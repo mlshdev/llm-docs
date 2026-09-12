@@ -1,0 +1,65 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtliocommandbuffer/enqueue()](https://developer.apple.com/documentation/metal/mtliocommandbuffer/enqueue())
+
+# enqueue() (Swift)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+Reserves a place for the input/output command buffer in the input/output command queue without committing the command buffer.
+
+## Declaration
+
+```swift
+func enqueue()
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The method saves the next position for the command buffer in the input/output command queue. You can call [enqueue()](enqueue%28%29.md) at any time relative to encoding commands, but you can only enqueue a command buffer once. To submit a command buffer to GPU for execution, call its [commit()](commit%28%29.md) method.
+
+For example, to fill multiple command buffers asynchronously that execute in a specific order:
+
+1. Call each command buffer’s [enqueue()](enqueue%28%29.md) method in order.
+2. Encode commands into each command buffer on its own, separate thread.
+3. Call each command buffer’s [commit()](commit%28%29.md) in any order.
+
+## See Also
+
+### Submitting a command buffer
+
+- [commit()](commit%28%29.md): Submits the command buffer to the queue for execution on the GPU.
+
+# enqueue (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+Reserves a place for the input/output command buffer in the input/output command queue without committing the command buffer.
+
+## Declaration
+
+```objectivec
+- (void) enqueue;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The method saves the next position for the command buffer in the input/output command queue. You can call [enqueue](enqueue%28%29.md) at any time relative to encoding commands, but you can only enqueue a command buffer once. To submit a command buffer to GPU for execution, call its [commit](commit%28%29.md) method.
+
+For example, to fill multiple command buffers asynchronously that execute in a specific order:
+
+1. Call each command buffer’s [enqueue](enqueue%28%29.md) method in order.
+2. Encode commands into each command buffer on its own, separate thread.
+3. Call each command buffer’s [commit](commit%28%29.md) in any order.
+
+## See Also
+
+### Submitting a command buffer
+
+- [commit](commit%28%29.md): Submits the command buffer to the queue for execution on the GPU.

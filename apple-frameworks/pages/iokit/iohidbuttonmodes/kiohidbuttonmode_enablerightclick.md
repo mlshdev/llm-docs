@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/iohidbuttonmodes/kiohidbuttonmode_enablerightclick](https://developer.apple.com/documentation/iokit/iohidbuttonmodes/kiohidbuttonmode_enablerightclick)
+
+# kIOHIDButtonMode_EnableRightClick
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.1+
+
+## Declaration
+
+```objectivec
+kIOHIDButtonMode_EnableRightClick = 2
+```

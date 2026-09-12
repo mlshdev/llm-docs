@@ -1,0 +1,66 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/sharedwithyou/swattributionview/menutitleforhideaction](https://developer.apple.com/documentation/sharedwithyou/swattributionview/menutitleforhideaction)
+
+# menuTitleForHideAction (Swift)
+
+**Framework:** Shared with You  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+A localized string the system uses as a custom title for the hide menu item.
+
+## Declaration
+
+```swift
+var menuTitleForHideAction: String? { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+A `nil` value causes the system to use the default title.
+
+## See Also
+
+### Customizing highlights
+
+- [backgroundStyle](backgroundstyle-swift.property.md): The background style of the child view that contains names and avatars.
+- [displayContext](displaycontext-swift.property.md): The context for the content the system displays with this view.
+- [highlight](highlight.md): The highlight you use to display this attribution.
+- [highlightMenu](highlightmenu.md): A menu with a list of system actions specific to this hightlight.
+- [horizontalAlignment](horizontalalignment-swift.property.md): The horizontal alignment of the view.
+- [preferredMaxLayoutWidth](preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
+- [supplementalMenu](supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
+
+# menuTitleForHideAction (Objective-C)
+
+**Framework:** Shared with You  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+A localized string the system uses as a custom title for the hide menu item.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, strong, readwrite, nullable) NSString * menuTitleForHideAction;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+A `nil` value causes the system to use the default title.
+
+## See Also
+
+### Customizing highlights
+
+- [backgroundStyle](backgroundstyle-swift.property.md): The background style of the child view that contains names and avatars.
+- [displayContext](displaycontext-swift.property.md): The context for the content the system displays with this view.
+- [highlight](highlight.md): The highlight you use to display this attribution.
+- [highlightMenu](highlightmenu.md): A menu with a list of system actions specific to this hightlight.
+- [horizontalAlignment](horizontalalignment-swift.property.md): The horizontal alignment of the view.
+- [preferredMaxLayoutWidth](preferredmaxlayoutwidth.md): A width the system uses to constrain the view contents.
+- [supplementalMenu](supplementalmenu.md): A supplemental menu to augment the attribution view’s existing menu.
+- [enablesMarquee](enablesmarquee.md): Automatically enables a marquee effect.

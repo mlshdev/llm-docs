@@ -1,0 +1,24 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/reference_movie_data_reference_atom/data_reference_type](https://developer.apple.com/documentation/quicktime-file-format/reference_movie_data_reference_atom/data_reference_type)
+
+# Data reference type
+
+**Framework:** QuickTime File Format  
+**Kind:** Data field
+
+The data reference type.
+
+<a id="Overview"></a>
+
+## Overview
+
+A value of `'alis'` indicates a file system alias record. A value of `'url '` indicates a string containing a uniform resource locator. Note that the fourth character in `'url '` is an ASCII blank (`0x20`).
+
+## See Also
+
+### Data fields
+
+- [Size](size.md): The number of bytes in this data reference atom.
+- [Type](type.md): The type of this atom.
+- [Flags](flags.md): A 32-bit integer containing flags.
+- [Data reference size](data_reference_size.md): The size of the data reference in bytes, expressed as a 32-bit integer.
+- [Data reference](data_reference.md): A data reference to a QuickTime movie, or to a stream or file that QuickTime can play.

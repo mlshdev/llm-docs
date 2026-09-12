@@ -1,0 +1,274 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/phase/phaseambientmixerdefinition](https://developer.apple.com/documentation/phase/phaseambientmixerdefinition)
+
+# PHASEAmbientMixerDefinition (Swift)
+
+**Framework:** PHASE  
+**Kind:** Class  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 17.0+ · visionOS 1.0+
+
+An audio-layering object that outputs sound in a particular direction in 3D space.
+
+## Declaration
+
+```swift
+class PHASEAmbientMixerDefinition
+```
+
+<a id="overview"></a>
+
+## Overview
+
+As an audio-layering object, this class combines multiple audio signals to a single signal for the output device. Play audio with a 3D orientation using this class when you supply a quaternion for the `orientation` argument of the [init(channelLayout:orientation:)](phaseambientmixerdefinition/init%28channellayout_orientation_%29.md) initializer. For information on orientation the sound, see [Working with Quaternions](../accelerate/working-with-quaternions.md).
+
+You also supply the intitializer with a channel layout in either mono, stereo, or surround formats. Surround audio files create the best listening experience due to their extra channel data. The framework renders each channel from the direction of its corresponding speaker in the channel layout. This class ignores low-frequency effect channels that may be present in the layout.
+
+> **Note**
+
+>  For one-time sounds that require no position or orientation, use [PHASEChannelMixerDefinition](phasechannelmixerdefinition.md) instead of this class. If your audio playback needs to react to distance or contain environmental effects, use a spatial mixer; for more information, see [Spatial Mixing](spatial-mixing.md).
+
+<a id="Play-Sound-with-a-Specific-Orientation-Channel-Layout-and-Listener"></a>
+
+### Play Sound with a Specific Orientation, Channel Layout, and Listener
+
+To play ambient sound, define an orientation for the mixer and a channel layout for the source audio data. For example, the following code creates a 5.0 surround-sound ambient source from a 5.1 surround-sound asset.
+
+**Swift**
+
+```swift
+// Orient the mixer.
+let orientation: PHASEQuaternion3D = simd_quaternion(1.0, 0.0, 0.0, 0.0)
+
+// Create a channel layout corresponding to the sound asset’s channel layout.
+let surroundLayout = AVAudioChannelLayout(
+    layoutTag: kAudioChannelLayoutTag_MPEG_5_1_A)
+
+// Create the ambient mixer.
+let ambientMixer = PHASEAmbientMixerDefinition(channelLayout: surroundLayout!,
+    orientation: orientation)
+```
+
+**Objective-C**
+
+```objc
+// Orient the mixer.
+PHASEQuaternion3D orientation = simd_quaternion(1.f, 0.f, 0.f, 0.f);
+
+// Create a channel layout corresponding to the sound asset’s channel layout. 
+AVAudioChannelLayout* surroundLayout =
+    [[AVAudioChannelLayout alloc] initWithLayoutTag:kAudioChannelLayoutTag_MPEG_5_1_A];
+
+// Create the ambient mixer.
+PHASEAmbientMixerDefinition* ambientMixer =
+    [[PHASEAmbientMixerDefinition alloc] initWithChannelLayout:surroundLayout orientation:orientation];
+```
+
+Ambient mixers require the app to specify a listener, for which you define an orientation by setting the listener’s [transform](phaseobject/transform.md). Continuing on the example above, the following code completes a mixer by attaching a listener, and then plays a sound event.
+
+**Swift**
+
+```swift
+// Attach the mixer to a listener.
+let mixerParams = PHASEMixerParameters()
+mixerParams.addAmbientMixerParameters(ambientMixer.uid, listener: listener)
+
+// Create a sound event object.    
+var ambientSoundEvent: PHASESoundEvent!
+do { ambientSoundEvent = try PHASESoundEvent(engine: engine,
+        registeredSoundEventNodeAssetUID: ambientSoundEventAsset.uid,
+        mixerParameters: mixerParams)
+} catch { fatalError("Failed to create a sound event.") }
+
+// Play the ambient sound.
+do { try ambientSoundEvent.start() } 
+catch { print("Failed to start a sound event.") }
+```
+
+**Objective-C**
+
+```objc
+// Attach the mixer to a listener.
+PHASEMixerParameters* mixerParams = [[PHASEMixerParameters alloc] init];
+[mixerParams addAmbientMixerParameters:ambientMixer.uid
+    listener:_listener];
+
+// Create a sound event object.    
+PHASESoundEvent* ambientSoundEvent =
+    [[PHASESoundEvent alloc]initWithEngine:_engine
+        registeredSoundEventNodeAssetUID:ambientSoundEventAsset.uid
+        mixerParameters:mixerParams
+        outError:&err];
+
+// Play the ambient sound.
+[ambientSoundEvent startAndReturnError:&err];
+```
+
+PHASE changes the channel output of ambient-mixer sound dynamically, depending on the respective directions of the mixer and the listener. For example, you can use an ambient mixer in a game to play the environmental sound of birds all around and the sound of traffic on a road in just one audio channel. Depending on the direction the player is facing, the mixer can rotate the audio so that the road always sounds like it’s coming from the same direction, for example, the west.
+
+## Topics
+
+### Creating an Ambient Mixer
+
+- [init(channelLayout:orientation:)](phaseambientmixerdefinition/init%28channellayout_orientation_%29.md): Creates an ambient mixer with the given channel layout and orientation.
+- [init(channelLayout:orientation:identifier:)](phaseambientmixerdefinition/init%28channellayout_orientation_identifier_%29.md): Creates a named ambient mixer with the given channel layout and orientation.
+
+### Inspecting the Mixer
+
+- [inputChannelLayout](phaseambientmixerdefinition/inputchannellayout.md): The channel layout of input audio.
+- [orientation](phaseambientmixerdefinition/orientation.md): A quaternion that describes the orientation of the speaker layout relative to the scene origin.
+
+## Relationships
+
+### Inherits From
+
+- [PHASEMixerDefinition](phasemixerdefinition.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Audio Layering and Effects
+
+- [PHASEChannelMixerDefinition](phasechannelmixerdefinition.md): An audio-layering object that routes sound directly to the device’s output.
+- [PHASEMixerDefinition](phasemixerdefinition.md): An object to initialize a mixer with a given configuration.
+- [PHASEMixer](phasemixer.md): An object that combines multiple audio signals into a single signal.
+- [PHASEDefinition](phasedefinition.md): A base class that adds a name to framework definitions.
+- [Spatial Mixing](spatial-mixing.md): Define environmental characteristics that determine how sound plays in your app’s 3D soundscape.
+
+# PHASEAmbientMixerDefinition (Objective-C)
+
+**Framework:** PHASE  
+**Kind:** Class  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 17.0+ · visionOS 1.0+
+
+An audio-layering object that outputs sound in a particular direction in 3D space.
+
+## Declaration
+
+```objectivec
+@interface PHASEAmbientMixerDefinition : PHASEMixerDefinition
+```
+
+<a id="overview"></a>
+
+## Overview
+
+As an audio-layering object, this class combines multiple audio signals to a single signal for the output device. Play audio with a 3D orientation using this class when you supply a quaternion for the `orientation` argument of the [initWithChannelLayout:orientation:](phaseambientmixerdefinition/init%28channellayout_orientation_%29.md) initializer. For information on orientation the sound, see [Working with Quaternions](../accelerate/working-with-quaternions.md).
+
+You also supply the intitializer with a channel layout in either mono, stereo, or surround formats. Surround audio files create the best listening experience due to their extra channel data. The framework renders each channel from the direction of its corresponding speaker in the channel layout. This class ignores low-frequency effect channels that may be present in the layout.
+
+> **Note**
+
+>  For one-time sounds that require no position or orientation, use [PHASEChannelMixerDefinition](phasechannelmixerdefinition.md) instead of this class. If your audio playback needs to react to distance or contain environmental effects, use a spatial mixer; for more information, see [Spatial Mixing](spatial-mixing.md).
+
+<a id="Play-Sound-with-a-Specific-Orientation-Channel-Layout-and-Listener"></a>
+
+### Play Sound with a Specific Orientation, Channel Layout, and Listener
+
+To play ambient sound, define an orientation for the mixer and a channel layout for the source audio data. For example, the following code creates a 5.0 surround-sound ambient source from a 5.1 surround-sound asset.
+
+**Swift**
+
+```swift
+// Orient the mixer.
+let orientation: PHASEQuaternion3D = simd_quaternion(1.0, 0.0, 0.0, 0.0)
+
+// Create a channel layout corresponding to the sound asset’s channel layout.
+let surroundLayout = AVAudioChannelLayout(
+    layoutTag: kAudioChannelLayoutTag_MPEG_5_1_A)
+
+// Create the ambient mixer.
+let ambientMixer = PHASEAmbientMixerDefinition(channelLayout: surroundLayout!,
+    orientation: orientation)
+```
+
+**Objective-C**
+
+```objc
+// Orient the mixer.
+PHASEQuaternion3D orientation = simd_quaternion(1.f, 0.f, 0.f, 0.f);
+
+// Create a channel layout corresponding to the sound asset’s channel layout. 
+AVAudioChannelLayout* surroundLayout =
+    [[AVAudioChannelLayout alloc] initWithLayoutTag:kAudioChannelLayoutTag_MPEG_5_1_A];
+
+// Create the ambient mixer.
+PHASEAmbientMixerDefinition* ambientMixer =
+    [[PHASEAmbientMixerDefinition alloc] initWithChannelLayout:surroundLayout orientation:orientation];
+```
+
+Ambient mixers require the app to specify a listener, for which you define an orientation by setting the listener’s [transform](phaseobject/transform.md). Continuing on the example above, the following code completes a mixer by attaching a listener, and then plays a sound event.
+
+**Swift**
+
+```swift
+// Attach the mixer to a listener.
+let mixerParams = PHASEMixerParameters()
+mixerParams.addAmbientMixerParameters(ambientMixer.uid, listener: listener)
+
+// Create a sound event object.    
+var ambientSoundEvent: PHASESoundEvent!
+do { ambientSoundEvent = try PHASESoundEvent(engine: engine,
+        registeredSoundEventNodeAssetUID: ambientSoundEventAsset.uid,
+        mixerParameters: mixerParams)
+} catch { fatalError("Failed to create a sound event.") }
+
+// Play the ambient sound.
+do { try ambientSoundEvent.start() } 
+catch { print("Failed to start a sound event.") }
+```
+
+**Objective-C**
+
+```objc
+// Attach the mixer to a listener.
+PHASEMixerParameters* mixerParams = [[PHASEMixerParameters alloc] init];
+[mixerParams addAmbientMixerParameters:ambientMixer.uid
+    listener:_listener];
+
+// Create a sound event object.    
+PHASESoundEvent* ambientSoundEvent =
+    [[PHASESoundEvent alloc]initWithEngine:_engine
+        registeredSoundEventNodeAssetUID:ambientSoundEventAsset.uid
+        mixerParameters:mixerParams
+        outError:&err];
+
+// Play the ambient sound.
+[ambientSoundEvent startAndReturnError:&err];
+```
+
+PHASE changes the channel output of ambient-mixer sound dynamically, depending on the respective directions of the mixer and the listener. For example, you can use an ambient mixer in a game to play the environmental sound of birds all around and the sound of traffic on a road in just one audio channel. Depending on the direction the player is facing, the mixer can rotate the audio so that the road always sounds like it’s coming from the same direction, for example, the west.
+
+## Topics
+
+### Creating an Ambient Mixer
+
+- [initWithChannelLayout:orientation:](phaseambientmixerdefinition/init%28channellayout_orientation_%29.md): Creates an ambient mixer with the given channel layout and orientation.
+- [initWithChannelLayout:orientation:identifier:](phaseambientmixerdefinition/init%28channellayout_orientation_identifier_%29.md): Creates a named ambient mixer with the given channel layout and orientation.
+
+### Inspecting the Mixer
+
+- [inputChannelLayout](phaseambientmixerdefinition/inputchannellayout.md): The channel layout of input audio.
+- [orientation](phaseambientmixerdefinition/orientation.md): A quaternion that describes the orientation of the speaker layout relative to the scene origin.
+
+## Relationships
+
+### Inherits From
+
+- [PHASEMixerDefinition](phasemixerdefinition.md)
+
+## See Also
+
+### Audio Layering and Effects
+
+- [PHASEChannelMixerDefinition](phasechannelmixerdefinition.md): An audio-layering object that routes sound directly to the device’s output.
+- [PHASEMixerDefinition](phasemixerdefinition.md): An object to initialize a mixer with a given configuration.
+- [PHASEMixer](phasemixer.md): An object that combines multiple audio signals into a single signal.
+- [PHASEDefinition](phasedefinition.md): A base class that adds a name to framework definitions.
+- [Spatial Mixing](spatial-mixing.md): Define environmental characteristics that determine how sound plays in your app’s 3D soundscape.

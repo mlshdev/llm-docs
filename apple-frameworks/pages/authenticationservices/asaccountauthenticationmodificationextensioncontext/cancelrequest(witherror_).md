@@ -1,0 +1,79 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/authenticationservices/asaccountauthenticationmodificationextensioncontext/cancelrequest(witherror:)](https://developer.apple.com/documentation/authenticationservices/asaccountauthenticationmodificationextensioncontext/cancelrequest(witherror:))
+
+# cancelRequest(withError:) (Swift)
+
+**Framework:** Authentication Services  
+**Kind:** Instance Method  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · visionOS 1.0+
+
+Cancels a request with an error.
+
+## Declaration
+
+```swift
+func cancelRequest(withError error: any Error)
+```
+
+## Parameters
+
+- `error`: An error that indicates the reason for the canceled request.
+
+## Mentioned In
+
+- [Upgrading Account Security With an Account Authentication Modification Extension](../upgrading-account-security-with-an-account-authentication-modification-extension.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If the user cancels the request, use the [ASExtensionError.Code.userCanceled](../asextensionerror/code/usercanceled.md) error code in the `error`. If the request requires user interaction, use [ASExtensionError.Code.userInteractionRequired](../asextensionerror/code/userinteractionrequired.md) instead.
+
+To include additional information regarding the failure, use [ASExtensionLocalizedFailureReasonErrorKey](../asextensionlocalizedfailurereasonerrorkey.md) to set a string value in the error’s `userInfo` dictionary. The system displays this string value to the user.
+
+## See Also
+
+### Handling Requests
+
+- [completeUpgradeToSignInWithApple(userInfo:)](completeupgradetosigninwithapple%28userinfo_%29.md): Completes the process of upgrading an account’s authentication credentials from using passwords to using Sign in with Apple.
+- [completeChangePasswordRequest(updatedCredential:userInfo:)](completechangepasswordrequest%28updatedcredential_userinfo_%29.md): Completes a request to update an account’s authentication credentials from using a weak password to using a strong password.
+- [getSignInWithAppleUpgradeAuthorization(state:nonce:completionHandler:)](getsigninwithappleupgradeauthorization%28state_nonce_completionhandler_%29.md): Retrieves the user’s current Sign in with Apple authorization credentials.
+- [ASExtensionLocalizedFailureReasonErrorKey](../asextensionlocalizedfailurereasonerrorkey.md): A key that specifies a string value to show to the user when a request fails.
+
+# cancelRequestWithError: (Objective-C)
+
+**Framework:** Authentication Services  
+**Kind:** Instance Method  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · visionOS 1.0+
+
+Cancels a request with an error.
+
+## Declaration
+
+```objectivec
+- (void) cancelRequestWithError:(NSError *) error;
+```
+
+## Parameters
+
+- `error`: An error that indicates the reason for the canceled request.
+
+## Mentioned In
+
+- [Upgrading Account Security With an Account Authentication Modification Extension](../upgrading-account-security-with-an-account-authentication-modification-extension.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If the user cancels the request, use the [ASExtensionErrorCodeUserCanceled](../asextensionerror/code/usercanceled.md) error code in the `error`. If the request requires user interaction, use [ASExtensionErrorCodeUserInteractionRequired](../asextensionerror/code/userinteractionrequired.md) instead.
+
+To include additional information regarding the failure, use [ASExtensionLocalizedFailureReasonErrorKey](../asextensionlocalizedfailurereasonerrorkey.md) to set a string value in the error’s `userInfo` dictionary. The system displays this string value to the user.
+
+## See Also
+
+### Handling Requests
+
+- [completeUpgradeToSignInWithAppleWithUserInfo:](completeupgradetosigninwithapple%28userinfo_%29.md): Completes the process of upgrading an account’s authentication credentials from using passwords to using Sign in with Apple.
+- [completeChangePasswordRequestWithUpdatedCredential:userInfo:](completechangepasswordrequest%28updatedcredential_userinfo_%29.md): Completes a request to update an account’s authentication credentials from using a weak password to using a strong password.
+- [getSignInWithAppleUpgradeAuthorizationWithState:nonce:completionHandler:](getsigninwithappleupgradeauthorization%28state_nonce_completionhandler_%29.md): Retrieves the user’s current Sign in with Apple authorization credentials.
+- [ASExtensionLocalizedFailureReasonErrorKey](../asextensionlocalizedfailurereasonerrorkey.md): A key that specifies a string value to show to the user when a request fails.

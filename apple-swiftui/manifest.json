@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "project": "apple-swiftui",
+  "title": "Apple SwiftUI",
+  "homepage": "https://developer.apple.com/documentation/swiftui",
+  "catalog": "swiftui",
+  "tag": "snapshot-5ae2cd850b20",
+  "snapshotDigest": "5ae2cd850b20ad5728652e071419f71b5604c76d38870605d23e5c435d0a59c5",
+  "contentDigest": "703f64dbbf46fa77015dc2b9add2f8d46ac554ae7c160089a93bf18774664edb",
+  "capturedAt": "2026-09-12T21:04:59.662Z",
+  "documentCount": 7104,
+  "notes": [
+    "Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.",
+    "1 framework in this catalog, captured at 2026-09-12T21:04:59.662Z.",
+    "Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.",
+    "Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream."
+  ]
+}

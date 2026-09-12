@@ -1,0 +1,55 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/subview](https://developer.apple.com/documentation/swiftui/subview)
+
+# Subview
+
+**Framework:** SwiftUI  
+**Kind:** Structure  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
+
+An opaque value representing a subview of another view.
+
+## Declaration
+
+```swift
+nonisolated struct Subview
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Access to a `Subview` can be obtained by using `ForEach(subviews:)` or `Group(subviews:)`.
+
+Subviews are proxies to the resolved view they represent, meaning that modifiers applied to the original view will be applied before modifiers applied to the subview, and the view is resolved using the environment of its container, *not* the environment of the its subview proxy. Additionally, because subviews must represent a single leaf view, or container, a subview may represent a view after the application of styles. As such, attempting to apply a style to it may have no affect.
+
+## Topics
+
+### Structures
+
+- [Subview.ID](subview/id-swift.struct.md): A unique identifier for a subview.
+
+### Instance Properties
+
+- [containerValues](subview/containervalues.md): The container values associated with the given subview.
+- [id](subview/id-swift.property.md): The unique identifier of the view.
+
+### Enumerations
+
+- [Subview.ContainerSizingOptions](subview/containersizingoptions.md): Options on how all subviews should be sized when in a container.
+
+## Relationships
+
+### Conforms To
+
+- [Identifiable](https://developer.apple.com/documentation/swift/identifiable)
+- [View](view.md)
+
+## See Also
+
+### Accessing a container’s subviews
+
+- [SubviewsCollection](subviewscollection.md): An opaque collection representing the subviews of view.
+- [SubviewsCollectionSlice](subviewscollectionslice.md): A slice of a SubviewsCollection.
+- [containerValue(\_:\_:)](view/containervalue%28____%29.md): Sets a particular container value of a view.
+- [ContainerValues](containervalues.md): A collection of container values associated with a given view.
+- [ContainerValueKey](containervaluekey.md): A key for accessing container values.

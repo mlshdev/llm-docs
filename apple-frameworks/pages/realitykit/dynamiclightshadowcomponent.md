@@ -1,0 +1,56 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/dynamiclightshadowcomponent](https://developer.apple.com/documentation/realitykit/dynamiclightshadowcomponent)
+
+# DynamicLightShadowComponent
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
+
+A component that controls an entity’s shadow from dynamic (virtual) lights.
+
+## Declaration
+
+```swift
+struct DynamicLightShadowComponent
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use `DynamicLightShadowComponent` to control whether an entity casts shadows from dynamic (virtual) lights. Dynamic lights cast shadows on other virtual objects, but not on physical objects. You can add a dynamic light shadow component to any entity that has a [ModelComponent](modelcomponent.md) in its component set by adding a dynamic light shadow component to the entity’s [components](entity/components.md) property.
+
+```swift
+if let model = try? await ModelEntity(named: "tv_retro") {
+    let shadowComponent = DynamicLightShadowComponent(castsShadow: false)
+    model.components.set(shadowComponent)
+}
+```
+
+You need to add the dynamic lights shadow component to each entity you want to apply the effect to because the dynamic light shadow component doesn’t apply to hierarchies.
+
+> **Note**
+
+> By default, without a dynamic light shadow component, entities cast shadows from dynamic lights.
+
+## Topics
+
+### Initializers
+
+- [init(castsShadow:)](dynamiclightshadowcomponent/init%28castsshadow_%29.md): Creates a dynamic light shadow component.
+
+### Instance Properties
+
+- [castsShadow](dynamiclightshadowcomponent/castsshadow.md): A Boolean value that indicates whether an entity casts a shadow.
+
+## Relationships
+
+### Conforms To
+
+- [Component](component.md)
+
+## See Also
+
+### General shadows
+
+- [GroundingShadowComponent](groundingshadowcomponent.md): A component that controls an entity’s grounding shadow.

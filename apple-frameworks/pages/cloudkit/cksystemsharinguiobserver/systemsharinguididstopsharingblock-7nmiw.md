@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cloudkit/cksystemsharinguiobserver/systemsharinguididstopsharingblock-7nmiw](https://developer.apple.com/documentation/cloudkit/cksystemsharinguiobserver/systemsharinguididstopsharingblock-7nmiw)
+
+# systemSharingUIDidStopSharingBlock
+
+**Framework:** CloudKit  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · visionOS
+
+A callback block the system invokes after the success or failure of a share delete by the system sharing UI.
+
+## Declaration
+
+```swift
+@preconcurrency var systemSharingUIDidStopSharingBlock: (@Sendable (CKRecord.ID, Result<Void, any Error>) -> Void)? { get set }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The system invokes this block on the success or failure of a [CKShare](../ckshare.md) delete when the user decides to stop sharing through the system sharing UI.
+
+Each [CKSystemSharingUIObserver](../cksystemsharinguiobserver.md) instance has a private serial queue. The system uses this queue for all callback block invocations.
+
+## See Also
+
+### Accessing sharing blocks
+
+- [systemSharingUIDidSaveShareBlock](systemsharinguididsaveshareblock-8c9vi.md): A callback block the system invokes after the success or failure of a share save by the system sharing UI.

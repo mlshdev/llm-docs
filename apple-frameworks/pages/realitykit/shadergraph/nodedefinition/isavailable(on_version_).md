@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/shadergraph/nodedefinition/isavailable(on:version:)](https://developer.apple.com/documentation/realitykit/shadergraph/nodedefinition/isavailable(on:version:))
+
+# isAvailable(on:version:)
+
+**Framework:** RealityKit  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+Returns whether this node definition is available on a given platform and OS version.
+
+## Declaration
+
+```swift
+func isAvailable(on platform: ShaderGraph.NodeDefinition.Platform, version: OperatingSystemVersion? = nil) -> Bool
+```
+
+## Parameters
+
+- `platform`: The platform to check availability for.
+- `version`: The OS version to check against. When `nil`, returns `true` if the definition is available on the platform at any version.
+
+<a id="return-value"></a>
+
+## Return Value
+
+`true` if this definition is available on `platform` at `version`; `false` if it is unavailable or has been obsoleted by that version.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this method to filter node definitions before presenting them to the user, or before adding them to a graph that targets a specific deployment target.
+
+```swift
+let library = ShaderGraph.NodeLibrary(version: .materialX138)
+let currentVersion = ProcessInfo.processInfo.operatingSystemVersion
+
+let supportedDefinitions = library.definitions.filter {
+    $0.isAvailable(on: .iOS, version: currentVersion)
+}
+```

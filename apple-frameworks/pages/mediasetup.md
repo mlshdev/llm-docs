@@ -1,0 +1,56 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mediasetup](https://developer.apple.com/documentation/mediasetup)
+
+# Media Setup (Swift)
+
+**Framework:** Media Setup  
+**Kind:** Framework  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 15.4+ · visionOS 1.0+
+
+Enable users to configure HomePod speakers to stream music directly from your media service.
+
+<a id="overview"></a>
+
+## Overview
+
+Use the Media Setup framework in your iOS app to help users transfer account credentials to their HomePod speakers. For example, if you have an iOS app that already supports Siri media intents to stream music, adopt this framework so the user can set up their HomePod to stream music directly from your media service. Provide endpoints the HomePod speaker can access by adopting [SiriKit Cloud Media](sirikitcloudmedia.md) on your media service.
+
+An [MSSetupSession](mediasetup/mssetupsession.md) uses the window you provide in [presentationAnchor()](mediasetup/msauthenticationpresentationcontext/presentationanchor%28%29.md) to present a configuration view to the user. After the user confirms the configuration, the session assembles a token request from its [account](mediasetup/mssetupsession/account.md) and sends it to your OAuth service. When your OAuth service responds with a token, the session verifies the token and [configurationURL](mediasetup/msserviceaccount/configurationurl.md). Then it sends that token to the HomePod speakers associated with the user’s Apple ID in the Home app.
+
+For details about applying for the SiriKit Media Intents on HomePod program, see the HomePod section of [Siri for Developers](https://developer.apple.com/siri).
+
+## Topics
+
+### HomePod Configuration
+
+- [MSSetupSession](mediasetup/mssetupsession.md): An object that manages the transfer of configuration information between your app, the system, your media service, and HomePod speakers.
+- [MSServiceAccount](mediasetup/msserviceaccount.md): Account details for accessing a streaming media service.
+
+# Media Setup (Objective-C)
+
+**Framework:** Media Setup  
+**Kind:** Framework  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 15.4+ · visionOS 1.0+
+
+Enable users to configure HomePod speakers to stream music directly from your media service.
+
+<a id="overview"></a>
+
+## Overview
+
+Use the Media Setup framework in your iOS app to help users transfer account credentials to their HomePod speakers. For example, if you have an iOS app that already supports Siri media intents to stream music, adopt this framework so the user can set up their HomePod to stream music directly from your media service. Provide endpoints the HomePod speaker can access by adopting [SiriKit Cloud Media](sirikitcloudmedia.md) on your media service.
+
+An [MSSetupSession](mediasetup/mssetupsession.md) uses the window you provide in [presentationAnchor](mediasetup/msauthenticationpresentationcontext/presentationanchor%28%29.md) to present a configuration view to the user. After the user confirms the configuration, the session assembles a token request from its [account](mediasetup/mssetupsession/account.md) and sends it to your OAuth service. When your OAuth service responds with a token, the session verifies the token and [configurationURL](mediasetup/msserviceaccount/configurationurl.md). Then it sends that token to the HomePod speakers associated with the user’s Apple ID in the Home app.
+
+For details about applying for the SiriKit Media Intents on HomePod program, see the HomePod section of [Siri for Developers](https://developer.apple.com/siri).
+
+## Topics
+
+### HomePod Configuration
+
+- [MSSetupSession](mediasetup/mssetupsession.md): An object that manages the transfer of configuration information between your app, the system, your media service, and HomePod speakers.
+- [MSServiceAccount](mediasetup/msserviceaccount.md): Account details for accessing a streaming media service.
+
+### Version
+
+- [MediaSetupVersionNumber](mediasetup/mediasetupversionnumber.md): The version number of the Media Setup framework.
+- [MediaSetupVersionString](mediasetup/mediasetupversionstring.md): The version of the Media Setup framework.

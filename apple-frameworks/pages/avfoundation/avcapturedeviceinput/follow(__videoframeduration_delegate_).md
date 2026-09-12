@@ -1,0 +1,121 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avcapturedeviceinput/follow(_:videoframeduration:delegate:)](https://developer.apple.com/documentation/avfoundation/avcapturedeviceinput/follow(_:videoframeduration:delegate:))
+
+# follow(\_:videoFrameDuration:delegate:) (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+
+
+Configures the the device input to follow an external sync device at the given frame duration.
+
+## Declaration
+
+```swift
+func follow(_ externalSyncDevice: AVExternalSyncDevice, videoFrameDuration frameDuration: CMTime, delegate: (any AVExternalSyncDeviceDelegate)?)
+```
+
+## Parameters
+
+- `externalSyncDevice`: The [AVExternalSyncDevice](../avexternalsyncdevice.md) hardware to follow.
+- `delegate`: The delegate to notify when the connection status changes, or an error occurs.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Call this method to direct your [AVCaptureDeviceInput](../avcapturedeviceinput.md) to follow the external sync pulse from a sync device at the given frame duration.
+
+Your provided `videoFrameDuration` value must match the sync pulse duration of the external sync device. If it does not, the request times out, the external sync device’s status returns to `AVExternalSyncDeviceStatusReady`, and your session stops running, posting a [runtimeErrorNotification](../avcapturesession/runtimeerrornotification.md) with `AVErrorFollowExternalSyncDeviceTimedOut`.
+
+The ability to follow an external sync device may change depending on the device configuration. For example, [follow(\_:videoFrameDuration:delegate:)](follow%28__videoframeduration_delegate_%29.md) cannot be used when [isAutoVideoFrameRateEnabled](../avcapturedevice/isautovideoframerateenabled.md) is `true`.
+
+To stop following an external pulse, call [unfollowExternalSyncDevice()](unfollowexternalsyncdevice%28%29.md). External sync device following is also disabled when your device’s [AVCaptureDevice.Format](../avcapturedevice/format.md) changes.
+
+Your provided delegate’s [externalSyncDeviceStatusDidChange(\_:)](../avexternalsyncdevicedelegate/externalsyncdevicestatusdidchange%28__%29.md) method is called with a status of `AVExternalSyncDeviceStatusReady` if the external pulse signal is not close enough to the provided `videoFrameDuration` for successful calibration.
+
+Once your [status](../avexternalsyncdevice/status.md) changes to `AVExternalSyncDeviceStatusActiveSync`, your input’s  `AVCaptureInput/activeExternalSyncVideoFrameDuration` property reports the up-to-date frame duration. `AVCaptureInput/activeExternalSyncVideoFrameDuration` is also reflected in the [activeVideoMinFrameDuration](../avcapturedevice/activevideominframeduration.md) and [activeVideoMaxFrameDuration](../avcapturedevice/activevideomaxframeduration.md) of your input’s associated device.
+
+> **Note**
+
+> Calling this method may cause a lengthy reconfiguration of the receiver, similar to setting a new active format or [sessionPreset](../avcapturesession/sessionpreset.md).
+
+> **Note**
+
+> When using this property, set the exposure duration with [setExposureModeCustom(duration:iso:completionHandler:)](../avcapturedevice/setexposuremodecustom%28duration_iso_completionhandler_%29.md) to one half the frame duration (or less) to maintain full dynamic range.
+
+> **Important**
+
+> Calling this method throws an `NSInvalidArgumentException` if [isExternalSyncSupported](isexternalsyncsupported.md) returns `false`.
+
+> **Important**
+
+> The provided external sync device’s `status` must be `AVExternalSyncDeviceStatusReady` when you call this method, otherwise an `NSInvalidArgumentException` is thrown.
+
+## See Also
+
+### Synchronizing with external devices
+
+- [isExternalSyncSupported](isexternalsyncsupported.md): Indicates whether the device input supports being configured to follow an external sync device.
+- [unfollowExternalSyncDevice()](unfollowexternalsyncdevice%28%29.md): Discontinues external sync.
+- [activeExternalSyncVideoFrameDuration](activeexternalsyncvideoframeduration.md): The receiver’s external sync frame duration (the reciprocal of its frame rate) when being driven by an external sync device.
+- [externalSyncDevice](externalsyncdevice.md): The external sync device currently being followed by this input.
+
+# followExternalSyncDevice:videoFrameDuration:delegate: (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+
+
+Configures the the device input to follow an external sync device at the given frame duration.
+
+## Declaration
+
+```objectivec
+- (void) followExternalSyncDevice:(AVExternalSyncDevice *) externalSyncDevice videoFrameDuration:(CMTime) frameDuration delegate:(id<AVExternalSyncDeviceDelegate>) delegate;
+```
+
+## Parameters
+
+- `externalSyncDevice`: The [AVExternalSyncDevice](../avexternalsyncdevice.md) hardware to follow.
+- `delegate`: The delegate to notify when the connection status changes, or an error occurs.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Call this method to direct your [AVCaptureDeviceInput](../avcapturedeviceinput.md) to follow the external sync pulse from a sync device at the given frame duration.
+
+Your provided `videoFrameDuration` value must match the sync pulse duration of the external sync device. If it does not, the request times out, the external sync device’s status returns to `AVExternalSyncDeviceStatusReady`, and your session stops running, posting a [AVCaptureSessionRuntimeErrorNotification](../avcapturesession/runtimeerrornotification.md) with `AVErrorFollowExternalSyncDeviceTimedOut`.
+
+The ability to follow an external sync device may change depending on the device configuration. For example, [followExternalSyncDevice:videoFrameDuration:delegate:](follow%28__videoframeduration_delegate_%29.md) cannot be used when [autoVideoFrameRateEnabled](../avcapturedevice/isautovideoframerateenabled.md) is `true`.
+
+To stop following an external pulse, call [unfollowExternalSyncDevice](unfollowexternalsyncdevice%28%29.md). External sync device following is also disabled when your device’s [AVCaptureDeviceFormat](../avcapturedevice/format.md) changes.
+
+Your provided delegate’s [externalSyncDeviceStatusDidChange:](../avexternalsyncdevicedelegate/externalsyncdevicestatusdidchange%28__%29.md) method is called with a status of `AVExternalSyncDeviceStatusReady` if the external pulse signal is not close enough to the provided `videoFrameDuration` for successful calibration.
+
+Once your [status](../avexternalsyncdevice/status.md) changes to `AVExternalSyncDeviceStatusActiveSync`, your input’s  `AVCaptureInput/activeExternalSyncVideoFrameDuration` property reports the up-to-date frame duration. `AVCaptureInput/activeExternalSyncVideoFrameDuration` is also reflected in the [activeVideoMinFrameDuration](../avcapturedevice/activevideominframeduration.md) and [activeVideoMaxFrameDuration](../avcapturedevice/activevideomaxframeduration.md) of your input’s associated device.
+
+> **Note**
+
+> Calling this method may cause a lengthy reconfiguration of the receiver, similar to setting a new active format or [sessionPreset](../avcapturesession/sessionpreset.md).
+
+> **Note**
+
+> When using this property, set the exposure duration with [setExposureModeCustomWithDuration:ISO:completionHandler:](../avcapturedevice/setexposuremodecustom%28duration_iso_completionhandler_%29.md) to one half the frame duration (or less) to maintain full dynamic range.
+
+> **Important**
+
+> Calling this method throws an `NSInvalidArgumentException` if [externalSyncSupported](isexternalsyncsupported.md) returns `false`.
+
+> **Important**
+
+> The provided external sync device’s `status` must be `AVExternalSyncDeviceStatusReady` when you call this method, otherwise an `NSInvalidArgumentException` is thrown.
+
+## See Also
+
+### Synchronizing with external devices
+
+- [externalSyncSupported](isexternalsyncsupported.md): Indicates whether the device input supports being configured to follow an external sync device.
+- [unfollowExternalSyncDevice](unfollowexternalsyncdevice%28%29.md): Discontinues external sync.
+- [activeExternalSyncVideoFrameDuration](activeexternalsyncvideoframeduration.md): The receiver’s external sync frame duration (the reciprocal of its frame rate) when being driven by an external sync device.
+- [externalSyncDevice](externalsyncdevice.md): The external sync device currently being followed by this input.

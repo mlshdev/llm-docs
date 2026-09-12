@@ -1,0 +1,94 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applemusicapi/get-multiple-personal-content-ratings-8tjvr](https://developer.apple.com/documentation/applemusicapi/get-multiple-personal-content-ratings-8tjvr)
+
+# Get Multiple Personal Album Ratings
+
+**Interface language:** Data
+
+**Framework:** Apple Music API  
+**Kind:** Web Service Endpoint  
+**Availability:** Apple Music 1.0+
+
+Fetch the user’s ratings for one or more albums by using the albums’ identifiers.
+
+## URL
+
+```http
+GET https://api.music.apple.com/v1/me/ratings/albums
+```
+
+## Query Parameters
+
+- `ids` — `[string]` (required): The unique identifiers for the albums.
+- `include` — `[string]`: Additional relationships to include in the fetch.
+- `l` — `string`: The localization to use, specified by a language tag. The possible values are in the `supportedLanguageTags` array belonging to the `Storefront` object specified by `storefront`. Otherwise, the default is `defaultLanguageTag` in `Storefront`.
+- `extend` — `[string]`: A list of attribute extensions to apply to resources in the response.
+
+## Response Codes
+
+- `200` OK — `RatingsResponse`: The request was successful.
+- `401` Unauthorized — `UnauthorizedResponse`: A response indicating an incorrect `Authorization` header.
+- `403` Forbidden — `ForbiddenResponse`: A response indicating invalid or insufficient authentication.
+- `500` Internal Server Error — `ErrorsResponse`: A response indicating an error occurred on the server.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This endpoint requires a music user token. For more information, see [User Authentication for MusicKit](user-authentication-for-musickit.md).
+
+A rating indicates whether a user likes `(1)` or dislikes `(-1)` the album. These are the only two ratings supported.
+
+<a id="Example"></a>
+
+### Example
+
+**Request**
+
+```
+https://api.music.apple.com/v1/me/ratings/albums?ids=1138988512,475655712
+```
+
+**Response**
+
+```json
+{
+    "data": [
+        {
+            "attributes": {
+                "value": 1
+            },
+            "href": "/v1/me/ratings/albums/1138988512",
+            "id": "1138988512",
+            "type": "ratings"
+        },
+        {
+            "attributes": {
+                "value": 1
+            },
+            "href": "/v1/me/ratings/albums/475655712",
+            "id": "475655712",
+            "type": "ratings"
+        }
+    ]
+}
+```
+
+## See Also
+
+### Related Documentation
+
+- [Ratings](ratings.md): An object that represents a rating for a resource.
+- [RatingRequest](ratingrequest.md): A request containing the data for a rating.
+- [RatingsResponse](ratingsresponse.md): The response to a request for a rating.
+
+### Requesting Catalog Ratings
+
+- [Get a Personal Album Rating](get-a-personal-content-rating-1q2mb.md): Fetch a user’s rating for an album by using the user’s identifier.
+- [Get a Personal Music Video Rating](get-a-personal-content-rating-8doe0.md): Fetch a user’s rating for a music video by using the video’s identifier.
+- [Get a Personal Playlist Rating](get-a-personal-content-rating-6wib7.md): Fetch a user’s rating for a playlist by using the playlist’s identifier.
+- [Get a Personal Song Rating](get-a-personal-content-rating-4k9c0.md): Fetch a user’s rating for a song by using the song’s identifier.
+- [Get a Personal Station Rating](get-a-personal-content-rating-try2.md): Fetch a user’s rating for a station by using the station’s identifier.
+- [Get Multiple Personal Music Video Ratings](get-multiple-personal-content-ratings-74o7x.md): Fetch the user’s ratings for one or more music videos by using the music videos’ identifiers.
+- [Get Multiple Personal Playlist Ratings](get-multiple-personal-content-ratings-7i7bv.md): Fetch the user’s ratings for one or more playlists by using the playlists’ identifiers.
+- [Get Multiple Personal Song Ratings](get-multiple-personal-content-ratings-6wab5.md): Fetch the user’s ratings for one or more songs by using the songs’ identifiers.
+- [Get Multiple Personal Station Ratings](get-multiple-personal-content-ratings-7ycdc.md): Fetch the user’s ratings for one or more stations by using the stations’ identifiers.

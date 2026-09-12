@@ -1,0 +1,161 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclusterthreadborderroutermanagement](https://developer.apple.com/documentation/matter/mtrbaseclusterthreadborderroutermanagement)
+
+# MTRBaseClusterThreadBorderRouterManagement (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+Cluster Thread Border Router Management
+
+## Declaration
+
+```swift
+class MTRBaseClusterThreadBorderRouterManagement
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Manage the Thread network of Thread Border Router
+
+## Topics
+
+### Initializers
+
+- [init(device:endpointID:queue:)](mtrbaseclusterthreadborderroutermanagement/init%28device_endpointid_queue_%29.md): For all instance methods (reads, writes, commands) that take a completion, the completion will be called on the provided queue.
+
+### Instance Methods
+
+- [getActiveDatasetRequest(completion:)](mtrbaseclusterthreadborderroutermanagement/getactivedatasetrequest%28completion_%29.md)
+- [getActiveDatasetRequest(with:completion:)](mtrbaseclusterthreadborderroutermanagement/getactivedatasetrequest%28with_completion_%29.md): Command GetActiveDatasetRequest
+- [getPendingDatasetRequest(completion:)](mtrbaseclusterthreadborderroutermanagement/getpendingdatasetrequest%28completion_%29.md)
+- [getPendingDatasetRequest(with:completion:)](mtrbaseclusterthreadborderroutermanagement/getpendingdatasetrequest%28with_completion_%29.md): Command GetPendingDatasetRequest
+- [readAttributeAcceptedCommandList(completion:)](mtrbaseclusterthreadborderroutermanagement/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeActiveDatasetTimestamp(completion:)](mtrbaseclusterthreadborderroutermanagement/readattributeactivedatasettimestamp%28completion_%29.md)
+- [readAttributeAttributeList(completion:)](mtrbaseclusterthreadborderroutermanagement/readattributeattributelist%28completion_%29.md)
+- [readAttributeBorderAgentID(completion:)](mtrbaseclusterthreadborderroutermanagement/readattributeborderagentid%28completion_%29.md)
+- [readAttributeBorderRouterName(completion:)](mtrbaseclusterthreadborderroutermanagement/readattributeborderroutername%28completion_%29.md)
+- [readAttributeClusterRevision(completion:)](mtrbaseclusterthreadborderroutermanagement/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeFeatureMap(completion:)](mtrbaseclusterthreadborderroutermanagement/readattributefeaturemap%28completion_%29.md)
+- [readAttributeGeneratedCommandList(completion:)](mtrbaseclusterthreadborderroutermanagement/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeInterfaceEnabled(completion:)](mtrbaseclusterthreadborderroutermanagement/readattributeinterfaceenabled%28completion_%29.md)
+- [readAttributePendingDatasetTimestamp(completion:)](mtrbaseclusterthreadborderroutermanagement/readattributependingdatasettimestamp%28completion_%29.md)
+- [readAttributeThreadVersion(completion:)](mtrbaseclusterthreadborderroutermanagement/readattributethreadversion%28completion_%29.md)
+- [setActiveDatasetRequestWith(\_:completion:)](mtrbaseclusterthreadborderroutermanagement/setactivedatasetrequestwith%28__completion_%29.md): Command SetActiveDatasetRequest
+- [setPendingDatasetRequestWith(\_:completion:)](mtrbaseclusterthreadborderroutermanagement/setpendingdatasetrequestwith%28__completion_%29.md): Command SetPendingDatasetRequest
+- [subscribeAttributeAcceptedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterthreadborderroutermanagement/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeActiveDatasetTimestamp(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterthreadborderroutermanagement/subscribeattributeactivedatasettimestamp%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterthreadborderroutermanagement/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeBorderAgentID(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterthreadborderroutermanagement/subscribeattributeborderagentid%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeBorderRouterName(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterthreadborderroutermanagement/subscribeattributeborderroutername%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevision(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterthreadborderroutermanagement/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMap(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterthreadborderroutermanagement/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterthreadborderroutermanagement/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeInterfaceEnabled(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterthreadborderroutermanagement/subscribeattributeinterfaceenabled%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePendingDatasetTimestamp(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterthreadborderroutermanagement/subscribeattributependingdatasettimestamp%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeThreadVersion(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterthreadborderroutermanagement/subscribeattributethreadversion%28with_subscriptionestablished_reporthandler_%29.md)
+
+### Type Methods
+
+- [readAttributeAcceptedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterthreadborderroutermanagement/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeActiveDatasetTimestamp(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterthreadborderroutermanagement/readattributeactivedatasettimestamp%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterthreadborderroutermanagement/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeBorderAgentID(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterthreadborderroutermanagement/readattributeborderagentid%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeBorderRouterName(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterthreadborderroutermanagement/readattributeborderroutername%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevision(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterthreadborderroutermanagement/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMap(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterthreadborderroutermanagement/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterthreadborderroutermanagement/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeInterfaceEnabled(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterthreadborderroutermanagement/readattributeinterfaceenabled%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePendingDatasetTimestamp(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterthreadborderroutermanagement/readattributependingdatasettimestamp%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeThreadVersion(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterthreadborderroutermanagement/readattributethreadversion%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRBaseClusterThreadBorderRouterManagement (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+Cluster Thread Border Router Management
+
+## Declaration
+
+```objectivec
+@interface MTRBaseClusterThreadBorderRouterManagement : MTRGenericBaseCluster
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Manage the Thread network of Thread Border Router
+
+## Topics
+
+### Instance Methods
+
+- [getActiveDatasetRequestWithCompletion:](mtrbaseclusterthreadborderroutermanagement/getactivedatasetrequest%28completion_%29.md)
+- [getActiveDatasetRequestWithParams:completion:](mtrbaseclusterthreadborderroutermanagement/getactivedatasetrequest%28with_completion_%29.md): Command GetActiveDatasetRequest
+- [getPendingDatasetRequestWithCompletion:](mtrbaseclusterthreadborderroutermanagement/getpendingdatasetrequest%28completion_%29.md)
+- [getPendingDatasetRequestWithParams:completion:](mtrbaseclusterthreadborderroutermanagement/getpendingdatasetrequest%28with_completion_%29.md): Command GetPendingDatasetRequest
+- [initWithDevice:endpointID:queue:](mtrbaseclusterthreadborderroutermanagement/init%28device_endpointid_queue_%29.md): For all instance methods (reads, writes, commands) that take a completion, the completion will be called on the provided queue.
+- [readAttributeAcceptedCommandListWithCompletion:](mtrbaseclusterthreadborderroutermanagement/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeActiveDatasetTimestampWithCompletion:](mtrbaseclusterthreadborderroutermanagement/readattributeactivedatasettimestamp%28completion_%29.md)
+- [readAttributeAttributeListWithCompletion:](mtrbaseclusterthreadborderroutermanagement/readattributeattributelist%28completion_%29.md)
+- [readAttributeBorderAgentIDWithCompletion:](mtrbaseclusterthreadborderroutermanagement/readattributeborderagentid%28completion_%29.md)
+- [readAttributeBorderRouterNameWithCompletion:](mtrbaseclusterthreadborderroutermanagement/readattributeborderroutername%28completion_%29.md)
+- [readAttributeClusterRevisionWithCompletion:](mtrbaseclusterthreadborderroutermanagement/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeFeatureMapWithCompletion:](mtrbaseclusterthreadborderroutermanagement/readattributefeaturemap%28completion_%29.md)
+- [readAttributeGeneratedCommandListWithCompletion:](mtrbaseclusterthreadborderroutermanagement/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeInterfaceEnabledWithCompletion:](mtrbaseclusterthreadborderroutermanagement/readattributeinterfaceenabled%28completion_%29.md)
+- [readAttributePendingDatasetTimestampWithCompletion:](mtrbaseclusterthreadborderroutermanagement/readattributependingdatasettimestamp%28completion_%29.md)
+- [readAttributeThreadVersionWithCompletion:](mtrbaseclusterthreadborderroutermanagement/readattributethreadversion%28completion_%29.md)
+- [setActiveDatasetRequestWithParams:completion:](mtrbaseclusterthreadborderroutermanagement/setactivedatasetrequestwith%28__completion_%29.md): Command SetActiveDatasetRequest
+- [setPendingDatasetRequestWithParams:completion:](mtrbaseclusterthreadborderroutermanagement/setpendingdatasetrequestwith%28__completion_%29.md): Command SetPendingDatasetRequest
+- [subscribeAttributeAcceptedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterthreadborderroutermanagement/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeActiveDatasetTimestampWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterthreadborderroutermanagement/subscribeattributeactivedatasettimestamp%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterthreadborderroutermanagement/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeBorderAgentIDWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterthreadborderroutermanagement/subscribeattributeborderagentid%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeBorderRouterNameWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterthreadborderroutermanagement/subscribeattributeborderroutername%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevisionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterthreadborderroutermanagement/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMapWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterthreadborderroutermanagement/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterthreadborderroutermanagement/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeInterfaceEnabledWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterthreadborderroutermanagement/subscribeattributeinterfaceenabled%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePendingDatasetTimestampWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterthreadborderroutermanagement/subscribeattributependingdatasettimestamp%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeThreadVersionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterthreadborderroutermanagement/subscribeattributethreadversion%28with_subscriptionestablished_reporthandler_%29.md)
+
+### Type Methods
+
+- [readAttributeAcceptedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterthreadborderroutermanagement/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeActiveDatasetTimestampWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterthreadborderroutermanagement/readattributeactivedatasettimestamp%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterthreadborderroutermanagement/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeBorderAgentIDWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterthreadborderroutermanagement/readattributeborderagentid%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeBorderRouterNameWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterthreadborderroutermanagement/readattributeborderroutername%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevisionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterthreadborderroutermanagement/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMapWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterthreadborderroutermanagement/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterthreadborderroutermanagement/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeInterfaceEnabledWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterthreadborderroutermanagement/readattributeinterfaceenabled%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePendingDatasetTimestampWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterthreadborderroutermanagement/readattributependingdatasettimestamp%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeThreadVersionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterthreadborderroutermanagement/readattributethreadversion%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)

@@ -1,0 +1,61 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremidi/midicompletionproc](https://developer.apple.com/documentation/coremidi/midicompletionproc)
+
+# MIDICompletionProc (Swift)
+
+**Framework:** Core MIDI  
+**Kind:** Type Alias  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+A function the system calls after it completely sends a system-exclusive (SysEx) event.
+
+## Declaration
+
+```swift
+typealias MIDICompletionProc = (UnsafeMutablePointer<MIDISysexSendRequest>) -> Void
+```
+
+## Parameters
+
+- `request`: The completed or aborted request.
+
+## See Also
+
+### Configuring a request
+
+- [destination](midisysexsendrequest/destination.md): The endpoint to send the event to.
+- [data](midisysexsendrequest/data.md): The request’s data.
+- [bytesToSend](midisysexsendrequest/bytestosend.md): The number of bytes to send.
+- [complete](midisysexsendrequest/complete.md): A Boolean value that indicates whether the transmission is complete.
+- [completionProc](midisysexsendrequest/completionproc.md): A function that the system calls after it sends all bytes for the request, or after the client marks the request as complete.
+- [completionRefCon](midisysexsendrequest/completionrefcon.md): Data to pass to the completion function.
+- [reserved](midisysexsendrequest/reserved.md): A field that’s reserved for future use.
+
+# MIDICompletionProc (Objective-C)
+
+**Framework:** Core MIDI  
+**Kind:** Type Alias  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+A function the system calls after it completely sends a system-exclusive (SysEx) event.
+
+## Declaration
+
+```objectivec
+typedef void (*)(struct MIDISysexSendRequest *) MIDICompletionProc;
+```
+
+## Parameters
+
+- `request`: The completed or aborted request.
+
+## See Also
+
+### Configuring a request
+
+- [destination](midisysexsendrequest/destination.md): The endpoint to send the event to.
+- [data](midisysexsendrequest/data.md): The request’s data.
+- [bytesToSend](midisysexsendrequest/bytestosend.md): The number of bytes to send.
+- [complete](midisysexsendrequest/complete.md): A Boolean value that indicates whether the transmission is complete.
+- [completionProc](midisysexsendrequest/completionproc.md): A function that the system calls after it sends all bytes for the request, or after the client marks the request as complete.
+- [completionRefCon](midisysexsendrequest/completionrefcon.md): Data to pass to the completion function.
+- [reserved](midisysexsendrequest/reserved.md): A field that’s reserved for future use.

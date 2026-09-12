@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "project": "grafana",
   "title": "Grafana",
+  "homepage": "https://grafana.com/docs/grafana/latest/",
   "repository": "grafana/grafana",
   "tag": "v13.2.1",
   "releaseId": 381036534,

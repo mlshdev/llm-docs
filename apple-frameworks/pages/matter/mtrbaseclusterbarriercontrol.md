@@ -1,0 +1,316 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclusterbarriercontrol](https://developer.apple.com/documentation/matter/mtrbaseclusterbarriercontrol)
+
+# MTRBaseClusterBarrierControl (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ (deprecated in 18.2) · iPadOS 16.1+ (deprecated in 18.2) · Mac Catalyst 16.1+ (deprecated in 18.2) · macOS 13.0+ (deprecated in 15.2) · tvOS 16.1+ (deprecated in 18.2) · visionOS 1.0+ (deprecated in 2.2) · watchOS 9.1+ (deprecated in 11.2)
+
+> BarrierControl is deprecated and will be removed
+
+## Declaration
+
+```swift
+class MTRBaseClusterBarrierControl
+```
+
+## Topics
+
+### Initializers
+
+- [init(device:endpoint:queue:)](mtrbaseclusterbarriercontrol/init%28device_endpoint_queue_%29.md): Deprecated.
+- [init(device:endpointID:queue:)](mtrbaseclusterbarriercontrol/init%28device_endpointid_queue_%29.md): Deprecated.
+
+### Instance Methods
+
+- [barrierControlGoToPercent(with:completion:)](mtrbaseclusterbarriercontrol/barriercontrolgotopercent%28with_completion_%29.md): Deprecated.
+- [barrierControlGoToPercent(with:completionHandler:)](mtrbaseclusterbarriercontrol/barriercontrolgotopercent%28with_completionhandler_%29.md): Deprecated.
+- [barrierControlStop(completion:)](mtrbaseclusterbarriercontrol/barriercontrolstop%28completion_%29.md): Deprecated.
+- [barrierControlStop(completionHandler:)](mtrbaseclusterbarriercontrol/barriercontrolstop%28completionhandler_%29.md): Deprecated.
+- [barrierControlStop(with:completion:)](mtrbaseclusterbarriercontrol/barriercontrolstop%28with_completion_%29.md): Deprecated.
+- [barrierControlStop(with:completionHandler:)](mtrbaseclusterbarriercontrol/barriercontrolstop%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandList(completion:)](mtrbaseclusterbarriercontrol/readattributeacceptedcommandlist%28completion_%29.md): Deprecated.
+- [readAttributeAcceptedCommandList(completionHandler:)](mtrbaseclusterbarriercontrol/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(completion:)](mtrbaseclusterbarriercontrol/readattributeattributelist%28completion_%29.md): Deprecated.
+- [readAttributeAttributeList(completionHandler:)](mtrbaseclusterbarriercontrol/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierCapabilities(completion:)](mtrbaseclusterbarriercontrol/readattributebarriercapabilities%28completion_%29.md): Deprecated.
+- [readAttributeBarrierCapabilities(completionHandler:)](mtrbaseclusterbarriercontrol/readattributebarriercapabilities%28completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierCloseEvents(completion:)](mtrbaseclusterbarriercontrol/readattributebarriercloseevents%28completion_%29.md): Deprecated.
+- [readAttributeBarrierCloseEvents(completionHandler:)](mtrbaseclusterbarriercontrol/readattributebarriercloseevents%28completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierClosePeriod(completion:)](mtrbaseclusterbarriercontrol/readattributebarriercloseperiod%28completion_%29.md): Deprecated.
+- [readAttributeBarrierClosePeriod(completionHandler:)](mtrbaseclusterbarriercontrol/readattributebarriercloseperiod%28completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierCommandCloseEvents(completion:)](mtrbaseclusterbarriercontrol/readattributebarriercommandcloseevents%28completion_%29.md): Deprecated.
+- [readAttributeBarrierCommandCloseEvents(completionHandler:)](mtrbaseclusterbarriercontrol/readattributebarriercommandcloseevents%28completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierCommandOpenEvents(completion:)](mtrbaseclusterbarriercontrol/readattributebarriercommandopenevents%28completion_%29.md): Deprecated.
+- [readAttributeBarrierCommandOpenEvents(completionHandler:)](mtrbaseclusterbarriercontrol/readattributebarriercommandopenevents%28completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierMovingState(completion:)](mtrbaseclusterbarriercontrol/readattributebarriermovingstate%28completion_%29.md): Deprecated.
+- [readAttributeBarrierMovingState(completionHandler:)](mtrbaseclusterbarriercontrol/readattributebarriermovingstate%28completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierOpenEvents(completion:)](mtrbaseclusterbarriercontrol/readattributebarrieropenevents%28completion_%29.md): Deprecated.
+- [readAttributeBarrierOpenEvents(completionHandler:)](mtrbaseclusterbarriercontrol/readattributebarrieropenevents%28completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierOpenPeriod(completion:)](mtrbaseclusterbarriercontrol/readattributebarrieropenperiod%28completion_%29.md): Deprecated.
+- [readAttributeBarrierOpenPeriod(completionHandler:)](mtrbaseclusterbarriercontrol/readattributebarrieropenperiod%28completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierPosition(completion:)](mtrbaseclusterbarriercontrol/readattributebarrierposition%28completion_%29.md): Deprecated.
+- [readAttributeBarrierPosition(completionHandler:)](mtrbaseclusterbarriercontrol/readattributebarrierposition%28completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierSafetyStatus(completion:)](mtrbaseclusterbarriercontrol/readattributebarriersafetystatus%28completion_%29.md): Deprecated.
+- [readAttributeBarrierSafetyStatus(completionHandler:)](mtrbaseclusterbarriercontrol/readattributebarriersafetystatus%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(completion:)](mtrbaseclusterbarriercontrol/readattributeclusterrevision%28completion_%29.md): Deprecated.
+- [readAttributeClusterRevision(completionHandler:)](mtrbaseclusterbarriercontrol/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(completion:)](mtrbaseclusterbarriercontrol/readattributefeaturemap%28completion_%29.md): Deprecated.
+- [readAttributeFeatureMap(completionHandler:)](mtrbaseclusterbarriercontrol/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(completion:)](mtrbaseclusterbarriercontrol/readattributegeneratedcommandlist%28completion_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(completionHandler:)](mtrbaseclusterbarriercontrol/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierCapabilities(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributebarriercapabilities%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierCapabilities(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributebarriercapabilities%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierCloseEvents(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributebarriercloseevents%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierCloseEvents(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributebarriercloseevents%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierClosePeriod(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributebarriercloseperiod%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierClosePeriod(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributebarriercloseperiod%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierCommandCloseEvents(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributebarriercommandcloseevents%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierCommandCloseEvents(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributebarriercommandcloseevents%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierCommandOpenEvents(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributebarriercommandopenevents%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierCommandOpenEvents(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributebarriercommandopenevents%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierMovingState(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributebarriermovingstate%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierMovingState(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributebarriermovingstate%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierOpenEvents(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributebarrieropenevents%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierOpenEvents(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributebarrieropenevents%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierOpenPeriod(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributebarrieropenperiod%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierOpenPeriod(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributebarrieropenperiod%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierPosition(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributebarrierposition%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierPosition(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributebarrierposition%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierSafetyStatus(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributebarriersafetystatus%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierSafetyStatus(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributebarriersafetystatus%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevision(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevision(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMap(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMap(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbarriercontrol/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [writeAttributeBarrierCloseEvents(withValue:completion:)](mtrbaseclusterbarriercontrol/writeattributebarriercloseevents%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeBarrierCloseEvents(withValue:completionHandler:)](mtrbaseclusterbarriercontrol/writeattributebarriercloseevents%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeBarrierCloseEvents(withValue:params:completion:)](mtrbaseclusterbarriercontrol/writeattributebarriercloseevents%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeBarrierCloseEvents(withValue:params:completionHandler:)](mtrbaseclusterbarriercontrol/writeattributebarriercloseevents%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeBarrierClosePeriod(withValue:completion:)](mtrbaseclusterbarriercontrol/writeattributebarriercloseperiod%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeBarrierClosePeriod(withValue:completionHandler:)](mtrbaseclusterbarriercontrol/writeattributebarriercloseperiod%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeBarrierClosePeriod(withValue:params:completion:)](mtrbaseclusterbarriercontrol/writeattributebarriercloseperiod%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeBarrierClosePeriod(withValue:params:completionHandler:)](mtrbaseclusterbarriercontrol/writeattributebarriercloseperiod%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeBarrierCommandCloseEvents(withValue:completion:)](mtrbaseclusterbarriercontrol/writeattributebarriercommandcloseevents%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeBarrierCommandCloseEvents(withValue:completionHandler:)](mtrbaseclusterbarriercontrol/writeattributebarriercommandcloseevents%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeBarrierCommandCloseEvents(withValue:params:completion:)](mtrbaseclusterbarriercontrol/writeattributebarriercommandcloseevents%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeBarrierCommandCloseEvents(withValue:params:completionHandler:)](mtrbaseclusterbarriercontrol/writeattributebarriercommandcloseevents%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeBarrierCommandOpenEvents(withValue:completion:)](mtrbaseclusterbarriercontrol/writeattributebarriercommandopenevents%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeBarrierCommandOpenEvents(withValue:completionHandler:)](mtrbaseclusterbarriercontrol/writeattributebarriercommandopenevents%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeBarrierCommandOpenEvents(withValue:params:completion:)](mtrbaseclusterbarriercontrol/writeattributebarriercommandopenevents%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeBarrierCommandOpenEvents(withValue:params:completionHandler:)](mtrbaseclusterbarriercontrol/writeattributebarriercommandopenevents%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeBarrierOpenEvents(withValue:completion:)](mtrbaseclusterbarriercontrol/writeattributebarrieropenevents%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeBarrierOpenEvents(withValue:completionHandler:)](mtrbaseclusterbarriercontrol/writeattributebarrieropenevents%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeBarrierOpenEvents(withValue:params:completion:)](mtrbaseclusterbarriercontrol/writeattributebarrieropenevents%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeBarrierOpenEvents(withValue:params:completionHandler:)](mtrbaseclusterbarriercontrol/writeattributebarrieropenevents%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeBarrierOpenPeriod(withValue:completion:)](mtrbaseclusterbarriercontrol/writeattributebarrieropenperiod%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeBarrierOpenPeriod(withValue:completionHandler:)](mtrbaseclusterbarriercontrol/writeattributebarrieropenperiod%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeBarrierOpenPeriod(withValue:params:completion:)](mtrbaseclusterbarriercontrol/writeattributebarrieropenperiod%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeBarrierOpenPeriod(withValue:params:completionHandler:)](mtrbaseclusterbarriercontrol/writeattributebarrieropenperiod%28withvalue_params_completionhandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbarriercontrol/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbarriercontrol/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeAttributeList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbarriercontrol/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbarriercontrol/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeBarrierCapabilities(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbarriercontrol/readattributebarriercapabilities%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierCapabilities(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbarriercontrol/readattributebarriercapabilities%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeBarrierCloseEvents(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbarriercontrol/readattributebarriercloseevents%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierCloseEvents(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbarriercontrol/readattributebarriercloseevents%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeBarrierClosePeriod(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbarriercontrol/readattributebarriercloseperiod%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierClosePeriod(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbarriercontrol/readattributebarriercloseperiod%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeBarrierCommandCloseEvents(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbarriercontrol/readattributebarriercommandcloseevents%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierCommandCloseEvents(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbarriercontrol/readattributebarriercommandcloseevents%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeBarrierCommandOpenEvents(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbarriercontrol/readattributebarriercommandopenevents%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierCommandOpenEvents(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbarriercontrol/readattributebarriercommandopenevents%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeBarrierMovingState(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbarriercontrol/readattributebarriermovingstate%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierMovingState(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbarriercontrol/readattributebarriermovingstate%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeBarrierOpenEvents(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbarriercontrol/readattributebarrieropenevents%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierOpenEvents(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbarriercontrol/readattributebarrieropenevents%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeBarrierOpenPeriod(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbarriercontrol/readattributebarrieropenperiod%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierOpenPeriod(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbarriercontrol/readattributebarrieropenperiod%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeBarrierPosition(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbarriercontrol/readattributebarrierposition%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierPosition(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbarriercontrol/readattributebarrierposition%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeBarrierSafetyStatus(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbarriercontrol/readattributebarriersafetystatus%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierSafetyStatus(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbarriercontrol/readattributebarriersafetystatus%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeClusterRevision(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbarriercontrol/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbarriercontrol/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeFeatureMap(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbarriercontrol/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbarriercontrol/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbarriercontrol/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbarriercontrol/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRBaseClusterBarrierControl (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ (deprecated in 18.2) · iPadOS 16.1+ (deprecated in 18.2) · Mac Catalyst 16.1+ (deprecated in 18.2) · macOS 13.0+ (deprecated in 15.2) · tvOS 16.1+ (deprecated in 18.2) · visionOS 1.0+ (deprecated in 2.2) · watchOS 9.1+ (deprecated in 11.2)
+
+> BarrierControl is deprecated and will be removed
+
+## Declaration
+
+```objectivec
+@interface MTRBaseClusterBarrierControl : MTRGenericBaseCluster
+```
+
+## Topics
+
+### Initializers
+
+- [initWithDevice:endpoint:queue:](mtrbaseclusterbarriercontrol/init%28device_endpoint_queue_%29.md): Deprecated.
+- [initWithDevice:endpointID:queue:](mtrbaseclusterbarriercontrol/init%28device_endpointid_queue_%29.md): Deprecated.
+
+### Instance Methods
+
+- [barrierControlGoToPercentWithParams:completion:](mtrbaseclusterbarriercontrol/barriercontrolgotopercent%28with_completion_%29.md): Deprecated.
+- [barrierControlGoToPercentWithParams:completionHandler:](mtrbaseclusterbarriercontrol/barriercontrolgotopercent%28with_completionhandler_%29.md): Deprecated.
+- [barrierControlStopWithCompletion:](mtrbaseclusterbarriercontrol/barriercontrolstop%28completion_%29.md): Deprecated.
+- [barrierControlStopWithCompletionHandler:](mtrbaseclusterbarriercontrol/barriercontrolstop%28completionhandler_%29.md): Deprecated.
+- [barrierControlStopWithParams:completion:](mtrbaseclusterbarriercontrol/barriercontrolstop%28with_completion_%29.md): Deprecated.
+- [barrierControlStopWithParams:completionHandler:](mtrbaseclusterbarriercontrol/barriercontrolstop%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandListWithCompletion:](mtrbaseclusterbarriercontrol/readattributeacceptedcommandlist%28completion_%29.md): Deprecated.
+- [readAttributeAcceptedCommandListWithCompletionHandler:](mtrbaseclusterbarriercontrol/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithCompletion:](mtrbaseclusterbarriercontrol/readattributeattributelist%28completion_%29.md): Deprecated.
+- [readAttributeAttributeListWithCompletionHandler:](mtrbaseclusterbarriercontrol/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierCapabilitiesWithCompletion:](mtrbaseclusterbarriercontrol/readattributebarriercapabilities%28completion_%29.md): Deprecated.
+- [readAttributeBarrierCapabilitiesWithCompletionHandler:](mtrbaseclusterbarriercontrol/readattributebarriercapabilities%28completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierCloseEventsWithCompletion:](mtrbaseclusterbarriercontrol/readattributebarriercloseevents%28completion_%29.md): Deprecated.
+- [readAttributeBarrierCloseEventsWithCompletionHandler:](mtrbaseclusterbarriercontrol/readattributebarriercloseevents%28completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierClosePeriodWithCompletion:](mtrbaseclusterbarriercontrol/readattributebarriercloseperiod%28completion_%29.md): Deprecated.
+- [readAttributeBarrierClosePeriodWithCompletionHandler:](mtrbaseclusterbarriercontrol/readattributebarriercloseperiod%28completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierCommandCloseEventsWithCompletion:](mtrbaseclusterbarriercontrol/readattributebarriercommandcloseevents%28completion_%29.md): Deprecated.
+- [readAttributeBarrierCommandCloseEventsWithCompletionHandler:](mtrbaseclusterbarriercontrol/readattributebarriercommandcloseevents%28completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierCommandOpenEventsWithCompletion:](mtrbaseclusterbarriercontrol/readattributebarriercommandopenevents%28completion_%29.md): Deprecated.
+- [readAttributeBarrierCommandOpenEventsWithCompletionHandler:](mtrbaseclusterbarriercontrol/readattributebarriercommandopenevents%28completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierMovingStateWithCompletion:](mtrbaseclusterbarriercontrol/readattributebarriermovingstate%28completion_%29.md): Deprecated.
+- [readAttributeBarrierMovingStateWithCompletionHandler:](mtrbaseclusterbarriercontrol/readattributebarriermovingstate%28completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierOpenEventsWithCompletion:](mtrbaseclusterbarriercontrol/readattributebarrieropenevents%28completion_%29.md): Deprecated.
+- [readAttributeBarrierOpenEventsWithCompletionHandler:](mtrbaseclusterbarriercontrol/readattributebarrieropenevents%28completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierOpenPeriodWithCompletion:](mtrbaseclusterbarriercontrol/readattributebarrieropenperiod%28completion_%29.md): Deprecated.
+- [readAttributeBarrierOpenPeriodWithCompletionHandler:](mtrbaseclusterbarriercontrol/readattributebarrieropenperiod%28completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierPositionWithCompletion:](mtrbaseclusterbarriercontrol/readattributebarrierposition%28completion_%29.md): Deprecated.
+- [readAttributeBarrierPositionWithCompletionHandler:](mtrbaseclusterbarriercontrol/readattributebarrierposition%28completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierSafetyStatusWithCompletion:](mtrbaseclusterbarriercontrol/readattributebarriersafetystatus%28completion_%29.md): Deprecated.
+- [readAttributeBarrierSafetyStatusWithCompletionHandler:](mtrbaseclusterbarriercontrol/readattributebarriersafetystatus%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithCompletion:](mtrbaseclusterbarriercontrol/readattributeclusterrevision%28completion_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithCompletionHandler:](mtrbaseclusterbarriercontrol/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithCompletion:](mtrbaseclusterbarriercontrol/readattributefeaturemap%28completion_%29.md): Deprecated.
+- [readAttributeFeatureMapWithCompletionHandler:](mtrbaseclusterbarriercontrol/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithCompletion:](mtrbaseclusterbarriercontrol/readattributegeneratedcommandlist%28completion_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithCompletionHandler:](mtrbaseclusterbarriercontrol/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierCapabilitiesWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributebarriercapabilities%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierCapabilitiesWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributebarriercapabilities%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierCloseEventsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributebarriercloseevents%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierCloseEventsWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributebarriercloseevents%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierClosePeriodWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributebarriercloseperiod%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierClosePeriodWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributebarriercloseperiod%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierCommandCloseEventsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributebarriercommandcloseevents%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierCommandCloseEventsWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributebarriercommandcloseevents%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierCommandOpenEventsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributebarriercommandopenevents%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierCommandOpenEventsWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributebarriercommandopenevents%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierMovingStateWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributebarriermovingstate%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierMovingStateWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributebarriermovingstate%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierOpenEventsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributebarrieropenevents%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierOpenEventsWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributebarrieropenevents%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierOpenPeriodWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributebarrieropenperiod%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierOpenPeriodWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributebarrieropenperiod%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierPositionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributebarrierposition%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierPositionWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributebarrierposition%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierSafetyStatusWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributebarriersafetystatus%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBarrierSafetyStatusWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributebarriersafetystatus%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevisionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevisionWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMapWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMapWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbarriercontrol/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [writeAttributeBarrierCloseEventsWithValue:completion:](mtrbaseclusterbarriercontrol/writeattributebarriercloseevents%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeBarrierCloseEventsWithValue:completionHandler:](mtrbaseclusterbarriercontrol/writeattributebarriercloseevents%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeBarrierCloseEventsWithValue:params:completion:](mtrbaseclusterbarriercontrol/writeattributebarriercloseevents%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeBarrierCloseEventsWithValue:params:completionHandler:](mtrbaseclusterbarriercontrol/writeattributebarriercloseevents%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeBarrierClosePeriodWithValue:completion:](mtrbaseclusterbarriercontrol/writeattributebarriercloseperiod%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeBarrierClosePeriodWithValue:completionHandler:](mtrbaseclusterbarriercontrol/writeattributebarriercloseperiod%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeBarrierClosePeriodWithValue:params:completion:](mtrbaseclusterbarriercontrol/writeattributebarriercloseperiod%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeBarrierClosePeriodWithValue:params:completionHandler:](mtrbaseclusterbarriercontrol/writeattributebarriercloseperiod%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeBarrierCommandCloseEventsWithValue:completion:](mtrbaseclusterbarriercontrol/writeattributebarriercommandcloseevents%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeBarrierCommandCloseEventsWithValue:completionHandler:](mtrbaseclusterbarriercontrol/writeattributebarriercommandcloseevents%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeBarrierCommandCloseEventsWithValue:params:completion:](mtrbaseclusterbarriercontrol/writeattributebarriercommandcloseevents%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeBarrierCommandCloseEventsWithValue:params:completionHandler:](mtrbaseclusterbarriercontrol/writeattributebarriercommandcloseevents%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeBarrierCommandOpenEventsWithValue:completion:](mtrbaseclusterbarriercontrol/writeattributebarriercommandopenevents%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeBarrierCommandOpenEventsWithValue:completionHandler:](mtrbaseclusterbarriercontrol/writeattributebarriercommandopenevents%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeBarrierCommandOpenEventsWithValue:params:completion:](mtrbaseclusterbarriercontrol/writeattributebarriercommandopenevents%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeBarrierCommandOpenEventsWithValue:params:completionHandler:](mtrbaseclusterbarriercontrol/writeattributebarriercommandopenevents%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeBarrierOpenEventsWithValue:completion:](mtrbaseclusterbarriercontrol/writeattributebarrieropenevents%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeBarrierOpenEventsWithValue:completionHandler:](mtrbaseclusterbarriercontrol/writeattributebarrieropenevents%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeBarrierOpenEventsWithValue:params:completion:](mtrbaseclusterbarriercontrol/writeattributebarrieropenevents%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeBarrierOpenEventsWithValue:params:completionHandler:](mtrbaseclusterbarriercontrol/writeattributebarrieropenevents%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeBarrierOpenPeriodWithValue:completion:](mtrbaseclusterbarriercontrol/writeattributebarrieropenperiod%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeBarrierOpenPeriodWithValue:completionHandler:](mtrbaseclusterbarriercontrol/writeattributebarrieropenperiod%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeBarrierOpenPeriodWithValue:params:completion:](mtrbaseclusterbarriercontrol/writeattributebarrieropenperiod%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeBarrierOpenPeriodWithValue:params:completionHandler:](mtrbaseclusterbarriercontrol/writeattributebarrieropenperiod%28withvalue_params_completionhandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbarriercontrol/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbarriercontrol/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeAttributeListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbarriercontrol/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbarriercontrol/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeBarrierCapabilitiesWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbarriercontrol/readattributebarriercapabilities%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierCapabilitiesWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbarriercontrol/readattributebarriercapabilities%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeBarrierCloseEventsWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbarriercontrol/readattributebarriercloseevents%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierCloseEventsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbarriercontrol/readattributebarriercloseevents%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeBarrierClosePeriodWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbarriercontrol/readattributebarriercloseperiod%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierClosePeriodWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbarriercontrol/readattributebarriercloseperiod%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeBarrierCommandCloseEventsWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbarriercontrol/readattributebarriercommandcloseevents%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierCommandCloseEventsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbarriercontrol/readattributebarriercommandcloseevents%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeBarrierCommandOpenEventsWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbarriercontrol/readattributebarriercommandopenevents%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierCommandOpenEventsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbarriercontrol/readattributebarriercommandopenevents%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeBarrierMovingStateWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbarriercontrol/readattributebarriermovingstate%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierMovingStateWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbarriercontrol/readattributebarriermovingstate%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeBarrierOpenEventsWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbarriercontrol/readattributebarrieropenevents%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierOpenEventsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbarriercontrol/readattributebarrieropenevents%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeBarrierOpenPeriodWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbarriercontrol/readattributebarrieropenperiod%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierOpenPeriodWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbarriercontrol/readattributebarrieropenperiod%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeBarrierPositionWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbarriercontrol/readattributebarrierposition%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierPositionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbarriercontrol/readattributebarrierposition%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeBarrierSafetyStatusWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbarriercontrol/readattributebarriersafetystatus%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBarrierSafetyStatusWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbarriercontrol/readattributebarriersafetystatus%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbarriercontrol/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbarriercontrol/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeFeatureMapWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbarriercontrol/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbarriercontrol/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbarriercontrol/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbarriercontrol/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md): Deprecated.
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)

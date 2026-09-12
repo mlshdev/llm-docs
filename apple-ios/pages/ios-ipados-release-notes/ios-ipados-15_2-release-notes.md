@@ -1,0 +1,126 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/ios-ipados-release-notes/ios-ipados-15_2-release-notes](https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-15_2-release-notes)
+
+# iOS & iPadOS 15.2 Release Notes
+
+**Kind:** Article
+
+Update your apps to use new features, and test your apps against API changes.
+
+<a id="Overview"></a>
+
+## Overview
+
+The iOS & iPadOS 15.2 SDK provides support to develop apps for iPhone, iPad, and iPod touch devices running iOS & iPadOS 15.2. The SDK comes bundled with Xcode 13.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 13.2, see [Xcode 13.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_2-release-notes).
+
+<a id="App-Privacy-Report"></a>
+
+### App Privacy Report
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- iOS & iPadOS 15 introduced the Record App Activity feature in the privacy settings, allowing people to save a summary of sensor, data, and internet access by apps on their device. In iOS & iPadOS 15.2, this activity is presented in Settings in a new UI called App Privacy Report. This is a great opportunity to review your app’s sensor, data, and internet usage. To view your activity in the report, go to Settings \> Privacy \> App Privacy Report \> Turn On App Privacy Report. Activity will show once you use your app. (78696668)
+
+<a id="App-Store"></a>
+
+### App Store
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- StoreKit APIs that present a refund request sheet can be tested with StoreKit Testing in Xcode. Use [beginRefundRequest(in:)](https://developer.apple.com/documentation/storekit/transaction/beginrefundrequest%28in:%29-9k0pj) or [beginRefundRequest(for:in:)](https://developer.apple.com/documentation/storekit/transaction/beginrefundrequest%28for:in:%29-65tph) when working with UIKit or the `refundRequestSheet(for:isPresented:onDismiss:)` view modifier when working with SwiftUI. (70794860)
+- StoreKit APIs that present a sheet in your app to manage subscriptions can be tested with StoreKit Testing in Xcode. Use [showManageSubscriptions(in:)](https://developer.apple.com/documentation/storekit/appstore/showmanagesubscriptions%28in:%29) when working with UIKit or the `manageSubscriptionsSheet(isPresented:)` view modifier when working with SwiftUI. (79975963)
+- New [SKTestSession.TimeRate](https://developer.apple.com/documentation/storekittest/sktestsession/timerate-swift.enum) values are available to use in automated tests with the StoreKit Test framework. (82680742)
+
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Subscriptions no longer continue to auto-renew after calling [expireSubscription(productIdentifier:)](https://developer.apple.com/documentation/storekittest/sktestsession/expiresubscription%28productidentifier:%29) in automated tests using StoreKit Test. (82800700)
+- Pay-as-you-go offers are no longer displayed incorrectly in payment sheets when testing subscriptions with StoreKit Testing in Xcode. (74165210)
+
+<a id="Apple-ID"></a>
+
+### Apple ID
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- Legacy Contacts has been added to iOS & iPadOS 15.2, allowing users to designate people as legacy contacts for their accounts, as part of the Digital Legacy program. (84536375)
+
+<a id="iCloud-Mail"></a>
+
+### iCloud Mail
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- iCloud+ subscribers can now access and use Hide My Email directly from the Mail app. (84956894)
+
+<a id="Core-Media"></a>
+
+### Core Media
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- Streaming in the Music app could result in higher CPU usage, causing faster battery drain in some scenarios. (84861891, 85326575)
+
+<a id="Location-Emergency"></a>
+
+### Location Emergency
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- Auto Call can now be set up to use one of two methods for initiating an emergency call: holding the side button together with a volume button, or rapidly pressing the side button multiple times. Both methods now show a longer, 8-second countdown before placing an emergency call. (84620050)
+
+<a id="Reminders"></a>
+
+### Reminders
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- Tags can now be bulk renamed and deleted. (82177979)
+
+<a id="SwiftUI"></a>
+
+### SwiftUI
+
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Using [alert(\_:isPresented:actions:message:)](https://developer.apple.com/documentation/swiftui/view/alert%28_:ispresented:actions:message:%29-6awwp) and [confirmationDialog(\_:isPresented:titleVisibility:actions:)](https://developer.apple.com/documentation/swiftui/view/confirmationdialog%28_:ispresented:titlevisibility:actions:%29) now present. (83731075)
+
+- Pushing a [ScrollView](https://developer.apple.com/documentation/swiftui/scrollview) that has a background applied while inside of a [stack](https://developer.apple.com/documentation/swiftui/navigationviewstyle/stack) style [NavigationView](https://developer.apple.com/documentation/swiftui/navigationview) when inside a [TabView](https://developer.apple.com/documentation/swiftui/tabview) is now correctly tracked by the [navigationBar](https://developer.apple.com/documentation/uikit/uinavigationcontroller/navigationbar) and [tabBar](https://developer.apple.com/documentation/uikit/uitabbarcontroller/tabbar). (83686857)
+
+- [List](https://developer.apple.com/documentation/swiftui/list) correctly respects safe area insets. (83312573)
+- Views are no longer hidden when using the iPad pointer to present a context menu. (83953549)
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- A [TextField](https://developer.apple.com/documentation/swiftui/textfield) won’t attempt to localize the raw string `TextField("Placeholder", text: $text)` when building against iOS 15 and running on older releases.
+
+  **Workaround:** Wrap the string in a [LocalizedStringKey](https://developer.apple.com/documentation/swiftui/localizedstringkey). (82076857)
+
+## See Also
+
+### iOS & iPadOS 15
+
+- [iOS & iPadOS 15.6 Release Notes](ios-ipados-15_6-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 15.5 Release Notes](ios-ipados-15_5-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 15.4 Release Notes](ios-ipados-15_4-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 15.3 Release Notes](ios-ipados-15_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 15.1 Release Notes](ios-ipados-15_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 15 Release Notes](ios-ipados-15-release-notes.md): Update your apps to use new features, and test your apps against API changes.

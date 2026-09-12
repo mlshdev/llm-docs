@@ -1,0 +1,24 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimagecvimageformat/format/format422ypcbcr_4a_8biplanar](https://developer.apple.com/documentation/accelerate/vimagecvimageformat/format/format422ypcbcr_4a_8biplanar)
+
+# vImageCVImageFormat.Format.format422YpCbCr_4A_8BiPlanar
+
+**Framework:** Accelerate  
+**Kind:** Case  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS · watchOS 6.0+
+
+A two-plane pixel format that contains a video-range 8-bit YpCbCr 4:2:2 plane and an 8-bit alpha plane.
+
+## Declaration
+
+```swift
+case format422YpCbCr_4A_8BiPlanar
+```
+
+## See Also
+
+### YpCbCr with alpha format constants
+
+- [vImageCVImageFormat.Format.format4444AYpCbCr8](format4444aypcbcr8.md): A full-range alpha, video-range luminance and chrominance YpCbCrA 4:4:4:4 pixel format with 8 bits per channel and ordered AYpCbCr.
+- [vImageCVImageFormat.Format.format4444YpCbCrA8](format4444ypcbcra8.md): A component YpCbCrA 4:4:4:4 pixel format with 8 bits per channel and ordered CbYpCrA.
+- [vImageCVImageFormat.Format.format4444YpCbCrA8R](format4444ypcbcra8r.md): A component YpCbCrA 4:4:4:4 rendering format with 8 bits per channel, full-range alpha, zero-biased YUV, and ordered AYpCbCr.
+- [vImageCVImageFormat.Format.format4444AYpCbCr16](format4444aypcbcr16.md): A full-range alpha, video-range luminance and chrominance YpCbCrA 4:4:4:4 pixel format with 16 bits per channel and ordered AYpCbCr.

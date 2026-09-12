@@ -1,0 +1,20 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/levelofdetailcomponent/selectionstrategy/resolutionmetric/init(switchingresolutions:boundingbox:)](https://developer.apple.com/documentation/realitykit/levelofdetailcomponent/selectionstrategy/resolutionmetric/init(switchingresolutions:boundingbox:))
+
+# init(switchingResolutions:boundingBox:)
+
+**Framework:** RealityKit  
+**Kind:** Initializer  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+Creates a resolution metric for a level of detail component to switch with.
+
+## Declaration
+
+```swift
+init(switchingResolutions: [LevelOfDetailComponent.SelectionStrategy.ResolutionMetric.DirectionalSwitchingResolutions], boundingBox: BoundingBox)
+```
+
+## Parameters
+
+- `switchingResolutions`: An array of `DirectionalSwitchingResolutions`. The `DirectionalSwitchingResolutions` at index `i` corresponds to the LOD level `i + 1`.
+- `boundingBox`: The bounding box of the entity used when calculating the switching resolutions.

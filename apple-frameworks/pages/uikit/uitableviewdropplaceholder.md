@@ -1,0 +1,108 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uitableviewdropplaceholder](https://developer.apple.com/documentation/uikit/uitableviewdropplaceholder)
+
+# UITableViewDropPlaceholder (Swift)
+
+**Framework:** UIKit  
+**Kind:** Class  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+A placeholder cell that supports customizing the drop preview parameters.
+
+## Declaration
+
+```swift
+@MainActor class UITableViewDropPlaceholder
+```
+
+<a id="overview"></a>
+
+## Overview
+
+When you want to insert a placeholder cell into your table, create a [UITableViewDropPlaceholder](uitableviewdropplaceholder.md) object and pass it to the [drop(\_:to:)](uitableviewdropcoordinator/drop%28__to_%29-3znax.md) method of your [UITableViewDropCoordinator](uitableviewdropcoordinator.md). You use a placeholder cell to display a temporary interface while you load the cell’s contents asynchronously. For example, your placeholder cell might display a progress indicator or a message that the cell content isn’t yet available. The placeholder object contains the reuse identifier of the temporary cell you want to display in your table. It can also include a custom preview to use during the drop.
+
+You must register the cells you use with your placeholders in advance. In your storyboard file, add a table view cell object to your table, configure its appearance, set its class to [UITableViewCell](uitableviewcell.md) (or an appropriate subclass), and assign a reuse identifier to it. When you create your [UITableViewDropPlaceholder](uitableviewdropplaceholder.md) object, pass the cell’s reuse identifier to [init(insertionIndexPath:reuseIdentifier:rowHeight:)](uitableviewplaceholder/init%28insertionindexpath_reuseidentifier_rowheight_%29.md). The table view uses the information in your placeholder object to insert the cell into the table.
+
+Set the [cellUpdateHandler](uitableviewplaceholder/cellupdatehandler.md) to a block of code that configures the cell as a placeholder for the incoming data.
+
+For more information, see [Supporting drag and drop in table views](supporting-drag-and-drop-in-table-views.md).
+
+> **Important**
+
+>  Placeholder cells are meant to be a temporary part of your table view. Always replace them with actual cells as soon as possible, or cancel the drop to remove them from the table. Use the methods of a [UITableViewDropPlaceholderContext](uitableviewdropplaceholdercontext.md) object to remove placeholders from your table.
+
+## Topics
+
+### Providing preview parameters
+
+- [previewParametersProvider](uitableviewdropplaceholder/previewparametersprovider.md): The handler block that provides the preview parameters for the specified cell.
+
+## Relationships
+
+### Inherits From
+
+- [UITableViewPlaceholder](uitableviewplaceholder.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Placeholder cells
+
+- [UITableViewDropPlaceholderContext](uitableviewdropplaceholdercontext.md): An object for tracking a placeholder cell that you added to your table during a drop operation.
+- [UITableViewPlaceholder](uitableviewplaceholder.md): An object that contains information about a placeholder cell being inserted into a table.
+
+# UITableViewDropPlaceholder (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Class  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+A placeholder cell that supports customizing the drop preview parameters.
+
+## Declaration
+
+```objectivec
+@interface UITableViewDropPlaceholder : UITableViewPlaceholder
+```
+
+<a id="overview"></a>
+
+## Overview
+
+When you want to insert a placeholder cell into your table, create a [UITableViewDropPlaceholder](uitableviewdropplaceholder.md) object and pass it to the [dropItem:toPlaceholder:](uitableviewdropcoordinator/drop%28__to_%29-3znax.md) method of your [UITableViewDropCoordinator](uitableviewdropcoordinator.md). You use a placeholder cell to display a temporary interface while you load the cell’s contents asynchronously. For example, your placeholder cell might display a progress indicator or a message that the cell content isn’t yet available. The placeholder object contains the reuse identifier of the temporary cell you want to display in your table. It can also include a custom preview to use during the drop.
+
+You must register the cells you use with your placeholders in advance. In your storyboard file, add a table view cell object to your table, configure its appearance, set its class to [UITableViewCell](uitableviewcell.md) (or an appropriate subclass), and assign a reuse identifier to it. When you create your [UITableViewDropPlaceholder](uitableviewdropplaceholder.md) object, pass the cell’s reuse identifier to [initWithInsertionIndexPath:reuseIdentifier:rowHeight:](uitableviewplaceholder/init%28insertionindexpath_reuseidentifier_rowheight_%29.md). The table view uses the information in your placeholder object to insert the cell into the table.
+
+Set the [cellUpdateHandler](uitableviewplaceholder/cellupdatehandler.md) to a block of code that configures the cell as a placeholder for the incoming data.
+
+For more information, see [Supporting drag and drop in table views](supporting-drag-and-drop-in-table-views.md).
+
+> **Important**
+
+>  Placeholder cells are meant to be a temporary part of your table view. Always replace them with actual cells as soon as possible, or cancel the drop to remove them from the table. Use the methods of a [UITableViewDropPlaceholderContext](uitableviewdropplaceholdercontext.md) object to remove placeholders from your table.
+
+## Topics
+
+### Providing preview parameters
+
+- [previewParametersProvider](uitableviewdropplaceholder/previewparametersprovider.md): The handler block that provides the preview parameters for the specified cell.
+
+## Relationships
+
+### Inherits From
+
+- [UITableViewPlaceholder](uitableviewplaceholder.md)
+
+## See Also
+
+### Placeholder cells
+
+- [UITableViewDropPlaceholderContext](uitableviewdropplaceholdercontext.md): An object for tracking a placeholder cell that you added to your table during a drop operation.
+- [UITableViewPlaceholder](uitableviewplaceholder.md): An object that contains information about a placeholder cell being inserted into a table.

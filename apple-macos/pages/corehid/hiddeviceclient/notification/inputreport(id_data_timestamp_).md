@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/corehid/hiddeviceclient/notification/inputreport(id:data:timestamp:)](https://developer.apple.com/documentation/corehid/hiddeviceclient/notification/inputreport(id:data:timestamp:))
+
+# HIDDeviceClient.Notification.inputReport(id:data:timestamp:)
+
+**Framework:** Core HID  
+**Kind:** Case  
+**Availability:** macOS 15.0+
+
+A notification that an input report was received from the device.
+
+## Declaration
+
+```swift
+case inputReport(id: HIDReportID?, data: Data, timestamp: SuspendingClock.Instant)
+```
+
+## Parameters
+
+- `id`: The ID of the report. This may not be populated if the descriptor contains only one report.
+- `data`: The raw bytes of the report. If there are multiple reports, the first byte is the report ID.
+- `timestamp`: The time the report was received by the system.

@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uitextformattingviewcontrollerremoveitalicchangetype](https://developer.apple.com/documentation/uikit/uitextformattingviewcontrollerremoveitalicchangetype)
+
+# UITextFormattingViewControllerRemoveItalicChangeType
+
+**Interface language:** Objective-C
+
+**Framework:** UIKit  
+**Kind:** Global Variable  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · visionOS 26.0+
+
+## Declaration
+
+```objectivec
+extern UITextFormattingViewControllerChangeType const UITextFormattingViewControllerRemoveItalicChangeType;
+```
+
+## See Also
+
+### Constants
+
+- [UITextFormattingViewControllerDecreaseFontSizeChangeType](uitextformattingviewcontrollerdecreasefontsizechangetype.md)
+- [UITextFormattingViewControllerDecreaseIndentationChangeType](uitextformattingviewcontrollerdecreaseindentationchangetype.md)
+- [UITextFormattingViewControllerFontChangeType](uitextformattingviewcontrollerfontchangetype.md)
+- [UITextFormattingViewControllerFontSizeChangeType](uitextformattingviewcontrollerfontsizechangetype.md)
+- [UITextFormattingViewControllerFormattingStyleChangeType](uitextformattingviewcontrollerformattingstylechangetype.md)
+- [UITextFormattingViewControllerHighlightChangeType](uitextformattingviewcontrollerhighlightchangetype.md)
+- [UITextFormattingViewControllerIncreaseFontSizeChangeType](uitextformattingviewcontrollerincreasefontsizechangetype.md)
+- [UITextFormattingViewControllerIncreaseIndentationChangeType](uitextformattingviewcontrollerincreaseindentationchangetype.md)
+- [UITextFormattingViewControllerLineHeightPointSizeChangeType](uitextformattingviewcontrollerlineheightpointsizechangetype.md)
+- [UITextFormattingViewControllerRemoveBoldChangeType](uitextformattingviewcontrollerremoveboldchangetype.md)
+- [UITextFormattingViewControllerRemoveStrikethroughChangeType](uitextformattingviewcontrollerremovestrikethroughchangetype.md)
+- [UITextFormattingViewControllerRemoveUnderlineChangeType](uitextformattingviewcontrollerremoveunderlinechangetype.md)
+- [UITextFormattingViewControllerSetBoldChangeType](uitextformattingviewcontrollersetboldchangetype.md)
+- [UITextFormattingViewControllerSetItalicChangeType](uitextformattingviewcontrollersetitalicchangetype.md)
+- [UITextFormattingViewControllerSetStrikethroughChangeType](uitextformattingviewcontrollersetstrikethroughchangetype.md)

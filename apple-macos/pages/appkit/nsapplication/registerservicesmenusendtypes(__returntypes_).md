@@ -1,0 +1,71 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsapplication/registerservicesmenusendtypes(_:returntypes:)](https://developer.apple.com/documentation/appkit/nsapplication/registerservicesmenusendtypes(_:returntypes:))
+
+# registerServicesMenuSendTypes(\_:returnTypes:) (Swift)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS
+
+Registers the pasteboard types the receiver can send and receive in response to service requests.
+
+## Declaration
+
+```swift
+func registerServicesMenuSendTypes(_ sendTypes: [NSPasteboard.PasteboardType], returnTypes: [NSPasteboard.PasteboardType])
+```
+
+## Parameters
+
+- `sendTypes`: An array of `NSString` objects, each of which corresponds to a particular pasteboard type that the app can send.
+- `returnTypes`: An array of `NSString` objects, each of which corresponds to a particular pasteboard type that the app can receive.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If the receiver has a Services menu, a menu item is added for each service provider that can accept one of the specified `sendTypes` or return one of the specified `returnTypes`. You should typically invoke this method at app startup time or when an object that can use services is created. You can invoke it more than once—its purpose is to ensure there is a menu item for every service the app can use. The event-handling mechanism will dynamically enable the individual items to indicate which services are currently appropriate. All the `NSResponder` objects in your app (typically `NSView` objects) should register every possible type they can send and receive by sending this message to `NSApp`.
+
+## See Also
+
+### Related Documentation
+
+- [validRequestor(forSendType:returnType:)](validrequestor%28forsendtype_returntype_%29.md): Indicates whether the receiver can send and receive the specified pasteboard types.
+
+### Managing the Services Menu
+
+- [servicesMenu](servicesmenu.md): The app’s Services menu.
+
+# registerServicesMenuSendTypes:returnTypes: (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS
+
+Registers the pasteboard types the receiver can send and receive in response to service requests.
+
+## Declaration
+
+```objectivec
+- (void) registerServicesMenuSendTypes:(NSArray<NSString *> *) sendTypes returnTypes:(NSArray<NSString *> *) returnTypes;
+```
+
+## Parameters
+
+- `sendTypes`: An array of `NSString` objects, each of which corresponds to a particular pasteboard type that the app can send.
+- `returnTypes`: An array of `NSString` objects, each of which corresponds to a particular pasteboard type that the app can receive.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If the receiver has a Services menu, a menu item is added for each service provider that can accept one of the specified `sendTypes` or return one of the specified `returnTypes`. You should typically invoke this method at app startup time or when an object that can use services is created. You can invoke it more than once—its purpose is to ensure there is a menu item for every service the app can use. The event-handling mechanism will dynamically enable the individual items to indicate which services are currently appropriate. All the `NSResponder` objects in your app (typically `NSView` objects) should register every possible type they can send and receive by sending this message to `NSApp`.
+
+## See Also
+
+### Related Documentation
+
+- [validRequestorForSendType:returnType:](validrequestor%28forsendtype_returntype_%29.md): Indicates whether the receiver can send and receive the specified pasteboard types.
+
+### Managing the Services Menu
+
+- [servicesMenu](servicesmenu.md): The app’s Services menu.

@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/stackshot_flags_t/stackshot_active_kernel_threads_only](https://developer.apple.com/documentation/kernel/stackshot_flags_t/stackshot_active_kernel_threads_only)
+
+# STACKSHOT_ACTIVE_KERNEL_THREADS_ONLY
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Enumeration Case  
+**Availability:** macOS 10.12+
+
+## Declaration
+
+```objectivec
+STACKSHOT_ACTIVE_KERNEL_THREADS_ONLY
+```

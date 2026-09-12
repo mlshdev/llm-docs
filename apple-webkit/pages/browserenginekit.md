@@ -1,0 +1,240 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/browserenginekit](https://developer.apple.com/documentation/browserenginekit)
+
+# BrowserEngineKit (Swift)
+
+**Framework:** BrowserEngineKit  
+**Kind:** Framework  
+**Availability:** iOS 17.4+ · iPadOS 18.0+
+
+Create a browser that renders content using an alternative browser engine.
+
+<a id="Overview"></a>
+
+## Overview
+
+A web browser loads content and code from remote — and potentially untrusted — servers. Design your browser app to isolate access to system resources, the data of the person using the app, and untrusted data from the web. Code defensively to reduce the risk posed by vulnerabilities in your browser code.
+
+If you use [WKWebView](webkit/wkwebview.md) to render web content in your browser app, WebKit automatically distributes its work to extensions that isolate their access to important resources and data.
+
+Whether you use [WebKit](webkit.md) or write your own alternative browser engine, you need to:
+
+- Request the entitlement to act as a person’s default web browser. For more information, see [Preparing your app to be the default web browser](https://developer.apple.com/documentation/xcode/preparing-your-app-to-be-the-default-browser).
+- Watch for the [MarketplaceKitURIScheme](https://developer.apple.com/documentation/marketplacekit/marketplacekiturischeme) within web content to support alternative distribution apps that install from a website. For more information, see [Enabling alternative distribution app installation in a browser](https://developer.apple.com/documentation/marketplacekit/enabling-alternative-distribution-app-installation-in-a-browser).
+
+<a id="Build-a-multi-process-browser"></a>
+
+### Build a multi-process browser
+
+If you use an alternative browser engine in your app, you must design your secure browser infrastructure to separate different components into extensions that your browser manages. Design a limited inter-process communication (IPC) protocol that coordinates work across the extensions. Separating your alternative browser engine into distinct extensions limits the impact of security vulnerabilities in any one process.
+
+For more information on designing your browser extensions, see [Designing your browser architecture](browserenginekit/designing-your-browser-architecture.md). For information on using the extensions in your browser, see [Managing the browser extension life cycle](browserenginekit/managing-the-browser-extension-lifecycle.md).
+
+<a id="Render-websites"></a>
+
+### Render websites
+
+Your browser app can get significant benefits by integrating closely with UIKit. You can customize the way your app handles many low-level user interface events, ensure that your browser app correctly renders CSS, and that it properly manipulates the Javascript DOM. You can use view classes in [BrowserEngineKit](browserenginekit.md) to handle scrolling, drag interactions, and the context menu in your browser app.
+
+For information on integrating a custom text view with the UIKit text system, see [Integrating custom browser text views with UIKit](browserenginekit/integrating-custom-browser-text-views-with-uikit.md).
+
+In your browser app, launch extensions as the person browses web content to make network requests, load the web content, and render media. For more information, see [Managing the browser extension life cycle](browserenginekit/managing-the-browser-extension-lifecycle.md). Use [XPC](https://developer.apple.com/documentation/xpc) to communicate between your browser app and extension processes. For more information, see [Using XPC to communicate with browser extensions](browserenginekit/using-xpc-to-communicate-with-browser-extensions.md).
+
+<a id="Develop-by-region"></a>
+
+### Develop by region
+
+To distribute an app that uses an alternative browser engine, request the relevant entitlements for your developer account. You must also request an entitlement if your app isn’t a web browser but embeds an alternative browser engine for in-app browsing.
+
+Support for alternative browser engines varies by geographic region:
+
+- **European Union**: To request the entitlements in the EU for an iOS or iPadOS app, see [Using alternative browser engines in the European Union](https://developer.apple.com/support/alternative-browser-engines).
+- **Japan**: To request the entitlements in Japan for an iOS app, see [Using alternative browser engines in Japan](https://developer.apple.com/support/alternative-browser-engines-jp). Also, your app needs to adopt the [com.apple.security.hardened-process.checked-allocations](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.security.hardened-process.checked-allocations) entitlement. In apps that aren’t browsers, you can embed only an alternative browser engine of which you have ownership; for more information, see [Embedded Browser Engine Association Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.embedded-web-browser-engine.engine-association).
+
+## Topics
+
+### Essentials
+
+- [Developing a browser app that uses an alternative browser engine](browserenginekit/developing-a-browser-app-that-uses-an-alternative-browser-engine.md): Create a browser app and associated extensions.
+- [Designing your browser architecture](browserenginekit/designing-your-browser-architecture.md): Isolate privileged access to system resources and private data from untrusted code.
+- [Preparing your app to be the default web browser](https://developer.apple.com/documentation/xcode/preparing-your-app-to-be-the-default-browser): Configure your browser app so users can set it as the default on their device instead of Safari.
+
+### Browser extensions
+
+- [Creating browser extensions in Xcode](browserenginekit/creating-browser-extensions-in-xcode.md): Configure your Xcode project to support your alternative browser engine.
+- [Extension life cycle](browserenginekit/extension-lifecycle.md): Launch, communicate with, and invalidate browser extensions.
+- [Extension resources](browserenginekit/extension-resources.md): Control access to files and memory in browser extensions.
+
+### Web content
+
+- [View and input coordination](browserenginekit/view-coordination.md): Display content in the browser’s UI that an extension renders.
+- [Text interaction](browserenginekit/text-interaction.md): Integrate your web browser engine asynchronously with the text system.
+- [BEWebAppManifest](browserenginekit/bewebappmanifest.md): An object that represents a web app manifest.
+
+### Scroll view interaction
+
+- [BEScrollView](browserenginekit/bescrollview.md): A scroll view that works with its delegate to handle nesting and customize scroll interactions.
+- [BEScrollViewScrollUpdate](browserenginekit/bescrollviewscrollupdate.md): An object that describes a change in a scroll view’s scroll state.
+- [BEScrollViewDelegate](browserenginekit/bescrollviewdelegate.md): A protocol for scroll view delegates to handle scroll updates and DOM nesting.
+
+### Drag interaction
+
+- [BEDragInteraction](browserenginekit/bedraginteraction.md): An interaction that enables your app to asynchronously provide drag items.
+- [BEDragInteractionDelegate](browserenginekit/bedraginteractiondelegate.md): A protocol for a drag interaction delegate.
+
+### Context menus
+
+- [BEContextMenuConfiguration](browserenginekit/becontextmenuconfiguration.md): An object that defers presentation of a contextual menu.
+
+### Accessibility
+
+- [BEAccessibilityTextMarkerSupport](browserenginekit/beaccessibilitytextmarkersupport.md): A set of methods that provide information about text offsets to support assistive features.
+- [valueChangedNotification](browserenginekit/beaccessibility/valuechangednotification.md): A notification you post when the value of an element changes.
+- [selectionChangedNotification](browserenginekit/beaccessibility/selectionchangednotification.md): A notification you post when the selection inside an element changes.
+- [BEAccessibilityContainerType](browserenginekit/beaccessibilitycontainertype.md): Types of containers for an element.
+- [BEAccessibilityPressedState](browserenginekit/beaccessibilitypressedstate.md): An enumeration that indicates whether an element is pressed.
+- [menuItem](browserenginekit/beaccessibility/menuitem.md): An accessibility element with a menu interface.
+- [popUpButton](browserenginekit/beaccessibility/popupbutton.md): An accessibility element with a pop-up button interface.
+- [radioButton](browserenginekit/beaccessibility/radiobutton.md): An accessibility element with a radio button interface.
+- [readOnly](browserenginekit/beaccessibility/readonly.md): An accessibility element with a read-only interface.
+- [visited](browserenginekit/beaccessibility/visited.md): An accessibility element that resembles a visited link.
+- [BEAccessibilityRemoteElement](browserenginekit/beaccessibilityremoteelement.md): A class that shares the accessibility information of a peripheral process with the main process.
+- [BEAccessibilityRemoteHostElement](browserenginekit/beaccessibilityremotehostelement.md): A class that connects the accessibility information of different processes.
+- [BEAccessibility](browserenginekit/beaccessibility.md): A category for accessibility features in the framework.
+
+### Just-in-time code compilation
+
+- [Protecting code compiled just in time](browserenginekit/protecting-code-compiled-just-in-time.md): Toggle memory between being writable and executable.
+- [Improving control flow integrity with pointer authentication](https://developer.apple.com/documentation/apple-silicon/improving-control-flow-integrity-with-pointer-authentication): Increase confidence that your code uses pointers correctly.
+- [BE_JIT_WRITE_PROTECT_TAG](browserenginecore/be_jit_write_protect_tag.md): A discriminator value the system uses to generate pointer authentication codes for just-in-time compilation.
+
+### Downloads
+
+- [Downloading files in a web browser with an alternative browser engine](browserenginekit/downloading-files-in-a-web-browser.md): Report download progress to the system to keep your networking extension active.
+- [BEDownloadMonitor](browserenginekit/bedownloadmonitor-9bwls.md): An object that reports the status of web downloads to the system.
+
+### Enumerations
+
+- [BEAccessibilityOrientation](browserenginekit/beaccessibilityorientation.md)
+
+# BrowserEngineKit (Objective-C)
+
+**Framework:** BrowserEngineKit  
+**Kind:** Framework  
+**Availability:** iOS 17.4+ · iPadOS 18.0+
+
+Create a browser that renders content using an alternative browser engine.
+
+<a id="Overview"></a>
+
+## Overview
+
+A web browser loads content and code from remote — and potentially untrusted — servers. Design your browser app to isolate access to system resources, the data of the person using the app, and untrusted data from the web. Code defensively to reduce the risk posed by vulnerabilities in your browser code.
+
+If you use [WKWebView](webkit/wkwebview.md) to render web content in your browser app, WebKit automatically distributes its work to extensions that isolate their access to important resources and data.
+
+Whether you use [WebKit](webkit.md) or write your own alternative browser engine, you need to:
+
+- Request the entitlement to act as a person’s default web browser. For more information, see [Preparing your app to be the default web browser](https://developer.apple.com/documentation/xcode/preparing-your-app-to-be-the-default-browser).
+- Watch for the [MarketplaceKitURIScheme](https://developer.apple.com/documentation/marketplacekit/marketplacekiturischeme) within web content to support alternative distribution apps that install from a website. For more information, see [Enabling alternative distribution app installation in a browser](https://developer.apple.com/documentation/marketplacekit/enabling-alternative-distribution-app-installation-in-a-browser).
+
+<a id="Build-a-multi-process-browser"></a>
+
+### Build a multi-process browser
+
+If you use an alternative browser engine in your app, you must design your secure browser infrastructure to separate different components into extensions that your browser manages. Design a limited inter-process communication (IPC) protocol that coordinates work across the extensions. Separating your alternative browser engine into distinct extensions limits the impact of security vulnerabilities in any one process.
+
+For more information on designing your browser extensions, see [Designing your browser architecture](browserenginekit/designing-your-browser-architecture.md). For information on using the extensions in your browser, see [Managing the browser extension life cycle](browserenginekit/managing-the-browser-extension-lifecycle.md).
+
+<a id="Render-websites"></a>
+
+### Render websites
+
+Your browser app can get significant benefits by integrating closely with UIKit. You can customize the way your app handles many low-level user interface events, ensure that your browser app correctly renders CSS, and that it properly manipulates the Javascript DOM. You can use view classes in [BrowserEngineKit](browserenginekit.md) to handle scrolling, drag interactions, and the context menu in your browser app.
+
+For information on integrating a custom text view with the UIKit text system, see [Integrating custom browser text views with UIKit](browserenginekit/integrating-custom-browser-text-views-with-uikit.md).
+
+In your browser app, launch extensions as the person browses web content to make network requests, load the web content, and render media. For more information, see [Managing the browser extension life cycle](browserenginekit/managing-the-browser-extension-lifecycle.md). Use [XPC](https://developer.apple.com/documentation/xpc) to communicate between your browser app and extension processes. For more information, see [Using XPC to communicate with browser extensions](browserenginekit/using-xpc-to-communicate-with-browser-extensions.md).
+
+<a id="Develop-by-region"></a>
+
+### Develop by region
+
+To distribute an app that uses an alternative browser engine, request the relevant entitlements for your developer account. You must also request an entitlement if your app isn’t a web browser but embeds an alternative browser engine for in-app browsing.
+
+Support for alternative browser engines varies by geographic region:
+
+- **European Union**: To request the entitlements in the EU for an iOS or iPadOS app, see [Using alternative browser engines in the European Union](https://developer.apple.com/support/alternative-browser-engines).
+- **Japan**: To request the entitlements in Japan for an iOS app, see [Using alternative browser engines in Japan](https://developer.apple.com/support/alternative-browser-engines-jp). Also, your app needs to adopt the [com.apple.security.hardened-process.checked-allocations](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.security.hardened-process.checked-allocations) entitlement. In apps that aren’t browsers, you can embed only an alternative browser engine of which you have ownership; for more information, see [Embedded Browser Engine Association Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.embedded-web-browser-engine.engine-association).
+
+## Topics
+
+### Essentials
+
+- [Developing a browser app that uses an alternative browser engine](browserenginekit/developing-a-browser-app-that-uses-an-alternative-browser-engine.md): Create a browser app and associated extensions.
+- [Designing your browser architecture](browserenginekit/designing-your-browser-architecture.md): Isolate privileged access to system resources and private data from untrusted code.
+- [Preparing your app to be the default web browser](https://developer.apple.com/documentation/xcode/preparing-your-app-to-be-the-default-browser): Configure your browser app so users can set it as the default on their device instead of Safari.
+
+### Browser extensions
+
+- [Creating browser extensions in Xcode](browserenginekit/creating-browser-extensions-in-xcode.md): Configure your Xcode project to support your alternative browser engine.
+- [Extension life cycle](browserenginekit/extension-lifecycle.md): Launch, communicate with, and invalidate browser extensions.
+- [Extension resources](browserenginekit/extension-resources.md): Control access to files and memory in browser extensions.
+
+### Web content
+
+- [View and input coordination](browserenginekit/view-coordination.md): Display content in the browser’s UI that an extension renders.
+- [Text interaction](browserenginekit/text-interaction.md): Integrate your web browser engine asynchronously with the text system.
+- [BEWebAppManifest](browserenginekit/bewebappmanifest.md): An object that represents a web app manifest.
+
+### Scroll view interaction
+
+- [BEScrollView](browserenginekit/bescrollview.md): A scroll view that works with its delegate to handle nesting and customize scroll interactions.
+- [BEScrollViewScrollUpdate](browserenginekit/bescrollviewscrollupdate.md): An object that describes a change in a scroll view’s scroll state.
+- [BEScrollViewDelegate](browserenginekit/bescrollviewdelegate.md): A protocol for scroll view delegates to handle scroll updates and DOM nesting.
+
+### Drag interaction
+
+- [BEDragInteraction](browserenginekit/bedraginteraction.md): An interaction that enables your app to asynchronously provide drag items.
+- [BEDragInteractionDelegate](browserenginekit/bedraginteractiondelegate.md): A protocol for a drag interaction delegate.
+
+### Context menus
+
+- [BEContextMenuConfiguration](browserenginekit/becontextmenuconfiguration.md): An object that defers presentation of a contextual menu.
+
+### Accessibility
+
+- [BEAccessibilityTextMarkerSupport](browserenginekit/beaccessibilitytextmarkersupport.md): A set of methods that provide information about text offsets to support assistive features.
+- [BEAccessibilityValueChangedNotification](browserenginekit/beaccessibility/valuechangednotification.md): A notification you post when the value of an element changes.
+- [BEAccessibilitySelectionChangedNotification](browserenginekit/beaccessibility/selectionchangednotification.md): A notification you post when the selection inside an element changes.
+- [BEAccessibilityContainerType](browserenginekit/beaccessibilitycontainertype.md): Types of containers for an element.
+- [BEAccessibilityPressedState](browserenginekit/beaccessibilitypressedstate.md): An enumeration that indicates whether an element is pressed.
+- [BEAccessibilityTraitMenuItem](browserenginekit/beaccessibility/menuitem.md): An accessibility element with a menu interface.
+- [BEAccessibilityTraitPopUpButton](browserenginekit/beaccessibility/popupbutton.md): An accessibility element with a pop-up button interface.
+- [BEAccessibilityTraitRadioButton](browserenginekit/beaccessibility/radiobutton.md): An accessibility element with a radio button interface.
+- [BEAccessibilityTraitReadOnly](browserenginekit/beaccessibility/readonly.md): An accessibility element with a read-only interface.
+- [BEAccessibilityTraitVisited](browserenginekit/beaccessibility/visited.md): An accessibility element that resembles a visited link.
+- [BEAccessibilityRemoteElement](browserenginekit/beaccessibilityremoteelement.md): A class that shares the accessibility information of a peripheral process with the main process.
+- [BEAccessibilityRemoteHostElement](browserenginekit/beaccessibilityremotehostelement.md): A class that connects the accessibility information of different processes.
+
+### Just-in-time code compilation
+
+- [Protecting code compiled just in time](browserenginekit/protecting-code-compiled-just-in-time.md): Toggle memory between being writable and executable.
+- [Improving control flow integrity with pointer authentication](https://developer.apple.com/documentation/apple-silicon/improving-control-flow-integrity-with-pointer-authentication): Increase confidence that your code uses pointers correctly.
+- [BE_JIT_WRITE_PROTECT_TAG](browserenginecore/be_jit_write_protect_tag.md): A discriminator value the system uses to generate pointer authentication codes for just-in-time compilation.
+
+### Downloads
+
+- [Downloading files in a web browser with an alternative browser engine](browserenginekit/downloading-files-in-a-web-browser.md): Report download progress to the system to keep your networking extension active.
+- [BEDownloadMonitor](browserenginekit/bedownloadmonitor-9y4hu.md): An object that reports the status of web downloads to the system.
+
+### Macros
+
+- [BROWSERENGINEKIT_HAS_LIBXPC](browserenginekit/browserenginekit_has_libxpc.md)
+- [BROWSERENGINEKIT_HAS_UIINTERACTION](browserenginekit/browserenginekit_has_uiinteraction.md)
+- [BROWSERENGINEKIT_HAS_UIKIT](browserenginekit/browserenginekit_has_uikit.md)
+- [BROWSERENGINEKIT_HAS_UIVIEW](browserenginekit/browserenginekit_has_uiview.md)
+
+### Enumerations
+
+- [BEAccessibilityOrientation](browserenginekit/beaccessibilityorientation.md)
+- [BEWebContentFilterPermissionDecision](browserenginekit/bewebcontentfilter/permissiondecision.md)

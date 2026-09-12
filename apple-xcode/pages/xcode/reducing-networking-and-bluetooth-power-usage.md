@@ -1,0 +1,67 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/reducing-networking-and-bluetooth-power-usage](https://developer.apple.com/documentation/xcode/reducing-networking-and-bluetooth-power-usage)
+
+# Reducing networking and Bluetooth power usage
+
+**Kind:** Article
+
+Schedule requests strategically and minimize background network activity to decrease your app’s energy use.
+
+<a id="Overview"></a>
+
+## Overview
+
+Decrease the power your app consumes in communication-related tasks by choosing the correct networking technology, batching connections, and waiting for appropriate networking conditions before making requests.
+
+<a id="Choose-an-appropriate-networking-framework"></a>
+
+### Choose an appropriate networking framework
+
+Your choice of networking framework directly impacts your app’s energy consumption. Use [URLSession](https://developer.apple.com/documentation/foundation/urlsession) to send HTTP requests, because it includes built-in power optimizations like connection pooling and intelligent scheduling. For lower-level networking access, use the [Network](https://developer.apple.com/documentation/network) framework, which provides energy-efficient protocols and gives you control over connection timing.
+
+Both `URLSession` and the Network framework take advantage of system-level power optimizations.
+
+<a id="Schedule-requests-efficiently"></a>
+
+### Schedule requests efficiently
+
+Minimize energy consumption by being strategic about when and how your app accesses the network. Use a single [URLSession](https://developer.apple.com/documentation/foundation/urlsession) instance (rather than multiple instances) so you can re-use connections wherever possible.
+
+Batch multiple requests together and compress payloads to reduce the total time network interfaces remain active.
+
+Manage expensive network requests through [URLSession](https://developer.apple.com/documentation/foundation/urlsession), and set properties on [URLSessionConfiguration](https://developer.apple.com/documentation/foundation/urlsessionconfiguration) to handle different network conditions. Set [waitsForConnectivity](https://developer.apple.com/documentation/foundation/urlsessionconfiguration/waitsforconnectivity) to `true` to avoid wasteful connection attempts when the network is unavailable.
+
+To prevent network tasks from using an expensive network, set [allowsExpensiveNetworkAccess](https://developer.apple.com/documentation/foundation/urlsessionconfiguration/allowsexpensivenetworkaccess) to `false`. Postpone nonessential tasks until a nonexpensive network, such as Wi-Fi, becomes available. Limit your app’s use of constrained network access by setting [allowsConstrainedNetworkAccess](https://developer.apple.com/documentation/foundation/urlsessionconfiguration/allowsconstrainednetworkaccess) to `false` for discretionary requests, and defer these tasks until a nonconstrained interface becomes available.
+
+<a id="Schedule-network-requests-in-the-background"></a>
+
+### Schedule network requests in the background
+
+Use [background(withIdentifier:)](https://developer.apple.com/documentation/foundation/urlsessionconfiguration/background%28withidentifier:%29) to configure a [URLSessionDownloadTask](https://developer.apple.com/documentation/foundation/urlsessiondownloadtask) to run in the background. The system schedules background download tasks when energy conditions are optional. Set [isDiscretionary](https://developer.apple.com/documentation/foundation/urlsessionconfiguration/isdiscretionary) to `true` to tell the system to use intelligent scheduling, which defers the download until the device is charging or connected to Wi-Fi.
+
+The system automatically coalesces background downloads from multiple apps, keeping the networking hardware active for shorter periods and reducing the energy overhead associated with each app.
+
+For more information, see [Downloading files in the background](https://developer.apple.com/documentation/foundation/downloading-files-in-the-background).
+
+<a id="Refresh-app-state-in-the-background"></a>
+
+### Refresh app state in the background
+
+Use [BGAppRefreshTask](https://developer.apple.com/documentation/backgroundtasks/bgapprefreshtask) strategically to keep your app’s state updated, while minimizing unnecessary network activity. Schedule background refresh tasks only when essential data updates are needed, and always check network conditions before initiating requests.
+
+Set an appropriate value for your request’s [earliestBeginDate](https://developer.apple.com/documentation/backgroundtasks/bgtaskrequest/earliestbegindate) to avoid frequent wake-ups, using exponential backoff for failed attempts to prevent energy-draining retry loops. For example, if your first refresh task fails, set the `earliestBeginDate` on the first retry 5 minutes later. If that fails, wait 10 minutes before retrying, then 20 minutes, and so on.
+
+Call [setTaskCompleted(success:)](https://developer.apple.com/documentation/backgroundtasks/bgtask/settaskcompleted%28success:%29) promptly when your task succeeds or fails to allow the system to return to sleep. Gracefully handle situations where the system expires your task after a timeout in your implementation of [expirationHandler](https://developer.apple.com/documentation/backgroundtasks/bgtask/expirationhandler).
+
+If your app uses too many resources in the background, the system might stop it, which increases your app’s energy use because the system needs to launch your app instead of bringing it to the foreground the next time someone tries to use it.
+
+<a id="Minimize-your-apps-Bluetooth-use"></a>
+
+### Minimize your app’s Bluetooth use
+
+Keep connections to Bluetooth accessories open only when your app is communicating with the accessory. Discover and configure accessories using [AccessorySetupKit](https://developer.apple.com/documentation/accessorysetupkit), which efficiently maintains the Bluetooth connection for you.
+
+## See Also
+
+### Networking and location
+
+- [Accessing the device’s location efficiently](accessing-the-device-s-location-efficiently.md): Use Core Location features to manage energy use, receive updates, and minimize location update frequency.

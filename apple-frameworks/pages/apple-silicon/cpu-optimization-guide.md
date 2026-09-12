@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/apple-silicon/cpu-optimization-guide](https://developer.apple.com/documentation/apple-silicon/cpu-optimization-guide)
+
+# Apple Silicon CPU Optimization Guide
+
+**Kind:** Article
+
+Identify performance optimization strategies for Apple silicon M-series and A-series chips.
+
+<a id="Overview"></a>
+
+## Overview
+
+The Apple Silicon CPU Optimization Guide provides an overview of the architecture of Apple silicon CPUs and optimization tips to help you optimize your code’s performance. The guide contains a wide range of information that is useful for all developers:
+
+- An overview of the Instruction Set Architecture (ISA) along with a method for detecting the existence of ISA features
+- Detailed description of the Advanced SIMD and Floating Point (FP) instructions as well as the Scalable Matrix Extension (SME) instructions
+- A discussion of intrinsic functions for utilizing specific instructions in high-level languages
+- An overview of CPU and cache topologies with recommendations for effective utilization of asymmetric multiprocessing
+- A high-level overview of CPU microarchitecture with sizes of key CPU structures and instruction latency and bandwidth tables
+- A discussion of recommended instruction sequences for various actions and algorithms
+- Lists of performance-monitoring events and metrics to measure key CPU performance behavior
+
+Access to the guide requires a registered developer account and you must opt-in to an additional agreement. To get the latest version of the guide, log in to your developer account and see [Apple Silicon CPU Optimization Guide](https://developer.apple.com/download/apple-silicon-cpu-optimization-guide/).
+
+## See Also
+
+### Performance
+
+- [Tuning your code’s performance for Apple silicon](tuning-your-code-s-performance-for-apple-silicon.md): Improve your code to get the best performance from both Apple silicon and Intel-based Mac computers.

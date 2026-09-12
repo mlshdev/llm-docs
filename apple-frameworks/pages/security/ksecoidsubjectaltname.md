@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/ksecoidsubjectaltname](https://developer.apple.com/documentation/security/ksecoidsubjectaltname)
+
+# kSecOIDSubjectAltName (Swift)
+
+**Framework:** Security  
+**Kind:** Global Variable  
+**Availability:** macOS 10.7+
+
+## Declaration
+
+```swift
+let kSecOIDSubjectAltName: CFString
+```
+
+# kSecOIDSubjectAltName (Objective-C)
+
+**Framework:** Security  
+**Kind:** Global Variable  
+**Availability:** macOS 10.7+
+
+## Declaration
+
+```objectivec
+extern CFStringRef const kSecOIDSubjectAltName;
+```

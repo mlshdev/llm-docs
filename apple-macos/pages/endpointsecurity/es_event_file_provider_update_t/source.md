@@ -1,0 +1,43 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_event_file_provider_update_t/source](https://developer.apple.com/documentation/endpointsecurity/es_event_file_provider_update_t/source)
+
+# source (Swift)
+
+**Framework:** Endpoint Security  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst · macOS
+
+The source file of the event.
+
+## Declaration
+
+```swift
+var source: UnsafeMutablePointer<es_file_t>
+```
+
+## See Also
+
+### Inspecting Event Properties
+
+- [target_path](target_path.md): The target path to update.
+- [reserved](reserved.md): An unused field reserved for future use.
+
+# source (Objective-C)
+
+**Framework:** Endpoint Security  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst · macOS
+
+The source file of the event.
+
+## Declaration
+
+```objectivec
+es_file_t * source;
+```
+
+## See Also
+
+### Inspecting Event Properties
+
+- [target_path](target_path.md): The target path to update.
+- [reserved](reserved.md): An unused field reserved for future use.

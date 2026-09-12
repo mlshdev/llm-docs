@@ -1,0 +1,63 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtlgpufamily/apple5](https://developer.apple.com/documentation/metal/mtlgpufamily/apple5)
+
+# MTLGPUFamily.apple5 (Swift)
+
+**Framework:** Metal  
+**Kind:** Case  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
+
+Represents the Apple family 5 GPU features that correspond to the Apple A12 GPUs.
+
+## Declaration
+
+```swift
+case apple5
+```
+
+## Mentioned In
+
+- [Optimizing texture data](../optimizing-texture-data.md)
+
+## See Also
+
+### Checking for Apple family GPU support
+
+- [MTLGPUFamily.apple9](apple9.md): Represents the Apple family 9 GPU features that correspond to the Apple A17, M3, and M4 GPUs.
+- [MTLGPUFamily.apple8](apple8.md): Represents the Apple family 8 GPU features that correspond to the Apple A15, A16, and M2 GPUs.
+- [MTLGPUFamily.apple7](apple7.md): Represents the Apple family 7 GPU features that correspond to the Apple A14 and M1 GPUs.
+- [MTLGPUFamily.apple6](apple6.md): Represents the Apple family 6 GPU features that correspond to the Apple A13 GPUs.
+- [MTLGPUFamily.apple4](apple4.md): Represents the Apple family 4 GPU features that correspond to the Apple A11 GPUs.
+- [MTLGPUFamily.apple3](apple3.md): Represents the Apple family 3 GPU features that correspond to the Apple A9 and A10 GPUs.
+- [MTLGPUFamily.apple2](apple2.md): Represents the Apple family 2 GPU features that correspond to the Apple A8 GPUs.
+- [MTLGPUFamily.apple1](apple1.md): Represents the Apple family 1 GPU features that correspond to the Apple A7 GPUs.
+
+# MTLGPUFamilyApple5 (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Enumeration Case  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
+
+Represents the Apple family 5 GPU features that correspond to the Apple A12 GPUs.
+
+## Declaration
+
+```objectivec
+MTLGPUFamilyApple5
+```
+
+## Mentioned In
+
+- [Optimizing texture data](../optimizing-texture-data.md)
+
+## See Also
+
+### Checking for Apple family GPU support
+
+- [MTLGPUFamilyApple9](apple9.md): Represents the Apple family 9 GPU features that correspond to the Apple A17, M3, and M4 GPUs.
+- [MTLGPUFamilyApple8](apple8.md): Represents the Apple family 8 GPU features that correspond to the Apple A15, A16, and M2 GPUs.
+- [MTLGPUFamilyApple7](apple7.md): Represents the Apple family 7 GPU features that correspond to the Apple A14 and M1 GPUs.
+- [MTLGPUFamilyApple6](apple6.md): Represents the Apple family 6 GPU features that correspond to the Apple A13 GPUs.
+- [MTLGPUFamilyApple4](apple4.md): Represents the Apple family 4 GPU features that correspond to the Apple A11 GPUs.
+- [MTLGPUFamilyApple3](apple3.md): Represents the Apple family 3 GPU features that correspond to the Apple A9 and A10 GPUs.
+- [MTLGPUFamilyApple2](apple2.md): Represents the Apple family 2 GPU features that correspond to the Apple A8 GPUs.
+- [MTLGPUFamilyApple1](apple1.md): Represents the Apple family 1 GPU features that correspond to the Apple A7 GPUs.

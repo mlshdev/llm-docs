@@ -1,0 +1,32 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/swiftdata/historydescriptor/init(predicate:sortby:)](https://developer.apple.com/documentation/swiftdata/historydescriptor/init(predicate:sortby:))
+
+# init(predicate:sortBy:)
+
+**Framework:** SwiftData  
+**Kind:** Initializer  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+ · Swift 5.9+
+
+Initializes a new history descriptor with the provided predicate and sort descriptor.
+
+## Declaration
+
+```swift
+init(predicate: Predicate<TransactionType>? = nil, sortBy: [SortDescriptor<TransactionType>] = [])
+```
+
+## Parameters
+
+- `predicate`: The logical condition that determines whether the history includes a specific model in its results. The default value is `nil`.
+- `sortBy`: The array of sort descriptors that tell the history how to order its results. The default value is an empty array.
+
+<a id="discussion"></a>
+
+## Discussion
+
+If you don’t specify a predicate, any fetch using this descriptor will return all models of the associated type. If you expect the number of fetched transactions to be high, use [fetchLimit](fetchlimit.md) to limit the number of transactions returned.
+
+## See Also
+
+### Creating a descriptor
+
+- [init(predicate:)](init%28predicate_%29.md): Initializes a new history descriptor with the provided predicate.

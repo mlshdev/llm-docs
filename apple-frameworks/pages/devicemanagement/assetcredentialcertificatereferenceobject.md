@@ -1,0 +1,30 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/assetcredentialcertificatereferenceobject](https://developer.apple.com/documentation/devicemanagement/assetcredentialcertificatereferenceobject)
+
+# AssetCredentialCertificateReferenceObject
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Object  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.1+ · watchOS 10.0+
+
+The external reference. Ensure the asset data contains exactly one certificate. If the PEM data contains more than one certificate, the system installs the first certificate and ignores the rest. Ensure that the asset data uses a media type of `application/pkcs1` or `application/pem` to correctly identify the type of encoded certificate. If the asset data includes a `ContentType` sub-key, set it to the corresponding media type.
+
+## Declaration
+
+```
+object AssetCredentialCertificateReferenceObject
+```
+
+## Properties
+
+- `ContentType` — `string`: The media type that describes the data. If present, the system checks the actual media type of the downloaded data, and an error occurs if the values don’t match.
+- `DataURL` — `string` (required): The URL to retrieve data, which needs to start with `https://`.
+- `Hash-SHA-256` — `string`: A SHA-256 hash of the data stored at the `DataURL`. Don’t set this value if `Size` is `0` as the client ignores it. However, if present, the system checks the actual hash of the downloaded data, and an error occurs if the values don’t match.
+- `Size` — `integer`: The size of the data. Set the size to `0` if there’s no expectation of a response body. If present, the system checks the actual size of the downloaded data, and an error occurs if the values don’t match.
+
+## See Also
+
+### Objects
+
+- [AssetCredentialCertificateAuthenticationObject](assetcredentialcertificateauthenticationobject.md): The server authentication details. If this key is absent, the default authentication type is MDM.

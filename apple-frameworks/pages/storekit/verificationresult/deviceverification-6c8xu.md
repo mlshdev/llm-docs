@@ -1,0 +1,36 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/verificationresult/deviceverification-6c8xu](https://developer.apple.com/documentation/storekit/verificationresult/deviceverification-6c8xu)
+
+# deviceVerification
+
+**Framework:** StoreKit  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+ · watchOS 9.0+
+
+The device verification value to use to verify whether the app transaction belongs to the device.
+
+## Declaration
+
+```swift
+var deviceVerification: Data { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+For more information about using the device verification value, see [deviceVerification](../transaction/deviceverification.md).
+
+This value is identical to the [deviceVerification](../apptransaction/deviceverification.md) value in [AppTransaction](../apptransaction.md).
+
+## See Also
+
+### Getting properties for app transactions
+
+- [jwsRepresentation](jwsrepresentation-6ma59.md): Conforms when `SignedType` is `AppTransaction`. The app transaction signed by the App Store, in JWS Compact Serialization format.
+- [deviceVerificationNonce](deviceverificationnonce-6082b.md): Conforms when `SignedType` is `AppTransaction`. The UUID for computing the device verification value.
+- [signedDate](signeddate-24zch.md): Conforms when `SignedType` is `AppTransaction`. The date that the App Store signed the JWS app transaction.
+- [headerData](headerdata-3drrl.md): Conforms when `SignedType` is `AppTransaction`. The header component of the JWS app transaction.
+- [payloadData](payloaddata-97acz.md): Conforms when `SignedType` is `AppTransaction`. The payload component of the JWS app transaction.
+- [signedData](signeddata-99fyo.md): Conforms when `SignedType` is `AppTransaction`. The app transaction data that the signature applies to.
+- [signatureData](signaturedata-4pvv0.md): Conforms when `SignedType` is `AppTransaction`. The signature component of the JWS app transaction.
+- [signature](signature-6d5ue.md): Conforms when `SignedType` is `AppTransaction`. The signature component of the JSON web signature.

@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/string/!=(_:_:)-frzf](https://developer.apple.com/documentation/swift/string/!=(_:_:)-frzf)
+
+# !=(\_:\_:)
+
+**Framework:** Swift  
+**Kind:** Operator  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+## Declaration
+
+```swift
+static func != <RHS>(lhs: Self, rhs: RHS) -> Bool where RHS : StringProtocol
+```
+
+## See Also
+
+### Comparing Strings Using Operators
+
+- [==(\_:\_:)](==%28____%29.md): Returns a Boolean value indicating whether two values are equal.
+- [==(\_:\_:)](==%28____%29-8kzxf.md)
+- [~=(\_:\_:)](~=%28____%29.md)

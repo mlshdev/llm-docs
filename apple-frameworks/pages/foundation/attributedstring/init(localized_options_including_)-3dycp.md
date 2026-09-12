@@ -1,0 +1,13 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/attributedstring/init(localized:options:including:)-3dycp](https://developer.apple.com/documentation/foundation/attributedstring/init(localized:options:including:)-3dycp)
+
+# init(localized:options:including:)
+
+**Framework:** Foundation  
+**Kind:** Initializer  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+ · watchOS 9.0+
+
+## Declaration
+
+```swift
+init<S>(localized resource: LocalizedStringResource, options: AttributedString.LocalizationOptions, including scope: S.Type) where S : AttributeScope
+```

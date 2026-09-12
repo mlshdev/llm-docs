@@ -1,0 +1,44 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applearchive/archivebytestream/sharedbufferpipe(capacity:)](https://developer.apple.com/documentation/applearchive/archivebytestream/sharedbufferpipe(capacity:))
+
+# sharedBufferPipe(capacity:)
+
+**Framework:** Apple Archive  
+**Kind:** Type Method  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS · watchOS 7.0+
+
+Creates a pair of streams and links them by a shared buffer.
+
+## Declaration
+
+```swift
+static func sharedBufferPipe(capacity: Int) -> (output: ArchiveByteStream, input: ArchiveByteStream)?
+```
+
+## Parameters
+
+- `capacity`: The size of the internal buffer allocation, in bytes.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new pair of [ArchiveByteStream](../archivebytestream.md) instances on success; `nil` otherwise.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This function creates two [ArchiveByteStream](../archivebytestream.md) instances that provide one-way communication between two threads. One thread calls the sequential output stream `output`, and the other thread calls the sequential input stream `input`. The function blocks writing to `output` when the buffer is full, and blocks reading from `input` when the buffer is empty.
+
+If either thread calls [cancel](../archiveheader/entrymessagestatus/cancel.md), the operation aborts both streams, and immediately calls return (without blocking) with an error.
+
+Closing `output`, indicates end-of-file (EOF) and writing additional bytes fails. After the operation reaches EOF and has read all data, the read function on `input` returns `0` to signal EOF.
+
+The operation destroys the underlying buffer after it closes both streams.
+
+## See Also
+
+### Streaming with Custom Streams
+
+- [customStream(instance:)](customstream%28instance_%29.md): Returns a new archive byte stream instance mapped to an object that conforms to the archive byte stream protocol.
+- [withStream(wrapping:\_:)](withstream%28wrapping___%29.md): Calls the given closure with an archive byte stream instance mapped to an object that conforms to the archive byte stream protocol.

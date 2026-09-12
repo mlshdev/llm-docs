@@ -1,0 +1,199 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coregraphics/cgcolor](https://developer.apple.com/documentation/coregraphics/cgcolor)
+
+# CGColor (Swift)
+
+**Framework:** Core Graphics  
+**Kind:** Class  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+A set of components that define a color, with a color space specifying how to interpret them.
+
+## Declaration
+
+```swift
+class CGColor
+```
+
+<a id="overview"></a>
+
+## Overview
+
+`CGColor` is the fundamental data type used internally by Core Graphics to represent colors. `CGColor` objects, and the functions that operate on them, provide a fast and convenient way of managing and setting colors directly, especially colors that are reused (such as black for text).
+
+A color object contains a set of components (such as red, green, and blue) that uniquely define a color, and a color space that specifies how those components should be interpreted.
+
+Color objects provide a fast and convenient way to manage and set colors, especially colors that are used repeatedly. Drawing operations use color objects for setting fill and stroke colors, managing alpha, and setting color with a pattern.
+
+[CGColor](cgcolor.md) is derived from [CFTypeRef](../corefoundation/cftyperef.md) and inherits the properties that all Core Foundation types have in common.
+
+## Topics
+
+### Creating Colors
+
+- [copy()](cgcolor/copy%28%29.md): Creates a copy of an existing color.
+- [copy(alpha:)](cgcolor/copy%28alpha_%29.md): Creates a copy of an existing color, substituting a new alpha value.
+- [init(genericCMYKCyan:magenta:yellow:black:alpha:)](cgcolor/init%28genericcmykcyan_magenta_yellow_black_alpha_%29.md): Creates a color in the Generic CMYK color space.
+- [init(gray:alpha:)](cgcolor/init%28gray_alpha_%29.md): Creates a color in the Generic gray color space.
+- [init(genericGrayGamma2_2Gray:alpha:)](cgcolor/init%28genericgraygamma2_2gray_alpha_%29.md): Creates a color in the Generic gray color space with a gamma ramp of 2.2.
+- [init(red:green:blue:alpha:)](cgcolor/init%28red_green_blue_alpha_%29.md): Creates a color in the Generic RGB color space.
+- [init(srgbRed:green:blue:alpha:)](cgcolor/init%28srgbred_green_blue_alpha_%29.md): Creates a color in the sRGB color space.
+- [init(colorSpace:components:)](cgcolor/init%28colorspace_components_%29.md): Creates a color using a list of intensity values (including alpha) and an associated color space.
+- [init(patternSpace:pattern:components:)](cgcolor/init%28patternspace_pattern_components_%29.md): Creates a color using a list of intensity values (including alpha), a pattern color space, and a pattern.
+
+### Getting System Colors
+
+- [black](cgcolor/black.md): The black color in the Generic gray color space.
+- [white](cgcolor/white.md): The white color in the Generic gray color space.
+- [clear](cgcolor/clear.md): The clear color in the Generic gray color space.
+
+### Examining a Color
+
+- [alpha](cgcolor/alpha.md): Returns the value of the alpha component associated with a color.
+- [colorSpace](cgcolor/colorspace.md): Returns the color space associated with a color.
+- [components](cgcolor/components.md): Returns the values of the color components (including alpha) associated with a color.
+- [numberOfComponents](cgcolor/numberofcomponents.md): Returns the number of color components (including alpha) associated with a color.
+- [pattern](cgcolor/pattern.md): Returns the pattern associated with a color in a pattern color space.
+
+### Converting Between Color Spaces
+
+- [conversionTRCSize](cgcolor/conversiontrcsize.md)
+- [converted(to:intent:options:)](cgcolor/converted%28to_intent_options_%29.md): Creates a new color in a different color space that matches the provided color.
+
+### Working with Core Foundation Types
+
+- [typeID](cgcolor/typeid.md): Returns the Core Foundation type identifier for a color data type.
+
+### Type Properties
+
+- [conversionBlackPointCompensation](cgcolor/conversionblackpointcompensation.md): An option for whether to apply black point compensation when converting between color profiles.
+
+### Initializers
+
+- [init(headroom:colorSpace:red:green:blue:alpha:)](cgcolor/init%28headroom_colorspace_red_green_blue_alpha_%29.md)
+
+### Instance Properties
+
+- [contentHeadroom](cgcolor/contentheadroom.md)
+
+## Relationships
+
+### Conforms To
+
+- [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [Decodable](https://developer.apple.com/documentation/swift/decodable)
+- [Encodable](https://developer.apple.com/documentation/swift/encodable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Escapable](https://developer.apple.com/documentation/swift/escapable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Related Documentation
+
+- [Quartz 2D Programming Guide](https://developer.apple.com/library/archive/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/Introduction/Introduction.html#//apple_ref/doc/uid/TP30001066)
+
+### Colors and Fonts
+
+- [CGColorConversionInfo](cgcolorconversioninfo.md): An object that describes how to convert between color spaces for use by other system services.
+- [CGColorSpace](cgcolorspace.md): A profile that specifies how to interpret a color value for display.
+- [CGFont](cgfont.md): A set of character glyphs and layout information for drawing text.
+
+# CGColorRef (Objective-C)
+
+**Framework:** Core Graphics  
+**Kind:** Type Alias  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+A set of components that define a color, with a color space specifying how to interpret them.
+
+## Declaration
+
+```objectivec
+typedef struct CGColor * CGColorRef;
+```
+
+<a id="overview"></a>
+
+## Overview
+
+`CGColor` is the fundamental data type used internally by Core Graphics to represent colors. `CGColor` objects, and the functions that operate on them, provide a fast and convenient way of managing and setting colors directly, especially colors that are reused (such as black for text).
+
+A color object contains a set of components (such as red, green, and blue) that uniquely define a color, and a color space that specifies how those components should be interpreted.
+
+Color objects provide a fast and convenient way to manage and set colors, especially colors that are used repeatedly. Drawing operations use color objects for setting fill and stroke colors, managing alpha, and setting color with a pattern.
+
+[CGColorRef](cgcolor.md) is derived from [CFTypeRef](../corefoundation/cftyperef.md) and inherits the properties that all Core Foundation types have in common.
+
+## Topics
+
+### Creating Colors
+
+- [CGColorCreateCopy](cgcolor/copy%28%29.md): Creates a copy of an existing color.
+- [CGColorCreateCopyWithAlpha](cgcolor/copy%28alpha_%29.md): Creates a copy of an existing color, substituting a new alpha value.
+- [CGColorCreateGenericCMYK](cgcolor/init%28genericcmykcyan_magenta_yellow_black_alpha_%29.md): Creates a color in the Generic CMYK color space.
+- [CGColorCreateGenericGray](cgcolor/init%28gray_alpha_%29.md): Creates a color in the Generic gray color space.
+- [CGColorCreateGenericGrayGamma2_2](cgcolor/init%28genericgraygamma2_2gray_alpha_%29.md): Creates a color in the Generic gray color space with a gamma ramp of 2.2.
+- [CGColorCreateGenericRGB](cgcolor/init%28red_green_blue_alpha_%29.md): Creates a color in the Generic RGB color space.
+- [CGColorCreateSRGB](cgcolor/init%28srgbred_green_blue_alpha_%29.md): Creates a color in the sRGB color space.
+- [CGColorCreate](cgcolor/init%28colorspace_components_%29.md): Creates a color using a list of intensity values (including alpha) and an associated color space.
+- [CGColorCreateWithPattern](cgcolor/init%28patternspace_pattern_components_%29.md): Creates a color using a list of intensity values (including alpha), a pattern color space, and a pattern.
+- [CGColorGetConstantColor](cgcolorgetconstantcolor.md): Returns a color object that represents a constant color.
+
+### Retaining and Releasing Color Objects
+
+- [CGColorRelease](cgcolorrelease.md): Decrements the retain count of a color.
+- [CGColorRetain](cgcolorretain.md): Increments the retain count of a color.
+
+### Getting System Colors
+
+- [kCGColorBlack](kcgcolorblack.md): The black color in the Generic gray color space.
+- [kCGColorWhite](kcgcolorwhite.md): The white color in the Generic gray color space.
+- [kCGColorClear](kcgcolorclear.md): The clear color in the Generic gray color space.
+
+### Examining a Color
+
+- [CGColorEqualToColor](cgcolorequaltocolor.md): Indicates whether two colors are equal.
+- [CGColorGetAlpha](cgcolor/alpha.md): Returns the value of the alpha component associated with a color.
+- [CGColorGetColorSpace](cgcolor/colorspace.md): Returns the color space associated with a color.
+- [CGColorGetNumberOfComponents](cgcolor/numberofcomponents.md): Returns the number of color components (including alpha) associated with a color.
+- [CGColorGetPattern](cgcolor/pattern.md): Returns the pattern associated with a color in a pattern color space.
+- [CGColorGetComponents](cgcolorgetcomponents.md): Returns the values of the color components (including alpha) associated with a color.
+
+### Converting Between Color Spaces
+
+- [kCGColorConversionTRCSize](cgcolor/conversiontrcsize.md)
+- [CGColorCreateCopyByMatchingToColorSpace](cgcolor/converted%28to_intent_options_%29.md): Creates a new color in a different color space that matches the provided color.
+
+### Working with Core Foundation Types
+
+- [CGColorGetTypeID](cgcolor/typeid.md): Returns the Core Foundation type identifier for a color data type.
+
+### Type Properties
+
+- [kCGColorConversionBlackPointCompensation](cgcolor/conversionblackpointcompensation.md): An option for whether to apply black point compensation when converting between color profiles.
+
+## See Also
+
+### Related Documentation
+
+- [Quartz 2D Programming Guide](https://developer.apple.com/library/archive/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/Introduction/Introduction.html#//apple_ref/doc/uid/TP30001066)
+
+### Opaque Types
+
+- [CGContextRef](cgcontext.md): A Quartz 2D drawing environment.
+- [CGColorConversionInfoRef](cgcolorconversioninfo.md): An object that describes how to convert between color spaces for use by other system services.
+- [CGColorSpaceRef](cgcolorspace.md): A profile that specifies how to interpret a color value for display.
+- [CGDataConsumerRef](cgdataconsumer.md): An abstraction for data-writing tasks that eliminates the need to manage a raw memory buffer.
+- [CGDataProviderRef](cgdataprovider.md): An abstraction for data-reading tasks that eliminates the need to manage a raw memory buffer.
+- [CGFontRef](cgfont.md): A set of character glyphs and layout information for drawing text.
+- [CGFunctionRef](cgfunction.md): A general facility for defining and using callback functions.
+- [CGGradientRef](cggradient.md): A definition for a smooth transition between colors for drawing radial and axial gradient fills.
+- [CGImageRef](cgimage.md): A bitmap image or image mask.
+- [CGLayerRef](cglayer.md): An offscreen context for reusing content drawn with Core Graphics.
+- [CGPathRef](cgpath.md): An immutable graphics path: a mathematical description of shapes or lines to be drawn in a graphics context.
+- [CGPatternRef](cgpattern.md): A 2D pattern to be used for drawing graphics paths.
+- [CGPDFArray](cgpdfarray.md): An array structure within a PDF document.
+- [CGPDFContentStream](cgpdfcontentstream.md): A representation of one or more content data streams in a PDF page.
+- [CGPDFDictionary](cgpdfdictionary.md): A dictionary structure within a PDF document.

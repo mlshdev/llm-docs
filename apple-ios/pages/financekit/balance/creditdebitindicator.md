@@ -1,0 +1,34 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/financekit/balance/creditdebitindicator](https://developer.apple.com/documentation/financekit/balance/creditdebitindicator)
+
+# creditDebitIndicator
+
+**Framework:** FinanceKit  
+**Kind:** Instance Property  
+**Availability:** iOS 17.4+ · iPadOS 17.4+
+
+A value that indicates whether the balance is a credit or a debit balance.
+
+## Declaration
+
+```swift
+let creditDebitIndicator: CreditDebitIndicator
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If an asset account has a positive balance, then the [CreditDebitIndicator](../creditdebitindicator.md) is [CreditDebitIndicator.credit](../creditdebitindicator/credit.md). If it has a negative balance, then the `CreditDebitIndicator` is [CreditDebitIndicator.debit](../creditdebitindicator/debit.md).
+
+If a liability account has a *spent* balance, then the `CreditDebitIndicator` is `CreditDebitIndicator/debit`. If it has been *is in credit* then the `CreditDebitIndicator` is `CreditDebitIndicator/credit`.
+
+> **Note**
+
+>  FinanceKit considers a zero balance to be a credit balance.
+
+## See Also
+
+### Instance Properties
+
+- [amount](amount.md): The amount of the balance.
+- [asOfDate](asofdate.md): The date and time the system calculated the balance.

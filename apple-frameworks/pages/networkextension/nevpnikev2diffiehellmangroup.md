@@ -1,0 +1,108 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/networkextension/nevpnikev2diffiehellmangroup](https://developer.apple.com/documentation/networkextension/nevpnikev2diffiehellmangroup)
+
+# NEVPNIKEv2DiffieHellmanGroup (Swift)
+
+**Framework:** Network Extension  
+**Kind:** Enumeration  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 17.0+ · visionOS 1.0+
+
+An enumeration of Diffie-Hellman group values.
+
+## Declaration
+
+```swift
+enum NEVPNIKEv2DiffieHellmanGroup
+```
+
+## Topics
+
+### Diffie-Hellman groups
+
+- [NEVPNIKEv2DiffieHellmanGroup.groupInvalid](nevpnikev2diffiehellmangroup/groupinvalid.md): A value indicating the group is not a valid Diffie-Hellman group.
+- [NEVPNIKEv2DiffieHellmanGroup.group14](nevpnikev2diffiehellmangroup/group14.md): Diffie Hellman group 14 (2048-bit modular exponential \[MODP\]).
+- [NEVPNIKEv2DiffieHellmanGroup.group15](nevpnikev2diffiehellmangroup/group15.md): Diffie Hellman group 15 (3072-bit modular exponential \[MODP\]).
+- [NEVPNIKEv2DiffieHellmanGroup.group16](nevpnikev2diffiehellmangroup/group16.md): Diffie Hellman group 16 (4096-bit modular exponential \[MODP\]).
+- [NEVPNIKEv2DiffieHellmanGroup.group17](nevpnikev2diffiehellmangroup/group17.md): Diffie Hellman group 17 (6144-bit modular exponential \[MODP\]).
+- [NEVPNIKEv2DiffieHellmanGroup.group18](nevpnikev2diffiehellmangroup/group18.md): Diffie Hellman group 18 (8192-bit modular exponential \[MODP\]).
+- [NEVPNIKEv2DiffieHellmanGroup.group19](nevpnikev2diffiehellmangroup/group19.md): Diffie Hellman group 19 (256-bit random elliptic curve group over GF\[P\] \[ECP\]).
+- [NEVPNIKEv2DiffieHellmanGroup.group20](nevpnikev2diffiehellmangroup/group20.md): Diffie Hellman group 20 (384-bit random elliptic curve group over GF\[P\] \[ECP\]).
+- [NEVPNIKEv2DiffieHellmanGroup.group21](nevpnikev2diffiehellmangroup/group21.md): Diffie Hellman group 21 (521-bit random elliptic curve group over GF\[P\] \[ECP\]).
+- [NEVPNIKEv2DiffieHellmanGroup.group31](nevpnikev2diffiehellmangroup/group31.md): Diffie Hellman group 31 (Curve 25519).
+- [NEVPNIKEv2DiffieHellmanGroup.group32](nevpnikev2diffiehellmangroup/group32.md): Diffie Hellman group 32 (Curve 448).
+
+### Initializers
+
+- [init(rawValue:)](nevpnikev2diffiehellmangroup/init%28rawvalue_%29.md)
+
+## Relationships
+
+### Conforms To
+
+- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### IKEv2 Security Association parameters
+
+- [encryptionAlgorithm](nevpnikev2securityassociationparameters/encryptionalgorithm.md): The algorithm used by the Security Association to encrypt and decrypt data.
+- [NEVPNIKEv2EncryptionAlgorithm](nevpnikev2encryptionalgorithm.md): An enumeration of encryption algorithm values.
+- [integrityAlgorithm](nevpnikev2securityassociationparameters/integrityalgorithm.md): The algorithm used by the Security Association to verify the integrity of data.
+- [NEVPNIKEv2IntegrityAlgorithm](nevpnikev2integrityalgorithm.md)
+- [diffieHellmanGroup](nevpnikev2securityassociationparameters/diffiehellmangroup.md): The Diffie Hellman group used by the Security Association.
+- [lifetimeMinutes](nevpnikev2securityassociationparameters/lifetimeminutes.md): The duration of the lifetime of the Security Association, in minutes.
+- [postQuantumKeyExchangeMethods](nevpnikev2securityassociationparameters/postquantumkeyexchangemethods-3173s.md): A list of the quantum-secure key exchange methods the Security Association uses.
+- [NEVPNIKEv2PostQuantumKeyExchangeMethod](nevpnikev2postquantumkeyexchangemethod.md): Quantum-secure key exchange methods you use with IKEv2 servers.
+
+# NEVPNIKEv2DiffieHellmanGroup (Objective-C)
+
+**Framework:** Network Extension  
+**Kind:** Enumeration  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 17.0+ · visionOS 1.0+
+
+An enumeration of Diffie-Hellman group values.
+
+## Declaration
+
+```objectivec
+enum NEVPNIKEv2DiffieHellmanGroup : NSInteger;
+```
+
+## Topics
+
+### Diffie-Hellman groups
+
+- [NEVPNIKEv2DiffieHellmanGroupInvalid](nevpnikev2diffiehellmangroup/groupinvalid.md): A value indicating the group is not a valid Diffie-Hellman group.
+- [NEVPNIKEv2DiffieHellmanGroup14](nevpnikev2diffiehellmangroup/group14.md): Diffie Hellman group 14 (2048-bit modular exponential \[MODP\]).
+- [NEVPNIKEv2DiffieHellmanGroup15](nevpnikev2diffiehellmangroup/group15.md): Diffie Hellman group 15 (3072-bit modular exponential \[MODP\]).
+- [NEVPNIKEv2DiffieHellmanGroup16](nevpnikev2diffiehellmangroup/group16.md): Diffie Hellman group 16 (4096-bit modular exponential \[MODP\]).
+- [NEVPNIKEv2DiffieHellmanGroup17](nevpnikev2diffiehellmangroup/group17.md): Diffie Hellman group 17 (6144-bit modular exponential \[MODP\]).
+- [NEVPNIKEv2DiffieHellmanGroup18](nevpnikev2diffiehellmangroup/group18.md): Diffie Hellman group 18 (8192-bit modular exponential \[MODP\]).
+- [NEVPNIKEv2DiffieHellmanGroup19](nevpnikev2diffiehellmangroup/group19.md): Diffie Hellman group 19 (256-bit random elliptic curve group over GF\[P\] \[ECP\]).
+- [NEVPNIKEv2DiffieHellmanGroup20](nevpnikev2diffiehellmangroup/group20.md): Diffie Hellman group 20 (384-bit random elliptic curve group over GF\[P\] \[ECP\]).
+- [NEVPNIKEv2DiffieHellmanGroup21](nevpnikev2diffiehellmangroup/group21.md): Diffie Hellman group 21 (521-bit random elliptic curve group over GF\[P\] \[ECP\]).
+- [NEVPNIKEv2DiffieHellmanGroup31](nevpnikev2diffiehellmangroup/group31.md): Diffie Hellman group 31 (Curve 25519).
+- [NEVPNIKEv2DiffieHellmanGroup32](nevpnikev2diffiehellmangroup/group32.md): Diffie Hellman group 32 (Curve 448).
+
+### Enumeration Cases
+
+- [NEVPNIKEv2DiffieHellmanGroup1](nevpnikev2diffiehellmangroup/nevpnikev2diffiehellmangroup1.md): Deprecated.
+- [NEVPNIKEv2DiffieHellmanGroup2](nevpnikev2diffiehellmangroup/nevpnikev2diffiehellmangroup2.md): Deprecated.
+- [NEVPNIKEv2DiffieHellmanGroup5](nevpnikev2diffiehellmangroup/nevpnikev2diffiehellmangroup5.md): Deprecated.
+
+## See Also
+
+### IKEv2 Security Association parameters
+
+- [encryptionAlgorithm](nevpnikev2securityassociationparameters/encryptionalgorithm.md): The algorithm used by the Security Association to encrypt and decrypt data.
+- [NEVPNIKEv2EncryptionAlgorithm](nevpnikev2encryptionalgorithm.md): An enumeration of encryption algorithm values.
+- [integrityAlgorithm](nevpnikev2securityassociationparameters/integrityalgorithm.md): The algorithm used by the Security Association to verify the integrity of data.
+- [NEVPNIKEv2IntegrityAlgorithm](nevpnikev2integrityalgorithm.md)
+- [diffieHellmanGroup](nevpnikev2securityassociationparameters/diffiehellmangroup.md): The Diffie Hellman group used by the Security Association.
+- [lifetimeMinutes](nevpnikev2securityassociationparameters/lifetimeminutes.md): The duration of the lifetime of the Security Association, in minutes.
+- [postQuantumKeyExchangeMethods](nevpnikev2securityassociationparameters/postquantumkeyexchangemethods-56672.md): A list of the quantum-secure key exchange methods the Security Association uses.
+- [NEVPNIKEv2PostQuantumKeyExchangeMethod](nevpnikev2postquantumkeyexchangemethod.md): Quantum-secure key exchange methods you use with IKEv2 servers.

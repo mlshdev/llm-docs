@@ -1,0 +1,100 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/pushtotalk/ptchannelerror-swift.struct/code](https://developer.apple.com/documentation/pushtotalk/ptchannelerror-swift.struct/code)
+
+# PTChannelError.Code (Swift)
+
+**Framework:** Push to Talk  
+**Kind:** Enumeration  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+
+
+Error codes for channel operations.
+
+## Declaration
+
+```swift
+enum Code
+```
+
+## Mentioned In
+
+- [Creating a Push to Talk app](../creating-a-push-to-talk-app.md)
+
+## Topics
+
+### Error codes
+
+- [PTChannelError.Code.unknown](code/unknown.md): A channel error that indicates an unknown error.
+- [PTChannelError.Code.appNotForeground](code/appnotforeground.md): A channel error that indicates the operation failed because the app isn’t in the foreground.
+- [PTChannelError.Code.channelNotFound](code/channelnotfound.md): A channel error that indicates the system can’t perform the action because there’s no active channel with the UUID you specify.
+- [PTChannelError.Code.channelLimitReached](code/channellimitreached.md): A channel error that indicates you reached the maximum of one active channel at a time for the entire device.
+- [PTChannelError.Code.callActive](code/callactive.md): A channel error that indicates there’s an active call that prevents the channel action.
+- [PTChannelError.Code.transmissionInProgress](code/transmissioninprogress.md): A channel error that indicates a transmission is already in progress.
+- [PTChannelError.Code.transmissionNotFound](code/transmissionnotfound.md): A channel error that indicates there’s no transmission to stop.
+- [PTChannelError.Code.deviceManagementRestriction](code/devicemanagementrestriction.md): A channel error that indicates a device-management policy or profile forbids joining the channel.
+- [PTChannelError.Code.screenTimeRestriction](code/screentimerestriction.md): A channel error that indicates a Screen Time restriction prevents the action.
+- [PTChannelError.Code.transmissionNotAllowed](code/transmissionnotallowed.md): A channel error that indicates the current transmission mode of the channel doesn’t allow the mode you specify.
+
+### Initializers
+
+- [init(rawValue:)](code/init%28rawvalue_%29.md)
+
+## Relationships
+
+### Conforms To
+
+- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Push to Talk errors
+
+- [PTChannelError](../ptchannelerror-swift.struct.md): A structure that represents a channel error.
+- [PTInstantiationError](../ptinstantiationerror-swift.struct.md): A structure that represents an instantiation error.
+- [PTInstantiationError.Code](../ptinstantiationerror-swift.struct/code.md): Error codes for instantiation operations.
+- [PTChannelErrorDomain](../ptchannelerrordomain.md): A string representation of the channel error domain.
+- [PTInstantiationErrorDomain](../ptinstantiationerrordomain.md): A string representation of the instantiation error domain.
+
+# PTChannelError (Objective-C)
+
+**Framework:** Push to Talk  
+**Kind:** Enumeration  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+
+
+Error codes for channel operations.
+
+## Declaration
+
+```objectivec
+enum PTChannelError : NSInteger;
+```
+
+## Mentioned In
+
+- [Creating a Push to Talk app](../creating-a-push-to-talk-app.md)
+
+## Topics
+
+### Error codes
+
+- [PTChannelErrorUnknown](code/unknown.md): A channel error that indicates an unknown error.
+- [PTChannelErrorAppNotForeground](code/appnotforeground.md): A channel error that indicates the operation failed because the app isn’t in the foreground.
+- [PTChannelErrorChannelNotFound](code/channelnotfound.md): A channel error that indicates the system can’t perform the action because there’s no active channel with the UUID you specify.
+- [PTChannelErrorChannelLimitReached](code/channellimitreached.md): A channel error that indicates you reached the maximum of one active channel at a time for the entire device.
+- [PTChannelErrorCallActive](code/callactive.md): A channel error that indicates there’s an active call that prevents the channel action.
+- [PTChannelErrorTransmissionInProgress](code/transmissioninprogress.md): A channel error that indicates a transmission is already in progress.
+- [PTChannelErrorTransmissionNotFound](code/transmissionnotfound.md): A channel error that indicates there’s no transmission to stop.
+- [PTChannelErrorDeviceManagementRestriction](code/devicemanagementrestriction.md): A channel error that indicates a device-management policy or profile forbids joining the channel.
+- [PTChannelErrorScreenTimeRestriction](code/screentimerestriction.md): A channel error that indicates a Screen Time restriction prevents the action.
+- [PTChannelErrorTransmissionNotAllowed](code/transmissionnotallowed.md): A channel error that indicates the current transmission mode of the channel doesn’t allow the mode you specify.
+
+## See Also
+
+### Push to Talk errors
+
+- [PTInstantiationError](../ptinstantiationerror-swift.struct/code.md): Error codes for instantiation operations.
+- [PTChannelErrorDomain](../ptchannelerrordomain.md): A string representation of the channel error domain.
+- [PTInstantiationErrorDomain](../ptinstantiationerrordomain.md): A string representation of the instantiation error domain.

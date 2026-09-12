@@ -1,0 +1,53 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/virtualization/vzfileserialportattachment/append](https://developer.apple.com/documentation/virtualization/vzfileserialportattachment/append)
+
+# append (Swift)
+
+**Framework:** Virtualization  
+**Kind:** Instance Property  
+**Availability:** macOS 11.0+
+
+A Boolean that indicates whether the virtual machine appends data to the file.
+
+## Declaration
+
+```swift
+var append: Bool { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When the value of this property is [true](https://developer.apple.com/documentation/swift/true), the virtual machine appends new data to the file; otherwise, it replaces the existing contents of the file before writing new data to it.
+
+## See Also
+
+### Getting the file details
+
+- [url](url.md): The URL of a file on the local file system.
+
+# append (Objective-C)
+
+**Framework:** Virtualization  
+**Kind:** Instance Property  
+**Availability:** macOS 11.0+
+
+A Boolean that indicates whether the virtual machine appends data to the file.
+
+## Declaration
+
+```objectivec
+@property (readonly) BOOL append;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When the value of this property is [true](https://developer.apple.com/documentation/swift/true), the virtual machine appends new data to the file; otherwise, it replaces the existing contents of the file before writing new data to it.
+
+## See Also
+
+### Getting the file details
+
+- [URL](url.md): The URL of a file on the local file system.

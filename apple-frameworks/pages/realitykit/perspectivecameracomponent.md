@@ -1,0 +1,73 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/perspectivecameracomponent](https://developer.apple.com/documentation/realitykit/perspectivecameracomponent)
+
+# PerspectiveCameraComponent
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 26.0+ · visionOS
+
+A component that defines a virtual camera and its controls.
+
+## Declaration
+
+```swift
+struct PerspectiveCameraComponent
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Each scene requires a camera that defines the viewpoint from which RealityKit renders the scene. In RealityKit, the default camera is a *perspective camera*, which simulates the way real cameras and human vision work. Entities that are farther away from the camera render smaller.
+
+For an alternative camera solution, see [OrthographicCameraComponent](orthographiccameracomponent.md).
+
+To create a perspective camera, add this component to an entity.
+
+```swift
+let cameraEntity = Entity()
+
+// Place the camera 2 meters along the z-axis,
+// looking at the scene origin.
+let cameraPosition: SIMD3<Float> = [0, 0, 2]
+cameraEntity.look(at: .zero, from: cameraPosition, relativeTo: nil)
+
+cameraEntity.components.set(PerspectiveCameraComponent())
+```
+
+A `PerspectiveCameraComponent` defines the camera settings for a perspective camera, such as the [fieldOfViewInDegrees](perspectivecameracomponent/fieldofviewindegrees.md). The entity’s [transform](hastransform/transform.md) defines the camera entity’s viewpoint and direction. The direction it points is along the entity’s negative z-axis.
+
+In AR scenarios, the system provides the camera automatically; however, in non-AR scenarios, the app needs to set the camera. If the app doesn’t provide a camera, the system uses the default perspective camera.
+
+## Topics
+
+### Creating a camera component
+
+- [init(near:far:fieldOfViewInDegrees:)](perspectivecameracomponent/init%28near_far_fieldofviewindegrees_%29.md): Creates a perspective camera component from near and far clipping planes and a field of view.
+- [init(near:far:fieldOfViewInDegrees:fieldOfViewOrientation:)](perspectivecameracomponent/init%28near_far_fieldofviewindegrees_fieldofvieworientation_%29.md): Creates a perspective camera component from near and far clipping planes, a field of view, and an orientation.
+
+### Setting focal points
+
+- [far](perspectivecameracomponent/far.md): The maximum distance in meters from the camera that the camera can see.
+- [near](perspectivecameracomponent/near.md): The minimum distance in meters from the camera that the camera can see.
+
+### Setting the field of view
+
+- [fieldOfViewInDegrees](perspectivecameracomponent/fieldofviewindegrees.md): The camera’s total field of view in degrees.
+- [fieldOfViewOrientation](perspectivecameracomponent/fieldofvieworientation.md): The orientation with which the system uses to apply the field-of-view degrees.
+
+## Relationships
+
+### Conforms To
+
+- [Component](component.md)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+
+## See Also
+
+### Cameras
+
+- [OrthographicCameraComponent](orthographiccameracomponent.md): A component that defines an orthographic virtual camera and its settings.
+- [CameraFieldOfViewOrientation](camerafieldofvieworientation.md): The orientations that a camera’s field-of-view degrees can apply.
+- [ProjectiveTransformCameraComponent](projectivetransformcameracomponent.md): A component that defines a virtual camera with a custom projection matrix.
+- [PerspectiveCamera](perspectivecamera.md): A virtual camera that establishes the rendering perspective.

@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/applicationservices/kaxtoolbarbuttonattribute](https://developer.apple.com/documentation/applicationservices/kaxtoolbarbuttonattribute)
+
+# kAXToolbarButtonAttribute (Swift)
+
+**Framework:** Application Services  
+**Kind:** Global Variable  
+**Availability:** macOS 10.2+
+
+## Declaration
+
+```swift
+var kAXToolbarButtonAttribute: String { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The toolbar button of the window represented by this accessibility object. An accessibility object includes this attribute to help an assistive application easily find a window’s toolbar button, without having to traverse the accessibility hierarchy. This attribute is recommended for all accessibility objects that represent windows that contain a toolbar button.
+
+# kAXToolbarButtonAttribute (Objective-C)
+
+**Framework:** Application Services  
+**Kind:** Macro  
+**Availability:** macOS 10.2+
+
+## Declaration
+
+```objectivec
+#define kAXToolbarButtonAttribute
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The toolbar button of the window represented by this accessibility object. An accessibility object includes this attribute to help an assistive application easily find a window’s toolbar button, without having to traverse the accessibility hierarchy. This attribute is recommended for all accessibility objects that represent windows that contain a toolbar button.

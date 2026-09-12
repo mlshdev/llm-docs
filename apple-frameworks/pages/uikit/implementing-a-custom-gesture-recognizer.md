@@ -1,0 +1,101 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/implementing-a-custom-gesture-recognizer](https://developer.apple.com/documentation/uikit/implementing-a-custom-gesture-recognizer)
+
+# Implementing a custom gesture recognizer (Swift)
+
+**Framework:** UIKit
+
+Discover when and how to build your own gesture recognizers.
+
+<a id="overview"></a>
+
+## Overview
+
+When the built-in UIKit gesture recognizers don’t provide the behavior you want, you can define custom gesture recognizers. UIKit defines highly configurable gesture recognizers to handle touch sequences for taps, long presses, pans, swipes, rotations, and pinches. For other touch sequences, or to handle gestures that involve button presses, you can define a custom gesture recognizer.
+
+You might also use a custom gesture recognizer to simplify the event-handling code in your app. For example, the [Leveraging touch input for drawing apps](leveraging-touch-input-for-drawing-apps.md) sample uses a gesture recognizer to capture input and display it onscreen, as shown in the following image.
+
+![A screenshot from an app that uses a custom gesture recognizer to allow a user to draw on the screen.](https://developer.apple.com/images/com.apple.uikit/implementing-a-custom-gesture-recognizer-1@2x.png)
+
+To define a custom gesture recognizer, subclass [UIGestureRecognizer](uigesturerecognizer.md) (or one of its subclasses). At the top of your source file, import the `UIGestureRecognizerSubclass.h` header file (for Objective-C) or the `UIKit.UIGestureRecognizerSubclass` module (for Swift), as shown in the following code. This file defines the methods and properties that you must override to implement your custom gesture recognizer.
+
+**Swift**
+
+```swift
+import UIKit
+import UIKit.UIGestureRecognizerSubclass
+```
+
+**Objective-C**
+
+```objc
+#import <UIKit/UIKit.h>
+#import "UIGestureRecognizerSubclass.h"
+```
+
+In your custom subclass, implement whatever methods you need to process events. For example, if your gesture consists of touch events, implement the [touchesBegan(\_:with:)](uiresponder/touchesbegan%28__with_%29.md), [touchesMoved(\_:with:)](uiresponder/touchesmoved%28__with_%29.md), [touchesEnded(\_:with:)](uiresponder/touchesended%28__with_%29.md), and [touchesCancelled(\_:with:)](uiresponder/touchescancelled%28__with_%29.md) methods. Use incoming events to update the [state](uigesturerecognizer/state-swift.property.md) property of your gesture recognizer. UIKit uses the gesture recognizer states to coordinate interactions with other objects in your interface.
+
+## Topics
+
+### Creating Custom Gesture Recognizers
+
+- [About the Gesture Recognizer State Machine](about-the-gesture-recognizer-state-machine.md): Learn about the states and transitions of the state machine that underlies gesture recognizers.
+- [Implementing a discrete gesture recognizer](implementing-a-discrete-gesture-recognizer.md): If your gesture involves a specific pattern of events, consider implementing a discrete gesture recognizer for it.
+- [Implementing a Continuous Gesture Recognizer](implementing-a-continuous-gesture-recognizer.md): For gestures that do not easily match a specific pattern, or when you want to use a gesture recognizer to gather touch input, create a continuous gesture recognizer.
+
+## See Also
+
+### Custom gestures
+
+- [UIGestureRecognizer](uigesturerecognizer.md): The base class for concrete gesture recognizers.
+- [UIGestureRecognizerDelegate](uigesturerecognizerdelegate.md): A set of methods implemented by the delegate of a gesture recognizer to fine-tune an app’s gesture-recognition behavior.
+- [Supporting gesture interaction in your apps](supporting-gesture-interaction-in-your-apps.md): Enrich your app’s user experience by supporting standard and custom gesture interaction.
+
+# Implementing a custom gesture recognizer (Objective-C)
+
+**Framework:** UIKit
+
+Discover when and how to build your own gesture recognizers.
+
+<a id="overview"></a>
+
+## Overview
+
+When the built-in UIKit gesture recognizers don’t provide the behavior you want, you can define custom gesture recognizers. UIKit defines highly configurable gesture recognizers to handle touch sequences for taps, long presses, pans, swipes, rotations, and pinches. For other touch sequences, or to handle gestures that involve button presses, you can define a custom gesture recognizer.
+
+You might also use a custom gesture recognizer to simplify the event-handling code in your app. For example, the [Leveraging touch input for drawing apps](leveraging-touch-input-for-drawing-apps.md) sample uses a gesture recognizer to capture input and display it onscreen, as shown in the following image.
+
+![A screenshot from an app that uses a custom gesture recognizer to allow a user to draw on the screen.](https://developer.apple.com/images/com.apple.uikit/implementing-a-custom-gesture-recognizer-1@2x.png)
+
+To define a custom gesture recognizer, subclass [UIGestureRecognizer](uigesturerecognizer.md) (or one of its subclasses). At the top of your source file, import the `UIGestureRecognizerSubclass.h` header file (for Objective-C) or the `UIKit.UIGestureRecognizerSubclass` module (for Swift), as shown in the following code. This file defines the methods and properties that you must override to implement your custom gesture recognizer.
+
+**Swift**
+
+```swift
+import UIKit
+import UIKit.UIGestureRecognizerSubclass
+```
+
+**Objective-C**
+
+```objc
+#import <UIKit/UIKit.h>
+#import "UIGestureRecognizerSubclass.h"
+```
+
+In your custom subclass, implement whatever methods you need to process events. For example, if your gesture consists of touch events, implement the [touchesBegan:withEvent:](uiresponder/touchesbegan%28__with_%29.md), [touchesMoved:withEvent:](uiresponder/touchesmoved%28__with_%29.md), [touchesEnded:withEvent:](uiresponder/touchesended%28__with_%29.md), and [touchesCancelled:withEvent:](uiresponder/touchescancelled%28__with_%29.md) methods. Use incoming events to update the [state](uigesturerecognizer/state-swift.property.md) property of your gesture recognizer. UIKit uses the gesture recognizer states to coordinate interactions with other objects in your interface.
+
+## Topics
+
+### Creating Custom Gesture Recognizers
+
+- [About the Gesture Recognizer State Machine](about-the-gesture-recognizer-state-machine.md): Learn about the states and transitions of the state machine that underlies gesture recognizers.
+- [Implementing a discrete gesture recognizer](implementing-a-discrete-gesture-recognizer.md): If your gesture involves a specific pattern of events, consider implementing a discrete gesture recognizer for it.
+- [Implementing a Continuous Gesture Recognizer](implementing-a-continuous-gesture-recognizer.md): For gestures that do not easily match a specific pattern, or when you want to use a gesture recognizer to gather touch input, create a continuous gesture recognizer.
+
+## See Also
+
+### Custom gestures
+
+- [UIGestureRecognizer](uigesturerecognizer.md): The base class for concrete gesture recognizers.
+- [UIGestureRecognizerDelegate](uigesturerecognizerdelegate.md): A set of methods implemented by the delegate of a gesture recognizer to fine-tune an app’s gesture-recognition behavior.
+- [Supporting gesture interaction in your apps](supporting-gesture-interaction-in-your-apps.md): Enrich your app’s user experience by supporting standard and custom gesture interaction.

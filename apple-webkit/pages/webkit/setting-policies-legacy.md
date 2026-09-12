@@ -1,0 +1,31 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/setting-policies-legacy](https://developer.apple.com/documentation/webkit/setting-policies-legacy)
+
+# Setting Policies (Legacy)
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** WebKit  
+**Kind:** API Collection
+
+## Topics
+
+### Setting Policies (Legacy)
+
+- [WebPolicyDecisionListener](webpolicydecisionlistener.md): Deprecated. This protocol enables [WebView](webview-swift.class.md) policy delegates to communicate with listener objects. A listener object conforming to this protocol is passed as one of the arguments to web view policy delegate methods.
+- [WebPolicyDelegate](webpolicydelegate.md): Deprecated.
+
+## See Also
+
+### WebKit Legacy APIs
+
+- [Document Object Models API (Legacy)](document-object-models-api-legacy.md)
+- [Setting Up a Web View (Legacy)](setting-up-a-web-view-legacy.md)
+- [Accessing Previous Webpages (Legacy)](accessing-previous-webpages-legacy.md)
+- [Archiving Webpages (Legacy)](archiving-webpages-legacy.md)
+- [Loading Resources (Legacy)](loading-resources-legacy.md)
+- [Working with Frames (legacy)](working-with-frames-legacy.md)
+- [Downloading Information (Legacy)](downloading-information-legacy.md)
+- [Opening a File (Legacy)](opening-a-file-legacy.md)
+- [Implementing Plugins (Legacy)](implementing-plugins-legacy.md)
+- [Incorporating Scripts (Legacy)](incorporating-scripts-legacy.md)
+- [Working With Document Web Views (Legacy)](working-with-document-web-views-legacy.md)

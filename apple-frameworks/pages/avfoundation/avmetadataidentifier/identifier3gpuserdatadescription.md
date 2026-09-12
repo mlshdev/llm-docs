@@ -1,0 +1,67 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avmetadataidentifier/identifier3gpuserdatadescription](https://developer.apple.com/documentation/avfoundation/avmetadataidentifier/identifier3gpuserdatadescription)
+
+# identifier3GPUserDataDescription (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Type Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 1.0+
+
+An identifier that represents the description for the media.
+
+## Declaration
+
+```swift
+static let identifier3GPUserDataDescription: AVMetadataIdentifier
+```
+
+## See Also
+
+### 3GP user metadata identifiers
+
+- [identifier3GPUserDataAlbumAndTrack](identifier3gpuserdataalbumandtrack.md): An identifier that represents the text for the album and track titles.
+- [identifier3GPUserDataAuthor](identifier3gpuserdataauthor.md): An identifier that represents the author of the media.
+- [identifier3GPUserDataCollection](identifier3gpuserdatacollection.md): An identifier that represents the collection name for the media.
+- [identifier3GPUserDataCopyright](identifier3gpuserdatacopyright.md): An identifier that represents the copyright statement.
+- [identifier3GPUserDataGenre](identifier3gpuserdatagenre.md): An identifier that represents the genre of the media.
+- [identifier3GPUserDataKeywordList](identifier3gpuserdatakeywordlist.md): An identifier that represents the list of keywords for the media.
+- [identifier3GPUserDataLocation](identifier3gpuserdatalocation.md): An identifier that represents the location information for the media.
+- [identifier3GPUserDataMediaClassification](identifier3gpuserdatamediaclassification.md): An identifier that represents the classification of the media content.
+- [identifier3GPUserDataMediaRating](identifier3gpuserdatamediarating.md): An identifier that represents the rating of the media content.
+- [identifier3GPUserDataPerformer](identifier3gpuserdataperformer.md): An identifier that represents information about the performer.
+- [identifier3GPUserDataRecordingYear](identifier3gpuserdatarecordingyear.md): An identifier that represents the recording year for the media.
+- [identifier3GPUserDataThumbnail](identifier3gpuserdatathumbnail.md): An identifier that represents the media thumbnail.
+- [identifier3GPUserDataTitle](identifier3gpuserdatatitle.md): An identifier that represents the title for the media.
+- [identifier3GPUserDataUserRating](identifier3gpuserdatauserrating.md): An identifier that represents the user rating.
+
+# AVMetadataIdentifier3GPUserDataDescription (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Global Variable  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 1.0+
+
+An identifier that represents the description for the media.
+
+## Declaration
+
+```objectivec
+extern AVMetadataIdentifier const AVMetadataIdentifier3GPUserDataDescription;
+```
+
+## See Also
+
+### 3GP user metadata identifiers
+
+- [AVMetadataIdentifier3GPUserDataAlbumAndTrack](identifier3gpuserdataalbumandtrack.md): An identifier that represents the text for the album and track titles.
+- [AVMetadataIdentifier3GPUserDataAuthor](identifier3gpuserdataauthor.md): An identifier that represents the author of the media.
+- [AVMetadataIdentifier3GPUserDataCollection](identifier3gpuserdatacollection.md): An identifier that represents the collection name for the media.
+- [AVMetadataIdentifier3GPUserDataCopyright](identifier3gpuserdatacopyright.md): An identifier that represents the copyright statement.
+- [AVMetadataIdentifier3GPUserDataGenre](identifier3gpuserdatagenre.md): An identifier that represents the genre of the media.
+- [AVMetadataIdentifier3GPUserDataKeywordList](identifier3gpuserdatakeywordlist.md): An identifier that represents the list of keywords for the media.
+- [AVMetadataIdentifier3GPUserDataLocation](identifier3gpuserdatalocation.md): An identifier that represents the location information for the media.
+- [AVMetadataIdentifier3GPUserDataMediaClassification](identifier3gpuserdatamediaclassification.md): An identifier that represents the classification of the media content.
+- [AVMetadataIdentifier3GPUserDataMediaRating](identifier3gpuserdatamediarating.md): An identifier that represents the rating of the media content.
+- [AVMetadataIdentifier3GPUserDataPerformer](identifier3gpuserdataperformer.md): An identifier that represents information about the performer.
+- [AVMetadataIdentifier3GPUserDataRecordingYear](identifier3gpuserdatarecordingyear.md): An identifier that represents the recording year for the media.
+- [AVMetadataIdentifier3GPUserDataThumbnail](identifier3gpuserdatathumbnail.md): An identifier that represents the media thumbnail.
+- [AVMetadataIdentifier3GPUserDataTitle](identifier3gpuserdatatitle.md): An identifier that represents the title for the media.
+- [AVMetadataIdentifier3GPUserDataUserRating](identifier3gpuserdatauserrating.md): An identifier that represents the user rating.

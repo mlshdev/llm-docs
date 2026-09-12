@@ -1,0 +1,30 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/scenephase/inactive](https://developer.apple.com/documentation/swiftui/scenephase/inactive)
+
+# ScenePhase.inactive
+
+**Framework:** SwiftUI  
+**Kind:** Case  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 7.0+
+
+The scene is in the foreground but should pause its work.
+
+## Declaration
+
+```swift
+case inactive
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+A scene in this phase doesn’t receive events and should pause timers and free any unnecessary resources. The scene might be completely hidden in the user interface, minimized, visible in the app switcher, or otherwise unavailable. In some cases, scenes only pass through this phase temporarily on their way to the [ScenePhase.background](background.md) phase.
+
+An app or custom scene in this phase contains no scene instances in the [ScenePhase.active](active.md) phase.
+
+## See Also
+
+### Getting scene phases
+
+- [ScenePhase.active](active.md): The scene is in the foreground and interactive.
+- [ScenePhase.background](background.md): The scene isn’t currently visible in the UI.

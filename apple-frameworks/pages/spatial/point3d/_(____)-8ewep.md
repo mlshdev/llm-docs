@@ -1,0 +1,40 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatial/point3d/*(_:_:)-8ewep](https://developer.apple.com/documentation/spatial/point3d/*(_:_:)-8ewep)
+
+# \*(\_:\_:)
+
+**Framework:** Spatial  
+**Kind:** Operator  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS · watchOS 9.0+
+
+Returns the point that results from applying the affine transform to the point.
+
+## Declaration
+
+```swift
+static func * (lhs: AffineTransform3D, rhs: Point3D) -> Point3D
+```
+
+## Parameters
+
+- `lhs`: The left-hand-side value.
+- `rhs`: The right-hand-side value.
+
+## See Also
+
+### Applying arithmetic operations
+
+- [\*(\_:\_:)](_%28____%29-9rqvh.md): Returns a point that’s the product of a point and a scalar value.
+- [\*(\_:\_:)](_%28____%29-9w7dk.md): Returns a point that’s the product of a scalar value and a point.
+- [\*(\_:\_:)](_%28____%29-9ak06.md): Returns the point that results from applying the projective transform to the point.
+- [\*(\_:\_:)](_%28____%29-8wgkb.md): Returns a new point after applying the pose to the point.
+- [+(\_:\_:)](+%28____%29-5v6x4.md): Returns a point that’s the element-wise sum of a point and a size.
+- [+(\_:\_:)](+%28____%29-4g55.md): Returns a point that’s the element-wise sum of a size and a point.
+- [-(\_:)](-%28__%29.md): Returns a point that’s the element-wise negation of the point.
+- [-(\_:\_:)](-%28____%29-6om9g.md): Returns a point that’s the element-wise difference of a point and a size.
+- [-(\_:\_:)](-%28____%29-9l6rn.md): Returns a point that’s the element-wise difference of two points.
+- [-(\_:\_:)](-%28____%29-5t01r.md): Returns a point that’s the element-wise difference of a size and a point.
+- [+=(\_:\_:)](+=%28____%29-80hjz.md): Adds a point and a vector, and stores the result in the left-hand-side variable.
+- [+=(\_:\_:)](+=%28____%29-3v0zk.md): Adds a point and a size, and stores the result in the left-hand-side variable.
+- [-=(\_:\_:)](-=%28____%29-23bow.md): Subtracts a vector from a point and stores the difference in the left-hand-side variable.
+- [-=(\_:\_:)](-=%28____%29-9xu2.md): Subtracts a vector from a point and stores the difference in the left-hand-side variable.
+- [\*=(\_:\_:)](_=%28____%29.md): Multiplies a point and a double-precision value, and stores the result in the left-hand-side variable.

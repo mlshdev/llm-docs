@@ -1,0 +1,26 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/lockd_notify](https://developer.apple.com/documentation/kernel/lockd_notify)
+
+# lockd_notify
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Availability:** macOS 13.0+
+
+## Declaration
+
+```objectivec
+struct lockd_notify {
+    ...
+};
+```
+
+## Topics
+
+### Instance Properties
+
+- [ln_addr](lockd_notify/3964943-ln_addr.md)
+- [ln_addrcount](lockd_notify/3964944-ln_addrcount.md)
+- [ln_flags](lockd_notify/3964945-ln_flags.md)
+- [ln_pad](lockd_notify/3964946-ln_pad.md)
+- [ln_version](lockd_notify/3964947-ln_version.md)

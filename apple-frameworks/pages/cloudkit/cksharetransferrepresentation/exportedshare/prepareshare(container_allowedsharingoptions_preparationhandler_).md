@@ -1,0 +1,43 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cloudkit/cksharetransferrepresentation/exportedshare/prepareshare(container:allowedsharingoptions:preparationhandler:)](https://developer.apple.com/documentation/cloudkit/cksharetransferrepresentation/exportedshare/prepareshare(container:allowedsharingoptions:preparationhandler:))
+
+# prepareShare(container:allowedSharingOptions:preparationHandler:)
+
+**Framework:** CloudKit  
+**Kind:** Type Method  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · visionOS
+
+Creates a share when the system calls the specified handler.
+
+## Declaration
+
+```swift
+static func prepareShare(container: CKContainer, allowedSharingOptions: CKAllowedSharingOptions = CKAllowedSharingOptions.standard, preparationHandler: @escaping @Sendable () async throws -> CKShare) -> CKShareTransferRepresentation<Item>.ExportedShare
+```
+
+## Parameters
+
+- `container`: The [CKContainer](../../ckcontainer.md) for the share.
+- `allowedSharingOptions`: The [CKAllowedSharingOptions](../../ckallowedsharingoptions.md). The [standard](../../ckallowedsharingoptions/standard.md) option is the default.
+- `preparationHandler`: The handler the system calls in your app to create a new [CKShare](../../ckshare.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+The [CKShareTransferRepresentation.ExportedShare](../exportedshare.md) with the new [CKShare](../../ckshare.md).
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this method when you want to share a collection of [CKRecord](../../ckrecord.md) objects, but don’t currently have a [CKShare](../../ckshare.md).
+
+When the system calls the `preparationHandler`, create a new [CKShare](../../ckshare.md) with the appropriate root [CKRecord](../../ckrecord.md) or [CKRecordZone.ID](../../ckrecordzone/id.md).
+
+After saving the share and all records to the server, return the resulting [CKShare](../../ckshare.md) or throw an error if saving fails. When your app invokes the share sheet with a [CKShare](../../ckshare.md) registered with this method, the system prompts the user to start sharing.
+
+## See Also
+
+### Preparing an exported share
+
+- [existing(\_:container:allowedSharingOptions:)](existing%28__container_allowedsharingoptions_%29.md): Allows the user to view or make modifications to the share settings.

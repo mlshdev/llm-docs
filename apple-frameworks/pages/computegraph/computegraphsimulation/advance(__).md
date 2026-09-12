@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/computegraph/computegraphsimulation/advance(_:)](https://developer.apple.com/documentation/computegraph/computegraphsimulation/advance(_:))
+
+# advance(\_:)
+
+**Framework:** Compute Graph  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · Reality Composer Pro
+
+Advances the simulation by one time step, encoding all simulation stage dispatches into the command buffer and encoder provided by `params`.
+
+## Declaration
+
+```swift
+final func advance(_ params: ComputeGraphSimulation.AdvanceParams)
+```
+
+## Parameters
+
+- `params`: The advance parameters, including the time delta, command buffer, compute encoder, and spatial transforms for this frame.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Call this once per frame from your render loop. The simulation reads [deltaTime](advanceparams/deltatime.md) to determine how much simulated time to consume, subject to [simulationRate](simulationrate-swift.property.md). Spatial transforms and optional viewer information in `params` are forwarded to the simulation graph.

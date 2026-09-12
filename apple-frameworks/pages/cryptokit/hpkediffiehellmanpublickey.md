@@ -1,0 +1,36 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cryptokit/hpkediffiehellmanpublickey](https://developer.apple.com/documentation/cryptokit/hpkediffiehellmanpublickey)
+
+# HPKEDiffieHellmanPublicKey
+
+**Framework:** Apple CryptoKit  
+**Kind:** Protocol  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+A type that represents the public key in a Diffie-Hellman key exchange.
+
+## Declaration
+
+```swift
+@preconcurrency protocol HPKEDiffieHellmanPublicKey : HPKEPublicKeySerialization
+```
+
+## Topics
+
+### Associated Types
+
+- [EphemeralPrivateKey](hpkediffiehellmanpublickey/ephemeralprivatekey.md): The type of the ephemeral private key.
+
+## Relationships
+
+### Inherits From
+
+- [HPKEPublicKeySerialization](hpkepublickeyserialization.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+### Conforming Types
+
+- [Curve25519.KeyAgreement.PublicKey](curve25519/keyagreement/publickey.md)
+- [P256.KeyAgreement.PublicKey](p256/keyagreement/publickey.md)
+- [P384.KeyAgreement.PublicKey](p384/keyagreement/publickey.md)
+- [P521.KeyAgreement.PublicKey](p521/keyagreement/publickey.md)

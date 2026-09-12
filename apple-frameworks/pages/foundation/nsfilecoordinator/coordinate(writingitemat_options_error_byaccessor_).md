@@ -1,0 +1,117 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsfilecoordinator/coordinate(writingitemat:options:error:byaccessor:)](https://developer.apple.com/documentation/foundation/nsfilecoordinator/coordinate(writingitemat:options:error:byaccessor:))
+
+# coordinate(writingItemAt:options:error:byAccessor:) (Swift)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Initiates a write operation on a single file or directory using the specified options.
+
+## Declaration
+
+```swift
+func coordinate(writingItemAt url: URL, options: NSFileCoordinator.WritingOptions = [], error outError: NSErrorPointer, byAccessor writer: (URL) -> Void)
+```
+
+## Parameters
+
+- `url`: A URL identifying the file or directory to write to. If other objects or processes are acting on the item at the URL, the actual URL passed to `writer` parameter may be different from the one in this parameter.
+- `options`: One of the writing options described in [NSFileCoordinator.WritingOptions](writingoptions.md). The options you specify partially determine how file presenters are notified and how this file coordinator object waits to execute your block.
+- `outError`: On input, a pointer to a pointer for an error object. If a file presenter encounters an error while preparing for this write operation, that error is returned in this parameter and the block in the `writer` parameter is not executed. If you cancel this operation before the `writer` block is executed, this parameter contains an error object on output.
+- `writer`: A [Block object](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/Block.html#//apple_ref/doc/uid/TP40008195-CH3) containing the file operations you want to perform in a coordinated manner. This block receives an [NSURL](../nsurl.md) object containing the URL of the item and returns no value. Always use the URL passed into the block instead of the value in the `url` parameter.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When invoking these methods, declare a `__block` variable before the accessor block and initialize it to a value that signals failure, and then inside the accessor block set it to a value that indicates success. If the coordinated operation fails, then the accessor block never runs. The sentinel variable still holds a value that indicates failure, and the [NSError](../nserror.md) out parameter contains a reference that describes the error.
+
+You use this method to perform write-related operations on a file or directory in a coordinated manner. This method executes synchronously, blocking the current thread until the `writer` block finishes executing. Before executing the block, though, the file coordinator waits until other relevant file presenter objects finish in-progress actions. Similarly, your write operation may cause pending actions for other file presenters to wait until your operations are complete. Whether or not the file coordinator waits depends on whether the item being written is a file or directory and also depends on other related operations.
+
+- If the `url` parameter specifies a file:
+- This method waits for other readers and writers of the exact same file to finish in-progress actions.
+- This method waits if the file is a file package or any item inside a file package and other writers are reading or writing to other items inside the package directory.
+- This method does not wait for readers or writers that are manipulating the parent directory of the file, unless one of those writers specified the [forDeleting](writingoptions/fordeleting.md) or [forMoving](writingoptions/formoving.md) option.
+- If the `url` parameter specifies a directory:
+- This method waits if other read or write operations are occurring on the exact same directory.
+- This method does not wait if read or write operations are occurring on items inside the directory (but not on the directory itself).
+- This method does not wait for readers or writers that are manipulating the parent directory of the directory, unless one of those writers specified the [forDeleting](writingoptions/fordeleting.md) or [forMoving](writingoptions/formoving.md) option.
+
+This method calls the [relinquishPresentedItem(toWriter:)](../nsfilepresenter/relinquishpresenteditem%28towriter_%29.md) method of any relevant file presenters. This method is called for file presenters in the current process and in other processes. Depending on the options you specify, other methods of the file presenters may also be called. When writing a file package directory, file presenter objects that are currently reading or writing the contents of that file package also receive these notifications. All of the called methods must return successfully before the file coordinator executes your block. If multiple file presenters are operating on the item, the order in which those presenters are notified is undefined.
+
+> **Note**
+
+>  When deleting an item inside a file package using the [forDeleting](writingoptions/fordeleting.md) option, the file coordinator does not call the [accommodatePresentedItemDeletion(completionHandler:)](../nsfilepresenter/accommodatepresenteditemdeletion%28completionhandler_%29.md) method of any file presenters monitoring the file package directory itself. Instead, the delete operation is treated as a write operation on the file package.
+
+With one exception, do not nest calls to file coordinator methods inside the block you pass to this method. You may call the [coordinate(readingItemAt:options:error:byAccessor:)](coordinate%28readingitemat_options_error_byaccessor_%29.md) method to read the file if you discover through modification-date checking that the contents of the file have changed. However, if you call this method from inside your block, the file coordinator object throws an exception.
+
+## See Also
+
+### Coordinating File Operations Synchronously
+
+- [coordinate(readingItemAt:options:error:byAccessor:)](coordinate%28readingitemat_options_error_byaccessor_%29.md): Initiates a read operation on a single file or directory using the specified options.
+- [coordinate(readingItemAt:options:writingItemAt:options:error:byAccessor:)](coordinate%28readingitemat_options_writingitemat_options_error_byaccessor_%29.md): Initiates a read operation that contains a follow-up write operation.
+- [coordinate(writingItemAt:options:writingItemAt:options:error:byAccessor:)](coordinate%28writingitemat_options_writingitemat_options_error_byaccessor_%29.md): Initiates a write operation that involves a secondary write operation.
+- [prepare(forReadingItemsAt:options:writingItemsAt:options:error:byAccessor:)](prepare%28forreadingitemsat_options_writingitemsat_options_error_byaccessor_%29.md): Prepare to read or write from multiple files in a single batch operation.
+- [item(at:willMoveTo:)](item%28at_willmoveto_%29.md): Announces that your app is moving a file to a new URL.
+- [item(at:didMoveTo:)](item%28at_didmoveto_%29.md): Notifies relevant file presenters that the location of a file or directory changed.
+- [cancel()](cancel%28%29.md): Cancels any active file coordination calls.
+
+# coordinateWritingItemAtURL:options:error:byAccessor: (Objective-C)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Initiates a write operation on a single file or directory using the specified options.
+
+## Declaration
+
+```objectivec
+- (void) coordinateWritingItemAtURL:(NSURL *) url options:(NSFileCoordinatorWritingOptions) options error:(NSError **) outError byAccessor:(void (^)(NSURL *newURL)) writer;
+```
+
+## Parameters
+
+- `url`: A URL identifying the file or directory to write to. If other objects or processes are acting on the item at the URL, the actual URL passed to `writer` parameter may be different from the one in this parameter.
+- `options`: One of the writing options described in [NSFileCoordinatorWritingOptions](writingoptions.md). The options you specify partially determine how file presenters are notified and how this file coordinator object waits to execute your block.
+- `outError`: On input, a pointer to a pointer for an error object. If a file presenter encounters an error while preparing for this write operation, that error is returned in this parameter and the block in the `writer` parameter is not executed. If you cancel this operation before the `writer` block is executed, this parameter contains an error object on output.
+- `writer`: A [Block object](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/Block.html#//apple_ref/doc/uid/TP40008195-CH3) containing the file operations you want to perform in a coordinated manner. This block receives an [NSURL](../nsurl.md) object containing the URL of the item and returns no value. Always use the URL passed into the block instead of the value in the `url` parameter.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When invoking these methods, declare a `__block` variable before the accessor block and initialize it to a value that signals failure, and then inside the accessor block set it to a value that indicates success. If the coordinated operation fails, then the accessor block never runs. The sentinel variable still holds a value that indicates failure, and the [NSError](../nserror.md) out parameter contains a reference that describes the error.
+
+You use this method to perform write-related operations on a file or directory in a coordinated manner. This method executes synchronously, blocking the current thread until the `writer` block finishes executing. Before executing the block, though, the file coordinator waits until other relevant file presenter objects finish in-progress actions. Similarly, your write operation may cause pending actions for other file presenters to wait until your operations are complete. Whether or not the file coordinator waits depends on whether the item being written is a file or directory and also depends on other related operations.
+
+- If the `url` parameter specifies a file:
+- This method waits for other readers and writers of the exact same file to finish in-progress actions.
+- This method waits if the file is a file package or any item inside a file package and other writers are reading or writing to other items inside the package directory.
+- This method does not wait for readers or writers that are manipulating the parent directory of the file, unless one of those writers specified the [NSFileCoordinatorWritingForDeleting](writingoptions/fordeleting.md) or [NSFileCoordinatorWritingForMoving](writingoptions/formoving.md) option.
+- If the `url` parameter specifies a directory:
+- This method waits if other read or write operations are occurring on the exact same directory.
+- This method does not wait if read or write operations are occurring on items inside the directory (but not on the directory itself).
+- This method does not wait for readers or writers that are manipulating the parent directory of the directory, unless one of those writers specified the [NSFileCoordinatorWritingForDeleting](writingoptions/fordeleting.md) or [NSFileCoordinatorWritingForMoving](writingoptions/formoving.md) option.
+
+This method calls the [relinquishPresentedItemToWriter:](../nsfilepresenter/relinquishpresenteditem%28towriter_%29.md) method of any relevant file presenters. This method is called for file presenters in the current process and in other processes. Depending on the options you specify, other methods of the file presenters may also be called. When writing a file package directory, file presenter objects that are currently reading or writing the contents of that file package also receive these notifications. All of the called methods must return successfully before the file coordinator executes your block. If multiple file presenters are operating on the item, the order in which those presenters are notified is undefined.
+
+> **Note**
+
+>  When deleting an item inside a file package using the [NSFileCoordinatorWritingForDeleting](writingoptions/fordeleting.md) option, the file coordinator does not call the [accommodatePresentedItemDeletionWithCompletionHandler:](../nsfilepresenter/accommodatepresenteditemdeletion%28completionhandler_%29.md) method of any file presenters monitoring the file package directory itself. Instead, the delete operation is treated as a write operation on the file package.
+
+With one exception, do not nest calls to file coordinator methods inside the block you pass to this method. You may call the [coordinateReadingItemAtURL:options:error:byAccessor:](coordinate%28readingitemat_options_error_byaccessor_%29.md) method to read the file if you discover through modification-date checking that the contents of the file have changed. However, if you call this method from inside your block, the file coordinator object throws an exception.
+
+## See Also
+
+### Coordinating File Operations Synchronously
+
+- [coordinateReadingItemAtURL:options:error:byAccessor:](coordinate%28readingitemat_options_error_byaccessor_%29.md): Initiates a read operation on a single file or directory using the specified options.
+- [coordinateReadingItemAtURL:options:writingItemAtURL:options:error:byAccessor:](coordinate%28readingitemat_options_writingitemat_options_error_byaccessor_%29.md): Initiates a read operation that contains a follow-up write operation.
+- [coordinateWritingItemAtURL:options:writingItemAtURL:options:error:byAccessor:](coordinate%28writingitemat_options_writingitemat_options_error_byaccessor_%29.md): Initiates a write operation that involves a secondary write operation.
+- [prepareForReadingItemsAtURLs:options:writingItemsAtURLs:options:error:byAccessor:](prepare%28forreadingitemsat_options_writingitemsat_options_error_byaccessor_%29.md): Prepare to read or write from multiple files in a single batch operation.
+- [itemAtURL:willMoveToURL:](item%28at_willmoveto_%29.md): Announces that your app is moving a file to a new URL.
+- [itemAtURL:didMoveToURL:](item%28at_didmoveto_%29.md): Notifies relevant file presenters that the location of a file or directory changed.
+- [cancel](cancel%28%29.md): Cancels any active file coordination calls.

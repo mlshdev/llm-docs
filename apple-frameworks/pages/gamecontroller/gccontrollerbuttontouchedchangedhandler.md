@@ -1,0 +1,61 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/gamecontroller/gccontrollerbuttontouchedchangedhandler](https://developer.apple.com/documentation/gamecontroller/gccontrollerbuttontouchedchangedhandler)
+
+# GCControllerButtonTouchedChangedHandler (Swift)
+
+**Framework:** Game Controller  
+**Kind:** Type Alias  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+
+
+The signature for the block that executes when the user touches the button if the controller supports that feature.
+
+## Declaration
+
+```swift
+typealias GCControllerButtonTouchedChangedHandler = (GCControllerButtonInput, Float, Bool, Bool) -> Void
+```
+
+## Parameters
+
+- `button`: The button element whose value changed.
+- `value`: A normalized number between `0.0` (minimum) and `1.0` (maximum) that represents the amount of physical or simulated pressure that the user applies to the button.
+- `pressed`: A Boolean value that indicates whether the user is pressing the button. If [true](https://developer.apple.com/documentation/swift/true), the user is pressing the button and the `value` parameter contains the amount of pressure. If [false](https://developer.apple.com/documentation/swift/false), the user isn’t applying any pressure and the `value` parameter is `0.0`.
+- `touched`: A Boolean value that indicates whether the user is touching the button. If [true](https://developer.apple.com/documentation/swift/true), the user is touching the button; otherwise, the user isn’t.
+
+## See Also
+
+### Getting change information
+
+- [touchedChangedHandler](gccontrollerbuttoninput/touchedchangedhandler.md): The block that the element calls when the user touches the button.
+- [pressedChangedHandler](gccontrollerbuttoninput/pressedchangedhandler.md): The block that the element calls when the user presses or releases the button.
+- [valueChangedHandler](gccontrollerbuttoninput/valuechangedhandler.md): The block that the element calls when the user changes the level of pressure on the button.
+- [GCControllerButtonValueChangedHandler](gccontrollerbuttonvaluechangedhandler.md): The signature for the block that executes when a button’s state changes.
+
+# GCControllerButtonTouchedChangedHandler (Objective-C)
+
+**Framework:** Game Controller  
+**Kind:** Type Alias  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+
+
+The signature for the block that executes when the user touches the button if the controller supports that feature.
+
+## Declaration
+
+```objectivec
+typedef void (^)(GCControllerButtonInput *, float, _Bool, _Bool) GCControllerButtonTouchedChangedHandler;
+```
+
+## Parameters
+
+- `button`: The button element whose value changed.
+- `value`: A normalized number between `0.0` (minimum) and `1.0` (maximum) that represents the amount of physical or simulated pressure that the user applies to the button.
+- `pressed`: A Boolean value that indicates whether the user is pressing the button. If [true](https://developer.apple.com/documentation/swift/true), the user is pressing the button and the `value` parameter contains the amount of pressure. If [false](https://developer.apple.com/documentation/swift/false), the user isn’t applying any pressure and the `value` parameter is `0.0`.
+- `touched`: A Boolean value that indicates whether the user is touching the button. If [true](https://developer.apple.com/documentation/swift/true), the user is touching the button; otherwise, the user isn’t.
+
+## See Also
+
+### Getting change information
+
+- [touchedChangedHandler](gccontrollerbuttoninput/touchedchangedhandler.md): The block that the element calls when the user touches the button.
+- [pressedChangedHandler](gccontrollerbuttoninput/pressedchangedhandler.md): The block that the element calls when the user presses or releases the button.
+- [valueChangedHandler](gccontrollerbuttoninput/valuechangedhandler.md): The block that the element calls when the user changes the level of pressure on the button.
+- [GCControllerButtonValueChangedHandler](gccontrollerbuttonvaluechangedhandler.md): The signature for the block that executes when a button’s state changes.

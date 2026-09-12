@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/tcp_connection_server_accurate_ecn_state_t](https://developer.apple.com/documentation/kernel/tcp_connection_server_accurate_ecn_state_t)
+
+# tcp_connection_server_accurate_ecn_state_t
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Enumeration  
+**Availability:** macOS 14.0+
+
+## Declaration
+
+```objectivec
+typedef enum tcp_connection_server_accurate_ecn_state_t : unsigned int {
+    ...
+} tcp_connection_server_accurate_ecn_state_t;
+```
+
+## Topics
+
+### Constants
+
+- [tcp_connection_server_accurate_ecn_ace_bleaching_detected](tcp_connection_server_accurate_ecn_state_t/tcp_connection_server_accurate_ecn_ace_bleaching_detected.md)
+- [tcp_connection_server_accurate_ecn_feature_disabled](tcp_connection_server_accurate_ecn_state_t/tcp_connection_server_accurate_ecn_feature_disabled.md)
+- [tcp_connection_server_accurate_ecn_feature_enabled](tcp_connection_server_accurate_ecn_state_t/tcp_connection_server_accurate_ecn_feature_enabled.md)
+- [tcp_connection_server_accurate_ecn_invalid](tcp_connection_server_accurate_ecn_state_t/tcp_connection_server_accurate_ecn_invalid.md)
+- [tcp_connection_server_accurate_ecn_negotiation_blackholed](tcp_connection_server_accurate_ecn_state_t/tcp_connection_server_accurate_ecn_negotiation_blackholed.md)
+- [tcp_connection_server_accurate_ecn_negotiation_success](tcp_connection_server_accurate_ecn_state_t/tcp_connection_server_accurate_ecn_negotiation_success.md)
+- [tcp_connection_server_accurate_ecn_negotiation_success_ect_bleaching_detected](tcp_connection_server_accurate_ecn_state_t/tcp_connection_server_accurate_ecn_negotiation_success_ect_bleaching_detected.md)
+- [tcp_connection_server_accurate_ecn_negotiation_success_ect_mangling_detected](tcp_connection_server_accurate_ecn_state_t/tcp_connection_server_accurate_ecn_negotiation_success_ect_mangling_detected.md)
+- [tcp_connection_server_accurate_ecn_requested](tcp_connection_server_accurate_ecn_state_t/tcp_connection_server_accurate_ecn_requested.md)
+- [tcp_connection_server_classic_ecn_requested](tcp_connection_server_accurate_ecn_state_t/tcp_connection_server_classic_ecn_requested.md)
+- [tcp_connection_server_no_ecn_requested](tcp_connection_server_accurate_ecn_state_t/tcp_connection_server_no_ecn_requested.md)

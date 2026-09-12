@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ip_timestamp](https://developer.apple.com/documentation/kernel/ip_timestamp)
+
+# ip_timestamp
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Availability:** macOS 10.6+
+
+## Declaration
+
+```objectivec
+struct ip_timestamp {
+    ...
+};
+```
+
+## Topics
+
+### Instance Properties
+
+- [ipt_code](ip_timestamp/1567045-ipt_code.md)
+- [ipt_flg](ip_timestamp/1567034-ipt_flg.md)
+- [ipt_len](ip_timestamp/1567002-ipt_len.md)
+- [ipt_oflw](ip_timestamp/1566998-ipt_oflw.md)
+- [ipt_ptr](ip_timestamp/1567041-ipt_ptr.md)
+- [ipt_timestamp](ip_timestamp/1567016-ipt_timestamp.md)

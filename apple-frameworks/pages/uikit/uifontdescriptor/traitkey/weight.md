@@ -1,0 +1,79 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uifontdescriptor/traitkey/weight](https://developer.apple.com/documentation/uikit/uifontdescriptor/traitkey/weight)
+
+# weight (Swift)
+
+**Framework:** UIKit  
+**Kind:** Type Property  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+The numerical value that corresponds to a font face.
+
+## Declaration
+
+```swift
+static let weight: UIFontDescriptor.TraitKey
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The value of this key is an [NSNumber](../../../foundation/nsnumber.md) object. The valid value range is from `-1.0` to `1.0`, where `0.0` corresponds to the [regular](../../uifont/weight/regular.md) weight constant. The negative side of the value range indicates that the font is light or thin; the positive side means the font is heavier or bolder. For example, the font face [ultraLight](../../uifont/weight/ultralight.md) has the approximate value of `-0.8`, and [black](../../uifont/weight/black.md) has the approximate value of `0.62`. When providing a weight that doesn’t precisely match a font face in the family, the system locates an available face that represents the closest match.
+
+You can use a font face constant to specify a weight; for a list of constants, see [UIFont.Weight](../../uifont/weight.md).
+
+To access the weight of a font, first retrieve the font’s [traits](../attributename/traits.md) dictionary information:
+
+```swift
+let font = UIFont.systemFont(ofSize: 21, weight: .bold)
+if let traits = font.fontDescriptor.object(forKey: .traits) as? [UIFontDescriptor.TraitKey: Any]{
+    let weightValue = traits[.weight]
+}
+```
+
+## See Also
+
+### Font traits
+
+- [slant](slant.md): The relative slant angle of the font.
+- [symbolic](symbolic.md): The symbolic font traits.
+- [width](width.md): The inter-glyph spacing of the font.
+
+# UIFontWeightTrait (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Global Variable  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+The numerical value that corresponds to a font face.
+
+## Declaration
+
+```objectivec
+extern UIFontDescriptorTraitKey const UIFontWeightTrait;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The value of this key is an [NSNumber](../../../foundation/nsnumber.md) object. The valid value range is from `-1.0` to `1.0`, where `0.0` corresponds to the [UIFontWeightRegular](../../uifont/weight/regular.md) weight constant. The negative side of the value range indicates that the font is light or thin; the positive side means the font is heavier or bolder. For example, the font face [UIFontWeightUltraLight](../../uifont/weight/ultralight.md) has the approximate value of `-0.8`, and [UIFontWeightBlack](../../uifont/weight/black.md) has the approximate value of `0.62`. When providing a weight that doesn’t precisely match a font face in the family, the system locates an available face that represents the closest match.
+
+You can use a font face constant to specify a weight; for a list of constants, see [UIFontWeight](../../uifont/weight.md).
+
+To access the weight of a font, first retrieve the font’s [UIFontDescriptorTraitsAttribute](../attributename/traits.md) dictionary information:
+
+```swift
+let font = UIFont.systemFont(ofSize: 21, weight: .bold)
+if let traits = font.fontDescriptor.object(forKey: .traits) as? [UIFontDescriptor.TraitKey: Any]{
+    let weightValue = traits[.weight]
+}
+```
+
+## See Also
+
+### Font traits
+
+- [UIFontSlantTrait](slant.md): The relative slant angle of the font.
+- [UIFontSymbolicTrait](symbolic.md): The symbolic font traits.
+- [UIFontWidthTrait](width.md): The inter-glyph spacing of the font.

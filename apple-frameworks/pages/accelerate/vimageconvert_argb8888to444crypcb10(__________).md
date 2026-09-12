@@ -1,0 +1,79 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimageconvert_argb8888to444crypcb10(_:_:_:_:_:)](https://developer.apple.com/documentation/accelerate/vimageconvert_argb8888to444crypcb10(_:_:_:_:_:))
+
+# vImageConvert_ARGB8888To444CrYpCb10(\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 8.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Converts an 8-bit-per-channel, 4-channel ARGB buffer to an 10-bit-per-channel 4:4:4 CrYpCb buffer.
+
+## Declaration
+
+```swift
+func vImageConvert_ARGB8888To444CrYpCb10(_ src: UnsafePointer<vImage_Buffer>, _ dest: UnsafePointer<vImage_Buffer>, _ info: UnsafePointer<vImage_ARGBToYpCbCr>, _ permuteMap: UnsafePointer<UInt8>!, _ flags: vImage_Flags) -> vImage_Error
+```
+
+## Parameters
+
+- `src`: The source vImage buffer.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the [height](vimage_buffer/height.md), [width](vimage_buffer/width.md), and [rowBytes](vimage_buffer/rowbytes.md) fields of this structure, and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+- `info`: A [vImage_ARGBToYpCbCr](vimage_argbtoypcbcr.md) structure that describes the conversion matrix, the range of the input and output pixels from the matrix, and clamping information.
+- `permuteMap`: An array of four 8-bit integers with the values `0`, `1`, `2`, and 3, in some order. Each value specifies the channel from the source image that the function copies to the destination channel at the corresponding index.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes in [Data Types and Constants](data-types-and-constants.md).
+
+## See Also
+
+### Converting to 4:4:4
+
+- [vImageConvert_ARGB8888To444CrYpCb8(\_:\_:\_:\_:\_:)](vimageconvert_argb8888to444crypcb8%28__________%29.md): Converts an 8-bit-per-channel, 4-channel ARGB buffer to an 8-bit-per-channel 4:4:4 CrYpCb buffer.
+- [vImageConvert_ARGB8888To444AYpCbCr8(\_:\_:\_:\_:\_:)](vimageconvert_argb8888to444aypcbcr8%28__________%29.md): Converts an 8-bit-per-channel, 4-channel ARGB buffer to an 8-bit-per-channel 4:4:4 YpCbCr buffer.
+- [vImageConvert_ARGB8888To444CbYpCrA8(\_:\_:\_:\_:\_:)](vimageconvert_argb8888to444cbypcra8%28__________%29.md): Converts an 8-bit-per-channel, 4-channel ARGB buffer to an 8-bit-per-channel 4:4:4 CrYpCbA buffer.
+- [vImageConvert_ARGB8888To444AYpCbCr16(\_:\_:\_:\_:\_:)](vimageconvert_argb8888to444aypcbcr16%28__________%29.md): Converts an 8-bit-per-channel, 4-channel ARGB buffer to an 16-bit-per-channel 4:4:4 YpCbCr buffer.
+- [vImageConvert_ARGB16UTo444AYpCbCr16(\_:\_:\_:\_:\_:)](vimageconvert_argb16uto444aypcbcr16%28__________%29.md): Converts an unsigned 16-bit-per-channel, 4-channel ARGB buffer to an 16-bit-per-channel 4:4:4 AYpCbCr buffer.
+- [vImageConvert_ARGB16Q12To444CrYpCb10(\_:\_:\_:\_:\_:)](vimageconvert_argb16q12to444crypcb10%28__________%29.md): Converts a fixed-point 16-bit-per-channel, 4-channel ARGB buffer to an 10-bit-per-channel 4:4:4 CrYpCb buffer.
+
+# vImageConvert_ARGB8888To444CrYpCb10 (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 8.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Converts an 8-bit-per-channel, 4-channel ARGB buffer to an 10-bit-per-channel 4:4:4 CrYpCb buffer.
+
+## Declaration
+
+```objectivec
+vImage_Error vImageConvert_ARGB8888To444CrYpCb10(const vImage_Buffer *src, const vImage_Buffer *dest, const vImage_ARGBToYpCbCr *info, const uint8_t permuteMap[4], vImage_Flags flags);
+```
+
+## Parameters
+
+- `src`: The source vImage buffer.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the [height](vimage_buffer/height.md), [width](vimage_buffer/width.md), and [rowBytes](vimage_buffer/rowbytes.md) fields of this structure, and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+- `info`: A [vImage_ARGBToYpCbCr](vimage_argbtoypcbcr.md) structure that describes the conversion matrix, the range of the input and output pixels from the matrix, and clamping information.
+- `permuteMap`: An array of four 8-bit integers with the values `0`, `1`, `2`, and 3, in some order. Each value specifies the channel from the source image that the function copies to the destination channel at the corresponding index.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes in [Data Types and Constants](data-types-and-constants.md).
+
+## See Also
+
+### Converting to 4:4:4
+
+- [vImageConvert_ARGB8888To444CrYpCb8](vimageconvert_argb8888to444crypcb8%28__________%29.md): Converts an 8-bit-per-channel, 4-channel ARGB buffer to an 8-bit-per-channel 4:4:4 CrYpCb buffer.
+- [vImageConvert_ARGB8888To444AYpCbCr8](vimageconvert_argb8888to444aypcbcr8%28__________%29.md): Converts an 8-bit-per-channel, 4-channel ARGB buffer to an 8-bit-per-channel 4:4:4 YpCbCr buffer.
+- [vImageConvert_ARGB8888To444CbYpCrA8](vimageconvert_argb8888to444cbypcra8%28__________%29.md): Converts an 8-bit-per-channel, 4-channel ARGB buffer to an 8-bit-per-channel 4:4:4 CrYpCbA buffer.
+- [vImageConvert_ARGB8888To444AYpCbCr16](vimageconvert_argb8888to444aypcbcr16%28__________%29.md): Converts an 8-bit-per-channel, 4-channel ARGB buffer to an 16-bit-per-channel 4:4:4 YpCbCr buffer.
+- [vImageConvert_ARGB16UTo444AYpCbCr16](vimageconvert_argb16uto444aypcbcr16%28__________%29.md): Converts an unsigned 16-bit-per-channel, 4-channel ARGB buffer to an 16-bit-per-channel 4:4:4 AYpCbCr buffer.
+- [vImageConvert_ARGB16Q12To444CrYpCb10](vimageconvert_argb16q12to444crypcb10%28__________%29.md): Converts a fixed-point 16-bit-per-channel, 4-channel ARGB buffer to an 10-bit-per-channel 4:4:4 CrYpCb buffer.

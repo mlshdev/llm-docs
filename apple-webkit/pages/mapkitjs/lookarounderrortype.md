@@ -1,0 +1,39 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/mapkitjs/lookarounderrortype](https://developer.apple.com/documentation/mapkitjs/lookarounderrortype)
+
+# LookAroundErrorType
+
+**Interface language:** Data
+
+**Framework:** MapKit JS  
+**Kind:** Enumeration  
+**Availability:** MapKit JS 5.79+
+
+Values that describes errors than can occur when starting a Look Around view.
+
+## Declaration
+
+```
+const LookAroundErrorType: Readonly<{
+    readonly AvailabilityError: "availability-error";
+    readonly BrowserError: "browser-error";
+    readonly ServiceError: "service-error";
+    readonly UnknownError: "unknown-error";
+}>
+type LookAroundErrorType =
+    (typeof LookAroundErrorType)[keyof typeof LookAroundErrorType];
+```
+
+## Topics
+
+### Enumeration Cases
+
+- [AvailabilityError](lookarounderrortype/availabilityerror.md): An error type that indicates the requested Look Around view isn’t available.
+- [BrowserError](lookarounderrortype/browsererror.md): An error type that indicates the browser doesn’t support the Look Around experience.
+- [ServiceError](lookarounderrortype/serviceerror.md): An error type that indicates the service supporting the Look Around view isn’t available.
+- [UnknownError](lookarounderrortype/unknownerror.md): An error type that indicates the Look Around view encountered an unknown error.
+
+## See Also
+
+### Events and event properties
+
+- [LookAroundErrorEvent](lookarounderrorevent.md): A custom event object that contains information about the error when starting a Look Around view.

@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/capabilitysetting](https://developer.apple.com/documentation/appstoreconnectapi/capabilitysetting)
+
+# CapabilitySetting
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.1+
+
+An object that represents a capability setting for an app.
+
+## Declaration
+
+```
+object CapabilitySetting
+```
+
+## Properties
+
+- `allowedInstances` — `string`: **Allowed values:** `ENTRY`, `SINGLE`, `MULTIPLE`
+- `description` — `string`:
+- `enabledByDefault` — `boolean`:
+- `key` — `string`: **Allowed values:** `ICLOUD_VERSION`, `DATA_PROTECTION_PERMISSION_LEVEL`, `APPLE_ID_AUTH_APP_CONSENT`
+- `name` — `string`:
+- `options` — `[CapabilityOption]`:
+- `visible` — `boolean`:
+- `minInstances` — `integer`:
+
+## See Also
+
+### Object and Data Types
+
+- [BundleIdCapability](bundleidcapability.md): An entitlement or service (such as Push Notifications or In-App Purchases) enabled for a registered bundle ID.
+- [BundleIdCapabilityCreateRequest](bundleidcapabilitycreaterequest.md): The request body you use to create a Bundle ID Capability.
+- [BundleIdCapabilityUpdateRequest](bundleidcapabilityupdaterequest.md): The request body you use to update a Bundle ID Capability.
+- [BundleIdCapabilityResponse](bundleidcapabilityresponse.md): The response body for endpoints that enable or modify a capability for a bundle ID.
+- [BundleIdCapabilitiesResponse](bundleidcapabilitiesresponse.md): The response body for endpoints that list capabilities enabled for a bundle ID.
+- [BundleIdCapabilitiesWithoutIncludesResponse](bundleidcapabilitieswithoutincludesresponse.md): A response containing a list of bundle ID capabilities, without related resources.
+- [CapabilityOption](capabilityoption.md): An option within a capability setting.
+- [CapabilityType](capabilitytype.md): String that represents an app’s capability type.

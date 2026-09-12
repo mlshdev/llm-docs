@@ -1,0 +1,174 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accountdatatransfer](https://developer.apple.com/documentation/accountdatatransfer)
+
+# Account Data Transfer
+
+**Interface language:** Data
+
+**Framework:** Account Data Transfer  
+**Kind:** Framework  
+**Availability:** Account Data Transfer 1.0+
+
+Download App Store information, app install, and push notification activity on behalf of people who use your app.
+
+<a id="Overview"></a>
+
+## Overview
+
+Use the Account Data Transfer web API to request and download information about the people who use your app. The data available relates to someone’s use of Apple’s App Store, including information such as previous transactions and downloads. It also contains information related to app install and push notification activity.
+
+<a id="Understand-scopes"></a>
+
+## Understand scopes
+
+A scope identifies a subset of data that your apps and website can access from a single Apple Account, with approval from the individual whose data you request. Only select the applicable scopes for your apps and website.
+
+<a id="User-information-scope"></a>
+
+### User information scope
+
+The developer portal selects the `data-transfer-user-profile` scope automatically when you request access to another scope.
+
+- **`data-transfer-user-profile`**: A read-only scope that you use to request one or more scopes such as App Store information, app install or push notification activity about a user.
+
+<a id="App-Store-information-scopes"></a>
+
+### App Store information scopes
+
+- **`appstore-info-account-data-for-EU-users`**: A read-only scope you use to access App Store account information about users in the EU.
+- **`appstore-info-account-data-for-JP-users`**: A read-only scope you use to access App Store account information about users in Japan.
+- **`appstore-info-account-data-for-UK-users`**: A read-only scope you use to access App Store account information about users in the UK.
+
+> **Note**
+
+> If you’ve previously requested access to App Store information using the `appstore-user-profile` scope along with older scope names, the system accepts these scopes and automatically approves them for both EU and UK scopes. You don’t need to make a new token request.
+
+<a id="App-install-and-push-notification-activity-scopes"></a>
+
+### App install and push notification activity scopes
+
+- **`app-install-activity-account-data-for-EU-users`**: A read-only scope you use to access app install and push notification activity about users in the EU.
+- **`app-install-activity-account-data-for-JP-users`**: A read-only scope you use to access app install and push notification activity about users in Japan.
+- **`app-install-activity-account-data-for-UK-users`**: A read-only scope you use to access app install and push notification activity about users in the UK.
+
+<a id="Request-permission-for-the-specific-scopes"></a>
+
+## Request permission for the specific scopes
+
+To get permission for your App ID or Services ID to request App Store information and app install and push notification scopes for users in the EU, the UK, or Japan, follow the instructions at [Request access to the Account Data Transfer API](https://developer.apple.com/contact/request/account-data-transfer-api/).
+
+> **Note**
+
+>  This API returns account data about users in the EU, UK, and Japan. If you’re an app developer and need to transfer data related to App Store information, app install, or push notification activity for your app instead, use the [App Data Transfer](appdatatransfer.md) API. If you request access to the Account Data Transfer API, and Apple grants your request, you don’t need to supply the `consent_mode` query parameter when you request an authorization token for the App Data Transfer API.
+>
+> If you have any questions about the data made available in this API, including about how Apple applies privacy measures to protect user privacy and complies with legal obligations, contact Apple through Feedback Assistant by selecting the following option:
+>
+> Developer Tools & Resources \> Data Portability \> Account Data Transfer API
+>
+> [Learn more](https://support.apple.com/guide/feedback-assistant/welcome/mac) about how to use Feedback Assistant.
+
+<a id="Understand-the-difference-between-scope-types"></a>
+
+### Understand the difference between scope types
+
+When making requests, it’s important to understand the scopes you can combine in a single request, and the scopes you need to request separately, as well as which are one-time requests and which can be either one-time or recurring requests. The following table describes the relationships between the available scopes:.
+
+| Scope | Additional scopes you can add to the same request | Request frequency |
+| --- | --- | --- |
+| `app-install-activity-account-data-for-EU-users` | `appstore-info-account-data-for-EU-users` | One-time and recurring |
+| `app-install-activity-account-data-for-UK-users` | `appstore-info-account-data-for-UK-users` | One-time and recurring |
+| `appstore-info-account-data-for-EU-users` | `app-install-activity-account-data-for-EU-users` | One-time and recurring |
+| `appstore-info-account-data-for-UK-users` | `app-install-activity-account-data-for-UK-users` | One-time and recurring |
+| `appstore-info-account-data-for-JP-users` | `app-install-activity-account-data-for-JP-users` | One-time and recurring |
+| `app-install-activity-account-data-for-JP-users` | `appstore-info-account-data-for-JP-users` | One-time and recurring |
+
+<a id="Set-required-HTTP-headers-for-the-requested-scopes"></a>
+
+## Set required HTTP headers for the requested scopes
+
+- **`X-Apple-Transaction-Id`**: Set the value to a UUID that uniquely identifies the request. If you need to contact Apple to get support, quote the UUID of the request for which you need help.
+- **`Authorization`**: Set the value to `Bearer <ACCESS_TOKEN>` to assert that your app is authorized to fetch data with the `data-transfer-user-profile` scope, one or more of the relevant App Store information, app install and push notification, or registration and activation scopes.
+
+<a id="Set-the-request-frequency"></a>
+
+### Set the request frequency
+
+When making an HTTP `POST` request to the [Submit request](accountdatatransfer/submit-request.md) endpoint, requesting the App Store or app install activity scope, you can request a one time or recurring request, depending on the specified scopes:
+
+To make a one-time request, set the `mode` key to `ONE_TIME`. To make recurring requests, for app install or push notification activity, use one of the following values:
+
+- **`DAILY_30`**: One recurring request every day for 30 days
+- **`WEEKLY_180`**: One recurring request every week for 180 days
+
+> **Note**
+
+> If you already have a recurring request pending and make another recurring request, the system returns an error, along with the ID of the existing request.
+
+<a id="Save-the-server-request-ID-and-check-delay-value"></a>
+
+### Save the server request ID and check delay value
+
+The Apple server returns a request ID, which you use when you get the request status, request download URLs, or cancel the request. For recurring requests, the Apple server returns a request ID, along with the parent ID that identifies the series of recurring requests.
+
+The response from the server also contains a `statusCheckDelay`, which is the number of seconds you need to wait before checking the status of the request. You can cancel a request before this time by making a `POST` request to the [Cancel request](accountdatatransfer/cancel-request.md) endpoint.
+
+If you submit a `DAILY_30` recurring request and don’t resubmit the recurring instance each subsequent day, the recurring request expires 40 days after submission of the initial request.
+
+If you submit a `WEEKLY_180` recurring request and don’t resubmit the recurring instance each subsequent week, the recurring request expires 190 days after submission of the initial request.
+
+<a id="Find-the-request-status"></a>
+
+## Find the request status
+
+The data corresponding to the request you submitted isn’t available immediately. After the status-check delay expires, make a `GET` request to [Get one-time request status](accountdatatransfer/get-one-time-request-status.md) or [Get recurring request status](accountdatatransfer/get-recurring-request-status.md). Use the endpoint that corresponds to the scope of the requested report and include the request identifier in the path.
+
+If the job status is `completed` or `completed_with_error`, the data associated with the request is ready to download.
+
+<a id="Transfer-data"></a>
+
+## Transfer data
+
+Get the download URLs for a completed request by making a `GET` request to [Get one-time request download URLs](accountdatatransfer/get-one-time-request-download-urls.md) or [Get recurring request download URLs](accountdatatransfer/get-recurring-request-download-urls.md), including the request identifier in the path.
+
+The response contains a list of URLs to which you make `GET` requests, to retrieve the person’s data.
+
+Download URLs are available for 3 days after the download request completes. The URLs you receive are valid for 15 minutes after you request them.
+
+For information on the content and terms used in the files you download, see [Data and Privacy](https://privacy.apple.com/file-guides/transfer/accountdata).
+
+<a id="Resubmit-recurring-requests"></a>
+
+## Resubmit recurring requests
+
+For app install or push notification requests, add the next instance of a recurring request to the queue by making a `POST` request to the [Resubmit request](accountdatatransfer/resubmit-request.md) endpoint. Include the parent request identifier and the request identifier of the most recent instance in your request.
+
+The server’s response contains the request identifier of the new request, and a delay to wait before you can check the new request’s status.
+
+## Topics
+
+### Request creation
+
+- [Submit request](accountdatatransfer/submit-request.md): Starts preparing someone’s data for download.
+- [JobSubmission](accountdatatransfer/jobsubmission.md): An object that describes a submission that requests someone’s data.
+- [CreatedJob](accountdatatransfer/createdjob.md): An object that represents a newly created download request.
+- [Resubmit request](accountdatatransfer/resubmit-request.md): Enqueue the next instance of a recurring request.
+- [ResubmissionRequest](accountdatatransfer/resubmissionrequest.md): An object that describes a request to resubmit a recurring download request.
+- [ResubmissionResponse](accountdatatransfer/resubmissionresponse.md): An object that represents a resubmitted recurring download request.
+
+### Status
+
+- [Get one-time request status](accountdatatransfer/get-one-time-request-status.md): Find the status of a one-time download request.
+- [Get recurring request status](accountdatatransfer/get-recurring-request-status.md): Get the status of an instance of a recurring download request.
+- [RequestStatus](accountdatatransfer/requeststatus.md): An object that represents the status of a download request.
+
+### Downloads
+
+- [Get one-time request download URLs](accountdatatransfer/get-one-time-request-download-urls.md): Get URLs to retrieve someone’s data.
+- [Get recurring request download URLs](accountdatatransfer/get-recurring-request-download-urls.md): Get URLs to download a snapshot of someone’s data from a recurring series.
+- [DownloadLinks](accountdatatransfer/downloadlinks.md): An object that contains URLs to download someone’s account data.
+- [DownloadError](accountdatatransfer/downloaderror.md): An object that describes an error the server encounters preparing download URLs for a request.
+
+### Cancellation
+
+- [Cancel request](accountdatatransfer/cancel-request.md): Tells the server to stop processing an active request.
+- [CancellationRequest](accountdatatransfer/cancellationrequest.md): An object that identifies a one-time request, or an individual instance of a recurring request, to cancel.
+- [CancellationResponse](accountdatatransfer/cancellationresponse.md): An object that describes the outcome of canceling a download request.

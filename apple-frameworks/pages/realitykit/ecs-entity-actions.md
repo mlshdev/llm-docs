@@ -1,0 +1,61 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/ecs-entity-actions](https://developer.apple.com/documentation/realitykit/ecs-entity-actions)
+
+# Entity actions
+
+**Framework:** RealityKit  
+**Kind:** API Collection
+
+Create simple, reusable actions that can change your app state, RealityKit scene, or animate an entity.
+
+<a id="Overview"></a>
+
+## Overview
+
+Entity actions provide an easy way to change or animate parts of your scene, while also allowing you to influence the changes with your app state.
+
+For example, you can vary the size of an impulse you apply to an entity with [ImpulseAction](impulseaction.md), play a sound at the end of an entity’s animation with [PlayAudioAction](playaudioaction.md), or create a custom action that changes your app state.
+
+## Topics
+
+### Action management
+
+- [EntityAction](entityaction.md): A protocol that defines an action for an entity.
+- [ActionAnimation](actionanimation.md): Defines an an action animation.
+- [ActionEntityResolution](actionentityresolution.md): Options available to determine the resolution method for a target entity in an action.
+- [ActionHandlerProtocol](actionhandlerprotocol.md): The base protocol for action handlers.
+
+### Action events
+
+- [ActionEvent](actionevent.md): The structure returned to all action event handlers.
+- [AnimationState](animationstate.md): The concretely typed animation state structure.
+- [ActionEventType](actioneventtype.md): A set of events that an action responds to.
+- [ActionEventDefinition](actioneventdefinition.md): Defines an action event interval, and any associated parameters.
+- [AnimationStateProtocol](animationstateprotocol.md): The protocol representing the current animation state of an action animation.
+
+### Built-in actions
+
+- [BillboardAction](billboardaction.md): An action that animates the blend factor of an entity’s billboard component.
+- [EmphasizeAction](emphasizeaction.md): An action that performs an animation to call attention to an entity.
+- [FromToByAction](fromtobyaction.md): An action that starts, stops, or increments by a specific value.
+- [ImpulseAction](impulseaction.md): An action that applies an impulse to the physics body at its center of mass when played as an animation.
+- [OrbitEntityAction](orbitentityaction.md): An action which animates the transform of an entity to revolve around a specified pivot entity.
+- [PlayAnimationAction](playanimationaction.md): An action that plays an animation on the given target entity with a range of playback options.
+- [PlayAudioAction](playaudioaction.md): An action which plays an audio resource on the given target entity.
+- [SetEntityEnabledAction](setentityenabledaction.md): An action that enables or disables the targeted entity and its descendants when played as an animation.
+- [SpinAction](spinaction.md): An action which animates the transform of an entity to rotate around a specified local axis.
+
+### Behavior trees
+
+- [BehaviorTreeComponent](behaviortreecomponent.md): Manages which behavior tree is active for the component’s entity.
+- [BehaviorTreeResource](behaviortreeresource.md): An immutable representation of a behavior tree.
+- [BehaviorTreeAction](behaviortreeaction.md): A protocol that defines an action that a behavior tree action node can use.
+- [BehaviorTreeActionHandler](behaviortreeactionhandler.md): Behavior Tree-specific event handlers that allow an `ActionResult` to be returned from the handler.
+- [ActionResult](actionresult.md): Status values that an action can report back to the animation system.
+
+## See Also
+
+### Scene management and logic
+
+- [Scenes](ecs-scenes.md): The context that holds all RealityKit entities.
+- [Systems](ecs-systems.md): Apply behaviors and physical effects to the entities in a RealityKit scene.
+- [Events](ecs-events.md): Respond to things happening in your RealityKit scene by subscribing to specific event types.

@@ -1,0 +1,55 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applepaywebmerchantregistrationapi](https://developer.apple.com/documentation/applepaywebmerchantregistrationapi)
+
+# Apple Pay Web Merchant Registration API
+
+**Interface language:** Data
+
+**Framework:** Apple Pay Web Merchant Registration API  
+**Kind:** Web Service  
+**Availability:** Apple Pay Web Merchant Registration API 1.0+
+
+Manage merchant registration through your web platform.
+
+<a id="overview"></a>
+
+## Overview
+
+The Apple Pay Web Merchant Registration API is a REST API that enables platform integrators such as payment-service providers and e-commerce platforms to register web merchants who want to offer Apple Pay on the web.
+
+As a platform integrator, you manage Apple Pay configuration on the merchants’ behalf when you call [Register Merchant](applepaywebmerchantregistrationapi/register-merchant.md). Merchants aren’t required to set up an Apple Developer account or configure their own keys and certificates — you set up a shared set of keys and certificates for your entire merchant portfolio. Register merchants with their own website domains, or with web pages hosted by your platform.
+
+> **Note**
+
+>  This API is available in production and in sandbox environments. To use this API in the sandbox environment, call the endpoints using the domain `apple-pay-gateway-cert.apple.com`.  For example, the sandbox endpoint for [Register Merchant](applepaywebmerchantregistrationapi/register-merchant.md) is: `POST https://apple-pay-gateway-cert.apple.com/paymentservices/registerMerchant`.
+
+<a id="API-Requirements-for-Use"></a>
+
+### API Requirements for Use
+
+To use the Apple Pay Web Merchant Registration API,  you must meet the following requirements:
+
+- Your organization must be enrolled in the Apple Developer program. For more information about enrollment, see the “Enrolling as an Organization” section in [What You Need To Enroll](https://developer.apple.com/programs/enroll/).
+- You must apply for access to the API. For more information about applying, see [Applying to use the registration API and configuring IDs](applepaywebmerchantregistrationapi/applying-to-use-the-registration-api-and-configuring-ids.md).
+- Your server must call the API using mutual authentication with Transport Layer Security (TLS) 1.2 or later, and one of the supported cipher suites. For a list of supported cipher suites, see [Setting Up Your Server](applepayontheweb/setting-up-your-server.md).
+
+## Topics
+
+### Essentials
+
+- [Applying to use the registration API and configuring IDs](applepaywebmerchantregistrationapi/applying-to-use-the-registration-api-and-configuring-ids.md): Request access to the Registration API and register an ID to use the web service.
+
+### Web Merchant Registration
+
+- [Preparing merchant domains for verification](applepaywebmerchantregistrationapi/preparing-merchant-domains-for-verification.md): Host a domain verification file on each domain before requesting registration.
+- [Register Merchant](applepaywebmerchantregistrationapi/register-merchant.md): Register a merchant and its corresponding set of fully qualified domains.
+- [RegisterMerchantRequest](applepaywebmerchantregistrationapi/registermerchantrequest.md): The request body you use to register merchants.
+
+### Web Merchant Unregistration
+
+- [Unregister Merchant](applepaywebmerchantregistrationapi/unregister-merchant.md): Unregister one or more domains associated with a previously registered merchant.
+- [UnregisterMerchantRequest](applepaywebmerchantregistrationapi/unregistermerchantrequest.md): The request body you use to unregister one or more merchant domains.
+
+### Web Merchant Details
+
+- [Get Merchant Details](applepaywebmerchantregistrationapi/get-merchant.md): Retrieve information about a registered merchant’s current state by using the merchant’s internal merchant identifier.
+- [MerchantDetails](applepaywebmerchantregistrationapi/merchantdetails.md): Detailed information for a single registered merchant.

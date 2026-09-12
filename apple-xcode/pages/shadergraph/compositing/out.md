@@ -1,0 +1,69 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/shadergraph/compositing/out](https://developer.apple.com/documentation/shadergraph/compositing/out)
+
+# Out
+
+**Framework:** ShaderGraph  
+**Kind:** ShaderGraph Node  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 26.0+ · visionOS 1.0+
+
+Outputs areas of foreground that do not overlap with background.
+
+<a id="Parameter-Types"></a>
+
+## Parameter Types
+
+| Input | Type |
+| --- | --- |
+| `Foreground` | Color4 |
+| `Background` | Color4 |
+| `Mix` | Float |
+
+| Output | Type |
+| --- | --- |
+| `Out` | Color4 |
+
+<a id="Parameter-descriptions"></a>
+
+## Parameter descriptions
+
+- **`Foreground`**: The `color4` foreground input. `F` represents the RGB component of this parameter. `f` represents the alpha component of this parameter.
+- **`Background`**: The `color4` background input. `B` represents the RGB component of this parameter. `b`represents the alpha component of this parameter.
+- **`Mix`**: The weight of the blend operation. The higher the value of `Mix`, the more apparent the effect of the blend operation. The default value is `1`. Values outside of the range `0-1` produce an undefined effect outside of the node’s intended function.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The `Out` node determines its output using the alpha channels of the foreground and background inputs. The RGB component of the output is `F*(1-b)` and the alpha component of the output is `f*(1-b)`. The visual effect of this node is that within the output, the node preserves the foreground values that don’t overlap with the background alpha. Below is a simple node graph that uses the `Out` node to blend a tile and rock texture:
+
+![](https://developer.apple.com/images/ShaderGraph-Docs/OutGraph.png)
+
+Below are the two original images, the image representation of the alpha of the background, and the resulting blended texture applied to a cube:
+
+![Foreground](https://developer.apple.com/images/ShaderGraph-Docs/DisjointOverMaterial1.png)
+
+![Background](https://developer.apple.com/images/ShaderGraph-Docs/DisjointOverMaterial2.png)
+
+![Background Alpha](https://developer.apple.com/images/ShaderGraph-Docs/InMaterialAlpha.png)
+
+![Blended texture](https://developer.apple.com/images/ShaderGraph-Docs/OutMaterial.png)
+
+## See Also
+
+### Nodes
+
+- [Premultiply](premultiply.md): Multiplies the RGB channels of the input by the alpha channel.
+- [Unpremultiply](unpremultiply.md): Divides the RGB channels of the input by the alpha channel.
+- [Additive Mix](additive-mix.md): Adds foreground and background values.
+- [Subtractive Mix](subtractive-mix.md): Subtracts foreground from background values.
+- [Difference](difference.md): Outputs the distance between foreground and background values.
+- [Burn](burn.md): A blend operation that darkens the foreground layer using the background.
+- [Dodge](dodge.md): A blend operation that lightens the background layer depending on the foreground.
+- [Screen](screen.md): A blend operation that lightens areas that are darker than white.
+- [Overlay](overlay.md): A blend operation that multiplies dark areas and screens light areas.
+- [Disjoint Over](disjoint-over.md): A merge operation that layers foreground over background color, but assumes no overlap in partially transparent areas covered by both.
+- [In](in.md): Outputs areas of foreground that overlap with the alpha of background.
+- [Mask](mask.md): Outputs areas of background that overlap with the alpha of foreground.
+- [Matte](matte.md): A merge operation that layers premultiplied foreground over background.
+- [Over](over.md): A merge operation that layers foreground over background, using the alpha of the foreground.
+- [Inside](inside.md): Multiplies a mask to all channels of the input.

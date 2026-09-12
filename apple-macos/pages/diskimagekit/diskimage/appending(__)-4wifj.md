@@ -1,0 +1,45 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/diskimagekit/diskimage/appending(_:)-4wifj](https://developer.apple.com/documentation/diskimagekit/diskimage/appending(_:)-4wifj)
+
+# appending(\_:)
+
+**Framework:** DiskImageKit  
+**Kind:** Instance Method  
+**Availability:** macOS 27.0+
+
+Appends a layer to this disk image, creating or extending a stack.
+
+## Declaration
+
+```swift
+consuming func appending(_ layer: consuming DiskImage) throws -> any StackedImage
+```
+
+## Parameters
+
+- `layer`: An existing disk image to append as the new top layer.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A [StackedImage](../stackedimage.md) containing all layers.
+
+<a id="discussion"></a>
+
+## Discussion
+
+> **Note**
+
+> The framework allows only one cache layer per stacked disk image.
+
+This method creates a stacked disk image by appending a layer to either a base image or an existing stacked image. When the image is already a stacked image, the framework adds the new layer on top of the existing stack.
+
+> **Throws**
+
+> [IncompatibleStackingError](../incompatiblestackingerror.md) if the appended layer isn’t compatible with the stack.
+
+## See Also
+
+### Appending layers and resizing existing images
+
+- [DiskImage.StackableLayer](stackablelayer.md): A marker protocol that stackable disk image layer configuration objects conform to.

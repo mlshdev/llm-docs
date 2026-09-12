@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iocommandgate/1811517-commandwakeup](https://developer.apple.com/documentation/kernel/iocommandgate/1811517-commandwakeup)
+
+# commandWakeup
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel
+
+Wakeup one or more threads that are asleep on an event.
+
+## Declaration
+
+```objectivec
+virtual void commandWakeup(
+ void *event,
+ bool oneThread = false); 
+```
+
+## Parameters
+
+- `event`: Pointer to an address.
+- `onlyOneThread`: true to only wake up at most one thread, false otherwise.
+
+## See Also
+
+### Miscellaneous
+
+- [attemptAction](1811105-attemptaction.md): Single thread a call to an action with the target work-loop.
+- [attemptCommand](1811141-attemptcommand.md): Single thread a command with the target work-loop.
+- [commandGate](1811293-commandgate.md): Factory method to create and initialise an IOCommandGate, See $link init.
+- [commandSleep(void \*, AbsoluteTime, UInt32)](1811482-commandsleep.md): Put a thread that is currently holding the command gate to sleep.
+- [commandSleep(void \*, UInt32)](1811498-commandsleep.md): Put a thread that is currently holding the command gate to sleep.
+- [disable](1811531-disable.md): Disable the command gate
+- [enable](1811547-enable.md): Enable command gate, this will unblock any blocked Commands and Actions.
+- [init](1811560-init.md): Class initialiser.
+- [runAction](1811576-runaction.md): Single thread a call to an action with the target work-loop.
+- [runCommand](1811585-runcommand.md): Single thread a command with the target work-loop.

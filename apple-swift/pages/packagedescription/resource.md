@@ -1,0 +1,51 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/packagedescription/resource](https://developer.apple.com/documentation/packagedescription/resource)
+
+# Resource
+
+**Framework:** PackageDescription  
+**Kind:** Structure  
+**Availability:** SwiftPM 5.3+
+
+A resource to bundle with the Swift package.
+
+## Declaration
+
+```swift
+struct Resource
+```
+
+<a id="overview"></a>
+
+## Overview
+
+If a Swift package declares a Swift tools version of 5.3 or later, it can include resource files. Similar to source code, Swift Package Manager scopes resources to a target, so you must put them into the folder that corresponds to the target they belong to. For example, any resources for the `MyLibrary` target must reside in `Sources/MyLibrary`. Use subdirectories to organize your resource files in a way that simplifies file identification and management. For example, put all resource files into a directory named `Resources`, so they reside at `Sources/MyLibrary/Resources`.
+
+By default, Swift Package Manager handles common resources types for Apple platforms automatically. For example, you don’t need to declare XIB files, storyboards, Core Data file types, and asset catalogs as resources in your package manifest. However, you must explicitly declare other file types — for example, image files — as resources using the [process(\_:localization:)](resource/process%28__localization_%29.md) or [copy(\_:)](resource/copy%28__%29.md) rules. Alternatively, exclude resource files from a target by passing them to the target initializer’s [exclude](target/exclude.md) parameter.
+
+To learn more about package resources, see [Bundling resources as a Swift Package](https://developer.apple.com/documentation/xcode/bundling-resources-with-a-swift-package).
+
+## Topics
+
+### Applying Rules
+
+- [process(\_:localization:)](resource/process%28__localization_%29.md): Applies a platform-specific rules to the resource at the given path.
+- [Resource.Localization](resource/localization.md): Defines the explicit type of localization for resources.
+- [copy(\_:)](resource/copy%28__%29.md): Applies the copy rule to a resource at the given path.
+- [embedInCode(\_:)](resource/embedincode%28__%29.md): Applies the embed rule to a resource at the given path.
+
+## Relationships
+
+### Conforms To
+
+- [Sendable](../swift/sendable.md)
+- [SendableMetatype](../swift/sendablemetatype.md)
+
+## See Also
+
+### Configuring File Locations
+
+- [path](target/path.md): The path of the target, relative to the package root.
+- [exclude](target/exclude.md): The paths to source and resource files that you don’t want to include in the target.
+- [sources](target/sources.md): The source files in this target.
+- [resources](target/resources.md): The explicit list of resource files in the target.
+- [publicHeadersPath](target/publicheaderspath.md): The path to the directory that contains public headers of a C-family target.

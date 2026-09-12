@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "project": "bun",
   "title": "Bun",
+  "homepage": "https://bun.com/docs",
   "repository": "oven-sh/bun",
   "tag": "bun-v1.4.2",
   "releaseId": 383114065,

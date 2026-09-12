@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsaccessibilityprotocol/isaccessibilityrequired()](https://developer.apple.com/documentation/appkit/nsaccessibilityprotocol/isaccessibilityrequired())
+
+# isAccessibilityRequired()
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS 10.12+
+
+Returns a Boolean value that determines whether the accessibility element must have content for successful submission of a form.
+
+## Declaration
+
+```swift
+func isAccessibilityRequired() -> Bool
+```
+
+## See Also
+
+### Assigning roles
+
+- [setAccessibilityRequired(\_:)](setaccessibilityrequired%28__%29.md): Sets a Boolean value that determines whether the accessibility element must have content for successful submission of a form.
+- [accessibilityRole()](accessibilityrole%28%29.md): Returns the type of interface element that the accessibility element represents.
+- [setAccessibilityRole(\_:)](setaccessibilityrole%28__%29.md): Sets the type of interface element that the accessibility element represents.
+- [accessibilityRoleDescription()](accessibilityroledescription%28%29.md): Returns a localized, human-intelligible description of the accessibility element’s role, such as *radio button*.
+- [setAccessibilityRoleDescription(\_:)](setaccessibilityroledescription%28__%29.md): Sets the localized, human-intelligible description of the accessibility element’s role, such as *radio button*.
+- [accessibilitySubrole()](accessibilitysubrole%28%29.md): Returns the specialized interface element type that the accessibility element represents.
+- [setAccessibilitySubrole(\_:)](setaccessibilitysubrole%28__%29.md): Sets the specialized interface element type that the accessibility element represents.
+- [NSAccessibility.Role](../nsaccessibility-swift.struct/role.md): Values that describe types of objects that accessibility elements represent.
+- [NSAccessibility.Subrole](../nsaccessibility-swift.struct/subrole.md): Values that describe specialized object subtypes that accessibility elements represent.

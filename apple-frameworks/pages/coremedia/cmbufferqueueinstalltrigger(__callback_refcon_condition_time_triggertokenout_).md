@@ -1,0 +1,99 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremedia/cmbufferqueueinstalltrigger(_:callback:refcon:condition:time:triggertokenout:)](https://developer.apple.com/documentation/coremedia/cmbufferqueueinstalltrigger(_:callback:refcon:condition:time:triggertokenout:))
+
+# CMBufferQueueInstallTrigger(\_:callback:refcon:condition:time:triggerTokenOut:) (Swift)
+
+**Framework:** Core Media  
+**Kind:** Function  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Installs a trigger with a callback on a buffer queue.
+
+## Declaration
+
+```swift
+func CMBufferQueueInstallTrigger(_ queue: CMBufferQueue, callback: CMBufferQueueTriggerCallback?, refcon: UnsafeMutableRawPointer?, condition: CMBufferQueueTriggerCondition, time: CMTime, triggerTokenOut: UnsafeMutablePointer<CMBufferQueueTriggerToken?>?) -> OSStatus
+```
+
+## Parameters
+
+- `queue`: `CMBufferQueue` on which the trigger is being set.
+- `callback`: Callback to be called when the trigger condition becomes true. Can be `NULL`, if client intends only to explicitly test the condition.  if `triggerTokenOut` is `NULL` this parameter cannot be `NULL` otherwise the trigger would be meaningless.
+- `refcon`: Refcon to be passed to the triggerCallback. Can be `NULL` if the callback doesn’t need it, or is                                                            itself `NULL`.
+- `condition`: The condition to be tested when evaluating the trigger.
+- `time`: The time value to compare against when evaluating the trigger. Must be numeric (ie. not invalid, indefinite, or infinite), except for certain trigger conditions which ignores it (eg, kCMBufferQueueTrigger_WhenMinPresentationTimeStampChanges).
+- `triggerTokenOut`: Address where created trigger token will be written. Can be `NULL`, if client has no need to explicitly test or remove the trigger. Cannot be `NULL` when triggerCallback is `NULL`,  since the trigger would be meaningless then.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See `Result Codes`
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The returned trigger token can be passed to `CMBufferQueueTestTrigger` and `CMBufferQueueRemoveTrigger`. The `triggerTokenOut` parameter can be `NULL` (client doesn’t need to test or remove trigger), and the `triggerCallback` parameter can be `NULL` (client doesn’t need callbacks, but rather will explicitly test the trigger).  One of these two parameters must be non-NULL, however, since an untestable trigger that does not perform a callback is meaningless.  If the trigger condition is already true,  `CMBufferQueueInstallTrigger` will call the triggerCallback and will first write the trigger token to \*triggerTokenOut.
+
+## See Also
+
+### Managing Triggers
+
+- [CMBufferQueueInstallTriggerHandler(\_:\_:\_:\_:\_:)](cmbufferqueueinstalltriggerhandler%28__________%29.md): Installs a trigger with a handler on a buffer queue.
+- [CMBufferQueueInstallTriggerHandlerWithIntegerThreshold(\_:\_:\_:\_:\_:)](cmbufferqueueinstalltriggerhandlerwithintegerthreshold%28__________%29.md): Installs a trigger with a handler and threshold on a buffer queue.
+- [CMBufferQueueTriggerHandler](cmbufferqueuetriggerhandler.md): A type alias for a trigger handler.
+- [CMBufferQueueTriggerToken](cmbufferqueuetriggertoken.md): A type alias for a trigger token.
+- [Buffer Trigger Conditions](buffer-trigger-conditions.md): The trigger conditions the framework supports.
+- [CMBufferQueueTestTrigger(\_:triggerToken:)](cmbufferqueuetesttrigger%28__triggertoken_%29.md): Tests whether the trigger condition is true for the specified buffer queue.
+- [CMBufferQueueInstallTriggerWithIntegerThreshold(\_:callback:refcon:condition:threshold:triggerTokenOut:)](cmbufferqueueinstalltriggerwithintegerthreshold%28__callback_refcon_condition_threshold_triggertokenout_%29.md): Installs a trigger with a callback and threshold on a buffer queue.
+- [CMBufferQueueTriggerCallback](cmbufferqueuetriggercallback.md): A callback for the system to invoke when a trigger condition becomes true.
+- [CMBufferQueueTriggerCondition](cmbufferqueuetriggercondition.md): A type to specify conditions to associate with a buffer queue trigger.
+
+# CMBufferQueueInstallTrigger (Objective-C)
+
+**Framework:** Core Media  
+**Kind:** Function  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Installs a trigger with a callback on a buffer queue.
+
+## Declaration
+
+```objectivec
+extern OSStatus CMBufferQueueInstallTrigger(CMBufferQueueRef queue, CMBufferQueueTriggerCallback callback, void *refcon, CMBufferQueueTriggerCondition condition, CMTime time, CMBufferQueueTriggerToken*triggerTokenOut);
+```
+
+## Parameters
+
+- `queue`: `CMBufferQueue` on which the trigger is being set.
+- `callback`: Callback to be called when the trigger condition becomes true. Can be `NULL`, if client intends only to explicitly test the condition.  if `triggerTokenOut` is `NULL` this parameter cannot be `NULL` otherwise the trigger would be meaningless.
+- `refcon`: Refcon to be passed to the triggerCallback. Can be `NULL` if the callback doesn’t need it, or is                                                            itself `NULL`.
+- `condition`: The condition to be tested when evaluating the trigger.
+- `time`: The time value to compare against when evaluating the trigger. Must be numeric (ie. not invalid, indefinite, or infinite), except for certain trigger conditions which ignores it (eg, kCMBufferQueueTrigger_WhenMinPresentationTimeStampChanges).
+- `triggerTokenOut`: Address where created trigger token will be written. Can be `NULL`, if client has no need to explicitly test or remove the trigger. Cannot be `NULL` when triggerCallback is `NULL`,  since the trigger would be meaningless then.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See `Result Codes`
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The returned trigger token can be passed to `CMBufferQueueTestTrigger` and `CMBufferQueueRemoveTrigger`. The `triggerTokenOut` parameter can be `NULL` (client doesn’t need to test or remove trigger), and the `triggerCallback` parameter can be `NULL` (client doesn’t need callbacks, but rather will explicitly test the trigger).  One of these two parameters must be non-NULL, however, since an untestable trigger that does not perform a callback is meaningless.  If the trigger condition is already true,  `CMBufferQueueInstallTrigger` will call the triggerCallback and will first write the trigger token to \*triggerTokenOut.
+
+## See Also
+
+### Managing Triggers
+
+- [CMBufferQueueInstallTriggerHandler](cmbufferqueueinstalltriggerhandler%28__________%29.md): Installs a trigger with a handler on a buffer queue.
+- [CMBufferQueueInstallTriggerHandlerWithIntegerThreshold](cmbufferqueueinstalltriggerhandlerwithintegerthreshold%28__________%29.md): Installs a trigger with a handler and threshold on a buffer queue.
+- [CMBufferQueueTriggerHandler](cmbufferqueuetriggerhandler.md): A type alias for a trigger handler.
+- [CMBufferQueueTriggerToken](cmbufferqueuetriggertoken.md): A type alias for a trigger token.
+- [Buffer Trigger Conditions](buffer-trigger-conditions.md): The trigger conditions the framework supports.
+- [CMBufferQueueTestTrigger](cmbufferqueuetesttrigger%28__triggertoken_%29.md): Tests whether the trigger condition is true for the specified buffer queue.
+- [CMBufferQueueInstallTriggerWithIntegerThreshold](cmbufferqueueinstalltriggerwithintegerthreshold%28__callback_refcon_condition_threshold_triggertokenout_%29.md): Installs a trigger with a callback and threshold on a buffer queue.
+- [CMBufferQueueTriggerCallback](cmbufferqueuetriggercallback.md): A callback for the system to invoke when a trigger condition becomes true.
+- [CMBufferQueueTriggerCondition](cmbufferqueuetriggercondition.md): A type to specify conditions to associate with a buffer queue trigger.

@@ -1,0 +1,136 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avcapturedeskviewapplication](https://developer.apple.com/documentation/avfoundation/avcapturedeskviewapplication)
+
+# AVCaptureDeskViewApplication (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Class  
+**Availability:** Mac Catalyst 16.1+ · macOS 13.0+
+
+An object that programmatically presents Desk View.
+
+## Declaration
+
+```swift
+class AVCaptureDeskViewApplication
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use this class to programmatically launch Desk View from your app. You can optionally customize the presentation and specifiy an action to take afterward.
+
+> **Note**
+
+>  Desk View is available in iOS 16 and later on iPhone 11 and later, excluding iPhone SE, for use with a Mac running macOS 13 and later.
+
+The following example shows how to configure and present Desk View with a completion handler:
+
+```swift
+let deskView = AVCaptureDeskViewApplication()
+let configuration = AVCaptureDeskViewApplication.LaunchConfiguration()
+
+// Use the previously set frame.
+configuration.mainWindowFrame = .zero
+
+// Execute the completion handler when the user starts Desk View.
+configuration.requiresSetUpModeCompletion = true
+
+// Launch Desk View with a configuration and completion handler.
+deskView.present(launchConfiguration: configuration) { error in
+    // Perform error handling and additional tasks.
+}
+```
+
+## Topics
+
+### Presenting the Desk View app
+
+- [present(completionHandler:)](avcapturedeskviewapplication/present%28completionhandler_%29.md): Launches Desk View with no additional configuration and then performs a completion handler if you specify it.
+- [present(launchConfiguration:completionHandler:)](avcapturedeskviewapplication/present%28launchconfiguration_completionhandler_%29.md): Launches Desk View with the configuration and completion handler that you specify.
+- [AVCaptureDeskViewApplication.LaunchConfiguration](avcapturedeskviewapplication/launchconfiguration.md): An object that configures how to present Desk View.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Continuity Camera
+
+- [Supporting Continuity Camera in your tvOS app](../avkit/supporting-continuity-camera-in-your-tvos-app.md): Capture high-quality photos, video, and audio in your Apple TV app by connecting an iPhone or iPad as a continuity device.
+- [Supporting Continuity Camera in your macOS app](supporting-continuity-camera-in-your-macos-app.md): Enable high-quality photo and video capture by using an iPhone camera as an external capture device.
+
+# AVCaptureDeskViewApplication (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Class  
+**Availability:** Mac Catalyst 16.1+ · macOS 13.0+
+
+An object that programmatically presents Desk View.
+
+## Declaration
+
+```objectivec
+@interface AVCaptureDeskViewApplication : NSObject
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use this class to programmatically launch Desk View from your app. You can optionally customize the presentation and specifiy an action to take afterward.
+
+> **Note**
+
+>  Desk View is available in iOS 16 and later on iPhone 11 and later, excluding iPhone SE, for use with a Mac running macOS 13 and later.
+
+The following example shows how to configure and present Desk View with a completion handler:
+
+```swift
+let deskView = AVCaptureDeskViewApplication()
+let configuration = AVCaptureDeskViewApplication.LaunchConfiguration()
+
+// Use the previously set frame.
+configuration.mainWindowFrame = .zero
+
+// Execute the completion handler when the user starts Desk View.
+configuration.requiresSetUpModeCompletion = true
+
+// Launch Desk View with a configuration and completion handler.
+deskView.present(launchConfiguration: configuration) { error in
+    // Perform error handling and additional tasks.
+}
+```
+
+## Topics
+
+### Presenting the Desk View app
+
+- [presentWithCompletionHandler:](avcapturedeskviewapplication/present%28completionhandler_%29.md): Launches Desk View with no additional configuration and then performs a completion handler if you specify it.
+- [presentWithLaunchConfiguration:completionHandler:](avcapturedeskviewapplication/present%28launchconfiguration_completionhandler_%29.md): Launches Desk View with the configuration and completion handler that you specify.
+- [AVCaptureDeskViewApplicationLaunchConfiguration](avcapturedeskviewapplication/launchconfiguration.md): An object that configures how to present Desk View.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+## See Also
+
+### Continuity Camera
+
+- [Supporting Continuity Camera in your tvOS app](../avkit/supporting-continuity-camera-in-your-tvos-app.md): Capture high-quality photos, video, and audio in your Apple TV app by connecting an iPhone or iPad as a continuity device.
+- [Supporting Continuity Camera in your macOS app](supporting-continuity-camera-in-your-macos-app.md): Enable high-quality photo and video capture by using an iPhone camera as an external capture device.

@@ -1,0 +1,34 @@
+# Apple Xcode and developer tools snapshot-ef15f2517b3c
+
+> Documentation generated from Apple's public DocC endpoints at [https://developer.apple.com/documentation/xcode](https://developer.apple.com/documentation/xcode) and pinned to catalog snapshot `ef15f2517b3cf1caffa4e230469793956bae2795781ded9695249cca474ecb70` captured at 2026-09-12T21:04:59.670Z.
+
+- [Full documentation](llms-full.txt): Complete normalized corpus for Apple Xcode and developer tools snapshot-ef15f2517b3c.
+- [Provenance manifest](manifest.json): Snapshot digest, capture time, document count, and generation notes.
+- Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.
+- 21 frameworks in this catalog, captured at 2026-09-12T21:04:59.670Z.
+- Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.
+- Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream.
+
+## Frameworks
+
+- [Analytics Reports](pages/analytics-reports.md): 142 pages.
+- [App Intents Testing](pages/appintentstesting.md): 118 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Automator](pages/automator.md): 165 pages. Platforms: Mac Catalyst, macOS.
+- [DeveloperToolsSupport](pages/developertoolssupport.md): 85 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Enterprise Program API](pages/enterpriseprogramapi.md): 185 pages.
+- [Installer JS](pages/installer_js.md): 51 pages.
+- [Playground Bluetooth](pages/playgroundbluetooth.md): 64 pages. Platforms: Swift Playgrounds.
+- [Playground Support](pages/playgroundsupport.md): 73 pages. Platforms: macOS, Swift Playgrounds.
+- [Reality Composer Pro](pages/realitycomposerpro.md): 32 pages.
+- [Scripting Bridge](pages/scriptingbridge.md): 39 pages. Platforms: Mac Catalyst, macOS.
+- [ShaderGraph](pages/shadergraph.md): 249 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [StoreKit Test](pages/storekittest.md): 251 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Swift Playgrounds](pages/swift-playgrounds.md): 24 pages.
+- [Swift Testing](pages/testing.md): 214 pages. Platforms: Swift, Xcode.
+- [Technotes](pages/technotes.md): 81 pages.
+- [XCTest](pages/xctest.md): 502 pages. Platforms: xcode.
+- [XCUIAutomation](pages/xcuiautomation.md): 536 pages. Platforms: Xcode.
+- [Xcode](pages/xcode.md): 365 pages.
+- [Xcode Release Notes](pages/xcode-release-notes.md): 65 pages.
+- [XcodeKit](pages/xcodekit.md): 40 pages. Platforms: macOS.
+- [xcselect](pages/xcselect.md): 12 pages. Platforms: Mac Catalyst, macOS.

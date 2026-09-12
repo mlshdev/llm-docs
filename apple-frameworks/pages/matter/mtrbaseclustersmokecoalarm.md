@@ -1,0 +1,186 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclustersmokecoalarm](https://developer.apple.com/documentation/matter/mtrbaseclustersmokecoalarm)
+
+# MTRBaseClusterSmokeCOAlarm (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+class MTRBaseClusterSmokeCOAlarm
+```
+
+## Topics
+
+### Initializers
+
+- [init(device:endpointID:queue:)](mtrbaseclustersmokecoalarm/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandList(completion:)](mtrbaseclustersmokecoalarm/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAttributeList(completion:)](mtrbaseclustersmokecoalarm/readattributeattributelist%28completion_%29.md)
+- [readAttributeBatteryAlert(completion:)](mtrbaseclustersmokecoalarm/readattributebatteryalert%28completion_%29.md)
+- [readAttributeCOState(completion:)](mtrbaseclustersmokecoalarm/readattributecostate%28completion_%29.md)
+- [readAttributeClusterRevision(completion:)](mtrbaseclustersmokecoalarm/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeContaminationState(completion:)](mtrbaseclustersmokecoalarm/readattributecontaminationstate%28completion_%29.md)
+- [readAttributeDeviceMuted(completion:)](mtrbaseclustersmokecoalarm/readattributedevicemuted%28completion_%29.md)
+- [readAttributeEndOfServiceAlert(completion:)](mtrbaseclustersmokecoalarm/readattributeendofservicealert%28completion_%29.md)
+- [readAttributeExpiryDate(completion:)](mtrbaseclustersmokecoalarm/readattributeexpirydate%28completion_%29.md)
+- [readAttributeExpressedState(completion:)](mtrbaseclustersmokecoalarm/readattributeexpressedstate%28completion_%29.md)
+- [readAttributeFeatureMap(completion:)](mtrbaseclustersmokecoalarm/readattributefeaturemap%28completion_%29.md)
+- [readAttributeGeneratedCommandList(completion:)](mtrbaseclustersmokecoalarm/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeHardwareFaultAlert(completion:)](mtrbaseclustersmokecoalarm/readattributehardwarefaultalert%28completion_%29.md)
+- [readAttributeInterconnectCOAlarm(completion:)](mtrbaseclustersmokecoalarm/readattributeinterconnectcoalarm%28completion_%29.md)
+- [readAttributeInterconnectSmoke(completion:)](mtrbaseclustersmokecoalarm/readattributeinterconnectsmoke%28completion_%29.md)
+- [readAttributeSmokeSensitivityLevel(completion:)](mtrbaseclustersmokecoalarm/readattributesmokesensitivitylevel%28completion_%29.md)
+- [readAttributeSmokeState(completion:)](mtrbaseclustersmokecoalarm/readattributesmokestate%28completion_%29.md)
+- [readAttributeTestInProgress(completion:)](mtrbaseclustersmokecoalarm/readattributetestinprogress%28completion_%29.md)
+- [selfTestRequest(completion:)](mtrbaseclustersmokecoalarm/selftestrequest%28completion_%29.md)
+- [selfTestRequest(with:completion:)](mtrbaseclustersmokecoalarm/selftestrequest%28with_completion_%29.md)
+- [subscribeAttributeAcceptedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclustersmokecoalarm/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeList(with:subscriptionEstablished:reportHandler:)](mtrbaseclustersmokecoalarm/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeBatteryAlert(with:subscriptionEstablished:reportHandler:)](mtrbaseclustersmokecoalarm/subscribeattributebatteryalert%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCOState(with:subscriptionEstablished:reportHandler:)](mtrbaseclustersmokecoalarm/subscribeattributecostate%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevision(with:subscriptionEstablished:reportHandler:)](mtrbaseclustersmokecoalarm/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeContaminationState(with:subscriptionEstablished:reportHandler:)](mtrbaseclustersmokecoalarm/subscribeattributecontaminationstate%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeDeviceMuted(with:subscriptionEstablished:reportHandler:)](mtrbaseclustersmokecoalarm/subscribeattributedevicemuted%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeEndOfServiceAlert(with:subscriptionEstablished:reportHandler:)](mtrbaseclustersmokecoalarm/subscribeattributeendofservicealert%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeExpiryDate(with:subscriptionEstablished:reportHandler:)](mtrbaseclustersmokecoalarm/subscribeattributeexpirydate%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeExpressedState(with:subscriptionEstablished:reportHandler:)](mtrbaseclustersmokecoalarm/subscribeattributeexpressedstate%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMap(with:subscriptionEstablished:reportHandler:)](mtrbaseclustersmokecoalarm/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclustersmokecoalarm/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeHardwareFaultAlert(with:subscriptionEstablished:reportHandler:)](mtrbaseclustersmokecoalarm/subscribeattributehardwarefaultalert%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeInterconnectCOAlarm(with:subscriptionEstablished:reportHandler:)](mtrbaseclustersmokecoalarm/subscribeattributeinterconnectcoalarm%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeInterconnectSmoke(with:subscriptionEstablished:reportHandler:)](mtrbaseclustersmokecoalarm/subscribeattributeinterconnectsmoke%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSmokeSensitivityLevel(with:subscriptionEstablished:reportHandler:)](mtrbaseclustersmokecoalarm/subscribeattributesmokesensitivitylevel%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSmokeState(with:subscriptionEstablished:reportHandler:)](mtrbaseclustersmokecoalarm/subscribeattributesmokestate%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeTestInProgress(with:subscriptionEstablished:reportHandler:)](mtrbaseclustersmokecoalarm/subscribeattributetestinprogress%28with_subscriptionestablished_reporthandler_%29.md)
+- [writeAttributeSmokeSensitivityLevel(withValue:completion:)](mtrbaseclustersmokecoalarm/writeattributesmokesensitivitylevel%28withvalue_completion_%29.md)
+- [writeAttributeSmokeSensitivityLevel(withValue:params:completion:)](mtrbaseclustersmokecoalarm/writeattributesmokesensitivitylevel%28withvalue_params_completion_%29.md)
+
+### Type Methods
+
+- [readAttributeAcceptedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustersmokecoalarm/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustersmokecoalarm/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeBatteryAlert(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustersmokecoalarm/readattributebatteryalert%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCOState(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustersmokecoalarm/readattributecostate%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevision(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustersmokecoalarm/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeContaminationState(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustersmokecoalarm/readattributecontaminationstate%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeDeviceMuted(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustersmokecoalarm/readattributedevicemuted%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeEndOfServiceAlert(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustersmokecoalarm/readattributeendofservicealert%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeExpiryDate(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustersmokecoalarm/readattributeexpirydate%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeExpressedState(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustersmokecoalarm/readattributeexpressedstate%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMap(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustersmokecoalarm/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustersmokecoalarm/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeHardwareFaultAlert(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustersmokecoalarm/readattributehardwarefaultalert%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeInterconnectCOAlarm(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustersmokecoalarm/readattributeinterconnectcoalarm%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeInterconnectSmoke(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustersmokecoalarm/readattributeinterconnectsmoke%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSmokeSensitivityLevel(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustersmokecoalarm/readattributesmokesensitivitylevel%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSmokeState(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustersmokecoalarm/readattributesmokestate%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeTestInProgress(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustersmokecoalarm/readattributetestinprogress%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRBaseClusterSmokeCOAlarm (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+@interface MTRBaseClusterSmokeCOAlarm : MTRGenericBaseCluster
+```
+
+## Topics
+
+### Initializers
+
+- [initWithDevice:endpointID:queue:](mtrbaseclustersmokecoalarm/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandListWithCompletion:](mtrbaseclustersmokecoalarm/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAttributeListWithCompletion:](mtrbaseclustersmokecoalarm/readattributeattributelist%28completion_%29.md)
+- [readAttributeBatteryAlertWithCompletion:](mtrbaseclustersmokecoalarm/readattributebatteryalert%28completion_%29.md)
+- [readAttributeCOStateWithCompletion:](mtrbaseclustersmokecoalarm/readattributecostate%28completion_%29.md)
+- [readAttributeClusterRevisionWithCompletion:](mtrbaseclustersmokecoalarm/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeContaminationStateWithCompletion:](mtrbaseclustersmokecoalarm/readattributecontaminationstate%28completion_%29.md)
+- [readAttributeDeviceMutedWithCompletion:](mtrbaseclustersmokecoalarm/readattributedevicemuted%28completion_%29.md)
+- [readAttributeEndOfServiceAlertWithCompletion:](mtrbaseclustersmokecoalarm/readattributeendofservicealert%28completion_%29.md)
+- [readAttributeExpiryDateWithCompletion:](mtrbaseclustersmokecoalarm/readattributeexpirydate%28completion_%29.md)
+- [readAttributeExpressedStateWithCompletion:](mtrbaseclustersmokecoalarm/readattributeexpressedstate%28completion_%29.md)
+- [readAttributeFeatureMapWithCompletion:](mtrbaseclustersmokecoalarm/readattributefeaturemap%28completion_%29.md)
+- [readAttributeGeneratedCommandListWithCompletion:](mtrbaseclustersmokecoalarm/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeHardwareFaultAlertWithCompletion:](mtrbaseclustersmokecoalarm/readattributehardwarefaultalert%28completion_%29.md)
+- [readAttributeInterconnectCOAlarmWithCompletion:](mtrbaseclustersmokecoalarm/readattributeinterconnectcoalarm%28completion_%29.md)
+- [readAttributeInterconnectSmokeAlarmWithCompletion:](mtrbaseclustersmokecoalarm/readattributeinterconnectsmoke%28completion_%29.md)
+- [readAttributeSmokeSensitivityLevelWithCompletion:](mtrbaseclustersmokecoalarm/readattributesmokesensitivitylevel%28completion_%29.md)
+- [readAttributeSmokeStateWithCompletion:](mtrbaseclustersmokecoalarm/readattributesmokestate%28completion_%29.md)
+- [readAttributeTestInProgressWithCompletion:](mtrbaseclustersmokecoalarm/readattributetestinprogress%28completion_%29.md)
+- [selfTestRequestWithCompletion:](mtrbaseclustersmokecoalarm/selftestrequest%28completion_%29.md)
+- [selfTestRequestWithParams:completion:](mtrbaseclustersmokecoalarm/selftestrequest%28with_completion_%29.md)
+- [subscribeAttributeAcceptedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustersmokecoalarm/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustersmokecoalarm/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeBatteryAlertWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustersmokecoalarm/subscribeattributebatteryalert%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCOStateWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustersmokecoalarm/subscribeattributecostate%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevisionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustersmokecoalarm/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeContaminationStateWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustersmokecoalarm/subscribeattributecontaminationstate%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeDeviceMutedWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustersmokecoalarm/subscribeattributedevicemuted%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeEndOfServiceAlertWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustersmokecoalarm/subscribeattributeendofservicealert%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeExpiryDateWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustersmokecoalarm/subscribeattributeexpirydate%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeExpressedStateWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustersmokecoalarm/subscribeattributeexpressedstate%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMapWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustersmokecoalarm/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustersmokecoalarm/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeHardwareFaultAlertWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustersmokecoalarm/subscribeattributehardwarefaultalert%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeInterconnectCOAlarmWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustersmokecoalarm/subscribeattributeinterconnectcoalarm%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeInterconnectSmokeAlarmWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustersmokecoalarm/subscribeattributeinterconnectsmoke%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSmokeSensitivityLevelWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustersmokecoalarm/subscribeattributesmokesensitivitylevel%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSmokeStateWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustersmokecoalarm/subscribeattributesmokestate%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeTestInProgressWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustersmokecoalarm/subscribeattributetestinprogress%28with_subscriptionestablished_reporthandler_%29.md)
+- [writeAttributeSmokeSensitivityLevelWithValue:completion:](mtrbaseclustersmokecoalarm/writeattributesmokesensitivitylevel%28withvalue_completion_%29.md)
+- [writeAttributeSmokeSensitivityLevelWithValue:params:completion:](mtrbaseclustersmokecoalarm/writeattributesmokesensitivitylevel%28withvalue_params_completion_%29.md)
+
+### Type Methods
+
+- [readAttributeAcceptedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustersmokecoalarm/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustersmokecoalarm/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeBatteryAlertWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustersmokecoalarm/readattributebatteryalert%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCOStateWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustersmokecoalarm/readattributecostate%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevisionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustersmokecoalarm/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeContaminationStateWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustersmokecoalarm/readattributecontaminationstate%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeDeviceMutedWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustersmokecoalarm/readattributedevicemuted%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeEndOfServiceAlertWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustersmokecoalarm/readattributeendofservicealert%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeExpiryDateWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustersmokecoalarm/readattributeexpirydate%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeExpressedStateWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustersmokecoalarm/readattributeexpressedstate%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMapWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustersmokecoalarm/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustersmokecoalarm/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeHardwareFaultAlertWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustersmokecoalarm/readattributehardwarefaultalert%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeInterconnectCOAlarmWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustersmokecoalarm/readattributeinterconnectcoalarm%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeInterconnectSmokeAlarmWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustersmokecoalarm/readattributeinterconnectsmoke%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSmokeSensitivityLevelWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustersmokecoalarm/readattributesmokesensitivitylevel%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSmokeStateWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustersmokecoalarm/readattributesmokestate%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeTestInProgressWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustersmokecoalarm/readattributetestinprogress%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)

@@ -1,0 +1,17 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/track_aperture_mode_dimensions_atom/size](https://developer.apple.com/documentation/quicktime-file-format/track_aperture_mode_dimensions_atom/size)
+
+# Size
+
+**Framework:** QuickTime File Format  
+**Kind:** Data field
+
+A 32-bit integer that specifies the number of bytes in the track aperture mode dimensions atom.
+
+## See Also
+
+### Data fields
+
+- [Type](type.md): A 32-bit integer that identifies the atom type.
+- [Track clean aperture dimensions atom](track_clean_aperture_dimensions_atom.md): An atom that carries the pixel dimensions of the track’s clean aperture.
+- [Track production aperture dimensions atom](track_production_aperture_dimensions_atom.md): An atom that carries the pixel dimensions of the track’s production aperture.
+- [Track encoded pixels dimensions atom](track_encoded_pixels_dimensions_atom.md): An atom that carries the pixel dimensions of the track’s encoded pixels.

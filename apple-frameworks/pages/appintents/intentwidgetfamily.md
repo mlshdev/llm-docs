@@ -1,0 +1,44 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/intentwidgetfamily](https://developer.apple.com/documentation/appintents/intentwidgetfamily)
+
+# IntentWidgetFamily
+
+**Framework:** App Intents  
+**Kind:** Enumeration  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · visionOS · watchOS 10.0+
+
+## Declaration
+
+```swift
+enum IntentWidgetFamily
+```
+
+## Topics
+
+### Enumeration Cases
+
+- [IntentWidgetFamily.accessoryCircular](intentwidgetfamily/accessorycircular.md): A circular widget.
+- [IntentWidgetFamily.accessoryCorner](intentwidgetfamily/accessorycorner.md): A corner widget.
+- [IntentWidgetFamily.accessoryInline](intentwidgetfamily/accessoryinline.md): A flat widget that contains a single row of text and an optional image.
+- [IntentWidgetFamily.accessoryRectangular](intentwidgetfamily/accessoryrectangular.md): A rectangular widget.
+- [IntentWidgetFamily.systemExtraLarge](intentwidgetfamily/systemextralarge.md): An extra large widget.
+- [IntentWidgetFamily.systemExtraLargePortrait](intentwidgetfamily/systemextralargeportrait.md): An extra large portrait widget.
+- [IntentWidgetFamily.systemLarge](intentwidgetfamily/systemlarge.md): A large widget.
+- [IntentWidgetFamily.systemMedium](intentwidgetfamily/systemmedium.md): A medium-sized widget.
+- [IntentWidgetFamily.systemSmall](intentwidgetfamily/systemsmall.md): A small widget.
+
+### Type Aliases
+
+- [IntentWidgetFamily.Specification](intentwidgetfamily/specification.md)
+- [IntentWidgetFamily.UnwrappedType](intentwidgetfamily/unwrappedtype.md)
+- [IntentWidgetFamily.ValueType](intentwidgetfamily/valuetype.md)
+
+### Type Properties
+
+- [defaultResolverSpecification](intentwidgetfamily/defaultresolverspecification.md)
+
+## Relationships
+
+### Conforms To
+
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)

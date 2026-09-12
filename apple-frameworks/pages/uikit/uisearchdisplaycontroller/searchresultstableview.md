@@ -1,0 +1,71 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uisearchdisplaycontroller/searchresultstableview](https://developer.apple.com/documentation/uikit/uisearchdisplaycontroller/searchresultstableview)
+
+# searchResultsTableView (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 3.0+ (deprecated in 8.0) · iPadOS 3.0+ (deprecated in 8.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+The table view in which the search results are displayed.
+
+> For more information, see [UISearchDisplayController](../uisearchdisplaycontroller.md).
+
+## Declaration
+
+```swift
+var searchResultsTableView: UITableView { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method creates a new table view if one does not already exist.
+
+## See Also
+
+### Configuring a search bar
+
+- [delegate](delegate.md): Deprecated. The controller’s delegate.
+- [searchBar](searchbar.md): Deprecated. The search bar.
+- [searchContentsController](searchcontentscontroller.md): Deprecated. The view controller that manages the contents being searched.
+- [searchResultsDataSource](searchresultsdatasource.md): Deprecated. The data source for the table view in which the search results are displayed.
+- [searchResultsDelegate](searchresultsdelegate.md): Deprecated. The delegate for the table view in which the search results are displayed.
+- [searchResultsTitle](searchresultstitle.md): Deprecated. The title for the search results view.
+- [displaysSearchBarInNavigationBar](displayssearchbarinnavigationbar.md): Deprecated. Specifies that the navigation bar contains a search bar.
+- [navigationItem](navigationitem.md): Deprecated. Represents the search display controller in a navigation controller’s navigation bar.
+
+# searchResultsTableView (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 3.0+ (deprecated in 8.0) · iPadOS 3.0+ (deprecated in 8.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+The table view in which the search results are displayed.
+
+> For more information, see [UISearchDisplayController](../uisearchdisplaycontroller.md).
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) UITableView * searchResultsTableView;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method creates a new table view if one does not already exist.
+
+## See Also
+
+### Configuring a search bar
+
+- [delegate](delegate.md): Deprecated. The controller’s delegate.
+- [searchBar](searchbar.md): Deprecated. The search bar.
+- [searchContentsController](searchcontentscontroller.md): Deprecated. The view controller that manages the contents being searched.
+- [searchResultsDataSource](searchresultsdatasource.md): Deprecated. The data source for the table view in which the search results are displayed.
+- [searchResultsDelegate](searchresultsdelegate.md): Deprecated. The delegate for the table view in which the search results are displayed.
+- [searchResultsTitle](searchresultstitle.md): Deprecated. The title for the search results view.
+- [displaysSearchBarInNavigationBar](displayssearchbarinnavigationbar.md): Deprecated. Specifies that the navigation bar contains a search bar.
+- [navigationItem](navigationitem.md): Deprecated. Represents the search display controller in a navigation controller’s navigation bar.

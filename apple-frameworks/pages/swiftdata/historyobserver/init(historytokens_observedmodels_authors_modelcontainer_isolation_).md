@@ -1,0 +1,32 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/swiftdata/historyobserver/init(historytokens:observedmodels:authors:modelcontainer:isolation:)](https://developer.apple.com/documentation/swiftdata/historyobserver/init(historytokens:observedmodels:authors:modelcontainer:isolation:))
+
+# init(historyTokens:observedModels:authors:modelContainer:isolation:)
+
+**Framework:** SwiftData  
+**Kind:** Initializer  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+Creates a history observer that reports changes through its observable [eventCounter](eventcounter.md) property.
+
+## Declaration
+
+```swift
+convenience init(historyTokens: [String : any HistoryToken]? = nil, observedModels: [any PersistentModel.Type] = [], authors: Set<String> = [], modelContainer: ModelContainer, isolation: isolated (any Actor)? = #isolation) throws
+```
+
+## Parameters
+
+- `historyTokens`: The initial history tokens keyed by store identifier. When `nil`, the observer starts with an empty token set and captures tokens from the first notification for each store.
+- `observedModels`: The model types to filter for. When empty (the default), the observer responds to changes for any model.
+- `authors`: The transaction authors to filter for. When empty (the default), the observer responds to changes from any author.
+- `modelContainer`: The model container to observe.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this initializer when you want to observe history changes via SwiftUI’s observation system or by reading [eventCounter](eventcounter.md) directly.
+
+> **Throws**
+
+> An error if the observer fails to fetch the initial history tokens.

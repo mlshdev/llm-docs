@@ -1,0 +1,67 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtlrendercommandencoder/setvisibilityresultmode(_:offset:)](https://developer.apple.com/documentation/metal/mtlrendercommandencoder/setvisibilityresultmode(_:offset:))
+
+# setVisibilityResultMode(\_:offset:) (Swift)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
+
+Configures which visibility test the GPU runs and the destination for any results it generates.
+
+## Declaration
+
+```swift
+func setVisibilityResultMode(_ mode: MTLVisibilityResultMode, offset: Int)
+```
+
+## Parameters
+
+- `mode`: An [MTLVisibilityResultMode](../mtlvisibilityresultmode.md) that configures which visibility test results the render pass saves to a buffer, or disables visibility testing.
+- `offset`: A location, in bytes, relative to the start of the render pass’s [visibilityResultBuffer](../mtlrenderpassdescriptor/visibilityresultbuffer.md). The GPU stores the result of a visibility test at `offset`, which needs to be a multiple of 8.
+
+<a id="discussion"></a>
+
+## Discussion
+
+To create a render pass that can enable visibility testing, assign an [MTLBuffer](../mtlbuffer.md) instance to the [visibilityResultBuffer](../mtlrenderpassdescriptor/visibilityresultbuffer.md) property of an [MTLRenderPassDescriptor](../mtlrenderpassdescriptor.md).
+
+You can monitor one or more drawing commands with a visibility test by calling this method before the drawing commands. The encoder uses the new visibility mode and offset for subsequent drawing commands until you change the configuration by calling the method again. For example, you can change the offset or entirely disable visibility tests for subsequent commands by passing [MTLVisibilityResultMode.disabled](../mtlvisibilityresultmode/disabled.md).
+
+> **Note**
+
+>  You can set a specific `offset` value only once per render pass. This means you need to encode all drawing commands for an offset at one time.
+
+The default mode for a render pass is [MTLVisibilityResultMode.disabled](../mtlvisibilityresultmode/disabled.md).
+
+# setVisibilityResultMode:offset: (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
+
+Configures which visibility test the GPU runs and the destination for any results it generates.
+
+## Declaration
+
+```objectivec
+- (void) setVisibilityResultMode:(MTLVisibilityResultMode) mode offset:(NSUInteger) offset;
+```
+
+## Parameters
+
+- `mode`: An [MTLVisibilityResultMode](../mtlvisibilityresultmode.md) that configures which visibility test results the render pass saves to a buffer, or disables visibility testing.
+- `offset`: A location, in bytes, relative to the start of the render pass’s [visibilityResultBuffer](../mtlrenderpassdescriptor/visibilityresultbuffer.md). The GPU stores the result of a visibility test at `offset`, which needs to be a multiple of 8.
+
+<a id="discussion"></a>
+
+## Discussion
+
+To create a render pass that can enable visibility testing, assign an [MTLBuffer](../mtlbuffer.md) instance to the [visibilityResultBuffer](../mtlrenderpassdescriptor/visibilityresultbuffer.md) property of an [MTLRenderPassDescriptor](../mtlrenderpassdescriptor.md).
+
+You can monitor one or more drawing commands with a visibility test by calling this method before the drawing commands. The encoder uses the new visibility mode and offset for subsequent drawing commands until you change the configuration by calling the method again. For example, you can change the offset or entirely disable visibility tests for subsequent commands by passing [MTLVisibilityResultModeDisabled](../mtlvisibilityresultmode/disabled.md).
+
+> **Note**
+
+>  You can set a specific `offset` value only once per render pass. This means you need to encode all drawing commands for an offset at one time.
+
+The default mode for a render pass is [MTLVisibilityResultModeDisabled](../mtlvisibilityresultmode/disabled.md).

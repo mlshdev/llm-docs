@@ -1,0 +1,77 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/app-encryption-declarations](https://developer.apple.com/documentation/appstoreconnectapi/app-encryption-declarations)
+
+# App Encryption Declarations
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** API Collection
+
+View, and assign to builds, the declarations about types of encryption used in your app.
+
+<a id="overview"></a>
+
+## Overview
+
+To comply with regulatory requirements, you sometimes need to provide information and supporting documentation in the form of declarations about the types of encryption used by your app. The app encryption declarations resource represents this information, and enables you to:
+
+- View information about the declaration, and
+- Assign the declaration to a build.
+- Create app encryption declarations in App Store Connect.
+- Upload app encryption declaration documents.
+
+> **Note**
+
+>  Builds that have the `usesNonExemptEncryption` flag set to true in the app’s property list must link to an app encryption declaration before the app can be submitted for beta app review.
+
+For more information, see [Overview of export compliance](https://developer.apple.com/help/app-store-connect/manage-app-information/overview-of-export-compliance).
+
+## Topics
+
+### Getting App Encryption Declarations
+
+- [List app encryption declarations](get-v1-appencryptiondeclarations.md): Find and list all available app encryption declarations.
+- [Read app encryption declaration information](get-v1-appencryptiondeclarations-_id_.md): Get information about a specific app encryption declaration.
+- [Read an app’s encryption declarations](get-v1-apps-_id_-appencryptiondeclarations.md): Find and list all available app encryption declarations.
+- [Read an app’s encryption declaration ids](get-v1-apps-_id_-relationships-appencryptiondeclarations.md): Find and list all available app encryption declaration IDs for a specific app.
+- [Read the app information of an app encryption declaration](get-v1-appencryptiondeclarations-_id_-app.md): Deprecated. Get the app information from a specific app encryption declaration.
+- [Read the App ID of an App Encryption Declaration](get-v1-appencryptiondeclarations-_id_-relationships-app.md): Deprecated. Get the app id from a specific app encryption declaration.
+- [Read a specific app encryption declaration document](get-v1-appencryptiondeclarationdocuments-_id_.md): Get detailed information about a specified App Encryption Declaration document.
+- [Read the declaration document for an app encryption declaration](get-v1-appencryptiondeclarations-_id_-appencryptiondeclarationdocument.md): Read the associated document for a specific App Encryption Declaration.
+- [Read the App ID of an App Encryption Declaration](get-v1-appencryptiondeclarations-_id_-relationships-app.md): Deprecated. Get the app id from a specific app encryption declaration.
+- [Read the ID of the Document for an App Encryption Declaration](get-v1-appencryptiondeclarations-_id_-relationships-appencryptiondeclarationdocument.md): Get the document id associated with a specific app encryption declaration.
+
+### Assigning App Encryption Declarations
+
+- [Create an app encryption declaration](post-v1-appencryptiondeclarations.md): Add an app encryption delcaration for a specific app.
+- [Assign builds to an app encryption declaration](post-v1-appencryptiondeclarations-_id_-relationships-builds.md): Deprecated. Assign one or more builds to an app encryption declaration.
+
+### Uploading App Encryption Declaration Documents
+
+- [Upload an app encryption declaration document](post-v1-appencryptiondeclarationdocuments.md): Add an App Encryption Declaration Document to an existing App Encryption Declaration.
+- [Modify an app encryption declaration document](patch-v1-appencryptiondeclarationdocuments-_id_.md): Commit an App Encryption Declaration Document after uploading it.
+
+### Objects and Data Types
+
+- [AppEncryptionDeclarationCreateRequest](appencryptiondeclarationcreaterequest.md): The request body you use to create an app encryption declaration.
+- [AppEncryptionDeclarationDocument](appencryptiondeclarationdocument.md): An uploaded export compliance document supporting an app encryption declaration.
+- [AppEncryptionDeclarationDocumentCreateRequest](appencryptiondeclarationdocumentcreaterequest.md): The request body for uploading an encryption compliance document for an app.
+- [AppEncryptionDeclarationDocumentResponse](appencryptiondeclarationdocumentresponse.md): A response containing a single encryption compliance document for an app.
+- [AppEncryptionDeclarationDocumentUpdateRequest](appencryptiondeclarationdocumentupdaterequest.md): The request body you use to update an app encryption declaration document update request.
+- [AppEncryptionDeclaration](appencryptiondeclaration.md): A declaration of an app’s use of encryption, required for export compliance and App Store submission.
+- [AppEncryptionDeclarationBuildsLinkagesRequest](appencryptiondeclarationbuildslinkagesrequest.md): Deprecated. A request body you use to add builds to an app encryption declaration.
+- [AppEncryptionDeclarationResponse](appencryptiondeclarationresponse.md): A response containing a single app encryption declaration.
+- [AppEncryptionDeclarationWithoutIncludesResponse](appencryptiondeclarationwithoutincludesresponse.md): A response containing a single encryption declaration, without related resources.
+- [AppEncryptionDeclarationsResponse](appencryptiondeclarationsresponse.md): A response containing a list of encryption declarations for an app.
+- [AppEncryptionDeclarationState](appencryptiondeclarationstate.md): Strings that represent the review or acceptance status of an app encryption declaration submitted to Apple.
+- [AppEncryptionDeclarationAppEncryptionDeclarationDocumentLinkageResponse](appencryptiondeclarationappencryptiondeclarationdocumentlinkageresponse.md)
+- [AppEncryptionDeclarationAppLinkageResponse](appencryptiondeclarationapplinkageresponse.md): Deprecated.
+
+## See Also
+
+### Builds
+
+- [Builds](builds.md): Manage builds for testers and submit builds for review.
+- [Build Bundles](build-bundles.md): Read metadata for app and App Clip binaries included in a build you upload to App Store Connect.
+- [Build Icons](build-icons.md): Get icons from your app’s binary that are uploaded to App Store.
+- [Build uploads](build-uploads.md): Read metadata for app builds you upload to App Store Connect.

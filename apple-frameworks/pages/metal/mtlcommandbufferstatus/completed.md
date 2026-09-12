@@ -1,0 +1,61 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtlcommandbufferstatus/completed](https://developer.apple.com/documentation/metal/mtlcommandbufferstatus/completed)
+
+# MTLCommandBufferStatus.completed (Swift)
+
+**Framework:** Metal  
+**Kind:** Case  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
+
+A command buffer’s successful, final state, which indicates the GPU finished running the command buffer’s commands without any problems.
+
+## Declaration
+
+```swift
+case completed
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+See the [MTLCommandBuffer](../mtlcommandbuffer.md) protocol’s [status](../mtlcommandbuffer/status.md) property for more information.
+
+## See Also
+
+### Command buffer states
+
+- [MTLCommandBufferStatus.notEnqueued](notenqueued.md): A command buffer’s initial state, which indicates its command queue isn’t reserving a place for it.
+- [MTLCommandBufferStatus.enqueued](enqueued.md): A command buffer’s second state, which indicates its command queue is reserving a place for it.
+- [MTLCommandBufferStatus.committed](committed.md): A command buffer’s third state, which indicates the command queue is preparing to schedule the command buffer by resolving its dependencies.
+- [MTLCommandBufferStatus.scheduled](scheduled.md): A command buffer’s fourth state, which indicates the command buffer has its resources ready and is waiting for the GPU to run its commands.
+- [MTLCommandBufferStatus.error](error.md): A command buffer’s unsuccessful, final state, which indicates the GPU stopped running the buffer’s commands because of a runtime issue.
+
+# MTLCommandBufferStatusCompleted (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Enumeration Case  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
+
+A command buffer’s successful, final state, which indicates the GPU finished running the command buffer’s commands without any problems.
+
+## Declaration
+
+```objectivec
+MTLCommandBufferStatusCompleted
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+See the [MTLCommandBuffer](../mtlcommandbuffer.md) protocol’s [status](../mtlcommandbuffer/status.md) property for more information.
+
+## See Also
+
+### Command buffer states
+
+- [MTLCommandBufferStatusNotEnqueued](notenqueued.md): A command buffer’s initial state, which indicates its command queue isn’t reserving a place for it.
+- [MTLCommandBufferStatusEnqueued](enqueued.md): A command buffer’s second state, which indicates its command queue is reserving a place for it.
+- [MTLCommandBufferStatusCommitted](committed.md): A command buffer’s third state, which indicates the command queue is preparing to schedule the command buffer by resolving its dependencies.
+- [MTLCommandBufferStatusScheduled](scheduled.md): A command buffer’s fourth state, which indicates the command buffer has its resources ready and is waiting for the GPU to run its commands.
+- [MTLCommandBufferStatusError](error.md): A command buffer’s unsuccessful, final state, which indicates the GPU stopped running the buffer’s commands because of a runtime issue.

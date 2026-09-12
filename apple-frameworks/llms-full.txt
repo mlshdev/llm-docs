@@ -1,0 +1,21 @@
+# Apple cross-platform frameworks snapshot-75c95c22eb2a: full documentation
+
+Source: https://developer.apple.com/documentation/technologies
+Catalog snapshot: 75c95c22eb2ad852f60a6fa16fc5b2a8bd2d83fed230b5c9ef73230b7dff2438
+Content digest: e6d3efcb96fcdebbc411a497a66265ee7cc6bedd94b4398515f60b69812f30c4
+Captured at: 2026-09-12T21:04:59.784Z
+
+This corpus is published as 12 volumes because a single file would exceed the 100 MiB GitHub file limit. Read the volumes in order for the complete corpus.
+
+- [Volume 1](llms-full.001.txt): 16217 documents.
+- [Volume 2](llms-full.002.txt): 16864 documents.
+- [Volume 3](llms-full.003.txt): 17202 documents.
+- [Volume 4](llms-full.004.txt): 30226 documents.
+- [Volume 5](llms-full.005.txt): 20911 documents.
+- [Volume 6](llms-full.006.txt): 18147 documents.
+- [Volume 7](llms-full.007.txt): 30523 documents.
+- [Volume 8](llms-full.008.txt): 23806 documents.
+- [Volume 9](llms-full.009.txt): 24456 documents.
+- [Volume 10](llms-full.010.txt): 27022 documents.
+- [Volume 11](llms-full.011.txt): 17628 documents.
+- [Volume 12](llms-full.012.txt): 3868 documents.

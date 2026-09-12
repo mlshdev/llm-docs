@@ -1,0 +1,39 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/ioi2crequest/1410339-sendsubaddress](https://developer.apple.com/documentation/iokit/ioi2crequest/1410339-sendsubaddress)
+
+# sendSubAddress
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.3+
+
+I2C subaddress to write.
+
+## Declaration
+
+```objectivec
+uint8_t sendSubAddress;
+```
+
+## See Also
+
+### Fields
+
+- [\__reservedA](../ioi2cinterface_h_user-space/ioi2crequest/1812650-_reserveda.md): Set to zero.
+- [result](1410361-result.md): The result of the transaction. Common errors are kIOReturnNoDevice if there is no device responding at the given address, kIOReturnUnsupportedMode if the type of transaction is unsupported on the requested bus.
+- [completion](1410371-completion.md): A completion routine to be executed when the request completes. If NULL is passed, the request is synchronous, otherwise it may execute asynchronously.
+- [commFlags](1410364-commflags.md): Flags that modify the I2C transaction type.
+- [minReplyDelay](1410394-minreplydelay.md): Minimum delay as absolute time between send and reply transactions.
+- [sendAddress](1410312-sendaddress.md): I2C address to write.
+- [\__reservedB](../ioi2cinterface_h_user-space/ioi2crequest/1812670-_reservedb.md): Set to zero.
+- [sendTransactionType](1410320-sendtransactiontype.md): Specifies one of three possible transaction types.
+- [sendBuffer](1410343-sendbuffer.md): Pointer to the send buffer.
+- [sendBytes](1410347-sendbytes.md): Number of bytes to send. Set to actual bytes sent on completion of the request.
+- [replyAddress](1410325-replyaddress.md): I2C Address from which to read.
+- [replySubAddress](1410358-replysubaddress.md): I2C Address from which to read.
+- [\__reservedC](../ioi2cinterface_h_user-space/ioi2crequest/1812697-_reservedc.md): Set to zero.
+- [replyTransactionType](1410310-replytransactiontype.md): Specifies one of four possible reply transaction types.
+- [replyBuffer](1410352-replybuffer.md): Pointer to the reply buffer.
+- [replyBytes](1410355-replybytes.md): Max bytes to reply (size of replyBuffer). Set to actual bytes received on completion of the request.
+- [\__reservedD](../ioi2cinterface_h_user-space/ioi2crequest/1812723-_reservedd.md): Set to zero.

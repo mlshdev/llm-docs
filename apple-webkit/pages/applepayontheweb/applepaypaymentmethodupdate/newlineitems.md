@@ -1,0 +1,31 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applepayontheweb/applepaypaymentmethodupdate/newlineitems](https://developer.apple.com/documentation/applepayontheweb/applepaypaymentmethodupdate/newlineitems)
+
+# newLineItems
+
+**Interface language:** Data
+
+**Framework:** Apple Pay on the Web  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+An optional list of updated line items for the payment request that results from the user’s change to the payment method.
+
+## Declaration
+
+```
+sequence <ApplePayLineItem> newLineItems;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Supply an updated list of line items if the user’s change in the payment method caused any changes in the line items.
+
+## See Also
+
+### Updating payment method properties
+
+- [newTotal](newtotal.md): The new total that results from the user’s change to the payment method.
+- [errors](errors.md): A list of customized errors you provide that results from the user’s change to the payment method.
+- [newShippingMethods](newshippingmethods.md): The updated list of available shipping methods that results from the user’s change to the payment method.

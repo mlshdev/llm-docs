@@ -1,0 +1,45 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/measurement/formatted(_:)](https://developer.apple.com/documentation/foundation/measurement/formatted(_:))
+
+# formatted(\_:)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+
+Generates a locale-aware string representation of a measurement using the provided measurement format style.
+
+## Declaration
+
+```swift
+func formatted<S>(_ style: S) -> S.FormatOutput where S : FormatStyle, S.FormatInput == Measurement<UnitType>
+```
+
+## Parameters
+
+- `style`: The measurement format style to apply to the measurement.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A string, formatted according to the provided style.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use the [formatted(\_:)](formatted%28__%29.md) method to create a string representation of a measurement using a custom measurement format style. You can specify the width of the unit name, the numeric formatting of the value, and the intended usage type of the measurement. You can use the [Measurement.FormatStyle](formatstyle.md) static factory method `measurement(width:usage:numberFormat:)` to create a custom format style as a parameter to the method, such as in the following example:
+
+```swift
+let temp = Measurement<UnitTemperature>(value: 38, unit: .celsius)
+let formattedTemp = temp.formatted(.measurement(width: .wide, usage: .weather, numberFormat: .numeric(precision: .fractionLength(1))))
+// For locale: en_US: 100.4 degrees Fahrenheit
+```
+
+## See Also
+
+### Formatting a Measurement
+
+- [formatted()](formatted%28%29.md): Conforms when `UnitType` inherits `Dimension`. Generates a locale-aware string representation of a measurement using the default measurement format style.
+- [Measurement.FormatStyle](formatstyle.md): Conforms when `UnitType` inherits `Dimension`. A type that provides localized representations of measurements.
+- [Measurement.AttributedStyle](attributedstyle.md): Conforms when `UnitType` inherits `Dimension`. A type that provides localized representations of measurements with an attributed string.

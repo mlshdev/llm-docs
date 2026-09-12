@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/osboolean/1585815-taggedrelease](https://developer.apple.com/documentation/kernel/osboolean/1585815-taggedrelease)
+
+# taggedRelease
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Instance Method  
+**Availability:** macOS 10.11.4+
+
+## Declaration
+
+```objectivec
+virtual void taggedRelease(const void *tag, const int when);
+```

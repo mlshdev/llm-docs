@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "project": "victorialogs",
   "title": "VictoriaLogs",
+  "homepage": "https://docs.victoriametrics.com/victorialogs/",
   "repository": "VictoriaMetrics/VictoriaLogs",
   "tag": "v1.52.0",
   "releaseId": 354834060,

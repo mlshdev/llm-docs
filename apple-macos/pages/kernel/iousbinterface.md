@@ -1,0 +1,89 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iousbinterface](https://developer.apple.com/documentation/kernel/iousbinterface)
+
+# IOUSBInterface
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Class  
+**Availability:** macOS 10.0+ (deprecated in 10.10)
+
+An object that represents an interface of a device on the USB bus.
+
+> Use [IOUSBHostInterface](iousbhostinterface.md) instead.
+
+## Declaration
+
+```objectivec
+class IOUSBInterface : IOService
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use this class to find an interface’s pipes and read its associated descriptors.
+
+## Topics
+
+### Miscellaneous
+
+- [DeviceRequest(IOUSBDevRequest \*, IOUSBCompletion \*)](iousbinterface/1809501-devicerequest.md): Sends a control request to the default control pipe in the device (pipe zero)
+- [DeviceRequest(IOUSBDevRequestDesc \*, IOUSBCompletion \*)](iousbinterface/1809505-devicerequest.md): Sends a control request to the default control pipe in the device (pipe zero)
+- [EnableRemoteWake](iousbinterface/1809508-enableremotewake.md): Will enable or disable the USB 3.0 remote wake function for the interface
+- [FindNextAltInterface](iousbinterface/1809512-findnextaltinterface.md)
+- [FindNextAssociatedDescriptor](iousbinterface/1809516-findnextassociateddescriptor.md)
+- [FindNextPipe(IOUSBPipe \*, IOUSBFindEndpointRequest \*)](iousbinterface/1809521-findnextpipe.md)
+- [FindNextPipe(IOUSBPipe \*, IOUSBFindEndpointRequest \*, bool)](iousbinterface/1809527-findnextpipe.md)
+- [GetAlternateSetting](iousbinterface/1809532-getalternatesetting.md)
+- [GetConfigValue](iousbinterface/1809537-getconfigvalue.md)
+- [GetDevice](iousbinterface/1809542-getdevice.md)
+- [GetEndpointProperties](iousbinterface/1809546-getendpointproperties.md): Returns the properties of an endpoint, possibly in an alternate interface.
+- [GetEndpointPropertiesV3](iousbinterface/1809552-getendpointpropertiesv3.md): Returns the properties of an endpoint, possibly in an alternate interface, including any information from the SuperSpeed Companion Descriptor
+- [GetInterfaceClass](iousbinterface/1809556-getinterfaceclass.md)
+- [GetInterfaceNumber](iousbinterface/1809561-getinterfacenumber.md)
+- [GetInterfaceProtocol](iousbinterface/1809564-getinterfaceprotocol.md)
+- [GetInterfaceStatus](iousbinterface/1809569-getinterfacestatus.md): Returns the result of issuing a GET_STATUS request on the device for this interface.
+- [GetInterfaceStringIndex](iousbinterface/1809572-getinterfacestringindex.md)
+- [GetInterfaceSubClass](iousbinterface/1809576-getinterfacesubclass.md)
+- [GetNumEndpoints](iousbinterface/1809584-getnumendpoints.md)
+- [GetPipeObj](iousbinterface/1809591-getpipeobj.md)
+- [RecreateStreams](iousbinterface/1809596-recreatestreams.md)
+- [RememberStreams](iousbinterface/1809603-rememberstreams.md)
+- [RememberStreams.](iousbinterface/1809609-rememberstreams.md)
+- [SetAlternateInterface](iousbinterface/1809615-setalternateinterface.md)
+- [SetFunctionSuspendFeature](iousbinterface/1809621-setfunctionsuspendfeature.md): Issues a SET_FEATURE(FUNCTION_SUSPEND) to the interface.
+
+### Instance Methods
+
+- [getMetaClass](iousbinterface/3609096-getmetaclass.md): Deprecated.
+
+## Relationships
+
+### Inherits From
+
+- [IOService](ioservice.md)
+
+## See Also
+
+### IOKit
+
+- [IOUSBDevice](iousbdevice.md): Deprecated. An input/output service object that represents a device on the USB bus.
+- [IOOFPathMatching](1575304-ioofpathmatching.md): Deprecated.
+- [IOUSBHostInterface](iousbhostinterface.md): Deprecated.
+- [IOUSBHostDevice](iousbhostdevice.md): Deprecated.
+- [IOUSBHostPipe](iousbhostpipe.md): Deprecated.
+- [IOUSBHostIOSource](iousbhostiosource.md): Deprecated.
+- [IOUSBHostStream](iousbhoststream.md): Deprecated.
+- [IOHIDEventDriver](iohideventdriver.md): Deprecated.
+- [IOHIDEventService](iohideventservice.md): Deprecated. IOService represents an device or OS service in IOKit and DriverKit.
+- [IOHIDInterface](iohidinterface.md): Deprecated. IOService represents an device or OS service in IOKit and DriverKit.
+- [IOHIDSystem](iohidsystem.md): Deprecated.
+- [IOHIKeyboardMapper](iohikeyboardmapper.md): Deprecated.
+- [IOHIKeyboard](iohikeyboard.md): Deprecated.
+- [IOHIPointing](iohipointing.md): Deprecated.
+- [IOHIDevice](iohidevice.md): Deprecated.
+- [IOHIDElement](iohidelement.md): Deprecated.
+- [IOHIDWorkLoop](iohidworkloop.md): Deprecated.
+- [IOEthernetInterface](ioethernetinterface.md): Deprecated. The Ethernet interface object.
+- [IOEthernetController](ioethernetcontroller.md): Deprecated. Abstract superclass for Ethernet controllers.

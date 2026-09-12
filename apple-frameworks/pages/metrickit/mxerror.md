@@ -1,0 +1,65 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metrickit/mxerror](https://developer.apple.com/documentation/metrickit/mxerror)
+
+# MXError
+
+**Framework:** MetricKit  
+**Kind:** Structure  
+**Availability:** iOS 16.0+ (deprecated in 27.0) · iPadOS 16.0+ (deprecated in 27.0) · Mac Catalyst 16.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+
+Error domain for error handling of app metrics.
+
+> Use [MetricManager.LaunchTaskError](metricmanager/launchtaskerror.md) instead.
+
+## Declaration
+
+```swift
+struct MXError
+```
+
+## Topics
+
+### Getting the error properties
+
+- [MXError.Code](mxerror/code.md): Deprecated. Error codes for error values from app metrics.
+- [MXErrorDomain](mxerrordomain.md): Deprecated. Error domain for error values from app metrics.
+
+### Getting the launch error properties
+
+- [errorDomain](mxerror/errordomain.md): Deprecated.
+- [launchTaskDuplicated](mxerror/launchtaskduplicated.md): Deprecated. A task with the same ID has already been started.
+- [launchTaskInternalFailure](mxerror/launchtaskinternalfailure.md): Deprecated. Internal failures happened inside the framework.
+- [launchTaskInvalidID](mxerror/launchtaskinvalidid.md): Deprecated. The task ID is a `null` value or exceeds the maximum 128 character length.
+- [launchTaskMaxCount](mxerror/launchtaskmaxcount.md): Deprecated. Exceeded the maximum number of tasks.
+- [launchTaskPastDeadline](mxerror/launchtaskpastdeadline.md): Deprecated. The start call was made too late.
+- [launchTaskUnknown](mxerror/launchtaskunknown.md): Deprecated. The task hasn’t been started or has already been finished.
+- [MXError.Code](mxerror/code.md): Deprecated. Error codes for error values from app metrics.
+- [MXErrorDomain](mxerrordomain.md): Deprecated. Error domain for error values from app metrics.
+
+## Relationships
+
+### Conforms To
+
+- [CustomNSError](../foundation/customnserror.md)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Error](https://developer.apple.com/documentation/swift/error)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Supporting types
+
+- [MXCallStackTree](mxcallstacktree.md): Deprecated. An object representing the call stack for an exception.
+- [MXMetaData](mxmetadata.md): Deprecated. An object containing system-level information about the device.
+- [MXAverage](mxaverage.md): Deprecated. A unit of measure for an average.
+- [MXHistogram](mxhistogram.md): Deprecated. An object representing a histogram of data values of the same type of unit.
+- [MXHistogramBucket](mxhistogrambucket.md): Deprecated. An object representing a bucket of data in a histogram.
+- [MXDiagnostic](mxdiagnostic.md): Deprecated. An abstract data class for a diagnostic.
+- [MXMetric](mxmetric.md): Deprecated. An abstract data class for a metric.
+- [MXError.Code](mxerror/code.md): Deprecated. Error codes for error values from app metrics.
+- [MXErrorDomain](mxerrordomain.md): Deprecated. Error domain for error values from app metrics.
+- [MXCrashDiagnosticObjectiveCExceptionReason](mxcrashdiagnosticobjectivecexceptionreason.md): Deprecated. An object that represents the exception reason for an uncaught ObjC exception.
+- [MXSignpostRecord](mxsignpostrecord.md): Deprecated. An object representing the record for a signpost interval or event.
+- [MXUnitAveragePixelLuminance](mxunitaveragepixelluminance.md): Deprecated. A unit of measure of pixel luminosity on an OLED display.
+- [MXUnitSignalBars](mxunitsignalbars.md): Deprecated. A unit of measure for the number of bars of cellular network connectivity.

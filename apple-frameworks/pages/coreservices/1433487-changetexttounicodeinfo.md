@@ -1,0 +1,48 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/1433487-changetexttounicodeinfo](https://developer.apple.com/documentation/coreservices/1433487-changetexttounicodeinfo)
+
+# ChangeTextToUnicodeInfo
+
+**Interface language:** Objective-C
+
+**Framework:** Core Services  
+**Kind:** Function  
+**Availability:** macOS 10.0+
+
+Changes the mapping information for the specified Unicodeconverter object used to convert text to Unicode to the new mappingyou provide.
+
+## Declaration
+
+```objectivec
+OSStatus ChangeTextToUnicodeInfo(TextToUnicodeInfo ioTextToUnicodeInfo, ConstUnicodeMappingPtr iUnicodeMapping);
+```
+
+## Parameters
+
+- `ioTextToUnicodeInfo`: The Unicode converter object of type [TextToUnicodeInfo](texttounicodeinfo.md) containing the mapping to be modified. You use the function [CreateTextToUnicodeInfo](1433598-createtexttounicodeinfo.md) to obtain one.
+- `iUnicodeMapping`: A structure of type [UnicodeMapping](unicodemapping.md) identifying the new mapping to be used. This is the mapping that replaces the existing mapping in the Unicode converter object.
+
+<a id="return_value"></a>
+
+## Return Value
+
+A resultcode. See [Result Codes](carbon_core/text_encoding_conversion_manager.md#1664324).
+
+<a id="discussion"></a>
+
+## Discussion
+
+The function replaces the mapping table information that currentlyexists in the Unicode converter object pointed to by the `ioTextToUnicodeInfo` parameterwith the information contained in the `UnicodeMapping` structureyou supply as the `iUnicodeMapping` parameter. 
+
+`ChangeTextToUnicodeInfo` resetsthe Unicode converter object’s fields as necessary. 
+
+If an error is returned, the Unicode converter object is invalid.
+
+## See Also
+
+### Converting to Unicode
+
+- [ConvertFromTextToUnicode](1433517-convertfromtexttounicode.md): Converts a string from any encoding to Unicode.
+- [CreateTextToUnicodeInfo](1433598-createtexttounicodeinfo.md): Creates and returns a Unicode converter object containinginformation required for converting strings from a non-Unicode encodingto Unicode.
+- [CreateTextToUnicodeInfoByEncoding](1433560-createtexttounicodeinfobyencodin.md): Based on the given text encoding specification, createsand returns a Unicode converter object containing information requiredfor converting strings from the specified non-Unicode encoding toUnicode.
+- [DisposeTextToUnicodeInfo](1433669-disposetexttounicodeinfo.md): Releases the memory allocated for the specified Unicodeconverter object.
+- [ResetTextToUnicodeInfo](1433526-resettexttounicodeinfo.md): Reinitializes all state information kept by the contextobjects.

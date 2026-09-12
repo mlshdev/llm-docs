@@ -1,0 +1,324 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclusterfancontrol](https://developer.apple.com/documentation/matter/mtrbaseclusterfancontrol)
+
+# MTRBaseClusterFanControl (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```swift
+class MTRBaseClusterFanControl
+```
+
+## Topics
+
+### Initializers
+
+- [init(device:endpoint:queue:)](mtrbaseclusterfancontrol/init%28device_endpoint_queue_%29.md): Deprecated.
+- [init(device:endpointID:queue:)](mtrbaseclusterfancontrol/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandList(completion:)](mtrbaseclusterfancontrol/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandList(completionHandler:)](mtrbaseclusterfancontrol/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAirflowDirection(completion:)](mtrbaseclusterfancontrol/readattributeairflowdirection%28completion_%29.md)
+- [readAttributeAttributeList(completion:)](mtrbaseclusterfancontrol/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeList(completionHandler:)](mtrbaseclusterfancontrol/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(completion:)](mtrbaseclusterfancontrol/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevision(completionHandler:)](mtrbaseclusterfancontrol/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeFanMode(completion:)](mtrbaseclusterfancontrol/readattributefanmode%28completion_%29.md)
+- [readAttributeFanMode(completionHandler:)](mtrbaseclusterfancontrol/readattributefanmode%28completionhandler_%29.md): Deprecated.
+- [readAttributeFanModeSequence(completion:)](mtrbaseclusterfancontrol/readattributefanmodesequence%28completion_%29.md)
+- [readAttributeFanModeSequence(completionHandler:)](mtrbaseclusterfancontrol/readattributefanmodesequence%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(completion:)](mtrbaseclusterfancontrol/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMap(completionHandler:)](mtrbaseclusterfancontrol/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(completion:)](mtrbaseclusterfancontrol/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandList(completionHandler:)](mtrbaseclusterfancontrol/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributePercentCurrent(completion:)](mtrbaseclusterfancontrol/readattributepercentcurrent%28completion_%29.md)
+- [readAttributePercentCurrent(completionHandler:)](mtrbaseclusterfancontrol/readattributepercentcurrent%28completionhandler_%29.md): Deprecated.
+- [readAttributePercentSetting(completion:)](mtrbaseclusterfancontrol/readattributepercentsetting%28completion_%29.md)
+- [readAttributePercentSetting(completionHandler:)](mtrbaseclusterfancontrol/readattributepercentsetting%28completionhandler_%29.md): Deprecated.
+- [readAttributeRockSetting(completion:)](mtrbaseclusterfancontrol/readattributerocksetting%28completion_%29.md)
+- [readAttributeRockSetting(completionHandler:)](mtrbaseclusterfancontrol/readattributerocksetting%28completionhandler_%29.md): Deprecated.
+- [readAttributeRockSupport(completion:)](mtrbaseclusterfancontrol/readattributerocksupport%28completion_%29.md)
+- [readAttributeRockSupport(completionHandler:)](mtrbaseclusterfancontrol/readattributerocksupport%28completionhandler_%29.md): Deprecated.
+- [readAttributeSpeedCurrent(completion:)](mtrbaseclusterfancontrol/readattributespeedcurrent%28completion_%29.md)
+- [readAttributeSpeedCurrent(completionHandler:)](mtrbaseclusterfancontrol/readattributespeedcurrent%28completionhandler_%29.md): Deprecated.
+- [readAttributeSpeedMax(completion:)](mtrbaseclusterfancontrol/readattributespeedmax%28completion_%29.md)
+- [readAttributeSpeedMax(completionHandler:)](mtrbaseclusterfancontrol/readattributespeedmax%28completionhandler_%29.md): Deprecated.
+- [readAttributeSpeedSetting(completion:)](mtrbaseclusterfancontrol/readattributespeedsetting%28completion_%29.md)
+- [readAttributeSpeedSetting(completionHandler:)](mtrbaseclusterfancontrol/readattributespeedsetting%28completionhandler_%29.md): Deprecated.
+- [readAttributeWindSetting(completion:)](mtrbaseclusterfancontrol/readattributewindsetting%28completion_%29.md)
+- [readAttributeWindSetting(completionHandler:)](mtrbaseclusterfancontrol/readattributewindsetting%28completionhandler_%29.md): Deprecated.
+- [readAttributeWindSupport(completion:)](mtrbaseclusterfancontrol/readattributewindsupport%28completion_%29.md)
+- [readAttributeWindSupport(completionHandler:)](mtrbaseclusterfancontrol/readattributewindsupport%28completionhandler_%29.md): Deprecated.
+- [step(with:completion:)](mtrbaseclusterfancontrol/step%28with_completion_%29.md)
+- [subscribeAttributeAcceptedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAirflowDirection(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributeairflowdirection%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevision(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevision(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFanMode(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributefanmode%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFanMode(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributefanmode%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFanModeSequence(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributefanmodesequence%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFanModeSequence(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributefanmodesequence%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMap(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMap(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePercentCurrent(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributepercentcurrent%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePercentCurrent(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributepercentcurrent%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePercentSetting(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributepercentsetting%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePercentSetting(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributepercentsetting%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeRockSetting(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributerocksetting%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeRockSetting(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributerocksetting%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeRockSupport(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributerocksupport%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeRockSupport(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributerocksupport%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSpeedCurrent(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributespeedcurrent%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSpeedCurrent(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributespeedcurrent%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSpeedMax(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributespeedmax%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSpeedMax(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributespeedmax%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSpeedSetting(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributespeedsetting%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSpeedSetting(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributespeedsetting%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeWindSetting(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributewindsetting%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeWindSetting(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributewindsetting%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeWindSupport(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributewindsupport%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeWindSupport(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterfancontrol/subscribeattributewindsupport%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [writeAttributeAirflowDirection(withValue:completion:)](mtrbaseclusterfancontrol/writeattributeairflowdirection%28withvalue_completion_%29.md)
+- [writeAttributeAirflowDirection(withValue:params:completion:)](mtrbaseclusterfancontrol/writeattributeairflowdirection%28withvalue_params_completion_%29.md)
+- [writeAttributeFanMode(withValue:completion:)](mtrbaseclusterfancontrol/writeattributefanmode%28withvalue_completion_%29.md)
+- [writeAttributeFanMode(withValue:completionHandler:)](mtrbaseclusterfancontrol/writeattributefanmode%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeFanMode(withValue:params:completion:)](mtrbaseclusterfancontrol/writeattributefanmode%28withvalue_params_completion_%29.md)
+- [writeAttributeFanMode(withValue:params:completionHandler:)](mtrbaseclusterfancontrol/writeattributefanmode%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeFanModeSequence(withValue:completion:)](mtrbaseclusterfancontrol/writeattributefanmodesequence%28withvalue_completion_%29.md)
+- [writeAttributeFanModeSequence(withValue:completionHandler:)](mtrbaseclusterfancontrol/writeattributefanmodesequence%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeFanModeSequence(withValue:params:completion:)](mtrbaseclusterfancontrol/writeattributefanmodesequence%28withvalue_params_completion_%29.md)
+- [writeAttributeFanModeSequence(withValue:params:completionHandler:)](mtrbaseclusterfancontrol/writeattributefanmodesequence%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributePercentSetting(withValue:completion:)](mtrbaseclusterfancontrol/writeattributepercentsetting%28withvalue_completion_%29.md)
+- [writeAttributePercentSetting(withValue:completionHandler:)](mtrbaseclusterfancontrol/writeattributepercentsetting%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributePercentSetting(withValue:params:completion:)](mtrbaseclusterfancontrol/writeattributepercentsetting%28withvalue_params_completion_%29.md)
+- [writeAttributePercentSetting(withValue:params:completionHandler:)](mtrbaseclusterfancontrol/writeattributepercentsetting%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeRockSetting(withValue:completion:)](mtrbaseclusterfancontrol/writeattributerocksetting%28withvalue_completion_%29.md)
+- [writeAttributeRockSetting(withValue:completionHandler:)](mtrbaseclusterfancontrol/writeattributerocksetting%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeRockSetting(withValue:params:completion:)](mtrbaseclusterfancontrol/writeattributerocksetting%28withvalue_params_completion_%29.md)
+- [writeAttributeRockSetting(withValue:params:completionHandler:)](mtrbaseclusterfancontrol/writeattributerocksetting%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeSpeedSetting(withValue:completion:)](mtrbaseclusterfancontrol/writeattributespeedsetting%28withvalue_completion_%29.md)
+- [writeAttributeSpeedSetting(withValue:completionHandler:)](mtrbaseclusterfancontrol/writeattributespeedsetting%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeSpeedSetting(withValue:params:completion:)](mtrbaseclusterfancontrol/writeattributespeedsetting%28withvalue_params_completion_%29.md)
+- [writeAttributeSpeedSetting(withValue:params:completionHandler:)](mtrbaseclusterfancontrol/writeattributespeedsetting%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeWindSetting(withValue:completion:)](mtrbaseclusterfancontrol/writeattributewindsetting%28withvalue_completion_%29.md)
+- [writeAttributeWindSetting(withValue:completionHandler:)](mtrbaseclusterfancontrol/writeattributewindsetting%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeWindSetting(withValue:params:completion:)](mtrbaseclusterfancontrol/writeattributewindsetting%28withvalue_params_completion_%29.md)
+- [writeAttributeWindSetting(withValue:params:completionHandler:)](mtrbaseclusterfancontrol/writeattributewindsetting%28withvalue_params_completionhandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterfancontrol/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterfancontrol/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAirflowDirection(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterfancontrol/readattributeairflowdirection%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterfancontrol/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterfancontrol/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevision(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterfancontrol/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterfancontrol/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFanMode(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterfancontrol/readattributefanmode%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFanMode(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterfancontrol/readattributefanmode%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFanModeSequence(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterfancontrol/readattributefanmodesequence%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFanModeSequence(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterfancontrol/readattributefanmodesequence%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMap(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterfancontrol/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterfancontrol/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterfancontrol/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterfancontrol/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePercentCurrent(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterfancontrol/readattributepercentcurrent%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePercentCurrent(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterfancontrol/readattributepercentcurrent%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePercentSetting(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterfancontrol/readattributepercentsetting%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePercentSetting(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterfancontrol/readattributepercentsetting%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeRockSetting(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterfancontrol/readattributerocksetting%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeRockSetting(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterfancontrol/readattributerocksetting%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeRockSupport(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterfancontrol/readattributerocksupport%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeRockSupport(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterfancontrol/readattributerocksupport%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSpeedCurrent(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterfancontrol/readattributespeedcurrent%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSpeedCurrent(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterfancontrol/readattributespeedcurrent%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSpeedMax(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterfancontrol/readattributespeedmax%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSpeedMax(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterfancontrol/readattributespeedmax%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSpeedSetting(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterfancontrol/readattributespeedsetting%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSpeedSetting(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterfancontrol/readattributespeedsetting%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeWindSetting(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterfancontrol/readattributewindsetting%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeWindSetting(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterfancontrol/readattributewindsetting%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeWindSupport(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterfancontrol/readattributewindsupport%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeWindSupport(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterfancontrol/readattributewindsupport%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRBaseClusterFanControl (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```objectivec
+@interface MTRBaseClusterFanControl : MTRGenericBaseCluster
+```
+
+## Topics
+
+### Initializers
+
+- [initWithDevice:endpoint:queue:](mtrbaseclusterfancontrol/init%28device_endpoint_queue_%29.md): Deprecated.
+- [initWithDevice:endpointID:queue:](mtrbaseclusterfancontrol/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandListWithCompletion:](mtrbaseclusterfancontrol/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandListWithCompletionHandler:](mtrbaseclusterfancontrol/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAirflowDirectionWithCompletion:](mtrbaseclusterfancontrol/readattributeairflowdirection%28completion_%29.md)
+- [readAttributeAttributeListWithCompletion:](mtrbaseclusterfancontrol/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeListWithCompletionHandler:](mtrbaseclusterfancontrol/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithCompletion:](mtrbaseclusterfancontrol/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevisionWithCompletionHandler:](mtrbaseclusterfancontrol/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeFanModeWithCompletion:](mtrbaseclusterfancontrol/readattributefanmode%28completion_%29.md)
+- [readAttributeFanModeWithCompletionHandler:](mtrbaseclusterfancontrol/readattributefanmode%28completionhandler_%29.md): Deprecated.
+- [readAttributeFanModeSequenceWithCompletion:](mtrbaseclusterfancontrol/readattributefanmodesequence%28completion_%29.md)
+- [readAttributeFanModeSequenceWithCompletionHandler:](mtrbaseclusterfancontrol/readattributefanmodesequence%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithCompletion:](mtrbaseclusterfancontrol/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMapWithCompletionHandler:](mtrbaseclusterfancontrol/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithCompletion:](mtrbaseclusterfancontrol/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandListWithCompletionHandler:](mtrbaseclusterfancontrol/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributePercentCurrentWithCompletion:](mtrbaseclusterfancontrol/readattributepercentcurrent%28completion_%29.md)
+- [readAttributePercentCurrentWithCompletionHandler:](mtrbaseclusterfancontrol/readattributepercentcurrent%28completionhandler_%29.md): Deprecated.
+- [readAttributePercentSettingWithCompletion:](mtrbaseclusterfancontrol/readattributepercentsetting%28completion_%29.md)
+- [readAttributePercentSettingWithCompletionHandler:](mtrbaseclusterfancontrol/readattributepercentsetting%28completionhandler_%29.md): Deprecated.
+- [readAttributeRockSettingWithCompletion:](mtrbaseclusterfancontrol/readattributerocksetting%28completion_%29.md)
+- [readAttributeRockSettingWithCompletionHandler:](mtrbaseclusterfancontrol/readattributerocksetting%28completionhandler_%29.md): Deprecated.
+- [readAttributeRockSupportWithCompletion:](mtrbaseclusterfancontrol/readattributerocksupport%28completion_%29.md)
+- [readAttributeRockSupportWithCompletionHandler:](mtrbaseclusterfancontrol/readattributerocksupport%28completionhandler_%29.md): Deprecated.
+- [readAttributeSpeedCurrentWithCompletion:](mtrbaseclusterfancontrol/readattributespeedcurrent%28completion_%29.md)
+- [readAttributeSpeedCurrentWithCompletionHandler:](mtrbaseclusterfancontrol/readattributespeedcurrent%28completionhandler_%29.md): Deprecated.
+- [readAttributeSpeedMaxWithCompletion:](mtrbaseclusterfancontrol/readattributespeedmax%28completion_%29.md)
+- [readAttributeSpeedMaxWithCompletionHandler:](mtrbaseclusterfancontrol/readattributespeedmax%28completionhandler_%29.md): Deprecated.
+- [readAttributeSpeedSettingWithCompletion:](mtrbaseclusterfancontrol/readattributespeedsetting%28completion_%29.md)
+- [readAttributeSpeedSettingWithCompletionHandler:](mtrbaseclusterfancontrol/readattributespeedsetting%28completionhandler_%29.md): Deprecated.
+- [readAttributeWindSettingWithCompletion:](mtrbaseclusterfancontrol/readattributewindsetting%28completion_%29.md)
+- [readAttributeWindSettingWithCompletionHandler:](mtrbaseclusterfancontrol/readattributewindsetting%28completionhandler_%29.md): Deprecated.
+- [readAttributeWindSupportWithCompletion:](mtrbaseclusterfancontrol/readattributewindsupport%28completion_%29.md)
+- [readAttributeWindSupportWithCompletionHandler:](mtrbaseclusterfancontrol/readattributewindsupport%28completionhandler_%29.md): Deprecated.
+- [stepWithParams:completion:](mtrbaseclusterfancontrol/step%28with_completion_%29.md)
+- [subscribeAttributeAcceptedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAirflowDirectionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributeairflowdirection%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevisionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevisionWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFanModeWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributefanmode%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFanModeWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributefanmode%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFanModeSequenceWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributefanmodesequence%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFanModeSequenceWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributefanmodesequence%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMapWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMapWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePercentCurrentWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributepercentcurrent%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePercentCurrentWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributepercentcurrent%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePercentSettingWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributepercentsetting%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePercentSettingWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributepercentsetting%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeRockSettingWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributerocksetting%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeRockSettingWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributerocksetting%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeRockSupportWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributerocksupport%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeRockSupportWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributerocksupport%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSpeedCurrentWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributespeedcurrent%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSpeedCurrentWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributespeedcurrent%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSpeedMaxWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributespeedmax%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSpeedMaxWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributespeedmax%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSpeedSettingWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributespeedsetting%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSpeedSettingWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributespeedsetting%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeWindSettingWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributewindsetting%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeWindSettingWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributewindsetting%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeWindSupportWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributewindsupport%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeWindSupportWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterfancontrol/subscribeattributewindsupport%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [writeAttributeAirflowDirectionWithValue:completion:](mtrbaseclusterfancontrol/writeattributeairflowdirection%28withvalue_completion_%29.md)
+- [writeAttributeAirflowDirectionWithValue:params:completion:](mtrbaseclusterfancontrol/writeattributeairflowdirection%28withvalue_params_completion_%29.md)
+- [writeAttributeFanModeWithValue:completion:](mtrbaseclusterfancontrol/writeattributefanmode%28withvalue_completion_%29.md)
+- [writeAttributeFanModeWithValue:completionHandler:](mtrbaseclusterfancontrol/writeattributefanmode%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeFanModeWithValue:params:completion:](mtrbaseclusterfancontrol/writeattributefanmode%28withvalue_params_completion_%29.md)
+- [writeAttributeFanModeWithValue:params:completionHandler:](mtrbaseclusterfancontrol/writeattributefanmode%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeFanModeSequenceWithValue:completion:](mtrbaseclusterfancontrol/writeattributefanmodesequence%28withvalue_completion_%29.md)
+- [writeAttributeFanModeSequenceWithValue:completionHandler:](mtrbaseclusterfancontrol/writeattributefanmodesequence%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeFanModeSequenceWithValue:params:completion:](mtrbaseclusterfancontrol/writeattributefanmodesequence%28withvalue_params_completion_%29.md)
+- [writeAttributeFanModeSequenceWithValue:params:completionHandler:](mtrbaseclusterfancontrol/writeattributefanmodesequence%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributePercentSettingWithValue:completion:](mtrbaseclusterfancontrol/writeattributepercentsetting%28withvalue_completion_%29.md)
+- [writeAttributePercentSettingWithValue:completionHandler:](mtrbaseclusterfancontrol/writeattributepercentsetting%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributePercentSettingWithValue:params:completion:](mtrbaseclusterfancontrol/writeattributepercentsetting%28withvalue_params_completion_%29.md)
+- [writeAttributePercentSettingWithValue:params:completionHandler:](mtrbaseclusterfancontrol/writeattributepercentsetting%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeRockSettingWithValue:completion:](mtrbaseclusterfancontrol/writeattributerocksetting%28withvalue_completion_%29.md)
+- [writeAttributeRockSettingWithValue:completionHandler:](mtrbaseclusterfancontrol/writeattributerocksetting%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeRockSettingWithValue:params:completion:](mtrbaseclusterfancontrol/writeattributerocksetting%28withvalue_params_completion_%29.md)
+- [writeAttributeRockSettingWithValue:params:completionHandler:](mtrbaseclusterfancontrol/writeattributerocksetting%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeSpeedSettingWithValue:completion:](mtrbaseclusterfancontrol/writeattributespeedsetting%28withvalue_completion_%29.md)
+- [writeAttributeSpeedSettingWithValue:completionHandler:](mtrbaseclusterfancontrol/writeattributespeedsetting%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeSpeedSettingWithValue:params:completion:](mtrbaseclusterfancontrol/writeattributespeedsetting%28withvalue_params_completion_%29.md)
+- [writeAttributeSpeedSettingWithValue:params:completionHandler:](mtrbaseclusterfancontrol/writeattributespeedsetting%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeWindSettingWithValue:completion:](mtrbaseclusterfancontrol/writeattributewindsetting%28withvalue_completion_%29.md)
+- [writeAttributeWindSettingWithValue:completionHandler:](mtrbaseclusterfancontrol/writeattributewindsetting%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeWindSettingWithValue:params:completion:](mtrbaseclusterfancontrol/writeattributewindsetting%28withvalue_params_completion_%29.md)
+- [writeAttributeWindSettingWithValue:params:completionHandler:](mtrbaseclusterfancontrol/writeattributewindsetting%28withvalue_params_completionhandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterfancontrol/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterfancontrol/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAirflowDirectionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterfancontrol/readattributeairflowdirection%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterfancontrol/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterfancontrol/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevisionWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterfancontrol/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterfancontrol/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFanModeWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterfancontrol/readattributefanmode%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFanModeWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterfancontrol/readattributefanmode%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFanModeSequenceWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterfancontrol/readattributefanmodesequence%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFanModeSequenceWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterfancontrol/readattributefanmodesequence%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMapWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterfancontrol/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterfancontrol/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterfancontrol/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterfancontrol/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePercentCurrentWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterfancontrol/readattributepercentcurrent%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePercentCurrentWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterfancontrol/readattributepercentcurrent%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePercentSettingWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterfancontrol/readattributepercentsetting%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePercentSettingWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterfancontrol/readattributepercentsetting%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeRockSettingWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterfancontrol/readattributerocksetting%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeRockSettingWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterfancontrol/readattributerocksetting%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeRockSupportWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterfancontrol/readattributerocksupport%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeRockSupportWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterfancontrol/readattributerocksupport%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSpeedCurrentWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterfancontrol/readattributespeedcurrent%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSpeedCurrentWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterfancontrol/readattributespeedcurrent%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSpeedMaxWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterfancontrol/readattributespeedmax%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSpeedMaxWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterfancontrol/readattributespeedmax%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSpeedSettingWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterfancontrol/readattributespeedsetting%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSpeedSettingWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterfancontrol/readattributespeedsetting%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeWindSettingWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterfancontrol/readattributewindsetting%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeWindSettingWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterfancontrol/readattributewindsetting%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeWindSupportWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterfancontrol/readattributewindsupport%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeWindSupportWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterfancontrol/readattributewindsupport%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)

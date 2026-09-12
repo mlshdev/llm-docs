@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/applicationservices/1550895-anonymous](https://developer.apple.com/documentation/applicationservices/1550895-anonymous)
+
+# Anonymous
+
+**Interface language:** Objective-C
+
+**Framework:** Application Services  
+**Kind:** Enumeration  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+## Declaration
+
+```objectivec
+enum : unsigned int {
+    ...
+};
+```
+
+## Topics
+
+### Constants
+
+- [kATSCubicCurveType](1550895-anonymous/katscubiccurvetype.md)
+- [kATSOtherCurveType](1550895-anonymous/katsothercurvetype.md)
+- [kATSQuadCurveType](1550895-anonymous/katsquadcurvetype.md)

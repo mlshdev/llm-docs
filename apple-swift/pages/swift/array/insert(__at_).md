@@ -1,0 +1,49 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/array/insert(_:at:)](https://developer.apple.com/documentation/swift/array/insert(_:at:))
+
+# insert(\_:at:)
+
+**Framework:** Swift  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Inserts a new element at the specified position.
+
+## Declaration
+
+```swift
+mutating func insert(_ newElement: Element, at i: Int)
+```
+
+## Parameters
+
+- `newElement`: The new element to insert into the array.
+- `i`: The position at which to insert the new element. `index` must be a valid index of the array or equal to its `endIndex` property.
+
+<a id="discussion"></a>
+
+## Discussion
+
+The new element is inserted before the element currently at the specified index. If you pass the array’s `endIndex` property as the `index` parameter, the new element is appended to the array.
+
+```swift
+var numbers = [1, 2, 3, 4, 5]
+numbers.insert(100, at: 3)
+numbers.insert(200, at: numbers.endIndex)
+
+print(numbers)
+// Prints "[1, 2, 3, 100, 4, 5, 200]"
+```
+
+> **Complexity**
+
+> O(*n*), where *n* is the length of the array. If `i == endIndex`, this method is equivalent to `append(_:)`.
+
+## See Also
+
+### Adding Elements
+
+- [append(\_:)](append%28__%29.md): Adds a new element at the end of the array.
+- [insert(contentsOf:at:)](insert%28contentsof_at_%29.md): Inserts the elements of a sequence into the collection at the specified position.
+- [replaceSubrange(\_:with:)](replacesubrange%28__with_%29.md): Replaces a range of elements with the elements in the specified collection.
+- [replaceSubrange(\_:with:)](replacesubrange%28__with_%29-7293p.md): Replaces the specified subrange of elements with the given collection.
+- [reserveCapacity(\_:)](reservecapacity%28__%29.md): Reserves enough space to store the specified number of elements.

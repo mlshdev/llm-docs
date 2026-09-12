@@ -1,0 +1,44 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/pull-requests](https://developer.apple.com/documentation/appstoreconnectapi/pull-requests)
+
+# Pull Requests
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** API Collection
+
+Read pull request information such as source and destination branches.
+
+<a id="overview"></a>
+
+## Overview
+
+The `scmPullRequests` resource represents pull requests (PRs) for repositories Xcode Cloud can access. Use it to access:
+
+- A PR’s number, URL, title, and status
+- The destination and source branches
+- A value that indicates whether the PR involves more than one repository
+
+> **Note**
+
+>  This resource supports JSON web tokens with a lifetime of up to six months. For more information, see [Determine the Appropriate Token Lifetime](generating-tokens-for-api-requests.md#Determine-the-Appropriate-Token-Lifetime).
+
+## Topics
+
+### Getting Pull Request Information
+
+- [Read pull request information](get-v1-scmpullrequests-_id_.md): Get information about a specific pull request.
+
+### Objects
+
+- [ScmPullRequest](scmpullrequest.md): A pull request in a source code repository connected to Xcode Cloud, which can automatically trigger workflow builds.
+- [ScmPullRequestResponse](scmpullrequestresponse.md): The response body for endpoints that read a single SCM pull request linked to Xcode Cloud.
+- [ScmPullRequestsResponse](scmpullrequestsresponse.md): The response body for endpoints that list SCM pull requests linked to Xcode Cloud.
+
+## See Also
+
+### Source Code Management
+
+- [Providers](providers.md): Read information about source code management providers you connected to Xcode Cloud.
+- [Repositories](repositories.md): Read detailed information for each repository Xcode Cloud can access, including Git references and pull requests.
+- [Git References](git-references.md): Read information about the canonical reference for a Git branch or tag.

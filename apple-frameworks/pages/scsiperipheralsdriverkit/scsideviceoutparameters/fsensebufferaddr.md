@@ -1,0 +1,36 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/scsiperipheralsdriverkit/scsideviceoutparameters/fsensebufferaddr](https://developer.apple.com/documentation/scsiperipheralsdriverkit/scsideviceoutparameters/fsensebufferaddr)
+
+# fSenseBufferAddr
+
+**Interface language:** Objective-C
+
+**Framework:** SCSIPeripheralsDriverKit  
+**Kind:** Instance Property  
+**Availability:** DriverKit 22.0+
+
+The virtual address of the buffer that the dext creates to transfer sense data.
+
+## Declaration
+
+```objectivec
+uint64_t fSenseBufferAddr;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The framework uses this address to create an [IOMemoryDescriptor](../../driverkit/iomemorydescriptor.md) in the kernel that [fSenseLengthRequested](fsenselengthrequested.md) specifies and maps to the dext process.
+
+## See Also
+
+### Setting command parameters
+
+- [fLogicalUnitNumber](flogicalunitnumber.md): The SCSI logical unit number of the device that receives the command.
+- [fTimeoutDuration](ftimeoutduration.md): A timeout for the command, in milliseconds.
+- [fCommandDescriptorBlock](fcommanddescriptorblock.md): A 16-byte opcode to fill out the Command Descriptor Block (CDB).
+- [fRequestedByteCountOfTransfer](frequestedbytecountoftransfer.md): The size of the data to transfer.
+- [fBufferDirection](fbufferdirection.md): The direction for the buffer to send or receive data.
+- [fDataTransferDirection](fdatatransferdirection.md): The direction for the caller to send data to or receive data from the device.
+- [fSenseLengthRequested](fsenselengthrequested.md): The length of sense data to read, in bytes.
+- [fDataBufferAddr](fdatabufferaddr.md): The virtual address of the buffer the dext creates to transfer data.

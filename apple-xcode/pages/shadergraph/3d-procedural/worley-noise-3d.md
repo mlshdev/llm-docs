@@ -1,0 +1,74 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/shadergraph/3d-procedural/worley-noise-3d](https://developer.apple.com/documentation/shadergraph/3d-procedural/worley-noise-3d)
+
+# Worley Noise 3D
+
+**Framework:** ShaderGraph  
+**Kind:** ShaderGraph Node  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 26.0+ · visionOS 1.0+
+
+A 3D Worley noise generator.
+
+<a id="Parameter-Types"></a>
+
+## Parameter Types
+
+**Worley Noise 3D (float)**
+
+| Input | Type |
+| --- | --- |
+| `Position` | Vector3f |
+| `Jitter` | Float |
+
+| Output | Type |
+| --- | --- |
+| `Out` | Float |
+
+**Worley Noise 3D (vector3f)**
+
+| Input | Type |
+| --- | --- |
+| `Position` | Vector3f |
+| `Jitter` | Float |
+
+| Output | Type |
+| --- | --- |
+| `Out` | Vector3f |
+
+**Worley Noise 3D (vector2f)**
+
+| Input | Type |
+| --- | --- |
+| `Position` | Vector3f |
+| `Jitter` | Float |
+
+| Output | Type |
+| --- | --- |
+| `Out` | Vector2f |
+
+<a id="Parameter-descriptions"></a>
+
+## Parameter descriptions
+
+- **`Position`**: The 3D coordinates at which the node reads the data for mapping a texture to a surface. The default uses the current 3D object-space coordinates.
+- **`Jitter`**: The amount of *jitter* or shift the center of each cell experiences. The default value is `1.0`. A smaller value creates a more regular pattern, and `0` creates perfect squares.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The `Worley Noise 3D` node procedurally generates nonuniform cellular regions. The node creates a finite number of center points, and each region is a polygon that surrounds the points closest to each center point. Because this node generates noise in 3D, the texture doesn’t repeat in the Z direction but rather continues as depth changes. Below is an example of a simple node graph that uses the `Worley Noise 3D` node to generate a black and white pattern procedurally:
+
+![](https://developer.apple.com/images/ShaderGraph-Docs/WorleyNoise3dGraph.png)
+
+Multiply the incoming texture coordinates with a constant float, which changes the frequency of the generated noise. A higher value corresponds to the pattern repeating more often. Then run the output through a convert node to change it to a black and white color value.
+Below, the resulting texture applies to a cube:
+
+![](https://developer.apple.com/images/ShaderGraph-Docs/WorleyNoise3dMaterial.png)
+
+## See Also
+
+### Nodes
+
+- [Noise 3D](noise-3d.md): A 3D Perlin noise generator.
+- [Fractal Noise 3D](fractal-noise-3d.md): Zero-centered 3D fractal noise created by summing several octaves of 3D Perlin noise.
+- [Cellular Noise 3D](cellular-noise-3d.md): A 3D cellular noise generator.

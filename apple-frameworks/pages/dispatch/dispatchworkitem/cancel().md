@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/dispatch/dispatchworkitem/cancel()](https://developer.apple.com/documentation/dispatch/dispatchworkitem/cancel())
+
+# cancel()
+
+**Framework:** Dispatch  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 8.0+ · macOS 10.10+ · tvOS · visionOS · watchOS
+
+Cancels the current work item asynchronously.
+
+## Declaration
+
+```swift
+func cancel()
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Cancellation causes future attempts to execute the work item to return immediately. Cancellation does not affect the execution of a work item that has already begun.
+
+Release of any resources associated with the block object is delayed until execution of the block object is next attempted (or any execution already in progress completes).
+
+> **Note**
+
+>  Take care to ensure that a work item does not capture any resources that require execution of the block body in order to be released, such as memory allocated with `malloc(3)` on which the block body calls `free(3)`. Such resources are leaked if the block body is never executed due to cancellation.
+
+## See Also
+
+### Canceling a Work Item
+
+- [isCancelled](iscancelled.md): A Boolean value indicating whether the work item has been canceled.

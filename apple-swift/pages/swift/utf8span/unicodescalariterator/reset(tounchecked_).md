@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/utf8span/unicodescalariterator/reset(tounchecked:)](https://developer.apple.com/documentation/swift/utf8span/unicodescalariterator/reset(tounchecked:))
+
+# reset(toUnchecked:)
+
+**Framework:** Swift  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
+
+Reset this iterator to `codeUnitOffset`, skipping *all* safety checks (including bounds checks).
+
+## Declaration
+
+```swift
+mutating func reset(toUnchecked codeUnitOffset: Int)
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Note: This is only for very specific, low-level use cases. If `codeUnitOffset` is not properly scalar-aligned, this function can result in undefined behavior when, e.g., `next()` is called.
+
+For example, this could be used by a regex engine to backtrack to a known-valid previous position.
+
+> **Complexity**
+
+> O(1)

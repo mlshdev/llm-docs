@@ -1,0 +1,50 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/canvasrenderingcontext2d/1629911-transform](https://developer.apple.com/documentation/webkitjs/canvasrenderingcontext2d/1629911-transform)
+
+# transform
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+Transforms the current transformation matrix using another matrix.
+
+## Declaration
+
+```
+void transform(
+    unrestricted float m11, 
+    unrestricted float m12, 
+    unrestricted float m21, 
+    unrestricted float m22, 
+    unrestricted float dx, 
+    unrestricted float dy
+);
+```
+
+## Parameters
+
+- `m11`: Column 1 row 1 matrix value (a).
+- `m12`: Column 1 row 2 matrix value (b).
+- `m21`: Column 2 row 1 matrix value (c).
+- `m22`: Column 2 row 2 matrix value (d).
+- `dx`: X scalar (e).
+- `dy`: Y Scalar (f).
+
+<a id="discussion"></a>
+
+## Discussion
+
+This method replaces the current transformation matrix with the result of a matrix multiplication between the current transformation matrix and the specified transformation matrix shown in [Figure 1](1629911-transform.md#1965803).
+
+![The transformation matrix](https://docs-assets.developer.apple.com/published/cf294fc724/matrix_2x_ba813c25-875c-47a3-b3b3-992285a1f6fd.png)
+
+## See Also
+
+### Changing the Coordinate System
+
+- [rotate](1630553-rotate.md): Rotates the canvas coordinate system.
+- [scale](1631799-scale.md): Scales the canvas coordinate system horizontally and vertically.
+- [setTransform](1630015-settransform.md): Sets the transformation matrix.
+- [translate](1629441-translate.md): Moves the origin of the canvas coordinate system.

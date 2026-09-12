@@ -1,0 +1,49 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/assistantschemas/readerentity/document](https://developer.apple.com/documentation/appintents/assistantschemas/readerentity/document)
+
+# document
+
+**Framework:** App Intents  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+ · watchOS 9.0+
+
+The app entity describes a document.
+
+## Declaration
+
+```swift
+var document: some AssistantSchemas.Entity { get }
+```
+
+<a id="Overview"></a>
+
+## Overview
+
+Use Swift macros that generate additional properties and add protocol conformance for your app entity implementation The following example shows an app entity that conforms to the `.reader.document` schema:
+
+```swift
+@AppEntity(schema: .reader.document)
+struct ReaderDocumentEntity: AppEntity {
+    struct Query: EntityStringQuery {
+        func entities(for identifiers: [ReaderDocumentEntity.ID]) async throws -> [ReaderDocumentEntity] { [] }
+        func entities(matching string: String) async throws -> [ReaderDocumentEntity] { [] }
+    }
+    static var defaultQuery = Query()
+    var displayRepresentation: DisplayRepresentation { "Document" }
+
+    let id = UUID()
+
+    @Property
+    var title: String
+
+    @Property
+    var kind: ReaderDocumentKind
+
+    @Property
+    var width: Int?
+
+    @Property
+    var height: Int?
+}
+```
+
+For more information about the `.reader` app intent domain, see [Reader](../../app-schema-domain-reader.md). For general information about app intent domains, see [Making actions and content discoverable by Apple Intelligence](../../making-actions-and-content-discoverable-by-apple-intelligence.md).

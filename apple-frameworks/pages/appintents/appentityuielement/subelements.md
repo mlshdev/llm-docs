@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/appentityuielement/subelements](https://developer.apple.com/documentation/appintents/appentityuielement/subelements)
+
+# subelements
+
+**Framework:** App Intents  
+**Kind:** Instance Property  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+An array of UI elements that represent subelements in the view hierarchy.
+
+## Declaration
+
+```swift
+var subelements: [AppEntityUIElement]
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This property holds an array of UI elements that represents a UI element’s composition. Each element has no defined coordinate space on its own, but instead uses the coordinate space of the root element. As a result, the bounds of the list of elements a provider returns have the same coordinate space as the provider’s attached view.

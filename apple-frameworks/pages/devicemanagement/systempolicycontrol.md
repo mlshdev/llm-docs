@@ -1,0 +1,97 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/systempolicycontrol](https://developer.apple.com/documentation/devicemanagement/systempolicycontrol)
+
+# SystemPolicyControl
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Device Management Profile  
+**Availability:** macOS 10.8+
+
+The payload that configures the system policy for assessments.
+
+## Declaration
+
+```
+object SystemPolicyControl
+```
+
+## Properties
+
+- `AllowIdentifiedDevelopers` — `boolean`: If `true`, enables Gatekeeper’s “Mac App Store and identified developers” option.
+
+  If `false`, enables Gatekeeper’s “Mac App Store” option.
+
+  If the value of `EnableAssessment` isn’t set to `true`, this key has no effect.
+- `EnableAssessment` — `boolean`: If `true`, enables Gatekeeper. If `false`, disables Gatekeeper.
+- `EnableXProtectMalwareUpload` — `boolean`: If `false`, prevents Gatekeeper from prompting the user to upload blocked malware to Apple for purposes of improving malware detection.
+
+  Available: macOS 15+
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Specify `com.apple.systempolicy.control` as the payload type.
+
+<a id="Profile-availability"></a>
+
+### Profile availability
+
+|  |  |
+| --- | --- |
+| Device channel | macOS |
+| User channel | N/A |
+| Allow manual install | macOS |
+| Requires supervision | N/A |
+| Requires user-approved MDM | N/A |
+| Allowed in user enrollment | N/A |
+| Allow multiple payloads | macOS |
+
+<a id="Profile-example"></a>
+
+### Profile example
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>AllowIdentifiedDevelopers</key>
+            <true/>
+            <key>EnableAssessment</key>
+            <false/>
+            <key>PayloadIdentifier</key>
+            <string>com.example.mysystempolicycontrolpayload</string>
+            <key>PayloadType</key>
+            <string>com.apple.systempolicy.control</string>
+            <key>PayloadUUID</key>
+            <string>f26fc0a5-09f4-4d71-9a5c-6f1a7d30e905</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+    </array>
+    <key>PayloadDisplayName</key>
+    <string>System Policy Control</string>
+    <key>PayloadIdentifier</key>
+    <string>com.example.myprofile</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>f379ac8d-8b9e-4e36-98e7-a43094d51e38</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>
+```
+
+## See Also
+
+### System policy
+
+- [SystemPolicyKernelExtensions](systempolicykernelextensions.md): The payload that configures the kernel extension policies.
+- [SystemPolicyManaged](systempolicymanaged.md): The payload that configures the Finder’s contextual menu to bypass the system policy.
+- [SystemPolicyRule](systempolicyrule.md): The payload that configures the system policy.

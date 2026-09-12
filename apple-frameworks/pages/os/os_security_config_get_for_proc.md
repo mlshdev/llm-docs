@@ -1,0 +1,34 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/os/os_security_config_get_for_proc](https://developer.apple.com/documentation/os/os_security_config_get_for_proc)
+
+# os_security_config_get_for_proc
+
+**Interface language:** Objective-C
+
+**Framework:** os  
+**Kind:** Function  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
+
+## Declaration
+
+```objectivec
+extern int os_security_config_get_for_proc(pid_t pid, os_security_config_t *config);
+```
+
+## Parameters
+
+- `pid`: The process identifier (pid_t) of the target process.
+- `config`: A pointer to an os_security_config_t variable where the resulting security configuration will be stored if the function succeeds. This parameter must not be NULL.
+
+<a id="return-value"></a>
+
+## Return Value
+
+Returns 0 on success, in which case `*config` is populated, or -1 on failure.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Retrieves the security configuration bitmask for a target process, identified by its PID.
+
+This function queries the kernel for the set of security properties active for the specified process.

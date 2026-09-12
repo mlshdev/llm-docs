@@ -1,0 +1,58 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v1-appeventlocalizations-_id_](https://developer.apple.com/documentation/appstoreconnectapi/get-v1-appeventlocalizations-_id_)
+
+# Read app event localization information
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Web Service Endpoint  
+**Availability:** App Store Connect API 1.7+
+
+Get information about a specific app event localization.
+
+## URL
+
+```http
+GET https://api.appstoreconnect.apple.com/v1/appEventLocalizations/{id}
+```
+
+## Path Parameters
+
+- `id` — `string` (required): An opaque resource ID that uniquely identifies the resource. Obtain the app event localization resource ID from the [List all localizations for an in-app event](get-v1-appevents-_id_-localizations.md) response.
+
+## Query Parameters
+
+- `fields[appEventLocalizations]` — `[string]`: Additional fields to include for each app event localization resource returned by the response.
+  **Allowed values:** `locale`, `name`, `shortDescription`, `longDescription`, `appEvent`, `appEventScreenshots`, `appEventVideoClips`
+- `fields[appEventScreenshots]` — `[string]`: Additional fields to include for each app event screenshot resource returned by the response.
+  **Allowed values:** `fileSize`, `fileName`, `imageAsset`, `assetToken`, `uploadOperations`, `assetDeliveryState`, `appEventAssetType`, `appEventLocalization`
+- `fields[appEventVideoClips]` — `[string]`: Additional fields to include for each app event video clip resource returned by the response.
+  **Allowed values:** `fileSize`, `fileName`, `previewFrameTimeCode`, `videoUrl`, `previewFrameImage`, `previewImage`, `uploadOperations`, `assetDeliveryState`, `videoDeliveryState`, `appEventAssetType`, `appEventLocalization`
+- `include` — `[string]`: The relationship data to include in the response.
+  **Allowed values:** `appEvent`, `appEventScreenshots`, `appEventVideoClips`
+- `limit[appEventScreenshots]` — `integer`: The maximum number of related app event screenshots resources to return.
+  **Maximum:** `50`
+- `limit[appEventVideoClips]` — `integer`: The maximum number of related app event video clips resources to return.
+  **Maximum:** `50`
+- `fields[appEvents]` — `[string]`: **Allowed values:** `referenceName`, `badge`, `eventState`, `deepLink`, `purchaseRequirement`, `primaryLocale`, `priority`, `purpose`, `territorySchedules`, `archivedTerritorySchedules`, `localizations`
+
+## Response Codes
+
+- `200` OK — `AppEventLocalizationResponse`:
+- `400` Bad Request — `ErrorResponse`:
+- `401` Unauthorized — `ErrorResponse`:
+- `403` Forbidden — `ErrorResponse`:
+- `404` Not Found — `ErrorResponse`:
+- `429` — `ErrorResponse`:
+
+## See Also
+
+### Endpoints
+
+- [List all video clips for an app event localization](get-v1-appeventlocalizations-_id_-appeventvideoclips.md): Get a list of video clips for a specific app event localization.
+- [List app event video clip IDs for an app event localization](get-v1-appeventlocalizations-_id_-relationships-appeventvideoclips.md)
+- [List all screenshots for an app event localization](get-v1-appeventlocalizations-_id_-appeventscreenshots.md): Get a list of screenshots for a specific app event localization.
+- [List app event screenshot IDs for an app event localization](get-v1-appeventlocalizations-_id_-relationships-appeventscreenshots.md)
+- [Modify an app event localization](patch-v1-appeventlocalizations-_id_.md): Update the localized metadata for a specific in-app event.
+- [Create an app event localization](post-v1-appeventlocalizations.md): Add a new localization for an in-app event.
+- [Delete an app event localization](delete-v1-appeventlocalizations-_id_.md): Delete localized metadata that you configured for an in-app event.

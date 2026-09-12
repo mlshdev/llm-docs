@@ -1,0 +1,53 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/recommendationcategory](https://developer.apple.com/documentation/apple-ads-platform-api/recommendationcategory)
+
+# RecommendationCategory
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Type  
+**Availability:** Apple Ads Platform API 1.0+
+
+Enumeration that categorizes a recommendation by optimization area and origin.
+
+## Declaration
+
+```
+string RecommendationCategory
+```
+
+## Possible Values
+
+- `KEYWORD`: Merged view of all keyword recommendations. Use this value when querying or applying.
+- `SKEYWORD`: System-generated keyword recommendation. Created by the optimization algorithm based on search volume, popularity, and predicted performance.
+- `DAILYCAP`: Merged view of all daily budget recommendations.
+- `SDAILYCAP`: System-generated daily budget recommendation. Triggered when a campaign is frequently hitting its spending ceiling.
+- `TCPA`: Merged view of all Target CPA recommendations.
+- `STCPA`: System-generated Target CPA recommendation. Suggests an adjusted CPA target based on recent auction performance and conversion rates.
+- `BID`: Merged view of all bid recommendations.
+- `SBID`: System-generated bid recommendation.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+> **Note**
+
+> The `KEYWORD`/`SKEYWORD` and `BID`/`SBID` categories are defined in this enum, but this API version doesn’t expose dedicated query, apply, or dismiss endpoints for keyword or bid recommendations. Only daily budget (`DAILYCAP`) and Target CPA (`TCPA`) recommendations have corresponding endpoints. See [Recommendations Endpoints](recommendations-endpoints.md) for the available endpoints.
+
+The `recommendationType` field appears on every recommendation read object and always holds one specific category value. For example, [TargetCpaRecommendation](targetcparecommendation.md) always carries `TCPA` and [DailyCapRecommendation](dailycaprecommendation.md) always carries `DAILYCAP`. Apply and dismiss request bodies don’t include a `recommendationType` field.
+
+Each optimization area has a merged category and a system (`S`) category. To retrieve all recommendations for that area regardless of origin, use the merged category (no prefix) in query filters. The system prefix variant allows filtering to only algorithm-generated recommendations.
+
+When filtering a query for recommendations, always use the merged category (no prefix) unless you specifically need to distinguish system-generated recommendations.
+
+## See Also
+
+- [RecommendationQueryRequest](recommendationqueryrequest.md): The structured request body for all recommendation query endpoints.
+- [QueryRequestPagination](recommendationqueryrequestpagination.md): Pagination parameters for a recommendation query request.
+- [Sorting](recommendationsorting.md): A sort specification used in a recommendation query request to order results.
+- [SortingOrder](recommendationsortingorder.md): The sort direction used in a recommendation sorting specification.
+- [FilterCondition](recommendationfiltercondition.md): A single filter condition used in a recommendation query request to narrow results.
+- [FilterOperator](recommendationfilteroperator.md): The comparison operator applied in a recommendation filter condition.
+- [RecommendationState](recommendationstate.md): The lifecycle state of a recommendation, indicating whether it’s available to act on or has already been accepted or rejected.
+- [RecommendationStatus](recommendationstatus.md): The operational status of a recommendation record, independent of its lifecycle state.

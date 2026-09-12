@@ -1,0 +1,59 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avassetexportsession/configureforresumableexport()](https://developer.apple.com/documentation/avfoundation/avassetexportsession/configureforresumableexport())
+
+# configureForResumableExport()
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+Configures the export session for resumable export.
+
+## Declaration
+
+```swift
+func configureForResumableExport() async -> AVAssetExportSession.ResumptionState
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+A `ResumptionState` indicating whether resumption is available and whether the export will resume from a previous state.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This method validates that the export session’s current configuration supports resumption and checks the temporary directory for any partial results from previous export attempts.
+
+Call this method after configuring all export settings (preset, output file type, etc.) and before calling `exportAsynchronously()`.
+
+> **Note**
+
+> Even if resumption is not available, you can still perform a normal (non-resumable) export by calling `exportAsynchronously()`.
+
+Example usage:
+
+```swift
+let exportSession = AVAssetExportSession(asset: asset, presetName: .hevc1920x1080)!
+exportSession.outputFileType = .mov
+exportSession.outputURL = outputURL
+exportSession.directoryForTemporaryFiles = temporaryDirectory
+
+let state = await exportSession.configureForResumableExport()
+switch state {
+case .resumable(let isResuming):
+    print("Export is resumable. Continuing from previous state: \(isResuming)")
+case .notResumable(let reason):
+    print("Cannot perform resumable export with current configuration: \(reason)")
+}
+
+try await exportSession.export(to: outputURL, as: .mov)
+```
+
+## See Also
+
+### Configuring resumable export
+
+- [AVAssetExportSession.ResumptionState](resumptionstate.md): Represents the resumption state of the export session.
+- [AVAssetExportSession.ResumptionFailureReason](resumptionfailurereason.md): The reason that configuring the export session for resumption failed.

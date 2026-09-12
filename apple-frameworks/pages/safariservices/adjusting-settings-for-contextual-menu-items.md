@@ -1,0 +1,301 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/safariservices/adjusting-settings-for-contextual-menu-items](https://developer.apple.com/documentation/safariservices/adjusting-settings-for-contextual-menu-items)
+
+# Adjusting settings for contextual menu items (Swift)
+
+**Framework:** Safari Services  
+**Kind:** Article
+
+Customize contextual menu items for your Safari app extension.
+
+<a id="overview"></a>
+
+## Overview
+
+You can add items to the contextual menu that Safari shows when the user Control-clicks a webpage. These actions trigger the following sequence of events:
+
+1. Safari sends an event to the web document, informing it that a contextual menu is about to appear.
+2. Safari displays the contextual menu.
+3. If the user chooses one of the items associated with your app extension, Safari calls your app extension’s handler to perform the command.
+
+To learn how to add a contextual menu item, see [Using contextual menu and toolbar item keys](using-contextual-menu-and-toolbar-item-keys.md).
+
+<a id="Localize-the-contextual-menu-item"></a>
+
+### Localize the contextual menu item
+
+To localize a contextual menu, provide an `InfoPlist.strings` file and include localized text for a custom key based on your command string. For example, to provide a Polish translation for a menu item with a command string of `Add`, you add the following entry to your strings file:
+
+```swift
+"Context Menu Item Label for Command: Add" = "Dodaj";
+
+```
+
+For more information, see [Managing your app’s information property list values](../bundleresources/managing-your-app-s-information-property-list.md).
+
+<a id="Validate-and-change-text-in-a-contextual-menu-item"></a>
+
+### Validate and change text in a contextual menu item
+
+Use the [validateContextMenuItem(withCommand:in:userInfo:validationHandler:)](sfsafariextensionhandling/validatecontextmenuitem%28withcommand_in_userinfo_validationhandler_%29.md) method to validate a contextual menu item. The command parameter is the `Command` string you provide in the `Info.plist` entry for the menu item. The `validationHandler` parameter is a code block where you specify whether to hide the menu item, and what text to use for it. Using this option, you can dynamically change the text of a context menu item.
+
+To change the menu text, use the following code:
+
+**Swift**
+
+```swift
+validationHandler(false, "Updated text")
+```
+
+**Objective-C**
+
+```objc
+validationHandler(NO, @"Updated text");
+```
+
+To use the default text, use the following code:
+
+**Swift**
+
+```swift
+validationHandler(false, nil)
+
+```
+
+**Objective-C**
+
+```objc
+validationHandler(NO, nil)
+```
+
+To hide the menu item, use the following code:
+
+**Swift**
+
+```swift
+validationHandler(true, nil)
+```
+
+**Objective-C**
+
+```objc
+validationHandler(YES, nil);
+```
+
+<a id="Send-custom-information-to-your-app-extension"></a>
+
+### Send custom information to your app extension
+
+To pass information from the current webpage to your app extension when the user chooses your menu item, you need to inject a JavaScript file; see [Injecting a script into a webpage](injecting-a-script-into-a-webpage.md). When the user Control-clicks a webpage, Safari sends out a `contextmenu` event. Your script can add a listener for this event, and react to it by inserting information into the user info dictionary. If the user later selects one of your contextual menu items, Safari sends this dictionary when it calls your app extension.
+
+For example, to capture the currently selected text in a webpage, use the following code:
+
+```javascript
+document.addEventListener("contextmenu", handleContextMenu, false);
+function handleContextMenu(event) {
+    var selectedText =  window.getSelection().toString();
+    safari.extension.setContextMenuEventUserInfo(event,
+        { "selectedText": selectedText });
+}
+```
+
+<a id="Handle-contextual-menu-item-commands-in-your-app-extension"></a>
+
+### Handle contextual menu item commands in your app extension
+
+When the user selects one of your contextual menu items, Safari sends the [contextMenuItemSelected(withCommand:in:userInfo:)](sfsafariextensionhandling/contextmenuitemselected%28withcommand_in_userinfo_%29.md) method to your [SFSafariExtensionHandler](sfsafariextensionhandler.md) subclass. The `c`ommand parameter is the `Command` string you provide in the `Info.plist` entry for the menu item.
+
+For example, if you add the `Command` string in your `Info.plist` entries for a contextual menu item, you might implement your context menu method to perform different actions for different commands.
+
+**Swift**
+
+```swift
+class MySafariExtensionHandler: SFSafariExtensionHandler {
+    override func contextMenuItemSelected(withCommand command: String,
+                                          in page: SFSafariPage, userInfo: [String : AnyObject]? = [:]) {
+        switch command {
+        case "Search":
+            print("The user asked to search for selected text.")
+            
+        case "AddEntry":
+            print("The user asked to add new entry for selected text.")
+        }
+}
+```
+
+**Objective-C**
+
+```objc
+@implementation MySafariExtensionHandler
+
+- (void)contextMenuItemSelectedWithCommand:(NSString *)command
+                                    inPage:(SFSafariPage *)page userInfo:(NSDictionary<NSString *, id> *)userInfo {
+    if ([command isEqualToString:@"Search"]) {
+        NSLog(@"The user asked to search for selected text.");
+    } else if ([command isEqualToString:@"AddEntry"]) {
+        NSLog(@"The user asked to add new entry for selected text.");
+    }
+}
+
+@end
+```
+
+You can use the `page` parameter to access information about the current webpage, including the URL and page title, and to send messages back to your injected JavaScript file using the [dispatchMessageToScript(withName:userInfo:)](sfsafaripage/dispatchmessagetoscript%28withname_userinfo_%29.md) method.
+
+## See Also
+
+### Contextual menu and toolbar items
+
+- [Using contextual menu and toolbar item keys](using-contextual-menu-and-toolbar-item-keys.md): Learn about adding contextual menu items and toolbar items to a Safari app extension with information property list keys.
+- [Adjusting settings for a toolbar item](adjusting-settings-for-a-toolbar-item.md): Customize a toolbar item for your Safari app extension.
+- [SFSafariToolbarItem](sfsafaritoolbaritem.md): A proxy for a Safari app extension toolbar item in a Safari window.
+- [SFSafariExtensionViewController](sfsafariextensionviewcontroller.md): The view controller for a popover associated with your app extension.
+
+# Adjusting settings for contextual menu items (Objective-C)
+
+**Framework:** Safari Services  
+**Kind:** Article
+
+Customize contextual menu items for your Safari app extension.
+
+<a id="overview"></a>
+
+## Overview
+
+You can add items to the contextual menu that Safari shows when the user Control-clicks a webpage. These actions trigger the following sequence of events:
+
+1. Safari sends an event to the web document, informing it that a contextual menu is about to appear.
+2. Safari displays the contextual menu.
+3. If the user chooses one of the items associated with your app extension, Safari calls your app extension’s handler to perform the command.
+
+To learn how to add a contextual menu item, see [Using contextual menu and toolbar item keys](using-contextual-menu-and-toolbar-item-keys.md).
+
+<a id="Localize-the-contextual-menu-item"></a>
+
+### Localize the contextual menu item
+
+To localize a contextual menu, provide an `InfoPlist.strings` file and include localized text for a custom key based on your command string. For example, to provide a Polish translation for a menu item with a command string of `Add`, you add the following entry to your strings file:
+
+```swift
+"Context Menu Item Label for Command: Add" = "Dodaj";
+
+```
+
+For more information, see [Managing your app’s information property list values](../bundleresources/managing-your-app-s-information-property-list.md).
+
+<a id="Validate-and-change-text-in-a-contextual-menu-item"></a>
+
+### Validate and change text in a contextual menu item
+
+Use the [validateContextMenuItemWithCommand:inPage:userInfo:validationHandler:](sfsafariextensionhandling/validatecontextmenuitem%28withcommand_in_userinfo_validationhandler_%29.md) method to validate a contextual menu item. The command parameter is the `Command` string you provide in the `Info.plist` entry for the menu item. The `validationHandler` parameter is a code block where you specify whether to hide the menu item, and what text to use for it. Using this option, you can dynamically change the text of a context menu item.
+
+To change the menu text, use the following code:
+
+**Swift**
+
+```swift
+validationHandler(false, "Updated text")
+```
+
+**Objective-C**
+
+```objc
+validationHandler(NO, @"Updated text");
+```
+
+To use the default text, use the following code:
+
+**Swift**
+
+```swift
+validationHandler(false, nil)
+
+```
+
+**Objective-C**
+
+```objc
+validationHandler(NO, nil)
+```
+
+To hide the menu item, use the following code:
+
+**Swift**
+
+```swift
+validationHandler(true, nil)
+```
+
+**Objective-C**
+
+```objc
+validationHandler(YES, nil);
+```
+
+<a id="Send-custom-information-to-your-app-extension"></a>
+
+### Send custom information to your app extension
+
+To pass information from the current webpage to your app extension when the user chooses your menu item, you need to inject a JavaScript file; see [Injecting a script into a webpage](injecting-a-script-into-a-webpage.md). When the user Control-clicks a webpage, Safari sends out a `contextmenu` event. Your script can add a listener for this event, and react to it by inserting information into the user info dictionary. If the user later selects one of your contextual menu items, Safari sends this dictionary when it calls your app extension.
+
+For example, to capture the currently selected text in a webpage, use the following code:
+
+```javascript
+document.addEventListener("contextmenu", handleContextMenu, false);
+function handleContextMenu(event) {
+    var selectedText =  window.getSelection().toString();
+    safari.extension.setContextMenuEventUserInfo(event,
+        { "selectedText": selectedText });
+}
+```
+
+<a id="Handle-contextual-menu-item-commands-in-your-app-extension"></a>
+
+### Handle contextual menu item commands in your app extension
+
+When the user selects one of your contextual menu items, Safari sends the [contextMenuItemSelectedWithCommand:inPage:userInfo:](sfsafariextensionhandling/contextmenuitemselected%28withcommand_in_userinfo_%29.md) method to your [SFSafariExtensionHandler](sfsafariextensionhandler.md) subclass. The `c`ommand parameter is the `Command` string you provide in the `Info.plist` entry for the menu item.
+
+For example, if you add the `Command` string in your `Info.plist` entries for a contextual menu item, you might implement your context menu method to perform different actions for different commands.
+
+**Swift**
+
+```swift
+class MySafariExtensionHandler: SFSafariExtensionHandler {
+    override func contextMenuItemSelected(withCommand command: String,
+                                          in page: SFSafariPage, userInfo: [String : AnyObject]? = [:]) {
+        switch command {
+        case "Search":
+            print("The user asked to search for selected text.")
+            
+        case "AddEntry":
+            print("The user asked to add new entry for selected text.")
+        }
+}
+```
+
+**Objective-C**
+
+```objc
+@implementation MySafariExtensionHandler
+
+- (void)contextMenuItemSelectedWithCommand:(NSString *)command
+                                    inPage:(SFSafariPage *)page userInfo:(NSDictionary<NSString *, id> *)userInfo {
+    if ([command isEqualToString:@"Search"]) {
+        NSLog(@"The user asked to search for selected text.");
+    } else if ([command isEqualToString:@"AddEntry"]) {
+        NSLog(@"The user asked to add new entry for selected text.");
+    }
+}
+
+@end
+```
+
+You can use the `page` parameter to access information about the current webpage, including the URL and page title, and to send messages back to your injected JavaScript file using the [dispatchMessageToScriptWithName:userInfo:](sfsafaripage/dispatchmessagetoscript%28withname_userinfo_%29.md) method.
+
+## See Also
+
+### Contextual menu and toolbar items
+
+- [Using contextual menu and toolbar item keys](using-contextual-menu-and-toolbar-item-keys.md): Learn about adding contextual menu items and toolbar items to a Safari app extension with information property list keys.
+- [Adjusting settings for a toolbar item](adjusting-settings-for-a-toolbar-item.md): Customize a toolbar item for your Safari app extension.
+- [SFSafariToolbarItem](sfsafaritoolbaritem.md): A proxy for a Safari app extension toolbar item in a Safari window.
+- [SFSafariExtensionViewController](sfsafariextensionviewcontroller.md): The view controller for a popover associated with your app extension.

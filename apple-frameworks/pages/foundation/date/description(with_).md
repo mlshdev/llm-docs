@@ -1,0 +1,32 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/date/description(with:)](https://developer.apple.com/documentation/foundation/date/description(with:))
+
+# description(with:)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 8.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Returns a string representation of the receiver using the given locale.
+
+## Declaration
+
+```swift
+func description(with locale: Locale?) -> String
+```
+
+## Parameters
+
+- `locale`: A `Locale`. If you pass `nil`, `Date` formats the date in the same way as the `description` property.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A string representation of the `Date`, using the given locale, or if the locale argument is `nil`, in the international format `YYYY-MM-DD HH:MM:SS ±HHMM`, where `±HHMM` represents the time zone offset in hours and minutes from UTC (for example, “`2001-03-24 10:45:32 +0600`”).
+
+## See Also
+
+### Describing Dates
+
+- [description](description.md): The representation is useful for debugging only. There are a number of options to acquire a formatted string for a date including: date formatters (see [NSDateFormatter](https://developer.apple.com//apple_ref/occ/cl/NSDateFormatter) and [Data Formatting Guide](https://developer.apple.com//apple_ref/doc/uid/10000029i)), and the `Date` function `description(locale:)`.
+- [customPlaygroundQuickLook](customplaygroundquicklook.md): Deprecated. A custom playground Quick Look for the date.

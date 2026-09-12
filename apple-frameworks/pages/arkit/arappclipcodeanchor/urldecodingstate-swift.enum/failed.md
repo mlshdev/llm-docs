@@ -1,0 +1,69 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/arappclipcodeanchor/urldecodingstate-swift.enum/failed](https://developer.apple.com/documentation/arkit/arappclipcodeanchor/urldecodingstate-swift.enum/failed)
+
+# ARAppClipCodeAnchor.URLDecodingState.failed (Swift)
+
+**Framework:** ARKit  
+**Kind:** Case  
+**Availability:** iOS 14.3+ · iPadOS 14.3+
+
+A state that indicates the failure to decode an App Clip Code’s URL.
+
+## Declaration
+
+```swift
+case failed
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The decoding of an App Clip Code URL fails under these circumstances:
+
+- The full app or App Clip is missing the associated-domains entitlement from its code signature.
+- The host of the resource identified by the App Clip Code URL doesn’t vend an Apple App Site Association (AASA) file.
+- The AASA file hosted at the App Clip Code URL’s domain lacks the App Clip’s fully-qualified application identifier.
+- The App Clip Code is not associated to the App Clip in an App Clip experience in App Store Connect.
+
+For more information, see [Configuring App Clip experiences](https://developer.apple.com/documentation/appclip/configuring-the-launch-experience-of-your-app-clip).
+
+## See Also
+
+### States
+
+- [ARAppClipCodeAnchor.URLDecodingState.decoded](decoded.md): A state that indicates the completed decoding of an App Clip Code URL.
+- [ARAppClipCodeAnchor.URLDecodingState.decoding](decoding.md): A state that indicates the continuing process of decoding an App Clip Code’s URL.
+
+# ARAppClipCodeURLDecodingStateFailed (Objective-C)
+
+**Framework:** ARKit  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS
+
+A state that indicates the failure to decode an App Clip Code’s URL.
+
+## Declaration
+
+```objectivec
+ARAppClipCodeURLDecodingStateFailed
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The decoding of an App Clip Code URL fails under these circumstances:
+
+- The full app or App Clip is missing the associated-domains entitlement from its code signature.
+- The host of the resource identified by the App Clip Code URL doesn’t vend an Apple App Site Association (AASA) file.
+- The AASA file hosted at the App Clip Code URL’s domain lacks the App Clip’s fully-qualified application identifier.
+- The App Clip Code is not associated to the App Clip in an App Clip experience in App Store Connect.
+
+For more information, see [Configuring App Clip experiences](https://developer.apple.com/documentation/appclip/configuring-the-launch-experience-of-your-app-clip).
+
+## See Also
+
+### States
+
+- [ARAppClipCodeURLDecodingStateDecoded](decoded.md): A state that indicates the completed decoding of an App Clip Code URL.
+- [ARAppClipCodeURLDecodingStateDecoding](decoding.md): A state that indicates the continuing process of decoding an App Clip Code’s URL.

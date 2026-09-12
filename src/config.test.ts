@@ -15,6 +15,13 @@ const branchPin = {
   sourceCommittedAt: "2026-08-28T14:48:42Z",
 };
 
+const snapshotPin = {
+  tag: "snapshot-0123456789ab",
+  snapshotDigest:
+    "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+  capturedAt: "2026-09-12T00:00:00.000Z",
+};
+
 const lock = (projects: Record<string, unknown>) => ({
   schemaVersion: 1,
   projects,
@@ -43,6 +50,40 @@ describe("sources lock validation", () => {
     expect(isSourcesLock(lock({ docker: branchPin }))).toBe(true);
   });
 
+  test("accepts a DocC catalog snapshot with or without a content digest", () => {
+    expect(isSourcesLock(lock({ "apple-swift": snapshotPin }))).toBe(true);
+    expect(
+      isSourcesLock(
+        lock({
+          "apple-swift": {
+            ...snapshotPin,
+            contentDigest:
+              "fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210",
+          },
+        }),
+      ),
+    ).toBe(true);
+  });
+
+  test("rejects a content digest that is not a digest or not a snapshot", () => {
+    expect(
+      isSourcesLock(
+        lock({ "apple-swift": { ...snapshotPin, contentDigest: "deadbeef" } }),
+      ),
+    ).toBe(false);
+    expect(
+      isSourcesLock(
+        lock({
+          traefik: {
+            ...pin,
+            contentDigest:
+              "fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210",
+          },
+        }),
+      ),
+    ).toBe(false);
+  });
+
   test("rejects an unknown project id", () => {
     expect(isSourcesLock(lock({ prometheus: pin }))).toBe(false);
   });
@@ -59,6 +100,20 @@ describe("sources lock validation", () => {
     ).toBe(false);
     expect(
       isSourcesLock(lock({ docker: { ...branchPin, releaseId: 1 } })),
+    ).toBe(false);
+    expect(
+      isSourcesLock(
+        lock({
+          "apple-swift": { ...snapshotPin, tag: "snapshot-wrong" },
+        }),
+      ),
+    ).toBe(false);
+    expect(
+      isSourcesLock(
+        lock({
+          "apple-swift": { ...snapshotPin, releasePublishedAt: "now" },
+        }),
+      ),
     ).toBe(false);
   });
 

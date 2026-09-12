@@ -1,0 +1,53 @@
+> Snapshot-pinned source for Apple watchOS snapshot-49fd8d0a44e2: [documentation/watchos-apps/presenting-notifications-on-apple-watch](https://developer.apple.com/documentation/watchos-apps/presenting-notifications-on-apple-watch)
+
+# Presenting notifications on Apple Watch
+
+**Kind:** Article
+
+Understand how the system displays incoming notifications.
+
+<a id="Overview"></a>
+
+## Overview
+
+When the Apple Watch displays a notification, the system first presents the short-look interface. If the user continues to look at the notification, the system transitions quickly from the short-look interface to the long-look interface
+
+<a id="Display-a-short-look-interface"></a>
+
+### Display a short-look interface
+
+The *short-look* interface is a nonscrolling screen that the system creates automatically.
+
+![A screenshot of the short-look interface, with the icon, title, and app name called out.](https://developer.apple.com/images/com.apple.watchOS-Apps/presenting-notifications-on-apple-watch-1@2x.png)
+
+The system uses a template to display the app name and icon along with the title string from the notification payload, and you can’t customize this interface. For local notifications, you specify the title string using the [UNMutableNotificationContent](https://developer.apple.com/documentation/usernotifications/unmutablenotificationcontent) object’s [title](https://developer.apple.com/documentation/usernotifications/unmutablenotificationcontent/title) property. For remote notifications, you specify it using the `alert` dictionary’s `title` key inside the notification’s payload.
+
+<a id="Transition-to-the-long-look-interface"></a>
+
+### Transition to the long-look interface
+
+The *long-look* interface is a scrollable screen that displays the notification’s content and any associated action buttons. The system’s default long-look interface includes your app icon, the notification’s title string, and the alert message; however, your app can customize this interface.
+
+![A screenshot of the short-look interface, with the sash, content, actions, and dismiss button called out.](https://developer.apple.com/images/com.apple.watchOS-Apps/presenting-notifications-on-apple-watch-2@2x.png)
+
+The long-look notification includes the following sections:
+
+- The sash is an overlay that contains the app icon and app name. The system automatically generates the sash, but you can configure the appearance using the hosting controller’s [sashColor](https://developer.apple.com/documentation/swiftui/wkusernotificationhostingcontroller/sashcolor), [titleColor](https://developer.apple.com/documentation/swiftui/wkusernotificationhostingcontroller/titlecolor), [subtitleColor](https://developer.apple.com/documentation/swiftui/wkusernotificationhostingcontroller/subtitlecolor), and [wantsSashBlur](https://developer.apple.com/documentation/swiftui/wkusernotificationhostingcontroller/wantssashblur) properties.
+- The content area contains detailed information about the incoming notification. If you provide a dynamic interactive interface for the notification, the content area can contain controls, like buttons or switches. For information on customizing the long-look interface, see [Customizing your long-look interface](customizing-your-long-look-interface.md).
+- The bottom contains a Dismiss button and any registered action buttons. For more information, see [Adding actions to notifications on watchOS](adding-actions-to-notifications-on-watchos.md).
+
+By default, the system dismisses the long-look interface, launches your app, and calls your notification center delegate’s [userNotificationCenter(\_:didReceive:withCompletionHandler:)](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate/usernotificationcenter%28_:didreceive:withcompletionhandler:%29) method when the user taps the notification. The response parameter’s [actionIdentifier](https://developer.apple.com/documentation/usernotifications/unnotificationresponse/actionidentifier) property varies, as shown below.
+
+| Interface element | Action identifier |
+| --- | --- |
+| Action button | The identifier for the selected action |
+| Dismiss button | [UNNotificationDismissActionIdentifier](https://developer.apple.com/documentation/usernotifications/unnotificationdismissactionidentifier) |
+| Anywhere else | [UNNotificationDefaultActionIdentifier](https://developer.apple.com/documentation/usernotifications/unnotificationdefaultactionidentifier) |
+
+For dynamic interactive interfaces, tapping the app content doesn’t launch your watchOS app. Instead, the user can interact with any controls placed in the interface, and the system calls the corresponding action method. The system only dismisses the notification and launches your app if the user taps the app icon or sash, or if you explicitly call the notification controller’s [performNotificationDefaultAction()](../watchkit/wkusernotificationinterfacecontroller/performnotificationdefaultaction%28%29.md) method.
+
+## See Also
+
+### Essentials
+
+- [Enabling and receiving notifications](enabling-and-receiving-notifications.md): Set up and handle local and remote notifications.

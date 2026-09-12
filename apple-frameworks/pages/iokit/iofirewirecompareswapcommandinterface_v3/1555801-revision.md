@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/iofirewirecompareswapcommandinterface_v3/1555801-revision](https://developer.apple.com/documentation/iokit/iofirewirecompareswapcommandinterface_v3/1555801-revision)
+
+# revision
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.5+
+
+## Declaration
+
+```objectivec
+UInt32 revision;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Interface version.
+
+## See Also
+
+### Instance Variables
+
+- [version](1555623-version.md)

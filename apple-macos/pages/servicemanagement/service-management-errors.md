@@ -1,0 +1,26 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/servicemanagement/service-management-errors](https://developer.apple.com/documentation/servicemanagement/service-management-errors)
+
+# Service Management Errors
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** Service Management  
+**Kind:** API Collection
+
+Errors that the framework returns.
+
+## Topics
+
+### Constants
+
+- [kSMErrorAlreadyRegistered](ksmerroralreadyregistered.md): The application is already registered.
+- [kSMErrorAuthorizationFailure](ksmerrorauthorizationfailure.md): The authorization requested failed.
+- [kSMErrorInternalFailure](ksmerrorinternalfailure.md): An internal failure has occurred.
+- [kSMErrorInvalidPlist](ksmerrorinvalidplist.md): The app’s property list is invalid.
+- [kSMErrorInvalidSignature](ksmerrorinvalidsignature.md): The app’s code signature doesn’t meet the requirements to perform the operation.
+- [kSMErrorJobMustBeEnabled](ksmerrorjobmustbeenabled.md)
+- [kSMErrorJobNotFound](ksmerrorjobnotfound.md): The system can’t find the specified job.
+- [kSMErrorJobPlistNotFound](ksmerrorjobplistnotfound.md)
+- [kSMErrorLaunchDeniedByUser](ksmerrorlaunchdeniedbyuser.md): The user denied the app’s launch request.
+- [kSMErrorServiceUnavailable](ksmerrorserviceunavailable.md): The service necessary to perform this operation is unavailable or is no longer accepting requests.
+- [kSMErrorToolNotValid](ksmerrortoolnotvalid.md): The specified path doesn’t exist or the helper tool at the specified path isn’t valid.

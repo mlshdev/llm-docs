@@ -1,0 +1,69 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/opendirectory/kodattributetypebootparams](https://developer.apple.com/documentation/opendirectory/kodattributetypebootparams)
+
+# kODAttributeTypeBootParams (Swift)
+
+**Framework:** Open Directory  
+**Kind:** Global Variable  
+**Availability:** Mac Catalyst · macOS
+
+The attribute type used to store boot parameters. Typically found in host or machine records.
+
+## Declaration
+
+```swift
+let kODAttributeTypeBootParams: String
+```
+
+## See Also
+
+### Constants
+
+- [kODAttributeTypeAllAttributes](kodattributetypeallattributes.md): The attribute type used in requesting all attribute types in a search.
+- [kODAttributeTypeStandardOnly](kodattributetypestandardonly.md): The attribute type used in requesting only standard attribute types in a search.
+- [kODAttributeTypeNativeOnly](kodattributetypenativeonly.md): The attribute type used in requesting only native attribute types in a search.
+- [kODAttributeTypeAdminLimits](kodattributetypeadminlimits.md): The attribute type of an XML property list that indicates what an admin user can edit. Found in records of type `kODRecordTypeUsers`.
+- [kODAttributeTypeAuthenticationHint](kodattributetypeauthenticationhint.md): The attribute type of an authentication hint attribute.
+- [kODAttributeTypeAllTypes](kodattributetypealltypes.md): The attribute type used to indicate all attribute types for a given record type the config node.
+- [kODAttributeTypeAuthorityRevocationList](kodattributetypeauthorityrevocationlist.md): The attribute type of the authority revocation list attribute, which defines certificate authority certificates that are no longer trusted. Typically found in records of type `kODRecordTypeCertificateAuthorities`.
+- [kODAttributeTypeBirthday](kodattributetypebirthday.md): The attribute type of a birthday attribute.
+- [kODAttributeTypeCACertificate](kodattributetypecacertificate.md): The attribute type of a certificate authority certificate attribute, which contains the binary of the certificate. Typically found in records of type `kODRecordTypeCertificateAuthority`.
+- [kODAttributeTypeCapacity](kodattributetypecapacity.md): The attribute type of a capacity attribute, which indicates the capacity of a resource.
+- [kODAttributeTypeCertificateRevocationList](kodattributetypecertificaterevocationlist.md): The attribute type of the certificate revocation list attribute, which defines certificates that are no longer trusted. Typically found in records of type `kODRecordTypeCertificateAuthorities`.
+- [kODAttributeTypeComment](kodattributetypecomment.md): The attribute type of an unformatted comment attribute.
+- [kODAttributeTypeContactGUID](kodattributetypecontactguid.md): The attribute type of the contact GUID attribute. Typically found in records of type `kODRecordTypeGroups`.
+- [kODAttributeTypeContactPerson](kodattributetypecontactperson.md): The attribute type of the contact person attribute, which indicates the contact person of a machine.
+- [kODAttributeTypeCreationTimestamp](kodattributetypecreationtimestamp.md): The attribute type of the creation timestamp attribute, which indicates the time the record was created.
+
+# kODAttributeTypeBootParams (Objective-C)
+
+**Framework:** Open Directory  
+**Kind:** Global Variable  
+**Availability:** Mac Catalyst · macOS
+
+The attribute type used to store boot parameters. Typically found in host or machine records.
+
+## Declaration
+
+```objectivec
+extern ODAttributeType const kODAttributeTypeBootParams;
+```
+
+## See Also
+
+### Constants
+
+- [kODAttributeTypeAllAttributes](kodattributetypeallattributes.md): The attribute type used in requesting all attribute types in a search.
+- [kODAttributeTypeStandardOnly](kodattributetypestandardonly.md): The attribute type used in requesting only standard attribute types in a search.
+- [kODAttributeTypeNativeOnly](kodattributetypenativeonly.md): The attribute type used in requesting only native attribute types in a search.
+- [kODAttributeTypeAdminLimits](kodattributetypeadminlimits.md): The attribute type of an XML property list that indicates what an admin user can edit. Found in records of type `kODRecordTypeUsers`.
+- [kODAttributeTypeAuthenticationHint](kodattributetypeauthenticationhint.md): The attribute type of an authentication hint attribute.
+- [kODAttributeTypeAllTypes](kodattributetypealltypes.md): The attribute type used to indicate all attribute types for a given record type the config node.
+- [kODAttributeTypeAuthorityRevocationList](kodattributetypeauthorityrevocationlist.md): The attribute type of the authority revocation list attribute, which defines certificate authority certificates that are no longer trusted. Typically found in records of type `kODRecordTypeCertificateAuthorities`.
+- [kODAttributeTypeBirthday](kodattributetypebirthday.md): The attribute type of a birthday attribute.
+- [kODAttributeTypeCACertificate](kodattributetypecacertificate.md): The attribute type of a certificate authority certificate attribute, which contains the binary of the certificate. Typically found in records of type `kODRecordTypeCertificateAuthority`.
+- [kODAttributeTypeCapacity](kodattributetypecapacity.md): The attribute type of a capacity attribute, which indicates the capacity of a resource.
+- [kODAttributeTypeCertificateRevocationList](kodattributetypecertificaterevocationlist.md): The attribute type of the certificate revocation list attribute, which defines certificates that are no longer trusted. Typically found in records of type `kODRecordTypeCertificateAuthorities`.
+- [kODAttributeTypeComment](kodattributetypecomment.md): The attribute type of an unformatted comment attribute.
+- [kODAttributeTypeContactGUID](kodattributetypecontactguid.md): The attribute type of the contact GUID attribute. Typically found in records of type `kODRecordTypeGroups`.
+- [kODAttributeTypeContactPerson](kodattributetypecontactperson.md): The attribute type of the contact person attribute, which indicates the contact person of a machine.
+- [kODAttributeTypeCreationTimestamp](kodattributetypecreationtimestamp.md): The attribute type of the creation timestamp attribute, which indicates the time the record was created.

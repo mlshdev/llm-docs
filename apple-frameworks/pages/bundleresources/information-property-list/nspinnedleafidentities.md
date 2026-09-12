@@ -1,0 +1,45 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/bundleresources/information-property-list/nspinnedleafidentities](https://developer.apple.com/documentation/bundleresources/information-property-list/nspinnedleafidentities)
+
+# NSPinnedLeafIdentities
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** Bundle Resources  
+**Kind:** Property List Key  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+A list of allowed leaf certificates for a given domain name.
+
+## Details
+
+`NSPinnedLeafIdentities`
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Provide an array of dictionaries as the value for this key. Each dictionary in the array contains the [SPKI-SHA256-BASE64](nspinnedleafidentities/spki-sha256-base64.md) key with a value that represents the Base64-encoded SHA-256 digest of an X.509 certificate’s DER-encoded ASN.1 Subject Public Key Info (SPKI) structure.
+
+```console
+NSPinnedLeafIdentities : Array {
+    Dictionary {
+        SPKI-SHA256-BASE64 : String
+    }
+}
+```
+
+When making a network connection to a named domain, App Transport Security (ATS) blocks the connection unless it can find the SPKI digest of the leaf certificate presented by the server among the digests in this array. Consider including more than one leaf certificate to allow for server-side configuration changes.
+
+You must include this key or the [NSPinnedCAIdentities](nspinnedcaidentities.md) key or both in each domain-specific [NSPinnedDomains](nsapptransportsecurity/nspinneddomains.md) subdictionary. If you include both, then both must produce a match.
+
+## Topics
+
+### Key Digests
+
+- [SPKI-SHA256-BASE64](nspinnedleafidentities/spki-sha256-base64.md): The digest of an X.509 certificate’s Subject Public Key Info structure.
+
+## See Also
+
+### Identities
+
+- [NSPinnedCAIdentities](nspinnedcaidentities.md): A list of allowed Certificate Authority certificates for a given domain name.

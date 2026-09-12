@@ -1,0 +1,71 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/xmlelement/removechild(at:)](https://developer.apple.com/documentation/foundation/xmlelement/removechild(at:))
+
+# removeChild(at:) (Swift)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+Removes the child node of the receiver identified by a given index.
+
+## Declaration
+
+```swift
+func removeChild(at index: Int)
+```
+
+## Parameters
+
+- `index`: An integer identifying the node in the receiver’s list of children to remove. An exception is raised if `index` is out of bounds.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The XML node object is released upon removal. The indices of subsequent children are decremented by one.
+
+## See Also
+
+### Manipulating Child Elements
+
+- [addChild(\_:)](addchild%28__%29.md): Adds a child node at the end of the receiver’s current list of children.
+- [insertChild(\_:at:)](insertchild%28__at_%29.md): Inserts a new child node at a specified location in the receiver’s list of child nodes.
+- [insertChildren(\_:at:)](insertchildren%28__at_%29.md): Inserts an array of child nodes at a specified location in the receiver’s list of children.
+- [replaceChild(at:with:)](replacechild%28at_with_%29.md): Replaces a child node at a specified location with another child node.
+- [setChildren(\_:)](setchildren%28__%29.md): Sets all child nodes of the receiver at once, replacing any existing children.
+- [normalizeAdjacentTextNodesPreservingCDATA(\_:)](normalizeadjacenttextnodespreservingcdata%28__%29.md): Coalesces adjacent text nodes of the receiver that you have explicitly added, optionally including CDATA sections.
+
+# removeChildAtIndex: (Objective-C)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+Removes the child node of the receiver identified by a given index.
+
+## Declaration
+
+```objectivec
+- (void) removeChildAtIndex:(NSUInteger) index;
+```
+
+## Parameters
+
+- `index`: An integer identifying the node in the receiver’s list of children to remove. An exception is raised if `index` is out of bounds.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The XML node object is released upon removal. The indices of subsequent children are decremented by one.
+
+## See Also
+
+### Manipulating Child Elements
+
+- [addChild:](addchild%28__%29.md): Adds a child node at the end of the receiver’s current list of children.
+- [insertChild:atIndex:](insertchild%28__at_%29.md): Inserts a new child node at a specified location in the receiver’s list of child nodes.
+- [insertChildren:atIndex:](insertchildren%28__at_%29.md): Inserts an array of child nodes at a specified location in the receiver’s list of children.
+- [replaceChildAtIndex:withNode:](replacechild%28at_with_%29.md): Replaces a child node at a specified location with another child node.
+- [setChildren:](setchildren%28__%29.md): Sets all child nodes of the receiver at once, replacing any existing children.
+- [normalizeAdjacentTextNodesPreservingCDATA:](normalizeadjacenttextnodespreservingcdata%28__%29.md): Coalesces adjacent text nodes of the receiver that you have explicitly added, optionally including CDATA sections.

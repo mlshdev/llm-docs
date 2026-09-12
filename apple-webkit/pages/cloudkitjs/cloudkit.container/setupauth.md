@@ -1,0 +1,52 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/cloudkitjs/cloudkit.container/setupauth](https://developer.apple.com/documentation/cloudkitjs/cloudkit.container/setupauth)
+
+# setUpAuth
+
+**Interface language:** Data
+
+**Framework:** CloudKit JS  
+**Kind:** Instance Method  
+**Availability:** CloudKit JS 1.0+
+
+Determines whether a user is signed in and presents an appropriate sign in or sign out button.
+
+## Declaration
+
+```
+Promise<CloudKit.UserIdentity, CloudKit.CKError> setUpAuth();
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+A `Promise` that resolves to a [CloudKit.UserIdentity](../cloudkit.useridentity.md) dictionary if an active CloudKit session was found; otherwise, `null`. If an error occurs, a `Promise` object that rejects to a [CKError](../cloudkit/ckerror.md) object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use the [setUpAuth](setupauth.md) method to determine whether the user is authenticated and to display the appropriate button.
+
+```javascript
+var myContainer = CloudKit.getDefaultContainer();
+ 
+myContainer.setUpAuth().then(function(userIdentity) {
+    if(userIdentity) {
+        // The user is authenticated
+    }
+});
+```
+
+In the function, use the `userRecordName` property to get the user record name from the [CloudKit.UserIdentity](../cloudkit.useridentity.md) parameter.
+
+The [setUpAuth](setupauth.md) method displays the appropriate buttons only if the required DOM elements are found. If the user is not signed in, the method displays a sign-in button; otherwise, it displays a sign-out button.
+
+You can call this method multiple times. For example, call this method to determine if a previous CloudKit session is still valid, and call this method later to display the buttons after you add the required DOM elements.
+
+## See Also
+
+### Authenticating Users
+
+- [whenUserSignsIn](whenusersignsin.md): Returns an object representing a deferred or asynchronous operation that resolves when the user signs in.
+- [whenUserSignsOut](whenusersignsout.md): Returns an object representing a deferred or asynchronous operation that resolves when the user signs out.

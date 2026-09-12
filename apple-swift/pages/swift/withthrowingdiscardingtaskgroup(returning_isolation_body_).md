@@ -1,0 +1,102 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/withthrowingdiscardingtaskgroup(returning:isolation:body:)](https://developer.apple.com/documentation/swift/withthrowingdiscardingtaskgroup(returning:isolation:body:))
+
+# withThrowingDiscardingTaskGroup(returning:isolation:body:)
+
+**Framework:** Swift  
+**Kind:** Function  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+Starts a new scope that can contain a dynamic number of child tasks.
+
+## Declaration
+
+```swift
+@backDeployed(before: macOS 15.0, iOS 18.0, watchOS 11.0, tvOS 18.0, visionOS 2.0)
+func withThrowingDiscardingTaskGroup<GroupResult>(returning returnType: GroupResult.Type = GroupResult.self, isolation: isolated (any Actor)? = #isolation, body: (inout ThrowingDiscardingTaskGroup<any Error>) async throws -> GroupResult) async throws -> GroupResult
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Unlike a [ThrowingTaskGroup](throwingtaskgroup.md), the child tasks as well as their results are discarded as soon as the tasks complete. This prevents the discarding task group from accumulating many results waiting to be consumed, and is best applied in situations where the result of a child task is some form of side-effect.
+
+A group *always* waits for all of its child tasks to complete before it returns. Even canceled tasks must run until completion before this function returns. Canceled child tasks cooperatively react to cancellation and attempt to return as early as possible. After this function returns, the task group is always empty.
+
+It is not possible to explicitly await completion of child-tasks, however the group will automatically await *all* child task completions before returning from this function:
+
+```swift
+try await withThrowingDiscardingTaskGroup { group in
+  group.addTask { /* slow-task */ }
+  // slow-task executes...
+}
+// guaranteed that slow-task has completed and the group is empty & destroyed
+```
+
+Refer to [TaskGroup](taskgroup.md) documentation for detailed discussion of semantics shared between all task groups.
+
+<a id="Task-Group-Cancellation"></a>
+
+## Task Group Cancellation
+
+You can cancel a task group and all of its child tasks by calling the [cancelAll()](taskgroup/cancelall%28%29.md) method on the task group, or by canceling the task in which the group is running.
+
+If you call `addTask(priority:operation:)` to create a new task in a canceled group, that task is immediately canceled after creation. Alternatively, you can call `asyncUnlessCancelled(priority:operation:)`, which doesn’t create the task if the group has already been canceled. Choosing between these two functions lets you control how to react to cancellation within a group: some child tasks need to run regardless of cancellation, but other tasks are better not even being created when you know they can’t produce useful results.
+
+<a id="Error-Handling-and-Implicit-Cancellation"></a>
+
+## Error Handling and Implicit Cancellation
+
+Since it is not possible to explicitly await individual task completions, it is also not possible to “re-throw” an error thrown by one of the child tasks using the same pattern as one would in a [ThrowingTaskGroup](throwingtaskgroup.md):
+
+```swift
+// ThrowingTaskGroup, pattern not applicable to ThrowingDiscardingTaskGroup
+try await withThrowingTaskGroup(of: Void.self) { group in
+  group.addTask { try boom() }
+  try await group.next() // re-throws "boom"
+}
+```
+
+Since discarding task groups don’t have access to `next()`, this pattern cannot be used. Instead, a *throwing discarding task group implicitly cancels itself whenever any of its child tasks throws*.
+
+The *first error* thrown inside such task group is then retained and thrown out of the `withThrowingDiscardingTaskGroup` method when it returns.
+
+```swift
+try await withThrowingDiscardingTaskGroup { group in
+  group.addTask { try boom(1) }
+  group.addTask { try boom(2, after: .seconds(5)) }
+  group.addTask { try boom(3, after: .seconds(5)) }
+}
+```
+
+Generally, this suits the typical use cases of a discarding task group well, however, if you want to prevent specific errors from canceling the group you can catch them inside the child task’s body like this:
+
+```swift
+try await withThrowingDiscardingTaskGroup { group in
+  group.addTask {
+    do {
+      try boom(1)
+    } catch is HarmlessError {
+      return
+    }
+  }
+  group.addTask {
+    try boom(2, after: .seconds(5))
+  }
+}
+```
+
+## See Also
+
+### Tasks
+
+- [Task](task.md): A unit of asynchronous work.
+- [TaskGroup](taskgroup.md): A group that contains dynamically created child tasks.
+- [withTaskGroup(of:returning:isolation:body:)](withtaskgroup%28of_returning_isolation_body_%29.md): Starts a new scope that can contain a dynamic number of child tasks.
+- [ThrowingTaskGroup](throwingtaskgroup.md): A group that contains throwing, dynamically created child tasks.
+- [withThrowingTaskGroup(of:returning:isolation:body:)](withthrowingtaskgroup%28of_returning_isolation_body_%29.md): Starts a new scope that can contain a dynamic number of throwing child tasks.
+- [TaskPriority](taskpriority.md): The priority of a task.
+- [DiscardingTaskGroup](discardingtaskgroup.md): A discarding group that contains dynamically created child tasks.
+- [withDiscardingTaskGroup(returning:isolation:body:)](withdiscardingtaskgroup%28returning_isolation_body_%29.md): Starts a new scope that can contain a dynamic number of child tasks.
+- [ThrowingDiscardingTaskGroup](throwingdiscardingtaskgroup.md): A throwing discarding group that contains dynamically created child tasks.
+- [UnsafeCurrentTask](unsafecurrenttask.md): An unsafe reference to the current task.

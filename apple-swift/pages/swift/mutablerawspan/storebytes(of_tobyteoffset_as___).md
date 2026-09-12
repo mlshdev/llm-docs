@@ -1,0 +1,28 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/mutablerawspan/storebytes(of:tobyteoffset:as:_:)](https://developer.apple.com/documentation/swift/mutablerawspan/storebytes(of:tobyteoffset:as:_:))
+
+# storeBytes(of:toByteOffset:as:\_:)
+
+**Framework:** Swift  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+Stores the given value’s bytes to the specified offset into the span’s memory.
+
+## Declaration
+
+```swift
+mutating func storeBytes<T>(of value: T, toByteOffset offset: Int, as type: T.Type, _ byteOrder: ByteOrder) where T : BitwiseCopyable, T : ConvertibleToBytes, T : FixedWidthInteger
+```
+
+## Parameters
+
+- `value`: The value to store as raw bytes.
+- `offset`: The offset in bytes into the span’s memory at which to begin writing the bytes from the value.
+- `type`: The type of the instance to store.
+- `byteOrder`: The order in which the bytes will be encoded to the span.
+
+<a id="discussion"></a>
+
+## Discussion
+
+The range of bytes required to store a value of type `T` starting at byte offset `offset` must be completely within the span. `offset` is not required to be aligned for `T`.

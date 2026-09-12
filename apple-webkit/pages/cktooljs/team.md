@@ -1,0 +1,51 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/cktooljs/team](https://developer.apple.com/documentation/cktooljs/team)
+
+# Team
+
+**Interface language:** Data
+
+**Framework:** CKTool JS  
+**Kind:** Structure  
+**Availability:** CKTool JS 1.2.15+
+
+Details of a developer team.
+
+## Declaration
+
+```
+dictionary Team {
+	string teamId;
+	string teamName;
+	string? teamType;
+};
+```
+
+<a id="overview"></a>
+
+## Overview
+
+You can find your team details in the Membership tab of the Apple Developer portal at `https://developer.apple.com`.
+
+In JavaScript, this is a plain object with properties as described.
+
+In TypeScript, this type is imported in the following way:
+
+```javascript
+import type { Team } from "@apple/cktool.database";
+```
+
+## Topics
+
+### Instance Properties
+
+- [teamId](team/teamid.md): Unique identifier of the developer team.
+- [teamName](team/teamname.md): Name of the developer team.
+- [teamType](team/teamtype.md): Type of the developer team.
+
+## See Also
+
+### User and Team
+
+- [getSessionUser](promisesapi/getsessionuser.md): Returns details for the user in current session.
+- [getTeams](promisesapi/getteams.md): Fetches a list of teams the current user is in.
+- [TeamsResponse](teamsresponse.md): Response object for a list of teams.

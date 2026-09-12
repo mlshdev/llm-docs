@@ -1,0 +1,107 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/animationview](https://developer.apple.com/documentation/realitykit/animationview)
+
+# AnimationView
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+An animation that represents a variation of another animation.
+
+## Declaration
+
+```swift
+struct AnimationView
+```
+
+<a id="overview"></a>
+
+## Overview
+
+This structure creates a variation of an existing animation by overriding its configuration. The term *view* in the name signifies that the variation represents a new visual perspective of the existing animation.
+
+<a id="Create-a-clip-of-an-animation"></a>
+
+### Create a clip of an animation
+
+By supplying a new beginning time ([trimStart](animationview/trimstart.md)) and ending time ([trimEnd](animationview/trimend.md)), the following code creates a shorter clip of an existing animation. With [trimStart](animationview/trimstart.md) set to `1.0` and [trimEnd](animationview/trimend.md) at `2.0`, the clip spans a one-second duration.
+
+```swift
+// Create or access an existing animation.
+let anim1 = FromToByAnimation<Float>(name: "Anim1",
+    from: 100.0, to: 200.0, duration: 10.0)
+
+// Use a view to create a clip of the original animation.
+let view = AnimationView(source: anim1,
+    name: "clip",
+    bindTarget: nil,
+    blendLayer: 0,
+    repeatMode: .autoReverse,
+    fillMode: [],
+    trimStart: 1.0,
+    trimEnd: 2.0,
+    trimDuration: nil,
+    offset: 0,
+    delay: 0,
+    speed: 1.0)
+
+// Create an animation resource from the clip.
+clipResource = try? AnimationResource.generate(with: view)
+
+// Play the clip.
+myModelEntity.playAnimation(clipResource)
+```
+
+<a id="Define-a-view-in-relation-to-the-animation-source"></a>
+
+### Define a view in relation to the animation source
+
+The source animation’s timing properties define a *timeline* on which the [trimDuration](animationview/trimduration.md), [delay](animationview/delay.md), and [speed](animationview/speed.md) properties operate to derive the view. The [trimDuration](animationview/trimduration.md) property specifies which animation data the view displays. If [trimDuration](animationview/trimduration.md) exceeds the length of the source animation’s timeline, the animation plays according to the characteristics of [repeatMode](animationview/repeatmode.md). The [delay](animationview/delay.md) property defines a waiting period before the animation begins, and the [speed](animationview/speed.md) determines how fast the view plays in relation to the original pace.
+
+## Topics
+
+### Creating an animation view
+
+- [init(source:name:bindTarget:blendLayer:repeatMode:fillMode:trimStart:trimEnd:trimDuration:offset:delay:speed:)](animationview/init%28source_name_bindtarget_blendlayer_repeatmode_fillmode_trimstart_trimend_trimduration_offset_delay_speed_%29.md): Creates a variation of the given animation by overriding its properties.
+
+### Configuring the animation view
+
+- [source](animationview/source.md): The original animation that this structure modifies.
+- [name](animationview/name.md): A textual name for the animation.
+- [bindTarget](animationview/bindtarget.md): A textual name that identifies the animated property.
+- [blendLayer](animationview/blendlayer.md): The order in which the framework composites the animation.
+
+### Timing the animation
+
+- [speed](animationview/speed.md): A factor that increases or decreases the animation’s rate of playback.
+- [delay](animationview/delay.md): An amount of time that lapses before the animation plays.
+- [duration](animationview/duration.md): The total playback time of the animation.
+- [offset](animationview/offset.md): The time, in seconds, at which the animation begins within the duration.
+- [trimDuration](animationview/trimduration.md): An optional duration that overrides the calculated duration.
+- [trimStart](animationview/trimstart.md): The time, in seconds, at which the source animation plays.
+- [trimEnd](animationview/trimend.md): The time, in seconds, at which the source animation stops.
+
+### Repeating animation playback
+
+- [repeatMode](animationview/repeatmode.md): An option that determines how the animation repeats.
+- [fillMode](animationview/fillmode.md): An option that determines which data displays outside of the normal duration.
+
+## Relationships
+
+### Conforms To
+
+- [AnimationDefinition](animationdefinition.md)
+
+## See Also
+
+### Animation definitions
+
+- [SampledAnimation](sampledanimation.md): An animation that cycles through a series of frames at a constant interval.
+- [TweenMode](tweenmode.md): Options that determine whether an animation switches between frames gradually or abruptly.
+- [FromToByAnimation](fromtobyanimation.md): An animation that starts, stops, or increments by a specific value.
+- [AnimationTimingFunction](animationtimingfunction.md): The pacing of an animation transition.
+- [OrbitAnimation](orbitanimation.md): An animation that revolves an entity around its origin.
+- [AnimationDefinition](animationdefinition.md): The configuration, including target object, timeframe, and visual semantics, of an animation.
+- [AnimationFillMode](animationfillmode.md): Options that determine which animation frames display outside of the normal duration.
+- [AnimationGroup](animationgroup.md): A collection of animations that play simultaneously.
+- [AnimationHandoffType](animationhandofftype.md): The type of handoff the play animation method performs between a current animation and a new animation.

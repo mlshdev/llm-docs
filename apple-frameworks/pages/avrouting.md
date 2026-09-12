@@ -1,0 +1,125 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avrouting](https://developer.apple.com/documentation/avrouting)
+
+# AVRouting (Swift)
+
+**Framework:** AVRouting  
+**Kind:** Framework  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 26.0+
+
+Display custom destinations to stream media in the system route picker.
+
+<a id="overview"></a>
+
+## Overview
+
+Use the AVRouting framework to add third-party devices and protocols to [AVRoutePickerView](avkit/avroutepickerview.md). This enables a user to stream AV content through a third-party protocol using the same system menu as AirPlay.
+
+When the user taps the view, the system presents a popover that lists the available media receivers. If your app’s bundle includes an extension with the [Media Device Discovery Extension](bundleresources/entitlements/com.apple.developer.media-device-discovery-extension.md) entitlement, the system runs the extension and adds its associated third-party protocol to the picker, if the device resides nearby.
+
+![A screenshot of a popover with a list of items. The top item is an iPad icon with a check mark to the right. Below that is the title Speakers and TVs with a list of six subitems. The first subitem says Third-party device, followed by AirPlay and Third-party protocol. The remaining subitems are Sunset Beach with an Apple TV icon on the left, Link with TV code with a globe icon on the left, and Show more. ](https://developer.apple.com/images/com.apple.avrouting/media-4084674@2x.png)
+
+<a id="Add-a-custom-route-to-the-system-device-picker-view"></a>
+
+### Add a custom route to the system device-picker view
+
+To indicate your app’s intent to search for a nearby third-party media receiver, set a custom routing controller ([AVCustomRoutingController](avrouting/avcustomroutingcontroller.md)) on the view.
+
+```swift
+struct DevicePickerView: UIViewRepresentable {
+    func makeUIView(context: Context) -> UIView {
+        let routePickerView = AVRoutePickerView()
+        routePickerView.delegate = context.coordinator
+        routePickerView.customRoutingController = RouteManager.shared.customRoutingController
+```
+
+Next, let the view know which particular device your app intends to add. Each device requires a unique device discovery extension, which distinguishes itself through a uniform type identifier in its `Info.plist` file. Add a custom routing action ([AVCustomRoutingActionItem](avrouting/avcustomroutingactionitem.md)) with [type](avrouting/avcustomroutingactionitem/type.md) set to the identifier and pass the item to the controller’s [customActionItems](avrouting/avcustomroutingcontroller/customactionitems.md).
+
+```swift
+func routePickerViewWillBeginPresentingRoutes(_ routePickerView: AVRoutePickerView) {
+    if let type = UTType("com.example.apple-DataAccessDemo.menu") {
+        let customRow1 = AVCustomRoutingActionItem()
+        customRow1.type = type
+        RouteManager.shared.customRoutingController?.customActionItems = [customRow1]
+    }
+}
+```
+
+If the extension finds the device at runtime, it passes the device to the system for display in the picker. See [Discovering a third-party media-streaming device](devicediscoveryextension/discovering-a-third-party-media-streaming-device.md) for a complete sample code project that routes media through a custom protocol.
+
+## Topics
+
+### Media routing
+
+- [AVCustomRoutingController](avrouting/avcustomroutingcontroller.md): An object that manages the connection from a device to a destination.
+- [AVCustomRoutingControllerDelegate](avrouting/avcustomroutingcontrollerdelegate.md): A protocol for delegates of a custom routing controller.
+- [AVCustomRoutingEvent](avrouting/avcustomroutingevent.md): An object that represents an event that occurs on a route.
+- [AVCustomRoutingActionItem](avrouting/avcustomroutingactionitem.md): An object that represents a custom action item to display in a device route picker.
+
+### Playback arbitration
+
+- [AVRoutingPlaybackArbiter](avrouting/avroutingplaybackarbiter.md): An object that manages playback routing preferences.
+- [AVRoutingPlaybackParticipant](avrouting/avroutingplaybackparticipant.md): A protocol for objects that participate in playback routing arbitration.
+
+# AVRouting (Objective-C)
+
+**Framework:** AVRouting  
+**Kind:** Framework  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 26.0+
+
+Display custom destinations to stream media in the system route picker.
+
+<a id="overview"></a>
+
+## Overview
+
+Use the AVRouting framework to add third-party devices and protocols to [AVRoutePickerView](avkit/avroutepickerview.md). This enables a user to stream AV content through a third-party protocol using the same system menu as AirPlay.
+
+When the user taps the view, the system presents a popover that lists the available media receivers. If your app’s bundle includes an extension with the [Media Device Discovery Extension](bundleresources/entitlements/com.apple.developer.media-device-discovery-extension.md) entitlement, the system runs the extension and adds its associated third-party protocol to the picker, if the device resides nearby.
+
+![A screenshot of a popover with a list of items. The top item is an iPad icon with a check mark to the right. Below that is the title Speakers and TVs with a list of six subitems. The first subitem says Third-party device, followed by AirPlay and Third-party protocol. The remaining subitems are Sunset Beach with an Apple TV icon on the left, Link with TV code with a globe icon on the left, and Show more. ](https://developer.apple.com/images/com.apple.avrouting/media-4084674@2x.png)
+
+<a id="Add-a-custom-route-to-the-system-device-picker-view"></a>
+
+### Add a custom route to the system device-picker view
+
+To indicate your app’s intent to search for a nearby third-party media receiver, set a custom routing controller ([AVCustomRoutingController](avrouting/avcustomroutingcontroller.md)) on the view.
+
+```swift
+struct DevicePickerView: UIViewRepresentable {
+    func makeUIView(context: Context) -> UIView {
+        let routePickerView = AVRoutePickerView()
+        routePickerView.delegate = context.coordinator
+        routePickerView.customRoutingController = RouteManager.shared.customRoutingController
+```
+
+Next, let the view know which particular device your app intends to add. Each device requires a unique device discovery extension, which distinguishes itself through a uniform type identifier in its `Info.plist` file. Add a custom routing action ([AVCustomRoutingActionItem](avrouting/avcustomroutingactionitem.md)) with [type](avrouting/avcustomroutingactionitem/type.md) set to the identifier and pass the item to the controller’s [customActionItems](avrouting/avcustomroutingcontroller/customactionitems.md).
+
+```swift
+func routePickerViewWillBeginPresentingRoutes(_ routePickerView: AVRoutePickerView) {
+    if let type = UTType("com.example.apple-DataAccessDemo.menu") {
+        let customRow1 = AVCustomRoutingActionItem()
+        customRow1.type = type
+        RouteManager.shared.customRoutingController?.customActionItems = [customRow1]
+    }
+}
+```
+
+If the extension finds the device at runtime, it passes the device to the system for display in the picker. See [Discovering a third-party media-streaming device](devicediscoveryextension/discovering-a-third-party-media-streaming-device.md) for a complete sample code project that routes media through a custom protocol.
+
+## Topics
+
+### Media routing
+
+- [AVCustomRoutingController](avrouting/avcustomroutingcontroller.md): An object that manages the connection from a device to a destination.
+- [AVCustomRoutingControllerDelegate](avrouting/avcustomroutingcontrollerdelegate.md): A protocol for delegates of a custom routing controller.
+- [AVCustomRoutingEvent](avrouting/avcustomroutingevent.md): An object that represents an event that occurs on a route.
+- [AVCustomRoutingActionItem](avrouting/avcustomroutingactionitem.md): An object that represents a custom action item to display in a device route picker.
+
+### Playback arbitration
+
+- [AVRoutingPlaybackArbiter](avrouting/avroutingplaybackarbiter.md): An object that manages playback routing preferences.
+- [AVRoutingPlaybackParticipant](avrouting/avroutingplaybackparticipant.md): A protocol for objects that participate in playback routing arbitration.
+
+### Macros
+
+- [AVROUTING_EXTERN](avrouting/avrouting_extern.md)

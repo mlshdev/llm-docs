@@ -1,0 +1,50 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtlcomputecommandencoder/useresources(_:usage:)](https://developer.apple.com/documentation/metal/mtlcomputecommandencoder/useresources(_:usage:))
+
+# useResources(\_:usage:)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 11.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS
+
+Ensures kernel calls that the system encodes in subsequent commands have access to multiple resources.
+
+## Declaration
+
+```swift
+func useResources(_ resources: [any MTLResource], usage: MTLResourceUsage)
+```
+
+## Parameters
+
+- `resources`: A list of [MTLResource](../mtlresource.md) instances used in one or more argument buffers.
+- `usage`: All the applicable access types for use of these resources, including [read](../mtlresourceusage/read.md) and [write](../mtlresourceusage/write.md). Your resource usage type applies to all resources passed to this method call.
+
+  For applicable resources, you may be able to prevent the GPU from unnecessarily decompressing color attachments on some devices by setting `usage` to [read](../mtlresourceusage/read.md).
+
+## Mentioned In
+
+- [Simplifying GPU resource management with residency sets](../simplifying-gpu-resource-management-with-residency-sets.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+You can make many resources *resident* (available in GPU memory) for the remaining duration of the compute pass by calling this method. Call the method before encoding function calls that may access these `resources` through an argument buffer. The method ensures the resource is in a format that’s compatible with the kernels that depend on it.
+
+> **Note**
+
+>  You don’t need to call this method if you bind a resource for compute kernels to access.
+
+The method also informs Metal when to apply hazard tracking for a resource you create with [MTLHazardTrackingMode.tracked](../mtlhazardtrackingmode/tracked.md). For a resource you create with [MTLHazardTrackingMode.untracked](../mtlhazardtrackingmode/untracked.md), you need to apply an [MTLFence](../mtlfence.md) or an [MTLEvent](../mtlevent.md) to account for potential reading and writing hazards.
+
+You can reconfigure an individual resource’s `usage` options for subsequent draw calls with the [useResource(\_:usage:)](useresource%28__usage_%29.md) method.
+
+Apps typically call this method for a resource in an argument buffer as a part of their *bindless* implementation. For more information about argument buffers and bindless implementations, see [Improving CPU performance by using argument buffers](../improving-cpu-performance-by-using-argument-buffers.md) and [Go bindless with Metal 3](https://developer.apple.com/videos/play/wwdc2022/10101/), respectively.
+
+## See Also
+
+### Making indirect resources resident
+
+- [useResource(\_:usage:)](useresource%28__usage_%29.md): Ensures kernel calls that the system encodes in subsequent commands have access to a resource.
+- [useHeap(\_:)](useheap%28__%29.md): Ensures the shaders in the render pass’s subsequent draw commands have access to all of the resources you allocate from a heap.
+- [useHeaps(\_:)](useheaps%28__%29.md): Ensures the shaders in the render pass’s subsequent draw commands have access to all of the resources you allocate from multiple heaps.

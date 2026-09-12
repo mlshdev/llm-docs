@@ -1,0 +1,95 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corefoundation/cfxmlcreatestringbyunescapingentities(_:_:_:)](https://developer.apple.com/documentation/corefoundation/cfxmlcreatestringbyunescapingentities(_:_:_:))
+
+# CFXMLCreateStringByUnescapingEntities(\_:\_:\_:) (Swift)
+
+**Framework:** Core Foundation  
+**Kind:** Function  
+**Availability:** macOS
+
+Given a CFString object containing XML source with escaped entities, returns a string with specified XML entities unescaped.
+
+## Declaration
+
+```swift
+func CFXMLCreateStringByUnescapingEntities(_ allocator: CFAllocator!, _ string: CFString!, _ entitiesDictionary: CFDictionary!) -> CFString!
+```
+
+## Parameters
+
+- `allocator`: The allocator to use to allocate memory for the new object. Pass `NULL` or kCFAllocatorDefault to use the current default allocator.
+- `string`: Any CFString object that may contain XML source. This function translates any entity that is mapped to an substring in `entitiesDictionary` to the specified substring.
+- `entitiesDictionary`: Specifies the entities to be replaced. Dictionary keys should be the entity names (for example, “para” for ¶), and the values should be CFString objects containing the expansion. Pass `NULL` to indicate no entities other than the standard five.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A CFString object derived from `string` with entities identified in `entitiesDictionary` unescaped to their corresponding substrings. Ownership follows the [The Create Rule](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html#//apple_ref/doc/uid/20001148-103029).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The standard five predefined entities are automatically supported.
+
+As an example of using this function, say you apply this function to string “Refer to ¶ 5 of the contract” with a key of “para” mapped to “¶” in `entitiesDictionary`. The resulting string is “Refer to ¶ 5 of the contract”.
+
+> **Note**
+
+>  Currently, only the standard predefined entities are supported; passing `NULL` for `entitiesDictionary` is sufficient.
+
+## See Also
+
+### CFXMLTree Miscellaneous Functions
+
+- [CFXMLCreateStringByEscapingEntities(\_:\_:\_:)](cfxmlcreatestringbyescapingentities%28______%29.md): Given a CFString object containing XML source with unescaped entities, returns a string with specified XML entities escaped.
+
+# CFXMLCreateStringByUnescapingEntities (Objective-C)
+
+**Framework:** Core Foundation  
+**Kind:** Function  
+**Availability:** macOS
+
+Given a CFString object containing XML source with escaped entities, returns a string with specified XML entities unescaped.
+
+## Declaration
+
+```objectivec
+extern CFStringRefCFXMLCreateStringByUnescapingEntities(CFAllocatorRef allocator, CFStringRef string, CFDictionaryRef entitiesDictionary);
+```
+
+## Parameters
+
+- `allocator`: The allocator to use to allocate memory for the new object. Pass `NULL` or kCFAllocatorDefault to use the current default allocator.
+- `string`: Any CFString object that may contain XML source. This function translates any entity that is mapped to an substring in `entitiesDictionary` to the specified substring.
+- `entitiesDictionary`: Specifies the entities to be replaced. Dictionary keys should be the entity names (for example, “para” for ¶), and the values should be CFString objects containing the expansion. Pass `NULL` to indicate no entities other than the standard five.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A CFString object derived from `string` with entities identified in `entitiesDictionary` unescaped to their corresponding substrings. Ownership follows the [The Create Rule](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html#//apple_ref/doc/uid/20001148-103029).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The standard five predefined entities are automatically supported.
+
+As an example of using this function, say you apply this function to string “Refer to ¶ 5 of the contract” with a key of “para” mapped to “¶” in `entitiesDictionary`. The resulting string is “Refer to ¶ 5 of the contract”.
+
+> **Note**
+
+>  Currently, only the standard predefined entities are supported; passing `NULL` for `entitiesDictionary` is sufficient.
+
+## See Also
+
+### CFXMLTree Miscellaneous Functions
+
+- [CFXMLCreateStringByEscapingEntities](cfxmlcreatestringbyescapingentities%28______%29.md): Given a CFString object containing XML source with unescaped entities, returns a string with specified XML entities escaped.
+- [CFXMLTreeCreateFromData](cfxmltreecreatefromdata.md): Deprecated. Parses the given XML data and returns the resulting CFXMLTree object.
+- [CFXMLTreeCreateFromDataWithError](cfxmltreecreatefromdatawitherror.md): Deprecated. Parses the given XML data and returns the resulting CFXMLTree object and any error information.
+- [CFXMLTreeCreateWithDataFromURL](cfxmltreecreatewithdatafromurl.md): Deprecated. Creates a new CFXMLTree object by loading the data to be parsed directly from a data source.
+- [CFXMLTreeCreateWithNode](cfxmltreecreatewithnode.md): Deprecated. Creates a childless, parentless CFXMLTree object node for a CFXMLNode object.
+- [CFXMLTreeCreateXMLData](cfxmltreecreatexmldata.md): Deprecated. Generates an XML document from a CFXMLTree object which is ready to be written to permanent storage.
+- [CFXMLTreeGetNode](cfxmltreegetnode.md): Deprecated. Returns the node of a CFXMLTree object.

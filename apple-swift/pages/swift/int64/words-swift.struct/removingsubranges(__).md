@@ -1,0 +1,45 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/int64/words-swift.struct/removingsubranges(_:)](https://developer.apple.com/documentation/swift/int64/words-swift.struct/removingsubranges(_:))
+
+# removingSubranges(\_:)
+
+**Framework:** Swift  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
+
+Returns a collection of the elements in this collection that are not represented by the given range set.
+
+## Declaration
+
+```swift
+func removingSubranges(_ subranges: RangeSet<Self.Index>) -> DiscontiguousSlice<Self>
+```
+
+## Parameters
+
+- `subranges`: A range set representing the indices of the elements to remove.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A collection of the elements that are not in `subranges`.
+
+<a id="discussion"></a>
+
+## Discussion
+
+For example, this code sample finds the indices of all the vowel characters in the string, and then retrieves a collection that omits those characters.
+
+```swift
+let str = "The rain in Spain stays mainly in the plain."
+let vowels: Set<Character> = ["a", "e", "i", "o", "u"]
+let vowelIndices = str.indices(where: { vowels.contains($0) })
+
+let disemvoweled = str.removingSubranges(vowelIndices)
+print(String(disemvoweled))
+// Prints "Th rn n Spn stys mnly n th pln."
+```
+
+> **Complexity**
+
+> O(*n*), where *n* is the length of the collection.

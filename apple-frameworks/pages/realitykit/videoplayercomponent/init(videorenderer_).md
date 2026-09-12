@@ -1,0 +1,101 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/videoplayercomponent/init(videorenderer:)](https://developer.apple.com/documentation/realitykit/videoplayercomponent/init(videorenderer:))
+
+# init(videoRenderer:)
+
+**Framework:** RealityKit  
+**Kind:** Initializer  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
+
+Creates a video player component from a sample buffer video renderer object.
+
+## Declaration
+
+```swift
+init(videoRenderer: AVSampleBufferVideoRenderer)
+```
+
+## Parameters
+
+- `videoRenderer`: The sample buffer video renderer with the visual contents the component presents.
+
+<a id="discussion"></a>
+
+## Discussion
+
+To create a `VideoPlayerComponent`, first create an [AVSampleBufferVideoRenderer](../../avfoundation/avsamplebuffervideorenderer.md) instance with no parameters and then pass that to the `VideoPlayerComponent` initializer. After creating the `VideoPlayerComponent`, create an [AVAssetReader](../../avfoundation/avassetreader.md) with the [AVURLAsset](../../avfoundation/avurlasset.md) and load the media (video), which you need to track as the [AVAssetTrack](../../avfoundation/avassettrack.md). Feed this `AVAssetTrack` to the [AVAssetReaderTrackOutput](../../avfoundation/avassetreadertrackoutput.md)
+and add this output tracker to the `AVAssetReader`.
+
+Wait for setup to finish and start reading. Read the sample buffers from the reader and enqueue it into the `AVSampleBufferVideoRenderer` object. `AVSampleBufferVideoRenderer` uses a push model, so feed the video sample buffers until the queue is full, and then resume feeding it when it’s ready for more. You can use `isReadyForMoreMediaData` on the `AVSampleBufferVideoRenderer` object in a while-loop to check whether you need to enqueue more sample buffers. You can’t use the same `AVSampleBufferVideoRenderer` object with more than one `VideoPlayerComponent`.
+
+You need to synchronize the audio, captions, and playback rate separately in your app.
+
+The following code example demonstrates how to synchronize video with audio:
+
+```swift
+// Create an `AVSampleBufferVideoRenderer` instance to control playback of a movie.
+let videoRenderer = AVSampleBufferVideoRenderer()
+
+// Create an `AVSampleBufferAudioRenderer` instance to control audio of the playback.
+let audioRenderer = AVSampleBufferAudioRenderer()
+
+// Create a `AVSampleBufferRenderSynchronizer` instance to synchronize video and audio.
+let synchronizer = AVSampleBufferRenderSynchronizer()
+
+// Add both videoRenderer and audioRenderer to the synchronizer.
+synchronizer.addRenderer(videoRenderer)
+synchronizer.addRenderer(audioRenderer)
+
+// Create an entity for display.
+let videoEntity = Entity()
+
+// Create a `VideoPlayerComponent` object that supplies the `AVSampleBufferVideoRenderer` object.
+let videoPlayerComponent = VideoPlayerComponent(videoRenderer: videoRenderer)
+videoEntity.components[VideoPlayerComponent.self] = videoPlayerComponent
+
+// Create a URL that points to the movie file.
+if let url = Bundle.main.url(forResource: "MyMovie", withExtension: "mp4") {
+
+    let sourceAsset = AVURLAsset(url: url)
+    let sourceAssetReader = AVAssetReader(asset: sourceAsset)
+    let sourceAssetVideoTrack = sourceAsset.loadTracks(withMediaType: .video).first
+    let sourceAssetAudioTrack = sourceAsset.loadTracks(withMediaType: .audio).first
+    let sourceAssetReaderVideoTrackOutput = AVAssetReaderTrackOutput(track: sourceAssetVideoTrack!, outputSettings: nil)
+    let sourceAssetReaderAudioTrackOutput = AVAssetReaderTrackOutput(track: sourceAssetAudioTrack!, outputSettings: nil)
+    sourceAssetReader.add(sourceAssetReaderVideoTrackOutput!)
+    sourceAssetReader.add(sourceAssetReaderAudioTrackOutput!)
+
+    sourceAssetReader.startReading()
+
+    videoRenderer.requestMediaDataWhenReady(on: DispatchQueue.global()) {
+        while videoRenderer.isReadyForMoreMediaData {
+            if let sampleBuffer = sourceAssetReaderVideoTrackOutput!.copyNextSampleBuffer() {
+                videoRenderer.enqueue(sampleBuffer)
+            } else {
+                videoRenderer.stopRequestingMediaData()
+                return
+            }
+        }
+    }
+
+    audioRenderer.requestMediaDataWhenReady(on: DispatchQueue.global()) {
+        while audioRenderer.isReadyForMoreMediaData {
+            if let sampleBuffer = sourceAssetReaderAudioTrackOutput!.copyNextSampleBuffer() {
+                audioRenderer.enqueue(sampleBuffer)
+            } else {
+                audioRenderer.stopRequestingMediaData()
+                return
+            }
+        }
+    }
+
+    // Start the playback immediately.
+    synchronizer.setRate(1, time: .zero)
+
+}
+```
+
+## See Also
+
+### Creating a video player component
+
+- [init(avPlayer:)](init%28avplayer_%29.md): Creates a video player component from an AV player object.

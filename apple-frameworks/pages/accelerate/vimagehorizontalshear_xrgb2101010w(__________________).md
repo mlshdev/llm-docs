@@ -1,0 +1,113 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimagehorizontalshear_xrgb2101010w(_:_:_:_:_:_:_:_:_:)](https://developer.apple.com/documentation/accelerate/vimagehorizontalshear_xrgb2101010w(_:_:_:_:_:_:_:_:_:))
+
+# vImageHorizontalShear_XRGB2101010W(\_:\_:\_:\_:\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 10.12+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.0+
+
+Performs a single-precision horizontal shear on a region of interest within a 2-bit alpha, 10-bit RGB interleaved image.
+
+## Declaration
+
+```swift
+func vImageHorizontalShear_XRGB2101010W(_ src: UnsafePointer<vImage_Buffer>, _ dest: UnsafePointer<vImage_Buffer>, _ srcOffsetToROI_X: vImagePixelCount, _ srcOffsetToROI_Y: vImagePixelCount, _ xTranslate: Float, _ shearSlope: Float, _ filter: ResamplingFilter!, _ backColor: Pixel_32U, _ flags: vImage_Flags) -> vImage_Error
+```
+
+## Parameters
+
+- `src`: A pointer to a vImage buffer structure that contains the source image.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the `height`, `width`, and `rowBytes` fields of this structure and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+
+  This parameter also specifies the size of the region of interest within the source image. The region of interest has the same height and width as the destination image buffer.
+- `srcOffsetToROI_X`: The horizontal offset, in pixels, from the upper-left pixel of the region of interest within the source image.
+- `srcOffsetToROI_Y`: The vertical offset, in pixels, from the upper-left pixel of the region of interest within the source image.
+- `xTranslate`: A translation value for the horizontal direction.
+- `shearSlope`: The slope of the front edge of the sheared image, measured in a clockwise direction.
+- `filter`: The resampling filter that the function uses. For more information, see [Reducing artifacts with custom resampling filters](reducing-artifacts-with-custom-resampling-filters.md).
+- `backColor`: A background color. If you set the `kvImageBackgroundColorFill` flag, pass a pixel value.
+- `flags`: The options to use when applying the transform.
+
+  To specify how vImage handles pixel locations beyond the edge of the source image, set one of the following flags: [kvImageBackgroundColorFill](kvimagebackgroundcolorfill.md) or [kvImageEdgeExtend](kvimageedgeextend.md).
+
+  If you want vImage to use a higher quality but a slower resampling filter, set the [kvImageHighQualityResampling](kvimagehighqualityresampling.md) flag.
+
+  If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md).
+
+  This function ignores the [kvImageLeaveAlphaUnchanged](kvimageleavealphaunchanged.md) flag.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes that [Data Types and Constants](data-types-and-constants.md) describes.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This function uses a resampling filter that you specify to shear, resize, and translate an image in one dimension. Use the resampling filter’s scale property to resize the image and the translate parameter to adjust the position of the destination image. The function transforms as much of the source image as it needs to fill the destination buffer. Therefore, it can transform pixels outside the region of interest.
+
+This function doesn’t work in place — that is, the source and destination buffers need to point to different memory.
+
+## See Also
+
+### Related Documentation
+
+- [Applying geometric transforms to images](applying-geometric-transforms-to-images.md): Reflect, shear, rotate, and scale image buffers using vImage.
+
+# vImageHorizontalShear_XRGB2101010W (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 10.12+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.0+
+
+Performs a single-precision horizontal shear on a region of interest within a 2-bit alpha, 10-bit RGB interleaved image.
+
+## Declaration
+
+```objectivec
+vImage_Error vImageHorizontalShear_XRGB2101010W(const vImage_Buffer *src, const vImage_Buffer *dest, vImagePixelCount srcOffsetToROI_X, vImagePixelCount srcOffsetToROI_Y, float xTranslate, float shearSlope, ResamplingFilter filter, const Pixel_32U backColor, vImage_Flags flags);
+```
+
+## Parameters
+
+- `src`: A pointer to a vImage buffer structure that contains the source image.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the `height`, `width`, and `rowBytes` fields of this structure and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+
+  This parameter also specifies the size of the region of interest within the source image. The region of interest has the same height and width as the destination image buffer.
+- `srcOffsetToROI_X`: The horizontal offset, in pixels, from the upper-left pixel of the region of interest within the source image.
+- `srcOffsetToROI_Y`: The vertical offset, in pixels, from the upper-left pixel of the region of interest within the source image.
+- `xTranslate`: A translation value for the horizontal direction.
+- `shearSlope`: The slope of the front edge of the sheared image, measured in a clockwise direction.
+- `filter`: The resampling filter that the function uses. For more information, see [Reducing artifacts with custom resampling filters](reducing-artifacts-with-custom-resampling-filters.md).
+- `backColor`: A background color. If you set the `kvImageBackgroundColorFill` flag, pass a pixel value.
+- `flags`: The options to use when applying the transform.
+
+  To specify how vImage handles pixel locations beyond the edge of the source image, set one of the following flags: [kvImageBackgroundColorFill](kvimagebackgroundcolorfill.md) or [kvImageEdgeExtend](kvimageedgeextend.md).
+
+  If you want vImage to use a higher quality but a slower resampling filter, set the [kvImageHighQualityResampling](kvimagehighqualityresampling.md) flag.
+
+  If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md).
+
+  This function ignores the [kvImageLeaveAlphaUnchanged](kvimageleavealphaunchanged.md) flag.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes that [Data Types and Constants](data-types-and-constants.md) describes.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This function uses a resampling filter that you specify to shear, resize, and translate an image in one dimension. Use the resampling filter’s scale property to resize the image and the translate parameter to adjust the position of the destination image. The function transforms as much of the source image as it needs to fill the destination buffer. Therefore, it can transform pixels outside the region of interest.
+
+This function doesn’t work in place — that is, the source and destination buffers need to point to different memory.
+
+## See Also
+
+### Related Documentation
+
+- [Applying geometric transforms to images](applying-geometric-transforms-to-images.md): Reflect, shear, rotate, and scale image buffers using vImage.

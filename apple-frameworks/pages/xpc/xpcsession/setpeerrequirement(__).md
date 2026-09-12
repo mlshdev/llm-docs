@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/xpc/xpcsession/setpeerrequirement(_:)](https://developer.apple.com/documentation/xpc/xpcsession/setpeerrequirement(_:))
+
+# setPeerRequirement(\_:)
+
+**Framework:** XPC  
+**Kind:** Instance Method  
+**Availability:** Mac Catalyst 26.0+ · macOS 26.0+
+
+Requires that the session peer has the specified requirement
+
+## Declaration
+
+```swift
+func setPeerRequirement(_ requirement: XPCPeerRequirement)
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+- requirement: The requirement the peer must have
+
+> **Note**
+
+> The session must be inactive to set a peer requirement. It is a programming error to call multiple of the `setPeerRequirement` method on the same session.
+
+> **Note**
+
+> All messages received on this session will be checked to ensure that they come from a peer who satisfies the requirement. When a reply is expected on the session and the peer does not satisfy the requirement, the session will be canceled and user’s cancelation handler will be invoked with `XPCRichError` describing the code signing error.

@@ -1,0 +1,47 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/doasyncunmap](https://developer.apple.com/documentation/blockstoragedevicedriverkit/iouserblockstoragedevice/doasyncunmap)
+
+# DoAsyncUnmap
+
+**Interface language:** Objective-C
+
+**Framework:** BlockStorageDeviceDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Sends an asynchronous request to the dext to reclaim storage by unmapping.
+
+## Declaration
+
+```objectivec
+virtual kern_return_t DoAsyncUnmap(uint32_t requestID, IOMemoryDescriptor *buffer, uint32_t numOfRanges);
+```
+
+## Parameters
+
+- `requestID`: An opaque identifier. After the dext completes the request, it calls [Complete](complete.md) and sends this value as a parameter.
+- `buffer`: A memory buffer containing the block ranges to unmap.
+- `numOfRanges`: The number of ranges in `buffer`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A value that indicates the unmap result. [kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) indicates success. For error definitions, see [IOKit Constants](../../iokit/iokit_constants.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When the unmap operation completes, the dext calls your [Complete](complete.md) method with the results of the operation.
+
+## See Also
+
+### Accessing the Device
+
+- [BlockRange](../blockrange.md): A structure that represents a range of blocks.
+- [DoAsyncSynchronize](doasyncsynchronize.md): Forces the hardware buffer to flush data blocks to the media.
+- [DoAsyncEjectMedia](doasyncejectmedia.md): Ejects the media.
+- [Complete](complete.md): Indicates that the dext completed an asynchronous call.
+- [DoAsyncReadWrite](doasyncreadwrite.md): Starts an asynchronous read or write operation.
+- [IOUserStorageOptions](../iouserstorageoptions.md): Options that affect the performance of read-write operations.
+- [CompleteIO](completeio.md): Indicates that the dext completed an asynchronous read-write call.

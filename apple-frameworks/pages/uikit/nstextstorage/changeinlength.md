@@ -1,0 +1,59 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/nstextstorage/changeinlength](https://developer.apple.com/documentation/uikit/nstextstorage/changeinlength)
+
+# changeInLength (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · tvOS 9.0+ · visionOS 1.0+
+
+The difference between the current length of the edited range and its length before editing.
+
+## Declaration
+
+```swift
+var changeInLength: Int { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This property reflects difference between the current length of the edited range and its length before editing began—that is, before the first call to the [beginEditing()](../../foundation/nsmutableattributedstring/beginediting%28%29.md) method or a single call to the[edited(\_:range:changeInLength:)](edited%28__range_changeinlength_%29.md) method. This difference is accumulated with each call to the [edited(\_:range:changeInLength:)](edited%28__range_changeinlength_%29.md) method, until the changes are finally processed.
+
+The text storage object’s delegate and layout managers can use this information to determine the nature of edits in their respective notification methods.
+
+## See Also
+
+### Determining the nature of changes
+
+- [editedMask](editedmask.md): A mask that describes the kinds of edits pending for the text storage object.
+- [editedRange](editedrange.md): The range of text that contains changes.
+
+# changeInLength (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · tvOS 9.0+ · visionOS 1.0+
+
+The difference between the current length of the edited range and its length before editing.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) NSInteger changeInLength;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This property reflects difference between the current length of the edited range and its length before editing began—that is, before the first call to the [beginEditing](../../foundation/nsmutableattributedstring/beginediting%28%29.md) method or a single call to the[edited:range:changeInLength:](edited%28__range_changeinlength_%29.md) method. This difference is accumulated with each call to the [edited:range:changeInLength:](edited%28__range_changeinlength_%29.md) method, until the changes are finally processed.
+
+The text storage object’s delegate and layout managers can use this information to determine the nature of edits in their respective notification methods.
+
+## See Also
+
+### Determining the nature of changes
+
+- [editedMask](editedmask.md): A mask that describes the kinds of edits pending for the text storage object.
+- [editedRange](editedrange.md): The range of text that contains changes.

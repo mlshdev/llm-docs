@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iirchannel](https://developer.apple.com/documentation/kernel/iirchannel)
+
+# IIRChannel
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Type Alias  
+**Availability:** macOS 10.9+
+
+Constants that specify which channels a stereo biquadratic filter operates.
+
+## Declaration
+
+```objectivec
+typedef int IIRChannel;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Pass an [IIRChannel](iirchannel.md) constant to [vDSP_biquad2_CreateSetup](1532224-vdsp_biquad2_createsetup.md) to specify which channels the function applies filtering to.
+
+- **`vDSP_IIRStereo`**: The filter operates over both channels.
+- **`vDSP_IIRMonoLeft`**: The filter operates on left-channel mono data and applies pass-through coefficients to the right channel.
+- **`vDSP_IIRMonoRight`**: The filter operates on right-channel mono data and applies pass-through coefficients to the left channel.
+
+## See Also
+
+### Biquadratic Infinite Impulse Response (IIR) Filters
+
+- [vDSP_biquad2](1532195-vdsp_biquad2.md): Applies a single-precision stereo biquadratic IIR filter.
+- [vDSP_biquad2_CreateSetup](1532224-vdsp_biquad2_createsetup.md): Builds a data structure that contains precalculated single-precision data for stereo biquadratic filter functions to use.
+- [vDSP_biquad2_CopyState](1532220-vdsp_biquad2_copystate.md): Copies the filter state from one biquadratic filter object to another.
+- [vDSP_biquad2_ResetState](1532215-vdsp_biquad2_resetstate.md): Resets the filter state of a single-precision stereo biquadratic filter object.
+- [vDSP_biquad2_DestroySetup](1532201-vdsp_biquad2_destroysetup.md): Destroys a single-precision stereo biquadratic IIR setup object.

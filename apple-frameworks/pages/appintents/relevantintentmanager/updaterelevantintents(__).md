@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/relevantintentmanager/updaterelevantintents(_:)](https://developer.apple.com/documentation/appintents/relevantintentmanager/updaterelevantintents(_:))
+
+# updateRelevantIntents(\_:)
+
+**Framework:** App Intents  
+**Kind:** Instance Method  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS · watchOS 10.0+
+
+Sets the relevant app intents for the system to suggest.
+
+## Declaration
+
+```swift
+final func updateRelevantIntents(_ relevantIntents: [RelevantIntent]) async throws
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+- Parameter
+
+  - relevantIntents: The array of relevant intents that currently apply to your app. Specify an empty array if your app doesn’t have any intents to suggest.
+
+Use this method to specify the complete set of relevant app intents for the system to consider. The system uses the relevance information in the [RelevantIntent](../relevantintent.md) structure to determine when to suggest the action. This method runs asynchronously and throws an error if it’s unable to update the current set of intents.

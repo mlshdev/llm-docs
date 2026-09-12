@@ -1,0 +1,44 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiodriverkit/iouseraudiostereopancontrol/setpanningchannels](https://developer.apple.com/documentation/audiodriverkit/iouseraudiostereopancontrol/setpanningchannels)
+
+# SetPanningChannels
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Sets the current stereo panning channels.
+
+## Declaration
+
+```objectivec
+kern_return_t SetPanningChannels(IOUserAudioObjectPropertyElement in_left_channel, IOUserAudioObjectPropertyElement in_right_channel);
+```
+
+## Parameters
+
+- `in_left_channel`: The [IOUserAudioObjectPropertyElement](../audiodriverkit/iouseraudioobjectpropertyelement.md) for the left channel.
+- `in_right_channel`: The [IOUserAudioObjectPropertyElement](../audiodriverkit/iouseraudioobjectpropertyelement.md) for the right channel.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kIOReturnSuccess](../../driverkit/kioreturnsuccess.md) on success, or another value if an error occurs. For a list of error codes, see [Error Codes](../../driverkit/error-codes.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If successful, changing the panning channels sends a notification to the host to update the object state.
+
+This method synchronizes by using the work queue created by the object.
+
+## See Also
+
+### Accessing the Value
+
+- [SetControlValue](setcontrolvalue.md): Sets the stereo pan value of the control.
+- [GetControlValue](getcontrolvalue.md): Gets the floating-point stereo pan value of the control.
+- [GetPanningChannels](getpanningchannels.md): Gets the current stereo panning channels.

@@ -15,7 +15,11 @@ import {
   dropPresentationMarkup,
 } from "./hugo-docs.ts";
 import { DocumentCollector } from "../quarantine.ts";
-import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
+import type {
+  GithubLockedSource,
+  GithubSourceProject,
+  ProjectBuild,
+} from "../types.ts";
 
 const docsRoot = "docs/sources";
 const sharedRoot = `${docsRoot}/shared`;
@@ -42,8 +46,8 @@ interface RenderContext {
 }
 
 export async function buildGrafana(
-  project: SourceProject,
-  lock: LockedSource,
+  project: GithubSourceProject,
+  lock: GithubLockedSource,
 ): Promise<ProjectBuild> {
   const version = docsVersion(lock.tag);
   return withRepositoryArchive(

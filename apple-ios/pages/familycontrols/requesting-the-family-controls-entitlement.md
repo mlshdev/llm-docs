@@ -1,0 +1,54 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/familycontrols/requesting-the-family-controls-entitlement](https://developer.apple.com/documentation/familycontrols/requesting-the-family-controls-entitlement)
+
+# Requesting the Family Controls entitlement
+
+**Framework:** Family Controls  
+**Kind:** Article
+
+Register your app and its Screen Time API app extensions to use Family Controls.
+
+<a id="Overview"></a>
+
+## Overview
+
+Before you distribute an app that uses Family Controls, your Apple Developer Account Holder must request permission to use the [Family Controls](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.family-controls) entitlement, and update your Xcode project to use the entitlement.
+
+<a id="Request-the-entitlement"></a>
+
+### Request the entitlement
+
+Request the Family Controls entitlement at [Family Controls distribution](https://developer.apple.com/contact/request/family-controls-distribution). If your app includes a Screen Time API app extension such as Device Activity Monitor, Device Activity Report, Shield Action, or Shield Configuration, submit the same request for the extension. For more information on the Screen Time APIs, see [Screen Time Technology Frameworks](https://developer.apple.com/documentation/ScreenTimeAPIDocumentation).
+
+> **Note**
+
+> You can also use the [Capability Requests](https://developer.apple.com/help/account/capabilities/capability-requests/) tab in [Certificates, Identifiers & Profiles](https://developer.apple.com/account/resources/) to request permission to use the Family Controls entitlement for distribution. For more information, see [Capability requests](https://developer.apple.com/help/account/capabilities/capability-requests/).
+
+Apple reviews your app, and if it’s approved, adds the entitlement to your developer account using managed capabilities. For more information, see [Provisioning with capabilities](https://developer.apple.com/help/account/reference/provisioning-with-managed-capabilities).
+
+<a id="Check-the-status-of-your-request"></a>
+
+### Check the status of your request
+
+To check your request status, follow the steps in Check the status of your request in [Capability Requests](https://developer.apple.com/help/account/capabilities/capability-requests/), then select Family Controls from the Capabilities list. When Apple approves your request, [Certificates, Identifiers & Profiles](https://developer.apple.com/account/resources/) displays an Assigned status for this capability.
+
+![A Capability Requests tab showing Family Controls (Distribution) capability with Assigned status and a search field containing Family Controls.](https://developer.apple.com/images/com.apple.FamilyControls/family-controls-assigned@2x.png)
+
+Click the info button next to the capability. In the dialog that appears, check that Provisioning Support lists all the distribution methods you need.
+
+![A Capability Requests tab for Family Controls showing the entitlement key com.apple.developer.family-controls and distribution capability with Assigned status.](https://developer.apple.com/images/com.apple.FamilyControls/family-controls-support@2x.png)
+
+<a id="Configure-the-Family-Controls-entitlement-for-your-app"></a>
+
+### Configure the Family Controls entitlement for your app
+
+When you receive the Family Controls entitlement, update your Xcode project to use it. For more information, see [Configuring Family Controls](https://developer.apple.com/documentation/xcode/configuring-family-controls).
+
+If your Xcode project already includes the Family Controls capability for development and you use automatic signing, Xcode automatically updates your app to use this capability for distribution.
+
+## See Also
+
+### Authorizations
+
+- [AuthorizationCenter](authorizationcenter.md): The center for requesting authorization to provide parental controls.
+- [AuthorizationStatus](authorizationstatus.md): The status of your app’s authorization to provide parental controls.
+- [Family Controls](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.family-controls): A Boolean value that indicates whether the app can request or revoke authorization to provide parental controls.

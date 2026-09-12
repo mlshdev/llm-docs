@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/meshdeformercomponent](https://developer.apple.com/documentation/realitykit/meshdeformercomponent)
+
+# MeshDeformerComponent
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+The component that applies mesh deformations to an `Entity`.
+
+## Declaration
+
+```swift
+struct MeshDeformerComponent
+```
+
+## Topics
+
+### Configuring deformations
+
+- [deformations](meshdeformercomponent/deformations.md): the deformations applied the entity
+
+### Initializers
+
+- [init(from:)](meshdeformercomponent/init%28from_%29.md): Validates the deformation and throws errors if a configuration problem is detected.
+
+## Relationships
+
+### Conforms To
+
+- [Component](component.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Deformers
+
+- [MeshDeformer](meshdeformer.md): An interface for all deformation types in a deformation definition, both built-in and custom. The users overrides all functions to implement a custom `MeshDeformer`, and can in general ignore all but the constructors for built-in deformers.
+- [SkinningDeformer](skinningdeformer.md): A deformation that binds a 3D mesh to an underlying skeleton.
+- [BlendShapeDeformer](blendshapedeformer.md): A blend-shape deformation that interpolates between N meshes according to a weighted sum. Consumes information from the `BlendShapeWeightsComponent`

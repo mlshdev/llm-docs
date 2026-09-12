@@ -1,0 +1,44 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/networkextension/vpn-on-demand-rules](https://developer.apple.com/documentation/networkextension/vpn-on-demand-rules)
+
+# VPN On Demand Rules
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** Network Extension  
+**Kind:** API Collection
+
+Set up VPN On Demand.
+
+<a id="overview"></a>
+
+## Overview
+
+VPN On Demand allows the system to automatically start or stop a VPN connection based on various criteria. For example, you can use VPN On Demand to configure an iPhone to start a VPN connection when it’s on Wi-Fi and stop the connection when it’s on cellular. Or, you can start the VPN connection when an app tries to connect to a specific service that’s only available via VPN.
+
+For more information, see “VPN On Demand” in [Apple Platform Deployment Guide](https://support.apple.com/guide/deployment/welcome/web).
+
+## Topics
+
+### Settings
+
+- [NEOnDemandRuleConnect](neondemandruleconnect.md): A VPN On Demand rule that connects the VPN.
+- [NEOnDemandRuleDisconnect](neondemandruledisconnect.md): A VPN On Demand rule that disconnects the VPN.
+- [NEOnDemandRuleIgnore](neondemandruleignore.md): A VPN On Demand rule that doesn’t change the status of the VPN.
+- [NEOnDemandRuleEvaluateConnection](neondemandruleevaluateconnection.md): A VPN On Demand rule that evaluate the app’s connection to determine whether to run its action.
+- [NEOnDemandRule](neondemandrule.md): A base class shared by all VPN On Demand rules.
+
+## See Also
+
+### Related Documentation
+
+- [Personal VPN](personal-vpn.md): Create and manage a VPN configuration that uses one of the built-in VPN protocols (IPsec or IKEv2).
+- [Packet tunnel provider](packet-tunnel-provider.md): Implement a VPN client for a packet-oriented, custom VPN protocol.
+- [App proxy provider](app-proxy-provider.md): Implement a VPN client for a flow-oriented, custom VPN protocol.
+
+### VPN configuration
+
+- [NEAppProxyProviderManager](neappproxyprovidermanager.md): An object to create and manage the app proxy provider’s VPN configuration.
+- [NETunnelProviderManager](netunnelprovidermanager.md): An object to create and manage the tunnel provider’s VPN configuration.
+- [NEVPNManager](nevpnmanager.md): An object to create and manage a Personal VPN configuration.
+- [NETunnelProviderProtocol](netunnelproviderprotocol.md): Configuration parameters for a VPN tunnel.
+- [NEAppRule](neapprule.md): The identity of an app whose traffic is to be routed through the tunnel.

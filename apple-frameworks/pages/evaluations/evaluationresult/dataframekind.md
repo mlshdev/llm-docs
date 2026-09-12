@@ -1,0 +1,49 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/evaluations/evaluationresult/dataframekind](https://developer.apple.com/documentation/evaluations/evaluationresult/dataframekind)
+
+# EvaluationResult.DataFrameKind
+
+**Framework:** Evaluations  
+**Kind:** Enumeration  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+ · watchOS 27.0+ · Xcode 27.0+
+
+The kind of DataFrame to convert for JSON serialization.
+
+## Declaration
+
+```swift
+enum DataFrameKind
+```
+
+<a id="overview"></a>
+
+## Overview
+
+```swift
+let kind: EvaluationResult.DataFrameKind = .summary
+```
+
+## Topics
+
+### Enumeration Cases
+
+- [EvaluationResult.DataFrameKind.detailed](dataframekind/detailed.md): The sample-level detailed results DataFrame.
+- [EvaluationResult.DataFrameKind.summary](dataframekind/summary.md): The aggregated summary DataFrame.
+
+## Relationships
+
+### Conforms To
+
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+
+## See Also
+
+### Accessing results
+
+- [summary](summary.md): Aggregated statistics for each metric in the evaluation.
+- [detailed](detailed.md): Individual results for each sample in the evaluation.
+- [evaluationInfo](evaluationinfo.md): User-defined information about this evaluation, such as the model name, prompt version, or dataset.
+- [evaluationID](evaluationid.md): The identifier of the evaluation that produced these results.
+- [resultID](resultid.md): A unique identifier for this particular result.
+- [reportMetadata](reportmetadata.md): Framework-generated metadata used for report presentation.
+- [aggregateValue(\_:)](aggregatevalue%28__%29.md): Returns the first aggregate value matching the given operation, or `-1` if not found.

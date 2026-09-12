@@ -1,0 +1,62 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/dragconfiguration/operationswithinapp-swift.struct](https://developer.apple.com/documentation/swiftui/dragconfiguration/operationswithinapp-swift.struct)
+
+# DragConfiguration.OperationsWithinApp
+
+**Framework:** SwiftUI  
+**Kind:** Structure  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · visionOS 26.0+
+
+Describes the drag operations suggested to destinations within the app.
+
+## Declaration
+
+```swift
+struct OperationsWithinApp
+```
+
+<a id="overview"></a>
+
+## Overview
+
+To create a default configuration, initialize it without parameters.
+
+On iOS, the default behavior is to allow drag-to-copy within the application. On macOS, the default configuration is to support drag-to-copy to destinations both within the application and to other apps.
+
+In addition to `copy`, add `move` operation support by specifying that in the initializer:
+
+```swift
+struct DraggableBookView: View {
+    var id: UUID
+
+    var body: some View {
+        BookView()
+            .draggable(Book(id: id))
+            .dragConfiguration(makeConfiguration())
+    }
+
+    func makeConfiguration() -> DragConfiguration {
+        let operations = OperationsWithinApp(allowMove: true)
+        return DragConfiguration(operationsWithinApp: operations)
+    }
+}
+```
+
+In the example above, an application provides operations that will be suggested to destinations within the app. Drags to other apps will use the default behavior: suggest operation `copy` to drag destinations on macOS, and forbid drags on iOS.
+
+## Topics
+
+### Initializers
+
+- [init(allowCopy:allowMove:allowDelete:)](operationswithinapp-swift.struct/init%28allowcopy_allowmove_allowdelete_%29.md): Creates a value that describes the operations allowed for drags that end within the application.
+- [init(allowMove:)](operationswithinapp-swift.struct/init%28allowmove_%29.md): Creates a value that describes the operations allowed for drags that end within the application. Copy operation is always allowed.
+
+### Instance Properties
+
+- [allowAlias](operationswithinapp-swift.struct/allowalias.md): A Boolean value indicating if the drag operation supports creating aliases to the dropped items.
+
+## Relationships
+
+### Conforms To
+
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)

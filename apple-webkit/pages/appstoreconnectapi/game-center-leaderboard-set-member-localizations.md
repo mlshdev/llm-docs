@@ -1,0 +1,49 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/game-center-leaderboard-set-member-localizations](https://developer.apple.com/documentation/appstoreconnectapi/game-center-leaderboard-set-member-localizations)
+
+# Game Center leaderboard set member localizations
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** API Collection
+
+Manage Game Center leaderboard set member localizations.
+
+<a id="overview"></a>
+
+## Overview
+
+Use Game Center leaderboard set member localizations to specify the specific localizations that a leaderboard displays when referenced as part of a Game Center Leaderboard set. See [Create a Leaderboard Set Localization](post-v1-gamecenterleaderboardsetlocalizations.md) for more information. If you instead want to create a localization for a specific leaderboard, see [Create a Leaderboard Localization](post-v1-gamecenterleaderboardlocalizations.md).
+
+## Topics
+
+### Managing leaderboard set member localizations
+
+- [Read Leaderboard Set Member Localization Information](get-v1-gamecenterleaderboardsetmemberlocalizations.md): Get information about leaderboard member set localizations.
+- [Read Leaderboard Information for a Leaderboard Set Member Localization](get-v1-gamecenterleaderboardsetmemberlocalizations-_id_-gamecenterleaderboard.md): Deprecated. Get information about a leaderboard for a specific leaderboard set member localization.
+- [Read the leaderboard id for a leaderboard set member localization](get-v1-gamecenterleaderboardsetmemberlocalizations-_id_-relationships-gamecenterleaderboard.md): Deprecated. Get the leaderboard ID for a specific leaderboard set member localization.
+- [Read Leaderboard Set Information for a Leaderboard Set Member Localization](get-v1-gamecenterleaderboardsetmemberlocalizations-_id_-gamecenterleaderboardset.md): Deprecated. Get information about a leaderboard set for a specific leaderboard set member localization.
+- [Get the leaderboard set ID for a Game Center leaderboard set member localization](get-v1-gamecenterleaderboardsetmemberlocalizations-_id_-relationships-gamecenterleaderboardset.md): Deprecated.
+- [Create a Leaderboard Set Member Localization](post-v1-gamecenterleaderboardsetmemberlocalizations.md): Deprecated. Add a new leaderboard set localization.
+- [Modify a Leaderboard Set Member Localization](patch-v1-gamecenterleaderboardsetmemberlocalizations-_id_.md): Deprecated. Edit a leaderboard set member localization.
+- [Delete a Leaderboard Set Member Localization](delete-v1-gamecenterleaderboardsetmemberlocalizations-_id_.md): Delete a localization that’s associated with a leaderboard set member.
+
+### Objects
+
+- [GameCenterLeaderboardSetMemberLocalization](gamecenterleaderboardsetmemberlocalization.md): The data structure that represent a leaderboard set member localization.
+- [GameCenterLeaderboardSetMemberLocalizationCreateRequest](gamecenterleaderboardsetmemberlocalizationcreaterequest.md): The request body you use to create a leaderboard set localization.
+- [GameCenterLeaderboardSetMemberLocalizationResponse](gamecenterleaderboardsetmemberlocalizationresponse.md): A response containing a single localization for a leaderboard’s membership within a leaderboard set.
+- [GameCenterLeaderboardSetMemberLocalizationUpdateRequest](gamecenterleaderboardsetmemberlocalizationupdaterequest.md): The request body you use to update a leaderboard localization.
+- [GameCenterLeaderboardSetMemberLocalizationsResponse](gamecenterleaderboardsetmemberlocalizationsresponse.md): A response that contains multiple leaderboard localizations resources.
+- [GameCenterLeaderboardSetMemberLocalizationGameCenterLeaderboardLinkageResponse](gamecenterleaderboardsetmemberlocalizationgamecenterleaderboardlinkageresponse.md): Deprecated.
+- [GameCenterLeaderboardSetMemberLocalizationGameCenterLeaderboardSetLinkageResponse](gamecenterleaderboardsetmemberlocalizationgamecenterleaderboardsetlinkageresponse.md): Deprecated.
+
+## See Also
+
+### Leaderboard sets
+
+- [Game Center leaderboard sets](game-center-leaderboard-sets.md): Manage Game Center leaderboard sets for your apps.
+- [Game Center leaderboard set localizations](game-center-leaderboard-set-localizations.md): Manage localizations for your Game Center leaderboard sets.
+- [Game Center leaderboard set images](game-center-leaderboard-set-images.md): Manage image assets for your Game Center leaderboard sets.
+- [Game Center leaderboard set versions](game-center-leaderboard-set-versions.md): Manage versions for your Game Center leaderboard sets.
+- [Game Center leaderboard set releases](game-center-leaderboard-set-releases.md): Manage a leaderboard set releases.

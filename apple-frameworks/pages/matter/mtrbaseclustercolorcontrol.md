@@ -1,0 +1,936 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclustercolorcontrol](https://developer.apple.com/documentation/matter/mtrbaseclustercolorcontrol)
+
+# MTRBaseClusterColorControl (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```swift
+class MTRBaseClusterColorControl
+```
+
+## Topics
+
+### Initializers
+
+- [init(device:endpoint:queue:)](mtrbaseclustercolorcontrol/init%28device_endpoint_queue_%29.md): Deprecated.
+- [init(device:endpointID:queue:)](mtrbaseclustercolorcontrol/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [colorLoopSet(with:completion:)](mtrbaseclustercolorcontrol/colorloopset%28with_completion_%29.md)
+- [colorLoopSet(with:completionHandler:)](mtrbaseclustercolorcontrol/colorloopset%28with_completionhandler_%29.md): Deprecated.
+- [enhancedMoveHue(with:completion:)](mtrbaseclustercolorcontrol/enhancedmovehue%28with_completion_%29.md)
+- [enhancedMoveHue(with:completionHandler:)](mtrbaseclustercolorcontrol/enhancedmovehue%28with_completionhandler_%29.md): Deprecated.
+- [enhancedMoveToHue(with:completion:)](mtrbaseclustercolorcontrol/enhancedmovetohue%28with_completion_%29.md)
+- [enhancedMoveToHue(with:completionHandler:)](mtrbaseclustercolorcontrol/enhancedmovetohue%28with_completionhandler_%29.md): Deprecated.
+- [enhancedMoveToHueAndSaturation(with:completion:)](mtrbaseclustercolorcontrol/enhancedmovetohueandsaturation%28with_completion_%29.md)
+- [enhancedMoveToHueAndSaturation(with:completionHandler:)](mtrbaseclustercolorcontrol/enhancedmovetohueandsaturation%28with_completionhandler_%29.md): Deprecated.
+- [enhancedStepHue(with:completion:)](mtrbaseclustercolorcontrol/enhancedstephue%28with_completion_%29.md)
+- [enhancedStepHue(with:completionHandler:)](mtrbaseclustercolorcontrol/enhancedstephue%28with_completionhandler_%29.md): Deprecated.
+- [moveColor(with:completion:)](mtrbaseclustercolorcontrol/movecolor%28with_completion_%29.md)
+- [moveColor(with:completionHandler:)](mtrbaseclustercolorcontrol/movecolor%28with_completionhandler_%29.md): Deprecated.
+- [moveColorTemperature(with:completion:)](mtrbaseclustercolorcontrol/movecolortemperature%28with_completion_%29.md)
+- [moveColorTemperature(with:completionHandler:)](mtrbaseclustercolorcontrol/movecolortemperature%28with_completionhandler_%29.md): Deprecated.
+- [moveHue(with:completion:)](mtrbaseclustercolorcontrol/movehue%28with_completion_%29.md)
+- [moveHue(with:completionHandler:)](mtrbaseclustercolorcontrol/movehue%28with_completionhandler_%29.md): Deprecated.
+- [moveSaturation(with:completion:)](mtrbaseclustercolorcontrol/movesaturation%28with_completion_%29.md)
+- [moveSaturation(with:completionHandler:)](mtrbaseclustercolorcontrol/movesaturation%28with_completionhandler_%29.md): Deprecated.
+- [moveToColor(with:completion:)](mtrbaseclustercolorcontrol/movetocolor%28with_completion_%29.md)
+- [moveToColor(with:completionHandler:)](mtrbaseclustercolorcontrol/movetocolor%28with_completionhandler_%29.md): Deprecated.
+- [moveToColorTemperature(with:completion:)](mtrbaseclustercolorcontrol/movetocolortemperature%28with_completion_%29.md)
+- [moveToColorTemperature(with:completionHandler:)](mtrbaseclustercolorcontrol/movetocolortemperature%28with_completionhandler_%29.md): Deprecated.
+- [moveToHue(with:completion:)](mtrbaseclustercolorcontrol/movetohue%28with_completion_%29.md)
+- [moveToHue(with:completionHandler:)](mtrbaseclustercolorcontrol/movetohue%28with_completionhandler_%29.md): Deprecated.
+- [moveToHueAndSaturation(with:completion:)](mtrbaseclustercolorcontrol/movetohueandsaturation%28with_completion_%29.md)
+- [moveToHueAndSaturation(with:completionHandler:)](mtrbaseclustercolorcontrol/movetohueandsaturation%28with_completionhandler_%29.md): Deprecated.
+- [moveToSaturation(with:completion:)](mtrbaseclustercolorcontrol/movetosaturation%28with_completion_%29.md)
+- [moveToSaturation(with:completionHandler:)](mtrbaseclustercolorcontrol/movetosaturation%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandList(completion:)](mtrbaseclustercolorcontrol/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandList(completionHandler:)](mtrbaseclustercolorcontrol/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(completion:)](mtrbaseclustercolorcontrol/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeList(completionHandler:)](mtrbaseclustercolorcontrol/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(completion:)](mtrbaseclustercolorcontrol/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevision(completionHandler:)](mtrbaseclustercolorcontrol/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorCapabilities(completion:)](mtrbaseclustercolorcontrol/readattributecolorcapabilities%28completion_%29.md)
+- [readAttributeColorCapabilities(completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorcapabilities%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorLoopActive(completion:)](mtrbaseclustercolorcontrol/readattributecolorloopactive%28completion_%29.md)
+- [readAttributeColorLoopActive(completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorloopactive%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorLoopDirection(completion:)](mtrbaseclustercolorcontrol/readattributecolorloopdirection%28completion_%29.md)
+- [readAttributeColorLoopDirection(completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorloopdirection%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorLoopStartEnhancedHue(completion:)](mtrbaseclustercolorcontrol/readattributecolorloopstartenhancedhue%28completion_%29.md)
+- [readAttributeColorLoopStartEnhancedHue(completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorloopstartenhancedhue%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorLoopStoredEnhancedHue(completion:)](mtrbaseclustercolorcontrol/readattributecolorloopstoredenhancedhue%28completion_%29.md)
+- [readAttributeColorLoopStoredEnhancedHue(completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorloopstoredenhancedhue%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorLoopTime(completion:)](mtrbaseclustercolorcontrol/readattributecolorlooptime%28completion_%29.md)
+- [readAttributeColorLoopTime(completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorlooptime%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorMode(completion:)](mtrbaseclustercolorcontrol/readattributecolormode%28completion_%29.md)
+- [readAttributeColorMode(completionHandler:)](mtrbaseclustercolorcontrol/readattributecolormode%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointBIntensity(completion:)](mtrbaseclustercolorcontrol/readattributecolorpointbintensity%28completion_%29.md)
+- [readAttributeColorPointBIntensity(completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorpointbintensity%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointBX(completion:)](mtrbaseclustercolorcontrol/readattributecolorpointbx%28completion_%29.md)
+- [readAttributeColorPointBX(completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorpointbx%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointBY(completion:)](mtrbaseclustercolorcontrol/readattributecolorpointby%28completion_%29.md)
+- [readAttributeColorPointBY(completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorpointby%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointGIntensity(completion:)](mtrbaseclustercolorcontrol/readattributecolorpointgintensity%28completion_%29.md)
+- [readAttributeColorPointGIntensity(completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorpointgintensity%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointGX(completion:)](mtrbaseclustercolorcontrol/readattributecolorpointgx%28completion_%29.md)
+- [readAttributeColorPointGX(completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorpointgx%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointGY(completion:)](mtrbaseclustercolorcontrol/readattributecolorpointgy%28completion_%29.md)
+- [readAttributeColorPointGY(completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorpointgy%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointRIntensity(completion:)](mtrbaseclustercolorcontrol/readattributecolorpointrintensity%28completion_%29.md)
+- [readAttributeColorPointRIntensity(completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorpointrintensity%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointRX(completion:)](mtrbaseclustercolorcontrol/readattributecolorpointrx%28completion_%29.md)
+- [readAttributeColorPointRX(completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorpointrx%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointRY(completion:)](mtrbaseclustercolorcontrol/readattributecolorpointry%28completion_%29.md)
+- [readAttributeColorPointRY(completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorpointry%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorTempPhysicalMaxMireds(completion:)](mtrbaseclustercolorcontrol/readattributecolortempphysicalmaxmireds%28completion_%29.md)
+- [readAttributeColorTempPhysicalMaxMireds(completionHandler:)](mtrbaseclustercolorcontrol/readattributecolortempphysicalmaxmireds%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorTempPhysicalMinMireds(completion:)](mtrbaseclustercolorcontrol/readattributecolortempphysicalminmireds%28completion_%29.md)
+- [readAttributeColorTempPhysicalMinMireds(completionHandler:)](mtrbaseclustercolorcontrol/readattributecolortempphysicalminmireds%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorTemperatureMireds(completion:)](mtrbaseclustercolorcontrol/readattributecolortemperaturemireds%28completion_%29.md)
+- [readAttributeColorTemperatureMireds(completionHandler:)](mtrbaseclustercolorcontrol/readattributecolortemperaturemireds%28completionhandler_%29.md): Deprecated.
+- [readAttributeCompensationText(completion:)](mtrbaseclustercolorcontrol/readattributecompensationtext%28completion_%29.md)
+- [readAttributeCompensationText(completionHandler:)](mtrbaseclustercolorcontrol/readattributecompensationtext%28completionhandler_%29.md): Deprecated.
+- [readAttributeCoupleColorTempToLevelMinMireds(completion:)](mtrbaseclustercolorcontrol/readattributecouplecolortemptolevelminmireds%28completion_%29.md)
+- [readAttributeCoupleColorTempToLevelMinMireds(completionHandler:)](mtrbaseclustercolorcontrol/readattributecouplecolortemptolevelminmireds%28completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentHue(completion:)](mtrbaseclustercolorcontrol/readattributecurrenthue%28completion_%29.md)
+- [readAttributeCurrentHue(completionHandler:)](mtrbaseclustercolorcontrol/readattributecurrenthue%28completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentSaturation(completion:)](mtrbaseclustercolorcontrol/readattributecurrentsaturation%28completion_%29.md)
+- [readAttributeCurrentSaturation(completionHandler:)](mtrbaseclustercolorcontrol/readattributecurrentsaturation%28completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentX(completion:)](mtrbaseclustercolorcontrol/readattributecurrentx%28completion_%29.md)
+- [readAttributeCurrentX(completionHandler:)](mtrbaseclustercolorcontrol/readattributecurrentx%28completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentY(completion:)](mtrbaseclustercolorcontrol/readattributecurrenty%28completion_%29.md)
+- [readAttributeCurrentY(completionHandler:)](mtrbaseclustercolorcontrol/readattributecurrenty%28completionhandler_%29.md): Deprecated.
+- [readAttributeDriftCompensation(completion:)](mtrbaseclustercolorcontrol/readattributedriftcompensation%28completion_%29.md)
+- [readAttributeDriftCompensation(completionHandler:)](mtrbaseclustercolorcontrol/readattributedriftcompensation%28completionhandler_%29.md): Deprecated.
+- [readAttributeEnhancedColorMode(completion:)](mtrbaseclustercolorcontrol/readattributeenhancedcolormode%28completion_%29.md)
+- [readAttributeEnhancedColorMode(completionHandler:)](mtrbaseclustercolorcontrol/readattributeenhancedcolormode%28completionhandler_%29.md): Deprecated.
+- [readAttributeEnhancedCurrentHue(completion:)](mtrbaseclustercolorcontrol/readattributeenhancedcurrenthue%28completion_%29.md)
+- [readAttributeEnhancedCurrentHue(completionHandler:)](mtrbaseclustercolorcontrol/readattributeenhancedcurrenthue%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(completion:)](mtrbaseclustercolorcontrol/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMap(completionHandler:)](mtrbaseclustercolorcontrol/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(completion:)](mtrbaseclustercolorcontrol/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandList(completionHandler:)](mtrbaseclustercolorcontrol/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfPrimaries(completion:)](mtrbaseclustercolorcontrol/readattributenumberofprimaries%28completion_%29.md)
+- [readAttributeNumberOfPrimaries(completionHandler:)](mtrbaseclustercolorcontrol/readattributenumberofprimaries%28completionhandler_%29.md): Deprecated.
+- [readAttributeOptions(completion:)](mtrbaseclustercolorcontrol/readattributeoptions%28completion_%29.md)
+- [readAttributeOptions(completionHandler:)](mtrbaseclustercolorcontrol/readattributeoptions%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary1Intensity(completion:)](mtrbaseclustercolorcontrol/readattributeprimary1intensity%28completion_%29.md)
+- [readAttributePrimary1Intensity(completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary1intensity%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary1X(completion:)](mtrbaseclustercolorcontrol/readattributeprimary1x%28completion_%29.md)
+- [readAttributePrimary1X(completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary1x%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary1Y(completion:)](mtrbaseclustercolorcontrol/readattributeprimary1y%28completion_%29.md)
+- [readAttributePrimary1Y(completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary1y%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary2Intensity(completion:)](mtrbaseclustercolorcontrol/readattributeprimary2intensity%28completion_%29.md)
+- [readAttributePrimary2Intensity(completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary2intensity%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary2X(completion:)](mtrbaseclustercolorcontrol/readattributeprimary2x%28completion_%29.md)
+- [readAttributePrimary2X(completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary2x%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary2Y(completion:)](mtrbaseclustercolorcontrol/readattributeprimary2y%28completion_%29.md)
+- [readAttributePrimary2Y(completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary2y%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary3Intensity(completion:)](mtrbaseclustercolorcontrol/readattributeprimary3intensity%28completion_%29.md)
+- [readAttributePrimary3Intensity(completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary3intensity%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary3X(completion:)](mtrbaseclustercolorcontrol/readattributeprimary3x%28completion_%29.md)
+- [readAttributePrimary3X(completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary3x%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary3Y(completion:)](mtrbaseclustercolorcontrol/readattributeprimary3y%28completion_%29.md)
+- [readAttributePrimary3Y(completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary3y%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary4Intensity(completion:)](mtrbaseclustercolorcontrol/readattributeprimary4intensity%28completion_%29.md)
+- [readAttributePrimary4Intensity(completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary4intensity%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary4X(completion:)](mtrbaseclustercolorcontrol/readattributeprimary4x%28completion_%29.md)
+- [readAttributePrimary4X(completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary4x%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary4Y(completion:)](mtrbaseclustercolorcontrol/readattributeprimary4y%28completion_%29.md)
+- [readAttributePrimary4Y(completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary4y%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary5Intensity(completion:)](mtrbaseclustercolorcontrol/readattributeprimary5intensity%28completion_%29.md)
+- [readAttributePrimary5Intensity(completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary5intensity%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary5X(completion:)](mtrbaseclustercolorcontrol/readattributeprimary5x%28completion_%29.md)
+- [readAttributePrimary5X(completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary5x%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary5Y(completion:)](mtrbaseclustercolorcontrol/readattributeprimary5y%28completion_%29.md)
+- [readAttributePrimary5Y(completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary5y%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary6Intensity(completion:)](mtrbaseclustercolorcontrol/readattributeprimary6intensity%28completion_%29.md)
+- [readAttributePrimary6Intensity(completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary6intensity%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary6X(completion:)](mtrbaseclustercolorcontrol/readattributeprimary6x%28completion_%29.md)
+- [readAttributePrimary6X(completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary6x%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary6Y(completion:)](mtrbaseclustercolorcontrol/readattributeprimary6y%28completion_%29.md)
+- [readAttributePrimary6Y(completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary6y%28completionhandler_%29.md): Deprecated.
+- [readAttributeRemainingTime(completion:)](mtrbaseclustercolorcontrol/readattributeremainingtime%28completion_%29.md)
+- [readAttributeRemainingTime(completionHandler:)](mtrbaseclustercolorcontrol/readattributeremainingtime%28completionhandler_%29.md): Deprecated.
+- [readAttributeStartUpColorTemperatureMireds(completion:)](mtrbaseclustercolorcontrol/readattributestartupcolortemperaturemireds%28completion_%29.md)
+- [readAttributeStartUpColorTemperatureMireds(completionHandler:)](mtrbaseclustercolorcontrol/readattributestartupcolortemperaturemireds%28completionhandler_%29.md): Deprecated.
+- [readAttributeWhitePointX(completion:)](mtrbaseclustercolorcontrol/readattributewhitepointx%28completion_%29.md)
+- [readAttributeWhitePointX(completionHandler:)](mtrbaseclustercolorcontrol/readattributewhitepointx%28completionhandler_%29.md): Deprecated.
+- [readAttributeWhitePointY(completion:)](mtrbaseclustercolorcontrol/readattributewhitepointy%28completion_%29.md)
+- [readAttributeWhitePointY(completionHandler:)](mtrbaseclustercolorcontrol/readattributewhitepointy%28completionhandler_%29.md): Deprecated.
+- [stepColor(with:completion:)](mtrbaseclustercolorcontrol/stepcolor%28with_completion_%29.md)
+- [stepColor(with:completionHandler:)](mtrbaseclustercolorcontrol/stepcolor%28with_completionhandler_%29.md): Deprecated.
+- [stepColorTemperature(with:completion:)](mtrbaseclustercolorcontrol/stepcolortemperature%28with_completion_%29.md)
+- [stepColorTemperature(with:completionHandler:)](mtrbaseclustercolorcontrol/stepcolortemperature%28with_completionhandler_%29.md): Deprecated.
+- [stepHue(with:completion:)](mtrbaseclustercolorcontrol/stephue%28with_completion_%29.md)
+- [stepHue(with:completionHandler:)](mtrbaseclustercolorcontrol/stephue%28with_completionhandler_%29.md): Deprecated.
+- [stepSaturation(with:completion:)](mtrbaseclustercolorcontrol/stepsaturation%28with_completion_%29.md)
+- [stepSaturation(with:completionHandler:)](mtrbaseclustercolorcontrol/stepsaturation%28with_completionhandler_%29.md): Deprecated.
+- [stopMoveStep(with:completion:)](mtrbaseclustercolorcontrol/stopmovestep%28with_completion_%29.md)
+- [stopMoveStep(with:completionHandler:)](mtrbaseclustercolorcontrol/stopmovestep%28with_completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeList(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevision(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevision(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorCapabilities(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorcapabilities%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorCapabilities(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorcapabilities%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorLoopActive(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorloopactive%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorLoopActive(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorloopactive%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorLoopDirection(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorloopdirection%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorLoopDirection(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorloopdirection%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorLoopStartEnhancedHue(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorloopstartenhancedhue%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorLoopStartEnhancedHue(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorloopstartenhancedhue%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorLoopStoredEnhancedHue(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorloopstoredenhancedhue%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorLoopStoredEnhancedHue(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorloopstoredenhancedhue%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorLoopTime(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorlooptime%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorLoopTime(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorlooptime%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorMode(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolormode%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorMode(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolormode%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorPointBIntensity(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorpointbintensity%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorPointBIntensity(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorpointbintensity%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorPointBX(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorpointbx%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorPointBX(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorpointbx%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorPointBY(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorpointby%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorPointBY(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorpointby%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorPointGIntensity(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorpointgintensity%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorPointGIntensity(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorpointgintensity%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorPointGX(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorpointgx%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorPointGX(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorpointgx%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorPointGY(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorpointgy%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorPointGY(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorpointgy%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorPointRIntensity(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorpointrintensity%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorPointRIntensity(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorpointrintensity%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorPointRX(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorpointrx%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorPointRX(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorpointrx%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorPointRY(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorpointry%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorPointRY(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolorpointry%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorTempPhysicalMaxMireds(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolortempphysicalmaxmireds%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorTempPhysicalMaxMireds(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolortempphysicalmaxmireds%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorTempPhysicalMinMireds(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolortempphysicalminmireds%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorTempPhysicalMinMireds(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolortempphysicalminmireds%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorTemperatureMireds(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolortemperaturemireds%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorTemperatureMireds(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecolortemperaturemireds%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCompensationText(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecompensationtext%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCompensationText(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecompensationtext%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCoupleColorTempToLevelMinMireds(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecouplecolortemptolevelminmireds%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCoupleColorTempToLevelMinMireds(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecouplecolortemptolevelminmireds%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCurrentHue(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecurrenthue%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentHue(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecurrenthue%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCurrentSaturation(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecurrentsaturation%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentSaturation(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecurrentsaturation%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCurrentX(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecurrentx%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentX(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecurrentx%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCurrentY(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecurrenty%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentY(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributecurrenty%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeDriftCompensation(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributedriftcompensation%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeDriftCompensation(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributedriftcompensation%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeEnhancedColorMode(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeenhancedcolormode%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeEnhancedColorMode(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeenhancedcolormode%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeEnhancedCurrentHue(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeenhancedcurrenthue%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeEnhancedCurrentHue(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeenhancedcurrenthue%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMap(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMap(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNumberOfPrimaries(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributenumberofprimaries%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfPrimaries(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributenumberofprimaries%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeOptions(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeoptions%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeOptions(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeoptions%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary1Intensity(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary1intensity%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary1Intensity(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary1intensity%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary1X(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary1x%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary1X(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary1x%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary1Y(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary1y%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary1Y(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary1y%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary2Intensity(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary2intensity%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary2Intensity(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary2intensity%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary2X(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary2x%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary2X(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary2x%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary2Y(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary2y%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary2Y(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary2y%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary3Intensity(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary3intensity%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary3Intensity(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary3intensity%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary3X(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary3x%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary3X(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary3x%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary3Y(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary3y%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary3Y(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary3y%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary4Intensity(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary4intensity%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary4Intensity(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary4intensity%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary4X(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary4x%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary4X(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary4x%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary4Y(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary4y%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary4Y(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary4y%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary5Intensity(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary5intensity%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary5Intensity(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary5intensity%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary5X(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary5x%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary5X(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary5x%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary5Y(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary5y%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary5Y(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary5y%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary6Intensity(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary6intensity%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary6Intensity(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary6intensity%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary6X(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary6x%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary6X(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary6x%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary6Y(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary6y%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary6Y(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeprimary6y%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeRemainingTime(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeremainingtime%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeRemainingTime(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributeremainingtime%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeStartUpColorTemperatureMireds(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributestartupcolortemperaturemireds%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeStartUpColorTemperatureMireds(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributestartupcolortemperaturemireds%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeWhitePointX(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributewhitepointx%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeWhitePointX(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributewhitepointx%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeWhitePointY(with:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributewhitepointy%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeWhitePointY(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustercolorcontrol/subscribeattributewhitepointy%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [writeAttributeColorPointBIntensity(withValue:completion:)](mtrbaseclustercolorcontrol/writeattributecolorpointbintensity%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeColorPointBIntensity(withValue:completionHandler:)](mtrbaseclustercolorcontrol/writeattributecolorpointbintensity%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointBIntensity(withValue:params:completion:)](mtrbaseclustercolorcontrol/writeattributecolorpointbintensity%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeColorPointBIntensity(withValue:params:completionHandler:)](mtrbaseclustercolorcontrol/writeattributecolorpointbintensity%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointBX(withValue:completion:)](mtrbaseclustercolorcontrol/writeattributecolorpointbx%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeColorPointBX(withValue:completionHandler:)](mtrbaseclustercolorcontrol/writeattributecolorpointbx%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointBX(withValue:params:completion:)](mtrbaseclustercolorcontrol/writeattributecolorpointbx%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeColorPointBX(withValue:params:completionHandler:)](mtrbaseclustercolorcontrol/writeattributecolorpointbx%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointBY(withValue:completion:)](mtrbaseclustercolorcontrol/writeattributecolorpointby%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeColorPointBY(withValue:completionHandler:)](mtrbaseclustercolorcontrol/writeattributecolorpointby%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointBY(withValue:params:completion:)](mtrbaseclustercolorcontrol/writeattributecolorpointby%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeColorPointBY(withValue:params:completionHandler:)](mtrbaseclustercolorcontrol/writeattributecolorpointby%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointGIntensity(withValue:completion:)](mtrbaseclustercolorcontrol/writeattributecolorpointgintensity%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeColorPointGIntensity(withValue:completionHandler:)](mtrbaseclustercolorcontrol/writeattributecolorpointgintensity%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointGIntensity(withValue:params:completion:)](mtrbaseclustercolorcontrol/writeattributecolorpointgintensity%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeColorPointGIntensity(withValue:params:completionHandler:)](mtrbaseclustercolorcontrol/writeattributecolorpointgintensity%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointGX(withValue:completion:)](mtrbaseclustercolorcontrol/writeattributecolorpointgx%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeColorPointGX(withValue:completionHandler:)](mtrbaseclustercolorcontrol/writeattributecolorpointgx%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointGX(withValue:params:completion:)](mtrbaseclustercolorcontrol/writeattributecolorpointgx%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeColorPointGX(withValue:params:completionHandler:)](mtrbaseclustercolorcontrol/writeattributecolorpointgx%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointGY(withValue:completion:)](mtrbaseclustercolorcontrol/writeattributecolorpointgy%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeColorPointGY(withValue:completionHandler:)](mtrbaseclustercolorcontrol/writeattributecolorpointgy%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointGY(withValue:params:completion:)](mtrbaseclustercolorcontrol/writeattributecolorpointgy%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeColorPointGY(withValue:params:completionHandler:)](mtrbaseclustercolorcontrol/writeattributecolorpointgy%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointRIntensity(withValue:completion:)](mtrbaseclustercolorcontrol/writeattributecolorpointrintensity%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeColorPointRIntensity(withValue:completionHandler:)](mtrbaseclustercolorcontrol/writeattributecolorpointrintensity%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointRIntensity(withValue:params:completion:)](mtrbaseclustercolorcontrol/writeattributecolorpointrintensity%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeColorPointRIntensity(withValue:params:completionHandler:)](mtrbaseclustercolorcontrol/writeattributecolorpointrintensity%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointRX(withValue:completion:)](mtrbaseclustercolorcontrol/writeattributecolorpointrx%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeColorPointRX(withValue:completionHandler:)](mtrbaseclustercolorcontrol/writeattributecolorpointrx%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointRX(withValue:params:completion:)](mtrbaseclustercolorcontrol/writeattributecolorpointrx%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeColorPointRX(withValue:params:completionHandler:)](mtrbaseclustercolorcontrol/writeattributecolorpointrx%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointRY(withValue:completion:)](mtrbaseclustercolorcontrol/writeattributecolorpointry%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeColorPointRY(withValue:completionHandler:)](mtrbaseclustercolorcontrol/writeattributecolorpointry%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointRY(withValue:params:completion:)](mtrbaseclustercolorcontrol/writeattributecolorpointry%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeColorPointRY(withValue:params:completionHandler:)](mtrbaseclustercolorcontrol/writeattributecolorpointry%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeOptions(withValue:completion:)](mtrbaseclustercolorcontrol/writeattributeoptions%28withvalue_completion_%29.md)
+- [writeAttributeOptions(withValue:completionHandler:)](mtrbaseclustercolorcontrol/writeattributeoptions%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeOptions(withValue:params:completion:)](mtrbaseclustercolorcontrol/writeattributeoptions%28withvalue_params_completion_%29.md)
+- [writeAttributeOptions(withValue:params:completionHandler:)](mtrbaseclustercolorcontrol/writeattributeoptions%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeStartUpColorTemperatureMireds(withValue:completion:)](mtrbaseclustercolorcontrol/writeattributestartupcolortemperaturemireds%28withvalue_completion_%29.md)
+- [writeAttributeStartUpColorTemperatureMireds(withValue:completionHandler:)](mtrbaseclustercolorcontrol/writeattributestartupcolortemperaturemireds%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeStartUpColorTemperatureMireds(withValue:params:completion:)](mtrbaseclustercolorcontrol/writeattributestartupcolortemperaturemireds%28withvalue_params_completion_%29.md)
+- [writeAttributeStartUpColorTemperatureMireds(withValue:params:completionHandler:)](mtrbaseclustercolorcontrol/writeattributestartupcolortemperaturemireds%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeWhitePointX(withValue:completion:)](mtrbaseclustercolorcontrol/writeattributewhitepointx%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeWhitePointX(withValue:completionHandler:)](mtrbaseclustercolorcontrol/writeattributewhitepointx%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeWhitePointX(withValue:params:completion:)](mtrbaseclustercolorcontrol/writeattributewhitepointx%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeWhitePointX(withValue:params:completionHandler:)](mtrbaseclustercolorcontrol/writeattributewhitepointx%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeWhitePointY(withValue:completion:)](mtrbaseclustercolorcontrol/writeattributewhitepointy%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeWhitePointY(withValue:completionHandler:)](mtrbaseclustercolorcontrol/writeattributewhitepointy%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeWhitePointY(withValue:params:completion:)](mtrbaseclustercolorcontrol/writeattributewhitepointy%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeWhitePointY(withValue:params:completionHandler:)](mtrbaseclustercolorcontrol/writeattributewhitepointy%28withvalue_params_completionhandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevision(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorCapabilities(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorcapabilities%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorCapabilities(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecolorcapabilities%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorLoopActive(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorloopactive%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorLoopActive(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecolorloopactive%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorLoopDirection(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorloopdirection%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorLoopDirection(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecolorloopdirection%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorLoopStartEnhancedHue(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorloopstartenhancedhue%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorLoopStartEnhancedHue(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecolorloopstartenhancedhue%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorLoopStoredEnhancedHue(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorloopstoredenhancedhue%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorLoopStoredEnhancedHue(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecolorloopstoredenhancedhue%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorLoopTime(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorlooptime%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorLoopTime(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecolorlooptime%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorMode(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecolormode%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorMode(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecolormode%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorPointBIntensity(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorpointbintensity%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointBIntensity(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecolorpointbintensity%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorPointBX(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorpointbx%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointBX(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecolorpointbx%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorPointBY(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorpointby%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointBY(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecolorpointby%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorPointGIntensity(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorpointgintensity%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointGIntensity(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecolorpointgintensity%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorPointGX(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorpointgx%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointGX(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecolorpointgx%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorPointGY(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorpointgy%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointGY(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecolorpointgy%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorPointRIntensity(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorpointrintensity%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointRIntensity(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecolorpointrintensity%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorPointRX(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorpointrx%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointRX(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecolorpointrx%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorPointRY(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecolorpointry%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointRY(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecolorpointry%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorTempPhysicalMaxMireds(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecolortempphysicalmaxmireds%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorTempPhysicalMaxMireds(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecolortempphysicalmaxmireds%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorTempPhysicalMinMireds(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecolortempphysicalminmireds%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorTempPhysicalMinMireds(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecolortempphysicalminmireds%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorTemperatureMireds(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecolortemperaturemireds%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorTemperatureMireds(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecolortemperaturemireds%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCompensationText(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecompensationtext%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCompensationText(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecompensationtext%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCoupleColorTempToLevelMinMireds(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecouplecolortemptolevelminmireds%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCoupleColorTempToLevelMinMireds(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecouplecolortemptolevelminmireds%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentHue(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecurrenthue%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentHue(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecurrenthue%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentSaturation(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecurrentsaturation%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentSaturation(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecurrentsaturation%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentX(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecurrentx%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentX(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecurrentx%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentY(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributecurrenty%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentY(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributecurrenty%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeDriftCompensation(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributedriftcompensation%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeDriftCompensation(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributedriftcompensation%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeEnhancedColorMode(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeenhancedcolormode%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeEnhancedColorMode(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeenhancedcolormode%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeEnhancedCurrentHue(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeenhancedcurrenthue%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeEnhancedCurrentHue(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeenhancedcurrenthue%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMap(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfPrimaries(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributenumberofprimaries%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfPrimaries(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributenumberofprimaries%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeOptions(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeoptions%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeOptions(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeoptions%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary1Intensity(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary1intensity%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary1Intensity(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeprimary1intensity%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary1X(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary1x%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary1X(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeprimary1x%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary1Y(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary1y%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary1Y(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeprimary1y%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary2Intensity(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary2intensity%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary2Intensity(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeprimary2intensity%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary2X(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary2x%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary2X(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeprimary2x%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary2Y(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary2y%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary2Y(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeprimary2y%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary3Intensity(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary3intensity%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary3Intensity(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeprimary3intensity%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary3X(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary3x%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary3X(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeprimary3x%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary3Y(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary3y%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary3Y(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeprimary3y%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary4Intensity(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary4intensity%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary4Intensity(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeprimary4intensity%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary4X(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary4x%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary4X(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeprimary4x%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary4Y(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary4y%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary4Y(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeprimary4y%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary5Intensity(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary5intensity%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary5Intensity(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeprimary5intensity%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary5X(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary5x%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary5X(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeprimary5x%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary5Y(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary5y%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary5Y(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeprimary5y%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary6Intensity(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary6intensity%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary6Intensity(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeprimary6intensity%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary6X(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary6x%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary6X(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeprimary6x%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary6Y(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeprimary6y%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary6Y(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeprimary6y%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeRemainingTime(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributeremainingtime%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeRemainingTime(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributeremainingtime%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeStartUpColorTemperatureMireds(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributestartupcolortemperaturemireds%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeStartUpColorTemperatureMireds(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributestartupcolortemperaturemireds%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeWhitePointX(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributewhitepointx%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeWhitePointX(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributewhitepointx%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeWhitePointY(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustercolorcontrol/readattributewhitepointy%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeWhitePointY(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustercolorcontrol/readattributewhitepointy%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRBaseClusterColorControl (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```objectivec
+@interface MTRBaseClusterColorControl : MTRGenericBaseCluster
+```
+
+## Topics
+
+### Initializers
+
+- [initWithDevice:endpoint:queue:](mtrbaseclustercolorcontrol/init%28device_endpoint_queue_%29.md): Deprecated.
+- [initWithDevice:endpointID:queue:](mtrbaseclustercolorcontrol/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [colorLoopSetWithParams:completion:](mtrbaseclustercolorcontrol/colorloopset%28with_completion_%29.md)
+- [colorLoopSetWithParams:completionHandler:](mtrbaseclustercolorcontrol/colorloopset%28with_completionhandler_%29.md): Deprecated.
+- [enhancedMoveHueWithParams:completion:](mtrbaseclustercolorcontrol/enhancedmovehue%28with_completion_%29.md)
+- [enhancedMoveHueWithParams:completionHandler:](mtrbaseclustercolorcontrol/enhancedmovehue%28with_completionhandler_%29.md): Deprecated.
+- [enhancedMoveToHueWithParams:completion:](mtrbaseclustercolorcontrol/enhancedmovetohue%28with_completion_%29.md)
+- [enhancedMoveToHueWithParams:completionHandler:](mtrbaseclustercolorcontrol/enhancedmovetohue%28with_completionhandler_%29.md): Deprecated.
+- [enhancedMoveToHueAndSaturationWithParams:completion:](mtrbaseclustercolorcontrol/enhancedmovetohueandsaturation%28with_completion_%29.md)
+- [enhancedMoveToHueAndSaturationWithParams:completionHandler:](mtrbaseclustercolorcontrol/enhancedmovetohueandsaturation%28with_completionhandler_%29.md): Deprecated.
+- [enhancedStepHueWithParams:completion:](mtrbaseclustercolorcontrol/enhancedstephue%28with_completion_%29.md)
+- [enhancedStepHueWithParams:completionHandler:](mtrbaseclustercolorcontrol/enhancedstephue%28with_completionhandler_%29.md): Deprecated.
+- [moveColorWithParams:completion:](mtrbaseclustercolorcontrol/movecolor%28with_completion_%29.md)
+- [moveColorWithParams:completionHandler:](mtrbaseclustercolorcontrol/movecolor%28with_completionhandler_%29.md): Deprecated.
+- [moveColorTemperatureWithParams:completion:](mtrbaseclustercolorcontrol/movecolortemperature%28with_completion_%29.md)
+- [moveColorTemperatureWithParams:completionHandler:](mtrbaseclustercolorcontrol/movecolortemperature%28with_completionhandler_%29.md): Deprecated.
+- [moveHueWithParams:completion:](mtrbaseclustercolorcontrol/movehue%28with_completion_%29.md)
+- [moveHueWithParams:completionHandler:](mtrbaseclustercolorcontrol/movehue%28with_completionhandler_%29.md): Deprecated.
+- [moveSaturationWithParams:completion:](mtrbaseclustercolorcontrol/movesaturation%28with_completion_%29.md)
+- [moveSaturationWithParams:completionHandler:](mtrbaseclustercolorcontrol/movesaturation%28with_completionhandler_%29.md): Deprecated.
+- [moveToColorWithParams:completion:](mtrbaseclustercolorcontrol/movetocolor%28with_completion_%29.md)
+- [moveToColorWithParams:completionHandler:](mtrbaseclustercolorcontrol/movetocolor%28with_completionhandler_%29.md): Deprecated.
+- [moveToColorTemperatureWithParams:completion:](mtrbaseclustercolorcontrol/movetocolortemperature%28with_completion_%29.md)
+- [moveToColorTemperatureWithParams:completionHandler:](mtrbaseclustercolorcontrol/movetocolortemperature%28with_completionhandler_%29.md): Deprecated.
+- [moveToHueWithParams:completion:](mtrbaseclustercolorcontrol/movetohue%28with_completion_%29.md)
+- [moveToHueWithParams:completionHandler:](mtrbaseclustercolorcontrol/movetohue%28with_completionhandler_%29.md): Deprecated.
+- [moveToHueAndSaturationWithParams:completion:](mtrbaseclustercolorcontrol/movetohueandsaturation%28with_completion_%29.md)
+- [moveToHueAndSaturationWithParams:completionHandler:](mtrbaseclustercolorcontrol/movetohueandsaturation%28with_completionhandler_%29.md): Deprecated.
+- [moveToSaturationWithParams:completion:](mtrbaseclustercolorcontrol/movetosaturation%28with_completion_%29.md)
+- [moveToSaturationWithParams:completionHandler:](mtrbaseclustercolorcontrol/movetosaturation%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandListWithCompletion:](mtrbaseclustercolorcontrol/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandListWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithCompletion:](mtrbaseclustercolorcontrol/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeListWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithCompletion:](mtrbaseclustercolorcontrol/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevisionWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorCapabilitiesWithCompletion:](mtrbaseclustercolorcontrol/readattributecolorcapabilities%28completion_%29.md)
+- [readAttributeColorCapabilitiesWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecolorcapabilities%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorLoopActiveWithCompletion:](mtrbaseclustercolorcontrol/readattributecolorloopactive%28completion_%29.md)
+- [readAttributeColorLoopActiveWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecolorloopactive%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorLoopDirectionWithCompletion:](mtrbaseclustercolorcontrol/readattributecolorloopdirection%28completion_%29.md)
+- [readAttributeColorLoopDirectionWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecolorloopdirection%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorLoopStartEnhancedHueWithCompletion:](mtrbaseclustercolorcontrol/readattributecolorloopstartenhancedhue%28completion_%29.md)
+- [readAttributeColorLoopStartEnhancedHueWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecolorloopstartenhancedhue%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorLoopStoredEnhancedHueWithCompletion:](mtrbaseclustercolorcontrol/readattributecolorloopstoredenhancedhue%28completion_%29.md)
+- [readAttributeColorLoopStoredEnhancedHueWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecolorloopstoredenhancedhue%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorLoopTimeWithCompletion:](mtrbaseclustercolorcontrol/readattributecolorlooptime%28completion_%29.md)
+- [readAttributeColorLoopTimeWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecolorlooptime%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorModeWithCompletion:](mtrbaseclustercolorcontrol/readattributecolormode%28completion_%29.md)
+- [readAttributeColorModeWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecolormode%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointBIntensityWithCompletion:](mtrbaseclustercolorcontrol/readattributecolorpointbintensity%28completion_%29.md)
+- [readAttributeColorPointBIntensityWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecolorpointbintensity%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointBXWithCompletion:](mtrbaseclustercolorcontrol/readattributecolorpointbx%28completion_%29.md)
+- [readAttributeColorPointBXWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecolorpointbx%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointBYWithCompletion:](mtrbaseclustercolorcontrol/readattributecolorpointby%28completion_%29.md)
+- [readAttributeColorPointBYWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecolorpointby%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointGIntensityWithCompletion:](mtrbaseclustercolorcontrol/readattributecolorpointgintensity%28completion_%29.md)
+- [readAttributeColorPointGIntensityWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecolorpointgintensity%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointGXWithCompletion:](mtrbaseclustercolorcontrol/readattributecolorpointgx%28completion_%29.md)
+- [readAttributeColorPointGXWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecolorpointgx%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointGYWithCompletion:](mtrbaseclustercolorcontrol/readattributecolorpointgy%28completion_%29.md)
+- [readAttributeColorPointGYWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecolorpointgy%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointRIntensityWithCompletion:](mtrbaseclustercolorcontrol/readattributecolorpointrintensity%28completion_%29.md)
+- [readAttributeColorPointRIntensityWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecolorpointrintensity%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointRXWithCompletion:](mtrbaseclustercolorcontrol/readattributecolorpointrx%28completion_%29.md)
+- [readAttributeColorPointRXWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecolorpointrx%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointRYWithCompletion:](mtrbaseclustercolorcontrol/readattributecolorpointry%28completion_%29.md)
+- [readAttributeColorPointRYWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecolorpointry%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorTempPhysicalMaxMiredsWithCompletion:](mtrbaseclustercolorcontrol/readattributecolortempphysicalmaxmireds%28completion_%29.md)
+- [readAttributeColorTempPhysicalMaxMiredsWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecolortempphysicalmaxmireds%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorTempPhysicalMinMiredsWithCompletion:](mtrbaseclustercolorcontrol/readattributecolortempphysicalminmireds%28completion_%29.md)
+- [readAttributeColorTempPhysicalMinMiredsWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecolortempphysicalminmireds%28completionhandler_%29.md): Deprecated.
+- [readAttributeColorTemperatureMiredsWithCompletion:](mtrbaseclustercolorcontrol/readattributecolortemperaturemireds%28completion_%29.md)
+- [readAttributeColorTemperatureMiredsWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecolortemperaturemireds%28completionhandler_%29.md): Deprecated.
+- [readAttributeCompensationTextWithCompletion:](mtrbaseclustercolorcontrol/readattributecompensationtext%28completion_%29.md)
+- [readAttributeCompensationTextWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecompensationtext%28completionhandler_%29.md): Deprecated.
+- [readAttributeCoupleColorTempToLevelMinMiredsWithCompletion:](mtrbaseclustercolorcontrol/readattributecouplecolortemptolevelminmireds%28completion_%29.md)
+- [readAttributeCoupleColorTempToLevelMinMiredsWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecouplecolortemptolevelminmireds%28completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentHueWithCompletion:](mtrbaseclustercolorcontrol/readattributecurrenthue%28completion_%29.md)
+- [readAttributeCurrentHueWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecurrenthue%28completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentSaturationWithCompletion:](mtrbaseclustercolorcontrol/readattributecurrentsaturation%28completion_%29.md)
+- [readAttributeCurrentSaturationWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecurrentsaturation%28completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentXWithCompletion:](mtrbaseclustercolorcontrol/readattributecurrentx%28completion_%29.md)
+- [readAttributeCurrentXWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecurrentx%28completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentYWithCompletion:](mtrbaseclustercolorcontrol/readattributecurrenty%28completion_%29.md)
+- [readAttributeCurrentYWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributecurrenty%28completionhandler_%29.md): Deprecated.
+- [readAttributeDriftCompensationWithCompletion:](mtrbaseclustercolorcontrol/readattributedriftcompensation%28completion_%29.md)
+- [readAttributeDriftCompensationWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributedriftcompensation%28completionhandler_%29.md): Deprecated.
+- [readAttributeEnhancedColorModeWithCompletion:](mtrbaseclustercolorcontrol/readattributeenhancedcolormode%28completion_%29.md)
+- [readAttributeEnhancedColorModeWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeenhancedcolormode%28completionhandler_%29.md): Deprecated.
+- [readAttributeEnhancedCurrentHueWithCompletion:](mtrbaseclustercolorcontrol/readattributeenhancedcurrenthue%28completion_%29.md)
+- [readAttributeEnhancedCurrentHueWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeenhancedcurrenthue%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithCompletion:](mtrbaseclustercolorcontrol/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMapWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithCompletion:](mtrbaseclustercolorcontrol/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandListWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfPrimariesWithCompletion:](mtrbaseclustercolorcontrol/readattributenumberofprimaries%28completion_%29.md)
+- [readAttributeNumberOfPrimariesWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributenumberofprimaries%28completionhandler_%29.md): Deprecated.
+- [readAttributeOptionsWithCompletion:](mtrbaseclustercolorcontrol/readattributeoptions%28completion_%29.md)
+- [readAttributeOptionsWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeoptions%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary1IntensityWithCompletion:](mtrbaseclustercolorcontrol/readattributeprimary1intensity%28completion_%29.md)
+- [readAttributePrimary1IntensityWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeprimary1intensity%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary1XWithCompletion:](mtrbaseclustercolorcontrol/readattributeprimary1x%28completion_%29.md)
+- [readAttributePrimary1XWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeprimary1x%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary1YWithCompletion:](mtrbaseclustercolorcontrol/readattributeprimary1y%28completion_%29.md)
+- [readAttributePrimary1YWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeprimary1y%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary2IntensityWithCompletion:](mtrbaseclustercolorcontrol/readattributeprimary2intensity%28completion_%29.md)
+- [readAttributePrimary2IntensityWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeprimary2intensity%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary2XWithCompletion:](mtrbaseclustercolorcontrol/readattributeprimary2x%28completion_%29.md)
+- [readAttributePrimary2XWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeprimary2x%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary2YWithCompletion:](mtrbaseclustercolorcontrol/readattributeprimary2y%28completion_%29.md)
+- [readAttributePrimary2YWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeprimary2y%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary3IntensityWithCompletion:](mtrbaseclustercolorcontrol/readattributeprimary3intensity%28completion_%29.md)
+- [readAttributePrimary3IntensityWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeprimary3intensity%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary3XWithCompletion:](mtrbaseclustercolorcontrol/readattributeprimary3x%28completion_%29.md)
+- [readAttributePrimary3XWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeprimary3x%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary3YWithCompletion:](mtrbaseclustercolorcontrol/readattributeprimary3y%28completion_%29.md)
+- [readAttributePrimary3YWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeprimary3y%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary4IntensityWithCompletion:](mtrbaseclustercolorcontrol/readattributeprimary4intensity%28completion_%29.md)
+- [readAttributePrimary4IntensityWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeprimary4intensity%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary4XWithCompletion:](mtrbaseclustercolorcontrol/readattributeprimary4x%28completion_%29.md)
+- [readAttributePrimary4XWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeprimary4x%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary4YWithCompletion:](mtrbaseclustercolorcontrol/readattributeprimary4y%28completion_%29.md)
+- [readAttributePrimary4YWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeprimary4y%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary5IntensityWithCompletion:](mtrbaseclustercolorcontrol/readattributeprimary5intensity%28completion_%29.md)
+- [readAttributePrimary5IntensityWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeprimary5intensity%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary5XWithCompletion:](mtrbaseclustercolorcontrol/readattributeprimary5x%28completion_%29.md)
+- [readAttributePrimary5XWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeprimary5x%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary5YWithCompletion:](mtrbaseclustercolorcontrol/readattributeprimary5y%28completion_%29.md)
+- [readAttributePrimary5YWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeprimary5y%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary6IntensityWithCompletion:](mtrbaseclustercolorcontrol/readattributeprimary6intensity%28completion_%29.md)
+- [readAttributePrimary6IntensityWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeprimary6intensity%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary6XWithCompletion:](mtrbaseclustercolorcontrol/readattributeprimary6x%28completion_%29.md)
+- [readAttributePrimary6XWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeprimary6x%28completionhandler_%29.md): Deprecated.
+- [readAttributePrimary6YWithCompletion:](mtrbaseclustercolorcontrol/readattributeprimary6y%28completion_%29.md)
+- [readAttributePrimary6YWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeprimary6y%28completionhandler_%29.md): Deprecated.
+- [readAttributeRemainingTimeWithCompletion:](mtrbaseclustercolorcontrol/readattributeremainingtime%28completion_%29.md)
+- [readAttributeRemainingTimeWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributeremainingtime%28completionhandler_%29.md): Deprecated.
+- [readAttributeStartUpColorTemperatureMiredsWithCompletion:](mtrbaseclustercolorcontrol/readattributestartupcolortemperaturemireds%28completion_%29.md)
+- [readAttributeStartUpColorTemperatureMiredsWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributestartupcolortemperaturemireds%28completionhandler_%29.md): Deprecated.
+- [readAttributeWhitePointXWithCompletion:](mtrbaseclustercolorcontrol/readattributewhitepointx%28completion_%29.md)
+- [readAttributeWhitePointXWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributewhitepointx%28completionhandler_%29.md): Deprecated.
+- [readAttributeWhitePointYWithCompletion:](mtrbaseclustercolorcontrol/readattributewhitepointy%28completion_%29.md)
+- [readAttributeWhitePointYWithCompletionHandler:](mtrbaseclustercolorcontrol/readattributewhitepointy%28completionhandler_%29.md): Deprecated.
+- [stepColorWithParams:completion:](mtrbaseclustercolorcontrol/stepcolor%28with_completion_%29.md)
+- [stepColorWithParams:completionHandler:](mtrbaseclustercolorcontrol/stepcolor%28with_completionhandler_%29.md): Deprecated.
+- [stepColorTemperatureWithParams:completion:](mtrbaseclustercolorcontrol/stepcolortemperature%28with_completion_%29.md)
+- [stepColorTemperatureWithParams:completionHandler:](mtrbaseclustercolorcontrol/stepcolortemperature%28with_completionhandler_%29.md): Deprecated.
+- [stepHueWithParams:completion:](mtrbaseclustercolorcontrol/stephue%28with_completion_%29.md)
+- [stepHueWithParams:completionHandler:](mtrbaseclustercolorcontrol/stephue%28with_completionhandler_%29.md): Deprecated.
+- [stepSaturationWithParams:completion:](mtrbaseclustercolorcontrol/stepsaturation%28with_completion_%29.md)
+- [stepSaturationWithParams:completionHandler:](mtrbaseclustercolorcontrol/stepsaturation%28with_completionhandler_%29.md): Deprecated.
+- [stopMoveStepWithParams:completion:](mtrbaseclustercolorcontrol/stopmovestep%28with_completion_%29.md)
+- [stopMoveStepWithParams:completionHandler:](mtrbaseclustercolorcontrol/stopmovestep%28with_completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevisionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevisionWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorCapabilitiesWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorcapabilities%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorCapabilitiesWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorcapabilities%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorLoopActiveWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorloopactive%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorLoopActiveWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorloopactive%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorLoopDirectionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorloopdirection%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorLoopDirectionWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorloopdirection%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorLoopStartEnhancedHueWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorloopstartenhancedhue%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorLoopStartEnhancedHueWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorloopstartenhancedhue%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorLoopStoredEnhancedHueWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorloopstoredenhancedhue%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorLoopStoredEnhancedHueWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorloopstoredenhancedhue%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorLoopTimeWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorlooptime%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorLoopTimeWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorlooptime%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorModeWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolormode%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorModeWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolormode%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorPointBIntensityWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorpointbintensity%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorPointBIntensityWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorpointbintensity%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorPointBXWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorpointbx%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorPointBXWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorpointbx%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorPointBYWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorpointby%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorPointBYWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorpointby%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorPointGIntensityWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorpointgintensity%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorPointGIntensityWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorpointgintensity%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorPointGXWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorpointgx%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorPointGXWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorpointgx%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorPointGYWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorpointgy%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorPointGYWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorpointgy%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorPointRIntensityWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorpointrintensity%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorPointRIntensityWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorpointrintensity%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorPointRXWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorpointrx%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorPointRXWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorpointrx%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorPointRYWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorpointry%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorPointRYWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolorpointry%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorTempPhysicalMaxMiredsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolortempphysicalmaxmireds%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorTempPhysicalMaxMiredsWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolortempphysicalmaxmireds%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorTempPhysicalMinMiredsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolortempphysicalminmireds%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorTempPhysicalMinMiredsWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolortempphysicalminmireds%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeColorTemperatureMiredsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolortemperaturemireds%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeColorTemperatureMiredsWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecolortemperaturemireds%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCompensationTextWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecompensationtext%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCompensationTextWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecompensationtext%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCoupleColorTempToLevelMinMiredsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecouplecolortemptolevelminmireds%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCoupleColorTempToLevelMinMiredsWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecouplecolortemptolevelminmireds%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCurrentHueWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecurrenthue%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentHueWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecurrenthue%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCurrentSaturationWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecurrentsaturation%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentSaturationWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecurrentsaturation%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCurrentXWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecurrentx%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentXWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecurrentx%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCurrentYWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecurrenty%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentYWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributecurrenty%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeDriftCompensationWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributedriftcompensation%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeDriftCompensationWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributedriftcompensation%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeEnhancedColorModeWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeenhancedcolormode%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeEnhancedColorModeWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeenhancedcolormode%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeEnhancedCurrentHueWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeenhancedcurrenthue%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeEnhancedCurrentHueWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeenhancedcurrenthue%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMapWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMapWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNumberOfPrimariesWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributenumberofprimaries%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfPrimariesWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributenumberofprimaries%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeOptionsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeoptions%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeOptionsWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeoptions%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary1IntensityWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary1intensity%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary1IntensityWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary1intensity%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary1XWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary1x%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary1XWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary1x%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary1YWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary1y%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary1YWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary1y%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary2IntensityWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary2intensity%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary2IntensityWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary2intensity%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary2XWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary2x%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary2XWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary2x%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary2YWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary2y%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary2YWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary2y%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary3IntensityWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary3intensity%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary3IntensityWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary3intensity%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary3XWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary3x%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary3XWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary3x%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary3YWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary3y%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary3YWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary3y%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary4IntensityWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary4intensity%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary4IntensityWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary4intensity%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary4XWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary4x%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary4XWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary4x%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary4YWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary4y%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary4YWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary4y%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary5IntensityWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary5intensity%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary5IntensityWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary5intensity%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary5XWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary5x%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary5XWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary5x%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary5YWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary5y%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary5YWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary5y%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary6IntensityWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary6intensity%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary6IntensityWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary6intensity%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary6XWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary6x%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary6XWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary6x%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePrimary6YWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary6y%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePrimary6YWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeprimary6y%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeRemainingTimeWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeremainingtime%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeRemainingTimeWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributeremainingtime%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeStartUpColorTemperatureMiredsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributestartupcolortemperaturemireds%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeStartUpColorTemperatureMiredsWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributestartupcolortemperaturemireds%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeWhitePointXWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributewhitepointx%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeWhitePointXWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributewhitepointx%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeWhitePointYWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributewhitepointy%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeWhitePointYWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustercolorcontrol/subscribeattributewhitepointy%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [writeAttributeColorPointBIntensityWithValue:completion:](mtrbaseclustercolorcontrol/writeattributecolorpointbintensity%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeColorPointBIntensityWithValue:completionHandler:](mtrbaseclustercolorcontrol/writeattributecolorpointbintensity%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointBIntensityWithValue:params:completion:](mtrbaseclustercolorcontrol/writeattributecolorpointbintensity%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeColorPointBIntensityWithValue:params:completionHandler:](mtrbaseclustercolorcontrol/writeattributecolorpointbintensity%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointBXWithValue:completion:](mtrbaseclustercolorcontrol/writeattributecolorpointbx%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeColorPointBXWithValue:completionHandler:](mtrbaseclustercolorcontrol/writeattributecolorpointbx%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointBXWithValue:params:completion:](mtrbaseclustercolorcontrol/writeattributecolorpointbx%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeColorPointBXWithValue:params:completionHandler:](mtrbaseclustercolorcontrol/writeattributecolorpointbx%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointBYWithValue:completion:](mtrbaseclustercolorcontrol/writeattributecolorpointby%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeColorPointBYWithValue:completionHandler:](mtrbaseclustercolorcontrol/writeattributecolorpointby%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointBYWithValue:params:completion:](mtrbaseclustercolorcontrol/writeattributecolorpointby%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeColorPointBYWithValue:params:completionHandler:](mtrbaseclustercolorcontrol/writeattributecolorpointby%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointGIntensityWithValue:completion:](mtrbaseclustercolorcontrol/writeattributecolorpointgintensity%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeColorPointGIntensityWithValue:completionHandler:](mtrbaseclustercolorcontrol/writeattributecolorpointgintensity%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointGIntensityWithValue:params:completion:](mtrbaseclustercolorcontrol/writeattributecolorpointgintensity%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeColorPointGIntensityWithValue:params:completionHandler:](mtrbaseclustercolorcontrol/writeattributecolorpointgintensity%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointGXWithValue:completion:](mtrbaseclustercolorcontrol/writeattributecolorpointgx%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeColorPointGXWithValue:completionHandler:](mtrbaseclustercolorcontrol/writeattributecolorpointgx%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointGXWithValue:params:completion:](mtrbaseclustercolorcontrol/writeattributecolorpointgx%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeColorPointGXWithValue:params:completionHandler:](mtrbaseclustercolorcontrol/writeattributecolorpointgx%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointGYWithValue:completion:](mtrbaseclustercolorcontrol/writeattributecolorpointgy%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeColorPointGYWithValue:completionHandler:](mtrbaseclustercolorcontrol/writeattributecolorpointgy%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointGYWithValue:params:completion:](mtrbaseclustercolorcontrol/writeattributecolorpointgy%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeColorPointGYWithValue:params:completionHandler:](mtrbaseclustercolorcontrol/writeattributecolorpointgy%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointRIntensityWithValue:completion:](mtrbaseclustercolorcontrol/writeattributecolorpointrintensity%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeColorPointRIntensityWithValue:completionHandler:](mtrbaseclustercolorcontrol/writeattributecolorpointrintensity%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointRIntensityWithValue:params:completion:](mtrbaseclustercolorcontrol/writeattributecolorpointrintensity%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeColorPointRIntensityWithValue:params:completionHandler:](mtrbaseclustercolorcontrol/writeattributecolorpointrintensity%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointRXWithValue:completion:](mtrbaseclustercolorcontrol/writeattributecolorpointrx%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeColorPointRXWithValue:completionHandler:](mtrbaseclustercolorcontrol/writeattributecolorpointrx%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointRXWithValue:params:completion:](mtrbaseclustercolorcontrol/writeattributecolorpointrx%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeColorPointRXWithValue:params:completionHandler:](mtrbaseclustercolorcontrol/writeattributecolorpointrx%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointRYWithValue:completion:](mtrbaseclustercolorcontrol/writeattributecolorpointry%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeColorPointRYWithValue:completionHandler:](mtrbaseclustercolorcontrol/writeattributecolorpointry%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeColorPointRYWithValue:params:completion:](mtrbaseclustercolorcontrol/writeattributecolorpointry%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeColorPointRYWithValue:params:completionHandler:](mtrbaseclustercolorcontrol/writeattributecolorpointry%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeOptionsWithValue:completion:](mtrbaseclustercolorcontrol/writeattributeoptions%28withvalue_completion_%29.md)
+- [writeAttributeOptionsWithValue:completionHandler:](mtrbaseclustercolorcontrol/writeattributeoptions%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeOptionsWithValue:params:completion:](mtrbaseclustercolorcontrol/writeattributeoptions%28withvalue_params_completion_%29.md)
+- [writeAttributeOptionsWithValue:params:completionHandler:](mtrbaseclustercolorcontrol/writeattributeoptions%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeStartUpColorTemperatureMiredsWithValue:completion:](mtrbaseclustercolorcontrol/writeattributestartupcolortemperaturemireds%28withvalue_completion_%29.md)
+- [writeAttributeStartUpColorTemperatureMiredsWithValue:completionHandler:](mtrbaseclustercolorcontrol/writeattributestartupcolortemperaturemireds%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeStartUpColorTemperatureMiredsWithValue:params:completion:](mtrbaseclustercolorcontrol/writeattributestartupcolortemperaturemireds%28withvalue_params_completion_%29.md)
+- [writeAttributeStartUpColorTemperatureMiredsWithValue:params:completionHandler:](mtrbaseclustercolorcontrol/writeattributestartupcolortemperaturemireds%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeWhitePointXWithValue:completion:](mtrbaseclustercolorcontrol/writeattributewhitepointx%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeWhitePointXWithValue:completionHandler:](mtrbaseclustercolorcontrol/writeattributewhitepointx%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeWhitePointXWithValue:params:completion:](mtrbaseclustercolorcontrol/writeattributewhitepointx%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeWhitePointXWithValue:params:completionHandler:](mtrbaseclustercolorcontrol/writeattributewhitepointx%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeWhitePointYWithValue:completion:](mtrbaseclustercolorcontrol/writeattributewhitepointy%28withvalue_completion_%29.md): Deprecated.
+- [writeAttributeWhitePointYWithValue:completionHandler:](mtrbaseclustercolorcontrol/writeattributewhitepointy%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeWhitePointYWithValue:params:completion:](mtrbaseclustercolorcontrol/writeattributewhitepointy%28withvalue_params_completion_%29.md): Deprecated.
+- [writeAttributeWhitePointYWithValue:params:completionHandler:](mtrbaseclustercolorcontrol/writeattributewhitepointy%28withvalue_params_completionhandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevisionWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorCapabilitiesWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecolorcapabilities%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorCapabilitiesWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecolorcapabilities%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorLoopActiveWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecolorloopactive%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorLoopActiveWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecolorloopactive%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorLoopDirectionWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecolorloopdirection%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorLoopDirectionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecolorloopdirection%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorLoopStartEnhancedHueWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecolorloopstartenhancedhue%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorLoopStartEnhancedHueWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecolorloopstartenhancedhue%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorLoopStoredEnhancedHueWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecolorloopstoredenhancedhue%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorLoopStoredEnhancedHueWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecolorloopstoredenhancedhue%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorLoopTimeWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecolorlooptime%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorLoopTimeWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecolorlooptime%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorModeWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecolormode%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorModeWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecolormode%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorPointBIntensityWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecolorpointbintensity%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointBIntensityWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecolorpointbintensity%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorPointBXWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecolorpointbx%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointBXWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecolorpointbx%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorPointBYWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecolorpointby%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointBYWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecolorpointby%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorPointGIntensityWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecolorpointgintensity%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointGIntensityWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecolorpointgintensity%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorPointGXWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecolorpointgx%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointGXWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecolorpointgx%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorPointGYWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecolorpointgy%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointGYWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecolorpointgy%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorPointRIntensityWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecolorpointrintensity%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointRIntensityWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecolorpointrintensity%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorPointRXWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecolorpointrx%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointRXWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecolorpointrx%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorPointRYWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecolorpointry%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorPointRYWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecolorpointry%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorTempPhysicalMaxMiredsWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecolortempphysicalmaxmireds%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorTempPhysicalMaxMiredsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecolortempphysicalmaxmireds%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorTempPhysicalMinMiredsWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecolortempphysicalminmireds%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorTempPhysicalMinMiredsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecolortempphysicalminmireds%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeColorTemperatureMiredsWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecolortemperaturemireds%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeColorTemperatureMiredsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecolortemperaturemireds%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCompensationTextWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecompensationtext%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCompensationTextWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecompensationtext%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCoupleColorTempToLevelMinMiredsWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecouplecolortemptolevelminmireds%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCoupleColorTempToLevelMinMiredsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecouplecolortemptolevelminmireds%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentHueWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecurrenthue%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentHueWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecurrenthue%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentSaturationWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecurrentsaturation%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentSaturationWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecurrentsaturation%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentXWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecurrentx%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentXWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecurrentx%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentYWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributecurrenty%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentYWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributecurrenty%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeDriftCompensationWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributedriftcompensation%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeDriftCompensationWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributedriftcompensation%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeEnhancedColorModeWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeenhancedcolormode%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeEnhancedColorModeWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeenhancedcolormode%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeEnhancedCurrentHueWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeenhancedcurrenthue%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeEnhancedCurrentHueWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeenhancedcurrenthue%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMapWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfPrimariesWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributenumberofprimaries%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfPrimariesWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributenumberofprimaries%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeOptionsWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeoptions%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeOptionsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeoptions%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary1IntensityWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeprimary1intensity%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary1IntensityWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeprimary1intensity%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary1XWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeprimary1x%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary1XWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeprimary1x%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary1YWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeprimary1y%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary1YWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeprimary1y%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary2IntensityWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeprimary2intensity%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary2IntensityWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeprimary2intensity%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary2XWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeprimary2x%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary2XWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeprimary2x%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary2YWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeprimary2y%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary2YWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeprimary2y%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary3IntensityWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeprimary3intensity%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary3IntensityWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeprimary3intensity%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary3XWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeprimary3x%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary3XWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeprimary3x%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary3YWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeprimary3y%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary3YWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeprimary3y%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary4IntensityWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeprimary4intensity%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary4IntensityWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeprimary4intensity%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary4XWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeprimary4x%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary4XWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeprimary4x%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary4YWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeprimary4y%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary4YWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeprimary4y%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary5IntensityWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeprimary5intensity%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary5IntensityWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeprimary5intensity%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary5XWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeprimary5x%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary5XWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeprimary5x%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary5YWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeprimary5y%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary5YWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeprimary5y%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary6IntensityWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeprimary6intensity%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary6IntensityWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeprimary6intensity%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary6XWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeprimary6x%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary6XWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeprimary6x%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePrimary6YWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeprimary6y%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePrimary6YWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeprimary6y%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeRemainingTimeWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributeremainingtime%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeRemainingTimeWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributeremainingtime%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeStartUpColorTemperatureMiredsWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributestartupcolortemperaturemireds%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeStartUpColorTemperatureMiredsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributestartupcolortemperaturemireds%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeWhitePointXWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributewhitepointx%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeWhitePointXWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributewhitepointx%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeWhitePointYWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustercolorcontrol/readattributewhitepointy%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeWhitePointYWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustercolorcontrol/readattributewhitepointy%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)

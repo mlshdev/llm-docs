@@ -1,0 +1,97 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/scenekit/scnmaterial/ambient](https://developer.apple.com/documentation/scenekit/scnmaterial/ambient)
+
+# ambient (Swift)
+
+**Framework:** SceneKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ (deprecated in 26.0) · iPadOS 8.0+ (deprecated in 26.0) · Mac Catalyst 13.1+ (deprecated in 26.0) · macOS 10.8+ (deprecated in 26.0) · tvOS 9.0+ (deprecated in 26.0) · visionOS 1.0+ (deprecated in 26.0) · watchOS 3.0+ (deprecated in 26.0)
+
+An object that manages the material’s response to ambient lighting.
+
+## Declaration
+
+```swift
+var ambient: SCNMaterialProperty { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Ambient shading describes the amount and color of ambient light reflected by the material. Ambient shading is uniform in all directions at all points on a surface. If a scene does not contain lights whose type is [ambient](../scnlight/lighttype/ambient.md), this property has no effect on a material’s appearance.
+
+By default, the ambient property’s [contents](../scnmaterialproperty/contents.md) object is a dark gray color. Changing the ambient property’s contents lets you specify a different color or texture for the areas of a surface not directly illuminated by lights in a scene. To make the material respond identically to both ambient and diffuse light, set its [locksAmbientWithDiffuse](locksambientwithdiffuse.md) property to [true](https://developer.apple.com/documentation/swift/true).
+
+The figure below shows a material (with a texture for its [diffuse](diffuse.md) property) before and after setting the ambient property’s contents to a solid color.
+
+![](https://developer.apple.com/images/com.apple.scenekit/media-2934161@2x.png)
+
+The material’s [lightingModel](lightingmodel-swift.property.md) property determines the formula SceneKit uses to combine its ambient color and other visual properties with lights and other contents in a scene to produce the final color for each rendered pixel in the rendered scene. For details, see `Lighting Models`.
+
+This material property does not apply to physically-based materials (see [physicallyBased](lightingmodel-swift.struct/physicallybased.md)).
+
+## See Also
+
+### Related Documentation
+
+- [normal](normal.md): An object that defines the nominal orientation of the surface at each point for use in lighting.
+- [emission](emission.md): An object that defines the color emitted by each point on a surface.
+
+### Visual Properties for Basic Shading
+
+- [diffuse](diffuse.md): An object that manages the material’s diffuse response to lighting.
+- [specular](specular.md): An object that manages the material’s specular response to lighting.
+- [reflective](reflective.md): An object that defines the reflected color for each point on a surface.
+- [multiply](multiply.md): An object that provides color values that are multiplied with pixels in a material after all other shading is complete.
+- [transparent](transparent.md): An object that determines the opacity of each point in a material.
+- [shininess](shininess.md): The sharpness of specular highlights. Animatable.
+- [fresnelExponent](fresnelexponent.md): A factor affecting the material’s reflectivity. Animatable.
+- [locksAmbientWithDiffuse](locksambientwithdiffuse.md): A Boolean value that determines whether the material responds identically to both ambient and diffuse lighting. Animatable.
+
+# ambient (Objective-C)
+
+**Framework:** SceneKit  
+**Kind:** Instance Property  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+An object that manages the material’s response to ambient lighting.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) SCNMaterialProperty * ambient;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Ambient shading describes the amount and color of ambient light reflected by the material. Ambient shading is uniform in all directions at all points on a surface. If a scene does not contain lights whose type is [SCNLightTypeAmbient](../scnlight/lighttype/ambient.md), this property has no effect on a material’s appearance.
+
+By default, the ambient property’s [contents](../scnmaterialproperty/contents.md) object is a dark gray color. Changing the ambient property’s contents lets you specify a different color or texture for the areas of a surface not directly illuminated by lights in a scene. To make the material respond identically to both ambient and diffuse light, set its [locksAmbientWithDiffuse](locksambientwithdiffuse.md) property to [true](https://developer.apple.com/documentation/swift/true).
+
+The figure below shows a material (with a texture for its [diffuse](diffuse.md) property) before and after setting the ambient property’s contents to a solid color.
+
+![](https://developer.apple.com/images/com.apple.scenekit/media-2934161@2x.png)
+
+The material’s [lightingModelName](lightingmodel-swift.property.md) property determines the formula SceneKit uses to combine its ambient color and other visual properties with lights and other contents in a scene to produce the final color for each rendered pixel in the rendered scene. For details, see `Lighting Models`.
+
+This material property does not apply to physically-based materials (see [SCNLightingModelPhysicallyBased](lightingmodel-swift.struct/physicallybased.md)).
+
+## See Also
+
+### Related Documentation
+
+- [normal](normal.md): An object that defines the nominal orientation of the surface at each point for use in lighting.
+- [emission](emission.md): An object that defines the color emitted by each point on a surface.
+
+### Visual Properties for Basic Shading
+
+- [diffuse](diffuse.md): An object that manages the material’s diffuse response to lighting.
+- [specular](specular.md): An object that manages the material’s specular response to lighting.
+- [reflective](reflective.md): An object that defines the reflected color for each point on a surface.
+- [multiply](multiply.md): An object that provides color values that are multiplied with pixels in a material after all other shading is complete.
+- [transparent](transparent.md): An object that determines the opacity of each point in a material.
+- [shininess](shininess.md): The sharpness of specular highlights. Animatable.
+- [fresnelExponent](fresnelexponent.md): A factor affecting the material’s reflectivity. Animatable.
+- [locksAmbientWithDiffuse](locksambientwithdiffuse.md): A Boolean value that determines whether the material responds identically to both ambient and diffuse lighting. Animatable.

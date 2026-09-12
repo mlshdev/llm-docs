@@ -1,0 +1,88 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v1-apps-_id_-betalicenseagreement](https://developer.apple.com/documentation/appstoreconnectapi/get-v1-apps-_id_-betalicenseagreement)
+
+# Read the beta license agreement of an app
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Web Service Endpoint  
+**Availability:** App Store Connect API 1.0+
+
+Get the beta license agreement for a specific app.
+
+## URL
+
+```http
+GET https://api.appstoreconnect.apple.com/v1/apps/{id}/betaLicenseAgreement
+```
+
+## Path Parameters
+
+- `id` — `string` (required): An opaque resource ID that uniquely identifies the resource. Obtain the app resource ID from the [List apps](get-v1-apps.md) response.
+
+## Query Parameters
+
+- `fields[betaLicenseAgreements]` — `[string]`: Additional fields to include for each beta license agreement resource returned by the response.
+  **Allowed values:** `agreementText`, `app`
+
+## Response Codes
+
+- `200` OK — `BetaLicenseAgreementWithoutIncludesResponse`:
+- `400` Bad Request — `ErrorResponse`: An error occurred with your request.
+- `401` Unauthorized — `ErrorResponse`:
+- `403` Forbidden — `ErrorResponse`: Request not authorized.
+- `404` Not Found — `ErrorResponse`: Resource not found.
+- `429` — `ErrorResponse`:
+
+<a id="Discussion"></a>
+
+## Discussion
+
+<a id="Example-Request-and-Response"></a>
+
+### Example Request and Response
+
+**Request**
+
+```
+https://api.appstoreconnect.apple.com/v1/apps/6446998023/betaLicenseAgreement
+```
+
+**Response**
+
+```json
+{
+    "data": {
+        "type": "betaLicenseAgreements",
+        "id": "66237ae8-4920-497d-90f5-3f9acc76ec95",
+        "attributes": {
+            "agreementText": "This is the Beta License Agreement for your Your Next Cortado. You are testing pre-release version of this app. Here are some more thoughts about a beta coffee app. The coffee might not be dialed in and you may experience less than perfect coffee."
+        },
+        "relationships": {
+            "app": {
+                "links": {
+                    "self": "https://api.appstoreconnect.apple.com/v1/betaLicenseAgreements/66237ae8-4920-497d-90f5-3f9acc76ec95/relationships/app",
+                    "related": "https://api.appstoreconnect.apple.com/v1/betaLicenseAgreements/66237ae8-4920-497d-90f5-3f9acc76ec95/app"
+                }
+            }
+        },
+        "links": {
+            "self": "https://api.appstoreconnect.apple.com/v1/betaLicenseAgreements/66237ae8-4920-497d-90f5-3f9acc76ec95"
+        }
+    },
+    "links": {
+        "self": "https://api.appstoreconnect.apple.com/v1/apps/6446998023/betaLicenseAgreement"
+    }
+}
+```
+
+## See Also
+
+### Getting an app’s TestFlight details
+
+- [Read the beta app review details resource of an app](get-v1-apps-_id_-betaappreviewdetail.md): Get the beta app review details for a specific app.
+- [Get the beta app review detail ID for an app](get-v1-apps-_id_-relationships-betaappreviewdetail.md)
+- [Get the beta app review detail ID for an app](get-v1-apps-_id_-relationships-betaappreviewdetail.md)
+- [Get the beta license agreement ID for an app](get-v1-apps-_id_-relationships-betalicenseagreement.md)
+- [List all beta app localizations of an app](get-v1-apps-_id_-betaapplocalizations.md): Get a list of localized beta test information for a specific app.
+- [List beta app localization IDs for an app](get-v1-apps-_id_-relationships-betaapplocalizations.md)

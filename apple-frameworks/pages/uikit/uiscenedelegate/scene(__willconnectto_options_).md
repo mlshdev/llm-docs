@@ -1,0 +1,101 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiscenedelegate/scene(_:willconnectto:options:)](https://developer.apple.com/documentation/uikit/uiscenedelegate/scene(_:willconnectto:options:))
+
+# scene(\_:willConnectTo:options:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · tvOS 13.0+ · visionOS 1.0+
+
+Tells the delegate about the addition of a scene to the app.
+
+## Declaration
+
+```swift
+optional func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions)
+```
+
+## Parameters
+
+- `scene`: The scene object being connected to your app.
+- `session`: The session object containing details about the scene’s configuration.
+- `connectionOptions`: Additional options for configuring the scene. Use the information in this object to handle actions that caused the creation of the scene, for example, to respond to a quick action selected by the user.
+
+## Mentioned In
+
+- [Presenting content on a connected display](../presenting-content-on-a-connected-display.md)
+- [About the app launch sequence](../about-the-app-launch-sequence.md)
+- [Transitioning to the UIKit scene-based life cycle](../transitioning-to-the-uikit-scene-based-life-cycle.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method is called when your app creates or restores an instance of your user interface.
+
+When the user or your app requests a new instance of your user interface, UIKit creates an appropriate scene object and connects it to your app. Use this method to respond to the addition of the new scene and to begin loading any data that the scene needs to display.
+
+When your app responds to scene activations requests, for example, by using [requestSceneSessionActivation(\_:userActivity:options:errorHandler:)](../uiapplication/requestscenesessionactivation%28__useractivity_options_errorhandler_%29.md), the user activity is in the [userActivities](../uiscene/connectionoptions/useractivities.md) set provided by options.
+
+When the user reactivates an instance of your user interface, UIKit creates a scene object and populates it with saved state, provided by  [stateRestorationActivity(for:)](staterestorationactivity%28for_%29.md). When your app restores state, the user activity is presented in the [stateRestorationActivity](../uiscenesession/staterestorationactivity.md) property of session.
+
+In addition to calling this method, UIKit also posts a [willConnectNotification](../uiscene/willconnectnotification.md) notification.
+
+## Topics
+
+### Window Scenes
+
+- [Supporting multiple windows on iPad](../supporting-multiple-windows-on-ipad.md): Support side-by-side instances of your app’s interface and create new windows.
+
+## See Also
+
+### Connecting and disconnecting the scene
+
+- [sceneDidDisconnect(\_:)](scenediddisconnect%28__%29.md): Tells the delegate that UIKit removed a scene from your app.
+- [UIScene.ConnectionOptions](../uiscene/connectionoptions.md): A data object containing information about the reasons why UIKit created the scene.
+
+# scene:willConnectToSession:options: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · tvOS 13.0+ · visionOS 1.0+
+
+Tells the delegate about the addition of a scene to the app.
+
+## Declaration
+
+```objectivec
+- (void) scene:(UIScene *) scene willConnectToSession:(UISceneSession *) session options:(UISceneConnectionOptions *) connectionOptions;
+```
+
+## Parameters
+
+- `scene`: The scene object being connected to your app.
+- `session`: The session object containing details about the scene’s configuration.
+- `connectionOptions`: Additional options for configuring the scene. Use the information in this object to handle actions that caused the creation of the scene, for example, to respond to a quick action selected by the user.
+
+## Mentioned In
+
+- [Presenting content on a connected display](../presenting-content-on-a-connected-display.md)
+- [About the app launch sequence](../about-the-app-launch-sequence.md)
+- [Transitioning to the UIKit scene-based life cycle](../transitioning-to-the-uikit-scene-based-life-cycle.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method is called when your app creates or restores an instance of your user interface.
+
+When the user or your app requests a new instance of your user interface, UIKit creates an appropriate scene object and connects it to your app. Use this method to respond to the addition of the new scene and to begin loading any data that the scene needs to display.
+
+When your app responds to scene activations requests, for example, by using [requestSceneSessionActivation:userActivity:options:errorHandler:](../uiapplication/requestscenesessionactivation%28__useractivity_options_errorhandler_%29.md), the user activity is in the [userActivities](../uiscene/connectionoptions/useractivities.md) set provided by options.
+
+When the user reactivates an instance of your user interface, UIKit creates a scene object and populates it with saved state, provided by  [stateRestorationActivityForScene:](staterestorationactivity%28for_%29.md). When your app restores state, the user activity is presented in the [stateRestorationActivity](../uiscenesession/staterestorationactivity.md) property of session.
+
+In addition to calling this method, UIKit also posts a [UISceneWillConnectNotification](../uiscene/willconnectnotification.md) notification.
+
+## See Also
+
+### Connecting and disconnecting the scene
+
+- [sceneDidDisconnect:](scenediddisconnect%28__%29.md): Tells the delegate that UIKit removed a scene from your app.
+- [UISceneConnectionOptions](../uiscene/connectionoptions.md): A data object containing information about the reasons why UIKit created the scene.

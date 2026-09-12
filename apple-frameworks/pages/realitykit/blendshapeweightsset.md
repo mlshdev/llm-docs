@@ -1,0 +1,74 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/blendshapeweightsset](https://developer.apple.com/documentation/realitykit/blendshapeweightsset)
+
+# BlendShapeWeightsSet
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
+
+A custom collection of named blend shape weights.
+
+## Declaration
+
+```swift
+struct BlendShapeWeightsSet
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Retrieve a `BlendShapeWeightsSet` from a [BlendShapeWeightsComponent](blendshapeweightscomponent.md) to access the current weights and weight names for each blend shape managed by the component.
+
+Set the current weights for a blend shape by assigning a `BlendShapeWeightsSet` to a [BlendShapeWeightsComponent](blendshapeweightscomponent.md) for a specific blend shape.
+
+The collection allows:
+
+- Access to elements by name.
+- Protection that prohibits updating an element, where such an update would try to rename the stored element.
+
+[BlendShapeWeightsSet](blendshapeweightsset.md) does not support addition/removal of elements, as the blend shape weights are defined in the asset and the number and names of the weights are immutable.
+
+## Topics
+
+### Initializers
+
+- [init()](blendshapeweightsset/init%28%29.md): Creates an empty set.
+
+### Instance Properties
+
+- [count](blendshapeweightsset/count.md): Number of blend shape weight data in the set.
+- [default](blendshapeweightsset/default.md): The blend shape weights data set that drives the model.
+- [isEmpty](blendshapeweightsset/isempty.md): Checks if the set contains any blend shape weights data.
+
+### Instance Methods
+
+- [contains(\_:)](blendshapeweightsset/contains%28__%29.md): Checks if the set contains a blend shape weights data instance with the given name.
+- [index(of:)](blendshapeweightsset/index%28of_%29.md): Returns the index where the specified blend shape weights data appears in the collection.
+- [set(\_:)](blendshapeweightsset/set%28__%29.md): Updates a blend shape weights data instance in the set based on its name. If blend shape weights data with this ID does not exist, does nothing.
+
+### Subscripts
+
+- [subscript(\_:)](blendshapeweightsset/subscript%28__%29.md): Accessor for reading a blend shape weights data in the set.
+
+### Default Implementations
+
+- [Collection Implementations](blendshapeweightsset/collection-implementations.md)
+
+## Relationships
+
+### Conforms To
+
+- [Collection](https://developer.apple.com/documentation/swift/collection)
+- [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [Escapable](https://developer.apple.com/documentation/swift/escapable)
+- [Sequence](https://developer.apple.com/documentation/swift/sequence)
+
+## See Also
+
+### Blend shape management
+
+- [BlendShapeWeightsComponent](blendshapeweightscomponent.md): A component that provides access to the current weights associated with all blend shape meshes on an entity.
+- [BlendShapeWeightsMapping](blendshapeweightsmapping.md): A mapping of blend weights to the target meshes that those weights affect.
+- [BlendShapeWeights](blendshapeweights.md): A set of animatable weight values that collectively represent the blending amounts for all the blend shapes’ blend targets.
+- [BlendShapeWeightsData](blendshapeweightsdata.md): A structure that encapsulates the blend shape name, blend shape weights and the names of those weights to be stored by the blend shape weights set.

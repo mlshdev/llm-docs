@@ -1,0 +1,71 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uisearchdisplaycontroller/searchresultstitle](https://developer.apple.com/documentation/uikit/uisearchdisplaycontroller/searchresultstitle)
+
+# searchResultsTitle (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 5.0+ (deprecated in 8.0) · iPadOS 5.0+ (deprecated in 8.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+The title for the search results view.
+
+## Declaration
+
+```swift
+var searchResultsTitle: String? { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The default value is `nil`.
+
+If the value is `nil`, the controller uses the default title string.
+
+## See Also
+
+### Configuring a search bar
+
+- [delegate](delegate.md): Deprecated. The controller’s delegate.
+- [searchBar](searchbar.md): Deprecated. The search bar.
+- [searchContentsController](searchcontentscontroller.md): Deprecated. The view controller that manages the contents being searched.
+- [searchResultsTableView](searchresultstableview.md): Deprecated. The table view in which the search results are displayed.
+- [searchResultsDataSource](searchresultsdatasource.md): Deprecated. The data source for the table view in which the search results are displayed.
+- [searchResultsDelegate](searchresultsdelegate.md): Deprecated. The delegate for the table view in which the search results are displayed.
+- [displaysSearchBarInNavigationBar](displayssearchbarinnavigationbar.md): Deprecated. Specifies that the navigation bar contains a search bar.
+- [navigationItem](navigationitem.md): Deprecated. Represents the search display controller in a navigation controller’s navigation bar.
+
+# searchResultsTitle (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 5.0+ (deprecated in 8.0) · iPadOS 5.0+ (deprecated in 8.0) · Mac Catalyst 13.1+ (deprecated in 13.1)
+
+The title for the search results view.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSString * searchResultsTitle;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The default value is `nil`.
+
+If the value is `nil`, the controller uses the default title string.
+
+## See Also
+
+### Configuring a search bar
+
+- [delegate](delegate.md): Deprecated. The controller’s delegate.
+- [searchBar](searchbar.md): Deprecated. The search bar.
+- [searchContentsController](searchcontentscontroller.md): Deprecated. The view controller that manages the contents being searched.
+- [searchResultsTableView](searchresultstableview.md): Deprecated. The table view in which the search results are displayed.
+- [searchResultsDataSource](searchresultsdatasource.md): Deprecated. The data source for the table view in which the search results are displayed.
+- [searchResultsDelegate](searchresultsdelegate.md): Deprecated. The delegate for the table view in which the search results are displayed.
+- [displaysSearchBarInNavigationBar](displayssearchbarinnavigationbar.md): Deprecated. Specifies that the navigation bar contains a search bar.
+- [navigationItem](navigationitem.md): Deprecated. Represents the search display controller in a navigation controller’s navigation bar.

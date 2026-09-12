@@ -1,0 +1,31 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/date/intervalformatstyle/init(date:time:locale:calendar:timezone:)](https://developer.apple.com/documentation/foundation/date/intervalformatstyle/init(date:time:locale:calendar:timezone:))
+
+# init(date:time:locale:calendar:timeZone:)
+
+**Framework:** Foundation  
+**Kind:** Initializer  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+
+Creates an instance using the provided date, time, locale, calendar, time zone, and capitalization context.
+
+## Declaration
+
+```swift
+init(date: Date.IntervalFormatStyle.DateStyle? = nil, time: Date.IntervalFormatStyle.TimeStyle? = nil, locale: Locale = .autoupdatingCurrent, calendar: Calendar = .autoupdatingCurrent, timeZone: TimeZone = .autoupdatingCurrent)
+```
+
+## Parameters
+
+- `date`: The [Date.FormatStyle.DateStyle](../formatstyle/datestyle.md) for creating the string representation of the date interval.
+- `time`: The [Date.FormatStyle.TimeStyle](../formatstyle/timestyle.md) for creating the string representation of the date interval.
+- `locale`: The [Locale](../../locale.md) for creating the string representation of the date interval.
+- `calendar`: The [Calendar](../../calendar.md) for creating the string representation of the date interval.
+- `timeZone`: The [TimeZone](../../timezone.md) for creating the string representation of the date interval.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Customize the date interval string by providing a date style, time style, locale, calendar, time zone, and capitalization scheme.
+
+Values for date style are [complete](../formatstyle/datestyle/complete.md), [long](../formatstyle/datestyle/long.md), [abbreviated](../formatstyle/datestyle/abbreviated.md), [numeric](../formatstyle/datestyle/numeric.md), [omitted](../formatstyle/datestyle/omitted.md), or `none`. Time style values are [complete](../formatstyle/timestyle/complete.md), [standard](../formatstyle/timestyle/standard.md), [shortened](../formatstyle/timestyle/shortened.md), [omitted](../formatstyle/timestyle/omitted.md), or `none`.

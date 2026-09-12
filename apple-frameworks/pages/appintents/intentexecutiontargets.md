@@ -1,0 +1,58 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/intentexecutiontargets](https://developer.apple.com/documentation/appintents/intentexecutiontargets)
+
+# IntentExecutionTargets
+
+**Framework:** App Intents  
+**Kind:** Structure  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+A set of options that describes which process performs an intent or entity query.
+
+## Declaration
+
+```swift
+struct IntentExecutionTargets
+```
+
+<a id="overview"></a>
+
+## Overview
+
+If you reuse intents and entities between your app, widget extension, or App Intents extension by using a Swift package or framework, the system may perform your [AppIntent](appintent.md) or [EntityQuery](entityquery.md) from the app or App Intents extension. By default, the system performs an intent or entity query using any available target. Use `IntentExecutionTargets` to tell the system which targets can perform your [AppIntent](appintent.md) or [EntityQuery](entityquery.md). For example, a browser app might represent browser tabs and bookmarks as app entities and offer app intents to add a bookmark or open a browser tab. Adding a bookmark might be an action that can happen while the app isn’t visible, so performing the action in the App Intents extension makes sense. However, opening a new tab makes sense only when the app is visible, requiring the system to perform the intent in the app’s process.
+
+The following example shows an app intent that the system performs in either the main app or the app intents extension:
+
+```swift
+struct MyIntent: AppIntent {
+    static var allowedExecutionTargets: IntentExecutionTargets { [.main, .appIntentsExtension] }
+}
+```
+
+## Topics
+
+### Specifying the target
+
+- [appIntentsExtension](intentexecutiontargets/appintentsextension.md): The system performs the intent or query in your app intents extension.
+- [default](intentexecutiontargets/default.md): The system performs the intent or query in any available target.
+- [main](intentexecutiontargets/main.md): The system performs the intent or query in the main app process.
+- [widgetKitExtension](intentexecutiontargets/widgetkitextension.md): The system performs the intent or query in a widget extension.
+
+## Relationships
+
+### Conforms To
+
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [ExpressibleByArrayLiteral](https://developer.apple.com/documentation/swift/expressiblebyarrayliteral)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [OptionSet](https://developer.apple.com/documentation/swift/optionset)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+- [SetAlgebra](https://developer.apple.com/documentation/swift/setalgebra)
+
+## See Also
+
+### Specifying the intent’s allowed target
+
+- [allowedExecutionTargets](appintent/allowedexecutiontargets.md): The list of targets this intent can be executed against.
+- [AppIntent.ExecutionTargets](appintent/executiontargets.md)

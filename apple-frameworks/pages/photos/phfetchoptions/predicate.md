@@ -1,0 +1,105 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/photos/phfetchoptions/predicate](https://developer.apple.com/documentation/photos/phfetchoptions/predicate)
+
+# predicate (Swift)
+
+**Framework:** Photos  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
+
+A predicate that specifies which properties to select results by and that also specifies any constraints on selection.
+
+## Declaration
+
+```swift
+var predicate: NSPredicate? { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Construct a predicate with the properties of the class of objects that you want to fetch, listed in the [PHFetchOptions](../phfetchoptions.md) table. For example, the following code uses a predicate to fetch assets matching a specific set of [mediaSubtypes](../phasset/mediasubtypes.md) values.
+
+**Swift**
+
+```swift
+let format = "(mediaSubtypes & %d) != 0 || (mediaSubtypes & %d) != 0"
+let fetchOptions = PHFetchOptions()
+fetchOptions.predicate = NSPredicate(format: format,
+                                     argumentArray: [PHAssetMediaSubtype.photoPanorama, PHAssetMediaSubtype.videoHighFrameRate])
+        
+let fetchResult = PHAsset.fetchAssets(with: PHAssetMediaType.image,
+                                          options: fetchOptions)
+```
+
+**Objective-C**
+
+```objc
+NSString *format = @"(mediaSubtypes & %d) != 0 || (mediaSubtypes & %d) != 0";
+PHFetchOptions* fetchOptions = [PHFetchOptions new];
+fetchOptions.predicate = [NSPredicate predicateWithFormat:format,
+                          PHAssetMediaSubtypePhotoPanorama,
+                          PHAssetMediaSubtypeVideoHighFrameRate];
+
+PHFetchResult* fetchResult = [PHAsset fetchAssetsWithOptions:fetchOptions];
+```
+
+Photos does not support predicates created with the `NSPredicate` method `init` or the `predicateWithBlock` method.
+
+## See Also
+
+### Sorting and Filtering Fetch Results
+
+- [sortDescriptors](sortdescriptors.md): A list of sort descriptors, specifying an order for the fetched objects.
+
+# predicate (Objective-C)
+
+**Framework:** Photos  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
+
+A predicate that specifies which properties to select results by and that also specifies any constraints on selection.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, strong, nullable) NSPredicate * predicate;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Construct a predicate with the properties of the class of objects that you want to fetch, listed in the [PHFetchOptions](../phfetchoptions.md) table. For example, the following code uses a predicate to fetch assets matching a specific set of [mediaSubtypes](../phasset/mediasubtypes.md) values.
+
+**Swift**
+
+```swift
+let format = "(mediaSubtypes & %d) != 0 || (mediaSubtypes & %d) != 0"
+let fetchOptions = PHFetchOptions()
+fetchOptions.predicate = NSPredicate(format: format,
+                                     argumentArray: [PHAssetMediaSubtype.photoPanorama, PHAssetMediaSubtype.videoHighFrameRate])
+        
+let fetchResult = PHAsset.fetchAssets(with: PHAssetMediaType.image,
+                                          options: fetchOptions)
+```
+
+**Objective-C**
+
+```objc
+NSString *format = @"(mediaSubtypes & %d) != 0 || (mediaSubtypes & %d) != 0";
+PHFetchOptions* fetchOptions = [PHFetchOptions new];
+fetchOptions.predicate = [NSPredicate predicateWithFormat:format,
+                          PHAssetMediaSubtypePhotoPanorama,
+                          PHAssetMediaSubtypeVideoHighFrameRate];
+
+PHFetchResult* fetchResult = [PHAsset fetchAssetsWithOptions:fetchOptions];
+```
+
+Photos does not support predicates created with the `NSPredicate` method `init` or the `predicateWithBlock` method.
+
+## See Also
+
+### Sorting and Filtering Fetch Results
+
+- [sortDescriptors](sortdescriptors.md): A list of sort descriptors, specifying an order for the fetched objects.

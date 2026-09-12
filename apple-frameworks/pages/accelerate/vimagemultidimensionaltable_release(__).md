@@ -1,0 +1,97 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimagemultidimensionaltable_release(_:)](https://developer.apple.com/documentation/accelerate/vimagemultidimensionaltable_release(_:))
+
+# vImageMultidimensionalTable_Release(\_:) (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 7.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Releases a multidimensional table.
+
+## Declaration
+
+```swift
+func vImageMultidimensionalTable_Release(_ table: vImage_MultidimensionalTable!) -> vImage_Error
+```
+
+## Parameters
+
+- `table`: The multidimensional table to release.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes in [Data Types and Constants](data-types-and-constants.md).
+
+## Mentioned In
+
+- [Applying color transforms to images with a multidimensional lookup table](applying-color-transforms-to-images-with-a-multidimensional-lookup-table.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This function decrements the multidimensional table’s reference count. When the reference count reaches `0`, the system destroys the object.
+
+## See Also
+
+### Transforming with a multidimensional lookup table
+
+- [Applying color transforms to images with a multidimensional lookup table](applying-color-transforms-to-images-with-a-multidimensional-lookup-table.md): Precompute translation values to optimize color space conversion and other pointwise operations.
+- [Cropping to the subject in a chroma-keyed image](cropping-to-the-subject-in-a-chroma-keyed-image.md): Convert a chroma-key color to alpha values and trim transparent pixels using Accelerate.
+- [Applying transformations to selected colors in an image](applying-transformations-to-selected-colors-in-an-image.md): Desaturate a range of colors in an image with a multidimensional lookup table.
+- [vImageMultidimensionalTable_Create(\_:\_:\_:\_:\_:\_:\_:)](vimagemultidimensionaltable_create%28______________%29.md): Creates a multidimensional lookup table.
+- [vImageMultiDimensionalInterpolatedLookupTable_PlanarF(\_:\_:\_:\_:\_:\_:)](vimagemultidimensionalinterpolatedlookuptable_planarf%28____________%29.md): Uses a multidimensional lookup table to transform a 32-bit planar image.
+- [vImageMultiDimensionalInterpolatedLookupTable_Planar16Q12(\_:\_:\_:\_:\_:\_:)](vimagemultidimensionalinterpolatedlookuptable_planar16q12%28____________%29.md): Uses a multidimensional lookup table to transform a 16Q12 planar image.
+- [vImageMultidimensionalTable_Retain(\_:)](vimagemultidimensionaltable_retain%28__%29.md): Retains a multidimensional table.
+- [vImage_MultidimensionalTable](vimage_multidimensionaltable.md): An opaque pointer that represents a multidimensional lookup table.
+- [vImageMDTableUsageHint](vimagemdtableusagehint.md): Constants that indicate the use for a multidimensional lookup table.
+- [vImage_InterpolationMethod](vimage_interpolationmethod.md): Constants that represent different interpolation methods.
+
+# vImageMultidimensionalTable_Release (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 7.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Releases a multidimensional table.
+
+## Declaration
+
+```objectivec
+vImage_Error vImageMultidimensionalTable_Release(vImage_MultidimensionalTable table);
+```
+
+## Parameters
+
+- `table`: The multidimensional table to release.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes in [Data Types and Constants](data-types-and-constants.md).
+
+## Mentioned In
+
+- [Applying color transforms to images with a multidimensional lookup table](applying-color-transforms-to-images-with-a-multidimensional-lookup-table.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This function decrements the multidimensional table’s reference count. When the reference count reaches `0`, the system destroys the object.
+
+## See Also
+
+### Transforming with a multidimensional lookup table
+
+- [Applying color transforms to images with a multidimensional lookup table](applying-color-transforms-to-images-with-a-multidimensional-lookup-table.md): Precompute translation values to optimize color space conversion and other pointwise operations.
+- [vImageMultidimensionalTable_Create](vimagemultidimensionaltable_create%28______________%29.md): Creates a multidimensional lookup table.
+- [vImageMultiDimensionalInterpolatedLookupTable_PlanarF](vimagemultidimensionalinterpolatedlookuptable_planarf%28____________%29.md): Uses a multidimensional lookup table to transform a 32-bit planar image.
+- [vImageMultiDimensionalInterpolatedLookupTable_Planar16Q12](vimagemultidimensionalinterpolatedlookuptable_planar16q12%28____________%29.md): Uses a multidimensional lookup table to transform a 16Q12 planar image.
+- [vImageMultidimensionalTable_Retain](vimagemultidimensionaltable_retain%28__%29.md): Retains a multidimensional table.
+- [vImage_MultidimensionalTable](vimage_multidimensionaltable.md): An opaque pointer that represents a multidimensional lookup table.
+- [vImageMDTableUsageHint](vimagemdtableusagehint.md): Constants that indicate the use for a multidimensional lookup table.
+- [vImage_InterpolationMethod](vimage_interpolationmethod.md): Constants that represent different interpolation methods.

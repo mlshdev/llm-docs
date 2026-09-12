@@ -1,0 +1,380 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclusterballastconfiguration](https://developer.apple.com/documentation/matter/mtrbaseclusterballastconfiguration)
+
+# MTRBaseClusterBallastConfiguration (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```swift
+class MTRBaseClusterBallastConfiguration
+```
+
+## Topics
+
+### Initializers
+
+- [init(device:endpoint:queue:)](mtrbaseclusterballastconfiguration/init%28device_endpoint_queue_%29.md): Deprecated.
+- [init(device:endpointID:queue:)](mtrbaseclusterballastconfiguration/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandList(completion:)](mtrbaseclusterballastconfiguration/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandList(completionHandler:)](mtrbaseclusterballastconfiguration/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(completion:)](mtrbaseclusterballastconfiguration/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeList(completionHandler:)](mtrbaseclusterballastconfiguration/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeBallastFactorAdjustment(completion:)](mtrbaseclusterballastconfiguration/readattributeballastfactoradjustment%28completion_%29.md)
+- [readAttributeBallastFactorAdjustment(completionHandler:)](mtrbaseclusterballastconfiguration/readattributeballastfactoradjustment%28completionhandler_%29.md): Deprecated.
+- [readAttributeBallastStatus(completion:)](mtrbaseclusterballastconfiguration/readattributeballaststatus%28completion_%29.md)
+- [readAttributeBallastStatus(completionHandler:)](mtrbaseclusterballastconfiguration/readattributeballaststatus%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(completion:)](mtrbaseclusterballastconfiguration/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevision(completionHandler:)](mtrbaseclusterballastconfiguration/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(completion:)](mtrbaseclusterballastconfiguration/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMap(completionHandler:)](mtrbaseclusterballastconfiguration/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(completion:)](mtrbaseclusterballastconfiguration/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandList(completionHandler:)](mtrbaseclusterballastconfiguration/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeIntrinsicBalanceFactor(completionHandler:)](mtrbaseclusterballastconfiguration/readattributeintrinsicbalancefactor%28completionhandler_%29.md): Deprecated.
+- [readAttributeIntrinsicBallastFactor(completion:)](mtrbaseclusterballastconfiguration/readattributeintrinsicballastfactor%28completion_%29.md)
+- [readAttributeLampAlarmMode(completion:)](mtrbaseclusterballastconfiguration/readattributelampalarmmode%28completion_%29.md)
+- [readAttributeLampAlarmMode(completionHandler:)](mtrbaseclusterballastconfiguration/readattributelampalarmmode%28completionhandler_%29.md): Deprecated.
+- [readAttributeLampBurnHours(completion:)](mtrbaseclusterballastconfiguration/readattributelampburnhours%28completion_%29.md)
+- [readAttributeLampBurnHours(completionHandler:)](mtrbaseclusterballastconfiguration/readattributelampburnhours%28completionhandler_%29.md): Deprecated.
+- [readAttributeLampBurnHoursTripPoint(completion:)](mtrbaseclusterballastconfiguration/readattributelampburnhourstrippoint%28completion_%29.md)
+- [readAttributeLampBurnHoursTripPoint(completionHandler:)](mtrbaseclusterballastconfiguration/readattributelampburnhourstrippoint%28completionhandler_%29.md): Deprecated.
+- [readAttributeLampManufacturer(completion:)](mtrbaseclusterballastconfiguration/readattributelampmanufacturer%28completion_%29.md)
+- [readAttributeLampManufacturer(completionHandler:)](mtrbaseclusterballastconfiguration/readattributelampmanufacturer%28completionhandler_%29.md): Deprecated.
+- [readAttributeLampQuantity(completion:)](mtrbaseclusterballastconfiguration/readattributelampquantity%28completion_%29.md)
+- [readAttributeLampQuantity(completionHandler:)](mtrbaseclusterballastconfiguration/readattributelampquantity%28completionhandler_%29.md): Deprecated.
+- [readAttributeLampRatedHours(completion:)](mtrbaseclusterballastconfiguration/readattributelampratedhours%28completion_%29.md)
+- [readAttributeLampRatedHours(completionHandler:)](mtrbaseclusterballastconfiguration/readattributelampratedhours%28completionhandler_%29.md): Deprecated.
+- [readAttributeLampType(completion:)](mtrbaseclusterballastconfiguration/readattributelamptype%28completion_%29.md)
+- [readAttributeLampType(completionHandler:)](mtrbaseclusterballastconfiguration/readattributelamptype%28completionhandler_%29.md): Deprecated.
+- [readAttributeMaxLevel(completion:)](mtrbaseclusterballastconfiguration/readattributemaxlevel%28completion_%29.md)
+- [readAttributeMaxLevel(completionHandler:)](mtrbaseclusterballastconfiguration/readattributemaxlevel%28completionhandler_%29.md): Deprecated.
+- [readAttributeMinLevel(completion:)](mtrbaseclusterballastconfiguration/readattributeminlevel%28completion_%29.md)
+- [readAttributeMinLevel(completionHandler:)](mtrbaseclusterballastconfiguration/readattributeminlevel%28completionhandler_%29.md): Deprecated.
+- [readAttributePhysicalMaxLevel(completion:)](mtrbaseclusterballastconfiguration/readattributephysicalmaxlevel%28completion_%29.md)
+- [readAttributePhysicalMaxLevel(completionHandler:)](mtrbaseclusterballastconfiguration/readattributephysicalmaxlevel%28completionhandler_%29.md): Deprecated.
+- [readAttributePhysicalMinLevel(completion:)](mtrbaseclusterballastconfiguration/readattributephysicalminlevel%28completion_%29.md)
+- [readAttributePhysicalMinLevel(completionHandler:)](mtrbaseclusterballastconfiguration/readattributephysicalminlevel%28completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBallastFactorAdjustment(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributeballastfactoradjustment%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeBallastFactorAdjustment(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributeballastfactoradjustment%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBallastStatus(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributeballaststatus%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeBallastStatus(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributeballaststatus%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevision(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevision(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMap(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMap(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeIntrinsicBalanceFactor(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributeintrinsicbalancefactor%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeIntrinsicBallastFactor(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributeintrinsicballastfactor%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLampAlarmMode(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributelampalarmmode%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLampAlarmMode(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributelampalarmmode%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLampBurnHours(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributelampburnhours%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLampBurnHours(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributelampburnhours%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLampBurnHoursTripPoint(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributelampburnhourstrippoint%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLampBurnHoursTripPoint(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributelampburnhourstrippoint%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLampManufacturer(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributelampmanufacturer%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLampManufacturer(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributelampmanufacturer%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLampQuantity(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributelampquantity%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLampQuantity(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributelampquantity%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLampRatedHours(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributelampratedhours%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLampRatedHours(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributelampratedhours%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLampType(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributelamptype%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLampType(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributelamptype%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMaxLevel(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributemaxlevel%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMaxLevel(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributemaxlevel%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMinLevel(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributeminlevel%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMinLevel(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributeminlevel%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePhysicalMaxLevel(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributephysicalmaxlevel%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePhysicalMaxLevel(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributephysicalmaxlevel%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePhysicalMinLevel(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributephysicalminlevel%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePhysicalMinLevel(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterballastconfiguration/subscribeattributephysicalminlevel%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [writeAttributeBallastFactorAdjustment(withValue:completion:)](mtrbaseclusterballastconfiguration/writeattributeballastfactoradjustment%28withvalue_completion_%29.md)
+- [writeAttributeBallastFactorAdjustment(withValue:completionHandler:)](mtrbaseclusterballastconfiguration/writeattributeballastfactoradjustment%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeBallastFactorAdjustment(withValue:params:completion:)](mtrbaseclusterballastconfiguration/writeattributeballastfactoradjustment%28withvalue_params_completion_%29.md)
+- [writeAttributeBallastFactorAdjustment(withValue:params:completionHandler:)](mtrbaseclusterballastconfiguration/writeattributeballastfactoradjustment%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeIntrinsicBalanceFactor(withValue:completionHandler:)](mtrbaseclusterballastconfiguration/writeattributeintrinsicbalancefactor%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeIntrinsicBalanceFactor(withValue:params:completionHandler:)](mtrbaseclusterballastconfiguration/writeattributeintrinsicbalancefactor%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeIntrinsicBallastFactor(withValue:completion:)](mtrbaseclusterballastconfiguration/writeattributeintrinsicballastfactor%28withvalue_completion_%29.md)
+- [writeAttributeIntrinsicBallastFactor(withValue:params:completion:)](mtrbaseclusterballastconfiguration/writeattributeintrinsicballastfactor%28withvalue_params_completion_%29.md)
+- [writeAttributeLampAlarmMode(withValue:completion:)](mtrbaseclusterballastconfiguration/writeattributelampalarmmode%28withvalue_completion_%29.md)
+- [writeAttributeLampAlarmMode(withValue:completionHandler:)](mtrbaseclusterballastconfiguration/writeattributelampalarmmode%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeLampAlarmMode(withValue:params:completion:)](mtrbaseclusterballastconfiguration/writeattributelampalarmmode%28withvalue_params_completion_%29.md)
+- [writeAttributeLampAlarmMode(withValue:params:completionHandler:)](mtrbaseclusterballastconfiguration/writeattributelampalarmmode%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeLampBurnHours(withValue:completion:)](mtrbaseclusterballastconfiguration/writeattributelampburnhours%28withvalue_completion_%29.md)
+- [writeAttributeLampBurnHours(withValue:completionHandler:)](mtrbaseclusterballastconfiguration/writeattributelampburnhours%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeLampBurnHours(withValue:params:completion:)](mtrbaseclusterballastconfiguration/writeattributelampburnhours%28withvalue_params_completion_%29.md)
+- [writeAttributeLampBurnHours(withValue:params:completionHandler:)](mtrbaseclusterballastconfiguration/writeattributelampburnhours%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeLampBurnHoursTripPoint(withValue:completion:)](mtrbaseclusterballastconfiguration/writeattributelampburnhourstrippoint%28withvalue_completion_%29.md)
+- [writeAttributeLampBurnHoursTripPoint(withValue:completionHandler:)](mtrbaseclusterballastconfiguration/writeattributelampburnhourstrippoint%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeLampBurnHoursTripPoint(withValue:params:completion:)](mtrbaseclusterballastconfiguration/writeattributelampburnhourstrippoint%28withvalue_params_completion_%29.md)
+- [writeAttributeLampBurnHoursTripPoint(withValue:params:completionHandler:)](mtrbaseclusterballastconfiguration/writeattributelampburnhourstrippoint%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeLampManufacturer(withValue:completion:)](mtrbaseclusterballastconfiguration/writeattributelampmanufacturer%28withvalue_completion_%29.md)
+- [writeAttributeLampManufacturer(withValue:completionHandler:)](mtrbaseclusterballastconfiguration/writeattributelampmanufacturer%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeLampManufacturer(withValue:params:completion:)](mtrbaseclusterballastconfiguration/writeattributelampmanufacturer%28withvalue_params_completion_%29.md)
+- [writeAttributeLampManufacturer(withValue:params:completionHandler:)](mtrbaseclusterballastconfiguration/writeattributelampmanufacturer%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeLampRatedHours(withValue:completion:)](mtrbaseclusterballastconfiguration/writeattributelampratedhours%28withvalue_completion_%29.md)
+- [writeAttributeLampRatedHours(withValue:completionHandler:)](mtrbaseclusterballastconfiguration/writeattributelampratedhours%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeLampRatedHours(withValue:params:completion:)](mtrbaseclusterballastconfiguration/writeattributelampratedhours%28withvalue_params_completion_%29.md)
+- [writeAttributeLampRatedHours(withValue:params:completionHandler:)](mtrbaseclusterballastconfiguration/writeattributelampratedhours%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeLampType(withValue:completion:)](mtrbaseclusterballastconfiguration/writeattributelamptype%28withvalue_completion_%29.md)
+- [writeAttributeLampType(withValue:completionHandler:)](mtrbaseclusterballastconfiguration/writeattributelamptype%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeLampType(withValue:params:completion:)](mtrbaseclusterballastconfiguration/writeattributelamptype%28withvalue_params_completion_%29.md)
+- [writeAttributeLampType(withValue:params:completionHandler:)](mtrbaseclusterballastconfiguration/writeattributelamptype%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeMaxLevel(withValue:completion:)](mtrbaseclusterballastconfiguration/writeattributemaxlevel%28withvalue_completion_%29.md)
+- [writeAttributeMaxLevel(withValue:completionHandler:)](mtrbaseclusterballastconfiguration/writeattributemaxlevel%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeMaxLevel(withValue:params:completion:)](mtrbaseclusterballastconfiguration/writeattributemaxlevel%28withvalue_params_completion_%29.md)
+- [writeAttributeMaxLevel(withValue:params:completionHandler:)](mtrbaseclusterballastconfiguration/writeattributemaxlevel%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeMinLevel(withValue:completion:)](mtrbaseclusterballastconfiguration/writeattributeminlevel%28withvalue_completion_%29.md)
+- [writeAttributeMinLevel(withValue:completionHandler:)](mtrbaseclusterballastconfiguration/writeattributeminlevel%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeMinLevel(withValue:params:completion:)](mtrbaseclusterballastconfiguration/writeattributeminlevel%28withvalue_params_completion_%29.md)
+- [writeAttributeMinLevel(withValue:params:completionHandler:)](mtrbaseclusterballastconfiguration/writeattributeminlevel%28withvalue_params_completionhandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterballastconfiguration/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterballastconfiguration/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterballastconfiguration/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterballastconfiguration/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeBallastFactorAdjustment(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterballastconfiguration/readattributeballastfactoradjustment%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBallastFactorAdjustment(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterballastconfiguration/readattributeballastfactoradjustment%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeBallastStatus(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterballastconfiguration/readattributeballaststatus%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBallastStatus(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterballastconfiguration/readattributeballaststatus%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevision(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterballastconfiguration/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterballastconfiguration/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMap(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterballastconfiguration/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterballastconfiguration/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterballastconfiguration/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterballastconfiguration/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeIntrinsicBalanceFactor(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterballastconfiguration/readattributeintrinsicbalancefactor%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeIntrinsicBallastFactor(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterballastconfiguration/readattributeintrinsicballastfactor%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLampAlarmMode(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterballastconfiguration/readattributelampalarmmode%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLampAlarmMode(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterballastconfiguration/readattributelampalarmmode%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLampBurnHours(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterballastconfiguration/readattributelampburnhours%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLampBurnHours(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterballastconfiguration/readattributelampburnhours%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLampBurnHoursTripPoint(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterballastconfiguration/readattributelampburnhourstrippoint%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLampBurnHoursTripPoint(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterballastconfiguration/readattributelampburnhourstrippoint%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLampManufacturer(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterballastconfiguration/readattributelampmanufacturer%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLampManufacturer(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterballastconfiguration/readattributelampmanufacturer%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLampQuantity(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterballastconfiguration/readattributelampquantity%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLampQuantity(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterballastconfiguration/readattributelampquantity%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLampRatedHours(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterballastconfiguration/readattributelampratedhours%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLampRatedHours(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterballastconfiguration/readattributelampratedhours%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLampType(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterballastconfiguration/readattributelamptype%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLampType(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterballastconfiguration/readattributelamptype%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMaxLevel(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterballastconfiguration/readattributemaxlevel%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMaxLevel(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterballastconfiguration/readattributemaxlevel%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMinLevel(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterballastconfiguration/readattributeminlevel%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMinLevel(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterballastconfiguration/readattributeminlevel%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePhysicalMaxLevel(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterballastconfiguration/readattributephysicalmaxlevel%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePhysicalMaxLevel(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterballastconfiguration/readattributephysicalmaxlevel%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePhysicalMinLevel(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterballastconfiguration/readattributephysicalminlevel%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePhysicalMinLevel(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterballastconfiguration/readattributephysicalminlevel%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRBaseClusterBallastConfiguration (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```objectivec
+@interface MTRBaseClusterBallastConfiguration : MTRGenericBaseCluster
+```
+
+## Topics
+
+### Initializers
+
+- [initWithDevice:endpoint:queue:](mtrbaseclusterballastconfiguration/init%28device_endpoint_queue_%29.md): Deprecated.
+- [initWithDevice:endpointID:queue:](mtrbaseclusterballastconfiguration/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandListWithCompletion:](mtrbaseclusterballastconfiguration/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandListWithCompletionHandler:](mtrbaseclusterballastconfiguration/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithCompletion:](mtrbaseclusterballastconfiguration/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeListWithCompletionHandler:](mtrbaseclusterballastconfiguration/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeBallastFactorAdjustmentWithCompletion:](mtrbaseclusterballastconfiguration/readattributeballastfactoradjustment%28completion_%29.md)
+- [readAttributeBallastFactorAdjustmentWithCompletionHandler:](mtrbaseclusterballastconfiguration/readattributeballastfactoradjustment%28completionhandler_%29.md): Deprecated.
+- [readAttributeBallastStatusWithCompletion:](mtrbaseclusterballastconfiguration/readattributeballaststatus%28completion_%29.md)
+- [readAttributeBallastStatusWithCompletionHandler:](mtrbaseclusterballastconfiguration/readattributeballaststatus%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithCompletion:](mtrbaseclusterballastconfiguration/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevisionWithCompletionHandler:](mtrbaseclusterballastconfiguration/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithCompletion:](mtrbaseclusterballastconfiguration/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMapWithCompletionHandler:](mtrbaseclusterballastconfiguration/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithCompletion:](mtrbaseclusterballastconfiguration/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandListWithCompletionHandler:](mtrbaseclusterballastconfiguration/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeIntrinsicBalanceFactorWithCompletionHandler:](mtrbaseclusterballastconfiguration/readattributeintrinsicbalancefactor%28completionhandler_%29.md): Deprecated.
+- [readAttributeIntrinsicBallastFactorWithCompletion:](mtrbaseclusterballastconfiguration/readattributeintrinsicballastfactor%28completion_%29.md)
+- [readAttributeLampAlarmModeWithCompletion:](mtrbaseclusterballastconfiguration/readattributelampalarmmode%28completion_%29.md)
+- [readAttributeLampAlarmModeWithCompletionHandler:](mtrbaseclusterballastconfiguration/readattributelampalarmmode%28completionhandler_%29.md): Deprecated.
+- [readAttributeLampBurnHoursWithCompletion:](mtrbaseclusterballastconfiguration/readattributelampburnhours%28completion_%29.md)
+- [readAttributeLampBurnHoursWithCompletionHandler:](mtrbaseclusterballastconfiguration/readattributelampburnhours%28completionhandler_%29.md): Deprecated.
+- [readAttributeLampBurnHoursTripPointWithCompletion:](mtrbaseclusterballastconfiguration/readattributelampburnhourstrippoint%28completion_%29.md)
+- [readAttributeLampBurnHoursTripPointWithCompletionHandler:](mtrbaseclusterballastconfiguration/readattributelampburnhourstrippoint%28completionhandler_%29.md): Deprecated.
+- [readAttributeLampManufacturerWithCompletion:](mtrbaseclusterballastconfiguration/readattributelampmanufacturer%28completion_%29.md)
+- [readAttributeLampManufacturerWithCompletionHandler:](mtrbaseclusterballastconfiguration/readattributelampmanufacturer%28completionhandler_%29.md): Deprecated.
+- [readAttributeLampQuantityWithCompletion:](mtrbaseclusterballastconfiguration/readattributelampquantity%28completion_%29.md)
+- [readAttributeLampQuantityWithCompletionHandler:](mtrbaseclusterballastconfiguration/readattributelampquantity%28completionhandler_%29.md): Deprecated.
+- [readAttributeLampRatedHoursWithCompletion:](mtrbaseclusterballastconfiguration/readattributelampratedhours%28completion_%29.md)
+- [readAttributeLampRatedHoursWithCompletionHandler:](mtrbaseclusterballastconfiguration/readattributelampratedhours%28completionhandler_%29.md): Deprecated.
+- [readAttributeLampTypeWithCompletion:](mtrbaseclusterballastconfiguration/readattributelamptype%28completion_%29.md)
+- [readAttributeLampTypeWithCompletionHandler:](mtrbaseclusterballastconfiguration/readattributelamptype%28completionhandler_%29.md): Deprecated.
+- [readAttributeMaxLevelWithCompletion:](mtrbaseclusterballastconfiguration/readattributemaxlevel%28completion_%29.md)
+- [readAttributeMaxLevelWithCompletionHandler:](mtrbaseclusterballastconfiguration/readattributemaxlevel%28completionhandler_%29.md): Deprecated.
+- [readAttributeMinLevelWithCompletion:](mtrbaseclusterballastconfiguration/readattributeminlevel%28completion_%29.md)
+- [readAttributeMinLevelWithCompletionHandler:](mtrbaseclusterballastconfiguration/readattributeminlevel%28completionhandler_%29.md): Deprecated.
+- [readAttributePhysicalMaxLevelWithCompletion:](mtrbaseclusterballastconfiguration/readattributephysicalmaxlevel%28completion_%29.md)
+- [readAttributePhysicalMaxLevelWithCompletionHandler:](mtrbaseclusterballastconfiguration/readattributephysicalmaxlevel%28completionhandler_%29.md): Deprecated.
+- [readAttributePhysicalMinLevelWithCompletion:](mtrbaseclusterballastconfiguration/readattributephysicalminlevel%28completion_%29.md)
+- [readAttributePhysicalMinLevelWithCompletionHandler:](mtrbaseclusterballastconfiguration/readattributephysicalminlevel%28completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBallastFactorAdjustmentWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributeballastfactoradjustment%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeBallastFactorAdjustmentWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributeballastfactoradjustment%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBallastStatusWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributeballaststatus%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeBallastStatusWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributeballaststatus%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevisionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevisionWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMapWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMapWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeIntrinsicBalanceFactorWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributeintrinsicbalancefactor%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeIntrinsicBallastFactorWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributeintrinsicballastfactor%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLampAlarmModeWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributelampalarmmode%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLampAlarmModeWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributelampalarmmode%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLampBurnHoursWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributelampburnhours%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLampBurnHoursWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributelampburnhours%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLampBurnHoursTripPointWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributelampburnhourstrippoint%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLampBurnHoursTripPointWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributelampburnhourstrippoint%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLampManufacturerWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributelampmanufacturer%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLampManufacturerWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributelampmanufacturer%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLampQuantityWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributelampquantity%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLampQuantityWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributelampquantity%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLampRatedHoursWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributelampratedhours%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLampRatedHoursWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributelampratedhours%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLampTypeWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributelamptype%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLampTypeWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributelamptype%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMaxLevelWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributemaxlevel%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMaxLevelWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributemaxlevel%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMinLevelWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributeminlevel%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMinLevelWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributeminlevel%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePhysicalMaxLevelWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributephysicalmaxlevel%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePhysicalMaxLevelWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributephysicalmaxlevel%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePhysicalMinLevelWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributephysicalminlevel%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePhysicalMinLevelWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterballastconfiguration/subscribeattributephysicalminlevel%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [writeAttributeBallastFactorAdjustmentWithValue:completion:](mtrbaseclusterballastconfiguration/writeattributeballastfactoradjustment%28withvalue_completion_%29.md)
+- [writeAttributeBallastFactorAdjustmentWithValue:completionHandler:](mtrbaseclusterballastconfiguration/writeattributeballastfactoradjustment%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeBallastFactorAdjustmentWithValue:params:completion:](mtrbaseclusterballastconfiguration/writeattributeballastfactoradjustment%28withvalue_params_completion_%29.md)
+- [writeAttributeBallastFactorAdjustmentWithValue:params:completionHandler:](mtrbaseclusterballastconfiguration/writeattributeballastfactoradjustment%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeIntrinsicBalanceFactorWithValue:completionHandler:](mtrbaseclusterballastconfiguration/writeattributeintrinsicbalancefactor%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeIntrinsicBalanceFactorWithValue:params:completionHandler:](mtrbaseclusterballastconfiguration/writeattributeintrinsicbalancefactor%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeIntrinsicBallastFactorWithValue:completion:](mtrbaseclusterballastconfiguration/writeattributeintrinsicballastfactor%28withvalue_completion_%29.md)
+- [writeAttributeIntrinsicBallastFactorWithValue:params:completion:](mtrbaseclusterballastconfiguration/writeattributeintrinsicballastfactor%28withvalue_params_completion_%29.md)
+- [writeAttributeLampAlarmModeWithValue:completion:](mtrbaseclusterballastconfiguration/writeattributelampalarmmode%28withvalue_completion_%29.md)
+- [writeAttributeLampAlarmModeWithValue:completionHandler:](mtrbaseclusterballastconfiguration/writeattributelampalarmmode%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeLampAlarmModeWithValue:params:completion:](mtrbaseclusterballastconfiguration/writeattributelampalarmmode%28withvalue_params_completion_%29.md)
+- [writeAttributeLampAlarmModeWithValue:params:completionHandler:](mtrbaseclusterballastconfiguration/writeattributelampalarmmode%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeLampBurnHoursWithValue:completion:](mtrbaseclusterballastconfiguration/writeattributelampburnhours%28withvalue_completion_%29.md)
+- [writeAttributeLampBurnHoursWithValue:completionHandler:](mtrbaseclusterballastconfiguration/writeattributelampburnhours%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeLampBurnHoursWithValue:params:completion:](mtrbaseclusterballastconfiguration/writeattributelampburnhours%28withvalue_params_completion_%29.md)
+- [writeAttributeLampBurnHoursWithValue:params:completionHandler:](mtrbaseclusterballastconfiguration/writeattributelampburnhours%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeLampBurnHoursTripPointWithValue:completion:](mtrbaseclusterballastconfiguration/writeattributelampburnhourstrippoint%28withvalue_completion_%29.md)
+- [writeAttributeLampBurnHoursTripPointWithValue:completionHandler:](mtrbaseclusterballastconfiguration/writeattributelampburnhourstrippoint%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeLampBurnHoursTripPointWithValue:params:completion:](mtrbaseclusterballastconfiguration/writeattributelampburnhourstrippoint%28withvalue_params_completion_%29.md)
+- [writeAttributeLampBurnHoursTripPointWithValue:params:completionHandler:](mtrbaseclusterballastconfiguration/writeattributelampburnhourstrippoint%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeLampManufacturerWithValue:completion:](mtrbaseclusterballastconfiguration/writeattributelampmanufacturer%28withvalue_completion_%29.md)
+- [writeAttributeLampManufacturerWithValue:completionHandler:](mtrbaseclusterballastconfiguration/writeattributelampmanufacturer%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeLampManufacturerWithValue:params:completion:](mtrbaseclusterballastconfiguration/writeattributelampmanufacturer%28withvalue_params_completion_%29.md)
+- [writeAttributeLampManufacturerWithValue:params:completionHandler:](mtrbaseclusterballastconfiguration/writeattributelampmanufacturer%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeLampRatedHoursWithValue:completion:](mtrbaseclusterballastconfiguration/writeattributelampratedhours%28withvalue_completion_%29.md)
+- [writeAttributeLampRatedHoursWithValue:completionHandler:](mtrbaseclusterballastconfiguration/writeattributelampratedhours%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeLampRatedHoursWithValue:params:completion:](mtrbaseclusterballastconfiguration/writeattributelampratedhours%28withvalue_params_completion_%29.md)
+- [writeAttributeLampRatedHoursWithValue:params:completionHandler:](mtrbaseclusterballastconfiguration/writeattributelampratedhours%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeLampTypeWithValue:completion:](mtrbaseclusterballastconfiguration/writeattributelamptype%28withvalue_completion_%29.md)
+- [writeAttributeLampTypeWithValue:completionHandler:](mtrbaseclusterballastconfiguration/writeattributelamptype%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeLampTypeWithValue:params:completion:](mtrbaseclusterballastconfiguration/writeattributelamptype%28withvalue_params_completion_%29.md)
+- [writeAttributeLampTypeWithValue:params:completionHandler:](mtrbaseclusterballastconfiguration/writeattributelamptype%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeMaxLevelWithValue:completion:](mtrbaseclusterballastconfiguration/writeattributemaxlevel%28withvalue_completion_%29.md)
+- [writeAttributeMaxLevelWithValue:completionHandler:](mtrbaseclusterballastconfiguration/writeattributemaxlevel%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeMaxLevelWithValue:params:completion:](mtrbaseclusterballastconfiguration/writeattributemaxlevel%28withvalue_params_completion_%29.md)
+- [writeAttributeMaxLevelWithValue:params:completionHandler:](mtrbaseclusterballastconfiguration/writeattributemaxlevel%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeMinLevelWithValue:completion:](mtrbaseclusterballastconfiguration/writeattributeminlevel%28withvalue_completion_%29.md)
+- [writeAttributeMinLevelWithValue:completionHandler:](mtrbaseclusterballastconfiguration/writeattributeminlevel%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeMinLevelWithValue:params:completion:](mtrbaseclusterballastconfiguration/writeattributeminlevel%28withvalue_params_completion_%29.md)
+- [writeAttributeMinLevelWithValue:params:completionHandler:](mtrbaseclusterballastconfiguration/writeattributeminlevel%28withvalue_params_completionhandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterballastconfiguration/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterballastconfiguration/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterballastconfiguration/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterballastconfiguration/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeBallastFactorAdjustmentWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterballastconfiguration/readattributeballastfactoradjustment%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBallastFactorAdjustmentWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterballastconfiguration/readattributeballastfactoradjustment%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeBallastStatusWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterballastconfiguration/readattributeballaststatus%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBallastStatusWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterballastconfiguration/readattributeballaststatus%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevisionWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterballastconfiguration/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterballastconfiguration/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMapWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterballastconfiguration/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterballastconfiguration/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterballastconfiguration/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterballastconfiguration/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeIntrinsicBalanceFactorWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterballastconfiguration/readattributeintrinsicbalancefactor%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeIntrinsicBallastFactorWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterballastconfiguration/readattributeintrinsicballastfactor%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLampAlarmModeWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterballastconfiguration/readattributelampalarmmode%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLampAlarmModeWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterballastconfiguration/readattributelampalarmmode%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLampBurnHoursWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterballastconfiguration/readattributelampburnhours%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLampBurnHoursWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterballastconfiguration/readattributelampburnhours%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLampBurnHoursTripPointWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterballastconfiguration/readattributelampburnhourstrippoint%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLampBurnHoursTripPointWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterballastconfiguration/readattributelampburnhourstrippoint%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLampManufacturerWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterballastconfiguration/readattributelampmanufacturer%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLampManufacturerWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterballastconfiguration/readattributelampmanufacturer%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLampQuantityWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterballastconfiguration/readattributelampquantity%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLampQuantityWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterballastconfiguration/readattributelampquantity%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLampRatedHoursWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterballastconfiguration/readattributelampratedhours%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLampRatedHoursWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterballastconfiguration/readattributelampratedhours%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLampTypeWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterballastconfiguration/readattributelamptype%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLampTypeWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterballastconfiguration/readattributelamptype%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMaxLevelWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterballastconfiguration/readattributemaxlevel%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMaxLevelWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterballastconfiguration/readattributemaxlevel%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMinLevelWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterballastconfiguration/readattributeminlevel%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMinLevelWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterballastconfiguration/readattributeminlevel%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePhysicalMaxLevelWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterballastconfiguration/readattributephysicalmaxlevel%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePhysicalMaxLevelWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterballastconfiguration/readattributephysicalmaxlevel%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePhysicalMinLevelWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterballastconfiguration/readattributephysicalminlevel%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePhysicalMinLevelWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterballastconfiguration/readattributephysicalminlevel%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)

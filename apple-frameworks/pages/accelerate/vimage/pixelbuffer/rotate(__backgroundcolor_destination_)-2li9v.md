@@ -1,0 +1,58 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimage/pixelbuffer/rotate(_:backgroundcolor:destination:)-2li9v](https://developer.apple.com/documentation/accelerate/vimage/pixelbuffer/rotate(_:backgroundcolor:destination:)-2li9v)
+
+# rotate(\_:backgroundColor:destination:)
+
+**Framework:** Accelerate  
+**Kind:** Instance Method  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS · watchOS 9.0+
+
+Rotates an 8-bit-per-channel, four-channel interleaved pixel buffer.
+
+## Declaration
+
+```swift
+func rotate(_ rotation: vImage.Rotation, backgroundColor: Pixel_8888? = (0, 0, 0, 0), destination: vImage.PixelBuffer<Format>)
+```
+
+## Parameters
+
+- `rotation`: An enumeration that specifies the rotation angle.
+- `backgroundColor`: An optional background color. If you pass `nil`, the operation uses the [kvImageEdgeExtend](../../kvimageedgeextend.md) flag to extend the edges of the image infinitely.
+- `destination`: The destination pixel buffer.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this function to either rotate an image by a multiple of 90° or by an angle, which you specify in degrees or radians.
+
+When you specify a rotation that’s a multiple of 90° (such as [vImage.Rotation.clockwise270Degrees](../rotation/clockwise270degrees.md)), this function maps the center point of the source image to the center point of the destination image. It doesn’t scale or resample; instead, the function copies individual pixels unchanged to new locations.
+
+The 90° and 270° rotations don’t rotate around the true center of the image if either of the following is true:
+
+- The parities of the source height and the destination width don’t match. For example, the source height is odd and the destination width is even.
+- The parities of the source width and the destination height don’t match. For example, the source width is odd and the destination height is even.
+
+The 0° and 180° rotations don’t rotate around the true center of the image if either of the following is true:
+
+- The parities of the source height and the destination height don’t match. For example, the source height is odd and the destination height is even.
+- The parities of the source width and the destination width don’t match. For example, the source width is odd and the destination width is even.
+
+To overcome this limitation, specify [vImage.Rotation.angleInRadians(\_:)](../rotation/angleinradians%28__%29.md) or [vImage.Rotation.angleInDegrees(\_:)](../rotation/angleindegrees%28__%29.md) to invoke the high-level rotate function.
+
+## See Also
+
+### Related Documentation
+
+- [Applying geometric transforms to images](../../applying-geometric-transforms-to-images.md): Reflect, shear, rotate, and scale image buffers using vImage.
+
+### Rotating images
+
+- [rotate(\_:backgroundColor:destination:)](rotate%28__backgroundcolor_destination_%29-7patt.md): Conforms when `Format` is `vImage.Planar8`. Rotates an 8-bit planar pixel buffer.
+- [rotate(\_:backgroundColor:useFloat16Accumulator:destination:)](rotate%28__backgroundcolor_usefloat16accumulator_destination_%29-9harr.md): Conforms when `Format` is `vImage.Planar16F`. Rotates a floating-point 16-bit planar pixel buffer.
+- [rotate(\_:backgroundColor:destination:)](rotate%28__backgroundcolor_destination_%29-7tzsn.md): Conforms when `Format` is `vImage.PlanarF`. Rotates a 32-bit planar pixel buffer.
+- [rotate(\_:backgroundColor:useFloat16Accumulator:destination:)](rotate%28__backgroundcolor_usefloat16accumulator_destination_%29-61l7b.md): Conforms when `Format` is `vImage.Interleaved16Fx2`. Rotates a floating-point 16-bit-per-channel, two-channel interleaved pixel buffer.
+- [rotate(\_:backgroundColor:destination:)](rotate%28__backgroundcolor_destination_%29-692ke.md): Conforms when `Format` is `vImage.Interleaved16Ux4`. Rotates an unsigned 16-bit-per-channel, four-channel interleaved pixel buffer.
+- [rotate(\_:backgroundColor:useFloat16Accumulator:destination:)](rotate%28__backgroundcolor_usefloat16accumulator_destination_%29-8glur.md): Conforms when `Format` is `vImage.Interleaved16Fx4`. Rotates a floating-point 16-bit-per-channel, four-channel interleaved pixel buffer.
+- [rotate(\_:backgroundColor:destination:)](rotate%28__backgroundcolor_destination_%29-9bnb6.md): Conforms when `Format` is `vImage.InterleavedFx4`. Rotates a 32-bit-per-channel, four-channel interleaved pixel buffer.
+- [vImage.Rotation](../rotation.md): The angle to rotate an image.

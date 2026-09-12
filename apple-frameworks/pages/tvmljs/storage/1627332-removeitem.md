@@ -1,0 +1,39 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tvmljs/storage/1627332-removeitem](https://developer.apple.com/documentation/tvmljs/storage/1627332-removeitem)
+
+# removeItem
+
+**Interface language:** Data
+
+**Framework:** TVMLKit JS, WebKit JS  
+**Kind:** Instance Method  
+**Availability:** tvOS 9.0+ · Safari Desktop 4.0+ · Safari Mobile 3.0+
+
+Deletes a key and all associated data from storage.
+
+## Declaration
+
+```
+void removeItem(
+    in String key
+);
+```
+
+```
+void removeItem(
+    DOMString key
+);
+```
+
+## Parameters
+
+- `key`: A `String` object containing the key being searched for.
+
+## See Also
+
+### Accessing Key-Value Pair Information
+
+- [clear](1627404-clear.md): Removes all instances of key-value pairs from the storage list.
+- [getItem](1627333-getitem.md): Retrieves the data associated with the specified key.
+- [key](1627380-key.md): Returns the key located in the specified location.
+- [length](1627448-length.md): The number of key-value pairs currently in the storage list.
+- [setItem](1627302-setitem.md): Associates the given data with the given key.

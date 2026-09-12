@@ -1,0 +1,69 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/mapkitjs/mapkit/init](https://developer.apple.com/documentation/mapkitjs/mapkit/init)
+
+# init(options)
+
+**Interface language:** Data
+
+**Framework:** MapKit JS  
+**Kind:** Instance Method  
+**Availability:** MapKit JS 5.0+
+
+Initializes MapKit JS by providing an authorization callback function and optional language.
+
+## Declaration
+
+```
+init(options: MapKitInitializationOptions): void;
+```
+
+## Parameters
+
+- `options`: MapKit JS initialization options.
+
+## Mentioned In
+
+- [Loading the latest version of MapKit JS](../loading-the-latest-version-of-mapkit-js.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Unless you wish to explicitly control initialization timing in JavaScript, use `data-token` instead of this method. See [Loading the latest version of MapKit JS](../loading-the-latest-version-of-mapkit-js.md) for more information.
+
+If you’re using this method, provide the token by setting [authorizationCallback](../mapkitinitializationoptions/authorizationcallback.md) on a JavaScript object as a function. The [authorizationCallback](../mapkitinitializationoptions/authorizationcallback.md) function calls `done()` to return the token. [Creating a Maps token](../creating-a-maps-token.md) shows how to create Maps tokens.
+
+When you create a server endpoint to deliver new tokens to MapKit JS, make an asynchronous request to this endpoint in your [authorizationCallback](../mapkitinitializationoptions/authorizationcallback.md) function and call `done()` with the result. The following example shows creating a callback that requests a token from a server endpoint and sets a preferred language for the map:
+
+```javascript
+mapkit.init({
+    authorizationCallback: function(done) {
+        fetch("/gettoken")
+            .then(res => res.text())
+            .then(done);
+    },
+    language: "es"
+});
+```
+
+If you don’t set up a server endpoint, you can alternatively set [authorizationCallback](../mapkitinitializationoptions/authorizationcallback.md) to a function that provides a pregenerated token string.
+
+```javascript
+mapkit.init({
+    authorizationCallback: function(done) {
+        done("your-token-string");
+    },
+    language: "es"
+});
+```
+
+An instance of [mapkit](../mapkit.md) emits a `configuration-change` event after MapKit JS initializes, and an `error` event when initialization fails. You can learn more about both of these events in [Handling initialization events](../handling-initialization-events.md).
+
+## See Also
+
+### Initialization
+
+- [Handling initialization events](../handling-initialization-events.md): Respond to events that trigger when MapKit JS initializes.
+- [MapKitInitializationOptions](../mapkitinitializationoptions.md): Initialization options for MapKit JS.
+- [Libraries](libraries.md): The list of available libraries.
+- [loadedLibraries](loadedlibraries.md): A string that describes the list of loaded libraries.
+- [load()](load.md): Tells MapKit JS which libraries to load.

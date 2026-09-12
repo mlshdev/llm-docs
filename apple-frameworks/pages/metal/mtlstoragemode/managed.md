@@ -1,0 +1,83 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtlstoragemode/managed](https://developer.apple.com/documentation/metal/mtlstoragemode/managed)
+
+# MTLStorageMode.managed (Swift)
+
+**Framework:** Metal  
+**Kind:** Case  
+**Availability:** Mac Catalyst 13.0+ (deprecated in 27.0) · macOS 10.11+ (deprecated in 27.0)
+
+The CPU and GPU may maintain separate copies of the resource, and any changes need to be explicitly synchronized.
+
+> Managed storage has no effect on Apple Silicon, use Shared storage instead
+
+## Declaration
+
+```swift
+case managed
+```
+
+## Mentioned In
+
+- [Synchronizing a managed resource in macOS](../synchronizing-a-managed-resource-in-macos.md)
+- [Optimizing texture data](../optimizing-texture-data.md)
+- [Adjusting for GPU memory bandwidth tradeoffs](../adjusting-for-gpu-memory-bandwidth-tradeoffs.md)
+- [Choosing a resource storage mode for Intel and AMD GPUs](../choosing-a-resource-storage-mode-for-intel-and-amd-gpus.md)
+- [Improving CPU performance by using argument buffers](../improving-cpu-performance-by-using-argument-buffers.md)
+- [Setting resource storage modes](../setting-resource-storage-modes.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+On Intel-based Mac computers, this is the default storage mode for [MTLTexture](../mtltexture.md) objects. In iOS and tvOS, the managed storage mode isn’t available. With managed storage, you synchronize changes between the CPU and GPU manually. For instructions and examples of resource synchronization, see [Synchronizing a managed resource in macOS](../synchronizing-a-managed-resource-in-macos.md).
+
+For more guidance on how to choose storage modes, see [Setting resource storage modes](../setting-resource-storage-modes.md).
+
+## See Also
+
+### Storage mode options
+
+- [MTLStorageMode.shared](shared.md): The CPU and GPU share access to the resource, allocated in system memory.
+- [MTLStorageMode.private](private.md): The resource is only available to the GPU.
+- [MTLStorageMode.memoryless](memoryless.md): The resource’s contents are only available to the GPU, and only exist temporarily during a render pass.
+
+# MTLStorageModeManaged (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.11+ (deprecated in 27.0)
+
+The CPU and GPU may maintain separate copies of the resource, and any changes need to be explicitly synchronized.
+
+> Managed storage has no effect on Apple Silicon, use Shared storage instead
+
+## Declaration
+
+```objectivec
+MTLStorageModeManaged
+```
+
+## Mentioned In
+
+- [Synchronizing a managed resource in macOS](../synchronizing-a-managed-resource-in-macos.md)
+- [Optimizing texture data](../optimizing-texture-data.md)
+- [Adjusting for GPU memory bandwidth tradeoffs](../adjusting-for-gpu-memory-bandwidth-tradeoffs.md)
+- [Choosing a resource storage mode for Intel and AMD GPUs](../choosing-a-resource-storage-mode-for-intel-and-amd-gpus.md)
+- [Improving CPU performance by using argument buffers](../improving-cpu-performance-by-using-argument-buffers.md)
+- [Setting resource storage modes](../setting-resource-storage-modes.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+On Intel-based Mac computers, this is the default storage mode for [MTLTexture](../mtltexture.md) objects. In iOS and tvOS, the managed storage mode isn’t available. With managed storage, you synchronize changes between the CPU and GPU manually. For instructions and examples of resource synchronization, see [Synchronizing a managed resource in macOS](../synchronizing-a-managed-resource-in-macos.md).
+
+For more guidance on how to choose storage modes, see [Setting resource storage modes](../setting-resource-storage-modes.md).
+
+## See Also
+
+### Storage mode options
+
+- [MTLStorageModeShared](shared.md): The CPU and GPU share access to the resource, allocated in system memory.
+- [MTLStorageModePrivate](private.md): The resource is only available to the GPU.
+- [MTLStorageModeMemoryless](memoryless.md): The resource’s contents are only available to the GPU, and only exist temporarily during a render pass.

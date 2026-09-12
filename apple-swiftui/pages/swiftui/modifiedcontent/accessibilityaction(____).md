@@ -1,0 +1,30 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/modifiedcontent/accessibilityaction(_:_:)](https://developer.apple.com/documentation/swiftui/modifiedcontent/accessibilityaction(_:_:))
+
+# accessibilityAction(\_:\_:)
+
+**Framework:** SwiftUI  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Adds an accessibility action to the view. Actions allow assistive technologies, such as the VoiceOver, to interact with the view by invoking the action.
+
+## Declaration
+
+```swift
+nonisolated func accessibilityAction(_ actionKind: AccessibilityActionKind = .default, _ handler: @escaping () -> Void) -> ModifiedContent<Content, Modifier>
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+For example, this is how a `.default` action to compose a new email could be added to a view.
+
+```swift
+var body: some View {
+    ContentView()
+        .accessibilityAction {
+            // Handle action
+        }
+}
+```

@@ -1,0 +1,89 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/computegraph/computenodegraph](https://developer.apple.com/documentation/computegraph/computenodegraph)
+
+# ComputeNodeGraph
+
+**Framework:** Compute Graph  
+**Kind:** Structure  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · Reality Composer Pro
+
+## Declaration
+
+```swift
+struct ComputeNodeGraph
+```
+
+## Topics
+
+### Classes
+
+- [ComputeNodeGraph.Library](computenodegraph/library.md): A class defining a library of node definitions that can be added to a ComputeNodeGraph
+
+### Structures
+
+- [ComputeNodeGraph.ArrayDefinition](computenodegraph/arraydefinition.md)
+- [ComputeNodeGraph.Assembly](computenodegraph/assembly.md): Fully assembled configuration of compute graph nodes.
+- [ComputeNodeGraph.DataType](computenodegraph/datatype.md)
+- [ComputeNodeGraph.Edge](computenodegraph/edge.md)
+- [ComputeNodeGraph.LibraryReference](computenodegraph/libraryreference.md): A Metal library and an optional bundle identifier that locates shader functions.
+- [ComputeNodeGraph.Metadata](computenodegraph/metadata.md)
+- [ComputeNodeGraph.Node](computenodegraph/node.md)
+- [ComputeNodeGraph.NodeDefinition](computenodegraph/nodedefinition.md)
+- [ComputeNodeGraph.Pipelines](computenodegraph/pipelines.md): Fully-compiled shaders for a compute graph.
+- [ComputeNodeGraph.PipelinesDescriptor](computenodegraph/pipelinesdescriptor.md): Specifies the configuration used to compile a set of compute pipelines for a compute graph effect.
+- [ComputeNodeGraph.PointerDefinition](computenodegraph/pointerdefinition.md)
+- [ComputeNodeGraph.PortDefinition](computenodegraph/portdefinition.md)
+- [ComputeNodeGraph.SamplerSettings](computenodegraph/samplersettings.md)
+- [ComputeNodeGraph.Scope](computenodegraph/scope.md): A scope is a named region of memory, indicating where a value lives
+- [ComputeNodeGraph.Stage](computenodegraph/stage.md): An execution context within a compute node graph that groups related nodes into a processing phase.
+- [ComputeNodeGraph.StateDefinition](computenodegraph/statedefinition.md): A declaration of a named state value and where it lives in the simulation.
+- [ComputeNodeGraph.StructureDefinition](computenodegraph/structuredefinition.md): A named structure type, pairing a type name with its in-memory layout.
+- [ComputeNodeGraph.StructureLayout](computenodegraph/structurelayout.md)
+- [ComputeNodeGraph.SwizzleChannels](computenodegraph/swizzlechannels.md)
+
+### Initializers
+
+- [init()](computenodegraph/init%28%29.md)
+- [init(data:)](computenodegraph/init%28data_%29.md): Creates a graph by decoding a computegraph.
+
+### Instance Properties
+
+- [edges](computenodegraph/edges.md)
+- [nodes](computenodegraph/nodes.md)
+
+### Instance Methods
+
+- [addEdge(\_:)](computenodegraph/addedge%28__%29.md)
+- [addNode(\_:)](computenodegraph/addnode%28__%29.md): Adds a node to the graph.
+- [canAddEdge(\_:)](computenodegraph/canaddedge%28__%29.md): Returns whether the given edge can be added to the graph.
+- [canAddNode(\_:)](computenodegraph/canaddnode%28__%29.md): Returns whether the given node can be added to the graph.
+- [contains(edge:)](computenodegraph/contains%28edge_%29.md): Returns whether the graph contains the given edge.
+- [contains(node:)](computenodegraph/contains%28node_%29.md): Returns whether the graph contains a node with the given key.
+- [data(using:)](computenodegraph/data%28using_%29.md): Returns the graph encoded in the specified format.
+- [removeEdge(\_:)](computenodegraph/removeedge%28__%29.md): Removes an edge from the graph.
+- [removeNode(\_:)](computenodegraph/removenode%28__%29.md): Removes a node from the graph.
+- [replaceAll(nodes:edges:)](computenodegraph/replaceall%28nodes_edges_%29.md): Replaces all nodes and edges in the graph with the provided collections.
+- [updateNode(\_:forKey:)](computenodegraph/updatenode%28__forkey_%29.md): Updates an existing node in the graph.
+
+### Subscripts
+
+- [subscript(\_:)](computenodegraph/subscript%28__%29.md): Accesses the node associated with the given key.
+
+### Type Aliases
+
+- [ComputeNodeGraph.NodeID](computenodegraph/nodeid.md)
+
+### Enumerations
+
+- [ComputeNodeGraph.Format](computenodegraph/format.md): A serialization format used to encode a compute node graph.
+- [ComputeNodeGraph.Port](computenodegraph/port.md)
+- [ComputeNodeGraph.StateType](computenodegraph/statetype.md): The shape of a value stored in a compute graph’s state.
+- [ComputeNodeGraph.Topology](computenodegraph/topology.md): The primitive topology used to assemble output geometry for an output stage.
+- [ComputeNodeGraph.ValueType](computenodegraph/valuetype.md): Describes the storage and layout of a port’s value, ranging from Metal primitives and structures to opaque references and stateful bindings.
+
+## Relationships
+
+### Conforms To
+
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)

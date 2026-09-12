@@ -1,0 +1,31 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/colorsync/colorsyncprofile/headroomadaptivegaincurve-swift.struct/colorvolumetransform-swift.struct/tonemapping/method-swift.enum/alternatecurve/controlpoints-swift.struct](https://developer.apple.com/documentation/colorsync/colorsyncprofile/headroomadaptivegaincurve-swift.struct/colorvolumetransform-swift.struct/tonemapping/method-swift.enum/alternatecurve/controlpoints-swift.struct)
+
+# ColorSyncProfile.HeadroomAdaptiveGainCurve.ColorVolumeTransform.ToneMapping.Method.AlternateCurve.ControlPoints
+
+**Framework:** ColorSync  
+**Kind:** Structure  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+The spline control points that define a gain curve.
+
+## Declaration
+
+```swift
+struct ControlPoints
+```
+
+## Topics
+
+### Initializers
+
+- [init(x:y:slopes:)](controlpoints-swift.struct/init%28x_y_slopes_%29.md): Creates a set of spline control points.
+
+### Instance Properties
+
+- [slopes](controlpoints-swift.struct/slopes-swift.property.md): How the framework determines the slope at each control point.
+- [x](controlpoints-swift.struct/x.md): Input levels normalized by reference white: 1.0 = reference white.
+- [y](controlpoints-swift.struct/y.md): Gain offsets in stops (non-negative): the framework infers direction (expand vs. compress) from the relationship between this alternate’s headroom and the baseline headroom.
+
+### Enumerations
+
+- [ColorSyncProfile.HeadroomAdaptiveGainCurve.ColorVolumeTransform.ToneMapping.Method.AlternateCurve.ControlPoints.Slopes](controlpoints-swift.struct/slopes-swift.enum.md): How the framework determines slopes at spline control points.

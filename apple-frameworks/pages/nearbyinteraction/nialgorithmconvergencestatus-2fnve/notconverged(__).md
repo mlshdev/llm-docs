@@ -1,0 +1,34 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/nearbyinteraction/nialgorithmconvergencestatus-2fnve/notconverged(_:)](https://developer.apple.com/documentation/nearbyinteraction/nialgorithmconvergencestatus-2fnve/notconverged(_:))
+
+# NIAlgorithmConvergenceStatus.notConverged(\_:)
+
+**Framework:** Nearby Interaction  
+**Kind:** Case  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · watchOS 9.0+
+
+A status that indicates the framework’s Camera Assistance feature requires action from the user.
+
+## Declaration
+
+```swift
+case notConverged([NIAlgorithmConvergenceStatus.Reason])
+```
+
+## Parameters
+
+- `reason`: A user action that the framework recommends to get the Camera Assistance feature operational.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+In this state, the framework needs more information about the user’s physical environment before setting [horizontalAngle](../ninearbyobject/horizontalangle-hsg.md) and/or [verticalDirectionEstimate](../ninearbyobject/verticaldirectionestimate-swift.property.md).
+
+Look to the reasons array of the `convergence` object provided by [session(\_:didUpdateAlgorithmConvergence:for:)](../nisessiondelegate/session%28__didupdatealgorithmconvergence_for_%29.md) for more information on the cause. Each reason indicates a specific action the user can do to provide ARKit with the necessary camera data to support Nearby Interaction’s Camera Assistance.
+
+## See Also
+
+### Interpreting the convergence state
+
+- [NIAlgorithmConvergenceStatus.converged](converged.md): A status that indicates the framework’s Camera Assistance feature is operational.
+- [NIAlgorithmConvergenceStatus.unknown](unknown.md): An indication that the framework is unsure of the Camera Assistance status.

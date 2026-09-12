@@ -1,0 +1,20 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/groupactivities/groupsessionmessenger/init(session:deliverymode:)](https://developer.apple.com/documentation/groupactivities/groupsessionmessenger/init(session:deliverymode:))
+
+# init(session:deliveryMode:)
+
+**Framework:** Group Activities  
+**Kind:** Initializer  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+Creates a new group session messenger with the specified delivery mode, [GroupSessionMessenger.DeliveryMode](deliverymode-swift.enum.md), and associates it with the specified session object.
+
+## Declaration
+
+```swift
+init<Activity>(session: GroupSession<Activity>, deliveryMode: GroupSessionMessenger.DeliveryMode) where Activity : GroupActivity
+```
+
+## Parameters
+
+- `session`: The group session to use for communication with participants. Specify a session object that is in either the [GroupSession.State.waiting](../groupsession/state-swift.enum/waiting.md) or [GroupSession.State.joined](../groupsession/state-swift.enum/joined.md) state for this parameter. However, a session must be in the joined state to send or receive messages.
+- `deliveryMode`: The delivery mode for sending and receiving messages. Specify a delivery mode option for the underlying transport of either [GroupSessionMessenger.DeliveryMode.reliable](deliverymode-swift.enum/reliable.md) or [GroupSessionMessenger.DeliveryMode.unreliable](deliverymode-swift.enum/unreliable.md)

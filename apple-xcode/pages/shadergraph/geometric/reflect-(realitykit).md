@@ -1,0 +1,48 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/shadergraph/geometric/reflect-(realitykit)](https://developer.apple.com/documentation/shadergraph/geometric/reflect-(realitykit))
+
+# Reflect (RealityKit)
+
+**Framework:** ShaderGraph  
+**Kind:** ShaderGraph Node  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 26.0+ · visionOS 1.0+
+
+Reflects a vector about another vector.
+
+<a id="Parameter-Types"></a>
+
+## Parameter Types
+
+| Input | Type |
+| --- | --- |
+| `In` | Vector3f |
+| `Normal` | Vector3f |
+
+| Output | Type |
+| --- | --- |
+| `Out` | Vector3f |
+
+<a id="Parameter-descriptions"></a>
+
+## Parameter descriptions
+
+- **`In`**: The input vector to reflect.
+- **`Normal`**: The vector that the `In` vector will be reflected with reference to.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The `Reflect` node reflects the `In` vector by taking into account the surface orientation determined by the `Normal` vector. The `Reflect` node normalizes the `Normal` vector, then calculates the reflection direction using the formula, `In - 2 * dot(Normal, In) * Normal`. In this equation, `dot()` represents the dot product of the two vectors.
+
+## See Also
+
+### Nodes
+
+- [Position](position.md): The coordinates of the currently-processed data in a given coordinate space.
+- [Normal](normal.md): The geometric normal of the currently-processed data in a given coordinate space.
+- [Tangent](tangent.md): The geometric tangent of the currently-processed data in a given coordinate space.
+- [Bitangent](bitangent.md): The geometric bitangent vector of the currently-processed data in a given coordinate space.
+- [Texture Coordinates](texture-coordinates.md): The 2D or 3D texture coordinates of the currently-processed data.
+- [Geometry Color](geometry-color.md): The color associated with the geometry at the currently-processed geometric position, typically defined by vertex color.
+- [Geometric Property](geometric-property.md): The value of the specified geometric property (defined using ) of the currently-bound geometry.
+- [Refract (RealityKit)](refract-%28realitykit%29.md): Refracts a vector using a given normal and index of refraction (eta).

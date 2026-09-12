@@ -1,0 +1,45 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/networkextension/neurlfiltermanager/urlparsingconfiguration](https://developer.apple.com/documentation/networkextension/neurlfiltermanager/urlparsingconfiguration)
+
+# urlParsingConfiguration
+
+**Framework:** Network Extension  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+
+
+A property to configure the filter’s parser behavior.
+
+## Declaration
+
+```swift
+var urlParsingConfiguration: NEURLFilterManager.ParsingConfiguration { get set }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this property to control which URL components to exclude, and to customize parsing behavior during sub-URL enumeration. This determines how the filter parses URLs which sub-URLs it generates for matching against the filter data set.
+
+For any excluded component – domain, path, query, or fragment –  the filter substitutes `"%*"` in place as a placeholder. By contrast, if you strip the domain or `www` subdomain, they’re removed entirely without a placeholder, since URL matching doesn’t typically require them.
+
+As an example, consider the URL `https://www.example.com/a/b/c?id=123#fragment` and a configuration set as follows:
+
+```swift
+var config = manager.urlParsingConfiguration
+config.excludeScheme = true
+config.domain.stripWWW = true
+config.path.excluded = true
+manager.urlParsingConfiguration = config
+```
+
+The parsing result is `example.com/%*?id=123#fragment`, where `"%*"` acts as the placeholder for the excluded path component. The presence of a placeholder indicates the original URL contained that component, but the parsing configuration excluded it.
+
+If the filter manager sets [urlParsingRegularExpression](urlparsingregularexpression.md), this configuration has no effect.
+
+## See Also
+
+### Customizing filter parsing behavior
+
+- [NEURLFilterManager.ParsingConfiguration](parsingconfiguration.md): A type to configure the filter’s parser behavior.
+- [urlParsingRegularExpression](urlparsingregularexpression.md): A regular expression used for advanced URL parsing.
+- [setURLParsingRegularExpression(\_:)](seturlparsingregularexpression%28__%29.md): Sets a regular expression for use in URL parsing.

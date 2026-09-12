@@ -1,0 +1,103 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/1584140-general_audio_unit_function_sele](https://developer.apple.com/documentation/audiotoolbox/1584140-general_audio_unit_function_sele)
+
+# General Audio Unit Function Selectors (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** API Collection
+
+General audio unit component selectors that correspond to functions in the audio unit API.
+
+## Topics
+
+### Constants
+
+- [kAudioUnitAddPropertyListenerSelect](kaudiounitaddpropertylistenerselect.md): Used by the system to register a property listener callback function for an audio unit when you call the [AudioUnitAddPropertyListener(\_:\_:\_:\_:)](audiounitaddpropertylistener%28________%29.md) function.
+- [kAudioUnitAddRenderNotifySelect](kaudiounitaddrendernotifyselect.md)
+- [kAudioUnitComplexRenderSelect](kaudiounitcomplexrenderselect.md)
+- [kAudioUnitGetParameterSelect](kaudiounitgetparameterselect.md): Used by the system to get the current value of an audio unit parameter when you call the [AudioUnitGetParameter(\_:\_:\_:\_:\_:)](audiounitgetparameter%28__________%29.md) function.
+- [kAudioUnitGetPropertyInfoSelect](kaudiounitgetpropertyinfoselect.md): Used by the system to get property information from an audio unit when you call the [AudioUnitGetPropertyInfo(\_:\_:\_:\_:\_:\_:)](audiounitgetpropertyinfo%28____________%29.md) function.
+- [kAudioUnitGetPropertySelect](kaudiounitgetpropertyselect.md)
+- [kAudioUnitInitializeSelect](kaudiounitinitializeselect.md)
+- [kAudioUnitProcessMultipleSelect](kaudiounitprocessmultipleselect.md)
+- [kAudioUnitProcessSelect](kaudiounitprocessselect.md)
+- [kAudioUnitRange](kaudiounitrange.md)
+- [kAudioUnitRemovePropertyListenerSelect](kaudiounitremovepropertylistenerselect.md): Used by the system to unregister a property listener callback function from an audio unit when you call the `AudioUnitRemovePropertyListener` function.
+- [kAudioUnitRemovePropertyListenerWithUserDataSelect](kaudiounitremovepropertylistenerwithuserdataselect.md)
+- [kAudioUnitRemoveRenderNotifySelect](kaudiounitremoverendernotifyselect.md)
+- [kAudioUnitRenderSelect](kaudiounitrenderselect.md): Used by the system to invoke audio rendering by an audio unit when you call the [AudioUnitRender(\_:\_:\_:\_:\_:\_:)](audiounitrender%28____________%29.md) function.
+- [kAudioUnitResetSelect](kaudiounitresetselect.md): Used by the system to reset an audio unit when you call the [AudioUnitReset(\_:\_:\_:)](audiounitreset%28______%29.md) function.
+- [kAudioUnitScheduleParametersSelect](kaudiounitscheduleparametersselect.md): Used by the system to schedule an audio unit parameter value change when you call the [AudioUnitScheduleParameters(\_:\_:\_:)](audiounitscheduleparameters%28______%29.md) function.
+- [kAudioUnitSetParameterSelect](kaudiounitsetparameterselect.md): Used by the system to set the value of an audio unit parameter when you call the [AudioUnitSetParameter(\_:\_:\_:\_:\_:\_:)](audiounitsetparameter%28____________%29.md) function.
+- [kAudioUnitSetPropertySelect](kaudiounitsetpropertyselect.md)
+- [kAudioUnitUninitializeSelect](kaudiounituninitializeselect.md): Used by the system to uninitialize an audio unit when you call the [AudioUnitUninitialize(\_:)](audiounituninitialize%28__%29.md) function.
+
+## See Also
+
+### Enumerations
+
+- [Audio Unit Types](1584142-audio_unit_types.md): The defined types of audio processing plug-ins known as audio units.
+- [Inter-App Audio Unit Types](1619501-inter-app-audio-unit-types.md)
+- [Audio Unit Manufacturer Identifier](1584143-audio_unit_manufacturer_identifi.md): The Apple audio unit manufacturer code.
+- [Audio Unit Output Subtypes](1584148-audio-unit-output-subtypes.md)
+- [I/O Audio Unit Subtypes](1619485-i-o-audio-unit-subtypes.md)
+- [Converter Audio Unit Subtypes](1584145-converter_audio_unit_subtypes.md): Audio data format converter audio unit subtypes for audio units provided by Apple.
+- [Reserved Audio Unit Clump Identifier](1533986-reserved_audio_unit_clump_identi.md): Reserved for system use.
+- [Offline Audio Unit Properties](1534054-offline_audio_unit_properties.md): Properties for audio units that perform offline processing—that is, processing in a nonplayback, nonrealtime mode.
+- [MIDI Audio Unit Parameters](1389613-midi_audio_unit_parameters.md): Parameters for instrument units.
+- [Generator Audio Unit Subtypes](1619493-generator_audio_unit_subtypes.md): Audio units that serve as sound sources.
+- [Input/Output Audio Unit Subtypes](1584139-input_output_audio_unit_subtypes.md): Input/output audio unit subtypes for audio units provided by Apple.
+- [Audio Unit Panner Subtypes](1584151-audio-unit-panner-subtypes.md)
+- [Audio Unit Player Subtypes](1584155-audio-unit-player-subtypes.md)
+- [Audio Unit Pitch Subtypes](1584152-audio-unit-pitch-subtypes.md)
+- [AudioUnitEventType](audiouniteventtype.md)
+
+# General Audio Unit Function Selectors (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** API Collection
+
+General audio unit component selectors that correspond to functions in the audio unit API.
+
+## Topics
+
+### Constants
+
+- [kAudioUnitAddPropertyListenerSelect](kaudiounitaddpropertylistenerselect.md): Used by the system to register a property listener callback function for an audio unit when you call the [AudioUnitAddPropertyListener](audiounitaddpropertylistener%28________%29.md) function.
+- [kAudioUnitAddRenderNotifySelect](kaudiounitaddrendernotifyselect.md)
+- [kAudioUnitComplexRenderSelect](kaudiounitcomplexrenderselect.md)
+- [kAudioUnitGetParameterSelect](kaudiounitgetparameterselect.md): Used by the system to get the current value of an audio unit parameter when you call the [AudioUnitGetParameter](audiounitgetparameter%28__________%29.md) function.
+- [kAudioUnitGetPropertyInfoSelect](kaudiounitgetpropertyinfoselect.md): Used by the system to get property information from an audio unit when you call the [AudioUnitGetPropertyInfo](audiounitgetpropertyinfo%28____________%29.md) function.
+- [kAudioUnitGetPropertySelect](kaudiounitgetpropertyselect.md)
+- [kAudioUnitInitializeSelect](kaudiounitinitializeselect.md)
+- [kAudioUnitProcessMultipleSelect](kaudiounitprocessmultipleselect.md)
+- [kAudioUnitProcessSelect](kaudiounitprocessselect.md)
+- [kAudioUnitRange](kaudiounitrange.md)
+- [kAudioUnitRemovePropertyListenerSelect](kaudiounitremovepropertylistenerselect.md): Used by the system to unregister a property listener callback function from an audio unit when you call the `AudioUnitRemovePropertyListener` function.
+- [kAudioUnitRemovePropertyListenerWithUserDataSelect](kaudiounitremovepropertylistenerwithuserdataselect.md)
+- [kAudioUnitRemoveRenderNotifySelect](kaudiounitremoverendernotifyselect.md)
+- [kAudioUnitRenderSelect](kaudiounitrenderselect.md): Used by the system to invoke audio rendering by an audio unit when you call the [AudioUnitRender](audiounitrender%28____________%29.md) function.
+- [kAudioUnitResetSelect](kaudiounitresetselect.md): Used by the system to reset an audio unit when you call the [AudioUnitReset](audiounitreset%28______%29.md) function.
+- [kAudioUnitScheduleParametersSelect](kaudiounitscheduleparametersselect.md): Used by the system to schedule an audio unit parameter value change when you call the [AudioUnitScheduleParameters](audiounitscheduleparameters%28______%29.md) function.
+- [kAudioUnitSetParameterSelect](kaudiounitsetparameterselect.md): Used by the system to set the value of an audio unit parameter when you call the [AudioUnitSetParameter](audiounitsetparameter%28____________%29.md) function.
+- [kAudioUnitSetPropertySelect](kaudiounitsetpropertyselect.md)
+- [kAudioUnitUninitializeSelect](kaudiounituninitializeselect.md): Used by the system to uninitialize an audio unit when you call the [AudioUnitUninitialize](audiounituninitialize%28__%29.md) function.
+
+## See Also
+
+### Enumerations
+
+- [Audio Unit Types](1584142-audio_unit_types.md): The defined types of audio processing plug-ins known as audio units.
+- [Inter-App Audio Unit Types](1619501-inter-app-audio-unit-types.md)
+- [Audio Unit Manufacturer Identifier](1584143-audio_unit_manufacturer_identifi.md): The Apple audio unit manufacturer code.
+- [Audio Unit Output Subtypes](1584148-audio-unit-output-subtypes.md)
+- [I/O Audio Unit Subtypes](1619485-i-o-audio-unit-subtypes.md)
+- [Converter Audio Unit Subtypes](1584145-converter_audio_unit_subtypes.md): Audio data format converter audio unit subtypes for audio units provided by Apple.
+- [Reserved Audio Unit Clump Identifier](1533986-reserved_audio_unit_clump_identi.md): Reserved for system use.
+- [Offline Audio Unit Properties](1534054-offline_audio_unit_properties.md): Properties for audio units that perform offline processing—that is, processing in a nonplayback, nonrealtime mode.
+- [MIDI Audio Unit Parameters](1389613-midi_audio_unit_parameters.md): Parameters for instrument units.
+- [Generator Audio Unit Subtypes](1619493-generator_audio_unit_subtypes.md): Audio units that serve as sound sources.
+- [Input/Output Audio Unit Subtypes](1584139-input_output_audio_unit_subtypes.md): Input/output audio unit subtypes for audio units provided by Apple.
+- [Audio Unit Panner Subtypes](1584151-audio-unit-panner-subtypes.md)
+- [Audio Unit Player Subtypes](1584155-audio-unit-player-subtypes.md)
+- [Audio Unit Pitch Subtypes](1584152-audio-unit-pitch-subtypes.md)
+- [AudioUnitEventType](audiouniteventtype.md)

@@ -1,0 +1,28 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/groupactivities/groupactivityactivationresult/activationpreferred](https://developer.apple.com/documentation/groupactivities/groupactivityactivationresult/activationpreferred)
+
+# GroupActivityActivationResult.activationPreferred
+
+**Framework:** Group Activities  
+**Kind:** Case  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+
+
+A result that indicates the user wants to share the activity with the group.
+
+## Declaration
+
+```swift
+case activationPreferred
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+When you receive this result in your completion handler, call the [activate()](../groupactivity/activate%28%29.md) method of your [GroupActivity](../groupactivity.md) type to advertise the activity to other participants in the group.
+
+## See Also
+
+### Getting the activation results
+
+- [GroupActivityActivationResult.activationDisabled](activationdisabled.md): A result that indicates the user disabled the automatic sharing of activities, or prefers to perform the activity locally.
+- [GroupActivityActivationResult.cancelled](cancelled.md): A result that indicates the user canceled the activation request.

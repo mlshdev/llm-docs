@@ -1,0 +1,184 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/networkextension/nefiltermanager](https://developer.apple.com/documentation/networkextension/nefiltermanager)
+
+# NEFilterManager (Swift)
+
+**Framework:** Network Extension  
+**Kind:** Class  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · visionOS 1.0+
+
+An object to create and manage a content filter’s configuration.
+
+## Declaration
+
+```swift
+class NEFilterManager
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Each app is allowed to create a single filter configuration. The [NEFilterManager](nefiltermanager.md) class has a class method ([shared()](nefiltermanager/shared%28%29.md)) that provides access to a single [NEFilterManager](nefiltermanager.md) instance. This single instance corresponds to a single filter configuration.
+
+The filter configuration is stored in the Network Extension preferences which are managed by the Network Extension framework. The filter configuration must be explicitly loaded into memory from the Network Extension preferences before it can be used, and any changes must be explicitly saved to the Network Extension preferences before taking effect on the system.
+
+> **Important**
+
+>  In product builds for distribution, Network Content Filter configurations can be created only on supervised devices. During development and testing you can temporarily override this restriction by signing your build with the `get-task-allow` entitlement.
+
+> **Important**
+
+>  To use the [NEFilterManager](nefiltermanager.md) class, you must enable the Network Extensions capability in Xcode and select the Content Filter capability. See [Configure network extensions](http://help.apple.com/xcode/mac/current/#/dev0b2ef6f08).
+
+<a id="Profile-Configuration"></a>
+
+### Profile Configuration
+
+Filter configurations are created using configuration profiles. See [WebContentFilter](../devicemanagement/webcontentfilter.md) for more information. To specify that a filter configuration created via a profile payload is associated with a particular app (and therefore allow the app to use `NEFilterManager` to manage the configuration), the app’s bundle identifier must be set as the value of the `PluginBundleID` field in the profile payload.
+
+<a id="Filter-Provider-Extensions"></a>
+
+### Filter Provider Extensions
+
+Apps that use `NEFilterManager` are required to contain two Filter Provider extensions that together perform the task of examining network content and making pass and block decisions. See the [NEFilterControlProvider](nefiltercontrolprovider.md) and [NEFilterDataProvider](nefilterdataprovider.md) classes for more details about these extensions.
+
+## Topics
+
+### Managing the filter configuration
+
+- [shared()](nefiltermanager/shared%28%29.md): Access the single instance of `NEFilterManager`.
+- [loadFromPreferences(completionHandler:)](nefiltermanager/loadfrompreferences%28completionhandler_%29.md): Load the filter configuration from the Network Extension preferences.
+- [saveToPreferences(completionHandler:)](nefiltermanager/savetopreferences%28completionhandler_%29.md): Save the filter configuration in the Network Extension preferences.
+- [removeFromPreferences(completionHandler:)](nefiltermanager/removefrompreferences%28completionhandler_%29.md): Remove the filter configuration from the Network Extension preferences.
+
+### Accessing filter configuration properties
+
+- [isEnabled](nefiltermanager/isenabled.md): A Boolean used to toggle the enabled state of the filter.
+- [providerConfiguration](nefiltermanager/providerconfiguration.md): A [NEFilterProviderConfiguration](nefilterproviderconfiguration.md) object containing the filter configuration settings.
+- [localizedDescription](nefiltermanager/localizeddescription.md): A string containing a description of the filter configuration.
+
+### Prioritizing filters
+
+- [grade](nefiltermanager/grade-swift.property.md): The grade of the filter, which determines when it acts relative to other filters.
+- [NEFilterManager.Grade](nefiltermanager/grade-swift.enum.md): A type for the grade or priority of the filter.
+
+### Errors
+
+- [NEFilterErrorDomain](nefiltererrordomain.md): The domain for errors resulting from calls to the filter manager.
+- [NEFilterManagerError](nefiltermanagererror.md): Error codes specific to filter managers.
+
+### Notifications
+
+- [NEFilterConfigurationDidChange](../foundation/nsnotification/name-swift.struct/nefilterconfigurationdidchange.md): Posted after the filter configuration stored in the Network Extension preferences changes.
+
+### Instance Properties
+
+- [disableEncryptedDNSSettings](nefiltermanager/disableencrypteddnssettings.md)
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Filter configuration
+
+- [NEFilterProviderConfiguration](nefilterproviderconfiguration.md): Configuration parameters for a content filter.
+
+# NEFilterManager (Objective-C)
+
+**Framework:** Network Extension  
+**Kind:** Class  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · visionOS 1.0+
+
+An object to create and manage a content filter’s configuration.
+
+## Declaration
+
+```objectivec
+@interface NEFilterManager : NSObject
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Each app is allowed to create a single filter configuration. The [NEFilterManager](nefiltermanager.md) class has a class method ([sharedManager](nefiltermanager/shared%28%29.md)) that provides access to a single [NEFilterManager](nefiltermanager.md) instance. This single instance corresponds to a single filter configuration.
+
+The filter configuration is stored in the Network Extension preferences which are managed by the Network Extension framework. The filter configuration must be explicitly loaded into memory from the Network Extension preferences before it can be used, and any changes must be explicitly saved to the Network Extension preferences before taking effect on the system.
+
+> **Important**
+
+>  In product builds for distribution, Network Content Filter configurations can be created only on supervised devices. During development and testing you can temporarily override this restriction by signing your build with the `get-task-allow` entitlement.
+
+> **Important**
+
+>  To use the [NEFilterManager](nefiltermanager.md) class, you must enable the Network Extensions capability in Xcode and select the Content Filter capability. See [Configure network extensions](http://help.apple.com/xcode/mac/current/#/dev0b2ef6f08).
+
+<a id="Profile-Configuration"></a>
+
+### Profile Configuration
+
+Filter configurations are created using configuration profiles. See [WebContentFilter](../devicemanagement/webcontentfilter.md) for more information. To specify that a filter configuration created via a profile payload is associated with a particular app (and therefore allow the app to use `NEFilterManager` to manage the configuration), the app’s bundle identifier must be set as the value of the `PluginBundleID` field in the profile payload.
+
+<a id="Filter-Provider-Extensions"></a>
+
+### Filter Provider Extensions
+
+Apps that use `NEFilterManager` are required to contain two Filter Provider extensions that together perform the task of examining network content and making pass and block decisions. See the [NEFilterControlProvider](nefiltercontrolprovider.md) and [NEFilterDataProvider](nefilterdataprovider.md) classes for more details about these extensions.
+
+## Topics
+
+### Managing the filter configuration
+
+- [sharedManager](nefiltermanager/shared%28%29.md): Access the single instance of `NEFilterManager`.
+- [loadFromPreferencesWithCompletionHandler:](nefiltermanager/loadfrompreferences%28completionhandler_%29.md): Load the filter configuration from the Network Extension preferences.
+- [saveToPreferencesWithCompletionHandler:](nefiltermanager/savetopreferences%28completionhandler_%29.md): Save the filter configuration in the Network Extension preferences.
+- [removeFromPreferencesWithCompletionHandler:](nefiltermanager/removefrompreferences%28completionhandler_%29.md): Remove the filter configuration from the Network Extension preferences.
+
+### Accessing filter configuration properties
+
+- [enabled](nefiltermanager/isenabled.md): A Boolean used to toggle the enabled state of the filter.
+- [providerConfiguration](nefiltermanager/providerconfiguration.md): A [NEFilterProviderConfiguration](nefilterproviderconfiguration.md) object containing the filter configuration settings.
+- [localizedDescription](nefiltermanager/localizeddescription.md): A string containing a description of the filter configuration.
+
+### Prioritizing filters
+
+- [grade](nefiltermanager/grade-swift.property.md): The grade of the filter, which determines when it acts relative to other filters.
+- [NEFilterManagerGrade](nefiltermanager/grade-swift.enum.md): A type for the grade or priority of the filter.
+
+### Errors
+
+- [NEFilterErrorDomain](nefiltererrordomain.md): The domain for errors resulting from calls to the filter manager.
+- [NEFilterManagerError](nefiltermanagererror.md): Error codes specific to filter managers.
+
+### Notifications
+
+- [NEFilterConfigurationDidChangeNotification](nefilterconfigurationdidchangenotification.md): Posted after the filter configuration stored in the Network Extension preferences changes.
+
+### Instance Properties
+
+- [disableEncryptedDNSSettings](nefiltermanager/disableencrypteddnssettings.md)
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+## See Also
+
+### Filter configuration
+
+- [NEFilterProviderConfiguration](nefilterproviderconfiguration.md): Configuration parameters for a content filter.

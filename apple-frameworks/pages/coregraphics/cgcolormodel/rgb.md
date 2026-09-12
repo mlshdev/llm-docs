@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coregraphics/cgcolormodel/rgb](https://developer.apple.com/documentation/coregraphics/cgcolormodel/rgb)
+
+# rgb (Swift)
+
+**Framework:** Core Graphics  
+**Kind:** Type Property  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+## Declaration
+
+```swift
+static var rgb: CGColorModel { get }
+```
+
+# kCGColorModelRGB (Objective-C)
+
+**Framework:** Core Graphics  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+## Declaration
+
+```objectivec
+kCGColorModelRGB
+```

@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/createmlcomponents/transformer/callasfunction(_:eventhandler:)](https://developer.apple.com/documentation/createmlcomponents/transformer/callasfunction(_:eventhandler:))
+
+# callAsFunction(\_:eventHandler:)
+
+**Framework:** Create ML Components  
+**Kind:** Instance Method  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+ · watchOS 11.0+
+
+Performs the transformation on a single input.
+
+## Declaration
+
+```swift
+func callAsFunction(_ input: Self.Input, eventHandler: EventHandler? = nil) async throws -> Self.Output
+```
+
+## Parameters
+
+- `input`: The transformer input.
+- `eventHandler`: An event handler.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An output produced by applying the transformer to the input.
+
+## See Also
+
+### Transforming and predicting
+
+- [prediction(from:)](prediction%28from_%29.md): Performs a prediction from a single input.
+- [prediction(from:eventHandler:)](prediction%28from_eventhandler_%29.md): Performs a prediction on a sequence of annotated inputs.

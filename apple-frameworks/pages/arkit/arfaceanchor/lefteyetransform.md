@@ -1,0 +1,63 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/arfaceanchor/lefteyetransform](https://developer.apple.com/documentation/arkit/arfaceanchor/lefteyetransform)
+
+# leftEyeTransform (Swift)
+
+**Framework:** ARKit  
+**Kind:** Instance Property  
+**Availability:** iOS 12.0+ · iPadOS 12.0+
+
+A transform matrix indicating the position and orientation of the face’s left eye.
+
+## Declaration
+
+```swift
+var leftEyeTransform: simd_float4x4 { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The translation aspect of this matrix indicates the position of the center of the eyeball, relative to the position represented by the anchor’s [transform](../aranchor/transform.md). The positive z-axis points from the center of the eyeball in the direction of the pupil.
+
+Rotational aspects of the matrix indicate the orientation of the eyeball—for example, a rotation about the x-axis directs the pupil upward or downward. The eye does not rotate about the z-axis.
+
+![Diagram showing the coordinate axis origin defined by the leftEyeTransform, representing both the position and rotation of the eye relative to the face anchor.](https://developer.apple.com/images/com.apple.arkit/media-3001546@2x.png)
+
+## See Also
+
+### Tracking Eye Movement
+
+- [rightEyeTransform](righteyetransform.md): A transform matrix indicating the position and orientation of the face’s right eye.
+- [lookAtPoint](lookatpoint.md): A position in face coordinate space estimating the direction of the face’s gaze.
+
+# leftEyeTransform (Objective-C)
+
+**Framework:** ARKit  
+**Kind:** Instance Property  
+**Availability:** iOS 12.0+ · iPadOS 12.0+
+
+A transform matrix indicating the position and orientation of the face’s left eye.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, assign, readonly) simd_float4x4 leftEyeTransform;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The translation aspect of this matrix indicates the position of the center of the eyeball, relative to the position represented by the anchor’s [transform](../aranchor/transform.md). The positive z-axis points from the center of the eyeball in the direction of the pupil.
+
+Rotational aspects of the matrix indicate the orientation of the eyeball—for example, a rotation about the x-axis directs the pupil upward or downward. The eye does not rotate about the z-axis.
+
+![Diagram showing the coordinate axis origin defined by the leftEyeTransform, representing both the position and rotation of the eye relative to the face anchor.](https://developer.apple.com/images/com.apple.arkit/media-3001546@2x.png)
+
+## See Also
+
+### Tracking Eye Movement
+
+- [rightEyeTransform](righteyetransform.md): A transform matrix indicating the position and orientation of the face’s right eye.
+- [lookAtPoint](lookatpoint.md): A position in face coordinate space estimating the direction of the face’s gaze.

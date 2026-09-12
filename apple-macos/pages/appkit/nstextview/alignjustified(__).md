@@ -1,0 +1,89 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstextview/alignjustified(_:)](https://developer.apple.com/documentation/appkit/nstextview/alignjustified(_:))
+
+# alignJustified(\_:) (Swift)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS
+
+Applies full justification to selected paragraphs (or all text, if the receiver is a plain text object).
+
+## Declaration
+
+```swift
+func alignJustified(_ sender: Any?)
+```
+
+## Parameters
+
+- `sender`: The control that sent the message; may be `nil`.
+
+## See Also
+
+### Related Documentation
+
+- [alignRight(\_:)](../nstext/alignright%28__%29.md): This action method applies right alignment to selected paragraphs (or all text if the receiver is a plain text object).
+- [alignLeft(\_:)](../nstext/alignleft%28__%29.md): This action method applies left alignment to selected paragraphs (or all text if the receiver is a plain text object).
+- [alignCenter(\_:)](../nstext/aligncenter%28__%29.md): This action method applies center alignment to selected paragraphs (or all text if the receiver is a plain text object).
+- [alignment](../nstext/alignment.md): The alignment of all the receiver’s text.
+
+### Setting text attributes
+
+- [changeAttributes(\_:)](changeattributes%28__%29.md): Changes the attributes of the current selection.
+- [changeColor(\_:)](changecolor%28__%29.md): Sets the color of the selected text.
+- [setAlignment(\_:range:)](setalignment%28__range_%29.md): Sets the alignment of the paragraphs containing characters in the specified range.
+- [typingAttributes](typingattributes.md): The receiver’s typing attributes.
+- [useStandardKerning(\_:)](usestandardkerning%28__%29.md): Set the receiver to use pair kerning data for the glyphs in its selection, or for all glyphs if the receiver is a plain text view.
+- [lowerBaseline(\_:)](lowerbaseline%28__%29.md): Lowers the baseline offset of selected text by 1 point, or of all text if the receiver is a plain text view.
+- [raiseBaseline(\_:)](raisebaseline%28__%29.md): Raises the baseline offset of selected text by 1 point, or of all text if the receiver is a plain text view.
+- [turnOffKerning(\_:)](turnoffkerning%28__%29.md): Sets the receiver to use nominal glyph spacing for the glyphs in its selection, or for all glyphs if the receiver is a plain text view.
+- [loosenKerning(\_:)](loosenkerning%28__%29.md): Increases the space between glyphs in the receiver’s selection, or in all text if the receiver is a plain text view.
+- [tightenKerning(\_:)](tightenkerning%28__%29.md): Decreases the space between glyphs in the receiver’s selection, or for all glyphs if the receiver is a plain text view.
+- [useStandardLigatures(\_:)](usestandardligatures%28__%29.md): Sets the receiver to use the standard ligatures available for the fonts and languages used when setting text, for the glyphs in the selection if the receiver is a rich text view, or for all glyphs if it’s a plain text view.
+- [turnOffLigatures(\_:)](turnoffligatures%28__%29.md): Sets the receiver to use only required ligatures when setting text, for the glyphs in the selection if the receiver is a rich text view, or for all glyphs if it’s a plain text view.
+- [useAllLigatures(\_:)](useallligatures%28__%29.md): Sets the receiver to use all ligatures available for the fonts and languages used when setting text, for the glyphs in the selection if the receiver is a rich text view, or for all glyphs if it’s a plain text view.
+- [toggleTraditionalCharacterShape(\_:)](toggletraditionalcharactershape%28__%29.md): Deprecated. Toggles the `NSCharacterShapeAttributeName` attribute at the current selection.
+
+# alignJustified: (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS
+
+Applies full justification to selected paragraphs (or all text, if the receiver is a plain text object).
+
+## Declaration
+
+```objectivec
+- (void) alignJustified:(id) sender;
+```
+
+## Parameters
+
+- `sender`: The control that sent the message; may be `nil`.
+
+## See Also
+
+### Related Documentation
+
+- [alignRight:](../nstext/alignright%28__%29.md): This action method applies right alignment to selected paragraphs (or all text if the receiver is a plain text object).
+- [alignLeft:](../nstext/alignleft%28__%29.md): This action method applies left alignment to selected paragraphs (or all text if the receiver is a plain text object).
+- [alignCenter:](../nstext/aligncenter%28__%29.md): This action method applies center alignment to selected paragraphs (or all text if the receiver is a plain text object).
+- [alignment](../nstext/alignment.md): The alignment of all the receiver’s text.
+
+### Setting text attributes
+
+- [changeAttributes:](changeattributes%28__%29.md): Changes the attributes of the current selection.
+- [changeColor:](changecolor%28__%29.md): Sets the color of the selected text.
+- [setAlignment:range:](setalignment%28__range_%29.md): Sets the alignment of the paragraphs containing characters in the specified range.
+- [typingAttributes](typingattributes.md): The receiver’s typing attributes.
+- [useStandardKerning:](usestandardkerning%28__%29.md): Set the receiver to use pair kerning data for the glyphs in its selection, or for all glyphs if the receiver is a plain text view.
+- [lowerBaseline:](lowerbaseline%28__%29.md): Lowers the baseline offset of selected text by 1 point, or of all text if the receiver is a plain text view.
+- [raiseBaseline:](raisebaseline%28__%29.md): Raises the baseline offset of selected text by 1 point, or of all text if the receiver is a plain text view.
+- [turnOffKerning:](turnoffkerning%28__%29.md): Sets the receiver to use nominal glyph spacing for the glyphs in its selection, or for all glyphs if the receiver is a plain text view.
+- [loosenKerning:](loosenkerning%28__%29.md): Increases the space between glyphs in the receiver’s selection, or in all text if the receiver is a plain text view.
+- [tightenKerning:](tightenkerning%28__%29.md): Decreases the space between glyphs in the receiver’s selection, or for all glyphs if the receiver is a plain text view.
+- [useStandardLigatures:](usestandardligatures%28__%29.md): Sets the receiver to use the standard ligatures available for the fonts and languages used when setting text, for the glyphs in the selection if the receiver is a rich text view, or for all glyphs if it’s a plain text view.
+- [turnOffLigatures:](turnoffligatures%28__%29.md): Sets the receiver to use only required ligatures when setting text, for the glyphs in the selection if the receiver is a rich text view, or for all glyphs if it’s a plain text view.
+- [useAllLigatures:](useallligatures%28__%29.md): Sets the receiver to use all ligatures available for the fonts and languages used when setting text, for the glyphs in the selection if the receiver is a rich text view, or for all glyphs if it’s a plain text view.
+- [toggleTraditionalCharacterShape:](toggletraditionalcharactershape%28__%29.md): Deprecated. Toggles the `NSCharacterShapeAttributeName` attribute at the current selection.

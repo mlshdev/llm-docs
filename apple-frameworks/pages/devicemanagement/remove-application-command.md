@@ -1,0 +1,113 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/remove-application-command](https://developer.apple.com/documentation/devicemanagement/remove-application-command)
+
+# Remove Application
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Web Service Endpoint  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 5.0+ · macOS 11.0+ · tvOS 10.2+ · visionOS 1.1+ · watchOS 10.0+
+
+Remove an app.
+
+## URL
+
+```http
+PUT https://yourmdmhost.example.com/mdm
+```
+
+## HTTP Body
+
+Content type: `application/x-apple-aspen-mdm`
+
+Type: `RemoveApplicationCommand`
+
+The request object the server returns for the Remove Application Command.
+
+## Response Codes
+
+- `200` OK — `RemoveApplicationResponse`: The response object the system returns for the Remove Application Command.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This command allows a server to remove managed apps. It also allows a server to remove unmanaged and system deletable apps on supervised devices in iOS 26 and later, tvOS 26 and later, visionOS 26 and later, and watchOS 26 and later. When the device removes an app, it also removes the data for the app.
+
+This command fails for apps that Declarative Device Management is managing.
+
+Refer to the following sections to determine supported channels and requirements, and to see an example request and response.
+
+<a id="Command-availability"></a>
+
+### Command availability
+
+|  |  |
+| --- | --- |
+| Device channel | iOS, macOS, Shared iPad, tvOS, visionOS, watchOS |
+| User channel | N/A |
+| Requires supervision | N/A |
+| Allowed in user enrollment | iOS, macOS, visionOS |
+| Required access right | AllowAppInstallation |
+
+<a id="Example-request-and-response"></a>
+
+### Example request and response
+
+**Request**
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Command</key>
+    <dict>
+        <key>Identifier</key>
+        <string>com.acme.myenterpriseapp</string>
+        <key>RequestType</key>
+        <string>RemoveApplication</string>
+    </dict>
+    <key>CommandUUID</key>
+    <string>0001_RemoveApplication</string>
+</dict>
+</plist>
+```
+
+**Response**
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CommandUUID</key>
+    <string>0001_RemoveApplication</string>
+    <key>Status</key>
+    <string>Acknowledged</string>
+    <key>UDID</key>
+    <string>00008020-000915083C80012E</string>
+</dict>
+</plist>
+```
+
+## Topics
+
+### Commands and responses
+
+- [RemoveApplicationCommand](removeapplicationcommand.md): The command to remove an app.
+- [RemoveApplicationResponse](removeapplicationresponse.md): A response from the device after it processes the command to remove an app.
+
+## See Also
+
+### Managed apps
+
+- [Install Application](install-application-command.md): Install a third-party app on a device.
+- [Install Enterprise Application](install-enterprise-application-command.md): Install an enterprise app on a device.
+- [Installed Application List](installed-application-list-command.md): Get a list of the installed apps on a device.
+- [Managed Application List](managed-application-list-command.md): Get the status of all managed apps on a device.
+- [Apply Redemption Code](apply-redemption-code-command.md): Complete the installation of an app using a redemption code.
+- [Validate Applications](validate-applications-command.md): Force validation of developer and universal provisioning profiles for enterprise apps.
+- [Managed Application Attributes](managed-application-attributes-command.md): Query attributes in managed apps on a device.
+- [Managed Application Configuration](managed-application-configuration-command.md): Get app configurations from managed apps on a device.
+- [Managed Application Feedback](managed-application-feedback-command.md): Get app feedback from a managed app on the device.

@@ -1,0 +1,19 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/media_atom/size](https://developer.apple.com/documentation/quicktime-file-format/media_atom/size)
+
+# Size
+
+**Framework:** QuickTime File Format  
+**Kind:** Data field
+
+A 32-bit integer that specifies the number of bytes in this media atom.
+
+## See Also
+
+### Data fields
+
+- [Type](type.md): A 32-bit integer that identifies the atom type.
+- [Media header atom](media_header_atom.md): This atom contains the standard media information.
+- [Extended language tag atom](extended_language_tag_atom.md): This atom contains the extended language tag describing the media language.
+- [Handler reference atom](handler_reference_atom.md): This atom identifies the media handler component that is to be used to interpret the media data.
+- [Media information atom](media_information_atom.md): This atom contains data specific to the media type for use by the media handler component.
+- [User data atom](user_data_atom.md): An atom where you define and store data associated with a QuickTime object.

@@ -1,0 +1,13 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/carplay/cpbarbutton/type/init(rawvalue:)](https://developer.apple.com/documentation/carplay/cpbarbutton/type/init(rawvalue:))
+
+# init(rawValue:)
+
+**Framework:** CarPlay  
+**Kind:** Initializer  
+**Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+
+
+## Declaration
+
+```swift
+init?(rawValue: UInt)
+```

@@ -1,0 +1,58 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iokerneldebugger/1812543-debugger](https://developer.apple.com/documentation/kernel/iokerneldebugger/1812543-debugger)
+
+# debugger
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel
+
+Factory method that performs allocation and initialization of an IOKernelDebugger object.
+
+## Declaration
+
+```objectivec
+static IOKernelDebugger * debugger(
+ IOService *target, 
+ IODebuggerTxHandlertxHandler, 
+ IODebuggerRxHandlerrxHandler, 
+ IODebuggerLinkStatusHandlerlinkStatusHandler, 
+ IODebuggerSetModeHandlersetModeHandler); 
+```
+
+## Parameters
+
+- `target`: The target object that implements the debugger handlers.
+- `txHandler`: The target's transmit handler. A pointer to a 'C' function.
+- `rxHandler`: The target's receive handler. A pointer to a 'C' function.
+- `linkStatusHandler`: The target's link status handler. A pointer to a 'C' function.
+- `setModeHandler`: The target's set mode handler. A pointer to a 'C' function.
+
+<a id="return_value"></a>
+
+## Return Value
+
+Returns an IOKernelDebugger instance on success, 0 otherwise.
+
+## See Also
+
+### Miscellaneous
+
+- [free](1812554-free.md): Frees the IOKernelDebugger instance.
+- [handleClose](1812560-handleclose.md): Handles a client close.
+- [handleIsOpen](1812565-handleisopen.md): Queries whether a client has an open on this object.
+- [handleOpen](1812573-handleopen.md): Handles a client open.
+- [init](1812584-init.md): Initializes an IOKernelDebugger instance.
+- [kdpLinkStatusDispatcher](1812595-kdplinkstatusdispatcher.md): The KDP link status dispatch function.
+- [kdpReceiveDispatcher](1812607-kdpreceivedispatcher.md): The KDP receive dispatch function.
+- [kdpSetModeDispatcher](1812616-kdpsetmodedispatcher.md): The KDP set mode dispatch function.
+- [kdpTransmitDispatcher](1812631-kdptransmitdispatcher.md): The KDP transmit dispatch function.
+- [lock](1812643-lock.md): Takes the debugger lock conditionally.
+- [nullLinkStatusHandler](1812653-nulllinkstatushandler.md): Null link status handler.
+- [nullRxHandler](1812663-nullrxhandler.md): Null receive handler.
+- [nullSetModeHandler](1812671-nullsetmodehandler.md): Null set mode handler.
+- [nullTxHandler](1812684-nulltxhandler.md): Null transmit handler.
+- [powerStateDidChangeTo](1812705-powerstatedidchangeto.md): Handles notification that the network controller did change power state.
+- [powerStateWillChangeTo](1812727-powerstatewillchangeto.md): Handles notification that the network controller will change power state.
+- [registerHandler](1812741-registerhandler.md): Registers the target and the handler functions.
+- [signalDebugger](1812763-signaldebugger.md): Signal the kernel to enter the debugger when safe.
+- [unlock](1812777-unlock.md): Releases the debugger lock.

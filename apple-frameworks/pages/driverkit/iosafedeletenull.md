@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/iosafedeletenull](https://developer.apple.com/documentation/driverkit/iosafedeletenull)
+
+# IOSafeDeleteNULL
+
+**Interface language:** Objective-C
+
+**Framework:** DriverKit  
+**Kind:** Macro  
+**Availability:** DriverKit · iOS · iPadOS · macOS
+
+Frees the memory associated with a typed array.
+
+## Declaration
+
+```objectivec
+#define IOSafeDeleteNULL(ptr, type, count)
+```
+
+## Parameters
+
+- `ptr`: The pointer to the memory block to free. You may specify `NULL` for this parameter. After freeing the memory, the macro sets the value of `ptr` to `NULL`.
+- `type`: The data type stored in the memory block. The macro uses the type to determine its size.
+- `count`: The number of array entries in the memory block
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this macro to free memory that you allocated with [IONew](ionew.md) or [IONewZero](ionewzero.md). If `ptr` is `NULL`, this macro doesn’t attempt to free the memory.
+
+## See Also
+
+### Deallocation
+
+- [IODelete](iodelete.md): Frees the memory associated with a valid, typed array.
+- [OSSafeReleaseNULL](ossafereleasenull.md): Frees memory that you allocated for a named class.
+- [IOFree](iofree.md): Frees a memory block that contains general-purpose memory.

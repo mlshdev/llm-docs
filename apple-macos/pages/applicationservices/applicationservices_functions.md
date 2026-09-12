@@ -1,0 +1,444 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/applicationservices/applicationservices_functions](https://developer.apple.com/documentation/applicationservices/applicationservices_functions)
+
+# ApplicationServices Functions (Swift)
+
+**Framework:** Application Services  
+**Kind:** API Collection
+
+## Topics
+
+### Functions
+
+- [CGDisplayCreateUUIDFromDisplayID(\_:)](https://developer.apple.com/documentation/colorsync/cgdisplaycreateuuidfromdisplayid%28_:%29)
+- [CGDisplayGetDisplayIDFromUUID(\_:)](https://developer.apple.com/documentation/colorsync/cgdisplaygetdisplayidfromuuid%28_:%29)
+- [ColorSyncCMMCopyCMMIdentifier(\_:)](https://developer.apple.com/documentation/colorsync/colorsynccmmcopycmmidentifier%28_:%29)
+- [ColorSyncCMMCopyLocalizedName(\_:)](https://developer.apple.com/documentation/colorsync/colorsynccmmcopylocalizedname%28_:%29)
+- [ColorSyncCMMCreate(\_:)](https://developer.apple.com/documentation/colorsync/colorsynccmmcreate%28_:%29)
+- [ColorSyncCMMGetBundle(\_:)](https://developer.apple.com/documentation/colorsync/colorsynccmmgetbundle%28_:%29)
+- [ColorSyncCMMGetTypeID()](https://developer.apple.com/documentation/colorsync/colorsynccmmgettypeid%28%29)
+- [ColorSyncDeviceCopyDeviceInfo(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncdevicecopydeviceinfo%28_:_:%29)
+- [ColorSyncDeviceSetCustomProfiles(\_:\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncdevicesetcustomprofiles%28_:_:_:%29)
+- [ColorSyncIterateDeviceProfiles(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsynciteratedeviceprofiles%28_:_:%29)
+- [ColorSyncIterateInstalledCMMs(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsynciterateinstalledcmms%28_:_:%29)
+- [ColorSyncIterateInstalledProfiles(\_:\_:\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsynciterateinstalledprofiles%28_:_:_:_:%29)
+- [ColorSyncProfileContainsTag(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilecontainstag%28_:_:%29)
+- [ColorSyncProfileCopyData(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilecopydata%28_:_:%29)
+- [ColorSyncProfileCopyDescriptionString(\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilecopydescriptionstring%28_:%29)
+- [ColorSyncProfileCopyHeader(\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilecopyheader%28_:%29)
+- [ColorSyncProfileCopyTag(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilecopytag%28_:_:%29)
+- [ColorSyncProfileCopyTagSignatures(\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilecopytagsignatures%28_:%29)
+- [ColorSyncProfileCreate(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilecreate%28_:_:%29)
+- [ColorSyncProfileCreateDeviceProfile(\_:\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilecreatedeviceprofile%28_:_:_:%29)
+- [ColorSyncProfileCreateDisplayTransferTablesFromVCGT(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilecreatedisplaytransfertablesfromvcgt%28_:_:%29)
+- [ColorSyncProfileCreateLink(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilecreatelink%28_:_:%29)
+- [ColorSyncProfileCreateMutable()](https://developer.apple.com/documentation/colorsync/colorsyncprofilecreatemutable%28%29)
+- [ColorSyncProfileCreateMutableCopy(\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilecreatemutablecopy%28_:%29)
+- [ColorSyncProfileCreateWithDisplayID(\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilecreatewithdisplayid%28_:%29)
+- [ColorSyncProfileCreateWithName(\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilecreatewithname%28_:%29)
+- [ColorSyncProfileCreateWithURL(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilecreatewithurl%28_:_:%29)
+- [ColorSyncProfileEstimateGamma(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofileestimategamma%28_:_:%29)
+- [ColorSyncProfileEstimateGammaWithDisplayID(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofileestimategammawithdisplayid%28_:_:%29)
+- [ColorSyncProfileGetDisplayTransferFormulaFromVCGT(\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilegetdisplaytransferformulafromvcgt%28_:_:_:_:_:_:_:_:_:_:%29)
+- [ColorSyncProfileGetMD5(\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilegetmd5%28_:%29)
+- [ColorSyncProfileGetTypeID()](https://developer.apple.com/documentation/colorsync/colorsyncprofilegettypeid%28%29)
+- [ColorSyncProfileGetURL(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilegeturl%28_:_:%29)
+- [ColorSyncProfileInstall(\_:\_:\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofileinstall%28_:_:_:_:%29)
+- [ColorSyncProfileRemoveTag(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofileremovetag%28_:_:%29)
+- [ColorSyncProfileSetHeader(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilesetheader%28_:_:%29)
+- [ColorSyncProfileSetTag(\_:\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilesettag%28_:_:_:%29)
+- [ColorSyncProfileUninstall(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofileuninstall%28_:_:%29)
+- [ColorSyncProfileVerify(\_:\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofileverify%28_:_:_:%29)
+- [ColorSyncRegisterDevice(\_:\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncregisterdevice%28_:_:_:%29)
+- [ColorSyncTransformConvert(\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsynctransformconvert%28_:_:_:_:_:_:_:_:_:_:_:_:%29)
+- [ColorSyncTransformCopyProperty(\_:\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsynctransformcopyproperty%28_:_:_:%29)
+- [ColorSyncTransformCreate(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsynctransformcreate%28_:_:%29)
+- [ColorSyncTransformGetTypeID()](https://developer.apple.com/documentation/colorsync/colorsynctransformgettypeid%28%29)
+- [ColorSyncTransformSetProperty(\_:\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsynctransformsetproperty%28_:_:_:%29)
+- [ColorSyncUnregisterDevice(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncunregisterdevice%28_:_:%29)
+- [DisposeIconActionUPP(\_:)](1461028-disposeiconactionupp.md)
+- [DisposeIconGetterUPP(\_:)](1461061-disposeicongetterupp.md)
+- [GetIconFamilyData(\_:\_:\_:)](1462743-geticonfamilydata.md)
+- [GetIconRefVariant(\_:\_:\_:)](1463088-geticonrefvariant.md)
+- [HIShapeContainsPoint(\_:\_:)](1464704-hishapecontainspoint.md)
+- [HIShapeCreateCopy(\_:)](1463131-hishapecreatecopy.md)
+- [HIShapeCreateDifference(\_:\_:)](1460901-hishapecreatedifference.md)
+- [HIShapeCreateEmpty()](1462651-hishapecreateempty.md)
+- [HIShapeCreateIntersection(\_:\_:)](1464400-hishapecreateintersection.md)
+- [HIShapeCreateMutable()](1459565-hishapecreatemutable.md)
+- [HIShapeCreateMutableCopy(\_:)](1463298-hishapecreatemutablecopy.md)
+- [HIShapeCreateMutableWithRect(\_:)](1459532-hishapecreatemutablewithrect.md)
+- [HIShapeCreateUnion(\_:\_:)](1460112-hishapecreateunion.md)
+- [HIShapeCreateWithQDRgn(\_:)](1464296-hishapecreatewithqdrgn.md)
+- [HIShapeCreateWithRect(\_:)](1460650-hishapecreatewithrect.md)
+- [HIShapeCreateXor(\_:\_:)](1459148-hishapecreatexor.md)
+- [HIShapeDifference(\_:\_:\_:)](1458876-hishapedifference.md)
+- [HIShapeEnumerate(\_:\_:\_:\_:)](1459161-hishapeenumerate.md)
+- [HIShapeGetAsQDRgn(\_:\_:)](1464369-hishapegetasqdrgn.md)
+- [HIShapeGetBounds(\_:\_:)](1460255-hishapegetbounds.md)
+- [HIShapeGetTypeID()](1463371-hishapegettypeid.md)
+- [HIShapeInset(\_:\_:\_:)](1463337-hishapeinset.md)
+- [HIShapeIntersect(\_:\_:\_:)](1462645-hishapeintersect.md)
+- [HIShapeIntersectsRect(\_:\_:)](1459614-hishapeintersectsrect.md)
+- [HIShapeIsEmpty(\_:)](1461878-hishapeisempty.md)
+- [HIShapeIsRectangular(\_:)](1461292-hishapeisrectangular.md)
+- [HIShapeOffset(\_:\_:\_:)](1461775-hishapeoffset.md)
+- [HIShapeReplacePathInCGContext(\_:\_:)](1460747-hishapereplacepathincgcontext.md)
+- [HIShapeSetEmpty(\_:)](1461259-hishapesetempty.md)
+- [HIShapeSetWithShape(\_:\_:)](1462473-hishapesetwithshape.md)
+- [HIShapeUnion(\_:\_:\_:)](1459542-hishapeunion.md)
+- [HIShapeUnionWithRect(\_:\_:)](1462757-hishapeunionwithrect.md)
+- [HIShapeXor(\_:\_:\_:)](1461294-hishapexor.md)
+- [IconRefContainsCGPoint(\_:\_:\_:\_:\_:)](1461049-iconrefcontainscgpoint.md)
+- [IconRefIntersectsCGRect(\_:\_:\_:\_:\_:)](1462553-iconrefintersectscgrect.md)
+- [IconRefToHIShape(\_:\_:\_:\_:)](1464005-iconreftohishape.md)
+- [IconRefToIconFamily(\_:\_:\_:)](1459977-iconreftoiconfamily.md)
+- [InvokeIconActionUPP(\_:\_:\_:\_:)](1464116-invokeiconactionupp.md)
+- [InvokeIconGetterUPP(\_:\_:\_:)](1460976-invokeicongetterupp.md)
+- [IsIconRefMaskEmpty(\_:)](1464419-isiconrefmaskempty.md)
+- [NewIconActionUPP(\_:)](1462738-newiconactionupp.md)
+- [NewIconGetterUPP(\_:)](1458777-newicongetterupp.md)
+- [PMPrinterCopyState(\_:\_:)](1460381-pmprintercopystate.md)
+- [PMPrinterSendCommand(\_:\_:\_:\_:)](1463872-pmprintersendcommand.md)
+- [PasteboardClear(\_:)](1460800-pasteboardclear.md)
+- [PasteboardCopyItemFlavorData(\_:\_:\_:\_:)](1458917-pasteboardcopyitemflavordata.md)
+- [PasteboardCopyItemFlavors(\_:\_:\_:)](1460005-pasteboardcopyitemflavors.md)
+- [PasteboardCopyName(\_:\_:)](1459455-pasteboardcopyname.md)
+- [PasteboardCopyPasteLocation(\_:\_:)](1462546-pasteboardcopypastelocation.md)
+- [PasteboardCreate(\_:\_:)](1461248-pasteboardcreate.md)
+- [PasteboardGetItemCount(\_:\_:)](1459551-pasteboardgetitemcount.md)
+- [PasteboardGetItemFlavorFlags(\_:\_:\_:\_:)](1459353-pasteboardgetitemflavorflags.md)
+- [PasteboardGetItemIdentifier(\_:\_:\_:)](1463412-pasteboardgetitemidentifier.md)
+- [PasteboardGetTypeID()](1463386-pasteboardgettypeid.md)
+- [PasteboardPutItemFlavor(\_:\_:\_:\_:\_:)](1463184-pasteboardputitemflavor.md)
+- [PasteboardResolvePromises(\_:)](1460816-pasteboardresolvepromises.md)
+- [PasteboardSetPasteLocation(\_:\_:)](1460572-pasteboardsetpastelocation.md)
+- [PasteboardSetPromiseKeeper(\_:\_:\_:)](1463604-pasteboardsetpromisekeeper.md)
+- [PasteboardSynchronize(\_:)](1459590-pasteboardsynchronize.md)
+- [PlotIconRefInContext(\_:\_:\_:\_:\_:\_:\_:)](1463721-ploticonrefincontext.md)
+- [SetIconFamilyData(\_:\_:\_:)](1462050-seticonfamilydata.md)
+- [TransformProcessType(\_:\_:)](1462420-transformprocesstype.md)
+- [TranslationCopyDestinationType(\_:\_:)](1459620-translationcopydestinationtype.md)
+- [TranslationCopySourceType(\_:\_:)](1459344-translationcopysourcetype.md)
+- [TranslationCreate(\_:\_:\_:\_:)](1459231-translationcreate.md)
+- [TranslationCreateWithSourceArray(\_:\_:\_:\_:)](1464306-translationcreatewithsourcearray.md)
+- [TranslationGetTranslationFlags(\_:\_:)](1459307-translationgettranslationflags.md)
+- [TranslationGetTypeID()](1463809-translationgettypeid.md)
+- [TranslationPerformForData(\_:\_:\_:)](1460828-translationperformfordata.md)
+- [TranslationPerformForFile(\_:\_:\_:\_:\_:)](1464541-translationperformforfile.md)
+- [TranslationPerformForURL(\_:\_:\_:\_:)](1460118-translationperformforurl.md)
+- [ATSCreateFontQueryRunLoopSource(\_:\_:\_:\_:)](1563673-atscreatefontqueryrunloopsource.md): Deprecated.
+- [ATSFontActivateFromFileReference(\_:\_:\_:\_:\_:\_:)](1563693-atsfontactivatefromfilereference.md): Deprecated.
+- [ATSFontActivateFromMemory(\_:\_:\_:\_:\_:\_:\_:)](1563678-atsfontactivatefrommemory.md): Deprecated.
+- [ATSFontApplyFunction(\_:\_:)](1563664-atsfontapplyfunction.md): Deprecated.
+- [ATSFontDeactivate(\_:\_:\_:)](1563682-atsfontdeactivate.md): Deprecated.
+- [ATSFontFamilyApplyFunction(\_:\_:)](1563672-atsfontfamilyapplyfunction.md): Deprecated.
+- [ATSFontFamilyFindFromName(\_:\_:)](1563662-atsfontfamilyfindfromname.md): Deprecated.
+- [ATSFontFamilyFindFromQuickDrawName(\_:)](1563687-atsfontfamilyfindfromquickdrawna.md): Deprecated.
+- [ATSFontFamilyGetEncoding(\_:)](1563658-atsfontfamilygetencoding.md): Deprecated.
+- [ATSFontFamilyGetGeneration(\_:)](1563689-atsfontfamilygetgeneration.md): Deprecated.
+- [ATSFontFamilyGetName(\_:\_:\_:)](1563697-atsfontfamilygetname.md): Deprecated.
+- [ATSFontFamilyGetQuickDrawName(\_:\_:)](1563692-atsfontfamilygetquickdrawname.md): Deprecated.
+- [ATSFontFamilyIteratorCreate(\_:\_:\_:\_:\_:)](1563688-atsfontfamilyiteratorcreate.md): Deprecated.
+- [ATSFontFamilyIteratorNext(\_:\_:)](1563679-atsfontfamilyiteratornext.md): Deprecated.
+- [ATSFontFamilyIteratorRelease(\_:)](1563681-atsfontfamilyiteratorrelease.md): Deprecated.
+- [ATSFontFamilyIteratorReset(\_:\_:\_:\_:\_:)](1563671-atsfontfamilyiteratorreset.md): Deprecated.
+- [ATSFontFindFromContainer(\_:\_:\_:\_:\_:)](1563690-atsfontfindfromcontainer.md): Deprecated.
+- [ATSFontFindFromName(\_:\_:)](1563676-atsfontfindfromname.md): Deprecated.
+- [ATSFontFindFromPostScriptName(\_:\_:)](1563685-atsfontfindfrompostscriptname.md): Deprecated.
+- [ATSFontGetAutoActivationSettingForApplication(\_:)](1563691-atsfontgetautoactivationsettingf.md): Deprecated.
+- [ATSFontGetContainer(\_:\_:\_:)](1563651-atsfontgetcontainer.md): Deprecated.
+- [ATSFontGetContainerFromFileReference(\_:\_:\_:\_:)](1563656-atsfontgetcontainerfromfilerefer.md): Deprecated.
+- [ATSFontGetFileReference(\_:\_:)](1563669-atsfontgetfilereference.md): Deprecated.
+- [ATSFontGetFontFamilyResource(\_:\_:\_:\_:)](1563684-atsfontgetfontfamilyresource.md): Deprecated.
+- [ATSFontGetGeneration(\_:)](1563670-atsfontgetgeneration.md): Deprecated.
+- [ATSFontGetGlobalAutoActivationSetting()](1563702-atsfontgetglobalautoactivationse.md): Deprecated.
+- [ATSFontGetHorizontalMetrics(\_:\_:\_:)](1563665-atsfontgethorizontalmetrics.md): Deprecated.
+- [ATSFontGetName(\_:\_:\_:)](1563657-atsfontgetname.md): Deprecated.
+- [ATSFontGetPostScriptName(\_:\_:\_:)](1563666-atsfontgetpostscriptname.md): Deprecated.
+- [ATSFontGetTable(\_:\_:\_:\_:\_:\_:)](1563699-atsfontgettable.md): Deprecated.
+- [ATSFontGetTableDirectory(\_:\_:\_:\_:)](1563677-atsfontgettabledirectory.md): Deprecated.
+- [ATSFontGetVerticalMetrics(\_:\_:\_:)](1563653-atsfontgetverticalmetrics.md): Deprecated.
+- [ATSFontIsEnabled(\_:)](1563655-atsfontisenabled.md): Deprecated.
+- [ATSFontIteratorCreate(\_:\_:\_:\_:\_:)](1563668-atsfontiteratorcreate.md): Deprecated.
+- [ATSFontIteratorNext(\_:\_:)](1563654-atsfontiteratornext.md): Deprecated.
+- [ATSFontIteratorRelease(\_:)](1563661-atsfontiteratorrelease.md): Deprecated.
+- [ATSFontIteratorReset(\_:\_:\_:\_:\_:)](1563680-atsfontiteratorreset.md): Deprecated.
+- [ATSFontNotificationSubscribe(\_:\_:\_:\_:)](1563696-atsfontnotificationsubscribe.md): Deprecated.
+- [ATSFontNotificationUnsubscribe(\_:)](1563675-atsfontnotificationunsubscribe.md): Deprecated.
+- [ATSFontNotify(\_:\_:)](1563701-atsfontnotify.md): Deprecated.
+- [ATSFontSetAutoActivationSettingForApplication(\_:\_:)](1563686-atsfontsetautoactivationsettingf.md): Deprecated.
+- [ATSFontSetEnabled(\_:\_:\_:)](1563667-atsfontsetenabled.md): Deprecated.
+- [ATSFontSetGlobalAutoActivationSetting(\_:)](1563663-atsfontsetglobalautoactivationse.md): Deprecated.
+- [ATSGetGeneration()](1563694-atsgetgeneration.md): Deprecated.
+- [AXTextMarkerCreate(\_:\_:\_:)](3882823-axtextmarkercreate.md)
+- [AXTextMarkerGetBytePtr(\_:)](3882824-axtextmarkergetbyteptr.md)
+- [AXTextMarkerGetLength(\_:)](3882825-axtextmarkergetlength.md)
+- [AXTextMarkerGetTypeID()](3882826-axtextmarkergettypeid.md)
+- [AXTextMarkerRangeCopyEndMarker(\_:)](3882827-axtextmarkerrangecopyendmarker.md)
+- [AXTextMarkerRangeCopyStartMarker(\_:)](3882828-axtextmarkerrangecopystartmarker.md)
+- [AXTextMarkerRangeCreate(\_:\_:\_:)](3882829-axtextmarkerrangecreate.md)
+- [AXTextMarkerRangeCreateWithBytes(\_:\_:\_:\_:\_:)](3882830-axtextmarkerrangecreatewithbytes.md)
+- [AXTextMarkerRangeGetTypeID()](3882831-axtextmarkerrangegettypeid.md)
+- [DisposeSpeechDoneUPP(\_:)](4030001-disposespeechdoneupp.md): Deprecated.
+- [DisposeSpeechErrorUPP(\_:)](4030002-disposespeecherrorupp.md): Deprecated.
+- [DisposeSpeechPhonemeUPP(\_:)](4030003-disposespeechphonemeupp.md): Deprecated.
+- [DisposeSpeechSyncUPP(\_:)](4030004-disposespeechsyncupp.md): Deprecated.
+- [DisposeSpeechTextDoneUPP(\_:)](4030005-disposespeechtextdoneupp.md): Deprecated.
+- [DisposeSpeechWordUPP(\_:)](4030006-disposespeechwordupp.md): Deprecated.
+- [GetSpeechInfo(\_:\_:\_:)](4030007-getspeechinfo.md): Deprecated.
+- [InvokeSpeechDoneUPP(\_:\_:\_:)](4030008-invokespeechdoneupp.md): Deprecated.
+- [InvokeSpeechErrorUPP(\_:\_:\_:\_:\_:)](4030009-invokespeecherrorupp.md): Deprecated.
+- [InvokeSpeechPhonemeUPP(\_:\_:\_:\_:)](4030010-invokespeechphonemeupp.md): Deprecated.
+- [InvokeSpeechSyncUPP(\_:\_:\_:\_:)](4030011-invokespeechsyncupp.md): Deprecated.
+- [InvokeSpeechTextDoneUPP(\_:\_:\_:\_:\_:\_:)](4030012-invokespeechtextdoneupp.md): Deprecated.
+- [InvokeSpeechWordUPP(\_:\_:\_:\_:\_:)](4030013-invokespeechwordupp.md): Deprecated.
+- [NewSpeechDoneUPP(\_:)](4030014-newspeechdoneupp.md): Deprecated.
+- [NewSpeechErrorUPP(\_:)](4030015-newspeecherrorupp.md): Deprecated.
+- [NewSpeechPhonemeUPP(\_:)](4030016-newspeechphonemeupp.md): Deprecated.
+- [NewSpeechSyncUPP(\_:)](4030017-newspeechsyncupp.md): Deprecated.
+- [NewSpeechTextDoneUPP(\_:)](4030018-newspeechtextdoneupp.md): Deprecated.
+- [NewSpeechWordUPP(\_:)](4030019-newspeechwordupp.md): Deprecated.
+- [SetSpeechInfo(\_:\_:\_:)](4030020-setspeechinfo.md): Deprecated.
+- [SpeakBuffer(\_:\_:\_:\_:)](4030021-speakbuffer.md): Deprecated.
+- [SpeakString(\_:)](4030022-speakstring.md): Deprecated.
+- [SpeakText(\_:\_:\_:)](4030023-speaktext.md): Deprecated.
+- [TextToPhonemes(\_:\_:\_:\_:\_:)](4030024-texttophonemes.md): Deprecated.
+- [UseDictionary(\_:\_:)](4030025-usedictionary.md): Deprecated.
+
+# ApplicationServices Functions (Objective-C)
+
+**Framework:** Application Services  
+**Kind:** API Collection
+
+## Topics
+
+### Functions
+
+- [ATSCreateFontQueryRunLoopSource](1563673-atscreatefontqueryrunloopsource.md): Deprecated.
+- [ATSFontActivateFromFileReference](1563693-atsfontactivatefromfilereference.md): Deprecated.
+- [ATSFontActivateFromMemory](1563678-atsfontactivatefrommemory.md): Deprecated.
+- [ATSFontApplyFunction](1563664-atsfontapplyfunction.md): Deprecated.
+- [ATSFontDeactivate](1563682-atsfontdeactivate.md): Deprecated.
+- [ATSFontFamilyApplyFunction](1563672-atsfontfamilyapplyfunction.md): Deprecated.
+- [ATSFontFamilyFindFromName](1563662-atsfontfamilyfindfromname.md): Deprecated.
+- [ATSFontFamilyFindFromQuickDrawName](1563687-atsfontfamilyfindfromquickdrawna.md): Deprecated.
+- [ATSFontFamilyGetEncoding](1563658-atsfontfamilygetencoding.md): Deprecated.
+- [ATSFontFamilyGetGeneration](1563689-atsfontfamilygetgeneration.md): Deprecated.
+- [ATSFontFamilyGetName](1563697-atsfontfamilygetname.md): Deprecated.
+- [ATSFontFamilyGetQuickDrawName](1563692-atsfontfamilygetquickdrawname.md): Deprecated.
+- [ATSFontFamilyIteratorCreate](1563688-atsfontfamilyiteratorcreate.md): Deprecated.
+- [ATSFontFamilyIteratorNext](1563679-atsfontfamilyiteratornext.md): Deprecated.
+- [ATSFontFamilyIteratorRelease](1563681-atsfontfamilyiteratorrelease.md): Deprecated.
+- [ATSFontFamilyIteratorReset](1563671-atsfontfamilyiteratorreset.md): Deprecated.
+- [ATSFontFindFromContainer](1563690-atsfontfindfromcontainer.md): Deprecated.
+- [ATSFontFindFromName](1563676-atsfontfindfromname.md): Deprecated.
+- [ATSFontFindFromPostScriptName](1563685-atsfontfindfrompostscriptname.md): Deprecated.
+- [ATSFontGetAutoActivationSettingForApplication](1563691-atsfontgetautoactivationsettingf.md): Deprecated.
+- [ATSFontGetContainer](1563651-atsfontgetcontainer.md): Deprecated.
+- [ATSFontGetContainerFromFileReference](1563656-atsfontgetcontainerfromfilerefer.md): Deprecated.
+- [ATSFontGetFileReference](1563669-atsfontgetfilereference.md): Deprecated.
+- [ATSFontGetFontFamilyResource](1563684-atsfontgetfontfamilyresource.md): Deprecated.
+- [ATSFontGetGeneration](1563670-atsfontgetgeneration.md): Deprecated.
+- [ATSFontGetGlobalAutoActivationSetting](1563702-atsfontgetglobalautoactivationse.md): Deprecated.
+- [ATSFontGetHorizontalMetrics](1563665-atsfontgethorizontalmetrics.md): Deprecated.
+- [ATSFontGetName](1563657-atsfontgetname.md): Deprecated.
+- [ATSFontGetPostScriptName](1563666-atsfontgetpostscriptname.md): Deprecated.
+- [ATSFontGetTable](1563699-atsfontgettable.md): Deprecated.
+- [ATSFontGetTableDirectory](1563677-atsfontgettabledirectory.md): Deprecated.
+- [ATSFontGetVerticalMetrics](1563653-atsfontgetverticalmetrics.md): Deprecated.
+- [ATSFontIsEnabled](1563655-atsfontisenabled.md): Deprecated.
+- [ATSFontIteratorCreate](1563668-atsfontiteratorcreate.md): Deprecated.
+- [ATSFontIteratorNext](1563654-atsfontiteratornext.md): Deprecated.
+- [ATSFontIteratorRelease](1563661-atsfontiteratorrelease.md): Deprecated.
+- [ATSFontIteratorReset](1563680-atsfontiteratorreset.md): Deprecated.
+- [ATSFontNotificationSubscribe](1563696-atsfontnotificationsubscribe.md): Deprecated.
+- [ATSFontNotificationUnsubscribe](1563675-atsfontnotificationunsubscribe.md): Deprecated.
+- [ATSFontNotify](1563701-atsfontnotify.md): Deprecated.
+- [ATSFontSetAutoActivationSettingForApplication](1563686-atsfontsetautoactivationsettingf.md): Deprecated.
+- [ATSFontSetEnabled](1563667-atsfontsetenabled.md): Deprecated.
+- [ATSFontSetGlobalAutoActivationSetting](1563663-atsfontsetglobalautoactivationse.md): Deprecated.
+- [ATSGetGeneration](1563694-atsgetgeneration.md): Deprecated.
+- [CGDisplayCreateUUIDFromDisplayID(\_:)](https://developer.apple.com/documentation/colorsync/cgdisplaycreateuuidfromdisplayid%28_:%29)
+- [CGDisplayGetDisplayIDFromUUID(\_:)](https://developer.apple.com/documentation/colorsync/cgdisplaygetdisplayidfromuuid%28_:%29)
+- [ColorSyncCMMCopyCMMIdentifier(\_:)](https://developer.apple.com/documentation/colorsync/colorsynccmmcopycmmidentifier%28_:%29)
+- [ColorSyncCMMCopyLocalizedName(\_:)](https://developer.apple.com/documentation/colorsync/colorsynccmmcopylocalizedname%28_:%29)
+- [ColorSyncCMMCreate(\_:)](https://developer.apple.com/documentation/colorsync/colorsynccmmcreate%28_:%29)
+- [ColorSyncCMMGetBundle(\_:)](https://developer.apple.com/documentation/colorsync/colorsynccmmgetbundle%28_:%29)
+- [ColorSyncCMMGetTypeID](https://developer.apple.com/documentation/colorsync/colorsynccmmgettypeid%28%29)
+- [ColorSyncDeviceCopyDeviceInfo(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncdevicecopydeviceinfo%28_:_:%29)
+- [ColorSyncDeviceSetCustomProfiles(\_:\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncdevicesetcustomprofiles%28_:_:_:%29)
+- [ColorSyncIterateDeviceProfiles(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsynciteratedeviceprofiles%28_:_:%29)
+- [ColorSyncIterateInstalledCMMs(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsynciterateinstalledcmms%28_:_:%29)
+- [ColorSyncIterateInstalledProfiles](https://developer.apple.com/documentation/colorsync/colorsynciterateinstalledprofiles%28_:_:_:_:%29)
+- [ColorSyncProfileContainsTag](https://developer.apple.com/documentation/colorsync/colorsyncprofilecontainstag%28_:_:%29)
+- [ColorSyncProfileCopyData](https://developer.apple.com/documentation/colorsync/colorsyncprofilecopydata%28_:_:%29)
+- [ColorSyncProfileCopyDescriptionString](https://developer.apple.com/documentation/colorsync/colorsyncprofilecopydescriptionstring%28_:%29)
+- [ColorSyncProfileCopyHeader](https://developer.apple.com/documentation/colorsync/colorsyncprofilecopyheader%28_:%29)
+- [ColorSyncProfileCopyTag](https://developer.apple.com/documentation/colorsync/colorsyncprofilecopytag%28_:_:%29)
+- [ColorSyncProfileCopyTagSignatures](https://developer.apple.com/documentation/colorsync/colorsyncprofilecopytagsignatures%28_:%29)
+- [ColorSyncProfileCreate](https://developer.apple.com/documentation/colorsync/colorsyncprofilecreate%28_:_:%29)
+- [ColorSyncProfileCreateDeviceProfile(\_:\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilecreatedeviceprofile%28_:_:_:%29)
+- [ColorSyncProfileCreateDisplayTransferTablesFromVCGT(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilecreatedisplaytransfertablesfromvcgt%28_:_:%29)
+- [ColorSyncProfileCreateLink](https://developer.apple.com/documentation/colorsync/colorsyncprofilecreatelink%28_:_:%29)
+- [ColorSyncProfileCreateMutable](https://developer.apple.com/documentation/colorsync/colorsyncprofilecreatemutable%28%29)
+- [ColorSyncProfileCreateMutableCopy](https://developer.apple.com/documentation/colorsync/colorsyncprofilecreatemutablecopy%28_:%29)
+- [ColorSyncProfileCreateWithDisplayID(\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilecreatewithdisplayid%28_:%29)
+- [ColorSyncProfileCreateWithName](https://developer.apple.com/documentation/colorsync/colorsyncprofilecreatewithname%28_:%29)
+- [ColorSyncProfileCreateWithURL](https://developer.apple.com/documentation/colorsync/colorsyncprofilecreatewithurl%28_:_:%29)
+- [ColorSyncProfileEstimateGamma(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofileestimategamma%28_:_:%29)
+- [ColorSyncProfileEstimateGammaWithDisplayID(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofileestimategammawithdisplayid%28_:_:%29)
+- [ColorSyncProfileGetDisplayTransferFormulaFromVCGT(\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofilegetdisplaytransferformulafromvcgt%28_:_:_:_:_:_:_:_:_:_:%29)
+- [ColorSyncProfileGetMD5](https://developer.apple.com/documentation/colorsync/colorsyncprofilegetmd5%28_:%29)
+- [ColorSyncProfileGetTypeID](https://developer.apple.com/documentation/colorsync/colorsyncprofilegettypeid%28%29)
+- [ColorSyncProfileGetURL](https://developer.apple.com/documentation/colorsync/colorsyncprofilegeturl%28_:_:%29)
+- [ColorSyncProfileInstall(\_:\_:\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofileinstall%28_:_:_:_:%29)
+- [ColorSyncProfileRemoveTag](https://developer.apple.com/documentation/colorsync/colorsyncprofileremovetag%28_:_:%29)
+- [ColorSyncProfileSetHeader](https://developer.apple.com/documentation/colorsync/colorsyncprofilesetheader%28_:_:%29)
+- [ColorSyncProfileSetTag](https://developer.apple.com/documentation/colorsync/colorsyncprofilesettag%28_:_:_:%29)
+- [ColorSyncProfileUninstall(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncprofileuninstall%28_:_:%29)
+- [ColorSyncProfileVerify](https://developer.apple.com/documentation/colorsync/colorsyncprofileverify%28_:_:_:%29)
+- [ColorSyncRegisterDevice(\_:\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncregisterdevice%28_:_:_:%29)
+- [ColorSyncTransformConvert](https://developer.apple.com/documentation/colorsync/colorsynctransformconvert%28_:_:_:_:_:_:_:_:_:_:_:_:%29)
+- [ColorSyncTransformCopyProperty](https://developer.apple.com/documentation/colorsync/colorsynctransformcopyproperty%28_:_:_:%29)
+- [ColorSyncTransformCreate](https://developer.apple.com/documentation/colorsync/colorsynctransformcreate%28_:_:%29)
+- [ColorSyncTransformGetTypeID](https://developer.apple.com/documentation/colorsync/colorsynctransformgettypeid%28%29)
+- [ColorSyncTransformSetProperty](https://developer.apple.com/documentation/colorsync/colorsynctransformsetproperty%28_:_:_:%29)
+- [ColorSyncUnregisterDevice(\_:\_:)](https://developer.apple.com/documentation/colorsync/colorsyncunregisterdevice%28_:_:%29)
+- [CopyProcessName](1501067-copyprocessname.md): Deprecated.
+- [DisposeIconActionUPP](1461028-disposeiconactionupp.md)
+- [DisposeIconGetterUPP](1461061-disposeicongetterupp.md)
+- [ExitToShell](1500985-exittoshell.md): Deprecated.
+- [GetCurrentProcess](1501115-getcurrentprocess.md): Deprecated.
+- [GetFrontProcess](1501050-getfrontprocess.md): Deprecated.
+- [GetIconFamilyData](1462743-geticonfamilydata.md)
+- [GetIconRefVariant](1463088-geticonrefvariant.md)
+- [GetNextProcess](1501061-getnextprocess.md): Deprecated.
+- [GetProcessBundleLocation](1501092-getprocessbundlelocation.md): Deprecated.
+- [GetProcessForPID](1501069-getprocessforpid.md): Deprecated.
+- [GetProcessInformation](1501011-getprocessinformation.md): Deprecated.
+- [GetProcessPID](1500992-getprocesspid.md): Deprecated.
+- [HIShapeContainsPoint](1464704-hishapecontainspoint.md)
+- [HIShapeCreateCopy](1463131-hishapecreatecopy.md)
+- [HIShapeCreateDifference](1460901-hishapecreatedifference.md)
+- [HIShapeCreateEmpty](1462651-hishapecreateempty.md)
+- [HIShapeCreateIntersection](1464400-hishapecreateintersection.md)
+- [HIShapeCreateMutable](1459565-hishapecreatemutable.md)
+- [HIShapeCreateMutableCopy](1463298-hishapecreatemutablecopy.md)
+- [HIShapeCreateMutableWithRect](1459532-hishapecreatemutablewithrect.md)
+- [HIShapeCreateUnion](1460112-hishapecreateunion.md)
+- [HIShapeCreateWithQDRgn](1464296-hishapecreatewithqdrgn.md)
+- [HIShapeCreateWithRect](1460650-hishapecreatewithrect.md)
+- [HIShapeCreateXor](1459148-hishapecreatexor.md)
+- [HIShapeDifference](1458876-hishapedifference.md)
+- [HIShapeEnumerate](1459161-hishapeenumerate.md)
+- [HIShapeGetAsQDRgn](1464369-hishapegetasqdrgn.md)
+- [HIShapeGetBounds](1460255-hishapegetbounds.md)
+- [HIShapeGetTypeID](1463371-hishapegettypeid.md)
+- [HIShapeInset](1463337-hishapeinset.md)
+- [HIShapeIntersect](1462645-hishapeintersect.md)
+- [HIShapeIntersectsRect](1459614-hishapeintersectsrect.md)
+- [HIShapeIsEmpty](1461878-hishapeisempty.md)
+- [HIShapeIsRectangular](1461292-hishapeisrectangular.md)
+- [HIShapeOffset](1461775-hishapeoffset.md)
+- [HIShapeReplacePathInCGContext](1460747-hishapereplacepathincgcontext.md)
+- [HIShapeSetEmpty](1461259-hishapesetempty.md)
+- [HIShapeSetWithShape](1462473-hishapesetwithshape.md)
+- [HIShapeUnion](1459542-hishapeunion.md)
+- [HIShapeUnionWithRect](1462757-hishapeunionwithrect.md)
+- [HIShapeXor](1461294-hishapexor.md)
+- [ICAddMapEntry](1578495-icaddmapentry.md): Deprecated.
+- [ICAddProfile](1578498-icaddprofile.md): Deprecated.
+- [ICBegin](1578517-icbegin.md): Deprecated.
+- [ICCountMapEntries](1578509-iccountmapentries.md): Deprecated.
+- [ICCountPref](1578542-iccountpref.md): Deprecated.
+- [ICCountProfiles](1578494-iccountprofiles.md): Deprecated.
+- [ICCreateGURLEvent](1578532-iccreategurlevent.md): Deprecated.
+- [ICDeleteMapEntry](1578488-icdeletemapentry.md): Deprecated.
+- [ICDeletePref](1578534-icdeletepref.md): Deprecated.
+- [ICDeleteProfile](1578483-icdeleteprofile.md): Deprecated.
+- [ICEditPreferences](1578512-iceditpreferences.md): Deprecated.
+- [ICEnd](1578544-icend.md): Deprecated.
+- [ICFindPrefHandle](1578526-icfindprefhandle.md): Deprecated.
+- [ICGetConfigName](1578511-icgetconfigname.md): Deprecated.
+- [ICGetCurrentProfile](1578505-icgetcurrentprofile.md): Deprecated.
+- [ICGetDefaultPref](1578528-icgetdefaultpref.md): Deprecated.
+- [ICGetIndMapEntry](1578493-icgetindmapentry.md): Deprecated.
+- [ICGetIndPref](1578503-icgetindpref.md): Deprecated.
+- [ICGetIndProfile](1578519-icgetindprofile.md): Deprecated.
+- [ICGetMapEntry](1578510-icgetmapentry.md): Deprecated.
+- [ICGetPerm](1578492-icgetperm.md): Deprecated.
+- [ICGetPref](1578522-icgetpref.md): Deprecated.
+- [ICGetPrefHandle](1578489-icgetprefhandle.md): Deprecated.
+- [ICGetProfileName](1578523-icgetprofilename.md): Deprecated.
+- [ICGetSeed](1578514-icgetseed.md): Deprecated.
+- [ICGetVersion](1578536-icgetversion.md): Deprecated.
+- [ICLaunchURL](1578504-iclaunchurl.md): Deprecated.
+- [ICMapEntriesFilename](1578539-icmapentriesfilename.md): Deprecated.
+- [ICMapEntriesTypeCreator](1578486-icmapentriestypecreator.md): Deprecated.
+- [ICMapFilename](1578490-icmapfilename.md): Deprecated.
+- [ICMapTypeCreator](1578520-icmaptypecreator.md): Deprecated.
+- [ICParseURL](1578515-icparseurl.md): Deprecated.
+- [ICSendGURLEvent](1578487-icsendgurlevent.md): Deprecated.
+- [ICSetCurrentProfile](1578485-icsetcurrentprofile.md): Deprecated.
+- [ICSetMapEntry](1578540-icsetmapentry.md): Deprecated.
+- [ICSetPref](1578533-icsetpref.md): Deprecated.
+- [ICSetPrefHandle](1578545-icsetprefhandle.md): Deprecated.
+- [ICSetProfileName](1578501-icsetprofilename.md): Deprecated.
+- [ICStart](1578513-icstart.md): Deprecated.
+- [ICStop](1578518-icstop.md): Deprecated.
+- [IconRefContainsCGPoint](1461049-iconrefcontainscgpoint.md)
+- [IconRefIntersectsCGRect](1462553-iconrefintersectscgrect.md)
+- [IconRefToHIShape](1464005-iconreftohishape.md)
+- [IconRefToIconFamily](1459977-iconreftoiconfamily.md)
+- [InvokeIconActionUPP](1464116-invokeiconactionupp.md)
+- [InvokeIconGetterUPP](1460976-invokeicongetterupp.md)
+- [IsIconRefMaskEmpty](1464419-isiconrefmaskempty.md)
+- [IsProcessVisible](1501035-isprocessvisible.md): Deprecated.
+- [KillProcess](1501110-killprocess.md): Deprecated.
+- [LaunchApplication](1501089-launchapplication.md): Deprecated.
+- [NewIconActionUPP](1462738-newiconactionupp.md)
+- [NewIconGetterUPP](1458777-newicongetterupp.md)
+- [PMPrinterCopyState](1460381-pmprintercopystate.md)
+- [PMPrinterSendCommand](1463872-pmprintersendcommand.md)
+- [PasteboardClear](1460800-pasteboardclear.md)
+- [PasteboardCopyItemFlavorData](1458917-pasteboardcopyitemflavordata.md)
+- [PasteboardCopyItemFlavors](1460005-pasteboardcopyitemflavors.md)
+- [PasteboardCopyName](1459455-pasteboardcopyname.md)
+- [PasteboardCopyPasteLocation](1462546-pasteboardcopypastelocation.md)
+- [PasteboardCreate](1461248-pasteboardcreate.md)
+- [PasteboardGetItemCount](1459551-pasteboardgetitemcount.md)
+- [PasteboardGetItemFlavorFlags](1459353-pasteboardgetitemflavorflags.md)
+- [PasteboardGetItemIdentifier](1463412-pasteboardgetitemidentifier.md)
+- [PasteboardGetTypeID](1463386-pasteboardgettypeid.md)
+- [PasteboardPutItemFlavor](1463184-pasteboardputitemflavor.md)
+- [PasteboardResolvePromises](1460816-pasteboardresolvepromises.md)
+- [PasteboardSetPasteLocation](1460572-pasteboardsetpastelocation.md)
+- [PasteboardSetPromiseKeeper](1463604-pasteboardsetpromisekeeper.md)
+- [PasteboardSynchronize](1459590-pasteboardsynchronize.md)
+- [PlotIconRefInContext](1463721-ploticonrefincontext.md)
+- [ProcessInformationCopyDictionary](1501104-processinformationcopydictionary.md): Deprecated.
+- [SameProcess](1501087-sameprocess.md): Deprecated.
+- [SetFrontProcess](1501042-setfrontprocess.md): Deprecated.
+- [SetFrontProcessWithOptions](1501003-setfrontprocesswithoptions.md): Deprecated.
+- [SetIconFamilyData](1462050-seticonfamilydata.md)
+- [ShowHideProcess](1501053-showhideprocess.md): Deprecated.
+- [TransformProcessType](1462420-transformprocesstype.md)
+- [TranslationCopyDestinationType](1459620-translationcopydestinationtype.md)
+- [TranslationCopySourceType](1459344-translationcopysourcetype.md)
+- [TranslationCreate](1459231-translationcreate.md)
+- [TranslationCreateWithSourceArray](1464306-translationcreatewithsourcearray.md)
+- [TranslationGetTranslationFlags](1459307-translationgettranslationflags.md)
+- [TranslationGetTypeID](1463809-translationgettypeid.md)
+- [TranslationPerformForData](1460828-translationperformfordata.md)
+- [TranslationPerformForFile](1464541-translationperformforfile.md)
+- [TranslationPerformForURL](1460118-translationperformforurl.md)
+- [WakeUpProcess](1501091-wakeupprocess.md): Deprecated.
+- [AXTextMarkerCreate](3882823-axtextmarkercreate.md)
+- [AXTextMarkerGetBytePtr](3882824-axtextmarkergetbyteptr.md)
+- [AXTextMarkerGetLength](3882825-axtextmarkergetlength.md)
+- [AXTextMarkerGetTypeID](3882826-axtextmarkergettypeid.md)
+- [AXTextMarkerRangeCopyEndMarker](3882827-axtextmarkerrangecopyendmarker.md)
+- [AXTextMarkerRangeCopyStartMarker](3882828-axtextmarkerrangecopystartmarker.md)
+- [AXTextMarkerRangeCreate](3882829-axtextmarkerrangecreate.md)
+- [AXTextMarkerRangeCreateWithBytes](3882830-axtextmarkerrangecreatewithbytes.md)
+- [AXTextMarkerRangeGetTypeID](3882831-axtextmarkerrangegettypeid.md)

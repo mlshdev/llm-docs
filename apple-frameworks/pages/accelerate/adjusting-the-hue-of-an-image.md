@@ -1,0 +1,184 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/adjusting-the-hue-of-an-image](https://developer.apple.com/documentation/accelerate/adjusting-the-hue-of-an-image)
+
+# Adjusting the hue of an image
+
+**Framework:** Accelerate  
+**Kind:** Sample Code  
+**Availability:** macOS 13.0+ · Xcode 14.0+
+
+Convert an image to L\*a\*b\* color space and apply hue adjustment.
+
+<a id="Overview"></a>
+
+## Overview
+
+This sample code project allows you to adjust the hue of an image by treating the chrominance information as 2D coordinates, and transforming those values with a rotation matrix. You can convert an RGB image — with its pixels represented as red, green, and blue values — to L\*a\*b\*, where luminance and chrominance are stored discretely. The *L\** in L\*a\*b\* refers to the lightness, and the *a\** and *b\** refer to the red-green and blue-yellow values, respectively.
+
+The image below shows an approximation of an L\*a\*b\* color chart. The *a\** value transitions horizontally (left to right) from negative, through zero, to positive, and the *b\** value transitions vertically (bottom to top) from negative, through zero, to positive. Because this sample code focuses on color rather than lightness, the image doesn’t consider L\*.
+
+![A graphic containing vertical and horizontal gradients. The gradient colors transition from green on the left to red on the right, and from yellow at the top to blue at the bottom.](https://developer.apple.com/images/com.apple.accelerate/lab-color-chart_2x.png)
+
+The sample uses the vImage Any-to-Any converter to convert the source image’s color space to L\*a\*b\*. The code converts the interleaved L\*a\*b\* image data to multiple-plane image data that it passes to a matrix multiply operation to apply the hue adjustment.
+
+The following image shows four photographs, from left to right, with a hue adjustment of -90º, 0º (an unchanged hue), 90º, and 180º:
+
+![Four photographs of a flower with different hue adjustments.](https://developer.apple.com/images/com.apple.accelerate/hueAdjust_2x.png)
+
+<a id="Create-the-Lab-image-format"></a>
+
+### Create the L\*a\*b\* image format
+
+To create the image format for the L\*a\*b\* color space, the sample app uses the [`genericLab`](../coregraphics/cgcolorspace/genericlab.md) system-defined [`CGColorSpace`](../coregraphics/cgcolorspace.md).
+
+```swift
+var labImageFormat = vImage_CGImageFormat(
+    bitsPerComponent: 8,
+    bitsPerPixel: 8 * 3,
+    colorSpace: CGColorSpace(name: CGColorSpace.genericLab)!,
+    bitmapInfo: CGBitmapInfo(rawValue: CGImageAlphaInfo.none.rawValue),
+    renderingIntent: .defaultIntent)!
+```
+
+On return, `labImageFormat` describes the interleaved L\*a\*b\* pixels over which this sample works. The first channel in each pixel is the lightness, and the second and third channels are the *a\** and *b\**, respectively.
+
+<a id="Generate-the-pixel-buffer-and-image-format-from-the-source-image"></a>
+
+### Generate the pixel buffer and image format from the source image
+
+The converter that the sample uses to convert the source pixels to L\*a\*b\* color space requires two [vImage_CGImageFormat](vimage_cgimageformat.md) structures that describe the source and destination images. The sample uses the [makeDynamicPixelBufferAndCGImageFormat(cgImage:)](vimage/pixelbuffer/makedynamicpixelbufferandcgimageformat%28cgimage_%29.md) method to create a dynamic pixel buffer and image format structure from the source Core Graphics image.
+
+```swift
+let source = try vImage.PixelBuffer
+    .makeDynamicPixelBufferAndCGImageFormat(cgImage: sourceCGImage)
+```
+
+On return, `source.cgImageFormat` contains the image format of the source image, and `source.pixelBuffer` is a pixel buffer that contains the source image data.
+
+<a id="Create-the-source-image-color-space-to-Lab-converter"></a>
+
+### Create the source image color space to L\*a\*b\* converter
+
+The sample app uses the source and L\*a\*b\* image formats to create a [vImageConverter](vimageconverter.md) instance to convert between the two color spaces.
+
+```swift
+let rgbToLab = try vImageConverter.make(sourceFormat: source.cgImageFormat,
+                                        destinationFormat: labImageFormat)
+```
+
+For more information about vImage’s convert-any-to-any functionality, see [Building a basic image conversion workflow](building-a-basic-image-conversion-workflow.md).
+
+<a id="Convert-the-source-image-to-Lab"></a>
+
+### Convert the source image to L\*a\*b\*
+
+The sample creates a pixel buffer that’s the same size as the source image.
+
+```swift
+labInterleavedSource = vImage.PixelBuffer<vImage.Interleaved8x3>(size: size)
+```
+
+The converter’s [convert(from:to:)](vimageconverter/convert%28from_to_%29-9s7p7.md) function performs the conversion.
+
+```swift
+try rgbToLab.convert(from: source.pixelBuffer,
+                     to: labInterleavedSource)
+```
+
+On return, the `labInterleavedSource` contains the L\*a\*b\* representation of the source image.
+
+<a id="Convert-the-interleaved-Lab-buffer-to-planar-buffers"></a>
+
+### Convert the interleaved L\*a\*b\* buffer to planar buffers
+
+The function the sample app uses to apply the hue adjustment, [multiply(by:divisor:preBias:postBias:destination:)](vimage/pixelbuffer/multiply%28by_divisor_prebias_postbias_destination_%29-7jo6v.md), operates on a multiple-plane pixel buffer. To convert the interleaved L\*a\*b\* buffer to planar buffers, the app creates a [vImage.Planar8x3](vimage/planar8x3.md) pixel buffer.
+
+```swift
+labPlanarDestination = vImage.PixelBuffer<vImage.Planar8x3>(size: size)
+```
+
+It then calls [deinterleave(destination:)](vimage/pixelbuffer/deinterleave%28destination_%29-hrhz.md) to populate the planar buffers with the contents of the interleaved buffer.
+
+```swift
+labInterleavedSource.deinterleave(destination: labPlanarDestination)
+```
+
+For more information about working with planar buffers, see [Optimizing image-processing performance](optimizing-image-processing-performance.md).
+
+<a id="Apply-the-hue-adjustment"></a>
+
+### Apply the hue adjustment
+
+The app adjusts the hue of an image by rotating a two-element vector, described by *a\** and *b\**. For more information about working with rotation matrices, see [Working with Matrices](working-with-matrices.md).
+
+The following visualizes a sample color (marked *A*) rotated by -90º (marked *C*) and 45º (marked *B*):
+
+![A graphic showing a color rotated by minus 90 degrees and by 45 degrees. The background contains vertical and horizontal gradients. The colors transition from green on the left to red on the right, and from yellow at the top to blue at the bottom. The original color is light yellow. The color that is rotated minus 90 degrees is light green, and the color that is rotated 45 degrees is light red. ](https://developer.apple.com/images/com.apple.accelerate/ColorRotate_2x.png)
+
+The following code generates the rotation matrix based on `hueAngle`:
+
+```swift
+let divisor: Int = 0x1000
+
+let rotationMatrix = [
+    1, 0,             0,
+    0, cos(hueAngle), -sin(hueAngle),
+    0, sin(hueAngle),  cos(hueAngle)
+].map {
+    return Int($0 * Float(divisor))
+}
+```
+
+The `preBias` and `postBias` values effectively shift the *a\** and *b\** values from `0...255` to `-128...127`, so the rotation is centered where *a\** and *b\** are zero.
+
+```swift
+let preBias = [Int](repeating: -128, count: 3)
+let postBias = [Int](repeating: 128 * divisor, count: 3)
+```
+
+The [multiply(by:divisor:preBias:postBias:destination:)](vimage/pixelbuffer/multiply%28by_divisor_prebias_postbias_destination_%29-7jo6v.md) function multiplies each pixel in the source buffer by the matrix and writes the result to the destination buffers. The code performs the matrix multiplication in-place, so the source and destination point to the same buffers.
+
+The following code performs the matrix multiply operation:
+
+```swift
+labPlanarDestination.multiply(
+    by: rotationMatrix,
+    divisor: divisor,
+    preBias: preBias,
+    postBias: postBias,
+    destination: labPlanarDestination)
+```
+
+On return, `labPlanarDestination` contains the hue-adjusted *a\** and *b\** channels.
+
+<a id="Display-the-image"></a>
+
+### Display the image
+
+Finally, the sample code converts the hue-adjusted planar buffer back to an interleaved buffer.
+
+```swift
+labPlanarDestination.interleave(destination: labInterleavedDestination)
+```
+
+The SwiftUI [Image](https://developer.apple.com/documentation/swiftui/image) view supports the L\*a\*b\* color space. The following code creates a Core Graphics image from the interleaved pixel buffer and passes it to the published `outputImage` property that the app displays on the screen:
+
+```swift
+if let result = labInterleavedDestination
+    .makeCGImage(cgImageFormat: labImageFormat) {
+    
+    DispatchQueue.main.async {
+        self.outputImage = result
+    }
+}
+```
+
+## See Also
+
+### Color and Tone Adjustment
+
+- [Adjusting the brightness and contrast of an image](adjusting-the-brightness-and-contrast-of-an-image.md): Use a gamma function to apply a linear or exponential curve.
+- [Adjusting saturation and applying tone mapping](adjusting-saturation-and-applying-tone-mapping.md): Convert an RGB image to discrete luminance and chrominance channels, and apply color and contrast treatments.
+- [Applying tone curve adjustments to images](applying-tone-curve-adjustments-to-images.md): Use the vImage library’s polynomial transform to apply tone curve adjustments to images.
+- [Specifying histograms with vImage](specifying-histograms-with-vimage.md): Calculate the histogram of one image, and apply it to a second image.
+- [Enhancing image contrast with histogram manipulation](enhancing-image-contrast-with-histogram-manipulation.md): Enhance and adjust the contrast of an image with histogram equalization and contrast stretching.
+- [Histogram](histogram.md): Calculate or manipulate an image’s histogram.

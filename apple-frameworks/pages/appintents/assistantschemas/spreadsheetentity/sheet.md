@@ -1,0 +1,46 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/assistantschemas/spreadsheetentity/sheet](https://developer.apple.com/documentation/appintents/assistantschemas/spreadsheetentity/sheet)
+
+# sheet
+
+**Framework:** App Intents  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+ · watchOS 9.0+
+
+The app entity describes a sheet in a spreadsheet.
+
+## Declaration
+
+```swift
+var sheet: some AssistantSchemas.Entity { get }
+```
+
+<a id="Overview"></a>
+
+## Overview
+
+Use Swift macros that generate additional properties and add protocol conformance for your app entity implementation. The following example shows an app entity that conforms to the `.spreadsheet.sheet` schema:
+
+```swift
+@AppEntity(schema: .spreadsheet.sheet)
+struct SheetEntity: AppEntity {
+    struct Query: EntityStringQuery {
+        func entities(for identifiers: [SheetEntity.ID]) async throws -> [SheetEntity] { [] }
+        func entities(matching string: String) async throws -> [SheetEntity] { [] }
+    }
+
+    static var defaultQuery = Query()
+    var displayRepresentation: DisplayRepresentation { "Sheet" }
+
+    let id = UUID()
+
+    @Property
+    public var spreadsheet: SpreadsheetEntity
+
+    @Property
+    public var name: String
+
+    @Property
+    public var sheetIndex: Int
+```
+
+For more information about the `.spreadsheet` app intent domain, see [Spreadsheet](../../app-schema-domain-spreadsheet.md). For general information about app intent domains, see [Making actions and content discoverable by Apple Intelligence](../../making-actions-and-content-discoverable-by-apple-intelligence.md).

@@ -1,0 +1,26 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/symbols/symboleffectoptions/repeatbehavior](https://developer.apple.com/documentation/symbols/symboleffectoptions/repeatbehavior)
+
+# SymbolEffectOptions.RepeatBehavior
+
+**Framework:** Symbols  
+**Kind:** Structure  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
+
+The behavior to use when requesting any repetition on a `SymbolEffect`.
+
+## Declaration
+
+```swift
+struct RepeatBehavior
+```
+
+## Topics
+
+### Type Properties
+
+- [continuous](repeatbehavior/continuous.md): A repeat behavior that prefers to repeat indefinitely, using continuous animations if available. Continuous animations have an intro, a body that runs as long as the effect is enabled, and an outro. If available these animations provide a smoother animation when an effect repeats indefinitely.
+- [periodic](repeatbehavior/periodic.md): A repeat behavior that prefers to repeat indefinitely using periodic animations. Periodic animations play the effect at regular intervals starting and stopping each time.
+
+### Type Methods
+
+- [periodic(\_:delay:)](repeatbehavior/periodic%28__delay_%29.md): A repeat behavior with a preferred play count and delay using periodic animations. Periodic animations play the effect at regular intervals starting and stopping each time.

@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/standardusb30_thubextstatus/standardusb30_khubextstatusrxsublinkspeedidphase](https://developer.apple.com/documentation/kernel/standardusb30_thubextstatus/standardusb30_khubextstatusrxsublinkspeedidphase)
+
+# StandardUSB30::kHubExtStatusRxSublinkSpeedIDPhase
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Enumeration Case  
+**Availability:** macOS 12.0+
+
+## Declaration
+
+```objectivec
+StandardUSB30::kHubExtStatusRxSublinkSpeedIDPhase = kIOUSB30HubExtStatusRxSublinkSpeedIDPhase
+```

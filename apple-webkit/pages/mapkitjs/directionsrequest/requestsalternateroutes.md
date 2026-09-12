@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/mapkitjs/directionsrequest/requestsalternateroutes](https://developer.apple.com/documentation/mapkitjs/directionsrequest/requestsalternateroutes)
+
+# requestsAlternateRoutes
+
+**Interface language:** Data
+
+**Framework:** MapKit JS  
+**Kind:** Interface Property  
+**Availability:** MapKit JS 5.0+
+
+A Boolean value that indicates whether the server returns multiple routes when they’re available.
+
+## Declaration
+
+```
+requestsAlternateRoutes?: boolean;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When this property is `false`, the server returns a single route between the start and end points. When this property is `true`, the server may return additional routes for the user to follow. The server returns additional routes only if they’re available and represent a reasonable path that the user might take.
+
+The default value of this property is `true`.
+
+## See Also
+
+### Directions request
+
+- [origin](origin.md): The starting point for routing directions.
+- [destination](destination.md): The end point for routing directions.
+- [arrivalDate](arrivaldate.md): The arrival date for the trip.
+- [departureDate](departuredate.md): The departure date for the trip.
+- [transportType](transporttype.md): The mode of transportation the directions apply to.
+- [avoidTolls](avoidtolls.md): A Boolean value that prioritizes routes to avoid tolls.
+- [signal](signal.md): A signal object allowing you to cancel the request.

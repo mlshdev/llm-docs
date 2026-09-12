@@ -1,0 +1,111 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/pointlightcomponent](https://developer.apple.com/documentation/realitykit/pointlightcomponent)
+
+# PointLightComponent
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 26.0+ · visionOS 2.0+
+
+A component that defines a point light source.
+
+## Declaration
+
+```swift
+struct PointLightComponent
+```
+
+## Mentioned In
+
+- [Automatically animating RealityKit entities](automatically-animating-realitykit-entities.md)
+
+<a id="overview"></a>
+
+## Overview
+
+The strength of a point light depends on a combination of its [intensity](pointlightcomponent/intensity.md) and [attenuationRadius](pointlightcomponent/attenuationradius.md). The default values for these properties make this light comparable to high-power streetlights, or outdoor floodlights.
+
+This table shows a few examples of common scenarios similar to a point light source:
+
+| Scenario | Approximate lumens | Attenuation radius | Description |
+| --- | --- | --- | --- |
+| Candle flame | 10-15 lumens | ~1 meter | Very small light source |
+| Nightlight | 20-30 lumens | 1-2 meters | Low-level lighting |
+| 25W lightbulb | 200-300 lumens | 2-3 meters | Small room lighting |
+| 40W lightbulb | 400-500 lumens | 3-4 meters | Moderate room lighting |
+| 60W lightbulb | 700-800 lumens | 4-5 meters | General-purpose lighting |
+| 100W lightbulb | 1,500-1,700 lumens | 5-6 meters | Bright room lighting |
+| LED flashlight | 300-600 lumens | 50-70 meters | Long distance illumination |
+| Car headlights (each, low-beam) | 700-1,200 lumens | 100-150 meters | Illuminates the road ahead |
+| LED streetlight | 8,000-10,000 lumens | 20-30 meters | Illuminates large outdoor areas |
+| Stadium lighting | ~100,000 lumens | 100-200 meters | Lights-up large outdoor areas |
+
+Use this component by applying it to an entity’s [components](entity/components.md) set. In this example, the light’s color is red:
+
+```swift
+let lightEntity = Entity()
+
+let redLightComponent = PointLightComponent(color: .red)
+lightEntity.components.set(redLightComponent)
+```
+
+The point light illuminates entities based on its distance from them. Here is a visual example of how a red `PointLightComponent` illuminates elements based on distance:
+
+| ![A screenshot of a RealityKit scene with a dark gray floor, a light gray cube, and a small green sphere to the left of the cube above the floor. The green sphere is emitting a red light, which slightly illuminates the close side of the cube and the floor below.](https://developer.apple.com/images/com.apple.RealityKit/pointlight-cube-far.jpg) | ![A screenshot of a RealityKit scene with a dark gray floor, a light gray cube, and a small green sphere to the left of the cube above the floor. The green sphere is emitting a red light, which strongly illuminates the close side of the cube and the floor below.](https://developer.apple.com/images/com.apple.RealityKit/pointlight-cube-closer.jpg) | ![A screenshot of a RealityKit scene with a dark gray floor, a light gray cube, and a small green sphere to the left of the cube above the floor. The green sphere is emitting a red light, which intensely illuminates the close side of the cube and the floor below.](https://developer.apple.com/images/com.apple.RealityKit/pointlight-cube-closest.jpg) |
+| --- | --- | --- |
+
+> **Note**
+
+> The green dot in the above illustrations is only a visual representation of the light’s position.
+
+<a id="Dynamic-light-capacity"></a>
+
+## Dynamic light capacity
+
+On older hardware, only a limited number of dynamic lights can affect each object. Devices that support `MTLGPUFamily.apple6` or later lift this limit.
+
+Excessive use of dynamic lights may contribute to user-noticeable frame drops and can cause the device to heat up in graphically demanding situations. Both the number of lights and each light’s coverage affect performance, so use properties like [attenuationRadius](pointlightcomponent/attenuationradius.md) to keep a light’s influence no larger than your scene needs. Monitor the thermal state and reduce usage as a mitigation, if necessary.
+
+Because this behavior varies by device, verify your scene’s lighting on the oldest hardware you support. You can check for this support at runtime with `MTLDevice.supportsFamily(.apple6)`.
+
+## Topics
+
+### Creating a point light component
+
+- [init(cgColor:intensity:attenuationRadius:)](pointlightcomponent/init%28cgcolor_intensity_attenuationradius_%29.md): Creates a new instance with the specified color, intensity and attenuation.
+
+### Configuring the light
+
+- [attenuationRadius](pointlightcomponent/attenuationradius.md): The distance from the light source where its intensity reaches zero.
+- [intensity](pointlightcomponent/intensity.md): The intensity of the point light, measured in lumen.
+- [attenuationFalloffExponent](pointlightcomponent/attenuationfalloffexponent.md): The exponent value for the light’s intensity falloff-transition curve.
+
+### Supporting types
+
+- [PointLightComponent.Color](pointlightcomponent/color-swift.typealias.md): A platform-specific type used to define color for a point light.
+
+### Assigning render layers
+
+- [layers](pointlightcomponent/layers.md): The layers this light illuminates.
+
+### Lighting the surroundings
+
+- [PointLightComponent.SurroundingsLight](pointlightcomponent/surroundingslight.md): A component that specifies that the point light illuminates the physical and immersive environment.
+
+### Initializers
+
+- [init(color:intensity:attenuationRadius:)](pointlightcomponent/init%28color_intensity_attenuationradius_%29.md): Creates a point light component with a configuration.
+- [init(color:intensity:attenuationRadius:attenuationFalloffExponent:)](pointlightcomponent/init%28color_intensity_attenuationradius_attenuationfalloffexponent_%29.md): Creates a point light component with a configuration.
+
+### Instance Properties
+
+- [color](pointlightcomponent/color-4ksx7.md): A color for the point light.
+- [color](pointlightcomponent/color-8gecu.md): A color for the point light.
+
+## Relationships
+
+### Conforms To
+
+- [Component](component.md)
+- [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Escapable](https://developer.apple.com/documentation/swift/escapable)

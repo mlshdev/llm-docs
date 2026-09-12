@@ -1,0 +1,17 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstextlayoutfragmentenumerationoptions/nstextlayoutfragmentenumerationoptionsnone](https://developer.apple.com/documentation/appkit/nstextlayoutfragmentenumerationoptions/nstextlayoutfragmentenumerationoptionsnone)
+
+# NSTextLayoutFragmentEnumerationOptionsNone
+
+**Interface language:** Objective-C
+
+**Framework:** AppKit  
+**Kind:** Enumeration Case  
+**Availability:** macOS 12.0+
+
+The value that represents no selected enumeration options.
+
+## Declaration
+
+```objectivec
+NSTextLayoutFragmentEnumerationOptionsNone
+```

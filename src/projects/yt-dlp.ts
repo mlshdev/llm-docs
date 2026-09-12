@@ -8,7 +8,11 @@ import {
   rewriteMarkdownLinks,
 } from "../markdown.ts";
 import { DocumentCollector } from "../quarantine.ts";
-import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
+import type {
+  GithubLockedSource,
+  GithubSourceProject,
+  ProjectBuild,
+} from "../types.ts";
 
 const documentationFiles = [
   "README.md",
@@ -19,8 +23,8 @@ const documentationFiles = [
 ] as const;
 
 export async function buildYtDlp(
-  project: SourceProject,
-  lock: LockedSource,
+  project: GithubSourceProject,
+  lock: GithubLockedSource,
 ): Promise<ProjectBuild> {
   return withRepositoryArchive(
     project.repository,

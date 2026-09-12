@@ -1,0 +1,99 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/sensitivecontentanalysis/testing-your-app-s-response-to-sensitive-media](https://developer.apple.com/documentation/sensitivecontentanalysis/testing-your-app-s-response-to-sensitive-media)
+
+# Testing your app’s response to sensitive media (Swift)
+
+**Framework:** Sensitive Content Analysis  
+**Kind:** Article
+
+Trigger your app’s intervention flow by using a special QR code and profile that Apple provides for testing.
+
+<a id="overview"></a>
+
+## Overview
+
+You can test your app’s response to sensitive content in media by analyzing a special QR code. When Sensitive Content Analysis encounters media that contains the code, the framework flags the media as sensitive. Testing with the QR code enables you to experience your app’s intervention workflow without storing or displaying content that contains sensitive material. You can use this testing process in an open development environment, or while demonstrating the app to an audience. To enable the framework to recognize the test QR code as sensitive, download and install a special profile on the development device.
+
+<a id="Download-the-QR-code"></a>
+
+### Download the QR code
+
+Although the following image contains no sensitive content, the framework recognizes it as sensitive. By returning [isSensitive](scsensitivityanalysis/issensitive.md) = `true`, the analyzer ([SCSensitivityAnalyzer](scsensitivityanalyzer.md)) returns a false positive for this QR code for the special purpose of testing.
+
+![A QR code.](https://developer.apple.com/images/com.apple.SensitiveContentAnalysis/testing_your_app_s_response_to_sensitive_media-1@2x.png)
+
+Click or tap to download [the test image](https://developer.apple.com/sample-code/web/qr-sca.jpg). Use [the test video](https://developer.apple.com/sample-code/web/qr-sca.mov) to generate a false positive with video.
+
+<a id="Install-the-test-profile"></a>
+
+### Install the test profile
+
+The framework considers the test QR code sensitive only if the development device contains a special profile. Apple provides a special profile specifically for this purpose:
+
+- Download and install the [Sensitive Content Analysis profile](https://developer.apple.com/services-account/download?path=/iOS/iOS_Logs/SensitiveContentAnalysis.mobileconfig).
+- Reboot the device for the test profile to take effect.
+
+<a id="Embed-the-test-QR-code-in-another-image-or-video"></a>
+
+### Embed the test QR code in another image or video
+
+You can include the QR code in other images or videos, and Sensitive Content Analysis recognizes the host media as sensitive. For example, you might incorporate the QR code in a larger media file that:
+
+- Indicates the test content with a visual alert such as a yellow triangle
+- Brings attention to the test content with an alert in text, such as, “A sensitive image.”
+
+If the QR code varies in size or position within the host media, the framework can still recognize it if its details remain crisp and unobstructed. In a video file, position the QR code in the first frame.
+
+<a id="Test-the-media-and-generate-a-false-positive"></a>
+
+### Test the media and generate a false positive
+
+In your app, check the test media by calling one of the `analyze` functions. For example, call [analyzeImage(\_:completionHandler:)](scsensitivityanalyzer/analyzeimage%28__completionhandler_%29.md) and pass in the image as an argument. Or, call [analyzeVideoFile:completionHandler:](scsensitivityanalyzer/analyzevideofile_completionhandler_.md) and pass in the test video as an argument. If you have installed the test profile and made it active on your device, the functions return an [SCSensitivityAnalysis](scsensitivityanalysis.md) instance with [isSensitive](scsensitivityanalysis/issensitive.md) set to `true` and [detectedTypes](scsensitivityanalysis/detectedtypes.md) containing [sexuallyExplicit](scsensitivityanalysis/contenttype/sexuallyexplicit.md).
+
+# Testing your app’s response to sensitive media (Objective-C)
+
+**Framework:** Sensitive Content Analysis  
+**Kind:** Article
+
+Trigger your app’s intervention flow by using a special QR code and profile that Apple provides for testing.
+
+<a id="overview"></a>
+
+## Overview
+
+You can test your app’s response to sensitive content in media by analyzing a special QR code. When Sensitive Content Analysis encounters media that contains the code, the framework flags the media as sensitive. Testing with the QR code enables you to experience your app’s intervention workflow without storing or displaying content that contains sensitive material. You can use this testing process in an open development environment, or while demonstrating the app to an audience. To enable the framework to recognize the test QR code as sensitive, download and install a special profile on the development device.
+
+<a id="Download-the-QR-code"></a>
+
+### Download the QR code
+
+Although the following image contains no sensitive content, the framework recognizes it as sensitive. By returning [sensitive](scsensitivityanalysis/issensitive.md) = `true`, the analyzer ([SCSensitivityAnalyzer](scsensitivityanalyzer.md)) returns a false positive for this QR code for the special purpose of testing.
+
+![A QR code.](https://developer.apple.com/images/com.apple.SensitiveContentAnalysis/testing_your_app_s_response_to_sensitive_media-1@2x.png)
+
+Click or tap to download [the test image](https://developer.apple.com/sample-code/web/qr-sca.jpg). Use [the test video](https://developer.apple.com/sample-code/web/qr-sca.mov) to generate a false positive with video.
+
+<a id="Install-the-test-profile"></a>
+
+### Install the test profile
+
+The framework considers the test QR code sensitive only if the development device contains a special profile. Apple provides a special profile specifically for this purpose:
+
+- Download and install the [Sensitive Content Analysis profile](https://developer.apple.com/services-account/download?path=/iOS/iOS_Logs/SensitiveContentAnalysis.mobileconfig).
+- Reboot the device for the test profile to take effect.
+
+<a id="Embed-the-test-QR-code-in-another-image-or-video"></a>
+
+### Embed the test QR code in another image or video
+
+You can include the QR code in other images or videos, and Sensitive Content Analysis recognizes the host media as sensitive. For example, you might incorporate the QR code in a larger media file that:
+
+- Indicates the test content with a visual alert such as a yellow triangle
+- Brings attention to the test content with an alert in text, such as, “A sensitive image.”
+
+If the QR code varies in size or position within the host media, the framework can still recognize it if its details remain crisp and unobstructed. In a video file, position the QR code in the first frame.
+
+<a id="Test-the-media-and-generate-a-false-positive"></a>
+
+### Test the media and generate a false positive
+
+In your app, check the test media by calling one of the `analyze` functions. For example, call [analyzeCGImage:completionHandler:](scsensitivityanalyzer/analyzeimage%28__completionhandler_%29.md) and pass in the image as an argument. Or, call [analyzeVideoFile:completionHandler:](scsensitivityanalyzer/analyzevideofile_completionhandler_.md) and pass in the test video as an argument. If you have installed the test profile and made it active on your device, the functions return an [SCSensitivityAnalysis](scsensitivityanalysis.md) instance with [sensitive](scsensitivityanalysis/issensitive.md) set to `true` and [detectedTypes](scsensitivityanalysis/detectedtypes.md) containing [SCSensitiveContentTypeSexuallyExplicit](scsensitivityanalysis/contenttype/sexuallyexplicit.md).

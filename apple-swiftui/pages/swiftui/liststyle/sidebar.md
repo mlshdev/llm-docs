@@ -1,0 +1,34 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/liststyle/sidebar](https://developer.apple.com/documentation/swiftui/liststyle/sidebar)
+
+# sidebar
+
+**Framework:** SwiftUI  
+**Kind:** Type Property  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 10.15+ · visionOS 1.0+
+
+The list style that describes the behavior and appearance of a sidebar list.
+
+## Declaration
+
+```swift
+@export(implementation) static var sidebar: SidebarListStyle { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+On macOS and iOS, the sidebar list style displays disclosure indicators in the section headers that allow the user to collapse and expand sections.
+
+## See Also
+
+### Getting built-in list styles
+
+- [automatic](automatic.md): Conforms when `Self` is `DefaultListStyle`. The list style that describes a platform’s default behavior and appearance for a list.
+- [bordered](bordered.md): Conforms when `Self` is `BorderedListStyle`. The list style that describes the behavior and appearance of a list with standard border.
+- [carousel](carousel.md): Conforms when `Self` is `CarouselListStyle`. The carousel list style.
+- [elliptical](elliptical.md): Conforms when `Self` is `EllipticalListStyle`. The list style that describes the behavior and appearance of an elliptical list.
+- [grouped](grouped.md): Conforms when `Self` is `GroupedListStyle`. The list style that describes the behavior and appearance of a grouped list.
+- [inset](inset.md): Conforms when `Self` is `InsetListStyle`. The list style that describes the behavior and appearance of an inset list.
+- [insetGrouped](insetgrouped.md): Conforms when `Self` is `InsetGroupedListStyle`. The list style that describes the behavior and appearance of an inset grouped list.
+- [plain](plain.md): Conforms when `Self` is `PlainListStyle`. The list style that describes the behavior and appearance of a plain list.

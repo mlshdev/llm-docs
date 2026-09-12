@@ -1,0 +1,117 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/singlesignon](https://developer.apple.com/documentation/devicemanagement/singlesignon)
+
+# SingleSignOn
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Device Management Profile  
+**Availability:** iOS 7.0+ (deprecated in 26.0) · iPadOS 7.0+ (deprecated in 26.0) · Mac Catalyst 7.0+ (deprecated in 26.0)
+
+The payload that configures single sign-on (SSO).
+
+## Declaration
+
+```
+object SingleSignOn
+```
+
+## Properties
+
+- `Kerberos` — `SingleSignOn.Kerberos`: The Kerberos dictionary.
+
+  Deprecated: iOS 26+ | iPadOS 26+
+- `Name` — `string` (required): The human-readable name for the account.
+
+  Deprecated: iOS 26+ | iPadOS 26+
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Specify `com.apple.sso` as the payload type.
+
+Deprecated in iOS 26. Use the [ExtensibleSingleSignOn](extensiblesinglesignon.md) payload instead.
+
+<a id="Profile-availability"></a>
+
+### Profile availability
+
+|  |  |
+| --- | --- |
+| Device channel | iOS |
+| User channel | N/A |
+| Allow manual install | iOS |
+| Requires supervision | N/A |
+| Requires user-approved MDM | N/A |
+| Allowed in user enrollment | iOS |
+| Allow multiple payloads | N/A |
+
+<a id="Profile-example"></a>
+
+### Profile example
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>ExtensionData</key>
+            <dict>
+                <key>useSiteAutoDiscovery</key>
+                <true/>
+            </dict>
+            <key>ExtensionIdentifier</key>
+            <string>com.apple.com</string>
+            <key>TeamIdentifier</key>
+            <string>RandomTeamID</string>
+            <key>Hosts</key>
+            <array>
+                <string>.com.example.com</string>
+            </array>
+            <key>Realm</key>
+            <string>com.example.com</string>
+            <key>Type</key>
+            <string>Credential</string>
+            <key>PayloadIdentifier</key>
+            <string>com.example.myssopayload</string>
+            <key>PayloadType</key>
+            <string>com.apple.sso</string>
+            <key>PayloadUUID</key>
+            <string>02cdfc1c-3c53-434d-99db-c55ee62548bd</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+    </array>
+    <key>PayloadDisplayName</key>
+    <string>SSO</string>
+    <key>PayloadIdentifier</key>
+    <string>com.example.myprofile</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>00d92c73-9844-4dc6-b742-eda33efbbf23</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>
+```
+
+## Topics
+
+### Objects
+
+- [SingleSignOn.Kerberos](singlesignon/kerberos-data.dictionary.md): Deprecated. The Kerberos dictionary.
+
+## See Also
+
+### Authentication
+
+- [DirectoryService](directoryservice.md): The payload that configures an Active Directory (AD) domain.
+- [ExtensibleSingleSignOn](extensiblesinglesignon.md): The payload that configures an app extension that performs single sign-on (SSO).
+- [ExtensibleSingleSignOnKerberos](extensiblesinglesignonkerberos.md): The payload that configures an app extension that performs single sign-on with the Kerberos extension.
+- [Identification](identification.md): Deprecated. The payload that configures the names of the account user.
+- [IdentityPreference](identitypreference.md): The payload that configures the user’s identity on the device.

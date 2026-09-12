@@ -1,0 +1,509 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/simdmask](https://developer.apple.com/documentation/swift/simdmask)
+
+# SIMDMask
+
+**Framework:** Swift  
+**Kind:** Structure  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+## Declaration
+
+```swift
+@frozen struct SIMDMask<Storage> where Storage : SIMD, Storage.Scalar : FixedWidthInteger, Storage.Scalar : SignedInteger
+```
+
+## Topics
+
+### Operators
+
+- [.!(\_:)](simdmask/'.!%28__%29-1i6z4.md): Conforms when `Storage` is `SIMD64<Int8>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-1taxm.md): Conforms when `Storage` is `SIMD8<Int8>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-1uoo5.md): Conforms when `Storage` is `SIMD8<Int16>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-1wni3.md): Conforms when `Storage` is `SIMD3<Int>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-21iaq.md): Conforms when `Storage` is `SIMD64<Int32>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-2s4rp.md): Conforms when `Storage` is `SIMD3<Int8>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-2xidg.md): Conforms when `Storage` is `SIMD2<Int8>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-369g7.md): Conforms when `Storage` is `SIMD32<Int64>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-37o53.md): Conforms when `Storage` is `SIMD3<Int32>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-3cez8.md): Conforms when `Storage` is `SIMD8<Int32>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-3v0wb.md): Conforms when `Storage` is `SIMD32<Int16>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-412oe.md): Conforms when `Storage` is `SIMD16<Int64>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-4j1ws.md): Conforms when `Storage` is `SIMD32<Int8>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-4jcjq.md): Conforms when `Storage` is `SIMD16<Int8>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-4x8xz.md): Conforms when `Storage` is `SIMD3<Int16>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-5byae.md): Conforms when `Storage` is `SIMD64<Int64>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-5glpy.md): Conforms when `Storage` is `SIMD2<Int16>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-5qm8v.md): Conforms when `Storage` is `SIMD4<Int16>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-6cygw.md): Conforms when `Storage` is `SIMD2<Int32>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-7iq11.md): Conforms when `Storage` is `SIMD32<Int32>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-7odl6.md): Conforms when `Storage` is `SIMD16<Int>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-7odqs.md): Conforms when `Storage` is `SIMD32<Int>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-7oxtu.md): Conforms when `Storage` is `SIMD8<Int64>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-7x8d0.md): Conforms when `Storage` is `SIMD64<Int>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-864jr.md): Conforms when `Storage` is `SIMD2<Int>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-88k9y.md): Conforms when `Storage` is `SIMD4<Int64>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-8ewdk.md): Conforms when `Storage` is `SIMD8<Int>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-8fdgj.md): Conforms when `Storage` is `SIMD16<Int16>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-8ps9r.md): Conforms when `Storage` is `SIMD4<Int>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-8qmdw.md): Conforms when `Storage` is `SIMD4<Int32>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-8qz21.md): Conforms when `Storage` is `SIMD3<Int64>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-9afyr.md): Conforms when `Storage` is `SIMD16<Int32>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-9j4wf.md): Conforms when `Storage` is `SIMD2<Int64>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-9lm1f.md): Conforms when `Storage` conforms to `SIMD`, `Storage.Scalar` conforms to `FixedWidthInteger`, and `Storage.Scalar` conforms to `SignedInteger`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-9oij3.md): Conforms when `Storage` is `SIMD4<Int8>`. A vector mask that is the pointwise logical negation of the input.
+- [.!(\_:)](simdmask/'.!%28__%29-w95r.md): Conforms when `Storage` is `SIMD64<Int16>`. A vector mask that is the pointwise logical negation of the input.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-1bstv.md): Conforms when `Storage` is `SIMD64<Int64>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-1xcmp.md): Conforms when `Storage` is `SIMD64<Int8>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-3aavu.md): Conforms when `Storage` is `SIMD64<Int32>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-3vfg0.md): Conforms when `Storage` is `SIMD8<Int64>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-3ylip.md): Conforms when `Storage` is `SIMD32<Int16>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-423h5.md): Conforms when `Storage` is `SIMD32<Int8>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-4efoo.md): Conforms when `Storage` is `SIMD16<Int>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-4qjq3.md): Conforms when `Storage` is `SIMD32<Int>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-4uyji.md): Conforms when `Storage` is `SIMD2<Int32>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-4yah8.md): Conforms when `Storage` is `SIMD16<Int8>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-52wyk.md): Conforms when `Storage` is `SIMD3<Int8>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-57336.md): Conforms when `Storage` is `SIMD64<Int>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-5b2tn.md): Conforms when `Storage` is `SIMD8<Int8>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-5b65c.md): Conforms when `Storage` is `SIMD4<Int16>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-5c1ea.md): Conforms when `Storage` is `SIMD2<Int16>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-69426.md): Conforms when `Storage` is `SIMD16<Int64>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-6g155.md): Conforms when `Storage` is `SIMD16<Int32>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-6k7jt.md): Conforms when `Storage` is `SIMD3<Int16>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-6xo9v.md): Conforms when `Storage` is `SIMD32<Int64>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-72ix7.md): Conforms when `Storage` is `SIMD32<Int32>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-7c281.md): Conforms when `Storage` is `SIMD8<Int>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-7eoc8.md): Conforms when `Storage` is `SIMD3<Int64>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-7i3ju.md): Conforms when `Storage` is `SIMD2<Int8>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-9gbp0.md): Conforms when `Storage` is `SIMD4<Int>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-9pxno.md): Conforms when `Storage` is `SIMD64<Int16>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-9qlrq.md): Conforms when `Storage` is `SIMD2<Int>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-9tocb.md): Conforms when `Storage` is `SIMD3<Int>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-9vgs4.md): Conforms when `Storage` is `SIMD4<Int64>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-a5c6.md): Conforms when `Storage` is `SIMD8<Int16>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-dffz.md): Conforms when `Storage` is `SIMD4<Int8>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-eifj.md): Conforms when `Storage` is `SIMD3<Int32>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-g3o1.md): Conforms when `Storage` is `SIMD2<Int64>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-m7n7.md): Conforms when `Storage` is `SIMD8<Int32>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-mac2.md): Conforms when `Storage` is `SIMD16<Int16>`. A vector mask with the result of a pointwise inequality comparison.
+- [.!=(\_:\_:)](simdmask/'.!=%28____%29-y5ox.md): Conforms when `Storage` is `SIMD4<Int32>`. A vector mask with the result of a pointwise inequality comparison.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-145py.md): Conforms when `Storage` conforms to `SIMD`, `Storage.Scalar` conforms to `FixedWidthInteger`, and `Storage.Scalar` conforms to `SignedInteger`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-169o8.md): Conforms when `Storage` is `SIMD3<Int16>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-1a23z.md): Conforms when `Storage` is `SIMD2<Int8>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-1pshx.md): Conforms when `Storage` is `SIMD2<Int64>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-1ucx5.md): Conforms when `Storage` is `SIMD64<Int64>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-20xdw.md): Conforms when `Storage` conforms to `SIMD`, `Storage.Scalar` conforms to `FixedWidthInteger`, and `Storage.Scalar` conforms to `SignedInteger`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-2awxi.md): Conforms when `Storage` is `SIMD64<Int>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-2imak.md): Conforms when `Storage` is `SIMD8<Int32>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-2lwk7.md): Conforms when `Storage` conforms to `SIMD`, `Storage.Scalar` conforms to `FixedWidthInteger`, and `Storage.Scalar` conforms to `SignedInteger`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-2peib.md): Conforms when `Storage` is `SIMD3<Int64>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-3ky5.md): Conforms when `Storage` is `SIMD16<Int64>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-3q922.md): Conforms when `Storage` is `SIMD2<Int>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-431pz.md): Conforms when `Storage` is `SIMD8<Int8>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-49px.md): Conforms when `Storage` is `SIMD16<Int8>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-4am8f.md): Conforms when `Storage` is `SIMD16<Int>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-4dlkk.md): Conforms when `Storage` is `SIMD3<Int32>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-4ryow.md): Conforms when `Storage` is `SIMD4<Int8>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-4vik1.md): Conforms when `Storage` is `SIMD64<Int32>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-4x5gc.md): Conforms when `Storage` is `SIMD8<Int16>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-557cy.md): Conforms when `Storage` is `SIMD4<Int64>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-5zen.md): Conforms when `Storage` is `SIMD2<Int32>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-67j.md): Conforms when `Storage` is `SIMD4<Int16>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-67wgv.md): Conforms when `Storage` is `SIMD16<Int16>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-680i1.md): Conforms when `Storage` is `SIMD2<Int16>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-6xa9c.md): Conforms when `Storage` is `SIMD32<Int64>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-6xn07.md): Conforms when `Storage` is `SIMD32<Int16>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-7mo1z.md): Conforms when `Storage` is `SIMD4<Int>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-892f.md): Conforms when `Storage` is `SIMD32<Int8>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-8pp6f.md): Conforms when `Storage` is `SIMD8<Int>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-8q5wb.md): Conforms when `Storage` is `SIMD64<Int8>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-9429d.md): Conforms when `Storage` is `SIMD4<Int32>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-97hdm.md): Conforms when `Storage` is `SIMD3<Int>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-9915i.md): Conforms when `Storage` is `SIMD3<Int8>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-9nff3.md): Conforms when `Storage` is `SIMD16<Int32>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-9qn9n.md): Conforms when `Storage` is `SIMD64<Int16>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-9u9mk.md): Conforms when `Storage` is `SIMD8<Int64>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-fq1q.md): Conforms when `Storage` is `SIMD32<Int>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&(\_:\_:)](simdmask/'.&%28____%29-zszx.md): Conforms when `Storage` is `SIMD32<Int32>`. A vector mask that is the pointwise logical conjunction of the inputs.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-12gkg.md): Conforms when `Storage` is `SIMD16<Int>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-1cwox.md): Conforms when `Storage` is `SIMD32<Int8>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-1wpn1.md): Conforms when `Storage` is `SIMD4<Int8>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-1x3hq.md): Conforms when `Storage` is `SIMD32<Int16>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-20boa.md): Conforms when `Storage` is `SIMD32<Int64>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-252cj.md): Conforms when `Storage` is `SIMD16<Int32>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-2na0m.md): Conforms when `Storage` conforms to `SIMD`, `Storage.Scalar` conforms to `FixedWidthInteger`, and `Storage.Scalar` conforms to `SignedInteger`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-34ad1.md): Conforms when `Storage` is `SIMD16<Int16>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-3oxz3.md): Conforms when `Storage` is `SIMD8<Int16>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-4ysik.md): Conforms when `Storage` conforms to `SIMD`, `Storage.Scalar` conforms to `FixedWidthInteger`, and `Storage.Scalar` conforms to `SignedInteger`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-52kbo.md): Conforms when `Storage` is `SIMD64<Int32>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-5en6.md): Conforms when `Storage` is `SIMD16<Int8>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-5jyb3.md): Conforms when `Storage` is `SIMD2<Int64>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-5kwst.md): Conforms when `Storage` is `SIMD3<Int16>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-5lkct.md): Conforms when `Storage` is `SIMD32<Int>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-5qb7m.md): Conforms when `Storage` is `SIMD8<Int>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-62ajs.md): Conforms when `Storage` is `SIMD4<Int32>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-63gip.md): Conforms when `Storage` is `SIMD3<Int>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-6ou9w.md): Conforms when `Storage` is `SIMD4<Int16>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-6p7x3.md): Conforms when `Storage` is `SIMD64<Int16>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-6tmg8.md): Conforms when `Storage` is `SIMD4<Int>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-6zusl.md): Conforms when `Storage` is `SIMD2<Int32>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-70wd4.md): Conforms when `Storage` is `SIMD3<Int64>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-7oyep.md): Conforms when `Storage` is `SIMD64<Int>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-7wb1u.md): Conforms when `Storage` is `SIMD16<Int64>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-844uv.md): Conforms when `Storage` is `SIMD8<Int32>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-85bn8.md): Conforms when `Storage` is `SIMD2<Int>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-86khr.md): Conforms when `Storage` is `SIMD3<Int32>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-8ur23.md): Conforms when `Storage` is `SIMD4<Int64>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-8yjqn.md): Conforms when `Storage` is `SIMD32<Int32>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-95thm.md): Conforms when `Storage` is `SIMD2<Int16>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-962kz.md): Conforms when `Storage` is `SIMD8<Int64>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-9kh2c.md): Conforms when `Storage` is `SIMD8<Int8>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-9wv32.md): Conforms when `Storage` is `SIMD64<Int8>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-icc.md): Conforms when `Storage` is `SIMD2<Int8>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-lg4i.md): Conforms when `Storage` is `SIMD64<Int64>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.&=(\_:\_:)](simdmask/'.&=%28____%29-skpc.md): Conforms when `Storage` is `SIMD3<Int8>`. Replaces `a` with the pointwise logical conjunction of `a` and `b`.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-11d2d.md): Conforms when `Storage` is `SIMD3<Int64>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-1jvgs.md): Conforms when `Storage` is `SIMD64<Int64>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-1og62.md): Conforms when `Storage` is `SIMD16<Int8>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-1ubfu.md): Conforms when `Storage` is `SIMD32<Int8>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-284j9.md): Conforms when `Storage` is `SIMD8<Int16>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-2brx5.md): Conforms when `Storage` is `SIMD32<Int32>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-2dam3.md): Conforms when `Storage` is `SIMD2<Int8>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-2iimf.md): Conforms when `Storage` is `SIMD16<Int64>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-39nci.md): Conforms when `Storage` is `SIMD4<Int>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-3gcbu.md): Conforms when `Storage` is `SIMD2<Int>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-3hdhk.md): Conforms when `Storage` is `SIMD32<Int64>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-3kebh.md): Conforms when `Storage` is `SIMD4<Int8>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-3myzv.md): Conforms when `Storage` is `SIMD64<Int16>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-42ijc.md): Conforms when `Storage` is `SIMD8<Int32>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-45t84.md): Conforms when `Storage` is `SIMD3<Int16>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-4b0ny.md): Conforms when `Storage` is `SIMD64<Int8>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-57ghp.md): Conforms when `Storage` is `SIMD64<Int>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-587zp.md): Conforms when `Storage` is `SIMD4<Int64>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-5h2mq.md): Conforms when `Storage` is `SIMD16<Int16>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-5uq1i.md): Conforms when `Storage` is `SIMD16<Int32>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-60n7g.md): Conforms when `Storage` is `SIMD16<Int>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-67dx6.md): Conforms when `Storage` is `SIMD3<Int8>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-6cck1.md): Conforms when `Storage` is `SIMD8<Int64>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-6fplg.md): Conforms when `Storage` is `SIMD8<Int>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-6vw48.md): Conforms when `Storage` is `SIMD2<Int64>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-71h0j.md): Conforms when `Storage` is `SIMD32<Int16>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-7fdu0.md): Conforms when `Storage` is `SIMD3<Int32>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-7h67k.md): Conforms when `Storage` is `SIMD64<Int32>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-8ergy.md): Conforms when `Storage` is `SIMD2<Int32>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-8vssm.md): Conforms when `Storage` is `SIMD3<Int>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-91rl9.md): Conforms when `Storage` is `SIMD4<Int16>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-979dh.md): Conforms when `Storage` is `SIMD2<Int16>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-k5h7.md): Conforms when `Storage` is `SIMD32<Int>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-riwy.md): Conforms when `Storage` is `SIMD4<Int32>`. A vector mask with the result of a pointwise equality comparison.
+- [.==(\_:\_:)](simdmask/'.==%28____%29-xxgz.md): Conforms when `Storage` is `SIMD8<Int8>`. A vector mask with the result of a pointwise equality comparison.
+- [.^(\_:\_:)](simdmask/'._%28____%29-11sjt.md): Conforms when `Storage` is `SIMD8<Int64>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-1ke9.md): Conforms when `Storage` conforms to `SIMD`, `Storage.Scalar` conforms to `FixedWidthInteger`, and `Storage.Scalar` conforms to `SignedInteger`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-1kfk0.md): Conforms when `Storage` is `SIMD8<Int32>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-1lqpw.md): Conforms when `Storage` is `SIMD2<Int32>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-1lxbl.md): Conforms when `Storage` is `SIMD4<Int32>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-1lz4p.md): Conforms when `Storage` is `SIMD3<Int8>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-1na0j.md): Conforms when `Storage` is `SIMD64<Int32>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-1orsn.md): Conforms when `Storage` is `SIMD4<Int8>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-1zt0u.md): Conforms when `Storage` is `SIMD32<Int32>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-2cb7l.md): Conforms when `Storage` conforms to `SIMD`, `Storage.Scalar` conforms to `FixedWidthInteger`, and `Storage.Scalar` conforms to `SignedInteger`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-2fut5.md): Conforms when `Storage` is `SIMD8<Int16>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-2ihng.md): Conforms when `Storage` is `SIMD8<Int32>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-2qbki.md): Conforms when `Storage` is `SIMD32<Int16>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-33q5z.md): Conforms when `Storage` is `SIMD8<Int8>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-374nn.md): Conforms when `Storage` is `SIMD3<Int16>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-3bgdq.md): Conforms when `Storage` is `SIMD8<Int8>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-3n4if.md): Conforms when `Storage` is `SIMD16<Int16>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-3o5p8.md): Conforms when `Storage` is `SIMD3<Int64>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-3qurd.md): Conforms when `Storage` is `SIMD4<Int16>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-3r14q.md): Conforms when `Storage` is `SIMD64<Int64>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-3t3b6.md): Conforms when `Storage` is `SIMD8<Int16>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-3tj8x.md): Conforms when `Storage` is `SIMD16<Int64>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-3uhaz.md): Conforms when `Storage` is `SIMD4<Int16>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-3wd47.md): Conforms when `Storage` is `SIMD3<Int>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-4akg1.md): Conforms when `Storage` is `SIMD2<Int64>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-4hjau.md): Conforms when `Storage` is `SIMD64<Int64>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-4qn8l.md): Conforms when `Storage` is `SIMD16<Int8>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-521pj.md): Conforms when `Storage` conforms to `SIMD`, `Storage.Scalar` conforms to `FixedWidthInteger`, and `Storage.Scalar` conforms to `SignedInteger`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-52ll8.md): Conforms when `Storage` is `SIMD8<Int>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-5bq2t.md): Conforms when `Storage` is `SIMD8<Int64>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-5coqj.md): Conforms when `Storage` is `SIMD64<Int16>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-5crsr.md): Conforms when `Storage` is `SIMD64<Int32>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-5ic47.md): Conforms when `Storage` is `SIMD4<Int64>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-5pu7e.md): Conforms when `Storage` is `SIMD16<Int16>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-5to13.md): Conforms when `Storage` is `SIMD32<Int>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-63r3t.md): Conforms when `Storage` is `SIMD2<Int64>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-6dhf6.md): Conforms when `Storage` is `SIMD4<Int64>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-6g5ou.md): Conforms when `Storage` is `SIMD64<Int8>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-6j7cz.md): Conforms when `Storage` is `SIMD32<Int64>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-6l9ra.md): Conforms when `Storage` is `SIMD3<Int32>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-6pru.md): Conforms when `Storage` is `SIMD4<Int>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-6v0gb.md): Conforms when `Storage` is `SIMD3<Int8>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-753hw.md): Conforms when `Storage` is `SIMD32<Int32>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-75fbk.md): Conforms when `Storage` conforms to `SIMD`, `Storage.Scalar` conforms to `FixedWidthInteger`, and `Storage.Scalar` conforms to `SignedInteger`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-77675.md): Conforms when `Storage` is `SIMD2<Int16>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-78lxr.md): Conforms when `Storage` is `SIMD2<Int32>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-7feku.md): Conforms when `Storage` is `SIMD64<Int16>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-7qdxf.md): Conforms when `Storage` is `SIMD32<Int8>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-7tall.md): Conforms when `Storage` is `SIMD3<Int>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-7yq75.md): Conforms when `Storage` conforms to `SIMD`, `Storage.Scalar` conforms to `FixedWidthInteger`, and `Storage.Scalar` conforms to `SignedInteger`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-81c6m.md): Conforms when `Storage` is `SIMD32<Int64>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-856yj.md): Conforms when `Storage` is `SIMD16<Int>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-865a6.md): Conforms when `Storage` is `SIMD64<Int8>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-86pih.md): Conforms when `Storage` is `SIMD3<Int32>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-87ha8.md): Conforms when `Storage` is `SIMD16<Int32>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-8ovj4.md): Conforms when `Storage` is `SIMD2<Int8>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-8oxhr.md): Conforms when `Storage` is `SIMD32<Int16>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-8pb64.md): Conforms when `Storage` is `SIMD2<Int16>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-8pklp.md): Conforms when `Storage` is `SIMD8<Int>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-8z99n.md): Conforms when `Storage` is `SIMD4<Int32>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-91mg7.md): Conforms when `Storage` conforms to `SIMD`, `Storage.Scalar` conforms to `FixedWidthInteger`, and `Storage.Scalar` conforms to `SignedInteger`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-93fh3.md): Conforms when `Storage` is `SIMD32<Int8>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-93uww.md): Conforms when `Storage` is `SIMD16<Int>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-94c8y.md): Conforms when `Storage` is `SIMD4<Int>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-952oz.md): Conforms when `Storage` is `SIMD3<Int64>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-99sse.md): Conforms when `Storage` is `SIMD32<Int>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-9h7g4.md): Conforms when `Storage` is `SIMD16<Int8>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-9i0ho.md): Conforms when `Storage` is `SIMD2<Int>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-9lt9f.md): Conforms when `Storage` is `SIMD64<Int>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-9picb.md): Conforms when `Storage` is `SIMD4<Int8>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-9s54c.md): Conforms when `Storage` is `SIMD16<Int64>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-9t6d6.md): Conforms when `Storage` is `SIMD16<Int32>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-9wmqe.md): Conforms when `Storage` is `SIMD2<Int>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-gx5e.md): Conforms when `Storage` is `SIMD3<Int16>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.|(\_:\_:)](simdmask/'._%28____%29-rztm.md): Conforms when `Storage` is `SIMD2<Int8>`. A vector mask that is the pointwise logical disjunction of the inputs.
+- [.^(\_:\_:)](simdmask/'._%28____%29-vf27.md): Conforms when `Storage` is `SIMD64<Int>`. A vector mask that is the pointwise exclusive or of the inputs.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-10b9k.md): Conforms when `Storage` is `SIMD2<Int16>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-11elm.md): Conforms when `Storage` is `SIMD8<Int64>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-17zji.md): Conforms when `Storage` is `SIMD4<Int16>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-187ym.md): Conforms when `Storage` is `SIMD2<Int64>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-19x8.md): Conforms when `Storage` is `SIMD64<Int>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-1bqze.md): Conforms when `Storage` conforms to `SIMD`, `Storage.Scalar` conforms to `FixedWidthInteger`, and `Storage.Scalar` conforms to `SignedInteger`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-1kwjk.md): Conforms when `Storage` is `SIMD2<Int>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-1l06v.md): Conforms when `Storage` is `SIMD3<Int64>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-1skak.md): Conforms when `Storage` is `SIMD8<Int8>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-289ei.md): Conforms when `Storage` is `SIMD64<Int64>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-28avd.md): Conforms when `Storage` is `SIMD4<Int32>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-2fptv.md): Conforms when `Storage` is `SIMD32<Int16>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-32bpi.md): Conforms when `Storage` is `SIMD64<Int16>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-33sbw.md): Conforms when `Storage` is `SIMD4<Int>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-35gl4.md): Conforms when `Storage` is `SIMD3<Int8>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-36fwo.md): Conforms when `Storage` is `SIMD4<Int32>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-36zd7.md): Conforms when `Storage` is `SIMD16<Int>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-37pr7.md): Conforms when `Storage` is `SIMD3<Int>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-3c5yv.md): Conforms when `Storage` is `SIMD64<Int32>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-3cq16.md): Conforms when `Storage` is `SIMD2<Int8>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-3dnxc.md): Conforms when `Storage` is `SIMD8<Int32>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-3dwxc.md): Conforms when `Storage` is `SIMD16<Int8>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-3jpjw.md): Conforms when `Storage` is `SIMD4<Int>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-3l4kc.md): Conforms when `Storage` is `SIMD32<Int64>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-3lgta.md): Conforms when `Storage` is `SIMD3<Int32>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-3lp52.md): Conforms when `Storage` is `SIMD8<Int32>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-3zval.md): Conforms when `Storage` is `SIMD16<Int64>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-424pq.md): Conforms when `Storage` is `SIMD2<Int8>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-48r5d.md): Conforms when `Storage` is `SIMD32<Int8>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-49ffo.md): Conforms when `Storage` is `SIMD16<Int8>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-4c0l2.md): Conforms when `Storage` is `SIMD4<Int64>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-4hstr.md): Conforms when `Storage` is `SIMD3<Int8>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-4jn7m.md): Conforms when `Storage` is `SIMD8<Int16>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-4m5ba.md): Conforms when `Storage` is `SIMD32<Int>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-4rjbb.md): Conforms when `Storage` is `SIMD64<Int8>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-4w85p.md): Conforms when `Storage` is `SIMD64<Int>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-53c71.md): Conforms when `Storage` is `SIMD3<Int16>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-55m63.md): Conforms when `Storage` is `SIMD3<Int64>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-564rm.md): Conforms when `Storage` is `SIMD32<Int8>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-5p4g2.md): Conforms when `Storage` is `SIMD8<Int64>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-5yqz0.md): Conforms when `Storage` is `SIMD2<Int32>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-68krs.md): Conforms when `Storage` is `SIMD64<Int64>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-6gi0j.md): Conforms when `Storage` is `SIMD16<Int16>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-6jqlh.md): Conforms when `Storage` is `SIMD16<Int64>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-6ncn.md): Conforms when `Storage` is `SIMD4<Int8>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-6q6ca.md): Conforms when `Storage` is `SIMD16<Int32>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-6rb2k.md): Conforms when `Storage` conforms to `SIMD`, `Storage.Scalar` conforms to `FixedWidthInteger`, and `Storage.Scalar` conforms to `SignedInteger`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-6vrul.md): Conforms when `Storage` is `SIMD4<Int16>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-6y37h.md): Conforms when `Storage` conforms to `SIMD`, `Storage.Scalar` conforms to `FixedWidthInteger`, and `Storage.Scalar` conforms to `SignedInteger`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-6yxof.md): Conforms when `Storage` is `SIMD8<Int8>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-75ws5.md): Conforms when `Storage` is `SIMD16<Int16>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-77voy.md): Conforms when `Storage` is `SIMD8<Int>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-78qic.md): Conforms when `Storage` is `SIMD16<Int32>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-7bu3y.md): Conforms when `Storage` is `SIMD8<Int16>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-7gotm.md): Conforms when `Storage` is `SIMD2<Int64>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-7hjr8.md): Conforms when `Storage` is `SIMD32<Int32>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-7rhqy.md): Conforms when `Storage` is `SIMD64<Int8>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-7vb81.md): Conforms when `Storage` is `SIMD3<Int>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-8n751.md): Conforms when `Storage` is `SIMD2<Int16>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-8ts0r.md): Conforms when `Storage` is `SIMD64<Int16>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-8wkee.md): Conforms when `Storage` is `SIMD4<Int64>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-8xdh5.md): Conforms when `Storage` is `SIMD16<Int>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-91v5a.md): Conforms when `Storage` is `SIMD3<Int16>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-9cexc.md): Conforms when `Storage` is `SIMD32<Int>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-9s8nu.md): Conforms when `Storage` is `SIMD32<Int64>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-9wm9x.md): Conforms when `Storage` is `SIMD2<Int32>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-9ybag.md): Conforms when `Storage` is `SIMD32<Int16>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-bbyz.md): Conforms when `Storage` is `SIMD3<Int32>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-dji1.md): Conforms when `Storage` is `SIMD2<Int>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.|=(\_:\_:)](simdmask/'._=%28____%29-g3jo.md): Conforms when `Storage` is `SIMD8<Int>`. Replaces `a` with the pointwise logical disjunction of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-gpt7.md): Conforms when `Storage` is `SIMD4<Int8>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-jiue.md): Conforms when `Storage` is `SIMD64<Int32>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-nixb.md): Conforms when `Storage` is `SIMD32<Int32>`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+- [.^=(\_:\_:)](simdmask/'._=%28____%29-wwci.md): Conforms when `Storage` conforms to `SIMD`, `Storage.Scalar` conforms to `FixedWidthInteger`, and `Storage.Scalar` conforms to `SignedInteger`. Replaces `a` with the pointwise exclusive or of `a` and `b`.
+
+### Initializers
+
+- [init()](simdmask/init%28%29.md): Creates a vector with zero in all lanes.
+- [init(repeating:)](simdmask/init%28repeating_%29-1m52n.md): Conforms when `Storage` is `SIMD32<Int16>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-202bd.md): Conforms when `Storage` is `SIMD2<Int>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-248q1.md): Conforms when `Storage` is `SIMD8<Int>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-2pmca.md): Conforms when `Storage` is `SIMD2<Int64>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-2x534.md): Conforms when `Storage` is `SIMD32<Int8>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-2yqe1.md): Conforms when `Storage` is `SIMD2<Int16>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-3q2ur.md): Conforms when `Storage` is `SIMD4<Int>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-3w0ux.md): Conforms when `Storage` is `SIMD3<Int>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-3w4ke.md): Conforms when `Storage` is `SIMD2<Int32>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-42cre.md): Conforms when `Storage` is `SIMD32<Int64>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-42vxu.md): Conforms when `Storage` is `SIMD64<Int>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-4kh6e.md): Conforms when `Storage` is `SIMD4<Int16>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-4n5yz.md): Conforms when `Storage` is `SIMD3<Int64>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-4p6y0.md): Conforms when `Storage` is `SIMD3<Int16>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-59l18.md): Conforms when `Storage` is `SIMD64<Int32>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-5cst1.md): Conforms when `Storage` is `SIMD4<Int64>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-5gywa.md): Conforms when `Storage` is `SIMD64<Int16>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-5zr61.md): Conforms when `Storage` is `SIMD3<Int8>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-6cczf.md): Conforms when `Storage` is `SIMD8<Int64>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-6lkx7.md): Conforms when `Storage` is `SIMD8<Int16>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-6r2mi.md): Conforms when `Storage` is `SIMD32<Int32>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-6wd06.md): Conforms when `Storage` is `SIMD16<Int>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-6xdsz.md): Conforms when `Storage` is `SIMD16<Int64>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-78cdd.md): Conforms when `Storage` is `SIMD8<Int32>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-7xzo4.md): Conforms when `Storage` is `SIMD2<Int8>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-80x0s.md): Conforms when `Storage` is `SIMD4<Int8>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-87zs0.md): Conforms when `Storage` is `SIMD16<Int32>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-89avq.md): Conforms when `Storage` is `SIMD16<Int8>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-8omke.md): Conforms when `Storage` is `SIMD8<Int8>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-8y7bw.md): Conforms when `Storage` is `SIMD3<Int32>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-9fi4f.md): Conforms when `Storage` is `SIMD64<Int8>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-9ndns.md): Conforms when `Storage` is `SIMD16<Int16>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-9su40.md): Conforms when `Storage` is `SIMD4<Int32>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-ufux.md): Conforms when `Storage` is `SIMD32<Int>`.
+- [init(repeating:)](simdmask/init%28repeating_%29-wbsm.md): Conforms when `Storage` is `SIMD64<Int64>`.
+
+### Instance Properties
+
+- [hashValue](simdmask/hashvalue.md): The hash value.
+- [scalarCount](simdmask/scalarcount.md): The number of scalars, or elements, in the vector.
+
+### Instance Methods
+
+- [replace(with:where:)](simdmask/replace%28with_where_%29-11sio.md): Conforms when `Storage` is `SIMD3<Int32>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-1apjj.md): Conforms when `Storage` is `SIMD4<Int8>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-21nlg.md): Conforms when `Storage` is `SIMD16<Int16>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-24wgu.md): Conforms when `Storage` is `SIMD64<Int16>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-2hsah.md): Conforms when `Storage` is `SIMD4<Int>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-2l1cw.md): Conforms when `Storage` is `SIMD2<Int32>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-2xv7u.md): Conforms when `Storage` is `SIMD32<Int>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-3huzu.md): Conforms when `Storage` is `SIMD16<Int32>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-3wsfp.md): Conforms when `Storage` is `SIMD16<Int>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-4acy9.md): Conforms when `Storage` is `SIMD3<Int64>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-4egrz.md): Conforms when `Storage` is `SIMD4<Int64>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-4zc4a.md): Conforms when `Storage` is `SIMD2<Int>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-4zrb4.md): Conforms when `Storage` is `SIMD8<Int>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-58aw.md): Conforms when `Storage` is `SIMD64<Int>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-5mzr3.md): Conforms when `Storage` is `SIMD32<Int16>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-5wj86.md): Conforms when `Storage` is `SIMD64<Int8>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-6b6u3.md): Conforms when `Storage` is `SIMD3<Int16>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-6unjm.md): Conforms when `Storage` is `SIMD16<Int64>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-6x0g3.md): Conforms when `Storage` is `SIMD4<Int16>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-76v5a.md): Conforms when `Storage` is `SIMD16<Int8>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-7ehzz.md): Conforms when `Storage` is `SIMD2<Int64>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-7hlsy.md): Conforms when `Storage` is `SIMD8<Int32>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-7qg9m.md): Conforms when `Storage` is `SIMD2<Int8>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-7qytv.md): Conforms when `Storage` is `SIMD3<Int>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-889b7.md): Conforms when `Storage` is `SIMD32<Int8>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-8gg39.md): Conforms when `Storage` is `SIMD64<Int64>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-9nlep.md): Conforms when `Storage` is `SIMD3<Int8>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-9pxoc.md): Conforms when `Storage` is `SIMD32<Int32>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-aosa.md): Conforms when `Storage` is `SIMD4<Int32>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-hn35.md): Conforms when `Storage` is `SIMD64<Int32>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-klo8.md): Conforms when `Storage` is `SIMD8<Int8>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-lhds.md): Conforms when `Storage` is `SIMD2<Int16>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-p18j.md): Conforms when `Storage` is `SIMD8<Int16>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-qerf.md): Conforms when `Storage` is `SIMD8<Int64>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replace(with:where:)](simdmask/replace%28with_where_%29-wt51.md): Conforms when `Storage` is `SIMD32<Int64>`. Replaces elements of this vector with elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-1tc07.md): Conforms when `Storage` is `SIMD3<Int8>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-1uajn.md): Conforms when `Storage` is `SIMD16<Int16>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-1vwr2.md): Conforms when `Storage` is `SIMD64<Int64>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-211v4.md): Conforms when `Storage` is `SIMD16<Int8>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-221u7.md): Conforms when `Storage` is `SIMD4<Int32>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-2h7n9.md): Conforms when `Storage` is `SIMD32<Int64>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-2j2hn.md): Conforms when `Storage` is `SIMD64<Int8>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-2jm3v.md): Conforms when `Storage` is `SIMD16<Int64>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-3firb.md): Conforms when `Storage` is `SIMD16<Int>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-3kfo4.md): Conforms when `Storage` is `SIMD32<Int8>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-3y37w.md): Conforms when `Storage` is `SIMD4<Int16>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-4gvh6.md): Conforms when `Storage` is `SIMD4<Int>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-4htdo.md): Conforms when `Storage` is `SIMD3<Int16>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-4mmzd.md): Conforms when `Storage` is `SIMD32<Int>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-4nikh.md): Conforms when `Storage` is `SIMD8<Int16>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-515tf.md): Conforms when `Storage` is `SIMD64<Int16>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-5dsdp.md): Conforms when `Storage` is `SIMD2<Int8>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-5eb2n.md): Conforms when `Storage` is `SIMD32<Int16>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-5n09x.md): Conforms when `Storage` is `SIMD2<Int32>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-60cao.md): Conforms when `Storage` is `SIMD64<Int32>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-6mn7k.md): Conforms when `Storage` is `SIMD2<Int16>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-6vk5h.md): Conforms when `Storage` is `SIMD3<Int32>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-7q8n5.md): Conforms when `Storage` is `SIMD4<Int64>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-7qxdb.md): Conforms when `Storage` is `SIMD8<Int8>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-7uyp7.md): Conforms when `Storage` is `SIMD64<Int>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-7wb0w.md): Conforms when `Storage` is `SIMD3<Int>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-7wxag.md): Conforms when `Storage` is `SIMD16<Int32>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-7yvsx.md): Conforms when `Storage` is `SIMD2<Int>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-8bs2p.md): Conforms when `Storage` is `SIMD4<Int8>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-8fafz.md): Conforms when `Storage` is `SIMD8<Int64>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-8kc21.md): Conforms when `Storage` is `SIMD8<Int>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-91l51.md): Conforms when `Storage` is `SIMD32<Int32>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-93wj5.md): Conforms when `Storage` is `SIMD8<Int32>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-9wyi2.md): Conforms when `Storage` is `SIMD3<Int64>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+- [replacing(with:where:)](simdmask/replacing%28with_where_%29-x0wd.md): Conforms when `Storage` is `SIMD2<Int64>`. Returns a copy of this vector, with elements replaced by elements of `other` in the lanes where `mask` is `true`.
+
+### Subscripts
+
+- [subscript(\_:)](simdmask/subscript%28__%29.md): Accesses the element at the specified index.
+
+### Type Aliases
+
+- [SIMDMask.ArrayLiteralElement](simdmask/arrayliteralelement.md): The type of the elements of an array literal.
+- [SIMDMask.MaskStorage](simdmask/maskstorage.md): The mask type resulting from pointwise comparisons of this vector type.
+- [SIMDMask.Scalar](simdmask/scalar.md)
+
+### Type Methods
+
+- [random()](simdmask/random%28%29.md): Conforms when `Storage` conforms to `SIMD`, `Storage.Scalar` conforms to `FixedWidthInteger`, and `Storage.Scalar` conforms to `SignedInteger`. Returns a vector mask with `true` or `false` randomly assigned in each lane.
+- [random(using:)](simdmask/random%28using_%29.md): Conforms when `Storage` conforms to `SIMD`, `Storage.Scalar` conforms to `FixedWidthInteger`, and `Storage.Scalar` conforms to `SignedInteger`. Returns a vector mask with `true` or `false` randomly assigned in each lane, using the given generator as a source for randomness.
+
+### Default Implementations
+
+- [Equatable Implementations](simdmask/equatable-implementations.md)
+- [SIMD Implementations](simdmask/simd-implementations.md)
+
+## Relationships
+
+### Conforms To
+
+- [CustomStringConvertible](customstringconvertible.md)
+- [Decodable](decodable.md)
+- [Encodable](encodable.md)
+- [Equatable](equatable.md)
+- [ExpressibleByArrayLiteral](expressiblebyarrayliteral.md)
+- [Hashable](hashable.md)
+- [SIMD](simd.md)
+- [SIMDStorage](simdstorage.md)
+- [Sendable](sendable.md)
+- [SendableMetatype](sendablemetatype.md)
+
+## See Also
+
+### Supporting Types
+
+- [SIMD](simd.md): A SIMD vector of a fixed number of elements.
+- [SIMDScalar](simdscalar.md): A type that can be used as an element in a SIMD vector.
+- [SIMDStorage](simdstorage.md): A type that can function as storage for a SIMD vector type.

@@ -1,0 +1,13 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/predicate/init(any:)](https://developer.apple.com/documentation/foundation/predicate/init(any:))
+
+# init(any:)
+
+**Framework:** Foundation  
+**Kind:** Initializer  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+## Declaration
+
+```swift
+init(any subpredicates: some BidirectionalCollection<Predicate<repeat each Input>>)
+```

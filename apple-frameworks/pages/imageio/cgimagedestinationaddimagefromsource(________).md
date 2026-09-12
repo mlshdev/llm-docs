@@ -1,0 +1,55 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/imageio/cgimagedestinationaddimagefromsource(_:_:_:_:)](https://developer.apple.com/documentation/imageio/cgimagedestinationaddimagefromsource(_:_:_:_:))
+
+# CGImageDestinationAddImageFromSource(\_:\_:\_:\_:) (Swift)
+
+**Framework:** Image I/O  
+**Kind:** Function  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.4+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Adds an image from an image source to an image destination.
+
+## Declaration
+
+```swift
+func CGImageDestinationAddImageFromSource(_ idst: CGImageDestination, _ isrc: CGImageSource, _ index: Int, _ properties: CFDictionary?)
+```
+
+## Parameters
+
+- `idst`: The image destination to modify.
+- `isrc`: An image source that contains the image.
+- `index`: The index of the image in the image source. Specify a valid, zero-based index into the images of the image source. If the index is invalid, this method returns `NULL`.
+- `properties`: An optional dictionary that specifies additional image property information. The added image automatically inherits the properties found in the image source. Use this dictionary to add properties to the image, or to modify one of the inherited properties. To remove an inherited property altogether, specify `NULL` for the property’s value. For a list of possible values, see [Image Properties](image-properties.md) and doc:CGImageDestination/Configuring-the-Image-Behaviors.
+
+## See Also
+
+### Adding Images to the Destination
+
+- [CGImageDestinationAddImage(\_:\_:\_:)](cgimagedestinationaddimage%28______%29.md): Adds an image to an image destination.
+
+# CGImageDestinationAddImageFromSource (Objective-C)
+
+**Framework:** Image I/O  
+**Kind:** Function  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.4+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Adds an image from an image source to an image destination.
+
+## Declaration
+
+```objectivec
+extern void CGImageDestinationAddImageFromSource(CGImageDestinationRef idst, CGImageSourceRef isrc, size_t index, CFDictionaryRef properties);
+```
+
+## Parameters
+
+- `idst`: The image destination to modify.
+- `isrc`: An image source that contains the image.
+- `index`: The index of the image in the image source. Specify a valid, zero-based index into the images of the image source. If the index is invalid, this method returns `NULL`.
+- `properties`: An optional dictionary that specifies additional image property information. The added image automatically inherits the properties found in the image source. Use this dictionary to add properties to the image, or to modify one of the inherited properties. To remove an inherited property altogether, specify `NULL` for the property’s value. For a list of possible values, see [Image Properties](image-properties.md) and doc:CGImageDestination/Configuring-the-Image-Behaviors.
+
+## See Also
+
+### Adding Images to the Destination
+
+- [CGImageDestinationAddImage](cgimagedestinationaddimage%28______%29.md): Adds an image to an image destination.

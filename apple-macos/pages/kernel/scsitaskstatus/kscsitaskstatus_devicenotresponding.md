@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/scsitaskstatus/kscsitaskstatus_devicenotresponding](https://developer.apple.com/documentation/kernel/scsitaskstatus/kscsitaskstatus_devicenotresponding)
+
+# kSCSITaskStatus_DeviceNotResponding
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Enumeration Case  
+**Availability:** macOS 10.3+
+
+## Declaration
+
+```objectivec
+kSCSITaskStatus_DeviceNotResponding = 0x03
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+If a task is unable to be delivered due to a failure of the device not accepting the task or the device acknowledging the attempt to send it the device the task status shall be set to kSCSITaskStatus_DeviceNotResponding. This will allow the SCSI Application driver to perform the necessary steps to try to recover the device. This shall only be reported after the SCSI Protocol Layer driver has attempted all protocol specific attempts to recover the device.

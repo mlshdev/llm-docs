@@ -1,0 +1,22 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/immersivemediasupport/immersivecameralensdefinition/generatestmap(device:cameraeye:stmaptype:into:)](https://developer.apple.com/documentation/immersivemediasupport/immersivecameralensdefinition/generatestmap(device:cameraeye:stmaptype:into:))
+
+# generateSTMap(device:cameraEye:stmapType:into:)
+
+**Framework:** Immersive Media Support  
+**Kind:** Instance Method  
+**Availability:** iOS 26.4+ · iPadOS 26.4+ · Mac Catalyst 26.4+ · macOS 26.0+ · visionOS 26.0+
+
+Generates an STMap for the given projection type and for the given camera eye into the provided texture asynchronously.
+
+## Declaration
+
+```swift
+func generateSTMap(device: any MTLDevice, cameraEye: ImmersiveCameraLensDefinition.Eye, stmapType: ImmersiveCameraLensDefinition.STMapType, into texture: any MTLTexture) async throws
+```
+
+## Parameters
+
+- `device`: The metal device to use during the STMap generation.
+- `cameraEye`: The camera side to use for generating the STMap.
+- `stmapType`: The type of STMap output: Equirectangular or Equidistant are the current options.
+- `texture`: The output texture where the STMap will be stored.

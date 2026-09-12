@@ -1,0 +1,20 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreaudio/audiohardwareobject/removelistener(forproperties:dispatchqueue:)](https://developer.apple.com/documentation/coreaudio/audiohardwareobject/removelistener(forproperties:dispatchqueue:))
+
+# removeListener(forProperties:dispatchQueue:)
+
+**Framework:** Core Audio  
+**Kind:** Instance Method  
+**Availability:** Mac Catalyst · macOS 15.0+
+
+Unregisters for receiving notifications when the given properties change.
+
+## Declaration
+
+```swift
+func removeListener(forProperties properties: [AudioObjectPropertyAddress], dispatchQueue: dispatch_queue_t? = nil) throws
+```
+
+## Parameters
+
+- `properties`: An array of AudioObjectPropertyAddress indicating from which properties the listener should be removed.
+- `dispatchQueue`: The dispatch queue on which the delegate was  dispatched to.

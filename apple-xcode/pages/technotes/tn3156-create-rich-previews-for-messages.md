@@ -1,0 +1,97 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/technotes/tn3156-create-rich-previews-for-messages](https://developer.apple.com/documentation/technotes/tn3156-create-rich-previews-for-messages)
+
+# TN3156: Create rich previews for Messages
+
+**Kind:** Technote
+
+Learn best practices for creating rich text and image previews for display in the Messages app.
+
+<a id="Overview"></a>
+
+## Overview
+
+The Messages app on iOS and macOS by default shows inline previews for links as gray bubbles with the page title, domain, and small icon belonging to the linked web page:
+
+![Example Domain](https://developer.apple.com/images/com.apple.technotes/tn3156_examplecom@2x.png)
+
+You can display images and meaningful captions in these link previews by adding [Open Graph](https://ogp.me) metadata on your website pages. Here’s an example link preview for `https://www.apple.com/iphone`, which includes an image and title:
+
+![IPhone Photo](https://developer.apple.com/images/com.apple.technotes/tn3156_iphoneapplecom@2x.png)
+
+This appearance results from the following `meta` tags on the webpage:
+
+```html
+<meta property="og:title" content="iPhone" />
+<meta property="og:image" content="https://www.apple.com/v/iphone/home/t/images/home/og.png?201610171354" />
+```
+
+Read the following sections for tips on how to get rich link previews in Messages.
+
+<a id="Use-consistent-metadata-for-all-user-agents"></a>
+
+## Use consistent metadata for all user agents
+
+Serve the same metadata to both mobile and desktop versions of the page. Clients shouldn’t have to change the `User-Agent` header to receive useful metadata.
+
+<a id="Add-images-to-link-previews"></a>
+
+## Add images to link previews
+
+Use the `og:image` property to include an image in your link preview. Preview images are displayed large enough to represent the linked page clearly, including relevant details.
+
+Also provide a high-resolution icon in addition to your image. The link preview will use an  [apple-touch-icon](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4), a favicon, or an icon specified by `<link rel="...">`. If you do not have a preview image of sufficient size or quality, use an `apple-touch-icon` instead.
+
+Avoid text in preview images. Images may be displayed at varying sizes depending on context and device, potentially making text unreadable. For best results, keep the image graphical and use other metadata tags for text. Text provided via metadata is also accessible for people using [VoiceOver](https://www.apple.com/accessibility/vision/).
+
+<a id="Add-videos-to-link-previews"></a>
+
+## Add videos to link previews
+
+If you want to display a video in your preview, use a direct link to your video asset via a `meta` tag, rather than a reference to an embeddable video page. With the direct link, the video loads and displays faster, and it uses the system user interface for playback.
+
+If the link preview encounters an `og:video` or `twitter:player:stream` property that points to a downloadable and playable media asset (for example, an MPEG-4 file), the preview downloads the video and automatically plays it back.
+
+Videos that can be streamed but not downloaded, such as [HTTP Live Streaming](https://developer.apple.com/streaming/) (HLS) streams, require the user to tap to start playback. Videos that require embedding HTML will not play inline.
+
+<a id="Customize-titles-in-link-previews"></a>
+
+## Customize titles in link previews
+
+Use the `og:title` property to specify the title of your link preview. Titles should be short and specific enough to distinguish different pages on the same website. For example, product pages should indicate the product name in the title.
+
+Do not put the site name or other branding in the `og:title`. Doing so often leads to duplication of information between the title and other parts of the rich preview, and is semantically incorrect. Use `og:site_name` for the site name instead.
+
+<a id="Ensure-your-metadata-is-reachable"></a>
+
+## Ensure your metadata is reachable
+
+Link previews do not follow `meta` redirects, nor run JavaScript; metadata must be available directly on the linked page. Server-side redirects are followed, however, and are a good alternative.
+
+Pages that require authentication should still have meaningful metadata, without revealing any sensitive content. For pages that require authentication, the main resource should provide metadata for the page to which access is being provided, and not for the authentication page itself. This avoids showing “Sign In” as the title for every page behind an authentication wall.
+
+<a id="Respect-resource-usage-guidelines"></a>
+
+## Respect resource usage guidelines
+
+- Icons should be square, at least 108 pixels per side.
+- Images should be at least 900 pixels in width.
+- Images less than 150 pixels in width may be ignored or presented as icons.
+- The main resource located at the previewed link is limited to 1 MB. The total size of associated resources (icons, images, and videos, etc) is limited to 10 MB.
+
+These recommendations are guidelines only. Limits may change in the future.
+
+<a id="Enable-social-network-link-previews"></a>
+
+## Enable social network link previews
+
+For preview links to user posts on social network services, specify the text of the user post via the `og:description` property. In addition:
+
+- The page must be configured with a `twitter:card` value of `summary` or `summary_large_image` as described in the [X for Websites](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary) documentation.
+- The page must have a `link` element with a `type` attribute of `application/activity+json` as described in the [ActivityPub protocol](https://www.w3.org/TR/activitypub/) documentation.
+
+<a id="Revision-History"></a>
+
+## Revision History
+
+- **2024-04-30** Republished as TN3156. Added social network information.
+- **2017-09-08** First published as TN2444 “Best Practices for Link Previews in Messages”.

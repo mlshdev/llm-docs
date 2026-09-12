@@ -1,0 +1,38 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/osset/witharray](https://developer.apple.com/documentation/driverkit/osset/witharray)
+
+# withArray
+
+**Interface language:** Objective-C
+
+**Framework:** DriverKit  
+**Kind:** Static Method  
+**Availability:** DriverKit · iOS · iPadOS · macOS
+
+Creates and initializes an OSSet populated with the contents of an OSArray.
+
+## Declaration
+
+```objectivec
+static OSSetPtr withArray(const OSArray *array, uint32_t capacity);
+```
+
+## Parameters
+
+- `array`: An array whose objects will be stored in the new OSSet.
+- `capacity`: The initial storage capacity of the new set object. If 0, the capacity is set to the number of objects in `array`; otherwise `capacity` must be greater than or equal to the number of objects in `array`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An instance of OSSet containing the objects of `array`, with a retain count of 1; `NULL` on failure.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Each distinct object in `array` is added to the new set.
+
+`array` must be non-`NULL`. If `capacity` is nonzero, it must be greater than or equal to `count`. The new OSSet will grow as needed to accommodate more key-object pairs (*unlike*[CFMutableSetRef](../../corefoundation/cfmutableset.md), for which the initial capacity is a hard limit).
+
+The objects in `array` are retained for storage in the new set, not copied.

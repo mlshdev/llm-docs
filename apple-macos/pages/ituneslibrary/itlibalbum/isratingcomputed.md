@@ -1,0 +1,81 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/ituneslibrary/itlibalbum/isratingcomputed](https://developer.apple.com/documentation/ituneslibrary/itlibalbum/isratingcomputed)
+
+# isRatingComputed (Swift)
+
+**Framework:** iTunes Library  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 14.0+ · macOS 10.13+
+
+A Boolean value that indicates whether the system computes the rating of the album using the ratings of individual tracks in the album.
+
+## Declaration
+
+```swift
+var isRatingComputed: Bool { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If the user rates tracks within the album individually, but hasn’t assigned a specific rating for the album, the album rating computes as the average of the rating of all tracks within the album (tracks with no rating don’t affect this average), and this property is `true`.
+
+If the user has rated the album, this property is `false`.
+
+If the user hasn’t rated the album and hasn’t rated any tracks on this album, the property is `false`.
+
+## See Also
+
+### Getting Album Info
+
+- [trackCount](trackcount.md): The number of tracks in the album.
+- [title](title.md): The title of the album.
+- [sortTitle](sorttitle.md): The title to use when sorting by album title.
+- [rating](rating.md): The rating of the album.
+- [isGapless](isgapless.md): A Boolean value that indicates whether the album is gapless.
+- [discNumber](discnumber.md): The index (1, 2, 3, and so on) of the disc within an album that’s a multiple-disc set.
+- [discCount](disccount.md): The number of discs in a multiple-disc set.
+- [isCompilation](iscompilation.md): A Boolean value that indicates whether the album is a compilation.
+- [albumArtist](albumartist.md): The name of the artist iTunes associates with the album.
+- [sortAlbumArtist](sortalbumartist.md): The name to use when sorting by album artist.
+- [persistentID](persistentid.md): The unique identifier of the album.
+
+# ratingComputed (Objective-C)
+
+**Framework:** iTunes Library  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 14.0+ · macOS 10.13+
+
+A Boolean value that indicates whether the system computes the rating of the album using the ratings of individual tracks in the album.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, assign, readonly, getter=isRatingComputed) BOOL ratingComputed;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If the user rates tracks within the album individually, but hasn’t assigned a specific rating for the album, the album rating computes as the average of the rating of all tracks within the album (tracks with no rating don’t affect this average), and this property is `true`.
+
+If the user has rated the album, this property is `false`.
+
+If the user hasn’t rated the album and hasn’t rated any tracks on this album, the property is `false`.
+
+## See Also
+
+### Getting Album Info
+
+- [trackCount](trackcount.md): The number of tracks in the album.
+- [title](title.md): The title of the album.
+- [sortTitle](sorttitle.md): The title to use when sorting by album title.
+- [rating](rating.md): The rating of the album.
+- [gapless](isgapless.md): A Boolean value that indicates whether the album is gapless.
+- [discNumber](discnumber.md): The index (1, 2, 3, and so on) of the disc within an album that’s a multiple-disc set.
+- [discCount](disccount.md): The number of discs in a multiple-disc set.
+- [compilation](iscompilation.md): A Boolean value that indicates whether the album is a compilation.
+- [albumArtist](albumartist.md): The name of the artist iTunes associates with the album.
+- [sortAlbumArtist](sortalbumartist.md): The name to use when sorting by album artist.
+- [persistentID](persistentid.md): The unique identifier of the album.

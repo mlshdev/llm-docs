@@ -1,0 +1,98 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/migrationassistantsettings](https://developer.apple.com/documentation/devicemanagement/migrationassistantsettings)
+
+# MigrationAssistantSettings
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Object  
+**Availability:** macOS 26.4+
+
+The declaration to configure Migration Assistant settings.
+
+## Declaration
+
+```
+object MigrationAssistantSettings
+```
+
+## Properties
+
+- `ExcludedAccounts` — `[string]`: An array of strings that represent the user account short names the system excludes from migration.
+- `ExcludedPaths` — `[string]`: An array of strings that represent files and directories relative to the user’s home directory that the system excludes from migration. Directory paths need to include a trailing “/”. For example, to exclude the “Excluded” directory in the “Documents” folder of a user’s home directory, use “Documents/Excluded/”.
+- `RequiredPaths` — `[string]`: An array of strings that represent files and directories relative to the user’s home directory that the system needs to migrate. Directory paths need to include a trailing “/”. For example, to require the “Required” directory in the “Documents” folder of a user’s home directory, use “Documents/Required/”.
+- `ShouldDoManagedMigration` — `boolean` (required): If `true`, the device manages Migration Assistant.
+- `ShouldMigrateSecurityPrivacySettings` — `boolean` (required): If `true`, the system migrates Security & Privacy settings.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Specify `com.apple.configuration.migration-assistant.settings` as the declaration type.
+
+This declaration allows the device management service to configure Migration Assistant when it runs during Setup Assistant on a Mac. This makes it easy for users to do Mac-to-Mac migrations of enterprise devices when they setup a new Mac.
+
+Configure the device to use the `AwaitingConfiguration` state after it enrolls with the server. The server needs to send the configuration and verify the configuration as both active and valid using the Declarative Device Management status, before it sends the [DeviceConfiguredCommand](deviceconfiguredcommand.md) command to exit that state.
+
+The device reports Migration Assistant progress using the [StatusMigrationAssistantState](statusmigrationassistantstate.md) status item, and provides a report when migration completes using the [StatusMigrationAssistantReport](statusmigrationassistantreport.md) status item.
+
+<a id="Configuration-availability"></a>
+
+### Configuration availability
+
+|  |  |
+| --- | --- |
+| Allowed in supervised enrollment | macOS |
+| Allowed in device enrollment | N/A |
+| Allowed in user enrollment | N/A |
+| Allowed in local enrollment | N/A |
+| Allowed in system scope | macOS |
+| Allowed in user scope | N/A |
+| Apply | Multiple configurations are combined and applied as a single effective configuration |
+
+<a id="Configuration-example"></a>
+
+### Configuration example
+
+This configuration provides settings for a Mac to Mac migration.
+
+```json
+{
+    "Type": "com.apple.configuration.migration-assistant.settings",
+    "Identifier": "F3CD2AD7-85AA-4FF3-9264-A737259FB55E",
+    "ServerToken": "5AB2B98C-FCE9-4A33-88B3-ADB05F081F77",
+    "Payload": {
+        "ShouldDoManagedMigration": true,
+        "ExcludedAccounts": [
+            "admin"
+        ],
+        "ExcludedPaths": [
+            "Documents/Personal Items/"
+        ],
+        "RequiredPaths": [
+            "Documents/Work Items/"
+        ],
+        "ShouldMigrateSecurityPrivacySettings": false
+    }
+}
+```
+
+## See Also
+
+### Configurations
+
+- [AccessibilitySettings](accessibilitysettings.md): The declaration to configure accessibility settings.
+- [AccountCalDAV](accountcaldav.md): The declaration to configure a Calendar account.
+- [AccountCardDAV](accountcarddav.md): The declaration to configure a Contacts account.
+- [AccountExchange](accountexchange.md): The declaration to configure an Exchange account.
+- [AccountGoogle](accountgoogle.md): The declaration to configure a Google account.
+- [AccountLDAP](accountldap.md): The declaration to configure a Lightweight Directory Access Protocol (LDAP) account.
+- [AccountMail](accountmail.md): The declaration to configure a Mail account.
+- [AccountSubscribedCalendar](accountsubscribedcalendar.md): The declaration to configure a subscribed calendar.
+- [AppManaged](appmanaged.md): The declaration to configure a managed app.
+- [AppSettings](appsettings.md): The declaration to configure app settings.
+- [AudioAccessorySettings](audioaccessorysettings.md): The declaration to configure audio accessory settings.
+- [ContentCaching](contentcaching.md): The declaration to configure the Content Caching service.
+- [DiskManagementSettings](diskmanagementsettings.md): The declaration to configure disk management settings on the device.
+- [ExtensibleSSO](extensiblesso.md): The declaration to configure Extensible Single Sign-On.
+- [ExternalIntelligenceSettings](externalintelligencesettings.md): The declaration to configure External Intelligence Integrations settings.

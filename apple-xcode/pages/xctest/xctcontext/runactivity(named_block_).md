@@ -1,0 +1,40 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xctest/xctcontext/runactivity(named:block:)](https://developer.apple.com/documentation/xctest/xctcontext/runactivity(named:block:))
+
+# runActivity(named:block:)
+
+**Framework:** XCTest  
+**Kind:** Type Method
+
+Creates and runs an activity with the provided block of code.
+
+## Declaration
+
+```swift
+@MainActor @preconcurrency class func runActivity<Result>(named name: String, block: @MainActor (any XCTActivity) throws -> Result) rethrows -> Result
+```
+
+## Parameters
+
+- `name`: A descriptive name for the activity, for display in Xcode’s test results browser.
+- `block`: A block of code for the test to execute as the body of the activity.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A [Result](https://developer.apple.com/documentation/swift/result) object that indicates whether the block of code runs successfully or encounters an error.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Run a block of code as a named substep in a test. For more information, see [Grouping Tests into Substeps with Activities](../grouping-tests-into-substeps-with-activities.md).
+
+To save screenshots or other test-result data for later investigation, call the [add(\_:)](../xctactivity/add%28__%29.md) method on the instance of [XCTActivity](../xctactivity.md) that the test system passes to your block. For more information, see [Adding Attachments to Tests, Activities, and Issues](../adding-attachments-to-tests-activities-and-issues.md).
+
+## See Also
+
+### Related Documentation
+
+- [Grouping Tests into Substeps with Activities](../grouping-tests-into-substeps-with-activities.md): Simplify test reports by creating activities that organize substeps within complex test methods.
+- [Adding Attachments to Tests, Activities, and Issues](../adding-attachments-to-tests-activities-and-issues.md): Use attachments to store a test’s output data for later analysis.

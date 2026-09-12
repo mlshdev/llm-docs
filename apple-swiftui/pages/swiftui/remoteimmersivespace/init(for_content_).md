@@ -1,0 +1,26 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/remoteimmersivespace/init(for:content:)](https://developer.apple.com/documentation/swiftui/remoteimmersivespace/init(for:content:))
+
+# init(for:content:)
+
+**Framework:** SwiftUI  
+**Kind:** Initializer  
+**Availability:** macOS 26.0+
+
+Creates the remote immersive space for a specified type of presented data.
+
+## Declaration
+
+```swift
+nonisolated init<C>(for type: Data.Type, @CompositorContentBuilder content: @escaping (Binding<Data?>) -> C) where Content == CompositorContentBuilder.Content<C>, C : CompositorContent
+```
+
+## Parameters
+
+- `type`: The type of presented data this immersive space accepts.
+- `content`: A compositor content builder that defines the content for each instance of the immersive space. The closure receives a binding to the value that you pass to the [openImmersiveSpace](../environmentvalues/openimmersivespace.md) action when you call that action to open an immersive space. The system automatically persists and restores the value of this binding during state restoration.
+
+<a id="discussion"></a>
+
+## Discussion
+
+The space uses the specified content builder to form the content. Your app invokes this initializer when it presents a value of the specified `type` using the [openImmersiveSpace](../environmentvalues/openimmersivespace.md) action.

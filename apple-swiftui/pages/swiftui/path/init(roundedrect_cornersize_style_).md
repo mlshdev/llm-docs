@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/path/init(roundedrect:cornersize:style:)](https://developer.apple.com/documentation/swiftui/path/init(roundedrect:cornersize:style:))
+
+# init(roundedRect:cornerSize:style:)
+
+**Framework:** SwiftUI  
+**Kind:** Initializer  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Creates a path containing a rounded rectangle.
+
+## Declaration
+
+```swift
+init(roundedRect rect: CGRect, cornerSize: CGSize, style: RoundedCornerStyle = .continuous)
+```
+
+## Parameters
+
+- `rect`: A rectangle, specified in user space coordinates.
+- `cornerSize`: The size of the corners, specified in user space coordinates.
+- `style`: The corner style. Defaults to the `continous` style if not specified.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This is a convenience function that creates a path of a rounded rectangle. Using this convenience function is more efficient than creating a path and adding a rounded rectangle to it.
+
+## See Also
+
+### Creating a path
+
+- [init()](init%28%29.md): Creates an empty path.
+- [init(\_:)](init%28__%29.md): Creates an empty path, then executes a closure to add its initial elements.
+- [init(ellipseIn:)](init%28ellipsein_%29.md): Creates a path as an ellipse within the given rectangle.
+- [init(roundedRect:cornerRadius:style:)](init%28roundedrect_cornerradius_style_%29.md): Creates a path containing a rounded rectangle.
+- [init(roundedRect:cornerRadii:style:)](init%28roundedrect_cornerradii_style_%29.md): Creates a path as the given rounded rectangle, which may have uneven corner radii.

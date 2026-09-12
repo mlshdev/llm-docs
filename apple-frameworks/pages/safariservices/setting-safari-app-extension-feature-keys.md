@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/safariservices/setting-safari-app-extension-feature-keys](https://developer.apple.com/documentation/safariservices/setting-safari-app-extension-feature-keys)
+
+# Setting Safari app extension feature keys
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** Safari Services  
+**Kind:** Article
+
+Set keys for permissions, scripts, style sheets, contextual menu items, and toolbar items in the information property list file.
+
+<a id="overview"></a>
+
+## Overview
+
+After selecting which default keys to use in your Safari app extension’s information property list file, select the appropriate feature keys to identify files and UI items.
+
+The table below lists the primary keys in the `NSExtension` dictionary that are associated with Safari app extension features. For information on available subkeys, see the link in the primary key description.
+
+| Key | Type | Description |
+| --- | --- | --- |
+| `SFSafariContentScript` | Array | An array for adding content scripts to the extension. Each value in the array is a dictionary that provides the filename for a content script. ![](https://developer.apple.com/images/com.apple.safariservices/spacer.png) For subkeys, see [Using content script and style sheet keys](using-content-script-and-style-sheet-keys.md). |
+| `SFSafariContextMenu` | Array | An array for adding items to Safari’s context menu — the menu that appears when the user Control-clicks a webpage. For more information, see [Adjusting settings for contextual menu items](adjusting-settings-for-contextual-menu-items.md). ![](https://developer.apple.com/images/com.apple.safariservices/spacer.png) For subkeys, see [Using contextual menu and toolbar item keys](using-contextual-menu-and-toolbar-item-keys.md). |
+| `SFSafariStyleSheet` | Array | An array for adding style sheets to the extension or to pages from a limited subset of URLs. Each value in the array is a dictionary that provides the filename for a content script. ![](https://developer.apple.com/images/com.apple.safariservices/spacer.png) For subkeys, see [Using content script and style sheet keys](using-content-script-and-style-sheet-keys.md). For more information, see [Injecting CSS style sheets into a webpage](injecting-css-style-sheets-into-a-webpage.md). |
+| `SFSafariToolbarItem` | Dictionary | A dictionary for adding a toolbar item to Safari windows. ![](https://developer.apple.com/images/com.apple.safariservices/spacer.png) For subkeys, see [Using contextual menu and toolbar item keys](using-contextual-menu-and-toolbar-item-keys.md). |
+| `SFSafariWebsiteAccess` | Dictionary | An optional dictionary that specifies which webpages the Safari app extension can access, if any. ![](https://developer.apple.com/images/com.apple.safariservices/spacer.png) For details about configuring website access, see [Adjusting website access permissions](adjusting-website-access-permissions.md). |
+
+In addition to the `NSExtension` keys, the `Info.plist` file includes an `NSHumanReadableDescription` key for your Safari app extension. When you install the app extension, the string value of this key appears in Safari \> Settings \> Preferences as the example below shows:
+
+![A screenshot of the description that appears in Safari \> Settings \> Preferences when a user selects your extension. A heading reads My Extension 1.0 from FirstSafariExtensionApp. Below that, a description reads This is a Safari Extension. You should tell us what your extension does here. At the bottom is a button labeled Uninstall. ](https://developer.apple.com/images/com.apple.safariservices/media-3897929@2x.png)
+
+## See Also
+
+### Access and permissions
+
+- [Adjusting website access permissions](adjusting-website-access-permissions.md): Set website access permissions in a Safari app extension using information property list keys.
+- [Using permissions for scripts and style sheets](using-permissions-for-scripts-and-style-sheets.md): Learn about URL permissions for scripts and style sheets in a Safari app extension using information property list keys.

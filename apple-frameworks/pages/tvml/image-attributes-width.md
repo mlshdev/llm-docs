@@ -1,0 +1,43 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tvml/image-attributes-width](https://developer.apple.com/documentation/tvml/image-attributes-width)
+
+# width
+
+**Kind:** Article
+
+Specifies the maximum width for an image element.
+
+<a id="Overview"></a>
+
+## Overview
+
+The image is shrunk to fit the bounding box if the image is bigger than the size specified for the `width` attribute. You must declare either a `width` style or attribute for an image. Declaring a style overwrites an attribute declaration. Here’s an example that sets the width for an image to 200 points.
+
+```xml
+<img src="resource://mpaa-g" width="200">
+```
+
+<a id="Values-for-width"></a>
+
+### Values for width
+
+- **Integer**: The width of the element, in points.
+
+<a id="Elements-that-Use-width"></a>
+
+### Elements that Use width
+
+- [decorationLabel](decorationlabel.md)
+- [fullscreenImg](fullscreenimg.md)
+- [heroImg](heroimg.md)
+- [img](img.md)
+
+> **Note**
+
+> When an image is a child of a `lockup` element, the longest dimension of the image must be 70 points longer than the corresponding bounding box dimension.
+
+## See Also
+
+### Image Size
+
+- [height](image-attributes-height.md): Specifies the maximum height for an image.
+- [aspectRatio](aspectratio.md): Specifies the aspect ratio of an image.

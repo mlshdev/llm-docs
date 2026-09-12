@@ -1,0 +1,119 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xctest/methods-for-skipping-tests](https://developer.apple.com/documentation/xctest/methods-for-skipping-tests)
+
+# Methods for Skipping Tests (Swift)
+
+**Framework:** XCTest  
+**Kind:** API Collection
+
+Skip tests when meeting specified conditions.
+
+<a id="overview"></a>
+
+## Overview
+
+Use `XCTSkipIf()` or `XCTSkipUnless()` when you have a Boolean condition that you can use to evaluate when to skip tests.
+
+In Swift, throw an `XCTSkip` error when you have other circumstances that result in skipped tests. In Objective-C use `XCTSkip`. For example:
+
+**Swift**
+
+```swift
+func testSomethingNew() throws {
+    guard #available(macOS <#VersionNumber#>, *) else {
+        throw XCTSkip("Required API is not available for this test.")
+    }
+    // perform test using <#VersionNumber#> APIs...
+}
+```
+
+**Objective-C**
+
+```objc
+- (void)testSomethingNew {
+    if (@available(macOS <#VersionNumber#>, *)) {
+        // perform test using <#VersionNumber#> APIs...
+    } else {
+        XCTSkip(@"Required API is not available for this test.");
+    }
+}
+```
+
+## Topics
+
+### Methods for Skipping Tests
+
+- [XCTSkipIf(\_:\_:file:line:)](xctskipif%28____file_line_%29.md): Skips remaining tests in a test method if the specified condition is met.
+- [XCTSkipUnless(\_:\_:file:line:)](xctskipunless%28____file_line_%29.md): Skips remaining tests in a test method unless the specified condition is met.
+- [XCTSkip](xctskip-swift.struct.md): An error that causes the current test to cease executing and the test runner to mark the test as skipped when the test throws the error.
+
+## See Also
+
+### Test assertions
+
+- [Boolean Assertions](boolean-assertions.md): Test a condition that generates a true or false result.
+- [Nil and Non-Nil Assertions](nil-and-non-nil-assertions.md): Check whether a test condition has, or doesn’t have, a value.
+- [Equality and Inequality Assertions](equality-and-inequality-assertions.md): Check whether two values are equal or unequal.
+- [Comparable Value Assertions](comparable-value-assertions.md): Compare two values to determine whether one is larger or smaller than the other.
+- [Error Assertions](error-assertions.md): Check whether a function call throws, or doesn’t throw, an error.
+- [NSException Assertions](nsexception-assertions.md): Check whether a function call throws, or doesn’t throw, an exception.
+- [Unconditional Test Failures](unconditional-test-failures.md): Generate a failure immediately and unconditionally.
+- [Expected Failures](expected-failures.md): Anticipate known test failures to prevent failing tests from affecting your workflows.
+
+# Methods for Skipping Tests (Objective-C)
+
+**Framework:** XCTest  
+**Kind:** API Collection
+
+Skip tests when meeting specified conditions.
+
+<a id="overview"></a>
+
+## Overview
+
+Use `XCTSkipIf()` or `XCTSkipUnless()` when you have a Boolean condition that you can use to evaluate when to skip tests.
+
+In Swift, throw an `XCTSkip` error when you have other circumstances that result in skipped tests. In Objective-C use `XCTSkip`. For example:
+
+**Swift**
+
+```swift
+func testSomethingNew() throws {
+    guard #available(macOS <#VersionNumber#>, *) else {
+        throw XCTSkip("Required API is not available for this test.")
+    }
+    // perform test using <#VersionNumber#> APIs...
+}
+```
+
+**Objective-C**
+
+```objc
+- (void)testSomethingNew {
+    if (@available(macOS <#VersionNumber#>, *)) {
+        // perform test using <#VersionNumber#> APIs...
+    } else {
+        XCTSkip(@"Required API is not available for this test.");
+    }
+}
+```
+
+## Topics
+
+### Methods for Skipping Tests
+
+- [XCTSkipIf](xctskipif.md): Skips remaining tests in a test method if the specified condition is met.
+- [XCTSkipUnless](xctskipunless.md): Skips remaining tests in a test method unless the specified condition is met.
+- [XCTSkip](xctskip-c.macro.md): Throws an exception that causes the test runner to cease executing the current test and mark the test skipped.
+
+## See Also
+
+### Test assertions
+
+- [Boolean Assertions](boolean-assertions.md): Test a condition that generates a true or false result.
+- [Nil and Non-Nil Assertions](nil-and-non-nil-assertions.md): Check whether a test condition has, or doesn’t have, a value.
+- [Equality and Inequality Assertions](equality-and-inequality-assertions.md): Check whether two values are equal or unequal.
+- [Comparable Value Assertions](comparable-value-assertions.md): Compare two values to determine whether one is larger or smaller than the other.
+- [Error Assertions](error-assertions.md): Check whether a function call throws, or doesn’t throw, an error.
+- [NSException Assertions](nsexception-assertions.md): Check whether a function call throws, or doesn’t throw, an exception.
+- [Unconditional Test Failures](unconditional-test-failures.md): Generate a failure immediately and unconditionally.
+- [Expected Failures](expected-failures.md): Anticipate known test failures to prevent failing tests from affecting your workflows.

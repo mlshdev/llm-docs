@@ -1,0 +1,55 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uipushbehavior/removeitem(_:)](https://developer.apple.com/documentation/uikit/uipushbehavior/removeitem(_:))
+
+# removeItem(\_:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+Removes a specific dynamic item from the behavior.
+
+## Declaration
+
+```swift
+func removeItem(_ item: any UIDynamicItem)
+```
+
+## Parameters
+
+- `item`: The dynamic item that you want to remove.
+
+## See Also
+
+### Initializing and managing a push behavior
+
+- [active](active.md): The state of the push behavior’s force: either active or inactive.
+- [addItem(\_:)](additem%28__%29.md): Adds a dynamic item to the behavior’s dynamic item array.
+- [init(items:mode:)](init%28items_mode_%29.md): Initializes a push behavior with an array of dynamic items.
+- [items](items.md): Returns the set of dynamic items you’ve added to the push behavior.
+
+# removeItem: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+Removes a specific dynamic item from the behavior.
+
+## Declaration
+
+```objectivec
+- (void) removeItem:(id<UIDynamicItem>) item;
+```
+
+## Parameters
+
+- `item`: The dynamic item that you want to remove.
+
+## See Also
+
+### Initializing and managing a push behavior
+
+- [active](active.md): The state of the push behavior’s force: either active or inactive.
+- [addItem:](additem%28__%29.md): Adds a dynamic item to the behavior’s dynamic item array.
+- [initWithItems:mode:](init%28items_mode_%29.md): Initializes a push behavior with an array of dynamic items.
+- [items](items.md): Returns the set of dynamic items you’ve added to the push behavior.

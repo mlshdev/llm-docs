@@ -1,0 +1,59 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uitabbarcontroller/performbatchupdates(_:)](https://developer.apple.com/documentation/uikit/uitabbarcontroller/performbatchupdates(_:))
+
+# performBatchUpdates(\_:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+Animates multiple tab changes as a single update.
+
+## Declaration
+
+```swift
+func performBatchUpdates(_ updates: () -> Void)
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this method when you need to make several changes to tab properties simultaneously. Changes made inside the `updates` block are coalesced into a single animated layout pass, preventing intermediate states from being visible to the user.
+
+The `updates` block is called synchronously. You can safely read and write any mutable tab properties inside this block.
+
+## See Also
+
+### Assigning tabs
+
+- [tabs](tabs.md): An array of tabs that the tab bar displays.
+- [setTabs(\_:animated:)](settabs%28__animated_%29.md): Sets the root tabs of the tab bar controller, with an option to animate the change.
+
+# performBatchUpdates: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+Animates multiple tab changes as a single update.
+
+## Declaration
+
+```objectivec
+- (void) performBatchUpdates:(void (^)()) updates;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this method when you need to make several changes to tab properties simultaneously. Changes made inside the `updates` block are coalesced into a single animated layout pass, preventing intermediate states from being visible to the user.
+
+The `updates` block is called synchronously. You can safely read and write any mutable tab properties inside this block.
+
+## See Also
+
+### Assigning tabs
+
+- [tabs](tabs.md): An array of tabs that the tab bar displays.
+- [setTabs:animated:](settabs%28__animated_%29.md): Sets the root tabs of the tab bar controller, with an option to animate the change.

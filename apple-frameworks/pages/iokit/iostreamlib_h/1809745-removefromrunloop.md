@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/iostreamlib_h/1809745-removefromrunloop](https://developer.apple.com/documentation/iokit/iostreamlib_h/1809745-removefromrunloop)
+
+# RemoveFromRunLoop
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit
+
+Remove the CFRunLoopSource for the notification port from a run loop.
+
+## Declaration
+
+```objectivec
+IOReturn ( *RemoveFromRunLoop)(
+   IOStreamRef stream,
+   CFRunLoopRef runLoop );
+```
+
+## Parameters
+
+- `stream`: The IOStreamRef of the stream to operate on.
+- `runLoop`: The run loop from which to remove the notification source.
+
+<a id="return_value"></a>
+
+## Return Value
+
+Returns kIOReturnSuccess if the source was successfully removed from the run loop.
+
+## See Also
+
+### Run loop operations
+
+- [AddToRunLoop](1809610-addtorunloop.md): Add the CFRunLoopSource for the notification port to a run loop.
+- [GetRunLoopSource](1809678-getrunloopsource.md): Gets a CFRunLoopSource for the CFMachPort used for notifications from the kernel that data is ready.

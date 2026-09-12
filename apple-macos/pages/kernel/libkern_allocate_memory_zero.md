@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/libkern_allocate_memory_zero](https://developer.apple.com/documentation/kernel/libkern_allocate_memory_zero)
+
+# libkern::allocate_memory_zero
+
+**Interface language:** Objective-C
+
+**Framework:** DriverKit, Kernel  
+**Kind:** Global Variable  
+**Availability:** DriverKit 21.0+ · macOS 12.0+
+
+## Declaration
+
+```objectivec
+const allocate_memory_zero_t libkern::allocate_memory_zero;
+```

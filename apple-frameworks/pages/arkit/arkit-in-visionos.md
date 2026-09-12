@@ -1,0 +1,235 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/arkit-in-visionos](https://developer.apple.com/documentation/arkit/arkit-in-visionos)
+
+# ARKit in visionOS (Swift)
+
+**Framework:** ARKit  
+**Kind:** API Collection
+
+Create immersive augmented reality experiences.
+
+<a id="overview"></a>
+
+## Overview
+
+ARKit in visionOS offers a new set of sensing capabilities that you adopt individually in your app, using data providers to deliver updates asynchronously. The available capabilities include:
+
+- **Plane detection.** Detect surfaces in a person’s surroundings and use them to anchor content.
+- **World tracking.** Determine the position and orientation of Apple Vision Pro relative to its surroundings, and add world anchors to place content.
+- **Hand tracking.** Use a person’s hand and finger positions as input for custom gestures and interactivity.
+- **Scene reconstruction.** Build a mesh of a person’s physical surroundings and incorporate it into your immersive spaces to support interactions.
+- **Image tracking.** Look for known images in a person’s surroundings and use them as anchor points for custom content.
+- **Object tracking.** Use 3D reference objects to find and track real-world objects in a person’s environment.
+- **Barcode detection.** Detect and scan QR codes and barcodes in a variety of formats in a person’s surroundings.
+- **Room tracking**. Use room anchors to identify specific rooms and implement per-room experiences.
+- **Light estimation.** Understand the lighting characteristics of a room to help improve the appearance of shiny or semi-reflective materials in your virtual content.
+- **Camera frames.** Access camera frames from a device in several formats.
+- **Accessory tracking.** Work with the real-time position and orientation of accessories that a person is using.
+
+![An illustration showing a split view of someone using Apple Vision Pro; the left side shows a person’s perspective of the room and the right side depicts ARKit’s perspective of the room. The right side illustrates ARKit’s sensing capabilities, including the detected shape of the room and the individual joints of a person’s hand.](https://developer.apple.com/images/com.apple.arkit/media-4330791@2x.png)
+
+## Topics
+
+### Setup
+
+- [Setting up access to ARKit data](../visionos/setting-up-access-to-arkit-data.md): Check whether your app can use ARKit and respect people’s privacy.
+- [ARKitSession](arkitsession.md): The main entry point for receiving data from ARKit.
+- [DataProvider](dataprovider.md): A source of live data from ARKit.
+- [DataProviderState](dataproviderstate.md): The possible states of a data provider.
+- [Anchor](anchor.md): The identity, location, and orientation of an object in world space.
+- [TrackableAnchor](trackableanchor.md): An anchor that can gain and lose its tracking state over the course of a session.
+- [ARKitCoordinateSpaceProviding](arkitcoordinatespaceproviding.md): A type that provides an ARKit coordinate space with an optional correction applied.
+- [ARKitCoordinateSpace](arkitcoordinatespace.md): An object which represents an ARKit coordinate space.
+
+### Barcode detection
+
+- [BarcodeDetectionProvider](barcodedetectionprovider.md): An object that provides the real-time position of barcodes the framework detects in a person’s environment.
+- [BarcodeAnchor](barcodeanchor.md): A barcode’s position in a person’s surroundings.
+
+### Camera sampling
+
+- [CameraFrameProvider](cameraframeprovider.md): An object that provides camera streams.
+- [CameraFrame](cameraframe.md): The representation of a camera frame.
+- [CameraVideoFormat](cameravideoformat.md): A structure that represents a camera video format.
+
+### Rendering
+
+- [StereoPropertiesProvider](stereopropertiesprovider.md): The StereoPropertiesProvider serves the latest viewpoint properties on the device.
+- [ViewpointProperties](viewpointproperties.md): The ViewpointProperties is a record of render camera transforms at some particular time.
+
+### Camera region
+
+- [CameraRegionProvider](cameraregionprovider.md): A camera region provider.
+- [CameraRegionAnchor](cameraregionanchor.md): Represents a region in space for capturing a camera stream.
+
+### Plane detection
+
+- [Placing content on detected planes](../visionos/placing-content-on-detected-planes.md): Detect horizontal surfaces like tables and floors, as well as vertical planes like walls and doors.
+- [PlaneDetectionProvider](planedetectionprovider.md): A source of live data about planes in a person’s surroundings.
+- [PlaneAnchor](planeanchor.md): An anchor that represents horizontal and vertical planes.
+
+### World tracking
+
+- [Tracking specific points in world space](../visionos/tracking-points-in-world-space.md): Retrieve the position and orientation of anchors your app stores in ARKit.
+- [Placing entities using head and device transform](../visionos/placing-entities-using-head-and-device-transform.md): Query and react to changes in the position and rotation of Apple Vision Pro.
+- [WorldTrackingProvider](worldtrackingprovider.md): A source of live data about the device pose and anchors in a person’s surroundings.
+- [WorldAnchor](worldanchor.md): A fixed location in a person’s surroundings.
+- [DeviceAnchor](deviceanchor.md): The position and orientation of Apple Vision Pro.
+
+### Hand tracking
+
+- [Happy Beam](../visionos/happybeam.md): Leverage a Full Space to create a fun game using ARKit.
+- [Creating a 3D painting space](../visionos/creating-a-painting-space-in-visionos.md): Implement a painting canvas entity, and update its mesh to represent a stroke.
+- [Tracking and visualizing hand movement](../visionos/tracking-and-visualizing-hand-movement.md): Use hand-tracking anchors to display a visual representation of hand transforms in visionOS.
+- [HandTrackingProvider](handtrackingprovider.md): A source of live data about the position of a person’s hands and hand joints.
+- [HandAnchor](handanchor.md): A hand’s position in a person’s surroundings.
+- [HandSkeleton](handskeleton.md): A collection of joints in a hand.
+
+### Scene reconstruction
+
+- [Incorporating real-world surroundings in an immersive experience](../visionos/incorporating-real-world-surroundings-in-an-immersive-experience.md): Create an immersive experience by making your app’s content respond to the local shape of the world.
+- [Applying mesh to real-world surroundings](../visionos/applying-mesh-to-real-world-surroundings.md): Add a layer of mesh to objects in the real world, using scene reconstruction in ARKit.
+- [Obscuring virtual items in a scene behind real-world items](../visionos/obscuring-virtual-items-in-a-scene-behind-real-world-items.md): Increase the realism of an immersive experience by adding entities with invisible materials real-world objects.
+- [SceneReconstructionProvider](scenereconstructionprovider.md): A source of live data about the shape of a person’s surroundings.
+- [MeshAnchor](meshanchor.md): A volume of space that contains a mesh of a person’s surroundings.
+
+### Image tracking
+
+- [Tracking and altering images](tracking-and-altering-images.md): Create images from rectangular shapes found in the user’s environment, and augment their appearance.
+- [Detecting Images in an AR Experience](detecting-images-in-an-ar-experience.md): React to known 2D images in the user’s environment, and use their positions to place AR content.
+- [Tracking preregistered images in 3D space](../visionos/tracking-images-in-3d-space.md): Place content based on the current position of a known image in a person’s surroundings.
+- [ImageTrackingProvider](imagetrackingprovider.md): A source of live data about a 2D image’s position in a person’s surroundings.
+- [ImageAnchor](imageanchor.md): A 2D image’s position in a person’s surroundings.
+- [ReferenceImage](referenceimage.md): A 2D image the system uses as a reference to find the same image in a person’s surroundings.
+
+### Geometry
+
+- [GeometryElement](geometryelement.md): A container for vertex indices of lines or triangles.
+- [GeometrySource](geometrysource.md): A container for geometrical vector data.
+
+### Lighting estimation
+
+- [EnvironmentLightEstimationProvider](environmentlightestimationprovider.md): A source of live data about lighting information in the environment.
+- [EnvironmentProbeAnchor](environmentprobeanchor.md): An environment probe in the world.
+
+### Object tracking
+
+- [ObjectTrackingProvider](objecttrackingprovider.md): A source of real-time position of reference objects in a person’s environment.
+- [ObjectAnchor](objectanchor.md): A reference object ARKit is tracking.
+- [Exploring object tracking with ARKit](../visionos/exploring_object_tracking_with_arkit.md): Find and track real-world objects in visionOS using reference objects you train with Create ML.
+- [Implementing object tracking in your app](../visionos/implementing-object-tracking-in-your-app.md): Create engaging interactions by training models to recognize and track real-world objects in people’s surroundings.
+
+### Accessory tracking
+
+- [Preparing spatial accessories for tracking in your visionOS app](preparing-spatial-accessories-for-tracking-in-your-visionos-app.md): Prepare a spatial accessory for tracking by training a reference accessory file and integrating it into your visionOS app.
+- [Working with generic spatial accessories](../visionos/working-with-generic-spatial-accessories.md): Let people place digital replicas of a generic spatial accessory by tracking the accessory with ARKit.
+- [AccessoryTrackingProvider](accessorytrackingprovider.md): Provides the real time position of accessories in the user’s environment.
+- [Accessory](accessory.md): Represents an accessory to be tracked.
+- [AccessoryAnchor](accessoryanchor.md): Represents a tracked accessory.
+- [Tracking accessories in volumetric windows](tracking-accessories-in-volumetric-windows.md): Translate the position and velocity of tracked handheld accessories to throw virtual balls at a stack of cans.
+- [Tracking a handheld accessory as a virtual sculpting tool](tracking-a-handheld-accessory-as-a-virtual-sculpting-tool.md): Use a tracked accessory with Apple Vision Pro to create a virtual sculpture.
+
+### Room tracking
+
+- [RoomTrackingProvider](roomtrackingprovider.md): A source of real-time information about the room that a person is currently in.
+- [RoomAnchor](roomanchor.md): The representation of a room ARKit is currently tracking.
+- [SurfaceClassification](surfaceclassification.md): A value describing the classification of a surface.
+- [Building local experiences with room tracking](../visionos/building-local-experiences-with-room-tracking.md): Use room tracking in visionOS to provide custom interactions with physical spaces.
+
+### Shared coordinate spaces
+
+- [SharedCoordinateSpaceProvider](sharedcoordinatespaceprovider.md): Provides ability to establish a shared coordinate space among multiple participants.
+
+### Visual Fidelity
+
+- [VisualFidelityProvider](visualfidelityprovider.md): A data provider that delivers visual fidelity monitoring data.
+- [VisualFidelityData](visualfidelitydata.md): Visual fidelity data containing device fit and field of view verification.
+- [FieldOfViewAnchor](fieldofviewanchor.md): An anchor representing a set of field of view (FoV) boundary polygon points in immersive space.
+- [DeviceFitStatus](devicefitstatus.md): Device fit validation status indicating the user’s eye position relative to the optimal device fit range.
+
+## See Also
+
+### visionOS
+
+- [Setting up access to ARKit data](../visionos/setting-up-access-to-arkit-data.md): Check whether your app can use ARKit and respect people’s privacy.
+- [ARKitSession](arkitsession.md): The main entry point for receiving data from ARKit.
+- [DataProvider](dataprovider.md): A source of live data from ARKit.
+- [Anchor](anchor.md): The identity, location, and orientation of an object in world space.
+
+# ARKit in visionOS (Objective-C)
+
+**Framework:** ARKit  
+**Kind:** API Collection
+
+Create immersive augmented reality experiences.
+
+<a id="overview"></a>
+
+## Overview
+
+ARKit in visionOS offers a new set of sensing capabilities that you adopt individually in your app, using data providers to deliver updates asynchronously. The available capabilities include:
+
+- **Plane detection.** Detect surfaces in a person’s surroundings and use them to anchor content.
+- **World tracking.** Determine the position and orientation of Apple Vision Pro relative to its surroundings, and add world anchors to place content.
+- **Hand tracking.** Use a person’s hand and finger positions as input for custom gestures and interactivity.
+- **Scene reconstruction.** Build a mesh of a person’s physical surroundings and incorporate it into your immersive spaces to support interactions.
+- **Image tracking.** Look for known images in a person’s surroundings and use them as anchor points for custom content.
+- **Object tracking.** Use 3D reference objects to find and track real-world objects in a person’s environment.
+- **Barcode detection.** Detect and scan QR codes and barcodes in a variety of formats in a person’s surroundings.
+- **Room tracking**. Use room anchors to identify specific rooms and implement per-room experiences.
+- **Light estimation.** Understand the lighting characteristics of a room to help improve the appearance of shiny or semi-reflective materials in your virtual content.
+- **Camera frames.** Access camera frames from a device in several formats.
+- **Accessory tracking.** Work with the real-time position and orientation of accessories that a person is using.
+
+![An illustration showing a split view of someone using Apple Vision Pro; the left side shows a person’s perspective of the room and the right side depicts ARKit’s perspective of the room. The right side illustrates ARKit’s sensing capabilities, including the detected shape of the room and the individual joints of a person’s hand.](https://developer.apple.com/images/com.apple.arkit/media-4330791@2x.png)
+
+## Topics
+
+### Setup
+
+- [Setting up access to ARKit data](../visionos/setting-up-access-to-arkit-data.md): Check whether your app can use ARKit and respect people’s privacy.
+
+### Plane detection
+
+- [Placing content on detected planes](../visionos/placing-content-on-detected-planes.md): Detect horizontal surfaces like tables and floors, as well as vertical planes like walls and doors.
+
+### World tracking
+
+- [Tracking specific points in world space](../visionos/tracking-points-in-world-space.md): Retrieve the position and orientation of anchors your app stores in ARKit.
+- [Placing entities using head and device transform](../visionos/placing-entities-using-head-and-device-transform.md): Query and react to changes in the position and rotation of Apple Vision Pro.
+
+### Hand tracking
+
+- [Happy Beam](../visionos/happybeam.md): Leverage a Full Space to create a fun game using ARKit.
+- [Creating a 3D painting space](../visionos/creating-a-painting-space-in-visionos.md): Implement a painting canvas entity, and update its mesh to represent a stroke.
+- [Tracking and visualizing hand movement](../visionos/tracking-and-visualizing-hand-movement.md): Use hand-tracking anchors to display a visual representation of hand transforms in visionOS.
+
+### Scene reconstruction
+
+- [Incorporating real-world surroundings in an immersive experience](../visionos/incorporating-real-world-surroundings-in-an-immersive-experience.md): Create an immersive experience by making your app’s content respond to the local shape of the world.
+- [Applying mesh to real-world surroundings](../visionos/applying-mesh-to-real-world-surroundings.md): Add a layer of mesh to objects in the real world, using scene reconstruction in ARKit.
+- [Obscuring virtual items in a scene behind real-world items](../visionos/obscuring-virtual-items-in-a-scene-behind-real-world-items.md): Increase the realism of an immersive experience by adding entities with invisible materials real-world objects.
+
+### Image tracking
+
+- [Tracking and altering images](tracking-and-altering-images.md): Create images from rectangular shapes found in the user’s environment, and augment their appearance.
+- [Tracking preregistered images in 3D space](../visionos/tracking-images-in-3d-space.md): Place content based on the current position of a known image in a person’s surroundings.
+
+### Object tracking
+
+- [Exploring object tracking with ARKit](../visionos/exploring_object_tracking_with_arkit.md): Find and track real-world objects in visionOS using reference objects you train with Create ML.
+- [Implementing object tracking in your app](../visionos/implementing-object-tracking-in-your-app.md): Create engaging interactions by training models to recognize and track real-world objects in people’s surroundings.
+
+### Accessory tracking
+
+- [Preparing spatial accessories for tracking in your visionOS app](preparing-spatial-accessories-for-tracking-in-your-visionos-app.md): Prepare a spatial accessory for tracking by training a reference accessory file and integrating it into your visionOS app.
+- [Working with generic spatial accessories](../visionos/working-with-generic-spatial-accessories.md): Let people place digital replicas of a generic spatial accessory by tracking the accessory with ARKit.
+
+### Room tracking
+
+- [Building local experiences with room tracking](../visionos/building-local-experiences-with-room-tracking.md): Use room tracking in visionOS to provide custom interactions with physical spaces.
+
+## See Also
+
+### visionOS
+
+- [ARKit in visionOS C API](arkit-in-visionos-c-api.md): Integrate ARKit with low-level libraries and functionality.

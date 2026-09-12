@@ -1,0 +1,67 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uistackview/distribution-swift.enum/equalspacing](https://developer.apple.com/documentation/uikit/uistackview/distribution-swift.enum/equalspacing)
+
+# UIStackView.Distribution.equalSpacing (Swift)
+
+**Framework:** UIKit  
+**Kind:** Case  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · tvOS 9.0+ · visionOS 1.0+
+
+A layout where the stack view maintains equal spacing between adjacent views while preserving their intrinsic content size.
+
+## Declaration
+
+```swift
+case equalSpacing
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When the arranged views don’t fill the stack view, it pads the spacing between the views evenly. If the arranged views don’t fit within the stack view, it shrinks the views according to their compression resistance priority. If there’s any ambiguity, the stack view shrinks the views based on their index in the [arrangedSubviews](../arrangedsubviews.md) array.
+
+The following image shows an example of a horizontal stack view that uses the [UIStackView.Distribution.equalSpacing](equalspacing.md) distribution.
+
+![A horizontal stack view with four arranged subviews. The stack view spaces the arranged views equally so that they fill the available space along the stack view’s axis.](https://developer.apple.com/images/com.apple.uikit/media-2557450@2x.png)
+
+## See Also
+
+### Constants
+
+- [UIStackView.Distribution.fill](fill.md): A layout where the stack view resizes its arranged views so that they fill the available space along the stack view’s axis.
+- [UIStackView.Distribution.fillEqually](fillequally.md): A layout where the stack view resizes all arranged views to the same size, filling the available space along the stack view’s axis.
+- [UIStackView.Distribution.fillProportionally](fillproportionally.md): A layout where the stack view resizes views proportionally based on their intrinsic content size to fill the available space along the stack view’s axis.
+- [UIStackView.Distribution.equalCentering](equalcentering.md): A layout that attempts to position the arranged views with equal center-to-center spacing along the stack view’s axis, while maintaining the spacing property’s distance between views.
+
+# UIStackViewDistributionEqualSpacing (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Enumeration Case  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · tvOS 9.0+ · visionOS 1.0+
+
+A layout where the stack view maintains equal spacing between adjacent views while preserving their intrinsic content size.
+
+## Declaration
+
+```objectivec
+UIStackViewDistributionEqualSpacing
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When the arranged views don’t fill the stack view, it pads the spacing between the views evenly. If the arranged views don’t fit within the stack view, it shrinks the views according to their compression resistance priority. If there’s any ambiguity, the stack view shrinks the views based on their index in the [arrangedSubviews](../arrangedsubviews.md) array.
+
+The following image shows an example of a horizontal stack view that uses the [UIStackViewDistributionEqualSpacing](equalspacing.md) distribution.
+
+![A horizontal stack view with four arranged subviews. The stack view spaces the arranged views equally so that they fill the available space along the stack view’s axis.](https://developer.apple.com/images/com.apple.uikit/media-2557450@2x.png)
+
+## See Also
+
+### Constants
+
+- [UIStackViewDistributionFill](fill.md): A layout where the stack view resizes its arranged views so that they fill the available space along the stack view’s axis.
+- [UIStackViewDistributionFillEqually](fillequally.md): A layout where the stack view resizes all arranged views to the same size, filling the available space along the stack view’s axis.
+- [UIStackViewDistributionFillProportionally](fillproportionally.md): A layout where the stack view resizes views proportionally based on their intrinsic content size to fill the available space along the stack view’s axis.
+- [UIStackViewDistributionEqualCentering](equalcentering.md): A layout that attempts to position the arranged views with equal center-to-center spacing along the stack view’s axis, while maintaining the spacing property’s distance between views.

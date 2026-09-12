@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1646373-anonymous/kusbendpointpropertiesversion3](https://developer.apple.com/documentation/kernel/1646373-anonymous/kusbendpointpropertiesversion3)
+
+# kUSBEndpointPropertiesVersion3
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Enumeration Case  
+**Availability:** macOS 10.12+
+
+## Declaration
+
+```objectivec
+kUSBEndpointPropertiesVersion3 = 0x03
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Version that has support for USB3 SuperSpeed Endpoint Companion fields.

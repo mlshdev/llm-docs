@@ -1,0 +1,85 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiactivity/activitytype-swift.struct/mail](https://developer.apple.com/documentation/uikit/uiactivity/activitytype-swift.struct/mail)
+
+# mail (Swift)
+
+**Framework:** UIKit  
+**Kind:** Type Property  
+**Availability:** iOS 6.0+ · iPadOS 6.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+A type of activity that posts the provided content to a new email message.
+
+## Declaration
+
+```swift
+static let mail: UIActivity.ActivityType
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When using this service, you can provide [NSString](../../../foundation/nsstring.md) and [UIImage](../../uiimage.md) objects and [NSURL](../../../foundation/nsurl.md) objects pointing to local files as data for the activity items.
+
+To specify an [NSData](../../../foundation/nsdata.md) object, you must implement the [UIActivityItemSource](../../uiactivityitemsource.md) protocol, return the data object in [activityViewController(\_:itemForActivityType:)](../../uiactivityitemsource/activityviewcontroller%28__itemforactivitytype_%29.md), and return the data object’s UTI in [activityViewController(\_:dataTypeIdentifierForActivityType:)](../../uiactivityitemsource/activityviewcontroller%28__datatypeidentifierforactivitytype_%29.md). Also, you may need to register the appropriate mapping so that the MIME type can be determined.
+
+## See Also
+
+### Constants
+
+- [addToHomeScreen](addtohomescreen.md)
+- [addToReadingList](addtoreadinglist.md): A type of activity that adds the URL to Safari’s reading list.
+- [airDrop](airdrop.md): A type of activity that makes the provided content available through AirDrop.
+- [assignToContact](assigntocontact.md): A type of activity that assigns the image to a contact.
+- [collaborationCopyLink](collaborationcopylink.md)
+- [collaborationInviteWithLink](collaborationinvitewithlink.md)
+- [copyToPasteboard](copytopasteboard.md): A type of activity that posts the provided content to the pasteboard.
+- [markupAsPDF](markupaspdf.md): A type of activity that marks up the provided content as a PDF file.
+- [message](message.md): A type of activity that posts the provided content to the Messages app.
+- [openInIBooks](openinibooks.md): A type of activity that opens the content in iBooks.
+- [postToFacebook](posttofacebook.md): A type of activity that posts the provided content to the user’s wall on Facebook.
+- [postToFlickr](posttoflickr.md): A type of activity that posts the provided image to the user’s Flickr account.
+- [postToTencentWeibo](posttotencentweibo.md): A type of activity that posts the provided content to the user’s Tencent Weibo feed.
+- [postToTwitter](posttotwitter.md): A type of activity that posts the provided content to the user’s Twitter feed.
+- [postToVimeo](posttovimeo.md): A type of activity that posts the provided video to the user’s Vimeo account.
+
+# UIActivityTypeMail (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Global Variable  
+**Availability:** iOS 6.0+ · iPadOS 6.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+A type of activity that posts the provided content to a new email message.
+
+## Declaration
+
+```objectivec
+extern UIActivityType const UIActivityTypeMail;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When using this service, you can provide [NSString](../../../foundation/nsstring.md) and [UIImage](../../uiimage.md) objects and [NSURL](../../../foundation/nsurl.md) objects pointing to local files as data for the activity items.
+
+To specify an [NSData](../../../foundation/nsdata.md) object, you must implement the [UIActivityItemSource](../../uiactivityitemsource.md) protocol, return the data object in [activityViewController:itemForActivityType:](../../uiactivityitemsource/activityviewcontroller%28__itemforactivitytype_%29.md), and return the data object’s UTI in [activityViewController:dataTypeIdentifierForActivityType:](../../uiactivityitemsource/activityviewcontroller%28__datatypeidentifierforactivitytype_%29.md). Also, you may need to register the appropriate mapping so that the MIME type can be determined.
+
+## See Also
+
+### Constants
+
+- [UIActivityTypeAddToHomeScreen](addtohomescreen.md)
+- [UIActivityTypeAddToReadingList](addtoreadinglist.md): A type of activity that adds the URL to Safari’s reading list.
+- [UIActivityTypeAirDrop](airdrop.md): A type of activity that makes the provided content available through AirDrop.
+- [UIActivityTypeAssignToContact](assigntocontact.md): A type of activity that assigns the image to a contact.
+- [UIActivityTypeCollaborationCopyLink](collaborationcopylink.md)
+- [UIActivityTypeCollaborationInviteWithLink](collaborationinvitewithlink.md)
+- [UIActivityTypeCopyToPasteboard](copytopasteboard.md): A type of activity that posts the provided content to the pasteboard.
+- [UIActivityTypeMarkupAsPDF](markupaspdf.md): A type of activity that marks up the provided content as a PDF file.
+- [UIActivityTypeMessage](message.md): A type of activity that posts the provided content to the Messages app.
+- [UIActivityTypeOpenInIBooks](openinibooks.md): A type of activity that opens the content in iBooks.
+- [UIActivityTypePostToFacebook](posttofacebook.md): A type of activity that posts the provided content to the user’s wall on Facebook.
+- [UIActivityTypePostToFlickr](posttoflickr.md): A type of activity that posts the provided image to the user’s Flickr account.
+- [UIActivityTypePostToTencentWeibo](posttotencentweibo.md): A type of activity that posts the provided content to the user’s Tencent Weibo feed.
+- [UIActivityTypePostToTwitter](posttotwitter.md): A type of activity that posts the provided content to the user’s Twitter feed.
+- [UIActivityTypePostToVimeo](posttovimeo.md): A type of activity that posts the provided video to the user’s Vimeo account.

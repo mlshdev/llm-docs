@@ -1,0 +1,65 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/coremediaio/cmiodevicestreamqueuealteredproc](https://developer.apple.com/documentation/coremediaio/cmiodevicestreamqueuealteredproc)
+
+# CMIODeviceStreamQueueAlteredProc (Swift)
+
+**Framework:** Core Media I/O  
+**Kind:** Type Alias  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.7+
+
+## Declaration
+
+```swift
+typealias CMIODeviceStreamQueueAlteredProc = (CMIOStreamID, UnsafeMutableRawPointer?, UnsafeMutableRawPointer?) -> Void
+```
+
+## See Also
+
+### Data Types
+
+- [CMIOClassID](cmioclassid.md)
+- [CMIOControlID](cmiocontrolid.md)
+- [CMIODeviceGetSMPTETimeProc](cmiodevicegetsmptetimeproc.md)
+- [CMIODeviceID](cmiodeviceid.md)
+- [CMIODevicePropertyID](cmiodevicepropertyid.md)
+- [CMIOHardwarePropertyID](cmiohardwarepropertyid.md)
+- [CMIOObjectID](cmioobjectid.md)
+- [CMIOObjectPropertyElement](cmioobjectpropertyelement.md)
+- [CMIOObjectPropertyListenerBlock](cmioobjectpropertylistenerblock.md)
+- [CMIOObjectPropertyListenerProc](cmioobjectpropertylistenerproc.md)
+- [CMIOObjectPropertyScope](cmioobjectpropertyscope.md)
+- [CMIOObjectPropertySelector](cmioobjectpropertyselector.md)
+- [CMIOStreamID](cmiostreamid.md)
+- [CMIOStreamScheduledOutputNotificationProc](cmiostreamscheduledoutputnotificationproc.md)
+- [CMIOExtensionProperty](cmioextensionproperty.md): A structure that defines the properties that providers, devices, and streams support.
+
+# CMIODeviceStreamQueueAlteredProc (Objective-C)
+
+**Framework:** Core Media I/O  
+**Kind:** Type Alias  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.7+
+
+## Declaration
+
+```objectivec
+typedef void (*)(unsigned int, void *, void *) CMIODeviceStreamQueueAlteredProc;
+```
+
+## See Also
+
+### Data Types
+
+- [CMIOClassID](cmioclassid.md)
+- [CMIOControlID](cmiocontrolid.md)
+- [CMIODeviceGetSMPTETimeProc](cmiodevicegetsmptetimeproc.md)
+- [CMIODeviceID](cmiodeviceid.md)
+- [CMIODevicePropertyID](cmiodevicepropertyid.md)
+- [CMIOHardwarePlugInRef](cmiohardwarepluginref.md)
+- [CMIOHardwarePropertyID](cmiohardwarepropertyid.md)
+- [CMIOObjectID](cmioobjectid.md)
+- [CMIOObjectPropertyElement](cmioobjectpropertyelement.md)
+- [CMIOObjectPropertyListenerBlock](cmioobjectpropertylistenerblock.md)
+- [CMIOObjectPropertyListenerProc](cmioobjectpropertylistenerproc.md)
+- [CMIOObjectPropertyScope](cmioobjectpropertyscope.md)
+- [CMIOObjectPropertySelector](cmioobjectpropertyselector.md)
+- [CMIOStreamID](cmiostreamid.md)
+- [CMIOStreamScheduledOutputNotificationProc](cmiostreamscheduledoutputnotificationproc.md)

@@ -1,0 +1,38 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/sample-to-group_atom/table_data](https://developer.apple.com/documentation/quicktime-file-format/sample-to-group_atom/table_data)
+
+# Table data
+
+**Framework:** QuickTime File Format  
+**Kind:** Data field
+
+A table of sample count and group description index pairs.
+
+## Mentioned In
+
+- [Representing encoder delay explicitly](../example_representing_encoder_delay_explicitly.md)
+
+<a id="Overview"></a>
+
+## Overview
+
+The layout of the table data is as follows:
+
+| Data field | Bytes |
+| --- | --- |
+| Sample count | 4 |
+| Group description index | 4 |
+
+- **Sample count**: A 32-bit integer that provides the number of consecutive media samples with the same sample group descriptor. The value is typically the same as in the sample size atom’s number of entries field.
+- **Group description index**: A 32-bit integer the value of which is the index into the sample group description atom’s payload data table which describes the samples in this group. The index ranges from `1` to the number of payload data entries in the sample group description atom, or takes the value `0` to indicate that this group of samples is a member of no group of this type.
+
+## See Also
+
+### Data fields
+
+- [Size](size.md): A 32-bit integer that specifies the number of bytes in this sample-to-group atom.
+- [Type](type.md): A 32-bit integer that identifies the atom type.
+- [Version](version.md): A 1-byte specification of the version of this sample-to-group atom.
+- [Flags](flags.md): A 3-byte reserved space.
+- [Grouping type](grouping_type.md): A 32-bit integer identifying the grouping type.
+- [Default length](default_length.md): A 32-bit integer indicating the length of the group entry in the payload data.
+- [Entry count](entry_count.md): A 32-bit integer giving the number of entries in the table data that follows.

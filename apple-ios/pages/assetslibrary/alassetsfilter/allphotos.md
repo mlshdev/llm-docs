@@ -1,0 +1,14 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/assetslibrary/alassetsfilter/allphotos](https://developer.apple.com/documentation/assetslibrary/alassetsfilter/allphotos)
+
+# allPhotos
+
+**Interface language:** Objective-C
+
+**Framework:** Assets Library  
+**Kind:** Type Method
+
+## Declaration
+
+```objectivec
++ (ALAssetsFilter *) allPhotos;
+```

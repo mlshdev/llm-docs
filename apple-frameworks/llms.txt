@@ -1,0 +1,282 @@
+# Apple cross-platform frameworks snapshot-75c95c22eb2a
+
+> Documentation generated from Apple's public DocC endpoints at [https://developer.apple.com/documentation/technologies](https://developer.apple.com/documentation/technologies) and pinned to catalog snapshot `75c95c22eb2ad852f60a6fa16fc5b2a8bd2d83fed230b5c9ef73230b7dff2438` captured at 2026-09-12T21:04:59.784Z.
+
+- [Full documentation](llms-full.txt): Complete normalized corpus for Apple cross-platform frameworks snapshot-75c95c22eb2a.
+- [Provenance manifest](manifest.json): Snapshot digest, capture time, document count, and generation notes.
+- Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.
+- 269 frameworks in this catalog, captured at 2026-09-12T21:04:59.784Z.
+- Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.
+- Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream.
+
+## Frameworks
+
+- [ARKit](pages/arkit.md): 2554 pages. Platforms: iOS, iPadOS, visionOS.
+- [AVFAudio](pages/avfaudio.md): 1576 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [AVFoundation](pages/avfoundation.md): 5601 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [AVKit](pages/avkit.md): 691 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [AVRouting](pages/avrouting.md): 38 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS.
+- [Accelerate](pages/accelerate.md): 8904 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Accessibility](pages/accessibility.md): 338 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Account & Organizational Data Sharing](pages/accountorganizationaldatasharing.md): 10 pages. Platforms: AccountOrganizationalDataSharing.
+- [Account Data Transfer](pages/accountdatatransfer.md): 17 pages. Platforms: Account Data Transfer.
+- [Accounts](pages/accounts.md): 83 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS.
+- [AdServices](pages/adservices.md): 15 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [AdSupport](pages/adsupport.md): 5 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS.
+- [Address Book](pages/addressbook.md): 676 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS.
+- [Advanced Commerce API](pages/advancedcommerceapi.md): 205 pages. Platforms: Advanced Commerce API.
+- [App Data Transfer](pages/appdatatransfer.md): 17 pages. Platforms: App Data Transfer.
+- [App Intents](pages/appintents.md): 4433 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [App License Delivery SDK](pages/applicensedeliverysdk.md): 51 pages.
+- [App Store Receipts](pages/appstorereceipts.md): 25 pages. Platforms: App Store Receipts.
+- [App Store Server API](pages/appstoreserverapi.md): 258 pages. Platforms: App Store Server API.
+- [App Store Server Notifications](pages/appstoreservernotifications.md): 134 pages. Platforms: App Store Server Notifications.
+- [App Tracking Transparency](pages/apptrackingtransparency.md): 12 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [Apple Ads](pages/apple_ads.md): 253 pages. Platforms: Apple Ads.
+- [Apple Archive](pages/applearchive.md): 653 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Apple Business API](pages/applebusinessapi.md): 330 pages. Platforms: Apple Business API.
+- [Apple CryptoKit](pages/cryptokit.md): 705 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Apple Maps Server API](pages/applemapsserverapi.md): 48 pages. Platforms: Apple Maps Server API.
+- [Apple Music Feed](pages/applemusicfeed.md): 40 pages. Platforms: AppleMusicFeed.
+- [Apple News](pages/applenews.md): 78 pages. Platforms: Apple News API, Apple News Format.
+- [Apple News API](pages/applenewsapi.md): 34 pages.
+- [Apple News Format](pages/applenewsformat.md): 155 pages.
+- [Apple Pencil](pages/applepencil.md): 4 pages.
+- [Apple School Manager API](pages/appleschoolmanagerapi.md): 65 pages. Platforms: Apple School Manager API.
+- [Apple School Manager and Apple Business APIs](pages/apple-school-and-business-manager-api.md): 3 pages.
+- [Apple silicon](pages/apple-silicon.md): 17 pages.
+- [Applepaymerchanttokenmanagementapi](pages/applepaymerchanttokenmanagementapi/adding-merchant-token-usage-information.md): 2 pages.
+- [Audio Toolbox](pages/audiotoolbox.md): 3731 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [Audio Unit](pages/audiounit.md): 2 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [AudioDriverKit](pages/audiodriverkit.md): 535 pages. Platforms: DriverKit.
+- [Authentication Services](pages/authenticationservices.md): 1452 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Automatic Assessment Configuration](pages/automaticassessmentconfiguration.md): 161 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS.
+- [Automatic Sign-In API](pages/automaticsigninapi.md): 5 pages. Platforms: Automatic Sign-In API.
+- [Background Assets](pages/backgroundassets.md): 245 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [Background Tasks](pages/backgroundtasks.md): 64 pages. Platforms: iOS, iPadOS, Mac Catalyst, tvOS, visionOS.
+- [BlockStorageDeviceDriverKit](pages/blockstoragedevicedriverkit.md): 41 pages. Platforms: DriverKit.
+- [Bundle Resources](pages/bundleresources.md): 910 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [CFNetwork](pages/cfnetwork.md): 419 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [CallKit](pages/callkit.md): 284 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS, watchOS.
+- [Cinematic](pages/cinematic.md): 400 pages. Platforms: iOS, iPadOS, macOS, tvOS.
+- [ClassKit](pages/classkit.md): 181 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [ClassKit Catalog API](pages/classkitcatalogapi.md): 20 pages. Platforms: ClassKit.
+- [ClassKit UI](pages/classkitui.md): 12 pages.
+- [ClockKit](pages/clockkit.md): 688 pages. Platforms: iOS, iPadOS, Mac Catalyst, watchOS.
+- [CloudKit](pages/cloudkit.md): 1300 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [ColorSync](pages/colorsync.md): 375 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Combine](pages/combine.md): 1062 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Compositor Services](pages/compositorservices.md): 355 pages. Platforms: visionOS.
+- [Compression](pages/compression.md): 66 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Compute Graph](pages/computegraph.md): 578 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, Reality Composer Pro.
+- [Contacts](pages/contacts.md): 691 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS, watchOS.
+- [Contacts UI](pages/contactsui.md): 50 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [Core AI](pages/coreai.md): 312 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Core Animation](pages/quartzcore.md): 699 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Core Audio](pages/coreaudio.md): 977 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Core Audio Types](pages/coreaudiotypes.md): 629 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Core Bluetooth](pages/corebluetooth.md): 386 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Core Data](pages/coredata.md): 1169 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Core Foundation](pages/corefoundation.md): 2701 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Core Graphics](pages/coregraphics.md): 1967 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Core Haptics](pages/corehaptics.md): 221 pages. Platforms: iOS, iPadOS, Mac Catalyst, tvOS, visionOS.
+- [Core Image](pages/coreimage.md): 2114 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [Core Location](pages/corelocation.md): 568 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Core MIDI](pages/coremidi.md): 1093 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Core ML](pages/coreml.md): 794 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Core Media](pages/coremedia.md): 2561 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Core Motion](pages/coremotion.md): 433 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS, watchOS.
+- [Core Services](pages/coreservices.md): 15777 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Core Spotlight](pages/corespotlight.md): 815 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [Core Telephony](pages/coretelephony.md): 179 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS.
+- [Core Text](pages/coretext.md): 2345 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Core Transferable](pages/coretransferable.md): 69 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Core Video](pages/corevideo.md): 1036 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [CoreAudioKit](pages/coreaudiokit.md): 65 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [CoreLocationUI](pages/corelocationui.md): 30 pages. Platforms: iOS, iPadOS, Mac Catalyst, watchOS.
+- [CrashReportExtension](pages/crashreportextension.md): 29 pages. Platforms: iOS, iPadOS, macOS.
+- [Create ML](pages/createml.md): 1756 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [Create ML Components](pages/createmlcomponents.md): 1636 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [CryptoTokenKit](pages/cryptotokenkit.md): 294 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Darwin Notify](pages/darwinnotify.md): 51 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [DataDetection](pages/datadetection.md): 112 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Declared Age Range](pages/declaredagerange.md): 48 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS.
+- [Device Management](pages/devicemanagement.md): 1415 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS, Device Assignment Services, VPP License Management.
+- [DeviceCheck](pages/devicecheck.md): 32 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [DeviceDiscoveryExtension](pages/devicediscoveryextension.md): 117 pages. Platforms: iOS, iPadOS, macOS, visionOS.
+- [DeviceDiscoveryUI](pages/devicediscoveryui.md): 25 pages. Platforms: iOS, iPadOS, Mac Catalyst, tvOS.
+- [Dispatch](pages/dispatch.md): 612 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [DriverKit](pages/driverkit.md): 2962 pages. Platforms: DriverKit, iOS, iPadOS, Mac Catalyst, macOS.
+- [Evaluations](pages/evaluations.md): 344 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS, watchOS, Xcode.
+- [EventKit](pages/eventkit.md): 425 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS, watchOS.
+- [EventKit UI](pages/eventkitui.md): 55 pages. Platforms: iOS, iPadOS, Mac Catalyst, visionOS.
+- [ExtensionFoundation](pages/extensionfoundation.md): 97 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [ExtensionKit](pages/extensionkit.md): 39 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [External Accessory](pages/externalaccessory.md): 92 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [External Purchase Server API](pages/externalpurchaseserverapi.md): 83 pages. Platforms: External Purchase Server API.
+- [File Provider](pages/fileprovider.md): 505 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [File Provider UI](pages/fileproviderui.md): 21 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [Foundation](pages/foundation.md): 14116 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Foundation Models](pages/foundationmodels.md): 703 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS, watchOS.
+- [Foveated Streaming](pages/foveatedstreaming.md): 123 pages. Platforms: visionOS.
+- [GLKit](pages/glkit.md): 531 pages. Platforms: iOS, iPadOS, macOS, tvOS.
+- [GSS](pages/gss.md): 438 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [Game Controller](pages/gamecontroller.md): 1194 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [GameKit](pages/gamekit.md): 1076 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [GameSave](pages/gamesave.md): 54 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [GameplayKit](pages/gameplaykit.md): 509 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [GeoToolbox](pages/geotoolbox.md): 20 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Group Activities](pages/groupactivities.md): 253 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [HIDDriverKit](pages/hiddriverkit.md): 2760 pages. Platforms: DriverKit, macOS.
+- [HTTP Live Streaming](pages/http-live-streaming.md): 22 pages.
+- [HealthKit](pages/healthkit.md): 2150 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS, watchOS.
+- [HealthKitUI](pages/healthkitui.md): 4 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [HomeKit](pages/homekit.md): 1302 pages. Platforms: iOS, iPadOS, Mac Catalyst, tvOS, visionOS, watchOS.
+- [IOKit](pages/iokit.md): 14367 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [IOSurface](pages/iosurface.md): 219 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [IdentityDocumentServices](pages/identitydocumentservices.md): 81 pages. Platforms: iOS, iPadOS, macOS.
+- [IdentityDocumentServicesUI](pages/identitydocumentservicesui.md): 30 pages. Platforms: iOS, iPadOS, macOS.
+- [IdentityLookupUI](pages/identitylookupui.md): 7 pages.
+- [Image I/O](pages/imageio.md): 915 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Image Playground](pages/imageplayground.md): 78 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [ImageCaptureCore](pages/imagecapturecore.md): 763 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [Immersive Media Support](pages/immersivemediasupport.md): 255 pages. Platforms: macOS, visionOS.
+- [Intents](pages/intents.md): 3501 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [IntentsUI](pages/intentsui.md): 49 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [JavaScriptCore](pages/javascriptcore.md): 371 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [LightweightCodeRequirements](pages/lightweightcoderequirements.md): 212 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS.
+- [LiveCommunicationKit](pages/livecommunicationkit.md): 163 pages. Platforms: iOS, iPadOS, Mac Catalyst, visionOS, watchOS.
+- [Local Authentication](pages/localauthentication.md): 245 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS, watchOS.
+- [Local Authentication Embedded UI](pages/localauthenticationembeddedui.md): 8 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [MIDIDriverKit](pages/mididriverkit.md): 161 pages. Platforms: DriverKit.
+- [ML Compute](pages/mlcompute.md): 817 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS.
+- [ManagedApp](pages/managedapp.md): 35 pages. Platforms: iOS, iPadOS, visionOS.
+- [ManagedAppDistribution](pages/managedappdistribution.md): 90 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [MapKit](pages/mapkit.md): 1295 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Matter](pages/matter.md): 24379 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [MatterSupport](pages/mattersupport.md): 68 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [Media Accessibility](pages/mediaaccessibility.md): 101 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [Media Intelligence](pages/mediaintelligence.md): 77 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [Media Intents](pages/mediaintents.md): 14 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Media Player](pages/mediaplayer.md): 780 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Media Setup](pages/mediasetup.md): 20 pages. Platforms: iOS, iPadOS, Mac Catalyst, visionOS.
+- [Media Toolbox](pages/mediatoolbox.md): 32 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [Message UI](pages/messageui.md): 80 pages. Platforms: iOS, iPadOS, Mac Catalyst, visionOS.
+- [Metal](pages/metal.md): 4123 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [Metal Performance Shaders](pages/metalperformanceshaders.md): 3188 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [Metal Performance Shaders Graph](pages/metalperformanceshadersgraph.md): 819 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [MetalFX](pages/metalfx.md): 269 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [MetalKit](pages/metalkit.md): 126 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [MetricKit](pages/metrickit.md): 561 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [Model I/O](pages/modelio.md): 969 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [Multipeer Connectivity](pages/multipeerconnectivity.md): 115 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [Music Understanding](pages/musicunderstanding.md): 90 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [MusicKit](pages/musickit.md): 942 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Natural Language](pages/naturallanguage.md): 329 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Nearby Interaction](pages/nearbyinteraction.md): 177 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, watchOS.
+- [Network](pages/network.md): 1975 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Network Extension](pages/networkextension.md): 1205 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [NetworkingDriverKit](pages/networkingdriverkit.md): 693 pages. Platforms: DriverKit.
+- [Notification Center](pages/notificationcenter.md): 49 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS.
+- [Now Playing](pages/nowplaying.md): 222 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [OSLog](pages/oslog.md): 98 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Objective-C Runtime](pages/objectivec.md): 850 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [OpenGL ES](pages/opengles.md): 1600 pages. Platforms: iOS, iPadOS, Mac Catalyst, tvOS, visionOS.
+- [PCIDriverKit](pages/pcidriverkit.md): 354 pages. Platforms: DriverKit, macOS.
+- [PDFKit](pages/pdfkit.md): 818 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [PHASE](pages/phase.md): 483 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [PaperKit](pages/paperkit.md): 360 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [PassKit (Apple Pay and Wallet)](pages/passkit.md): 1145 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS, watchOS.
+- [PencilKit](pages/pencilkit.md): 418 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [PermissionKit](pages/permissionkit.md): 108 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [PhotoKit](pages/photokit.md): 23 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Photos](pages/photos.md): 702 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [PhotosUI](pages/photosui.md): 312 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Professional Video Applications](pages/professional-video-applications/adding-onscreen-controls-to-plug-ins.md): 143 pages.
+- [Professional Video Applications](pages/professional_video_applications.md): 721 pages.
+- [ProximityReader](pages/proximityreader.md): 838 pages.
+- [PushKit](pages/pushkit.md): 30 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS, watchOS.
+- [Quick Look](pages/quicklook.md): 175 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [Quick Look Thumbnailing](pages/quicklookthumbnailing.md): 79 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [QuickTime File Format](pages/quicktime-file-format.md): 1152 pages.
+- [RealityKit](pages/realitykit.md): 6223 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [RelevanceKit](pages/relevancekit.md): 30 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS, watchOS.
+- [ReplayKit](pages/replaykit.md): 136 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [Retention Messaging API](pages/retentionmessaging.md): 108 pages. Platforms: Retention Messaging API.
+- [Roster API](pages/rosterapi.md): 21 pages. Platforms: Roster API.
+- [SCSIControllerDriverKit](pages/scsicontrollerdriverkit.md): 96 pages. Platforms: DriverKit.
+- [SCSIPeripheralsDriverKit](pages/scsiperipheralsdriverkit.md): 76 pages. Platforms: DriverKit.
+- [SKAdNetwork for Web Ads](pages/skadnetworkforwebads.md): 7 pages. Platforms: SKAdNetwork for Web Ads.
+- [SMS and Call Reporting](pages/identitylookup.md): 129 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [Safari Services](pages/safariservices.md): 280 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [SafetyKit](pages/safetykit.md): 48 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, watchOS.
+- [Sample Code Library](pages/samplecode.md): 1 pages.
+- [SceneKit](pages/scenekit.md): 1689 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [ScreenCaptureKit](pages/screencapturekit.md): 337 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [SecureElementCredential](pages/secureelementcredential.md): 112 pages.
+- [Security](pages/security.md): 7313 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Sensitive Content Analysis](pages/sensitivecontentanalysis.md): 43 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS.
+- [SerialDriverKit](pages/serialdriverkit.md): 66 pages. Platforms: DriverKit.
+- [Shared with You](pages/sharedwithyou.md): 127 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [Shared with You Core](pages/sharedwithyoucore.md): 85 pages.
+- [ShazamKit](pages/shazamkit.md): 166 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Sign in with Apple JS](pages/signinwithapplejs.md): 27 pages.
+- [Sign in with Apple REST API](pages/signinwithapplerestapi.md): 12 pages.
+- [SiriKit](pages/sirikit.md): 57 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [SiriKit Cloud Media](pages/sirikitcloudmedia.md): 168 pages. Platforms: SiriKit Cloud Media.
+- [Social](pages/social.md): 67 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS.
+- [Sound Analysis](pages/soundanalysis.md): 73 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Spatial](pages/spatial.md): 2204 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Spatial Preview](pages/spatialpreview.md): 64 pages. Platforms: macOS, visionOS.
+- [Speech](pages/speech.md): 387 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [SpriteKit](pages/spritekit.md): 1150 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [StateReporting](pages/statereporting.md): 38 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [StoreKit](pages/storekit.md): 1430 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Suggested Actions](pages/suggestedactions.md): 9 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [Swift Charts](pages/charts.md): 595 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [SwiftData](pages/swiftdata.md): 551 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Symbols](pages/symbols.md): 230 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [System](pages/system.md): 446 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [System Configuration](pages/systemconfiguration.md): 946 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [TV Services](pages/tvservices.md): 142 pages. Platforms: tvOS.
+- [TVML](pages/tvml.md): 194 pages.
+- [TVMLKit](pages/tvmlkit.md): 358 pages. Platforms: tvOS.
+- [TVMLKit JS](pages/tvmljs.md): 268 pages. Platforms: tvOS.
+- [TVUIKit](pages/tvuikit.md): 168 pages. Platforms: tvOS.
+- [TabletopKit](pages/tabletopkit.md): 654 pages. Platforms: visionOS.
+- [TabularData](pages/tabulardata.md): 844 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Technology Overviews](pages/technologyoverviews.md): 45 pages.
+- [ThreadNetwork](pages/threadnetwork.md): 29 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [TipKit](pages/tipkit.md): 190 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Touch Controller](pages/touchcontroller.md): 279 pages. Platforms: iOS, iPadOS, Mac Catalyst, visionOS.
+- [Translation](pages/translation.md): 70 pages. Platforms: iOS, iPadOS, macOS.
+- [UIKit](pages/uikit.md): 12625 pages. Platforms: iOS, iPadOS, Mac Catalyst, tvOS, visionOS, watchOS.
+- [USBDriverKit](pages/usbdriverkit.md): 946 pages. Platforms: DriverKit.
+- [USBSerialDriverKit](pages/usbserialdriverkit.md): 15 pages. Platforms: DriverKit.
+- [USD](pages/usd.md): 85 pages.
+- [USDKit](pages/usdkit.md): 1151 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [Uniform Type Identifiers](pages/uniformtypeidentifiers.md): 360 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [User Notifications](pages/usernotifications.md): 287 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [User Notifications UI](pages/usernotificationsui.md): 20 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [Video Subscriber Account](pages/videosubscriberaccount.md): 185 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [Video Toolbox](pages/videotoolbox.md): 918 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS.
+- [VideoDriverKit](pages/videodriverkit.md): 563 pages. Platforms: DriverKit.
+- [Vision](pages/vision.md): 1909 pages.
+- [VisionKit](pages/visionkit.md): 274 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS.
+- [Visual Intelligence](pages/visualintelligence.md): 9 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS.
+- [Wallet Orders](pages/walletorders.md): 31 pages. Platforms: iOS, iPadOS, macOS.
+- [Wallet Passes](pages/walletpasses.md): 63 pages. Platforms: iOS, iPadOS, watchOS.
+- [Watch Connectivity](pages/watchconnectivity.md): 105 pages. Platforms: iOS, iPadOS, Mac Catalyst, visionOS, watchOS.
+- [WeatherKit](pages/weatherkit.md): 429 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [WeatherKit REST API](pages/weatherkitrestapi.md): 41 pages. Platforms: Weather API.
+- [WidgetKit](pages/widgetkit.md): 329 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, visionOS, watchOS.
+- [WorkoutKit](pages/workoutkit.md): 155 pages. Platforms: iOS, iPadOS, Mac Catalyst, watchOS.
+- [XPC](pages/xpc.md): 753 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS.
+- [dnssd](pages/dnssd.md): 251 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [hvf](pages/hvf.md): 182 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [iWork Document Exporting API](pages/iworkdocumentexportingapi.md): 2 pages. Platforms: iWork.
+- [os](pages/os.md): 597 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [simd](pages/simd.md): 5557 pages.
+- [tvOS Release Notes](pages/tvos-release-notes.md): 58 pages.
+- [visionOS](pages/visionos.md): 86 pages. Platforms: visionOS.
+- [visionOS Release Notes](pages/visionos-release-notes.md): 20 pages.

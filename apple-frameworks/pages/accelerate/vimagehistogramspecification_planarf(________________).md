@@ -1,0 +1,167 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimagehistogramspecification_planarf(_:_:_:_:_:_:_:_:)](https://developer.apple.com/documentation/accelerate/vimagehistogramspecification_planarf(_:_:_:_:_:_:_:_:))
+
+# vImageHistogramSpecification_PlanarF(\_:\_:\_:\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.3+ · tvOS 5.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Specifies the histogram of a 32-bit planar buffer.
+
+## Declaration
+
+```swift
+func vImageHistogramSpecification_PlanarF(_ src: UnsafePointer<vImage_Buffer>, _ dest: UnsafePointer<vImage_Buffer>, _ tempBuffer: UnsafeMutableRawPointer!, _ desired_histogram: UnsafePointer<vImagePixelCount>, _ histogram_entries: UInt32, _ minVal: Pixel_F, _ maxVal: Pixel_F, _ flags: vImage_Flags) -> vImage_Error
+```
+
+## Parameters
+
+- `src`: The source vImage buffer.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the [height](vimage_buffer/height.md), [width](vimage_buffer/width.md), and [rowBytes](vimage_buffer/rowbytes.md) fields of this structure, and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+- `tempBuffer`: A pointer to workspace memory the function uses as it operates on an image. Pass `nil` to instruct the function to allocate, use, and then free its own temporary buffer.
+- `desired_histogram`: The histogram that the operation applies to the source buffer.
+- `histogram_entries`: The number of histogram entries.
+- `minVal`: The minimum pixel value. The operation assigns pixel values less than `minVal` to the first histogram entry.
+- `maxVal`: The maximum pixel value. The operation assigns pixel values greater than `maxVal` to the last histogram entry.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+  To instruct the function to return the minimum size of the workspace memory, set the [kvImageGetTempBufferSize](kvimagegettempbuffersize.md) flag.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, a negative value indicates one of the error codes that [Data Types and Constants](data-types-and-constants.md) describes, and a positive value indicates the required size for the temporary buffer.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this function to apply a histogram — that you’ve generated using [vImageHistogramCalculation_PlanarF(\_:\_:\_:\_:\_:\_:)](vimagehistogramcalculation_planarf%28____________%29.md) — to another image.
+
+The following code applies a histogram to a planar vImage buffer:
+
+```swift
+// `histogram` is a `entryCount`-element array.
+histogram.withUnsafeBufferPointer {
+    // `buffer` is a `vImage_Buffer` structure.
+    _ = vImageHistogramSpecification_PlanarF(&buffer, &buffer,
+                                             nil,
+                                             $0.baseAddress!,
+                                             UInt32(entryCount),
+                                             0, 1,
+                                             vImage_Flags(kvImageNoFlags))
+}
+```
+
+<a id="Optimize-performance-with-temporary-buffers"></a>
+
+### Optimize performance with temporary buffers
+
+This function uses a multiple-pass algorithm that saves intermediate pixel values between passes. In some cases, the destination buffer may not be large enough to store that intermediate data, so the operation requires additional storage.
+
+Pass `nil` to the `tempBuffer` parameter to have vImage create and manage this temporary storage for you.
+
+In cases where your code calls the function frequently (for example, when processing video), create and manage this temporary buffer yourself and reuse it across function calls. Reusing a buffer avoids vImage allocating the temporary storage with each call.
+
+To use your own temporary buffer, first call the function with the same values for all other parameters that you intend to use for subsequent calls. In addition, pass the `kvImageGetTempBufferSize` flag. The `kvImageGetTempBufferSize` instructs the function not to perform any processing, and to return a positive value that represents the minimum size, in bytes, of the temporary buffer. A negative return value represents an error.
+
+After you allocate the memory for the temporary buffer, pass that to the `tempBuffer` parameter for subsequent calls to the function, and don’t pass the `kvImageGetTempBufferSize` flag.
+
+You can use the same workspace memory for a group of images that are different sizes. To do this, create a vImage buffer structure with a size that shares the maximum width and maximum height of the images that you’re working with. For example, to create a workspace memory that’s suitable for 4x4, 5x4, and 4x5 images, pass a buffer with the size 5x5.
+
+## See Also
+
+### Related Documentation
+
+- [Enhancing image contrast with histogram manipulation](enhancing-image-contrast-with-histogram-manipulation.md): Enhance and adjust the contrast of an image with histogram equalization and contrast stretching.
+- [Specifying histograms with vImage](specifying-histograms-with-vimage.md): Calculate the histogram of one image, and apply it to a second image.
+
+### Specifying a histogram
+
+- [vImageHistogramSpecification_Planar8(\_:\_:\_:\_:)](vimagehistogramspecification_planar8%28________%29.md): Specifies the histogram of an 8-bit planar buffer.
+- [vImageHistogramSpecification_ARGB8888(\_:\_:\_:\_:)](vimagehistogramspecification_argb8888%28________%29.md): Specifies the histogram of an 8-bit-per-channel, 4-channel interleaved buffer.
+- [vImageHistogramSpecification_ARGBFFFF(\_:\_:\_:\_:\_:\_:\_:\_:)](vimagehistogramspecification_argbffff%28________________%29.md): Specifes the histogram of a 32-bit-per-channel, 4-channel interleaved buffer.
+
+# vImageHistogramSpecification_PlanarF (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.3+ · tvOS 5.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Specifies the histogram of a 32-bit planar buffer.
+
+## Declaration
+
+```objectivec
+vImage_Error vImageHistogramSpecification_PlanarF(const vImage_Buffer *src, const vImage_Buffer *dest, void *tempBuffer, const vImagePixelCount *desired_histogram, unsigned int histogram_entries, Pixel_F minVal, Pixel_F maxVal, vImage_Flags flags);
+```
+
+## Parameters
+
+- `src`: The source vImage buffer.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the [height](vimage_buffer/height.md), [width](vimage_buffer/width.md), and [rowBytes](vimage_buffer/rowbytes.md) fields of this structure, and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+- `tempBuffer`: A pointer to workspace memory the function uses as it operates on an image. Pass `nil` to instruct the function to allocate, use, and then free its own temporary buffer.
+- `desired_histogram`: The histogram that the operation applies to the source buffer.
+- `histogram_entries`: The number of histogram entries.
+- `minVal`: The minimum pixel value. The operation assigns pixel values less than `minVal` to the first histogram entry.
+- `maxVal`: The maximum pixel value. The operation assigns pixel values greater than `maxVal` to the last histogram entry.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+  To instruct the function to return the minimum size of the workspace memory, set the [kvImageGetTempBufferSize](kvimagegettempbuffersize.md) flag.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, a negative value indicates one of the error codes that [Data Types and Constants](data-types-and-constants.md) describes, and a positive value indicates the required size for the temporary buffer.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this function to apply a histogram — that you’ve generated using [vImageHistogramCalculation_PlanarF](vimagehistogramcalculation_planarf%28____________%29.md) — to another image.
+
+The following code applies a histogram to a planar vImage buffer:
+
+```swift
+// `histogram` is a `entryCount`-element array.
+histogram.withUnsafeBufferPointer {
+    // `buffer` is a `vImage_Buffer` structure.
+    _ = vImageHistogramSpecification_PlanarF(&buffer, &buffer,
+                                             nil,
+                                             $0.baseAddress!,
+                                             UInt32(entryCount),
+                                             0, 1,
+                                             vImage_Flags(kvImageNoFlags))
+}
+```
+
+<a id="Optimize-performance-with-temporary-buffers"></a>
+
+### Optimize performance with temporary buffers
+
+This function uses a multiple-pass algorithm that saves intermediate pixel values between passes. In some cases, the destination buffer may not be large enough to store that intermediate data, so the operation requires additional storage.
+
+Pass `nil` to the `tempBuffer` parameter to have vImage create and manage this temporary storage for you.
+
+In cases where your code calls the function frequently (for example, when processing video), create and manage this temporary buffer yourself and reuse it across function calls. Reusing a buffer avoids vImage allocating the temporary storage with each call.
+
+To use your own temporary buffer, first call the function with the same values for all other parameters that you intend to use for subsequent calls. In addition, pass the `kvImageGetTempBufferSize` flag. The `kvImageGetTempBufferSize` instructs the function not to perform any processing, and to return a positive value that represents the minimum size, in bytes, of the temporary buffer. A negative return value represents an error.
+
+After you allocate the memory for the temporary buffer, pass that to the `tempBuffer` parameter for subsequent calls to the function, and don’t pass the `kvImageGetTempBufferSize` flag.
+
+You can use the same workspace memory for a group of images that are different sizes. To do this, create a vImage buffer structure with a size that shares the maximum width and maximum height of the images that you’re working with. For example, to create a workspace memory that’s suitable for 4x4, 5x4, and 4x5 images, pass a buffer with the size 5x5.
+
+## See Also
+
+### Related Documentation
+
+- [Enhancing image contrast with histogram manipulation](enhancing-image-contrast-with-histogram-manipulation.md): Enhance and adjust the contrast of an image with histogram equalization and contrast stretching.
+- [Specifying histograms with vImage](specifying-histograms-with-vimage.md): Calculate the histogram of one image, and apply it to a second image.
+
+### Specifying a histogram
+
+- [vImageHistogramSpecification_Planar8](vimagehistogramspecification_planar8%28________%29.md): Specifies the histogram of an 8-bit planar buffer.
+- [vImageHistogramSpecification_ARGB8888](vimagehistogramspecification_argb8888%28________%29.md): Specifies the histogram of an 8-bit-per-channel, 4-channel interleaved buffer.
+- [vImageHistogramSpecification_ARGBFFFF](vimagehistogramspecification_argbffff%28________________%29.md): Specifes the histogram of a 32-bit-per-channel, 4-channel interleaved buffer.

@@ -1,0 +1,135 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/domains](https://developer.apple.com/documentation/devicemanagement/domains)
+
+# Domains
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Device Management Profile  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 8.0+ · macOS 10.10+ · visionOS 2.0+
+
+The payload that configures the domains under an organization’s management.
+
+## Declaration
+
+```
+object Domains
+```
+
+## Properties
+
+- `CrossSiteTrackingPreventionRelaxedApps` — `[string]`: An array of up to 10 strings representing app bundle-ids. Apps matching the bundle-ids listed here have relaxed enforcement of cross-site tracking prevention for the domains listed in `CrossSiteTrackingPreventionRelaxedDomains`.
+
+  Available: iOS 18+ | iPadOS 18+ | macOS 15+ | visionOS 2+
+- `CrossSiteTrackingPreventionRelaxedDomains` — `[string]`: An array of up to 10 strings. URLs matching the patterns listed here have relaxed enforcement of cross-site tracking prevention.
+
+  Available: iOS 16.2+ | iPadOS 16.2+ | macOS 13.1+ | visionOS 2+
+- `EmailDomains` — `[string]`: An array of domains. Mail marks in red all email addresses that lack a suffix matching any of these strings.
+
+  Available: iOS 8+ | iPadOS 8+ | macOS 10.10+
+- `SafariPasswordAutoFillDomains` — `[string]`: An array of domains. Users can only save passwords in Safari from URLs matching the patterns listed here. This property doesn’t disable the autofill feature itself.
+
+  Supervised devices or Shared iPad need this property to enable saving passwords in Safari.
+
+  Available: iOS 9.3+ | iPadOS 9.3+ | visionOS 2+
+- `WebDomains` — `[string]`: An array of domains. The system considers URLs matching the patterns listed in this property managed.
+
+  Available: iOS 8+ | iPadOS 8+ | visionOS 2+
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Specify `com.apple.domains` as the payload type.
+
+The `WebDomains`, `SafariPasswordAutoFillDomains`, and `CrossSiteTrackingPreventionRelaxedDomains` keys are arrays containing strings that use the following matching patterns:
+
+- `example.com`: Any path under `example.com` matches, but not `site.example.com`.
+- `foo.example.com`: Any path under `foo.example.com` matches, but not `example.com` or `bar.example.com`.
+- `\*.example.com`: Any path under `foo.example.com` or `bar.example.com` matches, but not `example.com`.
+- `example.com/sub`: `example.com/sub` and any path under it matches, but not `example.com`.
+- `foo.example.com/sub`: Any path under `foo.example.com/sub` matches, but not `example.com`, `example.com/sub`, `foo.example.com/`, or `bar.example.com/sub`.
+- `\*.example.com/sub`: Any path under `foo.example.com/sub` or `bar.example.com/sub` matches, but not `example.com` or `foo.example.com/`.
+- `\*.co`: Any path under `example.co` or `betterbag.co` matches, but not `example.co.uk` or `example.com`.
+
+A URL that begins with the prefix `www.` is treated as though it doesn’t contain that prefix during matching. For example, `http://www.example.com/store` is matched as `http://example.com/store`.
+
+Trailing slashes are ignored.
+
+If a domain string contains a port number, the system considers only addresses that specify that port number managed. Otherwise, the system matches the domain without regard to the port number specified. For example, the pattern `\*.example.com:8080` matches `http://site.example.com:8080/page.html` but not `http://site.example.com/page.html`, while the pattern `\*.example.com` matches both URLs.
+
+<a id="Profile-availability"></a>
+
+### Profile availability
+
+|  |  |
+| --- | --- |
+| Device channel | iOS, macOS, Shared iPad, visionOS |
+| User channel | macOS, Shared iPad |
+| Allow manual install | iOS, macOS, visionOS |
+| Requires supervision | N/A |
+| Requires user-approved MDM | N/A |
+| Allowed in user enrollment | N/A |
+| Allow multiple payloads | N/A |
+
+<a id="Profile-example"></a>
+
+### Profile example
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>EmailDomains</key>
+            <array>
+                <string>example.com</string>
+            </array>
+            <key>SafariPasswordAutoFillDomains</key>
+            <array>
+                <string>example.com</string>
+            </array>
+            <key>WebDomains</key>
+            <array>
+                <string>example.com</string>
+            </array>
+            <key>PayloadIdentifier</key>
+            <string>com.example.mysafaridomainspayload</string>
+            <key>PayloadType</key>
+            <string>com.apple.domains</string>
+            <key>PayloadUUID</key>
+            <string>0f94e664-4c36-4637-b264-19a533adc8e1</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+    </array>
+    <key>PayloadDisplayName</key>
+    <string>Domains</string>
+    <key>PayloadIdentifier</key>
+    <string>com.example.myprofile</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>0cf6d95f-8e9f-49f3-9cba-c5e78de5430e</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>
+```
+
+## See Also
+
+### Networking
+
+- [Cellular](cellular.md): The payload that configures cellular settings.
+- [CellularPrivateNetwork](cellularprivatenetwork.md): The payload that provides device info on private network deployments, including geographical location, preference over Wi-Fi, and network deployment type.
+- [ContentCachingService](contentcachingservice.md): Deprecated. The payload that configures the Content Caching service.
+- [DNSSettings](dnssettings.md): Deprecated. The payload that configures encrypted DNS settings.
+- [Firewall](firewall.md): The payload that configures the firewall.
+- [NetworkUsageRules](networkusagerules.md): The payload that configures network-usage rules.
+- [Relay](relay.md): Deprecated. The payload that configures relay settings.
+- [WiFi](wifi.md): The payload that configures Wi-Fi settings.
+- [WiFiManagedSettings](wifimanagedsettings.md): The payload that configures managed Wi-Fi settings.

@@ -1,0 +1,38 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/input-and-output](https://developer.apple.com/documentation/swift/input-and-output)
+
+# Input and Output
+
+**Framework:** Swift  
+**Kind:** API Collection
+
+Print values to the console, read from and write to text streams, and use command line arguments.
+
+## Topics
+
+### Text Output
+
+- [print(\_:separator:terminator:)](print%28__separator_terminator_%29.md): Writes the textual representations of the given items into the standard output.
+- [print(\_:separator:terminator:to:)](print%28__separator_terminator_to_%29.md): Writes the textual representations of the given items into the given output stream.
+
+### Command Line Input
+
+- [CommandLine](commandline.md): Command-line arguments for the current process.
+- [readLine(strippingNewline:)](readline%28strippingnewline_%29.md): Returns a string read from standard input through the end of the current line or until EOF is reached.
+
+### Streams
+
+- [TextOutputStream](textoutputstream.md): A type that can be the target of text-streaming operations.
+- [TextOutputStreamable](textoutputstreamable.md): A source of text-streaming operations.
+
+## See Also
+
+### Programming Tasks
+
+- [Debugging and Reflection](debugging-and-reflection.md): Fortify your code with runtime checks, and examine your values’ runtime representation.
+- [Macros](macros.md): Generate boilerplate code and perform other compile-time operations.
+- [Concurrency](concurrency.md): Perform asynchronous and parallel operations.
+- [Key-Path Expressions](key-path-expressions.md): Use key-path expressions to access properties dynamically.
+- [Manual Memory Management](manual-memory-management.md): Allocate and manage memory manually.
+- [Type Casting and Existential Types](type-casting-and-existential-types.md): Perform casts between types or represent values of any type.
+- [C Interoperability](c-interoperability.md): Use imported C types or call C variadic functions.
+- [Operator Declarations](operator-declarations.md): Work with prefix, postfix, and infix operators.

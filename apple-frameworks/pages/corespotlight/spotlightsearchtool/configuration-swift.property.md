@@ -1,0 +1,32 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corespotlight/spotlightsearchtool/configuration-swift.property](https://developer.apple.com/documentation/corespotlight/spotlightsearchtool/configuration-swift.property)
+
+# configuration
+
+**Framework:** CoreSpotlight  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+The configuration details for the search tool.
+
+## Declaration
+
+```swift
+let configuration: SpotlightSearchTool.Configuration
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this property to specify the configuration data you want to use with the tool. You use this property to configure the data sources for the tool to search, guidance on how to perform searches, and any custom processing steps your app provides. For more information on how to configure and use [SpotlightSearchTool](../spotlightsearchtool.md), see [Making your indexed content available to Foundation Models](../making-your-indexed-content-available-to-foundation-models.md).
+
+## See Also
+
+### Configuring the tool behavior
+
+- [SpotlightSearchTool.Configuration](configuration-swift.struct.md): The configuration data to use when creating a Spotlight search tool.
+- [SpotlightSearchTool.Guide](guide.md): A type you use to offer guidance about what search capabillities to employ during a session.
+- [SpotlightSearchTool.GuidanceProfile](guidanceprofile.md): Options for which techniques to use to determine a match.
+- [SpotlightSearchTool.GuidanceLevel](guidancelevel.md): Options for how to search your app’s content.
+- [SpotlightSearchTool.ContentDomain](contentdomain.md): A content domain that defines which fields and attribute mappings are presented to the model during a focused search session.
+- [SpotlightSearchTool.FormatLevel](formatlevel.md): Controls how tool responses are serialized for the model’s context window.

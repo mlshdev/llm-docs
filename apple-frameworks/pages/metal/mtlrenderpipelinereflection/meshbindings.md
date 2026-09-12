@@ -1,0 +1,59 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtlrenderpipelinereflection/meshbindings](https://developer.apple.com/documentation/metal/mtlrenderpipelinereflection/meshbindings)
+
+# meshBindings (Swift)
+
+**Framework:** Metal  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+An array of binding instances, each of which represents a parameter of the pipeline state’s mesh shader.
+
+## Declaration
+
+```swift
+var meshBindings: [any MTLBinding] { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The [MTLBinding](../mtlbinding.md) elements in the array are in the same order as the mesh shader’s declaration signature.
+
+## See Also
+
+### Inspecting a shader’s parameter
+
+- [fragmentBindings](fragmentbindings.md): An array of binding instances, each of which represents a parameter of the pipeline state’s fragment shader.
+- [objectBindings](objectbindings.md): An array of binding instances, each of which represents a parameter of the pipeline state’s object shader.
+- [tileBindings](tilebindings.md): An array of binding instances, each of which represents a parameter of the pipeline state’s tile shader.
+- [vertexBindings](vertexbindings.md): An array of binding instances, each of which represents a parameter of the pipeline state’s vertex shader.
+
+# meshBindings (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+
+
+An array of binding instances, each of which represents a parameter of the pipeline state’s mesh shader.
+
+## Declaration
+
+```objectivec
+@property (readonly, nonnull) NSArray<id<MTLBinding>> * meshBindings;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The [MTLBinding](../mtlbinding.md) elements in the array are in the same order as the mesh shader’s declaration signature.
+
+## See Also
+
+### Inspecting a shader’s parameter
+
+- [fragmentBindings](fragmentbindings.md): An array of binding instances, each of which represents a parameter of the pipeline state’s fragment shader.
+- [objectBindings](objectbindings.md): An array of binding instances, each of which represents a parameter of the pipeline state’s object shader.
+- [tileBindings](tilebindings.md): An array of binding instances, each of which represents a parameter of the pipeline state’s tile shader.
+- [vertexBindings](vertexbindings.md): An array of binding instances, each of which represents a parameter of the pipeline state’s vertex shader.

@@ -1,0 +1,39 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/proximityreader/paymentcardreadersession/readerror/pinnotallowed](https://developer.apple.com/documentation/proximityreader/paymentcardreadersession/readerror/pinnotallowed)
+
+# PaymentCardReaderSession.ReadError.pinNotAllowed
+
+**Framework:** ProximityReader  
+**Kind:** Case  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 17.0+
+
+The time window allowed for a PIN capture after a card read has expired or requesting the PIN is simply not supported by your current configuration.
+
+## Declaration
+
+```swift
+case pinNotAllowed
+```
+
+## Mentioned In
+
+- [Adding support for Tap to Pay on iPhone to your app](../../adding-support-for-tap-to-pay-on-iphone-to-your-app.md)
+
+## See Also
+
+### Getting the error
+
+- [PaymentCardReaderSession.ReadError.cardReadFailed](cardreadfailed.md): An error occurred when reading the card.
+- [PaymentCardReaderSession.ReadError.invalidAmount](invalidamount.md): The request contained an invalid amount.
+- [PaymentCardReaderSession.ReadError.invalidCurrencyCode](invalidcurrencycode.md): The request included an invalid currency code.
+- [PaymentCardReaderSession.ReadError.invalidPreferredAID](invalidpreferredaid.md): The preferred AID specified in the transaction request is invalid.
+- [PaymentCardReaderSession.ReadError.invalidVASMerchants(\_:)](invalidvasmerchants%28__%29.md): The specified list of VAS merchants list is invalid.
+- [PaymentCardReaderSession.ReadError.invalidVASRequestParameters(\_:)](invalidvasrequestparameters%28__%29.md): The specified VAS parameters are invalid.
+- [PaymentCardReaderSession.ReadError.nfcDisabled](nfcdisabled.md): NFC is disabled on the device.
+- [PaymentCardReaderSession.ReadError.noReaderSession](noreadersession.md): No reader session available or the session isn’t ready.
+- [PaymentCardReaderSession.ReadError.passcodeDisabled](passcodedisabled.md): Read operations aren’t allowed when the device’s passcode is disabled.
+- [PaymentCardReaderSession.ReadError.paymentCardDeclined](paymentcarddeclined.md): The payment card declined the transaction.
+- [PaymentCardReaderSession.ReadError.paymentReadFailed](paymentreadfailed.md): An internal failure prevented the read operation.
+- [PaymentCardReaderSession.ReadError.pinCancelled](pincancelled.md): The current PIN capture was cancelled, also cancelling any ongoing read operation.
+- [PaymentCardReaderSession.ReadError.pinEntryFailed](pinentryfailed.md): An error occurred when capturing the PIN.
+- [PaymentCardReaderSession.ReadError.pinEntryTimeout](pinentrytimeout.md): The current PIN capture was not completed in allowed time.
+- [PaymentCardReaderSession.ReadError.pinTokenInvalid](pintokeninvalid.md): An error that indicates an invalid PIN token.

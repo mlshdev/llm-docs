@@ -1,0 +1,49 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nscolor/init(name:dynamicprovider:)](https://developer.apple.com/documentation/appkit/nscolor/init(name:dynamicprovider:))
+
+# init(name:dynamicProvider:) (Swift)
+
+**Framework:** AppKit  
+**Kind:** Initializer  
+**Availability:** macOS 10.15+
+
+Creates a dynamic catalog color with a provider that’s used to resolve the exact color value, calculated on first use.
+
+## Declaration
+
+```swift
+init(name colorName: NSColor.Name?, dynamicProvider: @escaping (NSAppearance) -> NSColor)
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When methods on a color need color component values, AppKit calls the provider with [currentDrawingAppearance](../nsappearance/currentdrawingappearance.md). The provider can use the appearance to return another color to use for drawing. For example, if you create a color matching [systemYellow](systemyellow.md) for Light appearance, you’ll get a color matching [systemYellow](systemyellow.md) for Dark appearance when using Dark Mode. As often as possible, use the given appearance.
+
+The `colorName` is equal to the identity of the color and should be universally unique; if `nil`, the system generates a unique name.
+
+The name and the Light (aqua) appearance are encoded as part of this color. If a color is already registered with the same name as the decoded color, the decoded color joins the other color and becomes dynamic again.
+
+# colorWithName:dynamicProvider: (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Type Method  
+**Availability:** macOS 10.15+
+
+Creates a dynamic catalog color with a provider that’s used to resolve the exact color value, calculated on first use.
+
+## Declaration
+
+```objectivec
++ (NSColor *) colorWithName:(NSColorName) colorName dynamicProvider:(NSColor * (^)(NSAppearance *)) dynamicProvider;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When methods on a color need color component values, AppKit calls the provider with [currentDrawingAppearance](../nsappearance/currentdrawingappearance.md). The provider can use the appearance to return another color to use for drawing. For example, if you create a color matching [systemYellowColor](systemyellow.md) for Light appearance, you’ll get a color matching [systemYellowColor](systemyellow.md) for Dark appearance when using Dark Mode. As often as possible, use the given appearance.
+
+The `colorName` is equal to the identity of the color and should be universally unique; if `nil`, the system generates a unique name.
+
+The name and the Light (aqua) appearance are encoded as part of this color. If a color is already registered with the same name as the decoded color, the decoded color joins the other color and becomes dynamic again.

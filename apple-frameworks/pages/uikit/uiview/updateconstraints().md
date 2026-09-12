@@ -1,0 +1,97 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiview/updateconstraints()](https://developer.apple.com/documentation/uikit/uiview/updateconstraints())
+
+# updateConstraints() (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 6.0+ · iPadOS 6.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+Updates constraints for the view.
+
+## Declaration
+
+```swift
+func updateConstraints()
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Override this method to optimize changes to your constraints.
+
+> **Note**
+
+>  It’s almost always cleaner and easier to update a constraint immediately after the affecting change has occurred. For example, if you want to change a constraint in response to a button tap, make that change directly in the button’s action method.
+>
+> You should only override this method when changing constraints in place is too slow, or when a view is producing a number of redundant changes.
+
+To schedule a change, call [setNeedsUpdateConstraints()](setneedsupdateconstraints%28%29.md) on the view. The system then calls your implementation of [updateConstraints()](updateconstraints%28%29.md) before the layout occurs. This lets you verify that all necessary constraints for your content are in place at a time when your custom view’s properties aren’t changing.
+
+Your implementation must be as efficient as possible. Don’t deactivate all your constraints, then reactivate the ones you need. Instead, your app must have some way of tracking your constraints, and validating them during each update pass. Only change items that need to be changed. During each update pass, you must ensure that you have the appropriate constraints for the app’s current state.
+
+Don’t call [setNeedsUpdateConstraints()](setneedsupdateconstraints%28%29.md) inside your implementation. Calling [setNeedsUpdateConstraints()](setneedsupdateconstraints%28%29.md) schedules another update pass, creating a feedback loop.
+
+> **Important**
+
+>  Call `[super updateConstraints]` as the final step in your implementation.
+
+In iOS 18 and later, UIKit supports automatic trait tracking inside this method for traits from this view’s `traitCollection`. For more information, see [Automatic trait tracking](../automatic-trait-tracking.md).
+
+This method supports automatic observation tracking. For more information, see [Updating views automatically with observation tracking in UIKit](../updating-views-automatically-with-observation-tracking-in-uikit.md).
+
+## See Also
+
+### Observing data in views
+
+- [updateProperties()](updateproperties%28%29.md): Configures the view’s content and styling properties before layout.
+- [layoutSubviews()](layoutsubviews%28%29.md): Lays out subviews.
+- [draw(\_:)](draw%28__%29.md): Draws the view’s image within the passed-in rectangle.
+
+# updateConstraints (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 6.0+ · iPadOS 6.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Updates constraints for the view.
+
+## Declaration
+
+```objectivec
+- (void) updateConstraints;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Override this method to optimize changes to your constraints.
+
+> **Note**
+
+>  It’s almost always cleaner and easier to update a constraint immediately after the affecting change has occurred. For example, if you want to change a constraint in response to a button tap, make that change directly in the button’s action method.
+>
+> You should only override this method when changing constraints in place is too slow, or when a view is producing a number of redundant changes.
+
+To schedule a change, call [setNeedsUpdateConstraints](setneedsupdateconstraints%28%29.md) on the view. The system then calls your implementation of [updateConstraints](updateconstraints%28%29.md) before the layout occurs. This lets you verify that all necessary constraints for your content are in place at a time when your custom view’s properties aren’t changing.
+
+Your implementation must be as efficient as possible. Don’t deactivate all your constraints, then reactivate the ones you need. Instead, your app must have some way of tracking your constraints, and validating them during each update pass. Only change items that need to be changed. During each update pass, you must ensure that you have the appropriate constraints for the app’s current state.
+
+Don’t call [setNeedsUpdateConstraints](setneedsupdateconstraints%28%29.md) inside your implementation. Calling [setNeedsUpdateConstraints](setneedsupdateconstraints%28%29.md) schedules another update pass, creating a feedback loop.
+
+> **Important**
+
+>  Call `[super updateConstraints]` as the final step in your implementation.
+
+In iOS 18 and later, UIKit supports automatic trait tracking inside this method for traits from this view’s `traitCollection`. For more information, see [Automatic trait tracking](../automatic-trait-tracking.md).
+
+This method supports automatic observation tracking. For more information, see [Updating views automatically with observation tracking in UIKit](../updating-views-automatically-with-observation-tracking-in-uikit.md).
+
+## See Also
+
+### Observing data in views
+
+- [updateProperties](updateproperties%28%29.md): Configures the view’s content and styling properties before layout.
+- [layoutSubviews](layoutsubviews%28%29.md): Lays out subviews.
+- [drawRect:](draw%28__%29.md): Draws the view’s image within the passed-in rectangle.

@@ -1,0 +1,19 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremedia/cmblockbuffercustomblocksource/init(version:allocateblock:freeblock:refcon:)](https://developer.apple.com/documentation/coremedia/cmblockbuffercustomblocksource/init(version:allocateblock:freeblock:refcon:))
+
+# init(version:AllocateBlock:FreeBlock:refCon:)
+
+**Framework:** Core Media  
+**Kind:** Initializer  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 6.0+
+
+## Declaration
+
+```swift
+init(version: UInt32, AllocateBlock: ((UnsafeMutableRawPointer?, Int) -> UnsafeMutableRawPointer?)?, FreeBlock: ((UnsafeMutableRawPointer?, UnsafeMutableRawPointer, Int) -> Void)?, refCon: UnsafeMutableRawPointer?)
+```
+
+## See Also
+
+### Initializers
+
+- [init()](init%28%29.md)

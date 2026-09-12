@@ -1,0 +1,85 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/1444087-createrangedescriptor](https://developer.apple.com/documentation/coreservices/1444087-createrangedescriptor)
+
+# CreateRangeDescriptor(\_:\_:\_:\_:) (Swift)
+
+**Framework:** Core Services  
+**Kind:** Function  
+**Availability:** Mac Catalyst 13.1+ · macOS 10.0+
+
+Creates a range descriptor that specifies a series of consecutive elements in the same container.
+
+## Declaration
+
+```swift
+func CreateRangeDescriptor(_ rangeStart: UnsafeMutablePointer<AEDesc>!, _ rangeStop: UnsafeMutablePointer<AEDesc>!, _ disposeInputs: Bool, _ theDescriptor: UnsafeMutablePointer<AEDesc>!) -> OSErr
+```
+
+## Parameters
+
+- `rangeStart`: A pointer to an object specifier that identifies the first Apple event object in the range. See [AEDesc](aedesc.md).
+- `rangeStop`: A pointer to an object specifier that identifies the last Apple event object in the range. See [AEDesc](aedesc.md).
+- `disposeInputs`: A Boolean value. Pass (`TRUE`) if the function should dispose of the descriptors for the `rangeStart` and `rangeStop` parameters and set them to the null descriptor or (`FALSE`) if your application will. A value of `FALSE` may be more efficient for some applications because it allows them to reuse descriptors.
+- `theDescriptor`: A pointer to a descriptor. On successful return, the range descriptor created by `CreateRangeDescriptor`. Your application must dispose of this descriptor after it has finished using it. See [AEDesc](aedesc.md).
+
+<a id="return_value"></a>
+
+## Return Value
+
+A result code. See [Result Codes](https://developer.apple.com/documentation/applicationservices/apple_event_manager#1656145).
+
+<a id="discussion"></a>
+
+## Discussion
+
+Although the `rangeStart` and `rangeStop` parameters can be any object specifiers—including object specifiers that specify more than one Apple event object—most applications expect these parameters to specify single Apple event objects.
+
+## See Also
+
+### Creating Object Specifiers
+
+- [CreateCompDescriptor(\_:\_:\_:\_:\_:)](1449155-createcompdescriptor.md): Creates a comparison descriptor that specifies how to compare one or more Apple event objects with either another Apple event object or a descriptor.
+- [CreateLogicalDescriptor(\_:\_:\_:\_:)](1445212-createlogicaldescriptor.md): Creates a logical descriptor that specifies a logical operator and one or more logical terms for the Apple Event Manager to evaluate.
+- [CreateObjSpecifier(\_:\_:\_:\_:\_:\_:)](1450244-createobjspecifier.md): Assembles an object specifier that identifies one or more Apple event objects, from other descriptors.
+- [CreateOffsetDescriptor(\_:\_:)](1444957-createoffsetdescriptor.md): Creates an offset descriptor that specifies the position of an element in relation to the beginning or end of its container.
+
+# CreateRangeDescriptor (Objective-C)
+
+**Framework:** Core Services  
+**Kind:** Function  
+**Availability:** Mac Catalyst 13.1+ · macOS 10.0+
+
+Creates a range descriptor that specifies a series of consecutive elements in the same container.
+
+## Declaration
+
+```objectivec
+OSErr CreateRangeDescriptor(AEDesc *rangeStart, AEDesc *rangeStop, Boolean disposeInputs, AEDesc *theDescriptor);
+```
+
+## Parameters
+
+- `rangeStart`: A pointer to an object specifier that identifies the first Apple event object in the range. See [AEDesc](aedesc.md).
+- `rangeStop`: A pointer to an object specifier that identifies the last Apple event object in the range. See [AEDesc](aedesc.md).
+- `disposeInputs`: A Boolean value. Pass (`TRUE`) if the function should dispose of the descriptors for the `rangeStart` and `rangeStop` parameters and set them to the null descriptor or (`FALSE`) if your application will. A value of `FALSE` may be more efficient for some applications because it allows them to reuse descriptors.
+- `theDescriptor`: A pointer to a descriptor. On successful return, the range descriptor created by `CreateRangeDescriptor`. Your application must dispose of this descriptor after it has finished using it. See [AEDesc](aedesc.md).
+
+<a id="return_value"></a>
+
+## Return Value
+
+A result code. See [Result Codes](https://developer.apple.com/documentation/applicationservices/apple_event_manager#1656145).
+
+<a id="discussion"></a>
+
+## Discussion
+
+Although the `rangeStart` and `rangeStop` parameters can be any object specifiers—including object specifiers that specify more than one Apple event object—most applications expect these parameters to specify single Apple event objects.
+
+## See Also
+
+### Creating Object Specifiers
+
+- [CreateCompDescriptor](1449155-createcompdescriptor.md): Creates a comparison descriptor that specifies how to compare one or more Apple event objects with either another Apple event object or a descriptor.
+- [CreateLogicalDescriptor](1445212-createlogicaldescriptor.md): Creates a logical descriptor that specifies a logical operator and one or more logical terms for the Apple Event Manager to evaluate.
+- [CreateObjSpecifier](1450244-createobjspecifier.md): Assembles an object specifier that identifies one or more Apple event objects, from other descriptors.
+- [CreateOffsetDescriptor](1444957-createoffsetdescriptor.md): Creates an offset descriptor that specifies the position of an element in relation to the beginning or end of its container.

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "project": "apple-swift",
+  "title": "Apple Swift",
+  "homepage": "https://developer.apple.com/documentation/swift",
+  "catalog": "swift",
+  "tag": "snapshot-eebba30a4ab9",
+  "snapshotDigest": "eebba30a4ab9373b19010bdf3b1cdcfadf5599b64611c1dd07958482a85ddfa6",
+  "contentDigest": "a75ea1b797dba81590ef806324478845f3824ddec90b657f9212b5df093d17f9",
+  "capturedAt": "2026-09-12T21:04:59.660Z",
+  "documentCount": 19692,
+  "notes": [
+    "Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.",
+    "6 frameworks in this catalog, captured at 2026-09-12T21:04:59.660Z.",
+    "Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.",
+    "Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream."
+  ]
+}

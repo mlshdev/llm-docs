@@ -1,0 +1,23 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uilistcontentconfiguration-swift.struct/textproperties-swift.struct/texttransform/none](https://developer.apple.com/documentation/uikit/uilistcontentconfiguration-swift.struct/textproperties-swift.struct/texttransform/none)
+
+# UIListContentConfiguration.TextProperties.TextTransform.none
+
+**Framework:** UIKit  
+**Kind:** Case  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · tvOS 14.0+ · visionOS
+
+The text doesn’t have a transform.
+
+## Declaration
+
+```swift
+case none
+```
+
+## See Also
+
+### Text transforms
+
+- [UIListContentConfiguration.TextProperties.TextTransform.capitalized](capitalized.md): Displays the text with the first character capitalized.
+- [UIListContentConfiguration.TextProperties.TextTransform.lowercase](lowercase.md): Displays the text in all lowercase characters.
+- [UIListContentConfiguration.TextProperties.TextTransform.uppercase](uppercase.md): Displays the text in all uppercase characters.

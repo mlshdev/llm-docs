@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/livecommunicationkit/settranslatingaction/fulfill(using:)](https://developer.apple.com/documentation/livecommunicationkit/settranslatingaction/fulfill(using:))
+
+# fulfill(using:)
+
+**Framework:** LiveCommunicationKit  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+
+
+Reports that the translation action was successful.
+
+## Declaration
+
+```swift
+final func fulfill(using translationEngine: SetTranslatingAction.TranslationEngine)
+```
+
+## Parameters
+
+- `translationEngine`: A value that indicates whether the translation action used the system’s default translation engine or an external translation engine.
+
+## See Also
+
+### Completing a translation
+
+- [SetTranslatingAction.TranslationEngine](translationengine.md): Values that describe the translation engine that provided a translation.

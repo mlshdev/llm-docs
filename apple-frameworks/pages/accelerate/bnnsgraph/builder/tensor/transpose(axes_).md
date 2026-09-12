@@ -1,0 +1,19 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/bnnsgraph/builder/tensor/transpose(axes:)](https://developer.apple.com/documentation/accelerate/bnnsgraph/builder/tensor/transpose(axes:))
+
+# transpose(axes:)
+
+**Framework:** Accelerate  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
+
+Adds a transpose operation to the current graph.
+
+## Declaration
+
+```swift
+func transpose(axes: [Int]) -> BNNSGraph.Builder.Tensor<T>
+```
+
+## Parameters
+
+- `axes`: An array that specifies the order in which the operation permutes the dimensions. For example, specify an `axes` of `[0, 1, 3, 2]` to specify that the operation swaps the last two dimensions of a 4D tensor.

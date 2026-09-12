@@ -1,0 +1,62 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/safari-developer-tools/inspect-apps-and-devices](https://developer.apple.com/documentation/safari-developer-tools/inspect-apps-and-devices)
+
+# Inspect Apps and Devices
+
+**Framework:** Safari Developer Features  
+**Kind:** Article
+
+Discover all inspectable web content in Safari and other apps on your Mac and on connected devices.
+
+<a id="Overview"></a>
+
+## Overview
+
+The **Inspect Apps and Devices** menu item from the **Develop** menu opens the **Apps and Devices Inspection** window which shows all inspectable web content in Safari, as well as web content used by other applications on your Mac, on running simulators, and on connected devices that are configured for inspection.
+
+You can use this window to observe web content as it becomes available for inspection. This is also where you can configure automatic inspection for JSContexts.
+
+![Apps and Devices Inspection window open, with a MacBook Pro device selected, showing Safari and Safari Technology Preview, each with an inspectable webpage, and a third-party macOS app with an inspectable JSContext.](https://developer.apple.com/images/com.apple.safari.developer-tools/AppsAndDevicesInspection@2x.png)
+
+<a id="Using-the-Apps-and-Devices-Inspection-window"></a>
+
+## Using the Apps and Devices Inspection window
+
+The **Apps and Devices Inspection** window sidebar shows your Mac, any connected and paired devices, such as iPhone, iPad or Apple Vision Pro, and any simulators that are currently running. Each inspectable device and simulator shows its name and OS version to make it easier to find the specific device you want to inspect.
+
+Select a device to see inspectable web content available on that device grouped by the app it belongs to. This includes webpages, WKWebViews, JSContexts, service workers, Home Screen web apps, and Web Extension background pages. Click on a web content listing to launch [Web Inspector](web-inspector.md) for it.
+
+The list of apps for a device updates automatically to show any app that is currently running inspectable web content (see [Enabling inspecting content in your apps](enabling-inspecting-content-in-your-apps.md)).
+
+<a id="Automatic-Inspection-of-JSContexts"></a>
+
+## Automatic Inspection of JSContexts
+
+You can configure Web Inspector to automatically open for new JSContexts created in your app. Identify your app in the list of apps currently running inspectable web content and click the three-dots menu to reveal the automatic inspection settings:
+
+- **Automatically Inspect New JSContexts**: When enabled, Web Inspector is automatically opened whenever a `JSContext` is created by the app on the device.
+- **Automatically Pause New JSContexts**: When enabled, Web Inspector will also pause JavaScript execution when automatically inspecting a new `JSContext`. These two options are typically used together to debug issues in short-lived scripts or at the beginning of a script.
+
+If the `JSContext` you want to inspect automatically is already running, you will need to relaunch your app for automatic inspection settings to trigger the desired action.
+
+<a id="Automatic-Inspection-of-Service-Workers"></a>
+
+## Automatic Inspection of Service Workers
+
+Service workers can be short-lived or perform their actions before you can get to manually inspect them via the Develop menu, for example, when handling a push message for a Home Screen web app.
+
+You can configure Web Inspector to automatically open when a service worker is launched by Safari, a Home Screen web app, or any another app that runs service workers. Identify the app in the list of apps currently running inspectable web content and click the three-dots menu to reveal the automatic inspection settings:
+
+- **Automatically Inspect New Service Workers**: When enabled, Web Inspector is automatically opened whenever a service worker is created by the app on the device.
+- **Automatically Pause New Service Workers**: When enabled, Web Inspector will also pause JavaScript execution when automatically inspecting a new service worker. These two options are typically used together to debug issues in short-lived scripts or at the beginning of a script.
+
+If the service worker you want to inspect automatically is already running, you will need to cause it to relaunch for automatic inspection settings to trigger the desired action, for example, by closing and reopening the Safari tab that instantiates it.
+
+## See Also
+
+### Tools
+
+- [Develop menu](develop-menu.md): Access tools for debugging webpages in Safari, as well as tools for debugging web content in other apps and on other devices.
+- [Web Inspector](web-inspector.md): Use Web Inspector to inspect and debug your HTML, CSS, and JavaScript.
+- [Responsive Design Mode](responsive-design-mode.md): Use Responsive Design Mode to test your `media` queries and other dynamic styles to ensure your webpages look great on any screen.
+- [Connecting an AI agent to Safari](connecting-an-ai-agent-to-safari.md): Inspect, test, and debug your website with an AI agent connected to the Safari MCP server.
+- [WebDriver](webdriver.md): Use WebDriver to write robust, comprehensive tests and run them against any browser that has a WebDriver-compliant driver, including Safari.

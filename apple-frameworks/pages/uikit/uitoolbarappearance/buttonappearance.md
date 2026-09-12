@@ -1,0 +1,53 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uitoolbarappearance/buttonappearance](https://developer.apple.com/documentation/uikit/uitoolbarappearance/buttonappearance)
+
+# buttonAppearance (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · tvOS 13.0+ · visionOS 1.0+
+
+The appearance attributes for plain bar button items in the toolbar.
+
+## Declaration
+
+```swift
+@NSCopying var buttonAppearance: UIBarButtonItemAppearance { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+To configure the appearance of a done button item, use the [doneButtonAppearance](donebuttonappearance.md) property instead.
+
+## See Also
+
+### Configuring bar button items
+
+- [prominentButtonAppearance](prominentbuttonappearance.md): The appearance attributes for Prominent buttons.
+
+# buttonAppearance (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · tvOS 13.0+ · visionOS 1.0+
+
+The appearance attributes for plain bar button items in the toolbar.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, readwrite) UIBarButtonItemAppearance * buttonAppearance;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+To configure the appearance of a done button item, use the [doneButtonAppearance](donebuttonappearance.md) property instead.
+
+## See Also
+
+### Configuring bar button items
+
+- [prominentButtonAppearance](prominentbuttonappearance.md): The appearance attributes for Prominent buttons.

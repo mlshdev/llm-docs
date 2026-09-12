@@ -1,0 +1,36 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/synchronization/atomic/subtract(_:ordering:)-2ds2s](https://developer.apple.com/documentation/synchronization/atomic/subtract(_:ordering:)-2ds2s)
+
+# subtract(\_:ordering:)
+
+**Framework:** Synchronization  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
+
+Perform an atomic subtract operation and return the old and new value, applying the specified memory ordering.
+
+## Declaration
+
+```swift
+@discardableResult func subtract(_ operand: UInt64, ordering: AtomicUpdateOrdering) -> (oldValue: UInt64, newValue: UInt64)
+```
+
+## Parameters
+
+- `operand`: An integer value.
+- `ordering`: The memory ordering to apply on this operation.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A tuple containing the original value before the operation and the new value after the operation.
+
+<a id="discussion"></a>
+
+## Discussion
+
+> **Note**
+
+> This operation checks for overflow at runtime and will trap if an overflow does occur. In `-Ounchecked` builds, overflow checking is not performed.
+>
+> The need to check for overflow means that this operation is typically compiled into a compare-exchange loop. For use cases that require a direct atomic subtraction, see the `wrappingSubtract` operation: it avoids the loop, but in exchange it allows silent wraps on overflow.

@@ -1,0 +1,43 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/iorpcmessageerrorreturncontent](https://developer.apple.com/documentation/driverkit/iorpcmessageerrorreturncontent)
+
+# IORPCMessageErrorReturnContent
+
+**Interface language:** Objective-C
+
+**Framework:** DriverKit  
+**Kind:** Structure  
+**Availability:** DriverKit · iOS · iPadOS · macOS
+
+## Declaration
+
+```objectivec
+struct IORPCMessageErrorReturnContent;
+```
+
+## Topics
+
+### Instance Properties
+
+- [hdr](iorpcmessageerrorreturncontent/hdr.md)
+- [pad](iorpcmessageerrorreturncontent/pad.md)
+- [result](iorpcmessageerrorreturncontent/result.md)
+
+## See Also
+
+### Structures
+
+- [IODMACommandSpecification](iodmacommandspecification.md)
+- [IOHistogramReportValues](iohistogramreportvalues.md)
+- [IOHistogramSegmentConfig](iohistogramsegmentconfig.md)
+- [IONormDistReportValues](ionormdistreportvalues.md)
+- [IOReportChannel](ioreportchannel.md)
+- [IOReportChannelList](ioreportchannellist.md)
+- [IOReportChannelType](ioreportchanneltype.md)
+- [IOReportElement](ioreportelement.md)
+- [IOReportElementValues](ioreportelementvalues.md)
+- [IOReportInterest](ioreportinterest.md)
+- [IOReportInterestList](ioreportinterestlist.md)
+- [IOSimpleArrayReportValues](iosimplearrayreportvalues.md)
+- [IOSimpleReportValues](iosimplereportvalues.md)
+- [IOStateReportValues](iostatereportvalues.md)
+- [OSSharedPtr](ossharedptr.md)

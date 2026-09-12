@@ -57,6 +57,14 @@ const unresolvedSyntax: Record<ProjectId, RegExp> = {
     /<\/?(?:Accordion|Card|CardGroup|CodeGroup|Expandable|Frame|Info|Note|ParamField|ResponseField|Step|Steps|Tab|Tabs|Tip|Update|Warning)\b/,
   aria2:
     /^\s*\.\.\s+[a-zA-Z][\w:-]*::|:[a-zA-Z][\w:-]*:`|`[^`\n]+`_|^\s*=+(?:\s+=+)+\s*$/m,
+  "apple-swift": /(?!)/,
+  "apple-swiftui": /(?!)/,
+  "apple-webkit": /(?!)/,
+  "apple-xcode": /(?!)/,
+  "apple-ios": /(?!)/,
+  "apple-macos": /(?!)/,
+  "apple-watchos": /(?!)/,
+  "apple-frameworks": /(?!)/,
 };
 
 // A project that cannot be built at all: the caller falls back to the pins and

@@ -1,0 +1,71 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/userdefaults/standard](https://developer.apple.com/documentation/foundation/userdefaults/standard)
+
+# standard (Swift)
+
+**Framework:** Foundation  
+**Kind:** Type Property  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.0+ · macOS 10.0+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+The shared defaults object for the current app.
+
+## Declaration
+
+```swift
+class var standard: UserDefaults { get }
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+The shared defaults object for the app.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Each app maintains a single, shared defaults object for you to use in your code. The first time your app retrieves the value of this property, it creates the shared object and caches the result. Subsequent retrieval attempts return the cached object.
+
+The shared object retrieves settings from all of the standard domains. If you add a domain using the [addSuite(named:)](addsuite%28named_%29.md) method, the object retrieves values from that domain in addition to the standard ones. Custom domains remain in the search list until you remove them or the app exits. When you write settings using the shared object, it writes them to the current app’s settings.
+
+## See Also
+
+### Creating a user defaults object
+
+- [init()](init%28%29.md): Creates a new defaults object and initializes it with the app’s current settings.
+- [init(suiteName:)](init%28suitename_%29.md): Creates a new defaults object and initializes it with the settings from the specified database.
+
+# standardUserDefaults (Objective-C)
+
+**Framework:** Foundation  
+**Kind:** Type Property  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.0+ · macOS 10.0+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+The shared defaults object for the current app.
+
+## Declaration
+
+```objectivec
+@property (class, strong, readonly) NSUserDefaults * standardUserDefaults;
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+The shared defaults object for the app.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Each app maintains a single, shared defaults object for you to use in your code. The first time your app retrieves the value of this property, it creates the shared object and caches the result. Subsequent retrieval attempts return the cached object.
+
+The shared object retrieves settings from all of the standard domains. If you add a domain using the [addSuiteNamed:](addsuite%28named_%29.md) method, the object retrieves values from that domain in addition to the standard ones. Custom domains remain in the search list until you remove them or the app exits. When you write settings using the shared object, it writes them to the current app’s settings.
+
+## See Also
+
+### Creating a user defaults object
+
+- [init](init%28%29.md): Creates a new defaults object and initializes it with the app’s current settings.
+- [initWithSuiteName:](init%28suitename_%29.md): Creates a new defaults object and initializes it with the settings from the specified database.

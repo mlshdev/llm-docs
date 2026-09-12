@@ -1,0 +1,87 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/measurement-unit-attributes](https://developer.apple.com/documentation/appkit/measurement-unit-attributes)
+
+# Measurement Unit Attributes (Swift)
+
+**Framework:** AppKit  
+**Kind:** API Collection
+
+Values that indicate the unit values of a ruler or layout area.
+
+<a id="overview"></a>
+
+## Overview
+
+Use these values with the [units](nsaccessibility-swift.struct/attribute/units.md), [horizontalUnits](nsaccessibility-swift.struct/attribute/horizontalunits.md), and [verticalUnits](nsaccessibility-swift.struct/attribute/verticalunits.md) properties.
+
+## Topics
+
+### Constants
+
+- [inches](nsaccessibility-swift.struct/rulerunitvalue/inches.md): Deprecated. The units are inches.
+- [centimeters](nsaccessibility-swift.struct/rulerunitvalue/centimeters.md): The units are centimeters.
+- [points](nsaccessibility-swift.struct/rulerunitvalue/points.md): The units are points.
+- [picas](nsaccessibility-swift.struct/rulerunitvalue/picas.md): The units are picas.
+- [unknown](nsaccessibility-swift.struct/rulerunitvalue/unknown.md): The units are unknown.
+
+## See Also
+
+### Constants
+
+- [Standard Attributes](standard-attributes.md): Standard attributes that can be adopted by any accessibility object.
+- [Text-Specific Attributes](text-specific-attributes.md): Attributes that are specific to text.
+- [Text-Specific Parameterized Attributes](text-specific-parameterized-attributes.md): Parameterized attributes specific to text.
+- [Text Attributed-String Attributes and Constants](text-attributed-string-attributes-and-constants.md): Attributes and key constants used with attributed strings.
+- [Window-Specific Attributes](window-specific-attributes.md): Attributes specific to windows.
+- [App-Specific Attributes](app-specific-attributes.md): Attributes that are specific to the app object.
+- [Grid View Attributes](grid-view-attributes.md): Attributes that are used with grid views, such as thumbnails and media browsers that present a grid of items. The children of a grid are ordered.
+- [Table View and Outline View Attributes](table-view-and-outline-view-attributes.md): Attributes that are specific to tables and outlines.
+- [Outline View Attributes](outline-view-attributes.md): Attributes that are used in outline views.
+- [Cell-Based Table Attributes](cell-based-table-attributes.md): Attributes that are specific to cell-based tables.
+- [Cell-Based Table Parameterized Attributes](cell-based-table-parameterized-attributes.md): Parameterized attributes specific to cell-based tables.
+- [Cell Attributes](cell-attributes.md): Attributes that are specific to individual table cells.
+- [Layout Area Attributes](layout-area-attributes.md): Attributes that are specific to layout areas.
+- [Layout Area Parameterized Attributes](layout-area-parameterized-attributes.md): Parameterized attributes that are specific to layout areas.
+- [Layout Item Attributes](layout-item-attributes.md): Attributes that are specific to the items in a layout area.
+
+# Measurement Unit Attributes (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** API Collection
+
+Values that indicate the unit values of a ruler or layout area.
+
+<a id="overview"></a>
+
+## Overview
+
+Use these values with the [NSAccessibilityUnitsAttribute](nsaccessibility-swift.struct/attribute/units.md), [NSAccessibilityHorizontalUnitsAttribute](nsaccessibility-swift.struct/attribute/horizontalunits.md), and [NSAccessibilityVerticalUnitsAttribute](nsaccessibility-swift.struct/attribute/verticalunits.md) properties.
+
+## Topics
+
+### Constants
+
+- [NSAccessibilityInchesUnitValue](nsaccessibility-swift.struct/rulerunitvalue/inches.md): Deprecated. The units are inches.
+- [NSAccessibilityCentimetersUnitValue](nsaccessibility-swift.struct/rulerunitvalue/centimeters.md): The units are centimeters.
+- [NSAccessibilityPointsUnitValue](nsaccessibility-swift.struct/rulerunitvalue/points.md): The units are points.
+- [NSAccessibilityPicasUnitValue](nsaccessibility-swift.struct/rulerunitvalue/picas.md): The units are picas.
+- [NSAccessibilityUnknownUnitValue](nsaccessibility-swift.struct/rulerunitvalue/unknown.md): The units are unknown.
+
+## See Also
+
+### Constants
+
+- [Standard Attributes](standard-attributes.md): Standard attributes that can be adopted by any accessibility object.
+- [Text-Specific Attributes](text-specific-attributes.md): Attributes that are specific to text.
+- [Text-Specific Parameterized Attributes](text-specific-parameterized-attributes.md): Parameterized attributes specific to text.
+- [Text Attributed-String Attributes and Constants](text-attributed-string-attributes-and-constants.md): Attributes and key constants used with attributed strings.
+- [Window-Specific Attributes](window-specific-attributes.md): Attributes specific to windows.
+- [App-Specific Attributes](app-specific-attributes.md): Attributes that are specific to the app object.
+- [Grid View Attributes](grid-view-attributes.md): Attributes that are used with grid views, such as thumbnails and media browsers that present a grid of items. The children of a grid are ordered.
+- [Table View and Outline View Attributes](table-view-and-outline-view-attributes.md): Attributes that are specific to tables and outlines.
+- [Outline View Attributes](outline-view-attributes.md): Attributes that are used in outline views.
+- [Cell-Based Table Attributes](cell-based-table-attributes.md): Attributes that are specific to cell-based tables.
+- [Cell-Based Table Parameterized Attributes](cell-based-table-parameterized-attributes.md): Parameterized attributes specific to cell-based tables.
+- [Cell Attributes](cell-attributes.md): Attributes that are specific to individual table cells.
+- [Layout Area Attributes](layout-area-attributes.md): Attributes that are specific to layout areas.
+- [Layout Area Parameterized Attributes](layout-area-parameterized-attributes.md): Parameterized attributes that are specific to layout areas.
+- [Layout Item Attributes](layout-item-attributes.md): Attributes that are specific to the items in a layout area.

@@ -1,0 +1,28 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/attributedstring/transform(updating:body:)-9wpg2](https://developer.apple.com/documentation/foundation/attributedstring/transform(updating:body:)-9wpg2)
+
+# transform(updating:body:)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
+
+Tracks the location of the selection throughout the mutation closure, updating the selection so it represents the same effective locations after the mutation.
+
+## Declaration
+
+```swift
+mutating func transform<E>(updating selection: inout AttributedTextSelection, body: (inout AttributedString) throws(E) -> Void) throws(E) where E : Error
+```
+
+## Parameters
+
+- `selection`: The selection to track throughout the `body` closure.
+- `body`: A mutating operation, or set of operations, to perform on the value of `self`. The value of `self` is provided to the closure as an `inout AttributedString` that the closure should mutate directly. Do not capture the value of `self` in the provided closure - the closure should mutate the provided `inout` copy.
+
+<a id="discussion"></a>
+
+## Discussion
+
+> **Note**
+
+> If the mutation performed does not allow for tracking to succeed (such as replacing the provided inout variable with an entirely different `AttributedString`), the selection is reset to the fallback location at the end of the text.

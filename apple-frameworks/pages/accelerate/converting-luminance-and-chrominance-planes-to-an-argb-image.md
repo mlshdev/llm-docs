@@ -1,0 +1,253 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/converting-luminance-and-chrominance-planes-to-an-argb-image](https://developer.apple.com/documentation/accelerate/converting-luminance-and-chrominance-planes-to-an-argb-image)
+
+# Converting luminance and chrominance planes to an ARGB image (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Sample Code  
+**Availability:** macOS 13.3+ · Xcode 14.3+
+
+Create a displayable ARGB image using the luminance and chrominance information from your device’s camera.
+
+<a id="Overview"></a>
+
+## Overview
+
+As an alternative to the any-to-any conversion technique that [Using vImage pixel buffers to generate video effects](using-vimage-pixel-buffers-to-generate-video-effects.md) describes, vImage provides low-level functions for creating RGB images from the separate luminance and chrominance planes that an [`AVCaptureSession`](../avfoundation/avcapturesession.md) instance provides. These functions offer better performance and more granular configuration than using a [vImageConverter](vimageconverter.md) instance.
+
+<a id="Configure-the-YpCbCr-to-ARGB-information"></a>
+
+### Configure the YpCbCr-to-ARGB information
+
+The [vImageConvert_YpCbCrToARGB_GenerateConversion(\_:\_:\_:\_:\_:\_:)](vimageconvert_ypcbcrtoargb_generateconversion%28____________%29.md) function generates the information that vImage requires to convert the luminance and chrominance planes to a single ARGB image.
+
+Video-range YpCbCr formats often don’t use very low and very high values. For example, an 8-bit video range format typically uses the range `16...235` for luminance and `16...240` for chrominance. The generate conversion function accepts a [vImage_YpCbCrPixelRange](vimage_ypcbcrpixelrange.md) structure that defines the pixel range.
+
+The following code example populates a [vImage_YpCbCrToARGB](vimage_ypcbcrtoargb.md) structure with the required conversion information for video-range 8-bit pixels:
+
+```swift
+var infoYpCbCrToARGB = vImage_YpCbCrToARGB()
+
+func configureYpCbCrToARGBInfo() {
+    var pixelRange = vImage_YpCbCrPixelRange(Yp_bias: 16,
+                                             CbCr_bias: 128,
+                                             YpRangeMax: 235,
+                                             CbCrRangeMax: 240,
+                                             YpMax: 235,
+                                             YpMin: 16,
+                                             CbCrMax: 240,
+                                             CbCrMin: 16)
+
+    var ypCbCrToARGBMatrix = vImage_YpCbCrToARGBMatrix(Yp: 1.0,
+                                                       Cr_R: 1.402, Cr_G: -0.7141363,
+                                                       Cb_G: -0.3441363, Cb_B: 1.772)
+    
+    _ = vImageConvert_YpCbCrToARGB_GenerateConversion(
+        &ypCbCrToARGBMatrix,
+        &pixelRange,
+        &infoYpCbCrToARGB,
+        kvImage422CbYpCrYp8,
+        kvImageARGB8888,
+        vImage_Flags(kvImageNoFlags))
+}
+```
+
+<a id="Lock-the-Core-Video-pixel-buffer"></a>
+
+### Lock the Core Video pixel buffer
+
+Before the sample app accesses the pixel data that AVFoundation supplies as a [`CVPixelBuffer`](../corevideo/cvpixelbuffer-q2e.md), it calls [`CVPixelBufferLockBaseAddress(_:_:)`](../corevideo/cvpixelbufferlockbaseaddress%28____%29.md) to lock the pixel buffer and make the underlying memory available.
+
+After the YpCbCr-to-RGB conversion is complete, the code calls [`CVPixelBufferUnlockBaseAddress(_:_:)`](../corevideo/cvpixelbufferunlockbaseaddress%28____%29.md) to unlock the pixel buffer.
+
+The `convertYpCbCrToRGB(cvPixelBuffer:)` function performs the YpCbCr-to-RGB conversion.
+
+```swift
+CVPixelBufferLockBaseAddress(
+    pixelBuffer,
+    CVPixelBufferLockFlags.readOnly)
+
+convertYpCbCrToRGB(cvPixelBuffer: pixelBuffer)
+
+CVPixelBufferUnlockBaseAddress(
+    pixelBuffer,
+    CVPixelBufferLockFlags.readOnly)
+```
+
+<a id="Create-the-source-luminance-and-chrominance-pixel-buffers"></a>
+
+### Create the source luminance and chrominance pixel buffers
+
+The `convertYpCbCrToRGB(cvPixelBuffer:)` function creates two pixel buffers that share memory with the [`CVPixelBuffer`](../corevideo/cvpixelbuffer-q2e.md). The Core Video pixel buffer contains two planes: the plane at index `0` contains one channel that represents the luminance component, the plane at index `1` contains two interleaved channels that represent the two chrominance components.
+
+The [init(referencing:planeIndex:overrideSize:pixelFormat:)](vimage/pixelbuffer/init%28referencing_planeindex_overridesize_pixelformat_%29.md) function initializes a [vImage.PixelBuffer](vimage/pixelbuffer.md) that references a single plane of a multiple-plane Core Video pixel buffer.
+
+```swift
+let lumaPixelBuffer = vImage.PixelBuffer(referencing: cvPixelBuffer,
+                                         planeIndex: 0,
+                                         pixelFormat: vImage.Planar8.self)
+
+let chromaPixelBuffer = vImage.PixelBuffer(referencing: cvPixelBuffer,
+                                           planeIndex: 1,
+                                           pixelFormat: vImage.Interleaved8x2.self)
+```
+
+<a id="Adjust-the-contrast-of-the-image"></a>
+
+### Adjust the contrast of the image
+
+The sample app provides a [Slider](https://developer.apple.com/documentation/swiftui/slider) for changing the contrast of the final image. The following code example uses the tone-mapping technique that [Adjusting saturation and applying tone mapping](adjusting-saturation-and-applying-tone-mapping.md) describes:
+
+```swift
+if contrast != 1 {
+    lumaPixelBuffer.applyGamma(.halfPrecision(contrast),
+                               destination: lumaPixelBuffer)
+}
+```
+
+<a id="Convert-the-YpCbCr-image-to-an-ARGB-image"></a>
+
+### Convert the YpCbCr image to an ARGB image
+
+The [convert(lumaSource:chromaSource:conversionInfo:)](vimage/pixelbuffer/convert%28lumasource_chromasource_conversioninfo_%29.md) converts the luminance and chrominance information in `lumaPixelBuffer` and `chromaPixelBuffer` to an ARGB image. This pixel buffer method calls the underlying vImage [vImageConvert_420Yp8_CbCr8ToARGB8888(\_:\_:\_:\_:\_:\_:\_:)](vimageconvert_420yp8_cbcr8toargb8888%28______________%29.md) function.
+
+```swift
+argbPixelBuffer.convert(lumaSource: lumaPixelBuffer,
+                        chromaSource: chromaPixelBuffer,
+                        conversionInfo: infoYpCbCrToARGB)
+```
+
+## See Also
+
+### Conversion Between Image Formats
+
+- [Building a basic image conversion workflow](building-a-basic-image-conversion-workflow.md): Learn the fundamentals of the convert-any-to-any function by converting a CMYK image to an RGB image.
+- [Converting color images to grayscale](converting-color-images-to-grayscale.md): Convert an RGB image to grayscale using matrix multiplication.
+- [Applying color transforms to images with a multidimensional lookup table](applying-color-transforms-to-images-with-a-multidimensional-lookup-table.md): Precompute translation values to optimize color space conversion and other pointwise operations.
+- [Building a basic image conversion workflow](building-a-basic-image-conversion-workflow.md): Learn the fundamentals of the convert-any-to-any function by converting a CMYK image to an RGB image.
+- [Conversion](conversion.md): Convert an image to a different format.
+
+# Converting luminance and chrominance planes to an ARGB image (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Sample Code  
+**Availability:** macOS 13.3+ · Xcode 14.3+
+
+Create a displayable ARGB image using the luminance and chrominance information from your device’s camera.
+
+<a id="Overview"></a>
+
+## Overview
+
+As an alternative to the any-to-any conversion technique that [Using vImage pixel buffers to generate video effects](using-vimage-pixel-buffers-to-generate-video-effects.md) describes, vImage provides low-level functions for creating RGB images from the separate luminance and chrominance planes that an [`AVCaptureSession`](../avfoundation/avcapturesession.md) instance provides. These functions offer better performance and more granular configuration than using a [vImageConverterRef](vimageconverter.md) instance.
+
+<a id="Configure-the-YpCbCr-to-ARGB-information"></a>
+
+### Configure the YpCbCr-to-ARGB information
+
+The [vImageConvert_YpCbCrToARGB_GenerateConversion](vimageconvert_ypcbcrtoargb_generateconversion%28____________%29.md) function generates the information that vImage requires to convert the luminance and chrominance planes to a single ARGB image.
+
+Video-range YpCbCr formats often don’t use very low and very high values. For example, an 8-bit video range format typically uses the range `16...235` for luminance and `16...240` for chrominance. The generate conversion function accepts a [vImage_YpCbCrPixelRange](vimage_ypcbcrpixelrange.md) structure that defines the pixel range.
+
+The following code example populates a [vImage_YpCbCrToARGB](vimage_ypcbcrtoargb.md) structure with the required conversion information for video-range 8-bit pixels:
+
+```swift
+var infoYpCbCrToARGB = vImage_YpCbCrToARGB()
+
+func configureYpCbCrToARGBInfo() {
+    var pixelRange = vImage_YpCbCrPixelRange(Yp_bias: 16,
+                                             CbCr_bias: 128,
+                                             YpRangeMax: 235,
+                                             CbCrRangeMax: 240,
+                                             YpMax: 235,
+                                             YpMin: 16,
+                                             CbCrMax: 240,
+                                             CbCrMin: 16)
+
+    var ypCbCrToARGBMatrix = vImage_YpCbCrToARGBMatrix(Yp: 1.0,
+                                                       Cr_R: 1.402, Cr_G: -0.7141363,
+                                                       Cb_G: -0.3441363, Cb_B: 1.772)
+    
+    _ = vImageConvert_YpCbCrToARGB_GenerateConversion(
+        &ypCbCrToARGBMatrix,
+        &pixelRange,
+        &infoYpCbCrToARGB,
+        kvImage422CbYpCrYp8,
+        kvImageARGB8888,
+        vImage_Flags(kvImageNoFlags))
+}
+```
+
+<a id="Lock-the-Core-Video-pixel-buffer"></a>
+
+### Lock the Core Video pixel buffer
+
+Before the sample app accesses the pixel data that AVFoundation supplies as a [`CVPixelBuffer`](../corevideo/cvpixelbuffer-q2e.md), it calls [`CVPixelBufferLockBaseAddress(_:_:)`](../corevideo/cvpixelbufferlockbaseaddress%28____%29.md) to lock the pixel buffer and make the underlying memory available.
+
+After the YpCbCr-to-RGB conversion is complete, the code calls [`CVPixelBufferUnlockBaseAddress(_:_:)`](../corevideo/cvpixelbufferunlockbaseaddress%28____%29.md) to unlock the pixel buffer.
+
+The `convertYpCbCrToRGB(cvPixelBuffer:)` function performs the YpCbCr-to-RGB conversion.
+
+```swift
+CVPixelBufferLockBaseAddress(
+    pixelBuffer,
+    CVPixelBufferLockFlags.readOnly)
+
+convertYpCbCrToRGB(cvPixelBuffer: pixelBuffer)
+
+CVPixelBufferUnlockBaseAddress(
+    pixelBuffer,
+    CVPixelBufferLockFlags.readOnly)
+```
+
+<a id="Create-the-source-luminance-and-chrominance-pixel-buffers"></a>
+
+### Create the source luminance and chrominance pixel buffers
+
+The `convertYpCbCrToRGB(cvPixelBuffer:)` function creates two pixel buffers that share memory with the [`CVPixelBuffer`](../corevideo/cvpixelbuffer-q2e.md). The Core Video pixel buffer contains two planes: the plane at index `0` contains one channel that represents the luminance component, the plane at index `1` contains two interleaved channels that represent the two chrominance components.
+
+The [init(referencing:planeIndex:overrideSize:pixelFormat:)](vimage/pixelbuffer/init%28referencing_planeindex_overridesize_pixelformat_%29.md) function initializes a [vImage.PixelBuffer](vimage/pixelbuffer.md) that references a single plane of a multiple-plane Core Video pixel buffer.
+
+```swift
+let lumaPixelBuffer = vImage.PixelBuffer(referencing: cvPixelBuffer,
+                                         planeIndex: 0,
+                                         pixelFormat: vImage.Planar8.self)
+
+let chromaPixelBuffer = vImage.PixelBuffer(referencing: cvPixelBuffer,
+                                           planeIndex: 1,
+                                           pixelFormat: vImage.Interleaved8x2.self)
+```
+
+<a id="Adjust-the-contrast-of-the-image"></a>
+
+### Adjust the contrast of the image
+
+The sample app provides a [Slider](https://developer.apple.com/documentation/swiftui/slider) for changing the contrast of the final image. The following code example uses the tone-mapping technique that [Adjusting saturation and applying tone mapping](adjusting-saturation-and-applying-tone-mapping.md) describes:
+
+```swift
+if contrast != 1 {
+    lumaPixelBuffer.applyGamma(.halfPrecision(contrast),
+                               destination: lumaPixelBuffer)
+}
+```
+
+<a id="Convert-the-YpCbCr-image-to-an-ARGB-image"></a>
+
+### Convert the YpCbCr image to an ARGB image
+
+The [convert(lumaSource:chromaSource:conversionInfo:)](vimage/pixelbuffer/convert%28lumasource_chromasource_conversioninfo_%29.md) converts the luminance and chrominance information in `lumaPixelBuffer` and `chromaPixelBuffer` to an ARGB image. This pixel buffer method calls the underlying vImage [vImageConvert_420Yp8_CbCr8ToARGB8888](vimageconvert_420yp8_cbcr8toargb8888%28______________%29.md) function.
+
+```swift
+argbPixelBuffer.convert(lumaSource: lumaPixelBuffer,
+                        chromaSource: chromaPixelBuffer,
+                        conversionInfo: infoYpCbCrToARGB)
+```
+
+## See Also
+
+### Conversion Between Image Formats
+
+- [Building a basic image conversion workflow](building-a-basic-image-conversion-workflow.md): Learn the fundamentals of the convert-any-to-any function by converting a CMYK image to an RGB image.
+- [Converting color images to grayscale](converting-color-images-to-grayscale.md): Convert an RGB image to grayscale using matrix multiplication.
+- [Applying color transforms to images with a multidimensional lookup table](applying-color-transforms-to-images-with-a-multidimensional-lookup-table.md): Precompute translation values to optimize color space conversion and other pointwise operations.
+- [Building a basic image conversion workflow](building-a-basic-image-conversion-workflow.md): Learn the fundamentals of the convert-any-to-any function by converting a CMYK image to an RGB image.
+- [Conversion](conversion.md): Convert an image to a different format.

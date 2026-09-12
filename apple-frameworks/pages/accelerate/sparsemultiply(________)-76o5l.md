@@ -1,0 +1,173 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/sparsemultiply(_:_:_:_:)-76o5l](https://developer.apple.com/documentation/accelerate/sparsemultiply(_:_:_:_:)-76o5l)
+
+# SparseMultiply(\_:\_:\_:\_:) (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+ · watchOS 4.0+
+
+Performs the multiply operation *y* *= alpha \* Ax* on a vector of double-precision, floating-point values.
+
+## Declaration
+
+```swift
+func SparseMultiply(_ alpha: Double, _ A: SparseMatrix_Double, _ x: DenseVector_Double, _ y: DenseVector_Double)
+```
+
+## Parameters
+
+- `alpha`: The scalar value *alpha* in *y* *= alpha \* Ax*.
+- `A`: The sparse matrix *A* in *y* *= Ax*.
+- `x`: The dense vector *x* in *y* *= Ax*.
+- `y`: The dense vector *y* in *y* *= Ax*.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this function to multiply a scalar by a sparse matrix, and then by a dense vector. The following equation is an example of a scalar-matrix-vector multiplication where the matrix is sparse:
+
+![A mathematical formula that describes the matrix multiplication, y equals alpha times A x. A scalar value multiplied by a four-by-four matrix multiplied by a four-element column matrix equals a four-element column matrix.](https://developer.apple.com/images/com.apple.accelerate/media-3703082@2x.png)
+
+Call [SparseMultiply(\_:\_:\_:\_:)](sparsemultiply%28________%29-76o5l.md) to calculate the result.
+
+```swift
+let rowCount = Int32(4)
+let columnCount = Int32(4)
+let blockCount = 4
+let blockSize = UInt8(1)
+let rowIndices: [Int32] = [0, 3, 0, 3]
+let columnIndices: [Int32] = [0, 0, 3, 3]
+let data = [1.0, 4.0, 13.0, 16.0]
+
+/// The _A_ in _y = alpha * Ax_.
+let A = SparseConvertFromCoordinate(rowCount, columnCount,
+                                    blockCount, blockSize,
+                                    SparseAttributes_t(),
+                                    rowIndices, columnIndices,
+                                    data)
+defer {
+    SparseCleanup(A)
+}
+
+/// The values for _x_ in _y = alpha * Ax_.
+var xValues = [10.0, -1.0, -1.0, 10.0]
+
+let alpha = 2.0
+
+/// The values for _y_ in _y = alpha * Ax_.
+let yValues = [Double](unsafeUninitializedCapacity: xValues.count) {
+    resultBuffer, count in
+    
+    xValues.withUnsafeMutableBufferPointer { xValuesPtr in
+        /// The _x_ in _y = alpha * Ax_.
+        let x = DenseVector_Double(count: 4, 
+                                   data: xValuesPtr.baseAddress!)
+        
+        /// The _y_ in _y = alpha * Ax_.
+        let y = DenseVector_Double(count: 4,
+                                   data: resultBuffer.baseAddress!)
+        
+        SparseMultiply(alpha, A, x, y)
+    }
+    
+    count = xValues.count
+}
+
+/// On return, `yValues` contains:
+///      `[ 280.0, 0.0, 0.0,  400.0 ]`
+```
+
+## See Also
+
+### Multiplication functions
+
+- [SparseMultiply(\_:\_:\_:)](sparsemultiply%28______%29-9d57s.md): Performs the multiplication *y = Ax* on a vector of double-precision, floating-point values.
+- [SparseMultiply(\_:\_:\_:)](sparsemultiply%28______%29-4hrs4.md): Performs the multiplication *y = Ax* on a vector of single-precision, floating-point values.
+- [SparseMultiply(\_:\_:\_:\_:)](sparsemultiply%28________%29-8yzgo.md): Performs the multiply operation *y* *= alpha \* Ax* on a vector of single-precision, floating-point values.
+
+# SparseMultiply (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+ · watchOS 4.0+
+
+Performs the multiply operation *y* *= alpha \* Ax* on a vector of double-precision, floating-point values.
+
+## Declaration
+
+```objectivec
+static void SparseMultiply(double alpha, SparseMatrix_Double A, DenseVector_Double x, DenseVector_Double y);
+```
+
+## Parameters
+
+- `alpha`: The scalar value *alpha* in *y* *= alpha \* Ax*.
+- `A`: The sparse matrix *A* in *y* *= Ax*.
+- `x`: The dense vector *x* in *y* *= Ax*.
+- `y`: The dense vector *y* in *y* *= Ax*.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this function to multiply a scalar by a sparse matrix, and then by a dense vector. The following equation is an example of a scalar-matrix-vector multiplication where the matrix is sparse:
+
+![A mathematical formula that describes the matrix multiplication, y equals alpha times A x. A scalar value multiplied by a four-by-four matrix multiplied by a four-element column matrix equals a four-element column matrix.](https://developer.apple.com/images/com.apple.accelerate/media-3703082@2x.png)
+
+Call [SparseMultiply](sparsemultiply%28________%29-76o5l.md) to calculate the result.
+
+```swift
+let rowCount = Int32(4)
+let columnCount = Int32(4)
+let blockCount = 4
+let blockSize = UInt8(1)
+let rowIndices: [Int32] = [0, 3, 0, 3]
+let columnIndices: [Int32] = [0, 0, 3, 3]
+let data = [1.0, 4.0, 13.0, 16.0]
+
+/// The _A_ in _y = alpha * Ax_.
+let A = SparseConvertFromCoordinate(rowCount, columnCount,
+                                    blockCount, blockSize,
+                                    SparseAttributes_t(),
+                                    rowIndices, columnIndices,
+                                    data)
+defer {
+    SparseCleanup(A)
+}
+
+/// The values for _x_ in _y = alpha * Ax_.
+var xValues = [10.0, -1.0, -1.0, 10.0]
+
+let alpha = 2.0
+
+/// The values for _y_ in _y = alpha * Ax_.
+let yValues = [Double](unsafeUninitializedCapacity: xValues.count) {
+    resultBuffer, count in
+    
+    xValues.withUnsafeMutableBufferPointer { xValuesPtr in
+        /// The _x_ in _y = alpha * Ax_.
+        let x = DenseVector_Double(count: 4, 
+                                   data: xValuesPtr.baseAddress!)
+        
+        /// The _y_ in _y = alpha * Ax_.
+        let y = DenseVector_Double(count: 4,
+                                   data: resultBuffer.baseAddress!)
+        
+        SparseMultiply(alpha, A, x, y)
+    }
+    
+    count = xValues.count
+}
+
+/// On return, `yValues` contains:
+///      `[ 280.0, 0.0, 0.0,  400.0 ]`
+```
+
+## See Also
+
+### Multiplication functions
+
+- [SparseMultiply](sparsemultiply%28______%29-9d57s.md): Performs the multiplication *y = Ax* on a vector of double-precision, floating-point values.
+- [SparseMultiply](sparsemultiply%28______%29-4hrs4.md): Performs the multiplication *y = Ax* on a vector of single-precision, floating-point values.
+- [SparseMultiply](sparsemultiply%28________%29-8yzgo.md): Performs the multiply operation *y* *= alpha \* Ax* on a vector of single-precision, floating-point values.

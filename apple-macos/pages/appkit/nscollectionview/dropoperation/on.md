@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nscollectionview/dropoperation/on](https://developer.apple.com/documentation/appkit/nscollectionview/dropoperation/on)
+
+# NSCollectionView.DropOperation.on (Swift)
+
+**Framework:** AppKit  
+**Kind:** Case  
+**Availability:** macOS 10.6+
+
+The drop occurs at the collection view item to which the item was dragged.
+
+## Declaration
+
+```swift
+case on
+```
+
+## See Also
+
+### Constants
+
+- [NSCollectionView.DropOperation.before](before.md): The drop occurs before the collection view item to which the item was dragged.
+
+# NSCollectionViewDropOn (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Enumeration Case  
+**Availability:** macOS 10.6+
+
+The drop occurs at the collection view item to which the item was dragged.
+
+## Declaration
+
+```objectivec
+NSCollectionViewDropOn
+```
+
+## See Also
+
+### Constants
+
+- [NSCollectionViewDropBefore](before.md): The drop occurs before the collection view item to which the item was dragged.

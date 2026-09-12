@@ -10,13 +10,17 @@ import {
 import { convertMdx } from "../mdx.ts";
 import type { MdxImport } from "../mdx.ts";
 import { DocumentCollector } from "../quarantine.ts";
-import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
+import type {
+  GithubLockedSource,
+  GithubSourceProject,
+  ProjectBuild,
+} from "../types.ts";
 
 const siteBase = "https://bun.com/docs";
 
 export async function buildBun(
-  project: SourceProject,
-  lock: LockedSource,
+  project: GithubSourceProject,
+  lock: GithubLockedSource,
 ): Promise<ProjectBuild> {
   return withRepositoryArchive(
     project.repository,

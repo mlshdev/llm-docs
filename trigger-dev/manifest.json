@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "project": "trigger-dev",
   "title": "Trigger.dev",
+  "homepage": "https://trigger.dev/docs",
   "repository": "triggerdotdev/trigger.dev",
   "tag": "v4.5.16",
   "releaseId": 381460886,

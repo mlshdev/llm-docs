@@ -1,0 +1,178 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/apple-school-and-business-manager-api/apple-school-manager-and-apple-business-api-changelog](https://developer.apple.com/documentation/apple-school-and-business-manager-api/apple-school-manager-and-apple-business-api-changelog)
+
+# Apple School Manager and Apple Business APIs changelog
+
+**Interface language:** Data
+
+**Kind:** Article
+
+Learn about new features and updates in the Apple School Manager and Apple Business APIs.
+
+<a id="Overview"></a>
+
+### Overview
+
+Use this changelog to learn about feature updates, deprecations, and removals for the Apple School Manager and Apple Business APIs.
+
+<a id="24-Apple-Business-2026826"></a>
+
+### 2.4 (Apple Business) - 2026/8/26
+
+New features for the Apple Business APIs
+
+Added support for releasing devices using the following endpoint:
+
+- [Assign, Unassign Devices to a Device Management Service or Release Devices.](https://developer.apple.com/documentation/applebusinessapi/create-an-orgdeviceactivity)
+
+<a id="23-Apple-Business-2026812"></a>
+
+### 2.3 (Apple Business) - 2026/8/12
+
+<a id="16-Apple-School-Manager-2026812"></a>
+
+### 1.6 (Apple School Manager) - 2026/8/12
+
+New features for the Apple School Manager and Apple Business APIs
+
+Added support for device management service migration, allowing organizations to change device management services for their managed devices without erasing the device. Supports scheduling, updating, and canceling a device management service migration using the `orgDeviceActivities` activity types:
+
+- [Apple School Manager: Assign or Unassign Devices to a Device Management Service.](https://developer.apple.com/documentation/appleschoolmanagerapi/create-an-orgdeviceactivity)
+- [Apple Business: Assign or Unassign Devices to a Device Management Service.](https://developer.apple.com/documentation/applebusinessapi/create-an-orgdeviceactivity)
+- New read-only fields on organization devices: `isMdmMigrationCapable`, `mdmMigrationStatus`, and `mdmMigrationDeadlineDateTime`.
+
+<a id="22-2026715"></a>
+
+### 2.2 - 2026/7/15
+
+New features for the Apple Business APIs
+
+Added support for organizational units using the following endpoints:
+
+- [Get Organizational Units.](https://developer.apple.com/documentation/applebusinessapi/get-organizational-units)
+- [Get Organizational Unit Information.](https://developer.apple.com/documentation/applebusinessapi/get-organizationalunit-information)
+- [Get User IDs for an Organizational Unit.](https://developer.apple.com/documentation/applebusinessapi/get-all-user-ids-for-an-organizationalunit)
+
+<a id="21-202663"></a>
+
+### 2.1 - 2026/6/3
+
+New features for the Apple Business APIs
+
+Added support for managing device management services using the following endpoints:
+
+- [Get Device Management Service Information.](https://developer.apple.com/documentation/applebusinessapi/get-mdmserver-information)
+- [Create a Device Management Service.](https://developer.apple.com/documentation/applebusinessapi/create-an-mdmserver)
+- [Update a Device Management Service.](https://developer.apple.com/documentation/applebusinessapi/update-an-mdmserver)
+- [Delete a Device Management Service.](https://developer.apple.com/documentation/applebusinessapi/delete-an-mdmserver)
+
+<a id="20-2026414"></a>
+
+### 2.0 - 2026/4/14
+
+New features for the Apple Business APIs
+
+Added the following endpoints:
+
+- Audit events (to query organization audit events with filtering support)
+
+  - [Retrieve a list of audit events for an organization.](https://developer.apple.com/documentation/applebusinessapi/get-audit-events)
+- User and user group management services
+
+  - [Get a list of users in an organization.](https://developer.apple.com/documentation/applebusinessapi/get-users)
+  - [Get information about a specific user in an organization.](https://developer.apple.com/documentation/applebusinessapi/get-user-information)
+  - [Get a list of user groups in an organization.](https://developer.apple.com/documentation/applebusinessapi/get-user-groups)
+  - [Get information about a specific user group in an organization.](https://developer.apple.com/documentation/applebusinessapi/get-usergroup-information)
+  - [Get a list of users assigned to a user group in an organization.](https://developer.apple.com/documentation/applebusinessapi/get-all-user-ids-for-a-user-group)
+- Apps and packages
+
+  - [Get the licensed apps in an organization.](https://developer.apple.com/documentation/applebusinessapi/get-apps)
+  - [Get information about a specific app in an organization.](https://developer.apple.com/documentation/applebusinessapi/get-app-information)
+  - [Get packages in an organization.](https://developer.apple.com/documentation/applebusinessapi/get-packages)
+  - [Get information about a specific package in an organization.](https://developer.apple.com/documentation/applebusinessapi/get-package-information)
+
+Added full Configuration management: create, read, update, delete, and support for custom Configurations
+
+- [Get the list of Configurations in an organization.](https://developer.apple.com/documentation/applebusinessapi/get-configurations)
+- [Get the details of a Configuration in an organization.](https://developer.apple.com/documentation/applebusinessapi/get-configuration-information)
+- [Create a Configuration in an organization (of type CUSTOM_SETTING).](https://developer.apple.com/documentation/applebusinessapi/create-a-configuration)
+- [Update a Configuration in an organization (of type CUSTOM_SETTING).](https://developer.apple.com/documentation/applebusinessapi/update-a-configuration)
+- [Delete a Configuration in an organization.](https://developer.apple.com/documentation/applebusinessapi/delete-a-configuration)
+
+Added full Blueprint management: create, read, update, delete, and endpoints to manage Blueprint relationships with apps, packages, configurations, devices, users, and user groups
+
+- [Get a list of Blueprints in an organization.](https://developer.apple.com/documentation/applebusinessapi/get-blueprints)
+- [Create a Blueprint in an organization.](https://developer.apple.com/documentation/applebusinessapi/create-a-blueprint)
+- [Get information about a Blueprint in an organization.](https://developer.apple.com/documentation/applebusinessapi/get-blueprint-information)
+- [Update a Blueprint in an organization.](https://developer.apple.com/documentation/applebusinessapi/update-a-blueprint)
+- [Delete a Blueprint in an organization.](https://developer.apple.com/documentation/applebusinessapi/delete-a-blueprint)
+- [Get a list of app IDs associated with a Blueprint.](https://developer.apple.com/documentation/applebusinessapi/get-all-app-ids-for-a-blueprint)
+- [Add apps to a Blueprint.](https://developer.apple.com/documentation/applebusinessapi/add-apps-to-a-blueprint)
+- [Remove apps from a Blueprint.](https://developer.apple.com/documentation/applebusinessapi/remove-apps-from-a-blueprint)
+- [Get a list of Configuration IDs associated with a Blueprint.](https://developer.apple.com/documentation/applebusinessapi/get-all-configuration-ids-for-a-blueprint)
+- [Add Configurations to a Blueprint.](https://developer.apple.com/documentation/applebusinessapi/add-configurations-to-a-blueprint)
+- [Remove Configurations from a Blueprint.](https://developer.apple.com/documentation/applebusinessapi/remove-configurations-from-a-blueprint)
+- [Get a list of package IDs associated with a Blueprint.](https://developer.apple.com/documentation/applebusinessapi/get-all-package-ids-for-a-blueprint)
+- [Add packages to a Blueprint.](https://developer.apple.com/documentation/applebusinessapi/add-packages-to-a-blueprint)
+- [Remove packages from a Blueprint.](https://developer.apple.com/documentation/applebusinessapi/remove-packages-from-a-blueprint)
+- [Get a list of device IDs associated with a Blueprint.](https://developer.apple.com/documentation/applebusinessapi/get-all-orgdevice-ids-for-a-blueprint)
+- [Add devices to a Blueprint.](https://developer.apple.com/documentation/applebusinessapi/add-org-devices-to-a-blueprint)
+- [Remove devices from a Blueprint.](https://developer.apple.com/documentation/applebusinessapi/remove-org-devices-from-a-blueprint)
+- [Get a list of user IDs associated with a Blueprint.](https://developer.apple.com/documentation/applebusinessapi/get-all-user-ids-for-a-blueprint)
+- [Add users to a Blueprint.](https://developer.apple.com/documentation/applebusinessapi/add-users-to-a-blueprint)
+- [Remove users from a Blueprint.](https://developer.apple.com/documentation/applebusinessapi/remove-users-from-a-blueprint)
+- [Get a list of user group IDs associated with a Blueprint.](https://developer.apple.com/documentation/applebusinessapi/get-all-user-group-ids-for-a-blueprint)
+- [Add user groups to a Blueprint.](https://developer.apple.com/documentation/applebusinessapi/add-user-groups-to-a-blueprint)
+- [Remove user groups from a Blueprint.](https://developer.apple.com/documentation/applebusinessapi/remove-user-groups-from-a-blueprint)
+
+Added support for retrieving devices enrolled in the built-in device management service
+
+- [Get Devices Enrolled in the Apple Device Management Service.](https://developer.apple.com/documentation/applebusinessapi/get-apple-mdm-enrolled-devices)
+
+Added detailed device information for devices enrolled in the built-in device management service
+
+- [Get Details for a Device Enrolled in the Apple Device Management Service.](https://developer.apple.com/documentation/applebusinessapi/get-the-details-for-apple-mdm-enrolled-device)
+
+<a id="15-2026120"></a>
+
+### 1.5 - 2026/1/20
+
+Changes
+
+- Updated Python script example to use PwJWT in the article [Implementing OAuth for the Apple School and Business Manager API](https://developer.apple.com/documentation/apple-school-and-business-manager-api/implementing-oauth-for-the-apple-school-and-business-manager-api)
+- Updated MAC address types in Apple School Manager [OrgDevice.Attributes](https://developer.apple.com/documentation/appleschoolmanagerapi/orgdevice/attributes-data.dictionary).
+- Updated MAC address types in Apple Business [OrgDevice.Attributes](https://developer.apple.com/documentation/applebusinessmanagerapi/orgdevice/attributes-data.dictionary).
+
+<a id="14-20251217"></a>
+
+### 1.4 - 2025/12/17
+
+New features
+
+- Added Wi-Fi, Bluetooth, and built-in Ethernet MAC address attributes for macOS to the [Apple School Manager API](https://developer.apple.com/documentation/appleschoolmanagerapi/orgdevice/attributes-data.dictionary)
+- Added Wi-Fi, Bluetooth, and built-in Ethernet MAC address attributes for macOS to the [Apple Business API](https://developer.apple.com/documentation/appleschoolmanagerapi/orgdevice/attributes-data.dictionary)
+
+<a id="13-2025115"></a>
+
+### 1.3 - 2025/11/5
+
+New features
+
+- Added AppleCare content to the [Apple School Manager API](https://developer.apple.com/documentation/appleschoolmanagerapi/get-all-apple-care-coverage-for-an-orgdevice)
+- Added AppleCare content to the [Apple Business API](https://developer.apple.com/documentation/applebusinessmanagerapi/get-all-apple-care-coverage-for-an-orgdevice)
+
+<a id="12-20250716"></a>
+
+### 1.2 - 2025/07/16
+
+New features
+
+- Added Wi-Fi and Bluetooth MAC address attributes for iOS, iPadOS, tvOS, and visionOS to the [Apple School Manager API](https://developer.apple.com/documentation/appleschoolmanagerapi/orgdevice/attributes-data.dictionary)
+- Added Wi-Fi and Bluetooth MAC address attributes for iOS, iPadOS, tvOS, and visionOS to the [Apple Business API](https://developer.apple.com/documentation/appleschoolmanagerapi/orgdevice/attributes-data.dictionary)
+
+<a id="11-20250710"></a>
+
+### 1.1 - 2025/07/10
+
+Changes
+
+- Updated content in the article [Implementing OAuth for the Apple School and Business Manager API](https://developer.apple.com/documentation/apple-school-and-business-manager-api/implementing-oauth-for-the-apple-school-and-business-manager-api)

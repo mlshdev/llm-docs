@@ -1,0 +1,94 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/aedesc](https://developer.apple.com/documentation/coreservices/aedesc)
+
+# AEDesc (Swift)
+
+**Framework:** Core Services  
+**Kind:** Structure  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+Stores data and an accompanying descriptor type to formthe basic building block of all Apple Events.
+
+## Declaration
+
+```swift
+struct AEDesc
+```
+
+<a id="overview"></a>
+
+## Overview
+
+The Apple Event Manager uses one or more descriptors to constructApple event attributes and parameters, object specifiers, tokens,and many other types of data it works with. (Token is defined in [AEDisposeToken(\_:)](1446783-aedisposetoken.md).) Adescriptor consists of an opaque data storage container and a descriptortype that identifies the type of the data stored in the descriptor.
+
+The descriptor type is a structure of type `DescType`,which in turn is of data type `ResType`—thatis, a four-character code. [Descriptor Type Constants](apple_events/1542788-descriptor_type_constants.md) lists the constants for the basic descriptortypes used by the Apple Event Manager. For information about descriptortypes used with object specifiers, see [Key Form and Descriptor Type Object Specifier Constants](apple_events/1572731-key_form_and_descriptor_type_obj.md). 
+
+<a id="1770263"></a>
+
+### Version-Notes
+
+Prior to Carbon, the [AEDataStorage](aedatastorage.md) datatype was defined as follows:
+
+<a id="2556031"></a>
+
+**Listing 1**
+
+```occ
+typedef Handle AEDataStorage;
+```
+
+## Topics
+
+### Initializers
+
+- [init()](aedesc/1450256-init.md)
+- [init(descriptorType:dataHandle:)](aedesc/1690318-init.md)
+
+### Instance Properties
+
+- [dataHandle](aedesc/1444550-datahandle.md): An opaque storage type that points to the storagefor the descriptor data. Your application doesn’t access thisdata directly—rather, it calls one of the functions [AEGetDescDataSize(\_:)](1450119-aegetdescdatasize.md), [AEGetDescData(\_:\_:\_:)](1444427-aegetdescdata.md), or [AEReplaceDescData(\_:\_:\_:\_:)](1446695-aereplacedescdata.md).See [AEDataStorage](aedatastorage.md).
+- [descriptorType](aedesc/1445749-descriptortype.md): A four-character code of type [DescType](desctype.md) that indicates the type ofdata in the structure. See [DescType](desctype.md).
+
+# AEDesc (Objective-C)
+
+**Framework:** Core Services  
+**Kind:** Structure  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+Stores data and an accompanying descriptor type to formthe basic building block of all Apple Events.
+
+## Declaration
+
+```objectivec
+typedef struct AEDesc {
+    ...
+} AEDesc;
+```
+
+<a id="overview"></a>
+
+## Overview
+
+The Apple Event Manager uses one or more descriptors to constructApple event attributes and parameters, object specifiers, tokens,and many other types of data it works with. (Token is defined in [AEDisposeToken](1446783-aedisposetoken.md).) Adescriptor consists of an opaque data storage container and a descriptortype that identifies the type of the data stored in the descriptor.
+
+The descriptor type is a structure of type `DescType`,which in turn is of data type `ResType`—thatis, a four-character code. [Descriptor Type Constants](1542788-descriptor_type_constants.md) lists the constants for the basic descriptortypes used by the Apple Event Manager. For information about descriptortypes used with object specifiers, see [Key Form and Descriptor Type Object Specifier Constants](1572731-key_form_and_descriptor_type_obj.md). 
+
+<a id="1770263"></a>
+
+### Version-Notes
+
+Prior to Carbon, the [AEDataStorage](aedatastorage.md) datatype was defined as follows:
+
+<a id="2556031"></a>
+
+**Listing 1**
+
+```occ
+typedef Handle AEDataStorage;
+```
+
+## Topics
+
+### Instance Properties
+
+- [dataHandle](aedesc/1444550-datahandle.md): An opaque storage type that points to the storagefor the descriptor data. Your application doesn’t access thisdata directly—rather, it calls one of the functions [AEGetDescDataSize](1450119-aegetdescdatasize.md), [AEGetDescData](1444427-aegetdescdata.md), or [AEReplaceDescData](1446695-aereplacedescdata.md).See [AEDataStorage](aedatastorage.md).
+- [descriptorType](aedesc/1445749-descriptortype.md): A four-character code of type [DescType](desctype.md) that indicates the type ofdata in the structure. See [DescType](desctype.md).

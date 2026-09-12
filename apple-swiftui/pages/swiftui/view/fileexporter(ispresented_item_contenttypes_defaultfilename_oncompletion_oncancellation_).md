@@ -1,0 +1,73 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/fileexporter(ispresented:item:contenttypes:defaultfilename:oncompletion:oncancellation:)](https://developer.apple.com/documentation/swiftui/view/fileexporter(ispresented:item:contenttypes:defaultfilename:oncompletion:oncancellation:))
+
+# fileExporter(isPresented:item:contentTypes:defaultFilename:onCompletion:onCancellation:)
+
+**Framework:** SwiftUI  
+**Kind:** Instance Method  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · visionOS 1.0+
+
+Presents a system dialog allowing the user to export a `Transferable` item to a file on disk.
+
+## Declaration
+
+```swift
+nonisolated func fileExporter<T>(isPresented: Binding<Bool>, item: T?, contentTypes: [UTType] = [], defaultFilename: String? = nil, onCompletion: @escaping (Result<URL, any Error>) -> Void, onCancellation: @escaping () -> Void = { }) -> some View where T : Transferable
+
+```
+
+## Parameters
+
+- `isPresented`: A binding to whether the dialog should be shown.
+- `item`: The item to be saved on disk.
+- `contentTypes`: The optional content types to use for the exported file. If empty, SwiftUI uses the content types from the `transferRepresentation` property provided for `Transferable` conformance.
+- `defaultFilename`: If provided, the default name to use for the exported file, which the user will have an opportunity to edit prior to the export.
+- `onCompletion`: A callback that will be invoked when the operation has succeeded or failed.
+- `onCancellation`: A callback that will be invoked if the user cancels the operation.
+
+<a id="discussion"></a>
+
+## Discussion
+
+In order for the dialog to appear, `isPresented` must be set to `true`. When the operation is finished, `isPresented` will be set to `false` before `onCompletion` is called. If the user cancels the operation, `isPresented` will be set to `false` and `onCancellation` will be called.
+
+For example, a button that exports a photo might look like this:
+
+```swift
+struct ExportPhotoButton: View {
+    @State private var isExporterPresented = false
+    var photo: Photo
+
+    var body: some View {
+        Button("Export Photo") {
+            isExporterPresented = true
+        }
+        .fileExporter(
+            isPresented: $isExporterPresented,
+            item: photo,
+            defaultFilename: "exported photo"
+        ) { result in
+            switch result {
+            case .success(let url):
+                print("Saved to \(url)")
+            case .failure(let error):
+                print(error)
+            }
+        } onCancellation: {
+            print("Export cancelled")
+        }
+    }
+}
+
+struct Photo: Transferable { ... }
+```
+
+To further configure the dialog’s appearance and behavior, use these view modifiers: [fileDialogDefaultDirectory(\_:)](filedialogdefaultdirectory%28__%29.md), [fileDialogConfirmationLabel(\_:)](filedialogconfirmationlabel%28__%29.md), [fileDialogMessage(\_:)](filedialogmessage%28__%29.md), [fileDialogBrowserOptions(\_:)](filedialogbrowseroptions%28__%29.md), [fileExporterFilenameLabel(\_:)](fileexporterfilenamelabel%28__%29.md), and [fileDialogCustomizationID(\_:)](filedialogcustomizationid%28__%29.md).
+
+## See Also
+
+### Exporting to file
+
+- [fileExporter(isPresented:document:contentType:defaultFilename:onCompletion:onCancellation:)](fileexporter%28ispresented_document_contenttype_defaultfilename_oncompletion_oncancellation_%29.md): Presents a system dialog for allowing the user to export a `WritableDocument` to a file on disk.
+- [fileExporter(isPresented:documents:contentTypes:onCompletion:onCancellation:)](fileexporter%28ispresented_documents_contenttypes_oncompletion_oncancellation_%29.md): Presents a system dialog for allowing the user to export a collection of objects conforming to `WritableDocument` to files on disk.
+- [fileExporter(isPresented:items:contentTypes:onCompletion:onCancellation:)](fileexporter%28ispresented_items_contenttypes_oncompletion_oncancellation_%29.md): Presents a system dialog allowing the user to export a collection of `Transferable` items to files on disk.
+- [fileExporterFilenameLabel(\_:)](fileexporterfilenamelabel%28__%29.md): On macOS, configures the `fileExporter` with a label for the file name field.

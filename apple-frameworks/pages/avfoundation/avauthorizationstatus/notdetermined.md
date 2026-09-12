@@ -1,0 +1,65 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avauthorizationstatus/notdetermined](https://developer.apple.com/documentation/avfoundation/avauthorizationstatus/notdetermined)
+
+# AVAuthorizationStatus.notDetermined (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Case  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 14.0+ · macOS 10.14+ · tvOS 17.0+ · visionOS 1.0+
+
+A status that indicates the user hasn’t yet granted or denied authorization.
+
+## Declaration
+
+```swift
+case notDetermined
+```
+
+## Mentioned In
+
+- [Requesting authorization to capture and save media](../requesting-authorization-to-capture-and-save-media.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This is the default status prior to user to granting or denying recording priviledge to the app. Call [requestAccess(for:completionHandler:)](../avcapturedevice/requestaccess%28for_completionhandler_%29.md) to prompt the user for permission.
+
+## See Also
+
+### Status values
+
+- [AVAuthorizationStatus.restricted](restricted.md): A status that indicates the app isn’t permitted to use media capture devices.
+- [AVAuthorizationStatus.denied](denied.md): A status that indicates the user has explicitly denied an app permission to capture media.
+- [AVAuthorizationStatus.authorized](authorized.md): A status that indicates the user has explicitly granted an app permission to capture media.
+
+# AVAuthorizationStatusNotDetermined (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Enumeration Case  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 14.0+ · macOS 10.14+ · tvOS 17.0+ · visionOS 1.0+
+
+A status that indicates the user hasn’t yet granted or denied authorization.
+
+## Declaration
+
+```objectivec
+AVAuthorizationStatusNotDetermined
+```
+
+## Mentioned In
+
+- [Requesting authorization to capture and save media](../requesting-authorization-to-capture-and-save-media.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This is the default status prior to user to granting or denying recording priviledge to the app. Call [requestAccessForMediaType:completionHandler:](../avcapturedevice/requestaccess%28for_completionhandler_%29.md) to prompt the user for permission.
+
+## See Also
+
+### Status values
+
+- [AVAuthorizationStatusRestricted](restricted.md): A status that indicates the app isn’t permitted to use media capture devices.
+- [AVAuthorizationStatusDenied](denied.md): A status that indicates the user has explicitly denied an app permission to capture media.
+- [AVAuthorizationStatusAuthorized](authorized.md): A status that indicates the user has explicitly granted an app permission to capture media.

@@ -1,0 +1,50 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/usdkit/usdvalue/matrix3f](https://developer.apple.com/documentation/usdkit/usdvalue/matrix3f)
+
+# USDValue.Matrix3f
+
+**Framework:** USDKit  
+**Kind:** Structure  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+A 3x3 matrix of single-precision floating-point values.
+
+## Declaration
+
+```swift
+@frozen struct Matrix3f
+```
+
+## Topics
+
+### Initializers
+
+- [init(\_:)](matrix3f/init%28__%29.md): Creates a matrix from a SIMD `float3x3` matrix.
+- [init(\_:\_:\_:\_:\_:\_:\_:\_:\_:)](matrix3f/init%28__________________%29.md): Creates a matrix from individual element values in row-major order.
+- [init(diagonal:)](matrix3f/init%28diagonal_%29.md): Creates a diagonal matrix with `s` on the diagonal and zeros elsewhere.
+
+### Instance Properties
+
+- [matrix](matrix3f/matrix.md): The matrix as a SIMD `float3x3`.
+
+### Subscripts
+
+- [subscript(\_:)](matrix3f/subscript%28__%29.md): Accesses the row at the specified index.
+- [subscript(column:)](matrix3f/subscript%28column_%29.md): Accesses the column at the specified index.
+
+### Type Aliases
+
+- [USDValue.Matrix3f.VectorType](matrix3f/vectortype.md)
+
+## Relationships
+
+### Conforms To
+
+- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
+- [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Escapable](https://developer.apple.com/documentation/swift/escapable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+- [USDValueProtocol](../usdvalueprotocol.md)

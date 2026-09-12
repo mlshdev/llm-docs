@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/environmentvalues/systemprefersreducedresourceusage](https://developer.apple.com/documentation/swiftui/environmentvalues/systemprefersreducedresourceusage)
+
+# systemPrefersReducedResourceUsage
+
+**Framework:** SwiftUI  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+A boolean value indicating whether the system would prefer the app to reduce its overall resource usage.
+
+## Declaration
+
+```swift
+var systemPrefersReducedResourceUsage: Bool { get set }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+When this value is `true`, the system has entered a state where it would prefer apps to scale back resource-intensive work. The default value is `false`.
+
+Use this to avoid or reduce expensive work. For example:
+
+- Gate or simplify resource-intensive UI, such as 3D or AR viewers, advanced camera modes, or live effects.
+- Choose lighter-weight paths, such as lower-resolution assets or fewer simultaneous operations.
+- Defer or shrink non-essential background work, such as prefetching or precomputation.
+
+Avoid performing or scheduling expensive work in response to changes in this property, as this could worsen resource usage.
+
+> **Tip**
+
+> For in-memory caching, consider using `NSCache` with `NSPurgeableData`, which automatically evicts entries under system memory pressure. Use `systemPrefersReducedResourceUsage` for higher-level decisions that `NSCache` cannot make on its own.
+
+When accessed outside in an `App` or `Scene` struct, this defaults to an app-wide aggregate value based on all scenes.

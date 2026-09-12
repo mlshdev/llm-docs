@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/bidstrategygoal](https://developer.apple.com/documentation/apple-ads-platform-api/bidstrategygoal)
+
+# BidStrategyGoal
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Type  
+**Availability:** Apple Ads Platform API 1.0+
+
+Optimization objective a bid strategy targets during Apple Ads auction competition.
+
+## Declaration
+
+```
+string BidStrategyGoal
+```
+
+## Possible Values
+
+- `IMPRESSION`: The strategy optimizes for maximum ad impressions. Applies to impression-based pricing models such as `MANUAL_CPM`.
+- `INSTALL`: The strategy optimizes for app installs. The system bids more aggressively for queries likely to result in a new install.
+- `TAP`: The strategy optimizes for taps on the ad. Applies to tap-based pricing models such as `MANUAL_CPT`.
+
+## See Also
+
+- [AdGroupStatus](adgroupstatus.md): Advertiser-configurable serving status for an ad group.
+- [AdGroupSystemStatus](adgroupsystemstatus.md): System-derived operational status reflecting whether an ad group is actively serving.
+- [AdGroupDisplayStatus](adgroupdisplaystatus.md): Derived display status for an ad group, combining advertiser-set status with system status.
+- [AdGroupSystemStatusReason](adgroupsystemstatusreason.md): Reasons that can cause an ad group’s system status to be `NOT_RUNNING`.
+- [AdGroupSystemLimitedStatusReason](adgroupsystemlimitedstatusreason.md): Reasons that limit delivery for an ad group without fully stopping it.
+- [BidStrategyType](bidstrategytype.md): Auction participation approach controlling how an ad group or campaign sets and adjusts bids.
+- [PricingModel](pricingmodel.md): The unit of ad delivery that determines billing for an ad group, independent of how the account funds spend.

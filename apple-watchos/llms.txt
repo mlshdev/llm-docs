@@ -1,0 +1,133 @@
+# Apple watchOS snapshot-49fd8d0a44e2
+
+> Documentation generated from Apple's public DocC endpoints at [https://developer.apple.com/watchos/](https://developer.apple.com/watchos/) and pinned to catalog snapshot `49fd8d0a44e27da75b7933530cfa5505d9b13fb8ae49b84c40e9186ba4f090e4` captured at 2026-09-12T21:04:59.695Z.
+
+- [Full documentation](llms-full.txt): Complete normalized corpus for Apple watchOS snapshot-49fd8d0a44e2.
+- [Provenance manifest](manifest.json): Snapshot digest, capture time, document count, and generation notes.
+- Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.
+- 3 frameworks in this catalog, captured at 2026-09-12T21:04:59.695Z.
+- Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.
+- Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream.
+
+## Frameworks
+
+- [WatchKit](pages/watchkit.md): 738 pages. Platforms: watchOS.
+- [watchOS Release Notes](pages/watchos-release-notes.md): 55 pages.
+- [watchOS apps](pages/watchos-apps.md): 27 pages.
+
+## Frameworks shared with other platforms
+
+These frameworks are available on watchOS but are published by another project in this repository, so their pages are stored once rather than duplicated per platform.
+
+- [AVFAudio](../apple-frameworks/pages/avfaudio.md): 1576 pages.
+- [AVFoundation](../apple-frameworks/pages/avfoundation.md): 5601 pages.
+- [AVKit](../apple-frameworks/pages/avkit.md): 691 pages.
+- [Accelerate](../apple-frameworks/pages/accelerate.md): 8904 pages.
+- [Accessibility](../apple-frameworks/pages/accessibility.md): 338 pages.
+- [App Intents](../apple-frameworks/pages/appintents.md): 4433 pages.
+- [App Intents Testing](../apple-xcode/pages/appintentstesting.md): 118 pages.
+- [Apple Archive](../apple-frameworks/pages/applearchive.md): 653 pages.
+- [Apple CryptoKit](../apple-frameworks/pages/cryptokit.md): 705 pages.
+- [Authentication Services](../apple-frameworks/pages/authenticationservices.md): 1452 pages.
+- [Bundle Resources](../apple-frameworks/pages/bundleresources.md): 910 pages.
+- [CallKit](../apple-frameworks/pages/callkit.md): 284 pages.
+- [ClockKit](../apple-frameworks/pages/clockkit.md): 688 pages.
+- [CloudKit](../apple-frameworks/pages/cloudkit.md): 1300 pages.
+- [ColorSync](../apple-frameworks/pages/colorsync.md): 375 pages.
+- [Combine](../apple-frameworks/pages/combine.md): 1062 pages.
+- [Compression](../apple-frameworks/pages/compression.md): 66 pages.
+- [Contacts](../apple-frameworks/pages/contacts.md): 691 pages.
+- [Core AI](../apple-frameworks/pages/coreai.md): 312 pages.
+- [Core Animation](../apple-frameworks/pages/quartzcore.md): 699 pages.
+- [Core Audio](../apple-frameworks/pages/coreaudio.md): 977 pages.
+- [Core Audio Types](../apple-frameworks/pages/coreaudiotypes.md): 629 pages.
+- [Core Bluetooth](../apple-frameworks/pages/corebluetooth.md): 386 pages.
+- [Core Data](../apple-frameworks/pages/coredata.md): 1169 pages.
+- [Core Foundation](../apple-frameworks/pages/corefoundation.md): 2701 pages.
+- [Core Graphics](../apple-frameworks/pages/coregraphics.md): 1967 pages.
+- [Core Location](../apple-frameworks/pages/corelocation.md): 568 pages.
+- [Core MIDI](../apple-frameworks/pages/coremidi.md): 1093 pages.
+- [Core ML](../apple-frameworks/pages/coreml.md): 794 pages.
+- [Core Media](../apple-frameworks/pages/coremedia.md): 2561 pages.
+- [Core Motion](../apple-frameworks/pages/coremotion.md): 433 pages.
+- [Core Services](../apple-frameworks/pages/coreservices.md): 15777 pages.
+- [Core Text](../apple-frameworks/pages/coretext.md): 2345 pages.
+- [Core Transferable](../apple-frameworks/pages/coretransferable.md): 69 pages.
+- [Core Video](../apple-frameworks/pages/corevideo.md): 1036 pages.
+- [CoreLocationUI](../apple-frameworks/pages/corelocationui.md): 30 pages.
+- [Create ML Components](../apple-frameworks/pages/createmlcomponents.md): 1636 pages.
+- [CryptoTokenKit](../apple-frameworks/pages/cryptotokenkit.md): 294 pages.
+- [Darwin Notify](../apple-frameworks/pages/darwinnotify.md): 51 pages.
+- [DataDetection](../apple-frameworks/pages/datadetection.md): 112 pages.
+- [DeveloperToolsSupport](../apple-xcode/pages/developertoolssupport.md): 85 pages.
+- [Device Management](../apple-frameworks/pages/devicemanagement.md): 1415 pages.
+- [DeviceCheck](../apple-frameworks/pages/devicecheck.md): 32 pages.
+- [Dispatch](../apple-frameworks/pages/dispatch.md): 612 pages.
+- [Distributed](../apple-swift/pages/distributed.md): 93 pages.
+- [Evaluations](../apple-frameworks/pages/evaluations.md): 344 pages.
+- [EventKit](../apple-frameworks/pages/eventkit.md): 425 pages.
+- [ExtensionFoundation](../apple-frameworks/pages/extensionfoundation.md): 97 pages.
+- [ExtensionKit](../apple-frameworks/pages/extensionkit.md): 39 pages.
+- [Foundation](../apple-frameworks/pages/foundation.md): 14116 pages.
+- [Foundation Models](../apple-frameworks/pages/foundationmodels.md): 703 pages.
+- [GameKit](../apple-frameworks/pages/gamekit.md): 1076 pages.
+- [GeoToolbox](../apple-frameworks/pages/geotoolbox.md): 20 pages.
+- [HealthKit](../apple-frameworks/pages/healthkit.md): 2150 pages.
+- [HealthKitUI](../apple-frameworks/pages/healthkitui.md): 4 pages.
+- [HomeKit](../apple-frameworks/pages/homekit.md): 1302 pages.
+- [Image I/O](../apple-frameworks/pages/imageio.md): 915 pages.
+- [Intents](../apple-frameworks/pages/intents.md): 3501 pages.
+- [IntentsUI](../apple-frameworks/pages/intentsui.md): 49 pages.
+- [LiveCommunicationKit](../apple-frameworks/pages/livecommunicationkit.md): 163 pages.
+- [Local Authentication](../apple-frameworks/pages/localauthentication.md): 245 pages.
+- [MapKit](../apple-frameworks/pages/mapkit.md): 1295 pages.
+- [Matter](../apple-frameworks/pages/matter.md): 24379 pages.
+- [Media Intents](../apple-frameworks/pages/mediaintents.md): 14 pages.
+- [Media Player](../apple-frameworks/pages/mediaplayer.md): 780 pages.
+- [Music Understanding](../apple-frameworks/pages/musicunderstanding.md): 90 pages.
+- [MusicKit](../apple-frameworks/pages/musickit.md): 942 pages.
+- [Natural Language](../apple-frameworks/pages/naturallanguage.md): 329 pages.
+- [Nearby Interaction](../apple-frameworks/pages/nearbyinteraction.md): 177 pages.
+- [Network](../apple-frameworks/pages/network.md): 1975 pages.
+- [Network Extension](../apple-frameworks/pages/networkextension.md): 1205 pages.
+- [Now Playing](../apple-frameworks/pages/nowplaying.md): 222 pages.
+- [OSLog](../apple-frameworks/pages/oslog.md): 98 pages.
+- [Objective-C Runtime](../apple-frameworks/pages/objectivec.md): 850 pages.
+- [Observation](../apple-swift/pages/observation.md): 37 pages.
+- [PassKit (Apple Pay and Wallet)](../apple-frameworks/pages/passkit.md): 1145 pages.
+- [PhotoKit](../apple-frameworks/pages/photokit.md): 23 pages.
+- [PhotosUI](../apple-frameworks/pages/photosui.md): 312 pages.
+- [PushKit](../apple-frameworks/pages/pushkit.md): 30 pages.
+- [RegexBuilder](../apple-swift/pages/regexbuilder.md): 462 pages.
+- [RelevanceKit](../apple-frameworks/pages/relevancekit.md): 30 pages.
+- [SafetyKit](../apple-frameworks/pages/safetykit.md): 48 pages.
+- [SceneKit](../apple-frameworks/pages/scenekit.md): 1689 pages.
+- [Security](../apple-frameworks/pages/security.md): 7313 pages.
+- [ShazamKit](../apple-frameworks/pages/shazamkit.md): 166 pages.
+- [SiriKit](../apple-frameworks/pages/sirikit.md): 57 pages.
+- [Sound Analysis](../apple-frameworks/pages/soundanalysis.md): 73 pages.
+- [Spatial](../apple-frameworks/pages/spatial.md): 2204 pages.
+- [SpriteKit](../apple-frameworks/pages/spritekit.md): 1150 pages.
+- [StateReporting](../apple-frameworks/pages/statereporting.md): 38 pages.
+- [StoreKit](../apple-frameworks/pages/storekit.md): 1430 pages.
+- [StoreKit Test](../apple-xcode/pages/storekittest.md): 251 pages.
+- [Swift](../apple-swift/pages/swift.md): 18439 pages.
+- [Swift Charts](../apple-frameworks/pages/charts.md): 595 pages.
+- [SwiftData](../apple-frameworks/pages/swiftdata.md): 551 pages.
+- [SwiftUI](../apple-swiftui/pages/swiftui.md): 7104 pages.
+- [Symbols](../apple-frameworks/pages/symbols.md): 230 pages.
+- [Synchronization](../apple-swift/pages/synchronization.md): 196 pages.
+- [System](../apple-frameworks/pages/system.md): 446 pages.
+- [TabularData](../apple-frameworks/pages/tabulardata.md): 844 pages.
+- [TipKit](../apple-frameworks/pages/tipkit.md): 190 pages.
+- [UIKit](../apple-frameworks/pages/uikit.md): 12625 pages.
+- [Uniform Type Identifiers](../apple-frameworks/pages/uniformtypeidentifiers.md): 360 pages.
+- [User Notifications](../apple-frameworks/pages/usernotifications.md): 287 pages.
+- [Wallet Passes](../apple-frameworks/pages/walletpasses.md): 63 pages.
+- [Watch Connectivity](../apple-frameworks/pages/watchconnectivity.md): 105 pages.
+- [WeatherKit](../apple-frameworks/pages/weatherkit.md): 429 pages.
+- [WidgetKit](../apple-frameworks/pages/widgetkit.md): 329 pages.
+- [WorkoutKit](../apple-frameworks/pages/workoutkit.md): 155 pages.
+- [dnssd](../apple-frameworks/pages/dnssd.md): 251 pages.
+- [hvf](../apple-frameworks/pages/hvf.md): 182 pages.
+- [os](../apple-frameworks/pages/os.md): 597 pages.

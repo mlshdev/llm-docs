@@ -1,0 +1,61 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsresponder/resignfirstresponder()](https://developer.apple.com/documentation/appkit/nsresponder/resignfirstresponder())
+
+# resignFirstResponder() (Swift)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS
+
+Notifies the receiver that it’s been asked to relinquish its status as first responder in its window.
+
+## Declaration
+
+```swift
+func resignFirstResponder() -> Bool
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The default implementation returns [true](https://developer.apple.com/documentation/swift/true), resigning first responder status. Subclasses can override this method to update state or perform some action such as unhighlighting the selection, or to return [false](https://developer.apple.com/documentation/swift/false), refusing to relinquish first responder status.
+
+Use  the `NSWindow` [makeFirstResponder(\_:)](../nswindow/makefirstresponder%28__%29.md) method, not this method, to make an object the first responder. Never invoke this method directly.
+
+## See Also
+
+### Changing the First Responder
+
+- [acceptsFirstResponder](acceptsfirstresponder.md): A Boolean value that indicates whether the responder accepts first responder status.
+- [becomeFirstResponder()](becomefirstresponder%28%29.md): Notifies the receiver that it’s about to become first responder in its [NSWindow](../nswindow.md).
+- [validateProposedFirstResponder(\_:for:)](validateproposedfirstresponder%28__for_%29.md): Allows controls to determine when they should become first responder.
+
+# resignFirstResponder (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS
+
+Notifies the receiver that it’s been asked to relinquish its status as first responder in its window.
+
+## Declaration
+
+```objectivec
+- (BOOL) resignFirstResponder;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The default implementation returns [true](https://developer.apple.com/documentation/swift/true), resigning first responder status. Subclasses can override this method to update state or perform some action such as unhighlighting the selection, or to return [false](https://developer.apple.com/documentation/swift/false), refusing to relinquish first responder status.
+
+Use  the `NSWindow` [makeFirstResponder:](../nswindow/makefirstresponder%28__%29.md) method, not this method, to make an object the first responder. Never invoke this method directly.
+
+## See Also
+
+### Changing the First Responder
+
+- [acceptsFirstResponder](acceptsfirstresponder.md): A Boolean value that indicates whether the responder accepts first responder status.
+- [becomeFirstResponder](becomefirstresponder%28%29.md): Notifies the receiver that it’s about to become first responder in its [NSWindow](../nswindow.md).
+- [validateProposedFirstResponder:forEvent:](validateproposedfirstresponder%28__for_%29.md): Allows controls to determine when they should become first responder.

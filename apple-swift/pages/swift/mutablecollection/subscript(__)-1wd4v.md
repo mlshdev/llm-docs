@@ -1,0 +1,13 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/mutablecollection/subscript(_:)-1wd4v](https://developer.apple.com/documentation/swift/mutablecollection/subscript(_:)-1wd4v)
+
+# subscript(\_:)
+
+**Framework:** Swift  
+**Kind:** Instance Subscript  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+## Declaration
+
+```swift
+subscript<R>(r: R) -> Self.SubSequence where R : RangeExpression, Self.Index == R.Bound { get set }
+```

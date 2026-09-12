@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iofirewireserialbusprotocoltransport/1550706-lunresetcomplete](https://developer.apple.com/documentation/kernel/iofirewireserialbusprotocoltransport/1550706-lunresetcomplete)
+
+# LunResetComplete
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Instance Method  
+**Availability:** macOS 10.11.4+
+
+## Declaration
+
+```objectivec
+virtual void LunResetComplete(IOReturn status, IOFireWireSBP2ManagementORB *orb);
+```

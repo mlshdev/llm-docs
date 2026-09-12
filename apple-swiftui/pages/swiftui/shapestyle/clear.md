@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/shapestyle/clear](https://developer.apple.com/documentation/swiftui/shapestyle/clear)
+
+# clear
+
+**Framework:** SwiftUI  
+**Kind:** Type Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+A clear color suitable for use in UI elements.
+
+## Declaration
+
+```swift
+@export(implementation) static var clear: Color { get }
+```
+
+## See Also
+
+### System colors
+
+- [black](black.md): Conforms when `Self` is `Color`. A black color suitable for use in UI elements.
+- [blue](blue.md): Conforms when `Self` is `Color`. A context-dependent blue color suitable for use in UI elements.
+- [brown](brown.md): Conforms when `Self` is `Color`. A context-dependent brown color suitable for use in UI elements.
+- [cyan](cyan.md): Conforms when `Self` is `Color`. A context-dependent cyan color suitable for use in UI elements.
+- [gray](gray.md): Conforms when `Self` is `Color`. A context-dependent gray color suitable for use in UI elements.
+- [green](green.md): Conforms when `Self` is `Color`. A context-dependent green color suitable for use in UI elements.
+- [indigo](indigo.md): Conforms when `Self` is `Color`. A context-dependent indigo color suitable for use in UI elements.
+- [mint](mint.md): Conforms when `Self` is `Color`. A context-dependent mint color suitable for use in UI elements.
+- [orange](orange.md): Conforms when `Self` is `Color`. A context-dependent orange color suitable for use in UI elements.
+- [pink](pink.md): Conforms when `Self` is `Color`. A context-dependent pink color suitable for use in UI elements.
+- [purple](purple.md): Conforms when `Self` is `Color`. A context-dependent purple color suitable for use in UI elements.
+- [red](red.md): Conforms when `Self` is `Color`. A context-dependent red color suitable for use in UI elements.
+- [teal](teal.md): Conforms when `Self` is `Color`. A context-dependent teal color suitable for use in UI elements.
+- [white](white.md): Conforms when `Self` is `Color`. A white color suitable for use in UI elements.
+- [yellow](yellow.md): Conforms when `Self` is `Color`. A context-dependent yellow color suitable for use in UI elements.

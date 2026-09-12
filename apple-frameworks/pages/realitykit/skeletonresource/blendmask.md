@@ -1,0 +1,66 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/skeletonresource/blendmask](https://developer.apple.com/documentation/realitykit/skeletonresource/blendmask)
+
+# SkeletonResource.BlendMask
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+Describes a single blend mask for selective animation control.
+
+## Declaration
+
+```swift
+struct BlendMask
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Blend masks enable selective application of animations by defining per-joint weights. They allow fine-grained control over which parts of a skeleton are affected by specific animations, enabling layered animation systems and partial poses.
+
+```swift
+typealias BlendMask = SkeletonResource.BlendMask
+// Create blend masks for different body regions
+// Joints not listed default to weight 1.0 (full animation effect)
+let armOnlyMask = BlendMask(
+    name: "armOnly",
+    jointWeights: ["shoulder": 0.0] // Only affect upperArm, forearm, hand
+)
+
+let handOnlyMask = BlendMask(
+    name: "handOnly",
+    jointWeights: ["shoulder": 0.0, "upperArm": 0.0, "forearm": 0.0] // Only affect hand
+)
+```
+
+## Topics
+
+### Creating a blend mask
+
+- [init(name:jointWeights:)](blendmask/init%28name_jointweights_%29.md): Creates a blend mask with the specified parameters.
+
+### Accessing mask values
+
+- [jointWeights](blendmask/jointweights.md): Dictionary of joint weights keyed by joint name. Each weight corresponds to a joint in the skeleton, controlling how much that joint is affected by animations using this mask. Values range from 0.0 (no effect) to 1.0 (full effect). Joints not present in the dictionary are treated as having weight 1.0 (full animation effect).
+- [id](blendmask/id.md): The identifier of the blend mask, derived from its name.
+
+### Instance Properties
+
+- [name](blendmask/name.md): The name of the blend mask. Must be unique within the skeleton. Used to identify and reference specific masks within animation systems.
+
+## Relationships
+
+### Conforms To
+
+- [Identifiable](https://developer.apple.com/documentation/swift/identifiable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Configuring animation evaluation
+
+- [animationEvaluation](animationevaluation-swift.property.md): Animation-evaluation data baked into this resource at construction time.
+- [SkeletonResource.AnimationEvaluation](animationevaluation-swift.struct.md): A bundle of additional animation-related skeletal data the runtime consumes when evaluating animations against this skeleton.

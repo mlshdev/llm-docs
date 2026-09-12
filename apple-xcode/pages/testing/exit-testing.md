@@ -1,0 +1,167 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/testing/exit-testing](https://developer.apple.com/documentation/testing/exit-testing)
+
+# Exit testing
+
+**Framework:** Swift Testing  
+**Kind:** Article  
+**Availability:** Swift 6.2+ · Xcode 26.0+
+
+Use exit tests to test functionality that might cause a test process to exit.
+
+<a id="Overview"></a>
+
+## Overview
+
+Your code might contain calls to [precondition()](https://developer.apple.com/documentation/swift/precondition%28_:_:file:line:%29), [fatalError()](https://developer.apple.com/documentation/swift/fatalerror%28_:file:line:%29), or other functions that can cause the current process to exit. For example:
+
+```swift
+extension Customer {
+  func eat(_ food: consuming some Food) {
+    precondition(food.isDelicious, "Tasty food only!")
+    precondition(food.isNutritious, "Healthy food only!")
+    ...
+  }
+}
+```
+
+In this function, if `food.isDelicious` or `food.isNutritious` is `false`, the precondition fails and Swift forces the process to exit. You can write an exit test to validate preconditions like the ones above and to make sure that your functions correctly catch invalid inputs.
+
+> **Note**
+
+> Exit tests are available on macOS, Linux, FreeBSD, OpenBSD, and Windows.
+
+<a id="Create-an-exit-test"></a>
+
+### Create an exit test
+
+To create an exit test, call either the [expect(processExitsWith:observing:\_:sourceLocation:performing:)](expect%28processexitswith_observing___sourcelocation_performing_%29.md) or the [require(processExitsWith:observing:\_:sourceLocation:performing:)](require%28processexitswith_observing___sourcelocation_performing_%29.md) macro:
+
+```swift
+@Test func `Customer won't eat food unless it's delicious`() async {
+  let result = await #expect(processExitsWith: .failure) {
+    var food = ...
+    food.isDelicious = false
+    Customer.current.eat(food)
+  }
+}
+```
+
+The closure or function reference you pass to the macro is the *body* of the exit test. When an exit test is performed at runtime, the testing library starts a new process with the same executable as the current process. The current task is then suspended (as with `await`) and waits for the child process to exit.
+
+> **Note**
+
+> An exit test cannot run within another exit test.
+
+The parent process doesn’t call the body of the exit test. Instead, the child process treats the body of the exit test as its `main()` function and calls it directly.
+
+If the body returns before the child process exits, the process exits as if `main()` returned normally. If the body throws an error, Swift handles it as if it were thrown from `main()` and forces the process to exit abnormally.
+
+<a id="Specify-an-exit-condition"></a>
+
+### Specify an exit condition
+
+When you create an exit test, specify how you expect the child process exits by passing an instance of [ExitTest.Condition](exittest/condition.md):
+
+- If you expect the exit test’s body to run to completion or exit normally (for example, by calling [exit(EXIT_SUCCESS)](https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/man3/exit.3.html) from the C standard library), pass [success](exittest/condition/success.md).
+- If you expect the body to cause the child process to exit abnormally, but the exact status reported by the system is not important, pass [failure](exittest/condition/failure.md).
+- If you need to check for a specific exit code or signal, pass [exitCode(\_:)](exittest/condition/exitcode%28__%29.md) or [signal(\_:)](exittest/condition/signal%28__%29.md).
+
+When the child process exits, the parent process resumes and compares the exit status of the child process against the expected exit condition you passed. If they match, the exit test passes; otherwise, it fails and the testing library records an issue.
+
+<a id="Capture-state-from-the-parent-process"></a>
+
+### Capture state from the parent process
+
+To pass information from the parent process to the child process, you specify the Swift values you want to pass in a [capture list](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/closures/#Capturing-Values) on the exit test’s body:
+
+```swift
+@Test(arguments: Food.allJunkFood)
+func `Customer won't eat food unless it's nutritious`(_ food: Food) async {
+  await #expect(processExitsWith: .failure) { [food] in
+    Customer.current.eat(food)
+  }
+}
+```
+
+> **Note**
+
+> If you use [expect(processExitsWith:observing:\_:sourceLocation:performing:)](expect%28processexitswith_observing___sourcelocation_performing_%29.md) or [require(processExitsWith:observing:\_:sourceLocation:performing:)](require%28processexitswith_observing___sourcelocation_performing_%29.md) with a Swift compiler version lower than 6.3, the macro doesn’t capture state.
+
+If a captured value is an argument to the current function or is `self`, the compiler infers the value’s type. Otherwise, explicitly specify the type of the value using the `as` operator:
+
+```swift
+@Test func `Customer won't eat food unless it's nutritious`() async {
+  var food = ...
+  food.isNutritious = false
+  await #expect(processExitsWith: .failure) { [self, food = food as Food] in
+    self.prepare(food)
+    Customer.current.eat(food)
+  }
+}
+```
+
+Every value you capture in an exit test must conform to [Sendable](https://developer.apple.com/documentation/swift/sendable) and [Codable](https://developer.apple.com/documentation/swift/codable). The testing library passes each value to the exit test body by performing the following steps:
+
+1. It encodes each value using [encode(to:)](https://developer.apple.com/documentation/swift/encodable/encode%28to:%29) in the parent process
+2. It passes the encoded value to the child process
+3. It decodes each value using [init(from:)](https://developer.apple.com/documentation/swift/decodable/init%28from:%29) in the child process
+
+If a captured value’s type does not conform to both `Sendable` and `Codable`, or if the value is not explicitly specified in the exit test body’s capture list, the compiler emits an error:
+
+```swift
+@Test func `Customer won't eat food unless it's nutritious`() async {
+  var food = ...
+  food.isNutritious = false
+  await #expect(processExitsWith: .failure) {
+    Customer.current.eat(food) // ❌ ERROR: implicitly capturing 'food'
+  }
+}
+```
+
+<a id="Gather-output-from-the-child-process"></a>
+
+### Gather output from the child process
+
+The [expect(processExitsWith:observing:\_:sourceLocation:performing:)](expect%28processexitswith_observing___sourcelocation_performing_%29.md) and [require(processExitsWith:observing:\_:sourceLocation:performing:)](require%28processexitswith_observing___sourcelocation_performing_%29.md) macros return an instance of [ExitTest.Result](exittest/result.md) that contains information about the state of the child process.
+
+By default, the child process is configured without a standard output or standard error stream. If your test needs to review the content of either of these streams, pass the key path to the corresponding [ExitTest.Result](exittest/result.md) property to the macro:
+
+```swift
+extension Customer {
+  func eat(_ food: consuming some Food) {
+    print("Let's see if I want to eat \(food)...")
+    precondition(food.isDelicious, "Tasty food only!")
+    precondition(food.isNutritious, "Healthy food only!")
+    ...
+  }
+}
+
+@Test func `Customer won't eat food unless it's delicious`() async {
+  let result = await #expect(
+    processExitsWith: .failure,
+    observing: [\.standardOutputContent]
+  ) {
+    var food = ...
+    food.isDelicious = false
+    Customer.current.eat(food)
+  }
+  if let result {
+    #expect(result.standardOutputContent.contains(UInt8(ascii: "L")))
+  }
+}
+```
+
+> **Note**
+
+> The content of the standard output and standard error streams can contain any arbitrary sequence of bytes, including sequences that aren’t valid UTF-8 and can’t be decoded by [String.init(cString:)](https://developer.apple.com/documentation/swift/string/init%28cstring:%29-6kr8s). These streams are globally accessible within the child process, and any code running in an exit test may write to it including the operating system and any third-party dependencies you declare in your package description or Xcode project.
+
+The testing library always sets [exitStatus](exittest/result/exitstatus.md) to the actual exit status of the child process (as reported by the system) even if you do not observe `\.exitStatus`.
+
+## See Also
+
+### Checking how processes exit
+
+- [expect(processExitsWith:observing:\_:sourceLocation:performing:)](expect%28processexitswith_observing___sourcelocation_performing_%29.md): Check that an expression causes the process to terminate in a given fashion.
+- [require(processExitsWith:observing:\_:sourceLocation:performing:)](require%28processexitswith_observing___sourcelocation_performing_%29.md): Check that an expression causes the process to terminate in a given fashion and throw an error if it did not.
+- [ExitStatus](exitstatus.md): An enumeration describing possible status a process will report on exit.
+- [ExitTest](exittest.md): A type describing an exit test.

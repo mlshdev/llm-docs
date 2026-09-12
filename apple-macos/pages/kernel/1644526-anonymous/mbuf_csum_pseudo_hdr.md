@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1644526-anonymous/mbuf_csum_pseudo_hdr](https://developer.apple.com/documentation/kernel/1644526-anonymous/mbuf_csum_pseudo_hdr)
+
+# MBUF_CSUM_PSEUDO_HDR
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Enumeration Case  
+**Availability:** macOS 10.12+
+
+## Declaration
+
+```objectivec
+MBUF_CSUM_PSEUDO_HDR = 0x0800
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+If set, this indicates that the checksum value for MBUF_CSUM_DID_DATA includes the pseudo header value. If this is not set, the stack will calculate the pseudo header value and add that to the checksum. The value of this bit is only valid when MBUF_CSUM_DID_DATA is set.

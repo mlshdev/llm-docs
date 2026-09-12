@@ -1,0 +1,28 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/nsdiffabledatasourcesnapshot-swift.struct/insertitems(_:beforeitem:)](https://developer.apple.com/documentation/uikit/nsdiffabledatasourcesnapshot-swift.struct/insertitems(_:beforeitem:))
+
+# insertItems(\_:beforeItem:)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · tvOS 13.0+ · visionOS
+
+Inserts the provided items immediately before the item with the specified identifier in the snapshot.
+
+## Declaration
+
+```swift
+mutating func insertItems(_ identifiers: [ItemIdentifierType], beforeItem beforeIdentifier: ItemIdentifierType)
+```
+
+## Parameters
+
+- `identifiers`: The array of identifiers corresponding to the items to add to the snapshot.
+- `beforeIdentifier`: The identifier of the item before which to insert the new items.
+
+## See Also
+
+### Inserting items and sections
+
+- [insertItems(\_:afterItem:)](insertitems%28__afteritem_%29.md): Inserts the provided items immediately after the item with the specified identifier in the snapshot.
+- [insertSections(\_:afterSection:)](insertsections%28__aftersection_%29.md): Inserts the provided sections immediately after the section with the specified identifier in the snapshot.
+- [insertSections(\_:beforeSection:)](insertsections%28__beforesection_%29.md): Inserts the provided sections immediately before the section with the specified identifier in the snapshot.

@@ -1,0 +1,13 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/string/decodecstring(_:as:repairinginvalidcodeunits:)-3mvvy](https://developer.apple.com/documentation/swift/string/decodecstring(_:as:repairinginvalidcodeunits:)-3mvvy)
+
+# decodeCString(\_:as:repairingInvalidCodeUnits:)
+
+**Framework:** Swift  
+**Kind:** Type Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+## Declaration
+
+```swift
+static func decodeCString<Encoding>(_ cString: [Encoding.CodeUnit], as encoding: Encoding.Type, repairingInvalidCodeUnits isRepairing: Bool = true) -> (result: String, repairsMade: Bool)? where Encoding : _UnicodeEncoding
+```

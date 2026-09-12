@@ -1,0 +1,47 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metrickit/metricmanager/tracklaunchtask(id:ontrackingerror:_:)-jnu1](https://developer.apple.com/documentation/metrickit/metricmanager/tracklaunchtask(id:ontrackingerror:_:)-jnu1)
+
+# trackLaunchTask(id:onTrackingError:\_:)
+
+**Framework:** MetricKit  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+
+
+Measures the duration of a synchronous extended launch task.
+
+## Declaration
+
+```swift
+@MainActor final func trackLaunchTask<Result, Failure>(id: LaunchTaskID, onTrackingError: ((MetricManager.LaunchTaskError) -> Void)? = nil, _ operation: () throws(Failure) -> Result) throws(Failure) -> Result where Failure : Error
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this method to wrap synchronous work that extends your app’s perceived launch time. Pass a [LaunchTaskID](../launchtaskid.md) and a synchronous closure wrapping the work to measure. Measurement begins when the closure starts and ends it when the closure returns, regardless of whether the closure throws.
+
+```swift
+manager.trackLaunchTask(id: "register-services") {
+    registerAllServices()
+}
+```
+
+Pass an `onTrackingError` closure to observe [MetricManager.LaunchTaskError](launchtaskerror.md) values without interrupting the tracked work:
+
+```swift
+manager.trackLaunchTask(id: "register-services", onTrackingError: { error in
+    logger.warning("Tracking error: \(error.reason)")
+}) {
+    registerAllServices()
+}
+```
+
+To track asynchronous launch work instead, use [trackLaunchTask(id:onTrackingError:\_:)](tracklaunchtask%28id_ontrackingerror___%29-48k2s.md).
+
+## See Also
+
+### Extended launch
+
+- [trackLaunchTask(id:onTrackingError:\_:)](tracklaunchtask%28id_ontrackingerror___%29-48k2s.md): Measures the duration of an asynchronous extended launch task.
+- [MetricManager.LaunchTaskError](launchtaskerror.md): An error that describes a problem that occurred while tracking an extended launch task.
+- [LaunchTaskID](../launchtaskid.md): An identifier for a task measured as part of an extended app launch.

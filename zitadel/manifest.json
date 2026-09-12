@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "project": "zitadel",
   "title": "ZITADEL",
+  "homepage": "https://zitadel.com/docs",
   "repository": "zitadel/zitadel",
   "tag": "v4.17.3",
   "releaseId": 382525855,

@@ -1,0 +1,68 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/telephonymessagingkit/rcsservice/download(_:)](https://developer.apple.com/documentation/telephonymessagingkit/rcsservice/download(_:))
+
+# download(\_:)
+
+**Framework:** TelephonyMessagingKit  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+
+
+Downloads a file from the RCS content server.
+
+## Declaration
+
+```swift
+final func download(_ downloadRequest: RCSService.FileDownloadRequest) async throws -> RCSService.FileDownloadRequest.Metadata
+```
+
+## Parameters
+
+- `downloadRequest`: A [RCSService.FileDownloadRequest](filedownloadrequest.md) that indicates the URL to download and its destination path on the local filesystem.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A [RCSService.FileDownloadRequest.Metadata](filedownloadrequest/metadata.md) instance that contains information about the downloaded file.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Call this method after receiving an [RCSMessage](../rcsmessage.md) whose content type is [RCSMessage.Content.fileTransfer(\_:)](../rcsmessage/content-swift.enum/filetransfer%28__%29.md) from the RCS service’s [incomingMessageNotifications](incomingmessagenotifications.md) asynchronous sequence. Use the message’s [fileMetadata](../rcsmessage/filetransfer/filemetadata.md) and optional [thumbnailMetadata](../rcsmessage/filetransfer/thumbnailmetadata.md), both of type [RCSFileTransferMetadata](../rcsfiletransfermetadata.md), to get the URLs to download. The metadata structure also contains other properties which may be useful for downloading, such as the file size and type.
+
+The following example assumes you received a [RCSMessage.FileTransfer](../rcsmessage/filetransfer.md) instance called `fileTransferMessage` from the incoming message notifications sequence. It uses the message’s metadata to get a URL with which to call `download(_:)`, and then uses metadata from the download to get a [suggestedFileName](filedownloadrequest/metadata/suggestedfilename.md) to help place the file in a permanent location.
+
+```swift
+let service = TelephonyMessagingSession.shared.rcsService
+
+let cellularServices = try TelephonyMessagingSession.shared.cellularServices
+let cellularServiceID = cellularServices[0].id
+
+guard service.isViable(for: cellularServiceID) else { return }
+
+let downloadURL = fileTransferMessage.fileMetadata.url
+let temporaryURL = URL.temporaryDirectory
+    .appendingPathComponent(downloadURL.lastPathComponent)
+
+// Download file.
+let request = RCSService.FileDownloadRequest(cellularServiceID: cellularServiceID,
+                                             fileURL: downloadURL,
+                                             destinationFileURL: temporaryURL)
+let downloadMetadata = try await service.download(request)
+
+// Move file to permanent location, using suggested file name.
+let receivedURL = URL.documentsDirectory
+    .appendingPathComponent(downloadMetadata.suggestedFileName ?? "Unknown")
+try FileManager.default.moveItem(at: temporaryURL,
+                                 to: receivedURL)
+```
+
+## See Also
+
+### Transferring files
+
+- [upload(\_:)](upload%28__%29.md): Uploads a file to the RCS content server.
+- [RCSService.FileUploadRequest](fileuploadrequest.md): A structure that represents an RCS file upload request.
+- [RCSService.FileUploadRequest.Metadata](fileuploadrequest/metadata.md): A structure that contains upload metadata from the content server.
+- [RCSService.FileDownloadRequest](filedownloadrequest.md): A structure that represents an RCS file download request.
+- [RCSService.FileDownloadRequest.Metadata](filedownloadrequest/metadata.md): A structure that contains download metadata from the content server.

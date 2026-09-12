@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/filewrapperdocumentwriter/init(_:makefilewrapper:)](https://developer.apple.com/documentation/swiftui/filewrapperdocumentwriter/init(_:makefilewrapper:))
+
+# init(\_:makeFileWrapper:)
+
+**Framework:** SwiftUI  
+**Kind:** Initializer  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+Creates a writer that converts a snapshot into a `FileWrapper`.
+
+## Declaration
+
+```swift
+init(_ configuration: sending FileWrapperDocumentWriter<Snapshot>.WriteConfiguration, makeFileWrapper: @escaping (Snapshot, FileWrapper?) async throws -> FileWrapper)
+```
+
+## Parameters
+
+- `configuration`: Properties required to write a document to disk.
+- `makeFileWrapper`: Serializes a `Snapshot` into a `FileWrapper`. The closure takes the following parameters:
+
+  - `snapshot`: The snapshot to serialize into a `FileWrapper`.
+  - `previous`: The previous file wrapper that can be reused to optimize writing. If the latest operation for the document was writing, it is the file wrapper used for writing. If the latest operation was reading, SwiftUI passes the file wrapper read by a companion `FileWrapperDocumentReader`.
+
+## See Also
+
+### Creating a writer
+
+- [FileWrapperDocumentWriter.WriteConfiguration](writeconfiguration.md)

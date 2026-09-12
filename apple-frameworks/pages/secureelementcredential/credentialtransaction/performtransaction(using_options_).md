@@ -1,0 +1,53 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/secureelementcredential/credentialtransaction/performtransaction(using:options:)](https://developer.apple.com/documentation/secureelementcredential/credentialtransaction/performtransaction(using:options:))
+
+# performTransaction(using:options:)
+
+**Framework:** SecureElementCredential  
+**Kind:** Instance Method  
+**Availability:** iOS 18.1+ · iPadOS 18.1+
+
+Prompts the user for authorization and then activates a credential for card emulation.
+
+## Declaration
+
+```swift
+func performTransaction(using credential: Credential, options: CardEmulationOptions = .init()) async throws
+```
+
+## Parameters
+
+- `credential`: The credential to activate and transition into card emulation state.
+- `options`: The options to activate the credential with, defaults to none.
+
+## Mentioned In
+
+- [Accessing and using secure element credentials](../accessing-and-using-secure-element-credentials.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+If this call succeeds, the session state trasitions to [CredentialSession.State.cardEmulation(credential:)](../credentialsession/state-swift.enum/cardemulation%28credential_%29.md).
+
+Card emulation ends after 60 seconds, at which point the the event stream publishes a [CredentialSession.Event.cardEmulationTimeout](../credentialsession/event/cardemulationtimeout.md) event. If you complete your transaction before the timeout, call [endCardEmulation()](../credentialsession/endcardemulation%28%29.md) to exit card emulation mode.
+
+The caller needs to invoke [invalidate()](configuration/invalidate%28%29.md) after completing each transaction.
+
+> **Important**
+
+> Calling this method may generate a billable event to the credential provider.
+
+> **Throws**
+
+> An [CredentialSession.ErrorCode](../credentialsession/errorcode.md). The most common errors are:
+>
+> - [CredentialSession.ErrorCode.invalidView](../credentialsession/errorcode/invalidview.md): The transaction has no associated scene.
+> - [CredentialSession.ErrorCode.userCanceledAuthorization](../credentialsession/errorcode/usercanceledauthorization.md): The user dismissed the authorization sheet.
+> - [CredentialSession.ErrorCode.resourceUnavailable](../credentialsession/errorcode/resourceunavailable.md): The system resource is unavailable.
+
+## See Also
+
+### Performing transactions
+
+- [performTransactionInWiredMode(using:instanceAID:)](performtransactioninwiredmode%28using_instanceaid_%29.md): Enters wired mode to perform a transaction.
+- [performCardEmulationTransactionWithCurrentCredential(options:)](performcardemulationtransactionwithcurrentcredential%28options_%29.md): Activate the current credential to perform a transaction in card emulation mode.

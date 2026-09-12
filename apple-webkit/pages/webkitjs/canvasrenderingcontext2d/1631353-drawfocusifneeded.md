@@ -1,0 +1,17 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/canvasrenderingcontext2d/1631353-drawfocusifneeded](https://developer.apple.com/documentation/webkitjs/canvasrenderingcontext2d/1631353-drawfocusifneeded)
+
+# drawFocusIfNeeded
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+void drawFocusIfNeeded(
+    Element element
+);
+```

@@ -1,0 +1,45 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/homekit/hmcamerastreamstate/notstreaming](https://developer.apple.com/documentation/homekit/hmcamerastreamstate/notstreaming)
+
+# HMCameraStreamState.notStreaming (Swift)
+
+**Framework:** HomeKit  
+**Kind:** Case  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 10.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.0+
+
+The state when the camera stream is not active.
+
+## Declaration
+
+```swift
+case notStreaming
+```
+
+## See Also
+
+### Observing the streaming state
+
+- [HMCameraStreamState.starting](starting.md): The state when the camera stream start request is processing.
+- [HMCameraStreamState.stopping](stopping.md): The state when the camera stream is stopping.
+- [HMCameraStreamState.streaming](streaming.md): The state when the camera stream is currently in progress.
+
+# HMCameraStreamStateNotStreaming (Objective-C)
+
+**Framework:** HomeKit  
+**Kind:** Enumeration Case  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 14.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 2.0+
+
+The state when the camera stream is not active.
+
+## Declaration
+
+```objectivec
+HMCameraStreamStateNotStreaming
+```
+
+## See Also
+
+### Observing the streaming state
+
+- [HMCameraStreamStateStarting](starting.md): The state when the camera stream start request is processing.
+- [HMCameraStreamStateStopping](stopping.md): The state when the camera stream is stopping.
+- [HMCameraStreamStateStreaming](streaming.md): The state when the camera stream is currently in progress.

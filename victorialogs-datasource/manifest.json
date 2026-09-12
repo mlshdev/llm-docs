@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "project": "victorialogs-datasource",
   "title": "VictoriaLogs datasource for Grafana",
+  "homepage": "https://grafana.com/grafana/plugins/victoriametrics-logs-datasource/",
   "repository": "VictoriaMetrics/victorialogs-datasource",
   "tag": "v0.32.0",
   "releaseId": 381204445,

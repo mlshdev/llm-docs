@@ -1,0 +1,119 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/sirikit/requesting-authorization-to-use-siri](https://developer.apple.com/documentation/sirikit/requesting-authorization-to-use-siri)
+
+# Requesting Authorization to Use Siri (Swift)
+
+**Framework:** Intents  
+**Kind:** Article
+
+Request permission from the user for Siri and Maps to communicate with your app or Intents app extension.
+
+<a id="overview"></a>
+
+## Overview
+
+Siri can’t interact with your app or app extension until the user grants permission. Maps only interacts with your app extension, but as with Siri, only after the user authorizes it to do so. Request authorization from your iOS app, whether you’re handling intents in an app extension or in your app. When the user approves an authorization request from your iOS app, this grants permission for your iOS app, its Intents app extension, and your watchOS app.
+
+> **Note**
+
+>  You don’t need to request authorization if your app only supports actions in the Shortcuts app.
+
+<a id="Configure-Your-App-Target"></a>
+
+### Configure Your App Target
+
+First, enable the Siri capability for your iOS app or WatchKit extension for authorization to succeed. For information about how to enable the Siri capability, see [Creating an Intents App Extension](creating-an-intents-app-extension.md).
+
+Next, configure your `Info.plist` file. Include the [NSSiriUsageDescription](../bundleresources/information-property-list/nssiriusagedescription.md) key in your iOS appʼs `Info.plist` file. The value for this key is a string that describes what information your app shares with SiriKit. For example, a workout app might set the value to the string *Workout information will be sent to Siri*. This key is a requirement.
+
+<a id="Request-User-Authorization"></a>
+
+### Request User Authorization
+
+Call the [requestSiriAuthorization(\_:)](../intents/inpreferences/requestsiriauthorization%28__%29.md) class method of [INPreferences](../intents/inpreferences.md) at some point during your iOS app’s execution.
+
+Your app’s authorization status is [INSiriAuthorizationStatus.notDetermined](../intents/insiriauthorizationstatus/notdetermined.md) until the user authorizes or denies access. When your app requests authorization and its status is undetermined, the system prompts the user to authorize your app. The alert includes the usage description string you provided in the [NSSiriUsageDescription](../bundleresources/information-property-list/nssiriusagedescription.md) key of your app’s `Info.plist` file.
+
+The user can approve or deny your app’s request for authorization, and can change your app’s authorization status later in the Settings app. The system remembers your app’s authorization status so that subsequent calls to the [requestSiriAuthorization(\_:)](../intents/inpreferences/requestsiriauthorization%28__%29.md) method don’t prompt the user again.
+
+> **Note**
+
+>  Siri and Maps may assist in authorizing your app or Intents app extension when the user first tries to use an intent you support. Specifically, if the user interacts with your app or app extension and your app’s authorization status isn’t yet determined, Maps requests authorization automatically on your extension’s behalf.
+
+## See Also
+
+### Articles
+
+- [Adding User Interactivity with Siri Shortcuts and the Shortcuts App](adding-user-interactivity-with-siri-shortcuts-and-the-shortcuts-app.md): Add custom intents and parameters to help users interact more quickly and effectively with Siri and the Shortcuts app.
+- [Defining Relevant Shortcuts for the Siri Watch Face](defining-relevant-shortcuts-for-the-siri-watch-face.md): Deprecated. Inform Siri when your app’s shortcuts may be useful to the user.
+- [Deleting Donated Shortcuts](deleting-donated-shortcuts.md): Remove your donations from Siri.
+- [Dispatching intents to handlers](dispatching-intents-to-handlers.md): Provide SiriKit with an intent handler capable of handling a specific intent.
+- [Improving Siri Media Interactions and App Selection](improving-siri-media-interactions-and-app-selection.md): Fine-tune voice controls and improve Siri Suggestions by sharing app capabilities, customized names, and listening habits with the system.
+- [Improving interactions between Siri and your messaging app](improving-interactions-between-siri-and-your-messaging-app.md): Donate app-specific content, use Siri’s contact suggestions, and adopt the latest platform features to create a more consistent messaging experience.
+- [Registering Custom Vocabulary with SiriKit](registering-custom-vocabulary-with-sirikit.md): Register your app’s custom terminology, and provide sample phrases for how to use your app with Siri.
+- [Confirming the Details of an Intent](confirming-the-details-of-an-intent.md): Perform final validation of the intent parameters and verify that your services are ready to fulfill the intent.
+- [Handling an Intent](handling-an-intent.md): Fulfill the intent and provide feedback to SiriKit about what you did.
+- [Resolving the Parameters of an Intent](resolving-the-parameters-of-an-intent.md): Validate the parameters of an intent and make sure that you have the information you need to continue.
+- [Generating a List of Ride Options](generating-a-list-of-ride-options.md): Generate ride options for Maps to display to the user.
+- [Handling the Ride-Booking Intents](handling-the-ride-booking-intents.md): Support the different intent-handling sequences for booking rides with Shortcuts or Maps.
+- [Donating Reservations](donating-reservations.md): Inform Siri of reservations made from your app.
+- [Specifying Synonyms for Your App Name](specifying-synonyms-for-your-app-name.md): Provide alternative names for your app that are more familiar or easier for users to speak.
+- [Intent Phrases](intent-phrases.md): The keys that you include in your global vocabulary file to show how users engage your app from Siri.
+
+# Requesting Authorization to Use Siri (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Article
+
+Request permission from the user for Siri and Maps to communicate with your app or Intents app extension.
+
+<a id="overview"></a>
+
+## Overview
+
+Siri can’t interact with your app or app extension until the user grants permission. Maps only interacts with your app extension, but as with Siri, only after the user authorizes it to do so. Request authorization from your iOS app, whether you’re handling intents in an app extension or in your app. When the user approves an authorization request from your iOS app, this grants permission for your iOS app, its Intents app extension, and your watchOS app.
+
+> **Note**
+
+>  You don’t need to request authorization if your app only supports actions in the Shortcuts app.
+
+<a id="Configure-Your-App-Target"></a>
+
+### Configure Your App Target
+
+First, enable the Siri capability for your iOS app or WatchKit extension for authorization to succeed. For information about how to enable the Siri capability, see [Creating an Intents App Extension](creating-an-intents-app-extension.md).
+
+Next, configure your `Info.plist` file. Include the [NSSiriUsageDescription](../bundleresources/information-property-list/nssiriusagedescription.md) key in your iOS appʼs `Info.plist` file. The value for this key is a string that describes what information your app shares with SiriKit. For example, a workout app might set the value to the string *Workout information will be sent to Siri*. This key is a requirement.
+
+<a id="Request-User-Authorization"></a>
+
+### Request User Authorization
+
+Call the [requestSiriAuthorization:](../intents/inpreferences/requestsiriauthorization%28__%29.md) class method of [INPreferences](../intents/inpreferences.md) at some point during your iOS app’s execution.
+
+Your app’s authorization status is [INSiriAuthorizationStatusNotDetermined](../intents/insiriauthorizationstatus/notdetermined.md) until the user authorizes or denies access. When your app requests authorization and its status is undetermined, the system prompts the user to authorize your app. The alert includes the usage description string you provided in the [NSSiriUsageDescription](../bundleresources/information-property-list/nssiriusagedescription.md) key of your app’s `Info.plist` file.
+
+The user can approve or deny your app’s request for authorization, and can change your app’s authorization status later in the Settings app. The system remembers your app’s authorization status so that subsequent calls to the [requestSiriAuthorization:](../intents/inpreferences/requestsiriauthorization%28__%29.md) method don’t prompt the user again.
+
+> **Note**
+
+>  Siri and Maps may assist in authorizing your app or Intents app extension when the user first tries to use an intent you support. Specifically, if the user interacts with your app or app extension and your app’s authorization status isn’t yet determined, Maps requests authorization automatically on your extension’s behalf.
+
+## See Also
+
+### Articles
+
+- [Adding User Interactivity with Siri Shortcuts and the Shortcuts App](adding-user-interactivity-with-siri-shortcuts-and-the-shortcuts-app.md): Add custom intents and parameters to help users interact more quickly and effectively with Siri and the Shortcuts app.
+- [Defining Relevant Shortcuts for the Siri Watch Face](defining-relevant-shortcuts-for-the-siri-watch-face.md): Deprecated. Inform Siri when your app’s shortcuts may be useful to the user.
+- [Deleting Donated Shortcuts](deleting-donated-shortcuts.md): Remove your donations from Siri.
+- [Dispatching intents to handlers](dispatching-intents-to-handlers.md): Provide SiriKit with an intent handler capable of handling a specific intent.
+- [Improving Siri Media Interactions and App Selection](improving-siri-media-interactions-and-app-selection.md): Fine-tune voice controls and improve Siri Suggestions by sharing app capabilities, customized names, and listening habits with the system.
+- [Improving interactions between Siri and your messaging app](improving-interactions-between-siri-and-your-messaging-app.md): Donate app-specific content, use Siri’s contact suggestions, and adopt the latest platform features to create a more consistent messaging experience.
+- [Registering Custom Vocabulary with SiriKit](registering-custom-vocabulary-with-sirikit.md): Register your app’s custom terminology, and provide sample phrases for how to use your app with Siri.
+- [Confirming the Details of an Intent](confirming-the-details-of-an-intent.md): Perform final validation of the intent parameters and verify that your services are ready to fulfill the intent.
+- [Handling an Intent](handling-an-intent.md): Fulfill the intent and provide feedback to SiriKit about what you did.
+- [Resolving the Parameters of an Intent](resolving-the-parameters-of-an-intent.md): Validate the parameters of an intent and make sure that you have the information you need to continue.
+- [Generating a List of Ride Options](generating-a-list-of-ride-options.md): Generate ride options for Maps to display to the user.
+- [Handling the Ride-Booking Intents](handling-the-ride-booking-intents.md): Support the different intent-handling sequences for booking rides with Shortcuts or Maps.
+- [Donating Reservations](donating-reservations.md): Inform Siri of reservations made from your app.
+- [Specifying Synonyms for Your App Name](specifying-synonyms-for-your-app-name.md): Provide alternative names for your app that are more familiar or easier for users to speak.
+- [Intent Phrases](intent-phrases.md): The keys that you include in your global vocabulary file to show how users engage your app from Siri.

@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/avsystemrouting/avsystemroute-5s2um/removesession(_:)](https://developer.apple.com/documentation/avsystemrouting/avsystemroute-5s2um/removesession(_:))
+
+# removeSession(\_:)
+
+**Framework:** AVSystemRouting  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+
+
+Removes a session from the active route.
+
+## Declaration
+
+```swift
+final func removeSession(_ session: AVSystemRouteSession)
+```
+
+## Parameters
+
+- `session`: The session to remove from this route. If the session is not currently associated with this route, this function has no effect.
+
+## Mentioned In
+
+- [Routing and streaming media to remote devices](../routing-and-streaming-media-to-remote-devices.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+Call this function to unregister a session from the route when playback ends or when you no longer need the session. Removing a session stops any ongoing communication associated with that session and releases system resources.
+
+If the session is currently active, this function stops the session before removing it.
+
+> **Important**
+
+> Always remove sessions when they are no longer needed to ensure proper cleanup of system resources and network connections. To start new playback after removing a session, create a new [AVSystemRouteSession](../avsystemroutesession-gp78.md) instance.

@@ -1,0 +1,49 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/post-v1-gamecenterchallengelocalizations](https://developer.apple.com/documentation/appstoreconnectapi/post-v1-gamecenterchallengelocalizations)
+
+# Add a Challenge Localization
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Web Service Endpoint  
+**Availability:** App Store Connect API 4.0+
+
+Add a localization for a specific Game Center challenge.
+
+## URL
+
+```http
+POST https://api.appstoreconnect.apple.com/v1/gameCenterChallengeLocalizations
+```
+
+## HTTP Body
+
+Content type: `application/json`
+
+Type: `GameCenterChallengeLocalizationCreateRequest`
+
+## Response Codes
+
+- `201` Created — `GameCenterChallengeLocalizationResponse`:
+- `400` Bad Request — `ErrorResponse`:
+- `401` Unauthorized — `ErrorResponse`:
+- `403` Forbidden — `ErrorResponse`:
+- `409` Conflict — `ErrorResponse`:
+- `422` — `ErrorResponse`:
+- `429` — `ErrorResponse`:
+
+## Mentioned In
+
+- [Configuring Game Center challenges](configuring-game-center-challenges.md)
+
+## See Also
+
+### Managing localizations
+
+- [Read Challenge Localization Information](get-v1-gamecenterchallengelocalizations-_id_.md): Get information for a specific Game Center challenge localization.
+- [Read Image Information for a Challenge Localization](get-v1-gamecenterchallengelocalizations-_id_-image.md): Get details about the image for a specific Game Center challenge localization.
+- [Get the image id for a challenge localization](get-v1-gamecenterchallengelocalizations-_id_-relationships-image.md): Get the image ID for a specific Game Center challenge localization.
+- [List All Localizations for a Challenge Version](get-v1-gamecenterchallengeversions-_id_-localizations.md): Get details about the default localization for a specific Game Center challenge version.
+- [Get the localization ids for a challenge version](get-v1-gamecenterchallengeversions-_id_-relationships-localizations.md): List all the localization IDs for a specific Game Center challenge version.
+- [Modify a Challenge Localization](patch-v1-gamecenterchallengelocalizations-_id_.md): Update localization information for a specific Game Center challenge.
+- [Delete a Challenge Localization](delete-v1-gamecenterchallengelocalizations-_id_.md): Remove a specific localization from a Game Center challenge.

@@ -1,0 +1,59 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/javascriptcore/jsvalue/init(newbigintfrom:in:)-8l9iv](https://developer.apple.com/documentation/javascriptcore/jsvalue/init(newbigintfrom:in:)-8l9iv)
+
+# init(newBigIntFrom:in:) (Swift)
+
+**Framework:** JavaScriptCore  
+**Kind:** Initializer  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 9.0+ · visionOS 2.0+
+
+## Declaration
+
+```swift
+init?(newBigIntFrom int64: Int64, in context: JSContext)
+```
+
+## Parameters
+
+- `int64`: The signed 64-bit integer of the BigInt JavaScript value being created.
+- `context`: The JSContext to which the resulting JSValue belongs.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The JSValue representing a JavaScript value with type BigInt.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Create a new BigInt value from a int64_t.
+
+# valueWithNewBigIntFromInt64:inContext: (Objective-C)
+
+**Framework:** JavaScriptCore  
+**Kind:** Type Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 9.0+ · visionOS 2.0+
+
+## Declaration
+
+```objectivec
++ (JSValue *) valueWithNewBigIntFromInt64:(int64_t) int64 inContext:(JSContext *) context;
+```
+
+## Parameters
+
+- `int64`: The signed 64-bit integer of the BigInt JavaScript value being created.
+- `context`: The JSContext to which the resulting JSValue belongs.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The JSValue representing a JavaScript value with type BigInt.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Create a new BigInt value from a int64_t.

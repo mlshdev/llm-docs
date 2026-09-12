@@ -1,0 +1,59 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/cloudkitjs/cloudkit.database/fetchdatabasechanges](https://developer.apple.com/documentation/cloudkitjs/cloudkit.database/fetchdatabasechanges)
+
+# fetchDatabaseChanges
+
+**Interface language:** Data
+
+**Framework:** CloudKit JS  
+**Kind:** Instance Method  
+**Availability:** CloudKit JS 1.0+
+
+Fetch changed record zones in the database.
+
+## Declaration
+
+```
+Promise<CloudKit.DatabaseChangesResponse, CKError> fetchDatabaseChanges(
+	optional Object options
+);
+```
+
+## Parameters
+
+- `options`: Options to fetch database changes. This `Dictionary` object has one key:
+
+  | Key | Description |
+  | --- | --- |
+  | `syncToken` | Identifies a point in the database’s change history. The first time you fetch changes, omit this key and if `moreComing` is `true` in the response, use the `syncToken` in the response in the next request until `moreComing` is `false`. |
+
+<a id="return-value"></a>
+
+## Return Value
+
+A `Promise` object that resolves to a [CloudKit.DatabaseChangesResponse](../cloudkit.databasechangesresponse.md) object, or rejects to a [CKError](../cloudkit/ckerror.md) object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+For example, use this method to fetch the zones that changed and then use the [fetchRecordZoneChanges](fetchrecordzonechanges.md) method to fetch the changed records in each zone.
+
+```javascript
+database.fetchDatabaseChanges().then(function(response) {
+   return database.fetchRecordZoneChanges(response.zones)
+})
+.then(function(response) {
+   response.zones.forEach(function(zone) {
+       zone.records.forEach(function(record) {
+          // Apply the record change
+       })
+   })
+})
+```
+
+## See Also
+
+### Fetching Changes
+
+- [databaseScope](databasescope.md): The type of database (public, private, or shared).
+- [fetchRecordZoneChanges](fetchrecordzonechanges.md): Fetch changes to the specified record zones in the database.

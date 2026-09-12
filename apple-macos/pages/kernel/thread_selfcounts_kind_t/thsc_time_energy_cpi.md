@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/thread_selfcounts_kind_t/thsc_time_energy_cpi](https://developer.apple.com/documentation/kernel/thread_selfcounts_kind_t/thsc_time_energy_cpi)
+
+# THSC_TIME_ENERGY_CPI
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Enumeration Case  
+**Availability:** macOS 13.0+
+
+## Declaration
+
+```objectivec
+THSC_TIME_ENERGY_CPI
+```

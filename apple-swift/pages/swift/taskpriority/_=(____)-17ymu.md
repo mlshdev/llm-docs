@@ -1,0 +1,20 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/taskpriority/_=(_:_:)-17ymu](https://developer.apple.com/documentation/swift/taskpriority/_=(_:_:)-17ymu)
+
+# \<=(\_:\_:)
+
+**Framework:** Swift  
+**Kind:** Operator  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Returns a Boolean value indicating whether the value of the first argument is less than or equal to that of the second argument.
+
+## Declaration
+
+```swift
+static func <= (lhs: TaskPriority, rhs: TaskPriority) -> Bool
+```
+
+## Parameters
+
+- `lhs`: A value to compare.
+- `rhs`: Another value to compare.

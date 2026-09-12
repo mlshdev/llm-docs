@@ -1,0 +1,32 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/createml/mlobjectdetector/modelparameters-swift.struct/validationdata](https://developer.apple.com/documentation/createml/mlobjectdetector/modelparameters-swift.struct/validationdata)
+
+# MLObjectDetector.ModelParameters.ValidationData
+
+**Framework:** Create ML  
+**Kind:** Enumeration  
+**Availability:** macOS 10.15+
+
+A validation dataset for an object detector.
+
+## Declaration
+
+```swift
+enum ValidationData
+```
+
+## Topics
+
+### Designating validation data
+
+- [MLObjectDetector.ModelParameters.ValidationData.split(strategy:)](validationdata/split%28strategy_%29.md): A validation dataset Create ML derives by randomly selecting a portion of the object detector’s training dataset using the split strategy.
+- [MLObjectDetector.ModelParameters.ValidationData.dataFrame(\_:imageColumn:annotationColumn:)](validationdata/dataframe%28__imagecolumn_annotationcolumn_%29.md): Set validation data from the MLDataTable provided.
+- [MLObjectDetector.ModelParameters.ValidationData.dataSource(\_:)](validationdata/datasource%28__%29.md): A validation dataset you provide as a data source.
+- [MLObjectDetector.ModelParameters.ValidationData.table(\_:imageColumn:annotationColumn:)](validationdata/table%28__imagecolumn_annotationcolumn_%29.md): Deprecated. A validation dataset you provide as a data table.
+- [MLObjectDetector.ModelParameters.ValidationData.none](validationdata/none.md): An empty validation dataset that skips the model validation phase after training.
+
+## See Also
+
+### Supporting types
+
+- [MLObjectDetector.ModelParameters.ModelAlgorithmType](modelalgorithmtype.md): An object-detector training algorithm.
+- [MLObjectDetector.ModelParameters.FeatureExtractorType](featureextractortype.md): The underlying base model that extracts image features for an object-detector training session.

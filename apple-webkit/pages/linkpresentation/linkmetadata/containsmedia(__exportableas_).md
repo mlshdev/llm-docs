@@ -1,0 +1,40 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/linkpresentation/linkmetadata/containsmedia(_:exportableas:)](https://developer.apple.com/documentation/linkpresentation/linkmetadata/containsmedia(_:exportableas:))
+
+# containsMedia(\_:exportableAs:)
+
+**Framework:** Link Presentation  
+**Kind:** Instance Method  
+**Availability:** iOS 26.4+ · iPadOS 26.4+ · Mac Catalyst 26.4+ · macOS 26.4+ · tvOS 26.4+ · visionOS 26.4+ · watchOS 26.4+
+
+Determines if a specific `Transferable` type can be loaded for an attachment in the metadata.
+
+## Declaration
+
+```swift
+nonisolated func containsMedia(_ attachment: LinkMetadata.Attachment, exportableAs type: (some Transferable).Type) -> Bool
+```
+
+## Parameters
+
+- `attachment`: The kind of attachment to test, such as `.image`, `.icon`, and `.video`.
+- `type`: The `Transferable` type of the media data to test.
+
+<a id="return-value"></a>
+
+## Return Value
+
+`true` if the metadata contains the specified attachment and the attachment’s content type is compatible with the media type.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this function to immediately determine if metadata has some specific kind of media that can be coerced into a given type:
+
+```swift
+if metadata.containsMedia(.image, exportableAs: SwiftUI.Image.self) {
+    // Load the image, and while waiting, display some loading indicator.
+} else {
+    // The metadata contains no image, so omit any UI for it.
+}
+```

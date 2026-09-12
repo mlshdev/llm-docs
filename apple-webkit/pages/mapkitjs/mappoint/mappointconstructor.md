@@ -1,0 +1,42 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/mapkitjs/mappoint/mappointconstructor](https://developer.apple.com/documentation/mapkitjs/mappoint/mappointconstructor)
+
+# new MapPoint(x, y)
+
+**Interface language:** Data
+
+**Framework:** MapKit JS  
+**Kind:** Constructor  
+**Availability:** MapKit JS 5.0+
+
+Creates a map location.
+
+## Declaration
+
+```
+constructor(x?: number, y?: number);
+```
+
+## Parameters
+
+- `x`: The point along the east-west axis of the map projection.
+- `y`: The point along the north-south axis of the map projection.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The x and y values of the point are unit values. MapKit JS expects the value to be between `0` and `1,` and represents an interpolated location on the map projection in the x and y coordinates, respectively.
+
+The following example creates a point that’s one-tenth across the map projection along the x-axis, and half way across the y-axis:
+
+```javascript
+const mapPoint = new mapkit.MapPoint(0.1, 0.5);
+const x = mapPoint.x; // 0.1
+const y = mapPoint.y; // 0.5
+```
+
+## See Also
+
+### Creating a map point
+
+- [MapPointData](../mappointdata.md): A plain object representation of a map point in map units.

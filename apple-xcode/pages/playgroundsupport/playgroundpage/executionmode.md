@@ -1,0 +1,48 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/playgroundsupport/playgroundpage/executionmode](https://developer.apple.com/documentation/playgroundsupport/playgroundpage/executionmode)
+
+# PlaygroundPage.ExecutionMode
+
+**Framework:** Playground Support  
+**Kind:** Enumeration  
+**Availability:** Xcode 10.2+ · Swift Playgrounds 2.0+
+
+The available speeds for executing the code on a playground page.
+
+## Declaration
+
+```swift
+enum PlaygroundPage.ExecutionMode
+```
+
+<a id="overview"></a>
+
+## Overview
+
+The [PlaygroundPage.ExecutionMode.run](executionmode/run.md), [PlaygroundPage.ExecutionMode.runFaster](executionmode/runfaster.md), and [PlaygroundPage.ExecutionMode.runFastest](executionmode/runfastest.md) modes all execute code immediately. The [PlaygroundPage.ExecutionMode.step](executionmode/step.md) and [PlaygroundPage.ExecutionMode.stepSlowly](executionmode/stepslowly.md) modes execute  code statement by statement, highlighting each statement on the page as it's executed.
+
+For faster execution, explicitly support the [PlaygroundPage.ExecutionMode.runFaster](executionmode/runfaster.md) and [PlaygroundPage.ExecutionMode.runFastest](executionmode/runfastest.md) modes in your live view code. These modes signal to you that the learner wants the live view to show progress faster than the normal speed. These execution options aren't displayed to the learner unless you opt in by adding the `MaximumSupportedExecutionSpeed` key to a page's manifest property list. Set the key to `Faster` or `Fastest`, depending on how many speeds your live view supports.
+
+## Topics
+
+### Controlling Execution Speed
+
+- [PlaygroundPage.ExecutionMode.run](executionmode/run.md): An execution mode that runs at the normal speed.
+- [PlaygroundPage.ExecutionMode.runFaster](executionmode/runfaster.md): An execution mode that runs more quickly than usual.
+- [PlaygroundPage.ExecutionMode.runFastest](executionmode/runfastest.md): An execution mode that runs at the fastest possible speed.
+
+### Stepping Through Code
+
+- [PlaygroundPage.ExecutionMode.step](executionmode/step.md): An execution mode that executes code statement by statement.
+- [PlaygroundPage.ExecutionMode.stepSlowly](executionmode/stepslowly.md): An execution mode that executes code statement by statement with extra pauses between each.
+
+### Comparing Modes
+
+- [!=(\_:\_:)](executionmode/3029554.md): Returns `true` when the execution modes being compared are different.
+
+## See Also
+
+### Configuring Execution
+
+- [executionMode](3029561-executionmode.md): The currently selected speed for executing the code on this playground page.
+- [needsIndefiniteExecution](1964501-needsindefiniteexecution.md): A Boolean value that indicates whether indefinite execution is enabled.
+- [finishExecution()](1964505-finishexecution.md): Terminates execution of the current playground page.

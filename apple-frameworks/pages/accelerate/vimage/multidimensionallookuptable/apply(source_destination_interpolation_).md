@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimage/multidimensionallookuptable/apply(source:destination:interpolation:)](https://developer.apple.com/documentation/accelerate/vimage/multidimensionallookuptable/apply(source:destination:interpolation:))
+
+# apply(source:destination:interpolation:)
+
+**Framework:** Accelerate  
+**Kind:** Instance Method  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS · watchOS 9.0+
+
+Transforms a multiple plane pixel buffer using the multidimensional lookup table.
+
+## Declaration
+
+```swift
+func apply<SrcFormat, DestFormat>(source: vImage.PixelBuffer<SrcFormat>, destination: vImage.PixelBuffer<DestFormat>, interpolation: vImage.MultidimensionalLookupTable.InterpolationMethod) where SrcFormat : MultiplePlanePixelFormat, DestFormat : MultiplePlanePixelFormat, SrcFormat.ComponentType == Float, DestFormat.ComponentType == Float
+```
+
+## Parameters
+
+- `source`: A multiple plane [Pixel_F](../../pixel_f.md) pixel buffer that contains [sourceChannelCount](sourcechannelcount.md) planes.
+- `destination`: A multiple plane [Pixel_F](../../pixel_f.md) pixel buffer that contains [destinationChannelCount](destinationchannelcount.md) planes.
+- `interpolation`: An enumeration that specifies how the operation computes output color values that don’t have an explicit entry in the table.
+
+## See Also
+
+### Instance Methods
+
+- [apply(sources:destinations:interpolation:)](apply%28sources_destinations_interpolation_%29.md): Transforms an array of planar pixel buffers using the multidimensional lookup table.

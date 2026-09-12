@@ -1,0 +1,73 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cloudkit/ckasset/init(fileurl:)](https://developer.apple.com/documentation/cloudkit/ckasset/init(fileurl:))
+
+# init(fileURL:) (Swift)
+
+**Framework:** CloudKit  
+**Kind:** Initializer  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS · visionOS 1.0+ · watchOS 3.0+
+
+Creates an asset that references a file.
+
+## Declaration
+
+```swift
+init(fileURL: URL)
+```
+
+## Parameters
+
+- `fileURL`: The URL of the file that you want to store in CloudKit. You must provide a file URL, and it must not be `nil`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An asset object that represents the specified file.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this method to initialize new file-based assets that you want to transfer to iCloud. After saving an asset to the server, CloudKit doesn’t delete the file at the specified URL. If you no longer need the file, you must delete it yourself. When you subsequently download a record that contains an asset, CloudKit downloads its own copy of the asset data to the local device and provides you with a URL to that file.
+
+You can assign only one record to the asset that this method returns. If you want multiple records to point to the same file, you must create separate assets for each one.
+
+> **Important**
+
+> CloudKit saves only the contents of the file and doesn’t save the filename or any file-related metadata. To preserve the filename or any file-related metadata, save that data separately in the record.
+
+# initWithFileURL: (Objective-C)
+
+**Framework:** CloudKit  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS · visionOS 1.0+ · watchOS 3.0+
+
+Creates an asset that references a file.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithFileURL:(NSURL *) fileURL;
+```
+
+## Parameters
+
+- `fileURL`: The URL of the file that you want to store in CloudKit. You must provide a file URL, and it must not be `nil`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An asset object that represents the specified file.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this method to initialize new file-based assets that you want to transfer to iCloud. After saving an asset to the server, CloudKit doesn’t delete the file at the specified URL. If you no longer need the file, you must delete it yourself. When you subsequently download a record that contains an asset, CloudKit downloads its own copy of the asset data to the local device and provides you with a URL to that file.
+
+You can assign only one record to the asset that this method returns. If you want multiple records to point to the same file, you must create separate assets for each one.
+
+> **Important**
+
+> CloudKit saves only the contents of the file and doesn’t save the filename or any file-related metadata. To preserve the filename or any file-related metadata, save that data separately in the record.

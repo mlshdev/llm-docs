@@ -1,0 +1,45 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/testing/trait/bug(_:id:_:)-10yf5](https://developer.apple.com/documentation/testing/trait/bug(_:id:_:)-10yf5)
+
+# bug(\_:id:\_:)
+
+**Framework:** Swift Testing  
+**Kind:** Type Method  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS · Swift 6.0+ · Xcode 16.0+
+
+Constructs a bug to track with a test.
+
+## Declaration
+
+```swift
+static func bug(_ url: String? = nil, id: String, _ title: Comment? = nil) -> Self
+```
+
+## Parameters
+
+- `url`: A URL that refers to this bug in the associated bug-tracking system.
+- `id`: The unique identifier of this bug in its associated bug-tracking system.
+- `title`: Optionally, the human-readable title of the bug.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An instance of [Bug](../bug.md) that represents the specified bug.
+
+## Mentioned In
+
+- [Associating bugs with tests](../associatingbugs.md)
+- [Interpreting bug identifiers](../bugidentifiers.md)
+- [Enabling and disabling tests](../enablinganddisabling.md)
+
+## See Also
+
+### Annotating tests
+
+- [Adding tags to tests](../addingtags.md): Use tags to provide semantic information for organization, filtering, and customizing appearances.
+- [Adding comments to tests](../addingcomments.md): Add comments to provide useful information about tests.
+- [Associating bugs with tests](../associatingbugs.md): Associate bugs uncovered or verified by tests.
+- [Interpreting bug identifiers](../bugidentifiers.md): Examine how the testing library interprets bug identifiers provided by developers.
+- [Tag()](../tag%28%29.md): Declare a tag that can be applied to a test function or test suite.
+- [bug(\_:\_:)](bug%28____%29.md): Conforms when `Self` is `Bug`. Constructs a bug to track with a test.
+- [bug(\_:id:\_:)](bug%28__id___%29-3vtpl.md): Conforms when `Self` is `Bug`. Constructs a bug to track with a test.

@@ -1,0 +1,187 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/install-media-command](https://developer.apple.com/documentation/devicemanagement/install-media-command)
+
+# Install Media
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Web Service Endpoint  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 8.0+ · macOS 10.9+ (deprecated in 11.0)
+
+Install a book on a device.
+
+## URL
+
+```http
+PUT https://yourmdmhost.example.com/mdm
+```
+
+## HTTP Body
+
+Content type: `application/x-apple-aspen-mdm`
+
+Type: `InstallMediaCommand`
+
+The request object the server returns for the Install Media Command.
+
+## Response Codes
+
+- `200` OK — `InstallMediaResponse`: The response object the system returns for the Install Media Command.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The request must contain either the `iTunesStoreID` or `MediaURL`. The `MediaURL` must lead to a PDF file, an EPUB file in `gzip` format, or an iBooks Author document in `gzip` format. Books that MDM has installed become managed books.
+
+Use Volume Purchase Program (VPP) Licensing to obtain books from the Book Store. Books from the Book Store require that the device has enabled App Store. These books undergo backup, sync with iTunes, and remain on the device after removal of the MDM profile.
+
+Books that aren’t from the Book Store don’t require that the device has enabled App Store. These books don’t undergo backup, don’t sync with iTunes, and don’t remain on the device after removal of the MDM profile.
+
+If the book already exists, this command updates the book and makes it visible to the MDM server. The user doesn’t receive a prompt for a book installation or update unless they need to log in to complete a Book Store transaction.
+
+If you install a book from the Book Store with the same `iTunesStoreID` as an existing managed book, the new book replaces the existing one.
+
+If you install a book that isn’t from the Book Store with the same `PersistentID` as an existing book that also isn’t from the Book Store, the new book replaces the existing one.
+
+Refer to the following sections to determine supported channels and requirements, and to see an example request and response.
+
+<a id="Command-availability"></a>
+
+### Command availability
+
+|  |  |
+| --- | --- |
+| Device channel | iOS, Shared iPad |
+| User channel | macOS |
+| Requires supervision | macOS |
+| Allowed in user enrollment | iOS |
+| Required access right | AllowAppInstallation |
+
+<a id="Example-request-and-response"></a>
+
+### Example request and response
+
+**Enterprise**
+
+This command installs an enterprise book.
+
+**Request**
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Command</key>
+    <dict>
+        <key>Author</key>
+        <string>Acme, Inc.</string>
+        <key>Kind</key>
+        <string>pdf</string>
+        <key>MediaType</key>
+        <string>Book</string>
+        <key>MediaURL</key>
+        <string>https://yourmdmhost.example.com/files/myenterprisebook.pdf</string>
+        <key>PersistentID</key>
+        <string>com.acme.pdf.myenterprisebook</string>
+        <key>RequestType</key>
+        <string>InstallMedia</string>
+        <key>Title</key>
+        <string>My Enterprise Book</string>
+        <key>Version</key>
+        <string>1.0</string>
+    </dict>
+    <key>CommandUUID</key>
+    <string>0001_InstallMedia</string>
+</dict>
+</plist>
+```
+
+**Response**
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CommandUUID</key>
+    <string>0001_InstallMedia</string>
+    <key>MediaType</key>
+    <string>Book</string>
+    <key>MediaURL</key>
+    <string>https://yourmdmhost.example.com/files/myenterprisebook.pdf</string>
+    <key>PersistentID</key>
+    <string>com.acme.pdf.myenterprisebook</string>
+    <key>State</key>
+    <string>Installing</string>
+    <key>Status</key>
+    <string>Acknowledged</string>
+    <key>UDID</key>
+    <string>00008020-000915083C80012E</string>
+</dict>
+</plist>
+```
+
+**Book Store**
+
+This command installs a book from the Book Store.
+
+**Request**
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Command</key>
+    <dict>
+        <key>MediaType</key>
+        <string>Book</string>
+        <key>RequestType</key>
+        <string>InstallMedia</string>
+        <key>iTunesStoreID</key>
+        <integer>1420662672</integer>
+    </dict>
+    <key>CommandUUID</key>
+    <string>0001_InstallMedia</string>
+</dict>
+</plist>
+```
+
+**Response**
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CommandUUID</key>
+    <string>0001_InstallMedia</string>
+    <key>MediaType</key>
+    <string>Book</string>
+    <key>State</key>
+    <string>Installing</string>
+    <key>Status</key>
+    <string>Acknowledged</string>
+    <key>UDID</key>
+    <string>00008020-000915083C80012E</string>
+    <key>iTunesStoreID</key>
+    <integer>1420662672</integer>
+</dict>
+</plist>
+```
+
+## Topics
+
+### Commands and responses
+
+- [InstallMediaCommand](installmediacommand.md): Deprecated. The command to install a book on a device.
+- [InstallMediaResponse](installmediaresponse.md): Deprecated. A response from the device after it processes the command to install a book on a device.
+
+## See Also
+
+### Managed media
+
+- [Managed Media List](managed-media-list-command.md): Get a list of the managed books on a device.
+- [Remove Media](remove-media-command.md): Remove a previously installed book from a device.

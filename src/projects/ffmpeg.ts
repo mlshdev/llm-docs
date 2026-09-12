@@ -11,9 +11,9 @@ import {
 import { DocumentCollector } from "../quarantine.ts";
 import type {
   Document,
-  LockedSource,
+  GithubLockedSource,
+  GithubSourceProject,
   ProjectBuild,
-  SourceProject,
 } from "../types.ts";
 
 const texinfoManuals = [
@@ -56,8 +56,8 @@ const markdownAndText = [
 ] as const;
 
 export async function buildFfmpeg(
-  project: SourceProject,
-  lock: LockedSource,
+  project: GithubSourceProject,
+  lock: GithubLockedSource,
 ): Promise<ProjectBuild> {
   if (!lock.branch) {
     throw new Error("FFmpeg documentation must be pinned to a branch commit");
@@ -133,8 +133,8 @@ export async function buildFfmpeg(
 }
 
 function document(
-  project: SourceProject,
-  lock: LockedSource,
+  project: GithubSourceProject,
+  lock: GithubLockedSource,
   sourcePath: string,
   body: string,
   section: string,

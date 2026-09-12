@@ -1,0 +1,233 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/hkquantitysample/init(type:quantity:start:end:device:metadata:)](https://developer.apple.com/documentation/healthkit/hkquantitysample/init(type:quantity:start:end:device:metadata:))
+
+# init(type:quantity:start:end:device:metadata:) (Swift)
+
+**Framework:** HealthKit  
+**Kind:** Initializer  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.0+ · macOS 13.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Returns a sample containing a numeric measurement with the provided device and metadata.
+
+## Declaration
+
+```swift
+convenience init(type quantityType: HKQuantityType, quantity: HKQuantity, start startDate: Date, end endDate: Date, device: HKDevice?, metadata: [String : Any]?)
+```
+
+## Parameters
+
+- `quantityType`: The type of sample to be created. HealthKit defines a number of different quantity types, representing different types of health and fitness data. For the complete list of quantity type identifiers, see [HKQuantityTypeIdentifier](../hkquantitytypeidentifier.md).
+- `quantity`: The value to be stored in the sample. The quantity object must use units that are compatible with the provided quantity type. If the units are not compatible, this method throws an exception ([invalidArgumentException](../../foundation/nsexceptionname/invalidargumentexception.md)).
+- `startDate`: The start date for the sample. This date must be equal to or earlier than the end date; otherwise, this method throws an exception ([invalidArgumentException](../../foundation/nsexceptionname/invalidargumentexception.md)).
+- `endDate`: The end date for the sample. This date must be equal to or later than the start date; otherwise, this method throws an exception ([invalidArgumentException](../../foundation/nsexceptionname/invalidargumentexception.md)).
+- `device`: The device that generated the data for this sample.
+- `metadata`: The metadata dictionary contains extra information describing this sample. The dictionary’s keys are all [NSString](../../foundation/nsstring.md) objects. The values may be [NSString](../../foundation/nsstring.md) objects, [NSNumber](../../foundation/nsnumber.md) objects, or [NSDate](../../foundation/nsdate.md) objects. For a complete list of predefined metadata keys, see [Metadata Keys](../metadata-keys.md).
+
+  Using predefined keys helps facilitate sharing data between apps; however, you are also encouraged to create your own, custom keys as needed to extend the HealthKit quantity sample’s capabilities.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A valid quantity sample with the device and metadata.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+HealthKit uses quantity samples to represent sample data using a single numeric value. To create a quantity sample, first create the corresponding quantity type and quantity, and then set its start date, end date, device, and metadata. You produce a new quantity sample with the provided device and metadata.
+
+**Swift**
+
+```swift
+let device = HKDevice(name: deviceName,
+                      manufacturer: manufacturerName,
+                      model: modelName,
+                      hardwareVersion: hardwareVersionNumber,
+                      firmwareVersion: firmwareVersionNumber,
+                      softwareVersion: softwareVersionNumber,
+                      localIdentifier: localIdentifier,
+                      UDIDeviceIdentifier: deviceIdentifier)
+ 
+let metadata = [HKMetadataKeyDigitalSignature:digitalSignature,
+                HKMetadataKeyTimeZone:timeZone]
+ 
+guard let quantityType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate) else {
+    fatalError("*** Unable to create a heart rate quantity type ***")
+}
+ 
+let bpm = HKUnit(fromString: "count/min")
+let quantity = HKQuantity(unit: bpm, doubleValue: 72.0)
+ 
+let quantitySample = HKQuantitySample(type: quantityType,
+                                      quantity: quantity,
+                                      startDate: start,
+                                      endDate: end,
+                                      device: device,
+                                      metadata: metadata)
+```
+
+**Objective-C**
+
+```objc
+HKDevice *device = [[HKDevice alloc] initWithName:deviceName
+                                     manufacturer:manufacturerName
+                                            model:modelName
+                                  hardwareVersion:hardwareVersionNumber
+                                  firmwareVersion:firmwareVersionNumber
+                                  softwareVersion:softwareVersionNumber
+                                  localIdentifier:localIdentifier
+                              UDIDeviceIdentifier:deviceIdentifier];
+ 
+NSDictionary *metadata =
+@{HKMetadataKeyDigitalSignature:digitalSignature,
+HKMetadataKeyTimeZone:timeZone};
+ 
+HKQuantityType *quantityType =
+[HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierHeartRate];
+ 
+HKUnit *bpm = [HKUnit unitFromString:@"count/min"];
+ 
+HKQuantity *quantity = [HKQuantity quantityWithUnit:bpm
+                                        doubleValue:72.0];
+ 
+HKQuantitySample *sample =
+[HKQuantitySample quantitySampleWithType:quantityType
+                                quantity:quantity
+                               startDate:start
+                                 endDate:end
+                                  device:device
+                                metadata:metadata];
+```
+
+## See Also
+
+### Related Documentation
+
+- [quantityType](quantitytype.md): The quantity type for this sample.
+- [quantity](quantity.md): The quantity for this sample.
+- [endDate](../hksample/enddate.md): The sample’s end date.
+- [metadata](../hkobject/metadata.md): The metadata for this HealthKit object.
+- [quantityType(forIdentifier:)](../hkobjecttype/quantitytype%28foridentifier_%29.md): Deprecated. Returns the shared quantity type for the provided identifier.
+- [startDate](../hksample/startdate.md): The sample’s start date.
+
+### Creating Quantity Samples
+
+- [init(type:quantity:start:end:)](init%28type_quantity_start_end_%29.md): Returns a sample containing a numeric measurement.
+- [init(type:quantity:start:end:metadata:)](init%28type_quantity_start_end_metadata_%29.md): Returns a sample containing a numeric measurement with the provided metadata.
+
+# quantitySampleWithType:quantity:startDate:endDate:device:metadata: (Objective-C)
+
+**Framework:** HealthKit  
+**Kind:** Type Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.0+ · macOS 13.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Returns a sample containing a numeric measurement with the provided device and metadata.
+
+## Declaration
+
+```objectivec
++ (instancetype) quantitySampleWithType:(HKQuantityType *) quantityType quantity:(HKQuantity *) quantity startDate:(NSDate *) startDate endDate:(NSDate *) endDate device:(HKDevice *) device metadata:(NSDictionary<NSString *,id> *) metadata;
+```
+
+## Parameters
+
+- `quantityType`: The type of sample to be created. HealthKit defines a number of different quantity types, representing different types of health and fitness data. For the complete list of quantity type identifiers, see [HKQuantityTypeIdentifier](../hkquantitytypeidentifier.md).
+- `quantity`: The value to be stored in the sample. The quantity object must use units that are compatible with the provided quantity type. If the units are not compatible, this method throws an exception ([NSInvalidArgumentException](../../foundation/nsexceptionname/invalidargumentexception.md)).
+- `startDate`: The start date for the sample. This date must be equal to or earlier than the end date; otherwise, this method throws an exception ([NSInvalidArgumentException](../../foundation/nsexceptionname/invalidargumentexception.md)).
+- `endDate`: The end date for the sample. This date must be equal to or later than the start date; otherwise, this method throws an exception ([NSInvalidArgumentException](../../foundation/nsexceptionname/invalidargumentexception.md)).
+- `device`: The device that generated the data for this sample.
+- `metadata`: The metadata dictionary contains extra information describing this sample. The dictionary’s keys are all [NSString](../../foundation/nsstring.md) objects. The values may be [NSString](../../foundation/nsstring.md) objects, [NSNumber](../../foundation/nsnumber.md) objects, or [NSDate](../../foundation/nsdate.md) objects. For a complete list of predefined metadata keys, see [Metadata Keys](../metadata-keys.md).
+
+  Using predefined keys helps facilitate sharing data between apps; however, you are also encouraged to create your own, custom keys as needed to extend the HealthKit quantity sample’s capabilities.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A valid quantity sample with the device and metadata.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+HealthKit uses quantity samples to represent sample data using a single numeric value. To create a quantity sample, first create the corresponding quantity type and quantity, and then set its start date, end date, device, and metadata. You produce a new quantity sample with the provided device and metadata.
+
+**Swift**
+
+```swift
+let device = HKDevice(name: deviceName,
+                      manufacturer: manufacturerName,
+                      model: modelName,
+                      hardwareVersion: hardwareVersionNumber,
+                      firmwareVersion: firmwareVersionNumber,
+                      softwareVersion: softwareVersionNumber,
+                      localIdentifier: localIdentifier,
+                      UDIDeviceIdentifier: deviceIdentifier)
+ 
+let metadata = [HKMetadataKeyDigitalSignature:digitalSignature,
+                HKMetadataKeyTimeZone:timeZone]
+ 
+guard let quantityType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate) else {
+    fatalError("*** Unable to create a heart rate quantity type ***")
+}
+ 
+let bpm = HKUnit(fromString: "count/min")
+let quantity = HKQuantity(unit: bpm, doubleValue: 72.0)
+ 
+let quantitySample = HKQuantitySample(type: quantityType,
+                                      quantity: quantity,
+                                      startDate: start,
+                                      endDate: end,
+                                      device: device,
+                                      metadata: metadata)
+```
+
+**Objective-C**
+
+```objc
+HKDevice *device = [[HKDevice alloc] initWithName:deviceName
+                                     manufacturer:manufacturerName
+                                            model:modelName
+                                  hardwareVersion:hardwareVersionNumber
+                                  firmwareVersion:firmwareVersionNumber
+                                  softwareVersion:softwareVersionNumber
+                                  localIdentifier:localIdentifier
+                              UDIDeviceIdentifier:deviceIdentifier];
+ 
+NSDictionary *metadata =
+@{HKMetadataKeyDigitalSignature:digitalSignature,
+HKMetadataKeyTimeZone:timeZone};
+ 
+HKQuantityType *quantityType =
+[HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierHeartRate];
+ 
+HKUnit *bpm = [HKUnit unitFromString:@"count/min"];
+ 
+HKQuantity *quantity = [HKQuantity quantityWithUnit:bpm
+                                        doubleValue:72.0];
+ 
+HKQuantitySample *sample =
+[HKQuantitySample quantitySampleWithType:quantityType
+                                quantity:quantity
+                               startDate:start
+                                 endDate:end
+                                  device:device
+                                metadata:metadata];
+```
+
+## See Also
+
+### Related Documentation
+
+- [quantityType](quantitytype.md): The quantity type for this sample.
+- [quantity](quantity.md): The quantity for this sample.
+- [endDate](../hksample/enddate.md): The sample’s end date.
+- [metadata](../hkobject/metadata.md): The metadata for this HealthKit object.
+- [quantityTypeForIdentifier:](../hkobjecttype/quantitytype%28foridentifier_%29.md): Deprecated. Returns the shared quantity type for the provided identifier.
+- [startDate](../hksample/startdate.md): The sample’s start date.
+
+### Creating Quantity Samples
+
+- [quantitySampleWithType:quantity:startDate:endDate:](init%28type_quantity_start_end_%29.md): Returns a sample containing a numeric measurement.
+- [quantitySampleWithType:quantity:startDate:endDate:metadata:](init%28type_quantity_start_end_metadata_%29.md): Returns a sample containing a numeric measurement with the provided metadata.

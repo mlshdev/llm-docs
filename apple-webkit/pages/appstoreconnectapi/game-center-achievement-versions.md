@@ -1,0 +1,38 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/game-center-achievement-versions](https://developer.apple.com/documentation/appstoreconnectapi/game-center-achievement-versions)
+
+# Game Center achievement versions
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** API Collection
+
+Manage versions for your Game Center achievements.
+
+## Topics
+
+### Reading and creating achievement versions
+
+- [Read Game Center Achievement Version Information](get-v2-gamecenterachievementversions-_id_.md): Get information about a specific Game Center achievement version.
+- [List All Localizations for a Game Center Achievement Version](get-v2-gamecenterachievementversions-_id_-localizations.md): Get a list of localizations for a specific Game Center achievement version.
+- [Get All Localization IDs for a Game Center Achievement Version](get-v2-gamecenterachievementversions-_id_-relationships-localizations.md): Get a list of localization resource IDs for a specific Game Center achievement version.
+- [Create a Game Center Achievement Version](post-v2-gamecenterachievementversions.md): Create a Game Center achievement version.
+
+### Objects
+
+- [GameCenterAchievementVersionV2](gamecenterachievementversionv2.md): The data structure that represents a Game Center achievement version v2 resource.
+- [GameCenterAchievementVersionV2CreateRequest](gamecenterachievementversionv2createrequest.md): The request body you use to create a Game Center achievement version v2.
+- [GameCenterAchievementVersionV2Response](gamecenterachievementversionv2response.md): A response that contains a single Game Center achievement version v2 resource.
+- [GameCenterAchievementVersionsV2Response](gamecenterachievementversionsv2response.md): A response that contains a single Game Center achievement version v2 resource.
+- [GameCenterAchievementVersionV2InlineCreate](gamecenterachievementversionv2inlinecreate.md): The data structure that represents a Game Center achievement version v2 inline create resource.
+- [GameCenterAchievementVersionV2LocalizationsLinkagesResponse](gamecenterachievementversionv2localizationslinkagesresponse.md): A response that contains a list of Game Center achievement version v2 localization linkage resources.
+
+## See Also
+
+### Achievements
+
+- [Game Center achievements](game-center-achievements.md): Manage achievements for your apps.
+- [Game Center achievements localizations](game-center-achievements-localizations.md): Manage localizations for your achievements.
+- [Game Center achievements images](game-center-achievements-images.md): Manage images for your Game Center achievements.
+- [Game Center achievement releases](game-center-achievement-releases.md): Manage releases for your Game Center achievements.
+- [Game Center player achievements](game-center-player-achievements.md): Manage Game Center achievements by player for your apps.

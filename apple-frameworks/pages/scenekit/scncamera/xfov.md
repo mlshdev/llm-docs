@@ -1,0 +1,73 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/scenekit/scncamera/xfov](https://developer.apple.com/documentation/scenekit/scncamera/xfov)
+
+# xFov (Swift)
+
+**Framework:** SceneKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ (deprecated in 26.0) · iPadOS 8.0+ (deprecated in 26.0) · Mac Catalyst 13.1+ (deprecated in 26.0) · macOS 10.8+ (deprecated in 26.0) · tvOS 9.0+ (deprecated in 26.0) · visionOS 1.0+ (deprecated in 26.0) · watchOS 3.0+ (deprecated in 26.0)
+
+The camera’s field of view, in degrees, on the horizontal axis. Animatable.
+
+> Use [fieldOfView](fieldofview.md) instead; see also [projectionDirection](projectiondirection.md).
+
+## Declaration
+
+```swift
+var xFov: Double { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Field of view is an angle that determines the extent of the scene visible to the camera, similar to that of a real-world camera lens. A small field of view angle provides a narrow view, and a large field of view provides a wide view. A very wide field of view results in distorted perspective.
+
+SceneKit allows horizontal and vertical field of view to be set independently. By default, both the [xFov](xfov.md) and [yFov](yfov.md) properties are zero, causing SceneKit to use a 60° vertical field of view and automatically adjust the horizontal field of view to fit the renderer’s aspect ratio without distorting the image. If you set only one of the field of view properties to a nonzero value, SceneKit uses that value for its axis and automatically adjusts the field of view in the other axis. If you set both properties, SceneKit uses the property that best fits the renderer’s current aspect ratio and automatically adjusts the field of view in the other axis.
+
+You can animate changes to this property’s value. See [Animating SceneKit Content](../animating-scenekit-content.md).
+
+## See Also
+
+### Deprecated
+
+- [yFov](yfov.md): Deprecated. The camera’s field of view, in degrees, on the vertical axis. Animatable.
+- [focalDistance](focaldistance.md): Deprecated. The distance from the camera at which objects appear in sharp focus. Animatable.
+- [focalSize](focalsize.md): Deprecated. The width of the distance range at which objects appear in sharp focus. Animatable.
+- [focalBlurRadius](focalblurradius.md): Deprecated. The maximum amount of blurring, in pixels, applied to areas outside the camera’s depth of field. Animatable.
+- [aperture](aperture.md): Deprecated. A factor that determines the transition between in-focus and out-of-focus areas. Animatable.
+
+# xFov (Objective-C)
+
+**Framework:** SceneKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ (deprecated in 11.0) · iPadOS 8.0+ (deprecated in 11.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.8+ (deprecated in 10.13) · tvOS 9.0+ (deprecated in 11.0) · visionOS 1.0+ (deprecated in 1.0) · watchOS 3.0+ (deprecated in 4.0)
+
+The camera’s field of view, in degrees, on the horizontal axis. Animatable.
+
+> Use [fieldOfView](fieldofview.md) instead; see also [projectionDirection](projectiondirection.md).
+
+## Declaration
+
+```objectivec
+@property (nonatomic) double xFov;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Field of view is an angle that determines the extent of the scene visible to the camera, similar to that of a real-world camera lens. A small field of view angle provides a narrow view, and a large field of view provides a wide view. A very wide field of view results in distorted perspective.
+
+SceneKit allows horizontal and vertical field of view to be set independently. By default, both the [xFov](xfov.md) and [yFov](yfov.md) properties are zero, causing SceneKit to use a 60° vertical field of view and automatically adjust the horizontal field of view to fit the renderer’s aspect ratio without distorting the image. If you set only one of the field of view properties to a nonzero value, SceneKit uses that value for its axis and automatically adjusts the field of view in the other axis. If you set both properties, SceneKit uses the property that best fits the renderer’s current aspect ratio and automatically adjusts the field of view in the other axis.
+
+You can animate changes to this property’s value. See [Animating SceneKit Content](../animating-scenekit-content.md).
+
+## See Also
+
+### Deprecated
+
+- [yFov](yfov.md): Deprecated. The camera’s field of view, in degrees, on the vertical axis. Animatable.
+- [focalDistance](focaldistance.md): Deprecated. The distance from the camera at which objects appear in sharp focus. Animatable.
+- [focalSize](focalsize.md): Deprecated. The width of the distance range at which objects appear in sharp focus. Animatable.
+- [focalBlurRadius](focalblurradius.md): Deprecated. The maximum amount of blurring, in pixels, applied to areas outside the camera’s depth of field. Animatable.
+- [aperture](aperture.md): Deprecated. A factor that determines the transition between in-focus and out-of-focus areas. Animatable.

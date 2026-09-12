@@ -1,0 +1,45 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/addressbook/abgroup/searchelement(forproperty:label:key:value:comparison:)](https://developer.apple.com/documentation/addressbook/abgroup/searchelement(forproperty:label:key:value:comparison:))
+
+# searchElement(forProperty:label:key:value:comparison:) (Swift)
+
+**Framework:** Address Book  
+**Kind:** Type Method  
+**Availability:** macOS
+
+Returns a search element object that searches for records of this type.
+
+## Declaration
+
+```swift
+class func searchElement(forProperty property: String!, label: String!, key: String!, value: Any!, comparison: ABSearchComparison) -> ABSearchElement!
+```
+
+## Parameters
+
+- `property`: The name of the property to search on. It cannot be `nil`. For a full list of the properties, see  [Default Record Properties](../default-record-properties.md) and [Default Group Properties](../default-group-properties.md).
+- `label`: The label name for a multivalue list. If `property` does not have multiple values, pass `nil`. If `property` does have multiple values, pass `nil` to search all the values. By default, `ABGroup` records don’t contain any multivalue list properties.
+- `key`: The key name for a dictionary. Pass `nil` if `property` is not a dictionary. If `property` is a dictionary, pass `nil` to search all keys. By default, `ABGroup` records don’t contain any properties that are dictionaries.
+- `value`: What you’re searching for. If `nil`, the only supported value for `comparison` is `kABEqual` or `kABNotEqual`.
+- `comparison`: The type of comparison to perform and is an [ABSearchComparison](../absearchcomparison.md), such as `kABEqual` or `kABPrefixMatchCaseInsensitive`.
+
+# searchElementForProperty:label:key:value:comparison: (Objective-C)
+
+**Framework:** Address Book  
+**Kind:** Type Method  
+**Availability:** macOS
+
+Returns a search element object that searches for records of this type.
+
+## Declaration
+
+```objectivec
++ (ABSearchElement *) searchElementForProperty:(NSString *) property label:(NSString *) label key:(NSString *) key value:(id) value comparison:(ABSearchComparison) comparison;
+```
+
+## Parameters
+
+- `property`: The name of the property to search on. It cannot be `nil`. For a full list of the properties, see  [Default Record Properties](../default-record-properties.md) and [Default Group Properties](../default-group-properties.md).
+- `label`: The label name for a multivalue list. If `property` does not have multiple values, pass `nil`. If `property` does have multiple values, pass `nil` to search all the values. By default, `ABGroup` records don’t contain any multivalue list properties.
+- `key`: The key name for a dictionary. Pass `nil` if `property` is not a dictionary. If `property` is a dictionary, pass `nil` to search all keys. By default, `ABGroup` records don’t contain any properties that are dictionaries.
+- `value`: What you’re searching for. If `nil`, the only supported value for `comparison` is `kABEqual` or `kABNotEqual`.
+- `comparison`: The type of comparison to perform and is an [ABSearchComparison](../absearchcomparison.md), such as `kABEqual` or `kABPrefixMatchCaseInsensitive`.

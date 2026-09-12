@@ -1,0 +1,55 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uitableview/celllayoutmarginsfollowreadablewidth](https://developer.apple.com/documentation/uikit/uitableview/celllayoutmarginsfollowreadablewidth)
+
+# cellLayoutMarginsFollowReadableWidth (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · tvOS 9.0+ · visionOS 1.0+
+
+A Boolean value that indicates whether the cell margins derive from the width of the readable content guide.
+
+## Declaration
+
+```swift
+var cellLayoutMarginsFollowReadableWidth: Bool { get set }
+```
+
+## See Also
+
+### Related Documentation
+
+- [readableContentGuide](../uiview/readablecontentguide.md): A layout guide representing an area with a readable width within the view.
+
+### Configuring cell height and layout
+
+- [rowHeight](rowheight.md): The default height in points of each row in the table view.
+- [estimatedRowHeight](estimatedrowheight.md): The estimated height of rows in the table view.
+- [fillerRowHeight](fillerrowheight.md): The height for empty rows that fill the table view.
+- [insetsContentViewsToSafeArea](insetscontentviewstosafearea.md): A Boolean value that indicates whether the table view adjusts the content views of its cells, headers, and footers to fit within the safe area.
+
+# cellLayoutMarginsFollowReadableWidth (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · tvOS 9.0+ · visionOS 1.0+
+
+A Boolean value that indicates whether the cell margins derive from the width of the readable content guide.
+
+## Declaration
+
+```objectivec
+@property (nonatomic) BOOL cellLayoutMarginsFollowReadableWidth;
+```
+
+## See Also
+
+### Related Documentation
+
+- [readableContentGuide](../uiview/readablecontentguide.md): A layout guide representing an area with a readable width within the view.
+
+### Configuring cell height and layout
+
+- [rowHeight](rowheight.md): The default height in points of each row in the table view.
+- [estimatedRowHeight](estimatedrowheight.md): The estimated height of rows in the table view.
+- [fillerRowHeight](fillerrowheight.md): The height for empty rows that fill the table view.
+- [insetsContentViewsToSafeArea](insetscontentviewstosafearea.md): A Boolean value that indicates whether the table view adjusts the content views of its cells, headers, and footers to fit within the safe area.

@@ -1,0 +1,258 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclusterbasicinformation](https://developer.apple.com/documentation/matter/mtrbaseclusterbasicinformation)
+
+# MTRBaseClusterBasicInformation (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+class MTRBaseClusterBasicInformation
+```
+
+## Topics
+
+### Initializers
+
+- [init(device:endpointID:queue:)](mtrbaseclusterbasicinformation/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandList(completion:)](mtrbaseclusterbasicinformation/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAttributeList(completion:)](mtrbaseclusterbasicinformation/readattributeattributelist%28completion_%29.md)
+- [readAttributeCapabilityMinima(completion:)](mtrbaseclusterbasicinformation/readattributecapabilityminima%28completion_%29.md)
+- [readAttributeClusterRevision(completion:)](mtrbaseclusterbasicinformation/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeDataModelRevision(completion:)](mtrbaseclusterbasicinformation/readattributedatamodelrevision%28completion_%29.md)
+- [readAttributeFeatureMap(completion:)](mtrbaseclusterbasicinformation/readattributefeaturemap%28completion_%29.md)
+- [readAttributeGeneratedCommandList(completion:)](mtrbaseclusterbasicinformation/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeHardwareVersion(completion:)](mtrbaseclusterbasicinformation/readattributehardwareversion%28completion_%29.md)
+- [readAttributeHardwareVersionString(completion:)](mtrbaseclusterbasicinformation/readattributehardwareversionstring%28completion_%29.md)
+- [readAttributeLocalConfigDisabled(completion:)](mtrbaseclusterbasicinformation/readattributelocalconfigdisabled%28completion_%29.md)
+- [readAttributeLocation(completion:)](mtrbaseclusterbasicinformation/readattributelocation%28completion_%29.md)
+- [readAttributeManufacturingDate(completion:)](mtrbaseclusterbasicinformation/readattributemanufacturingdate%28completion_%29.md)
+- [readAttributeNodeLabel(completion:)](mtrbaseclusterbasicinformation/readattributenodelabel%28completion_%29.md)
+- [readAttributePartNumber(completion:)](mtrbaseclusterbasicinformation/readattributepartnumber%28completion_%29.md)
+- [readAttributeProductAppearance(completion:)](mtrbaseclusterbasicinformation/readattributeproductappearance%28completion_%29.md)
+- [readAttributeProductID(completion:)](mtrbaseclusterbasicinformation/readattributeproductid%28completion_%29.md)
+- [readAttributeProductLabel(completion:)](mtrbaseclusterbasicinformation/readattributeproductlabel%28completion_%29.md)
+- [readAttributeProductName(completion:)](mtrbaseclusterbasicinformation/readattributeproductname%28completion_%29.md)
+- [readAttributeProductURL(completion:)](mtrbaseclusterbasicinformation/readattributeproducturl%28completion_%29.md)
+- [readAttributeReachable(completion:)](mtrbaseclusterbasicinformation/readattributereachable%28completion_%29.md)
+- [readAttributeSerialNumber(completion:)](mtrbaseclusterbasicinformation/readattributeserialnumber%28completion_%29.md)
+- [readAttributeSoftwareVersion(completion:)](mtrbaseclusterbasicinformation/readattributesoftwareversion%28completion_%29.md)
+- [readAttributeSoftwareVersionString(completion:)](mtrbaseclusterbasicinformation/readattributesoftwareversionstring%28completion_%29.md)
+- [readAttributeUniqueID(completion:)](mtrbaseclusterbasicinformation/readattributeuniqueid%28completion_%29.md)
+- [readAttributeVendorID(completion:)](mtrbaseclusterbasicinformation/readattributevendorid%28completion_%29.md)
+- [readAttributeVendorName(completion:)](mtrbaseclusterbasicinformation/readattributevendorname%28completion_%29.md)
+- [subscribeAttributeAcceptedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCapabilityMinima(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributecapabilityminima%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevision(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeDataModelRevision(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributedatamodelrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMap(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeHardwareVersion(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributehardwareversion%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeHardwareVersionString(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributehardwareversionstring%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLocalConfigDisabled(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributelocalconfigdisabled%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLocation(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributelocation%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeManufacturingDate(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributemanufacturingdate%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNodeLabel(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributenodelabel%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePartNumber(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributepartnumber%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeProductAppearance(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributeproductappearance%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeProductID(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributeproductid%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeProductLabel(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributeproductlabel%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeProductName(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributeproductname%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeProductURL(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributeproducturl%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeReachable(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributereachable%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSerialNumber(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributeserialnumber%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSoftwareVersion(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributesoftwareversion%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSoftwareVersionString(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributesoftwareversionstring%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeUniqueID(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributeuniqueid%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeVendorID(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributevendorid%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeVendorName(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributevendorname%28with_subscriptionestablished_reporthandler_%29.md)
+- [writeAttributeLocalConfigDisabled(withValue:completion:)](mtrbaseclusterbasicinformation/writeattributelocalconfigdisabled%28withvalue_completion_%29.md)
+- [writeAttributeLocalConfigDisabled(withValue:params:completion:)](mtrbaseclusterbasicinformation/writeattributelocalconfigdisabled%28withvalue_params_completion_%29.md)
+- [writeAttributeLocation(withValue:completion:)](mtrbaseclusterbasicinformation/writeattributelocation%28withvalue_completion_%29.md)
+- [writeAttributeLocation(withValue:params:completion:)](mtrbaseclusterbasicinformation/writeattributelocation%28withvalue_params_completion_%29.md)
+- [writeAttributeNodeLabel(withValue:completion:)](mtrbaseclusterbasicinformation/writeattributenodelabel%28withvalue_completion_%29.md)
+- [writeAttributeNodeLabel(withValue:params:completion:)](mtrbaseclusterbasicinformation/writeattributenodelabel%28withvalue_params_completion_%29.md)
+- [readAttributeMaxPathsPerInvoke(completion:)](mtrbaseclusterbasicinformation/readattributemaxpathsperinvoke%28completion_%29.md)
+- [readAttributeSpecificationVersion(completion:)](mtrbaseclusterbasicinformation/readattributespecificationversion%28completion_%29.md)
+- [subscribeAttributeMaxPathsPerInvoke(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributemaxpathsperinvoke%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSpecificationVersion(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbasicinformation/subscribeattributespecificationversion%28with_subscriptionestablished_reporthandler_%29.md)
+
+### Type Methods
+
+- [readAttributeAcceptedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCapabilityMinima(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributecapabilityminima%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevision(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeDataModelRevision(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributedatamodelrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMap(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeHardwareVersion(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributehardwareversion%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeHardwareVersionString(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributehardwareversionstring%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLocalConfigDisabled(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributelocalconfigdisabled%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLocation(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributelocation%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeManufacturingDate(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributemanufacturingdate%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNodeLabel(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributenodelabel%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePartNumber(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributepartnumber%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeProductAppearance(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributeproductappearance%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeProductID(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributeproductid%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeProductLabel(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributeproductlabel%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeProductName(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributeproductname%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeProductURL(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributeproducturl%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeReachable(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributereachable%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSerialNumber(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributeserialnumber%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSoftwareVersion(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributesoftwareversion%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSoftwareVersionString(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributesoftwareversionstring%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeUniqueID(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributeuniqueid%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeVendorID(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributevendorid%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeVendorName(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributevendorname%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMaxPathsPerInvoke(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributemaxpathsperinvoke%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSpecificationVersion(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbasicinformation/readattributespecificationversion%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)
+
+### Inherited By
+
+- [MTRBaseClusterBasic](mtrbaseclusterbasic.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRBaseClusterBasicInformation (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+@interface MTRBaseClusterBasicInformation : MTRGenericBaseCluster
+```
+
+## Topics
+
+### Initializers
+
+- [initWithDevice:endpointID:queue:](mtrbaseclusterbasicinformation/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandListWithCompletion:](mtrbaseclusterbasicinformation/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAttributeListWithCompletion:](mtrbaseclusterbasicinformation/readattributeattributelist%28completion_%29.md)
+- [readAttributeCapabilityMinimaWithCompletion:](mtrbaseclusterbasicinformation/readattributecapabilityminima%28completion_%29.md)
+- [readAttributeClusterRevisionWithCompletion:](mtrbaseclusterbasicinformation/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeDataModelRevisionWithCompletion:](mtrbaseclusterbasicinformation/readattributedatamodelrevision%28completion_%29.md)
+- [readAttributeFeatureMapWithCompletion:](mtrbaseclusterbasicinformation/readattributefeaturemap%28completion_%29.md)
+- [readAttributeGeneratedCommandListWithCompletion:](mtrbaseclusterbasicinformation/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeHardwareVersionWithCompletion:](mtrbaseclusterbasicinformation/readattributehardwareversion%28completion_%29.md)
+- [readAttributeHardwareVersionStringWithCompletion:](mtrbaseclusterbasicinformation/readattributehardwareversionstring%28completion_%29.md)
+- [readAttributeLocalConfigDisabledWithCompletion:](mtrbaseclusterbasicinformation/readattributelocalconfigdisabled%28completion_%29.md)
+- [readAttributeLocationWithCompletion:](mtrbaseclusterbasicinformation/readattributelocation%28completion_%29.md)
+- [readAttributeManufacturingDateWithCompletion:](mtrbaseclusterbasicinformation/readattributemanufacturingdate%28completion_%29.md)
+- [readAttributeNodeLabelWithCompletion:](mtrbaseclusterbasicinformation/readattributenodelabel%28completion_%29.md)
+- [readAttributePartNumberWithCompletion:](mtrbaseclusterbasicinformation/readattributepartnumber%28completion_%29.md)
+- [readAttributeProductAppearanceWithCompletion:](mtrbaseclusterbasicinformation/readattributeproductappearance%28completion_%29.md)
+- [readAttributeProductIDWithCompletion:](mtrbaseclusterbasicinformation/readattributeproductid%28completion_%29.md)
+- [readAttributeProductLabelWithCompletion:](mtrbaseclusterbasicinformation/readattributeproductlabel%28completion_%29.md)
+- [readAttributeProductNameWithCompletion:](mtrbaseclusterbasicinformation/readattributeproductname%28completion_%29.md)
+- [readAttributeProductURLWithCompletion:](mtrbaseclusterbasicinformation/readattributeproducturl%28completion_%29.md)
+- [readAttributeReachableWithCompletion:](mtrbaseclusterbasicinformation/readattributereachable%28completion_%29.md)
+- [readAttributeSerialNumberWithCompletion:](mtrbaseclusterbasicinformation/readattributeserialnumber%28completion_%29.md)
+- [readAttributeSoftwareVersionWithCompletion:](mtrbaseclusterbasicinformation/readattributesoftwareversion%28completion_%29.md)
+- [readAttributeSoftwareVersionStringWithCompletion:](mtrbaseclusterbasicinformation/readattributesoftwareversionstring%28completion_%29.md)
+- [readAttributeUniqueIDWithCompletion:](mtrbaseclusterbasicinformation/readattributeuniqueid%28completion_%29.md)
+- [readAttributeVendorIDWithCompletion:](mtrbaseclusterbasicinformation/readattributevendorid%28completion_%29.md)
+- [readAttributeVendorNameWithCompletion:](mtrbaseclusterbasicinformation/readattributevendorname%28completion_%29.md)
+- [subscribeAttributeAcceptedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCapabilityMinimaWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributecapabilityminima%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevisionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeDataModelRevisionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributedatamodelrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMapWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeHardwareVersionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributehardwareversion%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeHardwareVersionStringWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributehardwareversionstring%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLocalConfigDisabledWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributelocalconfigdisabled%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLocationWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributelocation%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeManufacturingDateWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributemanufacturingdate%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNodeLabelWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributenodelabel%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePartNumberWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributepartnumber%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeProductAppearanceWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributeproductappearance%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeProductIDWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributeproductid%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeProductLabelWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributeproductlabel%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeProductNameWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributeproductname%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeProductURLWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributeproducturl%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeReachableWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributereachable%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSerialNumberWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributeserialnumber%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSoftwareVersionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributesoftwareversion%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSoftwareVersionStringWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributesoftwareversionstring%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeUniqueIDWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributeuniqueid%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeVendorIDWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributevendorid%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeVendorNameWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributevendorname%28with_subscriptionestablished_reporthandler_%29.md)
+- [writeAttributeLocalConfigDisabledWithValue:completion:](mtrbaseclusterbasicinformation/writeattributelocalconfigdisabled%28withvalue_completion_%29.md)
+- [writeAttributeLocalConfigDisabledWithValue:params:completion:](mtrbaseclusterbasicinformation/writeattributelocalconfigdisabled%28withvalue_params_completion_%29.md)
+- [writeAttributeLocationWithValue:completion:](mtrbaseclusterbasicinformation/writeattributelocation%28withvalue_completion_%29.md)
+- [writeAttributeLocationWithValue:params:completion:](mtrbaseclusterbasicinformation/writeattributelocation%28withvalue_params_completion_%29.md)
+- [writeAttributeNodeLabelWithValue:completion:](mtrbaseclusterbasicinformation/writeattributenodelabel%28withvalue_completion_%29.md)
+- [writeAttributeNodeLabelWithValue:params:completion:](mtrbaseclusterbasicinformation/writeattributenodelabel%28withvalue_params_completion_%29.md)
+- [readAttributeMaxPathsPerInvokeWithCompletion:](mtrbaseclusterbasicinformation/readattributemaxpathsperinvoke%28completion_%29.md)
+- [readAttributeSpecificationVersionWithCompletion:](mtrbaseclusterbasicinformation/readattributespecificationversion%28completion_%29.md)
+- [subscribeAttributeMaxPathsPerInvokeWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributemaxpathsperinvoke%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSpecificationVersionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbasicinformation/subscribeattributespecificationversion%28with_subscriptionestablished_reporthandler_%29.md)
+
+### Type Methods
+
+- [readAttributeAcceptedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCapabilityMinimaWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributecapabilityminima%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevisionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeDataModelRevisionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributedatamodelrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMapWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeHardwareVersionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributehardwareversion%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeHardwareVersionStringWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributehardwareversionstring%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLocalConfigDisabledWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributelocalconfigdisabled%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLocationWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributelocation%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeManufacturingDateWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributemanufacturingdate%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNodeLabelWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributenodelabel%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePartNumberWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributepartnumber%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeProductAppearanceWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributeproductappearance%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeProductIDWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributeproductid%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeProductLabelWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributeproductlabel%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeProductNameWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributeproductname%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeProductURLWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributeproducturl%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeReachableWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributereachable%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSerialNumberWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributeserialnumber%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSoftwareVersionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributesoftwareversion%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSoftwareVersionStringWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributesoftwareversionstring%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeUniqueIDWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributeuniqueid%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeVendorIDWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributevendorid%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeVendorNameWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributevendorname%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMaxPathsPerInvokeWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributemaxpathsperinvoke%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSpecificationVersionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbasicinformation/readattributespecificationversion%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)
+
+### Inherited By
+
+- [MTRBaseClusterBasic](mtrbaseclusterbasic.md)

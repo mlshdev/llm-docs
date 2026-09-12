@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/string/init(_:)-5a5lw](https://developer.apple.com/documentation/swift/string/init(_:)-5a5lw)
+
+# init(\_:)
+
+**Framework:** Swift  
+**Kind:** Initializer  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 8.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+## Declaration
+
+```swift
+init(_ cocoaString: NSString)
+```
+
+## See Also
+
+### Infrequently Used Functionality
+
+- [index(of:)](index%28of_%29.md): Deprecated. Conforms when `Element` conforms to `Equatable`. Returns the first index where the specified value appears in the collection.
+- [init(stringInterpolation:)](init%28stringinterpolation_%29.md): Creates a new instance from an interpolated string literal.
+- [init(stringLiteral:)](init%28stringliteral_%29.md): Creates an instance initialized to the given string value.
+- [init(unicodeScalarLiteral:)](init%28unicodescalarliteral_%29.md): Conforms when `ExtendedGraphemeClusterLiteralType` is `Self.UnicodeScalarLiteralType`.
+- [init(extendedGraphemeClusterLiteral:)](init%28extendedgraphemeclusterliteral_%29.md): Conforms when `ExtendedGraphemeClusterLiteralType` is `Self.StringLiteralType`.
+- [customPlaygroundQuickLook](customplaygroundquicklook.md): Deprecated. A custom playground Quick Look for the `String` instance.
+- [withContiguousStorageIfAvailable(\_:)](withcontiguousstorageifavailable%28__%29.md): Executes a closure on the sequence’s contiguous storage.

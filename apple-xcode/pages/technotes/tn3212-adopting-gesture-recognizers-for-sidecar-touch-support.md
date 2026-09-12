@@ -1,0 +1,191 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/technotes/tn3212-adopting-gesture-recognizers-for-sidecar-touch-support](https://developer.apple.com/documentation/technotes/tn3212-adopting-gesture-recognizers-for-sidecar-touch-support)
+
+# TN3212: Adopting gesture recognizers for Sidecar touch support
+
+**Kind:** Technote
+
+Use gesture recognizers to handle Sidecar touch input and update your event-handling code for macOS 27.
+
+<a id="Overview"></a>
+
+## Overview
+
+In macOS 27, AppKit continues to standardize on gesture recognizers as the primary mechanism for input handling. This change directly affects Sidecar because gesture recognizers are the only way to respond to touch input from a Sidecar-connected iPad running iPadOS 27. If your app relies on tracking loops for mouse event handling, migrate to gesture recognizers to support Sidecar touch input.
+
+This article explains how the gesture recognizer model works, how to implement gesture recognizers correctly for Sidecar touch input, how to update your existing event-handling code, and which APIs macOS 27 adds. Codebases that implement [nextEvent(matching:)](https://developer.apple.com/documentation/appkit/nswindow/nextevent%28matching:%29) or [mouseDown(with:)](https://developer.apple.com/documentation/appkit/nsresponder/mousedown%28with:%29), [mouseDragged(with:)](https://developer.apple.com/documentation/appkit/nsresponder/mousedragged%28with:%29), and [mouseUp(with:)](https://developer.apple.com/documentation/appkit/nsresponder/mouseup%28with:%29) events are most affected by the updates discussed.
+
+<a id="Understand-how-gesture-recognizers-gather-events"></a>
+
+## Understand how gesture recognizers gather events
+
+In the traditional AppKit responder-based model, mouse event handling was relatively insensitive to the z-ordering of sibling views. As long as a view called through to the superclass’s `mouseDown(with:)` implementation, the event passed through to any hit-testable underlapped sibling. This conveyance through the responder chain effectively bypassed normal hit testing, which wouldn’t consider the underlapped sibling or its descendants.
+
+Gesture recognizers work differently. They don’t follow the responder event chain. Instead, AppKit gathers all possible gesture recognizers at mouse-down or touch-began, using a strict walk of the view hierarchy from the hit-tested top-most view among siblings up to the window. From that point, the gathered set of recognizers all receive the stream of events until the end of the event sequence. This has a few important implications:
+
+- If your view is covered by another, often transparent, view, your gesture recognizer won’t be triggered. This is a common source of confusion when first working with gesture recognizers.
+- You can’t place views on top of standard framework controls, because those controls now use gesture recognizers internally. The overlapping view prevents those recognizers from activating. If necessary, rearrange the siblings, or override the occluding view’s [hitTest(\_:)](https://developer.apple.com/documentation/appkit/nsview/hittest%28_:%29) method and return `nil` to ensure it doesn’t block events going to underlying controls.
+- Gesture recognizers can only be added to views. If you want your view controller to handle touch events, add a gesture recognizer to its view and make the view controller the target and delegate.
+
+<a id="Handle-Sidecar-touch-input"></a>
+
+## Handle Sidecar touch input
+
+Unlike Touch Bar on Mac and touch events in UIKit, gesture recognizers are the only mechanism for receiving direct Sidecar touches. AppKit doesn’t deliver Sidecar touch events through the responder chain or through event monitors.
+
+> **Note**
+
+> Local and global event monitors don’t receive touch events. Touch events don’t go through [NSApp](https://developer.apple.com/documentation/appkit/nsapp) or [sendEvent(\_:)](https://developer.apple.com/documentation/appkit/nswindow/sendevent%28_:%29).
+
+For touch recognizers that need to yield to scrolling, set the [isCancellableByScrollGesture](https://developer.apple.com/documentation/appkit/nsgesturerecognizer/iscancellablebyscrollgesture) property to `true`.
+
+<a id="Update-your-event-handling-code"></a>
+
+## Update your event-handling code
+
+The transition to gesture recognizers on [NSControl](https://developer.apple.com/documentation/appkit/nscontrol) objects changes the timing of when AppKit delivers control action messages with respect to event processing. As a result, [currentEvent](https://developer.apple.com/documentation/appkit/nsapplication/currentevent) no longer returns the event that triggered an action. Use the [modifierFlags](https://developer.apple.com/documentation/appkit/nsevent/modifierflags-swift.type.property) and [pressedMouseButtons](https://developer.apple.com/documentation/appkit/nsevent/pressedmousebuttons) class properties on [NSEvent](https://developer.apple.com/documentation/appkit/nsevent) instead. Note that a touch is not part of `pressedMouseButtons`.
+
+AppKit still handles keyboard and scroll-wheel events through the responder chain. Hovering via [mouseMoved(with:)](https://developer.apple.com/documentation/appkit/nsresponder/mousemoved%28with:%29) is still managed with [NSTrackingArea](https://developer.apple.com/documentation/appkit/nstrackingarea).
+
+<a id="Implement-custom-gesture-recognizers"></a>
+
+## Implement custom gesture recognizers
+
+AppKit provides a number of existing gesture recognizers: [NSClickGestureRecognizer](https://developer.apple.com/documentation/appkit/nsclickgesturerecognizer), [NSPressGestureRecognizer](https://developer.apple.com/documentation/appkit/nspressgesturerecognizer), [NSPanGestureRecognizer](https://developer.apple.com/documentation/appkit/nspangesturerecognizer), [NSMagnificationGestureRecognizer](https://developer.apple.com/documentation/appkit/nsmagnificationgesturerecognizer), and [NSRotationGestureRecognizer](https://developer.apple.com/documentation/appkit/nsrotationgesturerecognizer). If these recognizers don’t provide the functionality you need, subclass them or create your own custom [NSGestureRecognizer](https://developer.apple.com/documentation/appkit/nsgesturerecognizer) subclass. Prefer the built in recognizers when possible.
+
+When you implement a custom `NSGestureRecognizer` subclass, keep the following guidelines in mind:
+
+- Handle cancellation. Implement [mouseCancelled(with:)](https://developer.apple.com/documentation/appkit/nsgesturerecognizer/mousecancelled%28with:%29) and [touchesCancelled(with:)](https://developer.apple.com/documentation/appkit/nsgesturerecognizer/touchescancelled%28with:%29), and set your state to either [NSGestureRecognizer.State.failed](https://developer.apple.com/documentation/appkit/nsgesturerecognizer/state-swift.enum/failed) or [NSGestureRecognizer.State.cancelled](https://developer.apple.com/documentation/appkit/nsgesturerecognizer/state-swift.enum/cancelled).
+- Use event processing methods only to update internal properties and state, and set your state to [NSGestureRecognizer.State.began](https://developer.apple.com/documentation/appkit/nsgesturerecognizer/state-swift.enum/began), [NSGestureRecognizer.State.changed](https://developer.apple.com/documentation/appkit/nsgesturerecognizer/state-swift.enum/changed), or [NSGestureRecognizer.State.ended](https://developer.apple.com/documentation/appkit/nsgesturerecognizer/state-swift.enum/ended).
+- Respond to the input from custom recognizers in action method messages.
+- If you need the originating `NSEvent` or [NSTouch](https://developer.apple.com/documentation/appkit/nstouch) objects, cache them during event processing method callbacks and retrieve the cached objects during the action message.
+- End your active gesture recognizer by transitioning to `ended`, `failed`, or `cancelled`. If you don’t, recognizers are blocked from activating.
+
+<a id="Filter-gesture-recognizer-candidates"></a>
+
+## Filter gesture recognizer candidates
+
+Remove inapplicable gesture recognizers during gesture gathering. Gesture recognizers handle this themselves in certain situations, but in many cases only your app knows whether a recognizer applies at the moment of mouse-down or touch-began. Use the following delegate methods, which provide the initiating event when the recognizer itself normally doesn’t:
+
+```swift
+// Only called for mouse events.
+func gestureRecognizer(_ gestureRecognizer: NSGestureRecognizer,
+    shouldAttemptToRecognizeWith event: NSEvent) -> Bool
+
+// Only called for touch events.
+func gestureRecognizer(_ gestureRecognizer: NSGestureRecognizer,
+    shouldReceive touch: NSTouch) -> Bool
+```
+
+<a id="Maintain-compatibility-with-existing-code"></a>
+
+## Maintain compatibility with existing code
+
+<a id="Handle-tracking-loop-compatibility"></a>
+
+### Handle tracking loop compatibility
+
+If you subclass an AppKit control and override any of the left-mouse responder methods, that control falls back to a tracking loop path for compatibility. For use cases that require overriding defaults in AppKit, use [NSControl](https://developer.apple.com/documentation/appkit/nscontrol) events to make your app compatible with gesture recognizers.
+
+For container views such as [NSTableView](https://developer.apple.com/documentation/appkit/nstableview) and [NSCollectionView](https://developer.apple.com/documentation/appkit/nscollectionview), similar tracking loop fallback paths exist. For `NSTableView`, use table view delegate methods such as [tableView(\_:shouldSelectRow:)](https://developer.apple.com/documentation/appkit/nstableviewdelegate/tableview%28_:shouldselectrow:%29). For `NSCollectionView`, use collection view delegate methods instead of overriding responder methods.
+
+<a id="Update-to-gesture-recognizer-behavior"></a>
+
+### Update to gesture recognizer behavior
+
+If your app depends on sequential, modal interactions that tracking loops provide, AppKit preserves that behavior and provides a way to opt out when you’re ready.
+
+For maximum compatibility, AppKit restricts gesture activations to a single view hierarchy at a time. Unlike in iOS, the person can’t perform multiple interactions simultaneously, though scrolling is a notable exception. This more closely simulates the implicit modality of tracking loops.
+
+You can change this behavior on a per-view basis (child views inherit the setting from their ancestors) via the [exclusiveGestureBehavior](https://developer.apple.com/documentation/appkit/nsview/exclusivegesturebehavior-swift.property) property on [NSView](https://developer.apple.com/documentation/appkit/nsview). Alternatively, set the default exclusive behavior for your app via the [NSViewGestureRecognizerIsExclusive](https://developer.apple.com/documentation/bundleresources/information-property-list/nsviewgesturerecognizerisexclusive) application information property list entry.
+
+<a id="Support-third-party-UI-frameworks"></a>
+
+## Support third-party UI frameworks
+
+If your app embeds a third-party UI framework that doesn’t yet support native touch input, AppKit provides automatic mouse emulation to help bridge the gap.
+
+- A tap emulates a mouse-down followed immediately by a mouse-up.
+- A touch and immediate pan emulates trackpad scroll events, even if the UI doesn’t respond to them.
+- A long press without movement emulates a [rightMouseDown(with:)](https://developer.apple.com/documentation/appkit/nsresponder/rightmousedown%28with:%29) (optionally followed by [rightMouseDragged(with:)](https://developer.apple.com/documentation/appkit/nsresponder/rightmousedragged%28with:%29)) with a [rightMouseUp(with:)](https://developer.apple.com/documentation/appkit/nsresponder/rightmouseup%28with:%29) on touch lift.
+- A two-finger pinch or rotation simultaneously emulates both the trackpad magnify and rotate gestures.
+
+As you adopt a touch-native version of the framework, add  [NSIsTouchNative](https://developer.apple.com/documentation/bundleresources/information-property-list/nsistouchnative) to your application information property list to disable the extra mouse emulation.
+
+<a id="Explore-updated-APIs-in-macOS-27"></a>
+
+## Explore updated APIs in macOS 27
+
+macOS 27 adds and updates APIs for touch capabilities, handling control events, configuring scroll behavior, and working with text and dragging that you can use when migrating from tracking loops to gesture recognizers or when polishing your app’s Sidecar behavior.
+
+<a id="Detect-touch-capability"></a>
+
+### Detect touch capability
+
+To determine whether a screen has touch capability, check the [multiTouch](https://developer.apple.com/documentation/appkit/nsscreen/touchcapabilities-swift.struct/multitouch) property on [NSScreen.TouchCapabilities](https://developer.apple.com/documentation/appkit/nsscreen/touchcapabilities-swift.struct).
+
+In macOS 27, this call returns `true` for all displays when a touch-capable Sidecar display is connected, not just for the Sidecar display. In most cases, instead of checking it directly, it’s better to handle events regardless of input source and decide on an alternate presentation based on the interaction type, if needed.
+
+<a id="Handle-control-events"></a>
+
+### Handle control events
+
+Several new event types are available in [NSControl.Events](https://developer.apple.com/documentation/appkit/nscontrol/events):
+
+- [trackingRepeated](https://developer.apple.com/documentation/appkit/nscontrol/events/trackingrepeated): An event when multiple `mouseDown(with:)` events with a click count greater than 1 occur.
+- [valueChanged](https://developer.apple.com/documentation/appkit/nscontrol/events/valuechanged): An event when the value changes on continuous controls, such as sliders.
+- [primaryActionTriggered](https://developer.apple.com/documentation/appkit/nscontrol/events/primaryactiontriggered): An event when a semantic primary action is triggered.
+- [menuActionTriggered](https://developer.apple.com/documentation/appkit/nscontrol/events/menuactiontriggered): An event that triggers when a menu gesture occurs, but before the menu presents.
+- [applicationReserved](https://developer.apple.com/documentation/appkit/nscontrol/events/applicationreserved): An event with a range of values, allowing your app to define custom control events.
+
+<a id="Configure-scroll-behavior"></a>
+
+### Configure scroll behavior
+
+[NSScrollView](https://developer.apple.com/documentation/appkit/nsscrollview) now supports pull-to-refresh functionality. See [NSRefreshController](https://developer.apple.com/documentation/appkit/nsrefreshcontroller) for details.
+
+The following new properties let you fine-tune scrolling behavior:
+
+**NSScrollView**
+
+- [isTouchScrollingEnabled](https://developer.apple.com/documentation/appkit/nsscrollview/istouchscrollingenabled)
+- [minimumNumberOfTouchesForScrolling](https://developer.apple.com/documentation/appkit/nsscrollview/minimumnumberoftouchesforscrolling)
+- [maximumNumberOfTouchesForScrolling](https://developer.apple.com/documentation/appkit/nsscrollview/maximumnumberoftouchesforscrolling)
+- [scrollGestureForRelationships](https://developer.apple.com/documentation/appkit/nsscrollview/scrollgestureforrelationships)
+
+**NSPanGestureRecognizer**
+
+- [minimumNumberOfTouches](https://developer.apple.com/documentation/appkit/nspangesturerecognizer/minimumnumberoftouches) and [maximumNumberOfTouches](https://developer.apple.com/documentation/appkit/nspangesturerecognizer/maximumnumberoftouches): These two properties replace [numberOfTouchesRequired](https://developer.apple.com/documentation/appkit/nspangesturerecognizer/numberoftouchesrequired). Set `maximumNumberOfTouches` to `0` to require exactly `minimumNumberOfTouches` touches; the default value for `maximumNumberOfTouches` is [NSIntegerMax](https://developer.apple.com/documentation/objectivec/nsintegermax).
+
+**NSGestureRecognizer**
+
+- `isCancellableByScrollGesture`
+
+<a id="Work-with-text-and-dragging"></a>
+
+### Work with text and dragging
+
+[NSTextSelectionManager](https://developer.apple.com/documentation/appkit/nstextselectionmanager) allows custom text engines to support standard text gestures.
+
+[NSDraggingSession](https://developer.apple.com/documentation/appkit/nsdraggingsession) gains new APIs for better interoperation with gesture recognizers. Use [beginDraggingSession(items:gesture:source:)](https://developer.apple.com/documentation/appkit/nsview/begindraggingsession%28items:gesture:source:%29) to start a drag from a gesture recognizer.
+
+macOS 27 also adds gesture-based dragging support for [NSColor](https://developer.apple.com/documentation/appkit/nscolor) and improved dragging support in [NSBrowser](https://developer.apple.com/documentation/appkit/nsbrowser).
+
+<a id="Handle-deprecations-and-behavior-changes"></a>
+
+### Handle deprecations and behavior changes
+
+In apps built with the macOS 27 SDK and Xcode 27, [location(in:)](https://developer.apple.com/documentation/appkit/nsgesturerecognizer/location%28in:%29) on `NSGestureRecognizer` returns [NSZeroPoint](https://developer.apple.com/documentation/foundation/nszeropoint) and logs an error if the receiver’s class doesn’t override the method. Subclasses of `NSGestureRecognizer` must implement `location(in:)` to report a meaningful location. For support with Xcode 27, see [Xcode support](https://developer.apple.com/support/xcode/).
+
+Use [GestureInputKinds](https://developer.apple.com/documentation/swiftui/gestureinputkinds) to limit gestures to specific types of input in SwiftUI.
+
+<a id="Related"></a>
+
+## Related
+
+- [Modernize your AppKit app](https://developer.apple.com/videos/play/wwdc2026/289)
+
+<a id="Revision-history"></a>
+
+## Revision history
+
+- **2026-06-08** First published.

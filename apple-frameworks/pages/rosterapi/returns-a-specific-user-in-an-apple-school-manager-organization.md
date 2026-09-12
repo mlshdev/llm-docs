@@ -1,0 +1,82 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/rosterapi/returns-a-specific-user-in-an-apple-school-manager-organization](https://developer.apple.com/documentation/rosterapi/returns-a-specific-user-in-an-apple-school-manager-organization)
+
+# Read a user
+
+**Interface language:** Data
+
+**Framework:** Roster API  
+**Kind:** Web Service Endpoint  
+**Availability:** Roster API 1.0.0+
+
+Read a user in an Apple School Manager organization.
+
+## URL
+
+```http
+GET https://api-school.apple.com/rosterapi/v1/users/{userId}
+```
+
+## Path Parameters
+
+- `userId` — `string` (required): The identifier from the user. Use the `id` field from the [User](user.md) object.
+
+## Response Codes
+
+- `200` OK — `User`: The request was successful.
+- `401` Unauthorized: The access token was invalid.
+- `403` Forbidden: Access to the requested user was forbidden.
+- `404` Not Found: The server didn’t find a user with the given `userId` in the organization.
+- `429`: The client made too many requests. The response includes an `X-Retry-After` header that indicates the number of seconds to wait before making another request.
+- `500` Internal Server Error: The server encountered an internal error.
+
+## Mentioned In
+
+- [Integrating with Roster API and Sign in with Apple](integrating-with-roster-api-and-sign-in-with-apple.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Access to the `users` resource requires authorization to the `edu.users.read` scope.
+
+<a id="Example"></a>
+
+### Example
+
+**Request**
+
+```
+curl "https://api-school.apple.com/rosterapi/v1/users/1234" \
+        -H "Authorization: Bearer ${TOKEN}"
+```
+
+**Response**
+
+```json
+{
+  "id": "1234",
+  "email": "user@example.edu",
+  "givenName": "Finny",
+  "middleName”: "Kim",
+  "familyName": "Ho",
+  "grade": "10",
+  "roleLocationMapping": [
+    {
+      "roleName": "Student",
+      "locationId": "LO:1234"
+    }
+  ],
+  "dateCreated": "2022-04-25T16:00:45Z",
+  "dateLastModified": "2022-04-25T16:00:45Z"
+}
+```
+
+## See Also
+
+### Information about users
+
+- [User](user.md): A user in an Apple School Manager organization.
+- [RoleLocation](rolelocation.md): A mapping between a role assumed by a user in an Apple School Manager organization, and the corresponding location.
+- [List users](returns-a-list-of-users-in-an-apple-school-manager-organization.md): List users in an Apple School Manager organization.
+- [List users in a class](returns-a-users-for-an-apple-school-manager-class.md): List users in a class of an Apple School Manager organization.
+- [Users](users.md): A list of users, with a token for pagination.

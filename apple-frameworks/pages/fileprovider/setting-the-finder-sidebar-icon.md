@@ -1,0 +1,59 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/fileprovider/setting-the-finder-sidebar-icon](https://developer.apple.com/documentation/fileprovider/setting-the-finder-sidebar-icon)
+
+# Setting the Finder Sidebar Icon
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** File Provider  
+**Kind:** Article
+
+Specify a standard or custom symbol as a sidebar icon.
+
+<a id="overview"></a>
+
+## Overview
+
+To set the sidebar icon for your File Provider extension, set the [CFBundleSymbolName](../bundleresources/information-property-list/cfbundleicons/cfbundleprimaryicon/cfbundlesymbolname.md) key in the File Provider extension’s `Info.plist` file. The key takes the name of one of the SF Symbols. For the complete list of available symbols, see [SF Symbols 3](https://developer.apple.com/sf-symbols/).
+
+This image shows setting the sidebar icon to the `cloud.bolt.fill` symbol in the Plist editor.
+
+![A screenshot of the File Provider extension’s Info.plist file. The Plist editor shows an Icon file (iOS 5) key that contains a Primary Icon key, which also contains the SF Symbol name key. ](https://developer.apple.com/images/com.apple.fileprovider/media-3908721@2x.png)
+
+Alternatively, you can open the `Info.plist` file as source code and edit the XML directly.
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleIcons</key>
+    <dict>
+        <key>CFBundlePrimaryIcon</key>
+        <dict>
+            <key>CFBundleSymbolName</key>
+            <string>cloud.bolt.fill</string>
+        </dict>
+    </dict>
+    <key>NSExtension</key>
+    <dict>
+        <key>NSExtensionFileProviderDocumentGroup</key>
+        <string>group.com.examples.My-File-Provider-App</string>
+        <key>NSExtensionFileProviderSupportsEnumeration</key>
+        <true/>
+        <key>NSExtensionPointIdentifier</key>
+        <string>com.apple.fileprovider-nonui</string>
+        <key>NSExtensionPrincipalClass</key>
+        <string>$(PRODUCT_MODULE_NAME).FileProviderExtension</string>
+    </dict>
+</dict>
+</plist>
+```
+
+To create a custom symbol for your app, see [Creating custom symbol images for your app](../uikit/creating-custom-symbol-images-for-your-app.md). To see a sample code project that uses a custom symbol, see [Synchronizing files using file provider extensions](synchronizing-files-using-file-provider-extensions.md).
+
+## See Also
+
+### Essentials
+
+- [Synchronizing the File Provider Extension](synchronizing-the-file-provider-extension.md): Keep the local and remote copies of your File Provider extension’s content in sync.
+- [Synchronizing files using file provider extensions](synchronizing-files-using-file-provider-extensions.md): Make remote files available in macOS and iOS, and synchronize their states by using file provider extensions.

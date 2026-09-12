@@ -1,0 +1,254 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsdatadetector](https://developer.apple.com/documentation/foundation/nsdatadetector)
+
+# NSDataDetector (Swift)
+
+**Framework:** Foundation  
+**Kind:** Class  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+A specialized regular expression object that matches natural language text for predefined data patterns.
+
+## Declaration
+
+```swift
+class NSDataDetector
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Find dates, addresses, links, phone numbers, and transit information in natural language text with `NSDataDetector`.
+
+`NSDataDetector` returns the results of matching content in [NSTextCheckingResult](nstextcheckingresult.md) objects. The [NSTextCheckingResult](nstextcheckingresult.md) objects that `NSDataDetector` returns are different from those that [NSRegularExpression](nsregularexpression.md) returns. The results are one of the data detector’s types and contain the corresponding properties. For example, results of type [date](nstextcheckingresult/checkingtype/date.md) have a [date](nstextcheckingresult/date.md), [timeZone](nstextcheckingresult/timezone.md), and [duration](nstextcheckingresult/duration.md); and results of type [link](nstextcheckingresult/checkingtype/link.md) have a [url](nstextcheckingresult/url.md).
+
+> **Important**
+
+>  Don’t use `NSDataDetector` to validate data. `NSDataDetector` discards potential matches in case of uncertainty. Use a class specific to the type of data for validation instead. For example, attempt to instantiate a [URL](url.md) object using [init(string:)](url/init%28string_%29.md) to validate a URL string. A valid URL string returns an instance of [URL](url.md), while an invalid URL string returns [nil](../objectivec/nil-227m0.md).
+
+<a id="Examples"></a>
+
+### Examples
+
+The following shows several graduated examples of using the `NSDataDetector` class.
+
+This code fragment creates a data detector that finds URL links and phone numbers. If an error occurs, it returns in `error`.
+
+```objc
+   NSError *error = nil;
+   NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink|NSTextCheckingTypePhoneNumber
+                                                              error:&error];
+```
+
+After creating the data detector instance, you can determine the number of matches within a range of a string using the `NSRegularExpression` method [numberOfMatches(in:options:range:)](nsregularexpression/numberofmatches%28in_options_range_%29.md).
+
+```objc
+   NSUInteger numberOfMatches = [detector numberOfMatchesInString:string
+                                                          options:0
+                                                            range:NSMakeRange(0, [string length])];
+```
+
+If you’re interested only in the overall range of the first match, the [numberOfMatches(in:options:range:)](nsregularexpression/numberofmatches%28in_options_range_%29.md) method provides it.  However, with data detectors, this is less likely than with regular expressions because clients are usually interested in additional information as well.
+
+The additional information available depends on the type of the result.  For results of type [link](nstextcheckingresult/checkingtype/link.md), it’s the `URL` property that’s significant.  For results of type `NSTextCheckingTypePhoneNumber` , it’s the `phoneNumber` property instead.
+
+The [matches(in:options:range:)](nsregularexpression/matches%28in_options_range_%29.md) method is similar to [firstMatch(in:options:range:)](nsregularexpression/firstmatch%28in_options_range_%29.md), except that it returns all matches rather than only the first. The following code fragment finds all the matches for links and phone numbers in a string:
+
+```objc
+   NSArray *matches = [detector matchesInString:string
+                                        options:0
+                                          range:NSMakeRange(0, [string length])];
+   for (NSTextCheckingResult *match in matches) {
+        NSRange matchRange = [match range];
+        if ([match resultType] == NSTextCheckingTypeLink) {
+            NSURL *url = [match URL];
+        } else if ([match resultType] == NSTextCheckingTypePhoneNumber) {
+            NSString *phoneNumber = [match phoneNumber];
+        }
+   }
+```
+
+The `NSRegularExpression` block object enumerator is the most general and flexible of the matching methods.  It allows you to iterate through matches in a string, performing arbitrary actions on each as specified by the code in the block, and to stop partway through if desired. In the following code fragment, the iteration stops after finding a certain number of matches:
+
+```objc
+   __block NSUInteger count = 0;
+   [detector enumerateMatchesInString:string
+                              options:0
+                                range:NSMakeRange(0, [string length])
+                           usingBlock:^(NSTextCheckingResult *match, NSMatchingFlags flags, BOOL *stop){
+        NSRange matchRange = [match range];
+        if ([match resultType] == NSTextCheckingTypeLink) {
+            NSURL *url = [match URL];
+        } else if ([match resultType] == NSTextCheckingTypePhoneNumber) {
+            NSString *phoneNumber = [match phoneNumber];
+        }
+        if (++count >= 100) *stop = YES;
+   }];
+```
+
+> **Note**
+
+>  Only use `NSDataDetector` on natural language text.
+>
+> If you expect text to be in a particular format, use an [Formatter](formatter.md) or [ValueTransformer](valuetransformer.md) subclass instead. For instance, if you’re expecting a date field to be an ISO 8601 timestamp, use [DateFormatter](dateformatter.md) to parse that into an [NSDate](nsdate.md) object.
+>
+> If the text is in a machine-readable format, such as XML or JSON, extract the natural language text, such as by using [XMLParser](xmlparser.md) or [JSONSerialization](jsonserialization.md), and match on that rather than attempt to match on the entire document.
+
+## Topics
+
+### Creating data detector instances
+
+- [init(types:)](nsdatadetector/init%28types_%29.md): Initializes and returns a data detector instance.
+
+### Getting the checking types
+
+- [checkingTypes](nsdatadetector/checkingtypes.md): Returns the checking types for the data detector.
+
+## Relationships
+
+### Inherits From
+
+- [NSRegularExpression](nsregularexpression.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCoding](nscoding.md)
+- [NSCopying](nscopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [NSSecureCoding](nssecurecoding.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Pattern Matching
+
+- [Scanner](scanner.md): A string parser that scans for substrings or characters in a character set, and for numeric values from decimal, hexadecimal, and floating-point representations.
+- [NSRegularExpression](nsregularexpression.md): An immutable representation of a compiled regular expression that you apply to Unicode strings.
+- [NSTextCheckingResult](nstextcheckingresult.md): An occurrence of textual content found during the analysis of a block of text, such as when matching a regular expression.
+- [NSNotFound](nsnotfound-4qp9h.md): A value indicating that a requested item couldn’t be found or doesn’t exist.
+
+# NSDataDetector (Objective-C)
+
+**Framework:** Foundation  
+**Kind:** Class  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+A specialized regular expression object that matches natural language text for predefined data patterns.
+
+## Declaration
+
+```objectivec
+@interface NSDataDetector : NSRegularExpression
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Find dates, addresses, links, phone numbers, and transit information in natural language text with `NSDataDetector`.
+
+`NSDataDetector` returns the results of matching content in [NSTextCheckingResult](nstextcheckingresult.md) objects. The [NSTextCheckingResult](nstextcheckingresult.md) objects that `NSDataDetector` returns are different from those that [NSRegularExpression](nsregularexpression.md) returns. The results are one of the data detector’s types and contain the corresponding properties. For example, results of type [NSTextCheckingTypeDate](nstextcheckingresult/checkingtype/date.md) have a [date](nstextcheckingresult/date.md), [timeZone](nstextcheckingresult/timezone.md), and [duration](nstextcheckingresult/duration.md); and results of type [NSTextCheckingTypeLink](nstextcheckingresult/checkingtype/link.md) have a [URL](nstextcheckingresult/url.md).
+
+> **Important**
+
+>  Don’t use `NSDataDetector` to validate data. `NSDataDetector` discards potential matches in case of uncertainty. Use a class specific to the type of data for validation instead. For example, attempt to instantiate a [URL](url.md) object using [init(string:)](url/init%28string_%29.md) to validate a URL string. A valid URL string returns an instance of [URL](url.md), while an invalid URL string returns [nil](../objectivec/nil-227m0.md).
+
+<a id="Examples"></a>
+
+### Examples
+
+The following shows several graduated examples of using the `NSDataDetector` class.
+
+This code fragment creates a data detector that finds URL links and phone numbers. If an error occurs, it returns in `error`.
+
+```objc
+   NSError *error = nil;
+   NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink|NSTextCheckingTypePhoneNumber
+                                                              error:&error];
+```
+
+After creating the data detector instance, you can determine the number of matches within a range of a string using the `NSRegularExpression` method [numberOfMatchesInString:options:range:](nsregularexpression/numberofmatches%28in_options_range_%29.md).
+
+```objc
+   NSUInteger numberOfMatches = [detector numberOfMatchesInString:string
+                                                          options:0
+                                                            range:NSMakeRange(0, [string length])];
+```
+
+If you’re interested only in the overall range of the first match, the [numberOfMatchesInString:options:range:](nsregularexpression/numberofmatches%28in_options_range_%29.md) method provides it.  However, with data detectors, this is less likely than with regular expressions because clients are usually interested in additional information as well.
+
+The additional information available depends on the type of the result.  For results of type [NSTextCheckingTypeLink](nstextcheckingresult/checkingtype/link.md), it’s the `URL` property that’s significant.  For results of type `NSTextCheckingTypePhoneNumber` , it’s the `phoneNumber` property instead.
+
+The [matchesInString:options:range:](nsregularexpression/matches%28in_options_range_%29.md) method is similar to [firstMatchInString:options:range:](nsregularexpression/firstmatch%28in_options_range_%29.md), except that it returns all matches rather than only the first. The following code fragment finds all the matches for links and phone numbers in a string:
+
+```objc
+   NSArray *matches = [detector matchesInString:string
+                                        options:0
+                                          range:NSMakeRange(0, [string length])];
+   for (NSTextCheckingResult *match in matches) {
+        NSRange matchRange = [match range];
+        if ([match resultType] == NSTextCheckingTypeLink) {
+            NSURL *url = [match URL];
+        } else if ([match resultType] == NSTextCheckingTypePhoneNumber) {
+            NSString *phoneNumber = [match phoneNumber];
+        }
+   }
+```
+
+The `NSRegularExpression` block object enumerator is the most general and flexible of the matching methods.  It allows you to iterate through matches in a string, performing arbitrary actions on each as specified by the code in the block, and to stop partway through if desired. In the following code fragment, the iteration stops after finding a certain number of matches:
+
+```objc
+   __block NSUInteger count = 0;
+   [detector enumerateMatchesInString:string
+                              options:0
+                                range:NSMakeRange(0, [string length])
+                           usingBlock:^(NSTextCheckingResult *match, NSMatchingFlags flags, BOOL *stop){
+        NSRange matchRange = [match range];
+        if ([match resultType] == NSTextCheckingTypeLink) {
+            NSURL *url = [match URL];
+        } else if ([match resultType] == NSTextCheckingTypePhoneNumber) {
+            NSString *phoneNumber = [match phoneNumber];
+        }
+        if (++count >= 100) *stop = YES;
+   }];
+```
+
+> **Note**
+
+>  Only use `NSDataDetector` on natural language text.
+>
+> If you expect text to be in a particular format, use an [NSFormatter](formatter.md) or [NSValueTransformer](valuetransformer.md) subclass instead. For instance, if you’re expecting a date field to be an ISO 8601 timestamp, use [NSDateFormatter](dateformatter.md) to parse that into an [NSDate](nsdate.md) object.
+>
+> If the text is in a machine-readable format, such as XML or JSON, extract the natural language text, such as by using [NSXMLParser](xmlparser.md) or [NSJSONSerialization](jsonserialization.md), and match on that rather than attempt to match on the entire document.
+
+## Topics
+
+### Creating data detector instances
+
+- [dataDetectorWithTypes:error:](nsdatadetector/datadetectorwithtypes_error_.md): Creates and returns a new data detector instance.
+- [initWithTypes:error:](nsdatadetector/init%28types_%29.md): Initializes and returns a data detector instance.
+
+### Getting the checking types
+
+- [checkingTypes](nsdatadetector/checkingtypes.md): Returns the checking types for the data detector.
+
+## Relationships
+
+### Inherits From
+
+- [NSRegularExpression](nsregularexpression.md)
+
+## See Also
+
+### Pattern Matching
+
+- [NSScanner](scanner.md): A string parser that scans for substrings or characters in a character set, and for numeric values from decimal, hexadecimal, and floating-point representations.
+- [NSRegularExpression](nsregularexpression.md): An immutable representation of a compiled regular expression that you apply to Unicode strings.
+- [NSTextCheckingResult](nstextcheckingresult.md): An occurrence of textual content found during the analysis of a block of text, such as when matching a regular expression.
+- [NSNotFound](nsnotfound-4qp9h.md): A value indicating that a requested item couldn’t be found or doesn’t exist.

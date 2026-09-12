@@ -1,0 +1,61 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/intents/incallrecordresolutionresult/success(with:)](https://developer.apple.com/documentation/intents/incallrecordresolutionresult/success(with:))
+
+# success(with:) (Swift)
+
+**Framework:** Intents  
+**Kind:** Type Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+Creates a result that contains the call record that matches the users request.
+
+## Declaration
+
+```swift
+class func success(with resolvedCallRecord: INCallRecord) -> Self
+```
+
+## Parameters
+
+- `resolvedCallRecord`: The value that resolves the users request. This value may be different than the original [INCallRecord](../incallrecord.md). This allows app extensions to apply business logic constraints.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new [INCallRecordResolutionResult](../incallrecordresolutionresult.md) object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this method for when the app extension wants to tell Siri to proceed, with a given `INCallRecord`.
+
+# successWithResolvedCallRecord: (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Type Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 4.0+
+
+Creates a result that contains the call record that matches the users request.
+
+## Declaration
+
+```objectivec
++ (instancetype) successWithResolvedCallRecord:(INCallRecord *) resolvedCallRecord;
+```
+
+## Parameters
+
+- `resolvedCallRecord`: The value that resolves the users request. This value may be different than the original [INCallRecord](../incallrecord.md). This allows app extensions to apply business logic constraints.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new [INCallRecordResolutionResult](../incallrecordresolutionresult.md) object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this method for when the app extension wants to tell Siri to proceed, with a given `INCallRecord`.

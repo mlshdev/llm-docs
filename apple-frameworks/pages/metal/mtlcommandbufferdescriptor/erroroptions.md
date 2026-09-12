@@ -1,0 +1,69 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtlcommandbufferdescriptor/erroroptions](https://developer.apple.com/documentation/metal/mtlcommandbufferdescriptor/erroroptions)
+
+# errorOptions (Swift)
+
+**Framework:** Metal  
+**Kind:** Instance Property  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+
+
+The reporting configuration that indicates which information the GPU driver stores in a command buffer’s error property.
+
+## Declaration
+
+```swift
+var errorOptions: MTLCommandBufferErrorOption { get set }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+By default, a GPU driver doesn’t report additional error information.
+
+To create a command buffer that saves additional GPU runtime error information, add the [encoderExecutionStatus](../mtlcommandbuffererroroption/encoderexecutionstatus.md) option to this property. If the GPU encounters an error as it runs the command buffer, you can retrieve the additional information from the command buffer’s [error](../mtlcommandbuffer/error.md) property.
+
+> **Note**
+
+>  Enabling the [encoderExecutionStatus](../mtlcommandbuffererroroption/encoderexecutionstatus.md) option can slightly reduce your app’s CPU runtime performance.
+
+## See Also
+
+### Configuring the command buffer
+
+- [logState](logstate.md): The shader logging configuration that the command buffer uses.
+- [retainedReferences](retainedreferences.md): A Boolean value that indicates whether the command buffer the descriptor creates maintains strong references to the resources it uses.
+- [MTLCommandBufferErrorOption](../mtlcommandbuffererroroption.md): Options for reporting errors from a command buffer.
+
+# errorOptions (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Instance Property  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+
+
+The reporting configuration that indicates which information the GPU driver stores in a command buffer’s error property.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readwrite) MTLCommandBufferErrorOption errorOptions;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+By default, a GPU driver doesn’t report additional error information.
+
+To create a command buffer that saves additional GPU runtime error information, add the [MTLCommandBufferErrorOptionEncoderExecutionStatus](../mtlcommandbuffererroroption/encoderexecutionstatus.md) option to this property. If the GPU encounters an error as it runs the command buffer, you can retrieve the additional information from the command buffer’s [error](../mtlcommandbuffer/error.md) property.
+
+> **Note**
+
+>  Enabling the [MTLCommandBufferErrorOptionEncoderExecutionStatus](../mtlcommandbuffererroroption/encoderexecutionstatus.md) option can slightly reduce your app’s CPU runtime performance.
+
+## See Also
+
+### Configuring the command buffer
+
+- [logState](logstate.md): The shader logging configuration that the command buffer uses.
+- [retainedReferences](retainedreferences.md): A Boolean value that indicates whether the command buffer the descriptor creates maintains strong references to the resources it uses.
+- [MTLCommandBufferErrorOption](../mtlcommandbuffererroroption.md): Options for reporting errors from a command buffer.

@@ -1,0 +1,81 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremedia/kcmformatdescriptionextension_cameracalibrationdatalenscollection](https://developer.apple.com/documentation/coremedia/kcmformatdescriptionextension_cameracalibrationdatalenscollection)
+
+# kCMFormatDescriptionExtension_CameraCalibrationDataLensCollection (Swift)
+
+**Framework:** Core Media  
+**Kind:** Global Variable  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
+
+## Declaration
+
+```swift
+let kCMFormatDescriptionExtension_CameraCalibrationDataLensCollection: CFString
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Specifies intrinsic and extrinsic parameters for single or multiple lenses.
+
+The property value is an array of dictionaries describing the camera calibration data for each lens. The camera calibration data includes intrinsics and extrinics with other parameters. For a stereoscopic camera system, the left and right lens signaling can be done with the kCMFormatDescriptionCameraCalibration_LensRole key and its value. The following keys are required in each kCMFormatDescriptionExtension_CameraCalibrationDataLensCollection dictionary. kCMFormatDescriptionCameraCalibration_LensAlgorithmKind kCMFormatDescriptionCameraCalibration_LensDomain kCMFormatDescriptionCameraCalibration_LensIdentifier kCMFormatDescriptionCameraCalibration_LensRole kCMFormatDescriptionCameraCalibration_LensDistortions kCMFormatDescriptionCameraCalibration_LensFrameAdjustmentsPolynomialX kCMFormatDescriptionCameraCalibration_LensFrameAdjustmentsPolynomialY kCMFormatDescriptionCameraCalibration_RadialAngleLimit kCMFormatDescriptionCameraCalibration_IntrinsicMatrix kCMFormatDescriptionCameraCalibration_IntrinsicMatrixProjectionOffset kCMFormatDescriptionCameraCalibration_IntrinsicMatrixReferenceDimensions kCMFormatDescriptionCameraCalibration_ExtrinsicOriginSource
+
+## See Also
+
+### Constants
+
+- [kCMFormatDescriptionCameraCalibration_ExtrinsicOrientationQuaternion](kcmformatdescriptioncameracalibration_extrinsicorientationquaternion.md)
+- [kCMFormatDescriptionCameraCalibration_ExtrinsicOriginSource](kcmformatdescriptioncameracalibration_extrinsicoriginsource.md)
+- [kCMFormatDescriptionCameraCalibration_IntrinsicMatrix](kcmformatdescriptioncameracalibration_intrinsicmatrix.md)
+- [kCMFormatDescriptionCameraCalibration_IntrinsicMatrixProjectionOffset](kcmformatdescriptioncameracalibration_intrinsicmatrixprojectionoffset.md)
+- [kCMFormatDescriptionCameraCalibration_IntrinsicMatrixReferenceDimensions](kcmformatdescriptioncameracalibration_intrinsicmatrixreferencedimensions.md)
+- [kCMFormatDescriptionCameraCalibration_LensAlgorithmKind](kcmformatdescriptioncameracalibration_lensalgorithmkind.md)
+- [kCMFormatDescriptionCameraCalibration_LensDistortions](kcmformatdescriptioncameracalibration_lensdistortions.md)
+- [kCMFormatDescriptionCameraCalibration_LensDomain](kcmformatdescriptioncameracalibration_lensdomain.md)
+- [kCMFormatDescriptionCameraCalibration_LensFrameAdjustmentsPolynomialX](kcmformatdescriptioncameracalibration_lensframeadjustmentspolynomialx.md)
+- [kCMFormatDescriptionCameraCalibration_LensFrameAdjustmentsPolynomialY](kcmformatdescriptioncameracalibration_lensframeadjustmentspolynomialy.md)
+- [kCMFormatDescriptionCameraCalibration_LensIdentifier](kcmformatdescriptioncameracalibration_lensidentifier.md)
+- [kCMFormatDescriptionCameraCalibration_LensRole](kcmformatdescriptioncameracalibration_lensrole.md)
+- [kCMFormatDescriptionCameraCalibration_RadialAngleLimit](kcmformatdescriptioncameracalibration_radialanglelimit.md)
+- [kCMFormatDescriptionCameraCalibrationExtrinsicOriginSource_StereoCameraSystemBaseline](kcmformatdescriptioncameracalibrationextrinsicoriginsource_stereocamerasystembaseline.md)
+- [kCMFormatDescriptionCameraCalibrationLensAlgorithmKind_ParametricLens](kcmformatdescriptioncameracalibrationlensalgorithmkind_parametriclens.md)
+
+# kCMFormatDescriptionExtension_CameraCalibrationDataLensCollection (Objective-C)
+
+**Framework:** Core Media  
+**Kind:** Global Variable  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
+
+## Declaration
+
+```objectivec
+extern CFStringRef const kCMFormatDescriptionExtension_CameraCalibrationDataLensCollection;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Specifies intrinsic and extrinsic parameters for single or multiple lenses.
+
+The property value is an array of dictionaries describing the camera calibration data for each lens. The camera calibration data includes intrinsics and extrinics with other parameters. For a stereoscopic camera system, the left and right lens signaling can be done with the kCMFormatDescriptionCameraCalibration_LensRole key and its value. The following keys are required in each kCMFormatDescriptionExtension_CameraCalibrationDataLensCollection dictionary. kCMFormatDescriptionCameraCalibration_LensAlgorithmKind kCMFormatDescriptionCameraCalibration_LensDomain kCMFormatDescriptionCameraCalibration_LensIdentifier kCMFormatDescriptionCameraCalibration_LensRole kCMFormatDescriptionCameraCalibration_LensDistortions kCMFormatDescriptionCameraCalibration_LensFrameAdjustmentsPolynomialX kCMFormatDescriptionCameraCalibration_LensFrameAdjustmentsPolynomialY kCMFormatDescriptionCameraCalibration_RadialAngleLimit kCMFormatDescriptionCameraCalibration_IntrinsicMatrix kCMFormatDescriptionCameraCalibration_IntrinsicMatrixProjectionOffset kCMFormatDescriptionCameraCalibration_IntrinsicMatrixReferenceDimensions kCMFormatDescriptionCameraCalibration_ExtrinsicOriginSource
+
+## See Also
+
+### Constants
+
+- [kCMFormatDescriptionCameraCalibration_ExtrinsicOrientationQuaternion](kcmformatdescriptioncameracalibration_extrinsicorientationquaternion.md)
+- [kCMFormatDescriptionCameraCalibration_ExtrinsicOriginSource](kcmformatdescriptioncameracalibration_extrinsicoriginsource.md)
+- [kCMFormatDescriptionCameraCalibration_IntrinsicMatrix](kcmformatdescriptioncameracalibration_intrinsicmatrix.md)
+- [kCMFormatDescriptionCameraCalibration_IntrinsicMatrixProjectionOffset](kcmformatdescriptioncameracalibration_intrinsicmatrixprojectionoffset.md)
+- [kCMFormatDescriptionCameraCalibration_IntrinsicMatrixReferenceDimensions](kcmformatdescriptioncameracalibration_intrinsicmatrixreferencedimensions.md)
+- [kCMFormatDescriptionCameraCalibration_LensAlgorithmKind](kcmformatdescriptioncameracalibration_lensalgorithmkind.md)
+- [kCMFormatDescriptionCameraCalibration_LensDistortions](kcmformatdescriptioncameracalibration_lensdistortions.md)
+- [kCMFormatDescriptionCameraCalibration_LensDomain](kcmformatdescriptioncameracalibration_lensdomain.md)
+- [kCMFormatDescriptionCameraCalibration_LensFrameAdjustmentsPolynomialX](kcmformatdescriptioncameracalibration_lensframeadjustmentspolynomialx.md)
+- [kCMFormatDescriptionCameraCalibration_LensFrameAdjustmentsPolynomialY](kcmformatdescriptioncameracalibration_lensframeadjustmentspolynomialy.md)
+- [kCMFormatDescriptionCameraCalibration_LensIdentifier](kcmformatdescriptioncameracalibration_lensidentifier.md)
+- [kCMFormatDescriptionCameraCalibration_LensRole](kcmformatdescriptioncameracalibration_lensrole.md)
+- [kCMFormatDescriptionCameraCalibration_RadialAngleLimit](kcmformatdescriptioncameracalibration_radialanglelimit.md)
+- [kCMFormatDescriptionCameraCalibrationExtrinsicOriginSource_StereoCameraSystemBaseline](kcmformatdescriptioncameracalibrationextrinsicoriginsource_stereocamerasystembaseline.md)
+- [kCMFormatDescriptionCameraCalibrationLensAlgorithmKind_ParametricLens](kcmformatdescriptioncameracalibrationlensalgorithmkind_parametriclens.md)

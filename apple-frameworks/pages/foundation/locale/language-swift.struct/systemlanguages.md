@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/locale/language-swift.struct/systemlanguages](https://developer.apple.com/documentation/foundation/locale/language-swift.struct/systemlanguages)
+
+# systemLanguages
+
+**Framework:** Foundation  
+**Kind:** Type Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+ · watchOS 9.0+
+
+An array of the system’s supported languages.
+
+## Declaration
+
+```swift
+static var systemLanguages: [Locale.Language] { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The returned array includes the languages of all product localizations for the current platform.

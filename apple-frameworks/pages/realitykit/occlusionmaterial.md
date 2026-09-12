@@ -1,0 +1,73 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/occlusionmaterial](https://developer.apple.com/documentation/realitykit/occlusionmaterial)
+
+# OcclusionMaterial
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 26.0+ · visionOS
+
+An invisible material that hides objects rendered behind it.
+
+## Declaration
+
+```swift
+struct OcclusionMaterial
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Add an `OcclusionMaterial` to a model by setting it as one of the [materials](modelcomponent/materials.md) in a [ModelComponent](modelcomponent.md).
+
+```swift
+let model = ModelComponent(
+    mesh: .generateBox(size: 1),
+    materials: [OcclusionMaterial()]
+)
+smallBoxEntity.components.set(model)
+```
+
+For example, on the left is a case of two cubes, the larger red cube is slightly further from the camera and has a simple material. The slightly smaller and closer cube has no material in the left image and an occlusion material on the right image.
+
+| No material | Occlusion material |
+| --- | --- |
+| ![A screenshot of two cubes in a living room scene. One cube is red and is slightly further from the camera, the other cube has a magenta striped material, is slightly closer to the camera, and is smaller than the red cube.](https://developer.apple.com/images/com.apple.RealityKit/occlusionmaterial-not-applied.jpg) | ![A screenshot of a partial red shape in a living room scene. The shape is of a cube with a cut-out in the shape of another cube slightly towards the upper right corner of the cube.](https://developer.apple.com/images/com.apple.RealityKit/occlusionmaterial-applied.jpg) |
+
+## Topics
+
+### Creating an occlusion material
+
+- [init(receivesDynamicLighting:)](occlusionmaterial/init%28receivesdynamiclighting_%29.md): Creates an occlusion material.
+- [init()](occlusionmaterial/init%28%29.md)
+
+### Receiving dynamic lighting
+
+- [receivesDynamicLighting](occlusionmaterial/receivesdynamiclighting.md): A Boolean that indicates whether the occlusion material receives dynamic lighting.
+
+### Setting depth testing properties
+
+- [readsDepth](occlusionmaterial/readsdepth.md): A boolean value that determines whether this material performs the depth test by reading RealityKit’s depth buffer.
+
+### Instance Properties
+
+- [faceCulling](occlusionmaterial/faceculling-swift.property.md): A process in which the system specifies polygons to remove before rendering a mesh using this material.
+
+### Type Aliases
+
+- [OcclusionMaterial.FaceCulling](occlusionmaterial/faceculling-swift.typealias.md): An alias for the cull mode object that’s appropriate for this material class.
+
+## Relationships
+
+### Conforms To
+
+- [Material](material.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Object occlusion
+
+- [Obscuring virtual items in a scene behind real-world items](../visionos/obscuring-virtual-items-in-a-scene-behind-real-world-items.md): Increase the realism of an immersive experience by adding entities with invisible materials real-world objects.
+- [OcclusionMaterial.FaceCulling](occlusionmaterial/faceculling-swift.typealias.md): An alias for the cull mode object that’s appropriate for this material class.

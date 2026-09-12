@@ -1,0 +1,69 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtllinkedfunctions/groups](https://developer.apple.com/documentation/metal/mtllinkedfunctions/groups)
+
+# groups (Swift)
+
+**Framework:** Metal  
+**Kind:** Instance Property  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+
+
+An optional list of groups specifying which functions your shader can call at each call site.
+
+## Declaration
+
+```swift
+var groups: [String : [any MTLFunction]]? { get set }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The default value is `nil`.
+
+The default behavior is conservative and assumes that your shader can call any linked function from every call site. If you know that the shader can only call a limited subset of functions at a call site, you can annotate those sites in the shader with a name of a group and then specify the list of functions for that call site using this property. Specifying call sites and callable functions more precisely can improve performance.
+
+For more information on how to specify call site groups, see [Metal Shading Language Specification](https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf).
+
+The value of this property is a dictionary whose keys are call site names and values are arrays specifying the list of functions that the shader can call from each site.
+
+## See Also
+
+### Specifying related functions
+
+- [functions](functions.md): An array of function objects to link to the new function.
+- [binaryFunctions](binaryfunctions.md): An array of function objects already compiled to a binary representation to link.
+- [privateFunctions](privatefunctions.md): An array of function objects to link to the new function, without exporting the functions publicly.
+
+# groups (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Instance Property  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+
+
+An optional list of groups specifying which functions your shader can call at each call site.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, readwrite, nullable) NSDictionary<NSString *,NSArray<id<MTLFunction>> *> * groups;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The default value is `nil`.
+
+The default behavior is conservative and assumes that your shader can call any linked function from every call site. If you know that the shader can only call a limited subset of functions at a call site, you can annotate those sites in the shader with a name of a group and then specify the list of functions for that call site using this property. Specifying call sites and callable functions more precisely can improve performance.
+
+For more information on how to specify call site groups, see [Metal Shading Language Specification](https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf).
+
+The value of this property is a dictionary whose keys are call site names and values are arrays specifying the list of functions that the shader can call from each site.
+
+## See Also
+
+### Specifying related functions
+
+- [functions](functions.md): An array of function objects to link to the new function.
+- [binaryFunctions](binaryfunctions.md): An array of function objects already compiled to a binary representation to link.
+- [privateFunctions](privatefunctions.md): An array of function objects to link to the new function, without exporting the functions publicly.

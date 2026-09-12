@@ -1,0 +1,49 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/usbdriverkit/iousbdevicecapabilitybillboardaltconfigcompatibility](https://developer.apple.com/documentation/usbdriverkit/iousbdevicecapabilitybillboardaltconfigcompatibility)
+
+# IOUSBDeviceCapabilityBillboardAltConfigCompatibility
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Structure  
+**Availability:** DriverKit 19.0+
+
+The structure for the billboard alternative configuration compatibility device capability.
+
+## Declaration
+
+```objectivec
+struct IOUSBDeviceCapabilityBillboardAltConfigCompatibility;
+```
+
+<a id="overview"></a>
+
+## Overview
+
+See USB Billboard 3.1.6.2: Billboard Capability Descriptor V1.2.
+
+## Topics
+
+### Accessing the Descriptor Properties
+
+- [wSVID](iousbdevicecapabilitybillboardaltconfigcompatibility/wsvid.md)
+- [dwAlternateMode](iousbdevicecapabilitybillboardaltconfigcompatibility/dwalternatemode.md)
+- [iAlternateModeString](iousbdevicecapabilitybillboardaltconfigcompatibility/ialternatemodestring.md)
+
+## See Also
+
+### Capability Descriptors
+
+- [IOUSBBOSDescriptor](iousbbosdescriptor.md): The structure for storing a binary object store (BOS) descriptor.
+- [IOUSBDeviceCapabilityDescriptorHeader](iousbdevicecapabilitydescriptorheader.md): The device capability descriptor header.
+- [IOUSBDeviceCapabilityBillboard](iousbdevicecapabilitybillboard.md): The structure for the billboard device capability.
+- [IOUSBDeviceCapabilityBillboardAltConfig](iousbdevicecapabilitybillboardaltconfig.md): The structure for the billboard alternative configuration device capability.
+- [IOUSBDeviceCapabilityBillboardAltMode](iousbdevicecapabilitybillboardaltmode.md): The structure for the billboard alternative mode device capability.
+- [IOUSBDeviceCapabilityContainerID](iousbdevicecapabilitycontainerid.md): The structure for the container ID device capability.
+- [IOUSBDeviceCapabilitySuperSpeedUSB](iousbdevicecapabilitysuperspeedusb.md): The structure for the super-speed USB device capability.
+- [IOUSBDeviceCapabilitySuperSpeedPlusUSB](iousbdevicecapabilitysuperspeedplususb.md): The structure for the super-speed plus USB device capability.
+- [IOUSBDeviceCapabilityUSB2Extension](iousbdevicecapabilityusb2extension.md): The structure for the USB 2 extension device capability.
+- [IOUSBPlatformCapabilityDescriptor](iousbplatformcapabilitydescriptor.md): The structure for the platform capability descriptor.
+- [tIOUSBDeviceCapabilityType](tiousbdevicecapabilitytype.md): Constants for the device capability types.
+- [SuperSpeed Device Capabilities](superspeed_device_capabilities-enum.md): Constants for configuring super-speed device capabilities.
+- [SuperSpeedPlus Device Capabilities](superspeedplus_device_capabiliti-enum.md): Constants for configuring super-speed plus device capabilities.

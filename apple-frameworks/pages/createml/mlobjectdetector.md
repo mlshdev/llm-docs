@@ -1,0 +1,111 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/createml/mlobjectdetector](https://developer.apple.com/documentation/createml/mlobjectdetector)
+
+# MLObjectDetector
+
+**Framework:** Create ML  
+**Kind:** Structure  
+**Availability:** macOS 10.15+
+
+A model you train to classify one or more objects within an image.
+
+## Declaration
+
+```swift
+struct MLObjectDetector
+```
+
+## Mentioned In
+
+- [Building an object detector data source](building-an-object-detector-data-source.md)
+
+<a id="overview"></a>
+
+## Overview
+
+Use an [MLObjectDetector](mlobjectdetector.md) task to train a machine learning model that can identify items, or *objects*, within an image. For example, you can train an object detector to recognize breakfast items on a table, such as bananas, croissants, and beverages.
+
+You create an object detector training it with a combination of images and annotations for each object within an image. Then save it as a Core ML model and use it in your app to recognize similar items.
+
+## Topics
+
+### Creating a data source
+
+- [Building an object detector data source](building-an-object-detector-data-source.md): Arrange your training data for an object detector in one of several different structured ways.
+
+### Training an object detector asynchronously
+
+- [train(trainingData:annotationType:parameters:sessionParameters:)](mlobjectdetector/train%28trainingdata_annotationtype_parameters_sessionparameters_%29.md): Begins an asynchronous object-detector training session.
+- [makeTrainingSession(trainingData:annotationType:parameters:sessionParameters:)](mlobjectdetector/maketrainingsession%28trainingdata_annotationtype_parameters_sessionparameters_%29.md): Creates an asynchronous object-detector training session.
+- [resume(\_:)](mlobjectdetector/resume%28__%29.md): Begins or continues an asynchronous object-detector training session.
+- [restoreTrainingSession(sessionParameters:)](mlobjectdetector/restoretrainingsession%28sessionparameters_%29.md): Creates an asynchronous training session for an object detector by restoring an existing training session’s state from its parameters.
+
+### Creating an object detector from a checkpoint
+
+- [init(checkpoint:)](mlobjectdetector/init%28checkpoint_%29.md): Creates an object detector from a training session checkpoint.
+
+### Training an object detector synchronously
+
+- [init(trainingData:parameters:annotationType:)](mlobjectdetector/init%28trainingdata_parameters_annotationtype_%29.md): Creates an object detector with a data source.
+- [init(trainingData:imageColumn:annotationColumn:annotationType:parameters:)](mlobjectdetector/init%28trainingdata_imagecolumn_annotationcolumn_annotationtype_parameters_%29.md): Deprecated. Creates an object detector with a data table.
+
+### Evaluating an object detector
+
+- [evaluation(on:)](mlobjectdetector/evaluation%28on_%29.md): Generates metrics by evaluating the object detector’s performance using annotated images in a data source.
+- [evaluation(on:imageColumn:annotationColumn:)](mlobjectdetector/evaluation%28on_imagecolumn_annotationcolumn_%29.md): Deprecated. Generates metrics by evaluating the object detector’s performance using annotated images in a data table.
+- [trainingMetrics](mlobjectdetector/trainingmetrics.md): Measurements of the object detector’s performance on the training dataset.
+- [validationMetrics](mlobjectdetector/validationmetrics.md): Measurements of the object detector’s performance on the validation dataset.
+
+### Testing an object detector
+
+- [prediction(from:)](mlobjectdetector/prediction%28from_%29.md): Locates objects in an image and generates an annotation for each object it detects.
+- [predictions(from:)](mlobjectdetector/predictions%28from_%29.md): Locates objects in an array of images and generates an array of annotation collections, one for each input image.
+- [MLObjectDetector.DetectedObjects](mlobjectdetector/detectedobjects.md): An array of annotations that represent the items an object detector found in an image.
+- [MLObjectDetector.ObjectAnnotation](mlobjectdetector/objectannotation.md): The label, location, and confidence score of an item the object detector found in an image.
+
+### Saving an object detector
+
+- [write(to:metadata:)](mlobjectdetector/write%28to_metadata_%29.md): Exports the object detector as a Core ML model file.
+- [write(toFile:metadata:)](mlobjectdetector/write%28tofile_metadata_%29.md): Exports the object detector as a Core ML model file.
+
+### Inspecting an object detector model
+
+- [model](mlobjectdetector/model.md): The object detector’s underlying Core ML model instance.
+- [modelParameters](mlobjectdetector/modelparameters-swift.property.md): The model configuration parameters the object detector used during its training session.
+
+### Describing an object detector
+
+- [description](mlobjectdetector/description.md): A text representation of the object detector.
+- [debugDescription](mlobjectdetector/debugdescription.md): A text representation of the object detector that’s suitable for output during debugging.
+- [playgroundDescription](mlobjectdetector/playgrounddescription.md): A description of the object detector within a playground.
+
+### Supporting types
+
+- [MLObjectDetector.DataSource](mlobjectdetector/datasource.md): A data source for an object detector.
+- [MLObjectDetector.AnnotationType](mlobjectdetector/annotationtype.md): The available types of image annotations.
+- [MLObjectDetector.ModelParameters](mlobjectdetector/modelparameters-swift.struct.md): Parameters that affect the process of training an object detection model.
+
+### Default Implementations
+
+- [CustomDebugStringConvertible Implementations](mlobjectdetector/customdebugstringconvertible-implementations.md)
+- [CustomPlaygroundDisplayConvertible Implementations](mlobjectdetector/customplaygrounddisplayconvertible-implementations.md)
+- [CustomStringConvertible Implementations](mlobjectdetector/customstringconvertible-implementations.md)
+
+## Relationships
+
+### Conforms To
+
+- [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomPlaygroundDisplayConvertible](https://developer.apple.com/documentation/swift/customplaygrounddisplayconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Escapable](https://developer.apple.com/documentation/swift/escapable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Image models
+
+- [Creating an Image Classifier Model](creating-an-image-classifier-model.md): Train a machine learning model to classify images, and add it to your Core ML app.
+- [MLImageClassifier](mlimageclassifier.md): A model you train to classify images.
+- [MLHandPoseClassifier](mlhandposeclassifier.md): A task that creates a hand pose classification model by training with images of people’s hands that you provide.

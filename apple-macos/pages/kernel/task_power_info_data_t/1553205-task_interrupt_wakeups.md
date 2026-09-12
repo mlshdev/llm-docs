@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/task_power_info_data_t/1553205-task_interrupt_wakeups](https://developer.apple.com/documentation/kernel/task_power_info_data_t/1553205-task_interrupt_wakeups)
+
+# task_interrupt_wakeups
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Instance Property  
+**Availability:** macOS 10.9+
+
+## Declaration
+
+```objectivec
+uint64_t task_interrupt_wakeups;
+```

@@ -1,0 +1,128 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/appsreportingadgroup](https://developer.apple.com/documentation/apple-ads-platform-api/appsreportingadgroup)
+
+# AppsReportingAdGroup
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Object  
+**Availability:** Apple Ads Platform API 1.0+
+
+Ad group metadata for apps report rows.
+
+## Declaration
+
+```
+object AppsReportingAdGroup
+```
+
+## Properties
+
+- `id` — `int64`: The ad group’s unique identifier.
+- `campaignId` — `int64`: The campaign this ad group belongs to.
+- `adAccountId` — `int64`: The ad account this ad group belongs to.
+- `name` — `string`: The ad group name as configured at report time.
+- `status` — `AppsReportingAdGroup.Status`: Possible values: `ENABLED`, `PAUSED`.
+- `deleted` — `boolean`: Whether the ad group has been soft-deleted.
+- `systemStatus` — `AppsReportingAdGroup.SystemStatus`: Possible values: `RUNNING`, `NOT_RUNNING`.
+- `systemStatusReasons` — `[AdGroupSystemStatusReason]`: System-applied reasons contributing to the current `systemStatus`.
+- `systemStatusLimitingReasons` — `[string]`: Status-limiting reasons applied based on advertiser and system factors.
+- `automatedKeywordsOptIn` — `boolean`: Whether the ad group opted in to automated keywords.
+- `automatedKeywordsRequired` — `boolean`: Whether automated keywords are required for this ad group.
+- `pricingModel` — `AppsReportingAdGroup.PricingModel`: Possible values: `CPA`, `CPM`, `CPT`.
+- `displayStatus` — `string`: System-computed, rolled-up delivery state combining ad group and campaign conditions.
+- `modificationTime` — `date-time`: Timestamp of the ad group’s last modification (ISO 8601).
+- `creationTime` — `date-time`: Timestamp when the ad group was created (ISO 8601).
+- `startTime` — `date-time`: Ad group start time.
+- `endTime` — `date-time`: Ad group end time.
+- `campaign` — `ReportingCampaignMin`: See [ReportingCampaignMin](reportingcampaignmin.md) for details.
+- `cpaCap` — `ReportingMoney`: CPA cap amount. See [ReportingMoney](reportingmoney.md) for details.
+- `bidStrategy` — `ReportingBidStrategy`: See [ReportingBidStrategy](reportingbidstrategy.md) for details.
+- `countryOrRegion` — `string`: Country or region groupBy dimension value.
+- `deviceClass` — `string`: Device class groupBy dimension value.
+- `gender` — `string`: Gender groupBy dimension value.
+- `ageRange` — `string`: Age range groupBy dimension value.
+- `locality` — `string`: Locality groupBy dimension value.
+- `countryCode` — `string`: Country code groupBy dimension value.
+- `adminArea` — `string`: Administrative area groupBy dimension value.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The `AppsReportingAdGroup` object is the ad group metadata embedded in apps ad group report rows. It captures the ad group’s configuration at report time, including its `pricingModel` (`CPA`, `CPM`, or `CPT`) and `bidStrategy`. The `campaign` field provides a lightweight `ReportingCampaignMin` summary for quick access to the parent campaign context.
+
+The response populates the dimension fields (`countryOrRegion`, `deviceClass`, `gender`, `ageRange`, `locality`, `countryCode`, `adminArea`) based on which `groupBy` dimensions you specify in the report request. Each populated dimension field generates one report row per unique value of that dimension.
+
+<a id="Example"></a>
+
+### Example
+
+```json
+{
+  "id": 555666777,
+  "campaignId": 123456789,
+  "adAccountId": 987654321,
+  "name": "AwayFinder - Search Ad Group",
+  "status": "ENABLED",
+  "deleted": false,
+  "systemStatus": "RUNNING",
+  "systemStatusReasons": [],
+  "systemStatusLimitingReasons": [],
+  "automatedKeywordsOptIn": false,
+  "automatedKeywordsRequired": false,
+  "pricingModel": "CPT",
+  "displayStatus": "RUNNING",
+  "modificationTime": "2025-01-10T08:00:00.000",
+  "creationTime": "2025-01-05T08:00:00.000",
+  "startTime": "2025-01-05T08:00:00.000",
+  "endTime": null,
+  "campaign": {},
+  "cpaCap": {
+    "value": {
+      "amount": "5.00",
+      "currency": "USD"
+    }
+  },
+  "bidStrategy": {
+    "bidStrategyType": "MANUAL_CPT",
+    "bid": {
+      "amount": "2.50",
+      "currency": "USD"
+    }
+  },
+  "countryOrRegion": "US",
+  "deviceClass": "IPHONE",
+  "gender": "M",
+  "ageRange": "25-34",
+  "locality": "San Francisco",
+  "countryCode": "US",
+  "adminArea": "CA"
+}
+```
+
+## Topics
+
+### Type Aliases
+
+- [AppsReportingAdGroup.PricingModel](appsreportingadgroup/pricingmodel-data.typealias.md): The pricing model of the ad group at report time.
+- [AppsReportingAdGroup.Status](appsreportingadgroup/status-data.typealias.md): Advertiser-configurable serving state of the ad group at report time.
+- [AppsReportingAdGroup.SystemStatus](appsreportingadgroup/systemstatus-data.typealias.md): System-evaluated delivery state of the ad group at report time.
+
+## See Also
+
+- [AppsReportingRequest](appsreportingrequest.md): Request body for apps reporting queries.
+- [AppsReportingCampaign](appsreportingcampaign.md): Campaign metadata for apps report rows.
+- [AppsReportingAd](appsreportingad.md): Ad metadata for apps report rows.
+- [AppsReportingCreative](appsreportingcreative.md): Creative metadata for apps ads.
+- [AppsCampaignReportResponse](appscampaignreportresponse.md): The top-level response envelope for apps campaign-level reports.
+- [AppsCampaignReportRow](appscampaignreportrow.md): A single row in an apps campaign report, containing campaign metadata, total metrics, and optional granular time-series metrics.
+- [AppsCampaignReportSummary](appscampaignreportsummary.md): The grand-total metrics aggregated across all rows in an Apps campaign report.
+- [AppsCampaignResultContainer](appscampaignresultcontainer.md): Wraps the array of Apps campaign report rows along with a grand-total summary.
+- [AppsAdGroupReportResponse](appsadgroupreportresponse.md): The top-level response envelope for apps ad group reports.
+- [AppsAdGroupReportRow](appsadgroupreportrow.md): A single row in an Apps ad group report, containing ad group metadata, total metrics, and optional granular time-series metrics.
+- [AppsAdGroupReportSummary](appsadgroupreportsummary.md): The grand-total metrics aggregated across all rows in an Apps ad group report.
+- [AppsAdGroupResultContainer](appsadgroupresultcontainer.md): Wraps the array of Apps ad group report rows along with a grand-total summary.
+- [AppsAdReportResponse](appsadreportresponse.md): The top-level response envelope for apps ad-level reports.
+- [AppsAdReportRow](appsadreportrow.md): A single row in an Apps ad-level report, containing ad metadata, total metrics, and optional granular time-series metrics.
+- [AppsAdReportSummary](appsadreportsummary.md): The grand-total metrics aggregated across all rows in an Apps ad-level report.

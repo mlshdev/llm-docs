@@ -1,0 +1,81 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/networkextension/nefiltercontrolprovider/handleremediation(for:completionhandler:)](https://developer.apple.com/documentation/networkextension/nefiltercontrolprovider/handleremediation(for:completionhandler:))
+
+# handleRemediation(for:completionHandler:) (Swift)
+
+**Framework:** Network Extension  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Handle a request for remediation from the user.
+
+## Declaration
+
+```swift
+func handleRemediation(for flow: NEFilterFlow, completionHandler: @escaping @Sendable (NEFilterControlVerdict) -> Void)
+```
+
+```swift
+func handleRemediation(for flow: NEFilterFlow) async -> NEFilterControlVerdict
+```
+
+## Parameters
+
+- `flow`: An [NEFilterFlow](../nefilterflow.md) object containing details about the flow that requires remediation.
+- `completionHandler`: A block that must be called when the Filter Control Provider has made a decision about the flow. The [NEFilterControlVerdict](../nefiltercontrolverdict.md) object passed to this block contains the decision that the Filter Control Provider made about the flow.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method is called by the system when the Filter Data Provider indicates that the filtering verdict for the given flow is `NEFilterRemediateVerdictNeedRules`. Subclass implementations must override this method and implement whatever steps are necessary to remediate the given flow.
+
+## See Also
+
+### Handling remediation
+
+- [remediationMap](remediationmap.md): A dictionary containing sets of strings used to customize the remediation portion of the block page.
+- [NEFilterProviderRemediationMapRemediationButtonTexts](../nefilterproviderremediationmapremediationbuttontexts.md): A key in the [remediationMap](remediationmap.md) dictionary. The value of this key should be set to a dictionary that maps button text string identifiers to the text to display for the remediation URL link in the block page. The button text string identifiers are defined by the Filter Control Provider app extension.
+- [NEFilterProviderRemediationMapRemediationURLs](../nefilterproviderremediationmapremediationurls.md): A key in the [remediationMap](remediationmap.md) dictionary. The value of this key should be set to a dictionary that maps URL identifiers to remediation URLs to be inserted into the block page. The URL identifiers are defined by the Filter Control Provider app extension.
+- [NEFilterProviderRemediationURLFlowURL](../nefilterproviderremediationurlflowurl.md): This string will be replaced with the full URL of the flow.
+- [NEFilterProviderRemediationURLFlowURLHostname](../nefilterproviderremediationurlflowurlhostname.md): This string will be replaced with the hostname portion of the flow’s URL.
+- [NEFilterProviderRemediationURLOrganization](../nefilterproviderremediationurlorganization.md): This string will be replaced with the value of the organization property set in the filter configuration.
+- [NEFilterProviderRemediationURLUsername](../nefilterproviderremediationurlusername.md): This string will be replaced with the value of the username property set in the filter configuration.
+- [urlAppendStringMap](urlappendstringmap.md): A dictionary containing strings to be appended to URLs.
+
+# handleRemediationForFlow:completionHandler: (Objective-C)
+
+**Framework:** Network Extension  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Handle a request for remediation from the user.
+
+## Declaration
+
+```objectivec
+- (void) handleRemediationForFlow:(NEFilterFlow *) flow completionHandler:(void (^)(NEFilterControlVerdict *)) completionHandler;
+```
+
+## Parameters
+
+- `flow`: An [NEFilterFlow](../nefilterflow.md) object containing details about the flow that requires remediation.
+- `completionHandler`: A block that must be called when the Filter Control Provider has made a decision about the flow. The [NEFilterControlVerdict](../nefiltercontrolverdict.md) object passed to this block contains the decision that the Filter Control Provider made about the flow.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method is called by the system when the Filter Data Provider indicates that the filtering verdict for the given flow is `NEFilterRemediateVerdictNeedRules`. Subclass implementations must override this method and implement whatever steps are necessary to remediate the given flow.
+
+## See Also
+
+### Handling remediation
+
+- [remediationMap](remediationmap.md): A dictionary containing sets of strings used to customize the remediation portion of the block page.
+- [NEFilterProviderRemediationMapRemediationButtonTexts](../nefilterproviderremediationmapremediationbuttontexts.md): A key in the [remediationMap](remediationmap.md) dictionary. The value of this key should be set to a dictionary that maps button text string identifiers to the text to display for the remediation URL link in the block page. The button text string identifiers are defined by the Filter Control Provider app extension.
+- [NEFilterProviderRemediationMapRemediationURLs](../nefilterproviderremediationmapremediationurls.md): A key in the [remediationMap](remediationmap.md) dictionary. The value of this key should be set to a dictionary that maps URL identifiers to remediation URLs to be inserted into the block page. The URL identifiers are defined by the Filter Control Provider app extension.
+- [NEFilterProviderRemediationURLFlowURL](../nefilterproviderremediationurlflowurl.md): This string will be replaced with the full URL of the flow.
+- [NEFilterProviderRemediationURLFlowURLHostname](../nefilterproviderremediationurlflowurlhostname.md): This string will be replaced with the hostname portion of the flow’s URL.
+- [NEFilterProviderRemediationURLOrganization](../nefilterproviderremediationurlorganization.md): This string will be replaced with the value of the organization property set in the filter configuration.
+- [NEFilterProviderRemediationURLUsername](../nefilterproviderremediationurlusername.md): This string will be replaced with the value of the username property set in the filter configuration.
+- [URLAppendStringMap](urlappendstringmap.md): A dictionary containing strings to be appended to URLs.

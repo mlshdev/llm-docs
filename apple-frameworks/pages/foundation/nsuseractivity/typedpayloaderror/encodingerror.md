@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsuseractivity/typedpayloaderror/encodingerror](https://developer.apple.com/documentation/foundation/nsuseractivity/typedpayloaderror/encodingerror)
+
+# NSUserActivity.TypedPayloadError.encodingError
+
+**Framework:** Foundation  
+**Kind:** Case  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 7.0+
+
+An encoding error that indicates that the content failed to encode into a valid dictionary.
+
+## Declaration
+
+```swift
+case encodingError
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The [setTypedPayload(\_:)](../settypedpayload%28__%29.md) method throws this error.
+
+## See Also
+
+### Typed payload errors
+
+- [NSUserActivity.TypedPayloadError.invalidContent](invalidcontent.md): A decoding error that indicates that the user info dictionary is empty or invalid.

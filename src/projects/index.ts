@@ -1,4 +1,5 @@
 import { buildAria2 } from "./aria2.ts";
+import { buildApple } from "./apple.ts";
 import { buildDatasourcePlugin } from "./datasource-plugin.ts";
 import { buildBun } from "./bun.ts";
 import { buildContainer } from "./container.ts";
@@ -19,6 +20,7 @@ import {
   describeError,
   ProjectBuildError,
 } from "../quarantine.ts";
+import { isGithubLockedSource, isSnapshotLockedSource } from "../types.ts";
 import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
 
 export async function buildProject(
@@ -46,6 +48,15 @@ function runAdapter(
   project: SourceProject,
   lock: LockedSource,
 ): Promise<ProjectBuild> {
+  if (project.kind === "docc") {
+    if (!isSnapshotLockedSource(lock)) {
+      throw new Error(`${project.id} requires a DocC snapshot lock`);
+    }
+    return buildApple(project, lock);
+  }
+  if (!isGithubLockedSource(lock)) {
+    throw new Error(`${project.id} requires a GitHub commit lock`);
+  }
   switch (project.id) {
     case "traefik":
       return buildTraefik(project, lock);

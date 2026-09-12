@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/applicationservices/kaxapplicationrole](https://developer.apple.com/documentation/applicationservices/kaxapplicationrole)
+
+# kAXApplicationRole (Swift)
+
+**Framework:** Application Services  
+**Kind:** Global Variable  
+**Availability:** macOS 10.2+
+
+An application.
+
+## Declaration
+
+```swift
+var kAXApplicationRole: String { get }
+```
+
+# kAXApplicationRole (Objective-C)
+
+**Framework:** Application Services  
+**Kind:** Macro  
+**Availability:** macOS 10.2+
+
+An application.
+
+## Declaration
+
+```objectivec
+#define kAXApplicationRole
+```

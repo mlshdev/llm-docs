@@ -1,0 +1,71 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/seckeychainunlock(_:_:_:_:)](https://developer.apple.com/documentation/security/seckeychainunlock(_:_:_:_:))
+
+# SecKeychainUnlock(\_:\_:\_:\_:) (Swift)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.2+ (deprecated in 10.10)
+
+Unlocks a keychain.
+
+> SecKeychain is deprecated
+
+## Declaration
+
+```swift
+func SecKeychainUnlock(_ keychain: SecKeychain?, _ passwordLength: UInt32, _ password: UnsafeRawPointer?, _ usePassword: Bool) -> OSStatus
+```
+
+## Parameters
+
+- `keychain`: A reference to the keychain to unlock. Pass `NULL` to specify the default keychain. If you pass a locked keychain, this function displays the Unlock Keychain dialog box if you have not provided a password. If the specified keychain is currently unlocked, the Unlock Keychain dialog box is not displayed and this function returns `noErr`. You must call the `CFRelease` function to release this object when you are finished using it.
+- `passwordLength`: An unsigned 32-bit integer representing the length of the password buffer.
+- `password`: A buffer containing the password for the keychain. Pass `NULL` if the user password is unknown. In this case, this function displays the Unlock Keychain dialog to prompt the user for the keychain password.
+- `usePassword`: A Boolean value indicating whether the password parameter is used. You should pass `TRUE` if you are passing a password or `FALSE` if it is to be ignored.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md). The result code [errSecUserCanceled](errsecusercanceled.md) indicates that the user pressed the Cancel button in the Unlock Keychain dialog box. The result code [errSecAuthFailed](errsecauthfailed.md) indicates that authentication failed because of too many unsuccessful retries. The result code [errSecInteractionRequired](errsecinteractionrequired.md) indicates that user interaction is required to unlock the keychain.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+In most cases, your application does not need to call this function directly, since most Keychain Services functions that require an unlocked keychain do so for you. If your application needs to verify that a keychain is unlocked, call the function [SecKeychainGetStatus(\_:\_:)](seckeychaingetstatus%28____%29.md).
+
+# SecKeychainUnlock (Objective-C)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.2+ (deprecated in 10.10)
+
+Unlocks a keychain.
+
+> SecKeychain is deprecated
+
+## Declaration
+
+```objectivec
+OSStatus SecKeychainUnlock(SecKeychainRef keychain, UInt32 passwordLength, const void *password, Boolean usePassword);
+```
+
+## Parameters
+
+- `keychain`: A reference to the keychain to unlock. Pass `NULL` to specify the default keychain. If you pass a locked keychain, this function displays the Unlock Keychain dialog box if you have not provided a password. If the specified keychain is currently unlocked, the Unlock Keychain dialog box is not displayed and this function returns `noErr`. You must call the `CFRelease` function to release this object when you are finished using it.
+- `passwordLength`: An unsigned 32-bit integer representing the length of the password buffer.
+- `password`: A buffer containing the password for the keychain. Pass `NULL` if the user password is unknown. In this case, this function displays the Unlock Keychain dialog to prompt the user for the keychain password.
+- `usePassword`: A Boolean value indicating whether the password parameter is used. You should pass `TRUE` if you are passing a password or `FALSE` if it is to be ignored.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md). The result code [errSecUserCanceled](errsecusercanceled.md) indicates that the user pressed the Cancel button in the Unlock Keychain dialog box. The result code [errSecAuthFailed](errsecauthfailed.md) indicates that authentication failed because of too many unsuccessful retries. The result code [errSecInteractionRequired](errsecinteractionrequired.md) indicates that user interaction is required to unlock the keychain.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+In most cases, your application does not need to call this function directly, since most Keychain Services functions that require an unlocked keychain do so for you. If your application needs to verify that a keychain is unlocked, call the function [SecKeychainGetStatus](seckeychaingetstatus%28____%29.md).

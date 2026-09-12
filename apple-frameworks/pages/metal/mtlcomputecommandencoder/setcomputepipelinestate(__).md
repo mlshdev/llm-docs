@@ -1,0 +1,73 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtlcomputecommandencoder/setcomputepipelinestate(_:)](https://developer.apple.com/documentation/metal/mtlcomputecommandencoder/setcomputepipelinestate(_:))
+
+# setComputePipelineState(\_:) (Swift)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
+
+Configures the compute encoder with a pipeline state for subsequent kernel calls.
+
+## Declaration
+
+```swift
+func setComputePipelineState(_ state: any MTLComputePipelineState)
+```
+
+## Parameters
+
+- `state`: An [MTLComputePipelineState](../mtlcomputepipelinestate.md) instance.
+
+<a id="discussion"></a>
+
+## Discussion
+
+> **Important**
+
+>  Set a compute encoder’s pipeline state before encoding any commands. Encoding commands without an available pipeline state causes an error.
+
+Create your pipeline state through one of the [MTLDevice](../mtldevice.md) methods in Creating Compute Pipeline States.
+
+A compute pipeline state provides information Metal uses to compile and run encoded commands. You can change the pipeline state at any time, allowing you to encode multiple kernel calls in a single command buffer. Changing the pipeline state doesn’t affect any previously encoded commands.
+
+## See Also
+
+### Configuring the pipeline state
+
+- [dispatchType](dispatchtype.md): The dispatch type to use when submitting compute work to the GPU.
+
+# setComputePipelineState: (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
+
+Configures the compute encoder with a pipeline state for subsequent kernel calls.
+
+## Declaration
+
+```objectivec
+- (void) setComputePipelineState:(id<MTLComputePipelineState>) state;
+```
+
+## Parameters
+
+- `state`: An [MTLComputePipelineState](../mtlcomputepipelinestate.md) instance.
+
+<a id="discussion"></a>
+
+## Discussion
+
+> **Important**
+
+>  Set a compute encoder’s pipeline state before encoding any commands. Encoding commands without an available pipeline state causes an error.
+
+Create your pipeline state through one of the [MTLDevice](../mtldevice.md) methods in Creating Compute Pipeline States.
+
+A compute pipeline state provides information Metal uses to compile and run encoded commands. You can change the pipeline state at any time, allowing you to encode multiple kernel calls in a single command buffer. Changing the pipeline state doesn’t affect any previously encoded commands.
+
+## See Also
+
+### Configuring the pipeline state
+
+- [dispatchType](dispatchtype.md): The dispatch type to use when submitting compute work to the GPU.

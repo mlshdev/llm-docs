@@ -1,0 +1,49 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uicontextmenuconfiguration/allowstypeselect](https://developer.apple.com/documentation/uikit/uicontextmenuconfiguration/allowstypeselect)
+
+# allowsTypeSelect (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · visionOS 27.0+
+
+A Boolean value that indicates whether the context menu supports keystroke-based navigation.
+
+## Declaration
+
+```swift
+var allowsTypeSelect: Bool { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+TypeSelect lets users move focus to a matching menu option by typing on a hardware keyboard while the menu is open. When a context menu appears alongside a text field that actively receives keyboard input, TypeSelect can intercept keystrokes before they reach the text field.
+
+Set this property to [false](https://developer.apple.com/documentation/swift/false) when the menu serves as a companion to an active text input, such as a suggestion menu or autocomplete picker. This allows keyboard input to flow to the text field without being captured by the menu’s navigation.
+
+The default value is [true](https://developer.apple.com/documentation/swift/true).
+
+# allowsTypeSelect (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · visionOS 27.0+
+
+A Boolean value that indicates whether the context menu supports keystroke-based navigation.
+
+## Declaration
+
+```objectivec
+@property (nonatomic) BOOL allowsTypeSelect;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+TypeSelect lets users move focus to a matching menu option by typing on a hardware keyboard while the menu is open. When a context menu appears alongside a text field that actively receives keyboard input, TypeSelect can intercept keystrokes before they reach the text field.
+
+Set this property to [false](https://developer.apple.com/documentation/swift/false) when the menu serves as a companion to an active text input, such as a suggestion menu or autocomplete picker. This allows keyboard input to flow to the text field without being captured by the menu’s navigation.
+
+The default value is [true](https://developer.apple.com/documentation/swift/true).

@@ -1,0 +1,123 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/iobluetooth-enumerations](https://developer.apple.com/documentation/iobluetooth/iobluetooth-enumerations)
+
+# IOBluetooth Enumerations
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** IOBluetooth  
+**Kind:** API Collection
+
+## Topics
+
+### Enumerations
+
+- [BluetoothAMPCommandRejectReason](bluetoothampcommandrejectreason.md)
+- [BluetoothAMPCreatePhysicalLinkResponseStatus](bluetoothampcreatephysicallinkresponsestatus.md)
+- [BluetoothAMPDisconnectPhysicalLinkResponseStatus](bluetoothampdisconnectphysicallinkresponsestatus.md)
+- [BluetoothAMPDiscoverResponseControllerStatus](bluetoothampdiscoverresponsecontrollerstatus.md)
+- [BluetoothAMPGetAssocResponseStatus](bluetoothampgetassocresponsestatus.md)
+- [BluetoothAMPGetInfoResponseStatus](bluetoothampgetinforesponsestatus.md)
+- [BluetoothAMPManagerCode](bluetoothampmanagercode.md)
+- [BluetoothHCIPowerState](bluetoothhcipowerstate.md)
+- [BluetoothL2CAPCommandCode](bluetoothl2capcommandcode.md)
+- [BluetoothL2CAPCommandRejectReason](bluetoothl2capcommandrejectreason.md)
+- [BluetoothL2CAPConfigurationOption](bluetoothl2capconfigurationoption.md)
+- [BluetoothL2CAPConfigurationResult](bluetoothl2capconfigurationresult.md)
+- [BluetoothL2CAPConfigurationRetransmissionAndFlowControlFlags](bluetoothl2capconfigurationretransmissionandflowcontrolflags.md)
+- [BluetoothL2CAPConnectionResult](bluetoothl2capconnectionresult.md)
+- [BluetoothL2CAPConnectionStatus](bluetoothl2capconnectionstatus.md)
+- [BluetoothL2CAPInformationExtendedFeaturesMask](bluetoothl2capinformationextendedfeaturesmask.md)
+- [BluetoothL2CAPInformationResult](bluetoothl2capinformationresult.md)
+- [BluetoothL2CAPInformationType](bluetoothl2capinformationtype.md)
+- [BluetoothL2CAPQoSType](bluetoothl2capqostype.md)
+- [BluetoothL2CAPSegmentationAndReassembly](bluetoothl2capsegmentationandreassembly.md)
+- [BluetoothL2CAPSupervisoryFuctionType](bluetoothl2capsupervisoryfuctiontype.md)
+- [BluetoothLEAddressType](bluetoothleaddresstype.md)
+- [BluetoothLEAdvertisingType](bluetoothleadvertisingtype.md)
+- [BluetoothLEConnectionInterval](bluetoothleconnectioninterval.md)
+- [BluetoothLEScan](bluetoothlescan.md)
+- [BluetoothLEScanDuplicateFilter](bluetoothlescanduplicatefilter.md)
+- [BluetoothLEScanFilter](bluetoothlescanfilter.md)
+- [BluetoothLEScanType](bluetoothlescantype.md)
+- [BluetoothLESecurityManagerCommandCode](bluetoothlesecuritymanagercommandcode.md)
+- [BluetoothLESecurityManagerIOCapability](bluetoothlesecuritymanageriocapability.md)
+- [BluetoothLESecurityManagerKeypressNotificationType](bluetoothlesecuritymanagerkeypressnotificationtype.md)
+- [BluetoothLESecurityManagerOOBData](bluetoothlesecuritymanageroobdata.md)
+- [BluetoothLESecurityManagerPairingFailedReasonCode](bluetoothlesecuritymanagerpairingfailedreasoncode.md)
+- [BluetoothLESecurityManagerUserInputCapability](bluetoothlesecuritymanageruserinputcapability.md)
+- [BluetoothLESecurityManagerUserOutputCapability](bluetoothlesecuritymanageruseroutputcapability.md)
+- [BluetoothRFCOMMLineStatus](bluetoothrfcommlinestatus.md)
+- [BluetoothRFCOMMParityType](bluetoothrfcommparitytype.md)
+- [IOBluetoothHandsFreeAudioGatewayFeatures](iobluetoothhandsfreeaudiogatewayfeatures.md)
+- [IOBluetoothHandsFreeCallHoldModes](iobluetoothhandsfreecallholdmodes.md)
+- [IOBluetoothHandsFreeCodecID](iobluetoothhandsfreecodecid.md)
+- [IOBluetoothHandsFreeDeviceFeatures](iobluetoothhandsfreedevicefeatures.md)
+- [IOBluetoothHandsFreePDUMessageStatus](iobluetoothhandsfreepdumessagestatus.md)
+- [IOBluetoothHandsFreeSMSSupport](iobluetoothhandsfreesmssupport.md)
+- [IOBluetoothL2CAPChannelEventType](iobluetoothl2capchanneleventtype.md)
+- [IOBluetoothSMSMode](iobluetoothsmsmode.md)
+- [IOBluetoothUserNotificationChannelDirection](iobluetoothusernotificationchanneldirection.md)
+- [Bluetooth logical channel constants](bluetooth-channel-constants-185mv.md)
+- [BluetoothVoiceSettingInputSampleSize constants](bluetoothvoicesettinginputsamplesize-constants-1bmtk.md)
+- [BluetoothEncryptionEnable constants](bluetoothencryptionenable-constants-1cxrq.md)
+- [BluetoothL2CAPConfigurationOption constants](bluetoothl2capconfigurationoption-constants-1hjhz.md)
+- [BluetoothL2CAPTCIEventID constants](bluetoothl2captcieventid-constants-1tcfj.md)
+- [BluetoothL2CAPPacketHeaderSize constants](bluetoothl2cappacketheadersize-constants-2k6pk.md)
+- [BluetoothGAPAppearance constants](bluetoothgapappearance-constants-2lmnv.md)
+- [BluetoothLETX constants](bluetoothletx-constants-2rrb0.md)
+- [BluetoothKeyFlag constants](bluetoothkeyflag-constants-33gk5.md)
+- [BluetoothHCILoopbackMode constants](bluetoothhciloopbackmode-constants-366i1.md)
+- [BluetoothSDPDataElementType constants](bluetoothsdpdataelementtype-constants-3dgra.md)
+- [BluetoothLEMaxTX constants](bluetoothlemaxtx-constants-3tkwh.md)
+- [BluetoothVoiceSettingInputCoding constants](bluetoothvoicesettinginputcoding-constants-3xsmm.md)
+- [BluetoothHCIEventMask constants](bluetoothhcieventmask-constants-3y92r.md)
+- [BluetoothDeviceNameMaxLength constants](bluetoothdevicenamemaxlength-constants-4che4.md)
+- [BluetoothVoiceSettingPCMBitPositionMask constants](bluetoothvoicesettingpcmbitpositionmask-constants-4frpt.md)
+- [BluetoothHCIErrorPowerIsOFF constants](bluetoothhcierrorpowerisoff-constants-4z8d6.md)
+- [BluetoothHCI packet size constants](bluetoothhci-packet-constants-511bu.md)
+- [BluetoothVoiceSettingAirCodingFormat constants](bluetoothvoicesettingaircodingformat-constants-53tsp.md)
+- [BluetoothKeyType constants](bluetoothkeytype-constants-5cjrj.md)
+- [BluetoothL2CAP constants](bluetoothl2cap-constants-5jo8y.md)
+- [BluetoothL2CAPFlushTimeout constants](bluetoothl2capflushtimeout-constants-5me0.md)
+- [BluetoothHCI event constants](bluetoothhci-event-constants-5mz8f.md)
+- [BluetoothSDPPDUID constants](bluetoothsdppduid-constants-62inr.md)
+- [BluetoothLESecurityManager constants](bluetoothlesecuritymanager-constants-67vw.md)
+- [BluetoothSynchronousConnectionPacketType constants](bluetoothsynchronousconnectionpackettype-constants-6b7qe.md)
+- [BluetoothHCI command constants](bluetoothhci-command-constants-6buqn.md)
+- [BluetoothHCIErroneousDataReporting constants](bluetoothhcierroneousdatareporting-constants-6tt47.md)
+- [BluetoothL2CAPTCICommand constants](bluetoothl2captcicommand-constants-6uh3g.md)
+- [BluetoothSDPErrorCode constants](bluetoothsdperrorcode-constants-70sy7.md)
+- [BluetoothConnectionHandleNone constants](bluetoothconnectionhandlenone-constants-73lg2.md)
+- [BluetoothVoiceSettingInputDataFormat constants](bluetoothvoicesettinginputdataformat-constants-7fqp2.md)
+- [BluetoothPacketType constants](bluetoothpackettype-constants-7r3q3.md)
+- [BluetoothAirMode constants](bluetoothairmode-constants-8csay.md)
+- [BluetoothL2CAPPSM constants](bluetoothl2cappsm-constants-8dvu9.md)
+- [BluetoothDeviceClassMinor constants](bluetoothdeviceclassminor-constants-8ex6p.md)
+- [BluetoothServiceClassMajor constants](bluetoothserviceclassmajor-constants-8lf4f.md)
+- [BluetoothL2CAPChannel constants](bluetoothl2capchannel-constants-8u90e.md)
+- [BluetoothDeviceClassMajor constants](bluetoothdeviceclassmajor-constants-8xnan.md)
+- [BluetoothHCIUSBDeviceMatchingConstants](bluetoothhciusbdevicematchingconstants-8yru7.md): Bluetooth USB device matching constants
+- [MaximumNumberOfInquiryAccessCodes constants](maximumnumberofinquiryaccesscodes-constants-925y5.md)
+- [BluetoothL2CAPInfoTypeMaxConnectionlessMTUSize constants](bluetoothl2capinfotypemaxconnectionlessmtusize-constants-92xuw.md)
+- [BluetoothHCIError constants](bluetoothhcierror-constants-9nq10.md)
+- [BluetoothPageScanMode constants](bluetoothpagescanmode-constants-9oksh.md)
+- [BluetoothSDPUUID16 constants](bluetoothsdpuuid16-constants-9owo4.md)
+- [BluetoothPageScanPeriodMode constants](bluetoothpagescanperiodmode-constants-9v205.md)
+- [Bluetooth role switch constants](bluetooth-roleswitch-constants-9vwwq.md)
+- [Bluetooth access inquiry constants](bluetooth-access-constants-9y49w.md)
+- [BluetoothPageScanRepetitionMode constants](bluetoothpagescanrepetitionmode-constants-dctr.md)
+
+## See Also
+
+### Reference
+
+- [Bluetooth.h User-Space](bluetooth-h-user-space.md): Bluetooth wireless technology
+- [IOBluetoothUserLib.h](iobluetoothuserlib-h.md): Public Interfaces for Apple’s implementation of Bluetooth technology.
+- [IOBluetoothUtilities.h](iobluetoothutilities-h.md): See the Overview section above for header-level documentation.
+- [OBEX.h](obex-h.md): Public OBEX technology interfaces.
+- [OBEXBluetooth.h](obexbluetooth-h.md): Object Exchange over Bluetooth.
+- [OBEXFileTransferServices.h](obexfiletransferservices-h.md)
+- [IOBluetooth Structures](iobluetooth-structures.md)
+- [IOBluetooth Constants](iobluetooth-constants.md)
+- [IOBluetooth Functions](iobluetooth-functions.md)
+- [IOBluetooth Data Types](iobluetooth-data-types.md)

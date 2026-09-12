@@ -1,0 +1,61 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uipresentationcontroller/containerviewdidlayoutsubviews()](https://developer.apple.com/documentation/uikit/uipresentationcontroller/containerviewdidlayoutsubviews())
+
+# containerViewDidLayoutSubviews() (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+Notifies the presentation controller when layout ends on the views of the container view.
+
+## Declaration
+
+```swift
+func containerViewDidLayoutSubviews()
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+UIKit calls this method after adjusting the layout of the views in the container view. Use this method to make any additional changes to the view hierarchy.
+
+In iOS 18 and later, UIKit supports automatic trait tracking inside this method for traits from this presentation controller’s `traitCollection` and the `traitCollection` of its [containerView](containerview.md). For more information, see [Automatic trait tracking](../automatic-trait-tracking.md).
+
+This method supports automatic observation tracking. For more information, see [Updating views automatically with observation tracking in UIKit](../updating-views-automatically-with-observation-tracking-in-uikit.md).
+
+## See Also
+
+### Observing data in presentation controllers
+
+- [containerViewWillLayoutSubviews()](containerviewwilllayoutsubviews%28%29.md): Notifies the presentation controller that layout is about to begin on the views of the container view.
+
+# containerViewDidLayoutSubviews (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+Notifies the presentation controller when layout ends on the views of the container view.
+
+## Declaration
+
+```objectivec
+- (void) containerViewDidLayoutSubviews;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+UIKit calls this method after adjusting the layout of the views in the container view. Use this method to make any additional changes to the view hierarchy.
+
+In iOS 18 and later, UIKit supports automatic trait tracking inside this method for traits from this presentation controller’s `traitCollection` and the `traitCollection` of its [containerView](containerview.md). For more information, see [Automatic trait tracking](../automatic-trait-tracking.md).
+
+This method supports automatic observation tracking. For more information, see [Updating views automatically with observation tracking in UIKit](../updating-views-automatically-with-observation-tracking-in-uikit.md).
+
+## See Also
+
+### Observing data in presentation controllers
+
+- [containerViewWillLayoutSubviews](containerviewwilllayoutsubviews%28%29.md): Notifies the presentation controller that layout is about to begin on the views of the container view.

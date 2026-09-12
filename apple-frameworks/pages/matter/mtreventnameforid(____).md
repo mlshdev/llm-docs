@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtreventnameforid(_:_:)](https://developer.apple.com/documentation/matter/mtreventnameforid(_:_:))
+
+# MTREventNameForID(\_:\_:) (Swift)
+
+**Framework:** Matter  
+**Kind:** Function  
+**Availability:** iOS 18.2+ · iPadOS 18.2+ · Mac Catalyst 18.2+ · macOS 15.2+ · tvOS 18.2+ · visionOS 2.2+ · watchOS 11.2+
+
+Resolve Matter event IDs into a descriptive string.
+
+## Declaration
+
+```swift
+func MTREventNameForID(_ clusterID: MTRClusterIDType, _ eventID: MTREventIDType) -> String!
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+For unknown IDs, a string ‘\<Unknown clusterID %d\>’ (if the cluster ID is not known) or ‘\<Unknown eventID %d\>’ (if the cluster ID is known but the event ID is not known) will be returned.
+
+# MTREventNameForID (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Function  
+**Availability:** iOS 18.2+ · iPadOS 18.2+ · Mac Catalyst 18.2+ · macOS 15.2+ · tvOS 18.2+ · visionOS 2.2+ · watchOS 11.2+
+
+Resolve Matter event IDs into a descriptive string.
+
+## Declaration
+
+```objectivec
+extern NSString *MTREventNameForID(MTRClusterIDType clusterID, MTREventIDType eventID);
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+For unknown IDs, a string ‘\<Unknown clusterID %d\>’ (if the cluster ID is not known) or ‘\<Unknown eventID %d\>’ (if the cluster ID is known but the event ID is not known) will be returned.

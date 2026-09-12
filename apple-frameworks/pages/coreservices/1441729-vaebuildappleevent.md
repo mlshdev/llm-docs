@@ -1,0 +1,104 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/1441729-vaebuildappleevent](https://developer.apple.com/documentation/coreservices/1441729-vaebuildappleevent)
+
+# vAEBuildAppleEvent(\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** Core Services  
+**Kind:** Function  
+**Availability:** macOS 10.0+
+
+Allows you to encapsulate calls to `AEBuildAppleEvent` in a wrapper routine.
+
+## Declaration
+
+```swift
+func vAEBuildAppleEvent(_ theClass: AEEventClass, _ theID: AEEventID, _ addressType: DescType, _ addressData: UnsafeRawPointer!, _ addressLength: Size, _ returnID: Int16, _ transactionID: Int32, _ resultEvt: UnsafeMutablePointer<AppleEvent>!, _ error: UnsafeMutablePointer<AEBuildError>!, _ paramsFmt: UnsafePointer<CChar>!, _ args: CVaListPointer) -> OSStatus
+```
+
+## Parameters
+
+- `theClass`: The event class for the resulting Apple event. See [AEEventClass](aeeventclass.md).
+- `theID`: The event id for the resulting Apple event. See [AEEventID](aeeventid.md).
+- `addressType`: The address type for the addressing information described in the next two parameters: usually one of `typeApplSignature`, `typeProcessSerialNumber`, or `typeKernelProcessID`. See [DescType](desctype.md).
+- `addressData`: A pointer to the address information.
+- `addressLength`: The number of bytes pointed to by the `addressData` parameter.
+- `returnID`: The return ID for the created Apple event. If you pass a value of `kAutoGenerateReturnID`, the Apple Event Manager assigns the created Apple event a return ID that is unique to the current session. If you pass any other value, the Apple Event Manager assigns that value for the ID.
+- `transactionID`: The transaction ID for this Apple event. A transaction is a sequence of Apple events that are sent back and forth between the client and server applications, beginning with the client’s initial request for a service. All Apple events that are part of a transaction must have the same transaction ID. You can specify the `kAnyTransactionID` constant if the Apple event is not one of a series of interdependent Apple events.
+- `result`: A pointer to a descriptor where the resulting descriptor should be stored. See [AppleEvent](appleevent.md) for a description of the data type.
+- `error`: A pointer to an `AEBuildError` structure where additional information about any errors that occur will be saved. This is an optional parameter and you can pass `NULL` if this information is not required. See [AEBuildErrorCode](aebuilderrorcode.md) for the syntax error codes that can be returned in this structure.
+- `paramsFmt`: An AEBuild format string describing the AppleEvent record to be created. The format of these strings is described in Technical Note TN2106, [AEBuild\*, AEPrint\*, and Friends](http://developer.apple.com/technotes/tn/tn2045.html).
+- `args`: A variable array of arguments to be substituted into the `paramsFmt` format string. See the ANSI C Interfaces documentation for a description of the `va_list` data type.
+
+<a id="return_value"></a>
+
+## Return Value
+
+A result code. See [Result Codes](https://developer.apple.com/documentation/applicationservices/apple_event_manager#1656145).
+
+<a id="discussion"></a>
+
+## Discussion
+
+Passing an argument list to `vAEBuildAppleEvent` corresponds to passing a series of individual parameters to the [AEBuildAppleEvent](1573757-aebuildappleevent.md) function.
+
+This function and related “AEBuild” routines provide a very simple translation service for converting specially formatted strings into complex Apple event descriptors. Normally, creating complex Apple event descriptors requires a large number of calls to Apple event Manager routines to build up the descriptor piece by piece. The `vAEBuildAppleEvent` function and related routines allow you to consolidate all of the calls required to construct a complex Apple event descriptor into a single system call that creates the desired structure as directed by a format string that you provide.
+
+## See Also
+
+### Creating Apple Event Structures in Memory
+
+- [AEPrintDescToHandle(\_:\_:)](1445158-aeprintdesctohandle.md): Provides a pretty printer facility for displaying the contents of Apple event descriptors.
+- [vAEBuildDesc(\_:\_:\_:\_:)](1446775-vaebuilddesc.md): Allows you to encapsulate calls to `AEBuildDesc` in your own wrapper routines.
+- [vAEBuildParameters(\_:\_:\_:\_:)](1448040-vaebuildparameters.md): Allows you to encapsulate calls to `AEBuildParameters` in your own `stdarg`-style wrapper routines, using techniques similar to those allowed by vsprintf.
+
+# vAEBuildAppleEvent (Objective-C)
+
+**Framework:** Core Services  
+**Kind:** Function  
+**Availability:** macOS 10.0+
+
+Allows you to encapsulate calls to `AEBuildAppleEvent` in a wrapper routine.
+
+## Declaration
+
+```objectivec
+OSStatus vAEBuildAppleEvent(AEEventClass theClass, AEEventID theID, DescType addressType, const void *addressData, Size addressLength, SInt16 returnID, SInt32 transactionID, AppleEvent *resultEvt, AEBuildError *error, const char *paramsFmt, va_list args);
+```
+
+## Parameters
+
+- `theClass`: The event class for the resulting Apple event. See [AEEventClass](aeeventclass.md).
+- `theID`: The event id for the resulting Apple event. See [AEEventID](aeeventid.md).
+- `addressType`: The address type for the addressing information described in the next two parameters: usually one of `typeApplSignature`, `typeProcessSerialNumber`, or `typeKernelProcessID`. See [DescType](desctype.md).
+- `addressData`: A pointer to the address information.
+- `addressLength`: The number of bytes pointed to by the `addressData` parameter.
+- `returnID`: The return ID for the created Apple event. If you pass a value of `kAutoGenerateReturnID`, the Apple Event Manager assigns the created Apple event a return ID that is unique to the current session. If you pass any other value, the Apple Event Manager assigns that value for the ID.
+- `transactionID`: The transaction ID for this Apple event. A transaction is a sequence of Apple events that are sent back and forth between the client and server applications, beginning with the client’s initial request for a service. All Apple events that are part of a transaction must have the same transaction ID. You can specify the `kAnyTransactionID` constant if the Apple event is not one of a series of interdependent Apple events.
+- `result`: A pointer to a descriptor where the resulting descriptor should be stored. See [AppleEvent](appleevent.md) for a description of the data type.
+- `error`: A pointer to an `AEBuildError` structure where additional information about any errors that occur will be saved. This is an optional parameter and you can pass `NULL` if this information is not required. See [AEBuildErrorCode](aebuilderrorcode.md) for the syntax error codes that can be returned in this structure.
+- `paramsFmt`: An AEBuild format string describing the AppleEvent record to be created. The format of these strings is described in Technical Note TN2106, [AEBuild\*, AEPrint\*, and Friends](http://developer.apple.com/technotes/tn/tn2045.html).
+- `args`: A variable array of arguments to be substituted into the `paramsFmt` format string. See the ANSI C Interfaces documentation for a description of the `va_list` data type.
+
+<a id="return_value"></a>
+
+## Return Value
+
+A result code. See [Result Codes](https://developer.apple.com/documentation/applicationservices/apple_event_manager#1656145).
+
+<a id="discussion"></a>
+
+## Discussion
+
+Passing an argument list to `vAEBuildAppleEvent` corresponds to passing a series of individual parameters to the [AEBuildAppleEvent](1573757-aebuildappleevent.md) function.
+
+This function and related “AEBuild” routines provide a very simple translation service for converting specially formatted strings into complex Apple event descriptors. Normally, creating complex Apple event descriptors requires a large number of calls to Apple event Manager routines to build up the descriptor piece by piece. The `vAEBuildAppleEvent` function and related routines allow you to consolidate all of the calls required to construct a complex Apple event descriptor into a single system call that creates the desired structure as directed by a format string that you provide.
+
+## See Also
+
+### Creating Apple Event Structures in Memory
+
+- [AEBuildAppleEvent](1573757-aebuildappleevent.md): Constructs an entire Apple event in a single call.
+- [AEBuildDesc](1573758-aebuilddesc.md): Provides a facility for compiling AEBuild descriptor strings into Apple event descriptors (`AEDesc`).
+- [AEBuildParameters](1573755-aebuildparameters.md): Adds additional parameters or attributes to an existing Apple event.
+- [AEPrintDescToHandle](1445158-aeprintdesctohandle.md): Provides a pretty printer facility for displaying the contents of Apple event descriptors.
+- [vAEBuildDesc](1446775-vaebuilddesc.md): Allows you to encapsulate calls to `AEBuildDesc` in your own wrapper routines.
+- [vAEBuildParameters](1448040-vaebuildparameters.md): Allows you to encapsulate calls to `AEBuildParameters` in your own `stdarg`-style wrapper routines, using techniques similar to those allowed by vsprintf.

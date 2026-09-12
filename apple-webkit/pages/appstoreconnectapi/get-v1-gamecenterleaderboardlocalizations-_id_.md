@@ -1,0 +1,99 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v1-gamecenterleaderboardlocalizations-_id_](https://developer.apple.com/documentation/appstoreconnectapi/get-v1-gamecenterleaderboardlocalizations-_id_)
+
+# Read Leaderboard Localization Information
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Web Service Endpoint  
+**Availability:** App Store Connect API 3.0+
+
+Get information about a leaderboard localization.
+
+## URL
+
+```http
+GET https://api.appstoreconnect.apple.com/v1/gameCenterLeaderboardLocalizations/{id}
+```
+
+## Path Parameters
+
+- `id` — `string` (required):
+
+## Query Parameters
+
+- `fields[gameCenterLeaderboardImages]` — `[string]`: **Allowed values:** `fileSize`, `fileName`, `imageAsset`, `uploadOperations`, `assetDeliveryState`, `gameCenterLeaderboardLocalization`
+- `fields[gameCenterLeaderboardLocalizations]` — `[string]`: **Allowed values:** `locale`, `name`, `formatterOverride`, `formatterSuffix`, `formatterSuffixSingular`, `description`, `gameCenterLeaderboard`, `gameCenterLeaderboardImage`
+- `include` — `[string]`: **Allowed values:** `gameCenterLeaderboard`, `gameCenterLeaderboardImage`
+- `fields[gameCenterLeaderboards]` — `[string]`: **Allowed values:** `defaultFormatter`, `referenceName`, `vendorIdentifier`, `submissionType`, `scoreSortType`, `scoreRangeStart`, `scoreRangeEnd`, `recurrenceStartDate`, `recurrenceDuration`, `recurrenceRule`, `archived`, `activityProperties`, `visibility`, `gameCenterDetail`, `gameCenterGroup`, `groupLeaderboard`, `gameCenterLeaderboardSets`, `localizations`, `releases`, `activity`, `challenge`
+
+## Response Codes
+
+- `200` OK — `GameCenterLeaderboardLocalizationResponse`:
+- `400` Bad Request — `ErrorResponse`:
+- `401` Unauthorized — `ErrorResponse`:
+- `403` Forbidden — `ErrorResponse`:
+- `404` Not Found — `ErrorResponse`:
+- `429` — `ErrorResponse`:
+
+<a id="Discussion"></a>
+
+## Discussion
+
+<a id="Example-Request-and-Response"></a>
+
+### Example Request and Response
+
+**Request**
+
+```
+https://api.appstoreconnect.apple.com/v1/gameCenterLeaderboards/843189c3-61a6-480a-a9d2-760a41299829/localizations
+```
+
+**Response**
+
+```json
+{
+  “data” : {
+    “type” : “gameCenterLeaderboardLocalizations”,
+    “id” : “5a75be8c-225a-4fd4-b51f-d33876c2c79b”,
+    “attributes” : {
+      “locale” : “en-US”,
+      “name” : “Best Latte Art”,
+      “formatterOverride” : “INTEGER”,
+      “formatterSuffix” : “points”,
+      “formatterSuffixSingular” : “points”
+    },
+    “relationships” : {
+      “gameCenterLeaderboardImage” : {
+        “links” : {
+          “self” : “https://api.appstoreconnect.apple.com/v1/gameCenterLeaderboardLocalizations/5a75be8c-225a-4fd4-b51f-d33876c2c79b/relationships/gameCenterLeaderboardImage”,
+          “related” : “https://api.appstoreconnect.apple.com/v1/gameCenterLeaderboardLocalizations/5a75be8c-225a-4fd4-b51f-d33876c2c79b/gameCenterLeaderboardImage”
+        }
+      }
+    },
+    “links” : {
+      “self” : “https://api.appstoreconnect.apple.com/v1/gameCenterLeaderboardLocalizations/5a75be8c-225a-4fd4-b51f-d33876c2c79b”
+    }
+  },
+  “links” : {
+    “self” : “https://api.appstoreconnect.apple.com/v1/gameCenterLeaderboardLocalizations/5a75be8c-225a-4fd4-b51f-d33876c2c79b”
+  }
+}
+```
+
+## See Also
+
+### Managing leaderboard localizations
+
+- [Read Game Center Leaderboard Localization Information](get-v2-gamecenterleaderboardlocalizations-_id_.md): Get information about a specific Game Center leaderboard localization.
+- [List All Images for a Game Center Leaderboard Localization](get-v2-gamecenterleaderboardlocalizations-_id_-image.md): Get a list of images for a specific Game Center leaderboard localization.
+- [Get All Image IDs for a Game Center Leaderboard Localization](get-v2-gamecenterleaderboardlocalizations-_id_-relationships-image.md): Get a list of image resource IDs for a specific Game Center leaderboard localization.
+- [Create a Game Center Leaderboard Localization](post-v2-gamecenterleaderboardlocalizations.md): Create a Game Center leaderboard localization.
+- [Modify a Game Center Leaderboard Localization](patch-v2-gamecenterleaderboardlocalizations-_id_.md): Update a specific Game Center leaderboard localization.
+- [Delete a Game Center Leaderboard Localization](delete-v2-gamecenterleaderboardlocalizations-_id_.md): Delete a specific Game Center leaderboard localization.
+- [Read the Image for a Leaderboard Localization](get-v1-gamecenterleaderboardlocalizations-_id_-gamecenterleaderboardimage.md): Deprecated. Get information about the image associated with a leaderboard localization.
+- [Get the leaderboard image ID for a Game Center leaderboard localization](get-v1-gamecenterleaderboardlocalizations-_id_-relationships-gamecenterleaderboardimage.md): Deprecated.
+- [Create a Leaderboard Localization](post-v1-gamecenterleaderboardlocalizations.md): Deprecated. Add a new leaderboard localization.
+- [Modify a Leaderboard Localization](patch-v1-gamecenterleaderboardlocalizations-_id_.md): Deprecated. Edit a leaderboard localization.
+- [Delete a Leaderboard Localization](delete-v1-gamecenterleaderboardlocalizations-_id_.md): Deprecated. Delete a localization that’s associated with a leaderboard.

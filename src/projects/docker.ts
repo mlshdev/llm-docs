@@ -13,7 +13,11 @@ import {
   titleCase,
 } from "../markdown.ts";
 import { DocumentCollector } from "../quarantine.ts";
-import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
+import type {
+  GithubLockedSource,
+  GithubSourceProject,
+  ProjectBuild,
+} from "../types.ts";
 
 interface DockerPage {
   readonly sourcePath: string;
@@ -46,8 +50,8 @@ interface CliPage {
 }
 
 export async function buildDocker(
-  project: SourceProject,
-  lock: LockedSource,
+  project: GithubSourceProject,
+  lock: GithubLockedSource,
 ): Promise<ProjectBuild> {
   if (!lock.branch) {
     throw new Error("Docker documentation must be pinned to a branch commit");

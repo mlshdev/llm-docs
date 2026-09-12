@@ -1,0 +1,51 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1575322-iomappedread16](https://developer.apple.com/documentation/kernel/1575322-iomappedread16)
+
+# IOMappedRead16
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Function  
+**Availability:** macOS 10.2+
+
+Read two bytes from the desired "Physical" IOSpace address.
+
+## Declaration
+
+```objectivec
+UInt16 IOMappedRead16(IOPhysicalAddress address);
+```
+
+## Parameters
+
+- `address`: The desired address, as returned by IOMemoryDescriptor::getPhysicalSegment.
+
+<a id="return_value"></a>
+
+## Return Value
+
+Data contained at that location
+
+<a id="discussion"></a>
+
+## Discussion
+
+Read two bytes from the desired "Physical" IOSpace address. This function allows the developer to read an address returned from any memory descriptor's getPhysicalSegment routine. It can then be used by segmenting a physical page slightly to tag the physical page with its kernel space virtual address.
+
+## See Also
+
+### Mapped Memory
+
+- [IOMapper](iomapper.md)
+- [IOMemoryMap](iomemorymap.md): A class defining common methods for describing a memory mapping.
+- [IOMappedRead32](1575311-iomappedread32.md): Read four bytes from the desired "Physical" IOSpace address.
+- [IOMappedRead64](1575301-iomappedread64.md): Read eight bytes from the desired "Physical" IOSpace address.
+- [IOMappedRead8](1575317-iomappedread8.md): Read one byte from the desired "Physical" IOSpace address.
+- [IOMappedWrite16](1575315-iomappedwrite16.md): Write two bytes to the desired "Physical" IOSpace address.
+- [IOMappedWrite32](1575310-iomappedwrite32.md): Write four bytes to the desired "Physical" IOSpace address.
+- [IOMappedWrite64](1575313-iomappedwrite64.md): Write eight bytes to the desired "Physical" IOSpace address.
+- [IOMappedWrite8](1575318-iomappedwrite8.md): Write one byte to the desired "Physical" IOSpace address.
+- [IOMapperIOVMAlloc](1532986-iomapperiovmalloc.md)
+- [IOMapperIOVMFree](1532978-iomapperiovmfree.md)
+- [IOMapperInsertPage](1532970-iomapperinsertpage.md)
+- [IOFlushProcessorCache](1575308-ioflushprocessorcache.md): Flushes the processor cache for mapped memory.

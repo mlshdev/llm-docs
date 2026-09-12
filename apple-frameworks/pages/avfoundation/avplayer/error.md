@@ -1,0 +1,55 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avplayer/error](https://developer.apple.com/documentation/avfoundation/avplayer/error)
+
+# error (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 1.0+
+
+An error that caused a failure.
+
+## Declaration
+
+```swift
+nonisolated var error: (any Error)? { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+By default, this value is `nil`. If a player reaches a [AVPlayer.Status.failed](status-swift.enum/failed.md), the system populates this value with an error that describes the failure.
+
+## See Also
+
+### Determining player readiness
+
+- [status](status-swift.property.md): A value that indicates the readiness of a player object for playback.
+- [AVPlayer.Status](status-swift.enum.md): Status values that indicate whether a player can successfully play media.
+
+# error (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 1.0+
+
+An error that caused a failure.
+
+## Declaration
+
+```objectivec
+@property (readonly, nullable) NSError * error;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+By default, this value is `nil`. If a player reaches a [AVPlayerStatusFailed](status-swift.enum/failed.md), the system populates this value with an error that describes the failure.
+
+## See Also
+
+### Determining player readiness
+
+- [status](status-swift.property.md): A value that indicates the readiness of a player object for playback.
+- [AVPlayerStatus](status-swift.enum.md): Status values that indicate whether a player can successfully play media.

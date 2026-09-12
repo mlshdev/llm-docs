@@ -1,0 +1,30 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/section/init(footer:content:)](https://developer.apple.com/documentation/swiftui/section/init(footer:content:))
+
+# init(footer:content:)
+
+**Framework:** SwiftUI  
+**Kind:** Initializer  
+**Availability:** iOS 13.0+ (deprecated in 27.0) · iPadOS 13.0+ (deprecated in 27.0) · Mac Catalyst 13.0+ (deprecated in 27.0) · macOS 10.15+ (deprecated in 27.0) · tvOS 13.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0) · watchOS 6.0+ (deprecated in 27.0)
+
+Creates a section with a footer and the provided section content.
+
+> Use [init(content:footer:)](init%28content_footer_%29.md) instead.
+
+## Declaration
+
+```swift
+init(footer: Footer, @ContentBuilder content: () -> Content)
+```
+
+## Parameters
+
+- `footer`: A view to use as the section’s footer.
+- `content`: The section’s content.
+
+## See Also
+
+### Deprecated symbols
+
+- [init(header:content:)](init%28header_content_%29.md): Deprecated. Conforms when `Parent` conforms to `View`, `Content` conforms to `View`, and `Footer` is `EmptyView`. Creates a section with a header and the provided section content.
+- [init(header:footer:content:)](init%28header_footer_content_%29.md): Deprecated. Conforms when `Parent` conforms to `View`, `Content` conforms to `View`, and `Footer` conforms to `View`. Creates a section with a header, footer, and the provided section content.
+- [collapsible(\_:)](collapsible%28__%29.md): Deprecated. Conforms when `Parent` conforms to `View`, `Content` conforms to `View`, and `Footer` conforms to `View`. Sets whether a section can be collapsed by the user.

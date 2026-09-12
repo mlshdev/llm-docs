@@ -1,0 +1,106 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avcapturephotosettings/init(rawpixelformattype:rawfiletype:processedformat:processedfiletype:)](https://developer.apple.com/documentation/avfoundation/avcapturephotosettings/init(rawpixelformattype:rawfiletype:processedformat:processedfiletype:))
+
+# init(rawPixelFormatType:rawFileType:processedFormat:processedFileType:) (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Initializer  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+Creates a photo settings object for capture in both RAW format and a processed format with the specified output file types.
+
+## Declaration
+
+```swift
+convenience init(rawPixelFormatType: OSType, rawFileType: AVFileType?, processedFormat: [String : Any]?, processedFileType: AVFileType?)
+```
+
+## Parameters
+
+- `rawPixelFormatType`: The Bayer RAW pixel format type to use for capture. This value must be one of the format identifiers listed in the [availableRawPhotoPixelFormatTypes](../avcapturephotooutput/availablerawphotopixelformattypes-5fatm.md) array of your photo capture output.
+- `rawFileType`: The container file format for eventual output of the RAW image.
+
+  If you have no preferred file format, pass `nil` and the photo output will automatically choose a default file format appropriate to the `rawPixelFormatType` parameter.
+- `processedFormat`: A dictionary of Core Video pixel buffer attributes or AVFoundation video settings constants (see `Video Settings`).
+
+  To capture a photo in an uncompressed format, such as 420f, 420v, or BGRA, set the key [kCVPixelBufferPixelFormatTypeKey](../../corevideo/kcvpixelbufferpixelformattypekey.md) in the `format` dictionary. The corresponding value must be one of the pixel format identifiers listed in the [availablePhotoPixelFormatTypes](../avcapturephotooutput/availablephotopixelformattypes-6eyb.md) array of your photo capture output.
+
+  To capture a photo in a compressed format, such as JPEG, set the key [AVVideoCodecKey](../avvideocodeckey.md) in the `format` dictionary. The corresponding value must be one of the codec identifiers listed in the [availablePhotoCodecTypes](../avcapturephotooutput/availablephotocodectypes.md) array of your photo capture output. For a compressed format, you can also specify a compression level with the key [AVVideoQualityKey](../avvideoqualitykey.md).
+- `processedFileType`: The container file format for eventual output of the processed image.
+
+  If you have no preferred file format, pass `nil` and the photo output will automatically choose a default file format appropriate to the `processedFormat` parameter.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new photo settings object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this initializer to capture an image in both RAW format and a processed format (such as JPEG). For RAW-only capture, use the [init(rawPixelFormatType:)](init%28rawpixelformattype_%29.md) initializer instead.
+
+Requesting both formats adds requirements for other photo settings: see the [format](format.md) property for processed format requirements and the [rawPhotoPixelFormatType](rawphotopixelformattype.md) property for RAW format requirements. The capture output validates these requirements when you call the [capturePhoto(with:delegate:)](../avcapturephotooutput/capturephoto%28with_delegate_%29.md) method. If your settings and delegate do not meet these requirements, that method raises an exception.
+
+## See Also
+
+### Creating photo settings
+
+- [init(format:)](init%28format_%29.md): Creates a photo settings object with the specified output format.
+- [init(rawPixelFormatType:)](init%28rawpixelformattype_%29.md): Creates a photo settings object for RAW-format-only capture with the specified pixel format.
+- [init(rawPixelFormatType:processedFormat:)](init%28rawpixelformattype_processedformat_%29.md): Creates a photo settings object for capture in both RAW format and a processed format.
+- [init(from:)](init%28from_%29.md): Creates a unique photo settings object, copying all settings values from the specified photo settings object.
+
+# photoSettingsWithRawPixelFormatType:rawFileType:processedFormat:processedFileType: (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Type Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+Creates a photo settings object for capture in both RAW format and a processed format with the specified output file types.
+
+## Declaration
+
+```objectivec
++ (instancetype) photoSettingsWithRawPixelFormatType:(OSType) rawPixelFormatType rawFileType:(AVFileType) rawFileType processedFormat:(NSDictionary<NSString *,id> *) processedFormat processedFileType:(AVFileType) processedFileType;
+```
+
+## Parameters
+
+- `rawPixelFormatType`: The Bayer RAW pixel format type to use for capture. This value must be one of the format identifiers listed in the [availableRawPhotoPixelFormatTypes](../avcapturephotooutput/availablerawphotopixelformattypes-5fatm.md) array of your photo capture output.
+- `rawFileType`: The container file format for eventual output of the RAW image.
+
+  If you have no preferred file format, pass `nil` and the photo output will automatically choose a default file format appropriate to the `rawPixelFormatType` parameter.
+- `processedFormat`: A dictionary of Core Video pixel buffer attributes or AVFoundation video settings constants (see `Video Settings`).
+
+  To capture a photo in an uncompressed format, such as 420f, 420v, or BGRA, set the key [kCVPixelBufferPixelFormatTypeKey](../../corevideo/kcvpixelbufferpixelformattypekey.md) in the `format` dictionary. The corresponding value must be one of the pixel format identifiers listed in the [availablePhotoPixelFormatTypes](../avcapturephotooutput/availablephotopixelformattypes-6eyb.md) array of your photo capture output.
+
+  To capture a photo in a compressed format, such as JPEG, set the key [AVVideoCodecKey](../avvideocodeckey.md) in the `format` dictionary. The corresponding value must be one of the codec identifiers listed in the [availablePhotoCodecTypes](../avcapturephotooutput/availablephotocodectypes.md) array of your photo capture output. For a compressed format, you can also specify a compression level with the key [AVVideoQualityKey](../avvideoqualitykey.md).
+- `processedFileType`: The container file format for eventual output of the processed image.
+
+  If you have no preferred file format, pass `nil` and the photo output will automatically choose a default file format appropriate to the `processedFormat` parameter.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new photo settings object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this initializer to capture an image in both RAW format and a processed format (such as JPEG). For RAW-only capture, use the [photoSettingsWithRawPixelFormatType:](init%28rawpixelformattype_%29.md) initializer instead.
+
+Requesting both formats adds requirements for other photo settings: see the [format](format.md) property for processed format requirements and the [rawPhotoPixelFormatType](rawphotopixelformattype.md) property for RAW format requirements. The capture output validates these requirements when you call the [capturePhotoWithSettings:delegate:](../avcapturephotooutput/capturephoto%28with_delegate_%29.md) method. If your settings and delegate do not meet these requirements, that method raises an exception.
+
+## See Also
+
+### Creating photo settings
+
+- [photoSettings](photosettings.md): Creates a photo settings object with default settings.
+- [photoSettingsWithFormat:](init%28format_%29.md): Creates a photo settings object with the specified output format.
+- [photoSettingsWithRawPixelFormatType:](init%28rawpixelformattype_%29.md): Creates a photo settings object for RAW-format-only capture with the specified pixel format.
+- [photoSettingsWithRawPixelFormatType:processedFormat:](init%28rawpixelformattype_processedformat_%29.md): Creates a photo settings object for capture in both RAW format and a processed format.
+- [photoSettingsFromPhotoSettings:](init%28from_%29.md): Creates a unique photo settings object, copying all settings values from the specified photo settings object.

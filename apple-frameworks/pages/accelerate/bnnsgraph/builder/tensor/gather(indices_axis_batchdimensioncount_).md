@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/bnnsgraph/builder/tensor/gather(indices:axis:batchdimensioncount:)](https://developer.apple.com/documentation/accelerate/bnnsgraph/builder/tensor/gather(indices:axis:batchdimensioncount:))
+
+# gather(indices:axis:batchDimensionCount:)
+
+**Framework:** Accelerate  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
+
+Adds a gather operation to the current graph.
+
+## Declaration
+
+```swift
+func gather(indices: some BNNSGraph.Builder.OperationParameter<Int32>, axis: Int, batchDimensionCount: Int) -> BNNSGraph.Builder.Tensor<T>
+```
+
+## Parameters
+
+- `indices`: The indices that the operation gathers.
+- `axis`: The axis over which the operation gathers.
+- `batchDimensionCount`: The number of additional leading dimensions.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Register a gather operation, which gathers entire slices of the input tensor along the specified axis. In particular, for each coordinate i valid for the indices tensor, fetch an input slice from the input tensor by indexing the axis dimension at `indices[i...]`, then store the entire slice into the output tensor by indexing it at `i...`.
+
+Outputs `y` such that `y[L..., i..., T...] = x[L..., indices[i...], T...]`, where `L` denotes leading dimensions before the axis, `T` denotes trailing dimensions after the axis, and i… denotes indices valid for the indices tensor. `batchDimensionCount` specifies the number of additional leading dimensions present in both `self` and `indices` which should be only used for a batch processing loop.

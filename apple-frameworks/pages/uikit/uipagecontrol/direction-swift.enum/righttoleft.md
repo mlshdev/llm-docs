@@ -1,0 +1,47 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uipagecontrol/direction-swift.enum/righttoleft](https://developer.apple.com/documentation/uikit/uipagecontrol/direction-swift.enum/righttoleft)
+
+# UIPageControl.Direction.rightToLeft (Swift)
+
+**Framework:** UIKit  
+**Kind:** Case  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · tvOS 16.0+ · visionOS 1.0+
+
+A direction that lays out the page indicators from right to left.
+
+## Declaration
+
+```swift
+case rightToLeft
+```
+
+## See Also
+
+### Directions
+
+- [UIPageControl.Direction.natural](natural.md): A direction that infers the lay out from the system’s locale.
+- [UIPageControl.Direction.leftToRight](lefttoright.md): A direction that lays out the page indicators from left to right.
+- [UIPageControl.Direction.topToBottom](toptobottom.md): A direction that lays out the page indicators from top to bottom.
+- [UIPageControl.Direction.bottomToTop](bottomtotop.md): A direction that lays out the page indicators from bottom to top.
+
+# UIPageControlDirectionRightToLeft (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Enumeration Case  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · tvOS 16.0+ · visionOS 1.0+
+
+A direction that lays out the page indicators from right to left.
+
+## Declaration
+
+```objectivec
+UIPageControlDirectionRightToLeft
+```
+
+## See Also
+
+### Directions
+
+- [UIPageControlDirectionNatural](natural.md): A direction that infers the lay out from the system’s locale.
+- [UIPageControlDirectionLeftToRight](lefttoright.md): A direction that lays out the page indicators from left to right.
+- [UIPageControlDirectionTopToBottom](toptobottom.md): A direction that lays out the page indicators from top to bottom.
+- [UIPageControlDirectionBottomToTop](bottomtotop.md): A direction that lays out the page indicators from bottom to top.

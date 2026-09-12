@@ -1,0 +1,75 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/vision/generatepersonsegmentationrequest](https://developer.apple.com/documentation/vision/generatepersonsegmentationrequest)
+
+# GeneratePersonSegmentationRequest
+
+**Framework:** Vision  
+**Kind:** Class  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+A request that produces a matte image for a person it finds in the input image.
+
+## Declaration
+
+```swift
+final class GeneratePersonSegmentationRequest
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Perform this request to detect and generate an image mask for a person in an image. The request returns the resulting image mask in an instance of [PixelBufferObservation](pixelbufferobservation.md).
+
+## Topics
+
+### Creating a request
+
+- [init(\_:frameAnalysisSpacing:)](generatepersonsegmentationrequest/init%28__frameanalysisspacing_%29.md): Creates a person-segmentation request.
+
+### Performing a request
+
+- [perform(on:orientation:)](imageprocessingrequest/perform%28on_orientation_%29-80bya.md): Performs the request on an image URL and produces observations.
+- [perform(on:orientation:)](imageprocessingrequest/perform%28on_orientation_%29-3f3f1.md): Performs the request on image data and produces observations.
+- [perform(on:orientation:)](imageprocessingrequest/perform%28on_orientation_%29-qxxx.md): Performs the request on a Core Graphics image and produces observations.
+- [perform(on:orientation:)](imageprocessingrequest/perform%28on_orientation_%29-xspx.md): Performs the request on a pixel buffer and produces observations.
+- [perform(on:orientation:)](imageprocessingrequest/perform%28on_orientation_%29-3hddl.md): Performs the request on a Core Media buffer and produces observations.
+- [perform(on:orientation:)](imageprocessingrequest/perform%28on_orientation_%29-85ex1.md): Performs the request on a Core Image image and produces observations.
+
+### Understanding the result
+
+- [PixelBufferObservation](pixelbufferobservation.md): An object that represents an image that an image-analysis request produces.
+
+### Configuring a request
+
+- [qualityLevel](generatepersonsegmentationrequest/qualitylevel-swift.property.md): A value that indicates how the request balances accuracy and performance.
+- [GeneratePersonSegmentationRequest.QualityLevel](generatepersonsegmentationrequest/qualitylevel-swift.enum.md): Constants that define the levels of quality for a person-segmentation request.
+- [outputPixelFormatType](generatepersonsegmentationrequest/outputpixelformattype.md): The desired pixel format of the observation.
+- [supportedOutputPixelFormats](generatepersonsegmentationrequest/supportedoutputpixelformats.md): The collection of supported pixel format types.
+
+### Getting the revision
+
+- [revision](generatepersonsegmentationrequest/revision-swift.property.md): The algorithm or implementation the request uses.
+- [supportedRevisions](generatepersonsegmentationrequest/supportedrevisions.md): The collection of revisions the request supports.
+- [GeneratePersonSegmentationRequest.Revision](generatepersonsegmentationrequest/revision-swift.enum.md): A type that describes the algorithm or implementation that the request performs.
+
+## Relationships
+
+### Conforms To
+
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [ImageProcessingRequest](imageprocessingrequest.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+- [StatefulRequest](statefulrequest.md)
+- [VisionRequest](visionrequest.md)
+
+## See Also
+
+### Image segmentation and subject lifting
+
+- [Segmenting objects using taps, scribbles or rectangles](segmenting-objects-using-taps-scribbles-or-rectangles.md): Select objects or regions in a photo using taps, scribbles, or rectangle selection, and generate a segmentation mask using the iterative segmentation API.
+- [GenerateForegroundInstanceMaskRequest](generateforegroundinstancemaskrequest.md): A request that generates an instance mask of noticeable objects to separate from the background.
+- [GeneratePersonInstanceMaskRequest](generatepersoninstancemaskrequest.md): A request that produces a mask of individual people it finds in the input image.
+- [GenerateIterativeSegmentationRequest](generateiterativesegmentationrequest.md): A request that generates a segmentation mask from points, a rectangle, or a scribble.

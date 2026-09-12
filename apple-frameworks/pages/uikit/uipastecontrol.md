@@ -1,0 +1,194 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uipastecontrol](https://developer.apple.com/documentation/uikit/uipastecontrol)
+
+# UIPasteControl (Swift)
+
+**Framework:** UIKit  
+**Kind:** Class  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · visionOS 1.0+
+
+A button that a person taps to place pasteboard contents in your app.
+
+## Declaration
+
+```swift
+@MainActor class UIPasteControl
+```
+
+<a id="overview"></a>
+
+## Overview
+
+You can configure the button to appear as an icon, text, or both. The following button represents the icon and text option:
+
+![A screenshot of a pill-shaped button with an icon of a paper sheet on top of a clipboard, and text that says Paste.](https://developer.apple.com/images/com.apple.uikit/media-4085675@2x.png)
+
+In iOS 16 and later, programmatic pasting raises a user alert that prompts the user for approval before the app gains access to pasteboard contents (`UIPasteboard.general.string`). Use this class to paste without a user prompt.
+
+<a id="Add-a-paste-button-to-a-text-view"></a>
+
+### Add a paste button to a text view
+
+The following code displays a paste button and assigns a text view as the recipient of pasteboard contents:
+
+```swift
+let textView = UITextView(frame: view.bounds)
+view.addSubview(textView)
+
+let configuration = UIPasteControl.Configuration()
+configuration.baseBackgroundColor = .red
+configuration.baseForegroundColor = .magenta
+configuration.cornerStyle = .capsule
+configuration.displayMode = .iconAndLabel
+                    
+let pasteButton = UIPasteControl(configuration: configuration)
+pasteButton.frame = CGRect(x: view.bounds.width/2.0, y: view.bounds.height/2.0, width: 150, height: 60)
+textView.addSubview(pasteButton)
+
+pasteButton.target = textView
+```
+
+## Topics
+
+### Creating a paste button
+
+- [init(coder:)](uipastecontrol/init%28coder_%29.md): Creates a paste button by deserializing the specified coder.
+- [init(configuration:)](uipastecontrol/init%28configuration_%29.md): Creates a paste button that conforms to the specified configuration.
+- [init(frame:)](uipastecontrol/init%28frame_%29.md): Creates a paste button with the specified size and position.
+
+### Identifying the content recipient
+
+- [target](uipastecontrol/target.md): The UI control that receives pasted content.
+
+### Determining the button’s look
+
+- [configuration](uipastecontrol/configuration-swift.property.md): An object that customizes the look of the paste button.
+- [UIPasteControl.Configuration](uipastecontrol/configuration-swift.class.md): An object that determines a paste button’s color, corner style, icon, and text.
+
+## Relationships
+
+### Inherits From
+
+- [UIControl](uicontrol.md)
+
+### Conforms To
+
+- [CALayerDelegate](../quartzcore/calayerdelegate.md)
+- [CLBodyIdentifiable](../corelocation/clbodyidentifiable.md)
+- [CMBodyIdentifiable](../coremotion/cmbodyidentifiable.md)
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCoding](../foundation/nscoding.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+- [UIAccessibilityIdentification](uiaccessibilityidentification.md)
+- [UIActivityItemsConfigurationProviding](uiactivityitemsconfigurationproviding.md)
+- [UIAppearance](uiappearance.md)
+- [UIAppearanceContainer](uiappearancecontainer.md)
+- [UIContextMenuInteractionDelegate](uicontextmenuinteractiondelegate.md)
+- [UICoordinateSpace](uicoordinatespace.md)
+- [UIDynamicItem](uidynamicitem.md)
+- [UIFocusEnvironment](uifocusenvironment.md)
+- [UIFocusItem](uifocusitem.md)
+- [UIFocusItemContainer](uifocusitemcontainer.md)
+- [UILargeContentViewerItem](uilargecontentvieweritem.md)
+- [UIPasteConfigurationSupporting](uipasteconfigurationsupporting.md)
+- [UIPopoverPresentationControllerSourceItem](uipopoverpresentationcontrollersourceitem.md)
+- [UIResponderStandardEditActions](uiresponderstandardeditactions.md)
+- [UITraitChangeObservable](uitraitchangeobservable-67e94.md)
+- [UITraitEnvironment](uitraitenvironment.md)
+- [UIUserActivityRestoring](uiuseractivityrestoring.md)
+
+## See Also
+
+### Pasteboard
+
+- [UIPasteControl.Configuration](uipastecontrol/configuration-swift.class.md): An object that determines a paste button’s color, corner style, icon, and text.
+- [UIPasteControl.DisplayMode](uipastecontrol/displaymode.md): Options that determine whether a paste button composes an icon, textual label, or both.
+- [UIPasteboard](uipasteboard.md): An object that helps a user share data from one place to another within your app, and from your app to other apps.
+- [UIPasteConfiguration](uipasteconfiguration.md): The interface that an object implements to declare its ability to accept specific data types for pasting and for drag-and-drop activities.
+- [UIPasteConfigurationSupporting](uipasteconfigurationsupporting.md): The interface that determines whether a responder object supports paste configuration.
+
+# UIPasteControl (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Class  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · visionOS 1.0+
+
+A button that a person taps to place pasteboard contents in your app.
+
+## Declaration
+
+```objectivec
+@interface UIPasteControl : UIControl
+```
+
+<a id="overview"></a>
+
+## Overview
+
+You can configure the button to appear as an icon, text, or both. The following button represents the icon and text option:
+
+![A screenshot of a pill-shaped button with an icon of a paper sheet on top of a clipboard, and text that says Paste.](https://developer.apple.com/images/com.apple.uikit/media-4085675@2x.png)
+
+In iOS 16 and later, programmatic pasting raises a user alert that prompts the user for approval before the app gains access to pasteboard contents (`UIPasteboard.general.string`). Use this class to paste without a user prompt.
+
+<a id="Add-a-paste-button-to-a-text-view"></a>
+
+### Add a paste button to a text view
+
+The following code displays a paste button and assigns a text view as the recipient of pasteboard contents:
+
+```swift
+let textView = UITextView(frame: view.bounds)
+view.addSubview(textView)
+
+let configuration = UIPasteControl.Configuration()
+configuration.baseBackgroundColor = .red
+configuration.baseForegroundColor = .magenta
+configuration.cornerStyle = .capsule
+configuration.displayMode = .iconAndLabel
+                    
+let pasteButton = UIPasteControl(configuration: configuration)
+pasteButton.frame = CGRect(x: view.bounds.width/2.0, y: view.bounds.height/2.0, width: 150, height: 60)
+textView.addSubview(pasteButton)
+
+pasteButton.target = textView
+```
+
+## Topics
+
+### Creating a paste button
+
+- [initWithCoder:](uipastecontrol/init%28coder_%29.md): Creates a paste button by deserializing the specified coder.
+- [initWithConfiguration:](uipastecontrol/init%28configuration_%29.md): Creates a paste button that conforms to the specified configuration.
+- [initWithFrame:](uipastecontrol/init%28frame_%29.md): Creates a paste button with the specified size and position.
+
+### Identifying the content recipient
+
+- [target](uipastecontrol/target.md): The UI control that receives pasted content.
+
+### Determining the button’s look
+
+- [configuration](uipastecontrol/configuration-swift.property.md): An object that customizes the look of the paste button.
+- [UIPasteControlConfiguration](uipastecontrol/configuration-swift.class.md): An object that determines a paste button’s color, corner style, icon, and text.
+
+## Relationships
+
+### Inherits From
+
+- [UIControl](uicontrol.md)
+
+## See Also
+
+### Pasteboard
+
+- [UIPasteControlConfiguration](uipastecontrol/configuration-swift.class.md): An object that determines a paste button’s color, corner style, icon, and text.
+- [UIPasteControlDisplayMode](uipastecontrol/displaymode.md): Options that determine whether a paste button composes an icon, textual label, or both.
+- [UIPasteboard](uipasteboard.md): An object that helps a user share data from one place to another within your app, and from your app to other apps.
+- [UIPasteConfiguration](uipasteconfiguration.md): The interface that an object implements to declare its ability to accept specific data types for pasting and for drag-and-drop activities.
+- [UIPasteConfigurationSupporting](uipasteconfigurationsupporting.md): The interface that determines whether a responder object supports paste configuration.

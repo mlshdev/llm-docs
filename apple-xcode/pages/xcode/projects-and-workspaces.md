@@ -1,0 +1,39 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/projects-and-workspaces](https://developer.apple.com/documentation/xcode/projects-and-workspaces)
+
+# Projects and workspaces
+
+Manage the code and resources you use to build apps, libraries, and other software for Apple platforms.
+
+## Topics
+
+- [Downloading and installing additional Xcode components](downloading-and-installing-additional-xcode-components.md): Add more simulated devices, optional features, and support for additional platforms.
+
+### Navigation
+
+- [Configuring the Xcode project window](configuring-the-xcode-project-window.md): Customize the Xcode project window and editor area to view and edit project files in a configuration you prefer.
+- [Finding and replacing content in a project](finding-and-replacing-content-in-a-project.md): Search some or all of your project for text strings or symbol names, and perform advanced searches using regular expressions.
+
+### Project configuration
+
+- [Managing your app’s information property list values](https://developer.apple.com/documentation/bundleresources/managing-your-app-s-information-property-list): Customize the information property list values for your app using Xcode.
+- [Adding package dependencies to your app](adding-package-dependencies-to-your-app.md): Integrate package dependencies to share code between projects, or leverage code from other developers.
+- [Creating a Mac version of your iPad app](https://developer.apple.com/documentation/uikit/creating-a-mac-version-of-your-ipad-app): Bring your iPad app to macOS with Mac Catalyst.
+- [Setting up a watchOS project](https://developer.apple.com/documentation/watchos-apps/setting-up-a-watchos-project): Create a new watchOS project or add a watch target to an existing iOS project.
+- [Embedding a command-line tool in a sandboxed app](embedding-a-helper-tool-in-a-sandboxed-app.md): Add a command-line tool to a sandboxed app’s Xcode project so the resulting app can run it as a helper tool.
+
+### Customization
+
+- [Customizing your workspace using themes](customizing-your-workspace-using-themes.md): Personalize the appearance of Xcode on your Mac.
+
+### Associated domains and universal links
+
+- [Allowing apps and websites to link to your content](allowing-apps-and-websites-to-link-to-your-content.md): Use universal links to link directly to content within your app and share data securely.
+
+## See Also
+
+### Xcode IDE
+
+- [Source control management](source-control-management.md): Back up your files, collaborate with others, and tag your releases with Git source control support in Xcode.
+- [Capabilities](capabilities.md): Enable services that Apple provides, such as In-App Purchase, Push Notifications, Apple Pay, iCloud, and many others.
+- [Build system](build-system.md): Compile your code into a binary format, and customize your project settings to build your code.
+- [Command-line tools](command-line-tools.md): Develop and customize your projects in Terminal.

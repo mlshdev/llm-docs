@@ -1,0 +1,63 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/nsshadow/shadowoffset](https://developer.apple.com/documentation/uikit/nsshadow/shadowoffset)
+
+# shadowOffset (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 6.0+ · iPadOS 6.0+ · Mac Catalyst 13.1+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+The shadow’s relative position, which you specify with horizontal and vertical offset values.
+
+## Declaration
+
+```swift
+var shadowOffset: CGSize { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This property contains the horizontal and vertical offset values that you specify using the `width` and `height` fields of the `CGSize` or `NSSize` data type. These offsets use the default user coordinate space and are not affected by custom transformations. Positive offset values extend down and to the right from the user’s perspective.
+
+> **Note**
+
+>  In macOS 10.15 and earlier, if you add a shadow to a layer that has a different graphics context, then positive offset values might extend up and to the right from the user’s perspective, instead of down and to the right as usual.
+
+## See Also
+
+### Managing a shadow
+
+- [shadowBlurRadius](shadowblurradius.md): The blur radius of the shadow.
+- [shadowColor](shadowcolor.md): The color of the shadow.
+
+# shadowOffset (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 6.0+ · iPadOS 6.0+ · Mac Catalyst 13.1+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+The shadow’s relative position, which you specify with horizontal and vertical offset values.
+
+## Declaration
+
+```objectivec
+@property (nonatomic) CGSize shadowOffset;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This property contains the horizontal and vertical offset values that you specify using the `width` and `height` fields of the `CGSize` or `NSSize` data type. These offsets use the default user coordinate space and are not affected by custom transformations. Positive offset values extend down and to the right from the user’s perspective.
+
+> **Note**
+
+>  In macOS 10.15 and earlier, if you add a shadow to a layer that has a different graphics context, then positive offset values might extend up and to the right from the user’s perspective, instead of down and to the right as usual.
+
+## See Also
+
+### Managing a shadow
+
+- [shadowBlurRadius](shadowblurradius.md): The blur radius of the shadow.
+- [shadowColor](shadowcolor.md): The color of the shadow.

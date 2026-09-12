@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appstoreservernotifications/externalpurchaseid](https://developer.apple.com/documentation/appstoreservernotifications/externalpurchaseid)
+
+# externalPurchaseId
+
+**Interface language:** Data
+
+**Framework:** App Store Server Notifications  
+**Kind:** Type  
+**Availability:** App Store Server Notifications 2.10+
+
+The field of an external purchase token that uniquely identifies the token.
+
+## Declaration
+
+```
+string externalPurchaseId
+```
+
+## Mentioned In
+
+- [App Store Server Notifications changelog](app-store-server-notifications-changelog.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The `externalPurchaseId` is the field of an [externalPurchaseToken](externalpurchasetoken.md) that uniquely identifies the token.
+
+## See Also
+
+### External purchase token fields
+
+- [tokenCreationDate](tokencreationdate.md): The field of an external purchase token that contains the UNIX date, in milliseconds, when the system created the token.
+- [tokenExpirationDate](tokenexpirationdate.md): The field of a custom link token that contains the UNIX date, in milliseconds, when the token expires.
+- [tokenType](tokentype.md): The type of an external purchase custom link token.

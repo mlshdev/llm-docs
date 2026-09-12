@@ -1,0 +1,128 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applemusicapi/create-a-new-library-playlist](https://developer.apple.com/documentation/applemusicapi/create-a-new-library-playlist)
+
+# Create a New Library Playlist
+
+**Interface language:** Data
+
+**Framework:** Apple Music API  
+**Kind:** Web Service Endpoint  
+**Availability:** Apple Music 1.0+
+
+Create a new playlist in a user’s library.
+
+## URL
+
+```http
+POST https://api.music.apple.com/v1/me/library/playlists
+```
+
+## Query Parameters
+
+- `l` — `string`: The localization to use, specified by a language tag. The possible values are in the `supportedLanguageTags` array belonging to the `Storefront` object specified by `storefront`. Otherwise, the default is `defaultLanguageTag` in `Storefront`.
+
+## HTTP Body
+
+Content type: `application/json`
+
+Type: `LibraryPlaylistCreationRequest`
+
+The `POST` request containing the `name`**,** `tracks` and `parent` playlist folder for the playlist to be added.
+
+## Response Codes
+
+- `201` Created — `LibraryPlaylistsResponse`: The request was successful.
+- `401` Unauthorized — `UnauthorizedResponse`: A response indicating an incorrect `Authorization` header.
+- `403` Forbidden — `ForbiddenResponse`: A response indicating invalid or insufficient authentication.
+- `500` Internal Server Error — `ErrorsResponse`: A response indicating an error occurred on the server.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If successful, the HTTP status code is 201 (Created) and a new resource created as a result. If unsuccessful, the HTTP status code indicates the error and the details are in the `errors` array.
+
+This endpoint requires a music user token. For more information, see [User Authentication for MusicKit](user-authentication-for-musickit.md).
+
+> **Note**
+
+>  There may be a delay before a new resource appears in a user’s library.
+
+You can include an optional `tracks` relationship in this request.
+
+<a id="Example"></a>
+
+### Example
+
+**Request**
+
+```
+https://api.music.apple.com/v1/me/library/playlists
+
+{
+  "attributes": {
+    "description": "string",
+    "name": "string",
+    "isPublic": true
+  },
+  "relationships": {
+    "tracks": {
+      "data": [
+        {
+          "id": "string",
+          "type": "library-music-videos"
+        }
+      ]
+    },
+    "parent": {
+      "data": [
+        {
+          "id": "string",
+          "type": "library-playlist-folders"
+        }
+      ]
+    }
+  }
+}
+```
+
+**Response**
+
+```json
+{    "data": [
+        {
+            "id": "p.RB1AAkGsv74Zkl",
+            "type": "library-playlists",
+            "href": "/v1/me/library/playlists/p.RB1AAkGsv74Zkl",
+            "attributes": {
+                "hasCatalog": false,
+                "description": {
+                    "standard": "My library playlist"
+                },
+                "name": "New Playlist",
+                "canEdit": true,
+                "isPublic": false,
+                "playParams": {
+                    "id": "p.RB1AAkGsv74Zkl",
+                    "kind": "playlist",
+                    "isLibrary": true
+                },
+                "dateAdded": "2021-09-30T13: 28: 29Z"
+            }
+        }
+    ]
+}
+```
+
+## See Also
+
+### Related Documentation
+
+- [LibraryPlaylists](libraryplaylists.md): A resource object that represents a library playlist.
+- [LibraryPlaylistsResponse](libraryplaylistsresponse.md): The response to a library playlists request.
+
+### Creating and Modifying User Playlists
+
+- [Add Tracks to a Library Playlist](add-tracks-to-a-library-playlist.md): Add new tracks to the end of a library playlist.
+- [Add a Resource to a Library](add-a-resource-to-a-library.md): Add a catalog resource to a user’s iCloud Music Library.
+- [LibraryPlaylistCreationRequest](libraryplaylistcreationrequest.md): A request to create a new playlist in a user’s library.
+- [LibraryPlaylistTracksRequest](libraryplaylisttracksrequest.md): A request to add tracks to a library playlist.

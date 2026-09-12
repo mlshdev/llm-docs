@@ -1,0 +1,70 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/environment(_:_:)](https://developer.apple.com/documentation/swiftui/view/environment(_:_:))
+
+# environment(\_:\_:)
+
+**Framework:** SwiftUI  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Sets the environment value of the specified key path to the given value.
+
+## Declaration
+
+```swift
+nonisolated func environment<V>(_ keyPath: WritableKeyPath<EnvironmentValues, V>, _ value: V) -> some View
+
+```
+
+## Parameters
+
+- `keyPath`: A key path that indicates the property of the [EnvironmentValues](../environmentvalues.md) structure to update.
+- `value`: The new value to set for the item specified by `keyPath`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A view that has the given value set in its environment.
+
+## Mentioned In
+
+- [Applying custom fonts to text](../applying-custom-fonts-to-text.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this modifier to set one of the writable properties of the [EnvironmentValues](../environmentvalues.md) structure, including custom values that you create. For example, you can set the value associated with the [truncationMode](../environmentvalues/truncationmode.md) key:
+
+```swift
+MyView()
+    .environment(\.truncationMode, .head)
+```
+
+You then read the value inside `MyView` or one of its descendants using the [Environment](../environment.md) property wrapper:
+
+```swift
+struct MyView: View {
+    @Environment(\.truncationMode) var truncationMode: Text.TruncationMode
+
+    var body: some View { ... }
+}
+```
+
+SwiftUI provides dedicated view modifiers for setting most environment values, like the [truncationMode(\_:)](truncationmode%28__%29.md) modifier which sets the [truncationMode](../environmentvalues/truncationmode.md) value:
+
+```swift
+MyView()
+    .truncationMode(.head)
+```
+
+Prefer the dedicated modifier when available, and offer your own when defining custom environment values, as described in [Entry()](../entry%28%29.md).
+
+This modifier affects the given view, as well as that view’s descendant views. It has no effect outside the view hierarchy on which you call it.
+
+## See Also
+
+### Modifying the environment of a view
+
+- [environment(\_:)](environment%28__%29.md): Places an observable object in the view’s environment.
+- [transformEnvironment(\_:transform:)](transformenvironment%28__transform_%29.md): Transforms the environment value of the specified key path with the given function.

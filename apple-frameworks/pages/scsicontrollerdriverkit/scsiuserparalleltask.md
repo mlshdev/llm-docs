@@ -1,0 +1,50 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/scsicontrollerdriverkit/scsiuserparalleltask](https://developer.apple.com/documentation/scsicontrollerdriverkit/scsiuserparalleltask)
+
+# SCSIUserParallelTask
+
+**Interface language:** Objective-C
+
+**Framework:** SCSIControllerDriverKit  
+**Kind:** Structure  
+**Availability:** DriverKit
+
+The properties of a parallel task to perform.
+
+## Declaration
+
+```objectivec
+typedef struct SCSIUserParallelTask { ... } SCSIUserParallelTask;
+```
+
+## Topics
+
+### Task Properties
+
+- [version](scsiuserparalleltask/version.md): The version of the parallel task structure currently in use.
+- [SCSIUserParallelTaskVersion](scsiuserparalleltaskversion.md): Constants that represent versions of the user parallel task structure.
+- [fTargetID](scsiuserparalleltask/ftargetid.md): An identifier that represents a SCSI target device.
+- [fSCSIParallelFeatureRequest](scsiuserparalleltask/fscsiparallelfeaturerequest.md): An array of features of the SCSI parallel interface to negotiate.
+- [SCSIParallelFeatureRequest](scsiparallelfeaturerequest.md): An enumeration of feature negotiation behaviors.
+- [fSCSIParallelFeatureRequestCount](scsiuserparalleltask/fscsiparallelfeaturerequestcount.md): The number of features to negotiate.
+- [fControllerTaskIdentifier](scsiuserparalleltask/fcontrollertaskidentifier.md): A unique identifier for a task.
+- [fRequestedTransferCount](scsiuserparalleltask/frequestedtransfercount.md): The requested data transfer count for the request’s data.
+- [fBufferIOVMAddr](scsiuserparalleltask/fbufferiovmaddr.md): The start address of the generated physical segment of the data buffer.
+- [fTaskAttribute](scsiuserparalleltask/ftaskattribute.md): The SCSI task attribute of the task.
+- [fTaskTagIdentifier](scsiuserparalleltask/ftasktagidentifier.md): A 64-bit number that represents a unique task identifier.
+- [fLogicalUnitBytes](scsiuserparalleltask/flogicalunitbytes.md): The request’s logical unit bytes.
+- [fCommandDescriptorBlock](scsiuserparalleltask/fcommanddescriptorblock.md): The task’s SCSI command descriptor block.
+- [fCommandSize](scsiuserparalleltask/fcommandsize.md): The size of the SCSI command descriptor block in bytes.
+- [fTransferDirection](scsiuserparalleltask/ftransferdirection.md): The direction of data transfer for this task.
+- [reserved](scsiuserparalleltask/reserved.md): An unused field reserved for future use.
+
+### Instance Properties
+
+- [fTimeoutInMilliSec](scsiuserparalleltask/ftimeoutinmillisec.md)
+
+## See Also
+
+### Managing Tasks
+
+- [UserProcessParallelTask](iouserscsiparallelinterfacecontroller/userprocessparalleltask.md): Processes a parallel task in response to a call from the framework.
+- [ParallelTaskCompletion](iouserscsiparallelinterfacecontroller/paralleltaskcompletion.md): Indicates to the system that the extension has completed an asynchronous request.
+- [SCSIUserParallelResponse](scsiuserparallelresponse.md): The properties of a completed request.

@@ -1,0 +1,71 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/adding-supplemental-content-to-a-documentation-catalog](https://developer.apple.com/documentation/xcode/adding-supplemental-content-to-a-documentation-catalog)
+
+# Adding supplemental content to a documentation catalog
+
+**Kind:** Article
+
+Include articles and extension files to extend your source documentation comments or provide supporting conceptual content.
+
+<a id="Overview"></a>
+
+## Overview
+
+The process of crafting great documentation is an art. Your content is unique; you know which elements, beyond source documentation comments, provide the most value to your readers. For information about adding supplemental content to a documentation catalog with DocC, see [Adding Supplemental Content to a Documentation Catalog Swift.Org](https://www.swift.org/documentation/docc/adding-supplemental-content-to-a-documentation-catalog).
+
+<a id="Add-articles-to-explain-concepts-or-describe-tasks"></a>
+
+### Add articles to explain concepts or describe tasks
+
+If your documentation catalog includes an article file with the name `GettingStarted.md`, Xcode displays this article in the documentation viewer with a document icon.
+
+![A screenshot of the Xcode documentation viewer that shows the Getting started with sloths article in a selected state in the Project navigator on the left. The pane on the right displays the article page with a document icon. ](https://developer.apple.com/images/com.apple.Xcode/adding-supplemental-content-to-a-documentation-catalog-1@2x.png)
+
+The structure of an article is similar to symbol files or a top-level landing page, with the exception that the first level 1 header is regular content instead of a symbol reference. For example, the Getting Started with Sloths article contains the following title, single-sentence abstract or summary, and Overview section:
+
+```markdown
+# Getting started with sloths
+
+Create a sloth and assign personality traits and abilities.
+
+## Overview
+
+Sloths are complex creatures that require careful creation and a suitable
+habitat.
+...
+```
+
+After the Overview section, additional sections and subsections use a double hash (##) for a level 2 header, and a triple hash (###) for a level 3 header. Follow the hashes with a space, and then the title for that section or subsection.
+
+To add an article to your documentation catalog in Xcode, do the following:
+
+1. Select your documentation catalog in the Project navigator.
+2. Choose File \> New \> File from Template.
+3. Select the Article File template in the Documentation section and click Next.
+4. Enter a filename and click Create. Xcode creates a new article file with a default name.
+5. Modify the first line of the file to specify its title.
+6. Replace the summary and placeholders in the file with appropriate content.
+
+![A screenshot that shows the Xcode file template chooser with the Article File template in a selected state.](https://developer.apple.com/images/com.apple.Xcode/adding-supplemental-content-to-a-documentation-catalog-2@2x.png)
+
+<a id="Add-extension-files-to-append-to-or-override-source-documentation-comments"></a>
+
+### Add extension files to append to or override source documentation comments
+
+DocC supports supplementing or completely replacing source documentation comments with content in extension files. To add an extension file to your documentation catalog, do the following:
+
+1. In Xcode, select your documentation catalog in the Project navigator.
+2. Choose File \> New \> File from Template.
+3. Select the Extension File template in the Documentation section and click Next.
+4. Enter the symbol name as the filename and click Create.
+5. Modify the first line of the file to identify the symbol that the file relates to.
+
+In the extension file, replace the `Symbol` placeholder with the absolute path to the symbol. The absolute path is the target’s product module name followed by the symbol name.
+
+![A screenshot that shows the Xcode file template chooser with the Extension File template in a selected state.](https://developer.apple.com/images/com.apple.Xcode/adding-supplemental-content-to-a-documentation-catalog-3@2x.png)
+
+## See Also
+
+### Documentation content
+
+- [Writing symbol documentation in your source files](writing-symbol-documentation-in-your-source-files.md): Add reference documentation to your symbols that explains how to use them.
+- [SlothCreator: Building DocC documentation in Xcode](slothcreator-building-docc-documentation-in-xcode.md): Build DocC documentation for a Swift package that contains a DocC Catalog.

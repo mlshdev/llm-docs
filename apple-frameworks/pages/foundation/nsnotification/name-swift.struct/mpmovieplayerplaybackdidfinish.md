@@ -1,0 +1,47 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsnotification/name-swift.struct/mpmovieplayerplaybackdidfinish](https://developer.apple.com/documentation/foundation/nsnotification/name-swift.struct/mpmovieplayerplaybackdidfinish)
+
+# MPMoviePlayerPlaybackDidFinish
+
+**Framework:** Foundation  
+**Kind:** Type Property  
+**Availability:** iOS 3.2+ (deprecated in 9.0) · iPadOS 3.2+ (deprecated in 9.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · tvOS 9.0+ (deprecated in 9.0)
+
+Posted when a movie has finished playing.
+
+> Use AVPlayerViewController in AVKit
+
+## Declaration
+
+```swift
+static let MPMoviePlayerPlaybackDidFinish: NSNotification.Name
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The `userInfo` dictionary of this notification contains the [MPMoviePlayerPlaybackDidFinishReasonUserInfoKey](../../../mediaplayer/mpmovieplayerplaybackdidfinishreasonuserinfokey.md) key, which indicates the reason that playback finished. This notification is also sent when playback fails because of an error.
+
+The movie player whose state has changed is available as the object associated with the notification.
+
+This notification is *not* sent when a movie is displaying in fullscreen mode and the user taps Done. The Done button pauses playback and causes the movie player to exit fullscreen mode. To detect this scenario, register for other notifications such as [MPMoviePlayerDidExitFullscreen](mpmovieplayerdidexitfullscreen.md).
+
+## See Also
+
+### MediaPlayer
+
+- [MPMusicPlayerControllerQueueDidChange](mpmusicplayercontrollerqueuedidchange.md): Indicates the music player’s queue changed.
+- [MPMediaLibraryDidChange](mpmedialibrarydidchange.md): Indicates the media library has changed.
+- [MPMediaPlaybackIsPreparedToPlayDidChange](mpmediaplaybackispreparedtoplaydidchange.md): Deprecated. Indicates that the prepared to play status of the media player has changed.
+- [MPMusicPlayerControllerNowPlayingItemDidChange](mpmusicplayercontrollernowplayingitemdidchange.md): Posted when the currently playing media item has changed.
+- [MPMusicPlayerControllerPlaybackStateDidChange](mpmusicplayercontrollerplaybackstatedidchange.md): Posted when the playback state changes programmatically or by user action.
+- [MPMusicPlayerControllerVolumeDidChange](mpmusicplayercontrollervolumedidchange.md): Posted when the audio playback volume for the music player has changed.
+- [MPMovieDurationAvailable](mpmoviedurationavailable.md): Deprecated. Posted when the duration of a movie has been determined. There is no `userInfo` dictionary.
+- [MPMovieMediaTypesAvailable](mpmoviemediatypesavailable.md): Deprecated. Posted when the available media types in a movie are determined. There is no `userInfo` dictionary.
+- [MPMovieNaturalSizeAvailable](mpmovienaturalsizeavailable.md): Deprecated. Posted when the natural frame size of a movie is first determined or subsequently changes. There is no `userInfo` dictionary.
+- [MPMoviePlayerDidEnterFullscreen](mpmovieplayerdidenterfullscreen.md): Deprecated. Posted when a movie player has entered full-screen mode. There is no `userInfo` dictionary.
+- [MPMoviePlayerDidExitFullscreen](mpmovieplayerdidexitfullscreen.md): Deprecated. Posted when a movie player has exited full-screen mode. There is no `userInfo` dictionary.
+- [MPMoviePlayerIsAirPlayVideoActiveDidChange](mpmovieplayerisairplayvideoactivedidchange.md): Deprecated. Posted when a movie player has started or ended playing a movie via AirPlay. There is no `userInfo` dictionary.
+- [MPMoviePlayerLoadStateDidChange](mpmovieplayerloadstatedidchange.md): Deprecated. Posted when a movie player’s network buffering state has changed. There is no `userInfo` dictionary.
+- [MPMoviePlayerNowPlayingMovieDidChange](mpmovieplayernowplayingmoviedidchange.md): Deprecated. Posted when the currently playing movie has changed. There is no `userInfo` dictionary.
+- [MPMoviePlayerPlaybackStateDidChange](mpmovieplayerplaybackstatedidchange.md): Deprecated. Posted when a movie player’s playback state has changed. There is no `userInfo` dictionary.

@@ -1,0 +1,84 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicediscoveryui/devicepicker](https://developer.apple.com/documentation/devicediscoveryui/devicepicker)
+
+# DevicePicker
+
+**Framework:** DeviceDiscoveryUI  
+**Kind:** Structure  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · tvOS 16.0+
+
+A SwiftUI view that displays other devices on the network, and creates an encrypted connection to a copy of your app running on that device.
+
+## Declaration
+
+```swift
+@MainActor @preconcurrency struct DevicePicker<Label, Fallback> where Label : View, Fallback : View
+```
+
+## Mentioned In
+
+- [Connecting a tvOS app to other devices over the local network](connecting-a-tvos-app-to-other-devices-over-the-local-network.md)
+
+<a id="overview"></a>
+
+## Overview
+
+Always display the picker as a full-screen, modal view. If the user selects a device, the system calls the closure you passed as the `onSelect` parameter. If the user cancels the picker, it silently closes.
+
+```swift
+DevicePicker(
+    .applicationService(name: "MyAppService")) { endpoint in
+        myDeviceManager.connectTo(endpoint: endpoint)
+    } label: {
+        Text("Connect to a local device.")
+    } fallback: {
+        Text("Not supported.")
+    } parameters: {
+        // This example uses the default application services parameters;
+        // however, you can add a NWProtocolFramer to provide application-level
+        // messaging.
+        .applicationService
+    }
+```
+
+If the current device doesn’t support device discovery, the system displays the fallback view instead of the device picker. Use the DevicePickerSupportedAction environment value to check whether the current device supports device discovery.
+
+```swift
+struct SettingsView: View {
+
+    @Environment{\.devicePickerSupports} var myDevicePickerSupports
+    @Binding var showDevicePicker: Bool
+
+    var body: some View {
+        if myDevicePickerSupports(.applicationService("MyAppService"),
+                                  parameters: { .applicationService }) {
+            Button("Select A Device") {
+                // Display a device picker.
+                showDevicePicker = true
+            }
+        }
+    }
+}
+```
+
+## Topics
+
+### Creating a device picker
+
+- [init(\_:onSelect:label:fallback:parameters:)](devicepicker/init%28__onselect_label_fallback_parameters_%29.md): Creates a view that displays available devices.
+- [init(\_:access:onSelect:label:fallback:parameters:)](devicepicker/init%28__access_onselect_label_fallback_parameters_%29.md): Creates a view that displays the available devices with the access level, section handler, and other parameters you supply.
+
+## Relationships
+
+### Conforms To
+
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+- [View](https://developer.apple.com/documentation/swiftui/view)
+
+## See Also
+
+### Pairing with nearby devices
+
+- [DDDevicePickerViewController](dddevicepickerviewcontroller.md): A UIKit view that displays other devices on the network, and creates an encrypted connection to a copy of your app running on that device.
+- [DevicePickerSupportedAction](devicepickersupportedaction.md): An environment value that indicates whether the current device supports device discovery.
+- [Connecting a tvOS app to other devices over the local network](connecting-a-tvos-app-to-other-devices-over-the-local-network.md): Display a view in your tvOS app that lists available iOS, iPadOS, and watchOS devices that the user can connect to over their local network.

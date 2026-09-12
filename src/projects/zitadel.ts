@@ -10,7 +10,11 @@ import {
 import { convertMdx } from "../mdx.ts";
 import type { MdxImport } from "../mdx.ts";
 import { DocumentCollector } from "../quarantine.ts";
-import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
+import type {
+  GithubLockedSource,
+  GithubSourceProject,
+  ProjectBuild,
+} from "../types.ts";
 
 const contentRoot = "apps/docs/content";
 const siteBase = "https://zitadel.com/docs";
@@ -31,8 +35,8 @@ const sections: Record<string, string> = {
 };
 
 export async function buildZitadel(
-  project: SourceProject,
-  lock: LockedSource,
+  project: GithubSourceProject,
+  lock: GithubLockedSource,
 ): Promise<ProjectBuild> {
   return withRepositoryArchive(
     project.repository,

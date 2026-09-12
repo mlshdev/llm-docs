@@ -1,0 +1,102 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/dismiss-target-cpa-recommendations](https://developer.apple.com/documentation/apple-ads-platform-api/dismiss-target-cpa-recommendations)
+
+# Dismiss Target CPA Recommendations
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Web Service Endpoint  
+**Availability:** Apple Ads Platform API 1.0+
+
+Dismiss one or more target CPA recommendations without changing the campaign’s bid strategy.
+
+## URL
+
+```http
+POST https://api.ads.apple.com/v1/recommendations/target-cpas/dismiss
+```
+
+## Header Parameters
+
+- `X-Ap-Context` — `string` (required):
+
+## HTTP Body
+
+Content type: `application/json`
+
+Type: `[ApplyTargetCpaRecommendation]`
+
+Send an array of [ApplyTargetCpaRecommendation](applytargetcparecommendation.md) objects, one per recommendation you want to dismiss. All items must share the same `promotedObjectId`, and each item needs `id`, `promotedObjectId`, and `promotedObjectType`.
+
+## Response Codes
+
+- `200` OK — `RecommendationDismissTargetCpaResponse`:
+- `400` Bad Request — `RecommendationResponseBody`:
+- `401` Unauthorized — `RecommendationResponseBody`:
+- `403` Forbidden — `RecommendationResponseBody`:
+- `404` Not Found — `RecommendationResponseBody`:
+- `429` Too Many Requests — `RecommendationResponseBody`:
+- `500` Internal Server Error — `RecommendationResponseBody`:
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Dismissing a target CPA recommendation just means you’ve reviewed it and decided not to apply it. The campaign’s target CPA stays unchanged, and the recommendation moves to `DISMISSED` state. The response is a history record that preserves the recommended value you passed on.
+
+<a id="Payload-Examples"></a>
+
+## Payload Examples
+
+This example dismisses a target CPA recommendation. The campaign’s target CPA stays the same, and the response confirms the recommendation is now in `DISMISSED` state, along with the recommended value that was passed on.
+
+**Dismiss Target CPA Recommendation**
+
+<a id="Request"></a>
+
+### Request
+
+```json
+POST /v1/recommendations/target-cpas/dismiss
+
+[
+ {
+   "id": "rec-tcpa-001",
+   "promotedObjectId": "123456",
+   "promotedObjectType": "APPSTORE_APP"
+ }
+]
+```
+
+<a id="Response"></a>
+
+### Response
+
+```json
+{
+ "result": [
+   {
+     "recommendationId": "rec-tcpa-001",
+     "recommendationType": "TCPA",
+     "promotedObjectId": "123456",
+     "promotedObjectType": "APPSTORE_APP",
+     "campaignId": 789012,
+     "state": "DISMISSED",
+     "appliedTime": "2026-02-23T14:30:00Z"
+   }
+ ],
+ "pagination": {
+   "totalCount": 1,
+   "offset": 0,
+   "pageSize": 20
+ }
+}
+```
+
+## See Also
+
+- [Query Target CPA Recommendations](query-target-cpa-recommendations.md): Retrieve target cost-per-acquisition recommendations for campaigns using a Maximize Conversions bid strategy.
+- [Apply Target CPA Recommendations](apply-target-cpa-recommendations.md): Apply one or more target CPA recommendations.
+- [Query Daily Budget Recommendations](query-daily-budget-recommendations.md): Retrieve daily budget recommendations for campaigns that may have more opportunities.
+- [Apply Daily Budget Recommendations](apply-daily-budget-recommendations.md): Apply one or more daily budget recommendations, updating the campaign’s daily budget to the suggested amount.
+- [Dismiss Daily Budget Recommendations](dismiss-daily-budget-recommendations.md): Dismiss one or more daily budget recommendations without changing the campaign’s budget.

@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corelocation/clmonitor-2r51v/add(_:identifier:assuming:)](https://developer.apple.com/documentation/corelocation/clmonitor-2r51v/add(_:identifier:assuming:))
+
+# add(\_:identifier:assuming:)
+
+**Framework:** Core Location  
+**Kind:** Instance Method  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+
+
+Adds the monitoring condition with the identifier and initial state you specify.
+
+## Declaration
+
+```swift
+func add(_ condition: any CLCondition, identifier: String, assuming state: CLMonitor.Event.State)
+```
+
+## Parameters
+
+- `condition`: The condition to monitor.
+- `identifier`: A string that identifies the monitored condition.
+- `state`: The monitoring state to initialize the condition with.
+
+## See Also
+
+### Adding and removing conditions
+
+- [add(\_:identifier:)](add%28__identifier_%29.md): Adds the given condition for monitoring.
+- [record(for:)](record%28for_%29.md): A record that contains a condition and the most recent event your app receives.
+- [remove(\_:)](remove%28__%29.md): Removes the condition and its enclosed record associated with the identifier you provide.

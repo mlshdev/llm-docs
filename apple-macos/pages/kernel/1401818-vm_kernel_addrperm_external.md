@@ -1,0 +1,23 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1401818-vm_kernel_addrperm_external](https://developer.apple.com/documentation/kernel/1401818-vm_kernel_addrperm_external)
+
+# vm_kernel_addrperm_external
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Function  
+**Availability:** macOS 10.11+
+
+## Declaration
+
+```objectivec
+void vm_kernel_addrperm_external(vm_offset_t addr, vm_offset_t *perm_addr);
+```
+
+## See Also
+
+### Untitled
+
+- [vm_kernel_addrhash](2881947-vm_kernel_addrhash.md)
+- [vm_kernel_addrhide](2881946-vm_kernel_addrhide.md)
+- [vm_kernel_unslide_or_perm_external](1401816-vm_kernel_unslide_or_perm_extern.md)

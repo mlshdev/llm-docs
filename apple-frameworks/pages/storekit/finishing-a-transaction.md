@@ -1,0 +1,99 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/finishing-a-transaction](https://developer.apple.com/documentation/storekit/finishing-a-transaction)
+
+# Finishing a transaction (Swift)
+
+**Framework:** StoreKit  
+**Kind:** Article
+
+Finish the transaction to complete the purchase process.
+
+<a id="overview"></a>
+
+## Overview
+
+Finishing a transaction tells StoreKit that your app completed its workflow to make a purchase complete. Unfinished transactions remain in the queue until they’re finished, so be sure to add the transaction queue observer every time your app launches, to enable your app to finish the transactions. Your app needs to finish each transaction, whether it succeeds or fails.
+
+Do all of the following before you finish a transaction:
+
+- Persist the purchase.
+- Deliver, download, or unlock the purchased content.
+- Update your app’s UI so the user can access the product.
+
+To finish the transaction, call the [finishTransaction(\_:)](skpaymentqueue/finishtransaction%28__%29.md) method on the payment queue.
+
+**Swift**
+
+```swift
+let transaction: SKPaymentTransaction = <# The current transaction #>
+SKPaymentQueue.default().finishTransaction(transaction)
+```
+
+**Objective-C**
+
+```objc
+SKPaymentTransaction *transaction = <# The currrent transaction #>;
+[[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+```
+
+After you finish a transaction, don’t take any actions on it or do any work to deliver the product. If any work remains, your app isn’t ready to finish the transaction.
+
+> **Important**
+
+>  Don’t call the [finishTransaction(\_:)](skpaymentqueue/finishtransaction%28__%29.md) method before the transaction is actually complete and attempt to use some other mechanism in your app to track the transaction as unfinished. StoreKit doesn’t function that way, and doing that prevents your app from downloading Apple-hosted content and can lead to other issues.
+
+## See Also
+
+### Content delivery
+
+- [Unlocking purchased content](unlocking-purchased-content.md): Deliver content to the customer after validating the purchase.
+- [Persisting a purchase](persisting-a-purchase.md): Keep a persistent record of a purchase to continue making the product available as needed.
+- [SKDownload](skdownload.md): Deprecated. Downloadable content associated with a product.
+
+# Finishing a transaction (Objective-C)
+
+**Framework:** StoreKit  
+**Kind:** Article
+
+Finish the transaction to complete the purchase process.
+
+<a id="overview"></a>
+
+## Overview
+
+Finishing a transaction tells StoreKit that your app completed its workflow to make a purchase complete. Unfinished transactions remain in the queue until they’re finished, so be sure to add the transaction queue observer every time your app launches, to enable your app to finish the transactions. Your app needs to finish each transaction, whether it succeeds or fails.
+
+Do all of the following before you finish a transaction:
+
+- Persist the purchase.
+- Deliver, download, or unlock the purchased content.
+- Update your app’s UI so the user can access the product.
+
+To finish the transaction, call the [finishTransaction:](skpaymentqueue/finishtransaction%28__%29.md) method on the payment queue.
+
+**Swift**
+
+```swift
+let transaction: SKPaymentTransaction = <# The current transaction #>
+SKPaymentQueue.default().finishTransaction(transaction)
+```
+
+**Objective-C**
+
+```objc
+SKPaymentTransaction *transaction = <# The currrent transaction #>;
+[[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+```
+
+After you finish a transaction, don’t take any actions on it or do any work to deliver the product. If any work remains, your app isn’t ready to finish the transaction.
+
+> **Important**
+
+>  Don’t call the [finishTransaction:](skpaymentqueue/finishtransaction%28__%29.md) method before the transaction is actually complete and attempt to use some other mechanism in your app to track the transaction as unfinished. StoreKit doesn’t function that way, and doing that prevents your app from downloading Apple-hosted content and can lead to other issues.
+
+## See Also
+
+### Content delivery
+
+- [Unlocking purchased content](unlocking-purchased-content.md): Deliver content to the customer after validating the purchase.
+- [Persisting a purchase](persisting-a-purchase.md): Keep a persistent record of a purchase to continue making the product available as needed.
+- [SKDownload](skdownload.md): Deprecated. Downloadable content associated with a product.

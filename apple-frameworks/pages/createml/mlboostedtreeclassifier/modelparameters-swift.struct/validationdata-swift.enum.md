@@ -1,0 +1,31 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/createml/mlboostedtreeclassifier/modelparameters-swift.struct/validationdata-swift.enum](https://developer.apple.com/documentation/createml/mlboostedtreeclassifier/modelparameters-swift.struct/validationdata-swift.enum)
+
+# MLBoostedTreeClassifier.ModelParameters.ValidationData
+
+**Framework:** Create ML  
+**Kind:** Enumeration  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 10.15+ · tvOS 16.0+ · visionOS 1.0+
+
+Values for specifying validation data.
+
+## Declaration
+
+```swift
+enum ValidationData
+```
+
+## Topics
+
+### Specifying validation data
+
+- [MLBoostedTreeClassifier.ModelParameters.ValidationData.split(strategy:)](validationdata-swift.enum/split%28strategy_%29.md): Generate validation data by splitting the training dataset. This is the default.
+- [MLBoostedTreeClassifier.ModelParameters.ValidationData.table(\_:)](validationdata-swift.enum/table%28__%29.md): Deprecated. Set validation data from the MLDataTable provided.
+- [MLBoostedTreeClassifier.ModelParameters.ValidationData.dataFrame(\_:)](validationdata-swift.enum/dataframe%28__%29.md): Validation data provided in a DataFrame.
+- [MLBoostedTreeClassifier.ModelParameters.ValidationData.none](validationdata-swift.enum/none.md): Do not set validation data.
+
+## See Also
+
+### Creating parameters
+
+- [init(validation:maxDepth:maxIterations:minLossReduction:minChildWeight:randomSeed:stepSize:earlyStoppingRounds:rowSubsample:columnSubsample:)](init%28validation_maxdepth_maxiterations_minlossreduction_minchildweight_randomseed_stepsize_earlystoppingrounds_rowsubsample_columnsubsample_%29.md)
+- [init(validationData:maxDepth:maxIterations:minLossReduction:minChildWeight:randomSeed:stepSize:earlyStoppingRounds:rowSubsample:columnSubsample:)](init%28validationdata_maxdepth_maxiterations_minlossreduction_minchildweight_randomseed_stepsize_earlystoppingrounds_rowsubsample_columnsubsample_%29.md): Deprecated. Creates a new set of parameters defining how a boosted tree classifier should be built.

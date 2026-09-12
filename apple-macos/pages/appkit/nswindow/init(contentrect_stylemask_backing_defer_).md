@@ -1,0 +1,109 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nswindow/init(contentrect:stylemask:backing:defer:)](https://developer.apple.com/documentation/appkit/nswindow/init(contentrect:stylemask:backing:defer:))
+
+# init(contentRect:styleMask:backing:defer:) (Swift)
+
+**Framework:** AppKit  
+**Kind:** Initializer  
+**Availability:** macOS
+
+Initializes the window with the specified values.
+
+## Declaration
+
+```swift
+init(contentRect: NSRect, styleMask style: NSWindow.StyleMask, backing backingStoreType: NSWindow.BackingStoreType, defer flag: Bool)
+```
+
+## Parameters
+
+- `contentRect`: Origin and size of the window’s content area in screen coordinates. Note that the window server limits window position coordinates to ±16,000 and sizes to 10,000.
+- `style`: The window’s style. It can be `NSBorderlessWindowMask`, or it can contain any of the options described in [NSWindow.StyleMask](stylemask-swift.struct.md), combined using the C bitwise OR operator. Borderless windows display none of the usual peripheral elements and are generally useful only for display or caching purposes; you should normally not need to create them. Also, note that a window’s style mask should include `NSTitledWindowMask` if it includes any of the others.
+- `backingStoreType`: Specifies how the drawing done in the window is buffered by the window device, and possible values are described in [NSWindow.BackingStoreType](backingstoretype.md).
+- `flag`: Specifies whether the window server creates a window device for the window immediately. When [true](https://developer.apple.com/documentation/swift/true), the window server defers creating the window device until the window is moved onscreen. All display messages sent to the window or its views are postponed until the window is created, just before it’s moved onscreen.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The initialized window.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method is the designated initializer for the `NSWindow` class.
+
+Deferring the creation of the window improves launch time and minimizes the virtual memory load on the window server.
+
+The new window creates a view to be its default content view. You can replace it with your own object by setting the [contentView](contentview.md) property.
+
+> **Warning**
+
+> Swift and Automatic Reference Counting (ARC) clients need to set the [isReleasedWhenClosed](isreleasedwhenclosed.md) property to [false](https://developer.apple.com/documentation/swift/false) to avoid releasing the window too many times.
+
+## See Also
+
+### Related Documentation
+
+- [isOneShot](isoneshot.md): Deprecated. A Boolean value that indicates whether the window device the window manages is freed when it’s removed from the screen list.
+- [orderFront(\_:)](orderfront%28__%29.md): Moves the window to the front of its level in the screen list, without changing either the key window or the main window.
+- [NSWindow](../nswindow.md): A window that an app displays on the screen.
+
+### Creating a Window
+
+- [init(contentViewController:)](init%28contentviewcontroller_%29.md): Creates a titled window that contains the specified content view controller.
+- [init(contentRect:styleMask:backing:defer:screen:)](init%28contentrect_stylemask_backing_defer_screen_%29.md): Initializes an allocated window with the specified values.
+
+# initWithContentRect:styleMask:backing:defer: (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS
+
+Initializes the window with the specified values.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithContentRect:(NSRect) contentRect styleMask:(NSWindowStyleMask) style backing:(NSBackingStoreType) backingStoreType defer:(BOOL) flag;
+```
+
+## Parameters
+
+- `contentRect`: Origin and size of the window’s content area in screen coordinates. Note that the window server limits window position coordinates to ±16,000 and sizes to 10,000.
+- `style`: The window’s style. It can be `NSBorderlessWindowMask`, or it can contain any of the options described in [NSWindowStyleMask](stylemask-swift.struct.md), combined using the C bitwise OR operator. Borderless windows display none of the usual peripheral elements and are generally useful only for display or caching purposes; you should normally not need to create them. Also, note that a window’s style mask should include `NSTitledWindowMask` if it includes any of the others.
+- `backingStoreType`: Specifies how the drawing done in the window is buffered by the window device, and possible values are described in [NSBackingStoreType](backingstoretype.md).
+- `flag`: Specifies whether the window server creates a window device for the window immediately. When [true](https://developer.apple.com/documentation/swift/true), the window server defers creating the window device until the window is moved onscreen. All display messages sent to the window or its views are postponed until the window is created, just before it’s moved onscreen.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The initialized window.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method is the designated initializer for the `NSWindow` class.
+
+Deferring the creation of the window improves launch time and minimizes the virtual memory load on the window server.
+
+The new window creates a view to be its default content view. You can replace it with your own object by setting the [contentView](contentview.md) property.
+
+> **Warning**
+
+> Swift and Automatic Reference Counting (ARC) clients need to set the [releasedWhenClosed](isreleasedwhenclosed.md) property to [false](https://developer.apple.com/documentation/swift/false) to avoid releasing the window too many times.
+
+## See Also
+
+### Related Documentation
+
+- [oneShot](isoneshot.md): Deprecated. A Boolean value that indicates whether the window device the window manages is freed when it’s removed from the screen list.
+- [orderFront:](orderfront%28__%29.md): Moves the window to the front of its level in the screen list, without changing either the key window or the main window.
+- [NSWindow](../nswindow.md): A window that an app displays on the screen.
+
+### Creating a Window
+
+- [windowWithContentViewController:](init%28contentviewcontroller_%29.md): Creates a titled window that contains the specified content view controller.
+- [initWithContentRect:styleMask:backing:defer:screen:](init%28contentrect_stylemask_backing_defer_screen_%29.md): Initializes an allocated window with the specified values.

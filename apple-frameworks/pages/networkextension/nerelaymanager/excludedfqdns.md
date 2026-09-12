@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/networkextension/nerelaymanager/excludedfqdns](https://developer.apple.com/documentation/networkextension/nerelaymanager/excludedfqdns)
+
+# excludedFQDNs (Swift)
+
+**Framework:** Network Extension  
+**Kind:** Instance Property  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+var excludedFQDNs: [String]? { get set }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+An array of strings containing Fully Qualified Domain Names (FQDNs). If the destination host matches one of these strings then the relay will not be used.  An excluded FQDN takes priority over the matchDomain property.  This means the relay will not be used if the hostname matches an FQDN in this array even if the matchDomains contains a domain that would have been considered a match.
+
+# excludedFQDNs (Objective-C)
+
+**Framework:** Network Extension  
+**Kind:** Instance Property  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+
+
+## Declaration
+
+```objectivec
+@property (copy, nullable) NSArray<NSString *> * excludedFQDNs;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+An array of strings containing Fully Qualified Domain Names (FQDNs). If the destination host matches one of these strings then the relay will not be used.  An excluded FQDN takes priority over the matchDomain property.  This means the relay will not be used if the hostname matches an FQDN in this array even if the matchDomains contains a domain that would have been considered a match.

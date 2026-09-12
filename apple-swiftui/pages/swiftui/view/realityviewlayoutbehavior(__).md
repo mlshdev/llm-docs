@@ -1,0 +1,46 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/realityviewlayoutbehavior(_:)](https://developer.apple.com/documentation/swiftui/view/realityviewlayoutbehavior(_:))
+
+# realityViewLayoutBehavior(\_:)
+
+**Framework:** RealityKit  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+A view modifier that controls the frame sizing and content alignment behavior for `RealityView`
+
+## Declaration
+
+```swift
+@MainActor @preconcurrency func realityViewLayoutBehavior(_ layoutOption: RealityViewLayoutOption) -> some View
+
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This modifier is only accounted for after the end of the `make` closure. It isn’t checked on any calls to the `update` closure.
+
+```swift
+struct ModelWrapperView: View {
+    let modelName: String
+    var body: some View {
+        RealityView { content in
+            let model = try? await Entity(named: modelName)
+            if let model {
+                content.add(model)
+            }
+        }
+        .realityViewLayoutBehavior(.fixedSize)
+    }
+}
+```
+
+See [RealityViewLayoutOption](https://developer.apple.com/documentation/realitykit/realityviewlayoutoption) for a list of options to pass into `realityViewLayoutBehavior(_:)`.
+
+## See Also
+
+### Configuring camera controls
+
+- [realityViewCameraControls](../environmentvalues/realityviewcameracontrols.md): The camera controls for the reality view.
+- [realityViewCameraControls(\_:)](realityviewcameracontrols%28__%29.md): Adds gestures that control the position and direction of a virtual camera.

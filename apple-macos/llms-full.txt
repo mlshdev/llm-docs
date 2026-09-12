@@ -1,0 +1,12 @@
+# Apple macOS snapshot-0b0d8b1a4a77: full documentation
+
+Source: https://developer.apple.com/macos/
+Catalog snapshot: 0b0d8b1a4a77841dabe3408abb94affbfce2598ab3f91e5ee497688ed5532de6
+Content digest: 261899149f391f58bc46c468881d82ec07fe2e3d04902a9c297d1c68eece64b1
+Captured at: 2026-09-12T21:04:59.695Z
+
+This corpus is published as 3 volumes because a single file would exceed the 100 MiB GitHub file limit. Read the volumes in order for the complete corpus.
+
+- [Volume 1](llms-full.001.txt): 17635 documents.
+- [Volume 2](llms-full.002.txt): 30892 documents.
+- [Volume 3](llms-full.003.txt): 29472 documents.

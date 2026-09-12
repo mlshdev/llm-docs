@@ -1,0 +1,67 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quartzcore/calayer/anchorpoint](https://developer.apple.com/documentation/quartzcore/calayer/anchorpoint)
+
+# anchorPoint (Swift)
+
+**Framework:** Core Animation  
+**Kind:** Instance Property  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.1+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
+
+Defines the anchor point of the layer’s bounds rectangle. Animatable.
+
+## Declaration
+
+```swift
+var anchorPoint: CGPoint { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You specify the value for this property using the unit coordinate space. The default value of this property is (0.5, 0.5), which represents the center of the layer’s bounds rectangle. All geometric manipulations to the view occur about the specified point. For example, applying a rotation transform to a layer with the default anchor point causes the layer to rotate around its center. Changing the anchor point to a different location would cause the layer to rotate around that new point.
+
+For more information about the relationship between the [frame](frame.md), [bounds](bounds.md), [anchorPoint](anchorpoint.md) and [position](position.md) properties, see [Core Animation Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreAnimation_guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40004514).
+
+## See Also
+
+### Modifying the layer geometry
+
+- [frame](frame.md): The layer’s frame rectangle.
+- [bounds](bounds.md): The layer’s bounds rectangle. Animatable.
+- [position](position.md): The layer’s position in its superlayer’s coordinate space. Animatable.
+- [zPosition](zposition.md): The layer’s position on the z axis. Animatable.
+- [anchorPointZ](anchorpointz.md): The anchor point for the layer’s position along the z axis. Animatable.
+- [contentsScale](contentsscale.md): The scale factor applied to the layer.
+
+# anchorPoint (Objective-C)
+
+**Framework:** Core Animation  
+**Kind:** Instance Property  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.1+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
+
+Defines the anchor point of the layer’s bounds rectangle. Animatable.
+
+## Declaration
+
+```objectivec
+@property CGPoint anchorPoint;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You specify the value for this property using the unit coordinate space. The default value of this property is (0.5, 0.5), which represents the center of the layer’s bounds rectangle. All geometric manipulations to the view occur about the specified point. For example, applying a rotation transform to a layer with the default anchor point causes the layer to rotate around its center. Changing the anchor point to a different location would cause the layer to rotate around that new point.
+
+For more information about the relationship between the [frame](frame.md), [bounds](bounds.md), [anchorPoint](anchorpoint.md) and [position](position.md) properties, see [Core Animation Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreAnimation_guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40004514).
+
+## See Also
+
+### Modifying the layer geometry
+
+- [frame](frame.md): The layer’s frame rectangle.
+- [bounds](bounds.md): The layer’s bounds rectangle. Animatable.
+- [position](position.md): The layer’s position in its superlayer’s coordinate space. Animatable.
+- [zPosition](zposition.md): The layer’s position on the z axis. Animatable.
+- [anchorPointZ](anchorpointz.md): The anchor point for the layer’s position along the z axis. Animatable.
+- [contentsScale](contentsscale.md): The scale factor applied to the layer.

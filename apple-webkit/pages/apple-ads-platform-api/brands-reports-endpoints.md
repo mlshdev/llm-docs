@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/brands-reports-endpoints](https://developer.apple.com/documentation/apple-ads-platform-api/brands-reports-endpoints)
+
+# Brands Reports Endpoints
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** API Collection  
+**Availability:** Apple Ads Platform API 1.0+
+
+Retrieve performance data for Apple Maps campaigns, ad groups, ads, keywords, and search terms.
+
+## Topics
+
+- [Campaigns Report (Brands)](get-brand-campaign-reports.md): Retrieve performance metrics for Apple Maps campaigns.
+- [Ad Groups Report (Brands)](get-brand-ad-group-reports.md): Retrieve performance metrics for Apple Maps ad groups.
+- [Ads Report (Brands)](get-brand-ad-reports.md): Retrieve performance metrics for Apple Maps ads.
+- [Keywords Report (Brands)](get-brand-keyword-reports.md): Retrieve performance metrics for Apple Maps keywords.
+- [Search Terms Report (Brands)](get-brand-search-term-reports.md): Retrieve performance metrics for the actual search terms that triggered keyword matches in Apple Maps campaigns.
+
+## See Also
+
+### Reports
+
+- [Managing Reports](reports.md): Retrieve performance data for campaigns, ad groups, ads, keywords, and search terms.
+- [App Store Reports Endpoints](apps-reports-endpoints.md): Endpoints for retrieving App Store campaign, ad group, ad, keyword, and search term performance data.
+- [Apps Data Objects](apps-reports-objects.md): Request, response, and metadata objects for Apps report endpoints.
+- [Brands Data Objects](brands-reports-objects.md): Explore the request, response, and metadata objects that Brands report endpoints use.
+- [Shared Objects](reports-shared-objects.md): Shared request and response objects used across Apps and Brands report endpoints.

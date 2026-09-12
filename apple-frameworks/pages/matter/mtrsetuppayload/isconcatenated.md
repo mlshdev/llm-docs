@@ -1,0 +1,43 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrsetuppayload/isconcatenated](https://developer.apple.com/documentation/matter/mtrsetuppayload/isconcatenated)
+
+# isConcatenated (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 26.2+ · iPadOS 26.2+ · Mac Catalyst 26.2+ · macOS 26.2+ · tvOS 26.2+ · visionOS 26.2+ · watchOS 26.2+
+
+Whether this object represents a concatenated QR Code payload consisting of two or more underlying payloads. If YES, then:
+
+## Declaration
+
+```swift
+var isConcatenated: Bool { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+- The constituent payloads are exposed in the `subPayloads` property.
+- Properties other than `subPayloads` and `qrCodeString` (e.g. `vendorID`, `discriminator`) are not relevant to a concatenated payload and should not be used. If accessed, they will act as if the payload was not in fact concatenated, and return the relevant value associated with the first sub-payload. Mutating such a property will discard the additional sub-payloads.
+
+# concatenated (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 26.2+ · iPadOS 26.2+ · Mac Catalyst 26.2+ · macOS 26.2+ · tvOS 26.2+ · visionOS 26.2+ · watchOS 26.2+
+
+Whether this object represents a concatenated QR Code payload consisting of two or more underlying payloads. If YES, then:
+
+## Declaration
+
+```objectivec
+@property (nonatomic, assign, readonly, getter=isConcatenated) BOOL concatenated;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+- The constituent payloads are exposed in the `subPayloads` property.
+- Properties other than `subPayloads` and `qrCodeString` (e.g. `vendorID`, `discriminator`) are not relevant to a concatenated payload and should not be used. If accessed, they will act as if the payload was not in fact concatenated, and return the relevant value associated with the first sub-payload. Mutating such a property will discard the additional sub-payloads.

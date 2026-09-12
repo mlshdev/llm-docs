@@ -1,0 +1,57 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/packagedescription/target/plugin(name:capability:dependencies:path:exclude:sources:packageaccess:)](https://developer.apple.com/documentation/packagedescription/target/plugin(name:capability:dependencies:path:exclude:sources:packageaccess:))
+
+# plugin(name:capability:dependencies:path:exclude:sources:packageAccess:)
+
+**Framework:** PackageDescription  
+**Kind:** Type Method  
+**Availability:** SwiftPM 5.9+
+
+Defines a new package plug-in target.
+
+## Declaration
+
+```swift
+static func plugin(name: String, capability: Target.PluginCapability, dependencies: [Target.Dependency] = [], path: String? = nil, exclude: [String] = [], sources: [String]? = nil, packageAccess: Bool = true) -> Target
+```
+
+## Parameters
+
+- `name`: The name of the plug-in target.
+- `capability`: The type of capability the plug-in target provides.
+- `dependencies`: The plug-in target’s dependencies.
+- `path`: The path of the plug-in target relative to the package root.
+- `exclude`: The paths to source and resource files that you want to exclude from the plug-in target.
+- `sources`: The source files in the plug-in target.
+- `packageAccess`: Allows access to package symbols from other targets in the package.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A `Target` instance.
+
+<a id="discussion"></a>
+
+## Discussion
+
+A plug-in target provides custom build commands to SwiftPM (and to any IDEs based on libSwiftPM).
+
+The capability determines what kind of build commands it can add. Besides determining at what point in the build those commands run, the capability determines the context that is available to the plug-in and the kinds of commands it can create.
+
+In the initial version of this proposal, three capabilities are provided: prebuild, build tool, and postbuild. For more information, see the declaration of each capability under [Target.PluginCapability](plugincapability-swift.enum.md).
+
+The package plug-in itself is implemented using a Swift script that is invoked for each target that uses it. The script is invoked after the package graph has been resolved, but before the build system creates its dependency graph. It’s also invoked after changes to the target or the build parameters.
+
+Note that the role of the package plug-in is only to define the commands that run before, during, or after the build. It doesn’t run those commands itself. The commands are defined in an IDE-neutral way, and are run as appropriate by the build system that builds the package. The extension itself is only a procedural way of generating commands and their input and output dependencies.
+
+The package plug-in may specify the executable or binary targets that provide the build tools used by the generated commands during the build. In the initial implementation, prebuild actions can only depend on binary targets. Build tool and postbuild plug-ins can depend on executables as well as binary targets. This is due to how Swift Package Manager constructs its build plan.
+
+## See Also
+
+### Creating a Plugin Target
+
+- [pluginCapability](plugincapability-swift.property.md): The capability provided by a package plug-in target.
+- [Target.PluginCapability](plugincapability-swift.enum.md): The different types of capability that a plug-in can provide.
+- [PluginCommandIntent](../plugincommandintent.md): The intended use case of the command plug-in.
+- [PluginPermission](../pluginpermission.md): The type of permission a plug-in requires.
+- [plugin(name:capability:dependencies:path:exclude:sources:)](plugin%28name_capability_dependencies_path_exclude_sources_%29.md): Deprecated. Defines a new package plugin target.

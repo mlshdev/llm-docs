@@ -1,0 +1,805 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/carbon_core/carbon_core_enumerations](https://developer.apple.com/documentation/coreservices/carbon_core/carbon_core_enumerations)
+
+# Carbon Core Enumerations (Swift)
+
+**Framework:** Core Services  
+**Kind:** API Collection
+
+## Topics
+
+### Enumerations
+
+- [Anonymous](carbon_core_enumerations/1556447-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556440-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556433-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556445-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556421-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556444-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556432-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556420-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556424-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556431-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556442-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556428-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556423-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556436-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556435-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556430-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556434-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556441-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556425-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556422-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1415186-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1542844-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1542940-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1542914-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1542749-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1553739-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1581401-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1527221-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1513007-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1513010-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1512979-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1573756-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1572727-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1645753-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1455359-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1645929-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559986-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560077-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560010-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560023-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560030-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560061-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559949-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560005-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560009-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559939-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559932-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559993-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559991-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560066-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560065-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559996-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560039-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559992-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560056-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560048-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560037-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560071-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559948-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559955-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559965-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560059-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560063-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559994-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559964-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560020-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559941-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560076-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560015-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560053-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560011-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559954-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559971-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559945-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560003-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560052-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559942-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560021-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560062-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559987-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559935-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560008-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560055-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559936-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559981-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560034-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559959-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559990-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560018-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559975-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560040-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560051-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560027-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560075-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560045-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559938-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560017-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559978-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559958-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560069-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559956-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560057-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559970-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559946-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559933-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560060-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559972-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560042-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559989-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559995-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559947-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560073-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560068-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559952-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560072-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560029-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560046-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560013-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560038-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559974-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559961-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560058-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560006-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560043-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559966-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559969-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559985-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559998-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560049-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559944-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560007-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560025-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560001-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560004-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560044-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560028-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560014-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559984-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559967-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559977-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559973-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560002-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559963-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560047-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560019-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559979-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559957-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560074-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559988-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560050-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559962-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559982-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560054-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560024-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559960-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560036-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560016-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560031-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560022-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560026-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559934-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560033-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559980-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559940-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560064-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560032-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560041-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560070-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559953-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559997-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560000-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560035-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559968-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560012-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559976-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559950-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559999-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1560067-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559983-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559951-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1559943-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1448600-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1390427-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1390624-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1390417-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1390433-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1390386-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1390501-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1429043-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1428995-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1429005-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556401-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556378-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556403-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556394-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556363-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556390-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556364-anonymous.md)
+- [Anonymous](carbon_core_enumerations/1556396-anonymous.md)
+- [cAEList](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1556411-caelist)
+- [cInsertionLoc](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1556389-cinsertionloc)
+- [cKeystroke](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1556385-ckeystroke)
+- [cURL](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1556375-curl)
+- [eScheme](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1556397-escheme)
+- [kBySmallIcon](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1556391-kbysmallicon)
+- [kConnSuite](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1556369-kconnsuite)
+- [kFAServerApp](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1556384-kfaserverapp)
+- [kLaunchToGetTerminology](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1457909-klaunchtogetterminology)
+- [kNextBody](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1556402-knextbody)
+- [kOSIZDontOpenResourceFile](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1457903-kosizdontopenresourcefile)
+- [kReadExtensionTermsMask](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1457896-kreadextensiontermsmask)
+- [kSOAP1999Schema](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1542943-ksoap1999schema)
+- [kTSMHiliteCaretPosition](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1556398-ktsmhilitecaretposition): Specify text highlighting information.
+- [kTSMOutsideOfBody](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1556371-ktsmoutsideofbody)
+- [kTextServiceClass](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1556406-ktextserviceclass)
+- [pArcAngle](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1556376-parcangle)
+- [pFormula](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1556373-pformula)
+- [pNewElementLoc](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1556400-pnewelementloc)
+- [pScheme](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1556408-pscheme)
+- [pTextStyles](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1556367-ptextstyles)
+- [typeAEText](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1556366-typeaetext)
+- [typeApplicationBundleID](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1542896-typeapplicationbundleid): For specifying a target application by bundle ID.
+- [typeHIMenu](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1556372-typehimenu)
+- [typeKernelProcessID](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1542936-typekernelprocessid): For specifying an application by UNIX process ID.
+- [typeMeters](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1556382-typemeters)
+- [typeReplyPortAttr](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1571649-typereplyportattr)
+- [typeTIFF](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1556405-typetiff)
+- [typeUnicodeText](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1542918-typeunicodetext)
+- [Anonymous](carbon_core_enumerations/3025780-anonymous.md)
+- [Anonymous](carbon_core_enumerations/3025781-anonymous.md)
+- [Anonymous](carbon_core_enumerations/3074489-anonymous.md)
+- [Anonymous](carbon_core_enumerations/4013044-anonymous.md)
+- [Anonymous](carbon_core_enumerations/4464838-anonymous.md)
+
+## See Also
+
+### Other Reference
+
+- [Carbon Core Structures](carbon_core_structures.md)
+- [Carbon Core Functions](carbon_core_functions.md)
+- [Carbon Core Data Types](carbon_core_data_types.md)
+
+# Carbon Core Enumerations (Objective-C)
+
+**Framework:** Core Services  
+**Kind:** API Collection
+
+## Topics
+
+### Enumerations
+
+- [AFP Text Encodings](../1399980-afp_text_encodings.md): The text encodings supported by AFP.
+- [Anonymous](../1556447-anonymous.md)
+- [Anonymous](../1556440-anonymous.md)
+- [Anonymous](../1556433-anonymous.md)
+- [Anonymous](../1556445-anonymous.md)
+- [Anonymous](../1556421-anonymous.md)
+- [Anonymous](../1556444-anonymous.md)
+- [Anonymous](../1556432-anonymous.md)
+- [Anonymous](../1556420-anonymous.md)
+- [Anonymous](../1556424-anonymous.md)
+- [Anonymous](../1556431-anonymous.md)
+- [Anonymous](../1556442-anonymous.md)
+- [Anonymous](../1556428-anonymous.md)
+- [Anonymous](../1556423-anonymous.md)
+- [Anonymous](../1556436-anonymous.md)
+- [Anonymous](../1556435-anonymous.md)
+- [Anonymous](../1556430-anonymous.md)
+- [Anonymous](../1556434-anonymous.md)
+- [Anonymous](../1556441-anonymous.md)
+- [Anonymous](../1556425-anonymous.md)
+- [Anonymous](../1556422-anonymous.md)
+- [Anonymous](../1415186-anonymous.md)
+- [Anonymous](../1389165-anonymous.md)
+- [Anonymous](../1389135-anonymous.md): Deprecated.
+- [Anonymous](../1389317-anonymous.md): Deprecated.
+- [Anonymous](../1389074-anonymous.md): Deprecated.
+- [Anonymous](../1389331-anonymous.md): Deprecated.
+- [Anonymous](../1389389-anonymous.md): Deprecated.
+- [Anonymous](../1389305-anonymous.md)
+- [Anonymous](../1389344-anonymous.md): Deprecated.
+- [Anonymous](../1389373-anonymous.md): Deprecated.
+- [Anonymous](../1389313-anonymous.md)
+- [Anonymous](../1389102-anonymous.md): Deprecated.
+- [Anonymous](../1389303-anonymous.md): Deprecated.
+- [Anonymous](../1389265-anonymous.md): Deprecated.
+- [Anonymous](../1389535-anonymous.md): Deprecated.
+- [Anonymous](../1389505-anonymous.md): Deprecated.
+- [Anonymous](../1389297-anonymous.md)
+- [Anonymous](../1389236-anonymous.md): Deprecated.
+- [Anonymous](../1389099-anonymous.md): Deprecated.
+- [Anonymous](../1389395-anonymous.md): Deprecated.
+- [Anonymous](../1389101-anonymous.md)
+- [Anonymous](../1389416-anonymous.md): Deprecated.
+- [Anonymous](../1389495-anonymous.md): Deprecated.
+- [Anonymous](../1500621-anonymous.md): Deprecated.
+- [Anonymous](../1500572-anonymous.md): Deprecated.
+- [Anonymous](../1427446-anonymous.md)
+- [Anonymous](../1427442-anonymous.md)
+- [Anonymous](../1427479-anonymous.md)
+- [Anonymous](../1501256-anonymous.md): Deprecated.
+- [Anonymous](../1517729-anonymous.md): Deprecated.
+- [Anonymous](../1517728-anonymous.md): Deprecated.
+- [Anonymous](../1517760-anonymous.md): Deprecated.
+- [Anonymous](../1517723-anonymous.md): Deprecated.
+- [Anonymous](../1516589-anonymous.md): Deprecated.
+- [Anonymous](../1516559-anonymous.md): Deprecated.
+- [Anonymous](../1542844-anonymous.md)
+- [Anonymous](../1542940-anonymous.md)
+- [Anonymous](../1542914-anonymous.md)
+- [Anonymous](../1542749-anonymous.md)
+- [Anonymous](../1553739-anonymous.md)
+- [Anonymous](../1483849-anonymous.md): Deprecated.
+- [Anonymous](../1485062-anonymous.md): Deprecated.
+- [Anonymous](../1485102-anonymous.md): Deprecated.
+- [Anonymous](../1484687-anonymous.md): Deprecated.
+- [Anonymous](../1484875-anonymous.md): Deprecated.
+- [Anonymous](../1484204-anonymous.md): Deprecated.
+- [Anonymous](../1483878-anonymous.md): Deprecated.
+- [Anonymous](../1484307-anonymous.md): Deprecated.
+- [Anonymous](../1483976-anonymous.md): Deprecated.
+- [Anonymous](../1484733-anonymous.md): Deprecated.
+- [Anonymous](../1484653-anonymous.md): Deprecated.
+- [Anonymous](../1483956-anonymous.md): Deprecated.
+- [Anonymous](../1484879-anonymous.md): Deprecated.
+- [Anonymous](../1484472-anonymous.md): Deprecated.
+- [Anonymous](../1484105-anonymous.md): Deprecated.
+- [Anonymous](../1485149-anonymous.md): Deprecated.
+- [Anonymous](../1484757-anonymous.md): Deprecated.
+- [Anonymous](../1485185-anonymous.md): Deprecated.
+- [Anonymous](../1484510-anonymous.md): Deprecated.
+- [Anonymous](../1485109-anonymous.md): Deprecated.
+- [Anonymous](../1484855-anonymous.md): Deprecated.
+- [Anonymous](../1485000-anonymous.md): Deprecated.
+- [Anonymous](../1483988-anonymous.md): Deprecated.
+- [Anonymous](../1484609-anonymous.md): Deprecated.
+- [Anonymous](../1484813-anonymous.md): Deprecated.
+- [Anonymous](../1485167-anonymous.md): Deprecated.
+- [Anonymous](../1484270-anonymous.md): Deprecated.
+- [Anonymous](../1484845-anonymous.md): Deprecated.
+- [Anonymous](../1484453-anonymous.md): Deprecated.
+- [Anonymous](../1485243-anonymous.md): Deprecated.
+- [Anonymous](../1485129-anonymous.md): Deprecated.
+- [Anonymous](../1484677-anonymous.md): Deprecated.
+- [Anonymous](../1483890-anonymous.md): Deprecated.
+- [Anonymous](../1484965-anonymous.md): Deprecated.
+- [Anonymous](../1484577-anonymous.md): Deprecated.
+- [Anonymous](../1485050-anonymous.md): Deprecated.
+- [Anonymous](../1485136-anonymous.md): Deprecated.
+- [Anonymous](../1484918-anonymous.md): Deprecated.
+- [Anonymous](../1484690-anonymous.md): Deprecated.
+- [Anonymous](../1484231-anonymous.md): Deprecated.
+- [Anonymous](../1484613-anonymous.md): Deprecated.
+- [Anonymous](../1484241-anonymous.md): Deprecated.
+- [Anonymous](../1484569-anonymous.md)
+- [Anonymous](../1484753-anonymous.md): Deprecated.
+- [Anonymous](../1484913-anonymous.md): Deprecated.
+- [Anonymous](../1485125-anonymous.md): Deprecated.
+- [Anonymous](../1485161-anonymous.md): Deprecated.
+- [Anonymous](../1529337-anonymous.md): Deprecated.
+- [Anonymous](../1529252-anonymous.md): Deprecated.
+- [Anonymous](../1529377-anonymous.md): Deprecated.
+- [Anonymous](../1529300-anonymous.md): Deprecated.
+- [Anonymous](../1529364-anonymous.md): Deprecated.
+- [Anonymous](../1529335-anonymous.md): Deprecated.
+- [Anonymous](../1470786-anonymous.md)
+- [Anonymous](../1472415-anonymous.md)
+- [Anonymous](../1472904-anonymous.md)
+- [Anonymous](../1471241-anonymous.md)
+- [Anonymous](../1473165-anonymous.md)
+- [Anonymous](../1470970-anonymous.md)
+- [Anonymous](../1472665-anonymous.md)
+- [Anonymous](../1471644-anonymous.md)
+- [Anonymous](../1581401-anonymous.md)
+- [Anonymous](../1571833-anonymous.md)
+- [Anonymous](../1571827-anonymous.md)
+- [Anonymous](../1571852-anonymous.md)
+- [Anonymous](../1571807-anonymous.md)
+- [Anonymous](../1533369-anonymous.md): Deprecated.
+- [Anonymous](../1533375-anonymous.md): Deprecated.
+- [Anonymous](../1533306-anonymous.md): Deprecated.
+- [Anonymous](../1533324-anonymous.md): Deprecated.
+- [Anonymous](../1579647-anonymous.md): Deprecated.
+- [Anonymous](../1579644-anonymous.md): Deprecated.
+- [Anonymous](../1579623-anonymous.md): Deprecated.
+- [Anonymous](../1527221-anonymous.md)
+- [Anonymous](../1588474-anonymous.md)
+- [Anonymous](../1588561-anonymous.md)
+- [Anonymous](../1588504-anonymous.md)
+- [Anonymous](../1588447-anonymous.md)
+- [Anonymous](../1513007-anonymous.md)
+- [Anonymous](../1513010-anonymous.md)
+- [Anonymous](../1512979-anonymous.md)
+- [Anonymous](../1562996-anonymous.md)
+- [Anonymous](../1563002-anonymous.md)
+- [Anonymous](../1563159-anonymous.md)
+- [Anonymous](../1563152-anonymous.md)
+- [Anonymous](../1563091-anonymous.md)
+- [Anonymous](../1563032-anonymous.md)
+- [Anonymous](../1563060-anonymous.md)
+- [Anonymous](../1563004-anonymous.md)
+- [Anonymous](../1563104-anonymous.md)
+- [Anonymous](../1563102-anonymous.md)
+- [Anonymous](../1563046-anonymous.md)
+- [Anonymous](../1562997-anonymous.md)
+- [Anonymous](../1573756-anonymous.md)
+- [Anonymous](../1424170-anonymous.md): Deprecated.
+- [Anonymous](../1424194-anonymous.md): Deprecated.
+- [Anonymous](../1424179-anonymous.md): Deprecated.
+- [Anonymous](../1424286-anonymous.md): Deprecated.
+- [Anonymous](../1424301-anonymous.md): Deprecated.
+- [Anonymous](../1424153-anonymous.md): Deprecated.
+- [Anonymous](../1424412-anonymous.md): Deprecated.
+- [Anonymous](../1424413-anonymous.md): Deprecated.
+- [Anonymous](../1424255-anonymous.md): Deprecated.
+- [Anonymous](../1424193-anonymous.md): Deprecated.
+- [Anonymous](../1424431-anonymous.md): Deprecated.
+- [Anonymous](../1424233-anonymous.md): Deprecated.
+- [Anonymous](../1424374-anonymous.md): Deprecated.
+- [Anonymous](../1424522-anonymous.md): Deprecated.
+- [Anonymous](../1424481-anonymous.md): Deprecated.
+- [Anonymous](../1424227-anonymous.md): Deprecated.
+- [Anonymous](../1424420-anonymous.md): Deprecated.
+- [Anonymous](../1424236-anonymous.md): Deprecated.
+- [Anonymous](../1424203-anonymous.md): Deprecated.
+- [Anonymous](../1424163-anonymous.md): Deprecated.
+- [Anonymous](../1424510-anonymous.md): Deprecated.
+- [Anonymous](../1424210-anonymous.md): Deprecated.
+- [Anonymous](../1424502-anonymous.md): Deprecated.
+- [Anonymous](../1424293-anonymous.md): Deprecated.
+- [Anonymous](../1424341-anonymous.md): Deprecated.
+- [Anonymous](../1424296-anonymous.md): Deprecated.
+- [Anonymous](../1565628-anonymous.md)
+- [Anonymous](../1566245-anonymous.md)
+- [Anonymous](../1566213-anonymous.md)
+- [Anonymous](../1566518-anonymous.md)
+- [Anonymous](../1566478-anonymous.md)
+- [Anonymous](../1566638-anonymous.md)
+- [Anonymous](../1566827-anonymous.md)
+- [Anonymous](../1566395-anonymous.md)
+- [Anonymous](../1566856-anonymous.md)
+- [Anonymous](../1566584-anonymous.md)
+- [Anonymous](../1566020-anonymous.md)
+- [Anonymous](../1566305-anonymous.md)
+- [Anonymous](../1566434-anonymous.md)
+- [Anonymous](../1566715-anonymous.md)
+- [Anonymous](../1565599-anonymous.md)
+- [Anonymous](../1565895-anonymous.md)
+- [Anonymous](../1565433-anonymous.md)
+- [Anonymous](../1566669-anonymous.md)
+- [Anonymous](../1566501-anonymous.md)
+- [Anonymous](../1565569-anonymous.md)
+- [Anonymous](../1565552-anonymous.md)
+- [Anonymous](../1565515-anonymous.md)
+- [Anonymous](../1565799-anonymous.md)
+- [Anonymous](../1566863-anonymous.md)
+- [Anonymous](../1566729-anonymous.md)
+- [Anonymous](../1566779-anonymous.md)
+- [Anonymous](../1565419-anonymous.md)
+- [Anonymous](../1566639-anonymous.md)
+- [Anonymous](../1565949-anonymous.md)
+- [Anonymous](../1565214-anonymous.md)
+- [Anonymous](../1566053-anonymous.md)
+- [Anonymous](../1565744-anonymous.md)
+- [Anonymous](../1565762-anonymous.md)
+- [Anonymous](../1566658-anonymous.md)
+- [Anonymous](../1565582-anonymous.md)
+- [Anonymous](../1566030-anonymous.md)
+- [Anonymous](../1566333-anonymous.md)
+- [Anonymous](../1566619-anonymous.md)
+- [Anonymous](../1565625-anonymous.md)
+- [Anonymous](../1565872-anonymous.md)
+- [Anonymous](../1566814-anonymous.md)
+- [Anonymous](../1566397-anonymous.md)
+- [Anonymous](../1565551-anonymous.md)
+- [Anonymous](../1566608-anonymous.md)
+- [Anonymous](../1565390-anonymous.md)
+- [Anonymous](../1565352-anonymous.md)
+- [Anonymous](../1565891-anonymous.md)
+- [Anonymous](../1566512-anonymous.md)
+- [Anonymous](../1566010-anonymous.md)
+- [Anonymous](../1542582-anonymous.md): Deprecated.
+- [Anonymous](../1542439-anonymous.md): Deprecated.
+- [Anonymous](../1542529-anonymous.md): Deprecated.
+- [Anonymous](../1542615-anonymous.md): Deprecated.
+- [Anonymous](../1542396-anonymous.md): Deprecated.
+- [Anonymous](../1542537-anonymous.md): Deprecated.
+- [Anonymous](../1542642-anonymous.md): Deprecated.
+- [Anonymous](../1542414-anonymous.md): Deprecated.
+- [Anonymous](../1542608-anonymous.md): Deprecated.
+- [Anonymous](../1542393-anonymous.md): Deprecated.
+- [Anonymous](../1542450-anonymous.md): Deprecated.
+- [Anonymous](../1542399-anonymous.md): Deprecated.
+- [Anonymous](../1542523-anonymous.md): Deprecated.
+- [Anonymous](../1542433-anonymous.md): Deprecated.
+- [Anonymous](../1542541-anonymous.md): Deprecated.
+- [Anonymous](../1542558-anonymous.md): Deprecated.
+- [Anonymous](../1542636-anonymous.md): Deprecated.
+- [Anonymous](../1542400-anonymous.md): Deprecated.
+- [Anonymous](../1542635-anonymous.md): Deprecated.
+- [Anonymous](../1574276-anonymous.md): Deprecated.
+- [Anonymous](../1574246-anonymous.md): Deprecated.
+- [Anonymous](../1574242-anonymous.md): Deprecated.
+- [Anonymous](../1574203-anonymous.md): Deprecated.
+- [Anonymous](../1585870-anonymous.md)
+- [Anonymous](../1585888-anonymous.md)
+- [Anonymous](../1585886-anonymous.md)
+- [Anonymous](../1585846-anonymous.md)
+- [Anonymous](../1585860-anonymous.md)
+- [Anonymous](../1585880-anonymous.md)
+- [Anonymous](../1585877-anonymous.md)
+- [Anonymous](../1550781-anonymous.md): Deprecated.
+- [Anonymous](../1572727-anonymous.md)
+- [Anonymous](../1645753-anonymous.md)
+- [Anonymous](../1455359-anonymous.md)
+- [Anonymous](../1645929-anonymous.md)
+- [Anonymous](../1551373-anonymous.md): Deprecated.
+- [Anonymous](../1551384-anonymous.md): Deprecated.
+- [Anonymous](../1551411-anonymous.md): Deprecated.
+- [Anonymous](../1551340-anonymous.md): Deprecated.
+- [Anonymous](../1433552-anonymous.md)
+- [Anonymous](../1559986-anonymous.md)
+- [Anonymous](../1560077-anonymous.md)
+- [Anonymous](../1560010-anonymous.md)
+- [Anonymous](../1560023-anonymous.md)
+- [Anonymous](../1560030-anonymous.md)
+- [Anonymous](../1560061-anonymous.md)
+- [Anonymous](../1559949-anonymous.md)
+- [Anonymous](../1560005-anonymous.md)
+- [Anonymous](../1560009-anonymous.md)
+- [Anonymous](../1559939-anonymous.md)
+- [Anonymous](../1559932-anonymous.md)
+- [Anonymous](../1559993-anonymous.md)
+- [Anonymous](../1559991-anonymous.md)
+- [Anonymous](../1560066-anonymous.md)
+- [Anonymous](../1560065-anonymous.md)
+- [Anonymous](../1559996-anonymous.md)
+- [Anonymous](../1560039-anonymous.md)
+- [Anonymous](../1559992-anonymous.md)
+- [Anonymous](../1560056-anonymous.md)
+- [Anonymous](../1560048-anonymous.md)
+- [Anonymous](../1560037-anonymous.md)
+- [Anonymous](../1560071-anonymous.md)
+- [Anonymous](../1559948-anonymous.md)
+- [Anonymous](../1559955-anonymous.md)
+- [Anonymous](../1559965-anonymous.md)
+- [Anonymous](../1560059-anonymous.md)
+- [Anonymous](../1560063-anonymous.md)
+- [Anonymous](../1559994-anonymous.md)
+- [Anonymous](../1559964-anonymous.md)
+- [Anonymous](../1560020-anonymous.md)
+- [Anonymous](../1559941-anonymous.md)
+- [Anonymous](../1560076-anonymous.md)
+- [Anonymous](../1560015-anonymous.md)
+- [Anonymous](../1560053-anonymous.md)
+- [Anonymous](../1560011-anonymous.md)
+- [Anonymous](../1559954-anonymous.md)
+- [Anonymous](../1559971-anonymous.md)
+- [Anonymous](../1559945-anonymous.md)
+- [Anonymous](../1560003-anonymous.md)
+- [Anonymous](../1560052-anonymous.md)
+- [Anonymous](../1559942-anonymous.md)
+- [Anonymous](../1560021-anonymous.md)
+- [Anonymous](../1560062-anonymous.md)
+- [Anonymous](../1559987-anonymous.md)
+- [Anonymous](../1559935-anonymous.md)
+- [Anonymous](../1560008-anonymous.md)
+- [Anonymous](../1560055-anonymous.md)
+- [Anonymous](../1559936-anonymous.md)
+- [Anonymous](../1559981-anonymous.md)
+- [Anonymous](../1560034-anonymous.md)
+- [Anonymous](../1559959-anonymous.md)
+- [Anonymous](../1559990-anonymous.md)
+- [Anonymous](../1560018-anonymous.md)
+- [Anonymous](../1559975-anonymous.md)
+- [Anonymous](../1560040-anonymous.md)
+- [Anonymous](../1560051-anonymous.md)
+- [Anonymous](../1560027-anonymous.md)
+- [Anonymous](../1560075-anonymous.md)
+- [Anonymous](../1560045-anonymous.md)
+- [Anonymous](../1559938-anonymous.md)
+- [Anonymous](../1560017-anonymous.md)
+- [Anonymous](../1559978-anonymous.md)
+- [Anonymous](../1559958-anonymous.md)
+- [Anonymous](../1560069-anonymous.md)
+- [Anonymous](../1559956-anonymous.md)
+- [Anonymous](../1560057-anonymous.md)
+- [Anonymous](../1559970-anonymous.md)
+- [Anonymous](../1559946-anonymous.md)
+- [Anonymous](../1559933-anonymous.md)
+- [Anonymous](../1560060-anonymous.md)
+- [Anonymous](../1559972-anonymous.md)
+- [Anonymous](../1560042-anonymous.md)
+- [Anonymous](../1559989-anonymous.md)
+- [Anonymous](../1559995-anonymous.md)
+- [Anonymous](../1559947-anonymous.md)
+- [Anonymous](../1560073-anonymous.md)
+- [Anonymous](../1560068-anonymous.md)
+- [Anonymous](../1559952-anonymous.md)
+- [Anonymous](../1560072-anonymous.md)
+- [Anonymous](../1560029-anonymous.md)
+- [Anonymous](../1560046-anonymous.md)
+- [Anonymous](../1560013-anonymous.md)
+- [Anonymous](../1560038-anonymous.md)
+- [Anonymous](../1559974-anonymous.md)
+- [Anonymous](../1559961-anonymous.md)
+- [Anonymous](../1560058-anonymous.md)
+- [Anonymous](../1560006-anonymous.md)
+- [Anonymous](../1560043-anonymous.md)
+- [Anonymous](../1559966-anonymous.md)
+- [Anonymous](../1559969-anonymous.md)
+- [Anonymous](../1559985-anonymous.md)
+- [Anonymous](../1559998-anonymous.md)
+- [Anonymous](../1560049-anonymous.md)
+- [Anonymous](../1559944-anonymous.md)
+- [Anonymous](../1560007-anonymous.md)
+- [Anonymous](../1560025-anonymous.md)
+- [Anonymous](../1560001-anonymous.md)
+- [Anonymous](../1560004-anonymous.md)
+- [Anonymous](../1560044-anonymous.md)
+- [Anonymous](../1560028-anonymous.md)
+- [Anonymous](../1560014-anonymous.md)
+- [Anonymous](../1559984-anonymous.md)
+- [Anonymous](../1559967-anonymous.md)
+- [Anonymous](../1559977-anonymous.md)
+- [Anonymous](../1559973-anonymous.md)
+- [Anonymous](../1560002-anonymous.md)
+- [Anonymous](../1559963-anonymous.md)
+- [Anonymous](../1560047-anonymous.md)
+- [Anonymous](../1560019-anonymous.md)
+- [Anonymous](../1559979-anonymous.md)
+- [Anonymous](../1559957-anonymous.md)
+- [Anonymous](../1560074-anonymous.md)
+- [Anonymous](../1559988-anonymous.md)
+- [Anonymous](../1560050-anonymous.md)
+- [Anonymous](../1559962-anonymous.md)
+- [Anonymous](../1559982-anonymous.md)
+- [Anonymous](../1560054-anonymous.md)
+- [Anonymous](../1560024-anonymous.md)
+- [Anonymous](../1559960-anonymous.md)
+- [Anonymous](../1560036-anonymous.md)
+- [Anonymous](../1560016-anonymous.md)
+- [Anonymous](../1560031-anonymous.md)
+- [Anonymous](../1560022-anonymous.md)
+- [Anonymous](../1560026-anonymous.md)
+- [Anonymous](../1559934-anonymous.md)
+- [Anonymous](../1560033-anonymous.md)
+- [Anonymous](../1559980-anonymous.md)
+- [Anonymous](../1559940-anonymous.md)
+- [Anonymous](../1560064-anonymous.md)
+- [Anonymous](../1560032-anonymous.md)
+- [Anonymous](../1560041-anonymous.md)
+- [Anonymous](../1560070-anonymous.md)
+- [Anonymous](../1559953-anonymous.md)
+- [Anonymous](../1559997-anonymous.md)
+- [Anonymous](../1560000-anonymous.md)
+- [Anonymous](../1560035-anonymous.md)
+- [Anonymous](../1559968-anonymous.md)
+- [Anonymous](../1560012-anonymous.md)
+- [Anonymous](../1559976-anonymous.md)
+- [Anonymous](../1559950-anonymous.md)
+- [Anonymous](../1559999-anonymous.md)
+- [Anonymous](../1560067-anonymous.md)
+- [Anonymous](../1559983-anonymous.md)
+- [Anonymous](../1559951-anonymous.md)
+- [Anonymous](../1559943-anonymous.md)
+- [Anonymous](../1444335-anonymous.md): Deprecated.
+- [Anonymous](../1448600-anonymous.md)
+- [Anonymous](../1492656-anonymous.md)
+- [Anonymous](../1508457-anonymous.md)
+- [Anonymous](../1585592-anonymous.md): Deprecated.
+- [Anonymous](../1585730-anonymous.md): Deprecated.
+- [Anonymous](../1585581-anonymous.md): Deprecated.
+- [Anonymous](../1390427-anonymous.md)
+- [Anonymous](../1390624-anonymous.md)
+- [Anonymous](../1390417-anonymous.md)
+- [Anonymous](../1390433-anonymous.md)
+- [Anonymous](../1390386-anonymous.md)
+- [Anonymous](../1390501-anonymous.md)
+- [Anonymous](../1470295-anonymous.md): Deprecated.
+- [Anonymous](../1585037-anonymous.md)
+- [Anonymous](../1585036-anonymous.md)
+- [Anonymous](../1429043-anonymous.md)
+- [Anonymous](../1428995-anonymous.md)
+- [Anonymous](../1429005-anonymous.md)
+- [Anonymous](../1573352-anonymous.md)
+- [Anonymous](../1573179-anonymous.md)
+- [Anonymous](../1573324-anonymous.md)
+- [Anonymous](../1573344-anonymous.md)
+- [Anonymous](../1573359-anonymous.md)
+- [Anonymous](../1573408-anonymous.md)
+- [Anonymous](../1573396-anonymous.md)
+- [Anonymous](../1498452-anonymous.md)
+- [Anonymous](../1498496-anonymous.md)
+- [Anonymous](../1498483-anonymous.md)
+- [Anonymous](../1400306-anonymous.md)
+- [Anonymous](../1399917-anonymous.md)
+- [Anonymous](../1400077-anonymous.md)
+- [Anonymous](../1399711-anonymous.md)
+- [Anonymous](../1400475-anonymous.md)
+- [Anonymous](../1400087-anonymous.md)
+- [Anonymous](../1399619-anonymous.md)
+- [Anonymous](../1399962-anonymous.md)
+- [Anonymous](../1399901-anonymous.md)
+- [Anonymous](../1400007-anonymous.md)
+- [Anonymous](../1399804-anonymous.md)
+- [Anonymous](../1400375-anonymous.md)
+- [Anonymous](../1399824-anonymous.md)
+- [Anonymous](../1399885-anonymous.md)
+- [Anonymous](../1400392-anonymous.md)
+- [Anonymous](../1399834-anonymous.md)
+- [Anonymous](../1399695-anonymous.md)
+- [Anonymous](../1556401-anonymous.md)
+- [Anonymous](../1556378-anonymous.md)
+- [Anonymous](../1556403-anonymous.md)
+- [Anonymous](../1556394-anonymous.md)
+- [Anonymous](../1556363-anonymous.md)
+- [Anonymous](../1556390-anonymous.md)
+- [Anonymous](../1556364-anonymous.md)
+- [Anonymous](../1556396-anonymous.md)
+- [Anonymous](../1506252-anonymous.md): Deprecated.
+- [Anonymous](../1506437-anonymous.md): Deprecated.
+- [Anonymous](../1506373-anonymous.md): Deprecated.
+- [Anonymous](../1506475-anonymous.md): Deprecated.
+- [Anonymous](../1506343-anonymous.md): Deprecated.
+- [Anonymous](../1506267-anonymous.md): Deprecated.
+- [Anonymous](../1429767-anonymous.md)
+- [Anonymous](../1429735-anonymous.md)
+- [Anonymous](../1429609-anonymous.md)
+- [Anonymous](../1429674-anonymous.md)
+- [Anonymous](../1429704-anonymous.md)
+- [Anonymous](../1429632-anonymous.md)
+- [Anonymous](../1429655-anonymous.md)
+- [Anonymous](../1429589-anonymous.md)
+- [Anonymous](../1429577-anonymous.md)
+- [Anonymous](../1429675-anonymous.md)
+- [Anonymous](../1429775-anonymous.md)
+- [Anonymous](../1429613-anonymous.md)
+- [Anonymous](../1429651-anonymous.md)
+- [Anonymous](../1429726-anonymous.md)
+- [Anonymous](../1580258-anonymous.md)
+- [Anonymous](../1580280-anonymous.md)
+- [Anonymous](../1551545-anonymous.md)
+- [Anonymous](../1551511-anonymous.md)
+- [Anonymous](../1551571-anonymous.md)
+- [Anonymous](../1551539-anonymous.md)
+- [Anonymous](../1551531-anonymous.md)
+- [Anonymous](../1551594-anonymous.md)
+- [WSTypeID](../wstypeid.md): Web Services Core uses the following enumeration when serializing between Core Foundation and XML types. Because CFTypes are defined at runtime, it isn't always possible to produce a static mapping to a particular CFTypeRef. This enum and associated API allows for static determination of the expected serialization.
+- [cAEList](../1556411-caelist.md)
+- [cInsertionLoc](../1556389-cinsertionloc.md)
+- [cKeystroke](../1556385-ckeystroke.md)
+- [cURL](../1556375-curl.md)
+- [eScheme](../1556397-escheme.md)
+- [kBySmallIcon](../1556391-kbysmallicon.md)
+- [kConnSuite](../1556369-kconnsuite.md)
+- [kFAServerApp](../1556384-kfaserverapp.md)
+- [kLaunchToGetTerminology](../1457909-klaunchtogetterminology.md)
+- [kNextBody](../1556402-knextbody.md)
+- [kOSIZDontOpenResourceFile](../1457903-kosizdontopenresourcefile.md)
+- [kReadExtensionTermsMask](../1457896-kreadextensiontermsmask.md)
+- [kSOAP1999Schema](../1542943-ksoap1999schema.md)
+- [kTSMHiliteCaretPosition](../1556398-ktsmhilitecaretposition.md): Specify text highlighting information.
+- [kTSMOutsideOfBody](../1556371-ktsmoutsideofbody.md)
+- [kTextServiceClass](../1556406-ktextserviceclass.md)
+- [pArcAngle](../1556376-parcangle.md)
+- [pFormula](../1556373-pformula.md)
+- [pNewElementLoc](../1556400-pnewelementloc.md)
+- [pScheme](../1556408-pscheme.md)
+- [pTextStyles](../1556367-ptextstyles.md)
+- [typeAEText](../1556366-typeaetext.md)
+- [typeApplicationBundleID](../1542896-typeapplicationbundleid.md): For specifying a target application by bundle ID.
+- [typeHIMenu](../1556372-typehimenu.md)
+- [typeKernelProcessID](../1542936-typekernelprocessid.md): For specifying an application by UNIX process ID.
+- [typeMeters](../1556382-typemeters.md)
+- [typeReplyPortAttr](../1571649-typereplyportattr.md)
+- [typeTIFF](../1556405-typetiff.md)
+- [typeUnicodeText](../1542918-typeunicodetext.md)
+- [Anonymous](../3025780-anonymous.md)
+- [Anonymous](../3025781-anonymous.md)
+- [Anonymous](../3074489-anonymous.md)
+- [Anonymous](../3608550-anonymous.md)
+- [Anonymous](../4013044-anonymous.md)
+- [Anonymous](../4179608-anonymous.md): Deprecated.
+- [Anonymous](../4464838-anonymous.md)
+
+## See Also
+
+### Other Reference
+
+- [Core Endian](core_endian.md): Deprecated. Convert data between big endian and little endian format
+- [Carbon Core Structures](carbon_core_structures.md)
+- [Carbon Core Functions](carbon_core_functions.md)
+- [Carbon Core Data Types](carbon_core_data_types.md)

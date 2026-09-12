@@ -1,0 +1,49 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mediaaccessibility/macaptionappearancetextedgestyle/dropshadow](https://developer.apple.com/documentation/mediaaccessibility/macaptionappearancetextedgestyle/dropshadow)
+
+# MACaptionAppearanceTextEdgeStyle.dropShadow (Swift)
+
+**Framework:** Media Accessibility  
+**Kind:** Case  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 17.0+ · visionOS 1.0+
+
+An edge makes the text appear to float above the background.
+
+## Declaration
+
+```swift
+case dropShadow
+```
+
+## See Also
+
+### Constants
+
+- [MACaptionAppearanceTextEdgeStyle.undefined](undefined.md): An edge style has not been specified.
+- [MACaptionAppearanceTextEdgeStyle.none](none.md): The text should not have a styled edge.
+- [MACaptionAppearanceTextEdgeStyle.raised](raised.md): An edge makes the text appear to rise above the background.
+- [MACaptionAppearanceTextEdgeStyle.depressed](depressed.md): An edge makes the text appear pushed in.
+- [MACaptionAppearanceTextEdgeStyle.uniform](uniform.md): A thin outline lies along the edge of the text.
+
+# kMACaptionAppearanceTextEdgeStyleDropShadow (Objective-C)
+
+**Framework:** Media Accessibility  
+**Kind:** Enumeration Case  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 17.0+ · visionOS 1.0+
+
+An edge makes the text appear to float above the background.
+
+## Declaration
+
+```objectivec
+kMACaptionAppearanceTextEdgeStyleDropShadow
+```
+
+## See Also
+
+### Constants
+
+- [kMACaptionAppearanceTextEdgeStyleUndefined](undefined.md): An edge style has not been specified.
+- [kMACaptionAppearanceTextEdgeStyleNone](none.md): The text should not have a styled edge.
+- [kMACaptionAppearanceTextEdgeStyleRaised](raised.md): An edge makes the text appear to rise above the background.
+- [kMACaptionAppearanceTextEdgeStyleDepressed](depressed.md): An edge makes the text appear pushed in.
+- [kMACaptionAppearanceTextEdgeStyleUniform](uniform.md): A thin outline lies along the edge of the text.

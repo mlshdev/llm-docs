@@ -1,0 +1,114 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/certificaterevocation](https://developer.apple.com/documentation/devicemanagement/certificaterevocation)
+
+# CertificateRevocation
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Device Management Profile  
+**Availability:** iOS 14.2+ · iPadOS 14.2+ · Mac Catalyst 14.2+ · visionOS 1.1+
+
+The payload that configures certificate revocation checking.
+
+## Declaration
+
+```
+object CertificateRevocation
+```
+
+## Properties
+
+- `EnabledForCerts` — `[CertificateRevocation.SubjectPublicKeyInfoHashDict]`: An array of certificates that the system checks for revocation.
+
+  Specifying a certificate authority (CA) enables revocation checking for all certificates chaining up to that CA.
+
+  It’s not necessary to specify trusted root certificates because they’re implicitly specified. See [https://support.apple.com/en-us/HT209143](https://support.apple.com/en-us/HT209143) for the available trusted root certificates for Apple operating systems.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Specify `com.apple.security.certificaterevocation` as the payload type.
+
+<a id="Profile-availability"></a>
+
+### Profile availability
+
+|  |  |
+| --- | --- |
+| Device channel | iOS, Shared iPad, visionOS |
+| User channel | N/A |
+| Allow manual install | iOS, visionOS |
+| Requires supervision | N/A |
+| Requires user-approved MDM | N/A |
+| Allowed in user enrollment | iOS, visionOS |
+| Allow multiple payloads | iOS, Shared iPad, visionOS |
+
+<a id="Profile-example"></a>
+
+### Profile example
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>EnabledForCerts</key>
+            <array>
+                <dict>
+                    <key>Algorithm</key>
+                    <string>sha256</string>
+                    <key>Hash</key>
+                    <data>ExampleDatY=</data>
+                </dict>
+            </array>
+            <key>PayloadDescription</key>
+            <string>Configures certificate Revocation</string>
+            <key>PayloadDisplayName</key>
+            <string>Certificate Revocation</string>
+            <key>PayloadIdentifier</key>
+            <string>com.example.mycertrevpayload</string>
+            <key>PayloadType</key>
+            <string>com.apple.security.certificaterevocation</string>
+            <key>PayloadUUID</key>
+            <string>2a4deb38-4c9f-43fd-a933-6598f4866e3b</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+    </array>
+    <key>PayloadDisplayName</key>
+    <string>Certificate Revocation</string>
+    <key>PayloadIdentifier</key>
+    <string>com.example.myprofile</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>b548e6df-10ad-438a-a65b-6b39374b7aff</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>
+```
+
+## Topics
+
+### Objects
+
+- [CertificateRevocation.SubjectPublicKeyInfoHashDict](certificaterevocation/subjectpublickeyinfohashdict.md): A dictionary of hashed public keys.
+
+## See Also
+
+### Certificates
+
+- [ACMECertificate](acmecertificate.md): The payload that configures Automated Certificate Management Environment (ACME) settings.
+- [ActiveDirectoryCertificate](activedirectorycertificate.md): The payload that configures Active Directory Certificate settings.
+- [CertificatePEM](certificatepem.md): The payload that configures a PEM-formatted certificate.
+- [CertificatePKCS1](certificatepkcs1.md): The payload that configures a PKCS #1-formatted certificate.
+- [CertificatePKCS12](certificatepkcs12.md): The payload that configures a PKCS #12-formatted certificate.
+- [CertificateRoot](certificateroot.md): The payload that configures a root certificate.
+- [CertificatePreference](certificatepreference.md): The payload that configures a certificate preference.
+- [CertificateTransparency](certificatetransparency.md): The payload that configures certificate transparency enforcement.
+- [SCEP](scep.md): The payload that configures Simple Certificate Enrollment Protocol (SCEP) settings.

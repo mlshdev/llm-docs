@@ -1,0 +1,76 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/exposurenotification/exposure-risk-value-calculation-in-exposurenotification-version-1](https://developer.apple.com/documentation/exposurenotification/exposure-risk-value-calculation-in-exposurenotification-version-1)
+
+# Exposure Risk Value Calculation in ExposureNotification Version 1
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** Exposure Notification  
+**Kind:** API Collection
+
+Learn how to determine a user’s risk of exposure.
+
+<a id="overview"></a>
+
+## Overview
+
+The ExposureNotification framework uses an Exposure Risk Value to assist the user in determining whether they may have been exposed to the coronavirus. Health authorities have flexibility in calculating this value by setting weights and values in a configuration object.
+
+To adopt this method of risk assessment, set the `ENAPIVersion` key to the integer value `1` in the app’s `Info.plist`.
+
+The following diagram illustrates the data structure and formula used to calculate the Exposure Risk Value.
+
+![A diagram that shows how the Exposure Risk Value is calculated.](https://developer.apple.com/images/com.apple.exposurenotification/media-3667011@2x.png)
+
+The following parameters are used to calculate a risk for each exposure incident:
+
+- **Transmission Risk**: Transmission risk is intended to reflect the status of infection in the affected user and its effect on risk of transmission. The value is based on the affected user’s symptoms, when symptoms first appeared, level of diagnosis verification, or other determination from the app or a health authority.
+- **Duration**: Cumulative duration of the exposure. The framework measures this value.
+- **Days**: Days since the exposure incident. The framework measures this value.
+- **Attenuation**: The attenuation (`transmission power - RSSI`) can vary during an exposure event. Attenuation values greater than 0 are weighted by the duration at each risk level and averaged for the overall duration. The framework measures and calculates this value.
+
+The [totalRiskScore](enexposureinfo/totalriskscore.md) is calculated using the following formula:
+
+```swift
+totalRiskScore = transmissionRiskValue * durationRiskValue *
+daysSinceLastExposureRiskValue * attenuationRiskValue
+```
+
+Level values are in the range of 0-8. While the formula’s range can be up to 4096, the framework limits [totalRiskScore](enexposureinfo/totalriskscore.md) to the upper limit of [ENRiskScore](enriskscore.md), which has a maximum value of 255.
+
+The following diagram illustrates an example of an Exposure Risk Value calculated for a person who was exposed to another person who was diagnosed positive.
+
+![A diagram showing an example of calculating the risk score.](https://developer.apple.com/images/com.apple.exposurenotification/media-3667010@2x.png)
+
+For this example, the other user reported a positive diagnosis, the encounter between the two devices lasted 14 minutes, it happened 4 days ago, and the signal strength attenuation between their phones had a weighted average of 68. The `totalRiskScore` is limited and set to 255.
+
+To exclude exposure incidents with a risk score below a certain amount, set  [minimumRiskScoreFullRange](enexposureconfiguration/minimumriskscorefullrange.md). The framework doesn’t use this property when calculating [matchedKeyCount](enexposuredetectionsummary/matchedkeycount.md) or [daysSinceLastExposureThreshold](enexposureconfiguration/dayssincelastexposurethreshold.md).
+
+## Topics
+
+### Exposure Information
+
+- [ENExposureInfo](enexposureinfo.md): Deprecated. The incident information related to a potential exposure.
+- [ENRiskScore](enriskscore.md): Deprecated. A value signifying the risk of an exposure event.
+- [ENRiskLevel](enrisklevel.md): Deprecated. The user’s estimated risk of exposure.
+- [ENRiskLevelValue](enrisklevelvalue.md): Deprecated. The value associated with a particular risk level.
+
+### Level Configuration
+
+- [attenuationDurationThresholds](enexposureconfiguration/attenuationdurationthresholds.md): Deprecated. The configurable signal-loss thresholds for calculating exposure risk.
+- [attenuationLevelValues](enexposureconfiguration/attenuationlevelvalues.md): Deprecated. The level values for attenuation.
+- [daysSinceLastExposureLevelValues](enexposureconfiguration/dayssincelastexposurelevelvalues.md): Deprecated. The level values for days since last exposure.
+- [durationLevelValues](enexposureconfiguration/durationlevelvalues.md): Deprecated. The level values for duration.
+- [transmissionRiskLevelValues](enexposureconfiguration/transmissionrisklevelvalues.md): Deprecated. The level values for transmission risk.
+- [metadata](enexposureconfiguration/metadata.md): Deprecated. The metadata you use to configure the exposure calculations.
+
+### Minimum Threshold Configuration
+
+- [minimumRiskScore](enexposureconfiguration/minimumriskscore.md): Deprecated. The value that is the user’s minimum risk score.
+- [minimumRiskScoreFullRange](enexposureconfiguration/minimumriskscorefullrange.md): Deprecated. The value that is the user’s full-range minimum risk score.
+
+### Weight Configuration
+
+- [attenuationWeight](enexposureconfiguration/attenuationweight.md): Deprecated. The weight assigned to a score for the Bluetooth signal strength.
+- [daysSinceLastExposureWeight](enexposureconfiguration/dayssincelastexposureweight.md): Deprecated. The weight assigned to a score for the days since the user’s exposure.
+- [durationWeight](enexposureconfiguration/durationweight.md): Deprecated. The weight assigned to a score for the duration of the user’s exposure.
+- [transmissionRiskWeight](enexposureconfiguration/transmissionriskweight.md): Deprecated. The weight assigned to a score for the affected user’s estimated risk of transmission.

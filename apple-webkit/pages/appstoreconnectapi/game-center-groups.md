@@ -1,0 +1,88 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/game-center-groups](https://developer.apple.com/documentation/appstoreconnectapi/game-center-groups)
+
+# Game Center groups
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** API Collection
+
+Manage groups between your apps.
+
+<a id="overview"></a>
+
+## Overview
+
+Use groups to connect multiple apps so they use common Game Center elements including: achievements, Game Center details, leaderboards, and leaderboard sets.
+
+Use this resource to:
+
+- Create and modify Game Center groups.
+- Read and modify relationships between a Game Center group and achievements, Game Center details, leaderboards, and leaderboard sets.
+
+## Topics
+
+### Managing groups
+
+- [Read Group Information](get-v1-gamecentergroups.md): List information for all groups.
+- [Read information for a specific group](get-v1-gamecentergroups-_id_.md): Read information for a specific Game Center group.
+- [Create a Group](post-v1-gamecentergroups.md): Add a new group.
+- [Modify a Group](patch-v1-gamecentergroups-_id_.md): Edit the reference name for a group.
+- [Delete a Group](delete-v1-gamecentergroups-_id_.md): Remove a group.
+- [List All Game Center Achievements for a Game Center Group](get-v1-gamecentergroups-_id_-gamecenterachievementsv2.md): Get a list of achievements for a specific Game Center group.
+- [List All Game Center Leaderboard Sets for a Game Center Group](get-v1-gamecentergroups-_id_-gamecenterleaderboardsetsv2.md): Get a list of leaderboard sets for a specific Game Center group.
+- [List All Game Center Leaderboards for a Game Center Group](get-v1-gamecentergroups-_id_-gamecenterleaderboardsv2.md): Get a list of leaderboards for a specific Game Center group.
+- [List the Achievements in a Group](get-v1-gamecentergroups-_id_-gamecenterachievements.md): Deprecated. List achievements information for a specific group.
+- [List game center details for a group](get-v1-gamecentergroups-_id_-gamecenterdetails.md): Read Game Center detail information for a specific group.
+- [List Game Center detail IDs for a Game Center group](get-v1-gamecentergroups-_id_-relationships-gamecenterdetails.md)
+- [List Game Center detail IDs for a Game Center group](get-v1-gamecentergroups-_id_-relationships-gamecenterdetails.md)
+- [List game center leaderboard sets in a group](get-v1-gamecentergroups-_id_-gamecenterleaderboardsets.md): Deprecated. Read Game Center leaderboard sets information for a specific group.
+- [List game center leaderboards for a group](get-v1-gamecentergroups-_id_-gamecenterleaderboards.md): Deprecated. Read Game Center leaderboard information for a specific group.
+- [List all activities for a game center group](get-v1-gamecentergroups-_id_-gamecenteractivities.md): Get a list of all activities for a Game Center group.
+- [List activity IDs for a Game Center group](get-v1-gamecentergroups-_id_-relationships-gamecenteractivities.md): Get a list of activity IDs for a specific Game Center group.
+- [Read the challenges for a game center group](get-v1-gamecentergroups-_id_-gamecenterchallenges.md): Get challenge information for a specific Game Center group.
+- [List Game Center challenge IDs for a Game Center group](get-v1-gamecentergroups-_id_-relationships-gamecenterchallenges.md)
+
+### Reading and modifying group relationships
+
+- [Get All Achievement IDs for a Game Center Group](get-v1-gamecentergroups-_id_-relationships-gamecenterachievementsv2.md): Get a list of achievement resource IDs for a specific Game Center group.
+- [Get All Leaderboard Set IDs for a Game Center Group](get-v1-gamecentergroups-_id_-relationships-gamecenterleaderboardsetsv2.md): Get a list of leaderboard set resource IDs for a specific Game Center group.
+- [Get All Leaderboard IDs for a Game Center Group](get-v1-gamecentergroups-_id_-relationships-gamecenterleaderboardsv2.md): Get a list of leaderboard resource IDs for a specific Game Center group.
+- [Modify the Achievements for a Game Center Group](patch-v1-gamecentergroups-_id_-relationships-gamecenterachievementsv2.md): Update the achievements relationship for a specific Game Center group.
+- [Modify the Leaderboard Sets for a Game Center Group](patch-v1-gamecentergroups-_id_-relationships-gamecenterleaderboardsetsv2.md): Update the leaderboard sets relationship for a specific Game Center group.
+- [Modify the Leaderboards for a Game Center Group](patch-v1-gamecentergroups-_id_-relationships-gamecenterleaderboardsv2.md): Update the leaderboards relationship for a specific Game Center group.
+- [Read the Achievements in a Group](get-v1-gamecentergroups-_id_-relationships-gamecenterachievements.md): Deprecated. List all the achievements associated with a specific group.
+- [Read the Leaderboard Sets in a Group](get-v1-gamecentergroups-_id_-relationships-gamecenterleaderboardsets.md): Deprecated. List all the leaderboard sets associated with a specific group.
+- [Read the Leaderboards in a Group](get-v1-gamecentergroups-_id_-relationships-gamecenterleaderboards.md): Deprecated. List all the leaderboard associated with a specific group.
+- [Edit the Achievements Associated With a Group](patch-v1-gamecentergroups-_id_-relationships-gamecenterachievements.md): Deprecated. Modify the achievements in a specific group.
+- [Edit the Leaderboard Sets Associated With a Group](patch-v1-gamecentergroups-_id_-relationships-gamecenterleaderboardsets.md): Deprecated. Modify the leaderboard sets in a specific group.
+- [Edit the Leaderboard Associated With a Group](patch-v1-gamecentergroups-_id_-relationships-gamecenterleaderboards.md): Deprecated. Modify the Game Center leaderboards in a specific group.
+
+### Objects
+
+- [GameCenterGroup](gamecentergroup.md): A named group that shares leaderboards and achievements across multiple apps in Game Center.
+- [GameCenterGroupCreateRequest](gamecentergroupcreaterequest.md): The request body you use to create a group.
+- [GameCenterGroupGameCenterAchievementsV2LinkagesRequest](gamecentergroupgamecenterachievementsv2linkagesrequest.md): The data structure that represents a Game Center group Game Center achievement linkage request resource.
+- [GameCenterGroupGameCenterAchievementsV2LinkagesResponse](gamecentergroupgamecenterachievementsv2linkagesresponse.md): A response that contains a list of Game Center group Game Center achievement linkage resources.
+- [GameCenterGroupGameCenterLeaderboardSetsV2LinkagesRequest](gamecentergroupgamecenterleaderboardsetsv2linkagesrequest.md): The data structure that represents a Game Center group Game Center leaderboard set linkage request resource.
+- [GameCenterGroupGameCenterLeaderboardSetsV2LinkagesResponse](gamecentergroupgamecenterleaderboardsetsv2linkagesresponse.md): A response that contains a list of Game Center group Game Center leaderboard set linkage resources.
+- [GameCenterGroupGameCenterLeaderboardsV2LinkagesRequest](gamecentergroupgamecenterleaderboardsv2linkagesrequest.md): The data structure that represents a Game Center group Game Center leaderboard linkage request resource.
+- [GameCenterGroupGameCenterLeaderboardsV2LinkagesResponse](gamecentergroupgamecenterleaderboardsv2linkagesresponse.md): A response that contains a list of Game Center group Game Center leaderboard linkage resources.
+- [GameCenterGroupGameCenterAchievementsLinkagesRequest](gamecentergroupgamecenterachievementslinkagesrequest.md): Deprecated. The request body you use to create a relationship between a group and an achievement.
+- [GameCenterGroupGameCenterAchievementsLinkagesResponse](gamecentergroupgamecenterachievementslinkagesresponse.md): Deprecated. A response that confirms a relationship between a group and an achievement.
+- [GameCenterGroupGameCenterLeaderboardSetsLinkagesRequest](gamecentergroupgamecenterleaderboardsetslinkagesrequest.md): Deprecated. The request body you use to create a relationship between a group and a leaderboard set.
+- [GameCenterGroupGameCenterLeaderboardSetsLinkagesResponse](gamecentergroupgamecenterleaderboardsetslinkagesresponse.md): Deprecated. A response that confirms a relationship between a group and leaderboard set.
+- [GameCenterGroupGameCenterLeaderboardsLinkagesRequest](gamecentergroupgamecenterleaderboardslinkagesrequest.md): Deprecated. The request body you use to create a relationship between a group and a leaderboard.
+- [GameCenterGroupGameCenterLeaderboardsLinkagesResponse](gamecentergroupgamecenterleaderboardslinkagesresponse.md): Deprecated. A response that confirms a relationship between a group and a leaderboard.
+- [GameCenterGroupResponse](gamecentergroupresponse.md): A response containing a single Game Center group that shares leaderboards and achievements across apps.
+- [GameCenterGroupUpdateRequest](gamecentergroupupdaterequest.md): The request body you use to update a group.
+- [GameCenterGroupsResponse](gamecentergroupsresponse.md): A response that contains one or more groups.
+- [GameCenterGroupGameCenterActivitiesLinkagesResponse](gamecentergroupgamecenteractivitieslinkagesresponse.md)
+- [GameCenterGroupGameCenterChallengesLinkagesResponse](gamecentergroupgamecenterchallengeslinkagesresponse.md)
+- [GameCenterGroupGameCenterDetailsLinkagesResponse](gamecentergroupgamecenterdetailslinkagesresponse.md)
+
+## See Also
+
+### Details and groups
+
+- [Game Center details](game-center-details.md): Manage enablement, achievement, leaderboard, and localization details for your apps.

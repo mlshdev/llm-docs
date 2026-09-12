@@ -1,0 +1,216 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclustergeneralcommissioning](https://developer.apple.com/documentation/matter/mtrbaseclustergeneralcommissioning)
+
+# MTRBaseClusterGeneralCommissioning (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```swift
+class MTRBaseClusterGeneralCommissioning
+```
+
+## Topics
+
+### Initializers
+
+- [init(device:endpoint:queue:)](mtrbaseclustergeneralcommissioning/init%28device_endpoint_queue_%29.md): Deprecated.
+- [init(device:endpointID:queue:)](mtrbaseclustergeneralcommissioning/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [armFailSafe(with:completion:)](mtrbaseclustergeneralcommissioning/armfailsafe%28with_completion_%29.md)
+- [armFailSafe(with:completionHandler:)](mtrbaseclustergeneralcommissioning/armfailsafe%28with_completionhandler_%29.md): Deprecated.
+- [commissioningComplete(completion:)](mtrbaseclustergeneralcommissioning/commissioningcomplete%28completion_%29.md)
+- [commissioningComplete(completionHandler:)](mtrbaseclustergeneralcommissioning/commissioningcomplete%28completionhandler_%29.md): Deprecated.
+- [commissioningComplete(with:completion:)](mtrbaseclustergeneralcommissioning/commissioningcomplete%28with_completion_%29.md)
+- [commissioningComplete(with:completionHandler:)](mtrbaseclustergeneralcommissioning/commissioningcomplete%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandList(completion:)](mtrbaseclustergeneralcommissioning/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandList(completionHandler:)](mtrbaseclustergeneralcommissioning/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(completion:)](mtrbaseclustergeneralcommissioning/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeList(completionHandler:)](mtrbaseclustergeneralcommissioning/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeBasicCommissioningInfo(completion:)](mtrbaseclustergeneralcommissioning/readattributebasiccommissioninginfo%28completion_%29.md)
+- [readAttributeBasicCommissioningInfo(completionHandler:)](mtrbaseclustergeneralcommissioning/readattributebasiccommissioninginfo%28completionhandler_%29.md): Deprecated.
+- [readAttributeBreadcrumb(completion:)](mtrbaseclustergeneralcommissioning/readattributebreadcrumb%28completion_%29.md)
+- [readAttributeBreadcrumb(completionHandler:)](mtrbaseclustergeneralcommissioning/readattributebreadcrumb%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(completion:)](mtrbaseclustergeneralcommissioning/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevision(completionHandler:)](mtrbaseclustergeneralcommissioning/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(completion:)](mtrbaseclustergeneralcommissioning/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMap(completionHandler:)](mtrbaseclustergeneralcommissioning/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(completion:)](mtrbaseclustergeneralcommissioning/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandList(completionHandler:)](mtrbaseclustergeneralcommissioning/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeLocationCapability(completion:)](mtrbaseclustergeneralcommissioning/readattributelocationcapability%28completion_%29.md)
+- [readAttributeLocationCapability(completionHandler:)](mtrbaseclustergeneralcommissioning/readattributelocationcapability%28completionhandler_%29.md): Deprecated.
+- [readAttributeRegulatoryConfig(completion:)](mtrbaseclustergeneralcommissioning/readattributeregulatoryconfig%28completion_%29.md)
+- [readAttributeRegulatoryConfig(completionHandler:)](mtrbaseclustergeneralcommissioning/readattributeregulatoryconfig%28completionhandler_%29.md): Deprecated.
+- [readAttributeSupportsConcurrentConnection(completion:)](mtrbaseclustergeneralcommissioning/readattributesupportsconcurrentconnection%28completion_%29.md)
+- [readAttributeSupportsConcurrentConnection(completionHandler:)](mtrbaseclustergeneralcommissioning/readattributesupportsconcurrentconnection%28completionhandler_%29.md): Deprecated.
+- [setRegulatoryConfigWith(\_:completion:)](mtrbaseclustergeneralcommissioning/setregulatoryconfigwith%28__completion_%29.md)
+- [setRegulatoryConfigWith(\_:completionHandler:)](mtrbaseclustergeneralcommissioning/setregulatoryconfigwith%28__completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclustergeneralcommissioning/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustergeneralcommissioning/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeList(with:subscriptionEstablished:reportHandler:)](mtrbaseclustergeneralcommissioning/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustergeneralcommissioning/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBasicCommissioningInfo(with:subscriptionEstablished:reportHandler:)](mtrbaseclustergeneralcommissioning/subscribeattributebasiccommissioninginfo%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeBasicCommissioningInfo(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustergeneralcommissioning/subscribeattributebasiccommissioninginfo%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBreadcrumb(with:subscriptionEstablished:reportHandler:)](mtrbaseclustergeneralcommissioning/subscribeattributebreadcrumb%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeBreadcrumb(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustergeneralcommissioning/subscribeattributebreadcrumb%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevision(with:subscriptionEstablished:reportHandler:)](mtrbaseclustergeneralcommissioning/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevision(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustergeneralcommissioning/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMap(with:subscriptionEstablished:reportHandler:)](mtrbaseclustergeneralcommissioning/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMap(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustergeneralcommissioning/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclustergeneralcommissioning/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustergeneralcommissioning/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLocationCapability(with:subscriptionEstablished:reportHandler:)](mtrbaseclustergeneralcommissioning/subscribeattributelocationcapability%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLocationCapability(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustergeneralcommissioning/subscribeattributelocationcapability%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeRegulatoryConfig(with:subscriptionEstablished:reportHandler:)](mtrbaseclustergeneralcommissioning/subscribeattributeregulatoryconfig%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeRegulatoryConfig(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustergeneralcommissioning/subscribeattributeregulatoryconfig%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSupportsConcurrentConnection(with:subscriptionEstablished:reportHandler:)](mtrbaseclustergeneralcommissioning/subscribeattributesupportsconcurrentconnection%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSupportsConcurrentConnection(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustergeneralcommissioning/subscribeattributesupportsconcurrentconnection%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [writeAttributeBreadcrumb(withValue:completion:)](mtrbaseclustergeneralcommissioning/writeattributebreadcrumb%28withvalue_completion_%29.md)
+- [writeAttributeBreadcrumb(withValue:completionHandler:)](mtrbaseclustergeneralcommissioning/writeattributebreadcrumb%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeBreadcrumb(withValue:params:completion:)](mtrbaseclustergeneralcommissioning/writeattributebreadcrumb%28withvalue_params_completion_%29.md)
+- [writeAttributeBreadcrumb(withValue:params:completionHandler:)](mtrbaseclustergeneralcommissioning/writeattributebreadcrumb%28withvalue_params_completionhandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustergeneralcommissioning/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustergeneralcommissioning/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustergeneralcommissioning/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustergeneralcommissioning/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeBasicCommissioningInfo(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustergeneralcommissioning/readattributebasiccommissioninginfo%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBasicCommissioningInfo(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustergeneralcommissioning/readattributebasiccommissioninginfo%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeBreadcrumb(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustergeneralcommissioning/readattributebreadcrumb%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBreadcrumb(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustergeneralcommissioning/readattributebreadcrumb%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevision(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustergeneralcommissioning/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustergeneralcommissioning/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMap(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustergeneralcommissioning/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustergeneralcommissioning/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustergeneralcommissioning/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustergeneralcommissioning/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLocationCapability(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustergeneralcommissioning/readattributelocationcapability%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLocationCapability(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustergeneralcommissioning/readattributelocationcapability%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeRegulatoryConfig(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustergeneralcommissioning/readattributeregulatoryconfig%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeRegulatoryConfig(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustergeneralcommissioning/readattributeregulatoryconfig%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSupportsConcurrentConnection(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustergeneralcommissioning/readattributesupportsconcurrentconnection%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSupportsConcurrentConnection(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustergeneralcommissioning/readattributesupportsconcurrentconnection%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRBaseClusterGeneralCommissioning (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```objectivec
+@interface MTRBaseClusterGeneralCommissioning : MTRGenericBaseCluster
+```
+
+## Topics
+
+### Initializers
+
+- [initWithDevice:endpoint:queue:](mtrbaseclustergeneralcommissioning/init%28device_endpoint_queue_%29.md): Deprecated.
+- [initWithDevice:endpointID:queue:](mtrbaseclustergeneralcommissioning/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [armFailSafeWithParams:completion:](mtrbaseclustergeneralcommissioning/armfailsafe%28with_completion_%29.md)
+- [armFailSafeWithParams:completionHandler:](mtrbaseclustergeneralcommissioning/armfailsafe%28with_completionhandler_%29.md): Deprecated.
+- [commissioningCompleteWithCompletion:](mtrbaseclustergeneralcommissioning/commissioningcomplete%28completion_%29.md)
+- [commissioningCompleteWithCompletionHandler:](mtrbaseclustergeneralcommissioning/commissioningcomplete%28completionhandler_%29.md): Deprecated.
+- [commissioningCompleteWithParams:completion:](mtrbaseclustergeneralcommissioning/commissioningcomplete%28with_completion_%29.md)
+- [commissioningCompleteWithParams:completionHandler:](mtrbaseclustergeneralcommissioning/commissioningcomplete%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandListWithCompletion:](mtrbaseclustergeneralcommissioning/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandListWithCompletionHandler:](mtrbaseclustergeneralcommissioning/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithCompletion:](mtrbaseclustergeneralcommissioning/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeListWithCompletionHandler:](mtrbaseclustergeneralcommissioning/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeBasicCommissioningInfoWithCompletion:](mtrbaseclustergeneralcommissioning/readattributebasiccommissioninginfo%28completion_%29.md)
+- [readAttributeBasicCommissioningInfoWithCompletionHandler:](mtrbaseclustergeneralcommissioning/readattributebasiccommissioninginfo%28completionhandler_%29.md): Deprecated.
+- [readAttributeBreadcrumbWithCompletion:](mtrbaseclustergeneralcommissioning/readattributebreadcrumb%28completion_%29.md)
+- [readAttributeBreadcrumbWithCompletionHandler:](mtrbaseclustergeneralcommissioning/readattributebreadcrumb%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithCompletion:](mtrbaseclustergeneralcommissioning/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevisionWithCompletionHandler:](mtrbaseclustergeneralcommissioning/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithCompletion:](mtrbaseclustergeneralcommissioning/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMapWithCompletionHandler:](mtrbaseclustergeneralcommissioning/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithCompletion:](mtrbaseclustergeneralcommissioning/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandListWithCompletionHandler:](mtrbaseclustergeneralcommissioning/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeLocationCapabilityWithCompletion:](mtrbaseclustergeneralcommissioning/readattributelocationcapability%28completion_%29.md)
+- [readAttributeLocationCapabilityWithCompletionHandler:](mtrbaseclustergeneralcommissioning/readattributelocationcapability%28completionhandler_%29.md): Deprecated.
+- [readAttributeRegulatoryConfigWithCompletion:](mtrbaseclustergeneralcommissioning/readattributeregulatoryconfig%28completion_%29.md)
+- [readAttributeRegulatoryConfigWithCompletionHandler:](mtrbaseclustergeneralcommissioning/readattributeregulatoryconfig%28completionhandler_%29.md): Deprecated.
+- [readAttributeSupportsConcurrentConnectionWithCompletion:](mtrbaseclustergeneralcommissioning/readattributesupportsconcurrentconnection%28completion_%29.md)
+- [readAttributeSupportsConcurrentConnectionWithCompletionHandler:](mtrbaseclustergeneralcommissioning/readattributesupportsconcurrentconnection%28completionhandler_%29.md): Deprecated.
+- [setRegulatoryConfigWithParams:completion:](mtrbaseclustergeneralcommissioning/setregulatoryconfigwith%28__completion_%29.md)
+- [setRegulatoryConfigWithParams:completionHandler:](mtrbaseclustergeneralcommissioning/setregulatoryconfigwith%28__completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustergeneralcommissioning/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustergeneralcommissioning/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustergeneralcommissioning/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustergeneralcommissioning/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBasicCommissioningInfoWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustergeneralcommissioning/subscribeattributebasiccommissioninginfo%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeBasicCommissioningInfoWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustergeneralcommissioning/subscribeattributebasiccommissioninginfo%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeBreadcrumbWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustergeneralcommissioning/subscribeattributebreadcrumb%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeBreadcrumbWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustergeneralcommissioning/subscribeattributebreadcrumb%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevisionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustergeneralcommissioning/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevisionWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustergeneralcommissioning/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMapWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustergeneralcommissioning/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMapWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustergeneralcommissioning/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustergeneralcommissioning/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustergeneralcommissioning/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLocationCapabilityWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustergeneralcommissioning/subscribeattributelocationcapability%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLocationCapabilityWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustergeneralcommissioning/subscribeattributelocationcapability%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeRegulatoryConfigWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustergeneralcommissioning/subscribeattributeregulatoryconfig%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeRegulatoryConfigWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustergeneralcommissioning/subscribeattributeregulatoryconfig%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSupportsConcurrentConnectionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustergeneralcommissioning/subscribeattributesupportsconcurrentconnection%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSupportsConcurrentConnectionWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustergeneralcommissioning/subscribeattributesupportsconcurrentconnection%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [writeAttributeBreadcrumbWithValue:completion:](mtrbaseclustergeneralcommissioning/writeattributebreadcrumb%28withvalue_completion_%29.md)
+- [writeAttributeBreadcrumbWithValue:completionHandler:](mtrbaseclustergeneralcommissioning/writeattributebreadcrumb%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeBreadcrumbWithValue:params:completion:](mtrbaseclustergeneralcommissioning/writeattributebreadcrumb%28withvalue_params_completion_%29.md)
+- [writeAttributeBreadcrumbWithValue:params:completionHandler:](mtrbaseclustergeneralcommissioning/writeattributebreadcrumb%28withvalue_params_completionhandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustergeneralcommissioning/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustergeneralcommissioning/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustergeneralcommissioning/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustergeneralcommissioning/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeBasicCommissioningInfoWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustergeneralcommissioning/readattributebasiccommissioninginfo%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBasicCommissioningInfoWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustergeneralcommissioning/readattributebasiccommissioninginfo%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeBreadcrumbWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustergeneralcommissioning/readattributebreadcrumb%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeBreadcrumbWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustergeneralcommissioning/readattributebreadcrumb%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevisionWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustergeneralcommissioning/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustergeneralcommissioning/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMapWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustergeneralcommissioning/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustergeneralcommissioning/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustergeneralcommissioning/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustergeneralcommissioning/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLocationCapabilityWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustergeneralcommissioning/readattributelocationcapability%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLocationCapabilityWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustergeneralcommissioning/readattributelocationcapability%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeRegulatoryConfigWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustergeneralcommissioning/readattributeregulatoryconfig%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeRegulatoryConfigWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustergeneralcommissioning/readattributeregulatoryconfig%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSupportsConcurrentConnectionWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustergeneralcommissioning/readattributesupportsconcurrentconnection%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSupportsConcurrentConnectionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustergeneralcommissioning/readattributesupportsconcurrentconnection%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)

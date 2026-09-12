@@ -1,0 +1,51 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/mapkitjs/coordinateregion/toboundingregion](https://developer.apple.com/documentation/mapkitjs/coordinateregion/toboundingregion)
+
+# toBoundingRegion()
+
+**Interface language:** Data
+
+**Framework:** MapKit JS  
+**Kind:** Instance Method  
+**Availability:** MapKit JS 5.0+
+
+Returns the bounding region that corresponds to the specified coordinate region.
+
+## Declaration
+
+```
+toBoundingRegion(): BoundingRegion;
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+A [BoundingRegion](../boundingregion.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+A bounding region is similar to a coordinate region; both represent a rectangular area on the 2D projected surface of the map. MapKit JS defines a coordinate region by a center coordinate and a span. The framework defines a bounding region by coordinates representing the rectangle’s northeast and southwest corners.
+
+The following example shows how to convert a coordinate region to a bounding region:
+
+```javascript
+// Create a coordinate region named myRegion.
+const coordinate = new mapkit.Coordinate(37.415, -122.048333);
+// The initializer requires parameters in the order of latitude, longitude.
+const span = new mapkit.CoordinateSpan(.016, .016);
+// The initializer requires parameters in the order of latitude delta, longitude delta.
+const myRegion = new mapkit.CoordinateRegion(coordinate, span);
+
+// Convert this coordinate region to a bounding region.
+const myBoundingRegion = myRegion.toBoundingRegion();
+```
+
+## See Also
+
+### Comparing, copying, and converting regions
+
+- [copy()](copy.md): Returns a copy of the calling coordinate region.
+- [equals()](equals.md): Returns a Boolean value indicating whether two regions are equal.
+- [toMapRect()](tomaprect.md): Deprecated. Returns the map rectangle that corresponds to the calling coordinate region.

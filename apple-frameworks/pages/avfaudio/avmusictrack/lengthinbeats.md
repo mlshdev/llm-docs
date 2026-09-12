@@ -1,0 +1,61 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfaudio/avmusictrack/lengthinbeats](https://developer.apple.com/documentation/avfaudio/avmusictrack/lengthinbeats)
+
+# lengthInBeats (Swift)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The total duration of the track, in beats.
+
+## Declaration
+
+```swift
+var lengthInBeats: AVMusicTimeStamp { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This property returns the beat of the last event in the track, plus any additional time that’s necessary to fade out the ending notes, or to round a loop point to a musical bar.
+
+If the user doesn’t set this value, the track length always adjusts to the end of the last active event in a track, and adjusts dynamically as the user adds or removes events.
+
+This property returns the maximum of the user-set track length or the calculated length.
+
+## See Also
+
+### Configuring the Track Duration
+
+- [lengthInSeconds](lengthinseconds.md): The total duration of the track, in seconds.
+
+# lengthInBeats (Objective-C)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The total duration of the track, in beats.
+
+## Declaration
+
+```objectivec
+@property (nonatomic) AVMusicTimeStamp lengthInBeats;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This property returns the beat of the last event in the track, plus any additional time that’s necessary to fade out the ending notes, or to round a loop point to a musical bar.
+
+If the user doesn’t set this value, the track length always adjusts to the end of the last active event in a track, and adjusts dynamically as the user adds or removes events.
+
+This property returns the maximum of the user-set track length or the calculated length.
+
+## See Also
+
+### Configuring the Track Duration
+
+- [lengthInSeconds](lengthinseconds.md): The total duration of the track, in seconds.

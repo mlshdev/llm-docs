@@ -1,0 +1,97 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiapplicationshortcuticon/init(contact:)](https://developer.apple.com/documentation/uikit/uiapplicationshortcuticon/init(contact:))
+
+# init(contact:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Initializer  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 9.0+ · visionOS 1.0+
+
+Creates a Home Screen quick action icon from the picture for a contact or a monogram of the contact name if the picture is unavailable.
+
+## Declaration
+
+```swift
+convenience init(contact: CNContact)
+```
+
+## Parameters
+
+- `contact`: The [CNContact](../../contacts/cncontact.md) contact object to derive the icon from.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A Home Screen quick action icon initialized with the contact’s picture or monogram.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+To use this method, pass in a contact from the user’s contacts database, available through the [CNContactStore](../../contacts/cncontactstore.md) object. If the contact you specify has a picture, the system creates a full-color quick action icon from that picture. If the contact has no picture, the system employs the contact’s initials and displays instead a monogram.
+
+> **Note**
+
+>  This method employs the [Contacts](../../contacts.md) framework.
+
+You can, alternatively, pass in a [CNContact](../../contacts/cncontact.md) object you create at runtime. Such a contact must have at least a first name or a last name. The quick action icon returned from this method is then a monogram built from the contact’s name. With this approach, it isn’t possible for you to provide an image for the quick action icon.
+
+Finally, you can call this method with an empty contact that you create by using the [CNContact](../../contacts/cncontact.md) class’s inherited [alloc](../../objectivec/nsobject-swift.class/alloc.md) and `init` methods. With this approach, the resulting icon is a monochrome silhouette.
+
+When providing a set of contact quick actions, ensure that every one of them has an icon. This ensures the best appearance for the set of quick actions.
+
+## See Also
+
+### Creating a quick action icon
+
+- [init(type:)](init%28type_%29.md): Creates a Home Screen quick action icon using a system-defined image.
+- [init(templateImageName:)](init%28templateimagename_%29.md): Creates a Home Screen quick action icon based on an image in your app’s bundle, preferably in an asset catalog.
+- [init(systemImageName:)](init%28systemimagename_%29.md): Creates a Home Screen quick action icon using a system symbol image.
+
+# iconWithContact: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Type Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · visionOS 1.0+
+
+Creates a Home Screen quick action icon from the picture for a contact or a monogram of the contact name if the picture is unavailable.
+
+## Declaration
+
+```objectivec
++ (instancetype) iconWithContact:(CNContact *) contact;
+```
+
+## Parameters
+
+- `contact`: The [CNContact](../../contacts/cncontact.md) contact object to derive the icon from.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A Home Screen quick action icon initialized with the contact’s picture or monogram.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+To use this method, pass in a contact from the user’s contacts database, available through the [CNContactStore](../../contacts/cncontactstore.md) object. If the contact you specify has a picture, the system creates a full-color quick action icon from that picture. If the contact has no picture, the system employs the contact’s initials and displays instead a monogram.
+
+> **Note**
+
+>  This method employs the [Contacts](../../contacts.md) framework.
+
+You can, alternatively, pass in a [CNContact](../../contacts/cncontact.md) object you create at runtime. Such a contact must have at least a first name or a last name. The quick action icon returned from this method is then a monogram built from the contact’s name. With this approach, it isn’t possible for you to provide an image for the quick action icon.
+
+Finally, you can call this method with an empty contact that you create by using the [CNContact](../../contacts/cncontact.md) class’s inherited [alloc](../../objectivec/nsobject-swift.class/alloc.md) and `init` methods. With this approach, the resulting icon is a monochrome silhouette.
+
+When providing a set of contact quick actions, ensure that every one of them has an icon. This ensures the best appearance for the set of quick actions.
+
+## See Also
+
+### Creating a quick action icon
+
+- [iconWithType:](init%28type_%29.md): Creates a Home Screen quick action icon using a system-defined image.
+- [iconWithTemplateImageName:](init%28templateimagename_%29.md): Creates a Home Screen quick action icon based on an image in your app’s bundle, preferably in an asset catalog.
+- [iconWithSystemImageName:](init%28systemimagename_%29.md): Creates a Home Screen quick action icon using a system symbol image.

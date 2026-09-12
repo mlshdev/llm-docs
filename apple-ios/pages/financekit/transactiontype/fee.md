@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/financekit/transactiontype/fee](https://developer.apple.com/documentation/financekit/transactiontype/fee)
+
+# TransactionType.fee
+
+**Framework:** FinanceKit  
+**Kind:** Case  
+**Availability:** iOS 17.4+ · iPadOS 17.4+
+
+A fee or charge levied by the account provider.
+
+## Declaration
+
+```swift
+case fee
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+For example, an overdraft fee or foreign currency commission.
+
+## See Also
+
+### Enumeration Cases
+
+- [TransactionType.adjustment](adjustment.md): A credit or debit adjustment transaction.
+- [TransactionType.atm](atm.md): An ATM transaction.
+- [TransactionType.billPayment](billpayment.md): A bill payment, usually carried out through an eBill or eCheck system.
+- [TransactionType.check](check.md): A check payment.
+- [TransactionType.deposit](deposit.md): A deposit of money by a payer into a payee’s bank account.
+- [TransactionType.directDebit](directdebit.md): A payment to a third party on agreed dates, typically in order to pay bills.
+- [TransactionType.directDeposit](directdeposit.md): A deposit of money by a payer directly into a payee’s bank account.
+- [TransactionType.dividend](dividend.md): A distribution of a company’s earnings to its shareholders.
+- [TransactionType.interest](interest.md): A credit or debit due to interest earned or incurred.
+- [TransactionType.loan](loan.md): A loan drawdown or repayment.
+- [TransactionType.pointOfSale](pointofsale.md): A Point of Sales transaction.
+- [TransactionType.refund](refund.md): A refund.
+- [TransactionType.standingOrder](standingorder.md): A regular payment of a fixed amount that’s paid on a specified date.
+- [TransactionType.transfer](transfer.md): A transfer between accounts.
+- [TransactionType.unknown](unknown.md): The transaction’s category doesn’t map to a known value.

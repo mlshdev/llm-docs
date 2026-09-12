@@ -1,0 +1,61 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nscoder/encode(_:forkey:)-6wbby](https://developer.apple.com/documentation/foundation/nscoder/encode(_:forkey:)-6wbby)
+
+# encode(\_:forKey:) (Swift)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Encodes a given Core Media time structure and associates it with a specified key.
+
+## Declaration
+
+```swift
+func encode(_ time: CMTime, forKey key: String)
+```
+
+## Parameters
+
+- `time`: A `CMTime` structure.
+- `key`: The key with which to associate `time` in the archive.
+
+## See Also
+
+### Related Documentation
+
+- [decodeTime(forKey:)](decodetime%28forkey_%29.md): Returns the Core Media time structure associated with a given key.
+
+### Encoding Core Media Time Structures
+
+- [encode(\_:forKey:)](encode%28__forkey_%29-46lo8.md): Encodes a given Core Media time range structure and associates it with a specified key.
+- [encode(\_:forKey:)](encode%28__forkey_%29-8tefb.md): Encodes a given Core Media time mapping structure and associates it with a specified key.
+
+# encodeCMTime:forKey: (Objective-C)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Encodes a given Core Media time structure and associates it with a specified key.
+
+## Declaration
+
+```objectivec
+- (void) encodeCMTime:(CMTime) time forKey:(NSString *) key;
+```
+
+## Parameters
+
+- `time`: A `CMTime` structure.
+- `key`: The key with which to associate `time` in the archive.
+
+## See Also
+
+### Related Documentation
+
+- [decodeCMTimeForKey:](decodetime%28forkey_%29.md): Returns the Core Media time structure associated with a given key.
+
+### Encoding Core Media Time Structures
+
+- [encodeCMTimeRange:forKey:](encode%28__forkey_%29-46lo8.md): Encodes a given Core Media time range structure and associates it with a specified key.
+- [encodeCMTimeMapping:forKey:](encode%28__forkey_%29-8tefb.md): Encodes a given Core Media time mapping structure and associates it with a specified key.

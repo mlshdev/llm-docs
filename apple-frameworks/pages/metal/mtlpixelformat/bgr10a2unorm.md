@@ -1,0 +1,67 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtlpixelformat/bgr10a2unorm](https://developer.apple.com/documentation/metal/mtlpixelformat/bgr10a2unorm)
+
+# MTLPixelFormat.bgr10a2Unorm (Swift)
+
+**Framework:** Metal  
+**Kind:** Case  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+A 32-bit packed pixel format with four normalized unsigned integer components: 10-bit blue, 10-bit green, 10-bit red, and 2-bit alpha.
+
+## Declaration
+
+```swift
+case bgr10a2Unorm
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Pixel data is stored in blue, green, red, and alpha order, from least significant bit to most significant bit.
+
+![Bit layout diagram showing the pixel data storage arrangement of the bgr10a2Unorm pixel format. The blue component is stored in bits 0 to 9, the green component is stored in bits 10 to 19, the red component is stored in bits 20 to 29, and the alpha component is stored in bits 30 to 31.](https://developer.apple.com/images/com.apple.metal/bgr10a2Unorm-1@2x.png)
+
+On devices with a wide color display, use this format instead of [MTLPixelFormat.bgra8Unorm](bgra8unorm.md) to reduce banding artifacts in your displayed content.
+
+## See Also
+
+### Packed 32-bit pixel formats
+
+- [MTLPixelFormat.rgb10a2Unorm](rgb10a2unorm.md): A 32-bit packed pixel format with four normalized unsigned integer components: 10-bit red, 10-bit green, 10-bit blue, and 2-bit alpha.
+- [MTLPixelFormat.rgb10a2Uint](rgb10a2uint.md): A 32-bit packed pixel format with four unsigned integer components: 10-bit red, 10-bit green, 10-bit blue, and 2-bit alpha.
+- [MTLPixelFormat.rg11b10Float](rg11b10float.md): 32-bit format with floating-point color components, 11 bits each for red and green and 10 bits for blue.
+- [MTLPixelFormat.rgb9e5Float](rgb9e5float.md): Packed 32-bit format with floating-point color components: 9 bits each for RGB and 5 bits for an exponent shared by RGB, packed into 32 bits.
+
+# MTLPixelFormatBGR10A2Unorm (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Enumeration Case  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+A 32-bit packed pixel format with four normalized unsigned integer components: 10-bit blue, 10-bit green, 10-bit red, and 2-bit alpha.
+
+## Declaration
+
+```objectivec
+MTLPixelFormatBGR10A2Unorm
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Pixel data is stored in blue, green, red, and alpha order, from least significant bit to most significant bit.
+
+![Bit layout diagram showing the pixel data storage arrangement of the bgr10a2Unorm pixel format. The blue component is stored in bits 0 to 9, the green component is stored in bits 10 to 19, the red component is stored in bits 20 to 29, and the alpha component is stored in bits 30 to 31.](https://developer.apple.com/images/com.apple.metal/bgr10a2Unorm-1@2x.png)
+
+On devices with a wide color display, use this format instead of [MTLPixelFormatBGRA8Unorm](bgra8unorm.md) to reduce banding artifacts in your displayed content.
+
+## See Also
+
+### Packed 32-bit pixel formats
+
+- [MTLPixelFormatRGB10A2Unorm](rgb10a2unorm.md): A 32-bit packed pixel format with four normalized unsigned integer components: 10-bit red, 10-bit green, 10-bit blue, and 2-bit alpha.
+- [MTLPixelFormatRGB10A2Uint](rgb10a2uint.md): A 32-bit packed pixel format with four unsigned integer components: 10-bit red, 10-bit green, 10-bit blue, and 2-bit alpha.
+- [MTLPixelFormatRG11B10Float](rg11b10float.md): 32-bit format with floating-point color components, 11 bits each for red and green and 10 bits for blue.
+- [MTLPixelFormatRGB9E5Float](rgb9e5float.md): Packed 32-bit format with floating-point color components: 9 bits each for RGB and 5 bits for an exponent shared by RGB, packed into 32 bits.

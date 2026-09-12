@@ -1,0 +1,119 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/timemachine](https://developer.apple.com/documentation/devicemanagement/timemachine)
+
+# TimeMachine
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Device Management Profile  
+**Availability:** macOS 10.7+
+
+The payload that configures Time Machine.
+
+## Declaration
+
+```
+object TimeMachine
+```
+
+## Properties
+
+- `AutoBackup` — `boolean`: If `true`, performs automatic backups at regular intervals.
+  **Default:** `true`
+- `BackupAllVolumes` — `boolean`: If `true`, backs up only the startup volume by default.
+  **Default:** `false`
+- `BackupDestURL` — `string` (required): The URL of the backup destination.
+- `BackupSizeMB` — `integer`: The backup size limit, in megabytes. Set to 0 for unlimited.
+  **Default:** `0`
+- `BackupSkipSys` — `boolean`: If `true`, skips system files and folders by default.
+  **Default:** `false`
+- `BasePaths` — `[string]`: The list of paths to back up besides the startup volume.
+- `MobileBackups` — `boolean`: If `true`, create local backup snapshots when not connected to the network.
+  **Default:** `true`
+- `SkipPaths` — `[string]`: The path to skip from start volume.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Specify `com.apple.MCX.TimeMachine` as the payload type.
+
+<a id="Profile-availability"></a>
+
+### Profile availability
+
+|  |  |
+| --- | --- |
+| Device channel | macOS |
+| User channel | N/A |
+| Allow manual install | macOS |
+| Requires supervision | N/A |
+| Requires user-approved MDM | N/A |
+| Allowed in user enrollment | N/A |
+| Allow multiple payloads | N/A |
+
+<a id="Profile-example"></a>
+
+### Profile example
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>AutoBackup</key>
+            <true/>
+            <key>BackupAllVolumes</key>
+            <true/>
+            <key>BackupDestURL</key>
+            <string>server.example.com</string>
+            <key>BackupSizeMB</key>
+            <integer>1000</integer>
+            <key>BackupSkipSys</key>
+            <false/>
+            <key>MobileBackups</key>
+            <true/>
+            <key>SkipPaths</key>
+            <array>
+                <string>/Users/Shared</string>
+            </array>
+            <key>PayloadIdentifier</key>
+            <string>com.example.mytimemachinepayload</string>
+            <key>PayloadType</key>
+            <string>com.apple.MCX.TimeMachine</string>
+            <key>PayloadUUID</key>
+            <string>5f0be3a6-c9b8-44db-a2ae-414311772fdb</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+    </array>
+    <key>PayloadDisplayName</key>
+    <string>Time Machine</string>
+    <key>PayloadIdentifier</key>
+    <string>com.example.myprofile</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>68ca5f6c-13e8-43c3-b2ee-8bc405f5eed5</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>
+```
+
+## See Also
+
+### User experience
+
+- [Accessibility](accessibility.md): The payload that configures the accessibility features of the device.
+- [Desktop](desktop.md): The payload that configures the desktop wallpaper.
+- [Dock](dock.md): The payload that configures the Dock.
+- [Finder](finder.md): The payload that configures Finder settings.
+- [HomeScreenLayout](homescreenlayout.md): The payload that configures the Home Screen layout.
+- [ManagedMenuExtras](managedmenuextras.md): The payload that configures menu extras.
+- [Notifications](notifications.md): The payload that configures notifications.
+- [ScreensaverUser](screensaveruser.md): The payload that configures a user’s screen saver settings.
+- [SetupAssistant](setupassistant.md): The payload that configures Setup Assistant settings.

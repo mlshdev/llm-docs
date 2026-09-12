@@ -1,0 +1,82 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/impulseaction](https://developer.apple.com/documentation/realitykit/impulseaction)
+
+# ImpulseAction
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
+
+An action that applies an impulse to the physics body at its center of mass when played as an animation.
+
+## Declaration
+
+```swift
+struct ImpulseAction
+```
+
+<a id="overview"></a>
+
+## Overview
+
+This action requires a [CollisionComponent](collisioncomponent.md) and [PhysicsBodyComponent](physicsbodycomponent.md) with the [mode](physicsbodycomponent/mode.md) set to [PhysicsBodyMode.dynamic](physicsbodymode/dynamic.md). Without these settings, the impulse has no effect on the entity.
+
+The example below creates an animation which applies an impulse to the entity after five seconds.
+
+```swift
+// Create an action to apply an impulse, forcing the object to move upwards.
+let impulseAction = ImpulseAction(linearImpulse: [0, 1, 0])
+
+// Create a small positive duration value.
+let duration: TimeInterval = 1 / 30.0
+
+// Create an animation for the action, which will start playing
+// after five seconds.
+let impulseAnimation = try AnimationResource
+    .makeActionAnimation(for: impulseAction,
+                         duration: duration,
+                         delay: 5.0)
+
+// Play the sequence animation that will play the actions.
+entity.playAnimation(impulseAnimation)
+```
+
+> **Important**
+
+> This action does not directly animate a bound property, such as [BindTarget.transform](bindtarget/transform.md).
+
+> **Tip**
+
+> This action performs instantaneously, consider supplying a small positive duration value when creating the animation.
+
+## Topics
+
+### Initializers
+
+- [init(targetEntity:linearImpulse:)](impulseaction/init%28targetentity_linearimpulse_%29.md): Creates a new impulse action.
+
+### Instance Properties
+
+- [animatedValueType](impulseaction/animatedvaluetype.md): The type for the value that the action modifies over time.
+- [linearImpulse](impulseaction/linearimpulse.md): An impulse in newton seconds (in physics simulation space).
+- [targetEntity](impulseaction/targetentity.md): The entity that the impulse acts upon.
+
+## Relationships
+
+### Conforms To
+
+- [Decodable](https://developer.apple.com/documentation/swift/decodable)
+- [Encodable](https://developer.apple.com/documentation/swift/encodable)
+- [EntityAction](entityaction.md)
+
+## See Also
+
+### Built-in actions
+
+- [BillboardAction](billboardaction.md): An action that animates the blend factor of an entity’s billboard component.
+- [EmphasizeAction](emphasizeaction.md): An action that performs an animation to call attention to an entity.
+- [FromToByAction](fromtobyaction.md): An action that starts, stops, or increments by a specific value.
+- [OrbitEntityAction](orbitentityaction.md): An action which animates the transform of an entity to revolve around a specified pivot entity.
+- [PlayAnimationAction](playanimationaction.md): An action that plays an animation on the given target entity with a range of playback options.
+- [PlayAudioAction](playaudioaction.md): An action which plays an audio resource on the given target entity.
+- [SetEntityEnabledAction](setentityenabledaction.md): An action that enables or disables the targeted entity and its descendants when played as an animation.
+- [SpinAction](spinaction.md): An action which animates the transform of an entity to rotate around a specified local axis.

@@ -1,0 +1,129 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/loading-future-timeline-events](https://developer.apple.com/documentation/clockkit/loading-future-timeline-events)
+
+# Loading future timeline events (Swift)
+
+**Framework:** ClockKit  
+**Kind:** Article
+
+Preserve battery life and improve performance on the watch by providing a timeline with expected data and updates.
+
+<a id="overview"></a>
+
+## Overview
+
+ClockKit renders your complication in advance to ensure that it’s instantly available when the user glances at their watch. To minimize power usage, create a timeline that includes your app’s current data as well as future entries. These timeline entries let ClockKit automatically update your complication without requiring further background tasks.
+
+For example, a meeting complication could display all the meetings that the user currently has scheduled, with a timeline entry for each meeting. If details about the meeting change, your server can use PushKit [complication](../pushkit/pkpushtype/complication.md) notifications to alert the user of these changes, updating the timeline as needed. For more information, see [Keeping your complications up to date](keeping-your-complications-up-to-date.md).
+
+<a id="Batch-Load-Data"></a>
+
+### Batch Load Data
+
+To batch load data for future timeline entries, implement your data source’s [getTimelineEndDate(for:withHandler:)](clkcomplicationdatasource/gettimelineenddate%28for_withhandler_%29.md) method and pass the handler the date of the last timeline entry you can create. For example, a meeting app might return the date of the user’s last meeting.
+
+```swift
+func getTimelineEndDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
+    handler(myMeetings.last?.date)
+}
+```
+
+If your app can’t provide future data, pass `nil` to the handler.
+
+> **Note**
+
+>  In watchOS 6 and earlier the system sets the end date to [distantFuture](../foundation/nsdate/distantfuture.md) if you passed `nil` to [getTimelineEndDate(for:withHandler:)](clkcomplicationdatasource/gettimelineenddate%28for_withhandler_%29.md). To indicate that your app can batch load future timeline entries, implement your data source’s [getSupportedTimeTravelDirections(for:withHandler:)](clkcomplicationdatasource/getsupportedtimetraveldirections%28for_withhandler_%29.md) method, and pass [forward](clkcomplicationtimetraveldirections/forward.md) to the handler.
+
+Next, implement your data source’s [getTimelineEntries(for:after:limit:withHandler:)](clkcomplicationdatasource/gettimelineentries%28for_after_limit_withhandler_%29.md) method.
+
+This process is similar to implementing the [getCurrentTimelineEntry(for:withHandler:)](clkcomplicationdatasource/getcurrenttimelineentry%28for_withhandler_%29.md) and may reuse much of the same code. However, your implementation must create timeline entries starting at the specified date. The entries must occur in chronological order, and the `limit` parameter determines the maximum number of entries you can pass to the handler. ClockKit calls this method again whenever it needs to extend your timeline.
+
+For details on creating timeline entries, see [Creating a timeline entry](creating-a-timeline-entry.md).
+
+<a id="Schedule-Future-Events"></a>
+
+### Schedule Future Events
+
+When constructing your timeline entries, choose dates that make sense based on when the user needs to see the data. ClockKit displays a timeline entry at the time specified by the entry’s [date](clkcomplicationtimelineentry/date.md) property. For some types of data, you may want to specify a date before the event actually occurs. For example, if you’re implementing a meeting app, alert users to the meeting before it starts. One option is to set the dates so that the complication displays the next meeting, as soon as the current meeting begins.
+
+![An illustration showing three meetings in the timeline. For the future events, the date is set to the previous meeting’s start time.](https://developer.apple.com/images/com.apple.clockkit/media-3161329@2x.png)
+
+## See Also
+
+### Related Documentation
+
+- [Enabling Complications for Your watchOS App](enabling-complications-for-your-watchos-app.md): Set up your watchOS app’s complications.
+- [Adding Placeholders for Your Complication](adding-placeholders-for-your-complication.md): Provide the placeholders that users see when adding your complication to a watch face.
+
+### Articles
+
+- [Creating complications for your watchOS app](creating-complications-for-your-watchos-app.md): Set up and implement complications for your watchOS app.
+- [Declaring complications for your app](declaring-complications-for-your-app.md): Define the complications that your app supports.
+- [Creating a timeline entry](creating-a-timeline-entry.md): Package your app-specific data into a template and create a timeline entry for that template.
+- [Keeping your complications up to date](keeping-your-complications-up-to-date.md): Replace or extend the data in your complication’s timeline.
+- [Building complications with SwiftUI](building-complications-with-swiftui.md): Design the appearance of a graphic complication using SwiftUI.
+- [Displaying progress views and gauges](displaying-progress-views-and-gauges.md): Add rich visual data to your SwiftUI complications with progress views and gauges.
+- [Adding text to a complication](adding-text-to-a-complication.md): Use text in SwiftUI complications.
+
+# Loading future timeline events (Objective-C)
+
+**Framework:** ClockKit  
+**Kind:** Article
+
+Preserve battery life and improve performance on the watch by providing a timeline with expected data and updates.
+
+<a id="overview"></a>
+
+## Overview
+
+ClockKit renders your complication in advance to ensure that it’s instantly available when the user glances at their watch. To minimize power usage, create a timeline that includes your app’s current data as well as future entries. These timeline entries let ClockKit automatically update your complication without requiring further background tasks.
+
+For example, a meeting complication could display all the meetings that the user currently has scheduled, with a timeline entry for each meeting. If details about the meeting change, your server can use PushKit [PKPushTypeComplication](../pushkit/pkpushtype/complication.md) notifications to alert the user of these changes, updating the timeline as needed. For more information, see [Keeping your complications up to date](keeping-your-complications-up-to-date.md).
+
+<a id="Batch-Load-Data"></a>
+
+### Batch Load Data
+
+To batch load data for future timeline entries, implement your data source’s [getTimelineEndDateForComplication:withHandler:](clkcomplicationdatasource/gettimelineenddate%28for_withhandler_%29.md) method and pass the handler the date of the last timeline entry you can create. For example, a meeting app might return the date of the user’s last meeting.
+
+```swift
+func getTimelineEndDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
+    handler(myMeetings.last?.date)
+}
+```
+
+If your app can’t provide future data, pass `nil` to the handler.
+
+> **Note**
+
+>  In watchOS 6 and earlier the system sets the end date to [distantFuture](../foundation/nsdate/distantfuture.md) if you passed `nil` to [getTimelineEndDateForComplication:withHandler:](clkcomplicationdatasource/gettimelineenddate%28for_withhandler_%29.md). To indicate that your app can batch load future timeline entries, implement your data source’s [getSupportedTimeTravelDirectionsForComplication:withHandler:](clkcomplicationdatasource/getsupportedtimetraveldirections%28for_withhandler_%29.md) method, and pass [CLKComplicationTimeTravelDirectionForward](clkcomplicationtimetraveldirections/forward.md) to the handler.
+
+Next, implement your data source’s [getTimelineEntriesForComplication:afterDate:limit:withHandler:](clkcomplicationdatasource/gettimelineentries%28for_after_limit_withhandler_%29.md) method.
+
+This process is similar to implementing the [getCurrentTimelineEntryForComplication:withHandler:](clkcomplicationdatasource/getcurrenttimelineentry%28for_withhandler_%29.md) and may reuse much of the same code. However, your implementation must create timeline entries starting at the specified date. The entries must occur in chronological order, and the `limit` parameter determines the maximum number of entries you can pass to the handler. ClockKit calls this method again whenever it needs to extend your timeline.
+
+For details on creating timeline entries, see [Creating a timeline entry](creating-a-timeline-entry.md).
+
+<a id="Schedule-Future-Events"></a>
+
+### Schedule Future Events
+
+When constructing your timeline entries, choose dates that make sense based on when the user needs to see the data. ClockKit displays a timeline entry at the time specified by the entry’s [date](clkcomplicationtimelineentry/date.md) property. For some types of data, you may want to specify a date before the event actually occurs. For example, if you’re implementing a meeting app, alert users to the meeting before it starts. One option is to set the dates so that the complication displays the next meeting, as soon as the current meeting begins.
+
+![An illustration showing three meetings in the timeline. For the future events, the date is set to the previous meeting’s start time.](https://developer.apple.com/images/com.apple.clockkit/media-3161329@2x.png)
+
+## See Also
+
+### Related Documentation
+
+- [Enabling Complications for Your watchOS App](enabling-complications-for-your-watchos-app.md): Set up your watchOS app’s complications.
+- [Adding Placeholders for Your Complication](adding-placeholders-for-your-complication.md): Provide the placeholders that users see when adding your complication to a watch face.
+
+### Articles
+
+- [Creating complications for your watchOS app](creating-complications-for-your-watchos-app.md): Set up and implement complications for your watchOS app.
+- [Declaring complications for your app](declaring-complications-for-your-app.md): Define the complications that your app supports.
+- [Creating a timeline entry](creating-a-timeline-entry.md): Package your app-specific data into a template and create a timeline entry for that template.
+- [Keeping your complications up to date](keeping-your-complications-up-to-date.md): Replace or extend the data in your complication’s timeline.
+- [Building complications with SwiftUI](building-complications-with-swiftui.md): Design the appearance of a graphic complication using SwiftUI.
+- [Displaying progress views and gauges](displaying-progress-views-and-gauges.md): Add rich visual data to your SwiftUI complications with progress views and gauges.
+- [Adding text to a complication](adding-text-to-a-complication.md): Use text in SwiftUI complications.

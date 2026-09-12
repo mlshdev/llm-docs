@@ -1,0 +1,85 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/wkusercontentcontroller/add(_:name:)](https://developer.apple.com/documentation/webkit/wkusercontentcontroller/add(_:name:))
+
+# add(\_:name:) (Swift)
+
+**Framework:** WebKit  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · visionOS 1.0+
+
+Installs a message handler that you can call from your JavaScript code.
+
+## Declaration
+
+```swift
+func add(_ scriptMessageHandler: any WKScriptMessageHandler, name: String)
+```
+
+## Parameters
+
+- `scriptMessageHandler`: The message handler object that implements your custom code. This object must adopt the [WKScriptMessageHandler](../wkscriptmessagehandler.md) protocol.
+- `name`: The name of the message handler. This parameter must be unique within the user content controller and must not be an empty string.
+
+  The user content controller uses this parameter to define a JavaScript function for your message handler in the page’s main content world. The name of this function is `window.webkit.messageHandlers.``.postMessage(<messageBody>)`, where  corresponds to the value of this parameter.  For example, if you specify the string `MyFunction`, the user content controller defines the `window.webkit.messageHandlers.MyFunction.postMessage()` function in JavaScript.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+To execute your handler’s code, call the JavaScript function that this method defines. You may pass a parameter value to the method. The user content controller packages that value into an appropriate type and delivers it to your content handler’s delegate method.
+
+This method uses the content world from the [page](../wkcontentworld/page.md) property of [WKContentWorld](../wkcontentworld.md).
+
+## See Also
+
+### Adding and Removing Message Handlers
+
+- [add(\_:contentWorld:name:)](add%28__contentworld_name_%29.md): Installs a message handler that you can call from the specified content world in your JavaScript code.
+- [addScriptMessageHandler(\_:contentWorld:name:)](addscriptmessagehandler%28__contentworld_name_%29.md): Installs a message handler that returns a reply to your JavaScript code.
+- [removeScriptMessageHandler(forName:)](removescriptmessagehandler%28forname_%29.md): Uninstalls the custom message handler with the specified name from your JavaScript code.
+- [removeScriptMessageHandler(forName:contentWorld:)](removescriptmessagehandler%28forname_contentworld_%29.md): Uninstalls a custom message handler from the specified content world in your JavaScript code.
+- [removeAllScriptMessageHandlers(from:)](removeallscriptmessagehandlers%28from_%29.md): Uninstalls all custom message handlers from the specified content world in your JavaScript code.
+- [removeAllScriptMessageHandlers()](removeallscriptmessagehandlers%28%29.md): Uninstalls all custom message handlers associated with the user content controller.
+- [WKScriptMessageHandler](../wkscriptmessagehandler.md): An interface for receiving messages from JavaScript code running in a webpage.
+- [WKScriptMessageHandlerWithReply](../wkscriptmessagehandlerwithreply.md): An interface for responding to messages from JavaScript code running in a webpage.
+
+# addScriptMessageHandler:name: (Objective-C)
+
+**Framework:** WebKit  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · visionOS 1.0+
+
+Installs a message handler that you can call from your JavaScript code.
+
+## Declaration
+
+```objectivec
+- (void) addScriptMessageHandler:(id<WKScriptMessageHandler>) scriptMessageHandler name:(NSString *) name;
+```
+
+## Parameters
+
+- `scriptMessageHandler`: The message handler object that implements your custom code. This object must adopt the [WKScriptMessageHandler](../wkscriptmessagehandler.md) protocol.
+- `name`: The name of the message handler. This parameter must be unique within the user content controller and must not be an empty string.
+
+  The user content controller uses this parameter to define a JavaScript function for your message handler in the page’s main content world. The name of this function is `window.webkit.messageHandlers.``.postMessage(<messageBody>)`, where  corresponds to the value of this parameter.  For example, if you specify the string `MyFunction`, the user content controller defines the `window.webkit.messageHandlers.MyFunction.postMessage()` function in JavaScript.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+To execute your handler’s code, call the JavaScript function that this method defines. You may pass a parameter value to the method. The user content controller packages that value into an appropriate type and delivers it to your content handler’s delegate method.
+
+This method uses the content world from the [pageWorld](../wkcontentworld/page.md) property of [WKContentWorld](../wkcontentworld.md).
+
+## See Also
+
+### Adding and Removing Message Handlers
+
+- [addScriptMessageHandler:contentWorld:name:](add%28__contentworld_name_%29.md): Installs a message handler that you can call from the specified content world in your JavaScript code.
+- [addScriptMessageHandlerWithReply:contentWorld:name:](addscriptmessagehandler%28__contentworld_name_%29.md): Installs a message handler that returns a reply to your JavaScript code.
+- [removeScriptMessageHandlerForName:](removescriptmessagehandler%28forname_%29.md): Uninstalls the custom message handler with the specified name from your JavaScript code.
+- [removeScriptMessageHandlerForName:contentWorld:](removescriptmessagehandler%28forname_contentworld_%29.md): Uninstalls a custom message handler from the specified content world in your JavaScript code.
+- [removeAllScriptMessageHandlersFromContentWorld:](removeallscriptmessagehandlers%28from_%29.md): Uninstalls all custom message handlers from the specified content world in your JavaScript code.
+- [removeAllScriptMessageHandlers](removeallscriptmessagehandlers%28%29.md): Uninstalls all custom message handlers associated with the user content controller.
+- [WKScriptMessageHandler](../wkscriptmessagehandler.md): An interface for receiving messages from JavaScript code running in a webpage.
+- [WKScriptMessageHandlerWithReply](../wkscriptmessagehandlerwithreply.md): An interface for responding to messages from JavaScript code running in a webpage.

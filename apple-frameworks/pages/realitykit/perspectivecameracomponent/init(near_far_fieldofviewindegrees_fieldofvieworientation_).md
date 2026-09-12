@@ -1,0 +1,28 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/perspectivecameracomponent/init(near:far:fieldofviewindegrees:fieldofvieworientation:)](https://developer.apple.com/documentation/realitykit/perspectivecameracomponent/init(near:far:fieldofviewindegrees:fieldofvieworientation:))
+
+# init(near:far:fieldOfViewInDegrees:fieldOfViewOrientation:)
+
+**Framework:** RealityKit  
+**Kind:** Initializer  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
+
+Creates a perspective camera component from near and far clipping planes, a field of view, and an orientation.
+
+## Declaration
+
+```swift
+init(near: Float = 0.01, far: Float = .infinity, fieldOfViewInDegrees: Float = 60.0, fieldOfViewOrientation: CameraFieldOfViewOrientation = .vertical)
+```
+
+## Parameters
+
+- `near`: The minimum distance in meters from the camera that the camera can see.
+- `far`: The maximum distance in meters from the camera that the camera can see.
+- `fieldOfViewInDegrees`: The camera’s field of view in degrees.
+- `fieldOfViewOrientation`: The orientation of the field of view.
+
+## See Also
+
+### Creating a camera component
+
+- [init(near:far:fieldOfViewInDegrees:)](init%28near_far_fieldofviewindegrees_%29.md): Creates a perspective camera component from near and far clipping planes and a field of view.

@@ -1,0 +1,40 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/packagedescription/package/init(name:defaultlocalization:platforms:pkgconfig:providers:products:traits:dependencies:targets:swiftlanguagemodes:clanguagestandard:cxxlanguagestandard:)](https://developer.apple.com/documentation/packagedescription/package/init(name:defaultlocalization:platforms:pkgconfig:providers:products:traits:dependencies:targets:swiftlanguagemodes:clanguagestandard:cxxlanguagestandard:))
+
+# init(name:defaultLocalization:platforms:pkgConfig:providers:products:traits:dependencies:targets:swiftLanguageModes:cLanguageStandard:cxxLanguageStandard:)
+
+**Framework:** PackageDescription  
+**Kind:** Initializer  
+**Availability:** SwiftPM 6.1+
+
+Initializes a Swift package with configuration options you provide.
+
+## Declaration
+
+```swift
+init(name: String, defaultLocalization: LanguageTag? = nil, platforms: [SupportedPlatform]? = nil, pkgConfig: String? = nil, providers: [SystemPackageProvider]? = nil, products: [Product] = [], traits: Set<Trait> = [], dependencies: [Package.Dependency] = [], targets: [Target] = [], swiftLanguageModes: [SwiftLanguageMode]? = nil, cLanguageStandard: CLanguageStandard? = nil, cxxLanguageStandard: CXXLanguageStandard? = nil)
+```
+
+## Parameters
+
+- `name`: The name of the Swift package, or `nil` to use the package’s Git URL to deduce the name.
+- `defaultLocalization`: The default localization for resources.
+- `platforms`: The list of supported platforms with a custom deployment target.
+- `pkgConfig`: The name to use for C modules. If present, Swift Package Manager searches for a `<name>.pc` file to get the additional flags required for a system target.
+- `providers`: The package providers for a system target.
+- `products`: The list of products that this package makes available for clients to use.
+- `traits`: The set of traits this package provides.
+- `dependencies`: The list of package dependencies.
+- `targets`: The list of targets that are part of this package.
+- `swiftLanguageModes`: The list of Swift language modes with which this package is compatible.
+- `cLanguageStandard`: The C language standard to use for all C targets in this package.
+- `cxxLanguageStandard`: The C++ language standard to use for all C++ targets in this package.
+
+## See Also
+
+### Creating a Package
+
+- [init(name:defaultLocalization:platforms:pkgConfig:providers:products:dependencies:targets:swiftLanguageModes:cLanguageStandard:cxxLanguageStandard:)](init%28name_defaultlocalization_platforms_pkgconfig_providers_products_dependencies_targets_swiftlanguagemodes_clanguagestandard_cxxlanguagestandard_%29.md): Initializes a Swift package with configuration options you provide.
+- [init(name:defaultLocalization:platforms:pkgConfig:providers:products:dependencies:targets:swiftLanguageVersions:cLanguageStandard:cxxLanguageStandard:)](init%28name_defaultlocalization_platforms_pkgconfig_providers_products_dependencies_targets_swiftlanguageversions_clanguagestandard_cxxlanguagestandard_%29.md): Deprecated. Initializes a Swift package with configuration options you provide.
+- [init(name:platforms:pkgConfig:providers:products:dependencies:targets:swiftLanguageVersions:cLanguageStandard:cxxLanguageStandard:)](init%28name_platforms_pkgconfig_providers_products_dependencies_targets_swiftlanguageversions_clanguagestandard_cxxlanguagestandard_%29.md): Deprecated. Initializes a Swift package with configuration options you provide.
+- [init(name:pkgConfig:providers:products:dependencies:targets:swiftLanguageVersions:cLanguageStandard:cxxLanguageStandard:)](init%28name_pkgconfig_providers_products_dependencies_targets_swiftlanguageversions_clanguagestandard_cxxlanguagestandard_%29-7ld3y.md): Deprecated. Initializes a Swift package with configuration options you provide.
+- [init(name:pkgConfig:providers:products:dependencies:targets:swiftLanguageVersions:cLanguageStandard:cxxLanguageStandard:)](init%28name_pkgconfig_providers_products_dependencies_targets_swiftlanguageversions_clanguagestandard_cxxlanguagestandard_%29-767rj.md): Deprecated. Initializes a Swift package with configuration options you provide.

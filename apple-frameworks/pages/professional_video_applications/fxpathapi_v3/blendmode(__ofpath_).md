@@ -1,0 +1,81 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/professional_video_applications/fxpathapi_v3/blendmode(_:ofpath:)](https://developer.apple.com/documentation/professional_video_applications/fxpathapi_v3/blendmode(_:ofpath:))
+
+# blendMode(\_:ofPath:) (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** Instance Method  
+**Availability:** FxPlug 4.0+
+
+Gets the blending mode for a given path.
+
+## Declaration
+
+```swift
+func blendMode(_ blendMode: UnsafeMutablePointer<FxPathBlendMode>!, ofPath pathID: FxPathID!) throws
+```
+
+## Parameters
+
+- `blendMode`: Upon return, contains the blend mode of the path.
+- `pathID`: The ID of the path whose blending mode you want to retrieve.
+
+## See Also
+
+### Getting Path Information
+
+- [numberOfPaths(at:)](numberofpaths%28at_%29.md): Provides the number of paths on the object to which your filter is applied, or on your generator.
+- [pathID(\_:for:)](pathid%28__for_%29.md): Gets the unique ID of the path at the index requested.
+- [name(\_:ofPath:)](name%28__ofpath_%29.md): Provides the name the user has entered for the path with the given ID.
+- [isPath(\_:open:at:)](ispath%28__open_at_%29.md): Tells whether the path is opened or closed.
+- [isPath(\_:inverted:at:)](ispath%28__inverted_at_%29.md): Tells whether the path is inverted or not.
+- [style(\_:ofPath:)](style%28__ofpath_%29.md): Provides the style of the path — linear, bezier, or b-spline.
+- [length(\_:ofPath:at:)](length%28__ofpath_at_%29.md): Provides you the length of the entire path.
+- [length(\_:ofSegment:ofPath:at:)](length%28__ofsegment_ofpath_at_%29.md): Provides the length of one segment of the entire path.
+- [number(ofVertices:inPath:at:)](number%28ofvertices_inpath_at_%29.md): Provides the number of vertices in the given path at the given time.
+- [vertex(\_:at:ofPath:at:)](vertex%28__at_ofpath_at_%29.md): Provides information about a single vertex on the path at the given time.
+- [point(\_:atPercentageOfDistance:alongPath:at:)](point%28__atpercentageofdistance_alongpath_at_%29.md): Provides a 2D point that contains the location of the point on the path, at a distance along the path’s length equal to the value of `percentDist`.
+- [point(\_:atPercentageOfParameter:alongPath:at:)](point%28__atpercentageofparameter_alongpath_at_%29.md): Provides a 2D point that contains the location of the point on the path, at a distance along the path’s parametric distance equal to the percent value of `percentParameter`.
+- [pathGeometryInfo(\_:forPath:at:)](pathgeometryinfo%28__forpath_at_%29.md): Gets geometry information about a given path.
+
+# blendMode:ofPath:error: (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** Instance Method
+
+Gets the blending mode for a given path.
+
+## Declaration
+
+```objectivec
+- (BOOL) blendMode:(FxPathBlendMode *) blendMode ofPath:(FxPathID) pathID error:(NSError * *) err;
+```
+
+## Parameters
+
+- `blendMode`: Upon return, contains the blend mode of the path.
+- `pathID`: The ID of the path whose blending mode you want to retrieve.
+- `err`: If this is not `nil`, then any errors that occurred while retrieving the blending mode.
+
+<a id="return-value"></a>
+
+## Return Value
+
+Returns `YES` if retrieving the blend mode was successful, `NO` otherwise. If it returns `NO` and `err` was not `nil`, then `*err` will point to an `NSError` object containing information about what went wrong.
+
+## See Also
+
+### Getting Path Information
+
+- [numberOfPathsAtTime:](numberofpaths%28at_%29.md): Provides the number of paths on the object to which your filter is applied, or on your generator.
+- [pathID:forIndex:error:](pathid%28__for_%29.md): Gets the unique ID of the path at the index requested.
+- [name:ofPath:error:](name%28__ofpath_%29.md): Provides the name the user has entered for the path with the given ID.
+- [isPath:open:atTime:error:](ispath%28__open_at_%29.md): Tells whether the path is opened or closed.
+- [isPath:inverted:atTime:error:](ispath%28__inverted_at_%29.md): Tells whether the path is inverted or not.
+- [style:ofPath:error:](style%28__ofpath_%29.md): Provides the style of the path — linear, bezier, or b-spline.
+- [length:ofPath:atTime:error:](length%28__ofpath_at_%29.md): Provides you the length of the entire path.
+- [length:ofSegment:ofPath:atTime:error:](length%28__ofsegment_ofpath_at_%29.md): Provides the length of one segment of the entire path.
+- [numberOfVertices:inPath:atTime:error:](number%28ofvertices_inpath_at_%29.md): Provides the number of vertices in the given path at the given time.
+- [vertex:atIndex:ofPath:atTime:error:](vertex%28__at_ofpath_at_%29.md): Provides information about a single vertex on the path at the given time.
+- [point:atPercentageOfDistance:alongPath:atTime:error:](point%28__atpercentageofdistance_alongpath_at_%29.md): Provides a 2D point that contains the location of the point on the path, at a distance along the path’s length equal to the value of `percentDist`.
+- [point:atPercentageOfParameter:alongPath:atTime:error:](point%28__atpercentageofparameter_alongpath_at_%29.md): Provides a 2D point that contains the location of the point on the path, at a distance along the path’s parametric distance equal to the percent value of `percentParameter`.
+- [pathGeometryInfo:forPath:atTime:error:](pathgeometryinfo%28__forpath_at_%29.md): Gets geometry information about a given path.

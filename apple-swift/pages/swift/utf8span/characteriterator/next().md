@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/utf8span/characteriterator/next()](https://developer.apple.com/documentation/swift/utf8span/characteriterator/next())
+
+# next()
+
+**Framework:** Swift  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
+
+Return the `Character` starting at `currentCodeUnitOffset`. After the function returns, `currentCodeUnitOffset` holds the position at the end of the `Character`, which is also the start of the next `Character`.
+
+## Declaration
+
+```swift
+mutating func next() -> Character?
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Returns `nil` if at the end of the `UTF8Span`.

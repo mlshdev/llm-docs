@@ -1,0 +1,58 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreml/mltensor/replacing(with:atindices:alongaxis:)](https://developer.apple.com/documentation/coreml/mltensor/replacing(with:atindices:alongaxis:))
+
+# replacing(with:atIndices:alongAxis:)
+
+**Framework:** Core ML  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
+
+Replaces slices along the specified indices with the given replacement values.
+
+## Declaration
+
+```swift
+func replacing(with replacement: MLTensor, atIndices indices: MLTensor, alongAxis axis: Int) -> MLTensor
+```
+
+## Parameters
+
+- `replacement`: The replacement values.
+- `indices`: A 32-bit integer tensor containing indices to scatter values from `replacement`. Must have the same shape as `replacement`. Must have the same shape as `self` except at `axis`.
+- `axis`: The axis to scatter to. Must be in the range `[-rank, rank)`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The updated tensor.
+
+<a id="discussion"></a>
+
+## Discussion
+
+For example:
+
+```swift
+let x = MLTensor(shape: [2, 3], scalars: [
+    10, 30, 20,
+    60, 40, 50
+], scalarType: Float.self)
+let i = MLTensor(shape: [2, 1], scalars: [
+    1,
+    0
+], scalarType: Int32.self)
+let updates = MLTensor(shape: [2, 1], scalars: [
+    99,
+    99
+], scalarType: Float.self)
+let y = x.replacing(atIndices: i, with: updates, alongAxis: 1)
+// [[10, 99, 20],
+//  [99, 40, 50]]
+```
+
+## See Also
+
+### Replacing the tensor values
+
+- [replacing(atIndices:with:alongAxis:)](replacing%28atindices_with_alongaxis_%29.md): Replaces slices along the specified indices with the given replacement values.
+- [replacing(with:where:)](replacing%28with_where_%29.md): Returns a new tensor replacing values from `other` with the corresponding element in `self` where the associated element in `mask` is `true`.

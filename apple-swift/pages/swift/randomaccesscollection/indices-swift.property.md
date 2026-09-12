@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/randomaccesscollection/indices-swift.property](https://developer.apple.com/documentation/swift/randomaccesscollection/indices-swift.property)
+
+# indices
+
+**Framework:** Swift  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+The indices that are valid for subscripting the collection, in ascending order.
+
+## Declaration
+
+```swift
+override var indices: Self.Indices { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+A collection’s `indices` property can hold a strong reference to the collection itself, causing the collection to be nonuniquely referenced. If you mutate the collection while iterating over its indices, a strong reference can result in an unexpected copy of the collection. To avoid the unexpected copy, use the `index(after:)` method starting with `startIndex` to produce indices instead.
+
+```swift
+var c = MyFancyCollection([10, 20, 30, 40, 50])
+var i = c.startIndex
+while i != c.endIndex {
+    c[i] /= 5
+    i = c.index(after: i)
+}
+// c == MyFancyCollection([2, 4, 6, 8, 10])
+```
+
+## Default Implementations
+
+### BidirectionalCollection Implementations
+
+- [indices](../bidirectionalcollection/indices-4jyvu.md): Conforms when `Index` conforms to `Strideable`, `Indices` is `Range<Self.Index>`, and `Index.Stride` is `Int`. The indices that are valid for subscripting the collection, in ascending order.

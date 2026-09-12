@@ -1,0 +1,31 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/discontiguousslice/poplast()](https://developer.apple.com/documentation/swift/discontiguousslice/poplast())
+
+# popLast()
+
+**Framework:** Swift  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Removes and returns the last element of the collection.
+
+## Declaration
+
+```swift
+mutating func popLast() -> Self.Element?
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+The last element of the collection if the collection has one or more elements; otherwise, `nil`.
+
+<a id="discussion"></a>
+
+## Discussion
+
+You can use `popLast()` to remove the last element of a collection that might be empty. The `removeLast()` method must be used only on a nonempty collection.
+
+> **Complexity**
+
+> O(1)

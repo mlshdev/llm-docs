@@ -1,0 +1,69 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshadersgraph/mpsgraph/runasync(on:feeds:targettensors:targetoperations:executiondescriptor:)](https://developer.apple.com/documentation/metalperformanceshadersgraph/mpsgraph/runasync(on:feeds:targettensors:targetoperations:executiondescriptor:))
+
+# runAsync(on:feeds:targetTensors:targetOperations:executionDescriptor:) (Swift)
+
+**Framework:** Metal Performance Shaders Graph  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+Runs the graph for the given feeds and returns the target tensor values, ensuring all target operations also executed.
+
+## Declaration
+
+```swift
+func runAsync(on commandQueue: any MTL4CommandQueue, feeds: [MPSGraphTensor : MPSGraphTensorData], targetTensors: [MPSGraphTensor], targetOperations: [MPSGraphOperation]?, executionDescriptor: MPSGraphExecutionDescriptor?) -> [MPSGraphTensor : MPSGraphTensorData]
+```
+
+## Parameters
+
+- `commandQueue`: MTL4CommandQueue passed to exectute the graph on.
+- `feeds`: Feeds dictionary for the placeholder tensors.
+- `targetTensors`: Tensors for which the caller wishes MPSGraphTensorData to be returned.
+- `targetOperations`: Operations to be completed at the end of the run.
+- `executionDescriptor`: ExecutionDescriptor to be passed in and used.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A valid MPSGraphTensor : MPSGraphTensorData dictionary with results synchronized to the CPU memory if MPSGraphOptionsSynchronizeResults set.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This call is asynchronous and will return immediately if a completionHandler is set.
+
+# runAsyncWithMTL4CommandQueue:feeds:targetTensors:targetOperations:executionDescriptor: (Objective-C)
+
+**Framework:** Metal Performance Shaders Graph  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+Runs the graph for the given feeds and returns the target tensor values, ensuring all target operations also executed.
+
+## Declaration
+
+```objectivec
+- (MPSGraphTensorDataDictionary *) runAsyncWithMTL4CommandQueue:(id<MTL4CommandQueue>) commandQueue feeds:(MPSGraphTensorDataDictionary *) feeds targetTensors:(NSArray<MPSGraphTensor *> *) targetTensors targetOperations:(NSArray<MPSGraphOperation *> *) targetOperations executionDescriptor:(MPSGraphExecutionDescriptor *) executionDescriptor;
+```
+
+## Parameters
+
+- `commandQueue`: MTL4CommandQueue passed to exectute the graph on.
+- `feeds`: Feeds dictionary for the placeholder tensors.
+- `targetTensors`: Tensors for which the caller wishes MPSGraphTensorData to be returned.
+- `targetOperations`: Operations to be completed at the end of the run.
+- `executionDescriptor`: ExecutionDescriptor to be passed in and used.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A valid MPSGraphTensor : MPSGraphTensorData dictionary with results synchronized to the CPU memory if MPSGraphOptionsSynchronizeResults set.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This call is asynchronous and will return immediately if a completionHandler is set.

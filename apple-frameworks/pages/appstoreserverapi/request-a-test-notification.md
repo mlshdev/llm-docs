@@ -1,0 +1,54 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appstoreserverapi/request-a-test-notification](https://developer.apple.com/documentation/appstoreserverapi/request-a-test-notification)
+
+# Request a Test Notification
+
+**Interface language:** Data
+
+**Framework:** App Store Server API  
+**Kind:** Web Service Endpoint  
+**Availability:** App Store Server API 1.5+
+
+Ask App Store Server Notifications to send a test notification to your server.
+
+## URL
+
+```http
+POST https://api.storekit.apple.com/inApps/v1/notifications/test
+```
+
+## Sandbox URL
+
+```http
+POST https://api.storekit-sandbox.apple.com/inApps/v1/notifications/test
+```
+
+## Response Codes
+
+- `200` OK — `SendTestNotificationResponse`: Successfully received your request to send a test notification.
+- `401` Unauthorized: The JSON Web Token (JWT) in the authorization header is invalid. For more information, see [Generating JSON Web Tokens for API requests](generating-json-web-tokens-for-api-requests.md).
+- `404` Not Found — `ServerNotificationURLNotFoundError`: An error that indicates that the App Store server couldn’t find a notifications URL for your app in this environment. For more information, see [ServerNotificationURLNotFoundError](servernotificationurlnotfounderror.md).
+- `429` — `RateLimitExceededError`: The request exceeded the rate limit.
+- `500` Internal Server Error — `(GeneralInternalError | GeneralInternalRetryableError)`: Server error. Try again later.
+
+## Mentioned In
+
+- [App Store Server API changelog](app-store-server-api-changelog.md)
+- [Identifying rate limits](identifying-rate-limits.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this endpoint to test if your server is receiving [App Store Server Notifications](../appstoreservernotifications.md) at the URLs that you configured in App Store Connect. The [Request a Test Notification](request-a-test-notification.md) endpoint prompts the App Store server to send your server a notification with the `TEST` [notificationType](notificationtype.md). The App Store server sends the `TEST` notification to your production URL if you call this endpoint’s production URL; it sends it to your sandbox URL if you call this endpoint’s sandbox URL.
+
+Although `TEST` is a version 2 notification, you can call this endpoint regardless of whether you configured your App Store Server Notifications URL in App Store Connect for version 1 or version 2. For more information about the configuration and enabling notifications, see [Enter a URL for App Store server notifications](https://help.apple.com/app-store-connect/#/dev0067a330b) and [Enabling App Store Server Notifications](../appstoreservernotifications/enabling-app-store-server-notifications.md).
+
+This endpoint responds with a `testNotificationToken` in [SendTestNotificationResponse](sendtestnotificationresponse.md). To learn the result that the App Store server recorded when it attempted to send your server the `TEST` notification, call the [Get Test Notification Status](get-test-notification-status.md) endpoint with the `testNotificationToken`. Use the status information to troubleshoot your server if it’s unable to receive the `TEST` notification.
+
+## See Also
+
+### App Store Server Notifications testing
+
+- [Get Test Notification Status](get-test-notification-status.md): Check the status of the test App Store server notification sent to your server.
+- [SendTestNotificationResponse](sendtestnotificationresponse.md): A response that contains the test notification token.
+- [CheckTestNotificationResponse](checktestnotificationresponse.md): A response that contains the contents of the App Store server’s test notification and the result from your server.

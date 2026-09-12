@@ -1,0 +1,54 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tvml/element-shaping-height](https://developer.apple.com/documentation/tvml/element-shaping-height)
+
+# height
+
+**Kind:** Article
+
+Specifies the height of an element.
+
+<a id="Overview"></a>
+
+## Overview
+
+Here’s an example that shows how to set the height of an image to 376 points.
+
+```xml
+<img src="path to image" width="250" height="376" />
+```
+
+<a id="Values-for-height"></a>
+
+### Values for height
+
+- **Integer**: The height of the element, in points. For example, `height="200"` sets the height of the element to 200 points.
+
+> **Note**
+
+> You must explicitly set this style for custom cell elements provided by your app binary.
+
+<a id="Elements-that-Use-height"></a>
+
+### Elements that Use height
+
+- [banner](banner.md)
+- [button](button.md)
+- [heroImg](heroimg.md)
+- [img](img.md)
+- [infoList](infolist.md)
+- [listItemLockup](listitemlockup.md)
+- [monogram](monogram.md)
+- [ratingCard](ratingcard.md)
+- [relatedContent](relatedcontent.md)
+- [reviewCard](reviewcard.md)
+- [separator](separator.md)
+- [stack](stack.md)
+
+## See Also
+
+### Element Sizing
+
+- [max-height](element-shaping-max-height.md): Specifies the maximum height for an element.
+- [max-width](element-shaping-max-width.md): Specifies the maximum width for an element.
+- [min-height](element-shaping-min-height.md): Specifies the minimum height for an element.
+- [min-width](element-shaping-min-width.md): Specifies the minimum width for an element.
+- [width](element-shaping-width.md): Specifies how wide an element is.

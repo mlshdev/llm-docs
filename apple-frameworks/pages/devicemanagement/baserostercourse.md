@@ -1,0 +1,30 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/baserostercourse](https://developer.apple.com/documentation/devicemanagement/baserostercourse)
+
+# BaseRosterCourse
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Object  
+**Availability:** Device Assignment Services 5.0+
+
+A base course’s properties and their values.
+
+## Declaration
+
+```
+object BaseRosterCourse
+```
+
+## Properties
+
+- `name` — `string`: The course name. The maximum length is 1024 UTF-8 characters.
+- `unique_identifier` — `string`: The global unique identifier for the location. The maximum length is 256 UTF-8 characters.
+
+## See Also
+
+### Course management
+
+- [RosterCourse](rostercourse.md): A course’s properties and their values.
+- [Get the List of Courses](fetch-course-roster.md): Obtain a list of the courses the server manages.
+- [Sync the List of Courses](fetch-course-roster-sync.md): Get updates about the list of courses the server manages.

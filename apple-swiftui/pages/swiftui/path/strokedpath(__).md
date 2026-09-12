@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/path/strokedpath(_:)](https://developer.apple.com/documentation/swiftui/path/strokedpath(_:))
+
+# strokedPath(\_:)
+
+**Framework:** SwiftUI  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Returns a stroked copy of the path using `style` to define how the stroked outline is created.
+
+## Declaration
+
+```swift
+func strokedPath(_ style: StrokeStyle) -> Path
+```

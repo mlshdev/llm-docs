@@ -1,0 +1,47 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/assistantschemas/whiteboardentity/board](https://developer.apple.com/documentation/appintents/assistantschemas/whiteboardentity/board)
+
+# board
+
+**Framework:** App Intents  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+ · watchOS 9.0+
+
+The app entity describes a whiteboard canvas.
+
+## Declaration
+
+```swift
+var board: some AssistantSchemas.Entity { get }
+```
+
+<a id="Overview"></a>
+
+## Overview
+
+Use Swift macros that generate additional properties and add protocol conformance for your app entity implementation. The following example shows an app entity that conforms to the `.whiteboard.board` schema:
+
+```swift
+@AppEntity(schema: .whiteboard.board)
+struct CanvasEntity: AppEntity {
+    struct Query: EntityStringQuery {
+        func entities(for identifiers: [CanvasEntity.ID]) async throws -> [CanvasEntity] { [] }
+        func entities(matching string: String) async throws -> [CanvasEntity] { [] }
+    }
+
+    static var defaultQuery = Query()
+    var displayRepresentation: DisplayRepresentation { "Canvas" }
+
+    let id = UUID()
+
+    @Property
+    var title: String
+
+    @Property
+    var creationDate: Date
+
+    @Property
+    var lastModificationDate: Date
+}
+```
+
+For more information about the `.whiteboard` app intent domain, see [Whiteboard](../../app-schema-domain-whiteboard.md). For general information about app intent domains, see [Making actions and content discoverable by Apple Intelligence](../../making-actions-and-content-discoverable-by-apple-intelligence.md).

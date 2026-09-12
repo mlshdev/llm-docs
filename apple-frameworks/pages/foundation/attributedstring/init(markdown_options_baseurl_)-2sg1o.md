@@ -1,0 +1,34 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/attributedstring/init(markdown:options:baseurl:)-2sg1o](https://developer.apple.com/documentation/foundation/attributedstring/init(markdown:options:baseurl:)-2sg1o)
+
+# init(markdown:options:baseURL:)
+
+**Framework:** Foundation  
+**Kind:** Initializer  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+
+Creates an attributed string from Markdown-formatted data using the provided options.
+
+## Declaration
+
+```swift
+init(markdown: Data, options: AttributedString.MarkdownParsingOptions = .init(), baseURL: URL? = nil) throws
+```
+
+## Parameters
+
+- `markdown`: The [Data](../data.md) instance that contains the Markdown formatting.
+- `options`: Options that affect how the initializer interprets formatting in the Markdown string. This parameter defaults to no options.
+- `baseURL`: The base URL to use when resolving Markdown URLs. The initializer treats URLs as being relative to this URL. If this value is `nil`, the initializer doesn’t resolve URLs. The default is `nil`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If your source string includes custom attributes defined by conformers to [MarkdownDecodableAttributedStringKey](../markdowndecodableattributedstringkey.md) and used with Apple’s markdown extension syntax, be sure to include the [allowsExtendedAttributes](../nsattributedstringmarkdownparsingoptions/allowsextendedattributes.md) option. Otherwise, the initializer doesn’t parse these attributes.
+
+## See Also
+
+### Initializing from Markdown Data
+
+- [init(markdown:including:options:baseURL:)](init%28markdown_including_options_baseurl_%29-4co46.md): Creates an attributed string from Markdown-formatted data using the provided options and attribute scope.
+- [init(markdown:including:options:baseURL:)](init%28markdown_including_options_baseurl_%29-5nap7.md): Creates an attributed string from Markdown-formatted data using the provided options and attribute scope that a key path identifies.

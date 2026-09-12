@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiodriverkit/audiodriverkit/iouseraudioclassid/linelevelcontrol](https://developer.apple.com/documentation/audiodriverkit/audiodriverkit/iouseraudioclassid/linelevelcontrol)
+
+# LineLevelControl
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 21.0+
+
+The identifier for the audio line level control class.
+
+## Declaration
+
+```objectivec
+LineLevelControl
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This class is a subclass of the [IOUserAudioSelectorControl](../../iouseraudioselectorcontrol.md) class that identifies the nominal line level for the element. This control isn’t a gain stage, but instead indicates the voltage standard (if any) used for the element, such as +4dBu, -10dBV, instrument, and so on.
+
+## See Also
+
+### Selector Controls
+
+- [SelectorControl](selectorcontrol.md): The identifier for the audio selector control class.
+- [DataDestinationControl](datadestinationcontrol.md): The identifier for the audio data destination control class.
+- [DataSourceControl](datasourcecontrol.md): The identifier for the audio data source control class.
+- [ClockSourceControl](clocksourcecontrol.md): The identifier for the audio clock source control class.
+- [HighPassFilterControl](highpassfiltercontrol.md): The identifier for the audio high pass filter control class.

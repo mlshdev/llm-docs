@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremotion/cmheadphoneactivitymanager/status/connected](https://developer.apple.com/documentation/coremotion/cmheadphoneactivitymanager/status/connected)
+
+# CMHeadphoneActivityManager.Status.connected (Swift)
+
+**Framework:** Core Motion  
+**Kind:** Case  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · watchOS 2.0+
+
+A compatible set of headphones is connected.
+
+## Declaration
+
+```swift
+case connected
+```
+
+## See Also
+
+### Enumeration Cases
+
+- [CMHeadphoneActivityManager.Status.disconnected](disconnected.md): The headphones disconnected.
+
+# CMHeadphoneActivityStatusConnected (Objective-C)
+
+**Framework:** Core Motion  
+**Kind:** Enumeration Case  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · visionOS 1.0+ · watchOS 2.0+
+
+A compatible set of headphones is connected.
+
+## Declaration
+
+```objectivec
+CMHeadphoneActivityStatusConnected
+```
+
+## See Also
+
+### Enumeration Cases
+
+- [CMHeadphoneActivityStatusDisconnected](disconnected.md): The headphones disconnected.

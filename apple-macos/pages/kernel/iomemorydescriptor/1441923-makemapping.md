@@ -1,0 +1,34 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iomemorydescriptor/1441923-makemapping](https://developer.apple.com/documentation/kernel/iomemorydescriptor/1441923-makemapping)
+
+# makeMapping
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Instance Method  
+**Availability:** macOS 10.11.4+
+
+## Declaration
+
+```objectivec
+virtual IOMemoryMap * makeMapping(IOMemoryDescriptor *owner, task_t intoTask, IOVirtualAddress atAddress, IOOptionBits options, IOByteCount offset, IOByteCount length);
+```
+
+## See Also
+
+### Managing Internal Structures
+
+- [reserved](reserved.md)
+- [initialize](1441798-initialize.md)
+- [Dispatch](3180641-dispatch.md)
+- [CreateMapping_Invoke](3174976-createmapping_invoke.md)
+- [populateDevicePager](1442017-populatedevicepager.md)
+- [CreateMapping](3174974-createmapping.md)
+- [CreateMapping_Impl](3174975-createmapping_impl.md)
+- [Map](3180643-map.md): Maps memory internally.
+- [addMapping](1442013-addmapping.md)
+- [removeMapping](1441778-removemapping.md)
+- [doMap](1441941-domap.md)
+- [doUnmap](1441883-dounmap.md)
+- [handleFault](1441782-handlefault.md)
+- [redirect](1441871-redirect.md)

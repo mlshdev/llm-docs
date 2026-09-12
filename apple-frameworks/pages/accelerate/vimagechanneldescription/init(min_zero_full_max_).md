@@ -1,0 +1,34 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimagechanneldescription/init(min:zero:full:max:)](https://developer.apple.com/documentation/accelerate/vimagechanneldescription/init(min:zero:full:max:))
+
+# init(min:zero:full:max:)
+
+**Framework:** Accelerate  
+**Kind:** Initializer  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+Returns a structure that describes the range and clamp limits for a pixel format.
+
+## Declaration
+
+```swift
+init(min: CGFloat, zero: CGFloat, full: CGFloat, max: CGFloat)
+```
+
+## Parameters
+
+- `min`: The minimum encoded value.
+- `zero`: The encoding for the value `0.0`.
+- `full`: The encoding for `1.0` (`0.5` for chrominance).
+- `max`: The maximum encoded value.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A structure that describes the range and clamp limits for a pixel format.
+
+## See Also
+
+### Creating a channel description
+
+- [init()](init%28%29.md): Returns an empty structure that describes the range and clamp limits for a pixel format.

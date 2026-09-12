@@ -1,0 +1,62 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v2-gamecenterleaderboardimages-_id_](https://developer.apple.com/documentation/appstoreconnectapi/get-v2-gamecenterleaderboardimages-_id_)
+
+# Read Game Center Leaderboard Image Information
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Web Service Endpoint  
+**Availability:** App Store Connect API 3.6+
+
+Get information about a specific Game Center leaderboard image.
+
+## URL
+
+```http
+GET https://api.appstoreconnect.apple.com/v2/gameCenterLeaderboardImages/{id}
+```
+
+## Path Parameters
+
+- `id` — `string` (required):
+
+## Query Parameters
+
+- `fields[gameCenterLeaderboardImages]` — `[string]`: **Allowed values:** `fileSize`, `fileName`, `imageAsset`, `uploadOperations`, `assetDeliveryState`, `localization`
+- `fields[gameCenterLeaderboardLocalizations]` — `[string]`: **Allowed values:** `locale`, `name`, `formatterOverride`, `formatterSuffix`, `formatterSuffixSingular`, `description`, `version`, `image`
+- `include` — `[string]`: **Allowed values:** `localization`
+
+## Response Codes
+
+- `200` OK — `GameCenterLeaderboardImageV2Response`:
+- `400` Bad Request — `ErrorResponse`:
+- `401` Unauthorized — `ErrorResponse`:
+- `403` Forbidden — `ErrorResponse`:
+- `404` Not Found — `ErrorResponse`:
+- `429` — `ErrorResponse`:
+
+<a id="overview"></a>
+
+## Overview
+
+- id:
+- fields\[gameCenterLeaderboardImages\]:
+- include:
+- 200:
+- 400:
+- 401:
+- 403:
+- 404:
+- 429:
+
+## See Also
+
+### Managing leaderboard images
+
+- [Create a Game Center Leaderboard Image](post-v2-gamecenterleaderboardimages.md): Create a Game Center leaderboard image.
+- [Modify a Game Center Leaderboard Image](patch-v2-gamecenterleaderboardimages-_id_.md): Update a specific Game Center leaderboard image.
+- [Delete a Game Center Leaderboard Image](delete-v2-gamecenterleaderboardimages-_id_.md): Delete a specific Game Center leaderboard image.
+- [Read Leaderboard Image Information](get-v1-gamecenterleaderboardimages-_id_.md): Deprecated. Get information about a leaderboard image and its upload and processing status.
+- [Create a Leaderboard Image](post-v1-gamecenterleaderboardimages.md): Deprecated. Add a new leaderboard image.
+- [Modify a Leaderboard Image](patch-v1-gamecenterleaderboardimages-_id_.md): Deprecated. Commit a leaderboard image after uploading it.
+- [Delete a Leaderboard Image](delete-v1-gamecenterleaderboardimages-_id_.md): Deprecated. Delete an image that’s associated with a leaderboard.

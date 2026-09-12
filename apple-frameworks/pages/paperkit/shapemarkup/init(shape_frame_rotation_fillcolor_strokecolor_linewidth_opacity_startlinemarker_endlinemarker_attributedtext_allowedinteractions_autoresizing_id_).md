@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/paperkit/shapemarkup/init(shape:frame:rotation:fillcolor:strokecolor:linewidth:opacity:startlinemarker:endlinemarker:attributedtext:allowedinteractions:autoresizing:id:)](https://developer.apple.com/documentation/paperkit/shapemarkup/init(shape:frame:rotation:fillcolor:strokecolor:linewidth:opacity:startlinemarker:endlinemarker:attributedtext:allowedinteractions:autoresizing:id:))
+
+# init(shape:frame:rotation:fillColor:strokeColor:lineWidth:opacity:startLineMarker:endLineMarker:attributedText:allowedInteractions:autoresizing:id:)
+
+**Framework:** PaperKit  
+**Kind:** Initializer  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+Initializes and returns a new shape markup from the specified parameters.
+
+## Declaration
+
+```swift
+init(shape: ShapeMarkup.Shape, frame: CGRect, rotation: CGFloat = 0.0, fillColor: CGColor? = nil, strokeColor: CGColor? = nil, lineWidth: CGFloat = 1.0, opacity: CGFloat = 1.0, startLineMarker: ShapeMarkup.LineMarker = .none, endLineMarker: ShapeMarkup.LineMarker = .none, attributedText: AttributedString = Foundation.AttributedString(), allowedInteractions: MarkupInteractions = .all, autoresizing: MarkupAutoresizing = [], id: MarkupID<ShapeMarkup> = MarkupID())
+```
+
+## Parameters
+
+- `shape`: The shape to create.
+- `frame`: The frame of the shape.
+- `rotation`: The rotation in radians of the shape. Defaults to `0.0` (no rotation).
+- `fillColor`: The fill color of the shape. Defaults to `nil` (no fill).
+- `strokeColor`: The stroke color of the shape’s outline. Defaults to `nil` (no stroke).
+- `lineWidth`: The width of the shape’s stroke. Defaults to `1.0`.
+- `opacity`: The opacity of the shape, ranging from `0.0` (fully transparent) to `1.0` (fully opaque). Defaults to `1.0`.
+- `startLineMarker`: The marker style for the start of the line. Defaults to `.none`. Only applicable for open shape paths.
+- `endLineMarker`: The marker style for the end of the line. Defaults to `.none`. Only applicable for open shape paths.
+- `attributedText`: The attributed text displayed inside this shape. Defaults to the empty string.
+- `allowedInteractions`: The flags controlling the interactions users can perform. Defaults to `.all`.
+- `autoresizing`: The flags controlling autoresize behavior. Defaults to `[]`.
+- `id`: The identity of the shape. Defaults to a unique id.
+
+## See Also
+
+### Creating a shape
+
+- [init(configuration:frame:rotation:)](init%28configuration_frame_rotation_%29.md): Initializes and returns a new shape markup from the specified parameters.

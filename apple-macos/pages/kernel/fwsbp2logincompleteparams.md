@@ -1,0 +1,50 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/fwsbp2logincompleteparams](https://developer.apple.com/documentation/kernel/fwsbp2logincompleteparams)
+
+# FWSBP2LoginCompleteParams
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Type Alias  
+**Availability:** macOS 10.0+
+
+## Declaration
+
+```objectivec
+typedef struct FWSBP2LoginCompleteParams FWSBP2LoginCompleteParams;
+```
+
+## Topics
+
+### Instance Properties
+
+- [generation](fwsbp2logincompleteparams/1572134-generation.md)
+- [login](fwsbp2logincompleteparams/1572241-login.md)
+- [loginResponse](fwsbp2logincompleteparams/1572105-loginresponse.md)
+- [status](fwsbp2logincompleteparams/1572130-status.md)
+- [statusBlock](fwsbp2logincompleteparams/1572122-statusblock.md)
+- [statusBlockLength](fwsbp2logincompleteparams/1572211-statusblocklength.md)
+
+## See Also
+
+### Serial Bus Protocol 2
+
+- [IOFireWireSBP2Login](iofirewiresbp2login.md): Supplies the login maintenance and Normal Command ORB execution portions of the API.
+- [IOFireWireSBP2ManagementORB](iofirewiresbp2managementorb.md): Supplies non login related management ORBs. Management ORBs can be executed independent of a login, if necessary. Management ORBs are created using the IOFireWireSBP2LUN interface.
+- [IOFireWireSBP2ORB](iofirewiresbp2orb.md): Represents an SBP2 normal command ORB. Supplies the APIs for configuring normal command ORBs. This includes setting the command block and writing the page tables for I/O. The ORBs are executed using the submitORB method in IOFireWireSBP2Login.
+- [FWSBP2FetchAgentWriteCallback](fwsbp2fetchagentwritecallback.md)
+- [FWSBP2LoginCallback](fwsbp2logincallback.md)
+- [FWSBP2LoginCompleteParamsPtr](fwsbp2logincompleteparamsptr.md)
+- [FWSBP2LoginResponse](fwsbp2loginresponse.md)
+- [FWSBP2LoginResponsePtr](fwsbp2loginresponseptr.md)
+- [FWSBP2LogoutCallback](fwsbp2logoutcallback.md)
+- [FWSBP2LogoutCompleteParams](fwsbp2logoutcompleteparams.md)
+- [FWSBP2LogoutCompleteParamsPtr](fwsbp2logoutcompleteparamsptr.md)
+- [FWSBP2ManagementCallback](fwsbp2managementcallback.md)
+- [FWSBP2NotifyCallback](fwsbp2notifycallback.md)
+- [FWSBP2NotifyParams](fwsbp2notifyparams.md)
+- [FWSBP2NotifyParamsPtr](fwsbp2notifyparamsptr.md)
+- [FWSBP2ReconnectParams](fwsbp2reconnectparams.md)
+- [FWSBP2ReconnectParamsPtr](fwsbp2reconnectparamsptr.md)
+- [FWSBP2StatusBlock](fwsbp2statusblock.md)
+- [FWSBP2StatusCallback](fwsbp2statuscallback.md)

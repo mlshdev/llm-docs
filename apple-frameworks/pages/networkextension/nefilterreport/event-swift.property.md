@@ -1,0 +1,51 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/networkextension/nefilterreport/event-swift.property](https://developer.apple.com/documentation/networkextension/nefilterreport/event-swift.property)
+
+# event (Swift)
+
+**Framework:** Network Extension  
+**Kind:** Instance Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · macOS 10.15+ · visionOS 1.0+
+
+The type of event indicated by this report.
+
+## Declaration
+
+```swift
+var event: NEFilterReport.Event { get }
+```
+
+## See Also
+
+### Getting report properties
+
+- [flow](flow.md): The flow on which the associated action was taken.
+- [action](action.md): The action taken on the reported flow.
+- [NEFilterAction](../nefilteraction.md): The actions a data provider can take on a filter flow.
+- [NEFilterReport.Event](event-swift.enum.md): A type that represents the kind of event indicated by a report.
+- [bytesInboundCount](bytesinboundcount.md): The number of inbound bytes received from the flow.
+- [bytesOutboundCount](bytesoutboundcount.md): The number of outbound bytes sent on the flow.
+
+# event (Objective-C)
+
+**Framework:** Network Extension  
+**Kind:** Instance Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · macOS 10.15+ · visionOS 1.0+
+
+The type of event indicated by this report.
+
+## Declaration
+
+```objectivec
+@property (readonly) NEFilterReportEvent event;
+```
+
+## See Also
+
+### Getting report properties
+
+- [flow](flow.md): The flow on which the associated action was taken.
+- [action](action.md): The action taken on the reported flow.
+- [NEFilterAction](../nefilteraction.md): The actions a data provider can take on a filter flow.
+- [NEFilterReportEvent](event-swift.enum.md): A type that represents the kind of event indicated by a report.
+- [bytesInboundCount](bytesinboundcount.md): The number of inbound bytes received from the flow.
+- [bytesOutboundCount](bytesoutboundcount.md): The number of outbound bytes sent on the flow.

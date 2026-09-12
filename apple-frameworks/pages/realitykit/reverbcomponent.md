@@ -1,0 +1,90 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/reverbcomponent](https://developer.apple.com/documentation/realitykit/reverbcomponent)
+
+# ReverbComponent
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
+
+A component that defines the reverberation of spatial audio sources.
+
+## Declaration
+
+```swift
+struct ReverbComponent
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Bring your spatial audio to life by setting a reverb appropriate for your immersive environment. In visionOS, an acoustic simulation of a person’s real environment reverberates the spatial audio sources by default. When presenting your content in [progressive](https://developer.apple.com/documentation/swiftui/immersionstyle/progressive) and [full](https://developer.apple.com/documentation/swiftui/immersionstyle/full) immersive spaces, consider setting a reverb component to make your spatial audio sound like it exists within the environment that your visuals represent.
+
+For example, a desert, living room, and concert hall each have unique acoustical characteristics. When the visuals and acoustic properties of sounds in your content are congruent, the environment becomes more effective as a whole.
+
+```swift
+// Create an entity to hold the reverb component and
+// use the concert hall preset.
+let reverbEntity = Entity()
+reverbEntity.components.set(ReverbComponent(reverb: .preset(.concertHall)))
+
+// Add the reverb entity to the reality view.
+content.add(reverbEntity)
+
+// Load an audio file of a violin.
+if let violin = try? await AudioFileResource(named: "violin") {
+
+    // Create an entity for playing the violin audio and
+    // set the spatial audio component.
+    let violinEntity = Entity()
+    violinEntity.components.set(
+        SpatialAudioComponent(
+            directivity: .beam(focus: 0.2)
+        )
+    )
+    violinEntity.playAudio(violin)
+
+    // Add the violin entity to the reality view.
+    content.add(violinEntity)
+}
+```
+
+Use the [reverbLevel](spatialaudiocomponent/reverblevel.md) property to adjust the level of audio you send to the spatial modeler. Use the [directLevel](spatialaudiocomponent/directlevel.md) property to adjust the level of audio you send directly to a person’s ears, without additional reverberation. Use the [directivity](spatialaudiocomponent/directivity.md) property to define the pattern that disperses sound into the acoustic environment.
+
+In macOS and iOS, only one `ReverbComponent` can be active at a time per [ARView](arview.md) or [RealityView](realityview.md). In visionOS, a `ReverbComponent` is only active while an app has a [progressive](https://developer.apple.com/documentation/swiftui/immersionstyle/progressive) or [full](https://developer.apple.com/documentation/swiftui/immersionstyle/full) immersive space open.
+
+You can place multiple simulated reverb components in a scene — for example, one entity each for the ceiling, floor, and walls of a virtual room — and the reflections and reverb update as audio sources move through the space. However, only one preset reverb can be active at a time; if both a preset and simulated reverb are present, the preset takes priority.
+
+When the content is within a [progressive](https://developer.apple.com/documentation/swiftui/immersionstyle/progressive) immersive space, the Digital Crown adjusts how RealityKit blends:
+
+- The acoustics simulation of a person’s real-world environment
+- The reverberation the `ReverbComponent` generates
+
+When your app is in a Shared Space [WindowGroup](https://developer.apple.com/documentation/swiftui/windowgroup) or an [ImmersiveSpace](https://developer.apple.com/documentation/swiftui/immersivespace) using a [mixed](https://developer.apple.com/documentation/swiftui/immersionstyle/mixed) style, RealityKit reverberates the spatial audio from the acoustics simulation and ignores the reverberation from the `ReverbComponent`.
+
+## Topics
+
+### Initializers
+
+- [init(reverb:)](reverbcomponent/init%28reverb_%29.md): Creates a component from a reverberation setting.
+
+### Instance Properties
+
+- [reverb](reverbcomponent/reverb.md): A reverberation setting the component applies to spatial audio.
+
+## Relationships
+
+### Conforms To
+
+- [Component](component.md)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Reverb
+
+- [Reverb](reverb.md): The reverberation RealityKit applies to spatial audio sources.
+- [Reverb.Preset](reverb/preset.md): Reverbs defined by a preset environment.

@@ -1,0 +1,39 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/retentionmessaging/promotionaloffersignaturev1](https://developer.apple.com/documentation/retentionmessaging/promotionaloffersignaturev1)
+
+# promotionalOfferSignatureV1
+
+**Interface language:** Data
+
+**Framework:** Retention Messaging API  
+**Kind:** Object  
+**Availability:** Retention Messaging API 1.0+
+
+The promotional-offer signature you generate using an earlier signature version.
+
+## Declaration
+
+```
+object promotionalOfferSignatureV1
+```
+
+## Properties
+
+- `encodedSignature` — `string` (required): The Base64-encoded cryptographic signature you generate using the offer parameters.
+- `productId` — `productId` (required): The subscription’s product identifier.
+- `nonce` — `uuid` (required): A one-time-use UUID antireplay value you generate. Use lowercase.
+- `timestamp` — `timestamp` (required): The UNIX time, in milliseconds, when you generate the signature.
+- `keyId` — `string` (required): A string that identifies the private key you use to generate the signature. You can find this identifier in App Store Connect Users and Access \> Keys in the Key ID column for the subscription key you generate.
+- `offerIdentifier` — `string` (required): The subscription offer identifier that you set up in App Store Connect.
+- `appAccountToken` — `uuid`: A UUID that you provide to associate with the transaction if the customer accepts the promotional offer. The string representation of the `appAccountToken` needs to be lowercase.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+To provide a promotional-offer retention message, you need to cryptographically sign the offer and include it in the [promotionalOffer](promotionaloffer.md) parameter of your [RealtimeResponseBody](realtimeresponsebody.md) response.
+
+> **Tip**
+
+> For a simpler implementation, use [promotionalOfferSignatureV2](promotionaloffersignaturev2.md) instead.
+
+For instructions on generating the `encodedSignature` for the `promotionalOfferSignatureV1`, see [Generating a signature for promotional offers](../storekit/generating-a-signature-for-promotional-offers.md).

@@ -1,0 +1,45 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coretransferable/transferrepresentation/suggestedfilename(_:)-2yln2](https://developer.apple.com/documentation/coretransferable/transferrepresentation/suggestedfilename(_:)-2yln2)
+
+# suggestedFileName(\_:)
+
+**Framework:** Core Transferable  
+**Kind:** Instance Method  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+ · watchOS 9.0+
+
+Provides a filename to use if the receiver chooses to write the item to disk.
+
+## Declaration
+
+```swift
+func suggestedFileName(_ fileName: String) -> some TransferRepresentation<Self.Item>
+
+```
+
+## Parameters
+
+- `fileName`: The suggested filename including the filename extension. If several suggested file names are specified on an item, only the last one will be used.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Any transfer representation can be written to disk.
+
+```swift
+ extension ImageDocumentLayer: Transferable {
+     static var transferRepresentation: some TransferRepresentation {
+         DataRepresentation(contentType: .layer) { layer in
+             layer.data()
+             } importing: { data in
+                 try ImageDocumentLayer(data: data)
+             }
+             .suggestedFileName("Layer.exampleLayer")
+         DataRepresentation(exportedContentType: .png) { layer in
+             layer.pngData()
+         }
+         .suggestedFileName("Layer")
+     }
+ }
+```
+
+The .exampleLayer filename extension above should match the extension for the `layer` content type, which you declare in your app’s `Info.plist` file.

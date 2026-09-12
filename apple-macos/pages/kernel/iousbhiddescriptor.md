@@ -1,0 +1,50 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iousbhiddescriptor](https://developer.apple.com/documentation/kernel/iousbhiddescriptor)
+
+# IOUSBHIDDescriptor
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Type Alias  
+**Availability:** macOS 10.0+
+
+A structure that defines the USB HID descriptor.
+
+## Declaration
+
+```objectivec
+typedef struct IOUSBHIDDescriptor IOUSBHIDDescriptor;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+See the USB Implementers Forum (USB-IF) *Device Class Definition for Human Interface Devices (HID)* for more information.
+
+## Topics
+
+### Getting the Properties
+
+- [descLen](iousbhiddescriptor/1546208-desclen.md): The size of the descriptor.
+- [descType](iousbhiddescriptor/1546221-desctype.md): The type of the descriptor.
+- [descVersNum](iousbhiddescriptor/1545993-descversnum.md): The verison number of the descriptor.
+- [hidCountryCode](iousbhiddescriptor/1546545-hidcountrycode.md): The country or region code of the localized hardware.
+- [hidDescriptorLengthHi](iousbhiddescriptor/1546246-hiddescriptorlengthhi.md): The high byte length of the descriptor.
+- [hidDescriptorLengthLo](iousbhiddescriptor/1546304-hiddescriptorlengthlo.md): The low byte length of the descriptor.
+- [hidDescriptorType](iousbhiddescriptor/1545961-hiddescriptortype.md): The class type of the descriptor.
+- [hidNumDescriptors](iousbhiddescriptor/1546017-hidnumdescriptors.md): The number of class descriptors.
+
+## See Also
+
+### HID Descriptors
+
+- [IOUSBHIDData](iousbhiddata.md): Data related to the mouse and keyboard.
+- [IOUSBHIDDataPtr](iousbhiddataptr.md): A pointer to a structure related to mouse and keyboard data.
+- [IOUSBHIDDescriptorPtr](iousbhiddescriptorptr.md): A pointer to a structure that defines the USB HID descriptor.
+- [IOUSBHIDReportDesc](iousbhidreportdesc.md): A structure that defines the USB HID report descriptor header.
+- [IOUSBHIDReportDescPtr](iousbhidreportdescptr.md): A pointer to a structure that defines the USB HID report descriptor header.
+
+### Related Documentation
+
+- [IOUSBHIDDescriptor](https://developer.apple.com/documentation/iokit/usb_h_user-space/iousbhiddescriptor)

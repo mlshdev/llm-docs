@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/changedetails/entitymetadata-data.dictionary](https://developer.apple.com/documentation/apple-ads-platform-api/changedetails/entitymetadata-data.dictionary)
+
+# ChangeDetails.EntityMetaData
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Object  
+**Availability:** Apple Ads Platform API 1.0+
+
+A key-value map of entity metadata captured at the time of the change, such as entity name and parent IDs.
+
+## Declaration
+
+```
+object ChangeDetails.EntityMetaData
+```
+
+## Properties
+
+- `Any Key` — `string`:
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Each key is a metadata attribute name, such as `name` or `campaignId`, not a fixed field name. The `entityMetaData` field is a free-form map rather than an object with named properties, so the reference page labels this key `Any Key`. Both keys and values are strings, and the set of keys present varies by `entityType`. For example, a `Campaign` entity’s `entityMetaData` typically includes `name`. An `AdGroup` entity’s also includes the parent `campaignId`.

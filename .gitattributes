@@ -9,6 +9,7 @@ searxng/** linguist-generated=true whitespace=-blank-at-eol,-blank-at-eof,-space
 bun/** linguist-generated=true whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
 trigger-dev/** linguist-generated=true
 aria2/** linguist-generated=true whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+apple-*/** linguist-generated=true
 llms-full.txt linguist-generated=true
 **/llms-full.txt linguist-generated=true
 llms-full.txt -diff

@@ -1,0 +1,70 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/billboardcomponent](https://developer.apple.com/documentation/realitykit/billboardcomponent)
+
+# BillboardComponent
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
+
+A component that orients an entity instance so that it continuously points toward the active camera.
+
+## Declaration
+
+```swift
+struct BillboardComponent
+```
+
+## Mentioned In
+
+- [Automatically animating RealityKit entities](automatically-animating-realitykit-entities.md)
+
+<a id="overview"></a>
+
+## Overview
+
+The `BillboardComponent` automatically adjusts an entity’s orientation so that its z-axis keeps pointing in the direction of the main camera in a RealityKit scene.
+
+Add a `BillboardComponent` to any entity by passing it to an entity’s [set(\_:)](entity/componentset/set%28__%29-8sii2.md) method.
+
+```swift
+entity.components.set(BillboardComponent())
+```
+
+The entity immediately reorients itself so that it faces the scene’s active camera.
+
+| Without `BillboardComponent` | With `BillboardComponent` |
+| --- | --- |
+| ![An image of a vintage-style toy robot in a living room scene. The robot is facing about 45 degrees to the left and down from the viewer’s perspective.](https://developer.apple.com/images/com.apple.RealityKit/billboardcomponent-robot-side-above-without.jpg) | ![An image of a vintage-style toy robot in a living room scene. The robot is facing directly towards the viewer.](https://developer.apple.com/images/com.apple.RealityKit/billboardcomponent-robot-side-above-with.jpg) |
+
+> **Important**
+
+> An entity with `BillboardComponent` doesn’t provide access to its end orientation. Requesting the entity’s orientation through its transform returns only the unaltered orientation.
+
+For an example of how to animate [blendFactor](billboardcomponent/blendfactor.md), see [BillboardAction](billboardaction.md).
+
+## Topics
+
+### Initializers
+
+- [init()](billboardcomponent/init%28%29.md): Creates a billboard component that points an entity’s positive z-axis directly toward the active camera.
+
+### Instance Properties
+
+- [blendFactor](billboardcomponent/blendfactor.md): The degree at which the entity rotates toward the camera.
+
+## Relationships
+
+### Conforms To
+
+- [Component](component.md)
+- [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [Escapable](https://developer.apple.com/documentation/swift/escapable)
+
+## See Also
+
+### Visual adjustments
+
+- [HoverEffectComponent](hovereffectcomponent.md): A component that applies a visual effect to a hierarchy of entities when a person looks at or selects an entity.
+- [EnvironmentBlendingComponent](environmentblendingcomponent.md): A component that controls how an entity blends visually with objects in the local environment.
+- [LensDistortionData](lensdistortiondata.md): A description of estimated lens distortion that can be used to rectify images.
+- [ImagePresentationComponent](imagepresentationcomponent.md): A component that supports general image presentation.

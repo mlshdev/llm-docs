@@ -1,0 +1,67 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtlcomputepipelinedescriptor/buffers](https://developer.apple.com/documentation/metal/mtlcomputepipelinedescriptor/buffers)
+
+# buffers (Swift)
+
+**Framework:** Metal  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+The buffer mutability options to apply to the next kernel call.
+
+## Declaration
+
+```swift
+var buffers: MTLPipelineBufferDescriptorArray { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This property holds an array of [MTLPipelineBufferDescriptor](../mtlpipelinebufferdescriptor.md) instances, where each index corresponds to the same entry in the buffer argument table.
+
+Metal can perform additional optimizations if you guarantee that neither the CPU nor the GPU modify a buffer’s contents after set in a function’s argument table and before its command buffer completes. Use immutable buffers as much as possible, for either regular buffers or argument buffers.
+
+```objective-c
+// Compute setup.
+// Set mutability for buffer at index 9.
+MTLComputePipelineDescriptor *computeDescriptor = [MTLComputePipelineDescriptor new];
+computeDescriptor.buffers[9].mutability = MTLMutabilityImmutable;
+// Compute pass.
+// Set immutable buffer at index 9.
+id <MTLComputeCommandEncoder> computeEncoder = [_commandBuffer computeCommandEncoder];
+[computeEncoder setBuffer:_buffer offset:0 atIndex:9];
+```
+
+# buffers (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+The buffer mutability options to apply to the next kernel call.
+
+## Declaration
+
+```objectivec
+@property (readonly) MTLPipelineBufferDescriptorArray * buffers;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This property holds an array of [MTLPipelineBufferDescriptor](../mtlpipelinebufferdescriptor.md) instances, where each index corresponds to the same entry in the buffer argument table.
+
+Metal can perform additional optimizations if you guarantee that neither the CPU nor the GPU modify a buffer’s contents after set in a function’s argument table and before its command buffer completes. Use immutable buffers as much as possible, for either regular buffers or argument buffers.
+
+```objective-c
+// Compute setup.
+// Set mutability for buffer at index 9.
+MTLComputePipelineDescriptor *computeDescriptor = [MTLComputePipelineDescriptor new];
+computeDescriptor.buffers[9].mutability = MTLMutabilityImmutable;
+// Compute pass.
+// Set immutable buffer at index 9.
+id <MTLComputeCommandEncoder> computeEncoder = [_commandBuffer computeCommandEncoder];
+[computeEncoder setBuffer:_buffer offset:0 atIndex:9];
+```

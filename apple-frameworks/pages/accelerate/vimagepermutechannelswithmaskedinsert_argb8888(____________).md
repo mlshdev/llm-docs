@@ -1,0 +1,129 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimagepermutechannelswithmaskedinsert_argb8888(_:_:_:_:_:_:)](https://developer.apple.com/documentation/accelerate/vimagepermutechannelswithmaskedinsert_argb8888(_:_:_:_:_:_:))
+
+# vImagePermuteChannelsWithMaskedInsert_ARGB8888(\_:\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 7.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Permutes and overwrites the channels of an 8-bit-per-channel, 4-channel interleaved buffer.
+
+## Declaration
+
+```swift
+func vImagePermuteChannelsWithMaskedInsert_ARGB8888(_ src: UnsafePointer<vImage_Buffer>, _ dest: UnsafePointer<vImage_Buffer>, _ permuteMap: UnsafePointer<UInt8>, _ copyMask: UInt8, _ backgroundColor: UnsafePointer<UInt8>, _ flags: vImage_Flags) -> vImage_Error
+```
+
+## Parameters
+
+- `src`: The source vImage buffer.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the [height](vimage_buffer/height.md), [width](vimage_buffer/width.md), and [rowBytes](vimage_buffer/rowbytes.md) fields of this structure, and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+- `permuteMap`: An array of four 8-bit integers with the values `0`, `1`, `2`, and 3, in some order. Each value specifies the channel from the source image that the function copies to the destination channel at the corresponding index.
+- `copyMask`: A bitmask that specifies the channel or channels that the function overwrites with the corresponding channel in the `backgroundColor` parameter. The value `0x8` represents channel `0`, the value `0x4` represents channel `1`, the value `0x2` represents channel `2`, and the value `0x1` represents channel `3`.
+- `backgroundColor`: The 8-bit-per-channel ARGB value that the function writes to the destination based on the `copyMask` value.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes in [Data Types and Constants](data-types-and-constants.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This fused operation provides the same functionality as [vImagePermuteChannels_ARGB8888(\_:\_:\_:\_:)](vimagepermutechannels_argb8888%28________%29.md) followed by [vImageOverwriteChannelsWithScalar_ARGB8888(\_:\_:\_:\_:\_:)](vimageoverwritechannelswithscalar_argb8888%28__________%29.md) but offers higher performance than calling the two functions separately.
+
+The following code reverses the channel ordering of a pixel buffer and overwrites channel `0` of the destination with element `0` of the background color:
+
+```swift
+let pixelBuffer = vImage.PixelBuffer<vImage.Interleaved8x4>(
+    pixelValues: [10, 20, 30, 40],
+    size: .init(width: 1, height: 1))
+
+let backgroundColor: [Pixel_8] = [101, 102, 103, 104]
+
+pixelBuffer.withUnsafePointerToVImageBuffer { buf in
+    _ = vImagePermuteChannelsWithMaskedInsert_ARGB8888(buf,
+                                                       buf,
+                                                       [3, 2, 1, 0],
+                                                       0x8,
+                                                       backgroundColor,
+                                                       vImage_Flags(kvImageNoFlags))
+}
+
+// Prints "[101, 30, 20, 10]".
+print(pixelBuffer.array)
+```
+
+## See Also
+
+### Permuting channels with masked insert
+
+- [vImagePermuteChannelsWithMaskedInsert_ARGB16U(\_:\_:\_:\_:\_:\_:)](vimagepermutechannelswithmaskedinsert_argb16u%28____________%29.md): Permutes and overwrites the channels of an unsigned 16-bit-per-channel, 4-channel interleaved buffer.
+- [vImagePermuteChannelsWithMaskedInsert_ARGBFFFF(\_:\_:\_:\_:\_:\_:)](vimagepermutechannelswithmaskedinsert_argbffff%28____________%29.md): Permutes and overwrites the channels of a floating-point 32-bit-per-channel, 4-channel interleaved buffer.
+
+# vImagePermuteChannelsWithMaskedInsert_ARGB8888 (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 7.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Permutes and overwrites the channels of an 8-bit-per-channel, 4-channel interleaved buffer.
+
+## Declaration
+
+```objectivec
+vImage_Error vImagePermuteChannelsWithMaskedInsert_ARGB8888(const vImage_Buffer *src, const vImage_Buffer *dest, const uint8_t permuteMap[4], uint8_t copyMask, const Pixel_8888 backgroundColor, vImage_Flags flags);
+```
+
+## Parameters
+
+- `src`: The source vImage buffer.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the [height](vimage_buffer/height.md), [width](vimage_buffer/width.md), and [rowBytes](vimage_buffer/rowbytes.md) fields of this structure, and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+- `permuteMap`: An array of four 8-bit integers with the values `0`, `1`, `2`, and 3, in some order. Each value specifies the channel from the source image that the function copies to the destination channel at the corresponding index.
+- `copyMask`: A bitmask that specifies the channel or channels that the function overwrites with the corresponding channel in the `backgroundColor` parameter. The value `0x8` represents channel `0`, the value `0x4` represents channel `1`, the value `0x2` represents channel `2`, and the value `0x1` represents channel `3`.
+- `backgroundColor`: The 8-bit-per-channel ARGB value that the function writes to the destination based on the `copyMask` value.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes in [Data Types and Constants](data-types-and-constants.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This fused operation provides the same functionality as [vImagePermuteChannels_ARGB8888](vimagepermutechannels_argb8888%28________%29.md) followed by [vImageOverwriteChannelsWithScalar_ARGB8888](vimageoverwritechannelswithscalar_argb8888%28__________%29.md) but offers higher performance than calling the two functions separately.
+
+The following code reverses the channel ordering of a pixel buffer and overwrites channel `0` of the destination with element `0` of the background color:
+
+```swift
+let pixelBuffer = vImage.PixelBuffer<vImage.Interleaved8x4>(
+    pixelValues: [10, 20, 30, 40],
+    size: .init(width: 1, height: 1))
+
+let backgroundColor: [Pixel_8] = [101, 102, 103, 104]
+
+pixelBuffer.withUnsafePointerToVImageBuffer { buf in
+    _ = vImagePermuteChannelsWithMaskedInsert_ARGB8888(buf,
+                                                       buf,
+                                                       [3, 2, 1, 0],
+                                                       0x8,
+                                                       backgroundColor,
+                                                       vImage_Flags(kvImageNoFlags))
+}
+
+// Prints "[101, 30, 20, 10]".
+print(pixelBuffer.array)
+```
+
+## See Also
+
+### Permuting channels with masked insert
+
+- [vImagePermuteChannelsWithMaskedInsert_ARGB16U](vimagepermutechannelswithmaskedinsert_argb16u%28____________%29.md): Permutes and overwrites the channels of an unsigned 16-bit-per-channel, 4-channel interleaved buffer.
+- [vImagePermuteChannelsWithMaskedInsert_ARGBFFFF](vimagepermutechannelswithmaskedinsert_argbffff%28____________%29.md): Permutes and overwrites the channels of a floating-point 32-bit-per-channel, 4-channel interleaved buffer.

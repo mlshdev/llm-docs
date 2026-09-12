@@ -1,0 +1,51 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uitableviewdropproposal/init(operation:intent:)](https://developer.apple.com/documentation/uikit/uitableviewdropproposal/init(operation:intent:))
+
+# init(operation:intent:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Initializer  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Creates a drop proposal object that specifies how to incorporate the dropped content.
+
+## Declaration
+
+```swift
+init(operation: UIDropOperation, intent: UITableViewDropProposal.Intent)
+```
+
+## Parameters
+
+- `operation`: The type of operation that you want to perform. Use this parameter to specify whether you want to move the original item to this new location, move a copy of the content, or prevent the content from being inserted at this location. For a list of possible values, see [UIDropOperation](../uidropoperation.md).
+- `intent`: The option for how to incorporate the content into the table view. You can insert the content between items or add it to an existing item.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized drop proposal.
+
+# initWithDropOperation:intent: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Creates a drop proposal object that specifies how to incorporate the dropped content.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithDropOperation:(UIDropOperation) operation intent:(UITableViewDropIntent) intent;
+```
+
+## Parameters
+
+- `operation`: The type of operation that you want to perform. Use this parameter to specify whether you want to move the original item to this new location, move a copy of the content, or prevent the content from being inserted at this location. For a list of possible values, see [UIDropOperation](../uidropoperation.md).
+- `intent`: The option for how to incorporate the content into the table view. You can insert the content between items or add it to an existing item.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized drop proposal.

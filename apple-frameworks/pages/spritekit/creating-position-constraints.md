@@ -1,0 +1,81 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spritekit/creating-position-constraints](https://developer.apple.com/documentation/spritekit/creating-position-constraints)
+
+# Creating Position Constraints (Swift)
+
+**Framework:** SpriteKit  
+**Kind:** Article
+
+Create a position constraint and add it to a node.
+
+<a id="overview"></a>
+
+## Overview
+
+You lock a node at a specific coordinate with [positionX(\_:y:)](skconstraint/positionx%28__y_%29.md). Constrain a node’s horizontal position with [positionX(\_:)](skconstraint/positionx%28__%29.md), or constrain its vertical position with [positionY(\_:)](skconstraint/positiony%28__%29.md).
+
+The following code shows how you can create a node with an attached physics body that’s affected by a noise field. The node moves with the noise but the constraints keep it within a rectangular region between 300 and 340 points on both the horizontal and vertical axes.
+
+```swift
+scene.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
+   
+let noiseField = SKFieldNode.noiseField(withSmoothness: 1, animationSpeed: 0.1)
+scene.addChild(noiseField)
+     
+let node = SKShapeNode(circleOfRadius: 10)
+node.physicsBody = SKPhysicsBody(circleOfRadius: 10)
+scene.addChild(node)
+     
+let range = SKRange(lowerLimit: 300, upperLimit: 340)
+
+let lockToCenter = SKConstraint.positionX(range, y: range)
+
+node.constraints = [ lockToCenter ]
+```
+
+## See Also
+
+### Creating Position Constraints
+
+- [positionX(\_:y:)](skconstraint/positionx%28__y_%29.md): Creates a constraint that restricts both coordinates of a node’s position.
+- [positionX(\_:)](skconstraint/positionx%28__%29.md): Creates a constraint that restricts the x-coordinate of a node’s position.
+- [positionY(\_:)](skconstraint/positiony%28__%29.md): Creates a constraint that restricts the y-coordinate of a node’s position.
+
+# Creating Position Constraints (Objective-C)
+
+**Framework:** SpriteKit  
+**Kind:** Article
+
+Create a position constraint and add it to a node.
+
+<a id="overview"></a>
+
+## Overview
+
+You lock a node at a specific coordinate with [positionX:Y:](skconstraint/positionx%28__y_%29.md). Constrain a node’s horizontal position with [positionX:](skconstraint/positionx%28__%29.md), or constrain its vertical position with [positionY:](skconstraint/positiony%28__%29.md).
+
+The following code shows how you can create a node with an attached physics body that’s affected by a noise field. The node moves with the noise but the constraints keep it within a rectangular region between 300 and 340 points on both the horizontal and vertical axes.
+
+```swift
+scene.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
+   
+let noiseField = SKFieldNode.noiseField(withSmoothness: 1, animationSpeed: 0.1)
+scene.addChild(noiseField)
+     
+let node = SKShapeNode(circleOfRadius: 10)
+node.physicsBody = SKPhysicsBody(circleOfRadius: 10)
+scene.addChild(node)
+     
+let range = SKRange(lowerLimit: 300, upperLimit: 340)
+
+let lockToCenter = SKConstraint.positionX(range, y: range)
+
+node.constraints = [ lockToCenter ]
+```
+
+## See Also
+
+### Creating Position Constraints
+
+- [positionX:Y:](skconstraint/positionx%28__y_%29.md): Creates a constraint that restricts both coordinates of a node’s position.
+- [positionX:](skconstraint/positionx%28__%29.md): Creates a constraint that restricts the x-coordinate of a node’s position.
+- [positionY:](skconstraint/positiony%28__%29.md): Creates a constraint that restricts the y-coordinate of a node’s position.

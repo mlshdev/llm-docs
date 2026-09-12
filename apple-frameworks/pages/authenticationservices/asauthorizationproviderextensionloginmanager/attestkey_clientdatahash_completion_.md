@@ -1,0 +1,30 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/authenticationservices/asauthorizationproviderextensionloginmanager/attestkey:clientdatahash:completion:](https://developer.apple.com/documentation/authenticationservices/asauthorizationproviderextensionloginmanager/attestkey:clientdatahash:completion:)
+
+# attestKey:clientDataHash:completion:
+
+**Interface language:** Objective-C
+
+**Framework:** Authentication Services  
+**Kind:** Instance Method  
+**Availability:** macOS 15.4+
+
+## Declaration
+
+```objectivec
+- (void) attestKey:(ASAuthorizationProviderExtensionKeyType) keyType clientDataHash:(NSData *) clientDataHash completion:(void (^)(NSArray *attestationCertificates, NSError *error)) completion;
+```
+
+## Parameters
+
+- `keyType`: The key type for the attestation.
+- `clientDataHash`: A SHA256 hash of a unique, single-use data block that embeds a challenge from your server.
+- `completion`: A closure that the method calls upon completion with the following parameters:
+
+  - attestationCertificates An array of certificates that verify the validity of the key associated with the keyType. Send this to your server for processing.
+  - error A DCError instance that indicates the reason for failure, or nil on success.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Provides a new or cached attestation for the specified key type.

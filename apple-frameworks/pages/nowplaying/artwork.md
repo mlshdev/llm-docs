@@ -1,0 +1,63 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/nowplaying/artwork](https://developer.apple.com/documentation/nowplaying/artwork)
+
+# Artwork
+
+**Framework:** Now Playing  
+**Kind:** Structure  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+Artwork for a media item that can be requested at a specified size.
+
+## Declaration
+
+```swift
+struct Artwork
+```
+
+## Mentioned In
+
+- [Publishing media sessions](publishing-media-sessions.md)
+
+<a id="overview"></a>
+
+## Overview
+
+The following example shows how to attach artwork to a content value:
+
+```swift
+let content = MusicContent(
+    id: track.id,
+    songTitle: track.title,
+    artistName: track.artist,
+    albumName: track.album,
+    type: .audio,
+    duration: .finite(track.duration),
+    artwork: Artwork(id: track.artworkID) { size in
+        let data = await loadArtworkData(size: size)
+        return try ArtworkRepresentation(data: data)
+    }
+)
+```
+
+## Topics
+
+### Initializers
+
+- [init(id:artworkProvider:)](artwork/init%28id_artworkprovider_%29.md): Creates an artwork whose image data loads on demand at the requested size.
+
+### Instance Properties
+
+- [id](artwork/id.md): A unique identifier for this artwork, which the system uses to cache artwork across fetches.
+
+## Relationships
+
+### Conforms To
+
+- [Identifiable](https://developer.apple.com/documentation/swift/identifiable)
+
+## See Also
+
+### Displaying artwork
+
+- [ArtworkRepresentation](artworkrepresentation.md): An artwork image representation, such as music album cover art, associated with a media item.
+- [AnimatedArtwork](animatedartwork.md): Animated artwork for the media item with video and preview support.

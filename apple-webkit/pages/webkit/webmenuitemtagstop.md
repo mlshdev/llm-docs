@@ -1,0 +1,69 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/webmenuitemtagstop](https://developer.apple.com/documentation/webkit/webmenuitemtagstop)
+
+# WebMenuItemTagStop (Swift)
+
+**Framework:** WebKit  
+**Kind:** Global Variable  
+**Availability:** macOS
+
+Stop loading the current page.
+
+## Declaration
+
+```swift
+var WebMenuItemTagStop: Int { get }
+```
+
+## See Also
+
+### Constants
+
+- [WebMenuItemTagOpenLinkInNewWindow](webmenuitemtagopenlinkinnewwindow.md): Deprecated. Open the link in a new window.
+- [WebMenuItemTagDownloadLinkToDisk](webmenuitemtagdownloadlinktodisk.md): Deprecated. Download the link to a disk.
+- [WebMenuItemTagCopyLinkToClipboard](webmenuitemtagcopylinktoclipboard.md): Deprecated. Copy the link to the clipboard.
+- [WebMenuItemTagOpenImageInNewWindow](webmenuitemtagopenimageinnewwindow.md): Deprecated. Open the image in a new window.
+- [WebMenuItemTagDownloadImageToDisk](webmenuitemtagdownloadimagetodisk.md): Deprecated. Download the image to disk.
+- [WebMenuItemTagCopyImageToClipboard](webmenuitemtagcopyimagetoclipboard.md): Deprecated. Copy the image to the clipboard.
+- [WebMenuItemTagOpenFrameInNewWindow](webmenuitemtagopenframeinnewwindow.md): Deprecated. Open the frame in a new window.
+- [WebMenuItemTagCopy](webmenuitemtagcopy.md): Deprecated. Copy the element to the clipboard.
+- [WebMenuItemTagGoBack](webmenuitemtaggoback.md): Deprecated. Load the previous page.
+- [WebMenuItemTagGoForward](webmenuitemtaggoforward.md): Deprecated. Load the next page.
+- [WebMenuItemTagReload](webmenuitemtagreload.md): Deprecated. Reload the current page.
+- [WebMenuItemTagCut](webmenuitemtagcut.md): Deprecated. Cut the currently selected content.
+- [WebMenuItemTagPaste](webmenuitemtagpaste.md): Deprecated. Paste the content on the clipboard onto the current selection.
+- [WebMenuItemTagSpellingGuess](webmenuitemtagspellingguess.md): Deprecated. Suggest spellings for the misspelled word.
+- [WebMenuItemTagNoGuessesFound](webmenuitemtagnoguessesfound.md): Deprecated. Indicate whether any suggested spellings for the misspelled word could be found.
+
+# WebMenuItemTagStop (Objective-C)
+
+**Framework:** WebKit  
+**Kind:** Enumeration Case  
+**Availability:** macOS 10.3+ (deprecated in 10.14)
+
+Stop loading the current page.
+
+## Declaration
+
+```objectivec
+WebMenuItemTagStop
+```
+
+## See Also
+
+### Constants
+
+- [WebMenuItemTagOpenLinkInNewWindow](webmenuitemtagopenlinkinnewwindow.md): Deprecated. Open the link in a new window.
+- [WebMenuItemTagDownloadLinkToDisk](webmenuitemtagdownloadlinktodisk.md): Deprecated. Download the link to a disk.
+- [WebMenuItemTagCopyLinkToClipboard](webmenuitemtagcopylinktoclipboard.md): Deprecated. Copy the link to the clipboard.
+- [WebMenuItemTagOpenImageInNewWindow](webmenuitemtagopenimageinnewwindow.md): Deprecated. Open the image in a new window.
+- [WebMenuItemTagDownloadImageToDisk](webmenuitemtagdownloadimagetodisk.md): Deprecated. Download the image to disk.
+- [WebMenuItemTagCopyImageToClipboard](webmenuitemtagcopyimagetoclipboard.md): Deprecated. Copy the image to the clipboard.
+- [WebMenuItemTagOpenFrameInNewWindow](webmenuitemtagopenframeinnewwindow.md): Deprecated. Open the frame in a new window.
+- [WebMenuItemTagCopy](webmenuitemtagcopy.md): Deprecated. Copy the element to the clipboard.
+- [WebMenuItemTagGoBack](webmenuitemtaggoback.md): Deprecated. Load the previous page.
+- [WebMenuItemTagGoForward](webmenuitemtaggoforward.md): Deprecated. Load the next page.
+- [WebMenuItemTagReload](webmenuitemtagreload.md): Deprecated. Reload the current page.
+- [WebMenuItemTagCut](webmenuitemtagcut.md): Deprecated. Cut the currently selected content.
+- [WebMenuItemTagPaste](webmenuitemtagpaste.md): Deprecated. Paste the content on the clipboard onto the current selection.
+- [WebMenuItemTagSpellingGuess](webmenuitemtagspellingguess.md): Deprecated. Suggest spellings for the misspelled word.
+- [WebMenuItemTagNoGuessesFound](webmenuitemtagnoguessesfound.md): Deprecated. Indicate whether any suggested spellings for the misspelled word could be found.

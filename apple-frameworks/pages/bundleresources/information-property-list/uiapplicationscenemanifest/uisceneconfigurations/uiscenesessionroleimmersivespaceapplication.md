@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/bundleresources/information-property-list/uiapplicationscenemanifest/uisceneconfigurations/uiscenesessionroleimmersivespaceapplication](https://developer.apple.com/documentation/bundleresources/information-property-list/uiapplicationscenemanifest/uisceneconfigurations/uiscenesessionroleimmersivespaceapplication)
+
+# UISceneSessionRoleImmersiveSpaceApplication
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** Bundle Resources  
+**Kind:** Property List Key  
+**Availability:** visionOS 1.0+
+
+Configurations for scenes you use to display SwiftUI content in an immersive space.
+
+## Details
+
+`UISceneSessionRoleImmersiveSpaceApplication`
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this key to specify scene configurations for a session role. Each scene configuration corresponds to one you use for content you display on the device. The first item in the array represents the default scene configuration for this role. Use [UIApplicationPreferredDefaultSceneSessionRole](../../uiapplicationpreferreddefaultscenesessionrole.md) to indicate a preferred initial scene session role for your app.
+
+> **Note**
+
+>  Immersive space scenes don’t provide support for custom scene delegate classes or scene sub-classes. The system ignores [UISceneClassName](uiwindowscenesessionroleapplication/uisceneclassname.md), [UISceneStoryboardFile](uiwindowscenesessionroleapplication/uiscenestoryboardfile.md) and [UISceneDelegateClassName](uiwindowscenesessionroleapplication/uiscenedelegateclassname.md) keys you provide in a `UISceneSessionRoleImmersiveSpaceApplication` dictionary.
+
+## Topics
+
+### Configuration name
+
+- [UISceneConfigurationName](uiwindowscenesessionroleapplication/uisceneconfigurationname.md): The app-specific name you use to identify the scene.
+
+### Immersion style
+
+- [UISceneInitialImmersionStyle](uiscenesessionroleimmersivespaceapplication/uisceneinitialimmersionstyle.md): Provide a preferred initial scene style for an immersive space scene.
+
+## See Also
+
+### Immersize space scene roles
+
+- [CPSceneSessionRoleImmersiveSpaceApplication](cpscenesessionroleimmersivespaceapplication.md): Configurations for scenes you use to display Compositor Services content in an immersive space.

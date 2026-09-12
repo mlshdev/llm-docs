@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclusterelectricalmeasurement/subscribeattributemeasuredphase11thharmoniccurrent(with:subscriptionestablished:reporthandler:)](https://developer.apple.com/documentation/matter/mtrbaseclusterelectricalmeasurement/subscribeattributemeasuredphase11thharmoniccurrent(with:subscriptionestablished:reporthandler:))
+
+# subscribeAttributeMeasuredPhase11thHarmonicCurrent(with:subscriptionEstablished:reportHandler:) (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 16.4+ (deprecated in 18.2) · iPadOS 16.4+ (deprecated in 18.2) · Mac Catalyst 16.4+ (deprecated in 18.2) · macOS 13.3+ (deprecated in 15.2) · tvOS 16.4+ (deprecated in 18.2) · visionOS 1.0+ (deprecated in 2.2) · watchOS 9.4+ (deprecated in 11.2)
+
+> This attribute is deprecated
+
+## Declaration
+
+```swift
+func subscribeAttributeMeasuredPhase11thHarmonicCurrent(with params: MTRSubscribeParams, subscriptionEstablished: MTRSubscriptionEstablishedHandler?, reportHandler: @escaping (NSNumber?, (any Error)?) -> Void)
+```
+
+# subscribeAttributeMeasuredPhase11thHarmonicCurrentWithParams:subscriptionEstablished:reportHandler: (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 16.4+ (deprecated in 18.2) · iPadOS 16.4+ (deprecated in 18.2) · Mac Catalyst 16.4+ (deprecated in 18.2) · macOS 13.3+ (deprecated in 15.2) · tvOS 16.4+ (deprecated in 18.2) · visionOS 1.0+ (deprecated in 2.2) · watchOS 9.4+ (deprecated in 11.2)
+
+> This attribute is deprecated
+
+## Declaration
+
+```objectivec
+- (void) subscribeAttributeMeasuredPhase11thHarmonicCurrentWithParams:(MTRSubscribeParams *) params subscriptionEstablished:(MTRSubscriptionEstablishedHandler) subscriptionEstablished reportHandler:(void (^)(NSNumber *value, NSError *error)) reportHandler;
+```

@@ -1,0 +1,32 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/uniquearray/append(addingcount:initializingwith:)](https://developer.apple.com/documentation/swift/uniquearray/append(addingcount:initializingwith:))
+
+# append(addingCount:initializingWith:)
+
+**Framework:** Swift  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+Append a given number of items to the end of this array by populating an output span.
+
+## Declaration
+
+```swift
+mutating func append<E>(addingCount newItemCount: Int, initializingWith initializer: @_lifetime(0: copy 0) (inout OutputSpan<Element>) throws(E) -> Void) throws(E) where E : Error
+```
+
+## Parameters
+
+- `newItemCount`: The number of items to append to the array.
+- `initializer`: A callback that gets called at most once to directly populate newly reserved storage within the array. The function is allowed to initialize fewer than `uninitializedCount` items. The array is appended however many items the callback adds to the output span before it returns (or before it throws an error).
+
+<a id="discussion"></a>
+
+## Discussion
+
+If the array does not have sufficient capacity to hold the requested number of new elements, then this reallocates the array’s storage to grow its capacity, using a geometric growth rate.
+
+If the callback fails to fully populate its output span or if it throws an error, then the array keeps all items that were successfully initialized before the callback terminated the insertion.
+
+> **Complexity**
+
+> O(`uninitializedCount`)

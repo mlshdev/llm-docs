@@ -1,0 +1,67 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiview/setneedslayout()](https://developer.apple.com/documentation/uikit/uiview/setneedslayout())
+
+# setNeedsLayout() (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS · iPadOS · Mac Catalyst · tvOS · visionOS
+
+Invalidates the current layout of the receiver and triggers a layout update during the next update cycle.
+
+## Declaration
+
+```swift
+func setNeedsLayout()
+```
+
+## Mentioned In
+
+- [Updating views automatically with observation tracking in UIKit](../updating-views-automatically-with-observation-tracking-in-uikit.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Call this method on your application’s main thread when you want to adjust the layout of a view’s subviews. This method makes a note of the request and returns immediately. Because this method does not force an immediate update, but instead waits for the next update cycle, you can use it to invalidate the layout of multiple views before any of those views are updated. This behavior allows you to consolidate all of your layout updates to one update cycle, which is usually better for performance.
+
+## See Also
+
+### Laying out subviews
+
+- [layoutSubviews()](layoutsubviews%28%29.md): Lays out subviews.
+- [layoutIfNeeded()](layoutifneeded%28%29.md): Lays out the subviews immediately, if layout updates are pending.
+- [requiresConstraintBasedLayout](requiresconstraintbasedlayout.md): A Boolean value that indicates whether the receiver depends on the constraint-based layout system.
+- [translatesAutoresizingMaskIntoConstraints](translatesautoresizingmaskintoconstraints.md): A Boolean value that determines whether the view’s autoresizing mask converts to Auto Layout constraints.
+
+# setNeedsLayout (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS · iPadOS · Mac Catalyst · tvOS · visionOS · watchOS
+
+Invalidates the current layout of the receiver and triggers a layout update during the next update cycle.
+
+## Declaration
+
+```objectivec
+- (void) setNeedsLayout;
+```
+
+## Mentioned In
+
+- [Updating views automatically with observation tracking in UIKit](../updating-views-automatically-with-observation-tracking-in-uikit.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Call this method on your application’s main thread when you want to adjust the layout of a view’s subviews. This method makes a note of the request and returns immediately. Because this method does not force an immediate update, but instead waits for the next update cycle, you can use it to invalidate the layout of multiple views before any of those views are updated. This behavior allows you to consolidate all of your layout updates to one update cycle, which is usually better for performance.
+
+## See Also
+
+### Laying out subviews
+
+- [layoutSubviews](layoutsubviews%28%29.md): Lays out subviews.
+- [layoutIfNeeded](layoutifneeded%28%29.md): Lays out the subviews immediately, if layout updates are pending.
+- [requiresConstraintBasedLayout](requiresconstraintbasedlayout.md): A Boolean value that indicates whether the receiver depends on the constraint-based layout system.
+- [translatesAutoresizingMaskIntoConstraints](translatesautoresizingmaskintoconstraints.md): A Boolean value that determines whether the view’s autoresizing mask converts to Auto Layout constraints.

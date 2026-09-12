@@ -1,0 +1,26 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/synchronization/atomic/logicalxor(_:ordering:)](https://developer.apple.com/documentation/synchronization/atomic/logicalxor(_:ordering:))
+
+# logicalXor(\_:ordering:)
+
+**Framework:** Synchronization  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
+
+Perform an atomic logical XOR operation and return the old and new value, applying the specified memory ordering.
+
+## Declaration
+
+```swift
+@discardableResult func logicalXor(_ operand: Bool, ordering: AtomicUpdateOrdering) -> (oldValue: Bool, newValue: Bool)
+```
+
+## Parameters
+
+- `operand`: A boolean value.
+- `ordering`: The memory ordering to apply on this operation.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A tuple with the old value before the operation and the new value after the operation.

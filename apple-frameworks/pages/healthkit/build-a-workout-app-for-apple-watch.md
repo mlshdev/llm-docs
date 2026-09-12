@@ -1,0 +1,46 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/build-a-workout-app-for-apple-watch](https://developer.apple.com/documentation/healthkit/build-a-workout-app-for-apple-watch)
+
+# Build a workout app for Apple Watch
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** HealthKit  
+**Kind:** Sample Code  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · watchOS 8.0+ · Xcode 14.2+
+
+Create your own workout app, quickly and easily, with HealthKit and SwiftUI.
+
+<a id="Overview"></a>
+
+## Overview
+
+> **Note**
+
+> This sample code project is associated with WWDC21 session [10009: Build a workout app for Apple Watch](https://developer.apple.com/wwdc21/10009/).
+
+<a id="Configure-the-sample-code-project"></a>
+
+### Configure the sample code project
+
+Before you run the sample code project in Xcode:
+
+1. Open the sample with the latest version of Xcode.
+2. Select the top-level project.
+3. For the three targets, select the correct team in the Signing & Capabilities pane (next to Team) to let Xcode automatically manage your provisioning profile.
+4. Make a note of the Bundle Identifier of the WatchKit App target.
+5. Open the `Info.plist` file of the WatchKit Extension target, and change the value of the `NSExtension` \> `NSExtensionAttributes` \> `WKAppBundleIdentifier` key to the bundle ID you noted in the previous step.
+6. Make a clean build and run the sample app on your device.
+
+## See Also
+
+### Sessions
+
+- [Running workout sessions](running-workout-sessions.md): Track a workout on Apple Watch.
+- [Building a multidevice workout app](building-a-multidevice-workout-app.md): Mirror a workout from a watchOS app to its companion iOS app, and perform bidirectional communication between them.
+- [Building a workout app for iPhone and iPad](building-a-workout-app-for-iphone-and-ipad.md): Start a workout in iOS, control it from the Lock Screen with App Intents, and present the workout status with Live Activities.
+- [HKWorkoutSession](hkworkoutsession.md): A session that tracks a person’s workout.
+- [HKWorkoutConfiguration](hkworkoutconfiguration.md): An object that contains configuration information about a workout session.
+- [HKWorkoutSessionState](hkworkoutsessionstate.md): A workout session’s state.
+- [HKLiveWorkoutBuilder](hkliveworkoutbuilder.md): A builder object that constructs a workout incrementally based on live data from an active workout session.
+- [HKLiveWorkoutBuilderDelegate](hkliveworkoutbuilderdelegate.md): A protocol that defines methods for receiving updates from a live workout builder.
+- [HKLiveWorkoutDataSource](hkliveworkoutdatasource.md): A data source that automatically provides live data from an active workout session.

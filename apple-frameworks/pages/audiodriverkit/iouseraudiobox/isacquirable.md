@@ -1,0 +1,40 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiodriverkit/iouseraudiobox/isacquirable](https://developer.apple.com/documentation/audiodriverkit/iouseraudiobox/isacquirable)
+
+# IsAcquirable
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Returns a Boolean value that indicates the box’s acquirabilty state.
+
+## Declaration
+
+```objectivec
+bool IsAcquirable();
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+`true` if the box is acquirable; `false` otherwise.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method synchronizes by using the work queue created by the object.
+
+## See Also
+
+### Managing Acquirability
+
+- [HandleChangeAcquireBox](handlechangeacquirebox.md): Informs the box of a change to its acquisition state.
+- [SetIsAcquired](setisacquired.md): Set the box’s acquisition state.
+- [IsAcquired](isacquired.md): Returns a Boolean value that indicates the box’s acquisition state.
+- [SetIsAcquirable](setisacquirable.md): Set the box’s acquirability state.
+- [SetAcquisitionFailure](setacquisitionfailure.md): Sets the error code to return when box acquisition fails.
+- [GetAcquisitionFailure](getacquisitionfailure.md): Returns the error code for use when box acquisition fails.

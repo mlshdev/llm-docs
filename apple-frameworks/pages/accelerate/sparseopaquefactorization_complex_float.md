@@ -1,0 +1,150 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/sparseopaquefactorization_complex_float](https://developer.apple.com/documentation/accelerate/sparseopaquefactorization_complex_float)
+
+# SparseOpaqueFactorization_Complex_Float (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Structure  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+A semi-opaque type representing a matrix factorization in complex float.
+
+## Declaration
+
+```swift
+struct SparseOpaqueFactorization_Complex_Float
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use the `SparseCleanup` function to free resources held by these objects.
+
+The object can be in one of the following states:
+
+1. Something went wrong with symbolic factorization, nothing is valid.
+
+   - indicated by `.symbolicFactorization.status < 0`
+2. Symbolic factorization was good, but failed in numeric factorization initialization.
+
+   - indicated by `.symbolicFactorization.status >= 0 && .status < 0 && .numericFactorization == NULL`
+   - symbolic factorization may be used for future calls.
+3. Symbolic factorization was good, factor allocated/initialized correctly, but numeric factorization failed e.g. a Cholesky factorization of an indefinite matrix was attempted.
+
+   - indicated by `.symbolicFactorization.status >= 0 && .status < 0 && .numericFactorization not NULL`
+   - user may pass this object to `SparseRefactor_Double` with a modified matrix
+4. Symbolic and numeric factorizations are both good
+
+   - indicated by `.status >= 0`
+
+- **`status`**: Indicates status of factorization object.
+- **`attributes`**: Flags associated with this factorization object. In particular, transpose field indicates whether object is considered to be factorization of A or A^T.
+- **`symbolicFactorization`**: Symbolic Factorization upon which this Numeric Factorization depends.
+- **`userFactorStorage`**: Flag that indicates if user provided storage backing this object. If true, then factor storage must be freed by the user once all references are finished with (though any additional storage allocated due to pivoting will still be freed by `SparseCleanup`).
+- **`numericFactorization`**: Pointer to private internal representation of numeric factor.
+- **`solveWorkspaceRequiredStatic`**: The required size of workspace, in bytes, for a call to `SparseSolve` is `solveWorkspaceRequiredStatic + nrhs * solveWorkspaceRequiredPerRHS` where `nrhs` is the number of right-hand side vectors.
+- **`solveWorkspaceRequiredPerRHS`**: The required size of workspace, in bytes, for a call to `SparseSolve` is `solveWorkspaceRequiredStatic + nrhs * solveWorkspaceRequiredPerRHS` where `nrhs` is the number of right-hand side vectors.
+
+## Topics
+
+### Initializers
+
+- [init()](sparseopaquefactorization_complex_float/init%28%29.md)
+- [init(status:attributes:symbolicFactorization:userFactorStorage:numericFactorization:solveWorkspaceRequiredStatic:solveWorkspaceRequiredPerRHS:)](sparseopaquefactorization_complex_float/init%28status_attributes_symbolicfactorization_userfactorstorage_numericfactorization_solveworkspacerequiredstatic_solveworkspacerequiredperrhs_%29.md)
+
+### Instance Properties
+
+- [attributes](sparseopaquefactorization_complex_float/attributes.md): A type representing the attributes of a matrix.
+- [numericFactorization](sparseopaquefactorization_complex_float/numericfactorization.md)
+- [solveWorkspaceRequiredPerRHS](sparseopaquefactorization_complex_float/solveworkspacerequiredperrhs.md)
+- [solveWorkspaceRequiredStatic](sparseopaquefactorization_complex_float/solveworkspacerequiredstatic.md)
+- [status](sparseopaquefactorization_complex_float/status.md): Status field for a factorization.
+- [symbolicFactorization](sparseopaquefactorization_complex_float/symbolicfactorization.md): A semi-opaque type representing symbolic matrix factorization.
+- [userFactorStorage](sparseopaquefactorization_complex_float/userfactorstorage.md)
+
+## See Also
+
+### Solving systems with direct sparse methods
+
+- [Solving systems using direct methods](solving-systems-using-direct-methods.md): Use direct methods to solve systems of equations where the coefficient matrix is sparse.
+- [SparseOpaqueFactorization_Double](sparseopaquefactorization_double.md): A structure that represents the factorization of a matrix of double-precision, floating-point values.
+- [SparseOpaqueFactorization_Float](sparseopaquefactorization_float.md): A structure that represents the factorization of a matrix of single-precision, floating-point values.
+- [SparseOpaqueFactorization_Complex_Double](sparseopaquefactorization_complex_double.md): A semi-opaque type representing a matrix factorization in complex double.
+- [Sparse Matrix Factor Functions](sparse-matrix-factor-functions.md): Compute the factorization of a matrix.
+- [Sparse Direct Solving Functions (Matrix RHS)](sparse-direct-solving-functions-matrix-rhs.md): Solve a system with a right-hand-side dense matrix using a factored sparse coefficient matrix.
+- [Sparse Direct Solving Functions (Vector RHS)](sparse-direct-solving-functions-vector-rhs.md): Solve a system with a right-hand-side dense vector using a factored sparse coefficient matrix.
+- [Sparse Symbolic Factorization Functions](sparse-symbolic-factorization-functions.md): Calculate the symbolic factorization of a matrix, and solve systems using precalculated symbolic factorizations.
+- [Sparse Refactor Functions](sparse-refactor-functions.md): Recompute a factorization using the numerical data from a matrix.
+- [Subfactor Functions](subfactor-functions.md): Extract and work with subfactors.
+
+# SparseOpaqueFactorization_Complex_Float (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Structure  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+A semi-opaque type representing a matrix factorization in complex float.
+
+## Declaration
+
+```objectivec
+typedef struct { ... } SparseOpaqueFactorization_Complex_Float;
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use the `SparseCleanup` function to free resources held by these objects.
+
+The object can be in one of the following states:
+
+1. Something went wrong with symbolic factorization, nothing is valid.
+
+   - indicated by `.symbolicFactorization.status < 0`
+2. Symbolic factorization was good, but failed in numeric factorization initialization.
+
+   - indicated by `.symbolicFactorization.status >= 0 && .status < 0 && .numericFactorization == NULL`
+   - symbolic factorization may be used for future calls.
+3. Symbolic factorization was good, factor allocated/initialized correctly, but numeric factorization failed e.g. a Cholesky factorization of an indefinite matrix was attempted.
+
+   - indicated by `.symbolicFactorization.status >= 0 && .status < 0 && .numericFactorization not NULL`
+   - user may pass this object to `SparseRefactor_Double` with a modified matrix
+4. Symbolic and numeric factorizations are both good
+
+   - indicated by `.status >= 0`
+
+- **`status`**: Indicates status of factorization object.
+- **`attributes`**: Flags associated with this factorization object. In particular, transpose field indicates whether object is considered to be factorization of A or A^T.
+- **`symbolicFactorization`**: Symbolic Factorization upon which this Numeric Factorization depends.
+- **`userFactorStorage`**: Flag that indicates if user provided storage backing this object. If true, then factor storage must be freed by the user once all references are finished with (though any additional storage allocated due to pivoting will still be freed by `SparseCleanup`).
+- **`numericFactorization`**: Pointer to private internal representation of numeric factor.
+- **`solveWorkspaceRequiredStatic`**: The required size of workspace, in bytes, for a call to `SparseSolve` is `solveWorkspaceRequiredStatic + nrhs * solveWorkspaceRequiredPerRHS` where `nrhs` is the number of right-hand side vectors.
+- **`solveWorkspaceRequiredPerRHS`**: The required size of workspace, in bytes, for a call to `SparseSolve` is `solveWorkspaceRequiredStatic + nrhs * solveWorkspaceRequiredPerRHS` where `nrhs` is the number of right-hand side vectors.
+
+## Topics
+
+### Instance Properties
+
+- [attributes](sparseopaquefactorization_complex_float/attributes.md): A type representing the attributes of a matrix.
+- [numericFactorization](sparseopaquefactorization_complex_float/numericfactorization.md)
+- [solveWorkspaceRequiredPerRHS](sparseopaquefactorization_complex_float/solveworkspacerequiredperrhs.md)
+- [solveWorkspaceRequiredStatic](sparseopaquefactorization_complex_float/solveworkspacerequiredstatic.md)
+- [status](sparseopaquefactorization_complex_float/status.md): Status field for a factorization.
+- [symbolicFactorization](sparseopaquefactorization_complex_float/symbolicfactorization.md): A semi-opaque type representing symbolic matrix factorization.
+- [userFactorStorage](sparseopaquefactorization_complex_float/userfactorstorage.md)
+
+## See Also
+
+### Solving systems with direct sparse methods
+
+- [Solving systems using direct methods](solving-systems-using-direct-methods.md): Use direct methods to solve systems of equations where the coefficient matrix is sparse.
+- [SparseOpaqueFactorization_Double](sparseopaquefactorization_double.md): A structure that represents the factorization of a matrix of double-precision, floating-point values.
+- [SparseOpaqueFactorization_Float](sparseopaquefactorization_float.md): A structure that represents the factorization of a matrix of single-precision, floating-point values.
+- [SparseOpaqueFactorization_Complex_Double](sparseopaquefactorization_complex_double.md): A semi-opaque type representing a matrix factorization in complex double.
+- [Sparse Matrix Factor Functions](sparse-matrix-factor-functions.md): Compute the factorization of a matrix.
+- [Sparse Direct Solving Functions (Matrix RHS)](sparse-direct-solving-functions-matrix-rhs.md): Solve a system with a right-hand-side dense matrix using a factored sparse coefficient matrix.
+- [Sparse Direct Solving Functions (Vector RHS)](sparse-direct-solving-functions-vector-rhs.md): Solve a system with a right-hand-side dense vector using a factored sparse coefficient matrix.
+- [Sparse Symbolic Factorization Functions](sparse-symbolic-factorization-functions.md): Calculate the symbolic factorization of a matrix, and solve systems using precalculated symbolic factorizations.
+- [Sparse Refactor Functions](sparse-refactor-functions.md): Recompute a factorization using the numerical data from a matrix.
+- [Subfactor Functions](subfactor-functions.md): Extract and work with subfactors.

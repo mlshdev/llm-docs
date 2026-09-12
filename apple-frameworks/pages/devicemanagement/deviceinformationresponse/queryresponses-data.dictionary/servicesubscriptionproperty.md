@@ -1,0 +1,51 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/deviceinformationresponse/queryresponses-data.dictionary/servicesubscriptionproperty](https://developer.apple.com/documentation/devicemanagement/deviceinformationresponse/queryresponses-data.dictionary/servicesubscriptionproperty)
+
+# DeviceInformationResponse.QueryResponses.ServiceSubscriptionProperty
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Device Management Command  
+**Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 12.0+
+
+The response dictionary that contains information about the active service subscription.
+
+## Declaration
+
+```
+object DeviceInformationResponse.QueryResponses.ServiceSubscriptionProperty
+```
+
+## Properties
+
+- `CarrierSettingsVersion` — `string`: The version of the carrier settings.
+- `CurrentCarrierNetwork` — `string`: The name of the current carrier network.
+- `CurrentMCC` — `string`: The current mobile country code (MCC).
+- `CurrentMNC` — `string`: The current mobile network code (MNC).
+- `EID` — `string`: The eSIM identifier.
+
+  Available: iOS 14+ | iPadOS 14+
+- `ICCID` — `string`: The integrated circuit card identifier (ICCID) value.
+- `IMEI` — `string`: The device International Mobile Equipment Identity (IMEI) number.
+- `IsDataPreferred` — `boolean`: If `true`, this subscription is the preference for data.
+- `IsRoaming` — `boolean`: If `true`, the phone is roaming.
+- `IsVoicePreferred` — `boolean`: If `true`, this subscription is the preference for voice.
+- `Label` — `string`: The label of this subscription.
+- `LabelID` — `string`: The unique identifier for this subscription.
+- `MEID` — `string`: The device Mobile Equipment Identifier (MEID) number.
+- `PhoneNumber` — `string`: The raw phone number without punctuation and including country code.
+- `Slot` — `string`: The description of the slot that contains the SIM representing this subscription.
+- `SubscriberCarrierNetwork` — `string`: The name of the home carrier network.
+
+  Available: iOS 16+ | iPadOS 16+
+
+## See Also
+
+### Objects
+
+- [DeviceInformationResponse.QueryResponses.AccessibilitySettings](accessibilitysettings-data.dictionary.md): The response dictionary that contains the devices accessibility settings.
+- [DeviceInformationResponse.QueryResponses.AutoSetupAdminAccountsItem](autosetupadminaccountsitem.md): The response dictionary that contains the administrator setup information.
+- [DeviceInformationResponse.QueryResponses.MDMOptions](mdmoptions-data.dictionary.md): The response dictionary that contains MDM options.
+- [DeviceInformationResponse.QueryResponses.OSUpdateSettings](osupdatesettings-data.dictionary.md): Deprecated. The response dictionary that contains operating system update settings.
+- [DeviceInformationResponse.QueryResponses.OrganizationInfo](organizationinfo-data.dictionary.md): The response dictionary that contains organization information.
+- [DeviceInformationResponse.QueryResponses.SoftwareUpdateSettings](softwareupdatesettings-data.dictionary.md): Deprecated. The response dictionary that contains information about the Software Update pane in Settings.

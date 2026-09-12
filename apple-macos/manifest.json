@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "project": "apple-macos",
+  "title": "Apple macOS",
+  "homepage": "https://developer.apple.com/macos/",
+  "catalog": "macos",
+  "tag": "snapshot-0b0d8b1a4a77",
+  "snapshotDigest": "0b0d8b1a4a77841dabe3408abb94affbfce2598ab3f91e5ee497688ed5532de6",
+  "contentDigest": "261899149f391f58bc46c468881d82ec07fe2e3d04902a9c297d1c68eece64b1",
+  "capturedAt": "2026-09-12T21:04:59.695Z",
+  "documentCount": 77999,
+  "corpusVolumes": [
+    "llms-full.txt",
+    "llms-full.001.txt",
+    "llms-full.002.txt",
+    "llms-full.003.txt"
+  ],
+  "notes": [
+    "Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.",
+    "39 frameworks in this catalog, captured at 2026-09-12T21:04:59.695Z.",
+    "Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.",
+    "Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream."
+  ]
+}

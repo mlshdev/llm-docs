@@ -1,0 +1,65 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/kbluetoothsdpattributeidentifierhiddescriptorlist](https://developer.apple.com/documentation/iobluetooth/kbluetoothsdpattributeidentifierhiddescriptorlist)
+
+# kBluetoothSDPAttributeIdentifierHIDDescriptorList (Swift)
+
+**Framework:** IOBluetooth  
+**Kind:** Global Variable  
+**Availability:** macOS
+
+## Declaration
+
+```swift
+var kBluetoothSDPAttributeIdentifierHIDDescriptorList: SDPAttributeIdentifierCodes { get }
+```
+
+## See Also
+
+### Constants
+
+- [kBluetoothSDPAttributeIdentifierAdditionalProtocolsDescriptorList](kbluetoothsdpattributeidentifieradditionalprotocolsdescriptorlist.md)
+- [kBluetoothSDPAttributeIdentifierAudioFeedbackSupport](kbluetoothsdpattributeidentifieraudiofeedbacksupport.md)
+- [kBluetoothSDPAttributeIdentifierBluetoothProfileDescriptorList](kbluetoothsdpattributeidentifierbluetoothprofiledescriptorlist.md)
+- [kBluetoothSDPAttributeIdentifierBrowseGroupList](kbluetoothsdpattributeidentifierbrowsegrouplist.md)
+- [kBluetoothSDPAttributeIdentifierClientExecutableURL](kbluetoothsdpattributeidentifierclientexecutableurl.md)
+- [kBluetoothSDPAttributeIdentifierDocumentationURL](kbluetoothsdpattributeidentifierdocumentationurl.md)
+- [kBluetoothSDPAttributeIdentifierExternalNetwork](kbluetoothsdpattributeidentifierexternalnetwork.md)
+- [kBluetoothSDPAttributeIdentifierFaxClass1Support](kbluetoothsdpattributeidentifierfaxclass1support.md)
+- [kBluetoothSDPAttributeIdentifierFaxClass2Support](kbluetoothsdpattributeidentifierfaxclass2support.md)
+- [kBluetoothSDPAttributeIdentifierFaxClass2_0Support](kbluetoothsdpattributeidentifierfaxclass2_0support.md)
+- [kBluetoothSDPAttributeIdentifierGroupID](kbluetoothsdpattributeidentifiergroupid.md)
+- [kBluetoothSDPAttributeIdentifierHIDBatteryPower](kbluetoothsdpattributeidentifierhidbatterypower.md)
+- [kBluetoothSDPAttributeIdentifierHIDBootDevice](kbluetoothsdpattributeidentifierhidbootdevice.md)
+- [kBluetoothSDPAttributeIdentifierHIDCountryCode](kbluetoothsdpattributeidentifierhidcountrycode.md)
+- [kBluetoothSDPAttributeIdentifierHIDDeviceSubclass](kbluetoothsdpattributeidentifierhiddevicesubclass.md)
+
+# kBluetoothSDPAttributeIdentifierHIDDescriptorList (Objective-C)
+
+**Framework:** IOBluetooth  
+**Kind:** Enumeration Case  
+**Availability:** macOS
+
+## Declaration
+
+```objectivec
+kBluetoothSDPAttributeIdentifierHIDDescriptorList
+```
+
+## See Also
+
+### Constants
+
+- [kBluetoothSDPAttributeIdentifierAdditionalProtocolsDescriptorList](kbluetoothsdpattributeidentifieradditionalprotocolsdescriptorlist.md)
+- [kBluetoothSDPAttributeIdentifierAudioFeedbackSupport](kbluetoothsdpattributeidentifieraudiofeedbacksupport.md)
+- [kBluetoothSDPAttributeIdentifierBluetoothProfileDescriptorList](kbluetoothsdpattributeidentifierbluetoothprofiledescriptorlist.md)
+- [kBluetoothSDPAttributeIdentifierBrowseGroupList](kbluetoothsdpattributeidentifierbrowsegrouplist.md)
+- [kBluetoothSDPAttributeIdentifierClientExecutableURL](kbluetoothsdpattributeidentifierclientexecutableurl.md)
+- [kBluetoothSDPAttributeIdentifierDocumentationURL](kbluetoothsdpattributeidentifierdocumentationurl.md)
+- [kBluetoothSDPAttributeIdentifierExternalNetwork](kbluetoothsdpattributeidentifierexternalnetwork.md)
+- [kBluetoothSDPAttributeIdentifierFaxClass1Support](kbluetoothsdpattributeidentifierfaxclass1support.md)
+- [kBluetoothSDPAttributeIdentifierFaxClass2Support](kbluetoothsdpattributeidentifierfaxclass2support.md)
+- [kBluetoothSDPAttributeIdentifierFaxClass2_0Support](kbluetoothsdpattributeidentifierfaxclass2_0support.md)
+- [kBluetoothSDPAttributeIdentifierGroupID](kbluetoothsdpattributeidentifiergroupid.md)
+- [kBluetoothSDPAttributeIdentifierHIDBatteryPower](kbluetoothsdpattributeidentifierhidbatterypower.md)
+- [kBluetoothSDPAttributeIdentifierHIDBootDevice](kbluetoothsdpattributeidentifierhidbootdevice.md)
+- [kBluetoothSDPAttributeIdentifierHIDCountryCode](kbluetoothsdpattributeidentifierhidcountrycode.md)
+- [kBluetoothSDPAttributeIdentifierHIDDeviceSubclass](kbluetoothsdpattributeidentifierhiddevicesubclass.md)

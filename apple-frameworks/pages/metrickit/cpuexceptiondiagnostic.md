@@ -1,0 +1,51 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metrickit/cpuexceptiondiagnostic](https://developer.apple.com/documentation/metrickit/cpuexceptiondiagnostic)
+
+# CPUExceptionDiagnostic
+
+**Framework:** MetricKit  
+**Kind:** Structure  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+A diagnostic for a fatal or nonfatal CPU exception.
+
+## Declaration
+
+```swift
+struct CPUExceptionDiagnostic
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+CPU exceptions occur when your app consumes an excessive amount of CPU time in a short period. The diagnostic includes a [CallStackTree](callstacktree.md) to identify the responsible code path, along with `totalCPUTime` and `totalSampledTime` measurements.
+
+## Topics
+
+### Call stack
+
+- [callStackTree](cpuexceptiondiagnostic/callstacktree.md): The application call stack tree associated with the excessive CPU consumption.
+
+### CPU exception details
+
+- [totalCPUTime](cpuexceptiondiagnostic/totalcputime.md): Total CPU time consumed in the scope of this CPU exception.
+- [totalSampledTime](cpuexceptiondiagnostic/totalsampledtime.md): Total time that the application was sampled for during the CPU exception.
+
+## Relationships
+
+### Conforms To
+
+- [Decodable](https://developer.apple.com/documentation/swift/decodable)
+- [Encodable](https://developer.apple.com/documentation/swift/encodable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### CPU and memory metrics
+
+- [CPUTimeMetric](cputimemetric.md): A metric that measures the total CPU time used by the app.
+- [CPUInstructionsCountMetric](cpuinstructionscountmetric.md): A metric that measures the total number of CPU instructions the app executed.
+- [PeakMemoryMetric](peakmemorymetric.md): A metric that measures peak memory footprint.
+- [SuspendedMemoryMetric](suspendedmemorymetric.md): A metric that measures average suspended memory footprint with statistical data.
+- [MemoryExceptionDiagnostic](memoryexceptiondiagnostic.md): A diagnostic MetricKit generates when your app or extension terminates because it exceeds the memory limit.

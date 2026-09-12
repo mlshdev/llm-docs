@@ -1,0 +1,36 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/lowlevelrendertarget](https://developer.apple.com/documentation/realitykit/lowlevelrendertarget)
+
+# LowLevelRenderTarget
+
+**Framework:** RealityKit  
+**Kind:** Class  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+An object that describes the pixel format configuration for a render pass’s color and depth attachments.
+
+## Declaration
+
+```swift
+final class LowLevelRenderTarget
+```
+
+<a id="overview"></a>
+
+## Overview
+
+`LowLevelRenderTarget.Descriptor` is analogous to `MTLRenderPassDescriptor`’s attachment descriptors — it specifies the `MTLPixelFormat` for color and depth targets, and the MSAA sample count. Build a [LowLevelRenderTarget.DescriptorSet](lowlevelrendertarget/descriptorset.md) from one or more descriptors and provide it when creating a `LowLevelRenderPipelineState` and a `LowLevelMeshInstanceArray`.
+
+## Topics
+
+### Describing the render target
+
+- [LowLevelRenderTarget.Descriptor](lowlevelrendertarget/descriptor.md): A color and depth pixel format combination for a render pass.
+- [LowLevelRenderTarget.DescriptorSet](lowlevelrendertarget/descriptorset.md): An unordered set of render target descriptors that defines the output format combination a pipeline state or mesh instance array is compatible with.
+
+## See Also
+
+### Pipeline and render targets
+
+- [LowLevelRenderPipelineState](lowlevelrenderpipelinestate.md): A compiled Metal render pipeline state for a specific mesh descriptor, material, and render target configuration.
+- [LowLevelArgumentTable](lowlevelargumenttable.md): A table of buffer slices and textures bound to a single shader function.
+- [LowLevelMaterialParameterMapping](lowlevelmaterialparametermapping.md): A mapping of named buffer and texture parameters to binding indices for a compiled shader function.

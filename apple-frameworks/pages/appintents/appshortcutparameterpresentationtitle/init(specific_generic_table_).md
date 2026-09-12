@@ -1,0 +1,23 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/appshortcutparameterpresentationtitle/init(specific:generic:table:)](https://developer.apple.com/documentation/appintents/appshortcutparameterpresentationtitle/init(specific:generic:table:))
+
+# init(specific:generic:table:)
+
+**Framework:** App Intents  
+**Kind:** Initializer  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS · watchOS 10.0+
+
+Initializes an `AppShortcutParameterPresentationTitle` with the specified parameters.
+
+> Please use init(for:summary:optionsCollections:)
+
+## Declaration
+
+```swift
+init(specific: AppShortcutParameterPresentationTitleString<Intent, Value, Parameter, ParameterKeyPath>, generic: StaticString, table: StaticString? = nil)
+```
+
+## Parameters
+
+- `specific`: An `AppShortcutParameterPresentationTitleString` representing the specific title of the `AppShortcutParameterPresentation`. Example: `"Call \(\.$person)"`.
+- `generic`: A `StaticString` representing the generic title of the `AppShortcutParameterPresentation`. Example: `"Call Person..."`.
+- `table`: An optional `StaticString` representing the table to use when localizing the title.

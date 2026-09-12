@@ -1,0 +1,187 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/updates/uikit](https://developer.apple.com/documentation/updates/uikit)
+
+# UIKit updates
+
+**Framework:** Updates  
+**Kind:** Article
+
+Learn about important changes to UIKit.
+
+<a id="Overview"></a>
+
+## Overview
+
+Browse notable changes in [UIKit](https://developer.apple.com/documentation/uikit).
+
+<a id="June-2026"></a>
+
+## June 2026
+
+<a id="General"></a>
+
+### General
+
+- Align sensor data from Core Location and Core Motion with your app’s UI orientation by setting a [UIView](https://developer.apple.com/documentation/uikit/uiview) as the body of a [CLLocationManager](https://developer.apple.com/documentation/corelocation/cllocationmanager) or [CMMotionManager](https://developer.apple.com/documentation/coremotion/cmmotionmanager) instance.
+- Use [UICollectionViewCompositionalLayoutSectionProvider](https://developer.apple.com/documentation/uikit/uicollectionviewcompositionallayoutsectionprovider) closures as part of automatic observation tracking to automatically invalidate and update compositional layouts when observable objects change.
+- Use [UIRefreshControl](https://developer.apple.com/documentation/uikit/uirefreshcontrol) and [UIStepper](https://developer.apple.com/documentation/uikit/uistepper) in Mac apps built with Mac Catalyst. These controls are now fully supported in the Mac idiom.
+
+<a id="App-life-cycle"></a>
+
+### App life cycle
+
+- Adopt the UIKit scene-based life cycle using the guidance in [Transitioning to the UIKit scene-based life cycle](https://developer.apple.com/documentation/uikit/transitioning-to-the-uikit-scene-based-life-cycle). Starting in iOS 27, apps built with the latest SDK must use the scene-based life cycle or they fail to launch.
+
+<a id="Drag-and-drop"></a>
+
+### Drag and drop
+
+- Control drag initiation timing in gesture-rich views by configuring [UIDragInteraction](https://developer.apple.com/documentation/uikit/uidraginteraction). Use [allowsPointerDragBeforeLiftDelay](https://developer.apple.com/documentation/uikit/uidraginteraction/allowspointerdragbeforeliftdelay) to independently control when pointer-initiated drags begin.
+
+<a id="Text-views"></a>
+
+### Text views
+
+- Override viewport layout methods directly in a [UITextView](https://developer.apple.com/documentation/uikit/uitextview) subclass by conforming to [NSTextViewportLayoutControllerDelegate](https://developer.apple.com/documentation/uikit/nstextviewportlayoutcontrollerdelegate).
+- Register a [UITextAttachmentViewProviderReusePolicy](https://developer.apple.com/documentation/uikit/uitextattachmentviewproviderreusepolicy) on `UITextView` to retain attachment views during scrolling and editing, preventing flicker and preserving view state.
+- Use [NSTextTable](https://developer.apple.com/documentation/uikit/nstexttable), [NSTextBlock](https://developer.apple.com/documentation/uikit/nstextblock), and [NSTextTableBlock](https://developer.apple.com/documentation/uikit/nstexttableblock) to represent table structures in attributed strings.
+- Access paragraph text blocks using [textBlocks](https://developer.apple.com/documentation/uikit/nsparagraphstyle/textblocks).
+- Use [NSTextViewportRenderingSurface](https://developer.apple.com/documentation/uikit/nstextviewportrenderingsurface) to render text in custom views and layers, and [NSTextViewportRenderingSurfaceKey](https://developer.apple.com/documentation/uikit/nstextviewportrenderingsurfacekey) to identify them for caching.
+
+<a id="June-2025"></a>
+
+## June 2025
+
+<a id="General"></a>
+
+### General
+
+- Provide seamless immersive visuals by using [UIBackgroundExtensionView](https://developer.apple.com/documentation/uikit/uibackgroundextensionview) to extend a view’s content under sidebars and inspectors.
+- Apply Liquid Glass effects to views using [UIGlassEffect](https://developer.apple.com/documentation/uikit/uiglasseffect).
+- Organize views together for morph animations in [UIGlassContainerEffect](https://developer.apple.com/documentation/uikit/uiglasscontainereffect).
+- Add or adjust effects at the edge of a scroll view with [UIScrollEdgeEffect](https://developer.apple.com/documentation/uikit/uiscrolledgeeffect).
+- Apply Liquid Glass effects to buttons with [glass()](https://developer.apple.com/documentation/uikit/uibutton/configuration-swift.struct/glass%28%29) and [prominentGlass()](https://developer.apple.com/documentation/uikit/uibutton/configuration-swift.struct/prominentglass%28%29).
+- UIKit now supports Swift Observable objects. Use observable objects in [layoutSubviews()](https://developer.apple.com/documentation/uikit/uiview/layoutsubviews%28%29); then UIKit automatically invalidates and updates the UI when those objects change.
+- Add a badge to a [UIBarButtonItem](https://developer.apple.com/documentation/uikit/uibarbuttonitem) with [badge](https://developer.apple.com/documentation/uikit/uibarbuttonitem/badge-4sz3f).
+- Notification payloads are now strongly typed: [NotificationCenter.MessageIdentifier](https://developer.apple.com/documentation/foundation/notificationcenter/messageidentifier).
+
+<a id="Menu-bar-in-iPadOS"></a>
+
+### Menu bar in iPadOS
+
+- Swipe from the top to reveal an iPad app’s full menu. Menus on iPad support images, submenus, inline sections, checkmarks, and more.
+- Configure main menus with [UIMainMenuSystem](https://developer.apple.com/documentation/uikit/uimainmenusystem).
+
+<a id="High-dynamic-range-HDR"></a>
+
+### High dynamic range (HDR)
+
+- [UIColorPickerViewController](https://developer.apple.com/documentation/uikit/uicolorpickerviewcontroller) supports picking HDR colors, with a maximum supported exposure value.
+- Observe [UITraitHDRHeadroomUsageLimit](https://developer.apple.com/documentation/uikit/uitraithdrheadroomusagelimit-swift.struct) to automatically adjust HDR usage when a view with HDR content is not in focus.
+
+<a id="June-2024"></a>
+
+## June 2024
+
+<a id="General"></a>
+
+### General
+
+- Leverage automatic trait usage tracking inside key update methods such as [layoutSubviews()](https://developer.apple.com/documentation/uikit/uiview/layoutsubviews%28%29), eliminating the need for manual trait change registration and invalidation.
+- Add repeat, wiggle, breathe, and rotate effects to [SF Symbols](https://developer.apple.com/sf-symbols/).
+- Take advantage of enhancements to [UIListContentConfiguration](https://developer.apple.com/documentation/uikit/uilistcontentconfiguration-swift.struct), which now automatically updates to match the style of the containing list by using the new [UIListEnvironment](https://developer.apple.com/documentation/uikit/uilistenvironment) trait from the trait collection, removing the need to instantiate a configuration for a specific list style yourself.
+- Opt out or restrict collaboration on certain types of data through the share sheet using [UIActivityCollaborationMode](https://developer.apple.com/documentation/uikit/uiactivitycollaborationmode).
+- Select a specific week of the year in [UICalendarView](https://developer.apple.com/documentation/uikit/uicalendarview) using the new [UICalendarSelectionWeekOfYear](https://developer.apple.com/documentation/uikit/uicalendarselectionweekofyear) selection option.
+- Observe, participate in, and affect the UI update process using [UIUpdateLink](https://developer.apple.com/documentation/uikit/uiupdatelink).
+
+<a id="Navigation"></a>
+
+### Navigation
+
+- Showcase your app and its unique identity with a new, customizable launch design for document-based apps. In UIKit, define [launchOptions](https://developer.apple.com/documentation/uikit/uidocumentviewcontroller/launchoptions-swift.property) on your [UIDocumentViewController](https://developer.apple.com/documentation/uikit/uidocumentviewcontroller).
+- Make your app’s navigation more immersive by adopting the new tab bar on iPad. If your app presents a rich hierarchy of tab items, set the  [mode](https://developer.apple.com/documentation/uikit/uitabbarcontroller/mode-swift.property) to [UITabBarController.Mode.tabSidebar](https://developer.apple.com/documentation/uikit/uitabbarcontroller/mode-swift.enum/tabsidebar) to automatically switch between the tab bar and sidebar representations. In SwiftUI, use [sidebarAdaptable](https://developer.apple.com/documentation/swiftui/tabviewstyle/sidebaradaptable).
+- Transition between views in a way that feels fluid and consistent using a systemwide zoom transition. In UIKit, configure your view controller’s [preferredTransition](https://developer.apple.com/documentation/uikit/uiviewcontroller/preferredtransition) to [zoom(options:sourceViewProvider:)](https://developer.apple.com/documentation/uikit/uiviewcontroller/transition/zoom%28options:sourceviewprovider:%29). In SwiftUI, use [zoom(sourceID:in:)](https://developer.apple.com/documentation/swiftui/navigationtransition/zoom%28sourceid:in:%29).
+
+<a id="Framework-interoperability"></a>
+
+### Framework interoperability
+
+- Reuse existing UIKit gesture recognizer code in SwiftUI. In SwiftUI, create UIKit gesture recognizers using [UIGestureRecognizerRepresentable](https://developer.apple.com/documentation/swiftui/uigesturerecognizerrepresentable). In UIKit, refer to SwiftUI gestures by name using [name](https://developer.apple.com/documentation/uikit/uigesturerecognizer/name).
+
+<a id="visionOS"></a>
+
+### visionOS
+
+- Support more varieties of list layouts by configuring whether section headers stretch to fill the entire width of the list or shrink to tightly hug their content. For collection views, use [contentHuggingElements](https://developer.apple.com/documentation/uikit/uicollectionlayoutlistconfiguration-swift.struct/contenthuggingelements-swift.property) on [UICollectionLayoutListConfiguration](https://developer.apple.com/documentation/uikit/uicollectionlayoutlistconfiguration-swift.struct). For table views, use [contentHuggingElements](https://developer.apple.com/documentation/uikit/uitableview/contenthuggingelements) on [UITableView](https://developer.apple.com/documentation/uikit/uitableview).
+- Animate SF Symbols on visionOS using the symbol effects API and [UIImageView](https://developer.apple.com/documentation/uikit/uiimageview).
+- Apply hierarchical vibrant text color to labels using [UIColor.Prominence](https://developer.apple.com/documentation/uikit/uicolor/prominence-swift.enum).
+- Specify an action to perform without shifting the focus away from the keyboard using [keyboardAction](https://developer.apple.com/documentation/uikit/uitextinputassistantitem/keyboardaction).
+- Push a new scene in place of an existing scene using [UIWindowScenePushPlacement](https://developer.apple.com/documentation/uikit/uiwindowscenepushplacement-swift.struct). The new scene appears in the same position as the original scene, hiding it. Closing the new scene makes the original scene reappear.
+
+<a id="tvOS"></a>
+
+### tvOS
+
+- Create a unifying color theme in your app by specifying an accent color in your app’s asset catalog, which is now supported in tvOS.
+
+<a id="June-2023"></a>
+
+## June 2023
+
+<a id="General"></a>
+
+### General
+
+- Preview your views and view controllers alongside your code using the new `#Preview` Swift macro.
+- Take advantage of a new view controller appearance callback, [viewIsAppearing(\_:)](https://developer.apple.com/documentation/uikit/uiviewcontroller/viewisappearing%28_:%29), to run code that depends on the view’s initial geometry. The system calls this method when both the view and view controller have an up-to-date trait collection, and after the superview adds the view to the hierarchy and lays it out. This method deploys back to iOS 13.
+- Learn about enhancements to the trait system, which let you define custom traits for your own data, quickly change trait values throughout the view hierarchy, and register for trait changes in more flexible ways. For more information, see WWDC23 session 10057: [Unleash the UIKit trait system](https://developer.apple.com/videos/play/wwdc2023/10057/).
+- Display and manage empty state consistently in your app with [UIContentUnavailableConfiguration](https://developer.apple.com/documentation/uikit/uicontentunavailableconfiguration-swift.struct), which provides new system standard styles and layouts for common empty states. Help people understand why no content is present, and when possible, provide guidance on how to add content.
+- Create a powerful text experience in your app. Define richer interactions by changing the default tap or menu behavior when interacting with a text item. If you implement a custom UI for displaying text, support the redesigned text cursor by adopting the new text selection UI. Mark up text fields with additional text content types to help people fill out forms even faster. For more information, see WWDC23 session 10058: [What’s new with text and text interactions](https://developer.apple.com/videos/play/wwdc2023/10058/).
+- Let people drop supported files and content onto your app icon on the Home Screen to open them in your app. To make sure your app is properly configured, verify that your `Info.plist` file specifies the file types your app supports using [CFBundleDocumentTypes](https://developer.apple.com/documentation/bundleresources/information-property-list/cfbundledocumenttypes).
+
+<a id="Accessibility-and-internationalization"></a>
+
+### Accessibility and internationalization
+
+- Simplify how you maintain your accessibility code with block-based setters for accessibility attributes. Make sure people receive the most important information first by specifying a default, low, or high priority for announcements. Enhance custom accessibility elements with the new toggle and zoom accessibility traits.
+- Create a great text experience for international users by testing your UI in all languages. Adopt text styles to take advantage of enhancements to the font system, like improved wrapping and hyphenation for Chinese, German, Japanese, and Korean, as well as enhancements for variable line heights that improve legibility in several languages, including Arabic, Hindi, Thai, and Vietnamese. Access localized variants of symbol images by specifying a locale.
+
+<a id="iPadOS"></a>
+
+### iPadOS
+
+- Help people customize their Stage Manager configuration by including a larger target area for dragging windows. Leverage new resizing behavior for split view controllers to get the most out of your UI in Stage Manager.
+- Support scrolling of your scroll view content with hardware keyboard shortcuts. This behavior is enabled by default, which you can override using [allowsKeyboardScrolling](https://developer.apple.com/documentation/uikit/uiscrollview/allowskeyboardscrolling).
+- Simplify document management in your document-centric apps. Set your `UIDocument` subclass as the rename delegate of a navigation item to handle file renaming automatically. Build your content view controller from `UIDocumentViewController`, which provides a system default experience for managing documents: automatically configuring the title menu, sharing, drag and drop, key commands, and more. For more information, see WWDC23 session 10056: [Build better document-centric apps](https://developer.apple.com/videos/play/wwdc2023/10056/).
+- Enhance the Apple Pencil experience in your iPadOS app. Give your app a sense of depth by using [UIHoverGestureRecognizer](https://developer.apple.com/documentation/uikit/uihovergesturerecognizer) to draw a preview of the stroke. Support the beautiful new inks in PencilKit, including monoline, fountain pen, watercolor, and crayon.
+
+<a id="Views-and-controls"></a>
+
+### Views and controls
+
+- Animate symbol images with new symbol effects, including bounce, pulse, variable color, scale, appear, disappear, and replace.
+- Build even more performant apps with flexible layouts using collection views. Apply diffable data source snapshots and perform batch updates with even better performance. Use the [uniformAcrossSiblings(estimate:)](https://developer.apple.com/documentation/uikit/nscollectionlayoutdimension/uniformacrosssiblings%28estimate:%29) dimension for compositional layouts to specify uniform size across sibling items, with smaller items increasing in size to match their largest sibling.
+- Simplify spring animations by providing duration and bounce parameters for the new view animation method, [animate(springDuration:bounce:initialSpringVelocity:delay:options:animations:completion:)](https://developer.apple.com/documentation/uikit/uiview/animate%28springduration:bounce:initialspringvelocity:delay:options:animations:completion:%29).
+- Represent fractional progress through a page of content with page controls.
+- Display and manipulate high dynamic range (HDR) images.
+- Display your menu as a palette with [displayAsPalette](https://developer.apple.com/documentation/uikit/uimenu/options-swift.struct/displayaspalette) for it to appear as a row of menu elements for choosing from a collection of items.
+- Take advantage of the [UIStatusBarStyle.default](https://developer.apple.com/documentation/uikit/uistatusbarstyle/default) status bar style, which now automatically chooses a light or dark appearance that maintains contrast with the content underneath it.
+
+## See Also
+
+### Technology and frameworks
+
+- [Accelerate updates](accelerate.md): Learn about important changes to Accelerate.
+- [Accessibility updates](accessibility.md): Learn about important changes to Accessibility.
+- [ActivityKit updates](activitykit.md): Learn about important changes in ActivityKit.
+- [AdAttributionKit Updates](adattributionkit.md): Learn about important changes to AdAttributionKit.
+- [App Clips updates](appclips.md): Learn about important changes in App Clips.
+- [App Intents updates](appintents.md): Learn about important changes in App Intents.
+- [AppKit updates](appkit.md): Learn about important changes to AppKit.
+- [Apple Intelligence updates](apple-intelligence.md): Learn about important changes to Apple Intelligence.
+- [AppleMapsServerAPI Updates](applemapsserverapi.md): Learn about important changes to AppleMapsServerAPI.
+- [Apple Pencil updates](applepencil.md): Learn about important changes to Apple Pencil.
+- [ARKit updates](arkit.md): Learn about important changes to ARKit.
+- [Audio Toolbox updates](audiotoolbox.md): Learn about important changes to Audio Toolbox.
+- [AuthenticationServices updates](authenticationservices.md): Learn about important changes to AuthenticationServices.
+- [AVFAudio updates](avfaudio.md): Learn about important changes to AVFAudio.
+- [AVFoundation updates](avfoundation.md): Learn about important changes to AVFoundation.

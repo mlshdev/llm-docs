@@ -1,0 +1,44 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/date/addingtimeinterval(_:)](https://developer.apple.com/documentation/foundation/date/addingtimeinterval(_:))
+
+# addingTimeInterval(\_:)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 8.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Creates a new date value by adding a time interval to this date.
+
+## Declaration
+
+```swift
+func addingTimeInterval(_ timeInterval: TimeInterval) -> Date
+```
+
+## Parameters
+
+- `timeInterval`: The value to add, in seconds.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new date value calculated by adding a time interval to this date.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+> **Warning**
+
+>  This only adjusts an absolute value. If you wish to add calendrical concepts like hours, days, months then you must use a `Calendar`. That will take into account complexities like daylight saving time, months with different numbers of days, and more.
+
+## See Also
+
+### Adding or Subtracting a Time Interval
+
+- [addTimeInterval(\_:)](addtimeinterval%28__%29.md): Adds a time interval to this date.
+- [advanced(by:)](advanced%28by_%29.md): Returns a date offset the specified time interval from this date.
+- [+(\_:\_:)](+%28____%29.md): Returns a date with a specified amount of time added to it.
+- [+=(\_:\_:)](+=%28____%29.md): Adds a time interval to a date.
+- [-(\_:\_:)](-%28____%29.md): Returns a `Date` with a specified amount of time subtracted from it.
+- [-=(\_:\_:)](-=%28____%29.md): Subtract a `TimeInterval` from a `Date`.

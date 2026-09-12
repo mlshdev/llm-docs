@@ -1,0 +1,230 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/providing-contextual-cues-to-apple-intelligence-and-siri](https://developer.apple.com/documentation/appintents/providing-contextual-cues-to-apple-intelligence-and-siri)
+
+# Providing contextual cues to Apple Intelligence and Siri
+
+**Framework:** App Intents  
+**Kind:** Article  
+**Availability:** iOS 18.2+ · iPadOS 18.2+ · Mac Catalyst 18.2+ · macOS 15.2+ · tvOS 18.2+ · visionOS 2.2+ · watchOS 11.2+ · Xcode 16.2+
+
+Annotate your interface with app entities to offer contextual information about your app’s onscreen content.
+
+<a id="Overview"></a>
+
+## Overview
+
+Your app’s interface reflects what a person is doing, and what data they’re viewing or changing. Although your app’s interface contains data, the system can’t use that data directly because it’s private to your app. However, you can annotate views and other content with app entities to give the system the context it needs to improve other types of interactions. For example, when someone refers to parts of your app’s content during a Siri conversation, Apple Intelligence can use the contextual information you provide to understand what the person meant.
+
+<a id="Apply-a-domain-specific-schema-to-your-custom-type"></a>
+
+### Apply a domain-specific schema to your custom type
+
+The App Intents framework defines domains for different types of content, and schemas for the app intents and app entities related to those domains. Each schema specifies the expected format for app intents and entities, including any expected parameters or properties. If your content matches one of the existing schemas, apply that schema to your type and implement the required content.
+
+> **Note**
+
+> The predefined schemas offer a consistent format for specific types of content. Features like Apple Intelligence and Siri use this consistency to improve the quality of responses they offer for that type of content.
+
+To adopt one of the predefined schemas for an app entity, type the `@AppEntity` macro before your [AppEntity](appentity.md) type declaration and use code completion to specify the schema you want. Add properties to your app entity to match the schema you selected. For properties that are part of the schema definition, the system infers the `@Property` macro automatically, so you don’t need to add it. For more details on how to create and implement entities, see [Defining app entities for your custom data types](defining-app-entities-for-your-custom-data-types.md).
+
+<a id="Support-conversions-between-your-app-entities-and-equivalent-system-types"></a>
+
+### Support conversions between your app entities and equivalent system types
+
+Many apps deal with similar types of content, and might define custom app entities to represent that content. Although you can use the [Transferable](../coretransferable/transferable.md) protocol to provide alternate representations of your content, there are limitations to how other apps can use that content. The protocol supports the creation of files and binary data types, which limits what apps can do with the content. For example, Maps can’t use a picture of a landmark to generate directions to that landmark. For locations, names, and contacts, you can use the [IntentValueRepresentation](intentvaluerepresentation.md) type to provide a version of your data that other apps can use directly.
+
+If your entity offers the same information found in an [IntentPerson](intentperson.md), [PlaceDescriptor](../geotoolbox/placedescriptor.md), or [PersonNameComponents](../foundation/personnamecomponents.md) type, implement the [transferRepresentation](../coretransferable/transferable/transferrepresentation.md) property and add an [IntentValueRepresentation](intentvaluerepresentation.md) as one of the representations. A representation of this type supports both importing and exporting your type. The following example shows an entity that manages contact information. The code provides the contact information in an [IntentPerson](intentperson.md) structure so that other apps can incorporate that contact information directly.
+
+```swift
+struct ContactEntity: AppEntity, Transferable {
+    static var typeDisplayRepresentation: TypeDisplayRepresentation = "Contact"
+    
+    var id: String
+    @Property var name: String
+    @Property var email: String
+    
+    var displayRepresentation: DisplayRepresentation {
+        .init(title: "\(name)")
+    }
+    
+    static var defaultQuery = ContactEntityQuery()
+    
+    // Bidirectional conversion with IntentPerson.
+    static var transferRepresentation: some TransferRepresentation {
+        IntentValueRepresentation(
+            exporting: { contact in
+                IntentPerson(
+                    identifier: .applicationDefined(contact.id),
+                    name: .displayName(contact.name),
+                    handle: .init(emailAddress: contact.email)
+                )
+            },
+            importing: { person in
+                guard case let .applicationDefined(id) = person.identifier?.value,
+                      let handle = person.handle else {
+                    throw ConversionError.missingData
+                }
+                return ContactEntity(
+                    id: id,
+                    name: person.name.displayString,
+                    email: handle.value
+                )
+            }
+        )
+    }
+    
+    enum ConversionError: Error {
+        case missingData
+    }
+```
+
+For more information about making your types transferable, see the [Core Transferable](../coretransferable.md) framework.
+
+<a id="Associate-entities-with-the-views-in-your-interface"></a>
+
+### Associate entities with the views in your interface
+
+Your app’s interface reflects the things a person is doing and what data they’re viewing or changing, but that information remains private to your app unless you tell the system about it.
+
+![An illustration of iPhone that shows an app with a single note onscreen and an association with one app entity.](https://developer.apple.com/images/com.apple.AppIntents/providing-contextual-cues-to-apple-intelligence-and-siri@2x.png)
+
+![An illustration of iPhone that shows an app with a chat onscreen. Each message in the chat has an associated message entity.](https://developer.apple.com/images/com.apple.AppIntents/providing-contextual-cues-to-apple-intelligence-and-siri-2@2x.png)
+
+To share your app’s content with the system, attach app entities to the views you use to show content:
+
+- In SwiftUI, assign the identifier of your app entity to a view using the [appEntityIdentifier(\_:)](https://developer.apple.com/documentation/swiftui/view/appentityidentifier%28_:%29) or [appEntityUIElements(\_:)](https://developer.apple.com/documentation/swiftui/view/appentityuielements%28_:%29) modifier.
+- In UIKit and AppKit, assign the identifier of your app entity to any responder object using the [appEntityIdentifier](appentityannotatable/appentityidentifier.md) property.
+
+> **Important**
+
+> Attach app entities to views to reflect the data those views show. Don’t attach unrelated app entities to your interface.
+
+If you don’t have a one-to-one mapping between an app entity and one of your views, add entities using the [AppEntityUIElement](appentityuielement.md) type. You might use this approach if your app draws all of its content in a single view or places content in [Core Animation layers](../quartzcore/calayer.md). With an entity UI element, you use a closure to supply the app entities for your view on demand. In SwiftUI, provide this closure using the [appEntityUIElements(\_:)](https://developer.apple.com/documentation/swiftui/view/appentityuielements%28_:%29) modifier. In UIKit and AppKit, assign this closure to your view’s [appEntityUIElementProvider](../uikit/uiview/appentityuielementprovider.md) property.
+
+The following examples show how to use a UI element closure to specify entities for SwiftUI and UIKit views. The view in the example draws custom sticky notes, which the person can place anywhere in the view. The closure uses the system-provided context object to determine whether to return the selected notes or the notes within the specified rectangle. For each note that matches the requested criteria, it creates an [AppEntityUIElement](appentityuielement.md) type with the entity information and returns it to the system.
+
+**SwiftUI**
+
+```swift
+struct NoteBoardView: View {
+    // A collection of `AppEntity` types that the view draws in its content.
+    @State private var stickyNotes: [StickyNote]
+
+    var body: some View {
+        Canvas { context, size in
+            stickyNotes.forEach { note in
+                context.fill(
+                    Path(
+                        roundedRect: note.frame,
+                        cornerSize: .zero
+                    ),
+                    with: .color(note.colorFill)
+                )
+            }
+        }
+        .appEntityUIElements { context in
+            // Determine which notes, if any, require a UI element.  
+            stickyNotes.compactMap { note in
+                let includeNote = context.requests.contains { request in
+                    switch request {
+                        case .visible(let rect):
+                            // Return true if the note is in the specified rectangle. 
+                            return note.frame.intersects(rect)
+                        case .selected:
+                            // Return true if the note is selected.
+                            return note.isSelected
+                        @unknown default:
+                            return false
+                    }
+                }
+                // If the note isn’t visible or selected, return nil.  
+                guard includeNote else {
+                    return nil
+                }
+        
+                // Return an element with the entity identifier and other details.
+                return AppEntityUIElement(
+                    identifier: EntityIdentifier(
+                        for: StickyNote.self,
+                        identifier: note.id
+                    ),
+                    bounds: note.frame,
+                    state: State(isSelected: note.isSelected)
+                )
+            }
+        }
+    }
+}
+```
+
+**UIKit**
+
+```swift
+class NoteBoardViewController: UIViewController {
+    // A collection of `AppEntity` types that the view draws in its content.
+    private var stickyNotes: [StickyNote]
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        self.view.appEntityUIElementProvider = { view, context in
+           // Determine which notes, if any, require a UI element.  
+           stickyNotes.compactMap { note in
+                let includeNote = context.requests.contains { request in
+                    switch request {
+                        case .visible(let rect):
+                            // Return true if the note is in the specified rectangle. 
+                            return note.frame.intersects(rect)
+                        case .selected:
+                            // Return true if the note is selected.
+                            return note.isSelected
+                        @unknown default:
+                            return false
+                    }
+                }
+                // If the note isn’t visible or selected, return nil.  
+                guard includeNote else {
+                    return nil
+                }
+        
+                // Return an element with the entity identifier and other details.
+                return AppEntityUIElement(
+                    identifier: EntityIdentifier(
+                        for: StickyNote.self,
+                        identifier: note.id
+                    ),
+                    bounds: note.frame,
+                    state: State(isSelected: note.isSelected)
+                )
+            }
+        }
+    }
+    
+    // Other view controller methods and properties...
+}
+```
+
+Associating app entities with your views is the best option when the current set of views reflect multiple entities. If the views reflect only one entity, add view annotations or deliver the entity using an [NSUserActivity](../foundation/nsuseractivity.md) object. User activity objects store a single, optional entity in their [appEntityIdentifier](../foundation/nsuseractivity/appentityidentifier.md) property, and the entity provides the system with similar information as an entity attached to one of your views. Delivering an entity in a user activity object is particularly relevant when your interface contains only one entity and represents an activity someone can continue on another device using Handoff. In UIKit and AppKit, assign user activity objects to views and responders using their [userActivity](../uikit/uiresponder/useractivity.md) property. In SwiftUI, create and configure an activity object in one of your views using the [userActivity(\_:element:\_:)](https://developer.apple.com/documentation/swiftui/view/useractivity%28_:element:_:%29) modifier.
+
+<a id="Associate-entities-with-other-types-of-content"></a>
+
+### Associate entities with other types of content
+
+If a system feature displays app-specific data, check whether you can provide an app entity with that data. Some system types support the [AppEntityAnnotatable](appentityannotatable.md) protocol, which gives you a way to associate an app entity with that type. For example:
+
+- If you create local notifications with the [User Notifications](../usernotifications.md) framework, use the [appEntityIdentifier](appentityannotatable/appentityidentifier.md) property of the mutable configuration object to specify an app entity with notification-related data.
+- If you provide Now Playing information using the [Media Player](../mediaplayer.md) framework, add one or more entities to the dictionary in the [nowPlayingInfo](../mediaplayer/mpnowplayinginfocenter/nowplayinginfo.md) property of [MPNowPlayingInfoCenter](../mediaplayer/mpnowplayinginfocenter.md). Set the [MPNowPlayingInfoPropertyAppEntityIdentifiers](../mediaplayer/mpnowplayinginfopropertyappentityidentifiers.md) key to the array of entities you want to associate with the current song.
+- If you configure alarms using [AlarmKit](https://developer.apple.com/documentation/alarmkit), specify an entity along with the other alarm details when creating the [AlarmManager.AlarmConfiguration](https://developer.apple.com/documentation/alarmkit/alarmmanager/alarmconfiguration) type.
+
+> **Note**
+
+> If a system type doesn’t conform to the [AppEntityAnnotatable](appentityannotatable.md) protocol, adding conformance to that protocol in your code doesn’t deliver any additional contextual data to the system.
+
+## See Also
+
+### Onscreen context
+
+- [App schema domains](app-schema-domains.md): Declare support for well-known actions and content by applying system-defined schemas to your app intents, app entities, and app enumerations.
+- [UITableViewAppIntentsDataSource](uitableviewappintentsdatasource.md): The methods that an object adopts to make items in a table view discoverable by Apple Intelligence and Siri.
+- [NSTableViewAppIntentsDataSource](nstableviewappintentsdatasource.md): The methods that an object adopts to make items in a table view or outline view discoverable by Apple Intelligence and Siri.
+- [UICollectionViewAppIntentsDataSource](uicollectionviewappintentsdatasource.md): The methods adopted by the object you use to make items in a collection view discoverable by Apple Intelligence and Siri.
+- [NSCollectionViewAppIntentsDataSource](nscollectionviewappintentsdatasource.md): The methods adopted by the object you use to make items in a collection view discoverable by Apple Intelligence and Siri.

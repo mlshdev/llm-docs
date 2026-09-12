@@ -1,0 +1,45 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nswritingtoolscoordinator/delegate-swift.protocol/writingtoolscoordinator(_:requestspreviewfor:of:in:textdecoration:completion:)](https://developer.apple.com/documentation/appkit/nswritingtoolscoordinator/delegate-swift.protocol/writingtoolscoordinator(_:requestspreviewfor:of:in:textdecoration:completion:))
+
+# writingToolsCoordinator(\_:requestsPreviewFor:of:in:textDecoration:completion:) (Swift)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS 27.0+
+
+Asks the delegate for preview images for the specified text.
+
+## Declaration
+
+```swift
+optional func writingToolsCoordinator(_ writingToolsCoordinator: NSWritingToolsCoordinator, requestsPreviewFor textAnimation: NSWritingToolsCoordinator.TextAnimation, of range: NSRange, in context: NSWritingToolsCoordinator.Context, textDecoration: NSWritingToolsCoordinator.TextDecoration, completion: @escaping @Sendable ([NSTextPreview]?) -> Void)
+```
+
+```swift
+optional func writingToolsCoordinator(_ writingToolsCoordinator: NSWritingToolsCoordinator, previewFor textAnimation: NSWritingToolsCoordinator.TextAnimation, range: NSRange, context: NSWritingToolsCoordinator.Context, textDecoration: NSWritingToolsCoordinator.TextDecoration) async -> [NSTextPreview]?
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+To support grammar animation, the delegate should provide previews for the relevant text, as with the required `requestsPreviewFor` method, but in this case showing the text with the specified decoration applied. The grammar animation needs previews of the text of the issue in two forms, without and with the grammar indication underline applied. If you use grammar animation, you must implement this delegate method to provide them, based on the specified decoration.
+
+# writingToolsCoordinator:requestsPreviewForTextAnimation:ofRange:inContext:textDecoration:completion: (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS 27.0+
+
+Asks the delegate for preview images for the specified text.
+
+## Declaration
+
+```objectivec
+- (void) writingToolsCoordinator:(NSWritingToolsCoordinator *) writingToolsCoordinator requestsPreviewForTextAnimation:(NSWritingToolsCoordinatorTextAnimation) textAnimation ofRange:(NSRange) range inContext:(NSWritingToolsCoordinatorContext *) context textDecoration:(NSWritingToolsCoordinatorTextDecoration) textDecoration completion:(void (^)(NSArray<NSTextPreview *> *textPreviews)) completion;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+To support grammar animation, the delegate should provide previews for the relevant text, as with the required `requestsPreviewFor` method, but in this case showing the text with the specified decoration applied. The grammar animation needs previews of the text of the issue in two forms, without and with the grammar indication underline applied. If you use grammar animation, you must implement this delegate method to provide them, based on the specified decoration.

@@ -1,0 +1,45 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsedgeinsets/bottom](https://developer.apple.com/documentation/foundation/nsedgeinsets/bottom)
+
+# bottom (Swift)
+
+**Framework:** Foundation  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+The distance from the bottom of the source rectangle to the bottom of the result rectangle.
+
+## Declaration
+
+```swift
+var bottom: Double
+```
+
+## See Also
+
+### Specifying the edge insets
+
+- [left](left.md): The distance from the left side of the source rectangle to the left side of the result rectangle.
+- [right](right.md): The distance from the right side of the source rectangle to the right side of the result rectangle.
+- [top](top.md): The distance from the top of the source rectangle to the top of the result rectangle.
+
+# bottom (Objective-C)
+
+**Framework:** Foundation  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+The distance from the bottom of the source rectangle to the bottom of the result rectangle.
+
+## Declaration
+
+```objectivec
+CGFloat bottom;
+```
+
+## See Also
+
+### Specifying the edge insets
+
+- [left](left.md): The distance from the left side of the source rectangle to the left side of the result rectangle.
+- [right](right.md): The distance from the right side of the source rectangle to the right side of the result rectangle.
+- [top](top.md): The distance from the top of the source rectangle to the top of the result rectangle.

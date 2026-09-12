@@ -1,0 +1,101 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/portalmaterial](https://developer.apple.com/documentation/realitykit/portalmaterial)
+
+# PortalMaterial
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 1.0+
+
+A material that makes the mesh part a portal to a different world.
+
+## Declaration
+
+```swift
+struct PortalMaterial
+```
+
+<a id="overview"></a>
+
+## Overview
+
+You use a `PortalMaterial` with [PortalComponent](portalcomponent.md) and [WorldComponent](worldcomponent.md) to enable portal features.
+
+You can set this material on individual mesh parts. For example, create a box with [generateBox(width:height:depth:cornerRadius:splitFaces:)](meshresource/generatebox%28width_height_depth_cornerradius_splitfaces_%29.md). It can have some faces using [PhysicallyBasedMaterial](physicallybasedmaterial.md) and some faces using `PortalMaterial`.
+
+```swift
+let portal = Entity()
+// When you set `splitFaces` to `true`, each face takes up a different material slot.
+let cyanMaterial = SimpleMaterial(color: .cyan, isMetallic: false)
+portal.components.set(ModelComponent(
+    mesh: .generateBox(width: 0.5, height: 0.5, depth: 0.5, splitFaces: true),
+    materials: [PortalMaterial(),
+                cyanMaterial,
+                cyanMaterial,
+                cyanMaterial,
+                cyanMaterial,
+                cyanMaterial]
+))
+// Because the box has `0.5 x 0.5 x 0.5` dimensions,
+// offset the portal plane on the z-axis by 0.25 so that
+// it's at the front of the cube.
+// Make sure it faces toward the positive z-direction.
+portal.components.set(PortalComponent(
+    target: world,
+    clippingMode: .disabled,
+    crossingMode: .plane(PortalComponent.Plane(position: [0, 0, 0.25], normal: [0, 0, 1]))
+))
+```
+
+![A screenshot of cyan color box with only one face using portal material and a spaceship poking out of it](https://developer.apple.com/images/com.apple.RealityKit/portal-material-box.png)
+
+RealityKit treats each mesh part with a `PortalMaterial` as a different portal, even if they are pointing to the same world. Beware of the performance impact of this usage.
+
+See [PortalComponent](portalcomponent.md) for example usage.
+
+## Topics
+
+### Specifying the shader program
+
+- [program](portalmaterial/program-swift.property.md): The compiled program that drives this material’s surface and geometry shading.
+- [PortalMaterial.Program](portalmaterial/program-swift.struct.md): A compiled shader program that drives the appearance of a portal’s surface and geometry.
+
+### Accessing shader parameters
+
+- [getParameter(name:)](portalmaterial/getparameter%28name_%29.md): Returns the value of a parameter by name.
+- [getParameter(handle:)](portalmaterial/getparameter%28handle_%29.md): Returns the value of a parameter identified by a handle.
+- [setParameter(name:value:)](portalmaterial/setparameter%28name_value_%29.md): Sets the value of a parameter by name.
+- [setParameter(handle:value:)](portalmaterial/setparameter%28handle_value_%29.md): Sets the value of a parameter identified by a handle.
+- [parameterHandle(name:)](portalmaterial/parameterhandle%28name_%29.md): Returns a handle for the parameter with the given name.
+
+### Initializers
+
+- [init()](portalmaterial/init%28%29.md)
+- [init(program:)](portalmaterial/init%28program_%29.md): Creates a portal material from a previously compiled program.
+
+### Instance Properties
+
+- [faceCulling](portalmaterial/faceculling-swift.property.md): A process in which the system specifies polygons to remove before rendering a mesh using this material.
+- [triangleFillMode](portalmaterial/trianglefillmode-swift.property.md): The object that controls how RealityKit draws triangles.
+
+### Type Aliases
+
+- [PortalMaterial.FaceCulling](portalmaterial/faceculling-swift.typealias.md): An alias for the cull mode object that’s appropriate for this material class.
+- [PortalMaterial.TriangleFillMode](portalmaterial/trianglefillmode-swift.typealias.md): An alias for the triangle fill mode object that’s appropriate for this material class.
+
+## Relationships
+
+### Conforms To
+
+- [Material](material.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Portals
+
+- [PortalMaterial.FaceCulling](portalmaterial/faceculling-swift.typealias.md): An alias for the cull mode object that’s appropriate for this material class.
+- [PortalMaterial.TriangleFillMode](portalmaterial/trianglefillmode-swift.typealias.md): An alias for the triangle fill mode object that’s appropriate for this material class.
+- [PortalComponent](portalcomponent.md): A component that turns mesh surfaces into portals to a different world.
+- [WorldComponent](worldcomponent.md): A component that defines a portal world.
+- [PortalCrossingComponent](portalcrossingcomponent.md): A component that allows entities to cross portal boundaries.

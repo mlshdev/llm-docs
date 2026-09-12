@@ -1,0 +1,26 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtlrendercommandencoder/executecommandsinbuffer(_:range:)](https://developer.apple.com/documentation/metal/mtlrendercommandencoder/executecommandsinbuffer(_:range:))
+
+# executeCommandsInBuffer(\_:range:)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 12.0+ · macOS 10.14+ · tvOS 12.0+ · visionOS
+
+Encodes a command that runs a range of commands from an indirect command buffer (ICB).
+
+## Declaration
+
+```swift
+func executeCommandsInBuffer(_ buffer: any MTLIndirectCommandBuffer, range: Range<Int>)
+```
+
+## Parameters
+
+- `buffer`: An [MTLIndirectCommandBuffer](../mtlindirectcommandbuffer.md) instance that contains other commands the current command runs.
+- `range`: A span of integers that represent the command entries in `buffer` the current command runs. When running on Metal devices that belong to the [MTLGPUFamily.mac2](../mtlgpufamily/mac2.md) GPU family, the number of commands needs to be less than or equal to 0x4000 (16,384). Metal devices that belong to an Apple silicon family, such as [MTLGPUFamily.apple10](../mtlgpufamily/apple10.md), don’t have this limitation.
+
+## See Also
+
+### Running commands from indirect command buffers
+
+- [executeCommandsInBuffer(\_:indirectBuffer:offset:)](executecommandsinbuffer%28__indirectbuffer_offset_%29.md): Encodes a command that runs an indirect range of commands from an indirect command buffer (ICB).

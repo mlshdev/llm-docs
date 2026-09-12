@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/avsystemrouting/avsystemroutelaunchmode/avsystemroutelaunchmodeapplication](https://developer.apple.com/documentation/avsystemrouting/avsystemroutelaunchmode/avsystemroutelaunchmodeapplication)
+
+# AVSystemRouteLaunchModeApplication
+
+**Interface language:** Objective-C
+
+**Framework:** AVSystemRouting  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst
+
+Launches the corresponding application on the remote device.
+
+## Declaration
+
+```objectivec
+AVSystemRouteLaunchModeApplication
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this mode when you want to start your app’s counterpart on the remote device, enabling app-to-application communication and custom playback experiences. The remote application can handle the provided URL and maintain bidirectional communication through the `AVSystemRouteDataChannel` returned in the completion handler.
+
+Application identifiers must be configured in the `MDESupportedProtocols` key in your app’s `Info.plist` file. For example:
+
+```xml
+<key>MDESupportedProtocols</key>
+<dict>
+	<key>com.example.sharingprotocol</key>
+	<string>com.example.myapplicationidentifier</string>
+</dict>
+```
+
+> **Important**
+
+> If `MDESupportedProtocols` is not set, calls to [startWithCompletionHandler:](../avsystemroutesession-5i6j6/startwithcompletionhandler_.md) fail.

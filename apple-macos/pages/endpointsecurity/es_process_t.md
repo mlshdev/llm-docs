@@ -1,0 +1,155 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_process_t](https://developer.apple.com/documentation/endpointsecurity/es_process_t)
+
+# es_process_t (Swift)
+
+**Framework:** Endpoint Security  
+**Kind:** Structure  
+**Availability:** Mac Catalyst · macOS
+
+A type that describes a process, as delivered by an Endpoint Security message.
+
+## Declaration
+
+```swift
+struct es_process_t
+```
+
+<a id="overview"></a>
+
+## Overview
+
+For process events, this type also indicates the newly-executing process.
+
+You can extract values such as the process identifier (`PID`), user identifier (`UID`), and group identifier (`GID`) from the [audit_token](es_process_t/audit_token.md) field by using functions defined in `libbsm.h`.
+
+<a id="Working-with-Code-Signing"></a>
+
+### Working with Code Signing
+
+Fields related to code signing, such as [cdhash](es_process_t/cdhash.md) and [signing_id](es_process_t/signing_id.md), reflect the state of the process at the time Endpoint Security generated the message. In the specific case of process execution, this is after the `exec` completes in the kernel, but before any code in the process starts executing. At that point, XNU has validated the signature itself and has verified that the `cdhash` is correct. This second validation means that the hash of all individual page hashes in the Code Directory match the signed `cdhash`, essentially verifying the signature wasn’t tampered with. However, XNU doesn’t verify individual page hashes until the binary executes and pages in the corresponding pages. XNU doesn’t determine a binary shows signs of tampering until the individual pages page in, at which point XNU updates the code signing flags.
+
+Endpoint Security provides clients the current state of the CS flags in the [codesigning_flags](es_process_t/codesigning_flags.md) member of the [es_process_t](es_process_t.md) structure. Keep the following points in mind when evaluating this field:
+
+- The `CS_VALID` bit in [codesigning_flags](es_process_t/codesigning_flags.md) means that everything the kernel has validated up to that point in time was valid. However, this doesn’t mean there’s been a full validation of all the pages in the executable file. If a page’s content has been tampered with, XNU won’t know until that page pages in.
+- When XNU detects a tampered page, it clears the `CS_VALID` bit. With the `CS_KILL` bit set, Endpoint Security terminates the process, preventing the tampered code from executing. Platform binaries and binaries that opted into the hardened runtime typically have the `CS_KILL` bit set.
+- If you want your Endpoint Security client to detect tampered code before it pages in, such as at execution time, you can do so with the [Security](https://developer.apple.com/documentation/security) framework. However, this may impose a significant performance cost.
+- Endpoint Security plays no role in verifying the validity of code signatures.
+
+## Topics
+
+### Inspecting the Source Process
+
+- [audit_token](es_process_t/audit_token.md): A token for use with Basic Security Module auditing functions.
+- [executable](es_process_t/executable.md): The file containing the executed process.
+- [is_es_client](es_process_t/is_es_client.md): A Boolean value that indicates whether the process connects to the Endpoint Security subsystem.
+- [is_platform_binary](es_process_t/is_platform_binary.md): A Boolean value that indicates whether the process is a platform binary.
+- [start_time](es_process_t/start_time.md): The time the process started.
+
+### Inspecting Process IDs
+
+- [ppid](es_process_t/ppid.md): The parent process identifier.
+- [original_ppid](es_process_t/original_ppid.md): The original parent process ID.
+- [group_id](es_process_t/group_id.md): The process group identifier.
+- [session_id](es_process_t/session_id.md): The identifier of the session that contains the process group.
+- [tty](es_process_t/tty.md): The TTY associated with the process sending the message.
+
+### Inspecting Code Signing Properties
+
+- [codesigning_flags](es_process_t/codesigning_flags.md): The flags used to sign the process.
+- [cdhash](es_process_t/cdhash.md): The code directory hash value.
+- [signing_id](es_process_t/signing_id.md): The identifier used to sign the process.
+- [team_id](es_process_t/team_id.md): The team identifier used to sign the process.
+
+### Inspecting Audit Tokens
+
+- [responsible_audit_token](es_process_t/responsible_audit_token.md): The audit token of the process responsible for this process.
+- [parent_audit_token](es_process_t/parent_audit_token.md): The audit token of the parent process.
+
+### Instance Properties
+
+- [cdhash_full](es_process_t/cdhash_full.md)
+- [cs_validation_category](es_process_t/cs_validation_category.md): es_cs_validation_category
+- [reserved](es_process_t/reserved-1o3sp.md)
+
+## See Also
+
+### Inspecting Event Properties
+
+- [target](es_event_exec_t/target.md): The process to execute.
+
+# es_process_t (Objective-C)
+
+**Framework:** Endpoint Security  
+**Kind:** Structure  
+**Availability:** Mac Catalyst · macOS
+
+A type that describes a process, as delivered by an Endpoint Security message.
+
+## Declaration
+
+```objectivec
+typedef struct { ... } es_process_t;
+```
+
+<a id="overview"></a>
+
+## Overview
+
+For process events, this type also indicates the newly-executing process.
+
+You can extract values such as the process identifier (`PID`), user identifier (`UID`), and group identifier (`GID`) from the [audit_token](es_process_t/audit_token.md) field by using functions defined in `libbsm.h`.
+
+<a id="Working-with-Code-Signing"></a>
+
+### Working with Code Signing
+
+Fields related to code signing, such as [cdhash](es_process_t/cdhash.md) and [signing_id](es_process_t/signing_id.md), reflect the state of the process at the time Endpoint Security generated the message. In the specific case of process execution, this is after the `exec` completes in the kernel, but before any code in the process starts executing. At that point, XNU has validated the signature itself and has verified that the `cdhash` is correct. This second validation means that the hash of all individual page hashes in the Code Directory match the signed `cdhash`, essentially verifying the signature wasn’t tampered with. However, XNU doesn’t verify individual page hashes until the binary executes and pages in the corresponding pages. XNU doesn’t determine a binary shows signs of tampering until the individual pages page in, at which point XNU updates the code signing flags.
+
+Endpoint Security provides clients the current state of the CS flags in the [codesigning_flags](es_process_t/codesigning_flags.md) member of the [es_process_t](es_process_t.md) structure. Keep the following points in mind when evaluating this field:
+
+- The `CS_VALID` bit in [codesigning_flags](es_process_t/codesigning_flags.md) means that everything the kernel has validated up to that point in time was valid. However, this doesn’t mean there’s been a full validation of all the pages in the executable file. If a page’s content has been tampered with, XNU won’t know until that page pages in.
+- When XNU detects a tampered page, it clears the `CS_VALID` bit. With the `CS_KILL` bit set, Endpoint Security terminates the process, preventing the tampered code from executing. Platform binaries and binaries that opted into the hardened runtime typically have the `CS_KILL` bit set.
+- If you want your Endpoint Security client to detect tampered code before it pages in, such as at execution time, you can do so with the [Security](https://developer.apple.com/documentation/security) framework. However, this may impose a significant performance cost.
+- Endpoint Security plays no role in verifying the validity of code signatures.
+
+## Topics
+
+### Inspecting the Source Process
+
+- [audit_token](es_process_t/audit_token.md): A token for use with Basic Security Module auditing functions.
+- [executable](es_process_t/executable.md): The file containing the executed process.
+- [is_es_client](es_process_t/is_es_client.md): A Boolean value that indicates whether the process connects to the Endpoint Security subsystem.
+- [is_platform_binary](es_process_t/is_platform_binary.md): A Boolean value that indicates whether the process is a platform binary.
+- [start_time](es_process_t/start_time.md): The time the process started.
+
+### Inspecting Process IDs
+
+- [ppid](es_process_t/ppid.md): The parent process identifier.
+- [original_ppid](es_process_t/original_ppid.md): The original parent process ID.
+- [group_id](es_process_t/group_id.md): The process group identifier.
+- [session_id](es_process_t/session_id.md): The identifier of the session that contains the process group.
+- [tty](es_process_t/tty.md): The TTY associated with the process sending the message.
+
+### Inspecting Code Signing Properties
+
+- [codesigning_flags](es_process_t/codesigning_flags.md): The flags used to sign the process.
+- [cdhash](es_process_t/cdhash.md): The code directory hash value.
+- [signing_id](es_process_t/signing_id.md): The identifier used to sign the process.
+- [team_id](es_process_t/team_id.md): The team identifier used to sign the process.
+
+### Inspecting Audit Tokens
+
+- [responsible_audit_token](es_process_t/responsible_audit_token.md): The audit token of the process responsible for this process.
+- [parent_audit_token](es_process_t/parent_audit_token.md): The audit token of the parent process.
+
+### Instance Properties
+
+- [cdhash_full](es_process_t/cdhash_full.md)
+- [cs_validation_category](es_process_t/cs_validation_category.md): es_cs_validation_category
+- [reserved](es_process_t/reserved-5t1sy.md)
+
+## See Also
+
+### Inspecting Event Properties
+
+- [target](es_event_exec_t/target.md): The process to execute.

@@ -1,0 +1,101 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videotoolbox/vtframesilo-api-collection](https://developer.apple.com/documentation/videotoolbox/vtframesilo-api-collection)
+
+# VTFrameSilo (Swift)
+
+**Framework:** Video Toolbox  
+**Kind:** API Collection
+
+An object that stores sample buffers from a multipass encoding session.
+
+<a id="overview"></a>
+
+## Overview
+
+A frame silo object starts out empty and is populated by calls to [VTFrameSiloAddSampleBuffer(\_:sampleBuffer:)](vtframesiloaddsamplebuffer%28__samplebuffer_%29.md) to add sample buffers in ascending decode order. After the first full pass, additional passes may be performed to replace sample buffers. Each such pass must begin with a call to [VTFrameSiloSetTimeRangesForNextPass(\_:timeRangeCount:timeRangeArray:)](vtframesilosettimerangesfornextpass%28__timerangecount_timerangearray_%29.md), which takes a list of time ranges. Samples in these time ranges are deleted, and calls to [VTFrameSiloAddSampleBuffer(\_:sampleBuffer:)](vtframesiloaddsamplebuffer%28__samplebuffer_%29.md) can then be made to provide replacements.
+
+Call [VTFrameSiloCallFunctionForEachSampleBuffer(\_:in:refcon:callback:)](vtframesilocallfunctionforeachsamplebuffer%28__in_refcon_callback_%29.md) or [VTFrameSiloCallBlockForEachSampleBuffer(\_:in:handler:)](vtframesilocallblockforeachsamplebuffer%28__in_handler_%29.md) to retrieve sample buffers. The frame silo object may write sample buffers and data to the backing file between addition and retrieval; don’t expect to get identical object pointers back.
+
+The sample buffers are ordered by decode timestamp.
+
+## Topics
+
+### Creating Frame Silos
+
+- [VTFrameSiloCreate(allocator:fileURL:timeRange:options:frameSiloOut:)](vtframesilocreate%28allocator_fileurl_timerange_options_framesiloout_%29.md): Creates a frame silo object using a temporary file.
+
+### Configuring Frame Silos
+
+- [VTFrameSiloAddSampleBuffer(\_:sampleBuffer:)](vtframesiloaddsamplebuffer%28__samplebuffer_%29.md): Adds a sample buffer to a frame silo object.
+- [VTFrameSiloSetTimeRangesForNextPass(\_:timeRangeCount:timeRangeArray:)](vtframesilosettimerangesfornextpass%28__timerangecount_timerangearray_%29.md): Begins a new pass of samples to be added to a frame silo object.
+- [VTFrameSiloCallBlockForEachSampleBuffer(\_:in:handler:)](vtframesilocallblockforeachsamplebuffer%28__in_handler_%29.md): Retrieves sample buffers from a frame silo object.
+- [VTFrameSiloCallFunctionForEachSampleBuffer(\_:in:refcon:callback:)](vtframesilocallfunctionforeachsamplebuffer%28__in_refcon_callback_%29.md): Retrieves sample buffers from a frame silo object.
+
+### Inspecting Frame Silos
+
+- [VTFrameSiloGetProgressOfCurrentPass(\_:progressOut:)](vtframesilogetprogressofcurrentpass%28__progressout_%29.md): Gets the progress of the current pass.
+- [VTFrameSiloGetTypeID()](vtframesilogettypeid%28%29.md): Retrieves the Core Foundation type identifier for the frame silo object.
+
+### Data Types
+
+- [VTFrameSilo](vtframesilo.md): An object that stores a large number of sample buffers, as produced by a multipass compression session.
+
+## See Also
+
+### Compression
+
+- [Encoding video for low-latency conferencing](encoding-video-for-low-latency-conferencing.md): Configure a compression session to optimize encoding for video-conferencing apps.
+- [Encoding video for live streaming](encoding-video-for-live-streaming.md): Configure a compression session to encode video for live streaming.
+- [Encoding video for offline transcoding](encoding-video-for-offline-transcoding.md): Configure a compression session to transcode video in offline workflows.
+- [VTCompressionSession](vtcompressionsession-api-collection.md): An object that compresses video data.
+- [VTDecompressionSession](vtdecompressionsession-api-collection.md): An object that decompresses video data.
+- [VTMultiPassStorage](vtmultipassstorage-api-collection.md): An object that stores video encoding metadata from a multipass encoding session.
+
+# VTFrameSilo (Objective-C)
+
+**Framework:** Video Toolbox  
+**Kind:** API Collection
+
+An object that stores sample buffers from a multipass encoding session.
+
+<a id="overview"></a>
+
+## Overview
+
+A frame silo object starts out empty and is populated by calls to [VTFrameSiloAddSampleBuffer](vtframesiloaddsamplebuffer%28__samplebuffer_%29.md) to add sample buffers in ascending decode order. After the first full pass, additional passes may be performed to replace sample buffers. Each such pass must begin with a call to [VTFrameSiloSetTimeRangesForNextPass](vtframesilosettimerangesfornextpass%28__timerangecount_timerangearray_%29.md), which takes a list of time ranges. Samples in these time ranges are deleted, and calls to [VTFrameSiloAddSampleBuffer](vtframesiloaddsamplebuffer%28__samplebuffer_%29.md) can then be made to provide replacements.
+
+Call [VTFrameSiloCallFunctionForEachSampleBuffer](vtframesilocallfunctionforeachsamplebuffer%28__in_refcon_callback_%29.md) or [VTFrameSiloCallBlockForEachSampleBuffer](vtframesilocallblockforeachsamplebuffer%28__in_handler_%29.md) to retrieve sample buffers. The frame silo object may write sample buffers and data to the backing file between addition and retrieval; don’t expect to get identical object pointers back.
+
+The sample buffers are ordered by decode timestamp.
+
+## Topics
+
+### Creating Frame Silos
+
+- [VTFrameSiloCreate](vtframesilocreate%28allocator_fileurl_timerange_options_framesiloout_%29.md): Creates a frame silo object using a temporary file.
+
+### Configuring Frame Silos
+
+- [VTFrameSiloAddSampleBuffer](vtframesiloaddsamplebuffer%28__samplebuffer_%29.md): Adds a sample buffer to a frame silo object.
+- [VTFrameSiloSetTimeRangesForNextPass](vtframesilosettimerangesfornextpass%28__timerangecount_timerangearray_%29.md): Begins a new pass of samples to be added to a frame silo object.
+- [VTFrameSiloCallBlockForEachSampleBuffer](vtframesilocallblockforeachsamplebuffer%28__in_handler_%29.md): Retrieves sample buffers from a frame silo object.
+- [VTFrameSiloCallFunctionForEachSampleBuffer](vtframesilocallfunctionforeachsamplebuffer%28__in_refcon_callback_%29.md): Retrieves sample buffers from a frame silo object.
+
+### Inspecting Frame Silos
+
+- [VTFrameSiloGetProgressOfCurrentPass](vtframesilogetprogressofcurrentpass%28__progressout_%29.md): Gets the progress of the current pass.
+- [VTFrameSiloGetTypeID](vtframesilogettypeid%28%29.md): Retrieves the Core Foundation type identifier for the frame silo object.
+
+### Data Types
+
+- [VTFrameSiloRef](vtframesilo.md): An object that stores a large number of sample buffers, as produced by a multipass compression session.
+
+## See Also
+
+### Compression
+
+- [Encoding video for low-latency conferencing](encoding-video-for-low-latency-conferencing.md): Configure a compression session to optimize encoding for video-conferencing apps.
+- [Encoding video for live streaming](encoding-video-for-live-streaming.md): Configure a compression session to encode video for live streaming.
+- [Encoding video for offline transcoding](encoding-video-for-offline-transcoding.md): Configure a compression session to transcode video in offline workflows.
+- [VTCompressionSession](vtcompressionsession-api-collection.md): An object that compresses video data.
+- [VTDecompressionSession](vtdecompressionsession-api-collection.md): An object that decompresses video data.
+- [VTMultiPassStorage](vtmultipassstorage-api-collection.md): An object that stores video encoding metadata from a multipass encoding session.

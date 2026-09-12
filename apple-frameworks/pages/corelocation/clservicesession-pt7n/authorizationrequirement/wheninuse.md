@@ -1,0 +1,24 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corelocation/clservicesession-pt7n/authorizationrequirement/wheninuse](https://developer.apple.com/documentation/corelocation/clservicesession-pt7n/authorizationrequirement/wheninuse)
+
+# CLServiceSession.AuthorizationRequirement.whenInUse
+
+**Framework:** Core Location  
+**Kind:** Case  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · tvOS 18.0+ · visionOS 1.0+ · watchOS 11.0+
+
+## Declaration
+
+```swift
+case whenInUse
+```
+
+## Mentioned In
+
+- [Handling location updates in the background](../../handling-location-updates-in-the-background.md)
+
+## See Also
+
+### Authorization requirement values
+
+- [CLServiceSession.AuthorizationRequirement.always](always.md)
+- [CLServiceSession.AuthorizationRequirement.none](none.md)

@@ -1,0 +1,67 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreml/mlmodelstructure-swift.enum](https://developer.apple.com/documentation/coreml/mlmodelstructure-swift.enum)
+
+# MLModelStructure
+
+**Framework:** Core ML  
+**Kind:** Enumeration  
+**Availability:** iOS 17.4+ · iPadOS 17.4+ · Mac Catalyst 17.4+ · macOS 14.4+ · tvOS 17.4+ · visionOS 1.0+ · watchOS 10.4+
+
+An enum representing the structure of a model.
+
+## Declaration
+
+```swift
+enum MLModelStructure
+```
+
+<a id="overview"></a>
+
+## Overview
+
+```
+// Load the model structure.
+let modelStructure = await try MLModelStructure.load(contentsOf: modelURL)
+switch modelStructure {
+case .program(let program):
+   // Examine ML Program model.
+case .neuralNetwork(let neuralNetwork):
+   // Examine Neural network model
+case .pipeline(let pipeline)
+   // Examine Pipeline model
+default:
+   // The model type is something else.
+}
+```
+
+## Topics
+
+### Model structures
+
+- [MLModelStructure.neuralNetwork(\_:)](mlmodelstructure-swift.enum/neuralnetwork%28__%29.md): Represents a NeuralNetwork model, the associated value is the structure of the NeuralNetwork.
+- [MLModelStructure.NeuralNetwork](mlmodelstructure-swift.enum/neuralnetwork.md): A struct representing the structure of a NeuralNetwork model..
+- [MLModelStructure.pipeline(\_:)](mlmodelstructure-swift.enum/pipeline%28__%29.md): Represents a Pipeline model, the associated value is the structure of the Pipeline.
+- [MLModelStructure.Pipeline](mlmodelstructure-swift.enum/pipeline.md): A struct representing the structure of a Pipeline model..
+- [MLModelStructure.program(\_:)](mlmodelstructure-swift.enum/program%28__%29.md): Represents a MLProgram model. the associated value is the structure of the Program.
+- [MLModelStructure.Program](mlmodelstructure-swift.enum/program.md): A struct representing the structure of an ML Program model.
+- [MLModelStructure.unsupported](mlmodelstructure-swift.enum/unsupported.md): Represents an unsupported model.
+
+### Loading a model structure
+
+- [load(asset:)](mlmodelstructure-swift.enum/load%28asset_%29.md): Load the model structure asynchronously from the model asset.
+- [load(contentsOf:)](mlmodelstructure-swift.enum/load%28contentsof_%29.md): Load the model structure asynchronously given the location of its on-disk representation.
+
+## Relationships
+
+### Conforms To
+
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Compute plan
+
+- [MLComputePlan](mlcomputeplan-1w21n.md): A class representing the compute plan of a model.
+- [MLComputePolicy](mlcomputepolicy.md): The compute policy determining what compute device, or compute devices, to execute ML workloads on.
+- [withMLTensorComputePolicy(\_:\_:)](withmltensorcomputepolicy%28____%29-8stx9.md): Calls the given closure within a task-local context using the specified compute policy to influence what compute device tensor operations are executed on.
+- [withMLTensorComputePolicy(\_:\_:)](withmltensorcomputepolicy%28____%29-6z33x.md): Calls the given closure within a task-local context using the specified compute policy to influence what compute device tensor operations are executed on.

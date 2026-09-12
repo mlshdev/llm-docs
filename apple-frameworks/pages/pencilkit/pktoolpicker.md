@@ -1,0 +1,242 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/pencilkit/pktoolpicker](https://developer.apple.com/documentation/pencilkit/pktoolpicker)
+
+# PKToolPicker (Swift)
+
+**Framework:** PencilKit  
+**Kind:** Class  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+A tool palette that displays a selection of drawing tools and colors for tools that a person can choose from.
+
+## Declaration
+
+```swift
+class PKToolPicker
+```
+
+## Mentioned In
+
+- [Supporting backward compatibility for ink types](supporting-backward-compatibility-for-ink-types.md)
+
+<a id="overview"></a>
+
+## Overview
+
+A [PKToolPicker](pktoolpicker.md) manages a draggable palette that displays drawing tools, colors, and additional options. You add a tool picker to your interface and configure it to display its palette at appropriate times. While the palette is onscreen, a person may reposition it anywhere within the current window. When a person interacts with the palette, the tool picker notifies registered observers of the changes so that they can respond.
+
+> **Important**
+
+>  The tool picker doesn’t display in Mac apps built with Mac Catalyst.
+
+When configuring your interface, call the [setVisible(\_:forFirstResponder:)](pktoolpicker/setvisible%28__forfirstresponder_%29.md) method to associate the tool picker with one or more views in your interface. Each window manages its own tool picker, and the window’s first responder determines the visibility of that tool picker. When one of the registered objects becomes first responder, the tool picker automatically adds its palette view to the current window. When there isn’t a registered object as first responder, the tool picker hides its palette view.
+
+[PKCanvasView](pkcanvasview.md) implements the observer protocol for detecting tool picker changes. Adding your canvas view as an observer to a tool picker automatically updates the current drawing tools. For more information about implementing custom observer objects, see [PKToolPickerObserver](pktoolpickerobserver.md).
+
+## Topics
+
+### Creating a tool picker
+
+- [init()](pktoolpicker/init%28%29.md): Creates a new tool picker with a default set of tools.
+- [init(toolItems:)](pktoolpicker/init%28toolitems_%29.md): Creates a new tool picker with the tools you specify.
+- [PKToolPickerInkingItem](pktoolpickerinkingitem.md): An item that represents an inking tool in the tool picker.
+- [PKToolPickerEraserItem](pktoolpickereraseritem.md): An item that represents an eraser tool in the tool picker.
+- [PKToolPickerLassoItem](pktoolpickerlassoitem.md): An item that represents a lasso tool in the tool picker.
+- [PKToolPickerRulerItem](pktoolpickerruleritem.md): An item that represents a ruler tool in the tool picker.
+- [PKToolPickerScribbleItem](pktoolpickerscribbleitem.md): An item that represents a Scribble tool in the tool picker.
+- [PKToolPickerCustomItem](pktoolpickercustomitem.md): An item that represents a custom tool in the tool picker.
+- [PKToolPickerItem](pktoolpickeritem.md): The base class for an item in the tool picker.
+
+### Accessing the picker’s tools
+
+- [toolItems](pktoolpicker/toolitems.md): All tool items in the tool picker.
+
+### Detecting changes to the picker
+
+- [addObserver(\_:)](pktoolpicker/addobserver%28__%29.md): Adds the specified object to the list of objects to notify when the picker configuration changes.
+- [removeObserver(\_:)](pktoolpicker/removeobserver%28__%29.md): Removes the specified object from the list of objects to notify when the picker configuration changes.
+- [PKToolPickerObserver](pktoolpickerobserver.md): An interface you use to detect when the user changes the selected tools and drawing characteristics of a tool picker object.
+
+### Coordinating the visibility of the picker
+
+- [setVisible(\_:forFirstResponder:)](pktoolpicker/setvisible%28__forfirstresponder_%29.md): Sets the visibility for the tool picker, based on when the specified responder object becomes active.
+- [isVisible](pktoolpicker/isvisible.md): A Boolean value that indicates whether the tool picker is currently visible.
+- [frameObscured(in:)](pktoolpicker/frameobscured%28in_%29.md): Returns the portion of the specified view that the tool picker obscures.
+
+### Managing selected tools
+
+- [selectedToolItem](pktoolpicker/selectedtoolitem.md): The currently selected tool item in the tool picker.
+- [selectedToolItemIdentifier](pktoolpicker/selectedtoolitemidentifier.md): The identifier of the selected tool item in the tool picker.
+
+### Customizing picker behavior
+
+- [isRulerActive](pktoolpicker/isruleractive.md): A Boolean value that indicates whether the ruler is visible on the canvas.
+- [colorUserInterfaceStyle](pktoolpicker/coloruserinterfacestyle.md): The user interface style for the tool picker.
+- [overrideUserInterfaceStyle](pktoolpicker/overrideuserinterfacestyle.md): The specific user interface style to apply to the tool picker.
+- [showsDrawingPolicyControls](pktoolpicker/showsdrawingpolicycontrols.md): A Boolean value that indicates whether the default drawing policy UI is visible.
+- [stateAutosaveName](pktoolpicker/stateautosavename.md): The name used to automatically save the tool picker’s state in the defaults system.
+
+### Configuring the accessory item
+
+- [accessoryItem](pktoolpicker/accessoryitem.md): An optional button that appears at the trailing edge of the tool picker.
+
+### Supporting PencilKit versions
+
+- [maximumSupportedContentVersion](pktoolpicker/maximumsupportedcontentversion.md): The maximum version of PencilKit to support.
+
+### Deprecated
+
+- [shared(for:)](pktoolpicker/shared%28for_%29.md): Deprecated. Returns the tool picker object to use for the specified window.
+- [selectedTool](pktoolpicker/selectedtool-2lptq.md): Deprecated. The currently selected tool in the tool picker.
+
+### Instance Properties
+
+- [colorMaximumLinearExposure](pktoolpicker/colormaximumlinearexposure.md): Maximum linear exposure for the color picker used by the tool picker. Can be used to enable picking HDR colors.
+- [delegate](pktoolpicker/delegate-swift.property.md): The delegate for the tool picker.
+- [prefersDismissControlVisible](pktoolpicker/prefersdismisscontrolvisible.md): If this is true the tool picker may show UI that allows dismissing it. If this is false the tool picker will not show this UI. By default this resigns first responder, but is customizable by `PKToolPickerDelegate`’s `toolPickerWillDismiss...` method.
+
+### Type Properties
+
+- [defaultToolItems](pktoolpicker/defaulttoolitems.md): The default tool items for new tool pickers.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Tools
+
+- [Configuring the PencilKit tool picker](configuring-the-pencilkit-tool-picker.md): Incorporate a custom PencilKit tool picker with a variety of system and custom tools into a drawing app.
+- [PKInkingTool](pkinkingtool-swift.struct.md): A structure that defines the drawing characteristics (width, color, pen style) to use when drawing lines on a canvas view.
+- [PKEraserTool](pkerasertool-swift.struct.md): A tool for erasing previously drawn content in a canvas view.
+- [PKLassoTool](pklassotool-swift.struct.md): A tool for selecting stroked lines and shapes in a canvas view.
+- [PKTool](pktool-swift.protocol.md): An interface adopted by drawing and writing tools used by a canvas view.
+
+# PKToolPicker (Objective-C)
+
+**Framework:** PencilKit  
+**Kind:** Class  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+A tool palette that displays a selection of drawing tools and colors for tools that a person can choose from.
+
+## Declaration
+
+```objectivec
+@interface PKToolPicker : NSObject
+```
+
+## Mentioned In
+
+- [Supporting backward compatibility for ink types](supporting-backward-compatibility-for-ink-types.md)
+
+<a id="overview"></a>
+
+## Overview
+
+A [PKToolPicker](pktoolpicker.md) manages a draggable palette that displays drawing tools, colors, and additional options. You add a tool picker to your interface and configure it to display its palette at appropriate times. While the palette is onscreen, a person may reposition it anywhere within the current window. When a person interacts with the palette, the tool picker notifies registered observers of the changes so that they can respond.
+
+> **Important**
+
+>  The tool picker doesn’t display in Mac apps built with Mac Catalyst.
+
+When configuring your interface, call the [setVisible:forFirstResponder:](pktoolpicker/setvisible%28__forfirstresponder_%29.md) method to associate the tool picker with one or more views in your interface. Each window manages its own tool picker, and the window’s first responder determines the visibility of that tool picker. When one of the registered objects becomes first responder, the tool picker automatically adds its palette view to the current window. When there isn’t a registered object as first responder, the tool picker hides its palette view.
+
+[PKCanvasView](pkcanvasview.md) implements the observer protocol for detecting tool picker changes. Adding your canvas view as an observer to a tool picker automatically updates the current drawing tools. For more information about implementing custom observer objects, see [PKToolPickerObserver](pktoolpickerobserver.md).
+
+## Topics
+
+### Creating a tool picker
+
+- [init](pktoolpicker/init%28%29.md): Creates a new tool picker with a default set of tools.
+- [initWithToolItems:](pktoolpicker/init%28toolitems_%29.md): Creates a new tool picker with the tools you specify.
+- [PKToolPickerInkingItem](pktoolpickerinkingitem.md): An item that represents an inking tool in the tool picker.
+- [PKToolPickerEraserItem](pktoolpickereraseritem.md): An item that represents an eraser tool in the tool picker.
+- [PKToolPickerLassoItem](pktoolpickerlassoitem.md): An item that represents a lasso tool in the tool picker.
+- [PKToolPickerRulerItem](pktoolpickerruleritem.md): An item that represents a ruler tool in the tool picker.
+- [PKToolPickerScribbleItem](pktoolpickerscribbleitem.md): An item that represents a Scribble tool in the tool picker.
+- [PKToolPickerCustomItem](pktoolpickercustomitem.md): An item that represents a custom tool in the tool picker.
+- [PKToolPickerItem](pktoolpickeritem.md): The base class for an item in the tool picker.
+
+### Accessing the picker’s tools
+
+- [toolItems](pktoolpicker/toolitems.md): All tool items in the tool picker.
+
+### Detecting changes to the picker
+
+- [addObserver:](pktoolpicker/addobserver%28__%29.md): Adds the specified object to the list of objects to notify when the picker configuration changes.
+- [removeObserver:](pktoolpicker/removeobserver%28__%29.md): Removes the specified object from the list of objects to notify when the picker configuration changes.
+- [PKToolPickerObserver](pktoolpickerobserver.md): An interface you use to detect when the user changes the selected tools and drawing characteristics of a tool picker object.
+
+### Coordinating the visibility of the picker
+
+- [setVisible:forFirstResponder:](pktoolpicker/setvisible%28__forfirstresponder_%29.md): Sets the visibility for the tool picker, based on when the specified responder object becomes active.
+- [isVisible](pktoolpicker/isvisible.md): A Boolean value that indicates whether the tool picker is currently visible.
+- [frameObscuredInView:](pktoolpicker/frameobscured%28in_%29.md): Returns the portion of the specified view that the tool picker obscures.
+
+### Managing selected tools
+
+- [selectedToolItem](pktoolpicker/selectedtoolitem.md): The currently selected tool item in the tool picker.
+- [selectedToolItemIdentifier](pktoolpicker/selectedtoolitemidentifier.md): The identifier of the selected tool item in the tool picker.
+
+### Customizing picker behavior
+
+- [rulerActive](pktoolpicker/isruleractive.md): A Boolean value that indicates whether the ruler is visible on the canvas.
+- [colorUserInterfaceStyle](pktoolpicker/coloruserinterfacestyle.md): The user interface style for the tool picker.
+- [overrideUserInterfaceStyle](pktoolpicker/overrideuserinterfacestyle.md): The specific user interface style to apply to the tool picker.
+- [showsDrawingPolicyControls](pktoolpicker/showsdrawingpolicycontrols.md): A Boolean value that indicates whether the default drawing policy UI is visible.
+- [stateAutosaveName](pktoolpicker/stateautosavename.md): The name used to automatically save the tool picker’s state in the defaults system.
+
+### Configuring the accessory item
+
+- [accessoryItem](pktoolpicker/accessoryitem.md): An optional button that appears at the trailing edge of the tool picker.
+
+### Supporting PencilKit versions
+
+- [maximumSupportedContentVersion](pktoolpicker/maximumsupportedcontentversion.md): The maximum version of PencilKit to support.
+
+### Deprecated
+
+- [sharedToolPickerForWindow:](pktoolpicker/shared%28for_%29.md): Deprecated. Returns the tool picker object to use for the specified window.
+- [selectedTool](pktoolpicker/selectedtool-93ikc.md): Deprecated. The currently selected tool in the tool picker.
+
+### Instance Properties
+
+- [colorMaximumLinearExposure](pktoolpicker/colormaximumlinearexposure.md): Maximum linear exposure for the color picker used by the tool picker. Can be used to enable picking HDR colors.
+- [delegate](pktoolpicker/delegate-swift.property.md): The delegate for the tool picker.
+- [prefersDismissControlVisible](pktoolpicker/prefersdismisscontrolvisible.md): If this is true the tool picker may show UI that allows dismissing it. If this is false the tool picker will not show this UI. By default this resigns first responder, but is customizable by `PKToolPickerDelegate`’s `toolPickerWillDismiss...` method.
+
+### Type Properties
+
+- [defaultToolItems](pktoolpicker/defaulttoolitems.md): The default tool items for new tool pickers.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+## See Also
+
+### Tools
+
+- [Configuring the PencilKit tool picker](configuring-the-pencilkit-tool-picker.md): Incorporate a custom PencilKit tool picker with a variety of system and custom tools into a drawing app.
+- [PKInkingTool](pkinkingtoolreference.md): An object that defines the drawing characteristics (width, color, pen style) to use when drawing lines on a canvas view.
+- [PKEraserTool](pkerasertoolreference.md): A tool for erasing previously drawn content in a canvas view.
+- [PKLassoTool](pklassotoolreference.md): A tool for selecting stroked lines and shapes in a canvas view.
+- [PKTool](pktool-c.class.md): An abstract base class for tools used by a canvas view.
+- [PKResponderState](pkresponderstate.md): An object that controls PencilKit behavior associated with a responder.
+- [PKToolPickerVisibility](pktoolpickervisibility.md): Constants that describe the visibility state of a tool picker.
+- [PKToolPickerDelegate](pktoolpicker/delegate-swift.protocol.md)
+- [PKToolPickerCustomItemControlOptions](pktoolpickercustomitem/controloptions.md): Options for which controls to present.

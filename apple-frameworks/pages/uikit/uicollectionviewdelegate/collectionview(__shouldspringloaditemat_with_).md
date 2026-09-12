@@ -1,0 +1,65 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uicollectionviewdelegate/collectionview(_:shouldspringloaditemat:with:)](https://developer.apple.com/documentation/uikit/uicollectionviewdelegate/collectionview(_:shouldspringloaditemat:with:))
+
+# collectionView(\_:shouldSpringLoadItemAt:with:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Determines whether the spring-loading interaction effect is displayed for the specified item.
+
+## Declaration
+
+```swift
+optional func collectionView(_ collectionView: UICollectionView, shouldSpringLoadItemAt indexPath: IndexPath, with context: any UISpringLoadedInteractionContext) -> Bool
+```
+
+## Parameters
+
+- `collectionView`: The collection view object notifying you of the interaction.
+- `indexPath`: The index path of the item for which the spring-loading behavior applies.
+- `context`: A context object containing information about the item and view on which to display the spring-loading interaction.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[true](https://developer.apple.com/documentation/swift/true) to apply the spring-loading behavior for the item or [false](https://developer.apple.com/documentation/swift/false) to suppress the behavior altogether.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If you do not implement this method, the collection view assumes a return value of [true](https://developer.apple.com/documentation/swift/true).
+
+# collectionView:shouldSpringLoadItemAtIndexPath:withContext: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Determines whether the spring-loading interaction effect is displayed for the specified item.
+
+## Declaration
+
+```objectivec
+- (BOOL) collectionView:(UICollectionView *) collectionView shouldSpringLoadItemAtIndexPath:(NSIndexPath *) indexPath withContext:(id<UISpringLoadedInteractionContext>) context;
+```
+
+## Parameters
+
+- `collectionView`: The collection view object notifying you of the interaction.
+- `indexPath`: The index path of the item for which the spring-loading behavior applies.
+- `context`: A context object containing information about the item and view on which to display the spring-loading interaction.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[true](https://developer.apple.com/documentation/swift/true) to apply the spring-loading behavior for the item or [false](https://developer.apple.com/documentation/swift/false) to suppress the behavior altogether.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If you do not implement this method, the collection view assumes a return value of [true](https://developer.apple.com/documentation/swift/true).

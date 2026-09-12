@@ -1,0 +1,119 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreimage/cifilter-swift.class/huesaturationvaluegradient()](https://developer.apple.com/documentation/coreimage/cifilter-swift.class/huesaturationvaluegradient())
+
+# hueSaturationValueGradient() (Swift)
+
+**Framework:** Core Image  
+**Kind:** Type Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
+
+Generates a gradient representing a specified color space.
+
+## Declaration
+
+```swift
+class func hueSaturationValueGradient() -> any CIFilter & CIHueSaturationValueGradient
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+The generated image.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method generates a hue-saturation-value gradient image. The filter creates a color wheel that shows the hues and saturations for a specified [CGColorSpace](../../coregraphics/cgcolorspace.md).
+
+The hue-saturation-value gradient uses the following properties:
+
+- **`colorSpace`**: A [CGColorSpace](../../coregraphics/cgcolorspace.md) representing the color space for the generated color wheel.
+- **`dither`**: A `boolean` value specifying whether the distort the generated output.
+- **`radius`**: A `float` representing the distance from the center of the effect as an [NSNumber](../../foundation/nsnumber.md).
+- **`softness`**: A `float` representing the softness of the generated color wheel as an [NSNumber](../../foundation/nsnumber.md).
+- **`value`**: A `float` representing the lightness of the hue-saturation gradient as an [NSNumber](../../foundation/nsnumber.md).
+
+The following code creates a filter that generates a color-space image:
+
+```swift
+func hueSaturationValue() -> CIImage {
+    let hueSaturationValueGradient = CIFilter.hueSaturationValueGradient()
+    hueSaturationValueGradient.colorSpace = CGColorSpaceCreateDeviceRGB()
+    hueSaturationValueGradient.dither = 1
+    hueSaturationValueGradient.radius = 100
+    hueSaturationValueGradient.softness = 2
+    hueSaturationValueGradient.value = 1
+    return hueSaturationValueGradient.outputImage!
+}
+```
+
+![A circular image containing every color in the represented colorspace.](https://developer.apple.com/images/com.apple.coreimage/media-3558798@2x.png)
+
+## See Also
+
+### Filters
+
+- [gaussianGradient()](gaussiangradient%28%29.md): Generates a gradient that varies from one color to another using a Gaussian distribution.
+- [linearGradient()](lineargradient%28%29.md): Generates a color gradient that varies along a linear axis between two defined endpoints.
+- [radialGradient()](radialgradient%28%29.md): Generates a gradient that varies radially between two circles having the same center.
+- [smoothLinearGradient()](smoothlineargradient%28%29.md): Generates a gradient that blends colors along a linear axis between two defined endpoints.
+
+# hueSaturationValueGradientFilter (Objective-C)
+
+**Framework:** Core Image  
+**Kind:** Type Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
+
+Generates a gradient representing a specified color space.
+
+## Declaration
+
+```objectivec
++ (CIFilter<CIHueSaturationValueGradient> *) hueSaturationValueGradientFilter;
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+The generated image.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method generates a hue-saturation-value gradient image. The filter creates a color wheel that shows the hues and saturations for a specified [CGColorSpaceRef](../../coregraphics/cgcolorspace.md).
+
+The hue-saturation-value gradient uses the following properties:
+
+- **`colorSpace`**: A [CGColorSpaceRef](../../coregraphics/cgcolorspace.md) representing the color space for the generated color wheel.
+- **`dither`**: A `boolean` value specifying whether the distort the generated output.
+- **`radius`**: A `float` representing the distance from the center of the effect as an [NSNumber](../../foundation/nsnumber.md).
+- **`softness`**: A `float` representing the softness of the generated color wheel as an [NSNumber](../../foundation/nsnumber.md).
+- **`value`**: A `float` representing the lightness of the hue-saturation gradient as an [NSNumber](../../foundation/nsnumber.md).
+
+The following code creates a filter that generates a color-space image:
+
+```swift
+func hueSaturationValue() -> CIImage {
+    let hueSaturationValueGradient = CIFilter.hueSaturationValueGradient()
+    hueSaturationValueGradient.colorSpace = CGColorSpaceCreateDeviceRGB()
+    hueSaturationValueGradient.dither = 1
+    hueSaturationValueGradient.radius = 100
+    hueSaturationValueGradient.softness = 2
+    hueSaturationValueGradient.value = 1
+    return hueSaturationValueGradient.outputImage!
+}
+```
+
+![A circular image containing every color in the represented colorspace.](https://developer.apple.com/images/com.apple.coreimage/media-3558798@2x.png)
+
+## See Also
+
+### Filters
+
+- [gaussianGradientFilter](gaussiangradient%28%29.md): Generates a gradient that varies from one color to another using a Gaussian distribution.
+- [linearGradientFilter](lineargradient%28%29.md): Generates a color gradient that varies along a linear axis between two defined endpoints.
+- [radialGradientFilter](radialgradient%28%29.md): Generates a gradient that varies radially between two circles having the same center.
+- [smoothLinearGradientFilter](smoothlineargradient%28%29.md): Generates a gradient that blends colors along a linear axis between two defined endpoints.

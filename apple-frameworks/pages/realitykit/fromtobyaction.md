@@ -1,0 +1,163 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/fromtobyaction](https://developer.apple.com/documentation/realitykit/fromtobyaction)
+
+# FromToByAction
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
+
+An action that starts, stops, or increments by a specific value.
+
+## Declaration
+
+```swift
+struct FromToByAction<Value> where Value : AnimatableData
+```
+
+<a id="overview"></a>
+
+## Overview
+
+This action animates a bound parameters value over time. Specifying a [from](fromtobyaction/from.md) value represents the animated properties’ initial value at the start of the animation. Specifying a [to](fromtobyaction/to.md) determines the value of the property at the end of the animation. Specifying a[by](fromtobyaction/by.md) adds a value to the properties initial state, which calculates the value at the end of the animation.
+
+This action exposes [FromToByAction.TransformMode](fromtobyaction/transformmode.md) which is used when animating a [Transform](transform.md) property. Use this mode to determine the reference space the property is relative to. For example, [FromToByAction.TransformMode.local](fromtobyaction/transformmode/local.md) means the provided transforms are relative to the transform of the bound entity. The only exception is when [by](fromtobyaction/by.md) is specified, this is relative to the space of the starting transform.
+
+> **Note**
+
+> `FromToByAction` doesn’t support [JointTransforms](jointtransforms.md) or [BlendShapeWeights](blendshapeweights.md) types. Use [FromToByAnimation](fromtobyanimation.md) to animate these types.
+
+<a id="Creating-a-from-to-by-action-to-animate-an-entitys-opacity"></a>
+
+### Creating a from, to, by action to animate an entity’s opacity
+
+The example below creates an animation which gradually animates the bound  entity’s opacity property for five seconds with a linear transition. In this example, the entity starts with opacity at `1.0`.
+
+```swift
+// Create an action that gradually animates a float value
+// towards `0.0`, with a linear transition.
+//
+// This action does not have a `from` value supplied, 
+// meaning this starts from the default source value.
+let opacityAction = FromToByAction<Float>(to: 0.0,
+                                          timing: .linear,
+                                          isAdditive: false)
+
+// A five second animation that plays an animation causing the entity to
+// gradually animate the `.opacity` property towards `0.0`.
+//
+// This makes the entity fade-out.
+let opacityAnimation = try AnimationResource
+    .makeActionAnimation(for: opacityAction,
+                         duration: 5.0,
+                         bindTarget: .opacity)
+
+// Play the five second animation on the entity that will fade-out.
+entity.playAnimation(opacityAnimation)
+```
+
+<a id="Create-a-from-to-by-action-to-animate-an-entitys-transform-property"></a>
+
+### Create a from, to, by action to animate an entity’s transform property
+
+The example below creates an animation which gradually animates the bound entities transform property for five seconds with a linear transition.
+
+```swift
+// Create a transform to start animating from.
+let startTransform = Transform(translation: [0.0, 2.0, 0.0])
+
+// Create a transform to animate towards.
+let endTransform = Transform(translation: [0.0, -2.0, 0.0])
+
+// Create an action that gradually animates a transform value.
+//
+// This starts `from` a specified value, and animates towards
+// a specified `to` value.
+//
+// The bound entity will move in the space relative to its parent.
+let transformAction = FromToByAction<Transform>(from: startTransform,
+                                                to: endTransform,
+                                                mode: .parent,
+                                                timing: .linear,
+                                                isAdditive: false)
+
+// A five second animation that plays an animation causing 
+// the entity to gradually move from a specific start, and end transform
+let transformAnimation = try AnimationResource
+    .makeActionAnimation(for: transformAction,
+                         duration: 5.0,
+                         bindTarget: .transform)
+
+// Play the five second animation on the entity that will cause it to move.
+entity.playAnimation(transformAnimation)
+```
+
+> **Note**
+
+> The default source value is the base value of the of animated property. If multiple animations target the property, then the framework observes the output of the previous animation as the subsequent animation’s default source value.
+
+> **Important**
+
+> This action animates various bound properties, for example [BindTarget.transform](bindtarget/transform.md) on the bound entity. Ensure a correct bind target is supplied when creating the animation.
+
+> **Note**
+
+> For more information on the combination of inputs this action supports see [FromToByAnimation](fromtobyanimation.md).
+
+> **Important**
+
+> If you do not provide values for any of the `from`, `to`, and `by` parameters, the animation stays at the default source value.
+
+## Topics
+
+### Initializers
+
+- [init(by:timing:isAdditive:)](fromtobyaction/init%28by_timing_isadditive_%29.md): Conforms when `Value` is `Transform`. Creates a new action to animate from the deaultSource by a transform relative to the starting transform.
+- [init(from:by:mode:timing:isAdditive:)](fromtobyaction/init%28from_by_mode_timing_isadditive_%29.md): Conforms when `Value` is `Transform`. Creates a new action that interpolates from a specified starting transform towards a specified transform, which is relative to the start. Alternatively, interpolates towards the default source if `by` is not supplied.
+- [init(from:by:timing:isAdditive:)](fromtobyaction/init%28from_by_timing_isadditive_%29.md): Creates a new action that interpolates towards a specified value, which is relative to the starting value.
+- [init(from:timing:isAdditive:)](fromtobyaction/init%28from_timing_isadditive_%29.md): Creates a new from to by action to animate from a specified value, towards the defaultSource value.
+- [init(from:to:mode:timing:isAdditive:)](fromtobyaction/init%28from_to_mode_timing_isadditive_%29.md): Conforms when `Value` is `Transform`. Creates a new action that interpolates towards a specified final transform.
+- [init(from:to:timing:isAdditive:)](fromtobyaction/init%28from_to_timing_isadditive_%29.md): Creates a new action that interpolates towards a specified final value.
+- [init(to:by:mode:timing:isAdditive:)](fromtobyaction/init%28to_by_mode_timing_isadditive_%29.md): Conforms when `Value` is `Transform`. Creates a action to animate towards a final value. The starting value is determined by adding the inverse of `by` to the specified final value.
+- [init(to:by:timing:isAdditive:)](fromtobyaction/init%28to_by_timing_isadditive_%29.md): Creates a new from to by action to animate towards a final value. The starting value is determined by adding the inverse of `by` to the specified final value.
+
+### Instance Properties
+
+- [animatedValueType](fromtobyaction/animatedvaluetype.md): The type for the value that the action modifies over time.
+- [by](fromtobyaction/by.md): The amount that the animated property changes during the animation.
+- [from](fromtobyaction/from.md): The state of the animated property before the animation starts.
+- [isAdditive](fromtobyaction/isadditive.md): A Boolean value that indicates whether the animation system additively blends the action’s output with the base value.
+- [isReversible](fromtobyaction/isreversible.md): Specifies whether you can play this action in reverse in order to undo prior operations.
+- [mode](fromtobyaction/mode.md): Conforms when `Value` is `Transform`. Determines the entities transform [from](fromtobyaction/from.md) and [to](fromtobyaction/to.md) are relative to.
+- [timingFunction](fromtobyaction/timingfunction.md): A timing function that controls the progress of the animation.
+- [to](fromtobyaction/to.md): The state of the animated property after the animation ends.
+
+### Enumerations
+
+- [FromToByAction.DecodingErrors](fromtobyaction/decodingerrors.md): Conforms when `Value` conforms to `AnimatableData`.
+- [FromToByAction.TransformMode](fromtobyaction/transformmode.md): Options available to determine the space the bound entity should be relative to.
+
+### Default Implementations
+
+- [Decodable Implementations](fromtobyaction/decodable-implementations.md)
+- [Encodable Implementations](fromtobyaction/encodable-implementations.md)
+
+## Relationships
+
+### Conforms To
+
+- [Decodable](https://developer.apple.com/documentation/swift/decodable)
+- [Encodable](https://developer.apple.com/documentation/swift/encodable)
+- [EntityAction](entityaction.md)
+
+## See Also
+
+### Built-in actions
+
+- [BillboardAction](billboardaction.md): An action that animates the blend factor of an entity’s billboard component.
+- [EmphasizeAction](emphasizeaction.md): An action that performs an animation to call attention to an entity.
+- [ImpulseAction](impulseaction.md): An action that applies an impulse to the physics body at its center of mass when played as an animation.
+- [OrbitEntityAction](orbitentityaction.md): An action which animates the transform of an entity to revolve around a specified pivot entity.
+- [PlayAnimationAction](playanimationaction.md): An action that plays an animation on the given target entity with a range of playback options.
+- [PlayAudioAction](playaudioaction.md): An action which plays an audio resource on the given target entity.
+- [SetEntityEnabledAction](setentityenabledaction.md): An action that enables or disables the targeted entity and its descendants when played as an animation.
+- [SpinAction](spinaction.md): An action which animates the transform of an entity to rotate around a specified local axis.

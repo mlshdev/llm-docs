@@ -1,0 +1,137 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/nearbyinteraction/discovering-peers-with-multipeer-connectivity](https://developer.apple.com/documentation/nearbyinteraction/discovering-peers-with-multipeer-connectivity)
+
+# Discovering peers with Multipeer Connectivity (Swift)
+
+**Framework:** Nearby Interaction  
+**Kind:** Article
+
+Exchange discovery tokens over the local network.
+
+<a id="overview"></a>
+
+## Overview
+
+To start an interaction session with a nearby device, an app checks for nearby peer devices. When the app finds a peer, it creates an [NISession](nisession.md) and sends the session’s [discoveryToken](nisession/discoverytoken.md) to the peer using the network technology on which they have agreed. An app can use [Multipeer Connectivity](../multipeerconnectivity.md) to find nearby peers and exchange discovery tokens over the local network.
+
+For an example app that find peer devices using Multipeer Connectivity, see [Implementing interactions between users in close proximity](implementing-interactions-between-users-in-close-proximity.md).
+
+<a id="Add-Bonjour-Services-Plist-Keys"></a>
+
+### Add Bonjour Services Plist Keys
+
+To use the local network on iOS and iPadOS 14, your app requires the [NSBonjourServices](../bundleresources/information-property-list/nsbonjourservices.md) key present in its `Info.plist`. The value of the key adheres to the following convention, including `.tcp` and `.udp` extensions.
+
+```swift
+<key>NSBonjourServices</key>
+<array>
+    <string>_myAppName._tcp</string>
+    <string>_myAppName._udp</string>
+</array>
+```
+
+In addition, the system prompts users to grant the app explicit permission to use the local network. To control the messaging of this prompt, your app can include the `NSLocalNetworkUsageDescription` key.
+
+<a id="Check-for-a-Nearby-Peer"></a>
+
+### Check for a Nearby Peer
+
+To broadcast a device’s ability to communicate through Multipeer Connectivity, your app creates an [MCNearbyServiceAdvertiser](../multipeerconnectivity/mcnearbyserviceadvertiser.md). The app creates an [MCNearbyServiceBrowser](../multipeerconnectivity/mcnearbyservicebrowser.md) to find other devices advertising with the same technology. When the browser finds another device, it calls [browser(\_:foundPeer:withDiscoveryInfo:)](../multipeerconnectivity/mcnearbyservicebrowserdelegate/browser%28__foundpeer_withdiscoveryinfo_%29.md) and invites the peer to exchange tokens by calling [invitePeer(\_:to:withContext:timeout:)](../multipeerconnectivity/mcnearbyservicebrowser/invitepeer%28__to_withcontext_timeout_%29.md).
+
+After the other device receives the invitation, [MCNearbyServiceAdvertiser](../multipeerconnectivity/mcnearbyserviceadvertiser.md) calls [advertiser(\_:didReceiveInvitationFromPeer:withContext:invitationHandler:)](../multipeerconnectivity/mcnearbyserviceadvertiserdelegate/advertiser%28__didreceiveinvitationfrompeer_withcontext_invitationhandler_%29.md), in which the apps can begin sharing their discovery tokens.
+
+> **Important**
+
+>  This process invites any nearby device to interact, but depending on the level of security an app requires, the app can more precisely control broadcasting, invitation, and acceptance behavior. For more information, see [Multipeer Connectivity](../multipeerconnectivity.md).
+
+<a id="Exchange-Discovery-Tokens"></a>
+
+### Exchange Discovery Tokens
+
+To respond to the invitation, the app sends its NI session’s [discoveryToken](ninearbyobject/discoverytoken.md) to the peer. Because Multipeer Connectivity requires serialization of the data it transmits, the app archives it first.
+
+```swift
+let data = try! NSKeyedArchiver.archivedData(withRootObject: niSession.discoverToken, requiringSecureCoding: true)
+
+```
+
+When the receiving peer accepts data from the Multipeer Connectivity session, the app unarchives the data to deserialize the peer’s discovery token.
+
+```swift
+let peerDiscoverToken = try! NSKeyedUnarchiver.unarchivedObject(ofClass: NIDiscoverToken, from: data) 
+```
+
+## See Also
+
+### Phone interaction
+
+- [Implementing interactions between users in close proximity](implementing-interactions-between-users-in-close-proximity.md): Enable devices to access relative positioning information.
+- [Extending advanced direction finding and ranging](extending-advanced-direction-finding-and-ranging.md): Extend your app’s direction finding capabilities with data from Ultra Wideband devices.
+- [NINearbyPeerConfiguration](ninearbypeerconfiguration.md): A configuration that enables interaction between iPhone or Apple Watch devices.
+
+# Discovering peers with Multipeer Connectivity (Objective-C)
+
+**Framework:** Nearby Interaction  
+**Kind:** Article
+
+Exchange discovery tokens over the local network.
+
+<a id="overview"></a>
+
+## Overview
+
+To start an interaction session with a nearby device, an app checks for nearby peer devices. When the app finds a peer, it creates an [NISession](nisession.md) and sends the session’s [discoveryToken](nisession/discoverytoken.md) to the peer using the network technology on which they have agreed. An app can use [Multipeer Connectivity](../multipeerconnectivity.md) to find nearby peers and exchange discovery tokens over the local network.
+
+For an example app that find peer devices using Multipeer Connectivity, see [Implementing interactions between users in close proximity](implementing-interactions-between-users-in-close-proximity.md).
+
+<a id="Add-Bonjour-Services-Plist-Keys"></a>
+
+### Add Bonjour Services Plist Keys
+
+To use the local network on iOS and iPadOS 14, your app requires the [NSBonjourServices](../bundleresources/information-property-list/nsbonjourservices.md) key present in its `Info.plist`. The value of the key adheres to the following convention, including `.tcp` and `.udp` extensions.
+
+```swift
+<key>NSBonjourServices</key>
+<array>
+    <string>_myAppName._tcp</string>
+    <string>_myAppName._udp</string>
+</array>
+```
+
+In addition, the system prompts users to grant the app explicit permission to use the local network. To control the messaging of this prompt, your app can include the `NSLocalNetworkUsageDescription` key.
+
+<a id="Check-for-a-Nearby-Peer"></a>
+
+### Check for a Nearby Peer
+
+To broadcast a device’s ability to communicate through Multipeer Connectivity, your app creates an [MCNearbyServiceAdvertiser](../multipeerconnectivity/mcnearbyserviceadvertiser.md). The app creates an [MCNearbyServiceBrowser](../multipeerconnectivity/mcnearbyservicebrowser.md) to find other devices advertising with the same technology. When the browser finds another device, it calls [browser:foundPeer:withDiscoveryInfo:](../multipeerconnectivity/mcnearbyservicebrowserdelegate/browser%28__foundpeer_withdiscoveryinfo_%29.md) and invites the peer to exchange tokens by calling [invitePeer:toSession:withContext:timeout:](../multipeerconnectivity/mcnearbyservicebrowser/invitepeer%28__to_withcontext_timeout_%29.md).
+
+After the other device receives the invitation, [MCNearbyServiceAdvertiser](../multipeerconnectivity/mcnearbyserviceadvertiser.md) calls [advertiser:didReceiveInvitationFromPeer:withContext:invitationHandler:](../multipeerconnectivity/mcnearbyserviceadvertiserdelegate/advertiser%28__didreceiveinvitationfrompeer_withcontext_invitationhandler_%29.md), in which the apps can begin sharing their discovery tokens.
+
+> **Important**
+
+>  This process invites any nearby device to interact, but depending on the level of security an app requires, the app can more precisely control broadcasting, invitation, and acceptance behavior. For more information, see [Multipeer Connectivity](../multipeerconnectivity.md).
+
+<a id="Exchange-Discovery-Tokens"></a>
+
+### Exchange Discovery Tokens
+
+To respond to the invitation, the app sends its NI session’s [discoveryToken](ninearbyobject/discoverytoken.md) to the peer. Because Multipeer Connectivity requires serialization of the data it transmits, the app archives it first.
+
+```swift
+let data = try! NSKeyedArchiver.archivedData(withRootObject: niSession.discoverToken, requiringSecureCoding: true)
+
+```
+
+When the receiving peer accepts data from the Multipeer Connectivity session, the app unarchives the data to deserialize the peer’s discovery token.
+
+```swift
+let peerDiscoverToken = try! NSKeyedUnarchiver.unarchivedObject(ofClass: NIDiscoverToken, from: data) 
+```
+
+## See Also
+
+### Phone interaction
+
+- [Implementing interactions between users in close proximity](implementing-interactions-between-users-in-close-proximity.md): Enable devices to access relative positioning information.
+- [Extending advanced direction finding and ranging](extending-advanced-direction-finding-and-ranging.md): Extend your app’s direction finding capabilities with data from Ultra Wideband devices.
+- [NINearbyPeerConfiguration](ninearbypeerconfiguration.md): A configuration that enables interaction between iPhone or Apple Watch devices.

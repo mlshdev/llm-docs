@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "project": "vmestimator",
   "title": "vmestimator",
+  "homepage": "https://docs.victoriametrics.com/victoriametrics/vmestimator/",
   "repository": "VictoriaMetrics/vmestimator",
   "tag": "v0.1.16",
   "releaseId": 384680561,

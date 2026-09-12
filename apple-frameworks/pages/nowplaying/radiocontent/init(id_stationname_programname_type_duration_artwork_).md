@@ -1,0 +1,24 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/nowplaying/radiocontent/init(id:stationname:programname:type:duration:artwork:)](https://developer.apple.com/documentation/nowplaying/radiocontent/init(id:stationname:programname:type:duration:artwork:))
+
+# init(id:stationName:programName:type:duration:artwork:)
+
+**Framework:** Now Playing  
+**Kind:** Initializer  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+Creates radio station content.
+
+## Declaration
+
+```swift
+init(id: String, stationName: String, programName: String? = nil, type: MediaType = .audio, duration: MediaDuration? = .live, artwork: Artwork?)
+```
+
+## Parameters
+
+- `id`: A unique identifier for this station.
+- `stationName`: The display name of the station.
+- `programName`: The current program or show, if available.
+- `type`: The media type. Defaults to `.audio`.
+- `duration`: The duration of the content. Defaults to `.live` for continuous broadcasts.
+- `artwork`: Artwork for the station, or `nil` when unavailable.

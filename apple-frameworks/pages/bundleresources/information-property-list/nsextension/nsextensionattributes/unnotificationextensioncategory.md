@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/bundleresources/information-property-list/nsextension/nsextensionattributes/unnotificationextensioncategory](https://developer.apple.com/documentation/bundleresources/information-property-list/nsextension/nsextensionattributes/unnotificationextensioncategory)
+
+# UNNotificationExtensionCategory
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** Bundle Resources  
+**Kind:** Property List Key  
+**Availability:** iOS 10.0+ · iPadOS 10.0+
+
+The identifier of a category declared by the app extension.
+
+## Details
+
+`UNNotificationExtensionCategory`
+
+## See Also
+
+### UIKit
+
+- [IDMessageFilterExtensionNetworkURL](idmessagefilterextensionnetworkurl.md): The server that a Message Filter app extension may defer a query to.
+- [ILClassificationExtensionSMSReportDestination](ilclassificationextensionsmsreportdestination.md): The phone number that receives SMS messages when the user reports an SMS message or a call.
+- [IsASCIICapable](isasciicapable.md): A Boolean value indicating whether a custom keyboard displays standard ASCII characters.
+- [MSMessagesAppPresentationContextMessages](msmessagesapppresentationcontextmessages.md): The contexts that an iMessage app or sticker pack supports.
+- [PrefersRightToLeft](prefersrighttoleft.md): A Boolean value indicating whether a keyboard extension supports right-to-left languages.
+- [PrimaryLanguage](primarylanguage.md): The primary language for a keyboard extension.
+- [RequestsOpenAccess](requestsopenaccess.md): A Boolean value indicating whether a custom keyboard uses a shared container and accesses the network.
+- [UIDocumentPickerModes](uidocumentpickermodes.md): The modes that a Document Picker extension supports.
+- [UIDocumentPickerSupportedFileTypes](uidocumentpickersupportedfiletypes.md): The Uniform Type Identifiers that a document picker extension supports.
+- [UNNotificationExtensionDefaultContentHidden](unnotificationextensiondefaultcontenthidden.md): A Boolean value indicating whether only the app extension’s custom view controller is displayed in the notification interface.
+- [UNNotificationExtensionInitialContentSizeRatio](unnotificationextensioninitialcontentsizeratio.md): The initial size of the view controller’s view for an app extension, expressed as a ratio of its height to its width.
+- [UNNotificationExtensionOverridesDefaultTitle](unnotificationextensionoverridesdefaulttitle.md): A Boolean value indicating whether the title of the app extension’s view controller is used as the title of the notification.
+- [UNNotificationExtensionUserInteractionEnabled](unnotificationextensionuserinteractionenabled.md): A Boolean value indicating whether user interactions in a custom notification are enabled.

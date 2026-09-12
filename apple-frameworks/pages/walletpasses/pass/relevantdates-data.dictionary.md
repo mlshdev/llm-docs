@@ -1,0 +1,47 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/walletpasses/pass/relevantdates-data.dictionary](https://developer.apple.com/documentation/walletpasses/pass/relevantdates-data.dictionary)
+
+# Pass.RelevantDates
+
+**Interface language:** Data
+
+**Framework:** Wallet Passes  
+**Kind:** Object  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · watchOS 11.0+
+
+An object that represents a date interval that the system uses to show a relevant pass.
+
+## Declaration
+
+```
+object Pass.RelevantDates
+```
+
+## Properties
+
+- `date` — `ISO 8601 date as string`: The date and time when the pass becomes relevant.
+
+  Wallet automatically calculates a relevancy interval from this date.
+- `endDate` — `ISO 8601 date as string`: The date and time for the pass relevancy interval to end.
+
+  Required when providing `startDate`.
+- `startDate` — `ISO 8601 date as string`: The date and time for the pass relevancy interval to begin.
+
+## Mentioned In
+
+- [Creating a poster event pass using semantic tags](../creating-an-event-pass-using-semantic-tags.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+> **Note**
+
+>  The values need to be a complete dates that include hours and minutes, and may optionally include seconds. For information about the ISO 8601 timestamp format, see [Time and Date Formats](http://www.w3.org/TR/NOTE-datetime) on the W3C website.
+
+## See Also
+
+### Adding relevance
+
+- [Showing a Pass on the Lock Screen](../showing-a-pass-on-the-lock-screen.md): Add information to your pass so the system can display it on the Lock Screen at a relevant time and place.
+- [Pass.Locations](locations-data.dictionary.md): An object that represents a location that the system uses to show a relevant pass.
+- [Pass.Beacons](beacons-data.dictionary.md): An object that represents the identifier of a Bluetooth Low Energy beacon the system uses to show a relevant pass.

@@ -1,0 +1,55 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/physicallybasedmaterial/specular-swift.property](https://developer.apple.com/documentation/realitykit/physicallybasedmaterial/specular-swift.property)
+
+# specular
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+The specular highlight applied to the entity.
+
+## Declaration
+
+```swift
+var specular: PhysicallyBasedMaterial.Specular { get set }
+```
+
+## Mentioned In
+
+- [Applying realistic material and lighting effects to entities](../applying-realistic-material-and-lighting-effects-to-entities.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+In Physically Based Rendering (PBR), specular highlights primarily come from the object’s [roughness](roughness-swift.property.md) value. RealityKit automatically renders materials that have a low roughness value with specular highlights based on the environment lighting and the shape of the entity. As a result, for most materials, you won’t need to specify a `specular` value when using [PhysicallyBasedMaterial](../physicallybasedmaterial.md).
+
+For some types of dielectric (nonmetallic) materials, like facet-cut glass or gems, PBR algorithms don’t create bright enough specular highlights using just roughness. To accurately simulate those types of materials, use the [specular](specular-swift.property.md) property to specify additional specular for the entity.
+
+The following example demonstrates how to specify specular using a single value for the entire material:
+
+```swift
+material.specular = .init(floatLiteral: 0.8)
+```
+
+This example shows how to specify specular using a UV-mapped image texture:
+
+```swift
+if let specularResource = try? TextureResource.load(named:"entity_specular") {
+    let specularMap = MaterialParameters.Texture(specularResource)
+    material.specular = .init(texture: specularMap)
+}
+```
+
+## See Also
+
+### Setting the core properties
+
+- [baseColor](basecolor-swift.property.md): The color of an entity unmodified by lighting.
+- [roughness](roughness-swift.property.md): The amount the surface of the 3D object scatters reflected light.
+- [metallic](metallic-swift.property.md): The reflectiveness of an entity.
+- [normal](normal-swift.property.md): The normal map for the entity.
+- [ambientOcclusion](ambientocclusion-swift.property.md): The ambient occlusion values for a material.
+- [clearcoat](clearcoat-swift.property.md): The transparent highlights that simulate a clear, shiny coating on an entity.
+- [clearcoatRoughness](clearcoatroughness-swift.property.md): The degree to which an entity’s clear, shiny coating scatters light to create soft highlights.
+- [clearcoatNormal](clearcoatnormal-swift.property.md): Waviness and imperfections for the top clearcoat.

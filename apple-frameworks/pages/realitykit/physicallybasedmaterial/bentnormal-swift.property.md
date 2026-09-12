@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/physicallybasedmaterial/bentnormal-swift.property](https://developer.apple.com/documentation/realitykit/physicallybasedmaterial/bentnormal-swift.property)
+
+# bentNormal
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+The bent normal map for the entity.
+
+## Declaration
+
+```swift
+var bentNormal: PhysicallyBasedMaterial.BentNormal { get set }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+*Bent normal mapping* describes the average direction of least occlusion at each surface point. This is used to modulate lighting intensity and direction of the material. Use with ambient occlusion to improve the accuracy of indirect diffuse lighting. You can generate bent normals maps from a 3D software package.
+
+The following code loads a bent normal map texture and uses it to set this property:
+
+```swift
+if let bentNormalResource = try? TextureResource.load(named:"entity_bentNormalMap") {
+    let bentNormalMap = PhysicallyBasedMaterial.Texture(bentNormalResource)
+    material.bentNormal = .init(texture: bentNormalMap)
+}
+```
+
+## See Also
+
+### Configuring occlusion shading
+
+- [PhysicallyBasedMaterial.BentNormal](bentnormal-swift.struct.md): The bent normal map for the entity.
+- [enableSpecularOcclusion](enablespecularocclusion.md): Enables specular occlusion computations.

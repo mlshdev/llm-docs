@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/bnnsgraph/context/executefunction(_:arguments:)-8bhcn](https://developer.apple.com/documentation/accelerate/bnnsgraph/context/executefunction(_:arguments:)-8bhcn)
+
+# executeFunction(\_:arguments:)
+
+**Framework:** Accelerate  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS · watchOS 11.0+
+
+Executes the specified function using an array of input and output tensors.
+
+## Declaration
+
+```swift
+func executeFunction(_ function: String? = nil, arguments: inout [BNNSTensor]) async throws
+```
+
+## Parameters
+
+- `function`: The function. Specify as `nil` if the graph only contains one function.
+- `arguments`: The output and input arguments. Note that the arguments may not be in the same order as the original `mlpackage` or `mlmodelc` file. Use the [argumentPosition(forFunction:argument:)](argumentposition%28forfunction_argument_%29.md) function to get the correct position in the `arguments` array for a given argument.
+
+## See Also
+
+### Executing a graph
+
+- [executeFunction(\_:arguments:)](executefunction%28__arguments_%29-95snr.md): Executes the specified function using an array of input and output pointers.
+- [BNNSGraph.PointerArgument](../pointerargument.md): A type that BNNS Graph accepts as an input-output argument.

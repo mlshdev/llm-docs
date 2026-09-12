@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/blurreplacetransition](https://developer.apple.com/documentation/swiftui/blurreplacetransition)
+
+# BlurReplaceTransition
+
+**Framework:** SwiftUI  
+**Kind:** Structure  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+A transition that animates the insertion or removal of a view by combining blurring and scaling effects.
+
+## Declaration
+
+```swift
+@MainActor @preconcurrency struct BlurReplaceTransition
+```
+
+## Topics
+
+### Creating the transition
+
+- [init(configuration:)](blurreplacetransition/init%28configuration_%29.md): Creates a new transition.
+- [configuration](blurreplacetransition/configuration-swift.property.md): The transition configuration.
+- [BlurReplaceTransition.Configuration](blurreplacetransition/configuration-swift.struct.md): Configuration properties for a transition.
+
+## Relationships
+
+### Conforms To
+
+- [Transition](transition.md)
+
+## See Also
+
+### Supporting types
+
+- [IdentityTransition](identitytransition.md): A transition that returns the input view, unmodified, as the output view.
+- [MoveTransition](movetransition.md): Returns a transition that moves the view away, towards the specified edge of the view.
+- [OffsetTransition](offsettransition.md): Returns a transition that offset the view by the specified amount.
+- [OpacityTransition](opacitytransition.md): A transition from transparent to opaque on insertion, and from opaque to transparent on removal.
+- [PushTransition](pushtransition.md): A transition that when added to a view will animate the view’s insertion by moving it in from the specified edge while fading it in, and animate its removal by moving it out towards the opposite edge and fading it out.
+- [ScaleTransition](scaletransition.md): Returns a transition that scales the view.
+- [SlideTransition](slidetransition.md): A transition that inserts by moving in from the leading edge, and removes by moving out towards the trailing edge.

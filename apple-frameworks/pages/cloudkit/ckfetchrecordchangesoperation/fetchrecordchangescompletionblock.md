@@ -1,0 +1,75 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cloudkit/ckfetchrecordchangesoperation/fetchrecordchangescompletionblock](https://developer.apple.com/documentation/cloudkit/ckfetchrecordchangesoperation/fetchrecordchangescompletionblock)
+
+# fetchRecordChangesCompletionBlock (Swift)
+
+**Framework:** CloudKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ (deprecated in 10.0) · iPadOS 8.0+ (deprecated in 10.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.10+ (deprecated in 10.12) · tvOS 9.0+ (deprecated in 10.0) · visionOS 1.0+ (deprecated in 1.0) · watchOS 3.0+ (deprecated in 3.0)
+
+The block to execute when the system finishes processing all changes.
+
+## Declaration
+
+```swift
+var fetchRecordChangesCompletionBlock: ((CKServerChangeToken?, Data?, (any Error)?) -> Void)? { get set }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The block returns no value and takes the following parameters:
+
+- **`serverChangeToken`**: The new change token from the server. You can store this token locally and use it during subsequent fetch operations to limit the results to records that the system changes after executing the operation.
+- **`clientChangeToken`**: The most recent client change token from the device. If the change token isn’t the most recent change token you provided, the server might not have received the associated changes.
+- **`operationError`**: An error object that contains information about a problem, or `nil` if the system successfully retrieves the changes.
+
+When implementing this block, check the [moreComing](morecoming.md) property of the operation object to verify that the server was able to deliver all results. If that property is [true](https://developer.apple.com/documentation/swift/true), you must create another operation object using the value in the `serverChangeToken` parameter to fetch any remaining changes.
+
+The operation object executes this block only once at the conclusion of the operation. It executes after all individual change blocks, but before the operation’s completion block. The block executes serially with respect to the other progress blocks of the operation.
+
+If you intend to use this block to process results, set it before executing the operation or submitting the operation object to a queue.
+
+## See Also
+
+### Processing the Fetch Record Changes Results
+
+- [recordChangedBlock](recordchangedblock.md): Deprecated. The block to execute with the contents of a changed record.
+- [recordWithIDWasDeletedBlock](recordwithidwasdeletedblock.md): Deprecated. The block to execute with the ID of a deleted record.
+
+# fetchRecordChangesCompletionBlock (Objective-C)
+
+**Framework:** CloudKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ (deprecated in 10.0) · iPadOS 8.0+ (deprecated in 10.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.10+ (deprecated in 10.12) · tvOS 9.0+ (deprecated in 10.0) · visionOS 1.0+ (deprecated in 1.0) · watchOS 3.0+ (deprecated in 3.0)
+
+The block to execute when the system finishes processing all changes.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) void (^fetchRecordChangesCompletionBlock)(CKServerChangeToken *serverChangeToken, NSData *clientChangeTokenData, NSError *operationError);
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The block returns no value and takes the following parameters:
+
+- **`serverChangeToken`**: The new change token from the server. You can store this token locally and use it during subsequent fetch operations to limit the results to records that the system changes after executing the operation.
+- **`clientChangeToken`**: The most recent client change token from the device. If the change token isn’t the most recent change token you provided, the server might not have received the associated changes.
+- **`operationError`**: An error object that contains information about a problem, or `nil` if the system successfully retrieves the changes.
+
+When implementing this block, check the [moreComing](morecoming.md) property of the operation object to verify that the server was able to deliver all results. If that property is [true](https://developer.apple.com/documentation/swift/true), you must create another operation object using the value in the `serverChangeToken` parameter to fetch any remaining changes.
+
+The operation object executes this block only once at the conclusion of the operation. It executes after all individual change blocks, but before the operation’s completion block. The block executes serially with respect to the other progress blocks of the operation.
+
+If you intend to use this block to process results, set it before executing the operation or submitting the operation object to a queue.
+
+## See Also
+
+### Processing the Fetch Record Changes Results
+
+- [recordChangedBlock](recordchangedblock.md): Deprecated. The block to execute with the contents of a changed record.
+- [recordWithIDWasDeletedBlock](recordwithidwasdeletedblock.md): Deprecated. The block to execute with the ID of a deleted record.

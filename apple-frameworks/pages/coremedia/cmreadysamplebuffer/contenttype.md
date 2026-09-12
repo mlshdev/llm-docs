@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremedia/cmreadysamplebuffer/contenttype](https://developer.apple.com/documentation/coremedia/cmreadysamplebuffer/contenttype)
+
+# contentType
+
+**Framework:** Core Media  
+**Kind:** Instance Property  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
+
+Type of the content carried by this sample buffer
+
+## Declaration
+
+```swift
+var contentType: CMSampleBuffer.ContentType { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The content type of the sample buffer can not be changed by assigning a different content, even if content is Dynamic.

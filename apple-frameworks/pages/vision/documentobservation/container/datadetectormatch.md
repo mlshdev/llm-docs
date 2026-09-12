@@ -1,0 +1,44 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/vision/documentobservation/container/datadetectormatch](https://developer.apple.com/documentation/vision/documentobservation/container/datadetectormatch)
+
+# DocumentObservation.Container.DataDetectorMatch
+
+**Framework:** Vision  
+**Kind:** Structure  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+Detected content in the document matched to a specific type of data, such as emails, phone numbers, addresses, and so on.
+
+## Declaration
+
+```swift
+struct DataDetectorMatch
+```
+
+## Topics
+
+### Getting the detected data
+
+- [match](datadetectormatch/match.md): The details of the data detected.
+
+## Relationships
+
+### Conforms To
+
+- [BoundingRegionProviding](../../boundingregionproviding.md)
+- [Decodable](https://developer.apple.com/documentation/swift/decodable)
+- [Encodable](https://developer.apple.com/documentation/swift/encodable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Accessing specific content within a document
+
+- [barcodes](barcodes.md): The machine-readable codes found within the container.
+- [lists](lists.md): The lists found within the container.
+- [paragraphs](paragraphs.md): The document’s extracted text, grouped into paragraphs within the container.
+- [tables](tables.md): The tables found within the container.
+- [text](text-swift.property.md): All the text found within the container.
+- [title](title.md): The title found within the container.

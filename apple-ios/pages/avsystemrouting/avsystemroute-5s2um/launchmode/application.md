@@ -1,0 +1,40 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/avsystemrouting/avsystemroute-5s2um/launchmode/application](https://developer.apple.com/documentation/avsystemrouting/avsystemroute-5s2um/launchmode/application)
+
+# AVSystemRoute.LaunchMode.application
+
+**Framework:** AVSystemRouting  
+**Kind:** Case  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+
+
+Launches the corresponding application on the remote device.
+
+## Declaration
+
+```swift
+case application
+```
+
+## Mentioned In
+
+- [Routing and streaming media to remote devices](../../routing-and-streaming-media-to-remote-devices.md)
+- [Routing media to third-party devices](../../routing-media-to-third-party-devices.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this mode when you want to start your app’s counterpart on the remote device, enabling app-to-application communication and custom playback experiences. The remote application can handle the provided URL and maintain bidirectional communication through the [AVSystemRoute.DataChannel](../datachannel.md) returned by [start()](../../avsystemroutesession-gp78/start%28%29.md).
+
+Application identifiers must be configured in the `MDESupportedProtocols` key in your app’s `Info.plist` file. For example:
+
+```xml
+<key>MDESupportedProtocols</key>
+<dict>
+	<key>com.example.sharingprotocol</key>
+	<string>com.example.myapplicationidentifier</string>
+</dict>
+```
+
+> **Important**
+
+> If `MDESupportedProtocols` is not set, calls to [start()](../../avsystemroutesession-gp78/start%28%29.md) fail.

@@ -1,0 +1,54 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/asyncthrowingstream/contains(where:)](https://developer.apple.com/documentation/swift/asyncthrowingstream/contains(where:))
+
+# contains(where:)
+
+**Framework:** Swift  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Returns a Boolean value that indicates whether the asynchronous sequence contains an element that satisfies the given predicate.
+
+## Declaration
+
+```swift
+func contains(where predicate: (Self.Element) async throws -> Bool) async rethrows -> Bool
+```
+
+## Parameters
+
+- `predicate`: A closure that takes an element of the asynchronous sequence as its argument and returns a Boolean value that indicates whether the passed element represents a match.
+
+<a id="return-value"></a>
+
+## Return Value
+
+`true` if the sequence contains an element that satisfies predicate; otherwise, `false`.
+
+<a id="discussion"></a>
+
+## Discussion
+
+You can use the predicate to check for an element of a type that doesn’t conform to the `Equatable` protocol, or to find an element that satisfies a general condition.
+
+In this example, an asynchronous sequence called `Counter` produces `Int` values from `1` to `10`. The `contains(where:)` method checks to see whether the sequence produces a value divisible by `3`:
+
+```swift
+let containsDivisibleByThree = await Counter(howHigh: 10)
+    .contains { $0 % 3 == 0 }
+print(containsDivisibleByThree)
+// Prints "true"
+```
+
+The predicate executes each time the asynchronous sequence produces an element, until either the predicate finds a match or the sequence ends.
+
+## See Also
+
+### Finding Elements
+
+- [contains(\_:)](contains%28__%29.md): Conforms when `Element` conforms to `Equatable`. Returns a Boolean value that indicates whether the asynchronous sequence contains the given element.
+- [allSatisfy(\_:)](allsatisfy%28__%29.md): Returns a Boolean value that indicates whether all elements produced by the asynchronous sequence satisfy the given predicate.
+- [first(where:)](first%28where_%29.md): Returns the first element of the sequence that satisfies the given predicate.
+- [min()](min%28%29.md): Conforms when `Element` conforms to `Comparable`. Returns the minimum element in an asynchronous sequence of comparable elements.
+- [min(by:)](min%28by_%29.md): Returns the minimum element in the asynchronous sequence, using the given predicate as the comparison between elements.
+- [max()](max%28%29.md): Conforms when `Element` conforms to `Comparable`. Returns the maximum element in an asynchronous sequence of comparable elements.
+- [max(by:)](max%28by_%29.md): Returns the maximum element in the asynchronous sequence, using the given predicate as the comparison between elements.

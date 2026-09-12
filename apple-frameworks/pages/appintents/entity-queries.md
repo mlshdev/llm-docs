@@ -1,0 +1,46 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/entity-queries](https://developer.apple.com/documentation/appintents/entity-queries)
+
+# Entity queries
+
+**Framework:** App Intents  
+**Kind:** API Collection
+
+Implement one or more query types to help the system find your app’s entities.
+
+<a id="Overview"></a>
+
+## Overview
+
+When the system needs to retrieve one or more specific instances of an app entity, it asks you to provide a relevant query type. The system uses queries during parameter resolution when the parameter of an intent contains an entity. The system also uses them to resolve information in a different format into one of your app’s entities. For example, it uses them to resolve natural spoken language into one of your app’s entities.
+
+The system can sometimes determine which entities it needs and provide you with a list of corresponding identifiers. Provide an [EntityQuery](entityquery.md) type to supply the entities for those identifiers. Provide additional query types to perform more advanced searches, such as a search that matches specific properties of the entity.
+
+## Topics
+
+### Identifier-based queries
+
+- [EntityQuery](entityquery.md): An interface for locating app entity instances by identifier.
+- [IndexedEntityQuery](indexedentityquery.md): An interface that adds Spotlight reindexing support to your entity query.
+- [EnumerableEntityQuery](enumerableentityquery.md): An interface you use to provide a short list of entities that are relatively small in size.
+
+### String-based queries
+
+- [EntityStringQuery](entitystringquery.md): An interface that locates entities using arbitrary string input.
+
+### Property-matched queries
+
+- [EntityPropertyQuery](entitypropertyquery.md): An interface for locating entities by matching values against one or more of their properties.
+- [EntityQueryProperties](entityqueryproperties.md): A type that provides the properties to include in a property-matched query.
+- [EntityQueryProperty](entityqueryproperty.md): An object that provides the supported comparators you use to describe the different ways users can query against a property of an app entity.
+- [Property comparators](property-comparators.md): Specify the type of comparison to perform during a property-matched query.
+
+### Sort options
+
+- [EntityQuerySortingOptions](entityquerysortingoptions.md): The potential properties you can use to sort the results of a query.
+- [EntityQuerySortableByProperty](entityquerysortablebyproperty.md): Details about a specific property you use to sort the query results.
+- [EntityQuerySort](entityquerysort.md): The properties to use to sort the results when the query runs.
+
+### Unique entity queries
+
+- [UniqueAppEntityQuery](uniqueappentityquery.md): A query designed for only returning a single possible value, provided by `uniqueEntity`. Protocol extensions will provide the other required query methods based on that.
+- [UniqueAppEntityProvider](uniqueappentityprovider.md): A simplified query type conforming to `UniqueAppEntityQuery`. Use this as the value of the `defaultQuery` of an entity conforming to `UniqueAppEntity`.

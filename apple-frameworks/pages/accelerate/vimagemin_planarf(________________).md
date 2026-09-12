@@ -1,0 +1,139 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimagemin_planarf(_:_:_:_:_:_:_:_:)](https://developer.apple.com/documentation/accelerate/vimagemin_planarf(_:_:_:_:_:_:_:_:))
+
+# vImageMin_PlanarF(\_:\_:\_:\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.3+ · tvOS 5.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Minimizes a 32-bit planar buffer.
+
+## Declaration
+
+```swift
+func vImageMin_PlanarF(_ src: UnsafePointer<vImage_Buffer>, _ dest: UnsafePointer<vImage_Buffer>, _ tempBuffer: UnsafeMutableRawPointer!, _ srcOffsetToROI_X: vImagePixelCount, _ srcOffsetToROI_Y: vImagePixelCount, _ kernel_height: vImagePixelCount, _ kernel_width: vImagePixelCount, _ flags: vImage_Flags) -> vImage_Error
+```
+
+## Parameters
+
+- `src`: The source vImage buffer.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the [height](vimage_buffer/height.md), [width](vimage_buffer/width.md), and [rowBytes](vimage_buffer/rowbytes.md) fields of this structure, and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+- `tempBuffer`: A pointer to workspace memory the function uses as it operates on an image. Pass `nil` to instruct the function to allocate, use, and then free its own temporary buffer.
+- `srcOffsetToROI_X`: The horizontal offset, in pixels, to the upper-left pixel of the region of interest within the source image.
+- `srcOffsetToROI_Y`: The vertical offset, in pixels, to the upper-left pixel of the region of interest within the source image.
+- `kernel_height`: The height of the kernel in pixels. This value needs to be odd.
+- `kernel_width`: The width of the kernel in pixels. This value needs to be odd.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+  To instruct the function to return the minimum size of the workspace memory, set the [kvImageGetTempBufferSize](kvimagegettempbuffersize.md) flag.
+
+  To determine the minimum size for the temporary buffer, set the [kvImageGetTempBufferSize](kvimagegettempbuffersize.md) flag.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, a negative value indicates one of the error codes that [Data Types and Constants](data-types-and-constants.md) describes, and a positive value indicates the required size for the temporary buffer.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The minimize filter is an optimized version of the erosion in which all the filter elements are zero.
+
+<a id="Optimize-performance-with-temporary-buffers"></a>
+
+### Optimize performance with temporary buffers
+
+This function uses a multiple-pass algorithm that saves intermediate pixel values between passes. In some cases, the destination buffer may not be large enough to store that intermediate data, so the operation requires additional storage.
+
+Pass `nil` to the `tempBuffer` parameter to have vImage create and manage this temporary storage for you.
+
+In cases where your code calls the function frequently (for example, when processing video), create and manage this temporary buffer yourself and reuse it across function calls. Reusing a buffer avoids vImage allocating the temporary storage with each call.
+
+To use your own temporary buffer, first call the function with the same values for all other parameters that you intend to use for subsequent calls. In addition, pass the `kvImageGetTempBufferSize` flag. The `kvImageGetTempBufferSize` instructs the function not to perform any processing, and to return a positive value that represents the minimum size, in bytes, of the temporary buffer. A negative return value represents an error.
+
+After you allocate the memory for the temporary buffer, pass that to the `tempBuffer` parameter for subsequent calls to the function, and don’t pass the `kvImageGetTempBufferSize` flag.
+
+You can use the same workspace memory for a group of images that are different sizes. To do this, create a vImage buffer structure with a size that shares the maximum width and maximum height of the images that you’re working with. For example, to create a workspace memory that’s suitable for 4x4, 5x4, and 4x5 images, pass a buffer with the size 5x5.
+
+## See Also
+
+### Related Documentation
+
+- [Adding a bokeh effect to images](adding-a-bokeh-effect-to-images.md): Simulate a bokeh effect by applying dilation.
+
+### Minimizing an object
+
+- [vImageMin_Planar8(\_:\_:\_:\_:\_:\_:\_:\_:)](vimagemin_planar8%28________________%29.md): Minimizes an 8-bit planar buffer.
+- [vImageMin_ARGB8888(\_:\_:\_:\_:\_:\_:\_:\_:)](vimagemin_argb8888%28________________%29.md): Minimizes an 8-bit-per-channel, 4-channel interleaved buffer.
+- [vImageMin_ARGBFFFF(\_:\_:\_:\_:\_:\_:\_:\_:)](vimagemin_argbffff%28________________%29.md): Minimizes an 8-bit-per-channel, 4-channel interleaved buffer.
+
+# vImageMin_PlanarF (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.3+ · tvOS 5.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Minimizes a 32-bit planar buffer.
+
+## Declaration
+
+```objectivec
+vImage_Error vImageMin_PlanarF(const vImage_Buffer *src, const vImage_Buffer *dest, void *tempBuffer, vImagePixelCount srcOffsetToROI_X, vImagePixelCount srcOffsetToROI_Y, vImagePixelCount kernel_height, vImagePixelCount kernel_width, vImage_Flags flags);
+```
+
+## Parameters
+
+- `src`: The source vImage buffer.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the [height](vimage_buffer/height.md), [width](vimage_buffer/width.md), and [rowBytes](vimage_buffer/rowbytes.md) fields of this structure, and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+- `tempBuffer`: A pointer to workspace memory the function uses as it operates on an image. Pass `nil` to instruct the function to allocate, use, and then free its own temporary buffer.
+- `srcOffsetToROI_X`: The horizontal offset, in pixels, to the upper-left pixel of the region of interest within the source image.
+- `srcOffsetToROI_Y`: The vertical offset, in pixels, to the upper-left pixel of the region of interest within the source image.
+- `kernel_height`: The height of the kernel in pixels. This value needs to be odd.
+- `kernel_width`: The width of the kernel in pixels. This value needs to be odd.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+  To instruct the function to return the minimum size of the workspace memory, set the [kvImageGetTempBufferSize](kvimagegettempbuffersize.md) flag.
+
+  To determine the minimum size for the temporary buffer, set the [kvImageGetTempBufferSize](kvimagegettempbuffersize.md) flag.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, a negative value indicates one of the error codes that [Data Types and Constants](data-types-and-constants.md) describes, and a positive value indicates the required size for the temporary buffer.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The minimize filter is an optimized version of the erosion in which all the filter elements are zero.
+
+<a id="Optimize-performance-with-temporary-buffers"></a>
+
+### Optimize performance with temporary buffers
+
+This function uses a multiple-pass algorithm that saves intermediate pixel values between passes. In some cases, the destination buffer may not be large enough to store that intermediate data, so the operation requires additional storage.
+
+Pass `nil` to the `tempBuffer` parameter to have vImage create and manage this temporary storage for you.
+
+In cases where your code calls the function frequently (for example, when processing video), create and manage this temporary buffer yourself and reuse it across function calls. Reusing a buffer avoids vImage allocating the temporary storage with each call.
+
+To use your own temporary buffer, first call the function with the same values for all other parameters that you intend to use for subsequent calls. In addition, pass the `kvImageGetTempBufferSize` flag. The `kvImageGetTempBufferSize` instructs the function not to perform any processing, and to return a positive value that represents the minimum size, in bytes, of the temporary buffer. A negative return value represents an error.
+
+After you allocate the memory for the temporary buffer, pass that to the `tempBuffer` parameter for subsequent calls to the function, and don’t pass the `kvImageGetTempBufferSize` flag.
+
+You can use the same workspace memory for a group of images that are different sizes. To do this, create a vImage buffer structure with a size that shares the maximum width and maximum height of the images that you’re working with. For example, to create a workspace memory that’s suitable for 4x4, 5x4, and 4x5 images, pass a buffer with the size 5x5.
+
+## See Also
+
+### Related Documentation
+
+- [Adding a bokeh effect to images](adding-a-bokeh-effect-to-images.md): Simulate a bokeh effect by applying dilation.
+
+### Minimizing an object
+
+- [vImageMin_Planar8](vimagemin_planar8%28________________%29.md): Minimizes an 8-bit planar buffer.
+- [vImageMin_ARGB8888](vimagemin_argb8888%28________________%29.md): Minimizes an 8-bit-per-channel, 4-channel interleaved buffer.
+- [vImageMin_ARGBFFFF](vimagemin_argbffff%28________________%29.md): Minimizes an 8-bit-per-channel, 4-channel interleaved buffer.

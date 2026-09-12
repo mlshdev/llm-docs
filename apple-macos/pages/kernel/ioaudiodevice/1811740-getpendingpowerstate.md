@@ -1,0 +1,63 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ioaudiodevice/1811740-getpendingpowerstate](https://developer.apple.com/documentation/kernel/ioaudiodevice/1811740-getpendingpowerstate)
+
+# getPendingPowerState
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel
+
+Returns the pending power state if a state change is in progress. Otherwise it returns the current power state change.
+
+## Declaration
+
+```objectivec
+virtual IOAudioDevicePowerState getPendingPowerState(); 
+```
+
+<a id="return_value"></a>
+
+## Return Value
+
+The pending power state
+
+## See Also
+
+### Miscellaneous
+
+- [activateAudioEngine(IOAudioEngine \*)](1811648-activateaudioengine.md): This simply calls activateAudioEngine(IOAudioEngine \*audioEngine, bool shouldStartAudioEngine) with a value of true for shouldStartAudioEngine.
+- [activateAudioEngine(IOAudioEngine \*, bool)](1811655-activateaudioengine.md): This is called to add a new IOAudioEngine object to the IOAudioDevice.
+- [addTimerEvent](1811662-addtimerevent.md): Adds a TimerEvent callback for the given target called at least as often as specified in interval.
+- [attachAudioPort](1811666-attachaudioport.md): Adds the port to the IOAudioDevice's list of ports and attaches the port to its parent and attaches the child to the port.
+- [audioEngineStarting](1811673-audioenginestarting.md): Called by IOAudioEngine when it is starting up
+- [audioEngineStopped](1811679-audioenginestopped.md): Called by IOAudioEngine when it has stopped
+- [completePowerStateChange](1811685-completepowerstatechange.md): Called when a power state change is complete
+- [completePowerStateChangeAction](1811692-completepowerstatechangeaction.md): IOCommandGate Action which calls protectedCompletePowerStateChange() while holding the IOCommandGate.
+- [deactivateAllAudioEngines](1811697-deactivateallaudioengines.md): Deactivates all of the audio engines in the device.
+- [detachAllAudioPorts](1811704-detachallaudioports.md): Deactivates all of the ports in the device.
+- [dispatchTimerEvents](1811710-dispatchtimerevents.md): Called by timerFired() to cause the timer event callbacks to be called.
+- [flushAudioControls](1811716-flushaudiocontrols.md): Forces each IOAudioControl in the driver to have its value flushed out to the hardware. That will cause either the IOAudioControl's ValueChangeHandler to be called.
+- [free](1811723-free.md): Frees resources used by the IOAudioDevice instance
+- [getCommandGate](1811730-getcommandgate.md): Returns the IOCommandGate for this IOAudioDevice
+- [getPowerState](1811749-getpowerstate.md): Returns the current power state (the old power state if a change is in progress).
+- [getWorkLoop](1811757-getworkloop.md): Returns the IOWorkLoop for the driver
+- [init](1811765-init.md): Initialize a newly created instance of IOAudioDevice.
+- [initHardware](1811773-inithardware.md): This function is called by start() to provide a convenient place for the subclass to perform its initialization.
+- [initiatePowerStateChange](1811782-initiatepowerstatechange.md): Called internally to execute a power state change
+- [performPowerStateChange](1811791-performpowerstatechange.md): This function is called by the IOAudioDevice when a power state change is needed.
+- [protectedCompletePowerStateChange](1811798-protectedcompletepowerstatechang.md): Called on the IOWorkLoop when a power state change is complete.
+- [protectedSetPowerState](1811807-protectedsetpowerstate.md): Called by setPowerStateAction() to deal with a power state change from the IOService power management facility.
+- [removeAllTimerEvents](1811813-removealltimerevents.md): Removes all timer events and stops the timer
+- [removeTimerEvent](1811823-removetimerevent.md): Removes the timer event for the given target.
+- [setConfigurationApplicationBundle](1811829-setconfigurationapplicationbundl.md): This function is to be called if an external configuration application is available to set which application to launch.
+- [setDeviceCanBeDefault](1811833-setdevicecanbedefault.md): This function is to be called to tell CoreAudio if this device shouldn't be a default device.
+- [setDeviceName](1811841-setdevicename.md): Sets the name of the device
+- [setDeviceShortName](1811844-setdeviceshortname.md): Sets the short name of the device
+- [setFamilyManagePower](1811848-setfamilymanagepower.md): Called set whether or not the family should manage the device power throught the IOService power management APIs.
+- [setIdleAudioSleepTime](1811852-setidleaudiosleeptime.md): This function is to be called by a driver that doesn't want to be told about the audio going idle immediately, but at some point in the future.
+- [setManufacturerName](1811862-setmanufacturername.md): Sets the manufacturer name of the device
+- [setPowerState](1811867-setpowerstate.md): Called by the power management system in IOService when the power state of this service needs to change.
+- [setPowerStateAction](1811878-setpowerstateaction.md): IOCommandGate Action which calls protectedSetPowerState() while holding the IOCommandGate
+- [start](1811891-start.md): This function is called automatically by the system to tell the driver to start vending services to the rest of the system.
+- [stop](1811898-stop.md): This is responsible for stopping the device after the system is done with it (or if the device is removed from the system).
+- [timerFired](1811908-timerfired.md): Internal static function called when the timer fires.
+- [waitForPendingPowerStateChange](1811913-waitforpendingpowerstatechange.md): Called internally to wait until a pending power state change is complete.

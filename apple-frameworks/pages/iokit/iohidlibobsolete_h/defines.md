@@ -1,0 +1,18 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/iohidlibobsolete_h/defines](https://developer.apple.com/documentation/iokit/iohidlibobsolete_h/defines)
+
+# Defines
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** API Collection
+
+## Topics
+
+### Constants
+
+- [kIOHIDDeviceInterfaceID](../kiohiddeviceinterfaceid.md)
+- [kIOHIDDeviceInterfaceID121](../kiohiddeviceinterfaceid121.md)
+- [kIOHIDDeviceInterfaceID122](../kiohiddeviceinterfaceid122.md)
+- [kIOHIDOutputTransactionInterfaceID](../kiohidoutputtransactioninterfaceid.md)
+- [kIOHIDQueueInterfaceID](../kiohidqueueinterfaceid.md)

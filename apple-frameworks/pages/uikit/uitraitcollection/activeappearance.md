@@ -1,0 +1,93 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uitraitcollection/activeappearance](https://developer.apple.com/documentation/uikit/uitraitcollection/activeappearance)
+
+# activeAppearance (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · tvOS 14.0+ · visionOS 1.0+
+
+A property that indicates whether a scene has an active appearance.
+
+## Declaration
+
+```swift
+var activeAppearance: UIUserInterfaceActiveAppearance { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+`activeAppearance` describes whether a scene is frontmost; it doesn’t describe a scene’s life-cycle state. A scene that isn’t frontmost can remain in the [UIScene.ActivationState.foregroundActive](../uiscene/activationstate-swift.enum/foregroundactive.md) activation state as long as it can still receive user interaction. Its activation state changes to [UIScene.ActivationState.foregroundInactive](../uiscene/activationstate-swift.enum/foregroundinactive.md) only when a system interruption takes over interaction. This can happen because of Control Center, an alert, Siri, App Switcher, or another app’s window covering it in windowed apps. Use [UIScene.ActivationState](../uiscene/activationstate-swift.enum.md) to decide when to save view state, and use `activeAppearance` to detect when a scene is no longer frontmost.
+
+Because `activeAppearance` belongs to a scene’s trait collection, each scene has its own value, even in apps that support multiple scenes. To detect when a scene becomes frontmost, register for changes to this trait by calling [registerForTraitChanges(\_:handler:)](../uitraitchangeobservable-67e94/registerfortraitchanges%28__handler_%29.md) on the window scene, or on any view or view controller in its hierarchy.
+
+In Mac apps built with Mac Catalyst, Stage Manager on iPad, and a windowed app on iPad, the value is `.active` when the window is focused (the key window) and `.inactive` when it isn’t. A window that another app’s window covers keeps an `.active` appearance as long as it remains the focused window.
+
+In iOS and in a full-screen app on iPad, the value reflects whether the app itself is in the foreground (`.active`) or not (`.inactive`).
+
+## See Also
+
+### Retrieving interface-related traits
+
+- [userInterfaceStyle](userinterfacestyle.md): The style associated with the user interface.
+- [UIUserInterfaceStyle](../uiuserinterfacestyle.md): Constants that indicate the interface style for the app.
+- [userInterfaceIdiom](userinterfaceidiom.md): The user interface idiom of the trait collection.
+- [UIUserInterfaceIdiom](../uiuserinterfaceidiom.md): Constants that indicate the interface type for the device or an object that has a trait environment, such as a view and view controller.
+- [userInterfaceLevel](userinterfacelevel.md): The elevation level of the interface.
+- [UIUserInterfaceLevel](../uiuserinterfacelevel.md): Constants that indicate the visual level for content in the window.
+- [layoutDirection](layoutdirection.md): The layout direction associated with the current environment.
+- [UITraitEnvironmentLayoutDirection](../uitraitenvironmentlayoutdirection.md): Constants that indicate the layout direction associated with the current environment.
+- [resolvesNaturalAlignmentWithBaseWritingDirection](resolvesnaturalalignmentwithbasewritingdirection-58wlh.md)
+- [accessibilityContrast](accessibilitycontrast.md): The accessibility contrast associated with the current environment.
+- [UIAccessibilityContrast](../uiaccessibilitycontrast.md): Constants that indicate the accessibility contrast setting.
+- [legibilityWeight](legibilityweight.md): The font weight to apply to text.
+- [UILegibilityWeight](../uilegibilityweight.md): Constants that indicate the weight to apply to text in your interface.
+- [UIUserInterfaceActiveAppearance](../uiuserinterfaceactiveappearance.md): Constants that indicate whether the user interface has an active appearance.
+- [toolbarItemPresentationSize](toolbaritempresentationsize.md): The presentation size of a toolbar item in an AppKit toolbar.
+
+# activeAppearance (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · tvOS 14.0+ · visionOS 1.0+
+
+A property that indicates whether a scene has an active appearance.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) UIUserInterfaceActiveAppearance activeAppearance;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+`activeAppearance` describes whether a scene is frontmost; it doesn’t describe a scene’s life-cycle state. A scene that isn’t frontmost can remain in the [UISceneActivationStateForegroundActive](../uiscene/activationstate-swift.enum/foregroundactive.md) activation state as long as it can still receive user interaction. Its activation state changes to [UISceneActivationStateForegroundInactive](../uiscene/activationstate-swift.enum/foregroundinactive.md) only when a system interruption takes over interaction. This can happen because of Control Center, an alert, Siri, App Switcher, or another app’s window covering it in windowed apps. Use [UISceneActivationState](../uiscene/activationstate-swift.enum.md) to decide when to save view state, and use `activeAppearance` to detect when a scene is no longer frontmost.
+
+Because `activeAppearance` belongs to a scene’s trait collection, each scene has its own value, even in apps that support multiple scenes. To detect when a scene becomes frontmost, register for changes to this trait by calling [registerForTraitChanges(\_:handler:)](../uitraitchangeobservable-67e94/registerfortraitchanges%28__handler_%29.md) on the window scene, or on any view or view controller in its hierarchy.
+
+In Mac apps built with Mac Catalyst, Stage Manager on iPad, and a windowed app on iPad, the value is `.active` when the window is focused (the key window) and `.inactive` when it isn’t. A window that another app’s window covers keeps an `.active` appearance as long as it remains the focused window.
+
+In iOS and in a full-screen app on iPad, the value reflects whether the app itself is in the foreground (`.active`) or not (`.inactive`).
+
+## See Also
+
+### Retrieving interface-related traits
+
+- [userInterfaceStyle](userinterfacestyle.md): The style associated with the user interface.
+- [UIUserInterfaceStyle](../uiuserinterfacestyle.md): Constants that indicate the interface style for the app.
+- [userInterfaceIdiom](userinterfaceidiom.md): The user interface idiom of the trait collection.
+- [UIUserInterfaceIdiom](../uiuserinterfaceidiom.md): Constants that indicate the interface type for the device or an object that has a trait environment, such as a view and view controller.
+- [userInterfaceLevel](userinterfacelevel.md): The elevation level of the interface.
+- [UIUserInterfaceLevel](../uiuserinterfacelevel.md): Constants that indicate the visual level for content in the window.
+- [layoutDirection](layoutdirection.md): The layout direction associated with the current environment.
+- [UITraitEnvironmentLayoutDirection](../uitraitenvironmentlayoutdirection.md): Constants that indicate the layout direction associated with the current environment.
+- [resolvesNaturalAlignmentWithBaseWritingDirection](resolvesnaturalalignmentwithbasewritingdirection-97osy.md): Specifies the behavior for resolving `NSTextAlignment.natural` to the visual alignment.
+- [accessibilityContrast](accessibilitycontrast.md): The accessibility contrast associated with the current environment.
+- [UIAccessibilityContrast](../uiaccessibilitycontrast.md): Constants that indicate the accessibility contrast setting.
+- [legibilityWeight](legibilityweight.md): The font weight to apply to text.
+- [UILegibilityWeight](../uilegibilityweight.md): Constants that indicate the weight to apply to text in your interface.
+- [UIUserInterfaceActiveAppearance](../uiuserinterfaceactiveappearance.md): Constants that indicate whether the user interface has an active appearance.
+- [toolbarItemPresentationSize](toolbaritempresentationsize.md): The presentation size of a toolbar item in an AppKit toolbar.

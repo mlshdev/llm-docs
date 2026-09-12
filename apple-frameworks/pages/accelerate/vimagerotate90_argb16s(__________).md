@@ -1,0 +1,125 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimagerotate90_argb16s(_:_:_:_:_:)](https://developer.apple.com/documentation/accelerate/vimagerotate90_argb16s(_:_:_:_:_:))
+
+# vImageRotate90_ARGB16S(\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 7.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Rotates a signed 16-bit-per-channel, 4-channel interleaved image by a multiple of 90°.
+
+## Declaration
+
+```swift
+func vImageRotate90_ARGB16S(_ src: UnsafePointer<vImage_Buffer>, _ dest: UnsafePointer<vImage_Buffer>, _ rotationConstant: UInt8, _ backColor: UnsafePointer<Int16>, _ flags: vImage_Flags) -> vImage_Error
+```
+
+## Parameters
+
+- `src`: A pointer to a vImage buffer structure that contains the source image.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the `height`, `width`, and `rowBytes` fields of this structure and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+- `rotationConstant`: A constant that specifies the rotation angle as a multiple of 90°. See [Rotation constants](1509228-rotation-constants.md) for the full list of supported rotation constants.
+- `backColor`: A background color. If you set the `kvImageBackgroundColorFill` flag, pass a pixel value.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes from [Error codes](1578972-error-codes.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This function maps the center point of the source image to the center point of the destination image. It doesn’t scale or resample; instead, the function copies unchanged individual pixels to new locations.
+
+Depending on the relative sizes of the source image and the destination buffer, the function may clip parts of the source image. Areas outside the source image might appear in the destination image if you don’t pass a background color to the function.
+
+The 90° and 270° rotations don’t rotate around the true center of the image if either of the following is true:
+
+- The parities of the source height and the destination width don’t match. For example, the source height is odd and the destination width is even.
+- The parities of the source width and the destination height don’t match. For example, the source width is odd and the destination height is even.
+
+The 0° and 180° rotations don’t rotate around the true center of the image if either of the following is true:
+
+- The parities of the source height and the destination height don’t match. For example, the source height is odd and the destination height is even.
+- The parities of the source width and the destination width don’t match. For example, the source width is odd and the destination width is even.
+
+To overcome this limitation, use the high-level rotation functions — for example, [vImageRotate90_ARGB16U(\_:\_:\_:\_:\_:)](vimagerotate90_argb16u%28__________%29.md).
+
+## See Also
+
+### Related Documentation
+
+- [Applying geometric transforms to images](applying-geometric-transforms-to-images.md): Reflect, shear, rotate, and scale image buffers using vImage.
+
+### Rotating 16-bit-per-channel buffers by multiples of 90°
+
+- [vImageRotate90_Planar16U(\_:\_:\_:\_:\_:)](vimagerotate90_planar16u%28__________%29.md): Rotates an unsigned 16-bit planar image by a multiple of 90°.
+- [vImageRotate90_Planar16F(\_:\_:\_:\_:\_:)](vimagerotate90_planar16f%28__________%29.md): Rotates a floating-point 16-bit planar image by a multiple of 90°.
+- [vImageRotate90_CbCr16F(\_:\_:\_:\_:\_:)](vimagerotate90_cbcr16f%28__________%29.md): Rotates a floating-point 16-bit-per-channel, 2-channel interleaved image by a multiple of 90°.
+- [vImageRotate90_ARGB16U(\_:\_:\_:\_:\_:)](vimagerotate90_argb16u%28__________%29.md): Rotates an unsigned 16-bit-per-channel, 4-channel interleaved image by a multiple of 90°.
+- [vImageRotate90_ARGB16F(\_:\_:\_:\_:\_:)](vimagerotate90_argb16f%28__________%29.md): Rotates a floating-point 16-bit-per-channel, 4-channel interleaved image by a multiple of 90°.
+
+# vImageRotate90_ARGB16S (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 7.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Rotates a signed 16-bit-per-channel, 4-channel interleaved image by a multiple of 90°.
+
+## Declaration
+
+```objectivec
+vImage_Error vImageRotate90_ARGB16S(const vImage_Buffer *src, const vImage_Buffer *dest, uint8_t rotationConstant, const Pixel_ARGB_16S backColor, vImage_Flags flags);
+```
+
+## Parameters
+
+- `src`: A pointer to a vImage buffer structure that contains the source image.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the `height`, `width`, and `rowBytes` fields of this structure and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+- `rotationConstant`: A constant that specifies the rotation angle as a multiple of 90°. See [Rotation constants](1509228-rotation-constants.md) for the full list of supported rotation constants.
+- `backColor`: A background color. If you set the `kvImageBackgroundColorFill` flag, pass a pixel value.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes from [Error codes](1578972-error-codes.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This function maps the center point of the source image to the center point of the destination image. It doesn’t scale or resample; instead, the function copies unchanged individual pixels to new locations.
+
+Depending on the relative sizes of the source image and the destination buffer, the function may clip parts of the source image. Areas outside the source image might appear in the destination image if you don’t pass a background color to the function.
+
+The 90° and 270° rotations don’t rotate around the true center of the image if either of the following is true:
+
+- The parities of the source height and the destination width don’t match. For example, the source height is odd and the destination width is even.
+- The parities of the source width and the destination height don’t match. For example, the source width is odd and the destination height is even.
+
+The 0° and 180° rotations don’t rotate around the true center of the image if either of the following is true:
+
+- The parities of the source height and the destination height don’t match. For example, the source height is odd and the destination height is even.
+- The parities of the source width and the destination width don’t match. For example, the source width is odd and the destination width is even.
+
+To overcome this limitation, use the high-level rotation functions — for example, [vImageRotate90_ARGB16U](vimagerotate90_argb16u%28__________%29.md).
+
+## See Also
+
+### Related Documentation
+
+- [Applying geometric transforms to images](applying-geometric-transforms-to-images.md): Reflect, shear, rotate, and scale image buffers using vImage.
+
+### Rotating 16-bit-per-channel buffers by multiples of 90°
+
+- [vImageRotate90_Planar16U](vimagerotate90_planar16u%28__________%29.md): Rotates an unsigned 16-bit planar image by a multiple of 90°.
+- [vImageRotate90_Planar16F](vimagerotate90_planar16f%28__________%29.md): Rotates a floating-point 16-bit planar image by a multiple of 90°.
+- [vImageRotate90_CbCr16F](vimagerotate90_cbcr16f%28__________%29.md): Rotates a floating-point 16-bit-per-channel, 2-channel interleaved image by a multiple of 90°.
+- [vImageRotate90_ARGB16U](vimagerotate90_argb16u%28__________%29.md): Rotates an unsigned 16-bit-per-channel, 4-channel interleaved image by a multiple of 90°.
+- [vImageRotate90_ARGB16F](vimagerotate90_argb16f%28__________%29.md): Rotates a floating-point 16-bit-per-channel, 4-channel interleaved image by a multiple of 90°.

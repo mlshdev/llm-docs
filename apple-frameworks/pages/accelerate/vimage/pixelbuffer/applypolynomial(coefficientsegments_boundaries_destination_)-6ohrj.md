@@ -1,0 +1,63 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimage/pixelbuffer/applypolynomial(coefficientsegments:boundaries:destination:)-6ohrj](https://developer.apple.com/documentation/accelerate/vimage/pixelbuffer/applypolynomial(coefficientsegments:boundaries:destination:)-6ohrj)
+
+# applyPolynomial(coefficientSegments:boundaries:destination:)
+
+**Framework:** Accelerate  
+**Kind:** Instance Method  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS · watchOS 9.0+
+
+Applies a set of piecewise polynomials to a 4-channel, 8-bit interleaved buffer and writes the result to a 4-channel, 32-bit interleaved buffer.
+
+## Declaration
+
+```swift
+func applyPolynomial(coefficientSegments: [[Float]], boundaries: [Float], destination: vImage.PixelBuffer<vImage.InterleavedFx4>)
+```
+
+## Parameters
+
+- `coefficientSegments`: An array that contains the polynomial coefficient array. Each polynomial must be of the same order.
+- `boundaries`: An array of boundary values, in increasing order, that separates adjacent ranges of pixel values. `boundaries` must contain `coefficientSegments.count + 1` elements.
+- `destination`: The destination pixel buffer.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The following code shows an example of applying three polynomials to an [vImage.Interleaved8x3](../interleaved8x3.md) buffer:
+
+```swift
+let src = vImage.PixelBuffer<vImage.Interleaved8x4>(
+    pixelValues: [64, 128, 192, 255],
+    size: vImage.Size(width: 1, height: 1))
+
+let dest = vImage.PixelBuffer<vImage.InterleavedFx4>(
+    size: src.size)
+
+src.applyPolynomial(coefficientSegments: [ [1, 0, 0],
+                                           [0, 1, 0],
+                                           [0, 0, 1] ],
+                    boundaries: [0, 1/3, 2/3, 1] as [Float],
+                    destination: dest)
+
+// Prints:
+//  1.0         ≅ 1 * (64 / 255)⁰
+
+//  0.5019608   ≅ 1 * (128 / 255)¹
+
+//  0.56692046  ≅ 1 * (192 / 255)²
+//  1.0         ≅ 1 * (255 / 255)²
+print(dest.array)
+```
+
+## See Also
+
+### Related Documentation
+
+- [Applying tone curve adjustments to images](../../applying-tone-curve-adjustments-to-images.md): Use the vImage library’s polynomial transform to apply tone curve adjustments to images.
+
+### Appying polynomial (8-bit source, 32-bit destination)
+
+- [applyPolynomial(coefficientSegments:boundaries:destination:)](applypolynomial%28coefficientsegments_boundaries_destination_%29-7sy2t.md): Conforms when `Format` is `vImage.Planar8`. Applies a set of piecewise polynomials to an 8-bit planar buffer and writes the result to a 32-bit planar buffer.
+- [applyPolynomial(coefficientSegments:boundaries:destination:)](applypolynomial%28coefficientsegments_boundaries_destination_%29-3sxxv.md): Conforms when `Format` is `vImage.Interleaved8x2`. Applies a set of piecewise polynomials to a 2-channel, 8-bit interleaved buffer and writes the result to a 2-channel, 32-bit interleaved buffer.
+- [applyPolynomial(coefficientSegments:boundaries:destination:)](applypolynomial%28coefficientsegments_boundaries_destination_%29-4o5ju.md): Conforms when `Format` is `vImage.Interleaved8x3`. Applies a set of piecewise polynomials to a 3-channel, 8-bit interleaved buffer and writes the result to a 3-channel, 32-bit interleaved buffer.

@@ -1,0 +1,13 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsuserinterfacelayoutorientation/init(rawvalue:)](https://developer.apple.com/documentation/appkit/nsuserinterfacelayoutorientation/init(rawvalue:))
+
+# init(rawValue:)
+
+**Framework:** AppKit  
+**Kind:** Initializer  
+**Availability:** macOS 10.9+
+
+## Declaration
+
+```swift
+init?(rawValue: Int)
+```

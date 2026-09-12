@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/os/osloginterpolation/appendinterpolation(_:format:privacy:)-5qaau](https://developer.apple.com/documentation/os/osloginterpolation/appendinterpolation(_:format:privacy:)-5qaau)
+
+# appendInterpolation(\_:format:privacy:)
+
+**Framework:** os  
+**Kind:** Instance Method  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS · watchOS 7.0+
+
+Appends an interpolated collection of raw bytes.
+
+## Declaration
+
+```swift
+mutating func appendInterpolation(_ pointer: @autoclosure @escaping () -> UnsafeRawBufferPointer, format: OSLogPointerFormat = .none, privacy: OSLogPrivacy = .auto)
+```
+
+## Parameters
+
+- `pointer`: A pointer to data with an implicit size.
+- `format`: The format to apply to the pointer. You format pointers as one of several different options. If you don’t specify this parameter, the system doesn’t format the value. For more information, see [OSLogPointerFormat](../oslogpointerformat.md).
+- `privacy`: The privacy level of the information. If you don’t specify this parameter, the system uses the default rules to determine whether to show the information.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Don’t call this function directly. The system calls it automatically when interpolating values of this type. When specifying the value in your string, you may include any of the indicated parameters to change the default presentation of that value.
+
+## See Also
+
+### Appending Pointer Data
+
+- [appendInterpolation(\_:bytes:format:privacy:)](appendinterpolation%28__bytes_format_privacy_%29.md): Appends interpolated pointer data.
+- [appendInterpolation(\_:bytes:format:privacy:attributes:)](appendinterpolation%28__bytes_format_privacy_attributes_%29.md): Appends interpolated pointer data with the specified attributes.
+- [appendInterpolation(\_:format:privacy:attributes:)](appendinterpolation%28__format_privacy_attributes_%29-93lbs.md): Appends an interpolated collection of raw bytes with the specified attributes.

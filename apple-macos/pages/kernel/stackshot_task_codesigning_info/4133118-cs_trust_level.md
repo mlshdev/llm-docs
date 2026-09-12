@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/stackshot_task_codesigning_info/4133118-cs_trust_level](https://developer.apple.com/documentation/kernel/stackshot_task_codesigning_info/4133118-cs_trust_level)
+
+# cs_trust_level
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Instance Property  
+**Availability:** macOS 13.3+
+
+## Declaration
+
+```objectivec
+uint32_t cs_trust_level;
+```

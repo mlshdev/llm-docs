@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/networkingdriverkit/ndk_21](https://developer.apple.com/documentation/networkingdriverkit/ndk_21)
+
+# NDK_21
+
+**Interface language:** Objective-C
+
+**Framework:** NetworkingDriverKit  
+**Kind:** Macro  
+**Availability:** DriverKit
+
+## Declaration
+
+```objectivec
+#define NDK_21
+```
+
+## See Also
+
+### Macros
+
+- [IOUSERNETWORKKEEPALIVEOFFLOADFRAME_AIRPLAY](iousernetworkkeepaliveoffloadframe_airplay.md)
+- [IOUSERNETWORKKEEPALIVEOFFLOADFRAME_IPSEC](iousernetworkkeepaliveoffloadframe_ipsec.md)
+- [IOUSERNETWORKKEEPALIVEOFFLOADFRAME_TCP](iousernetworkkeepaliveoffloadframe_tcp.md)
+- [IOUSERNETWORKKEEPALIVEOFFLOAD_DATA_SIZE](iousernetworkkeepaliveoffload_data_size.md)
+- [IOUSERNETWORKKEEPALIVEOFFLOAD_ETHERTYPE_IPV4](iousernetworkkeepaliveoffload_ethertype_ipv4.md)
+- [IOUSERNETWORKKEEPALIVEOFFLOAD_ETHERTYPE_IPV6](iousernetworkkeepaliveoffload_ethertype_ipv6.md)
+- [IOUSERNETWORKKEEPALIVEOFFLOAD_FLAG_NOWAKEFROMSLEEP](iousernetworkkeepaliveoffload_flag_nowakefromsleep.md)
+- [IOUSERNETWORKKEEPALIVEOFFLOAD_MAX_ADDR_SIZE](iousernetworkkeepaliveoffload_max_addr_size.md)
+- [IOUSERNETWORKLINKLAYERREACHABILITYINFO_ADDRLEN](iousernetworklinklayerreachabilityinfo_addrlen.md)
+- [IOUSERNETWORKPRIVATEDEFINED](iousernetworkprivatedefined.md)
+- [IP_PORTRANGE_BITFIELD_LEN](ip_portrange_bitfield_len.md)
+- [NDK_20](ndk_20.md)
+- [NDK_22](ndk_22.md)
+- [NDK_23](ndk_23.md)
+- [NDK_24](ndk_24.md)

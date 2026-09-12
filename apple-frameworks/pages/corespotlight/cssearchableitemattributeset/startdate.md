@@ -1,0 +1,49 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corespotlight/cssearchableitemattributeset/startdate](https://developer.apple.com/documentation/corespotlight/cssearchableitemattributeset/startdate)
+
+# startDate (Swift)
+
+**Framework:** Core Spotlight  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · visionOS 1.0+
+
+The start date for the item.
+
+## Declaration
+
+```swift
+var startDate: Date? { get set }
+```
+
+## See Also
+
+### Describing events
+
+- [allDay](allday.md): A value that indicates if the event covers an entire day.
+- [completionDate](completiondate.md): The date on which the item was completed.
+- [dueDate](duedate.md): The date on which the item is due.
+- [endDate](enddate.md): The end date for the item.
+- [importantDates](importantdates.md): An array of important dates associated with the item.
+
+# startDate (Objective-C)
+
+**Framework:** Core Spotlight  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · visionOS 1.0+
+
+The start date for the item.
+
+## Declaration
+
+```objectivec
+@property (strong, nullable) NSDate * startDate;
+```
+
+## See Also
+
+### Describing events
+
+- [allDay](allday.md): A value that indicates if the event covers an entire day.
+- [completionDate](completiondate.md): The date on which the item was completed.
+- [dueDate](duedate.md): The date on which the item is due.
+- [endDate](enddate.md): The end date for the item.
+- [importantDates](importantdates.md): An array of important dates associated with the item.

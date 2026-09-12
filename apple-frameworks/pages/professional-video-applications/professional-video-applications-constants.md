@@ -1,0 +1,47 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/professional-video-applications/professional-video-applications-constants](https://developer.apple.com/documentation/professional-video-applications/professional-video-applications-constants)
+
+# Professional Video Applications Constants (Swift)
+
+**Framework:** Professional Video Applications  
+**Kind:** API Collection
+
+## Topics
+
+### Constants
+
+- [kFxPropertyKey_DrawsInScreenSpace](../professional_video_applications/kfxpropertykey_drawsinscreenspace.md): Indicates that the filter or generator requires that its output to always be aligned with the camera’s film-back.
+- [kFxPropertyKey_MayRemapTime](../professional_video_applications/kfxpropertykey_mayremaptime.md): A Boolean value, encoded as an `NSNumber` object, indicating whether or not this plug-in may try to sample its input image(s) at any time other than the output time.
+- [kFxPropertyKey_PixelTransformSupport](../professional_video_applications/kfxpropertykey_pixeltransformsupport.md): A key in the `properties` dictionary in the `FXBaseEffect` Class that corresponds to an `NSNumber` containing one of the `FxImage` values. The default value is [kFxPixelTransform_ScaleTranslate](../professional_video_applications/kfxpixeltransform_scaletranslate.md)
+- [kFxPropertyKey_UsesNonmatchingTextureLayout](../professional_video_applications/kfxpropertykey_usesnonmatchingtexturelayout.md)
+
+## See Also
+
+### Reference
+
+- [Professional Video Applications Enumerations](professional-video-applications-enumerations.md)
+- [Professional Video Applications Data Types](professional-video-applications-data-types.md)
+- [Professional Video Applications Protocols](professional-video-applications-protocols.md)
+
+# Professional Video Applications Constants (Objective-C)
+
+**Framework:** Professional Video Applications  
+**Kind:** API Collection
+
+## Topics
+
+### Constants
+
+- [kFxPropertyKey_DrawsInScreenSpace](../professional_video_applications/kfxpropertykey_drawsinscreenspace.md): Indicates that the filter or generator requires that its output to always be aligned with the camera’s film-back.
+- [kFxPropertyKey_MayRemapTime](../professional_video_applications/kfxpropertykey_mayremaptime.md): A Boolean value, encoded as an `NSNumber` object, indicating whether or not this plug-in may try to sample its input image(s) at any time other than the output time.
+- [kFxPropertyKey_PixelTransformSupport](../professional_video_applications/kfxpropertykey_pixeltransformsupport.md): A key in the `properties` dictionary in the `FXBaseEffect` Class that corresponds to an `NSNumber` containing one of the `FxImage` values. The default value is [kFxPixelTransform_ScaleTranslate](../professional_video_applications/kfxpixeltransform_scaletranslate.md)
+- [kFxPropertyKey_UsesNonmatchingTextureLayout](../professional_video_applications/kfxpropertykey_usesnonmatchingtexturelayout.md)
+- [PluginManagerVersionNumber](../professional_video_applications/pluginmanagerversionnumber.md)
+- [PluginManagerVersionString](../professional_video_applications/pluginmanagerversionstring.md)
+
+## See Also
+
+### Reference
+
+- [Professional Video Applications Enumerations](professional-video-applications-enumerations.md)
+- [Professional Video Applications Data Types](professional-video-applications-data-types.md)
+- [Professional Video Applications Protocols](professional-video-applications-protocols.md)

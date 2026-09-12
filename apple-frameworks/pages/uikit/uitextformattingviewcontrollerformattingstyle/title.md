@@ -1,0 +1,17 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uitextformattingviewcontrollerformattingstyle/title](https://developer.apple.com/documentation/uikit/uitextformattingviewcontrollerformattingstyle/title)
+
+# title
+
+**Interface language:** Objective-C
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · visionOS 26.0+
+
+Style title displayed in UI.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, readonly, nonnull) NSString * title;
+```

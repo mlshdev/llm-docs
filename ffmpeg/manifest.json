@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "project": "ffmpeg",
   "title": "FFmpeg",
+  "homepage": "https://ffmpeg.org/documentation.html",
   "repository": "FFmpeg/FFmpeg",
   "tag": "master",
   "branch": "master",

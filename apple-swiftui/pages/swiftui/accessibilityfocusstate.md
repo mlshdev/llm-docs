@@ -1,0 +1,83 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/accessibilityfocusstate](https://developer.apple.com/documentation/swiftui/accessibilityfocusstate)
+
+# AccessibilityFocusState
+
+**Framework:** SwiftUI  
+**Kind:** Structure  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+
+A property wrapper type that can read and write a value that SwiftUI updates as the focus of any active accessibility technology, such as VoiceOver, changes.
+
+## Declaration
+
+```swift
+@propertyWrapper @frozen struct AccessibilityFocusState<Value> where Value : Hashable
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use this capability to request that VoiceOver or other accessibility technologies programmatically focus on a specific element, or to determine whether VoiceOver or other accessibility technologies are focused on particular elements. Use [accessibilityFocused(\_:equals:)](view/accessibilityfocused%28__equals_%29.md) or [accessibilityFocused(\_:)](view/accessibilityfocused%28__%29.md) in conjunction with this property wrapper to identify accessibility elements for which you want to get or set accessibility focus. When accessibility focus enters the modified accessibility element, the framework updates the wrapped value of this property to match a given prototype value. When accessibility focus leaves, SwiftUI resets the wrapped value of an optional property to `nil` or the wrapped value of a Boolean property to `false`. Setting the property’s value programmatically has the reverse effect, causing accessibility focus to move to whichever accessibility element is associated with the updated value.
+
+In the example below, when `notification` changes, and its  `isPriority` property is `true`, the accessibility focus moves to the notification `Text` element above the rest of the view’s content:
+
+```swift
+struct CustomNotification: Equatable {
+    var text: String
+    var isPriority: Bool
+}
+
+struct ContentView: View {
+    @Binding var notification: CustomNotification?
+    @AccessibilityFocusState var isNotificationFocused: Bool
+
+    var body: some View {
+        VStack {
+            if let notification = self.notification {
+                Text(notification.text)
+                    .accessibilityFocused($isNotificationFocused)
+            }
+            Text("The main content for this view.")
+        }
+        .onChange(of: notification) { notification in
+            if (notification?.isPriority == true)  {
+                isNotificationFocused = true
+            }
+        }
+
+    }
+}
+```
+
+To allow for cases where accessibility focus is completely absent from the tree of accessibility elements, or accessibility technologies are not active, the wrapped value must be either optional or Boolean.
+
+Some initializers of `AccessibilityFocusState` also allow specifying accessibility technologies, determining to which types of accessibility focus this binding applies. If you specify no accessibility technologies, SwiftUI uses an aggregate of any and all active accessibility technologies.
+
+## Topics
+
+### Creating a focus state
+
+- [init()](accessibilityfocusstate/init%28%29.md): Creates a new accessibility focus state for a Boolean value.
+- [init(for:)](accessibilityfocusstate/init%28for_%29.md): Creates a new accessibility focus state for a Boolean value, using the accessibility technologies you specify.
+
+### Getting the state
+
+- [projectedValue](accessibilityfocusstate/projectedvalue.md): A projection of the state value that can be used to establish bindings between view content and accessibility focus placement.
+- [wrappedValue](accessibilityfocusstate/wrappedvalue.md): The current state value, taking into account whatever bindings might be in effect due to the current location of focus.
+- [AccessibilityFocusState.Binding](accessibilityfocusstate/binding.md)
+
+## Relationships
+
+### Conforms To
+
+- [DynamicProperty](dynamicproperty.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Controlling focus
+
+- [accessibilityFocused(\_:)](view/accessibilityfocused%28__%29.md): Modifies this view by binding its accessibility element’s focus state to the given boolean state value.
+- [accessibilityFocused(\_:equals:)](view/accessibilityfocused%28__equals_%29.md): Modifies this view by binding its accessibility element’s focus state to the given state value.

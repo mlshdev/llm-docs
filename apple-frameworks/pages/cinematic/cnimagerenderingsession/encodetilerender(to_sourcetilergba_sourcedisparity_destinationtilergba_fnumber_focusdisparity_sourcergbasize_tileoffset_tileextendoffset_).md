@@ -1,0 +1,77 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cinematic/cnimagerenderingsession/encodetilerender(to:sourcetilergba:sourcedisparity:destinationtilergba:fnumber:focusdisparity:sourcergbasize:tileoffset:tileextendoffset:)](https://developer.apple.com/documentation/cinematic/cnimagerenderingsession/encodetilerender(to:sourcetilergba:sourcedisparity:destinationtilergba:fnumber:focusdisparity:sourcergbasize:tileoffset:tileextendoffset:))
+
+# encodeTileRender(to:sourceTileRGBA:sourceDisparity:destinationTileRGBA:fNumber:focusDisparity:sourceRGBASize:tileOffset:tileExtendOffset:) (Swift)
+
+**Framework:** Cinematic  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+
+
+Encode a command to render a shallow depth of field (SDoF) image to a metal texture
+
+## Declaration
+
+```swift
+func encodeTileRender(to commandBuffer: any MTLCommandBuffer, sourceTileRGBA: any MTLTexture, sourceDisparity: any MTLTexture, destinationTileRGBA: any MTLTexture, fNumber: Float, focusDisparity: Float, sourceRGBASize: CGSize, tileOffset: CGPoint, tileExtendOffset: CGPoint) -> Bool
+```
+
+## Parameters
+
+- `commandBuffer`: The Metal command buffer on which to encode the command
+- `sourceTileRGBA`: A color texture to which the effect should be applied. Texture must be in linear color space. Its origin in the full image is given by tileExtendOffset.
+- `sourceDisparity`: The texture with the disparity. This texture is not tiled.
+- `destinationTileRGBA`: The texture to which the SDoF image is rendered. Texture must be in linear color space. Its dimensions define the tile size. Its origin in the full image is given by `tileOffset`.
+- `fNumber`: The f-stop value which inversely affects the aperture used to render the image. A smaller f/ number results in larger bokeh and a shallower depth of field in the rendered image.
+- `focusDisparity`: The disparity value which represents the focus plane at which the rendered image should be in focus. A larger disparity results in the focus plane being closer to the camera. The scale and offset of disparity is not defined. It is best practice to obtain disparity values from detections or by interpolation between known disparity values.
+- `sourceRGBASize`: The width and height of the full (un-tiled) source image.
+- `tileOffset`: The pixel-coordinate origin of the destination tile within the full image.
+- `tileExtendOffset`: The pixel-coordinate origin of the extended source tile within the full image.
+
+<a id="return-value"></a>
+
+## Return Value
+
+YES if encoding succeeded; NO if required resources are unavailable or if the provided parameters are incompatible.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Tiled rendering avoids allocating a full-resolution texture for large images. The source tile must be larger than the destination tile (the “extend” region) so the renderer has enough surrounding pixel context to correctly compute bokeh near tile edges. Use `minimumTileExtendRectForTileRect:sourceRGBASize:` to compute the required extended source rect.
+
+# encodeTileRenderToCommandBuffer:sourceTileRGBA:sourceDisparity:destinationTileRGBA:fNumber:focusDisparity:sourceRGBASize:tileOffset:tileExtendOffset: (Objective-C)
+
+**Framework:** Cinematic  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+
+
+Encode a command to render a shallow depth of field (SDoF) image to a metal texture
+
+## Declaration
+
+```objectivec
+- (BOOL) encodeTileRenderToCommandBuffer:(id<MTLCommandBuffer>) commandBuffer sourceTileRGBA:(id<MTLTexture>) sourceTileRGBA sourceDisparity:(id<MTLTexture>) sourceDisparity destinationTileRGBA:(id<MTLTexture>) destinationTileRGBA fNumber:(float) fNumber focusDisparity:(float) focusDisparity sourceRGBASize:(CGSize) sourceRGBASize tileOffset:(CGPoint) tileOffset tileExtendOffset:(CGPoint) tileExtendOffset;
+```
+
+## Parameters
+
+- `commandBuffer`: The Metal command buffer on which to encode the command
+- `sourceTileRGBA`: A color texture to which the effect should be applied. Texture must be in linear color space. Its origin in the full image is given by tileExtendOffset.
+- `sourceDisparity`: The texture with the disparity. This texture is not tiled.
+- `destinationTileRGBA`: The texture to which the SDoF image is rendered. Texture must be in linear color space. Its dimensions define the tile size. Its origin in the full image is given by `tileOffset`.
+- `fNumber`: The f-stop value which inversely affects the aperture used to render the image. A smaller f/ number results in larger bokeh and a shallower depth of field in the rendered image.
+- `focusDisparity`: The disparity value which represents the focus plane at which the rendered image should be in focus. A larger disparity results in the focus plane being closer to the camera. The scale and offset of disparity is not defined. It is best practice to obtain disparity values from detections or by interpolation between known disparity values.
+- `sourceRGBASize`: The width and height of the full (un-tiled) source image.
+- `tileOffset`: The pixel-coordinate origin of the destination tile within the full image.
+- `tileExtendOffset`: The pixel-coordinate origin of the extended source tile within the full image.
+
+<a id="return-value"></a>
+
+## Return Value
+
+YES if encoding succeeded; NO if required resources are unavailable or if the provided parameters are incompatible.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Tiled rendering avoids allocating a full-resolution texture for large images. The source tile must be larger than the destination tile (the “extend” region) so the renderer has enough surrounding pixel context to correctly compute bokeh near tile edges. Use `minimumTileExtendRectForTileRect:sourceRGBASize:` to compute the required extended source rect.

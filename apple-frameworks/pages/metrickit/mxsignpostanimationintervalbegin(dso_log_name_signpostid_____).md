@@ -1,0 +1,43 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metrickit/mxsignpostanimationintervalbegin(dso:log:name:signpostid:_:_:)](https://developer.apple.com/documentation/metrickit/mxsignpostanimationintervalbegin(dso:log:name:signpostid:_:_:))
+
+# mxSignpostAnimationIntervalBegin(dso:log:name:signpostID:\_:\_:)
+
+**Framework:** MetricKit  
+**Kind:** Function  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · visionOS 1.0+
+
+Posts the start time of an animation interval to the log system.
+
+## Declaration
+
+```swift
+func mxSignpostAnimationIntervalBegin(dso: UnsafeRawPointer = #dsohandle, log: OSLog, name: StaticString, signpostID: OSSignpostID = .exclusive, _ format: StaticString = "isAnimation=YES \n%{public, signpost:metrics}@", _ arguments: [any CVarArg] = [Unmanaged<NSObject>.fromOpaque(_MXSignpostMetricsSnapshot()).takeUnretainedValue()])
+```
+
+## Parameters
+
+- `dso`: A parameter for internal system use.
+- `log`: A log object to log the signpost to.
+- `name`: A string containing the developer-assigned name of the custom event.
+- `signpostID`: A parameter for internal system use.
+- `format`: A parameter for internal system use.
+- `arguments`: An array of arguments with a format string, followed by the expected number of arguments in the order that they appear in the string.
+
+## Mentioned In
+
+- [Monitoring app performance with MetricKit](monitoring-app-performance-with-metrickit.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Call this function to mark the beginning of an animation interval in the metric kit log. Provide a `log` that you create with [makeLogHandle(category:)](mxmetricmanager/makeloghandle%28category_%29.md), a `name` for the event, and variable `arguments` for [os_signpost_event_emit](../os/os_signpost_event_emit.md). Don’t alter the parameters `dso`, `signpostID`, or `format`.
+
+To end the interval, call [mxSignpost(\_:dso:log:name:signpostID:\_:\_:)](mxsignpost%28__dso_log_name_signpostid_____%29.md) with a `type` of `end`, passing the same `log`, `name`, and `signpostID` you used to begin it.
+
+## See Also
+
+### Signpost and custom metrics
+
+- [SignpostIntervalMetric](signpostintervalmetric.md): A metric that measures the duration and count of custom signpost intervals.
+- [mxSignpost(\_:dso:log:name:signpostID:\_:\_:)](mxsignpost%28__dso_log_name_signpostid_____%29.md): Posts a single custom metric, the start time of a custom metric, or the end time of a custom metric to the log system.

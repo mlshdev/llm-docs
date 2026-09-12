@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/rosterapi/users](https://developer.apple.com/documentation/rosterapi/users)
+
+# Users
+
+**Interface language:** Data
+
+**Framework:** Roster API  
+**Kind:** Object  
+**Availability:** Roster API 1.0.0+
+
+A list of users, with a token for pagination.
+
+## Declaration
+
+```
+object Users
+```
+
+## Properties
+
+- `moreToFollow` — `boolean`: A flag that indicates whether there are more users. If `true`, use the `nextPageToken` to request another list from the remaining users.
+- `nextPageToken` — `string`: A token to request additional users, if any. Use this as the `nextPageToken` parameter for the [List users](returns-a-list-of-users-in-an-apple-school-manager-organization.md) request.
+- `users` — `[User]`: A list of [User](user.md) objects.
+
+## See Also
+
+### Information about users
+
+- [Read a user](returns-a-specific-user-in-an-apple-school-manager-organization.md): Read a user in an Apple School Manager organization.
+- [User](user.md): A user in an Apple School Manager organization.
+- [RoleLocation](rolelocation.md): A mapping between a role assumed by a user in an Apple School Manager organization, and the corresponding location.
+- [List users](returns-a-list-of-users-in-an-apple-school-manager-organization.md): List users in an Apple School Manager organization.
+- [List users in a class](returns-a-users-for-an-apple-school-manager-class.md): List users in a class of an Apple School Manager organization.

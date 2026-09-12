@@ -1,0 +1,13 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tipkit/tips/event/donation/subscript(dynamicmember:)](https://developer.apple.com/documentation/tipkit/tips/event/donation/subscript(dynamicmember:))
+
+# subscript(dynamicMember:)
+
+**Framework:** TipKit  
+**Kind:** Instance Subscript  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+## Declaration
+
+```swift
+subscript<Value>(dynamicMember keyPath: KeyPath<DonationInfo, Value>) -> Value { get }
+```

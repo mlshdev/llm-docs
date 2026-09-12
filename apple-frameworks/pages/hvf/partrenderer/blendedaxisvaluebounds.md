@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/hvf/partrenderer/blendedaxisvaluebounds](https://developer.apple.com/documentation/hvf/partrenderer/blendedaxisvaluebounds)
+
+# blendedAxisValueBounds
+
+**Framework:** hvf  
+**Kind:** Instance Property  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+After rendering, returns the maximum and minimum blended values set on any axis in the part’s tree This is useful for detecting axes going out of range (-1.0…1.0)
+
+## Declaration
+
+```swift
+var blendedAxisValueBounds: ClosedRange<Double> { get }
+```

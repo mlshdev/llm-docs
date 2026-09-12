@@ -1,0 +1,93 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/gameplaykit/gkgamemodel/gamemodelupdates(for:)](https://developer.apple.com/documentation/gameplaykit/gkgamemodel/gamemodelupdates(for:))
+
+# gameModelUpdates(for:) (Swift)
+
+**Framework:** GameplayKit  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.0+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Returns the set of moves available to the specified player.
+
+## Declaration
+
+```swift
+func gameModelUpdates(for player: any GKGameModelPlayer) -> [any GKGameModelUpdate]?
+```
+
+## Parameters
+
+- `player`: An instance of your game’s player class (a custom class implementing the [GKGameModelPlayer](../gkgamemodelplayer.md) protocol) representing the player whose moves are to be evaluated.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An array of instances of your game’s move class (a custom class implementing the [GKGameModelUpdate](../gkgamemodelupdate.md) protocol), each representing a possible move for the specified player.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Your implementation of the [GKGameModelUpdate](../gkgamemodelupdate.md) protocol, or *move class*, should add properties or methods that describe a move in terms of your game. In this method, you create one instance of your move class for each move currently allowed to the specified player, filling in each instance’s custom properties with the information that describes that move. GameplayKit calls this method to speculate about possible future moves and their effects, using a copy of the active game board.
+
+For example, in a Tic-Tac-Toe game, the move class would identify which of the nine spaces on the board to place a mark in. Your [gameModelUpdates(for:)](gamemodelupdates%28for_%29.md) method would create an instance of the move class for each space not already marked. Your implementation should also take into account whether any moves are possible at all—if the game has already been won or has resulted in a draw, this method should return `nil`.
+
+This method should return `nil` if the specified player is not valid or if no moves are available to that player.
+
+> **Note**
+
+>  If the current game model represents an end state for the game—that is, if one player has won, or if the game has resulted in a draw—return `nil` to indicate that the strategist should not attempt to plan further moves.
+
+## See Also
+
+### Evaluating a Game Model
+
+- [score(for:)](score%28for_%29.md): Returns a number rating the desirability of the game model’s current state from the perspective of the specified player.
+- [isLoss(for:)](isloss%28for_%29.md): Returns a Boolean value indicating whether the specified player has lost the game.
+- [isWin(for:)](iswin%28for_%29.md): Returns a Boolean value indicating whether the current state of the game model reflects a win for the specified player.
+
+# gameModelUpdatesForPlayer: (Objective-C)
+
+**Framework:** GameplayKit  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.0+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Returns the set of moves available to the specified player.
+
+## Declaration
+
+```objectivec
+- (NSArray<id<GKGameModelUpdate>> *) gameModelUpdatesForPlayer:(id<GKGameModelPlayer>) player;
+```
+
+## Parameters
+
+- `player`: An instance of your game’s player class (a custom class implementing the [GKGameModelPlayer](../gkgamemodelplayer.md) protocol) representing the player whose moves are to be evaluated.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An array of instances of your game’s move class (a custom class implementing the [GKGameModelUpdate](../gkgamemodelupdate.md) protocol), each representing a possible move for the specified player.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Your implementation of the [GKGameModelUpdate](../gkgamemodelupdate.md) protocol, or *move class*, should add properties or methods that describe a move in terms of your game. In this method, you create one instance of your move class for each move currently allowed to the specified player, filling in each instance’s custom properties with the information that describes that move. GameplayKit calls this method to speculate about possible future moves and their effects, using a copy of the active game board.
+
+For example, in a Tic-Tac-Toe game, the move class would identify which of the nine spaces on the board to place a mark in. Your [gameModelUpdatesForPlayer:](gamemodelupdates%28for_%29.md) method would create an instance of the move class for each space not already marked. Your implementation should also take into account whether any moves are possible at all—if the game has already been won or has resulted in a draw, this method should return `nil`.
+
+This method should return `nil` if the specified player is not valid or if no moves are available to that player.
+
+> **Note**
+
+>  If the current game model represents an end state for the game—that is, if one player has won, or if the game has resulted in a draw—return `nil` to indicate that the strategist should not attempt to plan further moves.
+
+## See Also
+
+### Evaluating a Game Model
+
+- [scoreForPlayer:](score%28for_%29.md): Returns a number rating the desirability of the game model’s current state from the perspective of the specified player.
+- [isLossForPlayer:](isloss%28for_%29.md): Returns a Boolean value indicating whether the specified player has lost the game.
+- [isWinForPlayer:](iswin%28for_%29.md): Returns a Boolean value indicating whether the current state of the game model reflects a win for the specified player.

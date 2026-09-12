@@ -1,0 +1,47 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/appintentstesting/appintenttypedefinition](https://developer.apple.com/documentation/appintentstesting/appintenttypedefinition)
+
+# AppIntentTypeDefinition
+
+**Framework:** App Intents Testing  
+**Kind:** Protocol  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+A protocol that associates a definition type with its corresponding instance type.
+
+## Declaration
+
+```swift
+protocol AppIntentTypeDefinition
+```
+
+<a id="overview"></a>
+
+## Overview
+
+The `AppIntentTypeDefinition` bridges a definition type you use to retrieve your intent, entity, and enum type, and the type-erased instance of your concrete intent, entity, or enum. For example, `AppIntentTypeDefinition` bridges [AppEntityDefinition](appentitydefinition.md) to the [AnyAppEntity](anyappentity.md). Validate that a given instance was produced from the correct definition using the [isInstance(\_:)](appintenttypedefinition/isinstance%28__%29.md) function.
+
+## Topics
+
+### Associated Types
+
+- [Instance](appintenttypedefinition/instance.md): The instance type that corresponds to this definition type.
+
+### Instance Methods
+
+- [isInstance(\_:)](appintenttypedefinition/isinstance%28__%29.md): Validates that the provided value matches this definition’s type.
+
+## Relationships
+
+### Conforming Types
+
+- [AppEntityDefinition](appentitydefinition.md)
+- [AppEnumDefinition](appenumdefinition.md)
+- [TransientAppEntityDefinition](transientappentitydefinition.md)
+
+## See Also
+
+### Supporting types
+
+- [DynamicPropertyPath](dynamicpropertypath.md): A type-safe, dynamic path to access nested intent values.
+- [DynamicPropertyPathCollection](dynamicpropertypathcollection.md): Indexed result items from an intent value query.
+- [IntentValuePropertiesCallable](intentvaluepropertiescallable.md): A callable wrapper that creates app intent instances from keyword arguments.

@@ -1,0 +1,56 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/bodytrackingcomponent](https://developer.apple.com/documentation/realitykit/bodytrackingcomponent)
+
+# BodyTrackingComponent
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 14.0+
+
+A component for tracking people in an AR session.
+
+## Declaration
+
+```swift
+struct BodyTrackingComponent
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Body tracking requires a compatible rigged model. For more information on creating a compatible model, see [Rigging a Model for Motion Capture](../arkit/rigging-a-model-for-motion-capture.md).
+
+For a sample app that uses body tracking, see [Capturing Body Motion in 3D](../arkit/capturing-body-motion-in-3d.md)
+
+## Topics
+
+### Creating a body tracking component
+
+- [init()](bodytrackingcomponent/init%28%29.md): Creates a body-tracking component.
+- [init(\_:)](bodytrackingcomponent/init%28__%29.md): Creates a body-tracking component for the given target.
+
+### Pausing body tracking
+
+- [isPaused](bodytrackingcomponent/ispaused.md): A Boolean that you can set to temporarily stop applying body tracking to the model and freeze the model in its current pose.
+
+### Selecting a body to track
+
+- [target](bodytrackingcomponent/target-swift.property.md): The body-tracking setting.
+- [BodyTrackingComponent.Target](bodytrackingcomponent/target-swift.enum.md): Body-tracking settings for selecting a person to track.
+
+## Relationships
+
+### Conforms To
+
+- [Component](component.md)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+
+## See Also
+
+### Body and face tracking
+
+- [Creating an App for Face-Painting in AR](creating-an-app-for-face-painting-in-ar.md): Combine RealityKit’s face detection with PencilKit to implement virtual face-painting.
+- [Occluding virtual content with people](../arkit/occluding-virtual-content-with-people.md): Cover your app’s virtual content with people that ARKit perceives in the camera feed.
+- [Placing entities using head and device transform](../visionos/placing-entities-using-head-and-device-transform.md): Query and react to changes in the position and rotation of Apple Vision Pro.
+- [BodyTrackedEntity](bodytrackedentity.md): An entity used to animate a virtual character in an AR scene by tracking a real person.
+- [HasBodyTracking](hasbodytracking.md): An interface that enables the animation of a virtual character by tracking a real person in AR.

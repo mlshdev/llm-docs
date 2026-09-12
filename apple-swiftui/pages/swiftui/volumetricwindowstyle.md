@@ -1,0 +1,49 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/volumetricwindowstyle](https://developer.apple.com/documentation/swiftui/volumetricwindowstyle)
+
+# VolumetricWindowStyle
+
+**Framework:** SwiftUI  
+**Kind:** Structure  
+**Availability:** visionOS 1.0+
+
+A window style that creates a 3D volumetric window.
+
+## Declaration
+
+```swift
+struct VolumetricWindowStyle
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use [volumetric](windowstyle/volumetric.md) to construct this style:
+
+```swift
+WindowGroup {
+    ContentView()
+}
+.windowStyle(.volumetric)
+```
+
+## Topics
+
+### Creating the window style
+
+- [init()](volumetricwindowstyle/init%28%29.md)
+
+## Relationships
+
+### Conforms To
+
+- [WindowStyle](windowstyle.md)
+
+## See Also
+
+### Supporting types
+
+- [DefaultWindowStyle](defaultwindowstyle.md): The default window style.
+- [HiddenTitleBarWindowStyle](hiddentitlebarwindowstyle.md): A window style which hides both the window’s title and the backing of the titlebar area, allowing more of the window’s content to show.
+- [PlainWindowStyle](plainwindowstyle.md): The plain window style.
+- [TitleBarWindowStyle](titlebarwindowstyle.md): A window style which displays the title bar section of the window.

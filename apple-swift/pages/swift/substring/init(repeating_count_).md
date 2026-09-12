@@ -1,0 +1,32 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/substring/init(repeating:count:)](https://developer.apple.com/documentation/swift/substring/init(repeating:count:))
+
+# init(repeating:count:)
+
+**Framework:** Swift  
+**Kind:** Initializer  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Creates a new collection containing the specified number of a single, repeated value.
+
+## Declaration
+
+```swift
+init(repeating repeatedValue: Self.Element, count: Int)
+```
+
+## Parameters
+
+- `repeatedValue`: The element to repeat.
+- `count`: The number of times to repeat the value passed in the `repeating` parameter. `count` must be zero or greater.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Here’s an example of creating an array initialized with five strings containing the letter *Z*.
+
+```swift
+let fiveZs = Array(repeating: "Z", count: 5)
+print(fiveZs)
+// Prints "["Z", "Z", "Z", "Z", "Z"]"
+```

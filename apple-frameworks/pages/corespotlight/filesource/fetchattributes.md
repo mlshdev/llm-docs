@@ -1,0 +1,30 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corespotlight/filesource/fetchattributes](https://developer.apple.com/documentation/corespotlight/filesource/fetchattributes)
+
+# fetchAttributes
+
+**Framework:** CoreSpotlight  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+The attributes to fetch for each file or directory and provide to the model.
+
+## Declaration
+
+```swift
+var fetchAttributes: [SearchableItemAttribute]
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this property to minimize the number of round trips between the Spotlight search tool and your content. When you index your app’s content, you create a [CSSearchableItemAttributeSet](../cssearchableitemattributeset.md) for each item and fill it with metadata about that item. For example, you might specify the title of a document and the number of pages it contains. For each item the Spotlight search tool identifies as a result, the tool retrieves the attributes you specify in this property. The tool delivers these attributes together with the item’s identifier to the model so it doesn’t have to request them later.
+
+The default value of this property is an empty set, which delivers only the item’s identifier to the model.
+
+## See Also
+
+### Configuring the search options
+
+- [scopes](scopes.md): The directories to search.
+- [maximumResultCount](maximumresultcount.md): The maximum number of results to retrieve from this source.

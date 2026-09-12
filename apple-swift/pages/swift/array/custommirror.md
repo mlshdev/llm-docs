@@ -1,0 +1,23 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/array/custommirror](https://developer.apple.com/documentation/swift/array/custommirror)
+
+# customMirror
+
+**Framework:** Swift  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+A mirror that reflects the array.
+
+## Declaration
+
+```swift
+var customMirror: Mirror { get }
+```
+
+## See Also
+
+### Describing an Array
+
+- [description](description.md): A textual representation of the array and its elements.
+- [debugDescription](debugdescription.md): A textual representation of the array and its elements, suitable for debugging.
+- [hash(into:)](hash%28into_%29.md): Conforms when `Element` conforms to `Hashable`. Hashes the essential components of this value by feeding them into the given hasher.

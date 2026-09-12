@@ -1,0 +1,34 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applepayontheweb/applepaysession/status_failure](https://developer.apple.com/documentation/applepayontheweb/applepaysession/status_failure)
+
+# STATUS_FAILURE
+
+**Interface language:** Data
+
+**Framework:** Apple Pay on the Web  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+The requested action failed.
+
+## Declaration
+
+```
+const unsigned short STATUS_FAILURE;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The payment is not completed and the payment sheet is dismissed.
+
+## See Also
+
+### Status code constants
+
+- [STATUS_INVALID_BILLING_POSTAL_ADDRESS](status_invalid_billing_postal_address.md): The billing address is invalid.
+- [STATUS_INVALID_SHIPPING_CONTACT](status_invalid_shipping_contact.md): The shipping contact information is invalid.
+- [STATUS_INVALID_SHIPPING_POSTAL_ADDRESS](status_invalid_shipping_postal_address.md): The shipping address is invalid.
+- [STATUS_PIN_INCORRECT](status_pin_incorrect.md): The PIN information is not valid.
+- [STATUS_PIN_LOCKOUT](status_pin_lockout.md): The maximum number of tries for a PIN has been reached and the user has been locked out.
+- [STATUS_PIN_REQUIRED](status_pin_required.md): The required PIN information was not provided.
+- [STATUS_SUCCESS](status_success.md): The requested action succeeded.

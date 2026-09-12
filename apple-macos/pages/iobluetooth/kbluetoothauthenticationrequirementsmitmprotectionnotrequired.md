@@ -1,0 +1,49 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/kbluetoothauthenticationrequirementsmitmprotectionnotrequired](https://developer.apple.com/documentation/iobluetooth/kbluetoothauthenticationrequirementsmitmprotectionnotrequired)
+
+# kBluetoothAuthenticationRequirementsMITMProtectionNotRequired (Swift)
+
+**Framework:** IOBluetooth  
+**Kind:** Global Variable  
+**Availability:** macOS
+
+## Declaration
+
+```swift
+var kBluetoothAuthenticationRequirementsMITMProtectionNotRequired: BluetoothAuthenticationRequirementsValues { get }
+```
+
+## See Also
+
+### Constants
+
+- [kBluetoothAuthenticationRequirementsMITMProtectionNotRequiredDedicatedBonding](kbluetoothauthenticationrequirementsmitmprotectionnotrequireddedicatedbonding.md)
+- [kBluetoothAuthenticationRequirementsMITMProtectionNotRequiredGeneralBonding](kbluetoothauthenticationrequirementsmitmprotectionnotrequiredgeneralbonding.md)
+- [kBluetoothAuthenticationRequirementsMITMProtectionNotRequiredNoBonding](kbluetoothauthenticationrequirementsmitmprotectionnotrequirednobonding.md)
+- [kBluetoothAuthenticationRequirementsMITMProtectionRequired](kbluetoothauthenticationrequirementsmitmprotectionrequired.md)
+- [kBluetoothAuthenticationRequirementsMITMProtectionRequiredDedicatedBonding](kbluetoothauthenticationrequirementsmitmprotectionrequireddedicatedbonding.md)
+- [kBluetoothAuthenticationRequirementsMITMProtectionRequiredGeneralBonding](kbluetoothauthenticationrequirementsmitmprotectionrequiredgeneralbonding.md)
+- [kBluetoothAuthenticationRequirementsMITMProtectionRequiredNoBonding](kbluetoothauthenticationrequirementsmitmprotectionrequirednobonding.md)
+
+# kBluetoothAuthenticationRequirementsMITMProtectionNotRequired (Objective-C)
+
+**Framework:** IOBluetooth  
+**Kind:** Enumeration Case  
+**Availability:** macOS
+
+## Declaration
+
+```objectivec
+kBluetoothAuthenticationRequirementsMITMProtectionNotRequired
+```
+
+## See Also
+
+### Constants
+
+- [kBluetoothAuthenticationRequirementsMITMProtectionNotRequiredDedicatedBonding](kbluetoothauthenticationrequirementsmitmprotectionnotrequireddedicatedbonding.md)
+- [kBluetoothAuthenticationRequirementsMITMProtectionNotRequiredGeneralBonding](kbluetoothauthenticationrequirementsmitmprotectionnotrequiredgeneralbonding.md)
+- [kBluetoothAuthenticationRequirementsMITMProtectionNotRequiredNoBonding](kbluetoothauthenticationrequirementsmitmprotectionnotrequirednobonding.md)
+- [kBluetoothAuthenticationRequirementsMITMProtectionRequired](kbluetoothauthenticationrequirementsmitmprotectionrequired.md)
+- [kBluetoothAuthenticationRequirementsMITMProtectionRequiredDedicatedBonding](kbluetoothauthenticationrequirementsmitmprotectionrequireddedicatedbonding.md)
+- [kBluetoothAuthenticationRequirementsMITMProtectionRequiredGeneralBonding](kbluetoothauthenticationrequirementsmitmprotectionrequiredgeneralbonding.md)
+- [kBluetoothAuthenticationRequirementsMITMProtectionRequiredNoBonding](kbluetoothauthenticationrequirementsmitmprotectionrequirednobonding.md)

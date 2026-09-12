@@ -1,0 +1,73 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/rotation3deffect(_:axis:anchor:anchorz:perspective:)](https://developer.apple.com/documentation/swiftui/view/rotation3deffect(_:axis:anchor:anchorz:perspective:))
+
+# rotation3DEffect(\_:axis:anchor:anchorZ:perspective:)
+
+**Framework:** SwiftUI  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Renders a view’s content as if it’s rotated in three dimensions around the specified axis.
+
+## Declaration
+
+```swift
+nonisolated func rotation3DEffect(_ angle: Angle, axis: (x: CGFloat, y: CGFloat, z: CGFloat), anchor: UnitPoint = .center, anchorZ: CGFloat = 0, perspective: CGFloat = 1) -> some View
+
+```
+
+## Parameters
+
+- `angle`: The angle by which to rotate the view’s content.
+- `axis`: The axis of rotation, specified as a tuple with named elements for each of the three spatial dimensions.
+- `anchor`: A two dimensional unit point within the view about which to perform the rotation. The default value is [center](../unitpoint/center.md).
+- `anchorZ`: The location on the z-axis around which to rotate the content. The default is `0`.
+- `perspective`: The relative vanishing point for the rotation. The default is `1`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A view with rotated content.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this method to create the effect of rotating a view in three dimensions around a specified axis of rotation. The modifier projects the rotated content onto the original view’s plane. Use the `perspective` value to control the renderer’s vanishing point. The following example creates the appearance of rotating text 45˚ about the y-axis:
+
+```swift
+Text("Rotation by passing an angle in degrees")
+    .rotation3DEffect(
+        .degrees(45),
+        axis: (x: 0.0, y: 1.0, z: 0.0),
+        anchor: .center,
+        anchorZ: 0,
+        perspective: 1)
+    .border(Color.gray)
+```
+
+![A screenshot of text in a grey box. The text says Rotation by passing an angle in degrees. The text is rendered in a way that makes it appear farther from the viewer on the right side and closer on the left, as if the text is angled to face someone sitting on the viewer’s right.](https://developer.apple.com/images/com.apple.SwiftUI/SwiftUI-View-rotation3DEffect@2x.png)
+
+> **Important**
+
+> In visionOS, create this effect with [perspectiveRotationEffect(\_:axis:anchor:anchorZ:perspective:)](perspectiverotationeffect%28__axis_anchor_anchorz_perspective_%29.md) instead. To truly rotate a view in three dimensions, use a 3D rotation modifier without a perspective input like [rotation3DEffect(\_:axis:anchor:)](rotation3deffect%28__axis_anchor_%29.md).
+
+## See Also
+
+### Scaling, rotating, or transforming a view
+
+- [scaledToFill()](scaledtofill%28%29.md): Scales this view to fill its parent.
+- [scaledToFit()](scaledtofit%28%29.md): Scales this view to fit its parent.
+- [scaleEffect(\_:anchor:)](scaleeffect%28__anchor_%29.md): Scales this view uniformly by the specified factor, relative to an anchor point.
+- [scaleEffect(x:y:anchor:)](scaleeffect%28x_y_anchor_%29.md): Scales this view’s rendered output by the given horizontal and vertical amounts, relative to an anchor point.
+- [scaleEffect(x:y:z:anchor:)](scaleeffect%28x_y_z_anchor_%29.md): Scales this view by the specified horizontal, vertical, and depth factors, relative to an anchor point.
+- [aspectRatio(\_:contentMode:)](aspectratio%28__contentmode_%29.md): Constrains this view’s dimensions to the specified aspect ratio.
+- [rotationEffect(\_:anchor:)](rotationeffect%28__anchor_%29.md): Rotates a view’s rendered output in two dimensions around the specified point.
+- [perspectiveRotationEffect(\_:axis:anchor:anchorZ:perspective:)](perspectiverotationeffect%28__axis_anchor_anchorz_perspective_%29.md): Renders a view’s content as if it’s rotated in three dimensions around the specified axis.
+- [rotation3DEffect(\_:anchor:)](rotation3deffect%28__anchor_%29.md): Rotates the view’s content by the specified 3D rotation value.
+- [rotation3DEffect(\_:axis:anchor:)](rotation3deffect%28__axis_anchor_%29.md): Rotates the view’s content by an angle about an axis that you specify as a tuple of elements.
+- [transformEffect(\_:)](transformeffect%28__%29.md): Applies an affine transformation to this view’s rendered output.
+- [transform3DEffect(\_:)](transform3deffect%28__%29.md): Applies a 3D transformation to this view’s rendered output.
+- [projectionEffect(\_:)](projectioneffect%28__%29.md): Applies a projection transformation to this view’s rendered output.
+- [ProjectionTransform](../projectiontransform.md)
+- [ContentMode](../contentmode.md): Constants that define how a view’s content fills the available space.

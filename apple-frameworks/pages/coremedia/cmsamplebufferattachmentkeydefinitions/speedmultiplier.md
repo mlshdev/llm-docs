@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremedia/cmsamplebufferattachmentkeydefinitions/speedmultiplier](https://developer.apple.com/documentation/coremedia/cmsamplebufferattachmentkeydefinitions/speedmultiplier)
+
+# speedMultiplier
+
+**Framework:** Core Media  
+**Kind:** Type Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+The factor by which the sample buffer’s presentation should be accelerated.
+
+## Declaration
+
+```swift
+static let speedMultiplier: CVAttachmentKeyDefinitionWithDefault<CMSampleBufferAttachmentKeyDefinitions.ShouldPropagate, Float>
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+For normal playback the speed multiplier would be 1.0 (which is the default value returned by getter if this attachment is not present); for double-speed playback the speed multiplier would be 2.0, which would halve the output duration. Speed-multiplication factors take effect after trimming; see [outputDuration](../cmreadysamplebuffer/outputduration.md). Note that this attachment principally provides information about the duration-stretching effect: by default, it should be implemented by rate conversion, but other attachments may specify richer stretching operations—for example, scaling without pitch shift, or pitch shift without changing duration. Sequences of speed-multiplied sample buffers should have explicit time stamps to clarify when each should be output (see [outputPresentationTimeStamp](../cmreadysamplebuffer/outputpresentationtimestamp.md)).

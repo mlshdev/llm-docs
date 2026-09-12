@@ -1,0 +1,180 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclusterflowmeasurement](https://developer.apple.com/documentation/matter/mtrbaseclusterflowmeasurement)
+
+# MTRBaseClusterFlowMeasurement (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```swift
+class MTRBaseClusterFlowMeasurement
+```
+
+## Topics
+
+### Initializers
+
+- [init(device:endpoint:queue:)](mtrbaseclusterflowmeasurement/init%28device_endpoint_queue_%29.md): Deprecated.
+- [init(device:endpointID:queue:)](mtrbaseclusterflowmeasurement/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandList(completion:)](mtrbaseclusterflowmeasurement/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandList(completionHandler:)](mtrbaseclusterflowmeasurement/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(completion:)](mtrbaseclusterflowmeasurement/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeList(completionHandler:)](mtrbaseclusterflowmeasurement/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(completion:)](mtrbaseclusterflowmeasurement/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevision(completionHandler:)](mtrbaseclusterflowmeasurement/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(completion:)](mtrbaseclusterflowmeasurement/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMap(completionHandler:)](mtrbaseclusterflowmeasurement/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(completion:)](mtrbaseclusterflowmeasurement/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandList(completionHandler:)](mtrbaseclusterflowmeasurement/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeMaxMeasuredValue(completion:)](mtrbaseclusterflowmeasurement/readattributemaxmeasuredvalue%28completion_%29.md)
+- [readAttributeMaxMeasuredValue(completionHandler:)](mtrbaseclusterflowmeasurement/readattributemaxmeasuredvalue%28completionhandler_%29.md): Deprecated.
+- [readAttributeMeasuredValue(completion:)](mtrbaseclusterflowmeasurement/readattributemeasuredvalue%28completion_%29.md)
+- [readAttributeMeasuredValue(completionHandler:)](mtrbaseclusterflowmeasurement/readattributemeasuredvalue%28completionhandler_%29.md): Deprecated.
+- [readAttributeMinMeasuredValue(completion:)](mtrbaseclusterflowmeasurement/readattributeminmeasuredvalue%28completion_%29.md)
+- [readAttributeMinMeasuredValue(completionHandler:)](mtrbaseclusterflowmeasurement/readattributeminmeasuredvalue%28completionhandler_%29.md): Deprecated.
+- [readAttributeTolerance(completion:)](mtrbaseclusterflowmeasurement/readattributetolerance%28completion_%29.md)
+- [readAttributeTolerance(completionHandler:)](mtrbaseclusterflowmeasurement/readattributetolerance%28completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterflowmeasurement/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterflowmeasurement/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterflowmeasurement/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterflowmeasurement/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevision(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterflowmeasurement/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevision(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterflowmeasurement/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMap(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterflowmeasurement/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMap(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterflowmeasurement/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterflowmeasurement/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterflowmeasurement/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMaxMeasuredValue(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterflowmeasurement/subscribeattributemaxmeasuredvalue%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMaxMeasuredValue(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterflowmeasurement/subscribeattributemaxmeasuredvalue%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMeasuredValue(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterflowmeasurement/subscribeattributemeasuredvalue%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMeasuredValue(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterflowmeasurement/subscribeattributemeasuredvalue%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMinMeasuredValue(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterflowmeasurement/subscribeattributeminmeasuredvalue%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMinMeasuredValue(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterflowmeasurement/subscribeattributeminmeasuredvalue%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeTolerance(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterflowmeasurement/subscribeattributetolerance%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeTolerance(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterflowmeasurement/subscribeattributetolerance%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterflowmeasurement/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterflowmeasurement/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterflowmeasurement/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterflowmeasurement/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevision(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterflowmeasurement/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterflowmeasurement/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMap(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterflowmeasurement/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterflowmeasurement/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterflowmeasurement/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterflowmeasurement/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMaxMeasuredValue(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterflowmeasurement/readattributemaxmeasuredvalue%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMaxMeasuredValue(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterflowmeasurement/readattributemaxmeasuredvalue%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMeasuredValue(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterflowmeasurement/readattributemeasuredvalue%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMeasuredValue(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterflowmeasurement/readattributemeasuredvalue%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMinMeasuredValue(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterflowmeasurement/readattributeminmeasuredvalue%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMinMeasuredValue(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterflowmeasurement/readattributeminmeasuredvalue%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeTolerance(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterflowmeasurement/readattributetolerance%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeTolerance(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterflowmeasurement/readattributetolerance%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRBaseClusterFlowMeasurement (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```objectivec
+@interface MTRBaseClusterFlowMeasurement : MTRGenericBaseCluster
+```
+
+## Topics
+
+### Initializers
+
+- [initWithDevice:endpoint:queue:](mtrbaseclusterflowmeasurement/init%28device_endpoint_queue_%29.md): Deprecated.
+- [initWithDevice:endpointID:queue:](mtrbaseclusterflowmeasurement/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandListWithCompletion:](mtrbaseclusterflowmeasurement/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandListWithCompletionHandler:](mtrbaseclusterflowmeasurement/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithCompletion:](mtrbaseclusterflowmeasurement/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeListWithCompletionHandler:](mtrbaseclusterflowmeasurement/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithCompletion:](mtrbaseclusterflowmeasurement/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevisionWithCompletionHandler:](mtrbaseclusterflowmeasurement/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithCompletion:](mtrbaseclusterflowmeasurement/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMapWithCompletionHandler:](mtrbaseclusterflowmeasurement/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithCompletion:](mtrbaseclusterflowmeasurement/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandListWithCompletionHandler:](mtrbaseclusterflowmeasurement/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeMaxMeasuredValueWithCompletion:](mtrbaseclusterflowmeasurement/readattributemaxmeasuredvalue%28completion_%29.md)
+- [readAttributeMaxMeasuredValueWithCompletionHandler:](mtrbaseclusterflowmeasurement/readattributemaxmeasuredvalue%28completionhandler_%29.md): Deprecated.
+- [readAttributeMeasuredValueWithCompletion:](mtrbaseclusterflowmeasurement/readattributemeasuredvalue%28completion_%29.md)
+- [readAttributeMeasuredValueWithCompletionHandler:](mtrbaseclusterflowmeasurement/readattributemeasuredvalue%28completionhandler_%29.md): Deprecated.
+- [readAttributeMinMeasuredValueWithCompletion:](mtrbaseclusterflowmeasurement/readattributeminmeasuredvalue%28completion_%29.md)
+- [readAttributeMinMeasuredValueWithCompletionHandler:](mtrbaseclusterflowmeasurement/readattributeminmeasuredvalue%28completionhandler_%29.md): Deprecated.
+- [readAttributeToleranceWithCompletion:](mtrbaseclusterflowmeasurement/readattributetolerance%28completion_%29.md)
+- [readAttributeToleranceWithCompletionHandler:](mtrbaseclusterflowmeasurement/readattributetolerance%28completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterflowmeasurement/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterflowmeasurement/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterflowmeasurement/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterflowmeasurement/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevisionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterflowmeasurement/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevisionWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterflowmeasurement/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMapWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterflowmeasurement/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMapWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterflowmeasurement/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterflowmeasurement/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterflowmeasurement/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMaxMeasuredValueWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterflowmeasurement/subscribeattributemaxmeasuredvalue%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMaxMeasuredValueWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterflowmeasurement/subscribeattributemaxmeasuredvalue%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMeasuredValueWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterflowmeasurement/subscribeattributemeasuredvalue%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMeasuredValueWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterflowmeasurement/subscribeattributemeasuredvalue%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMinMeasuredValueWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterflowmeasurement/subscribeattributeminmeasuredvalue%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMinMeasuredValueWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterflowmeasurement/subscribeattributeminmeasuredvalue%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeToleranceWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterflowmeasurement/subscribeattributetolerance%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeToleranceWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterflowmeasurement/subscribeattributetolerance%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterflowmeasurement/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterflowmeasurement/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterflowmeasurement/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterflowmeasurement/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevisionWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterflowmeasurement/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterflowmeasurement/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMapWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterflowmeasurement/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterflowmeasurement/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterflowmeasurement/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterflowmeasurement/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMaxMeasuredValueWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterflowmeasurement/readattributemaxmeasuredvalue%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMaxMeasuredValueWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterflowmeasurement/readattributemaxmeasuredvalue%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMeasuredValueWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterflowmeasurement/readattributemeasuredvalue%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMeasuredValueWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterflowmeasurement/readattributemeasuredvalue%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMinMeasuredValueWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterflowmeasurement/readattributeminmeasuredvalue%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMinMeasuredValueWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterflowmeasurement/readattributeminmeasuredvalue%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeToleranceWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterflowmeasurement/readattributetolerance%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeToleranceWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterflowmeasurement/readattributetolerance%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)

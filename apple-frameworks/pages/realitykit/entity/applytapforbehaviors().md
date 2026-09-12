@@ -1,0 +1,45 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/entity/applytapforbehaviors()](https://developer.apple.com/documentation/realitykit/entity/applytapforbehaviors())
+
+# applyTapForBehaviors()
+
+**Framework:** RealityKit  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
+
+Apply a tap to an Entity or one of its ancestors to trigger a RealityComposer behavior if one is present.
+
+## Declaration
+
+```swift
+@MainActor @preconcurrency func applyTapForBehaviors() -> Bool
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+`true` if a tap trigger was fired, otherwise returns `false`.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This method looks for a RealityComposer tap trigger, starting with `self` and moving up the Entity hierarchy. As soon as an entity with a tap trigger is found, the trigger is fired, and the method returns `true`.  If no tap trigger is found, the method returns `false`.
+
+```swift
+struct ContentView: View {
+  var body: some View {
+    RealityView() { content in
+      if let entity = try? await Entity(named: "Content") {
+        content.add(entity)
+      }
+    }.gesture(TapGesture().targetedToAnyEntity().onEnded { value in
+      if value.entity.applyTapForBehaviors() {
+        // Behavior was activated
+      } else {
+        // Behavior was not activated
+      }
+    })
+  }
+}
+```

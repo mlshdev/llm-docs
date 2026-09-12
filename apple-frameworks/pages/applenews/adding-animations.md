@@ -1,0 +1,178 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applenews/adding-animations](https://developer.apple.com/documentation/applenews/adding-animations)
+
+# Adding Animations
+
+**Interface language:** Data
+
+**Kind:** Article
+
+Use animations to affect how parts of your article come into view the first time they appear.
+
+<a id="overview"></a>
+
+## Overview
+
+**On this page, you’ll learn how to apply animations to components.**
+
+The images below display some animations. In the first image, the pull quote gets larger and darker as the user scrolls through the text. In the second image, the photo gets darker, but not larger, as the user scrolls. In the third image, the gallery moves in from the right side of the screen.
+
+![Side-by-side screenshots of an Apple News article on iPhone showing the effect of scrolling with a scale fade animation.](https://developer.apple.com/images/com.apple.applenews/media-3625689@2x.png)
+
+![Side-by-side screenshots of an Apple News article on iPhone showing the effect of scrolling with a fade-in animation.](https://developer.apple.com/images/com.apple.applenews/media-3625691@2x.png)
+
+![Side-by-side screenshots of an Apple News article on iPhone showing the effect of scrolling with a move-in animation.](https://developer.apple.com/images/com.apple.applenews/media-3625690@2x.png)
+
+<a id="Create-Animations"></a>
+
+### Create Animations
+
+1. Copy the example code [Scale Fade Animation: Copy This Code](adding-animations.md#Scale-Fade-Animation-Copy-This-Code).
+2. Paste the code inside the `pullquote` component in your `article.json` file, after the closing quotation mark that ends the `text` property.
+3. Copy the example code [Move-In Animation: Copy This Code](adding-animations.md#Move-In-Animation-Copy-This-Code).
+4. Paste the code inside the `gallery` component in your `article.json` file, after the comma that ends the `layout` property.
+5. Copy the example code [Fade-In Animation: Copy This Code](adding-animations.md#Fade-In-Animation-Copy-This-Code).
+6. Paste the code inside the `photo` component in your `article.json` file, after the closing quotation mark that ends the `caption` property.
+
+Your code should look like the example code [Animations: Result](adding-animations.md#Animations-Result).
+
+After you make these changes in your code, you can preview your working `article.json` file in News Preview to see the animations.
+
+<a id="Scale-Fade-Animation-Copy-This-Code"></a>
+
+#### Scale Fade Animation: Copy This Code
+
+```json
+,
+              "animation": {
+                "type": "scale_fade",
+                "userControllable": true,
+                "initialAlpha": 0.5,
+                "initialScale": 0.75
+              }
+```
+
+<a id="Move-In-Animation-Copy-This-Code"></a>
+
+#### Move-In Animation: Copy This Code
+
+```json
+          "animation": {
+            "type": "move_in",
+            "preferredStartingPosition": "right"
+          },
+```
+
+<a id="Fade-In-Animation-Copy-This-Code"></a>
+
+#### Fade-In Animation: Copy This Code
+
+```json
+,
+              "animation": {
+                "type": "fade_in",
+                "userControllable": true,
+                "initialAlpha": 0.5
+              }
+```
+
+<a id="Animations-Result"></a>
+
+#### Animations: Result
+
+Ellipses (`...`) indicate lines of code that have been omitted from this example.
+
+```json
+{
+  ...
+  "components": [
+    ...
+    {
+      "role": "section",
+      ...
+      "components": [
+        ...
+        {
+          "role": "container",
+          ...
+          "components": [
+            {
+              "role": "pullquote",
+              "format": "html",
+              "layout": "halfMarginAboveQuarterBelowContainedLayout",
+              "text": "“QUIA CONSEQUUNTUR MAGNI DOLORES EOS <span data-anf-textstyle='mediumGrayText'>QUI RATIONE VOLUPTATEM SEQUI NESCIUNT.”</span>",
+              "animation": {
+                "type": "scale_fade",
+                "userControllable": true,
+                "initialAlpha": 0.5,
+                "initialScale": 0.75
+              }
+            },
+            ...
+          ]
+        },
+        ...
+        {
+          "role": "gallery",
+          "layout": "noMarginLayout",
+          "animation": {
+            "type": "move_in",
+            "preferredStartingPosition": "right"
+          },
+          "items": [
+            ...
+          ]
+        },
+        ...
+        {
+          "role": "container",
+          ...
+          "components": [
+            {
+              "role": "photo",
+              "layout": "halfMarginAboveContainedLayout",
+              "URL": "bundle://sidebar.jpg",
+              "caption": "A caption for the sidebar photo.",
+              "animation": {
+                "type": "fade_in",
+                "userControllable": true,
+                "initialAlpha": 0.5
+              }
+            },
+            ...
+          ]
+        },
+        ...
+      ]
+    }
+  ],
+  ...
+}
+```
+
+<a id="Previous"></a>
+
+### Previous
+
+[Adding Color to Text Ranges](adding-color-to-text-ranges.md)
+
+<a id="Next"></a>
+
+### Next
+
+[Adding a Scene](adding-a-scene.md)
+
+## See Also
+
+### Related Documentation
+
+- [About Component Animations](about-component-animations.md): Learn how to affect the way in which components come into view.
+
+### Advanced Design Tutorial 2: Layout and Positioning
+
+- [Creating a Complex, Layered Header](creating-a-complex-layered-header.md): Layer a title and heading in front of an image, with their colors optimized for legibility.
+- [Creating a Floating Caption](creating-a-floating-caption.md): Position a caption in the wide right margin of your article.
+- [Creating an Inset Pull Quote](creating-an-inset-pull-quote.md): Wrap article body text around an inset pull quote.
+- [Creating an Inset Photo](creating-an-inset-photo.md): Wrap article body text around an inset photo.
+- [Adding Color to Text Ranges](adding-color-to-text-ranges.md): Create text in color by using HTML to refer to TextStyle objects.
+- [Adding a Scene](adding-a-scene.md): Control how the article’s opening section comes into view.
+- [Viewing the Finished Article for Advanced Design Tutorial 2](viewing-the-finished-article-for-advanced-design-tutorial-2.md): See the full JSON code from this tutorial.

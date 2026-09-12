@@ -1,0 +1,69 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtltextureviewdescriptor/minlod](https://developer.apple.com/documentation/metal/mtltextureviewdescriptor/minlod)
+
+# minLOD (Swift)
+
+**Framework:** Metal  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+The minimum level of detail for texture views you create with the descriptor.
+
+## Declaration
+
+```swift
+var minLOD: Float { get set }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The property configures the lower limit of the level-of-detail (LOD) range that texture operations access for texture views you create with the descriptor. When the GPU calculates a mipmap level, it applies the value of this property as the final step, after clamping the sampler LOD and applying the texture view level range offsets. The default value is `0.0`.
+
+Each of the following texture operations has a requirement for the `minLOD` value.
+
+| Operation | Requirement |
+| --- | --- |
+| Read | `floor(minLOD)` ≤ mip level |
+| Gather | `floor(minLOD)` ≤ `levelRange.location` |
+| Sample | `minLOD` ≤ `levelRange.location` \+ `levelRange.length` |
+
+Each operation returns an out-of-bounds value if a parameter doesn’t meet a requirement.
+
+> **Note**
+
+> For the specific out-of-bounds value for each operation, see the *Texture Functions* section of the [Metal Shading Language Specification (PDF)](https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf).
+
+# minLOD (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+The minimum level of detail for texture views you create with the descriptor.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readwrite) float minLOD;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The property configures the lower limit of the level-of-detail (LOD) range that texture operations access for texture views you create with the descriptor. When the GPU calculates a mipmap level, it applies the value of this property as the final step, after clamping the sampler LOD and applying the texture view level range offsets. The default value is `0.0`.
+
+Each of the following texture operations has a requirement for the `minLOD` value.
+
+| Operation | Requirement |
+| --- | --- |
+| Read | `floor(minLOD)` ≤ mip level |
+| Gather | `floor(minLOD)` ≤ `levelRange.location` |
+| Sample | `minLOD` ≤ `levelRange.location` \+ `levelRange.length` |
+
+Each operation returns an out-of-bounds value if a parameter doesn’t meet a requirement.
+
+> **Note**
+
+> For the specific out-of-bounds value for each operation, see the *Texture Functions* section of the [Metal Shading Language Specification (PDF)](https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf).

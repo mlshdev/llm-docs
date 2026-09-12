@@ -1,0 +1,57 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/ios-ipados-release-notes/ios-ipados-14_2-release-notes](https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_2-release-notes)
+
+# iOS & iPadOS 14.2 Release Notes
+
+**Kind:** Article
+
+Update your apps to use new features, and test your apps against API changes.
+
+<a id="Overview"></a>
+
+## Overview
+
+The iOS & iPadOS 14.2 SDK provides support to develop apps for iPhone, iPad, and iPod touch devices running iOS & iPadOS 14.2. The SDK comes bundled with Xcode 12.2, available from the Mac App Store. For information on the compatibility requirements for Xcode 12.2, see [Xcode 12.2 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12_2-release-notes).
+
+<a id="Core-Media"></a>
+
+### Core Media
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- Support for multiple concurrent [AVURLAsset](https://developer.apple.com/documentation/avfoundation/avurlasset) instances on offline HLS filesystem URLs has been improved.
+- You can now use multiple concurrent [AVPlayerItem](https://developer.apple.com/documentation/avfoundation/avplayeritem) objects and other [AVFoundation](https://developer.apple.com/documentation/avfoundation) objects on offline HLS assets with completed [AVMediaSelection](https://developer.apple.com/documentation/avfoundation/avmediaselection) objects without triggering network reads.
+- The progress indicator logic of [AVMediaSelection](https://developer.apple.com/documentation/avfoundation/avmediaselection) ordering for [AVAggregateAssetDownloadTask](https://developer.apple.com/documentation/avfoundation/avaggregateassetdownloadtask) has been improved. (64551736)
+
+<a id="Intercom"></a>
+
+### Intercom
+
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- You can now play and reply to Intercom notifications. (70470421)
+
+<a id="SKAdNetwork"></a>
+
+### SKAdNetwork
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- To receive a postback from devices running iOS 14 or later, generate signatures using signature version 2.0 or later. Version 1.0 signatures don’t result in a postback on iOS 14 and later, even if the advertised app is installed and launched. (71474331)
+
+## See Also
+
+### iOS & iPadOS 14
+
+- [iOS & iPadOS 14.7 Release Notes](ios-ipados-14_7-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 14.6 Release Notes](ios-ipados-14_6-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 14.5.1 Release Notes](ios-ipados-14_5_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 14.5 Release Notes](ios-ipados-14_5-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 14.4 Release Notes](ios-ipados-14_4-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 14.3 Release Notes](ios-ipados-14_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 14 Release Notes](ios-ipados-14-release-notes.md): Update your apps to use new features, and test your apps against API changes.

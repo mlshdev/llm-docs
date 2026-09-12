@@ -1,0 +1,30 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/createml/mlprogress/metric/maximumerror](https://developer.apple.com/documentation/createml/mlprogress/metric/maximumerror)
+
+# MLProgress.Metric.maximumError
+
+**Framework:** Create ML  
+**Kind:** Case  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+
+
+The metric for the model’s maximum error.
+
+## Declaration
+
+```swift
+case maximumError
+```
+
+## See Also
+
+### Retrieving metric keys
+
+- [MLProgress.Metric.accuracy](accuracy.md): The metric for the model’s accuracy.
+- [MLProgress.Metric.contentLoss](contentloss.md): The metric for the style transfer model’s content loss.
+- [MLProgress.Metric.loss](loss.md): The metric for the model’s loss.
+- [MLProgress.Metric.rootMeanSquaredError](rootmeansquarederror.md): The metric for the model’s root mean squared error (RMSE).
+- [MLProgress.Metric.styleLoss](styleloss.md): The metric for the style transfer model’s style loss.
+- [MLProgress.Metric.stylizedImageURL](stylizedimageurl.md): The location of the stylized image content in the file system.
+- [MLProgress.Metric.validationAccuracy](validationaccuracy.md): The metric for the model’s validation accuracy.
+- [MLProgress.Metric.validationLoss](validationloss.md): The metric for the model’s validation loss.
+- [MLProgress.Metric.validationMaximumError](validationmaximumerror.md): The metric for the model’s validation maximum error.
+- [MLProgress.Metric.validationRootMeanSquaredError](validationrootmeansquarederror.md): The metric for the model’s validation root mean squared error (RMSE).

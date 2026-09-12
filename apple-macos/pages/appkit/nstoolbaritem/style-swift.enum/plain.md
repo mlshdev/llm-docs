@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstoolbaritem/style-swift.enum/plain](https://developer.apple.com/documentation/appkit/nstoolbaritem/style-swift.enum/plain)
+
+# NSToolbarItem.Style.plain (Swift)
+
+**Framework:** AppKit  
+**Kind:** Case  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+
+
+## Declaration
+
+```swift
+case plain
+```
+
+# NSToolbarItemStylePlain (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 26.0+ · macOS 26.0+
+
+## Declaration
+
+```objectivec
+NSToolbarItemStylePlain
+```

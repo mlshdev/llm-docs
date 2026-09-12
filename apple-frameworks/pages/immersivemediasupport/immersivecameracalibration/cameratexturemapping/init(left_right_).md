@@ -1,0 +1,13 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/immersivemediasupport/immersivecameracalibration/cameratexturemapping/init(left:right:)](https://developer.apple.com/documentation/immersivemediasupport/immersivecameracalibration/cameratexturemapping/init(left:right:))
+
+# init(left:right:)
+
+**Framework:** Immersive Media Support  
+**Kind:** Initializer  
+**Availability:** iOS 26.4+ · iPadOS 26.4+ · Mac Catalyst 26.4+ · macOS 26.0+ · visionOS 26.0+
+
+## Declaration
+
+```swift
+init(left: matrix_float3x3 = matrix_identity_float3x3, right: matrix_float3x3 = matrix_identity_float3x3)
+```

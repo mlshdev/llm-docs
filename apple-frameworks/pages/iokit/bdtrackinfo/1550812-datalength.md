@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/bdtrackinfo/1550812-datalength](https://developer.apple.com/documentation/iokit/bdtrackinfo/1550812-datalength)
+
+# dataLength
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.5+
+
+## Declaration
+
+```objectivec
+UInt16 dataLength;
+```

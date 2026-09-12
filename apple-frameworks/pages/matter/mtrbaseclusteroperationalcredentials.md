@@ -1,0 +1,236 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclusteroperationalcredentials](https://developer.apple.com/documentation/matter/mtrbaseclusteroperationalcredentials)
+
+# MTRBaseClusterOperationalCredentials (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```swift
+class MTRBaseClusterOperationalCredentials
+```
+
+## Topics
+
+### Initializers
+
+- [init(device:endpoint:queue:)](mtrbaseclusteroperationalcredentials/init%28device_endpoint_queue_%29.md): Deprecated.
+- [init(device:endpointID:queue:)](mtrbaseclusteroperationalcredentials/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [addNOC(with:completion:)](mtrbaseclusteroperationalcredentials/addnoc%28with_completion_%29.md)
+- [addNOC(with:completionHandler:)](mtrbaseclusteroperationalcredentials/addnoc%28with_completionhandler_%29.md): Deprecated.
+- [addTrustedRootCertificate(with:completion:)](mtrbaseclusteroperationalcredentials/addtrustedrootcertificate%28with_completion_%29.md)
+- [addTrustedRootCertificate(with:completionHandler:)](mtrbaseclusteroperationalcredentials/addtrustedrootcertificate%28with_completionhandler_%29.md): Deprecated.
+- [attestationRequest(with:completion:)](mtrbaseclusteroperationalcredentials/attestationrequest%28with_completion_%29.md)
+- [attestationRequest(with:completionHandler:)](mtrbaseclusteroperationalcredentials/attestationrequest%28with_completionhandler_%29.md): Deprecated.
+- [certificateChainRequest(with:completion:)](mtrbaseclusteroperationalcredentials/certificatechainrequest%28with_completion_%29.md)
+- [certificateChainRequest(with:completionHandler:)](mtrbaseclusteroperationalcredentials/certificatechainrequest%28with_completionhandler_%29.md): Deprecated.
+- [csrRequest(with:completion:)](mtrbaseclusteroperationalcredentials/csrrequest%28with_completion_%29.md)
+- [csrRequest(with:completionHandler:)](mtrbaseclusteroperationalcredentials/csrrequest%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandList(completion:)](mtrbaseclusteroperationalcredentials/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandList(completionHandler:)](mtrbaseclusteroperationalcredentials/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(completion:)](mtrbaseclusteroperationalcredentials/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeList(completionHandler:)](mtrbaseclusteroperationalcredentials/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(completion:)](mtrbaseclusteroperationalcredentials/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevision(completionHandler:)](mtrbaseclusteroperationalcredentials/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeCommissionedFabrics(completion:)](mtrbaseclusteroperationalcredentials/readattributecommissionedfabrics%28completion_%29.md)
+- [readAttributeCommissionedFabrics(completionHandler:)](mtrbaseclusteroperationalcredentials/readattributecommissionedfabrics%28completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentFabricIndex(completion:)](mtrbaseclusteroperationalcredentials/readattributecurrentfabricindex%28completion_%29.md)
+- [readAttributeCurrentFabricIndex(completionHandler:)](mtrbaseclusteroperationalcredentials/readattributecurrentfabricindex%28completionhandler_%29.md): Deprecated.
+- [readAttributeFabrics(with:completion:)](mtrbaseclusteroperationalcredentials/readattributefabrics%28with_completion_%29.md)
+- [readAttributeFabrics(with:completionHandler:)](mtrbaseclusteroperationalcredentials/readattributefabrics%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(completion:)](mtrbaseclusteroperationalcredentials/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMap(completionHandler:)](mtrbaseclusteroperationalcredentials/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(completion:)](mtrbaseclusteroperationalcredentials/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandList(completionHandler:)](mtrbaseclusteroperationalcredentials/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeNOCs(with:completion:)](mtrbaseclusteroperationalcredentials/readattributenocs%28with_completion_%29.md)
+- [readAttributeNOCs(with:completionHandler:)](mtrbaseclusteroperationalcredentials/readattributenocs%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeSupportedFabrics(completion:)](mtrbaseclusteroperationalcredentials/readattributesupportedfabrics%28completion_%29.md)
+- [readAttributeSupportedFabrics(completionHandler:)](mtrbaseclusteroperationalcredentials/readattributesupportedfabrics%28completionhandler_%29.md): Deprecated.
+- [readAttributeTrustedRootCertificates(completion:)](mtrbaseclusteroperationalcredentials/readattributetrustedrootcertificates%28completion_%29.md)
+- [readAttributeTrustedRootCertificates(completionHandler:)](mtrbaseclusteroperationalcredentials/readattributetrustedrootcertificates%28completionhandler_%29.md): Deprecated.
+- [removeFabric(with:completion:)](mtrbaseclusteroperationalcredentials/removefabric%28with_completion_%29.md)
+- [removeFabric(with:completionHandler:)](mtrbaseclusteroperationalcredentials/removefabric%28with_completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteroperationalcredentials/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusteroperationalcredentials/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteroperationalcredentials/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusteroperationalcredentials/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevision(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteroperationalcredentials/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevision(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusteroperationalcredentials/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCommissionedFabrics(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteroperationalcredentials/subscribeattributecommissionedfabrics%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCommissionedFabrics(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusteroperationalcredentials/subscribeattributecommissionedfabrics%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCurrentFabricIndex(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteroperationalcredentials/subscribeattributecurrentfabricindex%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentFabricIndex(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusteroperationalcredentials/subscribeattributecurrentfabricindex%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFabrics(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteroperationalcredentials/subscribeattributefabrics%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFabrics(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusteroperationalcredentials/subscribeattributefabrics%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMap(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteroperationalcredentials/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMap(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusteroperationalcredentials/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteroperationalcredentials/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusteroperationalcredentials/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNOCs(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteroperationalcredentials/subscribeattributenocs%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNOCs(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusteroperationalcredentials/subscribeattributenocs%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSupportedFabrics(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteroperationalcredentials/subscribeattributesupportedfabrics%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSupportedFabrics(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusteroperationalcredentials/subscribeattributesupportedfabrics%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeTrustedRootCertificates(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteroperationalcredentials/subscribeattributetrustedrootcertificates%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeTrustedRootCertificates(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusteroperationalcredentials/subscribeattributetrustedrootcertificates%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [updateFabricLabel(with:completion:)](mtrbaseclusteroperationalcredentials/updatefabriclabel%28with_completion_%29.md)
+- [updateFabricLabel(with:completionHandler:)](mtrbaseclusteroperationalcredentials/updatefabriclabel%28with_completionhandler_%29.md): Deprecated.
+- [updateNOC(with:completion:)](mtrbaseclusteroperationalcredentials/updatenoc%28with_completion_%29.md)
+- [updateNOC(with:completionHandler:)](mtrbaseclusteroperationalcredentials/updatenoc%28with_completionhandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusteroperationalcredentials/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteroperationalcredentials/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusteroperationalcredentials/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteroperationalcredentials/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevision(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusteroperationalcredentials/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteroperationalcredentials/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCommissionedFabrics(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusteroperationalcredentials/readattributecommissionedfabrics%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCommissionedFabrics(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteroperationalcredentials/readattributecommissionedfabrics%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentFabricIndex(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusteroperationalcredentials/readattributecurrentfabricindex%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentFabricIndex(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteroperationalcredentials/readattributecurrentfabricindex%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFabrics(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusteroperationalcredentials/readattributefabrics%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFabrics(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteroperationalcredentials/readattributefabrics%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMap(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusteroperationalcredentials/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteroperationalcredentials/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusteroperationalcredentials/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteroperationalcredentials/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNOCs(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusteroperationalcredentials/readattributenocs%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNOCs(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteroperationalcredentials/readattributenocs%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSupportedFabrics(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusteroperationalcredentials/readattributesupportedfabrics%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSupportedFabrics(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteroperationalcredentials/readattributesupportedfabrics%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeTrustedRootCertificates(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusteroperationalcredentials/readattributetrustedrootcertificates%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeTrustedRootCertificates(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteroperationalcredentials/readattributetrustedrootcertificates%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRBaseClusterOperationalCredentials (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```objectivec
+@interface MTRBaseClusterOperationalCredentials : MTRGenericBaseCluster
+```
+
+## Topics
+
+### Initializers
+
+- [initWithDevice:endpoint:queue:](mtrbaseclusteroperationalcredentials/init%28device_endpoint_queue_%29.md): Deprecated.
+- [initWithDevice:endpointID:queue:](mtrbaseclusteroperationalcredentials/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [addNOCWithParams:completion:](mtrbaseclusteroperationalcredentials/addnoc%28with_completion_%29.md)
+- [addNOCWithParams:completionHandler:](mtrbaseclusteroperationalcredentials/addnoc%28with_completionhandler_%29.md): Deprecated.
+- [addTrustedRootCertificateWithParams:completion:](mtrbaseclusteroperationalcredentials/addtrustedrootcertificate%28with_completion_%29.md)
+- [addTrustedRootCertificateWithParams:completionHandler:](mtrbaseclusteroperationalcredentials/addtrustedrootcertificate%28with_completionhandler_%29.md): Deprecated.
+- [attestationRequestWithParams:completion:](mtrbaseclusteroperationalcredentials/attestationrequest%28with_completion_%29.md)
+- [attestationRequestWithParams:completionHandler:](mtrbaseclusteroperationalcredentials/attestationrequest%28with_completionhandler_%29.md): Deprecated.
+- [certificateChainRequestWithParams:completion:](mtrbaseclusteroperationalcredentials/certificatechainrequest%28with_completion_%29.md)
+- [certificateChainRequestWithParams:completionHandler:](mtrbaseclusteroperationalcredentials/certificatechainrequest%28with_completionhandler_%29.md): Deprecated.
+- [CSRRequestWithParams:completion:](mtrbaseclusteroperationalcredentials/csrrequest%28with_completion_%29.md)
+- [CSRRequestWithParams:completionHandler:](mtrbaseclusteroperationalcredentials/csrrequest%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandListWithCompletion:](mtrbaseclusteroperationalcredentials/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandListWithCompletionHandler:](mtrbaseclusteroperationalcredentials/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithCompletion:](mtrbaseclusteroperationalcredentials/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeListWithCompletionHandler:](mtrbaseclusteroperationalcredentials/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithCompletion:](mtrbaseclusteroperationalcredentials/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevisionWithCompletionHandler:](mtrbaseclusteroperationalcredentials/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeCommissionedFabricsWithCompletion:](mtrbaseclusteroperationalcredentials/readattributecommissionedfabrics%28completion_%29.md)
+- [readAttributeCommissionedFabricsWithCompletionHandler:](mtrbaseclusteroperationalcredentials/readattributecommissionedfabrics%28completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentFabricIndexWithCompletion:](mtrbaseclusteroperationalcredentials/readattributecurrentfabricindex%28completion_%29.md)
+- [readAttributeCurrentFabricIndexWithCompletionHandler:](mtrbaseclusteroperationalcredentials/readattributecurrentfabricindex%28completionhandler_%29.md): Deprecated.
+- [readAttributeFabricsWithParams:completion:](mtrbaseclusteroperationalcredentials/readattributefabrics%28with_completion_%29.md)
+- [readAttributeFabricsWithParams:completionHandler:](mtrbaseclusteroperationalcredentials/readattributefabrics%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithCompletion:](mtrbaseclusteroperationalcredentials/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMapWithCompletionHandler:](mtrbaseclusteroperationalcredentials/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithCompletion:](mtrbaseclusteroperationalcredentials/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandListWithCompletionHandler:](mtrbaseclusteroperationalcredentials/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeNOCsWithParams:completion:](mtrbaseclusteroperationalcredentials/readattributenocs%28with_completion_%29.md)
+- [readAttributeNOCsWithParams:completionHandler:](mtrbaseclusteroperationalcredentials/readattributenocs%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeSupportedFabricsWithCompletion:](mtrbaseclusteroperationalcredentials/readattributesupportedfabrics%28completion_%29.md)
+- [readAttributeSupportedFabricsWithCompletionHandler:](mtrbaseclusteroperationalcredentials/readattributesupportedfabrics%28completionhandler_%29.md): Deprecated.
+- [readAttributeTrustedRootCertificatesWithCompletion:](mtrbaseclusteroperationalcredentials/readattributetrustedrootcertificates%28completion_%29.md)
+- [readAttributeTrustedRootCertificatesWithCompletionHandler:](mtrbaseclusteroperationalcredentials/readattributetrustedrootcertificates%28completionhandler_%29.md): Deprecated.
+- [removeFabricWithParams:completion:](mtrbaseclusteroperationalcredentials/removefabric%28with_completion_%29.md)
+- [removeFabricWithParams:completionHandler:](mtrbaseclusteroperationalcredentials/removefabric%28with_completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteroperationalcredentials/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusteroperationalcredentials/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteroperationalcredentials/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusteroperationalcredentials/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevisionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteroperationalcredentials/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevisionWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusteroperationalcredentials/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCommissionedFabricsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteroperationalcredentials/subscribeattributecommissionedfabrics%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCommissionedFabricsWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusteroperationalcredentials/subscribeattributecommissionedfabrics%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCurrentFabricIndexWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteroperationalcredentials/subscribeattributecurrentfabricindex%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentFabricIndexWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusteroperationalcredentials/subscribeattributecurrentfabricindex%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFabricsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteroperationalcredentials/subscribeattributefabrics%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFabricsWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusteroperationalcredentials/subscribeattributefabrics%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMapWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteroperationalcredentials/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMapWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusteroperationalcredentials/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteroperationalcredentials/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusteroperationalcredentials/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNOCsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteroperationalcredentials/subscribeattributenocs%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNOCsWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusteroperationalcredentials/subscribeattributenocs%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSupportedFabricsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteroperationalcredentials/subscribeattributesupportedfabrics%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSupportedFabricsWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusteroperationalcredentials/subscribeattributesupportedfabrics%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeTrustedRootCertificatesWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteroperationalcredentials/subscribeattributetrustedrootcertificates%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeTrustedRootCertificatesWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusteroperationalcredentials/subscribeattributetrustedrootcertificates%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [updateFabricLabelWithParams:completion:](mtrbaseclusteroperationalcredentials/updatefabriclabel%28with_completion_%29.md)
+- [updateFabricLabelWithParams:completionHandler:](mtrbaseclusteroperationalcredentials/updatefabriclabel%28with_completionhandler_%29.md): Deprecated.
+- [updateNOCWithParams:completion:](mtrbaseclusteroperationalcredentials/updatenoc%28with_completion_%29.md)
+- [updateNOCWithParams:completionHandler:](mtrbaseclusteroperationalcredentials/updatenoc%28with_completionhandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusteroperationalcredentials/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteroperationalcredentials/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusteroperationalcredentials/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteroperationalcredentials/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevisionWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusteroperationalcredentials/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteroperationalcredentials/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCommissionedFabricsWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusteroperationalcredentials/readattributecommissionedfabrics%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCommissionedFabricsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteroperationalcredentials/readattributecommissionedfabrics%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentFabricIndexWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusteroperationalcredentials/readattributecurrentfabricindex%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentFabricIndexWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteroperationalcredentials/readattributecurrentfabricindex%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFabricsWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusteroperationalcredentials/readattributefabrics%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFabricsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteroperationalcredentials/readattributefabrics%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMapWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusteroperationalcredentials/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteroperationalcredentials/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusteroperationalcredentials/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteroperationalcredentials/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNOCsWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusteroperationalcredentials/readattributenocs%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNOCsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteroperationalcredentials/readattributenocs%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSupportedFabricsWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusteroperationalcredentials/readattributesupportedfabrics%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSupportedFabricsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteroperationalcredentials/readattributesupportedfabrics%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeTrustedRootCertificatesWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusteroperationalcredentials/readattributetrustedrootcertificates%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeTrustedRootCertificatesWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteroperationalcredentials/readattributetrustedrootcertificates%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)

@@ -7,13 +7,17 @@ import {
   rewriteMarkdownLinks,
 } from "../markdown.ts";
 import { DocumentCollector } from "../quarantine.ts";
-import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
+import type {
+  GithubLockedSource,
+  GithubSourceProject,
+  ProjectBuild,
+} from "../types.ts";
 
 interface PageSpec {
   readonly sourcePath: string;
   readonly outputPath: string;
   readonly section: string;
-  readonly title: (project: SourceProject) => string;
+  readonly title: (project: GithubSourceProject) => string;
 }
 
 // The Grafana datasource plugins keep their published documentation in the
@@ -40,8 +44,8 @@ const pages: readonly PageSpec[] = [
 ];
 
 export function buildDatasourcePlugin(
-  project: SourceProject,
-  lock: LockedSource,
+  project: GithubSourceProject,
+  lock: GithubLockedSource,
 ): Promise<ProjectBuild> {
   return withRepositoryArchive(
     project.repository,

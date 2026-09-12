@@ -1,0 +1,144 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclusteractivatedcarbonfiltermonitoring](https://developer.apple.com/documentation/matter/mtrbaseclusteractivatedcarbonfiltermonitoring)
+
+# MTRBaseClusterActivatedCarbonFilterMonitoring (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+class MTRBaseClusterActivatedCarbonFilterMonitoring
+```
+
+## Topics
+
+### Initializers
+
+- [init(device:endpointID:queue:)](mtrbaseclusteractivatedcarbonfiltermonitoring/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandList(completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAttributeList(completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributeattributelist%28completion_%29.md)
+- [readAttributeChangeIndication(completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributechangeindication%28completion_%29.md)
+- [readAttributeClusterRevision(completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeCondition(completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributecondition%28completion_%29.md)
+- [readAttributeDegradationDirection(completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributedegradationdirection%28completion_%29.md)
+- [readAttributeFeatureMap(completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributefeaturemap%28completion_%29.md)
+- [readAttributeGeneratedCommandList(completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeInPlaceIndicator(completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributeinplaceindicator%28completion_%29.md)
+- [readAttributeLastChangedTime(completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributelastchangedtime%28completion_%29.md)
+- [readAttributeReplacementProductList(completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributereplacementproductlist%28completion_%29.md)
+- [resetCondition(completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/resetcondition%28completion_%29.md)
+- [resetCondition(with:completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/resetcondition%28with_completion_%29.md)
+- [subscribeAttributeAcceptedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteractivatedcarbonfiltermonitoring/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteractivatedcarbonfiltermonitoring/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeChangeIndication(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteractivatedcarbonfiltermonitoring/subscribeattributechangeindication%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevision(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteractivatedcarbonfiltermonitoring/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCondition(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteractivatedcarbonfiltermonitoring/subscribeattributecondition%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeDegradationDirection(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteractivatedcarbonfiltermonitoring/subscribeattributedegradationdirection%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMap(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteractivatedcarbonfiltermonitoring/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteractivatedcarbonfiltermonitoring/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeInPlaceIndicator(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteractivatedcarbonfiltermonitoring/subscribeattributeinplaceindicator%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLastChangedTime(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteractivatedcarbonfiltermonitoring/subscribeattributelastchangedtime%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeReplacementProductList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteractivatedcarbonfiltermonitoring/subscribeattributereplacementproductlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [writeAttributeLastChangedTime(withValue:completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/writeattributelastchangedtime%28withvalue_completion_%29.md)
+- [writeAttributeLastChangedTime(withValue:params:completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/writeattributelastchangedtime%28withvalue_params_completion_%29.md)
+
+### Type Methods
+
+- [readAttributeAcceptedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeChangeIndication(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributechangeindication%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevision(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCondition(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributecondition%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeDegradationDirection(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributedegradationdirection%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMap(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeInPlaceIndicator(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributeinplaceindicator%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLastChangedTime(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributelastchangedtime%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeReplacementProductList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributereplacementproductlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRBaseClusterActivatedCarbonFilterMonitoring (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+@interface MTRBaseClusterActivatedCarbonFilterMonitoring : MTRGenericBaseCluster
+```
+
+## Topics
+
+### Initializers
+
+- [initWithDevice:endpointID:queue:](mtrbaseclusteractivatedcarbonfiltermonitoring/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandListWithCompletion:](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAttributeListWithCompletion:](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributeattributelist%28completion_%29.md)
+- [readAttributeChangeIndicationWithCompletion:](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributechangeindication%28completion_%29.md)
+- [readAttributeClusterRevisionWithCompletion:](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeConditionWithCompletion:](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributecondition%28completion_%29.md)
+- [readAttributeDegradationDirectionWithCompletion:](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributedegradationdirection%28completion_%29.md)
+- [readAttributeFeatureMapWithCompletion:](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributefeaturemap%28completion_%29.md)
+- [readAttributeGeneratedCommandListWithCompletion:](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeInPlaceIndicatorWithCompletion:](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributeinplaceindicator%28completion_%29.md)
+- [readAttributeLastChangedTimeWithCompletion:](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributelastchangedtime%28completion_%29.md)
+- [readAttributeReplacementProductListWithCompletion:](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributereplacementproductlist%28completion_%29.md)
+- [resetConditionWithCompletion:](mtrbaseclusteractivatedcarbonfiltermonitoring/resetcondition%28completion_%29.md)
+- [resetConditionWithParams:completion:](mtrbaseclusteractivatedcarbonfiltermonitoring/resetcondition%28with_completion_%29.md)
+- [subscribeAttributeAcceptedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteractivatedcarbonfiltermonitoring/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteractivatedcarbonfiltermonitoring/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeChangeIndicationWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteractivatedcarbonfiltermonitoring/subscribeattributechangeindication%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevisionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteractivatedcarbonfiltermonitoring/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeConditionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteractivatedcarbonfiltermonitoring/subscribeattributecondition%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeDegradationDirectionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteractivatedcarbonfiltermonitoring/subscribeattributedegradationdirection%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMapWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteractivatedcarbonfiltermonitoring/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteractivatedcarbonfiltermonitoring/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeInPlaceIndicatorWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteractivatedcarbonfiltermonitoring/subscribeattributeinplaceindicator%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLastChangedTimeWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteractivatedcarbonfiltermonitoring/subscribeattributelastchangedtime%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeReplacementProductListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteractivatedcarbonfiltermonitoring/subscribeattributereplacementproductlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [writeAttributeLastChangedTimeWithValue:completion:](mtrbaseclusteractivatedcarbonfiltermonitoring/writeattributelastchangedtime%28withvalue_completion_%29.md)
+- [writeAttributeLastChangedTimeWithValue:params:completion:](mtrbaseclusteractivatedcarbonfiltermonitoring/writeattributelastchangedtime%28withvalue_params_completion_%29.md)
+
+### Type Methods
+
+- [readAttributeAcceptedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeChangeIndicationWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributechangeindication%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevisionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeConditionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributecondition%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeDegradationDirectionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributedegradationdirection%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMapWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeInPlaceIndicatorWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributeinplaceindicator%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLastChangedTimeWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributelastchangedtime%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeReplacementProductListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteractivatedcarbonfiltermonitoring/readattributereplacementproductlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)

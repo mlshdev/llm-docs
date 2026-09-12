@@ -1,0 +1,86 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/get-subscription-administrators](https://developer.apple.com/documentation/devicemanagement/get-subscription-administrators)
+
+# Get Subscription Administrators
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Web Service Endpoint
+
+Get the administrators for subscriptions that your organization manages.
+
+## URL
+
+```http
+GET https://vpp.itunes.apple.com/mdm/v2/subscriptions/admins
+```
+
+## Query Parameters
+
+- `adamId` — `[int64]`: The filter for subscription administrators by Adam ID.
+- `includeUserState` — `boolean`: When `true`, includes the user status for each administrator in the response.
+- `cursor` — `string`: The cursor for pagination to fetch the next page of results.
+
+## Response Codes
+
+- `200` OK — `GetSubscriptionAdminsResponse`:
+- `400` Bad Request — `ErrorResponse`:
+- `401` Unauthorized — `ErrorResponse`: The provided token is invalid. It may either be missing or expired.
+- `500` Internal Server Error — `ErrorResponse`: An internal server error occurred. Try again later.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+<a id="Example-Request-and-Response"></a>
+
+### Example Request and Response
+
+**Request**
+
+```
+?adamId=12345&includeUserState=true
+```
+
+**Response**
+
+```json
+{
+    "admins": [
+        {
+            "adamId": 12345,
+            "clientUserId": "vpp-user",
+            "idHash": "rRVS8rlBrJjRqYwL8aNGDJG2CbU=",
+            "userStatus": "Associated"
+        }
+    ],
+    "nextCursor": "NjY5MjY0ODEtZTA4ZC00MmRhLTkxYjItMzdmMDI1MTVkYjQy",
+    "uId": "2049025000431439",
+    "tokenExpirationDate": "2030-11-08T22:33:22+0000",
+    "versionId": "f5897284-ed94-510f-8914-3b88c9c67799"
+}
+```
+
+## Topics
+
+### Response
+
+- [GetSubscriptionAdminsResponse](getsubscriptionadminsresponse.md): The response that contains the requested subscription administrators.
+- [ErrorResponse](errorresponse.md): The response that contains the error that occurs.
+
+### Content Metadata
+
+- [Managing subscriptions](managing-subscriptions.md): Administer auto-renewable subscription seats for your organization.
+
+## See Also
+
+### Subscription management
+
+- [Enable Subscriptions](enable-subscriptions.md): Declare that your device management service supports subscription management.
+- [Disable Subscriptions](disable-subscriptions.md): Declare that your device management service doesn’t support subscription management.
+- [Get Subscriptions](get-subscriptions.md): Get the subscriptions that your organization manages.
+- [Get Subscription Assignments](get-subscription-assignments.md): Get the subscription assignments for users in your organization.
+- [Associate Subscriptions](associate-subscriptions.md): Associate subscriptions with client user IDs.
+- [Disassociate Subscriptions](disassociate-subscriptions.md): Disassociate subscriptions from client user IDs.
+- [Add Subscription Administrators](add-subscription-administrators.md): Add administrators for subscriptions.
+- [Remove Subscription Administrators](remove-subscription-administrators.md): Remove administrators from subscriptions.

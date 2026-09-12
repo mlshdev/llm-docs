@@ -1,0 +1,31 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/wkwebextensioncontroller/didmovetab:fromindex:inwindow:](https://developer.apple.com/documentation/webkit/wkwebextensioncontroller/didmovetab:fromindex:inwindow:)
+
+# didMoveTab:fromIndex:inWindow:
+
+**Interface language:** Objective-C
+
+**Framework:** WebKit  
+**Kind:** Instance Method  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · visionOS 2.4+
+
+Should be called by the app when a tab is moved to fire appropriate events with all loaded web extensions.
+
+## Declaration
+
+```objectivec
+- (void) didMoveTab:(id<WKWebExtensionTab>) movedTab fromIndex:(NSUInteger) index inWindow:(id<WKWebExtensionWindow>) oldWindow;
+```
+
+## Parameters
+
+- `movedTab`: The tab that was moved.
+- `index`: The old index of the tab within the window.
+- `oldWindow`: The window that the tab was moved from, or `nil` if the tab is moving from no open window.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This method informs all loaded extensions of the movement of a tab, ensuring consistent understanding across extensions.
+
+If the window is staying the same, the current window should be specified. If the intention is to inform only a specific extension, use the respective method on that extension’s context instead.

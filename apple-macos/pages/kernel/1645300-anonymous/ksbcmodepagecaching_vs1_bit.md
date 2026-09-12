@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1645300-anonymous/ksbcmodepagecaching_vs1_bit](https://developer.apple.com/documentation/kernel/1645300-anonymous/ksbcmodepagecaching_vs1_bit)
+
+# kSBCModePageCaching_VS1_Bit
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Enumeration Case  
+**Availability:** macOS 10.12+
+
+## Declaration
+
+```objectivec
+kSBCModePageCaching_VS1_Bit = 3
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+VS1 Bit definition.

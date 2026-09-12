@@ -1,0 +1,53 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applepayontheweb/applepayerrorcode](https://developer.apple.com/documentation/applepayontheweb/applepayerrorcode)
+
+# ApplePayErrorCode
+
+**Interface language:** Data
+
+**Framework:** Apple Pay on the Web  
+**Kind:** Enumeration  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+The error code that indicates whether an error on the payment sheet is for shipping or billing information, or for another kind of error.
+
+## Declaration
+
+```
+enum ApplePayErrorCode
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use the following error codes in the [code](applepayerror/code.md) property of [ApplePayError](applepayerror.md):
+
+- **`"shippingContactInvalid"`**: The code that indicates that the shipping address or contact information is invalid or missing.
+
+  Use with [contactField](applepayerror/contactfield.md).
+- **`"billingContactInvalid"`**: The code that indicates that the billing address information is invalid or missing.
+
+  Use with [contactField](applepayerror/contactfield.md).
+- **`"addressUnserviceable"`**: The code that indicates that the merchant can’t provide service to the shipping address (for example, can’t deliver to a P.O. Box).
+- **`"couponCodeInvalid"`**: The code that indicates an invalid coupon.
+- **`"couponCodeExpired"`**: The code that indicates an expired coupon.
+- **`"unknown"`**: The code that indicates an unknown but nonfatal error occurred during payment processing. The user can attempt authorization again.
+
+## Topics
+
+### Enumeration Cases
+
+- [addressUnserviceable](applepayerrorcode/addressunserviceable.md)
+- [billingContactInvalid](applepayerrorcode/billingcontactinvalid.md)
+- [couponCodeExpired](applepayerrorcode/couponcodeexpired.md)
+- [couponCodeInvalid](applepayerrorcode/couponcodeinvalid.md)
+- [shippingContactInvalid](applepayerrorcode/shippingcontactinvalid.md)
+- [unknown](applepayerrorcode/unknown.md)
+
+## See Also
+
+### Status and errors
+
+- [ApplePayError](applepayerror.md): A customizable error type that you create to indicate problems with the address or contact information on an Apple Pay sheet.
+- [ApplePayErrorContactField](applepayerrorcontactfield.md): Names of the fields in the shipping or billing contact information, used to locate errors in the payment sheet.
+- [Apple Pay Status Codes](apple-pay-status-codes.md): Codes used to report the status of an Apple Pay session after a callback.

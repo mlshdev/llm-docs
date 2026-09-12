@@ -1,0 +1,63 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quartzcore/catransaction/flush()](https://developer.apple.com/documentation/quartzcore/catransaction/flush())
+
+# flush() (Swift)
+
+**Framework:** Core Animation  
+**Kind:** Type Method  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.1+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
+
+Flushes any extant implicit transaction.
+
+## Declaration
+
+```swift
+class func flush()
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Delays the commit until any nested explicit transactions have completed.
+
+Flush is typically called automatically at the end of the current runloop, regardless of the runloop mode. If your application does not have a runloop, you must call this method explicitly.
+
+However, you should attempt to avoid calling `flush` explicitly. By allowing `flush` to execute during the runloop your application will achieve better performance, atomic screen updates will be preserved, and transactions and animations that work from transaction to transaction will continue to function.
+
+## See Also
+
+### Creating and Committing Transactions
+
+- [begin()](begin%28%29.md): Begin a new transaction for the current thread.
+- [commit()](commit%28%29.md): Commit all changes made during the current transaction.
+
+# flush (Objective-C)
+
+**Framework:** Core Animation  
+**Kind:** Type Method  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.1+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
+
+Flushes any extant implicit transaction.
+
+## Declaration
+
+```objectivec
++ (void) flush;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Delays the commit until any nested explicit transactions have completed.
+
+Flush is typically called automatically at the end of the current runloop, regardless of the runloop mode. If your application does not have a runloop, you must call this method explicitly.
+
+However, you should attempt to avoid calling `flush` explicitly. By allowing `flush` to execute during the runloop your application will achieve better performance, atomic screen updates will be preserved, and transactions and animations that work from transaction to transaction will continue to function.
+
+## See Also
+
+### Creating and Committing Transactions
+
+- [begin](begin%28%29.md): Begin a new transaction for the current thread.
+- [commit](commit%28%29.md): Commit all changes made during the current transaction.

@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/gpt_hdr/1581442-hdr_revision](https://developer.apple.com/documentation/kernel/gpt_hdr/1581442-hdr_revision)
+
+# hdr_revision
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Instance Property  
+**Availability:** macOS 10.6+
+
+## Declaration
+
+```objectivec
+uint32_t hdr_revision;
+```

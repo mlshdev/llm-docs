@@ -1,0 +1,85 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coregraphics/cgcolorspace/itur_2020_pq_eotf](https://developer.apple.com/documentation/coregraphics/cgcolorspace/itur_2020_pq_eotf)
+
+# itur_2020_PQ_EOTF (Swift)
+
+**Framework:** Core Graphics  
+**Kind:** Type Property  
+**Availability:** iOS 12.6+ (deprecated in 13.4) · iPadOS 12.6+ (deprecated in 13.4) · Mac Catalyst 13.1+ (deprecated in 13.4) · macOS 10.14.6+ (deprecated in 10.15.4) · tvOS 12.0+ (deprecated in 13.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 5.0+ (deprecated in 6.2)
+
+The recommendation of the International Telecommunication Union (ITU) Radiocommunication sector for the BT.2020 color space, with the PQ transfer function.
+
+> No longer supported
+
+## Declaration
+
+```swift
+class let itur_2020_PQ_EOTF: CFString
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This color space has the same colorimetry as [itur_2020](itur_2020.md), but uses the Perceptual Quantizer (PQ) transfer function. A pixel value of `1.0` is assumed to be `100` nits. See the current active version of the BT.2100 recommendation on the ITU website ([https://www.itu.int/](https://www.itu.int/)).
+
+## See Also
+
+### Accessing System-Defined Color Spaces
+
+- [displayP3](displayp3.md): The Display P3 color space, created by Apple.
+- [displayP3_HLG](displayp3_hlg.md): The Display P3 color space, using the HLG transfer function.
+- [displayP3_PQ_EOTF](displayp3_pq_eotf.md): Deprecated. The Display P3 color space, using the PQ transfer function.
+- [extendedLinearDisplayP3](extendedlineardisplayp3.md): The Display P3 color space with a linear transfer function and extended-range values.
+- [sRGB](srgb.md): The standard Red Green Blue (sRGB) color space.
+- [linearSRGB](linearsrgb.md): The sRGB color space with a linear transfer function.
+- [extendedSRGB](extendedsrgb.md): The extended sRGB color space.
+- [extendedLinearSRGB](extendedlinearsrgb.md): The sRGB color space with a linear transfer function and extended-range values.
+- [genericGrayGamma2_2](genericgraygamma2_2.md): The generic gray color space that has an exponential transfer function with a power of 2.2.
+- [extendedGray](extendedgray.md): The extended gray color space.
+- [linearGray](lineargray.md): The gray color space using a linear transfer function.
+- [extendedLinearGray](extendedlineargray.md): The extended gray color space with a linear transfer function.
+- [genericCMYK](genericcmyk.md): The generic CMYK color space.
+- [genericRGBLinear](genericrgblinear.md): The generic RGB color space with a linear transfer function.
+- [genericXYZ](genericxyz.md): The XYZ color space, as defined by the CIE 1931 standard.
+
+# kCGColorSpaceITUR_2020_PQ_EOTF (Objective-C)
+
+**Framework:** Core Graphics  
+**Kind:** Global Variable  
+**Availability:** iOS 12.6+ (deprecated in 13.4) · iPadOS 12.6+ (deprecated in 13.4) · Mac Catalyst 13.1+ (deprecated in 13.4) · macOS 10.14.6+ (deprecated in 10.15.4) · tvOS 12.0+ (deprecated in 13.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 5.0+ (deprecated in 6.2)
+
+The recommendation of the International Telecommunication Union (ITU) Radiocommunication sector for the BT.2020 color space, with the PQ transfer function.
+
+> No longer supported
+
+## Declaration
+
+```objectivec
+extern CFStringRef const kCGColorSpaceITUR_2020_PQ_EOTF;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This color space has the same colorimetry as [kCGColorSpaceITUR_2020](itur_2020.md), but uses the Perceptual Quantizer (PQ) transfer function. A pixel value of `1.0` is assumed to be `100` nits. See the current active version of the BT.2100 recommendation on the ITU website ([https://www.itu.int/](https://www.itu.int/)).
+
+## See Also
+
+### Accessing System-Defined Color Spaces
+
+- [kCGColorSpaceDisplayP3](displayp3.md): The Display P3 color space, created by Apple.
+- [kCGColorSpaceDisplayP3_HLG](displayp3_hlg.md): The Display P3 color space, using the HLG transfer function.
+- [kCGColorSpaceDisplayP3_PQ_EOTF](displayp3_pq_eotf.md): Deprecated. The Display P3 color space, using the PQ transfer function.
+- [kCGColorSpaceExtendedLinearDisplayP3](extendedlineardisplayp3.md): The Display P3 color space with a linear transfer function and extended-range values.
+- [kCGColorSpaceSRGB](srgb.md): The standard Red Green Blue (sRGB) color space.
+- [kCGColorSpaceLinearSRGB](linearsrgb.md): The sRGB color space with a linear transfer function.
+- [kCGColorSpaceExtendedSRGB](extendedsrgb.md): The extended sRGB color space.
+- [kCGColorSpaceExtendedLinearSRGB](extendedlinearsrgb.md): The sRGB color space with a linear transfer function and extended-range values.
+- [kCGColorSpaceGenericGrayGamma2_2](genericgraygamma2_2.md): The generic gray color space that has an exponential transfer function with a power of 2.2.
+- [kCGColorSpaceExtendedGray](extendedgray.md): The extended gray color space.
+- [kCGColorSpaceLinearGray](lineargray.md): The gray color space using a linear transfer function.
+- [kCGColorSpaceExtendedLinearGray](extendedlineargray.md): The extended gray color space with a linear transfer function.
+- [kCGColorSpaceGenericCMYK](genericcmyk.md): The generic CMYK color space.
+- [kCGColorSpaceGenericRGBLinear](genericrgblinear.md): The generic RGB color space with a linear transfer function.
+- [kCGColorSpaceGenericXYZ](genericxyz.md): The XYZ color space, as defined by the CIE 1931 standard.

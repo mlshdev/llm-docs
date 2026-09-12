@@ -1,0 +1,36 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applepayontheweb/applepaypaymentmethod/billingcontact](https://developer.apple.com/documentation/applepayontheweb/applepaypaymentmethod/billingcontact)
+
+# billingContact
+
+**Interface language:** Data
+
+**Framework:** Apple Pay on the Web  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+The billing contact associated with the card.
+
+## Declaration
+
+```
+ApplePayPaymentContact billingContact;
+```
+
+## Mentioned In
+
+- [Apple Pay on the Web Version 10 Release Notes](../apple-pay-on-the-web-version-10-release-notes.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Before the user authorizes the transaction, you receive redacted billing contact information in a callback event. The redacted information includes only the necessary data for completing transaction tasks, such as calculating taxes or shipping costs.
+
+## See Also
+
+### Accessing payment method data
+
+- [displayName](displayname.md): A string, suitable for display, that describes the card.
+- [network](network.md): A string, suitable for display, that is the name of the payment network backing the card.
+- [type](type.md): A string value representing the card’s type of payment.
+- [paymentPass](paymentpass.md): The payment pass object currently selected to complete the payment.

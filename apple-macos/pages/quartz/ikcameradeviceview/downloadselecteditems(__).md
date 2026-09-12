@@ -1,0 +1,71 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/quartz/ikcameradeviceview/downloadselecteditems(_:)](https://developer.apple.com/documentation/quartz/ikcameradeviceview/downloadselecteditems(_:))
+
+# downloadSelectedItems(\_:) (Swift)
+
+**Framework:** Quartz  
+**Kind:** Instance Method  
+**Availability:** macOS 10.6+
+
+Deletes the selected items from the camera.
+
+## Declaration
+
+```swift
+@IBAction func downloadSelectedItems(_ sender: Any!)
+```
+
+## Parameters
+
+- `sender`: The object that sent the message.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method is can be connected to a user interface item in Interface Builder.
+
+## See Also
+
+### Configuring Download Interface and Downloading Files
+
+- [canDownloadSelectedItems](candownloadselecteditems.md): Returns whether the selected items can be downloaded
+- [downloadsDirectory](downloadsdirectory.md): Specifies the directory where files are downloaded
+- [downloadAllItems(\_:)](downloadallitems%28__%29.md): Downloads all the items.
+- [downloadSelectedControlLabel](downloadselectedcontrollabel.md): Allows the “Download Selected” control to be renamed.
+- [downloadAllControlLabel](downloadallcontrollabel.md): Allows the “Download All” control to be renamed.
+- [displaysDownloadsDirectoryControl](displaysdownloadsdirectorycontrol.md): Specifies whether the downloads directory control should be displayed.
+
+# downloadSelectedItems: (Objective-C)
+
+**Framework:** Quartz  
+**Kind:** Instance Method  
+**Availability:** macOS 10.6+
+
+Deletes the selected items from the camera.
+
+## Declaration
+
+```objectivec
+- (void) downloadSelectedItems:(id) sender;
+```
+
+## Parameters
+
+- `sender`: The object that sent the message.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method is can be connected to a user interface item in Interface Builder.
+
+## See Also
+
+### Configuring Download Interface and Downloading Files
+
+- [canDownloadSelectedItems](candownloadselecteditems.md): Returns whether the selected items can be downloaded
+- [downloadsDirectory](downloadsdirectory.md): Specifies the directory where files are downloaded
+- [downloadAllItems:](downloadallitems%28__%29.md): Downloads all the items.
+- [downloadSelectedControlLabel](downloadselectedcontrollabel.md): Allows the “Download Selected” control to be renamed.
+- [downloadAllControlLabel](downloadallcontrollabel.md): Allows the “Download All” control to be renamed.
+- [displaysDownloadsDirectoryControl](displaysdownloadsdirectorycontrol.md): Specifies whether the downloads directory control should be displayed.

@@ -1,0 +1,61 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/documentwriter/write(snapshot:to:previous:progress:)](https://developer.apple.com/documentation/swiftui/documentwriter/write(snapshot:to:previous:progress:))
+
+# write(snapshot:to:previous:progress:)
+
+**Framework:** SwiftUI  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+Writes the document content to disk.
+
+## Declaration
+
+```swift
+@concurrent func write(snapshot: sending Self.Snapshot, to destination: sending Self.Destination, previous: sending Self.Snapshot?, progress: consuming Subprogress) async throws
+```
+
+## Parameters
+
+- `snapshot`: The snapshot to write to disk.
+- `destination`: The file URL to write to.
+- `previous`: The last successfully written snapshot, or `nil` on the first save. Compare to `content` to write only what changed in package documents.
+- `progress`: A `Subprogress` value to report writing progress. Consume it once with `reporter(totalCount:)` and call `complete(count:)` as units finish.
+
+<a id="discussion"></a>
+
+## Discussion
+
+SwiftUI calls this method in the background after obtaining a snapshot via [snapshot(contentType:)](../writabledocument/snapshot%28contenttype_%29.md). Perform all serialization and disk access here.
+
+For most documents, use [FileWrapperDocumentWriter](../filewrapperdocumentwriter.md) instead of implementing a custom writer. Only implement `write` yourself when you need capabilities `FileWrapperDocumentWriter` doesn’t provide — such as direct URL access for Core Graphics, AVFoundation, or other frameworks that operate on file paths:
+
+```swift
+@concurrent
+func write(content image: sending CGImage, to destination: URL,
+    previous: sending CGImage?, progress: consuming Subprogress
+) async throws {
+    guard let imageDestination =
+        CGImageDestinationCreateWithURL(
+            destination as CFURL,
+            UTType.jpeg.identifier as CFString,
+            1, nil
+        ) else {
+        throw CocoaError(.fileWriteUnknown)
+    }
+    CGImageDestinationAddImage(
+        imageDestination, image, nil
+    )
+    guard CGImageDestinationFinalize(
+        imageDestination
+    ) else {
+        throw CocoaError(.fileWriteUnknown)
+    }
+}
+```
+
+## See Also
+
+### Writing a document
+
+- [Snapshot](snapshot.md): The type representing the document’s content to write.
+- [Destination](destination.md): The type of the destination location to write to.

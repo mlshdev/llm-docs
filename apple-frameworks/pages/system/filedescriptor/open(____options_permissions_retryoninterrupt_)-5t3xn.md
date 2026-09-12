@@ -1,0 +1,43 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/system/filedescriptor/open(_:_:options:permissions:retryoninterrupt:)-5t3xn](https://developer.apple.com/documentation/system/filedescriptor/open(_:_:options:permissions:retryoninterrupt:)-5t3xn)
+
+# open(\_:\_:options:permissions:retryOnInterrupt:)
+
+**Framework:** System  
+**Kind:** Type Method  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 7.0+
+
+Opens or creates a file for reading or writing.
+
+## Declaration
+
+```swift
+static func open(_ path: UnsafePointer<CChar>, _ mode: FileDescriptor.AccessMode, options: FileDescriptor.OpenOptions = FileDescriptor.OpenOptions(), permissions: FilePermissions? = nil, retryOnInterrupt: Bool = true) throws -> FileDescriptor
+```
+
+## Parameters
+
+- `path`: The location of the file to open.
+- `mode`: The read and write access to use.
+- `options`: The behavior for opening the file.
+- `permissions`: The file permissions to use for created files.
+- `retryOnInterrupt`: Whether to retry the open operation if it throws [interrupted](../errno/interrupted.md). The default is `true`. Pass `false` to try only once and throw an error upon interruption.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A file descriptor for the open file
+
+<a id="discussion"></a>
+
+## Discussion
+
+The corresponding C function is `open`.
+
+## See Also
+
+### Opening a File
+
+- [open(\_:\_:options:permissions:retryOnInterrupt:)](open%28____options_permissions_retryoninterrupt_%29-4ql4b.md): Opens or creates a file for reading or writing.
+- [FileDescriptor.AccessMode](accessmode.md): The desired read and write access for a newly opened file.
+- [FileDescriptor.OpenOptions](openoptions.md): Options that specify behavior for a newly-opened file.

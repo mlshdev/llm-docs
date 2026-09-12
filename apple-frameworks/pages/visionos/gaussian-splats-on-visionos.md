@@ -1,0 +1,36 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/visionos/gaussian-splats-on-visionos](https://developer.apple.com/documentation/visionos/gaussian-splats-on-visionos)
+
+# Gaussian splats on visionOS
+
+**Kind:** Sample Code  
+**Availability:** visionOS 27.0+ · Xcode 27.0+
+
+Use the new Gaussian splat APIs available in RealityKit in visionOS 27.
+
+<a id="Overview"></a>
+
+## Overview
+
+> **Note**
+
+> This sample code project is associated with WWDC26 session 287: [Build next generation experiences with visionOS 27](https://developer.apple.com/wwdc26/287), and session 279: [Explore advances in RealityKit](https://developer.apple.com/wwdc26/279).
+
+## See Also
+
+### RealityKit and Reality Composer Pro
+
+- [Reality Composer Pro](https://developer.apple.com/documentation/realitycomposerpro): Build, design, and orchestrate 3D content for your RealityKit apps.
+- [Chaparral Village: Building an immersive visionOS adventure game](chaparral-village-building-an-immersive-visionos-adventure-game.md): Create an adventure game using SwiftUI, RealityKit, and Reality Composer Pro 3.
+- [Designing no-code games with Reality Composer Pro 3](designing-no-code-games-in-reality-composer-pro-3.md): Build a video game in Reality Composer Pro without code using Script Graphs.
+- [Petite Asteroids: Building a volumetric visionOS game](petite-asteroids-building-a-volumetric-visionos-game.md): Use the latest RealityKit APIs to create a beautiful video game for visionOS.
+- [BOT-anist](bot-anist.md): Build a multiplatform app that uses windows, volumes, and animations to create a robot botanist’s greenhouse.
+- [Swift Splash](swift-splash.md): Use RealityKit to create an interactive ride in visionOS.
+- [Diorama](diorama.md): Design scenes for your visionOS app using Reality Composer Pro.
+- [Building an immersive media viewing experience](building-an-immersive-media-viewing-experience.md): Add a deeper level of immersion to media playback in your app with RealityKit and Reality Composer Pro.
+- [Enabling video reflections in an immersive environment](enabling-video-reflections-in-an-immersive-environment.md): Create a more immersive experience by adding video reflections in a custom environment.
+- [Combining 2D and 3D views in an immersive app](../realitykit/combining-2d-and-3d-views-in-an-immersive-app.md): Use attachments to place 2D content relative to 3D content in your visionOS app.
+- [Understanding the modular architecture of RealityKit](understanding-the-realitykit-modular-architecture.md): Learn how everything fits together in RealityKit.
+- [Using transforms to move, scale, and rotate entities](understanding-transforms.md): Learn how to use Transforms to move, scale, and rotate entities in RealityKit.
+- [Capturing screenshots and video from Apple Vision Pro for 2D viewing](capturing-screenshots-and-video-from-your-apple-vision-pro-for-2d-viewing.md): Create screenshots and record high-quality video of your visionOS app and its surroundings for app previews.
+- [Implementing object tracking in your app](implementing-object-tracking-in-your-app.md): Create engaging interactions by training models to recognize and track real-world objects in people’s surroundings.
+- [Placing entities using head and device transform](placing-entities-using-head-and-device-transform.md): Query and react to changes in the position and rotation of Apple Vision Pro.

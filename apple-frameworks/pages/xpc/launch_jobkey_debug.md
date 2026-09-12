@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/xpc/launch_jobkey_debug](https://developer.apple.com/documentation/xpc/launch_jobkey_debug)
+
+# LAUNCH_JOBKEY_DEBUG
+
+**Interface language:** Objective-C
+
+**Framework:** XPC  
+**Kind:** Macro  
+**Availability:** Mac Catalyst · macOS
+
+## Declaration
+
+```objectivec
+#define LAUNCH_JOBKEY_DEBUG
+```
+
+## See Also
+
+### Launch macros
+
+- [LAUNCH_JOBINETDCOMPATIBILITY_INSTANCES](launch_jobinetdcompatibility_instances.md)
+- [LAUNCH_JOBINETDCOMPATIBILITY_WAIT](launch_jobinetdcompatibility_wait.md)
+- [LAUNCH_JOBKEY_ABANDONPROCESSGROUP](launch_jobkey_abandonprocessgroup.md)
+- [LAUNCH_JOBKEY_ASSOCIATEDBUNDLEIDENTIFIERS](launch_jobkey_associatedbundleidentifiers.md)
+- [LAUNCH_JOBKEY_BONJOURFDS](launch_jobkey_bonjourfds.md)
+- [LAUNCH_JOBKEY_BUNDLEPROGRAM](launch_jobkey_bundleprogram.md)
+- [LAUNCH_JOBKEY_CAL_DAY](launch_jobkey_cal_day.md)
+- [LAUNCH_JOBKEY_CAL_HOUR](launch_jobkey_cal_hour.md)
+- [LAUNCH_JOBKEY_CAL_MINUTE](launch_jobkey_cal_minute.md)
+- [LAUNCH_JOBKEY_CAL_MONTH](launch_jobkey_cal_month.md)
+- [LAUNCH_JOBKEY_CAL_WEEKDAY](launch_jobkey_cal_weekday.md)
+- [LAUNCH_JOBKEY_DATASTORES](launch_jobkey_datastores.md)
+- [LAUNCH_JOBKEY_DATASTORES_SIZELIMIT](launch_jobkey_datastores_sizelimit.md)
+- [LAUNCH_JOBKEY_DISABLED](launch_jobkey_disabled.md)
+- [LAUNCH_JOBKEY_DISABLED_MACHINETYPE](launch_jobkey_disabled_machinetype.md)

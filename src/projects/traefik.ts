@@ -16,7 +16,11 @@ import {
   rewriteMarkdownLinks,
 } from "../markdown.ts";
 import { DocumentCollector } from "../quarantine.ts";
-import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
+import type {
+  GithubLockedSource,
+  GithubSourceProject,
+  ProjectBuild,
+} from "../types.ts";
 
 interface NavPage {
   readonly label: string;
@@ -25,8 +29,8 @@ interface NavPage {
 }
 
 export async function buildTraefik(
-  project: SourceProject,
-  lock: LockedSource,
+  project: GithubSourceProject,
+  lock: GithubLockedSource,
 ): Promise<ProjectBuild> {
   return withRepositoryArchive(
     project.repository,
@@ -216,7 +220,7 @@ function resolveTraefikLink(
   kind: "link" | "image",
   sourcePath: string,
   repository: string,
-  lock: LockedSource,
+  lock: GithubLockedSource,
   archiveFiles: ReadonlySet<string>,
 ): string | undefined {
   if (/^(?:[a-z][a-z0-9+.-]*:|\/\/|#)/i.test(url)) {

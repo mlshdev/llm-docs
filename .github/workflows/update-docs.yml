@@ -1,11 +1,9 @@
 name: Update and publish documentation
 
 on:
-  push:
-    branches:
-      - "main"
   schedule:
-    - cron: "7,22,37,52 * * * *"
+    - cron: "0 20 * * *"
+      timezone: "Europe/Warsaw"
   workflow_dispatch:
 
 permissions:
@@ -19,7 +17,9 @@ jobs:
   build:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 360
+    env:
+      DOCC_CONCURRENCY: "48"
     permissions:
       contents: read
       issues: write
@@ -112,7 +112,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git add -- sources.lock.json llms.txt llms-full.txt traefik netbird podman docker container n8n grafana victoriametrics victorialogs victoriametrics-datasource victorialogs-datasource vmestimator zitadel ffmpeg yt-dlp searxng bun trigger-dev aria2
+          git add -- sources.lock.json llms.txt llms-full.txt traefik netbird podman docker container n8n grafana victoriametrics victorialogs victoriametrics-datasource victorialogs-datasource vmestimator zitadel ffmpeg yt-dlp searxng bun trigger-dev aria2 apple-swift apple-swiftui apple-webkit apple-xcode apple-ios apple-macos apple-watchos apple-frameworks
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
@@ -146,6 +146,14 @@ jobs:
             bun
             trigger-dev
             aria2
+            apple-swift
+            apple-swiftui
+            apple-webkit
+            apple-xcode
+            apple-ios
+            apple-macos
+            apple-watchos
+            apple-frameworks
           if-no-files-found: error
           retention-days: "1"
       - name: Decide whether to publish Pages
@@ -175,7 +183,7 @@ jobs:
     if: needs.build.outputs.changed == 'true'
     needs: build
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 60
     permissions:
       contents: write
     steps:
@@ -206,7 +214,7 @@ jobs:
             git fetch --quiet origin main
             git reset --quiet --hard FETCH_HEAD
 
-            rm -rf traefik netbird podman docker container n8n grafana victoriametrics victorialogs victoriametrics-datasource victorialogs-datasource vmestimator zitadel ffmpeg yt-dlp searxng bun trigger-dev aria2
+            rm -rf traefik netbird podman docker container n8n grafana victoriametrics victorialogs victoriametrics-datasource victorialogs-datasource vmestimator zitadel ffmpeg yt-dlp searxng bun trigger-dev aria2 apple-swift apple-swiftui apple-webkit apple-xcode apple-ios apple-macos apple-watchos apple-frameworks
             cp _generated/sources.lock.json sources.lock.json
             cp _generated/llms.txt llms.txt
             cp _generated/llms-full.txt llms-full.txt
@@ -229,8 +237,16 @@ jobs:
             cp -R _generated/bun bun
             cp -R _generated/trigger-dev trigger-dev
             cp -R _generated/aria2 aria2
+            cp -R _generated/apple-swift apple-swift
+            cp -R _generated/apple-swiftui apple-swiftui
+            cp -R _generated/apple-webkit apple-webkit
+            cp -R _generated/apple-xcode apple-xcode
+            cp -R _generated/apple-ios apple-ios
+            cp -R _generated/apple-macos apple-macos
+            cp -R _generated/apple-watchos apple-watchos
+            cp -R _generated/apple-frameworks apple-frameworks
 
-            git add -- sources.lock.json llms.txt llms-full.txt traefik netbird podman docker container n8n grafana victoriametrics victorialogs victoriametrics-datasource victorialogs-datasource vmestimator zitadel ffmpeg yt-dlp searxng bun trigger-dev aria2
+            git add -- sources.lock.json llms.txt llms-full.txt traefik netbird podman docker container n8n grafana victoriametrics victorialogs victoriametrics-datasource victorialogs-datasource vmestimator zitadel ffmpeg yt-dlp searxng bun trigger-dev aria2 apple-swift apple-swiftui apple-webkit apple-xcode apple-ios apple-macos apple-watchos apple-frameworks
             if git diff --cached --quiet; then
               echo "main already carries these snapshots; nothing to commit."
               exit 0

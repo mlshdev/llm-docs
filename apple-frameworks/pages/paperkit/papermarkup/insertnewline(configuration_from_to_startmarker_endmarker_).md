@@ -1,0 +1,32 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/paperkit/papermarkup/insertnewline(configuration:from:to:startmarker:endmarker:)](https://developer.apple.com/documentation/paperkit/papermarkup/insertnewline(configuration:from:to:startmarker:endmarker:))
+
+# insertNewLine(configuration:from:to:startMarker:endMarker:)
+
+**Framework:** PaperKit  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · visionOS 26.0+
+
+Add a line element on top of the paper.
+
+## Declaration
+
+```swift
+mutating func insertNewLine(configuration: ShapeConfiguration, from start: CGPoint, to end: CGPoint, startMarker lineStartMarker: Bool = false, endMarker lineEndMarker: Bool = false)
+```
+
+## Parameters
+
+- `configuration`: The configuration of the line to insert.
+- `start`: The start position of the line.
+- `end`: The end position of the line.
+- `lineStartMarker`: True if the start of the line has a marker / arrow.
+- `lineEndMarker`: True if the end of the line has a marker / arrow.
+
+## See Also
+
+### Inserting elements
+
+- [insertNewShape(configuration:frame:rotation:)](insertnewshape%28configuration_frame_rotation_%29.md): Add a new element on top of the paper.
+- [insertNewImage(\_:frame:rotation:)](insertnewimage%28__frame_rotation_%29.md): Add a new image on top of the paper.
+- [insertNewTextbox(attributedText:frame:rotation:)](insertnewtextbox%28attributedtext_frame_rotation_%29-53rs.md): Add a new text box on top of the paper.
+- [insertNewTextbox(attributedText:frame:rotation:)](insertnewtextbox%28attributedtext_frame_rotation_%29-67igk.md): Add a new text box on top of the paper.

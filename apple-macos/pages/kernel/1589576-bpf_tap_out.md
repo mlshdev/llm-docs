@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1589576-bpf_tap_out](https://developer.apple.com/documentation/kernel/1589576-bpf_tap_out)
+
+# bpf_tap_out
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Function  
+**Availability:** macOS 10.5+
+
+## Declaration
+
+```objectivec
+void bpf_tap_out(ifnet_t interface, u_int32_t dlt, mbuf_t packet, void *header, size_t header_len);
+```
+
+## Parameters
+
+- `interface`: The interface the packet was or will be transmitted on.
+- `dlt`: The data link type of the packet.
+- `packet`: The packet received.
+- `header`: An optional pointer to a header that will be prepended.
+- `headerlen`: If the header was specified, the length of the header.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Call this function when your interface trasmits a packet. This function will check if any bpf devices need a a copy of the packet.
+
+## See Also
+
+### bpf
+
+- [bpf_attach](1589700-bpf_attach.md)
+- [bpf_tap_in](1589470-bpf_tap_in.md)
+- [bpfattach](1589467-bpfattach.md)

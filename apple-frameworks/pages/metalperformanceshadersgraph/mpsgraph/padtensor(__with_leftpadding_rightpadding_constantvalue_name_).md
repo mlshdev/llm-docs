@@ -1,0 +1,59 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshadersgraph/mpsgraph/padtensor(_:with:leftpadding:rightpadding:constantvalue:name:)](https://developer.apple.com/documentation/metalperformanceshadersgraph/mpsgraph/padtensor(_:with:leftpadding:rightpadding:constantvalue:name:))
+
+# padTensor(\_:with:leftPadding:rightPadding:constantValue:name:) (Swift)
+
+**Framework:** Metal Performance Shaders Graph  
+**Kind:** Instance Method  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+
+
+Creates a padding operation and returns the result tensor.
+
+## Declaration
+
+```swift
+func padTensor(_ tensor: MPSGraphTensor, with paddingMode: MPSGraphPaddingMode, leftPadding: [NSNumber], rightPadding: [NSNumber], constantValue: Double, name: String?) -> MPSGraphTensor
+```
+
+## Parameters
+
+- `tensor`: The input tensor.
+- `paddingMode`: The parameter that defines the padding mode.
+- `leftPadding`: The parameter that defines how much padding the operation applies to the input tensor before each dimension - must be of size `rank(tensor)`.
+- `rightPadding`: The parameter that defines how much padding the operation applies to the input tensor after each dimension - must be of size `rank(tensor)`.
+- `constantValue`: The constant value the operation uses when `paddingMode = MPSGraphPaddingModeConstant`.
+- `name`: The name for the operation.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A valid MPSGraphTensor object.
+
+# padTensor:withPaddingMode:leftPadding:rightPadding:constantValue:name: (Objective-C)
+
+**Framework:** Metal Performance Shaders Graph  
+**Kind:** Instance Method  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+
+
+Creates a padding operation and returns the result tensor.
+
+## Declaration
+
+```objectivec
+- (MPSGraphTensor *) padTensor:(MPSGraphTensor *) tensor withPaddingMode:(MPSGraphPaddingMode) paddingMode leftPadding:(MPSShape *) leftPadding rightPadding:(MPSShape *) rightPadding constantValue:(double) constantValue name:(NSString *) name;
+```
+
+## Parameters
+
+- `tensor`: The input tensor.
+- `paddingMode`: The parameter that defines the padding mode.
+- `leftPadding`: The parameter that defines how much padding the operation applies to the input tensor before each dimension - must be of size `rank(tensor)`.
+- `rightPadding`: The parameter that defines how much padding the operation applies to the input tensor after each dimension - must be of size `rank(tensor)`.
+- `constantValue`: The constant value the operation uses when `paddingMode = MPSGraphPaddingModeConstant`.
+- `name`: The name for the operation.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A valid MPSGraphTensor object.

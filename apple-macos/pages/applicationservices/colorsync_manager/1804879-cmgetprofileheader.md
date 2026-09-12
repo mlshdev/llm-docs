@@ -1,0 +1,58 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/applicationservices/colorsync_manager/1804879-cmgetprofileheader](https://developer.apple.com/documentation/applicationservices/colorsync_manager/1804879-cmgetprofileheader)
+
+# CMGetProfileHeader
+
+**Interface language:** Objective-C
+
+**Framework:** Application Services
+
+Obtains the profile header for the specified profile.
+
+## Declaration
+
+```objectivec
+CMError CMGetProfileHeader (
+   CMProfileRef prof,
+   CMAppleProfileHeader *header
+);
+```
+
+## Parameters
+
+- `prof`: A profile reference of type [CMProfileRef](../cmprofileref.md) to the profile whose header is to be copied.
+- `header`: A pointer to a profile header. On input, depending on the profile version, you may allocate a ColorSync 2.x or 1.0 header. On return, contains the profile data. For information about the ColorSync 2.x profile header structure, see [CM2Header](../cm2header.md). For information about the ColorSync 1.0 header, see `CMHeader`.
+
+<a id="return_value"></a>
+
+## Return Value
+
+A `CMError` value. See [Result Codes](../colorsync_manager.md#1670295).
+
+<a id="overview"></a>
+
+## Overview
+
+The `CMGetProfileHeader` function returns the header for a ColorSync 2.x or ColorSync 1.0 profile. To return the header, the function uses a union of type [CMAppleProfileHeader](../1560290-cmappleprofileheader.md), with variants for version 1.0 and 2.x headers. 
+
+A 32-bit version value is located at the same offset in either header. For ColorSync 2.x profiles, this is the `profileVersion` field. For ColorSync 1.0 profiles, this is the `applProfileVersion` field. You can inspect the value at this offset to determine the profile version, and interpret the remaining header fields accordingly.
+
+To copy a profile header to a profile after you modify the header’s contents, use the function [CMSetProfileHeader](1804882-cmsetprofileheader.md).
+
+## See Also
+
+### Accessing Profiles
+
+- [CMOpenProfile](1804853-cmopenprofile.md): Opens the specified profile and returns a reference to the profile.
+- [CMValidateProfile](1804856-cmvalidateprofile.md): Indicates whether the specified profile contains the minimum set of elements required by the current color management module (CMM) for color matching or color checking.
+- [CMCloseProfile](1804861-cmcloseprofile.md): Decrements the reference count for the specified profile reference and, if the reference count reaches 0, frees all private memory and other resources associated with the profile.
+- [CMUpdateProfile](1804864-cmupdateprofile.md): Saves modifications to the specified profile.
+- [CMCopyProfile](1804870-cmcopyprofile.md): Duplicates the specified existing profile.
+- [CMProfileModified](1804872-cmprofilemodified.md): Indicates whether the specified profile has been modified since it was created or last updated.
+- [CMGetProfileMD5](1804876-cmgetprofilemd5.md): Gets the MD5 checksum from the profile header (message digest)
+- [CMSetProfileHeader](1804882-cmsetprofileheader.md): Sets the header for the specified profile.
+- [CMGetProfileLocation](1804885-cmgetprofilelocation.md): Obtains the location of a profile based on the specified profile reference.
+- [NCMGetProfileLocation](1804889-ncmgetprofilelocation.md): Obtains either a profile location structure for a specified profile or the size of the location structure for the profile.
+- [CMCloneProfileRef](1804891-cmcloneprofileref.md): Increments the reference count for the specified profile reference.
+- [CMGetProfileRefCount](1804894-cmgetprofilerefcount.md): Obtains the current reference count for the specified profile.
+- [CMFlattenProfile](1804897-cmflattenprofile.md): Transfers a profile stored in an independent disk file to an external profile format that can be embedded in a graphics document.
+- [NCMUnflattenProfile](1804901-ncmunflattenprofile.md): Unflattens a previously flattened profile.

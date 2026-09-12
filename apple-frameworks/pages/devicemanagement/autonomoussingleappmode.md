@@ -1,0 +1,106 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/autonomoussingleappmode](https://developer.apple.com/documentation/devicemanagement/autonomoussingleappmode)
+
+# AutonomousSingleAppMode
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Device Management Profile  
+**Availability:** macOS 10.13.4+
+
+The payload that configures Autonomous Single App mode.
+
+## Declaration
+
+```
+object AutonomousSingleAppMode
+```
+
+## Properties
+
+- `AllowedApplications` — `[AutonomousSingleAppMode.AllowedApplicationsItem]` (required): An array of dictionaries that specifies the apps that the system grants access to the Accessibility APIs.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Specify `com.apple.asam` as the payload type.
+
+The system only allows installation of one profile of this type, and it requires installation through a user-approved MDM server. Apps listed in this profile have low-level access to the system, including, but not limited to, key logging and user interface manipulation outside the app’s context.
+
+> **Important**
+
+>  If two dictionaries contain the same `BundleIdentifier` value but a different `TeamIdentifier` value, an error occurs and the system doesn’t install the profile.
+
+<a id="Profile-availability"></a>
+
+### Profile availability
+
+|  |  |
+| --- | --- |
+| Device channel | macOS |
+| User channel | N/A |
+| Allow manual install | N/A |
+| Requires supervision | N/A |
+| Requires user-approved MDM | macOS |
+| Allowed in user enrollment | N/A |
+| Allow multiple payloads | N/A |
+
+<a id="Profile-example"></a>
+
+### Profile example
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>AllowedApplications</key>
+            <array>
+                <dict>
+                    <key>BundleIdentifier</key>
+                    <string>com.apple.safari</string>
+                    <key>TeamIdentifier</key>
+                    <string>team-id</string>
+                </dict>
+            </array>
+            <key>PayloadIdentifier</key>
+            <string>com.example.myasampayload</string>
+            <key>PayloadType</key>
+            <string>com.apple.asam</string>
+            <key>PayloadUUID</key>
+            <string>c324fd3e-d98a-4ea8-818a-5991024cddd0</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+    </array>
+    <key>PayloadDisplayName</key>
+    <string>Autonomous Single App Mode</string>
+    <key>PayloadIdentifier</key>
+    <string>com.example.profile</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>467ab3a0-9423-4c16-a05c-5c99d771088f</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>
+```
+
+## Topics
+
+### Objects
+
+- [AutonomousSingleAppMode.AllowedApplicationsItem](autonomoussingleappmode/allowedapplicationsitem.md): A dictionary that specifies an app that can be granted access to the Accessibilty APIs.
+
+## See Also
+
+### App management
+
+- [AppLock](applock.md): The payload that configures a device to run a single app.
+- [AssociatedDomains](associateddomains.md): The payload that configures associated domains.
+- [NSExtensionManagement](nsextensionmanagement.md): The payload that configures the extensions that the system allows or disallows to run on the device.

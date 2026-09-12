@@ -1,0 +1,389 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/hkcorrelation/init(type:start:end:objects:metadata:)](https://developer.apple.com/documentation/healthkit/hkcorrelation/init(type:start:end:objects:metadata:))
+
+# init(type:start:end:objects:metadata:) (Swift)
+
+**Framework:** HealthKit  
+**Kind:** Initializer  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 13.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Instantiates and returns a new correlation instance with the provided metadata.
+
+## Declaration
+
+```swift
+convenience init(type correlationType: HKCorrelationType, start startDate: Date, end endDate: Date, objects: Set<HKSample>, metadata: [String : Any]?)
+```
+
+## Parameters
+
+- `correlationType`: The type for this correlation. For a complete list of correlation types, see Correlation Types.
+- `startDate`: The start date for the sample. This date must be equal to or earlier than the end date; otherwise, this method throws an exception ([invalidArgumentException](../../foundation/nsexceptionname/invalidargumentexception.md)).
+- `endDate`: The end date for the sample. This date must be equal to or later than the start date; otherwise, this method throws an exception ([invalidArgumentException](../../foundation/nsexceptionname/invalidargumentexception.md)).
+- `objects`: A set of [HKSample](../hksample.md) objects. Specifically, this set contains the quantity and category samples to be grouped into this correlation.
+- `metadata`: The metadata dictionary containing extra information that describes this correlation. The dictionary’s keys are all [NSString](../../foundation/nsstring.md) objects . The values may be [NSString](../../foundation/nsstring.md), [NSNumber](../../foundation/nsnumber.md), or [NSDate](../../foundation/nsdate.md) objects. For a complete list of predefined metadata keys, see [Metadata Keys](../metadata-keys.md).
+
+  Using predefined keys helps facilitate sharing data between apps; however, you are also encouraged to create custom keys as needed to extend the HealthKit sample’s capabilities.
+
+  When creating correlations representing food, always use the [HKMetadataKeyFoodType](../hkmetadatakeyfoodtype.md) key to provide the food’s name.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use a correlation object to represent composite data—that is, a sample that requires more than a single value. To create a correlation sample, first create the quantity and category samples you intend to combine into the correlation. Next, create the correlation’s type. Finally, instantiate the correlation, passing in the type, start date, end date, samples, and metadata as shown below.
+
+Use this method when you need to include additional metadata, but the data was not recorded using external hardware. Samples representing food should always include metadata with the [HKMetadataKeyFoodType](../hkmetadatakeyfoodtype.md) key.
+
+**Swift**
+
+```swift
+let date = NSDate();
+ 
+// Create a sample for calories
+ 
+guard let calorieType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDietaryEnergyConsumed) else {
+    fatalError("*** Unable to create the calorie type ***")
+}
+ 
+let calorieQuantity =
+    HKQuantity(unit: HKUnit.kilocalorieUnit(), doubleValue: 110.0)
+ 
+let calorieSample = HKQuantitySample(type: calorieType,
+                                     quantity: calorieQuantity, startDate: date, endDate: date)
+ 
+// Create a sample for total fat
+ 
+guard let fatType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDietaryFatTotal) else {
+    fatalError("*** Unable to create the fat type ***")
+}
+ 
+let fatQuantity =
+    HKQuantity(unit: HKUnit.gramUnit(), doubleValue: 0.0)
+ 
+let fatSample = HKQuantitySample(type: fatType,
+                                 quantity: fatQuantity, startDate: date, endDate: date)
+ 
+// Create a sample for carbohydrates
+ 
+guard let carbohydratesType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDietaryCarbohydrates) else {
+    fatalError("*** Unable to create the carbohydrates type ***")
+}
+ 
+let carbohydratesQuantity =
+    HKQuantity(unit: HKUnit.gramUnit(), doubleValue: 30.0)
+ 
+let carbohydratesSample = HKQuantitySample(type: carbohydratesType,
+                                           quantity: carbohydratesQuantity, startDate: date, endDate: date)
+ 
+// Create a sample for protein
+ 
+guard let proteinType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDietaryProtein) else {
+    fatalError("*** Unable to create the protein type ***")
+}
+ 
+let proteinQuantity =
+    HKQuantity(unit: HKUnit.gramUnit(), doubleValue: 1.0)
+ 
+let proteinSample = HKQuantitySample(type: proteinType,
+                                     quantity: proteinQuantity, startDate: date, endDate: date)
+ 
+// Create the food sample
+ 
+let objects: Set = [calorieSample, fatSample, carbohydratesSample, proteinSample]
+ 
+let metadata = [HKMetadataKeyFoodType: "Banana"]
+ 
+guard let bananaType = HKObjectType.correlationTypeForIdentifier(HKCorrelationTypeIdentifierFood) else {
+    fatalError("*** Unable to create the banana type ***")
+}
+ 
+let banana = HKCorrelation(type: bananaType,
+                           startDate: date, endDate: date, objects: objects, metadata:metadata)
+```
+
+**Objective-C**
+
+```objc
+NSDate *date = [NSDate date];
+ 
+// Create sample for calories
+ 
+HKQuantityType *calorieType = [HKObjectType quantityTypeForIdentifier:
+    HKQuantityTypeIdentifierDietaryEnergyConsumed];
+ 
+HKQuantity *calorieQuantity =
+[HKQuantity quantityWithUnit:[HKUnit kilocalorieUnit] doubleValue:110.0];
+ 
+HKQuantitySample *calorieSample =
+[HKQuantitySample quantitySampleWithType:calorieType
+                                quantity:calorieQuantity
+                               startDate:date
+                                 endDate:date];
+ 
+// Create sample for total fat
+ 
+HKQuantityType *fatType = [HKObjectType quantityTypeForIdentifier:
+    HKQuantityTypeIdentifierDietaryFatTotal];
+ 
+HKQuantity *fatQuantity =
+[HKQuantity quantityWithUnit:[HKUnit gramUnit] doubleValue:0.0];
+ 
+HKQuantitySample *fatSample =
+[HKQuantitySample quantitySampleWithType:fatType
+                                quantity:fatQuantity
+                               startDate:date
+                                 endDate:date];
+ 
+// Create sample for carbohydrates
+ 
+HKQuantityType *carbohydratesType = [HKObjectType quantityTypeForIdentifier:
+    HKQuantityTypeIdentifierDietaryCarbohydrates];
+ 
+HKQuantity *carbohydratesQuantity =
+[HKQuantity quantityWithUnit:[HKUnit gramUnit] doubleValue:30.0];
+ 
+HKQuantitySample *carbohydratesSample =
+[HKQuantitySample quantitySampleWithType:carbohydratesType
+                                quantity:carbohydratesQuantity
+                               startDate:date
+                                 endDate:date];
+ 
+// Create sample for protein
+ 
+HKQuantityType *proteinType = [HKObjectType quantityTypeForIdentifier:
+    HKQuantityTypeIdentifierDietaryProtein];
+ 
+HKQuantity *proteinQuantity =
+[HKQuantity quantityWithUnit:[HKUnit gramUnit] doubleValue:30.0];
+ 
+HKQuantitySample *proteinSample =
+[HKQuantitySample quantitySampleWithType:proteinType
+                                quantity:proteinQuantity
+                               startDate:date
+                                 endDate:date];
+ 
+// Create food sample
+ 
+NSSet *objects = [NSSet setWithObjects:calorieSample, fatSample,
+                  carbohydratesSample, proteinSample, nil];
+ 
+NSDictionary *metadata = @{HKMetadataKeyFoodType: @"Banana"};
+ 
+HKCorrelationType *bananaType = [HKObjectType correlationTypeForIdentifier:
+    HKCorrelationTypeIdentifierFood];
+ 
+HKSample *banana = [HKCorrelation correlationWithType:bananaType
+                                            startDate:date
+                                              endDate:date
+                                              objects:objects metadata:metadata];
+```
+
+## See Also
+
+### Related Documentation
+
+- [objects](objects.md): The set of sample objects that make up the correlation.
+- [correlationType(forIdentifier:)](../hkobjecttype/correlationtype%28foridentifier_%29.md): Deprecated. Returns the shared correlation type for the provided identifier.
+- [endDate](../hksample/enddate.md): The sample’s end date.
+- [correlationType](correlationtype.md): The type for this correlation.
+- [metadata](../hkobject/metadata.md): The metadata for this HealthKit object.
+- [startDate](../hksample/startdate.md): The sample’s start date.
+
+### Creating Correlations
+
+- [init(type:start:end:objects:)](init%28type_start_end_objects_%29.md): Instantiates and returns a new correlation instance.
+- [init(type:start:end:objects:device:metadata:)](init%28type_start_end_objects_device_metadata_%29.md): Instantiates and returns a new correlation instance with the provided device and metadata.
+
+# correlationWithType:startDate:endDate:objects:metadata: (Objective-C)
+
+**Framework:** HealthKit  
+**Kind:** Type Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 13.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Instantiates and returns a new correlation instance with the provided metadata.
+
+## Declaration
+
+```objectivec
++ (instancetype) correlationWithType:(HKCorrelationType *) correlationType startDate:(NSDate *) startDate endDate:(NSDate *) endDate objects:(NSSet<HKSample *> *) objects metadata:(NSDictionary<NSString *,id> *) metadata;
+```
+
+## Parameters
+
+- `correlationType`: The type for this correlation. For a complete list of correlation types, see Correlation Types.
+- `startDate`: The start date for the sample. This date must be equal to or earlier than the end date; otherwise, this method throws an exception ([NSInvalidArgumentException](../../foundation/nsexceptionname/invalidargumentexception.md)).
+- `endDate`: The end date for the sample. This date must be equal to or later than the start date; otherwise, this method throws an exception ([NSInvalidArgumentException](../../foundation/nsexceptionname/invalidargumentexception.md)).
+- `objects`: A set of [HKSample](../hksample.md) objects. Specifically, this set contains the quantity and category samples to be grouped into this correlation.
+- `metadata`: The metadata dictionary containing extra information that describes this correlation. The dictionary’s keys are all [NSString](../../foundation/nsstring.md) objects . The values may be [NSString](../../foundation/nsstring.md), [NSNumber](../../foundation/nsnumber.md), or [NSDate](../../foundation/nsdate.md) objects. For a complete list of predefined metadata keys, see [Metadata Keys](../metadata-keys.md).
+
+  Using predefined keys helps facilitate sharing data between apps; however, you are also encouraged to create custom keys as needed to extend the HealthKit sample’s capabilities.
+
+  When creating correlations representing food, always use the [HKMetadataKeyFoodType](../hkmetadatakeyfoodtype.md) key to provide the food’s name.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use a correlation object to represent composite data—that is, a sample that requires more than a single value. To create a correlation sample, first create the quantity and category samples you intend to combine into the correlation. Next, create the correlation’s type. Finally, instantiate the correlation, passing in the type, start date, end date, samples, and metadata as shown below.
+
+Use this method when you need to include additional metadata, but the data was not recorded using external hardware. Samples representing food should always include metadata with the [HKMetadataKeyFoodType](../hkmetadatakeyfoodtype.md) key.
+
+**Swift**
+
+```swift
+let date = NSDate();
+ 
+// Create a sample for calories
+ 
+guard let calorieType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDietaryEnergyConsumed) else {
+    fatalError("*** Unable to create the calorie type ***")
+}
+ 
+let calorieQuantity =
+    HKQuantity(unit: HKUnit.kilocalorieUnit(), doubleValue: 110.0)
+ 
+let calorieSample = HKQuantitySample(type: calorieType,
+                                     quantity: calorieQuantity, startDate: date, endDate: date)
+ 
+// Create a sample for total fat
+ 
+guard let fatType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDietaryFatTotal) else {
+    fatalError("*** Unable to create the fat type ***")
+}
+ 
+let fatQuantity =
+    HKQuantity(unit: HKUnit.gramUnit(), doubleValue: 0.0)
+ 
+let fatSample = HKQuantitySample(type: fatType,
+                                 quantity: fatQuantity, startDate: date, endDate: date)
+ 
+// Create a sample for carbohydrates
+ 
+guard let carbohydratesType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDietaryCarbohydrates) else {
+    fatalError("*** Unable to create the carbohydrates type ***")
+}
+ 
+let carbohydratesQuantity =
+    HKQuantity(unit: HKUnit.gramUnit(), doubleValue: 30.0)
+ 
+let carbohydratesSample = HKQuantitySample(type: carbohydratesType,
+                                           quantity: carbohydratesQuantity, startDate: date, endDate: date)
+ 
+// Create a sample for protein
+ 
+guard let proteinType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDietaryProtein) else {
+    fatalError("*** Unable to create the protein type ***")
+}
+ 
+let proteinQuantity =
+    HKQuantity(unit: HKUnit.gramUnit(), doubleValue: 1.0)
+ 
+let proteinSample = HKQuantitySample(type: proteinType,
+                                     quantity: proteinQuantity, startDate: date, endDate: date)
+ 
+// Create the food sample
+ 
+let objects: Set = [calorieSample, fatSample, carbohydratesSample, proteinSample]
+ 
+let metadata = [HKMetadataKeyFoodType: "Banana"]
+ 
+guard let bananaType = HKObjectType.correlationTypeForIdentifier(HKCorrelationTypeIdentifierFood) else {
+    fatalError("*** Unable to create the banana type ***")
+}
+ 
+let banana = HKCorrelation(type: bananaType,
+                           startDate: date, endDate: date, objects: objects, metadata:metadata)
+```
+
+**Objective-C**
+
+```objc
+NSDate *date = [NSDate date];
+ 
+// Create sample for calories
+ 
+HKQuantityType *calorieType = [HKObjectType quantityTypeForIdentifier:
+    HKQuantityTypeIdentifierDietaryEnergyConsumed];
+ 
+HKQuantity *calorieQuantity =
+[HKQuantity quantityWithUnit:[HKUnit kilocalorieUnit] doubleValue:110.0];
+ 
+HKQuantitySample *calorieSample =
+[HKQuantitySample quantitySampleWithType:calorieType
+                                quantity:calorieQuantity
+                               startDate:date
+                                 endDate:date];
+ 
+// Create sample for total fat
+ 
+HKQuantityType *fatType = [HKObjectType quantityTypeForIdentifier:
+    HKQuantityTypeIdentifierDietaryFatTotal];
+ 
+HKQuantity *fatQuantity =
+[HKQuantity quantityWithUnit:[HKUnit gramUnit] doubleValue:0.0];
+ 
+HKQuantitySample *fatSample =
+[HKQuantitySample quantitySampleWithType:fatType
+                                quantity:fatQuantity
+                               startDate:date
+                                 endDate:date];
+ 
+// Create sample for carbohydrates
+ 
+HKQuantityType *carbohydratesType = [HKObjectType quantityTypeForIdentifier:
+    HKQuantityTypeIdentifierDietaryCarbohydrates];
+ 
+HKQuantity *carbohydratesQuantity =
+[HKQuantity quantityWithUnit:[HKUnit gramUnit] doubleValue:30.0];
+ 
+HKQuantitySample *carbohydratesSample =
+[HKQuantitySample quantitySampleWithType:carbohydratesType
+                                quantity:carbohydratesQuantity
+                               startDate:date
+                                 endDate:date];
+ 
+// Create sample for protein
+ 
+HKQuantityType *proteinType = [HKObjectType quantityTypeForIdentifier:
+    HKQuantityTypeIdentifierDietaryProtein];
+ 
+HKQuantity *proteinQuantity =
+[HKQuantity quantityWithUnit:[HKUnit gramUnit] doubleValue:30.0];
+ 
+HKQuantitySample *proteinSample =
+[HKQuantitySample quantitySampleWithType:proteinType
+                                quantity:proteinQuantity
+                               startDate:date
+                                 endDate:date];
+ 
+// Create food sample
+ 
+NSSet *objects = [NSSet setWithObjects:calorieSample, fatSample,
+                  carbohydratesSample, proteinSample, nil];
+ 
+NSDictionary *metadata = @{HKMetadataKeyFoodType: @"Banana"};
+ 
+HKCorrelationType *bananaType = [HKObjectType correlationTypeForIdentifier:
+    HKCorrelationTypeIdentifierFood];
+ 
+HKSample *banana = [HKCorrelation correlationWithType:bananaType
+                                            startDate:date
+                                              endDate:date
+                                              objects:objects metadata:metadata];
+```
+
+## See Also
+
+### Related Documentation
+
+- [objects](objects.md): The set of sample objects that make up the correlation.
+- [correlationTypeForIdentifier:](../hkobjecttype/correlationtype%28foridentifier_%29.md): Deprecated. Returns the shared correlation type for the provided identifier.
+- [endDate](../hksample/enddate.md): The sample’s end date.
+- [correlationType](correlationtype.md): The type for this correlation.
+- [metadata](../hkobject/metadata.md): The metadata for this HealthKit object.
+- [startDate](../hksample/startdate.md): The sample’s start date.
+
+### Creating Correlations
+
+- [correlationWithType:startDate:endDate:objects:](init%28type_start_end_objects_%29.md): Instantiates and returns a new correlation instance.
+- [correlationWithType:startDate:endDate:objects:device:metadata:](init%28type_start_end_objects_device_metadata_%29.md): Instantiates and returns a new correlation instance with the provided device and metadata.

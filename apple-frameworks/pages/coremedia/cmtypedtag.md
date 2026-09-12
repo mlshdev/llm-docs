@@ -1,0 +1,56 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremedia/cmtypedtag](https://developer.apple.com/documentation/coremedia/cmtypedtag)
+
+# CMTypedTag
+
+**Framework:** Core Media  
+**Kind:** Class  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+A tag to set additional metadata on media buffers, with an associated Swift type for its value.
+
+## Declaration
+
+```swift
+class CMTypedTag<TypedValue> where TypedValue : Sendable
+```
+
+## Topics
+
+### Creating Typed Tags
+
+- [init(category:value:)](cmtypedtag/init%28category_value_%29.md): Creates a new instance with the given category and value.
+
+### Inspecting Typed Tags
+
+- [category](cmtypedtag/category-swift.property.md): The category of the tag.
+- [value](cmtypedtag/value.md): The value of the tag, represented as its appropriate type.
+
+### Typed Tag Categories
+
+- [CMTypedTag.Category](cmtypedtag/category-swift.struct.md): An identifier for a media tag category.
+
+## Relationships
+
+### Inherits From
+
+- [CMTag](cmtag-swift.class.md)
+
+### Conforms To
+
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Metadata
+
+- [CMMetadata](cmmetadata.md): The APIs for working with the framework’s Metadata Identifier Services and Metadata Data Type Registry.
+- [CMTag](cmtag-api.md): Types and interfaces for working with Core Media tags.
+- [CMTag](cmtag-swift.class.md): A tag to set additional metadata on media buffers.
+- [CMTagCollection](cmtagcollection.md): Objective-C types and interfaces for working with Core Media tag collections.
+- [CMProjectionType](cmprojectiontype.md): Constants describing the projection surface information in a 3D video buffer or channel.
+- [CMStereoViewComponents](cmstereoviewcomponents.md): Constants describing the stereo views contained within a buffer or channel.
+- [CMStereoViewInterpretationOptions](cmstereoviewinterpretationoptions.md): Create a set of stereo view interpretation options from a constant.
+- [CMPackingType](cmpackingtype.md): The type of packing within each video frame, if any.

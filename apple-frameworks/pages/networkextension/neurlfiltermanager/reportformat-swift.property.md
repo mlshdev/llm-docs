@@ -1,0 +1,63 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/networkextension/neurlfiltermanager/reportformat-swift.property](https://developer.apple.com/documentation/networkextension/neurlfiltermanager/reportformat-swift.property)
+
+# reportFormat
+
+**Framework:** Network Extension  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+
+
+The format the manager uses to send blocked URL reports.
+
+## Declaration
+
+```swift
+var reportFormat: NEURLFilterManager.ReportFormat { get set }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use the values in the [NEURLFilterManager.ReportFormat](reportformat-swift.enum.md) enumeration to specify the format to use. By default, the manager uses the [NEURLFilterManager.ReportFormat.json](reportformat-swift.enum/json.md) format.
+
+<a id="Handling-JSON-results"></a>
+
+### Handling JSON results
+
+When you specify the [NEURLFilterManager.ReportFormat.json](reportformat-swift.enum/json.md) format, your endpoint receives data in JSON as a simple array of strings. The structure of this data is like the following:
+
+```json
+[
+	"example.com",
+	"example2.com",
+	"example3.com"
+]
+```
+
+<a id="Handling-Protobuf-results"></a>
+
+### Handling Protobuf results
+
+When you specify the [NEURLFilterManager.ReportFormat.protobuf](reportformat-swift.enum/protobuf.md) format, your endpoint receives the Protocol Buffers wire format with manual encoding for a repeated string field. Each URL entry follows this binary structure:
+
+- **Field Tag**: 1 byte (`0x0A` = field number 1, wire type 2 for length-delimited).
+- **String Length**: A variable-length integer (varint) encoding the byte length of the URL string.
+- **String Data**: UTF-8 encoded URL bytes.
+
+For strings under 128 bytes, the length is a single byte. For longer strings, the protocol uses varint encoding, where each byte has the MSB set (`0x80`) except the final byte.
+
+The following example shows the encoding of the URL `https://example.com`:
+
+```
+Example encoding for URL "https://example.com":
+[0x0A]    [0x13]    [h][t][t][p][s][:][/][/][e][x][a][m][p][l][e][.][c][o][m]
+^tag      ^len=19   ^------------ 19 bytes of UTF-8 string data ------------^
+```
+
+## See Also
+
+### Producing filtering reports
+
+- [reportEndpoint](reportendpoint.md): The endpoint that the filter manager sends blocked URL reports to.
+- [NEURLFilterManager.ReportFormat](reportformat-swift.enum.md): An enumertion of report format types used when reporting blocked URLs.
+- [reportInterval](reportinterval.md): The time interval (in seconds) at which the system sends reports of blocked URLs.

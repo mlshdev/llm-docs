@@ -1,0 +1,28 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreml/reducing-the-size-of-your-core-ml-app](https://developer.apple.com/documentation/coreml/reducing-the-size-of-your-core-ml-app)
+
+# Reducing the Size of Your Core ML App
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** Core ML  
+**Kind:** Article
+
+Reduce the storage used by the Core ML model inside your app bundle.
+
+<a id="overview"></a>
+
+## Overview
+
+Bundling your machine learning model in your app is the easiest way to get started with Core ML. As models get more advanced, they can become large and take up significant storage space. For a neural-network based model, consider reducing its footprint by using a lower precision representation for its weight parameters. If your model isn’t a neural network that can use lower precision or you need to further reduce your app’s size, add functionality to download and compile your models on the user’s device instead of bundling the models with your app.
+
+<a id="Convert-to-a-lower-precision-model"></a>
+
+### Convert to a lower precision model
+
+The [Core ML Tools](https://coremltools.readme.io/) provide utilities to convert a neural network model’s floating point weights from full-precision into half-precision values — reducing the number of bits used in the representation from 32 down to 16 — or lower precisions of 1 to 8 bits. For more information about using these utilities, see the [Core ML Tools Neural Network Quantization documentation](https://coremltools.readme.io/docs/quantization).
+
+<a id="Download-and-compile-a-model"></a>
+
+### Download and compile a model
+
+Another option to reduce the size of your app is to have the app download the model onto the user’s device and compile it in the background. For example, if users use only a subset of the models your app supports, you don’t need to bundle all the possible models with your app. Instead, the models can be downloaded later based on user behavior. See [Downloading and Compiling a Model on the User’s Device](downloading-and-compiling-a-model-on-the-user-s-device.md).

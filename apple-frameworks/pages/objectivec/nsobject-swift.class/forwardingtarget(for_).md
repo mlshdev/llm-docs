@@ -1,0 +1,75 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/objectivec/nsobject-swift.class/forwardingtarget(for:)](https://developer.apple.com/documentation/objectivec/nsobject-swift.class/forwardingtarget(for:))
+
+# forwardingTarget(for:) (Swift)
+
+**Framework:** Objective-C Runtime  
+**Kind:** Instance Method  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.1+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Returns the object to which unrecognized messages should first be directed.
+
+## Declaration
+
+```swift
+func forwardingTarget(for aSelector: Selector!) -> Any?
+```
+
+## Parameters
+
+- `aSelector`: A [Selector](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/Selector.html#//apple_ref/doc/uid/TP40008195-CH48) for a method that the receiver does not implement.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The object to which unrecognized messages should first be directed.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If an object implements (or inherits) this method, and returns a non-`nil` (and non-`self`) result, that returned object is used as the new receiver object and the message dispatch resumes to that new object. (Obviously if you return `self` from this method, the code would just fall into an infinite loop.)
+
+If you implement this method in a non-root class, if your class has nothing to return for the given selector then you should return the result of invoking super’s implementation.
+
+This method gives an object a chance to redirect an unknown message sent to it before the much more expensive [forwardInvocation:](forwardinvocation_.md) machinery takes over. This is useful when you simply want to redirect messages to another object and can be an order of magnitude faster than regular forwarding. It is not useful where the goal of the forwarding is to capture the NSInvocation, or manipulate the arguments or return value during the forwarding.
+
+# forwardingTargetForSelector: (Objective-C)
+
+**Framework:** Objective-C Runtime  
+**Kind:** Instance Method  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.1+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Returns the object to which unrecognized messages should first be directed.
+
+## Declaration
+
+```objectivec
+- (id) forwardingTargetForSelector:(SEL) aSelector;
+```
+
+## Parameters
+
+- `aSelector`: A [Selector](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/Selector.html#//apple_ref/doc/uid/TP40008195-CH48) for a method that the receiver does not implement.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The object to which unrecognized messages should first be directed.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If an object implements (or inherits) this method, and returns a non-`nil` (and non-`self`) result, that returned object is used as the new receiver object and the message dispatch resumes to that new object. (Obviously if you return `self` from this method, the code would just fall into an infinite loop.)
+
+If you implement this method in a non-root class, if your class has nothing to return for the given selector then you should return the result of invoking super’s implementation.
+
+This method gives an object a chance to redirect an unknown message sent to it before the much more expensive [forwardInvocation:](forwardinvocation_.md) machinery takes over. This is useful when you simply want to redirect messages to another object and can be an order of magnitude faster than regular forwarding. It is not useful where the goal of the forwarding is to capture the NSInvocation, or manipulate the arguments or return value during the forwarding.
+
+## See Also
+
+### Forwarding Messages
+
+- [forwardInvocation:](forwardinvocation_.md): Overridden by subclasses to forward messages to other objects.

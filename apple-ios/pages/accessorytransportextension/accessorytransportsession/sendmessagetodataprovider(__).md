@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/accessorytransportextension/accessorytransportsession/sendmessagetodataprovider(_:)](https://developer.apple.com/documentation/accessorytransportextension/accessorytransportsession/sendmessagetodataprovider(_:))
+
+# sendMessageToDataProvider(\_:)
+
+**Framework:** Accessory Transport Extension  
+**Kind:** Instance Method  
+**Availability:** iOS 26.5+
+
+Sends a message to the data provider extension.
+
+## Declaration
+
+```swift
+func sendMessageToDataProvider(_ message: TransportMessage) throws(AccessoryTransportSession.Error)
+```
+
+## Parameters
+
+- `message`: A transport message to send to the data provider.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this method to relay data from the accessory to your app’s [AccessoryDataProvider](../accessorydataprovider.md) extension. The system decrypts the message, if necessary, before delivering it to the data provider. Data providers receive the message through [messageHandler(\_:)](../../accessorynotifications/notificationsforwarding/accessorynotificationshandler/messagehandler%28__%29.md).
+
+> **Note**
+
+> This method relays data from the accessory for the Bluetooth transport type. For internet transport, the accessory routes its response to the device using [pushToken](pushtoken.md); the system delivers the decrypted response to your data provider extension through the same message handler.

@@ -1,0 +1,42 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/canvasrenderingcontext2d/1632379-strokerect](https://developer.apple.com/documentation/webkitjs/canvasrenderingcontext2d/1632379-strokerect)
+
+# strokeRect
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 3.0+ · Safari Mobile 1.0+
+
+Draws a rectangle using the current stroke color, pattern, or gradient.
+
+## Declaration
+
+```
+void strokeRect(
+    unrestricted float x, 
+    unrestricted float y, 
+    unrestricted float width, 
+    unrestricted float height
+);
+```
+
+## Parameters
+
+- `x`: The left edge of the rectangle, in units right from the origin of the canvas coordinate system.
+- `y`: The top of the rectangle, in units down from the origin of the canvas coordinate system.
+- `width`: The width of the rectangle, in canvas coordinate units.
+- `height`: The height of the rectangle, in canvas coordinate units.
+
+<a id="discussion"></a>
+
+## Discussion
+
+All parameter values are in the canvas’s current coordinate system, subject to the current transformation matrix (rotation, scale, and so on).
+
+## See Also
+
+### Drawing Rectangles
+
+- [clearRect](1632646-clearrect.md): Clears the specified rectangle to transparent black—RGBa(0,0,0,0).
+- [fillRect](1633676-fillrect.md): Fills a specified rectangle in the current fill color, gradient, or pattern.

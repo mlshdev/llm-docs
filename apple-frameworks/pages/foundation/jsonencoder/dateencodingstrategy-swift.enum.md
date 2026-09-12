@@ -1,0 +1,48 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/jsonencoder/dateencodingstrategy-swift.enum](https://developer.apple.com/documentation/foundation/jsonencoder/dateencodingstrategy-swift.enum)
+
+# JSONEncoder.DateEncodingStrategy
+
+**Framework:** Foundation  
+**Kind:** Enumeration  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 8.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+The formatting strategies available for formatting dates when encoding a date as JSON.
+
+## Declaration
+
+```swift
+enum DateEncodingStrategy
+```
+
+## Topics
+
+### Default Formats
+
+- [JSONEncoder.DateEncodingStrategy.deferredToDate](dateencodingstrategy-swift.enum/deferredtodate.md): The strategy that uses formatting from the Date structure.
+
+### Standard Formats
+
+- [JSONEncoder.DateEncodingStrategy.iso8601](dateencodingstrategy-swift.enum/iso8601.md): The strategy that formats dates according to the ISO 8601 and RFC 3339 standards.
+
+### Custom Formats
+
+- [JSONEncoder.DateEncodingStrategy.formatted(\_:)](dateencodingstrategy-swift.enum/formatted%28__%29.md): The strategy that defers formatting settings to a supplied date formatter.
+- [JSONEncoder.DateEncodingStrategy.custom(\_:)](dateencodingstrategy-swift.enum/custom%28__%29.md): The strategy that formats custom dates by calling a user-defined function.
+
+### Epoch Formats
+
+- [JSONEncoder.DateEncodingStrategy.millisecondsSince1970](dateencodingstrategy-swift.enum/millisecondssince1970.md): The strategy that encodes dates in terms of milliseconds since midnight UTC on January 1, 1970.
+- [JSONEncoder.DateEncodingStrategy.secondsSince1970](dateencodingstrategy-swift.enum/secondssince1970.md): The strategy that encodes dates in terms of seconds since midnight UTC on January 1, 1970.
+
+## Relationships
+
+### Conforms To
+
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Encoding Dates
+
+- [dateEncodingStrategy](dateencodingstrategy-swift.property.md): The strategy used when encoding dates as part of a JSON object.

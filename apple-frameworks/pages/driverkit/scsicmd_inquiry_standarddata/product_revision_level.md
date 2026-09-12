@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/scsicmd_inquiry_standarddata/product_revision_level](https://developer.apple.com/documentation/driverkit/scsicmd_inquiry_standarddata/product_revision_level)
+
+# PRODUCT_REVISION_LEVEL
+
+**Interface language:** Objective-C
+
+**Framework:** DriverKit  
+**Kind:** Instance Property  
+**Availability:** DriverKit · iOS · iPadOS · macOS
+
+## Declaration
+
+```objectivec
+char PRODUCT_REVISION_LEVEL[4];
+```

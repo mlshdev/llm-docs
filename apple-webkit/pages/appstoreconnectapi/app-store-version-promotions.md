@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/app-store-version-promotions](https://developer.apple.com/documentation/appstoreconnectapi/app-store-version-promotions)
+
+# App Store Version Promotions
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** API Collection
+
+Apply a version experiment treatment to your app’s product page in the App Store, or to your upcoming App Store version.
+
+## Topics
+
+### Endpoints
+
+- [Create an app store version promotion](post-v1-appstoreversionpromotions.md): Promote a specific App Store version.
+
+### Objects
+
+- [AppStoreVersionPromotion](appstoreversionpromotion.md): A promoted feature badge for an App Store version, highlighting it as new or updated in the App Store.
+- [AppStoreVersionPromotionCreateRequest](appstoreversionpromotioncreaterequest.md): The request body you use to create an App Store version promotion.
+
+## See Also
+
+### App Store Version Experiments
+
+- [App Store version experiments](app-store-version-experiments.md): Test elements of your App Store product page.
+- [App Store Version Experiment Treatments](app-store-version-experiment-treatments.md): Create and update the metadata and the optional icon that represent the treatment you apply to an App Store version experiment.
+- [App Store Version Experiment Treatment Localizations](app-store-version-experiment-treatment-localizations.md): Manage the localized assets, including screenshots and previews, for an App Store version experiment treatment.

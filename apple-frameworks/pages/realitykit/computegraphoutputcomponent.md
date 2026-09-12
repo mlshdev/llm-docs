@@ -1,0 +1,34 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/computegraphoutputcomponent](https://developer.apple.com/documentation/realitykit/computegraphoutputcomponent)
+
+# ComputeGraphOutputComponent
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+A transient component that identifies the compute graph output associated with an entity.
+
+## Declaration
+
+```swift
+struct ComputeGraphOutputComponent
+```
+
+<a id="overview"></a>
+
+## Overview
+
+The system attaches this component to child entities that represent individual graph outputs. Use `outputID` to correlate the entity with a specific output inside the owning entity’s running simulation.
+
+## Topics
+
+### Instance Properties
+
+- [outputID](computegraphoutputcomponent/outputid.md): The identifier of the output node in the compute graph that this entity represents.
+
+## Relationships
+
+### Conforms To
+
+- [Component](component.md)
+- [TransientComponent](transientcomponent.md)

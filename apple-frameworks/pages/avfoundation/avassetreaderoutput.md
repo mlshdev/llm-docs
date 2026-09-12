@@ -1,0 +1,153 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avassetreaderoutput](https://developer.apple.com/documentation/avfoundation/avassetreaderoutput)
+
+# AVAssetReaderOutput (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Class  
+**Availability:** iOS 4.1+ · iPadOS 4.1+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+
+
+An abstract class that defines the interface to read media samples from an asset reader.
+
+## Declaration
+
+```swift
+class AVAssetReaderOutput
+```
+
+## Mentioned In
+
+- [Tagging media with video color information](tagging-media-with-video-color-information.md)
+
+<a id="overview"></a>
+
+## Overview
+
+You add concrete output instances, such as [AVAssetReaderTrackOutput](avassetreadertrackoutput.md) or [AVAssetReaderVideoCompositionOutput](avassetreadervideocompositionoutput.md), to an asset reader to perform specific tasks.
+
+> **Important**
+
+>  If you don’t require modifying sample data in-place, set the value of the [alwaysCopiesSampleData](avassetreaderoutput/alwayscopiessampledata.md) property to [false](https://developer.apple.com/documentation/swift/false) to prevent the output from making unnecessary copies.
+
+## Topics
+
+### Configuring reading
+
+- [alwaysCopiesSampleData](avassetreaderoutput/alwayscopiessampledata.md): Deprecated. A Boolean value that indicates whether the output vends copied sample data.
+- [supportsRandomAccess](avassetreaderoutput/supportsrandomaccess.md): Deprecated. A Boolean value that indicates whether the output supports reconfiguring the time ranges it reads.
+- [reset(forReadingTimeRanges:)](avassetreaderoutput/reset%28forreadingtimeranges_%29.md): Deprecated. Restarts reading with a new set of time ranges.
+- [markConfigurationAsFinal()](avassetreaderoutput/markconfigurationasfinal%28%29.md): Deprecated. Tells the output that it’s finished reconfiguring time ranges, and allows the asset reader to advance to a completed state.
+
+### Copying sample buffers
+
+- [copyNextSampleBuffer()](avassetreaderoutput/copynextsamplebuffer%28%29.md): Deprecated. Copies the next sample buffer from the output.
+- [AVAssetReaderOutput.Provider](avassetreaderoutput/provider.md): An object that reads a collection of samples of a common media type from an asset reader.
+- [AVAssetReaderOutput.RandomAccessController](avassetreaderoutput/randomaccesscontroller.md): Object used to reset an output provider to read specified time ranges.
+- [AVAssetReaderOutput.SupportedPayload](avassetreaderoutput/supportedpayload.md)
+
+### Inspecting the media type
+
+- [mediaType](avassetreaderoutput/mediatype.md): The media type of samples that the output reads.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [AVAssetReaderAudioMixOutput](avassetreaderaudiomixoutput.md)
+- [AVAssetReaderSampleReferenceOutput](avassetreadersamplereferenceoutput.md)
+- [AVAssetReaderTrackOutput](avassetreadertrackoutput.md)
+- [AVAssetReaderVideoCompositionOutput](avassetreadervideocompositionoutput.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Media reading
+
+- [Reading multiview 3D video files](reading-multiview-3d-video-files.md): Render single images for the left eye and right eye from a multiview High Efficiency Video Coding format file by reading individual video frames.
+- [AVAssetReader](avassetreader.md): An object that reads media data from an asset.
+- [AVAssetReaderTrackOutput](avassetreadertrackoutput.md): An object that reads media data from a single track of an asset.
+- [AVAssetReaderAudioMixOutput](avassetreaderaudiomixoutput.md): An object that reads audio samples that result from mixing audio from one or more tracks.
+- [AVAssetReaderVideoCompositionOutput](avassetreadervideocompositionoutput.md): An object that reads composited video frames from one or more tracks of an asset.
+- [AVAssetReaderSampleReferenceOutput](avassetreadersamplereferenceoutput.md): An object that reads sample references from an asset track.
+- [AVAssetReaderOutputMetadataAdaptor](avassetreaderoutputmetadataadaptor.md): Deprecated. An object that creates timed metadata group objects for an asset track.
+
+# AVAssetReaderOutput (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Class  
+**Availability:** iOS 4.1+ · iPadOS 4.1+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+
+
+An abstract class that defines the interface to read media samples from an asset reader.
+
+## Declaration
+
+```objectivec
+@interface AVAssetReaderOutput : NSObject
+```
+
+## Mentioned In
+
+- [Tagging media with video color information](tagging-media-with-video-color-information.md)
+
+<a id="overview"></a>
+
+## Overview
+
+You add concrete output instances, such as [AVAssetReaderTrackOutput](avassetreadertrackoutput.md) or [AVAssetReaderVideoCompositionOutput](avassetreadervideocompositionoutput.md), to an asset reader to perform specific tasks.
+
+> **Important**
+
+>  If you don’t require modifying sample data in-place, set the value of the [alwaysCopiesSampleData](avassetreaderoutput/alwayscopiessampledata.md) property to [false](https://developer.apple.com/documentation/swift/false) to prevent the output from making unnecessary copies.
+
+## Topics
+
+### Configuring reading
+
+- [alwaysCopiesSampleData](avassetreaderoutput/alwayscopiessampledata.md): Deprecated. A Boolean value that indicates whether the output vends copied sample data.
+- [supportsRandomAccess](avassetreaderoutput/supportsrandomaccess.md): Deprecated. A Boolean value that indicates whether the output supports reconfiguring the time ranges it reads.
+- [resetForReadingTimeRanges:](avassetreaderoutput/reset%28forreadingtimeranges_%29.md): Deprecated. Restarts reading with a new set of time ranges.
+- [markConfigurationAsFinal](avassetreaderoutput/markconfigurationasfinal%28%29.md): Deprecated. Tells the output that it’s finished reconfiguring time ranges, and allows the asset reader to advance to a completed state.
+
+### Copying sample buffers
+
+- [copyNextSampleBuffer](avassetreaderoutput/copynextsamplebuffer%28%29.md): Deprecated. Copies the next sample buffer from the output.
+
+### Inspecting the media type
+
+- [mediaType](avassetreaderoutput/mediatype.md): The media type of samples that the output reads.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [AVAssetReaderAudioMixOutput](avassetreaderaudiomixoutput.md)
+- [AVAssetReaderSampleReferenceOutput](avassetreadersamplereferenceoutput.md)
+- [AVAssetReaderTrackOutput](avassetreadertrackoutput.md)
+- [AVAssetReaderVideoCompositionOutput](avassetreadervideocompositionoutput.md)
+
+## See Also
+
+### Media reading
+
+- [Reading multiview 3D video files](reading-multiview-3d-video-files.md): Render single images for the left eye and right eye from a multiview High Efficiency Video Coding format file by reading individual video frames.
+- [AVAssetReader](avassetreader.md): An object that reads media data from an asset.
+- [AVAssetReaderTrackOutput](avassetreadertrackoutput.md): An object that reads media data from a single track of an asset.
+- [AVAssetReaderAudioMixOutput](avassetreaderaudiomixoutput.md): An object that reads audio samples that result from mixing audio from one or more tracks.
+- [AVAssetReaderVideoCompositionOutput](avassetreadervideocompositionoutput.md): An object that reads composited video frames from one or more tracks of an asset.
+- [AVAssetReaderSampleReferenceOutput](avassetreadersamplereferenceoutput.md): An object that reads sample references from an asset track.
+- [AVAssetReaderOutputMetadataAdaptor](avassetreaderoutputmetadataadaptor.md): Deprecated. An object that creates timed metadata group objects for an asset track.

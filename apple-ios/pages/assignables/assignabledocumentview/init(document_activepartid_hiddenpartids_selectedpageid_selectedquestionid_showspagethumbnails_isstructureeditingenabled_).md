@@ -1,0 +1,48 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/assignables/assignabledocumentview/init(document:activepartid:hiddenpartids:selectedpageid:selectedquestionid:showspagethumbnails:isstructureeditingenabled:)](https://developer.apple.com/documentation/assignables/assignabledocumentview/init(document:activepartid:hiddenpartids:selectedpageid:selectedquestionid:showspagethumbnails:isstructureeditingenabled:))
+
+# init(document:activePartID:hiddenPartIDs:selectedPageID:selectedQuestionID:showsPageThumbnails:isStructureEditingEnabled:)
+
+**Framework:** Assignables  
+**Kind:** Initializer  
+**Availability:** iOS 17.4+ · iPadOS 17.4+ · Mac Catalyst 17.4+ · visionOS
+
+Displays an `AssignableDocument`.
+
+## Declaration
+
+```swift
+@MainActor @preconcurrency init(document: Binding<AssignableDocumentView.Document>, activePartID: MergeablePartsContainerPartID? = nil, hiddenPartIDs: [MergeablePartsContainerPartID] = [], selectedPageID: Binding<AssignableDocumentView.Document.Page.ID?>? = nil, selectedQuestionID: Binding<AssignableDocumentView.Document.Question.ID?>? = nil, showsPageThumbnails: Bool = true, isStructureEditingEnabled: Bool = true)
+```
+
+## Parameters
+
+- `document`: A binding to the [AssignableDocumentView.Document](document.md) to present in the view.
+- `activePartID`: The `PartID` to enable user interaction on.
+- `hiddenPartIDs`: A set of `PartID`s to hide on this view. Treated as a set.
+- `selectedPageID`: A binding to the selected page id.
+- `selectedQuestionID`: A binding to the selected question id.
+- `showsPageThumbnails`: Controls showing or hiding the document pages thumbnail previews.
+- `isStructureEditingEnabled`: Controls access to actions that allow changing the structure of the document on the page thumbnail view contextual menu (i.e. add/duplicate/move/remove pages).
+
+<a id="discussion"></a>
+
+## Discussion
+
+- Example:
+
+```
+    AssignableDocumentView(
+        document: $document,
+        activePartID: activeLayerID,
+        hiddenPartIDs: hiddenPartIDs,
+        selectedPageID: $selectedPageID,
+        showsPageThumbnails: isMultiPageDocument,
+        isStructureEditingEnabled: false,
+        onMarkupActivation: { isMarkupActivated in
+            if isMarkupActivated {
+                activeLayerID = AssignableDocument.PartIDs.instructionMarkup
+                isMarkupSelected = true
+            }
+        }
+    )
+```

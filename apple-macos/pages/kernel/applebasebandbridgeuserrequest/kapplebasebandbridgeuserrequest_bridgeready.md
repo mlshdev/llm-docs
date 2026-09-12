@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/applebasebandbridgeuserrequest/kapplebasebandbridgeuserrequest_bridgeready](https://developer.apple.com/documentation/kernel/applebasebandbridgeuserrequest/kapplebasebandbridgeuserrequest_bridgeready)
+
+# kAppleBasebandBridgeUserRequest_BridgeReady
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Enumeration Case  
+**Availability:** macOS 13.0+
+
+## Declaration
+
+```objectivec
+kAppleBasebandBridgeUserRequest_BridgeReady
+```

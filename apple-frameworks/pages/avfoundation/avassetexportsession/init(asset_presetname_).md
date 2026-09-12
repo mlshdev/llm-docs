@@ -1,0 +1,52 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avassetexportsession/init(asset:presetname:)](https://developer.apple.com/documentation/avfoundation/avassetexportsession/init(asset:presetname:))
+
+# init(asset:presetName:) (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Initializer  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+
+
+Creates an export session with a preset configuration.
+
+## Declaration
+
+```swift
+init?(asset: AVAsset, presetName: String)
+```
+
+## Parameters
+
+- `asset`: The asset to export.
+- `presetName`: A string constant that specifies the preset template for the export. See [Export presets](../export-presets.md) for available values.
+
+## See Also
+
+### Creating an export session
+
+- [Export presets](../export-presets.md): Configure an export session to output media in standard sizes and formats.
+
+# initWithAsset:presetName: (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+
+
+Creates an export session with a preset configuration.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithAsset:(AVAsset *) asset presetName:(NSString *) presetName;
+```
+
+## Parameters
+
+- `asset`: The asset to export.
+- `presetName`: A string constant that specifies the preset template for the export. See [Export presets](../export-presets.md) for available values.
+
+## See Also
+
+### Creating an export session
+
+- [exportSessionWithAsset:presetName:](exportsessionwithasset_presetname_.md): Returns a new asset export session that uses the specified preset.
+- [Export presets](../export-presets.md): Configure an export session to output media in standard sizes and formats.

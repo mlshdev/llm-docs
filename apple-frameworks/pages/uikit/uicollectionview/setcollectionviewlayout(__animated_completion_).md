@@ -1,0 +1,79 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uicollectionview/setcollectionviewlayout(_:animated:completion:)](https://developer.apple.com/documentation/uikit/uicollectionview/setcollectionviewlayout(_:animated:completion:))
+
+# setCollectionViewLayout(\_:animated:completion:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+Changes the collection view’s layout and notifies you when the animations complete.
+
+## Declaration
+
+```swift
+func setCollectionViewLayout(_ layout: UICollectionViewLayout, animated: Bool, completion: ((Bool) -> Void)? = nil)
+```
+
+## Parameters
+
+- `layout`: The new layout object for the collection view.
+- `animated`: Specify [true](https://developer.apple.com/documentation/swift/true) if you want to animate changes from the current layout to the new layout specified by the `layout` parameter. Specify [false](https://developer.apple.com/documentation/swift/false) to make the change without animations.
+- `completion`: The block that’s executed when the layout transition finishes or is terminated by the user. This block takes the following parameter:
+
+  - **finished**: A Boolean indicating whether the transition completed successfully. This parameter is [true](https://developer.apple.com/documentation/swift/true) if the transition finished and the new layout is installed. It’s [false](https://developer.apple.com/documentation/swift/false) if the user aborted the transition and returned to the old layout.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method initiates a layout change programmatically, notifying you when the transition is complete. If you choose to animate the layout change, the animation timing and parameters are controlled by the collection view.
+
+## See Also
+
+### Changing the layout
+
+- [collectionViewLayout](collectionviewlayout.md): The layout used to organize the collected view’s items.
+- [setCollectionViewLayout(\_:animated:)](setcollectionviewlayout%28__animated_%29.md): Changes the collection view’s layout and optionally animates the change.
+- [startInteractiveTransition(to:completion:)](startinteractivetransition%28to_completion_%29.md): Changes the collection view’s current layout using an interactive transition effect.
+- [finishInteractiveTransition()](finishinteractivetransition%28%29.md): Tells the collection view to finish an interactive transition by installing the intended target layout.
+- [cancelInteractiveTransition()](cancelinteractivetransition%28%29.md): Tells the collection view to cancel an interactive transition and return to its original layout object.
+- [UICollectionView.LayoutInteractiveTransitionCompletion](layoutinteractivetransitioncompletion.md): The completion block called at the end of an interactive transition for a collection view.
+
+# setCollectionViewLayout:animated:completion: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · tvOS · visionOS 1.0+
+
+Changes the collection view’s layout and notifies you when the animations complete.
+
+## Declaration
+
+```objectivec
+- (void) setCollectionViewLayout:(UICollectionViewLayout *) layout animated:(BOOL) animated completion:(void (^)(BOOL finished)) completion;
+```
+
+## Parameters
+
+- `layout`: The new layout object for the collection view.
+- `animated`: Specify [true](https://developer.apple.com/documentation/swift/true) if you want to animate changes from the current layout to the new layout specified by the `layout` parameter. Specify [false](https://developer.apple.com/documentation/swift/false) to make the change without animations.
+- `completion`: The block that’s executed when the layout transition finishes or is terminated by the user. This block takes the following parameter:
+
+  - **finished**: A Boolean indicating whether the transition completed successfully. This parameter is [true](https://developer.apple.com/documentation/swift/true) if the transition finished and the new layout is installed. It’s [false](https://developer.apple.com/documentation/swift/false) if the user aborted the transition and returned to the old layout.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method initiates a layout change programmatically, notifying you when the transition is complete. If you choose to animate the layout change, the animation timing and parameters are controlled by the collection view.
+
+## See Also
+
+### Changing the layout
+
+- [collectionViewLayout](collectionviewlayout.md): The layout used to organize the collected view’s items.
+- [setCollectionViewLayout:animated:](setcollectionviewlayout%28__animated_%29.md): Changes the collection view’s layout and optionally animates the change.
+- [startInteractiveTransitionToCollectionViewLayout:completion:](startinteractivetransition%28to_completion_%29.md): Changes the collection view’s current layout using an interactive transition effect.
+- [finishInteractiveTransition](finishinteractivetransition%28%29.md): Tells the collection view to finish an interactive transition by installing the intended target layout.
+- [cancelInteractiveTransition](cancelinteractivetransition%28%29.md): Tells the collection view to cancel an interactive transition and return to its original layout object.
+- [UICollectionViewLayoutInteractiveTransitionCompletion](layoutinteractivetransitioncompletion.md): The completion block called at the end of an interactive transition for a collection view.

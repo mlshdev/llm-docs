@@ -1,0 +1,145 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/appscampaignreportresponse](https://developer.apple.com/documentation/apple-ads-platform-api/appscampaignreportresponse)
+
+# AppsCampaignReportResponse
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Object  
+**Availability:** Apple Ads Platform API 1.0+
+
+The top-level response envelope for apps campaign-level reports.
+
+## Declaration
+
+```
+object AppsCampaignReportResponse
+```
+
+## Properties
+
+- `result` — `AppsCampaignResultContainer`: Wraps the array of report rows, each including campaign `metadata`, `totalMetrics`, and `granularMetrics`. If no rows match the request, `result` is returned as an empty object. See [AppsCampaignResultContainer](appscampaignresultcontainer.md) for details.
+- `pagination` — `ResponsePagination`: See [ResponsePagination](responsepagination.md) for details.
+- `error` — `Error`: Populated with an `ErrorResponse` describing the failure when the request fails. See [ErrorResponse](errorresponse.md) for details.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Each row nests campaign `metadata` alongside `totalMetrics` for the full date range and, when requested, `granularMetrics` broken down by day.
+
+<a id="Example"></a>
+
+### Example
+
+```json
+{
+  "result": {
+    "rows": [
+      {
+        "metadata": {
+          "id": 555666777,
+          "promotedObjectType": "APPSTORE_APP",
+          "promotedObjectId": "987654321",
+          "name": "AwayFinder - App Campaign",
+          "status": "ENABLED",
+          "deleted": false,
+          "displayStatus": "RUNNING",
+          "modificationTime": "2025-01-10T08:00:00.000",
+          "creationTime": "2024-11-01T08:00:00.000",
+          "adAccountId": 123456789,
+          "systemStatus": "RUNNING",
+          "systemStatusReasons": [],
+          "billingEvent": "TAPS",
+          "systemStatusLimitingReasons": [],
+          "dailyBudget": {
+            "value": {
+              "amount": "100.00",
+              "currency": "USD"
+            }
+          },
+          "startTime": "2024-11-01T08:00:00.000",
+          "endTime": null,
+          "bidStrategy": {
+            "bidStrategyType": "MANUAL_CPT",
+            "bid": {
+              "amount": "1.50",
+              "currency": "USD"
+            }
+          },
+          "adChannelType": "SEARCH"
+        },
+        "totalMetrics": {
+          "localSpend": {
+            "amount": "482.50",
+            "currency": "USD"
+          },
+          "impressions": 152300,
+          "taps": 3210,
+          "ttr": 0.021,
+          "totalInstalls": 768
+        },
+        "granularMetrics": [
+          {
+            "date": "2025-01-10",
+            "localSpend": {
+              "amount": "241.25",
+              "currency": "USD"
+            },
+            "impressions": 76150,
+            "taps": 1605,
+            "ttr": 0.021,
+            "totalInstalls": 384
+          },
+          {
+            "date": "2025-01-11",
+            "localSpend": {
+              "amount": "241.25",
+              "currency": "USD"
+            },
+            "impressions": 76150,
+            "taps": 1605,
+            "ttr": 0.021,
+            "totalInstalls": 384
+          }
+        ]
+      }
+    ],
+    "summary": {
+      "grandTotal": {
+        "localSpend": {
+          "amount": "482.50",
+          "currency": "USD"
+        },
+        "impressions": 152300,
+        "taps": 3210,
+        "ttr": 0.021,
+        "totalInstalls": 768
+      }
+    }
+  },
+  "pagination": {
+    "pageSize": 20,
+    "offset": 0,
+    "totalCount": 1
+  }
+}
+```
+
+## See Also
+
+- [AppsReportingRequest](appsreportingrequest.md): Request body for apps reporting queries.
+- [AppsReportingCampaign](appsreportingcampaign.md): Campaign metadata for apps report rows.
+- [AppsReportingAdGroup](appsreportingadgroup.md): Ad group metadata for apps report rows.
+- [AppsReportingAd](appsreportingad.md): Ad metadata for apps report rows.
+- [AppsReportingCreative](appsreportingcreative.md): Creative metadata for apps ads.
+- [AppsCampaignReportRow](appscampaignreportrow.md): A single row in an apps campaign report, containing campaign metadata, total metrics, and optional granular time-series metrics.
+- [AppsCampaignReportSummary](appscampaignreportsummary.md): The grand-total metrics aggregated across all rows in an Apps campaign report.
+- [AppsCampaignResultContainer](appscampaignresultcontainer.md): Wraps the array of Apps campaign report rows along with a grand-total summary.
+- [AppsAdGroupReportResponse](appsadgroupreportresponse.md): The top-level response envelope for apps ad group reports.
+- [AppsAdGroupReportRow](appsadgroupreportrow.md): A single row in an Apps ad group report, containing ad group metadata, total metrics, and optional granular time-series metrics.
+- [AppsAdGroupReportSummary](appsadgroupreportsummary.md): The grand-total metrics aggregated across all rows in an Apps ad group report.
+- [AppsAdGroupResultContainer](appsadgroupresultcontainer.md): Wraps the array of Apps ad group report rows along with a grand-total summary.
+- [AppsAdReportResponse](appsadreportresponse.md): The top-level response envelope for apps ad-level reports.
+- [AppsAdReportRow](appsadreportrow.md): A single row in an Apps ad-level report, containing ad metadata, total metrics, and optional granular time-series metrics.
+- [AppsAdReportSummary](appsadreportsummary.md): The grand-total metrics aggregated across all rows in an Apps ad-level report.

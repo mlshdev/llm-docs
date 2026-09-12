@@ -1,0 +1,23 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/entityaction/animatedvaluetype](https://developer.apple.com/documentation/realitykit/entityaction/animatedvaluetype)
+
+# animatedValueType
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
+
+A value that defines the type that the action animates, if the action animates a target value.
+
+## Declaration
+
+```swift
+var animatedValueType: (any AnimatableData.Type)? { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+In your implementation, return a type that matches the action animation’s bind target.
+
+For example if the action animates a [Transform](../transform.md), return `Transform.self` in your implementation, and set the action animation’s bind target to  [BindTarget.transform](../bindtarget/transform.md) when creating an [AnimationResource](../animationresource.md) with `AnimationResource.makeActionAnimation(...)`.

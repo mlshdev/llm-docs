@@ -1,0 +1,67 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accessibility/inspecting-the-accessibility-of-screens](https://developer.apple.com/documentation/accessibility/inspecting-the-accessibility-of-screens)
+
+# Inspecting the accessibility of the screens in your app
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** Accessibility  
+**Kind:** Article
+
+Focus on your app with Accessibility Inspector and investigate potential issues on each screen.
+
+<a id="Overview"></a>
+
+## Overview
+
+To investigate potential accessibility issues in your app, use Accessibility Inspector to display information about the accessibility properties of elements on screen in your app. Accessibility issues can occur on individual elements and when people navigate between elements, and you can detect both kinds of issue with the inspector.
+
+To open Accessibility Inspector, open Xcode and choose Xcode \> Open Developer Tool \> Accessibility Inspector.
+
+<a id="Target-your-app"></a>
+
+### Target your app
+
+In Accessibility Inspector, the target menu displays a list of connected devices and apps you can inspect. By default, it displays apps running on your Mac. If you’re developing a macOS app, pick your app from the list of running apps. If you’re developing for iOS, iPadOS, watchOS, or tvOS, select the name of the device on which the app is running, then pick the app from the processes menu. For information about targeting the correct device, see [Running your app on simulated or physical devices](https://developer.apple.com/documentation/xcode/running-your-app-on-simulated-or-physical-devices).
+
+> **Note**
+
+> Accessibility Inspector targets the current foreground app by default.
+
+Once you select your app, Accessibility Inspector displays detailed information about the accessibility properties of the current screen and focused element. The following images show the inspection of an app with the Quote element selected, and the corresponding iOS app showing the Quote element highlighted in green:
+
+**Accessibility Inspector window**
+
+![The accessibility inspector inspecting an app with the Quote button selected.](https://developer.apple.com/images/com.apple.Accessibility/accessibility-inspector-window-for-quote@2x.png)
+
+**Corresponding iOS app**
+
+![An iOS app being inspected by Accessibility Inspector. The Quote button is highlighted by a green rectangle that indicates it's the current target of inspection.](https://developer.apple.com/images/com.apple.Accessibility/quote-button-highlighted-in-green@2x.png)
+
+<a id="Inspect-individual-elements"></a>
+
+### Inspect individual elements
+
+You choose which element to inspect with the *Target an element* button or by pressing Option Space to toggle inspection mode. While in inspection mode, interact with the element you want to inspect to select it. For example, in macOS, click the element to select it. Similarly, in iOS, tap the element to select it.
+
+Accessibility Inspector displays information about the element you select in several sections:
+
+- **Basic**: The most important accessibility information for an element.
+- **Actions**: Interactions available for the current element, such as Activate, Scroll left or right, or accessibility custom actions.
+- **Element**: Detailed accessibility properties for the current element.
+- **Hierarchy**: Information about the view hierarchy on the current screen that leads from the root to the currently selected element.
+
+Each screen in your app has the potential to contain accessibility issues; periodically navigate through your app during development and check for issues. If you find an inaccessible element, focus Accessibility Inspector on that element, examine its values, and trigger its actions to find the problem. For more information, see [Performing accessibility audits for your app](performing-accessibility-audits-for-your-app.md).
+
+<a id="Navigate-elements-in-accessibility-order"></a>
+
+### Navigate elements in accessibility order
+
+The navigation section of the inspector contains controls for navigating the app in the same order that accessibility features like VoiceOver use to create a linear path through the elements of the current screen. You can also use these controls to navigate to individual elements for inspection.
+
+The play button starts an automatic sequence of navigation that loops from the current element to the end of the screen. The previous and next buttons advance the selected element one at a time in the linear navigation order. You can also press an arrow key while holding down the Control and Command keys to navigate. The speak button reads the current element aloud similar to how VoiceOver would speak the element to someone selecting this element in your app using VoiceOver.
+
+> **Note**
+
+> By default, left and right navigation drills into elements if possible. To change this navigation behavior to strictly traverse sibling elements, choose Inspection \> Disable Auto-interact Into Elements.
+
+If any elements have missing or improper spoken descriptions, find the source of that element in your app’s source code and make corrections.

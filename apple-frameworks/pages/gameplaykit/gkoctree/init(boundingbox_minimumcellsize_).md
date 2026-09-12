@@ -1,0 +1,73 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/gameplaykit/gkoctree/init(boundingbox:minimumcellsize:)](https://developer.apple.com/documentation/gameplaykit/gkoctree/init(boundingbox:minimumcellsize:))
+
+# init(boundingBox:minimumCellSize:) (Swift)
+
+**Framework:** GameplayKit  
+**Kind:** Initializer  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 10.12+ · tvOS 10.0+ · visionOS 1.0+
+
+Initializes an octree with the specified dimensions.
+
+## Declaration
+
+```swift
+init(boundingBox box: GKBox, minimumCellSize minCellSize: Float)
+```
+
+## Parameters
+
+- `box`: The axis-aligned rectangular bounding volume encompassing all possible elements of the tree. Elements added to the tree must lie entirely within this box.
+- `minCellSize`: The minimum dimension (width, height, and depth) of a node in the tree.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new octree object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The `minCellSize` parameter controls the memory usage and performance of the tree. A lower value causes the tree to make more spatial divisions when adding elements; a higher value causes the tree to create fewer such divisions, but store more elements in each node. Which direction leads to better performance depends on the number and spatial arrangement of the elements you add to the tree—for best results, profile with different values to find one best suited to your app or game.
+
+For more information, see [GameplayKit Programming Guide](https://developer.apple.com/library/archive/documentation/General/Conceptual/GameplayKit_Guide/index.html#//apple_ref/doc/uid/TP40015172).
+
+# initWithBoundingBox:minimumCellSize: (Objective-C)
+
+**Framework:** GameplayKit  
+**Kind:** Instance Method  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 10.12+ · tvOS 10.0+ · visionOS 1.0+
+
+Initializes an octree with the specified dimensions.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithBoundingBox:(GKBox) box minimumCellSize:(float) minCellSize;
+```
+
+## Parameters
+
+- `box`: The axis-aligned rectangular bounding volume encompassing all possible elements of the tree. Elements added to the tree must lie entirely within this box.
+- `minCellSize`: The minimum dimension (width, height, and depth) of a node in the tree.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new octree object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The `minCellSize` parameter controls the memory usage and performance of the tree. A lower value causes the tree to make more spatial divisions when adding elements; a higher value causes the tree to create fewer such divisions, but store more elements in each node. Which direction leads to better performance depends on the number and spatial arrangement of the elements you add to the tree—for best results, profile with different values to find one best suited to your app or game.
+
+For more information, see [GameplayKit Programming Guide](https://developer.apple.com/library/archive/documentation/General/Conceptual/GameplayKit_Guide/index.html#//apple_ref/doc/uid/TP40015172).
+
+## See Also
+
+### Creating an Octree
+
+- [octreeWithBoundingBox:minimumCellSize:](octreewithboundingbox_minimumcellsize_.md): Creates an octree with the specified dimensions.

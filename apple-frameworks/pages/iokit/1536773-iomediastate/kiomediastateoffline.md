@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1536773-iomediastate/kiomediastateoffline](https://developer.apple.com/documentation/iokit/1536773-iomediastate/kiomediastateoffline)
+
+# kIOMediaStateOffline
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.4+
+
+## Declaration
+
+```objectivec
+kIOMediaStateOffline = 0
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Media is not available.

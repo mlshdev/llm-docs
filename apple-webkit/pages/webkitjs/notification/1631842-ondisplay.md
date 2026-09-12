@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/notification/1631842-ondisplay](https://developer.apple.com/documentation/webkitjs/notification/1631842-ondisplay)
+
+# ondisplay
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 9.0+
+
+## Declaration
+
+```
+attribute EventHandler ondisplay;
+```

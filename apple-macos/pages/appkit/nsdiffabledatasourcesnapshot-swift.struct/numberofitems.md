@@ -1,0 +1,22 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsdiffabledatasourcesnapshot-swift.struct/numberofitems](https://developer.apple.com/documentation/appkit/nsdiffabledatasourcesnapshot-swift.struct/numberofitems)
+
+# numberOfItems
+
+**Framework:** AppKit  
+**Kind:** Instance Property  
+**Availability:** macOS 10.15.1+
+
+The number of items in the snapshot.
+
+## Declaration
+
+```swift
+var numberOfItems: Int { get }
+```
+
+## See Also
+
+### Getting Item and Section Metrics
+
+- [numberOfSections](numberofsections.md): The number of sections in the snapshot.
+- [numberOfItems(inSection:)](numberofitems%28insection_%29.md): Returns the number of items in the specified section of the snapshot.

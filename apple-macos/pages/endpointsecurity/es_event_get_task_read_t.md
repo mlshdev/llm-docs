@@ -1,0 +1,97 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_event_get_task_read_t](https://developer.apple.com/documentation/endpointsecurity/es_event_get_task_read_t)
+
+# es_event_get_task_read_t (Swift)
+
+**Framework:** Endpoint Security  
+**Kind:** Structure  
+**Availability:** Mac Catalyst · macOS
+
+A type for an event that indicates the retrieval of a task’s read port.
+
+## Declaration
+
+```swift
+struct es_event_get_task_read_t
+```
+
+<a id="overview"></a>
+
+## Overview
+
+This event represents a process that obtains a send right to a task read port, through `SYS_task_read_for_pid` or functions like `task_identity_token_get_task_port(_:_:_:)`.
+
+> **Note**
+
+>  For more information on ports and port rights, see the “Ports, Port Rights, Port Sets, and Port Namespaces” section of [Mach Overview](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Mach/Mach.html) in the [Kernel Programming Guide](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/About/About.html).
+
+## Topics
+
+### Inspecting Event Properties
+
+- [target](es_event_get_task_read_t/target.md): The process targeted by this event.
+- [reserved](es_event_get_task_read_t/reserved.md): An unused field reserved for future use.
+
+### Initializers
+
+- [init(target:type:reserved:)](es_event_get_task_read_t/init%28target_type_reserved_%29.md)
+
+### Instance Properties
+
+- [type](es_event_get_task_read_t/type.md)
+
+## Relationships
+
+### Conforms To
+
+- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
+
+## See Also
+
+### Task Port Event Types
+
+- [es_event_get_task_t](es_event_get_task_t.md): A type for an event that indicates the retrieval of a task’s control port.
+- [es_event_get_task_inspect_t](es_event_get_task_inspect_t.md): A type for an event that indicates the retrieval of a task’s inspect port.
+- [es_event_get_task_name_t](es_event_get_task_name_t.md): A type for an event that indicates the retrieval of a task’s name port.
+
+# es_event_get_task_read_t (Objective-C)
+
+**Framework:** Endpoint Security  
+**Kind:** Structure  
+**Availability:** Mac Catalyst · macOS
+
+A type for an event that indicates the retrieval of a task’s read port.
+
+## Declaration
+
+```objectivec
+typedef struct { ... } es_event_get_task_read_t;
+```
+
+<a id="overview"></a>
+
+## Overview
+
+This event represents a process that obtains a send right to a task read port, through `SYS_task_read_for_pid` or functions like `task_identity_token_get_task_port(_:_:_:)`.
+
+> **Note**
+
+>  For more information on ports and port rights, see the “Ports, Port Rights, Port Sets, and Port Namespaces” section of [Mach Overview](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Mach/Mach.html) in the [Kernel Programming Guide](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/About/About.html).
+
+## Topics
+
+### Inspecting Event Properties
+
+- [target](es_event_get_task_read_t/target.md): The process targeted by this event.
+- [reserved](es_event_get_task_read_t/reserved.md): An unused field reserved for future use.
+
+### Instance Properties
+
+- [type](es_event_get_task_read_t/type.md)
+
+## See Also
+
+### Task Port Event Types
+
+- [es_event_get_task_t](es_event_get_task_t.md): A type for an event that indicates the retrieval of a task’s control port.
+- [es_event_get_task_inspect_t](es_event_get_task_inspect_t.md): A type for an event that indicates the retrieval of a task’s inspect port.
+- [es_event_get_task_name_t](es_event_get_task_name_t.md): A type for an event that indicates the retrieval of a task’s name port.

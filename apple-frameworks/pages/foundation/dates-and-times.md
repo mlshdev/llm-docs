@@ -1,0 +1,91 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/dates-and-times](https://developer.apple.com/documentation/foundation/dates-and-times)
+
+# Dates and Times (Swift)
+
+**Framework:** Foundation  
+**Kind:** API Collection
+
+Compare dates and times, and perform calendar and time zone calculations.
+
+## Topics
+
+### Date Representations
+
+- [Date](date.md): A specific point in time, independent of any calendar or time zone.
+- [DateInterval](dateinterval.md): The span of time between a specific start date and end date.
+- [TimeInterval](timeinterval.md): A number of seconds.
+
+### Calendrical Calculations
+
+- [DateComponents](datecomponents.md): A date or time specified in terms of units (such as year, month, day, hour, and minute) to be evaluated in a calendar system and time zone.
+- [Calendar](calendar.md): A definition of the relationships between calendar units and absolute points in time, providing features for calculation and comparison of dates.
+- [TimeZone](timezone.md): Information about standard time conventions associated with a specific geopolitical region.
+
+### Date Formatting
+
+- [DateFormatter](dateformatter.md): A formatter that converts between dates and their textual representations.
+- [DateComponentsFormatter](datecomponentsformatter.md): A formatter that creates string representations of quantities of time.
+- [DateIntervalFormatter](dateintervalformatter.md): A formatter that creates string representations of time intervals.
+- [ISO8601DateFormatter](iso8601dateformatter.md): A formatter that converts between dates and their ISO 8601 string representations.
+
+### Internationalization
+
+- [Locale](locale.md): Information about linguistic, cultural, and technological conventions for use in formatting data for presentation.
+
+## See Also
+
+### Fundamentals
+
+- [Numbers, Data, and Basic Values](numbers-data-and-basic-values.md): Work with primitive values and other fundamental types used throughout Cocoa.
+- [Strings and Text](strings-and-text.md): Create and process strings of Unicode characters, use regular expressions to find patterns, and perform natural language analysis of text.
+- [Collections](collections.md): Use arrays, dictionaries, sets, and specialized collections to store and iterate groups of objects or values.
+- [Units and Measurement](units-and-measurement.md): Label numeric quantities with physical dimensions to allow locale-aware formatting and conversion between related units.
+- [Data Formatting](data-formatting.md): Convert numbers, dates, measurements, and other values to and from locale-aware string representations.
+- [Filters and Sorting](filters-and-sorting.md): Use predicates, expressions, and sort descriptors to examine elements in collections and other services.
+
+# Dates and Times (Objective-C)
+
+**Framework:** Foundation  
+**Kind:** API Collection
+
+Compare dates and times, and perform calendar and time zone calculations.
+
+## Topics
+
+### Date Representations
+
+- [NSDate](nsdate.md): A representation of a specific point in time, independent of any calendar or time zone.
+- [NSDateInterval](nsdateinterval.md): An object representing the span of time between a specific start date and end date.
+- [NSTimeInterval](timeinterval.md): A number of seconds.
+
+### Calendrical Calculations
+
+- [NSDateComponents](nsdatecomponents.md): An object that specifies a date or time in terms of units (such as year, month, day, hour, and minute) to be evaluated in a calendar system and time zone.
+- [NSCalendar](nscalendar.md): A definition of the relationships between calendar units and absolute points in time, providing features for calculation and comparison of dates.
+- [NSTimeZone](nstimezone.md): Information about standard time conventions associated with a specific geopolitical region.
+
+### Date Formatting
+
+- [NSDateFormatter](dateformatter.md): A formatter that converts between dates and their textual representations.
+- [NSDateComponentsFormatter](datecomponentsformatter.md): A formatter that creates string representations of quantities of time.
+- [NSDateIntervalFormatter](dateintervalformatter.md): A formatter that creates string representations of time intervals.
+- [NSISO8601DateFormatter](iso8601dateformatter.md): A formatter that converts between dates and their ISO 8601 string representations.
+
+### Internationalization
+
+- [NSLocale](nslocale.md): Information about linguistic, cultural, and technological conventions for use in formatting data for presentation.
+
+### Deprecated
+
+- [NSCalendarDate](nscalendardate.md): Deprecated. A specialized date object with embedded calendar information.
+
+## See Also
+
+### Fundamentals
+
+- [Numbers, Data, and Basic Values](numbers-data-and-basic-values.md): Work with primitive values and other fundamental types used throughout Cocoa.
+- [Strings and Text](strings-and-text.md): Create and process strings of Unicode characters, use regular expressions to find patterns, and perform natural language analysis of text.
+- [Collections](collections.md): Use arrays, dictionaries, sets, and specialized collections to store and iterate groups of objects or values.
+- [Units and Measurement](units-and-measurement.md): Label numeric quantities with physical dimensions to allow locale-aware formatting and conversion between related units.
+- [Data Formatting](data-formatting.md): Convert numbers, dates, measurements, and other values to and from locale-aware string representations.
+- [Filters and Sorting](filters-and-sorting.md): Use predicates, expressions, and sort descriptors to examine elements in collections and other services.

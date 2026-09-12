@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/unmanaged/encodeatomicoptionalrepresentation(_:)](https://developer.apple.com/documentation/swift/unmanaged/encodeatomicoptionalrepresentation(_:))
+
+# encodeAtomicOptionalRepresentation(\_:)
+
+**Framework:** Swift  
+**Kind:** Type Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
+
+Destroys a value of `Self` and prepares an `AtomicOptionalRepresentation` storage type to be used for atomic operations on `Optional`.
+
+## Declaration
+
+```swift
+static func encodeAtomicOptionalRepresentation(_ value: consuming Unmanaged<Instance>?) -> Unmanaged<Instance>.AtomicOptionalRepresentation
+```
+
+## Parameters
+
+- `value`: An optional instance of `Self` that’s about to be destroyed to encode an instance of its `AtomicOptionalRepresentation`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The newly encoded `AtomicOptionalRepresentation` storage.
+
+<a id="discussion"></a>
+
+## Discussion
+
+> **Note**
+
+> This is not an atomic operation. This simply encodes the logical type `Self` into its storage representation suitable for atomic operations, `AtomicOptionalRepresentation`.

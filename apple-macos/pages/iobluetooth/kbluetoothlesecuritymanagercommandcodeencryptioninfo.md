@@ -1,0 +1,65 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/kbluetoothlesecuritymanagercommandcodeencryptioninfo](https://developer.apple.com/documentation/iobluetooth/kbluetoothlesecuritymanagercommandcodeencryptioninfo)
+
+# kBluetoothLESecurityManagerCommandCodeEncryptionInfo (Swift)
+
+**Framework:** IOBluetooth  
+**Kind:** Global Variable  
+**Availability:** macOS
+
+## Declaration
+
+```swift
+var kBluetoothLESecurityManagerCommandCodeEncryptionInfo: BluetoothLESecurityManagerCommandCode { get }
+```
+
+## See Also
+
+### Constants
+
+- [kBluetoothLESecurityManagerCommandCodeIdentityAddressInfo](kbluetoothlesecuritymanagercommandcodeidentityaddressinfo.md)
+- [kBluetoothLESecurityManagerCommandCodeIdentityInfo](kbluetoothlesecuritymanagercommandcodeidentityinfo.md)
+- [kBluetoothLESecurityManagerCommandCodeMasterIdentification](kbluetoothlesecuritymanagercommandcodemasteridentification.md)
+- [kBluetoothLESecurityManagerCommandCodePairingConfirm](kbluetoothlesecuritymanagercommandcodepairingconfirm.md)
+- [kBluetoothLESecurityManagerCommandCodePairingDHKeyCheck](kbluetoothlesecuritymanagercommandcodepairingdhkeycheck.md)
+- [kBluetoothLESecurityManagerCommandCodePairingFailed](kbluetoothlesecuritymanagercommandcodepairingfailed.md)
+- [kBluetoothLESecurityManagerCommandCodePairingKeypressNotification](kbluetoothlesecuritymanagercommandcodepairingkeypressnotification.md)
+- [kBluetoothLESecurityManagerCommandCodePairingPublicKey](kbluetoothlesecuritymanagercommandcodepairingpublickey.md)
+- [kBluetoothLESecurityManagerCommandCodePairingRandom](kbluetoothlesecuritymanagercommandcodepairingrandom.md)
+- [kBluetoothLESecurityManagerCommandCodePairingRequest](kbluetoothlesecuritymanagercommandcodepairingrequest.md)
+- [kBluetoothLESecurityManagerCommandCodePairingResponse](kbluetoothlesecuritymanagercommandcodepairingresponse.md)
+- [kBluetoothLESecurityManagerCommandCodeReserved](kbluetoothlesecuritymanagercommandcodereserved.md)
+- [kBluetoothLESecurityManagerCommandCodeReservedEnd](kbluetoothlesecuritymanagercommandcodereservedend.md)
+- [kBluetoothLESecurityManagerCommandCodeReservedStart](kbluetoothlesecuritymanagercommandcodereservedstart.md)
+- [kBluetoothLESecurityManagerCommandCodeSecurityRequest](kbluetoothlesecuritymanagercommandcodesecurityrequest.md)
+
+# kBluetoothLESecurityManagerCommandCodeEncryptionInfo (Objective-C)
+
+**Framework:** IOBluetooth  
+**Kind:** Enumeration Case  
+**Availability:** macOS
+
+## Declaration
+
+```objectivec
+kBluetoothLESecurityManagerCommandCodeEncryptionInfo
+```
+
+## See Also
+
+### Constants
+
+- [kBluetoothLESecurityManagerCommandCodeIdentityAddressInfo](kbluetoothlesecuritymanagercommandcodeidentityaddressinfo.md)
+- [kBluetoothLESecurityManagerCommandCodeIdentityInfo](kbluetoothlesecuritymanagercommandcodeidentityinfo.md)
+- [kBluetoothLESecurityManagerCommandCodeMasterIdentification](kbluetoothlesecuritymanagercommandcodemasteridentification.md)
+- [kBluetoothLESecurityManagerCommandCodePairingConfirm](kbluetoothlesecuritymanagercommandcodepairingconfirm.md)
+- [kBluetoothLESecurityManagerCommandCodePairingDHKeyCheck](kbluetoothlesecuritymanagercommandcodepairingdhkeycheck.md)
+- [kBluetoothLESecurityManagerCommandCodePairingFailed](kbluetoothlesecuritymanagercommandcodepairingfailed.md)
+- [kBluetoothLESecurityManagerCommandCodePairingKeypressNotification](kbluetoothlesecuritymanagercommandcodepairingkeypressnotification.md)
+- [kBluetoothLESecurityManagerCommandCodePairingPublicKey](kbluetoothlesecuritymanagercommandcodepairingpublickey.md)
+- [kBluetoothLESecurityManagerCommandCodePairingRandom](kbluetoothlesecuritymanagercommandcodepairingrandom.md)
+- [kBluetoothLESecurityManagerCommandCodePairingRequest](kbluetoothlesecuritymanagercommandcodepairingrequest.md)
+- [kBluetoothLESecurityManagerCommandCodePairingResponse](kbluetoothlesecuritymanagercommandcodepairingresponse.md)
+- [kBluetoothLESecurityManagerCommandCodeReserved](kbluetoothlesecuritymanagercommandcodereserved.md)
+- [kBluetoothLESecurityManagerCommandCodeReservedEnd](kbluetoothlesecuritymanagercommandcodereservedend.md)
+- [kBluetoothLESecurityManagerCommandCodeReservedStart](kbluetoothlesecuritymanagercommandcodereservedstart.md)
+- [kBluetoothLESecurityManagerCommandCodeSecurityRequest](kbluetoothlesecuritymanagercommandcodesecurityrequest.md)

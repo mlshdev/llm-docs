@@ -1,0 +1,311 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/using-paginated-endpoints](https://developer.apple.com/documentation/devicemanagement/using-paginated-endpoints)
+
+# Using paginated endpoints
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Article
+
+Traverse large result sets with page-index and cursor-based pagination.
+
+<a id="overview"></a>
+
+## Overview
+
+To improve performance, the server uses pagination to return smaller discrete subsets of a large result set. When the number of records in a response exceeds a server-controlled limit, the server paginates it. Endpoints that support pagination can accept a `pageIndex` query parameter that indicates the page to return. You can make paginated requests in parallel to reduce the time it takes to retrieve the entire result set.
+
+The following endpoints support pagination:
+
+- [Get Assets](get-assets-4ski1.md)
+- [Get Assignments](get-assignments-9wv1e.md)
+- [Get Users](get-users-4mwln.md)
+
+You can use versioned endpoints to retrieve only those records with changes since your previous query. Endpoints that support versioning can accept a `sinceVersionId` query parameter. This lets you keep your data up to date with incremental changes if you’re unable to receive update notifications.
+
+The following endpoints support the `sinceVersionId` query parameter:
+
+- [Get Assignments](get-assignments-9wv1e.md)
+- [Get Users](get-users-4mwln.md)
+
+<a id="Handle-pagination"></a>
+
+## Handle pagination
+
+Requests for large record sets return paginated responses. You can traverse the pages by supplying the `pageIndex` query parameter in your request.
+
+To use a `pageIndex` to traverse a paginated response:
+
+1. Make an initial request without `pageIndex`, which returns the first page of records.
+2. If the number of records exceeds a server-controlled limit (on the order of several hundred), the server includes a `nextPageIndex` field in the response, along with the first page of records. You pass this value as the `pageIndex` in a subsequent request to get the next page of records. As long as additional pages remain, the server returns a `nextPageIndex` field in the response.
+3. After the server returns all records for the request, it no longer includes a `nextPageIndex` field in the response.
+
+A paginated response includes the following fields:
+
+| Response field | Description |
+| --- | --- |
+| `currentPageIndex` | The current page index of the paginated response. |
+| `nextPageIndex` | The next page index in the paginated response. |
+| `size` | The number of records on the current page. |
+| `totalPages` | The total number of pages in the paginated response. |
+
+> **Note**
+
+>  The `pageIndex` is a zero-based integer. A `pageIndex` of `0` returns the first page of results. If you omit it from the request, `pageIndex` defaults to `0`. The last page of results has a `pageIndex` equal to `totalPages`-1.
+
+The following is an example of a request for the first page of records:
+
+```javascript
+curl --location --request GET 'https://vpp.itunes.apple.com/mdm/v2/assignments' \
+--header 'Authorization: Bearer {sToken}'
+```
+
+The response that contains the first page of records looks like the following:
+
+```javascript
+{
+    "assignments": [
+         {
+            "adamId": "377298193",
+            "serialNumber": "b6817f44-6229-4f1b-ba16-9eef9ebf24c6",
+            "pricingParam": "STDQ"
+        },
+            …
+            …
+            …
+        {
+            "adamId": "377298193",
+            "serialNumber": "4b3f6bef-bfcd-47e6-ba8c-ad14f3b9d924",
+            "pricingParam": "STDQ"
+        },
+    ],
+    "currentPageIndex": 0,
+    "nextPageIndex": 1,
+    "size": 549,
+    "tokenExpirationDate": "2030-11-08T22:33:22+0000",
+    "totalPages": 353,
+    "uId": "2049025000431439",
+    "versionId": "658a45d0-5a7b-11eb-b9e4-d782eaed4cfb"
+}
+```
+
+The following is an example of a request for the second page of records:
+
+```javascript
+curl --location --request GET 'https://vpp.itunes.apple.com/mdm/v2/assignments?pageIndex=1' \
+--header 'Authorization: Bearer {sToken}'
+```
+
+The response that contains the second page of records looks like the following:
+
+```javascript
+{
+    "assignments": [
+         {
+            "adamId": "377298193",
+            "serialNumber": "b6817f44-6229-4f1b-ba16-9eef9ebf24c6",
+            "pricingParam": "STDQ"
+        },
+            …
+            …
+            …
+        {
+            "adamId": "377298193",
+            "serialNumber": "4b3f6bef-bfcd-47e6-ba8c-ad14f3b9d924",
+            "pricingParam": "STDQ"
+        }
+    ],
+    "currentPageIndex": 1,
+    "nextPageIndex": 2,
+    "size": 549,
+    "tokenExpirationDate": "2030-11-08T22:33:22+0000",
+    "totalPages": 353,
+    "uId": "2049025000431439",
+    "versionId": "658a45d0-5a7b-11eb-b9e4-d782eaed4cfb"
+}
+```
+
+The following is an example of a request for the last page of records:
+
+```javascript
+curl --location --request GET 'https://vpp.itunes.apple.com/mdm/v2/assignments?pageIndex=352' \
+--header 'Authorization: Bearer {sToken}'
+```
+
+The response that contains the last page of records looks like the following:
+
+```javascript
+{
+    "assignments": [
+         {
+            "adamId": "377298193",
+            "serialNumber": "b6817f44-6229-4f1b-ba16-9eef9ebf24c6",
+            "pricingParam": "STDQ"
+        },
+            …
+            …
+            …
+        {
+            "adamId": "377298193",
+            "serialNumber": "4b3f6bef-bfcd-47e6-ba8c-ad14f3b9d924",
+            "pricingParam": "STDQ"
+        }
+    ],
+    "currentPageIndex": 352,
+    "size": 549,
+    "tokenExpirationDate": "2030-11-08T22:33:22+0000",
+    "totalPages": 353,
+    "uId": "2049025000431439",
+    "versionId": "658a45d0-5a7b-11eb-b9e4-d782eaed4cfb"
+}
+```
+
+<a id="Handle-parallel-paginated-requests"></a>
+
+## Handle parallel paginated requests
+
+Paginated endpoints can accept multiple requests in parallel instead of sequentially, which can significantly reduce the amount of time to request and receive records. For performance reasons, don’t submit more than five requests simultaneously.
+
+To make requests for multiple pages in parallel:
+
+1. Make an initial request for the first page of results. The response contains a value for `totalPages`.
+2. Submit subsequent requests in parallel by making the same request with different values for `pageIndex` ranging from `1` to `totalPages`-1.
+
+> **Important**
+
+>  The `totalPages` in a result set can change while traversing a paginated result set. This occurs whenever the system modifies underlying data in the result set. When performing parallel requests, it’s important to note whether the value for `totalPages` changes on any paginated response, and to continue to iterate through the result set until you traverse the last page.
+
+<a id="Handle-versioned-responses"></a>
+
+## Handle versioned responses
+
+If you’re unable to subscribe to notifications, or are performing an initial sync, use the `sinceVersionId` query parameter to obtain incremental updates to keep your device management service up to date with changes without having to retrieve all records.
+
+A `versionId` returns in the response of all versioned endpoints. The `versionId` represents the state of a complete data set for an endpoint. The server generates a new `versionId` for an endpoint whenever the system modifies any underlying data for that endpoint. You can use a `versionId` in future requests to get records that contain modifications since generating the `versionId`. When any writes occur to the underlying data in a fetch, `versionId` updates.
+
+> **Note**
+
+>  The `versionId` for an endpoint can change while traversing a paginated result set. Use the `versionId` that returns on the first page of results in a subsequent query to obtain all newly modified records.
+
+To use a `versionId` to obtain modified records:
+
+1. Make an initial request. A `versionId` returns with the response that contains the first page of results.
+2. Store this `versionId` temporarily in your device management service.
+3. Iterate through any remaining pages of your initial request to retrieve all current data.
+4. To retrieve only those records with modifications since your previous query, make a new request and include the query parameter `sinceVersionId`. Use the `versionId` from your initial request as the value for this parameter. If any newly modified records exist, the response contains a new `versionId` along with those records.
+
+Repeat these steps at regular intervals to keep your system up to date with incremental changes.
+
+> **Important**
+
+>  The [Get Assets](get-assets-4ski1.md) endpoint returns a `versionId` to indicate when the server modifies underlying data. However, the [Get Assets](get-assets-4ski1.md) endpoint doesn’t support the `sinceVersionId` query parameter so you can’t query [Get Assets](get-assets-4ski1.md) to obtain only those records with modifications.
+
+The following is an example of a request for the initial data:
+
+```javascript
+curl --location --request GET 'https://vpp.itunes.apple.com/mdm/v2/assignments' \
+--header 'Authorization: Bearer {sToken}'
+```
+
+The response that contains the initial data looks like the following:
+
+```javascript
+{
+    "assignments": [
+         {
+            "adamId": "377298193",
+            "serialNumber": "b6817f44-6229-4f1b-ba16-9eef9ebf24c6",
+            "pricingParam": "STDQ"
+        },
+            …
+            …
+            …
+        {
+            "adamId": "377298193",
+            "serialNumber": "4b3f6bef-bfcd-47e6-ba8c-ad14f3b9d924",
+            "pricingParam": "STDQ"
+        }
+    ],
+    "currentPageIndex": 0,
+    "nextPageIndex": 1,
+    "size": 549,
+    "tokenExpirationDate": "2030-11-08T22:33:22+0000",
+    "totalPages": 353,
+    "uId": "2049025000431439",
+    "versionId": "658a45d0-5a7b-11eb-b9e4-d782eaed4cfb"
+} 
+```
+
+The following is an example of a request for the updated data:
+
+```javascript
+curl --location --request GET 'https://vpp.itunes.apple.com/mdm/v2/assignments?sinceVersionId=658a45d0-5a7b-11eb-b9e4-d782eaed4cfb' \
+--header 'Authorization: Bearer {sToken}'
+```
+
+The response that contains the updated data looks like the following:
+
+```javascript
+{
+    "assignments": [
+         {
+            "adamId": "377298193",
+            "serialNumber": "b6817f44-6229-4f1b-ba16-9eef9ebf24c6",
+            "pricingParam": "STDQ"
+        },
+            …
+            …
+            …
+        {
+            "adamId": "377298193",
+            "serialNumber": "4b3f6bef-bfcd-47e6-ba8c-ad14f3b9d924",
+            "pricingParam": "STDQ"
+        }
+    ],
+    "currentPageIndex": 0,
+    "nextPageIndex": 1,
+    "size": 1000,
+    "tokenExpirationDate": "2030-11-08T22:33:22+0000",
+    "totalPages": 10,
+    "uId": "2049025000431439",
+    "versionId": "87051b80-85f6-11eb-a3ab-95f98468c5f3"
+}
+```
+
+> **Note**
+
+>  Using the `sinceVersionId` query parameter can result in responses with zero records. This isn’t an error or an end signal. It’s just an indication that there aren’t any records with modifications.
+
+<a id="Handle-cursor-based-pagination"></a>
+
+## Handle cursor-based pagination
+
+The subscription endpoints use cursor-based pagination instead of page-index pagination. These endpoints include:
+
+- `GET /v2/subscriptions`
+- `GET /v2/subscriptions/assignments`
+- `GET /v2/subscriptions/admins`
+
+To begin, send the initial request without a `cursor` parameter. The response includes a `nextCursor` field that contains an opaque string token.
+
+```json
+{
+  "nextCursor": "eyJwYWdlIjoyfQ",
+  "versionId": "1680000000001"
+}
+```
+
+Pass the value of `nextCursor` as the `cursor` query parameter in the next request. Continue this process until the response no longer contains a `nextCursor` field, which indicates the last page.
+
+Treat the cursor as an opaque value. Don’t attempt to parse, decode, or construct cursor strings. The server generates each cursor to point to a specific position in the result set, and the format may change without notice.
+
+Unlike page-index pagination, cursor-based pagination is sequential. Each cursor depends on the previous response, so you can’t skip ahead or request arbitrary positions within the result set. Cursor-based pagination doesn’t support parallel requests.
+
+The cursor-based endpoints also return a `versionId` in each response. Store the `versionId` from your most recent complete fetch to track the state of the data set.
+
+## See Also
+
+### Common tasks
+
+- [Subscribing to notifications](subscribing-to-notifications.md): Monitor events for assets, assignments, and users in your organization.
+- [Handling error responses](handling-error-responses.md): Investigate and resolve service request errors.

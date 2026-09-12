@@ -1,0 +1,99 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videotoolbox/vtcompressionsessionencodeframe(_:imagebuffer:presentationtimestamp:duration:frameproperties:infoflagsout:outputhandler:)](https://developer.apple.com/documentation/videotoolbox/vtcompressionsessionencodeframe(_:imagebuffer:presentationtimestamp:duration:frameproperties:infoflagsout:outputhandler:))
+
+# VTCompressionSessionEncodeFrame(\_:imageBuffer:presentationTimeStamp:duration:frameProperties:infoFlagsOut:outputHandler:) (Swift)
+
+**Framework:** Video Toolbox  
+**Kind:** Function  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 10.2+ · visionOS 1.0+
+
+Presents frames to the compression session and invokes the output callback when compression is complete.
+
+## Declaration
+
+```swift
+func VTCompressionSessionEncodeFrame(_ session: VTCompressionSession, imageBuffer: CVImageBuffer, presentationTimeStamp: CMTime, duration: CMTime, frameProperties: CFDictionary?, infoFlagsOut: UnsafeMutablePointer<VTEncodeInfoFlags>?, outputHandler: @escaping VTCompressionOutputHandler) -> OSStatus
+```
+
+## Parameters
+
+- `session`: The compression session.
+- `imageBuffer`: A Core Video image buffer ([CVImageBuffer](../corevideo/cvimagebuffer.md)) containing a video frame to be compressed. The buffer must have a nonzero reference count.
+- `presentationTimeStamp`: The presentation timestamp for this frame, to be attached to the sample buffer. Each presentation timestamp passed to a session must be greater than the previous one.
+- `duration`: The presentation duration for this frame, to be attached to the sample buffer. If you do not have duration information, pass [invalid](../coremedia/cmtime/invalid.md).
+- `frameProperties`: Key/value pairs specifying additional properties for encoding this frame. Note that some session properties may also be changed between frames. Such changes affect subsequently encoded frames.
+- `infoFlagsOut`: A pointer to a `VTEncodeInfoFlags` to receive information about the encode operation.
+
+  The [asynchronous](vtencodeinfoflags/asynchronous.md) bit may be set if the encode is (or was) running asynchronously.
+
+  The [frameDropped](vtencodeinfoflags/framedropped.md) bit may be set if the frame was dropped (synchronously).
+
+  Pass `NULL` if you do not want to receive this information.
+- `outputHandler`: The block to be called when encoding the frame is completed. This block may be called asynchronously, on a different thread from the one that calls `VTCompressionSessionEncodeFrameWithOutputHandler`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Encoded frames may or may not be output before the function returns. The client should not modify the pixel data after making this call. The session and/or encoder retains the image buffer as long as necessary.
+
+> **Important**
+
+>  This function cannot be called with a session created with a [VTCompressionOutputCallback](vtcompressionoutputcallback.md).
+
+## See Also
+
+### Encoding Frames
+
+- [VTCompressionSessionGetPixelBufferPool(\_:)](vtcompressionsessiongetpixelbufferpool%28__%29.md): Returns a pool that provides ideal source pixel buffers for a compression session.
+- [VTCompressionSessionPrepareToEncodeFrames(\_:)](vtcompressionsessionpreparetoencodeframes%28__%29.md): Enables the encoder to perform any necessary resource allocation before the encoder begins encoding frames (optional).
+- [VTCompressionSessionEncodeFrame(\_:imageBuffer:presentationTimeStamp:duration:frameProperties:sourceFrameRefcon:infoFlagsOut:)](vtcompressionsessionencodeframe%28__imagebuffer_presentationtimestamp_duration_frameproperties_sourceframerefcon_infoflagsout_%29.md): Presents frames to the compression session.
+- [VTCompressionSessionCompleteFrames(\_:untilPresentationTimeStamp:)](vtcompressionsessioncompleteframes%28__untilpresentationtimestamp_%29.md): Forces the compression session to complete the encoding of frames.
+
+# VTCompressionSessionEncodeFrameWithOutputHandler (Objective-C)
+
+**Framework:** Video Toolbox  
+**Kind:** Function  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 10.2+ · visionOS 1.0+
+
+Presents frames to the compression session and invokes the output callback when compression is complete.
+
+## Declaration
+
+```objectivec
+extern OSStatus VTCompressionSessionEncodeFrameWithOutputHandler(VTCompressionSessionRef session, CVImageBufferRef imageBuffer, CMTime presentationTimeStamp, CMTime duration, CFDictionaryRef frameProperties, VTEncodeInfoFlags *infoFlagsOut, VTCompressionOutputHandler outputHandler);
+```
+
+## Parameters
+
+- `session`: The compression session.
+- `imageBuffer`: A Core Video image buffer ([CVImageBufferRef](../corevideo/cvimagebuffer.md)) containing a video frame to be compressed. The buffer must have a nonzero reference count.
+- `presentationTimeStamp`: The presentation timestamp for this frame, to be attached to the sample buffer. Each presentation timestamp passed to a session must be greater than the previous one.
+- `duration`: The presentation duration for this frame, to be attached to the sample buffer. If you do not have duration information, pass [kCMTimeInvalid](../coremedia/cmtime/invalid.md).
+- `frameProperties`: Key/value pairs specifying additional properties for encoding this frame. Note that some session properties may also be changed between frames. Such changes affect subsequently encoded frames.
+- `infoFlagsOut`: A pointer to a `VTEncodeInfoFlags` to receive information about the encode operation.
+
+  The [kVTEncodeInfo_Asynchronous](vtencodeinfoflags/asynchronous.md) bit may be set if the encode is (or was) running asynchronously.
+
+  The [kVTEncodeInfo_FrameDropped](vtencodeinfoflags/framedropped.md) bit may be set if the frame was dropped (synchronously).
+
+  Pass `NULL` if you do not want to receive this information.
+- `outputHandler`: The block to be called when encoding the frame is completed. This block may be called asynchronously, on a different thread from the one that calls `VTCompressionSessionEncodeFrameWithOutputHandler`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Encoded frames may or may not be output before the function returns. The client should not modify the pixel data after making this call. The session and/or encoder retains the image buffer as long as necessary.
+
+> **Important**
+
+>  This function cannot be called with a session created with a [VTCompressionOutputCallback](vtcompressionoutputcallback.md).
+
+## See Also
+
+### Encoding Frames
+
+- [VTCompressionSessionGetPixelBufferPool](vtcompressionsessiongetpixelbufferpool%28__%29.md): Returns a pool that provides ideal source pixel buffers for a compression session.
+- [VTCompressionSessionPrepareToEncodeFrames](vtcompressionsessionpreparetoencodeframes%28__%29.md): Enables the encoder to perform any necessary resource allocation before the encoder begins encoding frames (optional).
+- [VTCompressionSessionEncodeFrame](vtcompressionsessionencodeframe%28__imagebuffer_presentationtimestamp_duration_frameproperties_sourceframerefcon_infoflagsout_%29.md): Presents frames to the compression session.
+- [VTCompressionSessionCompleteFrames](vtcompressionsessioncompleteframes%28__untilpresentationtimestamp_%29.md): Forces the compression session to complete the encoding of frames.

@@ -1,0 +1,19 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/lazyfiltersequence/drop(while:)](https://developer.apple.com/documentation/swift/lazyfiltersequence/drop(while:))
+
+# drop(while:)
+
+**Framework:** Swift  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Returns a lazy sequence that skips any initial elements that satisfy `predicate`.
+
+## Declaration
+
+```swift
+func drop(while predicate: @escaping (Self.Elements.Element) -> Bool) -> LazyDropWhileSequence<Self.Elements>
+```
+
+## Parameters
+
+- `predicate`: A closure that takes an element of the sequence as its argument and returns `true` if the element should be skipped or `false` otherwise. Once `predicate` returns `false` it will not be called again.

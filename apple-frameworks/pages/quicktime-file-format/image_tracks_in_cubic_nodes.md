@@ -1,0 +1,18 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/image_tracks_in_cubic_nodes](https://developer.apple.com/documentation/quicktime-file-format/image_tracks_in_cubic_nodes)
+
+# Image tracks in cubic nodes
+
+**Framework:** QuickTime File Format  
+**Kind:** Article
+
+Store cubic nodes that represent a panorama.
+
+<a id="Overview"></a>
+
+## Overview
+
+For a cubic node the image track contains six samples that correspond to the six square faces of the cube. The same applies to hot spot and preview tracks. The following diagram shows how the order of samples in the track corresponds to the orientation of the cube faces.
+
+![A diagram that shows numbered cube faces laid in sample order at the top, numbered 1, 2, 3, 4, 5, and 6. Below that, the diagram shows the layout of cube faces. The first box, on the top left, is labeled 5. Below that, there are four boxes lined up horizontally, labeled 1, 2, 3, and 4. Below that, on the bottom left, there is a box labeled 6.](https://developer.apple.com/images/com.apple.qtff/cubic-node-cube-face@2x.png)
+
+Note that the frames are oriented horizontally. There is no provision for frames that are rotated 90 counterclockwise as there are for cylindrical panoramas.

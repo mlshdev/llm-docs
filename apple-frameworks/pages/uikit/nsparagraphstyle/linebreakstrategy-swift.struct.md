@@ -1,0 +1,103 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/nsparagraphstyle/linebreakstrategy-swift.struct](https://developer.apple.com/documentation/uikit/nsparagraphstyle/linebreakstrategy-swift.struct)
+
+# NSParagraphStyle.LineBreakStrategy (Swift)
+
+**Framework:** UIKit  
+**Kind:** Structure  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Constants that specify how the text system breaks lines while laying out paragraphs.
+
+## Declaration
+
+```swift
+struct LineBreakStrategy
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Line break strategy describes a collection of options that can affect where line breaks are placed in a paragraph. This is independent from line break mode, which describes what happens when text is too long to fit within its container. These options won’t have any effect when used with line break modes that don’t support multiple lines, like clipping or truncating middle.
+
+Constants that specify how the text system breaks lines while laying out paragraphs.
+
+## Topics
+
+### Getting the line-break styles
+
+- [pushOut](linebreakstrategy-swift.struct/pushout.md): The text system pushes out individual lines to avoid an orphan word on the last line of the paragraph.
+- [hangulWordPriority](linebreakstrategy-swift.struct/hangulwordpriority.md): The text system prohibits breaking between Hangul characters.
+- [standard](linebreakstrategy-swift.struct/standard.md): The text system uses the same configuration of line-break strategies that it uses for standard UI labels.
+
+### Creating a line-break style
+
+- [init(rawValue:)](linebreakstrategy-swift.struct/init%28rawvalue_%29.md): Creates a line-break strategy with the specified raw value.
+
+## Relationships
+
+### Conforms To
+
+- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [ExpressibleByArrayLiteral](https://developer.apple.com/documentation/swift/expressiblebyarrayliteral)
+- [OptionSet](https://developer.apple.com/documentation/swift/optionset)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+- [SetAlgebra](https://developer.apple.com/documentation/swift/setalgebra)
+
+## See Also
+
+### Getting line-break information
+
+- [lineBreakMode](linebreakmode.md): The mode for breaking lines in the paragraph that don’t fit within a container.
+- [NSLineBreakMode](../nslinebreakmode.md): Constants that specify what happens when a line is too long for a container.
+- [lineBreakStrategy](linebreakstrategy-swift.property.md): The strategy for breaking lines while laying out paragraphs.
+- [hyphenationFactor](hyphenationfactor.md): The paragraph’s threshold for hyphenation.
+- [usesDefaultHyphenation](usesdefaulthyphenation.md): A Boolean value that indicates whether the paragraph style uses the system hyphenation settings.
+- [tighteningFactorForTruncation](https://developer.apple.com/documentation/appkit/nsparagraphstyle/tighteningfactorfortruncation): The threshold for using tightening as an alternative to truncation.
+- [allowsDefaultTighteningForTruncation](allowsdefaulttighteningfortruncation.md): A Boolean value that indicates whether the system tightens character spacing before truncating text.
+
+# NSLineBreakStrategy (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Enumeration  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Constants that specify how the text system breaks lines while laying out paragraphs.
+
+## Declaration
+
+```objectivec
+enum NSLineBreakStrategy : NSUInteger;
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Line break strategy describes a collection of options that can affect where line breaks are placed in a paragraph. This is independent from line break mode, which describes what happens when text is too long to fit within its container. These options won’t have any effect when used with line break modes that don’t support multiple lines, like clipping or truncating middle.
+
+Constants that specify how the text system breaks lines while laying out paragraphs.
+
+## Topics
+
+### Getting the line-break styles
+
+- [NSLineBreakStrategyPushOut](linebreakstrategy-swift.struct/pushout.md): The text system pushes out individual lines to avoid an orphan word on the last line of the paragraph.
+- [NSLineBreakStrategyHangulWordPriority](linebreakstrategy-swift.struct/hangulwordpriority.md): The text system prohibits breaking between Hangul characters.
+- [NSLineBreakStrategyStandard](linebreakstrategy-swift.struct/standard.md): The text system uses the same configuration of line-break strategies that it uses for standard UI labels.
+- [NSLineBreakStrategyNone](../nslinebreakstrategy/nslinebreakstrategynone.md): The text system doesn’t use any line-break strategies.
+
+## See Also
+
+### Getting line-break information
+
+- [lineBreakMode](linebreakmode.md): The mode for breaking lines in the paragraph that don’t fit within a container.
+- [NSLineBreakMode](../nslinebreakmode.md): Constants that specify what happens when a line is too long for a container.
+- [lineBreakStrategy](linebreakstrategy-swift.property.md): The strategy for breaking lines while laying out paragraphs.
+- [hyphenationFactor](hyphenationfactor.md): The paragraph’s threshold for hyphenation.
+- [usesDefaultHyphenation](usesdefaulthyphenation.md): A Boolean value that indicates whether the paragraph style uses the system hyphenation settings.
+- [tighteningFactorForTruncation](https://developer.apple.com/documentation/appkit/nsparagraphstyle/tighteningfactorfortruncation): The threshold for using tightening as an alternative to truncation.
+- [allowsDefaultTighteningForTruncation](allowsdefaulttighteningfortruncation.md): A Boolean value that indicates whether the system tightens character spacing before truncating text.

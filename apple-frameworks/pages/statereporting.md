@@ -1,0 +1,64 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/statereporting](https://developer.apple.com/documentation/statereporting)
+
+# StateReporting (Swift)
+
+**Framework:** StateReporting  
+**Kind:** Framework  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+Communicate your app’s state to the system to improve diagnostic actionability.
+
+<a id="Overview"></a>
+
+## Overview
+
+StateReporting lets you define named domains and emit structured state transitions from your app. [MetricKit](metrickit.md) surfaces state context in both state-aggregated and interval-level metric entries. Instruments displays transitions in the Points of Interest instrument so you can cross-reference app state against other profiling data.
+
+Each domain holds up to one active state at a time, and you can combine states across domains. For example, your game can track its graphics configuration in one domain and its game mode in another, so you can compare performance across every state combination.
+
+## Topics
+
+### Essentials
+
+- [Getting started with StateReporting](statereporting/getting-started-with-statereporting.md): Define reportable metadata types, obtain a state reporter for your domain, and report transitions at the right call sites in your app.
+
+### Reporting
+
+- [StateReporter](statereporting/statereporter.md): An object unique per domain that records state transitions and volatile metadata updates.
+
+### Defining metadata
+
+- [ReportableMetadata](statereporting/reportablemetadata.md): A protocol for types that can supply their metadata as a dictionary of reportable values.
+- [ReportableMetadataValue](statereporting/reportablemetadatavalue.md): A value in a reportable-metadata dictionary.
+
+### Metadata type macros
+
+- [ReportableMetadata()](statereporting/reportablemetadata%28%29.md): Automatically generates `ReportableMetadata` conformance for a type.
+- [ReportableMetadataKey(\_:)](statereporting/reportablemetadatakey%28__%29.md): Specifies a custom key name for a property in the generated `metadataDictionary`.
+- [ReportableMetadataIgnored()](statereporting/reportablemetadataignored%28%29.md): Excludes a property from the generated `metadataDictionary`.
+
+# StateReporting (Objective-C)
+
+**Framework:** StateReporting  
+**Kind:** Framework  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+Communicate your app’s state to the system to improve diagnostic actionability.
+
+<a id="Overview"></a>
+
+## Overview
+
+StateReporting lets you define named domains and emit structured state transitions from your app. [MetricKit](metrickit.md) surfaces state context in both state-aggregated and interval-level metric entries. Instruments displays transitions in the Points of Interest instrument so you can cross-reference app state against other profiling data.
+
+Each domain holds up to one active state at a time, and you can combine states across domains. For example, your game can track its graphics configuration in one domain and its game mode in another, so you can compare performance across every state combination.
+
+## Topics
+
+### Essentials
+
+- [Getting started with StateReporting](statereporting/getting-started-with-statereporting.md): Define reportable metadata types, obtain a state reporter for your domain, and report transitions at the right call sites in your app.
+
+### Reporting
+
+- [SRStateReporter](statereporting/srstatereporter.md): An object unique per domain that records state transitions and volatile metadata updates.

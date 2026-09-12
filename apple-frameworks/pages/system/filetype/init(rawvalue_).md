@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/system/filetype/init(rawvalue:)](https://developer.apple.com/documentation/system/filetype/init(rawvalue:))
+
+# init(rawValue:)
+
+**Framework:** System  
+**Kind:** Initializer  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+Creates a strongly-typed file type from the raw C `mode_t`.
+
+## Declaration
+
+```swift
+init(rawValue: CInterop.Mode)
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+> **Note**
+
+> This initializer stores the `rawValue` directly and **does not** mask the value with `S_IFMT`. If the supplied `rawValue` contains bits outside of the `S_IFMT` mask, the resulting `FileType` will not compare equal to constants like `.directory` and `.symbolicLink`, which may be unexpected.
+>
+> If you’re unsure whether the `mode_t` contains bits outside of `S_IFMT`, you can use `FileMode(rawValue:)` instead to get a strongly-typed `FileMode`, then call `.type` to get the properly masked `FileType`.

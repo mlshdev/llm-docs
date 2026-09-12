@@ -1,0 +1,131 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/uiapplicationdelegateadaptor](https://developer.apple.com/documentation/swiftui/uiapplicationdelegateadaptor)
+
+# UIApplicationDelegateAdaptor
+
+**Framework:** SwiftUI  
+**Kind:** Structure  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · tvOS 14.0+ · visionOS 1.0+
+
+A property wrapper type that you use to create a UIKit app delegate.
+
+## Declaration
+
+```swift
+@MainActor @preconcurrency @propertyWrapper struct UIApplicationDelegateAdaptor<DelegateType> where DelegateType : NSObject, DelegateType : UIApplicationDelegate
+```
+
+## Mentioned In
+
+- [Migrating to the SwiftUI life cycle](migrating-to-the-swiftui-life-cycle.md)
+
+<a id="overview"></a>
+
+## Overview
+
+To handle app delegate callbacks in an app that uses the SwiftUI life cycle, define a type that conforms to the [UIApplicationDelegate](https://developer.apple.com/documentation/uikit/uiapplicationdelegate) protocol, and implement the delegate methods that you need. For example, you can implement the [application(\_:didRegisterForRemoteNotificationsWithDeviceToken:)](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/application%28_:didregisterforremotenotificationswithdevicetoken:%29) method to handle remote notification registration:
+
+```swift
+class MyAppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
+    func application(
+        _ application: UIApplication,
+        didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
+    ) {
+        // Record the device token.
+    }
+}
+```
+
+Then use the `UIApplicationDelegateAdaptor` property wrapper inside your [App](app.md) declaration to tell SwiftUI about the delegate type:
+
+```swift
+@main
+struct MyApp: App {
+    @UIApplicationDelegateAdaptor private var appDelegate: MyAppDelegate
+
+    var body: some Scene { ... }
+}
+```
+
+SwiftUI instantiates the delegate and calls the delegate’s methods in response to life cycle events. Define the delegate adaptor only in your [App](app.md) declaration, and only once for a given app. If you declare it more than once, SwiftUI generates a runtime error.
+
+If your app delegate conforms to the [ObservableObject](https://developer.apple.com/documentation/combine/observableobject) protocol, as in the example above, then SwiftUI puts the delegate it creates into the [Environment](environment.md). You can access the delegate from any scene or view in your app using the [EnvironmentObject](environmentobject.md) property wrapper:
+
+```swift
+@EnvironmentObject private var appDelegate: MyAppDelegate
+```
+
+This enables you to use the dollar sign (`$`) prefix to get a binding to published properties that you declare in the delegate. For more information, see [projectedValue](uiapplicationdelegateadaptor/projectedvalue.md).
+
+> **Important**
+
+> Manage an app’s life cycle events without using an app delegate whenever possible. For example, prefer to handle changes in [ScenePhase](scenephase.md) instead of relying on delegate callbacks, like [application(\_:didFinishLaunchingWithOptions:)](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/application%28_:didfinishlaunchingwithoptions:%29).
+
+<a id="Scene-delegates"></a>
+
+### Scene delegates
+
+Some iOS apps define a [UIWindowSceneDelegate](https://developer.apple.com/documentation/uikit/uiwindowscenedelegate) to handle scene-based events, like app shortcuts:
+
+```swift
+class MySceneDelegate: NSObject, UIWindowSceneDelegate, ObservableObject {
+    func windowScene(
+        _ windowScene: UIWindowScene,
+        performActionFor shortcutItem: UIApplicationShortcutItem
+    ) async -> Bool {
+        // Do something with the shortcut...
+
+        return true
+    }
+}
+```
+
+You can provide this kind of delegate to a SwiftUI app by returning the scene delegate’s type from the [application(\_:configurationForConnecting:options:)](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/application%28_:configurationforconnecting:options:%29) method inside your app delegate:
+
+```swift
+extension MyAppDelegate {
+    func application(
+        _ application: UIApplication,
+        configurationForConnecting connectingSceneSession: UISceneSession,
+        options: UIScene.ConnectionOptions
+    ) -> UISceneConfiguration {
+
+        let configuration = UISceneConfiguration(
+                                name: nil,
+                                sessionRole: connectingSceneSession.role)
+        if connectingSceneSession.role == .windowApplication {
+            configuration.delegateClass = MySceneDelegate.self
+        }
+        return configuration
+    }
+}
+```
+
+When you configure the [UISceneConfiguration](https://developer.apple.com/documentation/uikit/uisceneconfiguration) instance, you only need to indicate the delegate class, and not a scene class or storyboard. SwiftUI creates and manages the delegate instance, and sends it any relevant delegate callbacks.
+
+As with the app delegate, if you make your scene delegate an observable object, SwiftUI automatically puts it in the [Environment](environment.md), from where you can access it with the [EnvironmentObject](environmentobject.md) property wrapper, and create bindings to its published properties.
+
+## Topics
+
+### Creating a delegate adaptor
+
+- [init(\_:)](uiapplicationdelegateadaptor/init%28__%29.md): Conforms when `DelegateType` inherits `NSObject`, `DelegateType` conforms to `Observable`, and `DelegateType` conforms to `UIApplicationDelegate`. Creates a UIKit app delegate adaptor using an observable delegate.
+
+### Getting the delegate adaptor
+
+- [projectedValue](uiapplicationdelegateadaptor/projectedvalue.md): Conforms when `DelegateType` inherits `NSObject`, `DelegateType` conforms to `ObservableObject`, and `DelegateType` conforms to `UIApplicationDelegate`. A projection of the observed object that provides bindings to its properties.
+- [wrappedValue](uiapplicationdelegateadaptor/wrappedvalue.md): The underlying app delegate.
+
+## Relationships
+
+### Conforms To
+
+- [DynamicProperty](dynamicproperty.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Targeting iOS and iPadOS
+
+- [UILaunchScreen](https://developer.apple.com/documentation/bundleresources/information-property-list/uilaunchscreen): The user interface to show while an app launches.
+- [UILaunchScreens](https://developer.apple.com/documentation/bundleresources/information-property-list/uilaunchscreens): The user interfaces to show while an app launches in response to different URL schemes.

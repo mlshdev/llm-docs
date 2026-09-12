@@ -1,0 +1,118 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/directionallightcomponent](https://developer.apple.com/documentation/realitykit/directionallightcomponent)
+
+# DirectionalLightComponent
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 26.0+ · visionOS 2.0+
+
+A component that defines a directional light source.
+
+## Declaration
+
+```swift
+struct DirectionalLightComponent
+```
+
+## Mentioned In
+
+- [Automatically animating RealityKit entities](automatically-animating-realitykit-entities.md)
+
+<a id="overview"></a>
+
+## Overview
+
+A directional light shines in the entity’s forward direction `[0, 0, -1]`.
+
+Change the a directional light’s direction with the `Entity/orientation` or [look(at:from:upVector:relativeTo:)](hastransform/look%28at_from_upvector_relativeto_%29.md) method of the [Entity](entity.md) with a `DirectionalLightComponent`. The position of the entity does not play a part in the directional light’s effect.
+
+> **Tip**
+
+> Turn on shadows for a directional light by adding the [DirectionalLightComponent.Shadow](directionallightcomponent/shadow.md) component to an entity that has a `DirectionalLightComponent`.
+
+Use this component with shadows by adding `DirectionalLightComponent` and [DirectionalLightComponent.Shadow](directionallightcomponent/shadow.md) to an entity’s [components](entity/components.md) set. In this example, the light’s color is red, and the intensity is `10_000`, which is an approximate lux for ambient daylight:
+
+```swift
+let lightEntity = Entity()
+
+let redLightComponent = DirectionalLightComponent(
+    color: .red, intensity: 10_000
+)
+let lightShadowComponent = DirectionalLightComponent.Shadow()
+lightEntity.components.set([redLightComponent, lightShadowComponent])
+```
+
+The directional light illuminates entities evenly in the direction it derives from the orientation of `lightEntity`. Here is a visual example of how the above code snippet could illuminates entities in a scene:
+
+| Without a directional light | With a directional light |
+| --- | --- |
+| ![A screenshot of a RealityKit scene with a dark gray floor, a light gray cube. There is no obvious lighting in the scene, so the edges of the cube are not clear.](https://developer.apple.com/images/com.apple.RealityKit/directionallight-cube-off.jpg) | ![A screenshot of a RealityKit scene with a dark gray floor, a light gray cube, and five small green arrows in a row above the cube. There is a red light uniformly affecting the scene from above, casting a shadow to the right of the cube.](https://developer.apple.com/images/com.apple.RealityKit/directionallight-cube-on.jpg) |
+
+> **Note**
+
+> The green arrows in the above illustration are only a visual representation of the light’s direction.
+
+<a id="Dynamic-light-capacity"></a>
+
+## Dynamic light capacity
+
+On older hardware, only a limited number of dynamic lights can affect each object. Devices that support `MTLGPUFamily.apple6` or later lift this limit.
+
+Excessive use of dynamic lights may contribute to user-noticeable frame drops and can cause the device to heat up in graphically demanding situations. Monitor the thermal state and reduce the number of lights as a mitigation, if necessary.
+
+Because this behavior varies by device, verify your scene’s lighting on the oldest hardware you support. You can check for this support at runtime with `MTLDevice.supportsFamily(.apple6)`.
+
+## Topics
+
+### Creating a directional light
+
+- [init(color:intensity:)](directionallightcomponent/init%28color_intensity_%29.md): Creates a directional light with a configuration.
+- [init(color:intensity:isRealWorldProxy:)](directionallightcomponent/init%28color_intensity_isrealworldproxy_%29-42x82.md): Creates a directional light with a configuration.
+- [init(color:intensity:isRealWorldProxy:)](directionallightcomponent/init%28color_intensity_isrealworldproxy_%29-42x82.md): Creates a directional light with a configuration.
+
+### Setting the color
+
+- [color](directionallightcomponent/color-5ebuh.md): A color for the directional light.
+- [color](directionallightcomponent/color-5ebuh.md): A color for the directional light.
+
+### Setting intensity and shadows
+
+- [intensity](directionallightcomponent/intensity.md): The intensity of the directional light, measured in lumen per square meter.
+- [isRealWorldProxy](directionallightcomponent/isrealworldproxy.md): A Boolean that you use to control whether the directional light operates as a proxy for a real-world light.
+
+### Supporting types
+
+- [DirectionalLightComponent.Color](directionallightcomponent/color-swift.typealias.md): A platform-specific type used to define color for a directional light.
+
+### Assigning render layers
+
+- [layers](directionallightcomponent/layers.md): The layers this light illuminates.
+
+### Structures
+
+- [DirectionalLightComponent.Shadow](directionallightcomponent/shadow.md): A directional light component that adds shadows to entities that it illuminates
+
+### Initializers
+
+- [init(color:intensity:isRealWorldProxy:)](directionallightcomponent/init%28color_intensity_isrealworldproxy_%29.md): Creates a directional light with a configuration.
+
+### Instance Properties
+
+- [color](directionallightcomponent/color-7hs4n.md): A color for the directional light.
+
+## Relationships
+
+### Conforms To
+
+- [Component](component.md)
+- [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Escapable](https://developer.apple.com/documentation/swift/escapable)
+
+## See Also
+
+### Directional lights and their shadows
+
+- [DirectionalLightComponent.Shadow](directionallightcomponent/shadow.md): A directional light component that adds shadows to entities that it illuminates
+- [DirectionalLightComponent.Shadow.ShadowProjectionType](directionallightcomponent/shadow/shadowprojectiontype.md)
+- [DirectionalLightComponent.Shadow.ShadowMapCullMode](directionallightcomponent/shadow/shadowmapcullmode.md)

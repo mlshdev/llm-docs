@@ -1,0 +1,46 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtlcomputecommandencoder/setbuffers(_:offsets:attributestrides:range:)](https://developer.apple.com/documentation/metal/mtlcomputecommandencoder/setbuffers(_:offsets:attributestrides:range:))
+
+# setBuffers(\_:offsets:attributeStrides:range:)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS
+
+Binds multiple buffers with data in stride to the buffer argument table at once, allowing compute kernels to access their data on the GPU.
+
+## Declaration
+
+```swift
+func setBuffers(_ buffers: [(any MTLBuffer)?], offsets: [Int], attributeStrides: [Int], range: Range<Int>)
+```
+
+## Parameters
+
+- `buffers`: The [MTLBuffer](../mtlbuffer.md) instances to bind to the buffer argument table.
+- `offsets`: An array of offsets, each of which specifies where the data begins, in bytes, from the start of its corresponding buffer.
+- `attributeStrides`: An array of strides, each of which specifies the number of bytes between the start of one element and the start of the next for its corresponding buffer.
+- `range`: The argument table indicies to bind each of the `buffers` to, in the order they appear.
+
+<a id="discussion"></a>
+
+## Discussion
+
+> **Important**
+
+>  This method requires that the length of `buffers`, `offsets`, and `attributeStrides` are all equal to the length of `range`.
+
+For buffers binding to an argument using the `device` address space, align the offset to the data type’s size. The maximum size for an offset is `16` bytes.
+
+For buffers in the `constant` address space, the minimum alignment depends on the hardware running your app. See the [Metal feature set tables (PDF)](https://developer.apple.com/metal/Metal-Feature-Set-Tables.pdf) for information on each Apple GPU family.
+
+Rebinding an already bound buffer causes a Metal error.
+
+## See Also
+
+### Binding buffers
+
+- [setBuffer(\_:offset:index:)](setbuffer%28__offset_index_%29.md): Binds a buffer to the buffer argument table, allowing compute kernels to access its data on the GPU.
+- [setBuffer(\_:offset:attributeStride:index:)](setbuffer%28__offset_attributestride_index_%29.md): Binds a buffer with a stride to the buffer argument table, allowing compute kernels to access its data on the GPU.
+- [setBuffers(\_:offsets:range:)](setbuffers%28__offsets_range_%29.md): Binds multiple buffers to the buffer argument table at once, allowing compute kernels to access their data on the GPU.
+- [setBufferOffset(\_:index:)](setbufferoffset%28__index_%29.md): Changes where the data begins in a buffer already bound to the buffer argument table.
+- [setBufferOffset(offset:attributeStride:index:)](setbufferoffset%28offset_attributestride_index_%29.md): Changes where the data begins and the distance between adjacent elements in a buffer already bound to the buffer argument table.

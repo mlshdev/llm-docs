@@ -1,0 +1,39 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/bundleresources/entitlements/com.apple.developer.arkit.visual-fidelity.allow](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.arkit.visual-fidelity.allow)
+
+# Visual Fidelity monitoring
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** Bundle Resources  
+**Kind:** Property List Key  
+**Availability:** visionOS 27.0+
+
+A Boolean value that indicates whether your app can monitor visual fidelity.
+
+## Details
+
+`com.apple.developer.arkit.visual-fidelity.allow`
+
+<a id="discussion"></a>
+
+## Discussion
+
+Visual fidelity monitoring is part of enterprise APIs for visionOS, a collection of APIs that unlock capabilities for enterprise customers.
+
+To use the Visual Fidelity API, you need to apply for the entitlement. For more information, including how to apply for this entitlement, see [Building spatial experiences for business apps with enterprise APIs for visionOS](../../visionos/building-spatial-experiences-for-business-apps-with-enterprise-apis.md).
+
+## See Also
+
+### Enterprise
+
+- [Increased performance headroom](com.apple.developer.app-compute-category.md): An entitlement that allows an app to adjust thresholds that balance thermal dissipation and performance against fan noise and other factors.
+- [Passthrough in screen capture](com.apple.developer.screen-capture.include-passthrough.md): A Boolean value that indicates whether an app can include passthrough in screen capture.
+- [Main camera access](com.apple.developer.arkit.main-camera-access.allow.md): A Boolean value that indicates whether an app can use ARKit to access the main cameras on Apple Vision Pro.
+- [Object-tracking parameter adjustment](com.apple.developer.arkit.object-tracking-parameter-adjustment.allow.md): A Boolean value that allows an app to use ARKit to track more objects with a higher frequency.
+- [Spatial barcode and QR code scanning](com.apple.developer.arkit.barcode-detection.allow.md): A Boolean value that indicates whether an app can use ARKit to detect, position, and decode barcode and QR codes.
+- [Camera Region access](com.apple.developer.arkit.camera-region.allow.md): A Boolean value indicating whether your app may access the camera region.
+- [Shared Coordinate Space access](com.apple.developer.arkit.shared-coordinate-space.allow.md): A Boolean value indicating whether your app may use a shared coordinate space.
+- [App-Protected Content](com.apple.developer.protected-content.md): A Boolean value indicating whether the system prohibits capturing your app’s content.
+- [Window Follow Mode](com.apple.developer.window-body-follow.md): A Boolean value indicating whether your app’s windows will follow the person.
+- [Apple Neural Engine access](com.apple.developer.coreml.neural-engine-access.md): Deprecated. A Boolean value that indicates whether an app can use the Apple Neural Engine to speed up CoreML.
+- [UVC Device Access on visionOS](com.apple.developer.avfoundation.uvc-device-access.md): Deprecated. A Boolean value that indicates whether the app can stream USB UVC devices connected to the Developer strap.

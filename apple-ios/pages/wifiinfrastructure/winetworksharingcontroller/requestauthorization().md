@@ -1,0 +1,47 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/wifiinfrastructure/winetworksharingcontroller/requestauthorization()](https://developer.apple.com/documentation/wifiinfrastructure/winetworksharingcontroller/requestauthorization())
+
+# requestAuthorization()
+
+**Framework:** Wi-Fi Infrastructure  
+**Kind:** Instance Method  
+**Availability:** iOS 26.2+ · iPadOS 26.2+ · Mac Catalyst 26.2+
+
+Requests network-sharing authorization for the specified accessory at initial setup.
+
+## Declaration
+
+```swift
+func requestAuthorization() async throws -> WINetworkSharingController.AuthorizationState
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+An [WINetworkSharingController.AuthorizationState](authorizationstate.md) value indicating the authorization level the person selected.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Call this method to request that the system ask the person to authorize sharing of Wi-Fi networks to the specified accessory. The person or the system may decline the request.
+
+The person can select from the following sharing modes:
+
+- **Automatically Share**: The system automatically sends new networks to the accessory when the device joins them while the accessory is connected.
+- **Ask Every Time**: When the device joins a new network, the system notifies your extension through the Wi-Fi Infrastructure framework. Your extension can then check [newShareableNetworkAvailable](../winetworksharingprovider/networkevent/newshareablenetworkavailable.md) and call [presentAskToShareUI(scanProvider:)](../winetworksharingprovider/presentasktoshareui%28scanprovider_%29.md) to present UI asking the person to share that network.
+- **Don’t Share**: The person declines to share Wi-Fi networks with this accessory.
+
+In the “Automatically Share” and “Ask Every Time” sharing modes, the accessory may request to share a nearby network that’s known to the person. Accessories can use this to prompt a person to share a different network if they have trouble connecting to a previously shared network.
+
+> **Throws**
+
+> - `accessoryTransportNotSecured` if the accessory is not using a secure Bluetooth transport.
+> - `accessoryNotConnected` if the accessory isn’t connected when your container app calls this method.
+> - `WINetworkSharingError` if other faults occur.
+
+## See Also
+
+### Authorizing an accessory for network sharing
+
+- [WINetworkSharingController.AuthorizationState](authorizationstate.md): An enumeration that represents the authorization state for sharing Wi-Fi networks with a given accessory.

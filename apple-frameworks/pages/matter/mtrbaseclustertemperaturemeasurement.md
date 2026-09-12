@@ -1,0 +1,180 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclustertemperaturemeasurement](https://developer.apple.com/documentation/matter/mtrbaseclustertemperaturemeasurement)
+
+# MTRBaseClusterTemperatureMeasurement (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```swift
+class MTRBaseClusterTemperatureMeasurement
+```
+
+## Topics
+
+### Initializers
+
+- [init(device:endpoint:queue:)](mtrbaseclustertemperaturemeasurement/init%28device_endpoint_queue_%29.md): Deprecated.
+- [init(device:endpointID:queue:)](mtrbaseclustertemperaturemeasurement/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandList(completion:)](mtrbaseclustertemperaturemeasurement/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandList(completionHandler:)](mtrbaseclustertemperaturemeasurement/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(completion:)](mtrbaseclustertemperaturemeasurement/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeList(completionHandler:)](mtrbaseclustertemperaturemeasurement/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(completion:)](mtrbaseclustertemperaturemeasurement/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevision(completionHandler:)](mtrbaseclustertemperaturemeasurement/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(completion:)](mtrbaseclustertemperaturemeasurement/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMap(completionHandler:)](mtrbaseclustertemperaturemeasurement/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(completion:)](mtrbaseclustertemperaturemeasurement/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandList(completionHandler:)](mtrbaseclustertemperaturemeasurement/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeMaxMeasuredValue(completion:)](mtrbaseclustertemperaturemeasurement/readattributemaxmeasuredvalue%28completion_%29.md)
+- [readAttributeMaxMeasuredValue(completionHandler:)](mtrbaseclustertemperaturemeasurement/readattributemaxmeasuredvalue%28completionhandler_%29.md): Deprecated.
+- [readAttributeMeasuredValue(completion:)](mtrbaseclustertemperaturemeasurement/readattributemeasuredvalue%28completion_%29.md)
+- [readAttributeMeasuredValue(completionHandler:)](mtrbaseclustertemperaturemeasurement/readattributemeasuredvalue%28completionhandler_%29.md): Deprecated.
+- [readAttributeMinMeasuredValue(completion:)](mtrbaseclustertemperaturemeasurement/readattributeminmeasuredvalue%28completion_%29.md)
+- [readAttributeMinMeasuredValue(completionHandler:)](mtrbaseclustertemperaturemeasurement/readattributeminmeasuredvalue%28completionhandler_%29.md): Deprecated.
+- [readAttributeTolerance(completion:)](mtrbaseclustertemperaturemeasurement/readattributetolerance%28completion_%29.md)
+- [readAttributeTolerance(completionHandler:)](mtrbaseclustertemperaturemeasurement/readattributetolerance%28completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclustertemperaturemeasurement/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustertemperaturemeasurement/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeList(with:subscriptionEstablished:reportHandler:)](mtrbaseclustertemperaturemeasurement/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustertemperaturemeasurement/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevision(with:subscriptionEstablished:reportHandler:)](mtrbaseclustertemperaturemeasurement/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevision(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustertemperaturemeasurement/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMap(with:subscriptionEstablished:reportHandler:)](mtrbaseclustertemperaturemeasurement/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMap(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustertemperaturemeasurement/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclustertemperaturemeasurement/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustertemperaturemeasurement/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMaxMeasuredValue(with:subscriptionEstablished:reportHandler:)](mtrbaseclustertemperaturemeasurement/subscribeattributemaxmeasuredvalue%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMaxMeasuredValue(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustertemperaturemeasurement/subscribeattributemaxmeasuredvalue%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMeasuredValue(with:subscriptionEstablished:reportHandler:)](mtrbaseclustertemperaturemeasurement/subscribeattributemeasuredvalue%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMeasuredValue(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustertemperaturemeasurement/subscribeattributemeasuredvalue%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMinMeasuredValue(with:subscriptionEstablished:reportHandler:)](mtrbaseclustertemperaturemeasurement/subscribeattributeminmeasuredvalue%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMinMeasuredValue(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustertemperaturemeasurement/subscribeattributeminmeasuredvalue%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeTolerance(with:subscriptionEstablished:reportHandler:)](mtrbaseclustertemperaturemeasurement/subscribeattributetolerance%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeTolerance(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustertemperaturemeasurement/subscribeattributetolerance%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustertemperaturemeasurement/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustertemperaturemeasurement/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustertemperaturemeasurement/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustertemperaturemeasurement/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevision(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustertemperaturemeasurement/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustertemperaturemeasurement/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMap(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustertemperaturemeasurement/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustertemperaturemeasurement/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustertemperaturemeasurement/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustertemperaturemeasurement/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMaxMeasuredValue(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustertemperaturemeasurement/readattributemaxmeasuredvalue%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMaxMeasuredValue(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustertemperaturemeasurement/readattributemaxmeasuredvalue%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMeasuredValue(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustertemperaturemeasurement/readattributemeasuredvalue%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMeasuredValue(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustertemperaturemeasurement/readattributemeasuredvalue%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMinMeasuredValue(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustertemperaturemeasurement/readattributeminmeasuredvalue%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMinMeasuredValue(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustertemperaturemeasurement/readattributeminmeasuredvalue%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeTolerance(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustertemperaturemeasurement/readattributetolerance%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeTolerance(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustertemperaturemeasurement/readattributetolerance%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRBaseClusterTemperatureMeasurement (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```objectivec
+@interface MTRBaseClusterTemperatureMeasurement : MTRGenericBaseCluster
+```
+
+## Topics
+
+### Initializers
+
+- [initWithDevice:endpoint:queue:](mtrbaseclustertemperaturemeasurement/init%28device_endpoint_queue_%29.md): Deprecated.
+- [initWithDevice:endpointID:queue:](mtrbaseclustertemperaturemeasurement/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandListWithCompletion:](mtrbaseclustertemperaturemeasurement/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandListWithCompletionHandler:](mtrbaseclustertemperaturemeasurement/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithCompletion:](mtrbaseclustertemperaturemeasurement/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeListWithCompletionHandler:](mtrbaseclustertemperaturemeasurement/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithCompletion:](mtrbaseclustertemperaturemeasurement/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevisionWithCompletionHandler:](mtrbaseclustertemperaturemeasurement/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithCompletion:](mtrbaseclustertemperaturemeasurement/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMapWithCompletionHandler:](mtrbaseclustertemperaturemeasurement/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithCompletion:](mtrbaseclustertemperaturemeasurement/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandListWithCompletionHandler:](mtrbaseclustertemperaturemeasurement/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeMaxMeasuredValueWithCompletion:](mtrbaseclustertemperaturemeasurement/readattributemaxmeasuredvalue%28completion_%29.md)
+- [readAttributeMaxMeasuredValueWithCompletionHandler:](mtrbaseclustertemperaturemeasurement/readattributemaxmeasuredvalue%28completionhandler_%29.md): Deprecated.
+- [readAttributeMeasuredValueWithCompletion:](mtrbaseclustertemperaturemeasurement/readattributemeasuredvalue%28completion_%29.md)
+- [readAttributeMeasuredValueWithCompletionHandler:](mtrbaseclustertemperaturemeasurement/readattributemeasuredvalue%28completionhandler_%29.md): Deprecated.
+- [readAttributeMinMeasuredValueWithCompletion:](mtrbaseclustertemperaturemeasurement/readattributeminmeasuredvalue%28completion_%29.md)
+- [readAttributeMinMeasuredValueWithCompletionHandler:](mtrbaseclustertemperaturemeasurement/readattributeminmeasuredvalue%28completionhandler_%29.md): Deprecated.
+- [readAttributeToleranceWithCompletion:](mtrbaseclustertemperaturemeasurement/readattributetolerance%28completion_%29.md)
+- [readAttributeToleranceWithCompletionHandler:](mtrbaseclustertemperaturemeasurement/readattributetolerance%28completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustertemperaturemeasurement/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustertemperaturemeasurement/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustertemperaturemeasurement/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustertemperaturemeasurement/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevisionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustertemperaturemeasurement/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevisionWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustertemperaturemeasurement/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMapWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustertemperaturemeasurement/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMapWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustertemperaturemeasurement/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustertemperaturemeasurement/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustertemperaturemeasurement/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMaxMeasuredValueWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustertemperaturemeasurement/subscribeattributemaxmeasuredvalue%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMaxMeasuredValueWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustertemperaturemeasurement/subscribeattributemaxmeasuredvalue%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMeasuredValueWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustertemperaturemeasurement/subscribeattributemeasuredvalue%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMeasuredValueWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustertemperaturemeasurement/subscribeattributemeasuredvalue%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMinMeasuredValueWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustertemperaturemeasurement/subscribeattributeminmeasuredvalue%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMinMeasuredValueWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustertemperaturemeasurement/subscribeattributeminmeasuredvalue%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeToleranceWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustertemperaturemeasurement/subscribeattributetolerance%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeToleranceWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustertemperaturemeasurement/subscribeattributetolerance%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustertemperaturemeasurement/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustertemperaturemeasurement/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustertemperaturemeasurement/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustertemperaturemeasurement/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevisionWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustertemperaturemeasurement/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustertemperaturemeasurement/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMapWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustertemperaturemeasurement/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustertemperaturemeasurement/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustertemperaturemeasurement/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustertemperaturemeasurement/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMaxMeasuredValueWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustertemperaturemeasurement/readattributemaxmeasuredvalue%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMaxMeasuredValueWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustertemperaturemeasurement/readattributemaxmeasuredvalue%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMeasuredValueWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustertemperaturemeasurement/readattributemeasuredvalue%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMeasuredValueWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustertemperaturemeasurement/readattributemeasuredvalue%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMinMeasuredValueWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustertemperaturemeasurement/readattributeminmeasuredvalue%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMinMeasuredValueWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustertemperaturemeasurement/readattributeminmeasuredvalue%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeToleranceWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustertemperaturemeasurement/readattributetolerance%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeToleranceWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustertemperaturemeasurement/readattributetolerance%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)

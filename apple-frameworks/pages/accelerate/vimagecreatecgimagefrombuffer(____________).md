@@ -1,0 +1,165 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimagecreatecgimagefrombuffer(_:_:_:_:_:_:)](https://developer.apple.com/documentation/accelerate/vimagecreatecgimagefrombuffer(_:_:_:_:_:_:))
+
+# vImageCreateCGImageFromBuffer(\_:\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 7.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Creates a Core Graphics image from a vImage buffer.
+
+## Declaration
+
+```swift
+func vImageCreateCGImageFromBuffer(_ buf: UnsafePointer<vImage_Buffer>, _ format: UnsafePointer<vImage_CGImageFormat>, _ callback: ((UnsafeMutableRawPointer?, UnsafeMutableRawPointer?) -> Void)!, _ userData: UnsafeMutableRawPointer!, _ flags: vImage_Flags, _ error: UnsafeMutablePointer<vImage_Error>!) -> Unmanaged<CGImage>!
+```
+
+## Parameters
+
+- `buf`: The source vImage buffer.
+- `format`: The image format of the source vImage buffer. If the format’s color space is `nil`, the function uses sRGB. The new Core Graphics image retains the color space.
+- `callback`: A callback function that deallocates the source buffer’s data when the returned image no longer needs it. Pass this callback when you call this function in no-copy mode; that is, when you pass [kvImageNoAllocate](kvimagenoallocate.md) to `flags`. The system may call this function at any time — including before [vImageCreateCGImageFromBuffer(\_:\_:\_:\_:\_:\_:)](vimagecreatecgimagefrombuffer%28____________%29.md) returns — and from any thread.
+- `userData`: The value that passes to the `callback` function’s `userData` parameter.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+  Pass [kvImageNoAllocate](kvimagenoallocate.md) to specify that the function runs in no-copy mode. In this case, the function passes the ownership of the source vImage buffer’s memory to the returned [CGImage](../coregraphics/cgimage.md) instance. When you pass this flag, specify the callback function to manage the deallocation of the memory.
+
+  Pass [kvImageHighQualityResampling](kvimagehighqualityresampling.md) to specify high-quality resampling if the function resamples the output image to a smaller size.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes in [Data Types and Constants](data-types-and-constants.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The following code shows a passthrough function that generates an output Core Graphics image using no-copy mode. The vImage buffer, `buffer`, and the Core Graphics image, `destinationCGImage`, share the same memory. In this example, the deallocation callback deallocates the memory that the `data` variable points to:
+
+```swift
+static func passThrough(sourceImage: CGImage) throws -> CGImage? {
+    
+    let alignmentAndRowBytes = try vImage_Buffer.preferredAlignmentAndRowBytes(
+        width: sourceImage.width,
+        height: sourceImage.height,
+        bitsPerPixel: UInt32(sourceImage.bitsPerPixel))
+    
+    let data = UnsafeMutableRawPointer.allocate(
+        byteCount: alignmentAndRowBytes.rowBytes * alignmentAndRowBytes.rowBytes,
+        alignment: alignmentAndRowBytes.alignment)
+    
+    var buffer = vImage_Buffer(
+        data: data,
+        height: vImagePixelCount(sourceImage.height),
+        width: vImagePixelCount(sourceImage.width),
+        rowBytes: alignmentAndRowBytes.rowBytes)
+    
+    var format = vImage_CGImageFormat()
+    
+    vImageBuffer_InitWithCGImage(
+        &buffer,
+        &format,
+        nil,
+        sourceImage,
+        vImage_Flags(kvImageNoAllocate))
+
+    func callback(_: UnsafeMutableRawPointer?,
+                  bufferData: UnsafeMutableRawPointer?) {
+        bufferData?.deallocate()
+    }
+    
+    let destinationCGImage = vImageCreateCGImageFromBuffer(
+        &buffer,
+        &format,
+        callback,
+        nil,
+        vImage_Flags(kvImageNoAllocate),
+        nil)
+    
+    return destinationCGImage?.takeRetainedValue()
+}
+```
+
+# vImageCreateCGImageFromBuffer (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 7.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Creates a Core Graphics image from a vImage buffer.
+
+## Declaration
+
+```objectivec
+CGImageRefvImageCreateCGImageFromBuffer(const vImage_Buffer *buf, const vImage_CGImageFormat *format, void (*)(void *, void *)callback, void *userData, vImage_Flags flags, vImage_Error *error);
+```
+
+## Parameters
+
+- `buf`: The source vImage buffer.
+- `format`: The image format of the source vImage buffer. If the format’s color space is `nil`, the function uses sRGB. The new Core Graphics image retains the color space.
+- `callback`: A callback function that deallocates the source buffer’s data when the returned image no longer needs it. Pass this callback when you call this function in no-copy mode; that is, when you pass [kvImageNoAllocate](kvimagenoallocate.md) to `flags`. The system may call this function at any time — including before [vImageCreateCGImageFromBuffer](vimagecreatecgimagefrombuffer%28____________%29.md) returns — and from any thread.
+- `userData`: The value that passes to the `callback` function’s `userData` parameter.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+  Pass [kvImageNoAllocate](kvimagenoallocate.md) to specify that the function runs in no-copy mode. In this case, the function passes the ownership of the source vImage buffer’s memory to the returned [CGImageRef](../coregraphics/cgimage.md) instance. When you pass this flag, specify the callback function to manage the deallocation of the memory.
+
+  Pass [kvImageHighQualityResampling](kvimagehighqualityresampling.md) to specify high-quality resampling if the function resamples the output image to a smaller size.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes in [Data Types and Constants](data-types-and-constants.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The following code shows a passthrough function that generates an output Core Graphics image using no-copy mode. The vImage buffer, `buffer`, and the Core Graphics image, `destinationCGImage`, share the same memory. In this example, the deallocation callback deallocates the memory that the `data` variable points to:
+
+```swift
+static func passThrough(sourceImage: CGImage) throws -> CGImage? {
+    
+    let alignmentAndRowBytes = try vImage_Buffer.preferredAlignmentAndRowBytes(
+        width: sourceImage.width,
+        height: sourceImage.height,
+        bitsPerPixel: UInt32(sourceImage.bitsPerPixel))
+    
+    let data = UnsafeMutableRawPointer.allocate(
+        byteCount: alignmentAndRowBytes.rowBytes * alignmentAndRowBytes.rowBytes,
+        alignment: alignmentAndRowBytes.alignment)
+    
+    var buffer = vImage_Buffer(
+        data: data,
+        height: vImagePixelCount(sourceImage.height),
+        width: vImagePixelCount(sourceImage.width),
+        rowBytes: alignmentAndRowBytes.rowBytes)
+    
+    var format = vImage_CGImageFormat()
+    
+    vImageBuffer_InitWithCGImage(
+        &buffer,
+        &format,
+        nil,
+        sourceImage,
+        vImage_Flags(kvImageNoAllocate))
+
+    func callback(_: UnsafeMutableRawPointer?,
+                  bufferData: UnsafeMutableRawPointer?) {
+        bufferData?.deallocate()
+    }
+    
+    let destinationCGImage = vImageCreateCGImageFromBuffer(
+        &buffer,
+        &format,
+        callback,
+        nil,
+        vImage_Flags(kvImageNoAllocate),
+        nil)
+    
+    return destinationCGImage?.takeRetainedValue()
+}
+```

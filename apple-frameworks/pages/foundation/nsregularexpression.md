@@ -1,0 +1,841 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsregularexpression](https://developer.apple.com/documentation/foundation/nsregularexpression)
+
+# NSRegularExpression (Swift)
+
+**Framework:** Foundation  
+**Kind:** Class  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+An immutable representation of a compiled regular expression that you apply to Unicode strings.
+
+## Declaration
+
+```swift
+class NSRegularExpression
+```
+
+<a id="overview"></a>
+
+## Overview
+
+The fundamental matching method for [NSRegularExpression](nsregularexpression.md) is a Block iterator method that allows clients to supply a Block object which will be invoked each time the regular expression matches a portion of the target string.  There are additional convenience methods for returning all the matches as an array, the total number of matches, the first match, and the range of the first match.
+
+An individual match is represented by an instance of the [NSTextCheckingResult](nstextcheckingresult.md) class, which carries information about the overall matched range (via its [range](nstextcheckingresult/range.md) property), and the range of each individual capture group (via the [range(at:)](nstextcheckingresult/range%28at_%29.md) method).  For basic [NSRegularExpression](nsregularexpression.md) objects, these match results will be of type [regularExpression](nstextcheckingresult/checkingtype/regularexpression.md), but subclasses may use other types.
+
+> **Note**
+
+>  [NSRegularExpression](nsregularexpression.md) conforms to the International Components for Unicode ([ICU](https://unicode-org.github.io/icu/)) specification for [regular expressions](https://unicode-org.github.io/icu/userguide/strings/regexp.html).
+
+<a id="Examples-Using-NSRegularExpression"></a>
+
+### Examples Using NSRegularExpression
+
+What follows are a set of graduated examples for using the `NSRegularExpression` class. All these examples use the regular expression `\\b(a|b)(c|d)\\b` as their regular expression.
+
+This snippet creates a regular expression to match two-letter words, in which the first letter is “a” or “b” and the second letter is “c” or “d”. Specifying [caseInsensitive](nsregularexpression/options-swift.struct/caseinsensitive.md) means that matches will be case-insensitive, so this will match “BC”, “aD”, and so forth, as well as their lower-case equivalents.
+
+**Swift**
+
+```swift
+do {
+    let regex = try NSRegularExpression(pattern: "\\b(a|b)(c|d)\\b", options: .caseInsensitive)
+} catch let error as NSError {
+    print("Error creating NSRegularExpression: \(error)")
+}
+```
+
+**Objective-C**
+
+```objc
+NSError *error = NULL;
+NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\b(a|b)(c|d)\\b"
+                                                                       options:NSRegularExpressionCaseInsensitive
+                                                                         error:&error];
+```
+
+The [numberOfMatches(in:options:range:)](nsregularexpression/numberofmatches%28in_options_range_%29.md) method provides a simple mechanism for counting the number of matches in a given range of a string.
+
+**Swift**
+
+```swift
+let numberOfMatches = regex.numberOfMatches(in: string, options: [], range: NSRange(location: 0, length: string.utf16.count))
+
+```
+
+**Objective-C**
+
+```objc
+NSUInteger numberOfMatches = [regex numberOfMatchesInString:string
+                                                    options:0
+                                                      range:NSMakeRange(0, [string length])];
+```
+
+If you are interested only in the overall range of the first match, the [rangeOfFirstMatch(in:options:range:)](nsregularexpression/rangeoffirstmatch%28in_options_range_%29.md) method provides it for you.  Some regular expressions (though not the example pattern) can successfully match a zero-length range, so the comparison of the resulting range with `{NSNotFound, 0}` is the most reliable way to determine whether there was a match or not.
+
+The example regular expression contains two capture groups, corresponding to the two sets of parentheses, one for the first letter, and one for the second.  If you are interested in more than just the overall matched range, you want to obtain an [NSTextCheckingResult](nstextcheckingresult.md) object corresponding to a given match.  This object provides information about the overall matched range, via its [range](nstextcheckingresult/range.md) property, and also supplies the capture group ranges, via the [range(at:)](nstextcheckingresult/range%28at_%29.md) method.  The first capture group range is given by `[result rangeAtIndex:1]`, the second by `[result rangeAtIndex:2]`.  Sending a result the  [range(at:)](nstextcheckingresult/range%28at_%29.md) message and passing `0` is equivalent to `[result range]`.
+
+If the result returned is non-`nil`, then `[result range]` will always be a valid range, so it is not necessary to compare it against `{NSNotFound, 0}`.  However, for some regular expressions (though not the example pattern) some capture groups may or may not participate in a given match.  If a given capture group does not participate in a given match, then `[result rangeAtIndex:idx]` will return `{NSNotFound, 0}`.
+
+**Swift**
+
+```swift
+let rangeOfFirstMatch = regex.rangeOfFirstMatch(in: string, options: [], range: NSRange(location: 0, length: string.utf16.count))
+if rangeOfFirstMatch.location != NSNotFound {
+     let substringForFirstMatch = (string as NSString).substring(with: rangeOfFirstMatch)
+}
+```
+
+**Objective-C**
+
+```objc
+NSRange rangeOfFirstMatch = [regex rangeOfFirstMatchInString:string options:0 range:NSMakeRange(0, [string length])];
+if (!NSEqualRanges(rangeOfFirstMatch, NSMakeRange(NSNotFound, 0))) {
+    NSString *substringForFirstMatch = [string substringWithRange:rangeOfFirstMatch];
+}
+```
+
+The [matches(in:options:range:)](nsregularexpression/matches%28in_options_range_%29.md) returns all the matching results.
+
+**Swift**
+
+```swift
+let matches = regex.matches(in: string, options: [], range: NSRange(location: 0, length: string.utf16.count))
+ for match in matches {
+     let matchRange = match.range
+     let firstHalfRange = match.range(at: 1)
+     let secondHalfRange = match.range(at: 2)
+ }
+ 
+```
+
+**Objective-C**
+
+```objc
+NSArray *matches = [regex matchesInString:string
+                                  options:0
+                                    range:NSMakeRange(0, [string length])];
+for (NSTextCheckingResult *match in matches) {
+     NSRange matchRange = [match range];
+     NSRange firstHalfRange = [match rangeAtIndex:1];
+     NSRange secondHalfRange = [match rangeAtIndex:2];
+}
+```
+
+The [firstMatch(in:options:range:)](nsregularexpression/firstmatch%28in_options_range_%29.md) method is similar to [matches(in:options:range:)](nsregularexpression/matches%28in_options_range_%29.md) but it returns only the first match.
+
+**Swift**
+
+```swift
+if let match = regex.firstMatch(in: string, options: [], range: NSRange(location: 0, length: string.utf16.count)) {
+    let matchRange = match.range
+    let firstHalfRange = match.range(at: 1)
+    let secondHalfRange = match.range(at: 2)
+}
+```
+
+**Objective-C**
+
+```objc
+NSTextCheckingResult *match = [regex firstMatchInString:string
+                                                options:0
+                                                  range:NSMakeRange(0, [string length])];
+if (match) {
+    NSRange matchRange = [match range];
+    NSRange firstHalfRange = [match rangeAtIndex:1];
+    NSRange secondHalfRange = [match rangeAtIndex:2];
+ }
+ 
+```
+
+The Block enumeration method [enumerateMatches(in:options:range:using:)](nsregularexpression/enumeratematches%28in_options_range_using_%29.md) is the most general and flexible of the matching methods of `NSRegularExpression`.  It allows you to iterate through matches in a string, performing arbitrary actions on each as specified by the code in the Block and to stop partway through if desired.  In the following example case, the iteration is stopped after a certain number of matches have been found.
+
+If neither of the special options [reportProgress](nsregularexpression/matchingoptions/reportprogress.md) or [reportCompletion](nsregularexpression/matchingoptions/reportcompletion.md) is specified, then the result argument to the Block is guaranteed to be non-`nil`, and as mentioned before, it is guaranteed to have a valid overall range.  See [NSRegularExpression.MatchingOptions](nsregularexpression/matchingoptions.md) for the significance of [reportProgress](nsregularexpression/matchingoptions/reportprogress.md) or [reportCompletion](nsregularexpression/matchingoptions/reportcompletion.md).
+
+**Swift**
+
+```swift
+var count = 0
+regex.enumerateMatches(in: string, options: [], range: NSRange(location: 0, length: string.utf16.count)) { match, flags, stop in
+     guard let match = match else { return }
+
+     let matchRange = match.range
+     let firstHalfRange = match.range(at: 1)
+     let secondHalfRange = match.range(at: 2)
+     count += 1
+     if count >= 100 {
+         stop = true
+     }
+}
+```
+
+**Objective-C**
+
+```objc
+__block NSUInteger count = 0;
+[regex enumerateMatchesInString:string options:0 range:NSMakeRange(0, [string length]) usingBlock:^(NSTextCheckingResult *match, NSMatchingFlags flags, BOOL *stop){
+     NSRange matchRange = [match range];
+     NSRange firstHalfRange = [match rangeAtIndex:1];
+     NSRange secondHalfRange = [match rangeAtIndex:2];
+     if (++count >= 100) *stop = YES;
+}];
+```
+
+`NSRegularExpression` also provides simple methods for performing find-and-replace operations on a string.  The following example returns a modified copy, but there is a corresponding method for modifying a mutable string in place.  The template specifies what is to be used to replace each match, with `$0` representing the contents of the overall matched range, `$1` representing the contents of the first capture group, and so on.  In this case, the template reverses the two letters of the word.
+
+**Swift**
+
+```swift
+let modifiedString = regex.stringByReplacingMatches(in: string, options: [], range: NSRange(location: 0, length: string.utf16.count), withTemplate: "$2$1")
+ 
+```
+
+**Objective-C**
+
+```objc
+NSString *modifiedString = [regex stringByReplacingMatchesInString:string
+                                                           options:0
+                                                             range:NSMakeRange(0, [string length])
+                                                      withTemplate:@"$2$1"];
+```
+
+<a id="Concurrency-and-Thread-Safety"></a>
+
+### Concurrency and Thread Safety
+
+`NSRegularExpression` is designed to be immutable and thread safe, so that a single instance can be used in matching operations on multiple threads at once.  However, the string on which it is operating should not be mutated during the course of a matching operation, whether from another thread or from within the Block used in the iteration.
+
+<a id="Regular-Expression-Syntax"></a>
+
+### Regular Expression Syntax
+
+The following tables describe the character expressions used by the regular expression to match patterns within a string, the pattern operators that specify how many times a pattern is matched and additional matching restrictions, and the last table specifies flags that can be included in the regular expression pattern that specify search behavior over multiple lines (these flags can also be specified using the [NSRegularExpression.Options](nsregularexpression/options-swift.struct.md) option flags.
+
+<a id="Regular-Expression-Metacharacters"></a>
+
+#### Regular Expression Metacharacters
+
+Table 1: Character sequences used to match characters within a string.
+
+| Character Expression | Description |
+| --- | --- |
+| `\a` | Match a BELL, `\u0007` |
+| `\A` | Match at the beginning of the input. Differs from `^` in that `\A` will not match after a new line within the input. |
+| `\b, outside of a [Set]` | Match if the current position is a word boundary. Boundaries occur at the transitions between word (`\w`) and non-word (`\W`) characters, with combining marks ignored. For better word boundaries, see [useUnicodeWordBoundaries](nsregularexpression/options-swift.struct/useunicodewordboundaries.md). |
+| `\b, within a [Set]` | Match a BACKSPACE, `\u0008`. |
+| `\B` | Match if the current position is not a word boundary. |
+| `\cX` | Match a `control-X` character |
+| `\d` | Match any character with the Unicode General Category of Nd (Number, Decimal Digit.) |
+| `\D` | Match any character that is not a decimal digit. |
+| `\e` | Match an `ESCAPE`, `\u001B`. |
+| `\E` | Terminates a `\Q ... \E` quoted sequence. |
+| `\f` | Match a FORM FEED, `\u000C`. |
+| `\G` | Match if the current position is at the end of the previous match. |
+| `\n` | Match a `LINE FEED`, `\u000A`. |
+| `\N{`*UNICODE CHARACTER NAME*`}` | Match the named character. |
+| `\p{`*UNICODE PROPERTY NAME*`}` | Match any character with the specified Unicode Property. |
+| `\P{`*UNICODE PROPERTY NAME*`}` | Match any character not having the specified Unicode Property. |
+| `\Q` | Quotes all following characters until `\E`. |
+| `\r` | Match a CARRIAGE RETURN, \\u000D. |
+| `\s` | Match a white space character. White space is defined as \[\\t\\n\\f\\r\\p{Z}\]. |
+| `\S` | Match a non-white space character. |
+| `\t` | Match a HORIZONTAL TABULATION, `\u0009`. |
+| `\u`*hhhh* | Match the character with the hex value *hhhh*. |
+| `\U`*hhhhhhhh* | Match the character with the hex value *hhhhhhhh*. Exactly eight hex digits must be provided, even though the largest Unicode code point is `\U0010ffff`. |
+| `\w` | Match a word character. Word characters are \[\\p{Ll}\\p{Lu}\\p{Lt}\\p{Lo}\\p{Nd}\]. |
+| `\W` | Match a non-word character. |
+| `\x{`*hhhh*`}` | Match the character with hex value *hhhh*. From one to six hex digits may be supplied. |
+| `\x`*hh* | Match the character with two digit hex value *hh*. |
+| `\X` | Match a Grapheme Cluster. |
+| `\Z` | Match if the current position is at the end of input, but before the final line terminator, if one exists. |
+| `\z` | Match if the current position is at the end of input. |
+| `\`*n* | Back Reference. Match whatever the \_n_th capturing group matched. *n* must be a number `≥ 1` and `≤` total number of capture groups in the pattern. |
+| `\0`*ooo* | Match an Octal character.  *ooo* is from one to three octal digits.  `0377` is the largest allowed Octal character.  The leading zero is required; it distinguishes Octal constants from back references. |
+| `[`*pattern*`]` | Match any one character from the pattern. |
+| `.` | Match any character. See [dotMatchesLineSeparators](nsregularexpression/options-swift.struct/dotmatcheslineseparators.md) and the `s` character expression in Table 4. |
+| `^` | Match at the beginning of a line. See [anchorsMatchLines](nsregularexpression/options-swift.struct/anchorsmatchlines.md) and the `\m` character expression in Table 4. |
+| `$` | Match at the end of a line. See [anchorsMatchLines](nsregularexpression/options-swift.struct/anchorsmatchlines.md) and the `m` character expression in Table 4. |
+| `\` | Quotes the following character. Characters that must be quoted to be treated as literals are \`\* ? + \[ ( ) { } ^ $ |
+
+<a id="Regular-Expression-Operators"></a>
+
+#### Regular Expression Operators
+
+Table 2: Regular expression operators.
+
+| Operator | Description |
+| --- | --- |
+| \` | \` |
+| `*` | Match `0` or more times. Match as many times as possible. |
+| `+` | Match `1` or more times. Match as many times as possible. |
+| `?` | Match zero or one times. Prefer one. |
+| `{`*n*`}` | Match exactly *n* times. |
+| `{`*n*`,}` | Match at least *n* times. Match as many times as possible. |
+| `{`*n*`,`*m*`}` | Match between *n* and *m* times. Match as many times as possible, but not more than *m*. |
+| `*?` | Match `0` or more times. Match as few times as possible. |
+| `+?` | Match 1 or more times. Match as few times as possible. |
+| `??` | Match zero or one times. Prefer zero. |
+| `{`*n*`}?` | Match exactly n times. |
+| `{`*n*`,}?` | Match at least n times, but no more than required for an overall pattern match. |
+| `{`*n*`,`*m*`}?` | Match between n and m times. Match as few times as possible, but not less than n. |
+| `*+` | Match 0 or more times. Match as many times as possible when first encountered. Do not retry with fewer, even if overall match fails (possessive match). |
+| `++` | Match 1 or more times (possessive match). |
+| `?+` | Match zero or one times (possessive match). |
+| `{`*n*`}+` | Match exactly *n* times. |
+| `{`*n*`,}+` | Match at least *n* times (possessive match). |
+| `{`*n*`,`*m*`}+` | Match between *n* and *m* times (possessive match). |
+| `(`*…*`)` | Capturing parentheses. Range of input that matched the parenthesized subexpression is available after the match. |
+| `(?:`*…*`)` | Non-capturing parentheses. Groups the included pattern, but does not provide capturing of matching text. Somewhat more efficient than capturing parentheses. |
+| `(?>`*…*`)` | Atomic-match parentheses. First match of the parenthesized subexpression is the only one tried; if it does not lead to an overall pattern match, back up the search for a match to a position before the “`(?>`” |
+| `(?# ... )` | Free-format comment `(?# comment )`. |
+| `(?= ... )` | Look-ahead assertion. True if the parenthesized pattern matches at the current input position, but does not advance the input position. |
+| `(?! ... )` | Negative look-ahead assertion. True if the parenthesized pattern does not match at the current input position. Does not advance the input position. |
+| `(?<= ... )` | Look-behind assertion. True if the parenthesized pattern matches text preceding the current input position, with the last character of the match being the input character just before the current position. Does not alter the input position. The length of possible strings matched by the look-behind pattern must not be unbounded (no \* or + operators.) |
+| `(?<! ... )` | Negative Look-behind assertion. True if the parenthesized pattern does not match text preceding the current input position, with the last character of the match being the input character just before the current position. Does not alter the input position. The length of possible strings matched by the look-behind pattern must not be unbounded (no \* or + operators.) |
+| `(?ismwx-ismwx:` `...` `)` | Flag settings. Evaluate the parenthesized expression with the specified flags enabled or -disabled. The flags are defined in [Flag Options](nsregularexpression.md#Flag-Options). |
+| `(?ismwx-ismwx)` | Flag settings. Change the flag settings. Changes apply to the portion of the pattern following the setting. For example, (?i) changes to a case insensitive match.The flags are defined in [Flag Options](nsregularexpression.md#Flag-Options). |
+
+<a id="Template-Matching-Format"></a>
+
+#### Template Matching Format
+
+The `NSRegularExpression` class provides find-and-replace methods for both immutable and mutable strings using the technique of template matching.
+
+Table 3: Find-and-replace syntax.
+
+| Character | Descriptions |
+| --- | --- |
+| `$`*n* | The text of capture group n will be substituted for $*n*. *n* must be `>= 0` and not greater than the number of capture groups. A `$` not followed by a digit has no special meaning, and will appear in the substitution text as itself, a `$`. |
+| `\` | Treat the following character as a literal, suppressing any special meaning. Backslash escaping in substitution text is only required for ‘$’ and ’', but may be used on any other character without bad effects. |
+
+The replacement string is treated as a template, with `$0` being replaced by the contents of the matched range, `$1` by the contents of the first capture group, and so on.  Additional digits beyond the maximum required to represent the number of capture groups will be treated as ordinary characters, as will a `$` not followed by digits.  Backslash will escape both `$` and `\`.
+
+<a id="Flag-Options"></a>
+
+#### Flag Options
+
+The following flags control various aspects of regular expression matching. These flag values may be specified within the pattern using the `(?ismx-ismx)` pattern options.  Equivalent behaviors can be specified for the entire pattern when an `NSRegularExpression` is initialized, using the [NSRegularExpression.Options](nsregularexpression/options-swift.struct.md) option flags.
+
+Table 4: Regular expression matching flags.
+
+| Flag (Pattern) | Description |
+| --- | --- |
+| i | If set, matching will take place in a case-insensitive manner. |
+| x | If set, allow use of white space and #comments within patterns |
+| s | If set, a “`.`” in a pattern will match a line terminator in the input text. By default, it will not. Note that a `carriage-return / line-feed pair` in text behave as a single line terminator, and will match a single “`.`” in a regular expression pattern |
+| m | Control the behavior of “`^`” and “`$`” in a pattern. By default these will only match at the start and end, respectively, of the input text. If this flag is set, “`^`” and “`$`” will also match at the start and end of each line within the input text. |
+| w | Controls the behavior of `\b` in a pattern. If set, word boundaries are found according to the definitions of word found in Unicode UAX 29, Text Boundaries. By default, word boundaries are identified by means of a simple classification of characters as either “word” or “non-word”, which approximates traditional regular expression behavior. The results obtained with the two options can be quite different in runs of spaces and other non-word characters. |
+
+<a id="Performance"></a>
+
+### Performance
+
+`NSRegularExpression` implements a nondeterministic finite automaton matching engine. As such, complex regular expression patterns containing multiple `*` or `+` operators may result in poor performance when attempting to perform matches — particularly failing to match a given input. For more information, see the [“Performance Tips” section of the ICU User Guide](http://userguide.icu-project.org/strings/regexp#TOC-Performance-Tips).
+
+<a id="ICU-License"></a>
+
+### ICU License
+
+Tables 1, 2, 3, and 4 are reproduced from the ICU User Guide, Copyright (c) 2000 - 2009 IBM and Others, which are licensed under the following terms:
+
+COPYRIGHT AND PERMISSION NOTICE
+
+Copyright (c) 1995-2009 International Business Machines Corporation and others. All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, provided that the above copyright notice(s) and this permission notice appear in all copies of the Software and that both the above copyright notice(s) and this permission notice appear in supporting documentation.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder.
+
+All trademarks and registered trademarks mentioned herein are the property of their respective owners.
+
+## Topics
+
+### Creating Regular Expressions
+
+- [init(pattern:options:)](nsregularexpression/init%28pattern_options_%29.md): Returns an initialized NSRegularExpression instance with the specified regular expression pattern and options.
+
+### Getting the Regular Expression and Options
+
+- [pattern](nsregularexpression/pattern.md): Returns the regular expression pattern.
+- [options](nsregularexpression/options-swift.property.md): Returns the options used when the regular expression option was created.
+- [numberOfCaptureGroups](nsregularexpression/numberofcapturegroups.md): Returns the number of capture groups in the regular expression.
+
+### Searching Strings Using Regular Expressions
+
+- [numberOfMatches(in:options:range:)](nsregularexpression/numberofmatches%28in_options_range_%29.md): Returns the number of matches of the regular expression within the specified range of the string.
+- [enumerateMatches(in:options:range:using:)](nsregularexpression/enumeratematches%28in_options_range_using_%29.md): Enumerates the string allowing the Block to handle each regular expression match.
+- [matches(in:options:range:)](nsregularexpression/matches%28in_options_range_%29.md): Returns an array containing all the matches of the regular expression in the string.
+- [firstMatch(in:options:range:)](nsregularexpression/firstmatch%28in_options_range_%29.md): Returns the first match of the regular expression within the specified range of the string.
+- [rangeOfFirstMatch(in:options:range:)](nsregularexpression/rangeoffirstmatch%28in_options_range_%29.md): Returns the range of the first match of the regular expression within the specified range of the string.
+
+### Replacing Strings Using Regular Expressions
+
+- [replaceMatches(in:options:range:withTemplate:)](nsregularexpression/replacematches%28in_options_range_withtemplate_%29.md): Replaces regular expression matches within the mutable string using the template string.
+- [stringByReplacingMatches(in:options:range:withTemplate:)](nsregularexpression/stringbyreplacingmatches%28in_options_range_withtemplate_%29.md): Returns a new string containing matching regular expressions replaced with the template string.
+
+### Escaping Characters in a String
+
+- [escapedTemplate(for:)](nsregularexpression/escapedtemplate%28for_%29.md): Returns a template string by adding backslash escapes as necessary to protect any characters that would match as pattern metacharacters
+- [escapedPattern(for:)](nsregularexpression/escapedpattern%28for_%29.md): Returns a string by adding backslash escapes as necessary to protect any characters that would match as pattern metacharacters.
+
+### Custom Replace Functionality
+
+- [replacementString(for:in:offset:template:)](nsregularexpression/replacementstring%28for_in_offset_template_%29.md): Used to perform template substitution for a single result for clients implementing their own replace functionality.
+
+### Constants
+
+- [NSRegularExpression.Options](nsregularexpression/options-swift.struct.md): These constants define the regular expression options. These constants are used by the property [options](nsregularexpression/options-swift.property.md), [regularExpressionWithPattern:options:error:](nsregularexpression/regularexpressionwithpattern_options_error_.md), and [init(pattern:options:)](nsregularexpression/init%28pattern_options_%29.md).
+- [NSRegularExpression.MatchingFlags](nsregularexpression/matchingflags.md): Set by the Block as the matching progresses, completes, or fails. Used by the method [enumerateMatches(in:options:range:using:)](nsregularexpression/enumeratematches%28in_options_range_using_%29.md).
+- [NSRegularExpression.MatchingOptions](nsregularexpression/matchingoptions.md): The matching options constants specify the reporting, completion and matching rules to the expression matching methods. These constants are used by all methods that search for, or replace values, using a regular expression.
+
+### Initializers
+
+- [init(coder:)](nsregularexpression/init%28coder_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [NSDataDetector](nsdatadetector.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCoding](nscoding.md)
+- [NSCopying](nscopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [NSSecureCoding](nssecurecoding.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Pattern Matching
+
+- [Scanner](scanner.md): A string parser that scans for substrings or characters in a character set, and for numeric values from decimal, hexadecimal, and floating-point representations.
+- [NSDataDetector](nsdatadetector.md): A specialized regular expression object that matches natural language text for predefined data patterns.
+- [NSTextCheckingResult](nstextcheckingresult.md): An occurrence of textual content found during the analysis of a block of text, such as when matching a regular expression.
+- [NSNotFound](nsnotfound-4qp9h.md): A value indicating that a requested item couldn’t be found or doesn’t exist.
+
+# NSRegularExpression (Objective-C)
+
+**Framework:** Foundation  
+**Kind:** Class  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+An immutable representation of a compiled regular expression that you apply to Unicode strings.
+
+## Declaration
+
+```objectivec
+@interface NSRegularExpression : NSObject
+```
+
+<a id="overview"></a>
+
+## Overview
+
+The fundamental matching method for [NSRegularExpression](nsregularexpression.md) is a Block iterator method that allows clients to supply a Block object which will be invoked each time the regular expression matches a portion of the target string.  There are additional convenience methods for returning all the matches as an array, the total number of matches, the first match, and the range of the first match.
+
+An individual match is represented by an instance of the [NSTextCheckingResult](nstextcheckingresult.md) class, which carries information about the overall matched range (via its [range](nstextcheckingresult/range.md) property), and the range of each individual capture group (via the [rangeAtIndex:](nstextcheckingresult/range%28at_%29.md) method).  For basic [NSRegularExpression](nsregularexpression.md) objects, these match results will be of type [NSTextCheckingTypeRegularExpression](nstextcheckingresult/checkingtype/regularexpression.md), but subclasses may use other types.
+
+> **Note**
+
+>  [NSRegularExpression](nsregularexpression.md) conforms to the International Components for Unicode ([ICU](https://unicode-org.github.io/icu/)) specification for [regular expressions](https://unicode-org.github.io/icu/userguide/strings/regexp.html).
+
+<a id="Examples-Using-NSRegularExpression"></a>
+
+### Examples Using NSRegularExpression
+
+What follows are a set of graduated examples for using the `NSRegularExpression` class. All these examples use the regular expression `\\b(a|b)(c|d)\\b` as their regular expression.
+
+This snippet creates a regular expression to match two-letter words, in which the first letter is “a” or “b” and the second letter is “c” or “d”. Specifying [NSRegularExpressionCaseInsensitive](nsregularexpression/options-swift.struct/caseinsensitive.md) means that matches will be case-insensitive, so this will match “BC”, “aD”, and so forth, as well as their lower-case equivalents.
+
+**Swift**
+
+```swift
+do {
+    let regex = try NSRegularExpression(pattern: "\\b(a|b)(c|d)\\b", options: .caseInsensitive)
+} catch let error as NSError {
+    print("Error creating NSRegularExpression: \(error)")
+}
+```
+
+**Objective-C**
+
+```objc
+NSError *error = NULL;
+NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\b(a|b)(c|d)\\b"
+                                                                       options:NSRegularExpressionCaseInsensitive
+                                                                         error:&error];
+```
+
+The [numberOfMatchesInString:options:range:](nsregularexpression/numberofmatches%28in_options_range_%29.md) method provides a simple mechanism for counting the number of matches in a given range of a string.
+
+**Swift**
+
+```swift
+let numberOfMatches = regex.numberOfMatches(in: string, options: [], range: NSRange(location: 0, length: string.utf16.count))
+
+```
+
+**Objective-C**
+
+```objc
+NSUInteger numberOfMatches = [regex numberOfMatchesInString:string
+                                                    options:0
+                                                      range:NSMakeRange(0, [string length])];
+```
+
+If you are interested only in the overall range of the first match, the [rangeOfFirstMatchInString:options:range:](nsregularexpression/rangeoffirstmatch%28in_options_range_%29.md) method provides it for you.  Some regular expressions (though not the example pattern) can successfully match a zero-length range, so the comparison of the resulting range with `{NSNotFound, 0}` is the most reliable way to determine whether there was a match or not.
+
+The example regular expression contains two capture groups, corresponding to the two sets of parentheses, one for the first letter, and one for the second.  If you are interested in more than just the overall matched range, you want to obtain an [NSTextCheckingResult](nstextcheckingresult.md) object corresponding to a given match.  This object provides information about the overall matched range, via its [range](nstextcheckingresult/range.md) property, and also supplies the capture group ranges, via the [rangeAtIndex:](nstextcheckingresult/range%28at_%29.md) method.  The first capture group range is given by `[result rangeAtIndex:1]`, the second by `[result rangeAtIndex:2]`.  Sending a result the  [rangeAtIndex:](nstextcheckingresult/range%28at_%29.md) message and passing `0` is equivalent to `[result range]`.
+
+If the result returned is non-`nil`, then `[result range]` will always be a valid range, so it is not necessary to compare it against `{NSNotFound, 0}`.  However, for some regular expressions (though not the example pattern) some capture groups may or may not participate in a given match.  If a given capture group does not participate in a given match, then `[result rangeAtIndex:idx]` will return `{NSNotFound, 0}`.
+
+**Swift**
+
+```swift
+let rangeOfFirstMatch = regex.rangeOfFirstMatch(in: string, options: [], range: NSRange(location: 0, length: string.utf16.count))
+if rangeOfFirstMatch.location != NSNotFound {
+     let substringForFirstMatch = (string as NSString).substring(with: rangeOfFirstMatch)
+}
+```
+
+**Objective-C**
+
+```objc
+NSRange rangeOfFirstMatch = [regex rangeOfFirstMatchInString:string options:0 range:NSMakeRange(0, [string length])];
+if (!NSEqualRanges(rangeOfFirstMatch, NSMakeRange(NSNotFound, 0))) {
+    NSString *substringForFirstMatch = [string substringWithRange:rangeOfFirstMatch];
+}
+```
+
+The [matchesInString:options:range:](nsregularexpression/matches%28in_options_range_%29.md) returns all the matching results.
+
+**Swift**
+
+```swift
+let matches = regex.matches(in: string, options: [], range: NSRange(location: 0, length: string.utf16.count))
+ for match in matches {
+     let matchRange = match.range
+     let firstHalfRange = match.range(at: 1)
+     let secondHalfRange = match.range(at: 2)
+ }
+ 
+```
+
+**Objective-C**
+
+```objc
+NSArray *matches = [regex matchesInString:string
+                                  options:0
+                                    range:NSMakeRange(0, [string length])];
+for (NSTextCheckingResult *match in matches) {
+     NSRange matchRange = [match range];
+     NSRange firstHalfRange = [match rangeAtIndex:1];
+     NSRange secondHalfRange = [match rangeAtIndex:2];
+}
+```
+
+The [firstMatchInString:options:range:](nsregularexpression/firstmatch%28in_options_range_%29.md) method is similar to [matchesInString:options:range:](nsregularexpression/matches%28in_options_range_%29.md) but it returns only the first match.
+
+**Swift**
+
+```swift
+if let match = regex.firstMatch(in: string, options: [], range: NSRange(location: 0, length: string.utf16.count)) {
+    let matchRange = match.range
+    let firstHalfRange = match.range(at: 1)
+    let secondHalfRange = match.range(at: 2)
+}
+```
+
+**Objective-C**
+
+```objc
+NSTextCheckingResult *match = [regex firstMatchInString:string
+                                                options:0
+                                                  range:NSMakeRange(0, [string length])];
+if (match) {
+    NSRange matchRange = [match range];
+    NSRange firstHalfRange = [match rangeAtIndex:1];
+    NSRange secondHalfRange = [match rangeAtIndex:2];
+ }
+ 
+```
+
+The Block enumeration method [enumerateMatchesInString:options:range:usingBlock:](nsregularexpression/enumeratematches%28in_options_range_using_%29.md) is the most general and flexible of the matching methods of `NSRegularExpression`.  It allows you to iterate through matches in a string, performing arbitrary actions on each as specified by the code in the Block and to stop partway through if desired.  In the following example case, the iteration is stopped after a certain number of matches have been found.
+
+If neither of the special options [NSMatchingReportProgress](nsregularexpression/matchingoptions/reportprogress.md) or [NSMatchingReportCompletion](nsregularexpression/matchingoptions/reportcompletion.md) is specified, then the result argument to the Block is guaranteed to be non-`nil`, and as mentioned before, it is guaranteed to have a valid overall range.  See [NSMatchingOptions](nsregularexpression/matchingoptions.md) for the significance of [NSMatchingReportProgress](nsregularexpression/matchingoptions/reportprogress.md) or [NSMatchingReportCompletion](nsregularexpression/matchingoptions/reportcompletion.md).
+
+**Swift**
+
+```swift
+var count = 0
+regex.enumerateMatches(in: string, options: [], range: NSRange(location: 0, length: string.utf16.count)) { match, flags, stop in
+     guard let match = match else { return }
+
+     let matchRange = match.range
+     let firstHalfRange = match.range(at: 1)
+     let secondHalfRange = match.range(at: 2)
+     count += 1
+     if count >= 100 {
+         stop = true
+     }
+}
+```
+
+**Objective-C**
+
+```objc
+__block NSUInteger count = 0;
+[regex enumerateMatchesInString:string options:0 range:NSMakeRange(0, [string length]) usingBlock:^(NSTextCheckingResult *match, NSMatchingFlags flags, BOOL *stop){
+     NSRange matchRange = [match range];
+     NSRange firstHalfRange = [match rangeAtIndex:1];
+     NSRange secondHalfRange = [match rangeAtIndex:2];
+     if (++count >= 100) *stop = YES;
+}];
+```
+
+`NSRegularExpression` also provides simple methods for performing find-and-replace operations on a string.  The following example returns a modified copy, but there is a corresponding method for modifying a mutable string in place.  The template specifies what is to be used to replace each match, with `$0` representing the contents of the overall matched range, `$1` representing the contents of the first capture group, and so on.  In this case, the template reverses the two letters of the word.
+
+**Swift**
+
+```swift
+let modifiedString = regex.stringByReplacingMatches(in: string, options: [], range: NSRange(location: 0, length: string.utf16.count), withTemplate: "$2$1")
+ 
+```
+
+**Objective-C**
+
+```objc
+NSString *modifiedString = [regex stringByReplacingMatchesInString:string
+                                                           options:0
+                                                             range:NSMakeRange(0, [string length])
+                                                      withTemplate:@"$2$1"];
+```
+
+<a id="Concurrency-and-Thread-Safety"></a>
+
+### Concurrency and Thread Safety
+
+`NSRegularExpression` is designed to be immutable and thread safe, so that a single instance can be used in matching operations on multiple threads at once.  However, the string on which it is operating should not be mutated during the course of a matching operation, whether from another thread or from within the Block used in the iteration.
+
+<a id="Regular-Expression-Syntax"></a>
+
+### Regular Expression Syntax
+
+The following tables describe the character expressions used by the regular expression to match patterns within a string, the pattern operators that specify how many times a pattern is matched and additional matching restrictions, and the last table specifies flags that can be included in the regular expression pattern that specify search behavior over multiple lines (these flags can also be specified using the [NSRegularExpressionOptions](nsregularexpression/options-swift.struct.md) option flags.
+
+<a id="Regular-Expression-Metacharacters"></a>
+
+#### Regular Expression Metacharacters
+
+Table 1: Character sequences used to match characters within a string.
+
+| Character Expression | Description |
+| --- | --- |
+| `\a` | Match a BELL, `\u0007` |
+| `\A` | Match at the beginning of the input. Differs from `^` in that `\A` will not match after a new line within the input. |
+| `\b, outside of a [Set]` | Match if the current position is a word boundary. Boundaries occur at the transitions between word (`\w`) and non-word (`\W`) characters, with combining marks ignored. For better word boundaries, see [NSRegularExpressionUseUnicodeWordBoundaries](nsregularexpression/options-swift.struct/useunicodewordboundaries.md). |
+| `\b, within a [Set]` | Match a BACKSPACE, `\u0008`. |
+| `\B` | Match if the current position is not a word boundary. |
+| `\cX` | Match a `control-X` character |
+| `\d` | Match any character with the Unicode General Category of Nd (Number, Decimal Digit.) |
+| `\D` | Match any character that is not a decimal digit. |
+| `\e` | Match an `ESCAPE`, `\u001B`. |
+| `\E` | Terminates a `\Q ... \E` quoted sequence. |
+| `\f` | Match a FORM FEED, `\u000C`. |
+| `\G` | Match if the current position is at the end of the previous match. |
+| `\n` | Match a `LINE FEED`, `\u000A`. |
+| `\N{`*UNICODE CHARACTER NAME*`}` | Match the named character. |
+| `\p{`*UNICODE PROPERTY NAME*`}` | Match any character with the specified Unicode Property. |
+| `\P{`*UNICODE PROPERTY NAME*`}` | Match any character not having the specified Unicode Property. |
+| `\Q` | Quotes all following characters until `\E`. |
+| `\r` | Match a CARRIAGE RETURN, \\u000D. |
+| `\s` | Match a white space character. White space is defined as \[\\t\\n\\f\\r\\p{Z}\]. |
+| `\S` | Match a non-white space character. |
+| `\t` | Match a HORIZONTAL TABULATION, `\u0009`. |
+| `\u`*hhhh* | Match the character with the hex value *hhhh*. |
+| `\U`*hhhhhhhh* | Match the character with the hex value *hhhhhhhh*. Exactly eight hex digits must be provided, even though the largest Unicode code point is `\U0010ffff`. |
+| `\w` | Match a word character. Word characters are \[\\p{Ll}\\p{Lu}\\p{Lt}\\p{Lo}\\p{Nd}\]. |
+| `\W` | Match a non-word character. |
+| `\x{`*hhhh*`}` | Match the character with hex value *hhhh*. From one to six hex digits may be supplied. |
+| `\x`*hh* | Match the character with two digit hex value *hh*. |
+| `\X` | Match a Grapheme Cluster. |
+| `\Z` | Match if the current position is at the end of input, but before the final line terminator, if one exists. |
+| `\z` | Match if the current position is at the end of input. |
+| `\`*n* | Back Reference. Match whatever the \_n_th capturing group matched. *n* must be a number `≥ 1` and `≤` total number of capture groups in the pattern. |
+| `\0`*ooo* | Match an Octal character.  *ooo* is from one to three octal digits.  `0377` is the largest allowed Octal character.  The leading zero is required; it distinguishes Octal constants from back references. |
+| `[`*pattern*`]` | Match any one character from the pattern. |
+| `.` | Match any character. See [NSRegularExpressionDotMatchesLineSeparators](nsregularexpression/options-swift.struct/dotmatcheslineseparators.md) and the `s` character expression in Table 4. |
+| `^` | Match at the beginning of a line. See [NSRegularExpressionAnchorsMatchLines](nsregularexpression/options-swift.struct/anchorsmatchlines.md) and the `\m` character expression in Table 4. |
+| `$` | Match at the end of a line. See [NSRegularExpressionAnchorsMatchLines](nsregularexpression/options-swift.struct/anchorsmatchlines.md) and the `m` character expression in Table 4. |
+| `\` | Quotes the following character. Characters that must be quoted to be treated as literals are \`\* ? + \[ ( ) { } ^ $ |
+
+<a id="Regular-Expression-Operators"></a>
+
+#### Regular Expression Operators
+
+Table 2: Regular expression operators.
+
+| Operator | Description |
+| --- | --- |
+| \` | \` |
+| `*` | Match `0` or more times. Match as many times as possible. |
+| `+` | Match `1` or more times. Match as many times as possible. |
+| `?` | Match zero or one times. Prefer one. |
+| `{`*n*`}` | Match exactly *n* times. |
+| `{`*n*`,}` | Match at least *n* times. Match as many times as possible. |
+| `{`*n*`,`*m*`}` | Match between *n* and *m* times. Match as many times as possible, but not more than *m*. |
+| `*?` | Match `0` or more times. Match as few times as possible. |
+| `+?` | Match 1 or more times. Match as few times as possible. |
+| `??` | Match zero or one times. Prefer zero. |
+| `{`*n*`}?` | Match exactly n times. |
+| `{`*n*`,}?` | Match at least n times, but no more than required for an overall pattern match. |
+| `{`*n*`,`*m*`}?` | Match between n and m times. Match as few times as possible, but not less than n. |
+| `*+` | Match 0 or more times. Match as many times as possible when first encountered. Do not retry with fewer, even if overall match fails (possessive match). |
+| `++` | Match 1 or more times (possessive match). |
+| `?+` | Match zero or one times (possessive match). |
+| `{`*n*`}+` | Match exactly *n* times. |
+| `{`*n*`,}+` | Match at least *n* times (possessive match). |
+| `{`*n*`,`*m*`}+` | Match between *n* and *m* times (possessive match). |
+| `(`*…*`)` | Capturing parentheses. Range of input that matched the parenthesized subexpression is available after the match. |
+| `(?:`*…*`)` | Non-capturing parentheses. Groups the included pattern, but does not provide capturing of matching text. Somewhat more efficient than capturing parentheses. |
+| `(?>`*…*`)` | Atomic-match parentheses. First match of the parenthesized subexpression is the only one tried; if it does not lead to an overall pattern match, back up the search for a match to a position before the “`(?>`” |
+| `(?# ... )` | Free-format comment `(?# comment )`. |
+| `(?= ... )` | Look-ahead assertion. True if the parenthesized pattern matches at the current input position, but does not advance the input position. |
+| `(?! ... )` | Negative look-ahead assertion. True if the parenthesized pattern does not match at the current input position. Does not advance the input position. |
+| `(?<= ... )` | Look-behind assertion. True if the parenthesized pattern matches text preceding the current input position, with the last character of the match being the input character just before the current position. Does not alter the input position. The length of possible strings matched by the look-behind pattern must not be unbounded (no \* or + operators.) |
+| `(?<! ... )` | Negative Look-behind assertion. True if the parenthesized pattern does not match text preceding the current input position, with the last character of the match being the input character just before the current position. Does not alter the input position. The length of possible strings matched by the look-behind pattern must not be unbounded (no \* or + operators.) |
+| `(?ismwx-ismwx:` `...` `)` | Flag settings. Evaluate the parenthesized expression with the specified flags enabled or -disabled. The flags are defined in [Flag Options](nsregularexpression.md#Flag-Options). |
+| `(?ismwx-ismwx)` | Flag settings. Change the flag settings. Changes apply to the portion of the pattern following the setting. For example, (?i) changes to a case insensitive match.The flags are defined in [Flag Options](nsregularexpression.md#Flag-Options). |
+
+<a id="Template-Matching-Format"></a>
+
+#### Template Matching Format
+
+The `NSRegularExpression` class provides find-and-replace methods for both immutable and mutable strings using the technique of template matching.
+
+Table 3: Find-and-replace syntax.
+
+| Character | Descriptions |
+| --- | --- |
+| `$`*n* | The text of capture group n will be substituted for $*n*. *n* must be `>= 0` and not greater than the number of capture groups. A `$` not followed by a digit has no special meaning, and will appear in the substitution text as itself, a `$`. |
+| `\` | Treat the following character as a literal, suppressing any special meaning. Backslash escaping in substitution text is only required for ‘$’ and ’', but may be used on any other character without bad effects. |
+
+The replacement string is treated as a template, with `$0` being replaced by the contents of the matched range, `$1` by the contents of the first capture group, and so on.  Additional digits beyond the maximum required to represent the number of capture groups will be treated as ordinary characters, as will a `$` not followed by digits.  Backslash will escape both `$` and `\`.
+
+<a id="Flag-Options"></a>
+
+#### Flag Options
+
+The following flags control various aspects of regular expression matching. These flag values may be specified within the pattern using the `(?ismx-ismx)` pattern options.  Equivalent behaviors can be specified for the entire pattern when an `NSRegularExpression` is initialized, using the [NSRegularExpressionOptions](nsregularexpression/options-swift.struct.md) option flags.
+
+Table 4: Regular expression matching flags.
+
+| Flag (Pattern) | Description |
+| --- | --- |
+| i | If set, matching will take place in a case-insensitive manner. |
+| x | If set, allow use of white space and #comments within patterns |
+| s | If set, a “`.`” in a pattern will match a line terminator in the input text. By default, it will not. Note that a `carriage-return / line-feed pair` in text behave as a single line terminator, and will match a single “`.`” in a regular expression pattern |
+| m | Control the behavior of “`^`” and “`$`” in a pattern. By default these will only match at the start and end, respectively, of the input text. If this flag is set, “`^`” and “`$`” will also match at the start and end of each line within the input text. |
+| w | Controls the behavior of `\b` in a pattern. If set, word boundaries are found according to the definitions of word found in Unicode UAX 29, Text Boundaries. By default, word boundaries are identified by means of a simple classification of characters as either “word” or “non-word”, which approximates traditional regular expression behavior. The results obtained with the two options can be quite different in runs of spaces and other non-word characters. |
+
+<a id="Performance"></a>
+
+### Performance
+
+`NSRegularExpression` implements a nondeterministic finite automaton matching engine. As such, complex regular expression patterns containing multiple `*` or `+` operators may result in poor performance when attempting to perform matches — particularly failing to match a given input. For more information, see the [“Performance Tips” section of the ICU User Guide](http://userguide.icu-project.org/strings/regexp#TOC-Performance-Tips).
+
+<a id="ICU-License"></a>
+
+### ICU License
+
+Tables 1, 2, 3, and 4 are reproduced from the ICU User Guide, Copyright (c) 2000 - 2009 IBM and Others, which are licensed under the following terms:
+
+COPYRIGHT AND PERMISSION NOTICE
+
+Copyright (c) 1995-2009 International Business Machines Corporation and others. All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, provided that the above copyright notice(s) and this permission notice appear in all copies of the Software and that both the above copyright notice(s) and this permission notice appear in supporting documentation.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder.
+
+All trademarks and registered trademarks mentioned herein are the property of their respective owners.
+
+## Topics
+
+### Creating Regular Expressions
+
+- [regularExpressionWithPattern:options:error:](nsregularexpression/regularexpressionwithpattern_options_error_.md): Creates an NSRegularExpression instance with the specified regular expression pattern and options.
+- [initWithPattern:options:error:](nsregularexpression/init%28pattern_options_%29.md): Returns an initialized NSRegularExpression instance with the specified regular expression pattern and options.
+
+### Getting the Regular Expression and Options
+
+- [pattern](nsregularexpression/pattern.md): Returns the regular expression pattern.
+- [options](nsregularexpression/options-swift.property.md): Returns the options used when the regular expression option was created.
+- [numberOfCaptureGroups](nsregularexpression/numberofcapturegroups.md): Returns the number of capture groups in the regular expression.
+
+### Searching Strings Using Regular Expressions
+
+- [numberOfMatchesInString:options:range:](nsregularexpression/numberofmatches%28in_options_range_%29.md): Returns the number of matches of the regular expression within the specified range of the string.
+- [enumerateMatchesInString:options:range:usingBlock:](nsregularexpression/enumeratematches%28in_options_range_using_%29.md): Enumerates the string allowing the Block to handle each regular expression match.
+- [matchesInString:options:range:](nsregularexpression/matches%28in_options_range_%29.md): Returns an array containing all the matches of the regular expression in the string.
+- [firstMatchInString:options:range:](nsregularexpression/firstmatch%28in_options_range_%29.md): Returns the first match of the regular expression within the specified range of the string.
+- [rangeOfFirstMatchInString:options:range:](nsregularexpression/rangeoffirstmatch%28in_options_range_%29.md): Returns the range of the first match of the regular expression within the specified range of the string.
+
+### Replacing Strings Using Regular Expressions
+
+- [replaceMatchesInString:options:range:withTemplate:](nsregularexpression/replacematches%28in_options_range_withtemplate_%29.md): Replaces regular expression matches within the mutable string using the template string.
+- [stringByReplacingMatchesInString:options:range:withTemplate:](nsregularexpression/stringbyreplacingmatches%28in_options_range_withtemplate_%29.md): Returns a new string containing matching regular expressions replaced with the template string.
+
+### Escaping Characters in a String
+
+- [escapedTemplateForString:](nsregularexpression/escapedtemplate%28for_%29.md): Returns a template string by adding backslash escapes as necessary to protect any characters that would match as pattern metacharacters
+- [escapedPatternForString:](nsregularexpression/escapedpattern%28for_%29.md): Returns a string by adding backslash escapes as necessary to protect any characters that would match as pattern metacharacters.
+
+### Custom Replace Functionality
+
+- [replacementStringForResult:inString:offset:template:](nsregularexpression/replacementstring%28for_in_offset_template_%29.md): Used to perform template substitution for a single result for clients implementing their own replace functionality.
+
+### Constants
+
+- [NSRegularExpressionOptions](nsregularexpression/options-swift.struct.md): These constants define the regular expression options. These constants are used by the property [options](nsregularexpression/options-swift.property.md), [regularExpressionWithPattern:options:error:](nsregularexpression/regularexpressionwithpattern_options_error_.md), and [initWithPattern:options:error:](nsregularexpression/init%28pattern_options_%29.md).
+- [NSMatchingFlags](nsregularexpression/matchingflags.md): Set by the Block as the matching progresses, completes, or fails. Used by the method [enumerateMatchesInString:options:range:usingBlock:](nsregularexpression/enumeratematches%28in_options_range_using_%29.md).
+- [NSMatchingOptions](nsregularexpression/matchingoptions.md): The matching options constants specify the reporting, completion and matching rules to the expression matching methods. These constants are used by all methods that search for, or replace values, using a regular expression.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [NSDataDetector](nsdatadetector.md)
+
+### Conforms To
+
+- [NSCopying](nscopying.md)
+- [NSSecureCoding](nssecurecoding.md)
+
+## See Also
+
+### Pattern Matching
+
+- [NSScanner](scanner.md): A string parser that scans for substrings or characters in a character set, and for numeric values from decimal, hexadecimal, and floating-point representations.
+- [NSDataDetector](nsdatadetector.md): A specialized regular expression object that matches natural language text for predefined data patterns.
+- [NSTextCheckingResult](nstextcheckingresult.md): An occurrence of textual content found during the analysis of a block of text, such as when matching a regular expression.
+- [NSNotFound](nsnotfound-4qp9h.md): A value indicating that a requested item couldn’t be found or doesn’t exist.

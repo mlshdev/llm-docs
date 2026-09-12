@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "project": "container",
   "title": "Apple container",
+  "homepage": "https://github.com/apple/container",
   "repository": "apple/container",
   "tag": "1.4.1",
   "releaseId": 385155129,

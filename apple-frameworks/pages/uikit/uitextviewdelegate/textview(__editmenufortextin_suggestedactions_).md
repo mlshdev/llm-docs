@@ -1,0 +1,99 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uitextviewdelegate/textview(_:editmenufortextin:suggestedactions:)](https://developer.apple.com/documentation/uikit/uitextviewdelegate/textview(_:editmenufortextin:suggestedactions:))
+
+# textView(\_:editMenuForTextIn:suggestedActions:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 16.0+ (deprecated in 27.0) · iPadOS 16.0+ (deprecated in 27.0) · Mac Catalyst 16.0+ (deprecated in 27.0) · tvOS 16.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+
+Asks the delegate for the menu to display in the text view, based on the text range and actions the system provides.
+
+## Declaration
+
+```swift
+optional func textView(_ textView: UITextView, editMenuForTextIn range: NSRange, suggestedActions: [UIMenuElement]) -> UIMenu?
+```
+
+## Parameters
+
+- `textView`: The text view requesting the menu.
+- `range`: The character range the menu is presenting for.
+- `suggestedActions`: The actions and commands the system suggests.
+
+<a id="return-value"></a>
+
+## Return Value
+
+Returns a menu describing the desired menu hierarchy. Return `nil` to present the default system menu.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The following example returns a menu that includes an “Add Bookmark” action and also a “Highlight” action, but only if the selected text range is greater than zero.
+
+```swift
+func textView(_ textView: UITextView, editMenuForTextIn range: NSRange, suggestedActions: [UIMenuElement]) -> UIMenu? {
+    var additionalActions: [UIMenuElement] = []
+    if range.length > 0 {
+        let highlightAction = UIAction(title: "Highlight", image: UIImage(systemName: "highlighter")) { action in
+            // The highlight action.
+        }
+        additionalActions.append(highlightAction)
+    }
+    let addBookmarkAction = UIAction(title: "Add Bookmark", image: UIImage(systemName: "bookmark")) { action in
+        // The bookmark action.
+    }
+    additionalActions.append(addBookmarkAction)
+    return UIMenu(children: suggestedActions + additionalActions)
+}
+```
+
+# textView:editMenuForTextInRange:suggestedActions: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 16.0+ (deprecated in 27.0) · iPadOS 16.0+ (deprecated in 27.0) · Mac Catalyst 16.0+ (deprecated in 27.0) · tvOS 16.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+
+Asks the delegate for the menu to display in the text view, based on the text range and actions the system provides.
+
+## Declaration
+
+```objectivec
+- (UIMenu *) textView:(UITextView *) textView editMenuForTextInRange:(NSRange) range suggestedActions:(NSArray<UIMenuElement *> *) suggestedActions;
+```
+
+## Parameters
+
+- `textView`: The text view requesting the menu.
+- `range`: The character range the menu is presenting for.
+- `suggestedActions`: The actions and commands the system suggests.
+
+<a id="return-value"></a>
+
+## Return Value
+
+Returns a menu describing the desired menu hierarchy. Return `nil` to present the default system menu.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The following example returns a menu that includes an “Add Bookmark” action and also a “Highlight” action, but only if the selected text range is greater than zero.
+
+```swift
+func textView(_ textView: UITextView, editMenuForTextIn range: NSRange, suggestedActions: [UIMenuElement]) -> UIMenu? {
+    var additionalActions: [UIMenuElement] = []
+    if range.length > 0 {
+        let highlightAction = UIAction(title: "Highlight", image: UIImage(systemName: "highlighter")) { action in
+            // The highlight action.
+        }
+        additionalActions.append(highlightAction)
+    }
+    let addBookmarkAction = UIAction(title: "Add Bookmark", image: UIImage(systemName: "bookmark")) { action in
+        // The bookmark action.
+    }
+    additionalActions.append(addBookmarkAction)
+    return UIMenu(children: suggestedActions + additionalActions)
+}
+```

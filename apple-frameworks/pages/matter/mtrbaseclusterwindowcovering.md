@@ -1,0 +1,444 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclusterwindowcovering](https://developer.apple.com/documentation/matter/mtrbaseclusterwindowcovering)
+
+# MTRBaseClusterWindowCovering (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```swift
+class MTRBaseClusterWindowCovering
+```
+
+## Topics
+
+### Initializers
+
+- [init(device:endpoint:queue:)](mtrbaseclusterwindowcovering/init%28device_endpoint_queue_%29.md): Deprecated.
+- [init(device:endpointID:queue:)](mtrbaseclusterwindowcovering/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [downOrClose(completion:)](mtrbaseclusterwindowcovering/downorclose%28completion_%29.md)
+- [downOrClose(completionHandler:)](mtrbaseclusterwindowcovering/downorclose%28completionhandler_%29.md): Deprecated.
+- [downOrClose(with:completion:)](mtrbaseclusterwindowcovering/downorclose%28with_completion_%29.md)
+- [downOrClose(with:completionHandler:)](mtrbaseclusterwindowcovering/downorclose%28with_completionhandler_%29.md): Deprecated.
+- [goToLiftPercentage(with:completion:)](mtrbaseclusterwindowcovering/gotoliftpercentage%28with_completion_%29.md)
+- [goToLiftPercentage(with:completionHandler:)](mtrbaseclusterwindowcovering/gotoliftpercentage%28with_completionhandler_%29.md): Deprecated.
+- [goToLiftValue(with:completion:)](mtrbaseclusterwindowcovering/gotoliftvalue%28with_completion_%29.md)
+- [goToLiftValue(with:completionHandler:)](mtrbaseclusterwindowcovering/gotoliftvalue%28with_completionhandler_%29.md): Deprecated.
+- [goToTiltPercentage(with:completion:)](mtrbaseclusterwindowcovering/gototiltpercentage%28with_completion_%29.md)
+- [goToTiltPercentage(with:completionHandler:)](mtrbaseclusterwindowcovering/gototiltpercentage%28with_completionhandler_%29.md): Deprecated.
+- [goToTiltValue(with:completion:)](mtrbaseclusterwindowcovering/gototiltvalue%28with_completion_%29.md)
+- [goToTiltValue(with:completionHandler:)](mtrbaseclusterwindowcovering/gototiltvalue%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandList(completion:)](mtrbaseclusterwindowcovering/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandList(completionHandler:)](mtrbaseclusterwindowcovering/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(completion:)](mtrbaseclusterwindowcovering/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeList(completionHandler:)](mtrbaseclusterwindowcovering/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(completion:)](mtrbaseclusterwindowcovering/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevision(completionHandler:)](mtrbaseclusterwindowcovering/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeConfigStatus(completion:)](mtrbaseclusterwindowcovering/readattributeconfigstatus%28completion_%29.md)
+- [readAttributeConfigStatus(completionHandler:)](mtrbaseclusterwindowcovering/readattributeconfigstatus%28completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionLift(completion:)](mtrbaseclusterwindowcovering/readattributecurrentpositionlift%28completion_%29.md)
+- [readAttributeCurrentPositionLift(completionHandler:)](mtrbaseclusterwindowcovering/readattributecurrentpositionlift%28completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionLiftPercent100ths(completion:)](mtrbaseclusterwindowcovering/readattributecurrentpositionliftpercent100ths%28completion_%29.md)
+- [readAttributeCurrentPositionLiftPercent100ths(completionHandler:)](mtrbaseclusterwindowcovering/readattributecurrentpositionliftpercent100ths%28completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionLiftPercentage(completion:)](mtrbaseclusterwindowcovering/readattributecurrentpositionliftpercentage%28completion_%29.md)
+- [readAttributeCurrentPositionLiftPercentage(completionHandler:)](mtrbaseclusterwindowcovering/readattributecurrentpositionliftpercentage%28completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionTilt(completion:)](mtrbaseclusterwindowcovering/readattributecurrentpositiontilt%28completion_%29.md)
+- [readAttributeCurrentPositionTilt(completionHandler:)](mtrbaseclusterwindowcovering/readattributecurrentpositiontilt%28completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionTiltPercent100ths(completion:)](mtrbaseclusterwindowcovering/readattributecurrentpositiontiltpercent100ths%28completion_%29.md)
+- [readAttributeCurrentPositionTiltPercent100ths(completionHandler:)](mtrbaseclusterwindowcovering/readattributecurrentpositiontiltpercent100ths%28completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionTiltPercentage(completion:)](mtrbaseclusterwindowcovering/readattributecurrentpositiontiltpercentage%28completion_%29.md)
+- [readAttributeCurrentPositionTiltPercentage(completionHandler:)](mtrbaseclusterwindowcovering/readattributecurrentpositiontiltpercentage%28completionhandler_%29.md): Deprecated.
+- [readAttributeEndProductType(completion:)](mtrbaseclusterwindowcovering/readattributeendproducttype%28completion_%29.md)
+- [readAttributeEndProductType(completionHandler:)](mtrbaseclusterwindowcovering/readattributeendproducttype%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(completion:)](mtrbaseclusterwindowcovering/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMap(completionHandler:)](mtrbaseclusterwindowcovering/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(completion:)](mtrbaseclusterwindowcovering/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandList(completionHandler:)](mtrbaseclusterwindowcovering/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeInstalledClosedLimitLift(completion:)](mtrbaseclusterwindowcovering/readattributeinstalledclosedlimitlift%28completion_%29.md)
+- [readAttributeInstalledClosedLimitLift(completionHandler:)](mtrbaseclusterwindowcovering/readattributeinstalledclosedlimitlift%28completionhandler_%29.md): Deprecated.
+- [readAttributeInstalledClosedLimitTilt(completion:)](mtrbaseclusterwindowcovering/readattributeinstalledclosedlimittilt%28completion_%29.md)
+- [readAttributeInstalledClosedLimitTilt(completionHandler:)](mtrbaseclusterwindowcovering/readattributeinstalledclosedlimittilt%28completionhandler_%29.md): Deprecated.
+- [readAttributeInstalledOpenLimitLift(completion:)](mtrbaseclusterwindowcovering/readattributeinstalledopenlimitlift%28completion_%29.md)
+- [readAttributeInstalledOpenLimitLift(completionHandler:)](mtrbaseclusterwindowcovering/readattributeinstalledopenlimitlift%28completionhandler_%29.md): Deprecated.
+- [readAttributeInstalledOpenLimitTilt(completion:)](mtrbaseclusterwindowcovering/readattributeinstalledopenlimittilt%28completion_%29.md)
+- [readAttributeInstalledOpenLimitTilt(completionHandler:)](mtrbaseclusterwindowcovering/readattributeinstalledopenlimittilt%28completionhandler_%29.md): Deprecated.
+- [readAttributeMode(completion:)](mtrbaseclusterwindowcovering/readattributemode%28completion_%29.md)
+- [readAttributeMode(completionHandler:)](mtrbaseclusterwindowcovering/readattributemode%28completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfActuationsLift(completion:)](mtrbaseclusterwindowcovering/readattributenumberofactuationslift%28completion_%29.md)
+- [readAttributeNumberOfActuationsLift(completionHandler:)](mtrbaseclusterwindowcovering/readattributenumberofactuationslift%28completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfActuationsTilt(completion:)](mtrbaseclusterwindowcovering/readattributenumberofactuationstilt%28completion_%29.md)
+- [readAttributeNumberOfActuationsTilt(completionHandler:)](mtrbaseclusterwindowcovering/readattributenumberofactuationstilt%28completionhandler_%29.md): Deprecated.
+- [readAttributeOperationalStatus(completion:)](mtrbaseclusterwindowcovering/readattributeoperationalstatus%28completion_%29.md)
+- [readAttributeOperationalStatus(completionHandler:)](mtrbaseclusterwindowcovering/readattributeoperationalstatus%28completionhandler_%29.md): Deprecated.
+- [readAttributePhysicalClosedLimitLift(completion:)](mtrbaseclusterwindowcovering/readattributephysicalclosedlimitlift%28completion_%29.md)
+- [readAttributePhysicalClosedLimitLift(completionHandler:)](mtrbaseclusterwindowcovering/readattributephysicalclosedlimitlift%28completionhandler_%29.md): Deprecated.
+- [readAttributePhysicalClosedLimitTilt(completion:)](mtrbaseclusterwindowcovering/readattributephysicalclosedlimittilt%28completion_%29.md)
+- [readAttributePhysicalClosedLimitTilt(completionHandler:)](mtrbaseclusterwindowcovering/readattributephysicalclosedlimittilt%28completionhandler_%29.md): Deprecated.
+- [readAttributeSafetyStatus(completion:)](mtrbaseclusterwindowcovering/readattributesafetystatus%28completion_%29.md)
+- [readAttributeSafetyStatus(completionHandler:)](mtrbaseclusterwindowcovering/readattributesafetystatus%28completionhandler_%29.md): Deprecated.
+- [readAttributeTargetPositionLiftPercent100ths(completion:)](mtrbaseclusterwindowcovering/readattributetargetpositionliftpercent100ths%28completion_%29.md)
+- [readAttributeTargetPositionLiftPercent100ths(completionHandler:)](mtrbaseclusterwindowcovering/readattributetargetpositionliftpercent100ths%28completionhandler_%29.md): Deprecated.
+- [readAttributeTargetPositionTiltPercent100ths(completion:)](mtrbaseclusterwindowcovering/readattributetargetpositiontiltpercent100ths%28completion_%29.md)
+- [readAttributeTargetPositionTiltPercent100ths(completionHandler:)](mtrbaseclusterwindowcovering/readattributetargetpositiontiltpercent100ths%28completionhandler_%29.md): Deprecated.
+- [readAttributeType(completion:)](mtrbaseclusterwindowcovering/readattributetype%28completion_%29.md)
+- [readAttributeType(completionHandler:)](mtrbaseclusterwindowcovering/readattributetype%28completionhandler_%29.md): Deprecated.
+- [stopMotion(completion:)](mtrbaseclusterwindowcovering/stopmotion%28completion_%29.md)
+- [stopMotion(completionHandler:)](mtrbaseclusterwindowcovering/stopmotion%28completionhandler_%29.md): Deprecated.
+- [stopMotion(with:completion:)](mtrbaseclusterwindowcovering/stopmotion%28with_completion_%29.md)
+- [stopMotion(with:completionHandler:)](mtrbaseclusterwindowcovering/stopmotion%28with_completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevision(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevision(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeConfigStatus(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributeconfigstatus%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeConfigStatus(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributeconfigstatus%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCurrentPositionLift(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributecurrentpositionlift%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentPositionLift(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributecurrentpositionlift%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCurrentPositionLiftPercent100ths(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributecurrentpositionliftpercent100ths%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentPositionLiftPercent100ths(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributecurrentpositionliftpercent100ths%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCurrentPositionLiftPercentage(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributecurrentpositionliftpercentage%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentPositionLiftPercentage(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributecurrentpositionliftpercentage%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCurrentPositionTilt(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributecurrentpositiontilt%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentPositionTilt(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributecurrentpositiontilt%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCurrentPositionTiltPercent100ths(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributecurrentpositiontiltpercent100ths%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentPositionTiltPercent100ths(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributecurrentpositiontiltpercent100ths%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCurrentPositionTiltPercentage(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributecurrentpositiontiltpercentage%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentPositionTiltPercentage(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributecurrentpositiontiltpercentage%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeEndProductType(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributeendproducttype%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeEndProductType(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributeendproducttype%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMap(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMap(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeInstalledClosedLimitLift(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributeinstalledclosedlimitlift%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeInstalledClosedLimitLift(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributeinstalledclosedlimitlift%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeInstalledClosedLimitTilt(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributeinstalledclosedlimittilt%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeInstalledClosedLimitTilt(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributeinstalledclosedlimittilt%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeInstalledOpenLimitLift(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributeinstalledopenlimitlift%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeInstalledOpenLimitLift(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributeinstalledopenlimitlift%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeInstalledOpenLimitTilt(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributeinstalledopenlimittilt%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeInstalledOpenLimitTilt(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributeinstalledopenlimittilt%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMode(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributemode%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMode(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributemode%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNumberOfActuationsLift(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributenumberofactuationslift%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfActuationsLift(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributenumberofactuationslift%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNumberOfActuationsTilt(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributenumberofactuationstilt%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfActuationsTilt(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributenumberofactuationstilt%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeOperationalStatus(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributeoperationalstatus%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeOperationalStatus(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributeoperationalstatus%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePhysicalClosedLimitLift(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributephysicalclosedlimitlift%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePhysicalClosedLimitLift(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributephysicalclosedlimitlift%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePhysicalClosedLimitTilt(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributephysicalclosedlimittilt%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePhysicalClosedLimitTilt(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributephysicalclosedlimittilt%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSafetyStatus(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributesafetystatus%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSafetyStatus(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributesafetystatus%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeTargetPositionLiftPercent100ths(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributetargetpositionliftpercent100ths%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeTargetPositionLiftPercent100ths(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributetargetpositionliftpercent100ths%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeTargetPositionTiltPercent100ths(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributetargetpositiontiltpercent100ths%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeTargetPositionTiltPercent100ths(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributetargetpositiontiltpercent100ths%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeType(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributetype%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeType(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterwindowcovering/subscribeattributetype%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [upOrOpen(completion:)](mtrbaseclusterwindowcovering/uporopen%28completion_%29.md)
+- [upOrOpen(completionHandler:)](mtrbaseclusterwindowcovering/uporopen%28completionhandler_%29.md): Deprecated.
+- [upOrOpen(with:completion:)](mtrbaseclusterwindowcovering/uporopen%28with_completion_%29.md)
+- [upOrOpen(with:completionHandler:)](mtrbaseclusterwindowcovering/uporopen%28with_completionhandler_%29.md): Deprecated.
+- [writeAttributeMode(withValue:completion:)](mtrbaseclusterwindowcovering/writeattributemode%28withvalue_completion_%29.md)
+- [writeAttributeMode(withValue:completionHandler:)](mtrbaseclusterwindowcovering/writeattributemode%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeMode(withValue:params:completion:)](mtrbaseclusterwindowcovering/writeattributemode%28withvalue_params_completion_%29.md)
+- [writeAttributeMode(withValue:params:completionHandler:)](mtrbaseclusterwindowcovering/writeattributemode%28withvalue_params_completionhandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevision(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeConfigStatus(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributeconfigstatus%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeConfigStatus(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributeconfigstatus%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentPositionLift(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributecurrentpositionlift%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionLift(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributecurrentpositionlift%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentPositionLiftPercent100ths(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributecurrentpositionliftpercent100ths%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionLiftPercent100ths(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributecurrentpositionliftpercent100ths%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentPositionLiftPercentage(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributecurrentpositionliftpercentage%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionLiftPercentage(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributecurrentpositionliftpercentage%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentPositionTilt(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributecurrentpositiontilt%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionTilt(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributecurrentpositiontilt%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentPositionTiltPercent100ths(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributecurrentpositiontiltpercent100ths%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionTiltPercent100ths(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributecurrentpositiontiltpercent100ths%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentPositionTiltPercentage(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributecurrentpositiontiltpercentage%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionTiltPercentage(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributecurrentpositiontiltpercentage%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeEndProductType(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributeendproducttype%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeEndProductType(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributeendproducttype%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMap(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeInstalledClosedLimitLift(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributeinstalledclosedlimitlift%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeInstalledClosedLimitLift(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributeinstalledclosedlimitlift%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeInstalledClosedLimitTilt(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributeinstalledclosedlimittilt%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeInstalledClosedLimitTilt(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributeinstalledclosedlimittilt%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeInstalledOpenLimitLift(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributeinstalledopenlimitlift%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeInstalledOpenLimitLift(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributeinstalledopenlimitlift%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeInstalledOpenLimitTilt(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributeinstalledopenlimittilt%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeInstalledOpenLimitTilt(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributeinstalledopenlimittilt%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMode(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributemode%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMode(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributemode%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfActuationsLift(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributenumberofactuationslift%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfActuationsLift(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributenumberofactuationslift%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfActuationsTilt(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributenumberofactuationstilt%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfActuationsTilt(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributenumberofactuationstilt%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeOperationalStatus(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributeoperationalstatus%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeOperationalStatus(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributeoperationalstatus%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePhysicalClosedLimitLift(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributephysicalclosedlimitlift%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePhysicalClosedLimitLift(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributephysicalclosedlimitlift%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePhysicalClosedLimitTilt(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributephysicalclosedlimittilt%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePhysicalClosedLimitTilt(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributephysicalclosedlimittilt%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSafetyStatus(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributesafetystatus%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSafetyStatus(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributesafetystatus%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeTargetPositionLiftPercent100ths(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributetargetpositionliftpercent100ths%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeTargetPositionLiftPercent100ths(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributetargetpositionliftpercent100ths%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeTargetPositionTiltPercent100ths(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributetargetpositiontiltpercent100ths%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeTargetPositionTiltPercent100ths(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributetargetpositiontiltpercent100ths%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeType(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterwindowcovering/readattributetype%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeType(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterwindowcovering/readattributetype%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRBaseClusterWindowCovering (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```objectivec
+@interface MTRBaseClusterWindowCovering : MTRGenericBaseCluster
+```
+
+## Topics
+
+### Initializers
+
+- [initWithDevice:endpoint:queue:](mtrbaseclusterwindowcovering/init%28device_endpoint_queue_%29.md): Deprecated.
+- [initWithDevice:endpointID:queue:](mtrbaseclusterwindowcovering/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [downOrCloseWithCompletion:](mtrbaseclusterwindowcovering/downorclose%28completion_%29.md)
+- [downOrCloseWithCompletionHandler:](mtrbaseclusterwindowcovering/downorclose%28completionhandler_%29.md): Deprecated.
+- [downOrCloseWithParams:completion:](mtrbaseclusterwindowcovering/downorclose%28with_completion_%29.md)
+- [downOrCloseWithParams:completionHandler:](mtrbaseclusterwindowcovering/downorclose%28with_completionhandler_%29.md): Deprecated.
+- [goToLiftPercentageWithParams:completion:](mtrbaseclusterwindowcovering/gotoliftpercentage%28with_completion_%29.md)
+- [goToLiftPercentageWithParams:completionHandler:](mtrbaseclusterwindowcovering/gotoliftpercentage%28with_completionhandler_%29.md): Deprecated.
+- [goToLiftValueWithParams:completion:](mtrbaseclusterwindowcovering/gotoliftvalue%28with_completion_%29.md)
+- [goToLiftValueWithParams:completionHandler:](mtrbaseclusterwindowcovering/gotoliftvalue%28with_completionhandler_%29.md): Deprecated.
+- [goToTiltPercentageWithParams:completion:](mtrbaseclusterwindowcovering/gototiltpercentage%28with_completion_%29.md)
+- [goToTiltPercentageWithParams:completionHandler:](mtrbaseclusterwindowcovering/gototiltpercentage%28with_completionhandler_%29.md): Deprecated.
+- [goToTiltValueWithParams:completion:](mtrbaseclusterwindowcovering/gototiltvalue%28with_completion_%29.md)
+- [goToTiltValueWithParams:completionHandler:](mtrbaseclusterwindowcovering/gototiltvalue%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandListWithCompletion:](mtrbaseclusterwindowcovering/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandListWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithCompletion:](mtrbaseclusterwindowcovering/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeListWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithCompletion:](mtrbaseclusterwindowcovering/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevisionWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeConfigStatusWithCompletion:](mtrbaseclusterwindowcovering/readattributeconfigstatus%28completion_%29.md)
+- [readAttributeConfigStatusWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributeconfigstatus%28completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionLiftWithCompletion:](mtrbaseclusterwindowcovering/readattributecurrentpositionlift%28completion_%29.md)
+- [readAttributeCurrentPositionLiftWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributecurrentpositionlift%28completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionLiftPercent100thsWithCompletion:](mtrbaseclusterwindowcovering/readattributecurrentpositionliftpercent100ths%28completion_%29.md)
+- [readAttributeCurrentPositionLiftPercent100thsWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributecurrentpositionliftpercent100ths%28completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionLiftPercentageWithCompletion:](mtrbaseclusterwindowcovering/readattributecurrentpositionliftpercentage%28completion_%29.md)
+- [readAttributeCurrentPositionLiftPercentageWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributecurrentpositionliftpercentage%28completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionTiltWithCompletion:](mtrbaseclusterwindowcovering/readattributecurrentpositiontilt%28completion_%29.md)
+- [readAttributeCurrentPositionTiltWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributecurrentpositiontilt%28completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionTiltPercent100thsWithCompletion:](mtrbaseclusterwindowcovering/readattributecurrentpositiontiltpercent100ths%28completion_%29.md)
+- [readAttributeCurrentPositionTiltPercent100thsWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributecurrentpositiontiltpercent100ths%28completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionTiltPercentageWithCompletion:](mtrbaseclusterwindowcovering/readattributecurrentpositiontiltpercentage%28completion_%29.md)
+- [readAttributeCurrentPositionTiltPercentageWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributecurrentpositiontiltpercentage%28completionhandler_%29.md): Deprecated.
+- [readAttributeEndProductTypeWithCompletion:](mtrbaseclusterwindowcovering/readattributeendproducttype%28completion_%29.md)
+- [readAttributeEndProductTypeWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributeendproducttype%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithCompletion:](mtrbaseclusterwindowcovering/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMapWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithCompletion:](mtrbaseclusterwindowcovering/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandListWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeInstalledClosedLimitLiftWithCompletion:](mtrbaseclusterwindowcovering/readattributeinstalledclosedlimitlift%28completion_%29.md)
+- [readAttributeInstalledClosedLimitLiftWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributeinstalledclosedlimitlift%28completionhandler_%29.md): Deprecated.
+- [readAttributeInstalledClosedLimitTiltWithCompletion:](mtrbaseclusterwindowcovering/readattributeinstalledclosedlimittilt%28completion_%29.md)
+- [readAttributeInstalledClosedLimitTiltWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributeinstalledclosedlimittilt%28completionhandler_%29.md): Deprecated.
+- [readAttributeInstalledOpenLimitLiftWithCompletion:](mtrbaseclusterwindowcovering/readattributeinstalledopenlimitlift%28completion_%29.md)
+- [readAttributeInstalledOpenLimitLiftWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributeinstalledopenlimitlift%28completionhandler_%29.md): Deprecated.
+- [readAttributeInstalledOpenLimitTiltWithCompletion:](mtrbaseclusterwindowcovering/readattributeinstalledopenlimittilt%28completion_%29.md)
+- [readAttributeInstalledOpenLimitTiltWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributeinstalledopenlimittilt%28completionhandler_%29.md): Deprecated.
+- [readAttributeModeWithCompletion:](mtrbaseclusterwindowcovering/readattributemode%28completion_%29.md)
+- [readAttributeModeWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributemode%28completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfActuationsLiftWithCompletion:](mtrbaseclusterwindowcovering/readattributenumberofactuationslift%28completion_%29.md)
+- [readAttributeNumberOfActuationsLiftWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributenumberofactuationslift%28completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfActuationsTiltWithCompletion:](mtrbaseclusterwindowcovering/readattributenumberofactuationstilt%28completion_%29.md)
+- [readAttributeNumberOfActuationsTiltWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributenumberofactuationstilt%28completionhandler_%29.md): Deprecated.
+- [readAttributeOperationalStatusWithCompletion:](mtrbaseclusterwindowcovering/readattributeoperationalstatus%28completion_%29.md)
+- [readAttributeOperationalStatusWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributeoperationalstatus%28completionhandler_%29.md): Deprecated.
+- [readAttributePhysicalClosedLimitLiftWithCompletion:](mtrbaseclusterwindowcovering/readattributephysicalclosedlimitlift%28completion_%29.md)
+- [readAttributePhysicalClosedLimitLiftWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributephysicalclosedlimitlift%28completionhandler_%29.md): Deprecated.
+- [readAttributePhysicalClosedLimitTiltWithCompletion:](mtrbaseclusterwindowcovering/readattributephysicalclosedlimittilt%28completion_%29.md)
+- [readAttributePhysicalClosedLimitTiltWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributephysicalclosedlimittilt%28completionhandler_%29.md): Deprecated.
+- [readAttributeSafetyStatusWithCompletion:](mtrbaseclusterwindowcovering/readattributesafetystatus%28completion_%29.md)
+- [readAttributeSafetyStatusWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributesafetystatus%28completionhandler_%29.md): Deprecated.
+- [readAttributeTargetPositionLiftPercent100thsWithCompletion:](mtrbaseclusterwindowcovering/readattributetargetpositionliftpercent100ths%28completion_%29.md)
+- [readAttributeTargetPositionLiftPercent100thsWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributetargetpositionliftpercent100ths%28completionhandler_%29.md): Deprecated.
+- [readAttributeTargetPositionTiltPercent100thsWithCompletion:](mtrbaseclusterwindowcovering/readattributetargetpositiontiltpercent100ths%28completion_%29.md)
+- [readAttributeTargetPositionTiltPercent100thsWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributetargetpositiontiltpercent100ths%28completionhandler_%29.md): Deprecated.
+- [readAttributeTypeWithCompletion:](mtrbaseclusterwindowcovering/readattributetype%28completion_%29.md)
+- [readAttributeTypeWithCompletionHandler:](mtrbaseclusterwindowcovering/readattributetype%28completionhandler_%29.md): Deprecated.
+- [stopMotionWithCompletion:](mtrbaseclusterwindowcovering/stopmotion%28completion_%29.md)
+- [stopMotionWithCompletionHandler:](mtrbaseclusterwindowcovering/stopmotion%28completionhandler_%29.md): Deprecated.
+- [stopMotionWithParams:completion:](mtrbaseclusterwindowcovering/stopmotion%28with_completion_%29.md)
+- [stopMotionWithParams:completionHandler:](mtrbaseclusterwindowcovering/stopmotion%28with_completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevisionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevisionWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeConfigStatusWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributeconfigstatus%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeConfigStatusWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributeconfigstatus%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCurrentPositionLiftWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributecurrentpositionlift%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentPositionLiftWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributecurrentpositionlift%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCurrentPositionLiftPercent100thsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributecurrentpositionliftpercent100ths%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentPositionLiftPercent100thsWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributecurrentpositionliftpercent100ths%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCurrentPositionLiftPercentageWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributecurrentpositionliftpercentage%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentPositionLiftPercentageWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributecurrentpositionliftpercentage%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCurrentPositionTiltWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributecurrentpositiontilt%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentPositionTiltWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributecurrentpositiontilt%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCurrentPositionTiltPercent100thsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributecurrentpositiontiltpercent100ths%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentPositionTiltPercent100thsWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributecurrentpositiontiltpercent100ths%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCurrentPositionTiltPercentageWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributecurrentpositiontiltpercentage%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentPositionTiltPercentageWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributecurrentpositiontiltpercentage%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeEndProductTypeWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributeendproducttype%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeEndProductTypeWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributeendproducttype%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMapWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMapWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeInstalledClosedLimitLiftWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributeinstalledclosedlimitlift%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeInstalledClosedLimitLiftWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributeinstalledclosedlimitlift%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeInstalledClosedLimitTiltWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributeinstalledclosedlimittilt%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeInstalledClosedLimitTiltWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributeinstalledclosedlimittilt%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeInstalledOpenLimitLiftWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributeinstalledopenlimitlift%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeInstalledOpenLimitLiftWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributeinstalledopenlimitlift%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeInstalledOpenLimitTiltWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributeinstalledopenlimittilt%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeInstalledOpenLimitTiltWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributeinstalledopenlimittilt%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeModeWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributemode%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeModeWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributemode%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNumberOfActuationsLiftWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributenumberofactuationslift%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfActuationsLiftWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributenumberofactuationslift%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNumberOfActuationsTiltWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributenumberofactuationstilt%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfActuationsTiltWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributenumberofactuationstilt%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeOperationalStatusWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributeoperationalstatus%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeOperationalStatusWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributeoperationalstatus%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePhysicalClosedLimitLiftWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributephysicalclosedlimitlift%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePhysicalClosedLimitLiftWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributephysicalclosedlimitlift%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePhysicalClosedLimitTiltWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributephysicalclosedlimittilt%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePhysicalClosedLimitTiltWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributephysicalclosedlimittilt%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSafetyStatusWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributesafetystatus%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSafetyStatusWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributesafetystatus%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeTargetPositionLiftPercent100thsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributetargetpositionliftpercent100ths%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeTargetPositionLiftPercent100thsWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributetargetpositionliftpercent100ths%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeTargetPositionTiltPercent100thsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributetargetpositiontiltpercent100ths%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeTargetPositionTiltPercent100thsWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributetargetpositiontiltpercent100ths%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeTypeWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributetype%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeTypeWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterwindowcovering/subscribeattributetype%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [upOrOpenWithCompletion:](mtrbaseclusterwindowcovering/uporopen%28completion_%29.md)
+- [upOrOpenWithCompletionHandler:](mtrbaseclusterwindowcovering/uporopen%28completionhandler_%29.md): Deprecated.
+- [upOrOpenWithParams:completion:](mtrbaseclusterwindowcovering/uporopen%28with_completion_%29.md)
+- [upOrOpenWithParams:completionHandler:](mtrbaseclusterwindowcovering/uporopen%28with_completionhandler_%29.md): Deprecated.
+- [writeAttributeModeWithValue:completion:](mtrbaseclusterwindowcovering/writeattributemode%28withvalue_completion_%29.md)
+- [writeAttributeModeWithValue:completionHandler:](mtrbaseclusterwindowcovering/writeattributemode%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeModeWithValue:params:completion:](mtrbaseclusterwindowcovering/writeattributemode%28withvalue_params_completion_%29.md)
+- [writeAttributeModeWithValue:params:completionHandler:](mtrbaseclusterwindowcovering/writeattributemode%28withvalue_params_completionhandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevisionWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeConfigStatusWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributeconfigstatus%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeConfigStatusWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributeconfigstatus%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentPositionLiftWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributecurrentpositionlift%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionLiftWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributecurrentpositionlift%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentPositionLiftPercent100thsWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributecurrentpositionliftpercent100ths%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionLiftPercent100thsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributecurrentpositionliftpercent100ths%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentPositionLiftPercentageWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributecurrentpositionliftpercentage%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionLiftPercentageWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributecurrentpositionliftpercentage%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentPositionTiltWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributecurrentpositiontilt%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionTiltWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributecurrentpositiontilt%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentPositionTiltPercent100thsWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributecurrentpositiontiltpercent100ths%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionTiltPercent100thsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributecurrentpositiontiltpercent100ths%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentPositionTiltPercentageWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributecurrentpositiontiltpercentage%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCurrentPositionTiltPercentageWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributecurrentpositiontiltpercentage%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeEndProductTypeWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributeendproducttype%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeEndProductTypeWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributeendproducttype%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMapWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeInstalledClosedLimitLiftWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributeinstalledclosedlimitlift%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeInstalledClosedLimitLiftWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributeinstalledclosedlimitlift%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeInstalledClosedLimitTiltWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributeinstalledclosedlimittilt%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeInstalledClosedLimitTiltWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributeinstalledclosedlimittilt%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeInstalledOpenLimitLiftWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributeinstalledopenlimitlift%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeInstalledOpenLimitLiftWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributeinstalledopenlimitlift%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeInstalledOpenLimitTiltWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributeinstalledopenlimittilt%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeInstalledOpenLimitTiltWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributeinstalledopenlimittilt%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeModeWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributemode%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeModeWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributemode%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfActuationsLiftWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributenumberofactuationslift%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfActuationsLiftWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributenumberofactuationslift%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfActuationsTiltWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributenumberofactuationstilt%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfActuationsTiltWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributenumberofactuationstilt%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeOperationalStatusWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributeoperationalstatus%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeOperationalStatusWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributeoperationalstatus%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePhysicalClosedLimitLiftWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributephysicalclosedlimitlift%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePhysicalClosedLimitLiftWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributephysicalclosedlimitlift%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePhysicalClosedLimitTiltWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributephysicalclosedlimittilt%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePhysicalClosedLimitTiltWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributephysicalclosedlimittilt%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSafetyStatusWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributesafetystatus%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSafetyStatusWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributesafetystatus%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeTargetPositionLiftPercent100thsWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributetargetpositionliftpercent100ths%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeTargetPositionLiftPercent100thsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributetargetpositionliftpercent100ths%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeTargetPositionTiltPercent100thsWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributetargetpositiontiltpercent100ths%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeTargetPositionTiltPercent100thsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributetargetpositiontiltpercent100ths%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeTypeWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterwindowcovering/readattributetype%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeTypeWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterwindowcovering/readattributetype%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)

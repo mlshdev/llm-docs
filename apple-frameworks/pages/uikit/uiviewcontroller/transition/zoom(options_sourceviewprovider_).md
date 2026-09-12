@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiviewcontroller/transition/zoom(options:sourceviewprovider:)](https://developer.apple.com/documentation/uikit/uiviewcontroller/transition/zoom(options:sourceviewprovider:))
+
+# zoom(options:sourceViewProvider:)
+
+**Framework:** UIKit  
+**Kind:** Type Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · tvOS · visionOS
+
+Creates a zoom transition from the view that the source provider specifies.
+
+## Declaration
+
+```swift
+static func zoom(options: UIViewController.Transition.ZoomOptions? = nil, sourceViewProvider: @escaping (UIViewController.Transition.ZoomSourceViewProviderContext) -> UIView?) -> Self
+```
+
+## Parameters
+
+- `options`: Additional options for the zoom transition.
+- `sourceViewProvider`: A closure that returns the view, for example a thumbnail image, that the animation zooms out from and zooms back in to.
+
+## Mentioned In
+
+- [Enhancing your app with fluid transitions](../../enhancing-your-app-with-fluid-transitions.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The system calls the source view provider when it presents and when it dismisses the view controller. In the closure, return the [UIView](../../uiview.md) that the animation should zoom in from or zoom back out to, respectively. For more information, see [Enhancing your app with fluid transitions](../../enhancing-your-app-with-fluid-transitions.md).
+
+## See Also
+
+### Creating zoom transitions
+
+- [UIViewController.Transition.ZoomOptions](zoomoptions.md): Options for a zoom transition.
+- [UIViewController.Transition.ZoomSourceViewProviderContext](zoomsourceviewprovidercontext.md): A context object that contains references to the view controllers from a zoom transition.

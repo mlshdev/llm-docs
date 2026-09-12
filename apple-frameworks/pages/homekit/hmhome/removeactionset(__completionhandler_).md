@@ -1,0 +1,67 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/homekit/hmhome/removeactionset(_:completionhandler:)](https://developer.apple.com/documentation/homekit/hmhome/removeactionset(_:completionhandler:))
+
+# removeActionSet(\_:completionHandler:) (Swift)
+
+**Framework:** HomeKit  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 14.0+ · visionOS 1.0+
+
+Removes an action set from the home.
+
+## Declaration
+
+```swift
+func removeActionSet(_ actionSet: HMActionSet, completionHandler completion: @escaping @Sendable ((any Error)?) -> Void)
+```
+
+```swift
+func removeActionSet(_ actionSet: HMActionSet) async throws
+```
+
+## Parameters
+
+- `actionSet`: The action set to remove.
+- `completion`: The block executed after the request is processed.
+
+  - **error**: `nil` on success; otherwise, error object indicating the reason for failure.
+
+## See Also
+
+### Creating action sets
+
+- [actionSets](actionsets.md): An array of the action sets in the home.
+- [addActionSet(withName:completionHandler:)](addactionset%28withname_completionhandler_%29.md): Adds a new action set to the home.
+- [executeActionSet(\_:completionHandler:)](executeactionset%28__completionhandler_%29.md): Executes all the actions in a specified action set.
+- [builtinActionSet(ofType:)](builtinactionset%28oftype_%29.md): Retrieves the builtin action set for the specified type.
+- [HMActionSet](../hmactionset.md): A collection of actions that you trigger as a group.
+
+# removeActionSet:completionHandler: (Objective-C)
+
+**Framework:** HomeKit  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 14.0+ · visionOS 1.0+
+
+Removes an action set from the home.
+
+## Declaration
+
+```objectivec
+- (void) removeActionSet:(HMActionSet *) actionSet completionHandler:(void (^)(NSError *error)) completion;
+```
+
+## Parameters
+
+- `actionSet`: The action set to remove.
+- `completion`: The block executed after the request is processed.
+
+  - **error**: `nil` on success; otherwise, error object indicating the reason for failure.
+
+## See Also
+
+### Creating action sets
+
+- [actionSets](actionsets.md): An array of the action sets in the home.
+- [addActionSetWithName:completionHandler:](addactionset%28withname_completionhandler_%29.md): Adds a new action set to the home.
+- [executeActionSet:completionHandler:](executeactionset%28__completionhandler_%29.md): Executes all the actions in a specified action set.
+- [builtinActionSetOfType:](builtinactionset%28oftype_%29.md): Retrieves the builtin action set for the specified type.
+- [HMActionSet](../hmactionset.md): A collection of actions that you trigger as a group.

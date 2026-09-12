@@ -1,0 +1,45 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/clockkit/clktextprovider/new()](https://developer.apple.com/documentation/clockkit/clktextprovider/new())
+
+# new() (Swift)
+
+**Framework:** ClockKit  
+**Kind:** Type Method  
+**Availability:** watchOS 2.0+ (deprecated in 7.0)
+
+Creates an empty text provider.
+
+> Use factory methods that take parameters.
+
+## Declaration
+
+```swift
+class func new() -> Self
+```
+
+## See Also
+
+### Creating Empty Text Providers
+
+- [init()](init%28%29.md): Deprecated. Creates an empty text provider.
+
+# new (Objective-C)
+
+**Framework:** ClockKit  
+**Kind:** Type Method  
+**Availability:** watchOS 2.0+ (deprecated in 7.0)
+
+Creates an empty text provider.
+
+> Use factory methods that take parameters.
+
+## Declaration
+
+```objectivec
++ (instancetype) new;
+```
+
+## See Also
+
+### Creating Empty Text Providers
+
+- [init](init%28%29.md): Deprecated. Creates an empty text provider.

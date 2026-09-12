@@ -1,0 +1,68 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1532187-vdsp_maxmgv](https://developer.apple.com/documentation/kernel/1532187-vdsp_maxmgv)
+
+# vDSP_maxmgv
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Function  
+**Availability:** macOS 10.4+
+
+Calculates the maximum magnitude in a single-precision vector.
+
+## Declaration
+
+```objectivec
+void vDSP_maxmgv(const float *__A, vDSP_Stride __IA, float *__C, vDSP_Length __N);
+```
+
+## Parameters
+
+- `__A`: The single-precision real input vector `A`.
+- `__I`: The stride for input vector `A`.
+- `__C`: The single-precsion output scalar.
+- `__N`: The number of elements to process. If `N` is zero (`0`), this function returns `-INFINITY`.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This function calculates the maximum magnitude of the first `N` elements of `A` and writes the result to `C`:
+
+![A diagram showing the operation of the vDSP_maxmgv function. There are three rows. The top row represents the input, vector A. The second row represents the maximum magnitude value operation. The bottom row represents the output, vector C. The diagram has connecting lines from the input vectors to the operation and from the operation to the output vector indicating the relationships between the input and output.](https://docs-assets.developer.apple.com/published/bc8c9aceda/9997d1e5-1da8-4603-9168-199bc11da259.png)
+
+The operation is: 
+
+<a id="3921222"></a>
+
+**Listing 1**
+
+```other
+*C = -INFINITY;
+for (n = 0; n < N; ++n)
+    if (*C < |A[n*I]|)
+        *C = |A[n*I]|;
+```
+
+The following code shows an example of using [vDSP_maxmgv](https://developer.apple.com/documentation/accelerate/vdsp_maxmgv).
+
+<a id="3921221"></a>
+
+**Listing 2**
+
+```swift
+let stride = vDSP_Stride(1)
+
+let a: [Float] = [-1.5, 2.25, 3.6,
+                  0.2, -0.1, -4.3]
+let n = vDSP_Length(a.count)
+
+var c: Float = .nan
+
+vDSP_maxmgv(a,
+            stride,
+            &c,
+            n)
+
+print("max magnitude", c) // Prints "max magnitude 4.3".
+```

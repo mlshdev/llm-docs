@@ -1,0 +1,39 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/date/componentsformatstyle/input(after:)](https://developer.apple.com/documentation/foundation/date/componentsformatstyle/input(after:))
+
+# input(after:)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 1.0+ · watchOS 11.0+
+
+The next input value after the given input.
+
+## Declaration
+
+```swift
+func input(after input: Range<Date>) -> Range<Date>?
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+If [isPositive](ispositive.md) is true, the range `input.lowerBound..<x`, where `x` is the next larger date that this style can differentiate. If [isPositive](ispositive.md) is false, the range `x..<input.upperBound`, where `x` is the next higher date this style can differentiate, or `nil` if there is no such `x`.
+
+<a id="discussion"></a>
+
+## Discussion
+
+If [isPositive](ispositive.md) is true, the next input value maintains the same `lowerBound` as `input`, but has a different`upperBound`. If [isPositive](ispositive.md) is false, the next input value maintains the same `upperBound` as `input`, but as a different `lowerBound`.
+
+Use this function to determine if the return value provided by [discreteInput(before:)](discreteinput%28before_%29.md) is precise enough for your use case for any input `y`:
+
+```
+guard let x = style.discreteInput(before: y) else {
+    return
+}
+
+let z = style.input(after: x) ?? y
+```
+
+If the distance between the `upperBound`s of `x` and `z` is too large for the precision you require, you may want to manually probe `format(_:)` at a higher rate in that interval, as there is no guarantee for what the output will be in that interval.

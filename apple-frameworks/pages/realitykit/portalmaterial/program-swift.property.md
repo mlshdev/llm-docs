@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/portalmaterial/program-swift.property](https://developer.apple.com/documentation/realitykit/portalmaterial/program-swift.property)
+
+# program
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+The compiled program that drives this material’s surface and geometry shading.
+
+## Declaration
+
+```swift
+var program: PortalMaterial.Program { get set }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Read this property to recover the program a portal material was created with — for example, to share it with another [PortalMaterial](../portalmaterial.md). Assign a new program to swap a portal’s shading without rebuilding the material; the material’s existing parameter bindings are preserved, and bindings whose names and types match inputs on the new program’s shader graph keep working. Bindings that don’t match are ignored at render time — re-bind any new inputs the program introduces before drawing the portal.
+
+## See Also
+
+### Specifying the shader program
+
+- [PortalMaterial.Program](program-swift.struct.md): A compiled shader program that drives the appearance of a portal’s surface and geometry.

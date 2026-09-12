@@ -1,0 +1,119 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/sirikit/handling-the-ride-booking-intents](https://developer.apple.com/documentation/sirikit/handling-the-ride-booking-intents)
+
+# Handling the Ride-Booking Intents (Swift)
+
+**Framework:** Intents
+
+Support the different intent-handling sequences for booking rides with Shortcuts or Maps.
+
+<a id="overview"></a>
+
+## Overview
+
+A successful implementation of a ride-booking Intents app extension requires supporting all of the intents in the ride-booking domain. In fact, Maps on iOS expects your extension to handle all of the intents and doesn’t load it if it doesn’t.
+
+A ride-booking Intents app extension provides a list of available vehicles, details about the cost of each ride, and status updates for any booked rides. It also facilitates financial transactions associated with any rides and communicates any relevant information to your ride booking service. Shortcuts and Maps handle ride booking differently, and your extension must be able to support both flows.
+
+<a id="Book-Rides-from-Maps"></a>
+
+### Book Rides from Maps
+
+With Maps, users specify information such as the start and end points of their route directly using the Maps interface. Then Maps sends an [INListRideOptionsIntent](../intents/inlistrideoptionsintent.md) object that describes the user’s trip to your Intents app extension. Provide ride options available for the user’s requested trip. For more information about providing effective ride options, see [Generating a List of Ride Options](generating-a-list-of-ride-options.md). After the user selects one of your ride options, Maps sends an [INRequestRideIntent](../intents/inrequestrideintent.md) object to your Intents app extension to handle. Use the information in this object to book the ride.
+
+> **Note**
+
+>  When you handle a ride-booking intent from Maps, there isn’t a resolve or confirm step. Instead, Maps validates the user’s origin and destination before sending intents to your Intents app extension.
+
+Maps may send the same [INGetRideStatusIntent](../intents/ingetridestatusintent.md) object to your Intents app extension multiple times after booking is complete. Maps may also call the [startSendingUpdates(for:to:)](../intents/ingetridestatusintenthandling/startsendingupdates%28for_to_%29.md) method of your intent handler to ask for live status updates. Prepare your handler to push frequent status updates to the specified observer object. For information about how to handle live status updates, see [Providing Live Status Updates](providing-live-status-updates.md).
+
+<a id="Book-Rides-from-Shortcuts-and-Siri-Suggestions"></a>
+
+### Book Rides from Shortcuts and Siri Suggestions
+
+Shortcuts and Siri Suggestions send your Intents app extension [INRequestRideIntent](../intents/inrequestrideintent.md) objects to resolve, confirm, and handle. For more details about this sequence, see [Resolving and Handling Intents](resolving-and-handling-intents.md). Implement the methods in the [INRequestRideIntentHandling](../intents/inrequestrideintenthandling.md) protocol to prompt the user for additional information and confirm the details of their trip.
+
+## Topics
+
+### Related Articles
+
+- [Generating a List of Ride Options](generating-a-list-of-ride-options.md): Generate ride options for Maps to display to the user.
+- [Providing Live Status Updates](providing-live-status-updates.md): Provide regular updates to Maps about the status of a booked ride.
+
+## See Also
+
+### Articles
+
+- [Adding User Interactivity with Siri Shortcuts and the Shortcuts App](adding-user-interactivity-with-siri-shortcuts-and-the-shortcuts-app.md): Add custom intents and parameters to help users interact more quickly and effectively with Siri and the Shortcuts app.
+- [Defining Relevant Shortcuts for the Siri Watch Face](defining-relevant-shortcuts-for-the-siri-watch-face.md): Deprecated. Inform Siri when your app’s shortcuts may be useful to the user.
+- [Deleting Donated Shortcuts](deleting-donated-shortcuts.md): Remove your donations from Siri.
+- [Dispatching intents to handlers](dispatching-intents-to-handlers.md): Provide SiriKit with an intent handler capable of handling a specific intent.
+- [Improving Siri Media Interactions and App Selection](improving-siri-media-interactions-and-app-selection.md): Fine-tune voice controls and improve Siri Suggestions by sharing app capabilities, customized names, and listening habits with the system.
+- [Improving interactions between Siri and your messaging app](improving-interactions-between-siri-and-your-messaging-app.md): Donate app-specific content, use Siri’s contact suggestions, and adopt the latest platform features to create a more consistent messaging experience.
+- [Registering Custom Vocabulary with SiriKit](registering-custom-vocabulary-with-sirikit.md): Register your app’s custom terminology, and provide sample phrases for how to use your app with Siri.
+- [Confirming the Details of an Intent](confirming-the-details-of-an-intent.md): Perform final validation of the intent parameters and verify that your services are ready to fulfill the intent.
+- [Handling an Intent](handling-an-intent.md): Fulfill the intent and provide feedback to SiriKit about what you did.
+- [Resolving the Parameters of an Intent](resolving-the-parameters-of-an-intent.md): Validate the parameters of an intent and make sure that you have the information you need to continue.
+- [Generating a List of Ride Options](generating-a-list-of-ride-options.md): Generate ride options for Maps to display to the user.
+- [Donating Reservations](donating-reservations.md): Inform Siri of reservations made from your app.
+- [Specifying Synonyms for Your App Name](specifying-synonyms-for-your-app-name.md): Provide alternative names for your app that are more familiar or easier for users to speak.
+- [Intent Phrases](intent-phrases.md): The keys that you include in your global vocabulary file to show how users engage your app from Siri.
+- [Localizing Your Vocabulary for Chinese Dialects](localizing-your-vocabulary-for-chinese-dialects.md): Apply emphasis markers to your pronunciation tips to assist Siri with Chinese dialects.
+
+# Handling the Ride-Booking Intents (Objective-C)
+
+**Framework:** Intents
+
+Support the different intent-handling sequences for booking rides with Shortcuts or Maps.
+
+<a id="overview"></a>
+
+## Overview
+
+A successful implementation of a ride-booking Intents app extension requires supporting all of the intents in the ride-booking domain. In fact, Maps on iOS expects your extension to handle all of the intents and doesn’t load it if it doesn’t.
+
+A ride-booking Intents app extension provides a list of available vehicles, details about the cost of each ride, and status updates for any booked rides. It also facilitates financial transactions associated with any rides and communicates any relevant information to your ride booking service. Shortcuts and Maps handle ride booking differently, and your extension must be able to support both flows.
+
+<a id="Book-Rides-from-Maps"></a>
+
+### Book Rides from Maps
+
+With Maps, users specify information such as the start and end points of their route directly using the Maps interface. Then Maps sends an [INListRideOptionsIntent](../intents/inlistrideoptionsintent.md) object that describes the user’s trip to your Intents app extension. Provide ride options available for the user’s requested trip. For more information about providing effective ride options, see [Generating a List of Ride Options](generating-a-list-of-ride-options.md). After the user selects one of your ride options, Maps sends an [INRequestRideIntent](../intents/inrequestrideintent.md) object to your Intents app extension to handle. Use the information in this object to book the ride.
+
+> **Note**
+
+>  When you handle a ride-booking intent from Maps, there isn’t a resolve or confirm step. Instead, Maps validates the user’s origin and destination before sending intents to your Intents app extension.
+
+Maps may send the same [INGetRideStatusIntent](../intents/ingetridestatusintent.md) object to your Intents app extension multiple times after booking is complete. Maps may also call the [startSendingUpdatesForGetRideStatus:toObserver:](../intents/ingetridestatusintenthandling/startsendingupdates%28for_to_%29.md) method of your intent handler to ask for live status updates. Prepare your handler to push frequent status updates to the specified observer object. For information about how to handle live status updates, see [Providing Live Status Updates](providing-live-status-updates.md).
+
+<a id="Book-Rides-from-Shortcuts-and-Siri-Suggestions"></a>
+
+### Book Rides from Shortcuts and Siri Suggestions
+
+Shortcuts and Siri Suggestions send your Intents app extension [INRequestRideIntent](../intents/inrequestrideintent.md) objects to resolve, confirm, and handle. For more details about this sequence, see [Resolving and Handling Intents](resolving-and-handling-intents.md). Implement the methods in the [INRequestRideIntentHandling](../intents/inrequestrideintenthandling.md) protocol to prompt the user for additional information and confirm the details of their trip.
+
+## Topics
+
+### Related Articles
+
+- [Generating a List of Ride Options](generating-a-list-of-ride-options.md): Generate ride options for Maps to display to the user.
+- [Providing Live Status Updates](providing-live-status-updates.md): Provide regular updates to Maps about the status of a booked ride.
+
+## See Also
+
+### Articles
+
+- [Adding User Interactivity with Siri Shortcuts and the Shortcuts App](adding-user-interactivity-with-siri-shortcuts-and-the-shortcuts-app.md): Add custom intents and parameters to help users interact more quickly and effectively with Siri and the Shortcuts app.
+- [Defining Relevant Shortcuts for the Siri Watch Face](defining-relevant-shortcuts-for-the-siri-watch-face.md): Deprecated. Inform Siri when your app’s shortcuts may be useful to the user.
+- [Deleting Donated Shortcuts](deleting-donated-shortcuts.md): Remove your donations from Siri.
+- [Dispatching intents to handlers](dispatching-intents-to-handlers.md): Provide SiriKit with an intent handler capable of handling a specific intent.
+- [Improving Siri Media Interactions and App Selection](improving-siri-media-interactions-and-app-selection.md): Fine-tune voice controls and improve Siri Suggestions by sharing app capabilities, customized names, and listening habits with the system.
+- [Improving interactions between Siri and your messaging app](improving-interactions-between-siri-and-your-messaging-app.md): Donate app-specific content, use Siri’s contact suggestions, and adopt the latest platform features to create a more consistent messaging experience.
+- [Registering Custom Vocabulary with SiriKit](registering-custom-vocabulary-with-sirikit.md): Register your app’s custom terminology, and provide sample phrases for how to use your app with Siri.
+- [Confirming the Details of an Intent](confirming-the-details-of-an-intent.md): Perform final validation of the intent parameters and verify that your services are ready to fulfill the intent.
+- [Handling an Intent](handling-an-intent.md): Fulfill the intent and provide feedback to SiriKit about what you did.
+- [Resolving the Parameters of an Intent](resolving-the-parameters-of-an-intent.md): Validate the parameters of an intent and make sure that you have the information you need to continue.
+- [Generating a List of Ride Options](generating-a-list-of-ride-options.md): Generate ride options for Maps to display to the user.
+- [Donating Reservations](donating-reservations.md): Inform Siri of reservations made from your app.
+- [Specifying Synonyms for Your App Name](specifying-synonyms-for-your-app-name.md): Provide alternative names for your app that are more familiar or easier for users to speak.
+- [Intent Phrases](intent-phrases.md): The keys that you include in your global vocabulary file to show how users engage your app from Siri.
+- [Localizing Your Vocabulary for Chinese Dialects](localizing-your-vocabulary-for-chinese-dialects.md): Apply emphasis markers to your pronunciation tips to assist Siri with Chinese dialects.

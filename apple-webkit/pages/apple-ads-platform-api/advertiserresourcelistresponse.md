@@ -1,0 +1,55 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/advertiserresourcelistresponse](https://developer.apple.com/documentation/apple-ads-platform-api/advertiserresourcelistresponse)
+
+# AdvertiserResourceListResponse
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Object  
+**Availability:** Apple Ads Platform API 1.0+
+
+Response envelope for advertiser resource list requests.
+
+## Declaration
+
+```
+object AdvertiserResourceListResponse
+```
+
+## Properties
+
+- `error` — `Error`: Error detail if the request failed. See [Error](error.md).
+- `result` — `[Delegation]`: Array of matching advertiser resources. See [Delegation](delegation.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The `AdvertiserResourceListResponse` object is the response envelope the API returns when you fetch advertiser resources associated with an organization.
+
+Advertiser resources include entities such as content providers and brands. These resources appear in `Delegation` objects and control whether App Store or Apple Maps campaigns are accessible to an ad account.
+
+<a id="Example"></a>
+
+### Example
+
+```json
+{
+  "result": [
+    {
+      "resourceId": "555666777",
+      "resourceType": "CONTENT_PROVIDER",
+      "resourceName": "AwayFinder"
+    }
+  ]
+}
+```
+
+## See Also
+
+- [ProductFeatures](productfeatures.md): Product features are the advertising capabilities for an ad account.
+- [OrgSystemStatus](orgsystemstatus.md): System-derived operational status of an organization.
+- [OrgSystemStatusReason](orgsystemstatusreason.md): Reasons that can cause an organization’s system status to not be active.
+- [AdAccountSystemStatus](adaccountsystemstatus.md): System-derived operational status of an ad account.
+- [AdAccountSystemStatusReason](adaccountsystemstatusreason.md): Enumeration of reasons that can cause an ad account’s system status to be `INACTIVE`.
+- [AdvertiserResourceType](advertiserresourcetype.md): The type of advertiser resource you delegate to an ad account.

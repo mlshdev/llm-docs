@@ -1,0 +1,91 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremedia/cmtextdisplayflags](https://developer.apple.com/documentation/coremedia/cmtextdisplayflags)
+
+# CMTextDisplayFlags (Swift)
+
+**Framework:** Core Media  
+**Kind:** Type Alias  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 6.0+
+
+An integer value that describes the display mode flags for text media.
+
+## Declaration
+
+```swift
+typealias CMTextDisplayFlags = UInt32
+```
+
+## Topics
+
+### Constants
+
+- [kCMTextDisplayFlag_scrollIn](kcmtextdisplayflag_scrollin.md): A flag that describes the text scrolls into the display region.
+- [kCMTextDisplayFlag_scrollOut](kcmtextdisplayflag_scrollout.md): A flag that describes the text scrolls out of the display region.
+- [kCMTextDisplayFlag_scrollDirectionMask](kcmtextdisplayflag_scrolldirectionmask.md): A flag that describes the scrolling direction is set by a two-bit field, obtained from displayFlags using kCMTextDisplayFlag_scrollDirectionMask.
+- [kCMTextDisplayFlag_scrollDirection_bottomToTop](kcmtextdisplayflag_scrolldirection_bottomtotop.md): A flag that describes the text is vertically scrolled up (“credits style”), entering from the bottom and leaving towards the top.
+- [kCMTextDisplayFlag_scrollDirection_rightToLeft](kcmtextdisplayflag_scrolldirection_righttoleft.md): A flag that describes the text is horizontally scrolled (“marquee style”), entering from the right and leaving towards the left.
+- [kCMTextDisplayFlag_scrollDirection_topToBottom](kcmtextdisplayflag_scrolldirection_toptobottom.md): A flag that describes the text is vertically scrolled down, entering from the top and leaving towards the bottom.
+- [kCMTextDisplayFlag_scrollDirection_leftToRight](kcmtextdisplayflag_scrolldirection_lefttoright.md): A flag that describes the text is horizontally scrolled, entering from the left and leaving towards the right.
+- [kCMTextDisplayFlag_continuousKaraoke](kcmtextdisplayflag_continuouskaraoke.md): A flag that describes enabling the continuous karaoke mode where the range of karaoke highlighting extends to include additional ranges rather than the highlighting moves onto the next range.
+- [kCMTextDisplayFlag_writeTextVertically](kcmtextdisplayflag_writetextvertically.md): A flag that describes the text renders vertically.
+- [kCMTextDisplayFlag_fillTextRegion](kcmtextdisplayflag_filltextregion.md): A flag that describes the subtitle display bounds are to be filled with the color specified by `kCMTextFormatDescriptionExtension_BackgroundColor`.
+- [kCMTextDisplayFlag_forcedSubtitlesPresent](kcmtextdisplayflag_forcedsubtitlespresent.md): A flag that describes forcing subtitles are present, for example, a subtitle which only displays during foreign language sections of the video. Check individual samples to determine what type of subtitle is contained.
+- [kCMTextDisplayFlag_allSubtitlesForced](kcmtextdisplayflag_allsubtitlesforced.md): A flag that describes treating all subtitle samples as if they contain forced subtitles.
+
+## See Also
+
+### Data Types
+
+- [CMVideoDimensions](cmvideodimensions.md): A structure that represents video dimensions.
+- [CMAudioFormatDescriptionMask](cmaudioformatdescriptionmask.md): A type for mask bits that represent parts of an audio format description.
+- [CMMediaType](cmmediatype.md): Constants that represent media types.
+- [CMAudioCodecType](cmaudiocodectype.md): An audio codec type.
+- [CMVideoCodecType](cmvideocodectype.md): A video codec type.
+- [CMTextJustificationValue](cmtextjustificationvalue.md): An integer value that describes the justification modes for text media.
+- [Media Type Constants](media-type-constants.md): Constants that represent media types.
+- [Muxed Stream Types](muxed-stream-types.md): Constants that represent muxed stream types.
+- [Audio Codec Types](audio-codec-types.md): Constants that represent audio codec types.
+
+# CMTextDisplayFlags (Objective-C)
+
+**Framework:** Core Media  
+**Kind:** Type Alias  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 6.0+
+
+An integer value that describes the display mode flags for text media.
+
+## Declaration
+
+```objectivec
+typedef uint32_t CMTextDisplayFlags;
+```
+
+## Topics
+
+### Constants
+
+- [kCMTextDisplayFlag_scrollIn](kcmtextdisplayflag_scrollin.md): A flag that describes the text scrolls into the display region.
+- [kCMTextDisplayFlag_scrollOut](kcmtextdisplayflag_scrollout.md): A flag that describes the text scrolls out of the display region.
+- [kCMTextDisplayFlag_scrollDirectionMask](kcmtextdisplayflag_scrolldirectionmask.md): A flag that describes the scrolling direction is set by a two-bit field, obtained from displayFlags using kCMTextDisplayFlag_scrollDirectionMask.
+- [kCMTextDisplayFlag_scrollDirection_bottomToTop](kcmtextdisplayflag_scrolldirection_bottomtotop.md): A flag that describes the text is vertically scrolled up (“credits style”), entering from the bottom and leaving towards the top.
+- [kCMTextDisplayFlag_scrollDirection_rightToLeft](kcmtextdisplayflag_scrolldirection_righttoleft.md): A flag that describes the text is horizontally scrolled (“marquee style”), entering from the right and leaving towards the left.
+- [kCMTextDisplayFlag_scrollDirection_topToBottom](kcmtextdisplayflag_scrolldirection_toptobottom.md): A flag that describes the text is vertically scrolled down, entering from the top and leaving towards the bottom.
+- [kCMTextDisplayFlag_scrollDirection_leftToRight](kcmtextdisplayflag_scrolldirection_lefttoright.md): A flag that describes the text is horizontally scrolled, entering from the left and leaving towards the right.
+- [kCMTextDisplayFlag_continuousKaraoke](kcmtextdisplayflag_continuouskaraoke.md): A flag that describes enabling the continuous karaoke mode where the range of karaoke highlighting extends to include additional ranges rather than the highlighting moves onto the next range.
+- [kCMTextDisplayFlag_writeTextVertically](kcmtextdisplayflag_writetextvertically.md): A flag that describes the text renders vertically.
+- [kCMTextDisplayFlag_fillTextRegion](kcmtextdisplayflag_filltextregion.md): A flag that describes the subtitle display bounds are to be filled with the color specified by `kCMTextFormatDescriptionExtension_BackgroundColor`.
+- [kCMTextDisplayFlag_forcedSubtitlesPresent](kcmtextdisplayflag_forcedsubtitlespresent.md): A flag that describes forcing subtitles are present, for example, a subtitle which only displays during foreign language sections of the video. Check individual samples to determine what type of subtitle is contained.
+- [kCMTextDisplayFlag_allSubtitlesForced](kcmtextdisplayflag_allsubtitlesforced.md): A flag that describes treating all subtitle samples as if they contain forced subtitles.
+
+## See Also
+
+### Data Types
+
+- [CMVideoDimensions](cmvideodimensions.md): A structure that represents video dimensions.
+- [CMAudioFormatDescriptionMask](cmaudioformatdescriptionmask.md): A type for mask bits that represent parts of an audio format description.
+- [CMMediaType](cmmediatype.md): Constants that represent media types.
+- [CMAudioCodecType](cmaudiocodectype.md): An audio codec type.
+- [CMVideoCodecType](cmvideocodectype.md): A video codec type.
+- [CMTextJustificationValue](cmtextjustificationvalue.md): An integer value that describes the justification modes for text media.
+- [Media Type Constants](media-type-constants.md): Constants that represent media types.
+- [Muxed Stream Types](muxed-stream-types.md): Constants that represent muxed stream types.
+- [Audio Codec Types](audio-codec-types.md): Constants that represent audio codec types.

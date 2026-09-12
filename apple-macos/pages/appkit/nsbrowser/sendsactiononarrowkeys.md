@@ -1,0 +1,55 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsbrowser/sendsactiononarrowkeys](https://developer.apple.com/documentation/appkit/nsbrowser/sendsactiononarrowkeys)
+
+# sendsActionOnArrowKeys (Swift)
+
+**Framework:** AppKit  
+**Kind:** Instance Property  
+**Availability:** macOS
+
+A Boolean that indicates whether pressing an arrow key causes an action message to be sent.
+
+## Declaration
+
+```swift
+var sendsActionOnArrowKeys: Bool { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When the value of this property is [false](https://developer.apple.com/documentation/swift/false), pressing an arrow key scrolls the browser. When the value of this property is [true](https://developer.apple.com/documentation/swift/true), it also sends the action message specified by [action](../nscontrol/action.md).
+
+## See Also
+
+### Managing Actions
+
+- [doubleAction](doubleaction.md): The browser’s double-click action method.
+- [sendAction()](sendaction%28%29.md): Sends the action message to the target.
+
+# sendsActionOnArrowKeys (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Property  
+**Availability:** macOS
+
+A Boolean that indicates whether pressing an arrow key causes an action message to be sent.
+
+## Declaration
+
+```objectivec
+@property BOOL sendsActionOnArrowKeys;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When the value of this property is [false](https://developer.apple.com/documentation/swift/false), pressing an arrow key scrolls the browser. When the value of this property is [true](https://developer.apple.com/documentation/swift/true), it also sends the action message specified by [action](../nscontrol/action.md).
+
+## See Also
+
+### Managing Actions
+
+- [doubleAction](doubleaction.md): The browser’s double-click action method.
+- [sendAction](sendaction%28%29.md): Sends the action message to the target.

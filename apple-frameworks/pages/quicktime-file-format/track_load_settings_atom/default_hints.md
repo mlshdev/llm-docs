@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/track_load_settings_atom/default_hints](https://developer.apple.com/documentation/quicktime-file-format/track_load_settings_atom/default_hints)
+
+# Default hints
+
+**Framework:** QuickTime File Format  
+**Kind:** Data field
+
+A 32-bit integer containing playback hints.
+
+<a id="Overview"></a>
+
+## Overview
+
+More than one flag may be enabled. Flags are enabled by setting them to `1`. The following flags are defined.
+
+- **Double buffer**: This flag indicates playing the track using double-buffered I/O. This flag’s value is `0x0020`.
+- **High quality**: This flag indicates displaying the track at the highest possible quality, without regard to real-time performance considerations. This flag’s value is `0x0100`.
+
+## See Also
+
+### Data fields
+
+- [Size](size.md): A 32-bit integer that specifies the number of bytes in this track load settings atom.
+- [Type](type.md): A 32-bit integer that identifies the atom type.
+- [Preload start time](preload_start_time.md): A 32-bit integer specifying the starting time, in the movie’s time coordinate system, of a segment of the track that is to be preloaded.
+- [Preload duration](preload_duration.md): A 32-bit integer specifying the duration, in the movie’s time coordinate system, of a segment of the track that is to be preloaded.
+- [Preload flags](preload_flags.md): A 32-bit integer containing flags governing the preload operation.

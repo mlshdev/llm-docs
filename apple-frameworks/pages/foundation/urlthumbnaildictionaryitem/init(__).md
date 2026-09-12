@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/urlthumbnaildictionaryitem/init(_:)](https://developer.apple.com/documentation/foundation/urlthumbnaildictionaryitem/init(_:))
+
+# init(\_:)
+
+**Framework:** Foundation  
+**Kind:** Initializer  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.0+ · macOS 10.0+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Creates a thumbnail dictionary item key from the provided constant string.
+
+## Declaration
+
+```swift
+init(_ rawValue: String)
+```
+
+## See Also
+
+### Creating a Thumbnail Dictionary Key
+
+- [init(rawValue:)](init%28rawvalue_%29.md): Creates a thumbnail dictionary item key from the provided raw value string.

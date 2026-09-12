@@ -1,0 +1,54 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vdsp_rmsqvd](https://developer.apple.com/documentation/accelerate/vdsp_rmsqvd)
+
+# vDSP_rmsqvD
+
+**Interface language:** Objective-C
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.4+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Calculates the root mean square of a double-precision vector.
+
+## Declaration
+
+```objectivec
+extern void vDSP_rmsqvD(const double *__A, vDSP_Stride __IA, double *__C, vDSP_Length __N);
+```
+
+## Parameters
+
+- `__A`: The input vector.
+- `__IA`: The distance between the elements in the input vector.
+- `__C`: On output, the root mean square of the elements in the input vector.
+- `__N`: The number of elements that the function processes.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This function calculates the root mean square of the first `N` elements of the input vector and writes the result to the output scalar parameter, `C`.
+
+The following code shows an example of using [vDSP_rmsqvD](vdsp_rmsqvd.md):
+
+```swift
+    let stride = vDSP_Stride(1)
+    
+    let a: [Double] = [-8, -4, -2, 0, 2, 4, 8]
+    let n = vDSP_Length(a.count)
+    
+    var c = Double()
+    
+    vDSP_rmsqvD(a,
+                stride,
+                &c,
+                n)
+    
+    print(c) // Prints "4.89".
+```
+
+## See Also
+
+### Calculating the root mean square of a vector
+
+- [vDSP_rmsqv](vdsp_rmsqv.md): Calculates the root mean square of a single-precision vector.

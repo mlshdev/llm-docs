@@ -1,0 +1,17 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/mapkitjs/pointofinterestcategory/baseball](https://developer.apple.com/documentation/mapkitjs/pointofinterestcategory/baseball)
+
+# Baseball
+
+**Interface language:** Data
+
+**Framework:** MapKit JS  
+**Kind:** Enumeration Case  
+**Availability:** MapKit JS 5.78.112+
+
+The point-of-interest category for baseball parks.
+
+## Declaration
+
+```
+readonly Baseball: "Baseball";
+```

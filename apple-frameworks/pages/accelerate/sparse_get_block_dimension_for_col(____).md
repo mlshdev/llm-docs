@@ -1,0 +1,79 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/sparse_get_block_dimension_for_col(_:_:)](https://developer.apple.com/documentation/accelerate/sparse_get_block_dimension_for_col(_:_:))
+
+# sparse_get_block_dimension_for_col(\_:\_:) (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 3.0+
+
+Returns the dimension of the block for a specified column of a single-precision matrix.
+
+## Declaration
+
+```swift
+func sparse_get_block_dimension_for_col(_ A: UnsafeMutableRawPointer!, _ j: sparse_index) -> Int
+```
+
+## Parameters
+
+- `A`: The sparse matrix, *A*, which must have been created with [sparse_matrix_block_create_float(\_:\_:\_:\_:)](sparse_matrix_block_create_float%28________%29.md),  [sparse_matrix_block_create_double(\_:\_:\_:\_:)](sparse_matrix_block_create_double%28________%29.md), [sparse_matrix_variable_block_create_float(\_:\_:\_:\_:)](sparse_matrix_variable_block_create_float%28________%29.md), or [sparse_matrix_variable_block_create_double(\_:\_:\_:\_:)](sparse_matrix_variable_block_create_double%28________%29.md). 0 is returned if not met. `A` holds block dimensions (fixed or variable) set with matrix object creation routine.
+- `j`: The column to query.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The dimension of the block of the specified column.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+> **Important**
+
+>  Apple provides the BLAS and LAPACK libraries under the Accelerate framework to be in line with LAPACK 3.9.1. Starting with iOS 26, iPadOS 26, macOS 26, tvOS 26, visionOS 26, and watchOS 26, the libraries are in line with LAPACK 3.12.0. These new interfaces provide additional functionality, as well as a new ILP64 interface. To use the new interfaces, define `ACCELERATE_NEW_LAPACK` before including the Accelerate or vecLib headers. For ILP64 interfaces, also define `ACCELERATE_LAPACK_ILP64`. For Swift projects, specify `ACCELERATE_NEW_LAPACK=1` and `ACCELERATE_LAPACK_ILP64=1` as preprocessor macros in Xcode build settings under Apple Clang - Preprocessing \> Preprocessor Macros.
+
+## See Also
+
+### Block dimension queries
+
+- [sparse_get_block_dimension_for_row(\_:\_:)](sparse_get_block_dimension_for_row%28____%29.md): Returns the dimension of the block for a specified row of a double-precision matrix.
+
+# sparse_get_block_dimension_for_col (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 3.0+
+
+Returns the dimension of the block for a specified column of a single-precision matrix.
+
+## Declaration
+
+```objectivec
+long sparse_get_block_dimension_for_col(void *A, sparse_index j);
+```
+
+## Parameters
+
+- `A`: The sparse matrix, *A*, which must have been created with [sparse_matrix_block_create_float](sparse_matrix_block_create_float%28________%29.md),  [sparse_matrix_block_create_double](sparse_matrix_block_create_double%28________%29.md), [sparse_matrix_variable_block_create_float](sparse_matrix_variable_block_create_float%28________%29.md), or [sparse_matrix_variable_block_create_double](sparse_matrix_variable_block_create_double%28________%29.md). 0 is returned if not met. `A` holds block dimensions (fixed or variable) set with matrix object creation routine.
+- `j`: The column to query.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The dimension of the block of the specified column.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+> **Important**
+
+>  Apple provides the BLAS and LAPACK libraries under the Accelerate framework to be in line with LAPACK 3.9.1. Starting with iOS 26, iPadOS 26, macOS 26, tvOS 26, visionOS 26, and watchOS 26, the libraries are in line with LAPACK 3.12.0. These new interfaces provide additional functionality, as well as a new ILP64 interface. To use the new interfaces, define `ACCELERATE_NEW_LAPACK` before including the Accelerate or vecLib headers. For ILP64 interfaces, also define `ACCELERATE_LAPACK_ILP64`. For Swift projects, specify `ACCELERATE_NEW_LAPACK=1` and `ACCELERATE_LAPACK_ILP64=1` as preprocessor macros in Xcode build settings under Apple Clang - Preprocessing \> Preprocessor Macros.
+
+## See Also
+
+### Block dimension queries
+
+- [sparse_get_block_dimension_for_row](sparse_get_block_dimension_for_row%28____%29.md): Returns the dimension of the block for a specified row of a double-precision matrix.

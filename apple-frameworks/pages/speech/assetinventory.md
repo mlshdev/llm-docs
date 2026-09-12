@@ -1,0 +1,69 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/speech/assetinventory](https://developer.apple.com/documentation/speech/assetinventory)
+
+# AssetInventory
+
+**Framework:** Speech  
+**Kind:** Class  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+Manages the assets that are necessary for transcription or other analyses.
+
+## Declaration
+
+```swift
+final class AssetInventory
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Before using the [SpeechAnalyzer](speechanalyzer.md) class, you must install assets required by the modules you plan to use. These assets are machine-learning models downloaded from Apple’s servers and managed by the system. Once you download, install, or use an asset, the system retains and updates it automatically, and shares it with other apps. The system makes a certain number of locale-specific asset reservations available to your app to limit storage space and network usage.
+
+Your app does not work with assets directly. Instead, your app configures module objects. The system uses the modules’ configuration to determine what assets are relevant.
+
+<a id="Install-assets"></a>
+
+### Install assets
+
+Installing an asset is a four-step process:
+
+1. Create analyzer modules in the configurations that you wish to use. These modules can be discarded when no longer needed; the system installs assets using the modules’ configuration, not their object identity.
+2. Assign your app’s asset reservations to those locales. The class does this automatically if needed, but you can also call [reserve(locale:)](assetinventory/reserve%28locale_%29.md) to do this manually. This step is only necessary for modules with locale-specific assets; that is, modules conforming to [LocaleDependentSpeechModule](localedependentspeechmodule.md). You can skip this step for other modules.
+3. Start downloading the required assets for the modules’ configuration. Call [assetInstallationRequest(supporting:)](assetinventory/assetinstallationrequest%28supporting_%29.md) to obtain an instance of [AssetInstallationRequest](assetinstallationrequest.md) and call its [downloadAndInstall()](assetinstallationrequest/downloadandinstall%28%29.md) method.
+4. Wait for the download to finish. Note that the download may finish immediately; the assets may have already been downloaded if the assets were preinstalled on the system, another app already downloaded them, or a previous module configuration used the same assets.
+
+Once assets are downloaded, they persist between app launches and are shared between apps. The system may unsubscribe your app from assets that haven’t been used in a while.
+
+<a id="Manage-assets"></a>
+
+### Manage assets
+
+When your app no longer needs assets for a particular locale, call [release(reservedLocale:)](assetinventory/release%28reservedlocale_%29.md) to free up that reservation. The system will remove the assets at a later time.
+
+## Topics
+
+### Downloading and installing assets
+
+- [assetInstallationRequest(supporting:)](assetinventory/assetinstallationrequest%28supporting_%29.md): Returns an installation request object, which is used to initiate the asset download and monitor its progress.
+
+### Managing allocations
+
+- [reserve(locale:)](assetinventory/reserve%28locale_%29.md): Add an asset locale to the app’s current reservations.
+- [release(reservedLocale:)](assetinventory/release%28reservedlocale_%29.md): Removes an asset locale reservation.
+- [reservedLocales](assetinventory/reservedlocales.md): The app’s current asset locale reservations.
+- [maximumReservedLocales](assetinventory/maximumreservedlocales.md): The number of locale reservations permitted to an app.
+
+### Checking asset status
+
+- [status(forModules:)](assetinventory/status%28formodules_%29.md): Returns the status for the list of modules.
+- [AssetInventory.Status](assetinventory/status.md)
+
+## See Also
+
+### Essentials
+
+- [Speech updates](https://developer.apple.com/documentation/updates/speech): Learn about important changes to Speech.
+- [Recognizing speech in live audio](recognizing-speech-in-live-audio.md): Perform speech recognition and transcription on audio captured from the microphone of an iOS device.
+- [Bringing advanced speech-to-text capabilities to your app](bringing-advanced-speech-to-text-capabilities-to-your-app.md): Learn how to incorporate live speech-to-text transcription into your app with SpeechAnalyzer.
+- [SpeechAnalyzer](speechanalyzer.md): Analyzes spoken audio content in various ways and manages the analysis session.

@@ -1,0 +1,43 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/networkvpnvpnplugindnsobject](https://developer.apple.com/documentation/devicemanagement/networkvpnvpnplugindnsobject)
+
+# NetworkVPNVPNPluginDNSObject
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Object  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+A dictionary to use for all VPN types.
+
+## Declaration
+
+```
+object NetworkVPNVPNPluginDNSObject
+```
+
+## Properties
+
+- `DomainName` — `string`: The primary domain of the tunnel.
+- `IdentityAssetReference` — `string`: The identifier of a credential asset declaration that contains the identity that the system uses to authenticate the user to the DNS resolver.
+- `SearchDomains` — `[string]`: The list of domain strings used to fully qualify single-label host names.
+- `ServerAddresses` — `[string]` (required): The array of DNS server IP address strings. These IP addresses can be a mixture of IPv4 and IPv6 addresses.
+- `SupplementalMatchDomains` — `[string]`: The list of domain strings used to determine which DNS queries use the DNS resolver settings in `ServerAddresses`. The system uses this key to create a split DNS configuration where it resolves only hosts in certain domains using the tunnel’s DNS resolver. The system uses the default resolver for hosts that aren’t in one of the domains in this list.
+
+  If `SupplementalMatchDomains` contains the empty string it becomes the default domain.
+
+  Split-tunnel configurations can direct all DNS queries to the VPN DNS servers before the primary DNS servers. If the VPN tunnel becomes the network’s default route, the servers listed in `ServerAddresses` become the default resolver and the system ignores the `SupplementalMatchDomains` list.
+- `SupplementalMatchDomainsNoSearch` — `boolean`: If `true`, don’t append the domains in the `SupplementalMatchDomains` list to the resolver’s list of search domains.
+  **Default:** `false`
+
+## See Also
+
+### Objects
+
+- [NetworkVPNVPNPluginAuthenticationObject](networkvpnvpnpluginauthenticationobject.md): Settings that control authentication.
+- [NetworkVPNVPNPluginIdleObject](networkvpnvpnpluginidleobject.md): Specifies details about how the system handles idle VPN connections.
+- [NetworkVPNVPNPluginNetworkRoutingObject](networkvpnvpnpluginnetworkroutingobject.md): Specifies details about how the VPN routes different types of network traffic.
+- [NetworkVPNVPNPluginOnDemandObject](networkvpnvpnpluginondemandobject.md): Specifies details about how the system controls on-demand VPN.
+- [NetworkVPNVPNPluginProviderObject](networkvpnvpnpluginproviderobject.md): Specifies details about the provider.
+- [NetworkVPNVPNPluginProxiesObject](networkvpnvpnpluginproxiesobject.md): The dictionary to use to configure `Proxies` for use with `VPN`.
+- [NetworkVPNVPNPluginVendorConfigObject](networkvpnvpnpluginvendorconfigobject.md): The vendor-specific configuration dictionary, which the system reads only when `SubType` has a value.

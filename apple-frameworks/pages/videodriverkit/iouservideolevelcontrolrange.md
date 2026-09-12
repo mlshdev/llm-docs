@@ -1,0 +1,40 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iouservideolevelcontrolrange](https://developer.apple.com/documentation/videodriverkit/iouservideolevelcontrolrange)
+
+# IOUserVideoLevelControlRange
+
+**Interface language:** Objective-C
+
+**Framework:** VideoDriverKit  
+**Kind:** Structure  
+**Availability:** DriverKit 27.0+
+
+A control that supports a range of floating-point values.
+
+## Declaration
+
+```objectivec
+struct IOUserVideoLevelControlRange;
+```
+
+<a id="overview"></a>
+
+## Overview
+
+`m_min` is the minimum float value for the level control range. `m_max` is the maximum float value for the level control range.
+
+## Topics
+
+### Acccessing range limits
+
+- [m_min](iouservideolevelcontrolrange/m_min.md)
+- [m_max](iouservideolevelcontrolrange/m_max.md)
+
+## See Also
+
+### Creating a level control
+
+- [Create](iouservideolevelcontrol/create.md): A static factory method that allocates and initializes a video level control.
+- [init](iouservideolevelcontrol/init.md): Initializes an video level control.
+- [IOUserVideoDriver](iouservideodriver.md): A video driver.
+- [IOUserVideoObjectPropertyElement](videodriverkit/iouservideoobjectpropertyelement.md): An integer that identifies, along with the property selector and scope, a specific piece of information about a video object.
+- [IOUserVideoObjectPropertyScope](videodriverkit/iouservideoobjectpropertyscope.md): A four character code which, along with the selector and element, identifies a specific piece of information about a video object.

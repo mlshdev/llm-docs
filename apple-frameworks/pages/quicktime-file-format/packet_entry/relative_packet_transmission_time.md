@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/packet_entry/relative_packet_transmission_time](https://developer.apple.com/documentation/quicktime-file-format/packet_entry/relative_packet_transmission_time)
+
+# Relative packet transmission time
+
+**Framework:** QuickTime File Format  
+**Kind:** Data field
+
+A 32-bit signed integer value, indicating the time, in the hint track’s time scale, to send this packet relative to the hint sample’s actual time.
+
+<a id="Overview"></a>
+
+## Overview
+
+Negative values mean that the packet will be sent earlier than real time, which is useful for smoothing the data rate. Positive values are useful for repeating packets at later times. Within each hint sample track, each packet time stamp must be non-decreasing.
+
+## See Also
+
+### Data fields
+
+- [RTP header info](rtp_header_info.md): A 16-bit integer specifying various values to be set in the RTP header.
+- [RTP sequence number](rtp_sequence_number.md): A 16-bit integer specifying the RTP sequence number for this packet.
+- [Flags](flags.md): A 16-bit field indicating certain attributes for this packet.
+- [Entry count](entry_count.md): A 16-bit unsigned integer specifying the number of entries in the data table.
+- [Extra information TLVs](extra_information_tlvs.md): A list of extra informtion that extends the hint track format without changing the version.
+- [Data table](data_table.md): A table that defines the data to be put in the payload portion of the RTP packet.

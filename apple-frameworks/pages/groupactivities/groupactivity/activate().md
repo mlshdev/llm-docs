@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/groupactivities/groupactivity/activate()](https://developer.apple.com/documentation/groupactivities/groupactivity/activate())
+
+# activate()
+
+**Framework:** Group Activities  
+**Kind:** Instance Method  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+
+
+Begins the activity immediately and creates a session for the app when a FaceTime call is active.
+
+## Declaration
+
+```swift
+func activate() async throws -> Bool
+```
+
+## Mentioned In
+
+- [Configure your visionOS app for sharing with people nearby](../configure-your-app-for-sharing-with-people-nearby.md)
+- [Presenting SharePlay activities from your app’s UI](../promoting-shareplay-activities-from-your-apps-ui.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+Typically, you call this method only when the [prepareForActivation()](prepareforactivation%28%29.md) method delivers the [GroupActivityActivationResult.activationPreferred](../groupactivityactivationresult/activationpreferred.md) result. However, you may call it directly if your activity only makes sense in a group setting. For example, call it if the activity applies only to groups and can’t be performed without other participants.
+
+If a FaceTime call is active, this method configures a session. The system also invites other participants to join the activity. If a session will be delivered to your app this function returns true, otherwise it returns false. A case where this function could return false is when a session is created and handed off to an Apple TV. If a call isn’t active or a session wasn’t created, this method throws an error
+
+## See Also
+
+### Starting an activity immediately
+
+- [prepareForActivation()](prepareforactivation%28%29.md): Returns the participant’s preferred option for how to start the activity.
+- [GroupActivityActivationResult](../groupactivityactivationresult.md): The result of preparing to start a custom activity.

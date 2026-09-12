@@ -1,0 +1,188 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/technotes/tn3192-migrating-your-app-from-the-deprecated-uirequiresfullscreen-key](https://developer.apple.com/documentation/technotes/tn3192-migrating-your-app-from-the-deprecated-uirequiresfullscreen-key)
+
+# TN3192: Migrating your iPad app from the deprecated UIRequiresFullScreen key
+
+**Kind:** Technote
+
+Support iPad multitasking and dynamic resizing while updating your app to remove the deprecated full-screen compatibility mode.
+
+<a id="Overview"></a>
+
+## Overview
+
+Prior to iPadOS 26, apps could request a compatibility mode that opted them out of multitasking and dynamic scene resizing through the [UIRequiresFullScreen](https://developer.apple.com/documentation/BundleResources/Information-Property-List/UIRequiresFullScreen) key. Prior to iOS 27, this key-value pair configures iPadOS apps only, and is ignored for iOS apps.
+
+Update apps that rely on `UIRequiresFullScreen`’s compatibility mode to handle resizing scenes so they can provide a better multitasking experience.
+
+> **Note**
+
+> Starting in iPadOS 26, `UIRequiresFullScreen` and its associated compatibility mode are deprecated and will be ignored in a future release. Apps that don’t update may experience broken layouts, UI elements positioned incorrectly, or content that doesn’t fit properly when the system resizes their scenes to accommodate multitasking scenarios they weren’t designed to handle.
+
+Starting in iOS 27 and iPadOS 27, `UIRequiresFullScreen` no longer opts your app out of resizing. Instead, the system resizes your app’s scene discretely. This behavior applies when you build your app with the iOS 27 SDK or later and set `UIRequiresFullScreen` to `YES`, unless [UIRequiresFullScreenIgnoredStartingWithVersion](https://developer.apple.com/documentation/bundleresources/information-property-list/uirequiresfullscreenignoredstartingwithversion) specifies version 27 or earlier.
+
+With a discrete resize, the scene doesn’t change size while people drag the window. When they finish, the `coordinateSpace.bounds` of the scene’s `effectiveGeometry` changes, and the scene moves to a `UIScreen` of exactly the same size. To learn more about discrete resizing, see WWDC26 session 278: [Modernize your UIKit app](https://developer.apple.com/videos/play/wwdc2026/278/).
+
+This guide will help you migrate away from `UIRequiresFullScreen` and handle dynamic resizing. For more information on the enhanced window resizing and improved multitasking, see WWDC25 session 282: [Make your UIKit app more flexible](https://developer.apple.com/videos/play/wwdc2025/282/).
+
+<a id="Determine-if-your-app-should-update"></a>
+
+## Determine if your app should update
+
+To support resizable scenes ensure that your app:
+
+- Provides a [launch screen](../xcode/specifying-your-apps-launch-screen.md). Starting in iOS 27 and iPadOS 27, a launch screen is required for App Store submission. See [TN3208: Preparing your app’s launch screen to meet App Store requirements](tn3208-preparing-your-apps-launch-screen-to-meet-app-store-requirements.md).
+- Supports all [interface orientations](https://developer.apple.com/design/human-interface-guidelines/layout#Adaptability).
+- Doesn’t include the `UIRequiresFullScreen` key in its [Info.plist](https://developer.apple.com/documentation/bundleresources/information-property-list) or [INFOPLIST_KEY_UIRequiresFullScreen](https://developer.apple.com/documentation/xcode/build-settings-reference#Requires-Full-Screen) or its build settings.
+
+If you need to keep `UIRequiresFullScreen` to support earlier versions of iOS after you’ve made these updates, 
+add [`UIRequiresFullScreenIgnoredStartingWithVersion`](https://developer.apple.com/documentation/bundleresources/information-property-list/uirequiresfullscreenignoredstartingwithversion) to your information property list to specify in which version of iOS you want the system to begin ignoring `UIRequiresFullScreen` in your app.
+
+For example, if your app is available on iOS 18 and relies on `UIRequiresFullScreen` to function correctly, add `UIRequiresFullScreenIgnoredStartingWithVersion` to your `Info.plist` with a value of `26`. Then the system will begin ignoring `UIRequiresFullScreen` on iOS 26, iPadOS 26 and later, while supporting the full screen behavior on iOS 18, iPadOS or earlier.
+
+With these updates, your app will support resizable scenes and multitasking. To learn more about adopting scene-based life cycle, see [TN3187: Migrating to the UIKit scene-based life cycle](tn3187-migrating-to-the-uikit-scene-based-life-cycle.md).
+
+<a id="Respond-to-scene-size-changes"></a>
+
+## Respond to scene size changes
+
+If your app layout relies on consistent scene size, or uses absolute values for its view geometry, consider using Auto Layout to calculate the size and position of its views through constraints placed on its views.
+
+By using Auto Layout, you’re able to replace static, frame-based layouts in your app with flexible constraint-based layouts that respond to size changes. For more information on Auto Layout, including layout constraints and attributes, see [Auto Layout Guide](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html).
+
+When transitioning away from the deprecated `UIRequiresFullScreen` key, ensure your app’s views adapt to dynamic size changes that occur when users resize windows or change device orientation. Each of these scenarios can cause your app’s scene bounds to change at runtime, potentially breaking layouts that assume fixed dimensions. To learn more about debugging Auto Layout issues, see [Unsatisfiable Layouts](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/ConflictingLayouts.html#//apple_ref/doc/uid/TP40010853-CH19-SW1).
+
+You can adjust your app’s layout when the environment changes, such as when size class, display scale, or layout direction changes occur. To detect these changes, use [registerForTraitChanges(\_:target:action:)](https://developer.apple.com/documentation/uikit/uitraitchangeobservable-67e94/registerfortraitchanges%28_:target:action:%29) or [registerForTraitChanges(\_:handler:)](https://developer.apple.com/documentation/uikit/uitraitchangeobservable-67e94/registerfortraitchanges%28_:handler:%29) to register a list of traits to observe.
+
+To observe a scene’s geometry changing, use [windowScene(\_:didUpdateEffectiveGeometry:)](https://developer.apple.com/documentation/uikit/uiwindowscenedelegate/windowscene%28_:didupdateeffectivegeometry:%29) and compare the `coordinateSpace.bounds` of both geometries.
+
+Additionally, use [`UIWindowSceneGeometry.isInteractivelyResizing`](https://developer.apple.com/documentation/uikit/uiwindowscene/geometry/isinteractivelyresizing) to handle interactive resizing of the scene specifically. For example:
+
+```swift
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    var gameAssetManager = MyGameAssetManager()
+    var previousSceneSize = CGSize.zero
+
+    func windowScene(
+        _ windowScene: UIWindowScene,
+        didUpdateEffectiveGeometry previousGeometry: UIWindowScene.Geometry) {
+
+        let geometry = windowScene.effectiveGeometry
+        let sceneSize = geometry.coordinateSpace.bounds.size
+
+        if !geometry.isInteractivelyResizing && sceneSize != previousSceneSize {
+            previousSceneSize = sceneSize
+            gameAssetManager.updateAssets(sceneSize: sceneSize)
+        }
+    }
+}
+```
+
+In this example, `isInteractivelyResizing` is queried to only update assets for a new scene size after the interaction finishes. This is helpful for games, where multiple assets may require resizing when the scene changes size or if there are elements of your app’s UI that are computationally expensive to draw.
+
+In SwiftUI, use [onInteractiveResizeChange(\_:)](https://developer.apple.com/documentation/swiftui/view/oninteractiveresizechange%28_:%29) to adjust how your view behaves when a window is in the process of being resized by the user.
+
+<a id="Specify-scene-sizing-preference"></a>
+
+## Specify scene sizing preference
+
+To express a preferred minimum size of your scene’s content, use [`UISceneSizeRestrictions`](https://developer.apple.com/documentation/uikit/uiscenesizerestrictions). For example:
+
+```swift
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+
+    func scene(_ scene: UIScene,
+               willConnectTo session: UISceneSession,
+               options connectionOptions: UIScene.ConnectionOptions) {
+
+        guard let windowScene = scene as? UIWindowScene else { return }
+        windowScene.sizeRestrictions?.minimumSize.width = 500.0
+    }
+}
+```
+
+The example above specifies a preferred minimum width of 500 points.
+
+> **Note**
+
+> The `UISceneSizeRestrictions` object does not prohibit other resizing behavior like rotation. When people rotate their device and the scene changes orientation, the scene’s bounds will change as well, regardless of the preferences expressed through the [sizeRestrictions](https://developer.apple.com/documentation/uikit/uiwindowscene/sizerestrictions) property of your app’s window scene. After the rotation has completed, the system will re-evaluate the size restrictions against the scene’s new bounds.
+
+In SwiftUI, use the [windowResizability(\_:)](https://developer.apple.com/documentation/swiftui/scene/windowresizability%28_:%29) modifier to allow your scene’s content provide sizing information. The value that you specify indicates the strategy the system uses to place minimum restriction on windows that it creates from that scene. For example:
+
+```swift
+@main
+struct MyApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+               .frame(minWidth: 100, maxWidth: 400, minHeight: 100, maxHeight: 400)
+        }
+        .windowResizability(.contentMinSize)
+    }
+}
+```
+
+<a id="Request-scene-orientation-lock"></a>
+
+## Request scene orientation lock
+
+Some apps may benefit from temporarily locking the orientation. For example, a driving game may want to lock the orientation when the device is expected to rotate for steering a vehicle or a camera apps may need to lock orientation during photo or video capture.
+
+To request orientation lock, override [prefersInterfaceOrientationLocked](https://developer.apple.com/documentation/uikit/uiviewcontroller/prefersinterfaceorientationlocked) in your view controller subclass. Whenever this preference changes, call [setNeedsUpdateOfSupportedInterfaceOrientations()](https://developer.apple.com/documentation/uikit/uiviewcontroller/setneedsupdateofsupportedinterfaceorientations%28%29). For example:
+
+```swift
+class MyRaceViewController: UIViewController {
+
+    override var prefersInterfaceOrientationLocked: Bool {
+        return isDriving
+    }
+
+    // ...
+
+    var isDriving: Bool = false {
+        didSet {
+            if isDriving != oldValue {
+                setNeedsUpdateOfPrefersInterfaceOrientationLocked()
+            }
+        }
+    }
+}
+```
+
+The value returned by `prefersInterfaceOrientationLocked` indicates to the system that the view controller prefers the scene’s interface orientation to be locked when shown.
+
+> **Note**
+
+> The system does not guarantee that `prefersInterfaceOrientationLocked` preference will be honored. If honored, the preference to lock the interface orientation lasts while the view controller is visible, or you call `setNeedsUpdateOfPrefersInterfaceOrientationLocked` again and return `false` as the value of `prefersInterfaceOrientationLocked`.
+
+If your app uses the camera, use [`AVCaptureDevice.RotationCoordinator`](https://developer.apple.com/documentation/avfoundation/avcapturedevice/rotationcoordinator) to ensure that captures and camera preview interfaces are correctly oriented regardless of interface orientation lock.
+
+To observe the interface orientation lock, use `windowScene(_:didUpdateEffectiveGeometry:)` and check if the value of [isInterfaceOrientationLocked](https://developer.apple.com/documentation/uikit/uiwindowscene/geometry/isinterfaceorientationlocked) has changed. For example:
+
+```swift
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    var game = MyGame()
+
+    func windowScene(
+        _ windowScene: UIWindowScene,
+        didUpdateEffectiveGeometry previousGeometry: UIWindowScene.Geometry) {
+
+        let wasLocked = previousGeometry.isInterfaceOrientationLocked
+        let isLocked = windowScene.effectiveGeometry.isInterfaceOrientationLocked
+
+        if wasLocked != isLocked {
+            game.pauseIfNeeded(isInterfaceOrientationLocked: isLocked)
+        }
+    }
+}
+```
+
+For more information about locking your scene to your preferred interface orientation and preventing rotation changes, see [prefersInterfaceOrientationLocked](https://developer.apple.com/documentation/uikit/uiviewcontroller/prefersinterfaceorientationlocked).
+
+<a id="Revision-History"></a>
+
+## Revision History
+
+- **2026-08-13** Added information about the updated behavior of UIRequiresFullScreen in iOS 27 and iPadOS 27.
+- **2026-06-08** Added launch screen requirement for iOS 27 and iPadOS 27.
+- **2026-02-06** Added information about back deployment support.
+- **2025-09-08** First published.

@@ -1,0 +1,13 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/objectivec/objcenumerationimage/machheader(_:)](https://developer.apple.com/documentation/objectivec/objcenumerationimage/machheader(_:))
+
+# ObjCEnumerationImage.machHeader(\_:)
+
+**Framework:** Objective-C Runtime  
+**Kind:** Case  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS · watchOS 9.0+
+
+## Declaration
+
+```swift
+case machHeader(UnsafeRawPointer)
+```

@@ -1,0 +1,22 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremedia/cmformatdescription/equalitymask/magiccookie](https://developer.apple.com/documentation/coremedia/cmformatdescription/equalitymask/magiccookie)
+
+# magicCookie
+
+**Framework:** Core Media  
+**Kind:** Type Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+## Declaration
+
+```swift
+static let magicCookie: CMFormatDescription.EqualityMask
+```
+
+## See Also
+
+### Equality Masks
+
+- [all](all.md)
+- [channelLayout](channellayout.md)
+- [extensions](extensions.md)
+- [streamBasicDescription](streambasicdescription.md)

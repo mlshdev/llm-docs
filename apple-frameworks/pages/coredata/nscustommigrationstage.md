@@ -1,0 +1,114 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coredata/nscustommigrationstage](https://developer.apple.com/documentation/coredata/nscustommigrationstage)
+
+# NSCustomMigrationStage (Swift)
+
+**Framework:** Core Data  
+**Kind:** Class  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+An object that enables you to participate in the migration between two versions of the same model.
+
+## Declaration
+
+```swift
+class NSCustomMigrationStage
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use [NSCustomMigrationStage](nscustommigrationstage.md) when you have two versions of a model that Core Data can’t automatically migrate. Custom migration stages enable you to participate in the migration process by assigning handlers that the stage invokes before and after it runs. The handlers provide an opportunity to prepare the persistent store’s data for the upcoming changes before the stage runs, and perform any cleanup tasks afterward.
+
+For example, to support a migration that changes an optional attribute to be nonoptional, you might assign a handler to the stage’s [willMigrateHandler](nscustommigrationstage/willmigratehandler-5wead.md) property that sets any `nil` instances of that attribute to a default value, thereby ensuring the migration succeeds. To access the store you’re migrating, use the [container](nsstagedmigrationmanager/container.md) property of the migration manager that Core Data provides to every handler.
+
+## Topics
+
+### Creating a custom migration stage
+
+- [init(migratingFrom:to:)](nscustommigrationstage/init%28migratingfrom_to_%29.md): Creates a custom migration stage with the specified source and destination model references.
+- [NSManagedObjectModelReference](nsmanagedobjectmodelreference.md): An object that describes a specific version of an object model.
+
+### Accessing model references
+
+- [currentModel](nscustommigrationstage/currentmodel.md): The reference that represents the migration’s source model.
+- [nextModel](nscustommigrationstage/nextmodel.md): The reference that represents the migration’s destination model.
+
+### Assigning event handlers
+
+- [willMigrateHandler](nscustommigrationstage/willmigratehandler-5wead.md): The handler to execute before the stage runs.
+- [didMigrateHandler](nscustommigrationstage/didmigratehandler-2zbss.md): The handler to execute after the stage runs.
+
+## Relationships
+
+### Inherits From
+
+- [NSMigrationStage](nsmigrationstage.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Migration stages
+
+- [NSLightweightMigrationStage](nslightweightmigrationstage.md): An object that describes a series of models suitable for lightweight migration.
+- [NSMigrationStage](nsmigrationstage.md): An abstract base class for describing an individual stage of a migration.
+
+# NSCustomMigrationStage (Objective-C)
+
+**Framework:** Core Data  
+**Kind:** Class  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+An object that enables you to participate in the migration between two versions of the same model.
+
+## Declaration
+
+```objectivec
+@interface NSCustomMigrationStage : NSMigrationStage
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use [NSCustomMigrationStage](nscustommigrationstage.md) when you have two versions of a model that Core Data can’t automatically migrate. Custom migration stages enable you to participate in the migration process by assigning handlers that the stage invokes before and after it runs. The handlers provide an opportunity to prepare the persistent store’s data for the upcoming changes before the stage runs, and perform any cleanup tasks afterward.
+
+For example, to support a migration that changes an optional attribute to be nonoptional, you might assign a handler to the stage’s [willMigrateHandler](nscustommigrationstage/willmigratehandler-5wead.md) property that sets any `nil` instances of that attribute to a default value, thereby ensuring the migration succeeds. To access the store you’re migrating, use the [container](nsstagedmigrationmanager/container.md) property of the migration manager that Core Data provides to every handler.
+
+## Topics
+
+### Creating a custom migration stage
+
+- [initWithCurrentModelReference:nextModelReference:](nscustommigrationstage/initwithcurrentmodelreference_nextmodelreference_.md): Creates a custom migration stage with the specified source and destination model references.
+- [NSManagedObjectModelReference](nsmanagedobjectmodelreference.md): An object that describes a specific version of an object model.
+
+### Accessing model references
+
+- [currentModel](nscustommigrationstage/currentmodel.md): The reference that represents the migration’s source model.
+- [nextModel](nscustommigrationstage/nextmodel.md): The reference that represents the migration’s destination model.
+
+### Assigning event handlers
+
+- [willMigrateHandler](nscustommigrationstage/willmigratehandler-72p73.md): The handler to execute before the stage runs.
+- [didMigrateHandler](nscustommigrationstage/didmigratehandler-36uhx.md): The handler to execute after the stage runs.
+
+## Relationships
+
+### Inherits From
+
+- [NSMigrationStage](nsmigrationstage.md)
+
+## See Also
+
+### Migration stages
+
+- [NSLightweightMigrationStage](nslightweightmigrationstage.md): An object that describes a series of models suitable for lightweight migration.
+- [NSMigrationStage](nsmigrationstage.md): An abstract base class for describing an individual stage of a migration.

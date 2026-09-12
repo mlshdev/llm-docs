@@ -1,0 +1,47 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/rangereplaceablecollection/insert(contentsof:at:)](https://developer.apple.com/documentation/swift/rangereplaceablecollection/insert(contentsof:at:))
+
+# insert(contentsOf:at:)
+
+**Framework:** Swift  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Inserts the elements of a sequence into the collection at the specified position.
+
+## Declaration
+
+```swift
+mutating func insert<S>(contentsOf newElements: S, at i: Self.Index) where S : Collection, Self.Element == S.Element
+```
+
+## Parameters
+
+- `newElements`: The new elements to insert into the collection.
+- `i`: The position at which to insert the new elements. `index` must be a valid index of the collection.
+
+<a id="discussion"></a>
+
+## Discussion
+
+The new elements are inserted before the element currently at the specified index. If you pass the collection’s `endIndex` property as the `index` parameter, the new elements are appended to the collection.
+
+Here’s an example of inserting a range of integers into an array of the same type:
+
+```swift
+var numbers = [1, 2, 3, 4, 5]
+numbers.insert(contentsOf: 100...103, at: 3)
+print(numbers)
+// Prints "[1, 2, 3, 100, 101, 102, 103, 4, 5]"
+```
+
+Calling this method may invalidate any existing indices for use with this collection.
+
+> **Complexity**
+
+> O(*n* \+ *m*), where *n* is length of this collection and *m* is the length of `newElements`. If `i == endIndex`, this method is equivalent to `append(contentsOf:)`.
+
+## Default Implementations
+
+### RangeReplaceableCollection Implementations
+
+- [insert(contentsOf:at:)](insert%28contentsof_at_%29-3h5sa.md): Inserts the elements of a sequence into the collection at the specified position.

@@ -1,0 +1,63 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcodekit/xcsourcetextbuffer/usestabsforindentation](https://developer.apple.com/documentation/xcodekit/xcsourcetextbuffer/usestabsforindentation)
+
+# usesTabsForIndentation (Swift)
+
+**Framework:** XcodeKit  
+**Kind:** Instance Property  
+**Availability:** macOS 10.12+
+
+A Boolean value that indicates whether tabs are used for indentation.
+
+## Declaration
+
+```swift
+var usesTabsForIndentation: Bool { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The `usesTabsForIndentation` property determines whether tab characters are used to indent text instead of space characters when possible. When the indentation width isn’t a multiple of the tab width, space characters are used to pad the indentation to the appropriate width.
+
+For example, consider an `XCSourceTextBuffer` instance that has a tab width of eight, an indentation width of four, and the `usesTabsForIndentation` property set to `true`. The first indentation level is represented by four space characters, the second by a tab character, the third by a tab followed by four space characters, the fourth by two tab characters, and so on.
+
+![A diagram showing four lines of source code, with each line indented once more than the last.](https://developer.apple.com/images/com.apple.xcodekit/media-2902679@2x.png)
+
+## See Also
+
+### Configuring Source Editor Indentation
+
+- [indentationWidth](indentationwidth.md): The number of space characters used for indentation of the text in the buffer.
+- [tabWidth](tabwidth.md): The number of space characters represented by a tab character in the buffer.
+
+# usesTabsForIndentation (Objective-C)
+
+**Framework:** XcodeKit  
+**Kind:** Instance Property  
+**Availability:** macOS 10.12+
+
+A Boolean value that indicates whether tabs are used for indentation.
+
+## Declaration
+
+```objectivec
+@property (readonly) BOOL usesTabsForIndentation;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The `usesTabsForIndentation` property determines whether tab characters are used to indent text instead of space characters when possible. When the indentation width isn’t a multiple of the tab width, space characters are used to pad the indentation to the appropriate width.
+
+For example, consider an `XCSourceTextBuffer` instance that has a tab width of eight, an indentation width of four, and the `usesTabsForIndentation` property set to `true`. The first indentation level is represented by four space characters, the second by a tab character, the third by a tab followed by four space characters, the fourth by two tab characters, and so on.
+
+![A diagram showing four lines of source code, with each line indented once more than the last.](https://developer.apple.com/images/com.apple.xcodekit/media-2902679@2x.png)
+
+## See Also
+
+### Configuring Source Editor Indentation
+
+- [indentationWidth](indentationwidth.md): The number of space characters used for indentation of the text in the buffer.
+- [tabWidth](tabwidth.md): The number of space characters represented by a tab character in the buffer.

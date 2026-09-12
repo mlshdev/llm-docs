@@ -1,0 +1,22 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/extsrgb/1631919-srgb_alpha_ext](https://developer.apple.com/documentation/webkitjs/extsrgb/1631919-srgb_alpha_ext)
+
+# SRGB_ALPHA_EXT
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Availability:** Safari Desktop 9.0+ · Safari Mobile 9.0+
+
+## Declaration
+
+```
+const unsigned long SRGB_ALPHA_EXT;
+```
+
+## See Also
+
+### Miscellaneous
+
+- [FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT](1633296-framebuffer_attachment_color_enc.md)
+- [SRGB8_ALPHA8_EXT](1632244-srgb8_alpha8_ext.md)
+- [SRGB_EXT](1630285-srgb_ext.md)

@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatial/spsize3dunapplyscaledpose](https://developer.apple.com/documentation/spatial/spsize3dunapplyscaledpose)
+
+# SPSize3DUnapplyScaledPose
+
+**Interface language:** Objective-C
+
+**Framework:** Spatial  
+**Kind:** Function  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
+
+Returns a size that’s transformed by the inverse of the specified scaled pose.
+
+## Declaration
+
+```objectivec
+static SPSize3D SPSize3DUnapplyScaledPose(SPSize3D size, SPScaledPose3D pose);
+```
+
+## See Also
+
+### Transforming a 3D size structure
+
+- [SPSize3DScaleBySize](spsize3dscalebysize.md): Returns a size that results from scaling with the specified size structure.
+- [SPSize3DScaleUniform](spsize3dscaleuniform.md): Returns a size that results from uniformly scaling with the specified double-precision value.
+- [SPSize3DRotate](spsize3drotate.md): Returns a size that results from applying the specified rotation.
+- [SPSize3DRotateByQuaternion](spsize3drotatebyquaternion.md): Returns a size that results from rotating with the specified quaternion.
+- [SPSize3DApplyPose](spsize3dapplypose.md): Returns a size that results from applying the specified pose.
+- [SPSize3DUnapplyPose](spsize3dunapplypose.md): Returns a size that results from unapplying the specified pose.
+- [SPSize3DApplyAffineTransform](spsize3dapplyaffinetransform.md): Returns a size that results from applying the specified affine transform.
+- [SPSize3DApplyProjectiveTransform](spsize3dapplyprojectivetransform.md): Returns a size that results from applying the specified projective transform.
+- [SPSize3DUnapplyAffineTransform](spsize3dunapplyaffinetransform.md): Returns a size that results from unapplying the specified affine transform.
+- [SPSize3DUnapplyProjectiveTransform](spsize3dunapplyprojectivetransform.md): Returns a size that results from unapplying the specified projective transform.
+- [SPSize3DScaleBy](spsize3dscaleby.md): Returns a size that results from scaling with the specified double-precision values.
+- [SPSize3DShear](spsize3dshear.md): Returns a size that results from shearing over an axis by shear factors for the other two axes.
+- [SPSize3DApplyScaledPose](spsize3dapplyscaledpose.md): Returns a size that’s transformed by the specified scaled pose.

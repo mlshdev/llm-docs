@@ -1,0 +1,848 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclusterdoorlock](https://developer.apple.com/documentation/matter/mtrbaseclusterdoorlock)
+
+# MTRBaseClusterDoorLock (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```swift
+class MTRBaseClusterDoorLock
+```
+
+## Topics
+
+### Initializers
+
+- [init(device:endpoint:queue:)](mtrbaseclusterdoorlock/init%28device_endpoint_queue_%29.md): Deprecated.
+- [init(device:endpointID:queue:)](mtrbaseclusterdoorlock/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [clearCredential(with:completion:)](mtrbaseclusterdoorlock/clearcredential%28with_completion_%29.md)
+- [clearCredential(with:completionHandler:)](mtrbaseclusterdoorlock/clearcredential%28with_completionhandler_%29.md): Deprecated.
+- [clearHolidaySchedule(with:completion:)](mtrbaseclusterdoorlock/clearholidayschedule%28with_completion_%29.md)
+- [clearHolidaySchedule(with:completionHandler:)](mtrbaseclusterdoorlock/clearholidayschedule%28with_completionhandler_%29.md): Deprecated.
+- [clearUser(with:completion:)](mtrbaseclusterdoorlock/clearuser%28with_completion_%29.md)
+- [clearUser(with:completionHandler:)](mtrbaseclusterdoorlock/clearuser%28with_completionhandler_%29.md): Deprecated.
+- [clearWeekDaySchedule(with:completion:)](mtrbaseclusterdoorlock/clearweekdayschedule%28with_completion_%29.md)
+- [clearWeekDaySchedule(with:completionHandler:)](mtrbaseclusterdoorlock/clearweekdayschedule%28with_completionhandler_%29.md): Deprecated.
+- [clearYearDaySchedule(with:completion:)](mtrbaseclusterdoorlock/clearyeardayschedule%28with_completion_%29.md)
+- [clearYearDaySchedule(with:completionHandler:)](mtrbaseclusterdoorlock/clearyeardayschedule%28with_completionhandler_%29.md): Deprecated.
+- [getCredentialStatus(with:completion:)](mtrbaseclusterdoorlock/getcredentialstatus%28with_completion_%29.md)
+- [getCredentialStatus(with:completionHandler:)](mtrbaseclusterdoorlock/getcredentialstatus%28with_completionhandler_%29.md): Deprecated.
+- [getHolidaySchedule(with:completion:)](mtrbaseclusterdoorlock/getholidayschedule%28with_completion_%29.md)
+- [getHolidaySchedule(with:completionHandler:)](mtrbaseclusterdoorlock/getholidayschedule%28with_completionhandler_%29.md): Deprecated.
+- [getUserWith(\_:completion:)](mtrbaseclusterdoorlock/getuserwith%28__completion_%29.md)
+- [getUserWith(\_:completionHandler:)](mtrbaseclusterdoorlock/getuserwith%28__completionhandler_%29.md): Deprecated.
+- [getWeekDaySchedule(with:completion:)](mtrbaseclusterdoorlock/getweekdayschedule%28with_completion_%29.md)
+- [getWeekDaySchedule(with:completionHandler:)](mtrbaseclusterdoorlock/getweekdayschedule%28with_completionhandler_%29.md): Deprecated.
+- [getYearDaySchedule(with:completion:)](mtrbaseclusterdoorlock/getyeardayschedule%28with_completion_%29.md)
+- [getYearDaySchedule(with:completionHandler:)](mtrbaseclusterdoorlock/getyeardayschedule%28with_completionhandler_%29.md): Deprecated.
+- [lockDoor(completion:)](mtrbaseclusterdoorlock/lockdoor%28completion_%29.md)
+- [lockDoor(with:completion:)](mtrbaseclusterdoorlock/lockdoor%28with_completion_%29.md)
+- [lockDoor(with:completionHandler:)](mtrbaseclusterdoorlock/lockdoor%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandList(completion:)](mtrbaseclusterdoorlock/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandList(completionHandler:)](mtrbaseclusterdoorlock/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeActuatorEnabled(completion:)](mtrbaseclusterdoorlock/readattributeactuatorenabled%28completion_%29.md)
+- [readAttributeActuatorEnabled(completionHandler:)](mtrbaseclusterdoorlock/readattributeactuatorenabled%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(completion:)](mtrbaseclusterdoorlock/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeList(completionHandler:)](mtrbaseclusterdoorlock/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAutoRelockTime(completion:)](mtrbaseclusterdoorlock/readattributeautorelocktime%28completion_%29.md)
+- [readAttributeAutoRelockTime(completionHandler:)](mtrbaseclusterdoorlock/readattributeautorelocktime%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(completion:)](mtrbaseclusterdoorlock/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevision(completionHandler:)](mtrbaseclusterdoorlock/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeCredentialRulesSupport(completion:)](mtrbaseclusterdoorlock/readattributecredentialrulessupport%28completion_%29.md)
+- [readAttributeCredentialRulesSupport(completionHandler:)](mtrbaseclusterdoorlock/readattributecredentialrulessupport%28completionhandler_%29.md): Deprecated.
+- [readAttributeDefaultConfigurationRegister(completion:)](mtrbaseclusterdoorlock/readattributedefaultconfigurationregister%28completion_%29.md)
+- [readAttributeDefaultConfigurationRegister(completionHandler:)](mtrbaseclusterdoorlock/readattributedefaultconfigurationregister%28completionhandler_%29.md): Deprecated.
+- [readAttributeDoorClosedEvents(completion:)](mtrbaseclusterdoorlock/readattributedoorclosedevents%28completion_%29.md)
+- [readAttributeDoorClosedEvents(completionHandler:)](mtrbaseclusterdoorlock/readattributedoorclosedevents%28completionhandler_%29.md): Deprecated.
+- [readAttributeDoorOpenEvents(completion:)](mtrbaseclusterdoorlock/readattributedooropenevents%28completion_%29.md)
+- [readAttributeDoorOpenEvents(completionHandler:)](mtrbaseclusterdoorlock/readattributedooropenevents%28completionhandler_%29.md): Deprecated.
+- [readAttributeDoorState(completion:)](mtrbaseclusterdoorlock/readattributedoorstate%28completion_%29.md)
+- [readAttributeDoorState(completionHandler:)](mtrbaseclusterdoorlock/readattributedoorstate%28completionhandler_%29.md): Deprecated.
+- [readAttributeEnableInsideStatusLED(completion:)](mtrbaseclusterdoorlock/readattributeenableinsidestatusled%28completion_%29.md)
+- [readAttributeEnableInsideStatusLED(completionHandler:)](mtrbaseclusterdoorlock/readattributeenableinsidestatusled%28completionhandler_%29.md): Deprecated.
+- [readAttributeEnableLocalProgramming(completion:)](mtrbaseclusterdoorlock/readattributeenablelocalprogramming%28completion_%29.md)
+- [readAttributeEnableLocalProgramming(completionHandler:)](mtrbaseclusterdoorlock/readattributeenablelocalprogramming%28completionhandler_%29.md): Deprecated.
+- [readAttributeEnableOneTouchLocking(completion:)](mtrbaseclusterdoorlock/readattributeenableonetouchlocking%28completion_%29.md)
+- [readAttributeEnableOneTouchLocking(completionHandler:)](mtrbaseclusterdoorlock/readattributeenableonetouchlocking%28completionhandler_%29.md): Deprecated.
+- [readAttributeEnablePrivacyModeButton(completion:)](mtrbaseclusterdoorlock/readattributeenableprivacymodebutton%28completion_%29.md)
+- [readAttributeEnablePrivacyModeButton(completionHandler:)](mtrbaseclusterdoorlock/readattributeenableprivacymodebutton%28completionhandler_%29.md): Deprecated.
+- [readAttributeExpiringUserTimeout(completion:)](mtrbaseclusterdoorlock/readattributeexpiringusertimeout%28completion_%29.md)
+- [readAttributeExpiringUserTimeout(completionHandler:)](mtrbaseclusterdoorlock/readattributeexpiringusertimeout%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(completion:)](mtrbaseclusterdoorlock/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMap(completionHandler:)](mtrbaseclusterdoorlock/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(completion:)](mtrbaseclusterdoorlock/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandList(completionHandler:)](mtrbaseclusterdoorlock/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeLEDSettings(completion:)](mtrbaseclusterdoorlock/readattributeledsettings%28completion_%29.md)
+- [readAttributeLEDSettings(completionHandler:)](mtrbaseclusterdoorlock/readattributeledsettings%28completionhandler_%29.md): Deprecated.
+- [readAttributeLanguage(completion:)](mtrbaseclusterdoorlock/readattributelanguage%28completion_%29.md)
+- [readAttributeLanguage(completionHandler:)](mtrbaseclusterdoorlock/readattributelanguage%28completionhandler_%29.md): Deprecated.
+- [readAttributeLocalProgrammingFeatures(completion:)](mtrbaseclusterdoorlock/readattributelocalprogrammingfeatures%28completion_%29.md)
+- [readAttributeLocalProgrammingFeatures(completionHandler:)](mtrbaseclusterdoorlock/readattributelocalprogrammingfeatures%28completionhandler_%29.md): Deprecated.
+- [readAttributeLockState(completion:)](mtrbaseclusterdoorlock/readattributelockstate%28completion_%29.md)
+- [readAttributeLockState(completionHandler:)](mtrbaseclusterdoorlock/readattributelockstate%28completionhandler_%29.md): Deprecated.
+- [readAttributeLockType(completion:)](mtrbaseclusterdoorlock/readattributelocktype%28completion_%29.md)
+- [readAttributeLockType(completionHandler:)](mtrbaseclusterdoorlock/readattributelocktype%28completionhandler_%29.md): Deprecated.
+- [readAttributeMaxPINCodeLength(completion:)](mtrbaseclusterdoorlock/readattributemaxpincodelength%28completion_%29.md)
+- [readAttributeMaxPINCodeLength(completionHandler:)](mtrbaseclusterdoorlock/readattributemaxpincodelength%28completionhandler_%29.md): Deprecated.
+- [readAttributeMaxRFIDCodeLength(completion:)](mtrbaseclusterdoorlock/readattributemaxrfidcodelength%28completion_%29.md)
+- [readAttributeMaxRFIDCodeLength(completionHandler:)](mtrbaseclusterdoorlock/readattributemaxrfidcodelength%28completionhandler_%29.md): Deprecated.
+- [readAttributeMinPINCodeLength(completion:)](mtrbaseclusterdoorlock/readattributeminpincodelength%28completion_%29.md)
+- [readAttributeMinPINCodeLength(completionHandler:)](mtrbaseclusterdoorlock/readattributeminpincodelength%28completionhandler_%29.md): Deprecated.
+- [readAttributeMinRFIDCodeLength(completion:)](mtrbaseclusterdoorlock/readattributeminrfidcodelength%28completion_%29.md)
+- [readAttributeMinRFIDCodeLength(completionHandler:)](mtrbaseclusterdoorlock/readattributeminrfidcodelength%28completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfCredentialsSupportedPerUser(completion:)](mtrbaseclusterdoorlock/readattributenumberofcredentialssupportedperuser%28completion_%29.md)
+- [readAttributeNumberOfCredentialsSupportedPerUser(completionHandler:)](mtrbaseclusterdoorlock/readattributenumberofcredentialssupportedperuser%28completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfHolidaySchedulesSupported(completion:)](mtrbaseclusterdoorlock/readattributenumberofholidayschedulessupported%28completion_%29.md)
+- [readAttributeNumberOfHolidaySchedulesSupported(completionHandler:)](mtrbaseclusterdoorlock/readattributenumberofholidayschedulessupported%28completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfPINUsersSupported(completion:)](mtrbaseclusterdoorlock/readattributenumberofpinuserssupported%28completion_%29.md)
+- [readAttributeNumberOfPINUsersSupported(completionHandler:)](mtrbaseclusterdoorlock/readattributenumberofpinuserssupported%28completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfRFIDUsersSupported(completion:)](mtrbaseclusterdoorlock/readattributenumberofrfiduserssupported%28completion_%29.md)
+- [readAttributeNumberOfRFIDUsersSupported(completionHandler:)](mtrbaseclusterdoorlock/readattributenumberofrfiduserssupported%28completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfTotalUsersSupported(completion:)](mtrbaseclusterdoorlock/readattributenumberoftotaluserssupported%28completion_%29.md)
+- [readAttributeNumberOfTotalUsersSupported(completionHandler:)](mtrbaseclusterdoorlock/readattributenumberoftotaluserssupported%28completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfWeekDaySchedulesSupportedPerUser(completion:)](mtrbaseclusterdoorlock/readattributenumberofweekdayschedulessupportedperuser%28completion_%29.md)
+- [readAttributeNumberOfWeekDaySchedulesSupportedPerUser(completionHandler:)](mtrbaseclusterdoorlock/readattributenumberofweekdayschedulessupportedperuser%28completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfYearDaySchedulesSupportedPerUser(completion:)](mtrbaseclusterdoorlock/readattributenumberofyeardayschedulessupportedperuser%28completion_%29.md)
+- [readAttributeNumberOfYearDaySchedulesSupportedPerUser(completionHandler:)](mtrbaseclusterdoorlock/readattributenumberofyeardayschedulessupportedperuser%28completionhandler_%29.md): Deprecated.
+- [readAttributeOpenPeriod(completion:)](mtrbaseclusterdoorlock/readattributeopenperiod%28completion_%29.md)
+- [readAttributeOpenPeriod(completionHandler:)](mtrbaseclusterdoorlock/readattributeopenperiod%28completionhandler_%29.md): Deprecated.
+- [readAttributeOperatingMode(completion:)](mtrbaseclusterdoorlock/readattributeoperatingmode%28completion_%29.md)
+- [readAttributeOperatingMode(completionHandler:)](mtrbaseclusterdoorlock/readattributeoperatingmode%28completionhandler_%29.md): Deprecated.
+- [readAttributeRequirePINforRemoteOperation(completion:)](mtrbaseclusterdoorlock/readattributerequirepinforremoteoperation%28completion_%29.md)
+- [readAttributeRequirePINforRemoteOperation(completionHandler:)](mtrbaseclusterdoorlock/readattributerequirepinforremoteoperation%28completionhandler_%29.md): Deprecated.
+- [readAttributeSendPINOverTheAir(completion:)](mtrbaseclusterdoorlock/readattributesendpinovertheair%28completion_%29.md)
+- [readAttributeSendPINOverTheAir(completionHandler:)](mtrbaseclusterdoorlock/readattributesendpinovertheair%28completionhandler_%29.md): Deprecated.
+- [readAttributeSoundVolume(completion:)](mtrbaseclusterdoorlock/readattributesoundvolume%28completion_%29.md)
+- [readAttributeSoundVolume(completionHandler:)](mtrbaseclusterdoorlock/readattributesoundvolume%28completionhandler_%29.md): Deprecated.
+- [readAttributeSupportedOperatingModes(completion:)](mtrbaseclusterdoorlock/readattributesupportedoperatingmodes%28completion_%29.md)
+- [readAttributeSupportedOperatingModes(completionHandler:)](mtrbaseclusterdoorlock/readattributesupportedoperatingmodes%28completionhandler_%29.md): Deprecated.
+- [readAttributeUserCodeTemporaryDisableTime(completion:)](mtrbaseclusterdoorlock/readattributeusercodetemporarydisabletime%28completion_%29.md)
+- [readAttributeUserCodeTemporaryDisableTime(completionHandler:)](mtrbaseclusterdoorlock/readattributeusercodetemporarydisabletime%28completionhandler_%29.md): Deprecated.
+- [readAttributeWrongCodeEntryLimit(completion:)](mtrbaseclusterdoorlock/readattributewrongcodeentrylimit%28completion_%29.md)
+- [readAttributeWrongCodeEntryLimit(completionHandler:)](mtrbaseclusterdoorlock/readattributewrongcodeentrylimit%28completionhandler_%29.md): Deprecated.
+- [setCredentialWith(\_:completion:)](mtrbaseclusterdoorlock/setcredentialwith%28__completion_%29.md)
+- [setCredentialWith(\_:completionHandler:)](mtrbaseclusterdoorlock/setcredentialwith%28__completionhandler_%29.md): Deprecated.
+- [setHolidayScheduleWith(\_:completion:)](mtrbaseclusterdoorlock/setholidayschedulewith%28__completion_%29.md)
+- [setHolidayScheduleWith(\_:completionHandler:)](mtrbaseclusterdoorlock/setholidayschedulewith%28__completionhandler_%29.md): Deprecated.
+- [setUserWith(\_:completion:)](mtrbaseclusterdoorlock/setuserwith%28__completion_%29.md)
+- [setUserWith(\_:completionHandler:)](mtrbaseclusterdoorlock/setuserwith%28__completionhandler_%29.md): Deprecated.
+- [setWeekDayScheduleWith(\_:completion:)](mtrbaseclusterdoorlock/setweekdayschedulewith%28__completion_%29.md)
+- [setWeekDayScheduleWith(\_:completionHandler:)](mtrbaseclusterdoorlock/setweekdayschedulewith%28__completionhandler_%29.md): Deprecated.
+- [setYearDayScheduleWith(\_:completion:)](mtrbaseclusterdoorlock/setyeardayschedulewith%28__completion_%29.md)
+- [setYearDayScheduleWith(\_:completionHandler:)](mtrbaseclusterdoorlock/setyeardayschedulewith%28__completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeActuatorEnabled(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeactuatorenabled%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeActuatorEnabled(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeactuatorenabled%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAutoRelockTime(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeautorelocktime%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAutoRelockTime(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeautorelocktime%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevision(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevision(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCredentialRulesSupport(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributecredentialrulessupport%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCredentialRulesSupport(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributecredentialrulessupport%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeDefaultConfigurationRegister(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributedefaultconfigurationregister%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeDefaultConfigurationRegister(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributedefaultconfigurationregister%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeDoorClosedEvents(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributedoorclosedevents%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeDoorClosedEvents(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributedoorclosedevents%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeDoorOpenEvents(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributedooropenevents%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeDoorOpenEvents(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributedooropenevents%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeDoorState(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributedoorstate%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeDoorState(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributedoorstate%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeEnableInsideStatusLED(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeenableinsidestatusled%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeEnableInsideStatusLED(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeenableinsidestatusled%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeEnableLocalProgramming(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeenablelocalprogramming%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeEnableLocalProgramming(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeenablelocalprogramming%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeEnableOneTouchLocking(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeenableonetouchlocking%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeEnableOneTouchLocking(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeenableonetouchlocking%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeEnablePrivacyModeButton(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeenableprivacymodebutton%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeEnablePrivacyModeButton(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeenableprivacymodebutton%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeExpiringUserTimeout(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeexpiringusertimeout%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeExpiringUserTimeout(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeexpiringusertimeout%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMap(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMap(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLEDSettings(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeledsettings%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLEDSettings(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeledsettings%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLanguage(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributelanguage%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLanguage(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributelanguage%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLocalProgrammingFeatures(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributelocalprogrammingfeatures%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLocalProgrammingFeatures(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributelocalprogrammingfeatures%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLockState(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributelockstate%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLockState(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributelockstate%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLockType(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributelocktype%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLockType(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributelocktype%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMaxPINCodeLength(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributemaxpincodelength%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMaxPINCodeLength(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributemaxpincodelength%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMaxRFIDCodeLength(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributemaxrfidcodelength%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMaxRFIDCodeLength(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributemaxrfidcodelength%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMinPINCodeLength(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeminpincodelength%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMinPINCodeLength(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeminpincodelength%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMinRFIDCodeLength(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeminrfidcodelength%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMinRFIDCodeLength(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeminrfidcodelength%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNumberOfCredentialsSupportedPerUser(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributenumberofcredentialssupportedperuser%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfCredentialsSupportedPerUser(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributenumberofcredentialssupportedperuser%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNumberOfHolidaySchedulesSupported(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributenumberofholidayschedulessupported%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfHolidaySchedulesSupported(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributenumberofholidayschedulessupported%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNumberOfPINUsersSupported(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributenumberofpinuserssupported%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfPINUsersSupported(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributenumberofpinuserssupported%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNumberOfRFIDUsersSupported(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributenumberofrfiduserssupported%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfRFIDUsersSupported(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributenumberofrfiduserssupported%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNumberOfTotalUsersSupported(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributenumberoftotaluserssupported%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfTotalUsersSupported(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributenumberoftotaluserssupported%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNumberOfWeekDaySchedulesSupportedPerUser(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributenumberofweekdayschedulessupportedperuser%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfWeekDaySchedulesSupportedPerUser(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributenumberofweekdayschedulessupportedperuser%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNumberOfYearDaySchedulesSupportedPerUser(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributenumberofyeardayschedulessupportedperuser%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfYearDaySchedulesSupportedPerUser(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributenumberofyeardayschedulessupportedperuser%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeOpenPeriod(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeopenperiod%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeOpenPeriod(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeopenperiod%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeOperatingMode(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeoperatingmode%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeOperatingMode(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeoperatingmode%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeRequirePINforRemoteOperation(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributerequirepinforremoteoperation%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeRequirePINforRemoteOperation(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributerequirepinforremoteoperation%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSendPINOverTheAir(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributesendpinovertheair%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSendPINOverTheAir(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributesendpinovertheair%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSoundVolume(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributesoundvolume%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSoundVolume(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributesoundvolume%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSupportedOperatingModes(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributesupportedoperatingmodes%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSupportedOperatingModes(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributesupportedoperatingmodes%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeUserCodeTemporaryDisableTime(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeusercodetemporarydisabletime%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeUserCodeTemporaryDisableTime(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributeusercodetemporarydisabletime%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeWrongCodeEntryLimit(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributewrongcodeentrylimit%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeWrongCodeEntryLimit(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributewrongcodeentrylimit%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [unlockDoor(completion:)](mtrbaseclusterdoorlock/unlockdoor%28completion_%29.md)
+- [unlockDoor(with:completion:)](mtrbaseclusterdoorlock/unlockdoor%28with_completion_%29.md)
+- [unlockDoor(with:completionHandler:)](mtrbaseclusterdoorlock/unlockdoor%28with_completionhandler_%29.md): Deprecated.
+- [unlockWithTimeout(with:completion:)](mtrbaseclusterdoorlock/unlockwithtimeout%28with_completion_%29.md)
+- [unlockWithTimeout(with:completionHandler:)](mtrbaseclusterdoorlock/unlockwithtimeout%28with_completionhandler_%29.md): Deprecated.
+- [writeAttributeAutoRelockTime(withValue:completion:)](mtrbaseclusterdoorlock/writeattributeautorelocktime%28withvalue_completion_%29.md)
+- [writeAttributeAutoRelockTime(withValue:completionHandler:)](mtrbaseclusterdoorlock/writeattributeautorelocktime%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeAutoRelockTime(withValue:params:completion:)](mtrbaseclusterdoorlock/writeattributeautorelocktime%28withvalue_params_completion_%29.md)
+- [writeAttributeAutoRelockTime(withValue:params:completionHandler:)](mtrbaseclusterdoorlock/writeattributeautorelocktime%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeDoorClosedEvents(withValue:completion:)](mtrbaseclusterdoorlock/writeattributedoorclosedevents%28withvalue_completion_%29.md)
+- [writeAttributeDoorClosedEvents(withValue:completionHandler:)](mtrbaseclusterdoorlock/writeattributedoorclosedevents%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeDoorClosedEvents(withValue:params:completion:)](mtrbaseclusterdoorlock/writeattributedoorclosedevents%28withvalue_params_completion_%29.md)
+- [writeAttributeDoorClosedEvents(withValue:params:completionHandler:)](mtrbaseclusterdoorlock/writeattributedoorclosedevents%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeDoorOpenEvents(withValue:completion:)](mtrbaseclusterdoorlock/writeattributedooropenevents%28withvalue_completion_%29.md)
+- [writeAttributeDoorOpenEvents(withValue:completionHandler:)](mtrbaseclusterdoorlock/writeattributedooropenevents%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeDoorOpenEvents(withValue:params:completion:)](mtrbaseclusterdoorlock/writeattributedooropenevents%28withvalue_params_completion_%29.md)
+- [writeAttributeDoorOpenEvents(withValue:params:completionHandler:)](mtrbaseclusterdoorlock/writeattributedooropenevents%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeEnableInsideStatusLED(withValue:completion:)](mtrbaseclusterdoorlock/writeattributeenableinsidestatusled%28withvalue_completion_%29.md)
+- [writeAttributeEnableInsideStatusLED(withValue:completionHandler:)](mtrbaseclusterdoorlock/writeattributeenableinsidestatusled%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeEnableInsideStatusLED(withValue:params:completion:)](mtrbaseclusterdoorlock/writeattributeenableinsidestatusled%28withvalue_params_completion_%29.md)
+- [writeAttributeEnableInsideStatusLED(withValue:params:completionHandler:)](mtrbaseclusterdoorlock/writeattributeenableinsidestatusled%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeEnableLocalProgramming(withValue:completion:)](mtrbaseclusterdoorlock/writeattributeenablelocalprogramming%28withvalue_completion_%29.md)
+- [writeAttributeEnableLocalProgramming(withValue:completionHandler:)](mtrbaseclusterdoorlock/writeattributeenablelocalprogramming%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeEnableLocalProgramming(withValue:params:completion:)](mtrbaseclusterdoorlock/writeattributeenablelocalprogramming%28withvalue_params_completion_%29.md)
+- [writeAttributeEnableLocalProgramming(withValue:params:completionHandler:)](mtrbaseclusterdoorlock/writeattributeenablelocalprogramming%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeEnableOneTouchLocking(withValue:completion:)](mtrbaseclusterdoorlock/writeattributeenableonetouchlocking%28withvalue_completion_%29.md)
+- [writeAttributeEnableOneTouchLocking(withValue:completionHandler:)](mtrbaseclusterdoorlock/writeattributeenableonetouchlocking%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeEnableOneTouchLocking(withValue:params:completion:)](mtrbaseclusterdoorlock/writeattributeenableonetouchlocking%28withvalue_params_completion_%29.md)
+- [writeAttributeEnableOneTouchLocking(withValue:params:completionHandler:)](mtrbaseclusterdoorlock/writeattributeenableonetouchlocking%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeEnablePrivacyModeButton(withValue:completion:)](mtrbaseclusterdoorlock/writeattributeenableprivacymodebutton%28withvalue_completion_%29.md)
+- [writeAttributeEnablePrivacyModeButton(withValue:completionHandler:)](mtrbaseclusterdoorlock/writeattributeenableprivacymodebutton%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeEnablePrivacyModeButton(withValue:params:completion:)](mtrbaseclusterdoorlock/writeattributeenableprivacymodebutton%28withvalue_params_completion_%29.md)
+- [writeAttributeEnablePrivacyModeButton(withValue:params:completionHandler:)](mtrbaseclusterdoorlock/writeattributeenableprivacymodebutton%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeExpiringUserTimeout(withValue:completion:)](mtrbaseclusterdoorlock/writeattributeexpiringusertimeout%28withvalue_completion_%29.md)
+- [writeAttributeExpiringUserTimeout(withValue:completionHandler:)](mtrbaseclusterdoorlock/writeattributeexpiringusertimeout%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeExpiringUserTimeout(withValue:params:completion:)](mtrbaseclusterdoorlock/writeattributeexpiringusertimeout%28withvalue_params_completion_%29.md)
+- [writeAttributeExpiringUserTimeout(withValue:params:completionHandler:)](mtrbaseclusterdoorlock/writeattributeexpiringusertimeout%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeLEDSettings(withValue:completion:)](mtrbaseclusterdoorlock/writeattributeledsettings%28withvalue_completion_%29.md)
+- [writeAttributeLEDSettings(withValue:completionHandler:)](mtrbaseclusterdoorlock/writeattributeledsettings%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeLEDSettings(withValue:params:completion:)](mtrbaseclusterdoorlock/writeattributeledsettings%28withvalue_params_completion_%29.md)
+- [writeAttributeLEDSettings(withValue:params:completionHandler:)](mtrbaseclusterdoorlock/writeattributeledsettings%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeLanguage(withValue:completion:)](mtrbaseclusterdoorlock/writeattributelanguage%28withvalue_completion_%29.md)
+- [writeAttributeLanguage(withValue:completionHandler:)](mtrbaseclusterdoorlock/writeattributelanguage%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeLanguage(withValue:params:completion:)](mtrbaseclusterdoorlock/writeattributelanguage%28withvalue_params_completion_%29.md)
+- [writeAttributeLanguage(withValue:params:completionHandler:)](mtrbaseclusterdoorlock/writeattributelanguage%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeLocalProgrammingFeatures(withValue:completion:)](mtrbaseclusterdoorlock/writeattributelocalprogrammingfeatures%28withvalue_completion_%29.md)
+- [writeAttributeLocalProgrammingFeatures(withValue:completionHandler:)](mtrbaseclusterdoorlock/writeattributelocalprogrammingfeatures%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeLocalProgrammingFeatures(withValue:params:completion:)](mtrbaseclusterdoorlock/writeattributelocalprogrammingfeatures%28withvalue_params_completion_%29.md)
+- [writeAttributeLocalProgrammingFeatures(withValue:params:completionHandler:)](mtrbaseclusterdoorlock/writeattributelocalprogrammingfeatures%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeOpenPeriod(withValue:completion:)](mtrbaseclusterdoorlock/writeattributeopenperiod%28withvalue_completion_%29.md)
+- [writeAttributeOpenPeriod(withValue:completionHandler:)](mtrbaseclusterdoorlock/writeattributeopenperiod%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeOpenPeriod(withValue:params:completion:)](mtrbaseclusterdoorlock/writeattributeopenperiod%28withvalue_params_completion_%29.md)
+- [writeAttributeOpenPeriod(withValue:params:completionHandler:)](mtrbaseclusterdoorlock/writeattributeopenperiod%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeOperatingMode(withValue:completion:)](mtrbaseclusterdoorlock/writeattributeoperatingmode%28withvalue_completion_%29.md)
+- [writeAttributeOperatingMode(withValue:completionHandler:)](mtrbaseclusterdoorlock/writeattributeoperatingmode%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeOperatingMode(withValue:params:completion:)](mtrbaseclusterdoorlock/writeattributeoperatingmode%28withvalue_params_completion_%29.md)
+- [writeAttributeOperatingMode(withValue:params:completionHandler:)](mtrbaseclusterdoorlock/writeattributeoperatingmode%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeRequirePINforRemoteOperation(withValue:completion:)](mtrbaseclusterdoorlock/writeattributerequirepinforremoteoperation%28withvalue_completion_%29.md)
+- [writeAttributeRequirePINforRemoteOperation(withValue:completionHandler:)](mtrbaseclusterdoorlock/writeattributerequirepinforremoteoperation%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeRequirePINforRemoteOperation(withValue:params:completion:)](mtrbaseclusterdoorlock/writeattributerequirepinforremoteoperation%28withvalue_params_completion_%29.md)
+- [writeAttributeRequirePINforRemoteOperation(withValue:params:completionHandler:)](mtrbaseclusterdoorlock/writeattributerequirepinforremoteoperation%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeSendPINOverTheAir(withValue:completion:)](mtrbaseclusterdoorlock/writeattributesendpinovertheair%28withvalue_completion_%29.md)
+- [writeAttributeSendPINOverTheAir(withValue:completionHandler:)](mtrbaseclusterdoorlock/writeattributesendpinovertheair%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeSendPINOverTheAir(withValue:params:completion:)](mtrbaseclusterdoorlock/writeattributesendpinovertheair%28withvalue_params_completion_%29.md)
+- [writeAttributeSendPINOverTheAir(withValue:params:completionHandler:)](mtrbaseclusterdoorlock/writeattributesendpinovertheair%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeSoundVolume(withValue:completion:)](mtrbaseclusterdoorlock/writeattributesoundvolume%28withvalue_completion_%29.md)
+- [writeAttributeSoundVolume(withValue:completionHandler:)](mtrbaseclusterdoorlock/writeattributesoundvolume%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeSoundVolume(withValue:params:completion:)](mtrbaseclusterdoorlock/writeattributesoundvolume%28withvalue_params_completion_%29.md)
+- [writeAttributeSoundVolume(withValue:params:completionHandler:)](mtrbaseclusterdoorlock/writeattributesoundvolume%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeUserCodeTemporaryDisableTime(withValue:completion:)](mtrbaseclusterdoorlock/writeattributeusercodetemporarydisabletime%28withvalue_completion_%29.md)
+- [writeAttributeUserCodeTemporaryDisableTime(withValue:completionHandler:)](mtrbaseclusterdoorlock/writeattributeusercodetemporarydisabletime%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeUserCodeTemporaryDisableTime(withValue:params:completion:)](mtrbaseclusterdoorlock/writeattributeusercodetemporarydisabletime%28withvalue_params_completion_%29.md)
+- [writeAttributeUserCodeTemporaryDisableTime(withValue:params:completionHandler:)](mtrbaseclusterdoorlock/writeattributeusercodetemporarydisabletime%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeWrongCodeEntryLimit(withValue:completion:)](mtrbaseclusterdoorlock/writeattributewrongcodeentrylimit%28withvalue_completion_%29.md)
+- [writeAttributeWrongCodeEntryLimit(withValue:completionHandler:)](mtrbaseclusterdoorlock/writeattributewrongcodeentrylimit%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeWrongCodeEntryLimit(withValue:params:completion:)](mtrbaseclusterdoorlock/writeattributewrongcodeentrylimit%28withvalue_params_completion_%29.md)
+- [writeAttributeWrongCodeEntryLimit(withValue:params:completionHandler:)](mtrbaseclusterdoorlock/writeattributewrongcodeentrylimit%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [clearAliroReaderConfig(completion:)](mtrbaseclusterdoorlock/clearaliroreaderconfig%28completion_%29.md)
+- [clearAliroReaderConfig(with:completion:)](mtrbaseclusterdoorlock/clearaliroreaderconfig%28with_completion_%29.md): Command ClearAliroReaderConfig
+- [readAttributeAliroBLEAdvertisingVersion(completion:)](mtrbaseclusterdoorlock/readattributealirobleadvertisingversion%28completion_%29.md)
+- [readAttributeAliroExpeditedTransactionSupportedProtocolVersions(completion:)](mtrbaseclusterdoorlock/readattributealiroexpeditedtransactionsupportedprotocolversions%28completion_%29.md)
+- [readAttributeAliroGroupResolvingKey(completion:)](mtrbaseclusterdoorlock/readattributealirogroupresolvingkey%28completion_%29.md)
+- [readAttributeAliroReaderGroupIdentifier(completion:)](mtrbaseclusterdoorlock/readattributealiroreadergroupidentifier%28completion_%29.md)
+- [readAttributeAliroReaderGroupSubIdentifier(completion:)](mtrbaseclusterdoorlock/readattributealiroreadergroupsubidentifier%28completion_%29.md)
+- [readAttributeAliroReaderVerificationKey(completion:)](mtrbaseclusterdoorlock/readattributealiroreaderverificationkey%28completion_%29.md)
+- [readAttributeAliroSupportedBLEUWBProtocolVersions(completion:)](mtrbaseclusterdoorlock/readattributealirosupportedbleuwbprotocolversions%28completion_%29.md)
+- [readAttributeNumberOfAliroCredentialIssuerKeysSupported(completion:)](mtrbaseclusterdoorlock/readattributenumberofalirocredentialissuerkeyssupported%28completion_%29.md)
+- [readAttributeNumberOfAliroEndpointKeysSupported(completion:)](mtrbaseclusterdoorlock/readattributenumberofaliroendpointkeyssupported%28completion_%29.md)
+- [setAliroReaderConfigWith(\_:completion:)](mtrbaseclusterdoorlock/setaliroreaderconfigwith%28__completion_%29.md): Command SetAliroReaderConfig
+- [subscribeAttributeAliroBLEAdvertisingVersion(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributealirobleadvertisingversion%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAliroExpeditedTransactionSupportedProtocolVersions(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributealiroexpeditedtransactionsupportedprotocolversions%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAliroGroupResolvingKey(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributealirogroupresolvingkey%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAliroReaderGroupIdentifier(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributealiroreadergroupidentifier%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAliroReaderGroupSubIdentifier(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributealiroreadergroupsubidentifier%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAliroReaderVerificationKey(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributealiroreaderverificationkey%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAliroSupportedBLEUWBProtocolVersions(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributealirosupportedbleuwbprotocolversions%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfAliroCredentialIssuerKeysSupported(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributenumberofalirocredentialissuerkeyssupported%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfAliroEndpointKeysSupported(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterdoorlock/subscribeattributenumberofaliroendpointkeyssupported%28with_subscriptionestablished_reporthandler_%29.md)
+- [unboltDoor(completion:)](mtrbaseclusterdoorlock/unboltdoor%28completion_%29.md)
+- [unboltDoor(with:completion:)](mtrbaseclusterdoorlock/unboltdoor%28with_completion_%29.md): Command UnboltDoor
+
+### Type Methods
+
+- [readAttributeAcceptedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeActuatorEnabled(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributeactuatorenabled%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeActuatorEnabled(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributeactuatorenabled%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAutoRelockTime(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributeautorelocktime%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAutoRelockTime(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributeautorelocktime%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevision(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCredentialRulesSupport(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributecredentialrulessupport%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCredentialRulesSupport(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributecredentialrulessupport%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeDefaultConfigurationRegister(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributedefaultconfigurationregister%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeDefaultConfigurationRegister(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributedefaultconfigurationregister%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeDoorClosedEvents(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributedoorclosedevents%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeDoorClosedEvents(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributedoorclosedevents%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeDoorOpenEvents(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributedooropenevents%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeDoorOpenEvents(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributedooropenevents%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeDoorState(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributedoorstate%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeDoorState(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributedoorstate%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeEnableInsideStatusLED(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributeenableinsidestatusled%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeEnableInsideStatusLED(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributeenableinsidestatusled%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeEnableLocalProgramming(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributeenablelocalprogramming%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeEnableLocalProgramming(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributeenablelocalprogramming%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeEnableOneTouchLocking(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributeenableonetouchlocking%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeEnableOneTouchLocking(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributeenableonetouchlocking%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeEnablePrivacyModeButton(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributeenableprivacymodebutton%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeEnablePrivacyModeButton(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributeenableprivacymodebutton%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeExpiringUserTimeout(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributeexpiringusertimeout%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeExpiringUserTimeout(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributeexpiringusertimeout%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMap(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLEDSettings(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributeledsettings%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLEDSettings(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributeledsettings%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLanguage(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributelanguage%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLanguage(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributelanguage%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLocalProgrammingFeatures(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributelocalprogrammingfeatures%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLocalProgrammingFeatures(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributelocalprogrammingfeatures%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLockState(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributelockstate%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLockState(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributelockstate%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLockType(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributelocktype%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLockType(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributelocktype%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMaxPINCodeLength(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributemaxpincodelength%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMaxPINCodeLength(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributemaxpincodelength%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMaxRFIDCodeLength(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributemaxrfidcodelength%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMaxRFIDCodeLength(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributemaxrfidcodelength%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMinPINCodeLength(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributeminpincodelength%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMinPINCodeLength(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributeminpincodelength%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMinRFIDCodeLength(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributeminrfidcodelength%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMinRFIDCodeLength(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributeminrfidcodelength%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfCredentialsSupportedPerUser(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributenumberofcredentialssupportedperuser%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfCredentialsSupportedPerUser(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributenumberofcredentialssupportedperuser%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfHolidaySchedulesSupported(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributenumberofholidayschedulessupported%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfHolidaySchedulesSupported(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributenumberofholidayschedulessupported%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfPINUsersSupported(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributenumberofpinuserssupported%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfPINUsersSupported(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributenumberofpinuserssupported%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfRFIDUsersSupported(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributenumberofrfiduserssupported%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfRFIDUsersSupported(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributenumberofrfiduserssupported%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfTotalUsersSupported(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributenumberoftotaluserssupported%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfTotalUsersSupported(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributenumberoftotaluserssupported%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfWeekDaySchedulesSupportedPerUser(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributenumberofweekdayschedulessupportedperuser%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfWeekDaySchedulesSupportedPerUser(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributenumberofweekdayschedulessupportedperuser%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfYearDaySchedulesSupportedPerUser(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributenumberofyeardayschedulessupportedperuser%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfYearDaySchedulesSupportedPerUser(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributenumberofyeardayschedulessupportedperuser%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeOpenPeriod(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributeopenperiod%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeOpenPeriod(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributeopenperiod%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeOperatingMode(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributeoperatingmode%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeOperatingMode(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributeoperatingmode%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeRequirePINforRemoteOperation(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributerequirepinforremoteoperation%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeRequirePINforRemoteOperation(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributerequirepinforremoteoperation%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSendPINOverTheAir(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributesendpinovertheair%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSendPINOverTheAir(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributesendpinovertheair%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSoundVolume(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributesoundvolume%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSoundVolume(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributesoundvolume%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSupportedOperatingModes(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributesupportedoperatingmodes%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSupportedOperatingModes(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributesupportedoperatingmodes%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeUserCodeTemporaryDisableTime(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributeusercodetemporarydisabletime%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeUserCodeTemporaryDisableTime(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributeusercodetemporarydisabletime%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeWrongCodeEntryLimit(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterdoorlock/readattributewrongcodeentrylimit%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeWrongCodeEntryLimit(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributewrongcodeentrylimit%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAliroBLEAdvertisingVersion(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributealirobleadvertisingversion%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAliroExpeditedTransactionSupportedProtocolVersions(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributealiroexpeditedtransactionsupportedprotocolversions%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAliroGroupResolvingKey(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributealirogroupresolvingkey%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAliroReaderGroupIdentifier(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributealiroreadergroupidentifier%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAliroReaderGroupSubIdentifier(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributealiroreadergroupsubidentifier%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAliroReaderVerificationKey(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributealiroreaderverificationkey%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAliroSupportedBLEUWBProtocolVersions(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributealirosupportedbleuwbprotocolversions%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfAliroCredentialIssuerKeysSupported(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributenumberofalirocredentialissuerkeyssupported%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfAliroEndpointKeysSupported(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterdoorlock/readattributenumberofaliroendpointkeyssupported%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRBaseClusterDoorLock (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```objectivec
+@interface MTRBaseClusterDoorLock : MTRGenericBaseCluster
+```
+
+## Topics
+
+### Initializers
+
+- [initWithDevice:endpoint:queue:](mtrbaseclusterdoorlock/init%28device_endpoint_queue_%29.md): Deprecated.
+- [initWithDevice:endpointID:queue:](mtrbaseclusterdoorlock/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [clearCredentialWithParams:completion:](mtrbaseclusterdoorlock/clearcredential%28with_completion_%29.md)
+- [clearCredentialWithParams:completionHandler:](mtrbaseclusterdoorlock/clearcredential%28with_completionhandler_%29.md): Deprecated.
+- [clearHolidayScheduleWithParams:completion:](mtrbaseclusterdoorlock/clearholidayschedule%28with_completion_%29.md)
+- [clearHolidayScheduleWithParams:completionHandler:](mtrbaseclusterdoorlock/clearholidayschedule%28with_completionhandler_%29.md): Deprecated.
+- [clearUserWithParams:completion:](mtrbaseclusterdoorlock/clearuser%28with_completion_%29.md)
+- [clearUserWithParams:completionHandler:](mtrbaseclusterdoorlock/clearuser%28with_completionhandler_%29.md): Deprecated.
+- [clearWeekDayScheduleWithParams:completion:](mtrbaseclusterdoorlock/clearweekdayschedule%28with_completion_%29.md)
+- [clearWeekDayScheduleWithParams:completionHandler:](mtrbaseclusterdoorlock/clearweekdayschedule%28with_completionhandler_%29.md): Deprecated.
+- [clearYearDayScheduleWithParams:completion:](mtrbaseclusterdoorlock/clearyeardayschedule%28with_completion_%29.md)
+- [clearYearDayScheduleWithParams:completionHandler:](mtrbaseclusterdoorlock/clearyeardayschedule%28with_completionhandler_%29.md): Deprecated.
+- [getCredentialStatusWithParams:completion:](mtrbaseclusterdoorlock/getcredentialstatus%28with_completion_%29.md)
+- [getCredentialStatusWithParams:completionHandler:](mtrbaseclusterdoorlock/getcredentialstatus%28with_completionhandler_%29.md): Deprecated.
+- [getHolidayScheduleWithParams:completion:](mtrbaseclusterdoorlock/getholidayschedule%28with_completion_%29.md)
+- [getHolidayScheduleWithParams:completionHandler:](mtrbaseclusterdoorlock/getholidayschedule%28with_completionhandler_%29.md): Deprecated.
+- [getUserWithParams:completion:](mtrbaseclusterdoorlock/getuserwith%28__completion_%29.md)
+- [getUserWithParams:completionHandler:](mtrbaseclusterdoorlock/getuserwith%28__completionhandler_%29.md): Deprecated.
+- [getWeekDayScheduleWithParams:completion:](mtrbaseclusterdoorlock/getweekdayschedule%28with_completion_%29.md)
+- [getWeekDayScheduleWithParams:completionHandler:](mtrbaseclusterdoorlock/getweekdayschedule%28with_completionhandler_%29.md): Deprecated.
+- [getYearDayScheduleWithParams:completion:](mtrbaseclusterdoorlock/getyeardayschedule%28with_completion_%29.md)
+- [getYearDayScheduleWithParams:completionHandler:](mtrbaseclusterdoorlock/getyeardayschedule%28with_completionhandler_%29.md): Deprecated.
+- [lockDoorWithCompletion:](mtrbaseclusterdoorlock/lockdoor%28completion_%29.md)
+- [lockDoorWithParams:completion:](mtrbaseclusterdoorlock/lockdoor%28with_completion_%29.md)
+- [lockDoorWithParams:completionHandler:](mtrbaseclusterdoorlock/lockdoor%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandListWithCompletion:](mtrbaseclusterdoorlock/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandListWithCompletionHandler:](mtrbaseclusterdoorlock/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeActuatorEnabledWithCompletion:](mtrbaseclusterdoorlock/readattributeactuatorenabled%28completion_%29.md)
+- [readAttributeActuatorEnabledWithCompletionHandler:](mtrbaseclusterdoorlock/readattributeactuatorenabled%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithCompletion:](mtrbaseclusterdoorlock/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeListWithCompletionHandler:](mtrbaseclusterdoorlock/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAutoRelockTimeWithCompletion:](mtrbaseclusterdoorlock/readattributeautorelocktime%28completion_%29.md)
+- [readAttributeAutoRelockTimeWithCompletionHandler:](mtrbaseclusterdoorlock/readattributeautorelocktime%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithCompletion:](mtrbaseclusterdoorlock/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevisionWithCompletionHandler:](mtrbaseclusterdoorlock/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeCredentialRulesSupportWithCompletion:](mtrbaseclusterdoorlock/readattributecredentialrulessupport%28completion_%29.md)
+- [readAttributeCredentialRulesSupportWithCompletionHandler:](mtrbaseclusterdoorlock/readattributecredentialrulessupport%28completionhandler_%29.md): Deprecated.
+- [readAttributeDefaultConfigurationRegisterWithCompletion:](mtrbaseclusterdoorlock/readattributedefaultconfigurationregister%28completion_%29.md)
+- [readAttributeDefaultConfigurationRegisterWithCompletionHandler:](mtrbaseclusterdoorlock/readattributedefaultconfigurationregister%28completionhandler_%29.md): Deprecated.
+- [readAttributeDoorClosedEventsWithCompletion:](mtrbaseclusterdoorlock/readattributedoorclosedevents%28completion_%29.md)
+- [readAttributeDoorClosedEventsWithCompletionHandler:](mtrbaseclusterdoorlock/readattributedoorclosedevents%28completionhandler_%29.md): Deprecated.
+- [readAttributeDoorOpenEventsWithCompletion:](mtrbaseclusterdoorlock/readattributedooropenevents%28completion_%29.md)
+- [readAttributeDoorOpenEventsWithCompletionHandler:](mtrbaseclusterdoorlock/readattributedooropenevents%28completionhandler_%29.md): Deprecated.
+- [readAttributeDoorStateWithCompletion:](mtrbaseclusterdoorlock/readattributedoorstate%28completion_%29.md)
+- [readAttributeDoorStateWithCompletionHandler:](mtrbaseclusterdoorlock/readattributedoorstate%28completionhandler_%29.md): Deprecated.
+- [readAttributeEnableInsideStatusLEDWithCompletion:](mtrbaseclusterdoorlock/readattributeenableinsidestatusled%28completion_%29.md)
+- [readAttributeEnableInsideStatusLEDWithCompletionHandler:](mtrbaseclusterdoorlock/readattributeenableinsidestatusled%28completionhandler_%29.md): Deprecated.
+- [readAttributeEnableLocalProgrammingWithCompletion:](mtrbaseclusterdoorlock/readattributeenablelocalprogramming%28completion_%29.md)
+- [readAttributeEnableLocalProgrammingWithCompletionHandler:](mtrbaseclusterdoorlock/readattributeenablelocalprogramming%28completionhandler_%29.md): Deprecated.
+- [readAttributeEnableOneTouchLockingWithCompletion:](mtrbaseclusterdoorlock/readattributeenableonetouchlocking%28completion_%29.md)
+- [readAttributeEnableOneTouchLockingWithCompletionHandler:](mtrbaseclusterdoorlock/readattributeenableonetouchlocking%28completionhandler_%29.md): Deprecated.
+- [readAttributeEnablePrivacyModeButtonWithCompletion:](mtrbaseclusterdoorlock/readattributeenableprivacymodebutton%28completion_%29.md)
+- [readAttributeEnablePrivacyModeButtonWithCompletionHandler:](mtrbaseclusterdoorlock/readattributeenableprivacymodebutton%28completionhandler_%29.md): Deprecated.
+- [readAttributeExpiringUserTimeoutWithCompletion:](mtrbaseclusterdoorlock/readattributeexpiringusertimeout%28completion_%29.md)
+- [readAttributeExpiringUserTimeoutWithCompletionHandler:](mtrbaseclusterdoorlock/readattributeexpiringusertimeout%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithCompletion:](mtrbaseclusterdoorlock/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMapWithCompletionHandler:](mtrbaseclusterdoorlock/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithCompletion:](mtrbaseclusterdoorlock/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandListWithCompletionHandler:](mtrbaseclusterdoorlock/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeLEDSettingsWithCompletion:](mtrbaseclusterdoorlock/readattributeledsettings%28completion_%29.md)
+- [readAttributeLEDSettingsWithCompletionHandler:](mtrbaseclusterdoorlock/readattributeledsettings%28completionhandler_%29.md): Deprecated.
+- [readAttributeLanguageWithCompletion:](mtrbaseclusterdoorlock/readattributelanguage%28completion_%29.md)
+- [readAttributeLanguageWithCompletionHandler:](mtrbaseclusterdoorlock/readattributelanguage%28completionhandler_%29.md): Deprecated.
+- [readAttributeLocalProgrammingFeaturesWithCompletion:](mtrbaseclusterdoorlock/readattributelocalprogrammingfeatures%28completion_%29.md)
+- [readAttributeLocalProgrammingFeaturesWithCompletionHandler:](mtrbaseclusterdoorlock/readattributelocalprogrammingfeatures%28completionhandler_%29.md): Deprecated.
+- [readAttributeLockStateWithCompletion:](mtrbaseclusterdoorlock/readattributelockstate%28completion_%29.md)
+- [readAttributeLockStateWithCompletionHandler:](mtrbaseclusterdoorlock/readattributelockstate%28completionhandler_%29.md): Deprecated.
+- [readAttributeLockTypeWithCompletion:](mtrbaseclusterdoorlock/readattributelocktype%28completion_%29.md)
+- [readAttributeLockTypeWithCompletionHandler:](mtrbaseclusterdoorlock/readattributelocktype%28completionhandler_%29.md): Deprecated.
+- [readAttributeMaxPINCodeLengthWithCompletion:](mtrbaseclusterdoorlock/readattributemaxpincodelength%28completion_%29.md)
+- [readAttributeMaxPINCodeLengthWithCompletionHandler:](mtrbaseclusterdoorlock/readattributemaxpincodelength%28completionhandler_%29.md): Deprecated.
+- [readAttributeMaxRFIDCodeLengthWithCompletion:](mtrbaseclusterdoorlock/readattributemaxrfidcodelength%28completion_%29.md)
+- [readAttributeMaxRFIDCodeLengthWithCompletionHandler:](mtrbaseclusterdoorlock/readattributemaxrfidcodelength%28completionhandler_%29.md): Deprecated.
+- [readAttributeMinPINCodeLengthWithCompletion:](mtrbaseclusterdoorlock/readattributeminpincodelength%28completion_%29.md)
+- [readAttributeMinPINCodeLengthWithCompletionHandler:](mtrbaseclusterdoorlock/readattributeminpincodelength%28completionhandler_%29.md): Deprecated.
+- [readAttributeMinRFIDCodeLengthWithCompletion:](mtrbaseclusterdoorlock/readattributeminrfidcodelength%28completion_%29.md)
+- [readAttributeMinRFIDCodeLengthWithCompletionHandler:](mtrbaseclusterdoorlock/readattributeminrfidcodelength%28completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfCredentialsSupportedPerUserWithCompletion:](mtrbaseclusterdoorlock/readattributenumberofcredentialssupportedperuser%28completion_%29.md)
+- [readAttributeNumberOfCredentialsSupportedPerUserWithCompletionHandler:](mtrbaseclusterdoorlock/readattributenumberofcredentialssupportedperuser%28completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfHolidaySchedulesSupportedWithCompletion:](mtrbaseclusterdoorlock/readattributenumberofholidayschedulessupported%28completion_%29.md)
+- [readAttributeNumberOfHolidaySchedulesSupportedWithCompletionHandler:](mtrbaseclusterdoorlock/readattributenumberofholidayschedulessupported%28completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfPINUsersSupportedWithCompletion:](mtrbaseclusterdoorlock/readattributenumberofpinuserssupported%28completion_%29.md)
+- [readAttributeNumberOfPINUsersSupportedWithCompletionHandler:](mtrbaseclusterdoorlock/readattributenumberofpinuserssupported%28completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfRFIDUsersSupportedWithCompletion:](mtrbaseclusterdoorlock/readattributenumberofrfiduserssupported%28completion_%29.md)
+- [readAttributeNumberOfRFIDUsersSupportedWithCompletionHandler:](mtrbaseclusterdoorlock/readattributenumberofrfiduserssupported%28completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfTotalUsersSupportedWithCompletion:](mtrbaseclusterdoorlock/readattributenumberoftotaluserssupported%28completion_%29.md)
+- [readAttributeNumberOfTotalUsersSupportedWithCompletionHandler:](mtrbaseclusterdoorlock/readattributenumberoftotaluserssupported%28completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfWeekDaySchedulesSupportedPerUserWithCompletion:](mtrbaseclusterdoorlock/readattributenumberofweekdayschedulessupportedperuser%28completion_%29.md)
+- [readAttributeNumberOfWeekDaySchedulesSupportedPerUserWithCompletionHandler:](mtrbaseclusterdoorlock/readattributenumberofweekdayschedulessupportedperuser%28completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfYearDaySchedulesSupportedPerUserWithCompletion:](mtrbaseclusterdoorlock/readattributenumberofyeardayschedulessupportedperuser%28completion_%29.md)
+- [readAttributeNumberOfYearDaySchedulesSupportedPerUserWithCompletionHandler:](mtrbaseclusterdoorlock/readattributenumberofyeardayschedulessupportedperuser%28completionhandler_%29.md): Deprecated.
+- [readAttributeOpenPeriodWithCompletion:](mtrbaseclusterdoorlock/readattributeopenperiod%28completion_%29.md)
+- [readAttributeOpenPeriodWithCompletionHandler:](mtrbaseclusterdoorlock/readattributeopenperiod%28completionhandler_%29.md): Deprecated.
+- [readAttributeOperatingModeWithCompletion:](mtrbaseclusterdoorlock/readattributeoperatingmode%28completion_%29.md)
+- [readAttributeOperatingModeWithCompletionHandler:](mtrbaseclusterdoorlock/readattributeoperatingmode%28completionhandler_%29.md): Deprecated.
+- [readAttributeRequirePINforRemoteOperationWithCompletion:](mtrbaseclusterdoorlock/readattributerequirepinforremoteoperation%28completion_%29.md)
+- [readAttributeRequirePINforRemoteOperationWithCompletionHandler:](mtrbaseclusterdoorlock/readattributerequirepinforremoteoperation%28completionhandler_%29.md): Deprecated.
+- [readAttributeSendPINOverTheAirWithCompletion:](mtrbaseclusterdoorlock/readattributesendpinovertheair%28completion_%29.md)
+- [readAttributeSendPINOverTheAirWithCompletionHandler:](mtrbaseclusterdoorlock/readattributesendpinovertheair%28completionhandler_%29.md): Deprecated.
+- [readAttributeSoundVolumeWithCompletion:](mtrbaseclusterdoorlock/readattributesoundvolume%28completion_%29.md)
+- [readAttributeSoundVolumeWithCompletionHandler:](mtrbaseclusterdoorlock/readattributesoundvolume%28completionhandler_%29.md): Deprecated.
+- [readAttributeSupportedOperatingModesWithCompletion:](mtrbaseclusterdoorlock/readattributesupportedoperatingmodes%28completion_%29.md)
+- [readAttributeSupportedOperatingModesWithCompletionHandler:](mtrbaseclusterdoorlock/readattributesupportedoperatingmodes%28completionhandler_%29.md): Deprecated.
+- [readAttributeUserCodeTemporaryDisableTimeWithCompletion:](mtrbaseclusterdoorlock/readattributeusercodetemporarydisabletime%28completion_%29.md)
+- [readAttributeUserCodeTemporaryDisableTimeWithCompletionHandler:](mtrbaseclusterdoorlock/readattributeusercodetemporarydisabletime%28completionhandler_%29.md): Deprecated.
+- [readAttributeWrongCodeEntryLimitWithCompletion:](mtrbaseclusterdoorlock/readattributewrongcodeentrylimit%28completion_%29.md)
+- [readAttributeWrongCodeEntryLimitWithCompletionHandler:](mtrbaseclusterdoorlock/readattributewrongcodeentrylimit%28completionhandler_%29.md): Deprecated.
+- [setCredentialWithParams:completion:](mtrbaseclusterdoorlock/setcredentialwith%28__completion_%29.md)
+- [setCredentialWithParams:completionHandler:](mtrbaseclusterdoorlock/setcredentialwith%28__completionhandler_%29.md): Deprecated.
+- [setHolidayScheduleWithParams:completion:](mtrbaseclusterdoorlock/setholidayschedulewith%28__completion_%29.md)
+- [setHolidayScheduleWithParams:completionHandler:](mtrbaseclusterdoorlock/setholidayschedulewith%28__completionhandler_%29.md): Deprecated.
+- [setUserWithParams:completion:](mtrbaseclusterdoorlock/setuserwith%28__completion_%29.md)
+- [setUserWithParams:completionHandler:](mtrbaseclusterdoorlock/setuserwith%28__completionhandler_%29.md): Deprecated.
+- [setWeekDayScheduleWithParams:completion:](mtrbaseclusterdoorlock/setweekdayschedulewith%28__completion_%29.md)
+- [setWeekDayScheduleWithParams:completionHandler:](mtrbaseclusterdoorlock/setweekdayschedulewith%28__completionhandler_%29.md): Deprecated.
+- [setYearDayScheduleWithParams:completion:](mtrbaseclusterdoorlock/setyeardayschedulewith%28__completion_%29.md)
+- [setYearDayScheduleWithParams:completionHandler:](mtrbaseclusterdoorlock/setyeardayschedulewith%28__completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeActuatorEnabledWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeactuatorenabled%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeActuatorEnabledWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeactuatorenabled%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAutoRelockTimeWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeautorelocktime%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAutoRelockTimeWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeautorelocktime%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevisionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevisionWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeCredentialRulesSupportWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributecredentialrulessupport%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCredentialRulesSupportWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributecredentialrulessupport%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeDefaultConfigurationRegisterWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributedefaultconfigurationregister%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeDefaultConfigurationRegisterWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributedefaultconfigurationregister%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeDoorClosedEventsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributedoorclosedevents%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeDoorClosedEventsWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributedoorclosedevents%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeDoorOpenEventsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributedooropenevents%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeDoorOpenEventsWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributedooropenevents%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeDoorStateWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributedoorstate%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeDoorStateWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributedoorstate%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeEnableInsideStatusLEDWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeenableinsidestatusled%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeEnableInsideStatusLEDWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeenableinsidestatusled%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeEnableLocalProgrammingWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeenablelocalprogramming%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeEnableLocalProgrammingWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeenablelocalprogramming%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeEnableOneTouchLockingWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeenableonetouchlocking%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeEnableOneTouchLockingWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeenableonetouchlocking%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeEnablePrivacyModeButtonWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeenableprivacymodebutton%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeEnablePrivacyModeButtonWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeenableprivacymodebutton%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeExpiringUserTimeoutWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeexpiringusertimeout%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeExpiringUserTimeoutWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeexpiringusertimeout%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMapWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMapWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLEDSettingsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeledsettings%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLEDSettingsWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeledsettings%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLanguageWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributelanguage%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLanguageWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributelanguage%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLocalProgrammingFeaturesWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributelocalprogrammingfeatures%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLocalProgrammingFeaturesWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributelocalprogrammingfeatures%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLockStateWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributelockstate%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLockStateWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributelockstate%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeLockTypeWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributelocktype%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeLockTypeWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributelocktype%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMaxPINCodeLengthWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributemaxpincodelength%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMaxPINCodeLengthWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributemaxpincodelength%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMaxRFIDCodeLengthWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributemaxrfidcodelength%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMaxRFIDCodeLengthWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributemaxrfidcodelength%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMinPINCodeLengthWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeminpincodelength%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMinPINCodeLengthWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeminpincodelength%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMinRFIDCodeLengthWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeminrfidcodelength%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMinRFIDCodeLengthWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeminrfidcodelength%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNumberOfCredentialsSupportedPerUserWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributenumberofcredentialssupportedperuser%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfCredentialsSupportedPerUserWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributenumberofcredentialssupportedperuser%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNumberOfHolidaySchedulesSupportedWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributenumberofholidayschedulessupported%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfHolidaySchedulesSupportedWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributenumberofholidayschedulessupported%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNumberOfPINUsersSupportedWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributenumberofpinuserssupported%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfPINUsersSupportedWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributenumberofpinuserssupported%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNumberOfRFIDUsersSupportedWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributenumberofrfiduserssupported%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfRFIDUsersSupportedWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributenumberofrfiduserssupported%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNumberOfTotalUsersSupportedWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributenumberoftotaluserssupported%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfTotalUsersSupportedWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributenumberoftotaluserssupported%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNumberOfWeekDaySchedulesSupportedPerUserWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributenumberofweekdayschedulessupportedperuser%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfWeekDaySchedulesSupportedPerUserWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributenumberofweekdayschedulessupportedperuser%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNumberOfYearDaySchedulesSupportedPerUserWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributenumberofyeardayschedulessupportedperuser%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfYearDaySchedulesSupportedPerUserWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributenumberofyeardayschedulessupportedperuser%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeOpenPeriodWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeopenperiod%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeOpenPeriodWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeopenperiod%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeOperatingModeWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeoperatingmode%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeOperatingModeWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeoperatingmode%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeRequirePINforRemoteOperationWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributerequirepinforremoteoperation%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeRequirePINforRemoteOperationWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributerequirepinforremoteoperation%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSendPINOverTheAirWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributesendpinovertheair%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSendPINOverTheAirWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributesendpinovertheair%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSoundVolumeWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributesoundvolume%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSoundVolumeWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributesoundvolume%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSupportedOperatingModesWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributesupportedoperatingmodes%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSupportedOperatingModesWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributesupportedoperatingmodes%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeUserCodeTemporaryDisableTimeWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeusercodetemporarydisabletime%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeUserCodeTemporaryDisableTimeWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributeusercodetemporarydisabletime%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeWrongCodeEntryLimitWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributewrongcodeentrylimit%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeWrongCodeEntryLimitWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributewrongcodeentrylimit%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [unlockDoorWithCompletion:](mtrbaseclusterdoorlock/unlockdoor%28completion_%29.md)
+- [unlockDoorWithParams:completion:](mtrbaseclusterdoorlock/unlockdoor%28with_completion_%29.md)
+- [unlockDoorWithParams:completionHandler:](mtrbaseclusterdoorlock/unlockdoor%28with_completionhandler_%29.md): Deprecated.
+- [unlockWithTimeoutWithParams:completion:](mtrbaseclusterdoorlock/unlockwithtimeout%28with_completion_%29.md)
+- [unlockWithTimeoutWithParams:completionHandler:](mtrbaseclusterdoorlock/unlockwithtimeout%28with_completionhandler_%29.md): Deprecated.
+- [writeAttributeAutoRelockTimeWithValue:completion:](mtrbaseclusterdoorlock/writeattributeautorelocktime%28withvalue_completion_%29.md)
+- [writeAttributeAutoRelockTimeWithValue:completionHandler:](mtrbaseclusterdoorlock/writeattributeautorelocktime%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeAutoRelockTimeWithValue:params:completion:](mtrbaseclusterdoorlock/writeattributeautorelocktime%28withvalue_params_completion_%29.md)
+- [writeAttributeAutoRelockTimeWithValue:params:completionHandler:](mtrbaseclusterdoorlock/writeattributeautorelocktime%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeDoorClosedEventsWithValue:completion:](mtrbaseclusterdoorlock/writeattributedoorclosedevents%28withvalue_completion_%29.md)
+- [writeAttributeDoorClosedEventsWithValue:completionHandler:](mtrbaseclusterdoorlock/writeattributedoorclosedevents%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeDoorClosedEventsWithValue:params:completion:](mtrbaseclusterdoorlock/writeattributedoorclosedevents%28withvalue_params_completion_%29.md)
+- [writeAttributeDoorClosedEventsWithValue:params:completionHandler:](mtrbaseclusterdoorlock/writeattributedoorclosedevents%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeDoorOpenEventsWithValue:completion:](mtrbaseclusterdoorlock/writeattributedooropenevents%28withvalue_completion_%29.md)
+- [writeAttributeDoorOpenEventsWithValue:completionHandler:](mtrbaseclusterdoorlock/writeattributedooropenevents%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeDoorOpenEventsWithValue:params:completion:](mtrbaseclusterdoorlock/writeattributedooropenevents%28withvalue_params_completion_%29.md)
+- [writeAttributeDoorOpenEventsWithValue:params:completionHandler:](mtrbaseclusterdoorlock/writeattributedooropenevents%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeEnableInsideStatusLEDWithValue:completion:](mtrbaseclusterdoorlock/writeattributeenableinsidestatusled%28withvalue_completion_%29.md)
+- [writeAttributeEnableInsideStatusLEDWithValue:completionHandler:](mtrbaseclusterdoorlock/writeattributeenableinsidestatusled%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeEnableInsideStatusLEDWithValue:params:completion:](mtrbaseclusterdoorlock/writeattributeenableinsidestatusled%28withvalue_params_completion_%29.md)
+- [writeAttributeEnableInsideStatusLEDWithValue:params:completionHandler:](mtrbaseclusterdoorlock/writeattributeenableinsidestatusled%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeEnableLocalProgrammingWithValue:completion:](mtrbaseclusterdoorlock/writeattributeenablelocalprogramming%28withvalue_completion_%29.md)
+- [writeAttributeEnableLocalProgrammingWithValue:completionHandler:](mtrbaseclusterdoorlock/writeattributeenablelocalprogramming%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeEnableLocalProgrammingWithValue:params:completion:](mtrbaseclusterdoorlock/writeattributeenablelocalprogramming%28withvalue_params_completion_%29.md)
+- [writeAttributeEnableLocalProgrammingWithValue:params:completionHandler:](mtrbaseclusterdoorlock/writeattributeenablelocalprogramming%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeEnableOneTouchLockingWithValue:completion:](mtrbaseclusterdoorlock/writeattributeenableonetouchlocking%28withvalue_completion_%29.md)
+- [writeAttributeEnableOneTouchLockingWithValue:completionHandler:](mtrbaseclusterdoorlock/writeattributeenableonetouchlocking%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeEnableOneTouchLockingWithValue:params:completion:](mtrbaseclusterdoorlock/writeattributeenableonetouchlocking%28withvalue_params_completion_%29.md)
+- [writeAttributeEnableOneTouchLockingWithValue:params:completionHandler:](mtrbaseclusterdoorlock/writeattributeenableonetouchlocking%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeEnablePrivacyModeButtonWithValue:completion:](mtrbaseclusterdoorlock/writeattributeenableprivacymodebutton%28withvalue_completion_%29.md)
+- [writeAttributeEnablePrivacyModeButtonWithValue:completionHandler:](mtrbaseclusterdoorlock/writeattributeenableprivacymodebutton%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeEnablePrivacyModeButtonWithValue:params:completion:](mtrbaseclusterdoorlock/writeattributeenableprivacymodebutton%28withvalue_params_completion_%29.md)
+- [writeAttributeEnablePrivacyModeButtonWithValue:params:completionHandler:](mtrbaseclusterdoorlock/writeattributeenableprivacymodebutton%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeExpiringUserTimeoutWithValue:completion:](mtrbaseclusterdoorlock/writeattributeexpiringusertimeout%28withvalue_completion_%29.md)
+- [writeAttributeExpiringUserTimeoutWithValue:completionHandler:](mtrbaseclusterdoorlock/writeattributeexpiringusertimeout%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeExpiringUserTimeoutWithValue:params:completion:](mtrbaseclusterdoorlock/writeattributeexpiringusertimeout%28withvalue_params_completion_%29.md)
+- [writeAttributeExpiringUserTimeoutWithValue:params:completionHandler:](mtrbaseclusterdoorlock/writeattributeexpiringusertimeout%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeLEDSettingsWithValue:completion:](mtrbaseclusterdoorlock/writeattributeledsettings%28withvalue_completion_%29.md)
+- [writeAttributeLEDSettingsWithValue:completionHandler:](mtrbaseclusterdoorlock/writeattributeledsettings%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeLEDSettingsWithValue:params:completion:](mtrbaseclusterdoorlock/writeattributeledsettings%28withvalue_params_completion_%29.md)
+- [writeAttributeLEDSettingsWithValue:params:completionHandler:](mtrbaseclusterdoorlock/writeattributeledsettings%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeLanguageWithValue:completion:](mtrbaseclusterdoorlock/writeattributelanguage%28withvalue_completion_%29.md)
+- [writeAttributeLanguageWithValue:completionHandler:](mtrbaseclusterdoorlock/writeattributelanguage%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeLanguageWithValue:params:completion:](mtrbaseclusterdoorlock/writeattributelanguage%28withvalue_params_completion_%29.md)
+- [writeAttributeLanguageWithValue:params:completionHandler:](mtrbaseclusterdoorlock/writeattributelanguage%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeLocalProgrammingFeaturesWithValue:completion:](mtrbaseclusterdoorlock/writeattributelocalprogrammingfeatures%28withvalue_completion_%29.md)
+- [writeAttributeLocalProgrammingFeaturesWithValue:completionHandler:](mtrbaseclusterdoorlock/writeattributelocalprogrammingfeatures%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeLocalProgrammingFeaturesWithValue:params:completion:](mtrbaseclusterdoorlock/writeattributelocalprogrammingfeatures%28withvalue_params_completion_%29.md)
+- [writeAttributeLocalProgrammingFeaturesWithValue:params:completionHandler:](mtrbaseclusterdoorlock/writeattributelocalprogrammingfeatures%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeOpenPeriodWithValue:completion:](mtrbaseclusterdoorlock/writeattributeopenperiod%28withvalue_completion_%29.md)
+- [writeAttributeOpenPeriodWithValue:completionHandler:](mtrbaseclusterdoorlock/writeattributeopenperiod%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeOpenPeriodWithValue:params:completion:](mtrbaseclusterdoorlock/writeattributeopenperiod%28withvalue_params_completion_%29.md)
+- [writeAttributeOpenPeriodWithValue:params:completionHandler:](mtrbaseclusterdoorlock/writeattributeopenperiod%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeOperatingModeWithValue:completion:](mtrbaseclusterdoorlock/writeattributeoperatingmode%28withvalue_completion_%29.md)
+- [writeAttributeOperatingModeWithValue:completionHandler:](mtrbaseclusterdoorlock/writeattributeoperatingmode%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeOperatingModeWithValue:params:completion:](mtrbaseclusterdoorlock/writeattributeoperatingmode%28withvalue_params_completion_%29.md)
+- [writeAttributeOperatingModeWithValue:params:completionHandler:](mtrbaseclusterdoorlock/writeattributeoperatingmode%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeRequirePINforRemoteOperationWithValue:completion:](mtrbaseclusterdoorlock/writeattributerequirepinforremoteoperation%28withvalue_completion_%29.md)
+- [writeAttributeRequirePINforRemoteOperationWithValue:completionHandler:](mtrbaseclusterdoorlock/writeattributerequirepinforremoteoperation%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeRequirePINforRemoteOperationWithValue:params:completion:](mtrbaseclusterdoorlock/writeattributerequirepinforremoteoperation%28withvalue_params_completion_%29.md)
+- [writeAttributeRequirePINforRemoteOperationWithValue:params:completionHandler:](mtrbaseclusterdoorlock/writeattributerequirepinforremoteoperation%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeSendPINOverTheAirWithValue:completion:](mtrbaseclusterdoorlock/writeattributesendpinovertheair%28withvalue_completion_%29.md)
+- [writeAttributeSendPINOverTheAirWithValue:completionHandler:](mtrbaseclusterdoorlock/writeattributesendpinovertheair%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeSendPINOverTheAirWithValue:params:completion:](mtrbaseclusterdoorlock/writeattributesendpinovertheair%28withvalue_params_completion_%29.md)
+- [writeAttributeSendPINOverTheAirWithValue:params:completionHandler:](mtrbaseclusterdoorlock/writeattributesendpinovertheair%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeSoundVolumeWithValue:completion:](mtrbaseclusterdoorlock/writeattributesoundvolume%28withvalue_completion_%29.md)
+- [writeAttributeSoundVolumeWithValue:completionHandler:](mtrbaseclusterdoorlock/writeattributesoundvolume%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeSoundVolumeWithValue:params:completion:](mtrbaseclusterdoorlock/writeattributesoundvolume%28withvalue_params_completion_%29.md)
+- [writeAttributeSoundVolumeWithValue:params:completionHandler:](mtrbaseclusterdoorlock/writeattributesoundvolume%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeUserCodeTemporaryDisableTimeWithValue:completion:](mtrbaseclusterdoorlock/writeattributeusercodetemporarydisabletime%28withvalue_completion_%29.md)
+- [writeAttributeUserCodeTemporaryDisableTimeWithValue:completionHandler:](mtrbaseclusterdoorlock/writeattributeusercodetemporarydisabletime%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeUserCodeTemporaryDisableTimeWithValue:params:completion:](mtrbaseclusterdoorlock/writeattributeusercodetemporarydisabletime%28withvalue_params_completion_%29.md)
+- [writeAttributeUserCodeTemporaryDisableTimeWithValue:params:completionHandler:](mtrbaseclusterdoorlock/writeattributeusercodetemporarydisabletime%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeWrongCodeEntryLimitWithValue:completion:](mtrbaseclusterdoorlock/writeattributewrongcodeentrylimit%28withvalue_completion_%29.md)
+- [writeAttributeWrongCodeEntryLimitWithValue:completionHandler:](mtrbaseclusterdoorlock/writeattributewrongcodeentrylimit%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeWrongCodeEntryLimitWithValue:params:completion:](mtrbaseclusterdoorlock/writeattributewrongcodeentrylimit%28withvalue_params_completion_%29.md)
+- [writeAttributeWrongCodeEntryLimitWithValue:params:completionHandler:](mtrbaseclusterdoorlock/writeattributewrongcodeentrylimit%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [clearAliroReaderConfigWithCompletion:](mtrbaseclusterdoorlock/clearaliroreaderconfig%28completion_%29.md)
+- [clearAliroReaderConfigWithParams:completion:](mtrbaseclusterdoorlock/clearaliroreaderconfig%28with_completion_%29.md): Command ClearAliroReaderConfig
+- [readAttributeAliroBLEAdvertisingVersionWithCompletion:](mtrbaseclusterdoorlock/readattributealirobleadvertisingversion%28completion_%29.md)
+- [readAttributeAliroExpeditedTransactionSupportedProtocolVersionsWithCompletion:](mtrbaseclusterdoorlock/readattributealiroexpeditedtransactionsupportedprotocolversions%28completion_%29.md)
+- [readAttributeAliroGroupResolvingKeyWithCompletion:](mtrbaseclusterdoorlock/readattributealirogroupresolvingkey%28completion_%29.md)
+- [readAttributeAliroReaderGroupIdentifierWithCompletion:](mtrbaseclusterdoorlock/readattributealiroreadergroupidentifier%28completion_%29.md)
+- [readAttributeAliroReaderGroupSubIdentifierWithCompletion:](mtrbaseclusterdoorlock/readattributealiroreadergroupsubidentifier%28completion_%29.md)
+- [readAttributeAliroReaderVerificationKeyWithCompletion:](mtrbaseclusterdoorlock/readattributealiroreaderverificationkey%28completion_%29.md)
+- [readAttributeAliroSupportedBLEUWBProtocolVersionsWithCompletion:](mtrbaseclusterdoorlock/readattributealirosupportedbleuwbprotocolversions%28completion_%29.md)
+- [readAttributeNumberOfAliroCredentialIssuerKeysSupportedWithCompletion:](mtrbaseclusterdoorlock/readattributenumberofalirocredentialissuerkeyssupported%28completion_%29.md)
+- [readAttributeNumberOfAliroEndpointKeysSupportedWithCompletion:](mtrbaseclusterdoorlock/readattributenumberofaliroendpointkeyssupported%28completion_%29.md)
+- [setAliroReaderConfigWithParams:completion:](mtrbaseclusterdoorlock/setaliroreaderconfigwith%28__completion_%29.md): Command SetAliroReaderConfig
+- [subscribeAttributeAliroBLEAdvertisingVersionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributealirobleadvertisingversion%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAliroExpeditedTransactionSupportedProtocolVersionsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributealiroexpeditedtransactionsupportedprotocolversions%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAliroGroupResolvingKeyWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributealirogroupresolvingkey%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAliroReaderGroupIdentifierWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributealiroreadergroupidentifier%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAliroReaderGroupSubIdentifierWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributealiroreadergroupsubidentifier%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAliroReaderVerificationKeyWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributealiroreaderverificationkey%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAliroSupportedBLEUWBProtocolVersionsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributealirosupportedbleuwbprotocolversions%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfAliroCredentialIssuerKeysSupportedWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributenumberofalirocredentialissuerkeyssupported%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeNumberOfAliroEndpointKeysSupportedWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterdoorlock/subscribeattributenumberofaliroendpointkeyssupported%28with_subscriptionestablished_reporthandler_%29.md)
+- [unboltDoorWithCompletion:](mtrbaseclusterdoorlock/unboltdoor%28completion_%29.md)
+- [unboltDoorWithParams:completion:](mtrbaseclusterdoorlock/unboltdoor%28with_completion_%29.md): Command UnboltDoor
+
+### Type Methods
+
+- [readAttributeAcceptedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeActuatorEnabledWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributeactuatorenabled%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeActuatorEnabledWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributeactuatorenabled%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAutoRelockTimeWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributeautorelocktime%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAutoRelockTimeWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributeautorelocktime%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevisionWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCredentialRulesSupportWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributecredentialrulessupport%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeCredentialRulesSupportWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributecredentialrulessupport%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeDefaultConfigurationRegisterWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributedefaultconfigurationregister%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeDefaultConfigurationRegisterWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributedefaultconfigurationregister%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeDoorClosedEventsWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributedoorclosedevents%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeDoorClosedEventsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributedoorclosedevents%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeDoorOpenEventsWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributedooropenevents%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeDoorOpenEventsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributedooropenevents%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeDoorStateWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributedoorstate%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeDoorStateWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributedoorstate%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeEnableInsideStatusLEDWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributeenableinsidestatusled%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeEnableInsideStatusLEDWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributeenableinsidestatusled%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeEnableLocalProgrammingWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributeenablelocalprogramming%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeEnableLocalProgrammingWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributeenablelocalprogramming%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeEnableOneTouchLockingWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributeenableonetouchlocking%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeEnableOneTouchLockingWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributeenableonetouchlocking%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeEnablePrivacyModeButtonWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributeenableprivacymodebutton%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeEnablePrivacyModeButtonWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributeenableprivacymodebutton%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeExpiringUserTimeoutWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributeexpiringusertimeout%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeExpiringUserTimeoutWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributeexpiringusertimeout%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMapWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLEDSettingsWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributeledsettings%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLEDSettingsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributeledsettings%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLanguageWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributelanguage%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLanguageWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributelanguage%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLocalProgrammingFeaturesWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributelocalprogrammingfeatures%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLocalProgrammingFeaturesWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributelocalprogrammingfeatures%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLockStateWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributelockstate%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLockStateWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributelockstate%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeLockTypeWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributelocktype%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeLockTypeWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributelocktype%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMaxPINCodeLengthWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributemaxpincodelength%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMaxPINCodeLengthWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributemaxpincodelength%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMaxRFIDCodeLengthWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributemaxrfidcodelength%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMaxRFIDCodeLengthWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributemaxrfidcodelength%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMinPINCodeLengthWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributeminpincodelength%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMinPINCodeLengthWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributeminpincodelength%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMinRFIDCodeLengthWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributeminrfidcodelength%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMinRFIDCodeLengthWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributeminrfidcodelength%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfCredentialsSupportedPerUserWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributenumberofcredentialssupportedperuser%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfCredentialsSupportedPerUserWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributenumberofcredentialssupportedperuser%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfHolidaySchedulesSupportedWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributenumberofholidayschedulessupported%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfHolidaySchedulesSupportedWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributenumberofholidayschedulessupported%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfPINUsersSupportedWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributenumberofpinuserssupported%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfPINUsersSupportedWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributenumberofpinuserssupported%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfRFIDUsersSupportedWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributenumberofrfiduserssupported%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfRFIDUsersSupportedWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributenumberofrfiduserssupported%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfTotalUsersSupportedWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributenumberoftotaluserssupported%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfTotalUsersSupportedWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributenumberoftotaluserssupported%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfWeekDaySchedulesSupportedPerUserWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributenumberofweekdayschedulessupportedperuser%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfWeekDaySchedulesSupportedPerUserWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributenumberofweekdayschedulessupportedperuser%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfYearDaySchedulesSupportedPerUserWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributenumberofyeardayschedulessupportedperuser%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNumberOfYearDaySchedulesSupportedPerUserWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributenumberofyeardayschedulessupportedperuser%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeOpenPeriodWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributeopenperiod%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeOpenPeriodWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributeopenperiod%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeOperatingModeWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributeoperatingmode%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeOperatingModeWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributeoperatingmode%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeRequirePINforRemoteOperationWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributerequirepinforremoteoperation%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeRequirePINforRemoteOperationWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributerequirepinforremoteoperation%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSendPINOverTheAirWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributesendpinovertheair%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSendPINOverTheAirWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributesendpinovertheair%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSoundVolumeWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributesoundvolume%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSoundVolumeWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributesoundvolume%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSupportedOperatingModesWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributesupportedoperatingmodes%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSupportedOperatingModesWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributesupportedoperatingmodes%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeUserCodeTemporaryDisableTimeWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributeusercodetemporarydisabletime%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeUserCodeTemporaryDisableTimeWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributeusercodetemporarydisabletime%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeWrongCodeEntryLimitWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterdoorlock/readattributewrongcodeentrylimit%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeWrongCodeEntryLimitWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributewrongcodeentrylimit%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAliroBLEAdvertisingVersionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributealirobleadvertisingversion%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAliroExpeditedTransactionSupportedProtocolVersionsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributealiroexpeditedtransactionsupportedprotocolversions%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAliroGroupResolvingKeyWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributealirogroupresolvingkey%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAliroReaderGroupIdentifierWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributealiroreadergroupidentifier%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAliroReaderGroupSubIdentifierWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributealiroreadergroupsubidentifier%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAliroReaderVerificationKeyWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributealiroreaderverificationkey%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAliroSupportedBLEUWBProtocolVersionsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributealirosupportedbleuwbprotocolversions%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfAliroCredentialIssuerKeysSupportedWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributenumberofalirocredentialissuerkeyssupported%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeNumberOfAliroEndpointKeysSupportedWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterdoorlock/readattributenumberofaliroendpointkeyssupported%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)

@@ -1,0 +1,31 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction/offer-swift.struct/paymentmode-swift.struct/payasyougo](https://developer.apple.com/documentation/storekit/transaction/offer-swift.struct/paymentmode-swift.struct/payasyougo)
+
+# payAsYouGo
+
+**Framework:** StoreKit  
+**Kind:** Type Property  
+**Availability:** iOS 17.2+ · iPadOS 17.2+ · Mac Catalyst 17.2+ · macOS 14.2+ · tvOS 17.2+ · visionOS 1.1+ · watchOS 10.2+
+
+A payment mode of a product discount that applies over a single billing period or multiple billing periods.
+
+## Declaration
+
+```swift
+static let payAsYouGo: Transaction.Offer.PaymentMode
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+With a Pay As You Go payment mode, subscribers pay a discounted price for each billing period for the duration of the discount.
+
+![A timeline titled Pay As You Go that’s divided into four sections. The first three sections, labeled Introductory price, each have an equal timespan, and the fourth section, labeled Regular price has a different timespan. The first three sections represent the initial purchase, first renewal, and second renewal, respectively.  The fourth section is the third renewal, at the regular price. Three dots at the end of the timeline indicate the pattern continues with renewals at the regular price.](https://developer.apple.com/images/com.apple.storekit/media-4311727@2x.png)
+
+## See Also
+
+### Getting payment modes
+
+- [freeTrial](freetrial.md): A payment mode of a product discount that indicates a free trial.
+- [payUpFront](payupfront.md): A payment mode of a product discount that applies the discount up front.
+- [oneTime](onetime.md): A payment mode for a consumable, non-consumable, or non-renewing subscription offer that indicates a one-time purchase.

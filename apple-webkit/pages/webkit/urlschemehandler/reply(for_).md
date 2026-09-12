@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/urlschemehandler/reply(for:)](https://developer.apple.com/documentation/webkit/urlschemehandler/reply(for:))
+
+# reply(for:)
+
+**Framework:** WebKit  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · visionOS 26.0+
+
+Produces a sequence of intermixed responses and data to load a resource for a given request.
+
+## Declaration
+
+```swift
+func reply(for request: URLRequest) -> Self.TaskSequence
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Upon receiving the request, determine the size of the resource and add a [URLSchemeTaskResult.response(\_:)](../urlschemetaskresult/response%28__%29.md) value to the async sequence. Providing a response mirrors the behavior that a web server performs when it receives a request.
+
+After you load some portion of the resource data, add a [URLSchemeTaskResult.data(\_:)](../urlschemetaskresult/data%28__%29.md) value to the sequence. Multiple of these values may be added to the sequence to delivery data incrementally, or a single one with all of the data.
+
+If an error occurs at any point during the load process, a value of type `Failure` can be thrown to report it.

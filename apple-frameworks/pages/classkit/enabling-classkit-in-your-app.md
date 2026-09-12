@@ -1,0 +1,122 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/classkit/enabling-classkit-in-your-app](https://developer.apple.com/documentation/classkit/enabling-classkit-in-your-app)
+
+# Enabling ClassKit in your app (Swift)
+
+**Framework:** ClassKit
+
+Prepare your app and your development environment to adopt ClassKit.
+
+<a id="overview"></a>
+
+## Overview
+
+Adopting ClassKit allows your app to participate in a virtual classroom that spans many devices communicating through iCloud. To participate in this educational ecosystem, first enable the ClassKit capability. Then, to test your app’s interaction with this ecosystem, install Apple’s Schoolwork app on your development devices and simulate iCloud interaction by running in development mode.
+
+<a id="Enable-the-ClassKit-Capability"></a>
+
+### Enable the ClassKit Capability
+
+To gain access to the virtual classroom environment, enable the ClassKit capability for your app in Xcode.
+
+![Screenshot showing the ClassKit capability enabled in Xcode.](https://developer.apple.com/images/com.apple.classkit/media-2977078@2x.png)
+
+When you enable the ClassKit capability, Xcode automatically adds the [ClassKit Environment Entitlement](../bundleresources/entitlements/com.apple.developer.classkit-environment.md) to your entitlements file. It also adds the corresponding feature to your App ID. See [Add a Capability](https://help.apple.com/xcode/mac/current/#/dev88ff319e7) in Xcode help for more information about enabling capabilities.
+
+<a id="Install-the-Schoolwork-app-on-your-devices"></a>
+
+### Install the Schoolwork app on your devices
+
+The Schoolwork app provides the interface that teachers use to see what content your app offers, create assignments based on that content, and monitor student progress through those assignments. Students use the same app to receive assignments, and link directly to content in your app. Schoolwork provides both of these experiences by changing its behavior according to the role of the logged in user. For more information about user roles, see [About ClassKit and user roles](about-classkit-and-user-roles.md).
+
+To test your app’s ClassKit adoption, you install Schoolwork on your own development devices. This lets you validate the data your app sends to ClassKit. It also lets you experience what teachers and students see when they use your app in an educational environment.
+
+To get Schoolwork, download it from the [App Store](https://itunes.apple.com/us/app/schoolwork/id1355112526?ls=1&mt=8).
+
+> **Note**
+
+>  You can’t test ClassKit behavior in Simulator because Schoolwork isn’t available in that environment.
+
+<a id="Use-development-mode-to-test-locally"></a>
+
+### Use development mode to test locally
+
+When you distribute your ClassKit enabled app through the App Store, it runs in *production mode*. In this mode, assigments made by teachers propagate to students’ devices, and progress returns to the teacher’s device through iCloud. But during development, you might not have access to a classroom full of managed devices. So you test in *development mode*, storing all data locally on a single device, switching between teacher and student roles as needed. Xcode automatically handles the mode selection for you, but you control the role (student or teacher) in development mode, as described in [Testing your ClassKit app during development](testing-your-classkit-app-during-development.md).
+
+## Topics
+
+### Development mode
+
+- [Testing your ClassKit app during development](testing-your-classkit-app-during-development.md): Use development mode to test your app without a Managed Apple ID.
+
+### User roles
+
+- [About ClassKit and user roles](about-classkit-and-user-roles.md): Understand how ClassKit interacts with different kinds of users.
+
+## See Also
+
+### Essentials
+
+- [ClassKit Environment Entitlement](../bundleresources/entitlements/com.apple.developer.classkit-environment.md): The ClassKit development or production environment for an education app that works with the Schoolwork app.
+- [Incorporating ClassKit into an Educational App](incorporating-classkit-into-an-educational-app.md): Walk through the process of setting up assignments and recording student progress.
+- [ClassKit UI](../classkitui.md): Display views that enable students to submit and withdraw assigned documents in your app.
+- [CLSDataStore](clsdatastore.md): A container for all the ClassKit data in your app.
+
+# Enabling ClassKit in your app (Objective-C)
+
+**Framework:** ClassKit
+
+Prepare your app and your development environment to adopt ClassKit.
+
+<a id="overview"></a>
+
+## Overview
+
+Adopting ClassKit allows your app to participate in a virtual classroom that spans many devices communicating through iCloud. To participate in this educational ecosystem, first enable the ClassKit capability. Then, to test your app’s interaction with this ecosystem, install Apple’s Schoolwork app on your development devices and simulate iCloud interaction by running in development mode.
+
+<a id="Enable-the-ClassKit-Capability"></a>
+
+### Enable the ClassKit Capability
+
+To gain access to the virtual classroom environment, enable the ClassKit capability for your app in Xcode.
+
+![Screenshot showing the ClassKit capability enabled in Xcode.](https://developer.apple.com/images/com.apple.classkit/media-2977078@2x.png)
+
+When you enable the ClassKit capability, Xcode automatically adds the [ClassKit Environment Entitlement](../bundleresources/entitlements/com.apple.developer.classkit-environment.md) to your entitlements file. It also adds the corresponding feature to your App ID. See [Add a Capability](https://help.apple.com/xcode/mac/current/#/dev88ff319e7) in Xcode help for more information about enabling capabilities.
+
+<a id="Install-the-Schoolwork-app-on-your-devices"></a>
+
+### Install the Schoolwork app on your devices
+
+The Schoolwork app provides the interface that teachers use to see what content your app offers, create assignments based on that content, and monitor student progress through those assignments. Students use the same app to receive assignments, and link directly to content in your app. Schoolwork provides both of these experiences by changing its behavior according to the role of the logged in user. For more information about user roles, see [About ClassKit and user roles](about-classkit-and-user-roles.md).
+
+To test your app’s ClassKit adoption, you install Schoolwork on your own development devices. This lets you validate the data your app sends to ClassKit. It also lets you experience what teachers and students see when they use your app in an educational environment.
+
+To get Schoolwork, download it from the [App Store](https://itunes.apple.com/us/app/schoolwork/id1355112526?ls=1&mt=8).
+
+> **Note**
+
+>  You can’t test ClassKit behavior in Simulator because Schoolwork isn’t available in that environment.
+
+<a id="Use-development-mode-to-test-locally"></a>
+
+### Use development mode to test locally
+
+When you distribute your ClassKit enabled app through the App Store, it runs in *production mode*. In this mode, assigments made by teachers propagate to students’ devices, and progress returns to the teacher’s device through iCloud. But during development, you might not have access to a classroom full of managed devices. So you test in *development mode*, storing all data locally on a single device, switching between teacher and student roles as needed. Xcode automatically handles the mode selection for you, but you control the role (student or teacher) in development mode, as described in [Testing your ClassKit app during development](testing-your-classkit-app-during-development.md).
+
+## Topics
+
+### Development mode
+
+- [Testing your ClassKit app during development](testing-your-classkit-app-during-development.md): Use development mode to test your app without a Managed Apple ID.
+
+### User roles
+
+- [About ClassKit and user roles](about-classkit-and-user-roles.md): Understand how ClassKit interacts with different kinds of users.
+
+## See Also
+
+### Essentials
+
+- [ClassKit Environment Entitlement](../bundleresources/entitlements/com.apple.developer.classkit-environment.md): The ClassKit development or production environment for an education app that works with the Schoolwork app.
+- [Incorporating ClassKit into an Educational App](incorporating-classkit-into-an-educational-app.md): Walk through the process of setting up assignments and recording student progress.
+- [CLSDataStore](clsdatastore.md): A container for all the ClassKit data in your app.

@@ -1,0 +1,38 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/scsiperipheralsdriverkit/scsitype05inparameters](https://developer.apple.com/documentation/scsiperipheralsdriverkit/scsitype05inparameters)
+
+# SCSIType05InParameters
+
+**Interface language:** Objective-C
+
+**Framework:** SCSIPeripheralsDriverKit  
+**Kind:** Structure  
+**Availability:** DriverKit 22.0+
+
+Parameters for responses from the external SCSI device.
+
+## Declaration
+
+```objectivec
+struct SCSIType05InParameters;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This type contains all the fields from [SCSIDeviceInParameters](scsideviceinparameters.md), typed for use only with [IOUserSCSIPeripheralDeviceType05](iouserscsiperipheraldevicetype05.md) devices.
+
+## Relationships
+
+### Inherits From
+
+- [SCSIDeviceInParameters](scsideviceinparameters.md)
+
+## See Also
+
+### Sending commands to the device
+
+- [UserSendCDB](iouserscsiperipheraldevicetype05/usersendcdb.md): Sends a vendor-specific Command Descriptor Block (CDB) to the device.
+- [SCSIType05OutParameters](scsitype05outparameters.md): Parameters for commands to send to the external SCSI device.
+- [SCSIType05OutVersion](scsitype05outversion.md): Constants that represent versions of the type 05 outbound interface.
+- [SCSIType05InVersion](scsitype05inversion.md): Constants that represent versions of the type 05 inbound interface.

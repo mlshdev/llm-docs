@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tabletopkit/tabletopaction/updateequipment(_:state:context:)-6kawf](https://developer.apple.com/documentation/tabletopkit/tabletopaction/updateequipment(_:state:context:)-6kawf)
+
+# updateEquipment(\_:state:context:)
+
+**Framework:** TabletopKit  
+**Kind:** Type Method  
+**Availability:** visionOS 2.0+
+
+## Declaration
+
+```swift
+static func updateEquipment<E>(_ equipment: E, state: E.State, context: UInt64 = 0) -> Self where E : Equipment, E.State == CardState
+```
+
+## See Also
+
+### Changing equipment state properties
+
+- [updateEquipment(\_:faceUp:seatControl:pose:boundingBox:context:)](updateequipment%28__faceup_seatcontrol_pose_boundingbox_context_%29.md): Conforms when `Self` is `UpdateEquipmentAction<CardState>`.
+- [updateEquipment(\_:rawValue:seatControl:pose:boundingBox:context:)](updateequipment%28__rawvalue_seatcontrol_pose_boundingbox_context_%29.md): Conforms when `Self` is `UpdateEquipmentAction<RawValueState>`.
+- [updateEquipment(\_:seatControl:pose:boundingBox:context:)](updateequipment%28__seatcontrol_pose_boundingbox_context_%29.md): Conforms when `Self` is `UpdateEquipmentAction<BaseEquipmentState>`.
+- [updateEquipment(\_:state:context:)](updateequipment%28__state_context_%29-88v3m.md): Conforms when `Self` is `UpdateEquipmentAction<DieState>`.
+- [updateEquipment(\_:state:context:)](updateequipment%28__state_context_%29-8tmnn.md): Conforms when `Self` is `UpdateEquipmentAction<RawValueState>`.
+- [updateEquipment(\_:state:context:)](updateequipment%28__state_context_%29-j62v.md): Conforms when `Self` is `UpdateEquipmentAction<BaseEquipmentState>`.
+- [updateEquipment(\_:value:seatControl:pose:boundingBox:context:)](updateequipment%28__value_seatcontrol_pose_boundingbox_context_%29.md): Conforms when `Self` is `UpdateEquipmentAction<DieState>`.

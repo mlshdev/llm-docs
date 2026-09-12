@@ -1,0 +1,346 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/hkglasseslensspecification](https://developer.apple.com/documentation/healthkit/hkglasseslensspecification)
+
+# HKGlassesLensSpecification (Swift)
+
+**Framework:** HealthKit  
+**Kind:** Class  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · visionOS 1.0+ · watchOS 9.0+
+
+An object that contains the glasses prescription data for one eye.
+
+## Declaration
+
+```swift
+class HKGlassesLensSpecification
+```
+
+<a id="overview"></a>
+
+## Overview
+
+To create a sample that stores a glasses prescription, start by defining a specification for each eye. Each lens specification object requires a `sphere` parameter. This measures the lens’s strength for correcting either nearsightedness or farsightedness (measured in [diopter()](hkunit/diopter%28%29.md) units).
+
+```swift
+// The correction for farsightedness.
+let sphere = HKQuantity(unit: .diopter(), doubleValue: -0.75)
+```
+
+Next, create values for any of the prescription’s optional parameters. For example, if the prescription corrects for astigmatism, create the `cylinder` and `axis` values. The `cylinder` value uses [diopter()](hkunit/diopter%28%29.md) units, while the `axis` uses [degreeAngle()](hkunit/degreeangle%28%29.md).
+
+```swift
+// The corrections for astigmatism.
+let cylinder = HKQuantity(unit: .diopter(), doubleValue: -0.5)
+let axis = HKQuantity(unit: .degreeAngle(), doubleValue: 155.0)
+```
+
+To add a multifocal correction for reading, create an `addPower` value using [diopter()](hkunit/diopter%28%29.md) units.
+
+```swift
+// Multifocal correction for reading.
+let addPower = HKQuantity(unit: .diopter(), doubleValue: +2.00)
+```
+
+To add a correction for eye alignment, create an [HKVisionPrism](hkvisionprism.md) object.
+
+```swift
+// The correction for eye alignment.
+let prismQuantity = HKQuantity(unit: .prismDiopter(), doubleValue: +0.25)
+let angle = HKQuantity(unit: .degreeAngle(), doubleValue: 15.0)
+let prism = HKVisionPrism(amount: prismQuantity,
+                          angle: angle,
+                          eye: .right)
+```
+
+To add information about the distance between the eye and the back of the lens, or the pupil and the center of the nose, create `vertexDistance`, `nearDistance`, and `farDistance` values. All of these use millimeters.
+
+```swift
+// Distance between the back of the lens and the eye.
+let vertexDistance = HKQuantity(unit: HKUnit.meterUnit(with: .milli), doubleValue: 14.0)
+
+// Set the distance between the pupil and the center of the nose when looking at a nearby object.
+let nearDistance = HKQuantity(unit: HKUnit.meterUnit(with: .milli), doubleValue: 25.0)
+
+// Set the distance between the pupil and the center of the nose when looking far away.
+let farDistance = HKQuantity(unit: HKUnit.meterUnit(with: .milli), doubleValue: 27.0)
+```
+
+Then you can create the [HKGlassesLensSpecification](hkglasseslensspecification.md) lens specification.
+
+```swift
+// The prescription for the right eye.
+let glassesRightEye = HKGlassesLensSpecification(sphere: sphere,
+                                                 cylinder: cylinder,
+                                                 axis: axis,
+                                                 addPower: addPower,
+                                                 vertexDistance: vertexDistance,
+                                                 prism: prism,
+                                                 farPupillaryDistance: farDistance,
+                                                 nearPupillaryDistance: nearDistance)
+```
+
+After you create your lens specifications, you can create an [HKGlassesPrescription](hkglassesprescription.md) sample.
+
+```swift
+// The date the doctor issued the prescription.
+let dateIssued = Date()
+
+// The date when the prescription expires.
+let expirationDate = dateIssued.addingTimeInterval(60 * 24 * 365)
+
+// The glasses prescription.
+let prescription = HKGlassesPrescription(rightEyeSpecification: glassesRightEye,
+                                               leftEyeSpecification: glassesLeftEye,
+                                               dateIssued: dateIssued,
+                                               expirationDate: expirationDate,
+                                               device: HKDevice.local(),
+                                               metadata: nil)
+```
+
+Then save the sample to the HealthKit store.
+
+```swift
+// Save the sample to the HealthKit store.
+do {
+    try await store.save(prescription)
+} catch {
+    // Handle the error here.
+    fatalError("*** An error occurred while saving the prescription sample to the HealthKit store \(error.localizedDescription) ***")
+}
+```
+
+Finally, add an image or PDF of the prescription to the sample as an attachment.
+
+```swift
+// Get the attachment store.
+let attachmentStore = HKAttachmentStore(healthStore: store)
+
+// Attach the image to the sample.
+do {
+    _ = try await attachmentStore.addAttachment(to: prescription,
+                                                name: "Glasses Prescription",
+                                                contentType: type,
+                                                url: url)
+} catch {
+    // Handle the error.
+    fatalError("*** An error occurred while attaching the image: \(error.localizedDescription) ***")
+}
+```
+
+> **Important**
+
+>  Many regions require an image of the prescription to manufacture glasses or contacts. Add an image or pdf of the prescription as an attachment. For more information, see [HKAttachmentStore](hkattachmentstore.md).
+
+## Topics
+
+### Creating glasses lens specifications
+
+- [init(sphere:cylinder:axis:addPower:vertexDistance:prism:farPupillaryDistance:nearPupillaryDistance:)](hkglasseslensspecification/init%28sphere_cylinder_axis_addpower_vertexdistance_prism_farpupillarydistance_nearpupillarydistance_%29.md): Creates a new glasses lens specification, containing the prescription data for one eye.
+
+### Accessing the specification’s data
+
+- [farPupillaryDistance](hkglasseslensspecification/farpupillarydistance.md): The distance between the pupil and the center of the nose when looking at an object far away, measured in mm.
+- [nearPupillaryDistance](hkglasseslensspecification/nearpupillarydistance.md): The distance between the pupil and the center of the nose when looking at a nearby object, measured in mm.
+- [prism](hkglasseslensspecification/prism.md): An object that contains information about the eye alignment correction.
+- [vertexDistance](hkglasseslensspecification/vertexdistance.md): The distance between the back of the lens and the eye, measured in mm.
+
+### Initializers
+
+- [init(coder:)](hkglasseslensspecification/init%28coder_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [HKLensSpecification](hklensspecification.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCoding](../foundation/nscoding.md)
+- [NSCopying](../foundation/nscopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [NSSecureCoding](../foundation/nssecurecoding.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Vision prescriptions
+
+- [HKVisionPrescription](hkvisionprescription.md): A sample that stores a vision prescription.
+- [HKGlassesPrescription](hkglassesprescription.md): A sample that stores a prescription for glasses.
+- [HKContactsPrescription](hkcontactsprescription.md): A sample that store a prescription for contacts.
+- [HKContactsLensSpecification](hkcontactslensspecification.md): An object that contains the contacts prescription data for one eye.
+- [HKLensSpecification](hklensspecification.md): An abstract superclass for lens specifications.
+- [HKVisionPrism](hkvisionprism.md): Prescription data for eye alignment.
+- [HKPrescriptionType](hkprescriptiontype.md): A type that identifies samples that store a prescription.
+
+# HKGlassesLensSpecification (Objective-C)
+
+**Framework:** HealthKit  
+**Kind:** Class  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · visionOS 1.0+ · watchOS 9.0+
+
+An object that contains the glasses prescription data for one eye.
+
+## Declaration
+
+```objectivec
+@interface HKGlassesLensSpecification : HKLensSpecification
+```
+
+<a id="overview"></a>
+
+## Overview
+
+To create a sample that stores a glasses prescription, start by defining a specification for each eye. Each lens specification object requires a `sphere` parameter. This measures the lens’s strength for correcting either nearsightedness or farsightedness (measured in [diopterUnit](hkunit/diopter%28%29.md) units).
+
+```swift
+// The correction for farsightedness.
+let sphere = HKQuantity(unit: .diopter(), doubleValue: -0.75)
+```
+
+Next, create values for any of the prescription’s optional parameters. For example, if the prescription corrects for astigmatism, create the `cylinder` and `axis` values. The `cylinder` value uses [diopterUnit](hkunit/diopter%28%29.md) units, while the `axis` uses [degreeAngleUnit](hkunit/degreeangle%28%29.md).
+
+```swift
+// The corrections for astigmatism.
+let cylinder = HKQuantity(unit: .diopter(), doubleValue: -0.5)
+let axis = HKQuantity(unit: .degreeAngle(), doubleValue: 155.0)
+```
+
+To add a multifocal correction for reading, create an `addPower` value using [diopterUnit](hkunit/diopter%28%29.md) units.
+
+```swift
+// Multifocal correction for reading.
+let addPower = HKQuantity(unit: .diopter(), doubleValue: +2.00)
+```
+
+To add a correction for eye alignment, create an [HKVisionPrism](hkvisionprism.md) object.
+
+```swift
+// The correction for eye alignment.
+let prismQuantity = HKQuantity(unit: .prismDiopter(), doubleValue: +0.25)
+let angle = HKQuantity(unit: .degreeAngle(), doubleValue: 15.0)
+let prism = HKVisionPrism(amount: prismQuantity,
+                          angle: angle,
+                          eye: .right)
+```
+
+To add information about the distance between the eye and the back of the lens, or the pupil and the center of the nose, create `vertexDistance`, `nearDistance`, and `farDistance` values. All of these use millimeters.
+
+```swift
+// Distance between the back of the lens and the eye.
+let vertexDistance = HKQuantity(unit: HKUnit.meterUnit(with: .milli), doubleValue: 14.0)
+
+// Set the distance between the pupil and the center of the nose when looking at a nearby object.
+let nearDistance = HKQuantity(unit: HKUnit.meterUnit(with: .milli), doubleValue: 25.0)
+
+// Set the distance between the pupil and the center of the nose when looking far away.
+let farDistance = HKQuantity(unit: HKUnit.meterUnit(with: .milli), doubleValue: 27.0)
+```
+
+Then you can create the [HKGlassesLensSpecification](hkglasseslensspecification.md) lens specification.
+
+```swift
+// The prescription for the right eye.
+let glassesRightEye = HKGlassesLensSpecification(sphere: sphere,
+                                                 cylinder: cylinder,
+                                                 axis: axis,
+                                                 addPower: addPower,
+                                                 vertexDistance: vertexDistance,
+                                                 prism: prism,
+                                                 farPupillaryDistance: farDistance,
+                                                 nearPupillaryDistance: nearDistance)
+```
+
+After you create your lens specifications, you can create an [HKGlassesPrescription](hkglassesprescription.md) sample.
+
+```swift
+// The date the doctor issued the prescription.
+let dateIssued = Date()
+
+// The date when the prescription expires.
+let expirationDate = dateIssued.addingTimeInterval(60 * 24 * 365)
+
+// The glasses prescription.
+let prescription = HKGlassesPrescription(rightEyeSpecification: glassesRightEye,
+                                               leftEyeSpecification: glassesLeftEye,
+                                               dateIssued: dateIssued,
+                                               expirationDate: expirationDate,
+                                               device: HKDevice.local(),
+                                               metadata: nil)
+```
+
+Then save the sample to the HealthKit store.
+
+```swift
+// Save the sample to the HealthKit store.
+do {
+    try await store.save(prescription)
+} catch {
+    // Handle the error here.
+    fatalError("*** An error occurred while saving the prescription sample to the HealthKit store \(error.localizedDescription) ***")
+}
+```
+
+Finally, add an image or PDF of the prescription to the sample as an attachment.
+
+```swift
+// Get the attachment store.
+let attachmentStore = HKAttachmentStore(healthStore: store)
+
+// Attach the image to the sample.
+do {
+    _ = try await attachmentStore.addAttachment(to: prescription,
+                                                name: "Glasses Prescription",
+                                                contentType: type,
+                                                url: url)
+} catch {
+    // Handle the error.
+    fatalError("*** An error occurred while attaching the image: \(error.localizedDescription) ***")
+}
+```
+
+> **Important**
+
+>  Many regions require an image of the prescription to manufacture glasses or contacts. Add an image or pdf of the prescription as an attachment. For more information, see [HKAttachmentStore](hkattachmentstore.md).
+
+## Topics
+
+### Creating glasses lens specifications
+
+- [initWithSphere:cylinder:axis:addPower:vertexDistance:prism:farPupillaryDistance:nearPupillaryDistance:](hkglasseslensspecification/init%28sphere_cylinder_axis_addpower_vertexdistance_prism_farpupillarydistance_nearpupillarydistance_%29.md): Creates a new glasses lens specification, containing the prescription data for one eye.
+
+### Accessing the specification’s data
+
+- [farPupillaryDistance](hkglasseslensspecification/farpupillarydistance.md): The distance between the pupil and the center of the nose when looking at an object far away, measured in mm.
+- [nearPupillaryDistance](hkglasseslensspecification/nearpupillarydistance.md): The distance between the pupil and the center of the nose when looking at a nearby object, measured in mm.
+- [prism](hkglasseslensspecification/prism.md): An object that contains information about the eye alignment correction.
+- [vertexDistance](hkglasseslensspecification/vertexdistance.md): The distance between the back of the lens and the eye, measured in mm.
+
+## Relationships
+
+### Inherits From
+
+- [HKLensSpecification](hklensspecification.md)
+
+### Conforms To
+
+- [NSCopying](../foundation/nscopying.md)
+- [NSSecureCoding](../foundation/nssecurecoding.md)
+
+## See Also
+
+### Vision prescriptions
+
+- [HKVisionPrescription](hkvisionprescription.md): A sample that stores a vision prescription.
+- [HKGlassesPrescription](hkglassesprescription.md): A sample that stores a prescription for glasses.
+- [HKContactsPrescription](hkcontactsprescription.md): A sample that store a prescription for contacts.
+- [HKContactsLensSpecification](hkcontactslensspecification.md): An object that contains the contacts prescription data for one eye.
+- [HKLensSpecification](hklensspecification.md): An abstract superclass for lens specifications.
+- [HKVisionPrism](hkvisionprism.md): Prescription data for eye alignment.
+- [HKPrescriptionType](hkprescriptiontype.md): A type that identifies samples that store a prescription.

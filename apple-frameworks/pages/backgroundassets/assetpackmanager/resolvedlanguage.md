@@ -1,0 +1,32 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/backgroundassets/assetpackmanager/resolvedlanguage](https://developer.apple.com/documentation/backgroundassets/assetpackmanager/resolvedlanguage)
+
+# resolvedLanguage
+
+**Framework:** Background Assets  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+The language that best matches current preferences and for which the system automatically makes localized asset packs available locally.
+
+## Declaration
+
+```swift
+nonisolated var resolvedLanguage: Locale.Language? { get set }
+```
+
+## Mentioned In
+
+- [Reducing download and storage demands with localized asset packs](../reducing-download-and-storage-demands-with-localized-asset-packs.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+The preferred languages set in Settings or System Settings inform the choice of resolved language, respecting any language that your app sets manually by setting this property. This property may be `nil` if no localized asset packs are available. You can manually set this property to `nil` to revert to the system-wide language preference. If a person using the device recently changed their preferred language, then this property’s value might be temporarily out of sync with the set of asset packs that are available locally. Setting the language doesn’t immediately download or remove any asset packs; call [reconcilePreferredLanguages()](reconcilepreferredlanguages%28%29.md) to reconcile the set of downloaded asset packs with the new configuration.
+
+## See Also
+
+### Inspecting language support
+
+- [locallyAvailableLanguages](locallyavailablelanguages.md): The languages used by asset packs that are localized and are available locally.
+- [reconcilePreferredLanguages()](reconcilepreferredlanguages%28%29.md): Reconciles the set of locally available asset packs with the current preferred languages.

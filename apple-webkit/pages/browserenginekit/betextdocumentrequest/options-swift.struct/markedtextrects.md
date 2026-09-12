@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/browserenginekit/betextdocumentrequest/options-swift.struct/markedtextrects](https://developer.apple.com/documentation/browserenginekit/betextdocumentrequest/options-swift.struct/markedtextrects)
+
+# markedTextRects (Swift)
+
+**Framework:** BrowserEngineKit  
+**Kind:** Type Property  
+**Availability:** iOS 17.4+ · iPadOS 17.4+ · tvOS 17.4+ · visionOS 1.1+
+
+An option that requests the rectangular bounds of marked text regions.
+
+## Declaration
+
+```swift
+static var markedTextRects: BETextDocumentRequest.Options { get }
+```
+
+## See Also
+
+### Getting geometric information
+
+- [textRects](textrects.md): An option that requests the rectangular bounds of text within a document’s layout.
+
+# BETextDocumentOptionMarkedTextRects (Objective-C)
+
+**Framework:** BrowserEngineKit  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.4+ · iPadOS 17.4+ · tvOS 17.4+ · visionOS 1.1+
+
+An option that requests the rectangular bounds of marked text regions.
+
+## Declaration
+
+```objectivec
+BETextDocumentOptionMarkedTextRects
+```
+
+## See Also
+
+### Getting geometric information
+
+- [BETextDocumentOptionTextRects](textrects.md): An option that requests the rectangular bounds of text within a document’s layout.

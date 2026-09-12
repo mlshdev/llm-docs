@@ -1,0 +1,53 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/toggle/init(_:image:sources:ison:)](https://developer.apple.com/documentation/swiftui/toggle/init(_:image:sources:ison:))
+
+# init(\_:image:sources:isOn:)
+
+**Framework:** SwiftUI  
+**Kind:** Initializer  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+Creates a toggle representing a collection of values that generates its label from a localized string resource and image resource.
+
+## Declaration
+
+```swift
+@export(implementation) nonisolated init<C>(_ titleResource: LocalizedStringResource, image: ImageResource, sources: C, isOn: KeyPath<C.Element, Binding<Bool>>) where C : RandomAccessCollection
+```
+
+## Parameters
+
+- `titleResource`: Text resource for the toggle’s localized title, that describes the purpose of the toggle.
+- `image`: The name of the image resource to lookup.
+- `sources`: A collection of values used as the source for rendering the Toggle’s state.
+- `isOn`: The key path of the values that determines whether the toggle is on, mixed or off.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This initializer creates a [Text](../text.md) view on your behalf. See `Text` for more information about localizing strings.
+
+The following example creates a single toggle that represents the state of multiple alarms:
+
+```swift
+struct Alarm: Hashable, Identifiable {
+    var id = UUID()
+    var isOn = false
+    var name = ""
+}
+
+@State private var alarms = [
+    Alarm(isOn: true, name: "Morning"),
+    Alarm(isOn: false, name: "Evening")
+]
+
+Toggle("Enable all alarms", sources: $alarms, isOn: \.isOn)
+```
+
+## See Also
+
+### Creating a toggle for a collection
+
+- [init(\_:sources:isOn:)](init%28__sources_ison_%29.md): Conforms when `Label` is `Text`. Creates a toggle representing a collection of values that generates its label from a localized string resource.
+- [init(sources:isOn:label:)](init%28sources_ison_label_%29.md): Creates a toggle representing a collection of values with a custom label.
+- [init(\_:systemImage:sources:isOn:)](init%28__systemimage_sources_ison_%29.md): Conforms when `Label` is `Label<Text, Image>`. Creates a toggle representing a collection of values that generates its label from a localized string key and system image.

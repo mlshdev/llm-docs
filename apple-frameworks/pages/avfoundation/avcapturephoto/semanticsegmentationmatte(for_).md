@@ -1,0 +1,69 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avcapturephoto/semanticsegmentationmatte(for:)](https://developer.apple.com/documentation/avfoundation/avcapturephoto/semanticsegmentationmatte(for:))
+
+# semanticSegmentationMatte(for:) (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+Retrieves the semantic segmentation matte associated with this photo.
+
+## Declaration
+
+```swift
+func semanticSegmentationMatte(for semanticSegmentationMatteType: AVSemanticSegmentationMatte.MatteType) -> AVSemanticSegmentationMatte?
+```
+
+## Parameters
+
+- `semanticSegmentationMatteType`: The type of semantic segmentation matte to retrieve from the photo.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An instance of [AVSemanticSegmentationMatte](../avsemanticsegmentationmatte.md), or `nil` of you didn’t request semantic segmentation matte delivery or if no mattes of the specified type were found.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If you requested one or more semantic segmentation mattes by calling [enabledSemanticSegmentationMatteTypes](../avcapturephotosettings/enabledsemanticsegmentationmattetypes.md) with a nonempty array of types, this property offers access to the resulting [AVSemanticSegmentationMatte](../avsemanticsegmentationmatte.md) objects.
+
+> **Note**
+
+>  Semantic segmentation mattes are only embedded in the photo’s internal file format container if you set [embedsSemanticSegmentationMattesInPhoto](../avcapturephotosettings/embedssemanticsegmentationmattesinphoto.md) to [true](https://developer.apple.com/documentation/swift/true).
+
+# semanticSegmentationMatteForType: (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 14.0+ · tvOS 17.0+
+
+Retrieves the semantic segmentation matte associated with this photo.
+
+## Declaration
+
+```objectivec
+- (AVSemanticSegmentationMatte *) semanticSegmentationMatteForType:(AVSemanticSegmentationMatteType) semanticSegmentationMatteType;
+```
+
+## Parameters
+
+- `semanticSegmentationMatteType`: The type of semantic segmentation matte to retrieve from the photo.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An instance of [AVSemanticSegmentationMatte](../avsemanticsegmentationmatte.md), or `nil` of you didn’t request semantic segmentation matte delivery or if no mattes of the specified type were found.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If you requested one or more semantic segmentation mattes by calling [enabledSemanticSegmentationMatteTypes](../avcapturephotosettings/enabledsemanticsegmentationmattetypes.md) with a nonempty array of types, this property offers access to the resulting [AVSemanticSegmentationMatte](../avsemanticsegmentationmatte.md) objects.
+
+> **Note**
+
+>  Semantic segmentation mattes are only embedded in the photo’s internal file format container if you set [embedsSemanticSegmentationMattesInPhoto](../avcapturephotosettings/embedssemanticsegmentationmattesinphoto.md) to [true](https://developer.apple.com/documentation/swift/true).

@@ -1,0 +1,45 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nscell/tag](https://developer.apple.com/documentation/appkit/nscell/tag)
+
+# tag (Swift)
+
+**Framework:** AppKit  
+**Kind:** Instance Property  
+**Availability:** macOS
+
+A tag for identifying the cell.
+
+## Declaration
+
+```swift
+var tag: Int { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Tags allow you to identify particular cells. Tag values are not used internally by AppKit. You typically set tag values in Interface Builder and use them at runtime in your application. When you set the tag of a control with a single cell in Interface Builder, it sets the tags of both the control and the cell to the same value as a convenience.
+
+The default value of this property is `-1`. Setting the value of this property raises with [internalInconsistencyException](https://developer.apple.com/documentation/foundation/nsexceptionname/internalinconsistencyexception). Subclasses are expected to override this property if they support tags. The [NSActionCell](../nsactioncell.md) class implements this property and stores the integer you specify.
+
+# tag (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Property  
+**Availability:** macOS
+
+A tag for identifying the cell.
+
+## Declaration
+
+```objectivec
+@property NSInteger tag;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Tags allow you to identify particular cells. Tag values are not used internally by AppKit. You typically set tag values in Interface Builder and use them at runtime in your application. When you set the tag of a control with a single cell in Interface Builder, it sets the tags of both the control and the cell to the same value as a convenience.
+
+The default value of this property is `-1`. Setting the value of this property raises with [NSInternalInconsistencyException](https://developer.apple.com/documentation/foundation/nsexceptionname/internalinconsistencyexception). Subclasses are expected to override this property if they support tags. The [NSActionCell](../nsactioncell.md) class implements this property and stores the integer you specify.

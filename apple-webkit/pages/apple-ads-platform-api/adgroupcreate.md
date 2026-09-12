@@ -1,0 +1,118 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/adgroupcreate](https://developer.apple.com/documentation/apple-ads-platform-api/adgroupcreate)
+
+# AdGroupCreate
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Object  
+**Availability:** Apple Ads Platform API 1.0+
+
+The request body for creating a new ad group.
+
+## Declaration
+
+```
+object AdGroupCreate
+```
+
+## Properties
+
+- `name` — `string` (required): The advertiser-given name of this ad group.
+  **Minimum length:** `1`
+- `campaignId` — `int64` (required): The campaign this ad group belongs to. Immutable after creation.
+- `startTime` — `date-time`: The scheduled start date and time of this ad group in ISO 8601 format.
+- `endTime` — `date-time`: The scheduled end date and time. Omit to inherit the campaign end date.
+- `pricingModel` — `AdGroupCreate.PricingModel` (required): The pricing model for this ad group (`CPA`, `CPM`, or `CPT`). Must match the campaign’s billing event: `CPT` pairs with `billingEvent: TAPS`, `CPM` pairs with `billingEvent: IMPRESSIONS`. See [PricingModel](pricingmodel.md). Immutable after creation.
+- `automatedKeywordsOptIn` — `boolean`: Auto opt-in for Search Match. When enabled, the system automatically targets additional relevant search terms beyond the explicit keyword list.
+- `status` — `AdGroupCreate.Status`: Advertiser-configurable serving status. No default is applied when this field is omitted. See [AdGroupStatus](adgroupstatus.md).
+- `automatedKeywordsRequired` — `boolean`: Whether automated keyword generation is required for this ad group.
+- `bidStrategy` — `AdGroupCreate.BidStrategy`: The bid strategy for this ad group. If omitted, the campaign-level bid strategy applies. See [BidStrategyCreate](bidstrategycreate.md).
+- `targeting` — `AdGroupCreate.Targeting`: Audience and placement targeting for this ad group (device class, age, gender, location, etc.). See [AdGroupTargetingCreate](adgrouptargetingcreate.md).
+- `cpaCap` — `AdGroupCreate.CpaCap`: Deprecated. Use `bidStrategy` with `MAX_CONVERSIONS` instead. See [CPAGoalCreate](cpagoalcreate.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The `AdGroupCreate` object is the request payload for creating a new ad group via `POST /v1/adgroups` ([Create an Ad Group](post-adgroups.md)).
+
+You can’t create keywords or negative keywords inline. Create the ad group first, then add keywords and negative keywords with separate calls.
+
+<a id="Example"></a>
+
+### Example
+
+```json
+{
+  "name": "AwayFinder iOS — New Users 18-34",
+  "campaignId": 444555666,
+  "startTime": "2025-09-01T00:00:00.000",
+  "endTime": "2025-12-31T23:59:59.000",
+  "pricingModel": "CPT",
+  "automatedKeywordsOptIn": false,
+  "status": "ENABLED",
+  "automatedKeywordsRequired": false,
+  "bidStrategy": {
+    "bidStrategyType": "MANUAL_CPT",
+    "bidStrategyGoal": "TAP",
+    "bid": {
+      "amount": "2.50",
+      "currency": "USD"
+    }
+  },
+  "targeting": {
+    "deviceClass": {
+      "include": [
+        "IPHONE"
+      ]
+    },
+    "minAge": {
+      "include": [
+        "18"
+      ]
+    },
+    "maxAge": {
+      "include": [
+        "34"
+      ]
+    },
+    "appDownloader": {
+      "include": [
+        "123456789"
+      ]
+    }
+  }
+}
+```
+
+## Topics
+
+### Dictionaries
+
+- [AdGroupCreate.BidStrategy](adgroupcreate/bidstrategy-data.dictionary.md): The creation payload for configuring a bid strategy on an ad group or campaign.
+- [AdGroupCreate.CpaCap](adgroupcreate/cpacap-data.dictionary.md): Deprecated. The deprecated request payload for setting a cost-per-acquisition goal. Use `bidStrategy` with `MAX_CONVERSIONS` instead.
+- [AdGroupCreate.Targeting](adgroupcreate/targeting-data.dictionary.md): The targeting configuration for creating a new ad group, specifying audience dimensions to include or exclude.
+
+### Type Aliases
+
+- [AdGroupCreate.PricingModel](adgroupcreate/pricingmodel-data.typealias.md): The unit of ad delivery an ad group is charged for, independent of how the account funds spend.
+- [AdGroupCreate.Status](adgroupcreate/status-data.typealias.md): Advertiser-configurable serving status for an ad group.
+
+## See Also
+
+- [AdGroup](adgroup.md): Primary unit governing targeting, bid strategy, pricing model, and scheduling within a campaign.
+- [AdGroupUpdate](adgroupupdate.md): The request body for updating an existing ad group.
+- [AdGroupResponse](adgroupresponse.md): The response object for an ad group operation.
+- [AdGroupQueryResponse](adgroupqueryresponse.md): The response object for an ad group query, containing matched results and pagination metadata.
+- [AdGroupTargeting](adgrouptargeting.md): The comprehensive audience and placement configuration for an ad group.
+- [AdGroupTargetingCreate](adgrouptargetingcreate.md): The targeting configuration for creating a new ad group, specifying audience dimensions to include or exclude.
+- [AdGroupTargetingUpdate](adgrouptargetingupdate.md): The targeting configuration for updating an existing ad group, specifying audience dimensions to include or exclude.
+- [BidStrategy](bidstrategy.md): Defines how an ad group or campaign competes in auctions, including bid type, optimization goal, and bid amount.
+- [BidStrategyCreate](bidstrategycreate.md): The creation payload for configuring a bid strategy on an ad group or campaign.
+- [BidStrategyUpdate](bidstrategyupdate.md): The request body for updating a bid strategy on an ad group or campaign.
+- [CPAGoal](cpagoal.md): A deprecated cost-per-acquisition goal value. Use `bidStrategy` with `MAX_CONVERSIONS` instead.
+- [CPAGoalCreate](cpagoalcreate.md): The deprecated request payload for setting a cost-per-acquisition goal. Use `bidStrategy` with `MAX_CONVERSIONS` instead.
+- [CPAGoalUpdate](cpagoalupdate.md): The deprecated request payload for updating a cost-per-acquisition goal. Use `bidStrategy` with `MAX_CONVERSIONS` instead.
+- [TargetingData](targetingdata.md): The shared include and exclude pattern for all ad group and campaign targeting dimensions.
+- [TargetingDataCreate](targetingdatacreate.md): A targeting dimension value set for creating ad group or campaign targeting, specifying values to include or exclude.

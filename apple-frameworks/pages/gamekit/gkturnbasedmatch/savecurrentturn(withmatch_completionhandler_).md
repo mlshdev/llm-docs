@@ -1,0 +1,85 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/gamekit/gkturnbasedmatch/savecurrentturn(withmatch:completionhandler:)](https://developer.apple.com/documentation/gamekit/gkturnbasedmatch/savecurrentturn(withmatch:completionhandler:))
+
+# saveCurrentTurn(withMatch:completionHandler:) (Swift)
+
+**Framework:** GameKit  
+**Kind:** Instance Method  
+**Availability:** iOS 6.0+ · iPadOS 6.0+ · Mac Catalyst 13.1+ · macOS 10.8+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 3.0+
+
+Saves your match data in Game Center without ending the turn.
+
+## Declaration
+
+```swift
+func saveCurrentTurn(withMatch matchData: Data, completionHandler: (@Sendable ((any Error)?) -> Void)? = nil)
+```
+
+```swift
+func saveCurrentTurn(withMatch matchData: Data) async throws
+```
+
+## Parameters
+
+- `matchData`: Your game-specific data representing the match state. For example, include the current participant’s activity while taking their turn in this object. Don’t pass `nil` as this parameter.
+- `completionHandler`: The block that GameKit calls when it completes the request.
+
+  The block receives the following parameter:
+
+  - ***error***: Describes an error if it occurs, or `nil` if the operation completes.
+
+## Mentioned In
+
+- [Starting turn-based matches and passing turns between players](../starting-turn-based-matches-and-passing-turns-between-players.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Invoke this method only when the local player is the current participant. To receive turn-based events that this method generates, register a listener that conforms to the [GKTurnBasedEventListener](../gkturnbasedeventlistener.md) protocol with the local player. See [Starting turn-based matches and passing turns between players](../starting-turn-based-matches-and-passing-turns-between-players.md).
+
+## See Also
+
+### Ending Turns and Saving Data
+
+- [endTurn(withNextParticipants:turnTimeout:match:completionHandler:)](endturn%28withnextparticipants_turntimeout_match_completionhandler_%29.md): Passes the turn from the current participant to the next participant.
+- [Turn Timeouts](../turn-timeouts.md): A timeout for a player to take their turn.
+
+# saveCurrentTurnWithMatchData:completionHandler: (Objective-C)
+
+**Framework:** GameKit  
+**Kind:** Instance Method  
+**Availability:** iOS 6.0+ · iPadOS 6.0+ · Mac Catalyst 13.1+ · macOS 10.8+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 3.0+
+
+Saves your match data in Game Center without ending the turn.
+
+## Declaration
+
+```objectivec
+- (void) saveCurrentTurnWithMatchData:(NSData *) matchData completionHandler:(void (^)(NSError *error)) completionHandler;
+```
+
+## Parameters
+
+- `matchData`: Your game-specific data representing the match state. For example, include the current participant’s activity while taking their turn in this object. Don’t pass `nil` as this parameter.
+- `completionHandler`: The block that GameKit calls when it completes the request.
+
+  The block receives the following parameter:
+
+  - ***error***: Describes an error if it occurs, or `nil` if the operation completes.
+
+## Mentioned In
+
+- [Starting turn-based matches and passing turns between players](../starting-turn-based-matches-and-passing-turns-between-players.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Invoke this method only when the local player is the current participant. To receive turn-based events that this method generates, register a listener that conforms to the [GKTurnBasedEventListener](../gkturnbasedeventlistener.md) protocol with the local player. See [Starting turn-based matches and passing turns between players](../starting-turn-based-matches-and-passing-turns-between-players.md).
+
+## See Also
+
+### Ending Turns and Saving Data
+
+- [endTurnWithNextParticipants:turnTimeout:matchData:completionHandler:](endturn%28withnextparticipants_turntimeout_match_completionhandler_%29.md): Passes the turn from the current participant to the next participant.
+- [Turn Timeouts](../turn-timeouts.md): A timeout for a player to take their turn.

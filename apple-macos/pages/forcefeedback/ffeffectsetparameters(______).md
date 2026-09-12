@@ -1,0 +1,285 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/forcefeedback/ffeffectsetparameters(_:_:_:)](https://developer.apple.com/documentation/forcefeedback/ffeffectsetparameters(_:_:_:))
+
+# FFEffectSetParameters(\_:\_:\_:) (Swift)
+
+**Framework:** Force Feedback  
+**Kind:** Function  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+Sets the characteristics of an effect.
+
+## Declaration
+
+```swift
+func FFEffectSetParameters(_ effectReference: FFEffectObjectReference!, _ pFFEffect: UnsafeMutablePointer<FFEFFECT>!, _ flags: FFEffectParameterFlag) -> HRESULT
+```
+
+## Parameters
+
+- `effectReference`: An opaque reference handle to an effect object. This is obtained from a previous call to FFDeviceCreateEffect.
+- `pFFEffect`: Address of a FFEFFECT structure that contains effect information. The dwSize member must be filled in by the application before calling this method, as well as any members specified by corresponding bits in the flags parameter.
+- `flags`: Flags that specify which portions of the effect information are to be set and how the downloading of the parameters should be handled. The value can be 0 or one or more of the following constants:
+
+  FFEP_AXES
+
+  The cAxes and rgdwAxes members contain data.
+
+  FFEP_DIRECTION
+
+  The cAxes and rglDirection members contain data. The dwFlags member specifies (with FFEFF_CARTESIAN or FFEFF_POLAR) the coordinate system in which the values should be interpreted.
+
+  FFEP_DURATION
+
+  The dwDuration member contains data.
+
+  FFEP_ENVELOPE
+
+  The lpEnvelope member points to a FFENVELOPE structure that contains data. To detach any existing envelope from the effect, pass this flag and set the lpEnvelope member to NULL.
+
+  FFEP_GAIN
+
+  The dwGain member contains data.
+
+  FFEP_NODOWNLOAD
+
+  Suppress the automatic FFEffect_Download that is normally performed after the parameters are updated.
+
+  FFEP_NORESTART
+
+  Suppress the stopping and restarting of the effect to change parameters. See Remarks.
+
+  FFEP_SAMPLEPERIOD
+
+  The dwSamplePeriod member contains data.
+
+  FFEP_START
+
+  The effect is to be started (or restarted if it is currently playing) after the parameters are updated. By default, the play state of the effect is not altered.
+
+  FFEP_STARTDELAY
+
+  The dwStartDelay member contains data.
+
+  FFEP_TRIGGERBUTTON
+
+  The dwTriggerButton member contains data.
+
+  The dwTriggerRepeatInterval member contains data.
+
+  FFEP_TYPESPECIFICPARAMS
+
+  The lpvTypeSpecificParams and cbTypeSpecificParams members of the FFEFFECT structure contain the address and size of type-specific data for the effect.
+
+<a id="return-value"></a>
+
+## Return Value
+
+If the method succeeds, the return value is FF_OK. If the method fails, the return value can be one of the following error values:
+
+<a id="discussion"></a>
+
+## Discussion
+
+FFERR_INVALIDPARAM
+
+FFERR_UNSUPPORTEDAXIS
+
+FFERR_OUTOFMEMORY
+
+FFERR_DEVICEPAUSED
+
+FFERR_DEVICEFULL
+
+FFERR_INVALIDDOWNLOADID
+
+FFERR_INTERNAL
+
+FFERR_EFFECTTYPEMISMATCH
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The FFEffectSetParameters method automatically downloads the effect, but this behavior can be suppressed by setting the FFEP_NODOWNLOAD flag. If automatic download has been suppressed, you can manually download the effect by invoking the FFEffectDownload method.
+
+If the effect is playing while the parameters are changed, the new parameters take effect as if they were the parameters when the effect started.
+
+For example, suppose a periodic effect with a duration of three seconds is started. After two seconds, the direction of the effect is changed. The effect then continues for one additional second in the new direction. The envelope, phase, amplitude, and other parameters of the effect continue smoothly, as if the direction had not changed.
+
+In the same situation, if after two seconds the duration of the effect were changed to 1.5 seconds, the effect would stop.
+
+Normally, if the driver cannot update the parameters of a playing effect, the driver is permitted to stop the effect, update the parameters, and then restart the effect. Passing the FFEP_NORESTART flag suppresses this behavior. If the driver cannot update the parameters of an effect while it is playing, the error code FFERR_EFFECTPLAYING is returned, and the parameters are not updated.
+
+No more than one of the FFEP_NODOWNLOAD, FFEP_START, and FFEP_NORESTART flags should be set. (It is also valid to pass none of them.)
+
+These three flags control download and playback behavior as follows:
+
+If FFEP_NODOWNLOAD is set, the effect parameters are updated but not downloaded to the device.
+
+If the FFEP_START flag is set, the effect parameters are updated and downloaded to the device, and the effect is started just as if the FFEffect_Start method had been called with the dwIterations parameter set to 1 and with no flags. (Combining the update with FFEP_START is slightly faster than calling Start separately, because it requires less information to be transmitted to the device.)
+
+If neither FFEP_NODOWNLOAD nor FFEP_START is set and the effect is not playing, the parameters are updated and downloaded to the device.
+
+If neither FFEP_NODOWNLOAD nor FFEP_START is set and the effect is playing, the parameters are updated if the device supports on-the-fly updating. Otherwise the behavior depends on the state of the FFEP_NORESTART flag. If it is set, the error code FFERR_EFFECTPLAYING is returned. If it is clear, the effect is stopped, the parameters are updated, and the effect is restarted.
+
+## See Also
+
+### Miscellaneous
+
+- [FFCreateDevice(\_:\_:)](ffcreatedevice%28____%29.md): Creates a new API device object from an OS object in preparation to use the device for force feedback.
+- [FFDeviceCreateEffect(\_:\_:\_:\_:)](ffdevicecreateeffect%28________%29.md): Creates and initializes an instance of an effect identified by the effect UUID on the device.
+- [FFDeviceEscape(\_:\_:)](ffdeviceescape%28____%29.md): Sends a hardware-specific command to the device.
+- [FFDeviceGetForceFeedbackCapabilities(\_:\_:)](ffdevicegetforcefeedbackcapabilities%28____%29.md): Retrieves the device’s force feedback capabilities.
+- [FFDeviceGetForceFeedbackProperty(\_:\_:\_:\_:)](ffdevicegetforcefeedbackproperty%28________%29.md): Gets properties that define the device behavior.
+- [FFDeviceGetForceFeedbackState(\_:\_:)](ffdevicegetforcefeedbackstate%28____%29.md): Retrieves the state of the device’s force feedback system.
+- [FFDeviceReleaseEffect(\_:\_:)](ffdevicereleaseeffect%28____%29.md): Disposes of an API effect object created with FFDeviceCreateEffect.
+- [FFDeviceSendForceFeedbackCommand(\_:\_:)](ffdevicesendforcefeedbackcommand%28____%29.md): Sends a command to the device’s force feedback system.
+- [FFDeviceSetCooperativeLevel(\_:\_:\_:)](ffdevicesetcooperativelevel%28______%29.md): Function is unimplemented in version 1.0 of this API
+- [FFDeviceSetForceFeedbackProperty(\_:\_:\_:)](ffdevicesetforcefeedbackproperty%28______%29.md): Retrieves the device’s force feedback capabilities.
+- [FFEffectDownload(\_:)](ffeffectdownload%28__%29.md): Places the effect on the device. If the effect is already on the device, the existing effect is updated to match the values set by the FFEffectSetParameters method.
+- [FFEffectEscape(\_:\_:)](ffeffectescape%28____%29.md): Sends a hardware-specific command to the driver.
+- [FFEffectGetEffectStatus(\_:\_:)](ffeffectgeteffectstatus%28____%29.md): Sends a hardware-specific command to the driver.
+- [FFEffectGetParameters(\_:\_:\_:)](ffeffectgetparameters%28______%29.md): Retrieves information about an effect.
+- [FFEffectStart(\_:\_:\_:)](ffeffectstart%28______%29.md): Begins playing an effect. If the effect is already playing, it is restarted from the beginning. If the effect has not been downloaded or has been modified since its last download, it is downloaded before being started. This default behavior can be suppressed by passing the FFES_NODOWNLOAD flag.
+
+# FFEffectSetParameters (Objective-C)
+
+**Framework:** Force Feedback  
+**Kind:** Function  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+Sets the characteristics of an effect.
+
+## Declaration
+
+```objectivec
+extern HRESULT FFEffectSetParameters(FFEffectObjectReference effectReference, FFEFFECT *pFFEffect, FFEffectParameterFlag flags);
+```
+
+## Parameters
+
+- `effectReference`: An opaque reference handle to an effect object. This is obtained from a previous call to FFDeviceCreateEffect.
+- `pFFEffect`: Address of a FFEFFECT structure that contains effect information. The dwSize member must be filled in by the application before calling this method, as well as any members specified by corresponding bits in the flags parameter.
+- `flags`: Flags that specify which portions of the effect information are to be set and how the downloading of the parameters should be handled. The value can be 0 or one or more of the following constants:
+
+  FFEP_AXES
+
+  The cAxes and rgdwAxes members contain data.
+
+  FFEP_DIRECTION
+
+  The cAxes and rglDirection members contain data. The dwFlags member specifies (with FFEFF_CARTESIAN or FFEFF_POLAR) the coordinate system in which the values should be interpreted.
+
+  FFEP_DURATION
+
+  The dwDuration member contains data.
+
+  FFEP_ENVELOPE
+
+  The lpEnvelope member points to a FFENVELOPE structure that contains data. To detach any existing envelope from the effect, pass this flag and set the lpEnvelope member to NULL.
+
+  FFEP_GAIN
+
+  The dwGain member contains data.
+
+  FFEP_NODOWNLOAD
+
+  Suppress the automatic FFEffect_Download that is normally performed after the parameters are updated.
+
+  FFEP_NORESTART
+
+  Suppress the stopping and restarting of the effect to change parameters. See Remarks.
+
+  FFEP_SAMPLEPERIOD
+
+  The dwSamplePeriod member contains data.
+
+  FFEP_START
+
+  The effect is to be started (or restarted if it is currently playing) after the parameters are updated. By default, the play state of the effect is not altered.
+
+  FFEP_STARTDELAY
+
+  The dwStartDelay member contains data.
+
+  FFEP_TRIGGERBUTTON
+
+  The dwTriggerButton member contains data.
+
+  The dwTriggerRepeatInterval member contains data.
+
+  FFEP_TYPESPECIFICPARAMS
+
+  The lpvTypeSpecificParams and cbTypeSpecificParams members of the FFEFFECT structure contain the address and size of type-specific data for the effect.
+
+<a id="return-value"></a>
+
+## Return Value
+
+If the method succeeds, the return value is FF_OK. If the method fails, the return value can be one of the following error values:
+
+<a id="discussion"></a>
+
+## Discussion
+
+FFERR_INVALIDPARAM
+
+FFERR_UNSUPPORTEDAXIS
+
+FFERR_OUTOFMEMORY
+
+FFERR_DEVICEPAUSED
+
+FFERR_DEVICEFULL
+
+FFERR_INVALIDDOWNLOADID
+
+FFERR_INTERNAL
+
+FFERR_EFFECTTYPEMISMATCH
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The FFEffectSetParameters method automatically downloads the effect, but this behavior can be suppressed by setting the FFEP_NODOWNLOAD flag. If automatic download has been suppressed, you can manually download the effect by invoking the FFEffectDownload method.
+
+If the effect is playing while the parameters are changed, the new parameters take effect as if they were the parameters when the effect started.
+
+For example, suppose a periodic effect with a duration of three seconds is started. After two seconds, the direction of the effect is changed. The effect then continues for one additional second in the new direction. The envelope, phase, amplitude, and other parameters of the effect continue smoothly, as if the direction had not changed.
+
+In the same situation, if after two seconds the duration of the effect were changed to 1.5 seconds, the effect would stop.
+
+Normally, if the driver cannot update the parameters of a playing effect, the driver is permitted to stop the effect, update the parameters, and then restart the effect. Passing the FFEP_NORESTART flag suppresses this behavior. If the driver cannot update the parameters of an effect while it is playing, the error code FFERR_EFFECTPLAYING is returned, and the parameters are not updated.
+
+No more than one of the FFEP_NODOWNLOAD, FFEP_START, and FFEP_NORESTART flags should be set. (It is also valid to pass none of them.)
+
+These three flags control download and playback behavior as follows:
+
+If FFEP_NODOWNLOAD is set, the effect parameters are updated but not downloaded to the device.
+
+If the FFEP_START flag is set, the effect parameters are updated and downloaded to the device, and the effect is started just as if the FFEffect_Start method had been called with the dwIterations parameter set to 1 and with no flags. (Combining the update with FFEP_START is slightly faster than calling Start separately, because it requires less information to be transmitted to the device.)
+
+If neither FFEP_NODOWNLOAD nor FFEP_START is set and the effect is not playing, the parameters are updated and downloaded to the device.
+
+If neither FFEP_NODOWNLOAD nor FFEP_START is set and the effect is playing, the parameters are updated if the device supports on-the-fly updating. Otherwise the behavior depends on the state of the FFEP_NORESTART flag. If it is set, the error code FFERR_EFFECTPLAYING is returned. If it is clear, the effect is stopped, the parameters are updated, and the effect is restarted.
+
+## See Also
+
+### Miscellaneous
+
+- [FFCreateDevice](ffcreatedevice%28____%29.md): Creates a new API device object from an OS object in preparation to use the device for force feedback.
+- [FFDeviceCreateEffect](ffdevicecreateeffect%28________%29.md): Creates and initializes an instance of an effect identified by the effect UUID on the device.
+- [FFDeviceEscape](ffdeviceescape%28____%29.md): Sends a hardware-specific command to the device.
+- [FFDeviceGetForceFeedbackCapabilities](ffdevicegetforcefeedbackcapabilities%28____%29.md): Retrieves the device’s force feedback capabilities.
+- [FFDeviceGetForceFeedbackProperty](ffdevicegetforcefeedbackproperty%28________%29.md): Gets properties that define the device behavior.
+- [FFDeviceGetForceFeedbackState](ffdevicegetforcefeedbackstate%28____%29.md): Retrieves the state of the device’s force feedback system.
+- [FFDeviceReleaseEffect](ffdevicereleaseeffect%28____%29.md): Disposes of an API effect object created with FFDeviceCreateEffect.
+- [FFDeviceSendForceFeedbackCommand](ffdevicesendforcefeedbackcommand%28____%29.md): Sends a command to the device’s force feedback system.
+- [FFDeviceSetCooperativeLevel](ffdevicesetcooperativelevel%28______%29.md): Function is unimplemented in version 1.0 of this API
+- [FFDeviceSetForceFeedbackProperty](ffdevicesetforcefeedbackproperty%28______%29.md): Retrieves the device’s force feedback capabilities.
+- [FFEffectDownload](ffeffectdownload%28__%29.md): Places the effect on the device. If the effect is already on the device, the existing effect is updated to match the values set by the FFEffectSetParameters method.
+- [FFEffectEscape](ffeffectescape%28____%29.md): Sends a hardware-specific command to the driver.
+- [FFEffectGetEffectStatus](ffeffectgeteffectstatus%28____%29.md): Sends a hardware-specific command to the driver.
+- [FFEffectGetParameters](ffeffectgetparameters%28______%29.md): Retrieves information about an effect.
+- [FFEffectStart](ffeffectstart%28______%29.md): Begins playing an effect. If the effect is already playing, it is restarted from the beginning. If the effect has not been downloaded or has been modified since its last download, it is downloaded before being started. This default behavior can be suppressed by passing the FFES_NODOWNLOAD flag.

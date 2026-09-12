@@ -1,0 +1,36 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/accessibilitylinkedgroup(id:in:)](https://developer.apple.com/documentation/swiftui/view/accessibilitylinkedgroup(id:in:))
+
+# accessibilityLinkedGroup(id:in:)
+
+**Framework:** SwiftUI  
+**Kind:** Instance Method  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 7.0+
+
+Links multiple accessibility elements so that the user can quickly navigate from one element to another, even when the elements are not near each other in the accessibility hierarchy.
+
+## Declaration
+
+```swift
+nonisolated func accessibilityLinkedGroup<ID>(id: ID, in namespace: Namespace.ID) -> some View where ID : Hashable
+
+```
+
+## Parameters
+
+- `id`: A hashable identifier used to separate sets of linked elements within the same namespace. Elements with matching `namespace` and `id` will be linked together.
+- `namespace`: The namespace to use to organize linked accessibility elements. All elements marked with `accessibilityLinkedGroup` in this namespace and with the specified `id` will be linked together.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This can be useful to allow quickly jumping between content in a list and the same content shown in a detail view, for example. All elements marked with `accessibilityLinkedGroup` with the same namespace and identifier will be linked together.
+
+When all elements in the linked group are text views (`Text`, `TextEditor`, or `TextField`), VoiceOver treats the group as a single text element — line, word, and character navigation moves across element boundaries as if the views form one continuous text region. On macOS, this unified text navigation uses shared text UI elements. If any element in the group is not a text view, the standard linking behavior applies.
+
+## See Also
+
+### Configuring rotors
+
+- [accessibilityRotorEntry(id:in:)](accessibilityrotorentry%28id_in_%29.md): Defines an explicit identifier tying an Accessibility element for this view to an entry in an Accessibility Rotor.
+- [accessibilitySortPriority(\_:)](accessibilitysortpriority%28__%29.md): Sets the sort priority order for this view’s accessibility element, relative to other elements at the same level.

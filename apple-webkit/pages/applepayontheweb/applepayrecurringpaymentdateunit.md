@@ -1,0 +1,48 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applepayontheweb/applepayrecurringpaymentdateunit](https://developer.apple.com/documentation/applepayontheweb/applepayrecurringpaymentdateunit)
+
+# ApplePayRecurringPaymentDateUnit
+
+**Interface language:** Data
+
+**Framework:** Apple Pay on the Web  
+**Kind:** Enumeration  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+A type that indicates calendrical units, such as year, month, day, and hour.
+
+## Declaration
+
+```
+enum ApplePayRecurringPaymentDateUnit
+```
+
+<a id="overview"></a>
+
+## Overview
+
+The following are the values for the recurring payment date unit:
+
+- **`"year"`**: A value that specifies the year unit.
+- **`"month"`**: A value that specifies the month unit.
+- **`"day"`**: A value that specifies the day unit.
+- **`"hour"`**: A value that specifies the hour unit.
+- **`"minute"`**: A value that specifies the minute unit.
+
+## Topics
+
+### Enumeration Cases
+
+- [day](applepayrecurringpaymentdateunit/day.md)
+- [hour](applepayrecurringpaymentdateunit/hour.md)
+- [minute](applepayrecurringpaymentdateunit/minute.md)
+- [month](applepayrecurringpaymentdateunit/month.md)
+- [year](applepayrecurringpaymentdateunit/year.md)
+
+## See Also
+
+### Configuring recurring payments
+
+- [recurringPaymentStartDate](applepaylineitem/recurringpaymentstartdate.md): The date of the first payment.
+- [recurringPaymentEndDate](applepaylineitem/recurringpaymentenddate.md): The date of the final payment.
+- [recurringPaymentIntervalUnit](applepaylineitem/recurringpaymentintervalunit.md): The amount of time — in calendar units, such as day, month, or year — that represents a fraction of the total payment interval.
+- [recurringPaymentIntervalCount](applepaylineitem/recurringpaymentintervalcount.md): The number of interval units that make up the total payment interval.

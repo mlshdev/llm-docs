@@ -1,0 +1,67 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/findersync](https://developer.apple.com/documentation/findersync)
+
+# Finder Sync (Swift)
+
+**Framework:** Finder Sync  
+**Kind:** Framework  
+**Availability:** macOS 10.10+
+
+Modify the Finder’s user interface to express file synchronization and control.
+
+<a id="overview"></a>
+
+## Overview
+
+Use Finder Sync to cleanly and safely modify the Finder’s user interface to express file synchronization status and control. Unlike most extension points, Finder Sync doesn’t add features to a host app. Instead, it lets you modify the behavior of the Finder itself.
+
+Use this framework when you need to synchronize the contents of a local folder with a remote data source. Then provide visual feedback to the Finder by extending the [FIFinderSync](findersync/fifindersync-swift.class.md) class and overriding appearance methods defined within the [FIFinderSyncProtocol](findersync/fifindersyncprotocol.md) protocol.
+
+To learn more about creating a Finder Sync extension, see [Finder Sync](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/Finder.html#//apple_ref/doc/uid/TP40014214-CH15) in [App Extension Programming Guide](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214).
+
+## Topics
+
+### Classes
+
+- [FIFinderSync](findersync/fifindersync-swift.class.md): A type to subclass to add badges, custom shortcut menus, and toolbar buttons to the Finder.
+- [FIFinderSyncController](findersync/fifindersynccontroller.md): A controller that acts as a bridge between your Finder Sync extension and the Finder itself.
+
+### Protocols
+
+- [FIFinderSyncProtocol](findersync/fifindersyncprotocol.md): The group of methods to implement for modifying the Finder user interface to express file synchronization status and control.
+
+### Reference
+
+- [FinderSync Enumerations](findersync/findersyncenumerations.md)
+
+# Finder Sync (Objective-C)
+
+**Framework:** Finder Sync  
+**Kind:** Framework  
+**Availability:** macOS 10.10+
+
+Modify the Finder’s user interface to express file synchronization and control.
+
+<a id="overview"></a>
+
+## Overview
+
+Use Finder Sync to cleanly and safely modify the Finder’s user interface to express file synchronization status and control. Unlike most extension points, Finder Sync doesn’t add features to a host app. Instead, it lets you modify the behavior of the Finder itself.
+
+Use this framework when you need to synchronize the contents of a local folder with a remote data source. Then provide visual feedback to the Finder by extending the [FIFinderSync](findersync/fifindersync-swift.class.md) class and overriding appearance methods defined within the [FIFinderSync](findersync/fifindersyncprotocol.md) protocol.
+
+To learn more about creating a Finder Sync extension, see [Finder Sync](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/Finder.html#//apple_ref/doc/uid/TP40014214-CH15) in [App Extension Programming Guide](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214).
+
+## Topics
+
+### Classes
+
+- [FIFinderSync](findersync/fifindersync-swift.class.md): A type to subclass to add badges, custom shortcut menus, and toolbar buttons to the Finder.
+- [FIFinderSyncController](findersync/fifindersynccontroller.md): A controller that acts as a bridge between your Finder Sync extension and the Finder itself.
+
+### Protocols
+
+- [FIFinderSync](findersync/fifindersyncprotocol.md): The group of methods to implement for modifying the Finder user interface to express file synchronization status and control.
+
+### Reference
+
+- [FinderSync Enumerations](findersync/findersyncenumerations.md)

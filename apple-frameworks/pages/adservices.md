@@ -1,0 +1,78 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/adservices](https://developer.apple.com/documentation/adservices)
+
+# AdServices (Swift)
+
+**Framework:** AdServices  
+**Kind:** Framework  
+**Availability:** iOS 14.3+ · iPadOS 14.3+ · Mac Catalyst 14.3+ · macOS 11.1+ · visionOS 1.0+
+
+Attribute app-download campaigns that originate from the App Store on iOS devices.
+
+<a id="overview"></a>
+
+## Overview
+
+The Apple Ads Attribution API is a solution that combines the `AdServices` framework and a RESTful API for server-side communication with Apple’s attribution server. The API retrieves Apple Ads attribution data from Apple Ads campaigns. You can measure attribution data using specific Apple Ads campaign metadata against the performance of Apple Ads campaigns.
+
+The following diagram illustrates using the AdServices framework in combination with a RESTful endpoint to retrieve attribution data:
+
+![A diagram showing the sequence of interaction between the AdServices framework and RESTful API.](https://developer.apple.com/images/com.apple.AdServices/ad_services-1@2x.png)
+
+- In step 1, request a token from the `AdServices` framework.
+- In step 2, the `AdServices` framework generates a token.
+- In step 3, use the token in a RESTful API request to retrieve an attribution record from Apple’s attribution server. For more detail, see [attributionToken()](adservices/aaattribution/attributiontoken%28%29.md).
+- In step 4, the attribution record that returns has key-value pairs that correspond to your campaigns in the Apple Ads Campaign Management API. For more detail, see [Attribution payload descriptions](adservices/aaattribution/attributiontoken%28%29.md#Attribution-payload-descriptions).
+
+## Topics
+
+### Essentials
+
+- [Changelog](adservices/changelog.md): A log of Ad Services framework updates.
+
+### Tokens
+
+- [AAAttribution](adservices/aaattribution.md): The parent class that the framework uses to request a token.
+
+### Errors
+
+- [AAAttributionError](adservices/aaattributionerror.md): The error code that the parent class issues.
+- [AAAttributionErrorDomain](adservices/aaattributionerrordomain.md): The framework attribution error domain.
+- [AAAttributionError.Code](adservices/aaattributionerror/code.md): The error code that the parent class issues.
+
+# AdServices (Objective-C)
+
+**Framework:** AdServices  
+**Kind:** Framework  
+**Availability:** iOS 14.3+ · iPadOS 14.3+ · Mac Catalyst 14.3+ · macOS 11.1+ · visionOS 1.0+
+
+Attribute app-download campaigns that originate from the App Store on iOS devices.
+
+<a id="overview"></a>
+
+## Overview
+
+The Apple Ads Attribution API is a solution that combines the `AdServices` framework and a RESTful API for server-side communication with Apple’s attribution server. The API retrieves Apple Ads attribution data from Apple Ads campaigns. You can measure attribution data using specific Apple Ads campaign metadata against the performance of Apple Ads campaigns.
+
+The following diagram illustrates using the AdServices framework in combination with a RESTful endpoint to retrieve attribution data:
+
+![A diagram showing the sequence of interaction between the AdServices framework and RESTful API.](https://developer.apple.com/images/com.apple.AdServices/ad_services-1@2x.png)
+
+- In step 1, request a token from the `AdServices` framework.
+- In step 2, the `AdServices` framework generates a token.
+- In step 3, use the token in a RESTful API request to retrieve an attribution record from Apple’s attribution server. For more detail, see [attributionTokenWithError:](adservices/aaattribution/attributiontoken%28%29.md).
+- In step 4, the attribution record that returns has key-value pairs that correspond to your campaigns in the Apple Ads Campaign Management API. For more detail, see [Attribution payload descriptions](adservices/aaattribution/attributiontoken%28%29.md#Attribution-payload-descriptions).
+
+## Topics
+
+### Essentials
+
+- [Changelog](adservices/changelog.md): A log of Ad Services framework updates.
+
+### Tokens
+
+- [AAAttribution](adservices/aaattribution.md): The parent class that the framework uses to request a token.
+
+### Errors
+
+- [AAAttributionErrorDomain](adservices/aaattributionerrordomain.md): The framework attribution error domain.
+- [AAAttributionErrorCode](adservices/aaattributionerror/code.md): The error code that the parent class issues.

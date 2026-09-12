@@ -1,0 +1,105 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nslayoutmanager/characterindex(for:in:fractionofdistancebetweeninsertionpoints:)](https://developer.apple.com/documentation/appkit/nslayoutmanager/characterindex(for:in:fractionofdistancebetweeninsertionpoints:))
+
+# characterIndex(for:in:fractionOfDistanceBetweenInsertionPoints:) (Swift)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS 10.7+
+
+Returns the index of the character that lies beneath the specified point using the specified container’s coordinate system.
+
+## Declaration
+
+```swift
+func characterIndex(for point: NSPoint, in container: NSTextContainer, fractionOfDistanceBetweenInsertionPoints partialFraction: UnsafeMutablePointer<CGFloat>?) -> Int
+```
+
+## Parameters
+
+- `point`: The point to test.
+- `container`: The text container within which the point is tested.
+- `partialFraction`: A fraction of the distance from the insertion point, logically before the given character to the next one.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The index of the character falling under `point`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Analogous to [glyphIndex(for:in:fractionOfDistanceThroughGlyph:)](glyphindex%28for_in_fractionofdistancethroughglyph_%29.md), but expressed in character index terms. The method returns the index of the character falling under `point`, expressed in coordinate system of `container`; if no character is under the point, the nearest character is returned, where nearest is defined according to the requirements of selection by mouse. However, this is not simply equivalent to taking the result of the corresponding glyph index method and converting it to a character index, because in some cases a single glyph represents more than one selectable character, for example an fi ligature glyph. In that case, there is an insertion point within the glyph, and this method returns one character or the other, depending on whether the specified point lies to the left or the right of that insertion point.
+
+In general, this method returns only character indexes for which there is an insertion point. The `partialFraction` is a fraction of the distance from the insertion point, logically before the given character to the next one, which may be either to the right or to the left depending on directionality.
+
+## See Also
+
+### Performing advanced layout queries
+
+- [boundingRect(forGlyphRange:in:)](boundingrect%28forglyphrange_in_%29.md): Returns the bounding rectangle for the specified glyphs in a container.
+- [characterRange(forGlyphRange:actualGlyphRange:)](characterrange%28forglyphrange_actualglyphrange_%29.md): Returns the range of characters that correspond to the glyphs in the specified glyph range.
+- [enumerateEnclosingRects(forGlyphRange:withinSelectedGlyphRange:in:using:)](enumerateenclosingrects%28forglyphrange_withinselectedglyphrange_in_using_%29.md): Enumerates enclosing rectangles for the specified glyph range in a text container.
+- [enumerateLineFragments(forGlyphRange:using:)](enumeratelinefragments%28forglyphrange_using_%29.md): Enumerates line fragments intersecting with the specified glyph range.
+- [fractionOfDistanceThroughGlyph(for:in:)](fractionofdistancethroughglyph%28for_in_%29.md): Returns the fraction of the distance between the glyph at the specified point and the next glyph.
+- [getLineFragmentInsertionPoints(forCharacterAt:alternatePositions:inDisplayOrder:positions:characterIndexes:)](getlinefragmentinsertionpoints%28forcharacterat_alternatepositions_indisplayorder_positions_characterindexes_%29.md): Returns insertion points in bulk for a specified line fragment.
+- [glyphIndex(for:in:)](glyphindex%28for_in_%29.md): Returns the index of the glyph at the specified location in a text container.
+- [glyphIndex(for:in:fractionOfDistanceThroughGlyph:)](glyphindex%28for_in_fractionofdistancethroughglyph_%29.md): Returns the index of the glyph at the specified point using the container’s coordinate system.
+- [glyphRange(forBoundingRect:in:)](glyphrange%28forboundingrect_in_%29.md): Returns the smallest contiguous range for glyphs lying wholly or partially within the specified rectangle of the text container.
+- [glyphRange(forBoundingRectWithoutAdditionalLayout:in:)](glyphrange%28forboundingrectwithoutadditionallayout_in_%29.md): Returns the smallest contiguous range for glyphs lying wholly or partially within the specified rectangle of the text container.
+- [glyphRange(for:)](glyphrange%28for_%29.md): Returns the range of glyphs lying within the specified text container.
+- [glyphRange(forCharacterRange:actualCharacterRange:)](glyphrange%28forcharacterrange_actualcharacterrange_%29.md): Returns the range of glyphs that the specified range of characters generates.
+- [range(ofNominallySpacedGlyphsContaining:)](range%28ofnominallyspacedglyphscontaining_%29.md): Returns the range of displayable glyphs that surround the glyph at the specified index.
+
+# characterIndexForPoint:inTextContainer:fractionOfDistanceBetweenInsertionPoints: (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS 10.7+
+
+Returns the index of the character that lies beneath the specified point using the specified container’s coordinate system.
+
+## Declaration
+
+```objectivec
+- (NSUInteger) characterIndexForPoint:(NSPoint) point inTextContainer:(NSTextContainer *) container fractionOfDistanceBetweenInsertionPoints:(CGFloat *) partialFraction;
+```
+
+## Parameters
+
+- `point`: The point to test.
+- `container`: The text container within which the point is tested.
+- `partialFraction`: A fraction of the distance from the insertion point, logically before the given character to the next one.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The index of the character falling under `point`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Analogous to [glyphIndexForPoint:inTextContainer:fractionOfDistanceThroughGlyph:](glyphindex%28for_in_fractionofdistancethroughglyph_%29.md), but expressed in character index terms. The method returns the index of the character falling under `point`, expressed in coordinate system of `container`; if no character is under the point, the nearest character is returned, where nearest is defined according to the requirements of selection by mouse. However, this is not simply equivalent to taking the result of the corresponding glyph index method and converting it to a character index, because in some cases a single glyph represents more than one selectable character, for example an fi ligature glyph. In that case, there is an insertion point within the glyph, and this method returns one character or the other, depending on whether the specified point lies to the left or the right of that insertion point.
+
+In general, this method returns only character indexes for which there is an insertion point. The `partialFraction` is a fraction of the distance from the insertion point, logically before the given character to the next one, which may be either to the right or to the left depending on directionality.
+
+## See Also
+
+### Performing advanced layout queries
+
+- [boundingRectForGlyphRange:inTextContainer:](boundingrect%28forglyphrange_in_%29.md): Returns the bounding rectangle for the specified glyphs in a container.
+- [characterRangeForGlyphRange:actualGlyphRange:](characterrange%28forglyphrange_actualglyphrange_%29.md): Returns the range of characters that correspond to the glyphs in the specified glyph range.
+- [enumerateEnclosingRectsForGlyphRange:withinSelectedGlyphRange:inTextContainer:usingBlock:](enumerateenclosingrects%28forglyphrange_withinselectedglyphrange_in_using_%29.md): Enumerates enclosing rectangles for the specified glyph range in a text container.
+- [enumerateLineFragmentsForGlyphRange:usingBlock:](enumeratelinefragments%28forglyphrange_using_%29.md): Enumerates line fragments intersecting with the specified glyph range.
+- [fractionOfDistanceThroughGlyphForPoint:inTextContainer:](fractionofdistancethroughglyph%28for_in_%29.md): Returns the fraction of the distance between the glyph at the specified point and the next glyph.
+- [getLineFragmentInsertionPointsForCharacterAtIndex:alternatePositions:inDisplayOrder:positions:characterIndexes:](getlinefragmentinsertionpoints%28forcharacterat_alternatepositions_indisplayorder_positions_characterindexes_%29.md): Returns insertion points in bulk for a specified line fragment.
+- [glyphIndexForPoint:inTextContainer:](glyphindex%28for_in_%29.md): Returns the index of the glyph at the specified location in a text container.
+- [glyphIndexForPoint:inTextContainer:fractionOfDistanceThroughGlyph:](glyphindex%28for_in_fractionofdistancethroughglyph_%29.md): Returns the index of the glyph at the specified point using the container’s coordinate system.
+- [glyphRangeForBoundingRect:inTextContainer:](glyphrange%28forboundingrect_in_%29.md): Returns the smallest contiguous range for glyphs lying wholly or partially within the specified rectangle of the text container.
+- [glyphRangeForBoundingRectWithoutAdditionalLayout:inTextContainer:](glyphrange%28forboundingrectwithoutadditionallayout_in_%29.md): Returns the smallest contiguous range for glyphs lying wholly or partially within the specified rectangle of the text container.
+- [glyphRangeForTextContainer:](glyphrange%28for_%29.md): Returns the range of glyphs lying within the specified text container.
+- [glyphRangeForCharacterRange:actualCharacterRange:](glyphrange%28forcharacterrange_actualcharacterrange_%29.md): Returns the range of glyphs that the specified range of characters generates.
+- [rangeOfNominallySpacedGlyphsContainingIndex:](range%28ofnominallyspacedglyphscontaining_%29.md): Returns the range of displayable glyphs that surround the glyph at the specified index.

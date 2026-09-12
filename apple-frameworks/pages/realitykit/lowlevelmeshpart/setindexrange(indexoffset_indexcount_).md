@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/lowlevelmeshpart/setindexrange(indexoffset:indexcount:)](https://developer.apple.com/documentation/realitykit/lowlevelmeshpart/setindexrange(indexoffset:indexcount:))
+
+# setIndexRange(indexOffset:indexCount:)
+
+**Framework:** RealityKit  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+Updates the first index and index count for this mesh part.
+
+## Declaration
+
+```swift
+final func setIndexRange(indexOffset: Int, indexCount: Int) throws(LowLevelRenderContextError)
+```
+
+## Parameters
+
+- `indexOffset`: The byte offset of the first index within the index buffer.
+- `indexCount`: The number of indices to use for this part.
+
+<a id="discussion"></a>
+
+## Discussion
+
+> **Throws**
+
+> [LowLevelRenderContextError](../lowlevelrendercontexterror.md) if the resulting range falls outside the mesh resource’s index buffer.
+
+## See Also
+
+### Configuring the geometry
+
+- [primitive](primitive.md): The geometric primitive to use when rendering this part.
+- [windingOrder](windingorder.md): The winding order of front-facing polygons.

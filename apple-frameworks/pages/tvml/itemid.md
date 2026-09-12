@@ -1,0 +1,43 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tvml/itemid](https://developer.apple.com/documentation/tvml/itemid)
+
+# itemID
+
+**Kind:** Article
+
+Mark elements for reuse during DOM updates.
+
+<a id="Overview"></a>
+
+## Overview
+
+Use the `itemID` attribute to identify which elements are considered the same so they can be reused during DOM updates. When recreating the DOM, TVMLKit makes any necessary changes at the view level while retaining existing cells that have not been modified.
+
+<a id="Values-for-itemID"></a>
+
+### Values for itemID
+
+- **String**: The identifier for the item. The identifier must be unique inside its parent DOM element. The identifier does not have to be unique inside of the document.
+
+<a id="Elements-that-Use-itemID"></a>
+
+### Elements that Use itemID
+
+- [productBundleTemplate](productbundletemplate.md)
+- [productTemplate](producttemplate.md)
+- [searchTemplate](searchtemplate.md)
+- [stackTemplate](stacktemplate.md)
+
+`itemID` can only be used with the following elements inside of the above templates:
+
+- [grid](grid.md)
+- [section](section.md) in the `grid` or `shelf` element
+- [shelf](shelf.md)
+- Any element that can appear in a `shelf`/`section` or `grid`/`section` combination
+
+## See Also
+
+### Binding and DOM Manipulation
+
+- [binding](binding.md): Associates information in a data item with an element.
+- [prototype](prototype.md): Associates a data item type with an element.
+- [needsMoreThreshold](needsmorethreshold.md): Sets the amount of remaining screen lengths before firing the needs more event.

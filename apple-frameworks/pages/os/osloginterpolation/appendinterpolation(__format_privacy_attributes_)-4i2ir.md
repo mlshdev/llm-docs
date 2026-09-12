@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/os/osloginterpolation/appendinterpolation(_:format:privacy:attributes:)-4i2ir](https://developer.apple.com/documentation/os/osloginterpolation/appendinterpolation(_:format:privacy:attributes:)-4i2ir)
+
+# appendInterpolation(\_:format:privacy:attributes:)
+
+**Framework:** os  
+**Kind:** Instance Method  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS · watchOS 7.0+
+
+Appends an interpolated 32-bit integer with the specified attributes.
+
+## Declaration
+
+```swift
+mutating func appendInterpolation(_ number: @autoclosure @escaping () -> Int32, format: OSLogInt32ExtendedFormat, privacy: OSLogPrivacy = .auto, attributes: String)
+```
+
+## Parameters
+
+- `number`: The interpolated 32-bit integer. The system automatically wraps this value in a closure.
+- `format`: The format to apply to the value when the system renders it in a log message. For more information, see [OSLogInt32ExtendedFormat](../oslogint32extendedformat.md).
+- `privacy`: The privacy level of the value, which the system applies when it renders the value in a log message. For more information, see [OSLogPrivacy](../oslogprivacy.md). The default value is [auto](../oslogprivacy/auto.md).
+- `attributes`: Additional information about the value. Tools that process log messages interpret these attributes, which you typically provide as key-value pairs. For example, Instruments processes any  e_ngineering types\_ you embed in this value. For more information, see [Instruments Developer Help](https://help.apple.com/instruments/developer/mac/current/#/devcd5016d31).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+> **Important**
+
+>  You don’t call this method directly. Instead, the framework calls it automatically when you append an interpolated 32-bit integer to a log message.
+
+## See Also
+
+### Appending Signed Integers
+
+- [appendInterpolation(\_:format:align:privacy:)](appendinterpolation%28__format_align_privacy_%29-8kli1.md): Appends an interpolated integer.
+- [appendInterpolation(\_:format:align:privacy:)](appendinterpolation%28__format_align_privacy_%29-5ihzf.md): Appends an interpolated 8-bit integer.
+- [appendInterpolation(\_:format:align:privacy:)](appendinterpolation%28__format_align_privacy_%29-190d0.md): Appends an interpolated 16-bit integer.
+- [appendInterpolation(\_:format:privacy:)](appendinterpolation%28__format_privacy_%29-3ji02.md): Appends an interpolated 32-bit integer.
+- [appendInterpolation(\_:format:align:privacy:)](appendinterpolation%28__format_align_privacy_%29-2sb1i.md): Appends an interpolated 32-bit integer with the specified alignment.
+- [appendInterpolation(\_:format:align:privacy:)](appendinterpolation%28__format_align_privacy_%29-802m9.md): Appends an interpolated 64-bit integer.

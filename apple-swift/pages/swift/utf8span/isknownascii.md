@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/utf8span/isknownascii](https://developer.apple.com/documentation/swift/utf8span/isknownascii)
+
+# isKnownASCII
+
+**Framework:** Swift  
+**Kind:** Instance Property  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
+
+Returns whether contents are known to be all-ASCII. A return value of `true` means that all code units are ASCII. A return value of `false` means there *may* be non-ASCII content.
+
+## Declaration
+
+```swift
+var isKnownASCII: Bool { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+ASCII-ness is checked and remembered during UTF-8 validation, so this is often equivalent to is-ASCII, but there are some situations where we might return `false` even when the content happens to be all-ASCII.
+
+For example, a UTF-8 span generated from a `String` that at some point contained non-ASCII content would report false for `isKnownASCII`, even if that String had subsequent mutation operations that removed any non-ASCII content.
+
+> **Complexity**
+
+> O(1)

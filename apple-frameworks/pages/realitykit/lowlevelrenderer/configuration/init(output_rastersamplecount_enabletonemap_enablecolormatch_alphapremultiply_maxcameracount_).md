@@ -1,0 +1,24 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/lowlevelrenderer/configuration/init(output:rastersamplecount:enabletonemap:enablecolormatch:alphapremultiply:maxcameracount:)](https://developer.apple.com/documentation/realitykit/lowlevelrenderer/configuration/init(output:rastersamplecount:enabletonemap:enablecolormatch:alphapremultiply:maxcameracount:))
+
+# init(output:rasterSampleCount:enableTonemap:enableColorMatch:alphaPremultiply:maxCameraCount:)
+
+**Framework:** RealityKit  
+**Kind:** Initializer  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+Creates a configuration with the given output format, MSAA sample count, and flags.
+
+## Declaration
+
+```swift
+init(output: LowLevelRenderer.Configuration.Output, rasterSampleCount: Int, enableTonemap: Bool = true, enableColorMatch: Bool = false, alphaPremultiply: Bool = true, maxCameraCount: Int = 1)
+```
+
+## Parameters
+
+- `output`: The pixel format configuration for the renderer’s output attachments.
+- `rasterSampleCount`: The number of samples per pixel for MSAA.
+- `enableTonemap`: When `true`, HDR output values are tone-mapped before writing to the output texture. Defaults to `true`.
+- `enableColorMatch`: When `true`, a gamut conversion matrix from `renderer.colorMatch` is applied during resolve. Defaults to `false`.
+- `alphaPremultiply`: When `true`, the renderer divides content by alpha before applying tonemap and color match, then multiplies by alpha before final texture output. Defaults to `true`.
+- `maxCameraCount`: The maximum number of simultaneous cameras supported. Defaults to `1`.

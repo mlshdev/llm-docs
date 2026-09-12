@@ -1,0 +1,48 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v1-appstorereviewdetails-_id_-appstorereviewattachments](https://developer.apple.com/documentation/appstoreconnectapi/get-v1-appstorereviewdetails-_id_-appstorereviewattachments)
+
+# List all review attachments for an app store review detail
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Web Service Endpoint  
+**Availability:** App Store Connect API 1.2+
+
+List all the App Store review attachments you include with a version when you submit it for App Review.
+
+## URL
+
+```http
+GET https://api.appstoreconnect.apple.com/v1/appStoreReviewDetails/{id}/appStoreReviewAttachments
+```
+
+## Path Parameters
+
+- `id` — `string` (required): An opaque resource ID that uniquely identifies the resource. Obtain the App Store review detail resource ID from the [Read the app store review details resource information of an app store version](get-v1-appstoreversions-_id_-appstorereviewdetail.md) response.
+
+## Query Parameters
+
+- `fields[appStoreReviewAttachments]` — `[string]`: Additional fields to include for each App Store review attachment resource returned by the response.
+  **Allowed values:** `fileSize`, `fileName`, `sourceFileChecksum`, `uploadOperations`, `assetDeliveryState`, `appStoreReviewDetail`
+- `limit` — `integer`: The maximum number of App Store review attachment resources to return.
+  **Maximum:** `200`
+- `fields[appStoreReviewDetails]` — `[string]`: Additional fields to include for each App Store review detail resource returned by the response.
+  **Allowed values:** `contactFirstName`, `contactLastName`, `contactPhone`, `contactEmail`, `demoAccountName`, `demoAccountPassword`, `demoAccountRequired`, `notes`, `appStoreVersion`, `appStoreReviewAttachments`
+- `include` — `[string]`: The relationship data to include in the response.
+  **Allowed values:** `appStoreReviewDetail`
+
+## Response Codes
+
+- `200` OK — `AppStoreReviewAttachmentsResponse`:
+- `400` Bad Request — `ErrorResponse`:
+- `401` Unauthorized — `ErrorResponse`:
+- `403` Forbidden — `ErrorResponse`:
+- `404` Not Found — `ErrorResponse`:
+- `429` — `ErrorResponse`:
+
+## See Also
+
+### Reading Attachment Information
+
+- [Read app store review attachment information](get-v1-appstorereviewattachments-_id_.md): Get information about an App Store review attachment and its upload and processing status.
+- [List App Store review attachment IDs for an App Store review detail](get-v1-appstorereviewdetails-_id_-relationships-appstorereviewattachments.md)

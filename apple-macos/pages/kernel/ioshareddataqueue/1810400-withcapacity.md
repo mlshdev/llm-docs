@@ -1,0 +1,44 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ioshareddataqueue/1810400-withcapacity](https://developer.apple.com/documentation/kernel/ioshareddataqueue/1810400-withcapacity)
+
+# withCapacity
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel
+
+Static method that creates a new IOSharedDataQueue instance with the capacity specified in the size parameter.
+
+## Declaration
+
+```objectivec
+static IOSharedDataQueue *withCapacity(
+ UInt32size); 
+```
+
+## Parameters
+
+- `size`: The size of the data queue memory region.
+
+<a id="return_value"></a>
+
+## Return Value
+
+Returns the newly allocated IOSharedDataQueue instance. Zero is returned on failure.
+
+<a id="overview"></a>
+
+## Overview
+
+The actual size of the entire data queue memory region (to be shared into a user process) is equal to the capacity plus the IODataQueueMemory overhead. This overhead value can be determined from the DATA_QUEUE_MEMORY_HEADER_SIZE macro in \<IOKit/IODataQueueShared.h\>. The size of the data queue memory region must include space for the overhead of each IODataQueueEntry. This entry overhead can be determined from the DATA_QUEUE_ENTRY_HEADER_SIZE macro in \<IOKit/IODataQueueShared.h\>.
+
+This method allocates a new IODataQueue instance and then calls initWithCapacity() with the given size parameter. If the initWithCapacity() fails, the new instance is released and zero is returned.
+
+## See Also
+
+### Miscellaneous
+
+- [dequeue](1810190-dequeue.md): Dequeues the next available entry on the queue and copies it into the given data pointer.
+- [getMemoryDescriptor](1810240-getmemorydescriptor.md): Returns a memory descriptor covering the IODataQueueMemory region.
+- [initWithCapacity](1810293-initwithcapacity.md): Initializes an IOSharedDataQueue instance with the capacity specified in the size parameter.
+- [peek](1810347-peek.md): Used to peek at the next entry on the queue.
+- [withEntries](1810447-withentries.md): Static method that creates a new IOSharedDataQueue instance with the specified number of entries of the given size.

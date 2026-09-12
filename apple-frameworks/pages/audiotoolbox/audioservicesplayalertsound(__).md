@@ -1,0 +1,105 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/audioservicesplayalertsound(_:)](https://developer.apple.com/documentation/audiotoolbox/audioservicesplayalertsound(_:))
+
+# AudioServicesPlayAlertSound(\_:) (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Function  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.1+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
+
+Plays a system sound as an alert.
+
+## Declaration
+
+```swift
+func AudioServicesPlayAlertSound(_ inSystemSoundID: SystemSoundID)
+```
+
+## Parameters
+
+- `inSystemSoundID`: The system sound object to play as an alert.
+
+  Before using this function, call the [AudioServicesCreateSystemSoundID(\_:\_:)](audioservicescreatesystemsoundid%28____%29.md) function to obtain a system sound.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Depending on the particular iOS device, this function plays a short sound and may invoke vibration. Calling this function does the following on various iOS devices:
+
+- *iPhone*—plays the specified sound. If the user has configured the Settings application for vibration on ring, also invokes vibration. However, the device does *not* vibrate if your app’s audio session is configured with the  [playAndRecord](../avfaudio/avaudiosession/category-swift.struct/playandrecord.md) or [record](../avfaudio/avaudiosession/category-swift.struct/record.md) audio session category. This ensures that vibration doesn’t interfere with audio recording. For an explanation of audio session categories, see [Categories Express Audio Roles](https://developer.apple.com/library/archive/documentation/Audio/Conceptual/AudioSessionProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007875-CH1-SW4).
+- *iPod touch, original*—plays a short alert melody.
+- *iPod touch, 2nd generation and newer*—plays the specified sound.
+
+In iOS, the duration of the sound to be played must not be more than 30 seconds.
+
+> **Note**
+
+>  System-supplied alert sounds and system-supplied user-interface sound effects are not available to your iOS application. For example, using the `kSystemSoundID_UserPreferredAlert` constant as a parameter to the `AudioServicesPlayAlertSound` function will not play anything.
+
+In macOS, when a user has configured System Preferences to flash the screen for alerts, or if sound cannot be rendered, calling this function will result in the screen flashing. In macOS, pass the constant `kSystemSoundID_UserPreferredAlert` to play the alert sound selected by the user in System Preferences. In iOS there is no preferred user alert sound.
+
+To play a short sound not used as an alert, use [AudioServicesPlaySystemSound(\_:)](audioservicesplaysystemsound%28__%29.md).
+
+## See Also
+
+### Related Documentation
+
+- [AudioServicesCreateSystemSoundID(\_:\_:)](audioservicescreatesystemsoundid%28____%29.md): Creates a system sound object.
+
+### Playing Sounds
+
+- [AudioServicesPlayAlertSoundWithCompletion(\_:\_:)](audioservicesplayalertsoundwithcompletion%28____%29.md)
+- [AudioServicesPlaySystemSoundWithCompletion(\_:\_:)](audioservicesplaysystemsoundwithcompletion%28____%29.md)
+- [AudioServicesPlaySystemSound(\_:)](audioservicesplaysystemsound%28__%29.md): Plays a system sound object.
+
+# AudioServicesPlayAlertSound (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Function  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.1+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+
+
+Plays a system sound as an alert.
+
+## Declaration
+
+```objectivec
+extern void AudioServicesPlayAlertSound(SystemSoundID inSystemSoundID);
+```
+
+## Parameters
+
+- `inSystemSoundID`: The system sound object to play as an alert.
+
+  Before using this function, call the [AudioServicesCreateSystemSoundID](audioservicescreatesystemsoundid%28____%29.md) function to obtain a system sound.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Depending on the particular iOS device, this function plays a short sound and may invoke vibration. Calling this function does the following on various iOS devices:
+
+- *iPhone*—plays the specified sound. If the user has configured the Settings application for vibration on ring, also invokes vibration. However, the device does *not* vibrate if your app’s audio session is configured with the  [AVAudioSessionCategoryPlayAndRecord](../avfaudio/avaudiosession/category-swift.struct/playandrecord.md) or [AVAudioSessionCategoryRecord](../avfaudio/avaudiosession/category-swift.struct/record.md) audio session category. This ensures that vibration doesn’t interfere with audio recording. For an explanation of audio session categories, see [Categories Express Audio Roles](https://developer.apple.com/library/archive/documentation/Audio/Conceptual/AudioSessionProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007875-CH1-SW4).
+- *iPod touch, original*—plays a short alert melody.
+- *iPod touch, 2nd generation and newer*—plays the specified sound.
+
+In iOS, the duration of the sound to be played must not be more than 30 seconds.
+
+> **Note**
+
+>  System-supplied alert sounds and system-supplied user-interface sound effects are not available to your iOS application. For example, using the `kSystemSoundID_UserPreferredAlert` constant as a parameter to the `AudioServicesPlayAlertSound` function will not play anything.
+
+In macOS, when a user has configured System Preferences to flash the screen for alerts, or if sound cannot be rendered, calling this function will result in the screen flashing. In macOS, pass the constant `kSystemSoundID_UserPreferredAlert` to play the alert sound selected by the user in System Preferences. In iOS there is no preferred user alert sound.
+
+To play a short sound not used as an alert, use [AudioServicesPlaySystemSound](audioservicesplaysystemsound%28__%29.md).
+
+## See Also
+
+### Related Documentation
+
+- [AudioServicesCreateSystemSoundID](audioservicescreatesystemsoundid%28____%29.md): Creates a system sound object.
+
+### Playing Sounds
+
+- [AudioServicesPlayAlertSoundWithCompletion](audioservicesplayalertsoundwithcompletion%28____%29.md)
+- [AudioServicesPlaySystemSoundWithCompletion](audioservicesplaysystemsoundwithcompletion%28____%29.md)
+- [AudioServicesPlaySystemSound](audioservicesplaysystemsound%28__%29.md): Plays a system sound object.

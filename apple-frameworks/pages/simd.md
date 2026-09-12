@@ -1,0 +1,824 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/simd](https://developer.apple.com/documentation/simd)
+
+# simd (Swift)
+
+**Framework:** simd  
+**Kind:** Framework
+
+## Topics
+
+### Structures
+
+- [simd_double2x2](simd/simd_double2x2.md): A matrix of two columns and two rows that contains double-precision values.
+- [simd_double2x3](simd/simd_double2x3.md): A matrix of two columns and three rows that contains double-precision values.
+- [simd_double2x4](simd/simd_double2x4.md): A matrix of two columns and four rows that contains double-precision values.
+- [simd_double3x2](simd/simd_double3x2.md): A matrix of three columns and two rows that contains double-precision values.
+- [simd_double3x3](simd/simd_double3x3.md): A matrix of three columns and three rows that contains double-precision values.
+- [simd_double3x4](simd/simd_double3x4.md): A matrix of three columns and four rows that contains double-precision values.
+- [simd_double4x2](simd/simd_double4x2.md): A matrix of four columns and two rows that contains double-precision values.
+- [simd_double4x3](simd/simd_double4x3.md): A matrix of four columns and three rows that contains double-precision values.
+- [simd_double4x4](simd/simd_double4x4.md): A matrix of four columns and four rows that contains double-precision values.
+- [simd_float2x2](simd/simd_float2x2.md): A matrix of two columns and two rows that contains single-precision values.
+- [simd_float2x3](simd/simd_float2x3.md): A matrix of two columns and three rows that contains single-precision values.
+- [simd_float2x4](simd/simd_float2x4.md): A matrix of two columns and four rows that contains single-precision values.
+- [simd_float3x2](simd/simd_float3x2.md): A matrix of three columns and two rows that contains single-precision values.
+- [simd_float3x3](simd/simd_float3x3.md): A matrix of three columns and three rows that contains single-precision values.
+- [simd_float3x4](simd/simd_float3x4.md): A matrix of three columns and four rows that contains single-precision values.
+- [simd_float4x2](simd/simd_float4x2.md): A matrix of four columns and two rows that contains single-precision values.
+- [simd_float4x3](simd/simd_float4x3.md): A matrix of four columns and three rows that contains single-precision values.
+- [simd_float4x4](simd/simd_float4x4.md): A matrix of four columns and four rows that contains single-precision values.
+- [simd_half2x2](simd/simd_half2x2.md): A matrix of two columns and two rows that contains half-precision values.
+- [simd_half2x3](simd/simd_half2x3.md): A matrix of two columns and three rows that contains half-precision values.
+- [simd_half2x4](simd/simd_half2x4.md): A matrix of two columns and four rows that contains half-precision values.
+- [simd_half3x2](simd/simd_half3x2.md): A matrix of three columns and two rows that contains half-precision values.
+- [simd_half3x3](simd/simd_half3x3.md): A matrix of three columns and three rows that contains half-precision values.
+- [simd_half3x4](simd/simd_half3x4.md): A matrix of three columns and four rows that contains half-precision values.
+- [simd_half4x2](simd/simd_half4x2.md): A matrix of four columns and two rows that contains half-precision values.
+- [simd_half4x3](simd/simd_half4x3.md): A matrix of four columns and three rows that contains half-precision values.
+- [simd_half4x4](simd/simd_half4x4.md): A matrix of four columns and four rows that contains half-precision values.
+- [simd_quatd](simd/simd_quatd.md): A double-precision quaternion.
+- [simd_quatf](simd/simd_quatf.md): A single-precision quaternion.
+- [simd_quath](simd/simd_quath.md)
+
+### Variables
+
+- [SIMD_COMPILER_HAS_REQUIRED_FEATURES](simd/simd_compiler_has_required_features.md)
+- [SIMD_CURRENT_LIBRARY_VERSION](simd/simd_current_library_version.md)
+- [SIMD_LIBRARY_VERSION](simd/simd_library_version.md)
+
+### Functions
+
+- [abs(\_:)](simd/abs%28__%29-1oaic.md): Elementwise absolute value of a vector. The result is a vector of the same length with all elements positive.
+- [abs(\_:)](simd/abs%28__%29-23x59.md): Elementwise absolute value of a vector. The result is a vector of the same length with all elements positive.
+- [abs(\_:)](simd/abs%28__%29-2sqwt.md): Elementwise absolute value of a vector. The result is a vector of the same length with all elements positive.
+- [abs(\_:)](simd/abs%28__%29-4qe6n.md): Elementwise absolute value of a vector. The result is a vector of the same length with all elements positive.
+- [abs(\_:)](simd/abs%28__%29-5f1om.md): Elementwise absolute value of a vector. The result is a vector of the same length with all elements positive.
+- [abs(\_:)](simd/abs%28__%29-5yvia.md): Elementwise absolute value of a vector. The result is a vector of the same length with all elements positive.
+- [ceil(\_:)](simd/ceil%28__%29-2mz12.md): Each element of the result is the smallest integral value greater than or equal to the corresponding element of the input.
+- [ceil(\_:)](simd/ceil%28__%29-2y927.md): Each element of the result is the smallest integral value greater than or equal to the corresponding element of the input.
+- [ceil(\_:)](simd/ceil%28__%29-3qezc.md): Each element of the result is the smallest integral value greater than or equal to the corresponding element of the input.
+- [ceil(\_:)](simd/ceil%28__%29-5zaxi.md): Each element of the result is the smallest integral value greater than or equal to the corresponding element of the input.
+- [ceil(\_:)](simd/ceil%28__%29-6phu2.md): Each element of the result is the smallest integral value greater than or equal to the corresponding element of the input.
+- [ceil(\_:)](simd/ceil%28__%29-6qwcw.md): Each element of the result is the smallest integral value greater than or equal to the corresponding element of the input.
+- [floor(\_:)](simd/floor%28__%29-2r68l.md): Each element of the result is the largest integral value less than or equal to the corresponding element of the input.
+- [floor(\_:)](simd/floor%28__%29-51eh3.md): Each element of the result is the largest integral value less than or equal to the corresponding element of the input.
+- [floor(\_:)](simd/floor%28__%29-5kj31.md): Each element of the result is the largest integral value less than or equal to the corresponding element of the input.
+- [floor(\_:)](simd/floor%28__%29-5yv9x.md): Each element of the result is the largest integral value less than or equal to the corresponding element of the input.
+- [floor(\_:)](simd/floor%28__%29-8noum.md): Each element of the result is the largest integral value less than or equal to the corresponding element of the input.
+- [floor(\_:)](simd/floor%28__%29-9w8kb.md): Each element of the result is the largest integral value less than or equal to the corresponding element of the input.
+- [max(\_:\_:)](simd/max%28____%29-3ia66.md): Elementwise maximum of two vectors. Each component of the result is the larger of the corresponding component of the inputs.
+- [max(\_:\_:)](simd/max%28____%29-3nrjh.md): Vector-scalar maximum. Each component of the result is the maximum of the corresponding element of the input vector and the scalar.
+- [max(\_:\_:)](simd/max%28____%29-51f8j.md): Elementwise maximum of two vectors. Each component of the result is the larger of the corresponding component of the inputs.
+- [max(\_:\_:)](simd/max%28____%29-54mlg.md): Vector-scalar maximum. Each component of the result is the maximum of the corresponding element of the input vector and the scalar.
+- [max(\_:\_:)](simd/max%28____%29-6dcr1.md): Vector-scalar maximum. Each component of the result is the maximum of the corresponding element of the input vector and the scalar.
+- [max(\_:\_:)](simd/max%28____%29-6ityy.md): Elementwise maximum of two vectors. Each component of the result is the larger of the corresponding component of the inputs.
+- [max(\_:\_:)](simd/max%28____%29-7kwai.md): Elementwise maximum of two vectors. Each component of the result is the larger of the corresponding component of the inputs.
+- [max(\_:\_:)](simd/max%28____%29-7nw7d.md): Vector-scalar maximum. Each component of the result is the maximum of the corresponding element of the input vector and the scalar.
+- [max(\_:\_:)](simd/max%28____%29-8ukdb.md): Elementwise maximum of two vectors. Each component of the result is the larger of the corresponding component of the inputs.
+- [max(\_:\_:)](simd/max%28____%29-8xrps.md): Vector-scalar maximum. Each component of the result is the maximum of the corresponding element of the input vector and the scalar.
+- [max(\_:\_:)](simd/max%28____%29-960b9.md): Elementwise maximum of two vectors. Each component of the result is the larger of the corresponding component of the inputs.
+- [max(\_:\_:)](simd/max%28____%29-997qu.md): Vector-scalar maximum. Each component of the result is the maximum of the corresponding element of the input vector and the scalar.
+- [min(\_:\_:)](simd/min%28____%29-5rg96.md): Elementwise minimum of two vectors. Each component of the result is the smaller of the corresponding component of the inputs.
+- [min(\_:\_:)](simd/min%28____%29-5ul5l.md): Vector-scalar minimum. Each component of the result is the minimum of the corresponding element of the input vector and the scalar.
+- [min(\_:\_:)](simd/min%28____%29-67sp6.md): Elementwise minimum of two vectors. Each component of the result is the smaller of the corresponding component of the inputs.
+- [min(\_:\_:)](simd/min%28____%29-6b02l.md): Vector-scalar minimum. Each component of the result is the minimum of the corresponding element of the input vector and the scalar.
+- [min(\_:\_:)](simd/min%28____%29-735cl.md): Elementwise minimum of two vectors. Each component of the result is the smaller of the corresponding component of the inputs.
+- [min(\_:\_:)](simd/min%28____%29-76cpi.md): Vector-scalar minimum. Each component of the result is the minimum of the corresponding element of the input vector and the scalar.
+- [min(\_:\_:)](simd/min%28____%29-7bq1b.md): Elementwise minimum of two vectors. Each component of the result is the smaller of the corresponding component of the inputs.
+- [min(\_:\_:)](simd/min%28____%29-7ezvg.md): Vector-scalar minimum. Each component of the result is the minimum of the corresponding element of the input vector and the scalar.
+- [min(\_:\_:)](simd/min%28____%29-7vhsf.md): Elementwise minimum of two vectors. Each component of the result is the smaller of the corresponding component of the inputs.
+- [min(\_:\_:)](simd/min%28____%29-80p4s.md): Vector-scalar minimum. Each component of the result is the minimum of the corresponding element of the input vector and the scalar.
+- [min(\_:\_:)](simd/min%28____%29-qbr4.md): Vector-scalar minimum. Each component of the result is the minimum of the corresponding element of the input vector and the scalar.
+- [min(\_:\_:)](simd/min%28____%29-tj43.md): Elementwise minimum of two vectors. Each component of the result is the smaller of the corresponding component of the inputs.
+- [rint(\_:)](simd/rint%28__%29-16itt.md): Each element of the result is the corresponding element of the input rounded to the nearest integer, using the current rounding mode.
+- [rint(\_:)](simd/rint%28__%29-2g2hq.md): Each element of the result is the corresponding element of the input rounded to the nearest integer, using the current rounding mode.
+- [rint(\_:)](simd/rint%28__%29-3p367.md): Each element of the result is the corresponding element of the input rounded to the nearest integer, using the current rounding mode.
+- [rint(\_:)](simd/rint%28__%29-91msl.md): Each element of the result is the corresponding element of the input rounded to the nearest integer, using the current rounding mode.
+- [rint(\_:)](simd/rint%28__%29-9zf0h.md): Each element of the result is the corresponding element of the input rounded to the nearest integer, using the current rounding mode.
+- [rint(\_:)](simd/rint%28__%29-ryn3.md): Each element of the result is the corresponding element of the input rounded to the nearest integer, using the current rounding mode.
+- [simd_act(\_:\_:)](simd/simd_act%28____%29-17i5z.md)
+- [simd_add(\_:\_:)](simd/simd_add%28____%29-7ul9y.md)
+- [simd_angle(\_:)](simd/simd_angle%28__%29-zylp.md)
+- [simd_axis(\_:)](simd/simd_axis%28__%29-56smw.md)
+- [simd_bezier(\_:\_:\_:\_:\_:)](simd/simd_bezier%28__________%29-2cl6p.md)
+- [simd_clamp(\_:\_:\_:)](simd/simd_clamp%28______%29-7ck0a.md)
+- [simd_conjugate(\_:)](simd/simd_conjugate%28__%29-989np.md)
+- [simd_dot(\_:\_:)](simd/simd_dot%28____%29-2dt0z.md)
+- [simd_equal(\_:\_:)](simd/simd_equal%28____%29-29zmw.md)
+- [simd_imag(\_:)](simd/simd_imag%28__%29-2c8in.md)
+- [simd_inverse(\_:)](simd/simd_inverse%28__%29-3cumm.md)
+- [simd_length(\_:)](simd/simd_length%28__%29-52pax.md)
+- [simd_matrix3x3(\_:)](simd/simd_matrix3x3%28__%29-60esl.md)
+- [simd_matrix4x4(\_:)](simd/simd_matrix4x4%28__%29-20inb.md)
+- [simd_mul(\_:\_:)](simd/simd_mul%28____%29-2u2df.md)
+- [simd_mul(\_:\_:)](simd/simd_mul%28____%29-428fx.md)
+- [simd_mul(\_:\_:)](simd/simd_mul%28____%29-765ay.md)
+- [simd_negate(\_:)](simd/simd_negate%28__%29-3yw6m.md)
+- [simd_normalize(\_:)](simd/simd_normalize%28__%29-ubut.md)
+- [simd_quaternion(\_:)](simd/simd_quaternion%28__%29-2er3f.md)
+- [simd_quaternion(\_:)](simd/simd_quaternion%28__%29-4565s.md)
+- [simd_quaternion(\_:)](simd/simd_quaternion%28__%29-8kjw1.md)
+- [simd_quaternion(\_:)](simd/simd_quaternion%28__%29-9c4np.md)
+- [simd_quaternion(\_:\_:)](simd/simd_quaternion%28____%29-59cuw.md)
+- [simd_quaternion(\_:\_:)](simd/simd_quaternion%28____%29-6a6gg.md)
+- [simd_quaternion(\_:\_:\_:\_:)](simd/simd_quaternion%28________%29-9u5ci.md)
+- [simd_real(\_:)](simd/simd_real%28__%29-75wwb.md)
+- [simd_reduce_max(\_:)](simd/simd_reduce_max%28__%29-4hctl.md)
+- [simd_slerp(\_:\_:\_:)](simd/simd_slerp%28______%29-7vayy.md)
+- [simd_slerp_longest(\_:\_:\_:)](simd/simd_slerp_longest%28______%29-816ko.md)
+- [simd_spline(\_:\_:\_:\_:\_:)](simd/simd_spline%28__________%29-4ojmq.md)
+- [simd_sub(\_:\_:)](simd/simd_sub%28____%29-47kxs.md)
+- [sqrt(\_:)](simd/sqrt%28__%29-201lt.md): Each element of the result is the square root of the corresponding element of the input.
+- [sqrt(\_:)](simd/sqrt%28__%29-3tk46.md): Each element of the result is the square root of the corresponding element of the input.
+- [sqrt(\_:)](simd/sqrt%28__%29-5rag4.md): Each element of the result is the square root of the corresponding element of the input.
+- [sqrt(\_:)](simd/sqrt%28__%29-605ao.md): Each element of the result is the square root of the corresponding element of the input.
+- [sqrt(\_:)](simd/sqrt%28__%29-62r7j.md): Each element of the result is the square root of the corresponding element of the input.
+- [sqrt(\_:)](simd/sqrt%28__%29-85jg8.md): Each element of the result is the square root of the corresponding element of the input.
+- [trunc(\_:)](simd/trunc%28__%29-1ndoy.md): Each element of the result is the closest integral value with magnitude less than or equal to that of the corresponding element of the input.
+- [trunc(\_:)](simd/trunc%28__%29-3i567.md): Each element of the result is the closest integral value with magnitude less than or equal to that of the corresponding element of the input.
+- [trunc(\_:)](simd/trunc%28__%29-42bu2.md): Each element of the result is the closest integral value with magnitude less than or equal to that of the corresponding element of the input.
+- [trunc(\_:)](simd/trunc%28__%29-6l2mm.md): Each element of the result is the closest integral value with magnitude less than or equal to that of the corresponding element of the input.
+- [trunc(\_:)](simd/trunc%28__%29-8e59l.md): Each element of the result is the closest integral value with magnitude less than or equal to that of the corresponding element of the input.
+- [trunc(\_:)](simd/trunc%28__%29-l3lk.md): Each element of the result is the closest integral value with magnitude less than or equal to that of the corresponding element of the input.
+
+### Type Aliases
+
+- [matrix_half2x2](simd/matrix_half2x2.md)
+- [matrix_half2x3](simd/matrix_half2x3.md)
+- [matrix_half2x4](simd/matrix_half2x4.md)
+- [matrix_half3x2](simd/matrix_half3x2.md)
+- [matrix_half3x3](simd/matrix_half3x3.md)
+- [matrix_half3x4](simd/matrix_half3x4.md)
+- [matrix_half4x2](simd/matrix_half4x2.md)
+- [matrix_half4x3](simd/matrix_half4x3.md)
+- [matrix_half4x4](simd/matrix_half4x4.md)
+- [simd_bool](simd/simd_bool.md): A Boolean scalar value.
+- [simd_char1](simd/simd_char1.md): A vector of one 8-bit signed integer element.
+- [simd_char16](simd/simd_char16.md): A vector of sixteen 8-bit signed integer elements.
+- [simd_char2](simd/simd_char2.md): A vector of two 8-bit signed integer elements.
+- [simd_char3](simd/simd_char3.md): A vector of three 8-bit signed integer elements.
+- [simd_char32](simd/simd_char32.md): A vector of thirty-two 8-bit signed integer elements.
+- [simd_char4](simd/simd_char4.md): A vector of four 8-bit signed integer elements.
+- [simd_char64](simd/simd_char64.md): A vector of sixty-four 8-bit signed integer elements.
+- [simd_char8](simd/simd_char8.md): A vector of eight 8-bit signed integer elements.
+- [simd_double1](simd/simd_double1.md): A vector of one 64-bit floating-point element.
+- [simd_double2](simd/simd_double2.md): A vector of two 64-bit floating-point elements.
+- [simd_double3](simd/simd_double3.md): A vector of three 64-bit floating-point elements.
+- [simd_double4](simd/simd_double4.md): A vector of four 64-bit floating-point elements.
+- [simd_double8](simd/simd_double8.md): A vector of eight 64-bit floating-point elements.
+- [simd_float1](simd/simd_float1.md): A vector of one 32-bit floating-point element.
+- [simd_float16](simd/simd_float16.md): A vector of sixteen 32-bit floating-point elements.
+- [simd_float2](simd/simd_float2.md): A vector of two 32-bit floating-point elements.
+- [simd_float3](simd/simd_float3.md): A vector of three 32-bit floating-point elements.
+- [simd_float4](simd/simd_float4.md): A vector of four 32-bit floating-point elements.
+- [simd_float8](simd/simd_float8.md): A vector of eight 32-bit floating-point elements.
+- [simd_half1](simd/simd_half1.md): A vector of one 16-bit floating-point element.
+- [simd_half16](simd/simd_half16.md): A vector of sixteen 16-bit floating-point elements.
+- [simd_half2](simd/simd_half2.md): A vector of two 16-bit floating-point elements.
+- [simd_half3](simd/simd_half3.md): A vector of three 16-bit floating-point elements.
+- [simd_half32](simd/simd_half32.md): A vector of thirty-two 16-bit floating-point elements.
+- [simd_half4](simd/simd_half4.md): A vector of four 16-bit floating-point elements.
+- [simd_half8](simd/simd_half8.md): A vector of eight 16-bit floating-point elements.
+- [simd_int1](simd/simd_int1.md): A vector of one 32-bit signed integer element.
+- [simd_int16](simd/simd_int16.md): A vector of sixteen 32-bit signed integer elements.
+- [simd_int2](simd/simd_int2.md): A vector of two 32-bit signed integer elements.
+- [simd_int3](simd/simd_int3.md): A vector of three 32-bit signed integer elements.
+- [simd_int4](simd/simd_int4.md): A vector of four 32-bit signed integer elements.
+- [simd_int8](simd/simd_int8.md): A vector of eight 32-bit signed integer elements.
+- [simd_long1](simd/simd_long1.md): A vector of one 64-bit signed integer element.
+- [simd_long2](simd/simd_long2.md): A vector of two 64-bit signed integer elements.
+- [simd_long3](simd/simd_long3.md): A vector of three 64-bit signed integer elements.
+- [simd_long4](simd/simd_long4.md): A vector of four 64-bit signed integer elements.
+- [simd_long8](simd/simd_long8.md): A vector of eight 64-bit signed integer elements.
+- [simd_packed_char16](simd/simd_packed_char16.md): A packed vector of sixteen 8-bit signed integer elements.
+- [simd_packed_char2](simd/simd_packed_char2.md): A packed vector of two 8-bit signed integer elements.
+- [simd_packed_char32](simd/simd_packed_char32.md): A packed vector of thirty-two 8-bit signed integer elements.
+- [simd_packed_char4](simd/simd_packed_char4.md): A packed vector of four 8-bit signed integer elements.
+- [simd_packed_char64](simd/simd_packed_char64.md): A packed vector of sixty-four 8-bit signed integer elements.
+- [simd_packed_char8](simd/simd_packed_char8.md): A packed vector of eight 8-bit signed integer elements.
+- [simd_packed_double2](simd/simd_packed_double2.md): A packed vector of two 64-bit floating-point elements.
+- [simd_packed_double4](simd/simd_packed_double4.md): A packed vector of four 64-bit floating-point elements.
+- [simd_packed_double8](simd/simd_packed_double8.md): A packed vector of eight 64-bit floating-point elements.
+- [simd_packed_float16](simd/simd_packed_float16.md): A packed vector of sixteen 32-bit floating-point elements.
+- [simd_packed_float2](simd/simd_packed_float2.md): A packed vector of two 32-bit floating-point elements.
+- [simd_packed_float4](simd/simd_packed_float4.md): A packed vector of four 32-bit floating-point elements.
+- [simd_packed_float8](simd/simd_packed_float8.md): A packed vector of eight 32-bit floating-point elements.
+- [simd_packed_half16](simd/simd_packed_half16.md)
+- [simd_packed_half2](simd/simd_packed_half2.md)
+- [simd_packed_half32](simd/simd_packed_half32.md)
+- [simd_packed_half4](simd/simd_packed_half4.md)
+- [simd_packed_half8](simd/simd_packed_half8.md)
+- [simd_packed_int16](simd/simd_packed_int16.md): A packed vector of sixteen 32-bit signed integer elements.
+- [simd_packed_int2](simd/simd_packed_int2.md): A packed vector of two 32-bit signed integer elements.
+- [simd_packed_int4](simd/simd_packed_int4.md): A packed vector of four 32-bit signed integer elements.
+- [simd_packed_int8](simd/simd_packed_int8.md): A packed vector of eight 32-bit signed integer elements.
+- [simd_packed_long2](simd/simd_packed_long2.md): A packed vector of two 64-bit signed integer elements.
+- [simd_packed_long4](simd/simd_packed_long4.md): A packed vector of four 64-bit signed integer elements.
+- [simd_packed_long8](simd/simd_packed_long8.md): A packed vector of eight 64-bit signed integer elements.
+- [simd_packed_short16](simd/simd_packed_short16.md): A packed vector of sixteen 16-bit signed integer elements.
+- [simd_packed_short2](simd/simd_packed_short2.md): A packed vector of two 16-bit signed integer elements.
+- [simd_packed_short32](simd/simd_packed_short32.md): A packed vector of thirty-two 16-bit signed integer elements.
+- [simd_packed_short4](simd/simd_packed_short4.md): A packed vector of four 16-bit signed integer elements.
+- [simd_packed_short8](simd/simd_packed_short8.md): A packed vector of eight 16-bit signed integer elements.
+- [simd_packed_uchar16](simd/simd_packed_uchar16.md): A packed vector of sixteen 8-bit unsigned integer elements.
+- [simd_packed_uchar2](simd/simd_packed_uchar2.md): A packed vector of two 8-bit unsigned integer elements.
+- [simd_packed_uchar32](simd/simd_packed_uchar32.md): A packed vector of thirty-two 8-bit unsigned integer elements.
+- [simd_packed_uchar4](simd/simd_packed_uchar4.md): A packed vector of four 8-bit unsigned integer elements.
+- [simd_packed_uchar64](simd/simd_packed_uchar64.md): A packed vector of sixty-four 8-bit unsigned integer elements.
+- [simd_packed_uchar8](simd/simd_packed_uchar8.md): A packed vector of eight 8-bit unsigned integer elements.
+- [simd_packed_uint16](simd/simd_packed_uint16.md): A packed vector of sixteen 32-bit unsigned integer elements.
+- [simd_packed_uint2](simd/simd_packed_uint2.md): A packed vector of two 32-bit unsigned integer elements.
+- [simd_packed_uint4](simd/simd_packed_uint4.md): A packed vector of four 32-bit unsigned integer elements.
+- [simd_packed_uint8](simd/simd_packed_uint8.md): A packed vector of eight 32-bit unsigned integer elements.
+- [simd_packed_ulong2](simd/simd_packed_ulong2.md): A packed vector of two 64-bit unsigned integer element.
+- [simd_packed_ulong4](simd/simd_packed_ulong4.md): A packed vector of four 64-bit unsigned integer elements.
+- [simd_packed_ulong8](simd/simd_packed_ulong8.md): A packed vector of eight 64-bit unsigned integer elements.
+- [simd_packed_ushort16](simd/simd_packed_ushort16.md): A packed vector of sixteen 16-bit unsigned integer elements.
+- [simd_packed_ushort2](simd/simd_packed_ushort2.md): A packed vector of two 16-bit unsigned integer elements.
+- [simd_packed_ushort32](simd/simd_packed_ushort32.md): A packed vector of thirty-two 16-bit unsigned integer elements.
+- [simd_packed_ushort4](simd/simd_packed_ushort4.md): A packed vector of four 16-bit unsigned integer elements.
+- [simd_packed_ushort8](simd/simd_packed_ushort8.md): A packed vector of eight 16-bit unsigned integer elements.
+- [simd_short1](simd/simd_short1.md): A vector of one 16-bit signed integer element.
+- [simd_short16](simd/simd_short16.md): A vector of sixteen 16-bit signed integer elements.
+- [simd_short2](simd/simd_short2.md): A vector of two 16-bit signed integer elements.
+- [simd_short3](simd/simd_short3.md): A vector of three 16-bit signed integer elements.
+- [simd_short32](simd/simd_short32.md): A vector of thirty-two 16-bit signed integer elements.
+- [simd_short4](simd/simd_short4.md): A vector of four 16-bit signed integer elements.
+- [simd_short8](simd/simd_short8.md): A vector of eight 16-bit signed integer elements.
+- [simd_uchar1](simd/simd_uchar1.md): A vector of one 8-bit unsigned integer element.
+- [simd_uchar16](simd/simd_uchar16.md): A vector of sixteen 8-bit unsigned integer elements.
+- [simd_uchar2](simd/simd_uchar2.md): A vector of two 8-bit unsigned integer elements.
+- [simd_uchar3](simd/simd_uchar3.md): A vector of three 8-bit unsigned integer elements.
+- [simd_uchar32](simd/simd_uchar32.md): A vector of thirty-two 8-bit unsigned integer elements.
+- [simd_uchar4](simd/simd_uchar4.md): A vector of four 8-bit unsigned integer elements.
+- [simd_uchar64](simd/simd_uchar64.md): A vector of sixty-four 8-bit unsigned integer elements.
+- [simd_uchar8](simd/simd_uchar8.md): A vector of eight 8-bit unsigned integer elements.
+- [simd_uint1](simd/simd_uint1.md): A vector of one 32-bit unsigned integer element.
+- [simd_uint16](simd/simd_uint16.md): A vector of sixteen 32-bit unsigned integer elements.
+- [simd_uint2](simd/simd_uint2.md): A vector of two 32-bit unsigned integer elements.
+- [simd_uint3](simd/simd_uint3.md): A vector of three 32-bit unsigned integer elements.
+- [simd_uint4](simd/simd_uint4.md): A vector of four 32-bit unsigned integer elements.
+- [simd_uint8](simd/simd_uint8.md): A vector of eight 32-bit unsigned integer elements.
+- [simd_ulong1](simd/simd_ulong1.md): A vector of one 64-bit unsigned integer element.
+- [simd_ulong2](simd/simd_ulong2.md): A vector of two 64-bit unsigned integer elements.
+- [simd_ulong3](simd/simd_ulong3.md): A vector of three 64-bit unsigned integer elements.
+- [simd_ulong4](simd/simd_ulong4.md): A vector of four 64-bit unsigned integer elements.
+- [simd_ulong8](simd/simd_ulong8.md): A vector of eight 64-bit unsigned integer elements.
+- [simd_ushort1](simd/simd_ushort1.md): A vector of one 16-bit unsigned integer element.
+- [simd_ushort16](simd/simd_ushort16.md): A vector of sixteen 16-bit unsigned integer elements.
+- [simd_ushort2](simd/simd_ushort2.md): A vector of two 16-bit unsigned integer elements.
+- [simd_ushort3](simd/simd_ushort3.md): A vector of three 16-bit unsigned integer elements.
+- [simd_ushort32](simd/simd_ushort32.md): A vector of thirty-two 16-bit unsigned integer elements.
+- [simd_ushort4](simd/simd_ushort4.md): A vector of four 16-bit unsigned integer elements.
+- [simd_ushort8](simd/simd_ushort8.md): A vector of eight 16-bit unsigned integer elements.
+
+# simd (Objective-C)
+
+**Framework:** simd  
+**Kind:** Framework
+
+## Topics
+
+### Structures
+
+- [simd_double2x2](simd/simd_double2x2.md): A matrix of two columns and two rows that contains double-precision values.
+- [simd_double2x3](simd/simd_double2x3.md): A matrix of two columns and three rows that contains double-precision values.
+- [simd_double2x4](simd/simd_double2x4.md): A matrix of two columns and four rows that contains double-precision values.
+- [simd_double3x2](simd/simd_double3x2.md): A matrix of three columns and two rows that contains double-precision values.
+- [simd_double3x3](simd/simd_double3x3.md): A matrix of three columns and three rows that contains double-precision values.
+- [simd_double3x4](simd/simd_double3x4.md): A matrix of three columns and four rows that contains double-precision values.
+- [simd_double4x2](simd/simd_double4x2.md): A matrix of four columns and two rows that contains double-precision values.
+- [simd_double4x3](simd/simd_double4x3.md): A matrix of four columns and three rows that contains double-precision values.
+- [simd_double4x4](simd/simd_double4x4.md): A matrix of four columns and four rows that contains double-precision values.
+- [simd_float2x2](simd/simd_float2x2.md): A matrix of two columns and two rows that contains single-precision values.
+- [simd_float2x3](simd/simd_float2x3.md): A matrix of two columns and three rows that contains single-precision values.
+- [simd_float2x4](simd/simd_float2x4.md): A matrix of two columns and four rows that contains single-precision values.
+- [simd_float3x2](simd/simd_float3x2.md): A matrix of three columns and two rows that contains single-precision values.
+- [simd_float3x3](simd/simd_float3x3.md): A matrix of three columns and three rows that contains single-precision values.
+- [simd_float3x4](simd/simd_float3x4.md): A matrix of three columns and four rows that contains single-precision values.
+- [simd_float4x2](simd/simd_float4x2.md): A matrix of four columns and two rows that contains single-precision values.
+- [simd_float4x3](simd/simd_float4x3.md): A matrix of four columns and three rows that contains single-precision values.
+- [simd_float4x4](simd/simd_float4x4.md): A matrix of four columns and four rows that contains single-precision values.
+- [simd_half2x2](simd/simd_half2x2.md): A matrix of two columns and two rows that contains half-precision values.
+- [simd_half2x3](simd/simd_half2x3.md): A matrix of two columns and three rows that contains half-precision values.
+- [simd_half2x4](simd/simd_half2x4.md): A matrix of two columns and four rows that contains half-precision values.
+- [simd_half3x2](simd/simd_half3x2.md): A matrix of three columns and two rows that contains half-precision values.
+- [simd_half3x3](simd/simd_half3x3.md): A matrix of three columns and three rows that contains half-precision values.
+- [simd_half3x4](simd/simd_half3x4.md): A matrix of three columns and four rows that contains half-precision values.
+- [simd_half4x2](simd/simd_half4x2.md): A matrix of four columns and two rows that contains half-precision values.
+- [simd_half4x3](simd/simd_half4x3.md): A matrix of four columns and three rows that contains half-precision values.
+- [simd_half4x4](simd/simd_half4x4.md): A matrix of four columns and four rows that contains half-precision values.
+- [simd_quatd](simd/simd_quatd.md): A double-precision quaternion.
+- [simd_quatf](simd/simd_quatf.md): A single-precision quaternion.
+- [simd_quath](simd/simd_quath.md)
+
+### Functions
+
+- [matrix_multiply](simd/matrix_multiply-18j88.md)
+- [matrix_multiply](simd/matrix_multiply-1jaof.md)
+- [matrix_multiply](simd/matrix_multiply-1jik2.md)
+- [matrix_multiply](simd/matrix_multiply-1uyr4.md)
+- [matrix_multiply](simd/matrix_multiply-2n40a.md)
+- [matrix_multiply](simd/matrix_multiply-2rmj5.md)
+- [matrix_multiply](simd/matrix_multiply-311cm.md)
+- [matrix_multiply](simd/matrix_multiply-3332o.md)
+- [matrix_multiply](simd/matrix_multiply-3mmmp.md)
+- [matrix_multiply](simd/matrix_multiply-3x9dw.md)
+- [matrix_multiply](simd/matrix_multiply-43zd0.md)
+- [matrix_multiply](simd/matrix_multiply-4bsha.md)
+- [matrix_multiply](simd/matrix_multiply-4jykz.md)
+- [matrix_multiply](simd/matrix_multiply-4whaz.md)
+- [matrix_multiply](simd/matrix_multiply-4z8dc.md)
+- [matrix_multiply](simd/matrix_multiply-4zcrh.md)
+- [matrix_multiply](simd/matrix_multiply-5bqjq.md)
+- [matrix_multiply](simd/matrix_multiply-5k7w6.md)
+- [matrix_multiply](simd/matrix_multiply-5ldzf.md)
+- [matrix_multiply](simd/matrix_multiply-5p3rg.md)
+- [matrix_multiply](simd/matrix_multiply-5xhbd.md)
+- [matrix_multiply](simd/matrix_multiply-6147a.md)
+- [matrix_multiply](simd/matrix_multiply-6dul1.md)
+- [matrix_multiply](simd/matrix_multiply-6o5r.md)
+- [matrix_multiply](simd/matrix_multiply-6yiup.md)
+- [matrix_multiply](simd/matrix_multiply-72leb.md)
+- [matrix_multiply](simd/matrix_multiply-741hs.md)
+- [matrix_multiply](simd/matrix_multiply-7fyaj.md)
+- [matrix_multiply](simd/matrix_multiply-84yc5.md)
+- [matrix_multiply](simd/matrix_multiply-8ovpq.md)
+- [matrix_multiply](simd/matrix_multiply-9emv0.md)
+- [matrix_multiply](simd/matrix_multiply-9lo8m.md)
+- [matrix_multiply](simd/matrix_multiply-9s97x.md)
+- [matrix_multiply](simd/matrix_multiply-auk7.md)
+- [matrix_multiply](simd/matrix_multiply-mxp0.md)
+- [matrix_multiply](simd/matrix_multiply-wgnt.md)
+- [simd_act](simd/simd_act%28____%29-17i5z.md)
+- [simd_add](simd/simd_add%28____%29-7ul9y.md)
+- [simd_angle](simd/simd_angle%28__%29-zylp.md)
+- [simd_axis](simd/simd_axis%28__%29-56smw.md)
+- [simd_bezier](simd/simd_bezier%28__________%29-2cl6p.md)
+- [simd_char](simd/simd_char-513no.md)
+- [simd_char](simd/simd_char-7aslq.md)
+- [simd_char](simd/simd_char-7pop6.md)
+- [simd_char](simd/simd_char-7w8bk.md)
+- [simd_char](simd/simd_char-7z5ur.md)
+- [simd_char](simd/simd_char-98ee0.md)
+- [simd_char_sat](simd/simd_char_sat-1kc99.md)
+- [simd_char_sat](simd/simd_char_sat-1yte1.md)
+- [simd_char_sat](simd/simd_char_sat-2grxw.md)
+- [simd_char_sat](simd/simd_char_sat-2k98b.md)
+- [simd_char_sat](simd/simd_char_sat-6n61s.md)
+- [simd_char_sat](simd/simd_char_sat-uld7.md)
+- [simd_clamp](simd/simd_clamp%28______%29-7ck0a.md)
+- [simd_conjugate](simd/simd_conjugate%28__%29-989np.md)
+- [simd_dot](simd/simd_dot%28____%29-2dt0z.md)
+- [simd_double](simd/simd_double-50hin.md)
+- [simd_double](simd/simd_double-53euw.md)
+- [simd_double](simd/simd_double-5ouh6.md)
+- [simd_double](simd/simd_double-63bpq.md)
+- [simd_equal](simd/simd_equal%28____%29-29zmw.md)
+- [simd_float](simd/simd_float-14bkn.md)
+- [simd_float](simd/simd_float-17sxg.md)
+- [simd_float](simd/simd_float-1pri1.md)
+- [simd_float](simd/simd_float-33fes.md)
+- [simd_float](simd/simd_float-jft9.md)
+- [simd_imag](simd/simd_imag%28__%29-2c8in.md)
+- [simd_insphere](simd/simd_insphere-2zd3i.md)
+- [simd_int](simd/simd_int-42ktn.md)
+- [simd_int](simd/simd_int-9gpee.md)
+- [simd_int](simd/simd_int-9k6qb.md)
+- [simd_int](simd/simd_int-9n4ac.md)
+- [simd_int](simd/simd_int-nfub.md)
+- [simd_int_sat](simd/simd_int_sat-61pyc.md)
+- [simd_int_sat](simd/simd_int_sat-67ttb.md)
+- [simd_int_sat](simd/simd_int_sat-6spit.md)
+- [simd_int_sat](simd/simd_int_sat-6w72i.md)
+- [simd_int_sat](simd/simd_int_sat-7e597.md)
+- [simd_inverse](simd/simd_inverse%28__%29-3cumm.md)
+- [simd_length](simd/simd_length%28__%29-52pax.md)
+- [simd_long](simd/simd_long-48rt.md)
+- [simd_long](simd/simd_long-7b9i.md)
+- [simd_long](simd/simd_long-93ie8.md)
+- [simd_long](simd/simd_long-a8lf.md)
+- [simd_long_sat](simd/simd_long_sat-5lko6.md)
+- [simd_long_sat](simd/simd_long_sat-5p1r7.md)
+- [simd_long_sat](simd/simd_long_sat-5rzac.md)
+- [simd_long_sat](simd/simd_long_sat-6rwci.md)
+- [simd_matrix3x3](simd/simd_matrix3x3%28__%29-60esl.md)
+- [simd_matrix4x4](simd/simd_matrix4x4%28__%29-20inb.md)
+- [simd_mul](simd/simd_mul%28____%29-2u2df.md)
+- [simd_mul](simd/simd_mul%28____%29-428fx.md)
+- [simd_mul](simd/simd_mul%28____%29-765ay.md)
+- [simd_mul](simd/simd_mul-12lkj.md)
+- [simd_mul](simd/simd_mul-17zq5.md)
+- [simd_mul](simd/simd_mul-1a5eh.md)
+- [simd_mul](simd/simd_mul-1qe8r.md)
+- [simd_mul](simd/simd_mul-1sizq.md)
+- [simd_mul](simd/simd_mul-1x07h.md)
+- [simd_mul](simd/simd_mul-2lqvf.md)
+- [simd_mul](simd/simd_mul-2muu3.md)
+- [simd_mul](simd/simd_mul-2neew.md)
+- [simd_mul](simd/simd_mul-2qqjc.md)
+- [simd_mul](simd/simd_mul-2wjyy.md)
+- [simd_mul](simd/simd_mul-321dn.md)
+- [simd_mul](simd/simd_mul-38oyu.md)
+- [simd_mul](simd/simd_mul-3fo3k.md)
+- [simd_mul](simd/simd_mul-3hipi.md)
+- [simd_mul](simd/simd_mul-3iru.md)
+- [simd_mul](simd/simd_mul-3ut73.md)
+- [simd_mul](simd/simd_mul-3wqs3.md)
+- [simd_mul](simd/simd_mul-3ziny.md)
+- [simd_mul](simd/simd_mul-41mdx.md)
+- [simd_mul](simd/simd_mul-41oa5.md)
+- [simd_mul](simd/simd_mul-41okb.md)
+- [simd_mul](simd/simd_mul-48anl.md)
+- [simd_mul](simd/simd_mul-4ct77.md)
+- [simd_mul](simd/simd_mul-4llku.md)
+- [simd_mul](simd/simd_mul-4ydnc.md)
+- [simd_mul](simd/simd_mul-5kyh4.md)
+- [simd_mul](simd/simd_mul-5nnrs.md)
+- [simd_mul](simd/simd_mul-5plud.md)
+- [simd_mul](simd/simd_mul-5zwmf.md)
+- [simd_mul](simd/simd_mul-6bnxy.md)
+- [simd_mul](simd/simd_mul-6oyan.md)
+- [simd_mul](simd/simd_mul-6p1in.md)
+- [simd_mul](simd/simd_mul-74zjn.md)
+- [simd_mul](simd/simd_mul-7fak3.md)
+- [simd_mul](simd/simd_mul-7kqm0.md)
+- [simd_mul](simd/simd_mul-7wej.md)
+- [simd_mul](simd/simd_mul-7zoqz.md)
+- [simd_mul](simd/simd_mul-80p5g.md)
+- [simd_mul](simd/simd_mul-84u43.md)
+- [simd_mul](simd/simd_mul-84uld.md)
+- [simd_mul](simd/simd_mul-84wa9.md)
+- [simd_mul](simd/simd_mul-8b82h.md)
+- [simd_mul](simd/simd_mul-8gp44.md)
+- [simd_mul](simd/simd_mul-8js9d.md)
+- [simd_mul](simd/simd_mul-8kzil.md)
+- [simd_mul](simd/simd_mul-8zlvn.md)
+- [simd_mul](simd/simd_mul-9w6mz.md)
+- [simd_mul](simd/simd_mul-9yakc.md)
+- [simd_mul](simd/simd_mul-9ybrk.md)
+- [simd_mul](simd/simd_mul-9yc90.md)
+- [simd_mul](simd/simd_mul-df85.md)
+- [simd_mul](simd/simd_mul-ji50.md)
+- [simd_mul](simd/simd_mul-o8gy.md)
+- [simd_negate](simd/simd_negate%28__%29-3yw6m.md)
+- [simd_normalize](simd/simd_normalize%28__%29-ubut.md)
+- [simd_quaternion](simd/simd_quaternion%28__%29-2er3f.md)
+- [simd_quaternion](simd/simd_quaternion%28__%29-4565s.md)
+- [simd_quaternion](simd/simd_quaternion%28__%29-8kjw1.md)
+- [simd_quaternion](simd/simd_quaternion%28__%29-9c4np.md)
+- [simd_quaternion](simd/simd_quaternion%28____%29-59cuw.md)
+- [simd_quaternion](simd/simd_quaternion%28____%29-6a6gg.md)
+- [simd_quaternion](simd/simd_quaternion%28________%29-9u5ci.md)
+- [simd_real](simd/simd_real%28__%29-75wwb.md)
+- [simd_reduce_max](simd/simd_reduce_max%28__%29-4hctl.md)
+- [simd_short](simd/simd_short-3ecuc.md)
+- [simd_short](simd/simd_short-6evxu.md)
+- [simd_short](simd/simd_short-6hok1.md)
+- [simd_short](simd/simd_short-6l5p4.md)
+- [simd_short](simd/simd_short-6zn4s.md)
+- [simd_short](simd/simd_short-7lna0.md)
+- [simd_short_rte](simd/simd_short_rte-56npk.md)
+- [simd_short_rte](simd/simd_short_rte-7sa56.md)
+- [simd_short_rte](simd/simd_short_rte-8768u.md)
+- [simd_short_rte](simd/simd_short_rte-8dpvg.md)
+- [simd_short_rte](simd/simd_short_rte-8gne7.md)
+- [simd_short_rte](simd/simd_short_rte-zd6c.md)
+- [simd_short_sat](simd/simd_short_sat-31anf.md)
+- [simd_short_sat](simd/simd_short_sat-3bb2b.md)
+- [simd_short_sat](simd/simd_short_sat-3gbov.md)
+- [simd_short_sat](simd/simd_short_sat-3j95m.md)
+- [simd_short_sat](simd/simd_short_sat-3mqel.md)
+- [simd_short_sat](simd/simd_short_sat-551gs.md)
+- [simd_slerp](simd/simd_slerp%28______%29-7vayy.md)
+- [simd_slerp_longest](simd/simd_slerp_longest%28______%29-816ko.md)
+- [simd_spline](simd/simd_spline%28__________%29-4ojmq.md)
+- [simd_sub](simd/simd_sub%28____%29-47kxs.md)
+- [simd_trace](simd/simd_trace-1ujd7.md)
+- [simd_trace](simd/simd_trace-2pc5x.md)
+- [simd_trace](simd/simd_trace-3kkvh.md)
+- [simd_trace](simd/simd_trace-3xvj2.md)
+- [simd_trace](simd/simd_trace-5rbcl.md)
+- [simd_trace](simd/simd_trace-5xh9t.md)
+- [simd_trace](simd/simd_trace-8lzqg.md)
+- [simd_trace](simd/simd_trace-9u98r.md)
+- [simd_trace](simd/simd_trace-9zl1z.md)
+- [simd_uchar](simd/simd_uchar-1m2aw.md)
+- [simd_uchar](simd/simd_uchar-5t318.md)
+- [simd_uchar](simd/simd_uchar-83o9c.md)
+- [simd_uchar](simd/simd_uchar-8fxno.md)
+- [simd_uchar](simd/simd_uchar-8xw61.md)
+- [simd_uchar](simd/simd_uchar-91df2.md)
+- [simd_uchar_sat](simd/simd_uchar_sat-1947a.md)
+- [simd_uchar_sat](simd/simd_uchar_sat-1s7g0.md)
+- [simd_uchar_sat](simd/simd_uchar_sat-1xcab.md)
+- [simd_uchar_sat](simd/simd_uchar_sat-2d342.md)
+- [simd_uchar_sat](simd/simd_uchar_sat-2lkny.md)
+- [simd_uchar_sat](simd/simd_uchar_sat-32ox3.md)
+- [simd_uint](simd/simd_uint-19mle.md)
+- [simd_uint](simd/simd_uint-77jkc.md)
+- [simd_uint](simd/simd_uint-7dtda.md)
+- [simd_uint](simd/simd_uint-7gqq9.md)
+- [simd_uint](simd/simd_uint-8dq3c.md)
+- [simd_uint_rte](simd/simd_uint_rte-54lhz.md)
+- [simd_uint_rte](simd/simd_uint_rte-5q02h.md)
+- [simd_uint_rte](simd/simd_uint_rte-5sw0i.md)
+- [simd_uint_rte](simd/simd_uint_rte-6auoz.md)
+- [simd_uint_rte](simd/simd_uint_rte-7bn4j.md)
+- [simd_uint_sat](simd/simd_uint_sat-1bire.md)
+- [simd_uint_sat](simd/simd_uint_sat-53wth.md)
+- [simd_uint_sat](simd/simd_uint_sat-7ei6.md)
+- [simd_uint_sat](simd/simd_uint_sat-n5gn.md)
+- [simd_uint_sat](simd/simd_uint_sat-qmn8.md)
+- [simd_ulong](simd/simd_ulong-16q86.md)
+- [simd_ulong](simd/simd_ulong-1izqq.md)
+- [simd_ulong](simd/simd_ulong-1mh3r.md)
+- [simd_ulong](simd/simd_ulong-1rm3c.md)
+- [simd_ulong_rte](simd/simd_ulong_rte-8mqo1.md)
+- [simd_ulong_rte](simd/simd_ulong_rte-92hjo.md)
+- [simd_ulong_rte](simd/simd_ulong_rte-95web.md)
+- [simd_ulong_rte](simd/simd_ulong_rte-9qs9p.md)
+- [simd_ulong_sat](simd/simd_ulong_sat-10yvs.md)
+- [simd_ulong_sat](simd/simd_ulong_sat-1lulm.md)
+- [simd_ulong_sat](simd/simd_ulong_sat-1pbw9.md)
+- [simd_ulong_sat](simd/simd_ulong_sat-o57g.md)
+- [simd_ushort](simd/simd_ushort-2y5lz.md)
+- [simd_ushort](simd/simd_ushort-3g3zi.md)
+- [simd_ushort](simd/simd_ushort-3jlb1.md)
+- [simd_ushort](simd/simd_ushort-44h8j.md)
+- [simd_ushort](simd/simd_ushort-46ib2.md)
+- [simd_ushort](simd/simd_ushort-5c2hi.md)
+- [simd_ushort_rte](simd/simd_ushort_rte-13pr9.md)
+- [simd_ushort_rte](simd/simd_ushort_rte-3ekb9.md)
+- [simd_ushort_rte](simd/simd_ushort_rte-3jpiu.md)
+- [simd_ushort_rte](simd/simd_ushort_rte-42xjg.md)
+- [simd_ushort_rte](simd/simd_ushort_rte-4hevc.md)
+- [simd_ushort_rte](simd/simd_ushort_rte-7ng86.md)
+- [simd_ushort_sat](simd/simd_ushort_sat-11ngi.md)
+- [simd_ushort_sat](simd/simd_ushort_sat-3mju9.md)
+- [simd_ushort_sat](simd/simd_ushort_sat-7hbn2.md)
+- [simd_ushort_sat](simd/simd_ushort_sat-7kswp.md)
+- [simd_ushort_sat](simd/simd_ushort_sat-82rdg.md)
+- [simd_ushort_sat](simd/simd_ushort_sat-8ffvk.md)
+- [vector16](simd/vector16-4sbj7.md)
+- [vector2](simd/vector2-2oixh.md)
+- [vector3](simd/vector3-3dtww.md)
+- [vector3](simd/vector3-72qq8.md)
+- [vector32](simd/vector32-u9cr.md)
+- [vector4](simd/vector4-62ssk.md)
+- [vector4](simd/vector4-8o2lb.md)
+- [vector4](simd/vector4-9smik.md)
+- [vector8](simd/vector8-2us01.md)
+- [vector8](simd/vector8-2wxgj.md)
+
+### Macros
+
+- [SIMD_CFUNC](simd/simd_cfunc.md)
+- [SIMD_COMPILER_HAS_REQUIRED_FEATURES](simd/simd_compiler_has_required_features.md)
+- [SIMD_CONST](simd/simd_const.md)
+- [SIMD_CONSTEXPR](simd/simd_constexpr.md)
+- [SIMD_CPPFUNC](simd/simd_cppfunc.md)
+- [SIMD_CURRENT_LIBRARY_VERSION](simd/simd_current_library_version.md)
+- [SIMD_DEPRECATED](simd/simd_deprecated.md)
+- [SIMD_INLINE](simd/simd_inline.md)
+- [SIMD_LIBRARY_VERSION](simd/simd_library_version.md)
+- [SIMD_NODEBUG](simd/simd_nodebug.md)
+- [SIMD_NOEXCEPT](simd/simd_noexcept.md)
+- [SIMD_NOINLINE](simd/simd_noinline.md)
+- [SIMD_NONCONST](simd/simd_nonconst.md)
+- [SIMD_OVERLOAD](simd/simd_overload.md)
+- [carg](simd/carg.md)
+- [ceil](simd/ceil.md)
+- [cimag](simd/cimag.md)
+- [conj](simd/conj.md)
+- [cproj](simd/cproj.md)
+- [creal](simd/creal.md)
+- [floor](simd/floor.md)
+- [fmax](simd/fmax.md)
+- [fmin](simd/fmin.md)
+- [frexp](simd/frexp.md)
+- [ilogb](simd/ilogb.md)
+- [isfinite](simd/isfinite.md)
+- [isinf](simd/isinf.md)
+- [isnan](simd/isnan.md)
+- [isnormal](simd/isnormal.md)
+- [ldexp](simd/ldexp.md)
+- [lgamma](simd/lgamma.md)
+- [llrint](simd/llrint.md)
+- [llround](simd/llround.md)
+- [logb](simd/logb.md)
+- [lrint](simd/lrint.md)
+- [lround](simd/lround.md)
+- [matrix_add](simd/matrix_add.md)
+- [matrix_almost_equal_elements](simd/matrix_almost_equal_elements.md)
+- [matrix_almost_equal_elements_relative](simd/matrix_almost_equal_elements_relative.md)
+- [matrix_determinant](simd/matrix_determinant.md)
+- [matrix_equal](simd/matrix_equal.md)
+- [matrix_from_columns](simd/matrix_from_columns.md)
+- [matrix_from_diagonal](simd/matrix_from_diagonal.md)
+- [matrix_from_rows](simd/matrix_from_rows.md)
+- [matrix_invert](simd/matrix_invert.md)
+- [matrix_linear_combination](simd/matrix_linear_combination.md)
+- [matrix_sub](simd/matrix_sub.md)
+- [matrix_trace](simd/matrix_trace.md)
+- [matrix_transpose](simd/matrix_transpose.md)
+- [nearbyint](simd/nearbyint.md)
+- [nexttoward](simd/nexttoward.md)
+- [remquo](simd/remquo.md)
+- [scalbln](simd/scalbln.md)
+- [scalbn](simd/scalbn.md)
+- [simd_lerp](simd/simd_lerp.md)
+- [sincos](simd/sincos.md)
+- [sincospi](simd/sincospi.md)
+- [trunc](simd/trunc.md)
+- [vector_abs](simd/vector_abs.md)
+- [vector_all](simd/vector_all.md)
+- [vector_any](simd/vector_any.md)
+- [vector_bitselect](simd/vector_bitselect.md)
+- [vector_char](simd/vector_char.md)
+- [vector_char_sat](simd/vector_char_sat.md)
+- [vector_clamp](simd/vector_clamp.md)
+- [vector_cross](simd/vector_cross.md)
+- [vector_distance](simd/vector_distance.md)
+- [vector_distance_squared](simd/vector_distance_squared.md)
+- [vector_dot](simd/vector_dot.md)
+- [vector_double](simd/vector_double.md)
+- [vector_fast_distance](simd/vector_fast_distance.md)
+- [vector_fast_length](simd/vector_fast_length.md)
+- [vector_fast_normalize](simd/vector_fast_normalize.md)
+- [vector_fast_project](simd/vector_fast_project.md)
+- [vector_fast_recip](simd/vector_fast_recip.md)
+- [vector_fast_rsqrt](simd/vector_fast_rsqrt.md)
+- [vector_float](simd/vector_float.md)
+- [vector_fract](simd/vector_fract.md)
+- [vector_int](simd/vector_int.md)
+- [vector_int_sat](simd/vector_int_sat.md)
+- [vector_length](simd/vector_length.md)
+- [vector_length_squared](simd/vector_length_squared.md)
+- [vector_long](simd/vector_long.md)
+- [vector_long_sat](simd/vector_long_sat.md)
+- [vector_max](simd/vector_max.md)
+- [vector_min](simd/vector_min.md)
+- [vector_mix](simd/vector_mix.md)
+- [vector_norm_inf](simd/vector_norm_inf.md)
+- [vector_norm_one](simd/vector_norm_one.md)
+- [vector_normalize](simd/vector_normalize.md)
+- [vector_precise_distance](simd/vector_precise_distance.md)
+- [vector_precise_length](simd/vector_precise_length.md)
+- [vector_precise_normalize](simd/vector_precise_normalize.md)
+- [vector_precise_project](simd/vector_precise_project.md)
+- [vector_precise_recip](simd/vector_precise_recip.md)
+- [vector_precise_rsqrt](simd/vector_precise_rsqrt.md)
+- [vector_project](simd/vector_project.md)
+- [vector_recip](simd/vector_recip.md)
+- [vector_reduce_add](simd/vector_reduce_add.md)
+- [vector_reduce_max](simd/vector_reduce_max.md)
+- [vector_reduce_min](simd/vector_reduce_min.md)
+- [vector_reflect](simd/vector_reflect.md)
+- [vector_refract](simd/vector_refract.md)
+- [vector_rsqrt](simd/vector_rsqrt.md)
+- [vector_select](simd/vector_select.md)
+- [vector_short](simd/vector_short.md)
+- [vector_short_sat](simd/vector_short_sat.md)
+- [vector_sign](simd/vector_sign.md)
+- [vector_smoothstep](simd/vector_smoothstep.md)
+- [vector_step](simd/vector_step.md)
+- [vector_uchar](simd/vector_uchar.md)
+- [vector_uchar_sat](simd/vector_uchar_sat.md)
+- [vector_uint](simd/vector_uint.md)
+- [vector_uint_sat](simd/vector_uint_sat.md)
+- [vector_ulong](simd/vector_ulong.md)
+- [vector_ulong_sat](simd/vector_ulong_sat.md)
+- [vector_ushort](simd/vector_ushort.md)
+- [vector_ushort_sat](simd/vector_ushort_sat.md)
+
+### Type Aliases
+
+- [matrix_half2x2](simd/matrix_half2x2.md)
+- [matrix_half2x3](simd/matrix_half2x3.md)
+- [matrix_half2x4](simd/matrix_half2x4.md)
+- [matrix_half3x2](simd/matrix_half3x2.md)
+- [matrix_half3x3](simd/matrix_half3x3.md)
+- [matrix_half3x4](simd/matrix_half3x4.md)
+- [matrix_half4x2](simd/matrix_half4x2.md)
+- [matrix_half4x3](simd/matrix_half4x3.md)
+- [matrix_half4x4](simd/matrix_half4x4.md)
+- [simd_bool](simd/simd_bool.md): A Boolean scalar value.
+- [simd_char1](simd/simd_char1.md): A vector of one 8-bit signed integer element.
+- [simd_char16](simd/simd_char16.md): A vector of sixteen 8-bit signed integer elements.
+- [simd_char2](simd/simd_char2.md): A vector of two 8-bit signed integer elements.
+- [simd_char3](simd/simd_char3.md): A vector of three 8-bit signed integer elements.
+- [simd_char32](simd/simd_char32.md): A vector of thirty-two 8-bit signed integer elements.
+- [simd_char4](simd/simd_char4.md): A vector of four 8-bit signed integer elements.
+- [simd_char64](simd/simd_char64.md): A vector of sixty-four 8-bit signed integer elements.
+- [simd_char8](simd/simd_char8.md): A vector of eight 8-bit signed integer elements.
+- [simd_double1](simd/simd_double1.md): A vector of one 64-bit floating-point element.
+- [simd_double2](simd/simd_double2.md): A vector of two 64-bit floating-point elements.
+- [simd_double3](simd/simd_double3.md): A vector of three 64-bit floating-point elements.
+- [simd_double4](simd/simd_double4.md): A vector of four 64-bit floating-point elements.
+- [simd_double8](simd/simd_double8.md): A vector of eight 64-bit floating-point elements.
+- [simd_float1](simd/simd_float1.md): A vector of one 32-bit floating-point element.
+- [simd_float16](simd/simd_float16.md): A vector of sixteen 32-bit floating-point elements.
+- [simd_float2](simd/simd_float2.md): A vector of two 32-bit floating-point elements.
+- [simd_float3](simd/simd_float3.md): A vector of three 32-bit floating-point elements.
+- [simd_float4](simd/simd_float4.md): A vector of four 32-bit floating-point elements.
+- [simd_float8](simd/simd_float8.md): A vector of eight 32-bit floating-point elements.
+- [simd_half1](simd/simd_half1.md): A vector of one 16-bit floating-point element.
+- [simd_half16](simd/simd_half16.md): A vector of sixteen 16-bit floating-point elements.
+- [simd_half2](simd/simd_half2.md): A vector of two 16-bit floating-point elements.
+- [simd_half3](simd/simd_half3.md): A vector of three 16-bit floating-point elements.
+- [simd_half32](simd/simd_half32.md): A vector of thirty-two 16-bit floating-point elements.
+- [simd_half4](simd/simd_half4.md): A vector of four 16-bit floating-point elements.
+- [simd_half8](simd/simd_half8.md): A vector of eight 16-bit floating-point elements.
+- [simd_int1](simd/simd_int1.md): A vector of one 32-bit signed integer element.
+- [simd_int16](simd/simd_int16.md): A vector of sixteen 32-bit signed integer elements.
+- [simd_int2](simd/simd_int2.md): A vector of two 32-bit signed integer elements.
+- [simd_int3](simd/simd_int3.md): A vector of three 32-bit signed integer elements.
+- [simd_int4](simd/simd_int4.md): A vector of four 32-bit signed integer elements.
+- [simd_int8](simd/simd_int8.md): A vector of eight 32-bit signed integer elements.
+- [simd_long1](simd/simd_long1.md): A vector of one 64-bit signed integer element.
+- [simd_long2](simd/simd_long2.md): A vector of two 64-bit signed integer elements.
+- [simd_long3](simd/simd_long3.md): A vector of three 64-bit signed integer elements.
+- [simd_long4](simd/simd_long4.md): A vector of four 64-bit signed integer elements.
+- [simd_long8](simd/simd_long8.md): A vector of eight 64-bit signed integer elements.
+- [simd_packed_char16](simd/simd_packed_char16.md): A packed vector of sixteen 8-bit signed integer elements.
+- [simd_packed_char2](simd/simd_packed_char2.md): A packed vector of two 8-bit signed integer elements.
+- [simd_packed_char32](simd/simd_packed_char32.md): A packed vector of thirty-two 8-bit signed integer elements.
+- [simd_packed_char4](simd/simd_packed_char4.md): A packed vector of four 8-bit signed integer elements.
+- [simd_packed_char64](simd/simd_packed_char64.md): A packed vector of sixty-four 8-bit signed integer elements.
+- [simd_packed_char8](simd/simd_packed_char8.md): A packed vector of eight 8-bit signed integer elements.
+- [simd_packed_double2](simd/simd_packed_double2.md): A packed vector of two 64-bit floating-point elements.
+- [simd_packed_double4](simd/simd_packed_double4.md): A packed vector of four 64-bit floating-point elements.
+- [simd_packed_double8](simd/simd_packed_double8.md): A packed vector of eight 64-bit floating-point elements.
+- [simd_packed_float16](simd/simd_packed_float16.md): A packed vector of sixteen 32-bit floating-point elements.
+- [simd_packed_float2](simd/simd_packed_float2.md): A packed vector of two 32-bit floating-point elements.
+- [simd_packed_float4](simd/simd_packed_float4.md): A packed vector of four 32-bit floating-point elements.
+- [simd_packed_float8](simd/simd_packed_float8.md): A packed vector of eight 32-bit floating-point elements.
+- [simd_packed_half16](simd/simd_packed_half16.md)
+- [simd_packed_half2](simd/simd_packed_half2.md)
+- [simd_packed_half32](simd/simd_packed_half32.md)
+- [simd_packed_half4](simd/simd_packed_half4.md)
+- [simd_packed_half8](simd/simd_packed_half8.md)
+- [simd_packed_int16](simd/simd_packed_int16.md): A packed vector of sixteen 32-bit signed integer elements.
+- [simd_packed_int2](simd/simd_packed_int2.md): A packed vector of two 32-bit signed integer elements.
+- [simd_packed_int4](simd/simd_packed_int4.md): A packed vector of four 32-bit signed integer elements.
+- [simd_packed_int8](simd/simd_packed_int8.md): A packed vector of eight 32-bit signed integer elements.
+- [simd_packed_long2](simd/simd_packed_long2.md): A packed vector of two 64-bit signed integer elements.
+- [simd_packed_long4](simd/simd_packed_long4.md): A packed vector of four 64-bit signed integer elements.
+- [simd_packed_long8](simd/simd_packed_long8.md): A packed vector of eight 64-bit signed integer elements.
+- [simd_packed_short16](simd/simd_packed_short16.md): A packed vector of sixteen 16-bit signed integer elements.
+- [simd_packed_short2](simd/simd_packed_short2.md): A packed vector of two 16-bit signed integer elements.
+- [simd_packed_short32](simd/simd_packed_short32.md): A packed vector of thirty-two 16-bit signed integer elements.
+- [simd_packed_short4](simd/simd_packed_short4.md): A packed vector of four 16-bit signed integer elements.
+- [simd_packed_short8](simd/simd_packed_short8.md): A packed vector of eight 16-bit signed integer elements.
+- [simd_packed_uchar16](simd/simd_packed_uchar16.md): A packed vector of sixteen 8-bit unsigned integer elements.
+- [simd_packed_uchar2](simd/simd_packed_uchar2.md): A packed vector of two 8-bit unsigned integer elements.
+- [simd_packed_uchar32](simd/simd_packed_uchar32.md): A packed vector of thirty-two 8-bit unsigned integer elements.
+- [simd_packed_uchar4](simd/simd_packed_uchar4.md): A packed vector of four 8-bit unsigned integer elements.
+- [simd_packed_uchar64](simd/simd_packed_uchar64.md): A packed vector of sixty-four 8-bit unsigned integer elements.
+- [simd_packed_uchar8](simd/simd_packed_uchar8.md): A packed vector of eight 8-bit unsigned integer elements.
+- [simd_packed_uint16](simd/simd_packed_uint16.md): A packed vector of sixteen 32-bit unsigned integer elements.
+- [simd_packed_uint2](simd/simd_packed_uint2.md): A packed vector of two 32-bit unsigned integer elements.
+- [simd_packed_uint4](simd/simd_packed_uint4.md): A packed vector of four 32-bit unsigned integer elements.
+- [simd_packed_uint8](simd/simd_packed_uint8.md): A packed vector of eight 32-bit unsigned integer elements.
+- [simd_packed_ulong2](simd/simd_packed_ulong2.md): A packed vector of two 64-bit unsigned integer element.
+- [simd_packed_ulong4](simd/simd_packed_ulong4.md): A packed vector of four 64-bit unsigned integer elements.
+- [simd_packed_ulong8](simd/simd_packed_ulong8.md): A packed vector of eight 64-bit unsigned integer elements.
+- [simd_packed_ushort16](simd/simd_packed_ushort16.md): A packed vector of sixteen 16-bit unsigned integer elements.
+- [simd_packed_ushort2](simd/simd_packed_ushort2.md): A packed vector of two 16-bit unsigned integer elements.
+- [simd_packed_ushort32](simd/simd_packed_ushort32.md): A packed vector of thirty-two 16-bit unsigned integer elements.
+- [simd_packed_ushort4](simd/simd_packed_ushort4.md): A packed vector of four 16-bit unsigned integer elements.
+- [simd_packed_ushort8](simd/simd_packed_ushort8.md): A packed vector of eight 16-bit unsigned integer elements.
+- [simd_short1](simd/simd_short1.md): A vector of one 16-bit signed integer element.
+- [simd_short16](simd/simd_short16.md): A vector of sixteen 16-bit signed integer elements.
+- [simd_short2](simd/simd_short2.md): A vector of two 16-bit signed integer elements.
+- [simd_short3](simd/simd_short3.md): A vector of three 16-bit signed integer elements.
+- [simd_short32](simd/simd_short32.md): A vector of thirty-two 16-bit signed integer elements.
+- [simd_short4](simd/simd_short4.md): A vector of four 16-bit signed integer elements.
+- [simd_short8](simd/simd_short8.md): A vector of eight 16-bit signed integer elements.
+- [simd_uchar1](simd/simd_uchar1.md): A vector of one 8-bit unsigned integer element.
+- [simd_uchar16](simd/simd_uchar16.md): A vector of sixteen 8-bit unsigned integer elements.
+- [simd_uchar2](simd/simd_uchar2.md): A vector of two 8-bit unsigned integer elements.
+- [simd_uchar3](simd/simd_uchar3.md): A vector of three 8-bit unsigned integer elements.
+- [simd_uchar32](simd/simd_uchar32.md): A vector of thirty-two 8-bit unsigned integer elements.
+- [simd_uchar4](simd/simd_uchar4.md): A vector of four 8-bit unsigned integer elements.
+- [simd_uchar64](simd/simd_uchar64.md): A vector of sixty-four 8-bit unsigned integer elements.
+- [simd_uchar8](simd/simd_uchar8.md): A vector of eight 8-bit unsigned integer elements.
+- [simd_uint1](simd/simd_uint1.md): A vector of one 32-bit unsigned integer element.
+- [simd_uint16](simd/simd_uint16.md): A vector of sixteen 32-bit unsigned integer elements.
+- [simd_uint2](simd/simd_uint2.md): A vector of two 32-bit unsigned integer elements.
+- [simd_uint3](simd/simd_uint3.md): A vector of three 32-bit unsigned integer elements.
+- [simd_uint4](simd/simd_uint4.md): A vector of four 32-bit unsigned integer elements.
+- [simd_uint8](simd/simd_uint8.md): A vector of eight 32-bit unsigned integer elements.
+- [simd_ulong1](simd/simd_ulong1.md): A vector of one 64-bit unsigned integer element.
+- [simd_ulong2](simd/simd_ulong2.md): A vector of two 64-bit unsigned integer elements.
+- [simd_ulong3](simd/simd_ulong3.md): A vector of three 64-bit unsigned integer elements.
+- [simd_ulong4](simd/simd_ulong4.md): A vector of four 64-bit unsigned integer elements.
+- [simd_ulong8](simd/simd_ulong8.md): A vector of eight 64-bit unsigned integer elements.
+- [simd_ushort1](simd/simd_ushort1.md): A vector of one 16-bit unsigned integer element.
+- [simd_ushort16](simd/simd_ushort16.md): A vector of sixteen 16-bit unsigned integer elements.
+- [simd_ushort2](simd/simd_ushort2.md): A vector of two 16-bit unsigned integer elements.
+- [simd_ushort3](simd/simd_ushort3.md): A vector of three 16-bit unsigned integer elements.
+- [simd_ushort32](simd/simd_ushort32.md): A vector of thirty-two 16-bit unsigned integer elements.
+- [simd_ushort4](simd/simd_ushort4.md): A vector of four 16-bit unsigned integer elements.
+- [simd_ushort8](simd/simd_ushort8.md): A vector of eight 16-bit unsigned integer elements.

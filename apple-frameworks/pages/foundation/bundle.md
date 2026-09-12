@@ -1,0 +1,498 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/bundle](https://developer.apple.com/documentation/foundation/bundle)
+
+# Bundle (Swift)
+
+**Framework:** Foundation  
+**Kind:** Class  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.0+ · macOS 10.0+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+A representation of the code and resources stored in a bundle directory on disk.
+
+## Declaration
+
+```swift
+class Bundle
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Apple uses bundles to represent apps, frameworks, plug-ins, and many other specific types of content. Bundles organize their contained resources into well-defined subdirectories, and bundle structures vary depending on the platform and the type of the bundle. By using a bundle object, you can access a bundle’s resources without knowing the structure of the bundle. The bundle object provides a single interface for locating items, taking into account the bundle structure, user preferences, available localizations, and other relevant factors.
+
+Any executable can use a bundle object to locate resources, either inside an app’s bundle or in a known bundle located elsewhere. You don’t use a bundle object to locate files in a container directory or in other parts of the file system.
+
+The general pattern for using a bundle object is as follows:
+
+1. Create a bundle object for the intended bundle directory.
+2. Use the methods of the bundle object to locate or load the needed resource.
+3. Use other system APIs to interact with the resource.
+
+Some types of frequently used resources can be located and opened without a bundle. For example, when loading images, you store images in asset catalogs and load them using the [init(named:)](../uikit/uiimage/init%28named_%29.md) methods of [UIImage](../uikit/uiimage.md) or [NSImage](https://developer.apple.com/documentation/appkit/nsimage). Similarly, for string resources, you use [NSLocalizedString](nslocalizedstring.md) to load individual strings instead of loading the entire `.strings` file yourself.
+
+> **Note**
+
+> Unlike some other Foundation classes with corresponding Core Foundation names (such as [NSString](nsstring.md) and [CFString](../corefoundation/cfstring.md)), [Bundle](bundle.md) objects cannot be cast to [CFBundle](../corefoundation/cfbundle.md) references. If you need functionality provided by [CFBundle](../corefoundation/cfbundle.md), you can still create a [CFBundle](../corefoundation/cfbundle.md) and use the [CFBundle](../corefoundation/cfbundle.md) API. See [Toll-Free Bridging](https://developer.apple.com/library/archive/documentation/General/Conceptual/CocoaEncyclopedia/Toll-FreeBridgin/Toll-FreeBridgin.html#//apple_ref/doc/uid/TP40010810-CH2) for more information.
+
+<a id="Finding-and-Opening-a-Bundle"></a>
+
+### Finding and Opening a Bundle
+
+Before you can locate a resource, you must first specify which bundle contains it. The [Bundle](bundle.md) class has many constructors, but the one you use most often is [main](bundle/main.md). The main bundle represents the bundle directory that contains the currently executing code. So for an app, the main bundle object gives you access to the resources that shipped with your app.
+
+If your app interacts directly with plug-ins, frameworks, or other bundled content, you can use other methods of this class to create appropriate bundle objects. You can always create bundle objects from a known URL or path, but other methods make it easier to access bundles your app is already using. For example, if you link to a framework, you can use the [init(for:)](bundle/init%28for_%29.md) method to locate the framework bundle based on a class defined in that framework.
+
+**Swift**
+
+```swift
+// Get the app's main bundle
+let mainBundle = Bundle.main
+
+// Get the bundle containing the specified private class.
+let myBundle = Bundle(for: NSClassFromString("MyPrivateClass")!)
+```
+
+**Objective-C**
+
+```objc
+// Get the app's main bundle
+NSBundle *main = [NSBundle mainBundle];
+
+// Get the bundle containing the specified private class.
+NSBundle *myBundle = [NSBundle bundleForClass:[MyPrivateClass class]];
+```
+
+In Swift, use the [bundle()](bundle%28%29.md) macro to insert a bundle instance appropriate to the current execution context, whether an app, app extension, framework, or Swift package.
+
+<a id="Locating-Resources-in-a-Bundle"></a>
+
+### Locating Resources in a Bundle
+
+You use [Bundle](bundle.md) objects to obtain the location of specific resources inside the bundle. When looking for resources, you provide the name of the resource and its type at a minimum. For resources in a specific subdirectory, you can also specify that directory. After locating the resource, the bundle routines return a path string or URL that you can use to open the file.
+
+Locating a single resource in a bundle
+
+```objc
+NSBundle *main = [NSBundle mainBundle];
+NSString *resourcePath = [main pathForResource:@"Seagull" ofType:@"jpg"];
+```
+
+Bundle objects follow a specific search pattern when looking for resources on disk. Global resources—that is, resources not in a language-specific `.lproj` directory—are returned first, followed by region- and language-specific resources. This search pattern means that the bundle looks for resources in the following order:
+
+1. Global (nonlocalized) resources
+2. Region-specific localized resources (based on the user’s region preferences)
+3. Language-specific localized resources (based on the user’s language preferences)
+4. Development language resources (as specified by the [CFBundleDevelopmentRegion](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-130430) key in the bundle’s Info.plist file)
+
+Because global resources take precedence over language-specific resources, you should never include both a global and localized version of a given resource in your app. When a global version of a resource exists, language-specific versions are never returned. The reason for this precedence is performance. If localized resources were searched first, the bundle object might waste time searching for a nonexistent localized resource before returning the global resource.
+
+> **Important**
+
+>  Bundle objects always consider case when searching for resource files, even on file systems that support case-insensitive filenames. Always make sure that you specify filenames with case sensitivity in mind.
+
+When locating resource files, the bundle object automatically considers many standard filename modifiers when determining which file to return. Resources may be tagged for a specific device (`~iphone`, `~ipad`) or for a specific screen resolution (`@2x`, `@3x`). Do not include these modifiers when specifying the name of the resource you want. The bundle object selects the file that is most appropriate for the underlying device. For more information, see [App Icons on iPhone, iPad and Apple Watch](https://developer.apple.com/library/archive/qa/qa1686/_index.html#//apple_ref/doc/uid/DTS40009882).
+
+<a id="Understanding-Bundle-Structures"></a>
+
+### Understanding Bundle Structures
+
+Bundle structures vary depending on the target platform and the type of bundle you are building. The [Bundle](bundle.md) class hides this underlying structure in most (but not all) cases. Many of the methods you use to load resources from a bundle automatically locate the appropriate starting directory and look for resources in known places. You can also use the methods and properties of this class to get the location of known bundle directories and to retrieve resources specifically from those directories.
+
+For information about the bundle structure of iOS and macOS apps, see [Bundle Programming Guide](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFBundles/Introduction/Introduction.html#//apple_ref/doc/uid/10000123i). For information about the structure of framework bundles, see [Framework Programming Guide](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPFrameworks/Frameworks.html#//apple_ref/doc/uid/10000183i). For information about the structure of macOS plug-ins, see [Code Loading Programming Topics](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/LoadingCode/LoadingCode.html#//apple_ref/doc/uid/10000052i).
+
+## Topics
+
+### Getting standard bundle objects
+
+- [main](bundle/main.md): Returns the bundle object that contains the current executable.
+- [allFrameworks](bundle/allframeworks.md): Returns an array of all of the application’s bundles that represent frameworks.
+- [allBundles](bundle/allbundles.md): Returns an array of all the application’s non-framework bundles.
+
+### Creating and initializing a bundle
+
+- [init(url:)](bundle/init%28url_%29-a2t0.md): Returns an `NSBundle` object that corresponds to the specified file URL.
+- [init(for:)](bundle/init%28for_%29.md): Returns the `NSBundle` object with which the specified class is associated.
+- [init(identifier:)](bundle/init%28identifier_%29.md): Returns the `NSBundle` instance that has the specified bundle identifier.
+- [init(path:)](bundle/init%28path_%29.md): Returns an `NSBundle` object initialized to correspond to the specified directory.
+
+### Loading nib files
+
+- [loadNibNamed(\_:owner:options:)](bundle/loadnibnamed%28__owner_options_%29.md): Deprecated. Unarchives the contents of a nib file located in the receiver’s bundle.
+- [loadNibNamed(\_:owner:topLevelObjects:)](bundle/loadnibnamed%28__owner_toplevelobjects_%29.md): Loads a nib from the bundle with the specified file name and owner.
+
+### Finding resource files
+
+- [url(forResource:withExtension:subdirectory:)](bundle/url%28forresource_withextension_subdirectory_%29.md): Returns the file URL for the resource file identified by the specified name and extension and residing in a given bundle directory.
+- [url(forResource:withExtension:)](bundle/url%28forresource_withextension_%29.md): Returns the file URL for the resource identified by the specified name and file extension.
+- [urls(forResourcesWithExtension:subdirectory:)](bundle/urls%28forresourceswithextension_subdirectory_%29.md): Returns an array of file URLs for all resources identified by the specified file extension and located in the specified bundle subdirectory.
+- [url(forResource:withExtension:subdirectory:localization:)](bundle/url%28forresource_withextension_subdirectory_localization_%29.md): Returns the file URL for the resource identified by the specified name and file extension, located in the specified bundle subdirectory, and limited to global resources and those associated with the specified localization.
+- [urls(forResourcesWithExtension:subdirectory:localization:)](bundle/urls%28forresourceswithextension_subdirectory_localization_%29.md): Returns an array containing the file URLs for all bundle resources having the specified filename extension, residing in the specified resource subdirectory, and limited to global resources and those associated with the specified localization.
+- [url(forResource:withExtension:subdirectory:in:)](bundle/url%28forresource_withextension_subdirectory_in_%29.md): Creates and returns a file URL for the resource with the specified name and extension in the specified bundle.
+- [urls(forResourcesWithExtension:subdirectory:in:)](bundle/urls%28forresourceswithextension_subdirectory_in_%29.md): Returns an array containing the file URLs for all bundle resources having the specified filename extension, residing in the specified resource subdirectory, within the specified bundle.
+- [path(forResource:ofType:)](bundle/path%28forresource_oftype_%29.md): Returns the full pathname for the resource identified by the specified name and file extension.
+- [path(forResource:ofType:inDirectory:)](bundle/path%28forresource_oftype_indirectory_%29-swift.method.md): Returns the full pathname for the resource identified by the specified name and file extension and located in the specified bundle subdirectory.
+- [path(forResource:ofType:inDirectory:forLocalization:)](bundle/path%28forresource_oftype_indirectory_forlocalization_%29.md): Returns the full pathname for the resource identified by the specified name and file extension, located in the specified bundle subdirectory, and limited to global resources and those associated with the specified localization.
+- [paths(forResourcesOfType:inDirectory:)](bundle/paths%28forresourcesoftype_indirectory_%29-swift.method.md): Returns an array containing the pathnames for all bundle resources having the specified filename extension and residing in the resource subdirectory.
+- [paths(forResourcesOfType:inDirectory:forLocalization:)](bundle/paths%28forresourcesoftype_indirectory_forlocalization_%29.md): Returns an array containing the file for all bundle resources having the specified filename extension, residing in the specified resource subdirectory, and limited to global resources and those associated with the specified localization.
+- [path(forResource:ofType:inDirectory:)](bundle/path%28forresource_oftype_indirectory_%29-swift.type.method.md): Returns the full pathname for the resource file identified by the specified name and extension and residing in a given bundle directory.
+- [paths(forResourcesOfType:inDirectory:)](bundle/paths%28forresourcesoftype_indirectory_%29-swift.type.method.md): Returns an array containing the pathnames for all bundle resources having the specified extension and residing in the bundle directory at the specified path.
+
+### Finding image resources
+
+- [urlForImageResource(\_:)](bundle/urlforimageresource%28__%29.md): Returns the location of the specified image resource as an NSURL.
+- [pathForImageResource(\_:)](bundle/pathforimageresource%28__%29.md): Returns the location of the specified image resource file.
+- [image(forResource:)](bundle/image%28forresource_%29.md): Returns an `NSImage` instance associated with the specified name, which can be backed by multiple files representing different resolution versions of the image.
+
+### Finding sound resources
+
+- [path(forSoundResource:)](bundle/path%28forsoundresource_%29.md): Returns the location of the specified sound resource file.
+
+### Fetching localized strings
+
+- [localizedString(forKey:value:table:)](bundle/localizedstring%28forkey_value_table_%29.md): Returns a localized version of the string designated by the specified key and residing in the specified table.
+
+### Fetching context help resources
+
+- [contextHelp(forKey:)](bundle/contexthelp%28forkey_%29.md): Returns the context-sensitive help for the specified key from the bundle’s help file.
+
+### Getting the standard bundle directories
+
+- [resourceURL](bundle/resourceurl.md): The file URL of the bundle’s subdirectory containing resource files.
+- [executableURL](bundle/executableurl.md): The file URL of the receiver’s executable file.
+- [privateFrameworksURL](bundle/privateframeworksurl.md): The file URL of the bundle’s subdirectory containing private frameworks.
+- [sharedFrameworksURL](bundle/sharedframeworksurl.md): The file URL of the receiver’s subdirectory containing shared frameworks.
+- [builtInPlugInsURL](bundle/builtinpluginsurl.md): The file URL of the receiver’s subdirectory containing plug-ins.
+- [url(forAuxiliaryExecutable:)](bundle/url%28forauxiliaryexecutable_%29.md): Returns the file URL of the executable with the specified name in the receiver’s bundle.
+- [sharedSupportURL](bundle/sharedsupporturl.md): The file URL of the bundle’s subdirectory containing shared support files.
+- [appStoreReceiptURL](bundle/appstorereceipturl.md): Deprecated. The file URL for the bundle’s App Store receipt.
+- [resourcePath](bundle/resourcepath.md): The full pathname of the bundle’s subdirectory containing resources.
+- [executablePath](bundle/executablepath.md): The full pathname of the receiver’s executable file.
+- [privateFrameworksPath](bundle/privateframeworkspath.md): The full pathname of the bundle’s subdirectory containing private frameworks.
+- [sharedFrameworksPath](bundle/sharedframeworkspath.md): The full pathname of the bundle’s subdirectory containing shared frameworks.
+- [builtInPlugInsPath](bundle/builtinpluginspath.md): The full pathname of the receiver’s subdirectory containing plug-ins.
+- [path(forAuxiliaryExecutable:)](bundle/path%28forauxiliaryexecutable_%29.md): Returns the full pathname of the executable with the specified name in the receiver’s bundle.
+- [sharedSupportPath](bundle/sharedsupportpath.md): The full pathname of the bundle’s subdirectory containing shared support files.
+
+### Getting bundle information
+
+- [bundleURL](bundle/bundleurl.md): The full URL of the receiver’s bundle directory.
+- [bundlePath](bundle/bundlepath.md): The full pathname of the receiver’s bundle directory.
+- [bundleIdentifier](bundle/bundleidentifier.md): The receiver’s bundle identifier.
+- [infoDictionary](bundle/infodictionary.md): A dictionary, constructed from the bundle’s `Info.plist` file, that contains information about the receiver.
+- [object(forInfoDictionaryKey:)](bundle/object%28forinfodictionarykey_%29.md): Returns the value associated with the specified key in the receiver’s information property list.
+
+### Getting localization information
+
+- [localizations](bundle/localizations.md): A list of all the localizations contained in the bundle.
+- [preferredLocalizations](bundle/preferredlocalizations.md): An ordered list of preferred localizations contained in the bundle.
+- [developmentLocalization](bundle/developmentlocalization.md): The localization for the development language.
+- [localizedInfoDictionary](bundle/localizedinfodictionary.md): A dictionary with the keys from the bundle’s localized property list.
+- [preferredLocalizations(from:)](bundle/preferredlocalizations%28from_%29.md): Returns one or more localizations from the specified list that a bundle object would use to locate resources for the current user.
+- [preferredLocalizations(from:forPreferences:)](bundle/preferredlocalizations%28from_forpreferences_%29.md): Returns locale identifiers for which a bundle would provide localized content, given a specified list of candidates for a user’s language preferences.
+
+### Managing preservation priority for on-demand resources
+
+- [setPreservationPriority(\_:forTags:)](bundle/setpreservationpriority%28__fortags_%29.md): Deprecated. A hint to the system of the relative order for purging tagged sets of resources in the bundle.
+- [preservationPriority(forTag:)](bundle/preservationpriority%28fortag_%29.md): Deprecated. Returns the current preservation priority for the specified tag.
+
+### Getting classes from a bundle
+
+- [classNamed(\_:)](bundle/classnamed%28__%29.md): Returns the `Class` object for the specified name.
+- [principalClass](bundle/principalclass.md): The bundle’s principal class.
+- [didLoadNotification](bundle/didloadnotification.md): A notification that lets observers know when classes are dynamically loaded.
+- [NSLoadedClasses](nsloadedclasses.md): A constant used as a key for the `userInfo` dictionary of a [didLoadNotification](bundle/didloadnotification.md) notification that corresponds to an array of names of each class that was loaded.
+- [Bundle.DidLoadMessage](bundle/didloadmessage.md): A message a bundle sends when it dynamically loads a class.
+
+### Loading code from a bundle
+
+- [executableArchitectures](bundle/executablearchitectures.md): An array of numbers indicating the architecture types supported by the bundle’s executable.
+- [preflight()](bundle/preflight%28%29.md): Returns a Boolean value indicating whether the bundle’s executable code could be loaded successfully.
+- [load()](bundle/load%28%29.md): Dynamically loads the bundle’s executable code into a running program, if the code has not already been loaded.
+- [loadAndReturnError()](bundle/loadandreturnerror%28%29.md): Loads the bundle’s executable code and returns any errors.
+- [unload()](bundle/unload%28%29.md): Unloads the code associated with the receiver.
+- [isLoaded](bundle/isloaded.md): The load status of a bundle.
+- [Mach-O Architecture](1495005-mach-o-architecture.md): Constants that describe the CPU types that a bundle’s executable code supports.
+
+### Errors
+
+- [NSExecutableErrorMinimum](nsexecutableerrorminimum-swift.var.md): The beginning of the range of error codes reserved for errors related to executable files.
+- [NSExecutableNotLoadableError](nsexecutablenotloadableerror-swift.var.md): The executable type isn’t loadable in the current process.
+- [NSExecutableArchitectureMismatchError](nsexecutablearchitecturemismatcherror-swift.var.md): The executable doesn’t provide an architecture compatible with the current process.
+- [NSExecutableRuntimeMismatchError](nsexecutableruntimemismatcherror-swift.var.md): The executable has Objective-C runtime information that’s incompatible with the current process.
+- [NSExecutableLoadError](nsexecutableloaderror-swift.var.md): Executable cannot be loaded for an otherwise-unspecified reason.
+- [NSExecutableLinkError](nsexecutablelinkerror-swift.var.md): The executable failed due to linking issues.
+- [NSExecutableErrorMaximum](nsexecutableerrormaximum-swift.var.md): The end of the range of error codes reserved for errors related to executable files.
+
+### Initializers
+
+- [init(URL:)](bundle/init%28url_%29-16uva.md)
+- [init(URL:)](bundle/init%28url_%29-1y93d.md)
+- [init(forClass:)](bundle/init%28forclass_%29.md)
+- [init(url:)](bundle/init%28url_%29-3n9rf.md): Returns an `NSBundle` object initialized to correspond to the specified file URL.
+
+### Instance Methods
+
+- [loadAppleScriptObjectiveCScripts()](bundle/loadapplescriptobjectivecscripts%28%29.md)
+- [localizedString(forKey:value:table:localizations:)](bundle/localizedstring%28forkey_value_table_localizations_%29.md): Look up a localized string given a list of available languages.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Bundle Resources
+
+- [bundle()](bundle%28%29.md): Expands to a bundle instance that’s most likely to contain resources for the calling code.
+
+# NSBundle (Objective-C)
+
+**Framework:** Foundation  
+**Kind:** Class  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.0+ · macOS 10.0+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+A representation of the code and resources stored in a bundle directory on disk.
+
+## Declaration
+
+```objectivec
+@interface NSBundle : NSObject
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Apple uses bundles to represent apps, frameworks, plug-ins, and many other specific types of content. Bundles organize their contained resources into well-defined subdirectories, and bundle structures vary depending on the platform and the type of the bundle. By using a bundle object, you can access a bundle’s resources without knowing the structure of the bundle. The bundle object provides a single interface for locating items, taking into account the bundle structure, user preferences, available localizations, and other relevant factors.
+
+Any executable can use a bundle object to locate resources, either inside an app’s bundle or in a known bundle located elsewhere. You don’t use a bundle object to locate files in a container directory or in other parts of the file system.
+
+The general pattern for using a bundle object is as follows:
+
+1. Create a bundle object for the intended bundle directory.
+2. Use the methods of the bundle object to locate or load the needed resource.
+3. Use other system APIs to interact with the resource.
+
+Some types of frequently used resources can be located and opened without a bundle. For example, when loading images, you store images in asset catalogs and load them using the [imageNamed:](../uikit/uiimage/init%28named_%29.md) methods of [UIImage](../uikit/uiimage.md) or [NSImage](https://developer.apple.com/documentation/appkit/nsimage). Similarly, for string resources, you use [NSLocalizedString](nslocalizedstring.md) to load individual strings instead of loading the entire `.strings` file yourself.
+
+> **Note**
+
+> Unlike some other Foundation classes with corresponding Core Foundation names (such as [NSString](nsstring.md) and [CFStringRef](../corefoundation/cfstring.md)), [NSBundle](bundle.md) objects cannot be cast to [CFBundleRef](../corefoundation/cfbundle.md) references. If you need functionality provided by [CFBundleRef](../corefoundation/cfbundle.md), you can still create a [CFBundleRef](../corefoundation/cfbundle.md) and use the [CFBundleRef](../corefoundation/cfbundle.md) API. See [Toll-Free Bridging](https://developer.apple.com/library/archive/documentation/General/Conceptual/CocoaEncyclopedia/Toll-FreeBridgin/Toll-FreeBridgin.html#//apple_ref/doc/uid/TP40010810-CH2) for more information.
+
+<a id="Finding-and-Opening-a-Bundle"></a>
+
+### Finding and Opening a Bundle
+
+Before you can locate a resource, you must first specify which bundle contains it. The [NSBundle](bundle.md) class has many constructors, but the one you use most often is [mainBundle](bundle/main.md). The main bundle represents the bundle directory that contains the currently executing code. So for an app, the main bundle object gives you access to the resources that shipped with your app.
+
+If your app interacts directly with plug-ins, frameworks, or other bundled content, you can use other methods of this class to create appropriate bundle objects. You can always create bundle objects from a known URL or path, but other methods make it easier to access bundles your app is already using. For example, if you link to a framework, you can use the [bundleForClass:](bundle/init%28for_%29.md) method to locate the framework bundle based on a class defined in that framework.
+
+**Swift**
+
+```swift
+// Get the app's main bundle
+let mainBundle = Bundle.main
+
+// Get the bundle containing the specified private class.
+let myBundle = Bundle(for: NSClassFromString("MyPrivateClass")!)
+```
+
+**Objective-C**
+
+```objc
+// Get the app's main bundle
+NSBundle *main = [NSBundle mainBundle];
+
+// Get the bundle containing the specified private class.
+NSBundle *myBundle = [NSBundle bundleForClass:[MyPrivateClass class]];
+```
+
+In Swift, use the [bundle()](bundle%28%29.md) macro to insert a bundle instance appropriate to the current execution context, whether an app, app extension, framework, or Swift package.
+
+<a id="Locating-Resources-in-a-Bundle"></a>
+
+### Locating Resources in a Bundle
+
+You use [NSBundle](bundle.md) objects to obtain the location of specific resources inside the bundle. When looking for resources, you provide the name of the resource and its type at a minimum. For resources in a specific subdirectory, you can also specify that directory. After locating the resource, the bundle routines return a path string or URL that you can use to open the file.
+
+Locating a single resource in a bundle
+
+```objc
+NSBundle *main = [NSBundle mainBundle];
+NSString *resourcePath = [main pathForResource:@"Seagull" ofType:@"jpg"];
+```
+
+Bundle objects follow a specific search pattern when looking for resources on disk. Global resources—that is, resources not in a language-specific `.lproj` directory—are returned first, followed by region- and language-specific resources. This search pattern means that the bundle looks for resources in the following order:
+
+1. Global (nonlocalized) resources
+2. Region-specific localized resources (based on the user’s region preferences)
+3. Language-specific localized resources (based on the user’s language preferences)
+4. Development language resources (as specified by the [CFBundleDevelopmentRegion](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-130430) key in the bundle’s Info.plist file)
+
+Because global resources take precedence over language-specific resources, you should never include both a global and localized version of a given resource in your app. When a global version of a resource exists, language-specific versions are never returned. The reason for this precedence is performance. If localized resources were searched first, the bundle object might waste time searching for a nonexistent localized resource before returning the global resource.
+
+> **Important**
+
+>  Bundle objects always consider case when searching for resource files, even on file systems that support case-insensitive filenames. Always make sure that you specify filenames with case sensitivity in mind.
+
+When locating resource files, the bundle object automatically considers many standard filename modifiers when determining which file to return. Resources may be tagged for a specific device (`~iphone`, `~ipad`) or for a specific screen resolution (`@2x`, `@3x`). Do not include these modifiers when specifying the name of the resource you want. The bundle object selects the file that is most appropriate for the underlying device. For more information, see [App Icons on iPhone, iPad and Apple Watch](https://developer.apple.com/library/archive/qa/qa1686/_index.html#//apple_ref/doc/uid/DTS40009882).
+
+<a id="Understanding-Bundle-Structures"></a>
+
+### Understanding Bundle Structures
+
+Bundle structures vary depending on the target platform and the type of bundle you are building. The [NSBundle](bundle.md) class hides this underlying structure in most (but not all) cases. Many of the methods you use to load resources from a bundle automatically locate the appropriate starting directory and look for resources in known places. You can also use the methods and properties of this class to get the location of known bundle directories and to retrieve resources specifically from those directories.
+
+For information about the bundle structure of iOS and macOS apps, see [Bundle Programming Guide](https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFBundles/Introduction/Introduction.html#//apple_ref/doc/uid/10000123i). For information about the structure of framework bundles, see [Framework Programming Guide](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPFrameworks/Frameworks.html#//apple_ref/doc/uid/10000183i). For information about the structure of macOS plug-ins, see [Code Loading Programming Topics](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/LoadingCode/LoadingCode.html#//apple_ref/doc/uid/10000052i).
+
+## Topics
+
+### Getting standard bundle objects
+
+- [mainBundle](bundle/main.md): Returns the bundle object that contains the current executable.
+- [allFrameworks](bundle/allframeworks.md): Returns an array of all of the application’s bundles that represent frameworks.
+- [allBundles](bundle/allbundles.md): Returns an array of all the application’s non-framework bundles.
+
+### Creating and initializing a bundle
+
+- [bundleWithURL:](bundle/init%28url_%29-a2t0.md): Returns an `NSBundle` object that corresponds to the specified file URL.
+- [bundleWithPath:](nsbundle/bundlewithpath_.md): Returns an `NSBundle` object that corresponds to the specified directory.
+- [bundleForClass:](bundle/init%28for_%29.md): Returns the `NSBundle` object with which the specified class is associated.
+- [bundleWithIdentifier:](bundle/init%28identifier_%29.md): Returns the `NSBundle` instance that has the specified bundle identifier.
+- [initWithPath:](bundle/init%28path_%29.md): Returns an `NSBundle` object initialized to correspond to the specified directory.
+
+### Loading nib files
+
+- [loadNibNamed:owner:options:](bundle/loadnibnamed%28__owner_options_%29.md): Deprecated. Unarchives the contents of a nib file located in the receiver’s bundle.
+- [loadNibNamed:owner:topLevelObjects:](bundle/loadnibnamed%28__owner_toplevelobjects_%29.md): Loads a nib from the bundle with the specified file name and owner.
+- [loadNibNamed:owner:](nsbundle/loadnibnamed_owner_.md): Deprecated. Unarchives the contents of the nib file and links them to a specific owner object.
+- [loadNibFile:externalNameTable:withZone:](nsbundle/loadnibfile_externalnametable_withzone_-c.type.method.md): Deprecated. Unarchives the contents of the nib file and links them to objects in your program.
+- [loadNibFile:externalNameTable:withZone:](nsbundle/loadnibfile_externalnametable_withzone_-c.method.md): Deprecated. Unarchives the contents of a nib file located in the receiver’s bundle.
+
+### Finding resource files
+
+- [URLForResource:withExtension:subdirectory:](bundle/url%28forresource_withextension_subdirectory_%29.md): Returns the file URL for the resource file identified by the specified name and extension and residing in a given bundle directory.
+- [URLForResource:withExtension:](bundle/url%28forresource_withextension_%29.md): Returns the file URL for the resource identified by the specified name and file extension.
+- [URLsForResourcesWithExtension:subdirectory:](bundle/urls%28forresourceswithextension_subdirectory_%29.md): Returns an array of file URLs for all resources identified by the specified file extension and located in the specified bundle subdirectory.
+- [URLForResource:withExtension:subdirectory:localization:](bundle/url%28forresource_withextension_subdirectory_localization_%29.md): Returns the file URL for the resource identified by the specified name and file extension, located in the specified bundle subdirectory, and limited to global resources and those associated with the specified localization.
+- [URLsForResourcesWithExtension:subdirectory:localization:](bundle/urls%28forresourceswithextension_subdirectory_localization_%29.md): Returns an array containing the file URLs for all bundle resources having the specified filename extension, residing in the specified resource subdirectory, and limited to global resources and those associated with the specified localization.
+- [URLForResource:withExtension:subdirectory:inBundleWithURL:](bundle/url%28forresource_withextension_subdirectory_in_%29.md): Creates and returns a file URL for the resource with the specified name and extension in the specified bundle.
+- [URLsForResourcesWithExtension:subdirectory:inBundleWithURL:](bundle/urls%28forresourceswithextension_subdirectory_in_%29.md): Returns an array containing the file URLs for all bundle resources having the specified filename extension, residing in the specified resource subdirectory, within the specified bundle.
+- [pathForResource:ofType:](bundle/path%28forresource_oftype_%29.md): Returns the full pathname for the resource identified by the specified name and file extension.
+- [pathForResource:ofType:inDirectory:](bundle/path%28forresource_oftype_indirectory_%29-swift.method.md): Returns the full pathname for the resource identified by the specified name and file extension and located in the specified bundle subdirectory.
+- [pathForResource:ofType:inDirectory:forLocalization:](bundle/path%28forresource_oftype_indirectory_forlocalization_%29.md): Returns the full pathname for the resource identified by the specified name and file extension, located in the specified bundle subdirectory, and limited to global resources and those associated with the specified localization.
+- [pathsForResourcesOfType:inDirectory:](bundle/paths%28forresourcesoftype_indirectory_%29-swift.method.md): Returns an array containing the pathnames for all bundle resources having the specified filename extension and residing in the resource subdirectory.
+- [pathsForResourcesOfType:inDirectory:forLocalization:](bundle/paths%28forresourcesoftype_indirectory_forlocalization_%29.md): Returns an array containing the file for all bundle resources having the specified filename extension, residing in the specified resource subdirectory, and limited to global resources and those associated with the specified localization.
+- [pathForResource:ofType:inDirectory:](bundle/path%28forresource_oftype_indirectory_%29-swift.type.method.md): Returns the full pathname for the resource file identified by the specified name and extension and residing in a given bundle directory.
+- [pathsForResourcesOfType:inDirectory:](bundle/paths%28forresourcesoftype_indirectory_%29-swift.type.method.md): Returns an array containing the pathnames for all bundle resources having the specified extension and residing in the bundle directory at the specified path.
+
+### Finding image resources
+
+- [URLForImageResource:](bundle/urlforimageresource%28__%29.md): Returns the location of the specified image resource as an NSURL.
+- [pathForImageResource:](bundle/pathforimageresource%28__%29.md): Returns the location of the specified image resource file.
+- [imageForResource:](bundle/image%28forresource_%29.md): Returns an `NSImage` instance associated with the specified name, which can be backed by multiple files representing different resolution versions of the image.
+
+### Finding sound resources
+
+- [pathForSoundResource:](bundle/path%28forsoundresource_%29.md): Returns the location of the specified sound resource file.
+
+### Fetching localized strings
+
+- [localizedStringForKey:value:table:](bundle/localizedstring%28forkey_value_table_%29.md): Returns a localized version of the string designated by the specified key and residing in the specified table.
+
+### Fetching context help resources
+
+- [contextHelpForKey:](bundle/contexthelp%28forkey_%29.md): Returns the context-sensitive help for the specified key from the bundle’s help file.
+
+### Getting the standard bundle directories
+
+- [resourceURL](bundle/resourceurl.md): The file URL of the bundle’s subdirectory containing resource files.
+- [executableURL](bundle/executableurl.md): The file URL of the receiver’s executable file.
+- [privateFrameworksURL](bundle/privateframeworksurl.md): The file URL of the bundle’s subdirectory containing private frameworks.
+- [sharedFrameworksURL](bundle/sharedframeworksurl.md): The file URL of the receiver’s subdirectory containing shared frameworks.
+- [builtInPlugInsURL](bundle/builtinpluginsurl.md): The file URL of the receiver’s subdirectory containing plug-ins.
+- [URLForAuxiliaryExecutable:](bundle/url%28forauxiliaryexecutable_%29.md): Returns the file URL of the executable with the specified name in the receiver’s bundle.
+- [sharedSupportURL](bundle/sharedsupporturl.md): The file URL of the bundle’s subdirectory containing shared support files.
+- [appStoreReceiptURL](bundle/appstorereceipturl.md): Deprecated. The file URL for the bundle’s App Store receipt.
+- [resourcePath](bundle/resourcepath.md): The full pathname of the bundle’s subdirectory containing resources.
+- [executablePath](bundle/executablepath.md): The full pathname of the receiver’s executable file.
+- [privateFrameworksPath](bundle/privateframeworkspath.md): The full pathname of the bundle’s subdirectory containing private frameworks.
+- [sharedFrameworksPath](bundle/sharedframeworkspath.md): The full pathname of the bundle’s subdirectory containing shared frameworks.
+- [builtInPlugInsPath](bundle/builtinpluginspath.md): The full pathname of the receiver’s subdirectory containing plug-ins.
+- [pathForAuxiliaryExecutable:](bundle/path%28forauxiliaryexecutable_%29.md): Returns the full pathname of the executable with the specified name in the receiver’s bundle.
+- [sharedSupportPath](bundle/sharedsupportpath.md): The full pathname of the bundle’s subdirectory containing shared support files.
+
+### Getting bundle information
+
+- [bundleURL](bundle/bundleurl.md): The full URL of the receiver’s bundle directory.
+- [bundlePath](bundle/bundlepath.md): The full pathname of the receiver’s bundle directory.
+- [bundleIdentifier](bundle/bundleidentifier.md): The receiver’s bundle identifier.
+- [infoDictionary](bundle/infodictionary.md): A dictionary, constructed from the bundle’s `Info.plist` file, that contains information about the receiver.
+- [objectForInfoDictionaryKey:](bundle/object%28forinfodictionarykey_%29.md): Returns the value associated with the specified key in the receiver’s information property list.
+
+### Getting localization information
+
+- [localizations](bundle/localizations.md): A list of all the localizations contained in the bundle.
+- [preferredLocalizations](bundle/preferredlocalizations.md): An ordered list of preferred localizations contained in the bundle.
+- [developmentLocalization](bundle/developmentlocalization.md): The localization for the development language.
+- [localizedInfoDictionary](bundle/localizedinfodictionary.md): A dictionary with the keys from the bundle’s localized property list.
+- [preferredLocalizationsFromArray:](bundle/preferredlocalizations%28from_%29.md): Returns one or more localizations from the specified list that a bundle object would use to locate resources for the current user.
+- [preferredLocalizationsFromArray:forPreferences:](bundle/preferredlocalizations%28from_forpreferences_%29.md): Returns locale identifiers for which a bundle would provide localized content, given a specified list of candidates for a user’s language preferences.
+
+### Managing preservation priority for on-demand resources
+
+- [setPreservationPriority:forTags:](bundle/setpreservationpriority%28__fortags_%29.md): Deprecated. A hint to the system of the relative order for purging tagged sets of resources in the bundle.
+- [preservationPriorityForTag:](bundle/preservationpriority%28fortag_%29.md): Deprecated. Returns the current preservation priority for the specified tag.
+
+### Getting classes from a bundle
+
+- [classNamed:](bundle/classnamed%28__%29.md): Returns the `Class` object for the specified name.
+- [principalClass](bundle/principalclass.md): The bundle’s principal class.
+- [NSBundleDidLoadNotification](bundle/didloadnotification.md): A notification that lets observers know when classes are dynamically loaded.
+- [NSLoadedClasses](nsloadedclasses.md): A constant used as a key for the `userInfo` dictionary of a [NSBundleDidLoadNotification](bundle/didloadnotification.md) notification that corresponds to an array of names of each class that was loaded.
+
+### Loading code from a bundle
+
+- [executableArchitectures](bundle/executablearchitectures.md): An array of numbers indicating the architecture types supported by the bundle’s executable.
+- [preflightAndReturnError:](bundle/preflight%28%29.md): Returns a Boolean value indicating whether the bundle’s executable code could be loaded successfully.
+- [load](bundle/load%28%29.md): Dynamically loads the bundle’s executable code into a running program, if the code has not already been loaded.
+- [loadAndReturnError:](bundle/loadandreturnerror%28%29.md): Loads the bundle’s executable code and returns any errors.
+- [unload](bundle/unload%28%29.md): Unloads the code associated with the receiver.
+- [loaded](bundle/isloaded.md): The load status of a bundle.
+- [Mach-O Architecture](1495005-mach-o-architecture.md): Constants that describe the CPU types that a bundle’s executable code supports.
+
+### Errors
+
+- [NSExecutableErrorMinimum](nsexecutableerrorminimum-c.enum.case.md): The beginning of the range of error codes reserved for errors related to executable files.
+- [NSExecutableNotLoadableError](nsexecutablenotloadableerror-c.enum.case.md): The executable type isn’t loadable in the current process.
+- [NSExecutableArchitectureMismatchError](nsexecutablearchitecturemismatcherror-c.enum.case.md): The executable doesn’t provide an architecture compatible with the current process.
+- [NSExecutableRuntimeMismatchError](nsexecutableruntimemismatcherror-c.enum.case.md): The executable has Objective-C runtime information that’s incompatible with the current process.
+- [NSExecutableLoadError](nsexecutableloaderror-c.enum.case.md): Executable cannot be loaded for an otherwise-unspecified reason.
+- [NSExecutableLinkError](nsexecutablelinkerror-c.enum.case.md): The executable failed due to linking issues.
+- [NSExecutableErrorMaximum](nsexecutableerrormaximum-c.enum.case.md): The end of the range of error codes reserved for errors related to executable files.
+
+### Instance Methods
+
+- [initWithURL:](bundle/init%28url_%29-3n9rf.md): Returns an `NSBundle` object initialized to correspond to the specified file URL.
+- [loadAppleScriptObjectiveCScripts](bundle/loadapplescriptobjectivecscripts%28%29.md)
+- [localizedAttributedStringForKey:value:table:](nsbundle/localizedattributedstringforkey_value_table_.md)
+- [localizedStringForKey:value:table:localizations:](nsbundle/localizedstringforkey_value_table_localizations_.md): Look up a localized string given a list of available localizations.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)

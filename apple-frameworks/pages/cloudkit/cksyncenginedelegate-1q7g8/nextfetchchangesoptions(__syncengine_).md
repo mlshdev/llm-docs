@@ -1,0 +1,90 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cloudkit/cksyncenginedelegate-1q7g8/nextfetchchangesoptions(_:syncengine:)](https://developer.apple.com/documentation/cloudkit/cksyncenginedelegate-1q7g8/nextfetchchangesoptions(_:syncengine:))
+
+# nextFetchChangesOptions(\_:syncEngine:)
+
+**Framework:** CloudKit  
+**Kind:** Instance Method  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS · watchOS 10.0+
+
+Returns a custom set of options for [CKSyncEngine](../cksyncengine-5sie5.md) to use while fetching changes.
+
+## Declaration
+
+```swift
+func nextFetchChangesOptions(_ context: CKSyncEngine.FetchChangesContext, syncEngine: CKSyncEngine) async -> CKSyncEngine.FetchChangesOptions
+```
+
+## Parameters
+
+- `context`: The context of the fetch operation, including the current options and reason for fetching.
+- `syncEngine`: The sync engine requesting the options.
+
+<a id="return-value"></a>
+
+## Return Value
+
+Customized fetch options for the current fetch operation, or `context.options` to use the default options without customization.
+
+<a id="discussion"></a>
+
+## Discussion
+
+While [CKSyncEngine](../cksyncengine-5sie5.md) fetches changes from the server, it calls this function to determine priority and other options for fetching changes.
+
+For example, you can use this to prioritize fetching the object currently showing in the UI. You can also use this to prioritize specific zones during initial sync.
+
+By default, [CKSyncEngine](../cksyncengine-5sie5.md) uses whatever options are in the context. You can return `context.options` if you don’t want to perform any customization.
+
+This callback is called in between each server request while fetching changes. This allows the fetching mechanism to react dynamically while your app state changes.
+
+An example implementation might look something like this:
+
+```swift
+func nextFetchChangesOptions(_ context: CKSyncEngine.FetchChangesContext, syncEngine: CKSyncEngine) async -> CKSyncEngine.FetchChangesOptions {
+
+    // Start with the options from the context.
+    var options = context.options
+
+    // You can customize the quality-of-service based on the phase of changes being fetched.
+    // For example, you might want to fetch database changes at a higher priority.
+    if context.syncPhase == .databaseChanges {
+        options.operationGroup.defaultConfiguration.qualityOfService = .userInitiated
+    } else if context.syncPhase == .recordZoneChanges {
+        options.operationGroup.defaultConfiguration.qualityOfService = .utility
+    }
+
+    // You can also customize the queue priority to control execution order.
+    // Queue priority is independent of QoS and determines the order operations execute.
+    // For example, prioritize fetching changes for zones the user is currently viewing.
+    if let currentZoneID = self.currentlyViewingZoneID,
+       context.options.zoneIDs.contains(currentZoneID) {
+        options.operationGroup.defaultConfiguration.queuePriority = .high
+    }
+
+    // By default, the sync engine automatically fetches changes for all zones.
+    // If you know that you only want to sync a specific set of zones, you can override that here.
+    options.scope = .zoneIDs([...])
+
+    // You can prioritize specific zones to be fetched first by putting them in order.
+    var prioritizedZoneIDs: [CKRecordZone.ID] = []
+
+    // If you're showing some data in the UI, you might want to prioritize that zone first.
+    if let onScreenZoneID = uiController.currentlyViewedItem.zoneID {
+        prioritizedZoneIDs.append(onScreenZoneID)
+    }
+
+    // You could also prioritize special, well-known zones if that makes sense for your app.
+    // For example, if you have a top-level metadata zone that you'd like to sync first, you can prioritize that here.
+    let topLevelZoneID = CKRecordZone.ID(zoneName: "MyImportantMetadata")
+    prioritizedZoneIDs.append(topLevelZoneID)
+
+    options.prioritizedZoneIDs = prioritizedZoneIDs
+    return options
+}
+```
+
+## Default Implementations
+
+### CKSyncEngineDelegate Implementations
+
+- [nextFetchChangesOptions(\_:syncEngine:)](nextfetchchangesoptions%28__syncengine_%29-3eeax.md): Default implementation returns the options from the context.

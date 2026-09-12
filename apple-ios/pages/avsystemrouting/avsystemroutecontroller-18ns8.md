@@ -1,0 +1,66 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/avsystemrouting/avsystemroutecontroller-18ns8](https://developer.apple.com/documentation/avsystemrouting/avsystemroutecontroller-18ns8)
+
+# AVSystemRouteController
+
+**Framework:** AVSystemRouting  
+**Kind:** Class  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+
+
+An object that manages interaction with system routes.
+
+## Declaration
+
+```swift
+final class AVSystemRouteController
+```
+
+## Mentioned In
+
+- [Routing media to third-party devices](routing-media-to-third-party-devices.md)
+
+<a id="overview"></a>
+
+## Overview
+
+Important: Your app must declare support for Media Sharing Extensions with the `MDESupportsUniversalURLPlayback` key and/or for specific protocols in the `MDESupportedProtocols` key of  the app’s `Info.plist`.  ///
+
+```xml
+<key>MDESupportsUniversalURLPlayback</key>
+    <true/>
+<key>MDESupportedProtocols</key>
+   <dict>
+       <key>com.example.sharingprotocol</key>
+       <string>com.example.myapplicationidentifier</string>
+</dict>
+```
+
+Where the key in `MDESupportedProtocols` is the Protocol ID of the extension you are declaring support for and the string value is the application ID of your remote application which the protocol would launch on the receiver.
+
+Use the shared [shared](avsystemroutecontroller-18ns8/shared.md) instance to observe routing events. Register an [AVSystemRouteControllerObserver](avsystemroutecontrollerobserver-5syvg.md) to receive callbacks when users select or deselect routes in the system route picker.
+
+## Topics
+
+### Instance Methods
+
+- [addObserver(\_:)](avsystemroutecontroller-18ns8/addobserver%28__%29.md): Adds an observer to receive notifications about system routing events.
+- [removeObserver(\_:)](avsystemroutecontroller-18ns8/removeobserver%28__%29.md): Removes a previously registered observer from the system routing controller.
+
+### Type Properties
+
+- [shared](avsystemroutecontroller-18ns8/shared.md): The shared system routing controller instance.
+- [supportedExtensionAvailable](avsystemroutecontroller-18ns8/supportedextensionavailable.md): A Boolean value that indicates whether a supported system routing extension is available.
+
+## Relationships
+
+### Conforms To
+
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Essentials
+
+- [Routing media to third-party devices](routing-media-to-third-party-devices.md): Respond to routing events and control playback on a TV, speaker, or other media device.
+- [Routing and streaming media to remote devices](routing-and-streaming-media-to-remote-devices.md): Send media from an app to nearby remote playback devices.
+- [AVSystemRouteControllerObserver](avsystemroutecontrollerobserver-5syvg.md): A protocol for observers of a system routing controller.

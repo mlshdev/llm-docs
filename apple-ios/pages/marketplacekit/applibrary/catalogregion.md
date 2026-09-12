@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/marketplacekit/applibrary/catalogregion](https://developer.apple.com/documentation/marketplacekit/applibrary/catalogregion)
+
+# catalogRegion
+
+**Framework:** MarketplaceKit  
+**Kind:** Instance Property  
+**Availability:** iOS 26.2+ · iPadOS 26.2+
+
+A country code for the device’s current region.
+
+## Declaration
+
+```swift
+nonisolated final var catalogRegion: String? { get async }
+```
+
+## Mentioned In
+
+- [Participating in alternative distribution for specific regions](../participating-in-alternative-distribution-for-specific-regions.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+This property returns the device’s current country code based on its region setting, for example, `ie` for Ireland, and `jp` for Japan.
+
+Apps that reside on an alternative app marketplace can have varying availability based on region, so the marketplace can use the country code to decide which set of apps, or catalog, to offer a person for installation.
+
+This property is `nil` if the app isn’t an alternative app marketplace.

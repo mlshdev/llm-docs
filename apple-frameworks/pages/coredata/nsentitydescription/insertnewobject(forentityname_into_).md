@@ -1,0 +1,95 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coredata/nsentitydescription/insertnewobject(forentityname:into:)](https://developer.apple.com/documentation/coredata/nsentitydescription/insertnewobject(forentityname:into:))
+
+# insertNewObject(forEntityName:into:) (Swift)
+
+**Framework:** Core Data  
+**Kind:** Type Method  
+**Availability:** iOS 3.0+ · iPadOS 3.0+ · Mac Catalyst 13.1+ · macOS 10.4+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Creates, configures, and returns an instance of the class for the entity with a given name.
+
+## Declaration
+
+```swift
+class func insertNewObject(forEntityName entityName: String, into context: NSManagedObjectContext) -> NSManagedObject
+```
+
+## Parameters
+
+- `entityName`: The name of an entity.
+- `context`: The managed object context to use.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new, autoreleased, fully configured instance of the class for the entity named `entityName`. The instance has its entity description set and is inserted it into `context`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method makes it easy for you to create instances of a given entity without worrying about the details of managed object creation. The method is conceptually similar to the following code example.
+
+```objc
+NSManagedObjectModel *managedObjectModel =
+        [[context persistentStoreCoordinator] managedObjectModel];
+NSEntityDescription *entity =
+        [[managedObjectModel entitiesByName] objectForKey:entityName];
+NSManagedObject *newObject = [[NSManagedObject alloc]
+            initWithEntity:entity insertIntoManagedObjectContext:context];
+return newObject;
+```
+
+## See Also
+
+### Related Documentation
+
+- [init(entity:insertInto:)](../nsmanagedobject/init%28entity_insertinto_%29.md): Initializes a managed object from an entity description and inserts it into the specified managed object context.
+
+# insertNewObjectForEntityForName:inManagedObjectContext: (Objective-C)
+
+**Framework:** Core Data  
+**Kind:** Type Method  
+**Availability:** iOS 3.0+ · iPadOS 3.0+ · Mac Catalyst 13.1+ · macOS 10.4+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Creates, configures, and returns an instance of the class for the entity with a given name.
+
+## Declaration
+
+```objectivec
++ (NSManagedObject *) insertNewObjectForEntityForName:(NSString *) entityName inManagedObjectContext:(NSManagedObjectContext *) context;
+```
+
+## Parameters
+
+- `entityName`: The name of an entity.
+- `context`: The managed object context to use.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new, autoreleased, fully configured instance of the class for the entity named `entityName`. The instance has its entity description set and is inserted it into `context`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method makes it easy for you to create instances of a given entity without worrying about the details of managed object creation. The method is conceptually similar to the following code example.
+
+```objc
+NSManagedObjectModel *managedObjectModel =
+        [[context persistentStoreCoordinator] managedObjectModel];
+NSEntityDescription *entity =
+        [[managedObjectModel entitiesByName] objectForKey:entityName];
+NSManagedObject *newObject = [[NSManagedObject alloc]
+            initWithEntity:entity insertIntoManagedObjectContext:context];
+return newObject;
+```
+
+## See Also
+
+### Related Documentation
+
+- [initWithEntity:insertIntoManagedObjectContext:](../nsmanagedobject/init%28entity_insertinto_%29.md): Initializes a managed object from an entity description and inserts it into the specified managed object context.

@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssmerr_csp_missing_attr_key_type](https://developer.apple.com/documentation/security/cssmerr_csp_missing_attr_key_type)
+
+# CSSMERR_CSP_MISSING_ATTR_KEY_TYPE (Swift)
+
+**Framework:** Security  
+**Kind:** Global Variable  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+## Declaration
+
+```swift
+var CSSMERR_CSP_MISSING_ATTR_KEY_TYPE: Int { get }
+```
+
+# CSSMERR_CSP_MISSING_ATTR_KEY_TYPE (Objective-C)
+
+**Framework:** Security  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+## Declaration
+
+```objectivec
+CSSMERR_CSP_MISSING_ATTR_KEY_TYPE
+```

@@ -1,0 +1,34 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/createml/mldatatable/unpack(columnnamed:valuetypes:indexsubset:keysubset:)](https://developer.apple.com/documentation/createml/mldatatable/unpack(columnnamed:valuetypes:indexsubset:keysubset:))
+
+# unpack(columnNamed:valueTypes:indexSubset:keySubset:)
+
+**Framework:** Create ML  
+**Kind:** Instance Method  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 11.0+ · tvOS 16.0+ · visionOS 1.0+
+
+Creates a new data table with additional columns that contain the unpacked collections in the given column.
+
+## Declaration
+
+```swift
+func unpack(columnNamed: String, valueTypes: [MLDataValue.ValueType]? = nil, indexSubset: [Int]? = nil, keySubset: [String]? = nil) -> MLDataTable
+```
+
+## Parameters
+
+- `columnNamed`: The name of the column to unpack. The underlying type of the column must be either [MLDataValue.SequenceType](../mldatavalue/sequencetype.md) or [MLDataValue.DictionaryType](../mldatavalue/dictionarytype.md).
+- `valueTypes`: An array of the underlying types for the new, unpacked columns. If `nil`, the method infers the underlying types in the sequence or dictionary.
+- `indexSubset`: The subset of indicies to unpack from a specified sequence-typed column. If `nil`, the method unpacks all indicies.
+- `keySubset`: The subset of keys to unpack from a specified dictionary-typed column. If `nil`, the method unpacks all keys.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new data table.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This function performs the inverse of [pack(columnsNamed:to:type:filling:)](pack%28columnsnamed_to_type_filling_%29.md).

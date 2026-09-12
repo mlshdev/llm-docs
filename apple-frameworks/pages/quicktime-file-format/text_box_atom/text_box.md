@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/text_box_atom/text_box](https://developer.apple.com/documentation/quicktime-file-format/text_box_atom/text_box)
+
+# Text box
+
+**Framework:** QuickTime File Format  
+**Kind:** Data field
+
+A 64-bit rectangle that specifies an area to receive text (each 16 bits indicate top, left, bottom, and right, respectively) within the subtitle track.
+
+<a id="Overview"></a>
+
+## Overview
+
+This rectangle must fill the track width dimensions exactly. The top and bottom coordinates can vary because they are used to place and size the subtitle text vertically. The top is used to place the text; the height is determined by the bottom minus the top. Neither the top nor the bottom should be outside the subtitle track dimensions. See [Subtitle track header size and placement](../subtitle_track_header_size_and_placement.md).
+
+## See Also
+
+### Data fields
+
+- [Size](size.md): An unsigned 32-bit integer holding the size of the subtitle style atom.
+- [Type](type.md): An unsigned 32-bit field.

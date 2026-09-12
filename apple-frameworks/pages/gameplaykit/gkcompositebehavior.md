@@ -1,0 +1,209 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/gameplaykit/gkcompositebehavior](https://developer.apple.com/documentation/gameplaykit/gkcompositebehavior)
+
+# GKCompositeBehavior (Swift)
+
+**Framework:** GameplayKit  
+**Kind:** Class  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.0+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+A set of behaviors, each of which is a set of goals, that together influence the movement of an agent.
+
+## Declaration
+
+```swift
+class GKCompositeBehavior
+```
+
+<a id="overview"></a>
+
+## Overview
+
+By composing [GKGoal](gkgoal.md) objects into subgroups ([GKBehavior](gkbehavior.md) objects) and composing those behaviors into composite behaviors, you can control certain aspects of a [GKAgent](gkagent.md) object’s movement in concert. To assign a behavior to an agent, use its [behavior](gkagent/behavior.md) property.
+
+For example, you might create a behavior for a set of agents to stay together as a flock (with cohesion, alignment, and separation goals) while loosely following a path. With a single [GKBehavior](gkbehavior.md) object, whenever you want to change the importance of the flocking goals relative to the path-following goals, you’d need to individually change the weight of each goal. With a composite behavior, you can adjust the relative influence of a group of goals together, as in the following code.
+
+**Swift**
+
+```swift
+let flock = GKBehavior(goals: [
+    GKGoal(toAlignWith: agents, maxDistance: 10, maxAngle: .pi/4),
+    GKGoal(toCohereWith: agents, maxDistance: 10, maxAngle: .pi/4),
+    GKGoal(toSeparateFrom: agents, maxDistance: 10, maxAngle: .pi/4),
+])
+let meanderOnPath = GKBehavior(goals: [
+    GKGoal(toFollow: path, maxPredictionTime: 1, forward: true),
+    GKGoal(toWander: 10)
+])
+let composite = GKCompositeBehavior(behaviors: [
+    flock, meanderOnPath
+])
+```
+
+**Objective-C**
+
+```objc
+GKBehavior *flock = [GKBehavior behaviorWithGoals:@[
+    [GKGoal goalToAlignWithAgents:agents maxDistance:10 maxAngle:M_PI_4],
+    [GKGoal goalToCohereWithAgents:agents maxDistance:10 maxAngle:M_PI_4],
+    [GKGoal goalToSeparateFromAgents:agents maxDistance:10 maxAngle:M_PI_4]
+]];
+GKBehavior *meanderOnPath = [GKBehavior behaviorWithgoals:@[
+    [GKGoal goalToFollowPath:path maxPredictionTime:1.0 forward:YES],
+    [GKGoal goalToWander:10]
+]];
+GKCompositeBehavior *composite = [GKCompositeBehavior behaviorWithBehaviors:@[
+    flock, meanderOnPath
+]];
+```
+
+After constructing this behavior, you can use the [setWeight(\_:for:)](gkcompositebehavior/setweight%28__for_%29.md) method to increase or decrease the influence of the `flock` and `meanderOnPath` behaviors relative to one another.
+
+To learn more about using goals and agents, see [Agents, Goals, and Behaviors](https://developer.apple.com/library/archive/documentation/General/Conceptual/GameplayKit_Guide/Agent.html#//apple_ref/doc/uid/TP40015172-CH8) in [GameplayKit Programming Guide](https://developer.apple.com/library/archive/documentation/General/Conceptual/GameplayKit_Guide/index.html#//apple_ref/doc/uid/TP40015172).
+
+## Topics
+
+### Creating a Composite Behavior
+
+- [init(behaviors:)](gkcompositebehavior/init%28behaviors_%29.md): Creates a composite behavior from the specified individual behaviors.
+- [init(behaviors:andWeights:)](gkcompositebehavior/init%28behaviors_andweights_%29.md): Creates a behavior with the specified behaviors and weights.
+
+### Managing the Individual Behaviors in a Composite Behavior
+
+- [setWeight(\_:for:)](gkcompositebehavior/setweight%28__for_%29.md): Sets the weight for the specified individual behavior’s influence on agents, adding that behavior to the composite behavior if it is not already present.
+- [weight(for:)](gkcompositebehavior/weight%28for_%29.md): Returns the weight for the specified individual behavior’s influence on agents.
+- [remove(\_:)](gkcompositebehavior/remove%28__%29.md): Removes the specified individual behavior from the composite behavior.
+- [removeAllBehaviors()](gkcompositebehavior/removeallbehaviors%28%29.md): Removes all individual behaviors from the composite behavior.
+- [behaviorCount](gkcompositebehavior/behaviorcount.md): The number of individual behaviors in the composite behavior.
+
+### Working with Behaviors Using Subscript Syntax
+
+- [subscript(\_:)](gkcompositebehavior/subscript%28__%29-6jng9.md): Returns the weight associated with the behavior specified by subscript syntax.
+- [subscript(\_:)](gkcompositebehavior/subscript%28__%29-6krdg.md): Returns the individual behavior at the specified index in the composite behavior’s list of behaviors.
+
+## Relationships
+
+### Inherits From
+
+- [GKBehavior](gkbehavior.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCopying](../foundation/nscopying.md)
+- [NSFastEnumeration](../foundation/nsfastenumeration.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Agents, Goals, and Behaviors
+
+- [GKAgent](gkagent.md): A component that moves a game entity according to a set of goals and realistic constraints.
+- [GKAgent2D](gkagent2d.md): An agent that operates in a two-dimensional space.
+- [GKAgent3D](gkagent3d.md): An agent that operates in a three-dimensional space.
+- [GKGoal](gkgoal.md): An influence that motivates the movement of one or more agents.
+- [GKBehavior](gkbehavior.md): A set of goals that together influence the movement of an agent.
+- [GKPath](gkpath.md): A polygonal path that can be followed by an agent.
+- [GKAgentDelegate](gkagentdelegate.md): Implement this protocol to synchronize the state of an agent with its visual representation in your game.
+
+# GKCompositeBehavior (Objective-C)
+
+**Framework:** GameplayKit  
+**Kind:** Class  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.0+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+A set of behaviors, each of which is a set of goals, that together influence the movement of an agent.
+
+## Declaration
+
+```objectivec
+@interface GKCompositeBehavior : GKBehavior
+```
+
+<a id="overview"></a>
+
+## Overview
+
+By composing [GKGoal](gkgoal.md) objects into subgroups ([GKBehavior](gkbehavior.md) objects) and composing those behaviors into composite behaviors, you can control certain aspects of a [GKAgent](gkagent.md) object’s movement in concert. To assign a behavior to an agent, use its [behavior](gkagent/behavior.md) property.
+
+For example, you might create a behavior for a set of agents to stay together as a flock (with cohesion, alignment, and separation goals) while loosely following a path. With a single [GKBehavior](gkbehavior.md) object, whenever you want to change the importance of the flocking goals relative to the path-following goals, you’d need to individually change the weight of each goal. With a composite behavior, you can adjust the relative influence of a group of goals together, as in the following code.
+
+**Swift**
+
+```swift
+let flock = GKBehavior(goals: [
+    GKGoal(toAlignWith: agents, maxDistance: 10, maxAngle: .pi/4),
+    GKGoal(toCohereWith: agents, maxDistance: 10, maxAngle: .pi/4),
+    GKGoal(toSeparateFrom: agents, maxDistance: 10, maxAngle: .pi/4),
+])
+let meanderOnPath = GKBehavior(goals: [
+    GKGoal(toFollow: path, maxPredictionTime: 1, forward: true),
+    GKGoal(toWander: 10)
+])
+let composite = GKCompositeBehavior(behaviors: [
+    flock, meanderOnPath
+])
+```
+
+**Objective-C**
+
+```objc
+GKBehavior *flock = [GKBehavior behaviorWithGoals:@[
+    [GKGoal goalToAlignWithAgents:agents maxDistance:10 maxAngle:M_PI_4],
+    [GKGoal goalToCohereWithAgents:agents maxDistance:10 maxAngle:M_PI_4],
+    [GKGoal goalToSeparateFromAgents:agents maxDistance:10 maxAngle:M_PI_4]
+]];
+GKBehavior *meanderOnPath = [GKBehavior behaviorWithgoals:@[
+    [GKGoal goalToFollowPath:path maxPredictionTime:1.0 forward:YES],
+    [GKGoal goalToWander:10]
+]];
+GKCompositeBehavior *composite = [GKCompositeBehavior behaviorWithBehaviors:@[
+    flock, meanderOnPath
+]];
+```
+
+After constructing this behavior, you can use the [setWeight:forBehavior:](gkcompositebehavior/setweight%28__for_%29.md) method to increase or decrease the influence of the `flock` and `meanderOnPath` behaviors relative to one another.
+
+To learn more about using goals and agents, see [Agents, Goals, and Behaviors](https://developer.apple.com/library/archive/documentation/General/Conceptual/GameplayKit_Guide/Agent.html#//apple_ref/doc/uid/TP40015172-CH8) in [GameplayKit Programming Guide](https://developer.apple.com/library/archive/documentation/General/Conceptual/GameplayKit_Guide/index.html#//apple_ref/doc/uid/TP40015172).
+
+## Topics
+
+### Creating a Composite Behavior
+
+- [behaviorWithBehaviors:](gkcompositebehavior/init%28behaviors_%29.md): Creates a composite behavior from the specified individual behaviors.
+- [behaviorWithBehaviors:andWeights:](gkcompositebehavior/init%28behaviors_andweights_%29.md): Creates a behavior with the specified behaviors and weights.
+
+### Managing the Individual Behaviors in a Composite Behavior
+
+- [setWeight:forBehavior:](gkcompositebehavior/setweight%28__for_%29.md): Sets the weight for the specified individual behavior’s influence on agents, adding that behavior to the composite behavior if it is not already present.
+- [weightForBehavior:](gkcompositebehavior/weight%28for_%29.md): Returns the weight for the specified individual behavior’s influence on agents.
+- [removeBehavior:](gkcompositebehavior/remove%28__%29.md): Removes the specified individual behavior from the composite behavior.
+- [removeAllBehaviors](gkcompositebehavior/removeallbehaviors%28%29.md): Removes all individual behaviors from the composite behavior.
+- [behaviorCount](gkcompositebehavior/behaviorcount.md): The number of individual behaviors in the composite behavior.
+
+### Working with Behaviors Using Subscript Syntax
+
+- [objectForKeyedSubscript:](gkcompositebehavior/subscript%28__%29-6jng9.md): Returns the weight associated with the behavior specified by subscript syntax.
+- [setObject:forKeyedSubscript:](gkcompositebehavior/setobject_forkeyedsubscript_.md): Sets the weight for the behavior specified by subscript syntax.
+- [objectAtIndexedSubscript:](gkcompositebehavior/subscript%28__%29-6krdg.md): Returns the individual behavior at the specified index in the composite behavior’s list of behaviors.
+
+## Relationships
+
+### Inherits From
+
+- [GKBehavior](gkbehavior.md)
+
+## See Also
+
+### Agents, Goals, and Behaviors
+
+- [GKAgent](gkagent.md): A component that moves a game entity according to a set of goals and realistic constraints.
+- [GKAgent2D](gkagent2d.md): An agent that operates in a two-dimensional space.
+- [GKAgent3D](gkagent3d.md): An agent that operates in a three-dimensional space.
+- [GKGoal](gkgoal.md): An influence that motivates the movement of one or more agents.
+- [GKBehavior](gkbehavior.md): A set of goals that together influence the movement of an agent.
+- [GKPath](gkpath.md): A polygonal path that can be followed by an agent.
+- [GKAgentDelegate](gkagentdelegate.md): Implement this protocol to synchronize the state of an agent with its visual representation in your game.

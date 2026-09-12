@@ -1,0 +1,20 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/rangeset/init(_:within:)](https://developer.apple.com/documentation/swift/rangeset/init(_:within:))
+
+# init(\_:within:)
+
+**Framework:** Swift  
+**Kind:** Initializer  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
+
+Creates a new range set containing ranges that contain only the specified indices in the given collection.
+
+## Declaration
+
+```swift
+init<S, C>(_ indices: S, within collection: C) where Bound == S.Element, S : Sequence, C : Collection, S.Element == C.Index
+```
+
+## Parameters
+
+- `indices`: The indices to include in the range set. All members of `indices` must be valid indicies of `collection` that aren’t equal to the collection’s `endIndex`.
+- `collection`: The collection that contains `index`.

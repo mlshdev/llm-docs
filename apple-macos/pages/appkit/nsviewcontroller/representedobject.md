@@ -1,0 +1,45 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsviewcontroller/representedobject](https://developer.apple.com/documentation/appkit/nsviewcontroller/representedobject)
+
+# representedObject (Swift)
+
+**Framework:** AppKit  
+**Kind:** Instance Property  
+**Availability:** macOS 10.5+
+
+The object whose value is presented in the receiver’s primary view.
+
+## Declaration
+
+```swift
+var representedObject: Any? { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This property *retains* the object you provide to it; it does not *copy* it. In another words, a view controller has a *to-one* relationship with its represented object and does not own it as an attribute.
+
+The [representedObject](representedobject.md) property is key-value coding and key-value observing compliant. When you use the represented object as the file’s owner of a nib file, you can bind controls to the file’s owner using key paths that start with the string `representedObject`.
+
+# representedObject (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Property  
+**Availability:** macOS 10.5+
+
+The object whose value is presented in the receiver’s primary view.
+
+## Declaration
+
+```objectivec
+@property (strong, nullable) id representedObject;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This property *retains* the object you provide to it; it does not *copy* it. In another words, a view controller has a *to-one* relationship with its represented object and does not own it as an attribute.
+
+The [representedObject](representedobject.md) property is key-value coding and key-value observing compliant. When you use the represented object as the file’s owner of a nib file, you can bind controls to the file’s owner using key paths that start with the string `representedObject`.

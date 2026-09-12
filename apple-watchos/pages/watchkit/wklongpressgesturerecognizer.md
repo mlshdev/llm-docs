@@ -1,0 +1,158 @@
+> Snapshot-pinned source for Apple watchOS snapshot-49fd8d0a44e2: [documentation/watchkit/wklongpressgesturerecognizer](https://developer.apple.com/documentation/watchkit/wklongpressgesturerecognizer)
+
+# WKLongPressGestureRecognizer (Swift)
+
+**Framework:** WatchKit  
+**Kind:** Class  
+**Availability:** watchOS 3.0+
+
+A gesture recognizer that interprets a touch event that occurs in the same relative area for an extended period of time.
+
+## Declaration
+
+```swift
+class WKLongPressGestureRecognizer
+```
+
+<a id="overview"></a>
+
+## Overview
+
+A long-press gesture is essentially a tap where the user’s finger remains on the screen for a minimum amount of time, which is configurable. You can configure the amount of time required for the long-press to be recognized and the maximum distance those touches are allowed to move before being disallowed.
+
+You do not create instances of this class programmatically. Instead, add a long-press gesture recognizer to your Watch app’s storyboard file, dropping it onto a specific interface object. Touches occurring within the bounds of that interface object are tracked by the gesture recognizer and reported to an action method you define on the parent interface controller. For information on defining your action method and connecting it to your gesture recognizer, see [WKGestureRecognizer](wkgesturerecognizer.md).
+
+<a id="State-Changes-for-a-Long-Press-Gesture"></a>
+
+### State Changes for a Long-Press Gesture
+
+![](https://developer.apple.com/images/com.apple.watchkit/media-2557620@2x.png)
+
+A long-press gesture recognizer tracks touch events continuously, and therefore has many potential state changes. A long-press gesture transitions to the Began state when the touch event is first detected. After that, the gesture recognizer may transition to the Changed state, the Ended, state, the Failed state, or the Cancelled state. The two most common state transition sequences are as follows:
+
+- Possible → Began → \[Changed…\] → Ended
+- Possible → Began → \[Changed…\] → Failed
+
+The Changed state is optional and may occur multiple times before the Ended, Failed, or Cancelled state is reached. The gesture recognizer calls its action method at each state transition. For more information on implementing continuous gesture recognizers, see [WKGestureRecognizer](wkgesturerecognizer.md).
+
+<a id="Interface-Builder-Attributes"></a>
+
+### Interface Builder Attributes
+
+Xcode lets you configure information about your gesture recognizer in your storyboard file. The following table lists the attributes you can configure in your storyboard and their meaning.
+
+| Attribute | Description |
+| --- | --- |
+| Min Duration | The minimum time (in seconds) that the user’s finger must touch the screen before the gesture can be recognized. You can set this value programmatically using the [minimumPressDuration](wklongpressgesturerecognizer/minimumpressduration.md) property. |
+| Taps | The number of long-press taps that must occur for the gesture to be recognized. Each tap must touch the screen for the minimum duration. You can set this value programmatically using the [numberOfTapsRequired](wklongpressgesturerecognizer/numberoftapsrequired.md) property. |
+| Movement | The amount of movement (in points) allowed for each touch event. Recognition of the gesture fails if any of the touch events moves by the specified amount or more. You can set this value programmatically using the [allowableMovement](wklongpressgesturerecognizer/allowablemovement.md) property. |
+
+The [WKGestureRecognizer](wkgesturerecognizer.md) parent class also defines attributes that you can configure for your gesture recognizer. For information about those attributes, see [WKGestureRecognizer](wkgesturerecognizer.md).
+
+## Topics
+
+### Configuring the Gesture Recognizer
+
+- [minimumPressDuration](wklongpressgesturerecognizer/minimumpressduration.md): The minimum amount of time (in seconds) that the user’s fingers must be touching the interface object.
+- [numberOfTapsRequired](wklongpressgesturerecognizer/numberoftapsrequired.md): The number of taps on the interface object that are required for the gesture to be recognized.
+- [allowableMovement](wklongpressgesturerecognizer/allowablemovement.md): The maximum movement of the finger on the interface object that allows the gesture to be recognized.
+
+## Relationships
+
+### Inherits From
+
+- [WKGestureRecognizer](wkgesturerecognizer.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
+
+## See Also
+
+### Event handling
+
+- [WKCrownSequencer](wkcrownsequencer.md): An object that reports the current state of the digital crown, including its rotational speed when it is in motion.
+- [WKCrownDelegate](wkcrowndelegate.md): A collection of methods you can implement to track the user’s interaction with the digital crown, receiving notifications when the user rotates the crown or when rotation stops.
+- [WKGestureRecognizer](wkgesturerecognizer.md): The base class for all other gesture recognizer classes.
+- [WKPanGestureRecognizer](wkpangesturerecognizer.md): A gesture recognizer that interprets a touch event that moves around the screen.
+- [WKSwipeGestureRecognizer](wkswipegesturerecognizer.md): A gesture recognizer that interprets swiping gestures in one or more directions.
+- [WKTapGestureRecognizer](wktapgesturerecognizer.md): A gesture recognizer that interprets a touch event occurring and ending in approximately the same area on the screen.
+
+# WKLongPressGestureRecognizer (Objective-C)
+
+**Framework:** WatchKit  
+**Kind:** Class  
+**Availability:** watchOS 3.0+
+
+A gesture recognizer that interprets a touch event that occurs in the same relative area for an extended period of time.
+
+## Declaration
+
+```objectivec
+@interface WKLongPressGestureRecognizer : WKGestureRecognizer
+```
+
+<a id="overview"></a>
+
+## Overview
+
+A long-press gesture is essentially a tap where the user’s finger remains on the screen for a minimum amount of time, which is configurable. You can configure the amount of time required for the long-press to be recognized and the maximum distance those touches are allowed to move before being disallowed.
+
+You do not create instances of this class programmatically. Instead, add a long-press gesture recognizer to your Watch app’s storyboard file, dropping it onto a specific interface object. Touches occurring within the bounds of that interface object are tracked by the gesture recognizer and reported to an action method you define on the parent interface controller. For information on defining your action method and connecting it to your gesture recognizer, see [WKGestureRecognizer](wkgesturerecognizer.md).
+
+<a id="State-Changes-for-a-Long-Press-Gesture"></a>
+
+### State Changes for a Long-Press Gesture
+
+![](https://developer.apple.com/images/com.apple.watchkit/media-2557620@2x.png)
+
+A long-press gesture recognizer tracks touch events continuously, and therefore has many potential state changes. A long-press gesture transitions to the Began state when the touch event is first detected. After that, the gesture recognizer may transition to the Changed state, the Ended, state, the Failed state, or the Cancelled state. The two most common state transition sequences are as follows:
+
+- Possible → Began → \[Changed…\] → Ended
+- Possible → Began → \[Changed…\] → Failed
+
+The Changed state is optional and may occur multiple times before the Ended, Failed, or Cancelled state is reached. The gesture recognizer calls its action method at each state transition. For more information on implementing continuous gesture recognizers, see [WKGestureRecognizer](wkgesturerecognizer.md).
+
+<a id="Interface-Builder-Attributes"></a>
+
+### Interface Builder Attributes
+
+Xcode lets you configure information about your gesture recognizer in your storyboard file. The following table lists the attributes you can configure in your storyboard and their meaning.
+
+| Attribute | Description |
+| --- | --- |
+| Min Duration | The minimum time (in seconds) that the user’s finger must touch the screen before the gesture can be recognized. You can set this value programmatically using the [minimumPressDuration](wklongpressgesturerecognizer/minimumpressduration.md) property. |
+| Taps | The number of long-press taps that must occur for the gesture to be recognized. Each tap must touch the screen for the minimum duration. You can set this value programmatically using the [numberOfTapsRequired](wklongpressgesturerecognizer/numberoftapsrequired.md) property. |
+| Movement | The amount of movement (in points) allowed for each touch event. Recognition of the gesture fails if any of the touch events moves by the specified amount or more. You can set this value programmatically using the [allowableMovement](wklongpressgesturerecognizer/allowablemovement.md) property. |
+
+The [WKGestureRecognizer](wkgesturerecognizer.md) parent class also defines attributes that you can configure for your gesture recognizer. For information about those attributes, see [WKGestureRecognizer](wkgesturerecognizer.md).
+
+## Topics
+
+### Configuring the Gesture Recognizer
+
+- [minimumPressDuration](wklongpressgesturerecognizer/minimumpressduration.md): The minimum amount of time (in seconds) that the user’s fingers must be touching the interface object.
+- [numberOfTapsRequired](wklongpressgesturerecognizer/numberoftapsrequired.md): The number of taps on the interface object that are required for the gesture to be recognized.
+- [allowableMovement](wklongpressgesturerecognizer/allowablemovement.md): The maximum movement of the finger on the interface object that allows the gesture to be recognized.
+
+## Relationships
+
+### Inherits From
+
+- [WKGestureRecognizer](wkgesturerecognizer.md)
+
+## See Also
+
+### Event handling
+
+- [WKCrownSequencer](wkcrownsequencer.md): An object that reports the current state of the digital crown, including its rotational speed when it is in motion.
+- [WKCrownDelegate](wkcrowndelegate.md): A collection of methods you can implement to track the user’s interaction with the digital crown, receiving notifications when the user rotates the crown or when rotation stops.
+- [WKGestureRecognizer](wkgesturerecognizer.md): The base class for all other gesture recognizer classes.
+- [WKPanGestureRecognizer](wkpangesturerecognizer.md): A gesture recognizer that interprets a touch event that moves around the screen.
+- [WKSwipeGestureRecognizer](wkswipegesturerecognizer.md): A gesture recognizer that interprets swiping gestures in one or more directions.
+- [WKTapGestureRecognizer](wktapgesturerecognizer.md): A gesture recognizer that interprets a touch event occurring and ending in approximately the same area on the screen.

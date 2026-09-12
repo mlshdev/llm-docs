@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/unsaferawbufferpointer/bindmemory(to:)](https://developer.apple.com/documentation/swift/unsaferawbufferpointer/bindmemory(to:))
+
+# bindMemory(to:)
+
+**Framework:** Swift  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Binds this buffer’s memory to the specified type and returns a typed buffer of the bound memory.
+
+## Declaration
+
+```swift
+@discardableResult func bindMemory<T>(to type: T.Type) -> UnsafeBufferPointer<T> where T : ~Copyable
+```
+
+## Parameters
+
+- `type`: The type `T` to bind the memory to.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A typed buffer of the newly bound memory. The memory in this region is bound to `T`, but has not been modified in any other way. The typed buffer references `self.count / MemoryLayout<T>.stride` instances of `T`.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use the `bindMemory(to:)` method to bind the memory referenced by this buffer to the type `T`. The memory must be uninitialized or initialized to a type that is layout compatible with `T`. If the memory is uninitialized, it is still uninitialized after being bound to `T`.
+
+> **Warning**
+
+> A memory location may only be bound to one type at a time. The behavior of accessing memory as a type unrelated to its bound type is undefined.

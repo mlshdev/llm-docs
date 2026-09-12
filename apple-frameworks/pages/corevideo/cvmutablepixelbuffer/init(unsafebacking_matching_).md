@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corevideo/cvmutablepixelbuffer/init(unsafebacking:matching:)](https://developer.apple.com/documentation/corevideo/cvmutablepixelbuffer/init(unsafebacking:matching:))
+
+# init(unsafeBacking:matching:)
+
+**Framework:** Core Video  
+**Kind:** Initializer  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+Creates a CVPixelBuffer backed by the given `ioSurface`. The CVPixelBuffer will retain the `ioSurface`. **IMPORTANT** If you are using IOSurface to share CVPixelBuffers between processes and those CVPixelBuffers are allocated via a CVPixelBufferPool, it is important that the CVPixelBufferPool does not reuse CVPixelBuffers whose IOSurfaces are still in use in other processes. CoreVideo and IOSurface will take care of this for if you use IOSurfaceCreateMachPort and IOSurfaceLookupFromMachPort, but NOT if you pass IOSurfaceIDs.
+
+## Declaration
+
+```swift
+init(unsafeBacking ioSurface: IOSurface, matching attributes: CVPixelBufferCreationAttributes) throws
+```

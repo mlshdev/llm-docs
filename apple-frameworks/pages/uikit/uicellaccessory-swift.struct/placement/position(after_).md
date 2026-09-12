@@ -1,0 +1,22 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uicellaccessory-swift.struct/placement/position(after:)](https://developer.apple.com/documentation/uikit/uicellaccessory-swift.struct/placement/position(after:))
+
+# position(after:)
+
+**Framework:** UIKit  
+**Kind:** Type Method  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · tvOS 14.0+ · visionOS
+
+Provides a position after the accessory that matches the specified type, or at the end if there’s no matching type.
+
+## Declaration
+
+```swift
+static func position(after accessory: UICellAccessory) -> UICellAccessory.Placement.Position
+```
+
+## See Also
+
+### Specifying position
+
+- [position(before:)](position%28before_%29.md): Provides a position before the accessory that matches the specified type, or at the beginning if there’s no matching type.
+- [UICellAccessory.Placement.Position](position.md): The index position of the cell accessory in relation to the other accessories in the specified array.

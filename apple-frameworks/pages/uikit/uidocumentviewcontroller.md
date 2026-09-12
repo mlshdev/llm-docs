@@ -1,0 +1,331 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uidocumentviewcontroller](https://developer.apple.com/documentation/uikit/uidocumentviewcontroller)
+
+# UIDocumentViewController (Swift)
+
+**Framework:** UIKit  
+**Kind:** Class  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · visionOS 1.0+
+
+A view controller that manages and presents a document stored locally or in the cloud.
+
+## Declaration
+
+```swift
+@MainActor class UIDocumentViewController
+```
+
+## Mentioned In
+
+- [Customizing a document-based app’s launch experience](customizing-a-document-based-app-s-launch-experience.md)
+
+<a id="overview"></a>
+
+## Overview
+
+`UIDocumentViewController` presents a view that displays a [document](uidocumentviewcontroller/document.md). It manages opening, saving, and closing the document. You can use `UIDocumentViewController` to present documents from a [UIDocumentBrowserViewController](uidocumentbrowserviewcontroller.md), for instance. When you aren’t presenting documents from a `UIDocumentBrowserViewController`,  `UIDocumentViewController` displays a button that, when tapped, presents a picker a person can use to choose the document to display.
+
+The document view controller’s [document](uidocumentviewcontroller/document.md) property is an optional [UIDocument](uidocument.md). While the `document` property value is `nil`, the document view controller displays a view depicting an empty state with the message, “No Document”. The empty state provides a prompt that reads “Select a document by tapping the ‘Documents’ button at the top.”
+
+When the `document` property value is not `nil`, the document view controller displays the document. You configure the [view](uiviewcontroller/view.md) to display the document in the [documentDidOpen()](uidocumentviewcontroller/documentdidopen%28%29.md) callback method.
+
+The navigation item automatically assigns its title menu, its [UIDocumentProperties](uidocumentproperties.md) object, undo and redo buttons, and [renameDelegate](uinavigationitem/renamedelegate-o32h.md) from information in the document view controller’s `document`.
+
+`UIDocumentViewController` also provides sharing and drag and drop support, and key-commands for common actions such as undo and redo.
+
+<a id="Subclassing-notes"></a>
+
+### Subclassing notes
+
+`UIDocumentViewController` is an abstract base class that is meant to be subclassed. To create a subclass, you override two methods.
+
+1. The system calls [documentDidOpen()](uidocumentviewcontroller/documentdidopen%28%29.md) when someone opens the document associated with the document view controller, or when an object assigns a previously opened document to the document view controller.
+2. The system calls [navigationItemDidUpdate()](uidocumentviewcontroller/navigationitemdidupdate%28%29.md) every time `UIDocumentViewController` makes changes to its navigation item.
+
+<a id="Open-and-close-documents"></a>
+
+#### Open and close documents
+
+When the document view controller opens the document associated with it, or when an object assigns an already opened document to the document view controller, the system calls [documentDidOpen()](uidocumentviewcontroller/documentdidopen%28%29.md). You can populate the view controller’s views to display the content of the document in this method:
+
+```swift
+override func documentDidOpen() {
+    configureViewForCurrentDocument()
+}
+```
+
+It’s good practice to configure the view in its own method and call that method in both `documentDidOpen()` and [viewDidLoad()](uiviewcontroller/viewdidload%28%29.md). There is no guarantee of the timing between when the system calls `documentDidOpen()` and when the system loads the view controller’s view, so check that the view loaded and the document opened before configuring your views.
+
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+    configureViewForCurrentDocument()
+}
+
+func configureViewForCurrentDocument() {
+    guard let document = markdownDocument,
+        !document.documentState.contains(.closed)
+            && isViewLoaded else { return }
+    // Configure views for document
+}
+```
+
+<a id="Customize-navigation-items"></a>
+
+#### Customize navigation items
+
+While `UIDocumentViewController` automatically sets the document title and other navigation items using information from the document, you can customize these items by overriding the [navigationItemDidUpdate()](uidocumentviewcontroller/navigationitemdidupdate%28%29.md) method. The system calls `navigationItemDidUpdate()` every time `UIDocumentViewController` makes changes to the navigation item.
+
+```swift
+override func navigationItemDidUpdate() {
+    // Customize the navigation item.
+}
+```
+
+<a id="Add-sharing-drag-and-drop-and-undo-and-redo"></a>
+
+#### Add sharing, drag and drop, and undo and redo
+
+`UIDocumentViewController` automatically includes drag and drop, undo and redo, and sharing support. If you want undo and redo buttons to appear in your `UIDocumentViewController`, add a [undoRedoItemGroup](uidocumentviewcontroller/undoredoitemgroup.md) to the navigation bar and ensure that your custom `UIDocument` implements an undo manager. `UIDocumentViewController` sets the `hidden` property of this group, depending on the availability of an undo manager. It automatically enables or disables the buttons inside the group, as necessary.
+
+<a id="Open-a-document-from-outside-the-class"></a>
+
+#### Open a document from outside the class
+
+`UIDocumentViewController` automatically opens and closes its document. However, if you need to access a document from outside the document view controller, you can create a new instance of `UIDocumentViewController` and call its [openDocument(completionHandler:)](uidocumentviewcontroller/opendocument%28completionhandler_%29.md) method.
+
+In this sample code, a [UIDocumentBrowserViewController](uidocumentbrowserviewcontroller.md) presents a document using a `UIDocumentViewController`.
+
+```swift
+// Open a document.
+
+class BrowserViewController: UIDocumentBrowserViewController {
+
+    func presentDocument(_ document: MarkdownDocument) {
+        let documentController = UIDocumentViewController(document: document)
+        documentController.openDocument { success in
+            if success {
+                self.present(documentController, animated: true)
+            }
+        }
+    }
+
+}
+```
+
+`UIDocumentViewController` makes all the necessary callbacks, such as calling [documentDidOpen()](uidocumentviewcontroller/documentdidopen%28%29.md) and, when the document is open, it calls the completion handler you provided.
+
+<a id="Use-the-class-as-a-root-view-controller"></a>
+
+#### Use the class as a root view controller
+
+`To use a UIDocumentViewController` as the root view controller in an app, you need to declare the key “UIDocumentClass” for the relevant file type in your app’s info.plist. Set the document class to the `UIDocument` subclass you are using in your app.
+
+If there is no browser view controller in the hierarchy, `UIDocumentViewController` displays a document button that opens a document picker in the navigation bar.
+
+## Topics
+
+### Creating a document view controller
+
+- [init(document:)](uidocumentviewcontroller/init%28document_%29.md): Creates a document view controller with a document.
+
+### Managing the document view
+
+- [document](uidocumentviewcontroller/document.md): The document that the controller presents or edits.
+- [openDocument(completionHandler:)](uidocumentviewcontroller/opendocument%28completionhandler_%29.md): Opens a document in a document view controller from outside the document view controller.
+- [documentDidOpen()](uidocumentviewcontroller/documentdidopen%28%29.md): Provides an opportunity to configure the view after the system loads the controller’s document into memory.
+
+### Customizing navigation items
+
+- [navigationItemDidUpdate()](uidocumentviewcontroller/navigationitemdidupdate%28%29.md): Provides an opportunity to customize the navigation items after the navigation bar updates.
+
+### Adding undo and redo functionality
+
+- [undoRedoItemGroup](uidocumentviewcontroller/undoredoitemgroup.md): The group that contains the undo/redo buttons that this view controller adds to the navigation bar.
+
+### Customizing the launch experience
+
+- [launchOptions](uidocumentviewcontroller/launchoptions-swift.property.md): Options that customize a document-based app’s launch view.
+- [UIDocumentViewController.LaunchOptions](uidocumentviewcontroller/launchoptions-swift.class.md): Options for customizing the document launch view.
+
+## Relationships
+
+### Inherits From
+
+- [UIViewController](uiviewcontroller.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCoding](../foundation/nscoding.md)
+- [NSExtensionRequestHandling](../foundation/nsextensionrequesthandling.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+- [UIActivityItemsConfigurationProviding](uiactivityitemsconfigurationproviding.md)
+- [UIAppearanceContainer](uiappearancecontainer.md)
+- [UIContentContainer](uicontentcontainer.md)
+- [UIFocusEnvironment](uifocusenvironment.md)
+- [UIPasteConfigurationSupporting](uipasteconfigurationsupporting.md)
+- [UIResponderStandardEditActions](uiresponderstandardeditactions.md)
+- [UIStateRestoring](uistaterestoring.md)
+- [UITraitChangeObservable](uitraitchangeobservable-67e94.md)
+- [UITraitEnvironment](uitraitenvironment.md)
+- [UIUserActivityRestoring](uiuseractivityrestoring.md)
+
+# UIDocumentViewController (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Class  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · visionOS 1.0+
+
+A view controller that manages and presents a document stored locally or in the cloud.
+
+## Declaration
+
+```objectivec
+@interface UIDocumentViewController : UIViewController
+```
+
+## Mentioned In
+
+- [Customizing a document-based app’s launch experience](customizing-a-document-based-app-s-launch-experience.md)
+
+<a id="overview"></a>
+
+## Overview
+
+`UIDocumentViewController` presents a view that displays a [document](uidocumentviewcontroller/document.md). It manages opening, saving, and closing the document. You can use `UIDocumentViewController` to present documents from a [UIDocumentBrowserViewController](uidocumentbrowserviewcontroller.md), for instance. When you aren’t presenting documents from a `UIDocumentBrowserViewController`,  `UIDocumentViewController` displays a button that, when tapped, presents a picker a person can use to choose the document to display.
+
+The document view controller’s [document](uidocumentviewcontroller/document.md) property is an optional [UIDocument](uidocument.md). While the `document` property value is `nil`, the document view controller displays a view depicting an empty state with the message, “No Document”. The empty state provides a prompt that reads “Select a document by tapping the ‘Documents’ button at the top.”
+
+When the `document` property value is not `nil`, the document view controller displays the document. You configure the [view](uiviewcontroller/view.md) to display the document in the [documentDidOpen](uidocumentviewcontroller/documentdidopen%28%29.md) callback method.
+
+The navigation item automatically assigns its title menu, its [UIDocumentProperties](uidocumentproperties.md) object, undo and redo buttons, and [renameDelegate](uinavigationitem/renamedelegate-o32h.md) from information in the document view controller’s `document`.
+
+`UIDocumentViewController` also provides sharing and drag and drop support, and key-commands for common actions such as undo and redo.
+
+<a id="Subclassing-notes"></a>
+
+### Subclassing notes
+
+`UIDocumentViewController` is an abstract base class that is meant to be subclassed. To create a subclass, you override two methods.
+
+1. The system calls [documentDidOpen](uidocumentviewcontroller/documentdidopen%28%29.md) when someone opens the document associated with the document view controller, or when an object assigns a previously opened document to the document view controller.
+2. The system calls [navigationItemDidUpdate](uidocumentviewcontroller/navigationitemdidupdate%28%29.md) every time `UIDocumentViewController` makes changes to its navigation item.
+
+<a id="Open-and-close-documents"></a>
+
+#### Open and close documents
+
+When the document view controller opens the document associated with it, or when an object assigns an already opened document to the document view controller, the system calls [documentDidOpen](uidocumentviewcontroller/documentdidopen%28%29.md). You can populate the view controller’s views to display the content of the document in this method:
+
+```swift
+override func documentDidOpen() {
+    configureViewForCurrentDocument()
+}
+```
+
+It’s good practice to configure the view in its own method and call that method in both `documentDidOpen()` and [viewDidLoad](uiviewcontroller/viewdidload%28%29.md). There is no guarantee of the timing between when the system calls `documentDidOpen()` and when the system loads the view controller’s view, so check that the view loaded and the document opened before configuring your views.
+
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+    configureViewForCurrentDocument()
+}
+
+func configureViewForCurrentDocument() {
+    guard let document = markdownDocument,
+        !document.documentState.contains(.closed)
+            && isViewLoaded else { return }
+    // Configure views for document
+}
+```
+
+<a id="Customize-navigation-items"></a>
+
+#### Customize navigation items
+
+While `UIDocumentViewController` automatically sets the document title and other navigation items using information from the document, you can customize these items by overriding the [navigationItemDidUpdate](uidocumentviewcontroller/navigationitemdidupdate%28%29.md) method. The system calls `navigationItemDidUpdate()` every time `UIDocumentViewController` makes changes to the navigation item.
+
+```swift
+override func navigationItemDidUpdate() {
+    // Customize the navigation item.
+}
+```
+
+<a id="Add-sharing-drag-and-drop-and-undo-and-redo"></a>
+
+#### Add sharing, drag and drop, and undo and redo
+
+`UIDocumentViewController` automatically includes drag and drop, undo and redo, and sharing support. If you want undo and redo buttons to appear in your `UIDocumentViewController`, add a [undoRedoItemGroup](uidocumentviewcontroller/undoredoitemgroup.md) to the navigation bar and ensure that your custom `UIDocument` implements an undo manager. `UIDocumentViewController` sets the `hidden` property of this group, depending on the availability of an undo manager. It automatically enables or disables the buttons inside the group, as necessary.
+
+<a id="Open-a-document-from-outside-the-class"></a>
+
+#### Open a document from outside the class
+
+`UIDocumentViewController` automatically opens and closes its document. However, if you need to access a document from outside the document view controller, you can create a new instance of `UIDocumentViewController` and call its [openDocumentWithCompletionHandler:](uidocumentviewcontroller/opendocument%28completionhandler_%29.md) method.
+
+In this sample code, a [UIDocumentBrowserViewController](uidocumentbrowserviewcontroller.md) presents a document using a `UIDocumentViewController`.
+
+```swift
+// Open a document.
+
+class BrowserViewController: UIDocumentBrowserViewController {
+
+    func presentDocument(_ document: MarkdownDocument) {
+        let documentController = UIDocumentViewController(document: document)
+        documentController.openDocument { success in
+            if success {
+                self.present(documentController, animated: true)
+            }
+        }
+    }
+
+}
+```
+
+`UIDocumentViewController` makes all the necessary callbacks, such as calling [documentDidOpen](uidocumentviewcontroller/documentdidopen%28%29.md) and, when the document is open, it calls the completion handler you provided.
+
+<a id="Use-the-class-as-a-root-view-controller"></a>
+
+#### Use the class as a root view controller
+
+`To use a UIDocumentViewController` as the root view controller in an app, you need to declare the key “UIDocumentClass” for the relevant file type in your app’s info.plist. Set the document class to the `UIDocument` subclass you are using in your app.
+
+If there is no browser view controller in the hierarchy, `UIDocumentViewController` displays a document button that opens a document picker in the navigation bar.
+
+## Topics
+
+### Creating a document view controller
+
+- [initWithDocument:](uidocumentviewcontroller/init%28document_%29.md): Creates a document view controller with a document.
+
+### Managing the document view
+
+- [document](uidocumentviewcontroller/document.md): The document that the controller presents or edits.
+- [openDocumentWithCompletionHandler:](uidocumentviewcontroller/opendocument%28completionhandler_%29.md): Opens a document in a document view controller from outside the document view controller.
+- [documentDidOpen](uidocumentviewcontroller/documentdidopen%28%29.md): Provides an opportunity to configure the view after the system loads the controller’s document into memory.
+
+### Customizing navigation items
+
+- [navigationItemDidUpdate](uidocumentviewcontroller/navigationitemdidupdate%28%29.md): Provides an opportunity to customize the navigation items after the navigation bar updates.
+
+### Adding undo and redo functionality
+
+- [undoRedoItemGroup](uidocumentviewcontroller/undoredoitemgroup.md): The group that contains the undo/redo buttons that this view controller adds to the navigation bar.
+
+### Customizing the launch experience
+
+- [launchOptions](uidocumentviewcontroller/launchoptions-swift.property.md): Options that customize a document-based app’s launch view.
+- [UIDocumentViewControllerLaunchOptions](uidocumentviewcontroller/launchoptions-swift.class.md): Options for customizing the document launch view.
+
+## Relationships
+
+### Inherits From
+
+- [UIViewController](uiviewcontroller.md)

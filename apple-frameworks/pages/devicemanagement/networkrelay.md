@@ -1,0 +1,141 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/networkrelay](https://developer.apple.com/documentation/devicemanagement/networkrelay)
+
+# NetworkRelay
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Object  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+The declaration to configure Network Relay settings.
+
+## Declaration
+
+```
+object NetworkRelay
+```
+
+## Properties
+
+- `AllowDNSFailover` — `boolean`: If `true`, the device allows the relay to failover to the default system DNS resolver.
+  **Default:** `false`
+- `ExcludedDomains` — `[string]`: A list of domain strings to exclude from routing through the servers in `Relays`. Any connection that matches a domain in the list exactly or is a subdomain of the listed domain won’t use the relay server.
+- `ExcludedFQDNs` — `[string]`: A list of Fully Qualified Domain Names (FQDNs) to exclude from routing through the servers contained in `Relays`. Any connection that matches an FQDN in the list exactly won’t use the relay server. When `MatchDomains` is also present, any FQDN listed in the list should be a subdomain of at least one `MatchDomain` value, otherwise it won’t have any effect.
+- `MatchDomains` — `[string]`: A list of domain strings that the system uses to determine which connection to route through the servers in `Relays`.
+
+  Any connection that matches a domain in the list exactly or is a subdomain of the listed domain uses the relay servers, unless it matches a domain in `ExcludedDomains`.
+
+  If this list and `MatchFQDNs` are empty, the system routes traffic to all domains to the relay servers, except those that match an excluded domain or excluded FQDN.
+- `MatchFQDNs` — `[string]`: A list of Fully Qualified Domain Names (FQDNs) to route through the servers contained in `Relays`. Any connection that matches an FQDN in the list exactly uses the relay servers. If this list and `MatchDomains` are empty, the system routes traffic to all domains to the relay servers, except those that match an excluded domain or excluded FQDN.
+- `Relays` — `[NetworkRelayRelayObject]` (required): An array of dictionaries that describe one or more relay servers that the system can chain together.
+- `RelayUUID` — `string`: A globally unique identifier for this relay configuration. The system uses this UUID to route managed apps through the servers in `Relays`. This key is required for user enrollment.
+
+  Available: iOS 27+ | iPadOS 27+ | visionOS 27+
+- `UIToggleEnabled` — `boolean`: If `true`, the device allows the user to disable this network relay configuration.
+  **Default:** `true`
+- `VisibleName` — `string` (required): The name of the network relays that the system displays on the device.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Specify `com.apple.configuration.network.relay` as the declaration type.
+
+<a id="Configuration-availability"></a>
+
+### Configuration availability
+
+|  |  |
+| --- | --- |
+| Allowed in supervised enrollment | iOS, macOS, Shared iPad, visionOS |
+| Allowed in device enrollment | iOS, Shared iPad, visionOS |
+| Allowed in user enrollment | iOS, Shared iPad, visionOS |
+| Allowed in local enrollment | iOS, macOS, Shared iPad, visionOS |
+| Allowed in system scope | iOS, macOS, Shared iPad, visionOS |
+| Allowed in user scope | macOS |
+| Apply | Multiple configurations are applied separately |
+
+<a id="Configuration-examples"></a>
+
+### Configuration examples
+
+**Single relay**
+
+This configuration routes traffic to two domains through a single HTTP/2 relay with a custom authorization header.
+
+```json
+{
+    "Type": "com.apple.configuration.network.relay",
+    "Identifier": "EB13EE2B-5D63-4EBA-810F-5B81D07F5017",
+    "ServerToken": "E180CA9A-F089-4FA3-BBDF-94CC159C4AE8",
+    "Payload": {
+        "VisibleName": "Corporate Relay",
+        "Relays": [
+            {
+                "HTTP2RelayURL": "https://relay.example.com/proxy",
+                "AdditionalHTTPHeaderFields": {
+                    "Authorization": "Bearer enterprise-token-12345"
+                }
+            }
+        ],
+        "MatchDomains": ["example.com", "internal.example.com"],
+        "RelayUUID": "C3D4E5F6-A7B8-9012-CDEF-123456789012",
+        "UIToggleEnabled": false
+    }
+}
+```
+
+**Chained relays**
+
+This configuration routes specific hostnames through two chained relay hops supporting both HTTP/2 and HTTP/3.
+
+```json
+{
+    "Type": "com.apple.configuration.network.relay",
+    "Identifier": "2A3B4C5D-6E7F-8A9B-0C1D-2E3F4A5B6C7D",
+    "ServerToken": "F1E2D3C4-B5A6-7890-ABCD-EF1234567890",
+    "Payload": {
+        "VisibleName": "Two-Hop Privacy Relay",
+        "Relays": [
+            {
+                "HTTP3RelayURL": "https://relay1.example.com/hop1",
+                "HTTP2RelayURL": "https://relay1.example.com/hop1"
+            },
+            {
+                "HTTP3RelayURL": "https://relay2.example.com/hop2"
+            }
+        ],
+        "MatchFQDNs": ["secure.example.com", "api.example.com"],
+        "ExcludedDomains": ["cdn.example.com"],
+        "RelayUUID": "D4E5F6A7-B8C9-0123-DEF0-234567890123",
+        "AllowDNSFailover": true
+    }
+}
+```
+
+## Topics
+
+### Objects
+
+- [NetworkRelayRelayObject](networkrelayrelayobject.md): An array of dictionaries that describe one or more relay servers that the system can chain together.
+
+## See Also
+
+### Configurations
+
+- [AccessibilitySettings](accessibilitysettings.md): The declaration to configure accessibility settings.
+- [AccountCalDAV](accountcaldav.md): The declaration to configure a Calendar account.
+- [AccountCardDAV](accountcarddav.md): The declaration to configure a Contacts account.
+- [AccountExchange](accountexchange.md): The declaration to configure an Exchange account.
+- [AccountGoogle](accountgoogle.md): The declaration to configure a Google account.
+- [AccountLDAP](accountldap.md): The declaration to configure a Lightweight Directory Access Protocol (LDAP) account.
+- [AccountMail](accountmail.md): The declaration to configure a Mail account.
+- [AccountSubscribedCalendar](accountsubscribedcalendar.md): The declaration to configure a subscribed calendar.
+- [AppManaged](appmanaged.md): The declaration to configure a managed app.
+- [AppSettings](appsettings.md): The declaration to configure app settings.
+- [AudioAccessorySettings](audioaccessorysettings.md): The declaration to configure audio accessory settings.
+- [ContentCaching](contentcaching.md): The declaration to configure the Content Caching service.
+- [DiskManagementSettings](diskmanagementsettings.md): The declaration to configure disk management settings on the device.
+- [ExtensibleSSO](extensiblesso.md): The declaration to configure Extensible Single Sign-On.
+- [ExternalIntelligenceSettings](externalintelligencesettings.md): The declaration to configure External Intelligence Integrations settings.

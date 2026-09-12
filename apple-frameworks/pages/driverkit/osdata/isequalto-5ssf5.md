@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/osdata/isequalto-5ssf5](https://developer.apple.com/documentation/driverkit/osdata/isequalto-5ssf5)
+
+# isEqualTo
+
+**Interface language:** Objective-C
+
+**Framework:** DriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit · iOS · iPadOS · macOS
+
+Compares the data with an OSString
+
+## Declaration
+
+```objectivec
+bool isEqualTo(const OSString *aString) const;
+```
+
+## Parameters
+
+- `aString`: The object to compare with.
+
+<a id="return-value"></a>
+
+## Return Value
+
+True if the OSData and OSString contain the same c-string.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If the passed OSString object has the same length and all bytes are identical, true is returned. If the passed OSString object has a length one byte less than the OSData, all bytes are identical, and the last byte of the OSData is zero, true is returned. Otherwise false is returned.
+
+## See Also
+
+### Comparing Data Objects
+
+- [isEqualTo](isequalto-2kdml.md): Compares the data with an OSData
+- [isEqualTo](isequalto-4xz0j.md): Compares the data with an OSObject
+- [isEqualTo](isequalto-79gqy.md): Compares the data with a pointer to bytes

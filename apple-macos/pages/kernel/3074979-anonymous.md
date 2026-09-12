@@ -1,0 +1,23 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/3074979-anonymous](https://developer.apple.com/documentation/kernel/3074979-anonymous)
+
+# Anonymous
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Enumeration  
+**Availability:** macOS 10.15+
+
+## Declaration
+
+```objectivec
+enum : unsigned long {
+    ...
+};
+```
+
+## Topics
+
+### Constants
+
+- [kIORPCMessageIDKernel](3074979-anonymous/kiorpcmessageidkernel.md)

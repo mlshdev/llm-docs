@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "project": "n8n",
   "title": "n8n",
+  "homepage": "https://docs.n8n.io/",
   "repository": "n8n-io/n8n-docs",
   "tag": "main",
   "branch": "main",

@@ -1,0 +1,89 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/secaclcreatewithsimplecontents(_:_:_:_:_:)](https://developer.apple.com/documentation/security/secaclcreatewithsimplecontents(_:_:_:_:_:))
+
+# SecACLCreateWithSimpleContents(\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.7+ (deprecated in 10.10)
+
+Creates a new ACL entry with the given characteristics, and adds it to an access instance.
+
+> SecKeychain is deprecated
+
+## Declaration
+
+```swift
+func SecACLCreateWithSimpleContents(_ access: SecAccess, _ applicationList: CFArray?, _ description: CFString, _ promptSelector: SecKeychainPromptSelector, _ newAcl: UnsafeMutablePointer<SecACL?>) -> OSStatus
+```
+
+## Parameters
+
+- `access`: The access instance to which to add the information.
+- `applicationList`: An array of [SecTrustedApplication](sectrustedapplication.md) instances identifying apps that are allowed access to the keychain item without user confirmation.
+
+  Set this parameter to `nil` to indicate that any app can use this item. Pass an empty array to indicate that there are no trusted apps.
+- `description`: The human readable name to be used to refer to this item when the user is prompted.
+- `promptSelector`: A set of prompt selector flags. See [SecKeychainPromptSelector](seckeychainpromptselector.md) for possible values.
+- `newAcl`: A pointer the method uses to return the new [SecACL](secacl.md) instance.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The ACL entry returned by this method includes a list of trusted apps, the name of the keychain item as it appears in user prompts, the prompt selector flag, and a list of one or more operations to which this ACL entry applies. By default, a new ACL entry applies to all operations. Use the [SecACLUpdateAuthorizations(\_:\_:)](secaclupdateauthorizations%28____%29.md) method to set the list of operations for an ACL entry.
+
+> **Note**
+
+>  Starting in macOS 10.13.1, for added security, the system ignores the `promptSelector` property of an ACL object and always prompts for the keychain password when asking the user whether to add an app to the list of trusted apps.
+
+The system requires exactly one owner ACL entry in each access instance. The [SecACLCreateWithSimpleContents(\_:\_:\_:\_:\_:)](secaclcreatewithsimplecontents%28__________%29.md) method fails if you attempt to add a second owner entry. To change owner access controls, use the [SecAccessCopyMatchingACLList(\_:\_:)](secaccesscopymatchingacllist%28____%29.md) function to find the owner entry (the only one with an authorization tag of [kSecACLAuthorizationChangeACL](ksecaclauthorizationchangeacl.md)) and the [SecACLSetContents(\_:\_:\_:\_:)](secaclsetcontents%28________%29.md) method to change it as needed.
+
+# SecACLCreateWithSimpleContents (Objective-C)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** macOS 10.7+ (deprecated in 10.10)
+
+Creates a new ACL entry with the given characteristics, and adds it to an access instance.
+
+> SecKeychain is deprecated
+
+## Declaration
+
+```objectivec
+OSStatus SecACLCreateWithSimpleContents(SecAccessRef access, CFArrayRef applicationList, CFStringRef description, SecKeychainPromptSelector promptSelector, SecACLRef*newAcl);
+```
+
+## Parameters
+
+- `access`: The access instance to which to add the information.
+- `applicationList`: An array of [SecTrustedApplicationRef](sectrustedapplication.md) instances identifying apps that are allowed access to the keychain item without user confirmation.
+
+  Set this parameter to `nil` to indicate that any app can use this item. Pass an empty array to indicate that there are no trusted apps.
+- `description`: The human readable name to be used to refer to this item when the user is prompted.
+- `promptSelector`: A set of prompt selector flags. See [SecKeychainPromptSelector](seckeychainpromptselector.md) for possible values.
+- `newAcl`: A pointer the method uses to return the new [SecACLRef](secacl.md) instance.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The ACL entry returned by this method includes a list of trusted apps, the name of the keychain item as it appears in user prompts, the prompt selector flag, and a list of one or more operations to which this ACL entry applies. By default, a new ACL entry applies to all operations. Use the [SecACLUpdateAuthorizations](secaclupdateauthorizations%28____%29.md) method to set the list of operations for an ACL entry.
+
+> **Note**
+
+>  Starting in macOS 10.13.1, for added security, the system ignores the `promptSelector` property of an ACL object and always prompts for the keychain password when asking the user whether to add an app to the list of trusted apps.
+
+The system requires exactly one owner ACL entry in each access instance. The [SecACLCreateWithSimpleContents](secaclcreatewithsimplecontents%28__________%29.md) method fails if you attempt to add a second owner entry. To change owner access controls, use the [SecAccessCopyMatchingACLList](secaccesscopymatchingacllist%28____%29.md) function to find the owner entry (the only one with an authorization tag of [kSecACLAuthorizationChangeACL](ksecaclauthorizationchangeacl.md)) and the [SecACLSetContents](secaclsetcontents%28________%29.md) method to change it as needed.

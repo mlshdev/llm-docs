@@ -1,0 +1,170 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremotion/cmsensorrecorder](https://developer.apple.com/documentation/coremotion/cmsensorrecorder)
+
+# CMSensorRecorder (Swift)
+
+**Framework:** Core Motion  
+**Kind:** Class  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · watchOS 2.0+
+
+An object that gathers and retrieves accelerometer data from a device.
+
+## Declaration
+
+```swift
+class CMSensorRecorder
+```
+
+## Mentioned In
+
+- [Getting movement disorder symptom data](getting-movement-disorder-symptom-data.md)
+
+<a id="overview"></a>
+
+## Overview
+
+Use a sensor recorder to initiate the gathering of accelerometer data. Later, use the sensor recorder to fetch the recorded data so you can analyze it. You might use the recorded data to assess specific types of motion and incorporate the results into your app.
+
+To use a sensor recorder, create an instance of this class and call the [recordAccelerometer(forDuration:)](cmsensorrecorder/recordaccelerometer%28forduration_%29.md) method to begin recording data. You do not need to stop the recording process explicitly. The system stops recording automatically when the specified time expires and no other apps extend the recording time. The following example shows how to record 20 minutes worth of accelerometer data:
+
+**Swift**
+
+```swift
+if CMSensorRecorder.isAccelerometerRecordingAvailable() {
+    let recorder = CMSensorRecorder()
+    recorder.recordAccelerometerForDuration(20 * 60)  // Record for 20 minutes
+}
+```
+
+**Objective-C**
+
+```objc
+if ([CMSensorRecorder isAccelerometerRecordingAvailable]) {
+   CMSensorRecorder* recorder = [[CMSensorRecorder alloc] init];
+   [recorder recordAccelerometerForDuration:(20 * 60)]; // Record for 20 minutes
+}
+```
+
+> **Important**
+
+>  To use this API, you must include the [NSMotionUsageDescription](../bundleresources/information-property-list/nsmotionusagedescription.md) key in your app’s `Info.plist` file and provide a usage description string for this key. The usage description appears in the prompt that the user must accept the first time the system asks the user to access motion data for your app. If you don’t include a usage description string, your app crashes when you call this API.
+
+## Topics
+
+### Checking the Availability of Sensor Recording
+
+- [isAccelerometerRecordingAvailable()](cmsensorrecorder/isaccelerometerrecordingavailable%28%29.md): Returns a Boolean value indicating whether accelerometer recording is supported on the current device.
+- [authorizationStatus()](cmsensorrecorder/authorizationstatus%28%29.md): Returns a value indicating whether the app is authorized to record sensor data.
+- [CMAuthorizationStatus](cmauthorizationstatus.md): The authorization status for motion-related features.
+- [isAuthorizedForRecording()](cmsensorrecorder/isauthorizedforrecording%28%29.md): Deprecated. Returns a Boolean value indicating whether the app is authorized to record sensor data.
+
+### Recording Accelerometer Data
+
+- [recordAccelerometer(forDuration:)](cmsensorrecorder/recordaccelerometer%28forduration_%29.md): Begins recording accelerometer data for the specified period of time.
+
+### Retrieving Past Accelerometer Data
+
+- [accelerometerData(from:to:)](cmsensorrecorder/accelerometerdata%28from_to_%29.md): Retrieves the accelerometer data collected between the specified dates.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Accelerometers
+
+- [Getting raw accelerometer events](getting-raw-accelerometer-events.md): Retrieve data from the onboard accelerometers.
+- [CMAccelerometerData](cmaccelerometerdata.md): A data sample from the device’s three accelerometers.
+- [CMRecordedAccelerometerData](cmrecordedaccelerometerdata.md): A single piece of accelerometer data that was recorded by the device.
+- [CMSensorDataList](cmsensordatalist.md): A list of the accelerometer data recorded by the system.
+
+# CMSensorRecorder (Objective-C)
+
+**Framework:** Core Motion  
+**Kind:** Class  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · watchOS 2.0+
+
+An object that gathers and retrieves accelerometer data from a device.
+
+## Declaration
+
+```objectivec
+@interface CMSensorRecorder : NSObject
+```
+
+## Mentioned In
+
+- [Getting movement disorder symptom data](getting-movement-disorder-symptom-data.md)
+
+<a id="overview"></a>
+
+## Overview
+
+Use a sensor recorder to initiate the gathering of accelerometer data. Later, use the sensor recorder to fetch the recorded data so you can analyze it. You might use the recorded data to assess specific types of motion and incorporate the results into your app.
+
+To use a sensor recorder, create an instance of this class and call the [recordAccelerometerForDuration:](cmsensorrecorder/recordaccelerometer%28forduration_%29.md) method to begin recording data. You do not need to stop the recording process explicitly. The system stops recording automatically when the specified time expires and no other apps extend the recording time. The following example shows how to record 20 minutes worth of accelerometer data:
+
+**Swift**
+
+```swift
+if CMSensorRecorder.isAccelerometerRecordingAvailable() {
+    let recorder = CMSensorRecorder()
+    recorder.recordAccelerometerForDuration(20 * 60)  // Record for 20 minutes
+}
+```
+
+**Objective-C**
+
+```objc
+if ([CMSensorRecorder isAccelerometerRecordingAvailable]) {
+   CMSensorRecorder* recorder = [[CMSensorRecorder alloc] init];
+   [recorder recordAccelerometerForDuration:(20 * 60)]; // Record for 20 minutes
+}
+```
+
+> **Important**
+
+>  To use this API, you must include the [NSMotionUsageDescription](../bundleresources/information-property-list/nsmotionusagedescription.md) key in your app’s `Info.plist` file and provide a usage description string for this key. The usage description appears in the prompt that the user must accept the first time the system asks the user to access motion data for your app. If you don’t include a usage description string, your app crashes when you call this API.
+
+## Topics
+
+### Checking the Availability of Sensor Recording
+
+- [isAccelerometerRecordingAvailable](cmsensorrecorder/isaccelerometerrecordingavailable%28%29.md): Returns a Boolean value indicating whether accelerometer recording is supported on the current device.
+- [authorizationStatus](cmsensorrecorder/authorizationstatus%28%29.md): Returns a value indicating whether the app is authorized to record sensor data.
+- [CMAuthorizationStatus](cmauthorizationstatus.md): The authorization status for motion-related features.
+- [isAuthorizedForRecording](cmsensorrecorder/isauthorizedforrecording%28%29.md): Deprecated. Returns a Boolean value indicating whether the app is authorized to record sensor data.
+
+### Recording Accelerometer Data
+
+- [recordAccelerometerForDuration:](cmsensorrecorder/recordaccelerometer%28forduration_%29.md): Begins recording accelerometer data for the specified period of time.
+
+### Retrieving Past Accelerometer Data
+
+- [accelerometerDataFromDate:toDate:](cmsensorrecorder/accelerometerdata%28from_to_%29.md): Retrieves the accelerometer data collected between the specified dates.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+## See Also
+
+### Accelerometers
+
+- [Getting raw accelerometer events](getting-raw-accelerometer-events.md): Retrieve data from the onboard accelerometers.
+- [CMAccelerometerData](cmaccelerometerdata.md): A data sample from the device’s three accelerometers.
+- [CMRecordedAccelerometerData](cmrecordedaccelerometerdata.md): A single piece of accelerometer data that was recorded by the device.
+- [CMSensorDataList](cmsensordatalist.md): A list of the accelerometer data recorded by the system.

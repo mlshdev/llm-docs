@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/alarmkit/alarmattributes/encode(to:)](https://developer.apple.com/documentation/alarmkit/alarmattributes/encode(to:))
+
+# encode(to:)
+
+**Framework:** AlarmKit  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
+
+Performs encoding of the value using the given encoder.
+
+## Declaration
+
+```swift
+func encode(to encoder: any Encoder) throws
+```
+
+## Parameters
+
+- `encoder`: The encoder to write to.
+
+## See Also
+
+### Decoding and encoding
+
+- [init(from:)](init%28from_%29.md): Creates an instance from the given decoder.

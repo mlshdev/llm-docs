@@ -1,0 +1,59 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mapkit/mkdirections/etaresponse/expectedarrivaldate](https://developer.apple.com/documentation/mapkit/mkdirections/etaresponse/expectedarrivaldate)
+
+# expectedArrivalDate (Swift)
+
+**Framework:** MapKit  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+The expected arrival time.
+
+## Declaration
+
+```swift
+var expectedArrivalDate: Date { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The value of this property is dependent on whether you specify a departure date or arrival date in your [MKDirections.Request](../request.md) object. If you specify a departure date, the framework computes the date in this property by starting at your departure date and adding the expected travel time. If you specify an arrival time, but not a departure date, the framework sets this property to your arrival time. If you don’t specify an arrival date or departure date, the framework sets this property to the date that results by adding the travel time to the current time.
+
+## See Also
+
+### Getting the travel information
+
+- [expectedTravelTime](expectedtraveltime.md): The expected travel time, in seconds.
+- [expectedDepartureDate](expecteddeparturedate.md): The expected departure time.
+- [distance](distance.md): The expected travel distance, in meters.
+- [transportType](transporttype.md): The type of conveyance to use for determining the travel time.
+
+# expectedArrivalDate (Objective-C)
+
+**Framework:** MapKit  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.2+ · visionOS 1.0+ · watchOS 2.0+
+
+The expected arrival time.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) NSDate * expectedArrivalDate;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The value of this property is dependent on whether you specify a departure date or arrival date in your [MKDirectionsRequest](../request.md) object. If you specify a departure date, the framework computes the date in this property by starting at your departure date and adding the expected travel time. If you specify an arrival time, but not a departure date, the framework sets this property to your arrival time. If you don’t specify an arrival date or departure date, the framework sets this property to the date that results by adding the travel time to the current time.
+
+## See Also
+
+### Getting the travel information
+
+- [expectedTravelTime](expectedtraveltime.md): The expected travel time, in seconds.
+- [expectedDepartureDate](expecteddeparturedate.md): The expected departure time.
+- [distance](distance.md): The expected travel distance, in meters.
+- [transportType](transporttype.md): The type of conveyance to use for determining the travel time.

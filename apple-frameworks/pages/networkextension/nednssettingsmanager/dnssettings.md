@@ -1,0 +1,57 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/networkextension/nednssettingsmanager/dnssettings](https://developer.apple.com/documentation/networkextension/nednssettingsmanager/dnssettings)
+
+# dnsSettings (Swift)
+
+**Framework:** Network Extension  
+**Kind:** Instance Property  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+An object that contains the configuration settings for a DNS server.
+
+## Declaration
+
+```swift
+var dnsSettings: NEDNSSettings? { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This property can be set to either an [NEDNSOverHTTPSSettings](../nednsoverhttpssettings.md) object or an [NEDNSOverTLSSettings](../nednsovertlssettings.md) object.
+
+## See Also
+
+### Accessing DNS configuration properties
+
+- [isEnabled](isenabled.md): A Boolean you use to query the enabled state of the DNS settings configuration.
+- [localizedDescription](localizeddescription.md): A string that contains the display name of the DNS settings configuration.
+- [onDemandRules](ondemandrules.md): A list of ordered rules that defines the networks on which the DNS settings will apply.
+
+# dnsSettings (Objective-C)
+
+**Framework:** Network Extension  
+**Kind:** Instance Property  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · visionOS 1.0+
+
+An object that contains the configuration settings for a DNS server.
+
+## Declaration
+
+```objectivec
+@property (strong, nullable) NEDNSSettings * dnsSettings;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This property can be set to either an [NEDNSOverHTTPSSettings](../nednsoverhttpssettings.md) object or an [NEDNSOverTLSSettings](../nednsovertlssettings.md) object.
+
+## See Also
+
+### Accessing DNS configuration properties
+
+- [enabled](isenabled.md): A Boolean you use to query the enabled state of the DNS settings configuration.
+- [localizedDescription](localizeddescription.md): A string that contains the display name of the DNS settings configuration.
+- [onDemandRules](ondemandrules.md): A list of ordered rules that defines the networks on which the DNS settings will apply.

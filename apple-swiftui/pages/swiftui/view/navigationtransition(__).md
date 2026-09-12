@@ -1,0 +1,47 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/navigationtransition(_:)](https://developer.apple.com/documentation/swiftui/view/navigationtransition(_:))
+
+# navigationTransition(\_:)
+
+**Framework:** SwiftUI  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
+
+Sets the navigation transition style for this view.
+
+## Declaration
+
+```swift
+nonisolated func navigationTransition(_ style: some NavigationTransition) -> some View
+
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Add this modifier to a view that appears within a [NavigationStack](../navigationstack.md) or a sheet, outside of any containers such as [VStack](../vstack.md).
+
+```swift
+struct ContentView: View {
+    @Namespace private var namespace
+    var body: some View {
+        NavigationStack {
+            NavigationLink {
+                DetailView()
+                    .navigationTransition(.zoom(sourceID: "world", in: namespace))
+            } label: {
+                Image(systemName: "globe")
+                    .matchedTransitionSource(id: "world", in: namespace)
+            }
+        }
+    }
+}
+```
+
+## See Also
+
+### Defining navigation transitions
+
+- [NavigationTransition](../navigationtransition.md): A type that defines the transition to use when navigating to a view.
+- [AnyNavigationTransition](../anynavigationtransition.md): A type-erasing navigation transition that allows for providing any navigation transition value dynamically.
+- [CrossFadeNavigationTransition](../crossfadenavigationtransition.md): A navigation transition that cross-fades between the appearing view and the disappearing view.

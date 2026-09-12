@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/user_nfs_args/3944899-acdirmin](https://developer.apple.com/documentation/kernel/user_nfs_args/3944899-acdirmin)
+
+# acdirmin
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Instance Property  
+**Availability:** macOS 13.0+
+
+## Declaration
+
+```objectivec
+int acdirmin;
+```

@@ -1,0 +1,46 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iofwphysicaladdressspace/1812953-getmemorydescriptor](https://developer.apple.com/documentation/kernel/iofwphysicaladdressspace/1812953-getmemorydescriptor)
+
+# getMemoryDescriptor
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel
+
+Gets the memory descriptor, which is associated to this PhysicalAddressSpace.
+
+## Declaration
+
+```objectivec
+IOMemoryDescriptor * getMemoryDescriptor(
+ none. ); 
+```
+
+## Parameters
+
+- `none.`:
+
+<a id="return_value"></a>
+
+## Return Value
+
+returns the IOMemoryDescriptor
+
+## See Also
+
+### Miscellaneous
+
+- [checkMemoryInRange](1812923-checkmemoryinrange.md): Validates the IOMemoryDescriptor, which is used to initialize the PhysicalAddressSpace.
+- [complete](1812928-complete.md): complete the IODMACommand used by this PhysicalAddressSpace.
+- [doRead](1812935-doread.md): A method for processing an address space read request
+- [doWrite](1812940-dowrite.md): A method for processing an address space write request
+- [getDMACommand](1812943-getdmacommand.md): Get the DMACommand from this PhysicalAddressSpace.
+- [getLength](1812947-getlength.md): Get the length of the memory backed by PhysicalAddressSpace.
+- [getSegments](1812956-getsegments.md): Returns the scatter gather list of memory segments from the IODMACommand used in this PhysicalAddressSpace.
+- [init](1812960-init.md): Initialize physical address space.
+- [initWithDesc](1812962-initwithdesc.md): Initialize physical address space with IOMemoryDescriptor.
+- [initWithDMACommand](1812968-initwithdmacommand.md): Initialize physical address space with IODMACommand.
+- [isPrepared](1812974-isprepared.md): Inspects whether the IODMACommand was prepared in this PhysicalAddressSpace.
+- [prepare](1812981-prepare.md): Prepare the IODMACommand used by this PhysicalAddressSpace.
+- [setDMACommand](1812990-setdmacommand.md): Set the DMACommand for this PhysicalAddressSpace.
+- [setMemoryDescriptor](1813001-setmemorydescriptor.md): Sets the memory descriptor, which will be associated to this PhysicalAddressSpace.
+- [synchronize](1813014-synchronize.md): synchronize the IODMACommand used by this PhysicalAddressSpace.

@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/simd/simd_bitselect(_:_:_:)-9so3n](https://developer.apple.com/documentation/simd/simd_bitselect(_:_:_:)-9so3n)
+
+# simd_bitselect(\_:\_:\_:) (Swift)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns a vector that contains elements from either the first or second parameter, based on the corresponding element in the third parameter.
+
+## Declaration
+
+```swift
+func simd_bitselect(_ x: simd_short32, _ y: simd_short32, _ mask: simd_short32) -> simd_short32
+```
+
+## See Also
+
+### Logic and Bitwise Functions
+
+- [simd_any(\_:)](simd_any%28__%29-3b445.md)
+- [simd_all(\_:)](simd_all%28__%29-1kcj7.md)
+
+# simd_bitselect (Objective-C)
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns a vector that contains elements from either the first or second parameter, based on the corresponding element in the third parameter.
+
+## Declaration
+
+```objectivec
+static simd_short32 simd_bitselect(simd_short32 x, simd_short32 y, simd_short32 mask);
+```
+
+## See Also
+
+### Logic and Bitwise Functions
+
+- [simd_any](simd_any%28__%29-3b445.md)
+- [simd_all](simd_all%28__%29-1kcj7.md)

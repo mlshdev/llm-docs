@@ -1,0 +1,26 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/attributedstring/transform(updating:body:)-1b6eb](https://developer.apple.com/documentation/foundation/attributedstring/transform(updating:body:)-1b6eb)
+
+# transform(updating:body:)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
+
+Tracks the location of the provided range throughout the mutation closure, updating the provided range to one that represents the same effective locations after the mutation.
+
+## Declaration
+
+```swift
+mutating func transform<E>(updating range: inout Range<AttributedString.Index>, body: (inout AttributedString) throws(E) -> Void) throws(E) where E : Error
+```
+
+## Parameters
+
+- `range`: A range to track throughout the `body` closure.
+- `body`: A mutating operation, or set of operations, to perform on the value of `self`. The value of `self` is provided to the closure as an `inout AttributedString` that the closure should mutate directly. Do not capture the value of `self` in the provided closure - the closure should mutate the provided `inout` copy.
+
+<a id="discussion"></a>
+
+## Discussion
+
+If updating the provided range is not possible (tracking failed) then this function will fatal error. Use the `Optional`-returning variants to provide custom fallback behavior.

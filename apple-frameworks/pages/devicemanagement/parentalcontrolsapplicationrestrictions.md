@@ -1,0 +1,150 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/parentalcontrolsapplicationrestrictions](https://developer.apple.com/documentation/devicemanagement/parentalcontrolsapplicationrestrictions)
+
+# ParentalControlsApplicationRestrictions
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Device Management Profile  
+**Availability:** macOS 10.7+ (deprecated in 27.0)
+
+The payload that configures parental controls for apps.
+
+> Use the declarative management `com.apple.configuration.app.settings` configuration.
+
+## Declaration
+
+```
+object ParentalControlsApplicationRestrictions
+```
+
+## Properties
+
+- `allowList` — `[ParentalControlsApplicationRestrictions.ApplicationItem]`: The allow list of app item dictionaries.
+
+  Available: macOS 10.15+
+  Deprecated: macOS 27+
+- `familyControlsEnabled` — `boolean` (required): If `true`, enables app access restrictions.
+
+  Deprecated: macOS 27+
+- `pathAllowList` — `[string]`: The paths to apps in the allow list.
+
+  Available: macOS 10.15+
+  Deprecated: macOS 27+
+- `pathBlackList` — `[string]`: The paths to apps in the deny list. This property is deprecated in macOS 10.15 and later - use `pathDenyList` instead.
+
+  Deprecated: macOS 10.15+
+- `pathDenyList` — `[string]`: The paths to apps in the deny list.
+
+  Available: macOS 10.15+
+  Deprecated: macOS 27+
+- `pathWhiteList` — `[string]`: The paths to apps in the allow list. This property is deprecated in macOS 10.15 and later - use `pathAllowList` instead.
+
+  Deprecated: macOS 10.15+
+- `whiteList` — `[ParentalControlsApplicationRestrictions.ApplicationItem]`: The allow list of app item dictionaries. This property is deprecated in macOS 10.15 and later - use `allowList` instead.
+
+  Deprecated: macOS 10.15+
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Specify `com.apple.applicationaccess.new` as the payload type.
+
+To determine if an app can be launched, the app is evaluated with these rules:
+
+- Certain system app and utilities are always allowed to run.
+- The allow list is searched to see if the `bundleID` has a matching entry. If a match is found, `appID` and `detachedSignature` (if present) are used to verify the signature of the app being launched. If the signature is valid and matches the designated requirement (in the appID key), the app is allowed to launch.
+- If the path to the binary being launched matches or is in a subdirectory of a path in the deny list, the binary is denied.
+- If the path to the binary being launched matches or is a subdirectory of a path in the allow list, the binary is allowed to launch.
+- The binary is denied permission to launch.
+
+<a id="Profile-availability"></a>
+
+### Profile availability
+
+|  |  |
+| --- | --- |
+| Device channel | macOS |
+| User channel | macOS |
+| Allow manual install | macOS |
+| Requires supervision | N/A |
+| Requires user-approved MDM | N/A |
+| Allowed in user enrollment | N/A |
+| Allow multiple payloads | macOS |
+
+<a id="Profile-example"></a>
+
+### Profile example
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>familyControlsEnabled</key>
+            <true/>
+            <key>pathBlackList</key>
+            <array>
+                <string>/Applications/Utilities</string>
+            </array>
+            <key>pathWhiteList</key>
+            <array>
+                <string>/Applications/Utilities</string>
+            </array>
+            <key>whiteList</key>
+            <array>
+                <dict>
+                    <key>appID</key>
+                    <data>+t4MAAAAADAAAAABAAAABgAAAAIAAAASY29tLmFwcGxlLlRleHRFZGl0AAAAAAAD</data>
+                    <key>appStore</key>
+                    <false/>
+                    <key>bundleID</key>
+                    <string>com.example.myotherapp</string>
+                    <key>displayName</key>
+                    <string>My App</string>
+                    <key>subApps</key>
+                    <array/>
+                </dict>
+            </array>
+            <key>PayloadIdentifier</key>
+            <string>com.example.myapplicationrestrictionspayload</string>
+            <key>PayloadType</key>
+            <string>com.apple.applicationaccess.new</string>
+            <key>PayloadUUID</key>
+            <string>e5af83ab-e936-495a-b6b7-05b113cf530e</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+    </array>
+    <key>PayloadDisplayName</key>
+    <string>Parental Controls Application Restrictions</string>
+    <key>PayloadIdentifier</key>
+    <string>com.example.myprofile</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>144fbebc-4db4-4642-83eb-78eed2992578</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>
+```
+
+## Topics
+
+### Objects
+
+- [ParentalControlsApplicationRestrictions.ApplicationItem](parentalcontrolsapplicationrestrictions/applicationitem.md): Deprecated. A dictionary defining an app for parental control.
+
+## See Also
+
+### Parental controls
+
+- [ParentalControlsContentFilter](parentalcontrolscontentfilter.md): The payload that configures the parental control web content filters.
+- [ParentalControlsDictionary](parentalcontrolsdictionary.md): The payload that configures parental control dictionary restrictions.
+- [ParentalControlsGameCenter](parentalcontrolsgamecenter.md): The payload that configures Game Center parental controls.
+- [ParentalControlsTimeLimits](parentalcontrolstimelimits.md): The payload that configures parental control time limits.

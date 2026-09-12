@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/serialexecutor/checkisolated()](https://developer.apple.com/documentation/swift/serialexecutor/checkisolated())
+
+# checkIsolated()
+
+**Framework:** Swift  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
+
+Last resort “fallback” isolation check, called when the concurrency runtime is comparing executors e.g. during [assumeIsolated(\_:file:line:)](../actor/assumeisolated%28__file_line_%29.md) and is unable to prove serial equivalence between the expected (this object), and the current executor.
+
+## Declaration
+
+```swift
+func checkIsolated()
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+During executor comparison, the Swift concurrency runtime attempts to compare current and expected executors in a few ways (including “complex” equality between executors (see [isSameExclusiveExecutionContext(other:)](issameexclusiveexecutioncontext%28other_%29.md)), and if all those checks fail, this method is invoked on the expected executor.
+
+This method MUST crash if it is unable to prove that the current execution context belongs to this executor. At this point usual executor comparison would have already failed, though the executor may have some external tracking of threads it owns, and may be able to prove isolation nevertheless.
+
+A default implementation is provided that unconditionally crashes the program, and prevents calling code from proceeding with potentially not thread-safe execution.
+
+> **Warning**
+
+> This method must crash and halt program execution if unable to prove the isolation of the calling context.
+
+## Default Implementations
+
+### SerialExecutor Implementations
+
+- [checkIsolated()](checkisolated%28%29-76lg2.md): Last resort “fallback” isolation check, called when the concurrency runtime is comparing executors e.g. during [assumeIsolated(\_:file:line:)](../actor/assumeisolated%28__file_line_%29.md) and is unable to prove serial equivalence between the expected (this object), and the current executor.

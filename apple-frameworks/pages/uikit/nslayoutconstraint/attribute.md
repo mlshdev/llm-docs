@@ -1,0 +1,119 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/nslayoutconstraint/attribute](https://developer.apple.com/documentation/uikit/nslayoutconstraint/attribute)
+
+# NSLayoutConstraint.Attribute (Swift)
+
+**Framework:** UIKit  
+**Kind:** Enumeration  
+**Availability:** iOS · iPadOS · Mac Catalyst · tvOS · visionOS
+
+The part of the object’s visual representation that should be used to get the value for the constraint.
+
+## Declaration
+
+```swift
+enum Attribute
+```
+
+## Topics
+
+### Constants
+
+- [NSLayoutConstraint.Attribute.left](attribute/left.md): The left side of the object’s alignment rectangle.
+- [NSLayoutConstraint.Attribute.right](attribute/right.md): The right side of the object’s alignment rectangle.
+- [NSLayoutConstraint.Attribute.top](attribute/top.md): The top of the object’s alignment rectangle.
+- [NSLayoutConstraint.Attribute.bottom](attribute/bottom.md): The bottom of the object’s alignment rectangle.
+- [NSLayoutConstraint.Attribute.leading](attribute/leading.md): The leading edge of the object’s alignment rectangle.
+- [NSLayoutConstraint.Attribute.trailing](attribute/trailing.md): The trailing edge of the object’s alignment rectangle.
+- [NSLayoutConstraint.Attribute.width](attribute/width.md): The width of the object’s alignment rectangle.
+- [NSLayoutConstraint.Attribute.height](attribute/height.md): The height of the object’s alignment rectangle.
+- [NSLayoutConstraint.Attribute.centerX](attribute/centerx.md): The center along the x-axis of the object’s alignment rectangle.
+- [NSLayoutConstraint.Attribute.centerY](attribute/centery.md): The center along the y-axis of the object’s alignment rectangle.
+- [NSLayoutConstraint.Attribute.lastBaseline](attribute/lastbaseline.md): The object’s baseline.
+- [NSLayoutConstraint.Attribute.firstBaseline](attribute/firstbaseline.md): The object’s baseline.
+- [NSLayoutConstraint.Attribute.leftMargin](attribute/leftmargin.md): The object’s left margin.
+- [NSLayoutConstraint.Attribute.rightMargin](attribute/rightmargin.md): The object’s right margin.
+- [NSLayoutConstraint.Attribute.topMargin](attribute/topmargin.md): The object’s top margin.
+- [NSLayoutConstraint.Attribute.bottomMargin](attribute/bottommargin.md): The object’s bottom margin.
+- [NSLayoutConstraint.Attribute.leadingMargin](attribute/leadingmargin.md): The object’s leading margin.
+- [NSLayoutConstraint.Attribute.trailingMargin](attribute/trailingmargin.md): The object’s trailing margin.
+- [NSLayoutConstraint.Attribute.centerXWithinMargins](attribute/centerxwithinmargins.md): The center along the x-axis between the object’s left and right margin.
+- [NSLayoutConstraint.Attribute.centerYWithinMargins](attribute/centerywithinmargins.md): The center along the y-axis between the object’s top and bottom margin.
+- [NSLayoutConstraint.Attribute.notAnAttribute](attribute/notanattribute.md): A placeholder value for indicating that the constraint’s second item and second attribute aren’t used in any calculations.
+
+### Initializers
+
+- [init(rawValue:)](attribute/init%28rawvalue_%29.md)
+
+## Relationships
+
+### Conforms To
+
+- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Constants
+
+- [NSLayoutConstraint.Relation](relation-swift.enum.md): The relation between the first attribute and the modified second attribute in a constraint.
+- [NSLayoutConstraint.FormatOptions](formatoptions.md): A bit mask that specifies both a part of an interface element to align and a direction for the alignment between two interface elements.
+- [NSLayoutConstraint.Orientation](https://developer.apple.com/documentation/appkit/nslayoutconstraint/orientation): The layout constraint orientation, either horizontal or vertical, that the constraint uses to enforce layout between objects.
+- [NSLayoutConstraint.Axis](axis.md): Keys that specify a horizontal or vertical layout constraint between objects.
+- [NSEdgeInsets](../../foundation/nsedgeinsets.md): A description of the distance between the edges of two rectangles.
+- [NSLAYOUTCONSTRAINT_H](../nslayoutconstraint_h.md)
+
+# NSLayoutAttribute (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Enumeration  
+**Availability:** iOS · iPadOS · Mac Catalyst · tvOS · visionOS
+
+The part of the object’s visual representation that should be used to get the value for the constraint.
+
+## Declaration
+
+```objectivec
+enum NSLayoutAttribute : NSInteger;
+```
+
+## Topics
+
+### Constants
+
+- [NSLayoutAttributeLeft](attribute/left.md): The left side of the object’s alignment rectangle.
+- [NSLayoutAttributeRight](attribute/right.md): The right side of the object’s alignment rectangle.
+- [NSLayoutAttributeTop](attribute/top.md): The top of the object’s alignment rectangle.
+- [NSLayoutAttributeBottom](attribute/bottom.md): The bottom of the object’s alignment rectangle.
+- [NSLayoutAttributeLeading](attribute/leading.md): The leading edge of the object’s alignment rectangle.
+- [NSLayoutAttributeTrailing](attribute/trailing.md): The trailing edge of the object’s alignment rectangle.
+- [NSLayoutAttributeWidth](attribute/width.md): The width of the object’s alignment rectangle.
+- [NSLayoutAttributeHeight](attribute/height.md): The height of the object’s alignment rectangle.
+- [NSLayoutAttributeCenterX](attribute/centerx.md): The center along the x-axis of the object’s alignment rectangle.
+- [NSLayoutAttributeCenterY](attribute/centery.md): The center along the y-axis of the object’s alignment rectangle.
+- [NSLayoutAttributeBaseline](../nslayoutattribute/nslayoutattributebaseline.md): The object’s baseline.
+- [NSLayoutAttributeLastBaseline](attribute/lastbaseline.md): The object’s baseline.
+- [NSLayoutAttributeFirstBaseline](attribute/firstbaseline.md): The object’s baseline.
+- [NSLayoutAttributeLeftMargin](attribute/leftmargin.md): The object’s left margin.
+- [NSLayoutAttributeRightMargin](attribute/rightmargin.md): The object’s right margin.
+- [NSLayoutAttributeTopMargin](attribute/topmargin.md): The object’s top margin.
+- [NSLayoutAttributeBottomMargin](attribute/bottommargin.md): The object’s bottom margin.
+- [NSLayoutAttributeLeadingMargin](attribute/leadingmargin.md): The object’s leading margin.
+- [NSLayoutAttributeTrailingMargin](attribute/trailingmargin.md): The object’s trailing margin.
+- [NSLayoutAttributeCenterXWithinMargins](attribute/centerxwithinmargins.md): The center along the x-axis between the object’s left and right margin.
+- [NSLayoutAttributeCenterYWithinMargins](attribute/centerywithinmargins.md): The center along the y-axis between the object’s top and bottom margin.
+- [NSLayoutAttributeNotAnAttribute](attribute/notanattribute.md): A placeholder value for indicating that the constraint’s second item and second attribute aren’t used in any calculations.
+
+## See Also
+
+### Constants
+
+- [NSLayoutRelation](relation-swift.enum.md): The relation between the first attribute and the modified second attribute in a constraint.
+- [NSLayoutFormatOptions](formatoptions.md): A bit mask that specifies both a part of an interface element to align and a direction for the alignment between two interface elements.
+- [NSLayoutConstraintOrientation](https://developer.apple.com/documentation/appkit/nslayoutconstraint/orientation): The layout constraint orientation, either horizontal or vertical, that the constraint uses to enforce layout between objects.
+- [UILayoutConstraintAxis](axis.md): Keys that specify a horizontal or vertical layout constraint between objects.
+- [NSEdgeInsets](../../foundation/nsedgeinsets.md): A description of the distance between the edges of two rectangles.
+- [NSLAYOUTCONSTRAINT_H](../nslayoutconstraint_h.md)

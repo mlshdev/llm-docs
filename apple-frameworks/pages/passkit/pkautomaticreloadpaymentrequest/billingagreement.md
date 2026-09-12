@@ -1,0 +1,69 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/passkit/pkautomaticreloadpaymentrequest/billingagreement](https://developer.apple.com/documentation/passkit/pkautomaticreloadpaymentrequest/billingagreement)
+
+# billingAgreement (Swift)
+
+**Framework:** PassKit (Apple Pay and Wallet)  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · visionOS 1.0+
+
+A localized billing agreement that the payment sheet displays to the user before the user authorizes the payment.
+
+## Declaration
+
+```swift
+var billingAgreement: String? { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The merchant may provide an optional, localized [billingAgreement](billingagreement.md) string. The maximum length of the [billingAgreement](billingagreement.md) string is 500 characters.
+
+You may use this string to include information about the reload threshold amount or other reload conditions, for example, or information on how the user can cancel payments. This string isn’t intended to replace any payment terms that you provide outside of the Apple Pay payment sheet.
+
+> **Important**
+
+>  You’re responsible to ensure that your use of this framework, including your billing agreement, is compliant with applicable legal requirements.
+
+The Apple Pay payment sheet displays the text of the [billingAgreement](billingagreement.md) string; however, long [billingAgreement](billingagreement.md) strings that don’t fit on the payment sheet screen appear truncated with an ellipsis. Users can select the Billing Details on the payment sheet to read the full text of the [billingAgreement](billingagreement.md) string, up to the maximum 500 characters.
+
+## See Also
+
+### Describing an automatic reload payment
+
+- [paymentDescription](paymentdescription.md): A description that you provide of the automatic reload payment and that Apple Pay displays to the user in the payment sheet.
+
+# billingAgreement (Objective-C)
+
+**Framework:** PassKit (Apple Pay and Wallet)  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · visionOS 1.0+
+
+A localized billing agreement that the payment sheet displays to the user before the user authorizes the payment.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSString * billingAgreement;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The merchant may provide an optional, localized [billingAgreement](billingagreement.md) string. The maximum length of the [billingAgreement](billingagreement.md) string is 500 characters.
+
+You may use this string to include information about the reload threshold amount or other reload conditions, for example, or information on how the user can cancel payments. This string isn’t intended to replace any payment terms that you provide outside of the Apple Pay payment sheet.
+
+> **Important**
+
+>  You’re responsible to ensure that your use of this framework, including your billing agreement, is compliant with applicable legal requirements.
+
+The Apple Pay payment sheet displays the text of the [billingAgreement](billingagreement.md) string; however, long [billingAgreement](billingagreement.md) strings that don’t fit on the payment sheet screen appear truncated with an ellipsis. Users can select the Billing Details on the payment sheet to read the full text of the [billingAgreement](billingagreement.md) string, up to the maximum 500 characters.
+
+## See Also
+
+### Describing an automatic reload payment
+
+- [paymentDescription](paymentdescription.md): A description that you provide of the automatic reload payment and that Apple Pay displays to the user in the payment sheet.

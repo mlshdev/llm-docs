@@ -1,0 +1,54 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/hkasyncsequencequery/results(for:)](https://developer.apple.com/documentation/healthkit/hkasyncsequencequery/results(for:))
+
+# results(for:)
+
+**Framework:** HealthKit  
+**Kind:** Instance Method  
+**Availability:** iOS 15.4+ · iPadOS 15.4+ · Mac Catalyst 15.4+ · macOS 13.0+ · visionOS · watchOS 8.5+
+
+Initiates a query that returns its results using an asynchronous sequence.
+
+## Declaration
+
+```swift
+func results(for healthStore: HKHealthStore) -> Self.Sequence
+```
+
+## Parameters
+
+- `healthStore`: The access point for HealthKit data.
+
+## Mentioned In
+
+- [Running Queries with Swift Concurrency](../running-queries-with-swift-concurrency.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The adopting type’s [Sequence](sequence.md) associated type specifies the type of [AsyncSequence](https://developer.apple.com/documentation/swift/asyncsequence) that this method returns. For example, the [HKAnchoredObjectQueryDescriptor](../hkanchoredobjectquerydescriptor.md) returns a sequence of [HKAnchoredObjectQueryDescriptor.Result](../hkanchoredobjectquerydescriptor/result.md) instances.
+
+```swift
+let anchorDescriptor =
+HKAnchoredObjectQueryDescriptor(
+    predicates: [.workout()],
+    anchor: anchor)
+
+let updateQueue = anchorDescriptor.results(for: store)
+
+updateTask = Task {
+    for try await results in updateQueue {
+        // Process results here.
+    }
+}
+```
+
+Query descriptors for series data, like [HKQuantitySeriesSampleQueryDescriptor](../hkquantityseriessamplequerydescriptor.md), use an asynchronous sequence to return the high-frequency samples from a condensed sample, for example accessing individual heart rate samples from data recorded during a workout. These sequences have a finite size. When your app iterates over the sequence’s contents, the iteration automatically terminates after you receive all the data.
+
+Other query descriptors, like [HKAnchoredObjectQueryDescriptor](../hkanchoredobjectquerydescriptor.md), use this method to set up long-running queries that monitor the HealthKit store in the background. These queries continue to send updates using the asynchronous sequence. In these cases, code that iterates over the sequence continues until you cancel the sequence.
+
+## See Also
+
+### Running Queries
+
+- [Sequence](sequence.md)

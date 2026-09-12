@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/objectcapturesession/feedback-swift.property](https://developer.apple.com/documentation/realitykit/objectcapturesession/feedback-swift.property)
+
+# feedback
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 17.0+ · iPadOS 17.0+
+
+The current set of active `Feedback` states.
+
+## Declaration
+
+```swift
+@MainActor var feedback: Set<ObjectCaptureSession.Feedback> { get }
+```
+
+## See Also
+
+### Configuring a session
+
+- [ObjectCaptureSession.Feedback](feedback-swift.enum.md): Provides information about possible problems with the capture session.
+- [isPaused](ispaused.md): A Boolean value that indicates if the capture session is paused.
+- [state](state.md): The current state of the capture session.
+- [cameraTracking](cameratracking.md): The current state of ARKit camera tracking.
+- [ObjectCaptureSession.Tracking](tracking.md): A data structure that describes the current tracking state for the camera.

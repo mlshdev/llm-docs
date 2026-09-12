@@ -1,0 +1,36 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/pcidriverkit/iopcidevice/configurationwrite16](https://developer.apple.com/documentation/pcidriverkit/iopcidevice/configurationwrite16)
+
+# ConfigurationWrite16
+
+**Interface language:** Objective-C
+
+**Framework:** PCIDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit · macOS
+
+Writes an 16-bit data value to the device’s configuration space.
+
+## Declaration
+
+```objectivec
+void ConfigurationWrite16(uint64_t offset, uint16_t data);
+```
+
+## Parameters
+
+- `offset`: An offset into the configuration space. This method ignores bits 0 and 1. For a list of possible offset values, see [Configuration Data Offsets](../configuration-data-offsets-enum.md).
+- `data`: The data value that you want DriverKit to write to the specified location.
+
+## See Also
+
+### Reading and Writing Configuration Data
+
+- [ConfigurationRead8](configurationread8.md): Reads an 8-bit data value synchronously from the device’s configuration space.
+- [ConfigurationRead16](configurationread16.md): Reads a 16-bit data value synchronously from the device’s configuration space.
+- [ConfigurationRead32](configurationread32.md): Reads a 32-bit data value synchronously from the device’s configuration space.
+- [ConfigurationWrite8](configurationwrite8.md): Writes an 8-bit data value to the device’s configuration space.
+- [ConfigurationWrite32](configurationwrite32.md): Writes an 32-bit data value to the device’s configuration space.
+- [Configuration Data Offsets](../configuration-data-offsets-enum.md): Constants for the offsets that you use to read and write configuration registers.
+- [Bridge Header Offsets](../bridge-header-offsets-enum.md): Constants that specify offsets to distinct registers in a memory range.
+- [Command Register Bits](../command-register-bits-enum.md): Constants that you use to access specific bits of the command register.
+- [Status Register Bits](../status-register-bits-enum.md): Constants that you use to access specific bits of the status register.

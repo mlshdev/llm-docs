@@ -1,0 +1,32 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/scrollphase/animating](https://developer.apple.com/documentation/swiftui/scrollphase/animating)
+
+# ScrollPhase.animating
+
+**Framework:** SwiftUI  
+**Kind:** Case  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
+
+The animating phase where the scroll view is animating towards a final target.
+
+## Declaration
+
+```swift
+case animating
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This phase is the result of a programmatic scroll when using a [ScrollViewReader](../scrollviewreader.md) or [scrollPosition(id:anchor:)](../view/scrollposition%28id_anchor_%29.md) modifier.
+
+SwiftUI provides you a value of this type when using the [onScrollPhaseChange(\_:)](../view/onscrollphasechange%28__%29.md) modifier with a scrollable view like [ScrollView](../scrollview.md) or [List](../list.md).
+
+## See Also
+
+### Getting scroll gesture states
+
+- [ScrollPhase.decelerating](decelerating.md): The decelerating phase where the user use has stopped interacting with the scroll view and the scroll view is decelerating towards its final target.
+- [ScrollPhase.idle](idle.md): The idle phase where no kind of scrolling is occurring.
+- [ScrollPhase.interacting](interacting.md): The interacting phase where the user is interacting with the scroll view.
+- [ScrollPhase.tracking](tracking.md): The tracking phase where the scroll view is tracking a potential scroll by the user but the user hasn’t started a scroll.

@@ -1,0 +1,19 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/forcefeedback/ffeffect/init(dwsize:dwflags:dwduration:dwsampleperiod:dwgain:dwtriggerbutton:dwtriggerrepeatinterval:caxes:rgdwaxes:rgldirection:lpenvelope:cbtypespecificparams:lpvtypespecificparams:dwstartdelay:)](https://developer.apple.com/documentation/forcefeedback/ffeffect/init(dwsize:dwflags:dwduration:dwsampleperiod:dwgain:dwtriggerbutton:dwtriggerrepeatinterval:caxes:rgdwaxes:rgldirection:lpenvelope:cbtypespecificparams:lpvtypespecificparams:dwstartdelay:))
+
+# init(dwSize:dwFlags:dwDuration:dwSamplePeriod:dwGain:dwTriggerButton:dwTriggerRepeatInterval:cAxes:rgdwAxes:rglDirection:lpEnvelope:cbTypeSpecificParams:lpvTypeSpecificParams:dwStartDelay:)
+
+**Framework:** Force Feedback  
+**Kind:** Initializer  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```swift
+init(dwSize: DWORD, dwFlags: DWORD, dwDuration: DWORD, dwSamplePeriod: DWORD, dwGain: DWORD, dwTriggerButton: DWORD, dwTriggerRepeatInterval: DWORD, cAxes: DWORD, rgdwAxes: LPDWORD!, rglDirection: LPLONG!, lpEnvelope: PFFENVELOPE!, cbTypeSpecificParams: DWORD, lpvTypeSpecificParams: UnsafeMutableRawPointer!, dwStartDelay: DWORD)
+```
+
+## See Also
+
+### Initializers
+
+- [init()](init%28%29.md)

@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremedia/cmformatdescription/extensions-swift.struct/value/mpeg2videoprofile/xdcam_ex_1080p30_vbr35](https://developer.apple.com/documentation/coremedia/cmformatdescription/extensions-swift.struct/value/mpeg2videoprofile/xdcam_ex_1080p30_vbr35)
+
+# xdcam_EX_1080p30_VBR35
+
+**Framework:** Core Media  
+**Kind:** Type Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+## Declaration
+
+```swift
+static let xdcam_EX_1080p30_VBR35: CMFormatDescription.Extensions.Value.MPEG2VideoProfile
+```
+
+## See Also
+
+### Video Profiles
+
+- [hdv_1080i50](hdv_1080i50.md)
+- [hdv_1080i60](hdv_1080i60.md)
+- [hdv_1080p24](hdv_1080p24.md)
+- [hdv_1080p25](hdv_1080p25.md)
+- [hdv_1080p30](hdv_1080p30.md)
+- [hdv_720p24](hdv_720p24.md)
+- [hdv_720p25](hdv_720p25.md)
+- [hdv_720p30](hdv_720p30.md)
+- [hdv_720p50](hdv_720p50.md)
+- [hdv_720p60](hdv_720p60.md)
+- [xdcam_EX_1080i50_VBR35](xdcam_ex_1080i50_vbr35.md)
+- [xdcam_EX_1080i60_VBR35](xdcam_ex_1080i60_vbr35.md)
+- [xdcam_EX_1080p24_VBR35](xdcam_ex_1080p24_vbr35.md)
+- [xdcam_EX_1080p25_VBR35](xdcam_ex_1080p25_vbr35.md)
+- [xdcam_EX_720p24_VBR35](xdcam_ex_720p24_vbr35.md)

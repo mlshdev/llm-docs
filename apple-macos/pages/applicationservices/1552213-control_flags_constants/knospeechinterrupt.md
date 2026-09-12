@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/applicationservices/1552213-control_flags_constants/knospeechinterrupt](https://developer.apple.com/documentation/applicationservices/1552213-control_flags_constants/knospeechinterrupt)
+
+# kNoSpeechInterrupt
+
+**Interface language:** Objective-C
+
+**Framework:** Application Services  
+**Kind:** Enumeration Case  
+**Availability:** macOS 10.0+
+
+## Declaration
+
+```objectivec
+kNoSpeechInterrupt = 2
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Does not interrupt current speech. The `kNoSpeechInterrupt` flagbit is used to control the behavior of `SpeakBuffer` whencalled on a speech channel that is still busy. When the flag bitis not set, `SpeakBuffer` behavessimilarly to `SpeakString` and `SpeakText`.Any speech currently being produced on the specified speech channelis immediately interrupted, and then the new text buffer is spoken.When the `kNoSpeechInterrupt` flagbit is set, however, a request to speak on a channel that is stillbusy processing a prior text buffer will result in an error. Thenew buffer is ignored and the error `synthNotReady` isreturned. If the prior text buffer has been fully processed, thenew buffer is spoken normally. One way of achieving continuous speech without using callback functions is to continually call `SpeakBuffer` with the `kNoSpeechInterrupt` flagbit set until the function returns `noErr`.The function will then execute as soon as the first text bufferhas been processed.

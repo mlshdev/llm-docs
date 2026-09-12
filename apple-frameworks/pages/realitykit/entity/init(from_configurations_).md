@@ -1,0 +1,26 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/entity/init(from:configurations:)](https://developer.apple.com/documentation/realitykit/entity/init(from:configurations:))
+
+# init(from:configurations:)
+
+**Framework:** RealityKit  
+**Kind:** Initializer  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
+
+Loads an entity from a configuration catalog and a dictionary of configuration choices.
+
+## Declaration
+
+```swift
+@MainActor @preconcurrency convenience init(from catalog: Entity.ConfigurationCatalog, configurations: [String : String]? = nil) async throws
+```
+
+## Parameters
+
+- `catalog`: A collection of alternative representations for an entity.
+- `configurations`: A dictionary of configuration choices the initializer applies as it loads the entity, mapping the ID of a configuration set to the ID of a configuration within that set.
+
+## See Also
+
+### Loading an entity from a configuration catalog
+
+- [Entity.ConfigurationCatalog](configurationcatalog.md): A collection of alternative representations of an entity you can choose from.

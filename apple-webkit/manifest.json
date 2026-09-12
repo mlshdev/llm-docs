@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "project": "apple-webkit",
+  "title": "Apple WebKit and Safari",
+  "homepage": "https://developer.apple.com/documentation/webkit",
+  "catalog": "webkit",
+  "tag": "snapshot-3530be43aacd",
+  "snapshotDigest": "3530be43aacd786e94701d657cc3a93abfa572e6b5a0934bdcf16e0dbccf2ad4",
+  "contentDigest": "f4cf52294e833b8ca99becb45ffbf67e6eab5b0429dc04f3d496ea6b5a00e9a5",
+  "capturedAt": "2026-09-12T21:04:59.668Z",
+  "documentCount": 18692,
+  "notes": [
+    "Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.",
+    "25 frameworks in this catalog, captured at 2026-09-12T21:04:59.668Z.",
+    "Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.",
+    "Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream."
+  ]
+}

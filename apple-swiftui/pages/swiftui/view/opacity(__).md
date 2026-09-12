@@ -1,0 +1,59 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/opacity(_:)](https://developer.apple.com/documentation/swiftui/view/opacity(_:))
+
+# opacity(\_:)
+
+**Framework:** SwiftUI  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Sets the transparency of this view.
+
+## Declaration
+
+```swift
+nonisolated func opacity(_ opacity: Double) -> some View
+
+```
+
+## Parameters
+
+- `opacity`: A value between 0 (fully transparent) and 1 (fully opaque).
+
+<a id="return-value"></a>
+
+## Return Value
+
+A view that sets the transparency of this view.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Apply opacity to reveal views that are behind another view or to de-emphasize a view.
+
+When applying the `opacity(_:)` modifier to a view that has already had its opacity transformed, the modifier multiplies the effect of the underlying opacity transformation.
+
+The example below shows yellow and red rectangles configured to overlap. The top yellow rectangle has its opacity set to 50%, allowing the occluded portion of the bottom rectangle to be visible:
+
+```swift
+struct Opacity: View {
+    var body: some View {
+        VStack {
+            Color.yellow.frame(width: 100, height: 100, alignment: .center)
+                .zIndex(1)
+                .opacity(0.5)
+
+            Color.red.frame(width: 100, height: 100, alignment: .center)
+                .padding(-40)
+        }
+    }
+}
+```
+
+![Two overlaid rectangles, where the topmost has its opacity set to 50%,](https://developer.apple.com/images/com.apple.SwiftUI/SwiftUI-View-opacity@2x.png)
+
+## See Also
+
+### Hiding views
+
+- [hidden()](hidden%28%29.md): Hides this view unconditionally.

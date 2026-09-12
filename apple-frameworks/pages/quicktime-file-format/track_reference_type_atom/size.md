@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/track_reference_type_atom/size](https://developer.apple.com/documentation/quicktime-file-format/track_reference_type_atom/size)
+
+# Size
+
+**Framework:** QuickTime File Format  
+**Kind:** Data field
+
+A 32-bit integer that specifies the number of bytes in this track reference type atom.
+
+## See Also
+
+### Data fields
+
+- [Type](type.md): A 32-bit integer that identifies the atom type.
+- [Track IDs](track_ids.md): A list of track ID values (32-bit integers) specifying the related tracks.

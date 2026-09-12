@@ -1,0 +1,13 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/sslconnectiontype/init(rawvalue:)](https://developer.apple.com/documentation/security/sslconnectiontype/init(rawvalue:))
+
+# init(rawValue:)
+
+**Framework:** Security  
+**Kind:** Initializer  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+## Declaration
+
+```swift
+init?(rawValue: Int32)
+```

@@ -1,0 +1,28 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/date/compare(_:)](https://developer.apple.com/documentation/foundation/date/compare(_:))
+
+# compare(\_:)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 8.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Compares another date to this one.
+
+## Declaration
+
+```swift
+func compare(_ other: Date) -> ComparisonResult
+```
+
+## Parameters
+
+- `other`: Another date.
+
+## See Also
+
+### Comparing Dates
+
+- [==(\_:\_:)](==%28____%29.md): Returns true if the two `Date` values represent the same point in time.
+- [\>(\_:\_:)](_%28____%29-880ns.md): Returns true if the left hand `Date` is later in time than the right hand `Date`.
+- [\<(\_:\_:)](_%28____%29-42kro.md): Returns true if the left hand `Date` is earlier in time than the right hand `Date`.
+- [distance(to:)](distance%28to_%29.md): Returns the distance from this date to another date, specified as a time interval.

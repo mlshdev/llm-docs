@@ -1,0 +1,101 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/xpc/xpc_connection_set_peer_lightweight_code_requirement(_:_:)](https://developer.apple.com/documentation/xpc/xpc_connection_set_peer_lightweight_code_requirement(_:_:))
+
+# xpc_connection_set_peer_lightweight_code_requirement(\_:\_:) (Swift)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 17.4+ · iPadOS 17.4+ · Mac Catalyst 17.4+ · macOS 14.4+ · tvOS 17.4+ · visionOS 1.1+ · watchOS 10.4+
+
+Sets a requirement that the executable for the peer process has a valid code signature that matches the lightweight code requirement.
+
+## Declaration
+
+```swift
+func xpc_connection_set_peer_lightweight_code_requirement(_ connection: xpc_connection_t, _ lwcr: xpc_object_t) -> Int32
+```
+
+## Parameters
+
+- `connection`: The XPC connection.
+- `lwcr`: The lightweight code requirement to test for the peer process’s executable. Create an object of type [XPC_TYPE_DICTIONARY](xpc_type_dictionary-swift.var.md) that represents the requirement, using keys and values from [Defining launch environment and library constraints](../security/defining-launch-environment-and-library-constraints.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+On success, `0`. Otherwise, a value from [Errors](xpc-connections.md#Errors).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When you set this requirement on a connection, the operating system checks that peer process satisfies the requirement every time it sends a message to your process. If the peer process initiated the connection and its executable doesn’t satisfy the lightweight code requirement, then you don’t receive a message and the operating system doesn’t call your event handler. If your process sent a message to its peer expecting a reply, and its executable doesn’t have the requested entitlement, then you don’t receive a reply and the operating system delivers [XPC_ERROR_PEER_CODE_SIGNING_REQUIREMENT](xpc_error_peer_code_signing_requirement-c.macro.md) instead.
+
+> **Important**
+
+>  It’s an error to call this function multiple times for the same connection, or to call multiple functions that set code-signing requirements on the same connection. If you do, then the operating system terminates your process.
+
+## See Also
+
+### Remote peer information
+
+- [xpc_connection_get_name(\_:)](xpc_connection_get_name%28__%29.md): Returns the name of the remote service that creates the connection.
+- [xpc_connection_get_euid(\_:)](xpc_connection_get_euid%28__%29.md): Returns the EUID of the remote peer.
+- [xpc_connection_get_egid(\_:)](xpc_connection_get_egid%28__%29.md): Returns the EGID of the remote peer.
+- [xpc_connection_get_pid(\_:)](xpc_connection_get_pid%28__%29.md): Returns the PID of the remote peer.
+- [xpc_connection_get_asid(\_:)](xpc_connection_get_asid%28__%29.md): Returns the audit session identifier of the remote peer.
+- [xpc_connection_set_peer_entitlement_exists_requirement(\_:\_:)](xpc_connection_set_peer_entitlement_exists_requirement%28____%29.md): Sets a requirement that the executable for the peer process has a valid code signature that contains an entitlement.
+- [xpc_connection_set_peer_entitlement_matches_value_requirement(\_:\_:\_:)](xpc_connection_set_peer_entitlement_matches_value_requirement%28______%29.md): Sets a requirement that the executable for the peer process has a valid code signature that contains an entitlement with a specific value.
+- [xpc_connection_set_peer_platform_identity_requirement(\_:\_:)](xpc_connection_set_peer_platform_identity_requirement%28____%29.md): Sets a requirement that the executable for the peer process has a valid code signature that identifies it as an Apple-signed binary with the given signing identifier.
+- [xpc_connection_set_peer_team_identity_requirement(\_:\_:)](xpc_connection_set_peer_team_identity_requirement%28____%29.md): Sets a requirement that the executable for the peer process has a valid code signature and is signed by the same team identifier as the calling process.
+- [xpc_connection_set_peer_code_signing_requirement(\_:\_:)](xpc_connection_set_peer_code_signing_requirement%28____%29.md)
+
+# xpc_connection_set_peer_lightweight_code_requirement (Objective-C)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 17.4+ · iPadOS 17.4+ · Mac Catalyst 17.4+ · macOS 14.4+ · tvOS 17.4+ · visionOS 1.1+ · watchOS 10.4+
+
+Sets a requirement that the executable for the peer process has a valid code signature that matches the lightweight code requirement.
+
+## Declaration
+
+```objectivec
+extern int xpc_connection_set_peer_lightweight_code_requirement(xpc_connection_t connection, xpc_object_t lwcr);
+```
+
+## Parameters
+
+- `connection`: The XPC connection.
+- `lwcr`: The lightweight code requirement to test for the peer process’s executable. Create an object of type [XPC_TYPE_DICTIONARY](xpc_type_dictionary-swift.var.md) that represents the requirement, using keys and values from [Defining launch environment and library constraints](../security/defining-launch-environment-and-library-constraints.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+On success, `0`. Otherwise, a value from [Errors](xpc-connections.md#Errors).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When you set this requirement on a connection, the operating system checks that peer process satisfies the requirement every time it sends a message to your process. If the peer process initiated the connection and its executable doesn’t satisfy the lightweight code requirement, then you don’t receive a message and the operating system doesn’t call your event handler. If your process sent a message to its peer expecting a reply, and its executable doesn’t have the requested entitlement, then you don’t receive a reply and the operating system delivers [XPC_ERROR_PEER_CODE_SIGNING_REQUIREMENT](xpc_error_peer_code_signing_requirement-c.macro.md) instead.
+
+> **Important**
+
+>  It’s an error to call this function multiple times for the same connection, or to call multiple functions that set code-signing requirements on the same connection. If you do, then the operating system terminates your process.
+
+## See Also
+
+### Remote peer information
+
+- [xpc_connection_get_name](xpc_connection_get_name%28__%29.md): Returns the name of the remote service that creates the connection.
+- [xpc_connection_get_euid](xpc_connection_get_euid%28__%29.md): Returns the EUID of the remote peer.
+- [xpc_connection_get_egid](xpc_connection_get_egid%28__%29.md): Returns the EGID of the remote peer.
+- [xpc_connection_get_pid](xpc_connection_get_pid%28__%29.md): Returns the PID of the remote peer.
+- [xpc_connection_get_asid](xpc_connection_get_asid%28__%29.md): Returns the audit session identifier of the remote peer.
+- [xpc_connection_set_peer_entitlement_exists_requirement](xpc_connection_set_peer_entitlement_exists_requirement%28____%29.md): Sets a requirement that the executable for the peer process has a valid code signature that contains an entitlement.
+- [xpc_connection_set_peer_entitlement_matches_value_requirement](xpc_connection_set_peer_entitlement_matches_value_requirement%28______%29.md): Sets a requirement that the executable for the peer process has a valid code signature that contains an entitlement with a specific value.
+- [xpc_connection_set_peer_platform_identity_requirement](xpc_connection_set_peer_platform_identity_requirement%28____%29.md): Sets a requirement that the executable for the peer process has a valid code signature that identifies it as an Apple-signed binary with the given signing identifier.
+- [xpc_connection_set_peer_team_identity_requirement](xpc_connection_set_peer_team_identity_requirement%28____%29.md): Sets a requirement that the executable for the peer process has a valid code signature and is signed by the same team identifier as the calling process.
+- [xpc_connection_set_peer_code_signing_requirement](xpc_connection_set_peer_code_signing_requirement%28____%29.md)

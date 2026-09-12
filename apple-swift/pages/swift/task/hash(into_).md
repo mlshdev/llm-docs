@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/task/hash(into:)](https://developer.apple.com/documentation/swift/task/hash(into:))
+
+# hash(into:)
+
+**Framework:** Swift  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Hashes the essential components of this value by feeding them into the given hasher.
+
+## Declaration
+
+```swift
+func hash(into hasher: inout Hasher)
+```
+
+## Parameters
+
+- `hasher`: The hasher to use when combining the components of this instance.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Implement this method to conform to the `Hashable` protocol. The components used for hashing must be the same as the components compared in your type’s `==` operator implementation. Call `hasher.combine(_:)` with each of these components.
+
+> **Important**
+
+> In your implementation of `hash(into:)`, don’t call `finalize()` on the `hasher` instance provided, or replace it with a different instance. Doing so may become a compile-time error in the future.
+
+## See Also
+
+### Comparing Tasks
+
+- [==(\_:\_:)](==%28____%29.md): Conforms when `Success` conforms to `Sendable` and `Failure` conforms to `Error`. Returns a Boolean value indicating whether two values are equal.
+- [!=(\_:\_:)](!=%28____%29.md): Returns a Boolean value indicating whether two values are not equal.
+- [hashValue](hashvalue.md): Conforms when `Success` conforms to `Sendable` and `Failure` conforms to `Error`. The hash value.

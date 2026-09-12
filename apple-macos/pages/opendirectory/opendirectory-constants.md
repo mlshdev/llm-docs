@@ -1,0 +1,328 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/opendirectory/opendirectory-constants](https://developer.apple.com/documentation/opendirectory/opendirectory-constants)
+
+# OpenDirectory Constants (Swift)
+
+**Framework:** Open Directory  
+**Kind:** API Collection
+
+## Topics
+
+### Constants
+
+- [ODFrameworkErrorDomain](odframeworkerrordomain.md)
+- [ODSessionProxyAddress](odsessionproxyaddress.md): The address to connect to via proxy. The value is of type `NSString`.
+- [ODSessionProxyPassword](odsessionproxypassword.md): The password to connect with via proxy. The value is of type `NSString`.
+- [ODSessionProxyPort](odsessionproxyport.md): The port to connect to via proxy. The value is of type `NSNumber`.
+- [ODSessionProxyUsername](odsessionproxyusername.md): The username to connect with via proxy. The value is of type `NSString`.
+- [ODTrustTypeAnonymous](odtrusttypeanonymous.md)
+- [ODTrustTypeJoined](odtrusttypejoined.md)
+- [ODTrustTypeUsingCredentials](odtrusttypeusingcredentials.md)
+- [kODAttributeTypeAltSecurityIdentities](kodattributetypealtsecurityidentities.md)
+- [kODAttributeTypeHardwareUUID](kodattributetypehardwareuuid.md)
+- [kODAttributeTypeMetaAmbiguousName](kodattributetypemetaambiguousname.md)
+- [kODAttributeTypeMetaAugmentedAttributes](kodattributetypemetaaugmentedattributes.md)
+- [kODAttributeTypeMetaRecordName](kodattributetypemetarecordname.md)
+- [kODAttributeTypeNodeOptions](kodattributetypenodeoptions.md)
+- [kODAttributeTypeNodeSASLRealm](kodattributetypenodesaslrealm.md)
+- [kODAttributeTypeOperatingSystem](kodattributetypeoperatingsystem.md)
+- [kODAttributeTypeOperatingSystemVersion](kodattributetypeoperatingsystemversion.md)
+- [kODAttributeTypeProfiles](kodattributetypeprofiles.md)
+- [kODAttributeTypeProfilesTimestamp](kodattributetypeprofilestimestamp.md)
+- [kODAttributeTypeTrustInformation](kodattributetypetrustinformation.md)
+- [kODErrorCredentialsAccountDisabled](koderrorcredentialsaccountdisabled.md): The account is disabled.
+- [kODErrorCredentialsAccountExpired](koderrorcredentialsaccountexpired.md): The account is expired.
+- [kODErrorCredentialsAccountInactive](koderrorcredentialsaccountinactive.md): The account is inactive.
+- [kODErrorCredentialsAccountNotFound](koderrorcredentialsaccountnotfound.md): The authentication server could not find the provided account.
+- [kODErrorCredentialsInvalid](koderrorcredentialsinvalid.md): The provided credentials are invalid with the current node.
+- [kODErrorCredentialsInvalidComputer](koderrorcredentialsinvalidcomputer.md): The account is not permitted to log into this computer.
+- [kODErrorCredentialsInvalidLogonHours](koderrorcredentialsinvalidlogonhours.md): The logon attempt was not within set logon hours.
+- [kODErrorCredentialsMethodNotSupported](koderrorcredentialsmethodnotsupported.md): The extended authentication method is not supported.
+- [kODErrorCredentialsNotAuthorized](koderrorcredentialsnotauthorized.md): The operation, such as changing a password, is not permitted with current privileges.
+- [kODErrorCredentialsOperationFailed](koderrorcredentialsoperationfailed.md): The requested operation failed.
+- [kODErrorCredentialsParameterError](koderrorcredentialsparametererror.md): An invalid parameter was provided.
+- [kODErrorCredentialsPasswordChangeRequired](koderrorcredentialspasswordchangerequired.md): The password must be changed.
+- [kODErrorCredentialsPasswordChangeTooSoon](koderrorcredentialspasswordchangetoosoon.md): The password was changed too recently to be changed again.
+- [kODErrorCredentialsPasswordExpired](koderrorcredentialspasswordexpired.md): The password has expired and must be changed.
+- [kODErrorCredentialsPasswordNeedsDigit](koderrorcredentialspasswordneedsdigit.md): The provided password needs at least one digit.
+- [kODErrorCredentialsPasswordNeedsLetter](koderrorcredentialspasswordneedsletter.md): The provided password needs at least one letter.
+- [kODErrorCredentialsPasswordQualityFailed](koderrorcredentialspasswordqualityfailed.md): The provided password did not meet minimum quality requirements.
+- [kODErrorCredentialsPasswordTooLong](koderrorcredentialspasswordtoolong.md): The provided password is too long.
+- [kODErrorCredentialsPasswordTooShort](koderrorcredentialspasswordtooshort.md): The provided password is too short.
+- [kODErrorCredentialsPasswordUnrecoverable](koderrorcredentialspasswordunrecoverable.md): The password could not be recovered from the authentication database.
+- [kODErrorCredentialsServerCommunicationError](koderrorcredentialsservercommunicationerror.md): The authentication server encountered a communication error.
+- [kODErrorCredentialsServerError](koderrorcredentialsservererror.md): The authentication server encountered an error.
+- [kODErrorCredentialsServerNotFound](koderrorcredentialsservernotfound.md): The authentication server could not be found.
+- [kODErrorCredentialsServerTimeout](koderrorcredentialsservertimeout.md): The authentication server timed out.
+- [kODErrorCredentialsServerUnreachable](koderrorcredentialsserverunreachable.md): The authentication server could not be reached.
+- [kODErrorDaemonError](koderrordaemonerror.md): The daemon has encountered an undefined error.
+- [kODErrorDomainFramework](koderrordomainframework.md): The error domain used for errors from the Open Directory framework.
+- [kODErrorNodeConnectionFailed](koderrornodeconnectionfailed.md): The node connection failed.
+- [kODErrorNodeDisabled](koderrornodedisabled.md)
+- [kODErrorNodeUnknownHost](koderrornodeunknownhost.md): The host provided is invalid.
+- [kODErrorNodeUnknownName](koderrornodeunknownname.md): The node name provided does not exist and cannot be opened.
+- [kODErrorNodeUnknownType](koderrornodeunknowntype.md): The node type provided is not a known value.
+- [kODErrorPluginError](koderrorpluginerror.md): A plug-in has encountered an undefined error.
+- [kODErrorPluginOperationNotSupported](koderrorpluginoperationnotsupported.md): The plug-in does not support the requested operation.
+- [kODErrorPluginOperationTimeout](koderrorpluginoperationtimeout.md)
+- [kODErrorPolicyOutOfRange](koderrorpolicyoutofrange.md)
+- [kODErrorPolicyUnsupported](koderrorpolicyunsupported.md)
+- [kODErrorQueryInvalidMatchType](koderrorqueryinvalidmatchtype.md): An invalid match type was provided in the query.
+- [kODErrorQuerySynchronize](koderrorquerysynchronize.md): A query synchronization has been initiated.
+- [kODErrorQueryTimeout](koderrorquerytimeout.md): The query timed out.
+- [kODErrorQueryUnsupportedMatchType](koderrorqueryunsupportedmatchtype.md): An unsupported match type was provided in the query.
+- [kODErrorRecordAlreadyExists](koderrorrecordalreadyexists.md): The record create failed because the record already exists.
+- [kODErrorRecordAttributeNotFound](koderrorrecordattributenotfound.md): The requested attribute could not be found in the record.
+- [kODErrorRecordAttributeUnknownType](koderrorrecordattributeunknowntype.md): The attribute type is unknown.
+- [kODErrorRecordAttributeValueNotFound](koderrorrecordattributevaluenotfound.md): The requested attribute value could not be found in the record.
+- [kODErrorRecordAttributeValueSchemaError](koderrorrecordattributevalueschemaerror.md): The attribute value does not meet schema requirements.
+- [kODErrorRecordInvalidType](koderrorrecordinvalidtype.md)
+- [kODErrorRecordNoLongerExists](koderrorrecordnolongerexists.md)
+- [kODErrorRecordParameterError](koderrorrecordparametererror.md): An invalid parameter was provided.
+- [kODErrorRecordPermissionError](koderrorrecordpermissionerror.md): The changes were denied due to insufficient permissions.
+- [kODErrorRecordReadOnlyNode](koderrorrecordreadonlynode.md): The record cannot be modified.
+- [kODErrorRecordTypeDisabled](koderrorrecordtypedisabled.md): The record type is disabled by policy for a plug-in.
+- [kODErrorSessionDaemonNotRunning](koderrorsessiondaemonnotrunning.md): The daemon is not running.
+- [kODErrorSessionDaemonRefused](koderrorsessiondaemonrefused.md): The daemon refused the session.
+- [kODErrorSessionLocalOnlyDaemonInUse](koderrorsessionlocalonlydaemoninuse.md): A normal request was issued when the local-only daemon was in use.
+- [kODErrorSessionNormalDaemonInUse](koderrorsessionnormaldaemoninuse.md): A local-only request was issued when the normal daemon was in use.
+- [kODErrorSessionProxyCommunicationError](koderrorsessionproxycommunicationerror.md): There was a communication error with the remote daemon.
+- [kODErrorSessionProxyIPUnreachable](koderrorsessionproxyipunreachable.md): The proxy did not respond.
+- [kODErrorSessionProxyUnknownHost](koderrorsessionproxyunknownhost.md): The proxy could not be resolved.
+- [kODErrorSessionProxyVersionMismatch](koderrorsessionproxyversionmismatch.md): Versions mismatch between the remote daemon and the local framework.
+- [kODErrorSuccess](koderrorsuccess.md)
+- [kODModuleConfigOptionConnectionIdleDisconnect](kodmoduleconfigoptionconnectionidledisconnect.md)
+- [kODModuleConfigOptionConnectionSetupTimeout](kodmoduleconfigoptionconnectionsetuptimeout.md)
+- [kODModuleConfigOptionManInTheMiddle](kodmoduleconfigoptionmaninthemiddle.md)
+- [kODModuleConfigOptionPacketEncryption](kodmoduleconfigoptionpacketencryption.md)
+- [kODModuleConfigOptionPacketSigning](kodmoduleconfigoptionpacketsigning.md)
+- [kODModuleConfigOptionQueryTimeout](kodmoduleconfigoptionquerytimeout.md)
+- [kODNodeOptionsQuerySkippedSubnode](kodnodeoptionsqueryskippedsubnode.md)
+- [kODPolicyAttributeCreationTime](kodpolicyattributecreationtime.md)
+- [kODPolicyAttributeCurrentDate](kodpolicyattributecurrentdate.md)
+- [kODPolicyAttributeCurrentDayOfWeek](kodpolicyattributecurrentdayofweek.md)
+- [kODPolicyAttributeCurrentTime](kodpolicyattributecurrenttime.md)
+- [kODPolicyAttributeCurrentTimeOfDay](kodpolicyattributecurrenttimeofday.md)
+- [kODPolicyAttributeDaysUntilExpiration](kodpolicyattributedaysuntilexpiration.md)
+- [kODPolicyAttributeEnableAtTimeOfDay](kodpolicyattributeenableattimeofday.md)
+- [kODPolicyAttributeEnableOnDate](kodpolicyattributeenableondate.md)
+- [kODPolicyAttributeEnableOnDayOfWeek](kodpolicyattributeenableondayofweek.md)
+- [kODPolicyAttributeExpiresAtTimeOfDay](kodpolicyattributeexpiresattimeofday.md)
+- [kODPolicyAttributeExpiresEveryNDays](kodpolicyattributeexpireseveryndays.md)
+- [kODPolicyAttributeExpiresOnDate](kodpolicyattributeexpiresondate.md)
+- [kODPolicyAttributeExpiresOnDayOfWeek](kodpolicyattributeexpiresondayofweek.md)
+- [kODPolicyAttributeFailedAuthentications](kodpolicyattributefailedauthentications.md)
+- [kODPolicyAttributeLastAuthenticationTime](kodpolicyattributelastauthenticationtime.md)
+- [kODPolicyAttributeLastFailedAuthenticationTime](kodpolicyattributelastfailedauthenticationtime.md)
+- [kODPolicyAttributeLastPasswordChangeTime](kodpolicyattributelastpasswordchangetime.md)
+- [kODPolicyAttributeMaximumFailedAuthentications](kodpolicyattributemaximumfailedauthentications.md)
+- [kODPolicyAttributeNewPasswordRequiredTime](kodpolicyattributenewpasswordrequiredtime.md)
+- [kODPolicyAttributePassword](kodpolicyattributepassword.md)
+- [kODPolicyAttributePasswordHashes](kodpolicyattributepasswordhashes.md)
+- [kODPolicyAttributePasswordHistory](kodpolicyattributepasswordhistory.md)
+- [kODPolicyAttributePasswordHistoryDepth](kodpolicyattributepasswordhistorydepth.md)
+- [kODPolicyAttributeRecordName](kodpolicyattributerecordname.md)
+- [kODPolicyAttributeRecordType](kodpolicyattributerecordtype.md)
+- [kODPolicyCategoryAuthentication](kodpolicycategoryauthentication.md)
+- [kODPolicyCategoryPasswordChange](kodpolicycategorypasswordchange.md)
+- [kODPolicyCategoryPasswordContent](kodpolicycategorypasswordcontent.md)
+- [kODPolicyKeyContent](kodpolicykeycontent.md)
+- [kODPolicyKeyContentDescription](kodpolicykeycontentdescription.md)
+- [kODPolicyKeyEvaluationDetails](kodpolicykeyevaluationdetails.md)
+- [kODPolicyKeyIdentifier](kodpolicykeyidentifier.md)
+- [kODPolicyKeyParameters](kodpolicykeyparameters.md)
+- [kODPolicyKeyPolicySatisfied](kodpolicykeypolicysatisfied.md)
+- [kODPolicyTypeAccountExpiresOnDate](kodpolicytypeaccountexpiresondate.md)
+- [kODPolicyTypeAccountMaximumFailedLogins](kodpolicytypeaccountmaximumfailedlogins.md)
+- [kODPolicyTypeAccountMaximumMinutesOfNonUse](kodpolicytypeaccountmaximumminutesofnonuse.md)
+- [kODPolicyTypeAccountMaximumMinutesUntilDisabled](kodpolicytypeaccountmaximumminutesuntildisabled.md)
+- [kODPolicyTypeAccountMinutesUntilFailedLoginReset](kodpolicytypeaccountminutesuntilfailedloginreset.md)
+- [kODPolicyTypePasswordCannotBeAccountName](kodpolicytypepasswordcannotbeaccountname.md)
+- [kODPolicyTypePasswordChangeRequired](kodpolicytypepasswordchangerequired.md)
+- [kODPolicyTypePasswordHistory](kodpolicytypepasswordhistory.md)
+- [kODPolicyTypePasswordMaximumAgeInMinutes](kodpolicytypepasswordmaximumageinminutes.md)
+- [kODPolicyTypePasswordMaximumNumberOfCharacters](kodpolicytypepasswordmaximumnumberofcharacters.md)
+- [kODPolicyTypePasswordMinimumNumberOfCharacters](kodpolicytypepasswordminimumnumberofcharacters.md)
+- [kODPolicyTypePasswordRequiresAlpha](kodpolicytypepasswordrequiresalpha.md)
+- [kODPolicyTypePasswordRequiresMixedCase](kodpolicytypepasswordrequiresmixedcase.md)
+- [kODPolicyTypePasswordRequiresNumeric](kodpolicytypepasswordrequiresnumeric.md)
+- [kODPolicyTypePasswordRequiresSymbol](kodpolicytypepasswordrequiressymbol.md)
+- [kODPolicyTypePasswordSelfModification](kodpolicytypepasswordselfmodification.md)
+- [kODRecordTypeQueryInformation](kodrecordtypequeryinformation.md)
+- [kODAuthenticationTypeClearTextReadOnly](kodauthenticationtypecleartextreadonly.md)
+- [kODAuthenticationTypeMPPEPrimaryKeys](kodauthenticationtypemppeprimarykeys.md)
+- [kODBackOffSeconds](kodbackoffseconds.md)
+- [kODErrorCredentialsAccountLocked](koderrorcredentialsaccountlocked.md)
+- [kODErrorCredentialsAccountTemporarilyLocked](koderrorcredentialsaccounttemporarilylocked.md)
+- [kODErrorCredentialsContactPrimary](koderrorcredentialscontactprimary.md)
+
+## See Also
+
+### Reference
+
+- [OpenDirectory Functions](opendirectory-functions.md): This document describes the functions, constants, and data types used to interact with Open Directory.
+- [OpenDirectory Enumerations](opendirectory-enumerations.md)
+- [OpenDirectory Data Types](opendirectory-data-types.md)
+
+# OpenDirectory Constants (Objective-C)
+
+**Framework:** Open Directory  
+**Kind:** API Collection
+
+## Topics
+
+### Constants
+
+- [ODFrameworkErrorDomain](odframeworkerrordomain.md)
+- [ODSessionProxyAddress](odsessionproxyaddress.md): The address to connect to via proxy. The value is of type `NSString`.
+- [ODSessionProxyPassword](odsessionproxypassword.md): The password to connect with via proxy. The value is of type `NSString`.
+- [ODSessionProxyPort](odsessionproxyport.md): The port to connect to via proxy. The value is of type `NSNumber`.
+- [ODSessionProxyUsername](odsessionproxyusername.md): The username to connect with via proxy. The value is of type `NSString`.
+- [ODTrustTypeAnonymous](odtrusttypeanonymous.md)
+- [ODTrustTypeJoined](odtrusttypejoined.md)
+- [ODTrustTypeUsingCredentials](odtrusttypeusingcredentials.md)
+- [kODAttributeTypeAltSecurityIdentities](kodattributetypealtsecurityidentities.md)
+- [kODAttributeTypeHardwareUUID](kodattributetypehardwareuuid.md)
+- [kODAttributeTypeMetaAmbiguousName](kodattributetypemetaambiguousname.md)
+- [kODAttributeTypeMetaAugmentedAttributes](kodattributetypemetaaugmentedattributes.md)
+- [kODAttributeTypeMetaRecordName](kodattributetypemetarecordname.md)
+- [kODAttributeTypeNodeOptions](kodattributetypenodeoptions.md)
+- [kODAttributeTypeNodeSASLRealm](kodattributetypenodesaslrealm.md)
+- [kODAttributeTypeOperatingSystem](kodattributetypeoperatingsystem.md)
+- [kODAttributeTypeOperatingSystemVersion](kodattributetypeoperatingsystemversion.md)
+- [kODAttributeTypeProfiles](kodattributetypeprofiles.md)
+- [kODAttributeTypeProfilesTimestamp](kodattributetypeprofilestimestamp.md)
+- [kODAttributeTypeTrustInformation](kodattributetypetrustinformation.md)
+- [kODErrorCredentialsAccountDisabled](koderrorcredentialsaccountdisabled.md): The account is disabled.
+- [kODErrorCredentialsAccountExpired](koderrorcredentialsaccountexpired.md): The account is expired.
+- [kODErrorCredentialsAccountInactive](koderrorcredentialsaccountinactive.md): The account is inactive.
+- [kODErrorCredentialsAccountNotFound](koderrorcredentialsaccountnotfound.md): The authentication server could not find the provided account.
+- [kODErrorCredentialsContactMaster](odframeworkerrors/koderrorcredentialscontactmaster.md): Deprecated. The authentication server contacted is not the primary server, and the requested operation requires the primary server.
+- [kODErrorCredentialsInvalid](koderrorcredentialsinvalid.md): The provided credentials are invalid with the current node.
+- [kODErrorCredentialsInvalidComputer](koderrorcredentialsinvalidcomputer.md): The account is not permitted to log into this computer.
+- [kODErrorCredentialsInvalidLogonHours](koderrorcredentialsinvalidlogonhours.md): The logon attempt was not within set logon hours.
+- [kODErrorCredentialsMethodNotSupported](koderrorcredentialsmethodnotsupported.md): The extended authentication method is not supported.
+- [kODErrorCredentialsNotAuthorized](koderrorcredentialsnotauthorized.md): The operation, such as changing a password, is not permitted with current privileges.
+- [kODErrorCredentialsOperationFailed](koderrorcredentialsoperationfailed.md): The requested operation failed.
+- [kODErrorCredentialsParameterError](koderrorcredentialsparametererror.md): An invalid parameter was provided.
+- [kODErrorCredentialsPasswordChangeRequired](koderrorcredentialspasswordchangerequired.md): The password must be changed.
+- [kODErrorCredentialsPasswordChangeTooSoon](koderrorcredentialspasswordchangetoosoon.md): The password was changed too recently to be changed again.
+- [kODErrorCredentialsPasswordExpired](koderrorcredentialspasswordexpired.md): The password has expired and must be changed.
+- [kODErrorCredentialsPasswordNeedsDigit](koderrorcredentialspasswordneedsdigit.md): The provided password needs at least one digit.
+- [kODErrorCredentialsPasswordNeedsLetter](koderrorcredentialspasswordneedsletter.md): The provided password needs at least one letter.
+- [kODErrorCredentialsPasswordQualityFailed](koderrorcredentialspasswordqualityfailed.md): The provided password did not meet minimum quality requirements.
+- [kODErrorCredentialsPasswordTooLong](koderrorcredentialspasswordtoolong.md): The provided password is too long.
+- [kODErrorCredentialsPasswordTooShort](koderrorcredentialspasswordtooshort.md): The provided password is too short.
+- [kODErrorCredentialsPasswordUnrecoverable](koderrorcredentialspasswordunrecoverable.md): The password could not be recovered from the authentication database.
+- [kODErrorCredentialsServerCommunicationError](koderrorcredentialsservercommunicationerror.md): The authentication server encountered a communication error.
+- [kODErrorCredentialsServerError](koderrorcredentialsservererror.md): The authentication server encountered an error.
+- [kODErrorCredentialsServerNotFound](koderrorcredentialsservernotfound.md): The authentication server could not be found.
+- [kODErrorCredentialsServerTimeout](koderrorcredentialsservertimeout.md): The authentication server timed out.
+- [kODErrorCredentialsServerUnreachable](koderrorcredentialsserverunreachable.md): The authentication server could not be reached.
+- [kODErrorDaemonError](koderrordaemonerror.md): The daemon has encountered an undefined error.
+- [kODErrorDomainFramework](koderrordomainframework.md): The error domain used for errors from the Open Directory framework.
+- [kODErrorNodeConnectionFailed](koderrornodeconnectionfailed.md): The node connection failed.
+- [kODErrorNodeDisabled](koderrornodedisabled.md)
+- [kODErrorNodeUnknownHost](koderrornodeunknownhost.md): The host provided is invalid.
+- [kODErrorNodeUnknownName](koderrornodeunknownname.md): The node name provided does not exist and cannot be opened.
+- [kODErrorNodeUnknownType](koderrornodeunknowntype.md): The node type provided is not a known value.
+- [kODErrorPluginError](koderrorpluginerror.md): A plug-in has encountered an undefined error.
+- [kODErrorPluginOperationNotSupported](koderrorpluginoperationnotsupported.md): The plug-in does not support the requested operation.
+- [kODErrorPluginOperationTimeout](koderrorpluginoperationtimeout.md)
+- [kODErrorPolicyOutOfRange](koderrorpolicyoutofrange.md)
+- [kODErrorPolicyUnsupported](koderrorpolicyunsupported.md)
+- [kODErrorQueryInvalidMatchType](koderrorqueryinvalidmatchtype.md): An invalid match type was provided in the query.
+- [kODErrorQuerySynchronize](koderrorquerysynchronize.md): A query synchronization has been initiated.
+- [kODErrorQueryTimeout](koderrorquerytimeout.md): The query timed out.
+- [kODErrorQueryUnsupportedMatchType](koderrorqueryunsupportedmatchtype.md): An unsupported match type was provided in the query.
+- [kODErrorRecordAlreadyExists](koderrorrecordalreadyexists.md): The record create failed because the record already exists.
+- [kODErrorRecordAttributeNotFound](koderrorrecordattributenotfound.md): The requested attribute could not be found in the record.
+- [kODErrorRecordAttributeUnknownType](koderrorrecordattributeunknowntype.md): The attribute type is unknown.
+- [kODErrorRecordAttributeValueNotFound](koderrorrecordattributevaluenotfound.md): The requested attribute value could not be found in the record.
+- [kODErrorRecordAttributeValueSchemaError](koderrorrecordattributevalueschemaerror.md): The attribute value does not meet schema requirements.
+- [kODErrorRecordInvalidType](koderrorrecordinvalidtype.md)
+- [kODErrorRecordNoLongerExists](koderrorrecordnolongerexists.md)
+- [kODErrorRecordParameterError](koderrorrecordparametererror.md): An invalid parameter was provided.
+- [kODErrorRecordPermissionError](koderrorrecordpermissionerror.md): The changes were denied due to insufficient permissions.
+- [kODErrorRecordReadOnlyNode](koderrorrecordreadonlynode.md): The record cannot be modified.
+- [kODErrorRecordTypeDisabled](koderrorrecordtypedisabled.md): The record type is disabled by policy for a plug-in.
+- [kODErrorSessionDaemonNotRunning](koderrorsessiondaemonnotrunning.md): The daemon is not running.
+- [kODErrorSessionDaemonRefused](koderrorsessiondaemonrefused.md): The daemon refused the session.
+- [kODErrorSessionLocalOnlyDaemonInUse](koderrorsessionlocalonlydaemoninuse.md): A normal request was issued when the local-only daemon was in use.
+- [kODErrorSessionNormalDaemonInUse](koderrorsessionnormaldaemoninuse.md): A local-only request was issued when the normal daemon was in use.
+- [kODErrorSessionProxyCommunicationError](koderrorsessionproxycommunicationerror.md): There was a communication error with the remote daemon.
+- [kODErrorSessionProxyIPUnreachable](koderrorsessionproxyipunreachable.md): The proxy did not respond.
+- [kODErrorSessionProxyUnknownHost](koderrorsessionproxyunknownhost.md): The proxy could not be resolved.
+- [kODErrorSessionProxyVersionMismatch](koderrorsessionproxyversionmismatch.md): Versions mismatch between the remote daemon and the local framework.
+- [kODErrorSuccess](koderrorsuccess.md)
+- [kODModuleConfigOptionConnectionIdleDisconnect](kodmoduleconfigoptionconnectionidledisconnect.md)
+- [kODModuleConfigOptionConnectionSetupTimeout](kodmoduleconfigoptionconnectionsetuptimeout.md)
+- [kODModuleConfigOptionManInTheMiddle](kodmoduleconfigoptionmaninthemiddle.md)
+- [kODModuleConfigOptionPacketEncryption](kodmoduleconfigoptionpacketencryption.md)
+- [kODModuleConfigOptionPacketSigning](kodmoduleconfigoptionpacketsigning.md)
+- [kODModuleConfigOptionQueryTimeout](kodmoduleconfigoptionquerytimeout.md)
+- [kODNodeOptionsQuerySkippedSubnode](kodnodeoptionsqueryskippedsubnode.md)
+- [kODPolicyAttributeCreationTime](kodpolicyattributecreationtime.md)
+- [kODPolicyAttributeCurrentDate](kodpolicyattributecurrentdate.md)
+- [kODPolicyAttributeCurrentDayOfWeek](kodpolicyattributecurrentdayofweek.md)
+- [kODPolicyAttributeCurrentTime](kodpolicyattributecurrenttime.md)
+- [kODPolicyAttributeCurrentTimeOfDay](kodpolicyattributecurrenttimeofday.md)
+- [kODPolicyAttributeDaysUntilExpiration](kodpolicyattributedaysuntilexpiration.md)
+- [kODPolicyAttributeEnableAtTimeOfDay](kodpolicyattributeenableattimeofday.md)
+- [kODPolicyAttributeEnableOnDate](kodpolicyattributeenableondate.md)
+- [kODPolicyAttributeEnableOnDayOfWeek](kodpolicyattributeenableondayofweek.md)
+- [kODPolicyAttributeExpiresAtTimeOfDay](kodpolicyattributeexpiresattimeofday.md)
+- [kODPolicyAttributeExpiresEveryNDays](kodpolicyattributeexpireseveryndays.md)
+- [kODPolicyAttributeExpiresOnDate](kodpolicyattributeexpiresondate.md)
+- [kODPolicyAttributeExpiresOnDayOfWeek](kodpolicyattributeexpiresondayofweek.md)
+- [kODPolicyAttributeFailedAuthentications](kodpolicyattributefailedauthentications.md)
+- [kODPolicyAttributeLastAuthenticationTime](kodpolicyattributelastauthenticationtime.md)
+- [kODPolicyAttributeLastFailedAuthenticationTime](kodpolicyattributelastfailedauthenticationtime.md)
+- [kODPolicyAttributeLastPasswordChangeTime](kodpolicyattributelastpasswordchangetime.md)
+- [kODPolicyAttributeMaximumFailedAuthentications](kodpolicyattributemaximumfailedauthentications.md)
+- [kODPolicyAttributeNewPasswordRequiredTime](kodpolicyattributenewpasswordrequiredtime.md)
+- [kODPolicyAttributePassword](kodpolicyattributepassword.md)
+- [kODPolicyAttributePasswordHashes](kodpolicyattributepasswordhashes.md)
+- [kODPolicyAttributePasswordHistory](kodpolicyattributepasswordhistory.md)
+- [kODPolicyAttributePasswordHistoryDepth](kodpolicyattributepasswordhistorydepth.md)
+- [kODPolicyAttributeRecordName](kodpolicyattributerecordname.md)
+- [kODPolicyAttributeRecordType](kodpolicyattributerecordtype.md)
+- [kODPolicyCategoryAuthentication](kodpolicycategoryauthentication.md)
+- [kODPolicyCategoryPasswordChange](kodpolicycategorypasswordchange.md)
+- [kODPolicyCategoryPasswordContent](kodpolicycategorypasswordcontent.md)
+- [kODPolicyKeyContent](kodpolicykeycontent.md)
+- [kODPolicyKeyContentDescription](kodpolicykeycontentdescription.md)
+- [kODPolicyKeyEvaluationDetails](kodpolicykeyevaluationdetails.md)
+- [kODPolicyKeyIdentifier](kodpolicykeyidentifier.md)
+- [kODPolicyKeyParameters](kodpolicykeyparameters.md)
+- [kODPolicyKeyPolicySatisfied](kodpolicykeypolicysatisfied.md)
+- [kODPolicyTypeAccountExpiresOnDate](kodpolicytypeaccountexpiresondate.md)
+- [kODPolicyTypeAccountMaximumFailedLogins](kodpolicytypeaccountmaximumfailedlogins.md)
+- [kODPolicyTypeAccountMaximumMinutesOfNonUse](kodpolicytypeaccountmaximumminutesofnonuse.md)
+- [kODPolicyTypeAccountMaximumMinutesUntilDisabled](kodpolicytypeaccountmaximumminutesuntildisabled.md)
+- [kODPolicyTypeAccountMinutesUntilFailedLoginReset](kodpolicytypeaccountminutesuntilfailedloginreset.md)
+- [kODPolicyTypePasswordCannotBeAccountName](kodpolicytypepasswordcannotbeaccountname.md)
+- [kODPolicyTypePasswordChangeRequired](kodpolicytypepasswordchangerequired.md)
+- [kODPolicyTypePasswordHistory](kodpolicytypepasswordhistory.md)
+- [kODPolicyTypePasswordMaximumAgeInMinutes](kodpolicytypepasswordmaximumageinminutes.md)
+- [kODPolicyTypePasswordMaximumNumberOfCharacters](kodpolicytypepasswordmaximumnumberofcharacters.md)
+- [kODPolicyTypePasswordMinimumNumberOfCharacters](kodpolicytypepasswordminimumnumberofcharacters.md)
+- [kODPolicyTypePasswordRequiresAlpha](kodpolicytypepasswordrequiresalpha.md)
+- [kODPolicyTypePasswordRequiresMixedCase](kodpolicytypepasswordrequiresmixedcase.md)
+- [kODPolicyTypePasswordRequiresNumeric](kodpolicytypepasswordrequiresnumeric.md)
+- [kODPolicyTypePasswordRequiresSymbol](kodpolicytypepasswordrequiressymbol.md)
+- [kODPolicyTypePasswordSelfModification](kodpolicytypepasswordselfmodification.md)
+- [kODRecordTypeQueryInformation](kodrecordtypequeryinformation.md)
+- [kODAuthenticationTypeClearTextReadOnly](kodauthenticationtypecleartextreadonly.md)
+- [kODAuthenticationTypeMPPEPrimaryKeys](kodauthenticationtypemppeprimarykeys.md)
+- [kODBackOffSeconds](kodbackoffseconds.md)
+- [kODErrorCredentialsAccountLocked](koderrorcredentialsaccountlocked.md)
+- [kODErrorCredentialsAccountTemporarilyLocked](koderrorcredentialsaccounttemporarilylocked.md)
+- [kODErrorCredentialsContactPrimary](koderrorcredentialscontactprimary.md)
+
+## See Also
+
+### Reference
+
+- [OpenDirectory Functions](opendirectory-functions.md): This document describes the functions, constants, and data types used to interact with Open Directory.
+- [OpenDirectory Enumerations](opendirectory-enumerations.md)
+- [OpenDirectory Data Types](opendirectory-data-types.md)

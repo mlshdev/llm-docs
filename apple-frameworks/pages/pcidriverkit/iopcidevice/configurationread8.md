@@ -1,0 +1,39 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/pcidriverkit/iopcidevice/configurationread8](https://developer.apple.com/documentation/pcidriverkit/iopcidevice/configurationread8)
+
+# ConfigurationRead8
+
+**Interface language:** Objective-C
+
+**Framework:** PCIDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit · macOS
+
+Reads an 8-bit data value synchronously from the device’s configuration space.
+
+## Declaration
+
+```objectivec
+void ConfigurationRead8(uint64_t offset, uint8_t *readData);
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+- offset: An offset into the configuration space. This method ignores bits 0 and 1. For a list of possible offset values, see [Configuration Data Offsets](../configuration-data-offsets-enum.md).
+
+  - readData: A variable that stores the 8-bit data value. If the method encounters an error, it sets the value to -1.
+
+## See Also
+
+### Reading and Writing Configuration Data
+
+- [ConfigurationRead16](configurationread16.md): Reads a 16-bit data value synchronously from the device’s configuration space.
+- [ConfigurationRead32](configurationread32.md): Reads a 32-bit data value synchronously from the device’s configuration space.
+- [ConfigurationWrite8](configurationwrite8.md): Writes an 8-bit data value to the device’s configuration space.
+- [ConfigurationWrite16](configurationwrite16.md): Writes an 16-bit data value to the device’s configuration space.
+- [ConfigurationWrite32](configurationwrite32.md): Writes an 32-bit data value to the device’s configuration space.
+- [Configuration Data Offsets](../configuration-data-offsets-enum.md): Constants for the offsets that you use to read and write configuration registers.
+- [Bridge Header Offsets](../bridge-header-offsets-enum.md): Constants that specify offsets to distinct registers in a memory range.
+- [Command Register Bits](../command-register-bits-enum.md): Constants that you use to access specific bits of the command register.
+- [Status Register Bits](../status-register-bits-enum.md): Constants that you use to access specific bits of the status register.

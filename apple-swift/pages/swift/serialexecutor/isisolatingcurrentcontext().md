@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/serialexecutor/isisolatingcurrentcontext()](https://developer.apple.com/documentation/swift/serialexecutor/isisolatingcurrentcontext())
+
+# isIsolatingCurrentContext()
+
+**Framework:** Swift  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
+
+Checks if the current execution context is isolated by this executor.
+
+## Declaration
+
+```swift
+func isIsolatingCurrentContext() -> Bool?
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This function can be called by the runtime in order to perform assertions, or attempt to issue warnings about unexpected isolation.
+
+This method will be invoked *before* `checkIsolated` and may also be invoked when crashing is not an acceptable outcome of a check (e.g. when attempting to issue isolation *warnings*).
+
+Implementations should prefer to implement this method rather than `checkIsolated()` since it can often result in more tailored error messages. It is allowed, and useful for backwards compatibility with old runtimes which are not able to invoke `isIsolatingCurrentContext()` to implement `checkIsolated()`, even if an implementation is able to implement this method. Often times an implementation of `checkIsolated()`, would then invoke `isIsolatingCurrentContext()` and crash if the returned value was `false`.
+
+The default implementation returns `nil` is used to indicate that it is “unknown” if the current context is isolated by this serial executor. The runtime then *may* proceed to invoke `checkIsolated()` as a last-resort attempt to verify the isolation of the current context.
+
+## Default Implementations
+
+### SerialExecutor Implementations
+
+- [isIsolatingCurrentContext()](isisolatingcurrentcontext%28%29-65ht9.md): Checks if the current execution context is isolated by this executor.

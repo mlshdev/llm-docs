@@ -1,0 +1,46 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ioshareddataqueue/1810447-withentries](https://developer.apple.com/documentation/kernel/ioshareddataqueue/1810447-withentries)
+
+# withEntries
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel
+
+Static method that creates a new IOSharedDataQueue instance with the specified number of entries of the given size.
+
+## Declaration
+
+```objectivec
+static IOSharedDataQueue *withEntries(
+ UInt32numEntries,
+ UInt32entrySize); 
+```
+
+## Parameters
+
+- `numEntries`: Number of entries to allocate space for.
+- `entrySize`: Size of each entry.
+
+<a id="return_value"></a>
+
+## Return Value
+
+Reeturns the newly allocated IOSharedDataQueue instance. Zero is returned on failure.
+
+<a id="overview"></a>
+
+## Overview
+
+This method will create a new IOSharedDataQueue instance with enough capacity for numEntries of entrySize. It does account for the IODataQueueEntry overhead for each entry. Note that the numEntries and entrySize are simply used to determine the data region size. They do not actually restrict the size of number of entries that can be added to the queue.
+
+This method allocates a new IODataQueue instance and then calls initWithEntries() with the given numEntries and entrySize parameters. If the initWithEntries() fails, the new instance is released and zero is returned.
+
+## See Also
+
+### Miscellaneous
+
+- [dequeue](1810190-dequeue.md): Dequeues the next available entry on the queue and copies it into the given data pointer.
+- [getMemoryDescriptor](1810240-getmemorydescriptor.md): Returns a memory descriptor covering the IODataQueueMemory region.
+- [initWithCapacity](1810293-initwithcapacity.md): Initializes an IOSharedDataQueue instance with the capacity specified in the size parameter.
+- [peek](1810347-peek.md): Used to peek at the next entry on the queue.
+- [withCapacity](1810400-withcapacity.md): Static method that creates a new IOSharedDataQueue instance with the capacity specified in the size parameter.

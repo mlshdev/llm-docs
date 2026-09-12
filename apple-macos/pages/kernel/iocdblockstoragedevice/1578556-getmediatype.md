@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iocdblockstoragedevice/1578556-getmediatype](https://developer.apple.com/documentation/kernel/iocdblockstoragedevice/1578556-getmediatype)
+
+# getMediaType
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Instance Method  
+**Availability:** macOS 10.11.4+
+
+## Declaration
+
+```objectivec
+virtual UInt32 getMediaType(void);
+```

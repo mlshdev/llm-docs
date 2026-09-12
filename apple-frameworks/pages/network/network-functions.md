@@ -1,0 +1,434 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/network/network-functions](https://developer.apple.com/documentation/network/network-functions)
+
+# Network Functions (Swift)
+
+**Framework:** Network  
+**Kind:** API Collection
+
+Access Network framework functions used in C.
+
+## Topics
+
+### Functions
+
+- [nw_advertise_descriptor_copy_txt_record_object(\_:)](nw_advertise_descriptor_copy_txt_record_object%28__%29.md): Accesses the TXT record to advertise with the service.
+- [nw_advertise_descriptor_create_application_service(\_:)](nw_advertise_descriptor_create_application_service%28__%29.md)
+- [nw_advertise_descriptor_create_bonjour_service(\_:\_:\_:)](nw_advertise_descriptor_create_bonjour_service%28______%29.md): Initializes a Bonjour service to advertise.
+- [nw_advertise_descriptor_get_application_service_name(\_:)](nw_advertise_descriptor_get_application_service_name%28__%29.md)
+- [nw_advertise_descriptor_get_no_auto_rename(\_:)](nw_advertise_descriptor_get_no_auto_rename%28__%29.md): Checks whether the service prohibits automatic renaming in the event of a name conflict.
+- [nw_advertise_descriptor_set_no_auto_rename(\_:\_:)](nw_advertise_descriptor_set_no_auto_rename%28____%29.md): Sets a Boolean to indicate whether the service prohibits automatic renaming in the event of a name conflict.
+- [nw_advertise_descriptor_set_txt_record(\_:\_:\_:)](nw_advertise_descriptor_set_txt_record%28______%29.md): Sets the TXT record as a raw buffer to advertise with the service.
+- [nw_advertise_descriptor_set_txt_record_object(\_:\_:)](nw_advertise_descriptor_set_txt_record_object%28____%29.md): Sets the TXT record to advertise with the service.
+- [nw_browse_descriptor_create_application_service(\_:)](nw_browse_descriptor_create_application_service%28__%29.md)
+- [nw_browse_descriptor_create_bonjour_service(\_:\_:)](nw_browse_descriptor_create_bonjour_service%28____%29.md): Initializes a service descriptor used to discover a Bonjour service.
+- [nw_browse_descriptor_get_application_service_name(\_:)](nw_browse_descriptor_get_application_service_name%28__%29.md)
+- [nw_browse_descriptor_get_bonjour_service_domain(\_:)](nw_browse_descriptor_get_bonjour_service_domain%28__%29.md): Accesses the Bonjour service domain set on a browse descriptor.
+- [nw_browse_descriptor_get_bonjour_service_type(\_:)](nw_browse_descriptor_get_bonjour_service_type%28__%29.md): Accesses the Bonjour service type set on a browse descriptor.
+- [nw_browse_descriptor_get_include_txt_record(\_:)](nw_browse_descriptor_get_include_txt_record%28__%29.md): Checks if the browse descriptor requires including associated TXT records with all results.
+- [nw_browse_descriptor_set_include_txt_record(\_:\_:)](nw_browse_descriptor_set_include_txt_record%28____%29.md): Requires including associated TXT records with all results generated for this service descriptor.
+- [nw_browse_result_copy_endpoint(\_:)](nw_browse_result_copy_endpoint%28__%29.md): The discovered service endpoint.
+- [nw_browse_result_copy_txt_record_object(\_:)](nw_browse_result_copy_txt_record_object%28__%29.md): Accesses the TXT record associated with a discovered service.
+- [nw_browse_result_enumerate_interfaces(\_:\_:)](nw_browse_result_enumerate_interfaces%28____%29.md): Enumerates the list of interfaces on which the service was discovered.
+- [nw_browse_result_get_changes(\_:\_:)](nw_browse_result_get_changes%28____%29.md): Compares two discovered services and calculates changes between them.
+- [nw_browse_result_get_interfaces_count(\_:)](nw_browse_result_get_interfaces_count%28__%29.md): Accesses the number of interfaces associated with a discovered service.
+- [nw_browser_cancel(\_:)](nw_browser_cancel%28__%29.md): Stops browsing for services.
+- [nw_browser_copy_browse_descriptor(\_:)](nw_browser_copy_browse_descriptor%28__%29.md): Accesses the service descriptor with which the browser was created.
+- [nw_browser_copy_parameters(\_:)](nw_browser_copy_parameters%28__%29.md): Accesses the parameters with which the browser was created.
+- [nw_browser_create(\_:\_:)](nw_browser_create%28____%29.md): Initializes a browser with a type of service to discover.
+- [nw_browser_set_browse_results_changed_handler(\_:\_:)](nw_browser_set_browse_results_changed_handler%28____%29.md): Sets the handler to receive updates about discovered services.
+- [nw_browser_set_queue(\_:\_:)](nw_browser_set_queue%28____%29.md): Sets the queue on which all browser events will be delivered.
+- [nw_browser_set_state_changed_handler(\_:\_:)](nw_browser_set_state_changed_handler%28____%29.md): Sets a handler to receive browser state updates.
+- [nw_browser_start(\_:)](nw_browser_start%28__%29.md): Starts browsing for services.
+- [nw_connection_access_establishment_report(\_:\_:\_:)](nw_connection_access_establishment_report%28______%29.md): Requests a copy of the connection’s establishment report once the connection is in the ready state.
+- [nw_connection_batch(\_:\_:)](nw_connection_batch%28____%29.md): Defines a block in which calls to send and receive are processed as a batch to improve performance.
+- [nw_connection_cancel(\_:)](nw_connection_cancel%28__%29.md): Cancels the connection and gracefully disconnects any established network protocols.
+- [nw_connection_cancel_current_endpoint(\_:)](nw_connection_cancel_current_endpoint%28__%29.md): Causes the current endpoint to be rejected, allowing the connection to try another resolved address.
+- [nw_connection_copy_current_path(\_:)](nw_connection_copy_current_path%28__%29.md): Accesses the network path the connection is using.
+- [nw_connection_copy_description(\_:)](nw_connection_copy_description%28__%29.md): Copies the description of the connection as a string.
+- [nw_connection_copy_endpoint(\_:)](nw_connection_copy_endpoint%28__%29.md): Accesses the endpoint with which the connection was created.
+- [nw_connection_copy_parameters(\_:)](nw_connection_copy_parameters%28__%29.md): Accesses the parameters with which the connection was created.
+- [nw_connection_copy_protocol_metadata(\_:\_:)](nw_connection_copy_protocol_metadata%28____%29.md): Retrieves the connection-wide metadata for a specific protocol.
+- [nw_connection_create(\_:\_:)](nw_connection_create%28____%29.md): Initializes a new connection to a remote endpoint.
+- [nw_connection_create_new_data_transfer_report(\_:)](nw_connection_create_new_data_transfer_report%28__%29.md): Begins a new data transfer report, which can later be collected.
+- [nw_connection_force_cancel(\_:)](nw_connection_force_cancel%28__%29.md): Cancels the connection and immediately disconnects any established network protocols.
+- [nw_connection_get_maximum_datagram_size(\_:)](nw_connection_get_maximum_datagram_size%28__%29.md): Accesses the maximum size of a datagram message that can be sent on a connection.
+- [nw_connection_group_cancel(\_:)](nw_connection_group_cancel%28__%29.md): Cancels the connection group object and leaves the network group.
+- [nw_connection_group_copy_descriptor(\_:)](nw_connection_group_copy_descriptor%28__%29.md): Accesses the descriptor of the group you use to initialize the connection group.
+- [nw_connection_group_copy_local_endpoint_for_message(\_:\_:)](nw_connection_group_copy_local_endpoint_for_message%28____%29.md): Accesses the local address and port you use to receive the message.
+- [nw_connection_group_copy_parameters(\_:)](nw_connection_group_copy_parameters%28__%29.md): Accesses the parameters with which you initialize the connection group.
+- [nw_connection_group_copy_path_for_message(\_:\_:)](nw_connection_group_copy_path_for_message%28____%29.md): Accesses the network path on which you receive the message.
+- [nw_connection_group_copy_protocol_metadata(\_:\_:)](nw_connection_group_copy_protocol_metadata%28____%29.md)
+- [nw_connection_group_copy_protocol_metadata_for_message(\_:\_:\_:)](nw_connection_group_copy_protocol_metadata_for_message%28______%29.md)
+- [nw_connection_group_copy_remote_endpoint_for_message(\_:\_:)](nw_connection_group_copy_remote_endpoint_for_message%28____%29.md): Accesses the endpoint that originates the message you receive.
+- [nw_connection_group_create(\_:\_:)](nw_connection_group_create%28____%29.md): Initializes a new connection group with a group identifier.
+- [nw_connection_group_extract_connection(\_:\_:\_:)](nw_connection_group_extract_connection%28______%29.md)
+- [nw_connection_group_extract_connection_for_message(\_:\_:)](nw_connection_group_extract_connection_for_message%28____%29.md): Converts a message you receive from an endpoint into a connection object that you use for long-term communication with that endpoint.
+- [nw_connection_group_reinsert_extracted_connection(\_:\_:)](nw_connection_group_reinsert_extracted_connection%28____%29.md)
+- [nw_connection_group_reply(\_:\_:\_:\_:)](nw_connection_group_reply%28________%29.md): Sends a reply to the specific endpoint that originates a group message you receive.
+- [nw_connection_group_send_message(\_:\_:\_:\_:\_:)](nw_connection_group_send_message%28__________%29.md): Sends data to the entire group, or to a specific member of the group.
+- [nw_connection_group_set_new_connection_handler(\_:\_:)](nw_connection_group_set_new_connection_handler%28____%29.md)
+- [nw_connection_group_set_queue(\_:\_:)](nw_connection_group_set_queue%28____%29.md): Sets the queue on which you handle connection group events.
+- [nw_connection_group_set_receive_handler(\_:\_:\_:\_:)](nw_connection_group_set_receive_handler%28________%29.md): Sets a handler that receives inbound messages from members of the group.
+- [nw_connection_group_set_state_changed_handler(\_:\_:)](nw_connection_group_set_state_changed_handler%28____%29.md): Sets a handler that receives connection group state updates.
+- [nw_connection_group_start(\_:)](nw_connection_group_start%28__%29.md): Joins the group and registers to receive messages.
+- [nw_connection_receive(\_:\_:\_:\_:)](nw_connection_receive%28________%29.md): Schedules a single receive completion handler, with a range indicating how many bytes the handler can receive at one time.
+- [nw_connection_receive_message(\_:\_:)](nw_connection_receive_message%28____%29.md): Schedules a single receive completion handler for a complete message, as opposed to a range of bytes.
+- [nw_connection_restart(\_:)](nw_connection_restart%28__%29.md): Restarts a connection that is in the waiting state.
+- [nw_connection_send(\_:\_:\_:\_:\_:)](nw_connection_send%28__________%29.md): Sends data on a connection.
+- [nw_connection_set_better_path_available_handler(\_:\_:)](nw_connection_set_better_path_available_handler%28____%29.md): Sets a handler that receives updates when an alternative network path is preferred over the current path.
+- [nw_connection_set_path_changed_handler(\_:\_:)](nw_connection_set_path_changed_handler%28____%29.md): Sets a handler that receives network path updates.
+- [nw_connection_set_queue(\_:\_:)](nw_connection_set_queue%28____%29.md): Sets the queue on which all connection events are delivered.
+- [nw_connection_set_state_changed_handler(\_:\_:)](nw_connection_set_state_changed_handler%28____%29.md): Sets a handler to receive connection state updates.
+- [nw_connection_set_viability_changed_handler(\_:\_:)](nw_connection_set_viability_changed_handler%28____%29.md): Sets a handler that receives updates when data can be sent and received.
+- [nw_connection_start(\_:)](nw_connection_start%28__%29.md): Starts establishing a connection.
+- [nw_content_context_copy_antecedent(\_:)](nw_content_context_copy_antecedent%28__%29.md): Accesses the optional message context that must be sent before the context you are sending.
+- [nw_content_context_copy_protocol_metadata(\_:\_:)](nw_content_context_copy_protocol_metadata%28____%29.md): Retreives the metadata associated with a specific protocol.
+- [nw_content_context_create(\_:)](nw_content_context_create%28__%29.md): Initializes a custom message context.
+- [nw_content_context_foreach_protocol_metadata(\_:\_:)](nw_content_context_foreach_protocol_metadata%28____%29.md): Iterates through all protocol metadata associated with the message context.
+- [nw_content_context_get_expiration_milliseconds(\_:)](nw_content_context_get_expiration_milliseconds%28__%29.md): Accesses the expiration set for this message context.
+- [nw_content_context_get_identifier(\_:)](nw_content_context_get_identifier%28__%29.md): Accesses the identifier used to create this message context.
+- [nw_content_context_get_is_final(\_:)](nw_content_context_get_is_final%28__%29.md): Checks whether this context represents the final message being received.
+- [nw_content_context_get_relative_priority(\_:)](nw_content_context_get_relative_priority%28__%29.md): Accesses the relative value of priority used to reorder contexts when sending.
+- [nw_content_context_set_antecedent(\_:\_:)](nw_content_context_set_antecedent%28____%29.md): Set an optional message context that must be sent before the context you are sending.
+- [nw_content_context_set_expiration_milliseconds(\_:\_:)](nw_content_context_set_expiration_milliseconds%28____%29.md): Sets the number of milliseconds after which sending the data associated with this context must begin, otherwise the data is discarded.
+- [nw_content_context_set_is_final(\_:\_:)](nw_content_context_set_is_final%28____%29.md): Sets a Boolean indicating if this context represents the final message being sent.
+- [nw_content_context_set_metadata_for_protocol(\_:\_:)](nw_content_context_set_metadata_for_protocol%28____%29.md): Sets protocol metadata to configure per-message or per-packet properties.
+- [nw_content_context_set_relative_priority(\_:\_:)](nw_content_context_set_relative_priority%28____%29.md): Sets the relative value of priority used to reorder contexts when sending.
+- [nw_data_transfer_report_collect(\_:\_:\_:)](nw_data_transfer_report_collect%28______%29.md): Stops an outstanding data transfer report and calculates the results.
+- [nw_data_transfer_report_copy_path_interface(\_:\_:)](nw_data_transfer_report_copy_path_interface%28____%29.md): Accesses the network interface the path used.
+- [nw_data_transfer_report_get_duration_milliseconds(\_:)](nw_data_transfer_report_get_duration_milliseconds%28__%29.md): Checks the duration of the data transfer report, from when it was started to when it was collected.
+- [nw_data_transfer_report_get_path_count(\_:)](nw_data_transfer_report_get_path_count%28__%29.md): Checks the number of valid paths in the report.
+- [nw_data_transfer_report_get_path_radio_type(\_:\_:)](nw_data_transfer_report_get_path_radio_type%28____%29.md)
+- [nw_data_transfer_report_get_received_application_byte_count(\_:\_:)](nw_data_transfer_report_get_received_application_byte_count%28____%29.md): Accesses the number of bytes the connection delivered.
+- [nw_data_transfer_report_get_received_ip_packet_count(\_:\_:)](nw_data_transfer_report_get_received_ip_packet_count%28____%29.md): Accesses the number of IP packets the connection received.
+- [nw_data_transfer_report_get_received_transport_byte_count(\_:\_:)](nw_data_transfer_report_get_received_transport_byte_count%28____%29.md): Accesses the number of bytes the transport protocol delivered.
+- [nw_data_transfer_report_get_received_transport_duplicate_byte_count(\_:\_:)](nw_data_transfer_report_get_received_transport_duplicate_byte_count%28____%29.md): Accesses the number of duplicated bytes the transport protocol detected.
+- [nw_data_transfer_report_get_received_transport_out_of_order_byte_count(\_:\_:)](nw_data_transfer_report_get_received_transport_out_of_order_byte_count%28____%29.md): Accesses the number of bytes the transport protocol received out of order.
+- [nw_data_transfer_report_get_sent_application_byte_count(\_:\_:)](nw_data_transfer_report_get_sent_application_byte_count%28____%29.md): Accesses the number of bytes sent on the connection.
+- [nw_data_transfer_report_get_sent_ip_packet_count(\_:\_:)](nw_data_transfer_report_get_sent_ip_packet_count%28____%29.md): Accesses the number of IP packets the connection sent.
+- [nw_data_transfer_report_get_sent_transport_byte_count(\_:\_:)](nw_data_transfer_report_get_sent_transport_byte_count%28____%29.md): Accesses the number of bytes sent into the transport protocol.
+- [nw_data_transfer_report_get_sent_transport_retransmitted_byte_count(\_:\_:)](nw_data_transfer_report_get_sent_transport_retransmitted_byte_count%28____%29.md): Accesses the number of bytes the transport protocol retransmitted.
+- [nw_data_transfer_report_get_state(\_:)](nw_data_transfer_report_get_state%28__%29.md): Checks whether a data transfer report is collected.
+- [nw_data_transfer_report_get_transport_minimum_rtt_milliseconds(\_:\_:)](nw_data_transfer_report_get_transport_minimum_rtt_milliseconds%28____%29.md): Accesses the minimum round-trip time the transport protocol measured, in milliseconds.
+- [nw_data_transfer_report_get_transport_rtt_variance(\_:\_:)](nw_data_transfer_report_get_transport_rtt_variance%28____%29.md): Accesses the variance of the round-trip time the transport protocol measured.
+- [nw_data_transfer_report_get_transport_smoothed_rtt_milliseconds(\_:\_:)](nw_data_transfer_report_get_transport_smoothed_rtt_milliseconds%28____%29.md): Accesses the smoothed round-trip time the transport protocol measured, in milliseconds.
+- [nw_endpoint_copy_address_string(\_:)](nw_endpoint_copy_address_string%28__%29.md): Copies the address of an endpoint as a string.
+- [nw_endpoint_copy_port_string(\_:)](nw_endpoint_copy_port_string%28__%29.md): Copies the port of an endpoint as a string.
+- [nw_endpoint_copy_txt_record(\_:)](nw_endpoint_copy_txt_record%28__%29.md)
+- [nw_endpoint_create_address(\_:)](nw_endpoint_create_address%28__%29.md): Creates a network endpoint with an address structure.
+- [nw_endpoint_create_bonjour_service(\_:\_:\_:)](nw_endpoint_create_bonjour_service%28______%29.md): Creates a network endpoint with a Bonjour service name, type, and domain.
+- [nw_endpoint_create_host(\_:\_:)](nw_endpoint_create_host%28____%29.md): Creates a network endpoint with a hostname and port, where the hostname may be interpreted as an IP address.
+- [nw_endpoint_create_url(\_:)](nw_endpoint_create_url%28__%29.md): Creates a network endpoint with a URL string.
+- [nw_endpoint_get_address(\_:)](nw_endpoint_get_address%28__%29.md): Accesses the address structure stored in an address endpoint.
+- [nw_endpoint_get_bonjour_service_domain(\_:)](nw_endpoint_get_bonjour_service_domain%28__%29.md): Accesses the Bonjour service domain stored in an endpoint.
+- [nw_endpoint_get_bonjour_service_name(\_:)](nw_endpoint_get_bonjour_service_name%28__%29.md): Accesses the Bonjour service name stored in an endpoint.
+- [nw_endpoint_get_bonjour_service_type(\_:)](nw_endpoint_get_bonjour_service_type%28__%29.md): Accesses the Bonjour service type stored in an endpoint.
+- [nw_endpoint_get_hostname(\_:)](nw_endpoint_get_hostname%28__%29.md): Accesses the hostname stored in an endpoint.
+- [nw_endpoint_get_port(\_:)](nw_endpoint_get_port%28__%29.md): Accesses the port stored in an endpoint, in host-byte order.
+- [nw_endpoint_get_signature(\_:\_:)](nw_endpoint_get_signature%28____%29.md)
+- [nw_endpoint_get_type(\_:)](nw_endpoint_get_type%28__%29.md): Accesses the type of a endpoint.
+- [nw_endpoint_get_url(\_:)](nw_endpoint_get_url%28__%29.md): Accesses the URL string stored in an endpoint.
+- [nw_error_copy_cf_error(\_:)](nw_error_copy_cf_error%28__%29.md): Returns a copy of a network error.
+- [nw_error_get_error_code(\_:)](nw_error_get_error_code%28__%29.md): Accesses the specific code of the network error.
+- [nw_error_get_error_domain(\_:)](nw_error_get_error_domain%28__%29.md): Accesses the domain of the network error.
+- [nw_establishment_report_copy_proxy_endpoint(\_:)](nw_establishment_report_copy_proxy_endpoint%28__%29.md): Accesses the endpoint of the proxy the connection used.
+- [nw_establishment_report_enumerate_protocols(\_:\_:)](nw_establishment_report_enumerate_protocols%28____%29.md): Iterates a list of protocol handshakes in order from first completed to last completed.
+- [nw_establishment_report_enumerate_resolution_reports(\_:\_:)](nw_establishment_report_enumerate_resolution_reports%28____%29.md)
+- [nw_establishment_report_enumerate_resolutions(\_:\_:)](nw_establishment_report_enumerate_resolutions%28____%29.md): Iterates a list of resolution steps performed during connection establishment, in order from first resolved to last resolved.
+- [nw_establishment_report_get_attempt_started_after_milliseconds(\_:)](nw_establishment_report_get_attempt_started_after_milliseconds%28__%29.md): Accesses the time between the call to start and the beginning of the successful connection attempt, in milliseconds.
+- [nw_establishment_report_get_duration_milliseconds(\_:)](nw_establishment_report_get_duration_milliseconds%28__%29.md): Checks the total duration of the successful connection establishment attempt, from the preparing state to the ready state.
+- [nw_establishment_report_get_previous_attempt_count(\_:)](nw_establishment_report_get_previous_attempt_count%28__%29.md): Checks the number of attempts made before the successful attempt, when the connection moved from the preparing state back to the waiting state.
+- [nw_establishment_report_get_proxy_configured(\_:)](nw_establishment_report_get_proxy_configured%28__%29.md): Checks whether a proxy was configured on the connection.
+- [nw_establishment_report_get_used_proxy(\_:)](nw_establishment_report_get_used_proxy%28__%29.md): Checks whether the connection used a proxy.
+- [nw_ethernet_channel_cancel(\_:)](nw_ethernet_channel_cancel%28__%29.md): Unregisters the channel from the interface.
+- [nw_ethernet_channel_create(\_:\_:)](nw_ethernet_channel_create%28____%29.md): Initializes an Ethernet channel on a specific interface with a custom Ethernet type.
+- [nw_ethernet_channel_create_with_parameters(\_:\_:\_:)](nw_ethernet_channel_create_with_parameters%28______%29.md)
+- [nw_ethernet_channel_get_maximum_payload_size(\_:)](nw_ethernet_channel_get_maximum_payload_size%28__%29.md)
+- [nw_ethernet_channel_send(\_:\_:\_:\_:\_:)](nw_ethernet_channel_send%28__________%29.md): Sends a single Ethernet frame over a channel to a specific Ethernet address.
+- [nw_ethernet_channel_set_queue(\_:\_:)](nw_ethernet_channel_set_queue%28____%29.md): Sets the queue on which all channel events are delivered.
+- [nw_ethernet_channel_set_receive_handler(\_:\_:)](nw_ethernet_channel_set_receive_handler%28____%29.md): Sets a handler to receive inbound Ethernet frames.
+- [nw_ethernet_channel_set_state_changed_handler(\_:\_:)](nw_ethernet_channel_set_state_changed_handler%28____%29.md): Sets a handler to receive channel state updates.
+- [nw_ethernet_channel_start(\_:)](nw_ethernet_channel_start%28__%29.md): Starts the process of registering the channel.
+- [nw_framer_async(\_:\_:)](nw_framer_async%28____%29.md): Requests that a block be executed on the connection’s internal scheduling context.
+- [nw_framer_copy_local_endpoint(\_:)](nw_framer_copy_local_endpoint%28__%29.md): Accesses the local endpoint of the connection in which your protocol is running.
+- [nw_framer_copy_options(\_:)](nw_framer_copy_options%28__%29.md)
+- [nw_framer_copy_parameters(\_:)](nw_framer_copy_parameters%28__%29.md): Accesses the parameters of the connection in which your protocol is running.
+- [nw_framer_copy_remote_endpoint(\_:)](nw_framer_copy_remote_endpoint%28__%29.md): Accesses the remote endpoint of the connection in which your protocol is running.
+- [nw_framer_create_definition(\_:\_:\_:)](nw_framer_create_definition%28______%29.md): Initializes a new protocol definition based on your protocol implementation.
+- [nw_framer_create_options(\_:)](nw_framer_create_options%28__%29.md): Initializes a set of protocol options with a custom framer definition.
+- [nw_framer_deliver_input(\_:\_:\_:\_:\_:)](nw_framer_deliver_input%28__________%29.md): Delivers an inbound message containing arbitrary data from your protocol to the application.
+- [nw_framer_deliver_input_no_copy(\_:\_:\_:\_:)](nw_framer_deliver_input_no_copy%28________%29.md): Delivers an inbound message containing a specific number of next received bytes.
+- [nw_framer_mark_failed_with_error(\_:\_:)](nw_framer_mark_failed_with_error%28____%29.md): Indicates to a connection that your protocol has encountered an error, or has gracefully closed.
+- [nw_framer_mark_ready(\_:)](nw_framer_mark_ready%28__%29.md): Indicates to a connection that your protocol’s handshake is complete.
+- [nw_framer_message_access_value(\_:\_:\_:)](nw_framer_message_access_value%28______%29.md): Accesses a custom value stored in a framer message.
+- [nw_framer_message_copy_object_value(\_:\_:)](nw_framer_message_copy_object_value%28____%29.md): Accesses an NSObject value stored in a framer message.
+- [nw_framer_message_create(\_:)](nw_framer_message_create%28__%29.md): Initializes an empty message from within a framer implementation.
+- [nw_framer_message_set_object_value(\_:\_:\_:)](nw_framer_message_set_object_value%28______%29.md): Sets an NSObject value to be stored in a framer message.
+- [nw_framer_message_set_value(\_:\_:\_:\_:)](nw_framer_message_set_value%28________%29.md): Sets a value to be stored in a framer message, with a completion to call to disposed the stored value when the message is released.
+- [nw_framer_options_copy_object_value(\_:\_:)](nw_framer_options_copy_object_value%28____%29.md)
+- [nw_framer_options_set_object_value(\_:\_:\_:)](nw_framer_options_set_object_value%28______%29.md)
+- [nw_framer_parse_input(\_:\_:\_:\_:\_:)](nw_framer_parse_input%28__________%29.md): Examines the content of input data while inside your input handler block.
+- [nw_framer_parse_output(\_:\_:\_:\_:\_:)](nw_framer_parse_output%28__________%29.md): Examines the content of output data while inside your output handler.
+- [nw_framer_pass_through_input(\_:)](nw_framer_pass_through_input%28__%29.md): Indicates that your protocol no longer needs to handle input data.
+- [nw_framer_pass_through_output(\_:)](nw_framer_pass_through_output%28__%29.md): Indicates that your protocol no longer needs to handle output data.
+- [nw_framer_prepend_application_protocol(\_:\_:)](nw_framer_prepend_application_protocol%28____%29.md): Dynamically adds another protocol that will run above your protocol after your protocol calls [nw_framer_mark_ready(\_:)](nw_framer_mark_ready%28__%29.md).
+- [nw_framer_protocol_create_message(\_:)](nw_framer_protocol_create_message%28__%29.md): Initializes an empty message for a custom framer definition.
+- [nw_framer_schedule_wakeup(\_:\_:)](nw_framer_schedule_wakeup%28____%29.md): Requests that the [nw_framer_wakeup_handler_t](nw_framer_wakeup_handler_t.md) be called on your protocol at a specific time in the future.
+- [nw_framer_set_cleanup_handler(\_:\_:)](nw_framer_set_cleanup_handler%28____%29.md): Sets a block to handle the final cleanup of allocations made by your protocol instance.
+- [nw_framer_set_input_handler(\_:\_:)](nw_framer_set_input_handler%28____%29.md): Sets a block to handle new inbound data.
+- [nw_framer_set_output_handler(\_:\_:)](nw_framer_set_output_handler%28____%29.md): Sets a block to handle new outbound messages.
+- [nw_framer_set_stop_handler(\_:\_:)](nw_framer_set_stop_handler%28____%29.md): Sets a block to handle when the connection is being closed.
+- [nw_framer_set_wakeup_handler(\_:\_:)](nw_framer_set_wakeup_handler%28____%29.md): Sets a handler to receive scheduled wakeup events.
+- [nw_framer_write_output(\_:\_:\_:)](nw_framer_write_output%28______%29.md): Sends arbitrary output data in a buffer from your protocol to the next protocol.
+- [nw_framer_write_output_data(\_:\_:)](nw_framer_write_output_data%28____%29.md): Sends arbitrary output data from your protocol to the next protocol.
+- [nw_framer_write_output_no_copy(\_:\_:)](nw_framer_write_output_no_copy%28____%29.md): Sends a specific number of bytes from a message while inside your output handler.
+- [nw_group_descriptor_add_endpoint(\_:\_:)](nw_group_descriptor_add_endpoint%28____%29.md): Adds a multicast address endpoint you specify to define an extra IP multicast group to join.
+- [nw_group_descriptor_create_multicast(\_:)](nw_group_descriptor_create_multicast%28__%29.md): Creates group descriptor you use to join an IP multicast group on a local network.
+- [nw_group_descriptor_create_multiplex(\_:)](nw_group_descriptor_create_multiplex%28__%29.md)
+- [nw_group_descriptor_enumerate_endpoints(\_:\_:)](nw_group_descriptor_enumerate_endpoints%28____%29.md): Sets a handler to list all endpoints added to the group descriptor.
+- [nw_interface_get_index(\_:)](nw_interface_get_index%28__%29.md): Accesses the system interface index associated with the interface.
+- [nw_interface_get_name(\_:)](nw_interface_get_name%28__%29.md): Accesses the name of the interface.
+- [nw_interface_get_type(\_:)](nw_interface_get_type%28__%29.md): Accesses the type of the interface, such as Wi-Fi or Loopback.
+- [nw_ip_create_metadata()](nw_ip_create_metadata%28%29.md): Initializes an IP packet configuration with default settings.
+- [nw_ip_metadata_get_ecn_flag(\_:)](nw_ip_metadata_get_ecn_flag%28__%29.md): Checks the Explicit Congestion Notification flag value received on an IP packet.
+- [nw_ip_metadata_get_receive_time(\_:)](nw_ip_metadata_get_receive_time%28__%29.md): Access the time at which a packet was received, in nanoseconds, based on `CLOCK_MONOTONIC_RAW`.
+- [nw_ip_metadata_get_service_class(\_:)](nw_ip_metadata_get_service_class%28__%29.md): Accesses a specific service class to mark on an IP packet.
+- [nw_ip_metadata_set_ecn_flag(\_:\_:)](nw_ip_metadata_set_ecn_flag%28____%29.md): Sets a specific Explicit Congestion Notification flag value to set on an IP packet.
+- [nw_ip_metadata_set_service_class(\_:\_:)](nw_ip_metadata_set_service_class%28____%29.md): Sets a specific service class to mark on an IP packet.
+- [nw_ip_options_set_calculate_receive_time(\_:\_:)](nw_ip_options_set_calculate_receive_time%28____%29.md): Configures a connection to deliver receive timestamps for IP packets.
+- [nw_ip_options_set_disable_fragmentation(\_:\_:)](nw_ip_options_set_disable_fragmentation%28____%29.md): Configures a connection to disable fragmentation on outbound packets.
+- [nw_ip_options_set_disable_multicast_loopback(\_:\_:)](nw_ip_options_set_disable_multicast_loopback%28____%29.md)
+- [nw_ip_options_set_hop_limit(\_:\_:)](nw_ip_options_set_hop_limit%28____%29.md): Configures the default hop limit for packets generated by a connection.
+- [nw_ip_options_set_local_address_preference(\_:\_:)](nw_ip_options_set_local_address_preference%28____%29.md): Configures a connection to prefer certain types of local addresses, such as temporary or stable.
+- [nw_ip_options_set_use_minimum_mtu(\_:\_:)](nw_ip_options_set_use_minimum_mtu%28____%29.md): Configures a connection to use the minimum MTU value, which is 1280 bytes for IPv6.
+- [nw_ip_options_set_version(\_:\_:)](nw_ip_options_set_version%28____%29.md): Sets a required IP version to disable all other versions for a connection.
+- [nw_listener_cancel(\_:)](nw_listener_cancel%28__%29.md): Stops listening for inbound connections.
+- [nw_listener_create(\_:)](nw_listener_create%28__%29.md): Initializes a network listener, which will select a random port.
+- [nw_listener_create_with_connection(\_:\_:)](nw_listener_create_with_connection%28____%29.md): Initializes a network listener to receive new streams on a multiplexed connection.
+- [nw_listener_create_with_launchd_key(\_:\_:)](nw_listener_create_with_launchd_key%28____%29.md)
+- [nw_listener_create_with_port(\_:\_:)](nw_listener_create_with_port%28____%29.md): Initializes a network listener with a specified local port.
+- [nw_listener_get_new_connection_limit(\_:)](nw_listener_get_new_connection_limit%28__%29.md): Checks the remaining number of inbound connections to deliver before rejecting connections.
+- [nw_listener_get_port(\_:)](nw_listener_get_port%28__%29.md): The port on which the listener can accept connections.
+- [nw_listener_set_advertise_descriptor(\_:\_:)](nw_listener_set_advertise_descriptor%28____%29.md): Sets a Bonjour service that advertises the listener on the local network.
+- [nw_listener_set_advertised_endpoint_changed_handler(\_:\_:)](nw_listener_set_advertised_endpoint_changed_handler%28____%29.md): Sets a handler that receives updates for the service endpoint being advertised.
+- [nw_listener_set_new_connection_group_handler(\_:\_:)](nw_listener_set_new_connection_group_handler%28____%29.md)
+- [nw_listener_set_new_connection_handler(\_:\_:)](nw_listener_set_new_connection_handler%28____%29.md): Sets a handler that receives inbound connections.
+- [nw_listener_set_new_connection_limit(\_:\_:)](nw_listener_set_new_connection_limit%28____%29.md): Resets the number of inbound connections to deliver before rejecting connections.
+- [nw_listener_set_queue(\_:\_:)](nw_listener_set_queue%28____%29.md): Sets the queue on which all listener events are delivered.
+- [nw_listener_set_state_changed_handler(\_:\_:)](nw_listener_set_state_changed_handler%28____%29.md): Sets a handler to receive listener state updates.
+- [nw_listener_start(\_:)](nw_listener_start%28__%29.md): Registers for listening for inbound connections.
+- [nw_multicast_group_descriptor_get_disable_unicast_traffic(\_:)](nw_multicast_group_descriptor_get_disable_unicast_traffic%28__%29.md): Checks a Boolean that indicates whether a connection group should reject unicast traffic.
+- [nw_multicast_group_descriptor_set_disable_unicast_traffic(\_:\_:)](nw_multicast_group_descriptor_set_disable_unicast_traffic%28____%29.md): Sets a Boolean that indicates whether a connection group should reject unicast traffic.
+- [nw_multicast_group_descriptor_set_specific_source(\_:\_:)](nw_multicast_group_descriptor_set_specific_source%28____%29.md): Sets an optional address endpoint used to filter received multicast packets.
+- [nw_parameters_create_application_service()](nw_parameters_create_application_service%28%29.md)
+- [nw_parameters_create_quic(\_:)](nw_parameters_create_quic%28__%29.md): Initializes parameters for QUIC connections and listeners.
+- [nw_parameters_requires_dnssec_validation(\_:)](nw_parameters_requires_dnssec_validation%28__%29.md): Checks whether a connection requires DNSSEC validation when resolving endpoints.
+- [nw_parameters_set_requires_dnssec_validation(\_:\_:)](nw_parameters_set_requires_dnssec_validation%28____%29.md): Determines whether a connection requires DNSSEC validation when resolving endpoints.
+- [nw_path_copy_effective_local_endpoint(\_:)](nw_path_copy_effective_local_endpoint%28__%29.md): Accesses the local endpoint in use by a connection’s network path.
+- [nw_path_copy_effective_remote_endpoint(\_:)](nw_path_copy_effective_remote_endpoint%28__%29.md): Accesses the remote endpoint in use by a connection’s network path.
+- [nw_path_enumerate_gateways(\_:\_:)](nw_path_enumerate_gateways%28____%29.md): Enumerates the list of gateways configured on the interfaces available to a path.
+- [nw_path_enumerate_interfaces(\_:\_:)](nw_path_enumerate_interfaces%28____%29.md): Enumerates the list of all interfaces available to the path, in order of preference.
+- [nw_path_get_status(\_:)](nw_path_get_status%28__%29.md): Checks whether a path can be used by connections.
+- [nw_path_get_unsatisfied_reason(\_:)](nw_path_get_unsatisfied_reason%28__%29.md)
+- [nw_path_has_dns(\_:)](nw_path_has_dns%28__%29.md): Checks whether the path has a DNS server configured.
+- [nw_path_has_ipv4(\_:)](nw_path_has_ipv4%28__%29.md): Checks whether the path can route IPv4 traffic.
+- [nw_path_has_ipv6(\_:)](nw_path_has_ipv6%28__%29.md): Checks whether the path can route IPv6 traffic.
+- [nw_path_is_constrained(\_:)](nw_path_is_constrained%28__%29.md): Checks whether the path uses an interface in Low Data Mode.
+- [nw_path_is_equal(\_:\_:)](nw_path_is_equal%28____%29.md): Compares if two paths are identical.
+- [nw_path_is_expensive(\_:)](nw_path_is_expensive%28__%29.md): Checks whether the path uses an interface that is considered expensive, such as Cellular or a Personal Hotspot.
+- [nw_path_monitor_cancel(\_:)](nw_path_monitor_cancel%28__%29.md): Stops receiving network path updates.
+- [nw_path_monitor_create()](nw_path_monitor_create%28%29.md): Initializes a path monitor to observe all available interface types.
+- [nw_path_monitor_create_for_ethernet_channel()](nw_path_monitor_create_for_ethernet_channel%28%29.md)
+- [nw_path_monitor_create_with_type(\_:)](nw_path_monitor_create_with_type%28__%29.md): Initializes a path monitor to observe a specific interface type.
+- [nw_path_monitor_prohibit_interface_type(\_:\_:)](nw_path_monitor_prohibit_interface_type%28____%29.md): Prohibit a path monitor from using a specific interface type.
+- [nw_path_monitor_set_cancel_handler(\_:\_:)](nw_path_monitor_set_cancel_handler%28____%29.md): Sets a handler to determine when a monitor is fully cancelled and will no longer deliver events.
+- [nw_path_monitor_set_queue(\_:\_:)](nw_path_monitor_set_queue%28____%29.md): Sets a queue on which to deliver path events.
+- [nw_path_monitor_set_update_handler(\_:\_:)](nw_path_monitor_set_update_handler%28____%29.md): Sets a handler to receive network path updates.
+- [nw_path_monitor_start(\_:)](nw_path_monitor_start%28__%29.md): Starts monitoring path changes.
+- [nw_path_uses_interface_type(\_:\_:)](nw_path_uses_interface_type%28____%29.md): Checks if connections using the path may send traffic over a specific interface type.
+- [nw_protocol_copy_ip_definition()](nw_protocol_copy_ip_definition%28%29.md): Accesses the system definition of the Internet Protocol.
+- [nw_protocol_copy_quic_definition()](nw_protocol_copy_quic_definition%28%29.md): Accesses the system definition of the QUIC transport protocol.
+- [nw_protocol_copy_tcp_definition()](nw_protocol_copy_tcp_definition%28%29.md): Accesses the system definition of the Transport Control Protocol.
+- [nw_protocol_copy_tls_definition()](nw_protocol_copy_tls_definition%28%29.md): Accesses the system definition of the Transport Layer Security protocol.
+- [nw_protocol_copy_udp_definition()](nw_protocol_copy_udp_definition%28%29.md): Accesses the system definition of the User Datagram Protocol.
+- [nw_protocol_copy_ws_definition()](nw_protocol_copy_ws_definition%28%29.md): Accesses the system definition of the WebSocket protocol.
+- [nw_protocol_metadata_copy_definition(\_:)](nw_protocol_metadata_copy_definition%28__%29.md): Accesses the protocol definition associated with the metadata object.
+- [nw_protocol_metadata_is_framer_message(\_:)](nw_protocol_metadata_is_framer_message%28__%29.md): Checks if a metadata object represents a custom framer protocol message.
+- [nw_protocol_metadata_is_ip(\_:)](nw_protocol_metadata_is_ip%28__%29.md): Checks whether a metadata object represents an IP packet.
+- [nw_protocol_metadata_is_quic(\_:)](nw_protocol_metadata_is_quic%28__%29.md): Checks whether a metadata object contains QUIC connection state.
+- [nw_protocol_metadata_is_tcp(\_:)](nw_protocol_metadata_is_tcp%28__%29.md): Checks whether a metadata object contains TCP connection state.
+- [nw_protocol_metadata_is_tls(\_:)](nw_protocol_metadata_is_tls%28__%29.md): Checks whether a metadata object contains TLS connection state.
+- [nw_protocol_metadata_is_udp(\_:)](nw_protocol_metadata_is_udp%28__%29.md): Checks whether a metadata object represents a UDP datagram.
+- [nw_protocol_metadata_is_ws(\_:)](nw_protocol_metadata_is_ws%28__%29.md): Checks whether a metadata object represents a WebSocket message.
+- [nw_protocol_options_is_quic(\_:)](nw_protocol_options_is_quic%28__%29.md): Checks whether an options object uses the QUIC protocol.
+- [nw_proxy_config_add_excluded_domain(\_:\_:)](nw_proxy_config_add_excluded_domain%28____%29.md)
+- [nw_proxy_config_add_match_domain(\_:\_:)](nw_proxy_config_add_match_domain%28____%29.md)
+- [nw_proxy_config_clear_excluded_domains(\_:)](nw_proxy_config_clear_excluded_domains%28__%29.md)
+- [nw_proxy_config_clear_match_domains(\_:)](nw_proxy_config_clear_match_domains%28__%29.md)
+- [nw_proxy_config_enumerate_excluded_domains(\_:\_:)](nw_proxy_config_enumerate_excluded_domains%28____%29.md)
+- [nw_proxy_config_enumerate_match_domains(\_:\_:)](nw_proxy_config_enumerate_match_domains%28____%29.md)
+- [nw_quic_add_tls_application_protocol(\_:\_:)](nw_quic_add_tls_application_protocol%28____%29.md): Adds a supported Application-Layer Protocol Negotiation value.
+- [nw_quic_copy_sec_protocol_metadata(\_:)](nw_quic_copy_sec_protocol_metadata%28__%29.md): Accesses the result of the QUIC handshake.
+- [nw_quic_copy_sec_protocol_options(\_:)](nw_quic_copy_sec_protocol_options%28__%29.md): Accesses the handshake security options QUIC will use.
+- [nw_quic_create_options()](nw_quic_create_options%28%29.md): Initializes a default set of QUIC connection options.
+- [nw_quic_get_application_error(\_:)](nw_quic_get_application_error%28__%29.md): Accesses the QUIC application error code received from the peer.
+- [nw_quic_get_application_error_reason(\_:)](nw_quic_get_application_error_reason%28__%29.md): Accesses the QUIC application error reason received from the peer.
+- [nw_quic_get_idle_timeout(\_:)](nw_quic_get_idle_timeout%28__%29.md): Accesses the idle timeout for the QUIC connection, in milliseconds.
+- [nw_quic_get_initial_max_data(\_:)](nw_quic_get_initial_max_data%28__%29.md): Accesses a QUIC connection’s initial maximum data transport parameter.
+- [nw_quic_get_initial_max_stream_data_bidirectional_local(\_:)](nw_quic_get_initial_max_stream_data_bidirectional_local%28__%29.md): Accesses a QUIC connection’s initial maximum stream data limit for locally-initiated bidirectional streams.
+- [nw_quic_get_initial_max_stream_data_bidirectional_remote(\_:)](nw_quic_get_initial_max_stream_data_bidirectional_remote%28__%29.md): Accesses a QUIC connection’s initial maximum stream data limit for remote-initiated bidirectional streams.
+- [nw_quic_get_initial_max_stream_data_unidirectional(\_:)](nw_quic_get_initial_max_stream_data_unidirectional%28__%29.md): Accesses a QUIC connection’s initial maximum stream data limit for unidirectional streams.
+- [nw_quic_get_initial_max_streams_bidirectional(\_:)](nw_quic_get_initial_max_streams_bidirectional%28__%29.md): Accesses a QUIC connection’s initial maximum number of bidirectional streams.
+- [nw_quic_get_initial_max_streams_unidirectional(\_:)](nw_quic_get_initial_max_streams_unidirectional%28__%29.md): Accesses a QUIC connection’s initial maximum number of unidirectional streams.
+- [nw_quic_get_keepalive_interval(\_:)](nw_quic_get_keepalive_interval%28__%29.md): Accesses the keepalive interval for the QUIC connection, in seconds.
+- [nw_quic_get_local_max_streams_bidirectional(\_:)](nw_quic_get_local_max_streams_bidirectional%28__%29.md): Accesses the maximum number of bidirectional streams that the peer can create on a QUIC connection.
+- [nw_quic_get_local_max_streams_unidirectional(\_:)](nw_quic_get_local_max_streams_unidirectional%28__%29.md): Accesses the maximum number of unidirectional streams that the peer can create on a QUIC connection.
+- [nw_quic_get_max_datagram_frame_size(\_:)](nw_quic_get_max_datagram_frame_size%28__%29.md): Accesses a QUIC connection’s maximum DATAGRAM frame size.
+- [nw_quic_get_max_udp_payload_size(\_:)](nw_quic_get_max_udp_payload_size%28__%29.md): Accesses the maximum length of a QUIC packet that can be received on a connection, in bytes.
+- [nw_quic_get_remote_idle_timeout(\_:)](nw_quic_get_remote_idle_timeout%28__%29.md): Accesses the idle timeout value from the peer’s transport parameters, in milliseconds.
+- [nw_quic_get_remote_max_streams_bidirectional(\_:)](nw_quic_get_remote_max_streams_bidirectional%28__%29.md): Accesses the maximum number of bidirectional streams advertised by peer that the connection is allowed to create.
+- [nw_quic_get_remote_max_streams_unidirectional(\_:)](nw_quic_get_remote_max_streams_unidirectional%28__%29.md): Accesses the maximum number of unidirectional streams advertised by peer that the connection is allowed to create.
+- [nw_quic_get_stream_application_error(\_:)](nw_quic_get_stream_application_error%28__%29.md): Accesses the QUIC application error code received from the peer for the stream.
+- [nw_quic_get_stream_id(\_:)](nw_quic_get_stream_id%28__%29.md): Accesses the QUIC stream identifier.
+- [nw_quic_get_stream_is_datagram(\_:)](nw_quic_get_stream_is_datagram%28__%29.md): Checks if a QUIC stream is a datagram flow, instead of a byte stream.
+- [nw_quic_get_stream_is_unidirectional(\_:)](nw_quic_get_stream_is_unidirectional%28__%29.md): Checks if a QUIC stream is unidirectional, instead of bidirectional.
+- [nw_quic_get_stream_type(\_:)](nw_quic_get_stream_type%28__%29.md): Accesses the stream type of the QUIC stream.
+- [nw_quic_get_stream_usable_datagram_frame_size(\_:)](nw_quic_get_stream_usable_datagram_frame_size%28__%29.md): Accesses the maximum usable size of a datagram frame on a QUIC datagram flow.
+- [nw_quic_set_application_error(\_:\_:\_:)](nw_quic_set_application_error%28______%29.md): Sets the QUIC application error code to send for the connection.
+- [nw_quic_set_idle_timeout(\_:\_:)](nw_quic_set_idle_timeout%28____%29.md): Sets the idle timeout for the QUIC connection, in milliseconds.
+- [nw_quic_set_initial_max_data(\_:\_:)](nw_quic_set_initial_max_data%28____%29.md): Sets a QUIC connection’s initial maximum data transport parameter.
+- [nw_quic_set_initial_max_stream_data_bidirectional_local(\_:\_:)](nw_quic_set_initial_max_stream_data_bidirectional_local%28____%29.md): Sets a QUIC connection’s initial maximum stream data limit for locally-initiated bidirectional streams.
+- [nw_quic_set_initial_max_stream_data_bidirectional_remote(\_:\_:)](nw_quic_set_initial_max_stream_data_bidirectional_remote%28____%29.md): Sets a QUIC connection’s initial maximum stream data limit for remote-initiated bidirectional streams.
+- [nw_quic_set_initial_max_stream_data_unidirectional(\_:\_:)](nw_quic_set_initial_max_stream_data_unidirectional%28____%29.md): Sets a QUIC connection’s initial maximum stream data limit for unidirectional streams.
+- [nw_quic_set_initial_max_streams_bidirectional(\_:\_:)](nw_quic_set_initial_max_streams_bidirectional%28____%29.md): Sets a QUIC connection’s initial maximum number of bidirectional streams.
+- [nw_quic_set_initial_max_streams_unidirectional(\_:\_:)](nw_quic_set_initial_max_streams_unidirectional%28____%29.md): Sets a QUIC connection’s initial maximum number of unidirectional streams.
+- [nw_quic_set_keepalive_interval(\_:\_:)](nw_quic_set_keepalive_interval%28____%29.md): Sets the keepalive interval for the QUIC connection, in seconds.
+- [nw_quic_set_local_max_streams_bidirectional(\_:\_:)](nw_quic_set_local_max_streams_bidirectional%28____%29.md): Sets the maximum number of bidirectional streams that the peer can create on a QUIC connection.
+- [nw_quic_set_local_max_streams_unidirectional(\_:\_:)](nw_quic_set_local_max_streams_unidirectional%28____%29.md): Sets the maximum number of unidirectional streams that the peer can create on a QUIC connection.
+- [nw_quic_set_max_datagram_frame_size(\_:\_:)](nw_quic_set_max_datagram_frame_size%28____%29.md): Sets a QUIC connection’s maximum DATAGRAM frame size.
+- [nw_quic_set_max_udp_payload_size(\_:\_:)](nw_quic_set_max_udp_payload_size%28____%29.md): Sets the maximum length of a QUIC packet that can be received on a connection, in bytes.
+- [nw_quic_set_stream_application_error(\_:\_:)](nw_quic_set_stream_application_error%28____%29.md): Sets the QUIC application error code to send for the stream.
+- [nw_quic_set_stream_is_datagram(\_:\_:)](nw_quic_set_stream_is_datagram%28____%29.md): Configures a QUIC stream as a datagram flow, instead of a byte stream.
+- [nw_quic_set_stream_is_unidirectional(\_:\_:)](nw_quic_set_stream_is_unidirectional%28____%29.md): Configures a QUIC stream as unidirectional, instead of bidirectional.
+- [nw_resolution_report_copy_preferred_endpoint(\_:)](nw_resolution_report_copy_preferred_endpoint%28__%29.md): Accesses the resolved endpoint that the connection used for its first connection attempt.
+- [nw_resolution_report_copy_successful_endpoint(\_:)](nw_resolution_report_copy_successful_endpoint%28__%29.md): Accesses the resolved endpoint that led to the established connection.
+- [nw_resolution_report_get_endpoint_count(\_:)](nw_resolution_report_get_endpoint_count%28__%29.md): Accesses the number of endpoints resolved in this step.
+- [nw_resolution_report_get_milliseconds(\_:)](nw_resolution_report_get_milliseconds%28__%29.md): Accesses the duration of this resolution step, from when the query was issued to when the response was complete.
+- [nw_resolution_report_get_protocol(\_:)](nw_resolution_report_get_protocol%28__%29.md): Accesses the transport protocol your connection used for DNS resolution.
+- [nw_resolution_report_get_source(\_:)](nw_resolution_report_get_source%28__%29.md): Accesses the source of the DNS response.
+- [nw_tcp_create_options()](nw_tcp_create_options%28%29.md): Initializes a default set of TCP connection options.
+- [nw_tcp_get_available_receive_buffer(\_:)](nw_tcp_get_available_receive_buffer%28__%29.md): Accesses the number of available bytes in the TCP receive buffer.
+- [nw_tcp_get_available_send_buffer(\_:)](nw_tcp_get_available_send_buffer%28__%29.md): Accesses the number of available bytes in the TCP send buffer.
+- [nw_tcp_options_set_connection_timeout(\_:\_:)](nw_tcp_options_set_connection_timeout%28____%29.md): Sets the number of seconds that TCP waits before timing out its handshake.
+- [nw_tcp_options_set_disable_ack_stretching(\_:\_:)](nw_tcp_options_set_disable_ack_stretching%28____%29.md): Disables TCP acknowledgment stretching.
+- [nw_tcp_options_set_disable_ecn(\_:\_:)](nw_tcp_options_set_disable_ecn%28____%29.md): Disables negotiation of Explicit Congestion Notification markings.
+- [nw_tcp_options_set_enable_fast_open(\_:\_:)](nw_tcp_options_set_enable_fast_open%28____%29.md): Enables TCP Fast Open on a connection.
+- [nw_tcp_options_set_enable_keepalive(\_:\_:)](nw_tcp_options_set_enable_keepalive%28____%29.md): Enables TCP keepalives.
+- [nw_tcp_options_set_keepalive_count(\_:\_:)](nw_tcp_options_set_keepalive_count%28____%29.md): Sets the number of keepalive probes that TCP sends before terminating the connection.
+- [nw_tcp_options_set_keepalive_idle_time(\_:\_:)](nw_tcp_options_set_keepalive_idle_time%28____%29.md): Sets the number of seconds of idleness that TCP waits before sending keepalive probes.
+- [nw_tcp_options_set_keepalive_interval(\_:\_:)](nw_tcp_options_set_keepalive_interval%28____%29.md): Sets the number of seconds that TCP waits between sending keepalive probes.
+- [nw_tcp_options_set_maximum_segment_size(\_:\_:)](nw_tcp_options_set_maximum_segment_size%28____%29.md): Sets TCP’s maximum segment size in bytes.
+- [nw_tcp_options_set_multipath_force_version(\_:\_:)](nw_tcp_options_set_multipath_force_version%28____%29.md)
+- [nw_tcp_options_set_no_delay(\_:\_:)](nw_tcp_options_set_no_delay%28____%29.md): Disables Nagle’s algorithm for TCP.
+- [nw_tcp_options_set_no_options(\_:\_:)](nw_tcp_options_set_no_options%28____%29.md): Sets TCP into no-options mode.
+- [nw_tcp_options_set_no_push(\_:\_:)](nw_tcp_options_set_no_push%28____%29.md): Sets TCP into no-push mode.
+- [nw_tcp_options_set_persist_timeout(\_:\_:)](nw_tcp_options_set_persist_timeout%28____%29.md): Sets the TCP persist timeout in seconds, as defined by RFC 6429.
+- [nw_tcp_options_set_retransmit_connection_drop_time(\_:\_:)](nw_tcp_options_set_retransmit_connection_drop_time%28____%29.md): Sets the number of seconds that TCP waits between retransmission attempts.
+- [nw_tcp_options_set_retransmit_fin_drop(\_:\_:)](nw_tcp_options_set_retransmit_fin_drop%28____%29.md): Causes TCP to drop its connection after not receiving an ACK after a FIN.
+- [nw_tls_copy_sec_protocol_metadata(\_:)](nw_tls_copy_sec_protocol_metadata%28__%29.md): Accesses the result of the TLS handshake.
+- [nw_tls_copy_sec_protocol_options(\_:)](nw_tls_copy_sec_protocol_options%28__%29.md): Accesses the handshake security options TLS will use.
+- [nw_tls_create_options()](nw_tls_create_options%28%29.md): Initializes a default set of TLS connection options.
+- [nw_txt_record_access_bytes(\_:\_:)](nw_txt_record_access_bytes%28____%29.md): Accesses the raw bytes contained within a TXT record.
+- [nw_txt_record_access_key(\_:\_:\_:)](nw_txt_record_access_key%28______%29.md): Accesses the value for a specific key in a TXT record dictionary.
+- [nw_txt_record_apply(\_:\_:)](nw_txt_record_apply%28____%29.md): Iterates through all keys in a TXT record dictionary.
+- [nw_txt_record_copy(\_:)](nw_txt_record_copy%28__%29.md): Performs a deep copy of a TXT record.
+- [nw_txt_record_create_dictionary()](nw_txt_record_create_dictionary%28%29.md): Initializes a TXT record as a dictionary of strings.
+- [nw_txt_record_create_with_bytes(\_:\_:)](nw_txt_record_create_with_bytes%28____%29.md): Initializes a TXT record with raw bytes.
+- [nw_txt_record_find_key(\_:\_:)](nw_txt_record_find_key%28____%29.md): Checks the status of value associated with a key in a TXT record dictionary.
+- [nw_txt_record_get_key_count(\_:)](nw_txt_record_get_key_count%28__%29.md): Accesses the number of keys stored in the TXT record dictionary.
+- [nw_txt_record_is_dictionary(\_:)](nw_txt_record_is_dictionary%28__%29.md): Checks whether a TXT record conforms to a dictionary format.
+- [nw_txt_record_is_equal(\_:\_:)](nw_txt_record_is_equal%28____%29.md): Checks whether two TXT records are equivalent.
+- [nw_txt_record_remove_key(\_:\_:)](nw_txt_record_remove_key%28____%29.md): Removes a data value in a TXT record dictionary.
+- [nw_txt_record_set_key(\_:\_:\_:\_:)](nw_txt_record_set_key%28________%29.md): Sets a data value in a TXT record dictionary.
+- [nw_udp_create_metadata()](nw_udp_create_metadata%28%29.md): Initializes a default UDP message.
+- [nw_udp_create_options()](nw_udp_create_options%28%29.md): Initializes a default set of UDP connection options.
+- [nw_udp_options_set_prefer_no_checksum(\_:\_:)](nw_udp_options_set_prefer_no_checksum%28____%29.md): Configures the connection to not send UDP checksums.
+- [nw_ws_create_metadata(\_:)](nw_ws_create_metadata%28__%29.md): Initializes a WebSocket message with a specific type code.
+- [nw_ws_create_options(\_:)](nw_ws_create_options%28__%29.md): Initializes a default set of WebSocket connection options.
+- [nw_ws_metadata_copy_server_response(\_:)](nw_ws_metadata_copy_server_response%28__%29.md): Accesses the WebSocket server’s response sent during the handshake.
+- [nw_ws_metadata_get_close_code(\_:)](nw_ws_metadata_get_close_code%28__%29.md): Accesses the close code on a WebSocket message.
+- [nw_ws_metadata_get_opcode(\_:)](nw_ws_metadata_get_opcode%28__%29.md): Checks the type code on a WebSocket message.
+- [nw_ws_metadata_set_close_code(\_:\_:)](nw_ws_metadata_set_close_code%28____%29.md): Sets a close code on a WebSocket message.
+- [nw_ws_metadata_set_pong_handler(\_:\_:\_:)](nw_ws_metadata_set_pong_handler%28______%29.md): Sets a handler on a Ping message to be invoked when the corresponding Pong message is received.
+- [nw_ws_options_add_additional_header(\_:\_:\_:)](nw_ws_options_add_additional_header%28______%29.md): Adds additional HTTP header fields to be sent by the client during the WebSocket handshake.
+- [nw_ws_options_add_subprotocol(\_:\_:)](nw_ws_options_add_subprotocol%28____%29.md): Adds to the list of supported application protocols that will be presented to a WebSocket server during connection establishment.
+- [nw_ws_options_set_auto_reply_ping(\_:\_:)](nw_ws_options_set_auto_reply_ping%28____%29.md): Configures the connection to automatically reply to Ping messages instead of delivering them to you.
+- [nw_ws_options_set_client_request_handler(\_:\_:\_:)](nw_ws_options_set_client_request_handler%28______%29.md): Sets a handler to react to as a server to inbound WebSocket client handshakes.
+- [nw_ws_options_set_maximum_message_size(\_:\_:)](nw_ws_options_set_maximum_message_size%28____%29.md): Sets the maximum allowed message size, in bytes, to be received by the WebSocket connection.
+- [nw_ws_options_set_skip_handshake(\_:\_:)](nw_ws_options_set_skip_handshake%28____%29.md): Specifies whether the WebSocket protocol skips its handshake and begins framing data once the underlying connection is established.
+- [nw_ws_request_enumerate_additional_headers(\_:\_:)](nw_ws_request_enumerate_additional_headers%28____%29.md): Enumerates additional HTTP headers in a WebSocket message.
+- [nw_ws_request_enumerate_subprotocols(\_:\_:)](nw_ws_request_enumerate_subprotocols%28____%29.md): Enumerates the supported subprotocols in a WebSocket message.
+- [nw_ws_response_add_additional_header(\_:\_:\_:)](nw_ws_response_add_additional_header%28______%29.md): Adds an additional HTTP header to a WebSocket server response.
+- [nw_ws_response_create(\_:\_:)](nw_ws_response_create%28____%29.md): Initializes a WebSocket server response with a status and selected subprotocol.
+- [nw_ws_response_enumerate_additional_headers(\_:\_:)](nw_ws_response_enumerate_additional_headers%28____%29.md): Enumerates the additional HTTP headers in a WebSocket server response.
+- [nw_ws_response_get_selected_subprotocol(\_:)](nw_ws_response_get_selected_subprotocol%28__%29.md): Accesses the selected subprotocol in a WebSocket server response.
+- [nw_ws_response_get_status(\_:)](nw_ws_response_get_status%28__%29.md): Accesses the status of a WebSocket server response.
+
+## See Also
+
+### Reference
+
+- [Network Constants](network-constants.md): Access Network framework constants used in C.
+- [Network Data Types](network-data-types.md)
+
+# Network Functions (Objective-C)
+
+**Framework:** Network  
+**Kind:** API Collection
+
+Access Network framework functions used in C.
+
+## Topics
+
+### Functions
+
+- [nw_advertise_descriptor_create_application_service](nw_advertise_descriptor_create_application_service%28__%29.md)
+- [nw_advertise_descriptor_get_application_service_name](nw_advertise_descriptor_get_application_service_name%28__%29.md)
+- [nw_browse_descriptor_create_application_service](nw_browse_descriptor_create_application_service%28__%29.md)
+- [nw_browse_descriptor_get_application_service_name](nw_browse_descriptor_get_application_service_name%28__%29.md)
+- [nw_connection_group_copy_protocol_metadata](nw_connection_group_copy_protocol_metadata%28____%29.md)
+- [nw_connection_group_copy_protocol_metadata_for_message](nw_connection_group_copy_protocol_metadata_for_message%28______%29.md)
+- [nw_connection_group_extract_connection](nw_connection_group_extract_connection%28______%29.md)
+- [nw_connection_group_reinsert_extracted_connection](nw_connection_group_reinsert_extracted_connection%28____%29.md)
+- [nw_connection_group_set_new_connection_handler](nw_connection_group_set_new_connection_handler%28____%29.md)
+- [nw_data_transfer_report_get_path_radio_type](nw_data_transfer_report_get_path_radio_type%28____%29.md)
+- [nw_endpoint_copy_txt_record](nw_endpoint_copy_txt_record%28__%29.md)
+- [nw_endpoint_get_signature](nw_endpoint_get_signature%28____%29.md)
+- [nw_ethernet_channel_create_with_parameters](nw_ethernet_channel_create_with_parameters%28______%29.md)
+- [nw_ethernet_channel_get_maximum_payload_size](nw_ethernet_channel_get_maximum_payload_size%28__%29.md)
+- [nw_framer_copy_options](nw_framer_copy_options%28__%29.md)
+- [nw_framer_options_copy_object_value](nw_framer_options_copy_object_value%28____%29.md)
+- [nw_framer_options_set_object_value](nw_framer_options_set_object_value%28______%29.md)
+- [nw_group_descriptor_create_multiplex](nw_group_descriptor_create_multiplex%28__%29.md)
+- [nw_ip_options_set_disable_multicast_loopback](nw_ip_options_set_disable_multicast_loopback%28____%29.md)
+- [nw_listener_create_with_launchd_key](nw_listener_create_with_launchd_key%28____%29.md)
+- [nw_listener_set_new_connection_group_handler](nw_listener_set_new_connection_group_handler%28____%29.md)
+- [nw_parameters_create_application_service](nw_parameters_create_application_service%28%29.md)
+- [nw_path_get_unsatisfied_reason](nw_path_get_unsatisfied_reason%28__%29.md)
+- [nw_path_monitor_create_for_ethernet_channel](nw_path_monitor_create_for_ethernet_channel%28%29.md)
+- [nw_proxy_config_add_excluded_domain](nw_proxy_config_add_excluded_domain%28____%29.md)
+- [nw_proxy_config_add_match_domain](nw_proxy_config_add_match_domain%28____%29.md)
+- [nw_proxy_config_clear_excluded_domains](nw_proxy_config_clear_excluded_domains%28__%29.md)
+- [nw_proxy_config_clear_match_domains](nw_proxy_config_clear_match_domains%28__%29.md)
+- [nw_proxy_config_enumerate_excluded_domains](nw_proxy_config_enumerate_excluded_domains%28____%29.md)
+- [nw_proxy_config_enumerate_match_domains](nw_proxy_config_enumerate_match_domains%28____%29.md)
+- [nw_tcp_options_set_multipath_force_version](nw_tcp_options_set_multipath_force_version%28____%29.md)
+
+## See Also
+
+### Reference
+
+- [Network Enumerations](network-enumerations.md)
+- [Network Constants](network-constants.md): Access Network framework constants used in C.
+- [Network Data Types](network-data-types.md)
+- [Network Macros](network-macros.md)

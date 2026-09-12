@@ -1,0 +1,64 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/proximityreader/proximityreaderdiscovery](https://developer.apple.com/documentation/proximityreader/proximityreaderdiscovery)
+
+# ProximityReaderDiscovery
+
+**Framework:** ProximityReader  
+**Kind:** Class  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+
+
+An object that presents a UI with information about how to use Tap to Pay on iPhone.
+
+## Declaration
+
+```swift
+final class ProximityReaderDiscovery
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use a [ProximityReaderDiscovery](proximityreaderdiscovery.md) object to educate people on how to read contactless credentials with their iPhone. When building a reader interface in your app, include controls to display help information. When a person taps those controls, use this type to present a view controller with information about how to use a particular feature. The system manages the presented view controller, displaying materials to teach people how the system works.
+
+Create a [ProximityReaderDiscovery](proximityreaderdiscovery.md) object in response to requests for help from your app’s interface. Fetch a relevant help topic and present that topic using the [presentContent(\_:from:)](proximityreaderdiscovery/presentcontent%28__from_%29.md) method, as shown in the following example. Present the topic displays a new view controller with information about how to use the relevant features. This view controller remains visible until the person dismisses it, at which point control returns to your app’s current view controller.
+
+```
+let proximityReaderDiscovery = ProximityReaderDiscovery()
+
+Task {
+    do {
+        let content = try await proximityReaderDiscovery.content(for: ProximityReaderDiscovery.Topic.payment(.howToTap))
+        try await proximityReaderDiscovery.presentContent(content, from: myCurrentViewController)
+    } catch {
+        // Handle content display errors.
+    }
+}
+```
+
+## Topics
+
+### Creating a discovery object
+
+- [init()](proximityreaderdiscovery/init%28%29.md): Creates a new proximity reader discovery object.
+
+### Fetching the content to display
+
+- [content(for:)](proximityreaderdiscovery/content%28for_%29.md): Fetches the content for the specified topic.
+- [ProximityReaderDiscovery.Topic](proximityreaderdiscovery/topic.md): The topics you can present to someone.
+- [ProximityReaderDiscovery.Content](proximityreaderdiscovery/content.md): A type that represents content you can display on the current device.
+- [contentList](proximityreaderdiscovery/contentlist.md): The content you can present for the current device.
+
+### Displaying the information
+
+- [presentContent(\_:from:)](proximityreaderdiscovery/presentcontent%28__from_%29.md): Presents a sheet that teaches merchants how to use the specified feature.
+
+### Getting relevant errors
+
+- [ProximityReaderDiscovery.ContentError](proximityreaderdiscovery/contenterror.md): Errors that indicate a problem occurred when getting or showing content.
+
+## Relationships
+
+### Conforms To
+
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)

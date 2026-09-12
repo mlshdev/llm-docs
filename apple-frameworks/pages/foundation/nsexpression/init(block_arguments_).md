@@ -1,0 +1,95 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsexpression/init(block:arguments:)](https://developer.apple.com/documentation/foundation/nsexpression/init(block:arguments:))
+
+# init(block:arguments:) (Swift)
+
+**Framework:** Foundation  
+**Kind:** Initializer  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.6+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Creates an expression object that uses the block for evaluating objects.
+
+## Declaration
+
+```swift
+init(block: @escaping (Any?, [NSExpression], NSMutableDictionary?) -> Any, arguments: [NSExpression]?)
+```
+
+## Parameters
+
+- `block`: The Block is applied to the object to be evaluated.
+
+  The Block takes three arguments and returns a value:
+
+  - **evaluatedObject**: The object to be evaluated.
+  - **expressions**: An array of predicate expressions that evaluates to a collection.
+  - **context**: A dictionary that the expression can use to store temporary state for one predicate evaluation.
+
+  Note that `context` is mutable, and that it can only be accessed during the evaluation of the expression. You must not attempt to retain it for use elsewhere. \]
+
+  The Block returns the `evaluatedObject`.
+- `arguments`: An array containing `NSExpression` objects that will be used as parameters during the invocation of selector.
+
+  For a selector taking no parameters, the array should be empty. For a selector taking one or more parameters, the array should contain one `NSExpression` object which will evaluate to an instance of the appropriate type for each parameter.
+
+  If there is a mismatch between the number of parameters expected and the number you provide during evaluation, an exception may be raised or missing parameters may simply be replaced by `nil` (which occurs depends on how many parameters are provided, and whether you have over- or underflow).
+
+  See [init(forFunction:arguments:)](init%28forfunction_arguments_%29.md) for a complete list of arguments.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An expression that filters a collection using the specified Block.
+
+## See Also
+
+### Related Documentation
+
+- [expressionBlock](expressionblock.md): The block that executes to evaluate the expression.
+
+# expressionForBlock:arguments: (Objective-C)
+
+**Framework:** Foundation  
+**Kind:** Type Method  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.6+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Creates an expression object that uses the block for evaluating objects.
+
+## Declaration
+
+```objectivec
++ (NSExpression *) expressionForBlock:(id (^)(id evaluatedObject, NSArray<NSExpression *> *expressions, NSMutableDictionary *context)) block arguments:(NSArray<NSExpression *> *) arguments;
+```
+
+## Parameters
+
+- `block`: The Block is applied to the object to be evaluated.
+
+  The Block takes three arguments and returns a value:
+
+  - **evaluatedObject**: The object to be evaluated.
+  - **expressions**: An array of predicate expressions that evaluates to a collection.
+  - **context**: A dictionary that the expression can use to store temporary state for one predicate evaluation.
+
+  Note that `context` is mutable, and that it can only be accessed during the evaluation of the expression. You must not attempt to retain it for use elsewhere. \]
+
+  The Block returns the `evaluatedObject`.
+- `arguments`: An array containing `NSExpression` objects that will be used as parameters during the invocation of selector.
+
+  For a selector taking no parameters, the array should be empty. For a selector taking one or more parameters, the array should contain one `NSExpression` object which will evaluate to an instance of the appropriate type for each parameter.
+
+  If there is a mismatch between the number of parameters expected and the number you provide during evaluation, an exception may be raised or missing parameters may simply be replaced by `nil` (which occurs depends on how many parameters are provided, and whether you have over- or underflow).
+
+  See [expressionForFunction:arguments:](init%28forfunction_arguments_%29.md) for a complete list of arguments.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An expression that filters a collection using the specified Block.
+
+## See Also
+
+### Related Documentation
+
+- [expressionBlock](expressionblock.md): The block that executes to evaluate the expression.

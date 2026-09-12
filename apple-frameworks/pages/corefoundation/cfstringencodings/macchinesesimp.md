@@ -1,0 +1,65 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corefoundation/cfstringencodings/macchinesesimp](https://developer.apple.com/documentation/corefoundation/cfstringencodings/macchinesesimp)
+
+# CFStringEncodings.macChineseSimp (Swift)
+
+**Framework:** Core Foundation  
+**Kind:** Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+## Declaration
+
+```swift
+case macChineseSimp
+```
+
+## See Also
+
+### Enumeration Cases
+
+- [CFStringEncodings.ANSEL](ansel.md): ANSEL (ANSI Z39.47).
+- [CFStringEncodings.big5](big5.md): Big-5 (has variants)
+- [CFStringEncodings.big5_E](big5_e.md): Taiwan Big-5E standard.
+- [CFStringEncodings.big5_HKSCS_1999](big5_hkscs_1999.md): Big-5 with Hong Kong special char set supplement.
+- [CFStringEncodings.CNS_11643_92_P1](cns_11643_92_p1.md): CNS 11643-1992 plane 1.
+- [CFStringEncodings.CNS_11643_92_P2](cns_11643_92_p2.md): CNS 11643-1992 plane 2.
+- [CFStringEncodings.CNS_11643_92_P3](cns_11643_92_p3.md): CNS 11643-1992 plane 3 (was plane 14 in 1986 version).
+- [CFStringEncodings.dosArabic](dosarabic.md): Code page 864.
+- [CFStringEncodings.dosBalticRim](dosbalticrim.md): Code page 775.
+- [CFStringEncodings.dosCanadianFrench](doscanadianfrench.md): Code page 863.
+- [CFStringEncodings.dosChineseSimplif](doschinesesimplif.md): Code page 936, also for Windows.
+- [CFStringEncodings.dosChineseTrad](doschinesetrad.md): Code page 950, also for Windows.
+- [CFStringEncodings.dosCyrillic](doscyrillic.md): Code page 855, IBM Cyrillic.
+- [CFStringEncodings.dosGreek](dosgreek.md): Code page 737 (formerly code page 437G).
+- [CFStringEncodings.dosGreek1](dosgreek1.md): Code page 851.
+
+# kCFStringEncodingMacChineseSimp (Objective-C)
+
+**Framework:** Core Foundation  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+## Declaration
+
+```objectivec
+kCFStringEncodingMacChineseSimp
+```
+
+## See Also
+
+### Enumeration Cases
+
+- [kCFStringEncodingANSEL](ansel.md): ANSEL (ANSI Z39.47).
+- [kCFStringEncodingBig5](big5.md): Big-5 (has variants)
+- [kCFStringEncodingBig5_E](big5_e.md): Taiwan Big-5E standard.
+- [kCFStringEncodingBig5_HKSCS_1999](big5_hkscs_1999.md): Big-5 with Hong Kong special char set supplement.
+- [kCFStringEncodingCNS_11643_92_P1](cns_11643_92_p1.md): CNS 11643-1992 plane 1.
+- [kCFStringEncodingCNS_11643_92_P2](cns_11643_92_p2.md): CNS 11643-1992 plane 2.
+- [kCFStringEncodingCNS_11643_92_P3](cns_11643_92_p3.md): CNS 11643-1992 plane 3 (was plane 14 in 1986 version).
+- [kCFStringEncodingDOSArabic](dosarabic.md): Code page 864.
+- [kCFStringEncodingDOSBalticRim](dosbalticrim.md): Code page 775.
+- [kCFStringEncodingDOSCanadianFrench](doscanadianfrench.md): Code page 863.
+- [kCFStringEncodingDOSChineseSimplif](doschinesesimplif.md): Code page 936, also for Windows.
+- [kCFStringEncodingDOSChineseTrad](doschinesetrad.md): Code page 950, also for Windows.
+- [kCFStringEncodingDOSCyrillic](doscyrillic.md): Code page 855, IBM Cyrillic.
+- [kCFStringEncodingDOSGreek](dosgreek.md): Code page 737 (formerly code page 437G).
+- [kCFStringEncodingDOSGreek1](dosgreek1.md): Code page 851.

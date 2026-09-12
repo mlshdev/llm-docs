@@ -1,0 +1,57 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/backgroundassets/assetpackmanager/url(for:)](https://developer.apple.com/documentation/backgroundassets/assetpackmanager/url(for:))
+
+# url(for:)
+
+**Framework:** Background Assets  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+Returns a URL for the specified relative path.
+
+## Declaration
+
+```swift
+nonisolated func url(for path: FilePath) throws -> URL
+```
+
+## Parameters
+
+- `path`: The relative path.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The URL to the item.
+
+<a id="discussion"></a>
+
+## Discussion
+
+> **Warning**
+
+> Don’t persist the returned URL beyond the lifetime of the current process.
+
+> **Note**
+
+> This method will return a well formed URL even if no item exists at the specified relative path in any asset pack, in which case any attempts to get its contents—whether it’s a file or a directory—will fail.
+
+All asset packs share the same namespace, so you can treat the overall collection of downloaded asset packs as if it were a single root directory that contains all of your subdirectories and asset files, regardless of the specific asset pack in which any particular file resides. Unlike [contents(at:searchingInAssetPackWithID:options:)](contents%28at_searchinginassetpackwithid_options_%29.md) and [descriptor(for:searchingInAssetPackWithID:)](descriptor%28for_searchinginassetpackwithid_%29.md), this method supports retrieving entire directories—including packages—in which case it merges the corresponding slices of the shared logical directory from all downloaded asset packs that contain such slices. If there’s a path collision across multiple asset packs, then it’s undefined from which asset pack an individual file will be resolved.
+
+> **Warning**
+
+> This method is less efficient than are [contents(at:searchingInAssetPackWithID:options:)](contents%28at_searchinginassetpackwithid_options_%29.md) and [descriptor(for:searchingInAssetPackWithID:)](descriptor%28for_searchinginassetpackwithid_%29.md); use those methods instead if you can do so. In particular, this method shouldn’t be used to get the URL to the root of the shared asset-pack namespace. Don’t use this method to block the main thread.
+
+> **Throws**
+
+> When the path isn’t relative or when some other error occurs while finding the requested item.
+
+## See Also
+
+### Accessing asset contents
+
+- [contents(at:searchingInAssetPackWithID:options:)](contents%28at_searchinginassetpackwithid_options_%29.md): Returns the contents of an asset file at the specified relative path.
+- [contents(at:asLocalizedFor:options:)](contents%28at_aslocalizedfor_options_%29.md): Returns the contents of a localized asset file at the specified relative path.
+- [descriptor(for:searchingInAssetPackWithID:)](descriptor%28for_searchinginassetpackwithid_%29.md): Opens and returns a file descriptor for an asset file at the specified relative path.
+- [descriptor(for:asLocalizedFor:)](descriptor%28for_aslocalizedfor_%29.md): Opens and returns a file descriptor for a localized asset file at the specified relative path.
+- [url(for:asLocalizedFor:)](url%28for_aslocalizedfor_%29.md): Returns a URL for the specified relative path.

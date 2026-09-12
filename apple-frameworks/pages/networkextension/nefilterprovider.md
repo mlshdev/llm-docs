@@ -1,0 +1,188 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/networkextension/nefilterprovider](https://developer.apple.com/documentation/networkextension/nefilterprovider)
+
+# NEFilterProvider (Swift)
+
+**Framework:** Network Extension  
+**Kind:** Class  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.15+ · visionOS 1.0+
+
+An abstract base class shared by content filters.
+
+## Declaration
+
+```swift
+class NEFilterProvider
+```
+
+<a id="overview"></a>
+
+## Overview
+
+A Network Content Filter is made up of two Filter Provider extensions:
+
+The **Filter Data Provider extension** examines network content as it passes through the network stack on the device and decides if the network content should be blocked or allowed to pass on to its final destination.
+
+Because the Filter Data Provider extension has access to all of the network content flowing through the device, it runs in a very restrictive sandbox. The sandbox prevents the Filter Data Provider extension from moving network content outside of its address space by blocking all network access, IPC, and disk write operations.
+
+The Filter Data Provider extension is implemented by creating a custom subclass of the [NEFilterDataProvider](nefilterdataprovider.md) class.
+
+The **Filter Control Provider extension** is responsible for feeding information to the Filter Data Provider extension so that the Filter Data Provider extension can do its job.
+
+For example, the Filter Control Provider extension can be notified by the Filter Data Provider extension that it does not have enough information to make a decision about a particular flow of network content. The Filter Control Provider extension can then download more filtering rules from a server and write the rules to a location where the Filter Data Provider can access them.
+
+The Filter Control Provider extension is implemented by creating a custom subclass of the [NEFilterControlProvider](nefiltercontrolprovider.md) class.
+
+> **Important**
+
+>  To use the [NEFilterProvider](nefilterprovider.md) class, you must enable the Network Extensions capability in Xcode and select the Content Filter capability. See [Configure network extensions](http://help.apple.com/xcode/mac/current/#/dev0b2ef6f08).
+
+<a id="Subclassing-Notes"></a>
+
+### Subclassing Notes
+
+`NEFilterProvider` should not be subclassed directly. Instead, you should create subclasses of `NEFilterProvider’s` subclasses and override the following methods:
+
+<a id="Methods-to-Override"></a>
+
+#### Methods to Override
+
+- [startFilter(completionHandler:)](nefilterprovider/startfilter%28completionhandler_%29.md)
+- [stopFilter(with:completionHandler:)](nefilterprovider/stopfilter%28with_completionhandler_%29.md)
+
+## Topics
+
+### Managing the filter life cycle
+
+- [startFilter(completionHandler:)](nefilterprovider/startfilter%28completionhandler_%29.md): Start the filter.
+- [stopFilter(with:completionHandler:)](nefilterprovider/stopfilter%28with_completionhandler_%29.md): Stop the filter.
+
+### Getting the filter configuration
+
+- [filterConfiguration](nefilterprovider/filterconfiguration.md): An [NEFilterProviderConfiguration](nefilterproviderconfiguration.md) object containing the current filter configuration.
+
+### Receiving reports
+
+- [handle(\_:)](nefilterprovider/handle%28__%29.md): Receives a report from the framework.
+
+### Handling errors
+
+- [NEFilterErrorDomain](nefiltererrordomain.md): The domain for errors resulting from calls to the filter manager.
+- [NEFilterManagerError](nefiltermanagererror.md): Error codes specific to filter managers.
+
+## Relationships
+
+### Inherits From
+
+- [NEProvider](neprovider.md)
+
+### Inherited By
+
+- [NEFilterControlProvider](nefiltercontrolprovider.md)
+- [NEFilterDataProvider](nefilterdataprovider.md)
+- [NEFilterPacketProvider](nefilterpacketprovider.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Data and control providers
+
+- [NEFilterDataProvider](nefilterdataprovider.md): The principal class for a filter data provider extension.
+- [NEFilterControlProvider](nefiltercontrolprovider.md): The principal class for a filter control provider extension.
+- [NEFilterPacketProvider](nefilterpacketprovider.md): A filter provider that evaluates network packets and decides whether to block, allow, or delay the packets.
+
+# NEFilterProvider (Objective-C)
+
+**Framework:** Network Extension  
+**Kind:** Class  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.15+ · visionOS 1.0+
+
+An abstract base class shared by content filters.
+
+## Declaration
+
+```objectivec
+@interface NEFilterProvider : NEProvider
+```
+
+<a id="overview"></a>
+
+## Overview
+
+A Network Content Filter is made up of two Filter Provider extensions:
+
+The **Filter Data Provider extension** examines network content as it passes through the network stack on the device and decides if the network content should be blocked or allowed to pass on to its final destination.
+
+Because the Filter Data Provider extension has access to all of the network content flowing through the device, it runs in a very restrictive sandbox. The sandbox prevents the Filter Data Provider extension from moving network content outside of its address space by blocking all network access, IPC, and disk write operations.
+
+The Filter Data Provider extension is implemented by creating a custom subclass of the [NEFilterDataProvider](nefilterdataprovider.md) class.
+
+The **Filter Control Provider extension** is responsible for feeding information to the Filter Data Provider extension so that the Filter Data Provider extension can do its job.
+
+For example, the Filter Control Provider extension can be notified by the Filter Data Provider extension that it does not have enough information to make a decision about a particular flow of network content. The Filter Control Provider extension can then download more filtering rules from a server and write the rules to a location where the Filter Data Provider can access them.
+
+The Filter Control Provider extension is implemented by creating a custom subclass of the [NEFilterControlProvider](nefiltercontrolprovider.md) class.
+
+> **Important**
+
+>  To use the [NEFilterProvider](nefilterprovider.md) class, you must enable the Network Extensions capability in Xcode and select the Content Filter capability. See [Configure network extensions](http://help.apple.com/xcode/mac/current/#/dev0b2ef6f08).
+
+<a id="Subclassing-Notes"></a>
+
+### Subclassing Notes
+
+`NEFilterProvider` should not be subclassed directly. Instead, you should create subclasses of `NEFilterProvider’s` subclasses and override the following methods:
+
+<a id="Methods-to-Override"></a>
+
+#### Methods to Override
+
+- [startFilterWithCompletionHandler:](nefilterprovider/startfilter%28completionhandler_%29.md)
+- [stopFilterWithReason:completionHandler:](nefilterprovider/stopfilter%28with_completionhandler_%29.md)
+
+## Topics
+
+### Managing the filter life cycle
+
+- [startFilterWithCompletionHandler:](nefilterprovider/startfilter%28completionhandler_%29.md): Start the filter.
+- [stopFilterWithReason:completionHandler:](nefilterprovider/stopfilter%28with_completionhandler_%29.md): Stop the filter.
+
+### Getting the filter configuration
+
+- [filterConfiguration](nefilterprovider/filterconfiguration.md): An [NEFilterProviderConfiguration](nefilterproviderconfiguration.md) object containing the current filter configuration.
+
+### Receiving reports
+
+- [handleReport:](nefilterprovider/handle%28__%29.md): Receives a report from the framework.
+
+### Handling errors
+
+- [NEFilterErrorDomain](nefiltererrordomain.md): The domain for errors resulting from calls to the filter manager.
+- [NEFilterManagerError](nefiltermanagererror.md): Error codes specific to filter managers.
+
+## Relationships
+
+### Inherits From
+
+- [NEProvider](neprovider.md)
+
+### Inherited By
+
+- [NEFilterControlProvider](nefiltercontrolprovider.md)
+- [NEFilterDataProvider](nefilterdataprovider.md)
+- [NEFilterPacketProvider](nefilterpacketprovider.md)
+
+## See Also
+
+### Data and control providers
+
+- [NEFilterDataProvider](nefilterdataprovider.md): The principal class for a filter data provider extension.
+- [NEFilterControlProvider](nefiltercontrolprovider.md): The principal class for a filter control provider extension.
+- [NEFilterPacketProvider](nefilterpacketprovider.md): A filter provider that evaluates network packets and decides whether to block, allow, or delay the packets.

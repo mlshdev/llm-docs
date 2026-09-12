@@ -1,0 +1,32 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/pcidriverkit/kpci2pcioffsetmemoryrange](https://developer.apple.com/documentation/pcidriverkit/kpci2pcioffsetmemoryrange)
+
+# kPCI2PCIOffsetMemoryRange
+
+**Interface language:** Objective-C
+
+**Framework:** PCIDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit · macOS
+
+The offset to the memory base and memory limit registers.
+
+## Declaration
+
+```objectivec
+kPCI2PCIOffsetMemoryRange
+```
+
+## See Also
+
+### Offsets
+
+- [kPCI2PCIOffsetPrimaryBus](kpci2pcioffsetprimarybus.md): The offset to the primary bus number register.
+- [kPCI2PCIOffsetSecondaryBus](kpci2pcioffsetsecondarybus.md): The offset to the secondary bus number register.
+- [kPCI2PCIOffsetSubordinateBus](kpci2pcioffsetsubordinatebus.md): The offset to the subordinate bus number register.
+- [kPCI2PCIOffsetSecondaryLT](kpci2pcioffsetsecondarylt.md): The offset to the secondary latency timer register.
+- [kPCI2PCIOffsetIORange](kpci2pcioffsetiorange.md): The offset to the I/O base upper and I/O limit upper registers.
+- [kPCI2PCIOffsetPrefetchMemoryRange](kpci2pcioffsetprefetchmemoryrange.md): The offset to the prefetchable memory base and prefetchable memory limit registers.
+- [kPCI2PCIOffsetPrefetchUpperBase](kpci2pcioffsetprefetchupperbase.md): The offset to the prefetchable base upper 32 bits register.
+- [kPCI2PCIOffsetPrefetchUpperLimit](kpci2pcioffsetprefetchupperlimit.md): The offset to the prefetchable limit upper 32 bits registers.
+- [kPCI2PCIOffsetUpperIORange](kpci2pcioffsetupperiorange.md): The offset to the I/O base upper and I/O limit upper registers.
+- [kPCI2PCIOffsetBridgeControl](kpci2pcioffsetbridgecontrol.md): The offset to the bridge control register.

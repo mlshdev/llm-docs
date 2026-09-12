@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/buildbetadetail/attributes-data.dictionary](https://developer.apple.com/documentation/appstoreconnectapi/buildbetadetail/attributes-data.dictionary)
+
+# BuildBetaDetail.Attributes
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.0+
+
+Attributes that describe a Build Beta Details resource.
+
+## Declaration
+
+```
+object BuildBetaDetail.Attributes
+```
+
+## Properties
+
+- `autoNotifyEnabled` — `boolean`: A Boolean value that enables you to send test invitations to users automatically when the build is available to external groups.
+- `externalBuildState` — `ExternalBetaState`: A state that indicates if the build is available for external testing.
+- `internalBuildState` — `InternalBetaState`: A state that indicates if the build is available for internal testing.
+
+## See Also
+
+### Related Documentation
+
+- [Build Beta Details](../build-beta-details.md): TestFlight-specific information about beta builds.
+
+### Objects
+
+- [BuildBetaDetail.Relationships](relationships-data.dictionary.md): The relationships you include in the request and those on which you can operate.

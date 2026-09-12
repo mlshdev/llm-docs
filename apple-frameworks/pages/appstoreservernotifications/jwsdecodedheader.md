@@ -1,0 +1,51 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appstoreservernotifications/jwsdecodedheader](https://developer.apple.com/documentation/appstoreservernotifications/jwsdecodedheader)
+
+# JWSDecodedHeader
+
+**Interface language:** Data
+
+**Framework:** App Store Server Notifications  
+**Kind:** Object  
+**Availability:** App Store Server Notifications 2.0+
+
+A decoded JSON Web Signature header containing transaction or renewal information.
+
+## Declaration
+
+```
+object JWSDecodedHeader
+```
+
+## Properties
+
+- `alg` — `alg`: The algorithm used for signing the JSON Web Signature (JWS).
+- `x5c` — `x5c`: The X.509 certificate chain that corresponds to the key that the App Store used to secure the JWS.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+All JWS representations, including the [signedPayload](signedpayload.md), contain a JWS header. When you Base64 URL-decode the header, use the [JWSDecodedHeader](../appstoreserverapi/jwsdecodedheader.md) object to read its contents. Use the information in the [JWSDecodedHeader](jwsdecodedheader.md) to validate the JWS signature. For more information about validating signatures, see the JSON Web Signature (JWS) [IETF RFC 7515](https://datatracker.ietf.org/doc/html/rfc7515) specification.
+
+The App Store signs transaction and renewal information that you receive in [App Store Server Notifications V2](app-store-server-notifications-v2.md) and in the [App Store Server API](../appstoreserverapi.md). It uses the following `x5c` certificate chain, in the following order:
+
+1. A certificate that contains the public key that corresponds to the key the App Store uses to digitally sign the JWS. Section 4.11.10 Mac App Store Receipt Signing Certificates of the [Apple Inc. Certificate Practice Statement Worldwide Developer Relations](https://images.apple.com/certificateauthority/pdf/Apple_WWDR_CPS_v1.26.pdf) document defines the custom extensions this certificate uses.
+2. An Apple intermediate certificate that contains an extension with the extension ID for `Apple Worldwide Developer Relations (1.2.840.113635.100.6.2.1)`.
+3. An Apple root certificate.
+
+For more information, or to download Apple’s root and intermediate certificates, see [Apple PKI](https://www.apple.com/certificateauthority/).
+
+## Topics
+
+### JWS header types
+
+- [alg](alg.md): The JSON Web Signature (JWS) header parameter that identifies the cryptographic algorithm used to secure the JWS.
+- [x5c](x5c.md): The JSON Web Signature (JWS) header parameter that contains the certificate chain that corresponds to the key used to digitally sign the JWS.
+
+## See Also
+
+### JWS header and payload data types
+
+- [JWSTransactionDecodedPayload](jwstransactiondecodedpayload.md): A decoded payload that contains transaction information.
+- [JWSRenewalInfoDecodedPayload](jwsrenewalinfodecodedpayload.md): A decoded payload containing subscription renewal information for an auto-renewable subscription.
+- [Transaction data types](transaction-data-types.md): Refer to these data types for decoded transaction and renewal information payloads.

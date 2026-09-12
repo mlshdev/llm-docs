@@ -1,0 +1,81 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/systemconfiguration/scdynamicstoreaddtemporaryvalue(_:_:_:)](https://developer.apple.com/documentation/systemconfiguration/scdynamicstoreaddtemporaryvalue(_:_:_:))
+
+# SCDynamicStoreAddTemporaryValue(\_:\_:\_:) (Swift)
+
+**Framework:** System Configuration  
+**Kind:** Function  
+**Availability:** macOS 10.1+
+
+Temporarily adds the specified key-value pair to the dynamic store, if no such key already exists.
+
+## Declaration
+
+```swift
+func SCDynamicStoreAddTemporaryValue(_ store: SCDynamicStore, _ key: CFString, _ value: CFPropertyList) -> Bool
+```
+
+## Parameters
+
+- `store`: The dynamic store session.
+- `key`: The key of the value to add to the dynamic store.
+- `value`: The value to add to the dynamic store.
+
+<a id="return-value"></a>
+
+## Return Value
+
+`TRUE` if the key was added; `FALSE` if the key was already present in the dynamic store or if an error occurred.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Unless the key is updated by another session, the key-value pair added by this function is removed automatically when the session is closed.
+
+## See Also
+
+### Adding or Updating Keys and Values
+
+- [SCDynamicStoreAddValue(\_:\_:\_:)](scdynamicstoreaddvalue%28______%29.md): Adds the specified key-value pair to the dynamic store, if no such key already exists.
+- [SCDynamicStoreSetMultiple(\_:\_:\_:\_:)](scdynamicstoresetmultiple%28________%29.md): Updates multiple values in the dynamic store.
+- [SCDynamicStoreSetValue(\_:\_:\_:)](scdynamicstoresetvalue%28______%29.md): Adds or replaces a value in the dynamic store for the specified key.
+
+# SCDynamicStoreAddTemporaryValue (Objective-C)
+
+**Framework:** System Configuration  
+**Kind:** Function  
+**Availability:** macOS 10.1+
+
+Temporarily adds the specified key-value pair to the dynamic store, if no such key already exists.
+
+## Declaration
+
+```objectivec
+Boolean SCDynamicStoreAddTemporaryValue(SCDynamicStoreRef store, CFStringRef key, CFPropertyListRef value);
+```
+
+## Parameters
+
+- `store`: The dynamic store session.
+- `key`: The key of the value to add to the dynamic store.
+- `value`: The value to add to the dynamic store.
+
+<a id="return-value"></a>
+
+## Return Value
+
+`TRUE` if the key was added; `FALSE` if the key was already present in the dynamic store or if an error occurred.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Unless the key is updated by another session, the key-value pair added by this function is removed automatically when the session is closed.
+
+## See Also
+
+### Adding or Updating Keys and Values
+
+- [SCDynamicStoreAddValue](scdynamicstoreaddvalue%28______%29.md): Adds the specified key-value pair to the dynamic store, if no such key already exists.
+- [SCDynamicStoreSetMultiple](scdynamicstoresetmultiple%28________%29.md): Updates multiple values in the dynamic store.
+- [SCDynamicStoreSetValue](scdynamicstoresetvalue%28______%29.md): Adds or replaces a value in the dynamic store for the specified key.

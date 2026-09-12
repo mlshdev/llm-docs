@@ -1,0 +1,36 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/review-submission-items](https://developer.apple.com/documentation/appstoreconnectapi/review-submission-items)
+
+# Review submission items
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** API Collection
+
+Manage the contents of your review submission, which can include your App Store version, App Store version experiments, custom product page versions, and in-app events.
+
+## Topics
+
+### Endpoints
+
+- [Update a review submission item](patch-v1-reviewsubmissionitems-_id_.md): Update a specific review submission item.
+- [Create a Review Submission Item](post-v1-reviewsubmissionitems.md): Create a new review submission item.
+- [Remove a review submission item](delete-v1-reviewsubmissionitems-_id_.md): Remove a specific item from a review submission.
+
+### Objects
+
+- [ReviewSubmissionItemCreateRequest](reviewsubmissionitemcreaterequest.md): The request body you use to create a review submission item.
+- [ReviewSubmissionItemUpdateRequest](reviewsubmissionitemupdaterequest.md): The request body you use to update a review submission item update request.
+- [ReviewSubmissionItemsResponse](reviewsubmissionitemsresponse.md): The response body for endpoints that list items in a review submission.
+- [ReviewSubmissionItemResponse](reviewsubmissionitemresponse.md): The response body for endpoints that create, read, or modify a single review submission item.
+
+## See Also
+
+### App Store Review Submissions
+
+- [Review submissions](review-submissions.md): Create and manage your submissions for review, which can include your App Store version, App Store version experiments, custom product page versions, and in-app events.
+- [App Store review details](app-store-review-details.md): Manage the required information you provide for App Review.
+- [App Clip App Store review details](app-clip-app-store-review-details.md): Manage required App Clip information you provide for App Review.
+- [App Store review attachments](app-store-review-attachments.md): Manage the attachments you upload to App Store Connect for App Review.
+- [App Store version submissions](app-store-version-submissions.md): Submit versions of your app to App Review.
+- [Actors](actors.md): Get information about who or which service made a review submission.

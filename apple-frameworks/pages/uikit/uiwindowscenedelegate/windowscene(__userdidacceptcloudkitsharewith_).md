@@ -1,0 +1,75 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiwindowscenedelegate/windowscene(_:userdidacceptcloudkitsharewith:)](https://developer.apple.com/documentation/uikit/uiwindowscenedelegate/windowscene(_:userdidacceptcloudkitsharewith:))
+
+# windowScene(\_:userDidAcceptCloudKitShareWith:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · tvOS 13.0+ · visionOS 1.0+
+
+Tells the delegate that the window scene now has access to shared information in CloudKit.
+
+## Declaration
+
+```swift
+optional func windowScene(_ windowScene: UIWindowScene, userDidAcceptCloudKitShareWith cloudKitShareMetadata: CKShareMetadata)
+```
+
+## Parameters
+
+- `windowScene`: The window scene object receiving the metadata.
+- `cloudKitShareMetadata`: Information about the CloudKit data that is now available to the app. Use this object to retrieve information about the [CKShare](../../cloudkit/ckshare.md) object and the associated records.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this method to respond to a CloudKit Sharing invitation. In your implementation, accept the share by scheduling a [CKAcceptSharesOperation](../../cloudkit/ckacceptsharesoperation.md) object that contains the metadata object in the `cloudKitShareMetadata` parameter. After your operation object finishes successfully, you can begin fetching records and incorporating the resulting data into your app. Alternatively, if your app uses Core Data and [NSPersistentCloudKitContainer](../../coredata/nspersistentcloudkitcontainer.md), accept the share by calling the container’s [acceptShareInvitationsFromMetadata:intoPersistentStore:completion:](../../coredata/nspersistentcloudkitcontainer/acceptshareinvitationsfrommetadata_intopersistentstore_completion_.md) method.
+
+> **Note**
+
+>  To use this method in a SwiftUI app, you must first add scene and application delegates to your project and configure your app to use them. For more information, see [Accepting Share Invitations in a SwiftUI App](../../coredata/accepting-share-invitations-in-a-swiftui-app.md).
+
+The system calls this method only when your app is running and has an existing scene. If your app isn’t running, the system includes the share metadata in the [UIScene.ConnectionOptions](../uiscene/connectionoptions.md) object it passes to the [init(session:connectionOptions:)](../uiscene/init%28session_connectionoptions_%29.md) method when it creates your app’s first scene.
+
+## See Also
+
+### Performing tasks
+
+- [windowScene(\_:performActionFor:completionHandler:)](windowscene%28__performactionfor_completionhandler_%29.md): Asks the delegate to perform the user-selected action.
+
+# windowScene:userDidAcceptCloudKitShareWithMetadata: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · tvOS 13.0+ · visionOS 1.0+
+
+Tells the delegate that the window scene now has access to shared information in CloudKit.
+
+## Declaration
+
+```objectivec
+- (void) windowScene:(UIWindowScene *) windowScene userDidAcceptCloudKitShareWithMetadata:(CKShareMetadata *) cloudKitShareMetadata;
+```
+
+## Parameters
+
+- `windowScene`: The window scene object receiving the metadata.
+- `cloudKitShareMetadata`: Information about the CloudKit data that is now available to the app. Use this object to retrieve information about the [CKShare](../../cloudkit/ckshare.md) object and the associated records.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this method to respond to a CloudKit Sharing invitation. In your implementation, accept the share by scheduling a [CKAcceptSharesOperation](../../cloudkit/ckacceptsharesoperation.md) object that contains the metadata object in the `cloudKitShareMetadata` parameter. After your operation object finishes successfully, you can begin fetching records and incorporating the resulting data into your app. Alternatively, if your app uses Core Data and [NSPersistentCloudKitContainer](../../coredata/nspersistentcloudkitcontainer.md), accept the share by calling the container’s [acceptShareInvitationsFromMetadata:intoPersistentStore:completion:](../../coredata/nspersistentcloudkitcontainer/acceptshareinvitationsfrommetadata_intopersistentstore_completion_.md) method.
+
+> **Note**
+
+>  To use this method in a SwiftUI app, you must first add scene and application delegates to your project and configure your app to use them. For more information, see [Accepting Share Invitations in a SwiftUI App](../../coredata/accepting-share-invitations-in-a-swiftui-app.md).
+
+The system calls this method only when your app is running and has an existing scene. If your app isn’t running, the system includes the share metadata in the [UISceneConnectionOptions](../uiscene/connectionoptions.md) object it passes to the [initWithSession:connectionOptions:](../uiscene/init%28session_connectionoptions_%29.md) method when it creates your app’s first scene.
+
+## See Also
+
+### Performing tasks
+
+- [windowScene:performActionForShortcutItem:completionHandler:](windowscene%28__performactionfor_completionhandler_%29.md): Asks the delegate to perform the user-selected action.

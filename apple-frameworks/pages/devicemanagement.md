@@ -1,0 +1,65 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement](https://developer.apple.com/documentation/devicemanagement)
+
+# Device Management
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Web Service  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.1+ · watchOS 6.0+ · Device Assignment Services 5.0+ · VPP License Management 1.0+
+
+Manage your organization’s devices remotely.
+
+<a id="overview"></a>
+
+## Overview
+
+Deploying a device management service allows administrators to securely and remotely configure enrolled devices. Administrators use Apple School Manager or Apple Business Manager to enroll organization-owned devices, and users can enroll their own devices. After enrolling a device, administrators can update software and device settings; monitor compliance with organizational policies; remotely erase or lock devices; and install apps, books, and subscriptions developed in-house or purchased through Apple School Manager or Apple Business Manager.
+
+A device management service uses the Mobile Device Management (MDM) protocol to establish a communication channel with devices and declarative configurations, as well as configuration profiles to deploy settings.
+
+Device management works with Managed App Distribution and Managed App Configuration to provide a seamless app download and launch experience. For more information, see [ManagedAppDistribution](managedappdistribution.md) and [ManagedApp](managedapp.md).
+
+## Topics
+
+### Implementing device management
+
+- [Device management essentials](devicemanagement/device-management-essentials.md): Set up and maintain connectivity with devices and leverage declarative device management.
+- [Device enrollment](devicemanagement/device-enrollment.md): Implement Automated Device Enrollment and account-driven enrollments.
+- [Identity management](devicemanagement/identity-management.md): Use Platform Single Sign-on and Managed Device Attestation on managed devices.
+- [Content management](devicemanagement/content-management.md): Deploy apps and books to managed devices.
+- [Device life cycle](devicemanagement/device-life-cycle.md): Manage software updates, migrate managed devices, and return them into service.
+
+### MDM protocol
+
+- [Commands and queries](devicemanagement/commands-and-queries.md): Remotely execute management commands and queries on managed devices.
+- [Check-in](devicemanagement/check-in.md): Authenticate devices and maintain push tokens.
+
+### Declarative management
+
+- [Declarations](devicemanagement/devicemanagement-declarations.md): Configure devices using declarative device management.
+- [Status items](devicemanagement/status-items.md): Monitor device state using status reports.
+
+### Configuration profiles
+
+- [Profile-specific payload keys](devicemanagement/profile-specific-payload-keys.md): Apply settings to devices using configuration profiles.
+
+### Miscellaneous data formats
+
+- [ManifestURL](devicemanagement/manifesturl.md): The URL to the app manifest.
+- [PasswordHash](devicemanagement/passwordhash.md): A dictionary that contains the password hash for the account.
+
+### Deployment services
+
+- [Device assignment](devicemanagement/device-assignment.md): Manage devices for your students and employees.
+- [Roster management](devicemanagement/roster-management.md): Manage classes for your students and teachers.
+- [App, Book, and Subscription Management](devicemanagement/app-book-and-subscription-management.md): Manage apps, books, and subscriptions for your students and employees.
+- [Apple School Manager and Apple Business APIs](apple-school-and-business-manager-api.md): Automate device management actions and access data about devices that enroll using Automated Device Enrollment with the Apple School Manager and Apple Business APIs.
+
+### Removed items
+
+- [Removed commands and profiles](devicemanagement/removed-commands-and-profiles.md): Commands and configuration profiles that have been removed and are no longer supported.
+
+### Dictionaries
+
+- [InApps](devicemanagement/inapps.md)

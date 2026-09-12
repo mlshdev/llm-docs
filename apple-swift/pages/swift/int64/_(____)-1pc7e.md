@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/int64/_(_:_:)-1pc7e](https://developer.apple.com/documentation/swift/int64/_(_:_:)-1pc7e)
+
+# ^(\_:\_:)
+
+**Framework:** Swift  
+**Kind:** Operator  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Returns the result of performing a bitwise XOR operation on the two given values.
+
+## Declaration
+
+```swift
+static func ^ (lhs: Int64, rhs: Int64) -> Int64
+```
+
+## Parameters
+
+- `lhs`: An integer value.
+- `rhs`: Another integer value.
+
+<a id="discussion"></a>
+
+## Discussion
+
+A bitwise XOR operation, also known as an exclusive OR operation, results in a value that has each bit set to `1` where *one or the other but not both* of its arguments had that bit set to `1`. For example:
+
+```swift
+let x: UInt8 = 5          // 0b00000101
+let y: UInt8 = 14         // 0b00001110
+let z = x ^ y             // 0b00001011
+// z == 11
+```

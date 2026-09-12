@@ -1,0 +1,848 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/carbon_core/carbon_core_functions](https://developer.apple.com/documentation/coreservices/carbon_core/carbon_core_functions)
+
+# Carbon Core Functions (Swift)
+
+**Framework:** Core Services  
+**Kind:** API Collection
+
+## Topics
+
+### Functions
+
+- [AcquireIconRef(\_:)](../1441852-acquireiconref.md): Deprecated.
+- [CompositeIconRef(\_:\_:\_:)](../1450541-compositeiconref.md): Deprecated.
+- [CreateCompDescriptor(\_:\_:\_:\_:\_:)](../1449155-createcompdescriptor.md): Creates a comparison descriptor that specifies how to compare one or more Apple event objects with either another Apple event object or a descriptor.
+- [CreateLogicalDescriptor(\_:\_:\_:\_:)](../1445212-createlogicaldescriptor.md): Creates a logical descriptor that specifies a logical operator and one or more logical terms for the Apple Event Manager to evaluate.
+- [CreateObjSpecifier(\_:\_:\_:\_:\_:\_:)](../1450244-createobjspecifier.md): Assembles an object specifier that identifies one or more Apple event objects, from other descriptors.
+- [CreateOffsetDescriptor(\_:\_:)](../1444957-createoffsetdescriptor.md): Creates an offset descriptor that specifies the position of an element in relation to the beginning or end of its container.
+- [CreateRangeDescriptor(\_:\_:\_:\_:)](../1444087-createrangedescriptor.md): Creates a range descriptor that specifies a series of consecutive elements in the same container.
+- [DCSCopyTextDefinition(\_:\_:\_:)](../1446842-dcscopytextdefinition.md): Returns the definition associated with the provided text range.
+- [DCSGetTermRangeInString(\_:\_:\_:)](../1450556-dcsgettermrangeinstring.md): Determines the range of the longest word or phrase with respect to an offset.
+- [DisposeAECoerceDescUPP(\_:)](../1448721-disposeaecoercedescupp.md): Disposes of a universal procedure pointer to a function that coerces data stored in a descriptor.
+- [DisposeAECoercePtrUPP(\_:)](../1450664-disposeaecoerceptrupp.md): Disposes of a universal procedure pointer to a function that coerces data stored in a buffer.
+- [DisposeAEDisposeExternalUPP(\_:)](../1447284-disposeaedisposeexternalupp.md): Disposes of a universal procedure pointer to a function that disposes of data supplied to the `AECreateDescFromExternalPtr` function.
+- [DisposeAEEventHandlerUPP(\_:)](../1442066-disposeaeeventhandlerupp.md): Disposes of a universal procedure pointer to an event handler function.
+- [DisposeIndexToUCStringUPP(\_:)](../1390390-disposeindextoucstringupp.md)
+- [DisposeOSLAccessorUPP(\_:)](../1444684-disposeoslaccessorupp.md): Disposes of a universal procedure pointer to an object accessor function.
+- [DisposeOSLAdjustMarksUPP(\_:)](../1443940-disposeosladjustmarksupp.md): Disposes of a universal procedure pointer to an object callback adjust marks function.
+- [DisposeOSLCompareUPP(\_:)](../1448398-disposeoslcompareupp.md): Disposes of a universal procedure pointer to an object callback comparison function.
+- [DisposeOSLCountUPP(\_:)](../1443984-disposeoslcountupp.md): Disposes of a universal procedure pointer to an object callback count function.
+- [DisposeOSLDisposeTokenUPP(\_:)](../1442670-disposeosldisposetokenupp.md): Disposes of a universal procedure pointer to an object callback dispose token function.
+- [DisposeOSLGetErrDescUPP(\_:)](../1446061-disposeoslgeterrdescupp.md): Disposes of a universal procedure pointer to an object callback get error descriptor function.
+- [DisposeOSLGetMarkTokenUPP(\_:)](../1442377-disposeoslgetmarktokenupp.md): Disposes of a universal procedure pointer to an object callback get mark function.
+- [DisposeOSLMarkUPP(\_:)](../1449253-disposeoslmarkupp.md): Disposes of a universal procedure pointer to an object callback mark function.
+- [GetCustomIconsEnabled(\_:\_:)](../1442255-getcustomiconsenabled.md): Deprecated.
+- [GetIconRef(\_:\_:\_:\_:)](../1442776-geticonref.md): Deprecated.
+- [GetIconRefFromFileInfo(\_:\_:\_:\_:\_:\_:\_:\_:)](../1447966-geticonreffromfileinfo.md): Deprecated.
+- [GetIconRefFromFolder(\_:\_:\_:\_:\_:\_:)](../1441712-geticonreffromfolder.md): Deprecated.
+- [GetIconRefFromIconFamilyPtr(\_:\_:\_:)](../1443251-geticonreffromiconfamilyptr.md): Deprecated.
+- [GetIconRefFromTypeInfo(\_:\_:\_:\_:\_:\_:)](../1445758-geticonreffromtypeinfo.md): Deprecated.
+- [GetIconRefOwners(\_:\_:)](../1447221-geticonrefowners.md): Deprecated.
+- [InvokeAECoerceDescUPP(\_:\_:\_:\_:\_:)](../1445450-invokeaecoercedescupp.md): Calls a universal procedure pointer to a function that coerces data stored in a descriptor.
+- [InvokeAECoercePtrUPP(\_:\_:\_:\_:\_:\_:\_:)](../1447079-invokeaecoerceptrupp.md): Calls a universal procedure pointer to a function that coerces data stored in a buffer.
+- [InvokeAEDisposeExternalUPP(\_:\_:\_:\_:)](../1441717-invokeaedisposeexternalupp.md): Calls a dispose external universal procedure pointer.
+- [InvokeAEEventHandlerUPP(\_:\_:\_:\_:)](../1446585-invokeaeeventhandlerupp.md): Calls an event handler universal procedure pointer.
+- [InvokeIndexToUCStringUPP(\_:\_:\_:\_:\_:\_:)](../1390660-invokeindextoucstringupp.md)
+- [InvokeOSLAccessorUPP(\_:\_:\_:\_:\_:\_:\_:\_:)](../1448978-invokeoslaccessorupp.md): Calls an object accessor universal procedure pointer.
+- [InvokeOSLAdjustMarksUPP(\_:\_:\_:\_:)](../1448506-invokeosladjustmarksupp.md): Calls an object callback adjust marks universal procedure pointer.
+- [InvokeOSLCompareUPP(\_:\_:\_:\_:\_:)](../1443110-invokeoslcompareupp.md): Calls an object callback comparison universal procedure pointer.
+- [InvokeOSLCountUPP(\_:\_:\_:\_:\_:)](../1448030-invokeoslcountupp.md): Calls an object callback count universal procedure pointer.
+- [InvokeOSLDisposeTokenUPP(\_:\_:)](../1443963-invokeosldisposetokenupp.md): Calls an object callback dispose token universal procedure pointer.
+- [InvokeOSLGetErrDescUPP(\_:\_:)](../1448420-invokeoslgeterrdescupp.md): Calls an object callback get error descriptor universal procedure pointer.
+- [InvokeOSLGetMarkTokenUPP(\_:\_:\_:\_:)](../1441894-invokeoslgetmarktokenupp.md): Calls an object callback get mark universal procedure pointer.
+- [InvokeOSLMarkUPP(\_:\_:\_:\_:)](../1447444-invokeoslmarkupp.md): Calls an object callback mark universal procedure pointer.
+- [IsDataAvailableInIconRef(\_:\_:)](../1446627-isdataavailableiniconref.md): Deprecated.
+- [IsIconRefComposite(\_:\_:\_:)](../1446300-isiconrefcomposite.md): Deprecated.
+- [IsValidIconRef(\_:)](../1450233-isvalidiconref.md): Deprecated.
+- [LSSetItemAttribute(\_:\_:\_:\_:)](../1446733-lssetitemattribute.md): Deprecated.
+- [LSSharedFileListAddObserver(\_:\_:\_:\_:\_:)](../1445770-lssharedfilelistaddobserver.md): Deprecated.
+- [LSSharedFileListCopyProperty(\_:\_:)](../1444588-lssharedfilelistcopyproperty.md): Deprecated.
+- [LSSharedFileListCopySnapshot(\_:\_:)](../1448112-lssharedfilelistcopysnapshot.md): Deprecated.
+- [LSSharedFileListCreate(\_:\_:\_:)](../1443926-lssharedfilelistcreate.md): Deprecated.
+- [LSSharedFileListGetSeedValue(\_:)](../1444885-lssharedfilelistgetseedvalue.md): Deprecated.
+- [LSSharedFileListGetTypeID()](../1450618-lssharedfilelistgettypeid.md): Deprecated.
+- [LSSharedFileListInsertItemFSRef(\_:\_:\_:\_:\_:\_:\_:)](../1449884-lssharedfilelistinsertitemfsref.md): Deprecated.
+- [LSSharedFileListInsertItemURL(\_:\_:\_:\_:\_:\_:\_:)](../1444471-lssharedfilelistinsertitemurl.md): Deprecated.
+- [LSSharedFileListItemCopyDisplayName(\_:)](../1449716-lssharedfilelistitemcopydisplayn.md): Deprecated.
+- [LSSharedFileListItemCopyIconRef(\_:)](../1442889-lssharedfilelistitemcopyiconref.md): Deprecated.
+- [LSSharedFileListItemCopyProperty(\_:\_:)](../1445074-lssharedfilelistitemcopyproperty.md): Deprecated.
+- [LSSharedFileListItemCopyResolvedURL(\_:\_:\_:)](../1449882-lssharedfilelistitemcopyresolved.md): Deprecated.
+- [LSSharedFileListItemGetID(\_:)](../1443305-lssharedfilelistitemgetid.md): Deprecated.
+- [LSSharedFileListItemGetTypeID()](../1447138-lssharedfilelistitemgettypeid.md): Deprecated.
+- [LSSharedFileListItemMove(\_:\_:\_:)](../1444348-lssharedfilelistitemmove.md): Deprecated.
+- [LSSharedFileListItemRemove(\_:\_:)](../1442025-lssharedfilelistitemremove.md): Deprecated.
+- [LSSharedFileListItemResolve(\_:\_:\_:\_:)](../1447347-lssharedfilelistitemresolve.md): Deprecated.
+- [LSSharedFileListItemSetProperty(\_:\_:\_:)](../1445766-lssharedfilelistitemsetproperty.md): Deprecated.
+- [LSSharedFileListRemoveAllItems(\_:)](../1446389-lssharedfilelistremoveallitems.md): Deprecated.
+- [LSSharedFileListRemoveObserver(\_:\_:\_:\_:\_:)](../1443404-lssharedfilelistremoveobserver.md): Deprecated.
+- [LSSharedFileListSetAuthorization(\_:\_:)](../1446834-lssharedfilelistsetauthorization.md): Deprecated.
+- [LSSharedFileListSetProperty(\_:\_:\_:)](../1448857-lssharedfilelistsetproperty.md): Deprecated.
+- [MDCopyLabelKinds()](../1442887-mdcopylabelkinds.md)
+- [MDCopyLabelWithUUID(\_:)](../1447030-mdcopylabelwithuuid.md)
+- [MDCopyLabelsMatchingExpression(\_:)](../1448237-mdcopylabelsmatchingexpression.md)
+- [MDCopyLabelsWithKind(\_:)](../1444230-mdcopylabelswithkind.md)
+- [MDItemCopyLabels(\_:)](../1442606-mditemcopylabels.md)
+- [MDItemRemoveLabel(\_:\_:)](../1446067-mditemremovelabel.md)
+- [MDItemSetLabel(\_:\_:)](../1442559-mditemsetlabel.md)
+- [MDItemsCopyAttributes(\_:\_:)](../1426975-mditemscopyattributes.md)
+- [MDItemsCreateWithURLs(\_:\_:)](../1427086-mditemscreatewithurls.md)
+- [MDLabelCopyAttribute(\_:\_:)](../1445456-mdlabelcopyattribute.md)
+- [MDLabelCopyAttributeName(\_:)](../1445522-mdlabelcopyattributename.md)
+- [MDLabelCreate(\_:\_:\_:\_:)](../1442614-mdlabelcreate.md)
+- [MDLabelDelete(\_:)](../1449203-mdlabeldelete.md)
+- [MDLabelGetTypeID()](../1446579-mdlabelgettypeid.md)
+- [MDLabelSetAttributes(\_:\_:)](../1449005-mdlabelsetattributes.md)
+- [MDQueryCreateForItems(\_:\_:\_:\_:\_:)](../1413031-mdquerycreateforitems.md)
+- [MDQueryGetSortOptionFlagsForAttribute(\_:\_:)](../1413013-mdquerygetsortoptionflagsforattr.md)
+- [MDQuerySetSortOptionFlagsForAttribute(\_:\_:\_:)](../1413075-mdquerysetsortoptionflagsforattr.md)
+- [MDQuerySetSortOrder(\_:\_:)](../1413096-mdquerysetsortorder.md)
+- [NewAECoerceDescUPP(\_:)](../1445885-newaecoercedescupp.md): Creates a new universal procedure pointer to a function that coerces data stored in a descriptor.
+- [NewAECoercePtrUPP(\_:)](../1449962-newaecoerceptrupp.md): Creates a new universal procedure pointer to a function that coerces data stored in a buffer.
+- [NewAEDisposeExternalUPP(\_:)](../1447774-newaedisposeexternalupp.md): Creates a new universal procedure pointer to a function that disposes of data stored in a buffer.
+- [NewAEEventHandlerUPP(\_:)](../1446862-newaeeventhandlerupp.md): Creates a new universal procedure pointer to an event handler function.
+- [NewIndexToUCStringUPP(\_:)](../1390384-newindextoucstringupp.md)
+- [NewOSLAccessorUPP(\_:)](../1449584-newoslaccessorupp.md): Creates a new universal procedure pointer to an object accessor function.
+- [NewOSLAdjustMarksUPP(\_:)](../1443347-newosladjustmarksupp.md): Creates a new universal procedure pointer to an object callback adjust marks function.
+- [NewOSLCompareUPP(\_:)](../1444603-newoslcompareupp.md): Creates a new universal procedure pointer to an object callback comparison function.
+- [NewOSLCountUPP(\_:)](../1448156-newoslcountupp.md): Creates a new universal procedure pointer to an object callback count function.
+- [NewOSLDisposeTokenUPP(\_:)](../1450027-newosldisposetokenupp.md): Creates a new universal procedure pointer to an object callback dispose token function.
+- [NewOSLGetErrDescUPP(\_:)](../1447934-newoslgeterrdescupp.md): Creates a new universal procedure pointer to an object callback get error descriptor function.
+- [NewOSLGetMarkTokenUPP(\_:)](../1445166-newoslgetmarktokenupp.md): Creates a new universal procedure pointer to an object callback get mark function.
+- [NewOSLMarkUPP(\_:)](../1446942-newoslmarkupp.md): Creates a new universal procedure pointer to an object callback mark function.
+- [OverrideIconRef(\_:\_:)](../1445253-overrideiconref.md): Deprecated.
+- [ReadIconFromFSRef(\_:\_:)](../1444939-readiconfromfsref.md): Deprecated.
+- [RegisterIconRefFromFSRef(\_:\_:\_:\_:)](../1446795-registericonreffromfsref.md): Deprecated.
+- [RegisterIconRefFromIconFamily(\_:\_:\_:\_:)](../1443918-registericonreffromiconfamily.md): Deprecated.
+- [ReleaseIconRef(\_:)](../1443504-releaseiconref.md): Deprecated.
+- [RemoveIconRefOverride(\_:)](../1445832-removeiconrefoverride.md): Deprecated.
+- [SetCustomIconsEnabled(\_:\_:)](../1449302-setcustomiconsenabled.md): Deprecated.
+- [UCTypeSelectAddKeyToSelector(\_:\_:\_:\_:)](../1390517-uctypeselectaddkeytoselector.md)
+- [UCTypeSelectCompare(\_:\_:\_:)](../1390474-uctypeselectcompare.md)
+- [UCTypeSelectCreateSelector(\_:\_:\_:\_:)](../1390445-uctypeselectcreateselector.md)
+- [UCTypeSelectFindItem(\_:\_:\_:\_:\_:\_:)](../1390368-uctypeselectfinditem.md)
+- [UCTypeSelectFlushSelectorData(\_:)](../1390367-uctypeselectflushselectordata.md)
+- [UCTypeSelectReleaseSelector(\_:)](../1390644-uctypeselectreleaseselector.md)
+- [UCTypeSelectWalkList(\_:\_:\_:\_:\_:\_:\_:\_:)](../1390442-uctypeselectwalklist.md)
+- [UCTypeSelectWouldResetBuffer(\_:\_:\_:)](../1390538-uctypeselectwouldresetbuffer.md)
+- [UTCreateStringForOSType(\_:)](../1442804-utcreatestringforostype.md): Deprecated. Encodes an `OSType` into a string suitable for use as a tag argument.
+- [UTGetOSTypeFromString(\_:)](../1450472-utgetostypefromstring.md): Deprecated. Decodes a tag string into an OSType.
+- [UTTypeConformsTo(\_:\_:)](../1444079-uttypeconformsto.md): Deprecated. Returns whether a uniform type identifier conforms to another uniform type identifier.
+- [UTTypeCopyAllTagsWithClass(\_:\_:)](../1448473-uttypecopyalltagswithclass.md): Deprecated.
+- [UTTypeCopyDeclaration(\_:)](../1442505-uttypecopydeclaration.md): Deprecated. Returns a uniform type’s declaration.
+- [UTTypeCopyDeclaringBundleURL(\_:)](../1447781-uttypecopydeclaringbundleurl.md): Deprecated. Returns the location of a bundle containing the declaration for a type.
+- [UTTypeCopyDescription(\_:)](../1448514-uttypecopydescription.md): Deprecated. Returns the localized, user-readable type description string associated with a uniform type identifier.
+- [UTTypeCopyPreferredTagWithClass(\_:\_:)](../1442744-uttypecopypreferredtagwithclass.md): Deprecated. Translates a uniform type identifier to a list of tags in a different type classification method.
+- [UTTypeCreateAllIdentifiersForTag(\_:\_:\_:)](../1447261-uttypecreateallidentifiersfortag.md): Deprecated. Creates an array of all uniform type identifiers for the type indicated by the specified tag.
+- [UTTypeCreatePreferredIdentifierForTag(\_:\_:\_:)](../1448939-uttypecreatepreferredidentifierf.md): Deprecated. Creates a uniform type identifier for the type indicated by the specified tag.
+- [UTTypeEqual(\_:\_:)](../1447783-uttypeequal.md): Deprecated. Returns whether two uniform type identifiers are equal.
+- [UTTypeIsDeclared(\_:)](../1450352-uttypeisdeclared.md): Deprecated.
+- [UTTypeIsDynamic(\_:)](../1442980-uttypeisdynamic.md): Deprecated.
+- [UnregisterIconRef(\_:\_:)](../1444660-unregistericonref.md): Deprecated.
+- [UpdateIconRef(\_:)](../1445921-updateiconref.md): Deprecated.
+- [vAEBuildAppleEvent(\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:)](../1441729-vaebuildappleevent.md): Allows you to encapsulate calls to `AEBuildAppleEvent` in a wrapper routine.
+- [vAEBuildDesc(\_:\_:\_:\_:)](../1446775-vaebuilddesc.md): Allows you to encapsulate calls to `AEBuildDesc` in your own wrapper routines.
+- [vAEBuildParameters(\_:\_:\_:\_:)](../1448040-vaebuildparameters.md): Allows you to encapsulate calls to `AEBuildParameters` in your own `stdarg`-style wrapper routines, using techniques similar to those allowed by vsprintf.
+- [AEDeterminePermissionToAutomateTarget(\_:\_:\_:\_:)](../3025784-aedeterminepermissiontoautomatet.md)
+- [AEUnflattenDescFromBytes(\_:\_:\_:)](../3553279-aeunflattendescfrombytes.md)
+- [MDItemGetCacheFileDescriptors(\_:\_:)](../4485578-mditemgetcachefiledescriptors.md)
+
+## See Also
+
+### Other Reference
+
+- [Carbon Core Structures](carbon_core_structures.md)
+- [Carbon Core Enumerations](carbon_core_enumerations.md)
+- [Carbon Core Data Types](carbon_core_data_types.md)
+
+# Carbon Core Functions (Objective-C)
+
+**Framework:** Core Services  
+**Kind:** API Collection
+
+## Topics
+
+### Functions
+
+- [AbsoluteDeltaToDuration](../1501245-absolutedeltatoduration.md): Deprecated.
+- [AbsoluteDeltaToNanoseconds](../1501268-absolutedeltatonanoseconds.md): Deprecated.
+- [AbsoluteToDuration](../1501266-absolutetoduration.md): Deprecated.
+- [AbsoluteToNanoseconds](../1501246-absolutetonanoseconds.md): Deprecated.
+- [AcquireIconRef](../1441852-acquireiconref.md): Deprecated.
+- [AddAbsoluteToAbsolute](../1501267-addabsolutetoabsolute.md): Deprecated.
+- [AddAtomic](../1490591-addatomic.md): Deprecated.
+- [AddAtomic16](../1490589-addatomic16.md): Deprecated.
+- [AddAtomic8](../1490594-addatomic8.md): Deprecated.
+- [AddCollectionItem](../1551404-addcollectionitem.md): Deprecated.
+- [AddCollectionItemHdl](../1551458-addcollectionitemhdl.md): Deprecated.
+- [AddDurationToAbsolute](../1501249-adddurationtoabsolute.md): Deprecated.
+- [AddFolderDescriptor](../1389301-addfolderdescriptor.md): Deprecated.
+- [AddNanosecondsToAbsolute](../1501264-addnanosecondstoabsolute.md): Deprecated.
+- [AddResource](../1529276-addresource.md): Deprecated.
+- [BatteryCount](../1427413-batterycount.md): Deprecated.
+- [BitAnd](../1494613-bitand.md): Deprecated.
+- [BitAndAtomic](../1490596-bitandatomic.md): Deprecated.
+- [BitAndAtomic16](../1490599-bitandatomic16.md): Deprecated.
+- [BitAndAtomic8](../1490584-bitandatomic8.md): Deprecated.
+- [BitClr](../1494616-bitclr.md): Deprecated.
+- [BitNot](../1494611-bitnot.md): Deprecated.
+- [BitOr](../1494619-bitor.md): Deprecated.
+- [BitOrAtomic](../1490597-bitoratomic.md): Deprecated.
+- [BitOrAtomic16](../1490587-bitoratomic16.md): Deprecated.
+- [BitOrAtomic8](../1490581-bitoratomic8.md): Deprecated.
+- [BitSet](../1494618-bitset.md): Deprecated.
+- [BitShift](../1494615-bitshift.md): Deprecated.
+- [BitTst](../1494606-bittst.md): Deprecated.
+- [BitXor](../1494620-bitxor.md): Deprecated.
+- [BitXorAtomic](../1490592-bitxoratomic.md): Deprecated.
+- [BitXorAtomic16](../1490572-bitxoratomic16.md): Deprecated.
+- [BitXorAtomic8](../1490577-bitxoratomic8.md): Deprecated.
+- [ChangedResource](../1529318-changedresource.md): Deprecated.
+- [CloneCollection](../1551333-clonecollection.md): Deprecated.
+- [CloseResFile](../1529362-closeresfile.md): Deprecated.
+- [CollectionTagExists](../1551428-collectiontagexists.md): Deprecated.
+- [CompareAndSwap](../1490575-compareandswap.md): Deprecated.
+- [CompositeIconRef](../1450541-compositeiconref.md): Deprecated.
+- [CopyCollection](../1551383-copycollection.md): Deprecated.
+- [Count1Resources](../1529312-count1resources.md): Deprecated.
+- [Count1Types](../1529244-count1types.md): Deprecated.
+- [CountCollectionItems](../1551438-countcollectionitems.md): Deprecated.
+- [CountCollectionOwners](../1551353-countcollectionowners.md): Deprecated.
+- [CountCollectionTags](../1551378-countcollectiontags.md): Deprecated.
+- [CountResources](../1529322-countresources.md): Deprecated.
+- [CountTaggedCollectionItems](../1551379-counttaggedcollectionitems.md): Deprecated.
+- [CountTypes](../1529346-counttypes.md): Deprecated.
+- [CreateCompDescriptor](../1449155-createcompdescriptor.md): Creates a comparison descriptor that specifies how to compare one or more Apple event objects with either another Apple event object or a descriptor.
+- [CreateLogicalDescriptor](../1445212-createlogicaldescriptor.md): Creates a logical descriptor that specifies a logical operator and one or more logical terms for the Apple Event Manager to evaluate.
+- [CreateObjSpecifier](../1450244-createobjspecifier.md): Assembles an object specifier that identifies one or more Apple event objects, from other descriptors.
+- [CreateOffsetDescriptor](../1444957-createoffsetdescriptor.md): Creates an offset descriptor that specifies the position of an element in relation to the beginning or end of its container.
+- [CreateRangeDescriptor](../1444087-createrangedescriptor.md): Creates a range descriptor that specifies a series of consecutive elements in the same container.
+- [CreateThreadPool](../1574200-createthreadpool.md): Deprecated.
+- [CurResFile](../1529286-curresfile.md): Deprecated.
+- [CurrentProcessorSpeed](../1427463-currentprocessorspeed.md): Deprecated.
+- [DCSCopyTextDefinition](../1446842-dcscopytextdefinition.md): Returns the definition associated with the provided text range.
+- [DCSGetTermRangeInString](../1450556-dcsgettermrangeinstring.md): Determines the range of the longest word or phrase with respect to an offset.
+- [DebugAssert](../1517794-debugassert.md): Deprecated.
+- [DecrementAtomic](../1490603-decrementatomic.md): Deprecated.
+- [DecrementAtomic16](../1490579-decrementatomic16.md): Deprecated.
+- [DecrementAtomic8](../1490570-decrementatomic8.md): Deprecated.
+- [Delay](../1533332-delay.md): Deprecated.
+- [Dequeue](../1533381-dequeue.md): Deprecated.
+- [DetachResource](../1529238-detachresource.md): Deprecated.
+- [DetachResourceFile](../1529246-detachresourcefile.md): Deprecated.
+- [DetermineIfPathIsEnclosedByFolder](../1389166-determineifpathisenclosedbyfolde.md): Deprecated.
+- [DisposeAECoerceDescUPP](../1448721-disposeaecoercedescupp.md): Disposes of a universal procedure pointer to a function that coerces data stored in a descriptor.
+- [DisposeAECoercePtrUPP](../1450664-disposeaecoerceptrupp.md): Disposes of a universal procedure pointer to a function that coerces data stored in a buffer.
+- [DisposeAEDisposeExternalUPP](../1447284-disposeaedisposeexternalupp.md): Disposes of a universal procedure pointer to a function that disposes of data supplied to the `AECreateDescFromExternalPtr` function.
+- [DisposeAEEventHandlerUPP](../1442066-disposeaeeventhandlerupp.md): Disposes of a universal procedure pointer to an event handler function.
+- [DisposeCollection](../1551429-disposecollection.md): Deprecated.
+- [DisposeCollectionExceptionUPP](../1551385-disposecollectionexceptionupp.md): Deprecated.
+- [DisposeCollectionFlattenUPP](../1551454-disposecollectionflattenupp.md): Deprecated.
+- [DisposeDebugAssertOutputHandlerUPP](../1517746-disposedebugassertoutputhandleru.md): Deprecated.
+- [DisposeDebugComponent](../1517752-disposedebugcomponent.md): Deprecated.
+- [DisposeDebugComponentCallbackUPP](../1517724-disposedebugcomponentcallbackupp.md): Deprecated.
+- [DisposeDebuggerDisposeThreadUPP](../1574277-disposedebuggerdisposethreadupp.md): Deprecated.
+- [DisposeDebuggerNewThreadUPP](../1574218-disposedebuggernewthreadupp.md): Deprecated.
+- [DisposeDebuggerThreadSchedulerUPP](../1574286-disposedebuggerthreadschedulerup.md): Deprecated.
+- [DisposeDeferredTaskUPP](../1533363-disposedeferredtaskupp.md): Deprecated.
+- [DisposeExceptionHandlerUPP](../1500674-disposeexceptionhandlerupp.md): Deprecated.
+- [DisposeFNSubscriptionUPP](../1566772-disposefnsubscriptionupp.md): Deprecated.
+- [DisposeFSVolumeEjectUPP](../1566754-disposefsvolumeejectupp.md): Deprecated.
+- [DisposeFSVolumeMountUPP](../1565735-disposefsvolumemountupp.md): Deprecated.
+- [DisposeFSVolumeUnmountUPP](../1565476-disposefsvolumeunmountupp.md): Deprecated.
+- [DisposeFolderManagerNotificationUPP](../1389143-disposefoldermanagernotification.md): Deprecated.
+- [DisposeHandle](../1506451-disposehandle.md): Deprecated.
+- [DisposeIOCompletionUPP](../1566947-disposeiocompletionupp.md): Deprecated.
+- [DisposeIndexToUCStringUPP](../1390390-disposeindextoucstringupp.md)
+- [DisposeKCCallbackUPP](../1563023-disposekccallbackupp.md): Deprecated.
+- [DisposeOSLAccessorUPP](../1444684-disposeoslaccessorupp.md): Disposes of a universal procedure pointer to an object accessor function.
+- [DisposeOSLAdjustMarksUPP](../1443940-disposeosladjustmarksupp.md): Disposes of a universal procedure pointer to an object callback adjust marks function.
+- [DisposeOSLCompareUPP](../1448398-disposeoslcompareupp.md): Disposes of a universal procedure pointer to an object callback comparison function.
+- [DisposeOSLCountUPP](../1443984-disposeoslcountupp.md): Disposes of a universal procedure pointer to an object callback count function.
+- [DisposeOSLDisposeTokenUPP](../1442670-disposeosldisposetokenupp.md): Disposes of a universal procedure pointer to an object callback dispose token function.
+- [DisposeOSLGetErrDescUPP](../1446061-disposeoslgeterrdescupp.md): Disposes of a universal procedure pointer to an object callback get error descriptor function.
+- [DisposeOSLGetMarkTokenUPP](../1442377-disposeoslgetmarktokenupp.md): Disposes of a universal procedure pointer to an object callback get mark function.
+- [DisposeOSLMarkUPP](../1449253-disposeoslmarkupp.md): Disposes of a universal procedure pointer to an object callback mark function.
+- [DisposePtr](../1506427-disposeptr.md): Deprecated.
+- [DisposeResErrUPP](../1529332-disposereserrupp.md): Deprecated.
+- [DisposeSleepQUPP](../1427426-disposesleepqupp.md): Deprecated.
+- [DisposeThread](../1574219-disposethread.md): Deprecated.
+- [DisposeThreadEntryUPP](../1574275-disposethreadentryupp.md): Deprecated.
+- [DisposeThreadSchedulerUPP](../1574280-disposethreadschedulerupp.md): Deprecated.
+- [DisposeThreadSwitchUPP](../1574264-disposethreadswitchupp.md): Deprecated.
+- [DisposeThreadTerminationUPP](../1574233-disposethreadterminationupp.md): Deprecated.
+- [DisposeTimerUPP](../1550797-disposetimerupp.md): Deprecated.
+- [DurationToAbsolute](../1501247-durationtoabsolute.md): Deprecated.
+- [DurationToNanoseconds](../1501254-durationtonanoseconds.md): Deprecated.
+- [EmptyCollection](../1551422-emptycollection.md): Deprecated.
+- [EmptyHandle](../1506345-emptyhandle.md): Deprecated.
+- [Enqueue](../1533340-enqueue.md): Deprecated.
+- [FNGetDirectoryForSubscription](../1566615-fngetdirectoryforsubscription.md): Deprecated.
+- [FNNotify](../1565421-fnnotify.md): Deprecated.
+- [FNNotifyAll](../1565760-fnnotifyall.md): Deprecated.
+- [FNNotifyByPath](../1566346-fnnotifybypath.md): Deprecated.
+- [FNSubscribe](../1565373-fnsubscribe.md): Deprecated.
+- [FNSubscribeByPath](../1566843-fnsubscribebypath.md): Deprecated.
+- [FNUnsubscribe](../1565232-fnunsubscribe.md): Deprecated.
+- [FindFolder](../1389175-findfolder.md): Deprecated.
+- [Fix2Frac](../1409219-fix2frac.md): Deprecated.
+- [Fix2Long](../1409214-fix2long.md): Deprecated.
+- [Fix2X](../1409225-fix2x.md): Deprecated.
+- [FixATan2](../1409269-fixatan2.md): Deprecated.
+- [FixDiv](../1409285-fixdiv.md): Deprecated.
+- [FixMul](../1409241-fixmul.md): Deprecated.
+- [FixRatio](../1409283-fixratio.md): Deprecated.
+- [FixRound](../1409274-fixround.md): Deprecated.
+- [FlattenCollection](../1551324-flattencollection.md): Deprecated.
+- [FlattenCollectionToHdl](../1551407-flattencollectiontohdl.md): Deprecated.
+- [FlattenPartialCollection](../1551435-flattenpartialcollection.md): Deprecated.
+- [Frac2Fix](../1409286-frac2fix.md): Deprecated.
+- [Frac2X](../1409216-frac2x.md): Deprecated.
+- [FracCos](../1409257-fraccos.md): Deprecated.
+- [FracDiv](../1409280-fracdiv.md): Deprecated.
+- [FracMul](../1409259-fracmul.md): Deprecated.
+- [FracSin](../1409243-fracsin.md): Deprecated.
+- [FracSqrt](../1409284-fracsqrt.md): Deprecated.
+- [Get1IndResource](../1529284-get1indresource.md): Deprecated.
+- [Get1IndType](../1529368-get1indtype.md): Deprecated.
+- [Get1NamedResource](../1529253-get1namedresource.md): Deprecated.
+- [Get1Resource](../1529324-get1resource.md): Deprecated.
+- [GetCPUSpeed](../1427401-getcpuspeed.md): Deprecated.
+- [GetCollectionDefaultAttributes](../1551445-getcollectiondefaultattributes.md): Deprecated.
+- [GetCollectionExceptionProc](../1551420-getcollectionexceptionproc.md): Deprecated.
+- [GetCollectionItem](../1551357-getcollectionitem.md): Deprecated.
+- [GetCollectionItemHdl](../1551423-getcollectionitemhdl.md): Deprecated.
+- [GetCollectionItemInfo](../1551399-getcollectioniteminfo.md): Deprecated.
+- [GetCollectionRetainCount](../1551403-getcollectionretaincount.md): Deprecated.
+- [GetCurrentThread](../1574216-getcurrentthread.md): Deprecated.
+- [GetCustomIconsEnabled](../1442255-getcustomiconsenabled.md): Deprecated.
+- [GetDebugComponentInfo](../1517776-getdebugcomponentinfo.md): Deprecated.
+- [GetDebugOptionInfo](../1517775-getdebugoptioninfo.md): Deprecated.
+- [GetDefaultThreadStackSize](../1574231-getdefaultthreadstacksize.md): Deprecated.
+- [GetFolderNameUnicode](../1389375-getfoldernameunicode.md): Deprecated.
+- [GetFolderTypes](../1389428-getfoldertypes.md): Deprecated.
+- [GetHandleSize](../1506398-gethandlesize.md): Deprecated.
+- [GetIconRef](../1442776-geticonref.md): Deprecated.
+- [GetIconRefFromComponent](../1447113-geticonreffromcomponent.md): Deprecated.
+- [GetIconRefFromFileInfo](../1447966-geticonreffromfileinfo.md): Deprecated.
+- [GetIconRefFromFolder](../1441712-geticonreffromfolder.md): Deprecated.
+- [GetIconRefFromIconFamilyPtr](../1443251-geticonreffromiconfamilyptr.md): Deprecated.
+- [GetIconRefFromTypeInfo](../1445758-geticonreffromtypeinfo.md): Deprecated.
+- [GetIconRefOwners](../1447221-geticonrefowners.md): Deprecated.
+- [GetIndResource](../1529227-getindresource.md): Deprecated.
+- [GetIndType](../1529367-getindtype.md): Deprecated.
+- [GetIndexedCollectionItem](../1551437-getindexedcollectionitem.md): Deprecated.
+- [GetIndexedCollectionItemHdl](../1551443-getindexedcollectionitemhdl.md): Deprecated.
+- [GetIndexedCollectionItemInfo](../1551449-getindexedcollectioniteminfo.md): Deprecated.
+- [GetIndexedCollectionTag](../1551355-getindexedcollectiontag.md): Deprecated.
+- [GetMacOSStatusCommentString](../1517787-getmacosstatuscommentstring.md)
+- [GetMacOSStatusErrorString](../1517786-getmacosstatuserrorstring.md)
+- [GetMaxResourceSize](../1529298-getmaxresourcesize.md): Deprecated.
+- [GetNamedResource](../1529296-getnamedresource.md): Deprecated.
+- [GetNewCollection](../1551366-getnewcollection.md): Deprecated.
+- [GetNextFOND](../1529354-getnextfond.md): Deprecated.
+- [GetNextResourceFile](../1529310-getnextresourcefile.md): Deprecated.
+- [GetPtrSize](../1506465-getptrsize.md): Deprecated.
+- [GetResAttrs](../1529365-getresattrs.md): Deprecated.
+- [GetResFileAttrs](../1529231-getresfileattrs.md): Deprecated.
+- [GetResInfo](../1529369-getresinfo.md): Deprecated.
+- [GetResource](../1529302-getresource.md): Deprecated.
+- [GetResourceSizeOnDisk](../1529348-getresourcesizeondisk.md): Deprecated.
+- [GetScriptInfoFromTextEncoding](../1399675-getscriptinfofromtextencoding.md)
+- [GetScriptManagerVariable](../1485022-getscriptmanagervariable.md): Deprecated.
+- [GetTaggedCollectionItem](../1551359-gettaggedcollectionitem.md): Deprecated.
+- [GetTaggedCollectionItemInfo](../1551370-gettaggedcollectioniteminfo.md): Deprecated.
+- [GetTextEncodingFromScriptInfo](../1399689-gettextencodingfromscriptinfo.md)
+- [GetThreadCurrentTaskRef](../1574236-getthreadcurrenttaskref.md): Deprecated.
+- [GetThreadState](../1574250-getthreadstate.md): Deprecated.
+- [GetThreadStateGivenTaskRef](../1574234-getthreadstategiventaskref.md): Deprecated.
+- [GetTopResourceFile](../1529307-gettopresourcefile.md): Deprecated.
+- [HClrRBit](../1506459-hclrrbit.md): Deprecated.
+- [HGetState](../1506392-hgetstate.md): Deprecated.
+- [HLock](../1506234-hlock.md): Deprecated.
+- [HLockHi](../1506354-hlockhi.md): Deprecated.
+- [HSetRBit](../1506324-hsetrbit.md): Deprecated.
+- [HSetState](../1506435-hsetstate.md): Deprecated.
+- [HUnlock](../1506251-hunlock.md): Deprecated.
+- [HandAndHand](../1506243-handandhand.md): Deprecated.
+- [HandToHand](../1506272-handtohand.md): Deprecated.
+- [HomeResFile](../1529352-homeresfile.md): Deprecated.
+- [IdentifyFolder](../1389047-identifyfolder.md): Deprecated.
+- [IncrementAtomic](../1490602-incrementatomic.md): Deprecated.
+- [IncrementAtomic16](../1490600-incrementatomic16.md): Deprecated.
+- [IncrementAtomic8](../1490585-incrementatomic8.md): Deprecated.
+- [InsTime](../1550782-instime.md): Deprecated.
+- [InsXTime](../1550792-insxtime.md): Deprecated.
+- [InsertResourceFile](../1529327-insertresourcefile.md): Deprecated.
+- [InstallDebugAssertOutputHandler](../1517758-installdebugassertoutputhandler.md): Deprecated.
+- [InstallExceptionHandler](../1500730-installexceptionhandler.md): Deprecated.
+- [InstallTimeTask](../1550791-installtimetask.md): Deprecated.
+- [InstallXTimeTask](../1550795-installxtimetask.md): Deprecated.
+- [InvalidateFolderDescriptorCache](../1389097-invalidatefolderdescriptorcache.md): Deprecated.
+- [InvokeAECoerceDescUPP](../1445450-invokeaecoercedescupp.md): Calls a universal procedure pointer to a function that coerces data stored in a descriptor.
+- [InvokeAECoercePtrUPP](../1447079-invokeaecoerceptrupp.md): Calls a universal procedure pointer to a function that coerces data stored in a buffer.
+- [InvokeAEDisposeExternalUPP](../1441717-invokeaedisposeexternalupp.md): Calls a dispose external universal procedure pointer.
+- [InvokeAEEventHandlerUPP](../1446585-invokeaeeventhandlerupp.md): Calls an event handler universal procedure pointer.
+- [InvokeCollectionExceptionUPP](../1551347-invokecollectionexceptionupp.md): Deprecated.
+- [InvokeCollectionFlattenUPP](../1551380-invokecollectionflattenupp.md): Deprecated.
+- [InvokeDebugAssertOutputHandlerUPP](../1517712-invokedebugassertoutputhandlerup.md): Deprecated.
+- [InvokeDebugComponentCallbackUPP](../1517770-invokedebugcomponentcallbackupp.md): Deprecated.
+- [InvokeDebuggerDisposeThreadUPP](../1574308-invokedebuggerdisposethreadupp.md): Deprecated.
+- [InvokeDebuggerNewThreadUPP](../1574207-invokedebuggernewthreadupp.md): Deprecated.
+- [InvokeDebuggerThreadSchedulerUPP](../1574211-invokedebuggerthreadschedulerupp.md): Deprecated.
+- [InvokeDeferredTaskUPP](../1533349-invokedeferredtaskupp.md): Deprecated.
+- [InvokeExceptionHandlerUPP](../1500606-invokeexceptionhandlerupp.md): Deprecated.
+- [InvokeFNSubscriptionUPP](../1565242-invokefnsubscriptionupp.md): Deprecated.
+- [InvokeFSVolumeEjectUPP](../1565652-invokefsvolumeejectupp.md): Deprecated.
+- [InvokeFSVolumeMountUPP](../1566167-invokefsvolumemountupp.md): Deprecated.
+- [InvokeFSVolumeUnmountUPP](../1565842-invokefsvolumeunmountupp.md): Deprecated.
+- [InvokeFolderManagerNotificationUPP](../1389104-invokefoldermanagernotificationu.md): Deprecated.
+- [InvokeIOCompletionUPP](../1565303-invokeiocompletionupp.md): Deprecated.
+- [InvokeIndexToUCStringUPP](../1390660-invokeindextoucstringupp.md)
+- [InvokeKCCallbackUPP](../1563117-invokekccallbackupp.md): Deprecated.
+- [InvokeOSLAccessorUPP](../1448978-invokeoslaccessorupp.md): Calls an object accessor universal procedure pointer.
+- [InvokeOSLAdjustMarksUPP](../1448506-invokeosladjustmarksupp.md): Calls an object callback adjust marks universal procedure pointer.
+- [InvokeOSLCompareUPP](../1443110-invokeoslcompareupp.md): Calls an object callback comparison universal procedure pointer.
+- [InvokeOSLCountUPP](../1448030-invokeoslcountupp.md): Calls an object callback count universal procedure pointer.
+- [InvokeOSLDisposeTokenUPP](../1443963-invokeosldisposetokenupp.md): Calls an object callback dispose token universal procedure pointer.
+- [InvokeOSLGetErrDescUPP](../1448420-invokeoslgeterrdescupp.md): Calls an object callback get error descriptor universal procedure pointer.
+- [InvokeOSLGetMarkTokenUPP](../1441894-invokeoslgetmarktokenupp.md): Calls an object callback get mark universal procedure pointer.
+- [InvokeOSLMarkUPP](../1447444-invokeoslmarkupp.md): Calls an object callback mark universal procedure pointer.
+- [InvokeResErrUPP](../1529311-invokereserrupp.md): Deprecated.
+- [InvokeSleepQUPP](../1427428-invokesleepqupp.md): Deprecated.
+- [InvokeThreadEntryUPP](../1574226-invokethreadentryupp.md): Deprecated.
+- [InvokeThreadSchedulerUPP](../1574302-invokethreadschedulerupp.md): Deprecated.
+- [InvokeThreadSwitchUPP](../1574281-invokethreadswitchupp.md): Deprecated.
+- [InvokeThreadTerminationUPP](../1574290-invokethreadterminationupp.md): Deprecated.
+- [InvokeTimerUPP](../1550780-invoketimerupp.md): Deprecated.
+- [IsDataAvailableInIconRef](../1446627-isdataavailableiniconref.md): Deprecated.
+- [IsHandleValid](../1506347-ishandlevalid.md): Deprecated.
+- [IsHeapValid](../1506349-isheapvalid.md): Deprecated.
+- [IsIconRefComposite](../1446300-isiconrefcomposite.md): Deprecated.
+- [IsMetric](../1533364-ismetric.md): Deprecated.
+- [IsPointerValid](../1506360-ispointervalid.md): Deprecated.
+- [IsValidIconRef](../1450233-isvalidiconref.md): Deprecated.
+- [KCAddCallback](../1563150-kcaddcallback.md): Deprecated.
+- [KCCopyItem](../1562984-kccopyitem.md): Deprecated.
+- [KCCountKeychains](../1563038-kccountkeychains.md): Deprecated.
+- [KCDeleteItem](../1563195-kcdeleteitem.md): Deprecated.
+- [KCFindAppleSharePassword](../1563124-kcfindapplesharepassword.md): Deprecated.
+- [KCFindFirstItem](../1563050-kcfindfirstitem.md): Deprecated.
+- [KCFindGenericPassword](../1563056-kcfindgenericpassword.md): Deprecated.
+- [KCFindInternetPassword](../1563101-kcfindinternetpassword.md): Deprecated.
+- [KCFindInternetPasswordWithPath](../1563059-kcfindinternetpasswordwithpath.md): Deprecated.
+- [KCFindNextItem](../1563007-kcfindnextitem.md): Deprecated.
+- [KCGetAttribute](../1563176-kcgetattribute.md): Deprecated.
+- [KCGetData](../1563092-kcgetdata.md): Deprecated.
+- [KCGetDefaultKeychain](../1563054-kcgetdefaultkeychain.md): Deprecated.
+- [KCGetIndKeychain](../1563047-kcgetindkeychain.md): Deprecated.
+- [KCGetKeychain](../1563140-kcgetkeychain.md): Deprecated.
+- [KCGetKeychainManagerVersion](../1562979-kcgetkeychainmanagerversion.md): Deprecated.
+- [KCGetKeychainName](../1563052-kcgetkeychainname.md): Deprecated.
+- [KCGetStatus](../1563057-kcgetstatus.md): Deprecated.
+- [KCIsInteractionAllowed](../1563065-kcisinteractionallowed.md): Deprecated.
+- [KCLock](../1563012-kclock.md): Deprecated.
+- [KCMakeAliasFromKCRef](../1563163-kcmakealiasfromkcref.md): Deprecated.
+- [KCMakeKCRefFromAlias](../1563083-kcmakekcreffromalias.md): Deprecated.
+- [KCMakeKCRefFromFSRef](../1563116-kcmakekcreffromfsref.md): Deprecated.
+- [KCNewItem](../1563010-kcnewitem.md): Deprecated.
+- [KCReleaseItem](../1563161-kcreleaseitem.md): Deprecated.
+- [KCReleaseKeychain](../1563130-kcreleasekeychain.md): Deprecated.
+- [KCReleaseSearch](../1562982-kcreleasesearch.md): Deprecated.
+- [KCRemoveCallback](../1563066-kcremovecallback.md): Deprecated.
+- [KCSetAttribute](../1563089-kcsetattribute.md): Deprecated.
+- [KCSetData](../1563018-kcsetdata.md): Deprecated.
+- [KCSetDefaultKeychain](../1563084-kcsetdefaultkeychain.md): Deprecated.
+- [KCSetInteractionAllowed](../1563079-kcsetinteractionallowed.md): Deprecated.
+- [KCUpdateItem](../1563138-kcupdateitem.md): Deprecated.
+- [LMGetApFontID](../1564978-lmgetapfontid.md): Deprecated.
+- [LMGetBootDrive](../1564982-lmgetbootdrive.md): Deprecated.
+- [LMGetIntlSpec](../1565043-lmgetintlspec.md): Deprecated.
+- [LMGetMemErr](../1506460-lmgetmemerr.md): Deprecated.
+- [LMGetResErr](../1565008-lmgetreserr.md): Deprecated.
+- [LMGetResLoad](../1565056-lmgetresload.md): Deprecated.
+- [LMGetSysFontSize](../1565057-lmgetsysfontsize.md): Deprecated.
+- [LMGetSysMap](../1565032-lmgetsysmap.md): Deprecated.
+- [LMGetTmpResLoad](../1564999-lmgettmpresload.md): Deprecated.
+- [LMSetApFontID](../1565011-lmsetapfontid.md): Deprecated.
+- [LMSetBootDrive](../1564973-lmsetbootdrive.md): Deprecated.
+- [LMSetIntlSpec](../1565016-lmsetintlspec.md): Deprecated.
+- [LMSetMemErr](../1506279-lmsetmemerr.md): Deprecated.
+- [LMSetResErr](../1565000-lmsetreserr.md): Deprecated.
+- [LMSetResLoad](../1565052-lmsetresload.md): Deprecated.
+- [LMSetSysFontFam](../1565044-lmsetsysfontfam.md): Deprecated.
+- [LMSetSysFontSize](../1565048-lmsetsysfontsize.md): Deprecated.
+- [LMSetSysMap](../1565018-lmsetsysmap.md): Deprecated.
+- [LMSetTmpResLoad](../1565025-lmsettmpresload.md): Deprecated.
+- [LSSetItemAttribute](../1446733-lssetitemattribute.md): Deprecated.
+- [LSSharedFileListAddObserver](../1445770-lssharedfilelistaddobserver.md): Deprecated.
+- [LSSharedFileListCopyProperty](../1444588-lssharedfilelistcopyproperty.md): Deprecated.
+- [LSSharedFileListCopySnapshot](../1448112-lssharedfilelistcopysnapshot.md): Deprecated.
+- [LSSharedFileListCreate](../1443926-lssharedfilelistcreate.md): Deprecated.
+- [LSSharedFileListGetSeedValue](../1444885-lssharedfilelistgetseedvalue.md): Deprecated.
+- [LSSharedFileListGetTypeID](../1450618-lssharedfilelistgettypeid.md): Deprecated.
+- [LSSharedFileListInsertItemFSRef](../1449884-lssharedfilelistinsertitemfsref.md): Deprecated.
+- [LSSharedFileListInsertItemURL](../1444471-lssharedfilelistinsertitemurl.md): Deprecated.
+- [LSSharedFileListItemCopyDisplayName](../1449716-lssharedfilelistitemcopydisplayn.md): Deprecated.
+- [LSSharedFileListItemCopyIconRef](../1442889-lssharedfilelistitemcopyiconref.md): Deprecated.
+- [LSSharedFileListItemCopyProperty](../1445074-lssharedfilelistitemcopyproperty.md): Deprecated.
+- [LSSharedFileListItemCopyResolvedURL](../1449882-lssharedfilelistitemcopyresolved.md): Deprecated.
+- [LSSharedFileListItemGetID](../1443305-lssharedfilelistitemgetid.md): Deprecated.
+- [LSSharedFileListItemGetTypeID](../1447138-lssharedfilelistitemgettypeid.md): Deprecated.
+- [LSSharedFileListItemMove](../1444348-lssharedfilelistitemmove.md): Deprecated.
+- [LSSharedFileListItemRemove](../1442025-lssharedfilelistitemremove.md): Deprecated.
+- [LSSharedFileListItemResolve](../1447347-lssharedfilelistitemresolve.md): Deprecated.
+- [LSSharedFileListItemSetProperty](../1445766-lssharedfilelistitemsetproperty.md): Deprecated.
+- [LSSharedFileListRemoveAllItems](../1446389-lssharedfilelistremoveallitems.md): Deprecated.
+- [LSSharedFileListRemoveObserver](../1443404-lssharedfilelistremoveobserver.md): Deprecated.
+- [LSSharedFileListSetAuthorization](../1446834-lssharedfilelistsetauthorization.md): Deprecated.
+- [LSSharedFileListSetProperty](../1448857-lssharedfilelistsetproperty.md): Deprecated.
+- [LoadResource](../1529245-loadresource.md): Deprecated.
+- [LocaleCountNames](../1580255-localecountnames.md): Deprecated.
+- [LocaleGetIndName](../1580265-localegetindname.md): Deprecated.
+- [LocaleGetName](../1580248-localegetname.md): Deprecated.
+- [LocaleOperationCountLocales](../1580264-localeoperationcountlocales.md): Deprecated.
+- [LocaleOperationCountNames](../1580257-localeoperationcountnames.md)
+- [LocaleOperationGetIndName](../1580260-localeoperationgetindname.md)
+- [LocaleOperationGetLocales](../1580279-localeoperationgetlocales.md): Deprecated.
+- [LocaleOperationGetName](../1580269-localeoperationgetname.md)
+- [LocaleRefFromLangOrRegionCode](../1580276-localereffromlangorregioncode.md)
+- [LocaleRefFromLocaleString](../1580261-localereffromlocalestring.md)
+- [LocaleRefGetPartString](../1580273-localerefgetpartstring.md)
+- [LocaleStringToLangAndRegionCodes](../1580277-localestringtolangandregioncodes.md)
+- [Long2Fix](../1409235-long2fix.md): Deprecated.
+- [LongDoubleToSInt64](../1536234-longdoubletosint64.md)
+- [LongDoubleToUInt64](../1536290-longdoubletouint64.md)
+- [MDCopyLabelKinds](../1442887-mdcopylabelkinds.md)
+- [MDCopyLabelWithUUID](../1447030-mdcopylabelwithuuid.md)
+- [MDCopyLabelsMatchingExpression](../1448237-mdcopylabelsmatchingexpression.md)
+- [MDCopyLabelsWithKind](../1444230-mdcopylabelswithkind.md)
+- [MDItemCopyLabels](../1442606-mditemcopylabels.md)
+- [MDItemRemoveLabel](../1446067-mditemremovelabel.md)
+- [MDItemSetLabel](../1442559-mditemsetlabel.md)
+- [MDItemsCopyAttributes](../1426975-mditemscopyattributes.md)
+- [MDItemsCreateWithURLs](../1427086-mditemscreatewithurls.md)
+- [MDLabelCopyAttribute](../1445456-mdlabelcopyattribute.md)
+- [MDLabelCopyAttributeName](../1445522-mdlabelcopyattributename.md)
+- [MDLabelCreate](../1442614-mdlabelcreate.md)
+- [MDLabelDelete](../1449203-mdlabeldelete.md)
+- [MDLabelGetTypeID](../1446579-mdlabelgettypeid.md)
+- [MDLabelSetAttributes](../1449005-mdlabelsetattributes.md)
+- [MDQueryCreateForItems](../1413031-mdquerycreateforitems.md)
+- [MDQueryGetSortOptionFlagsForAttribute](../1413013-mdquerygetsortoptionflagsforattr.md)
+- [MDQuerySetSortOptionFlagsForAttribute](../1413075-mdquerysetsortoptionflagsforattr.md)
+- [MDQuerySetSortOrder](../1413096-mdquerysetsortorder.md)
+- [MaximumProcessorSpeed](../1427409-maximumprocessorspeed.md): Deprecated.
+- [MemError](../1506254-memerror.md): Deprecated.
+- [Microseconds](../1550773-microseconds.md): Deprecated.
+- [MinimumProcessorSpeed](../1427399-minimumprocessorspeed.md): Deprecated.
+- [Munger](../1588638-munger.md): Deprecated.
+- [NanosecondsToAbsolute](../1501255-nanosecondstoabsolute.md): Deprecated.
+- [NanosecondsToDuration](../1501257-nanosecondstoduration.md): Deprecated.
+- [NewAECoerceDescUPP](../1445885-newaecoercedescupp.md): Creates a new universal procedure pointer to a function that coerces data stored in a descriptor.
+- [NewAECoercePtrUPP](../1449962-newaecoerceptrupp.md): Creates a new universal procedure pointer to a function that coerces data stored in a buffer.
+- [NewAEDisposeExternalUPP](../1447774-newaedisposeexternalupp.md): Creates a new universal procedure pointer to a function that disposes of data stored in a buffer.
+- [NewAEEventHandlerUPP](../1446862-newaeeventhandlerupp.md): Creates a new universal procedure pointer to an event handler function.
+- [NewCollection](../1551416-newcollection.md): Deprecated.
+- [NewCollectionExceptionUPP](../1551448-newcollectionexceptionupp.md): Deprecated.
+- [NewCollectionFlattenUPP](../1551360-newcollectionflattenupp.md): Deprecated.
+- [NewDebugAssertOutputHandlerUPP](../1517735-newdebugassertoutputhandlerupp.md): Deprecated.
+- [NewDebugComponent](../1517721-newdebugcomponent.md): Deprecated.
+- [NewDebugComponentCallbackUPP](../1517764-newdebugcomponentcallbackupp.md): Deprecated.
+- [NewDebugOption](../1517718-newdebugoption.md): Deprecated.
+- [NewDebuggerDisposeThreadUPP](../1574285-newdebuggerdisposethreadupp.md): Deprecated.
+- [NewDebuggerNewThreadUPP](../1574208-newdebuggernewthreadupp.md): Deprecated.
+- [NewDebuggerThreadSchedulerUPP](../1574284-newdebuggerthreadschedulerupp.md): Deprecated.
+- [NewDeferredTaskUPP](../1533385-newdeferredtaskupp.md): Deprecated.
+- [NewEmptyHandle](../1506288-newemptyhandle.md): Deprecated.
+- [NewExceptionHandlerUPP](../1500655-newexceptionhandlerupp.md): Deprecated.
+- [NewFNSubscriptionUPP](../1566945-newfnsubscriptionupp.md): Deprecated.
+- [NewFSVolumeEjectUPP](../1566367-newfsvolumeejectupp.md): Deprecated.
+- [NewFSVolumeMountUPP](../1565615-newfsvolumemountupp.md): Deprecated.
+- [NewFSVolumeUnmountUPP](../1565539-newfsvolumeunmountupp.md): Deprecated.
+- [NewFolderManagerNotificationUPP](../1389484-newfoldermanagernotificationupp.md): Deprecated.
+- [NewHandle](../1506244-newhandle.md): Deprecated.
+- [NewHandleClear](../1506471-newhandleclear.md): Deprecated.
+- [NewIOCompletionUPP](../1565869-newiocompletionupp.md): Deprecated.
+- [NewIndexToUCStringUPP](../1390384-newindextoucstringupp.md)
+- [NewKCCallbackUPP](../1562977-newkccallbackupp.md): Deprecated.
+- [NewOSLAccessorUPP](../1449584-newoslaccessorupp.md): Creates a new universal procedure pointer to an object accessor function.
+- [NewOSLAdjustMarksUPP](../1443347-newosladjustmarksupp.md): Creates a new universal procedure pointer to an object callback adjust marks function.
+- [NewOSLCompareUPP](../1444603-newoslcompareupp.md): Creates a new universal procedure pointer to an object callback comparison function.
+- [NewOSLCountUPP](../1448156-newoslcountupp.md): Creates a new universal procedure pointer to an object callback count function.
+- [NewOSLDisposeTokenUPP](../1450027-newosldisposetokenupp.md): Creates a new universal procedure pointer to an object callback dispose token function.
+- [NewOSLGetErrDescUPP](../1447934-newoslgeterrdescupp.md): Creates a new universal procedure pointer to an object callback get error descriptor function.
+- [NewOSLGetMarkTokenUPP](../1445166-newoslgetmarktokenupp.md): Creates a new universal procedure pointer to an object callback get mark function.
+- [NewOSLMarkUPP](../1446942-newoslmarkupp.md): Creates a new universal procedure pointer to an object callback mark function.
+- [NewPtr](../1506463-newptr.md): Deprecated.
+- [NewPtrClear](../1506425-newptrclear.md): Deprecated.
+- [NewResErrUPP](../1529285-newreserrupp.md): Deprecated.
+- [NewSleepQUPP](../1427411-newsleepqupp.md): Deprecated.
+- [NewThread](../1574248-newthread.md): Deprecated.
+- [NewThreadEntryUPP](../1574224-newthreadentryupp.md): Deprecated.
+- [NewThreadSchedulerUPP](../1574293-newthreadschedulerupp.md): Deprecated.
+- [NewThreadSwitchUPP](../1574243-newthreadswitchupp.md): Deprecated.
+- [NewThreadTerminationUPP](../1574221-newthreadterminationupp.md): Deprecated.
+- [NewTimerUPP](../1550787-newtimerupp.md): Deprecated.
+- [OverrideIconRef](../1445253-overrideiconref.md): Deprecated.
+- [PBXLockRangeAsync](../1565710-pbxlockrangeasync.md): Deprecated.
+- [PBXLockRangeSync](../1566800-pbxlockrangesync.md): Deprecated.
+- [PBXUnlockRangeAsync](../1565257-pbxunlockrangeasync.md): Deprecated.
+- [PBXUnlockRangeSync](../1565709-pbxunlockrangesync.md): Deprecated.
+- [PLpos](../1585952-plpos.md): Deprecated.
+- [PLstrcat](../1585941-plstrcat.md): Deprecated.
+- [PLstrchr](../1585945-plstrchr.md): Deprecated.
+- [PLstrcmp](../1585947-plstrcmp.md): Deprecated.
+- [PLstrcpy](../1585940-plstrcpy.md): Deprecated.
+- [PLstrlen](../1585944-plstrlen.md): Deprecated.
+- [PLstrncat](../1585949-plstrncat.md): Deprecated.
+- [PLstrncmp](../1585951-plstrncmp.md): Deprecated.
+- [PLstrncpy](../1585946-plstrncpy.md): Deprecated.
+- [PLstrpbrk](../1585948-plstrpbrk.md): Deprecated.
+- [PLstrrchr](../1585943-plstrrchr.md): Deprecated.
+- [PLstrspn](../1585950-plstrspn.md): Deprecated.
+- [PLstrstr](../1585942-plstrstr.md): Deprecated.
+- [PrimeTime](../1550774-primetime.md): Deprecated.
+- [PrimeTimeTask](../1550783-primetimetask.md): Deprecated.
+- [PtrAndHand](../1506365-ptrandhand.md): Deprecated.
+- [PtrToHand](../1506370-ptrtohand.md): Deprecated.
+- [PtrToXHand](../1506246-ptrtoxhand.md): Deprecated.
+- [PurgeCollection](../1551434-purgecollection.md): Deprecated.
+- [PurgeCollectionTag](../1551327-purgecollectiontag.md): Deprecated.
+- [ReadIconFromFSRef](../1444939-readiconfromfsref.md): Deprecated.
+- [ReadLocation](../1533377-readlocation.md): Deprecated.
+- [ReadPartialResource](../1529248-readpartialresource.md): Deprecated.
+- [ReallocateHandle](../1506393-reallocatehandle.md): Deprecated.
+- [RecoverHandle](../1506310-recoverhandle.md): Deprecated.
+- [RegisterIconRefFromFSRef](../1446795-registericonreffromfsref.md): Deprecated.
+- [RegisterIconRefFromIconFamily](../1443918-registericonreffromiconfamily.md): Deprecated.
+- [ReleaseCollection](../1551418-releasecollection.md): Deprecated.
+- [ReleaseFolder](../1389109-releasefolder.md): Deprecated.
+- [ReleaseIconRef](../1443504-releaseiconref.md): Deprecated.
+- [ReleaseResource](../1529259-releaseresource.md): Deprecated.
+- [RemoveCollectionItem](../1551326-removecollectionitem.md): Deprecated.
+- [RemoveFolderDescriptor](../1389531-removefolderdescriptor.md): Deprecated.
+- [RemoveIconRefOverride](../1445832-removeiconrefoverride.md): Deprecated.
+- [RemoveIndexedCollectionItem](../1551414-removeindexedcollectionitem.md): Deprecated.
+- [RemoveResource](../1529272-removeresource.md): Deprecated.
+- [RemoveTimeTask](../1550772-removetimetask.md): Deprecated.
+- [ReplaceIndexedCollectionItem](../1551424-replaceindexedcollectionitem.md): Deprecated.
+- [ReplaceIndexedCollectionItemHdl](../1551345-replaceindexedcollectionitemhdl.md): Deprecated.
+- [ResError](../1529333-reserror.md): Deprecated.
+- [RetainCollection](../1551332-retaincollection.md): Deprecated.
+- [RmvTime](../1550775-rmvtime.md): Deprecated.
+- [S32Set](../1536232-s32set.md)
+- [S64Add](../1536277-s64add.md)
+- [S64And](../1536260-s64and.md)
+- [S64BitwiseAnd](../1536315-s64bitwiseand.md)
+- [S64BitwiseEor](../1536312-s64bitwiseeor.md)
+- [S64BitwiseNot](../1536333-s64bitwisenot.md)
+- [S64BitwiseOr](../1536285-s64bitwiseor.md)
+- [S64Compare](../1536359-s64compare.md)
+- [S64Div](../1536247-s64div.md)
+- [S64Divide](../1536237-s64divide.md)
+- [S64Eor](../1536245-s64eor.md)
+- [S64Max](../1536355-s64max.md)
+- [S64Min](../1536244-s64min.md)
+- [S64Mod](../1536242-s64mod.md)
+- [S64Multiply](../1536274-s64multiply.md)
+- [S64Negate](../1536337-s64negate.md)
+- [S64Not](../1536319-s64not.md)
+- [S64Or](../1536264-s64or.md)
+- [S64Set](../1536243-s64set.md)
+- [S64SetU](../1536330-s64setu.md)
+- [S64ShiftLeft](../1536299-s64shiftleft.md)
+- [S64ShiftRight](../1536323-s64shiftright.md)
+- [S64Subtract](../1536289-s64subtract.md)
+- [SInt64ToLongDouble](../1536253-sint64tolongdouble.md)
+- [SInt64ToUInt64](../1536320-sint64touint64.md)
+- [SInt64ToWide](../1536229-sint64towide.md)
+- [SetCollectionDefaultAttributes](../1551442-setcollectiondefaultattributes.md): Deprecated.
+- [SetCollectionExceptionProc](../1551417-setcollectionexceptionproc.md): Deprecated.
+- [SetCollectionItemInfo](../1551372-setcollectioniteminfo.md): Deprecated.
+- [SetCustomIconsEnabled](../1449302-setcustomiconsenabled.md): Deprecated.
+- [SetDebugOptionValue](../1517709-setdebugoptionvalue.md): Deprecated.
+- [SetDebuggerNotificationProcs](../1574202-setdebuggernotificationprocs.md): Deprecated.
+- [SetHandleSize](../1506241-sethandlesize.md): Deprecated.
+- [SetIndexedCollectionItemInfo](../1551406-setindexedcollectioniteminfo.md): Deprecated.
+- [SetPtrSize](../1506428-setptrsize.md): Deprecated.
+- [SetResAttrs](../1529240-setresattrs.md): Deprecated.
+- [SetResFileAttrs](../1529257-setresfileattrs.md): Deprecated.
+- [SetResInfo](../1529247-setresinfo.md): Deprecated.
+- [SetResLoad](../1529294-setresload.md): Deprecated.
+- [SetResPurge](../1529316-setrespurge.md): Deprecated.
+- [SetResourceSize](../1529277-setresourcesize.md): Deprecated.
+- [SetScriptManagerVariable](../1483931-setscriptmanagervariable.md): Deprecated.
+- [SetThreadReadyGivenTaskRef](../1574279-setthreadreadygiventaskref.md): Deprecated.
+- [SetThreadScheduler](../1574195-setthreadscheduler.md): Deprecated.
+- [SetThreadState](../1574212-setthreadstate.md): Deprecated.
+- [SetThreadStateEndCritical](../1574289-setthreadstateendcritical.md): Deprecated.
+- [SetThreadSwitcher](../1574270-setthreadswitcher.md): Deprecated.
+- [SetThreadTerminator](../1574205-setthreadterminator.md): Deprecated.
+- [SleepQInstall](../1427477-sleepqinstall.md): Deprecated.
+- [SleepQRemove](../1427457-sleepqremove.md): Deprecated.
+- [SubAbsoluteFromAbsolute](../1501265-subabsolutefromabsolute.md): Deprecated.
+- [SubDurationFromAbsolute](../1501261-subdurationfromabsolute.md): Deprecated.
+- [SubNanosecondsFromAbsolute](../1501240-subnanosecondsfromabsolute.md): Deprecated.
+- [SysError](../1559937-syserror.md): Deprecated.
+- [TECCopyTextEncodingInternetNameAndMIB](../1571835-teccopytextencodinginternetnamea.md)
+- [TECGetTextEncodingFromInternetNameOrMIB](../1571816-tecgettextencodingfrominternetna.md)
+- [TECSetBasicOptions](../1571847-tecsetbasicoptions.md)
+- [TaskLevel](../1517734-tasklevel.md): Deprecated.
+- [TempNewHandle](../1506376-tempnewhandle.md): Deprecated.
+- [TestAndClear](../1490573-testandclear.md): Deprecated.
+- [TestAndSet](../1490582-testandset.md): Deprecated.
+- [ThreadBeginCritical](../1574258-threadbegincritical.md): Deprecated.
+- [ThreadCurrentStackSpace](../1574269-threadcurrentstackspace.md): Deprecated.
+- [ThreadEndCritical](../1574230-threadendcritical.md): Deprecated.
+- [TickCount](../1533365-tickcount.md): Deprecated.
+- [U32SetU](../1536258-u32setu.md)
+- [U64Add](../1536306-u64add.md)
+- [U64And](../1536257-u64and.md)
+- [U64BitwiseAnd](../1536227-u64bitwiseand.md)
+- [U64BitwiseEor](../1536230-u64bitwiseeor.md)
+- [U64BitwiseNot](../1536304-u64bitwisenot.md)
+- [U64BitwiseOr](../1536365-u64bitwiseor.md)
+- [U64Compare](../1536343-u64compare.md): Deprecated.
+- [U64Div](../1536271-u64div.md)
+- [U64Divide](../1536326-u64divide.md)
+- [U64Eor](../1536351-u64eor.md)
+- [U64Max](../1536321-u64max.md)
+- [U64Mod](../1536225-u64mod.md)
+- [U64Multiply](../1536288-u64multiply.md)
+- [U64Not](../1536276-u64not.md)
+- [U64Or](../1536336-u64or.md)
+- [U64Set](../1536364-u64set.md)
+- [U64SetU](../1536282-u64setu.md)
+- [U64ShiftLeft](../1536248-u64shiftleft.md)
+- [U64ShiftRight](../1536363-u64shiftright.md)
+- [U64Subtract](../1536348-u64subtract.md)
+- [UCConvertCFAbsoluteTimeToLongDateTime](../1551577-ucconvertcfabsolutetimetolongdat.md)
+- [UCConvertCFAbsoluteTimeToSeconds](../1551534-ucconvertcfabsolutetimetoseconds.md)
+- [UCConvertCFAbsoluteTimeToUTCDateTime](../1551529-ucconvertcfabsolutetimetoutcdate.md)
+- [UCConvertLongDateTimeToCFAbsoluteTime](../1551619-ucconvertlongdatetimetocfabsolut.md)
+- [UCConvertSecondsToCFAbsoluteTime](../1551512-ucconvertsecondstocfabsolutetime.md)
+- [UCConvertUTCDateTimeToCFAbsoluteTime](../1551556-ucconvertutcdatetimetocfabsolute.md)
+- [UCGetUnicodeScalarValueForSurrogatePair](../1399615-ucgetunicodescalarvalueforsurrog.md)
+- [UCIsSurrogateHighCharacter](../1400432-ucissurrogatehighcharacter.md)
+- [UCIsSurrogateLowCharacter](../1400456-ucissurrogatelowcharacter.md)
+- [UCTypeSelectAddKeyToSelector](../1390517-uctypeselectaddkeytoselector.md)
+- [UCTypeSelectCompare](../1390474-uctypeselectcompare.md)
+- [UCTypeSelectCreateSelector](../1390445-uctypeselectcreateselector.md)
+- [UCTypeSelectFindItem](../1390368-uctypeselectfinditem.md)
+- [UCTypeSelectFlushSelectorData](../1390367-uctypeselectflushselectordata.md)
+- [UCTypeSelectReleaseSelector](../1390644-uctypeselectreleaseselector.md)
+- [UCTypeSelectWalkList](../1390442-uctypeselectwalklist.md)
+- [UCTypeSelectWouldResetBuffer](../1390538-uctypeselectwouldresetbuffer.md)
+- [UInt64ToLongDouble](../1536335-uint64tolongdouble.md)
+- [UInt64ToSInt64](../1536266-uint64tosint64.md)
+- [UInt64ToUnsignedWide](../1536362-uint64tounsignedwide.md)
+- [UTCreateStringForOSType](../1442804-utcreatestringforostype.md): Deprecated. Encodes an `OSType` into a string suitable for use as a tag argument.
+- [UTGetOSTypeFromString](../1450472-utgetostypefromstring.md): Deprecated. Decodes a tag string into an OSType.
+- [UTTypeConformsTo](../1444079-uttypeconformsto.md): Deprecated. Returns whether a uniform type identifier conforms to another uniform type identifier.
+- [UTTypeCopyAllTagsWithClass](../1448473-uttypecopyalltagswithclass.md): Deprecated.
+- [UTTypeCopyDeclaration](../1442505-uttypecopydeclaration.md): Deprecated. Returns a uniform type’s declaration.
+- [UTTypeCopyDeclaringBundleURL](../1447781-uttypecopydeclaringbundleurl.md): Deprecated. Returns the location of a bundle containing the declaration for a type.
+- [UTTypeCopyDescription](../1448514-uttypecopydescription.md): Deprecated. Returns the localized, user-readable type description string associated with a uniform type identifier.
+- [UTTypeCopyPreferredTagWithClass](../1442744-uttypecopypreferredtagwithclass.md): Deprecated. Translates a uniform type identifier to a list of tags in a different type classification method.
+- [UTTypeCreateAllIdentifiersForTag](../1447261-uttypecreateallidentifiersfortag.md): Deprecated. Creates an array of all uniform type identifiers for the type indicated by the specified tag.
+- [UTTypeCreatePreferredIdentifierForTag](../1448939-uttypecreatepreferredidentifierf.md): Deprecated. Creates a uniform type identifier for the type indicated by the specified tag.
+- [UTTypeEqual](../1447783-uttypeequal.md): Deprecated. Returns whether two uniform type identifiers are equal.
+- [UTTypeIsDeclared](../1450352-uttypeisdeclared.md): Deprecated.
+- [UTTypeIsDynamic](../1442980-uttypeisdynamic.md): Deprecated.
+- [UnflattenCollection](../1551348-unflattencollection.md): Deprecated.
+- [UnflattenCollectionFromHdl](../1551400-unflattencollectionfromhdl.md): Deprecated.
+- [Unique1ID](../1529314-unique1id.md): Deprecated.
+- [UniqueID](../1529255-uniqueid.md): Deprecated.
+- [UnregisterIconRef](../1444660-unregistericonref.md): Deprecated.
+- [UnsignedFixedMulDiv](../1409276-unsignedfixedmuldiv.md): Deprecated.
+- [UnsignedWideToUInt64](../1536357-unsignedwidetouint64.md)
+- [UpTime](../1501237-uptime.md): Deprecated.
+- [UpdateIconRef](../1445921-updateiconref.md): Deprecated.
+- [UpdateResFile](../1529379-updateresfile.md): Deprecated.
+- [UpdateSystemActivity](../1427505-updatesystemactivity.md): Deprecated.
+- [UseResFile](../1529268-useresfile.md): Deprecated.
+- [WSGetCFTypeIDFromWSTypeID](../1508451-wsgetcftypeidfromwstypeid.md): Deprecated. Gets the CFType associated with a given WSType
+- [WSGetWSTypeIDFromCFType](../1508442-wsgetwstypeidfromcftype.md): Deprecated. Returns the `WSTypeID` associated with a given `CFTypeRef`.
+- [WSMethodInvocationAddDeserializationOverride](../1576436-wsmethodinvocationadddeserializa.md): Deprecated. Specifies a callback to be made when parsing the XML in a method response.
+- [WSMethodInvocationAddSerializationOverride](../1576435-wsmethodinvocationaddserializati.md): Deprecated. Specifies a callback to be made when creating the XML for an method invocation.
+- [WSMethodInvocationCopyParameters](../1576399-wsmethodinvocationcopyparameters.md): Deprecated. Creates a copy of the parameters dictionary and sets the order in an array.
+- [WSMethodInvocationCopyProperty](../1576432-wsmethodinvocationcopyproperty.md): Deprecated. Creates a copy of a named property of the invocation reference.
+- [WSMethodInvocationCopySerialization](../1576441-wsmethodinvocationcopyserializat.md): Deprecated. Creates an XML serialization of a method invocation.
+- [WSMethodInvocationCreate](../1576406-wsmethodinvocationcreate.md): Deprecated. Creates a reference to a method invocation, containing the URL of the service, the operation name, and the protocol.
+- [WSMethodInvocationCreateFromSerialization](../1576400-wsmethodinvocationcreatefromseri.md): Deprecated. Creates a method invocation object from an XML serialization.
+- [WSMethodInvocationGetTypeID](../1576434-wsmethodinvocationgettypeid.md): Deprecated. Returns the type ID of the current method invocation.
+- [WSMethodInvocationInvoke](../1576428-wsmethodinvocationinvoke.md): Deprecated. Invokes an web services operation synchronously.
+- [WSMethodInvocationScheduleWithRunLoop](../1576408-wsmethodinvocationschedulewithru.md): Deprecated. Schedule a method invocation for asynchronous execution on a run loop.
+- [WSMethodInvocationSetCallBack](../1576439-wsmethodinvocationsetcallback.md): Deprecated. Set a callback to handle the response to an asynchronous method invocation.
+- [WSMethodInvocationSetParameters](../1576420-wsmethodinvocationsetparameters.md): Deprecated. Set the parameter names, types, and order for a method invocation.
+- [WSMethodInvocationSetProperty](../1576407-wsmethodinvocationsetproperty.md): Deprecated. Sets a named property of the method invocation.
+- [WSMethodInvocationUnscheduleFromRunLoop](../1576409-wsmethodinvocationunschedulefrom.md): Deprecated. Unschedules a method invocation from a run loop.
+- [WSMethodResultIsFault](../1576401-wsmethodresultisfault.md): Deprecated. Tests a method result dictionary for a fault condition.
+- [WSProtocolHandlerCopyFaultDocument](../1423449-wsprotocolhandlercopyfaultdocume.md): Deprecated. Creates a Fault XML response for a given WSProtocolHandler and fault details dictionary.
+- [WSProtocolHandlerCopyProperty](../1423436-wsprotocolhandlercopyproperty.md): Deprecated. Returns a copy of a property from a protocol handler reference.
+- [WSProtocolHandlerCopyReplyDictionary](../1423441-wsprotocolhandlercopyreplydictio.md): Deprecated. Parses an incoming XML document as if it were the reply of a method.
+- [WSProtocolHandlerCopyReplyDocument](../1423440-wsprotocolhandlercopyreplydocume.md): Deprecated. Creates a Reply XML document for a given WS ProtocolHandler and context dictionary.
+- [WSProtocolHandlerCopyRequestDictionary](../1423451-wsprotocolhandlercopyrequestdict.md): Deprecated. Parses an incoming XML document for the method name and parameters.
+- [WSProtocolHandlerCopyRequestDocument](../1423437-wsprotocolhandlercopyrequestdocu.md): Deprecated. Creates an XML request for a given `WSProtocolHandler` and parameter list.
+- [WSProtocolHandlerCreate](../1423434-wsprotocolhandlercreate.md): Deprecated. Creates a `WSProtocolHandlerRef` for use in translating an XML document.
+- [WSProtocolHandlerGetTypeID](../1423455-wsprotocolhandlergettypeid.md): Deprecated. Returns a `CFTypeID` for the current `WSProtocolHandlerRef`.
+- [WSProtocolHandlerSetDeserializationOverride](../1423444-wsprotocolhandlersetdeserializat.md): Deprecated. Specifies a callback to be made when parsing an XML method response.
+- [WSProtocolHandlerSetProperty](../1423442-wsprotocolhandlersetproperty.md): Deprecated. Sets a property in a specified protocol handler.
+- [WSProtocolHandlerSetSerializationOverride](../1423438-wsprotocolhandlersetserializatio.md): Deprecated. Specifies a callback which will be called to produce the XML that represents the serialization of a given type ref.
+- [WideAdd](../1409245-wideadd.md): Deprecated.
+- [WideBitShift](../1409247-widebitshift.md): Deprecated.
+- [WideCompare](../1409264-widecompare.md): Deprecated.
+- [WideDivide](../1409233-widedivide.md): Deprecated.
+- [WideMultiply](../1409273-widemultiply.md): Deprecated.
+- [WideNegate](../1409221-widenegate.md): Deprecated.
+- [WideShift](../1409239-wideshift.md): Deprecated.
+- [WideSquareRoot](../1409227-widesquareroot.md): Deprecated.
+- [WideSubtract](../1409210-widesubtract.md): Deprecated.
+- [WideToSInt64](../1536356-widetosint64.md)
+- [WideWideDivide](../1409265-widewidedivide.md): Deprecated.
+- [WritePartialResource](../1529305-writepartialresource.md): Deprecated.
+- [WriteResource](../1529291-writeresource.md): Deprecated.
+- [X2Fix](../1409237-x2fix.md): Deprecated.
+- [X2Frac](../1409261-x2frac.md): Deprecated.
+- [YieldToAnyThread](../1574238-yieldtoanythread.md): Deprecated.
+- [YieldToThread](../1574240-yieldtothread.md): Deprecated.
+- [annuity](../1492633-annuity.md): Deprecated.
+- [compound](../1492661-compound.md): Deprecated.
+- [dec2f](../1492641-dec2f.md): Deprecated.
+- [dec2l](../1492660-dec2l.md): Deprecated.
+- [dec2num](../1492667-dec2num.md): Deprecated.
+- [dec2numl](../1492631-dec2numl.md)
+- [dec2s](../1492647-dec2s.md): Deprecated.
+- [dec2str](../1492629-dec2str.md): Deprecated.
+- [dtox80](../1492664-dtox80.md): Deprecated.
+- [kcfindapplesharepassword](../1563164-kcfindapplesharepassword.md): Deprecated.
+- [kcfindgenericpassword](../1562994-kcfindgenericpassword.md): Deprecated.
+- [kcfindinternetpassword](../1563036-kcfindinternetpassword.md): Deprecated.
+- [kcfindinternetpasswordwithpath](../1563135-kcfindinternetpasswordwithpath.md): Deprecated.
+- [kcgetkeychainname](../1563005-kcgetkeychainname.md): Deprecated.
+- [ldtox80](../1492662-ldtox80.md)
+- [num2dec](../1492649-num2dec.md): Deprecated.
+- [num2decl](../1492642-num2decl.md)
+- [numtostring](../1579613-numtostring.md): Deprecated.
+- [randomx](../1492636-randomx.md): Deprecated.
+- [relation](../1492646-relation.md): Deprecated.
+- [relationl](../1492627-relationl.md)
+- [str2dec](../1492635-str2dec.md): Deprecated.
+- [vAEBuildAppleEvent](../1441729-vaebuildappleevent.md): Allows you to encapsulate calls to `AEBuildAppleEvent` in a wrapper routine.
+- [vAEBuildDesc](../1446775-vaebuilddesc.md): Allows you to encapsulate calls to `AEBuildDesc` in your own wrapper routines.
+- [vAEBuildParameters](../1448040-vaebuildparameters.md): Allows you to encapsulate calls to `AEBuildParameters` in your own `stdarg`-style wrapper routines, using techniques similar to those allowed by vsprintf.
+- [x80tod](../1492658-x80tod.md): Deprecated.
+- [x80told](../1492670-x80told.md)
+- [AEDeterminePermissionToAutomateTarget](../3025784-aedeterminepermissiontoautomatet.md)
+- [AEUnflattenDescFromBytes](../3553279-aeunflattendescfrombytes.md)
+- [MDItemGetCacheFileDescriptors](../4485578-mditemgetcachefiledescriptors.md)
+- [S64Absolute](../4357548-s64absolute.md)
+
+## See Also
+
+### Other Reference
+
+- [Core Endian](core_endian.md): Deprecated. Convert data between big endian and little endian format
+- [Carbon Core Structures](carbon_core_structures.md)
+- [Carbon Core Enumerations](carbon_core_enumerations.md)
+- [Carbon Core Data Types](carbon_core_data_types.md)

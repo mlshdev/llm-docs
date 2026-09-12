@@ -1,0 +1,103 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/bnnsapplymultiheadattentionbackward(_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:)](https://developer.apple.com/documentation/accelerate/bnnsapplymultiheadattentionbackward(_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:_:))
+
+# BNNSApplyMultiheadAttentionBackward(\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 14.0+ (deprecated in 18.0) · iPadOS 14.0+ (deprecated in 18.0) · Mac Catalyst 14.0+ (deprecated in 18.0) · macOS 11.0+ (deprecated in 15.0) · tvOS 14.0+ (deprecated in 18.0) · visionOS 1.0+ (deprecated in 2.0) · watchOS 7.0+ (deprecated in 11.0)
+
+Applies a multihead attention filter backward to generate gradients.
+
+> Use BNNSGraph\* APIs
+
+## Declaration
+
+```swift
+func BNNSApplyMultiheadAttentionBackward(_ F: BNNSFilter?, _ batch_size: Int, _ query: UnsafeRawPointer?, _ query_stride: Int, _ query_param_delta: UnsafeMutablePointer<BNNSMHAProjectionParameters>?, _ key: UnsafeRawPointer?, _ key_stride: Int, _ key_mask: UnsafePointer<BNNSNDArrayDescriptor>?, _ key_mask_stride: Int, _ key_param_delta: UnsafeMutablePointer<BNNSMHAProjectionParameters>?, _ value: UnsafeRawPointer?, _ value_stride: Int, _ value_param_delta: UnsafeMutablePointer<BNNSMHAProjectionParameters>?, _ add_to_attention: UnsafePointer<BNNSNDArrayDescriptor>?, _ key_attn_bias_delta: UnsafeMutablePointer<BNNSNDArrayDescriptor>?, _ value_attn_bias_delta: UnsafeMutablePointer<BNNSNDArrayDescriptor>?, _ output: UnsafeRawPointer?, _ output_stride: Int, _ output_param_delta: UnsafeMutablePointer<BNNSMHAProjectionParameters>, _ backprop_cache_size: Int, _ backprop_cache: UnsafeMutableRawPointer?, _ workspace_size: UnsafeMutablePointer<Int>?, _ workspace: UnsafeMutableRawPointer?) -> Int32
+```
+
+## Parameters
+
+- `F`: The filter to apply.
+- `batch_size`: The number of input-output pairs.
+- `query`: Pointer to data for query input matrix.
+- `query_stride`: Batch stride for query.
+- `query_param_delta`: Pointer to the data structure used to hold deltas for corresponding components.
+- `key`: Pointer to data for key input matrix.
+- `key_stride`: Batch stride for key.
+- `key_mask`: Mask applied to key for ignoring entries.
+- `key_mask_stride`: Batch stride for key mask.
+- `key_param_delta`: Pointer to the data structure used to hold deltas for corresponding components.
+- `value`: Pointer to the data for value input matrix,.
+- `value_stride`: Batch stride for value.
+- `value_param_delta`: Pointer to the data structure used to hold deltas for corresponding components.
+- `add_to_attention`: Pointer to the 2D tensor that’s used as part of the mask function prior to softmax in the attention calculation.
+- `key_attn_bias_delta`: Pointer to the data structure used to hold deltas for corresponding components.
+- `value_attn_bias_delta`: Pointer to the data structure used to hold deltas for corresponding components.
+- `output`: Pointer to the data for output matrix.
+- `output_stride`: Batch stride for output.
+- `output_param_delta`: Pointer to the data structure used to hold deltas for corresponding components.
+- `backprop_cache_size`: The size of the back propagation cache, in bytes.
+- `backprop_cache`: A cache that stores intermediate results that BNNS can use to accelerate a future call to this function.
+- `workspace_size`: The size of the array workspace, in bytes.
+- `workspace`: A scratch buffer used during the calculation.
+
+## See Also
+
+### Multihead attention layers
+
+- [BNNSMHAProjectionParameters](bnnsmhaprojectionparameters.md): A structure that contains multihead attention projection parameters.
+- [BNNSLayerParametersMultiheadAttention](bnnslayerparametersmultiheadattention.md): Deprecated. A structure that contains the parameters of a multihead attention layer.
+- [BNNSFilterCreateLayerMultiheadAttention(\_:\_:)](bnnsfiltercreatelayermultiheadattention%28____%29.md): Deprecated. Returns a new multihead attention layer.
+- [BNNSApplyMultiheadAttention(\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:)](bnnsapplymultiheadattention%28__________________________________%29.md): Deprecated. Applies a mutihead attention filter to a set of input objects, writing the result to a set of output objects.
+
+# BNNSApplyMultiheadAttentionBackward (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 14.0+ (deprecated in 18.0) · iPadOS 14.0+ (deprecated in 18.0) · Mac Catalyst 14.0+ (deprecated in 18.0) · macOS 11.0+ (deprecated in 15.0) · tvOS 14.0+ (deprecated in 18.0) · visionOS 1.0+ (deprecated in 2.0) · watchOS 7.0+ (deprecated in 11.0)
+
+Applies a multihead attention filter backward to generate gradients.
+
+> Use BNNSGraph\* APIs
+
+## Declaration
+
+```objectivec
+int BNNSApplyMultiheadAttentionBackward(BNNSFilter F, size_t batch_size, const void *query, size_t query_stride, BNNSMHAProjectionParameters *query_param_delta, const void *key, size_t key_stride, const BNNSNDArrayDescriptor *key_mask, size_t key_mask_stride, BNNSMHAProjectionParameters *key_param_delta, const void *value, size_t value_stride, BNNSMHAProjectionParameters *value_param_delta, const BNNSNDArrayDescriptor *add_to_attention, BNNSNDArrayDescriptor *key_attn_bias_delta, BNNSNDArrayDescriptor *value_attn_bias_delta, const void *output, size_t output_stride, BNNSMHAProjectionParameters *output_param_delta, size_t backprop_cache_size, void *backprop_cache, size_t *workspace_size, void *workspace);
+```
+
+## Parameters
+
+- `F`: The filter to apply.
+- `batch_size`: The number of input-output pairs.
+- `query`: Pointer to data for query input matrix.
+- `query_stride`: Batch stride for query.
+- `query_param_delta`: Pointer to the data structure used to hold deltas for corresponding components.
+- `key`: Pointer to data for key input matrix.
+- `key_stride`: Batch stride for key.
+- `key_mask`: Mask applied to key for ignoring entries.
+- `key_mask_stride`: Batch stride for key mask.
+- `key_param_delta`: Pointer to the data structure used to hold deltas for corresponding components.
+- `value`: Pointer to the data for value input matrix,.
+- `value_stride`: Batch stride for value.
+- `value_param_delta`: Pointer to the data structure used to hold deltas for corresponding components.
+- `add_to_attention`: Pointer to the 2D tensor that’s used as part of the mask function prior to softmax in the attention calculation.
+- `key_attn_bias_delta`: Pointer to the data structure used to hold deltas for corresponding components.
+- `value_attn_bias_delta`: Pointer to the data structure used to hold deltas for corresponding components.
+- `output`: Pointer to the data for output matrix.
+- `output_stride`: Batch stride for output.
+- `output_param_delta`: Pointer to the data structure used to hold deltas for corresponding components.
+- `backprop_cache_size`: The size of the back propagation cache, in bytes.
+- `backprop_cache`: A cache that stores intermediate results that BNNS can use to accelerate a future call to this function.
+- `workspace_size`: The size of the array workspace, in bytes.
+- `workspace`: A scratch buffer used during the calculation.
+
+## See Also
+
+### Multihead attention layers
+
+- [BNNSMHAProjectionParameters](bnnsmhaprojectionparameters.md): A structure that contains multihead attention projection parameters.
+- [BNNSLayerParametersMultiheadAttention](bnnslayerparametersmultiheadattention.md): Deprecated. A structure that contains the parameters of a multihead attention layer.
+- [BNNSFilterCreateLayerMultiheadAttention](bnnsfiltercreatelayermultiheadattention%28____%29.md): Deprecated. Returns a new multihead attention layer.
+- [BNNSApplyMultiheadAttention](bnnsapplymultiheadattention%28__________________________________%29.md): Deprecated. Applies a mutihead attention filter to a set of input objects, writing the result to a set of output objects.

@@ -1,0 +1,23 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/file_type_compatibility_atom/major_brand](https://developer.apple.com/documentation/quicktime-file-format/file_type_compatibility_atom/major_brand)
+
+# Major brand
+
+**Framework:** QuickTime File Format  
+**Kind:** Data field
+
+A 32-bit unsigned integer that represents a file format code.
+
+<a id="Overview"></a>
+
+## Overview
+
+A 32-bit unsigned integer that should be set to `'qt  '` (note the two trailing ASCII space characters) for QuickTime movie files. If a file is compatible with multiple brands, all such brands are listed in the [Compatible brands](compatible_brands.md) fields, and the Major brand identifies the preferred brand or best use.
+
+## See Also
+
+### Data fields
+
+- [Size](size.md): A 32-bit integer that specifies the number of bytes in the atom.
+- [Type](type.md): A 32-bit unsigned integer that identifies the atom type, typically represented as a four-character code.
+- [Minor version](minor_version.md): A 32-bit field that indicates the file format specification version.
+- [Compatible brands](compatible_brands.md): A series of unsigned 32-bit integers listing compatible file formats.

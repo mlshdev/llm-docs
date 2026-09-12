@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tabulardata/columnslice/-=(_:_:)-1n1gh](https://developer.apple.com/documentation/tabulardata/columnslice/-=(_:_:)-1n1gh)
+
+# -=(\_:\_:)
+
+**Framework:** TabularData  
+**Kind:** Operator  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+
+Modifies a column slice by subtracting a value from each element.
+
+## Declaration
+
+```swift
+static func -= (lhs: inout ColumnSlice<WrappedElement>, rhs: WrappedElement) where WrappedElement : AdditiveArithmetic
+```
+
+## Parameters
+
+- `lhs`: A column slice.
+- `rhs`: A value of the same type as the column’s elements.
+
+## See Also
+
+### Modifying a Column Slice with a Value
+
+- [+=(\_:\_:)](+=%28____%29-950qi.md): Modifies a column slice by adding a value to each element.
+- [\*=(\_:\_:)](_=%28____%29-i6qs.md): Modifies a column slice by multiplying each element by a value.
+- [/=(\_:\_:)](_=%28____%29-8oi36.md): Modifies an integer column slice by dividing each element by a value.
+- [/=(\_:\_:)](_=%28____%29-8pl3f.md): Modifies a floating-point column slice by dividing each element by a value.

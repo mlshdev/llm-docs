@@ -1,7 +1,11 @@
 import { readUtf8, withRepositoryArchive } from "../files.ts";
 import { documentTitle, githubBlobUrl, normalizeSpacing } from "../markdown.ts";
 import { DocumentCollector } from "../quarantine.ts";
-import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
+import type {
+  GithubLockedSource,
+  GithubSourceProject,
+  ProjectBuild,
+} from "../types.ts";
 
 const documentationFiles = [
   {
@@ -66,8 +70,8 @@ interface ParsedApiItem {
 }
 
 export async function buildAria2(
-  project: SourceProject,
-  lock: LockedSource,
+  project: GithubSourceProject,
+  lock: GithubLockedSource,
 ): Promise<ProjectBuild> {
   return withRepositoryArchive(
     project.repository,

@@ -1,0 +1,55 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/blendshapeweightscomponent](https://developer.apple.com/documentation/realitykit/blendshapeweightscomponent)
+
+# BlendShapeWeightsComponent
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
+
+A component that provides access to the current weights associated with all blend shape meshes on an entity.
+
+## Declaration
+
+```swift
+struct BlendShapeWeightsComponent
+```
+
+<a id="overview"></a>
+
+## Overview
+
+You can access the weights associated with an entity’s blend shapes by using the [weightSet](blendshapeweightscomponent/weightset.md) variable after an initialized `BlendShapeWeightsComponent` is added to an entity.
+
+```swift
+let blendShapeWeightsComponent = BlendShapeWeightsComponent(
+    weightsMapping: weightsMapping)
+entity.components.set(blendShapeWeightsComponent)
+let weightValues = BlendShapeWeights([0.3, 0.8])
+entity.components[BlendShapeWeightsComponent.self]!.weightSets[0].weights =
+    weightValues
+```
+
+## Topics
+
+### Initializers
+
+- [init(weightsMapping:)](blendshapeweightscomponent/init%28weightsmapping_%29.md): Create a BlendShapeWeightsComponent from a BlendShapeWeightsMapping.
+
+### Instance Properties
+
+- [weightSet](blendshapeweightscomponent/weightset.md): The runtime named blend shapes weights.
+
+## Relationships
+
+### Conforms To
+
+- [Component](component.md)
+
+## See Also
+
+### Blend shape management
+
+- [BlendShapeWeightsMapping](blendshapeweightsmapping.md): A mapping of blend weights to the target meshes that those weights affect.
+- [BlendShapeWeights](blendshapeweights.md): A set of animatable weight values that collectively represent the blending amounts for all the blend shapes’ blend targets.
+- [BlendShapeWeightsData](blendshapeweightsdata.md): A structure that encapsulates the blend shape name, blend shape weights and the names of those weights to be stored by the blend shape weights set.
+- [BlendShapeWeightsSet](blendshapeweightsset.md): A custom collection of named blend shape weights.

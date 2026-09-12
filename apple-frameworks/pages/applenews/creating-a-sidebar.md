@@ -1,0 +1,343 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applenews/creating-a-sidebar](https://developer.apple.com/documentation/applenews/creating-a-sidebar)
+
+# Creating a Sidebar
+
+**Interface language:** Data
+
+**Kind:** Article
+
+Create a box with an HTML bulleted list in the margin.
+
+<a id="overview"></a>
+
+## Overview
+
+Placing supplemental or reference information in the margin of your article can create an informative and engaging experience.
+
+**On this page, you’ll learn how to create a sidebar that contains some HTML formatting.**
+
+![Screenshot of an Apple News article with an anchored sidebar on iPad.](https://developer.apple.com/images/com.apple.applenews/media-3624926@2x.png)
+
+<a id="Create-Component-Layout-Objects-for-the-Sidebar"></a>
+
+### Create Component Layout Objects for the Sidebar
+
+The `ComponentLayout` object called `sidebarLayout` specifies that the sidebar will begin in column 7 of the article layout and span three columns. The other `ComponentLayout` object makes a minor adjustment.
+
+1. Copy the example code [Sidebar Layout Objects: Copy This Code](creating-a-sidebar.md#Sidebar-Layout-Objects-Copy-This-Code).
+2. Paste the code between the closing brace (`}`) of the last `ComponentLayout` object and the closing brace for the whole `componentLayouts` property.
+
+Your code should look like the example code [Sidebar Layout Objects: Result](creating-a-sidebar.md#Sidebar-Layout-Objects-Result).
+
+<a id="Sidebar-Layout-Objects-Copy-This-Code"></a>
+
+#### Sidebar Layout Objects: Copy This Code
+
+```json
+,
+    "sidebarLayout": {
+      "contentInset": {
+        "left": true,
+        "right": true
+      },
+      "columnStart": 14,
+      "columnSpan": 6,
+      "margin": {
+        "top": 24
+      }
+    },
+    "fullMarginBelowContainedLayout": {
+      "margin": {
+        "bottom": 24
+      }
+    }
+```
+
+<a id="Sidebar-Layout-Objects-Result"></a>
+
+#### Sidebar Layout Objects: Result
+
+Ellipses (`...`) indicate lines of code that have been omitted from this example.
+
+```json
+{
+  ...
+  "componentLayouts": {
+    ...
+    "sidebarLayout": {
+      "contentInset": {
+        "left": true,
+        "right": true
+      },
+      "columnStart": 14,
+      "columnSpan": 6,
+      "margin": {
+        "top": 24
+      }
+    },
+    "fullMarginBelowContainedLayout": {
+      "margin": {
+        "bottom": 24
+      }
+    }
+  },
+  ...
+}
+```
+
+<a id="Define-a-Component-Style-Object-for-the-Sidebar"></a>
+
+### Define a Component Style Object for the Sidebar
+
+Before you can apply a background color to the sidebar, you must define  a new `ComponentStyle` object for the sidebar background color.
+
+1. Copy the example code [sidebarBackgroundStyle: Copy This Code](creating-a-sidebar.md#sidebarBackgroundStyle-Copy-This-Code).
+2. Paste the code between the closing brace (`}`) of the last `ComponentStyle` object and the closing brace for the whole `componentStyles` property.
+
+Your code should look like the example code [sidebarBackgroundStyle: Result](creating-a-sidebar.md#sidebarBackgroundStyle-Result).
+
+<a id="sidebarBackgroundStyle-Copy-This-Code"></a>
+
+#### sidebarBackgroundStyle: Copy This Code
+
+```json
+,
+    "sidebarBackgroundStyle": {
+      "backgroundColor": "#EAF1F4"
+    }
+```
+
+<a id="sidebarBackgroundStyle-Result"></a>
+
+#### sidebarBackgroundStyle: Result
+
+Ellipses (`...`) indicate lines of code that have been omitted from this example.
+
+```json
+{
+  ...
+  "componentStyles": {
+    ...
+    "sidebarBackgroundStyle": {
+      "backgroundColor": "#EAF1F4"
+    }
+  },
+  ...
+}
+```
+
+<a id="Update-the-Body-Component"></a>
+
+### Update the Body Component
+
+In your working `article.json` file, update the `body` component that follows the `podcast` component.
+
+1. Copy the example code [Body: Copy This Code](creating-a-sidebar.md#Body-Copy-This-Code).
+2. Paste the copied code, replacing the `body` component that follows the `podcast` component.
+
+Your code should look like the example code [Body: Result](creating-a-sidebar.md#Body-Result)
+
+<a id="Body-Copy-This-Code"></a>
+
+#### Body: Copy This Code
+
+```json
+{
+  "identifier": "body2",
+  "role": "body",
+  "format": "html",
+  "layout": "fullMarginAboveLayout",
+  "text": "<p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio. Dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati.</p><p>Sed dignissim magna nec metus tincidunt, in posuere tortor malesuada. Morbi auctor justo sodales nulla tincidunt rhoncus. Praesent aliquam, ex eu auctor auctor, turpis metus vehicula augue, non dapibus odio massa a massa. Nunc condimentum dui quis odio condimentum, ac sodales libero elementum. Nullam sagittis felis ac tortor varius ultricies. Duis aliquet ex vel orci aliquam, sit amet bibendum risus rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p><p>Aliquam erat volutpat. Phasellus laoreet porttitor quam ut hendrerit. Aliquam nec arcu scelerisque, scelerisque nisi sit amet, eleifend augue. Nunc sit amet elit commodo, congue felis eget, gravida nibh. Praesent lorem risus, tristique sed porta non, aliquam in sapien. Praesent rhoncus orci eu scelerisque euismod. Morbi bibendum lorem lorem, eu tincidunt neque volutpat sit amet. Sed urna ligula, volutpat nec posuere a, laoreet ut tellus. Curabitur lacinia ornare nisi, et aliquet ex pretium sit amet. Aliquam finibus tristique arcu at feugiat. Donec nec sodales magna. Nulla vulputate sem eget libero venenatis lobortis. Morbi nec sodales metus. Ut eu diam quis augue imperdiet interdum ac quis metus.</p>"
+},
+```
+
+<a id="Body-Result"></a>
+
+#### Body: Result
+
+Ellipses (`...`) indicate lines of code that have been omitted from this example.
+
+```json
+{
+  ...
+  "components": [
+    ...
+    {
+      "role": "section",
+      "layout": "fullBleedLayout",
+      "style": "bodyBackgroundStyle",
+      "components": [
+        ...
+        {
+          "role": "podcast",
+          "layout": "noMarginLayout",
+          "orientation": "horizontal",
+          "URL": "https://podcasts.apple.com/us/podcast/apple-news-today/id1473872585"
+        },
+        {
+          "identifier": "body2",
+          "role": "body",
+          "format": "html",
+          "layout": "fullMarginAboveLayout",
+          "text": "<p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio. Dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati.</p><p>Sed dignissim magna nec metus tincidunt, in posuere tortor malesuada. Morbi auctor justo sodales nulla tincidunt rhoncus. Praesent aliquam, ex eu auctor auctor, turpis metus vehicula augue, non dapibus odio massa a massa. Nunc condimentum dui quis odio condimentum, ac sodales libero elementum. Nullam sagittis felis ac tortor varius ultricies. Duis aliquet ex vel orci aliquam, sit amet bibendum risus rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p><p>Aliquam erat volutpat. Phasellus laoreet porttitor quam ut hendrerit. Aliquam nec arcu scelerisque, scelerisque nisi sit amet, eleifend augue. Nunc sit amet elit commodo, congue felis eget, gravida nibh. Praesent lorem risus, tristique sed porta non, aliquam in sapien. Praesent rhoncus orci eu scelerisque euismod. Morbi bibendum lorem lorem, eu tincidunt neque volutpat sit amet. Sed urna ligula, volutpat nec posuere a, laoreet ut tellus. Curabitur lacinia ornare nisi, et aliquet ex pretium sit amet. Aliquam finibus tristique arcu at feugiat. Donec nec sodales magna. Nulla vulputate sem eget libero venenatis lobortis. Morbi nec sodales metus. Ut eu diam quis augue imperdiet interdum ac quis metus.</p>"
+        },
+        ...
+      ]
+    }
+  ],
+  ...
+}
+```
+
+<a id="Add-and-Anchor-the-Sidebar-Content"></a>
+
+### Add and Anchor the Sidebar Content
+
+In your working `article.json` file, the `body` component that follows the `podcast` component should now have an `identifier` property with the value `body2`.
+
+1. Copy the example code [Container: Copy This Code](creating-a-sidebar.md#Container-Copy-This-Code).
+2. Paste the code after the closing brace and comma at the end of the body component that contains an identifier property with the value `body2`.
+
+Your code should look like the example code [Container: Result](creating-a-sidebar.md#Container-Result).
+
+<a id="Container-Copy-This-Code"></a>
+
+#### Container: Copy This Code
+
+```json
+{
+  "role": "container",
+  "layout": "sidebarLayout",
+  "style": "sidebarBackgroundStyle",
+  "anchor": {
+    "targetComponentIdentifier": "body2",
+    "targetAnchorPosition": "bottom",
+    "originAnchorPosition": "bottom"
+  },
+  "animation": {
+    "type": "fade_in",
+    "userControllable": true,
+    "initialAlpha": 0.5
+  },
+  "components": [
+    {
+      "role": "heading3",
+      "layout": "halfMarginBothContainedLayout",
+      "text": "EPISODES OF NOTE"
+    },
+    {
+      "role": "divider",
+      "layout": "halfMarginBelowContainedLayout",
+      "stroke": {
+        "width": 1,
+        "color": "#A6AAA9"
+      }
+    },
+    {
+      "role": "caption",
+      "layout": "fullMarginBelowContainedLayout",
+      "format": "html",
+      "text": " <ul><li>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</li> <li>Praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.</li> <li>Sint occaecati cupiditate non provident.</li> <li>similique sunt in culpa qui officia deserunt mollitia animi.</li> <li>Et harum quidem rerum facilis est et expedita distinctio.</li></ul>"
+    }
+  ]
+},
+```
+
+<a id="Container-Result"></a>
+
+#### Container: Result
+
+Ellipses (`...`) indicate lines of code that have been omitted from this example.
+
+```json
+{
+  ...
+  "components": [
+    ...
+    {
+      "role": "section",
+      "layout": "fullBleedLayout",
+      "style": "bodyBackgroundStyle",
+      "components": [
+        ...
+        {
+          "identifier": "body2",
+          "role": "body",
+          "format": "html",
+          "layout": "fullMarginAboveLayout",
+          "text": "<p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio. Dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati.</p><p>Sed dignissim magna nec metus tincidunt, in posuere tortor malesuada. Morbi auctor justo sodales nulla tincidunt rhoncus. Praesent aliquam, ex eu auctor auctor, turpis metus vehicula augue, non dapibus odio massa a massa. Nunc condimentum dui quis odio condimentum, ac sodales libero elementum. Nullam sagittis felis ac tortor varius ultricies. Duis aliquet ex vel orci aliquam, sit amet bibendum risus rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p><p>Aliquam erat volutpat. Phasellus laoreet porttitor quam ut hendrerit. Aliquam nec arcu scelerisque, scelerisque nisi sit amet, eleifend augue. Nunc sit amet elit commodo, congue felis eget, gravida nibh. Praesent lorem risus, tristique sed porta non, aliquam in sapien. Praesent rhoncus orci eu scelerisque euismod. Morbi bibendum lorem lorem, eu tincidunt neque volutpat sit amet. Sed urna ligula, volutpat nec posuere a, laoreet ut tellus. Curabitur lacinia ornare nisi, et aliquet ex pretium sit amet. Aliquam finibus tristique arcu at feugiat. Donec nec sodales magna. Nulla vulputate sem eget libero venenatis lobortis. Morbi nec sodales metus. Ut eu diam quis augue imperdiet interdum ac quis metus.</p>"
+        },
+        {
+          "role": "container",
+          "layout": "sidebarLayout",
+          "style": "sidebarBackgroundStyle",
+          "anchor": {
+            "targetComponentIdentifier": "body2",
+            "targetAnchorPosition": "bottom",
+            "originAnchorPosition": "bottom"
+          },
+          "animation": {
+            "type": "fade_in",
+            "userControllable": true,
+            "initialAlpha": 0.5
+          },
+          "components": [
+            {
+              "role": "heading3",
+              "layout": "halfMarginBothContainedLayout",
+              "text": "EPISODES OF NOTE"
+            },
+            {
+              "role": "divider",
+              "layout": "halfMarginBelowContainedLayout",
+              "stroke": {
+                "width": 1,
+                "color": "#A6AAA9"
+              }
+            },
+            {
+              "role": "caption",
+              "layout": "fullMarginBelowContainedLayout",
+              "format": "html",
+              "text": " <ul><li>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</li> <li>Praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.</li> <li>Sint occaecati cupiditate non provident.</li> <li>similique sunt in culpa qui officia deserunt mollitia animi.</li> <li>Et harum quidem rerum facilis est et expedita distinctio.</li></ul>"
+            }
+          ]
+        },
+        ...
+      ]
+    }
+  ],
+  ...
+}
+```
+
+<a id="Previous"></a>
+
+### Previous
+
+[Adding a Video](adding-a-video.md)
+
+<a id="Next"></a>
+
+### Next
+
+[Adding a Fixed Image Fill](adding-a-fixed-image-fill.md)
+
+## See Also
+
+### Related Documentation
+
+- [Planning the Layout for Your Article](planning-the-layout-for-your-article.md): Define a layout that supports the look you want for your article.
+- [Positioning the Content in Your Article](positioning-the-content-in-your-article.md): Align article components with columns in your layout.
+- [Wrapping Text Around a Component](wrapping-text-around-a-component.md): Define the layout of a text component to wrap around another component.
+- [Nesting Components in an Article](nesting-components-in-an-article.md): Use container components to create the component hierarchies you need for special article designs.
+- [Anchor](../applenewsformat/anchor.md): The object for anchoring one component to another component in your article’s layout.
+- [Using HTML with Apple News Format](using-html-with-apple-news-format.md): Use HTML formatting for text components.
+
+### Advanced Design Tutorial 3: More Ideas
+
+- [Giving the Article a Dark Color Scheme](giving-the-article-a-dark-color-scheme.md): Apply a new color scheme to your article.
+- [Adding a Video](adding-a-video.md): Add a video component inside the header component.
+- [Adding a Fixed Image Fill](adding-a-fixed-image-fill.md): Add an image that remains stationary when the user scrolls.
+- [Creating a Newsletter Sign-Up Element](creating-a-newsletter-sign-up-element.md): Add a newsletter sign-up element in your article.
+- [Viewing the Finished Article for Advanced Design Tutorial 3](viewing-the-finished-article-for-advanced-design-tutorial-3.md): See the full JSON code from this tutorial.

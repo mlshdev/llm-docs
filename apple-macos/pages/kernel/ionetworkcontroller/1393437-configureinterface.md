@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ionetworkcontroller/1393437-configureinterface](https://developer.apple.com/documentation/kernel/ionetworkcontroller/1393437-configureinterface)
+
+# configureInterface
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Instance Method  
+**Availability:** macOS 10.11.4+
+
+## Declaration
+
+```objectivec
+virtual bool configureInterface(IONetworkInterface *interface);
+```

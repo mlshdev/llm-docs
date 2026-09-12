@@ -1,0 +1,23 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/simd/simd_inverse-9nllu](https://developer.apple.com/documentation/simd/simd_inverse-9nllu)
+
+# simd_inverse
+
+**Interface language:** Objective-C
+
+**Framework:** simd  
+**Kind:** Function  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Returns the inverse of the specified matrix.
+
+## Declaration
+
+```objectivec
+static simd_double4x4 simd_inverse(simd_double4x4 __x);
+```
+
+## See Also
+
+### Determinant and Inverse Functions
+
+- [simd_determinant](simd_determinant-9g8zm.md): Returns the determinant of the specified matrix.

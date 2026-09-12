@@ -1,0 +1,45 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/usd/horizontalalignment](https://developer.apple.com/documentation/usd/horizontalalignment)
+
+# horizontalAlignment
+
+**Kind:** Article
+
+An option that controls the text’s horizontal placement within its bounding box.
+
+<a id="overview"></a>
+
+## Overview
+
+The default value is `center`.
+
+<a id="Horizontal-Alignments"></a>
+
+### Horizontal Alignments
+
+- **`left`**: Left-aligns each line of text.
+- **`center`**: Center-aligns each line of text.
+- **`right`**: Right-aligns each line of text.
+- **`justified`**: Left- and right-aligns the text by adding additional spaces between words.
+
+<a id="Declaration"></a>
+
+### Declaration
+
+```other
+token horizontalAlignment = "center" (
+    allowedTokens = ["left", "center", "right", "justified"]
+)
+```
+
+## See Also
+
+### Properties
+
+- [content](content.md): The characters that the text displays.
+- [font](font.md): An array of font names.
+- [pointSize](pointsize.md): The size of the text’s font.
+- [width](width.md): The width of the text’s bounding box.
+- [height](height.md): The height of the text’s bounding box.
+- [depth](depth.md): A value that defines the depth, in scene units, of the text’s extrusion.
+- [wrapMode](wrapmode.md): An option that determines the flow of the text.
+- [verticalAlignment](verticalalignment.md): An option that controls the text’s vertical placement within its bounding rectangle.

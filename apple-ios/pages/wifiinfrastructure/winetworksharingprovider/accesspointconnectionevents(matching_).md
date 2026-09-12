@@ -1,0 +1,39 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/wifiinfrastructure/winetworksharingprovider/accesspointconnectionevents(matching:)](https://developer.apple.com/documentation/wifiinfrastructure/winetworksharingprovider/accesspointconnectionevents(matching:))
+
+# accessPointConnectionEvents(matching:)
+
+**Framework:** Wi-Fi Infrastructure  
+**Kind:** Instance Method  
+**Availability:** iOS 26.4+ · iPadOS 26.4+ · Mac Catalyst 26.4+
+
+Returns an async sequence of access point events containing the currently connected access point(s) and future updates.
+
+## Declaration
+
+```swift
+func accessPointConnectionEvents(matching predicate: Predicate<WINetworkSharingProvider.AccessPointConnection>? = nil) -> some Sendable & AsyncSequence<WINetworkSharingProvider.AccessPointConnectionEvent, any Error>
+
+```
+
+## Parameters
+
+- `predicate`: An optional predicate for filtering the access point list. The default is `nil`, meaning you receive all access point information.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An AsyncSequence that delivers [WINetworkSharingProvider.AccessPointConnectionEvent](accesspointconnectionevent.md) instances whenever your app extension needs to update its access point information.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Updates will be sent when the host joins or roams to a new Access Point, or when it disconnects from an access point.
+
+## See Also
+
+### Getting information about access point connections
+
+- [WINetworkSharingProvider.AccessPointConnection](accesspointconnection.md): A Wi-Fi access point the host is currently connected to, which may be shared with a connected accessory.
+- [WINetworkSharingProvider.AccessPointConnectionEvent](accesspointconnectionevent.md): An event that indicates an update to the available shared access points.

@@ -1,0 +1,17 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/usbdeviceinformationbits/kusbinformationdeviceisremotemask](https://developer.apple.com/documentation/kernel/usbdeviceinformationbits/kusbinformationdeviceisremotemask)
+
+# kUSBInformationDeviceIsRemoteMask
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Enumeration Case  
+**Availability:** macOS 10.7+
+
+The mask indicating that the USB device is remote.
+
+## Declaration
+
+```objectivec
+kUSBInformationDeviceIsRemoteMask = (1 << kUSBInformationDeviceIsRemote)
+```

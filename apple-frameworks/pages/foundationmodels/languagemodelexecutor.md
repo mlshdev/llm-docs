@@ -1,0 +1,82 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/languagemodelexecutor](https://developer.apple.com/documentation/foundationmodels/languagemodelexecutor)
+
+# LanguageModelExecutor
+
+**Framework:** Foundation Models  
+**Kind:** Protocol  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+A protocol that defines the interface for responding to session requests.
+
+## Declaration
+
+```swift
+protocol LanguageModelExecutor : Sendable
+```
+
+<a id="overview"></a>
+
+## Overview
+
+An executor is the bridge between the framework types and the system that actually generates the tokens, like a server API or a local inference engine. A [LanguageModel](languagemodel.md) pairs with exactly one executor type and the framework instantiates the executor from the [Configuration](languagemodelexecutor/configuration.md) the model provides.
+
+Every request can include preferences that control generation:
+
+- **[GenerationOptions](generationoptions.md)**: Configures the sampling strategy, temperature, and maximum response length.
+- **[ContextOptions](contextoptions.md)**: Configures the prompting behavior and thinking effort.
+
+When the framework calls [respond(to:model:streamingInto:)](languagemodelexecutor/respond%28to_model_streaminginto_%29.md), handle converting the transcript into the format your model expects and applying generation options. In some cases, you may need to fall back when your model can’t do exactly what was asked, like using temperature to approximate sampling options:
+
+```swift
+// Parse generation and context options
+func respond(
+    to request: LanguageModelExecutorGenerationRequest,
+    model: MyLanguageModel,
+    streamingInto channel: LanguageModelExecutorGenerationChannel
+) async throws {
+
+    // The request includes a sampling set to `greedy`, but your
+    // model only uses temperature.
+    if request.generationOptions.samplingMode == .greedy {
+        // Use the temperature of `0` to approximate the intention.
+    }
+
+    // ...
+}
+```
+
+Use [LanguageModelExecutorGenerationChannel](languagemodelexecutorgenerationchannel.md) to stream incremental events back as generation progresses. You don’t return a value or close the channel explicitly. The channel finishes when the method returns or when an error is thrown.
+
+## Topics
+
+### Creating an executor
+
+- [init(configuration:)](languagemodelexecutor/init%28configuration_%29.md): Creates an executor from a configuration.
+- [Configuration](languagemodelexecutor/configuration.md)
+
+### Prewarming the model
+
+- [prewarm(model:transcript:)](languagemodelexecutor/prewarm%28model_transcript_%29.md): Loads assets into memory or pre-fills caches ahead of a request.
+- [Model](languagemodelexecutor/model.md): The model type this executor processes requests for.
+
+### Handling the response
+
+- [respond(to:model:streamingInto:)](languagemodelexecutor/respond%28to_model_streaminginto_%29.md): Creates a response stream containing deltas.
+
+## Relationships
+
+### Inherits From
+
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Custom language model provider
+
+- [Running a Core AI model in a Foundation Models session](running-a-core-ai-model-in-a-foundation-models-session.md): Send requests on device to an open source model you export with Core AI to get a consistent API experience.
+- [Optimizing key-value caching in language model sessions](optimizing-key-value-caching-in-language-model-sessions.md): Prevent repeated token processing by preserving the cached state across turns.
+- [LanguageModel](languagemodel.md): A protocol that you use to interface with a model.
+- [LanguageModelCapabilities](languagemodelcapabilities.md): A set of capabilities that a language model provides.
+- [LanguageModelExecutorGenerationChannel](languagemodelexecutorgenerationchannel.md): A type you use to send model output deltas and updates to the framework.
+- [LanguageModelExecutorGenerationRequest](languagemodelexecutorgenerationrequest.md): A type that contains the details for a generation request.

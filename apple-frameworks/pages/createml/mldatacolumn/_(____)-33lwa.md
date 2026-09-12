@@ -1,0 +1,36 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/createml/mldatacolumn/_(_:_:)-33lwa](https://developer.apple.com/documentation/createml/mldatacolumn/_(_:_:)-33lwa)
+
+# \<(\_:\_:)
+
+**Framework:** Create ML  
+**Kind:** Operator  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 10.14+ · tvOS 16.0+ · visionOS 1.0+
+
+Creates a column of Booleans by testing whether the given value is less than each element in the given column.
+
+## Declaration
+
+```swift
+static func < (a: Element, b: MLDataColumn<Element>) -> MLDataColumn<Bool>
+```
+
+## Parameters
+
+- `a`: A value of the same type as the elements of the column.
+- `b`: A column.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new column of Booleans.
+
+## See Also
+
+### Comparing a value with a column to generate a column of booleans
+
+- [==(\_:\_:)](==%28____%29-6zz2o.md): Conforms when `Element` conforms to `MLDataValueConvertible`. Creates a column of Booleans by testing whether the given value is equal to each element in the given column.
+- [!=(\_:\_:)](!=%28____%29-4477j.md): Conforms when `Element` conforms to `MLDataValueConvertible`. Creates a column of Booleans by testing whether the given value is not equal to each element in the given column.
+- [\<=(\_:\_:)](_=%28____%29-3fx6w.md): Conforms when `Element` conforms to `MLDataValueConvertible`. Creates a column of Booleans by testing whether the given value is less than or equal to each element in the given column.
+- [\>(\_:\_:)](_%28____%29-6irjn.md): Conforms when `Element` conforms to `MLDataValueConvertible`. Creates a column of Booleans by testing whether the given value is greater than each element in the given column.
+- [\>=(\_:\_:)](_=%28____%29-8e3ur.md): Conforms when `Element` conforms to `MLDataValueConvertible`. Creates a column of Booleans by testing whether the given value is greater than or equal to each element in the given column.

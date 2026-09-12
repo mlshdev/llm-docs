@@ -1,0 +1,85 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/1447259-aeremoteprocessresolverschedulew](https://developer.apple.com/documentation/coreservices/1447259-aeremoteprocessresolverschedulew)
+
+# AERemoteProcessResolverScheduleWithRunLoop(\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** Core Services  
+**Kind:** Function  
+**Availability:** macOS 10.3+
+
+Schedules a resolver for execution on a given run loop in a given mode.
+
+## Declaration
+
+```swift
+func AERemoteProcessResolverScheduleWithRunLoop(_ ref: AERemoteProcessResolverRef!, _ runLoop: CFRunLoop!, _ runLoopMode: CFString!, _ callback: AERemoteProcessResolverCallback!, _ ctx: UnsafePointer<AERemoteProcessResolverContext>!)
+```
+
+## Parameters
+
+- `ref`: The [AERemoteProcessResolverRef](aeremoteprocessresolverref.md) to query. Acquired from a previous call to [AECreateRemoteProcessResolver(\_:\_:)](1445692-aecreateremoteprocessresolver.md).
+- `runLoop`: The run loop on which to schedule resolution of remote processes. For information on run loops, see Introduction to Run Loops. See the Core Foundation Reference Documentation for a description of the `CFRunLoop` data type.
+- `runLoopMode`: Specifies the run loop mode. See Input Modes for information on available modes. See the Core Foundation Reference Documentation for a description of the `CFStringRef` data type.
+- `callback`: A callback function to be executed when the resolver completes. See [AERemoteProcessResolverCallback](aeremoteprocessresolvercallback.md) for information on the callback definition.
+- `ctx`: Optionally supplies information of use while resolving remote processes. If this parameter is not `NULL`, the info field of this structure is passed to the callback function (otherwise, the info parameter to the `callback` function will explicitly be `NULL`). See [AERemoteProcessResolverContext](aeremoteprocessresolvercontext.md) for a description of this data type.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Schedules a resolver for execution on a given run loop in a given mode. The resolver will move through various internal states as long as the specified run loop is run. When the resolver completes, either with success or with an error condition, the callback is executed. There is no explicit unschedule of the resolver; you must dispose of it to remove it from the run loop.
+
+<a id="1770204"></a>
+
+### Version-Notes
+
+Thread safe starting in OS X v10.3.
+
+## See Also
+
+### Locating Processes on Remote Computers
+
+- [AECreateRemoteProcessResolver(\_:\_:)](1445692-aecreateremoteprocessresolver.md): Creates an object for resolving a list of remote processes.
+- [AEDisposeRemoteProcessResolver(\_:)](1442572-aedisposeremoteprocessresolver.md): Disposes of an `AERemoteProcessResolverRef`.
+- [AERemoteProcessResolverGetProcesses(\_:\_:)](1444456-aeremoteprocessresolvergetproces.md): Returns an array of objects containing information about processes running on a remote machine.
+
+# AERemoteProcessResolverScheduleWithRunLoop (Objective-C)
+
+**Framework:** Core Services  
+**Kind:** Function  
+**Availability:** macOS 10.3+
+
+Schedules a resolver for execution on a given run loop in a given mode.
+
+## Declaration
+
+```objectivec
+void AERemoteProcessResolverScheduleWithRunLoop(AERemoteProcessResolverRef ref, CFRunLoopRef runLoop, CFStringRef runLoopMode, AERemoteProcessResolverCallback callback, const AERemoteProcessResolverContext *ctx);
+```
+
+## Parameters
+
+- `ref`: The [AERemoteProcessResolverRef](aeremoteprocessresolverref.md) to query. Acquired from a previous call to [AECreateRemoteProcessResolver](1445692-aecreateremoteprocessresolver.md).
+- `runLoop`: The run loop on which to schedule resolution of remote processes. For information on run loops, see Introduction to Run Loops. See the Core Foundation Reference Documentation for a description of the `CFRunLoop` data type.
+- `runLoopMode`: Specifies the run loop mode. See Input Modes for information on available modes. See the Core Foundation Reference Documentation for a description of the `CFStringRef` data type.
+- `callback`: A callback function to be executed when the resolver completes. See [AERemoteProcessResolverCallback](aeremoteprocessresolvercallback.md) for information on the callback definition.
+- `ctx`: Optionally supplies information of use while resolving remote processes. If this parameter is not `NULL`, the info field of this structure is passed to the callback function (otherwise, the info parameter to the `callback` function will explicitly be `NULL`). See [AERemoteProcessResolverContext](aeremoteprocessresolvercontext.md) for a description of this data type.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Schedules a resolver for execution on a given run loop in a given mode. The resolver will move through various internal states as long as the specified run loop is run. When the resolver completes, either with success or with an error condition, the callback is executed. There is no explicit unschedule of the resolver; you must dispose of it to remove it from the run loop.
+
+<a id="1770204"></a>
+
+### Version-Notes
+
+Thread safe starting in OS X v10.3.
+
+## See Also
+
+### Locating Processes on Remote Computers
+
+- [AECreateRemoteProcessResolver](1445692-aecreateremoteprocessresolver.md): Creates an object for resolving a list of remote processes.
+- [AEDisposeRemoteProcessResolver](1442572-aedisposeremoteprocessresolver.md): Disposes of an `AERemoteProcessResolverRef`.
+- [AERemoteProcessResolverGetProcesses](1444456-aeremoteprocessresolvergetproces.md): Returns an array of objects containing information about processes running on a remote machine.

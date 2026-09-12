@@ -1,0 +1,34 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cloudkit/ckquerysubscription/init(recordtype:predicate:subscriptionid:options:)](https://developer.apple.com/documentation/cloudkit/ckquerysubscription/init(recordtype:predicate:subscriptionid:options:))
+
+# init(recordType:predicate:subscriptionID:options:)
+
+**Framework:** CloudKit  
+**Kind:** Initializer  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 10.12+ · tvOS 10.0+ · visionOS · watchOS 6.0+
+
+Creates a named query-based subscription that queries records of a specific type.
+
+## Declaration
+
+```swift
+convenience init(recordType: CKRecord.RecordType, predicate: NSPredicate, subscriptionID: CKSubscription.ID, options querySubscriptionOptions: CKQuerySubscription.Options = [.firesOnRecordCreation, .firesOnRecordUpdate, .firesOnRecordDeletion])
+```
+
+## Parameters
+
+- `recordType`: The record’s type. You’re responsible for defining your app’s record types.
+- `predicate`: The predicate that identifies the records for inclusion in the subscription. For information about the operators that predicates support, see the discussion in [CKQuery](../ckquery.md).
+- `subscriptionID`: The subscription’s name. You must specify a value that is unique in the target database, you should not specify an empty string.
+- `querySubscriptionOptions`: A bitmask of configuration options. See [CKQuerySubscription.Options](options.md) for more information.
+
+<a id="discussion"></a>
+
+## Discussion
+
+The subscription that this method returns is a query-based subscription with a scope that includes all of the user’s record zones. When CloudKit modifies a record that matches the specified type and predicate, it uses `querySubscriptionOptions` to determine whether to send a push notification.
+
+## See Also
+
+### Creating a Subscription
+
+- [init(coder:)](init%28coder_%29.md): Creates a query-based subscription from a serialized instance.

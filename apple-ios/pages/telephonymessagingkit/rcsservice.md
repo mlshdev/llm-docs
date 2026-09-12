@@ -1,0 +1,204 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/telephonymessagingkit/rcsservice](https://developer.apple.com/documentation/telephonymessagingkit/rcsservice)
+
+# RCSService
+
+**Framework:** TelephonyMessagingKit  
+**Kind:** Class  
+**Availability:** iOS 26.0+
+
+A class that provides an interface for performing RCS operations.
+
+## Declaration
+
+```swift
+final class RCSService
+```
+
+## Mentioned In
+
+- [Creating a carrier messaging app](creating-a-carrier-messaging-app.md)
+
+<a id="overview"></a>
+
+## Overview
+
+Use the [TelephonyMessagingSession](telephonymessagingsession.md) property [rcsService](telephonymessagingsession/rcsservice.md) to get an instance of this class.
+
+An `RCSService` sends and receives different kinds of messages, distinguished by the [content](rcsmessage/content-swift.property.md) property of [RCSMessage](rcsmessage.md):
+
+- **[RCSMessage.Text](rcsmessage/text.md)**: Plain text.
+- **[RCSMessage.FileTransfer](rcsmessage/filetransfer.md)**: Incoming or outgoing file transfer. To send a file to a receipient, call the [upload(\_:)](rcsservice/upload%28__%29.md): method, then send a message of this type. To receive a file, handle the incoming message from the [incomingMessageNotifications](rcsservice/incomingmessagenotifications.md) asynchronous sequence, and use its metadata to call [download(\_:)](rcsservice/download%28__%29.md).
+- **[RCSMessage.GeolocationPush](rcsmessage/geolocationpush.md)**: The sender’s location, as indicated by a latitude and longitude pair.
+- **[RCSMessage.ComposingIndicator](rcsmessage/composingindicator.md)**: An indicator that the sender is currently composing a message. Use this content type to provide “is typing” indicators to recipients.
+- **[RCSMessage.DispositionNotification](rcsmessage/dispositionnotification.md)**: An update regarding the processing of a message by the recipient app. This includes things like whether delivery suceeded or failed, and whether the app displayed the message to the recipient.
+
+Use the various overloads of `sendMessage(_:to:using:messageID)` to send messages of these types to recipients. The following example shows how to send a plain text message with [sendMessage(\_:to:using:messageID:)](rcsservice/sendmessage%28__to_using_messageid_%29-70q7h.md):
+
+```swift
+let service = TelephonyMessagingSession.shared.rcsService
+
+let cellularServices = try TelephonyMessagingSession.shared.cellularServices
+let cellularServiceID = cellularServices[0].id
+
+guard service.isViable(for: cellularServiceID) else { return }
+
+let message = RCSMessage.Text("Hello there.")
+guard let handle = RCSHandle.phoneNumber(SAMPLE_PHONE_NUMBER) else { return }
+try await service.sendMessage(message,
+                   to: handle,
+                   using:cellularServiceID,
+                   messageID: RCSMessageID(rawValue: SAMPLE_RCS_MESSAGE_ID))
+```
+
+To receive messages, iterate over the [incomingMessageNotifications](rcsservice/incomingmessagenotifications.md) asynchronous sequence with a `for`-`await`-`in` loop, then handle each notification based on its message content type, like this:
+
+```swift
+let service = TelephonyMessagingSession.shared.rcsService
+
+let incomingMessageNotifications = try service.incomingMessageNotifications
+Task {
+    for await notification in incomingMessageNotifications {
+        let receivedMessage = notification.message
+        switch receivedMessage.content {
+            case .text(let text): // ...
+            case .fileTransfer(let fileTransfer): // ...
+            case .geolocationPush(let geolocationPush): // ...
+            case .dispositionNotification(let dispositionNotification): // ...
+            case .composingIndicator(let composingIndicator): // ...
+        }
+    }
+}
+```
+
+## Topics
+
+### Determining service viabililty
+
+- [isViable(for:)](rcsservice/isviable%28for_%29.md): Queries whether the device can perform RCS operations at this time.
+- [viabilityNotifications](rcsservice/viabilitynotifications.md): An asynchronous sequence of service viability notifications produced by the service.
+- [RCSService.ViabilityNotification](rcsservice/viabilitynotification.md): A notification that indicates whether RCS is viable for a given cellular service.
+
+### Managing RCS configuration
+
+- [configuration(for:)](rcsservice/configuration%28for_%29.md): Retrieves the RCS configuration for the specified cellular service.
+- [RCSService.Configuration](rcsservice/configuration.md): A structure that contains RCS configuration parameters, such as timing and size limits.
+
+### Sending messages
+
+- [sendMessage(\_:to:using:messageID:)](rcsservice/sendmessage%28__to_using_messageid_%29-70q7h.md): Sends a text message to a specified destination.
+- [RCSMessage.Text](rcsmessage/text.md): A structure that represents text content in an RCS message.
+- [sendMessage(\_:to:using:messageID:)](rcsservice/sendmessage%28__to_using_messageid_%29-63zct.md): Sends a file transfer message to a specified destination.
+- [RCSMessage.FileTransfer](rcsmessage/filetransfer.md): A structure that represents file transfer content in an RCS message.
+- [sendMessage(\_:to:using:messageID:)](rcsservice/sendmessage%28__to_using_messageid_%29-9i178.md): Sends a composing indicator message to a specified destination.
+- [RCSMessage.ComposingIndicator](rcsmessage/composingindicator.md): A structure that represents RFC 3994 composing indicator content in an RCS message.
+- [sendMessage(\_:to:using:messageID:)](rcsservice/sendmessage%28__to_using_messageid_%29-y1z.md): Sends a geolocation push message to a specified destination.
+- [RCSMessage.GeolocationPush](rcsmessage/geolocationpush.md): A structure that represents geolocation push content in an RCS message.
+- [sendMessage(\_:to:using:messageID:group:)](rcsservice/sendmessage%28__to_using_messageid_group_%29.md): Sends the disposition for an incoming message.
+- [RCSMessage.DispositionNotification](rcsmessage/dispositionnotification.md): A structure that represents disposition notification content in an RCS message, such as whether delivery succeeded or failed.
+- [RCSHandle](rcshandle.md): An enumeration that represents an RCS destination or sender.
+- [CellularServiceID](cellularserviceid.md): An opaque identifier that represents the cellular service for which to provide operations.
+- [RCSMessageID](rcsmessageid.md): A structure that represents an RCS message identifier.
+
+### Sending encrypted messages
+
+- [sendEncryptedMessageRequest(\_:)](rcsservice/sendencryptedmessagerequest%28__%29.md): Sends an encrypted message to a specified destination.
+- [RCSService.SendEncryptedMessageRequest](rcsservice/sendencryptedmessagerequest.md): A structure that represents a request to send an encrypted message.
+- [RCSService.SendEncryptedMessageRequest.Result](rcsservice/sendencryptedmessagerequest/result.md): A structure that represents the result of sending an encrypted message.
+
+### Receiving messages
+
+- [incomingMessageNotifications](rcsservice/incomingmessagenotifications.md): An asynchronous sequence of incoming message notifications produced by this service.
+- [RCSService.IncomingMessageNotification](rcsservice/incomingmessagenotification.md): A structure that contains information about an incoming RCS message.
+- [RCSMessage](rcsmessage.md): A structure that contains an RCS message’s content and metadata.
+
+### Revoking messages
+
+- [revokeMessage(\_:)](rcsservice/revokemessage%28__%29.md): Requests revocation of an RCS message.
+- [RCSService.RevokeMessageRequest](rcsservice/revokemessagerequest.md): A structure that respresents a request to revoke a previously sent message.
+
+### Transferring files
+
+- [upload(\_:)](rcsservice/upload%28__%29.md): Uploads a file to the RCS content server.
+- [RCSService.FileUploadRequest](rcsservice/fileuploadrequest.md): A structure that represents an RCS file upload request.
+- [RCSService.FileUploadRequest.Metadata](rcsservice/fileuploadrequest/metadata.md): A structure that contains upload metadata from the content server.
+- [download(\_:)](rcsservice/download%28__%29.md): Downloads a file from the RCS content server.
+- [RCSService.FileDownloadRequest](rcsservice/filedownloadrequest.md): A structure that represents an RCS file download request.
+- [RCSService.FileDownloadRequest.Metadata](rcsservice/filedownloadrequest/metadata.md): A structure that contains download metadata from the content server.
+
+### Receiving handle updates
+
+- [remoteHandleUpdates](rcsservice/remotehandleupdates.md): An asynchronous sequence of remote handle updates produced by this service.
+- [RCSService.RemoteHandleUpdate](rcsservice/remotehandleupdate.md): A structure that contains information about an update to a remote handle.
+
+### Reporting spam
+
+- [reportSpam(\_:)](rcsservice/reportspam%28__%29.md): Reports an RCS message as spam to the carrier and to partners.
+- [RCSService.ReportSpamRequest](rcsservice/reportspamrequest.md): A structure that contains information about a spam reporting request for an RCS message.
+
+### Managing group chats
+
+- [createGroupChat(\_:)](rcsservice/creategroupchat%28__%29.md): Creates a group with a list of participants and a specified subject.
+- [RCSService.CreateGroupChatRequest](rcsservice/creategroupchatrequest.md): Structure representing a request for creating a group chat.
+- [leaveGroupChat(\_:)](rcsservice/leavegroupchat%28__%29.md): Leave a group chat.
+- [RCSService.LeaveGroupChatRequest](rcsservice/leavegroupchatrequest.md): Structure representing a request to leave a group chat.
+- [addGroupChatParticipants(\_:)](rcsservice/addgroupchatparticipants%28__%29.md): Adds participants to a group chat.
+- [RCSService.AddGroupChatParticipantsRequest](rcsservice/addgroupchatparticipantsrequest.md): Structure representing a request for adding participants to a group chat.
+- [removeGroupChatParticipants(\_:)](rcsservice/removegroupchatparticipants%28__%29.md): Removes participants from a group chat.
+- [RCSService.RemoveGroupChatParticipantsRequest](rcsservice/removegroupchatparticipantsrequest.md): Structure representing a request for removing participants from a group chat.
+- [changeGroupChatSubject(\_:)](rcsservice/changegroupchatsubject%28__%29.md): Changes subject of a group.
+- [RCSService.ChangeGroupChatSubjectRequest](rcsservice/changegroupchatsubjectrequest.md): Structure representing a request for changing a group chat’s subject.
+- [groupChatEvents](rcsservice/groupchatevents.md): Returns an asynchronous sequence of incoming group chat notifications produced by this service.
+- [RCSService.GroupChatEvent](rcsservice/groupchatevent.md): Enumeration representing an RCS group chat event.
+
+### Discovering remote capabilities
+
+- [remoteCapabilities(for:)](rcsservice/remotecapabilities%28for_%29.md): Requests remote capability discovery for a given handle
+- [RCSService.RemoteCapabilitiesRequest](rcsservice/remotecapabilitiesrequest.md): A structure representing a request to retrieve the capabilities of a remote handle.
+- [RCSService.RemoteCapabilities](rcsservice/remotecapabilities.md): Structure representing the capabilities of a remote handle.
+
+### Responding to business suggestions
+
+- [sendSuggestionResponse(\_:)](rcsservice/sendsuggestionresponse%28__%29.md): Sends a response for a business suggestion.
+- [RCSService.SuggestionResponse](rcsservice/suggestionresponse.md): Structure representing a response to a business suggestion.
+- [sendDeviceSpecifics(to:using:messageID:)](rcsservice/senddevicespecifics%28to_using_messageid_%29.md): Sends device specifics in response to a suggested action to send device specifics.
+
+### Retrieving business information
+
+- [businessInformation(for:)](rcsservice/businessinformation%28for_%29.md): Requests business information for a specified handle.
+- [RCSService.BusinessInformationRequest](rcsservice/businessinformationrequest.md): A structure representing a request to retrieve information about a business.
+- [RCSService.Business](rcsservice/business.md): Structure containing details about a business.
+
+### Handling errors
+
+- [RCSService.Error](rcsservice/error.md): A type to define errors that can occur when performing RCS operations.
+
+### Supporting types
+
+- [RCSService.GroupChatEndedEvent](rcsservice/groupchatendedevent.md): Event triggered when a group chat is ended.
+- [RCSService.GroupChatParticipantsAddedEvent](rcsservice/groupchatparticipantsaddedevent.md): Event triggered when participants are added to a group.
+- [RCSService.GroupChatParticipantsRemovedEvent](rcsservice/groupchatparticipantsremovedevent.md): Event triggered when participants are removed from a group.
+- [RCSService.GroupChatStartedEvent](rcsservice/groupchatstartedevent.md): Event triggered when group chat is started.
+- [RCSService.GroupChatSubjectUpdatedEvent](rcsservice/groupchatsubjectupdatedevent.md): Event triggered when a group’s subject is updated.
+
+### Structures
+
+- [RCSService.GroupChatSubjectInvalidatedEvent](rcsservice/groupchatsubjectinvalidatedevent.md): Event triggered when a group’s encryption state changes, which causes the group subject to be cleared on the server.
+
+### Instance Methods
+
+- [sendMessage(\_:to:using:messageID:)](rcsservice/sendmessage%28__to_using_messageid_%29-61imq.md): Sends a reply message to a specified destination.
+- [sendMessage(\_:to:using:messageID:)](rcsservice/sendmessage%28__to_using_messageid_%29-6kuet.md): Sends a reaction message to a specified destination.
+- [sendMessage(\_:to:using:messageID:)](rcsservice/sendmessage%28__to_using_messageid_%29-8213t.md): Sends a custom reaction message to a specified destination.
+
+## Relationships
+
+### Conforms To
+
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Using Rich Communication Services (RCS)
+
+- [rcsService](telephonymessagingsession/rcsservice.md): RCS service associated with this session.

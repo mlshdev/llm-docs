@@ -1,0 +1,71 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mlcompute/mlcoptimizerdescriptor/learningrate](https://developer.apple.com/documentation/mlcompute/mlcoptimizerdescriptor/learningrate)
+
+# learningRate (Swift)
+
+**Framework:** ML Compute  
+**Kind:** Instance Property  
+**Availability:** iOS 14.0+ (deprecated in 17.4) · iPadOS 14.0+ (deprecated in 17.4) · Mac Catalyst 14.0+ (deprecated in 17.4) · macOS 11.0+ (deprecated in 14.3) · tvOS 14.0+ (deprecated in 17.4)
+
+The learning rate.
+
+## Declaration
+
+```swift
+var learningRate: Float { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This property is readwrite so that callers can implement a decay during training.
+
+## See Also
+
+### Inspecting an Optimizer Descriptor
+
+- [gradientRescale](gradientrescale.md): Deprecated. The rescale value the optimizer applies to gradients during updates.
+- [appliesGradientClipping](appliesgradientclipping.md): Deprecated. A Boolean that indicates whether you apply gradient clipping.
+- [gradientClipMax](gradientclipmax.md): Deprecated. The maximum gradient value before the optimizer rescales the gradient, if you enabled gradient clipping.
+- [gradientClipMin](gradientclipmin.md): Deprecated. The minimum gradient value before the optimizer rescales the gradient, if you enabled gradient clipping.
+- [regularizationScale](regularizationscale.md): Deprecated. The regularization scale.
+- [regularizationType](regularizationtype.md): Deprecated. The regularization type.
+- [gradientClippingType](gradientclippingtype.md): Deprecated. The type of clipping the system applies to the gradient.
+- [MLCGradientClippingType](../mlcgradientclippingtype.md): Deprecated. A clipping type the system applies to a gradient.
+- [maximumClippingNorm](maximumclippingnorm.md): Deprecated. The maximum clipping value.
+- [customGlobalNorm](customglobalnorm.md): Deprecated. A custom norm the system uses in place of the global norm.
+
+# learningRate (Objective-C)
+
+**Framework:** ML Compute  
+**Kind:** Instance Property  
+**Availability:** iOS 14.0+ (deprecated in 17.4) · iPadOS 14.0+ (deprecated in 17.4) · Mac Catalyst 14.0+ (deprecated in 17.4) · macOS 11.0+ (deprecated in 14.3) · tvOS 14.0+ (deprecated in 17.4)
+
+The learning rate.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) float learningRate;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This property is readwrite so that callers can implement a decay during training.
+
+## See Also
+
+### Inspecting an Optimizer Descriptor
+
+- [gradientRescale](gradientrescale.md): Deprecated. The rescale value the optimizer applies to gradients during updates.
+- [appliesGradientClipping](appliesgradientclipping.md): Deprecated. A Boolean that indicates whether you apply gradient clipping.
+- [gradientClipMax](gradientclipmax.md): Deprecated. The maximum gradient value before the optimizer rescales the gradient, if you enabled gradient clipping.
+- [gradientClipMin](gradientclipmin.md): Deprecated. The minimum gradient value before the optimizer rescales the gradient, if you enabled gradient clipping.
+- [regularizationScale](regularizationscale.md): Deprecated. The regularization scale.
+- [regularizationType](regularizationtype.md): Deprecated. The regularization type.
+- [gradientClippingType](gradientclippingtype.md): Deprecated. The type of clipping the system applies to the gradient.
+- [MLCGradientClippingType](../mlcgradientclippingtype.md): Deprecated. A clipping type the system applies to a gradient.
+- [maximumClippingNorm](maximumclippingnorm.md): Deprecated. The maximum clipping value.
+- [customGlobalNorm](customglobalnorm.md): Deprecated. A custom norm the system uses in place of the global norm.

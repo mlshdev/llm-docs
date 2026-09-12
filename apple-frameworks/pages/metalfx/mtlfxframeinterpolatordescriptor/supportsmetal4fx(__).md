@@ -1,0 +1,49 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalfx/mtlfxframeinterpolatordescriptor/supportsmetal4fx(_:)](https://developer.apple.com/documentation/metalfx/mtlfxframeinterpolatordescriptor/supportsmetal4fx(_:))
+
+# supportsMetal4FX(\_:) (Swift)
+
+**Framework:** MetalFX  
+**Kind:** Type Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+
+
+Queries whether a Metal device supports frame interpolation compatible with a Metal 4 command buffer.
+
+## Declaration
+
+```swift
+class func supportsMetal4FX(_ device: any MTLDevice) -> Bool
+```
+
+## Parameters
+
+- `device`: The GPU device for which this methods tests support.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[true](https://developer.apple.com/documentation/swift/true) if the device supports frame interpolation for Metal 4, [false](https://developer.apple.com/documentation/swift/false) otherwise.
+
+# supportsMetal4FX: (Objective-C)
+
+**Framework:** MetalFX  
+**Kind:** Type Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+
+
+Queries whether a Metal device supports frame interpolation compatible with a Metal 4 command buffer.
+
+## Declaration
+
+```objectivec
++ (BOOL) supportsMetal4FX:(id<MTLDevice>) device;
+```
+
+## Parameters
+
+- `device`: The GPU device for which this methods tests support.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[true](https://developer.apple.com/documentation/swift/true) if the device supports frame interpolation for Metal 4, [false](https://developer.apple.com/documentation/swift/false) otherwise.

@@ -1,0 +1,99 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimageconvert_planar8toargb1555(_:_:_:_:_:_:)](https://developer.apple.com/documentation/accelerate/vimageconvert_planar8toargb1555(_:_:_:_:_:_:))
+
+# vImageConvert_Planar8toARGB1555(\_:\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.4+ · tvOS 5.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Interleaves four 8-bit planar buffers into an ARGB1555 4-channel interleaved buffer.
+
+## Declaration
+
+```swift
+func vImageConvert_Planar8toARGB1555(_ srcA: UnsafePointer<vImage_Buffer>, _ srcR: UnsafePointer<vImage_Buffer>, _ srcG: UnsafePointer<vImage_Buffer>, _ srcB: UnsafePointer<vImage_Buffer>, _ dest: UnsafePointer<vImage_Buffer>, _ flags: vImage_Flags) -> vImage_Error
+```
+
+## Parameters
+
+- `srcA`: The source vImage buffer that contains the alpha channel.
+- `srcR`: The source vImage buffer that contains the red channel.
+- `srcG`: The source vImage buffer that contains the green channel.
+- `srcB`: The source vImage buffer that contains the blue channel.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the [height](vimage_buffer/height.md), [width](vimage_buffer/width.md), and [rowBytes](vimage_buffer/rowbytes.md) fields of this structure, and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes in [Data Types and Constants](data-types-and-constants.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The function uses the following calculation to perform the conversion:
+
+```objc
+    Pixel8 alpha =  1bitAlphaChannel * 255
+    Pixel8 red   = (5bitRedChannel   * 255 + 15) / 31
+    Pixel8 green = (5bitGreenChannel * 255 + 15) / 31
+    Pixel8 blue  = (5bitBlueChannel  * 255 + 15) / 31
+```
+
+## See Also
+
+### Interleaving four unsigned 8-bit planar buffers
+
+- [vImageConvert_Planar8toARGB8888(\_:\_:\_:\_:\_:\_:)](vimageconvert_planar8toargb8888%28____________%29.md): Interleaves four 8-bit planar buffers into an 8-bit-per-channel, 4-channel interleaved buffer.
+- [vImageConvert_Planar8ToARGBFFFF(\_:\_:\_:\_:\_:\_:\_:\_:)](vimageconvert_planar8toargbffff%28________________%29.md): Interleaves four 8-bit planar buffers into a floating-point 32-bit-per-channel, 4-channel interleaved ARGB buffer.
+
+# vImageConvert_Planar8toARGB1555 (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.4+ · tvOS 5.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Interleaves four 8-bit planar buffers into an ARGB1555 4-channel interleaved buffer.
+
+## Declaration
+
+```objectivec
+vImage_Error vImageConvert_Planar8toARGB1555(const vImage_Buffer *srcA, const vImage_Buffer *srcR, const vImage_Buffer *srcG, const vImage_Buffer *srcB, const vImage_Buffer *dest, vImage_Flags flags);
+```
+
+## Parameters
+
+- `srcA`: The source vImage buffer that contains the alpha channel.
+- `srcR`: The source vImage buffer that contains the red channel.
+- `srcG`: The source vImage buffer that contains the green channel.
+- `srcB`: The source vImage buffer that contains the blue channel.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the [height](vimage_buffer/height.md), [width](vimage_buffer/width.md), and [rowBytes](vimage_buffer/rowbytes.md) fields of this structure, and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes in [Data Types and Constants](data-types-and-constants.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The function uses the following calculation to perform the conversion:
+
+```objc
+    Pixel8 alpha =  1bitAlphaChannel * 255
+    Pixel8 red   = (5bitRedChannel   * 255 + 15) / 31
+    Pixel8 green = (5bitGreenChannel * 255 + 15) / 31
+    Pixel8 blue  = (5bitBlueChannel  * 255 + 15) / 31
+```
+
+## See Also
+
+### Interleaving four unsigned 8-bit planar buffers
+
+- [vImageConvert_Planar8toARGB8888](vimageconvert_planar8toargb8888%28____________%29.md): Interleaves four 8-bit planar buffers into an 8-bit-per-channel, 4-channel interleaved buffer.
+- [vImageConvert_Planar8ToARGBFFFF](vimageconvert_planar8toargbffff%28________________%29.md): Interleaves four 8-bit planar buffers into a floating-point 32-bit-per-channel, 4-channel interleaved ARGB buffer.

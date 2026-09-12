@@ -1,0 +1,52 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corevideo/cvimagetransferfunction](https://developer.apple.com/documentation/corevideo/cvimagetransferfunction)
+
+# CVImageTransferFunction
+
+**Framework:** Core Video  
+**Kind:** Enumeration  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+The transfer function describes the tonality of an image for use in color matching operations. This value is used along with a color primaries gamut [CVImageColorPrimaries](cvimagecolorprimaries.md). Most apps should use the [CVImageTransferFunction.itu_R_709_2](cvimagetransferfunction/itu_r_709_2.md) transfer function.
+
+## Declaration
+
+```swift
+enum CVImageTransferFunction
+```
+
+## Topics
+
+### Enumeration Cases
+
+- [CVImageTransferFunction.itu_R_2020](cvimagetransferfunction/itu_r_2020.md): The transfer function for HDR video specified in ITU-R BT2020 standard.
+- [CVImageTransferFunction.itu_R_2100_HLG](cvimagetransferfunction/itu_r_2100_hlg.md): The transfer function for HDR video specified in ITU-R BT2020 HLG standard.
+- [CVImageTransferFunction.itu_R_709_2](cvimagetransferfunction/itu_r_709_2.md): The default transfer function for high-definition and standard-definition video.
+- [CVImageTransferFunction.linear](cvimagetransferfunction/linear.md)
+- [CVImageTransferFunction.sRGB](cvimagetransferfunction/srgb.md): The standard transfer function for web and desktop publishing.
+- [CVImageTransferFunction.smpte_240M_1995](cvimagetransferfunction/smpte_240m_1995.md): The transfer function for HDTV interim video.
+- [CVImageTransferFunction.smpte_ST_2084_PQ](cvimagetransferfunction/smpte_st_2084_pq.md): The transfer function for mapping HDR gamma to absolute light levels.
+- [CVImageTransferFunction.smpte_ST_428_1](cvimagetransferfunction/smpte_st_428_1.md): The transfer function for digital cinema distribution master.
+- [CVImageTransferFunction.useGamma](cvimagetransferfunction/usegamma.md): The transfer function that’s defined by the gamma level value of the image buffer.
+
+## Relationships
+
+### Conforms To
+
+- [CVAttachmentValueRepresentable](cvattachmentvaluerepresentable.md)
+- [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Escapable](https://developer.apple.com/documentation/swift/escapable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Color and signal characteristics
+
+- [CVImageColorPrimaries](cvimagecolorprimaries.md): Color primaries describe the gamut used for the rendering intent of an image.
+- [CVImageLogTransferFunction](cvimagelogtransferfunction.md): Identifies the specific log curve transfer function or gamma of the content.
+- [CVImageYCbCrMatrix](cvimageycbcrmatrix.md): Indicates color matrix used for converting image buffer from YCbCr to RGB.
+- [CVImageAlphaChannelMode](cvimagealphachannelmode.md)
+- [CVImageFieldDetail](cvimagefielddetail.md)

@@ -1,0 +1,43 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/app-pre-orders](https://developer.apple.com/documentation/appstoreconnectapi/app-pre-orders)
+
+# App Pre-Orders
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** API Collection
+
+Manage the settings that make your app available for pre-order.
+
+<a id="overview"></a>
+
+## Overview
+
+Use `appPreOrders` to offer your app as a pre-order before it’s initial release on the App Store. Customers can see your product page and order your app before it’s released for download. Once your app is released, customers are notified and your app is automatically download to their devices.
+
+Set up your app’s pre-order settings before submitting it for review. Once your app is approved, you can offer it on the App Store as a pre-order.
+
+> **Note**
+
+>  You can’t push a pre-order live to the App Store using the App Store Connect API. You can only do so in App Store Connect.
+
+For more information, see [Publish for pre-order](https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/publish-for-pre-order).
+
+## Topics
+
+### Making Apps Available for Pre-Order
+
+- [Create an app pre-order](post-v2-appavailabilities.md): Create an app pre-order and set the expected app release date.
+- [Modify the territory availability for an app pre-order](patch-v1-territoryavailabilities-_id_.md): Update the release territories for your app pre-order.
+
+### Canceling an App Pre-Order
+
+- [End an app pre-order](post-v1-endappavailabilitypreorders.md): End the pre-order for your app and release to store immediately.
+
+## See Also
+
+### App Store Publishing
+
+- [App Store Version Phased Releases](app-store-version-phased-releases.md): Manage phased releases of updates to your app.
+- [App Store Version Release Requests](app-store-version-release-requests.md): Manually release an App Store approved version of your app to the App Store.
+- [App availability](app-availability.md): Manage territory and date settings that make your app available for pre-order.

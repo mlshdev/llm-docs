@@ -1,0 +1,193 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/browserenginekit/attributing-memory-to-a-content-extension](https://developer.apple.com/documentation/browserenginekit/attributing-memory-to-a-content-extension)
+
+# Attributing memory to a content extension (Swift)
+
+**Framework:** BrowserEngineKit  
+**Kind:** Article
+
+Adhere to operating-system limits on GPU memory use.
+
+<a id="Overview"></a>
+
+## Overview
+
+A web browser’s GPU extension is limited to a small total memory allocation. To allocate large amounts of memory in a GPU extension on behalf of a content extension, attribute the memory to that content extension.
+
+The GPU and the content extension both need specific memory transfer entitlements to participate in memory attribution. In the content extension, you create a token that identifies the extension to the kernel. Pass the token to the GPU using your interprocess communication (IPC) channel. Then, in the GPU extension, use the token to assign ownership of the memory region to the content process.
+
+<a id="Use-the-correct-entitlements"></a>
+
+## Use the correct entitlements
+
+To participate in memory attribution, your content extension needs both the web-browser content extension entitlement `com.apple.developer.web-browser-engine.webcontent` and the `com.apple.developer.memory.transfer_accept` entitlement.
+
+Your GPU extension needs both the `com.apple.developer.web-browser-engine.rendering` and `com.apple.developer.memory.transfer_send` entitlements.
+
+Set the value for each of these entitlements to a string that matches the bundle ID of your browser app.
+
+For more information about the entitlements web browser extensions use, see [Designing your browser architecture](designing-your-browser-architecture.md).
+
+<a id="Create-a-task-identity-token"></a>
+
+## Create a task identity token
+
+Your content extension creates a task identity token that you pass to the GPU extension using your IPC protocol, for example, with [XPC](https://developer.apple.com/documentation/xpc). The task identity token is an unforgeable value that the system uses to identify the process to which it attributes memory in the GPU extension.
+
+To create a task identity token:
+
+```c
+task_id_token_t identityToken;
+mach_port_t port = mach_task_self();
+kern_result_t result = task_create_identity_token(port, &identityToken);
+
+if (result == KERN_SUCCESS) {
+  // Send identityToken to the GPU extension.
+} else {
+  // Handle the error.
+}
+```
+
+<a id="Attribute-memory-to-the-content-extension"></a>
+
+## Attribute memory to the content extension
+
+Receive the task identity token in the GPU extension and use it to attribute memory to the content extension.
+
+To attribute an [IOSurfaceRef](https://developer.apple.com/documentation/iosurface/iosurfaceref) to a content extension, call `IOSurfaceSetOwnershipIdentity`:
+
+```c
+IOSurfaceRef surface = /* Create an IOSurface. */;
+task_id_token_t identityToken = /* Receive the token using your IPC channel. */;
+kern_return_t result = IOSurfaceSetOwnershipIdentity(surface,
+	identityToken,
+	kIOSurfaceMemoryLedgerTagGraphics,
+	0);
+
+if (result != KERN_SUCCESS) {
+  // Handle the error.
+}
+```
+
+To attribute a `MTLResource` to a content extension, send it a `setOwnerWithIdentity:` message:
+
+```objc
+MTLResource *resource = /* Create a resource. */;
+task_id_token_t identityToken = /* Receive the token using your IPC channel. */;
+kern_return_t result = [resource setOwnerWithIdentity: identityToken];
+
+if (result != KERN_SUCCESS) {
+  // Handle the error.
+}
+```
+
+<a id="Free-the-memory-when-the-content-extension-finishes"></a>
+
+## Free the memory when the content extension finishes
+
+When the content extension exits, whether normally or due to an error, free the memory that’s attributed to it in your GPU extension.
+
+If you use `libxpc` to implement your IPC protocol, use the connection’s invalidation handler to detect when the content extension exits.
+
+## See Also
+
+### Access control
+
+- [Limiting resource access in web content extensions](limiting-resource-access-in-content-extensions.md): Reduce the impact of vulnerabilities in web content extensions by limiting privileges.
+- [Accessing files in browser extensions](accessing-files-in-browser-extensions.md): Grant extensions access to files from within your browser app.
+- [RestrictedSandboxAppliable](restrictedsandboxappliable.md): A protocol that browser extensions implement to opt into a more restricted sandbox.
+- [RestrictedSandboxRevision](restrictedsandboxrevision.md): Revisions to the restricted sandbox rules.
+
+# Attributing memory to a content extension (Objective-C)
+
+**Framework:** BrowserEngineKit  
+**Kind:** Article
+
+Adhere to operating-system limits on GPU memory use.
+
+<a id="Overview"></a>
+
+## Overview
+
+A web browser’s GPU extension is limited to a small total memory allocation. To allocate large amounts of memory in a GPU extension on behalf of a content extension, attribute the memory to that content extension.
+
+The GPU and the content extension both need specific memory transfer entitlements to participate in memory attribution. In the content extension, you create a token that identifies the extension to the kernel. Pass the token to the GPU using your interprocess communication (IPC) channel. Then, in the GPU extension, use the token to assign ownership of the memory region to the content process.
+
+<a id="Use-the-correct-entitlements"></a>
+
+## Use the correct entitlements
+
+To participate in memory attribution, your content extension needs both the web-browser content extension entitlement `com.apple.developer.web-browser-engine.webcontent` and the `com.apple.developer.memory.transfer_accept` entitlement.
+
+Your GPU extension needs both the `com.apple.developer.web-browser-engine.rendering` and `com.apple.developer.memory.transfer_send` entitlements.
+
+Set the value for each of these entitlements to a string that matches the bundle ID of your browser app.
+
+For more information about the entitlements web browser extensions use, see [Designing your browser architecture](designing-your-browser-architecture.md).
+
+<a id="Create-a-task-identity-token"></a>
+
+## Create a task identity token
+
+Your content extension creates a task identity token that you pass to the GPU extension using your IPC protocol, for example, with [XPC](https://developer.apple.com/documentation/xpc). The task identity token is an unforgeable value that the system uses to identify the process to which it attributes memory in the GPU extension.
+
+To create a task identity token:
+
+```c
+task_id_token_t identityToken;
+mach_port_t port = mach_task_self();
+kern_result_t result = task_create_identity_token(port, &identityToken);
+
+if (result == KERN_SUCCESS) {
+  // Send identityToken to the GPU extension.
+} else {
+  // Handle the error.
+}
+```
+
+<a id="Attribute-memory-to-the-content-extension"></a>
+
+## Attribute memory to the content extension
+
+Receive the task identity token in the GPU extension and use it to attribute memory to the content extension.
+
+To attribute an [IOSurfaceRef](https://developer.apple.com/documentation/iosurface/iosurfaceref) to a content extension, call `IOSurfaceSetOwnershipIdentity`:
+
+```c
+IOSurfaceRef surface = /* Create an IOSurface. */;
+task_id_token_t identityToken = /* Receive the token using your IPC channel. */;
+kern_return_t result = IOSurfaceSetOwnershipIdentity(surface,
+	identityToken,
+	kIOSurfaceMemoryLedgerTagGraphics,
+	0);
+
+if (result != KERN_SUCCESS) {
+  // Handle the error.
+}
+```
+
+To attribute a `MTLResource` to a content extension, send it a `setOwnerWithIdentity:` message:
+
+```objc
+MTLResource *resource = /* Create a resource. */;
+task_id_token_t identityToken = /* Receive the token using your IPC channel. */;
+kern_return_t result = [resource setOwnerWithIdentity: identityToken];
+
+if (result != KERN_SUCCESS) {
+  // Handle the error.
+}
+```
+
+<a id="Free-the-memory-when-the-content-extension-finishes"></a>
+
+## Free the memory when the content extension finishes
+
+When the content extension exits, whether normally or due to an error, free the memory that’s attributed to it in your GPU extension.
+
+If you use `libxpc` to implement your IPC protocol, use the connection’s invalidation handler to detect when the content extension exits.
+
+## See Also
+
+### Access control
+
+- [Limiting resource access in web content extensions](limiting-resource-access-in-content-extensions.md): Reduce the impact of vulnerabilities in web content extensions by limiting privileges.
+- [Accessing files in browser extensions](accessing-files-in-browser-extensions.md): Grant extensions access to files from within your browser app.

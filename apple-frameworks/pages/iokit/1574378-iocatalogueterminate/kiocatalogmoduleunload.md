@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1574378-iocatalogueterminate/kiocatalogmoduleunload](https://developer.apple.com/documentation/iokit/1574378-iocatalogueterminate/kiocatalogmoduleunload)
+
+# kIOCatalogModuleUnload
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+## Declaration
+
+```objectivec
+kIOCatalogModuleUnload = 1
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Terminates all services which depend on a particular module and unloads the module.

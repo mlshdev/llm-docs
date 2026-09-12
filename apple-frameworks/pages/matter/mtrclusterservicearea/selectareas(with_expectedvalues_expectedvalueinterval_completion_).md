@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrclusterservicearea/selectareas(with:expectedvalues:expectedvalueinterval:completion:)](https://developer.apple.com/documentation/matter/mtrclusterservicearea/selectareas(with:expectedvalues:expectedvalueinterval:completion:))
+
+# selectAreas(with:expectedValues:expectedValueInterval:completion:) (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```swift
+func selectAreas(with params: MTRServiceAreaClusterSelectAreasParams, expectedValues expectedDataValueDictionaries: [[String : Any]]?, expectedValueInterval expectedValueIntervalMs: NSNumber?, completion: @escaping @Sendable (MTRServiceAreaClusterSelectAreasResponseParams?, (any Error)?) -> Void)
+```
+
+```swift
+func selectAreas(with params: MTRServiceAreaClusterSelectAreasParams, expectedValues expectedDataValueDictionaries: [[String : Any]]?, expectedValueInterval expectedValueIntervalMs: NSNumber?) async throws -> MTRServiceAreaClusterSelectAreasResponseParams
+```
+
+# selectAreasWithParams:expectedValues:expectedValueInterval:completion: (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · tvOS 18.4+ · visionOS 2.4+ · watchOS 11.4+
+
+## Declaration
+
+```objectivec
+- (void) selectAreasWithParams:(MTRServiceAreaClusterSelectAreasParams *) params expectedValues:(NSArray<NSDictionary<NSString *,id> *> *) expectedDataValueDictionaries expectedValueInterval:(NSNumber *) expectedValueIntervalMs completion:(void (^)(MTRServiceAreaClusterSelectAreasResponseParams *data, NSError *error)) completion;
+```

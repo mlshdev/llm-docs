@@ -1,0 +1,100 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/systempolicyrule](https://developer.apple.com/documentation/devicemanagement/systempolicyrule)
+
+# SystemPolicyRule
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Device Management Profile  
+**Availability:** macOS 10.8+
+
+The payload that configures the system policy.
+
+## Declaration
+
+```
+object SystemPolicyRule
+```
+
+## Properties
+
+- `Comment` — `string`: This string appears in the System Policy UI. If it’s missing, the device enters `PayloadDisplayName` or `PayloadDescription` into this field before adding the rule to the System Policy database.
+- `Expiration` — `date`: The expiration date for rules being processed.
+- `LeafCertificate` — `data`: The single leaf certificate for the app that’s in the allow list.
+- `OperationType` — `string`: The type of operation.
+  **Default:** `operation:execute`  
+  **Allowed values:** `operation:execute`, `operation:install`, `operation:lsopen`
+- `Priority` — `number`: The rule’s priority.
+- `Requirement` — `string`: The policy requirement. This key must follow the syntax described in [Code Signing Requirement Language](https://developer.apple.com/library/archive/documentation/Security/Conceptual/CodeSigningGuide/RequirementLang/RequirementLang.html#//apple_ref/doc/uid/TP40005929-CH5).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Specify `com.apple.systempolicy.rule` as the payload type.
+
+This payload allows control over Gatekeeper’s system policy rules. The keys and functionality are tightly related to the `spctl` command line tool. For more information, see the manual page for `spctl`.
+
+This payload can only exist in a device profile. If the payload is present in a user profile, an error occurs during installation and the profile installation fails.
+
+<a id="Profile-availability"></a>
+
+### Profile availability
+
+|  |  |
+| --- | --- |
+| Device channel | macOS |
+| User channel | N/A |
+| Allow manual install | macOS |
+| Requires supervision | N/A |
+| Requires user-approved MDM | N/A |
+| Allowed in user enrollment | N/A |
+| Allow multiple payloads | macOS |
+
+<a id="Profile-example"></a>
+
+### Profile example
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>Priority</key>
+            <real>101</real>
+            <key>Requirement</key>
+            <string>anchor apple generic and identifier "com.example.myapp" and (certificate leaf[field.9.8.765.432109.876.5.4.3] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.9.8.765.432109.876.5.4.3] /* exists */ and certificate leaf[subject.OU] = "ABCDE12345")</string>
+            <key>PayloadIdentifier</key>
+            <string>com.example.mysystempolicyrulepayload</string>
+            <key>PayloadType</key>
+            <string>com.apple.systempolicy.rule</string>
+            <key>PayloadUUID</key>
+            <string>624b5152-a1cd-4bac-baa3-51fbb1f04973</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+    </array>
+    <key>PayloadDisplayName</key>
+    <string>System Policy Rule</string>
+    <key>PayloadIdentifier</key>
+    <string>com.example.myprofile</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>7fa54f02-e6e1-4042-bb75-a2a4d962ac6d</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>
+```
+
+## See Also
+
+### System policy
+
+- [SystemPolicyControl](systempolicycontrol.md): The payload that configures the system policy for assessments.
+- [SystemPolicyKernelExtensions](systempolicykernelextensions.md): The payload that configures the kernel extension policies.
+- [SystemPolicyManaged](systempolicymanaged.md): The payload that configures the Finder’s contextual menu to bypass the system policy.

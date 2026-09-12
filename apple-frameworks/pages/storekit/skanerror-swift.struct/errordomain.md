@@ -1,0 +1,13 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/skanerror-swift.struct/errordomain](https://developer.apple.com/documentation/storekit/skanerror-swift.struct/errordomain)
+
+# errorDomain
+
+**Framework:** StoreKit  
+**Kind:** Type Property  
+**Availability:** iOS 15.4+ · iPadOS 15.4+ · Mac Catalyst 15.4+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+static var errorDomain: String { get }
+```

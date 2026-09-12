@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/charts/chartproxy/value(atangle:as:)](https://developer.apple.com/documentation/charts/chartproxy/value(atangle:as:))
+
+# value(atAngle:as:)
+
+**Framework:** Swift Charts  
+**Kind:** Instance Method  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+Returns the data value at the given angle, or `nil` if the angle does not correspond to a valid data value.
+
+## Declaration
+
+```swift
+func value<P>(atAngle angle: Angle, as: P.Type = P.self) -> P? where P : Plottable
+```
+
+## Parameters
+
+- `angle`: The angle, relative to the plot center, where the 12 o’clock position is interpreted as zero degrees, increasing clockwise.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The data value at the given position.

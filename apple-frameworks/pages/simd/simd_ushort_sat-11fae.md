@@ -1,0 +1,24 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/simd/simd_ushort_sat-11fae](https://developer.apple.com/documentation/simd/simd_ushort_sat-11fae)
+
+# simd_ushort_sat
+
+**Interface language:** Objective-C
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
+
+## Declaration
+
+```objectivec
+static simd_ushort32 simd_ushort_sat(simd_ushort32 __x);
+```
+
+## See Also
+
+### Functions to Perform Saturating Conversion From Vectors of Other Types
+
+- [simd_ushort_sat](simd_ushort_sat-11tza.md): Returns a new vector from the specified vector of 8-bit, signed integer elements.
+- [simd_ushort_sat](simd_ushort_sat-11k7a.md): Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
+- [simd_ushort_sat](simd_ushort_sat-11p46.md): Returns a new vector from the specified vector of 16-bit, signed integer elements.

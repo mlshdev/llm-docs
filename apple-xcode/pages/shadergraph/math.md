@@ -1,0 +1,110 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/shadergraph/math](https://developer.apple.com/documentation/shadergraph/math)
+
+# Math
+
+**Framework:** ShaderGraph  
+**Kind:** ShaderGraph Node Group
+
+Perform a wide variety of mathematical and transformative operations on data values.
+
+<a id="overview"></a>
+
+## Overview
+
+Include `Math` nodes in your graph to perform typical mathematical operations on data values. A wide range of nodes are available, supporting basic arithmetic, trigonometry, logs, exponents, dot and cross products, and more. Some nodes operate on specific data types of values, but most operate on a wide range of data types, including numbers, colors, and vectors.
+
+## Topics
+
+### Nodes
+
+- [Add](math/add.md): Adds two values.
+- [Subtract](math/subtract.md): Subtracts two values.
+- [Multiply](math/multiply.md): Multiplies two values.
+- [Divide](math/divide.md): Divides two values.
+- [Modulo](math/modulo.md): Outputs the remaining fraction after dividing the input by a value and subtracting the integer portion.
+- [Abs](math/abs.md): Outputs the per-channel absolute value of the input.
+- [Floor](math/floor.md): Outputs the nearest integer value, per-channel, less than or equal to the incoming values.
+- [Ceiling](math/ceiling.md): Outputs the nearest integer value, per-channel, greater than or equal to the incoming values.
+- [Power](math/power.md): Raises the incoming value to an exponent.
+- [Sin](math/sin.md): The sine of the incoming value in radians.
+- [Cos](math/cos.md): The cosine of the incoming value in radians.
+- [Tan](math/tan.md): The tangent of the incoming value in radians.
+- [Asin](math/asin.md): The arcsine of the incoming value in radians.
+- [Acos](math/acos.md): The arccosine of the incoming value in radians.
+- [Atan2](math/atan2.md): The arctangent of the expression (iny/inx) in radians.
+- [Square Root](math/square-root.md): The square root of the incoming value.
+- [Natural Log](math/natural-log.md): The natural log of the input.
+- [Exp](math/exp.md): Outputs ‘e’ to the power of the input.
+- [Sign](math/sign.md): The per-channel sign of the input value: -1 for negative, +1 for positive, 0 for zero.
+- [Clamp](math/clamp.md): Clamps the input per-channel to a specified range.
+- [Min](math/min.md): Outputs the minimum of two incoming values.
+- [Max](math/max.md): Outputs the maximum of two incoming values.
+- [Normalize](math/normalize.md): Outputs a normalized vector.
+- [Magnitude](math/magnitude.md): Outputs the float magnitude of a vector.
+- [Dot Product](math/dot-product.md): Outputs the dot product of two vectors.
+- [Cross Product](math/cross-product.md): Calculates the cross product vector of 2 input vectors.
+- [Transform Point](math/transform-point.md): Transforms a coordinate from one space to another.
+- [Transform Vector](math/transform-vector.md): Transforms a vector3 from one space to another.
+- [Transform Normal](math/transform-normal.md): Transforms a normal from one space to another.
+- [Transform Matrix](math/transform-matrix.md): Transforms a vector by a matrix.
+- [Transpose](math/transpose.md): Outputs the tranpose of a matrix.
+- [Determinant](math/determinant.md): Outputs the float determinant of a matrix.
+- [Invert Matrix](math/invert-matrix.md): Outputs the inverse of a matrix.
+- [Rotate 2D](math/rotate-2d.md): Rotates a Vector2 (Float) about the origin in 2D.
+- [Rotate 3D](math/rotate-3d.md): Rotates a Vector3 (Float) about a specified unit axis vector.
+- [Place 2D](math/place-2d.md): Transforms UV texture coordinates for 2D texture placement.
+- [Round](math/round.md): Rounds to the nearest integer value, per-channel.
+- [Safe Power](math/safe-power.md): Raises the incoming value to an exponent and assigns the sign of the base to the output.
+- [Normal Map](math/normal-map.md): Transforms a normal vector from object or tangent space into world space.
+- [Fractional (RealityKit)](math/fractional-%28realitykit%29.md): Returns the fractional part of a floating point number.
+- [One Minus (RealityKit)](math/one-minus-%28realitykit%29.md): Outputs one minus the input.
+- [Normal Map Decode](math/normal-map-decode.md): Remaps a normal’s value from \[0,1\] to \[-1,1\] by applying 2x-1.
+- [Max3 (RealityKit)](math/max3-%28realitykit%29.md): Outputs the maximum of three incoming values.
+- [Min3 (RealityKit)](math/min3-%28realitykit%29.md): Outputs the minimum of three incoming values.
+- [Fractional (RealityKit)](math/fractional-%28realitykit%29.md): Returns the fractional part of a floating point number.
+- [Inverse Hyperbolic Cos](math/inverse-hyperbolic-cos.md): The inverse hyperbolic cosine of the incoming value in radians.
+- [Inverse Hyperbolic Sin](math/inverse-hyperbolic-sin.md): The inverse hyperbolic sine of the incoming value in radians.
+- [Atan](math/atan.md): The arctangent of the incoming value in radians.
+- [Inverse Hyperbolic Tan](math/inverse-hyperbolic-tan.md): The hyperbolic arc tangent of the incoming value in radians.
+- [Copy Sign (RealityKit)](math/copy-sign-%28realitykit%29.md): Return x with its sign changed to match the sign of y.
+- [Hyperbolic Cos](math/hyperbolic-cos.md): The hyperbolic cosine of the incoming value in radians.
+- [Cos Pi (RealityKit)](math/cos-pi-%28realitykit%29.md): Compute cos(πX).
+- [Exponential 2 (RealityKit)](math/exponential-2-%28realitykit%29.md): Exponential Base 2 of X.
+- [Exponential 10 (RealityKit)](math/exponential-10-%28realitykit%29.md): Exponential Base 10 of X.
+
+### Subscripts
+
+- [Distance (RealityKit)](math/distance-%28realitykit%29.md): Returns the distance between X and Y.
+- [Distance Square (RealityKit)](math/distance-square-%28realitykit%29.md): Returns the square of the distance between X and Y.
+- [Fused Multiply-Add (RealityKit)](math/fused-multiply-add-%28realitykit%29.md): Returns (A \* B) + C.
+- [Hyperbolic Sin](math/hyperbolic-sin.md): The hyperbolic sine of the incoming value in radians.
+- [Hyperbolic Tan](math/hyperbolic-tan.md): The hyperbolic tangent of the incoming value in radians.
+- [Log 10](math/log-10.md): The log base 10 of the input.
+- [Log 2](math/log-2.md): The log base 2 of the input.
+- [Magnitude Square (RealityKit)](math/magnitude-square-%28realitykit%29.md): Outputs the float magnitude of a vector, squared.
+- [Median3 (RealityKit)](math/median3-%28realitykit%29.md): Returns the middle value of three incoming values.
+- [Modulo (RealityKit)](math/modulo-%28realitykit%29.md): Outputs the remaining fraction after dividing the input by a value and subtracting the integer portion.
+- [Reciprocal Square Root (RealityKit)](math/reciprocal-square-root-%28realitykit%29.md): Computes inverse square root of X.
+- [Sin Pi (RealityKit)](math/sin-pi-%28realitykit%29.md): Compute sin(πX).
+- [Tan Pi (RealityKit)](math/tan-pi-%28realitykit%29.md): Compute tan(πX).
+- [Truncate (RealityKit)](math/truncate-%28realitykit%29.md): Rounds X to integral value using the round-toward-zero rounding mode.
+
+## See Also
+
+### Node Categories
+
+- [2D-Procedural](2d-procedural.md): Generate 2D gradients, noise, and other patterns programmatically for your material.
+- [2D-Texture](2d-texture.md): Load and configure 2D texture files.
+- [3D-Procedural](3d-procedural.md): Generate 3D noise patterns programmatically for your material.
+- [3D-Texture](3d-texture.md): Project multiple 2D images onto a surface to create a 3D texture.
+- [Adjustment](adjustment.md): Modify or convert values, or ranges of values, from one form to another.
+- [Application](application.md): Get system values such as the current time or the direction of the up vector.
+- [Compositing](compositing.md): Generate a single output from the combination of multiple data values.
+- [Data](data.md): Convert data values to different formats, or manipulate individual elements within a data structure.
+- [Geometric](geometric.md): Access scene geometry while your graph runs.
+- [Logic](logic.md): Perform Boolean operations and other logical comparisons on data values.
+- [Material](material.md): Encapsulate a set of shader graph nodes into a single module.
+- [Organization](organization.md): Modify the visual flow of data within your graph without changing any values.
+- [Procedural](procedural.md): Add a constant number, vector, matrix, color, string, or other value to your graph.
+- [RealityKit](realitykit.md): Add RealityKit surfaces or textures to your material and access and manipulate scene geometry.
+- [Surface](surface.md): Generate a MaterialX preview surface.

@@ -1,0 +1,36 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/createml/mldatacolumn/!=(_:_:)-1vu4e](https://developer.apple.com/documentation/createml/mldatacolumn/!=(_:_:)-1vu4e)
+
+# !=(\_:\_:)
+
+**Framework:** Create ML  
+**Kind:** Operator  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 10.14+ · tvOS 16.0+ · visionOS 1.0+
+
+Creates a column of Booleans by testing whether each element in the first column is not equal to the corresponding element in the second column.
+
+## Declaration
+
+```swift
+static func != (a: MLDataColumn<Element>, b: MLDataColumn<Element>) -> MLDataColumn<Bool>
+```
+
+## Parameters
+
+- `a`: A column.
+- `b`: A column.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new column of Booleans if the columns are the same size; otherwise an invalid column.
+
+## See Also
+
+### Comparing columns to generate a column of booleans
+
+- [==(\_:\_:)](==%28____%29-9e3tx.md): Conforms when `Element` conforms to `MLDataValueConvertible`. Creates a column of Booleans by testing whether each element in the first column is equal to the corresponding element in the second column.
+- [\<(\_:\_:)](_%28____%29-3om6w.md): Conforms when `Element` conforms to `MLDataValueConvertible`. Creates a column of Booleans by testing whether each element in the first column is less than the corresponding element in the second column.
+- [\<=(\_:\_:)](_=%28____%29-6s5v1.md): Conforms when `Element` conforms to `MLDataValueConvertible`. Creates a column of Booleans by testing whether each element in the first column is less than or equal to the corresponding element in the second column.
+- [\>(\_:\_:)](_%28____%29-2dym4.md): Conforms when `Element` conforms to `MLDataValueConvertible`. Creates a column of Booleans by testing whether each element in the first column is greater than the corresponding element in the second column.
+- [\>=(\_:\_:)](_=%28____%29-4w60p.md): Conforms when `Element` conforms to `MLDataValueConvertible`. Creates a column of Booleans by testing whether each element in the first column is greater than or equal to the corresponding element in the second column.

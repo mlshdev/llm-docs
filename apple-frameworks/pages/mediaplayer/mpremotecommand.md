@@ -1,0 +1,206 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mediaplayer/mpremotecommand](https://developer.apple.com/documentation/mediaplayer/mpremotecommand)
+
+# MPRemoteCommand (Swift)
+
+**Framework:** Media Player  
+**Kind:** Class  
+**Availability:** iOS 7.1+ · iPadOS 7.1+ · Mac Catalyst 13.1+ · macOS 10.12.2+ · tvOS 7.1+ · visionOS 1.0+ · watchOS 5.0+
+
+An object that responds to remote command events.
+
+## Declaration
+
+```swift
+class MPRemoteCommand
+```
+
+<a id="overview"></a>
+
+## Overview
+
+The Media Player framework defines a standard set of remote command objects for handling media-related events. When an accessory or iOS user interface generates a remote control event, the system notifies the corresponding command object on the shared [MPRemoteCommandCenter](mpremotecommandcenter.md) instance. That command object executes any attached handlers.
+
+To respond to a particular event, register a handler with the appropriate [MPRemoteCommand](mpremotecommand.md) object.
+
+Listing 1. Registering a remote control event handler
+
+**Swift**
+
+```swift
+// Get the shared command center.
+let commandCenter = MPRemoteCommandCenter.shared()
+
+// Add a handler for the play command.
+commandCenter.playCommand.addTarget { [unowned self] event in
+    if self.player.rate == 0.0 {
+        self.player.play()
+        return .success
+    }
+    return .commandFailed
+}
+```
+
+**Objective-C**
+
+```objc
+// Get the shared command center.
+MPRemoteCommandCenter *commandCenter = [MPRemoteCommandCenter sharedCommandCenter];
+
+// Add a handler for the play command.
+[commandCenter.playCommand addTargetWithHandler:^MPRemoteCommandHandlerStatus(MPRemoteCommandEvent * _Nonnull event) {
+    if (self.player.rate == 0.0) {
+        [self.player play];
+        return MPRemoteCommandHandlerStatusSuccess;
+    }
+    return MPRemoteCommandHandlerStatusCommandFailed;
+}];
+```
+
+If you explicitly don’t want to enable a given command, fetch the command object and set its enabled property to [false](https://developer.apple.com/documentation/swift/false). Disabling a remote command lets the system know that it shouldn’t display any related UI for that command when your app is the Now Playing app.
+
+The framework defines many subclasses to handle specific kinds of commands. Sometimes, these subclasses let you specify other information related to the command. For example, feedback commands let you specify a localized string that describes the meaning of the feedback. When supporting a particular command, be sure to look up the specific class used to handle those events.
+
+## Topics
+
+### Handling events
+
+- [addTarget(handler:)](mpremotecommand/addtarget%28handler_%29.md): Adds a block to be called when an event is received.
+- [addTarget(\_:action:)](mpremotecommand/addtarget%28__action_%29.md): Adds a target object to be called when an event is received.
+- [removeTarget(\_:)](mpremotecommand/removetarget%28__%29.md): Removes a target from the remote command object.
+- [removeTarget(\_:action:)](mpremotecommand/removetarget%28__action_%29.md): Removes a target and action from a remote command object.
+- [MPRemoteCommandHandlerStatus](mpremotecommandhandlerstatus.md): Constants indicating the status of a command.
+
+### Enabling a command object
+
+- [isEnabled](mpremotecommand/isenabled.md): A Boolean value that indicates whether a user can interact with the displayed element.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MPChangePlaybackPositionCommand](mpchangeplaybackpositioncommand.md)
+- [MPChangePlaybackRateCommand](mpchangeplaybackratecommand.md)
+- [MPChangeRepeatModeCommand](mpchangerepeatmodecommand.md)
+- [MPChangeShuffleModeCommand](mpchangeshufflemodecommand.md)
+- [MPFeedbackCommand](mpfeedbackcommand.md)
+- [MPRatingCommand](mpratingcommand.md)
+- [MPSkipIntervalCommand](mpskipintervalcommand.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Setting up the remote event handler
+
+- [Becoming a now playable app](becoming-a-now-playable-app.md): Ensure your app is eligible to become the Now Playing app by adopting best practices for providing Now Playing info and registering for remote command center actions.
+- [MPRemoteCommandCenter](mpremotecommandcenter.md): An object that responds to remote control events sent by external accessories and system controls.
+- [MPRemoteCommandEvent](mpremotecommandevent.md): A description of a command sent by an external media player.
+
+# MPRemoteCommand (Objective-C)
+
+**Framework:** Media Player  
+**Kind:** Class  
+**Availability:** iOS 7.1+ · iPadOS 7.1+ · Mac Catalyst 13.1+ · macOS 10.12.2+ · tvOS 7.1+ · visionOS 1.0+ · watchOS 5.0+
+
+An object that responds to remote command events.
+
+## Declaration
+
+```objectivec
+@interface MPRemoteCommand : NSObject
+```
+
+<a id="overview"></a>
+
+## Overview
+
+The Media Player framework defines a standard set of remote command objects for handling media-related events. When an accessory or iOS user interface generates a remote control event, the system notifies the corresponding command object on the shared [MPRemoteCommandCenter](mpremotecommandcenter.md) instance. That command object executes any attached handlers.
+
+To respond to a particular event, register a handler with the appropriate [MPRemoteCommand](mpremotecommand.md) object.
+
+Listing 1. Registering a remote control event handler
+
+**Swift**
+
+```swift
+// Get the shared command center.
+let commandCenter = MPRemoteCommandCenter.shared()
+
+// Add a handler for the play command.
+commandCenter.playCommand.addTarget { [unowned self] event in
+    if self.player.rate == 0.0 {
+        self.player.play()
+        return .success
+    }
+    return .commandFailed
+}
+```
+
+**Objective-C**
+
+```objc
+// Get the shared command center.
+MPRemoteCommandCenter *commandCenter = [MPRemoteCommandCenter sharedCommandCenter];
+
+// Add a handler for the play command.
+[commandCenter.playCommand addTargetWithHandler:^MPRemoteCommandHandlerStatus(MPRemoteCommandEvent * _Nonnull event) {
+    if (self.player.rate == 0.0) {
+        [self.player play];
+        return MPRemoteCommandHandlerStatusSuccess;
+    }
+    return MPRemoteCommandHandlerStatusCommandFailed;
+}];
+```
+
+If you explicitly don’t want to enable a given command, fetch the command object and set its enabled property to [false](https://developer.apple.com/documentation/swift/false). Disabling a remote command lets the system know that it shouldn’t display any related UI for that command when your app is the Now Playing app.
+
+The framework defines many subclasses to handle specific kinds of commands. Sometimes, these subclasses let you specify other information related to the command. For example, feedback commands let you specify a localized string that describes the meaning of the feedback. When supporting a particular command, be sure to look up the specific class used to handle those events.
+
+## Topics
+
+### Handling events
+
+- [addTargetWithHandler:](mpremotecommand/addtarget%28handler_%29.md): Adds a block to be called when an event is received.
+- [addTarget:action:](mpremotecommand/addtarget%28__action_%29.md): Adds a target object to be called when an event is received.
+- [removeTarget:](mpremotecommand/removetarget%28__%29.md): Removes a target from the remote command object.
+- [removeTarget:action:](mpremotecommand/removetarget%28__action_%29.md): Removes a target and action from a remote command object.
+- [MPRemoteCommandHandlerStatus](mpremotecommandhandlerstatus.md): Constants indicating the status of a command.
+
+### Enabling a command object
+
+- [enabled](mpremotecommand/isenabled.md): A Boolean value that indicates whether a user can interact with the displayed element.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Inherited By
+
+- [MPChangePlaybackPositionCommand](mpchangeplaybackpositioncommand.md)
+- [MPChangePlaybackRateCommand](mpchangeplaybackratecommand.md)
+- [MPChangeRepeatModeCommand](mpchangerepeatmodecommand.md)
+- [MPChangeShuffleModeCommand](mpchangeshufflemodecommand.md)
+- [MPFeedbackCommand](mpfeedbackcommand.md)
+- [MPRatingCommand](mpratingcommand.md)
+- [MPSkipIntervalCommand](mpskipintervalcommand.md)
+
+## See Also
+
+### Setting up the remote event handler
+
+- [Becoming a now playable app](becoming-a-now-playable-app.md): Ensure your app is eligible to become the Now Playing app by adopting best practices for providing Now Playing info and registering for remote command center actions.
+- [MPRemoteCommandCenter](mpremotecommandcenter.md): An object that responds to remote control events sent by external accessories and system controls.
+- [MPRemoteCommandEvent](mpremotecommandevent.md): A description of a command sent by an external media player.

@@ -1,0 +1,30 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tvos-release-notes/tvos-13_4-release-notes](https://developer.apple.com/documentation/tvos-release-notes/tvos-13_4-release-notes)
+
+# tvOS 13.4 Release Notes
+
+**Kind:** Article
+
+Update your apps to use new features, and test your apps against API changes.
+
+<a id="overview"></a>
+
+## Overview
+
+The tvOS 13.4 SDK provides support to develop tvOS apps for Apple TV devices running tvOS 13.4. The SDK comes bundled with Xcode 11.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 11.4, see [Xcode 11.4 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-11_4-release-notes).
+
+<a id="General"></a>
+
+### General
+
+There are no release notes for this software update.
+
+## See Also
+
+### tvOS 13
+
+- [tvOS 13.4.8 Release Notes](tvos-13_4_8-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [tvOS 13.4.5 Release Notes](tvos-13_4_5-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [tvOS 13.3.1 Release Notes](tvos-13_3_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [tvOS 13.3 Release Notes](tvos-13_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [tvOS 13.2 Release Notes](tvos-13_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [tvOS 13 Release Notes](tvos-13-release-notes.md): Update your apps to use new features, and test your apps against API changes.

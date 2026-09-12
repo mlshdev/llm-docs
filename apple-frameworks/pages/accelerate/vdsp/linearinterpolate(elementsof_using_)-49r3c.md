@@ -1,0 +1,84 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vdsp/linearinterpolate(elementsof:using:)-49r3c](https://developer.apple.com/documentation/accelerate/vdsp/linearinterpolate(elementsof:using:)-49r3c)
+
+# linearInterpolate(elementsOf:using:)
+
+**Framework:** Accelerate  
+**Kind:** Type Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS · watchOS 6.0+
+
+Returns the interpolation between the neighboring elements of a single-precision vector.
+
+## Declaration
+
+```swift
+static func linearInterpolate<T, U>(elementsOf vector: T, using controlVector: U) -> [Float] where T : AccelerateBuffer, U : AccelerateBuffer, T.Element == Float, U.Element == Float
+```
+
+## Parameters
+
+- `vector`: An array that contains the values to interpolate.
+- `controlVector`: An array that defines the interpolation: integer parts are indices into `vector` and fractional parts are interpolation constants.
+
+## Mentioned In
+
+- [Using linear interpolation to construct new data points](../using-linear-interpolation-to-construct-new-data-points.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Single-precision and double-precision [linearInterpolate(elementsOf:using:)](linearinterpolate%28elementsof_using_%29-49r3c.md) functions return an array of an arbitrary length that’s constructed from the linearly interpolated values in a source array. Pass [linearInterpolate(elementsOf:using:)](linearinterpolate%28elementsof_using_%29-49r3c.md) a control vector that defines the interpolation: the integer part of each element in the control vector is the zero-based index of the first element of a pair of adjacent values in the source array, and the fractional part defines the linear interpolation between the values at those indices.
+
+For example, the following code generates a five-element vector by interpolating three values:
+
+```swift
+let result = vDSP.linearInterpolate(elementsOf: [100, 200, 300],
+                                    using: [0, 0.5, 1, 1.5, 2])
+```
+
+On return, `result` contains `[100.0, 150.0, 200.0, 250.0, 300.0]`.
+
+To compute longer interpolation results, use [ramp(in:count:)](ramp%28in_count_%29-79aw7.md) to generate the control vector. The following code creates 1024 interpolated values from 10 source values:
+
+```swift
+let values: [Float] = [50, 90, 55, 10, 40, 85, 65, 15, 30, 80]
+let controlVector: [Float] = vDSP.ramp(in: 0 ... Float(values.count) - 1,
+                                       count: 1024)
+
+let result = vDSP.linearInterpolate(elementsOf: values,
+                                    using: controlVector)
+```
+
+The following figure visualizes the elements in `result`.
+
+![A graph of the linearly interpolated values based on a control vector created with a ramp.](https://developer.apple.com/images/com.apple.accelerate/media-3521343@2x.png)
+
+By changing the technique used to form the fractional parts of the control vector, you change the interpolation between the values in the source vector. The following code uses a sigmoid function—that is, a function that has an “S” shaped curve—to populate the control vector:
+
+```swift
+let values: [Float] = [50, 90, 55, 10, 40, 85, 65, 15, 30, 80]
+
+let denominator = 1024 / Float(values.count - 1)
+let tau = Float.pi * 2
+let controlVector: [Float] = (0 ..< 1024).map {
+    let x = modf(Float($0) / denominator)
+    
+    return x.0 + (tanh((x.1 - 0.5) * tau) * 0.5) + 0.5
+}
+
+let result = vDSP.linearInterpolate(elementsOf: values,
+                                    using: controlVector)
+```
+
+The following figure visualizes the elements in `result` using hyperbolic tangent for the sigmoid function.
+
+![A graph of the linearly interpolated values based on a control vector created with a sigmoid function.](https://developer.apple.com/images/com.apple.accelerate/media-3521334@2x.png)
+
+## See Also
+
+### Single-Vector Linear Interpolation
+
+- [Using linear interpolation to construct new data points](../using-linear-interpolation-to-construct-new-data-points.md): Fill the gaps in arrays of numerical data using linear interpolation.
+- [linearInterpolate(elementsOf:using:)](linearinterpolate%28elementsof_using_%29-5i3jc.md): Returns the interpolation between the neighboring elements of a double-precision vector.
+- [linearInterpolate(elementsOf:using:result:)](linearinterpolate%28elementsof_using_result_%29-4n3lr.md): Calculates the interpolation between the neighboring elements of a double-precision vector.
+- [linearInterpolate(elementsOf:using:result:)](linearinterpolate%28elementsof_using_result_%29-9y61c.md): Calculates the interpolation between the neighboring elements of a single-precision vector.

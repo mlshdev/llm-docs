@@ -1,0 +1,53 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsapplicationdelegate/applicationprotecteddatawillbecomeunavailable(_:)](https://developer.apple.com/documentation/appkit/nsapplicationdelegate/applicationprotecteddatawillbecomeunavailable(_:))
+
+# applicationProtectedDataWillBecomeUnavailable(\_:) (Swift)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS 12.0+
+
+Tells the delegate that protected data is about to become unavailable.
+
+## Declaration
+
+```swift
+@MainActor optional func applicationProtectedDataWillBecomeUnavailable(_ notification: Notification)
+```
+
+## See Also
+
+### Restoring Application State
+
+- [applicationSupportsSecureRestorableState(\_:)](applicationsupportssecurerestorablestate%28__%29.md): Returns a Boolean value that indicates if the app supports secure state restoration.
+- [applicationProtectedDataDidBecomeAvailable(\_:)](applicationprotecteddatadidbecomeavailable%28__%29.md): Tells the delegate that protected data is now available.
+- [application(\_:willEncodeRestorableState:)](application%28__willencoderestorablestate_%29.md): Tells the delegate that the app is about to encode its restorable state.
+- [application(\_:didDecodeRestorableState:)](application%28__diddecoderestorablestate_%29.md): Tells the delegate when the app finished decoding its restorable state.
+
+# applicationProtectedDataWillBecomeUnavailable: (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS 12.0+
+
+Tells the delegate that protected data is about to become unavailable.
+
+## Declaration
+
+```objectivec
+- (void) applicationProtectedDataWillBecomeUnavailable:(NSNotification *) notification;
+```
+
+## Topics
+
+### Related notification
+
+- [NSApplicationProtectedDataWillBecomeUnavailableNotification](../nsapplicationprotecteddatawillbecomeunavailablenotification.md): Posted when protected data is about to become unavailable.
+
+## See Also
+
+### Restoring Application State
+
+- [applicationSupportsSecureRestorableState:](applicationsupportssecurerestorablestate%28__%29.md): Returns a Boolean value that indicates if the app supports secure state restoration.
+- [applicationProtectedDataDidBecomeAvailable:](applicationprotecteddatadidbecomeavailable%28__%29.md): Tells the delegate that protected data is now available.
+- [application:willEncodeRestorableState:](application%28__willencoderestorablestate_%29.md): Tells the delegate that the app is about to encode its restorable state.
+- [application:didDecodeRestorableState:](application%28__diddecoderestorablestate_%29.md): Tells the delegate when the app finished decoding its restorable state.

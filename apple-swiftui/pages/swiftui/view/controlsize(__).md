@@ -1,0 +1,71 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/controlsize(_:)](https://developer.apple.com/documentation/swiftui/view/controlsize(_:))
+
+# controlSize(\_:)
+
+**Framework:** SwiftUI  
+**Kind:** Instance Method  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 10.15+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 9.0+
+
+Sets the size for controls within this view.
+
+## Declaration
+
+```swift
+nonisolated func controlSize(_ controlSize: ControlSize) -> some View
+
+```
+
+## Parameters
+
+- `controlSize`: One of the control sizes specified in the [ControlSize](../controlsize.md) enumeration.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use `controlSize(_:)` to override the system default size for controls in this view. In this example, a view displays several typical controls at `.mini`, `.small` and `.regular` sizes.
+
+```swift
+struct ControlSize: View {
+    var body: some View {
+        VStack {
+            MyControls(label: "Mini")
+                .controlSize(.mini)
+            MyControls(label: "Small")
+                .controlSize(.small)
+            MyControls(label: "Regular")
+                .controlSize(.regular)
+        }
+        .padding()
+        .frame(width: 450)
+        .border(Color.gray)
+    }
+}
+
+struct MyControls: View {
+    var label: String
+    @State private var value = 3.0
+    @State private var selected = 1
+    var body: some View {
+        HStack {
+            Text(label + ":")
+            Picker("Selection", selection: $selected) {
+                Text("option 1").tag(1)
+                Text("option 2").tag(2)
+                Text("option 3").tag(3)
+            }
+            Slider(value: $value, in: 1...10)
+            Button("OK") { }
+        }
+    }
+}
+```
+
+![A screenshot showing several controls of various](https://developer.apple.com/images/com.apple.SwiftUI/SwiftUI-View-controlSize@2x.png)
+
+## See Also
+
+### Sizing controls
+
+- [controlSize](../environmentvalues/controlsize.md): The size to apply to controls within a view.
+- [ControlSize](../controlsize.md): The size classes, like regular or small, that you can apply to controls within a view.

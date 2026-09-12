@@ -1,0 +1,212 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/sdpattributeidentifiercodes](https://developer.apple.com/documentation/iobluetooth/sdpattributeidentifiercodes)
+
+# SDPAttributeIdentifierCodes (Swift)
+
+**Framework:** IOBluetooth  
+**Kind:** Structure  
+**Availability:** macOS
+
+## Declaration
+
+```swift
+struct SDPAttributeIdentifierCodes
+```
+
+## Topics
+
+### Constants
+
+- [kBluetoothSDPAttributeIdentifierAdditionalProtocolsDescriptorList](kbluetoothsdpattributeidentifieradditionalprotocolsdescriptorlist.md)
+- [kBluetoothSDPAttributeIdentifierAudioFeedbackSupport](kbluetoothsdpattributeidentifieraudiofeedbacksupport.md)
+- [kBluetoothSDPAttributeIdentifierBluetoothProfileDescriptorList](kbluetoothsdpattributeidentifierbluetoothprofiledescriptorlist.md)
+- [kBluetoothSDPAttributeIdentifierBrowseGroupList](kbluetoothsdpattributeidentifierbrowsegrouplist.md)
+- [kBluetoothSDPAttributeIdentifierClientExecutableURL](kbluetoothsdpattributeidentifierclientexecutableurl.md)
+- [kBluetoothSDPAttributeIdentifierDocumentationURL](kbluetoothsdpattributeidentifierdocumentationurl.md)
+- [kBluetoothSDPAttributeIdentifierExternalNetwork](kbluetoothsdpattributeidentifierexternalnetwork.md)
+- [kBluetoothSDPAttributeIdentifierFaxClass1Support](kbluetoothsdpattributeidentifierfaxclass1support.md)
+- [kBluetoothSDPAttributeIdentifierFaxClass2Support](kbluetoothsdpattributeidentifierfaxclass2support.md)
+- [kBluetoothSDPAttributeIdentifierFaxClass2_0Support](kbluetoothsdpattributeidentifierfaxclass2_0support.md)
+- [kBluetoothSDPAttributeIdentifierGroupID](kbluetoothsdpattributeidentifiergroupid.md)
+- [kBluetoothSDPAttributeIdentifierHIDBatteryPower](kbluetoothsdpattributeidentifierhidbatterypower.md)
+- [kBluetoothSDPAttributeIdentifierHIDBootDevice](kbluetoothsdpattributeidentifierhidbootdevice.md)
+- [kBluetoothSDPAttributeIdentifierHIDCountryCode](kbluetoothsdpattributeidentifierhidcountrycode.md)
+- [kBluetoothSDPAttributeIdentifierHIDDescriptorList](kbluetoothsdpattributeidentifierhiddescriptorlist.md)
+- [kBluetoothSDPAttributeIdentifierHIDDeviceSubclass](kbluetoothsdpattributeidentifierhiddevicesubclass.md)
+- [kBluetoothSDPAttributeIdentifierHIDLangIDBaseList](kbluetoothsdpattributeidentifierhidlangidbaselist.md)
+- [kBluetoothSDPAttributeIdentifierHIDNormallyConnectable](kbluetoothsdpattributeidentifierhidnormallyconnectable.md)
+- [kBluetoothSDPAttributeIdentifierHIDParserVersion](kbluetoothsdpattributeidentifierhidparserversion.md)
+- [kBluetoothSDPAttributeIdentifierHIDProfileVersion](kbluetoothsdpattributeidentifierhidprofileversion.md)
+- [kBluetoothSDPAttributeIdentifierHIDReconnectInitiate](kbluetoothsdpattributeidentifierhidreconnectinitiate.md)
+- [kBluetoothSDPAttributeIdentifierHIDReleaseNumber](kbluetoothsdpattributeidentifierhidreleasenumber.md)
+- [kBluetoothSDPAttributeIdentifierHIDRemoteWake](kbluetoothsdpattributeidentifierhidremotewake.md)
+- [kBluetoothSDPAttributeIdentifierHIDSDPDisable](kbluetoothsdpattributeidentifierhidsdpdisable.md)
+- [kBluetoothSDPAttributeIdentifierHIDSSRHostMaxLatency](kbluetoothsdpattributeidentifierhidssrhostmaxlatency.md)
+- [kBluetoothSDPAttributeIdentifierHIDSSRHostMinTimeout](kbluetoothsdpattributeidentifierhidssrhostmintimeout.md)
+- [kBluetoothSDPAttributeIdentifierHIDSupervisionTimeout](kbluetoothsdpattributeidentifierhidsupervisiontimeout.md)
+- [kBluetoothSDPAttributeIdentifierHIDVirtualCable](kbluetoothsdpattributeidentifierhidvirtualcable.md)
+- [kBluetoothSDPAttributeIdentifierHomepageURL](kbluetoothsdpattributeidentifierhomepageurl.md)
+- [kBluetoothSDPAttributeIdentifierIPSubnet](kbluetoothsdpattributeidentifieripsubnet.md)
+- [kBluetoothSDPAttributeIdentifierIconURL](kbluetoothsdpattributeidentifiericonurl.md)
+- [kBluetoothSDPAttributeIdentifierLanguageBaseAttributeIDList](kbluetoothsdpattributeidentifierlanguagebaseattributeidlist.md)
+- [kBluetoothSDPAttributeIdentifierMaxNetAccessRate](kbluetoothsdpattributeidentifiermaxnetaccessrate.md)
+- [kBluetoothSDPAttributeIdentifierNetAccessType](kbluetoothsdpattributeidentifiernetaccesstype.md)
+- [kBluetoothSDPAttributeIdentifierNetwork](kbluetoothsdpattributeidentifiernetwork.md)
+- [kBluetoothSDPAttributeIdentifierNetworkAddress](kbluetoothsdpattributeidentifiernetworkaddress.md)
+- [kBluetoothSDPAttributeIdentifierProtocolDescriptorList](kbluetoothsdpattributeidentifierprotocoldescriptorlist.md)
+- [kBluetoothSDPAttributeIdentifierProviderName](kbluetoothsdpattributeidentifierprovidername.md)
+- [kBluetoothSDPAttributeIdentifierRemoteAudioVolumeControl](kbluetoothsdpattributeidentifierremoteaudiovolumecontrol.md)
+- [kBluetoothSDPAttributeIdentifierSecurityDescription](kbluetoothsdpattributeidentifiersecuritydescription.md)
+- [kBluetoothSDPAttributeIdentifierServiceAvailability](kbluetoothsdpattributeidentifierserviceavailability.md)
+- [kBluetoothSDPAttributeIdentifierServiceClassIDList](kbluetoothsdpattributeidentifierserviceclassidlist.md)
+- [kBluetoothSDPAttributeIdentifierServiceDatabaseState](kbluetoothsdpattributeidentifierservicedatabasestate.md)
+- [kBluetoothSDPAttributeIdentifierServiceDescription](kbluetoothsdpattributeidentifierservicedescription.md)
+- [kBluetoothSDPAttributeIdentifierServiceID](kbluetoothsdpattributeidentifierserviceid.md)
+- [kBluetoothSDPAttributeIdentifierServiceInfoTimeToLive](kbluetoothsdpattributeidentifierserviceinfotimetolive.md)
+- [kBluetoothSDPAttributeIdentifierServiceName](kbluetoothsdpattributeidentifierservicename.md)
+- [kBluetoothSDPAttributeIdentifierServiceRecordHandle](kbluetoothsdpattributeidentifierservicerecordhandle.md)
+- [kBluetoothSDPAttributeIdentifierServiceRecordState](kbluetoothsdpattributeidentifierservicerecordstate.md)
+- [kBluetoothSDPAttributeIdentifierServiceVersion](kbluetoothsdpattributeidentifierserviceversion.md)
+- [kBluetoothSDPAttributeIdentifierSupportedCapabilities](kbluetoothsdpattributeidentifiersupportedcapabilities.md)
+- [kBluetoothSDPAttributeIdentifierSupportedDataStoresList](kbluetoothsdpattributeidentifiersupporteddatastoreslist.md)
+- [kBluetoothSDPAttributeIdentifierSupportedFeatures](kbluetoothsdpattributeidentifiersupportedfeatures.md)
+- [kBluetoothSDPAttributeIdentifierSupportedFunctions](kbluetoothsdpattributeidentifiersupportedfunctions.md)
+- [kBluetoothSDPAttributeIdentifierSupporterFormatsList](kbluetoothsdpattributeidentifiersupporterformatslist.md)
+- [kBluetoothSDPAttributeIdentifierTotalImagingDataCapacity](kbluetoothsdpattributeidentifiertotalimagingdatacapacity.md)
+- [kBluetoothSDPAttributeIdentifierVersionNumberList](kbluetoothsdpattributeidentifierversionnumberlist.md)
+- [kBluetoothSDPAttributeIdentifierWAPGateway](kbluetoothsdpattributeidentifierwapgateway.md)
+- [kBluetoothSDPAttributeIdentifierWAPStackType](kbluetoothsdpattributeidentifierwapstacktype.md)
+
+### Initializers
+
+- [init(\_:)](sdpattributeidentifiercodes/init%28__%29.md)
+- [init(rawValue:)](sdpattributeidentifiercodes/init%28rawvalue_%29.md)
+
+### Instance Properties
+
+- [rawValue](sdpattributeidentifiercodes/rawvalue.md)
+
+## Relationships
+
+### Conforms To
+
+- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+
+## See Also
+
+### Data Types
+
+- [BluetoothAFHMode](bluetoothafhmode.md)
+- [BluetoothAirMode](bluetoothairmode.md)
+- [BluetoothAllowRoleSwitch](bluetoothallowroleswitch.md)
+- [BluetoothAuthenticationRequirements](bluetoothauthenticationrequirements.md)
+- [BluetoothAuthenticationRequirementsValues](bluetoothauthenticationrequirementsvalues.md)
+- [BluetoothClassOfDevice](bluetoothclassofdevice.md)
+- [BluetoothClockOffset](bluetoothclockoffset.md)
+- [BluetoothCompanyIdentifers](bluetoothcompanyidentifers.md)
+- [BluetoothConnectionHandle](bluetoothconnectionhandle.md)
+- [BluetoothDeviceClassMajor](bluetoothdeviceclassmajor.md)
+- [BluetoothDeviceClassMinor](bluetoothdeviceclassminor.md)
+- [BluetoothDeviceName](bluetoothdevicename.md)
+- [BluetoothEncryptionEnable](bluetoothencryptionenable.md)
+- [BluetoothFeatureBits](bluetoothfeaturebits.md)
+- [BluetoothHCIACLDataByteCount](bluetoothhciacldatabytecount.md)
+
+# SDPAttributeIdentifierCodes (Objective-C)
+
+**Framework:** IOBluetooth  
+**Kind:** Enumeration  
+**Availability:** macOS
+
+## Declaration
+
+```objectivec
+enum SDPAttributeIdentifierCodes : unsigned int;
+```
+
+## Topics
+
+### Constants
+
+- [kBluetoothSDPAttributeIdentifierAdditionalProtocolsDescriptorList](kbluetoothsdpattributeidentifieradditionalprotocolsdescriptorlist.md)
+- [kBluetoothSDPAttributeIdentifierAudioFeedbackSupport](kbluetoothsdpattributeidentifieraudiofeedbacksupport.md)
+- [kBluetoothSDPAttributeIdentifierBluetoothProfileDescriptorList](kbluetoothsdpattributeidentifierbluetoothprofiledescriptorlist.md)
+- [kBluetoothSDPAttributeIdentifierBrowseGroupList](kbluetoothsdpattributeidentifierbrowsegrouplist.md)
+- [kBluetoothSDPAttributeIdentifierClientExecutableURL](kbluetoothsdpattributeidentifierclientexecutableurl.md)
+- [kBluetoothSDPAttributeIdentifierDocumentationURL](kbluetoothsdpattributeidentifierdocumentationurl.md)
+- [kBluetoothSDPAttributeIdentifierExternalNetwork](kbluetoothsdpattributeidentifierexternalnetwork.md)
+- [kBluetoothSDPAttributeIdentifierFaxClass1Support](kbluetoothsdpattributeidentifierfaxclass1support.md)
+- [kBluetoothSDPAttributeIdentifierFaxClass2Support](kbluetoothsdpattributeidentifierfaxclass2support.md)
+- [kBluetoothSDPAttributeIdentifierFaxClass2_0Support](kbluetoothsdpattributeidentifierfaxclass2_0support.md)
+- [kBluetoothSDPAttributeIdentifierGroupID](kbluetoothsdpattributeidentifiergroupid.md)
+- [kBluetoothSDPAttributeIdentifierHIDBatteryPower](kbluetoothsdpattributeidentifierhidbatterypower.md)
+- [kBluetoothSDPAttributeIdentifierHIDBootDevice](kbluetoothsdpattributeidentifierhidbootdevice.md)
+- [kBluetoothSDPAttributeIdentifierHIDCountryCode](kbluetoothsdpattributeidentifierhidcountrycode.md)
+- [kBluetoothSDPAttributeIdentifierHIDDescriptorList](kbluetoothsdpattributeidentifierhiddescriptorlist.md)
+- [kBluetoothSDPAttributeIdentifierHIDDeviceSubclass](kbluetoothsdpattributeidentifierhiddevicesubclass.md)
+- [kBluetoothSDPAttributeIdentifierHIDLangIDBaseList](kbluetoothsdpattributeidentifierhidlangidbaselist.md)
+- [kBluetoothSDPAttributeIdentifierHIDNormallyConnectable](kbluetoothsdpattributeidentifierhidnormallyconnectable.md)
+- [kBluetoothSDPAttributeIdentifierHIDParserVersion](kbluetoothsdpattributeidentifierhidparserversion.md)
+- [kBluetoothSDPAttributeIdentifierHIDProfileVersion](kbluetoothsdpattributeidentifierhidprofileversion.md)
+- [kBluetoothSDPAttributeIdentifierHIDReconnectInitiate](kbluetoothsdpattributeidentifierhidreconnectinitiate.md)
+- [kBluetoothSDPAttributeIdentifierHIDReleaseNumber](kbluetoothsdpattributeidentifierhidreleasenumber.md)
+- [kBluetoothSDPAttributeIdentifierHIDRemoteWake](kbluetoothsdpattributeidentifierhidremotewake.md)
+- [kBluetoothSDPAttributeIdentifierHIDSDPDisable](kbluetoothsdpattributeidentifierhidsdpdisable.md)
+- [kBluetoothSDPAttributeIdentifierHIDSSRHostMaxLatency](kbluetoothsdpattributeidentifierhidssrhostmaxlatency.md)
+- [kBluetoothSDPAttributeIdentifierHIDSSRHostMinTimeout](kbluetoothsdpattributeidentifierhidssrhostmintimeout.md)
+- [kBluetoothSDPAttributeIdentifierHIDSupervisionTimeout](kbluetoothsdpattributeidentifierhidsupervisiontimeout.md)
+- [kBluetoothSDPAttributeIdentifierHIDVirtualCable](kbluetoothsdpattributeidentifierhidvirtualcable.md)
+- [kBluetoothSDPAttributeIdentifierHomepageURL](kbluetoothsdpattributeidentifierhomepageurl.md)
+- [kBluetoothSDPAttributeIdentifierIPSubnet](kbluetoothsdpattributeidentifieripsubnet.md)
+- [kBluetoothSDPAttributeIdentifierIconURL](kbluetoothsdpattributeidentifiericonurl.md)
+- [kBluetoothSDPAttributeIdentifierLanguageBaseAttributeIDList](kbluetoothsdpattributeidentifierlanguagebaseattributeidlist.md)
+- [kBluetoothSDPAttributeIdentifierMaxNetAccessRate](kbluetoothsdpattributeidentifiermaxnetaccessrate.md)
+- [kBluetoothSDPAttributeIdentifierNetAccessType](kbluetoothsdpattributeidentifiernetaccesstype.md)
+- [kBluetoothSDPAttributeIdentifierNetwork](kbluetoothsdpattributeidentifiernetwork.md)
+- [kBluetoothSDPAttributeIdentifierNetworkAddress](kbluetoothsdpattributeidentifiernetworkaddress.md)
+- [kBluetoothSDPAttributeIdentifierProtocolDescriptorList](kbluetoothsdpattributeidentifierprotocoldescriptorlist.md)
+- [kBluetoothSDPAttributeIdentifierProviderName](kbluetoothsdpattributeidentifierprovidername.md)
+- [kBluetoothSDPAttributeIdentifierRemoteAudioVolumeControl](kbluetoothsdpattributeidentifierremoteaudiovolumecontrol.md)
+- [kBluetoothSDPAttributeIdentifierSecurityDescription](kbluetoothsdpattributeidentifiersecuritydescription.md)
+- [kBluetoothSDPAttributeIdentifierServiceAvailability](kbluetoothsdpattributeidentifierserviceavailability.md)
+- [kBluetoothSDPAttributeIdentifierServiceClassIDList](kbluetoothsdpattributeidentifierserviceclassidlist.md)
+- [kBluetoothSDPAttributeIdentifierServiceDatabaseState](kbluetoothsdpattributeidentifierservicedatabasestate.md)
+- [kBluetoothSDPAttributeIdentifierServiceDescription](kbluetoothsdpattributeidentifierservicedescription.md)
+- [kBluetoothSDPAttributeIdentifierServiceID](kbluetoothsdpattributeidentifierserviceid.md)
+- [kBluetoothSDPAttributeIdentifierServiceInfoTimeToLive](kbluetoothsdpattributeidentifierserviceinfotimetolive.md)
+- [kBluetoothSDPAttributeIdentifierServiceName](kbluetoothsdpattributeidentifierservicename.md)
+- [kBluetoothSDPAttributeIdentifierServiceRecordHandle](kbluetoothsdpattributeidentifierservicerecordhandle.md)
+- [kBluetoothSDPAttributeIdentifierServiceRecordState](kbluetoothsdpattributeidentifierservicerecordstate.md)
+- [kBluetoothSDPAttributeIdentifierServiceVersion](kbluetoothsdpattributeidentifierserviceversion.md)
+- [kBluetoothSDPAttributeIdentifierSupportedCapabilities](kbluetoothsdpattributeidentifiersupportedcapabilities.md)
+- [kBluetoothSDPAttributeIdentifierSupportedDataStoresList](kbluetoothsdpattributeidentifiersupporteddatastoreslist.md)
+- [kBluetoothSDPAttributeIdentifierSupportedFeatures](kbluetoothsdpattributeidentifiersupportedfeatures.md)
+- [kBluetoothSDPAttributeIdentifierSupportedFunctions](kbluetoothsdpattributeidentifiersupportedfunctions.md)
+- [kBluetoothSDPAttributeIdentifierSupporterFormatsList](kbluetoothsdpattributeidentifiersupporterformatslist.md)
+- [kBluetoothSDPAttributeIdentifierTotalImagingDataCapacity](kbluetoothsdpattributeidentifiertotalimagingdatacapacity.md)
+- [kBluetoothSDPAttributeIdentifierVersionNumberList](kbluetoothsdpattributeidentifierversionnumberlist.md)
+- [kBluetoothSDPAttributeIdentifierWAPGateway](kbluetoothsdpattributeidentifierwapgateway.md)
+- [kBluetoothSDPAttributeIdentifierWAPStackType](kbluetoothsdpattributeidentifierwapstacktype.md)
+
+## See Also
+
+### Data Types
+
+- [BluetoothAFHMode](bluetoothafhmode.md)
+- [BluetoothAirMode](bluetoothairmode.md)
+- [BluetoothAllowRoleSwitch](bluetoothallowroleswitch.md)
+- [BluetoothAuthenticationRequirements](bluetoothauthenticationrequirements.md)
+- [BluetoothAuthenticationRequirementsValues](bluetoothauthenticationrequirementsvalues.md)
+- [BluetoothClassOfDevice](bluetoothclassofdevice.md)
+- [BluetoothClockOffset](bluetoothclockoffset.md)
+- [BluetoothCompanyIdentifers](bluetoothcompanyidentifers.md)
+- [BluetoothConnectionHandle](bluetoothconnectionhandle.md)
+- [BluetoothDeviceClassMajor](bluetoothdeviceclassmajor.md)
+- [BluetoothDeviceClassMinor](bluetoothdeviceclassminor.md)
+- [BluetoothDeviceName](bluetoothdevicename.md)
+- [BluetoothEncryptionEnable](bluetoothencryptionenable.md)
+- [BluetoothFeatureBits](bluetoothfeaturebits.md)
+- [BluetoothHCIACLDataByteCount](bluetoothhciacldatabytecount.md)

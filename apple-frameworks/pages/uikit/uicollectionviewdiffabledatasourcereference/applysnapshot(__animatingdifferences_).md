@@ -1,0 +1,73 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uicollectionviewdiffabledatasourcereference/applysnapshot(_:animatingdifferences:)](https://developer.apple.com/documentation/uikit/uicollectionviewdiffabledatasourcereference/applysnapshot(_:animatingdifferences:))
+
+# applySnapshot(\_:animatingDifferences:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · tvOS 13.0+ · visionOS 1.0+
+
+Updates the UI to reflect the state of the data in the snapshot, optionally animating the UI changes.
+
+## Declaration
+
+```swift
+func applySnapshot(_ snapshot: NSDiffableDataSourceSnapshotReference, animatingDifferences: Bool)
+```
+
+## Parameters
+
+- `snapshot`: The snapshot that reflects the new state of the data in the collection view.
+- `animatingDifferences`: If [true](https://developer.apple.com/documentation/swift/true), the system animates the updates to the collection view. If [false](https://developer.apple.com/documentation/swift/false), the system doesn’t animate the updates to the collection view.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The diffable data source computes the difference between the collection view’s current state and the new state in the applied snapshot, which is an O(*n*) operation, where *n* is the number of items in the snapshot.
+
+You can safely call this method from a background queue, but you must do so consistently in your app. Always call this method exclusively from the main queue or from a background queue.
+
+## See Also
+
+### Updating data
+
+- [snapshot()](snapshot%28%29.md): Returns a representation of the current state of the data in the collection view.
+- [applySnapshot(\_:animatingDifferences:completion:)](applysnapshot%28__animatingdifferences_completion_%29.md): Updates the UI to reflect the state of the data in the snapshot, optionally animating the UI changes and executing a completion handler.
+- [applySnapshot(usingReloadData:)](applysnapshot%28usingreloaddata_%29.md): Resets the UI to reflect the state of the data in the snapshot without computing a diff or animating the changes.
+- [applySnapshot(usingReloadData:completion:)](applysnapshot%28usingreloaddata_completion_%29.md): Resets the UI to reflect the state of the data in the snapshot without computing a diff or animating the changes, optionally executing a completion handler.
+
+# applySnapshot:animatingDifferences: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · tvOS 13.0+ · visionOS 1.0+
+
+Updates the UI to reflect the state of the data in the snapshot, optionally animating the UI changes.
+
+## Declaration
+
+```objectivec
+- (void) applySnapshot:(NSDiffableDataSourceSnapshot<id,id> *) snapshot animatingDifferences:(BOOL) animatingDifferences;
+```
+
+## Parameters
+
+- `snapshot`: The snapshot that reflects the new state of the data in the collection view.
+- `animatingDifferences`: If [true](https://developer.apple.com/documentation/swift/true), the system animates the updates to the collection view. If [false](https://developer.apple.com/documentation/swift/false), the system doesn’t animate the updates to the collection view.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The diffable data source computes the difference between the collection view’s current state and the new state in the applied snapshot, which is an O(*n*) operation, where *n* is the number of items in the snapshot.
+
+You can safely call this method from a background queue, but you must do so consistently in your app. Always call this method exclusively from the main queue or from a background queue.
+
+## See Also
+
+### Updating data
+
+- [snapshot](snapshot%28%29.md): Returns a representation of the current state of the data in the collection view.
+- [applySnapshot:animatingDifferences:completion:](applysnapshot%28__animatingdifferences_completion_%29.md): Updates the UI to reflect the state of the data in the snapshot, optionally animating the UI changes and executing a completion handler.
+- [applySnapshotUsingReloadData:](applysnapshot%28usingreloaddata_%29.md): Resets the UI to reflect the state of the data in the snapshot without computing a diff or animating the changes.
+- [applySnapshotUsingReloadData:completion:](applysnapshot%28usingreloaddata_completion_%29.md): Resets the UI to reflect the state of the data in the snapshot without computing a diff or animating the changes, optionally executing a completion handler.

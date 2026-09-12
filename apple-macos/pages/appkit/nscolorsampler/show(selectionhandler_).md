@@ -1,0 +1,57 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nscolorsampler/show(selectionhandler:)](https://developer.apple.com/documentation/appkit/nscolorsampler/show(selectionhandler:))
+
+# show(selectionHandler:) (Swift)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS 10.15+
+
+Displays the system color-sampling interface asynchronously and reports the selected color back to your app.
+
+## Declaration
+
+```swift
+func show(selectionHandler: @escaping @Sendable (NSColor?) -> Void)
+```
+
+```swift
+func sample() async -> NSColor?
+```
+
+## Parameters
+
+- `selectionHandler`: The handler block for processing the user-selected color. AppKit calls this block on your app’s main thread. This block has no return value and takes the following parameter:
+
+  - **selectedColor**: The selected color.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method displays the color-sampling interface and returns immediately. The color-sampling interface magnifies the onscreen pixels and makes it easier for the user to select a single pixel. When the user clicks any mouse button, AppKit dismisses the interface and calls `selectionHandler` with the results.
+
+# showSamplerWithSelectionHandler: (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS 10.15+
+
+Displays the system color-sampling interface asynchronously and reports the selected color back to your app.
+
+## Declaration
+
+```objectivec
+- (void) showSamplerWithSelectionHandler:(void (^)(NSColor *selectedColor)) selectionHandler;
+```
+
+## Parameters
+
+- `selectionHandler`: The handler block for processing the user-selected color. AppKit calls this block on your app’s main thread. This block has no return value and takes the following parameter:
+
+  - **selectedColor**: The selected color.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method displays the color-sampling interface and returns immediately. The color-sampling interface magnifies the onscreen pixels and makes it easier for the user to select a single pixel. When the user clicks any mouse button, AppKit dismisses the interface and calls `selectionHandler` with the results.

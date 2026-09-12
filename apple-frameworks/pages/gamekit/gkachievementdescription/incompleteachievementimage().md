@@ -1,0 +1,79 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/gamekit/gkachievementdescription/incompleteachievementimage()](https://developer.apple.com/documentation/gamekit/gkachievementdescription/incompleteachievementimage())
+
+# incompleteAchievementImage() (Swift)
+
+**Framework:** GameKit  
+**Kind:** Type Method  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+A common image that you can display when the player hasn’t completed the achievement.
+
+## Declaration
+
+```swift
+class func incompleteAchievementImage() -> UIImage
+```
+
+```swift
+class func incompleteAchievementImage() -> NSImage
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+A common image that represents an incomplete achievement.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+In macOS versions earlier than macOS 11, this class method returns an [NSImage](https://developer.apple.com/documentation/appkit/nsimage) object but otherwise works the same as in iOS, Mac Catalyst, and tvOS.
+
+Starting with iOS 14, macOS 11, and tvOS 14, this method returns a symbol image. To match your game’s appearance, make adjustments to the symbol image as described in [Configuring and displaying symbol images in your UI](../../uikit/configuring-and-displaying-symbol-images-in-your-ui.md).
+
+## See Also
+
+### Working with Achievement Images
+
+- [placeholderCompletedAchievementImage()](placeholdercompletedachievementimage%28%29.md): A placeholder image that you can display when the player completes the achievement.
+- [loadImage(completionHandler:)](loadimage%28completionhandler_%29.md): Loads the image to display when the player completes the achievement.
+
+# incompleteAchievementImage (Objective-C)
+
+**Framework:** GameKit  
+**Kind:** Type Method  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+A common image that you can display when the player hasn’t completed the achievement.
+
+## Declaration
+
+```objectivec
++ (UIImage *) incompleteAchievementImage;
+```
+
+```objectivec
++ (NSImage *) incompleteAchievementImage;
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+A common image that represents an incomplete achievement.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+In macOS versions earlier than macOS 11, this class method returns an [NSImage](https://developer.apple.com/documentation/appkit/nsimage) object but otherwise works the same as in iOS, Mac Catalyst, and tvOS.
+
+Starting with iOS 14, macOS 11, and tvOS 14, this method returns a symbol image. To match your game’s appearance, make adjustments to the symbol image as described in [Configuring and displaying symbol images in your UI](../../uikit/configuring-and-displaying-symbol-images-in-your-ui.md).
+
+## See Also
+
+### Working with Achievement Images
+
+- [placeholderCompletedAchievementImage](placeholdercompletedachievementimage%28%29.md): A placeholder image that you can display when the player completes the achievement.
+- [loadImageWithCompletionHandler:](loadimage%28completionhandler_%29.md): Loads the image to display when the player completes the achievement.

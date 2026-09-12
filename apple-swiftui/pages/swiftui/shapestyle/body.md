@@ -1,0 +1,31 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/shapestyle/body](https://developer.apple.com/documentation/swiftui/shapestyle/body)
+
+# body
+
+**Framework:** SwiftUI  
+**Kind:** Instance Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+A rectangular view that’s filled with the shape style.
+
+## Declaration
+
+```swift
+var body: _ShapeView<Rectangle, Self> { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+For a [ShapeStyle](../shapestyle.md) that also conforms to the [View](../view.md) protocol, like [Color](../color.md) or [LinearGradient](../lineargradient.md), this default implementation of the [body](../view/body-8kl5o.md) property provides a visual representation for the shape style. As a result, you can use the shape style in a view hierarchy like any other view:
+
+```swift
+ZStack {
+    Color.cyan
+    Text("Hello!")
+}
+.frame(width: 200, height: 50)
+```
+
+![A screenshot of a cyan rectangle with the text hello appearing](https://developer.apple.com/images/com.apple.SwiftUI/ShapeStyle-body-1@2x.png)

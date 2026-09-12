@@ -1,0 +1,34 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/movie_header_atom/next_track_id](https://developer.apple.com/documentation/quicktime-file-format/movie_header_atom/next_track_id)
+
+# Next track ID
+
+**Framework:** QuickTime File Format  
+**Kind:** Data field
+
+A 32-bit integer that indicates a value to use for the track ID number of the next track added to this movie.
+
+<a id="Overview"></a>
+
+## Overview
+
+Note that 0 is not a valid track ID value.
+
+## See Also
+
+### Data fields
+
+- [Size](size.md): A 32-bit integer that specifies the number of bytes in this movie header atom.
+- [Type](type.md): A 32-bit integer that identifies the atom type.
+- [Version](version.md): A 1-byte specification of the version of this movie header atom.
+- [Flags](flags.md): Three bytes of space for future movie header flags.
+- [Creation time](creation_time.md): A 32-bit integer that specifies the creation calendar date and time for the movie atom.
+- [Modification time](modification_time.md): A 32-bit integer that specifies the calendar date and time of the last change to the movie atom.
+- [Time scale](time_scale.md): A time value that indicates the time scale for this movie.
+- [Duration](duration.md): A time value that indicates the duration of the movie in time scale units.
+- [Preferred rate](preferred_rate.md): A 32-bit fixed-point number that specifies the rate at which to play this movie.
+- [Preferred volume](preferred_volume.md): A 16-bit fixed-point number that specifies how loud to play this movie’s sound.
+- [Reserved](reserved.md): Ten bytes reserved for use by Apple.
+- [Matrix structure](matrix_structure.md): The matrix structure associated with this movie.
+- [Preview time](preview_time.md): The time value in the movie at which the preview begins.
+- [Preview duration](preview_duration.md): The duration of the movie preview in movie time scale units.
+- [Poster time](poster_time.md): The time value of the time of the movie poster.

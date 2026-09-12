@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/carkey/carkeyremotecontrolsessiondelegate/remotecontrolsession(_:didcreatekey:forvehicle:)](https://developer.apple.com/documentation/carkey/carkeyremotecontrolsessiondelegate/remotecontrolsession(_:didcreatekey:forvehicle:))
+
+# remoteControlSession(\_:didCreateKey:forVehicle:)
+
+**Framework:** CarKey  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · watchOS 11.0+
+
+Called to notify your app when a new key has been created.
+
+## Declaration
+
+```swift
+func remoteControlSession(_ session: CarKeyRemoteControlSession, didCreateKey keyID: String, forVehicle vehicleID: String)
+```
+
+## Parameters
+
+- `session`: The current session.
+- `keyID`: The identifier of the key.
+- `vehicleID`: The identifier of the vehicle.
+
+## Default Implementations
+
+### CarKeyRemoteControlSessionDelegate Implementations
+
+- [remoteControlSession(\_:didCreateKey:forVehicle:)](remotecontrolsession%28__didcreatekey_forvehicle_%29-1djol.md): Called to notify your app when a new key has been created.

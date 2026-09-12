@@ -1,0 +1,49 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimage/pixelbuffer/applygamma(_:destination:)](https://developer.apple.com/documentation/accelerate/vimage/pixelbuffer/applygamma(_:destination:))
+
+# applyGamma(\_:destination:)
+
+**Framework:** Accelerate  
+**Kind:** Instance Method  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS · watchOS 9.0+
+
+Applies a gamma function to a 32-bit pixel buffer.
+
+## Declaration
+
+```swift
+func applyGamma(_ gamma: vImage.Gamma, destination: vImage.PixelBuffer<Format>)
+```
+
+## Parameters
+
+- `gamma`: An enumeration that specifies either a used-defined or constant gamma.
+- `destination`: The destination pixel buffer.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+For example, the following code applies a gamma of \`2.0\` to a one-pixel pixel buffer:
+
+```swift
+let buffer = vImage.PixelBuffer<vImage.PlanarF>(
+    pixelValues: [0.5],
+    size: vImage.Size(width: 1,
+                      height: 1))
+
+buffer.applyGamma(.fullPrecision(2),
+                  destination: buffer)
+
+// Prints "[0.25]" = [0.5²].
+print(buffer.array)
+```
+
+## See Also
+
+### Applying gamma
+
+- [applyGamma(\_:intermediateBuffer:destination:)](applygamma%28__intermediatebuffer_destination_%29-1fif9.md): Conforms when `Format` is `vImage.Planar8`. Applies a gamma function to an 8-bit planar pixel buffer.
+- [applyGamma(\_:intermediateBuffer:destination:)](applygamma%28__intermediatebuffer_destination_%29-390k5.md): Conforms when `Format` is `vImage.Interleaved8x2`. Applies a gamma function to an 8-bit-per-channel, 2-channel interleaved pixel buffer.
+- [applyGamma(\_:intermediateBuffer:destination:)](applygamma%28__intermediatebuffer_destination_%29-3yu0w.md): Conforms when `Format` is `vImage.Interleaved8x3`. Applies a gamma function to an 8-bit-per-channel, 3-channel interleaved pixel buffer.
+- [applyGamma(\_:intermediateBuffer:destination:)](applygamma%28__intermediatebuffer_destination_%29-wsww.md): Conforms when `Format` is `vImage.Interleaved8x4`. Applies a gamma function to an 8-bit-per-channel, 4-channel interleaved pixel buffer.
+- [vImage.Gamma](../gamma.md): Describes either a used-defined or constant gamma.

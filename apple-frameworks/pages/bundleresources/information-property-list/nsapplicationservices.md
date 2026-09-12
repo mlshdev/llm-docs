@@ -1,0 +1,89 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/bundleresources/information-property-list/nsapplicationservices](https://developer.apple.com/documentation/bundleresources/information-property-list/nsapplicationservices)
+
+# NSApplicationServices
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** Bundle Resources  
+**Kind:** Property List Key  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · tvOS 16.0+ · watchOS 9.0+
+
+A list of service providers and the devices that they support.
+
+## Details
+
+`NSApplicationServices`
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this key to define which devices [DeviceDiscoveryUI](../../devicediscoveryui.md) can connect with. The application services’s [Browses](nsapplicationservices/browses.md) key takes an array of dictionaries, where each dictionary contains a unique identifier, a usage description string, and a list of supported operating systems. You can define more than one application service for your apps. Each service has its own identifier, and can connect to a different subset of devices.
+
+Set these in your tvOS app target’s Info tab, or in its `Info.plist` file.
+
+```swift
+<key>NSApplicationServices</key>
+<dict>
+    <key>Browses</key>
+    <array>
+        <dict>
+            <key>NSApplicationServiceIdentifier</key>
+            <string>MyApp-Controller</string>
+            <key>NSApplicationServiceUsageDescription</key>
+            <string>You can control this app using an iOS device.</string>
+            <key>NSApplicationServicePlatformSupport</key>
+            <array>
+                <string>iOS</string>
+                <string>iPadOS</string>
+            </array>
+        </dict>
+        <dict>
+            <key>NSApplicationServiceIdentifier</key>
+            <string>MyApp-Workout</string>
+            <key>NSApplicationServiceUsageDescription</key>
+            <string>Connects to a watchOS app to read heart-rate and active calories burned from a workout session.</string>
+            <key>NSApplicationServicePlatformSupport</key>
+            <array>
+                <string>watchOS</string>
+            </array>
+        </dict>
+    </array>
+</dict>
+ 
+```
+
+- **`NSApplicationServiceIdentifier`**: A string that identifies your application service. You can use any string for your service, but you must use the same string for both your tvOS app and the iOS, iPadOS, and watchOS apps.
+- **`NSApplicationServiceUsageDescription`**: A string that describes why you want to access the other devices. This is displayed to the user in the picker view.
+- **`NSApplicationServicePlatformSupport`**: This is an array that contains strings representing the types of devices your application service can connect to. The valid values are `“iOS”`, `“iPadOS”`, and `“watchOS”`.
+
+You can use the human-readable key names in Xcode’s property list editor.
+
+![A screenshot showing the Application Services settings in Xcode’s property list editor.](https://developer.apple.com/images/com.apple.bundleresources/media-4030768@2x.png)
+
+In the iOS, iPadOS, or watchOS app, use the [Advertises](nsapplicationservices/advertises.md) key, and give it an array of dictionaries where each dictionary lists the application service identifier for the connection types supported on this platform.
+
+```swift
+<key>NSApplicationServices</key>
+<dict>
+    <key>Advertises</key>
+    <array>
+        <dict>
+            <key>NSApplicationServiceIdentifier</key>
+            <string>MyApp-Workout</string>
+        </dict>
+    </array>
+</dict>
+
+```
+
+You can use the human-readable key names in Xcode’s property list editor.
+
+![A screenshot showing the application services settings in Xcode’s property list editor.](https://developer.apple.com/images/com.apple.bundleresources/media-4030766@2x.png)
+
+## Topics
+
+### Property List Keys
+
+- [Advertises](nsapplicationservices/advertises.md): An array of dictionaries, where each dictionary contains a unique identifier.
+- [Browses](nsapplicationservices/browses.md): An array of dictionaries, where each dictionary contains a unique identifier, a usage description string, and a list of supported OSs.

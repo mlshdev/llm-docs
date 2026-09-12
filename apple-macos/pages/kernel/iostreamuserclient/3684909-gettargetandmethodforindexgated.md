@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iostreamuserclient/3684909-gettargetandmethodforindexgated](https://developer.apple.com/documentation/kernel/iostreamuserclient/3684909-gettargetandmethodforindexgated)
+
+# getTargetAndMethodForIndexGated
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Instance Method  
+**Availability:** macOS 11.0+
+
+## Declaration
+
+```objectivec
+IOReturn getTargetAndMethodForIndexGated(IOService **targetP, UInt32 index, IOExternalMethod **method);
+```

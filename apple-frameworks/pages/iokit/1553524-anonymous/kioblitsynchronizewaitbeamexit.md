@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1553524-anonymous/kioblitsynchronizewaitbeamexit](https://developer.apple.com/documentation/iokit/1553524-anonymous/kioblitsynchronizewaitbeamexit)
+
+# kIOBlitSynchronizeWaitBeamExit
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 18.4+ · macOS 10.0+
+
+## Declaration
+
+```objectivec
+kIOBlitSynchronizeWaitBeamExit = 0x00000001
+```

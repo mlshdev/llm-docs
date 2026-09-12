@@ -1,0 +1,69 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcuiautomation/xcuikeyboardkey/secondaryfn](https://developer.apple.com/documentation/xcuiautomation/xcuikeyboardkey/secondaryfn)
+
+# secondaryFn (Swift)
+
+**Framework:** XCUIAutomation  
+**Kind:** Type Property  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS · Xcode 16.3+
+
+A constant that represents the Function key.
+
+## Declaration
+
+```swift
+static let secondaryFn: XCUIKeyboardKey
+```
+
+## See Also
+
+### Function keys
+
+- [F1](f1.md): A constant that represents the F1 key.
+- [F2](f2.md): A constant that represents the F2 key.
+- [F3](f3.md): A constant that represents the F3 key.
+- [F4](f4.md): A constant that represents the F4 key.
+- [F5](f5.md): A constant that represents the F5 key.
+- [F6](f6.md): A constant that represents the F6 key.
+- [F7](f7.md): A constant that represents the F7 key.
+- [F8](f8.md): A constant that represents the F8 key.
+- [F9](f9.md): A constant that represents the F9 key.
+- [F10](f10.md): A constant that represents the F10 key.
+- [F11](f11.md): A constant that represents the F11 key.
+- [F12](f12.md): A constant that represents the F12 key.
+- [F13](f13.md): A constant that represents the F13 key.
+- [F14](f14.md): A constant that represents the F14 key.
+- [F15](f15.md): A constant that represents the F15 key.
+
+# XCUIKeyboardKeySecondaryFn (Objective-C)
+
+**Framework:** XCUIAutomation  
+**Kind:** Global Variable  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS · Xcode 16.3+
+
+A constant that represents the Function key.
+
+## Declaration
+
+```objectivec
+extern XCUIKeyboardKey const XCUIKeyboardKeySecondaryFn;
+```
+
+## See Also
+
+### Function keys
+
+- [XCUIKeyboardKeyF1](f1.md): A constant that represents the F1 key.
+- [XCUIKeyboardKeyF2](f2.md): A constant that represents the F2 key.
+- [XCUIKeyboardKeyF3](f3.md): A constant that represents the F3 key.
+- [XCUIKeyboardKeyF4](f4.md): A constant that represents the F4 key.
+- [XCUIKeyboardKeyF5](f5.md): A constant that represents the F5 key.
+- [XCUIKeyboardKeyF6](f6.md): A constant that represents the F6 key.
+- [XCUIKeyboardKeyF7](f7.md): A constant that represents the F7 key.
+- [XCUIKeyboardKeyF8](f8.md): A constant that represents the F8 key.
+- [XCUIKeyboardKeyF9](f9.md): A constant that represents the F9 key.
+- [XCUIKeyboardKeyF10](f10.md): A constant that represents the F10 key.
+- [XCUIKeyboardKeyF11](f11.md): A constant that represents the F11 key.
+- [XCUIKeyboardKeyF12](f12.md): A constant that represents the F12 key.
+- [XCUIKeyboardKeyF13](f13.md): A constant that represents the F13 key.
+- [XCUIKeyboardKeyF14](f14.md): A constant that represents the F14 key.
+- [XCUIKeyboardKeyF15](f15.md): A constant that represents the F15 key.

@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_parsed_cert-swift.struct/parsedcertformat](https://developer.apple.com/documentation/security/cssm_parsed_cert-swift.struct/parsedcertformat)
+
+# ParsedCertFormat (Swift)
+
+**Framework:** Security  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+## Declaration
+
+```swift
+var ParsedCertFormat: CSSM_CERT_PARSE_FORMAT
+```
+
+# ParsedCertFormat (Objective-C)
+
+**Framework:** Security  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+## Declaration
+
+```objectivec
+CSSM_CERT_PARSE_FORMAT ParsedCertFormat;
+```

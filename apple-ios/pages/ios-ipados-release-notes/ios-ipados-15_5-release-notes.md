@@ -1,0 +1,237 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/ios-ipados-release-notes/ios-ipados-15_5-release-notes](https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-15_5-release-notes)
+
+# iOS & iPadOS 15.5 Release Notes
+
+**Kind:** Article
+
+Update your apps to use new features, and test your apps against API changes.
+
+<a id="Overview"></a>
+
+## Overview
+
+The iOS & iPadOS 15.5 SDK provides support to develop apps for iPhone, iPad, and iPod touch devices running iOS & iPadOS 15.5. The SDK comes bundled with Xcode 13.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 13.4, see [Xcode 13.4 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_4-release-notes).
+
+<a id="Apple-Pay"></a>
+
+### Apple Pay
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- Developers can express payment network preference in [PKPaymentRequest](https://developer.apple.com/documentation/passkit/pkpaymentrequest). Network preference is determined by the order of [supportedNetworks](https://developer.apple.com/documentation/passkit/pkpaymentrequest/supportednetworks). This won’t override the user’s default card selection, but if the card is multi-SSD, then the network preference order determines which SSD is selected. (80827905)
+
+<a id="Authentication"></a>
+
+### Authentication
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- Support is added to the passkey technology preview, enabling signing in to passkey-compatible websites and apps on Mac and iPad using an iPhone with a saved passkey. (87998254)
+
+<a id="Developer-Settings"></a>
+
+### Developer Settings
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- You can now use Settings \> Developer Settings \> Run Throughput Test to view average results for ping packet loss, idle ping latency, and download and upload speeds. (81870452)
+
+<a id="Game-Controller"></a>
+
+### Game Controller
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- Support is now available for new DualSense adaptive trigger firmware features available via [GCDualSenseAdaptiveTrigger](https://developer.apple.com/documentation/gamecontroller/gcdualsenseadaptivetrigger). (87433163)
+
+<a id="Health-App"></a>
+
+### Health App
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- The Health app crashes when you attempt to onboard the Blood Oxygen feature from within the app. (87617635)
+- If Health sharing is skipped when setting up an Apple Watch for a family member, it can’t be enabled later. (87210981)
+
+<a id="HealthKit"></a>
+
+### HealthKit
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- Verifiable health records now support adding vaccination records in the EU Digital COVID Certificate (EU DCC) format to the Wallet and Health apps. (79917344)
+- `HealthKit` query APIs in Swift now support async/await syntax, which simplifies the structure of code that previously used completion callbacks. (74040680)
+
+<a id="Home"></a>
+
+### Home
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- You can only pair up to five Matter accessories in a home. (77933589)
+- The iOS device that initiates pairing needs to be logged in to the same iCloud account as the home hub. Only the owner of a home, not an invited user, can pair Matter accessories. (76012945)
+- Adding a Matter accessory to a third-party app fails if an Apple Home doesn’t exist. (80341813)
+
+  **Workaround:** Launch the Home App and create a Home first.
+
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Fixed an issue so that Matter accessories with multiple end points are now reachable in the Home App. (86170578)
+- Fixed an issue so that Matter accessories no longer go to a “No Response” state after pairing with the Home App. (86497690)
+
+<a id="iTunes"></a>
+
+### iTunes
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- Purchasing or downloading content again from the iTunes Store and TV app might fail on some devices. (86772291)
+
+  **Workaround:** Rebooting the device may resolve the issue.
+
+<a id="libc++"></a>
+
+### libc++
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- The following new C++20 and C++23 features are now implemented:
+
+  - C++20 library concepts defined in `<concepts>`
+  - `constexpr` for `std::swap()` and swap-related functions
+  - Miscellaneous `constexpr`-ification in the library
+  - `std::atomic` now default initializes as expected
+  - A `.contains()` method for associative containers
+  - Added `std::bind_front()` (88131816)
+
+<a id="Deprecations"></a>
+
+#### Deprecations
+
+- Some extensions in `std::tuple` were removed to fix bugs caused by those extensions:
+
+  - Tuples can no longer be constructed from fewer than the number of elements in the tuple. Previously, elements that weren’t specified were default-constructed; now this is a compiler error.
+  - A tuple can no longer be constructed from an array.
+  - The `std::result_of` and `std::is_literal_type` type traits are no longer available in C++20 mode, as specified in the Standard.
+
+<a id="Messages"></a>
+
+### Messages
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- A conversation transcript won’t scroll after viewing a photo in QuickLook. (87855403)
+
+  **Workaround:** Back out of the conversation and then reopen it to restore scrolling.
+
+<a id="Phone"></a>
+
+### Phone
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- Emergency SOS “Call with 5 Presses” is disabled for all users outside of India to fix an issue that caused this setting to unintentionally default for some users. (86189447)
+
+<a id="Settings"></a>
+
+### Settings
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- In the Throughput Test results, the Idle Ping Latency is reported in incorrect units. For example, an actual ping latency of 123.32 ms is shown as 0.12 ms. (87599982)
+
+<a id="SharePlay"></a>
+
+### SharePlay
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- A new [Group Activities](https://developer.apple.com/documentation/groupactivities) API allows you to present UI that enables starting a SharePlay session from within your app. (88099397)
+
+<a id="StoreKit"></a>
+
+### StoreKit
+
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Fixed an issue so developers using StoreKit 2 can now initiate a subscription offer purchase for a product that the customer currently subscribes to. (89152302)
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- [SKTestSession](https://developer.apple.com/documentation/storekittest/sktestsession) has three new methods to simulate a subscription requiring price increase consent, simulate consenting to a pending price increase, and simulate declining a price increase in automated tests. (84556183)
+- StoreKit records an ad impression if the framework displays an ad for a minimum of 2 seconds, down from the previous minimum of 3 seconds. (85874835)
+
+- `SKTestSession` has two new Boolean properties to simulate billing retry and grace period in automated tests. You can identify and simulate the resolution of billing retry issues using the same APIs as interrupted purchases. (83956205)
+
+- Users can now test the billing retry and grace period states using StoreKit Testing in Xcode. Use Xcode 13.3 or later to enable billing retry testing and toggle whether the app offers a grace period. Use [isInBillingRetry](https://developer.apple.com/documentation/storekit/product/subscriptioninfo/renewalinfo/isinbillingretry) and [gracePeriodExpirationDate](https://developer.apple.com/documentation/storekit/product/subscriptioninfo/renewalinfo/graceperiodexpirationdate) to handle these states in the app. (83938270)
+
+- You can now test offer codes with StoreKit Testing in Xcode. Configure offers for codes in Xcode 13.3 or later, and test redeeming them using [presentCodeRedemptionSheet()](https://developer.apple.com/documentation/storekit/skpaymentqueue/presentcoderedemptionsheet%28%29). (63692551)
+
+- Users can test subscription price increase behavior using StoreKit Testing in Xcode. Use Xcode 13.3 or later to set a price increase, then use [paymentQueueShouldShowPriceConsent(\_:)](https://developer.apple.com/documentation/storekit/skpaymentqueuedelegate/paymentqueueshouldshowpriceconsent%28_:%29), [showPriceConsentIfNeeded()](https://developer.apple.com/documentation/storekit/skpaymentqueue/showpriceconsentifneeded%28%29), and [priceIncreaseStatus](https://developer.apple.com/documentation/storekit/product/subscriptioninfo/renewalinfo/priceincreasestatus-swift.property) in the app. (58770817)
+
+- `StoreKit` error types now conform to [LocalizedError](https://developer.apple.com/documentation/foundation/localizederror). (78735204)
+
+- Some types in `StoreKit` now have a `localizedDescription` read-only `String` instance property. This property can be used to get a human-readable description of the value, localized for the device’s current locale. These types include: [Product.ProductType](https://developer.apple.com/documentation/storekit/product/producttype), [Product.SubscriptionInfo.RenewalState](https://developer.apple.com/documentation/storekit/product/subscriptioninfo/renewalstate), [expirationReason](https://developer.apple.com/documentation/storekit/product/subscriptioninfo/renewalinfo/expirationreason-swift.property), [priceIncreaseStatus](https://developer.apple.com/documentation/storekit/product/subscriptioninfo/renewalinfo/priceincreasestatus-swift.property), [Transaction.OfferType](https://developer.apple.com/documentation/storekit/transaction/offertype-swift.struct), [Product.SubscriptionOffer.OfferType](https://developer.apple.com/documentation/storekit/product/subscriptionoffer/offertype), [Product.SubscriptionOffer.PaymentMode](https://developer.apple.com/documentation/storekit/product/subscriptionoffer/paymentmode-swift.struct), [Product.SubscriptionPeriod.Unit](https://developer.apple.com/documentation/storekit/product/subscriptionperiod/unit-swift.enum), [Transaction.RevocationReason](https://developer.apple.com/documentation/storekit/transaction/revocationreason-swift.struct), and [Transaction.OwnershipType](https://developer.apple.com/documentation/storekit/transaction/ownershiptype-swift.struct). (78735060)
+
+- [SKAdNetwork](https://developer.apple.com/documentation/storekit/skadnetwork) implementation can now be unit tested using the [StoreKit Test](https://developer.apple.com/documentation/storekittest) framework. You can use the `SKAdTestSession` class to test the validity of ad impressions, update conversion values on test postbacks, and receive test postbacks at the server. This class also displays the URL to which the optional developer postback is sent. (59571961)
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- When testing with StoreKit Testing in Xcode, the following APIs don’t work in the simulator: [presentCodeRedemptionSheet()](https://developer.apple.com/documentation/storekit/skpaymentqueue/presentcoderedemptionsheet%28%29), [paymentQueueShouldShowPriceConsent(\_:)](https://developer.apple.com/documentation/storekit/skpaymentqueuedelegate/paymentqueueshouldshowpriceconsent%28_:%29), and [showPriceConsentIfNeeded()](https://developer.apple.com/documentation/storekit/skpaymentqueue/showpriceconsentifneeded%28%29). (85982859)
+
+  **Workaround:** Test these APIs using an iOS device.
+
+<a id="UIKit"></a>
+
+### UIKit
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- All animations created with [UIView](https://developer.apple.com/documentation/uikit/uiview) block APIs or [UIViewPropertyAnimator](https://developer.apple.com/documentation/uikit/uiviewpropertyanimator) run at up to 120 Hz on iPhones with ProMotion displays. (86175551)
+
+## See Also
+
+### iOS & iPadOS 15
+
+- [iOS & iPadOS 15.6 Release Notes](ios-ipados-15_6-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 15.4 Release Notes](ios-ipados-15_4-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 15.3 Release Notes](ios-ipados-15_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 15.2 Release Notes](ios-ipados-15_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 15.1 Release Notes](ios-ipados-15_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 15 Release Notes](ios-ipados-15-release-notes.md): Update your apps to use new features, and test your apps against API changes.

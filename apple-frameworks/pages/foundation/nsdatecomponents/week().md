@@ -1,0 +1,79 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsdatecomponents/week()](https://developer.apple.com/documentation/foundation/nsdatecomponents/week())
+
+# week() (Swift)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** iOS 2.0+ (deprecated in 7.0) · iPadOS 2.0+ (deprecated in 7.0) · Mac Catalyst 2.0+ (deprecated in 7.0) · tvOS 9.0+ (deprecated in 9.0) · visionOS 1.0+ (deprecated in 1.0) · watchOS 2.0+ (deprecated in 2.0)
+
+Returns the number of weeks.
+
+> Use [weekOfYear](weekofyear.md) or [weekOfMonth](weekofmonth.md) instead, depending on what you intend.
+
+## Declaration
+
+```swift
+func week() -> Int
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+The number of week units for the receiver.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This value is interpreted in the context of the calendar with which it is used—see [Calendars, Date Components, and Calendar Units](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/DatesAndTimes/Articles/dtCalendars.html#//apple_ref/doc/uid/TP40003470) in [Date and Time Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/DatesAndTimes/DatesAndTimes.html#//apple_ref/doc/uid/10000039i).
+
+## See Also
+
+### Accessing Weeks and Days
+
+- [weekday](weekday.md): The number of the weekdays.
+- [weekdayOrdinal](weekdayordinal.md): The ordinal number of weekdays.
+- [weekOfMonth](weekofmonth.md): The week number of the months.
+- [weekOfYear](weekofyear.md): The ISO 8601 week date of the year.
+- [day](day.md): The number of days.
+- [setWeek(\_:)](setweek%28__%29.md): Deprecated. Sets the number of weeks.
+
+# week (Objective-C)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** iOS 2.0+ (deprecated in 7.0) · iPadOS 2.0+ (deprecated in 7.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.4+ (deprecated in 10.9) · tvOS 9.0+ (deprecated in 9.0) · visionOS 1.0+ (deprecated in 1.0) · watchOS 2.0+ (deprecated in 2.0)
+
+Returns the number of weeks.
+
+> Use [weekOfYear](weekofyear.md) or [weekOfMonth](weekofmonth.md) instead, depending on what you intend.
+
+## Declaration
+
+```objectivec
+- (NSInteger) week;
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+The number of week units for the receiver.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This value is interpreted in the context of the calendar with which it is used—see [Calendars, Date Components, and Calendar Units](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/DatesAndTimes/Articles/dtCalendars.html#//apple_ref/doc/uid/TP40003470) in [Date and Time Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/DatesAndTimes/DatesAndTimes.html#//apple_ref/doc/uid/10000039i).
+
+## See Also
+
+### Accessing Weeks and Days
+
+- [weekday](weekday.md): The number of the weekdays.
+- [weekdayOrdinal](weekdayordinal.md): The ordinal number of weekdays.
+- [weekOfMonth](weekofmonth.md): The week number of the months.
+- [weekOfYear](weekofyear.md): The ISO 8601 week date of the year.
+- [day](day.md): The number of days.
+- [setWeek:](setweek%28__%29.md): Deprecated. Sets the number of weeks.

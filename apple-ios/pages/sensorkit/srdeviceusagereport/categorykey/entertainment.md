@@ -1,0 +1,69 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/sensorkit/srdeviceusagereport/categorykey/entertainment](https://developer.apple.com/documentation/sensorkit/srdeviceusagereport/categorykey/entertainment)
+
+# entertainment (Swift)
+
+**Framework:** SensorKit  
+**Kind:** Type Property  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
+
+An app category for entertainment.
+
+## Declaration
+
+```swift
+static let entertainment: SRDeviceUsageReport.CategoryKey
+```
+
+## See Also
+
+### Categories
+
+- [books](books.md): An app category for reading books.
+- [business](business.md): An app category for doing business.
+- [catalogs](catalogs.md): An app category for reading catalogs.
+- [developerTools](developertools.md): An app category for creating apps.
+- [education](education.md): An app category for learning.
+- [finance](finance.md): An app category for finance.
+- [foodAndDrink](foodanddrink.md): An app category for dining.
+- [games](games.md): An app category for gaming.
+- [graphicsAndDesign](graphicsanddesign.md): An app category for graphic design.
+- [healthAndFitness](healthandfitness.md): An app category for health and fitness.
+- [kids](kids.md): An app category for children.
+- [lifestyle](lifestyle.md): An app category for lifestyle.
+- [medical](medical.md): An app category for healthcare.
+- [miscellaneous](miscellaneous.md): An app category for miscellaneous apps.
+- [music](music.md): An app category for music.
+
+# SRDeviceUsageCategoryEntertainment (Objective-C)
+
+**Framework:** SensorKit  
+**Kind:** Global Variable  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
+
+An app category for entertainment.
+
+## Declaration
+
+```objectivec
+extern SRDeviceUsageCategoryKey const SRDeviceUsageCategoryEntertainment;
+```
+
+## See Also
+
+### Categories
+
+- [SRDeviceUsageCategoryBooks](books.md): An app category for reading books.
+- [SRDeviceUsageCategoryBusiness](business.md): An app category for doing business.
+- [SRDeviceUsageCategoryCatalogs](catalogs.md): An app category for reading catalogs.
+- [SRDeviceUsageCategoryDeveloperTools](developertools.md): An app category for creating apps.
+- [SRDeviceUsageCategoryEducation](education.md): An app category for learning.
+- [SRDeviceUsageCategoryFinance](finance.md): An app category for finance.
+- [SRDeviceUsageCategoryFoodAndDrink](foodanddrink.md): An app category for dining.
+- [SRDeviceUsageCategoryGames](games.md): An app category for gaming.
+- [SRDeviceUsageCategoryGraphicsAndDesign](graphicsanddesign.md): An app category for graphic design.
+- [SRDeviceUsageCategoryHealthAndFitness](healthandfitness.md): An app category for health and fitness.
+- [SRDeviceUsageCategoryKids](kids.md): An app category for children.
+- [SRDeviceUsageCategoryLifestyle](lifestyle.md): An app category for lifestyle.
+- [SRDeviceUsageCategoryMedical](medical.md): An app category for healthcare.
+- [SRDeviceUsageCategoryMiscellaneous](miscellaneous.md): An app category for miscellaneous apps.
+- [SRDeviceUsageCategoryMusic](music.md): An app category for music.

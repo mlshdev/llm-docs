@@ -1,0 +1,45 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/mapkitjs/directionsconstructoroptions](https://developer.apple.com/documentation/mapkitjs/directionsconstructoroptions)
+
+# DirectionsConstructorOptions
+
+**Interface language:** Data
+
+**Framework:** MapKit JS  
+**Kind:** Interface  
+**Availability:** MapKit JS 5.0+
+
+Options that you may provide when creating a directions object.
+
+## Declaration
+
+```
+interface DirectionsConstructorOptions
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use [DirectionsConstructorOptions](directionsconstructoroptions.md) to set options when creating a [Directions](directions.md) object.
+
+If you set `language` to a language ID, such as `fr-CA` or `en-GB`, MapKit JS returns step-by-step directions in the specified language, if available. If you don’t set `language` when initializing a [Directions](directions.md) object, the directions default to the language ID you provide when initializing the map with [init()](mapkit/init.md). If the map doesn’t have a specified language upon initialization, MapKit JS returns directions in the browser’s language setting.
+
+Set the `language` option when creating a [Directions](directions.md) object as in the code below:
+
+```javascript
+const directions = new mapkit.Directions({
+    language: "en-GB"
+});
+```
+
+## Topics
+
+### Initializing language
+
+- [language](directionsconstructoroptions/language.md): A language ID that determines the language for route information.
+
+## See Also
+
+### Creating a directions object
+
+- [Directions()](directions/directionsconstructor.md): Creates a directions object with options you provide.

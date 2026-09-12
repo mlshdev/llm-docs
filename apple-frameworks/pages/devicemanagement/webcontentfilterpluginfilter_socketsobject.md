@@ -1,0 +1,34 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/webcontentfilterpluginfilter_socketsobject](https://developer.apple.com/documentation/devicemanagement/webcontentfilterpluginfilter_socketsobject)
+
+# WebContentFilterPluginFilter_SocketsObject
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Object  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+Settings that control the socket filter. If not present, the system doesn’t use socket filtering.
+
+## Declaration
+
+```
+object WebContentFilterPluginFilter_SocketsObject
+```
+
+## Properties
+
+- `Enabled` — `boolean` (required): If `true`, enables the filtering of socket traffic.
+- `ProviderComposedIdentifier` — `string`: The data provider identifier. This string identifies the filter data provider when the filter starts running. Required when Enabled is true.
+
+  In iOS and visionOS, the identifier is a bundle ID, for example, “com.example.app”.
+
+  In macOS, the identifier is a composed identifier. The format of the composed identifier is “Bundle-ID {Designated-Requirement}”. “Bundle-ID” is the bundle identifier string of the provider. “Designated-Requirement” is the designated requirement string the device uses to match the code signature of the provider. For example, “com.example.app {anchor apple generic}”.
+
+## See Also
+
+### Objects
+
+- [WebContentFilterPluginFilter_BrowsersObject](webcontentfilterpluginfilter_browsersobject.md): Settings that control the browser filter. If not present, the system doesn’t use browser filtering.
+- [WebContentFilterPluginFilter_PacketsObject](webcontentfilterpluginfilter_packetsobject.md): Settings that control the packet filter. If not present, the system doesn’t use packet filtering.
+- [WebContentFilterPluginFilter_URLsObject](webcontentfilterpluginfilter_urlsobject.md): Settings that control the URL filter. If not present, the system doesn’t use URL filtering.

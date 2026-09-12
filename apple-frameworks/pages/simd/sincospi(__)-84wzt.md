@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/simd/sincospi(_:)-84wzt](https://developer.apple.com/documentation/simd/sincospi(_:)-84wzt)
+
+# sincospi(\_:)
+
+**Framework:** simd  
+**Kind:** Function  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · watchOS 10.0+
+
+Returns the sine and cosine of each element in a vector multiplied by pi.
+
+## Declaration
+
+```swift
+func sincospi(_ x: simd_float4) -> (sin: simd_float4, cos: simd_float4)
+```
+
+## Parameters
+
+- `x`: The source vector.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A two-element tuple. The first element contains the sines, and the second element contains the cosines.
+
+## See Also
+
+### Trigonometric Functions
+
+- [acos(\_:)](acos%28__%29-2blze.md): Returns the arccosine of each element in a vector.
+- [asin(\_:)](asin%28__%29-87ban.md): Returns the arcsine of each element in a vector.
+- [atan(\_:)](atan%28__%29-8xa90.md): Returns the arctangent of each element in a vector.
+- [atan2(\_:\_:)](atan2%28____%29-63ije.md): Returns the arctangent of each pair of corresponding elements in two vectors.
+- [cos(\_:)](cos%28__%29-8qcj2.md): Returns the cosine of each element in a vector.
+- [cospi(\_:)](cospi%28__%29-5chnf.md): Returns the cosine of each element in a vector multiplied by pi.
+- [sin(\_:)](sin%28__%29-80x4.md): Returns the sine of each element in a vector.
+- [sinpi(\_:)](sinpi%28__%29-71xz.md): Returns the sine of each element in a vector multiplied by pi.
+- [sincos(\_:)](sincos%28__%29-8bfn1.md): Returns the sine and cosine of each element in a vector.
+- [tan(\_:)](tan%28__%29-7uvy9.md): Returns the tangent of each element in a vector.
+- [tanpi(\_:)](tanpi%28__%29-93eul.md): Returns the tangent of each element in a vector multiplied by pi.

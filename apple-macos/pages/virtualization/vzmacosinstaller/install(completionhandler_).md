@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/virtualization/vzmacosinstaller/install(completionhandler:)](https://developer.apple.com/documentation/virtualization/vzmacosinstaller/install(completionhandler:))
+
+# install(completionHandler:)
+
+**Framework:** Virtualization  
+**Kind:** Instance Method  
+**Availability:** macOS 12.0+
+
+Start installing macOS.
+
+## Declaration
+
+```swift
+@preconcurrency func install(completionHandler: @escaping @Sendable (Result<Void, any Error>) -> Void)
+```
+
+## Parameters
+
+- `completionHandler`: A block the framework calls after installation has completed successfully or has failed.
+
+  The `error` parameter passed to the block is `nil` if installation was successful. The framework invokes the block on the VM’s queue. The completion handler returns an `error` parameter that describes the reason for the failure; the `error` is `nil` if installation was successful.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method starts the installation process. The VM must be in a stopped state. During the installation operation, pausing or stopping the VM results in an undefined behavior.
+
+If you start the installation on the same [VZMacOSInstaller](../vzmacosinstaller.md) object more than once, the framework raises an exception.
+
+Call this method only on the VM’s queue.
+
+## See Also
+
+### Installing macOS
+
+- [install()](install%28%29.md): Start installing macOS.

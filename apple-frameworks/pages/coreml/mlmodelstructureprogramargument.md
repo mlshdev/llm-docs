@@ -1,0 +1,46 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreml/mlmodelstructureprogramargument](https://developer.apple.com/documentation/coreml/mlmodelstructureprogramargument)
+
+# MLModelStructureProgramArgument
+
+**Interface language:** Objective-C
+
+**Framework:** Core ML  
+**Kind:** Class  
+**Availability:** iOS 17.4+ · iPadOS 17.4+ · Mac Catalyst 17.4+ · macOS 14.4+ · tvOS 17.4+ · visionOS 1.1+ · watchOS 10.4+
+
+A class representing an argument in the Program.
+
+## Declaration
+
+```objectivec
+@interface MLModelStructureProgramArgument : NSObject
+```
+
+## Topics
+
+### Accessing the bindings
+
+- [bindings](mlmodelstructureprogramargument/bindings.md): The array of bindings.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+## See Also
+
+### Model structure
+
+- [MLModelStructure](mlmodelstructure-c.class.md): A class representing the structure of a model.
+- [MLModelStructureNeuralNetwork](mlmodelstructureneuralnetwork.md): A class representing the structure of a NeuralNetwork model.
+- [MLModelStructureNeuralNetworkLayer](mlmodelstructureneuralnetworklayer.md): A class representing a layer in a NeuralNetwork.
+- [MLModelStructurePipeline](mlmodelstructurepipeline.md): A class representing the structure of a Pipeline model.
+- [MLModelStructureProgram](mlmodelstructureprogram.md): A class representing the structure of an ML Program model.
+- [MLModelStructureProgramBinding](mlmodelstructureprogrambinding.md): A class representing a binding in the Program
+- [MLModelStructureProgramBlock](mlmodelstructureprogramblock.md): A class representing a block in the Program.
+- [MLModelStructureProgramFunction](mlmodelstructureprogramfunction.md): A class representing a function in the Program.
+- [MLModelStructureProgramNamedValueType](mlmodelstructureprogramnamedvaluetype.md): A class representing a named value type in a Program.
+- [MLModelStructureProgramOperation](mlmodelstructureprogramoperation.md): A class representing an Operation in a Program.
+- [MLModelStructureProgramValue](mlmodelstructureprogramvalue.md): A class representing a constant value in the Program.
+- [MLModelStructureProgramValueType](mlmodelstructureprogramvaluetype.md): A class representing the type of a value or a variable in the Program.

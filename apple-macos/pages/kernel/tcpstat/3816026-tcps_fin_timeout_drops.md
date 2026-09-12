@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/tcpstat/3816026-tcps_fin_timeout_drops](https://developer.apple.com/documentation/kernel/tcpstat/3816026-tcps_fin_timeout_drops)
+
+# tcps_fin_timeout_drops
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Instance Property  
+**Availability:** macOS 12.0+
+
+## Declaration
+
+```objectivec
+u_int32_t tcps_fin_timeout_drops;
+```

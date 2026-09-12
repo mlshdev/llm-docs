@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstabview/allowstruncatedlabels](https://developer.apple.com/documentation/appkit/nstabview/allowstruncatedlabels)
+
+# allowsTruncatedLabels (Swift)
+
+**Framework:** AppKit  
+**Kind:** Instance Property  
+**Availability:** macOS
+
+A Boolean value that indicates if the tab view allows truncating for labels that don’t fit on a tab.
+
+## Declaration
+
+```swift
+var allowsTruncatedLabels: Bool { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When the value of this property is [true](https://developer.apple.com/documentation/swift/true), the tab view allows truncating for labels that don’t fit on a tab, otherwise it does not. The default value is [true](https://developer.apple.com/documentation/swift/true). When truncating is allowed, the tab view inserts an ellipsis, if necessary, to fit a label in the tab.
+
+# allowsTruncatedLabels (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Property  
+**Availability:** macOS
+
+A Boolean value that indicates if the tab view allows truncating for labels that don’t fit on a tab.
+
+## Declaration
+
+```objectivec
+@property BOOL allowsTruncatedLabels;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When the value of this property is [true](https://developer.apple.com/documentation/swift/true), the tab view allows truncating for labels that don’t fit on a tab, otherwise it does not. The default value is [true](https://developer.apple.com/documentation/swift/true). When truncating is allowed, the tab view inserts an ellipsis, if necessary, to fit a label in the tab.

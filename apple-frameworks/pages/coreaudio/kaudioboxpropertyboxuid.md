@@ -1,0 +1,53 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreaudio/kaudioboxpropertyboxuid](https://developer.apple.com/documentation/coreaudio/kaudioboxpropertyboxuid)
+
+# kAudioBoxPropertyBoxUID (Swift)
+
+**Framework:** Core Audio  
+**Kind:** Global Variable  
+**Availability:** Mac Catalyst · macOS
+
+## Declaration
+
+```swift
+var kAudioBoxPropertyBoxUID: AudioObjectPropertySelector { get }
+```
+
+## See Also
+
+### Constants
+
+- [kAudioBoxPropertyAcquired](kaudioboxpropertyacquired.md)
+- [kAudioBoxPropertyAcquisitionFailed](kaudioboxpropertyacquisitionfailed.md)
+- [kAudioBoxPropertyDeviceList](kaudioboxpropertydevicelist.md)
+- [kAudioBoxPropertyHasAudio](kaudioboxpropertyhasaudio.md)
+- [kAudioBoxPropertyHasMIDI](kaudioboxpropertyhasmidi.md)
+- [kAudioBoxPropertyHasVideo](kaudioboxpropertyhasvideo.md)
+- [kAudioBoxPropertyIsProtected](kaudioboxpropertyisprotected.md)
+- [kAudioBoxPropertyTransportType](kaudioboxpropertytransporttype.md)
+- [kAudioBoxPropertyClockDeviceList](kaudioboxpropertyclockdevicelist.md)
+
+# kAudioBoxPropertyBoxUID (Objective-C)
+
+**Framework:** Core Audio  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+## Declaration
+
+```objectivec
+kAudioBoxPropertyBoxUID
+```
+
+## See Also
+
+### Constants
+
+- [kAudioBoxPropertyAcquired](kaudioboxpropertyacquired.md)
+- [kAudioBoxPropertyAcquisitionFailed](kaudioboxpropertyacquisitionfailed.md)
+- [kAudioBoxPropertyDeviceList](kaudioboxpropertydevicelist.md)
+- [kAudioBoxPropertyHasAudio](kaudioboxpropertyhasaudio.md)
+- [kAudioBoxPropertyHasMIDI](kaudioboxpropertyhasmidi.md)
+- [kAudioBoxPropertyHasVideo](kaudioboxpropertyhasvideo.md)
+- [kAudioBoxPropertyIsProtected](kaudioboxpropertyisprotected.md)
+- [kAudioBoxPropertyTransportType](kaudioboxpropertytransporttype.md)
+- [kAudioBoxPropertyClockDeviceList](kaudioboxpropertyclockdevicelist.md)

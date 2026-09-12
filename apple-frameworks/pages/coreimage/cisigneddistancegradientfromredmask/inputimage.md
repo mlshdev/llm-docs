@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreimage/cisigneddistancegradientfromredmask/inputimage](https://developer.apple.com/documentation/coreimage/cisigneddistancegradientfromredmask/inputimage)
+
+# inputImage (Swift)
+
+**Framework:** Core Image  
+**Kind:** Instance Property  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.4+ · tvOS · visionOS 1.0+
+
+The input image whose red channel defines a mask. If the red channel pixel value is greater than 0.5 then the point is considered in the mask and output pixel will be a value between zero and negative one. Otherwise the output pixel will be a value between zero and one.
+
+## Declaration
+
+```swift
+var inputImage: CIImage? { get set }
+```
+
+# inputImage (Objective-C)
+
+**Framework:** Core Image  
+**Kind:** Instance Property  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+The input image whose red channel defines a mask. If the red channel pixel value is greater than 0.5 then the point is considered in the mask and output pixel will be a value between zero and negative one. Otherwise the output pixel will be a value between zero and one.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, retain, nullable) CIImage * inputImage;
+```

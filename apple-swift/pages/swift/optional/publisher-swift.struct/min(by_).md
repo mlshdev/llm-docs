@@ -1,0 +1,13 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/optional/publisher-swift.struct/min(by:)](https://developer.apple.com/documentation/swift/optional/publisher-swift.struct/min(by:))
+
+# min(by:)
+
+**Framework:** Swift  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+## Declaration
+
+```swift
+func min(by areInIncreasingOrder: (Optional<Wrapped>.Publisher.Output, Optional<Wrapped>.Publisher.Output) -> Bool) -> Optional<Wrapped>.Publisher
+```

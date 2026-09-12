@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "project": "aria2",
   "title": "aria2",
+  "homepage": "https://aria2.github.io/manual/en/html/",
   "repository": "aria2/aria2",
   "tag": "release-1.37.0",
   "releaseId": 129534349,

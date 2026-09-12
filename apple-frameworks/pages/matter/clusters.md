@@ -1,0 +1,1988 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/clusters](https://developer.apple.com/documentation/matter/clusters)
+
+# Clusters (Swift)
+
+**Framework:** Matter  
+**Kind:** API Collection
+
+Interact with groups of related functionality that Matter accessories expose.
+
+<a id="overview"></a>
+
+## Overview
+
+A cluster defines data and a set of related commands that operate on that data. For example, a temperature sensor exposes the Temperature Measurement cluster that provides ambient temperature. A door lock exposes the Door Lock cluster that provides the state of the lock, as well as commands to lock, unlock, and add access codes.
+
+## Topics
+
+### Interacting with the Application Launcher cluster
+
+- [MTRApplicationLauncherFeature](mtrapplicationlauncherfeature.md)
+- [MTRBaseClusterApplicationLauncher](mtrbaseclusterapplicationlauncher.md)
+- [MTRApplicationLauncherClusterApplicationEPStruct](mtrapplicationlauncherclusterapplicationepstruct.md)
+- [MTRApplicationLauncherClusterApplicationStruct](mtrapplicationlauncherclusterapplicationstruct.md)
+- [MTRApplicationLauncherClusterHideAppParams](mtrapplicationlauncherclusterhideappparams.md)
+- [MTRApplicationLauncherClusterLaunchAppParams](mtrapplicationlauncherclusterlaunchappparams.md)
+- [MTRApplicationLauncherClusterLauncherResponseParams](mtrapplicationlauncherclusterlauncherresponseparams.md)
+- [MTRApplicationLauncherClusterStopAppParams](mtrapplicationlauncherclusterstopappparams.md)
+- [MTRApplicationLauncherClusterApplication](mtrapplicationlauncherclusterapplication.md): Deprecated.
+- [MTRApplicationLauncherClusterApplicationEP](mtrapplicationlauncherclusterapplicationep.md): Deprecated.
+
+### Interacting with the Content Launcher cluster
+
+- [MTRContentLauncherContentLaunchStatus](mtrcontentlaunchercontentlaunchstatus.md): Deprecated.
+- [MTRContentLauncherFeature](mtrcontentlauncherfeature.md)
+- [MTRContentLauncherMetricType](mtrcontentlaunchermetrictype.md)
+- [MTRContentLauncherParameter](mtrcontentlauncherparameter.md)
+- [MTRContentLauncherSupportedStreamingProtocol](mtrcontentlaunchersupportedstreamingprotocol.md): Deprecated.
+- [MTRBaseClusterContentLauncher](mtrbaseclustercontentlauncher.md)
+- [MTRContentLauncherClusterAdditionalInfoStruct](mtrcontentlauncherclusteradditionalinfostruct.md)
+- [MTRContentLauncherClusterBrandingInformationStruct](mtrcontentlauncherclusterbrandinginformationstruct.md)
+- [MTRContentLauncherClusterContentSearchStruct](mtrcontentlauncherclustercontentsearchstruct.md)
+- [MTRContentLauncherClusterDimensionStruct](mtrcontentlauncherclusterdimensionstruct.md)
+- [MTRContentLauncherClusterAdditionalInfo](mtrcontentlauncherclusteradditionalinfo.md): Deprecated.
+- [MTRContentLauncherClusterBrandingInformation](mtrcontentlauncherclusterbrandinginformation.md): Deprecated.
+- [MTRContentLauncherClusterContentSearch](mtrcontentlauncherclustercontentsearch.md): Deprecated.
+- [MTRContentLauncherClusterDimension](mtrcontentlauncherclusterdimension.md): Deprecated.
+
+### Interacting with the Pump Configuration and Control cluster
+
+- [MTRPumpConfigurationAndControlPumpStatus](mtrpumpconfigurationandcontrolpumpstatus.md): Deprecated.
+- [MTRPumpConfigurationAndControlFeature](mtrpumpconfigurationandcontrolfeature.md)
+- [MTRPumpConfigurationAndControlPumpFeature](mtrpumpconfigurationandcontrolpumpfeature.md): Deprecated.
+- [MTRPumpConfigurationAndControlPumpStatusBitmap](mtrpumpconfigurationandcontrolpumpstatusbitmap.md)
+- [MTRPumpConfigurationAndControlClusterAirDetectionEvent](mtrpumpconfigurationandcontrolclusterairdetectionevent.md)
+- [MTRPumpConfigurationAndControlClusterDryRunningEvent](mtrpumpconfigurationandcontrolclusterdryrunningevent.md)
+- [MTRPumpConfigurationAndControlClusterElectronicFatalFailureEvent](mtrpumpconfigurationandcontrolclusterelectronicfatalfailureevent.md)
+- [MTRPumpConfigurationAndControlClusterElectronicNonFatalFailureEvent](mtrpumpconfigurationandcontrolclusterelectronicnonfatalfailureevent.md)
+- [MTRPumpConfigurationAndControlClusterElectronicTemperatureHighEvent](mtrpumpconfigurationandcontrolclusterelectronictemperaturehighevent.md)
+- [MTRPumpConfigurationAndControlClusterGeneralFaultEvent](mtrpumpconfigurationandcontrolclustergeneralfaultevent.md)
+- [MTRPumpConfigurationAndControlClusterLeakageEvent](mtrpumpconfigurationandcontrolclusterleakageevent.md)
+- [MTRPumpConfigurationAndControlClusterMotorTemperatureHighEvent](mtrpumpconfigurationandcontrolclustermotortemperaturehighevent.md)
+- [MTRPumpConfigurationAndControlClusterPowerMissingPhaseEvent](mtrpumpconfigurationandcontrolclusterpowermissingphaseevent.md)
+- [MTRPumpConfigurationAndControlClusterPumpBlockedEvent](mtrpumpconfigurationandcontrolclusterpumpblockedevent.md)
+- [MTRPumpConfigurationAndControlClusterPumpMotorFatalFailureEvent](mtrpumpconfigurationandcontrolclusterpumpmotorfatalfailureevent.md)
+- [MTRPumpConfigurationAndControlClusterSensorFailureEvent](mtrpumpconfigurationandcontrolclustersensorfailureevent.md)
+- [MTRPumpConfigurationAndControlClusterSupplyVoltageHighEvent](mtrpumpconfigurationandcontrolclustersupplyvoltagehighevent.md)
+- [MTRPumpConfigurationAndControlClusterSupplyVoltageLowEvent](mtrpumpconfigurationandcontrolclustersupplyvoltagelowevent.md)
+- [MTRPumpConfigurationAndControlClusterSystemPressureHighEvent](mtrpumpconfigurationandcontrolclustersystempressurehighevent.md)
+- [MTRPumpConfigurationAndControlClusterSystemPressureLowEvent](mtrpumpconfigurationandcontrolclustersystempressurelowevent.md)
+- [MTRPumpConfigurationAndControlClusterTurbineOperationEvent](mtrpumpconfigurationandcontrolclusterturbineoperationevent.md)
+
+### Interacting with the Level Control cluster
+
+- [MTRBaseClusterLevelControl](mtrbaseclusterlevelcontrol.md)
+- [MTRLevelControlFeature](mtrlevelcontrolfeature.md)
+- [MTRLevelControlMoveMode](mtrlevelcontrolmovemode.md)
+- [MTRLevelControlOptions](mtrlevelcontroloptions.md): Deprecated.
+- [MTRLevelControlStepMode](mtrlevelcontrolstepmode.md)
+- [MTRLevelControlClusterMoveParams](mtrlevelcontrolclustermoveparams.md)
+- [MTRLevelControlClusterMoveToClosestFrequencyParams](mtrlevelcontrolclustermovetoclosestfrequencyparams.md)
+- [MTRLevelControlClusterMoveToLevelParams](mtrlevelcontrolclustermovetolevelparams.md)
+- [MTRLevelControlClusterMoveToLevelWithOnOffParams](mtrlevelcontrolclustermovetolevelwithonoffparams.md)
+- [MTRLevelControlClusterMoveWithOnOffParams](mtrlevelcontrolclustermovewithonoffparams.md)
+- [MTRLevelControlClusterStepParams](mtrlevelcontrolclusterstepparams.md)
+- [MTRLevelControlClusterStepWithOnOffParams](mtrlevelcontrolclusterstepwithonoffparams.md)
+- [MTRLevelControlClusterStopParams](mtrlevelcontrolclusterstopparams.md)
+- [MTRLevelControlClusterStopWithOnOffParams](mtrlevelcontrolclusterstopwithonoffparams.md)
+
+### Interacting with the Switch cluster
+
+- [MTRSwitchClusterMultiPressOngoingEvent](mtrswitchclustermultipressongoingevent.md)
+- [MTRSwitchClusterShortReleaseEvent](mtrswitchclustershortreleaseevent.md)
+- [MTRSwitchClusterSwitchLatchedEvent](mtrswitchclusterswitchlatchedevent.md)
+- [MTRSwitchClusterInitialPressEvent](mtrswitchclusterinitialpressevent.md)
+- [MTRSwitchClusterLongPressEvent](mtrswitchclusterlongpressevent.md)
+- [MTRSwitchClusterLongReleaseEvent](mtrswitchclusterlongreleaseevent.md)
+- [MTRSwitchClusterMultiPressCompleteEvent](mtrswitchclustermultipresscompleteevent.md)
+
+### Interacting with the On Off cluster
+
+- [MTROnOffControl](mtronoffcontrol.md): Deprecated.
+- [MTROnOffFeature](mtronofffeature.md)
+- [MTROnOffClusterOffParams](mtronoffclusteroffparams.md)
+- [MTROnOffClusterOffWithEffectParams](mtronoffclusteroffwitheffectparams.md)
+- [MTROnOffClusterOnParams](mtronoffclusteronparams.md)
+- [MTROnOffClusterOnWithRecallGlobalSceneParams](mtronoffclusteronwithrecallglobalsceneparams.md)
+- [MTROnOffClusterOnWithTimedOffParams](mtronoffclusteronwithtimedoffparams.md)
+- [MTROnOffClusterToggleParams](mtronoffclustertoggleparams.md)
+
+### Interacting with the Door Lock cluster
+
+- [MTRDoorLockAlarmCode](mtrdoorlockalarmcode.md)
+- [MTRDoorLockCredentialRule](mtrdoorlockcredentialrule.md)
+- [MTRDoorLockCredentialType](mtrdoorlockcredentialtype.md)
+- [MTRDoorLockDataOperationType](mtrdoorlockdataoperationtype.md)
+- [MTRDoorLockDlLockState](mtrdoorlockdllockstate.md)
+- [MTRDoorLockDlLockType](mtrdoorlockdllocktype.md)
+- [MTRDoorLockDlStatus](mtrdoorlockdlstatus.md)
+- [MTRDoorLockDoorState](mtrdoorlockdoorstate.md)
+- [MTRDoorLockLockDataType](mtrdoorlocklockdatatype.md)
+- [MTRDoorLockLockOperationType](mtrdoorlocklockoperationtype.md)
+- [MTRDoorLockOperatingMode](mtrdoorlockoperatingmode.md)
+- [MTRDoorLockOperationError](mtrdoorlockoperationerror.md)
+- [MTRDoorLockOperationSource](mtrdoorlockoperationsource.md)
+- [MTRDoorLockUserStatus](mtrdoorlockuserstatus.md)
+- [MTRDoorLockUserType](mtrdoorlockusertype.md)
+- [MTRDoorLockDayOfWeek](mtrdoorlockdayofweek.md)
+- [MTRDoorLockDaysMaskMap](mtrdoorlockdaysmaskmap.md)
+- [MTRDoorLockDlCredentialRuleMask](mtrdoorlockdlcredentialrulemask.md)
+- [MTRDoorLockDlCredentialRulesSupport](mtrdoorlockdlcredentialrulessupport.md)
+- [MTRDoorLockDlDefaultConfigurationRegister](mtrdoorlockdldefaultconfigurationregister.md)
+- [MTRDoorLockDlKeypadOperationEventMask](mtrdoorlockdlkeypadoperationeventmask.md)
+- [MTRDoorLockDlKeypadProgrammingEventMask](mtrdoorlockdlkeypadprogrammingeventmask.md)
+- [MTRDoorLockDlLocalProgrammingFeatures](mtrdoorlockdllocalprogrammingfeatures.md)
+- [MTRDoorLockDlManualOperationEventMask](mtrdoorlockdlmanualoperationeventmask.md)
+- [MTRDoorLockDlRFIDOperationEventMask](mtrdoorlockdlrfidoperationeventmask.md)
+- [MTRDoorLockDlRFIDProgrammingEventMask](mtrdoorlockdlrfidprogrammingeventmask.md)
+- [MTRDoorLockDlRemoteOperationEventMask](mtrdoorlockdlremoteoperationeventmask.md)
+- [MTRDoorLockDlRemoteProgrammingEventMask](mtrdoorlockdlremoteprogrammingeventmask.md)
+- [MTRDoorLockDlSupportedOperatingModes](mtrdoorlockdlsupportedoperatingmodes.md)
+- [MTRDoorLockFeature](mtrdoorlockfeature.md)
+- [MTRBaseClusterDoorLock](mtrbaseclusterdoorlock.md)
+- [MTRDoorLockClusterLockOperationEvent](mtrdoorlockclusterlockoperationevent.md)
+- [MTRDoorLockClusterLockUserChangeEvent](mtrdoorlockclusterlockuserchangeevent.md)
+- [MTRDoorLockClusterSetCredentialParams](mtrdoorlockclustersetcredentialparams.md)
+- [MTRDoorLockClusterSetCredentialResponseParams](mtrdoorlockclustersetcredentialresponseparams.md)
+- [MTRDoorLockClusterSetHolidayScheduleParams](mtrdoorlockclustersetholidayscheduleparams.md)
+- [MTRDoorLockClusterSetUserParams](mtrdoorlockclustersetuserparams.md)
+- [MTRDoorLockClusterSetWeekDayScheduleParams](mtrdoorlockclustersetweekdayscheduleparams.md)
+- [MTRDoorLockClusterSetYearDayScheduleParams](mtrdoorlockclustersetyeardayscheduleparams.md)
+- [MTRDoorLockClusterUnlockDoorParams](mtrdoorlockclusterunlockdoorparams.md)
+- [MTRDoorLockClusterUnlockWithTimeoutParams](mtrdoorlockclusterunlockwithtimeoutparams.md)
+- [MTRElectricalMeasurementClusterGetMeasurementProfileCommandParams](mtrelectricalmeasurementclustergetmeasurementprofilecommandparams.md): Deprecated.
+- [MTRDoorLockClusterGetUserParams](mtrdoorlockclustergetuserparams.md)
+- [MTRDoorLockClusterGetUserResponseParams](mtrdoorlockclustergetuserresponseparams.md)
+- [MTRDoorLockClusterGetWeekDayScheduleParams](mtrdoorlockclustergetweekdayscheduleparams.md)
+- [MTRDoorLockClusterGetWeekDayScheduleResponseParams](mtrdoorlockclustergetweekdayscheduleresponseparams.md)
+- [MTRDoorLockClusterGetYearDayScheduleParams](mtrdoorlockclustergetyeardayscheduleparams.md)
+- [MTRDoorLockClusterGetYearDayScheduleResponseParams](mtrdoorlockclustergetyeardayscheduleresponseparams.md)
+- [MTRDoorLockClusterLockDoorParams](mtrdoorlockclusterlockdoorparams.md)
+- [MTRDoorLockClusterLockOperationErrorEvent](mtrdoorlockclusterlockoperationerrorevent.md)
+- [MTRDoorLockClusterClearYearDayScheduleParams](mtrdoorlockclusterclearyeardayscheduleparams.md)
+- [MTRDoorLockClusterCredentialStruct](mtrdoorlockclustercredentialstruct.md)
+- [MTRDoorLockClusterDoorLockAlarmEvent](mtrdoorlockclusterdoorlockalarmevent.md)
+- [MTRDoorLockClusterDoorStateChangeEvent](mtrdoorlockclusterdoorstatechangeevent.md)
+- [MTRDoorLockClusterGetCredentialStatusParams](mtrdoorlockclustergetcredentialstatusparams.md)
+- [MTRDoorLockClusterGetCredentialStatusResponseParams](mtrdoorlockclustergetcredentialstatusresponseparams.md)
+- [MTRDoorLockClusterGetHolidayScheduleParams](mtrdoorlockclustergetholidayscheduleparams.md)
+- [MTRDoorLockClusterGetHolidayScheduleResponseParams](mtrdoorlockclustergetholidayscheduleresponseparams.md)
+- [MTRDoorLockClusterClearCredentialParams](mtrdoorlockclusterclearcredentialparams.md)
+- [MTRDoorLockClusterClearHolidayScheduleParams](mtrdoorlockclusterclearholidayscheduleparams.md)
+- [MTRDoorLockClusterClearUserParams](mtrdoorlockclusterclearuserparams.md)
+- [MTRDoorLockClusterClearWeekDayScheduleParams](mtrdoorlockclusterclearweekdayscheduleparams.md)
+- [MTRDoorLockDlDaysMaskMap](mtrdoorlockdldaysmaskmap.md): Deprecated.
+
+### Interacting with the Thermostat cluster
+
+- [MTRThermostatModeForSequence](mtrthermostatmodeforsequence.md): Deprecated.
+- [MTRThermostatDayOfWeek](mtrthermostatdayofweek.md): Deprecated.
+- [MTRBaseClusterThermostat](mtrbaseclusterthermostat.md)
+- [MTRThermostatClusterClearWeeklyScheduleParams](mtrthermostatclusterclearweeklyscheduleparams.md)
+- [MTRThermostatClusterGetWeeklyScheduleParams](mtrthermostatclustergetweeklyscheduleparams.md)
+- [MTRThermostatClusterGetWeeklyScheduleResponseParams](mtrthermostatclustergetweeklyscheduleresponseparams.md)
+- [MTRThermostatClusterSetWeeklyScheduleParams](mtrthermostatclustersetweeklyscheduleparams.md)
+- [MTRThermostatClusterSetpointRaiseLowerParams](mtrthermostatclustersetpointraiselowerparams.md)
+- [MTRThermostatClusterThermostatScheduleTransition](mtrthermostatclusterthermostatscheduletransition.md): Deprecated.
+
+### Interacting with the Wi-Fi Network Diagnostics cluster
+
+- [MTRBaseClusterWiFiNetworkDiagnostics](mtrbaseclusterwifinetworkdiagnostics.md)
+- [MTRWiFiNetworkDiagnosticsClusterAssociationFailureEvent](mtrwifinetworkdiagnosticsclusterassociationfailureevent.md)
+- [MTRWiFiNetworkDiagnosticsClusterConnectionStatusEvent](mtrwifinetworkdiagnosticsclusterconnectionstatusevent.md)
+- [MTRWiFiNetworkDiagnosticsClusterDisconnectionEvent](mtrwifinetworkdiagnosticsclusterdisconnectionevent.md)
+- [MTRWiFiNetworkDiagnosticsClusterResetCountsParams](mtrwifinetworkdiagnosticsclusterresetcountsparams.md)
+- [MTRWiFiNetworkDiagnosticsFeature](mtrwifinetworkdiagnosticsfeature.md)
+- [MTRWiFiNetworkDiagnosticsAssociationFailureCause](mtrwifinetworkdiagnosticsassociationfailurecause.md)
+- [MTRWiFiNetworkDiagnosticsConnectionStatus](mtrwifinetworkdiagnosticsconnectionstatus.md)
+- [MTRWiFiNetworkDiagnosticsSecurityType](mtrwifinetworkdiagnosticssecuritytype.md)
+- [MTRWiFiNetworkDiagnosticsWiFiVersion](mtrwifinetworkdiagnosticswifiversion.md)
+- [MTRWiFiNetworkDiagnosticsWiFiConnectionStatus](mtrwifinetworkdiagnosticswificonnectionstatus.md): Deprecated.
+- [MTRWiFiNetworkDiagnosticsWiFiVersionType](mtrwifinetworkdiagnosticswifiversiontype.md): Deprecated.
+
+### Interacting with the Window Covering cluster
+
+- [MTRBaseClusterWindowCovering](mtrbaseclusterwindowcovering.md)
+- [MTRWindowCoveringConfigStatus](mtrwindowcoveringconfigstatus.md)
+- [MTRWindowCoveringEndProductType](mtrwindowcoveringendproducttype.md)
+- [MTRWindowCoveringFeature](mtrwindowcoveringfeature.md)
+- [MTRActionsCommandBits](mtractionscommandbits.md)
+- [MTRWindowCoveringMode](mtrwindowcoveringmode.md)
+- [MTRWindowCoveringOperationalStatus](mtrwindowcoveringoperationalstatus.md)
+- [MTRWindowCoveringSafetyStatus](mtrwindowcoveringsafetystatus.md)
+- [MTRWindowCoveringType](mtrwindowcoveringtype.md)
+- [MTRWindowCoveringClusterDownOrCloseParams](mtrwindowcoveringclusterdownorcloseparams.md)
+- [MTRWindowCoveringClusterGoToLiftPercentageParams](mtrwindowcoveringclustergotoliftpercentageparams.md)
+- [MTRWindowCoveringClusterGoToLiftValueParams](mtrwindowcoveringclustergotoliftvalueparams.md)
+- [MTRWindowCoveringClusterGoToTiltPercentageParams](mtrwindowcoveringclustergototiltpercentageparams.md)
+- [MTRWindowCoveringClusterGoToTiltValueParams](mtrwindowcoveringclustergototiltvalueparams.md)
+- [MTRWindowCoveringClusterStopMotionParams](mtrwindowcoveringclusterstopmotionparams.md)
+- [MTRWindowCoveringClusterUpOrOpenParams](mtrwindowcoveringclusteruporopenparams.md)
+
+### Interacting with the Power Source cluster
+
+- [MTRPowerSourceFeature](mtrpowersourcefeature.md)
+- [MTRPowerSourceClusterBatChargeFaultChangeEvent](mtrpowersourceclusterbatchargefaultchangeevent.md)
+- [MTRPowerSourceClusterBatFaultChangeEvent](mtrpowersourceclusterbatfaultchangeevent.md)
+- [MTRPowerSourceClusterWiredFaultChangeEvent](mtrpowersourceclusterwiredfaultchangeevent.md)
+- [MTRPowerSourceClusterBatFaultChangeType](mtrpowersourceclusterbatfaultchangetype.md): Deprecated.
+- [MTRPowerSourceClusterBatChargeFaultChangeType](mtrpowersourceclusterbatchargefaultchangetype.md): Deprecated.
+- [MTRPowerSourceClusterWiredFaultChangeType](mtrpowersourceclusterwiredfaultchangetype.md): Deprecated.
+
+### Interacting with the Thread Network Diagnostics cluster
+
+- [MTRThreadNetworkDiagnosticsConnectionStatus](mtrthreadnetworkdiagnosticsconnectionstatus.md)
+- [MTRThreadNetworkDiagnosticsFeature](mtrthreadnetworkdiagnosticsfeature.md)
+- [MTRThreadNetworkDiagnosticsNetworkFault](mtrthreadnetworkdiagnosticsnetworkfault.md)
+- [MTRThreadNetworkDiagnosticsRoutingRole](mtrthreadnetworkdiagnosticsroutingrole.md)
+- [MTRThreadNetworkDiagnosticsClusterNeighborTable](mtrthreadnetworkdiagnosticsclusterneighbortable.md): Deprecated.
+- [MTRThreadNetworkDiagnosticsClusterNetworkFaultChangeEvent](mtrthreadnetworkdiagnosticsclusternetworkfaultchangeevent.md)
+- [MTRThreadNetworkDiagnosticsClusterOperationalDatasetComponents](mtrthreadnetworkdiagnosticsclusteroperationaldatasetcomponents.md)
+- [MTRThreadNetworkDiagnosticsClusterResetCountsParams](mtrthreadnetworkdiagnosticsclusterresetcountsparams.md)
+- [MTRThreadNetworkDiagnosticsClusterRouteTable](mtrthreadnetworkdiagnosticsclusterroutetable.md): Deprecated.
+- [MTRThreadNetworkDiagnosticsClusterSecurityPolicy](mtrthreadnetworkdiagnosticsclustersecuritypolicy.md)
+
+### Interacting with the Color Control cluster
+
+- [MTRBaseClusterColorControl](mtrbaseclustercolorcontrol.md)
+- [MTRColorControlColorCapabilities](mtrcolorcontrolcolorcapabilities.md): Deprecated.
+- [MTRColorControlColorLoopAction](mtrcolorcontrolcolorloopaction.md)
+- [MTRColorControlColorLoopDirection](mtrcolorcontrolcolorloopdirection.md)
+- [MTRColorControlColorLoopUpdateFlags](mtrcolorcontrolcolorloopupdateflags.md): Deprecated.
+- [MTRColorControlColorMode](mtrcolorcontrolcolormode.md)
+- [MTRColorControlFeature](mtrcolorcontrolfeature.md)
+- [MTRColorControlHueDirection](mtrcolorcontrolhuedirection.md): Deprecated.
+- [MTRColorControlHueMoveMode](mtrcolorcontrolhuemovemode.md): Deprecated.
+- [MTRColorControlHueStepMode](mtrcolorcontrolhuestepmode.md): Deprecated.
+- [MTRColorControlSaturationMoveMode](mtrcolorcontrolsaturationmovemode.md): Deprecated.
+- [MTRColorControlSaturationStepMode](mtrcolorcontrolsaturationstepmode.md): Deprecated.
+- [MTRColorControlClusterColorLoopSetParams](mtrcolorcontrolclustercolorloopsetparams.md)
+- [MTRColorControlClusterEnhancedMoveHueParams](mtrcolorcontrolclusterenhancedmovehueparams.md)
+- [MTRColorControlClusterEnhancedMoveToHueAndSaturationParams](mtrcolorcontrolclusterenhancedmovetohueandsaturationparams.md)
+- [MTRColorControlClusterEnhancedMoveToHueParams](mtrcolorcontrolclusterenhancedmovetohueparams.md)
+- [MTRColorControlClusterEnhancedStepHueParams](mtrcolorcontrolclusterenhancedstephueparams.md)
+- [MTRColorControlClusterMoveColorParams](mtrcolorcontrolclustermovecolorparams.md)
+- [MTRColorControlClusterMoveColorTemperatureParams](mtrcolorcontrolclustermovecolortemperatureparams.md)
+- [MTRColorControlClusterMoveHueParams](mtrcolorcontrolclustermovehueparams.md)
+- [MTRColorControlClusterMoveSaturationParams](mtrcolorcontrolclustermovesaturationparams.md)
+- [MTRColorControlClusterMoveToColorParams](mtrcolorcontrolclustermovetocolorparams.md)
+- [MTRColorControlClusterMoveToColorTemperatureParams](mtrcolorcontrolclustermovetocolortemperatureparams.md)
+- [MTRColorControlClusterMoveToHueAndSaturationParams](mtrcolorcontrolclustermovetohueandsaturationparams.md)
+- [MTRColorControlClusterMoveToHueParams](mtrcolorcontrolclustermovetohueparams.md)
+- [MTRColorControlClusterMoveToSaturationParams](mtrcolorcontrolclustermovetosaturationparams.md)
+- [MTRColorControlClusterStepColorParams](mtrcolorcontrolclusterstepcolorparams.md)
+- [MTRColorControlClusterStepColorTemperatureParams](mtrcolorcontrolclusterstepcolortemperatureparams.md)
+- [MTRColorControlClusterStepHueParams](mtrcolorcontrolclusterstephueparams.md)
+- [MTRColorControlClusterStepSaturationParams](mtrcolorcontrolclusterstepsaturationparams.md)
+- [MTRColorControlClusterStopMoveStepParams](mtrcolorcontrolclusterstopmovestepparams.md)
+
+### Interacting with the Operational Credentials cluster
+
+- [MTROperationalCredentialsClusterAddNOCParams](mtroperationalcredentialsclusteraddnocparams.md)
+- [MTROperationalCredentialsClusterAddTrustedRootCertificateParams](mtroperationalcredentialsclusteraddtrustedrootcertificateparams.md)
+- [MTROperationalCredentialsClusterAttestationRequestParams](mtroperationalcredentialsclusterattestationrequestparams.md)
+- [MTROperationalCredentialsClusterAttestationResponseParams](mtroperationalcredentialsclusterattestationresponseparams.md)
+- [MTROperationalCredentialsClusterCSRRequestParams](mtroperationalcredentialsclustercsrrequestparams.md)
+- [MTROperationalCredentialsClusterCSRResponseParams](mtroperationalcredentialsclustercsrresponseparams.md)
+- [MTROperationalCredentialsClusterCertificateChainRequestParams](mtroperationalcredentialsclustercertificatechainrequestparams.md)
+- [MTROperationalCredentialsClusterCertificateChainResponseParams](mtroperationalcredentialsclustercertificatechainresponseparams.md)
+- [MTROperationalCredentialsClusterFabricDescriptorStruct](mtroperationalcredentialsclusterfabricdescriptorstruct.md)
+- [MTROperationalCredentialsClusterNOCResponseParams](mtroperationalcredentialsclusternocresponseparams.md)
+- [MTROperationalCredentialsClusterNOCStruct](mtroperationalcredentialsclusternocstruct.md)
+- [MTROperationalCredentialsClusterRemoveFabricParams](mtroperationalcredentialsclusterremovefabricparams.md)
+- [MTROperationalCredentialsClusterUpdateFabricLabelParams](mtroperationalcredentialsclusterupdatefabriclabelparams.md)
+- [MTROperationalCredentialsClusterUpdateNOCParams](mtroperationalcredentialsclusterupdatenocparams.md)
+- [MTROperationalCredentialsClusterFabricDescriptor](mtroperationalcredentialsclusterfabricdescriptor.md): Deprecated.
+
+### Interacting with the Actions cluster
+
+- [MTRBaseClusterActions](mtrbaseclusteractions.md)
+- [MTRActionsClusterActionFailedEvent](mtractionsclusteractionfailedevent.md)
+- [MTRActionsClusterActionStruct](mtractionsclusteractionstruct.md)
+- [MTRActionsClusterDisableActionParams](mtractionsclusterdisableactionparams.md)
+- [MTRActionsClusterDisableActionWithDurationParams](mtractionsclusterdisableactionwithdurationparams.md)
+- [MTRActionsClusterEnableActionParams](mtractionsclusterenableactionparams.md)
+- [MTRActionsClusterEnableActionWithDurationParams](mtractionsclusterenableactionwithdurationparams.md)
+- [MTRActionsClusterEndpointListStruct](mtractionsclusterendpointliststruct.md)
+- [MTRActionsClusterInstantActionParams](mtractionsclusterinstantactionparams.md)
+- [MTRActionsClusterInstantActionWithTransitionParams](mtractionsclusterinstantactionwithtransitionparams.md)
+- [MTRActionsClusterPauseActionParams](mtractionsclusterpauseactionparams.md)
+- [MTRActionsClusterPauseActionWithDurationParams](mtractionsclusterpauseactionwithdurationparams.md)
+- [MTRActionsClusterResumeActionParams](mtractionsclusterresumeactionparams.md)
+- [MTRActionsClusterStartActionParams](mtractionsclusterstartactionparams.md)
+- [MTRActionsClusterStartActionWithDurationParams](mtractionsclusterstartactionwithdurationparams.md)
+- [MTRActionsClusterStateChangedEvent](mtractionsclusterstatechangedevent.md)
+- [MTRActionsClusterStopActionParams](mtractionsclusterstopactionparams.md)
+- [MTRActionsActionError](mtractionsactionerror.md)
+- [MTRActionsActionState](mtractionsactionstate.md)
+- [MTRActionsActionType](mtractionsactiontype.md)
+- [MTRActionsCommandBits](mtractionscommandbits.md)
+- [MTRActionsEndpointListType](mtractionsendpointlisttype.md)
+
+### Interacting with the Software Diagnostics cluster
+
+- [MTRThermostatFeature](mtrthermostatfeature.md)
+- [MTRSoftwareDiagnosticsFeature](mtrsoftwarediagnosticsfeature.md)
+- [MTRBaseClusterSoftwareDiagnostics](mtrbaseclustersoftwarediagnostics.md)
+- [MTRSoftwareDiagnosticsClusterResetWatermarksParams](mtrsoftwarediagnosticsclusterresetwatermarksparams.md)
+- [MTRSoftwareDiagnosticsClusterSoftwareFaultEvent](mtrsoftwarediagnosticsclustersoftwarefaultevent.md)
+- [MTRSoftwareDiagnosticsClusterThreadMetricsStruct](mtrsoftwarediagnosticsclusterthreadmetricsstruct.md)
+- [MTRSoftwareDiagnosticsClusterThreadMetrics](mtrsoftwarediagnosticsclusterthreadmetrics.md): Deprecated.
+
+### Interacting with the Time Synchronization cluster
+
+- [MTRTimeFormatLocalizationCalendarType](mtrtimeformatlocalizationcalendartype.md)
+- [MTRTimeFormatLocalizationHourFormat](mtrtimeformatlocalizationhourformat.md)
+- [MTRTimeSynchronizationGranularity](mtrtimesynchronizationgranularity.md)
+- [MTRTimeSynchronizationTimeSource](mtrtimesynchronizationtimesource.md)
+- [MTRTimeSynchronizationClusterDSTOffsetStruct](mtrtimesynchronizationclusterdstoffsetstruct.md)
+- [MTRTimeSynchronizationClusterTimeZoneStruct](mtrtimesynchronizationclustertimezonestruct.md)
+- [MTRTimeSynchronizationClusterDstOffsetType](mtrtimesynchronizationclusterdstoffsettype.md): Deprecated.
+- [MTRTimeSynchronizationClusterTimeZoneType](mtrtimesynchronizationclustertimezonetype.md): Deprecated.
+
+### Interacting with the OTA Software Update Provider cluster
+
+- [MTRBaseClusterOTASoftwareUpdateProvider](mtrbaseclusterotasoftwareupdateprovider-8bnit.md)
+- [MTROTAHeader](mtrotaheader.md)
+- [MTROTASoftwareUpdateProviderClusterApplyUpdateRequestParams](mtrotasoftwareupdateproviderclusterapplyupdaterequestparams-1mlcr.md)
+- [MTROTASoftwareUpdateProviderClusterApplyUpdateResponseParams](mtrotasoftwareupdateproviderclusterapplyupdateresponseparams-36zc9.md)
+- [MTROTASoftwareUpdateProviderClusterNotifyUpdateAppliedParams](mtrotasoftwareupdateproviderclusternotifyupdateappliedparams-5eau8.md)
+- [MTROTASoftwareUpdateProviderClusterQueryImageParams](mtrotasoftwareupdateproviderclusterqueryimageparams-8z02b.md)
+- [MTROTASoftwareUpdateProviderClusterQueryImageResponseParams](mtrotasoftwareupdateproviderclusterqueryimageresponseparams-6wuvt.md)
+- [MTROTASoftwareUpdateRequestorClusterAnnounceOTAProviderParams](mtrotasoftwareupdaterequestorclusterannounceotaproviderparams-8dobu.md)
+- [MTROTASoftwareUpdateRequestorClusterDownloadErrorEvent](mtrotasoftwareupdaterequestorclusterdownloaderrorevent-2w5rw.md)
+- [MTROTASoftwareUpdateRequestorClusterProviderLocation](mtrotasoftwareupdaterequestorclusterproviderlocation-76vsq.md)
+- [MTROTASoftwareUpdateRequestorClusterStateTransitionEvent](mtrotasoftwareupdaterequestorclusterstatetransitionevent-3xhxb.md)
+- [MTROTASoftwareUpdateRequestorClusterVersionAppliedEvent](mtrotasoftwareupdaterequestorclusterversionappliedevent-94prr.md)
+- [MTROTAImageDigestType](mtrotaimagedigesttype.md)
+- [MTROTASoftwareUpdateProviderOTAApplyUpdateAction](mtrotasoftwareupdateproviderotaapplyupdateaction-klmu.md): Deprecated.
+- [MTROTASoftwareUpdateProviderOTADownloadProtocol](mtrotasoftwareupdateproviderotadownloadprotocol-1ixcq.md): Deprecated.
+- [MTROTASoftwareUpdateProviderOTAQueryStatus](mtrotasoftwareupdateproviderotaquerystatus-31lx3.md): Deprecated.
+- [MTROTASoftwareUpdateRequestorOTAAnnouncementReason](mtrotasoftwareupdaterequestorotaannouncementreason-30elp.md): Deprecated.
+- [MTROTASoftwareUpdateRequestorOTAChangeReason](mtrotasoftwareupdaterequestorotachangereason-6355y.md): Deprecated.
+- [MTROTASoftwareUpdateRequestorOTAUpdateState](mtrotasoftwareupdaterequestorotaupdatestate-3tft6.md): Deprecated.
+- [MTROtaSoftwareUpdateRequestorClusterStateTransitionEvent](mtrotasoftwareupdaterequestorclusterstatetransitionevent-1xzd5.md): Deprecated.
+- [MTROtaSoftwareUpdateRequestorClusterVersionAppliedEvent](mtrotasoftwareupdaterequestorclusterversionappliedevent-970fn.md): Deprecated.
+- [MTROtaSoftwareUpdateRequestorClusterAnnounceOtaProviderParams](mtrotasoftwareupdaterequestorclusterannounceotaproviderparams-1ucwe.md): Deprecated.
+- [MTROtaSoftwareUpdateRequestorClusterDownloadErrorEvent](mtrotasoftwareupdaterequestorclusterdownloaderrorevent-73h3t.md): Deprecated.
+- [MTROtaSoftwareUpdateRequestorClusterProviderLocation](mtrotasoftwareupdaterequestorclusterproviderlocation-yhnm.md): Deprecated.
+- [MTROtaSoftwareUpdateRequestorOTAAnnouncementReason](mtrotasoftwareupdaterequestorotaannouncementreason-86f8n.md): Deprecated.
+- [MTROtaSoftwareUpdateRequestorOTAChangeReason](mtrotasoftwareupdaterequestorotachangereason-4ixti.md): Deprecated.
+- [MTROtaSoftwareUpdateRequestorOTAUpdateState](mtrotasoftwareupdaterequestorotaupdatestate-18cur.md): Deprecated.
+
+### Interacting with the OTA Software Update Requestor cluster
+
+- [MTRBaseClusterOTASoftwareUpdateRequestor](mtrbaseclusterotasoftwareupdaterequestor-9n6nb.md)
+- [MTROtaSoftwareUpdateProviderClusterApplyUpdateRequestParams](mtrotasoftwareupdateproviderclusterapplyupdaterequestparams-5k4nj.md): Deprecated.
+- [MTROtaSoftwareUpdateProviderClusterApplyUpdateResponseParams](mtrotasoftwareupdateproviderclusterapplyupdateresponseparams-92als.md): Deprecated.
+- [MTROtaSoftwareUpdateProviderClusterNotifyUpdateAppliedParams](mtrotasoftwareupdateproviderclusternotifyupdateappliedparams-6s1jv.md): Deprecated.
+- [MTROtaSoftwareUpdateProviderClusterQueryImageParams](mtrotasoftwareupdateproviderclusterqueryimageparams-zidv.md): Deprecated.
+- [MTROtaSoftwareUpdateProviderClusterQueryImageResponseParams](mtrotasoftwareupdateproviderclusterqueryimageresponseparams-48oao.md): Deprecated.
+- [MTROtaSoftwareUpdateProviderOTAApplyUpdateAction](mtrotasoftwareupdateproviderotaapplyupdateaction-7hisl.md): Deprecated.
+- [MTROtaSoftwareUpdateProviderOTADownloadProtocol](mtrotasoftwareupdateproviderotadownloadprotocol-c5qi.md): Deprecated.
+- [MTROtaSoftwareUpdateProviderOTAQueryStatus](mtrotasoftwareupdateproviderotaquerystatus-4w7ot.md): Deprecated.
+
+### Interacting with the Unit Testing cluster
+
+- [MTRUnitTestingBitmap16MaskMap](mtrunittestingbitmap16maskmap.md)
+- [MTRUnitTestingBitmap32MaskMap](mtrunittestingbitmap32maskmap.md)
+- [MTRUnitTestingBitmap64MaskMap](mtrunittestingbitmap64maskmap.md)
+- [MTRUnitTestingBitmap8MaskMap](mtrunittestingbitmap8maskmap.md)
+- [MTRUnitTestingSimple](mtrunittestingsimple.md)
+- [MTRUnitTestingSimpleBitmap](mtrunittestingsimplebitmap.md)
+- [MTRUnitTestingClusterTestFabricScoped](mtrunittestingclustertestfabricscoped.md)
+- [MTRUnitTestingClusterTestFabricScopedEventEvent](mtrunittestingclustertestfabricscopedeventevent.md)
+- [MTRUnitTestingClusterTestListInt8UArgumentRequestParams](mtrunittestingclustertestlistint8uargumentrequestparams.md)
+- [MTRUnitTestingClusterTestListInt8UReverseRequestParams](mtrunittestingclustertestlistint8ureverserequestparams.md)
+- [MTRUnitTestingClusterTestListInt8UReverseResponseParams](mtrunittestingclustertestlistint8ureverseresponseparams.md)
+- [MTRUnitTestingClusterTestListNestedStructListArgumentRequestParams](mtrunittestingclustertestlistnestedstructlistargumentrequestparams.md)
+- [MTRUnitTestingClusterTestListStructArgumentRequestParams](mtrunittestingclustertestliststructargumentrequestparams.md)
+- [MTRUnitTestingClusterTestListStructOctet](mtrunittestingclustertestliststructoctet.md)
+- [MTRUnitTestingClusterTestNestedStructArgumentRequestParams](mtrunittestingclustertestnestedstructargumentrequestparams.md)
+- [MTRUnitTestingClusterTestNestedStructListArgumentRequestParams](mtrunittestingclustertestnestedstructlistargumentrequestparams.md)
+- [MTRUnitTestingClusterTestNotHandledParams](mtrunittestingclustertestnothandledparams.md)
+- [MTRUnitTestingClusterTestNullableOptionalRequestParams](mtrunittestingclustertestnullableoptionalrequestparams.md)
+- [MTRUnitTestingClusterTestNullableOptionalResponseParams](mtrunittestingclustertestnullableoptionalresponseparams.md)
+- [MTRUnitTestingClusterTestParams](mtrunittestingclustertestparams.md)
+- [MTRUnitTestingClusterTestSimpleArgumentRequestParams](mtrunittestingclustertestsimpleargumentrequestparams.md)
+- [MTRUnitTestingClusterTestSimpleArgumentResponseParams](mtrunittestingclustertestsimpleargumentresponseparams.md)
+- [MTRUnitTestingClusterTestSimpleOptionalArgumentRequestParams](mtrunittestingclustertestsimpleoptionalargumentrequestparams.md)
+- [MTRUnitTestingClusterTestSpecificParams](mtrunittestingclustertestspecificparams.md)
+- [MTRUnitTestingClusterTestSpecificResponseParams](mtrunittestingclustertestspecificresponseparams.md)
+- [MTRUnitTestingClusterTestStructArgumentRequestParams](mtrunittestingclusterteststructargumentrequestparams.md)
+- [MTRUnitTestingClusterTestStructArrayArgumentRequestParams](mtrunittestingclusterteststructarrayargumentrequestparams.md)
+- [MTRUnitTestingClusterTestStructArrayArgumentResponseParams](mtrunittestingclusterteststructarrayargumentresponseparams.md)
+- [MTRUnitTestingClusterTestUnknownCommandParams](mtrunittestingclustertestunknowncommandparams.md)
+- [MTRUnitTestingClusterTimedInvokeRequestParams](mtrunittestingclustertimedinvokerequestparams.md)
+- [MTRUserLabelClusterLabelStruct](mtruserlabelclusterlabelstruct.md)
+- [MTRTimeSynchronizationClusterSetUtcTimeParams](mtrtimesynchronizationclustersetutctimeparams-2ms2i.md)
+- [MTRUnitTestingClusterBooleanResponseParams](mtrunittestingclusterbooleanresponseparams.md)
+- [MTRUnitTestingClusterDoubleNestedStructList](mtrunittestingclusterdoublenestedstructlist.md)
+- [MTRUnitTestingClusterNestedStruct](mtrunittestingclusternestedstruct.md)
+- [MTRUnitTestingClusterNestedStructList](mtrunittestingclusternestedstructlist.md)
+- [MTRUnitTestingClusterNullablesAndOptionalsStruct](mtrunittestingclusternullablesandoptionalsstruct.md)
+- [MTRUnitTestingClusterSimpleStruct](mtrunittestingclustersimplestruct.md)
+- [MTRUnitTestingClusterSimpleStructEchoRequestParams](mtrunittestingclustersimplestructechorequestparams.md)
+- [MTRUnitTestingClusterSimpleStructResponseParams](mtrunittestingclustersimplestructresponseparams.md)
+- [MTRUnitTestingClusterTestAddArgumentsParams](mtrunittestingclustertestaddargumentsparams.md)
+- [MTRUnitTestingClusterTestAddArgumentsResponseParams](mtrunittestingclustertestaddargumentsresponseparams.md)
+- [MTRUnitTestingClusterTestComplexNullableOptionalRequestParams](mtrunittestingclustertestcomplexnullableoptionalrequestparams.md)
+- [MTRUnitTestingClusterTestComplexNullableOptionalResponseParams](mtrunittestingclustertestcomplexnullableoptionalresponseparams.md)
+- [MTRUnitTestingClusterTestEmitTestEventRequestParams](mtrunittestingclustertestemittesteventrequestparams.md)
+- [MTRUnitTestingClusterTestEmitTestEventResponseParams](mtrunittestingclustertestemittesteventresponseparams.md)
+- [MTRUnitTestingClusterTestEmitTestFabricScopedEventRequestParams](mtrunittestingclustertestemittestfabricscopedeventrequestparams.md)
+- [MTRUnitTestingClusterTestEmitTestFabricScopedEventResponseParams](mtrunittestingclustertestemittestfabricscopedeventresponseparams.md)
+- [MTRUnitTestingClusterTestEnumsRequestParams](mtrunittestingclustertestenumsrequestparams.md)
+- [MTRUnitTestingClusterTestEnumsResponseParams](mtrunittestingclustertestenumsresponseparams.md)
+- [MTRUnitTestingClusterTestEventEvent](mtrunittestingclustertesteventevent.md)
+- [MTRTestClusterClusterBooleanResponseParams](mtrtestclusterclusterbooleanresponseparams.md): Deprecated.
+- [MTRTestClusterClusterDoubleNestedStructList](mtrtestclusterclusterdoublenestedstructlist.md): Deprecated.
+- [MTRTestClusterClusterNestedStruct](mtrtestclusterclusternestedstruct.md): Deprecated.
+- [MTRTestClusterClusterNestedStructList](mtrtestclusterclusternestedstructlist.md): Deprecated.
+- [MTRTestClusterClusterNullablesAndOptionalsStruct](mtrtestclusterclusternullablesandoptionalsstruct.md): Deprecated.
+- [MTRTestClusterClusterSimpleStruct](mtrtestclusterclustersimplestruct.md): Deprecated.
+- [MTRTestClusterClusterSimpleStructEchoRequestParams](mtrtestclusterclustersimplestructechorequestparams.md): Deprecated.
+- [MTRTestClusterClusterSimpleStructResponseParams](mtrtestclusterclustersimplestructresponseparams.md): Deprecated.
+- [MTRTestClusterClusterTestAddArgumentsParams](mtrtestclusterclustertestaddargumentsparams.md): Deprecated.
+- [MTRTestClusterClusterTestAddArgumentsResponseParams](mtrtestclusterclustertestaddargumentsresponseparams.md): Deprecated.
+- [MTRTestClusterClusterTestComplexNullableOptionalRequestParams](mtrtestclusterclustertestcomplexnullableoptionalrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestComplexNullableOptionalResponseParams](mtrtestclusterclustertestcomplexnullableoptionalresponseparams.md): Deprecated.
+- [MTRTestClusterClusterTestEmitTestEventRequestParams](mtrtestclusterclustertestemittesteventrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestEmitTestEventResponseParams](mtrtestclusterclustertestemittesteventresponseparams.md): Deprecated.
+- [MTRTestClusterClusterTestEmitTestFabricScopedEventRequestParams](mtrtestclusterclustertestemittestfabricscopedeventrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestEmitTestFabricScopedEventResponseParams](mtrtestclusterclustertestemittestfabricscopedeventresponseparams.md): Deprecated.
+- [MTRTestClusterBitmap16MaskMap](mtrtestclusterbitmap16maskmap.md): Deprecated.
+- [MTRTestClusterBitmap32MaskMap](mtrtestclusterbitmap32maskmap.md): Deprecated.
+- [MTRTestClusterBitmap64MaskMap](mtrtestclusterbitmap64maskmap.md): Deprecated.
+- [MTRTestClusterBitmap8MaskMap](mtrtestclusterbitmap8maskmap.md): Deprecated.
+- [MTRTestClusterSimpleBitmap](mtrtestclustersimplebitmap.md): Deprecated.
+
+### Interacting with the Media Playback cluster
+
+- [MTRMediaPlaybackClusterFastForwardParams](mtrmediaplaybackclusterfastforwardparams.md)
+- [MTRMediaPlaybackClusterNextParams](mtrmediaplaybackclusternextparams.md)
+- [MTRMediaPlaybackClusterPauseParams](mtrmediaplaybackclusterpauseparams.md)
+- [MTRMediaPlaybackClusterPlayParams](mtrmediaplaybackclusterplayparams.md)
+- [MTRMediaPlaybackClusterPlaybackPositionStruct](mtrmediaplaybackclusterplaybackpositionstruct.md)
+- [MTRMediaPlaybackClusterPlaybackResponseParams](mtrmediaplaybackclusterplaybackresponseparams.md)
+- [MTRMediaPlaybackClusterPreviousParams](mtrmediaplaybackclusterpreviousparams.md)
+- [MTRMediaPlaybackClusterRewindParams](mtrmediaplaybackclusterrewindparams.md)
+- [MTRMediaPlaybackClusterSeekParams](mtrmediaplaybackclusterseekparams.md)
+- [MTRMediaPlaybackClusterSkipBackwardParams](mtrmediaplaybackclusterskipbackwardparams.md)
+- [MTRMediaPlaybackClusterSkipForwardParams](mtrmediaplaybackclusterskipforwardparams.md)
+- [MTRMediaPlaybackClusterStartOverParams](mtrmediaplaybackclusterstartoverparams.md)
+- [MTRMediaPlaybackClusterStopParams](mtrmediaplaybackclusterstopparams.md)
+
+### Interacting with other clusters
+
+- [MTRPressureMeasurementFeature](mtrpressuremeasurementfeature.md)
+- [MTRBasicInformationClusterProductAppearanceStruct](mtrbasicinformationclusterproductappearancestruct.md)
+- [MTRBridgedDeviceBasicInformationClusterProductAppearanceStruct](mtrbridgeddevicebasicinformationclusterproductappearancestruct.md)
+- [MTRBaseClusterAccessControl](mtrbaseclusteraccesscontrol.md)
+- [MTRBaseClusterAccountLogin](mtrbaseclusteraccountlogin.md)
+- [MTRBaseClusterAdministratorCommissioning](mtrbaseclusteradministratorcommissioning.md)
+- [MTRBaseClusterApplicationBasic](mtrbaseclusterapplicationbasic.md)
+- [MTRBaseClusterAudioOutput](mtrbaseclusteraudiooutput.md)
+- [MTRBaseClusterBallastConfiguration](mtrbaseclusterballastconfiguration.md)
+- [MTRBaseClusterBarrierControl](mtrbaseclusterbarriercontrol.md): Deprecated.
+- [MTRBaseClusterBasicInformation](mtrbaseclusterbasicinformation.md)
+- [MTRBaseClusterBinaryInputBasic](mtrbaseclusterbinaryinputbasic.md): Deprecated.
+- [MTRBaseClusterBinding](mtrbaseclusterbinding.md)
+- [MTRBaseClusterBooleanState](mtrbaseclusterbooleanstate.md)
+- [MTRBaseClusterBridgedDeviceBasic](mtrbaseclusterbridgeddevicebasic.md): Deprecated.
+- [MTRBaseClusterBridgedDeviceBasicInformation](mtrbaseclusterbridgeddevicebasicinformation.md)
+- [MTRBaseClusterChannel](mtrbaseclusterchannel.md)
+- [MTRBaseClusterDescriptor](mtrbaseclusterdescriptor.md)
+- [MTRBaseClusterDiagnosticLogs](mtrbaseclusterdiagnosticlogs.md)
+- [MTRBaseClusterElectricalMeasurement](mtrbaseclusterelectricalmeasurement.md): Deprecated.
+- [MTRBaseClusterEthernetNetworkDiagnostics](mtrbaseclusterethernetnetworkdiagnostics.md)
+- [MTRBaseClusterFanControl](mtrbaseclusterfancontrol.md)
+- [MTRBaseClusterFixedLabel](mtrbaseclusterfixedlabel.md)
+- [MTRBaseClusterFlowMeasurement](mtrbaseclusterflowmeasurement.md)
+- [MTRBaseClusterGeneralCommissioning](mtrbaseclustergeneralcommissioning.md)
+- [MTRBaseClusterGeneralDiagnostics](mtrbaseclustergeneraldiagnostics.md)
+- [MTRBaseClusterGroupKeyManagement](mtrbaseclustergroupkeymanagement.md)
+- [MTRBaseClusterGroups](mtrbaseclustergroups.md)
+- [MTRBaseClusterIdentify](mtrbaseclusteridentify.md)
+- [MTRBaseClusterIlluminanceMeasurement](mtrbaseclusterilluminancemeasurement.md)
+- [MTRBaseClusterKeypadInput](mtrbaseclusterkeypadinput.md)
+- [MTRBaseClusterLocalizationConfiguration](mtrbaseclusterlocalizationconfiguration.md)
+- [MTRBaseClusterLowPower](mtrbaseclusterlowpower.md)
+- [MTRBaseClusterMediaInput](mtrbaseclustermediainput.md)
+- [MTRBaseClusterMediaPlayback](mtrbaseclustermediaplayback.md)
+- [MTRBaseClusterModeSelect](mtrbaseclustermodeselect.md)
+- [MTRBaseClusterNetworkCommissioning](mtrbaseclusternetworkcommissioning.md)
+- [MTRBaseClusterOccupancySensing](mtrbaseclusteroccupancysensing.md)
+- [MTRBaseClusterOnOff](mtrbaseclusteronoff.md)
+- [MTRBaseClusterOnOffSwitchConfiguration](mtrbaseclusteronoffswitchconfiguration.md): Deprecated.
+- [MTRBaseClusterOperationalCredentials](mtrbaseclusteroperationalcredentials.md)
+- [MTRBaseClusterPowerSource](mtrbaseclusterpowersource.md)
+- [MTRBaseClusterPowerSourceConfiguration](mtrbaseclusterpowersourceconfiguration.md)
+- [MTRBaseClusterPressureMeasurement](mtrbaseclusterpressuremeasurement.md)
+- [MTRBaseClusterPumpConfigurationAndControl](mtrbaseclusterpumpconfigurationandcontrol.md)
+- [MTRBaseClusterRelativeHumidityMeasurement](mtrbaseclusterrelativehumiditymeasurement.md)
+- [MTRBaseClusterSwitch](mtrbaseclusterswitch.md)
+- [MTRBaseClusterTargetNavigator](mtrbaseclustertargetnavigator.md)
+- [MTRBaseClusterTemperatureMeasurement](mtrbaseclustertemperaturemeasurement.md)
+- [MTRBaseClusterThermostatUserInterfaceConfiguration](mtrbaseclusterthermostatuserinterfaceconfiguration.md)
+- [MTRBaseClusterThreadNetworkDiagnostics](mtrbaseclusterthreadnetworkdiagnostics.md)
+- [MTRBaseClusterTimeFormatLocalization](mtrbaseclustertimeformatlocalization.md)
+- [MTRBaseClusterUnitLocalization](mtrbaseclusterunitlocalization.md)
+- [MTRBaseClusterUnitTesting](mtrbaseclusterunittesting.md)
+- [MTRBaseClusterUserLabel](mtrbaseclusteruserlabel.md)
+- [MTRBaseClusterWakeOnLAN](mtrbaseclusterwakeonlan-1df75.md)
+- [MTRCluster](mtrcluster.md)
+- [MTRThreadNetworkDiagnosticsClusterConnectionStatusEvent](mtrthreadnetworkdiagnosticsclusterconnectionstatusevent.md)
+- [MTRTargetNavigatorClusterNavigateTargetParams](mtrtargetnavigatorclusternavigatetargetparams.md)
+- [MTRTargetNavigatorClusterNavigateTargetResponseParams](mtrtargetnavigatorclusternavigatetargetresponseparams.md)
+- [MTRTargetNavigatorClusterTargetInfoStruct](mtrtargetnavigatorclustertargetinfostruct.md)
+- [MTRSetupPayload](mtrsetuppayload.md)
+- [MTRNetworkCommissioningClusterScanNetworksResponseParams](mtrnetworkcommissioningclusterscannetworksresponseparams.md)
+- [MTRNetworkCommissioningClusterThreadInterfaceScanResult](mtrnetworkcommissioningclusterthreadinterfacescanresult.md): Deprecated.
+- [MTRNetworkCommissioningClusterWiFiInterfaceScanResult](mtrnetworkcommissioningclusterwifiinterfacescanresult.md): Deprecated.
+- [MTRMediaInputClusterShowInputStatusParams](mtrmediainputclustershowinputstatusparams.md)
+- [MTRModeSelectClusterChangeToModeParams](mtrmodeselectclusterchangetomodeparams.md)
+- [MTRModeSelectClusterModeOptionStruct](mtrmodeselectclustermodeoptionstruct.md)
+- [MTRModeSelectClusterSemanticTagStruct](mtrmodeselectclustersemantictagstruct.md)
+- [MTRNetworkCommissioningClusterAddOrUpdateThreadNetworkParams](mtrnetworkcommissioningclusteraddorupdatethreadnetworkparams.md)
+- [MTRNetworkCommissioningClusterAddOrUpdateWiFiNetworkParams](mtrnetworkcommissioningclusteraddorupdatewifinetworkparams.md)
+- [MTRNetworkCommissioningClusterConnectNetworkParams](mtrnetworkcommissioningclusterconnectnetworkparams.md)
+- [MTRNetworkCommissioningClusterConnectNetworkResponseParams](mtrnetworkcommissioningclusterconnectnetworkresponseparams.md)
+- [MTRNetworkCommissioningClusterNetworkConfigResponseParams](mtrnetworkcommissioningclusternetworkconfigresponseparams.md)
+- [MTRNetworkCommissioningClusterNetworkInfo](mtrnetworkcommissioningclusternetworkinfo.md): Deprecated.
+- [MTRNetworkCommissioningClusterRemoveNetworkParams](mtrnetworkcommissioningclusterremovenetworkparams.md)
+- [MTRNetworkCommissioningClusterReorderNetworkParams](mtrnetworkcommissioningclusterreordernetworkparams.md)
+- [MTRNetworkCommissioningClusterScanNetworksParams](mtrnetworkcommissioningclusterscannetworksparams.md)
+- [MTRIdentifyClusterTriggerEffectParams](mtridentifyclustertriggereffectparams.md)
+- [MTRKeypadInputClusterSendKeyParams](mtrkeypadinputclustersendkeyparams.md)
+- [MTRKeypadInputClusterSendKeyResponseParams](mtrkeypadinputclustersendkeyresponseparams.md)
+- [MTRLowPowerClusterSleepParams](mtrlowpowerclustersleepparams.md)
+- [MTRMediaInputClusterHideInputStatusParams](mtrmediainputclusterhideinputstatusparams.md)
+- [MTRMediaInputClusterInputInfoStruct](mtrmediainputclusterinputinfostruct.md)
+- [MTRMediaInputClusterRenameInputParams](mtrmediainputclusterrenameinputparams.md)
+- [MTRMediaInputClusterSelectInputParams](mtrmediainputclusterselectinputparams.md)
+- [MTRGroupKeyManagementClusterKeySetWriteParams](mtrgroupkeymanagementclusterkeysetwriteparams.md)
+- [MTRGroupsFeature](mtrgroupsfeature.md)
+- [MTRGroupsClusterAddGroupIfIdentifyingParams](mtrgroupsclusteraddgroupifidentifyingparams.md)
+- [MTRGroupsClusterAddGroupParams](mtrgroupsclusteraddgroupparams.md)
+- [MTRGroupsClusterAddGroupResponseParams](mtrgroupsclusteraddgroupresponseparams.md)
+- [MTRGroupsClusterGetGroupMembershipParams](mtrgroupsclustergetgroupmembershipparams.md)
+- [MTRGroupsClusterGetGroupMembershipResponseParams](mtrgroupsclustergetgroupmembershipresponseparams.md)
+- [MTRGroupsClusterRemoveAllGroupsParams](mtrgroupsclusterremoveallgroupsparams.md)
+- [MTRGroupsClusterRemoveGroupParams](mtrgroupsclusterremovegroupparams.md)
+- [MTRGroupsClusterRemoveGroupResponseParams](mtrgroupsclusterremovegroupresponseparams.md)
+- [MTRGroupsClusterViewGroupParams](mtrgroupsclusterviewgroupparams.md)
+- [MTRGroupsClusterViewGroupResponseParams](mtrgroupsclusterviewgroupresponseparams.md)
+- [MTRIdentifyClusterIdentifyParams](mtridentifyclusteridentifyparams.md)
+- [MTRGeneralDiagnosticsClusterRadioFaultChangeEvent](mtrgeneraldiagnosticsclusterradiofaultchangeevent.md)
+- [MTRGeneralDiagnosticsClusterTestEventTriggerParams](mtrgeneraldiagnosticsclustertesteventtriggerparams.md)
+- [MTRGroupKeyManagementClusterGroupInfoMapStruct](mtrgroupkeymanagementclustergroupinfomapstruct.md)
+- [MTRGroupKeyManagementClusterGroupKeyMapStruct](mtrgroupkeymanagementclustergroupkeymapstruct.md)
+- [MTRGroupKeyManagementClusterGroupKeySetStruct](mtrgroupkeymanagementclustergroupkeysetstruct.md)
+- [MTRGroupKeyManagementClusterKeySetReadAllIndicesParams](mtrgroupkeymanagementclusterkeysetreadallindicesparams.md)
+- [MTRGroupKeyManagementClusterKeySetReadAllIndicesResponseParams](mtrgroupkeymanagementclusterkeysetreadallindicesresponseparams.md)
+- [MTRGroupKeyManagementClusterKeySetReadParams](mtrgroupkeymanagementclusterkeysetreadparams.md)
+- [MTRGroupKeyManagementClusterKeySetReadResponseParams](mtrgroupkeymanagementclusterkeysetreadresponseparams.md)
+- [MTRGroupKeyManagementClusterKeySetRemoveParams](mtrgroupkeymanagementclusterkeysetremoveparams.md)
+- [MTRGeneralCommissioningClusterBasicCommissioningInfo](mtrgeneralcommissioningclusterbasiccommissioninginfo.md)
+- [MTRGeneralCommissioningClusterCommissioningCompleteParams](mtrgeneralcommissioningclustercommissioningcompleteparams.md)
+- [MTRGeneralCommissioningClusterCommissioningCompleteResponseParams](mtrgeneralcommissioningclustercommissioningcompleteresponseparams.md)
+- [MTRGeneralCommissioningClusterSetRegulatoryConfigParams](mtrgeneralcommissioningclustersetregulatoryconfigparams.md)
+- [MTRGeneralCommissioningClusterSetRegulatoryConfigResponseParams](mtrgeneralcommissioningclustersetregulatoryconfigresponseparams.md)
+- [MTRGeneralDiagnosticsClusterBootReasonEvent](mtrgeneraldiagnosticsclusterbootreasonevent.md)
+- [MTRGeneralDiagnosticsClusterHardwareFaultChangeEvent](mtrgeneraldiagnosticsclusterhardwarefaultchangeevent.md)
+- [MTRGeneralDiagnosticsClusterNetworkFaultChangeEvent](mtrgeneraldiagnosticsclusternetworkfaultchangeevent.md)
+- [MTRGeneralDiagnosticsClusterNetworkInterface](mtrgeneraldiagnosticsclusternetworkinterface.md)
+- [MTRElectricalMeasurementClusterGetMeasurementProfileResponseCommandParams](mtrelectricalmeasurementclustergetmeasurementprofileresponsecommandparams.md): Deprecated.
+- [MTRElectricalMeasurementClusterGetProfileInfoCommandParams](mtrelectricalmeasurementclustergetprofileinfocommandparams.md): Deprecated.
+- [MTRElectricalMeasurementClusterGetProfileInfoResponseCommandParams](mtrelectricalmeasurementclustergetprofileinforesponsecommandparams.md): Deprecated.
+- [MTREthernetNetworkDiagnosticsClusterResetCountsParams](mtrethernetnetworkdiagnosticsclusterresetcountsparams.md)
+- [MTRFixedLabelClusterLabelStruct](mtrfixedlabelclusterlabelstruct.md)
+- [MTRGeneralCommissioningClusterArmFailSafeParams](mtrgeneralcommissioningclusterarmfailsafeparams.md)
+- [MTRGeneralCommissioningClusterArmFailSafeResponseParams](mtrgeneralcommissioningclusterarmfailsaferesponseparams.md)
+- [MTRContentLauncherClusterStyleInformationStruct](mtrcontentlauncherclusterstyleinformationstruct.md)
+- [MTRDescriptorClusterDeviceTypeStruct](mtrdescriptorclusterdevicetypestruct.md)
+- [MTRDiagnosticLogsClusterRetrieveLogsRequestParams](mtrdiagnosticlogsclusterretrievelogsrequestparams.md)
+- [MTRDiagnosticLogsClusterRetrieveLogsResponseParams](mtrdiagnosticlogsclusterretrievelogsresponseparams.md)
+- [MTRContentLauncherClusterLaunchContentParams](mtrcontentlauncherclusterlaunchcontentparams.md)
+- [MTRContentLauncherClusterLaunchURLParams](mtrcontentlauncherclusterlaunchurlparams.md)
+- [MTRContentLauncherClusterLauncherResponseParams](mtrcontentlauncherclusterlauncherresponseparams.md)
+- [MTRContentLauncherClusterParameterStruct](mtrcontentlauncherclusterparameterstruct.md)
+- [MTRAccessControlClusterAccessControlEntryChangedEvent](mtraccesscontrolclusteraccesscontrolentrychangedevent.md)
+- [MTRAccessControlClusterAccessControlEntryStruct](mtraccesscontrolclusteraccesscontrolentrystruct.md)
+- [MTRAccessControlClusterAccessControlExtensionChangedEvent](mtraccesscontrolclusteraccesscontrolextensionchangedevent.md)
+- [MTRAccessControlClusterAccessControlExtensionStruct](mtraccesscontrolclusteraccesscontrolextensionstruct.md)
+- [MTRAccessControlClusterTarget](mtraccesscontrolclustertarget.md): Deprecated.
+- [MTRAccountLoginClusterGetSetupPINParams](mtraccountloginclustergetsetuppinparams.md)
+- [MTRAccountLoginClusterGetSetupPINResponseParams](mtraccountloginclustergetsetuppinresponseparams.md)
+- [MTRAccountLoginClusterLoginParams](mtraccountloginclusterloginparams.md)
+- [MTRAccountLoginClusterLogoutParams](mtraccountloginclusterlogoutparams.md)
+- [MTRAdministratorCommissioningClusterOpenBasicCommissioningWindowParams](mtradministratorcommissioningclusteropenbasiccommissioningwindowparams.md)
+- [MTRAdministratorCommissioningClusterOpenCommissioningWindowParams](mtradministratorcommissioningclusteropencommissioningwindowparams.md)
+- [MTRAdministratorCommissioningClusterRevokeCommissioningParams](mtradministratorcommissioningclusterrevokecommissioningparams.md)
+- [MTRApplicationBasicClusterApplicationStruct](mtrapplicationbasicclusterapplicationstruct.md)
+- [MTRAudioOutputClusterOutputInfoStruct](mtraudiooutputclusteroutputinfostruct.md)
+- [MTRAudioOutputClusterRenameOutputParams](mtraudiooutputclusterrenameoutputparams.md)
+- [MTRAudioOutputClusterSelectOutputParams](mtraudiooutputclusterselectoutputparams.md)
+- [MTRBarrierControlClusterBarrierControlGoToPercentParams](mtrbarriercontrolclusterbarriercontrolgotopercentparams.md): Deprecated.
+- [MTRBarrierControlClusterBarrierControlStopParams](mtrbarriercontrolclusterbarriercontrolstopparams.md): Deprecated.
+- [MTRBasicInformationClusterCapabilityMinimaStruct](mtrbasicinformationclustercapabilityminimastruct.md)
+- [MTRBasicInformationClusterLeaveEvent](mtrbasicinformationclusterleaveevent.md)
+- [MTRBasicInformationClusterReachableChangedEvent](mtrbasicinformationclusterreachablechangedevent.md)
+- [MTRBasicInformationClusterStartUpEvent](mtrbasicinformationclusterstartupevent.md)
+- [MTRBindingClusterTargetStruct](mtrbindingclustertargetstruct.md)
+- [MTRBooleanStateClusterStateChangeEvent](mtrbooleanstateclusterstatechangeevent.md)
+- [MTRBridgedDeviceBasicInformationClusterReachableChangedEvent](mtrbridgeddevicebasicinformationclusterreachablechangedevent.md)
+- [MTRBridgedDeviceBasicInformationClusterStartUpEvent](mtrbridgeddevicebasicinformationclusterstartupevent.md)
+- [MTRCertificates](mtrcertificates.md)
+- [MTRChannelClusterChangeChannelByNumberParams](mtrchannelclusterchangechannelbynumberparams.md)
+- [MTRChannelClusterChangeChannelParams](mtrchannelclusterchangechannelparams.md)
+- [MTRChannelClusterChangeChannelResponseParams](mtrchannelclusterchangechannelresponseparams.md)
+- [MTRChannelClusterChannelInfoStruct](mtrchannelclusterchannelinfostruct.md)
+- [MTRChannelClusterLineupInfoStruct](mtrchannelclusterlineupinfostruct.md)
+- [MTRChannelClusterSkipChannelParams](mtrchannelclusterskipchannelparams.md)
+- [MTRClusterAccessControl](mtrclusteraccesscontrol.md)
+- [MTRClusterAccountLogin](mtrclusteraccountlogin.md)
+- [MTRClusterAdministratorCommissioning](mtrclusteradministratorcommissioning.md)
+- [MTRClusterApplicationBasic](mtrclusterapplicationbasic.md)
+- [MTRClusterApplicationLauncher](mtrclusterapplicationlauncher.md)
+- [MTRClusterAudioOutput](mtrclusteraudiooutput.md)
+- [MTRClusterBallastConfiguration](mtrclusterballastconfiguration.md)
+- [MTRClusterBarrierControl](mtrclusterbarriercontrol.md): Deprecated.
+- [MTRClusterBasicInformation](mtrclusterbasicinformation.md)
+- [MTRClusterBinaryInputBasic](mtrclusterbinaryinputbasic.md): Deprecated.
+- [MTRClusterBinding](mtrclusterbinding.md)
+- [MTRClusterBooleanState](mtrclusterbooleanstate.md)
+- [MTRClusterBridgedDeviceBasic](mtrclusterbridgeddevicebasic.md): Deprecated.
+- [MTRClusterBridgedDeviceBasicInformation](mtrclusterbridgeddevicebasicinformation.md)
+- [MTRClusterChannel](mtrclusterchannel.md)
+- [MTRClusterColorControl](mtrclustercolorcontrol.md)
+- [MTRClusterContentLauncher](mtrclustercontentlauncher.md)
+- [MTRClusterDescriptor](mtrclusterdescriptor.md)
+- [MTRClusterDiagnosticLogs](mtrclusterdiagnosticlogs.md)
+- [MTRClusterDoorLock](mtrclusterdoorlock.md)
+- [MTRClusterElectricalMeasurement](mtrclusterelectricalmeasurement.md): Deprecated.
+- [MTRClusterEthernetNetworkDiagnostics](mtrclusterethernetnetworkdiagnostics.md)
+- [MTRClusterFanControl](mtrclusterfancontrol.md)
+- [MTRClusterFixedLabel](mtrclusterfixedlabel.md)
+- [MTRClusterFlowMeasurement](mtrclusterflowmeasurement.md)
+- [MTRClusterGeneralCommissioning](mtrclustergeneralcommissioning.md)
+- [MTRClusterGeneralDiagnostics](mtrclustergeneraldiagnostics.md)
+- [MTRClusterGroupKeyManagement](mtrclustergroupkeymanagement.md)
+- [MTRClusterGroups](mtrclustergroups.md)
+- [MTRClusterIdentify](mtrclusteridentify.md)
+- [MTRClusterIlluminanceMeasurement](mtrclusterilluminancemeasurement.md)
+- [MTRClusterKeypadInput](mtrclusterkeypadinput.md)
+- [MTRClusterLevelControl](mtrclusterlevelcontrol.md)
+- [MTRClusterLocalizationConfiguration](mtrclusterlocalizationconfiguration.md)
+- [MTRClusterLowPower](mtrclusterlowpower.md)
+- [MTRClusterMediaInput](mtrclustermediainput.md)
+- [MTRClusterMediaPlayback](mtrclustermediaplayback.md)
+- [MTRClusterModeSelect](mtrclustermodeselect.md)
+- [MTRClusterNetworkCommissioning](mtrclusternetworkcommissioning.md)
+- [MTRClusterOTASoftwareUpdateProvider](mtrclusterotasoftwareupdateprovider-wrfu.md)
+- [MTRClusterOTASoftwareUpdateRequestor](mtrclusterotasoftwareupdaterequestor-5qeao.md)
+- [MTRClusterOccupancySensing](mtrclusteroccupancysensing.md)
+- [MTRClusterOnOff](mtrclusteronoff.md)
+- [MTRClusterOnOffSwitchConfiguration](mtrclusteronoffswitchconfiguration.md): Deprecated.
+- [MTRClusterOperationalCredentials](mtrclusteroperationalcredentials.md)
+- [MTRClusterPowerSource](mtrclusterpowersource.md)
+- [MTRClusterPowerSourceConfiguration](mtrclusterpowersourceconfiguration.md)
+- [MTRClusterPressureMeasurement](mtrclusterpressuremeasurement.md)
+- [MTRClusterPumpConfigurationAndControl](mtrclusterpumpconfigurationandcontrol.md)
+- [MTRClusterRelativeHumidityMeasurement](mtrclusterrelativehumiditymeasurement.md)
+- [MTRClusterSoftwareDiagnostics](mtrclustersoftwarediagnostics.md)
+- [MTRClusterSwitch](mtrclusterswitch.md)
+- [MTRClusterTargetNavigator](mtrclustertargetnavigator.md)
+- [MTRClusterTemperatureMeasurement](mtrclustertemperaturemeasurement.md)
+- [MTRClusterThermostat](mtrclusterthermostat.md)
+- [MTRClusterThermostatUserInterfaceConfiguration](mtrclusterthermostatuserinterfaceconfiguration.md)
+- [MTRClusterThreadNetworkDiagnostics](mtrclusterthreadnetworkdiagnostics.md)
+- [MTRClusterTimeFormatLocalization](mtrclustertimeformatlocalization.md)
+- [MTRClusterUnitLocalization](mtrclusterunitlocalization.md)
+- [MTRClusterUnitTesting](mtrclusterunittesting.md)
+- [MTRClusterUserLabel](mtrclusteruserlabel.md)
+- [MTRClusterWakeOnLAN](mtrclusterwakeonlan-6dyo6.md)
+- [MTRClusterWiFiNetworkDiagnostics](mtrclusterwifinetworkdiagnostics.md)
+- [MTRClusterWindowCovering](mtrclusterwindowcovering.md)
+- [MTRClusterActions](mtrclusteractions.md)
+- [MTRBridgedDeviceBasicClusterLeaveEvent](mtrbridgeddevicebasicclusterleaveevent.md): Deprecated.
+- [MTRBridgedDeviceBasicClusterReachableChangedEvent](mtrbridgeddevicebasicclusterreachablechangedevent.md): Deprecated.
+- [MTRBridgedDeviceBasicClusterShutDownEvent](mtrbridgeddevicebasicclustershutdownevent.md): Deprecated.
+- [MTRBridgedDeviceBasicClusterStartUpEvent](mtrbridgeddevicebasicclusterstartupevent.md): Deprecated.
+- [MTRBridgedDeviceBasicInformationClusterLeaveEvent](mtrbridgeddevicebasicinformationclusterleaveevent.md)
+- [MTRBridgedDeviceBasicInformationClusterShutDownEvent](mtrbridgeddevicebasicinformationclustershutdownevent.md)
+- [MTRBasicInformationClusterShutDownEvent](mtrbasicinformationclustershutdownevent.md)
+- [MTRClusterOtaSoftwareUpdateProvider](mtrclusterotasoftwareupdateprovider-4p8us.md): Deprecated.
+- [MTRTestClusterClusterTestEnumsRequestParams](mtrtestclusterclustertestenumsrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestEnumsResponseParams](mtrtestclusterclustertestenumsresponseparams.md): Deprecated.
+- [MTRTestClusterClusterTestEventEvent](mtrtestclusterclustertesteventevent.md): Deprecated.
+- [MTRTestClusterClusterTestFabricScoped](mtrtestclusterclustertestfabricscoped.md): Deprecated.
+- [MTRTestClusterClusterTestFabricScopedEventEvent](mtrtestclusterclustertestfabricscopedeventevent.md): Deprecated.
+- [MTRTestClusterClusterTestListInt8UArgumentRequestParams](mtrtestclusterclustertestlistint8uargumentrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestListInt8UReverseRequestParams](mtrtestclusterclustertestlistint8ureverserequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestListInt8UReverseResponseParams](mtrtestclusterclustertestlistint8ureverseresponseparams.md): Deprecated.
+- [MTRTestClusterClusterTestListNestedStructListArgumentRequestParams](mtrtestclusterclustertestlistnestedstructlistargumentrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestListStructArgumentRequestParams](mtrtestclusterclustertestliststructargumentrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestListStructOctet](mtrtestclusterclustertestliststructoctet.md): Deprecated.
+- [MTRTestClusterClusterTestNestedStructArgumentRequestParams](mtrtestclusterclustertestnestedstructargumentrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestNestedStructListArgumentRequestParams](mtrtestclusterclustertestnestedstructlistargumentrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestNotHandledParams](mtrtestclusterclustertestnothandledparams.md): Deprecated.
+- [MTRTestClusterClusterTestNullableOptionalRequestParams](mtrtestclusterclustertestnullableoptionalrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestNullableOptionalResponseParams](mtrtestclusterclustertestnullableoptionalresponseparams.md): Deprecated.
+- [MTRTestClusterClusterTestParams](mtrtestclusterclustertestparams.md): Deprecated.
+- [MTRTestClusterClusterTestSimpleArgumentRequestParams](mtrtestclusterclustertestsimpleargumentrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestSimpleArgumentResponseParams](mtrtestclusterclustertestsimpleargumentresponseparams.md): Deprecated.
+- [MTRTestClusterClusterTestSimpleOptionalArgumentRequestParams](mtrtestclusterclustertestsimpleoptionalargumentrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestSpecificParams](mtrtestclusterclustertestspecificparams.md): Deprecated.
+- [MTRTestClusterClusterTestSpecificResponseParams](mtrtestclusterclustertestspecificresponseparams.md): Deprecated.
+- [MTRTestClusterClusterTestStructArgumentRequestParams](mtrtestclusterclusterteststructargumentrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestStructArrayArgumentRequestParams](mtrtestclusterclusterteststructarrayargumentrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestStructArrayArgumentResponseParams](mtrtestclusterclusterteststructarrayargumentresponseparams.md): Deprecated.
+- [MTRTestClusterClusterTestUnknownCommandParams](mtrtestclusterclustertestunknowncommandparams.md): Deprecated.
+- [MTRTestClusterClusterTimedInvokeRequestParams](mtrtestclusterclustertimedinvokerequestparams.md): Deprecated.
+- [MTRChannelClusterChannelInfo](mtrchannelclusterchannelinfo.md): Deprecated.
+- [MTRChannelClusterLineupInfo](mtrchannelclusterlineupinfo.md): Deprecated.
+- [MTRContentLauncherClusterStyleInformation](mtrcontentlauncherclusterstyleinformation.md): Deprecated.
+- [MTRDescriptorClusterDeviceType](mtrdescriptorclusterdevicetype.md): Deprecated.
+- [MTRContentLauncherClusterLaunchResponseParams](mtrcontentlauncherclusterlaunchresponseparams.md): Deprecated.
+- [MTRContentLauncherClusterParameter](mtrcontentlauncherclusterparameter.md): Deprecated.
+- [MTRAccessControlClusterAccessControlEntry](mtraccesscontrolclusteraccesscontrolentry.md): Deprecated.
+- [MTRAccessControlClusterExtensionEntry](mtraccesscontrolclusterextensionentry.md): Deprecated.
+- [MTRApplicationBasicClusterApplicationBasicApplication](mtrapplicationbasicclusterapplicationbasicapplication.md): Deprecated.
+- [MTRAudioOutputClusterOutputInfo](mtraudiooutputclusteroutputinfo.md): Deprecated.
+- [MTRTargetNavigatorClusterTargetInfo](mtrtargetnavigatorclustertargetinfo.md): Deprecated.
+- [MTRMediaPlaybackClusterPlaybackPosition](mtrmediaplaybackclusterplaybackposition.md): Deprecated.
+- [MTRMediaPlaybackClusterStopPlaybackParams](mtrmediaplaybackclusterstopplaybackparams.md): Deprecated.
+- [MTRModeSelectClusterSemanticTag](mtrmodeselectclustersemantictag.md): Deprecated.
+- [MTRMediaInputClusterInputInfo](mtrmediainputclusterinputinfo.md): Deprecated.
+- [MTRDoorLockClusterDlCredential](mtrdoorlockclusterdlcredential.md): Deprecated.
+- [MTRClusterWakeOnLan](mtrclusterwakeonlan-6e8me.md): Deprecated.
+- [MTRClusterTestCluster](mtrclustertestcluster.md): Deprecated.
+- [MTRClusterBasic](mtrclusterbasic.md): Deprecated.
+- [MTRBasicClusterMfgSpecificPingParams](mtrbasicclustermfgspecificpingparams.md): Deprecated.
+- [MTRGeneralDiagnosticsClusterNetworkInterfaceType](mtrgeneraldiagnosticsclusternetworkinterfacetype.md): Deprecated.
+- [MTRManualSetupPayloadParser](mtrmanualsetuppayloadparser.md): Deprecated.
+- [MTRClusterOtaSoftwareUpdateRequestor](mtrclusterotasoftwareupdaterequestor-22dfp.md): Deprecated.
+- [MTRBaseClusterBasic](mtrbaseclusterbasic.md): Deprecated.
+- [MTRBaseClusterOtaSoftwareUpdateProvider](mtrbaseclusterotasoftwareupdateprovider-2vync.md): Deprecated.
+- [MTRBaseClusterOtaSoftwareUpdateRequestor](mtrbaseclusterotasoftwareupdaterequestor-35vsy.md): Deprecated.
+- [MTRBaseClusterTestCluster](mtrbaseclustertestcluster.md): Deprecated.
+- [MTRBaseClusterWakeOnLan](mtrbaseclusterwakeonlan-1dp5d.md): Deprecated.
+- [MTRBasicClusterCapabilityMinimaStruct](mtrbasicclustercapabilityminimastruct.md): Deprecated.
+- [MTRBasicClusterLeaveEvent](mtrbasicclusterleaveevent.md): Deprecated.
+- [MTRBasicClusterReachableChangedEvent](mtrbasicclusterreachablechangedevent.md): Deprecated.
+- [MTRBasicClusterShutDownEvent](mtrbasicclustershutdownevent.md): Deprecated.
+- [MTRBasicClusterStartUpEvent](mtrbasicclusterstartupevent.md): Deprecated.
+
+### Data types
+
+- [MTRAsyncCallbackReadyHandler](mtrasynccallbackreadyhandler.md)
+- [MTRCSRDERBytes](mtrcsrderbytes.md)
+- [MTRCertificateDERBytes](mtrcertificatederbytes.md)
+- [MTRCertificateTLVBytes](mtrcertificatetlvbytes.md)
+- [MTRDeviceControllerGetterHandler](mtrdevicecontrollergetterhandler.md)
+- [MTRDeviceOpenCommissioningWindowHandler](mtrdeviceopencommissioningwindowhandler.md)
+- [MTRDeviceReportHandler](mtrdevicereporthandler.md)
+- [MTRDeviceResponseHandler](mtrdeviceresponsehandler.md)
+- [MTRDeviceResubscriptionScheduledHandler](mtrdeviceresubscriptionscheduledhandler.md)
+- [MTRStatusCompletion](mtrstatuscompletion.md)
+- [MTRSubscriptionEstablishedHandler](mtrsubscriptionestablishedhandler.md)
+- [MTRTLVBytes](mtrtlvbytes.md)
+- [MTRValuesHandler](mtrvalueshandler.md)
+- [MTRXPCConnectBlock](mtrxpcconnectblock.md)
+- [ResponseHandler](responsehandler.md): Deprecated.
+- [StatusCompletion](statuscompletion.md): Deprecated.
+- [SubscriptionEstablishedHandler](subscriptionestablishedhandler.md): Deprecated.
+- [MTRDeviceConnectionCallback](mtrdeviceconnectioncallback.md): Deprecated.
+- [MTRNOCChainGenerationCompleteHandler](mtrnocchaingenerationcompletehandler.md): Deprecated.
+
+### Constants
+
+- [MTRArrayValueType](mtrarrayvaluetype.md)
+- [MTRAttributePathKey](mtrattributepathkey.md)
+- [MTRBooleanValueType](mtrbooleanvaluetype.md)
+- [MTRCommandPathKey](mtrcommandpathkey.md)
+- [MTRContextTagKey](mtrcontexttagkey.md)
+- [MTRDataKey](mtrdatakey.md)
+- [MTRDoubleValueType](mtrdoublevaluetype.md)
+- [MTRErrorDomain](mtrerrordomain.md)
+- [MTRErrorKey](mtrerrorkey.md)
+- [MTREventNumberKey](mtreventnumberkey.md)
+- [MTREventPathKey](mtreventpathkey.md)
+- [MTREventPriorityKey](mtreventprioritykey.md)
+- [MTREventSystemUpTimeKey](mtreventsystemuptimekey.md)
+- [MTREventTimeTypeKey](mtreventtimetypekey.md)
+- [MTREventTimestampDateKey](mtreventtimestampdatekey.md)
+- [MTRFloatValueType](mtrfloatvaluetype.md)
+- [MTRInteractionErrorDomain](mtrinteractionerrordomain.md)
+- [MTRNullValueType](mtrnullvaluetype.md)
+- [MTROctetStringValueType](mtroctetstringvaluetype.md)
+- [MTRSignedIntegerValueType](mtrsignedintegervaluetype.md)
+- [MTRSizeThreadMasterKey](mtrsizethreadmasterkey.md)
+- [MTRSizeThreadNetworkName](mtrsizethreadnetworkname.md)
+- [MTRSizeThreadPANID](mtrsizethreadpanid.md)
+- [MTRSizeThreadPSKc](mtrsizethreadpskc.md)
+- [MTRStructureValueType](mtrstructurevaluetype.md)
+- [MTRTypeKey](mtrtypekey.md)
+- [MTRUTF8StringValueType](mtrutf8stringvaluetype.md)
+- [MTRUnsignedIntegerValueType](mtrunsignedintegervaluetype.md)
+- [MTRValueKey](mtrvaluekey.md)
+- [MTRSizeThreadExtendedPANID](mtrsizethreadextendedpanid-wb5c.md)
+- [MTRSizeThreadExtendedPanId](mtrsizethreadextendedpanid-2daa7.md): Deprecated.
+
+### Structures
+
+- [MTRApplicationLauncherFeature](mtrapplicationlauncherfeature.md)
+- [MTRAudioOutputFeature](mtraudiooutputfeature.md)
+- [MTRChannelFeature](mtrchannelfeature.md)
+- [MTRContentLauncherFeature](mtrcontentlauncherfeature.md)
+- [MTRContentLauncherSupportedStreamingProtocol](mtrcontentlaunchersupportedstreamingprotocol.md): Deprecated.
+- [MTRDiscoveryCapabilities](mtrdiscoverycapabilities.md)
+- [MTREthernetNetworkDiagnosticsFeature](mtrethernetnetworkdiagnosticsfeature.md)
+- [MTRFanControlFeature](mtrfancontrolfeature.md)
+- [MTRFanControlRockSupportMask](mtrfancontrolrocksupportmask.md): Deprecated.
+- [MTRFanControlWindSettingMask](mtrfancontrolwindsettingmask.md): Deprecated.
+- [MTRFanControlWindSupportMask](mtrfancontrolwindsupportmask.md): Deprecated.
+- [MTRGroupsGroupClusterFeature](mtrgroupsgroupclusterfeature.md): Deprecated.
+- [MTRInteractionError](mtrinteractionerror.md)
+- [MTRKeypadInputFeature](mtrkeypadinputfeature.md)
+- [MTRMediaInputFeature](mtrmediainputfeature.md)
+- [MTRMediaPlaybackFeature](mtrmediaplaybackfeature.md)
+- [MTRModeSelectFeature](mtrmodeselectfeature.md)
+- [MTRNetworkCommissioningFeature](mtrnetworkcommissioningfeature.md)
+- [MTRNetworkCommissioningWiFiSecurity](mtrnetworkcommissioningwifisecurity.md): Deprecated.
+- [MTROccupancySensingOccupancyBitmap](mtroccupancysensingoccupancybitmap.md)
+- [MTROccupancySensingOccupancySensorTypeBitmap](mtroccupancysensingoccupancysensortypebitmap.md)
+- [MTRPressureMeasurementPressureFeature](mtrpressuremeasurementpressurefeature.md): Deprecated.
+- [MTRSwitchFeature](mtrswitchfeature.md)
+- [MTRUnitLocalizationFeature](mtrunitlocalizationfeature.md)
+
+### Enumerations
+
+- [MTRAccessControlAuthMode](mtraccesscontrolauthmode.md): Deprecated.
+- [MTRAccessControlChangeType](mtraccesscontrolchangetype.md)
+- [MTRAccessControlEntryAuthMode](mtraccesscontrolentryauthmode.md)
+- [MTRAccessControlEntryPrivilege](mtraccesscontrolentryprivilege.md)
+- [MTRAccessControlPrivilege](mtraccesscontrolprivilege.md): Deprecated.
+- [MTRAdministratorCommissioningCommissioningWindowStatus](mtradministratorcommissioningcommissioningwindowstatus.md)
+- [MTRAdministratorCommissioningStatusCode](mtradministratorcommissioningstatuscode.md)
+- [MTRApplicationBasicApplicationStatus](mtrapplicationbasicapplicationstatus.md)
+- [MTRApplicationLauncherStatus](mtrapplicationlauncherstatus.md)
+- [MTRAttributeIDType](mtrattributeidtype.md)
+- [MTRAudioOutputFeature](mtraudiooutputfeature.md)
+- [MTRAudioOutputOutputType](mtraudiooutputoutputtype.md)
+- [MTRBasicInformationColor](mtrbasicinformationcolor.md)
+- [MTRBasicInformationProductFinish](mtrbasicinformationproductfinish.md)
+- [MTRBridgedDeviceBasicInformationColor](mtrbridgeddevicebasicinformationcolor.md)
+- [MTRBridgedDeviceBasicInformationProductFinish](mtrbridgeddevicebasicinformationproductfinish.md)
+- [MTRChannelFeature](mtrchannelfeature.md)
+- [MTRChannelLineupInfoType](mtrchannellineupinfotype.md)
+- [MTRChannelStatus](mtrchannelstatus.md)
+- [MTRClusterIDType](mtrclusteridtype.md)
+- [MTRCommandIDType](mtrcommandidtype.md)
+- [MTRCommissioningFlow](mtrcommissioningflow.md)
+- [MTRCommissioningStatus](mtrcommissioningstatus.md)
+- [MTRDeviceState](mtrdevicestate.md)
+- [MTRDiagnosticLogsIntent](mtrdiagnosticlogsintent.md)
+- [MTRDiagnosticLogsLogsIntent](mtrdiagnosticlogslogsintent.md): Deprecated.
+- [MTRDiagnosticLogsLogsStatus](mtrdiagnosticlogslogsstatus.md): Deprecated.
+- [MTRDiagnosticLogsLogsTransferProtocol](mtrdiagnosticlogslogstransferprotocol.md): Deprecated.
+- [MTRDiagnosticLogsStatus](mtrdiagnosticlogsstatus.md)
+- [MTRDiagnosticLogsTransferProtocol](mtrdiagnosticlogstransferprotocol.md)
+- [MTRDiscoveryCapabilities](mtrdiscoverycapabilities.md)
+- [MTRDoorLockDlAlarmCode](mtrdoorlockdlalarmcode.md): Deprecated.
+- [MTRDoorLockDlCredentialRule](mtrdoorlockdlcredentialrule.md): Deprecated.
+- [MTRDoorLockDlCredentialType](mtrdoorlockdlcredentialtype.md): Deprecated.
+- [MTRDoorLockDlDataOperationType](mtrdoorlockdldataoperationtype.md): Deprecated.
+- [MTRDoorLockDlDoorState](mtrdoorlockdldoorstate.md): Deprecated.
+- [MTRDoorLockDlLockDataType](mtrdoorlockdllockdatatype.md): Deprecated.
+- [MTRDoorLockDlLockOperationType](mtrdoorlockdllockoperationtype.md): Deprecated.
+- [MTRDoorLockDlOperatingMode](mtrdoorlockdloperatingmode.md): Deprecated.
+- [MTRDoorLockDlOperationError](mtrdoorlockdloperationerror.md): Deprecated.
+- [MTRDoorLockDlOperationSource](mtrdoorlockdloperationsource.md): Deprecated.
+- [MTRDoorLockDlUserStatus](mtrdoorlockdluserstatus.md): Deprecated.
+- [MTRDoorLockDlUserType](mtrdoorlockdlusertype.md): Deprecated.
+- [MTRDoorLockOperationEventCode](mtrdoorlockoperationeventcode.md): Deprecated.
+- [MTRDoorLockProgrammingEventCode](mtrdoorlockprogrammingeventcode.md): Deprecated.
+- [MTRDoorLockSetPinOrIdStatus](mtrdoorlocksetpinoridstatus.md): Deprecated.
+- [MTREthernetNetworkDiagnosticsFeature](mtrethernetnetworkdiagnosticsfeature.md)
+- [MTREthernetNetworkDiagnosticsPHYRate](mtrethernetnetworkdiagnosticsphyrate.md)
+- [MTREthernetNetworkDiagnosticsPHYRateType](mtrethernetnetworkdiagnosticsphyratetype.md): Deprecated.
+- [MTREventIDType](mtreventidtype.md)
+- [MTREventPriority](mtreventpriority.md)
+- [MTREventTimeType](mtreventtimetype.md)
+- [MTRFanControlFanModeSequenceType](mtrfancontrolfanmodesequencetype.md): Deprecated.
+- [MTRFanControlFanModeType](mtrfancontrolfanmodetype.md): Deprecated.
+- [MTRFanControlFeature](mtrfancontrolfeature.md)
+- [MTRFanControlRockSupportMask](mtrfancontrolrocksupportmask.md): Deprecated.
+- [MTRFanControlWindSettingMask](mtrfancontrolwindsettingmask.md): Deprecated.
+- [MTRFanControlWindSupportMask](mtrfancontrolwindsupportmask.md): Deprecated.
+- [MTRGeneralCommissioningCommissioningError](mtrgeneralcommissioningcommissioningerror.md)
+- [MTRGeneralCommissioningRegulatoryLocationType](mtrgeneralcommissioningregulatorylocationtype.md)
+- [MTRGeneralDiagnosticsBootReason](mtrgeneraldiagnosticsbootreason.md)
+- [MTRGeneralDiagnosticsBootReasonType](mtrgeneraldiagnosticsbootreasontype.md): Deprecated.
+- [MTRGeneralDiagnosticsHardwareFault](mtrgeneraldiagnosticshardwarefault.md)
+- [MTRGeneralDiagnosticsHardwareFaultType](mtrgeneraldiagnosticshardwarefaulttype.md): Deprecated.
+- [MTRGeneralDiagnosticsInterfaceType](mtrgeneraldiagnosticsinterfacetype.md)
+- [MTRGeneralDiagnosticsNetworkFault](mtrgeneraldiagnosticsnetworkfault.md)
+- [MTRGeneralDiagnosticsNetworkFaultType](mtrgeneraldiagnosticsnetworkfaulttype.md): Deprecated.
+- [MTRGeneralDiagnosticsRadioFault](mtrgeneraldiagnosticsradiofault.md)
+- [MTRGeneralDiagnosticsRadioFaultType](mtrgeneraldiagnosticsradiofaulttype.md): Deprecated.
+- [MTRGroupKeyManagementGroupKeySecurityPolicy](mtrgroupkeymanagementgroupkeysecuritypolicy.md)
+- [MTRGroupsFeature](mtrgroupsfeature.md)
+- [MTRGroupsGroupClusterFeature](mtrgroupsgroupclusterfeature.md): Deprecated.
+- [MTRIdentifyEffectIdentifier](mtridentifyeffectidentifier.md)
+- [MTRIdentifyEffectVariant](mtridentifyeffectvariant.md)
+- [MTRIdentifyType](mtridentifytype.md)
+- [MTRIlluminanceMeasurementLightSensorType](mtrilluminancemeasurementlightsensortype.md)
+- [MTRInteractionError.Code](mtrinteractionerror/code.md)
+- [MTRKeypadInputCecKeyCode](mtrkeypadinputceckeycode-85trg.md): Deprecated.
+- [MTRKeypadInputFeature](mtrkeypadinputfeature.md)
+- [MTRKeypadInputStatus](mtrkeypadinputstatus.md)
+- [MTRLogType](mtrlogtype.md)
+- [MTRMediaInputFeature](mtrmediainputfeature.md)
+- [MTRMediaInputInputType](mtrmediainputinputtype.md)
+- [MTRMediaPlaybackFeature](mtrmediaplaybackfeature.md)
+- [MTRMediaPlaybackPlaybackState](mtrmediaplaybackplaybackstate.md)
+- [MTRMediaPlaybackStatus](mtrmediaplaybackstatus.md)
+- [MTRModeSelectFeature](mtrmodeselectfeature.md)
+- [MTRNetworkCommissioningFeature](mtrnetworkcommissioningfeature.md)
+- [MTRNetworkCommissioningStatus](mtrnetworkcommissioningstatus.md)
+- [MTRNetworkCommissioningWiFiBand](mtrnetworkcommissioningwifiband.md)
+- [MTRNetworkCommissioningWiFiSecurity](mtrnetworkcommissioningwifisecurity.md): Deprecated.
+- [MTROccupancySensingOccupancyBitmap](mtroccupancysensingoccupancybitmap.md)
+- [MTROccupancySensingOccupancySensorType](mtroccupancysensingoccupancysensortype.md)
+- [MTROccupancySensingOccupancySensorTypeBitmap](mtroccupancysensingoccupancysensortypebitmap.md)
+- [MTROnOffDelayedAllOffEffectVariant](mtronoffdelayedalloffeffectvariant.md)
+- [MTROnOffDyingLightEffectVariant](mtronoffdyinglighteffectvariant.md)
+- [MTROnOffEffectIdentifier](mtronoffeffectidentifier.md)
+- [MTROnOffStartUpOnOff](mtronoffstartuponoff.md)
+- [MTROnboardingPayloadType](mtronboardingpayloadtype.md): Deprecated.
+- [MTROperationalCredentialsCertificateChainType](mtroperationalcredentialscertificatechaintype.md)
+- [MTROperationalCredentialsNodeOperationalCertStatus](mtroperationalcredentialsnodeoperationalcertstatus.md)
+- [MTROperationalCredentialsOperationalCertStatus](mtroperationalcredentialsoperationalcertstatus.md): Deprecated.
+- [MTROptionalQRCodeInfoType](mtroptionalqrcodeinfotype.md)
+- [MTRPairingStatus](mtrpairingstatus.md): Deprecated.
+- [MTRPowerSourceBatApprovedChemistry](mtrpowersourcebatapprovedchemistry.md)
+- [MTRPowerSourceBatChargeFault](mtrpowersourcebatchargefault.md)
+- [MTRPowerSourceBatChargeLevel](mtrpowersourcebatchargelevel.md)
+- [MTRPowerSourceBatChargeState](mtrpowersourcebatchargestate.md)
+- [MTRPowerSourceBatCommonDesignation](mtrpowersourcebatcommondesignation.md)
+- [MTRPowerSourceBatFault](mtrpowersourcebatfault.md)
+- [MTRPowerSourceBatReplaceability](mtrpowersourcebatreplaceability.md)
+- [MTRPowerSourceFeature](mtrpowersourcefeature.md)
+- [MTRPowerSourceStatus](mtrpowersourcestatus.md)
+- [MTRPowerSourceWiredCurrentType](mtrpowersourcewiredcurrenttype.md)
+- [MTRPowerSourceWiredFault](mtrpowersourcewiredfault.md)
+- [MTRPressureMeasurementFeature](mtrpressuremeasurementfeature.md)
+- [MTRPressureMeasurementPressureFeature](mtrpressuremeasurementpressurefeature.md): Deprecated.
+- [MTRPumpConfigurationAndControlControlMode](mtrpumpconfigurationandcontrolcontrolmode.md)
+- [MTRPumpConfigurationAndControlFeature](mtrpumpconfigurationandcontrolfeature.md)
+- [MTRPumpConfigurationAndControlOperationMode](mtrpumpconfigurationandcontroloperationmode.md)
+- [MTRPumpConfigurationAndControlPumpControlMode](mtrpumpconfigurationandcontrolpumpcontrolmode.md): Deprecated.
+- [MTRPumpConfigurationAndControlPumpOperationMode](mtrpumpconfigurationandcontrolpumpoperationmode.md): Deprecated.
+- [MTRSwitchFeature](mtrswitchfeature.md)
+- [MTRTargetNavigatorStatus](mtrtargetnavigatorstatus.md)
+- [MTRTestClusterSimple](mtrtestclustersimple.md): Deprecated.
+- [MTRThermostatControlSequence](mtrthermostatcontrolsequence.md): Deprecated.
+- [MTRThermostatRunningMode](mtrthermostatrunningmode.md)
+- [MTRThermostatSetpointAdjustMode](mtrthermostatsetpointadjustmode.md): Deprecated.
+- [MTRThermostatSystemMode](mtrthermostatsystemmode.md)
+- [MTRThreadNetworkDiagnosticsThreadConnectionStatus](mtrthreadnetworkdiagnosticsthreadconnectionstatus.md): Deprecated.
+- [MTRTransportType](mtrtransporttype.md)
+- [MTRUnitLocalizationFeature](mtrunitlocalizationfeature.md)
+- [MTRUnitLocalizationTempUnit](mtrunitlocalizationtempunit.md)
+
+# Clusters (Objective-C)
+
+**Framework:** Matter  
+**Kind:** API Collection
+
+Interact with groups of related functionality that Matter accessories expose.
+
+<a id="overview"></a>
+
+## Overview
+
+A cluster defines data and a set of related commands that operate on that data. For example, a temperature sensor exposes the Temperature Measurement cluster that provides ambient temperature. A door lock exposes the Door Lock cluster that provides the state of the lock, as well as commands to lock, unlock, and add access codes.
+
+## Topics
+
+### Interacting with the Application Launcher cluster
+
+- [MTRApplicationLauncherFeature](mtrapplicationlauncherfeature.md)
+- [MTRBaseClusterApplicationLauncher](mtrbaseclusterapplicationlauncher.md)
+- [MTRApplicationLauncherClusterApplicationEPStruct](mtrapplicationlauncherclusterapplicationepstruct.md)
+- [MTRApplicationLauncherClusterApplicationStruct](mtrapplicationlauncherclusterapplicationstruct.md)
+- [MTRApplicationLauncherClusterHideAppParams](mtrapplicationlauncherclusterhideappparams.md)
+- [MTRApplicationLauncherClusterLaunchAppParams](mtrapplicationlauncherclusterlaunchappparams.md)
+- [MTRApplicationLauncherClusterLauncherResponseParams](mtrapplicationlauncherclusterlauncherresponseparams.md)
+- [MTRApplicationLauncherClusterStopAppParams](mtrapplicationlauncherclusterstopappparams.md)
+- [MTRApplicationLauncherClusterApplication](mtrapplicationlauncherclusterapplication.md): Deprecated.
+- [MTRApplicationLauncherClusterApplicationEP](mtrapplicationlauncherclusterapplicationep.md): Deprecated.
+
+### Interacting with the Content Launcher cluster
+
+- [MTRContentLauncherContentLaunchStatus](mtrcontentlaunchercontentlaunchstatus.md): Deprecated.
+- [MTRContentLauncherFeature](mtrcontentlauncherfeature.md)
+- [MTRContentLauncherMetricType](mtrcontentlaunchermetrictype.md)
+- [MTRContentLauncherParameter](mtrcontentlauncherparameter.md)
+- [MTRContentLauncherSupportedStreamingProtocol](mtrcontentlaunchersupportedstreamingprotocol.md): Deprecated.
+- [MTRBaseClusterContentLauncher](mtrbaseclustercontentlauncher.md)
+- [MTRContentLauncherClusterAdditionalInfoStruct](mtrcontentlauncherclusteradditionalinfostruct.md)
+- [MTRContentLauncherClusterBrandingInformationStruct](mtrcontentlauncherclusterbrandinginformationstruct.md)
+- [MTRContentLauncherClusterContentSearchStruct](mtrcontentlauncherclustercontentsearchstruct.md)
+- [MTRContentLauncherClusterDimensionStruct](mtrcontentlauncherclusterdimensionstruct.md)
+- [MTRContentLauncherClusterAdditionalInfo](mtrcontentlauncherclusteradditionalinfo.md): Deprecated.
+- [MTRContentLauncherClusterBrandingInformation](mtrcontentlauncherclusterbrandinginformation.md): Deprecated.
+- [MTRContentLauncherClusterContentSearch](mtrcontentlauncherclustercontentsearch.md): Deprecated.
+- [MTRContentLauncherClusterDimension](mtrcontentlauncherclusterdimension.md): Deprecated.
+
+### Interacting with the Pump Configuration and Control cluster
+
+- [MTRPumpConfigurationAndControlPumpStatus](mtrpumpconfigurationandcontrolpumpstatus.md): Deprecated.
+- [MTRPumpConfigurationAndControlFeature](mtrpumpconfigurationandcontrolfeature.md)
+- [MTRPumpConfigurationAndControlPumpFeature](mtrpumpconfigurationandcontrolpumpfeature.md): Deprecated.
+- [MTRPumpConfigurationAndControlPumpStatusBitmap](mtrpumpconfigurationandcontrolpumpstatusbitmap.md)
+- [MTRPumpConfigurationAndControlClusterAirDetectionEvent](mtrpumpconfigurationandcontrolclusterairdetectionevent.md)
+- [MTRPumpConfigurationAndControlClusterDryRunningEvent](mtrpumpconfigurationandcontrolclusterdryrunningevent.md)
+- [MTRPumpConfigurationAndControlClusterElectronicFatalFailureEvent](mtrpumpconfigurationandcontrolclusterelectronicfatalfailureevent.md)
+- [MTRPumpConfigurationAndControlClusterElectronicNonFatalFailureEvent](mtrpumpconfigurationandcontrolclusterelectronicnonfatalfailureevent.md)
+- [MTRPumpConfigurationAndControlClusterElectronicTemperatureHighEvent](mtrpumpconfigurationandcontrolclusterelectronictemperaturehighevent.md)
+- [MTRPumpConfigurationAndControlClusterGeneralFaultEvent](mtrpumpconfigurationandcontrolclustergeneralfaultevent.md)
+- [MTRPumpConfigurationAndControlClusterLeakageEvent](mtrpumpconfigurationandcontrolclusterleakageevent.md)
+- [MTRPumpConfigurationAndControlClusterMotorTemperatureHighEvent](mtrpumpconfigurationandcontrolclustermotortemperaturehighevent.md)
+- [MTRPumpConfigurationAndControlClusterPowerMissingPhaseEvent](mtrpumpconfigurationandcontrolclusterpowermissingphaseevent.md)
+- [MTRPumpConfigurationAndControlClusterPumpBlockedEvent](mtrpumpconfigurationandcontrolclusterpumpblockedevent.md)
+- [MTRPumpConfigurationAndControlClusterPumpMotorFatalFailureEvent](mtrpumpconfigurationandcontrolclusterpumpmotorfatalfailureevent.md)
+- [MTRPumpConfigurationAndControlClusterSensorFailureEvent](mtrpumpconfigurationandcontrolclustersensorfailureevent.md)
+- [MTRPumpConfigurationAndControlClusterSupplyVoltageHighEvent](mtrpumpconfigurationandcontrolclustersupplyvoltagehighevent.md)
+- [MTRPumpConfigurationAndControlClusterSupplyVoltageLowEvent](mtrpumpconfigurationandcontrolclustersupplyvoltagelowevent.md)
+- [MTRPumpConfigurationAndControlClusterSystemPressureHighEvent](mtrpumpconfigurationandcontrolclustersystempressurehighevent.md)
+- [MTRPumpConfigurationAndControlClusterSystemPressureLowEvent](mtrpumpconfigurationandcontrolclustersystempressurelowevent.md)
+- [MTRPumpConfigurationAndControlClusterTurbineOperationEvent](mtrpumpconfigurationandcontrolclusterturbineoperationevent.md)
+
+### Interacting with the Level Control cluster
+
+- [MTRBaseClusterLevelControl](mtrbaseclusterlevelcontrol.md)
+- [MTRLevelControlFeature](mtrlevelcontrolfeature.md)
+- [MTRLevelControlMoveMode](mtrlevelcontrolmovemode.md)
+- [MTRLevelControlOptions](mtrlevelcontroloptions.md): Deprecated.
+- [MTRLevelControlStepMode](mtrlevelcontrolstepmode.md)
+- [MTRLevelControlClusterMoveParams](mtrlevelcontrolclustermoveparams.md)
+- [MTRLevelControlClusterMoveToClosestFrequencyParams](mtrlevelcontrolclustermovetoclosestfrequencyparams.md)
+- [MTRLevelControlClusterMoveToLevelParams](mtrlevelcontrolclustermovetolevelparams.md)
+- [MTRLevelControlClusterMoveToLevelWithOnOffParams](mtrlevelcontrolclustermovetolevelwithonoffparams.md)
+- [MTRLevelControlClusterMoveWithOnOffParams](mtrlevelcontrolclustermovewithonoffparams.md)
+- [MTRLevelControlClusterStepParams](mtrlevelcontrolclusterstepparams.md)
+- [MTRLevelControlClusterStepWithOnOffParams](mtrlevelcontrolclusterstepwithonoffparams.md)
+- [MTRLevelControlClusterStopParams](mtrlevelcontrolclusterstopparams.md)
+- [MTRLevelControlClusterStopWithOnOffParams](mtrlevelcontrolclusterstopwithonoffparams.md)
+
+### Interacting with the Switch cluster
+
+- [MTRSwitchClusterMultiPressOngoingEvent](mtrswitchclustermultipressongoingevent.md)
+- [MTRSwitchClusterShortReleaseEvent](mtrswitchclustershortreleaseevent.md)
+- [MTRSwitchClusterSwitchLatchedEvent](mtrswitchclusterswitchlatchedevent.md)
+- [MTRSwitchClusterInitialPressEvent](mtrswitchclusterinitialpressevent.md)
+- [MTRSwitchClusterLongPressEvent](mtrswitchclusterlongpressevent.md)
+- [MTRSwitchClusterLongReleaseEvent](mtrswitchclusterlongreleaseevent.md)
+- [MTRSwitchClusterMultiPressCompleteEvent](mtrswitchclustermultipresscompleteevent.md)
+
+### Interacting with the On Off cluster
+
+- [MTROnOffControl](mtronoffcontrol.md): Deprecated.
+- [MTROnOffFeature](mtronofffeature.md)
+- [MTROnOffClusterOffParams](mtronoffclusteroffparams.md)
+- [MTROnOffClusterOffWithEffectParams](mtronoffclusteroffwitheffectparams.md)
+- [MTROnOffClusterOnParams](mtronoffclusteronparams.md)
+- [MTROnOffClusterOnWithRecallGlobalSceneParams](mtronoffclusteronwithrecallglobalsceneparams.md)
+- [MTROnOffClusterOnWithTimedOffParams](mtronoffclusteronwithtimedoffparams.md)
+- [MTROnOffClusterToggleParams](mtronoffclustertoggleparams.md)
+
+### Interacting with the Door Lock cluster
+
+- [MTRDoorLockAlarmCode](mtrdoorlockalarmcode.md)
+- [MTRDoorLockCredentialRule](mtrdoorlockcredentialrule.md)
+- [MTRDoorLockCredentialType](mtrdoorlockcredentialtype.md)
+- [MTRDoorLockDataOperationType](mtrdoorlockdataoperationtype.md)
+- [MTRDoorLockDlLockState](mtrdoorlockdllockstate.md)
+- [MTRDoorLockDlLockType](mtrdoorlockdllocktype.md)
+- [MTRDoorLockDlStatus](mtrdoorlockdlstatus.md)
+- [MTRDoorLockDoorState](mtrdoorlockdoorstate.md)
+- [MTRDoorLockLockDataType](mtrdoorlocklockdatatype.md)
+- [MTRDoorLockLockOperationType](mtrdoorlocklockoperationtype.md)
+- [MTRDoorLockOperatingMode](mtrdoorlockoperatingmode.md)
+- [MTRDoorLockOperationError](mtrdoorlockoperationerror.md)
+- [MTRDoorLockOperationSource](mtrdoorlockoperationsource.md)
+- [MTRDoorLockUserStatus](mtrdoorlockuserstatus.md)
+- [MTRDoorLockUserType](mtrdoorlockusertype.md)
+- [MTRDoorLockDayOfWeek](mtrdoorlockdayofweek.md)
+- [MTRDoorLockDaysMaskMap](mtrdoorlockdaysmaskmap.md)
+- [MTRDoorLockDlCredentialRuleMask](mtrdoorlockdlcredentialrulemask.md)
+- [MTRDoorLockDlCredentialRulesSupport](mtrdoorlockdlcredentialrulessupport.md)
+- [MTRDoorLockDlDefaultConfigurationRegister](mtrdoorlockdldefaultconfigurationregister.md)
+- [MTRDoorLockDlKeypadOperationEventMask](mtrdoorlockdlkeypadoperationeventmask.md)
+- [MTRDoorLockDlKeypadProgrammingEventMask](mtrdoorlockdlkeypadprogrammingeventmask.md)
+- [MTRDoorLockDlLocalProgrammingFeatures](mtrdoorlockdllocalprogrammingfeatures.md)
+- [MTRDoorLockDlManualOperationEventMask](mtrdoorlockdlmanualoperationeventmask.md)
+- [MTRDoorLockDlRFIDOperationEventMask](mtrdoorlockdlrfidoperationeventmask.md)
+- [MTRDoorLockDlRFIDProgrammingEventMask](mtrdoorlockdlrfidprogrammingeventmask.md)
+- [MTRDoorLockDlRemoteOperationEventMask](mtrdoorlockdlremoteoperationeventmask.md)
+- [MTRDoorLockDlRemoteProgrammingEventMask](mtrdoorlockdlremoteprogrammingeventmask.md)
+- [MTRDoorLockDlSupportedOperatingModes](mtrdoorlockdlsupportedoperatingmodes.md)
+- [MTRDoorLockFeature](mtrdoorlockfeature.md)
+- [MTRBaseClusterDoorLock](mtrbaseclusterdoorlock.md)
+- [MTRDoorLockClusterLockOperationEvent](mtrdoorlockclusterlockoperationevent.md)
+- [MTRDoorLockClusterLockUserChangeEvent](mtrdoorlockclusterlockuserchangeevent.md)
+- [MTRDoorLockClusterSetCredentialParams](mtrdoorlockclustersetcredentialparams.md)
+- [MTRDoorLockClusterSetCredentialResponseParams](mtrdoorlockclustersetcredentialresponseparams.md)
+- [MTRDoorLockClusterSetHolidayScheduleParams](mtrdoorlockclustersetholidayscheduleparams.md)
+- [MTRDoorLockClusterSetUserParams](mtrdoorlockclustersetuserparams.md)
+- [MTRDoorLockClusterSetWeekDayScheduleParams](mtrdoorlockclustersetweekdayscheduleparams.md)
+- [MTRDoorLockClusterSetYearDayScheduleParams](mtrdoorlockclustersetyeardayscheduleparams.md)
+- [MTRDoorLockClusterUnlockDoorParams](mtrdoorlockclusterunlockdoorparams.md)
+- [MTRDoorLockClusterUnlockWithTimeoutParams](mtrdoorlockclusterunlockwithtimeoutparams.md)
+- [MTRElectricalMeasurementClusterGetMeasurementProfileCommandParams](mtrelectricalmeasurementclustergetmeasurementprofilecommandparams.md): Deprecated.
+- [MTRDoorLockClusterGetUserParams](mtrdoorlockclustergetuserparams.md)
+- [MTRDoorLockClusterGetUserResponseParams](mtrdoorlockclustergetuserresponseparams.md)
+- [MTRDoorLockClusterGetWeekDayScheduleParams](mtrdoorlockclustergetweekdayscheduleparams.md)
+- [MTRDoorLockClusterGetWeekDayScheduleResponseParams](mtrdoorlockclustergetweekdayscheduleresponseparams.md)
+- [MTRDoorLockClusterGetYearDayScheduleParams](mtrdoorlockclustergetyeardayscheduleparams.md)
+- [MTRDoorLockClusterGetYearDayScheduleResponseParams](mtrdoorlockclustergetyeardayscheduleresponseparams.md)
+- [MTRDoorLockClusterLockDoorParams](mtrdoorlockclusterlockdoorparams.md)
+- [MTRDoorLockClusterLockOperationErrorEvent](mtrdoorlockclusterlockoperationerrorevent.md)
+- [MTRDoorLockClusterClearYearDayScheduleParams](mtrdoorlockclusterclearyeardayscheduleparams.md)
+- [MTRDoorLockClusterCredentialStruct](mtrdoorlockclustercredentialstruct.md)
+- [MTRDoorLockClusterDoorLockAlarmEvent](mtrdoorlockclusterdoorlockalarmevent.md)
+- [MTRDoorLockClusterDoorStateChangeEvent](mtrdoorlockclusterdoorstatechangeevent.md)
+- [MTRDoorLockClusterGetCredentialStatusParams](mtrdoorlockclustergetcredentialstatusparams.md)
+- [MTRDoorLockClusterGetCredentialStatusResponseParams](mtrdoorlockclustergetcredentialstatusresponseparams.md)
+- [MTRDoorLockClusterGetHolidayScheduleParams](mtrdoorlockclustergetholidayscheduleparams.md)
+- [MTRDoorLockClusterGetHolidayScheduleResponseParams](mtrdoorlockclustergetholidayscheduleresponseparams.md)
+- [MTRDoorLockClusterClearCredentialParams](mtrdoorlockclusterclearcredentialparams.md)
+- [MTRDoorLockClusterClearHolidayScheduleParams](mtrdoorlockclusterclearholidayscheduleparams.md)
+- [MTRDoorLockClusterClearUserParams](mtrdoorlockclusterclearuserparams.md)
+- [MTRDoorLockClusterClearWeekDayScheduleParams](mtrdoorlockclusterclearweekdayscheduleparams.md)
+- [MTRDoorLockDlDaysMaskMap](mtrdoorlockdldaysmaskmap.md): Deprecated.
+
+### Interacting with the Thermostat cluster
+
+- [MTRThermostatModeForSequence](mtrthermostatmodeforsequence.md): Deprecated.
+- [MTRThermostatDayOfWeek](mtrthermostatdayofweek.md): Deprecated.
+- [MTRBaseClusterThermostat](mtrbaseclusterthermostat.md)
+- [MTRThermostatClusterClearWeeklyScheduleParams](mtrthermostatclusterclearweeklyscheduleparams.md)
+- [MTRThermostatClusterGetWeeklyScheduleParams](mtrthermostatclustergetweeklyscheduleparams.md)
+- [MTRThermostatClusterGetWeeklyScheduleResponseParams](mtrthermostatclustergetweeklyscheduleresponseparams.md)
+- [MTRThermostatClusterSetWeeklyScheduleParams](mtrthermostatclustersetweeklyscheduleparams.md)
+- [MTRThermostatClusterSetpointRaiseLowerParams](mtrthermostatclustersetpointraiselowerparams.md)
+- [MTRThermostatClusterThermostatScheduleTransition](mtrthermostatclusterthermostatscheduletransition.md): Deprecated.
+
+### Interacting with the Wi-Fi Network Diagnostics cluster
+
+- [MTRBaseClusterWiFiNetworkDiagnostics](mtrbaseclusterwifinetworkdiagnostics.md)
+- [MTRWiFiNetworkDiagnosticsClusterAssociationFailureEvent](mtrwifinetworkdiagnosticsclusterassociationfailureevent.md)
+- [MTRWiFiNetworkDiagnosticsClusterConnectionStatusEvent](mtrwifinetworkdiagnosticsclusterconnectionstatusevent.md)
+- [MTRWiFiNetworkDiagnosticsClusterDisconnectionEvent](mtrwifinetworkdiagnosticsclusterdisconnectionevent.md)
+- [MTRWiFiNetworkDiagnosticsClusterResetCountsParams](mtrwifinetworkdiagnosticsclusterresetcountsparams.md)
+- [MTRWiFiNetworkDiagnosticsFeature](mtrwifinetworkdiagnosticsfeature.md)
+- [MTRWiFiNetworkDiagnosticsAssociationFailureCause](mtrwifinetworkdiagnosticsassociationfailurecause.md)
+- [MTRWiFiNetworkDiagnosticsConnectionStatus](mtrwifinetworkdiagnosticsconnectionstatus.md)
+- [MTRWiFiNetworkDiagnosticsSecurityType](mtrwifinetworkdiagnosticssecuritytype.md)
+- [MTRWiFiNetworkDiagnosticsWiFiVersion](mtrwifinetworkdiagnosticswifiversion.md)
+- [MTRWiFiNetworkDiagnosticsWiFiConnectionStatus](mtrwifinetworkdiagnosticswificonnectionstatus.md): Deprecated.
+- [MTRWiFiNetworkDiagnosticsWiFiVersionType](mtrwifinetworkdiagnosticswifiversiontype.md): Deprecated.
+
+### Interacting with the Window Covering cluster
+
+- [MTRBaseClusterWindowCovering](mtrbaseclusterwindowcovering.md)
+- [MTRWindowCoveringConfigStatus](mtrwindowcoveringconfigstatus.md)
+- [MTRWindowCoveringEndProductType](mtrwindowcoveringendproducttype.md)
+- [MTRWindowCoveringFeature](mtrwindowcoveringfeature.md)
+- [MTRActionsCommandBits](mtractionscommandbits.md)
+- [MTRWindowCoveringMode](mtrwindowcoveringmode.md)
+- [MTRWindowCoveringOperationalStatus](mtrwindowcoveringoperationalstatus.md)
+- [MTRWindowCoveringSafetyStatus](mtrwindowcoveringsafetystatus.md)
+- [MTRWindowCoveringType](mtrwindowcoveringtype.md)
+- [MTRWindowCoveringClusterDownOrCloseParams](mtrwindowcoveringclusterdownorcloseparams.md)
+- [MTRWindowCoveringClusterGoToLiftPercentageParams](mtrwindowcoveringclustergotoliftpercentageparams.md)
+- [MTRWindowCoveringClusterGoToLiftValueParams](mtrwindowcoveringclustergotoliftvalueparams.md)
+- [MTRWindowCoveringClusterGoToTiltPercentageParams](mtrwindowcoveringclustergototiltpercentageparams.md)
+- [MTRWindowCoveringClusterGoToTiltValueParams](mtrwindowcoveringclustergototiltvalueparams.md)
+- [MTRWindowCoveringClusterStopMotionParams](mtrwindowcoveringclusterstopmotionparams.md)
+- [MTRWindowCoveringClusterUpOrOpenParams](mtrwindowcoveringclusteruporopenparams.md)
+
+### Interacting with the Power Source cluster
+
+- [MTRPowerSourceFeature](mtrpowersourcefeature.md)
+- [MTRPowerSourceClusterBatChargeFaultChangeEvent](mtrpowersourceclusterbatchargefaultchangeevent.md)
+- [MTRPowerSourceClusterBatFaultChangeEvent](mtrpowersourceclusterbatfaultchangeevent.md)
+- [MTRPowerSourceClusterWiredFaultChangeEvent](mtrpowersourceclusterwiredfaultchangeevent.md)
+- [MTRPowerSourceClusterBatFaultChangeType](mtrpowersourceclusterbatfaultchangetype.md): Deprecated.
+- [MTRPowerSourceClusterBatChargeFaultChangeType](mtrpowersourceclusterbatchargefaultchangetype.md): Deprecated.
+- [MTRPowerSourceClusterWiredFaultChangeType](mtrpowersourceclusterwiredfaultchangetype.md): Deprecated.
+
+### Interacting with the Thread Network Diagnostics cluster
+
+- [MTRThreadNetworkDiagnosticsConnectionStatus](mtrthreadnetworkdiagnosticsconnectionstatus.md)
+- [MTRThreadNetworkDiagnosticsFeature](mtrthreadnetworkdiagnosticsfeature.md)
+- [MTRThreadNetworkDiagnosticsNetworkFault](mtrthreadnetworkdiagnosticsnetworkfault.md)
+- [MTRThreadNetworkDiagnosticsRoutingRole](mtrthreadnetworkdiagnosticsroutingrole.md)
+- [MTRThreadNetworkDiagnosticsClusterNeighborTable](mtrthreadnetworkdiagnosticsclusterneighbortable.md): Deprecated.
+- [MTRThreadNetworkDiagnosticsClusterNetworkFaultChangeEvent](mtrthreadnetworkdiagnosticsclusternetworkfaultchangeevent.md)
+- [MTRThreadNetworkDiagnosticsClusterOperationalDatasetComponents](mtrthreadnetworkdiagnosticsclusteroperationaldatasetcomponents.md)
+- [MTRThreadNetworkDiagnosticsClusterResetCountsParams](mtrthreadnetworkdiagnosticsclusterresetcountsparams.md)
+- [MTRThreadNetworkDiagnosticsClusterRouteTable](mtrthreadnetworkdiagnosticsclusterroutetable.md): Deprecated.
+- [MTRThreadNetworkDiagnosticsClusterSecurityPolicy](mtrthreadnetworkdiagnosticsclustersecuritypolicy.md)
+
+### Interacting with the Color Control cluster
+
+- [MTRBaseClusterColorControl](mtrbaseclustercolorcontrol.md)
+- [MTRColorControlColorCapabilities](mtrcolorcontrolcolorcapabilities.md): Deprecated.
+- [MTRColorControlColorLoopAction](mtrcolorcontrolcolorloopaction.md)
+- [MTRColorControlColorLoopDirection](mtrcolorcontrolcolorloopdirection.md)
+- [MTRColorControlColorLoopUpdateFlags](mtrcolorcontrolcolorloopupdateflags.md): Deprecated.
+- [MTRColorControlColorMode](mtrcolorcontrolcolormode.md)
+- [MTRColorControlFeature](mtrcolorcontrolfeature.md)
+- [MTRColorControlHueDirection](mtrcolorcontrolhuedirection.md): Deprecated.
+- [MTRColorControlHueMoveMode](mtrcolorcontrolhuemovemode.md): Deprecated.
+- [MTRColorControlHueStepMode](mtrcolorcontrolhuestepmode.md): Deprecated.
+- [MTRColorControlSaturationMoveMode](mtrcolorcontrolsaturationmovemode.md): Deprecated.
+- [MTRColorControlSaturationStepMode](mtrcolorcontrolsaturationstepmode.md): Deprecated.
+- [MTRColorControlClusterColorLoopSetParams](mtrcolorcontrolclustercolorloopsetparams.md)
+- [MTRColorControlClusterEnhancedMoveHueParams](mtrcolorcontrolclusterenhancedmovehueparams.md)
+- [MTRColorControlClusterEnhancedMoveToHueAndSaturationParams](mtrcolorcontrolclusterenhancedmovetohueandsaturationparams.md)
+- [MTRColorControlClusterEnhancedMoveToHueParams](mtrcolorcontrolclusterenhancedmovetohueparams.md)
+- [MTRColorControlClusterEnhancedStepHueParams](mtrcolorcontrolclusterenhancedstephueparams.md)
+- [MTRColorControlClusterMoveColorParams](mtrcolorcontrolclustermovecolorparams.md)
+- [MTRColorControlClusterMoveColorTemperatureParams](mtrcolorcontrolclustermovecolortemperatureparams.md)
+- [MTRColorControlClusterMoveHueParams](mtrcolorcontrolclustermovehueparams.md)
+- [MTRColorControlClusterMoveSaturationParams](mtrcolorcontrolclustermovesaturationparams.md)
+- [MTRColorControlClusterMoveToColorParams](mtrcolorcontrolclustermovetocolorparams.md)
+- [MTRColorControlClusterMoveToColorTemperatureParams](mtrcolorcontrolclustermovetocolortemperatureparams.md)
+- [MTRColorControlClusterMoveToHueAndSaturationParams](mtrcolorcontrolclustermovetohueandsaturationparams.md)
+- [MTRColorControlClusterMoveToHueParams](mtrcolorcontrolclustermovetohueparams.md)
+- [MTRColorControlClusterMoveToSaturationParams](mtrcolorcontrolclustermovetosaturationparams.md)
+- [MTRColorControlClusterStepColorParams](mtrcolorcontrolclusterstepcolorparams.md)
+- [MTRColorControlClusterStepColorTemperatureParams](mtrcolorcontrolclusterstepcolortemperatureparams.md)
+- [MTRColorControlClusterStepHueParams](mtrcolorcontrolclusterstephueparams.md)
+- [MTRColorControlClusterStepSaturationParams](mtrcolorcontrolclusterstepsaturationparams.md)
+- [MTRColorControlClusterStopMoveStepParams](mtrcolorcontrolclusterstopmovestepparams.md)
+
+### Interacting with the Operational Credentials cluster
+
+- [MTROperationalCredentialsClusterAddNOCParams](mtroperationalcredentialsclusteraddnocparams.md)
+- [MTROperationalCredentialsClusterAddTrustedRootCertificateParams](mtroperationalcredentialsclusteraddtrustedrootcertificateparams.md)
+- [MTROperationalCredentialsClusterAttestationRequestParams](mtroperationalcredentialsclusterattestationrequestparams.md)
+- [MTROperationalCredentialsClusterAttestationResponseParams](mtroperationalcredentialsclusterattestationresponseparams.md)
+- [MTROperationalCredentialsClusterCSRRequestParams](mtroperationalcredentialsclustercsrrequestparams.md)
+- [MTROperationalCredentialsClusterCSRResponseParams](mtroperationalcredentialsclustercsrresponseparams.md)
+- [MTROperationalCredentialsClusterCertificateChainRequestParams](mtroperationalcredentialsclustercertificatechainrequestparams.md)
+- [MTROperationalCredentialsClusterCertificateChainResponseParams](mtroperationalcredentialsclustercertificatechainresponseparams.md)
+- [MTROperationalCredentialsClusterFabricDescriptorStruct](mtroperationalcredentialsclusterfabricdescriptorstruct.md)
+- [MTROperationalCredentialsClusterNOCResponseParams](mtroperationalcredentialsclusternocresponseparams.md)
+- [MTROperationalCredentialsClusterNOCStruct](mtroperationalcredentialsclusternocstruct.md)
+- [MTROperationalCredentialsClusterRemoveFabricParams](mtroperationalcredentialsclusterremovefabricparams.md)
+- [MTROperationalCredentialsClusterUpdateFabricLabelParams](mtroperationalcredentialsclusterupdatefabriclabelparams.md)
+- [MTROperationalCredentialsClusterUpdateNOCParams](mtroperationalcredentialsclusterupdatenocparams.md)
+- [MTROperationalCredentialsClusterFabricDescriptor](mtroperationalcredentialsclusterfabricdescriptor.md): Deprecated.
+
+### Interacting with the Actions cluster
+
+- [MTRBaseClusterActions](mtrbaseclusteractions.md)
+- [MTRActionsClusterActionFailedEvent](mtractionsclusteractionfailedevent.md)
+- [MTRActionsClusterActionStruct](mtractionsclusteractionstruct.md)
+- [MTRActionsClusterDisableActionParams](mtractionsclusterdisableactionparams.md)
+- [MTRActionsClusterDisableActionWithDurationParams](mtractionsclusterdisableactionwithdurationparams.md)
+- [MTRActionsClusterEnableActionParams](mtractionsclusterenableactionparams.md)
+- [MTRActionsClusterEnableActionWithDurationParams](mtractionsclusterenableactionwithdurationparams.md)
+- [MTRActionsClusterEndpointListStruct](mtractionsclusterendpointliststruct.md)
+- [MTRActionsClusterInstantActionParams](mtractionsclusterinstantactionparams.md)
+- [MTRActionsClusterInstantActionWithTransitionParams](mtractionsclusterinstantactionwithtransitionparams.md)
+- [MTRActionsClusterPauseActionParams](mtractionsclusterpauseactionparams.md)
+- [MTRActionsClusterPauseActionWithDurationParams](mtractionsclusterpauseactionwithdurationparams.md)
+- [MTRActionsClusterResumeActionParams](mtractionsclusterresumeactionparams.md)
+- [MTRActionsClusterStartActionParams](mtractionsclusterstartactionparams.md)
+- [MTRActionsClusterStartActionWithDurationParams](mtractionsclusterstartactionwithdurationparams.md)
+- [MTRActionsClusterStateChangedEvent](mtractionsclusterstatechangedevent.md)
+- [MTRActionsClusterStopActionParams](mtractionsclusterstopactionparams.md)
+- [MTRActionsActionError](mtractionsactionerror.md)
+- [MTRActionsActionState](mtractionsactionstate.md)
+- [MTRActionsActionType](mtractionsactiontype.md)
+- [MTRActionsCommandBits](mtractionscommandbits.md)
+- [MTRActionsEndpointListType](mtractionsendpointlisttype.md)
+
+### Interacting with the Software Diagnostics cluster
+
+- [MTRThermostatFeature](mtrthermostatfeature.md)
+- [MTRSoftwareDiagnosticsFeature](mtrsoftwarediagnosticsfeature.md)
+- [MTRBaseClusterSoftwareDiagnostics](mtrbaseclustersoftwarediagnostics.md)
+- [MTRSoftwareDiagnosticsClusterResetWatermarksParams](mtrsoftwarediagnosticsclusterresetwatermarksparams.md)
+- [MTRSoftwareDiagnosticsClusterSoftwareFaultEvent](mtrsoftwarediagnosticsclustersoftwarefaultevent.md)
+- [MTRSoftwareDiagnosticsClusterThreadMetricsStruct](mtrsoftwarediagnosticsclusterthreadmetricsstruct.md)
+- [MTRSoftwareDiagnosticsClusterThreadMetrics](mtrsoftwarediagnosticsclusterthreadmetrics.md): Deprecated.
+
+### Interacting with the Time Synchronization cluster
+
+- [MTRTimeFormatLocalizationCalendarType](mtrtimeformatlocalizationcalendartype.md)
+- [MTRTimeFormatLocalizationHourFormat](mtrtimeformatlocalizationhourformat.md)
+- [MTRTimeSynchronizationGranularity](mtrtimesynchronizationgranularity.md)
+- [MTRTimeSynchronizationTimeSource](mtrtimesynchronizationtimesource.md)
+- [MTRTimeSynchronizationClusterDSTOffsetStruct](mtrtimesynchronizationclusterdstoffsetstruct.md)
+- [MTRTimeSynchronizationClusterTimeZoneStruct](mtrtimesynchronizationclustertimezonestruct.md)
+- [MTRTimeSynchronizationClusterDstOffsetType](mtrtimesynchronizationclusterdstoffsettype.md): Deprecated.
+- [MTRTimeSynchronizationClusterTimeZoneType](mtrtimesynchronizationclustertimezonetype.md): Deprecated.
+
+### Interacting with the OTA Software Update Provider cluster
+
+- [MTRBaseClusterOTASoftwareUpdateProvider](mtrbaseclusterotasoftwareupdateprovider-8bnit.md)
+- [MTROTAHeader](mtrotaheader.md)
+- [MTROTASoftwareUpdateProviderClusterApplyUpdateRequestParams](mtrotasoftwareupdateproviderclusterapplyupdaterequestparams-1mlcr.md)
+- [MTROTASoftwareUpdateProviderClusterApplyUpdateResponseParams](mtrotasoftwareupdateproviderclusterapplyupdateresponseparams-36zc9.md)
+- [MTROTASoftwareUpdateProviderClusterNotifyUpdateAppliedParams](mtrotasoftwareupdateproviderclusternotifyupdateappliedparams-5eau8.md)
+- [MTROTASoftwareUpdateProviderClusterQueryImageParams](mtrotasoftwareupdateproviderclusterqueryimageparams-8z02b.md)
+- [MTROTASoftwareUpdateProviderClusterQueryImageResponseParams](mtrotasoftwareupdateproviderclusterqueryimageresponseparams-6wuvt.md)
+- [MTROTASoftwareUpdateRequestorClusterAnnounceOTAProviderParams](mtrotasoftwareupdaterequestorclusterannounceotaproviderparams-8dobu.md)
+- [MTROTASoftwareUpdateRequestorClusterDownloadErrorEvent](mtrotasoftwareupdaterequestorclusterdownloaderrorevent-2w5rw.md)
+- [MTROTASoftwareUpdateRequestorClusterProviderLocation](mtrotasoftwareupdaterequestorclusterproviderlocation-76vsq.md)
+- [MTROTASoftwareUpdateRequestorClusterStateTransitionEvent](mtrotasoftwareupdaterequestorclusterstatetransitionevent-3xhxb.md)
+- [MTROTASoftwareUpdateRequestorClusterVersionAppliedEvent](mtrotasoftwareupdaterequestorclusterversionappliedevent-94prr.md)
+- [MTROTAImageDigestType](mtrotaimagedigesttype.md)
+- [MTROTASoftwareUpdateProviderOTAApplyUpdateAction](mtrotasoftwareupdateproviderotaapplyupdateaction-klmu.md): Deprecated.
+- [MTROTASoftwareUpdateProviderOTADownloadProtocol](mtrotasoftwareupdateproviderotadownloadprotocol-1ixcq.md): Deprecated.
+- [MTROTASoftwareUpdateProviderOTAQueryStatus](mtrotasoftwareupdateproviderotaquerystatus-31lx3.md): Deprecated.
+- [MTROTASoftwareUpdateRequestorOTAAnnouncementReason](mtrotasoftwareupdaterequestorotaannouncementreason-30elp.md): Deprecated.
+- [MTROTASoftwareUpdateRequestorOTAChangeReason](mtrotasoftwareupdaterequestorotachangereason-6355y.md): Deprecated.
+- [MTROTASoftwareUpdateRequestorOTAUpdateState](mtrotasoftwareupdaterequestorotaupdatestate-3tft6.md): Deprecated.
+- [MTROtaSoftwareUpdateRequestorClusterStateTransitionEvent](mtrotasoftwareupdaterequestorclusterstatetransitionevent-1xzd5.md): Deprecated.
+- [MTROtaSoftwareUpdateRequestorClusterVersionAppliedEvent](mtrotasoftwareupdaterequestorclusterversionappliedevent-970fn.md): Deprecated.
+- [MTROtaSoftwareUpdateRequestorClusterAnnounceOtaProviderParams](mtrotasoftwareupdaterequestorclusterannounceotaproviderparams-1ucwe.md): Deprecated.
+- [MTROtaSoftwareUpdateRequestorClusterDownloadErrorEvent](mtrotasoftwareupdaterequestorclusterdownloaderrorevent-73h3t.md): Deprecated.
+- [MTROtaSoftwareUpdateRequestorClusterProviderLocation](mtrotasoftwareupdaterequestorclusterproviderlocation-yhnm.md): Deprecated.
+- [MTROtaSoftwareUpdateRequestorOTAAnnouncementReason](mtrotasoftwareupdaterequestorotaannouncementreason-86f8n.md): Deprecated.
+- [MTROtaSoftwareUpdateRequestorOTAChangeReason](mtrotasoftwareupdaterequestorotachangereason-4ixti.md): Deprecated.
+- [MTROtaSoftwareUpdateRequestorOTAUpdateState](mtrotasoftwareupdaterequestorotaupdatestate-18cur.md): Deprecated.
+
+### Interacting with the OTA Software Update Requestor cluster
+
+- [MTRBaseClusterOTASoftwareUpdateRequestor](mtrbaseclusterotasoftwareupdaterequestor-9n6nb.md)
+- [MTROtaSoftwareUpdateProviderClusterApplyUpdateRequestParams](mtrotasoftwareupdateproviderclusterapplyupdaterequestparams-5k4nj.md): Deprecated.
+- [MTROtaSoftwareUpdateProviderClusterApplyUpdateResponseParams](mtrotasoftwareupdateproviderclusterapplyupdateresponseparams-92als.md): Deprecated.
+- [MTROtaSoftwareUpdateProviderClusterNotifyUpdateAppliedParams](mtrotasoftwareupdateproviderclusternotifyupdateappliedparams-6s1jv.md): Deprecated.
+- [MTROtaSoftwareUpdateProviderClusterQueryImageParams](mtrotasoftwareupdateproviderclusterqueryimageparams-zidv.md): Deprecated.
+- [MTROtaSoftwareUpdateProviderClusterQueryImageResponseParams](mtrotasoftwareupdateproviderclusterqueryimageresponseparams-48oao.md): Deprecated.
+- [MTROtaSoftwareUpdateProviderOTAApplyUpdateAction](mtrotasoftwareupdateproviderotaapplyupdateaction-7hisl.md): Deprecated.
+- [MTROtaSoftwareUpdateProviderOTADownloadProtocol](mtrotasoftwareupdateproviderotadownloadprotocol-c5qi.md): Deprecated.
+- [MTROtaSoftwareUpdateProviderOTAQueryStatus](mtrotasoftwareupdateproviderotaquerystatus-4w7ot.md): Deprecated.
+
+### Interacting with the Unit Testing cluster
+
+- [MTRUnitTestingBitmap16MaskMap](mtrunittestingbitmap16maskmap.md)
+- [MTRUnitTestingBitmap32MaskMap](mtrunittestingbitmap32maskmap.md)
+- [MTRUnitTestingBitmap64MaskMap](mtrunittestingbitmap64maskmap.md)
+- [MTRUnitTestingBitmap8MaskMap](mtrunittestingbitmap8maskmap.md)
+- [MTRUnitTestingSimple](mtrunittestingsimple.md)
+- [MTRUnitTestingSimpleBitmap](mtrunittestingsimplebitmap.md)
+- [MTRUnitTestingClusterTestFabricScoped](mtrunittestingclustertestfabricscoped.md)
+- [MTRUnitTestingClusterTestFabricScopedEventEvent](mtrunittestingclustertestfabricscopedeventevent.md)
+- [MTRUnitTestingClusterTestListInt8UArgumentRequestParams](mtrunittestingclustertestlistint8uargumentrequestparams.md)
+- [MTRUnitTestingClusterTestListInt8UReverseRequestParams](mtrunittestingclustertestlistint8ureverserequestparams.md)
+- [MTRUnitTestingClusterTestListInt8UReverseResponseParams](mtrunittestingclustertestlistint8ureverseresponseparams.md)
+- [MTRUnitTestingClusterTestListNestedStructListArgumentRequestParams](mtrunittestingclustertestlistnestedstructlistargumentrequestparams.md)
+- [MTRUnitTestingClusterTestListStructArgumentRequestParams](mtrunittestingclustertestliststructargumentrequestparams.md)
+- [MTRUnitTestingClusterTestListStructOctet](mtrunittestingclustertestliststructoctet.md)
+- [MTRUnitTestingClusterTestNestedStructArgumentRequestParams](mtrunittestingclustertestnestedstructargumentrequestparams.md)
+- [MTRUnitTestingClusterTestNestedStructListArgumentRequestParams](mtrunittestingclustertestnestedstructlistargumentrequestparams.md)
+- [MTRUnitTestingClusterTestNotHandledParams](mtrunittestingclustertestnothandledparams.md)
+- [MTRUnitTestingClusterTestNullableOptionalRequestParams](mtrunittestingclustertestnullableoptionalrequestparams.md)
+- [MTRUnitTestingClusterTestNullableOptionalResponseParams](mtrunittestingclustertestnullableoptionalresponseparams.md)
+- [MTRUnitTestingClusterTestParams](mtrunittestingclustertestparams.md)
+- [MTRUnitTestingClusterTestSimpleArgumentRequestParams](mtrunittestingclustertestsimpleargumentrequestparams.md)
+- [MTRUnitTestingClusterTestSimpleArgumentResponseParams](mtrunittestingclustertestsimpleargumentresponseparams.md)
+- [MTRUnitTestingClusterTestSimpleOptionalArgumentRequestParams](mtrunittestingclustertestsimpleoptionalargumentrequestparams.md)
+- [MTRUnitTestingClusterTestSpecificParams](mtrunittestingclustertestspecificparams.md)
+- [MTRUnitTestingClusterTestSpecificResponseParams](mtrunittestingclustertestspecificresponseparams.md)
+- [MTRUnitTestingClusterTestStructArgumentRequestParams](mtrunittestingclusterteststructargumentrequestparams.md)
+- [MTRUnitTestingClusterTestStructArrayArgumentRequestParams](mtrunittestingclusterteststructarrayargumentrequestparams.md)
+- [MTRUnitTestingClusterTestStructArrayArgumentResponseParams](mtrunittestingclusterteststructarrayargumentresponseparams.md)
+- [MTRUnitTestingClusterTestUnknownCommandParams](mtrunittestingclustertestunknowncommandparams.md)
+- [MTRUnitTestingClusterTimedInvokeRequestParams](mtrunittestingclustertimedinvokerequestparams.md)
+- [MTRUserLabelClusterLabelStruct](mtruserlabelclusterlabelstruct.md)
+- [MTRTimeSynchronizationClusterSetUtcTimeParams](mtrtimesynchronizationclustersetutctimeparams-2ms2i.md)
+- [MTRUnitTestingClusterBooleanResponseParams](mtrunittestingclusterbooleanresponseparams.md)
+- [MTRUnitTestingClusterDoubleNestedStructList](mtrunittestingclusterdoublenestedstructlist.md)
+- [MTRUnitTestingClusterNestedStruct](mtrunittestingclusternestedstruct.md)
+- [MTRUnitTestingClusterNestedStructList](mtrunittestingclusternestedstructlist.md)
+- [MTRUnitTestingClusterNullablesAndOptionalsStruct](mtrunittestingclusternullablesandoptionalsstruct.md)
+- [MTRUnitTestingClusterSimpleStruct](mtrunittestingclustersimplestruct.md)
+- [MTRUnitTestingClusterSimpleStructEchoRequestParams](mtrunittestingclustersimplestructechorequestparams.md)
+- [MTRUnitTestingClusterSimpleStructResponseParams](mtrunittestingclustersimplestructresponseparams.md)
+- [MTRUnitTestingClusterTestAddArgumentsParams](mtrunittestingclustertestaddargumentsparams.md)
+- [MTRUnitTestingClusterTestAddArgumentsResponseParams](mtrunittestingclustertestaddargumentsresponseparams.md)
+- [MTRUnitTestingClusterTestComplexNullableOptionalRequestParams](mtrunittestingclustertestcomplexnullableoptionalrequestparams.md)
+- [MTRUnitTestingClusterTestComplexNullableOptionalResponseParams](mtrunittestingclustertestcomplexnullableoptionalresponseparams.md)
+- [MTRUnitTestingClusterTestEmitTestEventRequestParams](mtrunittestingclustertestemittesteventrequestparams.md)
+- [MTRUnitTestingClusterTestEmitTestEventResponseParams](mtrunittestingclustertestemittesteventresponseparams.md)
+- [MTRUnitTestingClusterTestEmitTestFabricScopedEventRequestParams](mtrunittestingclustertestemittestfabricscopedeventrequestparams.md)
+- [MTRUnitTestingClusterTestEmitTestFabricScopedEventResponseParams](mtrunittestingclustertestemittestfabricscopedeventresponseparams.md)
+- [MTRUnitTestingClusterTestEnumsRequestParams](mtrunittestingclustertestenumsrequestparams.md)
+- [MTRUnitTestingClusterTestEnumsResponseParams](mtrunittestingclustertestenumsresponseparams.md)
+- [MTRUnitTestingClusterTestEventEvent](mtrunittestingclustertesteventevent.md)
+- [MTRTestClusterClusterBooleanResponseParams](mtrtestclusterclusterbooleanresponseparams.md): Deprecated.
+- [MTRTestClusterClusterDoubleNestedStructList](mtrtestclusterclusterdoublenestedstructlist.md): Deprecated.
+- [MTRTestClusterClusterNestedStruct](mtrtestclusterclusternestedstruct.md): Deprecated.
+- [MTRTestClusterClusterNestedStructList](mtrtestclusterclusternestedstructlist.md): Deprecated.
+- [MTRTestClusterClusterNullablesAndOptionalsStruct](mtrtestclusterclusternullablesandoptionalsstruct.md): Deprecated.
+- [MTRTestClusterClusterSimpleStruct](mtrtestclusterclustersimplestruct.md): Deprecated.
+- [MTRTestClusterClusterSimpleStructEchoRequestParams](mtrtestclusterclustersimplestructechorequestparams.md): Deprecated.
+- [MTRTestClusterClusterSimpleStructResponseParams](mtrtestclusterclustersimplestructresponseparams.md): Deprecated.
+- [MTRTestClusterClusterTestAddArgumentsParams](mtrtestclusterclustertestaddargumentsparams.md): Deprecated.
+- [MTRTestClusterClusterTestAddArgumentsResponseParams](mtrtestclusterclustertestaddargumentsresponseparams.md): Deprecated.
+- [MTRTestClusterClusterTestComplexNullableOptionalRequestParams](mtrtestclusterclustertestcomplexnullableoptionalrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestComplexNullableOptionalResponseParams](mtrtestclusterclustertestcomplexnullableoptionalresponseparams.md): Deprecated.
+- [MTRTestClusterClusterTestEmitTestEventRequestParams](mtrtestclusterclustertestemittesteventrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestEmitTestEventResponseParams](mtrtestclusterclustertestemittesteventresponseparams.md): Deprecated.
+- [MTRTestClusterClusterTestEmitTestFabricScopedEventRequestParams](mtrtestclusterclustertestemittestfabricscopedeventrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestEmitTestFabricScopedEventResponseParams](mtrtestclusterclustertestemittestfabricscopedeventresponseparams.md): Deprecated.
+- [MTRTestClusterBitmap16MaskMap](mtrtestclusterbitmap16maskmap.md): Deprecated.
+- [MTRTestClusterBitmap32MaskMap](mtrtestclusterbitmap32maskmap.md): Deprecated.
+- [MTRTestClusterBitmap64MaskMap](mtrtestclusterbitmap64maskmap.md): Deprecated.
+- [MTRTestClusterBitmap8MaskMap](mtrtestclusterbitmap8maskmap.md): Deprecated.
+- [MTRTestClusterSimpleBitmap](mtrtestclustersimplebitmap.md): Deprecated.
+
+### Interacting with the Media Playback cluster
+
+- [MTRMediaPlaybackClusterFastForwardParams](mtrmediaplaybackclusterfastforwardparams.md)
+- [MTRMediaPlaybackClusterNextParams](mtrmediaplaybackclusternextparams.md)
+- [MTRMediaPlaybackClusterPauseParams](mtrmediaplaybackclusterpauseparams.md)
+- [MTRMediaPlaybackClusterPlayParams](mtrmediaplaybackclusterplayparams.md)
+- [MTRMediaPlaybackClusterPlaybackPositionStruct](mtrmediaplaybackclusterplaybackpositionstruct.md)
+- [MTRMediaPlaybackClusterPlaybackResponseParams](mtrmediaplaybackclusterplaybackresponseparams.md)
+- [MTRMediaPlaybackClusterPreviousParams](mtrmediaplaybackclusterpreviousparams.md)
+- [MTRMediaPlaybackClusterRewindParams](mtrmediaplaybackclusterrewindparams.md)
+- [MTRMediaPlaybackClusterSeekParams](mtrmediaplaybackclusterseekparams.md)
+- [MTRMediaPlaybackClusterSkipBackwardParams](mtrmediaplaybackclusterskipbackwardparams.md)
+- [MTRMediaPlaybackClusterSkipForwardParams](mtrmediaplaybackclusterskipforwardparams.md)
+- [MTRMediaPlaybackClusterStartOverParams](mtrmediaplaybackclusterstartoverparams.md)
+- [MTRMediaPlaybackClusterStopParams](mtrmediaplaybackclusterstopparams.md)
+
+### Interacting with other clusters
+
+- [MTRPressureMeasurementFeature](mtrpressuremeasurementfeature.md)
+- [MTRBasicInformationClusterProductAppearanceStruct](mtrbasicinformationclusterproductappearancestruct.md)
+- [MTRBridgedDeviceBasicInformationClusterProductAppearanceStruct](mtrbridgeddevicebasicinformationclusterproductappearancestruct.md)
+- [MTRBaseClusterAccessControl](mtrbaseclusteraccesscontrol.md)
+- [MTRBaseClusterAccountLogin](mtrbaseclusteraccountlogin.md)
+- [MTRBaseClusterAdministratorCommissioning](mtrbaseclusteradministratorcommissioning.md)
+- [MTRBaseClusterApplicationBasic](mtrbaseclusterapplicationbasic.md)
+- [MTRBaseClusterAudioOutput](mtrbaseclusteraudiooutput.md)
+- [MTRBaseClusterBallastConfiguration](mtrbaseclusterballastconfiguration.md)
+- [MTRBaseClusterBarrierControl](mtrbaseclusterbarriercontrol.md): Deprecated.
+- [MTRBaseClusterBasicInformation](mtrbaseclusterbasicinformation.md)
+- [MTRBaseClusterBinaryInputBasic](mtrbaseclusterbinaryinputbasic.md): Deprecated.
+- [MTRBaseClusterBinding](mtrbaseclusterbinding.md)
+- [MTRBaseClusterBooleanState](mtrbaseclusterbooleanstate.md)
+- [MTRBaseClusterBridgedDeviceBasic](mtrbaseclusterbridgeddevicebasic.md): Deprecated.
+- [MTRBaseClusterBridgedDeviceBasicInformation](mtrbaseclusterbridgeddevicebasicinformation.md)
+- [MTRBaseClusterChannel](mtrbaseclusterchannel.md)
+- [MTRBaseClusterDescriptor](mtrbaseclusterdescriptor.md)
+- [MTRBaseClusterDiagnosticLogs](mtrbaseclusterdiagnosticlogs.md)
+- [MTRBaseClusterElectricalMeasurement](mtrbaseclusterelectricalmeasurement.md): Deprecated.
+- [MTRBaseClusterEthernetNetworkDiagnostics](mtrbaseclusterethernetnetworkdiagnostics.md)
+- [MTRBaseClusterFanControl](mtrbaseclusterfancontrol.md)
+- [MTRBaseClusterFixedLabel](mtrbaseclusterfixedlabel.md)
+- [MTRBaseClusterFlowMeasurement](mtrbaseclusterflowmeasurement.md)
+- [MTRBaseClusterGeneralCommissioning](mtrbaseclustergeneralcommissioning.md)
+- [MTRBaseClusterGeneralDiagnostics](mtrbaseclustergeneraldiagnostics.md)
+- [MTRBaseClusterGroupKeyManagement](mtrbaseclustergroupkeymanagement.md)
+- [MTRBaseClusterGroups](mtrbaseclustergroups.md)
+- [MTRBaseClusterIdentify](mtrbaseclusteridentify.md)
+- [MTRBaseClusterIlluminanceMeasurement](mtrbaseclusterilluminancemeasurement.md)
+- [MTRBaseClusterKeypadInput](mtrbaseclusterkeypadinput.md)
+- [MTRBaseClusterLocalizationConfiguration](mtrbaseclusterlocalizationconfiguration.md)
+- [MTRBaseClusterLowPower](mtrbaseclusterlowpower.md)
+- [MTRBaseClusterMediaInput](mtrbaseclustermediainput.md)
+- [MTRBaseClusterMediaPlayback](mtrbaseclustermediaplayback.md)
+- [MTRBaseClusterModeSelect](mtrbaseclustermodeselect.md)
+- [MTRBaseClusterNetworkCommissioning](mtrbaseclusternetworkcommissioning.md)
+- [MTRBaseClusterOccupancySensing](mtrbaseclusteroccupancysensing.md)
+- [MTRBaseClusterOnOff](mtrbaseclusteronoff.md)
+- [MTRBaseClusterOnOffSwitchConfiguration](mtrbaseclusteronoffswitchconfiguration.md): Deprecated.
+- [MTRBaseClusterOperationalCredentials](mtrbaseclusteroperationalcredentials.md)
+- [MTRBaseClusterPowerSource](mtrbaseclusterpowersource.md)
+- [MTRBaseClusterPowerSourceConfiguration](mtrbaseclusterpowersourceconfiguration.md)
+- [MTRBaseClusterPressureMeasurement](mtrbaseclusterpressuremeasurement.md)
+- [MTRBaseClusterPumpConfigurationAndControl](mtrbaseclusterpumpconfigurationandcontrol.md)
+- [MTRBaseClusterRelativeHumidityMeasurement](mtrbaseclusterrelativehumiditymeasurement.md)
+- [MTRBaseClusterSwitch](mtrbaseclusterswitch.md)
+- [MTRBaseClusterTargetNavigator](mtrbaseclustertargetnavigator.md)
+- [MTRBaseClusterTemperatureMeasurement](mtrbaseclustertemperaturemeasurement.md)
+- [MTRBaseClusterThermostatUserInterfaceConfiguration](mtrbaseclusterthermostatuserinterfaceconfiguration.md)
+- [MTRBaseClusterThreadNetworkDiagnostics](mtrbaseclusterthreadnetworkdiagnostics.md)
+- [MTRBaseClusterTimeFormatLocalization](mtrbaseclustertimeformatlocalization.md)
+- [MTRBaseClusterUnitLocalization](mtrbaseclusterunitlocalization.md)
+- [MTRBaseClusterUnitTesting](mtrbaseclusterunittesting.md)
+- [MTRBaseClusterUserLabel](mtrbaseclusteruserlabel.md)
+- [MTRBaseClusterWakeOnLAN](mtrbaseclusterwakeonlan-1df75.md)
+- [MTRCluster](mtrcluster.md)
+- [MTRThreadNetworkDiagnosticsClusterConnectionStatusEvent](mtrthreadnetworkdiagnosticsclusterconnectionstatusevent.md)
+- [MTRTargetNavigatorClusterNavigateTargetParams](mtrtargetnavigatorclusternavigatetargetparams.md)
+- [MTRTargetNavigatorClusterNavigateTargetResponseParams](mtrtargetnavigatorclusternavigatetargetresponseparams.md)
+- [MTRTargetNavigatorClusterTargetInfoStruct](mtrtargetnavigatorclustertargetinfostruct.md)
+- [MTRSetupPayload](mtrsetuppayload.md)
+- [MTRNetworkCommissioningClusterScanNetworksResponseParams](mtrnetworkcommissioningclusterscannetworksresponseparams.md)
+- [MTRNetworkCommissioningClusterThreadInterfaceScanResult](mtrnetworkcommissioningclusterthreadinterfacescanresult.md): Deprecated.
+- [MTRNetworkCommissioningClusterWiFiInterfaceScanResult](mtrnetworkcommissioningclusterwifiinterfacescanresult.md): Deprecated.
+- [MTRMediaInputClusterShowInputStatusParams](mtrmediainputclustershowinputstatusparams.md)
+- [MTRModeSelectClusterChangeToModeParams](mtrmodeselectclusterchangetomodeparams.md)
+- [MTRModeSelectClusterModeOptionStruct](mtrmodeselectclustermodeoptionstruct.md)
+- [MTRModeSelectClusterSemanticTagStruct](mtrmodeselectclustersemantictagstruct.md)
+- [MTRNetworkCommissioningClusterAddOrUpdateThreadNetworkParams](mtrnetworkcommissioningclusteraddorupdatethreadnetworkparams.md)
+- [MTRNetworkCommissioningClusterAddOrUpdateWiFiNetworkParams](mtrnetworkcommissioningclusteraddorupdatewifinetworkparams.md)
+- [MTRNetworkCommissioningClusterConnectNetworkParams](mtrnetworkcommissioningclusterconnectnetworkparams.md)
+- [MTRNetworkCommissioningClusterConnectNetworkResponseParams](mtrnetworkcommissioningclusterconnectnetworkresponseparams.md)
+- [MTRNetworkCommissioningClusterNetworkConfigResponseParams](mtrnetworkcommissioningclusternetworkconfigresponseparams.md)
+- [MTRNetworkCommissioningClusterNetworkInfo](mtrnetworkcommissioningclusternetworkinfo.md): Deprecated.
+- [MTRNetworkCommissioningClusterRemoveNetworkParams](mtrnetworkcommissioningclusterremovenetworkparams.md)
+- [MTRNetworkCommissioningClusterReorderNetworkParams](mtrnetworkcommissioningclusterreordernetworkparams.md)
+- [MTRNetworkCommissioningClusterScanNetworksParams](mtrnetworkcommissioningclusterscannetworksparams.md)
+- [MTRIdentifyClusterTriggerEffectParams](mtridentifyclustertriggereffectparams.md)
+- [MTRKeypadInputClusterSendKeyParams](mtrkeypadinputclustersendkeyparams.md)
+- [MTRKeypadInputClusterSendKeyResponseParams](mtrkeypadinputclustersendkeyresponseparams.md)
+- [MTRLowPowerClusterSleepParams](mtrlowpowerclustersleepparams.md)
+- [MTRMediaInputClusterHideInputStatusParams](mtrmediainputclusterhideinputstatusparams.md)
+- [MTRMediaInputClusterInputInfoStruct](mtrmediainputclusterinputinfostruct.md)
+- [MTRMediaInputClusterRenameInputParams](mtrmediainputclusterrenameinputparams.md)
+- [MTRMediaInputClusterSelectInputParams](mtrmediainputclusterselectinputparams.md)
+- [MTRGroupKeyManagementClusterKeySetWriteParams](mtrgroupkeymanagementclusterkeysetwriteparams.md)
+- [MTRGroupsFeature](mtrgroupsfeature.md)
+- [MTRGroupsClusterAddGroupIfIdentifyingParams](mtrgroupsclusteraddgroupifidentifyingparams.md)
+- [MTRGroupsClusterAddGroupParams](mtrgroupsclusteraddgroupparams.md)
+- [MTRGroupsClusterAddGroupResponseParams](mtrgroupsclusteraddgroupresponseparams.md)
+- [MTRGroupsClusterGetGroupMembershipParams](mtrgroupsclustergetgroupmembershipparams.md)
+- [MTRGroupsClusterGetGroupMembershipResponseParams](mtrgroupsclustergetgroupmembershipresponseparams.md)
+- [MTRGroupsClusterRemoveAllGroupsParams](mtrgroupsclusterremoveallgroupsparams.md)
+- [MTRGroupsClusterRemoveGroupParams](mtrgroupsclusterremovegroupparams.md)
+- [MTRGroupsClusterRemoveGroupResponseParams](mtrgroupsclusterremovegroupresponseparams.md)
+- [MTRGroupsClusterViewGroupParams](mtrgroupsclusterviewgroupparams.md)
+- [MTRGroupsClusterViewGroupResponseParams](mtrgroupsclusterviewgroupresponseparams.md)
+- [MTRIdentifyClusterIdentifyParams](mtridentifyclusteridentifyparams.md)
+- [MTRGeneralDiagnosticsClusterRadioFaultChangeEvent](mtrgeneraldiagnosticsclusterradiofaultchangeevent.md)
+- [MTRGeneralDiagnosticsClusterTestEventTriggerParams](mtrgeneraldiagnosticsclustertesteventtriggerparams.md)
+- [MTRGroupKeyManagementClusterGroupInfoMapStruct](mtrgroupkeymanagementclustergroupinfomapstruct.md)
+- [MTRGroupKeyManagementClusterGroupKeyMapStruct](mtrgroupkeymanagementclustergroupkeymapstruct.md)
+- [MTRGroupKeyManagementClusterGroupKeySetStruct](mtrgroupkeymanagementclustergroupkeysetstruct.md)
+- [MTRGroupKeyManagementClusterKeySetReadAllIndicesParams](mtrgroupkeymanagementclusterkeysetreadallindicesparams.md)
+- [MTRGroupKeyManagementClusterKeySetReadAllIndicesResponseParams](mtrgroupkeymanagementclusterkeysetreadallindicesresponseparams.md)
+- [MTRGroupKeyManagementClusterKeySetReadParams](mtrgroupkeymanagementclusterkeysetreadparams.md)
+- [MTRGroupKeyManagementClusterKeySetReadResponseParams](mtrgroupkeymanagementclusterkeysetreadresponseparams.md)
+- [MTRGroupKeyManagementClusterKeySetRemoveParams](mtrgroupkeymanagementclusterkeysetremoveparams.md)
+- [MTRGeneralCommissioningClusterBasicCommissioningInfo](mtrgeneralcommissioningclusterbasiccommissioninginfo.md)
+- [MTRGeneralCommissioningClusterCommissioningCompleteParams](mtrgeneralcommissioningclustercommissioningcompleteparams.md)
+- [MTRGeneralCommissioningClusterCommissioningCompleteResponseParams](mtrgeneralcommissioningclustercommissioningcompleteresponseparams.md)
+- [MTRGeneralCommissioningClusterSetRegulatoryConfigParams](mtrgeneralcommissioningclustersetregulatoryconfigparams.md)
+- [MTRGeneralCommissioningClusterSetRegulatoryConfigResponseParams](mtrgeneralcommissioningclustersetregulatoryconfigresponseparams.md)
+- [MTRGeneralDiagnosticsClusterBootReasonEvent](mtrgeneraldiagnosticsclusterbootreasonevent.md)
+- [MTRGeneralDiagnosticsClusterHardwareFaultChangeEvent](mtrgeneraldiagnosticsclusterhardwarefaultchangeevent.md)
+- [MTRGeneralDiagnosticsClusterNetworkFaultChangeEvent](mtrgeneraldiagnosticsclusternetworkfaultchangeevent.md)
+- [MTRGeneralDiagnosticsClusterNetworkInterface](mtrgeneraldiagnosticsclusternetworkinterface.md)
+- [MTRElectricalMeasurementClusterGetMeasurementProfileResponseCommandParams](mtrelectricalmeasurementclustergetmeasurementprofileresponsecommandparams.md): Deprecated.
+- [MTRElectricalMeasurementClusterGetProfileInfoCommandParams](mtrelectricalmeasurementclustergetprofileinfocommandparams.md): Deprecated.
+- [MTRElectricalMeasurementClusterGetProfileInfoResponseCommandParams](mtrelectricalmeasurementclustergetprofileinforesponsecommandparams.md): Deprecated.
+- [MTREthernetNetworkDiagnosticsClusterResetCountsParams](mtrethernetnetworkdiagnosticsclusterresetcountsparams.md)
+- [MTRFixedLabelClusterLabelStruct](mtrfixedlabelclusterlabelstruct.md)
+- [MTRGeneralCommissioningClusterArmFailSafeParams](mtrgeneralcommissioningclusterarmfailsafeparams.md)
+- [MTRGeneralCommissioningClusterArmFailSafeResponseParams](mtrgeneralcommissioningclusterarmfailsaferesponseparams.md)
+- [MTRContentLauncherClusterStyleInformationStruct](mtrcontentlauncherclusterstyleinformationstruct.md)
+- [MTRDescriptorClusterDeviceTypeStruct](mtrdescriptorclusterdevicetypestruct.md)
+- [MTRDiagnosticLogsClusterRetrieveLogsRequestParams](mtrdiagnosticlogsclusterretrievelogsrequestparams.md)
+- [MTRDiagnosticLogsClusterRetrieveLogsResponseParams](mtrdiagnosticlogsclusterretrievelogsresponseparams.md)
+- [MTRContentLauncherClusterLaunchContentParams](mtrcontentlauncherclusterlaunchcontentparams.md)
+- [MTRContentLauncherClusterLaunchURLParams](mtrcontentlauncherclusterlaunchurlparams.md)
+- [MTRContentLauncherClusterLauncherResponseParams](mtrcontentlauncherclusterlauncherresponseparams.md)
+- [MTRContentLauncherClusterParameterStruct](mtrcontentlauncherclusterparameterstruct.md)
+- [MTRAccessControlClusterAccessControlEntryChangedEvent](mtraccesscontrolclusteraccesscontrolentrychangedevent.md)
+- [MTRAccessControlClusterAccessControlEntryStruct](mtraccesscontrolclusteraccesscontrolentrystruct.md)
+- [MTRAccessControlClusterAccessControlExtensionChangedEvent](mtraccesscontrolclusteraccesscontrolextensionchangedevent.md)
+- [MTRAccessControlClusterAccessControlExtensionStruct](mtraccesscontrolclusteraccesscontrolextensionstruct.md)
+- [MTRAccessControlClusterTarget](mtraccesscontrolclustertarget.md): Deprecated.
+- [MTRAccountLoginClusterGetSetupPINParams](mtraccountloginclustergetsetuppinparams.md)
+- [MTRAccountLoginClusterGetSetupPINResponseParams](mtraccountloginclustergetsetuppinresponseparams.md)
+- [MTRAccountLoginClusterLoginParams](mtraccountloginclusterloginparams.md)
+- [MTRAccountLoginClusterLogoutParams](mtraccountloginclusterlogoutparams.md)
+- [MTRAdministratorCommissioningClusterOpenBasicCommissioningWindowParams](mtradministratorcommissioningclusteropenbasiccommissioningwindowparams.md)
+- [MTRAdministratorCommissioningClusterOpenCommissioningWindowParams](mtradministratorcommissioningclusteropencommissioningwindowparams.md)
+- [MTRAdministratorCommissioningClusterRevokeCommissioningParams](mtradministratorcommissioningclusterrevokecommissioningparams.md)
+- [MTRApplicationBasicClusterApplicationStruct](mtrapplicationbasicclusterapplicationstruct.md)
+- [MTRAudioOutputClusterOutputInfoStruct](mtraudiooutputclusteroutputinfostruct.md)
+- [MTRAudioOutputClusterRenameOutputParams](mtraudiooutputclusterrenameoutputparams.md)
+- [MTRAudioOutputClusterSelectOutputParams](mtraudiooutputclusterselectoutputparams.md)
+- [MTRBarrierControlClusterBarrierControlGoToPercentParams](mtrbarriercontrolclusterbarriercontrolgotopercentparams.md): Deprecated.
+- [MTRBarrierControlClusterBarrierControlStopParams](mtrbarriercontrolclusterbarriercontrolstopparams.md): Deprecated.
+- [MTRBasicInformationClusterCapabilityMinimaStruct](mtrbasicinformationclustercapabilityminimastruct.md)
+- [MTRBasicInformationClusterLeaveEvent](mtrbasicinformationclusterleaveevent.md)
+- [MTRBasicInformationClusterReachableChangedEvent](mtrbasicinformationclusterreachablechangedevent.md)
+- [MTRBasicInformationClusterStartUpEvent](mtrbasicinformationclusterstartupevent.md)
+- [MTRBindingClusterTargetStruct](mtrbindingclustertargetstruct.md)
+- [MTRBooleanStateClusterStateChangeEvent](mtrbooleanstateclusterstatechangeevent.md)
+- [MTRBridgedDeviceBasicInformationClusterReachableChangedEvent](mtrbridgeddevicebasicinformationclusterreachablechangedevent.md)
+- [MTRBridgedDeviceBasicInformationClusterStartUpEvent](mtrbridgeddevicebasicinformationclusterstartupevent.md)
+- [MTRCertificates](mtrcertificates.md)
+- [MTRChannelClusterChangeChannelByNumberParams](mtrchannelclusterchangechannelbynumberparams.md)
+- [MTRChannelClusterChangeChannelParams](mtrchannelclusterchangechannelparams.md)
+- [MTRChannelClusterChangeChannelResponseParams](mtrchannelclusterchangechannelresponseparams.md)
+- [MTRChannelClusterChannelInfoStruct](mtrchannelclusterchannelinfostruct.md)
+- [MTRChannelClusterLineupInfoStruct](mtrchannelclusterlineupinfostruct.md)
+- [MTRChannelClusterSkipChannelParams](mtrchannelclusterskipchannelparams.md)
+- [MTRClusterAccessControl](mtrclusteraccesscontrol.md)
+- [MTRClusterAccountLogin](mtrclusteraccountlogin.md)
+- [MTRClusterAdministratorCommissioning](mtrclusteradministratorcommissioning.md)
+- [MTRClusterApplicationBasic](mtrclusterapplicationbasic.md)
+- [MTRClusterApplicationLauncher](mtrclusterapplicationlauncher.md)
+- [MTRClusterAudioOutput](mtrclusteraudiooutput.md)
+- [MTRClusterBallastConfiguration](mtrclusterballastconfiguration.md)
+- [MTRClusterBarrierControl](mtrclusterbarriercontrol.md): Deprecated.
+- [MTRClusterBasicInformation](mtrclusterbasicinformation.md)
+- [MTRClusterBinaryInputBasic](mtrclusterbinaryinputbasic.md): Deprecated.
+- [MTRClusterBinding](mtrclusterbinding.md)
+- [MTRClusterBooleanState](mtrclusterbooleanstate.md)
+- [MTRClusterBridgedDeviceBasic](mtrclusterbridgeddevicebasic.md): Deprecated.
+- [MTRClusterBridgedDeviceBasicInformation](mtrclusterbridgeddevicebasicinformation.md)
+- [MTRClusterChannel](mtrclusterchannel.md)
+- [MTRClusterColorControl](mtrclustercolorcontrol.md)
+- [MTRClusterContentLauncher](mtrclustercontentlauncher.md)
+- [MTRClusterDescriptor](mtrclusterdescriptor.md)
+- [MTRClusterDiagnosticLogs](mtrclusterdiagnosticlogs.md)
+- [MTRClusterDoorLock](mtrclusterdoorlock.md)
+- [MTRClusterElectricalMeasurement](mtrclusterelectricalmeasurement.md): Deprecated.
+- [MTRClusterEthernetNetworkDiagnostics](mtrclusterethernetnetworkdiagnostics.md)
+- [MTRClusterFanControl](mtrclusterfancontrol.md)
+- [MTRClusterFixedLabel](mtrclusterfixedlabel.md)
+- [MTRClusterFlowMeasurement](mtrclusterflowmeasurement.md)
+- [MTRClusterGeneralCommissioning](mtrclustergeneralcommissioning.md)
+- [MTRClusterGeneralDiagnostics](mtrclustergeneraldiagnostics.md)
+- [MTRClusterGroupKeyManagement](mtrclustergroupkeymanagement.md)
+- [MTRClusterGroups](mtrclustergroups.md)
+- [MTRClusterIdentify](mtrclusteridentify.md)
+- [MTRClusterIlluminanceMeasurement](mtrclusterilluminancemeasurement.md)
+- [MTRClusterKeypadInput](mtrclusterkeypadinput.md)
+- [MTRClusterLevelControl](mtrclusterlevelcontrol.md)
+- [MTRClusterLocalizationConfiguration](mtrclusterlocalizationconfiguration.md)
+- [MTRClusterLowPower](mtrclusterlowpower.md)
+- [MTRClusterMediaInput](mtrclustermediainput.md)
+- [MTRClusterMediaPlayback](mtrclustermediaplayback.md)
+- [MTRClusterModeSelect](mtrclustermodeselect.md)
+- [MTRClusterNetworkCommissioning](mtrclusternetworkcommissioning.md)
+- [MTRClusterOTASoftwareUpdateProvider](mtrclusterotasoftwareupdateprovider-wrfu.md)
+- [MTRClusterOTASoftwareUpdateRequestor](mtrclusterotasoftwareupdaterequestor-5qeao.md)
+- [MTRClusterOccupancySensing](mtrclusteroccupancysensing.md)
+- [MTRClusterOnOff](mtrclusteronoff.md)
+- [MTRClusterOnOffSwitchConfiguration](mtrclusteronoffswitchconfiguration.md): Deprecated.
+- [MTRClusterOperationalCredentials](mtrclusteroperationalcredentials.md)
+- [MTRClusterPowerSource](mtrclusterpowersource.md)
+- [MTRClusterPowerSourceConfiguration](mtrclusterpowersourceconfiguration.md)
+- [MTRClusterPressureMeasurement](mtrclusterpressuremeasurement.md)
+- [MTRClusterPumpConfigurationAndControl](mtrclusterpumpconfigurationandcontrol.md)
+- [MTRClusterRelativeHumidityMeasurement](mtrclusterrelativehumiditymeasurement.md)
+- [MTRClusterSoftwareDiagnostics](mtrclustersoftwarediagnostics.md)
+- [MTRClusterSwitch](mtrclusterswitch.md)
+- [MTRClusterTargetNavigator](mtrclustertargetnavigator.md)
+- [MTRClusterTemperatureMeasurement](mtrclustertemperaturemeasurement.md)
+- [MTRClusterThermostat](mtrclusterthermostat.md)
+- [MTRClusterThermostatUserInterfaceConfiguration](mtrclusterthermostatuserinterfaceconfiguration.md)
+- [MTRClusterThreadNetworkDiagnostics](mtrclusterthreadnetworkdiagnostics.md)
+- [MTRClusterTimeFormatLocalization](mtrclustertimeformatlocalization.md)
+- [MTRClusterUnitLocalization](mtrclusterunitlocalization.md)
+- [MTRClusterUnitTesting](mtrclusterunittesting.md)
+- [MTRClusterUserLabel](mtrclusteruserlabel.md)
+- [MTRClusterWakeOnLAN](mtrclusterwakeonlan-6dyo6.md)
+- [MTRClusterWiFiNetworkDiagnostics](mtrclusterwifinetworkdiagnostics.md)
+- [MTRClusterWindowCovering](mtrclusterwindowcovering.md)
+- [MTRClusterActions](mtrclusteractions.md)
+- [MTRBridgedDeviceBasicClusterLeaveEvent](mtrbridgeddevicebasicclusterleaveevent.md): Deprecated.
+- [MTRBridgedDeviceBasicClusterReachableChangedEvent](mtrbridgeddevicebasicclusterreachablechangedevent.md): Deprecated.
+- [MTRBridgedDeviceBasicClusterShutDownEvent](mtrbridgeddevicebasicclustershutdownevent.md): Deprecated.
+- [MTRBridgedDeviceBasicClusterStartUpEvent](mtrbridgeddevicebasicclusterstartupevent.md): Deprecated.
+- [MTRBridgedDeviceBasicInformationClusterLeaveEvent](mtrbridgeddevicebasicinformationclusterleaveevent.md)
+- [MTRBridgedDeviceBasicInformationClusterShutDownEvent](mtrbridgeddevicebasicinformationclustershutdownevent.md)
+- [MTRBasicInformationClusterShutDownEvent](mtrbasicinformationclustershutdownevent.md)
+- [MTRClusterOtaSoftwareUpdateProvider](mtrclusterotasoftwareupdateprovider-4p8us.md): Deprecated.
+- [MTRTestClusterClusterTestEnumsRequestParams](mtrtestclusterclustertestenumsrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestEnumsResponseParams](mtrtestclusterclustertestenumsresponseparams.md): Deprecated.
+- [MTRTestClusterClusterTestEventEvent](mtrtestclusterclustertesteventevent.md): Deprecated.
+- [MTRTestClusterClusterTestFabricScoped](mtrtestclusterclustertestfabricscoped.md): Deprecated.
+- [MTRTestClusterClusterTestFabricScopedEventEvent](mtrtestclusterclustertestfabricscopedeventevent.md): Deprecated.
+- [MTRTestClusterClusterTestListInt8UArgumentRequestParams](mtrtestclusterclustertestlistint8uargumentrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestListInt8UReverseRequestParams](mtrtestclusterclustertestlistint8ureverserequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestListInt8UReverseResponseParams](mtrtestclusterclustertestlistint8ureverseresponseparams.md): Deprecated.
+- [MTRTestClusterClusterTestListNestedStructListArgumentRequestParams](mtrtestclusterclustertestlistnestedstructlistargumentrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestListStructArgumentRequestParams](mtrtestclusterclustertestliststructargumentrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestListStructOctet](mtrtestclusterclustertestliststructoctet.md): Deprecated.
+- [MTRTestClusterClusterTestNestedStructArgumentRequestParams](mtrtestclusterclustertestnestedstructargumentrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestNestedStructListArgumentRequestParams](mtrtestclusterclustertestnestedstructlistargumentrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestNotHandledParams](mtrtestclusterclustertestnothandledparams.md): Deprecated.
+- [MTRTestClusterClusterTestNullableOptionalRequestParams](mtrtestclusterclustertestnullableoptionalrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestNullableOptionalResponseParams](mtrtestclusterclustertestnullableoptionalresponseparams.md): Deprecated.
+- [MTRTestClusterClusterTestParams](mtrtestclusterclustertestparams.md): Deprecated.
+- [MTRTestClusterClusterTestSimpleArgumentRequestParams](mtrtestclusterclustertestsimpleargumentrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestSimpleArgumentResponseParams](mtrtestclusterclustertestsimpleargumentresponseparams.md): Deprecated.
+- [MTRTestClusterClusterTestSimpleOptionalArgumentRequestParams](mtrtestclusterclustertestsimpleoptionalargumentrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestSpecificParams](mtrtestclusterclustertestspecificparams.md): Deprecated.
+- [MTRTestClusterClusterTestSpecificResponseParams](mtrtestclusterclustertestspecificresponseparams.md): Deprecated.
+- [MTRTestClusterClusterTestStructArgumentRequestParams](mtrtestclusterclusterteststructargumentrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestStructArrayArgumentRequestParams](mtrtestclusterclusterteststructarrayargumentrequestparams.md): Deprecated.
+- [MTRTestClusterClusterTestStructArrayArgumentResponseParams](mtrtestclusterclusterteststructarrayargumentresponseparams.md): Deprecated.
+- [MTRTestClusterClusterTestUnknownCommandParams](mtrtestclusterclustertestunknowncommandparams.md): Deprecated.
+- [MTRTestClusterClusterTimedInvokeRequestParams](mtrtestclusterclustertimedinvokerequestparams.md): Deprecated.
+- [MTRChannelClusterChannelInfo](mtrchannelclusterchannelinfo.md): Deprecated.
+- [MTRChannelClusterLineupInfo](mtrchannelclusterlineupinfo.md): Deprecated.
+- [MTRContentLauncherClusterStyleInformation](mtrcontentlauncherclusterstyleinformation.md): Deprecated.
+- [MTRDescriptorClusterDeviceType](mtrdescriptorclusterdevicetype.md): Deprecated.
+- [MTRContentLauncherClusterLaunchResponseParams](mtrcontentlauncherclusterlaunchresponseparams.md): Deprecated.
+- [MTRContentLauncherClusterParameter](mtrcontentlauncherclusterparameter.md): Deprecated.
+- [MTRAccessControlClusterAccessControlEntry](mtraccesscontrolclusteraccesscontrolentry.md): Deprecated.
+- [MTRAccessControlClusterExtensionEntry](mtraccesscontrolclusterextensionentry.md): Deprecated.
+- [MTRApplicationBasicClusterApplicationBasicApplication](mtrapplicationbasicclusterapplicationbasicapplication.md): Deprecated.
+- [MTRAudioOutputClusterOutputInfo](mtraudiooutputclusteroutputinfo.md): Deprecated.
+- [MTRTargetNavigatorClusterTargetInfo](mtrtargetnavigatorclustertargetinfo.md): Deprecated.
+- [MTRMediaPlaybackClusterPlaybackPosition](mtrmediaplaybackclusterplaybackposition.md): Deprecated.
+- [MTRMediaPlaybackClusterStopPlaybackParams](mtrmediaplaybackclusterstopplaybackparams.md): Deprecated.
+- [MTRModeSelectClusterSemanticTag](mtrmodeselectclustersemantictag.md): Deprecated.
+- [MTRMediaInputClusterInputInfo](mtrmediainputclusterinputinfo.md): Deprecated.
+- [MTRDoorLockClusterDlCredential](mtrdoorlockclusterdlcredential.md): Deprecated.
+- [MTRClusterWakeOnLan](mtrclusterwakeonlan-6e8me.md): Deprecated.
+- [MTRClusterTestCluster](mtrclustertestcluster.md): Deprecated.
+- [MTRClusterBasic](mtrclusterbasic.md): Deprecated.
+- [MTRBasicClusterMfgSpecificPingParams](mtrbasicclustermfgspecificpingparams.md): Deprecated.
+- [MTRGeneralDiagnosticsClusterNetworkInterfaceType](mtrgeneraldiagnosticsclusternetworkinterfacetype.md): Deprecated.
+- [MTRManualSetupPayloadParser](mtrmanualsetuppayloadparser.md): Deprecated.
+- [MTRClusterOtaSoftwareUpdateRequestor](mtrclusterotasoftwareupdaterequestor-22dfp.md): Deprecated.
+- [MTRBaseClusterBasic](mtrbaseclusterbasic.md): Deprecated.
+- [MTRBaseClusterOtaSoftwareUpdateProvider](mtrbaseclusterotasoftwareupdateprovider-2vync.md): Deprecated.
+- [MTRBaseClusterOtaSoftwareUpdateRequestor](mtrbaseclusterotasoftwareupdaterequestor-35vsy.md): Deprecated.
+- [MTRBaseClusterTestCluster](mtrbaseclustertestcluster.md): Deprecated.
+- [MTRBaseClusterWakeOnLan](mtrbaseclusterwakeonlan-1dp5d.md): Deprecated.
+- [MTRBasicClusterCapabilityMinimaStruct](mtrbasicclustercapabilityminimastruct.md): Deprecated.
+- [MTRBasicClusterLeaveEvent](mtrbasicclusterleaveevent.md): Deprecated.
+- [MTRBasicClusterReachableChangedEvent](mtrbasicclusterreachablechangedevent.md): Deprecated.
+- [MTRBasicClusterShutDownEvent](mtrbasicclustershutdownevent.md): Deprecated.
+- [MTRBasicClusterStartUpEvent](mtrbasicclusterstartupevent.md): Deprecated.
+
+### Data types
+
+- [MTRAsyncCallbackReadyHandler](mtrasynccallbackreadyhandler.md)
+- [MTRCSRDERBytes](mtrcsrderbytes.md)
+- [MTRCertificateDERBytes](mtrcertificatederbytes.md)
+- [MTRCertificateTLVBytes](mtrcertificatetlvbytes.md)
+- [MTRDeviceControllerGetterHandler](mtrdevicecontrollergetterhandler.md)
+- [MTRDeviceOpenCommissioningWindowHandler](mtrdeviceopencommissioningwindowhandler.md)
+- [MTRDeviceReportHandler](mtrdevicereporthandler.md)
+- [MTRDeviceResponseHandler](mtrdeviceresponsehandler.md)
+- [MTRDeviceResubscriptionScheduledHandler](mtrdeviceresubscriptionscheduledhandler.md)
+- [MTRStatusCompletion](mtrstatuscompletion.md)
+- [MTRSubscriptionEstablishedHandler](mtrsubscriptionestablishedhandler.md)
+- [MTRTLVBytes](mtrtlvbytes.md)
+- [MTRValuesHandler](mtrvalueshandler.md)
+- [MTRXPCConnectBlock](mtrxpcconnectblock.md)
+- [ResponseHandler](responsehandler.md): Deprecated.
+- [StatusCompletion](statuscompletion.md): Deprecated.
+- [SubscriptionEstablishedHandler](subscriptionestablishedhandler.md): Deprecated.
+- [MTRDeviceConnectionCallback](mtrdeviceconnectioncallback.md): Deprecated.
+- [MTRNOCChainGenerationCompleteHandler](mtrnocchaingenerationcompletehandler.md): Deprecated.
+
+### Constants
+
+- [MTRArrayValueType](mtrarrayvaluetype.md)
+- [MTRAttributePathKey](mtrattributepathkey.md)
+- [MTRBooleanValueType](mtrbooleanvaluetype.md)
+- [MTRCommandPathKey](mtrcommandpathkey.md)
+- [MTRContextTagKey](mtrcontexttagkey.md)
+- [MTRDataKey](mtrdatakey.md)
+- [MTRDoubleValueType](mtrdoublevaluetype.md)
+- [MTRErrorDomain](mtrerrordomain.md)
+- [MTRErrorKey](mtrerrorkey.md)
+- [MTREventNumberKey](mtreventnumberkey.md)
+- [MTREventPathKey](mtreventpathkey.md)
+- [MTREventPriorityKey](mtreventprioritykey.md)
+- [MTREventSystemUpTimeKey](mtreventsystemuptimekey.md)
+- [MTREventTimeTypeKey](mtreventtimetypekey.md)
+- [MTREventTimestampDateKey](mtreventtimestampdatekey.md)
+- [MTRFloatValueType](mtrfloatvaluetype.md)
+- [MTRInteractionErrorDomain](mtrinteractionerrordomain.md)
+- [MTRNullValueType](mtrnullvaluetype.md)
+- [MTROctetStringValueType](mtroctetstringvaluetype.md)
+- [MTRSignedIntegerValueType](mtrsignedintegervaluetype.md)
+- [MTRSizeThreadMasterKey](mtrsizethreadmasterkey.md)
+- [MTRSizeThreadNetworkName](mtrsizethreadnetworkname.md)
+- [MTRSizeThreadPANID](mtrsizethreadpanid.md)
+- [MTRSizeThreadPSKc](mtrsizethreadpskc.md)
+- [MTRStructureValueType](mtrstructurevaluetype.md)
+- [MTRTypeKey](mtrtypekey.md)
+- [MTRUTF8StringValueType](mtrutf8stringvaluetype.md)
+- [MTRUnsignedIntegerValueType](mtrunsignedintegervaluetype.md)
+- [MTRValueKey](mtrvaluekey.md)
+- [MTRSizeThreadExtendedPANID](mtrsizethreadextendedpanid-wb5c.md)
+- [MTRSizeThreadExtendedPanId](mtrsizethreadextendedpanid-2daa7.md): Deprecated.
+
+### Structures
+
+- [MTRApplicationLauncherFeature](mtrapplicationlauncherfeature.md)
+- [MTRAudioOutputFeature](mtraudiooutputfeature.md)
+- [MTRChannelFeature](mtrchannelfeature.md)
+- [MTRContentLauncherFeature](mtrcontentlauncherfeature.md)
+- [MTRContentLauncherSupportedStreamingProtocol](mtrcontentlaunchersupportedstreamingprotocol.md): Deprecated.
+- [MTRDiscoveryCapabilities](mtrdiscoverycapabilities.md)
+- [MTREthernetNetworkDiagnosticsFeature](mtrethernetnetworkdiagnosticsfeature.md)
+- [MTRFanControlFeature](mtrfancontrolfeature.md)
+- [MTRFanControlRockSupportMask](mtrfancontrolrocksupportmask.md): Deprecated.
+- [MTRFanControlWindSettingMask](mtrfancontrolwindsettingmask.md): Deprecated.
+- [MTRFanControlWindSupportMask](mtrfancontrolwindsupportmask.md): Deprecated.
+- [MTRGroupsGroupClusterFeature](mtrgroupsgroupclusterfeature.md): Deprecated.
+- [MTRKeypadInputFeature](mtrkeypadinputfeature.md)
+- [MTRMediaInputFeature](mtrmediainputfeature.md)
+- [MTRMediaPlaybackFeature](mtrmediaplaybackfeature.md)
+- [MTRModeSelectFeature](mtrmodeselectfeature.md)
+- [MTRNetworkCommissioningFeature](mtrnetworkcommissioningfeature.md)
+- [MTRNetworkCommissioningWiFiSecurity](mtrnetworkcommissioningwifisecurity.md): Deprecated.
+- [MTROccupancySensingOccupancyBitmap](mtroccupancysensingoccupancybitmap.md)
+- [MTROccupancySensingOccupancySensorTypeBitmap](mtroccupancysensingoccupancysensortypebitmap.md)
+- [MTRPressureMeasurementPressureFeature](mtrpressuremeasurementpressurefeature.md): Deprecated.
+- [MTRSwitchFeature](mtrswitchfeature.md)
+- [MTRUnitLocalizationFeature](mtrunitlocalizationfeature.md)
+
+### Enumerations
+
+- [MTRAccessControlAuthMode](mtraccesscontrolauthmode.md): Deprecated.
+- [MTRAccessControlChangeType](mtraccesscontrolchangetype.md)
+- [MTRAccessControlEntryAuthMode](mtraccesscontrolentryauthmode.md)
+- [MTRAccessControlEntryPrivilege](mtraccesscontrolentryprivilege.md)
+- [MTRAccessControlPrivilege](mtraccesscontrolprivilege.md): Deprecated.
+- [MTRAdministratorCommissioningCommissioningWindowStatus](mtradministratorcommissioningcommissioningwindowstatus.md)
+- [MTRAdministratorCommissioningStatusCode](mtradministratorcommissioningstatuscode.md)
+- [MTRApplicationBasicApplicationStatus](mtrapplicationbasicapplicationstatus.md)
+- [MTRApplicationLauncherStatus](mtrapplicationlauncherstatus.md)
+- [MTRAttributeIDType](mtrattributeidtype.md)
+- [MTRAudioOutputFeature](mtraudiooutputfeature.md)
+- [MTRAudioOutputOutputType](mtraudiooutputoutputtype.md)
+- [MTRBasicInformationColor](mtrbasicinformationcolor.md)
+- [MTRBasicInformationProductFinish](mtrbasicinformationproductfinish.md)
+- [MTRBridgedDeviceBasicInformationColor](mtrbridgeddevicebasicinformationcolor.md)
+- [MTRBridgedDeviceBasicInformationProductFinish](mtrbridgeddevicebasicinformationproductfinish.md)
+- [MTRChannelFeature](mtrchannelfeature.md)
+- [MTRChannelLineupInfoType](mtrchannellineupinfotype.md)
+- [MTRChannelStatus](mtrchannelstatus.md)
+- [MTRClusterIDType](mtrclusteridtype.md)
+- [MTRCommandIDType](mtrcommandidtype.md)
+- [MTRCommissioningFlow](mtrcommissioningflow.md)
+- [MTRCommissioningStatus](mtrcommissioningstatus.md)
+- [MTRDeviceState](mtrdevicestate.md)
+- [MTRDiagnosticLogsIntent](mtrdiagnosticlogsintent.md)
+- [MTRDiagnosticLogsLogsIntent](mtrdiagnosticlogslogsintent.md): Deprecated.
+- [MTRDiagnosticLogsLogsStatus](mtrdiagnosticlogslogsstatus.md): Deprecated.
+- [MTRDiagnosticLogsLogsTransferProtocol](mtrdiagnosticlogslogstransferprotocol.md): Deprecated.
+- [MTRDiagnosticLogsStatus](mtrdiagnosticlogsstatus.md)
+- [MTRDiagnosticLogsTransferProtocol](mtrdiagnosticlogstransferprotocol.md)
+- [MTRDiscoveryCapabilities](mtrdiscoverycapabilities.md)
+- [MTRDoorLockDlAlarmCode](mtrdoorlockdlalarmcode.md): Deprecated.
+- [MTRDoorLockDlCredentialRule](mtrdoorlockdlcredentialrule.md): Deprecated.
+- [MTRDoorLockDlCredentialType](mtrdoorlockdlcredentialtype.md): Deprecated.
+- [MTRDoorLockDlDataOperationType](mtrdoorlockdldataoperationtype.md): Deprecated.
+- [MTRDoorLockDlDoorState](mtrdoorlockdldoorstate.md): Deprecated.
+- [MTRDoorLockDlLockDataType](mtrdoorlockdllockdatatype.md): Deprecated.
+- [MTRDoorLockDlLockOperationType](mtrdoorlockdllockoperationtype.md): Deprecated.
+- [MTRDoorLockDlOperatingMode](mtrdoorlockdloperatingmode.md): Deprecated.
+- [MTRDoorLockDlOperationError](mtrdoorlockdloperationerror.md): Deprecated.
+- [MTRDoorLockDlOperationSource](mtrdoorlockdloperationsource.md): Deprecated.
+- [MTRDoorLockDlUserStatus](mtrdoorlockdluserstatus.md): Deprecated.
+- [MTRDoorLockDlUserType](mtrdoorlockdlusertype.md): Deprecated.
+- [MTRDoorLockOperationEventCode](mtrdoorlockoperationeventcode.md): Deprecated.
+- [MTRDoorLockProgrammingEventCode](mtrdoorlockprogrammingeventcode.md): Deprecated.
+- [MTRDoorLockSetPinOrIdStatus](mtrdoorlocksetpinoridstatus.md): Deprecated.
+- [MTREthernetNetworkDiagnosticsFeature](mtrethernetnetworkdiagnosticsfeature.md)
+- [MTREthernetNetworkDiagnosticsPHYRate](mtrethernetnetworkdiagnosticsphyrate.md)
+- [MTREthernetNetworkDiagnosticsPHYRateType](mtrethernetnetworkdiagnosticsphyratetype.md): Deprecated.
+- [MTREventIDType](mtreventidtype.md)
+- [MTREventPriority](mtreventpriority.md)
+- [MTREventTimeType](mtreventtimetype.md)
+- [MTRFanControlFanModeSequenceType](mtrfancontrolfanmodesequencetype.md): Deprecated.
+- [MTRFanControlFanModeType](mtrfancontrolfanmodetype.md): Deprecated.
+- [MTRFanControlFeature](mtrfancontrolfeature.md)
+- [MTRFanControlRockSupportMask](mtrfancontrolrocksupportmask.md): Deprecated.
+- [MTRFanControlWindSettingMask](mtrfancontrolwindsettingmask.md): Deprecated.
+- [MTRFanControlWindSupportMask](mtrfancontrolwindsupportmask.md): Deprecated.
+- [MTRGeneralCommissioningCommissioningError](mtrgeneralcommissioningcommissioningerror.md)
+- [MTRGeneralCommissioningRegulatoryLocationType](mtrgeneralcommissioningregulatorylocationtype.md)
+- [MTRGeneralDiagnosticsBootReason](mtrgeneraldiagnosticsbootreason.md)
+- [MTRGeneralDiagnosticsBootReasonType](mtrgeneraldiagnosticsbootreasontype.md): Deprecated.
+- [MTRGeneralDiagnosticsHardwareFault](mtrgeneraldiagnosticshardwarefault.md)
+- [MTRGeneralDiagnosticsHardwareFaultType](mtrgeneraldiagnosticshardwarefaulttype.md): Deprecated.
+- [MTRGeneralDiagnosticsInterfaceType](mtrgeneraldiagnosticsinterfacetype.md)
+- [MTRGeneralDiagnosticsNetworkFault](mtrgeneraldiagnosticsnetworkfault.md)
+- [MTRGeneralDiagnosticsNetworkFaultType](mtrgeneraldiagnosticsnetworkfaulttype.md): Deprecated.
+- [MTRGeneralDiagnosticsRadioFault](mtrgeneraldiagnosticsradiofault.md)
+- [MTRGeneralDiagnosticsRadioFaultType](mtrgeneraldiagnosticsradiofaulttype.md): Deprecated.
+- [MTRGroupKeyManagementGroupKeySecurityPolicy](mtrgroupkeymanagementgroupkeysecuritypolicy.md)
+- [MTRGroupsFeature](mtrgroupsfeature.md)
+- [MTRGroupsGroupClusterFeature](mtrgroupsgroupclusterfeature.md): Deprecated.
+- [MTRIdentifyEffectIdentifier](mtridentifyeffectidentifier.md)
+- [MTRIdentifyEffectVariant](mtridentifyeffectvariant.md)
+- [MTRIdentifyType](mtridentifytype.md)
+- [MTRIlluminanceMeasurementLightSensorType](mtrilluminancemeasurementlightsensortype.md)
+- [MTRInteractionErrorCode](mtrinteractionerror/code.md)
+- [MTRKeypadInputCecKeyCode](mtrkeypadinputceckeycode-85trg.md): Deprecated.
+- [MTRKeypadInputFeature](mtrkeypadinputfeature.md)
+- [MTRKeypadInputStatus](mtrkeypadinputstatus.md)
+- [MTRLogType](mtrlogtype.md)
+- [MTRMediaInputFeature](mtrmediainputfeature.md)
+- [MTRMediaInputInputType](mtrmediainputinputtype.md)
+- [MTRMediaPlaybackFeature](mtrmediaplaybackfeature.md)
+- [MTRMediaPlaybackPlaybackState](mtrmediaplaybackplaybackstate.md)
+- [MTRMediaPlaybackStatus](mtrmediaplaybackstatus.md)
+- [MTRModeSelectFeature](mtrmodeselectfeature.md)
+- [MTRNetworkCommissioningFeature](mtrnetworkcommissioningfeature.md)
+- [MTRNetworkCommissioningStatus](mtrnetworkcommissioningstatus.md)
+- [MTRNetworkCommissioningWiFiBand](mtrnetworkcommissioningwifiband.md)
+- [MTRNetworkCommissioningWiFiSecurity](mtrnetworkcommissioningwifisecurity.md): Deprecated.
+- [MTROccupancySensingOccupancyBitmap](mtroccupancysensingoccupancybitmap.md)
+- [MTROccupancySensingOccupancySensorType](mtroccupancysensingoccupancysensortype.md)
+- [MTROccupancySensingOccupancySensorTypeBitmap](mtroccupancysensingoccupancysensortypebitmap.md)
+- [MTROnOffDelayedAllOffEffectVariant](mtronoffdelayedalloffeffectvariant.md)
+- [MTROnOffDyingLightEffectVariant](mtronoffdyinglighteffectvariant.md)
+- [MTROnOffEffectIdentifier](mtronoffeffectidentifier.md)
+- [MTROnOffStartUpOnOff](mtronoffstartuponoff.md)
+- [MTROnboardingPayloadType](mtronboardingpayloadtype.md): Deprecated.
+- [MTROperationalCredentialsCertificateChainType](mtroperationalcredentialscertificatechaintype.md)
+- [MTROperationalCredentialsNodeOperationalCertStatus](mtroperationalcredentialsnodeoperationalcertstatus.md)
+- [MTROperationalCredentialsOperationalCertStatus](mtroperationalcredentialsoperationalcertstatus.md): Deprecated.
+- [MTROptionalQRCodeInfoType](mtroptionalqrcodeinfotype.md)
+- [MTRPairingStatus](mtrpairingstatus.md): Deprecated.
+- [MTRPowerSourceBatApprovedChemistry](mtrpowersourcebatapprovedchemistry.md)
+- [MTRPowerSourceBatChargeFault](mtrpowersourcebatchargefault.md)
+- [MTRPowerSourceBatChargeLevel](mtrpowersourcebatchargelevel.md)
+- [MTRPowerSourceBatChargeState](mtrpowersourcebatchargestate.md)
+- [MTRPowerSourceBatCommonDesignation](mtrpowersourcebatcommondesignation.md)
+- [MTRPowerSourceBatFault](mtrpowersourcebatfault.md)
+- [MTRPowerSourceBatReplaceability](mtrpowersourcebatreplaceability.md)
+- [MTRPowerSourceFeature](mtrpowersourcefeature.md)
+- [MTRPowerSourceStatus](mtrpowersourcestatus.md)
+- [MTRPowerSourceWiredCurrentType](mtrpowersourcewiredcurrenttype.md)
+- [MTRPowerSourceWiredFault](mtrpowersourcewiredfault.md)
+- [MTRPressureMeasurementFeature](mtrpressuremeasurementfeature.md)
+- [MTRPressureMeasurementPressureFeature](mtrpressuremeasurementpressurefeature.md): Deprecated.
+- [MTRPumpConfigurationAndControlControlMode](mtrpumpconfigurationandcontrolcontrolmode.md)
+- [MTRPumpConfigurationAndControlFeature](mtrpumpconfigurationandcontrolfeature.md)
+- [MTRPumpConfigurationAndControlOperationMode](mtrpumpconfigurationandcontroloperationmode.md)
+- [MTRPumpConfigurationAndControlPumpControlMode](mtrpumpconfigurationandcontrolpumpcontrolmode.md): Deprecated.
+- [MTRPumpConfigurationAndControlPumpOperationMode](mtrpumpconfigurationandcontrolpumpoperationmode.md): Deprecated.
+- [MTRSwitchFeature](mtrswitchfeature.md)
+- [MTRTargetNavigatorStatus](mtrtargetnavigatorstatus.md)
+- [MTRTestClusterSimple](mtrtestclustersimple.md): Deprecated.
+- [MTRThermostatControlSequence](mtrthermostatcontrolsequence.md): Deprecated.
+- [MTRThermostatRunningMode](mtrthermostatrunningmode.md)
+- [MTRThermostatSetpointAdjustMode](mtrthermostatsetpointadjustmode.md): Deprecated.
+- [MTRThermostatSystemMode](mtrthermostatsystemmode.md)
+- [MTRThreadNetworkDiagnosticsThreadConnectionStatus](mtrthreadnetworkdiagnosticsthreadconnectionstatus.md): Deprecated.
+- [MTRTransportType](mtrtransporttype.md)
+- [MTRUnitLocalizationFeature](mtrunitlocalizationfeature.md)
+- [MTRUnitLocalizationTempUnit](mtrunitlocalizationtempunit.md)

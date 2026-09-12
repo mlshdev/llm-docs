@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "project": "netbird",
   "title": "NetBird",
+  "homepage": "https://docs.netbird.io/",
   "repository": "netbirdio/netbird",
   "tag": "v0.77.1",
   "releaseId": 374532818,

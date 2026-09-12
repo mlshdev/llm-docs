@@ -1,0 +1,162 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/audiounitparameterunit](https://developer.apple.com/documentation/audiotoolbox/audiounitparameterunit)
+
+# AudioUnitParameterUnit (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+The unit-of-measure for an audio unit parameter.
+
+## Declaration
+
+```swift
+enum AudioUnitParameterUnit
+```
+
+<a id="overview"></a>
+
+## Overview
+
+The various units of measure for audio unit parameters are described in `Audio Unit Parameter Units of Measure`.
+
+## Topics
+
+### Enumeration Cases
+
+- [AudioUnitParameterUnit.absoluteCents](audiounitparameterunit/absolutecents.md): An absolute unit of measure for the musical pitch of a note.
+- [AudioUnitParameterUnit.BPM](audiounitparameterunit/bpm.md): A whole-number unit of measure for musical tempo, representing beats per minute.
+- [AudioUnitParameterUnit.beats](audiounitparameterunit/beats.md): A time unit of measure in musical beats.
+- [AudioUnitParameterUnit.boolean](audiounitparameterunit/boolean.md): A Boolean-like unit of measure.
+- [AudioUnitParameterUnit.cents](audiounitparameterunit/cents.md): A logarithmic unit of measure for a musical interval between two notes.
+- [AudioUnitParameterUnit.customUnit](audiounitparameterunit/customunit.md): A custom unit of measure.
+- [AudioUnitParameterUnit.decibels](audiounitparameterunit/decibels.md): A logarithmic unit of measure representing the ratio between two audio levels.
+- [AudioUnitParameterUnit.degrees](audiounitparameterunit/degrees.md): An angular degree unit of measure.
+- [AudioUnitParameterUnit.equalPowerCrossfade](audiounitparameterunit/equalpowercrossfade.md): An audio power unit of measure.
+- [AudioUnitParameterUnit.generic](audiounitparameterunit/generic.md): A generic unit of measure.
+- [AudioUnitParameterUnit.hertz](audiounitparameterunit/hertz.md): A hertz unit of measure.
+- [AudioUnitParameterUnit.indexed](audiounitparameterunit/indexed.md): An indexed unit of measure.
+- [AudioUnitParameterUnit.linearGain](audiounitparameterunit/lineargain.md): A linear unit of measure representing the difference between two audio levels.
+- [AudioUnitParameterUnit.midiController](audiounitparameterunit/midicontroller.md): A whole-number unit of measure corresponding to standard MIDI control numbers.
+- [AudioUnitParameterUnit.midiNoteNumber](audiounitparameterunit/midinotenumber.md): A whole-number unit of measure corresponding to audio frequency.
+- [AudioUnitParameterUnit.meters](audiounitparameterunit/meters.md): A distance unit of measure, corresponding to meters.
+- [AudioUnitParameterUnit.milliseconds](audiounitparameterunit/milliseconds.md): A time unit of measure representing milliseconds.
+- [AudioUnitParameterUnit.mixerFaderCurve1](audiounitparameterunit/mixerfadercurve1.md): An audio power unit of measure.
+- [AudioUnitParameterUnit.octaves](audiounitparameterunit/octaves.md): A relative unit of measure for the musical interval between two notes.
+- [AudioUnitParameterUnit.pan](audiounitparameterunit/pan.md): An audio position unit of measure.
+- [AudioUnitParameterUnit.percent](audiounitparameterunit/percent.md): A percentage unit of measure.
+- [AudioUnitParameterUnit.phase](audiounitparameterunit/phase.md): An angular degree unit of measure.
+- [AudioUnitParameterUnit.rate](audiounitparameterunit/rate.md): A multiplication factor unit of measure.
+- [AudioUnitParameterUnit.ratio](audiounitparameterunit/ratio.md): A unitless ratio unit of measure.
+- [AudioUnitParameterUnit.relativeSemiTones](audiounitparameterunit/relativesemitones.md): A relative unit of measure for a musical interval between two notes.
+- [AudioUnitParameterUnit.sampleFrames](audiounitparameterunit/sampleframes.md): A sample-frame-count unit of measure.
+- [AudioUnitParameterUnit.seconds](audiounitparameterunit/seconds.md): A whole-seconds unit of measure, indicating either absolute or relative time.
+- [AudioUnitParameterUnit.midi2Controller](audiounitparameterunit/midi2controller.md)
+
+### Initializers
+
+- [init(rawValue:)](audiounitparameterunit/init%28rawvalue_%29.md)
+
+## Relationships
+
+### Conforms To
+
+- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Enumerations
+
+- [Audio Unit Types](1584142-audio_unit_types.md): The defined types of audio processing plug-ins known as audio units.
+- [Inter-App Audio Unit Types](1619501-inter-app-audio-unit-types.md)
+- [Audio Unit Manufacturer Identifier](1584143-audio_unit_manufacturer_identifi.md): The Apple audio unit manufacturer code.
+- [Audio Unit Output Subtypes](1584148-audio-unit-output-subtypes.md)
+- [I/O Audio Unit Subtypes](1619485-i-o-audio-unit-subtypes.md)
+- [Converter Audio Unit Subtypes](1584145-converter_audio_unit_subtypes.md): Audio data format converter audio unit subtypes for audio units provided by Apple.
+- [Reserved Audio Unit Clump Identifier](1533986-reserved_audio_unit_clump_identi.md): Reserved for system use.
+- [Offline Audio Unit Properties](1534054-offline_audio_unit_properties.md): Properties for audio units that perform offline processing—that is, processing in a nonplayback, nonrealtime mode.
+- [MIDI Audio Unit Parameters](1389613-midi_audio_unit_parameters.md): Parameters for instrument units.
+- [General Audio Unit Function Selectors](1584140-general_audio_unit_function_sele.md): General audio unit component selectors that correspond to functions in the audio unit API.
+- [Generator Audio Unit Subtypes](1619493-generator_audio_unit_subtypes.md): Audio units that serve as sound sources.
+- [Input/Output Audio Unit Subtypes](1584139-input_output_audio_unit_subtypes.md): Input/output audio unit subtypes for audio units provided by Apple.
+- [Audio Unit Panner Subtypes](1584151-audio-unit-panner-subtypes.md)
+- [Audio Unit Player Subtypes](1584155-audio-unit-player-subtypes.md)
+- [Audio Unit Pitch Subtypes](1584152-audio-unit-pitch-subtypes.md)
+
+# AudioUnitParameterUnit (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Enumeration  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+The unit-of-measure for an audio unit parameter.
+
+## Declaration
+
+```objectivec
+enum AudioUnitParameterUnit : UInt32;
+```
+
+<a id="overview"></a>
+
+## Overview
+
+The various units of measure for audio unit parameters are described in `Audio Unit Parameter Units of Measure`.
+
+## Topics
+
+### Enumeration Cases
+
+- [kAudioUnitParameterUnit_AbsoluteCents](audiounitparameterunit/absolutecents.md): An absolute unit of measure for the musical pitch of a note.
+- [kAudioUnitParameterUnit_BPM](audiounitparameterunit/bpm.md): A whole-number unit of measure for musical tempo, representing beats per minute.
+- [kAudioUnitParameterUnit_Beats](audiounitparameterunit/beats.md): A time unit of measure in musical beats.
+- [kAudioUnitParameterUnit_Boolean](audiounitparameterunit/boolean.md): A Boolean-like unit of measure.
+- [kAudioUnitParameterUnit_Cents](audiounitparameterunit/cents.md): A logarithmic unit of measure for a musical interval between two notes.
+- [kAudioUnitParameterUnit_CustomUnit](audiounitparameterunit/customunit.md): A custom unit of measure.
+- [kAudioUnitParameterUnit_Decibels](audiounitparameterunit/decibels.md): A logarithmic unit of measure representing the ratio between two audio levels.
+- [kAudioUnitParameterUnit_Degrees](audiounitparameterunit/degrees.md): An angular degree unit of measure.
+- [kAudioUnitParameterUnit_EqualPowerCrossfade](audiounitparameterunit/equalpowercrossfade.md): An audio power unit of measure.
+- [kAudioUnitParameterUnit_Generic](audiounitparameterunit/generic.md): A generic unit of measure.
+- [kAudioUnitParameterUnit_Hertz](audiounitparameterunit/hertz.md): A hertz unit of measure.
+- [kAudioUnitParameterUnit_Indexed](audiounitparameterunit/indexed.md): An indexed unit of measure.
+- [kAudioUnitParameterUnit_LinearGain](audiounitparameterunit/lineargain.md): A linear unit of measure representing the difference between two audio levels.
+- [kAudioUnitParameterUnit_MIDIController](audiounitparameterunit/midicontroller.md): A whole-number unit of measure corresponding to standard MIDI control numbers.
+- [kAudioUnitParameterUnit_MIDINoteNumber](audiounitparameterunit/midinotenumber.md): A whole-number unit of measure corresponding to audio frequency.
+- [kAudioUnitParameterUnit_Meters](audiounitparameterunit/meters.md): A distance unit of measure, corresponding to meters.
+- [kAudioUnitParameterUnit_Milliseconds](audiounitparameterunit/milliseconds.md): A time unit of measure representing milliseconds.
+- [kAudioUnitParameterUnit_MixerFaderCurve1](audiounitparameterunit/mixerfadercurve1.md): An audio power unit of measure.
+- [kAudioUnitParameterUnit_Octaves](audiounitparameterunit/octaves.md): A relative unit of measure for the musical interval between two notes.
+- [kAudioUnitParameterUnit_Pan](audiounitparameterunit/pan.md): An audio position unit of measure.
+- [kAudioUnitParameterUnit_Percent](audiounitparameterunit/percent.md): A percentage unit of measure.
+- [kAudioUnitParameterUnit_Phase](audiounitparameterunit/phase.md): An angular degree unit of measure.
+- [kAudioUnitParameterUnit_Rate](audiounitparameterunit/rate.md): A multiplication factor unit of measure.
+- [kAudioUnitParameterUnit_Ratio](audiounitparameterunit/ratio.md): A unitless ratio unit of measure.
+- [kAudioUnitParameterUnit_RelativeSemiTones](audiounitparameterunit/relativesemitones.md): A relative unit of measure for a musical interval between two notes.
+- [kAudioUnitParameterUnit_SampleFrames](audiounitparameterunit/sampleframes.md): A sample-frame-count unit of measure.
+- [kAudioUnitParameterUnit_Seconds](audiounitparameterunit/seconds.md): A whole-seconds unit of measure, indicating either absolute or relative time.
+- [kAudioUnitParameterUnit_MIDI2Controller](audiounitparameterunit/midi2controller.md)
+
+## See Also
+
+### Enumerations
+
+- [Audio Unit Types](1584142-audio_unit_types.md): The defined types of audio processing plug-ins known as audio units.
+- [Inter-App Audio Unit Types](1619501-inter-app-audio-unit-types.md)
+- [Audio Unit Manufacturer Identifier](1584143-audio_unit_manufacturer_identifi.md): The Apple audio unit manufacturer code.
+- [Audio Unit Output Subtypes](1584148-audio-unit-output-subtypes.md)
+- [I/O Audio Unit Subtypes](1619485-i-o-audio-unit-subtypes.md)
+- [Converter Audio Unit Subtypes](1584145-converter_audio_unit_subtypes.md): Audio data format converter audio unit subtypes for audio units provided by Apple.
+- [Reserved Audio Unit Clump Identifier](1533986-reserved_audio_unit_clump_identi.md): Reserved for system use.
+- [Offline Audio Unit Properties](1534054-offline_audio_unit_properties.md): Properties for audio units that perform offline processing—that is, processing in a nonplayback, nonrealtime mode.
+- [MIDI Audio Unit Parameters](1389613-midi_audio_unit_parameters.md): Parameters for instrument units.
+- [General Audio Unit Function Selectors](1584140-general_audio_unit_function_sele.md): General audio unit component selectors that correspond to functions in the audio unit API.
+- [Generator Audio Unit Subtypes](1619493-generator_audio_unit_subtypes.md): Audio units that serve as sound sources.
+- [Input/Output Audio Unit Subtypes](1584139-input_output_audio_unit_subtypes.md): Input/output audio unit subtypes for audio units provided by Apple.
+- [Audio Unit Panner Subtypes](1584151-audio-unit-panner-subtypes.md)
+- [Audio Unit Player Subtypes](1584155-audio-unit-player-subtypes.md)
+- [Audio Unit Pitch Subtypes](1584152-audio-unit-pitch-subtypes.md)

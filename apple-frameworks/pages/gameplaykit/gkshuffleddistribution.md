@@ -1,0 +1,155 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/gameplaykit/gkshuffleddistribution](https://developer.apple.com/documentation/gameplaykit/gkshuffleddistribution)
+
+# GKShuffledDistribution (Swift)
+
+**Framework:** GameplayKit  
+**Kind:** Class  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+A generator for random numbers that are uniformly distributed across many samplings, but where short sequences of similar values are unlikely.
+
+## Declaration
+
+```swift
+class GKShuffledDistribution
+```
+
+<a id="overview"></a>
+
+## Overview
+
+The behavior of a shuffled distribution is sometimes called “fair” randomization, because true randomness in games can result in extended “lucky streaks” or “unlucky streaks” for players. To create a shuffled distribution and use it to generate random numbers, use the methods defined by its superclass [GKRandomDistribution](gkrandomdistribution.md).
+
+The [GKShuffledDistribution](gkshuffleddistribution.md) class inherits its entire interface from its superclass—to initialize and use a shuffled distribution, use the methods listed in [GKRandomDistribution](gkrandomdistribution.md). A shuffled distribution differs from its superclass in behavior only. Consider the code snippets below:
+
+**Swift**
+
+```swift
+// Uniform distribution
+let uniform = GKRandomDistribution.d6()
+for _ in 1...100 { print(uniform.nextInt()) }
+ 
+// Shuffled distribution
+let shuffled = GKShuffledDistribution.d6()
+for _ in 1...100 { print(shuffled.nextInt()) }
+```
+
+**Objective-C**
+
+```objc
+// Uniform distribution
+GKRandomDistribution *uniform = [GKRandomDistribution d6];
+for (int i = 0; i < 100; i++) { NSLog(@"%d", [uniform nextInt]); }
+ 
+// Shuffled distribution
+GKRandomDistribution *shuffled = [GKShuffledDistribution d6];
+for (int i = 0; i < 100; i++) { NSLog(@"%d", [shuffled nextInt]); }
+```
+
+In this example, each distribution generates 100 random integers from a simulated six-sided die. In both cases, the distribution of results is roughly uniform—that is, the number of occurrences of any specific value is about the same as that of any other value. However, the shuffled distribution makes sure not to repeat any one value until it has used all of its possible values. In this example, if the die rolls a 1, the shuffled distribution will not generate another 1 for at least five more rolls.
+
+> **Important**
+
+>  The randomization services provided in GameplayKit are suitable for reliably creating deterministic, pseudorandom gameplay mechanics, but are not cryptographically robust. For cryptography, obfuscation, or cipher uses, use the Security framework, described in [Cryptographic Services Guide](https://developer.apple.com/library/archive/documentation/Security/Conceptual/cryptoservices/Introduction/Introduction.html#//apple_ref/doc/uid/TP40011172).
+
+For more information on choosing and using randomizers in GameplayKit, read [Randomization](https://developer.apple.com/library/archive/documentation/General/Conceptual/GameplayKit_Guide/RandomSources.html#//apple_ref/doc/uid/TP40015172-CH9) in [GameplayKit Programming Guide](https://developer.apple.com/library/archive/documentation/General/Conceptual/GameplayKit_Guide/index.html#//apple_ref/doc/uid/TP40015172).
+
+## Relationships
+
+### Inherits From
+
+- [GKRandomDistribution](gkrandomdistribution.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [GKRandom](gkrandom.md)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Randomization
+
+- [GKRandom](gkrandom.md): The common interface for all randomization classes in (or usable with) GameplayKit.
+- [GKRandomSource](gkrandomsource.md): The superclass for all basic randomization classes in GameplayKit.
+- [GKARC4RandomSource](gkarc4randomsource.md): A basic random number generator implementing the ARC4 algorithm, which is suitable for most gameplay mechanics.
+- [GKLinearCongruentialRandomSource](gklinearcongruentialrandomsource.md): A basic random number generator implementing the linear congruential generator algorithm, which is faster but less random than the default random source.
+- [GKMersenneTwisterRandomSource](gkmersennetwisterrandomsource.md): A basic random number generator implementing the Mersenne Twister algorithm, which is more random, but slower than the default random source.
+- [GKRandomDistribution](gkrandomdistribution.md): A generator for random numbers that fall within a specific range and that exhibit a specific distribution over multiple samplings.
+- [GKGaussianDistribution](gkgaussiandistribution.md): A generator for random numbers that follow a *Gaussian distribution* (also known as a *normal distribution*) across multiple samplings.
+
+# GKShuffledDistribution (Objective-C)
+
+**Framework:** GameplayKit  
+**Kind:** Class  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+A generator for random numbers that are uniformly distributed across many samplings, but where short sequences of similar values are unlikely.
+
+## Declaration
+
+```objectivec
+@interface GKShuffledDistribution : GKRandomDistribution
+```
+
+<a id="overview"></a>
+
+## Overview
+
+The behavior of a shuffled distribution is sometimes called “fair” randomization, because true randomness in games can result in extended “lucky streaks” or “unlucky streaks” for players. To create a shuffled distribution and use it to generate random numbers, use the methods defined by its superclass [GKRandomDistribution](gkrandomdistribution.md).
+
+The [GKShuffledDistribution](gkshuffleddistribution.md) class inherits its entire interface from its superclass—to initialize and use a shuffled distribution, use the methods listed in [GKRandomDistribution](gkrandomdistribution.md). A shuffled distribution differs from its superclass in behavior only. Consider the code snippets below:
+
+**Swift**
+
+```swift
+// Uniform distribution
+let uniform = GKRandomDistribution.d6()
+for _ in 1...100 { print(uniform.nextInt()) }
+ 
+// Shuffled distribution
+let shuffled = GKShuffledDistribution.d6()
+for _ in 1...100 { print(shuffled.nextInt()) }
+```
+
+**Objective-C**
+
+```objc
+// Uniform distribution
+GKRandomDistribution *uniform = [GKRandomDistribution d6];
+for (int i = 0; i < 100; i++) { NSLog(@"%d", [uniform nextInt]); }
+ 
+// Shuffled distribution
+GKRandomDistribution *shuffled = [GKShuffledDistribution d6];
+for (int i = 0; i < 100; i++) { NSLog(@"%d", [shuffled nextInt]); }
+```
+
+In this example, each distribution generates 100 random integers from a simulated six-sided die. In both cases, the distribution of results is roughly uniform—that is, the number of occurrences of any specific value is about the same as that of any other value. However, the shuffled distribution makes sure not to repeat any one value until it has used all of its possible values. In this example, if the die rolls a 1, the shuffled distribution will not generate another 1 for at least five more rolls.
+
+> **Important**
+
+>  The randomization services provided in GameplayKit are suitable for reliably creating deterministic, pseudorandom gameplay mechanics, but are not cryptographically robust. For cryptography, obfuscation, or cipher uses, use the Security framework, described in [Cryptographic Services Guide](https://developer.apple.com/library/archive/documentation/Security/Conceptual/cryptoservices/Introduction/Introduction.html#//apple_ref/doc/uid/TP40011172).
+
+For more information on choosing and using randomizers in GameplayKit, read [Randomization](https://developer.apple.com/library/archive/documentation/General/Conceptual/GameplayKit_Guide/RandomSources.html#//apple_ref/doc/uid/TP40015172-CH9) in [GameplayKit Programming Guide](https://developer.apple.com/library/archive/documentation/General/Conceptual/GameplayKit_Guide/index.html#//apple_ref/doc/uid/TP40015172).
+
+## Relationships
+
+### Inherits From
+
+- [GKRandomDistribution](gkrandomdistribution.md)
+
+## See Also
+
+### Randomization
+
+- [GKRandom](gkrandom.md): The common interface for all randomization classes in (or usable with) GameplayKit.
+- [GKRandomSource](gkrandomsource.md): The superclass for all basic randomization classes in GameplayKit.
+- [GKARC4RandomSource](gkarc4randomsource.md): A basic random number generator implementing the ARC4 algorithm, which is suitable for most gameplay mechanics.
+- [GKLinearCongruentialRandomSource](gklinearcongruentialrandomsource.md): A basic random number generator implementing the linear congruential generator algorithm, which is faster but less random than the default random source.
+- [GKMersenneTwisterRandomSource](gkmersennetwisterrandomsource.md): A basic random number generator implementing the Mersenne Twister algorithm, which is more random, but slower than the default random source.
+- [GKRandomDistribution](gkrandomdistribution.md): A generator for random numbers that fall within a specific range and that exhibit a specific distribution over multiple samplings.
+- [GKGaussianDistribution](gkgaussiandistribution.md): A generator for random numbers that follow a *Gaussian distribution* (also known as a *normal distribution*) across multiple samplings.

@@ -1,0 +1,49 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/mapkitjs/maprect/scale](https://developer.apple.com/documentation/mapkitjs/maprect/scale)
+
+# scale(scaleFactor, scaleCenter)
+
+**Interface language:** Data
+
+**Framework:** MapKit JS  
+**Kind:** Instance Method  
+**Availability:** MapKit JS 5.0+
+
+Returns a scaled map rectangle for a map location.
+
+## Declaration
+
+```
+scale(scaleFactor: number, scaleCenter?: MapPointData): MapRect;
+```
+
+## Parameters
+
+- `scaleFactor`: The scale factor.
+- `scaleCenter`: The center map point for scaling.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The following example demonstrates scaling a `mapkit.MapRect` instance first with a common center, and then with a common origin:
+
+```javascript
+const mapRect = new mapkit.MapRect(0.1, 0.2, 0.3, 0.4);
+
+// Scale a MapRect to be 2x the width and 2x the height of mapRect
+// and have the same center.
+const scaledRect = mapRect.scale(2);
+
+// Same scale but this time mapRect and scaledRectAroundOrigin
+// have the same origin rather than the same center.
+const scaledRectAroundOrigin = mapRect.scale(2, new mapkit.MapPoint(mapRect.minX(), mapRect.maxX()));
+
+```
+
+## See Also
+
+### Working with map rectangles
+
+- [copy()](copy.md): Returns a copy of a map rectangle.
+- [equals()](equals.md): Compares whether two map rectangles are equal.
+- [toCoordinateRegion()](tocoordinateregion.md): Returns the region that corresponds to a map rectangle.

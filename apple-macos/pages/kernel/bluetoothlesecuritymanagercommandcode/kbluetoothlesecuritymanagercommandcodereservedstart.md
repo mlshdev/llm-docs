@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/bluetoothlesecuritymanagercommandcode/kbluetoothlesecuritymanagercommandcodereservedstart](https://developer.apple.com/documentation/kernel/bluetoothlesecuritymanagercommandcode/kbluetoothlesecuritymanagercommandcodereservedstart)
+
+# kBluetoothLESecurityManagerCommandCodeReservedStart
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Enumeration Case  
+**Availability:** macOS 10.7+
+
+## Declaration
+
+```objectivec
+kBluetoothLESecurityManagerCommandCodeReservedStart = 0x0F
+```

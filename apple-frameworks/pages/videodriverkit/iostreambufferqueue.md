@@ -1,0 +1,43 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videodriverkit/iostreambufferqueue](https://developer.apple.com/documentation/videodriverkit/iostreambufferqueue)
+
+# IOStreamBufferQueue
+
+**Interface language:** Objective-C
+
+**Framework:** VideoDriverKit  
+**Kind:** Structure  
+**Availability:** DriverKit 27.0+
+
+## Declaration
+
+```objectivec
+struct IOStreamBufferQueue;
+```
+
+## Topics
+
+### Accessing queue contents
+
+- [entryCount](iostreambufferqueue/entrycount.md)
+- [headIndex](iostreambufferqueue/headindex.md)
+- [tailIndex](iostreambufferqueue/tailindex.md)
+- [queue](iostreambufferqueue/queue.md)
+- [IOStreamBufferQueueEntry](iostreambufferqueueentry.md)
+
+### Accessing reserved properties
+
+Don’t use these properties, which VideoDriverKit reserves for its own use.
+
+- [reserved](iostreambufferqueue/reserved.md)
+
+## See Also
+
+### Working with queues
+
+- [GetInputQueue](iouservideostream/getinputqueue.md): Gets the buffer queue for the stream.
+- [GetOutputQueue](iouservideostream/getoutputqueue.md): Gets the memory descriptor used for video IO that was initialized with or set on the video stream.
+- [createQueues](iouservideostream/createqueues.md): Creates the shared input and output queues, without regard to whether the stream is open or not.
+- [destroyQueues](iouservideostream/destroyqueues.md): Releases the shared input and output queues.
+- [dequeueInputEntry](iouservideostream/dequeueinputentry.md)
+- [enqueueOutputEntry](iouservideostream/enqueueoutputentry.md)
+- [SendBufferQueueChange](iouservideostream/sendbufferqueuechange.md): Sends a notification to the host that the buffer queue has changed.

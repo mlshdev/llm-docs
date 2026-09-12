@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/webpage/navigationpreferences/allowscontentjavascript](https://developer.apple.com/documentation/webkit/webpage/navigationpreferences/allowscontentjavascript)
+
+# allowsContentJavaScript
+
+**Framework:** WebKit  
+**Kind:** Instance Property  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · visionOS 26.0+
+
+Indicates whether JavaScript from web content is allowed to run.
+
+## Declaration
+
+```swift
+var allowsContentJavaScript: Bool
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The default value of this property is `true`. If you change the value to `false`, the web page doesn’t execute JavaScript code referenced by the web content. That includes JavaScript code found in inline `<script>` elements, `javascript:` URLs, and all other referenced JavaScript content.

@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/adding-resources-to-localizations](https://developer.apple.com/documentation/xcode/adding-resources-to-localizations)
+
+# Adding resources to localizations
+
+**Kind:** Article
+
+Include more resources in the localizations you add to your project.
+
+<a id="Overview"></a>
+
+## Overview
+
+As you add more resources to your project, you can also add them to your localizations. Perform this step before you export localizations so that placeholder resources appear in the localization export folders.
+
+<a id="Make-resources-localizable"></a>
+
+### Make resources localizable
+
+In the Project navigator, select the resource. Then in the inspector, under Localization, click Localize. In the dialog that appears, choose the localizations to add to the resource from the pop-up menu, and click Localize.
+
+![Screenshot of the project editor with an image file resource selected and the Localize button visible in the lower right-hand corner.](https://developer.apple.com/images/com.apple.Xcode/adding-resources-to-localizations-1@2x.png)
+
+In the inspector, under Localization, you can also select or deselect localizations for the resource. If you select multiple localizations, the resource becomes a group in the Project navigator localization-specific versions of the file.
+
+> **Note**
+
+> If you add a Settings Bundle or WatchKit Settings Bundle file to your project, it’s automatically localizable.
+
+## See Also
+
+### Resources and assets
+
+- [Localizing assets in a catalog](localizing-assets-in-a-catalog.md): Use asset catalogs to localize colors, images, symbols, watch complications, and more.

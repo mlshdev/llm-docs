@@ -1,0 +1,50 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uniformtypeidentifiers/uttypereference/version](https://developer.apple.com/documentation/uniformtypeidentifiers/uttypereference/version)
+
+# version (Swift)
+
+**Framework:** Uniform Type Identifiers  
+**Kind:** Instance Property  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 7.0+
+
+The type’s version, if available.
+
+## Declaration
+
+```swift
+var version: NSNumber? { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Most types don’t have a version.
+
+# version (Objective-C)
+
+**Framework:** Uniform Type Identifiers  
+**Kind:** Instance Property  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 7.0+
+
+The type’s version, if available.
+
+## Declaration
+
+```objectivec
+@property (readonly, nullable) NSNumber * version;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Most types don’t have a version.
+
+## See Also
+
+### Obtaining additional type information
+
+- [declared](isdeclared.md): A Boolean value that indicates whether the system declares the type.
+- [dynamic](isdynamic.md): A Boolean value that indicates whether the system generates the type.
+- [publicType](ispublic.md): A Boolean value that indicates whether the type is in the public domain.
+- [referenceURL](referenceurl.md): The reference URL for the type.

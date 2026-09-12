@@ -1,0 +1,81 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsbutton/buttontype/momentarypushin](https://developer.apple.com/documentation/appkit/nsbutton/buttontype/momentarypushin)
+
+# NSButton.ButtonType.momentaryPushIn (Swift)
+
+**Framework:** AppKit  
+**Kind:** Case  
+**Availability:** macOS
+
+A button that illuminates when the user clicks it.
+
+## Declaration
+
+```swift
+case momentaryPushIn
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This button type is the default.
+
+This type of button is best for simply triggering actions, as it doesn’t show its state; it always displays its normal image or title.
+
+Most buttons in macOS, such as the Cancel button in many dialogs, are momentary light buttons. If a user clicks one, it highlights briefly, triggers an action, and returns to its original state.
+
+This option corresponds to the Momentary Push In type in Interface Builder’s Attributes Inspector.
+
+## See Also
+
+### Configuring Button Behavior
+
+- [NSButton.ButtonType.momentaryLight](momentarylight.md): A button that displays a highlight when the user clicks it and returns to its normal state when the user releases it.
+- [NSButton.ButtonType.momentaryChange](momentarychange.md): A button that displays its alternate content when clicked and returns to its normal content when the user releases it.
+- [NSButton.ButtonType.pushOnPushOff](pushonpushoff.md): A button that switches between on and off states with each click.
+- [NSButton.ButtonType.onOff](onoff.md): A button that switches between a normal and emphasized bezel on each click.
+- [NSButton.ButtonType.toggle](toggle.md): A button that switches between its normal and alternate content on each click.
+- [NSButton.ButtonType.switch](switch.md): A standard checkbox button.
+- [NSButton.ButtonType.radio](radio.md): A button that displays a single selected value from group of possible choices.
+- [NSButton.ButtonType.accelerator](accelerator.md): A button that sends repeating actions as pressure changes occur.
+- [NSButton.ButtonType.multiLevelAccelerator](multilevelaccelerator.md): A button that allows for a configurable number of stepped pressure levels and provides tactile feedback as the user reaches each step.
+
+# NSButtonTypeMomentaryPushIn (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Enumeration Case  
+**Availability:** macOS
+
+A button that illuminates when the user clicks it.
+
+## Declaration
+
+```objectivec
+NSButtonTypeMomentaryPushIn
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This button type is the default.
+
+This type of button is best for simply triggering actions, as it doesn’t show its state; it always displays its normal image or title.
+
+Most buttons in macOS, such as the Cancel button in many dialogs, are momentary light buttons. If a user clicks one, it highlights briefly, triggers an action, and returns to its original state.
+
+This option corresponds to the Momentary Push In type in Interface Builder’s Attributes Inspector.
+
+## See Also
+
+### Configuring Button Behavior
+
+- [NSButtonTypeMomentaryLight](momentarylight.md): A button that displays a highlight when the user clicks it and returns to its normal state when the user releases it.
+- [NSButtonTypeMomentaryChange](momentarychange.md): A button that displays its alternate content when clicked and returns to its normal content when the user releases it.
+- [NSButtonTypePushOnPushOff](pushonpushoff.md): A button that switches between on and off states with each click.
+- [NSButtonTypeOnOff](onoff.md): A button that switches between a normal and emphasized bezel on each click.
+- [NSButtonTypeToggle](toggle.md): A button that switches between its normal and alternate content on each click.
+- [NSButtonTypeSwitch](switch.md): A standard checkbox button.
+- [NSButtonTypeRadio](radio.md): A button that displays a single selected value from group of possible choices.
+- [NSButtonTypeAccelerator](accelerator.md): A button that sends repeating actions as pressure changes occur.
+- [NSButtonTypeMultiLevelAccelerator](multilevelaccelerator.md): A button that allows for a configurable number of stepped pressure levels and provides tactile feedback as the user reaches each step.

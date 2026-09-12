@@ -1,0 +1,85 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/transaction(value:_:)](https://developer.apple.com/documentation/swiftui/view/transaction(value:_:))
+
+# transaction(value:\_:)
+
+**Framework:** SwiftUI  
+**Kind:** Instance Method  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+Applies the given transaction mutation function to all animations used within the view.
+
+## Declaration
+
+```swift
+@export(implementation) nonisolated func transaction(value: some Equatable, _ transform: @escaping (inout Transaction) -> Void) -> some View
+
+```
+
+## Parameters
+
+- `value`: A value to monitor for changes.
+- `transform`: The transformation to apply to transactions within this view.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A view that wraps this view and applies a transformation to all transactions used within the view whenever `value` changes.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this modifier to change or replace the animation used in a view. Consider three identical views controlled by a button that changes all three simultaneously:
+
+- The first view animates rotating the “Rotation” [Text](../text.md) view by 360 degrees.
+- The second uses the `transaction(_:)` modifier to change the animation by adding a delay to the start of the animation by two seconds and then increases the rotational speed of the “Rotation\\nModified” [Text](../text.md) view animation by a factor of 2.
+- The third uses the `transaction(_:)` modifier to disable animations affecting the “Animation\\nReplaced” [Text](../text.md) view.
+
+The following code implements these animations:
+
+```swift
+struct TransactionExample: View {
+    @State var flag = false
+
+    var body: some View {
+        VStack(spacing: 50) {
+            HStack(spacing: 30) {
+                Text("Rotation")
+                    .rotationEffect(Angle(degrees: flag ? 360 : 0))
+
+                Text("Rotation\nModified")
+                    .rotationEffect(Angle(degrees: flag ? 360 : 0))
+                    .transaction(value: flag) { t in
+                        t.animation =
+                            t.animation?.delay(2.0).speed(2)
+                    }
+
+                Text("Animation\nReplaced")
+                    .rotationEffect(Angle(degrees: flag ? 360 : 0))
+                    .transaction(value: flag) { t in
+                        t.disableAnimations = true
+                    }
+            }
+
+            Button("Animate") {
+                withAnimation(.easeIn(duration: 2.0)) {
+                    flag.toggle()
+                }
+            }
+        }
+    }
+}
+```
+
+## See Also
+
+### Moving an animation to another view
+
+- [withTransaction(\_:\_:)](../withtransaction%28____%29.md): Executes a closure with the specified transaction and returns the result.
+- [withTransaction(\_:\_:\_:)](../withtransaction%28______%29.md): Executes a closure with the specified transaction key path and value and returns the result.
+- [transaction(\_:)](transaction%28__%29.md): Applies the given transaction mutation function to all animations used within the view.
+- [transaction(\_:body:)](transaction%28__body_%29.md): Applies the given transaction mutation function to all animations used within the `body` closure.
+- [Transaction](../transaction.md): The context of the current state-processing update.
+- [Entry()](../entry%28%29.md): Creates an environment values, transaction, container values, or focused values entry.
+- [TransactionKey](../transactionkey.md): A key for accessing values in a transaction.

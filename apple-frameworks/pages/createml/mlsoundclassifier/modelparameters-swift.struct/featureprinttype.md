@@ -1,0 +1,44 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/createml/mlsoundclassifier/modelparameters-swift.struct/featureprinttype](https://developer.apple.com/documentation/createml/mlsoundclassifier/modelparameters-swift.struct/featureprinttype)
+
+# MLSoundClassifier.ModelParameters.FeaturePrintType
+
+**Framework:** Create ML  
+**Kind:** Enumeration  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · visionOS 1.0+
+
+The type options for an Audio Feature Print feature extractor.
+
+## Declaration
+
+```swift
+enum FeaturePrintType
+```
+
+## Topics
+
+### Designating a feature-print type
+
+- [MLSoundClassifier.ModelParameters.FeaturePrintType.sound](featureprinttype/sound.md): Creates a feature print type for a sound classifier.
+
+### Describing a feature-print type
+
+- [description](featureprinttype/description.md): A text representation of the feature-print type.
+
+## Relationships
+
+### Conforms To
+
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Supporting types
+
+- [MLSoundClassifier.ModelParameters.ValidationData](validationdata.md): The source of a validation dataset for a sound classifier.
+- [MLSoundClassifier.ModelParameters.ModelAlgorithmType](modelalgorithmtype.md): The algorithm options to train a sound classifier.
+- [MLSoundClassifier.ModelParameters.ClassifierType](classifiertype.md): The classifier options for a sound classifier training algorithm.
+- [MLSoundClassifier.ModelParameters.FeatureExtractorType](featureextractortype.md): The feature-extractor options for a sound-classifier training algorithm.

@@ -1,0 +1,130 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/available-os-updates-command](https://developer.apple.com/documentation/devicemanagement/available-os-updates-command)
+
+# Available OS Updates
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Web Service Endpoint  
+**Availability:** iOS 9.0+ (deprecated in 26.0) · iPadOS 9.0+ (deprecated in 26.0) · Mac Catalyst 9.0+ (deprecated in 26.0) · macOS 10.11+ (deprecated in 26.0) · tvOS 12.0+ (deprecated in 26.0)
+
+Get a list of available operating-system updates for a device. Removed: use the declarative management `com.apple.configuration.softwareupdate.enforcement.specific` configuration.
+
+> **Removed** Use the declarative management software update features instead.
+
+## URL
+
+```http
+PUT https://yourmdmhost.example.com/mdm
+```
+
+## HTTP Body
+
+Content type: `application/x-apple-aspen-mdm`
+
+Type: `AvailableOSUpdatesCommand`
+
+The request object the server returns for the Available OS Updates Command.
+
+## Response Codes
+
+- `200` OK — `AvailableOSUpdatesResponse`: The response object the system returns for the Available OS Updates Command.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+A device must have a total of `DownloadSize` \+ `InstallSize` bytes available to successfully install a software update. In macOS, execute the `ScheduleOSUpdateScan` command to update the results that this command returns. In iOS and tvOS, the list only contains the latest available updates.
+
+Refer to the following sections to determine supported channels and requirements, and to see an example request and response.
+
+<a id="Command-availability"></a>
+
+### Command availability
+
+|  |  |
+| --- | --- |
+| Device channel | iOS, macOS, Shared iPad, tvOS |
+| User channel | N/A |
+| Requires supervision | iOS, macOS, tvOS |
+| Allowed in user enrollment | N/A |
+| Required access right | AllowAppInstallation |
+
+<a id="Example-request-and-response"></a>
+
+### Example request and response
+
+**Request**
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Command</key>
+    <dict>
+        <key>RequestType</key>
+        <string>AvailableOSUpdates</string>
+    </dict>
+    <key>CommandUUID</key>
+    <string>0001_AvailableOSUpdates</string>
+</dict>
+</plist>
+```
+
+**Response**
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>AvailableOSUpdates</key>
+    <array>
+        <dict>
+            <key>AllowsInstallLater</key>
+            <false/>
+            <key>Build</key>
+            <string>17A576</string>
+            <key>DownloadSize</key>
+            <integer>251607570</integer>
+            <key>HumanReadableName</key>
+            <string>iOS 13.0</string>
+            <key>InstallSize</key>
+            <integer>1809842176</integer>
+            <key>IsCritical</key>
+            <false/>
+            <key>ProductKey</key>
+            <string>iOSUpdate17A576</string>
+            <key>ProductName</key>
+            <string>iOS</string>
+            <key>RestartRequired</key>
+            <true/>
+            <key>Version</key>
+            <string>13.0</string>
+        </dict>
+    </array>
+    <key>CommandUUID</key>
+    <string>0001_AvailableOSUpdates</string>
+    <key>Status</key>
+    <string>Acknowledged</string>
+    <key>UDID</key>
+    <string>00008020-000915083C80012E</string>
+</dict>
+</plist>
+```
+
+## Topics
+
+### Commands and responses
+
+- [AvailableOSUpdatesCommand](availableosupdatescommand.md): Deprecated. The command to get a list of available operating-system updates for a device. Removed: use the declarative management `com.apple.configuration.softwareupdate.enforcement.specific` configuration.
+- [AvailableOSUpdatesResponse](availableosupdatesresponse.md): Deprecated. A response from the device after it processes the command to get a list of available operating-system updates for a device. Removed: use the declarative management `com.apple.configuration.softwareupdate.enforcement.specific` configuration.
+
+## See Also
+
+### Commands
+
+- [OS Update Status](os-update-status-command.md): Deprecated. Get the status of operating-system updates on a device. Removed: subscribe to the declarative management `softwareupdate.install-state` status item.
+- [Schedule OS Update](schedule-os-update-command.md): Deprecated. Schedule an update of the operating system on a device. Removed: use the declarative management `com.apple.configuration.softwareupdate.enforcement.specific` configuration.
+- [Schedule OS Update Scan](schedule-os-update-scan-command.md): Deprecated. Schedule a background scan for operating-system updates on a device. Removed: use the declarative management `com.apple.configuration.softwareupdate.enforcement.specific` configuration.

@@ -1,0 +1,28 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/control-the-ray-tracing-process-using-intersection-queries](https://developer.apple.com/documentation/metal/control-the-ray-tracing-process-using-intersection-queries)
+
+# Control the ray tracing process using intersection queries
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** Metal  
+**Kind:** Sample Code  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · Xcode 26.3+
+
+Explicitly enumerate a ray’s intersections with acceleration structures by creating an intersection query object.
+
+<a id="overview"></a>
+
+## Overview
+
+> **Note**
+
+> This sample code project is associated with WWDC21 session [10149: Enhance Your App with Metal Ray Tracing](https://developer.apple.com/wwdc21/10149/).
+
+## See Also
+
+### Ray tracing
+
+- [Rendering reflections in real time using ray tracing](rendering-reflections-in-real-time-using-ray-tracing.md): Implement realistic real-time lighting by dynamically generating reflection maps by encoding a ray-tracing compute pass.
+- [Accelerating ray tracing using Metal](accelerating-ray-tracing-using-metal.md): Implement ray-traced rendering using GPU-based parallel processing.
+- [Accelerating ray tracing and motion blur using Metal](accelerating-ray-tracing-and-motion-blur-using-metal.md): Generate ray-traced images with motion blur using GPU-based parallel processing.
+- [Rendering a curve primitive in a ray tracing scene](rendering-a-curve-primitive-in-a-ray-tracing-scene.md): Implement ray traced rendering using GPU-based parallel processing.

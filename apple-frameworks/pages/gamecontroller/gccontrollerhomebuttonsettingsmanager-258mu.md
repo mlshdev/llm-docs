@@ -1,0 +1,47 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/gamecontroller/gccontrollerhomebuttonsettingsmanager-258mu](https://developer.apple.com/documentation/gamecontroller/gccontrollerhomebuttonsettingsmanager-258mu)
+
+# GCControllerHomeButtonSettingsManager
+
+**Framework:** Game Controller  
+**Kind:** Class  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+Access the game controller system Home button settings.
+
+## Declaration
+
+```swift
+class GCControllerHomeButtonSettingsManager
+```
+
+<a id="overview"></a>
+
+## Overview
+
+macOS, iOS, and visionOS allow the user to assign an action that launches a chosen application to a long press of the Home button (the logo button on PlayStation and Xbox controllers).  The \\c GCControllerHomeButtonSettingsManager class allows your application to partially inspect the user’s currently configured action, and to open the system game controller settings screen where the user can modify the action.
+
+Performing operations on `GCControllerHomeButtonSettingsManager` is only permitted while a game controller is connected.
+
+## Topics
+
+### Initializers
+
+- [init()](gccontrollerhomebuttonsettingsmanager-258mu/init%28%29.md)
+- [init(\_:)](gccontrollerhomebuttonsettingsmanager-258mu/init%28__%29.md)
+
+### Instance Properties
+
+- [controllerHomeButtonInAppAction](gccontrollerhomebuttonsettingsmanager-258mu/controllerhomebuttoninappaction.md): Get the current controller Home button in-app action setting.
+- [controllerHomeButtonSystemAction](gccontrollerhomebuttonsettingsmanager-258mu/controllerhomebuttonsystemaction.md): Get the current controller Home button system action setting.
+- [settingsUpdates](gccontrollerhomebuttonsettingsmanager-258mu/settingsupdates.md): The asynchronous sequence of update notifications for the Home button settings.
+
+### Instance Methods
+
+- [openControllerHomeButtonSettings(for:)](gccontrollerhomebuttonsettingsmanager-258mu/opencontrollerhomebuttonsettings%28for_%29.md): Opens the Settings app to the screen in game controller settings where the user can change the controller shortcut action.
+
+### Type Aliases
+
+- [GCControllerHomeButtonSettingsManager.InAppAction](gccontrollerhomebuttonsettingsmanager-258mu/inappaction.md)
+- [GCControllerHomeButtonSettingsManager.SettingCustomizationStatus](gccontrollerhomebuttonsettingsmanager-258mu/settingcustomizationstatus.md)
+- [GCControllerHomeButtonSettingsManager.SettingsCustomizationActivity](gccontrollerhomebuttonsettingsmanager-258mu/settingscustomizationactivity.md)
+- [GCControllerHomeButtonSettingsManager.SystemAction](gccontrollerhomebuttonsettingsmanager-258mu/systemaction.md)

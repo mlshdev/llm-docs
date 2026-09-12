@@ -1,0 +1,59 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avcapturephoto/constantcolorconfidencemap](https://developer.apple.com/documentation/avfoundation/avcapturephoto/constantcolorconfidencemap)
+
+# constantColorConfidenceMap (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+
+
+A pixel buffer where each pixel value indicates how fully the system achieves the constant color effect in the corresponding region of the photo.
+
+## Declaration
+
+```swift
+var constantColorConfidenceMap: CVPixelBuffer? { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+A value of `255` means full confidence and `0` means zero confidence.
+
+This property provides a valid value only for constant color photos. The value is `nil` in all other cases.
+
+## See Also
+
+### Enabling constant color
+
+- [constantColorCenterWeightedMeanConfidenceLevel](constantcolorcenterweightedmeanconfidencelevel.md): A score that summarizes the overall confidence level of a constant color photo.
+- [isConstantColorFallbackPhoto](isconstantcolorfallbackphoto.md): A Boolean value that Indicates whether this photo is a fallback photo for a constant color capture.
+
+# constantColorConfidenceMap (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+
+
+A pixel buffer where each pixel value indicates how fully the system achieves the constant color effect in the corresponding region of the photo.
+
+## Declaration
+
+```objectivec
+@property (readonly, nullable) CVPixelBufferRef constantColorConfidenceMap;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+A value of `255` means full confidence and `0` means zero confidence.
+
+This property provides a valid value only for constant color photos. The value is `nil` in all other cases.
+
+## See Also
+
+### Enabling constant color
+
+- [constantColorCenterWeightedMeanConfidenceLevel](constantcolorcenterweightedmeanconfidencelevel.md): A score that summarizes the overall confidence level of a constant color photo.
+- [constantColorFallbackPhoto](isconstantcolorfallbackphoto.md): A Boolean value that Indicates whether this photo is a fallback photo for a constant color capture.

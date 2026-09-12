@@ -1,0 +1,59 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/wkwebextensioncontrollerdelegate/webextensioncontroller(_:opennewtabusing:for:completionhandler:)](https://developer.apple.com/documentation/webkit/wkwebextensioncontrollerdelegate/webextensioncontroller(_:opennewtabusing:for:completionhandler:))
+
+# webExtensionController(\_:openNewTabUsing:for:completionHandler:) (Swift)
+
+**Framework:** WebKit  
+**Kind:** Instance Method  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · visionOS 2.4+
+
+Called when an extension context requests a new tab to be opened.
+
+## Declaration
+
+```swift
+optional func webExtensionController(_ controller: WKWebExtensionController, openNewTabUsing configuration: WKWebExtension.TabConfiguration, for extensionContext: WKWebExtensionContext, completionHandler: @escaping ((any WKWebExtensionTab)?, (any Error)?) -> Void)
+```
+
+```swift
+optional func webExtensionController(_ controller: WKWebExtensionController, openNewTabUsing configuration: WKWebExtension.TabConfiguration, for extensionContext: WKWebExtensionContext) async throws -> (any WKWebExtensionTab)?
+```
+
+## Parameters
+
+- `controller`: The web extension controller that is managing the extension.
+- `configuration`: The configuration specifying how the new tab should be created.
+- `extensionContext`: The context in which the web extension is running.
+- `completionHandler`: A block to be called with the newly created tab or `nil` if the tab wasn’t created. An error should be provided if any errors occurred.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This method should be implemented by the app to handle requests to open new tabs. The app can decide how to handle the process based on the provided configuration and existing tabs. Once handled, the app should call the completion handler with the opened tab or `nil` if the request was declined or failed. If not implemented, the extension will be unable to open new tabs.
+
+# webExtensionController:openNewTabUsingConfiguration:forExtensionContext:completionHandler: (Objective-C)
+
+**Framework:** WebKit  
+**Kind:** Instance Method  
+**Availability:** iOS 18.4+ · iPadOS 18.4+ · Mac Catalyst 18.4+ · macOS 15.4+ · visionOS 2.4+
+
+Called when an extension context requests a new tab to be opened.
+
+## Declaration
+
+```objectivec
+- (void) webExtensionController:(WKWebExtensionController *) controller openNewTabUsingConfiguration:(WKWebExtensionTabConfiguration *) configuration forExtensionContext:(WKWebExtensionContext *) extensionContext completionHandler:(void (^)(id<WKWebExtensionTab>newTab, NSError *error)) completionHandler;
+```
+
+## Parameters
+
+- `controller`: The web extension controller that is managing the extension.
+- `configuration`: The configuration specifying how the new tab should be created.
+- `extensionContext`: The context in which the web extension is running.
+- `completionHandler`: A block to be called with the newly created tab or `nil` if the tab wasn’t created. An error should be provided if any errors occurred.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This method should be implemented by the app to handle requests to open new tabs. The app can decide how to handle the process based on the provided configuration and existing tabs. Once handled, the app should call the completion handler with the opened tab or `nil` if the request was declined or failed. If not implemented, the extension will be unable to open new tabs.

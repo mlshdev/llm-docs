@@ -1,0 +1,26 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/link/init(destination:label:)](https://developer.apple.com/documentation/swiftui/link/init(destination:label:))
+
+# init(destination:label:)
+
+**Framework:** SwiftUI  
+**Kind:** Initializer  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 7.0+
+
+Creates a control, consisting of a URL and a label, used to navigate to the given URL.
+
+## Declaration
+
+```swift
+@MainActor @preconcurrency init(destination: URL, @ContentBuilder label: () -> Label)
+```
+
+## Parameters
+
+- `destination`: The URL for the link.
+- `label`: A view that describes the destination of URL.
+
+## See Also
+
+### Creating a link
+
+- [init(\_:destination:)](init%28__destination_%29.md): Conforms when `Label` is `Text`. Creates a control, consisting of a URL and a title resource, used to navigate to a URL.

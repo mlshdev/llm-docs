@@ -1,0 +1,66 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/createml/mldatatable/subscript(_:)-3opgl](https://developer.apple.com/documentation/createml/mldatatable/subscript(_:)-3opgl)
+
+# subscript(\_:)
+
+**Framework:** Create ML  
+**Kind:** Instance Subscript  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 10.14+ · tvOS 16.0+ · visionOS 1.0+
+
+Creates a subset of the table by masking the rows with the given column of Booleans.
+
+## Declaration
+
+```swift
+subscript(mask: MLDataColumn<Bool>) -> MLDataTable { get }
+```
+
+## Parameters
+
+- `mask`: A Boolean column indicating whether rows should be kept (`true`) or removed (`false`) in the derived table.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new data table.
+
+<a id="overview"></a>
+
+## Overview
+
+Use this Boolean column–based subscript to create a new table by masking a subset of the table rows.
+
+![A table of book titles and genres such as “Hamlet” and “Drama” on the](https://developer.apple.com/images/com.apple.createml/MLDataTable-subscript%28_:%29-3opgl-1@2x.png)
+
+For example, to filter the values in a data table as shown above, begin by creating a table with the original data.
+
+```swift
+let data: [String: MLDataValueConvertible] = [
+    "Title": ["Alice in Wonderland", "Hamlet", "Treasure Island", "Peter Pan"],
+    "Genre": ["Fantasy", "Drama", "Adventure", "Fantasy"]
+]
+
+let table = try? MLDataTable(dictionary: data) else {
+    fatalError("Invalid dictionary data")
+}
+```
+
+After you create the table, use column arithmetic operators or the [map(\_:)](https://developer.apple.com/documentation/createml/mldatatable/map%28_:%29-92wrj) method to build a row mask. The subscript uses the Boolean values in the row mask to determine whether to keep a row.
+
+```swift
+// Retrieve the "Genre" column from the table.
+guard let genreColumn = table["Genre", String.self] else {
+    fatalError("Missing or invalid 'genre' column in table.")
+}
+
+// Create a new column of Booleans by comparing all of the values
+// in `Genre` with `Fantasy` using the
+// `!=(MLDataColumn<String>, String) -> MLDataColumn<Bool>` operator.
+let noFantasyMask = genreColumn != "Fantasy"
+```
+
+Use `subscript(mask: MLDataColumn<Bool>)` with the Boolean column–row mask to create a filtered table.
+
+```swift
+let noFantasyTable = table[noFantasyMask]
+```

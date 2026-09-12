@@ -1,0 +1,91 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiapplicationmain(_:_:_:_:)-1yub7](https://developer.apple.com/documentation/uikit/uiapplicationmain(_:_:_:_:)-1yub7)
+
+# UIApplicationMain(\_:\_:\_:\_:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Function  
+**Availability:** iOS · iPadOS · Mac Catalyst · tvOS · visionOS
+
+Creates the application object and the application delegate and sets up the event cycle.
+
+## Declaration
+
+```swift
+func UIApplicationMain(_ argc: Int32, _ argv: UnsafeMutablePointer<UnsafeMutablePointer<CChar>?>, _ principalClassName: String?, _ delegateClassName: String?) -> Int32
+```
+
+## Parameters
+
+- `argc`: The count of arguments in `argv`; this usually is the corresponding parameter to `main`.
+- `argv`: A variable list of arguments; this usually is the corresponding parameter to `main`.
+- `principalClassName`: The name of the [UIApplication](uiapplication.md) class or subclass. If you specify `nil`, `UIApplication` is assumed.
+- `delegateClassName`: The name of the class from which the application delegate is instantiated. If `principalClassName` designates a subclass of [UIApplication](uiapplication.md), you may designate the subclass as the delegate; the subclass instance receives the application-delegate messages. Specify `nil` if you load the delegate object from your application’s main nib file.
+
+<a id="return-value"></a>
+
+## Return Value
+
+Even though an integer return type is specified, this function never returns. When users exits an iOS app by pressing the Home button, the application moves to the background.
+
+## Mentioned In
+
+- [About the app launch sequence](about-the-app-launch-sequence.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This function instantiates the application object from the principal class and instantiates the delegate (if any) from the given class and sets the delegate for the application. It also sets up the main event loop, including the application’s run loop, and begins processing events. If the application’s `Info.plist` file specifies a main nib file to be loaded, by including the [NSMainNibFile](../bundleresources/information-property-list/nsmainnibfile.md) key and a valid nib file name for the value, this function loads that nib file.
+
+Despite the declared return type, this function never returns.
+
+## See Also
+
+### Architecture
+
+- [Updating your app from 32-bit to 64-bit architecture](updating-your-app-from-32-bit-to-64-bit-architecture.md): Ensure that your app behaves as expected by adapting it to support later versions of the operating system.
+
+# UIApplicationMain (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Function  
+**Availability:** iOS · iPadOS · Mac Catalyst · tvOS · visionOS
+
+Creates the application object and the application delegate and sets up the event cycle.
+
+## Declaration
+
+```objectivec
+extern int UIApplicationMain(int argc, char * argv[], NSString *principalClassName, NSString *delegateClassName);
+```
+
+## Parameters
+
+- `argc`: The count of arguments in `argv`; this usually is the corresponding parameter to `main`.
+- `argv`: A variable list of arguments; this usually is the corresponding parameter to `main`.
+- `principalClassName`: The name of the [UIApplication](uiapplication.md) class or subclass. If you specify `nil`, `UIApplication` is assumed.
+- `delegateClassName`: The name of the class from which the application delegate is instantiated. If `principalClassName` designates a subclass of [UIApplication](uiapplication.md), you may designate the subclass as the delegate; the subclass instance receives the application-delegate messages. Specify `nil` if you load the delegate object from your application’s main nib file.
+
+<a id="return-value"></a>
+
+## Return Value
+
+Even though an integer return type is specified, this function never returns. When users exits an iOS app by pressing the Home button, the application moves to the background.
+
+## Mentioned In
+
+- [About the app launch sequence](about-the-app-launch-sequence.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This function instantiates the application object from the principal class and instantiates the delegate (if any) from the given class and sets the delegate for the application. It also sets up the main event loop, including the application’s run loop, and begins processing events. If the application’s `Info.plist` file specifies a main nib file to be loaded, by including the [NSMainNibFile](../bundleresources/information-property-list/nsmainnibfile.md) key and a valid nib file name for the value, this function loads that nib file.
+
+Despite the declared return type, this function never returns.
+
+## See Also
+
+### Architecture
+
+- [Updating your app from 32-bit to 64-bit architecture](updating-your-app-from-32-bit-to-64-bit-architecture.md): Ensure that your app behaves as expected by adapting it to support later versions of the operating system.

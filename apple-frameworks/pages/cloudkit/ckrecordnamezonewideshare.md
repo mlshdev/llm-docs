@@ -1,0 +1,109 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cloudkit/ckrecordnamezonewideshare](https://developer.apple.com/documentation/cloudkit/ckrecordnamezonewideshare)
+
+# CKRecordNameZoneWideShare (Swift)
+
+**Framework:** CloudKit  
+**Kind:** Global Variable  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+
+The name of a share record that manages a shared record zone.
+
+## Declaration
+
+```swift
+let CKRecordNameZoneWideShare: String
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+When you create an instance of [CKShare](ckshare.md) for sharing a record zone, CloudKit automatically assigns this constant as the [recordName](ckrecord/id/recordname.md) element of the share record’s [recordID](ckrecord/recordid.md). After you save the share record to iCloud, you can fetch it by reconstructing the record ID using this constant, as the following example shows:
+
+```swift
+func fetchShare(
+    forZone zone: CKRecordZone,
+    completion: @escaping (Result<CKShare, any Error>) -> Void
+) {
+    let database = CKContainer.default().privateCloudDatabase
+
+    // Use the 'CKRecordNameZoneWideShare' constant to create the record ID.
+    let recordID = CKRecord.ID(recordName: CKRecordNameZoneWideShare,
+                               zoneID: zone.zoneID)
+
+    // Fetch the share record from the specified record zone.
+    database.fetch(withRecordID: recordID) { share, error in
+        if let error = error {
+            // If the fetch fails, inform the caller.
+            completion(.failure(error))
+        } else if let share = share as? CKShare {
+            // Otherwise, pass the fetched share record to the
+            // completion handler.
+            completion(.success(share))
+        } else {
+            fatalError("Unable to fetch record with ID: \(recordID)")
+        }
+    }
+}
+```
+
+## See Also
+
+### Creating a Record ID
+
+- [init(recordName:)](ckrecord/id/init%28recordname_%29.md): Creates a new record ID with the specified name in the default zone.
+- [init(recordName:zoneID:)](ckrecord/id/init%28recordname_zoneid_%29.md): Creates a new record ID with the specified name and zone information.
+
+# CKRecordNameZoneWideShare (Objective-C)
+
+**Framework:** CloudKit  
+**Kind:** Global Variable  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+
+The name of a share record that manages a shared record zone.
+
+## Declaration
+
+```objectivec
+extern NSString * const CKRecordNameZoneWideShare;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+When you create an instance of [CKShare](ckshare.md) for sharing a record zone, CloudKit automatically assigns this constant as the [recordName](ckrecord/id/recordname.md) element of the share record’s [recordID](ckrecord/recordid.md). After you save the share record to iCloud, you can fetch it by reconstructing the record ID using this constant, as the following example shows:
+
+```swift
+func fetchShare(
+    forZone zone: CKRecordZone,
+    completion: @escaping (Result<CKShare, any Error>) -> Void
+) {
+    let database = CKContainer.default().privateCloudDatabase
+
+    // Use the 'CKRecordNameZoneWideShare' constant to create the record ID.
+    let recordID = CKRecord.ID(recordName: CKRecordNameZoneWideShare,
+                               zoneID: zone.zoneID)
+
+    // Fetch the share record from the specified record zone.
+    database.fetch(withRecordID: recordID) { share, error in
+        if let error = error {
+            // If the fetch fails, inform the caller.
+            completion(.failure(error))
+        } else if let share = share as? CKShare {
+            // Otherwise, pass the fetched share record to the
+            // completion handler.
+            completion(.success(share))
+        } else {
+            fatalError("Unable to fetch record with ID: \(recordID)")
+        }
+    }
+}
+```
+
+## See Also
+
+### Creating a Record ID
+
+- [initWithRecordName:](ckrecord/id/init%28recordname_%29.md): Creates a new record ID with the specified name in the default zone.
+- [initWithRecordName:zoneID:](ckrecordid/initwithrecordname_zoneid_.md): Creates a new record ID with the specified name and zone information.

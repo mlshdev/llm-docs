@@ -1,0 +1,136 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclusterelectricalenergymeasurement](https://developer.apple.com/documentation/matter/mtrbaseclusterelectricalenergymeasurement)
+
+# MTRBaseClusterElectricalEnergyMeasurement (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+class MTRBaseClusterElectricalEnergyMeasurement
+```
+
+## Topics
+
+### Initializers
+
+- [init(device:endpointID:queue:)](mtrbaseclusterelectricalenergymeasurement/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandList(completion:)](mtrbaseclusterelectricalenergymeasurement/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAccuracy(completion:)](mtrbaseclusterelectricalenergymeasurement/readattributeaccuracy%28completion_%29.md)
+- [readAttributeAttributeList(completion:)](mtrbaseclusterelectricalenergymeasurement/readattributeattributelist%28completion_%29.md)
+- [readAttributeClusterRevision(completion:)](mtrbaseclusterelectricalenergymeasurement/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeCumulativeEnergyExported(completion:)](mtrbaseclusterelectricalenergymeasurement/readattributecumulativeenergyexported%28completion_%29.md)
+- [readAttributeCumulativeEnergyImported(completion:)](mtrbaseclusterelectricalenergymeasurement/readattributecumulativeenergyimported%28completion_%29.md)
+- [readAttributeCumulativeEnergyReset(completion:)](mtrbaseclusterelectricalenergymeasurement/readattributecumulativeenergyreset%28completion_%29.md)
+- [readAttributeFeatureMap(completion:)](mtrbaseclusterelectricalenergymeasurement/readattributefeaturemap%28completion_%29.md)
+- [readAttributeGeneratedCommandList(completion:)](mtrbaseclusterelectricalenergymeasurement/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributePeriodicEnergyExported(completion:)](mtrbaseclusterelectricalenergymeasurement/readattributeperiodicenergyexported%28completion_%29.md)
+- [readAttributePeriodicEnergyImported(completion:)](mtrbaseclusterelectricalenergymeasurement/readattributeperiodicenergyimported%28completion_%29.md)
+- [subscribeAttributeAcceptedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterelectricalenergymeasurement/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAccuracy(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterelectricalenergymeasurement/subscribeattributeaccuracy%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterelectricalenergymeasurement/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevision(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterelectricalenergymeasurement/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCumulativeEnergyExported(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterelectricalenergymeasurement/subscribeattributecumulativeenergyexported%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCumulativeEnergyImported(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterelectricalenergymeasurement/subscribeattributecumulativeenergyimported%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCumulativeEnergyReset(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterelectricalenergymeasurement/subscribeattributecumulativeenergyreset%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMap(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterelectricalenergymeasurement/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterelectricalenergymeasurement/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePeriodicEnergyExported(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterelectricalenergymeasurement/subscribeattributeperiodicenergyexported%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePeriodicEnergyImported(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterelectricalenergymeasurement/subscribeattributeperiodicenergyimported%28with_subscriptionestablished_reporthandler_%29.md)
+
+### Type Methods
+
+- [readAttributeAcceptedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterelectricalenergymeasurement/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAccuracy(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterelectricalenergymeasurement/readattributeaccuracy%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterelectricalenergymeasurement/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevision(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterelectricalenergymeasurement/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCumulativeEnergyExported(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterelectricalenergymeasurement/readattributecumulativeenergyexported%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCumulativeEnergyImported(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterelectricalenergymeasurement/readattributecumulativeenergyimported%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCumulativeEnergyReset(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterelectricalenergymeasurement/readattributecumulativeenergyreset%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMap(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterelectricalenergymeasurement/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterelectricalenergymeasurement/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePeriodicEnergyExported(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterelectricalenergymeasurement/readattributeperiodicenergyexported%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePeriodicEnergyImported(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterelectricalenergymeasurement/readattributeperiodicenergyimported%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRBaseClusterElectricalEnergyMeasurement (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+@interface MTRBaseClusterElectricalEnergyMeasurement : MTRGenericBaseCluster
+```
+
+## Topics
+
+### Initializers
+
+- [initWithDevice:endpointID:queue:](mtrbaseclusterelectricalenergymeasurement/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandListWithCompletion:](mtrbaseclusterelectricalenergymeasurement/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAccuracyWithCompletion:](mtrbaseclusterelectricalenergymeasurement/readattributeaccuracy%28completion_%29.md)
+- [readAttributeAttributeListWithCompletion:](mtrbaseclusterelectricalenergymeasurement/readattributeattributelist%28completion_%29.md)
+- [readAttributeClusterRevisionWithCompletion:](mtrbaseclusterelectricalenergymeasurement/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeCumulativeEnergyExportedWithCompletion:](mtrbaseclusterelectricalenergymeasurement/readattributecumulativeenergyexported%28completion_%29.md)
+- [readAttributeCumulativeEnergyImportedWithCompletion:](mtrbaseclusterelectricalenergymeasurement/readattributecumulativeenergyimported%28completion_%29.md)
+- [readAttributeCumulativeEnergyResetWithCompletion:](mtrbaseclusterelectricalenergymeasurement/readattributecumulativeenergyreset%28completion_%29.md)
+- [readAttributeFeatureMapWithCompletion:](mtrbaseclusterelectricalenergymeasurement/readattributefeaturemap%28completion_%29.md)
+- [readAttributeGeneratedCommandListWithCompletion:](mtrbaseclusterelectricalenergymeasurement/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributePeriodicEnergyExportedWithCompletion:](mtrbaseclusterelectricalenergymeasurement/readattributeperiodicenergyexported%28completion_%29.md)
+- [readAttributePeriodicEnergyImportedWithCompletion:](mtrbaseclusterelectricalenergymeasurement/readattributeperiodicenergyimported%28completion_%29.md)
+- [subscribeAttributeAcceptedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterelectricalenergymeasurement/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAccuracyWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterelectricalenergymeasurement/subscribeattributeaccuracy%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterelectricalenergymeasurement/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevisionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterelectricalenergymeasurement/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCumulativeEnergyExportedWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterelectricalenergymeasurement/subscribeattributecumulativeenergyexported%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCumulativeEnergyImportedWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterelectricalenergymeasurement/subscribeattributecumulativeenergyimported%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCumulativeEnergyResetWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterelectricalenergymeasurement/subscribeattributecumulativeenergyreset%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMapWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterelectricalenergymeasurement/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterelectricalenergymeasurement/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePeriodicEnergyExportedWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterelectricalenergymeasurement/subscribeattributeperiodicenergyexported%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributePeriodicEnergyImportedWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterelectricalenergymeasurement/subscribeattributeperiodicenergyimported%28with_subscriptionestablished_reporthandler_%29.md)
+
+### Type Methods
+
+- [readAttributeAcceptedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterelectricalenergymeasurement/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAccuracyWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterelectricalenergymeasurement/readattributeaccuracy%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterelectricalenergymeasurement/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevisionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterelectricalenergymeasurement/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCumulativeEnergyExportedWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterelectricalenergymeasurement/readattributecumulativeenergyexported%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCumulativeEnergyImportedWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterelectricalenergymeasurement/readattributecumulativeenergyimported%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCumulativeEnergyResetWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterelectricalenergymeasurement/readattributecumulativeenergyreset%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMapWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterelectricalenergymeasurement/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterelectricalenergymeasurement/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePeriodicEnergyExportedWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterelectricalenergymeasurement/readattributeperiodicenergyexported%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributePeriodicEnergyImportedWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterelectricalenergymeasurement/readattributeperiodicenergyimported%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)

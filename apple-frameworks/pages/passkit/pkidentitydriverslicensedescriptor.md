@@ -1,0 +1,158 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/passkit/pkidentitydriverslicensedescriptor](https://developer.apple.com/documentation/passkit/pkidentitydriverslicensedescriptor)
+
+# PKIdentityDriversLicenseDescriptor (Swift)
+
+**Framework:** PassKit (Apple Pay and Wallet)  
+**Kind:** Class  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · visionOS 1.0+
+
+An object for requesting information from a user’s driver’s license or equivalent document.
+
+## Declaration
+
+```swift
+class PKIdentityDriversLicenseDescriptor
+```
+
+## Mentioned In
+
+- [Requesting identity data from a Wallet pass](requesting-identity-data-from-a-wallet-pass.md)
+
+<a id="overview"></a>
+
+## Overview
+
+For the elements you request, the response contains the corresponding elements present in the user’s identity document. The table below maps the elements you request using [PKIdentityElement](pkidentityelement.md) with the ISO and American Association of Motor Vehicle Administrators (AAMVA) namespaces in the response.
+
+> **Important**
+
+>  When you verify a person’s driving privileges from a U.S. driver’s license, use `domestic_driving_privileges` from the `org.iso.18013.5.1.aamva` namespace instead of `driving_privileges` from the `org.iso.18013.5.1` namespace because the former maps more directly to state laws. For more information about implementation, see [AAMVA Mobile Driver’s License (mDL) Implementation Guidelines](https://www.aamva.org/topics/mobile-driver-license#?wst=4a3b89462cc2cff2cbe0c7accde57421).
+
+The framework allows for requesting the Boolean [age(atLeast:)](pkidentityelement/age%28atleast_%29.md) element for any age between `1` and `125` only if the issuer includes it. If an app requests [age(atLeast:)](pkidentityelement/age%28atleast_%29.md) and the `age_over_XX` element isn’t present in the mobile driver’s license, the framework falls back to a request for the [age](pkidentityelement/age.md) element.
+
+An app can’t include both an [age(atLeast:)](pkidentityelement/age%28atleast_%29.md) element and an [age](pkidentityelement/age.md) element in the same request.
+
+| Identity element | ISO namespace | AAMVA namespace |
+| --- | --- | --- |
+| `givenName` | `given_name` | `given_name_truncation`, `aka_given_name`, `name_suffix`, `aka_suffix` |
+| `familyName` | `family_name` | `family_name_truncation`, `aka_family_name` |
+| `portrait` | `portrait` |  |
+| `address` | `resident_address`, `resident_city`, `resident_country`, `resident_postal_code` |  |
+| `issuingAuthority` | `issuing_authority`, `issuing_jurisdiction`, `issuing_country`, `un_distinguishing_sign` |  |
+| `documentExpirationDate` | `expiry_date` |  |
+| `documentIssueDate` | `document_issue_date` |  |
+| `documentNumber` | `document_number` |  |
+| `drivingPrivileges` | `driving_privileges` | `domestic_driving_privileges` |
+| `age` | `age_in_years` |  |
+| `dateOfBirth` | `birth_date` |  |
+| `age(atLeast: XX)` | `age_over_XX` |  |
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [PKIdentityDocumentDescriptor](pkidentitydocumentdescriptor.md)
+
+## See Also
+
+### Identity passes and authorization
+
+- [Requesting identity data from a Wallet pass](requesting-identity-data-from-a-wallet-pass.md): Initiate a request for identity information by prompting a user for permission and decrypting a response payload.
+- [Configuring your environment for the Verify with Wallet API](configuring-your-environment-for-the-verify-with-wallet-api.md): Set up your environment to use Verify with Wallet.
+- [Verifying Wallet identity requests](verifying-wallet-identity-requests.md): Decrypt and verify an in-app presentment request on your server.
+- [PKIdentityPhotoIDDescriptor](pkidentityphotoiddescriptor.md): An object you use to request information from a user’s photo ID or equivalent document.
+- [PKIdentityAnyOfDescriptor](pkidentityanyofdescriptor.md): An object you use to request information from multiple identity documents.
+- [PKAddIdentityDocumentMetadata](pkaddidentitydocumentmetadata.md): The object for specifying the metadata necessary to provision identity documents.
+- [PKAddIdentityDocumentConfiguration](pkaddidentitydocumentconfiguration.md): Configuration to define the identity document.
+- [PKAddIdentityDocumentType](pkaddidentitydocumenttype.md): Classifications that reflect the type of identity document.
+- [JPKIPassContents](jpkipasscontents.md): A set of actions for viewing and updating PINs, passwords, and signing abilities associated with digital identities on the JPKI applet.
+- [PKAddIdentityDocumentConfiguration](pkaddidentitydocumentconfiguration.md): Configuration to define the identity document.
+- [PKAddPassMetadataPreview](pkaddpassmetadatapreview.md): A preview object that contains information representing the pass you add to Wallet.
+- [PKIdentityDocumentMetadata](pkidentitydocumentmetadata.md): A set of configured metadata that defines the required information to add the corresponding pass to Wallet.
+- [PKIdentityNationalIDCardDescriptor](pkidentitynationalidcarddescriptor.md): An object for requesting information from a user’s national ID card.
+- [PKJapanIndividualNumberCardMetadata](pkjapanindividualnumbercardmetadata.md): A class that contains metadata indicating the specific product instance to provision.
+
+# PKIdentityDriversLicenseDescriptor (Objective-C)
+
+**Framework:** PassKit (Apple Pay and Wallet)  
+**Kind:** Class  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · visionOS 1.0+
+
+An object for requesting information from a user’s driver’s license or equivalent document.
+
+## Declaration
+
+```objectivec
+@interface PKIdentityDriversLicenseDescriptor : NSObject
+```
+
+## Mentioned In
+
+- [Requesting identity data from a Wallet pass](requesting-identity-data-from-a-wallet-pass.md)
+
+<a id="overview"></a>
+
+## Overview
+
+For the elements you request, the response contains the corresponding elements present in the user’s identity document. The table below maps the elements you request using [PKIdentityElement](pkidentityelement.md) with the ISO and American Association of Motor Vehicle Administrators (AAMVA) namespaces in the response.
+
+> **Important**
+
+>  When you verify a person’s driving privileges from a U.S. driver’s license, use `domestic_driving_privileges` from the `org.iso.18013.5.1.aamva` namespace instead of `driving_privileges` from the `org.iso.18013.5.1` namespace because the former maps more directly to state laws. For more information about implementation, see [AAMVA Mobile Driver’s License (mDL) Implementation Guidelines](https://www.aamva.org/topics/mobile-driver-license#?wst=4a3b89462cc2cff2cbe0c7accde57421).
+
+The framework allows for requesting the Boolean [ageThresholdElementWithAge:](pkidentityelement/age%28atleast_%29.md) element for any age between `1` and `125` only if the issuer includes it. If an app requests [ageThresholdElementWithAge:](pkidentityelement/age%28atleast_%29.md) and the `age_over_XX` element isn’t present in the mobile driver’s license, the framework falls back to a request for the [ageElement](pkidentityelement/age.md) element.
+
+An app can’t include both an [ageThresholdElementWithAge:](pkidentityelement/age%28atleast_%29.md) element and an [ageElement](pkidentityelement/age.md) element in the same request.
+
+| Identity element | ISO namespace | AAMVA namespace |
+| --- | --- | --- |
+| `givenName` | `given_name` | `given_name_truncation`, `aka_given_name`, `name_suffix`, `aka_suffix` |
+| `familyName` | `family_name` | `family_name_truncation`, `aka_family_name` |
+| `portrait` | `portrait` |  |
+| `address` | `resident_address`, `resident_city`, `resident_country`, `resident_postal_code` |  |
+| `issuingAuthority` | `issuing_authority`, `issuing_jurisdiction`, `issuing_country`, `un_distinguishing_sign` |  |
+| `documentExpirationDate` | `expiry_date` |  |
+| `documentIssueDate` | `document_issue_date` |  |
+| `documentNumber` | `document_number` |  |
+| `drivingPrivileges` | `driving_privileges` | `domestic_driving_privileges` |
+| `age` | `age_in_years` |  |
+| `dateOfBirth` | `birth_date` |  |
+| `age(atLeast: XX)` | `age_over_XX` |  |
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Conforms To
+
+- [PKIdentityDocumentDescriptor](pkidentitydocumentdescriptor.md)
+
+## See Also
+
+### Identity passes and authorization
+
+- [Requesting identity data from a Wallet pass](requesting-identity-data-from-a-wallet-pass.md): Initiate a request for identity information by prompting a user for permission and decrypting a response payload.
+- [Configuring your environment for the Verify with Wallet API](configuring-your-environment-for-the-verify-with-wallet-api.md): Set up your environment to use Verify with Wallet.
+- [Verifying Wallet identity requests](verifying-wallet-identity-requests.md): Decrypt and verify an in-app presentment request on your server.
+- [PKIdentityPhotoIDDescriptor](pkidentityphotoiddescriptor.md): An object you use to request information from a user’s photo ID or equivalent document.
+- [PKIdentityAnyOfDescriptor](pkidentityanyofdescriptor.md): An object you use to request information from multiple identity documents.
+- [PKAddIdentityDocumentMetadata](pkaddidentitydocumentmetadata.md): The object for specifying the metadata necessary to provision identity documents.
+- [PKAddIdentityDocumentConfiguration](pkaddidentitydocumentconfiguration.md): Configuration to define the identity document.
+- [PKAddIdentityDocumentType](pkaddidentitydocumenttype.md): Classifications that reflect the type of identity document.
+- [PKAddIdentityDocumentConfiguration](pkaddidentitydocumentconfiguration.md): Configuration to define the identity document.
+- [PKAddPassMetadataPreview](pkaddpassmetadatapreview.md): A preview object that contains information representing the pass you add to Wallet.
+- [PKIdentityDocumentMetadata](pkidentitydocumentmetadata.md): A set of configured metadata that defines the required information to add the corresponding pass to Wallet.
+- [PKIdentityNationalIDCardDescriptor](pkidentitynationalidcarddescriptor.md): An object for requesting information from a user’s national ID card.
+- [PKJapanIndividualNumberCardMetadata](pkjapanindividualnumbercardmetadata.md): A class that contains metadata indicating the specific product instance to provision.

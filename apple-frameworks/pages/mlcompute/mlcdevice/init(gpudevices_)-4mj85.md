@@ -1,0 +1,59 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mlcompute/mlcdevice/init(gpudevices:)-4mj85](https://developer.apple.com/documentation/mlcompute/mlcdevice/init(gpudevices:)-4mj85)
+
+# init(gpuDevices:) (Swift)
+
+**Framework:** ML Compute  
+**Kind:** Initializer  
+**Availability:** iOS 14.0+ (deprecated in 17.4) · iPadOS 14.0+ (deprecated in 17.4) · Mac Catalyst 14.0+ (deprecated in 17.4) · macOS 11.0+ (deprecated in 14.3) · tvOS 14.0+ (deprecated in 17.4)
+
+Creates a device using the GPUs you specify.
+
+## Declaration
+
+```swift
+convenience init?(gpuDevices gpus: [any MTLDevice])
+```
+
+## Parameters
+
+- `gpus`: An array that contains specific Metal devices you’ll use to execute neural networks.
+
+## See Also
+
+### Creating Devices
+
+- [init(type:)](init%28type_%29.md): Deprecated. Creates a device of the type you specify.
+- [init(type:selectsMultipleComputeDevices:)](init%28type_selectsmultiplecomputedevices_%29.md): Deprecated. Creates a device that you can configure to use multiple compute devices.
+- [MLCDeviceType](../mlcdevicetype.md): Deprecated. A device type for execution of a neural network.
+- [cpu()](cpu%28%29.md): Deprecated. Creates a device that uses the CPU.
+- [gpu()](gpu%28%29.md): Deprecated. Creates a device that uses a GPU, if one exists.
+- [ane()](ane%28%29.md): Deprecated. Creates a device that uses the Apple Neural Engine, if one exists.
+
+# deviceWithGPUDevices: (Objective-C)
+
+**Framework:** ML Compute  
+**Kind:** Type Method  
+**Availability:** iOS 14.0+ (deprecated in 17.4) · iPadOS 14.0+ (deprecated in 17.4) · Mac Catalyst 14.0+ (deprecated in 17.4) · macOS 11.0+ (deprecated in 14.3) · tvOS 14.0+ (deprecated in 17.4)
+
+Creates a device using the GPUs you specify.
+
+## Declaration
+
+```objectivec
++ (instancetype) deviceWithGPUDevices:(NSArray<id<MTLDevice>> *) gpus;
+```
+
+## Parameters
+
+- `gpus`: An array that contains specific Metal devices you’ll use to execute neural networks.
+
+## See Also
+
+### Creating Devices
+
+- [deviceWithType:](init%28type_%29.md): Deprecated. Creates a device of the type you specify.
+- [deviceWithType:selectsMultipleComputeDevices:](init%28type_selectsmultiplecomputedevices_%29.md): Deprecated. Creates a device that you can configure to use multiple compute devices.
+- [MLCDeviceType](../mlcdevicetype.md): Deprecated. A device type for execution of a neural network.
+- [cpuDevice](cpu%28%29.md): Deprecated. Creates a device that uses the CPU.
+- [gpuDevice](gpu%28%29.md): Deprecated. Creates a device that uses a GPU, if one exists.
+- [aneDevice](ane%28%29.md): Deprecated. Creates a device that uses the Apple Neural Engine, if one exists.

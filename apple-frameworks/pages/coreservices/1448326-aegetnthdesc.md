@@ -1,0 +1,107 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/1448326-aegetnthdesc](https://developer.apple.com/documentation/coreservices/1448326-aegetnthdesc)
+
+# AEGetNthDesc(\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** Core Services  
+**Kind:** Function  
+**Availability:** macOS 10.0+
+
+Copies a descriptor from a specified position in a descriptor list into a specified descriptor; typically used when your application needs to pass the extracted data to another function as a descriptor.
+
+## Declaration
+
+```swift
+func AEGetNthDesc(_ theAEDescList: UnsafePointer<AEDescList>!, _ index: Int, _ desiredType: DescType, _ theAEKeyword: UnsafeMutablePointer<AEKeyword>!, _ result: UnsafeMutablePointer<AEDesc>!) -> OSErr
+```
+
+## Parameters
+
+- `theAEDescList`: A pointer to the descriptor list to get the descriptor from. See [AEDescList](aedesclist.md).
+- `index`: A one-based positive integer indicating the position of the descriptor to get. `AEGetNthDesc` returns an error if you pass zero, a negative number, or a value that is out of range.
+- `desiredType`: The desired descriptor type for the descriptor to copy. For a list of AppleScript’s predefined descriptor types, see [Descriptor Type Constants](apple_events/1542788-descriptor_type_constants.md).
+
+  If the descriptor specified by the `index` parameter is not of the desired type, `AEGetNthDesc` attempts to coerce it to this type. However, if you pass a value of `typeWildCard`, no coercion is performed, and the descriptor type of the copied descriptor is the same as the descriptor type of the original descriptor.
+
+  See [DescType](desctype.md).
+- `theAEKeyword`: A pointer to a keyword. On successful return, the keyword for the specified descriptor, if you are getting data from a list of keyword-specified descriptors; otherwise, `AEGetNthDesc` returns the value `typeWildCard`. Some keyword constants are described in [Keyword Attribute Constants](apple_events/1542920-keyword_attribute_constants.md) and [Keyword Parameter Constants](apple_events/1527206-keyword_parameter_constants.md). See [AEKeyword](aekeyword.md).
+- `result`: A pointer to a descriptor. On successful return, a copy of the descriptor specified by the `index` parameter, coerced, if necessary, to the descriptor type specified by the `desiredType` parameter. On error, a null descriptor. If the function returns successfully, your application should call the [AEDisposeDesc(\_:)](1444208-aedisposedesc.md) function to dispose of the resulting descriptor after it has finished using it. See [AEDesc](aedesc.md).
+
+<a id="return_value"></a>
+
+## Return Value
+
+A result code. See [Result Codes](https://developer.apple.com/documentation/applicationservices/apple_event_manager#1656145).
+
+<a id="discussion"></a>
+
+## Discussion
+
+If the Nth descriptor in the list is itself an Apple event record and the desired type is not wildcard, record, or list, `AEGetNthDesc` will fail with an `errAECoercionFailed` error. This behavior prevents coercion problems. 
+
+You may find the [AEGetNthPtr(\_:\_:\_:\_:\_:\_:\_:\_:)](1447539-aegetnthptr.md) function convenient for retrieving data for direct use in your application, as it includes automatic coercion. 
+
+<a id="1770194"></a>
+
+### Version-Notes
+
+Thread safe starting in OS X v10.2.
+
+## See Also
+
+### Getting Items From Descriptor Lists
+
+- [AEGetArray(\_:\_:\_:\_:\_:\_:\_:)](1445720-aegetarray.md): Extracts data from an Apple event array created with the `AEPutArray` function and stores it as a standard array of fixed size items in the specified buffer.
+- [AEGetNthPtr(\_:\_:\_:\_:\_:\_:\_:\_:)](1447539-aegetnthptr.md): Gets a copy of the data from a descriptor at a specified position in a descriptor list; typically used when your application needs to work with the extracted data directly.
+
+# AEGetNthDesc (Objective-C)
+
+**Framework:** Core Services  
+**Kind:** Function  
+**Availability:** macOS 10.0+
+
+Copies a descriptor from a specified position in a descriptor list into a specified descriptor; typically used when your application needs to pass the extracted data to another function as a descriptor.
+
+## Declaration
+
+```objectivec
+OSErr AEGetNthDesc(const AEDescList *theAEDescList, long index, DescType desiredType, AEKeyword *theAEKeyword, AEDesc *result);
+```
+
+## Parameters
+
+- `theAEDescList`: A pointer to the descriptor list to get the descriptor from. See [AEDescList](aedesclist.md).
+- `index`: A one-based positive integer indicating the position of the descriptor to get. `AEGetNthDesc` returns an error if you pass zero, a negative number, or a value that is out of range.
+- `desiredType`: The desired descriptor type for the descriptor to copy. For a list of AppleScript’s predefined descriptor types, see [Descriptor Type Constants](1542788-descriptor_type_constants.md).
+
+  If the descriptor specified by the `index` parameter is not of the desired type, `AEGetNthDesc` attempts to coerce it to this type. However, if you pass a value of `typeWildCard`, no coercion is performed, and the descriptor type of the copied descriptor is the same as the descriptor type of the original descriptor.
+
+  See [DescType](desctype.md).
+- `theAEKeyword`: A pointer to a keyword. On successful return, the keyword for the specified descriptor, if you are getting data from a list of keyword-specified descriptors; otherwise, `AEGetNthDesc` returns the value `typeWildCard`. Some keyword constants are described in [Keyword Attribute Constants](1542920-keyword_attribute_constants.md) and [Keyword Parameter Constants](1527206-keyword_parameter_constants.md). See [AEKeyword](aekeyword.md).
+- `result`: A pointer to a descriptor. On successful return, a copy of the descriptor specified by the `index` parameter, coerced, if necessary, to the descriptor type specified by the `desiredType` parameter. On error, a null descriptor. If the function returns successfully, your application should call the [AEDisposeDesc](1444208-aedisposedesc.md) function to dispose of the resulting descriptor after it has finished using it. See [AEDesc](aedesc.md).
+
+<a id="return_value"></a>
+
+## Return Value
+
+A result code. See [Result Codes](https://developer.apple.com/documentation/applicationservices/apple_event_manager#1656145).
+
+<a id="discussion"></a>
+
+## Discussion
+
+If the Nth descriptor in the list is itself an Apple event record and the desired type is not wildcard, record, or list, `AEGetNthDesc` will fail with an `errAECoercionFailed` error. This behavior prevents coercion problems. 
+
+You may find the [AEGetNthPtr](1447539-aegetnthptr.md) function convenient for retrieving data for direct use in your application, as it includes automatic coercion. 
+
+<a id="1770194"></a>
+
+### Version-Notes
+
+Thread safe starting in OS X v10.2.
+
+## See Also
+
+### Getting Items From Descriptor Lists
+
+- [AEGetArray](1445720-aegetarray.md): Extracts data from an Apple event array created with the `AEPutArray` function and stores it as a standard array of fixed size items in the specified buffer.
+- [AEGetNthPtr](1447539-aegetnthptr.md): Gets a copy of the data from a descriptor at a specified position in a descriptor list; typically used when your application needs to work with the extracted data directly.

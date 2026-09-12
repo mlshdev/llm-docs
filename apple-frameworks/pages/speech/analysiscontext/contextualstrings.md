@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/speech/analysiscontext/contextualstrings](https://developer.apple.com/documentation/speech/analysiscontext/contextualstrings)
+
+# contextualStrings
+
+**Framework:** Speech  
+**Kind:** Instance Property  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+Words or phrases, grouped by tag, that should be recognized even if they are not in the system vocabulary.
+
+## Declaration
+
+```swift
+final var contextualStrings: [AnalysisContext.ContextualStringsTag : [String]] { get set }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+With the [DictationTranscriber](../dictationtranscriber.md) module, you can use this property to specify short custom phrases that are unique to your app. You might include phrases with the names of characters, products, or places that are specific to your app. Assigning custom phrases to this property improves the likelihood of those phrases being recognized.
+
+Keep phrases relatively brief, limiting them to one or two words whenever possible. Lengthy phrases are less likely to be recognized. In addition, try to limit each phrase to something the user can say without pausing. Limit the total number of phrases across all tags to no more than 100.
+
+You might also include domain-specific terminology or unusual or made-up words, but the system may not estimate their pronounciation correctly. You can provide a custom language model with correct pronounciations to [DictationTranscriber](../dictationtranscriber.md) by initializing it with a [customizedLanguage(modelConfiguration:)](../dictationtranscriber/contenthint/customizedlanguage%28modelconfiguration_%29.md) content hint.
+
+Use the tag to easily swap out some of the strings while leaving others in place. The framework provides a predefined [general](contextualstringstag/general.md) tag.
+
+## See Also
+
+### Providing textual context
+
+- [AnalysisContext.ContextualStringsTag](contextualstringstag.md)

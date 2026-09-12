@@ -1,0 +1,99 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/mobileaccounts](https://developer.apple.com/documentation/devicemanagement/mobileaccounts)
+
+# MobileAccounts
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Device Management Profile  
+**Availability:** macOS 10.7+
+
+The payload that configures mobile accounts on the device.
+
+## Declaration
+
+```
+object MobileAccounts
+```
+
+## Properties
+
+- `cachedaccounts.askForSecureTokenAuthBypass` — `boolean`: If `true`, the system bypasses the secure token authorization dialog. This dialog only appears on APFS volumes.
+  **Default:** `false`
+- `cachedaccounts.expiry.delete.disusedSeconds` — `integer`: The minimum number of seconds a mobile account can exist before the system makes an automatic attempt to remove the mobile account. Set to `0` to attempt removing it at the next login or logout. Set to `-1` to never attempt removing the mobile account.
+  **Default:** `-1`
+- `cachedaccounts.WarnOnCreate.allowNever` — `boolean`: If `true`, the system allows the user to stop the prompts about mobile account creation every time the user logs in. This key is only valid if `com.apple.cachedaccounts.WarnOnCreate` is `true`.
+  **Default:** `false`
+- `com.apple.cachedaccounts.CreateAtLogin` — `boolean`: If `true`, the system creates the mobile account at login time.
+  **Default:** `false`
+- `com.apple.cachedaccounts.WarnOnCreate` — `boolean`: If `true`, the system asks the user whether to create the mobile account and it allows the user to not create it.
+  **Default:** `false`
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Specify `com.apple.MCX` as the payload type.
+
+<a id="Profile-availability"></a>
+
+### Profile availability
+
+|  |  |
+| --- | --- |
+| Device channel | macOS |
+| User channel | macOS |
+| Allow manual install | macOS |
+| Requires supervision | N/A |
+| Requires user-approved MDM | N/A |
+| Allowed in user enrollment | N/A |
+| Allow multiple payloads | N/A |
+
+<a id="Profile-example"></a>
+
+### Profile example
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>com.apple.cachedaccounts.CreateAtLogin</key>
+            <true/>
+            <key>PayloadIdentifier</key>
+            <string>com.example.mymobileccountpayload</string>
+            <key>PayloadType</key>
+            <string>com.apple.MCX</string>
+            <key>PayloadUUID</key>
+            <string>93aa2058-4fe5-4f8b-a409-80f05b7fb2f0</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+    </array>
+    <key>PayloadDisplayName</key>
+    <string>Mobility</string>
+    <key>PayloadIdentifier</key>
+    <string>com.example.myprofile</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>b89ce975-801b-4994-8f68-dc5cad408ad1</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>
+```
+
+## See Also
+
+### Accounts
+
+- [Accounts](accounts.md): The payload that configures guest accounts.
+- [CalDAV](caldav.md): The payload that configures a Calendar account.
+- [CardDAV](carddav.md): The payload that configures a Contacts account.
+- [GoogleAccount](googleaccount.md): The payload that configures a Google account.
+- [LDAP](ldap.md): The payload that configures a Lightweight Directory Access Protocol (LDAP) account.
+- [SubscribedCalendars](subscribedcalendars.md): The payload that configures subscribed calendars.

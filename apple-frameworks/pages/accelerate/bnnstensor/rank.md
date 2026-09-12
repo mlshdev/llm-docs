@@ -1,0 +1,63 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/bnnstensor/rank](https://developer.apple.com/documentation/accelerate/bnnstensor/rank)
+
+# rank (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Instance Property  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+The rank of the tensor.
+
+## Declaration
+
+```swift
+var rank: UInt8
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This value must be greater than or equal to zero, and less than or equal to `BNNS_MAX_TENSOR_DIMENSION`.
+
+## See Also
+
+### Specifying a tensor’s properties
+
+- [data_type](data_type.md): The data type of the tensor.
+- [shape](shape.md): A tuple of unsigned-integer elements that specify the size of the tensor.
+- [stride](stride.md): A tuple of unsigned-integer elements that specify the stride of the tensor.
+- [data](data.md): A pointer to the memory that contains the tensor values.
+- [data_size_in_bytes](data_size_in_bytes.md): The size, in bytes, of the memory that contains the tensor values.
+- [name](name.md): An optional name for the tensor that you can use for debugging.
+
+# rank (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Instance Property  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+The rank of the tensor.
+
+## Declaration
+
+```objectivec
+uint8_t rank;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This value must be greater than or equal to zero, and less than or equal to `BNNS_MAX_TENSOR_DIMENSION`.
+
+## See Also
+
+### Specifying a tensor’s properties
+
+- [data_type](data_type.md): The data type of the tensor.
+- [shape](shape.md): A tuple of unsigned-integer elements that specify the size of the tensor.
+- [stride](stride.md): A tuple of unsigned-integer elements that specify the stride of the tensor.
+- [data](data.md): A pointer to the memory that contains the tensor values.
+- [data_size_in_bytes](data_size_in_bytes.md): The size, in bytes, of the memory that contains the tensor values.
+- [name](name.md): An optional name for the tensor that you can use for debugging.

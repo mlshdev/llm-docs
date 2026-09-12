@@ -1,0 +1,83 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstableviewdelegate/tableview(_:rowactionsforrow:edge:)](https://developer.apple.com/documentation/appkit/nstableviewdelegate/tableview(_:rowactionsforrow:edge:))
+
+# tableView(\_:rowActionsForRow:edge:) (Swift)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS 10.11+
+
+Asks the delegate to provide an array of row actions to be attached to the specified edge of a table row and displayed when the user swipes horizontally across the row.
+
+## Declaration
+
+```swift
+@MainActor optional func tableView(_ tableView: NSTableView, rowActionsForRow row: Int, edge: NSTableView.RowActionEdge) -> [NSTableViewRowAction]
+```
+
+## Parameters
+
+- `tableView`: The table view that sent the message.
+- `row`: The index of the target row.
+- `edge`: The edge (of class [NSTableView.RowActionEdge](../nstableview/rowactionedge.md)) for which row actions are requested. This is based on the direction in which the user swiped on the row. Swiping to the right results in an edge value of [NSTableView.RowActionEdge.leading](../nstableview/rowactionedge/leading.md). Swiping to the left results in an edge value of [NSTableView.RowActionEdge.trailing](../nstableview/rowactionedge/trailing.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+An array of row actions (of class [NSTableViewRowAction](../nstableviewrowaction.md)) to be enabled on the specified edge of the table row.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Implement this method if your table row supports actions that are displayed when the user swipes horizontally across the row. For example, your table view could use this method to implement a swipe left to delete function in your table rows. When called, this method receives the table view, the index of the row the user swiped, and an edge of type `NSTableRowActionEdge`. The method should return an array of any row actions of class [NSTableViewRowAction](../nstableviewrowaction.md) that are supported for the specified edge. If no row actions are available, an empty array should be returned.
+
+If this method isn’t implemented, then the table row displays no actions when the user swipes horizontally away from the specified edge.
+
+## See Also
+
+### Related Documentation
+
+- [NSTableViewRowAction](../nstableviewrowaction.md): A single action to present when the user swipes horizontally on a table row.
+- [NSTableView.RowActionEdge](../nstableview/rowactionedge.md): These constants define table row edges on which row actions are attached. They are used by the `tableView:rowActionsForRow:edge:` delegate method.
+
+# tableView:rowActionsForRow:edge: (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS 10.11+
+
+Asks the delegate to provide an array of row actions to be attached to the specified edge of a table row and displayed when the user swipes horizontally across the row.
+
+## Declaration
+
+```objectivec
+- (NSArray<NSTableViewRowAction *> *) tableView:(NSTableView *) tableView rowActionsForRow:(NSInteger) row edge:(NSTableRowActionEdge) edge;
+```
+
+## Parameters
+
+- `tableView`: The table view that sent the message.
+- `row`: The index of the target row.
+- `edge`: The edge (of class [NSTableRowActionEdge](../nstableview/rowactionedge.md)) for which row actions are requested. This is based on the direction in which the user swiped on the row. Swiping to the right results in an edge value of [NSTableRowActionEdgeLeading](../nstableview/rowactionedge/leading.md). Swiping to the left results in an edge value of [NSTableRowActionEdgeTrailing](../nstableview/rowactionedge/trailing.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+An array of row actions (of class [NSTableViewRowAction](../nstableviewrowaction.md)) to be enabled on the specified edge of the table row.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Implement this method if your table row supports actions that are displayed when the user swipes horizontally across the row. For example, your table view could use this method to implement a swipe left to delete function in your table rows. When called, this method receives the table view, the index of the row the user swiped, and an edge of type `NSTableRowActionEdge`. The method should return an array of any row actions of class [NSTableViewRowAction](../nstableviewrowaction.md) that are supported for the specified edge. If no row actions are available, an empty array should be returned.
+
+If this method isn’t implemented, then the table row displays no actions when the user swipes horizontally away from the specified edge.
+
+## See Also
+
+### Related Documentation
+
+- [NSTableViewRowAction](../nstableviewrowaction.md): A single action to present when the user swipes horizontally on a table row.
+- [NSTableRowActionEdge](../nstableview/rowactionedge.md): These constants define table row edges on which row actions are attached. They are used by the `tableView:rowActionsForRow:edge:` delegate method.

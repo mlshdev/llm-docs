@@ -17,9 +17,9 @@ import {
 import { DocumentCollector } from "../quarantine.ts";
 import type {
   Document,
-  LockedSource,
+  GithubLockedSource,
+  GithubSourceProject,
   ProjectBuild,
-  SourceProject,
 } from "../types.ts";
 
 const rootDocuments = [
@@ -42,8 +42,8 @@ const sphinxDocuments = [
 ] as const;
 
 export async function buildPodman(
-  project: SourceProject,
-  lock: LockedSource,
+  project: GithubSourceProject,
+  lock: GithubLockedSource,
 ): Promise<ProjectBuild> {
   return withRepositoryArchive(
     project.repository,

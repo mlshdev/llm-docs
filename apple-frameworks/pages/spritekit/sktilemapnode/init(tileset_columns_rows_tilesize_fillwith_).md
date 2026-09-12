@@ -1,0 +1,88 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spritekit/sktilemapnode/init(tileset:columns:rows:tilesize:fillwith:)](https://developer.apple.com/documentation/spritekit/sktilemapnode/init(tileset:columns:rows:tilesize:fillwith:))
+
+# init(tileSet:columns:rows:tileSize:fillWith:) (Swift)
+
+**Framework:** SpriteKit  
+**Kind:** Initializer  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 10.12+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.0+
+
+Creates and initializes a tile map node using the provided tile set with a specified number of columns and rows.
+
+## Declaration
+
+```swift
+init(tileSet: SKTileSet, columns: Int, rows: Int, tileSize: CGSize, fillWith tileGroup: SKTileGroup)
+```
+
+## Parameters
+
+- `tileSet`: The tile set that is used to render the tiles.
+- `columns`: The number of columns in the map.
+- `rows`: The number of rows in the map.
+- `tileSize`: The size of each tile in points.
+- `tileGroup`: The tile group to fill the tile map with.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new tile map node.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+For a grid set type, the overall size, in points, of the node will be `numberOfColumns` \* `tileSize.width` wide and `numberOfRows` \* `tileSize.height` high. This initializer fills each tile with a texture defined by the descriptors in the final `SKTileGroup` argument.
+
+## See Also
+
+### Creating a Tile Map
+
+- [init(tileSet:columns:rows:tileSize:)](init%28tileset_columns_rows_tilesize_%29.md): Creates and initializes a tile map node using the provided tile set with a specified number of columns and rows.
+- [init(tileSet:columns:rows:tileSize:tileGroupLayout:)](init%28tileset_columns_rows_tilesize_tilegrouplayout_%29.md): Creates and initializes a tile map node using the provided tile set with a specified number of columns and rows. For a grid set type, the overall size, in points, of the node will be `numberOfColumns * tileSize.width` wide and `numberOfRows * tileSize.height` high.
+- [tileMapNodes(tileSet:columns:rows:tileSize:from:tileTypeNoiseMapThresholds:)](tilemapnodes%28tileset_columns_rows_tilesize_from_tiletypenoisemapthresholds_%29.md): Creates a tile map node by allowing a [GKNoiseMap](../../gameplaykit/gknoisemap.md) to choose its tiles.
+
+# initWithTileSet:columns:rows:tileSize:fillWithTileGroup: (Objective-C)
+
+**Framework:** SpriteKit  
+**Kind:** Instance Method  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 10.12+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.0+
+
+Creates and initializes a tile map node using the provided tile set with a specified number of columns and rows.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithTileSet:(SKTileSet *) tileSet columns:(NSUInteger) columns rows:(NSUInteger) rows tileSize:(CGSize) tileSize fillWithTileGroup:(SKTileGroup *) tileGroup;
+```
+
+## Parameters
+
+- `tileSet`: The tile set that is used to render the tiles.
+- `columns`: The number of columns in the map.
+- `rows`: The number of rows in the map.
+- `tileSize`: The size of each tile in points.
+- `tileGroup`: The tile group to fill the tile map with.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new tile map node.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+For a grid set type, the overall size, in points, of the node will be `numberOfColumns` \* `tileSize.width` wide and `numberOfRows` \* `tileSize.height` high. This initializer fills each tile with a texture defined by the descriptors in the final `SKTileGroup` argument.
+
+## See Also
+
+### Creating a Tile Map
+
+- [initWithTileSet:columns:rows:tileSize:](init%28tileset_columns_rows_tilesize_%29.md): Creates and initializes a tile map node using the provided tile set with a specified number of columns and rows.
+- [initWithTileSet:columns:rows:tileSize:tileGroupLayout:](init%28tileset_columns_rows_tilesize_tilegrouplayout_%29.md): Creates and initializes a tile map node using the provided tile set with a specified number of columns and rows. For a grid set type, the overall size, in points, of the node will be `numberOfColumns * tileSize.width` wide and `numberOfRows * tileSize.height` high.
+- [tileMapNodesWithTileSet:columns:rows:tileSize:fromNoiseMap:tileTypeNoiseMapThresholds:](tilemapnodes%28tileset_columns_rows_tilesize_from_tiletypenoisemapthresholds_%29.md): Creates a tile map node by allowing a [GKNoiseMap](../../gameplaykit/gknoisemap.md) to choose its tiles.
+- [tileMapNodeWithTileSet:columns:rows:tileSize:](tilemapnodewithtileset_columns_rows_tilesize_.md)
+- [tileMapNodeWithTileSet:columns:rows:tileSize:fillWithTileGroup:](tilemapnodewithtileset_columns_rows_tilesize_fillwithtilegroup_.md)
+- [tileMapNodeWithTileSet:columns:rows:tileSize:tileGroupLayout:](tilemapnodewithtileset_columns_rows_tilesize_tilegrouplayout_.md)

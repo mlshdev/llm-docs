@@ -1,0 +1,36 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtlrasterizationratemapdescriptor/rasterizationratemapdescriptorwithscreensize:layercount:layers:](https://developer.apple.com/documentation/metal/mtlrasterizationratemapdescriptor/rasterizationratemapdescriptorwithscreensize:layercount:layers:)
+
+# rasterizationRateMapDescriptorWithScreenSize:layerCount:layers:
+
+**Interface language:** Objective-C
+
+**Framework:** Metal  
+**Kind:** Type Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.4+ · macOS 10.15.4+ · tvOS 16.0+ · visionOS 1.0+
+
+Creates a rate map descriptor with a set of layer descriptors.
+
+## Declaration
+
+```objectivec
++ (MTLRasterizationRateMapDescriptor *) rasterizationRateMapDescriptorWithScreenSize:(MTLSize) screenSize layerCount:(NSUInteger) layerCount layers:(MTLRasterizationRateLayerDescriptor * const*) layers;
+```
+
+## Parameters
+
+- `screenSize`: The logical size, in pixels, of the viewport coordinate system.
+- `layerCount`: The number of array elements in `layers`.
+- `layers`: An array of rate layer descriptors for the rate map’s layers.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A descriptor object whose [screenSize](screensize.md) is set to the provided size and whose rate map layers are set to the array you provided.
+
+## See Also
+
+### Creating rate map descriptors
+
+- [rasterizationRateMapDescriptorWithScreenSize:](rasterizationratemapdescriptorwithscreensize_.md): Creates a rate map descriptor with a given size and identifier.
+- [rasterizationRateMapDescriptorWithScreenSize:layer:](rasterizationratemapdescriptorwithscreensize_layer_.md): Creates a rate map descriptor with a single rate layer.

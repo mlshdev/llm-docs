@@ -20,6 +20,14 @@ searxng/
 bun/
 trigger-dev/
 aria2/
+apple-swift/
+apple-swiftui/
+apple-webkit/
+apple-xcode/
+apple-ios/
+apple-macos/
+apple-watchos/
+apple-frameworks/
 llms.txt
 llms-full.txt
 bun.lock

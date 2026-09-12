@@ -1,7 +1,8 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-import { projectIds } from "./types.ts";
+import { doccCatalogIds, doccProjectCatalogs, projectIds } from "./types.ts";
 import type {
+  DoccCatalogId,
   LockedSource,
   ProjectId,
   SourcesConfig,
@@ -50,19 +51,44 @@ function isSourcesConfig(value: unknown): value is SourcesConfig {
       !isRecord(project) ||
       !isProjectId(project.id) ||
       typeof project.title !== "string" ||
-      typeof project.repository !== "string" ||
       typeof project.homepage !== "string" ||
-      (project.docsRepository !== undefined &&
-        typeof project.docsRepository !== "string") ||
-      (project.branch !== undefined &&
-        (typeof project.branch !== "string" || project.branch.trim() === "")) ||
-      ids.has(project.id)
+      ids.has(project.id) ||
+      !isSourceKind(project)
     ) {
       return false;
     }
     ids.add(project.id);
   }
   return ids.size === projectIds.length;
+}
+
+function isSourceKind(project: Record<string, unknown>): boolean {
+  if (project.kind === "github") {
+    return (
+      doccProjectCatalogs[project.id as keyof typeof doccProjectCatalogs] ===
+        undefined &&
+      typeof project.repository === "string" &&
+      (project.docsRepository === undefined ||
+        typeof project.docsRepository === "string") &&
+      (project.branch === undefined ||
+        (typeof project.branch === "string" && project.branch.trim() !== ""))
+    );
+  }
+  if (project.kind === "docc") {
+    return (
+      isDoccCatalogId(project.catalog) &&
+      doccProjectCatalogs[project.id as keyof typeof doccProjectCatalogs] ===
+        project.catalog &&
+      project.repository === undefined &&
+      project.docsRepository === undefined &&
+      project.branch === undefined
+    );
+  }
+  return false;
+}
+
+function isDoccCatalogId(value: unknown): value is DoccCatalogId {
+  return doccCatalogIds.some((catalog) => catalog === value);
 }
 
 export function isSourcesLock(value: unknown): value is SourcesLock {
@@ -79,11 +105,25 @@ export function isSourcesLock(value: unknown): value is SourcesLock {
 }
 
 function isLockedSource(value: unknown): value is LockedSource {
-  if (
-    !isRecord(value) ||
-    typeof value.tag !== "string" ||
-    !isCommitSha(value.sourceCommit)
-  ) {
+  if (!isRecord(value) || typeof value.tag !== "string") {
+    return false;
+  }
+  if (value.snapshotDigest !== undefined) {
+    return (
+      isSnapshotDigest(value.snapshotDigest) &&
+      (value.contentDigest === undefined ||
+        isSnapshotDigest(value.contentDigest)) &&
+      typeof value.capturedAt === "string" &&
+      value.tag === `snapshot-${value.snapshotDigest.slice(0, 12)}` &&
+      value.sourceCommit === undefined &&
+      value.branch === undefined &&
+      value.sourceCommittedAt === undefined &&
+      value.docsCommit === undefined &&
+      value.releaseId === undefined &&
+      value.releasePublishedAt === undefined
+    );
+  }
+  if (value.contentDigest !== undefined || !isCommitSha(value.sourceCommit)) {
     return false;
   }
   if (value.branch !== undefined) {
@@ -102,6 +142,10 @@ function isLockedSource(value: unknown): value is LockedSource {
     value.sourceCommittedAt === undefined &&
     (value.docsCommit === undefined || isCommitSha(value.docsCommit))
   );
+}
+
+function isSnapshotDigest(value: unknown): value is string {
+  return typeof value === "string" && /^[0-9a-f]{64}$/.test(value);
 }
 
 function isCommitSha(value: unknown): value is string {

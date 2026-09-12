@@ -1,0 +1,52 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/appschema/notesintent/createnote](https://developer.apple.com/documentation/appintents/appschema/notesintent/createnote)
+
+# createNote
+
+**Framework:** App Intents  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+An intent schema that creates a new note.
+
+## Declaration
+
+```swift
+var createNote: some AppSchemaIntent { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+To make your app’s actions available to Apple Intelligence, conform your [AppIntent](../../appintent.md) to a schema that describes your action to the system. If your app’s functionality aligns with the `notes` domain and one of your app’s actions matches the `createNote` schema, you can generate the properties and protocol conformance the schema requires for your intent implementation with the `@AppIntent( .notes.createNote)` Swift macro. To make your app work with Siri, see [Apple Intelligence and Siri AI](../../apple-intelligence-and-siri-ai.md).
+
+The following example shows an intent that conforms to the `createNote` schema:
+
+```swift
+@AppIntent(schema: .notes.createNote)
+struct CreateNoteIntent {
+    var name: AttributedString
+    var content: AttributedString?
+    var attachments: [IntentFile]
+    var isPinned: Bool
+    var folder: <#FolderEntity#>?
+
+    func perform() async throws -> some ReturnsValue<<#NoteEntity#>> {
+        <#code#>
+    }
+}
+```
+
+The schema supports the following system experiences:
+
+- Siri
+- Shortcuts
+
+For more information about the App Intents framework and the experiences it supports, see [Getting started with the App Intents framework](../../getting-started-with-the-app-intents-framework.md).
+
+## See Also
+
+### Actions
+
+- [updateNote](updatenote.md): An intent schema that updates a note.
+- [AppSchema.NotesIntent](../notesintent.md): Identifies intent schemas in the notes domain.

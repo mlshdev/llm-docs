@@ -1,0 +1,59 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/homekit/hmcharacteristicvaluelockmechanismlastknownaction/unsecuredusingphysicalmovementexterior](https://developer.apple.com/documentation/homekit/hmcharacteristicvaluelockmechanismlastknownaction/unsecuredusingphysicalmovementexterior)
+
+# HMCharacteristicValueLockMechanismLastKnownAction.unsecuredUsingPhysicalMovementExterior (Swift)
+
+**Framework:** HomeKit  
+**Kind:** Case  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 8.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 2.0+
+
+The last known action was for the lock to be unsecured using physical movement on the exterior of the door.
+
+## Declaration
+
+```swift
+case unsecuredUsingPhysicalMovementExterior
+```
+
+## See Also
+
+### Lock Mechanism Actions
+
+- [HMCharacteristicValueLockMechanismLastKnownAction.securedRemotely](securedremotely.md): The last known action was for the lock to be secured remotely.
+- [HMCharacteristicValueLockMechanismLastKnownAction.securedUsingPhysicalMovement](securedusingphysicalmovement.md): The last known action was for the lock to be secured using physical movement.
+- [HMCharacteristicValueLockMechanismLastKnownAction.securedUsingPhysicalMovementExterior](securedusingphysicalmovementexterior.md): The last known action was for the lock to be secured using physical movement on the exterior of the door.
+- [HMCharacteristicValueLockMechanismLastKnownAction.securedUsingPhysicalMovementInterior](securedusingphysicalmovementinterior.md): The last known action was for the lock to be secured using physical movement on the interior of the door.
+- [HMCharacteristicValueLockMechanismLastKnownAction.securedWithAutomaticSecureTimeout](securedwithautomaticsecuretimeout.md): The last known action was for the lock to be secured automatically after a timeout period expired.
+- [HMCharacteristicValueLockMechanismLastKnownAction.securedWithKeypad](securedwithkeypad.md): The last known action was for the lock to be secured using a keypad.
+- [HMCharacteristicValueLockMechanismLastKnownAction.unsecuredRemotely](unsecuredremotely.md): The last known action was for the lock to be unsecured remotely.
+- [HMCharacteristicValueLockMechanismLastKnownAction.unsecuredUsingPhysicalMovement](unsecuredusingphysicalmovement.md): The last known action was for the lock to be unsecured using physical movement.
+- [HMCharacteristicValueLockMechanismLastKnownAction.unsecuredUsingPhysicalMovementInterior](unsecuredusingphysicalmovementinterior.md): The last known action was for the lock to be unsecured using physical movement on the interior of the door.
+- [HMCharacteristicValueLockMechanismLastKnownAction.unsecuredWithKeypad](unsecuredwithkeypad.md): The last known action was for the lock to be unsecured using a keypad.
+
+# HMCharacteristicValueLockMechanismLastKnownActionUnsecuredUsingPhysicalMovementExterior (Objective-C)
+
+**Framework:** HomeKit  
+**Kind:** Enumeration Case  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 14.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 2.0+
+
+The last known action was for the lock to be unsecured using physical movement on the exterior of the door.
+
+## Declaration
+
+```objectivec
+HMCharacteristicValueLockMechanismLastKnownActionUnsecuredUsingPhysicalMovementExterior
+```
+
+## See Also
+
+### Lock Mechanism Actions
+
+- [HMCharacteristicValueLockMechanismLastKnownActionSecuredRemotely](securedremotely.md): The last known action was for the lock to be secured remotely.
+- [HMCharacteristicValueLockMechanismLastKnownActionSecuredUsingPhysicalMovement](securedusingphysicalmovement.md): The last known action was for the lock to be secured using physical movement.
+- [HMCharacteristicValueLockMechanismLastKnownActionSecuredUsingPhysicalMovementExterior](securedusingphysicalmovementexterior.md): The last known action was for the lock to be secured using physical movement on the exterior of the door.
+- [HMCharacteristicValueLockMechanismLastKnownActionSecuredUsingPhysicalMovementInterior](securedusingphysicalmovementinterior.md): The last known action was for the lock to be secured using physical movement on the interior of the door.
+- [HMCharacteristicValueLockMechanismLastKnownActionSecuredWithAutomaticSecureTimeout](securedwithautomaticsecuretimeout.md): The last known action was for the lock to be secured automatically after a timeout period expired.
+- [HMCharacteristicValueLockMechanismLastKnownActionSecuredWithKeypad](securedwithkeypad.md): The last known action was for the lock to be secured using a keypad.
+- [HMCharacteristicValueLockMechanismLastKnownActionUnsecuredRemotely](unsecuredremotely.md): The last known action was for the lock to be unsecured remotely.
+- [HMCharacteristicValueLockMechanismLastKnownActionUnsecuredUsingPhysicalMovement](unsecuredusingphysicalmovement.md): The last known action was for the lock to be unsecured using physical movement.
+- [HMCharacteristicValueLockMechanismLastKnownActionUnsecuredUsingPhysicalMovementInterior](unsecuredusingphysicalmovementinterior.md): The last known action was for the lock to be unsecured using physical movement on the interior of the door.
+- [HMCharacteristicValueLockMechanismLastKnownActionUnsecuredWithKeypad](unsecuredwithkeypad.md): The last known action was for the lock to be unsecured using a keypad.

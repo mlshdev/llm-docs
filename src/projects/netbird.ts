@@ -10,11 +10,15 @@ import {
 } from "../markdown.ts";
 import { convertMdx } from "../mdx.ts";
 import { DocumentCollector } from "../quarantine.ts";
-import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
+import type {
+  GithubLockedSource,
+  GithubSourceProject,
+  ProjectBuild,
+} from "../types.ts";
 
 export async function buildNetbird(
-  project: SourceProject,
-  lock: LockedSource,
+  project: GithubSourceProject,
+  lock: GithubLockedSource,
 ): Promise<ProjectBuild> {
   if (!project.docsRepository || !lock.docsCommit) {
     throw new Error(

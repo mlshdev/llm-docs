@@ -1,0 +1,67 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/indexedentityquery](https://developer.apple.com/documentation/appintents/indexedentityquery)
+
+# IndexedEntityQuery
+
+**Framework:** App Intents  
+**Kind:** Protocol  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+An interface that adds Spotlight reindexing support to your entity query.
+
+## Declaration
+
+```swift
+protocol IndexedEntityQuery : EntityQuery where Self.Entity : IndexedEntity
+```
+
+## Mentioned In
+
+- [Making app entities available in Spotlight](making-app-entities-available-in-spotlight.md)
+- [Defining app entities for your custom data types](defining-app-entities-for-your-custom-data-types.md)
+
+<a id="overview"></a>
+
+## Overview
+
+Adopt this protocol in query types for app entities that you donate to your app’s Spotlight index using the [indexAppEntities(\_:priority:)](../corespotlight/cssearchableindex/indexappentities%28__priority_%29.md) method. When the system encounters an issue with an app’s index, it can ask that app to reindex its content. During reindexing, the system calls the methods of this protocol if your query type supports the protocol. If your type doesn’t support the protocol, Spotlight continues to ask your app’s [CSSearchableIndexDelegate](../corespotlight/cssearchableindexdelegate.md) object to reindex any content. Similarly, if you donated an entity by associating it with a [CSSearchableItem](../corespotlight/cssearchableitem.md) type, Spotlight uses your [CSSearchableIndexDelegate](../corespotlight/cssearchableindexdelegate.md) object.
+
+Implement the methods of this protocol and use them to retrieve the specified entities and donate them again to Spotlight. The following example shows the implementation of this protocol for a photos app. The methods fetch the requested app entities and donate them again using the app’s preferred searchable index.
+
+```swift
+struct PhotoQuery: IndexedEntityQuery {
+    func reindexEntities(for identifiers: [PhotoEntity.ID], indexDescription: CSSearchableIndexDescription) async throws {
+        let photos = try await photoStore.fetch(ids: identifiers)
+        try await CSSearchableIndex(name: “MyPhotosApp”).indexAppEntities(photos)
+    }
+
+    func reindexAllEntities(indexDescription: CSSearchableIndexDescription) async throws {
+        let allPhotos = try await photoStore.fetchAll()
+        try await CSSearchableIndex(name: “MyPhotosApp”).indexAppEntities(allPhotos)
+    }
+}
+```
+
+For more information about indexing your app entites, see [Making app entities available in Spotlight](making-app-entities-available-in-spotlight.md).
+
+## Topics
+
+### Instance Methods
+
+- [reindexAllEntities(indexDescription:)](indexedentityquery/reindexallentities%28indexdescription_%29.md): Reindexes all entities in the app index with the specified characteristics.
+- [reindexEntities(for:indexDescription:)](indexedentityquery/reindexentities%28for_indexdescription_%29.md): Reindexes a specific subset of app entities within an index.
+
+## Relationships
+
+### Inherits From
+
+- [DynamicOptionsProvider](dynamicoptionsprovider.md)
+- [EntityQuery](entityquery.md)
+- [PersistentlyIdentifiable](persistentlyidentifiable.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Spotlight support
+
+- [IndexedEntity](indexedentity.md): An interface that allows you to include an entity in your app’s Spotlight index.

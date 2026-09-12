@@ -1,0 +1,40 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/dispatch/dispatchio/init(type:path:oflag:mode:queue:cleanuphandler:)-50rb0](https://developer.apple.com/documentation/dispatch/dispatchio/init(type:path:oflag:mode:queue:cleanuphandler:)-50rb0)
+
+# init(type:path:oflag:mode:queue:cleanupHandler:)
+
+**Framework:** Dispatch  
+**Kind:** Initializer  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS · Swift 4.0+
+
+Creates a new I/O channel that accesses the file at the specified path, potentially creating that file in the process.
+
+## Declaration
+
+```swift
+convenience init?(type: DispatchIO.StreamType, path: UnsafePointer<Int8>, oflag: Int32, mode: mode_t, queue: DispatchQueue, cleanupHandler: @escaping (Int32) -> Void)
+```
+
+## Parameters
+
+- `type`: The access semantics for the channel. For a list of possible values, see [DispatchIO.StreamType](streamtype.md).
+- `path`: The absolute path of the file you want to open.
+- `oflag`: The flags to pass to `open(2)` when opening the file at the specified path.
+- `mode`: The mode flags to pass to `open(2)`. Specify `O_CREAT` to create the file at the specified path; otherwise, specify 0.
+- `queue`: The dispatch queue on which to perform work.
+- `cleanupHandler`: The handler to execute once the channel is closed. This block has no return value and takes the following parameter:
+
+  - **error**: An `errno` condition if creating or opening the channel failed; otherwise, the value is `0`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method opens the channel by passing the `path`, `oflag`, and mode parameters to the low-level `open(2)` function. The file descriptor returned by that function remains open and under system control until you close the channel, or until an error occurs that causes the channel to release the file descriptor. After closing the file descriptor, the channel executes the specified `cleanupHandler` block on `queue`.
+
+## See Also
+
+### Creating a Dispatch I/O Object
+
+- [init(type:fileDescriptor:queue:cleanupHandler:)](init%28type_filedescriptor_queue_cleanuphandler_%29.md): Creates a new I/O channel that accesses the specified file descriptor.
+- [init(type:io:queue:cleanupHandler:)](init%28type_io_queue_cleanuphandler_%29.md): Creates a new I/O channel from an existing I/O channel.
+- [DispatchIO.StreamType](streamtype.md): The semantics for accessing the contents of a file descriptor.

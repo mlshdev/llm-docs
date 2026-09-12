@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/systemconfiguration/kcnnetworkinfokeyssid](https://developer.apple.com/documentation/systemconfiguration/kcnnetworkinfokeyssid)
+
+# kCNNetworkInfoKeySSID
+
+**Interface language:** Objective-C
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** iOS 4.1+ · iPadOS 4.1+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+The key for the network’s SSID, which is represented as a [CFStringRef](../corefoundation/cfstring.md) object.
+
+## Declaration
+
+```objectivec
+extern CFStringRef const kCNNetworkInfoKeySSID;
+```
+
+## See Also
+
+### Constants
+
+- [kCNNetworkInfoKeyBSSID](kcnnetworkinfokeybssid.md): The key for the network’s BSSID, which is represented as a [CFStringRef](../corefoundation/cfstring.md) object.
+- [kCNNetworkInfoKeySSIDData](kcnnetworkinfokeyssiddata.md): The key for the network’s SSID, which is represented as a [CFDataRef](../corefoundation/cfdata.md) object.
+- [kSCCompAnyRegex](ksccompanyregex-swift.var.md): A regular expression pattern that matches any component.
+- [kSCPropNetIPSecConnectTime](kscpropnetipsecconnecttime-swift.var.md): The IPSec key ConnectTime.
+- [kSCPropNetIPSecRemoteAddress](kscpropnetipsecremoteaddress-swift.var.md): The IPSec key RemoteAddress.
+- [kSCPropNetIPSecStatus](kscpropnetipsecstatus-swift.var.md): The IPSec key Status.
+- [kSCPropNetIPSecXAuthEnabled](kscpropnetipsecxauthenabled-swift.var.md): The IPSec key XAuthEnabled.
+- [kSCPropNetIPSecXAuthName](kscpropnetipsecxauthname-swift.var.md): The IPSec key XAuthName.
+- [kSCPropNetIPSecXAuthPassword](kscpropnetipsecxauthpassword-swift.var.md): The IPSec key XAuthPassword.
+- [kSCPropNetIPSecXAuthPasswordEncryption](kscpropnetipsecxauthpasswordencryption-swift.var.md): The IPSec key XAuthPasswordEncryption.
+- [kSCPropNetProxiesProxyAutoConfigJavaScript](kscpropnetproxiesproxyautoconfigjavascript-swift.var.md): The Proxies key ProxyAutoConfigJavaScript.
+- [kSCPropUsersConsoleUserGID](kscpropusersconsoleusergid-c.var.md): Deprecated. The deprecated key GID.
+- [kSCPropUsersConsoleUserName](kscpropusersconsoleusername-c.var.md): Deprecated. The deprecated key Name.
+- [kSCPropUsersConsoleUserUID](kscpropusersconsoleuseruid-c.var.md): Deprecated. The deprecated key UID.
+- [kSCResvInactive](kscresvinactive-swift.var.md): The reserved key \__INACTIVE\__.

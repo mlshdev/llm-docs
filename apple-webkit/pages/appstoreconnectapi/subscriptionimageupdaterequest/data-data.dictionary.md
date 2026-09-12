@@ -1,0 +1,32 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/subscriptionimageupdaterequest/data-data.dictionary](https://developer.apple.com/documentation/appstoreconnectapi/subscriptionimageupdaterequest/data-data.dictionary)
+
+# SubscriptionImageUpdateRequest.Data
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 3.6+ (deprecated in 4.4.1)
+
+The request body you use to update a subscription purchase image reservation.
+
+> This object is deprecated. Use [SubscriptionImageV2UpdateRequest](../subscriptionimagev2updaterequest.md) instead.
+
+## Declaration
+
+```
+object SubscriptionImageUpdateRequest.Data
+```
+
+## Properties
+
+- `attributes` — `SubscriptionImageUpdateRequest.Data.Attributes`: The resource’s attributes.
+- `id` — `string` (required): An opaque resource ID that uniquely identifies the resource. Obtain the `subscriptionImages` resource ID from the [List Subscription Images](../get-v1-subscriptions-_id_-images.md) response.
+- `type` — `string` (required): The resource type.
+  **Allowed values:** `subscriptionImages`
+
+## Topics
+
+### Objects
+
+- [SubscriptionImageUpdateRequest.Data.Attributes](data-data.dictionary/attributes-data.dictionary.md): Deprecated. Attributes that describe a subscription image request resource.

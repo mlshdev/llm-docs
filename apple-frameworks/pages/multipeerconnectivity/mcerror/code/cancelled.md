@@ -1,0 +1,55 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/multipeerconnectivity/mcerror/code/cancelled](https://developer.apple.com/documentation/multipeerconnectivity/mcerror/code/cancelled)
+
+# MCError.Code.cancelled (Swift)
+
+**Framework:** Multipeer Connectivity  
+**Kind:** Case  
+**Availability:** iOS 7.0+ (deprecated in 27.0) · iPadOS 7.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.10+ (deprecated in 27.0) · tvOS 10.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+
+The operation was cancelled by the user.
+
+> Use Network Framework instead
+
+## Declaration
+
+```swift
+case cancelled
+```
+
+## See Also
+
+### Constants
+
+- [MCError.Code.unknown](unknown.md): Deprecated. An unknown error occurred.
+- [MCError.Code.notConnected](notconnected.md): Deprecated. Your app attempted to send data to a peer that is not connected.
+- [MCError.Code.invalidParameter](invalidparameter.md): Deprecated. Your app passed an invalid value as a parameter.
+- [MCError.Code.unsupported](unsupported.md): Deprecated. The operation is unsupported. For example, this error is returned if you call [sendResource(at:withName:toPeer:withCompletionHandler:)](../../mcsession/sendresource%28at_withname_topeer_withcompletionhandler_%29.md) with a URL that is neither a local file nor a web URL.
+- [MCError.Code.timedOut](timedout.md): Deprecated. The connection attempt timed out.
+- [MCError.Code.unavailable](unavailable.md): Deprecated. Multipeer connectivity is currently unavailable.
+
+# MCErrorCancelled (Objective-C)
+
+**Framework:** Multipeer Connectivity  
+**Kind:** Enumeration Case  
+**Availability:** iOS 7.0+ (deprecated in 27.0) · iPadOS 7.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.10+ (deprecated in 27.0) · tvOS 10.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+
+The operation was cancelled by the user.
+
+> Use Network Framework instead
+
+## Declaration
+
+```objectivec
+MCErrorCancelled
+```
+
+## See Also
+
+### Constants
+
+- [MCErrorUnknown](unknown.md): Deprecated. An unknown error occurred.
+- [MCErrorNotConnected](notconnected.md): Deprecated. Your app attempted to send data to a peer that is not connected.
+- [MCErrorInvalidParameter](invalidparameter.md): Deprecated. Your app passed an invalid value as a parameter.
+- [MCErrorUnsupported](unsupported.md): Deprecated. The operation is unsupported. For example, this error is returned if you call [sendResourceAtURL:withName:toPeer:withCompletionHandler:](../../mcsession/sendresource%28at_withname_topeer_withcompletionhandler_%29.md) with a URL that is neither a local file nor a web URL.
+- [MCErrorTimedOut](timedout.md): Deprecated. The connection attempt timed out.
+- [MCErrorUnavailable](unavailable.md): Deprecated. Multipeer connectivity is currently unavailable.

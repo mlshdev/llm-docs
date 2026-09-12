@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/mapkitjs/pointsofinterestsearchoptions/signal](https://developer.apple.com/documentation/mapkitjs/pointsofinterestsearchoptions/signal)
+
+# signal
+
+**Interface language:** Data
+
+**Framework:** MapKit JS  
+**Kind:** Interface Property  
+**Availability:** MapKit JS 6.0+
+
+A signal object allowing you to cancel the request.
+
+## Declaration
+
+```
+signal?: AbortSignal;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Pass an `AbortSignal` from an `AbortController` to allow the controller to cancel a pending points of interest search request. When the controller aborts, the promise it returns rejects with a `DOMException` whose `name` is `"AbortError"`.
+
+## See Also
+
+### Configuring fetch options
+
+- [region](region.md): The region that bounds the area in which to fetch points of interest.
+- [center](center.md): The center point of the request represented as latitude and longitude.
+- [radius](radius.md): The distance provided in meters, or the longest distance derived from the center point to the region’s bounding box.
+- [pointOfInterestFilter](pointofinterestfilter.md): A filter that lists points of interest categories to include or exclude.
+- [language](../serviceconstructoroptions/language.md): A language identifier that determines the language for the service results text.

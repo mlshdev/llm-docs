@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtldrawpatchindirectarguments/init()](https://developer.apple.com/documentation/metal/mtldrawpatchindirectarguments/init())
+
+# init()
+
+**Framework:** Metal  
+**Kind:** Initializer  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+Returns a new data layout for drawing patches via indirect buffer calls.
+
+## Declaration
+
+```swift
+init()
+```

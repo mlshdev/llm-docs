@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/audio/material/absorption(_:)](https://developer.apple.com/documentation/realitykit/audio/material/absorption(_:))
+
+# absorption(\_:)
+
+**Framework:** RealityKit  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+Creates a new audio material with the provided absorption data.
+
+## Declaration
+
+```swift
+func absorption(_ data: Audio.Absorption) -> Audio.Material
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Example usage:
+
+```
+let material: Audio.Material = .concrete.absorption([500: 0.3, 1000: 0.4, 4000: 0.5])
+```

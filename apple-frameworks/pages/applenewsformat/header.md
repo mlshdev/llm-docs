@@ -1,0 +1,128 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applenewsformat/header](https://developer.apple.com/documentation/applenewsformat/header)
+
+# Header
+
+**Interface language:** Data
+
+**Framework:** Apple News Format  
+**Kind:** Object  
+**Availability:** Apple News Format 1.7+
+
+The component for defining the top area of an article, chapter, or section.
+
+## Declaration
+
+```
+object Header
+```
+
+## Properties
+
+- `role` — `string` (required): Always `header` for this component.
+  **Allowed values:** `header`
+- `additions` — `[ComponentLink]`: An array of `ComponentLink` objects you can use to create a ComponentLink, allowing a link to anywhere in News.
+
+  You can add a link to a [Container](container.md) component to make the entire component tappable. Any links used in its child components are not interactable.
+- `allowAutoplacedAds` — `boolean`: A Boolean value that allows the placement of ad banners between components. Nested components inherit the value of the outermost container that explicitly sets `allowAutoplacedAds`. The default value is `true`.
+  **Default:** `true`
+- `anchor` — `Anchor`: An object that defines vertical alignment with another component.
+- `animation` — `(ComponentAnimation | string("none"))`: An object that defines an animation you apply to the component.
+
+  Use the `none` value for conditional design elements. Adding it here has no effect.  
+  **Allowed types:** `ComponentAnimation`, `string("none")`
+- `behavior` — `(Behavior | string("none"))`: An object that defines behavior for a component, like [Parallax](parallax.md) or [Springy](springy.md).
+
+  The `none` value is used for conditional design elements. Adding it here has no effect.  
+  **Allowed types:** `Behavior`, `string("none")`
+- `components` — `[Component]`: An array of components to display as child components. Child components are positioned and rendered relative to their parent component.
+- `conditional` — `(ConditionalContainer | [ConditionalContainer])`: An instance or array of container properties that can be applied conditionally, and the conditions that cause them to be applied.
+  **Allowed types:** `ConditionalContainer`, `[ConditionalContainer]`
+- `contentDisplay` — `(CollectionDisplay | HorizontalStackDisplay | string("none"))`: An object that defines how to position child components within this `container` component. A [HorizontalStackDisplay](horizontalstackdisplay.md), for example, allows for displaying child components side by side.
+
+  In versions of News prior to iOS 11, child components are positioned as if `contentDisplay` were not defined.
+
+  The `none` value is used for conditional design elements. Adding it here has no effect.  
+  **Allowed types:** `CollectionDisplay`, `HorizontalStackDisplay`, `string("none")`
+- `hidden` — `boolean`: A Boolean value that determines whether the component is hidden.
+  **Default:** `false`
+- `identifier` — `string`: An optional unique identifier for this component. If used, this `identifier` must be unique across the entire document. You will need an `identifier` for your component if you want to anchor other components to it. See [Anchor](anchor.md).
+- `layout` — `(ComponentLayout | string)`: An inline `ComponentLayout` object that contains layout information, or a string reference to a `ComponentLayout` object that is defined at the top level of the document.
+
+  If `layout` is not defined, size and position are be based on various factors, such as the device type, the length of the content, and the `role` of this component.  
+  **Allowed types:** `ComponentLayout`, `string`
+- `style` — `(ComponentStyle | string | string("none"))`: An inline `ComponentStyle` object that defines the appearance of this component, or a string reference to a `ComponentStyle` object that is defined at the top level of the document.
+
+  The `none` value is used for conditional design elements. Adding it here has no effect.  
+  **Allowed types:** `ComponentStyle`, `string`, `string("none")`
+
+## Mentioned In
+
+- [Adding a Scene to a Chapter or a Section Header](../applenews/adding-a-scene-to-a-chapter-or-a-section-header.md)
+- [Nesting Components in an Article](../applenews/nesting-components-in-an-article.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+A header is a structural component used to define the top area of an article or the top part of a [Section](section.md) or [Chapter](chapter.md) component. A header can contain child components—such as a [Title](title.md) or [Heading](heading.md)—and is often used to layer titles and headings over a background image. (You specify the image in the `style` property with an [ImageFill](imagefill.md) style.) The minimum size of a header component is determined by the size of its child components.
+
+<a id="Example"></a>
+
+### Example
+
+```json
+{
+  "components": [
+    {
+      "role": "header",
+      "components": [
+        {
+          "role": "title",
+          "text": "Article Title",
+          "style": {
+            "fill": {
+              "type": "image",
+              "URL": "bundle://header.jpg",
+              "fillMode": "cover",
+              "verticalAlignment": "top",
+              "horizontalAlignment": "center"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+## Relationships
+
+### Inherits From
+
+- [Container](container.md)
+
+## See Also
+
+### Related Documentation
+
+- [About Containers](../applenews/about-containers.md): Learn the basic Apple News Format container concepts required for the three advanced tutorials.
+- [Creating a Layered Header](../applenews/creating-a-layered-header.md): Create a header with a caption that’s layered in front of an image.
+- [Creating a Complex, Layered Header](../applenews/creating-a-complex-layered-header.md): Layer a title and heading in front of an image, with their colors optimized for legibility.
+
+### Article Structure
+
+- [Nesting Components in an Article](../applenews/nesting-components-in-an-article.md): Use container components to create the component hierarchies you need for special article designs.
+- [Adding a Scene to a Chapter or a Section Header](../applenews/adding-a-scene-to-a-chapter-or-a-section-header.md): Add a scene to your article to create special effects.
+- [Creating an Article Link](../applenews/creating-an-article-link.md): Link to an article by using the article-linking container component.
+- [Displaying Components Side By Side](../applenews/displaying-components-side-by-side.md): Configure a side-by-side, horizontal arrangement of components for your article.
+- [Container](container.md): Properties shared by all container types.
+- [Section](section.md): The component for organizing an article into sections.
+- [Chapter](chapter.md): The component for organizing an article into chapters.
+- [Aside](aside.md): The component for setting apart content that is not directly related to the article, such as promotional content.
+- [CollectionDisplay](collectiondisplay.md): An object used in any container component type to define how the collection of child components is presented.
+- [HorizontalStackDisplay](horizontalstackdisplay.md): The object for displaying components side by side in a Container component.
+- [FlexibleSpacer](flexiblespacer.md): The component for redistributing empty space inside a horizontal stack collection.
+- [Divider](divider.md): The component for defining a horizontal line to visually divide parts of your article.
+- [ArticleLink](articlelink.md): The container component for creating a link to an article.
+- [SupportedArticleIdentifier](supportedarticleidentifier.md): The patterns supported for article identifiers in UUID format.
+- [PublisherArticleIdentifier](publisherarticleidentifier.md): The identifier provided by the publisher.

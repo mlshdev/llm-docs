@@ -1,0 +1,57 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/modelio/mdlindexbitdepth/uint32-swift.enum.case](https://developer.apple.com/documentation/modelio/mdlindexbitdepth/uint32-swift.enum.case)
+
+# MDLIndexBitDepth.uInt32 (Swift)
+
+**Framework:** Model I/O  
+**Kind:** Case  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.0+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Each index in the submesh’s index buffer is a 32-bit integer.
+
+## Declaration
+
+```swift
+case uInt32
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+An index buffer with this data type can contain a maximum of 4,294,967,296 indices.
+
+## See Also
+
+### Constants
+
+- [MDLIndexBitDepth.invalid](invalid.md): The submesh has not been initialized or its data type is unknown.
+- [MDLIndexBitDepth.uInt8](uint8-swift.enum.case.md): Each index in the submesh’s index buffer is an 8-bit integer.
+- [MDLIndexBitDepth.uInt16](uint16-swift.enum.case.md): Each index in the submesh’s index buffer is a 16-bit integer.
+
+# MDLIndexBitDepthUInt32 (Objective-C)
+
+**Framework:** Model I/O  
+**Kind:** Enumeration Case  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.0+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Each index in the submesh’s index buffer is a 32-bit integer.
+
+## Declaration
+
+```objectivec
+MDLIndexBitDepthUInt32
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+An index buffer with this data type can contain a maximum of 4,294,967,296 indices.
+
+## See Also
+
+### Constants
+
+- [MDLIndexBitDepthInvalid](invalid.md): The submesh has not been initialized or its data type is unknown.
+- [MDLIndexBitDepthUInt8](uint8-swift.enum.case.md): Each index in the submesh’s index buffer is an 8-bit integer.
+- [MDLIndexBitDepthUInt16](uint16-swift.enum.case.md): Each index in the submesh’s index buffer is a 16-bit integer.

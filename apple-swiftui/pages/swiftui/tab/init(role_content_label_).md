@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/tab/init(role:content:label:)](https://developer.apple.com/documentation/swiftui/tab/init(role:content:label:))
+
+# init(role:content:label:)
+
+**Framework:** SwiftUI  
+**Kind:** Initializer  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
+
+Creates a new tab with a label that you can use in a tab view.
+
+## Declaration
+
+```swift
+init(role: TabRole?, @ContentBuilder content: () -> Content, @ContentBuilder label: () -> Label)
+```
+
+## Parameters
+
+- `role`: The role defining the semantic purpose of the tab.
+- `content`: The view content of the tab.
+- `label`: The label for the tab’s tab item.
+
+## See Also
+
+### Creating a tab with label
+
+- [init(content:label:)](init%28content_label_%29.md): Conforms when `Value` is `Never`, `Content` conforms to `View`, and `Label` conforms to `View`. Creates a new tab with a label that you can use in a tab view.
+- [init(value:content:label:)](init%28value_content_label_%29.md): Conforms when `Value` conforms to `Hashable`, `Content` conforms to `View`, and `Label` conforms to `View`. Creates a new tab with a label that you can use in a tab view.
+- [init(value:role:content:label:)](init%28value_role_content_label_%29.md): Conforms when `Value` conforms to `Hashable`, `Content` conforms to `View`, and `Label` conforms to `View`. Creates a new tab with a label that you can use in a tab view.

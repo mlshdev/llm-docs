@@ -1,0 +1,23 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/stack_snapshot_frame32](https://developer.apple.com/documentation/kernel/stack_snapshot_frame32)
+
+# stack_snapshot_frame32
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Availability:** macOS 10.9+
+
+## Declaration
+
+```objectivec
+struct stack_snapshot_frame32 {
+    ...
+};
+```
+
+## Topics
+
+### Instance Properties
+
+- [lr](stack_snapshot_frame32/1551713-lr.md)
+- [sp](stack_snapshot_frame32/1551654-sp.md)

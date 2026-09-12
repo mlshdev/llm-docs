@@ -8,7 +8,11 @@ import {
 import { convertMdx } from "../mdx.ts";
 import type { MdxImport } from "../mdx.ts";
 import { DocumentCollector } from "../quarantine.ts";
-import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
+import type {
+  GithubLockedSource,
+  GithubSourceProject,
+  ProjectBuild,
+} from "../types.ts";
 import {
   mintlifyOpenApiSpecs,
   mintlifySections,
@@ -24,8 +28,8 @@ const siteBase = "https://trigger.dev/docs";
 const pageExtensions = [".mdx", ".md"] as const;
 
 export async function buildTriggerDev(
-  project: SourceProject,
-  lock: LockedSource,
+  project: GithubSourceProject,
+  lock: GithubLockedSource,
 ): Promise<ProjectBuild> {
   return withRepositoryArchive(
     project.repository,

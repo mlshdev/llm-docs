@@ -1,0 +1,19 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremidi/midinotification/init()](https://developer.apple.com/documentation/coremidi/midinotification/init())
+
+# init()
+
+**Framework:** Core MIDI  
+**Kind:** Initializer  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+## Declaration
+
+```swift
+init()
+```
+
+## See Also
+
+### Initializers
+
+- [init(messageID:messageSize:)](init%28messageid_messagesize_%29.md)

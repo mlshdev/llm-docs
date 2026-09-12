@@ -1,0 +1,87 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/systemconfiguration/kscpropnetpppauthprompt-swift.var](https://developer.apple.com/documentation/systemconfiguration/kscpropnetpppauthprompt-swift.var)
+
+# kSCPropNetPPPAuthPrompt (Swift)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.3+
+
+The PPP key `AuthPrompt`, whose value is of type `CFString`.
+
+## Declaration
+
+```swift
+let kSCPropNetPPPAuthPrompt: CFString
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This key can be passed the following constants:
+
+- `kSCValNetPPPAuthPromptBefore`, which has the value `Before`
+- `kSCValNetPPPAuthPromptAfter`, which has the value `After`
+
+## See Also
+
+### Constants
+
+- [kSCPropNetPPPACSPEnabled](kscpropnetpppacspenabled-swift.var.md): The PPP key `ACSPEnabled`, whose value is of type `CFNumber` and is equal to `0` or `1`.
+- [kSCPropNetPPPConnectTime](kscpropnetpppconnecttime-swift.var.md): The PPP key `ConnectTime`, whose value is of type `CFNumber`.
+- [kSCPropNetPPPDeviceLastCause](kscpropnetpppdevicelastcause-swift.var.md): The PPP key `DeviceLastCause`, whose value is of type `CFNumber`.
+- [kSCPropNetPPPDialOnDemand](kscpropnetpppdialondemand-swift.var.md): The PPP key `DialOnDemand`, whose value is of type `CFNumber` and is equal to `0` or `1`.
+- [kSCPropNetPPPDisconnectOnFastUserSwitch](kscpropnetpppdisconnectonfastuserswitch-swift.var.md): The PPP key `DisconnectOnFastUserSwitch`, whose value is of type `CFNumber` and is equal to `0` or `1`.
+- [kSCPropNetPPPDisconnectOnIdle](kscpropnetpppdisconnectonidle-swift.var.md): The PPP key `DisconnectOnIdle`, whose value is of type `CFNumber` and is equal to `0` or `1`.
+- [kSCPropNetPPPDisconnectOnIdleTimer](kscpropnetpppdisconnectonidletimer-swift.var.md): The PPP key `DisconnectOnIdleTimer`, whose value is of type `CFNumber`.
+- [kSCPropNetPPPDisconnectOnLogout](kscpropnetpppdisconnectonlogout-swift.var.md): The PPP key `DisconnectOnLogout`, whose value is of type `CFNumber` and is equal to `0` or `1`.
+- [kSCPropNetPPPDisconnectOnSleep](kscpropnetpppdisconnectonsleep-swift.var.md): The PPP key `DisconnectOnSleep`, whose value is of type `CFNumber` and is equal to `0` or `1`.
+- [kSCPropNetPPPDisconnectTime](kscpropnetpppdisconnecttime-swift.var.md): The PPP key `DisconnectTime`, whose value is of type `CFNumber`.
+- [kSCPropNetPPPIdleReminderTimer](kscpropnetpppidleremindertimer-swift.var.md): The PPP key `IdleReminderTimer`, whose value is of type `CFNumber`.
+- [kSCPropNetPPPIdleReminder](kscpropnetpppidlereminder-swift.var.md): The PPP key `IdleReminder`, whose value is of type `CFNumber` and is equal to `0` or `1`.
+- [kSCPropNetPPPLastCause](kscpropnetppplastcause-swift.var.md): The PPP key `LastCause`, whose value is of type `CFNumber`.
+- [kSCPropNetPPPLogfile](kscpropnetppplogfile-swift.var.md): The PPP key `Logfile`, whose value is of type `CFString`.
+- [kSCPropNetPPPPlugins](kscpropnetpppplugins-swift.var.md): Deprecated. The PPP key `Plugins`, whose value is of type `CFArray`, containing elements of type `CFString`.
+
+# kSCPropNetPPPAuthPrompt (Objective-C)
+
+**Framework:** System Configuration  
+**Kind:** Global Variable  
+**Availability:** macOS 10.3+
+
+The PPP key `AuthPrompt`, whose value is of type `CFString`.
+
+## Declaration
+
+```objectivec
+extern CFStringRef const kSCPropNetPPPAuthPrompt;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This key can be passed the following constants:
+
+- `kSCValNetPPPAuthPromptBefore`, which has the value `Before`
+- `kSCValNetPPPAuthPromptAfter`, which has the value `After`
+
+## See Also
+
+### Constants
+
+- [kSCPropNetPPPACSPEnabled](kscpropnetpppacspenabled-swift.var.md): The PPP key `ACSPEnabled`, whose value is of type `CFNumber` and is equal to `0` or `1`.
+- [kSCPropNetPPPConnectTime](kscpropnetpppconnecttime-swift.var.md): The PPP key `ConnectTime`, whose value is of type `CFNumber`.
+- [kSCPropNetPPPDeviceLastCause](kscpropnetpppdevicelastcause-swift.var.md): The PPP key `DeviceLastCause`, whose value is of type `CFNumber`.
+- [kSCPropNetPPPDialOnDemand](kscpropnetpppdialondemand-swift.var.md): The PPP key `DialOnDemand`, whose value is of type `CFNumber` and is equal to `0` or `1`.
+- [kSCPropNetPPPDisconnectOnFastUserSwitch](kscpropnetpppdisconnectonfastuserswitch-swift.var.md): The PPP key `DisconnectOnFastUserSwitch`, whose value is of type `CFNumber` and is equal to `0` or `1`.
+- [kSCPropNetPPPDisconnectOnIdle](kscpropnetpppdisconnectonidle-swift.var.md): The PPP key `DisconnectOnIdle`, whose value is of type `CFNumber` and is equal to `0` or `1`.
+- [kSCPropNetPPPDisconnectOnIdleTimer](kscpropnetpppdisconnectonidletimer-swift.var.md): The PPP key `DisconnectOnIdleTimer`, whose value is of type `CFNumber`.
+- [kSCPropNetPPPDisconnectOnLogout](kscpropnetpppdisconnectonlogout-swift.var.md): The PPP key `DisconnectOnLogout`, whose value is of type `CFNumber` and is equal to `0` or `1`.
+- [kSCPropNetPPPDisconnectOnSleep](kscpropnetpppdisconnectonsleep-swift.var.md): The PPP key `DisconnectOnSleep`, whose value is of type `CFNumber` and is equal to `0` or `1`.
+- [kSCPropNetPPPDisconnectTime](kscpropnetpppdisconnecttime-swift.var.md): The PPP key `DisconnectTime`, whose value is of type `CFNumber`.
+- [kSCPropNetPPPIdleReminderTimer](kscpropnetpppidleremindertimer-swift.var.md): The PPP key `IdleReminderTimer`, whose value is of type `CFNumber`.
+- [kSCPropNetPPPIdleReminder](kscpropnetpppidlereminder-swift.var.md): The PPP key `IdleReminder`, whose value is of type `CFNumber` and is equal to `0` or `1`.
+- [kSCPropNetPPPLastCause](kscpropnetppplastcause-swift.var.md): The PPP key `LastCause`, whose value is of type `CFNumber`.
+- [kSCPropNetPPPLogfile](kscpropnetppplogfile-swift.var.md): The PPP key `Logfile`, whose value is of type `CFString`.
+- [kSCPropNetPPPPlugins](kscpropnetpppplugins-swift.var.md): Deprecated. The PPP key `Plugins`, whose value is of type `CFArray`, containing elements of type `CFString`.

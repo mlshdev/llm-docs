@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/groupsectionsofcontent](https://developer.apple.com/documentation/swiftui/groupsectionsofcontent)
+
+# GroupSectionsOfContent
+
+**Framework:** SwiftUI  
+**Kind:** Structure  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
+
+Transforms the sections of a given view into a resulting content view.
+
+## Declaration
+
+```swift
+nonisolated struct GroupSectionsOfContent<Sections, Content> where Sections : View, Content : View
+```
+
+<a id="overview"></a>
+
+## Overview
+
+You don’t use this type directly. Instead SwiftUI creates this type on your behalf.
+
+## Relationships
+
+### Conforms To
+
+- [View](view.md)
+
+## See Also
+
+### Grouping views into a container
+
+- [Creating custom container views](creating-custom-container-views.md): Access individual subviews to compose flexible container views.
+- [Group](group.md): A type that collects multiple instances of a content type — like views, scenes, or commands — into a single unit.
+- [GroupElementsOfContent](groupelementsofcontent.md): Transforms the subviews of a given view into a resulting content view.

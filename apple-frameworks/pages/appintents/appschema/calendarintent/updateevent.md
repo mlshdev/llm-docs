@@ -1,0 +1,59 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/appschema/calendarintent/updateevent](https://developer.apple.com/documentation/appintents/appschema/calendarintent/updateevent)
+
+# updateEvent
+
+**Framework:** App Intents  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+An intent schema that updates a calendar event.
+
+## Declaration
+
+```swift
+var updateEvent: some AppSchemaIntent { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+To make your app’s actions available to Apple Intelligence, conform your [AppIntent](../../appintent.md) to a schema that describes your action to the system. If your app’s functionality aligns with the `calendar` domain and one of your app’s actions matches the `updateEvent` schema, you can generate the properties and protocol conformance the schema requires for your intent implementation with the `@AppIntent( .calendar.updateEvent)` Swift macro. To make your app work with Siri, see [Apple Intelligence and Siri AI](../../apple-intelligence-and-siri-ai.md).
+
+The following example shows an intent that conforms to the `updateEvent` schema:
+
+```swift
+@AppIntent(schema: .calendar.updateEvent)
+struct UpdateEventIntent {
+    var event: <#EventEntity#>
+    var title: String?
+    var attendees: [<#AttendeeEntity#>]?
+    var startDate: Date?
+    var endDate: Date?
+    var isAllDay: Bool?
+    var calendar: <#CalendarEntity#>?
+    var recurrence: Calendar.RecurrenceRule?
+    var note: String?
+    var location: <#EventLocation#>?
+    var span: <#EventSpan#>?
+
+    func perform() async throws -> some ReturnsValue<<#EventEntity#>> {
+        <#code#>
+    }
+}
+```
+
+The schema supports the following system experiences:
+
+- Siri
+- Shortcuts
+
+For more information about the App Intents framework and the experiences it supports, see [Getting started with the App Intents framework](../../getting-started-with-the-app-intents-framework.md).
+
+## See Also
+
+### Actions
+
+- [createEvent](createevent.md): An intent schema that creates a calendar event.
+- [deleteEvent](deleteevent.md): An intent schema that deletes a calendar event.
+- [AppSchema.CalendarIntent](../calendarintent.md): Identifies intent schemas in the calendar domain.

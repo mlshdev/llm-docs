@@ -1,0 +1,59 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/os/ossignposter/withintervalsignpost(_:id:_:around:)](https://developer.apple.com/documentation/os/ossignposter/withintervalsignpost(_:id:_:around:))
+
+# withIntervalSignpost(\_:id:\_:around:)
+
+**Framework:** os  
+**Kind:** Instance Method  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS · watchOS 8.0+
+
+Measures the execution of a closure and attaches the specified message.
+
+## Declaration
+
+```swift
+func withIntervalSignpost<T>(_ name: StaticString, id: OSSignpostID = .exclusive, _ message: SignpostMetadata, around task: () throws -> T) rethrows -> T
+```
+
+## Parameters
+
+- `name`: The signpost’s name.
+- `id`: The signpost’s ID. The default value is [exclusive](../ossignpostid/exclusive.md).
+- `message`: The interpolated string that the signposter attaches to the signpost. Each of the message’s interpolations can specify individual formatting and privacy options. For more information, see [Message Argument Formatters](../message-argument-formatters.md).
+- `task`: The closure around which to create the signposted interval.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+> **Important**
+
+>  Don’t create an instance of [SignpostMetadata](../signpostmetadata.md). Instead, provide an interpolated string as the `message` parameter and the system converts it automatically.
+
+The signposter uses a signpost ID to pair the beginning and the end of a signposted interval, which is necessary because multiple intervals with the same configuration and scope can be in-flight simultaneously. If only one interval with a specific configuration can execute at any particular time, pass [exclusive](../ossignpostid/exclusive.md) as the `id` parameter. Otherwise, use the [makeSignpostID()](makesignpostid%28%29.md) and [makeSignpostID(from:)](makesignpostid%28from_%29.md) methods to generate a signpost identifier, as the following example shows:
+
+```swift
+let accountNumber = "12345678"
+                
+// Create a signposter using the default subsystem.
+let signposter = OSSignposter()
+        
+// Generate a signpost ID to associate with the signpost.
+let signpostID = signposter.makeSignpostID()
+        
+// Signpost the interval of a closure that encapsulates
+// one or more related tasks, and attach a message that
+// securely interpolates sensitive data.
+signposter.withIntervalSignpost("Account Reconciliation", id: signpostID,
+    "Account: \(accountNumber, privacy: .sensitive(mask: .hash))") {
+    
+    // Perform the related tasks.
+    processTransactions()
+    updateBalance()
+}
+```
+
+## See Also
+
+### Measuring a Closure
+
+- [withIntervalSignpost(\_:id:around:)](withintervalsignpost%28__id_around_%29.md): Measures the execution of the specified closure.

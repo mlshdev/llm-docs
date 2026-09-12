@@ -1,0 +1,53 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiresponderstandardeditactions/updatetextattributes(conversionhandler:)](https://developer.apple.com/documentation/uikit/uiresponderstandardeditactions/updatetextattributes(conversionhandler:))
+
+# updateTextAttributes(conversionHandler:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · tvOS 13.0+ · visionOS 1.0+
+
+Tells your app to update the attributes of the currently selected text.
+
+## Declaration
+
+```swift
+optional func updateTextAttributes(conversionHandler: ([NSAttributedString.Key : Any]) -> [NSAttributedString.Key : Any])
+```
+
+## Parameters
+
+- `conversionHandler`: A handler block that you execute to retrieve the new attributes selected by the user. This block returns a dictionary containing the new values to apply to the text selection, and it takes the following parameter:
+
+  - **attributes**: The dictionary of attributes that your app supports for the selected text. Specify all of the attributes and their current values.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Implement this method if your app supports attributes that aren’t represented by other action methods such as [toggleBoldface(\_:)](toggleboldface%28__%29.md). The system calls this method to let responders know that the user or system applied new attributes for you to apply the current selection. In your implementation of this method, get the dictionary of the attributes associated with the selected content and pass it as a parameter to the `conversionHandler` block. When the block returns, apply the returned attributes to the selected text.
+
+# updateTextAttributesWithConversionHandler: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · tvOS 13.0+ · visionOS 1.0+
+
+Tells your app to update the attributes of the currently selected text.
+
+## Declaration
+
+```objectivec
+- (void) updateTextAttributesWithConversionHandler:(UITextAttributesConversionHandler) conversionHandler;
+```
+
+## Parameters
+
+- `conversionHandler`: A handler block that you execute to retrieve the new attributes selected by the user. This block returns a dictionary containing the new values to apply to the text selection, and it takes the following parameter:
+
+  - **attributes**: The dictionary of attributes that your app supports for the selected text. Specify all of the attributes and their current values.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Implement this method if your app supports attributes that aren’t represented by other action methods such as [toggleBoldface:](toggleboldface%28__%29.md). The system calls this method to let responders know that the user or system applied new attributes for you to apply the current selection. In your implementation of this method, get the dictionary of the attributes associated with the selected content and pass it as a parameter to the `conversionHandler` block. When the block returns, apply the returned attributes to the selected text.

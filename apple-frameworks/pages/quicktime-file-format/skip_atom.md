@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/skip_atom](https://developer.apple.com/documentation/quicktime-file-format/skip_atom)
+
+# Skip atom ('skip')
+
+**Framework:** QuickTime File Format  
+**Kind:** Atom
+
+An atom that designates unused space in the movie data file.
+
+<a id="Overview"></a>
+
+## Overview
+
+Both `free` and `skip` atoms designate unused space in the movie data file. These atoms consist of only an atom header (`size` and `type` fields), followed by the appropriate number of bytes of free space. When reading a QuickTime movie, your application may safely skip these atoms. When writing or updating a movie, you may reuse the space associated with these atom types.
+
+## Topics
+
+### Data fields
+
+- [Size](skip_atom/size.md): A 32-bit integer that specifies the number of bytes in the atom.
+- [Type](skip_atom/type.md): A 32-bit integer that identifies the atom type.
+- [Free space](skip_atom/free_space.md): Bytes of free space.
+
+## See Also
+
+### Setting free space
+
+- [Free space atom](free_space_atom.md): An atom that designates unused space in the movie data file.
+- [Wide atom](wide_atom.md): An atom that designates reserved space in the movie data file.

@@ -1,0 +1,49 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corevideo/kcvimagebufferycbcrmatrix_smpte_240m_1995](https://developer.apple.com/documentation/corevideo/kcvimagebufferycbcrmatrix_smpte_240m_1995)
+
+# kCVImageBufferYCbCrMatrix_SMPTE_240M_1995 (Swift)
+
+**Framework:** Core Video  
+**Kind:** Global Variable  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.4+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+A key to the conversion matrix for 1920 x 1135 HDTV images, that follows the SMPTE 240M 1995 standard.
+
+## Declaration
+
+```swift
+let kCVImageBufferYCbCrMatrix_SMPTE_240M_1995: CFString
+```
+
+## See Also
+
+### Constants
+
+- [kCVImageBufferYCbCrMatrix_ITU_R_2020](kcvimagebufferycbcrmatrix_itu_r_2020.md)
+- [kCVImageBufferYCbCrMatrix_P3_D65](kcvimagebufferycbcrmatrix_p3_d65.md): Deprecated.
+- [kCVImageBufferYCbCrMatrix_ITU_R_709_2](kcvimagebufferycbcrmatrix_itu_r_709_2.md): A key to the conversion matrix for HDTV digital television images, that follows the ITU R 709 standard.
+- [kCVImageBufferYCbCrMatrix_ITU_R_601_4](kcvimagebufferycbcrmatrix_itu_r_601_4.md): A key to the conversion matrix for standard digital television images, that follows the ITU R 601 standard.
+- [kCVImageBufferYCbCrMatrix_DCI_P3](kcvimagebufferycbcrmatrix_dci_p3.md): Deprecated.
+
+# kCVImageBufferYCbCrMatrix_SMPTE_240M_1995 (Objective-C)
+
+**Framework:** Core Video  
+**Kind:** Global Variable  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.4+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+A key to the conversion matrix for 1920 x 1135 HDTV images, that follows the SMPTE 240M 1995 standard.
+
+## Declaration
+
+```objectivec
+extern CFStringRef const kCVImageBufferYCbCrMatrix_SMPTE_240M_1995;
+```
+
+## See Also
+
+### Constants
+
+- [kCVImageBufferYCbCrMatrix_ITU_R_2020](kcvimagebufferycbcrmatrix_itu_r_2020.md)
+- [kCVImageBufferYCbCrMatrix_P3_D65](kcvimagebufferycbcrmatrix_p3_d65.md): Deprecated.
+- [kCVImageBufferYCbCrMatrix_ITU_R_709_2](kcvimagebufferycbcrmatrix_itu_r_709_2.md): A key to the conversion matrix for HDTV digital television images, that follows the ITU R 709 standard.
+- [kCVImageBufferYCbCrMatrix_ITU_R_601_4](kcvimagebufferycbcrmatrix_itu_r_601_4.md): A key to the conversion matrix for standard digital television images, that follows the ITU R 601 standard.
+- [kCVImageBufferYCbCrMatrix_DCI_P3](kcvimagebufferycbcrmatrix_dci_p3.md): Deprecated.

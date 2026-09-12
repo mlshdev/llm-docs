@@ -1,0 +1,73 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/undomanager/undo()](https://developer.apple.com/documentation/foundation/undomanager/undo())
+
+# undo() (Swift)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** iOS 3.0+ · iPadOS 3.0+ · Mac Catalyst 13.1+ · macOS 10.0+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Closes the top-level undo group if necessary, and then performs undo operations on the group.
+
+## Declaration
+
+```swift
+func undo()
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+After closing the top-level undo group, this method invokes [undoNestedGroup()](undonestedgroup%28%29.md).
+
+This method also invokes [endUndoGrouping()](endundogrouping%28%29.md) if the nesting level is 1. Raises an `NSInternalInconsistencyException` if more than one undo group is open (that is, if the last group isn’t at the top level).
+
+This method posts an [NSUndoManagerCheckpoint](../nsnotification/name-swift.struct/nsundomanagercheckpoint.md).
+
+## See Also
+
+### Related Documentation
+
+- [groupingLevel](groupinglevel.md): The number of nested undo groups (or redo groups, if redo is the most recent operation) in the current event loop.
+- [enableUndoRegistration()](enableundoregistration%28%29.md): Enables the recording of undo operations.
+
+### Performing undo and redo
+
+- [undoNestedGroup()](undonestedgroup%28%29.md): Performs the undo operations in the last undo group (whether top-level or nested), recording the operations on the redo stack as a single group.
+- [redo()](redo%28%29.md): Performs the operations in the last group on the redo stack, if there are any, recording them on the undo stack as a single group.
+
+# undo (Objective-C)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** iOS 3.0+ · iPadOS 3.0+ · Mac Catalyst 13.1+ · macOS 10.0+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Closes the top-level undo group if necessary, and then performs undo operations on the group.
+
+## Declaration
+
+```objectivec
+- (void) undo;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+After closing the top-level undo group, this method invokes [undoNestedGroup](undonestedgroup%28%29.md).
+
+This method also invokes [endUndoGrouping](endundogrouping%28%29.md) if the nesting level is 1. Raises an `NSInternalInconsistencyException` if more than one undo group is open (that is, if the last group isn’t at the top level).
+
+This method posts an [NSUndoManagerCheckpointNotification](../nsnotification/name-swift.struct/nsundomanagercheckpoint.md).
+
+## See Also
+
+### Related Documentation
+
+- [groupingLevel](groupinglevel.md): The number of nested undo groups (or redo groups, if redo is the most recent operation) in the current event loop.
+- [enableUndoRegistration](enableundoregistration%28%29.md): Enables the recording of undo operations.
+
+### Performing undo and redo
+
+- [undoNestedGroup](undonestedgroup%28%29.md): Performs the undo operations in the last undo group (whether top-level or nested), recording the operations on the redo stack as a single group.
+- [redo](redo%28%29.md): Performs the operations in the last group on the redo stack, if there are any, recording them on the undo stack as a single group.

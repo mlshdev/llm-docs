@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tabulardata/filledcolumn/mean()-8xs60](https://developer.apple.com/documentation/tabulardata/filledcolumn/mean()-8xs60)
+
+# mean()
+
+**Framework:** TabularData  
+**Kind:** Instance Method  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+
+Returns the mean average of the integer column’s elements.
+
+## Declaration
+
+```swift
+func mean() -> Double?
+```
+
+## See Also
+
+### Getting Statistical Values
+
+- [sum()](sum%28%29-5836l.md): Conforms when `Base` conforms to `OptionalColumnProtocol` and `Base.WrappedElement` conforms to `BinaryInteger`. Returns the sum of the integer column’s elements.
+- [sum()](sum%28%29-2805h.md): Conforms when `Base` conforms to `OptionalColumnProtocol` and `Base.WrappedElement` conforms to `FloatingPoint`. Returns the sum of the floating-point column’s elements.
+- [min()](min%28%29.md): Conforms when `Base` conforms to `OptionalColumnProtocol` and `Base.WrappedElement` conforms to `Comparable`. Returns the element with the lowest value.
+- [max()](max%28%29.md): Conforms when `Base` conforms to `OptionalColumnProtocol` and `Base.WrappedElement` conforms to `Comparable`. Returns the element with the highest value.
+- [mean()](mean%28%29-jd3v.md): Conforms when `Base` conforms to `OptionalColumnProtocol` and `Base.WrappedElement` conforms to `FloatingPoint`. Returns the mean average of the floating-point column’s elements.
+- [standardDeviation(deltaDegreesOfFreedom:)](standarddeviation%28deltadegreesoffreedom_%29-4cofd.md): Conforms when `Base` conforms to `OptionalColumnProtocol` and `Base.WrappedElement` conforms to `BinaryInteger`. Returns the standard deviation of the integer column’s elements.
+- [standardDeviation(deltaDegreesOfFreedom:)](standarddeviation%28deltadegreesoffreedom_%29-27xnl.md): Conforms when `Base` conforms to `OptionalColumnProtocol` and `Base.WrappedElement` conforms to `FloatingPoint`. Returns the standard deviation of the floating-point column’s elements.

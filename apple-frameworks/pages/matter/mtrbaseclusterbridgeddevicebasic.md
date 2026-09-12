@@ -1,0 +1,198 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclusterbridgeddevicebasic](https://developer.apple.com/documentation/matter/mtrbaseclusterbridgeddevicebasic)
+
+# MTRBaseClusterBridgedDeviceBasic (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ (deprecated in 17.0) · iPadOS 16.1+ (deprecated in 17.0) · Mac Catalyst 16.1+ (deprecated in 17.0) · macOS 13.0+ (deprecated in 14.0) · tvOS 16.1+ (deprecated in 17.0) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.1+ (deprecated in 10.0)
+
+> Please use MTRBaseClusterBridgedDeviceBasicInformation
+
+## Declaration
+
+```swift
+class MTRBaseClusterBridgedDeviceBasic
+```
+
+## Topics
+
+### Initializers
+
+- [init(device:endpoint:queue:)](mtrbaseclusterbridgeddevicebasic/init%28device_endpoint_queue_%29.md): Deprecated.
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandList(completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeHardwareVersion(completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributehardwareversion%28completionhandler_%29.md): Deprecated.
+- [readAttributeHardwareVersionString(completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributehardwareversionstring%28completionhandler_%29.md): Deprecated.
+- [readAttributeManufacturingDate(completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributemanufacturingdate%28completionhandler_%29.md): Deprecated.
+- [readAttributeNodeLabel(completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributenodelabel%28completionhandler_%29.md): Deprecated.
+- [readAttributePartNumber(completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributepartnumber%28completionhandler_%29.md): Deprecated.
+- [readAttributeProductLabel(completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributeproductlabel%28completionhandler_%29.md): Deprecated.
+- [readAttributeProductName(completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributeproductname%28completionhandler_%29.md): Deprecated.
+- [readAttributeProductURL(completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributeproducturl%28completionhandler_%29.md): Deprecated.
+- [readAttributeReachable(completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributereachable%28completionhandler_%29.md): Deprecated.
+- [readAttributeSerialNumber(completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributeserialnumber%28completionhandler_%29.md): Deprecated.
+- [readAttributeSoftwareVersion(completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributesoftwareversion%28completionhandler_%29.md): Deprecated.
+- [readAttributeSoftwareVersionString(completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributesoftwareversionstring%28completionhandler_%29.md): Deprecated.
+- [readAttributeUniqueID(completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributeuniqueid%28completionhandler_%29.md): Deprecated.
+- [readAttributeVendorID(completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributevendorid%28completionhandler_%29.md): Deprecated.
+- [readAttributeVendorName(completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributevendorname%28completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbridgeddevicebasic/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbridgeddevicebasic/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevision(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbridgeddevicebasic/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMap(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbridgeddevicebasic/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbridgeddevicebasic/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeHardwareVersion(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbridgeddevicebasic/subscribeattributehardwareversion%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeHardwareVersionString(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbridgeddevicebasic/subscribeattributehardwareversionstring%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeManufacturingDate(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbridgeddevicebasic/subscribeattributemanufacturingdate%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNodeLabel(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbridgeddevicebasic/subscribeattributenodelabel%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePartNumber(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbridgeddevicebasic/subscribeattributepartnumber%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeProductLabel(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbridgeddevicebasic/subscribeattributeproductlabel%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeProductName(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbridgeddevicebasic/subscribeattributeproductname%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeProductURL(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbridgeddevicebasic/subscribeattributeproducturl%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeReachable(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbridgeddevicebasic/subscribeattributereachable%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSerialNumber(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbridgeddevicebasic/subscribeattributeserialnumber%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSoftwareVersion(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbridgeddevicebasic/subscribeattributesoftwareversion%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSoftwareVersionString(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbridgeddevicebasic/subscribeattributesoftwareversionstring%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeUniqueID(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbridgeddevicebasic/subscribeattributeuniqueid%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeVendorID(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbridgeddevicebasic/subscribeattributevendorid%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeVendorName(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterbridgeddevicebasic/subscribeattributevendorname%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [writeAttributeNodeLabel(withValue:completionHandler:)](mtrbaseclusterbridgeddevicebasic/writeattributenodelabel%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeNodeLabel(withValue:params:completionHandler:)](mtrbaseclusterbridgeddevicebasic/writeattributenodelabel%28withvalue_params_completionhandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeHardwareVersion(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributehardwareversion%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeHardwareVersionString(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributehardwareversionstring%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeManufacturingDate(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributemanufacturingdate%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNodeLabel(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributenodelabel%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePartNumber(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributepartnumber%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeProductLabel(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributeproductlabel%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeProductName(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributeproductname%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeProductURL(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributeproducturl%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeReachable(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributereachable%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSerialNumber(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributeserialnumber%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSoftwareVersion(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributesoftwareversion%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSoftwareVersionString(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributesoftwareversionstring%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeUniqueID(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributeuniqueid%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeVendorID(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributevendorid%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeVendorName(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterbridgeddevicebasic/readattributevendorname%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+
+## Relationships
+
+### Inherits From
+
+- [MTRBaseClusterBridgedDeviceBasicInformation](mtrbaseclusterbridgeddevicebasicinformation.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRBaseClusterBridgedDeviceBasic (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ (deprecated in 17.0) · iPadOS 16.1+ (deprecated in 17.0) · Mac Catalyst 16.1+ (deprecated in 17.0) · macOS 13.0+ (deprecated in 14.0) · tvOS 16.1+ (deprecated in 17.0) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.1+ (deprecated in 10.0)
+
+> Please use MTRBaseClusterBridgedDeviceBasicInformation
+
+## Declaration
+
+```objectivec
+@interface MTRBaseClusterBridgedDeviceBasic : MTRBaseClusterBridgedDeviceBasicInformation
+```
+
+## Topics
+
+### Initializers
+
+- [initWithDevice:endpoint:queue:](mtrbaseclusterbridgeddevicebasic/init%28device_endpoint_queue_%29.md): Deprecated.
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandListWithCompletionHandler:](mtrbaseclusterbridgeddevicebasic/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithCompletionHandler:](mtrbaseclusterbridgeddevicebasic/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithCompletionHandler:](mtrbaseclusterbridgeddevicebasic/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithCompletionHandler:](mtrbaseclusterbridgeddevicebasic/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithCompletionHandler:](mtrbaseclusterbridgeddevicebasic/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeHardwareVersionWithCompletionHandler:](mtrbaseclusterbridgeddevicebasic/readattributehardwareversion%28completionhandler_%29.md): Deprecated.
+- [readAttributeHardwareVersionStringWithCompletionHandler:](mtrbaseclusterbridgeddevicebasic/readattributehardwareversionstring%28completionhandler_%29.md): Deprecated.
+- [readAttributeManufacturingDateWithCompletionHandler:](mtrbaseclusterbridgeddevicebasic/readattributemanufacturingdate%28completionhandler_%29.md): Deprecated.
+- [readAttributeNodeLabelWithCompletionHandler:](mtrbaseclusterbridgeddevicebasic/readattributenodelabel%28completionhandler_%29.md): Deprecated.
+- [readAttributePartNumberWithCompletionHandler:](mtrbaseclusterbridgeddevicebasic/readattributepartnumber%28completionhandler_%29.md): Deprecated.
+- [readAttributeProductLabelWithCompletionHandler:](mtrbaseclusterbridgeddevicebasic/readattributeproductlabel%28completionhandler_%29.md): Deprecated.
+- [readAttributeProductNameWithCompletionHandler:](mtrbaseclusterbridgeddevicebasic/readattributeproductname%28completionhandler_%29.md): Deprecated.
+- [readAttributeProductURLWithCompletionHandler:](mtrbaseclusterbridgeddevicebasic/readattributeproducturl%28completionhandler_%29.md): Deprecated.
+- [readAttributeReachableWithCompletionHandler:](mtrbaseclusterbridgeddevicebasic/readattributereachable%28completionhandler_%29.md): Deprecated.
+- [readAttributeSerialNumberWithCompletionHandler:](mtrbaseclusterbridgeddevicebasic/readattributeserialnumber%28completionhandler_%29.md): Deprecated.
+- [readAttributeSoftwareVersionWithCompletionHandler:](mtrbaseclusterbridgeddevicebasic/readattributesoftwareversion%28completionhandler_%29.md): Deprecated.
+- [readAttributeSoftwareVersionStringWithCompletionHandler:](mtrbaseclusterbridgeddevicebasic/readattributesoftwareversionstring%28completionhandler_%29.md): Deprecated.
+- [readAttributeUniqueIDWithCompletionHandler:](mtrbaseclusterbridgeddevicebasic/readattributeuniqueid%28completionhandler_%29.md): Deprecated.
+- [readAttributeVendorIDWithCompletionHandler:](mtrbaseclusterbridgeddevicebasic/readattributevendorid%28completionhandler_%29.md): Deprecated.
+- [readAttributeVendorNameWithCompletionHandler:](mtrbaseclusterbridgeddevicebasic/readattributevendorname%28completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbridgeddevicebasic/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbridgeddevicebasic/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevisionWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbridgeddevicebasic/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMapWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbridgeddevicebasic/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbridgeddevicebasic/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeHardwareVersionWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbridgeddevicebasic/subscribeattributehardwareversion%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeHardwareVersionStringWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbridgeddevicebasic/subscribeattributehardwareversionstring%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeManufacturingDateWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbridgeddevicebasic/subscribeattributemanufacturingdate%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeNodeLabelWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbridgeddevicebasic/subscribeattributenodelabel%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributePartNumberWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbridgeddevicebasic/subscribeattributepartnumber%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeProductLabelWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbridgeddevicebasic/subscribeattributeproductlabel%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeProductNameWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbridgeddevicebasic/subscribeattributeproductname%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeProductURLWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbridgeddevicebasic/subscribeattributeproducturl%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeReachableWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbridgeddevicebasic/subscribeattributereachable%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSerialNumberWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbridgeddevicebasic/subscribeattributeserialnumber%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSoftwareVersionWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbridgeddevicebasic/subscribeattributesoftwareversion%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSoftwareVersionStringWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbridgeddevicebasic/subscribeattributesoftwareversionstring%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeUniqueIDWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbridgeddevicebasic/subscribeattributeuniqueid%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeVendorIDWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbridgeddevicebasic/subscribeattributevendorid%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeVendorNameWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterbridgeddevicebasic/subscribeattributevendorname%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [writeAttributeNodeLabelWithValue:completionHandler:](mtrbaseclusterbridgeddevicebasic/writeattributenodelabel%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeNodeLabelWithValue:params:completionHandler:](mtrbaseclusterbridgeddevicebasic/writeattributenodelabel%28withvalue_params_completionhandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbridgeddevicebasic/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbridgeddevicebasic/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbridgeddevicebasic/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbridgeddevicebasic/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbridgeddevicebasic/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeHardwareVersionWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbridgeddevicebasic/readattributehardwareversion%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeHardwareVersionStringWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbridgeddevicebasic/readattributehardwareversionstring%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeManufacturingDateWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbridgeddevicebasic/readattributemanufacturingdate%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeNodeLabelWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbridgeddevicebasic/readattributenodelabel%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributePartNumberWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbridgeddevicebasic/readattributepartnumber%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeProductLabelWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbridgeddevicebasic/readattributeproductlabel%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeProductNameWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbridgeddevicebasic/readattributeproductname%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeProductURLWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbridgeddevicebasic/readattributeproducturl%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeReachableWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbridgeddevicebasic/readattributereachable%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSerialNumberWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbridgeddevicebasic/readattributeserialnumber%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSoftwareVersionWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbridgeddevicebasic/readattributesoftwareversion%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSoftwareVersionStringWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbridgeddevicebasic/readattributesoftwareversionstring%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeUniqueIDWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbridgeddevicebasic/readattributeuniqueid%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeVendorIDWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbridgeddevicebasic/readattributevendorid%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeVendorNameWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterbridgeddevicebasic/readattributevendorname%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+
+## Relationships
+
+### Inherits From
+
+- [MTRBaseClusterBridgedDeviceBasicInformation](mtrbaseclusterbridgeddevicebasicinformation.md)

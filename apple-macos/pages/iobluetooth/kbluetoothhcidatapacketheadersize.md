@@ -1,0 +1,51 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/kbluetoothhcidatapacketheadersize](https://developer.apple.com/documentation/iobluetooth/kbluetoothhcidatapacketheadersize)
+
+# kBluetoothHCIDataPacketHeaderSize (Swift)
+
+**Framework:** IOBluetooth  
+**Kind:** Global Variable  
+**Availability:** macOS
+
+## Declaration
+
+```swift
+var kBluetoothHCIDataPacketHeaderSize: Int { get }
+```
+
+## See Also
+
+### Constants
+
+- [kBluetoothHCICommandPacketHeaderSize](kbluetoothhcicommandpacketheadersize.md)
+- [kBluetoothHCICommandPacketMaxDataSize](kbluetoothhcicommandpacketmaxdatasize.md)
+- [kBluetoothHCIDataPacketMaxDataSize](kbluetoothhcidatapacketmaxdatasize.md)
+- [kBluetoothHCIEventPacketHeaderSize](kbluetoothhcieventpacketheadersize.md)
+- [kBluetoothHCIEventPacketMaxDataSize](kbluetoothhcieventpacketmaxdatasize.md)
+- [kBluetoothHCIMaxCommandPacketSize](kbluetoothhcimaxcommandpacketsize.md)
+- [kBluetoothHCIMaxDataPacketSize](kbluetoothhcimaxdatapacketsize.md)
+- [kBluetoothHCIMaxEventPacketSize](kbluetoothhcimaxeventpacketsize.md)
+
+# kBluetoothHCIDataPacketHeaderSize (Objective-C)
+
+**Framework:** IOBluetooth  
+**Kind:** Enumeration Case  
+**Availability:** macOS
+
+## Declaration
+
+```objectivec
+kBluetoothHCIDataPacketHeaderSize
+```
+
+## See Also
+
+### Constants
+
+- [kBluetoothHCICommandPacketHeaderSize](kbluetoothhcicommandpacketheadersize.md)
+- [kBluetoothHCICommandPacketMaxDataSize](kbluetoothhcicommandpacketmaxdatasize.md)
+- [kBluetoothHCIDataPacketMaxDataSize](kbluetoothhcidatapacketmaxdatasize.md)
+- [kBluetoothHCIEventPacketHeaderSize](kbluetoothhcieventpacketheadersize.md)
+- [kBluetoothHCIEventPacketMaxDataSize](kbluetoothhcieventpacketmaxdatasize.md)
+- [kBluetoothHCIMaxCommandPacketSize](kbluetoothhcimaxcommandpacketsize.md)
+- [kBluetoothHCIMaxDataPacketSize](kbluetoothhcimaxdatapacketsize.md)
+- [kBluetoothHCIMaxEventPacketSize](kbluetoothhcimaxeventpacketsize.md)

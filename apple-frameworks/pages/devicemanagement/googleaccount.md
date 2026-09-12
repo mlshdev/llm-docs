@@ -1,0 +1,116 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/googleaccount](https://developer.apple.com/documentation/devicemanagement/googleaccount)
+
+# GoogleAccount
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Device Management Profile  
+**Availability:** iOS 9.3+ · iPadOS 9.3+ · Mac Catalyst 9.3+ · visionOS 1.1+
+
+The payload that configures a Google account.
+
+## Declaration
+
+```
+object GoogleAccount
+```
+
+## Properties
+
+- `AccountDescription` — `string`: A user-visible description of the Google account, shown in the Mail and Settings apps.
+- `AccountName` — `string`: The user’s full name for the Google account. This name appears in sent messages.
+- `CommunicationServiceRules` — `GoogleAccount.CommunicationServiceRules`: The communication service handler rules for this account.
+
+  Available: iOS 10+ | iPadOS 10+ | visionOS 1.1+
+- `EmailAddress` — `string` (required): The full Google email address for the account.
+- `VPNUUID` — `string`: The VPNUUID of the per-app VPN the account uses for network communication.
+
+  Available: iOS 14+ | iPadOS 14+ | visionOS 1.1+
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Specify `com.apple.google-oauth` as the payload type.
+
+You can install multiple Google payloads. Each sets up a Google email address and any other Google services the user enables after authentication.
+
+> **Note**
+
+>  For supervised devices, the system requires installation of Google accounts through MDM or Apple Configurator 2.
+
+The payload never contains credentials; the system prompts the user to enter credentials shortly after installation of the payload.
+
+<a id="Profile-availability"></a>
+
+### Profile availability
+
+|  |  |
+| --- | --- |
+| Device channel | iOS, visionOS |
+| User channel | Shared iPad |
+| Allow manual install | iOS, visionOS |
+| Requires supervision | N/A |
+| Requires user-approved MDM | N/A |
+| Allowed in user enrollment | iOS, visionOS |
+| Allow multiple payloads | iOS, Shared iPad, visionOS |
+
+<a id="Profile-example"></a>
+
+### Profile example
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>AccountDescription</key>
+            <string>Google Account</string>
+            <key>AccountName</key>
+            <string>Juan Chavez</string>
+            <key>EmailAddress</key>
+            <string>juanchavez4@example.com</string>
+            <key>PayloadIdentifier</key>
+            <string>com.example.mygoogleaccountpayload</string>
+            <key>PayloadType</key>
+            <string>com.apple.google-oauth</string>
+            <key>PayloadUUID</key>
+            <string>0fe8f4dc-8cf0-4da3-9d5b-f734efb98a59</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+    </array>
+    <key>PayloadDisplayName</key>
+    <string>GoogleAccount</string>
+    <key>PayloadIdentifier</key>
+    <string>com.example.myprofile</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>80141025-50d3-4a38-9387-ca610ff3a247</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>
+```
+
+## Topics
+
+### Objects
+
+- [GoogleAccount.CommunicationServiceRules](googleaccount/communicationservicerules-data.dictionary.md): The communication service handler rules for this account.
+
+## See Also
+
+### Accounts
+
+- [Accounts](accounts.md): The payload that configures guest accounts.
+- [CalDAV](caldav.md): The payload that configures a Calendar account.
+- [CardDAV](carddav.md): The payload that configures a Contacts account.
+- [LDAP](ldap.md): The payload that configures a Lightweight Directory Access Protocol (LDAP) account.
+- [MobileAccounts](mobileaccounts.md): The payload that configures mobile accounts on the device.
+- [SubscribedCalendars](subscribedcalendars.md): The payload that configures subscribed calendars.

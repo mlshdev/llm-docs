@@ -1,0 +1,93 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreai/ndarray/scalartype-swift.enum](https://developer.apple.com/documentation/coreai/ndarray/scalartype-swift.enum)
+
+# NDArray.ScalarType
+
+**Framework:** Core AI  
+**Kind:** Enumeration  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+The possible scalar types.
+
+## Declaration
+
+```swift
+enum ScalarType
+```
+
+## Mentioned In
+
+- [Integrating on-device AI models in your app with Core AI](../integrating-on-device-ai-models-in-your-app-with-core-ai.md)
+
+## Topics
+
+### Defining floating-point types
+
+- [NDArray.ScalarType.float16](scalartype-swift.enum/float16.md): A 16-bit floating-point type.
+- [NDArray.ScalarType.float32](scalartype-swift.enum/float32.md): A 32-bit floating-point type.
+- [NDArray.ScalarType.float64](scalartype-swift.enum/float64.md): A 64-bit floating-point type.
+- [NDArray.ScalarType.bfloat16](scalartype-swift.enum/bfloat16.md): A 16-bit brain floating-point type.
+
+### Defining 8-bit floating-point types
+
+- [NDArray.ScalarType.float8e4m3fn](scalartype-swift.enum/float8e4m3fn.md): An 8-bit floating-point type with 4 exponent bits and 3 mantissa bits, without a sign bit.
+- [NDArray.ScalarType.float8e5m2](scalartype-swift.enum/float8e5m2.md): An 8-bit floating-point type with 5 exponent bits and 2 mantissa bits.
+
+### Defining 4- and 8-bit special floating-point types
+
+- [NDArray.ScalarType.float4e2m1fn](scalartype-swift.enum/float4e2m1fn.md): A 4-bit floating-point type with 2 exponent bits and 1 mantissa bit.
+- [NDArray.ScalarType.float8e8m0fn](scalartype-swift.enum/float8e8m0fn.md): An 8-bit floating-point type with 8 exponent bits and 0 mantissa bits, without a sign bit.
+
+### Defining complex types
+
+- [NDArray.ScalarType.cfloat16](scalartype-swift.enum/cfloat16.md): A 16-bit complex floating-point type.
+- [NDArray.ScalarType.cfloat32](scalartype-swift.enum/cfloat32.md): A 32-bit complex floating-point type.
+- [NDArray.ScalarType.cfloat64](scalartype-swift.enum/cfloat64.md): A 64-bit complex floating-point type.
+
+### Defining standard integer types
+
+- [NDArray.ScalarType.int8](scalartype-swift.enum/int8.md): An 8-bit signed integer.
+- [NDArray.ScalarType.int16](scalartype-swift.enum/int16.md): A 16-bit signed integer.
+- [NDArray.ScalarType.int32](scalartype-swift.enum/int32.md): A 32-bit signed integer.
+- [NDArray.ScalarType.int64](scalartype-swift.enum/int64.md): A 64-bit signed integer.
+- [NDArray.ScalarType.int128](scalartype-swift.enum/int128.md): A 128-bit signed integer.
+
+### Defining standard unsigned integer types
+
+- [NDArray.ScalarType.uint8](scalartype-swift.enum/uint8.md): An 8-bit unsigned integer.
+- [NDArray.ScalarType.uint16](scalartype-swift.enum/uint16.md): A 16-bit unsigned integer.
+- [NDArray.ScalarType.uint32](scalartype-swift.enum/uint32.md): A 32-bit unsigned integer.
+- [NDArray.ScalarType.uint64](scalartype-swift.enum/uint64.md): A 64-bit unsigned integer.
+- [NDArray.ScalarType.uint128](scalartype-swift.enum/uint128.md): A 128-bit unsigned integer.
+
+### Defining sub-byte signed integer types
+
+- [NDArray.ScalarType.int2](scalartype-swift.enum/int2.md): A 2-bit signed integer.
+- [NDArray.ScalarType.int3](scalartype-swift.enum/int3.md): A 3-bit signed integer.
+- [NDArray.ScalarType.int4](scalartype-swift.enum/int4.md): A 4-bit signed integer.
+- [NDArray.ScalarType.int5](scalartype-swift.enum/int5.md): A 5-bit signed integer.
+- [NDArray.ScalarType.int6](scalartype-swift.enum/int6.md): A 6-bit signed integer.
+- [NDArray.ScalarType.int7](scalartype-swift.enum/int7.md): A 7-bit signed integer.
+
+### Defining sub-byte unsigned integer types
+
+- [NDArray.ScalarType.uint1](scalartype-swift.enum/uint1.md): A 1-bit unsigned integer.
+- [NDArray.ScalarType.uint2](scalartype-swift.enum/uint2.md): A 2-bit unsigned integer.
+- [NDArray.ScalarType.uint3](scalartype-swift.enum/uint3.md): A 3-bit unsigned integer.
+- [NDArray.ScalarType.uint4](scalartype-swift.enum/uint4.md): A 4-bit unsigned integer.
+- [NDArray.ScalarType.uint5](scalartype-swift.enum/uint5.md): A 5-bit unsigned integer.
+- [NDArray.ScalarType.uint6](scalartype-swift.enum/uint6.md): A 6-bit unsigned integer.
+- [NDArray.ScalarType.uint7](scalartype-swift.enum/uint7.md): A 7-bit unsigned integer.
+
+### Defining the boolean type
+
+- [NDArray.ScalarType.bool](scalartype-swift.enum/bool.md): A Boolean scalar.
+
+## Relationships
+
+### Conforms To
+
+- [CaseIterable](https://developer.apple.com/documentation/swift/caseiterable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)

@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/bnns/randomgenerator/init(method:seed:filterparameters:)](https://developer.apple.com/documentation/accelerate/bnns/randomgenerator/init(method:seed:filterparameters:))
+
+# init(method:seed:filterParameters:)
+
+**Framework:** Accelerate  
+**Kind:** Initializer  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS · watchOS 8.0+
+
+Returns a new random number generator.
+
+## Declaration
+
+```swift
+init?(method: BNNS.RandomGeneratorMethod, seed: UInt64? = nil, filterParameters: BNNSFilterParameters? = nil)
+```
+
+## Parameters
+
+- `method`: The random number generation method.
+- `seed`: An optional unsigned integer value the function uses to initialize the random number generator.
+- `filterParameters`: The runtime filter parameters.
+
+## See Also
+
+### Creating a Random Number Generator
+
+- [BNNS.RandomGeneratorMethod](../randomgeneratormethod.md): Constants that describe random number generation methods.

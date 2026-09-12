@@ -1,0 +1,63 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/scenekit/scncapsule/init(capradius:height:)](https://developer.apple.com/documentation/scenekit/scncapsule/init(capradius:height:))
+
+# init(capRadius:height:) (Swift)
+
+**Framework:** SceneKit  
+**Kind:** Initializer  
+**Availability:** iOS 8.0+ (deprecated in 26.0) · iPadOS 8.0+ (deprecated in 26.0) · Mac Catalyst 13.1+ (deprecated in 26.0) · macOS 10.8+ (deprecated in 26.0) · tvOS 9.0+ (deprecated in 26.0) · visionOS 1.0+ (deprecated in 26.0) · watchOS 3.0+ (deprecated in 26.0)
+
+Creates a capsule geometry with the specified radius and height.
+
+## Declaration
+
+```swift
+convenience init(capRadius: CGFloat, height: CGFloat)
+```
+
+## Parameters
+
+- `capRadius`: The radius both of the capsule’s cylindrical body and of its hemispherical ends.
+- `height`: The height of the capsule along the y-axis of its local coordinate space.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new capsule geometry.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The capsule is centered in its local coordinate system. For example, if you create a capsule whose cap radius is `5.0` and height is `20.0`, it extends from `-10.0` to `10.0` in the y-axis, and the circular cross section at the center of its body extends from `-5.0` to `5.0` along the x- and z-axes.
+
+# capsuleWithCapRadius:height: (Objective-C)
+
+**Framework:** SceneKit  
+**Kind:** Type Method  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+Creates a capsule geometry with the specified radius and height.
+
+## Declaration
+
+```objectivec
++ (instancetype) capsuleWithCapRadius:(CGFloat) capRadius height:(CGFloat) height;
+```
+
+## Parameters
+
+- `capRadius`: The radius both of the capsule’s cylindrical body and of its hemispherical ends.
+- `height`: The height of the capsule along the y-axis of its local coordinate space.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new capsule geometry.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The capsule is centered in its local coordinate system. For example, if you create a capsule whose cap radius is `5.0` and height is `20.0`, it extends from `-10.0` to `10.0` in the y-axis, and the circular cross section at the center of its body extends from `-5.0` to `5.0` along the x- and z-axes.

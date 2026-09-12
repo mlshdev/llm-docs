@@ -1,0 +1,56 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/iofirewireasyncstreamcommandinterface/1555862-settagbits](https://developer.apple.com/documentation/iokit/iofirewireasyncstreamcommandinterface/1555862-settagbits)
+
+# SetTagBits
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.5+
+
+Set the tag bits for the AsynStream packets.
+
+## Declaration
+
+```objectivec
+void (*SetTagBits)(IOFireWireLibAsyncStreamCommandRef self, UInt16 tag);
+```
+
+## Parameters
+
+- `self`: The command object interface of interest
+- `tag`: The value for tag bits in the AsyncStream packet
+
+<a id="discussion"></a>
+
+## Discussion
+
+Available in v1 and newer.
+
+## See Also
+
+### Miscellaneous
+
+- [Cancel](1556085-cancel.md): Cancel command execution
+- [GetAckCode](1555749-getackcode.md): Gets the most recently received ack code for this transaction.
+- [GetBuffer](1555715-getbuffer.md): Set the command refCon value and callback handler, and submit the command to FireWire for execution.
+- [GetRefCon](1555645-getrefcon.md): Gets the refcon associated with this command
+- [GetResponseCode](1556076-getresponsecode.md): Gets the most recently received response code for this transaction.
+- [GetStatus](1555697-getstatus.md): Return command completion status.
+- [GetTargetAddress](1555626-gettargetaddress.md): Get command target address.
+- [GetTransferredBytes](1555792-gettransferredbytes.md): Return number of bytes transferred by this command object when it last completed execution.
+- [IsExecuting](1555918-isexecuting.md): Is this command object currently executing?
+- [SetBuffer](1556094-setbuffer.md): Set the buffer where read data should be stored.
+- [SetCallback](1555992-setcallback.md): Set the completion handler to be called once the command completes asynchronous execution .
+- [SetChannel](1556108-setchannel.md): Set the new channel to transmit the AsyncStream command.
+- [SetFlags](1555736-setflags.md): Set flags governing this command's execution.
+- [SetGeneration](1555988-setgeneration.md): Set FireWire bus generation for which the command object shall be valid. If the failOnReset attribute has been set, the command will only be considered for execution during the bus generation specified by this function.
+- [SetMaxPacket](1555624-setmaxpacket.md): Set the maximum size in bytes of packets transferred by this command.
+- [SetMaxPacketSpeed](1555695-setmaxpacketspeed.md): Gets the most recently received ack code for this transaction.
+- [SetMaxRetryCount](1555983-setmaxretrycount.md): Sets the maximum number of retries for this command.
+- [SetRefCon](1555818-setrefcon.md): Set the user refCon value. This is the user defined value that will be passed in the refCon argument to the completion function.
+- [SetSyncBits](1556029-setsyncbits.md): Set the sync bits for the AsynStream packets.
+- [SetTarget](1555682-settarget.md): Set command target address
+- [SetTimeoutDuration](1555946-settimeoutduration.md): Sets the duration of the timeout for this command.
+- [Submit](1556112-submit.md)
+- [SubmitWithRefconAndCallback](1556071-submitwithrefconandcallback.md): Set the command refCon value and callback handler, and submit the command to FireWire for execution.

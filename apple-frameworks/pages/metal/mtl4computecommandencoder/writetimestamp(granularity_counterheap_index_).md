@@ -1,0 +1,63 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtl4computecommandencoder/writetimestamp(granularity:counterheap:index:)](https://developer.apple.com/documentation/metal/mtl4computecommandencoder/writetimestamp(granularity:counterheap:index:))
+
+# writeTimestamp(granularity:counterHeap:index:) (Swift)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+Writes a GPU timestamp into a heap.
+
+## Declaration
+
+```swift
+func writeTimestamp(granularity: MTL4TimestampGranularity, counterHeap: any MTL4CounterHeap, index: Int)
+```
+
+## Parameters
+
+- `granularity`: [MTL4TimestampGranularity](../mtl4timestampgranularity.md) hint to Metal about acceptable the level of precision.
+- `counterHeap`: [MTL4CounterHeap](../mtl4counterheap.md) to write timestamps into.
+- `index`: The index value into which Metal writes the timestamp.
+
+<a id="discussion"></a>
+
+## Discussion
+
+The method ensures that any prior work finishes, but doesn’t delay any subsequent work.
+
+You can alter this command’s behavior through the `granularity` parameter.
+
+- Pass [MTL4TimestampGranularity.relaxed](../mtl4timestampgranularity/relaxed.md) to allow Metal to provide timestamps with minimal impact to runtime performance, but with less detail. For example, the command may group all timestamps for a pass together.
+- Pass [MTL4TimestampGranularity.precise](../mtl4timestampgranularity/precise.md) to request that Metal provides timestamps with the most detail. This can affect runtime performance.
+
+# writeTimestampWithGranularity:intoHeap:atIndex: (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+Writes a GPU timestamp into a heap.
+
+## Declaration
+
+```objectivec
+- (void) writeTimestampWithGranularity:(MTL4TimestampGranularity) granularity intoHeap:(id<MTL4CounterHeap>) counterHeap atIndex:(NSUInteger) index;
+```
+
+## Parameters
+
+- `granularity`: [MTL4TimestampGranularity](../mtl4timestampgranularity.md) hint to Metal about acceptable the level of precision.
+- `counterHeap`: [MTL4CounterHeap](../mtl4counterheap.md) to write timestamps into.
+- `index`: The index value into which Metal writes the timestamp.
+
+<a id="discussion"></a>
+
+## Discussion
+
+The method ensures that any prior work finishes, but doesn’t delay any subsequent work.
+
+You can alter this command’s behavior through the `granularity` parameter.
+
+- Pass [MTL4TimestampGranularityRelaxed](../mtl4timestampgranularity/relaxed.md) to allow Metal to provide timestamps with minimal impact to runtime performance, but with less detail. For example, the command may group all timestamps for a pass together.
+- Pass [MTL4TimestampGranularityPrecise](../mtl4timestampgranularity/precise.md) to request that Metal provides timestamps with the most detail. This can affect runtime performance.

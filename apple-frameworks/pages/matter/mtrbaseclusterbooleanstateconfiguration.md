@@ -1,0 +1,156 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclusterbooleanstateconfiguration](https://developer.apple.com/documentation/matter/mtrbaseclusterbooleanstateconfiguration)
+
+# MTRBaseClusterBooleanStateConfiguration (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```swift
+class MTRBaseClusterBooleanStateConfiguration
+```
+
+## Topics
+
+### Initializers
+
+- [init(device:endpointID:queue:)](mtrbaseclusterbooleanstateconfiguration/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [enableDisableAlarm(with:completion:)](mtrbaseclusterbooleanstateconfiguration/enabledisablealarm%28with_completion_%29.md)
+- [readAttributeAcceptedCommandList(completion:)](mtrbaseclusterbooleanstateconfiguration/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAlarmsActive(completion:)](mtrbaseclusterbooleanstateconfiguration/readattributealarmsactive%28completion_%29.md)
+- [readAttributeAlarmsEnabled(completion:)](mtrbaseclusterbooleanstateconfiguration/readattributealarmsenabled%28completion_%29.md)
+- [readAttributeAlarmsSupported(completion:)](mtrbaseclusterbooleanstateconfiguration/readattributealarmssupported%28completion_%29.md)
+- [readAttributeAlarmsSuppressed(completion:)](mtrbaseclusterbooleanstateconfiguration/readattributealarmssuppressed%28completion_%29.md)
+- [readAttributeAttributeList(completion:)](mtrbaseclusterbooleanstateconfiguration/readattributeattributelist%28completion_%29.md)
+- [readAttributeClusterRevision(completion:)](mtrbaseclusterbooleanstateconfiguration/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeCurrentSensitivityLevel(completion:)](mtrbaseclusterbooleanstateconfiguration/readattributecurrentsensitivitylevel%28completion_%29.md)
+- [readAttributeDefaultSensitivityLevel(completion:)](mtrbaseclusterbooleanstateconfiguration/readattributedefaultsensitivitylevel%28completion_%29.md)
+- [readAttributeFeatureMap(completion:)](mtrbaseclusterbooleanstateconfiguration/readattributefeaturemap%28completion_%29.md)
+- [readAttributeGeneratedCommandList(completion:)](mtrbaseclusterbooleanstateconfiguration/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeSensorFault(completion:)](mtrbaseclusterbooleanstateconfiguration/readattributesensorfault%28completion_%29.md)
+- [readAttributeSupportedSensitivityLevels(completion:)](mtrbaseclusterbooleanstateconfiguration/readattributesupportedsensitivitylevels%28completion_%29.md)
+- [subscribeAttributeAcceptedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbooleanstateconfiguration/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAlarmsActive(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbooleanstateconfiguration/subscribeattributealarmsactive%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAlarmsEnabled(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbooleanstateconfiguration/subscribeattributealarmsenabled%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAlarmsSupported(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbooleanstateconfiguration/subscribeattributealarmssupported%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAlarmsSuppressed(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbooleanstateconfiguration/subscribeattributealarmssuppressed%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbooleanstateconfiguration/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevision(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbooleanstateconfiguration/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentSensitivityLevel(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbooleanstateconfiguration/subscribeattributecurrentsensitivitylevel%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeDefaultSensitivityLevel(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbooleanstateconfiguration/subscribeattributedefaultsensitivitylevel%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMap(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbooleanstateconfiguration/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbooleanstateconfiguration/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSensorFault(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbooleanstateconfiguration/subscribeattributesensorfault%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSupportedSensitivityLevels(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterbooleanstateconfiguration/subscribeattributesupportedsensitivitylevels%28with_subscriptionestablished_reporthandler_%29.md)
+- [suppressAlarm(with:completion:)](mtrbaseclusterbooleanstateconfiguration/suppressalarm%28with_completion_%29.md)
+- [writeAttributeCurrentSensitivityLevel(withValue:completion:)](mtrbaseclusterbooleanstateconfiguration/writeattributecurrentsensitivitylevel%28withvalue_completion_%29.md)
+- [writeAttributeCurrentSensitivityLevel(withValue:params:completion:)](mtrbaseclusterbooleanstateconfiguration/writeattributecurrentsensitivitylevel%28withvalue_params_completion_%29.md)
+
+### Type Methods
+
+- [readAttributeAcceptedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbooleanstateconfiguration/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAlarmsActive(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbooleanstateconfiguration/readattributealarmsactive%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAlarmsEnabled(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbooleanstateconfiguration/readattributealarmsenabled%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAlarmsSupported(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbooleanstateconfiguration/readattributealarmssupported%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAlarmsSuppressed(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbooleanstateconfiguration/readattributealarmssuppressed%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbooleanstateconfiguration/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevision(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbooleanstateconfiguration/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentSensitivityLevel(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbooleanstateconfiguration/readattributecurrentsensitivitylevel%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeDefaultSensitivityLevel(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbooleanstateconfiguration/readattributedefaultsensitivitylevel%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMap(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbooleanstateconfiguration/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbooleanstateconfiguration/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSensorFault(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbooleanstateconfiguration/readattributesensorfault%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSupportedSensitivityLevels(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterbooleanstateconfiguration/readattributesupportedsensitivitylevels%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRBaseClusterBooleanStateConfiguration (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 17.6+ · iPadOS 17.6+ · Mac Catalyst 17.6+ · macOS 14.6+ · tvOS 17.6+ · visionOS 1.0+ · watchOS 10.6+
+
+## Declaration
+
+```objectivec
+@interface MTRBaseClusterBooleanStateConfiguration : MTRGenericBaseCluster
+```
+
+## Topics
+
+### Initializers
+
+- [initWithDevice:endpointID:queue:](mtrbaseclusterbooleanstateconfiguration/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [enableDisableAlarmWithParams:completion:](mtrbaseclusterbooleanstateconfiguration/enabledisablealarm%28with_completion_%29.md)
+- [readAttributeAcceptedCommandListWithCompletion:](mtrbaseclusterbooleanstateconfiguration/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAlarmsActiveWithCompletion:](mtrbaseclusterbooleanstateconfiguration/readattributealarmsactive%28completion_%29.md)
+- [readAttributeAlarmsEnabledWithCompletion:](mtrbaseclusterbooleanstateconfiguration/readattributealarmsenabled%28completion_%29.md)
+- [readAttributeAlarmsSupportedWithCompletion:](mtrbaseclusterbooleanstateconfiguration/readattributealarmssupported%28completion_%29.md)
+- [readAttributeAlarmsSuppressedWithCompletion:](mtrbaseclusterbooleanstateconfiguration/readattributealarmssuppressed%28completion_%29.md)
+- [readAttributeAttributeListWithCompletion:](mtrbaseclusterbooleanstateconfiguration/readattributeattributelist%28completion_%29.md)
+- [readAttributeClusterRevisionWithCompletion:](mtrbaseclusterbooleanstateconfiguration/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeCurrentSensitivityLevelWithCompletion:](mtrbaseclusterbooleanstateconfiguration/readattributecurrentsensitivitylevel%28completion_%29.md)
+- [readAttributeDefaultSensitivityLevelWithCompletion:](mtrbaseclusterbooleanstateconfiguration/readattributedefaultsensitivitylevel%28completion_%29.md)
+- [readAttributeFeatureMapWithCompletion:](mtrbaseclusterbooleanstateconfiguration/readattributefeaturemap%28completion_%29.md)
+- [readAttributeGeneratedCommandListWithCompletion:](mtrbaseclusterbooleanstateconfiguration/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeSensorFaultWithCompletion:](mtrbaseclusterbooleanstateconfiguration/readattributesensorfault%28completion_%29.md)
+- [readAttributeSupportedSensitivityLevelsWithCompletion:](mtrbaseclusterbooleanstateconfiguration/readattributesupportedsensitivitylevels%28completion_%29.md)
+- [subscribeAttributeAcceptedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbooleanstateconfiguration/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAlarmsActiveWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbooleanstateconfiguration/subscribeattributealarmsactive%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAlarmsEnabledWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbooleanstateconfiguration/subscribeattributealarmsenabled%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAlarmsSupportedWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbooleanstateconfiguration/subscribeattributealarmssupported%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAlarmsSuppressedWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbooleanstateconfiguration/subscribeattributealarmssuppressed%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbooleanstateconfiguration/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevisionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbooleanstateconfiguration/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCurrentSensitivityLevelWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbooleanstateconfiguration/subscribeattributecurrentsensitivitylevel%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeDefaultSensitivityLevelWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbooleanstateconfiguration/subscribeattributedefaultsensitivitylevel%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMapWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbooleanstateconfiguration/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbooleanstateconfiguration/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSensorFaultWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbooleanstateconfiguration/subscribeattributesensorfault%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSupportedSensitivityLevelsWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterbooleanstateconfiguration/subscribeattributesupportedsensitivitylevels%28with_subscriptionestablished_reporthandler_%29.md)
+- [suppressAlarmWithParams:completion:](mtrbaseclusterbooleanstateconfiguration/suppressalarm%28with_completion_%29.md)
+- [writeAttributeCurrentSensitivityLevelWithValue:completion:](mtrbaseclusterbooleanstateconfiguration/writeattributecurrentsensitivitylevel%28withvalue_completion_%29.md)
+- [writeAttributeCurrentSensitivityLevelWithValue:params:completion:](mtrbaseclusterbooleanstateconfiguration/writeattributecurrentsensitivitylevel%28withvalue_params_completion_%29.md)
+
+### Type Methods
+
+- [readAttributeAcceptedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbooleanstateconfiguration/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAlarmsActiveWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbooleanstateconfiguration/readattributealarmsactive%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAlarmsEnabledWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbooleanstateconfiguration/readattributealarmsenabled%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAlarmsSupportedWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbooleanstateconfiguration/readattributealarmssupported%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAlarmsSuppressedWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbooleanstateconfiguration/readattributealarmssuppressed%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbooleanstateconfiguration/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevisionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbooleanstateconfiguration/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCurrentSensitivityLevelWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbooleanstateconfiguration/readattributecurrentsensitivitylevel%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeDefaultSensitivityLevelWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbooleanstateconfiguration/readattributedefaultsensitivitylevel%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMapWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbooleanstateconfiguration/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbooleanstateconfiguration/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSensorFaultWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbooleanstateconfiguration/readattributesensorfault%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSupportedSensitivityLevelsWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterbooleanstateconfiguration/readattributesupportedsensitivitylevels%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)

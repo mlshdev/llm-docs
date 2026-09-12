@@ -1,0 +1,13 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/intents/incar/headunit-swift.class/init(coder:)](https://developer.apple.com/documentation/intents/incar/headunit-swift.class/init(coder:))
+
+# init(coder:)
+
+**Framework:** Intents  
+**Kind:** Initializer  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · visionOS 1.0+ · watchOS 7.0+
+
+## Declaration
+
+```swift
+init?(coder: NSCoder)
+```

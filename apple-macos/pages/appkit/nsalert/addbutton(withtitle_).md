@@ -1,0 +1,87 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsalert/addbutton(withtitle:)](https://developer.apple.com/documentation/appkit/nsalert/addbutton(withtitle:))
+
+# addButton(withTitle:) (Swift)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS
+
+Adds a button with a given title to the alert.
+
+## Declaration
+
+```swift
+func addButton(withTitle title: String) -> NSButton
+```
+
+## Parameters
+
+- `title`: Title of the button to add to the alert. Must not be `nil`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+Button added to the alert.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Buttons are placed starting near the right side of the alert and going toward the left side (for languages that read left to right). The first three buttons are identified positionally as `NSAlertFirstButtonReturn`, `NSAlertSecondButtonReturn`, `NSAlertThirdButtonReturn` in the return-code parameter evaluated by the modal delegate. Subsequent buttons are identified as `NSAlertThirdButtonReturn` +`n`, where `n` is an integer
+
+By default, the first button has a key equivalent of Return, any button with a title of “Cancel” has a key equivalent of Escape, and any button with the title “Don’t Save” has a key equivalent of Command-D (but only if it’s *not* the first button). You can also assign different key equivalents for the buttons using the [keyEquivalent](../nsbutton/keyequivalent.md) method of the `NSButton` class. In addition, you can use the [tag](../nscontrol/tag.md) method of the `NSButton` class to set the return value.
+
+## See Also
+
+### Related Documentation
+
+- [NSAlert](../nsalert.md): A modal dialog or sheet attached to a document window.
+
+### Accessing alert response buttons
+
+- [buttons](buttons.md): The array of response buttons for the alert.
+- [NSApplication.ModalResponse](../nsapplication/modalresponse.md): A set of button return values for modal dialogs.
+
+# addButtonWithTitle: (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS
+
+Adds a button with a given title to the alert.
+
+## Declaration
+
+```objectivec
+- (NSButton *) addButtonWithTitle:(NSString *) title;
+```
+
+## Parameters
+
+- `title`: Title of the button to add to the alert. Must not be `nil`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+Button added to the alert.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Buttons are placed starting near the right side of the alert and going toward the left side (for languages that read left to right). The first three buttons are identified positionally as `NSAlertFirstButtonReturn`, `NSAlertSecondButtonReturn`, `NSAlertThirdButtonReturn` in the return-code parameter evaluated by the modal delegate. Subsequent buttons are identified as `NSAlertThirdButtonReturn` +`n`, where `n` is an integer
+
+By default, the first button has a key equivalent of Return, any button with a title of “Cancel” has a key equivalent of Escape, and any button with the title “Don’t Save” has a key equivalent of Command-D (but only if it’s *not* the first button). You can also assign different key equivalents for the buttons using the [keyEquivalent](../nsbutton/keyequivalent.md) method of the `NSButton` class. In addition, you can use the [tag](../nscontrol/tag.md) method of the `NSButton` class to set the return value.
+
+## See Also
+
+### Related Documentation
+
+- [NSAlert](../nsalert.md): A modal dialog or sheet attached to a document window.
+
+### Accessing alert response buttons
+
+- [buttons](buttons.md): The array of response buttons for the alert.
+- [NSModalResponse](../nsapplication/modalresponse.md): A set of button return values for modal dialogs.

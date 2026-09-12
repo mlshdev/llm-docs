@@ -1,0 +1,115 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/systempolicykernelextensions](https://developer.apple.com/documentation/devicemanagement/systempolicykernelextensions)
+
+# SystemPolicyKernelExtensions
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Device Management Profile  
+**Availability:** macOS 10.13.2+
+
+The payload that configures the kernel extension policies.
+
+## Declaration
+
+```
+object SystemPolicyKernelExtensions
+```
+
+## Properties
+
+- `AllowedKernelExtensions` — `SystemPolicyKernelExtensions.AllowedKernelExtensions`: The dictionary that represents a set of kernel extensions that the system always allows to load on the computer. The dictionary maps team identifiers (keys) to arrays of bundle identifiers.
+- `AllowedTeamIdentifiers` — `[string]`: The array of team identifiers that define which validly signed kernel extensions can load.
+- `AllowNonAdminUserApprovals` — `boolean`: If `true`, nonadministrative users can approve additional kernel extensions in the Security & Privacy preferences.
+
+  Available: macOS 11+  
+  **Default:** `false`
+- `AllowUserOverrides` — `boolean`: If `true`, users can approve additional kernel extensions that configuration profiles don’t explicitly allow.
+  **Default:** `false`
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Specify `com.apple.syspolicy.kernel-extension-policy` as the payload type.
+
+<a id="Profile-availability"></a>
+
+### Profile availability
+
+|  |  |
+| --- | --- |
+| Device channel | macOS |
+| User channel | N/A |
+| Allow manual install | N/A |
+| Requires supervision | N/A |
+| Requires user-approved MDM | macOS |
+| Allowed in user enrollment | N/A |
+| Allow multiple payloads | macOS |
+
+<a id="Profile-example"></a>
+
+### Profile example
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>AllowUserOverrides</key>
+            <false/>
+            <key>AllowedTeamIdentifiers</key>
+            <array>
+                <string>ABCDE12345</string>
+            </array>
+            <key>AllowedKernelExtensions</key>
+            <dict>
+                <key></key>
+                <array>
+                    <string>com.example.mydriver</string>
+                </array>
+                <key>ABCDE12345</key>
+                <array>
+                    <string>com.example.kext.mydriver</string>
+                </array>
+            </dict>
+            <key>PayloadIdentifier</key>
+            <string>com.example.mysystempolicykernalextensionspayload</string>
+            <key>PayloadType</key>
+            <string>com.apple.syspolicy.kernel-extension-policy</string>
+            <key>PayloadUUID</key>
+            <string>3202f59b-3583-4e6c-82ae-776f3c815df1</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+    </array>
+    <key>PayloadDisplayName</key>
+    <string>System Policy Kernal Extension</string>
+    <key>PayloadIdentifier</key>
+    <string>com.example.myprofile</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>d9fa7f5b-713d-48f8-a8bd-219cf3061873</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>
+```
+
+## Topics
+
+### Objects
+
+- [SystemPolicyKernelExtensions.AllowedKernelExtensions](systempolicykernelextensions/allowedkernelextensions-data.dictionary.md): The dictionary that represents a set of kernel extensions.
+
+## See Also
+
+### System policy
+
+- [SystemPolicyControl](systempolicycontrol.md): The payload that configures the system policy for assessments.
+- [SystemPolicyManaged](systempolicymanaged.md): The payload that configures the Finder’s contextual menu to bypass the system policy.
+- [SystemPolicyRule](systempolicyrule.md): The payload that configures the system policy.

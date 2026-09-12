@@ -1,0 +1,53 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshaders/mpstemporaryimage/readcount](https://developer.apple.com/documentation/metalperformanceshaders/mpstemporaryimage/readcount)
+
+# readCount (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Instance Property  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
+
+The number of times a temporary image may be read by a CNN kernel before its contents become undefined.
+
+## Declaration
+
+```swift
+var readCount: Int { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Temporary images must release their underlying textures for reuse immediately after last use. In order to facilitate *prompt* and convenient memory recycling, each time a [MPSTemporaryImage](../mpstemporaryimage.md) object is read by an `encode` method of an [MPSCNNKernel](../mpscnnkernel.md) object, the value of its [readCount](readcount.md) property is automatically decremented. When the value of [readCount](readcount.md) reaches 0, the underlying texture is automatically made available and reusable to the framework for its own needs (and for other [MPSTemporaryImage](../mpstemporaryimage.md) objects prior to return from the `encode` method). The contents of the underlying texture become undefined at this time.
+
+By default, the value of [readCount](readcount.md) is initialized to 1, indicating a temporary image that may be overwritten any number of times, but read only once.
+
+You may change the value of [readCount](readcount.md) as desired to allow [MPSCNNKernel](../mpscnnkernel.md) objects to read the [MPSTemporaryImage](../mpstemporaryimage.md) object additional times. However, it is an error to change the value of [readCount](readcount.md) once it reaches 0 (it is also an error to read or write to a temporary image with a [readCount](readcount.md) value of 0). You may set the value of  [readCount](readcount.md) to 0 yourself to cause the underlying texture to be returned to the framework. Writing to a temporary image does not adjust the value of [readCount](readcount.md).
+
+The Metal API Validation layer will assert if a temporary image is deallocated with a non-zero [readCount](readcount.md) value to help identify cases when resources are not returned promptly.
+
+# readCount (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Instance Property  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 10.0+ · visionOS 1.0+
+
+The number of times a temporary image may be read by a CNN kernel before its contents become undefined.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readwrite) NSUInteger readCount;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Temporary images must release their underlying textures for reuse immediately after last use. In order to facilitate *prompt* and convenient memory recycling, each time a [MPSTemporaryImage](../mpstemporaryimage.md) object is read by an `encode` method of an [MPSCNNKernel](../mpscnnkernel.md) object, the value of its [readCount](readcount.md) property is automatically decremented. When the value of [readCount](readcount.md) reaches 0, the underlying texture is automatically made available and reusable to the framework for its own needs (and for other [MPSTemporaryImage](../mpstemporaryimage.md) objects prior to return from the `encode` method). The contents of the underlying texture become undefined at this time.
+
+By default, the value of [readCount](readcount.md) is initialized to 1, indicating a temporary image that may be overwritten any number of times, but read only once.
+
+You may change the value of [readCount](readcount.md) as desired to allow [MPSCNNKernel](../mpscnnkernel.md) objects to read the [MPSTemporaryImage](../mpstemporaryimage.md) object additional times. However, it is an error to change the value of [readCount](readcount.md) once it reaches 0 (it is also an error to read or write to a temporary image with a [readCount](readcount.md) value of 0). You may set the value of  [readCount](readcount.md) to 0 yourself to cause the underlying texture to be returned to the framework. Writing to a temporary image does not adjust the value of [readCount](readcount.md).
+
+The Metal API Validation layer will assert if a temporary image is deallocated with a non-zero [readCount](readcount.md) value to help identify cases when resources are not returned promptly.

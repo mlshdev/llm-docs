@@ -1,0 +1,23 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/appclipadvancedexperiencelocalizationinlinecreate/attributes-data.dictionary](https://developer.apple.com/documentation/appstoreconnectapi/appclipadvancedexperiencelocalizationinlinecreate/attributes-data.dictionary)
+
+# AppClipAdvancedExperienceLocalizationInlineCreate.Attributes
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.6+
+
+The attributes that describe an Advanced App Clip Experience Localization Inline Creates resource.
+
+## Declaration
+
+```
+object AppClipAdvancedExperienceLocalizationInlineCreate.Attributes
+```
+
+## Properties
+
+- `language` — `AppClipAdvancedExperienceLanguage`: A string that identifies the language of the advanced App Clip experience.
+- `subtitle` — `string`: The subtitle that appears on the App Clip card for the advanced App Clip experience.
+- `title` — `string`: The title that appears on the App Clip card for the advanced App Clip experience.

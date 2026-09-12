@@ -1,0 +1,40 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/scsiperipheralsdriverkit/scsideviceoutparameters/fdatatransferdirection](https://developer.apple.com/documentation/scsiperipheralsdriverkit/scsideviceoutparameters/fdatatransferdirection)
+
+# fDataTransferDirection
+
+**Interface language:** Objective-C
+
+**Framework:** SCSIPeripheralsDriverKit  
+**Kind:** Instance Property  
+**Availability:** DriverKit 22.0+
+
+The direction for the caller to send data to or receive data from the device.
+
+## Declaration
+
+```objectivec
+uint8_t fDataTransferDirection;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use the following `DriverKit/storage/SCSITask.h` direction values to populate this field:
+
+- [kSCSIDataTransfer_NoDataTransfer](../../iokit/1534749-data_transfer_direction/kscsidatatransfer_nodatatransfer.md)
+- [kSCSIDataTransfer_FromInitiatorToTarget](../../iokit/1534749-data_transfer_direction/kscsidatatransfer_frominitiatortotarget.md)
+- [kSCSIDataTransfer_FromTargetToInitiator](../../iokit/1534749-data_transfer_direction/kscsidatatransfer_fromtargettoinitiator.md)
+
+## See Also
+
+### Setting command parameters
+
+- [fLogicalUnitNumber](flogicalunitnumber.md): The SCSI logical unit number of the device that receives the command.
+- [fTimeoutDuration](ftimeoutduration.md): A timeout for the command, in milliseconds.
+- [fCommandDescriptorBlock](fcommanddescriptorblock.md): A 16-byte opcode to fill out the Command Descriptor Block (CDB).
+- [fRequestedByteCountOfTransfer](frequestedbytecountoftransfer.md): The size of the data to transfer.
+- [fBufferDirection](fbufferdirection.md): The direction for the buffer to send or receive data.
+- [fSenseLengthRequested](fsenselengthrequested.md): The length of sense data to read, in bytes.
+- [fDataBufferAddr](fdatabufferaddr.md): The virtual address of the buffer the dext creates to transfer data.
+- [fSenseBufferAddr](fsensebufferaddr.md): The virtual address of the buffer that the dext creates to transfer sense data.

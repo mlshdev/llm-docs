@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/transform/matrix](https://developer.apple.com/documentation/realitykit/transform/matrix)
+
+# matrix
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 26.0+ · visionOS
+
+The transform represented as a 4x4 matrix.
+
+## Declaration
+
+```swift
+var matrix: float4x4 { get set }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The [Transform](../transform.md) component can’t represent all transforms that a general 4x4 matrix can represent. Using a 4x4 matrix to set the transform is therefore a lossy event that might result in certain transformations, like shear, being dropped.
+
+## See Also
+
+### Setting transform properties
+
+- [scale](scale.md): The scaling factor applied to the entity.
+- [rotation](rotation.md): The rotation of the entity specified as a unit quaternion.
+- [translation](translation.md): The position of the entity along the x, y, and z axes.

@@ -1,0 +1,55 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiupdateinfo/isperforminglowlatencyphases](https://developer.apple.com/documentation/uikit/uiupdateinfo/isperforminglowlatencyphases)
+
+# isPerformingLowLatencyPhases (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · tvOS 18.0+ · visionOS 2.0+
+
+A Boolean value that indicates whether the UI update is in the low-latency phases.
+
+## Declaration
+
+```swift
+var isPerformingLowLatencyPhases: Bool { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The value of this property is [true](https://developer.apple.com/documentation/swift/true) between the [beforeLowLatencyEventDispatch](../uiupdateactionphase/beforelowlatencyeventdispatch.md) and [afterLowLatencyCATransactionCommit](../uiupdateactionphase/afterlowlatencycatransactioncommit.md) UI update phases. Keep any code you run in this part of the UI update as minimal as possible, especially when [isImmediatePresentationExpected](isimmediatepresentationexpected.md) is `true`. Defer any processing that isn’t critical for the current UI update until [afterLowLatencyCATransactionCommit](../uiupdateactionphase/afterlowlatencycatransactioncommit.md).
+
+## See Also
+
+### Working with low-latency updates
+
+- [isImmediatePresentationExpected](isimmediatepresentationexpected.md): A Boolean value that indicates whether the system presents UI updates immediately upon completion.
+- [isLowLatencyEventDispatchConfirmed](islowlatencyeventdispatchconfirmed.md): A Boolean value that indicates whether the system runs low-latency phases for the UI update.
+
+# performingLowLatencyPhases (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · tvOS 18.0+ · visionOS 2.0+
+
+A Boolean value that indicates whether the UI update is in the low-latency phases.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly, getter=isPerformingLowLatencyPhases) BOOL performingLowLatencyPhases;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The value of this property is [true](https://developer.apple.com/documentation/swift/true) between the [beforeLowLatencyEventDispatch](../uiupdateactionphase/beforelowlatencyeventdispatch.md) and [afterLowLatencyCATransactionCommit](../uiupdateactionphase/afterlowlatencycatransactioncommit.md) UI update phases. Keep any code you run in this part of the UI update as minimal as possible, especially when [immediatePresentationExpected](isimmediatepresentationexpected.md) is `true`. Defer any processing that isn’t critical for the current UI update until [afterLowLatencyCATransactionCommit](../uiupdateactionphase/afterlowlatencycatransactioncommit.md).
+
+## See Also
+
+### Working with low-latency updates
+
+- [immediatePresentationExpected](isimmediatepresentationexpected.md): A Boolean value that indicates whether the system presents UI updates immediately upon completion.
+- [lowLatencyEventDispatchConfirmed](islowlatencyeventdispatchconfirmed.md): A Boolean value that indicates whether the system runs low-latency phases for the UI update.

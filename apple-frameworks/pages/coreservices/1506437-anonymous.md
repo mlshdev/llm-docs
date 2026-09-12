@@ -1,0 +1,23 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/1506437-anonymous](https://developer.apple.com/documentation/coreservices/1506437-anonymous)
+
+# Anonymous
+
+**Interface language:** Objective-C
+
+**Framework:** Core Services  
+**Kind:** Enumeration  
+**Availability:** Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.0+ (deprecated in 10.8)
+
+## Declaration
+
+```objectivec
+enum : unsigned int {
+    ...
+};
+```
+
+## Topics
+
+### Constants
+
+- [defaultPhysicalEntryCount](1506437-anonymous/defaultphysicalentrycount.md): Deprecated.

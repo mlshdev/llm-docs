@@ -1,0 +1,138 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/delete-adgroups-_id_](https://developer.apple.com/documentation/apple-ads-platform-api/delete-adgroups-_id_)
+
+# Delete an Ad Group
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Web Service Endpoint  
+**Availability:** Apple Ads Platform API 1.0+
+
+Soft-delete an ad group by its unique identifier, along with all ads and keywords associated with it.
+
+## URL
+
+```http
+DELETE https://api.ads.apple.com/v1/adgroups/{id}
+```
+
+## Path Parameters
+
+- `id` — `string` (required):
+
+## Header Parameters
+
+- `X-Ap-Context` — `string` (required):
+
+## Response Codes
+
+- `200` OK — `Response`:
+- `400` Bad Request — `ErrorResponse`:
+- `401` Unauthorized — `ErrorResponse`:
+- `403` Forbidden — `ErrorResponse`:
+- `404` Not Found — `ErrorResponse`:
+- `429` Too Many Requests — `ErrorResponse`:
+- `500` Internal Server Error — `ErrorResponse`:
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This endpoint deletes an ad group by its ID, using a soft delete: the system marks it `deleted: true` and preserves the record. By default, `POST /adgroups/query` results exclude it unless you filter with `deleted EQUALS true`.
+
+Deletion cascades to all resources nested under the ad group: it also marks ads, keywords, and negative keywords as deleted. This operation can’t be undone.
+
+Deleting an ad group has the following effects:
+
+| Constraint | Detail |
+| --- | --- |
+| Soft delete only | The system marks the ad group `deleted: true` but retains the record. |
+| Cascade deletion | Deletion also marks all ads, keywords, and negative keywords belonging to the ad group as deleted. |
+| Excluded from query results by default | `POST /adgroups/query` results exclude deleted ad groups unless you filter with `deleted EQUALS true`. |
+| Parent campaign deletion also deletes ad groups | Deleting a campaign cascades to all of its ad groups and their nested resources. |
+
+<a id="Payload-Examples"></a>
+
+## Payload Examples
+
+**Delete Ad Group**
+
+<a id="Request"></a>
+
+### Request
+
+Deletes an ad group by its unique identifier. A successful delete returns HTTP 200 with an empty response body.
+
+```
+DELETE https://api.ads.apple.com/v1/adgroups/555666777
+```
+
+<a id="Response"></a>
+
+### Response
+
+```json
+{}
+```
+
+**Verify Deletion**
+
+<a id="Request"></a>
+
+### Request
+
+Query with `deleted EQUALS true` to confirm the ad group shows as deleted.
+
+```json
+POST /v1/adgroups/query
+
+{
+ "filters": [
+   {
+     "field": "campaignId",
+     "operator": "EQUALS",
+     "value": 444555666
+   },
+   {
+     "field": "deleted",
+     "operator": "EQUALS",
+     "value": true
+   }
+ ]
+}
+```
+
+<a id="Response"></a>
+
+### Response
+
+```json
+{
+ "result": [
+   {
+     "id": 555666777,
+     "name": "AwayFinder iOS — New Users 18-34",
+     "adAccountId": 123456789,
+     "campaignId": 444555666,
+     "pricingModel": "CPT",
+     "status": "ENABLED",
+     "systemStatus": "NOT_RUNNING",
+     "deleted": true,
+     "creationTime": "2025-01-10T08:00:00.000",
+     "modificationTime": "2025-06-15T14:00:00.000"
+   }
+ ],
+ "pagination": {
+   "totalCount": 1,
+   "offset": 0,
+   "pageSize": 20
+ }
+}
+```
+
+## See Also
+
+- [Create an Ad Group](post-adgroups.md): Create a new ad group within a campaign, defining targeting, bid strategy, and scheduling for a set of ads.
+- [Query Ad Groups](post-adgroups-query.md): Query ad groups using filters, sorting, and pagination.
+- [Get an Ad Group](get-adgroups-_id_.md): Retrieve a single ad group by its unique identifier.
+- [Update an Ad Group](put-adgroups-_id_.md): Update an existing ad group’s name, status, bid strategy, targeting, or scheduling.

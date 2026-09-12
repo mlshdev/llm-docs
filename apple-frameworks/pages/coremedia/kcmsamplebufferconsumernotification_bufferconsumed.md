@@ -1,0 +1,57 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremedia/kcmsamplebufferconsumernotification_bufferconsumed](https://developer.apple.com/documentation/coremedia/kcmsamplebufferconsumernotification_bufferconsumed)
+
+# kCMSampleBufferConsumerNotification_BufferConsumed (Swift)
+
+**Framework:** Core Media  
+**Kind:** Global Variable  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Optionally posted when a sample buffer is consumed.
+
+## Declaration
+
+```swift
+let kCMSampleBufferConsumerNotification_BufferConsumed: CFString
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If a sample buffer has a value for the [kCMSampleBufferAttachmentKey_PostNotificationWhenConsumed](kcmsamplebufferattachmentkey_postnotificationwhenconsumed.md) attachment, an object that consumes the sample buffer should post this notification with itself as the notifying object and the attachment value as the `userInfo` dictionary.
+
+## See Also
+
+### Sample Buffer Notifications
+
+- [kCMSampleBufferNotification_DataBecameReady](kcmsamplebuffernotification_databecameready.md): Posted on a sample buffer by the [CMSampleBufferSetDataReady(\_:)](cmsamplebuffersetdataready%28__%29.md) function when the buffer becomes ready.
+- [kCMSampleBufferNotification_DataFailed](kcmsamplebuffernotification_datafailed.md)
+- [kCMSampleBufferNotificationParameter_OSStatus](kcmsamplebuffernotificationparameter_osstatus.md)
+
+# kCMSampleBufferConsumerNotification_BufferConsumed (Objective-C)
+
+**Framework:** Core Media  
+**Kind:** Global Variable  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Optionally posted when a sample buffer is consumed.
+
+## Declaration
+
+```objectivec
+extern CFStringRef const kCMSampleBufferConsumerNotification_BufferConsumed;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If a sample buffer has a value for the [kCMSampleBufferAttachmentKey_PostNotificationWhenConsumed](kcmsamplebufferattachmentkey_postnotificationwhenconsumed.md) attachment, an object that consumes the sample buffer should post this notification with itself as the notifying object and the attachment value as the `userInfo` dictionary.
+
+## See Also
+
+### Sample Buffer Notifications
+
+- [kCMSampleBufferNotification_DataBecameReady](kcmsamplebuffernotification_databecameready.md): Posted on a sample buffer by the [CMSampleBufferSetDataReady](cmsamplebuffersetdataready%28__%29.md) function when the buffer becomes ready.
+- [kCMSampleBufferNotification_DataFailed](kcmsamplebuffernotification_datafailed.md)
+- [kCMSampleBufferNotificationParameter_OSStatus](kcmsamplebuffernotificationparameter_osstatus.md)

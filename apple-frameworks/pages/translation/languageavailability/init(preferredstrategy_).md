@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/translation/languageavailability/init(preferredstrategy:)](https://developer.apple.com/documentation/translation/languageavailability/init(preferredstrategy:))
+
+# init(preferredStrategy:)
+
+**Framework:** Translation  
+**Kind:** Initializer  
+**Availability:** iOS 26.4+ · iPadOS 26.4+ · Mac Catalyst 26.0+ · macOS 26.4+
+
+Creates an instance for checking language availability with a preferred translation strategy.
+
+## Declaration
+
+```swift
+init(preferredStrategy: TranslationSession.Strategy)
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Set this property to determine which translation models the framework considers when checking language availability. [lowLatency](../translationsession/strategy/lowlatency.md) checks for traditional translation models that provide faster translations and use less power. [highFidelity](../translationsession/strategy/highfidelity.md) checks for Apple Intelligence models that provide more fluent translations. When Apple Intelligence is enabled, these models are already downloaded, so translation is immediately available without prompting the person to download languages. On devices without Apple Intelligence, it falls back to the traditional models used by `lowLatency`.
+
+## See Also
+
+### Creating a language availability
+
+- [init()](init%28%29.md): Creates an instance to check what languages are available.

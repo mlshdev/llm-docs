@@ -1,0 +1,36 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/backgroundassets/assetpackmanager/reconcilepreferredlanguages()](https://developer.apple.com/documentation/backgroundassets/assetpackmanager/reconcilepreferredlanguages())
+
+# reconcilePreferredLanguages()
+
+**Framework:** Background Assets  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+Reconciles the set of locally available asset packs with the current preferred languages.
+
+## Declaration
+
+```swift
+func reconcilePreferredLanguages() async throws
+```
+
+## Mentioned In
+
+- [Reducing download and storage demands with localized asset packs](../reducing-download-and-storage-demands-with-localized-asset-packs.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+This method downloads any missing localized asset packs, waits for those downloads to finish, and removes any unneeded ones. If you’ve overridden the preferred languages by setting [resolvedLanguage](resolvedlanguage.md), then this method will respect that. It won’t remove any localized asset packs that you’ve downloaded manually.
+
+> **Throws**
+
+> When the set of locally available asset packs can’t be reconciled with the preferred languages. When the thrown error is an instance of [AssetPackManager.LocalAvailabilityError](localavailabilityerror.md), it provides information about asset packs for which the system successfully ensured local availability and those for which the system couldn’t ensure local availability, with an underlying error for each failure.
+
+## See Also
+
+### Inspecting language support
+
+- [locallyAvailableLanguages](locallyavailablelanguages.md): The languages used by asset packs that are localized and are available locally.
+- [resolvedLanguage](resolvedlanguage.md): The language that best matches current preferences and for which the system automatically makes localized asset packs available locally.

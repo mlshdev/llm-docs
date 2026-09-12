@@ -1,0 +1,127 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coregraphics/cgevent/tapcreate(tap:place:options:eventsofinterest:callback:userinfo:)](https://developer.apple.com/documentation/coregraphics/cgevent/tapcreate(tap:place:options:eventsofinterest:callback:userinfo:))
+
+# tapCreate(tap:place:options:eventsOfInterest:callback:userInfo:) (Swift)
+
+**Framework:** Core Graphics  
+**Kind:** Type Method  
+**Availability:** Mac Catalyst 13.1+ · macOS 10.4+
+
+Creates an event tap.
+
+## Declaration
+
+```swift
+class func tapCreate(tap: CGEventTapLocation, place: CGEventTapPlacement, options: CGEventTapOptions, eventsOfInterest: CGEventMask, callback: CGEventTapCallBack, userInfo: UnsafeMutableRawPointer?) -> CFMachPort?
+```
+
+## Parameters
+
+- `tap`: The location of the new event tap. Pass one of the constants listed in [CGEventTapLocation](../cgeventtaplocation.md). Only processes running as the root user may locate an event tap at the point where HID events enter the window server; for other users, this function returns `NULL`.
+- `place`: The placement of the new event tap in the list of active event taps. Pass one of the constants listed in [CGEventTapPlacement](../cgeventtapplacement.md).
+- `options`: A constant that specifies whether the new event tap is a passive listener or an active filter.
+- `eventsOfInterest`: A bit mask that specifies the set of events to be observed. For a list of possible events, see [CGEventType](../cgeventtype.md). For information on how to specify the mask, see [CGEventMask](../cgeventmask.md). If the event tap is not permitted to monitor one or more of the events specified in the `eventsOfInterest` parameter, then the appropriate bits in the mask are cleared. If that action results in an empty mask, this function returns `NULL`.
+- `callback`: An event tap callback function that you provide. Your callback function is invoked from the run loop to which the event tap is added as a source. The thread safety of the callback is defined by the run loop’s environment. To learn more about event tap callbacks, see [CGEventTapCallBack](../cgeventtapcallback.md).
+- `userInfo`: A pointer to user-defined data. This pointer is passed into the callback function specified in the `callback` parameter.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A Core Foundation mach port that represents the new event tap, or `NULL` if the event tap could not be created. When you are finished using the event tap, you should release the mach port using the function `CFRelease`. Releasing the mach port also releases the tap.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Event taps receive key up and key down events if one of the following conditions is true:
+
+- The current process is running as the root user.
+- Access for assistive devices is enabled. In OS X v10.4, you can enable this feature using System Preferences, Universal Access panel, Keyboard view.
+
+After creating an event tap, you can add it to a run loop as follows:
+
+1. Pass the event tap to the [CFMachPortCreateRunLoopSource(\_:\_:\_:)](../../corefoundation/cfmachportcreaterunloopsource%28______%29.md) function to create a run loop event source.
+2. Call the [CFRunLoopAddSource(\_:\_:\_:)](../../corefoundation/cfrunloopaddsource%28______%29.md) function to add the source to the appropriate run loop.
+
+## See Also
+
+### Functions
+
+- [CGAcquireDisplayFadeReservation(\_:\_:)](../cgacquiredisplayfadereservation%28____%29.md): Reserves the fade hardware for a specified time interval.
+- [CGAssociateMouseAndMouseCursorPosition(\_:)](../cgassociatemouseandmousecursorposition%28__%29.md): Connects or disconnects the mouse and cursor while an application is in the foreground.
+- [CGBeginDisplayConfiguration(\_:)](../cgbegindisplayconfiguration%28__%29.md): Begins a new set of display configuration changes.
+- [CGCancelDisplayConfiguration(\_:)](../cgcanceldisplayconfiguration%28__%29.md): Cancels a set of display configuration changes.
+- [CGCaptureAllDisplays()](../cgcapturealldisplays%28%29.md): Obtains exclusive use of all active displays, preventing other applications and system services from using the display or changing its configuration.
+- [CGCaptureAllDisplaysWithOptions(\_:)](../cgcapturealldisplayswithoptions%28__%29.md): Captures all attached displays, using the specified options.
+- [CGCompleteDisplayConfiguration(\_:\_:)](../cgcompletedisplayconfiguration%28____%29.md): Completes a set of display configuration changes.
+- [CGConfigureDisplayFadeEffect(\_:\_:\_:\_:\_:\_:)](../cgconfiguredisplayfadeeffect%28____________%29.md): Modifies the settings of the built-in fade effect that occurs during a display configuration.
+- [CGConfigureDisplayMirrorOfDisplay(\_:\_:\_:)](../cgconfiguredisplaymirrorofdisplay%28______%29.md): Changes the configuration of a mirroring set.
+- [CGConfigureDisplayMode(\_:\_:\_:)](../cgconfiguredisplaymode%28______%29.md): Deprecated. Configures the display mode of a display.
+- [CGConfigureDisplayOrigin(\_:\_:\_:\_:)](../cgconfiguredisplayorigin%28________%29.md): Configures the origin of a display relative to the global display coordinate space.
+- [CGConfigureDisplayStereoOperation(\_:\_:\_:\_:)](../cgconfiguredisplaystereooperation%28________%29.md): Enables or disables stereo operation for a display, as part of a display configuration.
+- [CGConfigureDisplayWithDisplayMode(\_:\_:\_:\_:)](../cgconfiguredisplaywithdisplaymode%28________%29.md): Configures the display mode of a display.
+- [CGCursorIsDrawnInFramebuffer()](../cgcursorisdrawninframebuffer%28%29.md): Deprecated. Returns a Boolean value indicating whether the mouse cursor is drawn in framebuffer memory.
+- [CGCursorIsVisible()](../cgcursorisvisible%28%29.md): Deprecated. Returns a Boolean value indicating whether the mouse cursor is visible.
+
+# CGEventTapCreate (Objective-C)
+
+**Framework:** Core Graphics  
+**Kind:** Function  
+**Availability:** Mac Catalyst 13.1+ · macOS 10.4+
+
+Creates an event tap.
+
+## Declaration
+
+```objectivec
+extern CFMachPortRefCGEventTapCreate(CGEventTapLocation tap, CGEventTapPlacement place, CGEventTapOptions options, CGEventMask eventsOfInterest, CGEventTapCallBack callback, void *userInfo);
+```
+
+## Parameters
+
+- `tap`: The location of the new event tap. Pass one of the constants listed in [CGEventTapLocation](../cgeventtaplocation.md). Only processes running as the root user may locate an event tap at the point where HID events enter the window server; for other users, this function returns `NULL`.
+- `place`: The placement of the new event tap in the list of active event taps. Pass one of the constants listed in [CGEventTapPlacement](../cgeventtapplacement.md).
+- `options`: A constant that specifies whether the new event tap is a passive listener or an active filter.
+- `eventsOfInterest`: A bit mask that specifies the set of events to be observed. For a list of possible events, see [CGEventType](../cgeventtype.md). For information on how to specify the mask, see [CGEventMask](../cgeventmask.md). If the event tap is not permitted to monitor one or more of the events specified in the `eventsOfInterest` parameter, then the appropriate bits in the mask are cleared. If that action results in an empty mask, this function returns `NULL`.
+- `callback`: An event tap callback function that you provide. Your callback function is invoked from the run loop to which the event tap is added as a source. The thread safety of the callback is defined by the run loop’s environment. To learn more about event tap callbacks, see [CGEventTapCallBack](../cgeventtapcallback.md).
+- `userInfo`: A pointer to user-defined data. This pointer is passed into the callback function specified in the `callback` parameter.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A Core Foundation mach port that represents the new event tap, or `NULL` if the event tap could not be created. When you are finished using the event tap, you should release the mach port using the function `CFRelease`. Releasing the mach port also releases the tap.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Event taps receive key up and key down events if one of the following conditions is true:
+
+- The current process is running as the root user.
+- Access for assistive devices is enabled. In OS X v10.4, you can enable this feature using System Preferences, Universal Access panel, Keyboard view.
+
+After creating an event tap, you can add it to a run loop as follows:
+
+1. Pass the event tap to the [CFMachPortCreateRunLoopSource](../../corefoundation/cfmachportcreaterunloopsource%28______%29.md) function to create a run loop event source.
+2. Call the [CFRunLoopAddSource](../../corefoundation/cfrunloopaddsource%28______%29.md) function to add the source to the appropriate run loop.
+
+## See Also
+
+### Functions
+
+- [CGAcquireDisplayFadeReservation](../cgacquiredisplayfadereservation%28____%29.md): Reserves the fade hardware for a specified time interval.
+- [CGAssociateMouseAndMouseCursorPosition](../cgassociatemouseandmousecursorposition%28__%29.md): Connects or disconnects the mouse and cursor while an application is in the foreground.
+- [CGBeginDisplayConfiguration](../cgbegindisplayconfiguration%28__%29.md): Begins a new set of display configuration changes.
+- [CGCancelDisplayConfiguration](../cgcanceldisplayconfiguration%28__%29.md): Cancels a set of display configuration changes.
+- [CGCaptureAllDisplays](../cgcapturealldisplays%28%29.md): Obtains exclusive use of all active displays, preventing other applications and system services from using the display or changing its configuration.
+- [CGCaptureAllDisplaysWithOptions](../cgcapturealldisplayswithoptions%28__%29.md): Captures all attached displays, using the specified options.
+- [CGColorConversionInfoCreateFromList](../cgcolorconversioninfocreatefromlist.md): Creates a conversion between an arbitrary number of specified color spaces.
+- [CGCompleteDisplayConfiguration](../cgcompletedisplayconfiguration%28____%29.md): Completes a set of display configuration changes.
+- [CGConfigureDisplayFadeEffect](../cgconfiguredisplayfadeeffect%28____________%29.md): Modifies the settings of the built-in fade effect that occurs during a display configuration.
+- [CGConfigureDisplayMirrorOfDisplay](../cgconfiguredisplaymirrorofdisplay%28______%29.md): Changes the configuration of a mirroring set.
+- [CGConfigureDisplayMode](../cgconfiguredisplaymode%28______%29.md): Deprecated. Configures the display mode of a display.
+- [CGConfigureDisplayOrigin](../cgconfiguredisplayorigin%28________%29.md): Configures the origin of a display relative to the global display coordinate space.
+- [CGConfigureDisplayStereoOperation](../cgconfiguredisplaystereooperation%28________%29.md): Enables or disables stereo operation for a display, as part of a display configuration.
+- [CGConfigureDisplayWithDisplayMode](../cgconfiguredisplaywithdisplaymode%28________%29.md): Configures the display mode of a display.
+- [CGContextDrawPDFDocument](../cgcontextdrawpdfdocument.md): Deprecated.

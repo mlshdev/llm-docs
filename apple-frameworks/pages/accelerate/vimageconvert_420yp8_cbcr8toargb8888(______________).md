@@ -1,0 +1,73 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimageconvert_420yp8_cbcr8toargb8888(_:_:_:_:_:_:_:)](https://developer.apple.com/documentation/accelerate/vimageconvert_420yp8_cbcr8toargb8888(_:_:_:_:_:_:_:))
+
+# vImageConvert_420Yp8_CbCr8ToARGB8888(\_:\_:\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 8.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Converts a planar Yp buffer and a 2-channel CbCr buffer to an 8-bit-per-channel, 4-channel ARGB buffer.
+
+## Declaration
+
+```swift
+func vImageConvert_420Yp8_CbCr8ToARGB8888(_ srcYp: UnsafePointer<vImage_Buffer>, _ srcCbCr: UnsafePointer<vImage_Buffer>, _ dest: UnsafePointer<vImage_Buffer>, _ info: UnsafePointer<vImage_YpCbCrToARGB>, _ permuteMap: UnsafePointer<UInt8>!, _ alpha: UInt8, _ flags: vImage_Flags) -> vImage_Error
+```
+
+## Parameters
+
+- `srcYp`: The source vImage buffer that contains the Yp channel.
+- `srcCbCr`: The source vImage buffer that contains the CbCr channels.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the [height](vimage_buffer/height.md), [width](vimage_buffer/width.md), and [rowBytes](vimage_buffer/rowbytes.md) fields of this structure, and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+- `info`: A [vImage_YpCbCrToARGB](vimage_ypcbcrtoargb.md) structure that describes the conversion matrix, the range of the input and output pixels from the matrix, and clamping information.
+- `permuteMap`: An array of four 8-bit integers with the values `0`, `1`, `2`, and 3, in some order. Each value specifies the channel from the source image that the function copies to the destination channel at the corresponding index.
+- `alpha`: The constant destination alpha value.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes in [Data Types and Constants](data-types-and-constants.md).
+
+## See Also
+
+### Converting from 4:2:0
+
+- [vImageConvert_420Yp8_Cb8_Cr8ToARGB8888(\_:\_:\_:\_:\_:\_:\_:\_:)](vimageconvert_420yp8_cb8_cr8toargb8888%28________________%29.md): Converts planar Yp, Cb, and Cr buffers to an 8-bit-per-channel, 4-channel ARGB buffer.
+
+# vImageConvert_420Yp8_CbCr8ToARGB8888 (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 8.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Converts a planar Yp buffer and a 2-channel CbCr buffer to an 8-bit-per-channel, 4-channel ARGB buffer.
+
+## Declaration
+
+```objectivec
+vImage_Error vImageConvert_420Yp8_CbCr8ToARGB8888(const vImage_Buffer *srcYp, const vImage_Buffer *srcCbCr, const vImage_Buffer *dest, const vImage_YpCbCrToARGB *info, const uint8_t permuteMap[4], const uint8_t alpha, vImage_Flags flags);
+```
+
+## Parameters
+
+- `srcYp`: The source vImage buffer that contains the Yp channel.
+- `srcCbCr`: The source vImage buffer that contains the CbCr channels.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the [height](vimage_buffer/height.md), [width](vimage_buffer/width.md), and [rowBytes](vimage_buffer/rowbytes.md) fields of this structure, and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+- `info`: A [vImage_YpCbCrToARGB](vimage_ypcbcrtoargb.md) structure that describes the conversion matrix, the range of the input and output pixels from the matrix, and clamping information.
+- `permuteMap`: An array of four 8-bit integers with the values `0`, `1`, `2`, and 3, in some order. Each value specifies the channel from the source image that the function copies to the destination channel at the corresponding index.
+- `alpha`: The constant destination alpha value.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes in [Data Types and Constants](data-types-and-constants.md).
+
+## See Also
+
+### Converting from 4:2:0
+
+- [vImageConvert_420Yp8_Cb8_Cr8ToARGB8888](vimageconvert_420yp8_cb8_cr8toargb8888%28________________%29.md): Converts planar Yp, Cb, and Cr buffers to an 8-bit-per-channel, 4-channel ARGB buffer.

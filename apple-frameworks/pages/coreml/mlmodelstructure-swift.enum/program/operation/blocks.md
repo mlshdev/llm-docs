@@ -1,0 +1,23 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreml/mlmodelstructure-swift.enum/program/operation/blocks](https://developer.apple.com/documentation/coreml/mlmodelstructure-swift.enum/program/operation/blocks)
+
+# blocks
+
+**Framework:** Core ML  
+**Kind:** Instance Property  
+**Availability:** iOS 17.4+ · iPadOS 17.4+ · Mac Catalyst 17.4+ · macOS 14.4+ · tvOS 17.4+ · visionOS 1.0+ · watchOS 10.4+
+
+Nested blocks for loops and conditionals, e.g., a conditional block will have two entries here.
+
+## Declaration
+
+```swift
+let blocks: [MLModelStructure.Program.Block]
+```
+
+## See Also
+
+### Accessing the properties
+
+- [inputs](inputs.md): The arguments to the Operation.
+- [operatorName](operatorname.md): The name of the operator, e.g., “conv”, “pool”, “softmax”, etc.
+- [outputs](outputs.md): The outputs of the Operation.

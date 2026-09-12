@@ -1,0 +1,67 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreml/mlmodel/init(contentsof:configuration:)](https://developer.apple.com/documentation/coreml/mlmodel/init(contentsof:configuration:))
+
+# init(contentsOf:configuration:) (Swift)
+
+**Framework:** Core ML  
+**Kind:** Initializer  
+**Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+ · macOS 10.14+ · tvOS 12.0+ · visionOS 1.0+ · watchOS 5.0+
+
+Creates a Core ML model instance from a compiled model file and a custom configuration.
+
+## Declaration
+
+```swift
+convenience init(contentsOf url: URL, configuration: MLModelConfiguration) throws
+```
+
+## Parameters
+
+- `url`: The path to a compiled model file (*ModelName*`.mlmodelc`), typically with the `URL` that [compileModel(at:)](https://developer.apple.com/documentation/coreml/mlmodel/compilemodel%28at:%29-6442s) returns.
+- `configuration`: The runtime settings for the new model instance.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+In most cases, your app won’t need to create a model object directly. Consider the programmer-friendly wrapper class that Xcode automatically generates when you add a model to your project (see [Integrating a Core ML Model into Your App](../integrating-a-core-ml-model-into-your-app.md)).
+
+If the wrapper class doesn’t meet your app’s needs or you need to customize the model’s configuration, use this initializer to create a model object from any compiled model file you can access. Typically, you use this initializer after your app has downloaded and compiled a model, which is one technique for saving space in your app (see [Downloading and Compiling a Model on the User’s Device](../downloading-and-compiling-a-model-on-the-user-s-device.md)).
+
+## See Also
+
+### Loading a model
+
+- [load(contentsOf:configuration:)](load%28contentsof_configuration_%29.md): Construct a model asynchronously from a compiled model asset.
+- [load(\_:configuration:completionHandler:)](load%28__configuration_completionhandler_%29.md): Construct a model asynchronously from a compiled model asset.
+- [load(contentsOf:configuration:completionHandler:)](load%28contentsof_configuration_completionhandler_%29.md): Creates a Core ML model instance asynchronously from a compiled model file, a custom configuration, and a completion handler.
+- [init(contentsOf:)](init%28contentsof_%29.md): Creates a Core ML model instance from a compiled model file.
+- [init(contentsOfURL:)](init%28contentsofurl_%29.md)
+- [init(contentsOfURL:configuration:)](init%28contentsofurl_configuration_%29.md)
+
+# modelWithContentsOfURL:configuration:error: (Objective-C)
+
+**Framework:** Core ML  
+**Kind:** Type Method  
+**Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+ · macOS 10.14+ · tvOS 12.0+ · visionOS 1.0+ · watchOS 5.0+
+
+Creates a Core ML model instance from a compiled model file and a custom configuration.
+
+## Declaration
+
+```objectivec
++ (instancetype) modelWithContentsOfURL:(NSURL *) url configuration:(MLModelConfiguration *) configuration error:(NSError **) error;
+```
+
+## Parameters
+
+- `url`: The path to a compiled model file (*ModelName*`.mlmodelc`), typically with the `URL` that [compileModelAtURL:error:](https://developer.apple.com/documentation/coreml/mlmodel/compilemodel%28at:%29-6442s) returns.
+- `configuration`: The runtime settings for the new model instance.
+- `error`: On return in Objective-C, if an error occurs, a pointer to an error information instance; otherwise `nil`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+In most cases, your app won’t need to create a model object directly. Consider the programmer-friendly wrapper class that Xcode automatically generates when you add a model to your project (see [Integrating a Core ML Model into Your App](../integrating-a-core-ml-model-into-your-app.md)).
+
+If the wrapper class doesn’t meet your app’s needs or you need to customize the model’s configuration, use this initializer to create a model object from any compiled model file you can access. Typically, you use this initializer after your app has downloaded and compiled a model, which is one technique for saving space in your app (see [Downloading and Compiling a Model on the User’s Device](../downloading-and-compiling-a-model-on-the-user-s-device.md)).

@@ -1,0 +1,34 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimage/pixelbuffer/init(size:pixelformat:)-12gl9](https://developer.apple.com/documentation/accelerate/vimage/pixelbuffer/init(size:pixelformat:)-12gl9)
+
+# init(size:pixelFormat:)
+
+**Framework:** Accelerate  
+**Kind:** Initializer  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS · watchOS 9.0+
+
+Returns a new multiplane pixel buffer with a size that you specify.
+
+## Declaration
+
+```swift
+init(size: vImage.Size, pixelFormat: Format.Type = Format.self)
+```
+
+## Parameters
+
+- `size`: The width and height of the buffer.
+- `pixelFormat`: The pixel format of the buffer.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This initializer allocates but doesn’t initialize the pixel buffer’s memory. That is, the operation doesn’t guarantee that all pixel values are zero.
+
+## See Also
+
+### Creating a pixel buffer
+
+- [init(size:pixelFormat:)](init%28size_pixelformat_%29-96ocu.md): Conforms when `Format` conforms to `StaticPixelFormat`. Returns a new pixel buffer with a size that you specify.
+- [init(width:height:pixelFormat:)](init%28width_height_pixelformat_%29.md): Conforms when `Format` conforms to `StaticPixelFormat`. Returns a new pixel buffer with a width and height that you specify.
+- [vImage.Size](../size.md): A structure that contains width and height values.

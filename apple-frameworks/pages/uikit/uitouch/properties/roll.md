@@ -1,0 +1,47 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uitouch/properties/roll](https://developer.apple.com/documentation/uikit/uitouch/properties/roll)
+
+# roll (Swift)
+
+**Framework:** UIKit  
+**Kind:** Type Property  
+**Availability:** iOS 17.5+ · iPadOS 17.5+ · Mac Catalyst 17.5+ · visionOS 1.2+
+
+A touch property, representing barrel-roll angle, in a bit mask.
+
+## Declaration
+
+```swift
+static var roll: UITouch.Properties { get }
+```
+
+## See Also
+
+### Constants
+
+- [force](force.md): A touch property, representing force, in a bit mask.
+- [azimuth](azimuth.md): A touch property, representing azimuth, in a bit mask.
+- [altitude](altitude.md): A touch property, representing altitude, in a bit mask.
+- [location](location.md): A touch property, representing location, in a bit mask.
+
+# UITouchPropertyRoll (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.5+ · iPadOS 17.5+ · Mac Catalyst 17.5+ · visionOS 1.2+
+
+A touch property, representing barrel-roll angle, in a bit mask.
+
+## Declaration
+
+```objectivec
+UITouchPropertyRoll
+```
+
+## See Also
+
+### Constants
+
+- [UITouchPropertyForce](force.md): A touch property, representing force, in a bit mask.
+- [UITouchPropertyAzimuth](azimuth.md): A touch property, representing azimuth, in a bit mask.
+- [UITouchPropertyAltitude](altitude.md): A touch property, representing altitude, in a bit mask.
+- [UITouchPropertyLocation](location.md): A touch property, representing location, in a bit mask.

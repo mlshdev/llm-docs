@@ -1,0 +1,38 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/iodataqueuedispatchsource/enqueue](https://developer.apple.com/documentation/driverkit/iodataqueuedispatchsource/enqueue)
+
+# Enqueue
+
+**Interface language:** Objective-C
+
+**Framework:** DriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit · iOS · iPadOS · macOS
+
+Adds a single entry to the shared data queue.
+
+## Declaration
+
+```objectivec
+kern_return_t Enqueue(uint32_t dataSize, IODataQueueClientEnqueueEntryBlock callback);
+```
+
+## Parameters
+
+- `dataSize`: The size of the data to enqueue.
+- `callback`: The callback to execute when there is enough space to enqueue the data.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kIOReturnSuccess](../kioreturnsuccess.md) on success, [kIOReturnOverrun](../kioreturnoverrun.md) if the queue was full, or [kIOReturnError](../kioreturnerror.md) if the queue is corrupt. See [Error Codes](../error-codes.md).
+
+## See Also
+
+### Adding Work to the Queue
+
+- [SetDataServicedHandler](setdataservicedhandler.md): Installs the handler block to execute when data is removed from the queue.
+- [DataServiced](dataserviced.md): Responds to the removal of data from the queue.
+- [EnqueueWithCoalesce](enqueuewithcoalesce.md): Adds an entry to the queue, but doesn’t automatically send a data-available notification.
+- [SendDataAvailable](senddataavailable.md): Sends a notification to observers that indicates more data is available for processing.
+- [IODataQueueClientEnqueueEntryBlock](../iodataqueueclientenqueueentryblock.md): The handler block you use to add data to a queue.

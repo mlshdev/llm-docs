@@ -1,0 +1,59 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/scene/environment(_:_:)](https://developer.apple.com/documentation/swiftui/scene/environment(_:_:))
+
+# environment(\_:\_:)
+
+**Framework:** SwiftUI  
+**Kind:** Instance Method  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 7.0+
+
+Sets the environment value of the specified key path to the given value.
+
+## Declaration
+
+```swift
+@export(implementation) nonisolated func environment<V>(_ keyPath: WritableKeyPath<EnvironmentValues, V>, _ value: V) -> some Scene
+
+```
+
+## Parameters
+
+- `keyPath`: A key path that indicates the property of the [EnvironmentValues](../environmentvalues.md) structure to update.
+- `value`: The new value to set for the item specified by `keyPath`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A view that has the given value set in its environment.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this modifier to set one of the writable properties of the [EnvironmentValues](../environmentvalues.md) structure, including custom values that you create. For example, you can create a custom environment key `styleOverrides` to set a value that represents style settings that for the entire app:
+
+```swift
+WindowGroup {
+    ContentView()
+}
+.environment(\.styleOverrides, StyleOverrides())
+```
+
+You then read the value inside `ContentView` or one of its descendants using the [Environment](../environment.md) property wrapper:
+
+```swift
+struct MyView: View {
+    @Environment(\.styleOverrides) var styleOverrides: StyleOverrides
+
+    var body: some View { ... }
+}
+```
+
+This modifier affects the given scene, as well as that scene’s descendant views. It has no effect outside the view hierarchy on which you call it.
+
+## See Also
+
+### Modifying the environment of a scene
+
+- [environment(\_:)](environment%28__%29.md): Places an observable object in the scene’s environment.
+- [transformEnvironment(\_:transform:)](transformenvironment%28__transform_%29.md): Transforms the environment value of the specified key path with the given function.

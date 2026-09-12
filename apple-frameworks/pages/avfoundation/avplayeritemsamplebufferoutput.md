@@ -1,0 +1,147 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avplayeritemsamplebufferoutput](https://developer.apple.com/documentation/avfoundation/avplayeritemsamplebufferoutput)
+
+# AVPlayerItemSampleBufferOutput (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Class  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+[AVPlayerItemSampleBufferOutput](avplayeritemsamplebufferoutput.md) delivers `CMSampleBuffers` for [AVPlayerItem](avplayeritem.md) playback.
+
+## Declaration
+
+```swift
+class AVPlayerItemSampleBufferOutput
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Playback only happens when the [AVPlayerItem](avplayeritem.md) is the current item of its [AVPlayer](avplayer.md).
+
+Create an [AVPlayerItemSampleBufferOutput](avplayeritemsamplebufferoutput.md) with a [AVPlayerItemSampleBufferOutputAudioConfiguration](avplayeritemsamplebufferoutputaudioconfiguration.md) to configure it to deliver `CMSampleBuffers` containing the decoded audio, and attach it to the [AVPlayerItem](avplayeritem.md) using `-[AVPlayerItem addOutput:]`; the audio will be in the format specified by the configuration object’s `requestedAudioFormat`.
+
+Note that [AVPlayerItemSampleBufferOutput](avplayeritemsamplebufferoutput.md) may be used to pull `CMSampleBuffers` far ahead of the current play time.  Practical use requires clients to monitor the item timebase time, and pause pulling when they have received CMSampleBuffers sufficient to prepare for near-term-future playback or processing.
+
+Marker-only `CMSampleBuffers` may be among those returned; you can detect and skip these by testing whether `CMSampleBufferGetNumSamples(sampleBuffer) == 0`.
+
+The output `CMSampleBuffers` will have appropriate OutputPresentationTimeStamps for playback, but beyond that, synchronizing presentation to the AVPlayerItem’s timebase is entirely up to the client.
+
+Currently supported for HLS `AVPlayerItems` only, and only for delivering decoded PCM audio.
+
+## Topics
+
+### Creating a sample buffer output
+
+- [init(configuration:)](avplayeritemsamplebufferoutput/init%28configuration_%29.md): Initializes an instance of [AVPlayerItemSampleBufferOutput](avplayeritemsamplebufferoutput.md).
+
+### Retrieving sample buffers
+
+- [nextAvailableSampleBuffer()](avplayeritemsamplebufferoutput/nextavailablesamplebuffer%28%29.md): Returns the next sample buffer if it is already available.
+- [nextSampleBuffer()](avplayeritemsamplebufferoutput/nextsamplebuffer%28%29.md): Returns next sample buffer once it becomes available.
+- [AVPlayerItemSampleBufferOutput.SampleBufferInSequence](avplayeritemsamplebufferoutput/samplebufferinsequence.md): Holds the information necessary for processing generated sample buffers.
+
+## Relationships
+
+### Inherits From
+
+- [AVPlayerItemOutput](avplayeritemoutput.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Media output
+
+- [AVPlayerVideoOutput](avplayervideooutput.md): An object that receives video data from a player object.
+- [AVVideoOutputSpecification](avvideooutputspecification.md): An object that specifies the pixel buffer attributes and tag collections handled by a player video output.
+- [AVPlayerItemOutput](avplayeritemoutput.md): An abstract class that defines the common interface to output media data from a player item.
+- [AVPlayerItemVideoOutput](avplayeritemvideooutput.md): An object that outputs video frames from a player item.
+- [AVPlayerItemLegibleOutput](avplayeritemlegibleoutput.md): An object that vends attributed strings for media with a legible characteristic.
+- [AVPlayerItemRenderedLegibleOutput](avplayeritemrenderedlegibleoutput.md): A player item output that vends media with a legible characteristic as rendered pixel buffers.
+- [AVRenderedCaptionImage](avrenderedcaptionimage.md): An object that provides a rendered pixel buffer and its position in pixels.
+- [AVPlayerItemMetadataOutput](avplayeritemmetadataoutput.md): An object that vends collections of metadata items that a player item’s tracks carry.
+- [AVPlayerItemOutputPushDelegate](avplayeritemoutputpushdelegate.md): A protocol that defines the methods to implement to respond to changes in the media data sequence.
+- [AVPlayerItemSampleBufferOutputConfiguration](avplayeritemsamplebufferoutputconfiguration.md): Configuration options specified when creating an [AVPlayerItemSampleBufferOutput](avplayeritemsamplebufferoutput.md).
+- [AVPlayerItemSampleBufferOutputAudioConfiguration](avplayeritemsamplebufferoutputaudioconfiguration.md): Audio-specific configuration options specified when creating an [AVPlayerItemSampleBufferOutput](avplayeritemsamplebufferoutput.md).
+
+# AVPlayerItemSampleBufferOutput (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Class  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+[AVPlayerItemSampleBufferOutput](avplayeritemsamplebufferoutput.md) delivers `CMSampleBuffers` for [AVPlayerItem](avplayeritem.md) playback.
+
+## Declaration
+
+```objectivec
+@interface AVPlayerItemSampleBufferOutput : AVPlayerItemOutput
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Playback only happens when the [AVPlayerItem](avplayeritem.md) is the current item of its [AVPlayer](avplayer.md).
+
+Create an [AVPlayerItemSampleBufferOutput](avplayeritemsamplebufferoutput.md) with a [AVPlayerItemSampleBufferOutputAudioConfiguration](avplayeritemsamplebufferoutputaudioconfiguration.md) to configure it to deliver `CMSampleBuffers` containing the decoded audio, and attach it to the [AVPlayerItem](avplayeritem.md) using `-[AVPlayerItem addOutput:]`; the audio will be in the format specified by the configuration object’s `requestedAudioFormat`.
+
+Note that [AVPlayerItemSampleBufferOutput](avplayeritemsamplebufferoutput.md) may be used to pull `CMSampleBuffers` far ahead of the current play time.  Practical use requires clients to monitor the item timebase time, and pause pulling when they have received CMSampleBuffers sufficient to prepare for near-term-future playback or processing.
+
+Marker-only `CMSampleBuffers` may be among those returned; you can detect and skip these by testing whether `CMSampleBufferGetNumSamples(sampleBuffer) == 0`.
+
+The output `CMSampleBuffers` will have appropriate OutputPresentationTimeStamps for playback, but beyond that, synchronizing presentation to the AVPlayerItem’s timebase is entirely up to the client.
+
+Currently supported for HLS `AVPlayerItems` only, and only for delivering decoded PCM audio.
+
+## Topics
+
+### Creating a sample buffer output
+
+- [initWithConfiguration:](avplayeritemsamplebufferoutput/init%28configuration_%29.md): Initializes an instance of [AVPlayerItemSampleBufferOutput](avplayeritemsamplebufferoutput.md).
+
+### Configuring the delegate
+
+- [delegate](avplayeritemsamplebufferoutput/delegate.md): The receiver’s delegate.
+- [delegateQueue](avplayeritemsamplebufferoutput/delegatequeue.md): The dispatch queue where the delegate is messaged.
+- [setDelegate:queue:](avplayeritemsamplebufferoutput/setdelegate_queue_.md): Sets the receiver’s delegate and a dispatch queue on which the delegate will be called.
+
+### Retrieving sample buffers
+
+- [copyNextSampleBuffer](avplayeritemsamplebufferoutput/copynextsamplebuffer.md): Copies the next sample buffer for the output synchronously.
+
+## Relationships
+
+### Inherits From
+
+- [AVPlayerItemOutput](avplayeritemoutput.md)
+
+## See Also
+
+### Media output
+
+- [AVPlayerVideoOutput](avplayervideooutput.md): An object that receives video data from a player object.
+- [AVVideoOutputSpecification](avvideooutputspecification.md): An object that specifies the pixel buffer attributes and tag collections handled by a player video output.
+- [CMTagCollectionCreateWithVideoOutputPreset](cmtagcollectioncreatewithvideooutputpreset.md): Creates a collection with the required tags to describe the specified video output requirements.
+- [CMTagCollectionVideoOutputPreset](cmtagcollectionvideooutputpreset.md): Constants that indicate the type of video content to output.
+- [AVPlayerItemOutput](avplayeritemoutput.md): An abstract class that defines the common interface to output media data from a player item.
+- [AVPlayerItemVideoOutput](avplayeritemvideooutput.md): An object that outputs video frames from a player item.
+- [AVPlayerItemLegibleOutput](avplayeritemlegibleoutput.md): An object that vends attributed strings for media with a legible characteristic.
+- [AVPlayerItemRenderedLegibleOutput](avplayeritemrenderedlegibleoutput.md): A player item output that vends media with a legible characteristic as rendered pixel buffers.
+- [AVRenderedCaptionImage](avrenderedcaptionimage.md): An object that provides a rendered pixel buffer and its position in pixels.
+- [AVPlayerItemMetadataOutput](avplayeritemmetadataoutput.md): An object that vends collections of metadata items that a player item’s tracks carry.
+- [AVPlayerItemOutputPushDelegate](avplayeritemoutputpushdelegate.md): A protocol that defines the methods to implement to respond to changes in the media data sequence.
+- [AVPlayerItemSampleBufferOutputConfiguration](avplayeritemsamplebufferoutputconfiguration.md): Configuration options specified when creating an [AVPlayerItemSampleBufferOutput](avplayeritemsamplebufferoutput.md).
+- [AVPlayerItemSampleBufferOutputAudioConfiguration](avplayeritemsamplebufferoutputaudioconfiguration.md): Audio-specific configuration options specified when creating an [AVPlayerItemSampleBufferOutput](avplayeritemsamplebufferoutput.md).
+- [AVPlayerItemSampleBufferOutputDelegate](avplayeritemsamplebufferoutputdelegate.md): Defines common delegate methods for objects participating in sample buffer output.

@@ -1,0 +1,55 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coretelephony/ctcellularplanstatus/checkvalidity(oftoken:completionhandler:)](https://developer.apple.com/documentation/coretelephony/ctcellularplanstatus/checkvalidity(oftoken:completionhandler:))
+
+# checkValidity(ofToken:completionHandler:) (Swift)
+
+**Framework:** Core Telephony  
+**Kind:** Type Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
+
+Checks the validity of the ICCID associated with the token.
+
+## Declaration
+
+```swift
+class func checkValidity(ofToken token: String, completionHandler: @escaping @Sendable (Bool, (any Error)?) -> Void)
+```
+
+```swift
+class func checkValidity(ofToken token: String) async throws -> Bool
+```
+
+## Parameters
+
+- `token`: The token to validate.
+- `completionHandler`: A closure the framework calls with a Boolean indicating whether the ICCID is present and turned on, and any error that occurs.
+
+<a id="discussion"></a>
+
+## Discussion
+
+The `isValid` parameter in the completion handler is `true` when the ICCID associated with the token is present and turned on.
+
+# checkValidityOfToken:completionHandler: (Objective-C)
+
+**Framework:** Core Telephony  
+**Kind:** Type Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
+
+Checks the validity of the ICCID associated with the token.
+
+## Declaration
+
+```objectivec
++ (void) checkValidityOfToken:(NSString *) token completionHandler:(void (^)(BOOL isValid, NSError *error)) completionHandler;
+```
+
+## Parameters
+
+- `token`: The token to validate.
+- `completionHandler`: A closure the framework calls with a Boolean indicating whether the ICCID is present and turned on, and any error that occurs.
+
+<a id="discussion"></a>
+
+## Discussion
+
+The `isValid` parameter in the completion handler is `true` when the ICCID associated with the token is present and turned on.

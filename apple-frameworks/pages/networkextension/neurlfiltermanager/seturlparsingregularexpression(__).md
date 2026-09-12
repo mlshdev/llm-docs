@@ -1,0 +1,43 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/networkextension/neurlfiltermanager/seturlparsingregularexpression(_:)](https://developer.apple.com/documentation/networkextension/neurlfiltermanager/seturlparsingregularexpression(_:))
+
+# setURLParsingRegularExpression(\_:)
+
+**Framework:** Network Extension  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+
+
+Sets a regular expression for use in URL parsing.
+
+## Declaration
+
+```swift
+func setURLParsingRegularExpression(_ pattern: String?) throws
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Setting a regular expression allows you to perform custom URL parsing patterns beyond the standard parsing options. The filter uses the regular expression to parse the URL before matching against the specified data set.
+
+Calling this method validates the `pattern` you provide for the regular expression. In your regular expression, use the standard name captured group syntax. For example, `"https?://(?<host>[^/]+)"` captures the domain by using the group name `host`. You can use whatever custom labels you want for group names, but they are limited to ASCII alphanumeric characters.
+
+The result is a single string that uses the space character for a delimiter between each name-value pair, such as:
+
+```
+<group-1-name>=<group-1-value> <group-2-name>=<group-2-value> <group-3-name>=...
+```
+
+Providing a `pattern` without a named capture group throws an error. If you provide a regular expression that uses other types of captured groups, only the named captured groups appear in the result.
+
+Setting a regular expression causes the [urlParsingConfiguration](urlparsingconfiguration.md) parameter to have no effect. You can read the current value of the regular expression with the [urlParsingRegularExpression](urlparsingregularexpression.md) property.
+
+URL parsing with a regular expression is case insensitive.
+
+## See Also
+
+### Customizing filter parsing behavior
+
+- [urlParsingConfiguration](urlparsingconfiguration.md): A property to configure the filter’s parser behavior.
+- [NEURLFilterManager.ParsingConfiguration](parsingconfiguration.md): A type to configure the filter’s parser behavior.
+- [urlParsingRegularExpression](urlparsingregularexpression.md): A regular expression used for advanced URL parsing.

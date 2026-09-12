@@ -1,0 +1,50 @@
+> Snapshot-pinned source for Apple watchOS snapshot-49fd8d0a44e2: [documentation/watchkit/wkinterfacecontroller/presentcontroller(_:)](https://developer.apple.com/documentation/watchkit/wkinterfacecontroller/presentcontroller(_:))
+
+# presentController(\_:)
+
+**Framework:** WatchKit  
+**Kind:** Instance Method  
+**Availability:** watchOS
+
+Presents a page-based interface modally.
+
+> Use [presentController(withNamesAndContexts:)](presentcontroller%28withnamesandcontexts_%29.md) instead.
+
+## Declaration
+
+```swift
+@MainActor @nonobjc @preconcurrency final func presentController(_ namesAndContexts: [(name: String, context: AnyObject)])
+```
+
+## Parameters
+
+- `namesAndContexts`: An array of tuples. Each tuple must contain the following named elements:
+
+  - **name**: The name of the interface controller you want to display. In your storyboard, the name of an interface controller is stored in the object’s Identifier property, which is located in the attributes inspector. This element must not be `nil`.
+  - **context**: An object to pass to the new interface controller. Use the object in this parameter to communicate important information to the new interface controller, such as the data to display or any relevant state information. You may specify `nil` for this element if you want but doing so is not recommended.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+After calling this method, WatchKit loads and initializes the new interface controllers and animates them into position on top of the current interface controller. A modal interface slides up from the bottom of the screen and completely cover the previous interface. WatchKit displays the first interface controller in the `names` array initially. The user can navigate to the other interfaces by swiping horizontally.
+
+The title of the modal interface is set to the string Cancel unless the presented interface controller explicitly changes it using the [setTitle(\_:)](settitle%28__%29.md) method. Tapping the title dismisses the interface automatically. To dismiss the interface programmatically, call the [dismiss()](dismiss%28%29.md) method.
+
+Always call this method from your WatchKit extension’s main thread.
+
+## See Also
+
+### Deprecated symbols
+
+- [Text Response Key](../text-response-key.md): Keys for retrieving text response information.
+- [addMenuItem(withImageNamed:title:action:)](addmenuitem%28withimagenamed_title_action_%29.md): Deprecated. Adds an action to the context menu using an existing image resource in your Watch app bundle.
+- [addMenuItem(with:title:action:)](addmenuitem%28with_title_action_%29-6pb4t.md): Deprecated. Adds an action to the context menu using a system-provided icon.
+- [addMenuItem(with:title:action:)](addmenuitem%28with_title_action_%29-1q2zj.md): Deprecated. Adds an action to the context menu by using an image provided by your WatchKit extension.
+- [beginGlanceUpdates()](beginglanceupdates%28%29.md): Deprecated. Tells the system that you are about to start a potentially lengthy update task for your glance.
+- [clearAllMenuItems()](clearallmenuitems%28%29.md): Deprecated. Removes all programmatically added actions from the context menu.
+- [endGlanceUpdates()](endglanceupdates%28%29.md): Deprecated. Tells the system that you finished updating your glance content.
+- [handleUserActivity(\_:)](handleuseractivity%28__%29.md): Deprecated. Responds to Handoff–related activity.
+- [reloadRootControllers(withNames:contexts:)](reloadrootcontrollers%28withnames_contexts_%29.md): Deprecated. Loads the specified interface controllers and rebuilds the app’s page-based interface.
+- [updateUserActivity(\_:userInfo:webpageURL:)](updateuseractivity%28__userinfo_webpageurl_%29.md): Deprecated. Registers the current user activity with the system.
+- [WKMenuItemIcon](../wkmenuitemicon.md): Deprecated. Template images that you can use for menus.

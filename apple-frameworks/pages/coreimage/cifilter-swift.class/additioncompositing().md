@@ -1,0 +1,137 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreimage/cifilter-swift.class/additioncompositing()](https://developer.apple.com/documentation/coreimage/cifilter-swift.class/additioncompositing())
+
+# additionCompositing() (Swift)
+
+**Framework:** Core Image  
+**Kind:** Type Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
+
+Blends colors from two images by addition.
+
+## Declaration
+
+```swift
+class func additionCompositing() -> any CIFilter & CICompositeOperation
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+The modified image.
+
+## Mentioned In
+
+- [Selectively Focusing on an Image](../selectively-focusing-on-an-image.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The filter calculates the sum of color components in the two input images to produce a brightening effect. People typically use this filter to add highlights and lens flares.
+
+The addition compositing filter uses the following properties:
+
+- **`inputImage`**: An image with the type [CIImage](../ciimage.md).
+- **`backgroundImage`**: An image that the filter applies the effect on with the type [CIImage](../ciimage.md).
+
+The following code creates a filter that combines the images’ colors to produce one image:
+
+```swift
+func additionCompositing(inputImage: CIImage, backgroundImage: CIImage) -> CIImage {
+    let additionCompositeFilter = CIFilter.additionCompositing()
+    additionCompositeFilter.inputImage = inputImage
+    additionCompositeFilter.backgroundImage = backgroundImage
+    return additionCompositeFilter.outputImage!
+}
+```
+
+![The image on the top left shows a beach with multiple palm trees and a rainbow arching across the blue sky.  The image below is a gradient image displaying a gradual color shift from purple to a dark orange. The image on the right shows the output from applying the addition compositing filter. This displays a mix of colors from both images and is brighter.](https://developer.apple.com/images/com.apple.coreimage/media-3546408@2x.png)
+
+## See Also
+
+### Filters
+
+- [colorBlendMode()](colorblendmode%28%29.md): Blends color from two images using the luminance values from the background image and the hue and saturation values from the input image.
+- [colorBurnBlendMode()](colorburnblendmode%28%29.md): Blends color from two images while darkening the image.
+- [colorDodgeBlendMode()](colordodgeblendmode%28%29.md): Blends color from two images using dodging.
+- [darkenBlendMode()](darkenblendmode%28%29.md): Blends colors from two images while darkening lighter pixels.
+- [differenceBlendMode()](differenceblendmode%28%29.md): Subtracts color values to blend colors.
+- [divideBlendMode()](divideblendmode%28%29.md): Divides color values to blend colors.
+- [exclusionBlendMode()](exclusionblendmode%28%29.md): Subtracts color values to blend colors with less contrast.
+- [hardLightBlendMode()](hardlightblendmode%28%29.md): Blends colors of two images by screening and multiplying.
+- [hueBlendMode()](hueblendmode%28%29.md): Blends colors of two images by computing the sum of image color values.
+- [lightenBlendMode()](lightenblendmode%28%29.md): Blends colors from two images by brightening colors.
+- [linearBurnBlendMode()](linearburnblendmode%28%29.md): Blends color from two images while increasing contrast.
+- [linearDodgeBlendMode()](lineardodgeblendmode%28%29.md): Blends colors of two images with dodging.
+- [linearLightBlendMode()](linearlightblendmode%28%29.md): A combination of linear burn and linear dodge blend modes.
+- [luminosityBlendMode()](luminosityblendmode%28%29.md): Blends color from two images by calculating the color, hue, and saturation.
+- [minimumCompositing()](minimumcompositing%28%29.md): Blends colors from two images by computing minimum values.
+
+# additionCompositingFilter (Objective-C)
+
+**Framework:** Core Image  
+**Kind:** Type Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
+
+Blends colors from two images by addition.
+
+## Declaration
+
+```objectivec
++ (CIFilter<CICompositeOperation> *) additionCompositingFilter;
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+The modified image.
+
+## Mentioned In
+
+- [Selectively Focusing on an Image](../selectively-focusing-on-an-image.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The filter calculates the sum of color components in the two input images to produce a brightening effect. People typically use this filter to add highlights and lens flares.
+
+The addition compositing filter uses the following properties:
+
+- **`inputImage`**: An image with the type [CIImage](../ciimage.md).
+- **`backgroundImage`**: An image that the filter applies the effect on with the type [CIImage](../ciimage.md).
+
+The following code creates a filter that combines the images’ colors to produce one image:
+
+```swift
+func additionCompositing(inputImage: CIImage, backgroundImage: CIImage) -> CIImage {
+    let additionCompositeFilter = CIFilter.additionCompositing()
+    additionCompositeFilter.inputImage = inputImage
+    additionCompositeFilter.backgroundImage = backgroundImage
+    return additionCompositeFilter.outputImage!
+}
+```
+
+![The image on the top left shows a beach with multiple palm trees and a rainbow arching across the blue sky.  The image below is a gradient image displaying a gradual color shift from purple to a dark orange. The image on the right shows the output from applying the addition compositing filter. This displays a mix of colors from both images and is brighter.](https://developer.apple.com/images/com.apple.coreimage/media-3546408@2x.png)
+
+## See Also
+
+### Filters
+
+- [colorBlendModeFilter](colorblendmode%28%29.md): Blends color from two images using the luminance values from the background image and the hue and saturation values from the input image.
+- [colorBurnBlendModeFilter](colorburnblendmode%28%29.md): Blends color from two images while darkening the image.
+- [colorDodgeBlendModeFilter](colordodgeblendmode%28%29.md): Blends color from two images using dodging.
+- [darkenBlendModeFilter](darkenblendmode%28%29.md): Blends colors from two images while darkening lighter pixels.
+- [differenceBlendModeFilter](differenceblendmode%28%29.md): Subtracts color values to blend colors.
+- [divideBlendModeFilter](divideblendmode%28%29.md): Divides color values to blend colors.
+- [exclusionBlendModeFilter](exclusionblendmode%28%29.md): Subtracts color values to blend colors with less contrast.
+- [hardLightBlendModeFilter](hardlightblendmode%28%29.md): Blends colors of two images by screening and multiplying.
+- [hueBlendModeFilter](hueblendmode%28%29.md): Blends colors of two images by computing the sum of image color values.
+- [lightenBlendModeFilter](lightenblendmode%28%29.md): Blends colors from two images by brightening colors.
+- [linearBurnBlendModeFilter](linearburnblendmode%28%29.md): Blends color from two images while increasing contrast.
+- [linearDodgeBlendModeFilter](lineardodgeblendmode%28%29.md): Blends colors of two images with dodging.
+- [linearLightBlendModeFilter](linearlightblendmode%28%29.md): A combination of linear burn and linear dodge blend modes.
+- [luminosityBlendModeFilter](luminosityblendmode%28%29.md): Blends color from two images by calculating the color, hue, and saturation.
+- [minimumCompositingFilter](minimumcompositing%28%29.md): Blends colors from two images by computing minimum values.

@@ -1,0 +1,50 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/swiftdata/modelcontext/notificationkey/historytokens](https://developer.apple.com/documentation/swiftdata/modelcontext/notificationkey/historytokens)
+
+# ModelContext.NotificationKey.historyTokens
+
+**Framework:** SwiftData  
+**Kind:** Case  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+ · Swift 5.9+
+
+A history token representing the persistent store state after the save.
+
+## Declaration
+
+```swift
+case historyTokens
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This key is available in `ModelContext.didSave` notifications (it is not present in `willSave` notifications). The value is an instance conforming to `HistoryToken`.
+
+Use this token with `HistoryDescriptor` to fetch only changes that occurred after this save operation:
+
+```swift
+NotificationCenter.default.addObserver(
+    forName: ModelContext.didSave,
+    object: nil,
+    queue: nil
+) { notification in
+    guard let token = notification.userInfo?[ModelContext.NotificationKey.historyToken] as? DefaultHistoryToken else {
+        return
+    }
+
+    // Use token to fetch changes since this save
+    let descriptor = HistoryDescriptor<DefaultHistoryTransaction>(
+        predicate: #Predicate { $0.token > token }
+    )
+}
+```
+
+## See Also
+
+### Accessing notification keys
+
+- [ModelContext.NotificationKey.deletedIdentifiers](deletedidentifiers.md): A set of values identifying the context’s deleted models.
+- [ModelContext.NotificationKey.insertedIdentifiers](insertedidentifiers.md): A set of values identifying the context’s inserted models.
+- [ModelContext.NotificationKey.invalidatedAllIdentifiers](invalidatedallidentifiers.md): A set of values identifying the context’s invalidated models.
+- [ModelContext.NotificationKey.updatedIdentifiers](updatedidentifiers.md): A set of values identifying the context’s updated models.
+- [ModelContext.NotificationKey.queryGeneration](querygeneration.md): A token that indicates which generation of the model store SwiftData is using.

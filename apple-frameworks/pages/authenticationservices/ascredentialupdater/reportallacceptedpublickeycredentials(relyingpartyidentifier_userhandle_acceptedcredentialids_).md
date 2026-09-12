@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/authenticationservices/ascredentialupdater/reportallacceptedpublickeycredentials(relyingpartyidentifier:userhandle:acceptedcredentialids:)](https://developer.apple.com/documentation/authenticationservices/ascredentialupdater/reportallacceptedpublickeycredentials(relyingpartyidentifier:userhandle:acceptedcredentialids:))
+
+# reportAllAcceptedPublicKeyCredentials(relyingPartyIdentifier:userHandle:acceptedCredentialIDs:)
+
+**Framework:** Authentication Services  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ (deprecated in 26.2) · iPadOS 26.0+ (deprecated in 26.2) · Mac Catalyst 26.0+ (deprecated in 26.2) · macOS 26.0+ (deprecated in 26.2) · visionOS 26.0+ (deprecated in 26.2)
+
+Provides credential managers with a snapshot of all credential identifiers accepted for a given user handle.
+
+> Use \`ASCredentialDataManager\` instead
+
+## Declaration
+
+```swift
+final func reportAllAcceptedPublicKeyCredentials(relyingPartyIdentifier: String, userHandle: Data, acceptedCredentialIDs: [Data]) async throws
+```
+
+## Parameters
+
+- `relyingPartyIdentifier`: The relying party, typically a website, for which to save the credential.
+- `userHandle`: The user identifier.
+- `acceptedCredentialIDs`: An array of identifiers that uniquely identifies the accepted credentials.
+
+<a id="discussion"></a>
+
+## Discussion
+
+If your app allows someone to revoke a passkey or create a new one, call this method to report all credentials still accepted after the change. Credential managers can act on this report by removing or hiding any credentials not present in `acceptedCredentialIDs`, which prevents display of invalid passkeys during later sign ins.
+
+You can also call this method periodically, such as by invoking it on every sign in. This sort of periodic check in helps keep credential managers up to date.
+
+This call shares the updated credential data with all enabled credential managers installed on the system.
+
+> **Throws**
+
+> This method throws [ASAuthorizationError](../asauthorizationerror-swift.struct.md) if the system failed to accept the update.

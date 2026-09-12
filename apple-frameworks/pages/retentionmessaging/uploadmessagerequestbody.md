@@ -1,0 +1,57 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/retentionmessaging/uploadmessagerequestbody](https://developer.apple.com/documentation/retentionmessaging/uploadmessagerequestbody)
+
+# UploadMessageRequestBody
+
+**Interface language:** Data
+
+**Framework:** Retention Messaging API  
+**Kind:** Object  
+**Availability:** Retention Messaging API 1.0+
+
+The request body for uploading a message, which includes the message text and an optional image reference and bullet points.
+
+## Declaration
+
+```
+object UploadMessageRequestBody
+```
+
+## Properties
+
+- `header` — `header` (required): The header text of the retention message that the system displays to customers.
+  **Maximum length:** `66`
+- `body` — `body` (required): The body text of the retention message that the system displays to customers.
+  **Maximum length:** `144`
+- `image` — `UploadMessageImage`: The optional image identifier and its alternative text to appear as part of a text-based message with an image.
+- `bulletPoints` — `[BulletPoint]`: An optional array of bullet points.
+- `headerPosition` — `headerPosition`: The position of header text, which defaults to placing header text above the body.
+
+## Mentioned In
+
+- [Retention Messaging API changelog](retention-messaging-changelog.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This is the request body for the [Upload Message](upload-message.md) endpoint.
+
+All messages require `body` and `header` text.
+
+Don’t include an `image` or `bulletPoints` when you upload the text for the following retention message types:
+
+- A promotional-offer retention message
+- A switch-plan retention message
+
+All default retention messages require body text and header text, and may optionally include an image and bullet points. To place header text above an image, include an image, and set the value of [headerPosition](https://developer.apple.com/documentation/retentionmessaging/uploadmessagerequestbody/headerposition) to `ABOVE_IMAGE`. Otherwise, the header text appears above the message body, which is below the image.
+
+## See Also
+
+### Message configuration
+
+- [Upload Message](upload-message.md): Uploads a message to use for retention messaging.
+- [Delete Message](delete-message.md): Deletes a previously uploaded message.
+- [Get Message List](get-message-list.md): Gets the message identifier and state of all uploaded messages.
+- [UploadMessageImage](uploadmessageimage.md): The definition of an image with its alternative text.
+- [GetMessageListResponse](getmessagelistresponse.md): A response that contains status information for all messages.
+- [GetMessageListResponseItem](getmessagelistresponseitem.md): A message identifier and status information for a message.

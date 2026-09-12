@@ -1,0 +1,31 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/bundleresources/information-property-list/uilaunchimages/uilaunchimagename](https://developer.apple.com/documentation/bundleresources/information-property-list/uilaunchimages/uilaunchimagename)
+
+# UILaunchImageName
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** Bundle Resources  
+**Kind:** Property List Key  
+**Availability:** iOS 7.0+ (deprecated in 13.0) · iPadOS 7.0+ (deprecated in 13.0) · tvOS 9.0+ (deprecated in 13.0)
+
+A string containing the name of the image file.
+
+## Details
+
+`UILaunchImageName`
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The image file must reside at the top level of the app bundle. The name you specify for this key should not include a filename extension, nor should it include modifiers such as `@2x`, `-568h`, `~iphone`, or `~ipad`.
+
+On disk, your image filenames may still include the modifiers as appropriate, although they are not required. The system automatically considers such modifiers when choosing which file to load.
+
+## See Also
+
+### Launch Image Configuration
+
+- [UILaunchImageMinimumOSVersion](uilaunchimageminimumosversion.md): Deprecated. A string representing the minimum iOS version number for which the image is intended.
+- [UILaunchImageOrientation](uilaunchimageorientation.md): Deprecated. A string containing the orientation of the image
+- [UILaunchImageSize](uilaunchimagesize.md): Deprecated. A string containing the width and height of the image.

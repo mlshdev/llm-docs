@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/diffuseproberesource/init(positions:coefficients:tetrahedronindices:)](https://developer.apple.com/documentation/realitykit/diffuseproberesource/init(positions:coefficients:tetrahedronindices:))
+
+# init(positions:coefficients:tetrahedronIndices:)
+
+**Framework:** RealityKit  
+**Kind:** Initializer  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+Creates a diffuse probe resource from arrays of probe data.
+
+## Declaration
+
+```swift
+nonisolated convenience init(positions: [SIMD3<Float>], coefficients: [InlineArray<3, SIMD4<Float>>], tetrahedronIndices: [SIMD4<UInt16>]) throws
+```
+
+## Parameters
+
+- `positions`: The 3D positions of each probe, in local space relative to the probe group entity. Must contain at least 4 positions to form a valid tetrahedral mesh.
+- `coefficients`: Spherical harmonic coefficients for each probe. Each entry contains exactly 3 `SIMD4<Float>` values — one per RGB channel, ordered as `(L0, L1.x, L1.y, L1.z)`. Must have the same count as `positions`.
+- `tetrahedronIndices`: Indices defining the tetrahedral mesh connectivity. Each `SIMD4<UInt16>` references 4 probe positions by index into `positions`. Must contain at least 1 tetrahedron, and all indices must be less than `positions.count`.
+
+<a id="discussion"></a>
+
+## Discussion
+
+> **Throws**
+
+> An error if the data is invalid — for example, if `positions.count` and `coefficients.count` differ, if fewer than 4 probes are provided, or if any tetrahedral index is out of bounds.

@@ -1,0 +1,47 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/formatstyle/bytecount(style:allowedunits:spellsoutzero:includesactualbytecount:)-59ep0](https://developer.apple.com/documentation/foundation/formatstyle/bytecount(style:allowedunits:spellsoutzero:includesactualbytecount:)-59ep0)
+
+# byteCount(style:allowedUnits:spellsOutZero:includesActualByteCount:)
+
+**Framework:** Foundation  
+**Kind:** Type Method  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+
+Returns a format style to format a data storage value.
+
+## Declaration
+
+```swift
+static func byteCount(style: ByteCountFormatStyle.Style, allowedUnits: ByteCountFormatStyle.Units = .all, spellsOutZero: Bool = true, includesActualByteCount: Bool = false) -> Self
+```
+
+## Parameters
+
+- `style`: The style of byte count to express, such as memory or file system storage.
+- `allowedUnits`: The units the format style can use to express the byte count.
+- `spellsOutZero`: A Boolean value that indicates whether the format style should spell out zero-byte values as text, like `Zero kB`.
+- `includesActualByteCount`: A Boolean value that indicates whether the format style should include the exact byte count, in addition to expressing it in terms of units. For example, `1 kB (1,024 bytes)`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A format style for formatting a measurement of data storage, customized with the provided behaviors.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this type method when the call point allows the use of [ByteCountFormatStyle](../bytecountformatstyle.md). You typically do this when calling the [formatted(\_:)](https://developer.apple.com/documentation/swift/binaryinteger/formatted%28_:%29-4qd73) method of [BinaryInteger](https://developer.apple.com/documentation/swift/binaryinteger) values that represent byte counts, as seen here:
+
+```swift
+let count: Int64 = 1024
+let formatted = count.formatted(.byteCount(style: .memory)) // "1 kB"
+```
+
+## See Also
+
+### Applying byte-count styles
+
+- [ByteCountFormatStyle](../bytecountformatstyle.md): A format style that provides string representations of byte counts.
+- [byteCount(style:allowedUnits:spellsOutZero:includesActualByteCount:)](bytecount%28style_allowedunits_spellsoutzero_includesactualbytecount_%29-ev0u.md): Conforms when `Self` is `Measurement<UnitInformationStorage>.FormatStyle.ByteCount`. Returns a format style to format a data storage value represented with Foundation’s measurement type.
+- [Measurement.FormatStyle.ByteCount](../measurement/formatstyle/bytecount.md): Conforms when `UnitType` is `UnitInformationStorage`. A format style that provides string representations of byte counts, expressed as measurements of information storage.

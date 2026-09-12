@@ -1,0 +1,69 @@
+> Snapshot-pinned source for Apple watchOS snapshot-49fd8d0a44e2: [documentation/watchkit/wkinterfacepicker/setcoordinatedanimations(_:)](https://developer.apple.com/documentation/watchkit/wkinterfacepicker/setcoordinatedanimations(_:))
+
+# setCoordinatedAnimations(\_:) (Swift)
+
+**Framework:** WatchKit  
+**Kind:** Instance Method  
+**Availability:** watchOS 2.0+
+
+Sets the interface objects that should coordinate their own animations with the picker.
+
+## Declaration
+
+```swift
+func setCoordinatedAnimations(_ coordinatedAnimations: [any WKInterfaceObject & WKImageAnimatable]?)
+```
+
+## Parameters
+
+- `coordinatedAnimations`: An array of objects that conform to the [WKImageAnimatable](../wkimageanimatable.md) protocol. The objects in this array should be displaying an animated image. Specify `nil` to remove all coordinated objects from the picker.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this method to link other animatable images to the picker. When the user turns the crown, the picker updates the currently displayed image in each of the linked interface objects.
+
+The animated images associated with the interface objects may have any number of frames. For each object, the picker determines the appropriate image to display based on the percentage offset from the beginning of the picker’s own item list. The first picker item displays the first image in the animated sequence and the last picker item displays the last item. If the picker has ten items and an animated image has 20 images, each new picker item advances the animated image by two frames.
+
+## See Also
+
+### Managing the Picker Contents
+
+- [setItems(\_:)](setitems%28__%29.md): Sets the list of items displayed by the picker.
+- [WKPickerItem](../wkpickeritem.md): A single item in a picker interface.
+- [setSelectedItemIndex(\_:)](setselecteditemindex%28__%29.md): Selects the specified item in the list.
+
+# setCoordinatedAnimations: (Objective-C)
+
+**Framework:** WatchKit  
+**Kind:** Instance Method  
+**Availability:** watchOS 2.0+
+
+Sets the interface objects that should coordinate their own animations with the picker.
+
+## Declaration
+
+```objectivec
+- (void) setCoordinatedAnimations:(NSArray<WKInterfaceObject<WKImageAnimatable> *> *) coordinatedAnimations;
+```
+
+## Parameters
+
+- `coordinatedAnimations`: An array of objects that conform to the [WKImageAnimatable](../wkimageanimatable.md) protocol. The objects in this array should be displaying an animated image. Specify `nil` to remove all coordinated objects from the picker.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this method to link other animatable images to the picker. When the user turns the crown, the picker updates the currently displayed image in each of the linked interface objects.
+
+The animated images associated with the interface objects may have any number of frames. For each object, the picker determines the appropriate image to display based on the percentage offset from the beginning of the picker’s own item list. The first picker item displays the first image in the animated sequence and the last picker item displays the last item. If the picker has ten items and an animated image has 20 images, each new picker item advances the animated image by two frames.
+
+## See Also
+
+### Managing the Picker Contents
+
+- [setItems:](setitems%28__%29.md): Sets the list of items displayed by the picker.
+- [WKPickerItem](../wkpickeritem.md): A single item in a picker interface.
+- [setSelectedItemIndex:](setselecteditemindex%28__%29.md): Selects the specified item in the list.

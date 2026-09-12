@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coretransferable/transferable/importedcontenttypes()-swift.method](https://developer.apple.com/documentation/coretransferable/transferable/importedcontenttypes()-swift.method)
+
+# importedContentTypes()
+
+**Framework:** Core Transferable  
+**Kind:** Instance Method  
+**Availability:** iOS 18.2+ · iPadOS 18.2+ · Mac Catalyst 18.2+ · macOS 15.2+ · tvOS 18.2+ · visionOS 2.2+ · watchOS 11.2+
+
+Content types supported by a given value’s `Transferable` conformance for import (like drop or paste).
+
+## Declaration
+
+```swift
+func importedContentTypes() -> [UTType]
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Returns a list of all content types available for import. The default implementation of this function is available to all types that conform to [Transferable](../transferable.md) protocol.

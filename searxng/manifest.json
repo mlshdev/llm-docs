@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "project": "searxng",
   "title": "SearXNG",
+  "homepage": "https://docs.searxng.org/",
   "repository": "searxng/searxng",
   "tag": "master",
   "branch": "master",

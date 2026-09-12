@@ -1,0 +1,56 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/mapkitjs/coordinateregion/equals](https://developer.apple.com/documentation/mapkitjs/coordinateregion/equals)
+
+# equals(anotherRegion)
+
+**Interface language:** Data
+
+**Framework:** MapKit JS  
+**Kind:** Instance Method  
+**Availability:** MapKit JS 5.0+
+
+Returns a Boolean value indicating whether two regions are equal.
+
+## Declaration
+
+```
+equals(anotherRegion: CoordinateRegion): boolean;
+```
+
+## Parameters
+
+- `anotherRegion`: The region to compare.
+
+<a id="return-value"></a>
+
+## Return Value
+
+`true` if the region that `anotherRegion` specifies is equal to the calling [CoordinateRegion](../coordinateregion.md); otherwise, `false`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The following example shows how to determine whether a given region is equal to the region that’s displaying on the map.
+
+```javascript
+// Create a map.
+const map = new mapkit.Map("my-map-element-id");
+
+// Create a region named myRegion.
+const coordinate = new mapkit.Coordinate(37.415, -122.048333); // latitude, longitude
+const span = new mapkit.CoordinateSpan(.016, .016); // latitude delta, longitude delta
+const myRegion = new mapkit.CoordinateRegion(coordinate, span);
+
+// Check whether myRegion is equal to the current map region.
+if (myRegion.equals(map.region))
+   console.log("These two regions are equal.");
+
+```
+
+## See Also
+
+### Comparing, copying, and converting regions
+
+- [copy()](copy.md): Returns a copy of the calling coordinate region.
+- [toBoundingRegion()](toboundingregion.md): Returns the bounding region that corresponds to the specified coordinate region.
+- [toMapRect()](tomaprect.md): Deprecated. Returns the map rectangle that corresponds to the calling coordinate region.

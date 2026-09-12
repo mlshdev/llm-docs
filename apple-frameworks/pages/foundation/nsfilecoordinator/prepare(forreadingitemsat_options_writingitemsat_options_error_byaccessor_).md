@@ -1,0 +1,111 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsfilecoordinator/prepare(forreadingitemsat:options:writingitemsat:options:error:byaccessor:)](https://developer.apple.com/documentation/foundation/nsfilecoordinator/prepare(forreadingitemsat:options:writingitemsat:options:error:byaccessor:))
+
+# prepare(forReadingItemsAt:options:writingItemsAt:options:error:byAccessor:) (Swift)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Prepare to read or write from multiple files in a single batch operation.
+
+## Declaration
+
+```swift
+func prepare(forReadingItemsAt readingURLs: [URL], options readingOptions: NSFileCoordinator.ReadingOptions = [], writingItemsAt writingURLs: [URL], options writingOptions: NSFileCoordinator.WritingOptions = [], error outError: NSErrorPointer, byAccessor batchAccessor: (@escaping @Sendable () -> Void) -> Void)
+```
+
+## Parameters
+
+- `readingURLs`: An array of [NSURL](../nsurl.md) objects identifying the items you want to read.
+- `readingOptions`: One of the reading options described in [NSFileCoordinator.ReadingOptions](readingoptions.md). If you pass `0` for this parameter, the [savePresentedItemChanges(completionHandler:)](../nsfilepresenter/savepresenteditemchanges%28completionhandler_%29.md) method of relevant file presenters is called before your block executes.
+- `writingURLs`: An array of [NSURL](../nsurl.md) objects identifying the items you want to write.
+- `writingOptions`: One of the writing options described in [NSFileCoordinator.WritingOptions](writingoptions.md). The options you specify partially determine how file presenters are notified and how this file coordinator object waits to execute your block.
+- `outError`: On input, a pointer to a pointer for an error object. If a file presenter encounters an error while preparing for this operation, that error is returned in this parameter and the block in the `writer` parameter is not executed. If you cancel this operation before the `batchAccessor` block is executed, this parameter contains an error object on output.
+- `batchAccessor`: A [Block object](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/Block.html#//apple_ref/doc/uid/TP40008195-CH3) containing additional calls to methods of this class.
+
+  The block takes the following parameter:
+
+  - **completionHandler**: A completion handler block. The batch accessor must call the completion handler when it has finished its read and write calls.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this method to prepare the file coordinator for multiple read and write operations. Because file coordination requires interprocess communication, it is much more efficient to batch changes to large numbers of files and directories than to change each item individually. The file coordinator uses the values in the `readingURLs` and `writingURLs` parameters, together with reading and writing options, to prepare any relevant file presenters for the upcoming operations. Specifically, it uses these parameters in the same way as the [coordinate(readingItemAt:options:error:byAccessor:)](coordinate%28readingitemat_options_error_byaccessor_%29.md) and [coordinate(writingItemAt:options:error:byAccessor:)](coordinate%28writingitemat_options_error_byaccessor_%29.md) methods to determine which file presenter methods to call.
+
+This method executes synchronously, blocking the current thread until the `batchAccessor` block finishes executing. The block you provide for the `batchAccessor` parameter does not perform the actual operations itself. Instead, you must call the individual coordinated read and write methods from inside the `batchAccessor` block. You must then call the completion handler after all the coordinated reads and writes have completed. You can call the completion handler from any thread.
+
+Don’t simply pass this method all the URLs that are passed into the nested coordinate methods. Instead pass only the top-level files and directories involved in the operation. This method triggers messages to the file presenters of those items and to the file presenters of any items contained by those items.
+
+In most cases, passing the same reading and writing options to both this method and the contained coordination operations is redundant. For example, it is often appropriate to pass [withoutChanges](readingoptions/withoutchanges.md) to nested read operations. This method has already triggered a call to [savePresentedItemChanges(completionHandler:)](../nsfilepresenter/savepresenteditemchanges%28completionhandler_%29.md). The individual read operations do not need to trigger additional calls.
+
+## See Also
+
+### Related Documentation
+
+- [coordinate(with:queue:byAccessor:)](coordinate%28with_queue_byaccessor_%29.md): Performs a number of coordinated-read or -write operations asynchronously.
+
+### Coordinating File Operations Synchronously
+
+- [coordinate(readingItemAt:options:error:byAccessor:)](coordinate%28readingitemat_options_error_byaccessor_%29.md): Initiates a read operation on a single file or directory using the specified options.
+- [coordinate(writingItemAt:options:error:byAccessor:)](coordinate%28writingitemat_options_error_byaccessor_%29.md): Initiates a write operation on a single file or directory using the specified options.
+- [coordinate(readingItemAt:options:writingItemAt:options:error:byAccessor:)](coordinate%28readingitemat_options_writingitemat_options_error_byaccessor_%29.md): Initiates a read operation that contains a follow-up write operation.
+- [coordinate(writingItemAt:options:writingItemAt:options:error:byAccessor:)](coordinate%28writingitemat_options_writingitemat_options_error_byaccessor_%29.md): Initiates a write operation that involves a secondary write operation.
+- [item(at:willMoveTo:)](item%28at_willmoveto_%29.md): Announces that your app is moving a file to a new URL.
+- [item(at:didMoveTo:)](item%28at_didmoveto_%29.md): Notifies relevant file presenters that the location of a file or directory changed.
+- [cancel()](cancel%28%29.md): Cancels any active file coordination calls.
+
+# prepareForReadingItemsAtURLs:options:writingItemsAtURLs:options:error:byAccessor: (Objective-C)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Prepare to read or write from multiple files in a single batch operation.
+
+## Declaration
+
+```objectivec
+- (void) prepareForReadingItemsAtURLs:(NSArray<NSURL *> *) readingURLs options:(NSFileCoordinatorReadingOptions) readingOptions writingItemsAtURLs:(NSArray<NSURL *> *) writingURLs options:(NSFileCoordinatorWritingOptions) writingOptions error:(NSError **) outError byAccessor:(void (^)(void (^completionHandler)())) batchAccessor;
+```
+
+## Parameters
+
+- `readingURLs`: An array of [NSURL](../nsurl.md) objects identifying the items you want to read.
+- `readingOptions`: One of the reading options described in [NSFileCoordinatorReadingOptions](readingoptions.md). If you pass `0` for this parameter, the [savePresentedItemChangesWithCompletionHandler:](../nsfilepresenter/savepresenteditemchanges%28completionhandler_%29.md) method of relevant file presenters is called before your block executes.
+- `writingURLs`: An array of [NSURL](../nsurl.md) objects identifying the items you want to write.
+- `writingOptions`: One of the writing options described in [NSFileCoordinatorWritingOptions](writingoptions.md). The options you specify partially determine how file presenters are notified and how this file coordinator object waits to execute your block.
+- `outError`: On input, a pointer to a pointer for an error object. If a file presenter encounters an error while preparing for this operation, that error is returned in this parameter and the block in the `writer` parameter is not executed. If you cancel this operation before the `batchAccessor` block is executed, this parameter contains an error object on output.
+- `batchAccessor`: A [Block object](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/Block.html#//apple_ref/doc/uid/TP40008195-CH3) containing additional calls to methods of this class.
+
+  The block takes the following parameter:
+
+  - **completionHandler**: A completion handler block. The batch accessor must call the completion handler when it has finished its read and write calls.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this method to prepare the file coordinator for multiple read and write operations. Because file coordination requires interprocess communication, it is much more efficient to batch changes to large numbers of files and directories than to change each item individually. The file coordinator uses the values in the `readingURLs` and `writingURLs` parameters, together with reading and writing options, to prepare any relevant file presenters for the upcoming operations. Specifically, it uses these parameters in the same way as the [coordinateReadingItemAtURL:options:error:byAccessor:](coordinate%28readingitemat_options_error_byaccessor_%29.md) and [coordinateWritingItemAtURL:options:error:byAccessor:](coordinate%28writingitemat_options_error_byaccessor_%29.md) methods to determine which file presenter methods to call.
+
+This method executes synchronously, blocking the current thread until the `batchAccessor` block finishes executing. The block you provide for the `batchAccessor` parameter does not perform the actual operations itself. Instead, you must call the individual coordinated read and write methods from inside the `batchAccessor` block. You must then call the completion handler after all the coordinated reads and writes have completed. You can call the completion handler from any thread.
+
+Don’t simply pass this method all the URLs that are passed into the nested coordinate methods. Instead pass only the top-level files and directories involved in the operation. This method triggers messages to the file presenters of those items and to the file presenters of any items contained by those items.
+
+In most cases, passing the same reading and writing options to both this method and the contained coordination operations is redundant. For example, it is often appropriate to pass [NSFileCoordinatorReadingWithoutChanges](readingoptions/withoutchanges.md) to nested read operations. This method has already triggered a call to [savePresentedItemChangesWithCompletionHandler:](../nsfilepresenter/savepresenteditemchanges%28completionhandler_%29.md). The individual read operations do not need to trigger additional calls.
+
+## See Also
+
+### Related Documentation
+
+- [coordinateAccessWithIntents:queue:byAccessor:](coordinate%28with_queue_byaccessor_%29.md): Performs a number of coordinated-read or -write operations asynchronously.
+
+### Coordinating File Operations Synchronously
+
+- [coordinateReadingItemAtURL:options:error:byAccessor:](coordinate%28readingitemat_options_error_byaccessor_%29.md): Initiates a read operation on a single file or directory using the specified options.
+- [coordinateWritingItemAtURL:options:error:byAccessor:](coordinate%28writingitemat_options_error_byaccessor_%29.md): Initiates a write operation on a single file or directory using the specified options.
+- [coordinateReadingItemAtURL:options:writingItemAtURL:options:error:byAccessor:](coordinate%28readingitemat_options_writingitemat_options_error_byaccessor_%29.md): Initiates a read operation that contains a follow-up write operation.
+- [coordinateWritingItemAtURL:options:writingItemAtURL:options:error:byAccessor:](coordinate%28writingitemat_options_writingitemat_options_error_byaccessor_%29.md): Initiates a write operation that involves a secondary write operation.
+- [itemAtURL:willMoveToURL:](item%28at_willmoveto_%29.md): Announces that your app is moving a file to a new URL.
+- [itemAtURL:didMoveToURL:](item%28at_didmoveto_%29.md): Notifies relevant file presenters that the location of a file or directory changed.
+- [cancel](cancel%28%29.md): Cancels any active file coordination calls.

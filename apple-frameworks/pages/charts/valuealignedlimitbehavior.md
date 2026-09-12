@@ -1,0 +1,30 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/charts/valuealignedlimitbehavior](https://developer.apple.com/documentation/charts/valuealignedlimitbehavior)
+
+# ValueAlignedLimitBehavior
+
+**Framework:** Swift Charts  
+**Kind:** Structure  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+A type that defines the amount of marks that can be scrolled at a time.
+
+## Declaration
+
+```swift
+struct ValueAlignedLimitBehavior
+```
+
+## Topics
+
+### Type Properties
+
+- [always](valuealignedlimitbehavior/always.md): The always limit behavior.
+- [automatic](valuealignedlimitbehavior/automatic.md): The automatic limit behavior.
+- [never](valuealignedlimitbehavior/never.md): The never limit behavior.
+
+## See Also
+
+### Supporting types
+
+- [MajorValueAlignment](majorvaluealignment.md): A type that defines how the valigned aligned chart scroll target behavior aligns to major values on swipe.
+- [ValueAlignedChartScrollTargetBehavior](valuealignedchartscrolltargetbehavior.md): A scroll target behavior that aligns to values spaced at regular intervals along the scrollable axes.

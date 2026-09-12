@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/sampledanimation/start](https://developer.apple.com/documentation/realitykit/sampledanimation/start)
+
+# start
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+ · visionOS
+
+An integer multiple of the frame interval at which the animation plays.
+
+## Declaration
+
+```swift
+var start: TimeInterval { get set }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+When calculating the visual beginning of a sampled animation, the framework first evaluates this property, and then applies the optional [trimStart](trimstart.md), in seconds.
+
+The framework requires this property to contain an integer multiple of [frameInterval](frameinterval.md). Note that the value of this property can be irrational because frame interval is of type [TimeInterval](../../foundation/timeinterval.md).
+
+## See Also
+
+### Timing the animation
+
+- [frameInterval](frameinterval.md): The duration within the animation timeline for each frame in the frames array.
+- [end](end.md): An integer multiple of the frame interval at which the animation stops.
+- [speed](speed.md): A factor that changes the animation’s rate of playback.
+- [delay](delay.md): An amount of time that elapses before the animation plays.
+- [duration](duration.md): The total playback time of the animation.
+- [offset](offset.md): The time, in seconds, at which the animation begins within the duration.
+- [trimDuration](trimduration.md): An optional duration that overrides the calculated duration.
+- [trimStart](trimstart.md): The optional time, in seconds, at which the animation plays.
+- [trimEnd](trimend.md): The optional time, in seconds, at which the animation stops.

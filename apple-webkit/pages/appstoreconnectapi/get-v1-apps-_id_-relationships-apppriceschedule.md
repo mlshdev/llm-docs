@@ -1,0 +1,42 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v1-apps-_id_-relationships-apppriceschedule](https://developer.apple.com/documentation/appstoreconnectapi/get-v1-apps-_id_-relationships-apppriceschedule)
+
+# Get the app price schedule ID for an app
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Web Service Endpoint  
+**Availability:** App Store Connect API 4.0+
+
+## URL
+
+```http
+GET https://api.appstoreconnect.apple.com/v1/apps/{id}/relationships/appPriceSchedule
+```
+
+## Path Parameters
+
+- `id` — `string` (required):
+
+## Response Codes
+
+- `200` OK — `AppAppPriceScheduleLinkageResponse`:
+- `400` Bad Request — `ErrorResponse`:
+- `401` Unauthorized — `ErrorResponse`:
+- `403` Forbidden — `ErrorResponse`:
+- `404` Not Found — `ErrorResponse`:
+- `429` — `ErrorResponse`:
+
+## See Also
+
+### Getting and managing an app’s price schedules
+
+- [Read Price Schedule Information for an App](get-v1-apps-_id_-apppriceschedule.md): Read price schedule details for a specific app.
+- [Read an App's Price Schedule Information](get-v1-apppriceschedules-_id_.md): List the price schedule details for a specific app.
+- [List Automatically Generated Prices for an App](get-v1-apppriceschedules-_id_-automaticprices.md): List the automatically calculated prices for an app generated from a base territory.
+- [Read the Base Territory for an App's Price Schedule](get-v1-apppriceschedules-_id_-baseterritory.md): Read the base territory and currency for a specific app.
+- [List Manually Chosen Prices for an App](get-v1-apppriceschedules-_id_-manualprices.md): List the prices you chose for a specific app.
+- [List automatic price IDs for an app price schedule](get-v1-apppriceschedules-_id_-relationships-automaticprices.md)
+- [Get the base territory ID for an app price schedule](get-v1-apppriceschedules-_id_-relationships-baseterritory.md)
+- [List manual price IDs for an app price schedule](get-v1-apppriceschedules-_id_-relationships-manualprices.md)
+- [Add a Scheduled Price Change to an App](post-v1-apppriceschedules.md): Create a scheduled price change for an app.

@@ -1,0 +1,84 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/custommaterial/metallic-swift.property](https://developer.apple.com/documentation/realitykit/custommaterial/metallic-swift.property)
+
+# metallic
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 26.0+
+
+The reflectiveness of an entity.
+
+## Declaration
+
+```swift
+var metallic: CustomMaterial.Metallic { get set }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+In physically based rendering, the `metallic` property represents the reflectiveness of an entity. Use this property to specify whether the entity displays metallic qualities and reflects the surrounding environment, or displays dielectric qualities and doesn’t reflect the environment. With custom materials, RealityKit doesn’t automatically use the values set on this property. To render a custom material using the metallic property, set [lightingModel](lightingmodel-swift.property.md) to [CustomMaterial.LightingModel.lit](lightingmodel-swift.enum/lit.md) or [CustomMaterial.LightingModel.clearcoat](lightingmodel-swift.enum/clearcoat.md) and call `params.surface().set_roughness()` from its surface shader.
+
+![An illustration showing two spheres rendered in RealityKit. The sphere](https://developer.apple.com/images/com.apple.RealityKit/CustomMaterial-metallic-swift-property-1@2x.png)
+
+The following Swift code shows how to use an image and a scale to specify roughness:
+
+```swift
+if let metallicResource = try? TextureResource.load(named:"entity_metallic") {
+    let metallic = MaterialParameters.Texture(metallicResource)
+    material.metallic = PhysicallyBasedMaterial.Metallic(scale: 1.0, texture:metallic)
+}
+```
+
+The following surface shader takes the scale and texture values from the [metallic](metallic-swift.property.md) property, multiplies them together, and uses the result to specify the metallic value for rendering, which emulates the behavior of [PhysicallyBasedMaterial](../physicallybasedmaterial.md).
+
+```cpp
+#include <metal_stdlib>
+#include <RealityKit/RealityKit.h>
+using namespace metal;
+
+// Use samplers to retrieve a color value from a texture based on // the
+entity's UV coordinates. Samplers can be reused with different textures.
+// Surface shader functions should define no more than eight samplers.
+constexpr sampler textureSampler(address::clamp_to_edge,
+filter::bicubic);
+
+[[visible]] void mySurfaceShader(realitykit::surface_parameters params)
+{
+    // Retrieve the metallic scale from the CustomMaterial.
+    float metallicScale = params.material_constants().metallic_scale();
+
+    // Retrieve the entity's texture coordinates.
+    float2 uv = params.geometry().uv0();
+
+    // Entities loaded from USDZ or .reality files have texture coordinates
+    // with a flipped y-axis. This adjusts for that.
+    uv.y = 1.0 - uv.y;
+
+    // Sample the metallic texture based on the UV coordinates.
+    auto tex = params.textures();
+    half metallic = tex.metallic().sample(textureSampler, uv).r;
+
+    // Multiply the tint and the sampled value from the texture,
+    // and assign the result to the shader's metallic property.
+    metallic *= metallicScale;
+    params.surface().set_metallic(metallic);
+}
+```
+
+For more information on creating custom materials and writing shader functions, see [Modifying RealityKit rendering using custom materials](../modifying-realitykit-rendering-using-custom-materials.md).
+
+## See Also
+
+### Setting the core properties
+
+- [baseColor](basecolor-swift.property.md): The color of an entity unmodified by lighting.
+- [roughness](roughness-swift.property.md): The amount the surface of the 3D object scatters reflected light.
+- [normal](normal-swift.property.md): A texture map that stores fine surface details for the entity.
+- [emissiveColor](emissivecolor-swift.property.md): The color of light this material emits.
+- [ambientOcclusion](ambientocclusion-swift.property.md): The ambient light exposure for a material.
+- [specular](specular-swift.property.md): The bright highlights to apply to the entity.
+- [clearcoat](clearcoat-swift.property.md): The transparent highlights that simulate a clear, shiny coating on an entity.
+- [clearcoatRoughness](clearcoatroughness-swift.property.md): The degree to which an entity’s clear, shiny coating scatters light to create soft highlights.
+- [clearcoatNormal](clearcoatnormal-swift.property.md): Waviness and imperfections for the top clearcoat.

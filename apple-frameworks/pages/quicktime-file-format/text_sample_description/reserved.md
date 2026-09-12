@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/text_sample_description/reserved](https://developer.apple.com/documentation/quicktime-file-format/text_sample_description/reserved)
+
+# Reserved
+
+**Framework:** QuickTime File Format  
+**Kind:** Data field
+
+A 64-bit value.
+
+<a id="Overview"></a>
+
+## Overview
+
+This must be set to `0`.
+
+## See Also
+
+### Data fields
+
+- [Display flags](display_flags.md): A 32-bit integer containing flags that describe how the text should be drawn.
+- [Text justification](text_justification.md): A 32-bit integer that indicates how the text should be aligned.
+- [Background color](background_color.md): A 48-bit RGB color that specifies the text’s background color.
+- [Default text box](default_text_box.md): A 64-bit rectangle that specifies an area to receive text (top, left, bottom, right).
+- [Font number](font_number.md): A 16-bit value.
+- [Font face](font_face.md): A 16-bit integer that indicates the font’s style.
+- [Reserved](reserved2.md): An 8-bit value.
+- [Reserved](reserved3.md): A 16-bit value.
+- [Foreground color](foreground_color.md): A 48-bit RGB color that specifies the text’s foreground color.
+- [Text name](text_name.md): A Pascal string specifying the name of the font to use to display the text.

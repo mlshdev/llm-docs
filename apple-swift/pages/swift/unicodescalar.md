@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/unicodescalar](https://developer.apple.com/documentation/swift/unicodescalar)
+
+# UnicodeScalar
+
+**Framework:** Swift  
+**Kind:** Type Alias  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+## Declaration
+
+```swift
+typealias UnicodeScalar = Unicode.Scalar
+```
+
+## See Also
+
+### Deprecated
+
+- [UTF8](utf8.md)
+- [UTF16](utf16.md)
+- [UTF32](utf32.md)

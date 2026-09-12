@@ -1,0 +1,52 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v1-gamecentergroups-_id_-relationships-gamecenterdetails](https://developer.apple.com/documentation/appstoreconnectapi/get-v1-gamecentergroups-_id_-relationships-gamecenterdetails)
+
+# List Game Center detail IDs for a Game Center group
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Web Service Endpoint  
+**Availability:** App Store Connect API 4.0+
+
+## URL
+
+```http
+GET https://api.appstoreconnect.apple.com/v1/gameCenterGroups/{id}/relationships/gameCenterDetails
+```
+
+## Path Parameters
+
+- `id` — `string` (required):
+
+## Query Parameters
+
+- `limit` — `integer`: **Maximum:** `200`
+
+## Response Codes
+
+- `200` OK — `GameCenterGroupGameCenterDetailsLinkagesResponse`:
+- `400` Bad Request — `ErrorResponse`:
+- `401` Unauthorized — `ErrorResponse`:
+- `403` Forbidden — `ErrorResponse`:
+- `404` Not Found — `ErrorResponse`:
+- `429` — `ErrorResponse`:
+
+## See Also
+
+### Managing groups
+
+- [Read Group Information](get-v1-gamecentergroups.md): List information for all groups.
+- [Read information for a specific group](get-v1-gamecentergroups-_id_.md): Read information for a specific Game Center group.
+- [Create a Group](post-v1-gamecentergroups.md): Add a new group.
+- [Modify a Group](patch-v1-gamecentergroups-_id_.md): Edit the reference name for a group.
+- [Delete a Group](delete-v1-gamecentergroups-_id_.md): Remove a group.
+- [List All Game Center Achievements for a Game Center Group](get-v1-gamecentergroups-_id_-gamecenterachievementsv2.md): Get a list of achievements for a specific Game Center group.
+- [List All Game Center Leaderboard Sets for a Game Center Group](get-v1-gamecentergroups-_id_-gamecenterleaderboardsetsv2.md): Get a list of leaderboard sets for a specific Game Center group.
+- [List All Game Center Leaderboards for a Game Center Group](get-v1-gamecentergroups-_id_-gamecenterleaderboardsv2.md): Get a list of leaderboards for a specific Game Center group.
+- [List the Achievements in a Group](get-v1-gamecentergroups-_id_-gamecenterachievements.md): Deprecated. List achievements information for a specific group.
+- [List game center details for a group](get-v1-gamecentergroups-_id_-gamecenterdetails.md): Read Game Center detail information for a specific group.
+- [List game center leaderboard sets in a group](get-v1-gamecentergroups-_id_-gamecenterleaderboardsets.md): Deprecated. Read Game Center leaderboard sets information for a specific group.
+- [List game center leaderboards for a group](get-v1-gamecentergroups-_id_-gamecenterleaderboards.md): Deprecated. Read Game Center leaderboard information for a specific group.
+- [List all activities for a game center group](get-v1-gamecentergroups-_id_-gamecenteractivities.md): Get a list of all activities for a Game Center group.
+- [List activity IDs for a Game Center group](get-v1-gamecentergroups-_id_-relationships-gamecenteractivities.md): Get a list of activity IDs for a specific Game Center group.
+- [Read the challenges for a game center group](get-v1-gamecentergroups-_id_-gamecenterchallenges.md): Get challenge information for a specific Game Center group.

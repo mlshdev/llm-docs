@@ -1,0 +1,56 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/updates/coremotion](https://developer.apple.com/documentation/updates/coremotion)
+
+# Core Motion updates
+
+**Framework:** Updates  
+**Kind:** Article
+
+Learn about important changes to Core Motion.
+
+<a id="Overview"></a>
+
+## Overview
+
+Browse notable changes in [Core Motion](https://developer.apple.com/documentation/coremotion).
+
+<a id="September-2024"></a>
+
+## September 2024
+
+- Apple Watch Series 10 supports the Shallow Depth and Pressure capability. Use [CMWaterSubmersionManager](https://developer.apple.com/documentation/coremotion/cmwatersubmersionmanager) to start a shallow dive session.
+
+<a id="June-2024"></a>
+
+## June 2024
+
+- Use the [CMHeadphoneActivityManager](https://developer.apple.com/documentation/coremotion/cmheadphoneactivitymanager) class to access motion activity from connected headphones.
+- Enable connect or disconnect monitoring outside of a motion session with the [CMHeadphoneMotionManager](https://developer.apple.com/documentation/coremotion/cmheadphonemotionmanager) class. You can also use `CMHeadphoneMotionManager` to support AirPods device motion data on watchOS.
+
+<a id="June-2023"></a>
+
+## June 2023
+
+- Use the  [CMHighFrequencyHeartRateData](https://developer.apple.com/documentation/coremotion/cmhighfrequencyheartratedata) class to get heart rate data, including the confidence level.
+- Use the [CMOdometerData](https://developer.apple.com/documentation/coremotion/cmodometerdata)  class to get odometer data from workouts, such as speed, slope, distances, and altitude.
+- Use the [CMBatchedSensorManager](https://developer.apple.com/documentation/coremotion/cmbatchedsensormanager) class to access batches of high-frequency accelerometer and device motion data during workouts, such as a golf swing or a baseball bat swing.
+- Use the [CMWaterSubmersionManager](https://developer.apple.com/documentation/coremotion/cmwatersubmersionmanager) class to monitor shallow dives on Apple Watch Ultra.
+
+## See Also
+
+### Technology and frameworks
+
+- [Accelerate updates](accelerate.md): Learn about important changes to Accelerate.
+- [Accessibility updates](accessibility.md): Learn about important changes to Accessibility.
+- [ActivityKit updates](activitykit.md): Learn about important changes in ActivityKit.
+- [AdAttributionKit Updates](adattributionkit.md): Learn about important changes to AdAttributionKit.
+- [App Clips updates](appclips.md): Learn about important changes in App Clips.
+- [App Intents updates](appintents.md): Learn about important changes in App Intents.
+- [AppKit updates](appkit.md): Learn about important changes to AppKit.
+- [Apple Intelligence updates](apple-intelligence.md): Learn about important changes to Apple Intelligence.
+- [AppleMapsServerAPI Updates](applemapsserverapi.md): Learn about important changes to AppleMapsServerAPI.
+- [Apple Pencil updates](applepencil.md): Learn about important changes to Apple Pencil.
+- [ARKit updates](arkit.md): Learn about important changes to ARKit.
+- [Audio Toolbox updates](audiotoolbox.md): Learn about important changes to Audio Toolbox.
+- [AuthenticationServices updates](authenticationservices.md): Learn about important changes to AuthenticationServices.
+- [AVFAudio updates](avfaudio.md): Learn about important changes to AVFAudio.
+- [AVFoundation updates](avfoundation.md): Learn about important changes to AVFoundation.

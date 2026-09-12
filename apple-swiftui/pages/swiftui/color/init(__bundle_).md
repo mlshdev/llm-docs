@@ -1,0 +1,54 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/color/init(_:bundle:)](https://developer.apple.com/documentation/swiftui/color/init(_:bundle:))
+
+# init(\_:bundle:)
+
+**Framework:** SwiftUI  
+**Kind:** Initializer  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Creates a color from a color set that you indicate by name.
+
+## Declaration
+
+```swift
+init(_ name: String, bundle: Bundle? = nil)
+```
+
+## Parameters
+
+- `name`: The name of the color resource to look up.
+- `bundle`: The bundle in which to search for the color resource. If you don’t indicate a bundle, the initializer looks in your app’s main bundle by default.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this initializer to load a color from a color set stored in an Asset Catalog. The system determines which color within the set to use based on the environment at render time. For example, you can provide light and dark versions for background and foreground colors:
+
+![A screenshot of color sets for foreground and background colors,](https://developer.apple.com/images/com.apple.SwiftUI/Color-init-1@2x.png)
+
+You can then instantiate colors by referencing the names of the assets:
+
+```swift
+struct Hello: View {
+    var body: some View {
+        ZStack {
+            Color("background")
+            Text("Hello, world!")
+                .foregroundStyle(Color("foreground"))
+        }
+        .frame(width: 200, height: 100)
+    }
+}
+```
+
+SwiftUI renders the appropriate colors for each appearance:
+
+![A side by side comparison of light and dark appearance screenshots](https://developer.apple.com/images/com.apple.SwiftUI/Color-init-2@2x.png)
+
+## See Also
+
+### Creating a color
+
+- [init(\_:)](init%28__%29.md): Creates a constant color with the values specified by the resolved color.
+- [resolve(in:)](resolve%28in_%29.md): Evaluates this color to a resolved color given the current `context`.

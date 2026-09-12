@@ -1,0 +1,61 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videotoolbox/vtsuperresolutionscalerconfiguration/init(framewidth:frameheight:scalefactor:inputtype:useprecomputedflow:qualityprioritization:revision:)](https://developer.apple.com/documentation/videotoolbox/vtsuperresolutionscalerconfiguration/init(framewidth:frameheight:scalefactor:inputtype:useprecomputedflow:qualityprioritization:revision:))
+
+# init(frameWidth:frameHeight:scaleFactor:inputType:usePrecomputedFlow:qualityPrioritization:revision:) (Swift)
+
+**Framework:** Video Toolbox  
+**Kind:** Initializer  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+
+
+Creates a new super-resolution scaler processor configuration.
+
+## Declaration
+
+```swift
+init?(frameWidth: Int, frameHeight: Int, scaleFactor: Int, inputType: VTSuperResolutionScalerConfiguration.InputType, usePrecomputedFlow: Bool, qualityPrioritization: VTSuperResolutionScalerConfiguration.QualityPrioritization, revision: VTSuperResolutionScalerConfiguration.Revision)
+```
+
+## Parameters
+
+- `frameWidth`: Width of source frame in pixels. With `VTSuperResolutionScalerConfigurationInputTypeVideo`, maximum width is 1920 on macOS and 1440 on iOS. With `VTSuperResolutionScalerConfigurationInputTypeImage`, maximum width is 1920.
+- `frameHeight`: Height of source frame in pixels. With `VTSuperResolutionScalerConfigurationInputTypeVideo`, maximum height is 1080. With `VTSuperResolutionScalerConfigurationInputTypeImage`, maximum height is 1920 on macOS and 1080 on iOS.
+- `scaleFactor`: Indicates the scale factor between input and output.
+- `inputType`: Indicates the type of input, either video or image.
+- `usePrecomputedFlow`: Boolean value to indicate that you provide optical flow; if false, this configuration computes the optical flow on the fly.
+- `qualityPrioritization`: A level you use to prioritize quality or performance; for more information about supported levels, see [VTSuperResolutionScalerConfiguration.QualityPrioritization](qualityprioritization-swift.enum.md).
+- `revision`: The specific algorithm or configuration revision you use to perform the request.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This processor increases resolution of an image or video. Returns `nil` if dimensions are out of range or revision is unsupported.
+
+# initWithFrameWidth:frameHeight:scaleFactor:inputType:usePrecomputedFlow:qualityPrioritization:revision: (Objective-C)
+
+**Framework:** Video Toolbox  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+
+
+Creates a new super-resolution scaler processor configuration.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithFrameWidth:(NSInteger) frameWidth frameHeight:(NSInteger) frameHeight scaleFactor:(NSInteger) scaleFactor inputType:(VTSuperResolutionScalerConfigurationInputType) inputType usePrecomputedFlow:(BOOL) usePrecomputedFlow qualityPrioritization:(VTSuperResolutionScalerConfigurationQualityPrioritization) qualityPrioritization revision:(VTSuperResolutionScalerConfigurationRevision) revision;
+```
+
+## Parameters
+
+- `frameWidth`: Width of source frame in pixels. With `VTSuperResolutionScalerConfigurationInputTypeVideo`, maximum width is 1920 on macOS and 1440 on iOS. With `VTSuperResolutionScalerConfigurationInputTypeImage`, maximum width is 1920.
+- `frameHeight`: Height of source frame in pixels. With `VTSuperResolutionScalerConfigurationInputTypeVideo`, maximum height is 1080. With `VTSuperResolutionScalerConfigurationInputTypeImage`, maximum height is 1920 on macOS and 1080 on iOS.
+- `scaleFactor`: Indicates the scale factor between input and output.
+- `inputType`: Indicates the type of input, either video or image.
+- `usePrecomputedFlow`: Boolean value to indicate that you provide optical flow; if false, this configuration computes the optical flow on the fly.
+- `qualityPrioritization`: A level you use to prioritize quality or performance; for more information about supported levels, see [VTSuperResolutionScalerConfigurationQualityPrioritization](qualityprioritization-swift.enum.md).
+- `revision`: The specific algorithm or configuration revision you use to perform the request.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This processor increases resolution of an image or video. Returns `nil` if dimensions are out of range or revision is unsupported.

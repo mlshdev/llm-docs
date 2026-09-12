@@ -1,0 +1,69 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/modelio/mdlmaterialsemantic/ambientocclusionscale](https://developer.apple.com/documentation/modelio/mdlmaterialsemantic/ambientocclusionscale)
+
+# MDLMaterialSemantic.ambientOcclusionScale (Swift)
+
+**Framework:** Model I/O  
+**Kind:** Case  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.0+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The scaling factor for ambient occlusion shading.
+
+## Declaration
+
+```swift
+case ambientOcclusionScale
+```
+
+## See Also
+
+### Constants
+
+- [MDLMaterialSemantic.baseColor](basecolor.md): The inherent color of a surface, to be used as a modulator during shading.
+- [MDLMaterialSemantic.subsurface](subsurface.md): The degree to which light scatters under the surface of a material.
+- [MDLMaterialSemantic.metallic](metallic.md): The degree to which a material appears as a dielectric surface (lower values) or as a metal (higher values).
+- [MDLMaterialSemantic.specular](specular.md): The intensity of specular highlights that appear on the material’s surface.
+- [MDLMaterialSemantic.specularExponent](specularexponent.md): The exponent to be used in Blinn-Phong approximation of the material’s specular response.
+- [MDLMaterialSemantic.specularTint](speculartint.md): The balance of color for specular highlights, between the light color (lower values) and the material’s base color (at higher values).
+- [MDLMaterialSemantic.roughness](roughness.md): The degree to which a material appears smooth, affecting both diffuse and specular response.
+- [MDLMaterialSemantic.anisotropic](anisotropic.md): The degree to which specular highlights elongate in the direction of the local tangent basis.
+- [MDLMaterialSemantic.anisotropicRotation](anisotropicrotation.md): The angle at which anisotropic effects are rotated relative to the local tangent basis.
+- [MDLMaterialSemantic.sheen](sheen.md): The intensity of highlights that appear only at glancing angles on a material’s surface.
+- [MDLMaterialSemantic.sheenTint](sheentint.md): The balance of color for highlights that appear only at glancing angles, between the light color (lower values) and the material’s base color (at higher values).
+- [MDLMaterialSemantic.clearcoat](clearcoat.md): The intensity of a second specular highlight, similar to the gloss that results from a clear coat on an automotive finish.
+- [MDLMaterialSemantic.clearcoatGloss](clearcoatgloss.md): The spread of a second specular highlight, similar to the gloss that results from a clear coat on an automotive finish.
+- [MDLMaterialSemantic.emission](emission.md): The color emitted as radiance from a material’s surface.
+- [MDLMaterialSemantic.bump](bump.md): The degree of perturbation in a material’s surface.
+
+# MDLMaterialSemanticAmbientOcclusionScale (Objective-C)
+
+**Framework:** Model I/O  
+**Kind:** Enumeration Case  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.0+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The scaling factor for ambient occlusion shading.
+
+## Declaration
+
+```objectivec
+MDLMaterialSemanticAmbientOcclusionScale
+```
+
+## See Also
+
+### Constants
+
+- [MDLMaterialSemanticBaseColor](basecolor.md): The inherent color of a surface, to be used as a modulator during shading.
+- [MDLMaterialSemanticSubsurface](subsurface.md): The degree to which light scatters under the surface of a material.
+- [MDLMaterialSemanticMetallic](metallic.md): The degree to which a material appears as a dielectric surface (lower values) or as a metal (higher values).
+- [MDLMaterialSemanticSpecular](specular.md): The intensity of specular highlights that appear on the material’s surface.
+- [MDLMaterialSemanticSpecularExponent](specularexponent.md): The exponent to be used in Blinn-Phong approximation of the material’s specular response.
+- [MDLMaterialSemanticSpecularTint](speculartint.md): The balance of color for specular highlights, between the light color (lower values) and the material’s base color (at higher values).
+- [MDLMaterialSemanticRoughness](roughness.md): The degree to which a material appears smooth, affecting both diffuse and specular response.
+- [MDLMaterialSemanticAnisotropic](anisotropic.md): The degree to which specular highlights elongate in the direction of the local tangent basis.
+- [MDLMaterialSemanticAnisotropicRotation](anisotropicrotation.md): The angle at which anisotropic effects are rotated relative to the local tangent basis.
+- [MDLMaterialSemanticSheen](sheen.md): The intensity of highlights that appear only at glancing angles on a material’s surface.
+- [MDLMaterialSemanticSheenTint](sheentint.md): The balance of color for highlights that appear only at glancing angles, between the light color (lower values) and the material’s base color (at higher values).
+- [MDLMaterialSemanticClearcoat](clearcoat.md): The intensity of a second specular highlight, similar to the gloss that results from a clear coat on an automotive finish.
+- [MDLMaterialSemanticClearcoatGloss](clearcoatgloss.md): The spread of a second specular highlight, similar to the gloss that results from a clear coat on an automotive finish.
+- [MDLMaterialSemanticEmission](emission.md): The color emitted as radiance from a material’s surface.
+- [MDLMaterialSemanticBump](bump.md): The degree of perturbation in a material’s surface.

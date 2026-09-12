@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "project": "docker",
   "title": "Docker",
+  "homepage": "https://docs.docker.com/",
   "repository": "docker/docs",
   "tag": "main",
   "branch": "main",

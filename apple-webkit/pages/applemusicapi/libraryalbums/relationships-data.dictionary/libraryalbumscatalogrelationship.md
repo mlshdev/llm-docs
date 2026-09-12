@@ -1,0 +1,30 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applemusicapi/libraryalbums/relationships-data.dictionary/libraryalbumscatalogrelationship](https://developer.apple.com/documentation/applemusicapi/libraryalbums/relationships-data.dictionary/libraryalbumscatalogrelationship)
+
+# LibraryAlbums.Relationships.LibraryAlbumsCatalogRelationship
+
+**Interface language:** Data
+
+**Framework:** Apple Music API  
+**Kind:** Object  
+**Availability:** Apple Music 1.0+
+
+A relationship from the library album to its associated catalog content.
+
+## Declaration
+
+```
+object LibraryAlbums.Relationships.LibraryAlbumsCatalogRelationship
+```
+
+## Properties
+
+- `href` — `string`: The relative location to fetch the relationship directly.
+- `next` — `string`: The relative location to request the next page of resources in the collection, if additional resources are available for fetching.
+- `data` — `[Albums]` (required): The album from the Apple Music catalog associated with the library album, if any.
+
+## See Also
+
+### Related Objects
+
+- [LibraryAlbums.Relationships.LibraryAlbumsArtistsRelationship](libraryalbumsartistsrelationship.md): A relationship from the library album to its artist.
+- [LibraryAlbums.Relationships.LibraryAlbumsTracksRelationship](libraryalbumstracksrelationship.md): A relationship from the library album to its tracks.

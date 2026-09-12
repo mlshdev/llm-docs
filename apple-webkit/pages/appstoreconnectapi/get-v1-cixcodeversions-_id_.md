@@ -1,0 +1,145 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/get-v1-cixcodeversions-_id_](https://developer.apple.com/documentation/appstoreconnectapi/get-v1-cixcodeversions-_id_)
+
+# Read xcode version information
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Web Service Endpoint  
+**Availability:** App Store Connect API 1.5+
+
+Get information about a specific Xcode version that’s available to Xcode Cloud workflows.
+
+## URL
+
+```http
+GET https://api.appstoreconnect.apple.com/v1/ciXcodeVersions/{id}
+```
+
+## Path Parameters
+
+- `id` — `string` (required): The opaque resource ID that uniquely identifies the Xcode Versions resource.
+
+## Query Parameters
+
+- `fields[ciXcodeVersions]` — `[string]`: Additional fields to include for the Xcode Versions resource returned by the response.
+  **Allowed values:** `version`, `name`, `testDestinations`, `macOsVersions`
+- `include` — `[string]`: The relationship data to include in the response.
+  **Allowed values:** `macOsVersions`
+- `limit[macOsVersions]` — `integer`: The number of included Xcode Versions resources to return if the macOS versions relationship is included.
+  **Maximum:** `50`
+- `fields[ciMacOsVersions]` — `[string]`: Additional fields to include for the Xcode Versions resource returned by the response.
+  **Allowed values:** `version`, `name`, `xcodeVersions`
+
+## Response Codes
+
+- `200` OK — `CiXcodeVersionResponse`: The request completed successfully.
+- `400` Bad Request — `ErrorResponse`: An error occurred with your request.
+- `401` Unauthorized — `ErrorResponse`:
+- `403` Forbidden — `ErrorResponse`: Request not authorized.
+- `404` Not Found — `ErrorResponse`: Resource not found.
+- `429` — `ErrorResponse`:
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The example request below accesses detailed information for a specific Xcode version available to Xcode Cloud workflows. Use the data provided in the response to display available Xcode versions and test destinations on a dashboard or to read additional information; for example, macOS version information.
+
+<a id="Example-Request-and-Response"></a>
+
+### Example Request and Response
+
+**Request**
+
+```
+GET https://api.appstoreconnect.apple.com/v1/ciXcodeVersions/Xcode12E507:stable
+```
+
+**Response**
+
+```json
+{
+    "data": {
+        "type": "ciXcodeVersions",
+        "id": "Xcode12E507:stable",
+        "attributes": {
+            "version": "Xcode12E507:stable",
+            "name": "Xcode 12.5.1 (12E507)",
+            "testDestinations": [
+                {
+                    "deviceTypeName": "iPhone 8",
+                    "deviceTypeIdentifier": "com.apple.CoreSimulator.SimDeviceType.iPhone-8",
+                    "availableRuntimes": [
+                        {
+                            "runtimeName": "iOS 13.0",
+                            "runtimeIdentifier": "com.apple.CoreSimulator.SimRuntime.iOS-13-0"
+                        }
+                    ],
+                    "kind": "SIMULATOR"
+                },
+                {
+                    "deviceTypeName": "Mac",
+                    "deviceTypeIdentifier": "mac",
+                    "availableRuntimes": [
+                        {
+                            "runtimeName": "Same as Selected macOS Version",
+                            "runtimeIdentifier": "builder"
+                        },
+                        {
+                            "runtimeName": "Latest Beta or Release (Currently macOS Big Sur 11.5.2 (20G95))",
+                            "runtimeIdentifier": "latest:all"
+                        },
+                        {
+                            "runtimeName": "macOS Big Sur 11.5.2 (20G95)",
+                            "runtimeIdentifier": "20G95"
+                        }
+                    ],
+                    "kind": "MAC"
+                },
+                {
+                    "deviceTypeName": "Mac (Mac Catalyst)",
+                    "deviceTypeIdentifier": "mac_catalyst",
+                    "availableRuntimes": [
+                        {
+                            "runtimeName": "Same as Selected macOS Version",
+                            "runtimeIdentifier": "builder"
+                        },
+                        {
+                            "runtimeName": "Latest Beta or Release (Currently macOS Big Sur 11.5.2 (20G95))",
+                            "runtimeIdentifier": "latest:all"
+                        },
+                        {
+                            "runtimeName": "macOS Big Sur 11.5.2 (20G95)",
+                            "runtimeIdentifier": "20G95"
+                        }
+                    ],
+                    "kind": "MAC"
+                }
+            ]
+        },
+        "relationships": {
+            "macOsVersions": {
+                "links": {
+                    "self": "https://api.appstoreconnect.apple.com/v1/ciXcodeVersions/Xcode12E507:stable/relationships/macOsVersions",
+                    "related": "https://api.appstoreconnect.apple.com/v1/ciXcodeVersions/Xcode12E507:stable/macOsVersions"
+                }
+            }
+        },
+        "links": {
+            "self": "https://api.appstoreconnect.apple.com/v1/ciXcodeVersions/Xcode12E507:stable"
+        }
+    },
+    "links": {
+        "self": "https://api.appstoreconnect.apple.com/v1/ciXcodeVersions/Xcode12E507:stable"
+    }
+}
+```
+
+## See Also
+
+### Getting Xcode Version Information
+
+- [List all xcode versions available in xcode cloud](get-v1-cixcodeversions.md): List all Xcode versions that are available to Xcode Cloud workflows.
+- [List available macos versions for an xcode version](get-v1-cixcodeversions-_id_-macosversions.md): List all macOS versions available in Xcode Cloud that support a specific Xcode version.
+- [List macOS version IDs for a CI Xcode version](get-v1-cixcodeversions-_id_-relationships-macosversions.md)

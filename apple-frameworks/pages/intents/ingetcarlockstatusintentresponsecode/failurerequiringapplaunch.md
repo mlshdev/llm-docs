@@ -1,0 +1,61 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/intents/ingetcarlockstatusintentresponsecode/failurerequiringapplaunch](https://developer.apple.com/documentation/intents/ingetcarlockstatusintentresponsecode/failurerequiringapplaunch)
+
+# INGetCarLockStatusIntentResponseCode.failureRequiringAppLaunch (Swift)
+
+**Framework:** Intents  
+**Kind:** Case  
+**Availability:** iOS 10.3+ · iPadOS 10.3+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
+
+An error code indicating that the user must launch your app to get the car’s lock status.
+
+## Declaration
+
+```swift
+case failureRequiringAppLaunch
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this response code when you cannot handle the request through Siri for a reason not covered by any other response code. For example, you might use this code if the user has not set up the car in your app. Do not use it for general errors or to force the user to launch your app.
+
+## See Also
+
+### Constants
+
+- [INGetCarLockStatusIntentResponseCode.failure](failure.md): An error code indicating that you were unable to get the car’s lock status.
+- [INGetCarLockStatusIntentResponseCode.inProgress](inprogress.md): A response code indicating that you are getting the car’s lock status but do not yet have the results.
+- [INGetCarLockStatusIntentResponseCode.ready](ready.md): A response code indicating that you are ready to handle the intent.
+- [INGetCarLockStatusIntentResponseCode.success](success.md): A response code indicating that you have successfully handled the intent.
+- [INGetCarLockStatusIntentResponseCode.unspecified](unspecified.md): A response code indicating that the status was not specified.
+
+# INGetCarLockStatusIntentResponseCodeFailureRequiringAppLaunch (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Enumeration Case  
+**Availability:** iOS 10.3+ · iPadOS 10.3+ · Mac Catalyst 13.1+ · visionOS 1.0+ · watchOS 3.2+
+
+An error code indicating that the user must launch your app to get the car’s lock status.
+
+## Declaration
+
+```objectivec
+INGetCarLockStatusIntentResponseCodeFailureRequiringAppLaunch
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this response code when you cannot handle the request through Siri for a reason not covered by any other response code. For example, you might use this code if the user has not set up the car in your app. Do not use it for general errors or to force the user to launch your app.
+
+## See Also
+
+### Constants
+
+- [INGetCarLockStatusIntentResponseCodeFailure](failure.md): An error code indicating that you were unable to get the car’s lock status.
+- [INGetCarLockStatusIntentResponseCodeInProgress](inprogress.md): A response code indicating that you are getting the car’s lock status but do not yet have the results.
+- [INGetCarLockStatusIntentResponseCodeReady](ready.md): A response code indicating that you are ready to handle the intent.
+- [INGetCarLockStatusIntentResponseCodeSuccess](success.md): A response code indicating that you have successfully handled the intent.
+- [INGetCarLockStatusIntentResponseCodeUnspecified](unspecified.md): A response code indicating that the status was not specified.

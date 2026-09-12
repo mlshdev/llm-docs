@@ -1,0 +1,65 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshaders/mpscnnbinarykernel/destinationimageallocator](https://developer.apple.com/documentation/metalperformanceshaders/mpscnnbinarykernel/destinationimageallocator)
+
+# destinationImageAllocator (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+## Declaration
+
+```swift
+var destinationImageAllocator: any MPSImageAllocator { get set }
+```
+
+## See Also
+
+### Instance Properties
+
+- [clipRect](cliprect.md)
+- [destinationFeatureChannelOffset](destinationfeaturechanneloffset.md)
+- [isBackwards](isbackwards.md)
+- [padding](padding.md)
+- [primaryEdgeMode](primaryedgemode.md)
+- [primaryOffset](primaryoffset.md)
+- [primaryStrideInPixelsX](primarystrideinpixelsx.md)
+- [primaryStrideInPixelsY](primarystrideinpixelsy.md)
+- [secondaryEdgeMode](secondaryedgemode.md)
+- [secondaryOffset](secondaryoffset.md)
+- [secondaryStrideInPixelsX](secondarystrideinpixelsx.md)
+- [secondaryStrideInPixelsY](secondarystrideinpixelsy.md)
+- [isStateModified](isstatemodified.md)
+- [primaryDilationRateX](primarydilationratex.md)
+- [primaryDilationRateY](primarydilationratey.md)
+
+# destinationImageAllocator (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Instance Property  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+
+
+## Declaration
+
+```objectivec
+@property (nonatomic, retain, readwrite, nonnull) id<MPSImageAllocator> destinationImageAllocator;
+```
+
+## See Also
+
+### Instance Properties
+
+- [clipRect](cliprect.md)
+- [destinationFeatureChannelOffset](destinationfeaturechanneloffset.md)
+- [isBackwards](isbackwards.md)
+- [padding](padding.md)
+- [primaryEdgeMode](primaryedgemode.md)
+- [primaryOffset](primaryoffset.md)
+- [primaryStrideInPixelsX](primarystrideinpixelsx.md)
+- [primaryStrideInPixelsY](primarystrideinpixelsy.md)
+- [secondaryEdgeMode](secondaryedgemode.md)
+- [secondaryOffset](secondaryoffset.md)
+- [secondaryStrideInPixelsX](secondarystrideinpixelsx.md)
+- [secondaryStrideInPixelsY](secondarystrideinpixelsy.md)
+- [isStateModified](isstatemodified.md)
+- [primaryDilationRateX](primarydilationratex.md)
+- [primaryDilationRateY](primarydilationratey.md)

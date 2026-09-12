@@ -1,0 +1,86 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/accessibilitysettings](https://developer.apple.com/documentation/devicemanagement/accessibilitysettings)
+
+# AccessibilitySettings
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Object  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+The declaration to configure accessibility settings.
+
+## Declaration
+
+```
+object AccessibilitySettings
+```
+
+## Properties
+
+- `Vision` — `AccessibilitySettingsVisionObject`: If present, configures vision accessibility settings.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Specify `com.apple.configuration.accessibility.settings` as the declaration type.
+
+<a id="Configuration-availability"></a>
+
+### Configuration availability
+
+|  |  |
+| --- | --- |
+| Allowed in supervised enrollment | iOS, macOS, visionOS |
+| Allowed in device enrollment | N/A |
+| Allowed in user enrollment | N/A |
+| Allowed in local enrollment | N/A |
+| Allowed in system scope | iOS, macOS, visionOS |
+| Allowed in user scope | macOS |
+| Apply | Multiple configurations are combined and applied as a single effective configuration |
+
+<a id="Configuration-example"></a>
+
+### Configuration example
+
+This configuration prevents the use of Live Recognition.
+
+```json
+{
+    "Type": "com.apple.configuration.accessibility.settings",
+    "Identifier": "119D31F8-E3A2-454A-A019-FD3F05A008D3",
+    "ServerToken": "DC31F056-0ADE-4D01-8E63-A7CA093EC7CD",
+    "Payload": {
+        "Vision": {
+            "AllowLiveRecognition": false
+        }
+    }
+}
+```
+
+## Topics
+
+### Objects
+
+- [AccessibilitySettingsVisionObject](accessibilitysettingsvisionobject.md): If present, configures vision accessibility settings.
+
+## See Also
+
+### Configurations
+
+- [AccountCalDAV](accountcaldav.md): The declaration to configure a Calendar account.
+- [AccountCardDAV](accountcarddav.md): The declaration to configure a Contacts account.
+- [AccountExchange](accountexchange.md): The declaration to configure an Exchange account.
+- [AccountGoogle](accountgoogle.md): The declaration to configure a Google account.
+- [AccountLDAP](accountldap.md): The declaration to configure a Lightweight Directory Access Protocol (LDAP) account.
+- [AccountMail](accountmail.md): The declaration to configure a Mail account.
+- [AccountSubscribedCalendar](accountsubscribedcalendar.md): The declaration to configure a subscribed calendar.
+- [AppManaged](appmanaged.md): The declaration to configure a managed app.
+- [AppSettings](appsettings.md): The declaration to configure app settings.
+- [AudioAccessorySettings](audioaccessorysettings.md): The declaration to configure audio accessory settings.
+- [ContentCaching](contentcaching.md): The declaration to configure the Content Caching service.
+- [DiskManagementSettings](diskmanagementsettings.md): The declaration to configure disk management settings on the device.
+- [ExtensibleSSO](extensiblesso.md): The declaration to configure Extensible Single Sign-On.
+- [ExternalIntelligenceSettings](externalintelligencesettings.md): The declaration to configure External Intelligence Integrations settings.
+- [IntelligenceSettings](intelligencesettings.md): The declaration to configure Apple Intelligence settings.

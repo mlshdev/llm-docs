@@ -1,0 +1,79 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/passkit/pkpaymentrequest/shippingtype](https://developer.apple.com/documentation/passkit/pkpaymentrequest/shippingtype)
+
+# shippingType (Swift)
+
+**Framework:** PassKit (Apple Pay and Wallet)  
+**Kind:** Instance Property  
+**Availability:** iOS 8.3+ · iPadOS 8.3+ · Mac Catalyst 13.1+ · macOS 11.0+ · visionOS 1.0+ · watchOS 3.0+
+
+The type of shipping the request uses.
+
+## Declaration
+
+```swift
+var shippingType: PKShippingType { get set }
+```
+
+## Mentioned In
+
+- [Displaying a Read-Only Pickup Address](../displaying-a-read-only-pickup-address.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This property sets the labels for the shipping information displayed by the [PKPaymentAuthorizationViewController](../pkpaymentauthorizationviewcontroller.md) class. The default value is [PKShippingType.shipping](../pkshippingtype/shipping.md). For a complete list of valid shipping types, see [PKShippingType](../pkshippingtype.md).
+
+> **Note**
+
+>  In iOS 14 and earlier, watchOS 4 and earlier, and Catalyst 14 and earlier, if you’re using a [PKShippingType.storePickup](../pkshippingtype/storepickup.md) shipping type, you need to manage the shipping information displayed by the payment authorization view controller. By default, the system displays the user’s preferred shipping address. You can set the request’s [shippingAddress](shippingaddress.md) property to the address for your store, or hide the shipping information entirely by setting the [requiredShippingAddressFields](requiredshippingaddressfields.md) property to [PKAddressFieldNone](../pkaddressfield/pkaddressfieldnone.md).
+
+## See Also
+
+### Setting the shipping methods and types
+
+- [Displaying a Read-Only Pickup Address](../displaying-a-read-only-pickup-address.md): Configure a payment request to display a read-only pickup address on the payment sheet.
+- [shippingMethods](shippingmethods.md): An array of shipping method objects that describe the supported shipping methods.
+- [PKShippingMethod](../pkshippingmethod.md): An object that defines a shipping method for delivering physical goods.
+- [shippingContactEditingMode](shippingcontacteditingmode.md): A value that indicates whether the shipping mode prevents the user from editing the shipping address.
+- [PKShippingType](../pkshippingtype.md): A complete list of valid shipping types.
+- [PKShippingContactEditingMode](../pkshippingcontacteditingmode.md): Constants that indicate whether the shipping mode prevents the user from editing fields of the shipping address.
+
+# shippingType (Objective-C)
+
+**Framework:** PassKit (Apple Pay and Wallet)  
+**Kind:** Instance Property  
+**Availability:** iOS 8.3+ · iPadOS 8.3+ · Mac Catalyst 13.1+ · macOS 11.0+ · visionOS 1.0+ · watchOS 3.0+
+
+The type of shipping the request uses.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, assign) PKShippingType shippingType;
+```
+
+## Mentioned In
+
+- [Displaying a Read-Only Pickup Address](../displaying-a-read-only-pickup-address.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This property sets the labels for the shipping information displayed by the [PKPaymentAuthorizationViewController](../pkpaymentauthorizationviewcontroller.md) class. The default value is [PKShippingTypeShipping](../pkshippingtype/shipping.md). For a complete list of valid shipping types, see [PKShippingType](../pkshippingtype.md).
+
+> **Note**
+
+>  In iOS 14 and earlier, watchOS 4 and earlier, and Catalyst 14 and earlier, if you’re using a [PKShippingTypeStorePickup](../pkshippingtype/storepickup.md) shipping type, you need to manage the shipping information displayed by the payment authorization view controller. By default, the system displays the user’s preferred shipping address. You can set the request’s [shippingAddress](shippingaddress.md) property to the address for your store, or hide the shipping information entirely by setting the [requiredShippingAddressFields](requiredshippingaddressfields.md) property to [PKAddressFieldNone](../pkaddressfield/pkaddressfieldnone.md).
+
+## See Also
+
+### Setting the shipping methods and types
+
+- [Displaying a Read-Only Pickup Address](../displaying-a-read-only-pickup-address.md): Configure a payment request to display a read-only pickup address on the payment sheet.
+- [shippingMethods](shippingmethods.md): An array of shipping method objects that describe the supported shipping methods.
+- [PKShippingMethod](../pkshippingmethod.md): An object that defines a shipping method for delivering physical goods.
+- [shippingContactEditingMode](shippingcontacteditingmode.md): A value that indicates whether the shipping mode prevents the user from editing the shipping address.
+- [PKShippingType](../pkshippingtype.md): A complete list of valid shipping types.
+- [PKShippingContactEditingMode](../pkshippingcontacteditingmode.md): Constants that indicate whether the shipping mode prevents the user from editing fields of the shipping address.

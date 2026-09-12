@@ -1,0 +1,14 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/assetslibrary/alassetslibrary/videoatpathiscompatiblewithsavedphotosalbum:](https://developer.apple.com/documentation/assetslibrary/alassetslibrary/videoatpathiscompatiblewithsavedphotosalbum:)
+
+# videoAtPathIsCompatibleWithSavedPhotosAlbum:
+
+**Interface language:** Objective-C
+
+**Framework:** Assets Library  
+**Kind:** Instance Method
+
+## Declaration
+
+```objectivec
+- (BOOL) videoAtPathIsCompatibleWithSavedPhotosAlbum:(NSURL *) videoPathURL;
+```

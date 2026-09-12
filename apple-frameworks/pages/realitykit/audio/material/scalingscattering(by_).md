@@ -1,0 +1,51 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/audio/material/scalingscattering(by:)](https://developer.apple.com/documentation/realitykit/audio/material/scalingscattering(by:))
+
+# scalingScattering(by:)
+
+**Framework:** RealityKit  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+Scale the scattering data by a frequency-dependent scalar value between -1 and 1.
+
+## Declaration
+
+```swift
+func scalingScattering(by frequencyDependentScalar: (Float) -> Float) -> Audio.Material
+```
+
+## Parameters
+
+- `frequencyDependentScalar`: A function with frequency as input and coefficient scalar as output.
+
+<a id="return-value"></a>
+
+## Return Value
+
+Audio material with scattering data scaled by the frequency-dependent scaling function.
+
+<a id="discussion"></a>
+
+## Discussion
+
+- No adjustment is made to the coefficient when the scalar is 0.
+- The coefficient is set to 0 when the scalar is -1.
+- The coefficient is set to 1 when the scalar is +1.
+- If the scalar value is between -1 and 0, the coefficient is adjusted by the percentage defined by the absolute value of the scalar between the original coefficient and 0.
+- If the scalar value is between 0 and 1, the coefficient is adjusted by the percentage defined by the scalar between the original coefficient and 1.
+
+Example usage:
+
+```
+// Make a generic concrete material scatter more at high frequencies by making it rougher.
+// Below 4000Hz, the scattering remains the same. Above 4000Hz, the scattering is increased.
+let roughConcrete: Audio.Material = .concrete.scalingScattering { frequency in
+    frequency > 4000 ? 0.5 : .zero
+}
+```
+
+## See Also
+
+### Adjusting acoustic properties
+
+- [scalingAbsorption(by:)](scalingabsorption%28by_%29.md): Scale the absorption data by a frequency-dependent scalar value between -1 and 1.

@@ -1,0 +1,17 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/svgtransformlist/1633463-removeitem](https://developer.apple.com/documentation/webkitjs/svgtransformlist/1633463-removeitem)
+
+# removeItem
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 3.0+ · Safari Mobile 2.1+
+
+## Declaration
+
+```
+SVGTransform removeItem(
+    unsigned long index
+);
+```

@@ -1,0 +1,146 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/quartz/ikslideshow](https://developer.apple.com/documentation/quartz/ikslideshow)
+
+# IKSlideshow (Swift)
+
+**Framework:** Quartz  
+**Kind:** Class  
+**Availability:** macOS 10.4+
+
+The `IKSlideshow` class encapsulates a data source and options for a slideshow.
+
+## Declaration
+
+```swift
+class IKSlideshow
+```
+
+## Topics
+
+### Creating a Shared Instance of a Slideshow
+
+- [shared()](ikslideshow/shared%28%29.md): Returns a shared instance of a slideshow.
+
+### Running and Stopping a Slideshow
+
+- [run(with:inMode:options:)](ikslideshow/run%28with_inmode_options_%29.md): Runs a slideshow that contains the specified kind of items, provided from a data source.
+- [stop(\_:)](ikslideshow/stop%28__%29.md): Stops a slideshow.
+- [autoPlayDelay](ikslideshow/autoplaydelay.md): Controls the interval of time before a slideshow starts to play automatically.
+
+### Getting Slideshow Data
+
+- [indexOfCurrentSlideshowItem()](ikslideshow/indexofcurrentslideshowitem%28%29.md): Returns the index of the current slideshow item.
+
+### Reloading Data
+
+- [reloadData()](ikslideshow/reloaddata%28%29.md): Reloads the data for a slideshow.
+- [reloadItem(at:)](ikslideshow/reloaditem%28at_%29.md): Reloads the data for a slideshow, starting at the specified index.
+
+### Exporting Slideshow Items
+
+- [canExport(toApplication:)](ikslideshow/canexport%28toapplication_%29.md): Finds out whether the slideshow can export its contents to an application.
+- [exportItem(\_:toApplication:)](ikslideshow/exportitem%28__toapplication_%29.md): Exports a slideshow item to the application that has the provided bundle identifier.
+
+### Constants
+
+- [Bundle Identifiers](bundle-identifiers.md): Identifiers for exporting slideshow items to an application.
+- [Slideshow Modes](slideshow-modes.md): The kind of items in the slideshow.
+- [Slideshow Option Keys](slideshow-option-keys.md): Keys for slideshow options.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](https://developer.apple.com/documentation/objectivec/nsobject-swift.class)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
+
+## See Also
+
+### Classes
+
+- [IKCameraDeviceView](ikcameradeviceview.md): The `IKCameraDeviceView` class displays the contents of the selected camera.
+- [IKDeviceBrowserView](ikdevicebrowserview.md): The `IKDeviceBrowserView` allows you to select a camera or scanner from a list of the available devices.
+- [IKFilterBrowserPanel](ikfilterbrowserpanel.md): Presents a user interface for browsing filters.
+- [IKFilterBrowserView](ikfilterbrowserview.md): The `IKFilterBrowserView` class is used as a container for the elements of an [IKFilterBrowserPanel](ikfilterbrowserpanel.md) object.
+- [IKFilterUIView](ikfilteruiview.md): Input parameters for filtering core image filters.
+- [IKImageBrowserCell](ikimagebrowsercell.md): A class used to display a cell.
+- [IKImageEditPanel](ikimageeditpanel.md): The `IKImageEditPanel` class provides a panel, that is, a utility window that floats on top of document windows, optimized for image editing.
+- [IKImageView](ikimageview.md): A view that allows displaying and minor editing of an image.
+- [IKPictureTaker](ikpicturetaker.md): The `IKPictureTaker` class represents a panel that allows users to choose images by browsing the file system. The picture taker panel provides an Open Recent menu, supports image cropping, and supports taking snapshots from an iSight or other digital camera.
+- [IKSaveOptions](iksaveoptions.md): The `IKSaveOptions` class initializes, adds, and manages user interface options for saving image data.
+- [IKScannerDeviceView](ikscannerdeviceview.md): The `IKScannerDeviceView` class displays a view that allows scanning. It can be customized by specifying the display mode. The delegate receives the scanned data and must implement the [IKScannerDeviceViewDelegate](ikscannerdeviceviewdelegate.md) protocol.
+
+# IKSlideshow (Objective-C)
+
+**Framework:** Quartz  
+**Kind:** Class  
+**Availability:** macOS 10.4+
+
+The `IKSlideshow` class encapsulates a data source and options for a slideshow.
+
+## Declaration
+
+```objectivec
+@interface IKSlideshow : NSObject
+```
+
+## Topics
+
+### Creating a Shared Instance of a Slideshow
+
+- [sharedSlideshow](ikslideshow/shared%28%29.md): Returns a shared instance of a slideshow.
+
+### Running and Stopping a Slideshow
+
+- [runSlideshowWithDataSource:inMode:options:](ikslideshow/run%28with_inmode_options_%29.md): Runs a slideshow that contains the specified kind of items, provided from a data source.
+- [stopSlideshow:](ikslideshow/stop%28__%29.md): Stops a slideshow.
+- [autoPlayDelay](ikslideshow/autoplaydelay.md): Controls the interval of time before a slideshow starts to play automatically.
+
+### Getting Slideshow Data
+
+- [indexOfCurrentSlideshowItem](ikslideshow/indexofcurrentslideshowitem%28%29.md): Returns the index of the current slideshow item.
+
+### Reloading Data
+
+- [reloadData](ikslideshow/reloaddata%28%29.md): Reloads the data for a slideshow.
+- [reloadSlideshowItemAtIndex:](ikslideshow/reloaditem%28at_%29.md): Reloads the data for a slideshow, starting at the specified index.
+
+### Exporting Slideshow Items
+
+- [canExportToApplication:](ikslideshow/canexport%28toapplication_%29.md): Finds out whether the slideshow can export its contents to an application.
+- [exportSlideshowItem:toApplication:](ikslideshow/exportitem%28__toapplication_%29.md): Exports a slideshow item to the application that has the provided bundle identifier.
+
+### Constants
+
+- [Bundle Identifiers](bundle-identifiers.md): Identifiers for exporting slideshow items to an application.
+- [Slideshow Modes](slideshow-modes.md): The kind of items in the slideshow.
+- [Slideshow Option Keys](slideshow-option-keys.md): Keys for slideshow options.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](https://developer.apple.com/documentation/objectivec/nsobject-swift.class)
+
+## See Also
+
+### Classes
+
+- [IKCameraDeviceView](ikcameradeviceview.md): The `IKCameraDeviceView` class displays the contents of the selected camera.
+- [IKDeviceBrowserView](ikdevicebrowserview.md): The `IKDeviceBrowserView` allows you to select a camera or scanner from a list of the available devices.
+- [IKFilterBrowserPanel](ikfilterbrowserpanel.md): Presents a user interface for browsing filters.
+- [IKFilterBrowserView](ikfilterbrowserview.md): The `IKFilterBrowserView` class is used as a container for the elements of an [IKFilterBrowserPanel](ikfilterbrowserpanel.md) object.
+- [IKFilterUIView](ikfilteruiview.md): Input parameters for filtering core image filters.
+- [IKImageBrowserCell](ikimagebrowsercell.md): A class used to display a cell.
+- [IKImageEditPanel](ikimageeditpanel.md): The `IKImageEditPanel` class provides a panel, that is, a utility window that floats on top of document windows, optimized for image editing.
+- [IKImageView](ikimageview.md): A view that allows displaying and minor editing of an image.
+- [IKPictureTaker](ikpicturetaker.md): The `IKPictureTaker` class represents a panel that allows users to choose images by browsing the file system. The picture taker panel provides an Open Recent menu, supports image cropping, and supports taking snapshots from an iSight or other digital camera.
+- [IKSaveOptions](iksaveoptions.md): The `IKSaveOptions` class initializes, adds, and manages user interface options for saving image data.
+- [IKScannerDeviceView](ikscannerdeviceview.md): The `IKScannerDeviceView` class displays a view that allows scanning. It can be customized by specifying the display mode. The delegate receives the scanned data and must implement the [IKScannerDeviceViewDelegate](ikscannerdeviceviewdelegate.md) protocol.

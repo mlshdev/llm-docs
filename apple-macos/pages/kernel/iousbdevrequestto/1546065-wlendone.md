@@ -1,0 +1,30 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iousbdevrequestto/1546065-wlendone](https://developer.apple.com/documentation/kernel/iousbdevrequestto/1546065-wlendone)
+
+# wLenDone
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Instance Property  
+**Availability:** macOS 10.1+
+
+The number of data bytes that the system actually transferred.
+
+## Declaration
+
+```objectivec
+UInt32 wLenDone;
+```
+
+## See Also
+
+### Getting the Properties
+
+- [bmRequestType](1546240-bmrequesttype.md): The type of the request.
+- [bRequest](1546186-brequest.md): The request code.
+- [wValue](1546569-wvalue.md): The 16-bit parameter for the request.
+- [wIndex](1545983-windex.md): The 16-bit parameter for the request.
+- [wLength](1546424-wlength.md): The length of the data part of the request.
+- [pData](1546393-pdata.md): The pointer to the data for the request.
+- [completionTimeout](1546188-completiontimeout.md): The value of the completion timeout in milliseconds.
+- [noDataTimeout](1546538-nodatatimeout.md): The value of the completion timeout in milliseconds if there’s no data.

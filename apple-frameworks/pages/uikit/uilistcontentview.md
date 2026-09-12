@@ -1,0 +1,146 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uilistcontentview](https://developer.apple.com/documentation/uikit/uilistcontentview)
+
+# UIListContentView (Swift)
+
+**Framework:** UIKit  
+**Kind:** Class  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · tvOS 14.0+ · visionOS 1.0+
+
+A content view for displaying list-based content.
+
+## Declaration
+
+```swift
+@MainActor class UIListContentView
+```
+
+<a id="overview"></a>
+
+## Overview
+
+You use a list content view for displaying list-based content in a custom view hierarchy. You can embed a list content view manually in a custom cell or in a container view, like a [UIStackView](uistackview.md). You can use Auto Layout or manual layout techniques to size and position the view, and its height adjusts dynamically according to its width and the space it needs to display its content.
+
+A list content view relies on its list content configuration to supply its styling and content. You create a list content view by passing in a [UIListContentConfiguration](uilistcontentconfiguration-swift.struct.md) to [init(configuration:)](uilistcontentview/init%28configuration_%29.md) (Swift) or [initWithConfiguration:](uilistcontentview/initwithconfiguration_.md) (Objective-C). To update the content view, you set a new configuration on it through its [configuration](uilistcontentview/configuration.md) property.
+
+If you’re using a [UICollectionView](uicollectionview.md) or [UITableView](uitableview.md), you don’t need to manually create a list content view to take advantage of the list configuration. Instead, you assign a [UIListContentConfiguration](uilistcontentconfiguration-swift.struct.md) to the [contentConfiguration](uicollectionviewcell/contentconfiguration-1lcqh.md) property of the cells, headers, or footers within those types.
+
+## Topics
+
+### Creating a list content view
+
+- [init(configuration:)](uilistcontentview/init%28configuration_%29.md): Creates a list content view with the specified content configuration.
+- [init(coder:)](uilistcontentview/init%28coder_%29.md): Creates a list content view from data in an unarchiver.
+
+### Managing the content layout
+
+- [textLayoutGuide](uilistcontentview/textlayoutguide.md): A guide for positioning the primary text in the content view.
+- [secondaryTextLayoutGuide](uilistcontentview/secondarytextlayoutguide.md): A guide for positioning the secondary text in the content view.
+- [imageLayoutGuide](uilistcontentview/imagelayoutguide.md): A guide for positioning the image in the content view.
+
+## Relationships
+
+### Inherits From
+
+- [UIView](uiview.md)
+
+### Conforms To
+
+- [CALayerDelegate](../quartzcore/calayerdelegate.md)
+- [CLBodyIdentifiable](../corelocation/clbodyidentifiable.md)
+- [CMBodyIdentifiable](../coremotion/cmbodyidentifiable.md)
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Escapable](https://developer.apple.com/documentation/swift/escapable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCoding](../foundation/nscoding.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [NSTouchBarProvider](https://developer.apple.com/documentation/appkit/nstouchbarprovider)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+- [UIAccessibilityIdentification](uiaccessibilityidentification.md)
+- [UIActivityItemsConfigurationProviding](uiactivityitemsconfigurationproviding.md)
+- [UIAppearance](uiappearance.md)
+- [UIAppearanceContainer](uiappearancecontainer.md)
+- [UIContentView](uicontentview-5fh3z.md)
+- [UICoordinateSpace](uicoordinatespace.md)
+- [UIDynamicItem](uidynamicitem.md)
+- [UIFocusEnvironment](uifocusenvironment.md)
+- [UIFocusItem](uifocusitem.md)
+- [UIFocusItemContainer](uifocusitemcontainer.md)
+- [UILargeContentViewerItem](uilargecontentvieweritem.md)
+- [UIPasteConfigurationSupporting](uipasteconfigurationsupporting.md)
+- [UIPopoverPresentationControllerSourceItem](uipopoverpresentationcontrollersourceitem.md)
+- [UIResponderStandardEditActions](uiresponderstandardeditactions.md)
+- [UITraitChangeObservable](uitraitchangeobservable-67e94.md)
+- [UITraitEnvironment](uitraitenvironment.md)
+- [UIUserActivityRestoring](uiuseractivityrestoring.md)
+
+## See Also
+
+### Content configurations
+
+- [UIListContentConfiguration](uilistcontentconfiguration-swift.struct.md): A content configuration for a list-based content view.
+- [UIContentConfiguration](uicontentconfiguration-9eib5.md): The requirements for an object that provides the configuration for a content view.
+- [UIContentView](uicontentview-5fh3z.md): The requirements for a content view that you create using a configuration.
+
+# UIListContentView (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Class  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · tvOS 14.0+ · visionOS 1.0+
+
+A content view for displaying list-based content.
+
+## Declaration
+
+```objectivec
+@interface UIListContentView : UIView
+```
+
+<a id="overview"></a>
+
+## Overview
+
+You use a list content view for displaying list-based content in a custom view hierarchy. You can embed a list content view manually in a custom cell or in a container view, like a [UIStackView](uistackview.md). You can use Auto Layout or manual layout techniques to size and position the view, and its height adjusts dynamically according to its width and the space it needs to display its content.
+
+A list content view relies on its list content configuration to supply its styling and content. You create a list content view by passing in a [UIListContentConfiguration](uilistcontentconfiguration-swift.struct.md) to [init(configuration:)](uilistcontentview/init%28configuration_%29.md) (Swift) or [initWithConfiguration:](uilistcontentview/initwithconfiguration_.md) (Objective-C). To update the content view, you set a new configuration on it through its [configuration](uilistcontentview/configuration.md) property.
+
+If you’re using a [UICollectionView](uicollectionview.md) or [UITableView](uitableview.md), you don’t need to manually create a list content view to take advantage of the list configuration. Instead, you assign a [UIListContentConfiguration](uilistcontentconfiguration-swift.struct.md) to the [contentConfiguration](uicollectionviewcell/contentconfiguration-1lcqh.md) property of the cells, headers, or footers within those types.
+
+## Topics
+
+### Creating a list content view
+
+- [initWithConfiguration:](uilistcontentview/initwithconfiguration_.md): Creates a list content view with the specified content configuration.
+- [initWithCoder:](uilistcontentview/init%28coder_%29.md): Creates a list content view from data in an unarchiver.
+
+### Managing the content configuration
+
+- [configuration](uilistcontentview/configuration.md): The current configuration of the view.
+
+### Managing the content layout
+
+- [textLayoutGuide](uilistcontentview/textlayoutguide.md): A guide for positioning the primary text in the content view.
+- [secondaryTextLayoutGuide](uilistcontentview/secondarytextlayoutguide.md): A guide for positioning the secondary text in the content view.
+- [imageLayoutGuide](uilistcontentview/imagelayoutguide.md): A guide for positioning the image in the content view.
+
+## Relationships
+
+### Inherits From
+
+- [UIView](uiview.md)
+
+### Conforms To
+
+- [UIContentView](uicontentview-3zu2k.md)
+
+## See Also
+
+### Content configurations
+
+- [UIListContentConfiguration](uilistcontentconfiguration-c.class.md): A content configuration for a list-based content view.
+- [UIContentConfiguration](uicontentconfiguration-2raci.md): The requirements for an object that provides the configuration for a content view.
+- [UIContentView](uicontentview-3zu2k.md): The requirements for a content view that you create using a configuration.

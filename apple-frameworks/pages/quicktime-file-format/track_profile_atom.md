@@ -1,0 +1,36 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/track_profile_atom](https://developer.apple.com/documentation/quicktime-file-format/track_profile_atom)
+
+# Track profile atom ('prfl')
+
+**Framework:** QuickTime File Format  
+**Kind:** Atom
+
+A child atom of movie atoms or track atoms.
+
+> Profile atoms are deprecated in the QuickTime file format. The information that follows documents existing content containing profile atoms and should not be used for new development.
+
+## Mentioned In
+
+- [QuickTime File Format change log](revision_history.md)
+
+<a id="Overview"></a>
+
+## Overview
+
+Profile atoms can be children of movie atoms or track atoms. For details on profile atoms, see [Movie profile atom](movie_profile_atom.md).
+
+## Topics
+
+### Data fields
+
+- [Reserved](track_profile_atom/reserved.md): A 32-bit field.
+- [Part-ID](track_profile_atom/part-id.md): A 32-bit field that defines the feature as being either brand-specific or universal.
+- [Feature code](track_profile_atom/feature_code.md): A 32-bit unsigned integer that represents a code specifying a feature.
+- [Value](track_profile_atom/value.md): A 32-bit field that represents a value related to a feature.
+
+## See Also
+
+### Movie atoms
+
+- [Movie profile atom](movie_profile_atom.md): Deprecated. An atom that summarizes the features and complexity of a movie.
+- [Appendix F: Profile atom guidelines](appendix_f_profile_atom_guidelines.md): Summarize profile information about a QuickTime movie so readers can easily determine features and complexity.

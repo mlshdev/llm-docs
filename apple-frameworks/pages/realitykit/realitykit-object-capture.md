@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/realitykit-object-capture](https://developer.apple.com/documentation/realitykit/realitykit-object-capture)
+
+# Object capture
+
+**Framework:** RealityKit  
+**Kind:** API Collection
+
+Create 3D objects from a series of photographs using photogrammetry.
+
+<a id="Overview"></a>
+
+## Overview
+
+In iOS 17 and macOS 12 and later, you can create 3D objects from photographs using a process called photogrammetry. You provide RealityKit Object Capture with a series of well-lit photographs taken from many different angles. It analyzes the overlap area between different images to match up landmarks and produces a 3D model of the photographed object.
+
+## Topics
+
+### Model creation
+
+- [Capturing photographs for RealityKit Object Capture](capturing-photographs-for-realitykit-object-capture.md): Take high-quality images of objects to generate 3D models.
+- [Creating 3D objects from photographs](creating-3d-objects-from-photographs.md): Construct virtual objects to use in your AR experiences.
+- [Scanning objects using Object Capture](scanning-objects-using-object-capture.md): Implement a full scanning workflow for capturing objects on iOS devices.
+- [Building an object reconstruction app](building-an-object-reconstruction-app.md): Reconstruct objects from user-selected input images by using photogrammetry.
+- [Creating a photogrammetry command-line app](creating-a-photogrammetry-command-line-app.md): Generate 3D objects from images using RealityKit Object Capture.
+- [Using object capture assets in RealityKit](using-object-capture-assets-in-realitykit.md): Create a chess game using RealityKit and assets created using Object Capture.
+- [PhotogrammetrySession](photogrammetrysession.md): Manages the creation of a 3D model from a set of images.
+- [PhotogrammetrySample](photogrammetrysample.md): An object that represents one image and its corresponding metadata.
+- [ObjectCaptureView](objectcaptureview.md): A view that guides a user through capturing images for object capture.
+- [ObjectCaptureSession](objectcapturesession.md): A session object that monitors and controls image capture for photogrammetry.
+- [ObjectCapturePointCloudView](objectcapturepointcloudview.md): Renders the current state of the point cloud from an object capture session.
+
+## See Also
+
+### Asset creation
+
+- [Reality Composer Pro](https://developer.apple.com/documentation/realitycomposerpro): Build, design, and orchestrate 3D content for your RealityKit apps.
+- [Swift Splash](../visionos/swift-splash.md): Use RealityKit to create an interactive ride in visionOS.
+- [Diorama](../visionos/diorama.md): Design scenes for your visionOS app using Reality Composer Pro.
+- [Presenting an artist’s scene](presenting-an-artists-scene.md): Display a scene from Reality Composer Pro in visionOS.
+- [USD](../usd.md): An efficient and scalable way to represent 3D scenes.
+- [Composing interactive 3D content with RealityKit and Reality Composer Pro](composing-interactive-3d-content-with-realitykit-and-reality-composer-pro.md): Build an interactive scene using an animation timeline.

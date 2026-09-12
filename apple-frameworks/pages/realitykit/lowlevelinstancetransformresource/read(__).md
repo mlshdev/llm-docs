@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/lowlevelinstancetransformresource/read(_:)](https://developer.apple.com/documentation/realitykit/lowlevelinstancetransformresource/read(_:))
+
+# read(\_:)
+
+**Framework:** RealityKit  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+Reads the current transform data synchronously on the CPU.
+
+## Declaration
+
+```swift
+final func read<R, E>(_ body: (consuming Span<float4x4>) throws(E) -> R) throws(E) -> R where E : Error, R : ~Copyable
+```
+
+## Parameters
+
+- `body`: A closure that receives a read-only span over the transform data.
+
+<a id="discussion"></a>
+
+## Discussion
+
+You pass a closure that receives a read-only span representing the transform data. This span is valid only for the duration of the closure.
+
+> **Throws**
+
+> Any error thrown by `body`.
+
+## See Also
+
+### Reading transform data
+
+- [read(commandBuffer:)](read%28commandbuffer_%29.md): Returns a Metal buffer containing the current transform data for GPU read operations.

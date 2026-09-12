@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/proximityreader/paymentcardreadersession/id](https://developer.apple.com/documentation/proximityreader/paymentcardreadersession/id)
+
+# id
+
+**Framework:** ProximityReader  
+**Kind:** Instance Property  
+**Availability:** iOS 15.4+ (deprecated in 16.0) · iPadOS 15.4+ (deprecated in 16.0) · Mac Catalyst 17.0+ (deprecated in 17.0)
+
+A unique identifier for this object.
+
+> Use ObjectIdentifier instead
+
+## Declaration
+
+```swift
+final let id: String
+```
+
+## See Also
+
+### Deprecated
+
+- [readPaymentCard(\_:eventHandler:)](readpaymentcard%28__eventhandler_%29-2zgwn.md): Deprecated. Presents a sheet to read a contactless payment card for a purchase or a refund, and returns the encrypted card data.
+- [readPaymentCard(\_:eventHandler:)](readpaymentcard%28__eventhandler_%29-20e1w.md): Deprecated. Presents a sheet to verify a contactless payment card, and returns the card data.
+- [readPaymentCard(\_:vasRequest:stopOnVASResult:eventHandler:)](readpaymentcard%28__vasrequest_stoponvasresult_eventhandler_%29.md): Deprecated. Presents a sheet to read both contactless payments and loyalty cards for a purchase or refund, and returns the relevant card data.
+- [readVAS(\_:eventHandler:)](readvas%28__eventhandler_%29.md): Deprecated. Presents a sheet to read a loyalty card for Value Added Services (VAS), and returns the loyalty card data.
+- [PaymentCardReaderSession.Event](event.md): Deprecated. Optional events you can observe during the card-reading process.

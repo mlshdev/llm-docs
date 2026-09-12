@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/boot_args/3553756-kc_hdrs_vaddr](https://developer.apple.com/documentation/kernel/boot_args/3553756-kc_hdrs_vaddr)
+
+# KC_hdrs_vaddr
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Instance Property  
+**Availability:** macOS 11.0+
+
+## Declaration
+
+```objectivec
+uint64_t KC_hdrs_vaddr;
+```

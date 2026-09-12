@@ -1,0 +1,65 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/fskit/fsvolume/preallocatehandler/preallocatespace(for:at:length:flags:context:replyhandler:)](https://developer.apple.com/documentation/fskit/fsvolume/preallocatehandler/preallocatespace(for:at:length:flags:context:replyhandler:))
+
+# preallocateSpace(for:at:length:flags:context:replyHandler:) (Swift)
+
+**Framework:** FSKit  
+**Kind:** Instance Method  
+**Availability:** macOS 27.0+
+
+Preallocates disk space for the given item.
+
+## Declaration
+
+```swift
+func preallocateSpace(for item: FSItem, at offset: off_t, length: Int, flags: FSVolume.PreallocateFlags, context: FSContext, replyHandler reply: @escaping @Sendable (FSPreallocateResult?, (any Error)?) -> Void)
+```
+
+```swift
+func preallocateSpace(for item: FSItem, at offset: off_t, length: Int, flags: FSVolume.PreallocateFlags, context: FSContext) async throws -> FSPreallocateResult
+```
+
+## Parameters
+
+- `item`: The item for which to preallocate space.
+- `offset`: The offset from which to allocate.
+- `length`: The length of the space in bytes.
+- `flags`: Flags that affect the preallocation behavior.
+- `context`: An object that enables context-aware file system decisions throughout the operation.
+- `reply`: A block or closure to indicate success or failure. If preallocation succeeds, pass an instance of [FSPreallocateResult](../../fspreallocateresult.md) containing the amount of bytes allocated, the updated [FSItem.Attributes](../../fsitem/attributes.md) of the file and the volume’s updated free space, along with a `nil` error. If preallocation fails, pass the relevant error as the second parameter; FSKit ignores the [FSPreallocateResult](../../fspreallocateresult.md) instance in this case. For an `async` Swift implementation, there’s no reply handler; simply return the result instance or throw an error.
+
+## See Also
+
+### Preallocating space
+
+- [FSVolume.PreallocateFlags](../preallocateflags.md): Behavior flags for preallocation operations.
+- [FSPreallocateResult](../../fspreallocateresult.md): The result of a preallocate call.
+
+# preallocateSpaceForItem:atOffset:length:flags:context:replyHandler: (Objective-C)
+
+**Framework:** FSKit  
+**Kind:** Instance Method  
+**Availability:** macOS 27.0+
+
+Preallocates disk space for the given item.
+
+## Declaration
+
+```objectivec
+- (void) preallocateSpaceForItem:(FSItem *) item atOffset:(off_t) offset length:(size_t) length flags:(FSPreallocateFlags) flags context:(FSContext *) context replyHandler:(void (^)(FSPreallocateResult *result, NSError *error)) reply;
+```
+
+## Parameters
+
+- `item`: The item for which to preallocate space.
+- `offset`: The offset from which to allocate.
+- `length`: The length of the space in bytes.
+- `flags`: Flags that affect the preallocation behavior.
+- `context`: An object that enables context-aware file system decisions throughout the operation.
+- `reply`: A block or closure to indicate success or failure. If preallocation succeeds, pass an instance of [FSPreallocateResult](../../fspreallocateresult.md) containing the amount of bytes allocated, the updated [FSItemAttributes](../../fsitem/attributes.md) of the file and the volume’s updated free space, along with a `nil` error. If preallocation fails, pass the relevant error as the second parameter; FSKit ignores the [FSPreallocateResult](../../fspreallocateresult.md) instance in this case. For an `async` Swift implementation, there’s no reply handler; simply return the result instance or throw an error.
+
+## See Also
+
+### Preallocating space
+
+- [FSPreallocateFlags](../preallocateflags.md): Behavior flags for preallocation operations.
+- [FSPreallocateResult](../../fspreallocateresult.md): The result of a preallocate call.

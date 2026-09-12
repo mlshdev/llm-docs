@@ -1,0 +1,184 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/query-target-cpa-suggestion](https://developer.apple.com/documentation/apple-ads-platform-api/query-target-cpa-suggestion)
+
+# Query Target CPA Suggestion
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Web Service Endpoint  
+**Availability:** Apple Ads Platform API 1.0+
+
+Retrieve the recommended target CPA for a new Maximize Conversions campaign on the App Store.
+
+## URL
+
+```http
+POST https://api.ads.apple.com/v1/suggestions/target-cpas/query
+```
+
+## Header Parameters
+
+- `X-Ap-Context` — `string` (required):
+
+## HTTP Body
+
+Content type: `application/json`
+
+Type: `RecommendationQueryRequest`
+
+See [RecommendationQueryRequest](recommendationqueryrequest.md).
+
+## Response Codes
+
+- `200` OK — `RecommendationQueryTargetCpaSuggestionResponse`:
+- `400` Bad Request — `RecommendationResponseBody`:
+- `401` Unauthorized — `RecommendationResponseBody`:
+- `403` Forbidden — `RecommendationResponseBody`:
+- `404` Not Found — `RecommendationResponseBody`:
+- `429` Too Many Requests — `RecommendationResponseBody`:
+- `500` Internal Server Error — `RecommendationResponseBody`:
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This endpoint returns the suggested target CPA for a [campaign](campaigns-endpoints.md). The suggestion is the maximum tap-install CPI observed across the specified app’s eligible markets over the last 28 days. Only countries or regions with at least 10 installs in that window qualify.
+
+To identify the app, use `promotedObjectId` and `promotedObjectType`. Scope results to specific markets with an optional `countryOrRegion` filter. The response returns the single highest suggested target CPA and the market that produced it, along with the `appCategory` the suggestion applies to.
+
+See [FilterOperator](recommendationfilteroperator.md) for the full set of supported comparison operators.
+
+<a id="Filterable-Fields"></a>
+
+### Filterable Fields
+
+| Field | Type | Operators | Description |
+| --- | --- | --- | --- |
+| `promotedObjectId` | string | `EQUALS` | Required. A single numeric App Store app ID. |
+| `promotedObjectType` | string (enum) | `EQUALS` | Required. Must be `APPSTORE_APP`. |
+| `countryOrRegion` | array of strings | `IN` | Optional. One or more ISO 3166-1 alpha-2 country or region codes. When omitted, all eligible countries and regions are considered. |
+
+<a id="Payload-Examples"></a>
+
+## Payload Examples
+
+**All Eligible Countries**
+
+Retrieve the suggested target CPA across all markets. Omitting `countryOrRegion` causes the endpoint to evaluate every country and region with at least 10 installs in the last 28 days and return the highest result.
+
+<a id="Request"></a>
+
+### Request
+
+Identifies the app by `promotedObjectId` and `promotedObjectType`. Since you don’t supply a country filter, the endpoint evaluates all eligible markets.
+
+```json
+POST /v1/suggestions/target-cpas/query
+
+{
+ "filters": [
+   {
+     "field": "promotedObjectId",
+     "operator": "EQUALS",
+     "value": [
+       "987654321"
+     ]
+   },
+   {
+     "field": "promotedObjectType",
+     "operator": "EQUALS",
+     "value": [
+       "APPSTORE_APP"
+     ]
+   }
+ ]
+}
+```
+
+<a id="Response"></a>
+
+### Response
+
+```json
+{
+ "result": {
+   "promotedObjectId": "987654321",
+   "suggestedTargetCPA": {
+     "amount": "1.20",
+     "currency": "USD"
+   },
+   "countryOrRegion": [
+     "US"
+   ],
+   "appCategory": "Games"
+ }
+}
+```
+
+**Scoped to Specific Countries**
+
+Restrict evaluation to specific markets by adding a `countryOrRegion` filter. The endpoint returns the highest suggested target CPA found within those countries or regions only.
+
+<a id="Request"></a>
+
+### Request
+
+Adds a `countryOrRegion` filter restricting evaluation to the US, GB, and CA markets.
+
+```json
+POST /v1/suggestions/target-cpas/query
+
+{
+ "filters": [
+   {
+     "field": "promotedObjectId",
+     "operator": "EQUALS",
+     "value": [
+       "987654321"
+     ]
+   },
+   {
+     "field": "promotedObjectType",
+     "operator": "EQUALS",
+     "value": [
+       "APPSTORE_APP"
+     ]
+   },
+   {
+     "field": "countryOrRegion",
+     "operator": "IN",
+     "value": [
+       "US",
+       "GB",
+       "CA"
+     ]
+   }
+ ]
+}
+```
+
+<a id="Response"></a>
+
+### Response
+
+```json
+{
+ "result": {
+   "promotedObjectId": "987654321",
+   "suggestedTargetCPA": {
+     "amount": "0.95",
+     "currency": "USD"
+   },
+   "countryOrRegion": [
+     "GB"
+   ],
+   "appCategory": "Games"
+ }
+}
+```
+
+## See Also
+
+- [Query Keyword Suggestions](query-keyword-suggestions.md): Query keyword suggestions based on search terms and App Store countries or regions using structured filters.
+- [Query Phrase Suggestions](query-phrase-suggestions.md): Query phrase suggestions using either a discovery or search route based on the query type.
+- [Query Category Suggestions](query-category-suggestions.md): Query category suggestions for apps or brands using either a discovery or search route based on the query type.

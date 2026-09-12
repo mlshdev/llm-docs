@@ -1,0 +1,91 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/visionos/tracking-points-in-world-space](https://developer.apple.com/documentation/visionos/tracking-points-in-world-space)
+
+# Tracking specific points in world space
+
+**Kind:** Sample Code  
+**Availability:** visionOS 26.0+ · Xcode 26.0+
+
+Retrieve the position and orientation of anchors your app stores in ARKit.
+
+<a id="Overview"></a>
+
+## Overview
+
+Use world anchors along with an ARKit session’s [WorldTrackingProvider](../arkit/worldtrackingprovider.md) to track points of interest in the world over time, as a person moves while wearing the device, and across device usage sessions. For example, someone might place a 3D object in a specific position on their desk and expect it to come back the next time they use the device.
+
+Video: world-tracking.mp4
+
+ARKit keeps track of a unique identifier for each world anchor your app creates and automatically places those anchors back in the space when the person returns to your app in the same location. A world tracking provider also provides the position of the device the person is wearing.
+
+<a id="Start-an-ARKit-session-with-world-tracking"></a>
+
+### Start an ARKit session with world tracking
+
+Use an [ARKitSession](../arkit/arkitsession.md) configured for world tracking to start receiving updates on the world anchors your app places. The following shows updates to world anchors your app previously registered using the [addAnchor(\_:)](../arkit/worldtrackingprovider/addanchor%28__%29.md) method:
+
+```swift
+let session = ARKitSession()
+let worldInfo = WorldTrackingProvider()
+
+Task {
+    try await session.run([worldInfo])
+    
+    for await update in worldInfo.anchorUpdates {
+        switch update.event {
+        case .added, .updated:
+            // Update the app's understanding of this world anchor.
+            print("Anchor position updated.")
+        case .removed:
+            // Remove content related to this anchor.
+            print("Anchor position now unknown.")
+    }
+}
+```
+
+> **Important**
+
+> If a person repositions the current space — for example, by holding down the Digital Crown — world anchor updates begin updating their position relative to the new world origin. For example, a world anchor placed on a table still reports information about the table’s position, but those positions are relative to the updated world origin.
+
+<a id="Create-and-add-world-anchors"></a>
+
+### Create and add world anchors
+
+You can create world anchors for any point of interest in your app’s world coordinate system once you’ve started a world tracking ARKit session. For example, you might track that a person placed an item at a particular offset from a desk in their space:
+
+```swift
+let anchor = WorldAnchor(originFromAnchorTransform: deskPlane.originFromAnchorTransform + offset)
+try await worldInfo.addAnchor(anchor)
+```
+
+Once you add a world anchor to your app’s tracking provider using the [addAnchor(\_:)](../arkit/worldtrackingprovider/addanchor%28__%29.md) method, the [anchorUpdates](../arkit/worldtrackingprovider/anchorupdates.md) sequence in the current session and future runs of your app provides updates to the current position of that new world anchor.
+
+<a id="Persist-world-anchors-across-sessions"></a>
+
+### Persist world anchors across sessions
+
+The only information ARKit persists about the world anchors in your app is their [UUID](../foundation/uuid.md) — a [WorldAnchor](../arkit/worldanchor.md) instance’s [id](../arkit/worldanchor/id.md) property — and pose in a particular space. It’s your app’s responsibility to persist additional information, such as the meaning of each anchor. For example, you might save local data about a custom 3D lamp model that a person placed on their desk.
+
+As a person moves from town-to-town or room-to-room, your app won’t receive all of the world anchor updates from each place someone used your app. Instead, the [anchorUpdates](../arkit/worldtrackingprovider/anchorupdates.md) sequence only provides world anchors for nearby objects.
+
+<a id="Track-the-device-position-in-the-world"></a>
+
+### Track the device position in the world
+
+Use the Compositor Services framework and the [WorldTrackingProvider](../arkit/worldtrackingprovider.md) class’s [queryDeviceAnchor(atTimestamp:)](../arkit/worldtrackingprovider/querydeviceanchor%28attimestamp_%29.md) method to get low-latency information about the current and future-predicted pose of the person’s device in world space. For more information, see [Drawing fully immersive content using Metal](../compositorservices/drawing-fully-immersive-content-using-metal.md).
+
+## See Also
+
+### ARKit
+
+- [Happy Beam](happybeam.md): Leverage a Full Space to create a fun game using ARKit.
+- [Setting up access to ARKit data](setting-up-access-to-arkit-data.md): Check whether your app can use ARKit and respect people’s privacy.
+- [Incorporating real-world surroundings in an immersive experience](incorporating-real-world-surroundings-in-an-immersive-experience.md): Create an immersive experience by making your app’s content respond to the local shape of the world.
+- [Placing content on detected planes](placing-content-on-detected-planes.md): Detect horizontal surfaces like tables and floors, as well as vertical planes like walls and doors.
+- [Tracking preregistered images in 3D space](tracking-images-in-3d-space.md): Place content based on the current position of a known image in a person’s surroundings.
+- [Exploring object tracking with ARKit](exploring_object_tracking_with_arkit.md): Find and track real-world objects in visionOS using reference objects you train with Create ML.
+- [Object tracking with Reality Composer Pro experiences](object-tracking-with-reality-composer-pro-experiences.md): Use object tracking in visionOS to attach digital content to real objects to create engaging experiences.
+- [Building local experiences with room tracking](building-local-experiences-with-room-tracking.md): Use room tracking in visionOS to provide custom interactions with physical spaces.
+- [Placing entities using head and device transform](placing-entities-using-head-and-device-transform.md): Query and react to changes in the position and rotation of Apple Vision Pro.
+- [Drawing in the air and on surfaces with a spatial stylus](drawing-in-the-air-and-on-surfaces-with-a-spatial-stylus.md): Create a spatial stylus drawing experience that balances latency and accuracy for both in-air and on-surface drawing.
+- [Preparing spatial accessories for tracking in your visionOS app](../arkit/preparing-spatial-accessories-for-tracking-in-your-visionos-app.md): Prepare a spatial accessory for tracking by training a reference accessory file and integrating it into your visionOS app.
+- [Working with generic spatial accessories](working-with-generic-spatial-accessories.md): Let people place digital replicas of a generic spatial accessory by tracking the accessory with ARKit.

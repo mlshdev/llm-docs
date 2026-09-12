@@ -1,0 +1,195 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreimage/cifilter-swift.class/colorcubesmixedwithmask()](https://developer.apple.com/documentation/coreimage/cifilter-swift.class/colorcubesmixedwithmask())
+
+# colorCubesMixedWithMask() (Swift)
+
+**Framework:** Core Image  
+**Kind:** Type Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
+
+Alters an image’s pixels using a three-dimensional color tables and a mask image.
+
+## Declaration
+
+```swift
+class func colorCubesMixedWithMask() -> any CIFilter & CIColorCubesMixedWithMask
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+The modified image.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method applies the color cubes mixed with mask filter to an image. The effect uses two color cube tables to modify the input image. The filter uses the mask image to interpolate between the two color cubes.
+
+The color cubes mixed with mask filter uses the following properties:
+
+- **`inputImage`**: An image with the type [CIImage](../ciimage.md).
+- **`maskImage`**: A mask image with the type [CIImage](../ciimage.md).
+- **`cube0Data`**: Data containing a 3-dimensional color table of floating-point premultiplied RGBA values. The cells are organized in a standard ordering. The columns and rows of the data are indexed by red and green, respectively. Each data plane is followed by the next higher plane in the data, with planes indexed by blue.
+- **`cube1Data`**: Data containing a 3-dimensional color table of floating-point premultiplied RGBA values. The cells are organized in a standard ordering. The columns and rows of the data are indexed by red and green, respectively. Each data plane is followed by the next higher plane in the data, with planes indexed by blue.
+- **`colorSpace`**: A [CGColorSpace](../../coregraphics/cgcolorspace.md) representing the color space for the color cubes.
+- **`cubeDimension`**: The dimension of the color cubes
+
+The following code creates a filter that adds colors from the mask image and brightness to the input image:
+
+```swift
+func colorCube(inputImage: CIImage, maskImage: CIImage, cube0Data: Data, cube1Data: Data) -> CIImage {
+    let colorCubeEffect = CIFilter.colorCubesMixedWithMask()
+    colorCubeEffect.inputImage = inputImage
+    colorCubeEffect.colorSpace = CGColorSpaceCreateDeviceRGB()
+    colorCubeEffect.cube0Data = cube1Data
+    colorCubeEffect.cube1Data = cube0Data
+    colorCubeEffect.maskImage = maskImage
+    colorCubeEffect.cubeDimension = 4
+    return colorCubeEffect.outputImage!
+}
+var colorCube0Data: [Float32] = []
+var colorCube1Data: [Float32] = []
+let size = 4
+let step = 1.0 / Float(size - 1)
+for b in 0..<size {
+    for g in 0..<size {
+        for r in 0..<size {
+            // Calculate the normalized color component values.
+            let redNormalised = Float32(r) * step
+            let greenNormalised = Float32(g) * step
+            let blueNormalised = Float32(b) * step
+            let alpha: Float = 1.0
+            colorCube0Data.append(contentsOf: [redNormalised*1.2, greenNormalised*0.8, blueNormalised*1.2, alpha])
+            colorCube1Data.append(contentsOf: [redNormalised*1.2, greenNormalised*1.15, blueNormalised*0.9, alpha])
+        }
+    }
+}
+let cube0Data = Data(bytes:colorCube0Data, count: colorCube0Data.count*4)
+let cube1Data = Data(bytes:colorCube1Data, count: colorCube1Data.count*4)
+let maskImage = CIFilter.linearGradient()
+maskImage.color0 = CIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+maskImage.color1 = CIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+maskImage.point0 = CGPoint(x:0, y:0)
+maskImage.point1 = CGPoint(x: ciImage.extent.width, y: 0)
+let result = colorCube(inputImage: ciImage, maskImage: maskImage.outputImage!, cube0Data: cube0Data, cube1Data: cube1Data)
+```
+
+![One photograph on the left above a gradient image, and a second photograph on the right. The photograph on the left shows a single flower photographed close-up, in focus, with good light and no effects. The image below it is a gradient image displaying a gradual color change from purple to a warm orange color. The photo on the right shows the same flower image with a colorCubesMixedWithMask filter applied, resulting in a brighter photograph with colors from the gradient photo. ](https://developer.apple.com/images/com.apple.coreimage/media-3546428@2x.png)
+
+## See Also
+
+### Color Effect Filters
+
+- [colorCrossPolynomial()](colorcrosspolynomial%28%29.md): Adjusts an image’s color by applying polynomial cross-products.
+- [colorCube()](colorcube%28%29.md): Adjusts an image’s pixels using a three-dimensional color table.
+- [colorCubeWithColorSpace()](colorcubewithcolorspace%28%29.md): Adjusts an image’s pixels using a three-dimensional color table in specified color space.
+- [colorCurves()](colorcurves%28%29.md): Adjusts an image’s color curves.
+- [colorInvert()](colorinvert%28%29.md): Inverts an image’s colors.
+- [colorMap()](colormap%28%29.md): Performs a transformation of the input image colors to colors from a gradient image.
+- [colorMonochrome()](colormonochrome%28%29.md): Adjusts an image’s colors to shades of a single color.
+- [colorPosterize()](colorposterize%28%29.md): Flattens an image’s colors.
+- [convertLabToRGB()](convertlabtorgb%28%29.md): Converts an image from CIELAB to RGB color space.
+- [convertRGBtoLab()](convertrgbtolab%28%29.md): Converts an image from RGB to CIELAB color space.
+- [dither()](dither%28%29.md): Applies randomized noise to produce a processed look.
+- [documentEnhancer()](documentenhancer%28%29.md): Adjusts an image’s shadows and contrast.
+- [falseColor()](falsecolor%28%29.md): Replaces an image’s colors with specified colors.
+- [labDeltaE()](labdeltae%28%29.md): Compares an image’s color values.
+- [maskToAlpha()](masktoalpha%28%29.md): Converts an image to a white image with an alpha component.
+
+# colorCubesMixedWithMaskFilter (Objective-C)
+
+**Framework:** Core Image  
+**Kind:** Type Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
+
+Alters an image’s pixels using a three-dimensional color tables and a mask image.
+
+## Declaration
+
+```objectivec
++ (CIFilter<CIColorCubesMixedWithMask> *) colorCubesMixedWithMaskFilter;
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+The modified image.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method applies the color cubes mixed with mask filter to an image. The effect uses two color cube tables to modify the input image. The filter uses the mask image to interpolate between the two color cubes.
+
+The color cubes mixed with mask filter uses the following properties:
+
+- **`inputImage`**: An image with the type [CIImage](../ciimage.md).
+- **`maskImage`**: A mask image with the type [CIImage](../ciimage.md).
+- **`cube0Data`**: Data containing a 3-dimensional color table of floating-point premultiplied RGBA values. The cells are organized in a standard ordering. The columns and rows of the data are indexed by red and green, respectively. Each data plane is followed by the next higher plane in the data, with planes indexed by blue.
+- **`cube1Data`**: Data containing a 3-dimensional color table of floating-point premultiplied RGBA values. The cells are organized in a standard ordering. The columns and rows of the data are indexed by red and green, respectively. Each data plane is followed by the next higher plane in the data, with planes indexed by blue.
+- **`colorSpace`**: A [CGColorSpaceRef](../../coregraphics/cgcolorspace.md) representing the color space for the color cubes.
+- **`cubeDimension`**: The dimension of the color cubes
+
+The following code creates a filter that adds colors from the mask image and brightness to the input image:
+
+```swift
+func colorCube(inputImage: CIImage, maskImage: CIImage, cube0Data: Data, cube1Data: Data) -> CIImage {
+    let colorCubeEffect = CIFilter.colorCubesMixedWithMask()
+    colorCubeEffect.inputImage = inputImage
+    colorCubeEffect.colorSpace = CGColorSpaceCreateDeviceRGB()
+    colorCubeEffect.cube0Data = cube1Data
+    colorCubeEffect.cube1Data = cube0Data
+    colorCubeEffect.maskImage = maskImage
+    colorCubeEffect.cubeDimension = 4
+    return colorCubeEffect.outputImage!
+}
+var colorCube0Data: [Float32] = []
+var colorCube1Data: [Float32] = []
+let size = 4
+let step = 1.0 / Float(size - 1)
+for b in 0..<size {
+    for g in 0..<size {
+        for r in 0..<size {
+            // Calculate the normalized color component values.
+            let redNormalised = Float32(r) * step
+            let greenNormalised = Float32(g) * step
+            let blueNormalised = Float32(b) * step
+            let alpha: Float = 1.0
+            colorCube0Data.append(contentsOf: [redNormalised*1.2, greenNormalised*0.8, blueNormalised*1.2, alpha])
+            colorCube1Data.append(contentsOf: [redNormalised*1.2, greenNormalised*1.15, blueNormalised*0.9, alpha])
+        }
+    }
+}
+let cube0Data = Data(bytes:colorCube0Data, count: colorCube0Data.count*4)
+let cube1Data = Data(bytes:colorCube1Data, count: colorCube1Data.count*4)
+let maskImage = CIFilter.linearGradient()
+maskImage.color0 = CIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+maskImage.color1 = CIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+maskImage.point0 = CGPoint(x:0, y:0)
+maskImage.point1 = CGPoint(x: ciImage.extent.width, y: 0)
+let result = colorCube(inputImage: ciImage, maskImage: maskImage.outputImage!, cube0Data: cube0Data, cube1Data: cube1Data)
+```
+
+![One photograph on the left above a gradient image, and a second photograph on the right. The photograph on the left shows a single flower photographed close-up, in focus, with good light and no effects. The image below it is a gradient image displaying a gradual color change from purple to a warm orange color. The photo on the right shows the same flower image with a colorCubesMixedWithMask filter applied, resulting in a brighter photograph with colors from the gradient photo. ](https://developer.apple.com/images/com.apple.coreimage/media-3546428@2x.png)
+
+## See Also
+
+### Color Effect Filters
+
+- [colorCrossPolynomialFilter](colorcrosspolynomial%28%29.md): Adjusts an image’s color by applying polynomial cross-products.
+- [colorCubeFilter](colorcube%28%29.md): Adjusts an image’s pixels using a three-dimensional color table.
+- [colorCubeWithColorSpaceFilter](colorcubewithcolorspace%28%29.md): Adjusts an image’s pixels using a three-dimensional color table in specified color space.
+- [colorCurvesFilter](colorcurves%28%29.md): Adjusts an image’s color curves.
+- [colorInvertFilter](colorinvert%28%29.md): Inverts an image’s colors.
+- [colorMapFilter](colormap%28%29.md): Performs a transformation of the input image colors to colors from a gradient image.
+- [colorMonochromeFilter](colormonochrome%28%29.md): Adjusts an image’s colors to shades of a single color.
+- [colorPosterizeFilter](colorposterize%28%29.md): Flattens an image’s colors.
+- [convertLabToRGBFilter](convertlabtorgb%28%29.md): Converts an image from CIELAB to RGB color space.
+- [convertRGBtoLabFilter](convertrgbtolab%28%29.md): Converts an image from RGB to CIELAB color space.
+- [ditherFilter](dither%28%29.md): Applies randomized noise to produce a processed look.
+- [documentEnhancerFilter](documentenhancer%28%29.md): Adjusts an image’s shadows and contrast.
+- [falseColorFilter](falsecolor%28%29.md): Replaces an image’s colors with specified colors.
+- [LabDeltaE](labdeltae%28%29.md): Compares an image’s color values.
+- [maskToAlphaFilter](masktoalpha%28%29.md): Converts an image to a white image with an alpha component.

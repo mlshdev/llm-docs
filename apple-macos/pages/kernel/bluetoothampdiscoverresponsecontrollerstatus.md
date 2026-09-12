@@ -1,0 +1,38 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/bluetoothampdiscoverresponsecontrollerstatus](https://developer.apple.com/documentation/kernel/bluetoothampdiscoverresponsecontrollerstatus)
+
+# BluetoothAMPDiscoverResponseControllerStatus
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Type Alias  
+**Availability:** macOS 10.6+
+
+## Declaration
+
+```objectivec
+typedef enum BluetoothAMPDiscoverResponseControllerStatus BluetoothAMPDiscoverResponseControllerStatus;
+```
+
+## Topics
+
+### Constants
+
+- [kBluetoothAMPManagerDiscoverResponseControllerStatusBluetoothOnly](bluetoothampdiscoverresponsecontrollerstatus/kbluetoothampmanagerdiscoverresponsecontrollerstatusbluetoothonly.md)
+- [kBluetoothAMPManagerDiscoverResponseControllerStatusFullCapacity](bluetoothampdiscoverresponsecontrollerstatus/kbluetoothampmanagerdiscoverresponsecontrollerstatusfullcapacity.md)
+- [kBluetoothAMPManagerDiscoverResponseControllerStatusHighCapacity](bluetoothampdiscoverresponsecontrollerstatus/kbluetoothampmanagerdiscoverresponsecontrollerstatushighcapacity.md)
+- [kBluetoothAMPManagerDiscoverResponseControllerStatusLowCapacity](bluetoothampdiscoverresponsecontrollerstatus/kbluetoothampmanagerdiscoverresponsecontrollerstatuslowcapacity.md)
+- [kBluetoothAMPManagerDiscoverResponseControllerStatusMediumCapacity](bluetoothampdiscoverresponsecontrollerstatus/kbluetoothampmanagerdiscoverresponsecontrollerstatusmediumcapacity.md)
+- [kBluetoothAMPManagerDiscoverResponseControllerStatusNoCapacity](bluetoothampdiscoverresponsecontrollerstatus/kbluetoothampmanagerdiscoverresponsecontrollerstatusnocapacity.md)
+- [kBluetoothAMPManagerDiscoverResponseControllerStatusPoweredDown](bluetoothampdiscoverresponsecontrollerstatus/kbluetoothampmanagerdiscoverresponsecontrollerstatuspowereddown.md)
+
+## See Also
+
+### AMP
+
+- [BluetoothAMPCommandRejectReason](bluetoothampcommandrejectreason.md)
+- [BluetoothAMPCreatePhysicalLinkResponseStatus](bluetoothampcreatephysicallinkresponsestatus.md)
+- [BluetoothAMPDisconnectPhysicalLinkResponseStatus](bluetoothampdisconnectphysicallinkresponsestatus.md)
+- [BluetoothAMPGetAssocResponseStatus](bluetoothampgetassocresponsestatus.md)
+- [BluetoothAMPGetInfoResponseStatus](bluetoothampgetinforesponsestatus.md)
+- [BluetoothAMPManagerCode](bluetoothampmanagercode.md)

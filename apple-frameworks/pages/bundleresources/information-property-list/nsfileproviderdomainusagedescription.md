@@ -1,0 +1,40 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/bundleresources/information-property-list/nsfileproviderdomainusagedescription](https://developer.apple.com/documentation/bundleresources/information-property-list/nsfileproviderdomainusagedescription)
+
+# NSFileProviderDomainUsageDescription
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** Bundle Resources  
+**Kind:** Property List Key  
+**Availability:** macOS 10.15+
+
+A message that tells people why the app needs access to files managed by a file provider.
+
+## Details
+
+`NSFileProviderDomainUsageDescription`
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The user implicitly grants your app access to a file managed by a file provider when selecting the file in an Open or Save panel, dragging it onto your app, or opening it in Finder. Your app can access that file right away and any time in the future. In addition, if your app creates a new file managed by a file provider, the app can access that file without user consent.
+
+The first time your app tries to access a file managed by a file provider without implied user consent, the system prompts the user for permission. Add the [NSFileProviderDomainUsageDescription](nsfileproviderdomainusagedescription.md) key to your app’s [Information Property List](../information-property-list.md) file to provide a string for the prompt that explains why your app needs access. The usage description is optional, but highly recommended.
+
+After the user chooses whether to grant access, the system remembers the user’s choice. To reset permissions, use the `tccutil` command line utility with your app’s bundle ID:
+
+```sh
+$ tccutil reset FileProviderDomain <bundleID>
+```
+
+## See Also
+
+### Files and folders
+
+- [NSDesktopFolderUsageDescription](nsdesktopfolderusagedescription.md): A message that tells people why the app needs access to their Desktop folder.
+- [NSDocumentsFolderUsageDescription](nsdocumentsfolderusagedescription.md)
+- [NSDownloadsFolderUsageDescription](nsdownloadsfolderusagedescription.md): A message that tells people why the app needs access to the user’s Downloads folder.
+- [NSNetworkVolumesUsageDescription](nsnetworkvolumesusagedescription.md): A message that tells people why the app needs access to files on a network volume.
+- [NSRemovableVolumesUsageDescription](nsremovablevolumesusagedescription.md): A message that tells people why the app needs access to files on a removable volume.
+- [NSFileProviderPresenceUsageDescription](nsfileproviderpresenceusagedescription.md): A message that tells people why the app’s file provider needs to determine which files the person is currently accessing.

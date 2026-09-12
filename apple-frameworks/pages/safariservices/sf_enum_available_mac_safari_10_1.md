@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/safariservices/sf_enum_available_mac_safari_10_1](https://developer.apple.com/documentation/safariservices/sf_enum_available_mac_safari_10_1)
+
+# SF_ENUM_AVAILABLE_MAC_SAFARI_10_1
+
+**Interface language:** Objective-C
+
+**Framework:** Safari Services  
+**Kind:** Macro  
+**Availability:** macOS 10.12+
+
+## Declaration
+
+```objectivec
+#define SF_ENUM_AVAILABLE_MAC_SAFARI_10_1
+```

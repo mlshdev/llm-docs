@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/directionallightcomponent/shadow/cascades-swift.property](https://developer.apple.com/documentation/realitykit/directionallightcomponent/shadow/cascades-swift.property)
+
+# cascades
+
+**Framework:** RealityKit  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+Number of shadow cascades to use when rendering shadows for this light.
+
+## Declaration
+
+```swift
+var cascades: DirectionalLightComponent.Shadow.Cascades { get set }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Cascaded shadow maps can significantly increase the shadow resolution of directional lights and help reduce perspective aliasing, particularly effective in expansive scenes with viewing angles displaying both objects close to the viewer and in the far distance. By default, the light uses one cascade which means a single shadow map texture is mapped to the entire area covered by the directional light. The more cascades are used, the higher the effective resolution of the shadows cast by the light. However, note that using two cascades would take up twice as much texture memory in your app, three cascades three times as much, and so on.
+
+Note that a light with [DirectionalLightComponent.Shadow.ShadowProjectionType.fixed(zNear:zFar:orthographicScale:)](shadowprojectiontype/fixed%28znear_zfar_orthographicscale_%29.md) shadow projection will not participate in cascaded shadow maps.
+
+## See Also
+
+### Configuring shadow cascades
+
+- [DirectionalLightComponent.Shadow.Cascades](cascades-swift.struct.md)

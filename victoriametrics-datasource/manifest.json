@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "project": "victoriametrics-datasource",
   "title": "VictoriaMetrics datasource for Grafana",
+  "homepage": "https://grafana.com/grafana/plugins/victoriametrics-metrics-datasource/",
   "repository": "VictoriaMetrics/victoriametrics-datasource",
   "tag": "v0.26.1",
   "releaseId": 387057789,

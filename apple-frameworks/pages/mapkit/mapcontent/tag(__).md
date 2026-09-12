@@ -1,0 +1,34 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mapkit/mapcontent/tag(_:)](https://developer.apple.com/documentation/mapkit/mapcontent/tag(_:))
+
+# tag(\_:)
+
+**Framework:** MapKit  
+**Kind:** Instance Method  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS · watchOS 10.0+
+
+Sets the unique tag value of this piece of map content.
+
+## Declaration
+
+```swift
+@MainActor @preconcurrency func tag<V>(_ tag: V) -> some MapContent where V : Hashable
+
+```
+
+## Parameters
+
+- `tag`: A [Hashable](https://developer.apple.com/documentation/swift/hashable) value to use as the map content’s tag.
+
+<a id="return-value"></a>
+
+## Return Value
+
+Map content with the specified tag set.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this modifier to differentiate between selectable content in the map. When the map’s selection binding has the same value as the tag applied to a piece of map content, that content is considered selected.
+
+A `ForEach` automatically applies a default tag to each enumerated view using the `id` parameter of the corresponding element. If the element’s `id` parameter and the the map’s selection input have the same type, you can omit the explicit tag modifier.

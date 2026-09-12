@@ -1,0 +1,68 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/appschema/clockentity/timer](https://developer.apple.com/documentation/appintents/appschema/clockentity/timer)
+
+# timer
+
+**Framework:** App Intents  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+An entity schema for a timer.
+
+## Declaration
+
+```swift
+var timer: some AppSchemaEntity { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+To make your app’s content available to Apple Intelligence, conform your [AppEntity](../../appentity.md) to a schema that describes your content to the system. If your app’s functionality aligns with the `clock` domain and its content matches the `timer` schema, you can generate the properties and protocol conformance the schema requires for your app entity implementation with the `@AppEntity( .clock.timer)` Swift macro. To make your app work with Siri, see [Apple Intelligence and Siri AI](../../apple-intelligence-and-siri-ai.md).
+
+The following example shows an app entity that conforms to the `timer` schema:
+
+```swift
+@AppEntity(schema: .clock.timer)
+struct TimerEntity {
+    // MARK: Static
+
+    static let defaultQuery = TimerEntityQuery()
+
+    // MARK: Properties
+
+    let id: <#Identifiable.ID#>
+
+    var duration: Duration
+    var durationRemaining: Duration
+    var state: <#TimerState#>
+    var label: String?
+    var isSleepTimer: Bool
+
+    var displayRepresentation: DisplayRepresentation {
+        <#DisplayRepresentation#>
+    }
+
+    // MARK: Query
+
+    struct TimerEntityQuery: EntityQuery {
+        func entities(for identifiers: [TimerEntity.ID]) async throws -> [TimerEntity] {
+            <#code#>
+        }
+    }
+}
+```
+
+The schema supports the following system experiences:
+
+- Siri
+- Shortcuts
+
+For more information about the App Intents framework and the experiences it supports, see [Getting started with the App Intents framework](../../getting-started-with-the-app-intents-framework.md).
+
+## See Also
+
+### Content and parameter types
+
+- [alarm](alarm.md): An entity schema for an alarm.
+- [AppSchema.ClockEntity](../clockentity.md): Identifies entity schemas in the clock domain.

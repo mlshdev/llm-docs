@@ -1,0 +1,39 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cloudkit/cksyncengine-5sie5/recordzonechangebatch/init(pendingchanges:recordprovider:)](https://developer.apple.com/documentation/cloudkit/cksyncengine-5sie5/recordzonechangebatch/init(pendingchanges:recordprovider:))
+
+# init(pendingChanges:recordProvider:)
+
+**Framework:** CloudKit  
+**Kind:** Initializer  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS · watchOS 10.0+
+
+Creates a batch of records to modify using the provided record zone changes.
+
+## Declaration
+
+```swift
+init?(pendingChanges: [CKSyncEngine.PendingRecordZoneChange], recordProvider: @Sendable (CKRecord.ID) async -> CKRecord?) async
+```
+
+## Parameters
+
+- `pendingChanges`: The record zone changes to process.
+- `recordProvider`: A closure that returns the record for the specified record identifier.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The batch of records to modify, or `nil` if there are no pending changes.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This method iterates over `pendingChanges` and adds the necessary information to the new batch, until there are no more changes or the size of the batch reaches the maximum limit. If the type of change is a record save, the method asks the specified `recordProvider` closure for that record. If the closure returns `nil`, the method skips that change.
+
+## See Also
+
+### Creating a batch
+
+- [CKSyncEngine.PendingRecordZoneChange](../pendingrecordzonechange.md): Describes an unsent record modification.
+- [init(recordsToSave:recordIDsToDelete:atomicByZone:)](init%28recordstosave_recordidstodelete_atomicbyzone_%29.md): Creates a batch of records to modify.

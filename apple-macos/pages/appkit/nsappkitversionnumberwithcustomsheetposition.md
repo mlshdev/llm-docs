@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsappkitversionnumberwithcustomsheetposition](https://developer.apple.com/documentation/appkit/nsappkitversionnumberwithcustomsheetposition)
+
+# NSAppKitVersionNumberWithCustomSheetPosition
+
+**Interface language:** Objective-C
+
+**Framework:** AppKit  
+**Kind:** Global Variable  
+**Availability:** macOS
+
+The specific version of the AppKit framework that introduced custom sheet positioning.
+
+## Declaration
+
+```objectivec
+static const NSAppKitVersion NSAppKitVersionNumberWithCustomSheetPosition;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Developers should not need to use this constant unless they are writing applications for macOS 10.2 and earlier.
+
+## See Also
+
+### Feature Introductions
+
+- [NSAppKitVersionNumberWithColumnResizingBrowser](nsappkitversionnumberwithcolumnresizingbrowser.md): The specific version of the AppKit framework that introduced support for resizing individual browser columns.
+- [NSAppKitVersionNumberWithContinuousScrollingBrowser](nsappkitversionnumberwithcontinuousscrollingbrowser.md): The specific version of the AppKit framework that introduced support the continuous scrolling in a browser view.
+- [NSAppKitVersionNumberWithCursorSizeSupport](nsappkitversionnumberwithcursorsizesupport.md): The specific version of the AppKit framework that introduced support for cursors larger than 16 x 16 pixels in size.
+- [NSAppKitVersionNumberWithDeferredWindowDisplaySupport](nsappkitversionnumberwithdeferredwindowdisplaysupport.md): The specific version of the AppKit framework that introduced support for deferred window display.
+- [NSAppKitVersionNumberWithDirectionalTabs](nsappkitversionnumberwithdirectionaltabs.md): The specific version of the AppKit framework that introduced support for directional tab items.
+- [NSAppKitVersionNumberWithDockTilePlugInSupport](nsappkitversionnumberwithdocktilepluginsupport.md): The specific version of the AppKit framework that introduced support for dock tile plug-ins.
+- [NSAppKitVersionNumberWithPatternColorLeakFix](nsappkitversionnumberwithpatterncolorleakfix.md): The specific version of the AppKit framework from OS X 10.1 that correctly autoreleases color objects.

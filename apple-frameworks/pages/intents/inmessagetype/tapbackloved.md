@@ -1,0 +1,53 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/intents/inmessagetype/tapbackloved](https://developer.apple.com/documentation/intents/inmessagetype/tapbackloved)
+
+# INMessageType.tapbackLoved (Swift)
+
+**Framework:** Intents  
+**Kind:** Case  
+**Availability:** iOS 11.0+ (deprecated in 18.1) · iPadOS 11.0+ (deprecated in 18.1) · Mac Catalyst 13.1+ (deprecated in 18.1) · visionOS 1.0+ (deprecated in 2.1) · watchOS 4.0+ (deprecated in 11.1)
+
+Content indicating that the user loved something.
+
+> Use INMessageReaction
+
+## Declaration
+
+```swift
+case tapbackLoved
+```
+
+## See Also
+
+### Tapback Types
+
+- [INMessageType.tapbackLiked](tapbackliked.md): Deprecated. Content indicating that the user liked something.
+- [INMessageType.tapbackDisliked](tapbackdisliked.md): Deprecated. Content indicating that the user disliked something.
+- [INMessageType.tapbackEmphasized](tapbackemphasized.md): Deprecated. Content indicating that the user emphasized something.
+- [INMessageType.tapbackQuestioned](tapbackquestioned.md): Deprecated. Content indicating that the user questioned something.
+- [INMessageType.tapbackLaughed](tapbacklaughed.md): Deprecated. Content indicating that the user laughed at something.
+
+# INMessageTypeTapbackLoved (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Enumeration Case  
+**Availability:** iOS 11.0+ (deprecated in 18.1) · iPadOS 11.0+ (deprecated in 18.1) · Mac Catalyst 13.1+ (deprecated in 18.1) · visionOS 1.0+ (deprecated in 2.1) · watchOS 4.0+ (deprecated in 11.1)
+
+Content indicating that the user loved something.
+
+> Use INMessageReaction
+
+## Declaration
+
+```objectivec
+INMessageTypeTapbackLoved
+```
+
+## See Also
+
+### Tapback Types
+
+- [INMessageTypeTapbackLiked](tapbackliked.md): Deprecated. Content indicating that the user liked something.
+- [INMessageTypeTapbackDisliked](tapbackdisliked.md): Deprecated. Content indicating that the user disliked something.
+- [INMessageTypeTapbackEmphasized](tapbackemphasized.md): Deprecated. Content indicating that the user emphasized something.
+- [INMessageTypeTapbackQuestioned](tapbackquestioned.md): Deprecated. Content indicating that the user questioned something.
+- [INMessageTypeTapbackLaughed](tapbacklaughed.md): Deprecated. Content indicating that the user laughed at something.

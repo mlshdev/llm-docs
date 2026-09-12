@@ -1,0 +1,55 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/eventkit/ekeventstore/reset()](https://developer.apple.com/documentation/eventkit/ekeventstore/reset())
+
+# reset() (Swift)
+
+**Framework:** EventKit  
+**Kind:** Instance Method  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.8+ · visionOS 1.0+ · watchOS 2.0+
+
+Reverts the event store to its saved state.
+
+## Declaration
+
+```swift
+func reset()
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method updates all the properties of all the objects with their corresponding values in the event store. Any local changes that aren’t saved before invoking this method are lost. All existing objects created or retrieved using this store are disassociated from it and are invalid.
+
+## See Also
+
+### Saving and restoring state
+
+- [commit()](commit%28%29.md): Commits all unsaved changes to the event store.
+- [refreshSourcesIfNecessary()](refreshsourcesifnecessary%28%29.md): Pulls new data from remote sources, if necessary.
+
+# reset (Objective-C)
+
+**Framework:** EventKit  
+**Kind:** Instance Method  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.8+ · visionOS 1.0+ · watchOS 2.0+
+
+Reverts the event store to its saved state.
+
+## Declaration
+
+```objectivec
+- (void) reset;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method updates all the properties of all the objects with their corresponding values in the event store. Any local changes that aren’t saved before invoking this method are lost. All existing objects created or retrieved using this store are disassociated from it and are invalid.
+
+## See Also
+
+### Saving and restoring state
+
+- [commit:](commit%28%29.md): Commits all unsaved changes to the event store.
+- [refreshSourcesIfNecessary](refreshsourcesifnecessary%28%29.md): Pulls new data from remote sources, if necessary.

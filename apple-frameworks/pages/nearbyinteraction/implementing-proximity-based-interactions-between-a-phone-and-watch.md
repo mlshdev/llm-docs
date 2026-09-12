@@ -1,0 +1,32 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/nearbyinteraction/implementing-proximity-based-interactions-between-a-phone-and-watch](https://developer.apple.com/documentation/nearbyinteraction/implementing-proximity-based-interactions-between-a-phone-and-watch)
+
+# Implementing proximity-based interactions between a phone and watch
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** Nearby Interaction  
+**Kind:** Sample Code  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · watchOS 8.0+ · Xcode 13.3+
+
+Interact with a nearby Apple Watch by measuring its distance to a paired iPhone.
+
+<a id="Overview"></a>
+
+## Overview
+
+> **Note**
+
+> This sample code project is associated with WWDC21 session [10165: Explore Nearby Interaction with Third-Party Accessories](https://developer.apple.com/wwdc21/10165).
+
+<a id="Configure-the-Sample-Code-Project"></a>
+
+### Configure the Sample Code Project
+
+You can run this sample either in the simulator or on paired devices. When running on paired devices, both the watch and iPhone must contain an Ultra Wideband chip.
+
+To run on paired devices:
+
+1. Select the WatchNIDemo target, then change the bundle ID to `<Your iOS app bundle ID>`. Select the right team to let Xcode automatically manage your provisioning profile.
+2. Repeat step 1 for the WatchKit app and WatchKit Extension target. The bundle IDs should be `<Your iOS app bundle ID>.watchkitapp` and `<Your iOS app bundle ID>.watchkitapp.watchkitextension` respectively.
+3. Next, for the WatchKit app target, select the Info tab, and change the value of `WKCompanionAppBundleIdentifier` key to `<Your iOS app bundle ID>`.
+4. Finally, open the `Info.plist` file of the WatchKit Extension target, navigate to `NSExtension` \> `NSExtensionAttributes` \> `WKAppBundleIdentifier` key, and change the value of the key to `<Your iOS app bundle ID>.watchkitapp`.

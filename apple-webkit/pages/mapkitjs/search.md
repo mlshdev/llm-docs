@@ -1,0 +1,88 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/mapkitjs/search](https://developer.apple.com/documentation/mapkitjs/search)
+
+# Search
+
+**Interface language:** Data
+
+**Framework:** MapKit JS  
+**Kind:** Class  
+**Availability:** MapKit JS 5.0+
+
+An object that retrieves map-based search results for a user-entered query.
+
+## Declaration
+
+```
+class Search extends Service
+```
+
+## Mentioned In
+
+- [MapKit JS 5](mapkit-js-5.md)
+
+<a id="overview"></a>
+
+## Overview
+
+The search service lets you populate a map with results from a user-entered query, including information about businesses and other points of interest. MapKit JS handles this through a search object that makes network requests to the search service.
+
+Supplying *search context* creates the most relevant results for a query. Context can include the user’s location, or a coordinate or region that you provide.
+
+To use the search service, create an instance of a search object with the desired options. Use the search object to make search requests.
+
+## Topics
+
+### Creating a search
+
+- [Search()](search/searchconstructor.md): Creates a search object with optional initial values that you provide.
+- [SearchConstructorOptions](searchconstructoroptions.md): Options you provide when you create a search object.
+
+### Performing a search
+
+- [search()](search/search.md): Retrieves the results of a search query.
+- [SearchDelegate](searchdelegate.md): An object or callback function the framework calls when performing a search or an autocomplete request.
+- [SearchOptions](searchoptions.md): An object that contains options to adjust a search.
+- [SearchResponse](searchresponse.md): The result of a search, including the original search query, the bounding region, and a list of places that match the query.
+
+### Performing a search autocomplete
+
+- [autocomplete()](search/autocomplete.md): Retrieves a list of autocomplete results for the specified search query.
+- [SearchAutocompleteOptions](searchautocompleteoptions.md): Options you provide to constrain an autocomplete request.
+- [SearchAutocompleteResponse](searchautocompleteresponse.md): An object containing the response from an autocomplete request.
+- [SearchAutocompleteResult](searchautocompleteresult.md): The result of an autocomplete query, including display lines and a coordinate.
+
+### Filtering a search
+
+- [AddressFilter](addressfilter.md): An object that filters which address options to include or exclude in search results.
+
+### Deprecated
+
+- [autocomplete()](search/autocomplete1.md): Deprecated. Retrieves a list of autocomplete results for the specified search query.
+- [cancel()](service/cancel.md): Deprecated. Cancels a request using the provided request promise.
+- [RegionPriority](search/regionpriority-data.var.md): Deprecated. A static property that allows you to access region priority enumeration.
+- [search()](search/search1.md): Deprecated. Retrieves the results of a search query.
+
+### Instance Properties
+
+- [addressFilter](search/addressfilter.md): An filter that lists which address components to include or exclude in search results.
+- [coordinate](search/coordinate.md): A map coordinate that provides a hint for the geographic area to search.
+- [includeAddresses](search/includeaddresses.md): A Boolean value that indicates whether the search results include addresses.
+- [includePhysicalFeatures](search/includephysicalfeatures.md): A Boolean value that indicates whether the search results include physical features, such as mountain ranges, rivers, and ocean basins.
+- [includePointsOfInterest](search/includepointsofinterest.md): A Boolean value that indicates whether the search results should include points of interest.
+- [includeQueries](search/includequeries.md): A Boolean value that indicates whether the search results include queries.
+- [limitToCountries](search/limittocountries.md): A string that constrains search results to be within the provided countries.
+- [pointOfInterestFilter](search/pointofinterestfilter.md): A filter to use to include or exclude point-of-interest categories.
+- [region](search/region.md): A map region that provides a hint about the geographic area to search.
+- [regionPriority](search/regionpriority-data.property.md): A region priority value that controls whether results occur outside, or strictly within, the region.
+
+## Relationships
+
+### Inherits From
+
+- [Service](service.md)
+
+## See Also
+
+### Search
+
+- [AddressFilter](addressfilter.md): An object that filters which address options to include or exclude in search results.

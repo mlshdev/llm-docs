@@ -1,0 +1,333 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/hkcorrelationquery](https://developer.apple.com/documentation/healthkit/hkcorrelationquery)
+
+# HKCorrelationQuery (Swift)
+
+**Framework:** HealthKit  
+**Kind:** Class  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 13.0+ · visionOS 1.0+ · watchOS 2.0+
+
+A query that performs complex searches based on the correlation’s contents, and returns a snapshot of all matching samples.
+
+## Declaration
+
+```swift
+class HKCorrelationQuery
+```
+
+## Mentioned In
+
+- [Reading data from HealthKit](reading-data-from-healthkit.md)
+
+<a id="overview"></a>
+
+## Overview
+
+Correlation samples act as a container, grouping multiple quantity or category samples. While you can use [HKSample](hksample.md) objects to search for correlations, correlation queries allow more complex filtering based on the contained samples. Specifically, correlation queries let you provide a separate predicate for each of the sample types stored in the correlation. A correlation is  returned only if the correlation’s predicate and all of the sample predicates match.
+
+<a id="Requesting-Permission-to-Share-and-Read"></a>
+
+### Requesting Permission to Share and Read
+
+Unlike other sample types, you do not request permission to share and read correlation types directly. Instead, you request permission to share and read each of the sample types contained within the correlation.
+
+When saving a correlation, the app must have permission to share all of the contained objects. If the app does not have permission to share one or more of the contained objects, the operation fails.
+
+When your app queries for correlation data, HealthKit only returns samples that contain objects you have permission to read. If the app has permission to read only some of the contained objects, HealthKit still returns the correlation; however, the correlation appears to only contain those objects that your app has permission to read. HealthKit hides all of the other contained objects from your app.
+
+<a id="Executing-Queries"></a>
+
+### Executing Queries
+
+You create a correlation query by calling the [init(type:predicate:samplePredicates:completion:)](hkcorrelationquery/init%28type_predicate_samplepredicates_completion_%29.md) initializer. After the query is instantiated, you run it by calling the HealthKit store’s [execute(\_:)](hkhealthstore/execute%28__%29.md) method. This method runs the query on an anonymous background queue. When the query is complete, it executes the results handler on the same background queue (though not necessarily the same thread). Typically, you dispatch these results back to the main thread to update your user interface.
+
+The following example builds a correlation query that searches for food samples with more than 800 calories.
+
+**Swift**
+
+```swift
+var highCalorieFoods: [HKCorrelationQuery] = []
+ 
+let highCalorie = HKQuantity(unit: HKUnit.kilocalorieUnit(),
+                             doubleValue: 800.0);
+ 
+let greaterThanHighCalorie = HKQuery.predicateForQuantitySamplesWithOperatorType(
+    .GreaterThanOrEqualToPredicateOperatorType, quantity: highCalorie)
+ 
+let energyConsumed = HKObjectType.quantityTypeForIdentifier(
+    HKQuantityTypeIdentifierDietaryEnergyConsumed)
+ 
+let samplePredicates = [energyConsumed: greaterThanHighCalorie]
+ 
+let foodType = HKCorrelationType.correlationTypeForIdentifier(
+    HKCorrelationTypeIdentifierFood)
+ 
+let query = HKCorrelationQuery(type: foodType, predicate: nil, samplePredicates: samplePredicates)
+{
+    query, results, error in
+    
+    if let correlations = results as? [HKCorrelationQuery] {
+        for correlation in correlations {
+            highCalorieFoods.append(correlation)
+        }
+    }
+    else {
+        // Provide proper error handling here...
+        println("An error occurred while searching for high calorie food: \(error.localizedDescription)")
+        abort()
+    }
+    
+    println("Found \(highCalorieFoods.count) foods: \(highCalorieFoods)")
+}
+ 
+healthStore.executeQuery(query)
+```
+
+**Objective-C**
+
+```objc
+NSMutableArray *highCalorieFoods = [NSMutableArray array];
+HKQuantity *highCalorie = [HKQuantity quantityWithUnit:[HKUnit kilocalorieUnit]
+                                           doubleValue:800.0];
+ 
+NSPredicate *greaterThanHighCalorie =
+[HKQuery predicateForQuantitySamplesWithOperatorType:
+ NSGreaterThanOrEqualToPredicateOperatorType quantity:highCalorie];
+ 
+HKQuantityType *energyConsumed =
+[HKObjectType quantityTypeForIdentifier:
+ HKQuantityTypeIdentifierDietaryEnergyConsumed];
+ 
+NSDictionary *samplePredicates = @{energyConsumed : greaterThanHighCalorie};
+ 
+HKCorrelationType *foodType =
+[HKCorrelationType correlationTypeForIdentifier:HKCorrelationTypeIdentifierFood];
+ 
+HKCorrelationQuery *query =
+[[HKCorrelationQuery alloc]
+ initWithType:foodType predicate:nil
+ samplePredicates:samplePredicates
+ completion:^(HKCorrelationQuery *query, NSArray *correlations, NSError *error) {
+     if (correlations == nil) {
+         // Provide proper error handling here...
+         NSLog(@"An error occurred while searching for high calorie food: %@",
+              error.localizedDescription);
+         abort();
+     }
+     for (HKCorrelation *correlation in correlations) {
+         [highCalorieFoods addObject:correlation];
+     }
+     NSLog(@"Found %lu foods: %@", (unsigned long)[highCalorieFoods count], highCalorieFoods);
+ 
+ }];
+ 
+[self.healthStore executeQuery:query];
+```
+
+It begins by setting up an array to store our high calorie foods. Next, the sample code creates a predicate that matches quantities greater than or equal to 800 kcal. It then creates a dictionary using a quantity type object for dietary energy consumed as the key and the newly-created predicate as the value. It uses this dictionary as the sample predicates for a correlation query.
+
+In the query’s completion handler, the sample code first checks to see if an error occurred. If no errors occurred, it adds the results to the array of high calorie foods. Then it logs the number of matching samples found, and the contents of the high calorie foods array.
+
+Once the sample code finishes declaring the completion handler, the query is ready to use. The sample code simply executes the query on the HeathKit store.
+
+<a id="Subclassing-Correlation-Queries"></a>
+
+### Subclassing Correlation Queries
+
+As with many HealthKit classes, don’t subclass the [HKCorrelationQuery](hkcorrelationquery.md) class.
+
+## Topics
+
+### Creating Correlation Queries
+
+- [init(type:predicate:samplePredicates:completion:)](hkcorrelationquery/init%28type_predicate_samplepredicates_completion_%29.md): Instantiates and returns a correlation query.
+
+### Getting Property Data
+
+- [correlationType](hkcorrelationquery/correlationtype.md): The type of correlation to search for.
+- [samplePredicates](hkcorrelationquery/samplepredicates.md): A dictionary whose keys are [HKSampleType](hksampletype.md) instances and whose values are [NSPredicate](../foundation/nspredicate.md) instances.
+
+## Relationships
+
+### Inherits From
+
+- [HKQuery](hkquery.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Basic queries
+
+- [HKSampleQueryDescriptor](hksamplequerydescriptor.md): A query interface that reads samples using Swift concurrency.
+- [HKSampleQuery](hksamplequery.md): A general query that returns a snapshot of all the matching samples currently saved in the HealthKit store.
+- [HKQueryDescriptor](hkquerydescriptor.md): A descriptor that specifies a set of samples based on the data type and a predicate.
+- [HKQuery](hkquery.md): An abstract class for all the query classes in HealthKit.
+
+# HKCorrelationQuery (Objective-C)
+
+**Framework:** HealthKit  
+**Kind:** Class  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 13.0+ · visionOS 1.0+ · watchOS 2.0+
+
+A query that performs complex searches based on the correlation’s contents, and returns a snapshot of all matching samples.
+
+## Declaration
+
+```objectivec
+@interface HKCorrelationQuery : HKQuery
+```
+
+## Mentioned In
+
+- [Reading data from HealthKit](reading-data-from-healthkit.md)
+
+<a id="overview"></a>
+
+## Overview
+
+Correlation samples act as a container, grouping multiple quantity or category samples. While you can use [HKSample](hksample.md) objects to search for correlations, correlation queries allow more complex filtering based on the contained samples. Specifically, correlation queries let you provide a separate predicate for each of the sample types stored in the correlation. A correlation is  returned only if the correlation’s predicate and all of the sample predicates match.
+
+<a id="Requesting-Permission-to-Share-and-Read"></a>
+
+### Requesting Permission to Share and Read
+
+Unlike other sample types, you do not request permission to share and read correlation types directly. Instead, you request permission to share and read each of the sample types contained within the correlation.
+
+When saving a correlation, the app must have permission to share all of the contained objects. If the app does not have permission to share one or more of the contained objects, the operation fails.
+
+When your app queries for correlation data, HealthKit only returns samples that contain objects you have permission to read. If the app has permission to read only some of the contained objects, HealthKit still returns the correlation; however, the correlation appears to only contain those objects that your app has permission to read. HealthKit hides all of the other contained objects from your app.
+
+<a id="Executing-Queries"></a>
+
+### Executing Queries
+
+You create a correlation query by calling the [initWithType:predicate:samplePredicates:completion:](hkcorrelationquery/init%28type_predicate_samplepredicates_completion_%29.md) initializer. After the query is instantiated, you run it by calling the HealthKit store’s [executeQuery:](hkhealthstore/execute%28__%29.md) method. This method runs the query on an anonymous background queue. When the query is complete, it executes the results handler on the same background queue (though not necessarily the same thread). Typically, you dispatch these results back to the main thread to update your user interface.
+
+The following example builds a correlation query that searches for food samples with more than 800 calories.
+
+**Swift**
+
+```swift
+var highCalorieFoods: [HKCorrelationQuery] = []
+ 
+let highCalorie = HKQuantity(unit: HKUnit.kilocalorieUnit(),
+                             doubleValue: 800.0);
+ 
+let greaterThanHighCalorie = HKQuery.predicateForQuantitySamplesWithOperatorType(
+    .GreaterThanOrEqualToPredicateOperatorType, quantity: highCalorie)
+ 
+let energyConsumed = HKObjectType.quantityTypeForIdentifier(
+    HKQuantityTypeIdentifierDietaryEnergyConsumed)
+ 
+let samplePredicates = [energyConsumed: greaterThanHighCalorie]
+ 
+let foodType = HKCorrelationType.correlationTypeForIdentifier(
+    HKCorrelationTypeIdentifierFood)
+ 
+let query = HKCorrelationQuery(type: foodType, predicate: nil, samplePredicates: samplePredicates)
+{
+    query, results, error in
+    
+    if let correlations = results as? [HKCorrelationQuery] {
+        for correlation in correlations {
+            highCalorieFoods.append(correlation)
+        }
+    }
+    else {
+        // Provide proper error handling here...
+        println("An error occurred while searching for high calorie food: \(error.localizedDescription)")
+        abort()
+    }
+    
+    println("Found \(highCalorieFoods.count) foods: \(highCalorieFoods)")
+}
+ 
+healthStore.executeQuery(query)
+```
+
+**Objective-C**
+
+```objc
+NSMutableArray *highCalorieFoods = [NSMutableArray array];
+HKQuantity *highCalorie = [HKQuantity quantityWithUnit:[HKUnit kilocalorieUnit]
+                                           doubleValue:800.0];
+ 
+NSPredicate *greaterThanHighCalorie =
+[HKQuery predicateForQuantitySamplesWithOperatorType:
+ NSGreaterThanOrEqualToPredicateOperatorType quantity:highCalorie];
+ 
+HKQuantityType *energyConsumed =
+[HKObjectType quantityTypeForIdentifier:
+ HKQuantityTypeIdentifierDietaryEnergyConsumed];
+ 
+NSDictionary *samplePredicates = @{energyConsumed : greaterThanHighCalorie};
+ 
+HKCorrelationType *foodType =
+[HKCorrelationType correlationTypeForIdentifier:HKCorrelationTypeIdentifierFood];
+ 
+HKCorrelationQuery *query =
+[[HKCorrelationQuery alloc]
+ initWithType:foodType predicate:nil
+ samplePredicates:samplePredicates
+ completion:^(HKCorrelationQuery *query, NSArray *correlations, NSError *error) {
+     if (correlations == nil) {
+         // Provide proper error handling here...
+         NSLog(@"An error occurred while searching for high calorie food: %@",
+              error.localizedDescription);
+         abort();
+     }
+     for (HKCorrelation *correlation in correlations) {
+         [highCalorieFoods addObject:correlation];
+     }
+     NSLog(@"Found %lu foods: %@", (unsigned long)[highCalorieFoods count], highCalorieFoods);
+ 
+ }];
+ 
+[self.healthStore executeQuery:query];
+```
+
+It begins by setting up an array to store our high calorie foods. Next, the sample code creates a predicate that matches quantities greater than or equal to 800 kcal. It then creates a dictionary using a quantity type object for dietary energy consumed as the key and the newly-created predicate as the value. It uses this dictionary as the sample predicates for a correlation query.
+
+In the query’s completion handler, the sample code first checks to see if an error occurred. If no errors occurred, it adds the results to the array of high calorie foods. Then it logs the number of matching samples found, and the contents of the high calorie foods array.
+
+Once the sample code finishes declaring the completion handler, the query is ready to use. The sample code simply executes the query on the HeathKit store.
+
+<a id="Subclassing-Correlation-Queries"></a>
+
+### Subclassing Correlation Queries
+
+As with many HealthKit classes, don’t subclass the [HKCorrelationQuery](hkcorrelationquery.md) class.
+
+## Topics
+
+### Creating Correlation Queries
+
+- [initWithType:predicate:samplePredicates:completion:](hkcorrelationquery/init%28type_predicate_samplepredicates_completion_%29.md): Instantiates and returns a correlation query.
+
+### Getting Property Data
+
+- [correlationType](hkcorrelationquery/correlationtype.md): The type of correlation to search for.
+- [samplePredicates](hkcorrelationquery/samplepredicates.md): A dictionary whose keys are [HKSampleType](hksampletype.md) instances and whose values are [NSPredicate](../foundation/nspredicate.md) instances.
+
+## Relationships
+
+### Inherits From
+
+- [HKQuery](hkquery.md)
+
+## See Also
+
+### Basic queries
+
+- [HKSampleQuery](hksamplequery.md): A general query that returns a snapshot of all the matching samples currently saved in the HealthKit store.
+- [HKQueryDescriptor](hkquerydescriptor.md): A descriptor that specifies a set of samples based on the data type and a predicate.
+- [HKQuery](hkquery.md): An abstract class for all the query classes in HealthKit.

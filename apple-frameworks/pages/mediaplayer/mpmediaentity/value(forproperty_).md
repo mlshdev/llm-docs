@@ -1,0 +1,85 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mediaplayer/mpmediaentity/value(forproperty:)](https://developer.apple.com/documentation/mediaplayer/mpmediaentity/value(forproperty:))
+
+# value(forProperty:) (Swift)
+
+**Framework:** Media Player  
+**Kind:** Instance Method  
+**Availability:** iOS 4.2+ · iPadOS 4.2+ · Mac Catalyst 13.1+ · tvOS 14.0+ · visionOS 1.0+
+
+Retrieves the value for a specified media property key.
+
+## Declaration
+
+```swift
+func value(forProperty property: String) -> Any?
+```
+
+## Parameters
+
+- `property`: The media property key that you want the corresponding value of.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The value for the media `property` key.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use [enumerateValues(forProperties:using:)](enumeratevalues%28forproperties_using_%29.md) to efficiently access more than one property at a time.
+
+To see which media property keys you can use with this method, refer to [Media entity property keys](../media-entity-property-keys.md), [General media item property keys](../general-media-item-property-keys.md), [Playlist property keys](../playlist-property-keys.md), and [User-defined property keys](../user-defined-property-keys.md).
+
+## See Also
+
+### Working with media properties
+
+- [canFilter(byProperty:)](canfilter%28byproperty_%29.md): Indicates whether you can use the media property key that you specify to construct a media property predicate.
+- [enumerateValues(forProperties:using:)](enumeratevalues%28forproperties_using_%29.md): Executes a provided block with the fetched values for the given item properties.
+- [persistentID](persistentid.md): The persistent identifier for a media entity.
+- [subscript(\_:)](subscript%28__%29.md): Returns the object specified by the key.
+- [MPMediaEntityPersistentID](../mpmediaentitypersistentid.md): Defines the type for storing a persistent identifier to a particular entity.
+
+# valueForProperty: (Objective-C)
+
+**Framework:** Media Player  
+**Kind:** Instance Method  
+**Availability:** iOS 4.2+ · iPadOS 4.2+ · Mac Catalyst 13.1+ · tvOS 14.0+ · visionOS 1.0+
+
+Retrieves the value for a specified media property key.
+
+## Declaration
+
+```objectivec
+- (id) valueForProperty:(NSString *) property;
+```
+
+## Parameters
+
+- `property`: The media property key that you want the corresponding value of.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The value for the media `property` key.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use [enumerateValuesForProperties:usingBlock:](enumeratevalues%28forproperties_using_%29.md) to efficiently access more than one property at a time.
+
+To see which media property keys you can use with this method, refer to [Media entity property keys](../media-entity-property-keys.md), [General media item property keys](../general-media-item-property-keys.md), [Playlist property keys](../playlist-property-keys.md), and [User-defined property keys](../user-defined-property-keys.md).
+
+## See Also
+
+### Working with media properties
+
+- [canFilterByProperty:](canfilter%28byproperty_%29.md): Indicates whether you can use the media property key that you specify to construct a media property predicate.
+- [enumerateValuesForProperties:usingBlock:](enumeratevalues%28forproperties_using_%29.md): Executes a provided block with the fetched values for the given item properties.
+- [persistentID](persistentid.md): The persistent identifier for a media entity.
+- [objectForKeyedSubscript:](subscript%28__%29.md): Returns the object specified by the key.
+- [MPMediaEntityPersistentID](../mpmediaentitypersistentid.md): Defines the type for storing a persistent identifier to a particular entity.

@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/sectionedfetchrequest/projectedvalue](https://developer.apple.com/documentation/swiftui/sectionedfetchrequest/projectedvalue)
+
+# projectedValue
+
+**Framework:** SwiftUI  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+
+A binding to the request’s mutable configuration properties.
+
+## Declaration
+
+```swift
+@MainActor @preconcurrency var projectedValue: Binding<SectionedFetchRequest<SectionIdentifier, Result>.Configuration> { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This property behaves like the [projectedValue](../fetchrequest/projectedvalue.md) of a [FetchRequest](../fetchrequest.md). In particular, SwiftUI returns the value associated with this property when you use [SectionedFetchRequest](../sectionedfetchrequest.md) as a property wrapper on a [SectionedFetchResults](../sectionedfetchresults.md) instance and then access the results with a dollar sign (`$`) prefix. The value that SwiftUI returns is a [Binding](../binding.md) to the request’s [SectionedFetchRequest.Configuration](configuration.md) structure, which dynamically configures the request.
+
+## See Also
+
+### Configuring a request dynamically
+
+- [SectionedFetchRequest.Configuration](configuration.md): The request’s configurable properties.

@@ -1,0 +1,34 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimage_perpsectivetransform/init(a:b:c:d:tx:ty:vx:vy:v:)](https://developer.apple.com/documentation/accelerate/vimage_perpsectivetransform/init(a:b:c:d:tx:ty:vx:vy:v:))
+
+# init(a:b:c:d:tx:ty:vx:vy:v:)
+
+**Framework:** Accelerate  
+**Kind:** Initializer  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+Creates a projective-transformation structure from the specified single-precision values.
+
+## Declaration
+
+```swift
+init(a: Float, b: Float, c: Float, d: Float, tx: Float, ty: Float, vx: Float, vy: Float, v: Float)
+```
+
+## Parameters
+
+- `a`: The top-left cell in the 3 x 3 transformation matrix.
+- `b`: The top-middle cell in the 3 x 3 transformation matrix.
+- `c`: The middle-left cell in the 3 x 3 transformation matrix.
+- `d`: The middle-middle cell in the 3 x 3 transformation matrix.
+- `tx`: The x-coordinate translation.
+- `ty`: The y-coordinate translation.
+- `vx`: The x-component of the projective vector.
+- `vy`: The y-component of the projective vector.
+- `v`: The homogeneous scale factor.
+
+## See Also
+
+### Creating a projective-transformation structure
+
+- [init()](init%28%29.md): Creates a projective-transformation structure.
+- [init(source:destination:)](init%28source_destination_%29.md): Returns a projective-transformation structure that defines the mapping between a source quadrilateral and a destination quadrilateral.

@@ -1,0 +1,43 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avcapturephotooutput/availablephotopixelformattypes-6eyb](https://developer.apple.com/documentation/avfoundation/avcapturephotooutput/availablephotopixelformattypes-6eyb)
+
+# availablePhotoPixelFormatTypes
+
+**Interface language:** Objective-C
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 14.0+ · macOS 10.15+ · tvOS 17.0+
+
+The pixel formats the capture output supports for photo capture.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) NSArray<NSNumber *> * availablePhotoPixelFormatTypes;
+```
+
+## Mentioned In
+
+- [Capturing uncompressed image data](../capturing-uncompressed-image-data.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+To capture a photo in an uncompressed format, such as 420f, 420v, or BGRA, use the [photoSettingsWithFormat:](../avcapturephotosettings/init%28format_%29.md) initializer to create your photo settings object. In that initializer’s `format` dictionary, pass the key [kCVPixelBufferPixelFormatTypeKey](../../corevideo/kcvpixelbufferpixelformattypekey.md), whose value must be one of the pixel format identifiers listed in this array.
+
+> **Note**
+
+>  Read this property only after adding the photo capture output to an [AVCaptureSession](../avcapturesession.md) object containing a video source. If the photo capture output isn’t connected to a session with a video source, this array is empty.
+
+This property supports key-value observing.
+
+## See Also
+
+### Determining supported pixel formats
+
+- [availableRawPhotoPixelFormatTypes](availablerawphotopixelformattypes-5fatm.md): The pixel formats the capture output supports for RAW photo capture.
+- [supportedPhotoPixelFormatTypesForFileType:](supportedphotopixelformattypesforfiletype_.md): Returns the list of uncompressed pixel formats supported for photo data in the specified file type.
+- [supportedRawPhotoPixelFormatTypesForFileType:](supportedrawphotopixelformattypesforfiletype_.md): Returns the list of Bayer RAW pixel formats supported for photo data in the specified file type.
+- [isAppleProRAWPixelFormat:](isappleprorawpixelformat%28__%29.md): Returns a Boolean value that indicates whether the pixel format is an Apple ProRAW format.
+- [isBayerRAWPixelFormat:](isbayerrawpixelformat%28__%29.md): Returns a Boolean value that indicates whether the pixel format is a Bayer RAW format.

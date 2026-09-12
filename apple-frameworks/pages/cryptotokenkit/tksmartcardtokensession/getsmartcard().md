@@ -1,0 +1,45 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cryptotokenkit/tksmartcardtokensession/getsmartcard()](https://developer.apple.com/documentation/cryptotokenkit/tksmartcardtokensession/getsmartcard())
+
+# getSmartCard() (Swift)
+
+**Framework:** CryptoTokenKit  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
+
+## Declaration
+
+```swift
+func getSmartCard() throws -> TKSmartCard
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Returns a TKSmartCard instance with an active exclusive session and the SmartCard application selected. Replaces the deprecated @c smartCard property.
+
+The TKSmartCard object is only accessible within the methods of the TKTokenSessionDelegate protocol. If the associated token has an AID set, the returned card will have an exclusive session already opened and the specified application selected. In this scenario: Do not call -\[TKSmartCard beginSessionWithReply:\]) on the returned SmartCard instance. The system manages the session lifecycle and will terminate it automatically when the current token request servicing is finished. Do not call -\[TKSmartCard endSession\]. You can use the `smartCard.context` property to store any context-specific state information related to the card. This property is automatically set to `nil` if the card is reset or accessed by a different TKSmartCard instance (potentially in another process). Before performing an operation, check the `TKSmartCard.context` property for a previously stored value. This can help you avoid potentially costly restoration of the SmartCard state if it’s already available.
+
+# getSmartCardWithError: (Objective-C)
+
+**Framework:** CryptoTokenKit  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
+
+## Declaration
+
+```objectivec
+- (TKSmartCard *) getSmartCardWithError:(NSError **) error;
+```
+
+## Parameters
+
+- `error`: An NSError object containing details if the operation fails.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Returns a TKSmartCard instance with an active exclusive session and the SmartCard application selected. Replaces the deprecated @c smartCard property.
+
+The TKSmartCard object is only accessible within the methods of the TKTokenSessionDelegate protocol. If the associated token has an AID set, the returned card will have an exclusive session already opened and the specified application selected. In this scenario: Do not call -\[TKSmartCard beginSessionWithReply:\]) on the returned SmartCard instance. The system manages the session lifecycle and will terminate it automatically when the current token request servicing is finished. Do not call -\[TKSmartCard endSession\]. You can use the `smartCard.context` property to store any context-specific state information related to the card. This property is automatically set to `nil` if the card is reset or accessed by a different TKSmartCard instance (potentially in another process). Before performing an operation, check the `TKSmartCard.context` property for a previously stored value. This can help you avoid potentially costly restoration of the SmartCard state if it’s already available.

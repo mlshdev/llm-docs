@@ -1,0 +1,83 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/disable-subscriptions](https://developer.apple.com/documentation/devicemanagement/disable-subscriptions)
+
+# Disable Subscriptions
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Web Service Endpoint
+
+Declare that your device management service doesn’t support subscription management.
+
+## URL
+
+```http
+POST https://vpp.itunes.apple.com/mdm/v2/subscriptions/disable
+```
+
+## Response Codes
+
+- `200` OK — `SubscriptionManagementResponse`:
+- `400` Bad Request — `ErrorResponse`: The organizational unit has existing subscriptions, so subscription management can’t be disabled.
+- `401` Unauthorized — `ErrorResponse`: The provided token is invalid. It may either be missing or expired.
+- `500` Internal Server Error — `ErrorResponse`: An internal server error occurred. Try again later.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Send a POST request to declare that your device management service doesn’t support subscriptions for the organizational unit that the token represents. Apple School Manager and Apple Business Manager use this declaration to indicate to content managers that the organizational unit doesn’t support subscriptions, rather than leaving its support status unstated.
+
+This request takes no body. The server processes it synchronously and returns the resulting `subscriptionManagement` state.
+
+> **Important**
+
+>  Disabling is a positive declaration that an organizational unit doesn’t support subscriptions. You can also use it to reverse an earlier [Enable Subscriptions](enable-subscriptions.md) request, but only while the organizational unit has no subscriptions. If any subscriptions exist there, the request fails with error `9818` (`Subscriptions exist for the organizational unit, so subscription management can't be disabled.`). For more information, see [Handling error responses](handling-error-responses.md).
+
+<a id="Example-Request-and-Response"></a>
+
+### Example Request and Response
+
+**Request**
+
+```
+curl --location --request POST 'https://vpp.itunes.apple.com/mdm/v2/subscriptions/disable' \
+--header 'Authorization: Bearer {sToken}'
+```
+
+**Response**
+
+```json
+{
+    "mdmInfo": null,
+    "subscriptionManagement": false,
+    "tokenExpirationDate": "2030-11-08T22:33:22+0000",
+    "uId": "2049025000431439"
+}
+```
+
+To declare that an organizational unit supports subscriptions, use [Enable Subscriptions](enable-subscriptions.md).
+
+## Topics
+
+### Response
+
+- [SubscriptionManagementResponse](subscriptionmanagementresponse.md): A confirmation response that reports your device management service’s subscription management support.
+- [ErrorResponse](errorresponse.md): The response that contains the error that occurs.
+
+### Content Metadata
+
+- [Managing subscriptions](managing-subscriptions.md): Administer auto-renewable subscription seats for your organization.
+
+## See Also
+
+### Subscription management
+
+- [Enable Subscriptions](enable-subscriptions.md): Declare that your device management service supports subscription management.
+- [Get Subscriptions](get-subscriptions.md): Get the subscriptions that your organization manages.
+- [Get Subscription Assignments](get-subscription-assignments.md): Get the subscription assignments for users in your organization.
+- [Associate Subscriptions](associate-subscriptions.md): Associate subscriptions with client user IDs.
+- [Disassociate Subscriptions](disassociate-subscriptions.md): Disassociate subscriptions from client user IDs.
+- [Get Subscription Administrators](get-subscription-administrators.md): Get the administrators for subscriptions that your organization manages.
+- [Add Subscription Administrators](add-subscription-administrators.md): Add administrators for subscriptions.
+- [Remove Subscription Administrators](remove-subscription-administrators.md): Remove administrators from subscriptions.

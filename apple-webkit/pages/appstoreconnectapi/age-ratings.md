@@ -1,0 +1,56 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/age-ratings](https://developer.apple.com/documentation/appstoreconnectapi/age-ratings)
+
+# Age Ratings
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** API Collection
+
+Read and update age ratings and declarations for your app.
+
+<a id="overview"></a>
+
+## Overview
+
+`ageRatingDeclarations` handles your answers to the app-characteristic questions that affect your app’s age rating. This resource enables you to answer the questions and update your answers. You must fill out this information before submitting your app for review.
+
+`territoryAgeRatings` allows you to read the age ratings per territory that are calculated by your age rating declaration responses.
+
+For more information about age ratings, see [Set an app age rating](https://developer.apple.com/help/app-store-connect/manage-app-information/set-an-app-age-rating).
+
+> **Important**
+
+> The age-rating declaration attributes `INFREQUENT_OR_MILD` and `FREQUENT_OR_INTENSE` are deprecated. Instead, use `INFREQUENT` or `FREQUENT`.
+
+## Topics
+
+### Reading and modifying declarations
+
+- [Read the age-rating declaration](get-v1-appinfos-_id_-ageratingdeclaration.md): Get the age-rating declaration for an app info.
+- [Get the age rating declaration ID for an app info](get-v1-appinfos-_id_-relationships-ageratingdeclaration.md)
+- [Modify an age rating declaration](patch-v1-ageratingdeclarations-_id_.md): Provide age-related information so the App Store can determine the age rating for your app.
+
+### Reading territory age rating
+
+- [List Territory Age Ratings for an App Info](get-v1-appinfos-_id_-territoryageratings.md): List all territory age ratings for a specific app info.
+- [List territory age rating IDs for an app info](get-v1-appinfos-_id_-relationships-territoryageratings.md): List all territory age rating IDs for a specific app info.
+
+### Objects and data types
+
+- [AgeRatingDeclaration](ageratingdeclaration.md): A set of content descriptors for your app that App Store Connect uses to assign an age rating.
+- [AgeRatingDeclarationResponse](ageratingdeclarationresponse.md): A response containing a single age rating declaration with your app’s content descriptors.
+- [AgeRatingDeclarationUpdateRequest](ageratingdeclarationupdaterequest.md): The request body you use to update an Age Rating Declaration.
+- [AppInfoAgeRatingDeclarationLinkageResponse](appinfoageratingdeclarationlinkageresponse.md)
+- [AppInfoTerritoryAgeRatingsLinkagesResponse](appinfoterritoryageratingslinkagesresponse.md): A response containing the resource identifiers of territory-specific age ratings for an app info record.
+- [AppStoreAgeRating](appstoreagerating.md): A string that represents the app’s age rating as it appears on the App Store for all platforms.
+- [BrazilAgeRating](brazilagerating.md): String that represents the app’s age rating as it appears on the App Store in Brazil for all platforms.
+- [KidsAgeBand](kidsageband.md): String that represents the age band for a Made for Kids app.
+- [TerritoryAgeRating](territoryagerating.md): The data structure that represent a territory age-rating resource.
+- [TerritoryAgeRatingsResponse](territoryageratingsresponse.md): A response containing a list of age ratings assigned to an app across App Store territories.
+
+## See Also
+
+### Managing Categories and Age Declarations
+
+- [App Categories](app-categories.md): Get App Store categories and subcategories for apps.

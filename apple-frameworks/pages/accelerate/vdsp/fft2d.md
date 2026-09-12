@@ -1,0 +1,39 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vdsp/fft2d](https://developer.apple.com/documentation/accelerate/vdsp/fft2d)
+
+# vDSP.FFT2D
+
+**Framework:** Accelerate  
+**Kind:** Class  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS · watchOS 6.0+
+
+A 2D single- and double-precision fast Fourier transform.
+
+## Declaration
+
+```swift
+class FFT2D<T> where T : vDSP_FourierTransformable
+```
+
+## Topics
+
+### Initializers
+
+- [init(width:height:ofType:)](fft2d/init%28width_height_oftype_%29.md): Initializes a new fast Fourier transform instance for 2D FFT.
+
+### Instance Methods
+
+- [transform(input:output:direction:)](fft2d/transform%28input_output_direction_%29.md): Computes an out-of-place 2D fast Fourier transform.
+
+## Relationships
+
+### Inherits From
+
+- [vDSP.FFT](fft.md)
+
+## See Also
+
+### Objects that Simplify FFTs
+
+- [vDSP.FFT](fft.md): A 1D single- and double-precision fast Fourier transform.
+- [vDSP.FourierTransformDirection](fouriertransformdirection.md): Fast Fourier transform directions.
+- [vDSP.Radix](radix.md): Fast Fourier transform radices.

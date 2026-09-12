@@ -1,0 +1,113 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applemusicapi/get-the-user's-personal-apple-music-station](https://developer.apple.com/documentation/applemusicapi/get-the-user's-personal-apple-music-station)
+
+# Get the User's Personal Apple Music Station
+
+**Interface language:** Data
+
+**Framework:** Apple Music API  
+**Kind:** Web Service Endpoint  
+**Availability:** Apple Music 1.0+
+
+Fetch the current user’s personal Apple Music station.
+
+## URL
+
+```http
+GET https://api.music.apple.com/v1/catalog/{storefront}/stations
+```
+
+## Path Parameters
+
+- `storefront` — `string` (required): An iTunes Store territory, specified by an ISO 3166 alpha-2 country code. The possible values are the `id` attributes of `Storefront` objects.
+
+## Query Parameters
+
+- `filter[identity]` — `[string]` (required): A filter to apply to the request.
+  **Allowed values:** `personal`
+- `include` — `[string]`: Additional relationships to include in the fetch.
+- `l` — `string`: The localization to use, specified by a language tag. The possible values are in the `supportedLanguageTags` array belonging to the `Storefront` object specified by `storefront`. Otherwise, the default is `defaultLanguageTag` in `Storefront`.
+- `extend` — `[string]`: A list of attribute extensions to apply to resources in the response.
+
+## Response Codes
+
+- `200` OK — `StationsResponse`: A list of attribute extensions to apply to resources in the response.
+- `401` Unauthorized — `UnauthorizedResponse`: A response indicating an incorrect `Authorization` header.
+- `403` Forbidden — `ForbiddenResponse`: A response indicating invalid or insufficient authentication.
+- `500` Internal Server Error — `ErrorsResponse`: A response indicating an error occurred on the server.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If successful, the HTTP status code is 200 (OK) and the `data` array contains the requested resource object. If unsuccessful, the HTTP status code indicates the error and the details are in the `errors` array. For more information, see [Handling Requests and Responses](handling-requests-and-responses.md).
+
+<a id="Example"></a>
+
+### Example
+
+**Request**
+
+```
+https://api.music.apple.com/v1/catalog/us/stations?filter[identity]=personal
+```
+
+**Response**
+
+```json
+{
+    "data": [
+        {
+            "id": "ra.u-741b035f6f0a85c81abb70ff757aa95f",
+            "type": "stations",
+            "href": "/v1/catalog/us/stations/ra.u-741b035f6f0a85c81abb70ff757aa95f",
+            "attributes": {
+                "artwork": {
+                    "width": 2400,
+                    "height": 2400,
+                    "url": "https: //is1-ssl.mzstatic.com/image/thumb/Features124/v4/7b/1d/f0/7b1df048-0017-8ac0-98c9-735f14849606/mza_7507996640781423701.png/{w}x{h}bb.jpg"
+                },
+                "name": "My Station",
+                "mediaKind": "audio",
+                "playParams": {
+                    "id": "ra.u-741b035f6f0a85c81abb70ff757aa95f",
+                    "kind": "radioStation",
+                    "format": "tracks",
+                    "stationHash": "CgoIByIGCPeqnL8HEAE",
+                    "hasDrm": false,
+                    "mediaType": 0
+                },
+                "url": "https: //music.apple.com/us/station/grace-lis-station/ra.u-741b035f6f0a85c81abb70ff757aa95f",
+                "isLive": false
+            }
+        }
+    ],
+    "meta": {
+        "filters": {
+            "identity": {
+                "personal": [
+                    {
+                        "id": "ra.u-741b035f6f0a85c81abb70ff757aa95f",
+                        "type": "stations",
+                        "href": "/v1/catalog/us/stations/ra.u-741b035f6f0a85c81abb70ff757aa95f"
+                    }
+                ]
+            }
+        }
+    }
+}
+
+```
+
+## See Also
+
+### Related Documentation
+
+- [Stations](stations.md): A resource object that represents a station.
+- [StationsResponse](stationsresponse.md): The response to a stations request.
+
+### Requesting a Catalog Station
+
+- [Get a Catalog Station](get-a-catalog-station.md): Fetch a station by using its identifier.
+- [Get a Catalog Station's Relationship Directly by Name](fetch-a-relationship-on-this-resource-by-name-38wmf.md): Fetch a station’s relationship using its identifier.
+- [Get Multiple Catalog Stations](get-multiple-catalog-stations.md): Fetch one or more stations by using their identifiers.
+- [Get the Apple Music Live Radio Stations](get-the-apple-music-live-radio-stations.md): Fetch the Apple Music live radio stations for the storefront.

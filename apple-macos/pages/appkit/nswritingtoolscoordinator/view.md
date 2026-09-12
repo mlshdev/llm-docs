@@ -1,0 +1,55 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nswritingtoolscoordinator/view](https://developer.apple.com/documentation/appkit/nswritingtoolscoordinator/view)
+
+# view (Swift)
+
+**Framework:** AppKit  
+**Kind:** Instance Property  
+**Availability:** macOS 15.2+
+
+The view that currently uses the writing tools coordinator.
+
+## Declaration
+
+```swift
+weak var view: NSView? { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this property to refer to the view that currently owns the coordinator object. The system updates this property automatically when you assign the coordinator to the [writingToolsCoordinator](../nsview/writingtoolscoordinator.md) property of your view. The value of this property is `nil` if there is no associated view.
+
+## See Also
+
+### Managing Writing Tools interactions
+
+- [delegate](delegate-swift.property.md): The object that handles Writing Tools interactions for your view.
+- [NSWritingToolsCoordinator.Delegate](delegate-swift.protocol.md): An interface that you use to manage interactions between Writing Tools and your custom text view.
+
+# view (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Property  
+**Availability:** macOS 15.2+
+
+The view that currently uses the writing tools coordinator.
+
+## Declaration
+
+```objectivec
+@property (weak, readonly, nullable) NSView * view;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this property to refer to the view that currently owns the coordinator object. The system updates this property automatically when you assign the coordinator to the [writingToolsCoordinator](../nsview/writingtoolscoordinator.md) property of your view. The value of this property is `nil` if there is no associated view.
+
+## See Also
+
+### Managing Writing Tools interactions
+
+- [delegate](delegate-swift.property.md): The object that handles Writing Tools interactions for your view.
+- [NSWritingToolsCoordinatorDelegate](delegate-swift.protocol.md): An interface that you use to manage interactions between Writing Tools and your custom text view.

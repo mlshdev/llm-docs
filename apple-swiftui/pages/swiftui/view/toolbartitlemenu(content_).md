@@ -1,0 +1,51 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/toolbartitlemenu(content:)](https://developer.apple.com/documentation/swiftui/view/toolbartitlemenu(content:))
+
+# toolbarTitleMenu(content:)
+
+**Framework:** SwiftUI  
+**Kind:** Instance Method  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+ · watchOS 9.0+
+
+Configure the title menu of a toolbar.
+
+## Declaration
+
+```swift
+nonisolated func toolbarTitleMenu<C>(@ContentBuilder content: () -> C) -> some View where C : View
+
+```
+
+## Parameters
+
+- `content`: The content associated to the toolbar title menu.
+
+<a id="discussion"></a>
+
+## Discussion
+
+A title menu represent common functionality that can be done on the content represented by your app’s toolbar or navigation title. This menu may be populated from your app’s commands like [saveItem](../commandgroupplacement/saveitem.md) or [printItem](../commandgroupplacement/printitem.md).
+
+```swift
+ContentView()
+    .toolbar {
+        ToolbarTitleMenu()
+    }
+```
+
+You can provide your own set of actions to override this behavior.
+
+```swift
+ContentView()
+    .toolbarTitleMenu {
+        DuplicateButton()
+        PrintButton()
+    }
+```
+
+In iOS and iPadOS, this will construct a menu that can be presented by tapping the navigation title in the app’s navigation bar.
+
+## See Also
+
+### Setting the toolbar title menu
+
+- [ToolbarTitleMenu](../toolbartitlemenu.md): The title menu of a toolbar.

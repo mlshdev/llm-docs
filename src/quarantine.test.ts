@@ -31,6 +31,7 @@ function build(
   return {
     project: {
       id: "n8n",
+      kind: "github",
       title: "n8n",
       repository: "n8n-io/n8n-docs",
       homepage: "https://docs.n8n.io/",

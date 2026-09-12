@@ -1,0 +1,408 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applenews/using-markdown-with-apple-news-format](https://developer.apple.com/documentation/applenews/using-markdown-with-apple-news-format)
+
+# Using Markdown with Apple News Format
+
+**Interface language:** Data
+
+**Framework:** Apple News Format  
+**Kind:** Article
+
+Use Markdown formatting for text components.
+
+<a id="overview"></a>
+
+## Overview
+
+Apple News Format supports a subset of Markdown syntax. You can use Markdown in the following components by setting the `format` property to `markdown`.
+
+- [Author](../applenewsformat/author.md)
+- [Body](../applenewsformat/body.md)
+- [Byline](../applenewsformat/byline.md)
+- [Caption](../applenewsformat/caption.md)
+- [Heading](../applenewsformat/heading.md)
+- [Illustrator](../applenewsformat/illustrator.md)
+- [Intro](../applenewsformat/intro.md)
+- [Photographer](../applenewsformat/photographer.md)
+- [PullQuote](../applenewsformat/pullquote.md)
+- [Quote](../applenewsformat/quote.md)
+- [Title](../applenewsformat/title.md)
+
+In addition to the components above, you can also use Markdown to format text in [CaptionDescriptor](../applenewsformat/captiondescriptor.md), and [FormattedText](../applenewsformat/formattedtext.md) objects.
+
+<a id="Example"></a>
+
+### Example
+
+```json
+{
+"role": "heading",
+"text": "1\\. First list item",
+"format": "markdown"
+}
+```
+
+To learn more about Markdown, visit the [Markdown](https://commonmark.org) website.
+
+<a id="Text-Level-Markdown-Syntax"></a>
+
+### Text-Level Markdown Syntax
+
+Apple News Format supports these Markdown features within text paragraphs.
+
+<a id="Emphasis-Italics"></a>
+
+#### Emphasis (Italics)
+
+Use single asterisks (`*`) or single underscores (`_`).
+
+**Markdown:**
+
+```other
+A sentence with _emphasis_ and two different types of *emphasis notation*.
+```
+
+**Result:**
+
+A sentence with *emphasis* and two different types of *emphasis notation*.
+
+**Markdown:**
+
+```other
+This _sentence_'s Markdown formatting is (_more_) in_volved_.
+```
+
+**Result:**
+
+This *sentence*’s Markdown formatting is (*more*) in*volved*.
+
+<a id="Strong-Emphasis-Bold"></a>
+
+#### Strong Emphasis (Bold)
+
+To make text bold, use double asterisks (`**`) or double underscores (`__`).
+
+**Markdown:**
+
+```other
+A sentence containing something **really important**.
+```
+
+**Result:**
+
+A sentence containing something **really important**.
+
+**Markdown:**
+
+```other
+This __sentence__'s Markdown formatting is (__more__) in__volved__.
+```
+
+**Result:**
+
+This **sentence**’s Markdown formatting is (**more**) in**volved**.
+
+<a id="Combined-Emphasis-Italics-and-Strong-Bold"></a>
+
+#### Combined Emphasis (Italics) and Strong (Bold)
+
+You can nest emphasis and strong emphasis to use bold-italic font faces by using underscores with double asterisks (or double underscores with single asterisks).
+
+**Markdown:**
+
+```other
+A _**sentence**_ containing **_four_** ways to __*combine*__ strong and *__emphasis__*.
+_An emphasized sentence containing a **strong phrase**._
+```
+
+**Result:**
+
+In the first example, the words *sentence*, *four*, *combine*, and *emphasis* are in both italics and bold.
+
+In the second example, the entire sentence is displayed in italics with *strong phrase* in italics and bold.
+
+**Markdown:**
+
+```other
+This _**sentence**_'s Markdown formatting is (__*more*__) *in__volved__*.
+```
+
+**Result:**
+
+In this example, the word *sentence* (but not the apostrophe and the letter *s* that follow it) is in italics and bold, as is the word *more* (but not the parentheses). The *volved* portion of the word *involved* is also italics and bold, while the *in* part of the word is italics only.
+
+> **Note**
+
+> Apple News Format doesn’t support the use of triple asterisks (`***`) or triple underscores (`___`) to create bold-italic.
+
+<a id="Strikethrough"></a>
+
+#### Strikethrough
+
+For strikethrough text, surround with double tildes (~~).
+
+**Markdown:**
+
+```other
+A sentence containing something ~~no longer neeeded~~.
+```
+
+**Result:**
+
+In this example, the text *no longer neeeded* is crossed out.
+
+<a id="Links"></a>
+
+### Links
+
+To add a link with Markdown, use brackets for the linked text and parentheses for the link URL. Brackets must contain at least one character; empty brackets are invalid.
+
+**Markdown**:
+
+```other
+This text contains [a link to another page](http:/www.apple.com).
+_This emphasized sentence contains [a link to another page] (http://www.apple.com)_.
+This text contains an emphasized [_link to another page_](http://www.apple.com).
+```
+
+**Result**:
+
+The first example contains a simple link.
+
+The second example italicizes the entire sentence, including the link text.
+
+The third example italicizes just the link.
+
+> **Note**
+
+> Apple News Format doesn’t support Markdown reference links, which use a second set of square brackets that contain a label that’s defined elsewhere in the article.
+
+<a id="Block-Level-Markdown"></a>
+
+### Block-Level Markdown
+
+<a id="Headings"></a>
+
+#### Headings
+
+To indicate that text is a heading, use the `#` character.
+
+`# Heading 1`
+
+`## Heading 2`
+
+`### Heading 3`
+
+`#### Heading 4`
+
+`##### Heading 5`
+
+`###### Heading 6`
+
+<a id="Inline-Text-Style"></a>
+
+#### Inline Text Style
+
+To apply a text style that you have already defined in Apple News Format, use square brackets (`[]`) to enclose the text you want to format and put the name of the text style you want to use in curly brackets (`{}`). You must define the text style you refer to using the `textStyles` property in the article document properties.
+
+For this example, `specialTextStyle` is predefined to be **bold**. (Your actual result depends on how you define `specialTextStyle`.)
+
+**Markdown**:
+
+```other
+The trail passes the [Big Sur Waterfall]{specialTextStyle} before ending in the valley.
+```
+
+**Result**:
+
+The trail passes the **Big Sur Waterfall** before ending in the valley.
+
+<a id="Paragraphs"></a>
+
+#### Paragraphs
+
+To separate text into paragraphs, use two of the Markdown new line tags `(\n\n)` between the end of one paragraph and the beginning of the next paragraph. In JSON, new lines are encoded as `\n`.
+
+**Markdown**:
+
+```other
+Last line of paragraph 1.\n\nFirst line of paragraph 2.
+```
+
+**Result**:
+
+Last line of paragraph 1.
+
+First line of paragraph 2.
+
+Apple News Format doesn’t support Markdown paragraph and line separators (`\n` or `\n\n`) at the beginning or end of components. To add space in these locations within a component, use layout margins.
+
+> **Note**
+
+> Apple News Format does not support single `\n` or `\r` Markdown tags. You can use the Unicode line separator `(\u2028)` to start a new line.
+
+<a id="Lists"></a>
+
+#### Lists
+
+<a id="Bulleted-List"></a>
+
+##### Bulleted List
+
+To create a bulleted list item, start a new line, then type either a hyphen (`-`), an asterisk (`*`), or a plus sign (`+`) followed by a space.
+
+**Markdown:**
+
+```other
+- First item
+- Second item
+```
+
+**Result:**
+
+- First item
+- Second item
+
+<a id="Numbered-List"></a>
+
+##### Numbered List
+
+Use numbers and periods followed by a space (`1. `).
+
+**Markdown:**
+
+```other
+1. First numbered item
+2. Second numbered item
+```
+
+**Result:**
+
+1. First numbered item
+2. Second numbered item
+
+<a id="Numbered-List-in-Apple-News-Format"></a>
+
+##### Numbered List in Apple News Format
+
+In a numbered list, Apple News Format restarts at 1 for each new component — no matter what number you provide in your text.
+
+If you need to separate a list into multiple components, remove `"format": "markdown"` from each component or “escape” the period with two backslashes (`\\`), as shown in the following JSON example:
+
+**Markdown in a JSON file:**
+
+```json
+{
+   "role": "heading",
+   "text": "1\\. First list item",
+   "format": "markdown"
+},
+{
+   "role": "heading",
+   "text": "2\\. Second list item",
+   "format": "markdown"
+}
+```
+
+**Result:**
+
+1. First list item
+2. Second list item
+
+<a id="Divider"></a>
+
+#### Divider
+
+To create a divider line or horizontal rule, type at least 3 hyphens (`---`) or 3 asterisks (`***`) on a new, empty line.
+
+```other
+Dividers can separate portions of text.
+---
+Here's the epilogue to my story.
+```
+
+<a id="Maps"></a>
+
+#### Maps
+
+To add a map that renders within your article, begin the URL for your map with `https://maps.apple.com/`. When Apple News Format renders the article, it converts the link to a map that you can manipulate the same way as a `map` component. If your URL doesn’t start with `https://maps.apple.com/`, then Apple News Format only displays a link to the map.
+
+**Markdown**:
+
+```other
+Apple's main campus occupies 172 acres at [Apple Park](https://maps.apple.com?sll=37.3327,-122.00533&t=standard&spn=0.02,0.02&q=Apple%20Inc).
+```
+
+**Result**:
+
+Apple’s main campus occupies 172 acres at Apple Park.
+
+![Screenshot of a full-screen map showing the location of Apple Park in Cupertino.](https://developer.apple.com/images/com.apple.applenews/media-3591443@2x.png)
+
+<a id="Escaping-Markdown"></a>
+
+### Escaping Markdown
+
+To escape special Markdown characters in a JSON document, use two backslashes (one to escape Markdown and one to escape JSON) as shown in the following examples:
+
+<a id="Example-1"></a>
+
+#### Example 1
+
+**Markdown**:
+
+```other
+This is an asterisk: \*\n\nThis is an underscore: \_
+```
+
+**Markdown in a JSON document (using two backslashes)**:
+
+```other
+This is an asterisk: \\*\n\nThis is an underscore: \\_
+```
+
+**Result**:
+
+This is an asterisk: \*
+
+This is an underscore: \_
+
+<a id="Example-2"></a>
+
+#### Example 2
+
+**Markdown**:
+
+```other
+1. First list item\n1. Second list item\n\n1\. Not a list item
+```
+
+**Markdown in a JSON document (using two backslashes)**:
+
+```other
+1. First list item\n1. Second list item\n\n1\\. Not a list item
+```
+
+**Result:**
+
+1. First list item
+2. Second list item
+
+`1`. Not a list item
+
+## See Also
+
+### Text
+
+- [Using HTML with Apple News Format](using-html-with-apple-news-format.md): Use HTML formatting for text components.
+- [Body](../applenewsformat/body.md): The component for adding body text.
+- [Title](../applenewsformat/title.md): The component for adding an article title.
+- [Heading](../applenewsformat/heading.md): The text component for adding a heading.
+- [Intro](../applenewsformat/intro.md): The component for adding introductory text.
+- [Caption](../applenewsformat/caption.md): The component for adding caption text.
+- [Author](../applenewsformat/author.md): The component for adding the name of the author.
+- [Byline](../applenewsformat/byline.md): The component for adding the publication date or contributor credits, especially for articles with multiple contributors.
+- [Illustrator](../applenewsformat/illustrator.md): The component for adding illustrator credit.
+- [Photographer](../applenewsformat/photographer.md): The component for adding a photographer credit.
+- [Quote](../applenewsformat/quote.md): The component for including a quote.
+- [PullQuote](../applenewsformat/pullquote.md): The component for including a pull quote.
+- [Text](../applenewsformat/text.md): Properties shared by all text component types.

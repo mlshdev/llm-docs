@@ -1,0 +1,42 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/substring/unicodescalarview/filter(_:)-6e5i2](https://developer.apple.com/documentation/swift/substring/unicodescalarview/filter(_:)-6e5i2)
+
+# filter(\_:)
+
+**Framework:** Swift  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+ · Swift 4.0+
+
+Returns a new collection of the same type containing, in order, the elements of the original collection that satisfy the given predicate.
+
+## Declaration
+
+```swift
+consuming func filter<E>(_ isIncluded: (Self.Element) throws(E) -> Bool) throws(E) -> Self where E : Error
+```
+
+## Parameters
+
+- `isIncluded`: A closure that takes an element of the sequence as its argument and returns a Boolean value indicating whether the element should be included in the returned collection.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A collection of the elements that `isIncluded` allowed.
+
+<a id="discussion"></a>
+
+## Discussion
+
+In this example, `filter(_:)` is used to include only names shorter than five characters.
+
+```swift
+let cast = ["Vivien", "Marlon", "Kim", "Karl"]
+let shortNames = cast.filter { $0.count < 5 }
+print(shortNames)
+// Prints "["Kim", "Karl"]"
+```
+
+> **Complexity**
+
+> O(*n*), where *n* is the length of the collection.

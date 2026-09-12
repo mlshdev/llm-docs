@@ -1,0 +1,42 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/xpc/xpclistener/init(service:targetqueue:options:incomingsessionhandler:)](https://developer.apple.com/documentation/xpc/xpclistener/init(service:targetqueue:options:incomingsessionhandler:))
+
+# init(service:targetQueue:options:incomingSessionHandler:)
+
+**Framework:** XPC  
+**Kind:** Initializer  
+**Availability:** Mac Catalyst 17.0+ · macOS 14.0+
+
+Creates the server side of an XPC service using the specified service name.
+
+## Declaration
+
+```swift
+@preconcurrency init(service: String, targetQueue: DispatchQueue? = nil, options: XPCListener.InitializationOptions = .none, incomingSessionHandler: @escaping @Sendable (XPCListener.IncomingSessionRequest) -> XPCListener.IncomingSessionRequest.Decision) throws
+```
+
+## Parameters
+
+- `service`: The Mach service or XPC service name that clients use to connect to the service.
+- `targetQueue`: The dispatch queue that events arrive on. This may be a concurrent queue. If [nil](../../objectivec/nil-227m0.md), the listeners uses `DISPATCH_TARGET_QUEUE_DEFAULT`.
+- `options`: Configuration options for the listener, such as creating it in an inactive state.
+- `incomingSessionHandler`: A handler that the system calls when a client connects to the XPC service.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Listener creation fails if the XPC service isn’t found or is unavailable.
+
+When a client connects to your service, the system invokes the `incomingSessionHandler` with a request that you must either accept or reject. To accept the incoming request, choose one of the following two approaches:
+
+- For simple protocols, use [accept(incomingMessageHandler:cancellationHandler:)](incomingsessionrequest/accept%28incomingmessagehandler_cancellationhandler_%29-8rodk.md) or [accept(incomingMessageHandler:cancellationHandler:)](incomingsessionrequest/accept%28incomingmessagehandler_cancellationhandler_%29-48c3k.md) to provide a closure that receives the incoming message directly.
+- For more complex protocols that delegate message handling to a different object, use `accept(_:)` to provide a closure that returns a [XPCPeerHandler](../xpcpeerhandler.md). The peer handler object receives incoming messages from the client directly.
+
+When the `incomingSessionHandler` returns, the system automatically activates the peer session unless you explicitly reject it or pass the [inactive](initializationoptions/inactive.md) initialzation option.
+
+## See Also
+
+### Creating a listener
+
+- [XPCListener.InitializationOptions](initializationoptions.md): Options that control the listener’s configuration, such as if it’s inactive at creation.
+- [XPCListener.IncomingSessionRequest](incomingsessionrequest.md): A session request from a client that you accept or reject.

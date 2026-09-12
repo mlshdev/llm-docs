@@ -1,0 +1,100 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/sparse_status](https://developer.apple.com/documentation/accelerate/sparse_status)
+
+# sparse_status (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Structure  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+The type reflecting the status of an operations.
+
+## Declaration
+
+```swift
+struct sparse_status
+```
+
+<a id="overview"></a>
+
+## Overview
+
+> **Important**
+
+>  Apple provides the BLAS and LAPACK libraries under the Accelerate framework to be in line with LAPACK 3.9.1. Starting with iOS 26, iPadOS 26, macOS 26, tvOS 26, visionOS 26, and watchOS 26, the libraries are in line with LAPACK 3.12.0. These new interfaces provide additional functionality, as well as a new ILP64 interface. To use the new interfaces, define `ACCELERATE_NEW_LAPACK` before including the Accelerate or vecLib headers. For ILP64 interfaces, also define `ACCELERATE_LAPACK_ILP64`. For Swift projects, specify `ACCELERATE_NEW_LAPACK=1` and `ACCELERATE_LAPACK_ILP64=1` as preprocessor macros in Xcode build settings under Apple Clang - Preprocessing \> Preprocessor Macros.
+
+## Topics
+
+### Constants
+
+- [SPARSE_SUCCESS](sparse_success.md): Operation was a success.
+- [SPARSE_ILLEGAL_PARAMETER](sparse_illegal_parameter.md): Operation was not completed because one or more of the arguments had an illegal value.
+- [SPARSE_CANNOT_SET_PROPERTY](sparse_cannot_set_property.md): A property was set after values were inserted into the matrix.
+- [SPARSE_SYSTEM_ERROR](sparse_system_error.md): An internal error has occured, such as non enough memory.
+
+### Initializers
+
+- [init(\_:)](sparse_status/init%28__%29.md)
+- [init(rawValue:)](sparse_status/init%28rawvalue_%29.md)
+
+### Instance Properties
+
+- [rawValue](sparse_status/rawvalue.md)
+
+## Relationships
+
+### Conforms To
+
+- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+
+## See Also
+
+### Supporting types
+
+- [sparse_dimension](sparse_dimension.md): The dimension type.
+- [sparse_index](sparse_index.md): The index type.
+- [sparse_matrix_double](sparse_matrix_double.md): Sparse matrix opaque type for double.
+- [sparse_matrix_float](sparse_matrix_float.md): Sparse matrix opaque type for float.
+
+# sparse_status (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Enumeration  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+The type reflecting the status of an operations.
+
+## Declaration
+
+```objectivec
+typedef enum { ... } sparse_status;
+```
+
+<a id="overview"></a>
+
+## Overview
+
+> **Important**
+
+>  Apple provides the BLAS and LAPACK libraries under the Accelerate framework to be in line with LAPACK 3.9.1. Starting with iOS 26, iPadOS 26, macOS 26, tvOS 26, visionOS 26, and watchOS 26, the libraries are in line with LAPACK 3.12.0. These new interfaces provide additional functionality, as well as a new ILP64 interface. To use the new interfaces, define `ACCELERATE_NEW_LAPACK` before including the Accelerate or vecLib headers. For ILP64 interfaces, also define `ACCELERATE_LAPACK_ILP64`. For Swift projects, specify `ACCELERATE_NEW_LAPACK=1` and `ACCELERATE_LAPACK_ILP64=1` as preprocessor macros in Xcode build settings under Apple Clang - Preprocessing \> Preprocessor Macros.
+
+## Topics
+
+### Constants
+
+- [SPARSE_SUCCESS](sparse_success.md): Operation was a success.
+- [SPARSE_ILLEGAL_PARAMETER](sparse_illegal_parameter.md): Operation was not completed because one or more of the arguments had an illegal value.
+- [SPARSE_CANNOT_SET_PROPERTY](sparse_cannot_set_property.md): A property was set after values were inserted into the matrix.
+- [SPARSE_SYSTEM_ERROR](sparse_system_error.md): An internal error has occured, such as non enough memory.
+
+## See Also
+
+### Supporting types
+
+- [sparse_dimension](sparse_dimension.md): The dimension type.
+- [sparse_index](sparse_index.md): The index type.
+- [sparse_matrix_double](sparse_matrix_double.md): Sparse matrix opaque type for double.
+- [sparse_matrix_float](sparse_matrix_float.md): Sparse matrix opaque type for float.

@@ -1,0 +1,73 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/searchtermpopularityrow](https://developer.apple.com/documentation/apple-ads-platform-api/searchtermpopularityrow)
+
+# SearchTermPopularityRow
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Object  
+**Availability:** Apple Ads Platform API 1.0+
+
+A single search term popularity data row.
+
+## Declaration
+
+```
+object SearchTermPopularityRow
+```
+
+## Properties
+
+- `week` — `date`: The date immediately following the completed weekly range, in YYYY-MM-DD format. For example, a range covering Sunday through Saturday returns the following Sunday’s date. Present when granularity is `WEEKLY_SUN_SAT`. Read-only.
+- `month` — `string`: Calendar month of the report snapshot in YYYY-MM format. Present when granularity is `MONTHLY`. Read-only.
+- `countryOrRegion` — `string`: ISO 3166-1 alpha-2 country or region code. Data is available for approximately 90 countries and regions, excluding Russia and Belarus. Always included in the response. Read-only.
+- `genre` — `string`: App Store genre classification. Always included in the response. Read-only.
+- `searchTerm` — `string`: The search term. Only terms meeting eligibility criteria (≥ 500 searches and ≥ 10 impressions within the reporting period) are included. Always included in the response. Read-only.
+- `rankInGenre` — `integer`: Rank of the search term by search volume within its country or region and genre. Rank `1` = highest volume. Up to 500 search terms per country and genre combination. Included only when requested via the request’s `fields` array. Read-only.
+- `searchPopularityInGenre` — `integer`: Popularity within country or region and genre on a 1–100 scale. `100` = most popular within that genre. Included only when requested via the request’s `fields` array. Read-only.
+- `searchPopularity1to100` — `integer`: Popularity score on a 1–100 scale across all genres within the country or region. `100` = most popular overall. Use to compare a term’s in-genre popularity against its market-wide popularity. Include only when requested via the request’s `fields` array. Read-only.
+- `searchPopularity1to5` — `integer`: Popularity across all genres within country/region on a 1–5 scale. `5` = most popular. Matches the Search Popularity metric displayed in Campaign Management. Include only when requested via the request’s `fields` array. Read-only.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Each `SearchTermPopularityRow` represents one combination of time period, country or region, genre, and search term in a search term popularity report. The date field present depends on the granularity in [SearchTermPopularityTimeRange](searchtermpopularitytimerange.md): `week` for `WEEKLY_SUN_SAT`, `month` for `MONTHLY`.
+
+<a id="Popularity-metrics"></a>
+
+### Popularity metrics
+
+The response provides three popularity scales, each scoped differently.
+
+<a id="Example"></a>
+
+### Example
+
+```json
+{
+  "week": "2025-01-05",
+  "countryOrRegion": "US",
+  "genre": "GAMES",
+  "searchTerm": "awayfinder",
+  "rankInGenre": 42,
+  "searchPopularityInGenre": 78,
+  "searchPopularity1to100": 65,
+  "searchPopularity1to5": 4
+}
+```
+
+## See Also
+
+- [ImpressionShareQueryRequest](impressionsharequeryrequest.md): Request body for the impression share query endpoint.
+- [ImpressionShareQueryResponse](impressionsharequeryresponse.md): The impression share query endpoint returns this response wrapper.
+- [ImpressionShareRow](impressionsharerow.md): A single impression share data row.
+- [ImpressionShareTimeRange](impressionsharetimerange.md): Time range for impression share queries.
+- [ImpressionShareOptions](impressionshareoptions.md): Report options for impression share queries.
+- [SearchTermPopularityQueryRequest](searchtermpopularityqueryrequest.md): Request body for the search term popularity query endpoint.
+- [SearchTermPopularityQueryResponse](searchtermpopularityqueryresponse.md): A response wrapper for search term popularity query results.
+- [SearchTermPopularityTimeRange](searchtermpopularitytimerange.md): Time range for search term popularity queries.
+- [ImpressionShareResultContainer](impressionshareresultcontainer.md): Container holding the array of impression share rows a query returns.
+- [SearchTermPopularityResultContainer](searchtermpopularityresultcontainer.md): Container holding the array of search term popularity rows a query returns.
+- [KeywordInsights](keywordinsights.md): Insights for keyword reporting rows.
+- [ReportingKeywordBidRecommendation](reportingkeywordbidrecommendation.md): Keyword bid recommendation details, including a suggested bid amount.

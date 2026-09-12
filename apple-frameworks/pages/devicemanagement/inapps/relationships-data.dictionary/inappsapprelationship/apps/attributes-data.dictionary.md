@@ -1,0 +1,73 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/inapps/relationships-data.dictionary/inappsapprelationship/apps/attributes-data.dictionary](https://developer.apple.com/documentation/devicemanagement/inapps/relationships-data.dictionary/inappsapprelationship/apps/attributes-data.dictionary)
+
+# InApps.Relationships.InAppsAppRelationship.Apps.Attributes
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Object
+
+## Declaration
+
+```
+object InApps.Relationships.InAppsAppRelationship.Apps.Attributes
+```
+
+## Properties
+
+- `artistName` — `string` (required):
+- `artwork` — `InApps.Relationships.InAppsAppRelationship.Apps.Attributes.Artwork` (required):
+- `bundleId` — `string` (required):
+- `contentRatingsBySystem` — `InApps.Relationships.InAppsAppRelationship.Apps.Attributes.ContentRatingsBySystem` (required):
+- `description` — `InApps.Relationships.InAppsAppRelationship.Apps.Attributes.DescriptionAttribute`:
+- `deviceFamilies` — `[string]` (required):
+- `externalVersionId` — `int32` (required):
+- `fileSizeByDevice` — `InApps.Relationships.InAppsAppRelationship.Apps.Attributes.FileSizeByDevice`:
+- `genreDisplayName` — `string`:
+- `hasEula` — `boolean` (required):
+- `isB2BCustomApp` — `boolean` (required):
+- `isFirstPartyHideableApp` — `boolean` (required):
+- `isIOSBinaryMacOSCompatible` — `boolean` (required):
+- `isVisionOSCompatible` — `boolean`:
+- `isVppDeviceBasedLicensingEnabled` — `boolean` (required):
+- `languageList` — `[string]`:
+- `latestVersionInfo` — `InApps.Relationships.InAppsAppRelationship.Apps.Attributes.LatestVersionInfo`:
+- `macRequiredCapabilities` — `string`:
+- `minimumMacOSVersion` — `string`:
+- `minimumOSVersion` — `string` (required):
+- `minimumVisionOSVersion` — `string`:
+- `name` — `string` (required):
+- `offers` — `[InApps.Relationships.InAppsAppRelationship.Apps.Attributes.Offers]` (required):
+- `privacyPolicyUrl` — `string`:
+- `requiredCapabilities` — `string`:
+- `requiredCapabilitiesForRealityDevice` — `string`:
+- `requirementsByDeviceFamily` — `InApps.Relationships.InAppsAppRelationship.Apps.Attributes.RequirementsByDeviceFamily`:
+- `screenshotsByType` — `InApps.Relationships.InAppsAppRelationship.Apps.Attributes.ScreenshotsByType`:
+- `seller` — `string`:
+- `subtitle` — `string`:
+- `supportURLForLanguage` — `string`:
+- `supportsDeviceSharing` — `boolean`:
+- `taxExclusivePrices` — `[InApps.Relationships.InAppsAppRelationship.Apps.Attributes.TaxExclusivePrices]`:
+- `taxRate` — `number`:
+- `url` — `string` (required):
+- `userRating` — `InApps.Relationships.InAppsAppRelationship.Apps.Attributes.UserRating` (required):
+- `usesClassKit` — `boolean`:
+- `versionHistory` — `[InApps.Relationships.InAppsAppRelationship.Apps.Attributes.VersionHistory]`:
+- `watchBundleId` — `string`:
+- `websiteUrl` — `string`:
+
+## Topics
+
+### Dictionaries
+
+- [InApps.Relationships.InAppsAppRelationship.Apps.Attributes.Artwork](attributes-data.dictionary/artwork-data.dictionary.md)
+- [InApps.Relationships.InAppsAppRelationship.Apps.Attributes.ContentRatingsBySystem](attributes-data.dictionary/contentratingsbysystem-data.dictionary.md)
+- [InApps.Relationships.InAppsAppRelationship.Apps.Attributes.DescriptionAttribute](attributes-data.dictionary/descriptionattribute.md)
+- [InApps.Relationships.InAppsAppRelationship.Apps.Attributes.FileSizeByDevice](attributes-data.dictionary/filesizebydevice-data.dictionary.md)
+- [InApps.Relationships.InAppsAppRelationship.Apps.Attributes.LatestVersionInfo](attributes-data.dictionary/latestversioninfo-data.dictionary.md)
+- [InApps.Relationships.InAppsAppRelationship.Apps.Attributes.Offers](attributes-data.dictionary/offers-data.dictionary.md)
+- [InApps.Relationships.InAppsAppRelationship.Apps.Attributes.RequirementsByDeviceFamily](attributes-data.dictionary/requirementsbydevicefamily-data.dictionary.md)
+- [InApps.Relationships.InAppsAppRelationship.Apps.Attributes.ScreenshotsByType](attributes-data.dictionary/screenshotsbytype-data.dictionary.md)
+- [InApps.Relationships.InAppsAppRelationship.Apps.Attributes.TaxExclusivePrices](attributes-data.dictionary/taxexclusiveprices-data.dictionary.md)
+- [InApps.Relationships.InAppsAppRelationship.Apps.Attributes.UserRating](attributes-data.dictionary/userrating-data.dictionary.md)
+- [InApps.Relationships.InAppsAppRelationship.Apps.Attributes.VersionHistory](attributes-data.dictionary/versionhistory-data.dictionary.md)

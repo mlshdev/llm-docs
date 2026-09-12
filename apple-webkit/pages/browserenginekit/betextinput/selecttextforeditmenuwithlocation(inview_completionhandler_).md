@@ -1,0 +1,65 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/browserenginekit/betextinput/selecttextforeditmenuwithlocation(inview:completionhandler:)](https://developer.apple.com/documentation/browserenginekit/betextinput/selecttextforeditmenuwithlocation(inview:completionhandler:))
+
+# selectTextForEditMenuWithLocation(inView:completionHandler:) (Swift)
+
+**Framework:** BrowserEngineKit  
+**Kind:** Instance Method  
+**Availability:** iOS 17.4+ · iPadOS 17.4+ · tvOS 17.4+ · visionOS 1.1+
+
+Indicates the edit menu displays at the given location in the text input view’s coordinate space.
+
+## Declaration
+
+```swift
+func selectTextForEditMenuWithLocation(inView locationInView: CGPoint, completionHandler: @escaping @Sendable (Bool, String?, NSRange) -> Void)
+```
+
+```swift
+func selectTextForEditMenuWithLocation(inView locationInView: CGPoint) async -> (Bool, String?, NSRange)
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The completion handler arguments are:
+
+- A Boolean value that indicates whether the menu displays
+- A string that represents the text context around the updated selection range (generally, this encompasses the paragraph containing the selection range)
+- The range of the updated selection relative to the paragraph context
+
+## See Also
+
+### Managing the edit menu
+
+- [canPerformAction(\_:withSender:)](canperformaction%28__withsender_%29.md): Indicates whether the text view can process a given action.
+
+# selectTextForEditMenuWithLocationInView:completionHandler: (Objective-C)
+
+**Framework:** BrowserEngineKit  
+**Kind:** Instance Method  
+**Availability:** iOS 17.4+ · iPadOS 17.4+ · tvOS 17.4+ · visionOS 1.1+
+
+Indicates the edit menu displays at the given location in the text input view’s coordinate space.
+
+## Declaration
+
+```objectivec
+- (void) selectTextForEditMenuWithLocationInView:(CGPoint) locationInView completionHandler:(void (^)(BOOL shouldPresentMenu, NSString *contextString, NSRange selectedRangeInContextString)) completionHandler;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The completion handler arguments are:
+
+- A Boolean value that indicates whether the menu displays
+- A string that represents the text context around the updated selection range (generally, this encompasses the paragraph containing the selection range)
+- The range of the updated selection relative to the paragraph context
+
+## See Also
+
+### Managing the edit menu
+
+- [canPerformAction:withSender:](canperformaction%28__withsender_%29.md): Indicates whether the text view can process a given action.

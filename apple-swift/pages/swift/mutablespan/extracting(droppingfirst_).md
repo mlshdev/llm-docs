@@ -1,0 +1,39 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/mutablespan/extracting(droppingfirst:)](https://developer.apple.com/documentation/swift/mutablespan/extracting(droppingfirst:))
+
+# extracting(droppingFirst:)
+
+**Framework:** Swift  
+**Kind:** Instance Method  
+**Availability:** iOS 12.2+ · iPadOS 12.2+ · Mac Catalyst 12.2+ · macOS 10.14.4+ · tvOS 12.2+ · visionOS 1.0+ · watchOS 5.2+
+
+Returns a span over all but the given number of initial elements.
+
+## Declaration
+
+```swift
+mutating func extracting(droppingFirst k: Int) -> MutableSpan<Element>
+```
+
+## Parameters
+
+- `k`: The number of elements to drop from the beginning of the span. `k` must be greater than or equal to zero.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A span starting after the specified number of elements.
+
+<a id="discussion"></a>
+
+## Discussion
+
+If the number of elements to drop exceeds the number of elements in the span, the result is an empty span.
+
+The returned span represents a mutation of this span.
+
+The returned span’s first item is always at offset 0; unlike buffer slices, extracted spans do not share their indices with the span from which they are extracted.
+
+> **Complexity**
+
+> O(1)

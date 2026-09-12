@@ -1,0 +1,47 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/endpointsecurity/es_event_rename_t/source](https://developer.apple.com/documentation/endpointsecurity/es_event_rename_t/source)
+
+# source (Swift)
+
+**Framework:** Endpoint Security  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst · macOS
+
+The source file to rename.
+
+## Declaration
+
+```swift
+var source: UnsafeMutablePointer<es_file_t>
+```
+
+## See Also
+
+### Inspecting Event Properties
+
+- [destination](destination.md): The destination of the rename operation.
+- [destination_type](destination_type.md): A property that indicates whether the destination is a new path or an existing file.
+- [es_destination_type_t](../es_destination_type_t.md): A type that indicates how a file event presents its destination to the client.
+- [reserved](reserved.md): An unused field reserved for future use.
+
+# source (Objective-C)
+
+**Framework:** Endpoint Security  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst · macOS
+
+The source file to rename.
+
+## Declaration
+
+```objectivec
+es_file_t * source;
+```
+
+## See Also
+
+### Inspecting Event Properties
+
+- [destination](destination.md): The destination of the rename operation.
+- [destination_type](destination_type.md): A property that indicates whether the destination is a new path or an existing file.
+- [es_destination_type_t](../es_destination_type_t.md): A type that indicates how a file event presents its destination to the client.
+- [reserved](reserved.md): An unused field reserved for future use.

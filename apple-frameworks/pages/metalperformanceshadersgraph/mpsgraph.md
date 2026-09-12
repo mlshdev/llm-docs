@@ -1,0 +1,915 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshadersgraph/mpsgraph](https://developer.apple.com/documentation/metalperformanceshadersgraph/mpsgraph)
+
+# MPSGraph (Swift)
+
+**Framework:** Metal Performance Shaders Graph  
+**Kind:** Class  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+
+
+The optimized representation of a compute graph of operations and tensors.
+
+## Declaration
+
+```swift
+class MPSGraph
+```
+
+<a id="overview"></a>
+
+## Overview
+
+An MPSGraph is a symbolic representation of operations to be utilized to execute compute graphs on a device.
+
+## Topics
+
+### Initializers
+
+- [init()](mpsgraph/init%28%29.md): Initialize an MPSGraph to insert nodes in.
+
+### Instance Properties
+
+- [options](mpsgraph/options.md): Options for the graph.
+- [placeholderTensors](mpsgraph/placeholdertensors.md): Array of all the placeholder tensors.
+
+### Instance Methods
+
+- [GRU(\_:recurrentWeight:inputWeight:bias:descriptor:name:)](mpsgraph/gru%28__recurrentweight_inputweight_bias_descriptor_name_%29.md): Creates a GRU operation and returns the value and optionally the training state tensor.
+- [GRU(\_:recurrentWeight:inputWeight:bias:initState:descriptor:name:)](mpsgraph/gru%28__recurrentweight_inputweight_bias_initstate_descriptor_name_%29.md): Creates a GRU operation and returns the value and optionally the training state tensor.
+- [GRU(\_:recurrentWeight:inputWeight:bias:initState:mask:secondaryBias:descriptor:name:)](mpsgraph/gru%28__recurrentweight_inputweight_bias_initstate_mask_secondarybias_descriptor_name_%29.md): Creates a GRU operation and returns the value and optionally the training state tensor.
+- [GRUGradients(\_:recurrentWeight:sourceGradient:zState:outputFwd:inputWeight:bias:descriptor:name:)](mpsgraph/grugradients%28__recurrentweight_sourcegradient_zstate_outputfwd_inputweight_bias_descriptor_name_%29.md): Creates a GRU gradient operation and returns the gradient tensor values.
+- [GRUGradients(\_:recurrentWeight:sourceGradient:zState:outputFwd:inputWeight:bias:initState:descriptor:name:)](mpsgraph/grugradients%28__recurrentweight_sourcegradient_zstate_outputfwd_inputweight_bias_initstate_descriptor_name_%29.md): Creates a GRU gradient operation and returns the gradient tensor values.
+- [GRUGradients(\_:recurrentWeight:sourceGradient:zState:outputFwd:stateGradient:inputWeight:bias:initState:mask:secondaryBias:descriptor:name:)](mpsgraph/grugradients%28__recurrentweight_sourcegradient_zstate_outputfwd_stategradient_inputweight_bias_initstate_mask_secondarybias_descriptor_name_%29.md): Creates a GRU gradient operation and returns the gradient tensor values.
+- [HammingDistance(primary:secondary:resultDataType:name:)](mpsgraph/hammingdistance%28primary_secondary_resultdatatype_name_%29.md): Computes the hamming distance of two input tensors with support for broadcasting.
+- [HermiteanToRealFFT(\_:axes:descriptor:name:)](mpsgraph/hermiteantorealfft%28__axes_descriptor_name_%29.md): Creates a Hermitean-to-real fast Fourier transform operation and returns the result tensor.
+- [HermiteanToRealFFT(\_:axesTensor:descriptor:name:)](mpsgraph/hermiteantorealfft%28__axestensor_descriptor_name_%29.md): Creates a Hermitean-to-real fast Fourier transform operation and returns the result tensor.
+- [L2NormPooling4D(\_:descriptor:name:)](mpsgraph/l2normpooling4d%28__descriptor_name_%29.md): Creates a 4D L2-norm pooling operation and returns the result tensor.
+- [L2NormPooling4DGradient(\_:source:descriptor:name:)](mpsgraph/l2normpooling4dgradient%28__source_descriptor_name_%29.md): Creates a L2-Norm pooling gradient operation and returns the result tensor.
+- [LSTM(\_:recurrentWeight:initState:initCell:descriptor:name:)](mpsgraph/lstm%28__recurrentweight_initstate_initcell_descriptor_name_%29.md): Creates an LSTM operation and returns the value tensor and optionally the cell state tensor and the training state tensor.
+- [LSTM(\_:recurrentWeight:inputWeight:bias:initState:initCell:descriptor:name:)](mpsgraph/lstm%28__recurrentweight_inputweight_bias_initstate_initcell_descriptor_name_%29.md): Creates an LSTM operation and returns the value tensor and optionally the cell state tensor and the training state tensor.
+- [LSTM(\_:recurrentWeight:inputWeight:bias:initState:initCell:mask:peephole:descriptor:name:)](mpsgraph/lstm%28__recurrentweight_inputweight_bias_initstate_initcell_mask_peephole_descriptor_name_%29.md): Creates an LSTM operation and returns the value tensor and optionally the cell state tensor and the training state tensor.
+- [LSTMGradients(\_:recurrentWeight:sourceGradient:zState:cellOutputFwd:descriptor:name:)](mpsgraph/lstmgradients%28__recurrentweight_sourcegradient_zstate_celloutputfwd_descriptor_name_%29.md): Creates an LSTM gradient operation and returns the gradient tensor values.
+- [LSTMGradients(\_:recurrentWeight:sourceGradient:zState:cellOutputFwd:inputWeight:bias:initState:initCell:descriptor:name:)](mpsgraph/lstmgradients%28__recurrentweight_sourcegradient_zstate_celloutputfwd_inputweight_bias_initstate_initcell_descriptor_name_%29.md): Creates an LSTM gradient operation and returns the gradient tensor values.
+- [LSTMGradients(\_:recurrentWeight:sourceGradient:zState:cellOutputFwd:inputWeight:bias:initState:initCell:mask:descriptor:name:)](mpsgraph/lstmgradients%28__recurrentweight_sourcegradient_zstate_celloutputfwd_inputweight_bias_initstate_initcell_mask_descriptor_name_%29.md): Creates an LSTM gradient operation and returns the gradient tensor values.
+- [LSTMGradients(\_:recurrentWeight:sourceGradient:zState:cellOutputFwd:stateGradient:cellGradient:inputWeight:bias:initState:initCell:mask:peephole:descriptor:name:)](mpsgraph/lstmgradients%28__recurrentweight_sourcegradient_zstate_celloutputfwd_stategradient_cellgradient_inputweight_bias_initstate_initcell_mask_peephole_descriptor_name_%29.md): Creates an LSTM gradient operation and returns the gradient tensor values.
+- [absolute(with:name:)](mpsgraph/absolute%28with_name_%29.md): Returns the absolute values of the input tensor elements.
+- [absoluteSquare(tensor:name:)](mpsgraph/absolutesquare%28tensor_name_%29.md): Returns the absolute square of the input tensor elements.
+- [acos(with:name:)](mpsgraph/acos%28with_name_%29.md): Applies the inverse cosine operation to the input tensor elements.
+- [acosh(with:name:)](mpsgraph/acosh%28with_name_%29.md): Applies the inverse hyperbolic cosine operation to the input tensor elements.
+- [adam(currentLearningRate:beta1:beta2:epsilon:values:momentum:velocity:maximumVelocity:gradient:name:)](mpsgraph/adam%28currentlearningrate_beta1_beta2_epsilon_values_momentum_velocity_maximumvelocity_gradient_name_%29.md): Creates operations to apply Adam optimization.
+- [adam(learningRate:beta1:beta2:epsilon:beta1Power:beta2Power:values:momentum:velocity:maximumVelocity:gradient:name:)](mpsgraph/adam%28learningrate_beta1_beta2_epsilon_beta1power_beta2power_values_momentum_velocity_maximumvelocity_gradient_name_%29.md): Creates operations to apply Adam optimization.
+- [addition(\_:\_:name:)](mpsgraph/addition%28____name_%29.md): Adds two input tensors.
+- [applyStochasticGradientDescent(learningRate:variable:gradient:name:)](mpsgraph/applystochasticgradientdescent%28learningrate_variable_gradient_name_%29.md): The Stochastic gradient descent performs a gradient descent `variable = variable - (learningRate * g)` where, `g` is gradient of error wrt variable this op directly writes to the variable
+- [argSort(\_:axis:descending:name:)](mpsgraph/argsort%28__axis_descending_name_%29.md): Computes the indices that sort the elements of the input tensor along the specified axis.
+- [argSort(\_:axis:name:)](mpsgraph/argsort%28__axis_name_%29.md): Computes the indices that sort the elements of the input tensor along the specified axis.
+- [argSort(\_:axisTensor:descending:name:)](mpsgraph/argsort%28__axistensor_descending_name_%29.md): Computes the indices that sort the elements of the input tensor along the specified axis.
+- [argSort(\_:axisTensor:name:)](mpsgraph/argsort%28__axistensor_name_%29.md): Computes the indices that sort the elements of the input tensor along the specified axis.
+- [asin(with:name:)](mpsgraph/asin%28with_name_%29.md): Applies the inverse sine operation to the input tensor elements.
+- [asinh(with:name:)](mpsgraph/asinh%28with_name_%29.md): Applies the inverse hyperbolic sine operation to the input tensor elements.
+- [assign(\_:tensor:name:)](mpsgraph/assign%28__tensor_name_%29.md): Creates an assign operation which writes at this point of execution of the graph.
+- [atan(with:name:)](mpsgraph/atan%28with_name_%29.md): Applies the inverse tangent operation to the input tensor elements.
+- [atan2(withPrimaryTensor:secondaryTensor:name:)](mpsgraph/atan2%28withprimarytensor_secondarytensor_name_%29.md): Returns the elementwise two-argument arctangent of the input tensors.
+- [atanh(with:name:)](mpsgraph/atanh%28with_name_%29.md): Applies the inverse hyperbolic tangent operation to the input tensor elements.
+- [avgPooling2D(withSourceTensor:descriptor:name:)](mpsgraph/avgpooling2d%28withsourcetensor_descriptor_name_%29.md): Creates a 2D average-pooling operation and returns the result tensor.
+- [avgPooling2DGradient(withGradientTensor:sourceTensor:descriptor:name:)](mpsgraph/avgpooling2dgradient%28withgradienttensor_sourcetensor_descriptor_name_%29.md): Creates a 2D average pooling gradient operation and returns the result tensor.
+- [avgPooling4D(\_:descriptor:name:)](mpsgraph/avgpooling4d%28__descriptor_name_%29.md): Creates a 4D average pooling operation and returns the result tensor.
+- [avgPooling4DGradient(\_:source:descriptor:name:)](mpsgraph/avgpooling4dgradient%28__source_descriptor_name_%29.md): Creates an average pooling gradient operation and returns the result tensor.
+- [bandPart(\_:numLower:numUpper:name:)](mpsgraph/bandpart%28__numlower_numupper_name_%29.md): Computes the band part of an input tensor.
+- [bandPart(\_:numLowerTensor:numUpperTensor:name:)](mpsgraph/bandpart%28__numlowertensor_numuppertensor_name_%29.md): Creates the band part operation and returns the result.
+- [batchToSpace(\_:spatialAxes:batchAxis:blockDimensions:usePixelShuffleOrder:name:)](mpsgraph/batchtospace%28__spatialaxes_batchaxis_blockdimensions_usepixelshuffleorder_name_%29.md): Creates a batch-to-space operation and returns the result tensor.
+- [batchToSpace(\_:spatialAxesTensor:batchAxisTensor:blockDimensionsTensor:usePixelShuffleOrder:name:)](mpsgraph/batchtospace%28__spatialaxestensor_batchaxistensor_blockdimensionstensor_usepixelshuffleorder_name_%29.md): Creates a batch-to-space operation and returns the result tensor.
+- [bitwiseAND(\_:\_:name:)](mpsgraph/bitwiseand%28____name_%29.md): Returns the elementwise bitwise AND of binary representations of two integer tensors.
+- [bitwiseLeftShift(\_:\_:name:)](mpsgraph/bitwiseleftshift%28____name_%29.md): Returns the elementwise left-shifted binary representations of the primary integer by the secondary tensor amount.
+- [bitwiseNOT(\_:name:)](mpsgraph/bitwisenot%28__name_%29.md): Applies the bitwise NOT operation to the input tensor element.
+- [bitwiseOR(\_:\_:name:)](mpsgraph/bitwiseor%28____name_%29.md): Returns the elementwise bitwise OR of binary representations of two integer tensors.
+- [bitwisePopulationCount(\_:name:)](mpsgraph/bitwisepopulationcount%28__name_%29.md): Returns the population count of the input tensor elements.
+- [bitwiseRightShift(\_:\_:name:)](mpsgraph/bitwiserightshift%28____name_%29.md): Returns the elementwise right-shifted binary representations of the primary integer by the secondary tensor amount.
+- [bitwiseXOR(\_:\_:name:)](mpsgraph/bitwisexor%28____name_%29.md): Returns the elementwise bitwise XOR of binary representations of two integer tensors.
+- [bottomK(\_:axis:k:name:)](mpsgraph/bottomk%28__axis_k_name_%29.md): Creates a BottomK operation and returns the value and indices tensors.
+- [bottomK(\_:axisTensor:kTensor:name:)](mpsgraph/bottomk%28__axistensor_ktensor_name_%29.md): Creates a BottomK operation and returns the result tensor.
+- [bottomKGradient(\_:source:axis:k:name:)](mpsgraph/bottomkgradient%28__source_axis_k_name_%29.md): Creates a BottomKGradient operation and returns the result tensor.
+- [bottomKGradient(\_:source:axisTensor:kTensor:name:)](mpsgraph/bottomkgradient%28__source_axistensor_ktensor_name_%29.md): Creates a BottomKGradient operation and returns the result tensor.
+- [broadcast(\_:shape:name:)](mpsgraph/broadcast%28__shape_name_%29.md): Creates a broadcast operation and returns the result tensor.
+- [broadcast(\_:shapeTensor:name:)](mpsgraph/broadcast%28__shapetensor_name_%29.md): Creates a broadcast operation and returns the result tensor.
+- [call(symbolName:inputTensors:outputTypes:name:)](mpsgraph/call%28symbolname_inputtensors_outputtypes_name_%29.md): Creates an operation which invokes another executable.
+- [cast(\_:to:name:)](mpsgraph/cast%28__to_name_%29.md): Creates a cast operation and returns the result tensor.
+- [ceil(with:name:)](mpsgraph/ceil%28with_name_%29.md): Applies the ceiling operation to the input tensor elements.
+- [clamp(\_:min:max:name:)](mpsgraph/clamp%28__min_max_name_%29.md): Clamps the values in the first tensor between the corresponding values in the minimum and maximum value tensor.
+- [colToIm(\_:outputShape:descriptor:name:)](mpsgraph/coltoim%28__outputshape_descriptor_name_%29.md): Creates a column to image operation and returns the result tensor.
+- [compile(with:feeds:targetTensors:targetOperations:compilationDescriptor:)](mpsgraph/compile%28with_feeds_targettensors_targetoperations_compilationdescriptor_%29.md): Compiles the graph for the given feeds to returns the target tensor values, ensuring all target operations would be executed.
+- [complexConstant(realPart:imaginaryPart:)](mpsgraph/complexconstant%28realpart_imaginarypart_%29.md): Creates a complex constant op with the MPSDataTypeComplexFloat32 data type and returns the result tensor.
+- [complexConstant(realPart:imaginaryPart:dataType:)](mpsgraph/complexconstant%28realpart_imaginarypart_datatype_%29.md): Creates a complex constant operation and returns the result tensor.
+- [complexConstant(realPart:imaginaryPart:shape:dataType:)](mpsgraph/complexconstant%28realpart_imaginarypart_shape_datatype_%29.md): Creates a complex constant op with a given shape and returns the result tensor.
+- [complexTensor(realTensor:imaginaryTensor:name:)](mpsgraph/complextensor%28realtensor_imaginarytensor_name_%29.md): Returns a complex tensor from the two input tensors.
+- [concatTensor(\_:with:dimension:name:)](mpsgraph/concattensor%28__with_dimension_name_%29.md): Creates a concatenation operation and returns the result tensor.
+- [concatTensors(\_:dimension:interleave:name:)](mpsgraph/concattensors%28__dimension_interleave_name_%29.md): Creates a concatenation operation and returns the result tensor.
+- [concatTensors(\_:dimension:name:)](mpsgraph/concattensors%28__dimension_name_%29.md): Creates a concatenation operation and returns the result tensor.
+- [conjugate(tensor:name:)](mpsgraph/conjugate%28tensor_name_%29.md): Returns the complex conjugate of the input tensor elements.
+- [constant(\_:dataType:)](mpsgraph/constant%28__datatype_%29.md): Creates a constant operation and returns the result tensor.
+- [constant(\_:shape:dataType:)](mpsgraph/constant%28__shape_datatype_%29-3wa0e.md): Creates a constant op with a given shape and returns the result tensor.
+- [constant(\_:shape:dataType:)](mpsgraph/constant%28__shape_datatype_%29-ylr4.md): Creates a constant op with a given shape and data, and returns the result tensor.
+- [controlDependency(with:dependentBlock:name:)](mpsgraph/controldependency%28with_dependentblock_name_%29.md): Runs the graph for the given feeds and returns the target tensor values, ensuring all target operations also executed.
+- [convolution2D(\_:weights:descriptor:name:)](mpsgraph/convolution2d%28__weights_descriptor_name_%29.md): Creates a 2D (forward) convolution operation and returns the result tensor.
+- [convolution2DDataGradient(\_:weights:outputShape:forwardConvolutionDescriptor:name:)](mpsgraph/convolution2ddatagradient%28__weights_outputshape_forwardconvolutiondescriptor_name_%29.md): Creates a 2D convolution gradient operation with respect to the source tensor of the forward convolution.
+- [convolution2DDataGradient(\_:weights:outputShapeTensor:forwardConvolutionDescriptor:name:)](mpsgraph/convolution2ddatagradient%28__weights_outputshapetensor_forwardconvolutiondescriptor_name_%29.md): Creates a 2D convolution gradient operation with respect to the source tensor of the forward convolution.
+- [convolution2DWeightsGradient(\_:source:outputShape:forwardConvolutionDescriptor:name:)](mpsgraph/convolution2dweightsgradient%28__source_outputshape_forwardconvolutiondescriptor_name_%29.md): Creates a 2D convolution gradient operation with respect to the weights tensor of the forward convolution.
+- [convolution2DWeightsGradient(\_:source:outputShapeTensor:forwardConvolutionDescriptor:name:)](mpsgraph/convolution2dweightsgradient%28__source_outputshapetensor_forwardconvolutiondescriptor_name_%29.md): Creates a 2D convolution gradient operation with respect to weights tensor of forward convolution.
+- [convolution3D(\_:weights:descriptor:name:)](mpsgraph/convolution3d%28__weights_descriptor_name_%29.md): Creates a 3D forward convolution operation and returns the result tensor.
+- [convolution3DDataGradient(\_:weights:outputShape:forwardConvolutionDescriptor:name:)](mpsgraph/convolution3ddatagradient%28__weights_outputshape_forwardconvolutiondescriptor_name_%29.md): Creates a 3D convolution gradient operation with respect to the source tensor of the forward convolution.
+- [convolution3DDataGradient(\_:weights:outputShapeTensor:forwardConvolutionDescriptor:name:)](mpsgraph/convolution3ddatagradient%28__weights_outputshapetensor_forwardconvolutiondescriptor_name_%29.md): Creates a 3D convolution gradient operation with respect to the source tensor of the forward convolution.
+- [convolution3DWeightsGradient(\_:source:outputShape:forwardConvolutionDescriptor:name:)](mpsgraph/convolution3dweightsgradient%28__source_outputshape_forwardconvolutiondescriptor_name_%29.md): Creates a 3D convolution gradient operation with respect to the weights tensor of the forward convolution.
+- [convolution3DWeightsGradient(\_:source:outputShapeTensor:forwardConvolutionDescriptor:name:)](mpsgraph/convolution3dweightsgradient%28__source_outputshapetensor_forwardconvolutiondescriptor_name_%29.md): Creates a 3D convolution gradient operation with respect to the weights tensor of the forward convolution.
+- [convolutionTranspose2D(\_:weights:outputShape:descriptor:name:)](mpsgraph/convolutiontranspose2d%28__weights_outputshape_descriptor_name_%29.md): Creates a convolution transpose operation and returns the result tensor.
+- [convolutionTranspose2D(\_:weights:outputShapeTensor:descriptor:name:)](mpsgraph/convolutiontranspose2d%28__weights_outputshapetensor_descriptor_name_%29.md): Creates a convolution transpose operation and returns the result tensor.
+- [convolutionTranspose2DDataGradient(\_:weights:outputShape:forwardConvolutionDescriptor:name:)](mpsgraph/convolutiontranspose2ddatagradient%28__weights_outputshape_forwardconvolutiondescriptor_name_%29.md): Creates a convolution transpose gradient operation with respect to the source tensor of convolution transpose operation and returns the result tensor.
+- [convolutionTranspose2DDataGradient(\_:weights:outputShapeTensor:forwardConvolutionDescriptor:name:)](mpsgraph/convolutiontranspose2ddatagradient%28__weights_outputshapetensor_forwardconvolutiondescriptor_name_%29.md): Creates a convolution transpose gradient operation with respect to the source tensor of convolution transpose operation and returns the result tensor.
+- [convolutionTranspose2DWeightsGradient(\_:weights:outputShape:forwardConvolutionDescriptor:name:)](mpsgraph/convolutiontranspose2dweightsgradient%28__weights_outputshape_forwardconvolutiondescriptor_name_%29.md): Creates a convolution transpose gradient operation with respect to the weights tensor of the convolution transpose operation and returns the result tensor.
+- [convolutionTranspose2DWeightsGradient(\_:weights:outputShapeTensor:forwardConvolutionDescriptor:name:)](mpsgraph/convolutiontranspose2dweightsgradient%28__weights_outputshapetensor_forwardconvolutiondescriptor_name_%29.md): Creates a convolution transpose gradient operation with respect to the weights tensor of the convolution transpose operation and returns the result tensor.
+- [coordinate(alongAxis:withShape:name:)](mpsgraph/coordinate%28alongaxis_withshape_name_%29.md): Creates a get-coordindate operation and returns the result tensor.
+- [coordinate(alongAxis:withShapeTensor:name:)](mpsgraph/coordinate%28alongaxis_withshapetensor_name_%29.md): Creates a get-coordindate operation and returns the result tensor.
+- [coordinate(alongAxisTensor:withShape:name:)](mpsgraph/coordinate%28alongaxistensor_withshape_name_%29.md): Creates a get-coordindate operation and returns the result tensor.
+- [coordinate(alongAxisTensor:withShapeTensor:name:)](mpsgraph/coordinate%28alongaxistensor_withshapetensor_name_%29.md): Creates a get-coordindate operation and returns the result tensor.
+- [cos(with:name:)](mpsgraph/cos%28with_name_%29.md): Applies the cosine operation to the input tensor elements.
+- [cosh(with:name:)](mpsgraph/cosh%28with_name_%29.md): Applies the hyperbolic cosine operation to the input tensor elements.
+- [cumulativeMaximum(\_:axis:exclusive:reverse:name:)](mpsgraph/cumulativemaximum%28__axis_exclusive_reverse_name_%29.md): Computes the cumulative maximum of the input tensor along the specified axis.
+- [cumulativeMaximum(\_:axis:name:)](mpsgraph/cumulativemaximum%28__axis_name_%29.md): Computes the cumulative maximum of the input tensor along the specified axis.
+- [cumulativeMaximum(\_:axisTensor:exclusive:reverse:name:)](mpsgraph/cumulativemaximum%28__axistensor_exclusive_reverse_name_%29.md): Computes the cumulative maximum of the input tensor along the specified axis.
+- [cumulativeMaximum(\_:axisTensor:name:)](mpsgraph/cumulativemaximum%28__axistensor_name_%29.md): Computes the cumulative maximum of the input tensor along the specified axis.
+- [cumulativeMinimum(\_:axis:exclusive:reverse:name:)](mpsgraph/cumulativeminimum%28__axis_exclusive_reverse_name_%29.md): Computes the cumulative minimum of the input tensor along the specified axis.
+- [cumulativeMinimum(\_:axis:name:)](mpsgraph/cumulativeminimum%28__axis_name_%29.md): Computes the cumulative minimum of the input tensor along the specified axis.
+- [cumulativeMinimum(\_:axisTensor:exclusive:reverse:name:)](mpsgraph/cumulativeminimum%28__axistensor_exclusive_reverse_name_%29.md): Computes the cumulative minimum of the input tensor along the specified axis.
+- [cumulativeMinimum(\_:axisTensor:name:)](mpsgraph/cumulativeminimum%28__axistensor_name_%29.md): Computes the cumulative minimum of the input tensor along the specified axis.
+- [cumulativeProduct(\_:axis:exclusive:reverse:name:)](mpsgraph/cumulativeproduct%28__axis_exclusive_reverse_name_%29.md): Computes the cumulative product of the input tensor along the specified axis.
+- [cumulativeProduct(\_:axis:name:)](mpsgraph/cumulativeproduct%28__axis_name_%29.md): Computes the cumulative product of the input tensor along the specified axis.
+- [cumulativeProduct(\_:axisTensor:exclusive:reverse:name:)](mpsgraph/cumulativeproduct%28__axistensor_exclusive_reverse_name_%29.md): Computes the cumulative product of the input tensor along the specified axis.
+- [cumulativeProduct(\_:axisTensor:name:)](mpsgraph/cumulativeproduct%28__axistensor_name_%29.md): Computes the cumulative product of the input tensor along the specified axis.
+- [cumulativeSum(\_:axis:exclusive:reverse:name:)](mpsgraph/cumulativesum%28__axis_exclusive_reverse_name_%29.md): Computes the cumulative sum of the input tensor along the specified axis.
+- [cumulativeSum(\_:axis:name:)](mpsgraph/cumulativesum%28__axis_name_%29.md): Computes the cumulative sum of the input tensor along the specified axis.
+- [cumulativeSum(\_:axisTensor:exclusive:reverse:name:)](mpsgraph/cumulativesum%28__axistensor_exclusive_reverse_name_%29.md): Computes the cumulative sum of the input tensor along the specified axis.
+- [cumulativeSum(\_:axisTensor:name:)](mpsgraph/cumulativesum%28__axistensor_name_%29.md): Computes the cumulative sum of the input tensor along the specified axis.
+- [depth(toSpace2DTensor:widthAxis:heightAxis:depthAxis:blockSize:usePixelShuffleOrder:name:)](mpsgraph/depth%28tospace2dtensor_widthaxis_heightaxis_depthaxis_blocksize_usepixelshuffleorder_name_%29.md): Creates a depth-to-space2D operation and returns the result tensor.
+- [depth(toSpace2DTensor:widthAxisTensor:heightAxisTensor:depthAxisTensor:blockSize:usePixelShuffleOrder:name:)](mpsgraph/depth%28tospace2dtensor_widthaxistensor_heightaxistensor_depthaxistensor_blocksize_usepixelshuffleorder_name_%29.md): Creates a depth-to-space2D operation and returns the result tensor.
+- [depthwiseConvolution2D(\_:weights:descriptor:name:)](mpsgraph/depthwiseconvolution2d%28__weights_descriptor_name_%29.md): Creates a 2D-depthwise convolution operation and returns the result tensor.
+- [depthwiseConvolution2DDataGradient(\_:weights:outputShape:descriptor:name:)](mpsgraph/depthwiseconvolution2ddatagradient%28__weights_outputshape_descriptor_name_%29.md): Creates a 2D-depthwise convolution gradient for data operation and returns the result tensor.
+- [depthwiseConvolution2DWeightsGradient(\_:source:outputShape:descriptor:name:)](mpsgraph/depthwiseconvolution2dweightsgradient%28__source_outputshape_descriptor_name_%29.md): Creates a 2D-depthwise convolution gradient for weights operation and returns the result tensor.
+- [depthwiseConvolution3D(\_:weights:descriptor:name:)](mpsgraph/depthwiseconvolution3d%28__weights_descriptor_name_%29.md): Creates a 3D depthwise convolution operation and returns the result tensor.
+- [depthwiseConvolution3DDataGradient(\_:weights:outputShape:descriptor:name:)](mpsgraph/depthwiseconvolution3ddatagradient%28__weights_outputshape_descriptor_name_%29.md): Creates a 3D depthwise convolution gradient for data operation and returns the result tensor.
+- [depthwiseConvolution3DWeightsGradient(\_:source:outputShape:descriptor:name:)](mpsgraph/depthwiseconvolution3dweightsgradient%28__source_outputshape_descriptor_name_%29.md): Creates a 3D depthwise convolution gradient for weights operation and returns the result tensor.
+- [dequantize(\_:LUTTensor:axis:name:)](mpsgraph/dequantize%28__luttensor_axis_name_%29.md): Creates a vector lookup-table based dequantize operation and returns the result tensor.
+- [dequantize(\_:LUTTensor:name:)](mpsgraph/dequantize%28__luttensor_name_%29.md): Creates a lookup-table based dequantize operation and returns the result tensor.
+- [dequantize(\_:scale:zeroPoint:dataType:name:)](mpsgraph/dequantize%28__scale_zeropoint_datatype_name_%29.md): Creates Dequantize operation and returns the result tensor.
+- [dequantize(\_:scaleTensor:dataType:name:)](mpsgraph/dequantize%28__scaletensor_datatype_name_%29.md): Creates a dequantize operation and returns the result tensor.
+- [dequantize(\_:scaleTensor:zeroPoint:dataType:axis:name:)](mpsgraph/dequantize%28__scaletensor_zeropoint_datatype_axis_name_%29.md): Creates Dequantize operation and returns the result tensor.
+- [dequantize(\_:scaleTensor:zeroPointTensor:dataType:axis:name:)](mpsgraph/dequantize%28__scaletensor_zeropointtensor_datatype_axis_name_%29.md): Creates a dequantize operation and returns the result tensor.
+- [dequantize(\_:scaleTensor:zeroPointTensor:dataType:name:)](mpsgraph/dequantize%28__scaletensor_zeropointtensor_datatype_name_%29.md): Creates a dequantize operation and returns the result tensor.
+- [division(\_:\_:name:)](mpsgraph/division%28____name_%29.md): Divides the first input tensor by the second.
+- [divisionNoNaN(\_:\_:name:)](mpsgraph/divisionnonan%28____name_%29.md): Divides the first input tensor by the second, with the result being 0 if the denominator is 0.
+- [dropout(\_:rate:name:)](mpsgraph/dropout%28__rate_name_%29-16cq4.md): Creates a dropout operation and returns the result
+- [dropout(\_:rate:name:)](mpsgraph/dropout%28__rate_name_%29-6hvf3.md): Creates a dropout operation and returns the result
+- [encode(to:feeds:targetOperations:resultsDictionary:executionDescriptor:)](mpsgraph/encode%28to_feeds_targetoperations_resultsdictionary_executiondescriptor_%29.md): Encodes the graph for the given feeds to returns the target tensor values in the results dictionary provided by the user.
+- [encode(to:feeds:targetTensors:targetOperations:executionDescriptor:)](mpsgraph/encode%28to_feeds_targettensors_targetoperations_executiondescriptor_%29.md): Encodes the graph for the given feeds to returns the target tensor values, ensuring all target operations also executed.
+- [equal(\_:\_:name:)](mpsgraph/equal%28____name_%29.md): Returns the elementwise equality check of the input tensors.
+- [erf(with:name:)](mpsgraph/erf%28with_name_%29.md): Applies the error function to the input tensor elements.
+- [expandDims(\_:axes:name:)](mpsgraph/expanddims%28__axes_name_%29.md): Creates an expand-dimensions operation and returns the result tensor.
+- [expandDims(\_:axesTensor:name:)](mpsgraph/expanddims%28__axestensor_name_%29.md): Creates an expand-dimensions operation and returns the result tensor.
+- [expandDims(\_:axis:name:)](mpsgraph/expanddims%28__axis_name_%29.md): Creates an expand-dimensions operation and returns the result tensor.
+- [exponent(with:name:)](mpsgraph/exponent%28with_name_%29.md): Applies the natural exponent to the input tensor elements.
+- [exponentBase10(with:name:)](mpsgraph/exponentbase10%28with_name_%29.md): Applies an exponent with base 10 to the input tensor elements.
+- [exponentBase2(with:name:)](mpsgraph/exponentbase2%28with_name_%29.md): Applies an exponent with base 2 to the input tensor elements.
+- [fastFourierTransform(\_:axes:descriptor:name:)](mpsgraph/fastfouriertransform%28__axes_descriptor_name_%29.md): Creates a fast Fourier transform operation and returns the result tensor.
+- [fastFourierTransform(\_:axesTensor:descriptor:name:)](mpsgraph/fastfouriertransform%28__axestensor_descriptor_name_%29.md): Creates a fast Fourier transform operation and returns the result tensor.
+- [flatten2D(\_:axis:name:)](mpsgraph/flatten2d%28__axis_name_%29.md): Creates a flatten2D operation and returns the result tensor.
+- [flatten2D(\_:axisTensor:name:)](mpsgraph/flatten2d%28__axistensor_name_%29.md): Creates a flatten2D operation and returns the result tensor.
+- [floor(with:name:)](mpsgraph/floor%28with_name_%29.md): Applies the floor operation to the input tensor elements.
+- [floorModulo(\_:\_:name:)](mpsgraph/floormodulo%28____name_%29.md): Returns the remainder of floor divison between the primary and secondary tensor.
+- [for(lowerBound:upperBound:step:initialBodyArguments:body:name:)](mpsgraph/for%28lowerbound_upperbound_step_initialbodyarguments_body_name_%29.md): Adds a for loop operation, The lower and upper bounds specify a half-open range: the range includes the lower bound but does not include the upper bound.
+- [for(numberOfIterations:initialBodyArguments:body:name:)](mpsgraph/for%28numberofiterations_initialbodyarguments_body_name_%29.md): Adds a for loop operation, with a specific number of iterations.
+- [gather(withUpdatesTensor:indicesTensor:axis:batchDimensions:name:)](mpsgraph/gather%28withupdatestensor_indicestensor_axis_batchdimensions_name_%29.md): Creates a Gather operation and returns the result tensor.
+- [gatherAlongAxis(\_:updates:indices:name:)](mpsgraph/gatheralongaxis%28__updates_indices_name_%29.md): Creates a GatherAlongAxis operation and returns the result tensor.
+- [gatherAlongAxisTensor(\_:updates:indices:name:)](mpsgraph/gatheralongaxistensor%28__updates_indices_name_%29.md): Creates a GatherAlongAxis operation and returns the result tensor.
+- [gatherND(withUpdatesTensor:indicesTensor:batchDimensions:name:)](mpsgraph/gathernd%28withupdatestensor_indicestensor_batchdimensions_name_%29.md): Creates a GatherND operation and returns the result tensor.
+- [gradients(of:with:name:)](mpsgraph/gradients%28of_with_name_%29.md): Calculates a partial derivative of primaryTensor with respect to the tensors.
+- [greaterThan(\_:\_:name:)](mpsgraph/greaterthan%28____name_%29.md): Checks in an elementwise manner if the first input tensor is greater than the second.
+- [greaterThanOrEqualTo(\_:\_:name:)](mpsgraph/greaterthanorequalto%28____name_%29.md): Checks in an elementwise manner if the first input tensor is greater than or equal to the second.
+- [identity(with:name:)](mpsgraph/identity%28with_name_%29.md): Copies the input tensor values into the output, behaving as an identity operation.
+- [if(\_:then:else:name:)](mpsgraph/if%28__then_else_name_%29.md): Adds an if-then-else operation to the graph.
+- [imToCol(\_:descriptor:name:)](mpsgraph/imtocol%28__descriptor_name_%29.md): Creates an imToCol operation and returns the result tensor.
+- [imaginaryPartOfTensor(tensor:name:)](mpsgraph/imaginarypartoftensor%28tensor_name_%29.md): Returns the imaginary part of a tensor.
+- [inverse(input:name:)](mpsgraph/inverse%28input_name_%29.md): Computes the inverse of an input tensor.
+- [isFinite(with:name:)](mpsgraph/isfinite%28with_name_%29.md): Checks if the input tensor elements are finite or not.
+- [isInfinite(with:name:)](mpsgraph/isinfinite%28with_name_%29.md): Checks if the input tensor elements are infinite or not.
+- [isNaN(with:name:)](mpsgraph/isnan%28with_name_%29.md): Checks if the input tensor elements are `NaN` or not.
+- [leakyReLU(with:alpha:name:)](mpsgraph/leakyrelu%28with_alpha_name_%29.md): Computes the leaky rectified linear unit (ReLU) activation function on the input tensor.
+- [leakyReLU(with:alphaTensor:name:)](mpsgraph/leakyrelu%28with_alphatensor_name_%29.md): Computes the leaky rectified linear unit (ReLU) activation function on the input tensor.
+- [leakyReLUGradient(withIncomingGradient:sourceTensor:alphaTensor:name:)](mpsgraph/leakyrelugradient%28withincominggradient_sourcetensor_alphatensor_name_%29.md): Computes the gradient of the leaky rectified linear unit (ReLU) activation.
+- [lessThan(\_:\_:name:)](mpsgraph/lessthan%28____name_%29.md): Checks in an elementwise manner if the first input tensor is less than the second.
+- [lessThanOrEqualTo(\_:\_:name:)](mpsgraph/lessthanorequalto%28____name_%29.md): Checks in an elementwise manner if the first input tensor is less than or equal to the second.
+- [logarithm(with:name:)](mpsgraph/logarithm%28with_name_%29.md): Computes the natural logarithm to the input tensor elements.
+- [logarithmBase10(with:name:)](mpsgraph/logarithmbase10%28with_name_%29.md): Computes the logarithm with base 10 to the input tensor elements.
+- [logarithmBase2(with:name:)](mpsgraph/logarithmbase2%28with_name_%29.md): Computes the logarithm with base 2 to the input tensor elements.
+- [logicalAND(\_:\_:name:)](mpsgraph/logicaland%28____name_%29.md): Returns the elementwise logical AND of the input tensors.
+- [logicalNAND(\_:\_:name:)](mpsgraph/logicalnand%28____name_%29.md): Returns the elementwise logical NAND of the input tensors.
+- [logicalNOR(\_:\_:name:)](mpsgraph/logicalnor%28____name_%29.md): Returns the elementwise logical NOR of the input tensors.
+- [logicalOR(\_:\_:name:)](mpsgraph/logicalor%28____name_%29.md): Returns the elementwise logical OR of the input tensors.
+- [logicalXNOR(\_:\_:name:)](mpsgraph/logicalxnor%28____name_%29.md): Returns the elementwise logical XNOR of the input tensors.
+- [logicalXOR(\_:\_:name:)](mpsgraph/logicalxor%28____name_%29.md): Returns the elementwise logical XOR of the input tensors.
+- [matrixMultiplication(primary:secondary:name:)](mpsgraph/matrixmultiplication%28primary_secondary_name_%29.md): Computes the matrix multiplication of 2 input tensors with support for broadcasting.
+- [maxPooling2D(withSourceTensor:descriptor:name:)](mpsgraph/maxpooling2d%28withsourcetensor_descriptor_name_%29.md): Creates a 2D max-pooling operation and returns the result tensor.
+- [maxPooling2DGradient(withGradientTensor:indicesTensor:outputShape:descriptor:name:)](mpsgraph/maxpooling2dgradient%28withgradienttensor_indicestensor_outputshape_descriptor_name_%29.md): Creates a max-pooling gradient operation and returns the result tensor.
+- [maxPooling2DGradient(withGradientTensor:indicesTensor:outputShapeTensor:descriptor:name:)](mpsgraph/maxpooling2dgradient%28withgradienttensor_indicestensor_outputshapetensor_descriptor_name_%29.md): Creates a max-pooling gradient operation and returns the result tensor.
+- [maxPooling2DGradient(withGradientTensor:sourceTensor:descriptor:name:)](mpsgraph/maxpooling2dgradient%28withgradienttensor_sourcetensor_descriptor_name_%29.md): Creates a max-pooling gradient operation and returns the result tensor.
+- [maxPooling2DReturnIndices(\_:descriptor:name:)](mpsgraph/maxpooling2dreturnindices%28__descriptor_name_%29.md): Creates a 2D max-pooling operation and returns the result tensor and the corresponding indices tensor.
+- [maxPooling4D(\_:descriptor:name:)](mpsgraph/maxpooling4d%28__descriptor_name_%29.md): Creates a 4D max-pooling operation and returns the result tensor.
+- [maxPooling4DGradient(\_:source:descriptor:name:)](mpsgraph/maxpooling4dgradient%28__source_descriptor_name_%29.md): Creates a max-pooling gradient operation and returns the result tensor.
+- [maxPooling4DGradient(withGradientTensor:indicesTensor:outputShape:descriptor:name:)](mpsgraph/maxpooling4dgradient%28withgradienttensor_indicestensor_outputshape_descriptor_name_%29.md): Creates a max-pooling gradient operation and returns the result tensor.
+- [maxPooling4DGradient(withGradientTensor:indicesTensor:outputShapeTensor:descriptor:name:)](mpsgraph/maxpooling4dgradient%28withgradienttensor_indicestensor_outputshapetensor_descriptor_name_%29.md): Creates a max-pooling gradient operation and returns the result tensor.
+- [maxPooling4DReturnIndices(\_:descriptor:name:)](mpsgraph/maxpooling4dreturnindices%28__descriptor_name_%29.md): Creates a 4D max-pooling operation and returns the result tensor and the corresponding indices tensor.
+- [maximum(\_:\_:name:)](mpsgraph/maximum%28____name_%29.md): Returns the elementwise maximum of the input tensors.
+- [maximumWithNaNPropagation(\_:\_:name:)](mpsgraph/maximumwithnanpropagation%28____name_%29.md): Returns the elementwise maximum of the input tensors, while propagating `NaN` values.
+- [mean(of:axes:name:)](mpsgraph/mean%28of_axes_name_%29.md): Returns the mean of the first input along the specified axes.
+- [minimum(\_:\_:name:)](mpsgraph/minimum%28____name_%29.md): Returns the elementwise minimum of the input tensors.
+- [minimumWithNaNPropagation(\_:\_:name:)](mpsgraph/minimumwithnanpropagation%28____name_%29.md): Returns the elementwise minimum of the input tensors, while propagating `NaN` values.
+- [modulo(\_:\_:name:)](mpsgraph/modulo%28____name_%29.md): Returns the remainder obtained by dividing the first input tensor by the second.
+- [multiplication(\_:\_:name:)](mpsgraph/multiplication%28____name_%29.md): Multiplies two input tensors.
+- [negative(with:name:)](mpsgraph/negative%28with_name_%29.md): Applies negative to the input tensor elements.
+- [nonMaximumSuppression(withBoxesTensor:scoresTensor:classIndicesTensor:iouThreshold:scoreThreshold:perClassSuppression:coordinateMode:name:)](mpsgraph/nonmaximumsuppression%28withboxestensor_scorestensor_classindicestensor_iouthreshold_scorethreshold_perclasssuppression_coordinatemode_name_%29.md): Creates a nonMaximumumSuppression operation and returns the result tensor.
+- [nonMaximumSuppression(withBoxesTensor:scoresTensor:iouThreshold:scoreThreshold:perClassSuppression:coordinateMode:name:)](mpsgraph/nonmaximumsuppression%28withboxestensor_scorestensor_iouthreshold_scorethreshold_perclasssuppression_coordinatemode_name_%29.md): Creates a nonMaximumumSuppression operation and returns the result tensor.
+- [nonZeroIndices(\_:name:)](mpsgraph/nonzeroindices%28__name_%29.md): Computes the indices of the non-zero elements of the input tensor.
+- [normalizationBetaGradient(withIncomingGradientTensor:sourceTensor:reductionAxes:name:)](mpsgraph/normalizationbetagradient%28withincominggradienttensor_sourcetensor_reductionaxes_name_%29.md): Creates a normalization beta-gradient operation and returns the result tensor.
+- [normalizationGammaGradient(withIncomingGradientTensor:sourceTensor:mean:varianceTensor:reductionAxes:epsilon:name:)](mpsgraph/normalizationgammagradient%28withincominggradienttensor_sourcetensor_mean_variancetensor_reductionaxes_epsilon_name_%29.md): Creates a normalization gamma-gradient operation and returns the result tensor.
+- [normalizationGradient(withIncomingGradientTensor:sourceTensor:mean:varianceTensor:gammaTensor:gammaGradientTensor:betaGradientTensor:reductionAxes:epsilon:name:)](mpsgraph/normalizationgradient%28withincominggradienttensor_sourcetensor_mean_variancetensor_gammatensor_gammagradienttensor_betagradienttensor_reductionaxes_epsilon_name_%29.md): Creates a normalization input gradient operation and returns the result tensor.
+- [normalize(\_:mean:variance:gamma:beta:epsilon:name:)](mpsgraph/normalize%28__mean_variance_gamma_beta_epsilon_name_%29.md): Creates a batch normalization operation and returns the result tensor.
+- [not(with:name:)](mpsgraph/not%28with_name_%29.md): Applies the logical NOT operation to the input tensor elements.
+- [notEqual(\_:\_:name:)](mpsgraph/notequal%28____name_%29.md): Returns the elementwise inequality check of the input tensors.
+- [oneHot(withIndicesTensor:depth:axis:dataType:name:)](mpsgraph/onehot%28withindicestensor_depth_axis_datatype_name_%29.md): Creates a oneHot operation and returns the result tensor.
+- [oneHot(withIndicesTensor:depth:axis:dataType:onValue:offValue:name:)](mpsgraph/onehot%28withindicestensor_depth_axis_datatype_onvalue_offvalue_name_%29.md): Creates a oneHot operation and returns the result tensor.
+- [oneHot(withIndicesTensor:depth:axis:name:)](mpsgraph/onehot%28withindicestensor_depth_axis_name_%29.md): Creates a oneHot operation and returns the result tensor.
+- [oneHot(withIndicesTensor:depth:dataType:name:)](mpsgraph/onehot%28withindicestensor_depth_datatype_name_%29.md): Creates a oneHot operation and returns the result tensor.
+- [oneHot(withIndicesTensor:depth:dataType:onValue:offValue:name:)](mpsgraph/onehot%28withindicestensor_depth_datatype_onvalue_offvalue_name_%29.md): Creates a oneHot operation and returns the result tensor.
+- [oneHot(withIndicesTensor:depth:name:)](mpsgraph/onehot%28withindicestensor_depth_name_%29.md): Creates a oneHot operation and returns the result tensor.
+- [padGradient(withIncomingGradientTensor:sourceTensor:paddingMode:leftPadding:rightPadding:name:)](mpsgraph/padgradient%28withincominggradienttensor_sourcetensor_paddingmode_leftpadding_rightpadding_name_%29.md): Creates a padding gradient operation and returns the result tensor.
+- [padTensor(\_:with:leftPadding:rightPadding:constantValue:name:)](mpsgraph/padtensor%28__with_leftpadding_rightpadding_constantvalue_name_%29.md): Creates a padding operation and returns the result tensor.
+- [placeholder(shape:dataType:name:)](mpsgraph/placeholder%28shape_datatype_name_%29.md): Creates a placeholder operation and returns the result tensor.
+- [placeholder(shape:name:)](mpsgraph/placeholder%28shape_name_%29.md): Creates a placeholder operation and returns the result tensor with the dataType of the placeholder tensor set to 32 bit float.
+- [planarTensor(tensor:name:)](mpsgraph/planartensor%28tensor_name_%29.md): Returns a real-valued tensor from a complex-valued tensor with real and imaginary planes separated.
+- [power(\_:\_:name:)](mpsgraph/power%28____name_%29.md): Returns the elementwise result of raising the first tensor to the power of the second tensor.
+- [quantize(\_:scale:zeroPoint:dataType:name:)](mpsgraph/quantize%28__scale_zeropoint_datatype_name_%29.md): Creates a Quantize operation and returns the result tensor.
+- [quantize(\_:scaleTensor:zeroPoint:dataType:axis:name:)](mpsgraph/quantize%28__scaletensor_zeropoint_datatype_axis_name_%29.md): Creates a Quantize operation and returns the result tensor.
+- [quantize(\_:scaleTensor:zeroPointTensor:dataType:axis:name:)](mpsgraph/quantize%28__scaletensor_zeropointtensor_datatype_axis_name_%29.md): Creates a Quantize operation and returns the result tensor.
+- [randomPhiloxStateTensor(withCounterLow:counterHigh:key:name:)](mpsgraph/randomphiloxstatetensor%28withcounterlow_counterhigh_key_name_%29.md): Creates a tensor representing state using the Philox algorithm with given counter and key values.
+- [randomPhiloxStateTensor(withSeed:name:)](mpsgraph/randomphiloxstatetensor%28withseed_name_%29.md): Creates a tensor representing state using the Philox algorithm with given counter and key values.
+- [randomTensor(withShape:descriptor:name:)](mpsgraph/randomtensor%28withshape_descriptor_name_%29.md): Creates a Random op of type matching distribution in descriptor and returns random values.
+- [randomTensor(withShape:descriptor:seed:name:)](mpsgraph/randomtensor%28withshape_descriptor_seed_name_%29.md): Creates a Random op of type matching distribution in descriptor and returns random values.
+- [randomTensor(withShape:descriptor:stateTensor:name:)](mpsgraph/randomtensor%28withshape_descriptor_statetensor_name_%29.md): Creates a Random op of type matching distribution in descriptor, and returns random values and updated state.
+- [randomTensor(withShapeTensor:descriptor:name:)](mpsgraph/randomtensor%28withshapetensor_descriptor_name_%29.md): Creates a Random op of type matching distribution in descriptor and returns random values.
+- [randomTensor(withShapeTensor:descriptor:seed:name:)](mpsgraph/randomtensor%28withshapetensor_descriptor_seed_name_%29.md): Creates a Random op of type matching distribution in descriptor and returns random values.
+- [randomTensor(withShapeTensor:descriptor:stateTensor:name:)](mpsgraph/randomtensor%28withshapetensor_descriptor_statetensor_name_%29.md): Creates a Random op of type matching distribution in descriptor, and returns random values and updated state.
+- [randomUniformTensor(withShape:name:)](mpsgraph/randomuniformtensor%28withshape_name_%29.md): Creates a RandomUniform operation and returns random uniform values
+- [randomUniformTensor(withShape:seed:name:)](mpsgraph/randomuniformtensor%28withshape_seed_name_%29.md): Creates a RandomUniform operation and returns random uniform values
+- [randomUniformTensor(withShape:stateTensor:name:)](mpsgraph/randomuniformtensor%28withshape_statetensor_name_%29.md): Creates a RandomUniform operation and returns random uniform values and updated state
+- [randomUniformTensor(withShapeTensor:name:)](mpsgraph/randomuniformtensor%28withshapetensor_name_%29.md): Creates a RandomUniform operation and returns random uniform values
+- [randomUniformTensor(withShapeTensor:seed:name:)](mpsgraph/randomuniformtensor%28withshapetensor_seed_name_%29.md): Creates a RandomUniform operation and returns random uniform values
+- [randomUniformTensor(withShapeTensor:stateTensor:name:)](mpsgraph/randomuniformtensor%28withshapetensor_statetensor_name_%29.md): Creates a RandomUniform operation and returns random uniform values and updated state
+- [reLU(with:name:)](mpsgraph/relu%28with_name_%29.md): Computes the ReLU (rectified linear activation unit) function with the input tensor.
+- [reLUGradient(withIncomingGradient:sourceTensor:name:)](mpsgraph/relugradient%28withincominggradient_sourcetensor_name_%29.md): Computes the gradient of the ReLU (rectified linear activation unit) function using the incoming gradient.
+- [read(\_:name:)](mpsgraph/read%28__name_%29.md): Creates a read op which reads at this point of execution of the graph and returns the result tensor.
+- [realPartOfTensor(tensor:name:)](mpsgraph/realpartoftensor%28tensor_name_%29.md): Returns the real part of a tensor.
+- [realToHermiteanFFT(\_:axes:descriptor:name:)](mpsgraph/realtohermiteanfft%28__axes_descriptor_name_%29.md): Creates a Real-to-Hermitean fast Fourier transform operation and returns the result tensor.
+- [realToHermiteanFFT(\_:axesTensor:descriptor:name:)](mpsgraph/realtohermiteanfft%28__axestensor_descriptor_name_%29.md): Creates a Real-to-Hermitean fast Fourier transform operation and returns the result tensor.
+- [reciprocal(with:name:)](mpsgraph/reciprocal%28with_name_%29.md): Applies the reciprocal operation to the input tensor elements.
+- [reciprocalSquareRoot(\_:name:)](mpsgraph/reciprocalsquareroot%28__name_%29.md): Applies the reciprocal square root operation to the input tensor elements.
+- [reductionAnd(with:axes:name:)](mpsgraph/reductionand%28with_axes_name_%29.md): Creates a reduction and operation and returns the result tensor.
+- [reductionAnd(with:axis:name:)](mpsgraph/reductionand%28with_axis_name_%29.md): Creates a reduction and operation and returns the result tensor.
+- [reductionArgMaximum(with:axis:name:)](mpsgraph/reductionargmaximum%28with_axis_name_%29.md): Creates a reduction argMax operation and returns the result tensor.
+- [reductionArgMinimum(with:axis:name:)](mpsgraph/reductionargminimum%28with_axis_name_%29.md): Creates a reduction argMin operation and returns the result tensor.
+- [reductionMaximum(with:axes:name:)](mpsgraph/reductionmaximum%28with_axes_name_%29.md): Creates a reduction max operation and returns the result tensor.
+- [reductionMaximum(with:axis:name:)](mpsgraph/reductionmaximum%28with_axis_name_%29.md): Creates a reduction max operation and returns the result tensor.
+- [reductionMaximumPropagateNaN(with:axes:name:)](mpsgraph/reductionmaximumpropagatenan%28with_axes_name_%29.md): Creates a reduction max propagate NaN operation and returns the result tensor.
+- [reductionMaximumPropagateNaN(with:axis:name:)](mpsgraph/reductionmaximumpropagatenan%28with_axis_name_%29.md): Creates a reduction max propagate NaN operation and returns the result tensor.
+- [reductionMinimum(with:axes:name:)](mpsgraph/reductionminimum%28with_axes_name_%29.md): Creates a reduction min operation and returns the result tensor.
+- [reductionMinimum(with:axis:name:)](mpsgraph/reductionminimum%28with_axis_name_%29.md): Creates a reduction minimum operation and returns the result tensor.
+- [reductionMinimumPropagateNaN(with:axes:name:)](mpsgraph/reductionminimumpropagatenan%28with_axes_name_%29.md): Creates a reduction min propagate NaN operation and returns the result tensor.
+- [reductionMinimumPropagateNaN(with:axis:name:)](mpsgraph/reductionminimumpropagatenan%28with_axis_name_%29.md): Creates a reduction min propagate NaN operation and returns the result tensor.
+- [reductionOr(with:axes:name:)](mpsgraph/reductionor%28with_axes_name_%29.md): Creates a reduction or operation and returns the result tensor.
+- [reductionOr(with:axis:name:)](mpsgraph/reductionor%28with_axis_name_%29.md): Creates a reduction or operation and returns the result tensor.
+- [reductionProduct(with:axes:name:)](mpsgraph/reductionproduct%28with_axes_name_%29.md): Creates a reduction product operation and returns the result tensor.
+- [reductionProduct(with:axis:name:)](mpsgraph/reductionproduct%28with_axis_name_%29.md): Creates a reduction product operation and returns the result tensor.
+- [reductionSum(with:axes:name:)](mpsgraph/reductionsum%28with_axes_name_%29.md): Creates a reduction sum operation and returns the result tensor.
+- [reductionSum(with:axis:name:)](mpsgraph/reductionsum%28with_axis_name_%29.md): Creates a reduction sum operation and returns the result tensor.
+- [reinterpretCast(\_:to:name:)](mpsgraph/reinterpretcast%28__to_name_%29.md): Creates a reinterpret cast operation and returns the result tensor.
+- [reshape(\_:shape:name:)](mpsgraph/reshape%28__shape_name_%29.md): Creates a reshape operation and returns the result tensor.
+- [reshape(\_:shapeTensor:name:)](mpsgraph/reshape%28__shapetensor_name_%29.md): Creates a reshape operation and returns the result tensor.
+- [resize(\_:size:mode:centerResult:alignCorners:layout:name:)](mpsgraph/resize%28__size_mode_centerresult_aligncorners_layout_name_%29.md): Creates a Resize operation and returns the result tensor.
+- [resize(\_:sizeTensor:mode:centerResult:alignCorners:layout:name:)](mpsgraph/resize%28__sizetensor_mode_centerresult_aligncorners_layout_name_%29.md): Creates a Resize operation and returns the result tensor.
+- [resize(\_:sizeTensor:mode:centerResult:alignCorners:name:)](mpsgraph/resize%28__sizetensor_mode_centerresult_aligncorners_name_%29.md): Creates a Resize operation and returns the result tensor.
+- [resize(\_:sizeTensor:scaleOffsetTensor:mode:layout:name:)](mpsgraph/resize%28__sizetensor_scaleoffsettensor_mode_layout_name_%29.md): Resamples input images to given size using the provided scale and offset. Destination indices are computed using
+- [resize(\_:sizeTensor:scaleTensor:offsetTenor:mode:name:)](mpsgraph/resize%28__sizetensor_scaletensor_offsettenor_mode_name_%29.md): Creates a Resize operation and returns the result tensor.
+- [resize(withGradientTensor:input:mode:centerResult:alignCorners:layout:name:)](mpsgraph/resize%28withgradienttensor_input_mode_centerresult_aligncorners_layout_name_%29.md): Creates a Resize gradient operation and returns the result tensor.
+- [resize(withGradientTensor:input:scale:offsetTensor:mode:name:)](mpsgraph/resize%28withgradienttensor_input_scale_offsettensor_mode_name_%29.md): Creates a Resize gradient operation and returns the result tensor.
+- [resize(withGradientTensor:input:scaleOffsetTensor:mode:layout:name:)](mpsgraph/resize%28withgradienttensor_input_scaleoffsettensor_mode_layout_name_%29.md): Creates a Resize gradient operation and returns the result tensor.
+- [resizeBilinear(\_:sizeTensor:centerResult:alignCorners:layout:name:)](mpsgraph/resizebilinear%28__sizetensor_centerresult_aligncorners_layout_name_%29.md): Resamples input images to given size using bilinear sampling.
+- [resizeBilinear(\_:sizeTensor:centerResult:alignCorners:name:)](mpsgraph/resizebilinear%28__sizetensor_centerresult_aligncorners_name_%29.md): Creates a Resize operation and returns the result tensor.
+- [resizeBilinear(\_:sizeTensor:scaleOffsetTensor:layout:name:)](mpsgraph/resizebilinear%28__sizetensor_scaleoffsettensor_layout_name_%29.md): Resamples input images to given size using the provided scale and offset and bilinear sampling See above discussion for more details.
+- [resizeBilinear(\_:sizeTensor:scaleTensor:offsetTensor:name:)](mpsgraph/resizebilinear%28__sizetensor_scaletensor_offsettensor_name_%29.md): Creates a Resize operation and returns the result tensor.
+- [resizeBilinear(withGradientTensor:input:centerResult:alignCorners:layout:name:)](mpsgraph/resizebilinear%28withgradienttensor_input_centerresult_aligncorners_layout_name_%29.md): Creates a Resize gradient operation and returns the result tensor.
+- [resizeBilinear(withGradientTensor:input:scale:offsetTensor:name:)](mpsgraph/resizebilinear%28withgradienttensor_input_scale_offsettensor_name_%29.md): Creates a Resize gradient operation and returns the result tensor.
+- [resizeBilinear(withGradientTensor:input:scaleOffsetTensor:layout:name:)](mpsgraph/resizebilinear%28withgradienttensor_input_scaleoffsettensor_layout_name_%29.md): Creates a Resize gradient operation and returns the result tensor.
+- [resizeNearest(\_:sizeTensor:nearestRoundingMode:centerResult:alignCorners:layout:name:)](mpsgraph/resizenearest%28__sizetensor_nearestroundingmode_centerresult_aligncorners_layout_name_%29.md): Resamples input images to given size using nearest neighbor sampling.
+- [resizeNearest(\_:sizeTensor:nearestRoundingMode:centerResult:alignCorners:name:)](mpsgraph/resizenearest%28__sizetensor_nearestroundingmode_centerresult_aligncorners_name_%29.md): Creates a Resize operation and returns the result tensor.
+- [resizeNearest(\_:sizeTensor:scaleOffsetTensor:nearestRoundingMode:layout:name:)](mpsgraph/resizenearest%28__sizetensor_scaleoffsettensor_nearestroundingmode_layout_name_%29.md): Resamples input images to given size using the provided scale and offset and nearest neighbor sampling See above discussion for more details.
+- [resizeNearest(\_:sizeTensor:scaleTensor:offsetTensor:nearestRoundingMode:name:)](mpsgraph/resizenearest%28__sizetensor_scaletensor_offsettensor_nearestroundingmode_name_%29.md): Creates a Resize operation and returns the result tensor.
+- [resizeNearest(withGradientTensor:input:nearestRoundingMode:centerResult:alignCorners:layout:name:)](mpsgraph/resizenearest%28withgradienttensor_input_nearestroundingmode_centerresult_aligncorners_layout_name_%29.md): Creates a Resize gradient operation and returns the result tensor.
+- [resizeNearest(withGradientTensor:input:scale:offsetTensor:nearestRoundingMode:name:)](mpsgraph/resizenearest%28withgradienttensor_input_scale_offsettensor_nearestroundingmode_name_%29.md): Creates a Resize gradient operation and returns the result tensor.
+- [resizeNearest(withGradientTensor:input:scaleOffsetTensor:nearestRoundingMode:layout:name:)](mpsgraph/resizenearest%28withgradienttensor_input_scaleoffsettensor_nearestroundingmode_layout_name_%29.md): Creates a Resize gradient operation and returns the result tensor.
+- [reverse(\_:axes:name:)](mpsgraph/reverse%28__axes_name_%29.md): Creates a reverse operation and returns the result tensor.
+- [reverse(\_:axesTensor:name:)](mpsgraph/reverse%28__axestensor_name_%29.md): Creates a reverse operation and returns the result tensor.
+- [reverse(\_:name:)](mpsgraph/reverse%28__name_%29.md): Creates a reverse operation and returns the result tensor.
+- [reverseSquareRoot(with:name:)](mpsgraph/reversesquareroot%28with_name_%29.md): Deprecated. Applies the reverse square root operation to the input tensor elements.
+- [rint(with:name:)](mpsgraph/rint%28with_name_%29.md): Rounds the input tensor elements by rounding to nearest even.
+- [round(with:name:)](mpsgraph/round%28with_name_%29.md): Rounds the input tensor elements.
+- [run(feeds:targetTensors:targetOperations:)](mpsgraph/run%28feeds_targettensors_targetoperations_%29.md): Runs the graph for the given feeds and returns the target tensor values, ensuring all target operations also executed.
+- [run(with:feeds:targetOperations:resultsDictionary:)](mpsgraph/run%28with_feeds_targetoperations_resultsdictionary_%29.md): Runs the graph for the given feeds and returns the target tensor values in the results dictionary provided by the user.
+- [run(with:feeds:targetTensors:targetOperations:)](mpsgraph/run%28with_feeds_targettensors_targetoperations_%29.md): Runs the graph for the given feeds and returns the target tensor values, ensuring all target operations also executed.
+- [runAsync(feeds:targetTensors:targetOperations:executionDescriptor:)](mpsgraph/runasync%28feeds_targettensors_targetoperations_executiondescriptor_%29.md): Runs the graph for the given feeds and returns the target tensor values, ensuring all target operations also executed.
+- [runAsync(on:feeds:targetOperations:resultsDictionary:executionDescriptor:)](mpsgraph/runasync%28on_feeds_targetoperations_resultsdictionary_executiondescriptor_%29.md): Encodes the graph for the given feeds to returns the target tensor values in the results dictionary provided by the user.
+- [runAsync(on:feeds:targetTensors:targetOperations:executionDescriptor:)](mpsgraph/runasync%28on_feeds_targettensors_targetoperations_executiondescriptor_%29.md): Runs the graph for the given feeds and returns the target tensor values, ensuring all target operations also executed.
+- [runAsync(with:feeds:targetOperations:resultsDictionary:executionDescriptor:)](mpsgraph/runasync%28with_feeds_targetoperations_resultsdictionary_executiondescriptor_%29.md): Encodes the graph for the given feeds to returns the target tensor values in the results dictionary provided by the user.
+- [runAsync(with:feeds:targetTensors:targetOperations:executionDescriptor:)](mpsgraph/runasync%28with_feeds_targettensors_targetoperations_executiondescriptor_%29.md): Runs the graph for the given feeds and returns the target tensor values, ensuring all target operations also executed.
+- [sampleGrid(withSourceTensor:coordinateTensor:layout:normalizeCoordinates:relativeCoordinates:alignCorners:paddingMode:nearestRoundingMode:constantValue:name:)](mpsgraph/samplegrid%28withsourcetensor_coordinatetensor_layout_normalizecoordinates_relativecoordinates_aligncorners_paddingmode_nearestroundingmode_constantvalue_name_%29.md): Samples a tensor using the coordinates provided, using nearest neighbor sampling with specified rounding mode.
+- [sampleGrid(withSourceTensor:coordinateTensor:layout:normalizeCoordinates:relativeCoordinates:alignCorners:paddingMode:samplingMode:constantValue:name:)](mpsgraph/samplegrid%28withsourcetensor_coordinatetensor_layout_normalizecoordinates_relativecoordinates_aligncorners_paddingmode_samplingmode_constantvalue_name_%29.md): Samples a tensor using the coordinates provided.
+- [scaledDotProductAttention(query:key:value:descriptor:name:)](mpsgraph/scaleddotproductattention%28query_key_value_descriptor_name_%29.md): Creates a scaled dot product attention (SDPA) operation using a descriptor and returns the result tensor.
+- [scaledDotProductAttention(query:key:value:mask:scale:name:)](mpsgraph/scaleddotproductattention%28query_key_value_mask_scale_name_%29.md): Creates a scaled dot product attention (SDPA) operation and returns the result tensor.
+- [scaledDotProductAttention(query:key:value:scale:name:)](mpsgraph/scaleddotproductattention%28query_key_value_scale_name_%29.md): Creates a scaled dot product attention (SDPA) operation (without a mask) and returns the result tensor.
+- [scatter(\_:indices:shape:axis:mode:name:)](mpsgraph/scatter%28__indices_shape_axis_mode_name_%29.md): Creates a Scatter operation and returns the result tensor.
+- [scatterAlongAxis(\_:data:updates:indices:mode:name:)](mpsgraph/scatteralongaxis%28__data_updates_indices_mode_name_%29.md): Creates a ScatterAlongAxis operation and returns the result tensor.
+- [scatterAlongAxis(\_:updates:indices:shape:mode:name:)](mpsgraph/scatteralongaxis%28__updates_indices_shape_mode_name_%29.md): Creates a ScatterAlongAxis operation and returns the result tensor.
+- [scatterAlongAxisTensor(\_:data:updates:indices:mode:name:)](mpsgraph/scatteralongaxistensor%28__data_updates_indices_mode_name_%29.md): Creates a ScatterAlongAxis operation and returns the result tensor.
+- [scatterAlongAxisTensor(\_:updates:indices:shape:mode:name:)](mpsgraph/scatteralongaxistensor%28__updates_indices_shape_mode_name_%29.md): Creates a ScatterAlongAxis operation and returns the result tensor.
+- [scatterND(withUpdatesTensor:indicesTensor:shape:batchDimensions:mode:name:)](mpsgraph/scatternd%28withupdatestensor_indicestensor_shape_batchdimensions_mode_name_%29.md): Creates a ScatterND operation and returns the result tensor.
+- [scatterND(withUpdatesTensor:indicesTensor:shape:batchDimensions:name:)](mpsgraph/scatternd%28withupdatestensor_indicestensor_shape_batchdimensions_name_%29.md): Creates a ScatterND operation and returns the result tensor.
+- [scatterNDWithData(\_:updates:indices:batchDimensions:mode:name:)](mpsgraph/scatterndwithdata%28__updates_indices_batchdimensions_mode_name_%29.md): Creates a ScatterND operation and returns the result tensor.
+- [scatterWithData(\_:updates:indices:axis:mode:name:)](mpsgraph/scatterwithdata%28__updates_indices_axis_mode_name_%29.md): Creates a Scatter operation and returns the result tensor.
+- [select(predicate:trueTensor:falseTensor:name:)](mpsgraph/select%28predicate_truetensor_falsetensor_name_%29.md): Selects values from either the true or false predicate tensor, depending on the values in the first input.
+- [shapeOf(\_:name:)](mpsgraph/shapeof%28__name_%29.md): Creates a shape-of operation and returns the result tensor.
+- [sigmoid(with:name:)](mpsgraph/sigmoid%28with_name_%29.md): Computes the sigmoid operation on an input tensor.
+- [sigmoidGradient(withIncomingGradient:sourceTensor:name:)](mpsgraph/sigmoidgradient%28withincominggradient_sourcetensor_name_%29.md): Computes the gradient of the sigmoid function using the incoming gradient tensor.
+- [sign(with:name:)](mpsgraph/sign%28with_name_%29.md): Returns the sign of the input tensor elements.
+- [signbit(with:name:)](mpsgraph/signbit%28with_name_%29.md): Returns the sign bit of the input tensor elements.
+- [sin(with:name:)](mpsgraph/sin%28with_name_%29.md): Applies the sine operation to the input tensor elements.
+- [singleGateRNN(\_:recurrentWeight:initState:descriptor:name:)](mpsgraph/singlegaternn%28__recurrentweight_initstate_descriptor_name_%29.md): Creates a single-gate RNN operation and returns the value and optionally the training state tensor.
+- [singleGateRNN(\_:recurrentWeight:inputWeight:bias:initState:descriptor:name:)](mpsgraph/singlegaternn%28__recurrentweight_inputweight_bias_initstate_descriptor_name_%29.md): Creates a single-gate RNN operation and returns the value and optionally the training state tensor.
+- [singleGateRNN(\_:recurrentWeight:inputWeight:bias:initState:mask:descriptor:name:)](mpsgraph/singlegaternn%28__recurrentweight_inputweight_bias_initstate_mask_descriptor_name_%29.md): Creates a single-gate RNN operation and returns the value and optionally the training state tensor.
+- [singleGateRNNGradients(\_:recurrentWeight:sourceGradient:zState:initState:descriptor:name:)](mpsgraph/singlegaternngradients%28__recurrentweight_sourcegradient_zstate_initstate_descriptor_name_%29.md): Creates a single-gate RNN gradient operation and returns the gradient tensor values.
+- [singleGateRNNGradients(\_:recurrentWeight:sourceGradient:zState:inputWeight:bias:initState:descriptor:name:)](mpsgraph/singlegaternngradients%28__recurrentweight_sourcegradient_zstate_inputweight_bias_initstate_descriptor_name_%29.md): Creates a single-gate RNN gradient operation and returns the gradient tensor values.
+- [singleGateRNNGradients(\_:recurrentWeight:sourceGradient:zState:inputWeight:bias:initState:mask:descriptor:name:)](mpsgraph/singlegaternngradients%28__recurrentweight_sourcegradient_zstate_inputweight_bias_initstate_mask_descriptor_name_%29.md): Creates a single-gate RNN gradient operation and returns the gradient tensor values.
+- [singleGateRNNGradients(\_:recurrentWeight:sourceGradient:zState:stateGradient:inputWeight:bias:initState:mask:descriptor:name:)](mpsgraph/singlegaternngradients%28__recurrentweight_sourcegradient_zstate_stategradient_inputweight_bias_initstate_mask_descriptor_name_%29.md): Creates a single-gate RNN gradient operation and returns the gradient tensor values.
+- [sinh(with:name:)](mpsgraph/sinh%28with_name_%29.md): Applies the hyperbolic sine operation to the input tensor elements.
+- [sliceGradientTensor(\_:fwdInShapeTensor:start:end:strideTensor:startMask:endMask:squeezeMask:name:)](mpsgraph/slicegradienttensor%28__fwdinshapetensor_start_end_stridetensor_startmask_endmask_squeezemask_name_%29.md): Creates a strided-slice gradient operation and returns the result tensor.
+- [sliceGradientTensor(\_:fwdInShapeTensor:start:sizeTensor:squeezeMask:name:)](mpsgraph/slicegradienttensor%28__fwdinshapetensor_start_sizetensor_squeezemask_name_%29.md): Creates a slice gradient operation and returns the result tensor.
+- [sliceGradientTensor(\_:fwdInShapeTensor:starts:ends:strides:name:)](mpsgraph/slicegradienttensor%28__fwdinshapetensor_starts_ends_strides_name_%29.md): Creates a strided-slice gradient operation and returns the result tensor.
+- [sliceGradientTensor(\_:fwdInShapeTensor:starts:ends:strides:startMask:endMask:squeezeMask:name:)](mpsgraph/slicegradienttensor%28__fwdinshapetensor_starts_ends_strides_startmask_endmask_squeezemask_name_%29.md): Creates a strided-slice gradient operation and returns the result tensor.
+- [sliceTensor(\_:dimension:start:length:name:)](mpsgraph/slicetensor%28__dimension_start_length_name_%29.md): Creates a slice operation and returns the result tensor.
+- [sliceTensor(\_:start:end:strideTensor:startMask:endMask:squeezeMask:name:)](mpsgraph/slicetensor%28__start_end_stridetensor_startmask_endmask_squeezemask_name_%29.md): Creates a strided-slice operation and returns the result tensor.
+- [sliceTensor(\_:start:sizeTensor:squeezeMask:name:)](mpsgraph/slicetensor%28__start_sizetensor_squeezemask_name_%29.md): Creates a slice operation and returns the result tensor.
+- [sliceTensor(\_:starts:ends:strides:name:)](mpsgraph/slicetensor%28__starts_ends_strides_name_%29.md): Creates a strided-slice operation and returns the result tensor.
+- [sliceTensor(\_:starts:ends:strides:startMask:endMask:squeezeMask:name:)](mpsgraph/slicetensor%28__starts_ends_strides_startmask_endmask_squeezemask_name_%29.md): Creates a strided-slice operation and returns the result tensor.
+- [sliceUpdateDataTensor(\_:update:starts:ends:strides:name:)](mpsgraph/sliceupdatedatatensor%28__update_starts_ends_strides_name_%29.md): Creates a strided-slice update operation with zero masks and returns the result tensor.
+- [sliceUpdateDataTensor(\_:update:starts:ends:strides:startMask:endMask:squeezeMask:name:)](mpsgraph/sliceupdatedatatensor%28__update_starts_ends_strides_startmask_endmask_squeezemask_name_%29.md): Creates a strided-slice update operation and returns the result tensor.
+- [sliceUpdateDataTensor(\_:update:startsTensor:endsTensor:stridesTensor:name:)](mpsgraph/sliceupdatedatatensor%28__update_startstensor_endstensor_stridestensor_name_%29.md): Creates a strided-slice update operation with zero masks and returns the result tensor.
+- [sliceUpdateDataTensor(\_:update:startsTensor:endsTensor:stridesTensor:startMask:endMask:squeezeMask:name:)](mpsgraph/sliceupdatedatatensor%28__update_startstensor_endstensor_stridestensor_startmask_endmask_squeezemask_name_%29.md): Creates a strided-slice update operation and returns the result tensor.
+- [softMax(with:axis:name:)](mpsgraph/softmax%28with_axis_name_%29.md): Computes the softmax function on the input tensor along the specified axis.
+- [softMaxCrossEntropy(\_:labels:axis:reuctionType:name:)](mpsgraph/softmaxcrossentropy%28__labels_axis_reuctiontype_name_%29.md): Creates a softmax cross-entropy loss operation and returns the result tensor.
+- [softMaxCrossEntropyGradient(\_:source:labels:axis:reuctionType:name:)](mpsgraph/softmaxcrossentropygradient%28__source_labels_axis_reuctiontype_name_%29.md): Creates the gradient of a softmax cross-entropy loss operation and returns the result tensor.
+- [softMaxGradient(withIncomingGradient:sourceTensor:axis:name:)](mpsgraph/softmaxgradient%28withincominggradient_sourcetensor_axis_name_%29.md): Computes the gradient of the softmax function along the specified axis using the incoming gradient tensor.
+- [sort(\_:axis:descending:name:)](mpsgraph/sort%28__axis_descending_name_%29.md): Sorts the elements of the input tensor along the specified axis.
+- [sort(\_:axis:name:)](mpsgraph/sort%28__axis_name_%29.md): Sorts the elements of the input tensor along the specified axis.
+- [sort(\_:axisTensor:descending:name:)](mpsgraph/sort%28__axistensor_descending_name_%29.md): Sorts the elements of the input tensor along the specified axis.
+- [sort(\_:axisTensor:name:)](mpsgraph/sort%28__axistensor_name_%29.md): Sorts the elements of the input tensor along the specified axis.
+- [space(toDepth2DTensor:widthAxis:heightAxis:depthAxis:blockSize:usePixelShuffleOrder:name:)](mpsgraph/space%28todepth2dtensor_widthaxis_heightaxis_depthaxis_blocksize_usepixelshuffleorder_name_%29.md): Creates a space-to-depth2D operation and returns the result tensor.
+- [space(toDepth2DTensor:widthAxisTensor:heightAxisTensor:depthAxisTensor:blockSize:usePixelShuffleOrder:name:)](mpsgraph/space%28todepth2dtensor_widthaxistensor_heightaxistensor_depthaxistensor_blocksize_usepixelshuffleorder_name_%29.md): Creates a space-to-depth2D operation and returns the result tensor.
+- [spaceToBatch(\_:spatialAxes:batchAxis:blockDimensions:usePixelShuffleOrder:name:)](mpsgraph/spacetobatch%28__spatialaxes_batchaxis_blockdimensions_usepixelshuffleorder_name_%29.md): Creates a space-to-batch operation and returns the result tensor.
+- [spaceToBatch(\_:spatialAxesTensor:batchAxisTensor:blockDimensionsTensor:usePixelShuffleOrder:name:)](mpsgraph/spacetobatch%28__spatialaxestensor_batchaxistensor_blockdimensionstensor_usepixelshuffleorder_name_%29.md): Creates a space-to-batch operation and returns the result tensor.
+- [sparseTensor(sparseTensorWithDescriptor:tensors:shape:name:)](mpsgraph/sparsetensor%28sparsetensorwithdescriptor_tensors_shape_name_%29.md): Creates a sparse tensor representation.
+- [sparseTensor(sparseTensorWithType:tensors:shape:dataType:name:)](mpsgraph/sparsetensor%28sparsetensorwithtype_tensors_shape_datatype_name_%29.md): Creates a sparse tensor representation.
+- [split(\_:numSplits:axis:name:)](mpsgraph/split%28__numsplits_axis_name_%29.md): Creates a split operation and returns the result tensor.
+- [split(\_:splitSizes:axis:name:)](mpsgraph/split%28__splitsizes_axis_name_%29.md): Creates a split operation and returns the result tensor.
+- [split(\_:splitSizesTensor:axis:name:)](mpsgraph/split%28__splitsizestensor_axis_name_%29.md): Creates a split operation and returns the result tensor.
+- [square(with:name:)](mpsgraph/square%28with_name_%29.md): Applies the square operation to the input tensor elements.
+- [squareRoot(with:name:)](mpsgraph/squareroot%28with_name_%29.md): Applies the square root operation to the input tensor elements.
+- [squeeze(\_:axes:name:)](mpsgraph/squeeze%28__axes_name_%29.md): Creates a squeeze operation and returns the result tensor.
+- [squeeze(\_:axesTensor:name:)](mpsgraph/squeeze%28__axestensor_name_%29.md): Creates a squeeze operation and returns the result tensor.
+- [squeeze(\_:axis:name:)](mpsgraph/squeeze%28__axis_name_%29.md): Creates a squeeze operation and returns the result tensor.
+- [squeeze(\_:name:)](mpsgraph/squeeze%28__name_%29.md): Creates a squeeze operation and returns the result tensor.
+- [stack(\_:axis:name:)](mpsgraph/stack%28__axis_name_%29.md): Creates a stack operation and returns the result tensor.
+- [stencil(withSourceTensor:weightsTensor:descriptor:name:)](mpsgraph/stencil%28withsourcetensor_weightstensor_descriptor_name_%29.md): Creates a stencil operation and returns the result tensor.
+- [stochasticGradientDescent(learningRate:values:gradient:name:)](mpsgraph/stochasticgradientdescent%28learningrate_values_gradient_name_%29.md): The Stochastic gradient descent performs a gradient descent.
+- [subtraction(\_:\_:name:)](mpsgraph/subtraction%28____name_%29.md): Subtracts the second input tensor from the first.
+- [tan(with:name:)](mpsgraph/tan%28with_name_%29.md): Applies the tangent operation to the input tensor elements.
+- [tanh(with:name:)](mpsgraph/tanh%28with_name_%29.md): Applies the hyperbolic tangent operation to the input tensor elements.
+- [tileGradient(withIncomingGradientTensor:sourceTensor:withMultiplier:name:)](mpsgraph/tilegradient%28withincominggradienttensor_sourcetensor_withmultiplier_name_%29.md): Creates a tile gradient operation and returns the result tensor.
+- [tileTensor(\_:withMultiplier:name:)](mpsgraph/tiletensor%28__withmultiplier_name_%29.md): Creates a tile operation and returns the result tensor.
+- [topK(\_:axis:k:name:)](mpsgraph/topk%28__axis_k_name_%29.md): Creates a TopK operation and returns the value and indices tensors.
+- [topK(\_:axisTensor:kTensor:name:)](mpsgraph/topk%28__axistensor_ktensor_name_%29.md): Creates a TopK operation and returns the result tensor.
+- [topK(\_:k:name:)](mpsgraph/topk%28__k_name_%29.md): Creates a TopK operation and returns the value and indices tensors
+- [topK(\_:kTensor:name:)](mpsgraph/topk%28__ktensor_name_%29.md): Creates a TopK operation and returns the result tensor.
+- [topKGradient(\_:input:k:name:)](mpsgraph/topkgradient%28__input_k_name_%29.md): Creates a TopKGradient operation and returns the result tensor.
+- [topKGradient(\_:input:kTensor:name:)](mpsgraph/topkgradient%28__input_ktensor_name_%29.md): Creates a TopKGradient operation and returns the result tensor.
+- [topKGradient(\_:source:axis:k:name:)](mpsgraph/topkgradient%28__source_axis_k_name_%29.md): Creates a TopKGradient operation and returns the result tensor.
+- [topKGradient(\_:source:axisTensor:kTensor:name:)](mpsgraph/topkgradient%28__source_axistensor_ktensor_name_%29.md): Creates a TopKGradient operation and returns the result tensor.
+- [transpose(\_:permutation:name:)](mpsgraph/transpose%28__permutation_name_%29.md): Creates a permutation operation and returns the result tensor.
+- [transposeTensor(\_:dimension:withDimension:name:)](mpsgraph/transposetensor%28__dimension_withdimension_name_%29.md): Creates a transpose operation and returns the result tensor.
+- [truncate(\_:name:)](mpsgraph/truncate%28__name_%29.md): Applies the truncate operation to the input tensor elements.
+- [variable(with:shape:dataType:name:)](mpsgraph/variable%28with_shape_datatype_name_%29.md): Creates a variable operation and returns the result tensor.
+- [variableFromTensor(\_:name:)](mpsgraph/variablefromtensor%28__name_%29.md): Creates a variable from an input tensor.
+- [variance(of:axes:name:)](mpsgraph/variance%28of_axes_name_%29.md): Returns the variance of the first input along the specified axes.
+- [variance(of:mean:axes:name:)](mpsgraph/variance%28of_mean_axes_name_%29.md): Returns the variance of the first input along the specified axes when the mean has been precomputed.
+- [while(initialInputs:before:after:name:)](mpsgraph/while%28initialinputs_before_after_name_%29.md): Adds a while loop operation.
+
+### Type Methods
+
+- [new()](mpsgraph/new%28%29.md): Creates a new graph to insert nodes in.
+
+## Relationships
+
+### Inherits From
+
+- [MPSGraphObject](mpsgraphobject.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Classes
+
+- [MPSGraphCompilationDescriptor](mpsgraphcompilationdescriptor.md): A class that consists of all the levers for compiling graphs.
+- [MPSGraphConvolution2DOpDescriptor](mpsgraphconvolution2dopdescriptor.md): A class that describes the properties of a 2D-convolution operator.
+- [MPSGraphConvolution3DOpDescriptor](mpsgraphconvolution3dopdescriptor.md): A class that describes the properties of a 3D-convolution operator.
+- [MPSGraphCreateSparseOpDescriptor](mpsgraphcreatesparseopdescriptor.md): A class that describes the properties of a create sparse operation.
+- [MPSGraphDepthwiseConvolution2DOpDescriptor](mpsgraphdepthwiseconvolution2dopdescriptor.md): A class that defines the parameters for a 2D-depthwise convolution operation.
+- [MPSGraphDepthwiseConvolution3DOpDescriptor](mpsgraphdepthwiseconvolution3dopdescriptor.md): The class that defines the parameters for a 3D-depthwise convolution operation.
+- [MPSGraphDevice](mpsgraphdevice.md): A class that describes the compute device.
+- [MPSGraphExecutable](mpsgraphexecutable.md): The compiled representation of a compute graph executable.
+- [MPSGraphExecutableExecutionDescriptor](mpsgraphexecutableexecutiondescriptor.md): A class that consists of all the levers to synchronize and schedule executable execution.
+- [MPSGraphExecutableSerializationDescriptor](mpsgraphexecutableserializationdescriptor.md): A class that consists of all the levers to serialize an executable.
+- [MPSGraphExecutionDescriptor](mpsgraphexecutiondescriptor.md): A class that consists of all the levers to synchronize and schedule graph execution.
+- [MPSGraphFFTDescriptor](mpsgraphfftdescriptor.md): The class that defines the parameters for a fast Fourier transform (FFT) operation.
+- [MPSGraphGRUDescriptor](mpsgraphgrudescriptor.md): The class that defines the parameters for a gated recurrent unit (GRU) operation.
+- [MPSGraphImToColOpDescriptor](mpsgraphimtocolopdescriptor.md): The class that defines the parameters for an image to column or column to image operation.
+- [MPSGraphLSTMDescriptor](mpsgraphlstmdescriptor.md): The class that defines the parameters for a long short-term memory (LSTM) operation.
+
+# MPSGraph (Objective-C)
+
+**Framework:** Metal Performance Shaders Graph  
+**Kind:** Class  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+
+
+The optimized representation of a compute graph of operations and tensors.
+
+## Declaration
+
+```objectivec
+@interface MPSGraph : MPSGraphObject
+```
+
+<a id="overview"></a>
+
+## Overview
+
+An MPSGraph is a symbolic representation of operations to be utilized to execute compute graphs on a device.
+
+## Topics
+
+### Instance Properties
+
+- [options](mpsgraph/options.md): Options for the graph.
+- [placeholderTensors](mpsgraph/placeholdertensors.md): Array of all the placeholder tensors.
+
+### Instance Methods
+
+- [GRUWithSourceTensor:recurrentWeight:inputWeight:bias:descriptor:name:](mpsgraph/gru%28__recurrentweight_inputweight_bias_descriptor_name_%29.md): Creates a GRU operation and returns the value and optionally the training state tensor.
+- [GRUWithSourceTensor:recurrentWeight:inputWeight:bias:initState:descriptor:name:](mpsgraph/gru%28__recurrentweight_inputweight_bias_initstate_descriptor_name_%29.md): Creates a GRU operation and returns the value and optionally the training state tensor.
+- [GRUWithSourceTensor:recurrentWeight:inputWeight:bias:initState:mask:secondaryBias:descriptor:name:](mpsgraph/gru%28__recurrentweight_inputweight_bias_initstate_mask_secondarybias_descriptor_name_%29.md): Creates a GRU operation and returns the value and optionally the training state tensor.
+- [GRUGradientsWithSourceTensor:recurrentWeight:sourceGradient:zState:outputFwd:inputWeight:bias:descriptor:name:](mpsgraph/grugradients%28__recurrentweight_sourcegradient_zstate_outputfwd_inputweight_bias_descriptor_name_%29.md): Creates a GRU gradient operation and returns the gradient tensor values.
+- [GRUGradientsWithSourceTensor:recurrentWeight:sourceGradient:zState:outputFwd:inputWeight:bias:initState:descriptor:name:](mpsgraph/grugradients%28__recurrentweight_sourcegradient_zstate_outputfwd_inputweight_bias_initstate_descriptor_name_%29.md): Creates a GRU gradient operation and returns the gradient tensor values.
+- [GRUGradientsWithSourceTensor:recurrentWeight:sourceGradient:zState:outputFwd:stateGradient:inputWeight:bias:initState:mask:secondaryBias:descriptor:name:](mpsgraph/grugradients%28__recurrentweight_sourcegradient_zstate_outputfwd_stategradient_inputweight_bias_initstate_mask_secondarybias_descriptor_name_%29.md): Creates a GRU gradient operation and returns the gradient tensor values.
+- [HammingDistanceWithPrimaryTensor:secondaryTensor:resultDataType:name:](mpsgraph/hammingdistance%28primary_secondary_resultdatatype_name_%29.md): Computes the hamming distance of two input tensors with support for broadcasting.
+- [HermiteanToRealFFTWithTensor:axes:descriptor:name:](mpsgraph/hermiteantorealfft%28__axes_descriptor_name_%29.md): Creates a Hermitean-to-real fast Fourier transform operation and returns the result tensor.
+- [HermiteanToRealFFTWithTensor:axesTensor:descriptor:name:](mpsgraph/hermiteantorealfft%28__axestensor_descriptor_name_%29.md): Creates a Hermitean-to-real fast Fourier transform operation and returns the result tensor.
+- [L2NormPooling4DWithSourceTensor:descriptor:name:](mpsgraph/l2normpooling4d%28__descriptor_name_%29.md): Creates a 4D L2-norm pooling operation and returns the result tensor.
+- [L2NormPooling4DGradientWithGradientTensor:sourceTensor:descriptor:name:](mpsgraph/l2normpooling4dgradient%28__source_descriptor_name_%29.md): Creates a L2-Norm pooling gradient operation and returns the result tensor.
+- [LSTMWithSourceTensor:recurrentWeight:initState:initCell:descriptor:name:](mpsgraph/lstm%28__recurrentweight_initstate_initcell_descriptor_name_%29.md): Creates an LSTM operation and returns the value tensor and optionally the cell state tensor and the training state tensor.
+- [LSTMWithSourceTensor:recurrentWeight:inputWeight:bias:initState:initCell:descriptor:name:](mpsgraph/lstm%28__recurrentweight_inputweight_bias_initstate_initcell_descriptor_name_%29.md): Creates an LSTM operation and returns the value tensor and optionally the cell state tensor and the training state tensor.
+- [LSTMWithSourceTensor:recurrentWeight:inputWeight:bias:initState:initCell:mask:peephole:descriptor:name:](mpsgraph/lstm%28__recurrentweight_inputweight_bias_initstate_initcell_mask_peephole_descriptor_name_%29.md): Creates an LSTM operation and returns the value tensor and optionally the cell state tensor and the training state tensor.
+- [LSTMGradientsWithSourceTensor:recurrentWeight:sourceGradient:zState:cellOutputFwd:descriptor:name:](mpsgraph/lstmgradients%28__recurrentweight_sourcegradient_zstate_celloutputfwd_descriptor_name_%29.md): Creates an LSTM gradient operation and returns the gradient tensor values.
+- [LSTMGradientsWithSourceTensor:recurrentWeight:sourceGradient:zState:cellOutputFwd:inputWeight:bias:initState:initCell:descriptor:name:](mpsgraph/lstmgradients%28__recurrentweight_sourcegradient_zstate_celloutputfwd_inputweight_bias_initstate_initcell_descriptor_name_%29.md): Creates an LSTM gradient operation and returns the gradient tensor values.
+- [LSTMGradientsWithSourceTensor:recurrentWeight:sourceGradient:zState:cellOutputFwd:inputWeight:bias:initState:initCell:mask:descriptor:name:](mpsgraph/lstmgradients%28__recurrentweight_sourcegradient_zstate_celloutputfwd_inputweight_bias_initstate_initcell_mask_descriptor_name_%29.md): Creates an LSTM gradient operation and returns the gradient tensor values.
+- [LSTMGradientsWithSourceTensor:recurrentWeight:sourceGradient:zState:cellOutputFwd:stateGradient:cellGradient:inputWeight:bias:initState:initCell:mask:peephole:descriptor:name:](mpsgraph/lstmgradients%28__recurrentweight_sourcegradient_zstate_celloutputfwd_stategradient_cellgradient_inputweight_bias_initstate_initcell_mask_peephole_descriptor_name_%29.md): Creates an LSTM gradient operation and returns the gradient tensor values.
+- [absoluteWithTensor:name:](mpsgraph/absolute%28with_name_%29.md): Returns the absolute values of the input tensor elements.
+- [absoluteSquareWithTensor:name:](mpsgraph/absolutesquare%28tensor_name_%29.md): Returns the absolute square of the input tensor elements.
+- [acosWithTensor:name:](mpsgraph/acos%28with_name_%29.md): Applies the inverse cosine operation to the input tensor elements.
+- [acoshWithTensor:name:](mpsgraph/acosh%28with_name_%29.md): Applies the inverse hyperbolic cosine operation to the input tensor elements.
+- [adamWithCurrentLearningRateTensor:beta1Tensor:beta2Tensor:epsilonTensor:valuesTensor:momentumTensor:velocityTensor:maximumVelocityTensor:gradientTensor:name:](mpsgraph/adam%28currentlearningrate_beta1_beta2_epsilon_values_momentum_velocity_maximumvelocity_gradient_name_%29.md): Creates operations to apply Adam optimization.
+- [adamWithLearningRateTensor:beta1Tensor:beta2Tensor:epsilonTensor:beta1PowerTensor:beta2PowerTensor:valuesTensor:momentumTensor:velocityTensor:maximumVelocityTensor:gradientTensor:name:](mpsgraph/adam%28learningrate_beta1_beta2_epsilon_beta1power_beta2power_values_momentum_velocity_maximumvelocity_gradient_name_%29.md): Creates operations to apply Adam optimization.
+- [additionWithPrimaryTensor:secondaryTensor:name:](mpsgraph/addition%28____name_%29.md): Adds two input tensors.
+- [applyStochasticGradientDescentWithLearningRateTensor:variable:gradientTensor:name:](mpsgraph/applystochasticgradientdescent%28learningrate_variable_gradient_name_%29.md): The Stochastic gradient descent performs a gradient descent `variable = variable - (learningRate * g)` where, `g` is gradient of error wrt variable this op directly writes to the variable
+- [argSortWithTensor:axis:descending:name:](mpsgraph/argsort%28__axis_descending_name_%29.md): Computes the indices that sort the elements of the input tensor along the specified axis.
+- [argSortWithTensor:axis:name:](mpsgraph/argsort%28__axis_name_%29.md): Computes the indices that sort the elements of the input tensor along the specified axis.
+- [argSortWithTensor:axisTensor:descending:name:](mpsgraph/argsort%28__axistensor_descending_name_%29.md): Computes the indices that sort the elements of the input tensor along the specified axis.
+- [argSortWithTensor:axisTensor:name:](mpsgraph/argsort%28__axistensor_name_%29.md): Computes the indices that sort the elements of the input tensor along the specified axis.
+- [asinWithTensor:name:](mpsgraph/asin%28with_name_%29.md): Applies the inverse sine operation to the input tensor elements.
+- [asinhWithTensor:name:](mpsgraph/asinh%28with_name_%29.md): Applies the inverse hyperbolic sine operation to the input tensor elements.
+- [assignVariable:withValueOfTensor:name:](mpsgraph/assign%28__tensor_name_%29.md): Creates an assign operation which writes at this point of execution of the graph.
+- [atanWithTensor:name:](mpsgraph/atan%28with_name_%29.md): Applies the inverse tangent operation to the input tensor elements.
+- [atan2WithPrimaryTensor:secondaryTensor:name:](mpsgraph/atan2%28withprimarytensor_secondarytensor_name_%29.md): Returns the elementwise two-argument arctangent of the input tensors.
+- [atanhWithTensor:name:](mpsgraph/atanh%28with_name_%29.md): Applies the inverse hyperbolic tangent operation to the input tensor elements.
+- [avgPooling2DWithSourceTensor:descriptor:name:](mpsgraph/avgpooling2d%28withsourcetensor_descriptor_name_%29.md): Creates a 2D average-pooling operation and returns the result tensor.
+- [avgPooling2DGradientWithGradientTensor:sourceTensor:descriptor:name:](mpsgraph/avgpooling2dgradient%28withgradienttensor_sourcetensor_descriptor_name_%29.md): Creates a 2D average pooling gradient operation and returns the result tensor.
+- [avgPooling4DWithSourceTensor:descriptor:name:](mpsgraph/avgpooling4d%28__descriptor_name_%29.md): Creates a 4D average pooling operation and returns the result tensor.
+- [avgPooling4DGradientWithGradientTensor:sourceTensor:descriptor:name:](mpsgraph/avgpooling4dgradient%28__source_descriptor_name_%29.md): Creates an average pooling gradient operation and returns the result tensor.
+- [bandPartWithTensor:numLower:numUpper:name:](mpsgraph/bandpart%28__numlower_numupper_name_%29.md): Computes the band part of an input tensor.
+- [bandPartWithTensor:numLowerTensor:numUpperTensor:name:](mpsgraph/bandpart%28__numlowertensor_numuppertensor_name_%29.md): Creates the band part operation and returns the result.
+- [batchToSpaceTensor:spatialAxes:batchAxis:blockDimensions:usePixelShuffleOrder:name:](mpsgraph/batchtospace%28__spatialaxes_batchaxis_blockdimensions_usepixelshuffleorder_name_%29.md): Creates a batch-to-space operation and returns the result tensor.
+- [batchToSpaceTensor:spatialAxesTensor:batchAxisTensor:blockDimensionsTensor:usePixelShuffleOrder:name:](mpsgraph/batchtospace%28__spatialaxestensor_batchaxistensor_blockdimensionstensor_usepixelshuffleorder_name_%29.md): Creates a batch-to-space operation and returns the result tensor.
+- [bitwiseANDWithPrimaryTensor:secondaryTensor:name:](mpsgraph/bitwiseand%28____name_%29.md): Returns the elementwise bitwise AND of binary representations of two integer tensors.
+- [bitwiseLeftShiftWithPrimaryTensor:secondaryTensor:name:](mpsgraph/bitwiseleftshift%28____name_%29.md): Returns the elementwise left-shifted binary representations of the primary integer by the secondary tensor amount.
+- [bitwiseNOTWithTensor:name:](mpsgraph/bitwisenot%28__name_%29.md): Applies the bitwise NOT operation to the input tensor element.
+- [bitwiseORWithPrimaryTensor:secondaryTensor:name:](mpsgraph/bitwiseor%28____name_%29.md): Returns the elementwise bitwise OR of binary representations of two integer tensors.
+- [bitwisePopulationCountWithTensor:name:](mpsgraph/bitwisepopulationcount%28__name_%29.md): Returns the population count of the input tensor elements.
+- [bitwiseRightShiftWithPrimaryTensor:secondaryTensor:name:](mpsgraph/bitwiserightshift%28____name_%29.md): Returns the elementwise right-shifted binary representations of the primary integer by the secondary tensor amount.
+- [bitwiseXORWithPrimaryTensor:secondaryTensor:name:](mpsgraph/bitwisexor%28____name_%29.md): Returns the elementwise bitwise XOR of binary representations of two integer tensors.
+- [bottomKWithSourceTensor:axis:k:name:](mpsgraph/bottomk%28__axis_k_name_%29.md): Creates a BottomK operation and returns the value and indices tensors.
+- [bottomKWithSourceTensor:axisTensor:kTensor:name:](mpsgraph/bottomk%28__axistensor_ktensor_name_%29.md): Creates a BottomK operation and returns the result tensor.
+- [bottomKWithGradientTensor:source:axis:k:name:](mpsgraph/bottomkgradient%28__source_axis_k_name_%29.md): Creates a BottomKGradient operation and returns the result tensor.
+- [bottomKWithGradientTensor:source:axisTensor:kTensor:name:](mpsgraph/bottomkgradient%28__source_axistensor_ktensor_name_%29.md): Creates a BottomKGradient operation and returns the result tensor.
+- [broadcastTensor:toShape:name:](mpsgraph/broadcast%28__shape_name_%29.md): Creates a broadcast operation and returns the result tensor.
+- [broadcastTensor:toShapeTensor:name:](mpsgraph/broadcast%28__shapetensor_name_%29.md): Creates a broadcast operation and returns the result tensor.
+- [callSymbolName:inputTensors:outputTypes:name:](mpsgraph/call%28symbolname_inputtensors_outputtypes_name_%29.md): Creates an operation which invokes another executable.
+- [castTensor:toType:name:](mpsgraph/cast%28__to_name_%29.md): Creates a cast operation and returns the result tensor.
+- [ceilWithTensor:name:](mpsgraph/ceil%28with_name_%29.md): Applies the ceiling operation to the input tensor elements.
+- [clampWithTensor:minValueTensor:maxValueTensor:name:](mpsgraph/clamp%28__min_max_name_%29.md): Clamps the values in the first tensor between the corresponding values in the minimum and maximum value tensor.
+- [colToImWithSourceTensor:outputShape:descriptor:name:](mpsgraph/coltoim%28__outputshape_descriptor_name_%29.md): Creates a column to image operation and returns the result tensor.
+- [compileWithDevice:feeds:targetTensors:targetOperations:compilationDescriptor:](mpsgraph/compile%28with_feeds_targettensors_targetoperations_compilationdescriptor_%29.md): Compiles the graph for the given feeds to returns the target tensor values, ensuring all target operations would be executed.
+- [constantWithRealPart:imaginaryPart:](mpsgraph/complexconstant%28realpart_imaginarypart_%29.md): Creates a complex constant op with the MPSDataTypeComplexFloat32 data type and returns the result tensor.
+- [constantWithRealPart:imaginaryPart:dataType:](mpsgraph/complexconstant%28realpart_imaginarypart_datatype_%29.md): Creates a complex constant operation and returns the result tensor.
+- [constantWithRealPart:imaginaryPart:shape:dataType:](mpsgraph/complexconstant%28realpart_imaginarypart_shape_datatype_%29.md): Creates a complex constant op with a given shape and returns the result tensor.
+- [complexTensorWithRealTensor:imaginaryTensor:name:](mpsgraph/complextensor%28realtensor_imaginarytensor_name_%29.md): Returns a complex tensor from the two input tensors.
+- [concatTensor:withTensor:dimension:name:](mpsgraph/concattensor%28__with_dimension_name_%29.md): Creates a concatenation operation and returns the result tensor.
+- [concatTensors:dimension:interleave:name:](mpsgraph/concattensors%28__dimension_interleave_name_%29.md): Creates a concatenation operation and returns the result tensor.
+- [concatTensors:dimension:name:](mpsgraph/concattensors%28__dimension_name_%29.md): Creates a concatenation operation and returns the result tensor.
+- [conjugateWithTensor:name:](mpsgraph/conjugate%28tensor_name_%29.md): Returns the complex conjugate of the input tensor elements.
+- [constantWithScalar:dataType:](mpsgraph/constant%28__datatype_%29.md): Creates a constant operation and returns the result tensor.
+- [constantWithScalar:shape:dataType:](mpsgraph/constant%28__shape_datatype_%29-3wa0e.md): Creates a constant op with a given shape and returns the result tensor.
+- [constantWithData:shape:dataType:](mpsgraph/constant%28__shape_datatype_%29-ylr4.md): Creates a constant op with a given shape and data, and returns the result tensor.
+- [controlDependencyWithOperations:dependentBlock:name:](mpsgraph/controldependency%28with_dependentblock_name_%29.md): Runs the graph for the given feeds and returns the target tensor values, ensuring all target operations also executed.
+- [convolution2DWithSourceTensor:weightsTensor:descriptor:name:](mpsgraph/convolution2d%28__weights_descriptor_name_%29.md): Creates a 2D (forward) convolution operation and returns the result tensor.
+- [convolution2DDataGradientWithIncomingGradientTensor:weightsTensor:outputShape:forwardConvolutionDescriptor:name:](mpsgraph/convolution2ddatagradient%28__weights_outputshape_forwardconvolutiondescriptor_name_%29.md): Creates a 2D convolution gradient operation with respect to the source tensor of the forward convolution.
+- [convolution2DDataGradientWithIncomingGradientTensor:weightsTensor:outputShapeTensor:forwardConvolutionDescriptor:name:](mpsgraph/convolution2ddatagradient%28__weights_outputshapetensor_forwardconvolutiondescriptor_name_%29.md): Creates a 2D convolution gradient operation with respect to the source tensor of the forward convolution.
+- [convolution2DWeightsGradientWithIncomingGradientTensor:sourceTensor:outputShape:forwardConvolutionDescriptor:name:](mpsgraph/convolution2dweightsgradient%28__source_outputshape_forwardconvolutiondescriptor_name_%29.md): Creates a 2D convolution gradient operation with respect to the weights tensor of the forward convolution.
+- [convolution2DWeightsGradientWithIncomingGradientTensor:sourceTensor:outputShapeTensor:forwardConvolutionDescriptor:name:](mpsgraph/convolution2dweightsgradient%28__source_outputshapetensor_forwardconvolutiondescriptor_name_%29.md): Creates a 2D convolution gradient operation with respect to weights tensor of forward convolution.
+- [convolution3DWithSourceTensor:weightsTensor:descriptor:name:](mpsgraph/convolution3d%28__weights_descriptor_name_%29.md): Creates a 3D forward convolution operation and returns the result tensor.
+- [convolution3DDataGradientWithIncomingGradientTensor:weightsTensor:outputShape:forwardConvolutionDescriptor:name:](mpsgraph/convolution3ddatagradient%28__weights_outputshape_forwardconvolutiondescriptor_name_%29.md): Creates a 3D convolution gradient operation with respect to the source tensor of the forward convolution.
+- [convolution3DDataGradientWithIncomingGradientTensor:weightsTensor:outputShapeTensor:forwardConvolutionDescriptor:name:](mpsgraph/convolution3ddatagradient%28__weights_outputshapetensor_forwardconvolutiondescriptor_name_%29.md): Creates a 3D convolution gradient operation with respect to the source tensor of the forward convolution.
+- [convolution3DWeightsGradientWithIncomingGradientTensor:sourceTensor:outputShape:forwardConvolutionDescriptor:name:](mpsgraph/convolution3dweightsgradient%28__source_outputshape_forwardconvolutiondescriptor_name_%29.md): Creates a 3D convolution gradient operation with respect to the weights tensor of the forward convolution.
+- [convolution3DWeightsGradientWithIncomingGradientTensor:sourceTensor:outputShapeTensor:forwardConvolutionDescriptor:name:](mpsgraph/convolution3dweightsgradient%28__source_outputshapetensor_forwardconvolutiondescriptor_name_%29.md): Creates a 3D convolution gradient operation with respect to the weights tensor of the forward convolution.
+- [convolutionTranspose2DWithSourceTensor:weightsTensor:outputShape:descriptor:name:](mpsgraph/convolutiontranspose2d%28__weights_outputshape_descriptor_name_%29.md): Creates a convolution transpose operation and returns the result tensor.
+- [convolutionTranspose2DWithSourceTensor:weightsTensor:outputShapeTensor:descriptor:name:](mpsgraph/convolutiontranspose2d%28__weights_outputshapetensor_descriptor_name_%29.md): Creates a convolution transpose operation and returns the result tensor.
+- [convolutionTranspose2DDataGradientWithIncomingGradientTensor:weightsTensor:outputShape:forwardConvolutionDescriptor:name:](mpsgraph/convolutiontranspose2ddatagradient%28__weights_outputshape_forwardconvolutiondescriptor_name_%29.md): Creates a convolution transpose gradient operation with respect to the source tensor of convolution transpose operation and returns the result tensor.
+- [convolutionTranspose2DDataGradientWithIncomingGradientTensor:weightsTensor:outputShapeTensor:forwardConvolutionDescriptor:name:](mpsgraph/convolutiontranspose2ddatagradient%28__weights_outputshapetensor_forwardconvolutiondescriptor_name_%29.md): Creates a convolution transpose gradient operation with respect to the source tensor of convolution transpose operation and returns the result tensor.
+- [convolutionTranspose2DWeightsGradientWithIncomingGradientTensor:sourceTensor:outputShape:forwardConvolutionDescriptor:name:](mpsgraph/convolutiontranspose2dweightsgradient%28__weights_outputshape_forwardconvolutiondescriptor_name_%29.md): Creates a convolution transpose gradient operation with respect to the weights tensor of the convolution transpose operation and returns the result tensor.
+- [convolutionTranspose2DWeightsGradientWithIncomingGradientTensor:sourceTensor:outputShapeTensor:forwardConvolutionDescriptor:name:](mpsgraph/convolutiontranspose2dweightsgradient%28__weights_outputshapetensor_forwardconvolutiondescriptor_name_%29.md): Creates a convolution transpose gradient operation with respect to the weights tensor of the convolution transpose operation and returns the result tensor.
+- [coordinateAlongAxis:withShape:name:](mpsgraph/coordinate%28alongaxis_withshape_name_%29.md): Creates a get-coordindate operation and returns the result tensor.
+- [coordinateAlongAxis:withShapeTensor:name:](mpsgraph/coordinate%28alongaxis_withshapetensor_name_%29.md): Creates a get-coordindate operation and returns the result tensor.
+- [coordinateAlongAxisTensor:withShape:name:](mpsgraph/coordinate%28alongaxistensor_withshape_name_%29.md): Creates a get-coordindate operation and returns the result tensor.
+- [coordinateAlongAxisTensor:withShapeTensor:name:](mpsgraph/coordinate%28alongaxistensor_withshapetensor_name_%29.md): Creates a get-coordindate operation and returns the result tensor.
+- [cosWithTensor:name:](mpsgraph/cos%28with_name_%29.md): Applies the cosine operation to the input tensor elements.
+- [coshWithTensor:name:](mpsgraph/cosh%28with_name_%29.md): Applies the hyperbolic cosine operation to the input tensor elements.
+- [cumulativeMaximumWithTensor:axis:exclusive:reverse:name:](mpsgraph/cumulativemaximum%28__axis_exclusive_reverse_name_%29.md): Computes the cumulative maximum of the input tensor along the specified axis.
+- [cumulativeMaximumWithTensor:axis:name:](mpsgraph/cumulativemaximum%28__axis_name_%29.md): Computes the cumulative maximum of the input tensor along the specified axis.
+- [cumulativeMaximumWithTensor:axisTensor:exclusive:reverse:name:](mpsgraph/cumulativemaximum%28__axistensor_exclusive_reverse_name_%29.md): Computes the cumulative maximum of the input tensor along the specified axis.
+- [cumulativeMaximumWithTensor:axisTensor:name:](mpsgraph/cumulativemaximum%28__axistensor_name_%29.md): Computes the cumulative maximum of the input tensor along the specified axis.
+- [cumulativeMinimumWithTensor:axis:exclusive:reverse:name:](mpsgraph/cumulativeminimum%28__axis_exclusive_reverse_name_%29.md): Computes the cumulative minimum of the input tensor along the specified axis.
+- [cumulativeMinimumWithTensor:axis:name:](mpsgraph/cumulativeminimum%28__axis_name_%29.md): Computes the cumulative minimum of the input tensor along the specified axis.
+- [cumulativeMinimumWithTensor:axisTensor:exclusive:reverse:name:](mpsgraph/cumulativeminimum%28__axistensor_exclusive_reverse_name_%29.md): Computes the cumulative minimum of the input tensor along the specified axis.
+- [cumulativeMinimumWithTensor:axisTensor:name:](mpsgraph/cumulativeminimum%28__axistensor_name_%29.md): Computes the cumulative minimum of the input tensor along the specified axis.
+- [cumulativeProductWithTensor:axis:exclusive:reverse:name:](mpsgraph/cumulativeproduct%28__axis_exclusive_reverse_name_%29.md): Computes the cumulative product of the input tensor along the specified axis.
+- [cumulativeProductWithTensor:axis:name:](mpsgraph/cumulativeproduct%28__axis_name_%29.md): Computes the cumulative product of the input tensor along the specified axis.
+- [cumulativeProductWithTensor:axisTensor:exclusive:reverse:name:](mpsgraph/cumulativeproduct%28__axistensor_exclusive_reverse_name_%29.md): Computes the cumulative product of the input tensor along the specified axis.
+- [cumulativeProductWithTensor:axisTensor:name:](mpsgraph/cumulativeproduct%28__axistensor_name_%29.md): Computes the cumulative product of the input tensor along the specified axis.
+- [cumulativeSumWithTensor:axis:exclusive:reverse:name:](mpsgraph/cumulativesum%28__axis_exclusive_reverse_name_%29.md): Computes the cumulative sum of the input tensor along the specified axis.
+- [cumulativeSumWithTensor:axis:name:](mpsgraph/cumulativesum%28__axis_name_%29.md): Computes the cumulative sum of the input tensor along the specified axis.
+- [cumulativeSumWithTensor:axisTensor:exclusive:reverse:name:](mpsgraph/cumulativesum%28__axistensor_exclusive_reverse_name_%29.md): Computes the cumulative sum of the input tensor along the specified axis.
+- [cumulativeSumWithTensor:axisTensor:name:](mpsgraph/cumulativesum%28__axistensor_name_%29.md): Computes the cumulative sum of the input tensor along the specified axis.
+- [depthToSpace2DTensor:widthAxis:heightAxis:depthAxis:blockSize:usePixelShuffleOrder:name:](mpsgraph/depth%28tospace2dtensor_widthaxis_heightaxis_depthaxis_blocksize_usepixelshuffleorder_name_%29.md): Creates a depth-to-space2D operation and returns the result tensor.
+- [depthToSpace2DTensor:widthAxisTensor:heightAxisTensor:depthAxisTensor:blockSize:usePixelShuffleOrder:name:](mpsgraph/depth%28tospace2dtensor_widthaxistensor_heightaxistensor_depthaxistensor_blocksize_usepixelshuffleorder_name_%29.md): Creates a depth-to-space2D operation and returns the result tensor.
+- [depthwiseConvolution2DWithSourceTensor:weightsTensor:descriptor:name:](mpsgraph/depthwiseconvolution2d%28__weights_descriptor_name_%29.md): Creates a 2D-depthwise convolution operation and returns the result tensor.
+- [depthwiseConvolution2DDataGradientWithIncomingGradientTensor:weightsTensor:outputShape:descriptor:name:](mpsgraph/depthwiseconvolution2ddatagradient%28__weights_outputshape_descriptor_name_%29.md): Creates a 2D-depthwise convolution gradient for data operation and returns the result tensor.
+- [depthwiseConvolution2DWeightsGradientWithIncomingGradientTensor:sourceTensor:outputShape:descriptor:name:](mpsgraph/depthwiseconvolution2dweightsgradient%28__source_outputshape_descriptor_name_%29.md): Creates a 2D-depthwise convolution gradient for weights operation and returns the result tensor.
+- [depthwiseConvolution3DWithSourceTensor:weightsTensor:descriptor:name:](mpsgraph/depthwiseconvolution3d%28__weights_descriptor_name_%29.md): Creates a 3D depthwise convolution operation and returns the result tensor.
+- [depthwiseConvolution3DDataGradientWithIncomingGradientTensor:weightsTensor:outputShape:descriptor:name:](mpsgraph/depthwiseconvolution3ddatagradient%28__weights_outputshape_descriptor_name_%29.md): Creates a 3D depthwise convolution gradient for data operation and returns the result tensor.
+- [depthwiseConvolution3DWeightsGradientWithIncomingGradientTensor:sourceTensor:outputShape:descriptor:name:](mpsgraph/depthwiseconvolution3dweightsgradient%28__source_outputshape_descriptor_name_%29.md): Creates a 3D depthwise convolution gradient for weights operation and returns the result tensor.
+- [dequantizeTensor:LUTTensor:axis:name:](mpsgraph/dequantize%28__luttensor_axis_name_%29.md): Creates a vector lookup-table based dequantize operation and returns the result tensor.
+- [dequantizeTensor:LUTTensor:name:](mpsgraph/dequantize%28__luttensor_name_%29.md): Creates a lookup-table based dequantize operation and returns the result tensor.
+- [dequantizeTensor:scale:zeroPoint:dataType:name:](mpsgraph/dequantize%28__scale_zeropoint_datatype_name_%29.md): Creates Dequantize operation and returns the result tensor.
+- [dequantizeTensor:scaleTensor:dataType:name:](mpsgraph/dequantize%28__scaletensor_datatype_name_%29.md): Creates a dequantize operation and returns the result tensor.
+- [dequantizeTensor:scaleTensor:zeroPoint:dataType:axis:name:](mpsgraph/dequantize%28__scaletensor_zeropoint_datatype_axis_name_%29.md): Creates Dequantize operation and returns the result tensor.
+- [dequantizeTensor:scaleTensor:zeroPointTensor:dataType:axis:name:](mpsgraph/dequantize%28__scaletensor_zeropointtensor_datatype_axis_name_%29.md): Creates a dequantize operation and returns the result tensor.
+- [dequantizeTensor:scaleTensor:zeroPointTensor:dataType:name:](mpsgraph/dequantize%28__scaletensor_zeropointtensor_datatype_name_%29.md): Creates a dequantize operation and returns the result tensor.
+- [divisionWithPrimaryTensor:secondaryTensor:name:](mpsgraph/division%28____name_%29.md): Divides the first input tensor by the second.
+- [divisionNoNaNWithPrimaryTensor:secondaryTensor:name:](mpsgraph/divisionnonan%28____name_%29.md): Divides the first input tensor by the second, with the result being 0 if the denominator is 0.
+- [dropoutTensor:rateTensor:name:](mpsgraph/dropout%28__rate_name_%29-16cq4.md): Creates a dropout operation and returns the result
+- [dropoutTensor:rate:name:](mpsgraph/dropout%28__rate_name_%29-6hvf3.md): Creates a dropout operation and returns the result
+- [encodeToCommandBuffer:feeds:targetOperations:resultsDictionary:executionDescriptor:](mpsgraph/encode%28to_feeds_targetoperations_resultsdictionary_executiondescriptor_%29.md): Encodes the graph for the given feeds to returns the target tensor values in the results dictionary provided by the user.
+- [encodeToCommandBuffer:feeds:targetTensors:targetOperations:executionDescriptor:](mpsgraph/encode%28to_feeds_targettensors_targetoperations_executiondescriptor_%29.md): Encodes the graph for the given feeds to returns the target tensor values, ensuring all target operations also executed.
+- [equalWithPrimaryTensor:secondaryTensor:name:](mpsgraph/equal%28____name_%29.md): Returns the elementwise equality check of the input tensors.
+- [erfWithTensor:name:](mpsgraph/erf%28with_name_%29.md): Applies the error function to the input tensor elements.
+- [expandDimsOfTensor:axes:name:](mpsgraph/expanddims%28__axes_name_%29.md): Creates an expand-dimensions operation and returns the result tensor.
+- [expandDimsOfTensor:axesTensor:name:](mpsgraph/expanddims%28__axestensor_name_%29.md): Creates an expand-dimensions operation and returns the result tensor.
+- [expandDimsOfTensor:axis:name:](mpsgraph/expanddims%28__axis_name_%29.md): Creates an expand-dimensions operation and returns the result tensor.
+- [exponentWithTensor:name:](mpsgraph/exponent%28with_name_%29.md): Applies the natural exponent to the input tensor elements.
+- [exponentBase10WithTensor:name:](mpsgraph/exponentbase10%28with_name_%29.md): Applies an exponent with base 10 to the input tensor elements.
+- [exponentBase2WithTensor:name:](mpsgraph/exponentbase2%28with_name_%29.md): Applies an exponent with base 2 to the input tensor elements.
+- [fastFourierTransformWithTensor:axes:descriptor:name:](mpsgraph/fastfouriertransform%28__axes_descriptor_name_%29.md): Creates a fast Fourier transform operation and returns the result tensor.
+- [fastFourierTransformWithTensor:axesTensor:descriptor:name:](mpsgraph/fastfouriertransform%28__axestensor_descriptor_name_%29.md): Creates a fast Fourier transform operation and returns the result tensor.
+- [flatten2DTensor:axis:name:](mpsgraph/flatten2d%28__axis_name_%29.md): Creates a flatten2D operation and returns the result tensor.
+- [flatten2DTensor:axisTensor:name:](mpsgraph/flatten2d%28__axistensor_name_%29.md): Creates a flatten2D operation and returns the result tensor.
+- [floorWithTensor:name:](mpsgraph/floor%28with_name_%29.md): Applies the floor operation to the input tensor elements.
+- [floorModuloWithPrimaryTensor:secondaryTensor:name:](mpsgraph/floormodulo%28____name_%29.md): Returns the remainder of floor divison between the primary and secondary tensor.
+- [forLoopWithLowerBound:upperBound:step:initialBodyArguments:body:name:](mpsgraph/for%28lowerbound_upperbound_step_initialbodyarguments_body_name_%29.md): Adds a for loop operation, The lower and upper bounds specify a half-open range: the range includes the lower bound but does not include the upper bound.
+- [forLoopWithNumberOfIterations:initialBodyArguments:body:name:](mpsgraph/for%28numberofiterations_initialbodyarguments_body_name_%29.md): Adds a for loop operation, with a specific number of iterations.
+- [gatherWithUpdatesTensor:indicesTensor:axis:batchDimensions:name:](mpsgraph/gather%28withupdatestensor_indicestensor_axis_batchdimensions_name_%29.md): Creates a Gather operation and returns the result tensor.
+- [gatherAlongAxis:withUpdatesTensor:indicesTensor:name:](mpsgraph/gatheralongaxis%28__updates_indices_name_%29.md): Creates a GatherAlongAxis operation and returns the result tensor.
+- [gatherAlongAxisTensor:withUpdatesTensor:indicesTensor:name:](mpsgraph/gatheralongaxistensor%28__updates_indices_name_%29.md): Creates a GatherAlongAxis operation and returns the result tensor.
+- [gatherNDWithUpdatesTensor:indicesTensor:batchDimensions:name:](mpsgraph/gathernd%28withupdatestensor_indicestensor_batchdimensions_name_%29.md): Creates a GatherND operation and returns the result tensor.
+- [gradientForPrimaryTensor:withTensors:name:](mpsgraph/gradients%28of_with_name_%29.md): Calculates a partial derivative of primaryTensor with respect to the tensors.
+- [greaterThanWithPrimaryTensor:secondaryTensor:name:](mpsgraph/greaterthan%28____name_%29.md): Checks in an elementwise manner if the first input tensor is greater than the second.
+- [greaterThanOrEqualToWithPrimaryTensor:secondaryTensor:name:](mpsgraph/greaterthanorequalto%28____name_%29.md): Checks in an elementwise manner if the first input tensor is greater than or equal to the second.
+- [identityWithTensor:name:](mpsgraph/identity%28with_name_%29.md): Copies the input tensor values into the output, behaving as an identity operation.
+- [ifWithPredicateTensor:thenBlock:elseBlock:name:](mpsgraph/if%28__then_else_name_%29.md): Adds an if-then-else operation to the graph.
+- [imToColWithSourceTensor:descriptor:name:](mpsgraph/imtocol%28__descriptor_name_%29.md): Creates an imToCol operation and returns the result tensor.
+- [imaginaryPartOfTensor:name:](mpsgraph/imaginarypartoftensor%28tensor_name_%29.md): Returns the imaginary part of a tensor.
+- [init](mpsgraph/init%28%29.md): Initialize an MPSGraph to insert nodes in.
+- [inverseOfTensor:name:](mpsgraph/inverse%28input_name_%29.md): Computes the inverse of an input tensor.
+- [isFiniteWithTensor:name:](mpsgraph/isfinite%28with_name_%29.md): Checks if the input tensor elements are finite or not.
+- [isInfiniteWithTensor:name:](mpsgraph/isinfinite%28with_name_%29.md): Checks if the input tensor elements are infinite or not.
+- [isNaNWithTensor:name:](mpsgraph/isnan%28with_name_%29.md): Checks if the input tensor elements are `NaN` or not.
+- [leakyReLUWithTensor:alpha:name:](mpsgraph/leakyrelu%28with_alpha_name_%29.md): Computes the leaky rectified linear unit (ReLU) activation function on the input tensor.
+- [leakyReLUWithTensor:alphaTensor:name:](mpsgraph/leakyrelu%28with_alphatensor_name_%29.md): Computes the leaky rectified linear unit (ReLU) activation function on the input tensor.
+- [leakyReLUGradientWithIncomingGradient:sourceTensor:alphaTensor:name:](mpsgraph/leakyrelugradient%28withincominggradient_sourcetensor_alphatensor_name_%29.md): Computes the gradient of the leaky rectified linear unit (ReLU) activation.
+- [lessThanWithPrimaryTensor:secondaryTensor:name:](mpsgraph/lessthan%28____name_%29.md): Checks in an elementwise manner if the first input tensor is less than the second.
+- [lessThanOrEqualToWithPrimaryTensor:secondaryTensor:name:](mpsgraph/lessthanorequalto%28____name_%29.md): Checks in an elementwise manner if the first input tensor is less than or equal to the second.
+- [logarithmWithTensor:name:](mpsgraph/logarithm%28with_name_%29.md): Computes the natural logarithm to the input tensor elements.
+- [logarithmBase10WithTensor:name:](mpsgraph/logarithmbase10%28with_name_%29.md): Computes the logarithm with base 10 to the input tensor elements.
+- [logarithmBase2WithTensor:name:](mpsgraph/logarithmbase2%28with_name_%29.md): Computes the logarithm with base 2 to the input tensor elements.
+- [logicalANDWithPrimaryTensor:secondaryTensor:name:](mpsgraph/logicaland%28____name_%29.md): Returns the elementwise logical AND of the input tensors.
+- [logicalNANDWithPrimaryTensor:secondaryTensor:name:](mpsgraph/logicalnand%28____name_%29.md): Returns the elementwise logical NAND of the input tensors.
+- [logicalNORWithPrimaryTensor:secondaryTensor:name:](mpsgraph/logicalnor%28____name_%29.md): Returns the elementwise logical NOR of the input tensors.
+- [logicalORWithPrimaryTensor:secondaryTensor:name:](mpsgraph/logicalor%28____name_%29.md): Returns the elementwise logical OR of the input tensors.
+- [logicalXNORWithPrimaryTensor:secondaryTensor:name:](mpsgraph/logicalxnor%28____name_%29.md): Returns the elementwise logical XNOR of the input tensors.
+- [logicalXORWithPrimaryTensor:secondaryTensor:name:](mpsgraph/logicalxor%28____name_%29.md): Returns the elementwise logical XOR of the input tensors.
+- [matrixMultiplicationWithPrimaryTensor:secondaryTensor:name:](mpsgraph/matrixmultiplication%28primary_secondary_name_%29.md): Computes the matrix multiplication of 2 input tensors with support for broadcasting.
+- [maxPooling2DWithSourceTensor:descriptor:name:](mpsgraph/maxpooling2d%28withsourcetensor_descriptor_name_%29.md): Creates a 2D max-pooling operation and returns the result tensor.
+- [maxPooling2DGradientWithGradientTensor:indicesTensor:outputShape:descriptor:name:](mpsgraph/maxpooling2dgradient%28withgradienttensor_indicestensor_outputshape_descriptor_name_%29.md): Creates a max-pooling gradient operation and returns the result tensor.
+- [maxPooling2DGradientWithGradientTensor:indicesTensor:outputShapeTensor:descriptor:name:](mpsgraph/maxpooling2dgradient%28withgradienttensor_indicestensor_outputshapetensor_descriptor_name_%29.md): Creates a max-pooling gradient operation and returns the result tensor.
+- [maxPooling2DGradientWithGradientTensor:sourceTensor:descriptor:name:](mpsgraph/maxpooling2dgradient%28withgradienttensor_sourcetensor_descriptor_name_%29.md): Creates a max-pooling gradient operation and returns the result tensor.
+- [maxPooling2DReturnIndicesWithSourceTensor:descriptor:name:](mpsgraph/maxpooling2dreturnindices%28__descriptor_name_%29.md): Creates a 2D max-pooling operation and returns the result tensor and the corresponding indices tensor.
+- [maxPooling4DWithSourceTensor:descriptor:name:](mpsgraph/maxpooling4d%28__descriptor_name_%29.md): Creates a 4D max-pooling operation and returns the result tensor.
+- [maxPooling4DGradientWithGradientTensor:sourceTensor:descriptor:name:](mpsgraph/maxpooling4dgradient%28__source_descriptor_name_%29.md): Creates a max-pooling gradient operation and returns the result tensor.
+- [maxPooling4DGradientWithGradientTensor:indicesTensor:outputShape:descriptor:name:](mpsgraph/maxpooling4dgradient%28withgradienttensor_indicestensor_outputshape_descriptor_name_%29.md): Creates a max-pooling gradient operation and returns the result tensor.
+- [maxPooling4DGradientWithGradientTensor:indicesTensor:outputShapeTensor:descriptor:name:](mpsgraph/maxpooling4dgradient%28withgradienttensor_indicestensor_outputshapetensor_descriptor_name_%29.md): Creates a max-pooling gradient operation and returns the result tensor.
+- [maxPooling4DReturnIndicesWithSourceTensor:descriptor:name:](mpsgraph/maxpooling4dreturnindices%28__descriptor_name_%29.md): Creates a 4D max-pooling operation and returns the result tensor and the corresponding indices tensor.
+- [maximumWithPrimaryTensor:secondaryTensor:name:](mpsgraph/maximum%28____name_%29.md): Returns the elementwise maximum of the input tensors.
+- [maximumWithNaNPropagationWithPrimaryTensor:secondaryTensor:name:](mpsgraph/maximumwithnanpropagation%28____name_%29.md): Returns the elementwise maximum of the input tensors, while propagating `NaN` values.
+- [meanOfTensor:axes:name:](mpsgraph/mean%28of_axes_name_%29.md): Returns the mean of the first input along the specified axes.
+- [minimumWithPrimaryTensor:secondaryTensor:name:](mpsgraph/minimum%28____name_%29.md): Returns the elementwise minimum of the input tensors.
+- [minimumWithNaNPropagationWithPrimaryTensor:secondaryTensor:name:](mpsgraph/minimumwithnanpropagation%28____name_%29.md): Returns the elementwise minimum of the input tensors, while propagating `NaN` values.
+- [moduloWithPrimaryTensor:secondaryTensor:name:](mpsgraph/modulo%28____name_%29.md): Returns the remainder obtained by dividing the first input tensor by the second.
+- [multiplicationWithPrimaryTensor:secondaryTensor:name:](mpsgraph/multiplication%28____name_%29.md): Multiplies two input tensors.
+- [negativeWithTensor:name:](mpsgraph/negative%28with_name_%29.md): Applies negative to the input tensor elements.
+- [nonMaximumSuppressionWithBoxesTensor:scoresTensor:classIndicesTensor:IOUThreshold:scoreThreshold:perClassSuppression:coordinateMode:name:](mpsgraph/nonmaximumsuppression%28withboxestensor_scorestensor_classindicestensor_iouthreshold_scorethreshold_perclasssuppression_coordinatemode_name_%29.md): Creates a nonMaximumumSuppression operation and returns the result tensor.
+- [nonMaximumSuppressionWithBoxesTensor:scoresTensor:IOUThreshold:scoreThreshold:perClassSuppression:coordinateMode:name:](mpsgraph/nonmaximumsuppression%28withboxestensor_scorestensor_iouthreshold_scorethreshold_perclasssuppression_coordinatemode_name_%29.md): Creates a nonMaximumumSuppression operation and returns the result tensor.
+- [nonZeroIndicesOfTensor:name:](mpsgraph/nonzeroindices%28__name_%29.md): Computes the indices of the non-zero elements of the input tensor.
+- [normalizationBetaGradientWithIncomingGradientTensor:sourceTensor:reductionAxes:name:](mpsgraph/normalizationbetagradient%28withincominggradienttensor_sourcetensor_reductionaxes_name_%29.md): Creates a normalization beta-gradient operation and returns the result tensor.
+- [normalizationGammaGradientWithIncomingGradientTensor:sourceTensor:meanTensor:varianceTensor:reductionAxes:epsilon:name:](mpsgraph/normalizationgammagradient%28withincominggradienttensor_sourcetensor_mean_variancetensor_reductionaxes_epsilon_name_%29.md): Creates a normalization gamma-gradient operation and returns the result tensor.
+- [normalizationGradientWithIncomingGradientTensor:sourceTensor:meanTensor:varianceTensor:gammaTensor:gammaGradientTensor:betaGradientTensor:reductionAxes:epsilon:name:](mpsgraph/normalizationgradient%28withincominggradienttensor_sourcetensor_mean_variancetensor_gammatensor_gammagradienttensor_betagradienttensor_reductionaxes_epsilon_name_%29.md): Creates a normalization input gradient operation and returns the result tensor.
+- [normalizationWithTensor:meanTensor:varianceTensor:gammaTensor:betaTensor:epsilon:name:](mpsgraph/normalize%28__mean_variance_gamma_beta_epsilon_name_%29.md): Creates a batch normalization operation and returns the result tensor.
+- [notWithTensor:name:](mpsgraph/not%28with_name_%29.md): Applies the logical NOT operation to the input tensor elements.
+- [notEqualWithPrimaryTensor:secondaryTensor:name:](mpsgraph/notequal%28____name_%29.md): Returns the elementwise inequality check of the input tensors.
+- [oneHotWithIndicesTensor:depth:axis:dataType:name:](mpsgraph/onehot%28withindicestensor_depth_axis_datatype_name_%29.md): Creates a oneHot operation and returns the result tensor.
+- [oneHotWithIndicesTensor:depth:axis:dataType:onValue:offValue:name:](mpsgraph/onehot%28withindicestensor_depth_axis_datatype_onvalue_offvalue_name_%29.md): Creates a oneHot operation and returns the result tensor.
+- [oneHotWithIndicesTensor:depth:axis:name:](mpsgraph/onehot%28withindicestensor_depth_axis_name_%29.md): Creates a oneHot operation and returns the result tensor.
+- [oneHotWithIndicesTensor:depth:dataType:name:](mpsgraph/onehot%28withindicestensor_depth_datatype_name_%29.md): Creates a oneHot operation and returns the result tensor.
+- [oneHotWithIndicesTensor:depth:dataType:onValue:offValue:name:](mpsgraph/onehot%28withindicestensor_depth_datatype_onvalue_offvalue_name_%29.md): Creates a oneHot operation and returns the result tensor.
+- [oneHotWithIndicesTensor:depth:name:](mpsgraph/onehot%28withindicestensor_depth_name_%29.md): Creates a oneHot operation and returns the result tensor.
+- [padGradientWithIncomingGradientTensor:sourceTensor:paddingMode:leftPadding:rightPadding:name:](mpsgraph/padgradient%28withincominggradienttensor_sourcetensor_paddingmode_leftpadding_rightpadding_name_%29.md): Creates a padding gradient operation and returns the result tensor.
+- [padTensor:withPaddingMode:leftPadding:rightPadding:constantValue:name:](mpsgraph/padtensor%28__with_leftpadding_rightpadding_constantvalue_name_%29.md): Creates a padding operation and returns the result tensor.
+- [placeholderWithShape:dataType:name:](mpsgraph/placeholder%28shape_datatype_name_%29.md): Creates a placeholder operation and returns the result tensor.
+- [placeholderWithShape:name:](mpsgraph/placeholder%28shape_name_%29.md): Creates a placeholder operation and returns the result tensor with the dataType of the placeholder tensor set to 32 bit float.
+- [planarTensorWithComplexTensor:name:](mpsgraph/planartensor%28tensor_name_%29.md): Returns a real-valued tensor from a complex-valued tensor with real and imaginary planes separated.
+- [powerWithPrimaryTensor:secondaryTensor:name:](mpsgraph/power%28____name_%29.md): Returns the elementwise result of raising the first tensor to the power of the second tensor.
+- [quantizeTensor:scale:zeroPoint:dataType:name:](mpsgraph/quantize%28__scale_zeropoint_datatype_name_%29.md): Creates a Quantize operation and returns the result tensor.
+- [quantizeTensor:scaleTensor:zeroPoint:dataType:axis:name:](mpsgraph/quantize%28__scaletensor_zeropoint_datatype_axis_name_%29.md): Creates a Quantize operation and returns the result tensor.
+- [quantizeTensor:scaleTensor:zeroPointTensor:dataType:axis:name:](mpsgraph/quantize%28__scaletensor_zeropointtensor_datatype_axis_name_%29.md): Creates a Quantize operation and returns the result tensor.
+- [randomPhiloxStateTensorWithCounterLow:counterHigh:key:name:](mpsgraph/randomphiloxstatetensor%28withcounterlow_counterhigh_key_name_%29.md): Creates a tensor representing state using the Philox algorithm with given counter and key values.
+- [randomPhiloxStateTensorWithSeed:name:](mpsgraph/randomphiloxstatetensor%28withseed_name_%29.md): Creates a tensor representing state using the Philox algorithm with given counter and key values.
+- [randomTensorWithShape:descriptor:name:](mpsgraph/randomtensor%28withshape_descriptor_name_%29.md): Creates a Random op of type matching distribution in descriptor and returns random values.
+- [randomTensorWithShape:descriptor:seed:name:](mpsgraph/randomtensor%28withshape_descriptor_seed_name_%29.md): Creates a Random op of type matching distribution in descriptor and returns random values.
+- [randomTensorWithShape:descriptor:stateTensor:name:](mpsgraph/randomtensor%28withshape_descriptor_statetensor_name_%29.md): Creates a Random op of type matching distribution in descriptor, and returns random values and updated state.
+- [randomTensorWithShapeTensor:descriptor:name:](mpsgraph/randomtensor%28withshapetensor_descriptor_name_%29.md): Creates a Random op of type matching distribution in descriptor and returns random values.
+- [randomTensorWithShapeTensor:descriptor:seed:name:](mpsgraph/randomtensor%28withshapetensor_descriptor_seed_name_%29.md): Creates a Random op of type matching distribution in descriptor and returns random values.
+- [randomTensorWithShapeTensor:descriptor:stateTensor:name:](mpsgraph/randomtensor%28withshapetensor_descriptor_statetensor_name_%29.md): Creates a Random op of type matching distribution in descriptor, and returns random values and updated state.
+- [randomUniformTensorWithShape:name:](mpsgraph/randomuniformtensor%28withshape_name_%29.md): Creates a RandomUniform operation and returns random uniform values
+- [randomUniformTensorWithShape:seed:name:](mpsgraph/randomuniformtensor%28withshape_seed_name_%29.md): Creates a RandomUniform operation and returns random uniform values
+- [randomUniformTensorWithShape:stateTensor:name:](mpsgraph/randomuniformtensor%28withshape_statetensor_name_%29.md): Creates a RandomUniform operation and returns random uniform values and updated state
+- [randomUniformTensorWithShapeTensor:name:](mpsgraph/randomuniformtensor%28withshapetensor_name_%29.md): Creates a RandomUniform operation and returns random uniform values
+- [randomUniformTensorWithShapeTensor:seed:name:](mpsgraph/randomuniformtensor%28withshapetensor_seed_name_%29.md): Creates a RandomUniform operation and returns random uniform values
+- [randomUniformTensorWithShapeTensor:stateTensor:name:](mpsgraph/randomuniformtensor%28withshapetensor_statetensor_name_%29.md): Creates a RandomUniform operation and returns random uniform values and updated state
+- [reLUWithTensor:name:](mpsgraph/relu%28with_name_%29.md): Computes the ReLU (rectified linear activation unit) function with the input tensor.
+- [reLUGradientWithIncomingGradient:sourceTensor:name:](mpsgraph/relugradient%28withincominggradient_sourcetensor_name_%29.md): Computes the gradient of the ReLU (rectified linear activation unit) function using the incoming gradient.
+- [readVariable:name:](mpsgraph/read%28__name_%29.md): Creates a read op which reads at this point of execution of the graph and returns the result tensor.
+- [realPartOfTensor:name:](mpsgraph/realpartoftensor%28tensor_name_%29.md): Returns the real part of a tensor.
+- [realToHermiteanFFTWithTensor:axes:descriptor:name:](mpsgraph/realtohermiteanfft%28__axes_descriptor_name_%29.md): Creates a Real-to-Hermitean fast Fourier transform operation and returns the result tensor.
+- [realToHermiteanFFTWithTensor:axesTensor:descriptor:name:](mpsgraph/realtohermiteanfft%28__axestensor_descriptor_name_%29.md): Creates a Real-to-Hermitean fast Fourier transform operation and returns the result tensor.
+- [reciprocalWithTensor:name:](mpsgraph/reciprocal%28with_name_%29.md): Applies the reciprocal operation to the input tensor elements.
+- [reciprocalSquareRootWithTensor:name:](mpsgraph/reciprocalsquareroot%28__name_%29.md): Applies the reciprocal square root operation to the input tensor elements.
+- [reductionAndWithTensor:axes:name:](mpsgraph/reductionand%28with_axes_name_%29.md): Creates a reduction and operation and returns the result tensor.
+- [reductionAndWithTensor:axis:name:](mpsgraph/reductionand%28with_axis_name_%29.md): Creates a reduction and operation and returns the result tensor.
+- [reductionArgMaximumWithTensor:axis:name:](mpsgraph/reductionargmaximum%28with_axis_name_%29.md): Creates a reduction argMax operation and returns the result tensor.
+- [reductionArgMinimumWithTensor:axis:name:](mpsgraph/reductionargminimum%28with_axis_name_%29.md): Creates a reduction argMin operation and returns the result tensor.
+- [reductionMaximumWithTensor:axes:name:](mpsgraph/reductionmaximum%28with_axes_name_%29.md): Creates a reduction max operation and returns the result tensor.
+- [reductionMaximumWithTensor:axis:name:](mpsgraph/reductionmaximum%28with_axis_name_%29.md): Creates a reduction max operation and returns the result tensor.
+- [reductionMaximumPropagateNaNWithTensor:axes:name:](mpsgraph/reductionmaximumpropagatenan%28with_axes_name_%29.md): Creates a reduction max propagate NaN operation and returns the result tensor.
+- [reductionMaximumPropagateNaNWithTensor:axis:name:](mpsgraph/reductionmaximumpropagatenan%28with_axis_name_%29.md): Creates a reduction max propagate NaN operation and returns the result tensor.
+- [reductionMinimumWithTensor:axes:name:](mpsgraph/reductionminimum%28with_axes_name_%29.md): Creates a reduction min operation and returns the result tensor.
+- [reductionMinimumWithTensor:axis:name:](mpsgraph/reductionminimum%28with_axis_name_%29.md): Creates a reduction minimum operation and returns the result tensor.
+- [reductionMinimumPropagateNaNWithTensor:axes:name:](mpsgraph/reductionminimumpropagatenan%28with_axes_name_%29.md): Creates a reduction min propagate NaN operation and returns the result tensor.
+- [reductionMinimumPropagateNaNWithTensor:axis:name:](mpsgraph/reductionminimumpropagatenan%28with_axis_name_%29.md): Creates a reduction min propagate NaN operation and returns the result tensor.
+- [reductionOrWithTensor:axes:name:](mpsgraph/reductionor%28with_axes_name_%29.md): Creates a reduction or operation and returns the result tensor.
+- [reductionOrWithTensor:axis:name:](mpsgraph/reductionor%28with_axis_name_%29.md): Creates a reduction or operation and returns the result tensor.
+- [reductionProductWithTensor:axes:name:](mpsgraph/reductionproduct%28with_axes_name_%29.md): Creates a reduction product operation and returns the result tensor.
+- [reductionProductWithTensor:axis:name:](mpsgraph/reductionproduct%28with_axis_name_%29.md): Creates a reduction product operation and returns the result tensor.
+- [reductionSumWithTensor:axes:name:](mpsgraph/reductionsum%28with_axes_name_%29.md): Creates a reduction sum operation and returns the result tensor.
+- [reductionSumWithTensor:axis:name:](mpsgraph/reductionsum%28with_axis_name_%29.md): Creates a reduction sum operation and returns the result tensor.
+- [reinterpretCastTensor:toType:name:](mpsgraph/reinterpretcast%28__to_name_%29.md): Creates a reinterpret cast operation and returns the result tensor.
+- [reshapeTensor:withShape:name:](mpsgraph/reshape%28__shape_name_%29.md): Creates a reshape operation and returns the result tensor.
+- [reshapeTensor:withShapeTensor:name:](mpsgraph/reshape%28__shapetensor_name_%29.md): Creates a reshape operation and returns the result tensor.
+- [resizeTensor:size:mode:centerResult:alignCorners:layout:name:](mpsgraph/resize%28__size_mode_centerresult_aligncorners_layout_name_%29.md): Creates a Resize operation and returns the result tensor.
+- [resizeTensor:sizeTensor:mode:centerResult:alignCorners:layout:name:](mpsgraph/resize%28__sizetensor_mode_centerresult_aligncorners_layout_name_%29.md): Creates a Resize operation and returns the result tensor.
+- [resizeTensor:sizeTensor:mode:centerResult:alignCorners:name:](mpsgraph/resize%28__sizetensor_mode_centerresult_aligncorners_name_%29.md): Creates a Resize operation and returns the result tensor.
+- [resizeTensor:sizeTensor:scaleOffsetTensor:mode:layout:name:](mpsgraph/resize%28__sizetensor_scaleoffsettensor_mode_layout_name_%29.md): Resamples input images to given size using the provided scale and offset. Destination indices are computed using
+- [resizeTensor:sizeTensor:scaleTensor:offsetTensor:mode:name:](mpsgraph/resize%28__sizetensor_scaletensor_offsettenor_mode_name_%29.md): Creates a Resize operation and returns the result tensor.
+- [resizeWithGradientTensor:input:mode:centerResult:alignCorners:layout:name:](mpsgraph/resize%28withgradienttensor_input_mode_centerresult_aligncorners_layout_name_%29.md): Creates a Resize gradient operation and returns the result tensor.
+- [resizeWithGradientTensor:input:scaleTensor:offsetTensor:mode:name:](mpsgraph/resize%28withgradienttensor_input_scale_offsettensor_mode_name_%29.md): Creates a Resize gradient operation and returns the result tensor.
+- [resizeWithGradientTensor:input:scaleOffsetTensor:mode:layout:name:](mpsgraph/resize%28withgradienttensor_input_scaleoffsettensor_mode_layout_name_%29.md): Creates a Resize gradient operation and returns the result tensor.
+- [resizeBilinearWithTensor:sizeTensor:centerResult:alignCorners:layout:name:](mpsgraph/resizebilinear%28__sizetensor_centerresult_aligncorners_layout_name_%29.md): Resamples input images to given size using bilinear sampling.
+- [resizeBilinearWithTensor:sizeTensor:centerResult:alignCorners:name:](mpsgraph/resizebilinear%28__sizetensor_centerresult_aligncorners_name_%29.md): Creates a Resize operation and returns the result tensor.
+- [resizeBilinearWithTensor:sizeTensor:scaleOffsetTensor:layout:name:](mpsgraph/resizebilinear%28__sizetensor_scaleoffsettensor_layout_name_%29.md): Resamples input images to given size using the provided scale and offset and bilinear sampling See above discussion for more details.
+- [resizeBilinearWithTensor:sizeTensor:scaleTensor:offsetTensor:name:](mpsgraph/resizebilinear%28__sizetensor_scaletensor_offsettensor_name_%29.md): Creates a Resize operation and returns the result tensor.
+- [resizeBilinearWithGradientTensor:input:centerResult:alignCorners:layout:name:](mpsgraph/resizebilinear%28withgradienttensor_input_centerresult_aligncorners_layout_name_%29.md): Creates a Resize gradient operation and returns the result tensor.
+- [resizeBilinearWithGradientTensor:input:scaleTensor:offsetTensor:name:](mpsgraph/resizebilinear%28withgradienttensor_input_scale_offsettensor_name_%29.md): Creates a Resize gradient operation and returns the result tensor.
+- [resizeBilinearWithGradientTensor:input:scaleOffsetTensor:layout:name:](mpsgraph/resizebilinear%28withgradienttensor_input_scaleoffsettensor_layout_name_%29.md): Creates a Resize gradient operation and returns the result tensor.
+- [resizeNearestWithTensor:sizeTensor:nearestRoundingMode:centerResult:alignCorners:layout:name:](mpsgraph/resizenearest%28__sizetensor_nearestroundingmode_centerresult_aligncorners_layout_name_%29.md): Resamples input images to given size using nearest neighbor sampling.
+- [resizeNearestWithTensor:sizeTensor:nearestRoundingMode:centerResult:alignCorners:name:](mpsgraph/resizenearest%28__sizetensor_nearestroundingmode_centerresult_aligncorners_name_%29.md): Creates a Resize operation and returns the result tensor.
+- [resizeNearestWithTensor:sizeTensor:scaleOffsetTensor:nearestRoundingMode:layout:name:](mpsgraph/resizenearest%28__sizetensor_scaleoffsettensor_nearestroundingmode_layout_name_%29.md): Resamples input images to given size using the provided scale and offset and nearest neighbor sampling See above discussion for more details.
+- [resizeNearestWithTensor:sizeTensor:scaleTensor:offsetTensor:nearestRoundingMode:name:](mpsgraph/resizenearest%28__sizetensor_scaletensor_offsettensor_nearestroundingmode_name_%29.md): Creates a Resize operation and returns the result tensor.
+- [resizeNearestWithGradientTensor:input:nearestRoundingMode:centerResult:alignCorners:layout:name:](mpsgraph/resizenearest%28withgradienttensor_input_nearestroundingmode_centerresult_aligncorners_layout_name_%29.md): Creates a Resize gradient operation and returns the result tensor.
+- [resizeNearestWithGradientTensor:input:scaleTensor:offsetTensor:nearestRoundingMode:name:](mpsgraph/resizenearest%28withgradienttensor_input_scale_offsettensor_nearestroundingmode_name_%29.md): Creates a Resize gradient operation and returns the result tensor.
+- [resizeNearestWithGradientTensor:input:scaleOffsetTensor:nearestRoundingMode:layout:name:](mpsgraph/resizenearest%28withgradienttensor_input_scaleoffsettensor_nearestroundingmode_layout_name_%29.md): Creates a Resize gradient operation and returns the result tensor.
+- [reverseTensor:axes:name:](mpsgraph/reverse%28__axes_name_%29.md): Creates a reverse operation and returns the result tensor.
+- [reverseTensor:axesTensor:name:](mpsgraph/reverse%28__axestensor_name_%29.md): Creates a reverse operation and returns the result tensor.
+- [reverseTensor:name:](mpsgraph/reverse%28__name_%29.md): Creates a reverse operation and returns the result tensor.
+- [reverseSquareRootWithTensor:name:](mpsgraph/reversesquareroot%28with_name_%29.md): Deprecated. Applies the reverse square root operation to the input tensor elements.
+- [rintWithTensor:name:](mpsgraph/rint%28with_name_%29.md): Rounds the input tensor elements by rounding to nearest even.
+- [roundWithTensor:name:](mpsgraph/round%28with_name_%29.md): Rounds the input tensor elements.
+- [runWithFeeds:targetTensors:targetOperations:](mpsgraph/run%28feeds_targettensors_targetoperations_%29.md): Runs the graph for the given feeds and returns the target tensor values, ensuring all target operations also executed.
+- [runWithMTLCommandQueue:feeds:targetOperations:resultsDictionary:](mpsgraph/run%28with_feeds_targetoperations_resultsdictionary_%29.md): Runs the graph for the given feeds and returns the target tensor values in the results dictionary provided by the user.
+- [runWithMTLCommandQueue:feeds:targetTensors:targetOperations:](mpsgraph/run%28with_feeds_targettensors_targetoperations_%29.md): Runs the graph for the given feeds and returns the target tensor values, ensuring all target operations also executed.
+- [runAsyncWithFeeds:targetTensors:targetOperations:executionDescriptor:](mpsgraph/runasync%28feeds_targettensors_targetoperations_executiondescriptor_%29.md): Runs the graph for the given feeds and returns the target tensor values, ensuring all target operations also executed.
+- [runAsyncWithMTL4CommandQueue:feeds:targetOperations:resultsDictionary:executionDescriptor:](mpsgraph/runasync%28on_feeds_targetoperations_resultsdictionary_executiondescriptor_%29.md): Encodes the graph for the given feeds to returns the target tensor values in the results dictionary provided by the user.
+- [runAsyncWithMTL4CommandQueue:feeds:targetTensors:targetOperations:executionDescriptor:](mpsgraph/runasync%28on_feeds_targettensors_targetoperations_executiondescriptor_%29.md): Runs the graph for the given feeds and returns the target tensor values, ensuring all target operations also executed.
+- [runAsyncWithMTLCommandQueue:feeds:targetOperations:resultsDictionary:executionDescriptor:](mpsgraph/runasync%28with_feeds_targetoperations_resultsdictionary_executiondescriptor_%29.md): Encodes the graph for the given feeds to returns the target tensor values in the results dictionary provided by the user.
+- [runAsyncWithMTLCommandQueue:feeds:targetTensors:targetOperations:executionDescriptor:](mpsgraph/runasync%28with_feeds_targettensors_targetoperations_executiondescriptor_%29.md): Runs the graph for the given feeds and returns the target tensor values, ensuring all target operations also executed.
+- [sampleGridWithSourceTensor:coordinateTensor:layout:normalizeCoordinates:relativeCoordinates:alignCorners:paddingMode:nearestRoundingMode:constantValue:name:](mpsgraph/samplegrid%28withsourcetensor_coordinatetensor_layout_normalizecoordinates_relativecoordinates_aligncorners_paddingmode_nearestroundingmode_constantvalue_name_%29.md): Samples a tensor using the coordinates provided, using nearest neighbor sampling with specified rounding mode.
+- [sampleGridWithSourceTensor:coordinateTensor:layout:normalizeCoordinates:relativeCoordinates:alignCorners:paddingMode:samplingMode:constantValue:name:](mpsgraph/samplegrid%28withsourcetensor_coordinatetensor_layout_normalizecoordinates_relativecoordinates_aligncorners_paddingmode_samplingmode_constantvalue_name_%29.md): Samples a tensor using the coordinates provided.
+- [scaledDotProductAttentionWithQueryTensor:keyTensor:valueTensor:descriptor:name:](mpsgraph/scaleddotproductattention%28query_key_value_descriptor_name_%29.md): Creates a scaled dot product attention (SDPA) operation using a descriptor and returns the result tensor.
+- [scaledDotProductAttentionWithQueryTensor:keyTensor:valueTensor:maskTensor:scale:name:](mpsgraph/scaleddotproductattention%28query_key_value_mask_scale_name_%29.md): Creates a scaled dot product attention (SDPA) operation and returns the result tensor.
+- [scaledDotProductAttentionWithQueryTensor:keyTensor:valueTensor:scale:name:](mpsgraph/scaleddotproductattention%28query_key_value_scale_name_%29.md): Creates a scaled dot product attention (SDPA) operation (without a mask) and returns the result tensor.
+- [scatterWithUpdatesTensor:indicesTensor:shape:axis:mode:name:](mpsgraph/scatter%28__indices_shape_axis_mode_name_%29.md): Creates a Scatter operation and returns the result tensor.
+- [scatterAlongAxis:withDataTensor:updatesTensor:indicesTensor:mode:name:](mpsgraph/scatteralongaxis%28__data_updates_indices_mode_name_%29.md): Creates a ScatterAlongAxis operation and returns the result tensor.
+- [scatterAlongAxis:withUpdatesTensor:indicesTensor:shape:mode:name:](mpsgraph/scatteralongaxis%28__updates_indices_shape_mode_name_%29.md): Creates a ScatterAlongAxis operation and returns the result tensor.
+- [scatterAlongAxisTensor:withDataTensor:updatesTensor:indicesTensor:mode:name:](mpsgraph/scatteralongaxistensor%28__data_updates_indices_mode_name_%29.md): Creates a ScatterAlongAxis operation and returns the result tensor.
+- [scatterAlongAxisTensor:withUpdatesTensor:indicesTensor:shape:mode:name:](mpsgraph/scatteralongaxistensor%28__updates_indices_shape_mode_name_%29.md): Creates a ScatterAlongAxis operation and returns the result tensor.
+- [scatterNDWithUpdatesTensor:indicesTensor:shape:batchDimensions:mode:name:](mpsgraph/scatternd%28withupdatestensor_indicestensor_shape_batchdimensions_mode_name_%29.md): Creates a ScatterND operation and returns the result tensor.
+- [scatterNDWithUpdatesTensor:indicesTensor:shape:batchDimensions:name:](mpsgraph/scatternd%28withupdatestensor_indicestensor_shape_batchdimensions_name_%29.md): Creates a ScatterND operation and returns the result tensor.
+- [scatterNDWithDataTensor:updatesTensor:indicesTensor:batchDimensions:mode:name:](mpsgraph/scatterndwithdata%28__updates_indices_batchdimensions_mode_name_%29.md): Creates a ScatterND operation and returns the result tensor.
+- [scatterWithDataTensor:updatesTensor:indicesTensor:axis:mode:name:](mpsgraph/scatterwithdata%28__updates_indices_axis_mode_name_%29.md): Creates a Scatter operation and returns the result tensor.
+- [selectWithPredicateTensor:truePredicateTensor:falsePredicateTensor:name:](mpsgraph/select%28predicate_truetensor_falsetensor_name_%29.md): Selects values from either the true or false predicate tensor, depending on the values in the first input.
+- [shapeOfTensor:name:](mpsgraph/shapeof%28__name_%29.md): Creates a shape-of operation and returns the result tensor.
+- [sigmoidWithTensor:name:](mpsgraph/sigmoid%28with_name_%29.md): Computes the sigmoid operation on an input tensor.
+- [sigmoidGradientWithIncomingGradient:sourceTensor:name:](mpsgraph/sigmoidgradient%28withincominggradient_sourcetensor_name_%29.md): Computes the gradient of the sigmoid function using the incoming gradient tensor.
+- [signWithTensor:name:](mpsgraph/sign%28with_name_%29.md): Returns the sign of the input tensor elements.
+- [signbitWithTensor:name:](mpsgraph/signbit%28with_name_%29.md): Returns the sign bit of the input tensor elements.
+- [sinWithTensor:name:](mpsgraph/sin%28with_name_%29.md): Applies the sine operation to the input tensor elements.
+- [singleGateRNNWithSourceTensor:recurrentWeight:initState:descriptor:name:](mpsgraph/singlegaternn%28__recurrentweight_initstate_descriptor_name_%29.md): Creates a single-gate RNN operation and returns the value and optionally the training state tensor.
+- [singleGateRNNWithSourceTensor:recurrentWeight:inputWeight:bias:initState:descriptor:name:](mpsgraph/singlegaternn%28__recurrentweight_inputweight_bias_initstate_descriptor_name_%29.md): Creates a single-gate RNN operation and returns the value and optionally the training state tensor.
+- [singleGateRNNWithSourceTensor:recurrentWeight:inputWeight:bias:initState:mask:descriptor:name:](mpsgraph/singlegaternn%28__recurrentweight_inputweight_bias_initstate_mask_descriptor_name_%29.md): Creates a single-gate RNN operation and returns the value and optionally the training state tensor.
+- [singleGateRNNGradientsWithSourceTensor:recurrentWeight:sourceGradient:zState:initState:descriptor:name:](mpsgraph/singlegaternngradients%28__recurrentweight_sourcegradient_zstate_initstate_descriptor_name_%29.md): Creates a single-gate RNN gradient operation and returns the gradient tensor values.
+- [singleGateRNNGradientsWithSourceTensor:recurrentWeight:sourceGradient:zState:inputWeight:bias:initState:descriptor:name:](mpsgraph/singlegaternngradients%28__recurrentweight_sourcegradient_zstate_inputweight_bias_initstate_descriptor_name_%29.md): Creates a single-gate RNN gradient operation and returns the gradient tensor values.
+- [singleGateRNNGradientsWithSourceTensor:recurrentWeight:sourceGradient:zState:inputWeight:bias:initState:mask:descriptor:name:](mpsgraph/singlegaternngradients%28__recurrentweight_sourcegradient_zstate_inputweight_bias_initstate_mask_descriptor_name_%29.md): Creates a single-gate RNN gradient operation and returns the gradient tensor values.
+- [singleGateRNNGradientsWithSourceTensor:recurrentWeight:sourceGradient:zState:stateGradient:inputWeight:bias:initState:mask:descriptor:name:](mpsgraph/singlegaternngradients%28__recurrentweight_sourcegradient_zstate_stategradient_inputweight_bias_initstate_mask_descriptor_name_%29.md): Creates a single-gate RNN gradient operation and returns the gradient tensor values.
+- [sinhWithTensor:name:](mpsgraph/sinh%28with_name_%29.md): Applies the hyperbolic sine operation to the input tensor elements.
+- [sliceGradientTensor:fwdInShapeTensor:startTensor:endTensor:strideTensor:startMask:endMask:squeezeMask:name:](mpsgraph/slicegradienttensor%28__fwdinshapetensor_start_end_stridetensor_startmask_endmask_squeezemask_name_%29.md): Creates a strided-slice gradient operation and returns the result tensor.
+- [sliceGradientTensor:fwdInShapeTensor:startTensor:sizeTensor:squeezeMask:name:](mpsgraph/slicegradienttensor%28__fwdinshapetensor_start_sizetensor_squeezemask_name_%29.md): Creates a slice gradient operation and returns the result tensor.
+- [sliceGradientTensor:fwdInShapeTensor:starts:ends:strides:name:](mpsgraph/slicegradienttensor%28__fwdinshapetensor_starts_ends_strides_name_%29.md): Creates a strided-slice gradient operation and returns the result tensor.
+- [sliceGradientTensor:fwdInShapeTensor:starts:ends:strides:startMask:endMask:squeezeMask:name:](mpsgraph/slicegradienttensor%28__fwdinshapetensor_starts_ends_strides_startmask_endmask_squeezemask_name_%29.md): Creates a strided-slice gradient operation and returns the result tensor.
+- [sliceTensor:dimension:start:length:name:](mpsgraph/slicetensor%28__dimension_start_length_name_%29.md): Creates a slice operation and returns the result tensor.
+- [sliceTensor:startTensor:endTensor:strideTensor:startMask:endMask:squeezeMask:name:](mpsgraph/slicetensor%28__start_end_stridetensor_startmask_endmask_squeezemask_name_%29.md): Creates a strided-slice operation and returns the result tensor.
+- [sliceTensor:startTensor:sizeTensor:squeezeMask:name:](mpsgraph/slicetensor%28__start_sizetensor_squeezemask_name_%29.md): Creates a slice operation and returns the result tensor.
+- [sliceTensor:starts:ends:strides:name:](mpsgraph/slicetensor%28__starts_ends_strides_name_%29.md): Creates a strided-slice operation and returns the result tensor.
+- [sliceTensor:starts:ends:strides:startMask:endMask:squeezeMask:name:](mpsgraph/slicetensor%28__starts_ends_strides_startmask_endmask_squeezemask_name_%29.md): Creates a strided-slice operation and returns the result tensor.
+- [sliceUpdateDataTensor:updateTensor:starts:ends:strides:name:](mpsgraph/sliceupdatedatatensor%28__update_starts_ends_strides_name_%29.md): Creates a strided-slice update operation with zero masks and returns the result tensor.
+- [sliceUpdateDataTensor:updateTensor:starts:ends:strides:startMask:endMask:squeezeMask:name:](mpsgraph/sliceupdatedatatensor%28__update_starts_ends_strides_startmask_endmask_squeezemask_name_%29.md): Creates a strided-slice update operation and returns the result tensor.
+- [sliceUpdateDataTensor:updateTensor:startsTensor:endsTensor:stridesTensor:name:](mpsgraph/sliceupdatedatatensor%28__update_startstensor_endstensor_stridestensor_name_%29.md): Creates a strided-slice update operation with zero masks and returns the result tensor.
+- [sliceUpdateDataTensor:updateTensor:startsTensor:endsTensor:stridesTensor:startMask:endMask:squeezeMask:name:](mpsgraph/sliceupdatedatatensor%28__update_startstensor_endstensor_stridestensor_startmask_endmask_squeezemask_name_%29.md): Creates a strided-slice update operation and returns the result tensor.
+- [softMaxWithTensor:axis:name:](mpsgraph/softmax%28with_axis_name_%29.md): Computes the softmax function on the input tensor along the specified axis.
+- [softMaxCrossEntropyWithSourceTensor:labelsTensor:axis:reductionType:name:](mpsgraph/softmaxcrossentropy%28__labels_axis_reuctiontype_name_%29.md): Creates a softmax cross-entropy loss operation and returns the result tensor.
+- [softMaxCrossEntropyGradientWithIncomingGradientTensor:sourceTensor:labelsTensor:axis:reductionType:name:](mpsgraph/softmaxcrossentropygradient%28__source_labels_axis_reuctiontype_name_%29.md): Creates the gradient of a softmax cross-entropy loss operation and returns the result tensor.
+- [softMaxGradientWithIncomingGradient:sourceTensor:axis:name:](mpsgraph/softmaxgradient%28withincominggradient_sourcetensor_axis_name_%29.md): Computes the gradient of the softmax function along the specified axis using the incoming gradient tensor.
+- [sortWithTensor:axis:descending:name:](mpsgraph/sort%28__axis_descending_name_%29.md): Sorts the elements of the input tensor along the specified axis.
+- [sortWithTensor:axis:name:](mpsgraph/sort%28__axis_name_%29.md): Sorts the elements of the input tensor along the specified axis.
+- [sortWithTensor:axisTensor:descending:name:](mpsgraph/sort%28__axistensor_descending_name_%29.md): Sorts the elements of the input tensor along the specified axis.
+- [sortWithTensor:axisTensor:name:](mpsgraph/sort%28__axistensor_name_%29.md): Sorts the elements of the input tensor along the specified axis.
+- [spaceToDepth2DTensor:widthAxis:heightAxis:depthAxis:blockSize:usePixelShuffleOrder:name:](mpsgraph/space%28todepth2dtensor_widthaxis_heightaxis_depthaxis_blocksize_usepixelshuffleorder_name_%29.md): Creates a space-to-depth2D operation and returns the result tensor.
+- [spaceToDepth2DTensor:widthAxisTensor:heightAxisTensor:depthAxisTensor:blockSize:usePixelShuffleOrder:name:](mpsgraph/space%28todepth2dtensor_widthaxistensor_heightaxistensor_depthaxistensor_blocksize_usepixelshuffleorder_name_%29.md): Creates a space-to-depth2D operation and returns the result tensor.
+- [spaceToBatchTensor:spatialAxes:batchAxis:blockDimensions:usePixelShuffleOrder:name:](mpsgraph/spacetobatch%28__spatialaxes_batchaxis_blockdimensions_usepixelshuffleorder_name_%29.md): Creates a space-to-batch operation and returns the result tensor.
+- [spaceToBatchTensor:spatialAxesTensor:batchAxisTensor:blockDimensionsTensor:usePixelShuffleOrder:name:](mpsgraph/spacetobatch%28__spatialaxestensor_batchaxistensor_blockdimensionstensor_usepixelshuffleorder_name_%29.md): Creates a space-to-batch operation and returns the result tensor.
+- [sparseTensorWithDescriptor:tensors:shape:name:](mpsgraph/sparsetensor%28sparsetensorwithdescriptor_tensors_shape_name_%29.md): Creates a sparse tensor representation.
+- [sparseTensorWithType:tensors:shape:dataType:name:](mpsgraph/sparsetensor%28sparsetensorwithtype_tensors_shape_datatype_name_%29.md): Creates a sparse tensor representation.
+- [splitTensor:numSplits:axis:name:](mpsgraph/split%28__numsplits_axis_name_%29.md): Creates a split operation and returns the result tensor.
+- [splitTensor:splitSizes:axis:name:](mpsgraph/split%28__splitsizes_axis_name_%29.md): Creates a split operation and returns the result tensor.
+- [splitTensor:splitSizesTensor:axis:name:](mpsgraph/split%28__splitsizestensor_axis_name_%29.md): Creates a split operation and returns the result tensor.
+- [squareWithTensor:name:](mpsgraph/square%28with_name_%29.md): Applies the square operation to the input tensor elements.
+- [squareRootWithTensor:name:](mpsgraph/squareroot%28with_name_%29.md): Applies the square root operation to the input tensor elements.
+- [squeezeTensor:axes:name:](mpsgraph/squeeze%28__axes_name_%29.md): Creates a squeeze operation and returns the result tensor.
+- [squeezeTensor:axesTensor:name:](mpsgraph/squeeze%28__axestensor_name_%29.md): Creates a squeeze operation and returns the result tensor.
+- [squeezeTensor:axis:name:](mpsgraph/squeeze%28__axis_name_%29.md): Creates a squeeze operation and returns the result tensor.
+- [squeezeTensor:name:](mpsgraph/squeeze%28__name_%29.md): Creates a squeeze operation and returns the result tensor.
+- [stackTensors:axis:name:](mpsgraph/stack%28__axis_name_%29.md): Creates a stack operation and returns the result tensor.
+- [stencilWithSourceTensor:weightsTensor:descriptor:name:](mpsgraph/stencil%28withsourcetensor_weightstensor_descriptor_name_%29.md): Creates a stencil operation and returns the result tensor.
+- [stochasticGradientDescentWithLearningRateTensor:valuesTensor:gradientTensor:name:](mpsgraph/stochasticgradientdescent%28learningrate_values_gradient_name_%29.md): The Stochastic gradient descent performs a gradient descent.
+- [subtractionWithPrimaryTensor:secondaryTensor:name:](mpsgraph/subtraction%28____name_%29.md): Subtracts the second input tensor from the first.
+- [tanWithTensor:name:](mpsgraph/tan%28with_name_%29.md): Applies the tangent operation to the input tensor elements.
+- [tanhWithTensor:name:](mpsgraph/tanh%28with_name_%29.md): Applies the hyperbolic tangent operation to the input tensor elements.
+- [tileGradientWithIncomingGradientTensor:sourceTensor:withMultiplier:name:](mpsgraph/tilegradient%28withincominggradienttensor_sourcetensor_withmultiplier_name_%29.md): Creates a tile gradient operation and returns the result tensor.
+- [tileTensor:withMultiplier:name:](mpsgraph/tiletensor%28__withmultiplier_name_%29.md): Creates a tile operation and returns the result tensor.
+- [topKWithSourceTensor:axis:k:name:](mpsgraph/topk%28__axis_k_name_%29.md): Creates a TopK operation and returns the value and indices tensors.
+- [topKWithSourceTensor:axisTensor:kTensor:name:](mpsgraph/topk%28__axistensor_ktensor_name_%29.md): Creates a TopK operation and returns the result tensor.
+- [topKWithSourceTensor:k:name:](mpsgraph/topk%28__k_name_%29.md): Creates a TopK operation and returns the value and indices tensors
+- [topKWithSourceTensor:kTensor:name:](mpsgraph/topk%28__ktensor_name_%29.md): Creates a TopK operation and returns the result tensor.
+- [topKWithGradientTensor:source:k:name:](mpsgraph/topkgradient%28__input_k_name_%29.md): Creates a TopKGradient operation and returns the result tensor.
+- [topKWithGradientTensor:source:kTensor:name:](mpsgraph/topkgradient%28__input_ktensor_name_%29.md): Creates a TopKGradient operation and returns the result tensor.
+- [topKWithGradientTensor:source:axis:k:name:](mpsgraph/topkgradient%28__source_axis_k_name_%29.md): Creates a TopKGradient operation and returns the result tensor.
+- [topKWithGradientTensor:source:axisTensor:kTensor:name:](mpsgraph/topkgradient%28__source_axistensor_ktensor_name_%29.md): Creates a TopKGradient operation and returns the result tensor.
+- [transposeTensor:permutation:name:](mpsgraph/transpose%28__permutation_name_%29.md): Creates a permutation operation and returns the result tensor.
+- [transposeTensor:dimension:withDimension:name:](mpsgraph/transposetensor%28__dimension_withdimension_name_%29.md): Creates a transpose operation and returns the result tensor.
+- [truncateWithTensor:name:](mpsgraph/truncate%28__name_%29.md): Applies the truncate operation to the input tensor elements.
+- [variableWithData:shape:dataType:name:](mpsgraph/variable%28with_shape_datatype_name_%29.md): Creates a variable operation and returns the result tensor.
+- [variableFromTensorWithTensor:name:](mpsgraph/variablefromtensor%28__name_%29.md): Creates a variable from an input tensor.
+- [varianceOfTensor:axes:name:](mpsgraph/variance%28of_axes_name_%29.md): Returns the variance of the first input along the specified axes.
+- [varianceOfTensor:meanTensor:axes:name:](mpsgraph/variance%28of_mean_axes_name_%29.md): Returns the variance of the first input along the specified axes when the mean has been precomputed.
+- [whileWithInitialInputs:before:after:name:](mpsgraph/while%28initialinputs_before_after_name_%29.md): Adds a while loop operation.
+
+### Type Methods
+
+- [new](mpsgraph/new%28%29.md): Creates a new graph to insert nodes in.
+
+## Relationships
+
+### Inherits From
+
+- [MPSGraphObject](mpsgraphobject.md)
+
+## See Also
+
+### Classes
+
+- [MPSGraphCompilationDescriptor](mpsgraphcompilationdescriptor.md): A class that consists of all the levers for compiling graphs.
+- [MPSGraphConvolution2DOpDescriptor](mpsgraphconvolution2dopdescriptor.md): A class that describes the properties of a 2D-convolution operator.
+- [MPSGraphConvolution3DOpDescriptor](mpsgraphconvolution3dopdescriptor.md): A class that describes the properties of a 3D-convolution operator.
+- [MPSGraphCreateSparseOpDescriptor](mpsgraphcreatesparseopdescriptor.md): A class that describes the properties of a create sparse operation.
+- [MPSGraphDepthwiseConvolution2DOpDescriptor](mpsgraphdepthwiseconvolution2dopdescriptor.md): A class that defines the parameters for a 2D-depthwise convolution operation.
+- [MPSGraphDepthwiseConvolution3DOpDescriptor](mpsgraphdepthwiseconvolution3dopdescriptor.md): The class that defines the parameters for a 3D-depthwise convolution operation.
+- [MPSGraphDevice](mpsgraphdevice.md): A class that describes the compute device.
+- [MPSGraphExecutable](mpsgraphexecutable.md): The compiled representation of a compute graph executable.
+- [MPSGraphExecutableExecutionDescriptor](mpsgraphexecutableexecutiondescriptor.md): A class that consists of all the levers to synchronize and schedule executable execution.
+- [MPSGraphExecutableSerializationDescriptor](mpsgraphexecutableserializationdescriptor.md): A class that consists of all the levers to serialize an executable.
+- [MPSGraphExecutionDescriptor](mpsgraphexecutiondescriptor.md): A class that consists of all the levers to synchronize and schedule graph execution.
+- [MPSGraphFFTDescriptor](mpsgraphfftdescriptor.md): The class that defines the parameters for a fast Fourier transform (FFT) operation.
+- [MPSGraphGRUDescriptor](mpsgraphgrudescriptor.md): The class that defines the parameters for a gated recurrent unit (GRU) operation.
+- [MPSGraphImToColOpDescriptor](mpsgraphimtocolopdescriptor.md): The class that defines the parameters for an image to column or column to image operation.
+- [MPSGraphLSTMDescriptor](mpsgraphlstmdescriptor.md): The class that defines the parameters for a long short-term memory (LSTM) operation.

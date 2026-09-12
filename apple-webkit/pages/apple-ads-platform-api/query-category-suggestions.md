@@ -1,0 +1,243 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/query-category-suggestions](https://developer.apple.com/documentation/apple-ads-platform-api/query-category-suggestions)
+
+# Query Category Suggestions
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Web Service Endpoint  
+**Availability:** Apple Ads Platform API 1.0+
+
+Query category suggestions for apps or brands using either a discovery or search route based on the query type.
+
+## URL
+
+```http
+POST https://api.ads.apple.com/v1/suggestions/categories/query
+```
+
+## Header Parameters
+
+- `X-Ap-Context` — `string` (required):
+
+## HTTP Body
+
+Content type: `application/json`
+
+Type: `RecommendationQueryRequest`
+
+See [RecommendationQueryRequest](recommendationqueryrequest.md). This endpoint supports two query routes selected by the `queryType` filter: `SUGGESTION` discovers categories for a specific app or brand, and `SEARCH` looks up or searches categories by name.
+
+## Response Codes
+
+- `200` OK — `RecommendationQueryCategorySuggestionResponse`:
+- `400` Bad Request — `RecommendationResponseBody`:
+- `401` Unauthorized — `RecommendationResponseBody`:
+- `403` Forbidden — `RecommendationResponseBody`:
+- `404` Not Found — `RecommendationResponseBody`:
+- `429` Too Many Requests — `RecommendationResponseBody`:
+- `500` Internal Server Error — `RecommendationResponseBody`:
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Each result is a [CategorySuggestion](categorysuggestion.md) object with a `category` name (for example, `"Productivity"`) and a `popularity` score. Sort by `popularity DESC` and use `pagination` to page through results.
+
+See [FilterOperator](recommendationfilteroperator.md) for the full set of supported comparison operators.
+
+<a id="Filterable-Fields"></a>
+
+### Filterable Fields
+
+| Field | Type | Operators | Description |
+| --- | --- | --- | --- |
+| `queryType` | string (enum) | `EQUALS` | Required. Selects this query route: `SUGGESTION` discovers categories for an app or brand, and `SEARCH` looks up or searches categories by name. |
+| `promotedObjectId` | string | `EQUALS` | Required for the `SUGGESTION` route. The app or brand ID. |
+| `promotedObjectType` | string (enum) | `EQUALS` | Required for the `SUGGESTION` route. Can be either `APPSTORE_APP` or `BUSINESS_BRAND`. |
+| `category` | string | `IN`, `LIKE` | Required for the `SEARCH` route. `IN` fetches popularity for specific named categories. `LIKE` performs a partial string match search across all available categories. |
+
+<a id="Payload-Examples"></a>
+
+## Payload Examples
+
+This example discovers category suggestions for a brand using the SUGGESTION route. The response is a list of category names with their relative popularity scores. The same route also works for apps, using `APPSTORE_APP` as the `promotedObjectType`.
+
+**Suggestion for Brand**
+
+<a id="Request"></a>
+
+### Request
+
+```json
+POST /v1/suggestions/categories/query
+
+{
+ "filters": [
+   {
+     "field": "promotedObjectId",
+     "operator": "EQUALS",
+     "value": [
+       "123456"
+     ]
+   },
+   {
+     "field": "promotedObjectType",
+     "operator": "EQUALS",
+     "value": [
+       "BUSINESS_BRAND"
+     ]
+   },
+   {
+     "field": "queryType",
+     "operator": "EQUALS",
+     "value": [
+       "SUGGESTION"
+     ]
+   }
+ ]
+}
+```
+
+<a id="Response"></a>
+
+### Response
+
+```json
+{
+ "result": [
+   {
+     "category": "Productivity",
+     "popularity": 90
+   },
+   {
+     "category": "Business",
+     "popularity": 78
+   },
+   {
+     "category": "Utilities",
+     "popularity": 65
+   }
+ ],
+ "pagination": {
+   "offset": 0,
+   "pageSize": 20,
+   "totalCount": 3
+ }
+}
+```
+
+**Search by Category Name**
+
+<a id="Request"></a>
+
+### Request
+
+```json
+POST /v1/suggestions/categories/query
+
+{
+ "filters": [
+   {
+     "field": "queryType",
+     "operator": "EQUALS",
+     "value": [
+       "SEARCH"
+     ]
+   },
+   {
+     "field": "category",
+     "operator": "IN",
+     "value": [
+       "Productivity",
+       "Business"
+     ]
+   }
+ ]
+}
+```
+
+<a id="Response"></a>
+
+### Response
+
+```json
+{
+ "result": [
+   {
+     "category": "Productivity",
+     "popularity": 90
+   },
+   {
+     "category": "Business",
+     "popularity": 78
+   }
+ ],
+ "pagination": {
+   "offset": 0,
+   "pageSize": 20,
+   "totalCount": 2
+ }
+}
+```
+
+**Search by Partial Match**
+
+This example uses `LIKE` to perform a partial string match search across all available categories, rather than looking up specific named categories with `IN`.
+
+<a id="Request"></a>
+
+### Request
+
+```json
+POST /v1/suggestions/categories/query
+
+{
+ "filters": [
+   {
+     "field": "queryType",
+     "operator": "EQUALS",
+     "value": [
+       "SEARCH"
+     ]
+   },
+   {
+     "field": "category",
+     "operator": "LIKE",
+     "value": [
+       "prod"
+     ]
+   }
+ ]
+}
+```
+
+<a id="Response"></a>
+
+### Response
+
+```json
+{
+ "result": [
+   {
+     "category": "Productivity",
+     "popularity": 90
+   },
+   {
+     "category": "Food & Drink",
+     "popularity": 42
+   }
+ ],
+ "pagination": {
+   "offset": 0,
+   "pageSize": 20,
+   "totalCount": 2
+ }
+}
+```
+
+## See Also
+
+- [Query Keyword Suggestions](query-keyword-suggestions.md): Query keyword suggestions based on search terms and App Store countries or regions using structured filters.
+- [Query Phrase Suggestions](query-phrase-suggestions.md): Query phrase suggestions using either a discovery or search route based on the query type.
+- [Query Target CPA Suggestion](query-target-cpa-suggestion.md): Retrieve the recommended target CPA for a new Maximize Conversions campaign on the App Store.

@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applearchive/archiveencryptioncontext/sign(encryptedstream:encryptioncontext:)](https://developer.apple.com/documentation/applearchive/archiveencryptioncontext/sign(encryptedstream:encryptioncontext:))
+
+# sign(encryptedStream:encryptionContext:)
+
+**Framework:** Apple Archive  
+**Kind:** Type Method  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS · watchOS 8.0+
+
+Signs an encrypted archive using the credentials stored in the specified encryption context.
+
+## Declaration
+
+```swift
+static func sign(encryptedStream: ArchiveByteStream, encryptionContext context: ArchiveEncryptionContext) throws
+```
+
+## Parameters
+
+- `encryptedStream`: A read-write byte stream that points to an encrypted archive.
+- `context`: The encryption context that provides the credentials.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Close the encrypted stream before calling this function, and create the archive with a `signatureMode` other than [none](signaturemode-swift.struct/none.md). Create the context that you pass to this function from the same archive and it must contain the signature encryption key and the signing private key.
+
+## See Also
+
+### Signing an encryption context
+
+- [signatureMode](signaturemode-swift.property.md): The signature mode, such as an ECDSA Nist P-256 signature.
+- [ArchiveEncryptionContext.SignatureMode](signaturemode-swift.struct.md): Constants that describe the signature modes of an encryption context.

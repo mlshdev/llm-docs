@@ -1,0 +1,53 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/build/attributes-data.dictionary](https://developer.apple.com/documentation/appstoreconnectapi/build/attributes-data.dictionary)
+
+# Build.Attributes
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.0+
+
+Attributes that describe a Builds resource.
+
+## Declaration
+
+```
+object Build.Attributes
+```
+
+## Properties
+
+- `expired` — `boolean`: A Boolean value that indicates if the build has expired. An expired build is unavailable for testing.
+- `iconAssetToken` — `ImageAsset`: The icon of the uploaded build.
+- `minOsVersion` — `string`: The minimum operating system version needed to test a build.
+- `processingState` — `string`: The processing state of the build indicating that it is not yet available for testing.
+  **Allowed values:** `PROCESSING`, `FAILED`, `INVALID`, `VALID`
+- `version` — `string`: The version number of the uploaded build.
+- `usesNonExemptEncryption` — `boolean`: A Boolean value that indicates whether the build uses non-exempt encryption.
+- `uploadedDate` — `date-time`: The date and time the build was uploaded to App Store Connect.
+- `expirationDate` — `date-time`: The date and time the build  will auto-expire and no longer be available for testing.
+- `buildAudienceType` — `BuildAudienceType`:
+- `computedMinMacOsVersion` — `string`:
+- `lsMinimumSystemVersion` — `string`:
+- `computedMinVisionOsVersion` — `string`:
+
+## Mentioned In
+
+- [App Store Connect API 4.1 release notes](../app-store-connect-api-4-1-release-notes.md)
+
+## Topics
+
+### Types
+
+- [BuildAudienceType](../buildaudiencetype.md): A string that represents the App Store Connect audience for a build.
+
+## See Also
+
+### Related Documentation
+
+- [Builds](../builds.md): Manage builds for testers and submit builds for review.
+
+### Attributes and Relationships
+
+- [Build.Relationships](relationships-data.dictionary.md): The relationships you include in the request and those on which you can operate.

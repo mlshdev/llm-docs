@@ -1,0 +1,48 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/pencilsqueezegesturephase](https://developer.apple.com/documentation/swiftui/pencilsqueezegesturephase)
+
+# PencilSqueezeGesturePhase
+
+**Framework:** SwiftUI  
+**Kind:** Enumeration  
+**Availability:** iOS 17.5+ · iPadOS 17.5+ · Mac Catalyst 17.5+ · macOS 14.5+ · visionOS 26.2+
+
+Describes the phase and value of an Apple Pencil squeeze gesture.
+
+## Declaration
+
+```swift
+@frozen enum PencilSqueezeGesturePhase
+```
+
+<a id="overview"></a>
+
+## Overview
+
+When you use the [onPencilSqueeze(perform:)](view/onpencilsqueeze%28perform_%29.md) view modifier, you can handle the Apple Pencil squeeze gesture’s phase in the `action` closure.
+
+## Topics
+
+### Enumeration Cases
+
+- [PencilSqueezeGesturePhase.active(\_:)](pencilsqueezegesturephase/active%28__%29.md): The user started squeezing their Apple Pencil.
+- [PencilSqueezeGesturePhase.ended(\_:)](pencilsqueezegesturephase/ended%28__%29.md): The user successfully completed a squeeze gesture.
+- [PencilSqueezeGesturePhase.failed](pencilsqueezegesturephase/failed.md): The user started squeezing their Apple Pencil but failed to successfully complete the gesture.
+
+## Relationships
+
+### Conforms To
+
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+
+## See Also
+
+### Recognizing Apple Pencil gestures
+
+- [onPencilDoubleTap(perform:)](view/onpencildoubletap%28perform_%29.md): Adds an action to perform after the user double-taps their Apple Pencil.
+- [onPencilSqueeze(perform:)](view/onpencilsqueeze%28perform_%29.md): Adds an action to perform when the user squeezes their Apple Pencil.
+- [preferredPencilDoubleTapAction](environmentvalues/preferredpencildoubletapaction.md): The action that the user prefers to perform after double-tapping their Apple Pencil, as selected in the Settings app.
+- [preferredPencilSqueezeAction](environmentvalues/preferredpencilsqueezeaction.md): The action that the user prefers to perform when squeezing their Apple Pencil, as selected in the Settings app.
+- [PencilPreferredAction](pencilpreferredaction.md): An action that the user prefers to perform after double-tapping their Apple Pencil.
+- [PencilDoubleTapGestureValue](pencildoubletapgesturevalue.md): Describes the value of an Apple Pencil double-tap gesture.
+- [PencilSqueezeGestureValue](pencilsqueezegesturevalue.md): Describes the value of an Apple Pencil squeeze gesture.
+- [PencilHoverPose](pencilhoverpose.md): A value describing the location and distance of an Apple Pencil hovering in the area above a view’s bounds.

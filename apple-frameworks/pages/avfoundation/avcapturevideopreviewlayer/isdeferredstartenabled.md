@@ -1,0 +1,77 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avcapturevideopreviewlayer/isdeferredstartenabled](https://developer.apple.com/documentation/avfoundation/avcapturevideopreviewlayer/isdeferredstartenabled)
+
+# isDeferredStartEnabled (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+
+
+A `BOOL` value that indicates whether to defer starting this preview layer.
+
+## Declaration
+
+```swift
+var isDeferredStartEnabled: Bool { get set }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+When this value is `true`, the session does not prepare the output’s resources until some time after [startRunning()](../avcapturesession/startrunning%28%29.md) returns. You can start the visual parts of your user interface (e.g. preview) prior to other parts (e.g. photo/movie capture, metadata output, etc..) to improve startup performance. Set this value to `false` if your app needs video preview immediately for startup, and `true` if it does not.
+
+By default, this value is `false` for [AVCaptureVideoPreviewLayer](../avcapturevideopreviewlayer.md) objects, since this object is used to display preview. For best session start performance, set [isDeferredStartEnabled](isdeferredstartenabled.md) to `false` for preview layers. If your app contains multiple preview layers, you may want to display the main preview layer as soon as possible and allow the remaining layers to display subsequently. In this case, set [isDeferredStartEnabled](isdeferredstartenabled.md) to `true` for the remaining layers.
+
+> **Note**
+
+> Setting this property to the same value for all outputs, including [AVCaptureVideoPreviewLayer](../avcapturevideopreviewlayer.md) and [AVCaptureOutput](../avcaptureoutput.md), is equivalent to not using deferred start.
+
+If [isDeferredStartSupported](isdeferredstartsupported.md) is `false`, setting this property value to `true` results in the session throwing an `NSInvalidArgumentException`.
+
+> **Note**
+
+> Set this value before calling [commitConfiguration()](../avcapturesession/commitconfiguration%28%29.md) as it requires a lengthy reconfiguration of the capture render pipeline.
+
+## See Also
+
+### Configuring deferred start
+
+- [isDeferredStartSupported](isdeferredstartsupported.md): A `BOOL` value that indicates whether the preview layer supports deferred start.
+
+# deferredStartEnabled (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+
+
+A `BOOL` value that indicates whether to defer starting this preview layer.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, getter=isDeferredStartEnabled) BOOL deferredStartEnabled;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+When this value is `true`, the session does not prepare the output’s resources until some time after [startRunning](../avcapturesession/startrunning%28%29.md) returns. You can start the visual parts of your user interface (e.g. preview) prior to other parts (e.g. photo/movie capture, metadata output, etc..) to improve startup performance. Set this value to `false` if your app needs video preview immediately for startup, and `true` if it does not.
+
+By default, this value is `false` for [AVCaptureVideoPreviewLayer](../avcapturevideopreviewlayer.md) objects, since this object is used to display preview. For best session start performance, set [deferredStartEnabled](isdeferredstartenabled.md) to `false` for preview layers. If your app contains multiple preview layers, you may want to display the main preview layer as soon as possible and allow the remaining layers to display subsequently. In this case, set [deferredStartEnabled](isdeferredstartenabled.md) to `true` for the remaining layers.
+
+> **Note**
+
+> Setting this property to the same value for all outputs, including [AVCaptureVideoPreviewLayer](../avcapturevideopreviewlayer.md) and [AVCaptureOutput](../avcaptureoutput.md), is equivalent to not using deferred start.
+
+If [deferredStartSupported](isdeferredstartsupported.md) is `false`, setting this property value to `true` results in the session throwing an `NSInvalidArgumentException`.
+
+> **Note**
+
+> Set this value before calling [commitConfiguration](../avcapturesession/commitconfiguration%28%29.md) as it requires a lengthy reconfiguration of the capture render pipeline.
+
+## See Also
+
+### Configuring deferred start
+
+- [deferredStartSupported](isdeferredstartsupported.md): A `BOOL` value that indicates whether the preview layer supports deferred start.

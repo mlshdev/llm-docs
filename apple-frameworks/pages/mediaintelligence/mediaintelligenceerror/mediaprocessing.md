@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mediaintelligence/mediaintelligenceerror/mediaprocessing](https://developer.apple.com/documentation/mediaintelligence/mediaintelligenceerror/mediaprocessing)
+
+# MediaIntelligenceError.mediaProcessing
+
+**Framework:** Media Intelligence  
+**Kind:** Case  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+The framework can’t process a media asset.
+
+## Declaration
+
+```swift
+case mediaProcessing
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This error occurs when the framework can’t read or process an image or video asset. This can happen when the asset’s URL is unreachable, the file format is unsupported, or the asset data is corrupt.
+
+## See Also
+
+### Errors
+
+- [MediaIntelligenceError.faceGroupProcessing](facegroupprocessing.md): The framework can’t complete a face grouping operation.
+- [MediaIntelligenceError.resultFetching](resultfetching.md): The framework can’t retrieve analysis results.
+- [MediaIntelligenceError.workingDirectory](workingdirectory.md): The framework can’t access the working directory.

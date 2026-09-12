@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "project": "apple-xcode",
+  "title": "Apple Xcode and developer tools",
+  "homepage": "https://developer.apple.com/documentation/xcode",
+  "catalog": "xcode",
+  "tag": "snapshot-ef15f2517b3c",
+  "snapshotDigest": "ef15f2517b3cf1caffa4e230469793956bae2795781ded9695249cca474ecb70",
+  "contentDigest": "20d06e06127ece2f7d714ef2ec558df44009dbb37983eadee49466036bf397f9",
+  "capturedAt": "2026-09-12T21:04:59.670Z",
+  "documentCount": 3293,
+  "notes": [
+    "Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.",
+    "21 frameworks in this catalog, captured at 2026-09-12T21:04:59.670Z.",
+    "Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.",
+    "Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream."
+  ]
+}

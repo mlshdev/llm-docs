@@ -1,0 +1,110 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/1556369-kconnsuite](https://developer.apple.com/documentation/coreservices/1556369-kconnsuite)
+
+# kConnSuite
+
+**Interface language:** Objective-C
+
+**Framework:** Core Services  
+**Kind:** Enumeration  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+## Declaration
+
+```objectivec
+enum : OSType {
+    ...
+};
+```
+
+## Topics
+
+### Constants
+
+- [cADBAddress](1556369-kconnsuite/cadbaddress.md)
+- [cAddressSpec](1556369-kconnsuite/caddressspec.md)
+- [cAppleTalkAddress](1556369-kconnsuite/cappletalkaddress.md)
+- [cBusAddress](1556369-kconnsuite/cbusaddress.md)
+- [cDevSpec](1556369-kconnsuite/cdevspec.md)
+- [cEthernetAddress](1556369-kconnsuite/cethernetaddress.md)
+- [cFireWireAddress](1556369-kconnsuite/cfirewireaddress.md)
+- [cIPAddress](1556369-kconnsuite/cipaddress.md)
+- [cLocalTalkAddress](1556369-kconnsuite/clocaltalkaddress.md)
+- [cSCSIAddress](1556369-kconnsuite/cscsiaddress.md)
+- [cTokenRingAddress](1556369-kconnsuite/ctokenringaddress.md)
+- [cUSBAddress](1556369-kconnsuite/cusbaddress.md)
+- [eADB](1556369-kconnsuite/eadb.md)
+- [eAddressSpec](1556369-kconnsuite/eaddressspec.md)
+- [eAnalogAudio](1556369-kconnsuite/eanalogaudio.md)
+- [eAppleTalk](1556369-kconnsuite/eappletalk.md)
+- [eAudioLineIn](1556369-kconnsuite/eaudiolinein.md)
+- [eAudioLineOut](1556369-kconnsuite/eaudiolineout.md)
+- [eAudioOut](1556369-kconnsuite/eaudioout.md)
+- [eBus](1556369-kconnsuite/ebus.md)
+- [eCDROM](1556369-kconnsuite/ecdrom.md)
+- [eCommSlot](1556369-kconnsuite/ecommslot.md)
+- [eConduit](1556369-kconnsuite/econduit.md)
+- [eDVD](1556369-kconnsuite/edvd.md)
+- [eDeviceType](1556369-kconnsuite/edevicetype.md)
+- [eDigitalAudio](1556369-kconnsuite/edigitalaudio.md)
+- [eDisplay](1556369-kconnsuite/edisplay.md)
+- [eEthernet](1556369-kconnsuite/eethernet.md)
+- [eFireWire](1556369-kconnsuite/efirewire.md)
+- [eFloppy](1556369-kconnsuite/efloppy.md)
+- [eHD](1556369-kconnsuite/ehd.md)
+- [eIP](1556369-kconnsuite/eip.md)
+- [eIRTalk](1556369-kconnsuite/eirtalk.md)
+- [eInfrared](1556369-kconnsuite/einfrared.md)
+- [eIrDA](1556369-kconnsuite/eirda.md)
+- [eKeyboard](1556369-kconnsuite/ekeyboard.md)
+- [eLCD](1556369-kconnsuite/elcd.md)
+- [eLocalTalk](1556369-kconnsuite/elocaltalk.md)
+- [eMacIP](1556369-kconnsuite/emacip.md)
+- [eMacVideo](1556369-kconnsuite/emacvideo.md)
+- [eMicrophone](1556369-kconnsuite/emicrophone.md)
+- [eModem](1556369-kconnsuite/emodem.md)
+- [eModemPort](1556369-kconnsuite/emodemport.md)
+- [eModemPrinterPort](1556369-kconnsuite/emodemprinterport.md)
+- [eMonitorOut](1556369-kconnsuite/emonitorout.md)
+- [eMouse](1556369-kconnsuite/emouse.md)
+- [eNuBus](1556369-kconnsuite/enubus.md)
+- [eNuBusCard](1556369-kconnsuite/enubuscard.md)
+- [ePCIbus](1556369-kconnsuite/epcibus.md)
+- [ePCIcard](1556369-kconnsuite/epcicard.md)
+- [ePCcard](1556369-kconnsuite/epccard.md)
+- [ePDScard](1556369-kconnsuite/epdscard.md)
+- [ePDSslot](1556369-kconnsuite/epdsslot.md)
+- [ePPP](1556369-kconnsuite/eppp.md)
+- [ePointingDevice](1556369-kconnsuite/epointingdevice.md)
+- [ePostScript](1556369-kconnsuite/epostscript.md)
+- [ePrinter](1556369-kconnsuite/eprinter.md)
+- [ePrinterPort](1556369-kconnsuite/eprinterport.md)
+- [eProtocol](1556369-kconnsuite/eprotocol.md)
+- [eSCSI](1556369-kconnsuite/escsi.md)
+- [eSVGA](1556369-kconnsuite/esvga.md)
+- [eSerial](1556369-kconnsuite/eserial.md)
+- [eSpeakers](1556369-kconnsuite/espeakers.md)
+- [eStorageDevice](1556369-kconnsuite/estoragedevice.md)
+- [eSvideo](1556369-kconnsuite/esvideo.md)
+- [eTokenRing](1556369-kconnsuite/etokenring.md)
+- [eTrackball](1556369-kconnsuite/etrackball.md)
+- [eTrackpad](1556369-kconnsuite/etrackpad.md)
+- [eUSB](1556369-kconnsuite/eusb.md)
+- [eVideoIn](1556369-kconnsuite/evideoin.md)
+- [eVideoMonitor](1556369-kconnsuite/evideomonitor.md)
+- [eVideoOut](1556369-kconnsuite/evideoout.md)
+- [kConnSuite](1556369-kconnsuite/kconnsuite.md)
+- [pATMachine](1556369-kconnsuite/patmachine.md)
+- [pATType](1556369-kconnsuite/pattype.md)
+- [pATZone](1556369-kconnsuite/patzone.md)
+- [pConduit](1556369-kconnsuite/pconduit.md)
+- [pDNS](1556369-kconnsuite/pdns.md)
+- [pDeviceAddress](1556369-kconnsuite/pdeviceaddress.md)
+- [pDeviceType](1556369-kconnsuite/pdevicetype.md)
+- [pDottedDecimal](1556369-kconnsuite/pdotteddecimal.md)
+- [pNetwork](1556369-kconnsuite/pnetwork.md)
+- [pNode](1556369-kconnsuite/pnode.md)
+- [pPort](1556369-kconnsuite/pport.md)
+- [pProtocol](1556369-kconnsuite/pprotocol.md)
+- [pSCSIBus](1556369-kconnsuite/pscsibus.md)
+- [pSCSILUN](1556369-kconnsuite/pscsilun.md)
+- [pSocket](1556369-kconnsuite/psocket.md)

@@ -1,0 +1,46 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/walletpasses/unregister-a-pass-for-update-notifications](https://developer.apple.com/documentation/walletpasses/unregister-a-pass-for-update-notifications)
+
+# Unregister a Pass for Update Notifications
+
+**Interface language:** Data
+
+**Framework:** Wallet Passes  
+**Kind:** Web Service Endpoint  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · watchOS 3.0+
+
+Stop sending update notifications for a pass on a device.
+
+## URL
+
+```http
+DELETE https://yourpasshost.example.com/v1/devices/{deviceLibraryIdentifier}/registrations/{passTypeIdentifier}/{serialNumber}
+```
+
+## Path Parameters
+
+- `deviceLibraryIdentifier` — `string` (required): The identifier for the device that’s making the request.
+- `passTypeIdentifier` — `string` (required): The pass type identifier of the pass to unregister. This value corresponds to the value of the `passTypeIdentifier` key of the pass.
+- `serialNumber` — `string` (required): The serial number of the pass to unregister. This value corresponds to the `serialNumber` key of the pass.
+
+## Header Parameters
+
+- `Authorization` — `string`: The authentication for a pass. The value is the word `ApplePass`, followed by a space, followed by the `authenticationToken` key of the pass.
+  **Allowed values:** `ApplePass {passAuthorizationToken}`
+
+## Response Codes
+
+- `200` Device Unregistered: The pass unregistration is successful.
+- `401` Request Not Authorized: The request isn’t authorized.
+
+## See Also
+
+### Pass updates
+
+- [Adding a Web Service to Update Passes](adding-a-web-service-to-update-passes.md): Implement a web server to register, update, and unregister a pass on a device.
+- [Register a Pass for Update Notifications](register-a-pass-for-update-notifications.md): Set up change notifications for a pass on a device.
+- [Get the List of Updatable Passes](get-the-list-of-updatable-passes.md): Send the serial numbers for updated passes to a device.
+- [Send an Updated Pass](send-an-updated-pass.md): Create and sign an updated pass, and send it to the device.
+- [Log a Message](log-a-message.md): Record a message on your server.
+- [PushToken](pushtoken.md): An object that contains the push notification token for a registered pass on a device.
+- [SerialNumbers](serialnumbers.md): An object that contains serial numbers for the updatable passes on a device.
+- [LogEntries](logentries.md): An object that contains an array of messages.

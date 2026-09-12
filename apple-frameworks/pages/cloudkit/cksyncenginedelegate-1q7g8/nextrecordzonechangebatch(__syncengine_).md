@@ -1,0 +1,59 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cloudkit/cksyncenginedelegate-1q7g8/nextrecordzonechangebatch(_:syncengine:)](https://developer.apple.com/documentation/cloudkit/cksyncenginedelegate-1q7g8/nextrecordzonechangebatch(_:syncengine:))
+
+# nextRecordZoneChangeBatch(\_:syncEngine:)
+
+**Framework:** CloudKit  
+**Kind:** Instance Method  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS · watchOS 10.0+
+
+Asks the delegate to provide the next set of record changes to send to the server.
+
+## Declaration
+
+```swift
+func nextRecordZoneChangeBatch(_ context: CKSyncEngine.SendChangesContext, syncEngine: CKSyncEngine) async -> CKSyncEngine.RecordZoneChangeBatch?
+```
+
+## Parameters
+
+- `context`: The reason for the sync engine’s request, and any additional options that request is using.
+- `syncEngine`: The sync engine asking about pending changes.
+
+<a id="return-value"></a>
+
+## Return Value
+
+If there are pending record changes, a batch of those changes for the sync engine to process; otherwise, `nil` to indicate there are no changes to send.
+
+<a id="discussion"></a>
+
+## Discussion
+
+In your implementation, ask the sync engine’s state for any pending record zone changes and then return a change batch containing a [CKRecord](../ckrecord.md) instance for each record identifier the state provides, as the following example shows:
+
+```swift
+func nextRecordZoneChangeBatch(
+    _ context: CKSyncEngine.SendChangesContext,
+    syncEngine: CKSyncEngine
+) async -> CKSyncEngine.RecordZoneChangeBatch? {
+
+    // Get the pending record changes and filter by the context's scope.
+    let pendingChanges = syncEngine.state.pendingRecordZoneChanges
+        .filter { context.options.zoneIDs.contains($0) }
+
+    // Return a change batch that contains the corresponding materialized records.
+    return await CKSyncEngine.RecordZoneChangeBatch(
+        pendingChanges: pendingChanges) { self.recordFor(id: $0) }
+}
+```
+
+When syncing, you must make sure to only return a batch for the scope specified in the callback. You can do this by checking the [scope](../cksyncengine-5sie5/sendchangesoptions/scope-swift.property.md) property in [options](../cksyncengine-5sie5/sendchangescontext/options.md). If you do not do this, you may encounter a [invalidArguments](../ckerror/invalidarguments.md) error.
+
+For both scheduled and manual send operations, the sync engine calls this method repeatedly until your app has no more changes and returns `nil`.
+
+## See Also
+
+### Sending changes
+
+- [CKSyncEngine.SendChangesContext](../cksyncengine-5sie5/sendchangescontext.md): The context of an attempt to send changes to the server.
+- [CKSyncEngine.RecordZoneChangeBatch](../cksyncengine-5sie5/recordzonechangebatch.md): A type that contains the record changes for a single send operation.

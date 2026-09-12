@@ -1,0 +1,97 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/homekit/hmcharacteristicmetadata/units](https://developer.apple.com/documentation/homekit/hmcharacteristicmetadata/units)
+
+# units (Swift)
+
+**Framework:** HomeKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 8.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 2.0+
+
+The units of the characteristic value.
+
+## Declaration
+
+```swift
+var units: String? { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The [units](units.md) property tells you how to use the corresponding characteristic’s [value](../hmcharacteristic/value.md) in calculations or how to format it for presentation. For example, you can extend the [HMCharacteristic](../hmcharacteristic.md) class with a computed property that returns the appropriate symbol to accompany the value in printed output:
+
+```swift
+extension HMCharacteristic {
+    var symbol: String {
+        guard let units = metadata?.units else { return "" }
+
+        switch units {
+        case HMCharacteristicMetadataUnitsPercentage:              return "%"
+        case HMCharacteristicMetadataUnitsPartsPerMillion:         return "ppm"
+        case HMCharacteristicMetadataUnitsCelsius:                 return "°C"
+        case HMCharacteristicMetadataUnitsFahrenheit:              return "°F"
+        case HMCharacteristicMetadataUnitsSeconds:                 return "s"
+        case HMCharacteristicMetadataUnitsLux:                     return "lx"
+        case HMCharacteristicMetadataUnitsMicrogramsPerCubicMeter: return "μg/m³"
+        case HMCharacteristicMetadataUnitsArcDegree:               return "°"
+        default:                                                   return ""
+        }
+    }
+}
+```
+
+See [Characteristic Units](../characteristic-units.md) for the complete list of possible units.
+
+## See Also
+
+### Specifying units
+
+- [Characteristic Units](../characteristic-units.md): Descriptions of the units of a characteristic.
+
+# units (Objective-C)
+
+**Framework:** HomeKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 14.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 2.0+
+
+The units of the characteristic value.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, readonly, nullable) NSString * units;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The [units](units.md) property tells you how to use the corresponding characteristic’s [value](../hmcharacteristic/value.md) in calculations or how to format it for presentation. For example, you can extend the [HMCharacteristic](../hmcharacteristic.md) class with a computed property that returns the appropriate symbol to accompany the value in printed output:
+
+```swift
+extension HMCharacteristic {
+    var symbol: String {
+        guard let units = metadata?.units else { return "" }
+
+        switch units {
+        case HMCharacteristicMetadataUnitsPercentage:              return "%"
+        case HMCharacteristicMetadataUnitsPartsPerMillion:         return "ppm"
+        case HMCharacteristicMetadataUnitsCelsius:                 return "°C"
+        case HMCharacteristicMetadataUnitsFahrenheit:              return "°F"
+        case HMCharacteristicMetadataUnitsSeconds:                 return "s"
+        case HMCharacteristicMetadataUnitsLux:                     return "lx"
+        case HMCharacteristicMetadataUnitsMicrogramsPerCubicMeter: return "μg/m³"
+        case HMCharacteristicMetadataUnitsArcDegree:               return "°"
+        default:                                                   return ""
+        }
+    }
+}
+```
+
+See [Characteristic Units](../characteristic-units.md) for the complete list of possible units.
+
+## See Also
+
+### Specifying units
+
+- [Characteristic Units](../characteristic-units.md): Descriptions of the units of a characteristic.

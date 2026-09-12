@@ -1,0 +1,12 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/simd/simd_float4x3/*(_:_:)-6v4mm](https://developer.apple.com/documentation/simd/simd_float4x3/*(_:_:)-6v4mm)
+
+# \*(\_:\_:)
+
+**Framework:** simd  
+**Kind:** Operator
+
+## Declaration
+
+```swift
+static func * (lhs: Float, rhs: simd_float4x3) -> simd_float4x3
+```

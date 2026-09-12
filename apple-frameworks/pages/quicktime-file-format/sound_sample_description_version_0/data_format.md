@@ -1,0 +1,30 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/sound_sample_description_version_0/data_format](https://developer.apple.com/documentation/quicktime-file-format/sound_sample_description_version_0/data_format)
+
+# Data format
+
+**Framework:** QuickTime File Format  
+**Kind:** Data field
+
+A 32-bit integer indicating the format of the stored data.
+
+<a id="Overview"></a>
+
+## Overview
+
+This depends on the media type, but is usually either the compression format or the media type.
+
+## See Also
+
+### Data fields
+
+- [Sample description size](sample_description_size.md): A 32-bit integer indicating the number of bytes in the sample description.
+- [Reserved](reserved.md): Six bytes.
+- [Data reference index](data_reference_index.md): A 16-bit integer that contains the index of the data reference to use to retrieve data associated with samples that use this sample description.
+- [Version](version.md): A 16-bit integer that holds the sample description version.
+- [Revision level](revision_level.md): A 16-bit integer.
+- [Vendor](vendor.md): A 32-bit integer.
+- [Number of channels](number_of_channels.md): A 16-bit integer that indicates the number of sound channels used by the sound sample.
+- [Sample size](sample_size.md): A 16-bit integer that specifies the number of bits in each uncompressed sound sample.
+- [Compression ID](compression_id.md): A 16-bit integer.
+- [Packet size](packet_size.md): A 16-bit integer.
+- [Sample rate](sample_rate.md): A 32-bit unsigned fixed-point number (16.16) that indicates the rate at which the sound samples were obtained.

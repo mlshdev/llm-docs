@@ -1,0 +1,172 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/post-ad-accounts](https://developer.apple.com/documentation/apple-ads-platform-api/post-ad-accounts)
+
+# Create Ad Accounts
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Web Service Endpoint  
+**Availability:** Apple Ads Platform API 1.0+
+
+Create a new ad account under a specified organization.
+
+## URL
+
+```http
+POST https://api.ads.apple.com/v1/ad-accounts
+```
+
+## Header Parameters
+
+- `X-Ap-Context` — `string`:
+
+## HTTP Body
+
+Content type: `application/json`
+
+Type: `AdAccountCreate`
+
+## Response Codes
+
+- `200` OK — `AdAccountResponse`: Successful operation. Returns [AdAccountResponse](adaccountresponse.md) (`result`: [AdAccount](adaccount.md)).
+- `400` Bad Request — `ErrorResponse`: Bad Request. Returns [ErrorResponse](errorresponse.md).
+- `401` Unauthorized — `ErrorResponse`: Unauthorized.
+- `403` Forbidden — `ErrorResponse`: Forbidden.
+- `404` Not Found — `ErrorResponse`: Resource not found. Returns [ErrorResponse](errorresponse.md).
+- `429` Too Many Requests — `ErrorResponse`: Rate Limit Exceeded. See [Applying Rate Limits](rate-limits.md).
+- `500` Internal Server Error — `ErrorResponse`: Internal Server Error. Returns [ErrorResponse](errorresponse.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This endpoint creates a new ad account under a specified organization.
+
+- The ad account inherits `currency`, `timezone`, and `paymentModel` from the parent org at creation time. These values are immutable after creation, as is the `orgId` relationship.
+- The `name` and `productFeatures` fields are both required. The system rejects the request if either is omitted.
+- The `X-AP-Context` header isn’t required for this endpoint.
+- To enable App Store advertising, include a `CONTENT_PROVIDER` delegation with the CPID as `resourceId`.
+- To enable Maps advertising, include a `BUSINESS_BRAND` delegation with the Brand ID as `resourceId`.
+- See [ProductFeatures](productfeatures.md) for delegation requirements by App Store or Apple Maps.
+
+<a id="Payload-Examples"></a>
+
+## Payload Examples
+
+**Request with CPID Delegation**
+
+Links the ad account to an App Store Connect account via a Content Provider ID (CPID). The `delegations` field is optional but when included, each entry requires `resourceId` and `resourceType`.
+
+<a id="Request"></a>
+
+### Request
+
+```json
+POST /v1/ad-accounts
+
+{
+ "name": "AwayFinder Ad Account",
+ "productFeatures": [
+   "APPSTORE_APP_MANUAL"
+ ],
+ "delegations": [
+   {
+     "resourceId": "12345678",
+     "resourceType": "CONTENT_PROVIDER"
+   }
+ ]
+}
+```
+
+<a id="Response"></a>
+
+### Response
+
+```json
+{
+ "result": {
+   "id": 123456789,
+   "name": "AwayFinder Ad Account",
+   "orgId": 987654321,
+   "timezone": "America/New_York",
+   "currency": "USD",
+   "paymentModel": "PAYG",
+   "systemStatus": "ACTIVE",
+   "systemStatusReasons": [],
+   "productFeatures": [
+     "APPSTORE_APP_MANUAL"
+   ],
+   "delegations": [
+     {
+       "resourceId": "12345678",
+       "resourceType": "CONTENT_PROVIDER",
+       "resourceName": "AwayFinder Apps"
+     }
+   ],
+   "creationTime": "2025-01-10T08:00:00.000",
+   "modificationTime": "2025-01-10T08:00:00.000"
+ }
+}
+```
+
+**Request with Maps Delegation**
+
+Links the ad account to a validated brand for Apple Maps advertising via a Brand ID. The `productFeatures` field must include `BUSINESS_BRAND_MANUAL` and the matching delegation must use `resourceType: BUSINESS_BRAND`.
+
+<a id="Request"></a>
+
+### Request
+
+```json
+POST /v1/ad-accounts
+
+{
+ "name": "AwayFinder Brand Ad Account",
+ "productFeatures": [
+   "BUSINESS_BRAND_MANUAL"
+ ],
+ "delegations": [
+   {
+     "resourceId": "9876543",
+     "resourceType": "BUSINESS_BRAND"
+   }
+ ]
+}
+```
+
+<a id="Response"></a>
+
+### Response
+
+```json
+{
+ "result": {
+   "id": 123456790,
+   "name": "AwayFinder Brand Ad Account",
+   "orgId": 987654321,
+   "timezone": "America/New_York",
+   "currency": "USD",
+   "paymentModel": "PAYG",
+   "systemStatus": "ACTIVE",
+   "systemStatusReasons": [],
+   "productFeatures": [
+     "BUSINESS_BRAND_MANUAL"
+   ],
+   "delegations": [
+     {
+       "resourceId": "9876543",
+       "resourceType": "BUSINESS_BRAND",
+       "resourceName": "AwayFinder"
+     }
+   ],
+   "creationTime": "2025-01-10T08:00:00.000",
+   "modificationTime": "2025-01-10T08:00:00.000"
+ }
+}
+```
+
+## See Also
+
+- [Get Ad Account by ID](get-ad-accounts-_id_.md): Retrieve the full details of a specific ad account by its ID.
+- [Update Ad Accounts](put-ad-accounts-_id_.md): Update an ad account’s name or delegations.
+- [Get Advertiser Resources](get-advertiser-resources.md): Retrieve the advertiser resources available to your organization, filtered by resource type.

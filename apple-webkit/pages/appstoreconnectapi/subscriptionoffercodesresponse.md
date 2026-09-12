@@ -1,0 +1,44 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/subscriptionoffercodesresponse](https://developer.apple.com/documentation/appstoreconnectapi/subscriptionoffercodesresponse)
+
+# SubscriptionOfferCodesResponse
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 2.0+
+
+The response body for endpoints that list offer codes for a subscription.
+
+## Declaration
+
+```
+object SubscriptionOfferCodesResponse
+```
+
+## Properties
+
+- `data` — `[SubscriptionOfferCode]` (required):
+- `included` — `[*]`: **Allowed types:** `SubscriptionOfferCodeCustomCode`, `SubscriptionOfferCodeOneTimeUseCode`, `SubscriptionOfferCodePrice`, `Subscription`
+- `links` — `PagedDocumentLinks` (required):
+- `meta` — `PagingInformation`:
+
+## See Also
+
+### Objects and data types
+
+- [SubscriptionCreateRequest](subscriptioncreaterequest.md): The request body you use to create a subscription.
+- [SubscriptionUpdateRequest](subscriptionupdaterequest.md): The request body you use to update a subscription update request.
+- [SubscriptionResponse](subscriptionresponse.md): The response body for endpoints that create, read, or modify a single auto-renewable subscription.
+- [SubscriptionsResponse](subscriptionsresponse.md): The response body for endpoints that list auto-renewable subscriptions in a subscription group.
+- [Subscription](subscription.md): An auto-renewable subscription product offered within an app, with configurable pricing, duration, and promotional offers.
+- [SubscriptionIntroductoryOffersResponse](subscriptionintroductoryoffersresponse.md): The response body for endpoints that list introductory offers for a subscription.
+- [SubscriptionIntroductoryOffer](subscriptionintroductoryoffer.md): A discounted price or free trial period offered to new subscribers of an auto-renewable subscription.
+- [SubscriptionIntroductoryOffersLinkagesRequest](subscriptionintroductoryofferslinkagesrequest.md): The request body for updating the list of introductory offers linked to a subscription.
+- [SubscriptionIntroductoryOffersLinkagesResponse](subscriptionintroductoryofferslinkagesresponse.md): A response containing the resource identifiers of introductory offers linked to a subscription.
+- [SubscriptionOfferCodeResponse](subscriptionoffercoderesponse.md): The response body for endpoints that create, read, or modify a single subscription offer code.
+- [SubscriptionOfferCode](subscriptionoffercode.md): A promotional code that gives customers a discounted or free subscription for a specified duration and eligibility group.
+- [PromotedPurchaseResponse](promotedpurchaseresponse.md): The response body for endpoints that read or modify a promoted in-app purchase or subscription.
+- [PromotedPurchase](promotedpurchase.md): An in-app purchase or subscription configured to appear on the app’s App Store product page.
+- [SubscriptionPricePointsResponse](subscriptionpricepointsresponse.md): The response body for endpoints that list available price points for a subscription.
+- [SubscriptionPricesResponse](subscriptionpricesresponse.md): The response body for endpoints that list scheduled prices for a subscription.

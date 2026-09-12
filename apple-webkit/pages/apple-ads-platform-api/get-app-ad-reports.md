@@ -1,0 +1,301 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/get-app-ad-reports](https://developer.apple.com/documentation/apple-ads-platform-api/get-app-ad-reports)
+
+# Ads Report
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Web Service Endpoint  
+**Availability:** Apple Ads Platform API 1.0+
+
+Retrieve performance metrics for ads.
+
+## URL
+
+```http
+POST https://api.ads.apple.com/v1/reports/apps/ads/query
+```
+
+## Header Parameters
+
+- `X-Ap-Context` — `string` (required):
+
+## HTTP Body
+
+Content type: `application/json`
+
+Type: `AppsReportingRequest`
+
+## Response Codes
+
+- `200` OK — `AppsAdReportResponse`: Successful response. Returns [AppsAdReportResponse](appsadreportresponse.md) (`result`: [AppsAdResultContainer](appsadresultcontainer.md)).
+- `400` Bad Request — `Error`: Bad Request. Returns [ErrorResponse](errorresponse.md).
+- `401` Unauthorized — `Error`: Unauthorized.
+- `403` Forbidden — `Error`: Forbidden.
+- `404` Not Found — `Error`: Not Found. Returns [ErrorResponse](errorresponse.md).
+- `429` Too Many Requests — `Error`: Rate Limit Exceeded. Returns [ErrorResponse](errorresponse.md).
+- `500` Internal Server Error — `Error`: Internal Server Error. Returns [ErrorResponse](errorresponse.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Ad reports return one row per ad. Each row contains a `metadata` object with ad identifiers (including `campaignId` and `adGroupId`), `totalMetrics` aggregated over the full date range, and a `granularMetrics` array broken down by the selected `granularity`.
+
+Every apps report request requires a `campaignId` filter; optionally add `adGroupId` in the `filters` array to scope results to a specific ad group.
+
+See [Filter](filter.md) for the full set of supported comparison operators.
+
+<a id="Request-Body"></a>
+
+## Request Body
+
+See [AppsReportingRequest](appsreportingrequest.md).
+
+<a id="groupBy-Dimensions"></a>
+
+### groupBy Dimensions
+
+`storefront`, `countryOrRegion`
+
+The following dimensions are **not** supported for the `AD` entity: `deviceClass`, `ageRange`, `gender`, `countryCode`, `adminArea`, `locality`.
+
+Ad reports follow the standard date range rules per granularity, except `HOURLY` isn’t available at the ad level.
+
+| Granularity | Constraint |
+| --- | --- |
+| `DAILY` | Date range start must be within the last 90 days. Date range must be greater than one day. |
+| `HOURLY` | **Not supported** for the `AD` entity. |
+| `WEEKLY` | Date range start within the last 365 days. End date must be at least 14 days in the past. |
+| `MONTHLY` | End date must be at least 90 days in the past. |
+
+To request a single day of data, omit `granularity` entirely. For a single-day request, the response returns results in `totalMetrics` only, since there is no `granularMetrics` breakdown to compute.
+
+Only `DAILY` granularity or coarser is available for ads, and either `ORTZ` or `UTC` timezones are accepted.
+
+| Constraint | Detail |
+| --- | --- |
+| HOURLY granularity | Not available for ads. Use `DAILY` as the finest granularity. |
+| Timezone | Use `ORTZ` (reporting timezone) or `UTC`. |
+
+<a id="Payload-Examples"></a>
+
+## Payload Examples
+
+**Daily by Device**
+
+Retrieve daily ad metrics for a specific ad group, grouped by device class.
+
+<a id="Request"></a>
+
+### Request
+
+Filters by `adGroupId` and groups results by `deviceClass`, returning daily ad-level metrics for a 31-day window in the account’s reporting timezone.
+
+```json
+POST /v1/reports/apps/ads/query
+
+{
+ "pagination": {
+   "offset": 0,
+   "pageSize": 20
+ },
+ "filters": [
+   {
+     "field": "adGroupId",
+     "operator": "EQUALS",
+     "value": "555666777"
+   }
+ ],
+ "groupBy": [
+   "deviceClass"
+ ],
+ "timeRange": {
+   "start": "2025-01-01",
+   "end": "2025-01-31",
+   "timeZone": "ORTZ",
+   "granularity": "DAILY"
+ }
+}
+```
+
+<a id="Response"></a>
+
+### Response
+
+```json
+{
+ "result": {
+   "rows": [
+     {
+       "metadata": {
+         "id": 234567891,
+         "name": "AwayFinder Default Ad",
+         "adAccountId": 123456789,
+         "campaignId": 444555666,
+         "adGroupId": 555666777,
+         "status": "ENABLED",
+         "deleted": false
+       },
+       "totalMetrics": {
+         "localSpend": {
+           "amount": "150.00",
+           "currency": "USD"
+         },
+         "impressions": 10000,
+         "taps": 500,
+         "ttr": 0.05,
+         "cpt": {
+           "amount": "0.30",
+           "currency": "USD"
+         },
+         "tapInstalls": 120,
+         "totalInstalls": 145
+       },
+       "granularMetrics": [
+         {
+           "date": "2025-01-01",
+           "deviceClass": "IPHONE",
+           "localSpend": {
+             "amount": "4.80",
+             "currency": "USD"
+           },
+           "impressions": 330,
+           "taps": 16,
+           "tapInstalls": 4
+         }
+       ]
+     }
+   ],
+   "summary": {
+     "grandTotal": {
+       "localSpend": {
+         "amount": "150.00",
+         "currency": "USD"
+       },
+       "impressions": 10000,
+       "taps": 500,
+       "tapInstalls": 120
+     }
+   }
+ },
+ "pagination": {
+   "totalCount": 1,
+   "offset": 0,
+   "pageSize": 20
+ }
+}
+```
+
+**No groupBy**
+
+Retrieve daily ad metrics without dimensional grouping. The `granularMetrics` array returns one entry per day with aggregate figures across all devices and countries.
+
+<a id="Request"></a>
+
+### Request
+
+Filters by `campaignId` with no `groupBy` dimension, returning daily ad metrics aggregated across all devices and countries for a 7-day window.
+
+```json
+POST /v1/reports/apps/ads/query
+
+{
+ "pagination": {
+   "offset": 0,
+   "pageSize": 20
+ },
+ "filters": [
+   {
+     "field": "campaignId",
+     "operator": "EQUALS",
+     "value": "444555666"
+   }
+ ],
+ "timeRange": {
+   "start": "2025-01-01",
+   "end": "2025-01-07",
+   "timeZone": "ORTZ",
+   "granularity": "DAILY"
+ }
+}
+```
+
+<a id="Response"></a>
+
+### Response
+
+```json
+{
+ "result": {
+   "rows": [
+     {
+       "metadata": {
+         "id": 234567891,
+         "name": "AwayFinder Default Ad",
+         "adAccountId": 123456789,
+         "campaignId": 444555666,
+         "adGroupId": 555666777,
+         "status": "ENABLED",
+         "deleted": false
+       },
+       "totalMetrics": {
+         "localSpend": {
+           "amount": "35.00",
+           "currency": "USD"
+         },
+         "impressions": 2300,
+         "taps": 115,
+         "ttr": 0.05,
+         "tapInstalls": 28
+       },
+       "granularMetrics": [
+         {
+           "date": "2025-01-01",
+           "localSpend": {
+             "amount": "5.20",
+             "currency": "USD"
+           },
+           "impressions": 340,
+           "taps": 17,
+           "tapInstalls": 4
+         },
+         {
+           "date": "2025-01-02",
+           "localSpend": {
+             "amount": "4.80",
+             "currency": "USD"
+           },
+           "impressions": 310,
+           "taps": 15,
+           "tapInstalls": 3
+         }
+       ]
+     }
+   ],
+   "summary": {
+     "grandTotal": {
+       "localSpend": {
+         "amount": "35.00",
+         "currency": "USD"
+       },
+       "impressions": 2300,
+       "taps": 115,
+       "tapInstalls": 28
+     }
+   }
+ },
+ "pagination": {
+   "totalCount": 1,
+   "offset": 0,
+   "pageSize": 20
+ }
+}
+```
+
+## See Also
+
+- [Campaigns Report](get-app-campaign-reports.md): Retrieve performance metrics for campaigns.
+- [Ad Groups Report](get-app-ad-group-reports.md): Retrieve performance metrics for ad groups.
+- [Keywords Report](get-app-keyword-reports.md): Retrieve performance metrics for keywords.
+- [Search Terms Report](get-app-search-term-reports.md): Retrieve performance metrics for the actual search terms that triggered keyword matches.

@@ -1,0 +1,107 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/float16](https://developer.apple.com/documentation/swift/float16)
+
+# Float16
+
+**Framework:** Swift  
+**Kind:** Structure  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 7.0+
+
+A half-precision (16-bit), floating-point value type.
+
+## Declaration
+
+```swift
+@frozen struct Float16
+```
+
+<a id="overview"></a>
+
+## Overview
+
+On macOS, `Float16` is only available when targeting Apple silicon. On other supported platforms, `Float16` is available for all architectures. If the specified target supports 16-bit floating point arithmetic directly, those instructions will be used; otherwise Float16 arithmetic will be emulated by the swift compiler and runtime.
+
+## Topics
+
+### Initializers
+
+- [init()](float16/init%28%29.md)
+- [init(\_:)](float16/init%28__%29-5x2si.md)
+- [init(\_:)](float16/init%28__%29-77b3g.md): Creates a new instance initialized to the given value.
+- [init(bitPattern:)](float16/init%28bitpattern_%29.md): Creates a new value with the given bit pattern.
+- [init(exactly:)](float16/init%28exactly_%29-27ijx.md): Creates a new instance initialized to the given value, if it can be represented without rounding.
+- [init(exactly:)](float16/init%28exactly_%29-4hyr3.md): Creates a new instance initialized to the given value, if it can be represented without rounding.
+- [init(exactly:)](float16/init%28exactly_%29-8rmd7.md): Creates a new instance initialized to the given value, if it can be represented without rounding.
+- [init(nan:signaling:)](float16/init%28nan_signaling_%29.md): Creates a NaN (“not a number”) value with the specified payload.
+
+### Instance Properties
+
+- [bitPattern](float16/bitpattern.md): The bit pattern of the value’s encoding.
+
+### Default Implementations
+
+- [AdditiveArithmetic Implementations](float16/additivearithmetic-implementations.md)
+- [AtomicRepresentable Implementations](float16/atomicrepresentable-implementations.md)
+- [BinaryFloatingPoint Implementations](float16/binaryfloatingpoint-implementations.md)
+- [Comparable Implementations](float16/comparable-implementations.md)
+- [CustomDebugStringConvertible Implementations](float16/customdebugstringconvertible-implementations.md)
+- [CustomStringConvertible Implementations](float16/customstringconvertible-implementations.md)
+- [Decodable Implementations](float16/decodable-implementations.md)
+- [Encodable Implementations](float16/encodable-implementations.md)
+- [Equatable Implementations](float16/equatable-implementations.md)
+- [ExpressibleByFloatLiteral Implementations](float16/expressiblebyfloatliteral-implementations.md)
+- [ExpressibleByIntegerLiteral Implementations](float16/expressiblebyintegerliteral-implementations.md)
+- [FloatingPoint Implementations](float16/floatingpoint-implementations.md)
+- [Hashable Implementations](float16/hashable-implementations.md)
+- [LosslessStringConvertible Implementations](float16/losslessstringconvertible-implementations.md)
+- [Numeric Implementations](float16/numeric-implementations.md)
+- [OperationParameter Implementations](float16/operationparameter-implementations.md)
+- [SIMDScalar Implementations](float16/simdscalar-implementations.md)
+- [SignedNumeric Implementations](float16/signednumeric-implementations.md)
+- [Strideable Implementations](float16/strideable-implementations.md)
+- [TextOutputStreamable Implementations](float16/textoutputstreamable-implementations.md)
+
+## Relationships
+
+### Conforms To
+
+- [AdditiveArithmetic](additivearithmetic.md)
+- [AtomicRepresentable](../synchronization/atomicrepresentable.md)
+- [BNNSGraph.Builder.OperationParameter](https://developer.apple.com/documentation/accelerate/bnnsgraph/builder/operationparameter)
+- [BNNSScalar](https://developer.apple.com/documentation/accelerate/bnnsscalar)
+- [BinaryFloatingPoint](binaryfloatingpoint.md)
+- [BitwiseCopyable](bitwisecopyable.md)
+- [Comparable](comparable.md)
+- [ConvertibleFromBytes](convertiblefrombytes.md)
+- [ConvertibleToBytes](convertibletobytes.md)
+- [Copyable](copyable.md)
+- [CustomDebugStringConvertible](customdebugstringconvertible.md)
+- [CustomStringConvertible](customstringconvertible.md)
+- [Decodable](decodable.md)
+- [Encodable](encodable.md)
+- [Equatable](equatable.md)
+- [Escapable](escapable.md)
+- [ExpressibleByFloatLiteral](expressiblebyfloatliteral.md)
+- [ExpressibleByIntegerLiteral](expressiblebyintegerliteral.md)
+- [FloatingPoint](floatingpoint.md)
+- [Hashable](hashable.md)
+- [LosslessStringConvertible](losslessstringconvertible.md)
+- [MLShapedArrayScalar](https://developer.apple.com/documentation/coreml/mlshapedarrayscalar)
+- [MLTensorScalar](https://developer.apple.com/documentation/coreml/mltensorscalar)
+- [Numeric](numeric.md)
+- [Plottable](https://developer.apple.com/documentation/charts/plottable)
+- [PrimitivePlottableProtocol](https://developer.apple.com/documentation/charts/primitiveplottableprotocol)
+- [SIMDScalar](simdscalar.md)
+- [Sendable](sendable.md)
+- [SendableMetatype](sendablemetatype.md)
+- [SignedNumeric](signednumeric.md)
+- [Strideable](strideable.md)
+- [TextOutputStreamable](textoutputstreamable.md)
+- [USDPrim.Attribute.Value](https://developer.apple.com/documentation/usdkit/usdprim/attribute/value)
+- [USDStage.Object.MetadataValue](https://developer.apple.com/documentation/usdkit/usdstage/object/metadatavalue)
+- [USDValueProtocol](https://developer.apple.com/documentation/usdkit/usdvalueprotocol)
+
+## See Also
+
+### Floating-Point Values
+
+- [Float80](float80.md): An extended-precision, floating-point value type.

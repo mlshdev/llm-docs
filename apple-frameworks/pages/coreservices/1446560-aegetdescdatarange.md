@@ -1,0 +1,87 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/1446560-aegetdescdatarange](https://developer.apple.com/documentation/coreservices/1446560-aegetdescdatarange)
+
+# AEGetDescDataRange(\_:\_:\_:\_:) (Swift)
+
+**Framework:** Core Services  
+**Kind:** Function  
+**Availability:** macOS 10.2+
+
+Retrieves a specified series of bytes from the specified descriptor.
+
+## Declaration
+
+```swift
+func AEGetDescDataRange(_ dataDesc: UnsafePointer<AEDesc>!, _ buffer: UnsafeMutableRawPointer!, _ offset: Size, _ length: Size) -> OSStatus
+```
+
+## Parameters
+
+- `dataDesc`: A pointer to the descriptor to get the data from. See [AEDesc](aedesc.md).
+- `buffer`: A pointer to a buffer, local variable, or other storage location created and disposed of by your application. The size in bytes should be at least as large as the value you pass in the `length` parameter. On return, contains the specified data from the descriptor.
+- `offset`: The zero-based offset to the data to be retrieved from the descriptor.
+- `length`: The number of bytes of contiguous data to retrieve.
+
+<a id="return_value"></a>
+
+## Return Value
+
+A result code. If the requested `offset` and `length` are such that they do not fit entirely within the descriptor’s data, `AEGetDescDataRange` returns `errAEBufferTooSmall`. See also [Result Codes](https://developer.apple.com/documentation/applicationservices/apple_event_manager#1656145).
+
+<a id="discussion"></a>
+
+## Discussion
+
+This function is valid only for value type descriptors (such as`typeUTF8Text`). You can use this function when you know the precise location of a subset of data within the descriptor. For example, if the descriptor contains a block of your private data, you might retrieve just a particular chunk you need at a known offset, representing an image, a string, or some other data type. Or if a descriptor contains an RGB color, you can access just the blue field.
+
+When used in conjunction with [AECreateDescFromExternalPtr(\_:\_:\_:\_:\_:\_:)](1446239-aecreatedescfromexternalptr.md), `AEGetDescDataRange` can provide greatly improved performance, especially when working with large blocks of data.
+
+## See Also
+
+### Operating On Descriptor Data
+
+- [AEGetDescData(\_:\_:\_:)](1444427-aegetdescdata.md): Gets the data from the specified descriptor.
+- [AEGetDescDataSize(\_:)](1450119-aegetdescdatasize.md): Gets the size, in bytes, of the data in the specified descriptor.
+- [AEReplaceDescData(\_:\_:\_:\_:)](1446695-aereplacedescdata.md): Copies the specified data into the specified descriptor, replacing any previous data.
+
+# AEGetDescDataRange (Objective-C)
+
+**Framework:** Core Services  
+**Kind:** Function  
+**Availability:** macOS 10.2+
+
+Retrieves a specified series of bytes from the specified descriptor.
+
+## Declaration
+
+```objectivec
+OSStatus AEGetDescDataRange(const AEDesc *dataDesc, void *buffer, Size offset, Size length);
+```
+
+## Parameters
+
+- `dataDesc`: A pointer to the descriptor to get the data from. See [AEDesc](aedesc.md).
+- `buffer`: A pointer to a buffer, local variable, or other storage location created and disposed of by your application. The size in bytes should be at least as large as the value you pass in the `length` parameter. On return, contains the specified data from the descriptor.
+- `offset`: The zero-based offset to the data to be retrieved from the descriptor.
+- `length`: The number of bytes of contiguous data to retrieve.
+
+<a id="return_value"></a>
+
+## Return Value
+
+A result code. If the requested `offset` and `length` are such that they do not fit entirely within the descriptor’s data, `AEGetDescDataRange` returns `errAEBufferTooSmall`. See also [Result Codes](https://developer.apple.com/documentation/applicationservices/apple_event_manager#1656145).
+
+<a id="discussion"></a>
+
+## Discussion
+
+This function is valid only for value type descriptors (such as`typeUTF8Text`). You can use this function when you know the precise location of a subset of data within the descriptor. For example, if the descriptor contains a block of your private data, you might retrieve just a particular chunk you need at a known offset, representing an image, a string, or some other data type. Or if a descriptor contains an RGB color, you can access just the blue field.
+
+When used in conjunction with [AECreateDescFromExternalPtr](1446239-aecreatedescfromexternalptr.md), `AEGetDescDataRange` can provide greatly improved performance, especially when working with large blocks of data.
+
+## See Also
+
+### Operating On Descriptor Data
+
+- [AEGetDescData](1444427-aegetdescdata.md): Gets the data from the specified descriptor.
+- [AEGetDescDataSize](1450119-aegetdescdatasize.md): Gets the size, in bytes, of the data in the specified descriptor.
+- [AEReplaceDescData](1446695-aereplacedescdata.md): Copies the specified data into the specified descriptor, replacing any previous data.

@@ -1,0 +1,73 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/hkunit/count()](https://developer.apple.com/documentation/healthkit/hkunit/count())
+
+# count() (Swift)
+
+**Framework:** HealthKit  
+**Kind:** Type Method  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · visionOS · watchOS
+
+Returns a HealthKit unit for measuring counts.
+
+## Declaration
+
+```swift
+class func count() -> Self
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+A HealthKit unit for measuring counts.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Count units are used to represent raw scalar values. They are often used to represent the number of times an event occurs—for example, the number of steps the user has taken or the number of times the user has used his or her inhaler. They can also be used as part of a compound unit—for example, the beats portion of beats per minute. Even though count and percent units are both scalar units, you cannot convert between them.
+
+> **Note**
+
+>  In HealthKit quantities, count values are stored using `double` values, even though they are often interpreted as integers.
+
+## See Also
+
+### Constructing scalar units
+
+- [percent()](percent%28%29.md): Returns a HealthKit unit for measuring percentages.
+
+# countUnit (Objective-C)
+
+**Framework:** HealthKit  
+**Kind:** Type Method  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · visionOS · watchOS
+
+Returns a HealthKit unit for measuring counts.
+
+## Declaration
+
+```objectivec
++ (instancetype) countUnit;
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+A HealthKit unit for measuring counts.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Count units are used to represent raw scalar values. They are often used to represent the number of times an event occurs—for example, the number of steps the user has taken or the number of times the user has used his or her inhaler. They can also be used as part of a compound unit—for example, the beats portion of beats per minute. Even though count and percent units are both scalar units, you cannot convert between them.
+
+> **Note**
+
+>  In HealthKit quantities, count values are stored using `double` values, even though they are often interpreted as integers.
+
+## See Also
+
+### Constructing scalar units
+
+- [percentUnit](percent%28%29.md): Returns a HealthKit unit for measuring percentages.

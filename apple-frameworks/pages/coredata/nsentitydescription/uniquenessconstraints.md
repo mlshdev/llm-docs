@@ -1,0 +1,67 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coredata/nsentitydescription/uniquenessconstraints](https://developer.apple.com/documentation/coredata/nsentitydescription/uniquenessconstraints)
+
+# uniquenessConstraints (Swift)
+
+**Framework:** Core Data  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+An array of arrays that contains one or more attributes with a value that must be unique over the instances of that entity.
+
+## Declaration
+
+```swift
+var uniquenessConstraints: [[Any]] { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Each inner array contains one or more [NSAttributeDescription](../nsattributedescription.md) objects or strings that contain the names of attributes on the entity.
+
+This value forms part of the entity’s version hash. Stores that don’t support uniqueness constraints must refuse to initialize when receiving a model that contains such constraints.
+
+> **Note**
+
+>  Uniqueness constraint violations can be computationally expensive to handle. The recommendation is to use only one uniqueness constraint per entity hierarchy, although subentites may extend a superentity’s constraint.
+
+## See Also
+
+### Configuring indexes and constraints
+
+- [indexes](indexes.md): An array of fetch index descriptions for the entity.
+- [compoundIndexes](compoundindexes.md): Deprecated. The compound indexes for the entity as an array of arrays.
+
+# uniquenessConstraints (Objective-C)
+
+**Framework:** Core Data  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+An array of arrays that contains one or more attributes with a value that must be unique over the instances of that entity.
+
+## Declaration
+
+```objectivec
+@property (strong) NSArray<NSArray<id> *> * uniquenessConstraints;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Each inner array contains one or more [NSAttributeDescription](../nsattributedescription.md) objects or strings that contain the names of attributes on the entity.
+
+This value forms part of the entity’s version hash. Stores that don’t support uniqueness constraints must refuse to initialize when receiving a model that contains such constraints.
+
+> **Note**
+
+>  Uniqueness constraint violations can be computationally expensive to handle. The recommendation is to use only one uniqueness constraint per entity hierarchy, although subentites may extend a superentity’s constraint.
+
+## See Also
+
+### Configuring indexes and constraints
+
+- [indexes](indexes.md): An array of fetch index descriptions for the entity.
+- [compoundIndexes](compoundindexes.md): Deprecated. The compound indexes for the entity as an array of arrays.

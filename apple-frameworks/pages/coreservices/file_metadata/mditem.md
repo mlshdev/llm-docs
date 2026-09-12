@@ -1,0 +1,112 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreservices/file_metadata/mditem](https://developer.apple.com/documentation/coreservices/file_metadata/mditem)
+
+# MDItem (Swift)
+
+**Framework:** Core Services  
+**Kind:** API Collection
+
+<a id="overview"></a>
+
+## Overview
+
+MDItem is a CF-compliant object that represents a file andthe metadata associated with the file.
+
+For functions that expect an MDItemRef parameter, if thisparameter is not a valid MDItemRef, the behavior is undefined. `NULL` isnot a valid MDItemRef.
+
+## Topics
+
+### Creating an MDItem
+
+- [MDItemCreate(\_:\_:)](../1426917-mditemcreate.md): Creates an MDItem object for a file at the specified path.
+- [MDItemCreateWithURL(\_:\_:)](../1427034-mditemcreatewithurl.md): Creates an MDItem object for a file at the specified file URL.
+
+### Getting the Type Identifier
+
+- [MDItemGetTypeID()](../1427168-mditemgettypeid.md): Returns the type identifier of all MDItem instances.
+
+### Retrieving Metadata Attributes 
+
+- [MDItemCopyAttribute(\_:\_:)](../1427080-mditemcopyattribute.md): Returns the value of the specified attribute in the metadata item.
+- [MDItemCopyAttributes(\_:\_:)](../1426980-mditemcopyattributes.md): Returns the values of the specified attributes in the metadata item.
+- [MDItemCopyAttributeNames(\_:)](../1427066-mditemcopyattributenames.md): Returns an array containing the attribute names existing in the metadata item.
+
+### Data Types
+
+- [MDItem](../mditem.md): A reference to a MDItem object.
+
+### Constants
+
+- [Common Metadata Attribute Keys](mditem/common_metadata_attribute_keys.md): Metadata attribute keys that are common to many file types.
+- [Image Metadata Attribute Keys](mditem/image_metadata_attribute_keys.md): Metadata attribute keys that are common to image files.
+- [Video Metadata Attribute Keys](mditem/video_metadata_attribute_keys.md): Metadata attribute keys that are common to video files.
+- [Audio Metadata Attribute Keys](mditem/audio_metadata_attribute_keys.md): Metadata attribute keys that describe an audio file.
+- [File System Metadata Attribute Keys](mditem/file_system_metadata_attribute_keys.md): Metadata attribute keys that describe the file system attributes for a file.
+
+## See Also
+
+### Opaque Types
+
+- [MDSchema](mdschema.md)
+
+### Related Documentation
+
+- [Spotlight Overview](https://developer.apple.com/library/archive/documentation/Carbon/Conceptual/MetadataIntro/MetadataIntro.html#//apple_ref/doc/uid/TP40001268)
+- [File Metadata Search Programming Guide](https://developer.apple.com/library/archive/documentation/Carbon/Conceptual/SpotlightQuery/Concepts/Introduction.html#//apple_ref/doc/uid/TP40001841)
+- [Spotlight Importer Programming Guide](https://developer.apple.com/library/archive/documentation/Carbon/Conceptual/MDImporters/MDImporters.html#//apple_ref/doc/uid/TP40001267)
+- [File Metadata Attributes Reference](https://developer.apple.com/library/archive/documentation/CoreServices/Reference/MetadataAttributesRef/MetadataAttrRef.html#//apple_ref/doc/uid/TP40001689)
+
+# MDItem (Objective-C)
+
+**Framework:** Core Services  
+**Kind:** API Collection
+
+<a id="overview"></a>
+
+## Overview
+
+MDItem is a CF-compliant object that represents a file andthe metadata associated with the file.
+
+For functions that expect an MDItemRef parameter, if thisparameter is not a valid MDItemRef, the behavior is undefined. `NULL` isnot a valid MDItemRef.
+
+## Topics
+
+### Creating an MDItem
+
+- [MDItemCreate](../1426917-mditemcreate.md): Creates an MDItem object for a file at the specified path.
+- [MDItemCreateWithURL](../1427034-mditemcreatewithurl.md): Creates an MDItem object for a file at the specified file URL.
+
+### Getting the Type Identifier
+
+- [MDItemGetTypeID](../1427168-mditemgettypeid.md): Returns the type identifier of all MDItem instances.
+
+### Retrieving Metadata Attributes 
+
+- [MDItemCopyAttribute](../1427080-mditemcopyattribute.md): Returns the value of the specified attribute in the metadata item.
+- [MDItemCopyAttributes](../1426980-mditemcopyattributes.md): Returns the values of the specified attributes in the metadata item.
+- [MDItemCopyAttributeList](../1427028-mditemcopyattributelist.md): Returns the values of the specified attributes in the metadata item.
+- [MDItemCopyAttributeNames](../1427066-mditemcopyattributenames.md): Returns an array containing the attribute names existing in the metadata item.
+
+### Data Types
+
+- [MDItemRef](../mditemref.md): A reference to a MDItem object.
+
+### Constants
+
+- [Common Metadata Attribute Keys](mditem/common_metadata_attribute_keys.md): Metadata attribute keys that are common to many file types.
+- [Image Metadata Attribute Keys](mditem/image_metadata_attribute_keys.md): Metadata attribute keys that are common to image files.
+- [Video Metadata Attribute Keys](mditem/video_metadata_attribute_keys.md): Metadata attribute keys that are common to video files.
+- [Audio Metadata Attribute Keys](mditem/audio_metadata_attribute_keys.md): Metadata attribute keys that describe an audio file.
+- [File System Metadata Attribute Keys](mditem/file_system_metadata_attribute_keys.md): Metadata attribute keys that describe the file system attributes for a file.
+
+## See Also
+
+### Opaque Types
+
+- [MDSchema](mdschema.md)
+
+### Related Documentation
+
+- [Spotlight Overview](https://developer.apple.com/library/archive/documentation/Carbon/Conceptual/MetadataIntro/MetadataIntro.html#//apple_ref/doc/uid/TP40001268)
+- [File Metadata Search Programming Guide](https://developer.apple.com/library/archive/documentation/Carbon/Conceptual/SpotlightQuery/Concepts/Introduction.html#//apple_ref/doc/uid/TP40001841)
+- [Spotlight Importer Programming Guide](https://developer.apple.com/library/archive/documentation/Carbon/Conceptual/MDImporters/MDImporters.html#//apple_ref/doc/uid/TP40001267)
+- [File Metadata Attributes Reference](https://developer.apple.com/library/archive/documentation/CoreServices/Reference/MetadataAttributesRef/MetadataAttrRef.html#//apple_ref/doc/uid/TP40001689)

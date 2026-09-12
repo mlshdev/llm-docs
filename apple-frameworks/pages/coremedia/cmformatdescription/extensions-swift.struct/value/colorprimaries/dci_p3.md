@@ -1,0 +1,24 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremedia/cmformatdescription/extensions-swift.struct/value/colorprimaries/dci_p3](https://developer.apple.com/documentation/coremedia/cmformatdescription/extensions-swift.struct/value/colorprimaries/dci_p3)
+
+# dci_P3
+
+**Framework:** Core Media  
+**Kind:** Type Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+## Declaration
+
+```swift
+static let dci_P3: CMFormatDescription.Extensions.Value.ColorPrimaries
+```
+
+## See Also
+
+### Color Primaries
+
+- [ebu_3213](ebu_3213.md)
+- [itu_R_2020](itu_r_2020.md)
+- [itu_R_709_2](itu_r_709_2.md)
+- [p22](p22.md)
+- [p3_D65](p3_d65.md)
+- [smpte_C](smpte_c.md)

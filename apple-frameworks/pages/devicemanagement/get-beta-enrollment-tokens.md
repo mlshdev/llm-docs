@@ -1,0 +1,44 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/get-beta-enrollment-tokens](https://developer.apple.com/documentation/devicemanagement/get-beta-enrollment-tokens)
+
+# Get Beta Enrollment Tokens
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Web Service Endpoint  
+**Availability:** Device Assignment Services 5.1+
+
+Retrieves the beta enrollment tokens available for the organization.
+
+## URL
+
+```http
+GET https://mdmenrollment.apple.com/os-beta-enrollment/tokens
+```
+
+## Response Codes
+
+- `200` OK — `GetSeedBuildTokenResponse`:
+- `403` APPLE_SEED_FOR_IT_TURNED_OFF: No access - your organization doesn’t allow beta access.
+
+## Mentioned In
+
+- [Enrolling a device in a beta program](enrolling-a-device-in-a-beta-program.md)
+
+## Topics
+
+### Response
+
+- [GetSeedBuildTokenResponse](getseedbuildtokenresponse.md): Provides a list of beta enrollment tokens available for the given organization.
+- [SeedBuildToken](seedbuildtoken.md): Describes a beta enrollment token available for the given organization.
+
+## See Also
+
+### Device management
+
+- [Activation Lock a Device](activation-lock-devices.md): Enable activation lock on a remote device.
+- [Get Device Details](device-details.md): Get the details on a set of devices.
+- [Get a List of Devices](fetch-devices.md): Get a list of devices that are managed by the server.
+- [Sync the List of Devices](sync-devices.md): Get updates about the list of devices the server manages.
+- [Disown Devices](disown-devices.md): Notify Apple’s servers that your organization no longer owns the specified devices.
+- [Get Replacement Details](get-replacement-details.md): Get information about the device that a replacement device replaces.

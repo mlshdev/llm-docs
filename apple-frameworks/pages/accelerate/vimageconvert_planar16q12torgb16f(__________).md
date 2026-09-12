@@ -1,0 +1,81 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimageconvert_planar16q12torgb16f(_:_:_:_:_:)](https://developer.apple.com/documentation/accelerate/vimageconvert_planar16q12torgb16f(_:_:_:_:_:))
+
+# vImageConvert_Planar16Q12toRGB16F(\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 10.12+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.0+
+
+Interleaves three fixed-point 16-bit planar buffers into a floating-point 32-bit-per-channel, 3-channel interleaved buffer.
+
+## Declaration
+
+```swift
+func vImageConvert_Planar16Q12toRGB16F(_ red: UnsafePointer<vImage_Buffer>, _ green: UnsafePointer<vImage_Buffer>, _ blue: UnsafePointer<vImage_Buffer>, _ dest: UnsafePointer<vImage_Buffer>, _ flags: vImage_Flags) -> vImage_Error
+```
+
+## Parameters
+
+- `red`: The source vImage buffer that contains the red channel.
+- `green`: The source vImage buffer that contains the green channel.
+- `blue`: The source vImage buffer that contains the blue channel.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the [height](vimage_buffer/height.md), [width](vimage_buffer/width.md), and [rowBytes](vimage_buffer/rowbytes.md) fields of this structure, and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes in [Data Types and Constants](data-types-and-constants.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The conversion maps source pixels with a value of `0` to `0.0`, and maps source pixels with a value of `4096` to `1.0`.
+
+## See Also
+
+### Interleaving three fixed-point 16-bit planar buffers
+
+- [vImageConvert_Planar16Q12toRGB888(\_:\_:\_:\_:\_:)](vimageconvert_planar16q12torgb888%28__________%29.md): Interleaves three fixed-point 16-bit planar buffers into an 8-bit-per-channel, 3-channel interleaved buffer.
+
+# vImageConvert_Planar16Q12toRGB16F (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 10.12+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.0+
+
+Interleaves three fixed-point 16-bit planar buffers into a floating-point 32-bit-per-channel, 3-channel interleaved buffer.
+
+## Declaration
+
+```objectivec
+vImage_Error vImageConvert_Planar16Q12toRGB16F(const vImage_Buffer *red, const vImage_Buffer *green, const vImage_Buffer *blue, const vImage_Buffer *dest, vImage_Flags flags);
+```
+
+## Parameters
+
+- `red`: The source vImage buffer that contains the red channel.
+- `green`: The source vImage buffer that contains the green channel.
+- `blue`: The source vImage buffer that contains the blue channel.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the [height](vimage_buffer/height.md), [width](vimage_buffer/width.md), and [rowBytes](vimage_buffer/rowbytes.md) fields of this structure, and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes in [Data Types and Constants](data-types-and-constants.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The conversion maps source pixels with a value of `0` to `0.0`, and maps source pixels with a value of `4096` to `1.0`.
+
+## See Also
+
+### Interleaving three fixed-point 16-bit planar buffers
+
+- [vImageConvert_Planar16Q12toRGB888](vimageconvert_planar16q12torgb888%28__________%29.md): Interleaves three fixed-point 16-bit planar buffers into an 8-bit-per-channel, 3-channel interleaved buffer.

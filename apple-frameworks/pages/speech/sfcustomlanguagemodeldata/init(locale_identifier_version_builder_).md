@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/speech/sfcustomlanguagemodeldata/init(locale:identifier:version:builder:)](https://developer.apple.com/documentation/speech/sfcustomlanguagemodeldata/init(locale:identifier:version:builder:))
+
+# init(locale:identifier:version:builder:)
+
+**Framework:** Speech  
+**Kind:** Initializer  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.1+
+
+Constructs a data container using a builder
+
+## Declaration
+
+```swift
+convenience init(locale: Locale, identifier: String, version: String, @SFCustomLanguageModelData.DataInsertableBuilder builder: () -> any DataInsertable)
+```
+
+## Parameters
+
+- `locale`: The region and language of the training data (must match with the locale used to construct the `SFSpeechRecognizer` later)
+- `identifier`: Used to uniquely identify the resulting language model on the device where it will be processed
+- `version`: Used to distinguish different versions of the language model on the device where it will be processed
+- `builder`: A DataInsertableBuilder object that yields DataInsertable objects
+
+<a id="discussion"></a>
+
+## Discussion
+
+The `SFCustomLanguageModelData` class accumulates language model training and custom vocabulary data, both associated with a specified locale. This initializer creates an object that is initially populated using the provided builder.
+
+## See Also
+
+### Creating a model data container
+
+- [init(locale:identifier:version:)](init%28locale_identifier_version_%29.md): Constructs an empty data container.
+- [SFCustomLanguageModelData.DataInsertableBuilder](datainsertablebuilder.md): A custom parameter attribute that constructs custom language model data from closures.

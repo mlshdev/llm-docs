@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "project": "podman",
   "title": "Podman",
+  "homepage": "https://docs.podman.io/",
   "repository": "podman-container-tools/podman",
   "tag": "v6.1.1",
   "releaseId": 381417560,

@@ -1,0 +1,79 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uidocumentviewcontroller/documentdidopen()](https://developer.apple.com/documentation/uikit/uidocumentviewcontroller/documentdidopen())
+
+# documentDidOpen() (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · visionOS 1.0+
+
+Provides an opportunity to configure the view after the system loads the controller’s document into memory.
+
+## Declaration
+
+```swift
+func documentDidOpen()
+```
+
+## Mentioned In
+
+- [Customizing a document-based app’s launch experience](../customizing-a-document-based-app-s-launch-experience.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The system calls this method after the document view controller opens its document, or when an object assigns an already opened document to the document view controller’s `document` property. Override this method to customize the views that present your document in the view:
+
+```swift
+override func documentDidOpen() {
+    configureViewForCurrentDocument()
+}
+```
+
+Configure the view in its own method and call that method in both `documentDidOpen()` and [viewDidLoad()](../uiviewcontroller/viewdidload%28%29.md). There is no timing guarantee between when the system calls `documentDidOpen` and when it loads the view controller’s view.
+
+## See Also
+
+### Managing the document view
+
+- [document](document.md): The document that the controller presents or edits.
+- [openDocument(completionHandler:)](opendocument%28completionhandler_%29.md): Opens a document in a document view controller from outside the document view controller.
+
+# documentDidOpen (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · visionOS 1.0+
+
+Provides an opportunity to configure the view after the system loads the controller’s document into memory.
+
+## Declaration
+
+```objectivec
+- (void) documentDidOpen;
+```
+
+## Mentioned In
+
+- [Customizing a document-based app’s launch experience](../customizing-a-document-based-app-s-launch-experience.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The system calls this method after the document view controller opens its document, or when an object assigns an already opened document to the document view controller’s `document` property. Override this method to customize the views that present your document in the view:
+
+```swift
+override func documentDidOpen() {
+    configureViewForCurrentDocument()
+}
+```
+
+Configure the view in its own method and call that method in both `documentDidOpen()` and [viewDidLoad](../uiviewcontroller/viewdidload%28%29.md). There is no timing guarantee between when the system calls `documentDidOpen` and when it loads the view controller’s view.
+
+## See Also
+
+### Managing the document view
+
+- [document](document.md): The document that the controller presents or edits.
+- [openDocumentWithCompletionHandler:](opendocument%28completionhandler_%29.md): Opens a document in a document view controller from outside the document view controller.

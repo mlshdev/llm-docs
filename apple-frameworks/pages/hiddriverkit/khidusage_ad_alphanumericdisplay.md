@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/hiddriverkit/khidusage_ad_alphanumericdisplay](https://developer.apple.com/documentation/hiddriverkit/khidusage_ad_alphanumericdisplay)
+
+# kHIDUsage_AD_AlphanumericDisplay
+
+**Interface language:** Objective-C
+
+**Framework:** HIDDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit · macOS
+
+## Declaration
+
+```objectivec
+kHIDUsage_AD_AlphanumericDisplay
+```
+
+## See Also
+
+### Getting the Usages
+
+- [kHIDUsage_AD_ASCIICharacterSet](khidusage_ad_asciicharacterset.md)
+- [kHIDUsage_AD_CharacterHeight](khidusage_ad_characterheight.md)
+- [kHIDUsage_AD_CharacterReport](khidusage_ad_characterreport.md)
+- [kHIDUsage_AD_CharacterSpacingHorizontal](khidusage_ad_characterspacinghorizontal.md)
+- [kHIDUsage_AD_CharacterSpacingVertical](khidusage_ad_characterspacingvertical.md)
+- [kHIDUsage_AD_CharacterWidth](khidusage_ad_characterwidth.md)
+- [kHIDUsage_AD_ClearDisplay](khidusage_ad_cleardisplay.md)
+- [kHIDUsage_AD_Column](khidusage_ad_column.md)
+- [kHIDUsage_AD_Columns](khidusage_ad_columns.md)
+- [kHIDUsage_AD_CursorBlink](khidusage_ad_cursorblink.md)
+- [kHIDUsage_AD_CursorEnable](khidusage_ad_cursorenable.md)
+- [kHIDUsage_AD_CursorMode](khidusage_ad_cursormode.md)
+- [kHIDUsage_AD_CursorPixelPositioning](khidusage_ad_cursorpixelpositioning.md)
+- [kHIDUsage_AD_CursorPositionReport](khidusage_ad_cursorpositionreport.md)
+- [kHIDUsage_AD_DataReadBack](khidusage_ad_datareadback.md)

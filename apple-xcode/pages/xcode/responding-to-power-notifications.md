@@ -1,0 +1,48 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode/responding-to-power-notifications](https://developer.apple.com/documentation/xcode/responding-to-power-notifications)
+
+# Responding to power notifications
+
+**Kind:** Article
+
+Adopt more power-efficient strategies to prolong the device’s battery life.
+
+<a id="Overview"></a>
+
+## Overview
+
+Certain situations cause a device to reduce the amount of work it does and the amount of power it uses. People who want to increase the time before their device needs charging can turn on Low Power Mode. When a device is in Low Power Mode, the system enacts energy-saving measures, including reducing animations, and increasing the time between certain power-consuming actions like fetching data over the network.
+
+Additionally, if the system detects that the temperature is too high, it reduces the amount of power it uses until the temperature decreases.
+
+Register for system notifications about power- and thermal-state changes so you can take steps to help the system conserve energy and reduce its temperature.
+
+<a id="Detect-and-react-to-power-state-notifications"></a>
+
+### Detect and react to power-state notifications
+
+In your app, register for [NSProcessInfoPowerStateDidChange](https://developer.apple.com/documentation/foundation/nsnotification/name-swift.struct/nsprocessinfopowerstatedidchange) to discover when the device’s power state changes. When you receive the notification, query the value of [isLowPowerModeEnabled](https://developer.apple.com/documentation/foundation/processinfo/islowpowermodeenabled) to determine if the system’s in Low Power Mode.
+
+If Low Power Mode is active, take additional steps to help the system conserve energy, including:
+
+- Pausing any optional activities
+- Reducing display updates
+- Minimizing animations
+- Reducing the frequency of network connections
+- Stopping location updates
+
+<a id="Detect-and-react-to-thermal-state-notifications"></a>
+
+### Detect and react to thermal-state notifications
+
+In your app, register for [thermalStateDidChangeNotification](https://developer.apple.com/documentation/foundation/processinfo/thermalstatedidchangenotification) to discover when the device’s thermal state changes. When you receive the notification, adjust your app’s behavior according to the value of [thermalState](https://developer.apple.com/documentation/foundation/processinfo/thermalstate-swift.property):
+
+- **[ProcessInfo.ThermalState.nominal](https://developer.apple.com/documentation/foundation/processinfo/thermalstate-swift.enum/nominal)**: Enable all of your app’s functionality.
+- **[ProcessInfo.ThermalState.fair](https://developer.apple.com/documentation/foundation/processinfo/thermalstate-swift.enum/fair)**: Defer work for which a person doesn’t immediately need the results; for example, background video processing.
+- **[ProcessInfo.ThermalState.serious](https://developer.apple.com/documentation/foundation/processinfo/thermalstate-swift.enum/serious)**: Reduce networking and location activity, screen updates, and animations.
+- **[ProcessInfo.ThermalState.critical](https://developer.apple.com/documentation/foundation/processinfo/thermalstate-swift.enum/critical)**: To prevent the device becoming hotter and potentially unusable, reduce or stop all work that your app is doing. Minimize computation, and stop or significantly reduce use of the camera, Bluetooth, location, and other power-intensive subsystems.
+
+## See Also
+
+### Essentials
+
+- [Scheduling CPU work efficiently](scheduling-cpu-work-efficiently.md): Use concurrent programming and adjust the prioritization of background activities to improve the performance of your app.

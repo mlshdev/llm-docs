@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applenews/getting-started-as-an-apple-news-publisher](https://developer.apple.com/documentation/applenews/getting-started-as-an-apple-news-publisher)
+
+# Getting Started as an Apple News Publisher
+
+**Interface language:** Data
+
+**Kind:** Article
+
+Provide information about your publication and choose how to publish content.
+
+<a id="overview"></a>
+
+## Overview
+
+Before you can publish content to Apple News, you must submit information about your publication and samples of your content to the Apple News team.
+
+<a id="Decide-How-to-Publish-to-Apple-News"></a>
+
+### Decide How to Publish to Apple News
+
+Choose the process that works best with your publishing model, your content management system (CMS), and your business:
+
+- Use the [Apple News API](../applenewsapi.md) to deliver and publish Apple News Format articles to News.
+- Work with [Apple News preferred providers](https://developer.apple.com/go/?id=news-providers).
+- Use a third-party solution from the table below.
+
+| **CMS** | **Third-Party Vendor** |
+| --- | --- |
+| WordPress (plug-in) | [Alley Interactive](https://wordpress.org/plugins/publish-to-apple-news/) |
+| Drupal (plug-in) | [Project Ricochet](https://www.drupal.org/project/publish_to_apple_news) |
+| Drupal (plug-in) | [Chapter Three](https://www.drupal.org/project/applenews) |
+| Craft CMS (plug-in) | [Pixel & Tonic](https://craftcms.com/apple-news) |
+| ExpressionEngine (plug-in) | [Hop Studios](https://www.hopstudios.com/software/hop_apple_news) |

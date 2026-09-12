@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/betabuildlocalizationcreaterequest/data-data.dictionary/relationships-data.dictionary/build-data.dictionary](https://developer.apple.com/documentation/appstoreconnectapi/betabuildlocalizationcreaterequest/data-data.dictionary/relationships-data.dictionary/build-data.dictionary)
+
+# BetaBuildLocalizationCreateRequest.Data.Relationships.Build
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.0+
+
+The relationships to other resources that you can set with this request.
+
+## Declaration
+
+```
+object BetaBuildLocalizationCreateRequest.Data.Relationships.Build
+```
+
+## Properties
+
+- `data` — `BetaBuildLocalizationCreateRequest.Data.Relationships.Build.Data` (required):
+
+## Topics
+
+### Objects
+
+- [BetaBuildLocalizationCreateRequest.Data.Relationships.Build.Data](build-data.dictionary/data-data.dictionary.md): The type and ID of the resource that you’re relating with the resource you’re creating.

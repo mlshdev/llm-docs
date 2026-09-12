@@ -1,0 +1,50 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/devicefitstatus](https://developer.apple.com/documentation/arkit/devicefitstatus)
+
+# DeviceFitStatus
+
+**Framework:** ARKit  
+**Kind:** Enumeration  
+**Availability:** visionOS 27.0+
+
+Device fit validation status indicating the user’s eye position relative to the optimal device fit range.
+
+## Declaration
+
+```swift
+enum DeviceFitStatus
+```
+
+## Topics
+
+### Enumeration Cases
+
+- [DeviceFitStatus.eyesAbove](devicefitstatus/eyesabove.md): User’s eyes are positioned above the optimal device fit range.
+- [DeviceFitStatus.eyesBackward](devicefitstatus/eyesbackward.md): User’s eyes are positioned farther from the display than the optimal device fit range.
+- [DeviceFitStatus.eyesBelow](devicefitstatus/eyesbelow.md): User’s eyes are positioned below the optimal device fit range.
+- [DeviceFitStatus.eyesForward](devicefitstatus/eyesforward.md): User’s eyes are positioned closer to the display than the optimal device fit range.
+- [DeviceFitStatus.eyesLeft](devicefitstatus/eyesleft.md): User’s eyes are positioned to the left of the optimal device fit range.
+- [DeviceFitStatus.eyesRight](devicefitstatus/eyesright.md): User’s eyes are positioned to the right of the optimal device fit range.
+- [DeviceFitStatus.unknown](devicefitstatus/unknown.md): Device fit status is unknown.
+- [DeviceFitStatus.valid](devicefitstatus/valid.md): User’s eyes are properly positioned within the optimal device fit range.
+
+### Instance Properties
+
+- [description](devicefitstatus/description.md): A textual representation of the device fit status.
+
+## Relationships
+
+### Conforms To
+
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Visual Fidelity
+
+- [VisualFidelityProvider](visualfidelityprovider.md): A data provider that delivers visual fidelity monitoring data.
+- [VisualFidelityData](visualfidelitydata.md): Visual fidelity data containing device fit and field of view verification.
+- [FieldOfViewAnchor](fieldofviewanchor.md): An anchor representing a set of field of view (FoV) boundary polygon points in immersive space.

@@ -1,0 +1,43 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtlvertexformat/uint1010102normalized](https://developer.apple.com/documentation/metal/mtlvertexformat/uint1010102normalized)
+
+# MTLVertexFormat.uint1010102Normalized (Swift)
+
+**Framework:** Metal  
+**Kind:** Case  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
+
+A four-component vector with 10-bit, normalized, unsigned integer values for red, green, and blue, and a 2-bit value for alpha.
+
+## Declaration
+
+```swift
+case uint1010102Normalized
+```
+
+## See Also
+
+### 32-bit normalized integer formats
+
+- [MTLVertexFormat.int1010102Normalized](int1010102normalized.md): A four-component vector with 10-bit, normalized, signed integer values for red, green, and blue, and a 2-bit value for alpha.
+- [MTLVertexFormat.uchar4Normalized_bgra](uchar4normalized_bgra.md): A four-component vector with 8-bit, normalized, unsigned integer values for blue, green, red, and alpha.
+
+# MTLVertexFormatUInt1010102Normalized (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Enumeration Case  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
+
+A four-component vector with 10-bit, normalized, unsigned integer values for red, green, and blue, and a 2-bit value for alpha.
+
+## Declaration
+
+```objectivec
+MTLVertexFormatUInt1010102Normalized
+```
+
+## See Also
+
+### 32-bit normalized integer formats
+
+- [MTLVertexFormatInt1010102Normalized](int1010102normalized.md): A four-component vector with 10-bit, normalized, signed integer values for red, green, and blue, and a 2-bit value for alpha.
+- [MTLVertexFormatUChar4Normalized_BGRA](uchar4normalized_bgra.md): A four-component vector with 8-bit, normalized, unsigned integer values for blue, green, red, and alpha.

@@ -1,0 +1,34 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/bnns/dropoutlayer/init(input:output:rate:seed:control:filterparameters:)](https://developer.apple.com/documentation/accelerate/bnns/dropoutlayer/init(input:output:rate:seed:control:filterparameters:))
+
+# init(input:output:rate:seed:control:filterParameters:)
+
+**Framework:** Accelerate  
+**Kind:** Initializer  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS · watchOS 7.0+
+
+Returns a new dropout layer.
+
+> Use the BNNSGraph API instead.
+
+## Declaration
+
+```swift
+convenience init?(input: BNNSNDArrayDescriptor, output: BNNSNDArrayDescriptor, rate: Float, seed: UInt32, control: UInt8, filterParameters: BNNSFilterParameters? = nil)
+```
+
+## Parameters
+
+- `input`: The descriptor of the input.
+- `output`: The descriptor of the output.
+- `rate`: The probability that the layer drops out an element or a group of elements.
+- `seed`: The seed for the random number generator that the layer ignores if zero.
+- `control`: An 8-bit bit mask that indicates the dimension of the grouping of the dropout decision.
+- `filterParameters`: The filter runtime parameters.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+> **Important**
+
+>  Dropout layers only support arrays with a data type of `float`. The input shape must be equal to the output shape.

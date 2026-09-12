@@ -1,0 +1,36 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/implementing-plugins-legacy](https://developer.apple.com/documentation/webkit/implementing-plugins-legacy)
+
+# Implementing Plugins (Legacy)
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** WebKit  
+**Kind:** API Collection
+
+## Topics
+
+### Implementing Plugins  (Legacy)
+
+- [WebPlugIn](https://developer.apple.com/documentation/objectivec/webplugin): The `WebPlugIn` informal protocol defines methods that enable interaction between an application using the WebKit framework and any WebKit-based plug-ins it may use.
+- [WebPlugInContainer](https://developer.apple.com/documentation/objectivec/webplugincontainer): `WebPlugInContainer` is an informal protocol that enables a plug-in to send messages to the application.
+- [WebPlugInViewFactory](webpluginviewfactory.md): Deprecated.
+
+## See Also
+
+### Related Documentation
+
+- [WebKit Objective-C Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/DisplayWebContent/DisplayWebContent.html#//apple_ref/doc/uid/10000164i)
+
+### WebKit Legacy APIs
+
+- [Document Object Models API (Legacy)](document-object-models-api-legacy.md)
+- [Setting Up a Web View (Legacy)](setting-up-a-web-view-legacy.md)
+- [Accessing Previous Webpages (Legacy)](accessing-previous-webpages-legacy.md)
+- [Archiving Webpages (Legacy)](archiving-webpages-legacy.md)
+- [Loading Resources (Legacy)](loading-resources-legacy.md)
+- [Working with Frames (legacy)](working-with-frames-legacy.md)
+- [Downloading Information (Legacy)](downloading-information-legacy.md)
+- [Opening a File (Legacy)](opening-a-file-legacy.md)
+- [Setting Policies (Legacy)](setting-policies-legacy.md)
+- [Incorporating Scripts (Legacy)](incorporating-scripts-legacy.md)
+- [Working With Document Web Views (Legacy)](working-with-document-web-views-legacy.md)

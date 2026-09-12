@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ioscsiparallelinterfacecontroller/3516772-createtargetforid](https://developer.apple.com/documentation/kernel/ioscsiparallelinterfacecontroller/3516772-createtargetforid)
+
+# CreateTargetForID
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Instance Method  
+**Availability:** macOS 10.15.2+ (deprecated in 11.0)
+
+## Declaration
+
+```objectivec
+bool CreateTargetForID(SCSIDeviceIdentifier targetID, OSDictionary *properties);
+```

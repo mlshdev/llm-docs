@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1505569-anonymous/kiorangesupportssignal_0700_0300](https://developer.apple.com/documentation/iokit/1505569-anonymous/kiorangesupportssignal_0700_0300)
+
+# kIORangeSupportsSignal_0700_0300
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.3+
+
+## Declaration
+
+```objectivec
+kIORangeSupportsSignal_0700_0300 = 0x00000001
+```

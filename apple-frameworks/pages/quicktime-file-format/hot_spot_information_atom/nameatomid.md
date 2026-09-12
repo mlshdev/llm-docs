@@ -1,0 +1,32 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/hot_spot_information_atom/nameatomid](https://developer.apple.com/documentation/quicktime-file-format/hot_spot_information_atom/nameatomid)
+
+# nameAtomID
+
+**Framework:** QuickTime File Format  
+**Kind:** Data field
+
+The ID of the string atom that contains the name of the hot spot.
+
+<a id="Overview"></a>
+
+## Overview
+
+This atom should be a sibling of the hot spot information atom. This string is displayed in the QuickTime VR controller bar when the mouse is moved over the hot spot.
+
+## See Also
+
+### Data fields
+
+- [majorVersion](majorversion.md): The major version number of the file format.
+- [minorVersion](minorversion.md): The minor version number of the file format.
+- [hotSpotType](hotspottype.md): The hot spot type.
+- [commentAtomID](commentatomid.md): The ID of the string atom that contains a comment for the hot spot.
+- [cursorID](cursorid.md): An array of three IDs for custom hot spot cursors.
+- [bestPan](bestpan.md): The best pan angle for viewing this hot spot.
+- [bestTilt](besttilt.md): The best tilt angle for viewing this hot spot.
+- [bestFOV](bestfov.md): The best field of view for viewing this hot spot.
+- [bestViewCenter](bestviewcenter.md): The best view center for viewing this hot spot.
+- [hotSpotRect](hotspotrect.md): The boundary box for this hot spot, specified as the number of pixels in full panoramic space.
+- [flags](flags.md): A set of hot spot flags.
+- [reserved1](reserved1.md): Reserved.
+- [reserved2](reserved2.md): Reserved.

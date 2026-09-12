@@ -1,0 +1,63 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/externalaccessory/eawifiunconfiguredaccessorybrowserdelegate/accessorybrowser(_:didfindunconfiguredaccessories:)](https://developer.apple.com/documentation/externalaccessory/eawifiunconfiguredaccessorybrowserdelegate/accessorybrowser(_:didfindunconfiguredaccessories:))
+
+# accessoryBrowser(\_:didFindUnconfiguredAccessories:) (Swift)
+
+**Framework:** External Accessory  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Indicates that the browser found a new unconfigured accessory that matches the filter predicate defined at the start of the search.
+
+## Declaration
+
+```swift
+func accessoryBrowser(_ browser: EAWiFiUnconfiguredAccessoryBrowser, didFindUnconfiguredAccessories accessories: Set<EAWiFiUnconfiguredAccessory>)
+```
+
+## Parameters
+
+- `browser`: The instance of [EAWiFiUnconfiguredAccessoryBrowser](../eawifiunconfiguredaccessorybrowser.md) that is generating the event.
+- `accessories`: The set of [EAWiFiUnconfiguredAccessory](../eawifiunconfiguredaccessory.md) objects that have been found since the last update.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When a new unconfigured accessory is found, it’s added to the browser’s set of accessories, which is available in the [unconfiguredAccessories](../eawifiunconfiguredaccessorybrowser/unconfiguredaccessories.md) property. A delegate can implement this method to present to the user the current list of unconfigured accessories. Because this method is called every time a new unconfigured accessory is found, you might use this callback as a prompt to check the list of accessories in [unconfiguredAccessories](../eawifiunconfiguredaccessorybrowser/unconfiguredaccessories.md).
+
+## See Also
+
+### Getting Updates About the Search Process
+
+- [accessoryBrowser(\_:didRemoveUnconfiguredAccessories:)](accessorybrowser%28__didremoveunconfiguredaccessories_%29.md): Indicates that the browser removed an unconfigured accessory from the search results.
+
+# accessoryBrowser:didFindUnconfiguredAccessories: (Objective-C)
+
+**Framework:** External Accessory  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Indicates that the browser found a new unconfigured accessory that matches the filter predicate defined at the start of the search.
+
+## Declaration
+
+```objectivec
+- (void) accessoryBrowser:(EAWiFiUnconfiguredAccessoryBrowser *) browser didFindUnconfiguredAccessories:(NSSet<EAWiFiUnconfiguredAccessory *> *) accessories;
+```
+
+## Parameters
+
+- `browser`: The instance of [EAWiFiUnconfiguredAccessoryBrowser](../eawifiunconfiguredaccessorybrowser.md) that is generating the event.
+- `accessories`: The set of [EAWiFiUnconfiguredAccessory](../eawifiunconfiguredaccessory.md) objects that have been found since the last update.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When a new unconfigured accessory is found, it’s added to the browser’s set of accessories, which is available in the [unconfiguredAccessories](../eawifiunconfiguredaccessorybrowser/unconfiguredaccessories.md) property. A delegate can implement this method to present to the user the current list of unconfigured accessories. Because this method is called every time a new unconfigured accessory is found, you might use this callback as a prompt to check the list of accessories in [unconfiguredAccessories](../eawifiunconfiguredaccessorybrowser/unconfiguredaccessories.md).
+
+## See Also
+
+### Getting Updates About the Search Process
+
+- [accessoryBrowser:didRemoveUnconfiguredAccessories:](accessorybrowser%28__didremoveunconfiguredaccessories_%29.md): Indicates that the browser removed an unconfigured accessory from the search results.

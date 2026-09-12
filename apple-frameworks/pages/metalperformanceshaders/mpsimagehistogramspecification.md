@@ -1,0 +1,137 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metalperformanceshaders/mpsimagehistogramspecification](https://developer.apple.com/documentation/metalperformanceshaders/mpsimagehistogramspecification)
+
+# MPSImageHistogramSpecification (Swift)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Class  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 9.0+ · visionOS 1.0+
+
+A filter that performs a histogram specification operation on an image.
+
+## Declaration
+
+```swift
+class MPSImageHistogramSpecification
+```
+
+<a id="overview"></a>
+
+## Overview
+
+[MPSImageHistogramSpecification](mpsimagehistogramspecification.md) is a generalized version of histogram equalization operation. The histogram specification filter converts the image so that its histogram matches the desired histogram.
+
+The process is divided into three steps:
+
+1. Call the [init(device:histogramInfo:)](mpsimagehistogramspecification/init%28device_histograminfo_%29.md) method to create a [MPSImageHistogramSpecification](mpsimagehistogramspecification.md) object.
+2. Call the [encodeTransform(to:sourceTexture:sourceHistogram:sourceHistogramOffset:desiredHistogram:desiredHistogramOffset:)](mpsimagehistogramspecification/encodetransform%28to_sourcetexture_sourcehistogram_sourcehistogramoffset_desiredhistogram_desiredhistogramoffset_%29.md) method. This creates a privately held image transform which will convert the distribution of the source histogram to the desired histogram. This process runs on a command buffer when it is committed to a command queue. It must complete before the next step can be run. It may be performed on the same command buffer. The `sourceTexture` argument is used by the method to determine the number of channels and therefore which histogram data in the source histogram buffer to use. The source histogram and desired histogram must have been computed either on the CPU or using the [MPSImageHistogram](mpsimagehistogram.md) kernel.
+3. Call the [encode(commandBuffer:sourceTexture:destinationTexture:)](mpsunaryimagekernel/encode%28commandbuffer_sourcetexture_destinationtexture_%29.md) method to read data from the source texture, apply the equalization transform to it, and write to the destination texture. This step is also done on the GPU on a command queue.
+
+> **Note**
+
+>  You can reuse the same specification transform on other images to perform the same transform on those images. (Since their distribution is probably different, they will probably not arrive at the same distribution as the desired histogram.) This filter usually will not be able to work in place.
+
+## Topics
+
+### Initializers
+
+- [init(coder:device:)](mpsimagehistogramspecification/init%28coder_device_%29.md)
+
+### Methods
+
+- [init(device:histogramInfo:)](mpsimagehistogramspecification/init%28device_histograminfo_%29.md): Initializes a histogram with specific information.
+- [encodeTransform(to:sourceTexture:sourceHistogram:sourceHistogramOffset:desiredHistogram:desiredHistogramOffset:)](mpsimagehistogramspecification/encodetransform%28to_sourcetexture_sourcehistogram_sourcehistogramoffset_desiredhistogram_desiredhistogramoffset_%29.md): Encodes the transform function to a command buffer using a compute command encoder. The transform function computes the equalization lookup table.
+
+### Properties
+
+- [histogramInfo](mpsimagehistogramspecification/histograminfo.md): A structure describing the histogram content.
+
+## Relationships
+
+### Inherits From
+
+- [MPSUnaryImageKernel](mpsunaryimagekernel.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCoding](../foundation/nscoding.md)
+- [NSCopying](../foundation/nscopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+- [NSSecureCoding](../foundation/nssecurecoding.md)
+
+## See Also
+
+### Related Documentation
+
+- [Metal Image Filters: Using the image filters provided by the Metal Performance Shaders framework.](https://developer.apple.com/library/archive/samplecode/MetalImageFilters/Introduction/Intro.html#//apple_ref/doc/uid/TP40017535)
+
+### Histogram Image Filters
+
+- [MPSImageHistogram](mpsimagehistogram.md): A filter that computes the histogram of an image.
+- [MPSImageHistogramEqualization](mpsimagehistogramequalization.md): A filter that equalizes the histogram of an image.
+
+# MPSImageHistogramSpecification (Objective-C)
+
+**Framework:** Metal Performance Shaders  
+**Kind:** Class  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.0+ · macOS 10.13+ · tvOS 9.0+ · visionOS 1.0+
+
+A filter that performs a histogram specification operation on an image.
+
+## Declaration
+
+```objectivec
+@interface MPSImageHistogramSpecification : MPSUnaryImageKernel
+```
+
+<a id="overview"></a>
+
+## Overview
+
+[MPSImageHistogramSpecification](mpsimagehistogramspecification.md) is a generalized version of histogram equalization operation. The histogram specification filter converts the image so that its histogram matches the desired histogram.
+
+The process is divided into three steps:
+
+1. Call the [initWithDevice:histogramInfo:](mpsimagehistogramspecification/init%28device_histograminfo_%29.md) method to create a [MPSImageHistogramSpecification](mpsimagehistogramspecification.md) object.
+2. Call the [encodeTransformToCommandBuffer:sourceTexture:sourceHistogram:sourceHistogramOffset:desiredHistogram:desiredHistogramOffset:](mpsimagehistogramspecification/encodetransform%28to_sourcetexture_sourcehistogram_sourcehistogramoffset_desiredhistogram_desiredhistogramoffset_%29.md) method. This creates a privately held image transform which will convert the distribution of the source histogram to the desired histogram. This process runs on a command buffer when it is committed to a command queue. It must complete before the next step can be run. It may be performed on the same command buffer. The `sourceTexture` argument is used by the method to determine the number of channels and therefore which histogram data in the source histogram buffer to use. The source histogram and desired histogram must have been computed either on the CPU or using the [MPSImageHistogram](mpsimagehistogram.md) kernel.
+3. Call the [encodeToCommandBuffer:sourceTexture:destinationTexture:](mpsunaryimagekernel/encode%28commandbuffer_sourcetexture_destinationtexture_%29.md) method to read data from the source texture, apply the equalization transform to it, and write to the destination texture. This step is also done on the GPU on a command queue.
+
+> **Note**
+
+>  You can reuse the same specification transform on other images to perform the same transform on those images. (Since their distribution is probably different, they will probably not arrive at the same distribution as the desired histogram.) This filter usually will not be able to work in place.
+
+## Topics
+
+### Initializers
+
+- [initWithCoder:device:](mpsimagehistogramspecification/init%28coder_device_%29.md)
+
+### Methods
+
+- [initWithDevice:histogramInfo:](mpsimagehistogramspecification/init%28device_histograminfo_%29.md): Initializes a histogram with specific information.
+- [encodeTransformToCommandBuffer:sourceTexture:sourceHistogram:sourceHistogramOffset:desiredHistogram:desiredHistogramOffset:](mpsimagehistogramspecification/encodetransform%28to_sourcetexture_sourcehistogram_sourcehistogramoffset_desiredhistogram_desiredhistogramoffset_%29.md): Encodes the transform function to a command buffer using a compute command encoder. The transform function computes the equalization lookup table.
+
+### Properties
+
+- [histogramInfo](mpsimagehistogramspecification/histograminfo.md): A structure describing the histogram content.
+
+## Relationships
+
+### Inherits From
+
+- [MPSUnaryImageKernel](mpsunaryimagekernel.md)
+
+## See Also
+
+### Related Documentation
+
+- [Metal Image Filters: Using the image filters provided by the Metal Performance Shaders framework.](https://developer.apple.com/library/archive/samplecode/MetalImageFilters/Introduction/Intro.html#//apple_ref/doc/uid/TP40017535)
+
+### Histogram Image Filters
+
+- [MPSImageHistogram](mpsimagehistogram.md): A filter that computes the histogram of an image.
+- [MPSImageHistogramEqualization](mpsimagehistogramequalization.md): A filter that equalizes the histogram of an image.

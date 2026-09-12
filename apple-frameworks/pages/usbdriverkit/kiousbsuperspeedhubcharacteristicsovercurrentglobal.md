@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/usbdriverkit/kiousbsuperspeedhubcharacteristicsovercurrentglobal](https://developer.apple.com/documentation/usbdriverkit/kiousbsuperspeedhubcharacteristicsovercurrentglobal)
+
+# kIOUSBSuperSpeedHubCharacteristicsOverCurrentGlobal
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+## Declaration
+
+```objectivec
+kIOUSBSuperSpeedHubCharacteristicsOverCurrentGlobal
+```
+
+## See Also
+
+### Getting the Characteristics
+
+- [kIOUSBSuperSpeedHubCharacteristicsCompoundDevice](kiousbsuperspeedhubcharacteristicscompounddevice.md)
+- [kIOUSBSuperSpeedHubCharacteristicsOverCurrentIndividual](kiousbsuperspeedhubcharacteristicsovercurrentindividual.md)
+- [kIOUSBSuperSpeedHubCharacteristicsOverCurrentMask](kiousbsuperspeedhubcharacteristicsovercurrentmask.md)
+- [kIOUSBSuperSpeedHubCharacteristicsPowerSwitchingGanged](kiousbsuperspeedhubcharacteristicspowerswitchingganged.md)
+- [kIOUSBSuperSpeedHubCharacteristicsPowerSwitchingIndividual](kiousbsuperspeedhubcharacteristicspowerswitchingindividual.md)
+- [kIOUSBSuperSpeedHubCharacteristicsPowerSwitchingMask](kiousbsuperspeedhubcharacteristicspowerswitchingmask.md)
+- [kIOUSBSuperSpeedHubCharacteristicsReserved](kiousbsuperspeedhubcharacteristicsreserved.md)
+- [kIOUSBSuperSpeedHubDecodeLatencyMax](kiousbsuperspeedhubdecodelatencymax.md)
+- [kIOUSBSuperSpeedHubDelayMax](kiousbsuperspeedhubdelaymax.md)

@@ -1,0 +1,39 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/applearchive/archiveencryptioncontext/setsigningprivatekey(_:)](https://developer.apple.com/documentation/applearchive/archiveencryptioncontext/setsigningprivatekey(_:))
+
+# setSigningPrivateKey(\_:)
+
+**Framework:** Apple Archive  
+**Kind:** Instance Method  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS · watchOS 8.0+
+
+Sets the signing private key that corresponds to the signing public key that you used to create the archive.
+
+## Declaration
+
+```swift
+func setSigningPrivateKey(_ key: P256.Signing.PrivateKey) throws
+```
+
+## Parameters
+
+- `key`: The signing private key.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If you set this on an encryption stream, you don’t need to set the corresponding public key because Apple Archive derives the public key from the private key.
+
+If you only provide a signing public key to the encryption stream, sign the archive with a private key after closing the stream. Use a private key that corresponds to the signing public key that you used to create the archive.
+
+## See Also
+
+### Setting and retrieving keys
+
+- [mainKey](mainkey.md): The main key used to append data to an existing archive.
+- [symmetricKey](symmetrickey.md): The symmetric encryption key used to encrypt or decrypt an archive.
+- [generateSymmetricKey()](generatesymmetrickey%28%29.md): Generates a symmetric encryption key.
+- [setSymmetricKey(\_:)](setsymmetrickey%28__%29.md): Sets the symmetric encryption key that the context requires for symmetric encryption mode.
+- [setRecipientPrivateKey(\_:)](setrecipientprivatekey%28__%29.md): Sets the recipient private key that the context requires to decrypt an archive to a specific recipient in ECDHE encryption profiles.
+- [setRecipientPublicKey(\_:)](setrecipientpublickey%28__%29.md): Sets the recipient public key that the context requires to encrypt an archive to a specific recipient in ECDHE encryption profiles.
+- [setSigningPublicKey(\_:)](setsigningpublickey%28__%29.md): Sets the signing public key that the context requires to unlock a signed archive.

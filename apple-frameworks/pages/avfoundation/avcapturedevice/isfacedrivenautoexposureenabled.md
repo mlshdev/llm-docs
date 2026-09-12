@@ -1,0 +1,79 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avcapturedevice/isfacedrivenautoexposureenabled](https://developer.apple.com/documentation/avfoundation/avcapturedevice/isfacedrivenautoexposureenabled)
+
+# isFaceDrivenAutoExposureEnabled (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 15.4+ · iPadOS 15.4+ · Mac Catalyst 15.4+ · tvOS 17.0+
+
+A Boolean value that indicates whether the device has face-driven autoexposure enabled.
+
+## Declaration
+
+```swift
+var isFaceDrivenAutoExposureEnabled: Bool { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Face-driven autoexposure takes a subject’s face into account when performing automatic exposure adjustments. Enabling this feature can better expose subjects with darker skin tones or those who are backlit. For apps that link against iOS 15.4 or later, the value of this property defaults to [true](https://developer.apple.com/documentation/swift/true) for devices that support autoexposure.
+
+Before setting a value for this property, perform the following:
+
+- Obtain exclusive access to the device by calling its [lockForConfiguration()](lockforconfiguration%28%29.md) method.
+- Set the value of the device’s [automaticallyAdjustsFaceDrivenAutoExposureEnabled](automaticallyadjustsfacedrivenautoexposureenabled.md) property to [false](https://developer.apple.com/documentation/swift/false).
+
+Attempting to set a value before performing these steps results in an exception.
+
+When you finish configuring the device, unlock it by calling its [unlockForConfiguration()](unlockforconfiguration%28%29.md) method.
+
+> **Important**
+
+>  Updating the state of this property doesn’t initiate an exposure change. After setting a new value, set an appropriate [exposureMode](exposuremode-swift.property.md) to apply the change.
+
+## See Also
+
+### Configuring face-driven automatic exposure
+
+- [automaticallyAdjustsFaceDrivenAutoExposureEnabled](automaticallyadjustsfacedrivenautoexposureenabled.md): A Boolean value that indicates whether the device automatically adjusts face-driven autoexposure.
+
+# faceDrivenAutoExposureEnabled (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 15.4+ · iPadOS 15.4+ · Mac Catalyst 15.4+ · tvOS 17.0+
+
+A Boolean value that indicates whether the device has face-driven autoexposure enabled.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, getter=isFaceDrivenAutoExposureEnabled) BOOL faceDrivenAutoExposureEnabled;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Face-driven autoexposure takes a subject’s face into account when performing automatic exposure adjustments. Enabling this feature can better expose subjects with darker skin tones or those who are backlit. For apps that link against iOS 15.4 or later, the value of this property defaults to [true](https://developer.apple.com/documentation/swift/true) for devices that support autoexposure.
+
+Before setting a value for this property, perform the following:
+
+- Obtain exclusive access to the device by calling its [lockForConfiguration:](lockforconfiguration%28%29.md) method.
+- Set the value of the device’s [automaticallyAdjustsFaceDrivenAutoExposureEnabled](automaticallyadjustsfacedrivenautoexposureenabled.md) property to [false](https://developer.apple.com/documentation/swift/false).
+
+Attempting to set a value before performing these steps results in an exception.
+
+When you finish configuring the device, unlock it by calling its [unlockForConfiguration](unlockforconfiguration%28%29.md) method.
+
+> **Important**
+
+>  Updating the state of this property doesn’t initiate an exposure change. After setting a new value, set an appropriate [exposureMode](exposuremode-swift.property.md) to apply the change.
+
+## See Also
+
+### Configuring face-driven automatic exposure
+
+- [automaticallyAdjustsFaceDrivenAutoExposureEnabled](automaticallyadjustsfacedrivenautoexposureenabled.md): A Boolean value that indicates whether the device automatically adjusts face-driven autoexposure.

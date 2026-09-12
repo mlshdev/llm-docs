@@ -1,0 +1,280 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/get-change-details-by-detailid](https://developer.apple.com/documentation/apple-ads-platform-api/get-change-details-by-detailid)
+
+# Get Change History Detail
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Web Service Endpoint  
+**Availability:** Apple Ads Platform API 1.0+
+
+Retrieve field-level before and after values for a single entity change by its detail ID.
+
+## URL
+
+```http
+GET https://api.ads.apple.com/v1/change-history/{detailId}
+```
+
+## Path Parameters
+
+- `detailId` — `string` (required): The composite identifier for the entity change to retrieve, in the form `EntityType.entityId.txnId` (for example, `Campaign.444555666.txn_abc123def456`). Path parameter.
+
+## Query Parameters
+
+- `limit` — `integer`: Maximum number of entries to return from the `changes` array. Defaults to `100`.
+  **Default:** `100`
+- `offset` — `integer`: Zero-based index of the first `changes` entry to return. Defaults to `0`.
+  **Default:** `0`
+
+## Header Parameters
+
+- `X-Ap-Context` — `string` (required):
+
+## Response Codes
+
+- `200` OK — `ChangeDetailsResponse`: Successful operation. Returns [ChangeDetailsResponse](changedetailsresponse.md) (`result`: array of [ChangeDetails](changedetails.md)).
+- `400` Bad Request — `Error`: Bad Request. Returns [ErrorMessage](errormessage.md).
+- `401` Unauthorized — `Error`: Unauthorized.
+- `403` Forbidden — `Error`: Forbidden.
+- `404` Not Found — `Error`: Not Found. Returns [ErrorMessage](errormessage.md).
+- `429` Too Many Requests — `Error`: Rate Limit Exceeded. Returns [ErrorMessage](errormessage.md).
+- `500` Internal Server Error — `Error`: Internal Server Error. Returns [ErrorMessage](errormessage.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This endpoint returns the complete field-level change record for a single entity within a transaction. The response contains a `details` array of [ActivityDetail](activitydetail.md) objects, each holding a `changes` array of field change objects. Each change object captures the `field` name, `oldValues`, and `newValues` as string arrays. To page through a large `changes` array, use `limit` and `offset`.
+
+What populates `oldValues` and `newValues` depends on the event type that produced the change.
+
+| Event Type | `oldValues` | `newValues` |
+| --- | --- | --- |
+| `CREATE` | Empty array | Set to values at creation |
+| `UPDATE` | Previous field value | Updated field value |
+| `DELETE` | Last known value | Typically empty \[\], but may contain system-managed values (for example, deletion flag, status, transaction ID) set at delete time |
+
+<a id="Payload-Examples"></a>
+
+## Payload Examples
+
+**Campaign Update**
+
+<a id="Request"></a>
+
+### Request
+
+Retrieve field-level details for a campaign update that changed two fields in the same transaction: it re-enables `status` and increases `dailyBudget`.
+
+```
+GET https://api.ads.apple.com/v1/change-history/Campaign.444555666.txn_abc123def456
+```
+
+<a id="Response"></a>
+
+### Response
+
+```json
+{
+ "dataType": "ChangeDetail",
+ "pagination": {
+   "offset": 0,
+   "pageSize": 1,
+   "totalCount": 1
+ },
+ "result": [
+   {
+     "transactionId": "txn_abc123def456",
+     "detailId": "Campaign.444555666.txn_abc123def456",
+     "eventType": "UPDATE",
+     "entityType": "Campaign",
+     "entityId": "444555666",
+     "eventTime": "2025-03-15T14:30:00.000Z",
+     "userType": "CUSTOMER_API",
+     "modifiedBy": "555666777",
+     "entityMetaData": {
+       "name": "AwayFinder - Summer App Promo"
+     },
+     "details": [
+       {
+         "transactionId": "txn_abc123def456",
+         "changes": [
+           {
+             "field": "status",
+             "oldValues": [
+               "PAUSED"
+             ],
+             "newValues": [
+               "ENABLED"
+             ]
+           },
+           {
+             "field": "dailyBudget",
+             "oldValues": [
+               "50.00"
+             ],
+             "newValues": [
+               "100.00"
+             ]
+           }
+         ]
+       }
+     ]
+   }
+ ]
+}
+```
+
+**Ad Group Create**
+
+<a id="Request"></a>
+
+### Request
+
+Retrieve field-level details for a new ad group creation. The `oldValues` field is empty for all fields on `CREATE` events.
+
+```
+GET https://api.ads.apple.com/v1/change-history/AdGroup.888999333.txn_def789ghi012
+```
+
+<a id="Response"></a>
+
+### Response
+
+```json
+{
+ "dataType": "ChangeDetail",
+ "pagination": {
+   "offset": 0,
+   "pageSize": 1,
+   "totalCount": 1
+ },
+ "result": [
+   {
+     "transactionId": "txn_def789ghi012",
+     "detailId": "AdGroup.888999333.txn_def789ghi012",
+     "eventType": "CREATE",
+     "entityType": "AdGroup",
+     "entityId": "888999333",
+     "eventTime": "2025-03-10T09:15:00.000Z",
+     "userType": "CUSTOMER",
+     "modifiedBy": "12345678",
+     "entityMetaData": {
+       "name": "AwayFinder — Broad Match — US",
+       "campaignId": "444555777"
+     },
+     "details": [
+       {
+         "transactionId": "txn_def789ghi012",
+         "changes": [
+           {
+             "field": "name",
+             "oldValues": [],
+             "newValues": [
+               "AwayFinder — Broad Match — US"
+             ]
+           },
+           {
+             "field": "status",
+             "oldValues": [],
+             "newValues": [
+               "ENABLED"
+             ]
+           },
+           {
+             "field": "defaultBidAmount",
+             "oldValues": [],
+             "newValues": [
+               "2.50"
+             ]
+           },
+           {
+             "field": "campaignId",
+             "oldValues": [],
+             "newValues": [
+               "444555777"
+             ]
+           }
+         ]
+       }
+     ]
+   }
+ ]
+}
+```
+
+**Keyword Delete**
+
+<a id="Request"></a>
+
+### Request
+
+Retrieve field-level details for a deleted keyword. The `newValues` field is empty for all fields on `DELETE` events.
+
+```
+GET https://api.ads.apple.com/v1/change-history/Keyword.777888999.txn_jkl345mno678
+```
+
+<a id="Response"></a>
+
+### Response
+
+```json
+{
+ "dataType": "ChangeDetail",
+ "pagination": {
+   "offset": 0,
+   "pageSize": 1,
+   "totalCount": 1
+ },
+ "result": [
+   {
+     "transactionId": "txn_jkl345mno678",
+     "detailId": "Keyword.777888999.txn_jkl345mno678",
+     "eventType": "DELETE",
+     "entityType": "Keyword",
+     "entityId": "777888999",
+     "eventTime": "2025-03-05T11:00:00.000Z",
+     "userType": "CUSTOMER_API",
+     "modifiedBy": "98765432",
+     "entityMetaData": {
+       "adGroupId": "888999111",
+       "campaignId": "444555666"
+     },
+     "details": [
+       {
+         "transactionId": "txn_jkl345mno678",
+         "changes": [
+           {
+             "field": "text",
+             "oldValues": [
+               "fitness tracker"
+             ],
+             "newValues": []
+           },
+           {
+             "field": "matchType",
+             "oldValues": [
+               "BROAD"
+             ],
+             "newValues": []
+           },
+           {
+             "field": "status",
+             "oldValues": [
+               "ENABLED"
+             ],
+             "newValues": []
+           }
+         ]
+       }
+     ]
+   }
+ ]
+}
+```
+
+## See Also
+
+- [Query Change History](query-audit-summary-_-grouped-by-transaction.md): Query audit summaries grouped by transaction across a specified time range.

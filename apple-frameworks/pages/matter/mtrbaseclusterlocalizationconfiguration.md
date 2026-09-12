@@ -1,0 +1,164 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclusterlocalizationconfiguration](https://developer.apple.com/documentation/matter/mtrbaseclusterlocalizationconfiguration)
+
+# MTRBaseClusterLocalizationConfiguration (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```swift
+class MTRBaseClusterLocalizationConfiguration
+```
+
+## Topics
+
+### Initializers
+
+- [init(device:endpoint:queue:)](mtrbaseclusterlocalizationconfiguration/init%28device_endpoint_queue_%29.md): Deprecated.
+- [init(device:endpointID:queue:)](mtrbaseclusterlocalizationconfiguration/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandList(completion:)](mtrbaseclusterlocalizationconfiguration/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandList(completionHandler:)](mtrbaseclusterlocalizationconfiguration/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeActiveLocale(completion:)](mtrbaseclusterlocalizationconfiguration/readattributeactivelocale%28completion_%29.md)
+- [readAttributeActiveLocale(completionHandler:)](mtrbaseclusterlocalizationconfiguration/readattributeactivelocale%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(completion:)](mtrbaseclusterlocalizationconfiguration/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeList(completionHandler:)](mtrbaseclusterlocalizationconfiguration/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(completion:)](mtrbaseclusterlocalizationconfiguration/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevision(completionHandler:)](mtrbaseclusterlocalizationconfiguration/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(completion:)](mtrbaseclusterlocalizationconfiguration/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMap(completionHandler:)](mtrbaseclusterlocalizationconfiguration/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(completion:)](mtrbaseclusterlocalizationconfiguration/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandList(completionHandler:)](mtrbaseclusterlocalizationconfiguration/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeSupportedLocales(completion:)](mtrbaseclusterlocalizationconfiguration/readattributesupportedlocales%28completion_%29.md)
+- [readAttributeSupportedLocales(completionHandler:)](mtrbaseclusterlocalizationconfiguration/readattributesupportedlocales%28completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterlocalizationconfiguration/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterlocalizationconfiguration/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeActiveLocale(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterlocalizationconfiguration/subscribeattributeactivelocale%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeActiveLocale(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterlocalizationconfiguration/subscribeattributeactivelocale%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterlocalizationconfiguration/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterlocalizationconfiguration/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevision(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterlocalizationconfiguration/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevision(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterlocalizationconfiguration/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMap(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterlocalizationconfiguration/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMap(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterlocalizationconfiguration/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterlocalizationconfiguration/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterlocalizationconfiguration/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSupportedLocales(with:subscriptionEstablished:reportHandler:)](mtrbaseclusterlocalizationconfiguration/subscribeattributesupportedlocales%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSupportedLocales(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusterlocalizationconfiguration/subscribeattributesupportedlocales%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [writeAttributeActiveLocale(withValue:completion:)](mtrbaseclusterlocalizationconfiguration/writeattributeactivelocale%28withvalue_completion_%29.md)
+- [writeAttributeActiveLocale(withValue:completionHandler:)](mtrbaseclusterlocalizationconfiguration/writeattributeactivelocale%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeActiveLocale(withValue:params:completion:)](mtrbaseclusterlocalizationconfiguration/writeattributeactivelocale%28withvalue_params_completion_%29.md)
+- [writeAttributeActiveLocale(withValue:params:completionHandler:)](mtrbaseclusterlocalizationconfiguration/writeattributeactivelocale%28withvalue_params_completionhandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterlocalizationconfiguration/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterlocalizationconfiguration/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeActiveLocale(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterlocalizationconfiguration/readattributeactivelocale%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeActiveLocale(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterlocalizationconfiguration/readattributeactivelocale%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterlocalizationconfiguration/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterlocalizationconfiguration/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevision(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterlocalizationconfiguration/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterlocalizationconfiguration/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMap(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterlocalizationconfiguration/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterlocalizationconfiguration/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterlocalizationconfiguration/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterlocalizationconfiguration/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSupportedLocales(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusterlocalizationconfiguration/readattributesupportedlocales%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSupportedLocales(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusterlocalizationconfiguration/readattributesupportedlocales%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRBaseClusterLocalizationConfiguration (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```objectivec
+@interface MTRBaseClusterLocalizationConfiguration : MTRGenericBaseCluster
+```
+
+## Topics
+
+### Initializers
+
+- [initWithDevice:endpoint:queue:](mtrbaseclusterlocalizationconfiguration/init%28device_endpoint_queue_%29.md): Deprecated.
+- [initWithDevice:endpointID:queue:](mtrbaseclusterlocalizationconfiguration/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandListWithCompletion:](mtrbaseclusterlocalizationconfiguration/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandListWithCompletionHandler:](mtrbaseclusterlocalizationconfiguration/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeActiveLocaleWithCompletion:](mtrbaseclusterlocalizationconfiguration/readattributeactivelocale%28completion_%29.md)
+- [readAttributeActiveLocaleWithCompletionHandler:](mtrbaseclusterlocalizationconfiguration/readattributeactivelocale%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithCompletion:](mtrbaseclusterlocalizationconfiguration/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeListWithCompletionHandler:](mtrbaseclusterlocalizationconfiguration/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithCompletion:](mtrbaseclusterlocalizationconfiguration/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevisionWithCompletionHandler:](mtrbaseclusterlocalizationconfiguration/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithCompletion:](mtrbaseclusterlocalizationconfiguration/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMapWithCompletionHandler:](mtrbaseclusterlocalizationconfiguration/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithCompletion:](mtrbaseclusterlocalizationconfiguration/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandListWithCompletionHandler:](mtrbaseclusterlocalizationconfiguration/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeSupportedLocalesWithCompletion:](mtrbaseclusterlocalizationconfiguration/readattributesupportedlocales%28completion_%29.md)
+- [readAttributeSupportedLocalesWithCompletionHandler:](mtrbaseclusterlocalizationconfiguration/readattributesupportedlocales%28completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterlocalizationconfiguration/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterlocalizationconfiguration/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeActiveLocaleWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterlocalizationconfiguration/subscribeattributeactivelocale%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeActiveLocaleWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterlocalizationconfiguration/subscribeattributeactivelocale%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterlocalizationconfiguration/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterlocalizationconfiguration/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevisionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterlocalizationconfiguration/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevisionWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterlocalizationconfiguration/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMapWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterlocalizationconfiguration/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMapWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterlocalizationconfiguration/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterlocalizationconfiguration/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterlocalizationconfiguration/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSupportedLocalesWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusterlocalizationconfiguration/subscribeattributesupportedlocales%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSupportedLocalesWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusterlocalizationconfiguration/subscribeattributesupportedlocales%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [writeAttributeActiveLocaleWithValue:completion:](mtrbaseclusterlocalizationconfiguration/writeattributeactivelocale%28withvalue_completion_%29.md)
+- [writeAttributeActiveLocaleWithValue:completionHandler:](mtrbaseclusterlocalizationconfiguration/writeattributeactivelocale%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeActiveLocaleWithValue:params:completion:](mtrbaseclusterlocalizationconfiguration/writeattributeactivelocale%28withvalue_params_completion_%29.md)
+- [writeAttributeActiveLocaleWithValue:params:completionHandler:](mtrbaseclusterlocalizationconfiguration/writeattributeactivelocale%28withvalue_params_completionhandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterlocalizationconfiguration/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterlocalizationconfiguration/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeActiveLocaleWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterlocalizationconfiguration/readattributeactivelocale%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeActiveLocaleWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterlocalizationconfiguration/readattributeactivelocale%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterlocalizationconfiguration/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterlocalizationconfiguration/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevisionWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterlocalizationconfiguration/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterlocalizationconfiguration/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMapWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterlocalizationconfiguration/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterlocalizationconfiguration/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterlocalizationconfiguration/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterlocalizationconfiguration/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSupportedLocalesWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusterlocalizationconfiguration/readattributesupportedlocales%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSupportedLocalesWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusterlocalizationconfiguration/readattributesupportedlocales%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)

@@ -1,0 +1,109 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/dnssd/txtrecordgetitematindex(_:_:_:_:_:_:_:)](https://developer.apple.com/documentation/dnssd/txtrecordgetitematindex(_:_:_:_:_:_:_:))
+
+# TXTRecordGetItemAtIndex(\_:\_:\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** dnssd  
+**Kind:** Function  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.12+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.0+
+
+Allows you to retrieve a key name and value pointer, given an index into a TXT Record.
+
+## Declaration
+
+```swift
+func TXTRecordGetItemAtIndex(_ txtLen: UInt16, _ txtRecord: UnsafeRawPointer!, _ itemIndex: UInt16, _ keyBufLen: UInt16, _ key: UnsafeMutablePointer<CChar>!, _ valueLen: UnsafeMutablePointer<UInt8>!, _ value: UnsafeMutablePointer<UnsafeRawPointer?>!) -> DNSServiceErrorType
+```
+
+## Parameters
+
+- `txtLen`: The size of the received TXT Record.
+- `txtRecord`: Pointer to the received TXT Record bytes.
+- `itemIndex`: An index into the TXT Record.
+- `keyBufLen`: The size of the string buffer being supplied.
+- `key`: A string buffer used to store the key name. On return, the buffer contains a null-terminated C string giving the key name. DNS-SD TXT keys are usually 9 characters or fewer. To hold the maximum possible key name, the buffer should be 256 bytes long.
+- `valueLen`: On output, will be set to the size of the “value” data.
+- `value`: On output, \*value is set to point to location within TXT Record bytes that holds the value data.
+
+<a id="return-value"></a>
+
+## Return Value
+
+Returns [kDNSServiceErr_NoError](kdnsserviceerr_noerror.md) on success. Returns kDNSServiceErr_NoMemory if keyBufLen is too short. Returns kDNSServiceErr_Invalid if index is greater than TXTRecordGetCount()-1.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Legal index values range from zero to TXTRecordGetCount()-1. It’s also possible to iterate through keys in a TXT record by simply calling TXTRecordGetItemAtIndex() repeatedly, beginning with index zero and increasing until TXTRecordGetItemAtIndex() returns kDNSServiceErr_Invalid.
+
+On return:
+
+For keys with no value, \*value is set to NULL and \*valueLen is zero.
+
+For keys with empty value, \*value is non-NULL and \*valueLen is zero.
+
+For keys with non-empty value, \*value is non-NULL and \*valueLen is non-zero.
+
+## See Also
+
+### TXT Record Parsing Functions
+
+- [DNSServiceCreateDelegateConnection](dnsservicecreatedelegateconnection.md): Create a delegate connection to the daemon allowing efficient registration of multiple individual records.
+- [DNSServiceSetDispatchQueue(\_:\_:)](dnsservicesetdispatchqueue%28____%29.md): Allows you to schedule a DNSServiceRef on a serial dispatch queue for receiving asynchronous callbacks.
+- [TXTRecordContainsKey(\_:\_:\_:)](txtrecordcontainskey%28______%29.md): Allows you to determine if a given TXT Record contains a specified key.
+- [TXTRecordGetCount(\_:\_:)](txtrecordgetcount%28____%29.md): Returns the number of keys stored in the TXT Record.
+- [TXTRecordGetValuePtr(\_:\_:\_:\_:)](txtrecordgetvalueptr%28________%29.md): Allows you to retrieve the value for a given key from a TXT Record.
+
+# TXTRecordGetItemAtIndex (Objective-C)
+
+**Framework:** dnssd  
+**Kind:** Function  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.12+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.0+
+
+Allows you to retrieve a key name and value pointer, given an index into a TXT Record.
+
+## Declaration
+
+```objectivec
+DNSServiceErrorType TXTRecordGetItemAtIndex(uint16_t txtLen, const void *txtRecord, uint16_t itemIndex, uint16_t keyBufLen, char *key, uint8_t *valueLen, const void **value);
+```
+
+## Parameters
+
+- `txtLen`: The size of the received TXT Record.
+- `txtRecord`: Pointer to the received TXT Record bytes.
+- `itemIndex`: An index into the TXT Record.
+- `keyBufLen`: The size of the string buffer being supplied.
+- `key`: A string buffer used to store the key name. On return, the buffer contains a null-terminated C string giving the key name. DNS-SD TXT keys are usually 9 characters or fewer. To hold the maximum possible key name, the buffer should be 256 bytes long.
+- `valueLen`: On output, will be set to the size of the “value” data.
+- `value`: On output, \*value is set to point to location within TXT Record bytes that holds the value data.
+
+<a id="return-value"></a>
+
+## Return Value
+
+Returns [kDNSServiceErr_NoError](kdnsserviceerr_noerror.md) on success. Returns kDNSServiceErr_NoMemory if keyBufLen is too short. Returns kDNSServiceErr_Invalid if index is greater than TXTRecordGetCount()-1.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Legal index values range from zero to TXTRecordGetCount()-1. It’s also possible to iterate through keys in a TXT record by simply calling TXTRecordGetItemAtIndex() repeatedly, beginning with index zero and increasing until TXTRecordGetItemAtIndex() returns kDNSServiceErr_Invalid.
+
+On return:
+
+For keys with no value, \*value is set to NULL and \*valueLen is zero.
+
+For keys with empty value, \*value is non-NULL and \*valueLen is zero.
+
+For keys with non-empty value, \*value is non-NULL and \*valueLen is non-zero.
+
+## See Also
+
+### TXT Record Parsing Functions
+
+- [DNSServiceCreateDelegateConnection](dnsservicecreatedelegateconnection.md): Create a delegate connection to the daemon allowing efficient registration of multiple individual records.
+- [DNSServiceSetDispatchQueue](dnsservicesetdispatchqueue%28____%29.md): Allows you to schedule a DNSServiceRef on a serial dispatch queue for receiving asynchronous callbacks.
+- [TXTRecordContainsKey](txtrecordcontainskey%28______%29.md): Allows you to determine if a given TXT Record contains a specified key.
+- [TXTRecordGetCount](txtrecordgetcount%28____%29.md): Returns the number of keys stored in the TXT Record.
+- [TXTRecordGetValuePtr](txtrecordgetvalueptr%28________%29.md): Allows you to retrieve the value for a given key from a TXT Record.

@@ -1,0 +1,40 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/createmlcomponents/multilabelclassificationmetrics/meanaverageprecisionscore(classifications:groundtruth:)](https://developer.apple.com/documentation/createmlcomponents/multilabelclassificationmetrics/meanaverageprecisionscore(classifications:groundtruth:))
+
+# meanAveragePrecisionScore(classifications:groundTruth:)
+
+**Framework:** Create ML Components  
+**Kind:** Type Method  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 11.0+
+
+Computes the mean average precision.
+
+## Declaration
+
+```swift
+static func meanAveragePrecisionScore(classifications: some Sequence<ClassificationDistribution<Label>>, groundTruth: some Sequence<Set<Label>>) -> Float
+```
+
+## Parameters
+
+- `classifications`: A sequence of multi-label classifications.
+- `groundTruth`: A sequence of multi-label correct labels.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The mean average precision.
+
+<a id="discussion"></a>
+
+## Discussion
+
+An average precision score summarizes the precision-recall curve for a label. The mean average precision is the mean of the average precision scores for all the classification labels.
+
+## See Also
+
+### Computing the precision
+
+- [meanAveragePrecisionScore(\_:)](meanaverageprecisionscore%28__%29.md): Conforms when `Label` conforms to `Hashable`. Computes the mean average precision.
+- [meanAveragePrecisionScore(\_:labels:)](meanaverageprecisionscore%28__labels_%29.md): Conforms when `Label` conforms to `Hashable`. Computes the mean average precision.
+- [meanAveragePrecisionScore(classifications:groundTruth:labels:)](meanaverageprecisionscore%28classifications_groundtruth_labels_%29.md): Conforms when `Label` conforms to `Hashable`. Computes the mean average precision.

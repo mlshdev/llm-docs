@@ -1,0 +1,36 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/bundleresources/entitlements/com.apple.developer.web-browser-engine.restrict.notifyd](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.web-browser-engine.restrict.notifyd)
+
+# com.apple.developer.web-browser-engine.restrict.notifyd
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** Bundle Resources  
+**Kind:** Property List Key  
+**Availability:** iOS 17.4+ · iPadOS 17.4+
+
+An entitlement that restricts access to system notifications to enhance the security of your browser app.
+
+## Details
+
+`com.apple.developer.web-browser-engine.restrict.notifyd`
+
+<a id="discussion"></a>
+
+## Discussion
+
+To enhance the security of a browser app you develop that uses an alternative browser engine, add this entitlement to the app’s web-content extension with a value of `true`.
+
+For more information, see [Limiting resource access in web content extensions](https://developer.apple.com/documentation/browserenginekit/limiting-resource-access-in-content-extensions).
+
+## See Also
+
+### Alternative browser engines
+
+- [Embedded Browser Engine Entitlement](com.apple.developer.embedded-web-browser-engine.md): An entitlement that enables an app to embed an alternative browser engine.
+- [Embedded Browser Engine Association Entitlement](com.apple.developer.embedded-web-browser-engine.engine-association.md): An entitlement that indicates whether you own the alternative browser engine that your app embeds.
+- [Web Browser Engine Entitlement](com.apple.developer.web-browser-engine.host.md): An entitlement that enables your browser app to implement an alternative browser engine.
+- [com.apple.developer.web-browser-engine.networking](com.apple.developer.web-browser-engine.networking.md): An entitlement that grants an alternative browser engine’s extension the ability to use the network.
+- [com.apple.developer.web-browser-engine.webcontent](com.apple.developer.web-browser-engine.webcontent.md): An entitlement that grants an alternative browser engine’s extension the ability to manage web content.
+- [com.apple.developer.web-browser-engine.rendering](com.apple.developer.web-browser-engine.rendering.md): An entitlement that grants an alternative browser engine’s extension the ability to render web content.
+- [com.apple.developer.memory.transfer_accept](com.apple.developer.memory.transfer_accept.md): An entitlement that grants an alternative browser engine’s web-content extension the ability to increase memory.
+- [com.apple.developer.memory.transfer_send](com.apple.developer.memory.transfer_send.md): An entitlement that grants an alternative browser engine’s rendering extension the ability to transfer memory.

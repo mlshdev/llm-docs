@@ -1,0 +1,77 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videotoolbox/kvtcompressionpropertycameracalibrationkey_lensrole](https://developer.apple.com/documentation/videotoolbox/kvtcompressionpropertycameracalibrationkey_lensrole)
+
+# kVTCompressionPropertyCameraCalibrationKey_LensRole (Swift)
+
+**Framework:** Video Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+## Declaration
+
+```swift
+let kVTCompressionPropertyCameraCalibrationKey_LensRole: CFString
+```
+
+## Topics
+
+### Lens Roles
+
+- [kVTCameraCalibrationLensRole_Left](kvtcameracalibrationlensrole_left.md)
+- [kVTCameraCalibrationLensRole_Mono](kvtcameracalibrationlensrole_mono.md)
+- [kVTCameraCalibrationLensRole_Right](kvtcameracalibrationlensrole_right.md)
+
+## See Also
+
+### Camera Calibration
+
+- [kVTCompressionPropertyKey_CameraCalibrationDataLensCollection](kvtcompressionpropertykey_cameracalibrationdatalenscollection.md)
+- [kVTCompressionPropertyCameraCalibrationKey_ExtrinsicOrientationQuaternion](kvtcompressionpropertycameracalibrationkey_extrinsicorientationquaternion.md)
+- [kVTCompressionPropertyCameraCalibrationKey_ExtrinsicOriginSource](kvtcompressionpropertycameracalibrationkey_extrinsicoriginsource.md)
+- [kVTCompressionPropertyCameraCalibrationKey_IntrinsicMatrix](kvtcompressionpropertycameracalibrationkey_intrinsicmatrix.md)
+- [kVTCompressionPropertyCameraCalibrationKey_IntrinsicMatrixProjectionOffset](kvtcompressionpropertycameracalibrationkey_intrinsicmatrixprojectionoffset.md)
+- [kVTCompressionPropertyCameraCalibrationKey_IntrinsicMatrixReferenceDimensions](kvtcompressionpropertycameracalibrationkey_intrinsicmatrixreferencedimensions.md)
+- [kVTCompressionPropertyCameraCalibrationKey_LensAlgorithmKind](kvtcompressionpropertycameracalibrationkey_lensalgorithmkind.md)
+- [kVTCompressionPropertyCameraCalibrationKey_LensDistortions](kvtcompressionpropertycameracalibrationkey_lensdistortions.md)
+- [kVTCompressionPropertyCameraCalibrationKey_LensDomain](kvtcompressionpropertycameracalibrationkey_lensdomain.md)
+- [kVTCompressionPropertyCameraCalibrationKey_LensFrameAdjustmentsPolynomialX](kvtcompressionpropertycameracalibrationkey_lensframeadjustmentspolynomialx.md)
+- [kVTCompressionPropertyCameraCalibrationKey_LensFrameAdjustmentsPolynomialY](kvtcompressionpropertycameracalibrationkey_lensframeadjustmentspolynomialy.md)
+- [kVTCompressionPropertyCameraCalibrationKey_LensIdentifier](kvtcompressionpropertycameracalibrationkey_lensidentifier.md)
+- [kVTCompressionPropertyCameraCalibrationKey_RadialAngleLimit](kvtcompressionpropertycameracalibrationkey_radialanglelimit.md)
+
+# kVTCompressionPropertyCameraCalibrationKey_LensRole (Objective-C)
+
+**Framework:** Video Toolbox  
+**Kind:** Global Variable  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+## Declaration
+
+```objectivec
+extern CFStringRef const kVTCompressionPropertyCameraCalibrationKey_LensRole;
+```
+
+## Topics
+
+### Lens Roles
+
+- [kVTCameraCalibrationLensRole_Left](kvtcameracalibrationlensrole_left.md)
+- [kVTCameraCalibrationLensRole_Mono](kvtcameracalibrationlensrole_mono.md)
+- [kVTCameraCalibrationLensRole_Right](kvtcameracalibrationlensrole_right.md)
+
+## See Also
+
+### Camera Calibration
+
+- [kVTCompressionPropertyKey_CameraCalibrationDataLensCollection](kvtcompressionpropertykey_cameracalibrationdatalenscollection.md)
+- [kVTCompressionPropertyCameraCalibrationKey_ExtrinsicOrientationQuaternion](kvtcompressionpropertycameracalibrationkey_extrinsicorientationquaternion.md)
+- [kVTCompressionPropertyCameraCalibrationKey_ExtrinsicOriginSource](kvtcompressionpropertycameracalibrationkey_extrinsicoriginsource.md)
+- [kVTCompressionPropertyCameraCalibrationKey_IntrinsicMatrix](kvtcompressionpropertycameracalibrationkey_intrinsicmatrix.md)
+- [kVTCompressionPropertyCameraCalibrationKey_IntrinsicMatrixProjectionOffset](kvtcompressionpropertycameracalibrationkey_intrinsicmatrixprojectionoffset.md)
+- [kVTCompressionPropertyCameraCalibrationKey_IntrinsicMatrixReferenceDimensions](kvtcompressionpropertycameracalibrationkey_intrinsicmatrixreferencedimensions.md)
+- [kVTCompressionPropertyCameraCalibrationKey_LensAlgorithmKind](kvtcompressionpropertycameracalibrationkey_lensalgorithmkind.md)
+- [kVTCompressionPropertyCameraCalibrationKey_LensDistortions](kvtcompressionpropertycameracalibrationkey_lensdistortions.md)
+- [kVTCompressionPropertyCameraCalibrationKey_LensDomain](kvtcompressionpropertycameracalibrationkey_lensdomain.md)
+- [kVTCompressionPropertyCameraCalibrationKey_LensFrameAdjustmentsPolynomialX](kvtcompressionpropertycameracalibrationkey_lensframeadjustmentspolynomialx.md)
+- [kVTCompressionPropertyCameraCalibrationKey_LensFrameAdjustmentsPolynomialY](kvtcompressionpropertycameracalibrationkey_lensframeadjustmentspolynomialy.md)
+- [kVTCompressionPropertyCameraCalibrationKey_LensIdentifier](kvtcompressionpropertycameracalibrationkey_lensidentifier.md)
+- [kVTCompressionPropertyCameraCalibrationKey_RadialAngleLimit](kvtcompressionpropertycameracalibrationkey_radialanglelimit.md)

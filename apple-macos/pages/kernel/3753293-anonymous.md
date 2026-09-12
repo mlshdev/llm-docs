@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/3753293-anonymous](https://developer.apple.com/documentation/kernel/3753293-anonymous)
+
+# Anonymous
+
+**Interface language:** Objective-C
+
+**Framework:** DriverKit, Kernel  
+**Kind:** Enumeration  
+**Availability:** DriverKit 21.0+ · macOS 12.0+
+
+## Declaration
+
+```objectivec
+enum : unsigned int {
+    ...
+};
+```
+
+## Topics
+
+### Constants
+
+- [kIOInterruptSourceAbsoluteTime](3753293-anonymous/kiointerruptsourceabsolutetime.md)
+- [kIOInterruptSourceContinuousTime](3753293-anonymous/kiointerruptsourcecontinuoustime.md)
+- [kIOInterruptSourceIndexMask](3753293-anonymous/kiointerruptsourceindexmask.md)

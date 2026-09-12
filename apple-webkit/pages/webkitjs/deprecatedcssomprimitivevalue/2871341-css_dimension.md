@@ -1,0 +1,48 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/deprecatedcssomprimitivevalue/2871341-css_dimension](https://developer.apple.com/documentation/webkitjs/deprecatedcssomprimitivevalue/2871341-css_dimension)
+
+# CSS_DIMENSION
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+const unsigned short CSS_DIMENSION;
+```
+
+## See Also
+
+### Miscellaneous
+
+- [CSS_ATTR](2871245-css_attr.md)
+- [CSS_CM](2871470-css_cm.md)
+- [CSS_COUNTER](2871457-css_counter.md)
+- [CSS_DEG](2871476-css_deg.md)
+- [CSS_EMS](2871471-css_ems.md)
+- [CSS_EXS](2871478-css_exs.md)
+- [CSS_GRAD](2871401-css_grad.md)
+- [CSS_HZ](2871071-css_hz.md)
+- [CSS_IDENT](2871013-css_ident.md)
+- [CSS_IN](2871172-css_in.md)
+- [CSS_KHZ](2871251-css_khz.md)
+- [CSS_MM](2871004-css_mm.md)
+- [CSS_MS](2871447-css_ms.md)
+- [CSS_NUMBER](2871051-css_number.md)
+- [CSS_PC](2871093-css_pc.md)
+- [CSS_PERCENTAGE](2871065-css_percentage.md)
+- [CSS_PT](2871362-css_pt.md)
+- [CSS_PX](2871432-css_px.md)
+- [CSS_RAD](2871374-css_rad.md)
+- [CSS_RECT](2871157-css_rect.md)
+- [CSS_RGBCOLOR](2871252-css_rgbcolor.md)
+- [CSS_S](2871369-css_s.md)
+- [CSS_STRING](2871025-css_string.md)
+- [CSS_UNKNOWN](2871377-css_unknown.md)
+- [CSS_URI](2870985-css_uri.md)
+- [CSS_VH](2870998-css_vh.md)
+- [CSS_VMAX](2871088-css_vmax.md)
+- [CSS_VMIN](2871241-css_vmin.md)
+- [CSS_VW](2870979-css_vw.md)

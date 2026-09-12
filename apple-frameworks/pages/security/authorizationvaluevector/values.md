@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/authorizationvaluevector/values](https://developer.apple.com/documentation/security/authorizationvaluevector/values)
+
+# values
+
+**Interface language:** Objective-C
+
+**Framework:** Security  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+## Declaration
+
+```objectivec
+AuthorizationValue * values;
+```

@@ -1,0 +1,32 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/usd/movedistance](https://developer.apple.com/documentation/usd/movedistance)
+
+# moveDistance
+
+**Kind:** Article
+
+The distance that this action moves the target prims.
+
+<a id="overview"></a>
+
+## Overview
+
+The default value is zero. This property is in stage linear units; for more information, see [Encoding Stage Linear Units](https://openusd.org/docs/api/group___usd_geom_linear_units__group.html).
+
+<a id="Declaration"></a>
+
+### Declaration
+
+```other
+uniform double moveDistance = 0.0
+```
+
+## See Also
+
+### Properties
+
+- [info:id](info-id.md): The action’s unique identifier.
+- [affectedObjects](affectedobjects.md): A list of prims that respond to the notification.
+- [type](type.md): An option that controls the order in which the actions execute.
+- [style](style.md): An option that implements different kinds of animation timing.
+- [motionType](motiontype.md): An option that determines how the action displays or hides a prim.
+- [easeType](easetype.md): An option that describes the animation’s change in pace over time.

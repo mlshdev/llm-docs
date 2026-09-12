@@ -1,0 +1,43 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/callkit/cxplaydtmfcallaction/actiontype/hardpause](https://developer.apple.com/documentation/callkit/cxplaydtmfcallaction/actiontype/hardpause)
+
+# CXPlayDTMFCallAction.ActionType.hardPause (Swift)
+
+**Framework:** CallKit  
+**Kind:** Case  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 10.0+ · visionOS 1.0+ · watchOS 9.0+
+
+Indicates that the user included digits after a hard pause in their dial string. A hard pause is indicated by a semicolon (`;`) and waits for further user interaction before dialing the additional digits.
+
+## Declaration
+
+```swift
+case hardPause
+```
+
+## See Also
+
+### Constants
+
+- [CXPlayDTMFCallAction.ActionType.singleTone](singletone.md): Indicates that the user tapped a digit on the in-call keypad.
+- [CXPlayDTMFCallAction.ActionType.softPause](softpause.md): Indicates that the user included digits after a soft pause in their dial string. A soft pause is indicated by a comma (`,`) and waits a few seconds before dialing the additional digits.
+
+# CXPlayDTMFCallActionTypeHardPause (Objective-C)
+
+**Framework:** CallKit  
+**Kind:** Enumeration Case  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · visionOS 1.0+ · watchOS 9.0+
+
+Indicates that the user included digits after a hard pause in their dial string. A hard pause is indicated by a semicolon (`;`) and waits for further user interaction before dialing the additional digits.
+
+## Declaration
+
+```objectivec
+CXPlayDTMFCallActionTypeHardPause
+```
+
+## See Also
+
+### Constants
+
+- [CXPlayDTMFCallActionTypeSingleTone](singletone.md): Indicates that the user tapped a digit on the in-call keypad.
+- [CXPlayDTMFCallActionTypeSoftPause](softpause.md): Indicates that the user included digits after a soft pause in their dial string. A soft pause is indicated by a comma (`,`) and waits a few seconds before dialing the additional digits.

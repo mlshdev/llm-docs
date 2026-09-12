@@ -1,0 +1,97 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/forceeffectprotocol](https://developer.apple.com/documentation/realitykit/forceeffectprotocol)
+
+# ForceEffectProtocol
+
+**Framework:** RealityKit  
+**Kind:** Protocol  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
+
+A protocol that defines a custom force effect.
+
+## Declaration
+
+```swift
+protocol ForceEffectProtocol
+```
+
+<a id="overview"></a>
+
+## Overview
+
+A custom force effect is a function of a set of input rigid body attributes and returns force-like vector quantities. You can declare this custom force effect’s input types ([parameterTypes](forceeffectprotocol/parametertypes.md)) and output types ([forceMode](forceeffectprotocol/forcemode.md)) by conforming to `ForceEffectProtocol`.
+
+For example, you can declare a custom force effect that depends on rigid bodies’ position and mass, and computes acceleration for each rigid body.
+
+```swift
+struct MyCustomForce : ForceEffectProtocol {
+    var parameterTypes: PhysicsBodyParameterTypes { [.position, .mass] }
+    var forceMode: ForceMode = .acceleration
+    func update(parameters: inout ForceEffectParameters) {
+    }
+}
+```
+
+Register your custom force effect to enable the physics system to compute forces affected by rigid bodies.
+
+```swift
+MyCustomForce.register()
+```
+
+At each physics update, the [update(parameters:)](forceeffectprotocol/update%28parameters_%29.md) method receives the declared inputs from [ForceEffectParameters](forceeffectparameters.md). You can set the output forces for each rigid body with [setForce(\_:index:)](forceeffectparameters/setforce%28__index_%29.md).
+
+Sometimes, you may need to access properties from both your custom force effect and the current context while computing forces in the update function. The [register(\_:)](forceeffectprotocol/register%28__%29-1zt9t.md) method accepts an optional closure that allows you to capture the necessary properties. If you provide this closure to the register method, the update method is not required.
+
+```swift
+struct MyCustomForceClosure: ForceEffectProtocol {
+    var forceMode: RealityFoundation.ForceMode = .force
+    var parameterTypes: PhysicsBodyParameterTypes { [.position, .mass] }
+    let customProperty: Double = 1
+}
+
+let contextualProperty: Double = 1
+
+MyCustomForceClosure.register { event in
+    // Access the effect property via `event.effect.customProperty`.
+    // Access the input rigid body attributes via `event.parameters`.
+    // Access the contextual property directly by `contextualProperty`.
+}
+```
+
+## Topics
+
+### Updating effects
+
+- [update(parameters:)](forceeffectprotocol/update%28parameters_%29.md): Defines how the custom force effect computes forces at each physics simulation step.
+- [register(\_:)](forceeffectprotocol/register%28__%29-1zt9t.md): Registers the custom effect.
+- [PhysicsBodyParameterTypes](physicsbodyparametertypes.md): Defines which rigid body inputs are required by a force effect’s update handler.
+- [ForceEffectParameters](forceeffectparameters.md): The force effect input data to the effect’s update handler or closure.
+- [ForceEffectEvent](forceeffectevent.md): A struct that defines the arguments to the custom force effect update closure.
+- [UnsafeForceEffectBuffer](unsafeforceeffectbuffer.md): Provides access to physics body parameters from the effect’s update function or event handler.
+
+### Instance Properties
+
+- [forceMode](forceeffectprotocol/forcemode.md): The mode that controls how the physics system interprets the outputs from a user’s custom force computation.
+- [parameterTypes](forceeffectprotocol/parametertypes.md): The input types to user’s custom force computation.
+
+### Type Methods
+
+- [register(\_:)](forceeffectprotocol/register%28__%29.md): Registers the custom effect.
+
+## Relationships
+
+### Conforming Types
+
+- [ConstantForceEffect](constantforceeffect.md)
+- [ConstantRadialForceEffect](constantradialforceeffect.md)
+- [DragForceEffect](dragforceeffect.md)
+- [RadialForceEffect](radialforceeffect.md)
+- [TurbulenceForceEffect](turbulenceforceeffect.md)
+- [VortexForceEffect](vortexforceeffect.md)
+
+## See Also
+
+### Custom forces
+
+- [ForceMode](forcemode.md): The options that control how physics system applies the forces.
+- [ForceEffectParameters](forceeffectparameters.md): The force effect input data to the effect’s update handler or closure.
+- [ForceEffectBase](forceeffectbase.md): The base protocol for the wrapping force effect structure containing common parameters for all force-effects.

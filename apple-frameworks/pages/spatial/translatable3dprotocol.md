@@ -1,0 +1,48 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatial/translatable3dprotocol](https://developer.apple.com/documentation/spatial/translatable3dprotocol)
+
+# Translatable3DProtocol
+
+**Framework:** Spatial  
+**Kind:** Protocol  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
+
+A set of methods that defines the interface for Spatial entities that can translate.
+
+## Declaration
+
+```swift
+protocol Translatable3DProtocol<Scalar> : SpatialTypeProtocol
+```
+
+## Topics
+
+### Instance Methods
+
+- [translate(by:)](translatable3dprotocol/translate%28by_%29.md): Translates the entity by the specified vector.
+- [translated(by:)](translatable3dprotocol/translated%28by_%29.md): Returns the entity translated by the specified vector.
+
+## Relationships
+
+### Inherits From
+
+- [Decodable](https://developer.apple.com/documentation/swift/decodable)
+- [Encodable](https://developer.apple.com/documentation/swift/encodable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [SpatialTypeProtocol](spatialtypeprotocol.md)
+
+### Conforming Types
+
+- [AffineTransform3D](affinetransform3d.md)
+- [AffineTransform3DFloat](affinetransform3dfloat.md)
+- [Point3D](point3d.md)
+- [Point3DFloat](point3dfloat.md)
+- [Pose3D](pose3d.md)
+- [Pose3DFloat](pose3dfloat.md)
+- [ProjectiveTransform3D](projectivetransform3d.md)
+- [ProjectiveTransform3DFloat](projectivetransform3dfloat.md)
+- [Ray3D](ray3d.md)
+- [Ray3DFloat](ray3dfloat.md)
+- [Rect3D](rect3d.md)
+- [Rect3DFloat](rect3dfloat.md)
+- [ScaledPose3D](scaledpose3d.md)
+- [ScaledPose3DFloat](scaledpose3dfloat.md)

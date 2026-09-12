@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/musickit/artworkimage/init(_:height:)](https://developer.apple.com/documentation/musickit/artworkimage/init(_:height:))
+
+# init(\_:height:)
+
+**Framework:** MusicKit  
+**Kind:** Initializer  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+
+Creates an instance with a specified height.
+
+## Declaration
+
+```swift
+nonisolated init(_ artwork: Artwork, height: CGFloat)
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This initializer derives the [URL](../../foundation/url.md) for loading the artwork image from the [Artwork](../artwork.md) instance and the specified sizing parameters, as well as the display scale for the current environment.
+
+The loaded image and placeholder have constrained frames from these sizing parameters.
+
+If you provide the height only, the artwork image calculates the width dimension as a proportional length according to the aspect ratio of the artwork.

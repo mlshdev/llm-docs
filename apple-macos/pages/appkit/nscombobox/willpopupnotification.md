@@ -1,0 +1,61 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nscombobox/willpopupnotification](https://developer.apple.com/documentation/appkit/nscombobox/willpopupnotification)
+
+# willPopUpNotification (Swift)
+
+**Framework:** AppKit  
+**Kind:** Type Property  
+**Availability:** macOS
+
+Posted whenever the pop-up list of the `NSComboBox` is going to be displayed.
+
+## Declaration
+
+```swift
+class let willPopUpNotification: NSNotification.Name
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The notification object is the `NSComboBox` whose pop-up window will be displayed. This notification does not contain a `userInfo` dictionary.
+
+To observe this notification using Swift concurrency, use [NSComboBox.WillPopUpMessage](willpopupmessage.md).
+
+## See Also
+
+### Notifications
+
+- [selectionDidChangeNotification](selectiondidchangenotification.md): Posted after the pop-up list selection of the `NSComboBox` changes.
+- [selectionIsChangingNotification](selectionischangingnotification.md): Posted whenever the pop-up list selection of the `NSComboBox` is changing.
+- [willDismissNotification](willdismissnotification.md): Posted whenever the pop-up list of the `NSComboBox` is about to be dismissed.
+
+# NSComboBoxWillPopUpNotification (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Global Variable  
+**Availability:** macOS
+
+Posted whenever the pop-up list of the `NSComboBox` is going to be displayed.
+
+## Declaration
+
+```objectivec
+extern NSNotificationName NSComboBoxWillPopUpNotification;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The notification object is the `NSComboBox` whose pop-up window will be displayed. This notification does not contain a `userInfo` dictionary.
+
+To observe this notification using Swift concurrency, use [NSComboBox.WillPopUpMessage](willpopupmessage.md).
+
+## See Also
+
+### Notifications
+
+- [NSComboBoxSelectionDidChangeNotification](selectiondidchangenotification.md): Posted after the pop-up list selection of the `NSComboBox` changes.
+- [NSComboBoxSelectionIsChangingNotification](selectionischangingnotification.md): Posted whenever the pop-up list selection of the `NSComboBox` is changing.
+- [NSComboBoxWillDismissNotification](willdismissnotification.md): Posted whenever the pop-up list of the `NSComboBox` is about to be dismissed.

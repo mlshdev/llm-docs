@@ -1,0 +1,67 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/modelio/mdlnormalmaptexture/init(bygeneratingnormalmapwith:name:smoothness:contrast:)](https://developer.apple.com/documentation/modelio/mdlnormalmaptexture/init(bygeneratingnormalmapwith:name:smoothness:contrast:))
+
+# init(byGeneratingNormalMapWith:name:smoothness:contrast:) (Swift)
+
+**Framework:** Model I/O  
+**Kind:** Initializer  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Initializes a normal map to be generated from the specified texture.
+
+## Declaration
+
+```swift
+init(byGeneratingNormalMapWith sourceTexture: MDLTexture, name: String?, smoothness: Float, contrast: Float)
+```
+
+## Parameters
+
+- `sourceTexture`: The texture from which to generate a normal map.
+- `name`: The [name](../mdlnamed/name.md) property for the new texture object.
+- `smoothness`: A number between `0.0` and `1.0` indicating how much the texture should be smoothed before the normal map is generated. A value of `0.0` means that the texture is not smoothed at all before being processed.
+- `contrast`: A value used to magnify the effect of the generated normal map. A value of `1.0` indicates no magnification is applied.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new normal map texture object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This initializer does not generate texel data; the [MDLNormalMapTexture](../mdlnormalmaptexture.md) class automatically generates data when you use one of the [MDLTexture](../mdltexture.md) methods listed in Accessing Texture Data. The generated texture uses the same dimensions and other properties as the source texture.
+
+# initByGeneratingNormalMapWithTexture:name:smoothness:contrast: (Objective-C)
+
+**Framework:** Model I/O  
+**Kind:** Instance Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+Initializes a normal map to be generated from the specified texture.
+
+## Declaration
+
+```objectivec
+- (instancetype) initByGeneratingNormalMapWithTexture:(MDLTexture *) sourceTexture name:(NSString *) name smoothness:(float) smoothness contrast:(float) contrast;
+```
+
+## Parameters
+
+- `sourceTexture`: The texture from which to generate a normal map.
+- `name`: The [name](../mdlnamed/name.md) property for the new texture object.
+- `smoothness`: A number between `0.0` and `1.0` indicating how much the texture should be smoothed before the normal map is generated. A value of `0.0` means that the texture is not smoothed at all before being processed.
+- `contrast`: A value used to magnify the effect of the generated normal map. A value of `1.0` indicates no magnification is applied.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new normal map texture object.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This initializer does not generate texel data; the [MDLNormalMapTexture](../mdlnormalmaptexture.md) class automatically generates data when you use one of the [MDLTexture](../mdltexture.md) methods listed in Accessing Texture Data. The generated texture uses the same dimensions and other properties as the source texture.

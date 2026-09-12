@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/data/init(referencing:)](https://developer.apple.com/documentation/foundation/data/init(referencing:))
+
+# init(referencing:)
+
+**Framework:** Foundation  
+**Kind:** Initializer  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 8.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Initialize a `Data` by adopting a reference type.
+
+## Declaration
+
+```swift
+init(referencing reference: NSData)
+```
+
+## Parameters
+
+- `reference`: The instance of `NSData` that you wish to wrap. This instance will be copied by `struct Data`.
+
+<a id="discussion"></a>
+
+## Discussion
+
+You can use this initializer to create a `struct Data` that wraps a `class NSData`. `struct Data` will use the `class NSData` for all operations. Other initializers (including casting using `as Data`) may choose to hold a reference or not, based on a what is the most efficient representation.
+
+If the resulting value is mutated, then `Data` will invoke the `mutableCopy()` function on the reference to copy the contents. You may customize the behavior of that function if you wish to return a specialized mutable subclass.

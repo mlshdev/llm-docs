@@ -1,0 +1,61 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsprogressindicator/minvalue](https://developer.apple.com/documentation/appkit/nsprogressindicator/minvalue)
+
+# minValue (Swift)
+
+**Framework:** AppKit  
+**Kind:** Instance Property  
+**Availability:** macOS
+
+The minimum value for the progress indicator.
+
+## Declaration
+
+```swift
+var minValue: Double { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+By default, a determinate progress indicator goes from `0.0` to `100.0`, so the default value of this property is `0.0`.
+
+An indeterminate progress indicator does not use this value.
+
+## See Also
+
+### Advancing the progress bar
+
+- [increment(by:)](increment%28by_%29.md): Advances the progress bar of a determinate progress indicator by the specified amount.
+- [doubleValue](doublevalue.md): The value that indicates the current extent of the progress indicator.
+- [maxValue](maxvalue.md): The maximum value for the progress indicator.
+
+# minValue (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Property  
+**Availability:** macOS
+
+The minimum value for the progress indicator.
+
+## Declaration
+
+```objectivec
+@property double minValue;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+By default, a determinate progress indicator goes from `0.0` to `100.0`, so the default value of this property is `0.0`.
+
+An indeterminate progress indicator does not use this value.
+
+## See Also
+
+### Advancing the progress bar
+
+- [incrementBy:](increment%28by_%29.md): Advances the progress bar of a determinate progress indicator by the specified amount.
+- [doubleValue](doublevalue.md): The value that indicates the current extent of the progress indicator.
+- [maxValue](maxvalue.md): The maximum value for the progress indicator.

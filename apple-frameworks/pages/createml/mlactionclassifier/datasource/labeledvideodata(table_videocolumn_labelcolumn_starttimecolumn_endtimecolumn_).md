@@ -1,0 +1,31 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/createml/mlactionclassifier/datasource/labeledvideodata(table:videocolumn:labelcolumn:starttimecolumn:endtimecolumn:)](https://developer.apple.com/documentation/createml/mlactionclassifier/datasource/labeledvideodata(table:videocolumn:labelcolumn:starttimecolumn:endtimecolumn:))
+
+# MLActionClassifier.DataSource.labeledVideoData(table:videoColumn:labelColumn:startTimeColumn:endTimeColumn:)
+
+**Framework:** Create ML  
+**Kind:** Case  
+**Availability:** macOS 11.0+ (deprecated in 14.0)
+
+A data table that contains the locations of the video files and the action annotations.
+
+## Declaration
+
+```swift
+case labeledVideoData(table: MLDataTable, videoColumn: String = __Defaults.videoColumnName, labelColumn: String = __Defaults.labelColumnName, startTimeColumn: String? = nil, endTimeColumn: String? = nil)
+```
+
+## Parameters
+
+- `table`: A data table that contains the video file locations and the action annotations.
+- `videoColumn`: The name of the column that contains the URLs to the video files.
+- `labelColumn`: The name of the column that contains the labels of the action the person demonstrates in the video file.
+- `startTimeColumn`: The name of the column that contains the action’s starting-time index in the video file.
+- `endTimeColumn `: The name of the column that contains the action’s ending-time index in the video file.
+
+## See Also
+
+### Creating a data source
+
+- [MLActionClassifier.DataSource.labeledDirectories(at:)](labeleddirectories%28at_%29.md): The location of a folder with subfolders each of which contain sample videos of an action.
+- [MLActionClassifier.DataSource.labeledFiles(at:)](labeledfiles%28at_%29.md): The location of a folder that contains video files whose names you use to label corresponding actions.
+- [MLActionClassifier.DataSource.directoryWithVideosAndAnnotation(at:annotationFile:videoColumn:labelColumn:startTimeColumn:endTimeColumn:)](directorywithvideosandannotation%28at_annotationfile_videocolumn_labelcolumn_starttimecolumn_endtimecolumn_%29.md): The location of a directory of video files, and the location of an action annotation file.

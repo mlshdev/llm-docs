@@ -1,0 +1,13 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vdsp/vectorizablefloat/applymulti(setup:pinputs:poutputs:count:)](https://developer.apple.com/documentation/accelerate/vdsp/vectorizablefloat/applymulti(setup:pinputs:poutputs:count:))
+
+# applyMulti(setup:pInputs:pOutputs:count:)
+
+**Framework:** Accelerate  
+**Kind:** Type Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS · watchOS 6.0+
+
+## Declaration
+
+```swift
+static func applyMulti(setup: vDSP_biquadm_SetupD, pInputs: UnsafeMutablePointer<UnsafePointer<vDSP.VectorizableFloat.Scalar>>, pOutputs: UnsafeMutablePointer<UnsafeMutablePointer<vDSP.VectorizableFloat.Scalar>>, count: vDSP_Length)
+```

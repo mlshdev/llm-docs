@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/iousbdevicecapabilityusb2extension/1425944-bmattributes](https://developer.apple.com/documentation/iokit/iousbdevicecapabilityusb2extension/1425944-bmattributes)
+
+# bmAttributes
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Instance Property  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.7+
+
+## Declaration
+
+```objectivec
+uint32_t bmAttributes;
+```

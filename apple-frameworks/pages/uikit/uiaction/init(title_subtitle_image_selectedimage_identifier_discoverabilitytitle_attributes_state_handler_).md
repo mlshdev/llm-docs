@@ -1,0 +1,13 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiaction/init(title:subtitle:image:selectedimage:identifier:discoverabilitytitle:attributes:state:handler:)](https://developer.apple.com/documentation/uikit/uiaction/init(title:subtitle:image:selectedimage:identifier:discoverabilitytitle:attributes:state:handler:))
+
+# init(title:subtitle:image:selectedImage:identifier:discoverabilityTitle:attributes:state:handler:)
+
+**Framework:** UIKit  
+**Kind:** Initializer  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · tvOS 17.0+ · visionOS
+
+## Declaration
+
+```swift
+@MainActor @preconcurrency convenience init(title: String = "", subtitle: String? = nil, image: UIImage? = nil, selectedImage: UIImage? = nil, identifier: UIAction.Identifier? = nil, discoverabilityTitle: String? = nil, attributes: UIMenuElement.Attributes = [], state: UIMenuElement.State = .off, handler: @escaping UIActionHandler)
+```

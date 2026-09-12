@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tipkit/tips/configurationoption/displayfrequency/hourly](https://developer.apple.com/documentation/tipkit/tips/configurationoption/displayfrequency/hourly)
+
+# hourly
+
+**Framework:** TipKit  
+**Kind:** Type Property  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+A hourly display frequency.
+
+## Declaration
+
+```swift
+static var hourly: Tips.ConfigurationOption.DisplayFrequency { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+When you set this, the system shows no more than one tip per hour.

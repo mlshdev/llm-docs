@@ -1,0 +1,73 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uidocument/init(fileurl:)](https://developer.apple.com/documentation/uikit/uidocument/init(fileurl:))
+
+# init(fileURL:) (Swift)
+
+**Framework:** UIKit  
+**Kind:** Initializer  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Returns a document object initialized with its file-system location.
+
+## Declaration
+
+```swift
+init(fileURL url: URL)
+```
+
+## Parameters
+
+- `url`: A file URL identifying the location in the application sandbox where document data is to be written. Passing in `nil` or an empty URL results in the throwing of an [invalidArgumentException](../../foundation/nsexceptionname/invalidargumentexception.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+A `UIDocument` object or `nil` if the object could not be created.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+After you create a document object and no file exists for it yet, you should next call the [save(to:for:completionHandler:)](save%28to_for_completionhandler_%29.md) to write the document to its file-system location in the application sandbox. If `url` locates an existing document file, call [open(completionHandler:)](open%28completionhandler_%29.md) after creating the document object. The second parameter of this method, the save operation constant, should be [UIDocument.SaveOperation.forCreating](saveoperation/forcreating.md) when there is no document file yet. In the completion handler, if you want the document to be automatically synced with other devices you should ensure that its URL is based in a ubiquitous container; see [Designing for Documents in iCloud](https://developer.apple.com/library/content/documentation/General/Conceptual/iCloudDesignGuide/Chapters/DesigningForDocumentsIniCloud.html#//apple_ref/doc/uid/TP40012094-CH2-SW1) for more information.
+
+## See Also
+
+### Related Documentation
+
+- [fileURL](fileurl.md): The file URL you use to initialize the document.
+
+# initWithFileURL: (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+Returns a document object initialized with its file-system location.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithFileURL:(NSURL *) url;
+```
+
+## Parameters
+
+- `url`: A file URL identifying the location in the application sandbox where document data is to be written. Passing in `nil` or an empty URL results in the throwing of an [NSInvalidArgumentException](../../foundation/nsexceptionname/invalidargumentexception.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+A `UIDocument` object or `nil` if the object could not be created.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+After you create a document object and no file exists for it yet, you should next call the [saveToURL:forSaveOperation:completionHandler:](save%28to_for_completionhandler_%29.md) to write the document to its file-system location in the application sandbox. If `url` locates an existing document file, call [openWithCompletionHandler:](open%28completionhandler_%29.md) after creating the document object. The second parameter of this method, the save operation constant, should be [UIDocumentSaveForCreating](saveoperation/forcreating.md) when there is no document file yet. In the completion handler, if you want the document to be automatically synced with other devices you should ensure that its URL is based in a ubiquitous container; see [Designing for Documents in iCloud](https://developer.apple.com/library/content/documentation/General/Conceptual/iCloudDesignGuide/Chapters/DesigningForDocumentsIniCloud.html#//apple_ref/doc/uid/TP40012094-CH2-SW1) for more information.
+
+## See Also
+
+### Related Documentation
+
+- [fileURL](fileurl.md): The file URL you use to initialize the document.

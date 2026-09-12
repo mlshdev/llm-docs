@@ -1,0 +1,129 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimageconvert_argb8888torgba1010102(_:_:_:_:_:_:)](https://developer.apple.com/documentation/accelerate/vimageconvert_argb8888torgba1010102(_:_:_:_:_:_:))
+
+# vImageConvert_ARGB8888ToRGBA1010102(\_:\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 8.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Converts an 8-bit-per-channel, 4-channel interleaved buffer to an RGBA1010102 32-bit, 4-channel buffer with permutation.
+
+## Declaration
+
+```swift
+func vImageConvert_ARGB8888ToRGBA1010102(_ src: UnsafePointer<vImage_Buffer>, _ dest: UnsafePointer<vImage_Buffer>, _ RGB101010RangeMin: Int32, _ RGB101010RangeMax: Int32, _ permuteMap: UnsafePointer<UInt8>!, _ flags: vImage_Flags) -> vImage_Error
+```
+
+## Parameters
+
+- `src`: The source vImage buffer.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the [height](vimage_buffer/height.md), [width](vimage_buffer/width.md), and [rowBytes](vimage_buffer/rowbytes.md) fields of this structure, and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+- `RGB101010RangeMin`: The minimum pixel value for the destination image.
+- `RGB101010RangeMax`: The maximum pixel value for the destination image.
+- `permuteMap`: An array of four 8-bit integers with the values `0`, `1`, `2`, and 3, in some order. Each value specifies the channel from the source image that the function copies to the destination channel at the corresponding index.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes in [Data Types and Constants](data-types-and-constants.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The function uses the following calculation to perform the conversion:
+
+```c
+ uint8_t *srcPixel = src.data;
+ A8 = srcPixel[permuteMap[0]];
+ R8 = srcPixel[permuteMap[1]];
+ G8 = srcPixel[permuteMap[2]];
+ B8 = srcPixel[permuteMap[3]];
+ srcPixel += 4;
+ 
+ int32_t R10, G10, B10;
+ int32_t range10 = RGB101010RangeMax - RGB101010RangeMin;
+ int32_t rounding = UCHAR_MAX >> 1;
+ R10 = ((R8 * range10 + rounding) / UCHAR_MAX) + RGB101010RangeMin;
+ G10 = ((G8 * range10 + rounding) / UCHAR_MAX) + RGB101010RangeMin;
+ B10 = ((B8 * range10 + rounding) / UCHAR_MAX) + RGB101010RangeMin;
+ A10 = ((A10 * 3 + rounding) / UCHAR_MAX);
+ 
+ uint32_t *destPixel = dest.data;
+ destPixel[0] = htonl((R10 << 22) | (G10 << 12) | (B10 << 2) | A10);
+ destPixel += 1;
+
+```
+
+## See Also
+
+### Converting from 8-bit buffers
+
+- [vImageConvert_ARGB8888ToARGB2101010(\_:\_:\_:\_:\_:\_:)](vimageconvert_argb8888toargb2101010%28____________%29.md): Converts an 8-bit-per-channel, 4-channel interleaved buffer to an ARGB2101010 32-bit, 4-channel buffer with permutation.
+- [vImageConvert_ARGB8888ToXRGB2101010(\_:\_:\_:\_:\_:\_:)](vimageconvert_argb8888toxrgb2101010%28____________%29.md): Converts an 8-bit-per-channel, 4-channel interleaved buffer to an ARGB2101010 32-bit, 4-channel buffer with permutation.
+
+# vImageConvert_ARGB8888ToRGBA1010102 (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 8.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Converts an 8-bit-per-channel, 4-channel interleaved buffer to an RGBA1010102 32-bit, 4-channel buffer with permutation.
+
+## Declaration
+
+```objectivec
+vImage_Error vImageConvert_ARGB8888ToRGBA1010102(const vImage_Buffer *src, const vImage_Buffer *dest, int32_t RGB101010RangeMin, int32_t RGB101010RangeMax, const uint8_t permuteMap[4], vImage_Flags flags);
+```
+
+## Parameters
+
+- `src`: The source vImage buffer.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the [height](vimage_buffer/height.md), [width](vimage_buffer/width.md), and [rowBytes](vimage_buffer/rowbytes.md) fields of this structure, and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+- `RGB101010RangeMin`: The minimum pixel value for the destination image.
+- `RGB101010RangeMax`: The maximum pixel value for the destination image.
+- `permuteMap`: An array of four 8-bit integers with the values `0`, `1`, `2`, and 3, in some order. Each value specifies the channel from the source image that the function copies to the destination channel at the corresponding index.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes in [Data Types and Constants](data-types-and-constants.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The function uses the following calculation to perform the conversion:
+
+```c
+ uint8_t *srcPixel = src.data;
+ A8 = srcPixel[permuteMap[0]];
+ R8 = srcPixel[permuteMap[1]];
+ G8 = srcPixel[permuteMap[2]];
+ B8 = srcPixel[permuteMap[3]];
+ srcPixel += 4;
+ 
+ int32_t R10, G10, B10;
+ int32_t range10 = RGB101010RangeMax - RGB101010RangeMin;
+ int32_t rounding = UCHAR_MAX >> 1;
+ R10 = ((R8 * range10 + rounding) / UCHAR_MAX) + RGB101010RangeMin;
+ G10 = ((G8 * range10 + rounding) / UCHAR_MAX) + RGB101010RangeMin;
+ B10 = ((B8 * range10 + rounding) / UCHAR_MAX) + RGB101010RangeMin;
+ A10 = ((A10 * 3 + rounding) / UCHAR_MAX);
+ 
+ uint32_t *destPixel = dest.data;
+ destPixel[0] = htonl((R10 << 22) | (G10 << 12) | (B10 << 2) | A10);
+ destPixel += 1;
+
+```
+
+## See Also
+
+### Converting from 8-bit buffers
+
+- [vImageConvert_ARGB8888ToARGB2101010](vimageconvert_argb8888toargb2101010%28____________%29.md): Converts an 8-bit-per-channel, 4-channel interleaved buffer to an ARGB2101010 32-bit, 4-channel buffer with permutation.
+- [vImageConvert_ARGB8888ToXRGB2101010](vimageconvert_argb8888toxrgb2101010%28____________%29.md): Converts an 8-bit-per-channel, 4-channel interleaved buffer to an ARGB2101010 32-bit, 4-channel buffer with permutation.

@@ -1,0 +1,39 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/speech/speechanalyzer/analyzesequence(_:)](https://developer.apple.com/documentation/speech/speechanalyzer/analyzesequence(_:))
+
+# analyzeSequence(\_:)
+
+**Framework:** Speech  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+Analyzes an input sequence, returning when the sequence terminates.
+
+## Declaration
+
+```swift
+final func analyzeSequence<InputSequence>(_ inputSequence: InputSequence) async throws -> CMTime? where InputSequence : Sendable, InputSequence : AsyncSequence, InputSequence.Element == AnalyzerInput
+```
+
+## Parameters
+
+- `inputSequence`: An input sequence to analyze.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The time-code of the last audio sample that was consumed from this or an earlier input sequence, or `nil` if no audio sample has been consumed. You may use this value for the parameter of [finalizeAndFinish(through:)](finalizeandfinish%28through_%29.md) (or other methods).
+
+<a id="discussion"></a>
+
+## Discussion
+
+When this method returns, the last audio consumed from the input sequence may still be undergoing analysis. To wait for the analysis to complete, call another method such as [finalize(through:)](finalize%28through_%29.md) and await its return.
+
+If you cancel the task executing this method, most input sequences will terminate early, causing this method to return early. The method returns the time-code of the last audio sample that was consumed and does not throw `CancellationError`.
+
+## See Also
+
+### Performing analysis
+
+- [analyzeSequence(from:)](analyzesequence%28from_%29.md): Analyzes an input sequence created from an audio file, returning when the file has been read.

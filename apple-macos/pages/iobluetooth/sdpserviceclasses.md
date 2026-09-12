@@ -1,0 +1,232 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/sdpserviceclasses](https://developer.apple.com/documentation/iobluetooth/sdpserviceclasses)
+
+# SDPServiceClasses (Swift)
+
+**Framework:** IOBluetooth  
+**Kind:** Structure  
+**Availability:** macOS
+
+## Declaration
+
+```swift
+struct SDPServiceClasses
+```
+
+## Topics
+
+### Constants
+
+- [kBluetoothSDPUUID16ServiceClassAVRemoteControl](kbluetoothsdpuuid16serviceclassavremotecontrol.md)
+- [kBluetoothSDPUUID16ServiceClassAVRemoteControlController](kbluetoothsdpuuid16serviceclassavremotecontrolcontroller.md)
+- [kBluetoothSDPUUID16ServiceClassAVRemoteControlTarget](kbluetoothsdpuuid16serviceclassavremotecontroltarget.md)
+- [kBluetoothSDPUUID16ServiceClassAdvancedAudioDistribution](kbluetoothsdpuuid16serviceclassadvancedaudiodistribution.md)
+- [kBluetoothSDPUUID16ServiceClassAudioSink](kbluetoothsdpuuid16serviceclassaudiosink.md)
+- [kBluetoothSDPUUID16ServiceClassAudioSource](kbluetoothsdpuuid16serviceclassaudiosource.md)
+- [kBluetoothSDPUUID16ServiceClassAudioVideo](kbluetoothsdpuuid16serviceclassaudiovideo.md)
+- [kBluetoothSDPUUID16ServiceClassBasicPrinting](kbluetoothsdpuuid16serviceclassbasicprinting.md)
+- [kBluetoothSDPUUID16ServiceClassBrowseGroupDescriptor](kbluetoothsdpuuid16serviceclassbrowsegroupdescriptor.md)
+- [kBluetoothSDPUUID16ServiceClassCommonISDNAccess](kbluetoothsdpuuid16serviceclasscommonisdnaccess.md)
+- [kBluetoothSDPUUID16ServiceClassCordlessTelephony](kbluetoothsdpuuid16serviceclasscordlesstelephony.md)
+- [kBluetoothSDPUUID16ServiceClassDialupNetworking](kbluetoothsdpuuid16serviceclassdialupnetworking.md)
+- [kBluetoothSDPUUID16ServiceClassDirectPrinting](kbluetoothsdpuuid16serviceclassdirectprinting.md)
+- [kBluetoothSDPUUID16ServiceClassDirectPrintingReferenceObjectsService](kbluetoothsdpuuid16serviceclassdirectprintingreferenceobjectsservice.md)
+- [kBluetoothSDPUUID16ServiceClassFax](kbluetoothsdpuuid16serviceclassfax.md)
+- [kBluetoothSDPUUID16ServiceClassGN](kbluetoothsdpuuid16serviceclassgn.md)
+- [kBluetoothSDPUUID16ServiceClassGenericAudio](kbluetoothsdpuuid16serviceclassgenericaudio.md)
+- [kBluetoothSDPUUID16ServiceClassGenericFileTransfer](kbluetoothsdpuuid16serviceclassgenericfiletransfer.md)
+- [kBluetoothSDPUUID16ServiceClassGenericNetworking](kbluetoothsdpuuid16serviceclassgenericnetworking.md)
+- [kBluetoothSDPUUID16ServiceClassGenericTelephony](kbluetoothsdpuuid16serviceclassgenerictelephony.md)
+- [kBluetoothSDPUUID16ServiceClassGlobalNavigationSatelliteSystem](kbluetoothsdpuuid16serviceclassglobalnavigationsatellitesystem.md)
+- [kBluetoothSDPUUID16ServiceClassGlobalNavigationSatelliteSystemServer](kbluetoothsdpuuid16serviceclassglobalnavigationsatellitesystemserver.md)
+- [kBluetoothSDPUUID16ServiceClassHCR_Print](kbluetoothsdpuuid16serviceclasshcr_print.md)
+- [kBluetoothSDPUUID16ServiceClassHCR_Scan](kbluetoothsdpuuid16serviceclasshcr_scan.md)
+- [kBluetoothSDPUUID16ServiceClassHandsFree](kbluetoothsdpuuid16serviceclasshandsfree.md)
+- [kBluetoothSDPUUID16ServiceClassHandsFreeAudioGateway](kbluetoothsdpuuid16serviceclasshandsfreeaudiogateway.md)
+- [kBluetoothSDPUUID16ServiceClassHardcopyCableReplacement](kbluetoothsdpuuid16serviceclasshardcopycablereplacement.md)
+- [kBluetoothSDPUUID16ServiceClassHeadset](kbluetoothsdpuuid16serviceclassheadset.md)
+- [kBluetoothSDPUUID16ServiceClassHeadsetAudioGateway](kbluetoothsdpuuid16serviceclassheadsetaudiogateway.md)
+- [kBluetoothSDPUUID16ServiceClassHeadset_HS](kbluetoothsdpuuid16serviceclassheadset_hs.md)
+- [kBluetoothSDPUUID16ServiceClassHealthDevice](kbluetoothsdpuuid16serviceclasshealthdevice.md)
+- [kBluetoothSDPUUID16ServiceClassHealthDeviceSink](kbluetoothsdpuuid16serviceclasshealthdevicesink.md)
+- [kBluetoothSDPUUID16ServiceClassHealthDeviceSource](kbluetoothsdpuuid16serviceclasshealthdevicesource.md)
+- [kBluetoothSDPUUID16ServiceClassHumanInterfaceDeviceService](kbluetoothsdpuuid16serviceclasshumaninterfacedeviceservice.md)
+- [kBluetoothSDPUUID16ServiceClassImaging](kbluetoothsdpuuid16serviceclassimaging.md)
+- [kBluetoothSDPUUID16ServiceClassImagingAutomaticArchive](kbluetoothsdpuuid16serviceclassimagingautomaticarchive.md)
+- [kBluetoothSDPUUID16ServiceClassImagingReferencedObjects](kbluetoothsdpuuid16serviceclassimagingreferencedobjects.md)
+- [kBluetoothSDPUUID16ServiceClassImagingResponder](kbluetoothsdpuuid16serviceclassimagingresponder.md)
+- [kBluetoothSDPUUID16ServiceClassIntercom](kbluetoothsdpuuid16serviceclassintercom.md)
+- [kBluetoothSDPUUID16ServiceClassIrMCSync](kbluetoothsdpuuid16serviceclassirmcsync.md)
+- [kBluetoothSDPUUID16ServiceClassIrMCSyncCommand](kbluetoothsdpuuid16serviceclassirmcsynccommand.md)
+- [kBluetoothSDPUUID16ServiceClassLANAccessUsingPPP](kbluetoothsdpuuid16serviceclasslanaccessusingppp.md)
+- [kBluetoothSDPUUID16ServiceClassMessageAccessProfile](kbluetoothsdpuuid16serviceclassmessageaccessprofile.md)
+- [kBluetoothSDPUUID16ServiceClassMessageAccessServer](kbluetoothsdpuuid16serviceclassmessageaccessserver.md)
+- [kBluetoothSDPUUID16ServiceClassMessageNotificationServer](kbluetoothsdpuuid16serviceclassmessagenotificationserver.md)
+- [kBluetoothSDPUUID16ServiceClassNAP](kbluetoothsdpuuid16serviceclassnap.md)
+- [kBluetoothSDPUUID16ServiceClassOBEXFileTransfer](kbluetoothsdpuuid16serviceclassobexfiletransfer.md)
+- [kBluetoothSDPUUID16ServiceClassOBEXObjectPush](kbluetoothsdpuuid16serviceclassobexobjectpush.md)
+- [kBluetoothSDPUUID16ServiceClassPANU](kbluetoothsdpuuid16serviceclasspanu.md)
+- [kBluetoothSDPUUID16ServiceClassPhonebookAccess](kbluetoothsdpuuid16serviceclassphonebookaccess.md)
+- [kBluetoothSDPUUID16ServiceClassPhonebookAccess_PCE](kbluetoothsdpuuid16serviceclassphonebookaccess_pce.md)
+- [kBluetoothSDPUUID16ServiceClassPhonebookAccess_PSE](kbluetoothsdpuuid16serviceclassphonebookaccess_pse.md)
+- [kBluetoothSDPUUID16ServiceClassPnPInformation](kbluetoothsdpuuid16serviceclasspnpinformation.md)
+- [kBluetoothSDPUUID16ServiceClassPrintingStatus](kbluetoothsdpuuid16serviceclassprintingstatus.md)
+- [kBluetoothSDPUUID16ServiceClassPublicBrowseGroup](kbluetoothsdpuuid16serviceclasspublicbrowsegroup.md)
+- [kBluetoothSDPUUID16ServiceClassReferencePrinting](kbluetoothsdpuuid16serviceclassreferenceprinting.md)
+- [kBluetoothSDPUUID16ServiceClassReflectedUI](kbluetoothsdpuuid16serviceclassreflectedui.md)
+- [kBluetoothSDPUUID16ServiceClassSIM_Access](kbluetoothsdpuuid16serviceclasssim_access.md)
+- [kBluetoothSDPUUID16ServiceClassSerialPort](kbluetoothsdpuuid16serviceclassserialport.md)
+- [kBluetoothSDPUUID16ServiceClassServiceDiscoveryServer](kbluetoothsdpuuid16serviceclassservicediscoveryserver.md)
+- [kBluetoothSDPUUID16ServiceClassUDI_MT](kbluetoothsdpuuid16serviceclassudi_mt.md)
+- [kBluetoothSDPUUID16ServiceClassUDI_TA](kbluetoothsdpuuid16serviceclassudi_ta.md)
+- [kBluetoothSDPUUID16ServiceClassVideoConferencingGW](kbluetoothsdpuuid16serviceclassvideoconferencinggw.md)
+- [kBluetoothSDPUUID16ServiceClassVideoDistribution](kbluetoothsdpuuid16serviceclassvideodistribution.md)
+- [kBluetoothSDPUUID16ServiceClassVideoSink](kbluetoothsdpuuid16serviceclassvideosink.md)
+- [kBluetoothSDPUUID16ServiceClassVideoSource](kbluetoothsdpuuid16serviceclassvideosource.md)
+- [kBluetoothSDPUUID16ServiceClassWAP](kbluetoothsdpuuid16serviceclasswap.md)
+- [kBluetoothSDPUUID16ServiceClassWAPClient](kbluetoothsdpuuid16serviceclasswapclient.md)
+- [kBluetoothSDPUUID16ServiceClassGATT](kbluetoothsdpuuid16serviceclassgatt.md)
+
+### Initializers
+
+- [init(\_:)](sdpserviceclasses/init%28__%29.md)
+- [init(rawValue:)](sdpserviceclasses/init%28rawvalue_%29.md)
+
+### Instance Properties
+
+- [rawValue](sdpserviceclasses/rawvalue.md)
+
+## Relationships
+
+### Conforms To
+
+- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [RawRepresentable](https://developer.apple.com/documentation/swift/rawrepresentable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+
+## See Also
+
+### Data Types
+
+- [BluetoothAFHMode](bluetoothafhmode.md)
+- [BluetoothAirMode](bluetoothairmode.md)
+- [BluetoothAllowRoleSwitch](bluetoothallowroleswitch.md)
+- [BluetoothAuthenticationRequirements](bluetoothauthenticationrequirements.md)
+- [BluetoothAuthenticationRequirementsValues](bluetoothauthenticationrequirementsvalues.md)
+- [BluetoothClassOfDevice](bluetoothclassofdevice.md)
+- [BluetoothClockOffset](bluetoothclockoffset.md)
+- [BluetoothCompanyIdentifers](bluetoothcompanyidentifers.md)
+- [BluetoothConnectionHandle](bluetoothconnectionhandle.md)
+- [BluetoothDeviceClassMajor](bluetoothdeviceclassmajor.md)
+- [BluetoothDeviceClassMinor](bluetoothdeviceclassminor.md)
+- [BluetoothDeviceName](bluetoothdevicename.md)
+- [BluetoothEncryptionEnable](bluetoothencryptionenable.md)
+- [BluetoothFeatureBits](bluetoothfeaturebits.md)
+- [BluetoothHCIACLDataByteCount](bluetoothhciacldatabytecount.md)
+
+# SDPServiceClasses (Objective-C)
+
+**Framework:** IOBluetooth  
+**Kind:** Enumeration  
+**Availability:** macOS
+
+## Declaration
+
+```objectivec
+enum SDPServiceClasses : unsigned int;
+```
+
+## Topics
+
+### Constants
+
+- [kBluetoothSDPUUID16ServiceClassAVRemoteControl](kbluetoothsdpuuid16serviceclassavremotecontrol.md)
+- [kBluetoothSDPUUID16ServiceClassAVRemoteControlController](kbluetoothsdpuuid16serviceclassavremotecontrolcontroller.md)
+- [kBluetoothSDPUUID16ServiceClassAVRemoteControlTarget](kbluetoothsdpuuid16serviceclassavremotecontroltarget.md)
+- [kBluetoothSDPUUID16ServiceClassAdvancedAudioDistribution](kbluetoothsdpuuid16serviceclassadvancedaudiodistribution.md)
+- [kBluetoothSDPUUID16ServiceClassAudioSink](kbluetoothsdpuuid16serviceclassaudiosink.md)
+- [kBluetoothSDPUUID16ServiceClassAudioSource](kbluetoothsdpuuid16serviceclassaudiosource.md)
+- [kBluetoothSDPUUID16ServiceClassAudioVideo](kbluetoothsdpuuid16serviceclassaudiovideo.md)
+- [kBluetoothSDPUUID16ServiceClassBasicPrinting](kbluetoothsdpuuid16serviceclassbasicprinting.md)
+- [kBluetoothSDPUUID16ServiceClassBrowseGroupDescriptor](kbluetoothsdpuuid16serviceclassbrowsegroupdescriptor.md)
+- [kBluetoothSDPUUID16ServiceClassCommonISDNAccess](kbluetoothsdpuuid16serviceclasscommonisdnaccess.md)
+- [kBluetoothSDPUUID16ServiceClassCordlessTelephony](kbluetoothsdpuuid16serviceclasscordlesstelephony.md)
+- [kBluetoothSDPUUID16ServiceClassDialupNetworking](kbluetoothsdpuuid16serviceclassdialupnetworking.md)
+- [kBluetoothSDPUUID16ServiceClassDirectPrinting](kbluetoothsdpuuid16serviceclassdirectprinting.md)
+- [kBluetoothSDPUUID16ServiceClassDirectPrintingReferenceObjectsService](kbluetoothsdpuuid16serviceclassdirectprintingreferenceobjectsservice.md)
+- [kBluetoothSDPUUID16ServiceClassFax](kbluetoothsdpuuid16serviceclassfax.md)
+- [kBluetoothSDPUUID16ServiceClassGN](kbluetoothsdpuuid16serviceclassgn.md)
+- [kBluetoothSDPUUID16ServiceClassGenericAudio](kbluetoothsdpuuid16serviceclassgenericaudio.md)
+- [kBluetoothSDPUUID16ServiceClassGenericFileTransfer](kbluetoothsdpuuid16serviceclassgenericfiletransfer.md)
+- [kBluetoothSDPUUID16ServiceClassGenericNetworking](kbluetoothsdpuuid16serviceclassgenericnetworking.md)
+- [kBluetoothSDPUUID16ServiceClassGenericTelephony](kbluetoothsdpuuid16serviceclassgenerictelephony.md)
+- [kBluetoothSDPUUID16ServiceClassGlobalNavigationSatelliteSystem](kbluetoothsdpuuid16serviceclassglobalnavigationsatellitesystem.md)
+- [kBluetoothSDPUUID16ServiceClassGlobalNavigationSatelliteSystemServer](kbluetoothsdpuuid16serviceclassglobalnavigationsatellitesystemserver.md)
+- [kBluetoothSDPUUID16ServiceClassHCR_Print](kbluetoothsdpuuid16serviceclasshcr_print.md)
+- [kBluetoothSDPUUID16ServiceClassHCR_Scan](kbluetoothsdpuuid16serviceclasshcr_scan.md)
+- [kBluetoothSDPUUID16ServiceClassHandsFree](kbluetoothsdpuuid16serviceclasshandsfree.md)
+- [kBluetoothSDPUUID16ServiceClassHandsFreeAudioGateway](kbluetoothsdpuuid16serviceclasshandsfreeaudiogateway.md)
+- [kBluetoothSDPUUID16ServiceClassHardcopyCableReplacement](kbluetoothsdpuuid16serviceclasshardcopycablereplacement.md)
+- [kBluetoothSDPUUID16ServiceClassHeadset](kbluetoothsdpuuid16serviceclassheadset.md)
+- [kBluetoothSDPUUID16ServiceClassHeadsetAudioGateway](kbluetoothsdpuuid16serviceclassheadsetaudiogateway.md)
+- [kBluetoothSDPUUID16ServiceClassHeadset_HS](kbluetoothsdpuuid16serviceclassheadset_hs.md)
+- [kBluetoothSDPUUID16ServiceClassHealthDevice](kbluetoothsdpuuid16serviceclasshealthdevice.md)
+- [kBluetoothSDPUUID16ServiceClassHealthDeviceSink](kbluetoothsdpuuid16serviceclasshealthdevicesink.md)
+- [kBluetoothSDPUUID16ServiceClassHealthDeviceSource](kbluetoothsdpuuid16serviceclasshealthdevicesource.md)
+- [kBluetoothSDPUUID16ServiceClassHumanInterfaceDeviceService](kbluetoothsdpuuid16serviceclasshumaninterfacedeviceservice.md)
+- [kBluetoothSDPUUID16ServiceClassImaging](kbluetoothsdpuuid16serviceclassimaging.md)
+- [kBluetoothSDPUUID16ServiceClassImagingAutomaticArchive](kbluetoothsdpuuid16serviceclassimagingautomaticarchive.md)
+- [kBluetoothSDPUUID16ServiceClassImagingReferencedObjects](kbluetoothsdpuuid16serviceclassimagingreferencedobjects.md)
+- [kBluetoothSDPUUID16ServiceClassImagingResponder](kbluetoothsdpuuid16serviceclassimagingresponder.md)
+- [kBluetoothSDPUUID16ServiceClassIntercom](kbluetoothsdpuuid16serviceclassintercom.md)
+- [kBluetoothSDPUUID16ServiceClassIrMCSync](kbluetoothsdpuuid16serviceclassirmcsync.md)
+- [kBluetoothSDPUUID16ServiceClassIrMCSyncCommand](kbluetoothsdpuuid16serviceclassirmcsynccommand.md)
+- [kBluetoothSDPUUID16ServiceClassLANAccessUsingPPP](kbluetoothsdpuuid16serviceclasslanaccessusingppp.md)
+- [kBluetoothSDPUUID16ServiceClassMessageAccessProfile](kbluetoothsdpuuid16serviceclassmessageaccessprofile.md)
+- [kBluetoothSDPUUID16ServiceClassMessageAccessServer](kbluetoothsdpuuid16serviceclassmessageaccessserver.md)
+- [kBluetoothSDPUUID16ServiceClassMessageNotificationServer](kbluetoothsdpuuid16serviceclassmessagenotificationserver.md)
+- [kBluetoothSDPUUID16ServiceClassNAP](kbluetoothsdpuuid16serviceclassnap.md)
+- [kBluetoothSDPUUID16ServiceClassOBEXFileTransfer](kbluetoothsdpuuid16serviceclassobexfiletransfer.md)
+- [kBluetoothSDPUUID16ServiceClassOBEXObjectPush](kbluetoothsdpuuid16serviceclassobexobjectpush.md)
+- [kBluetoothSDPUUID16ServiceClassPANU](kbluetoothsdpuuid16serviceclasspanu.md)
+- [kBluetoothSDPUUID16ServiceClassPhonebookAccess](kbluetoothsdpuuid16serviceclassphonebookaccess.md)
+- [kBluetoothSDPUUID16ServiceClassPhonebookAccess_PCE](kbluetoothsdpuuid16serviceclassphonebookaccess_pce.md)
+- [kBluetoothSDPUUID16ServiceClassPhonebookAccess_PSE](kbluetoothsdpuuid16serviceclassphonebookaccess_pse.md)
+- [kBluetoothSDPUUID16ServiceClassPnPInformation](kbluetoothsdpuuid16serviceclasspnpinformation.md)
+- [kBluetoothSDPUUID16ServiceClassPrintingStatus](kbluetoothsdpuuid16serviceclassprintingstatus.md)
+- [kBluetoothSDPUUID16ServiceClassPublicBrowseGroup](kbluetoothsdpuuid16serviceclasspublicbrowsegroup.md)
+- [kBluetoothSDPUUID16ServiceClassReferencePrinting](kbluetoothsdpuuid16serviceclassreferenceprinting.md)
+- [kBluetoothSDPUUID16ServiceClassReflectedUI](kbluetoothsdpuuid16serviceclassreflectedui.md)
+- [kBluetoothSDPUUID16ServiceClassSIM_Access](kbluetoothsdpuuid16serviceclasssim_access.md)
+- [kBluetoothSDPUUID16ServiceClassSerialPort](kbluetoothsdpuuid16serviceclassserialport.md)
+- [kBluetoothSDPUUID16ServiceClassServiceDiscoveryServer](kbluetoothsdpuuid16serviceclassservicediscoveryserver.md)
+- [kBluetoothSDPUUID16ServiceClassUDI_MT](kbluetoothsdpuuid16serviceclassudi_mt.md)
+- [kBluetoothSDPUUID16ServiceClassUDI_TA](kbluetoothsdpuuid16serviceclassudi_ta.md)
+- [kBluetoothSDPUUID16ServiceClassVideoConferencingGW](kbluetoothsdpuuid16serviceclassvideoconferencinggw.md)
+- [kBluetoothSDPUUID16ServiceClassVideoDistribution](kbluetoothsdpuuid16serviceclassvideodistribution.md)
+- [kBluetoothSDPUUID16ServiceClassVideoSink](kbluetoothsdpuuid16serviceclassvideosink.md)
+- [kBluetoothSDPUUID16ServiceClassVideoSource](kbluetoothsdpuuid16serviceclassvideosource.md)
+- [kBluetoothSDPUUID16ServiceClassWAP](kbluetoothsdpuuid16serviceclasswap.md)
+- [kBluetoothSDPUUID16ServiceClassWAPClient](kbluetoothsdpuuid16serviceclasswapclient.md)
+- [kBluetoothSDPUUID16ServiceClassGATT](kbluetoothsdpuuid16serviceclassgatt.md)
+
+## See Also
+
+### Data Types
+
+- [BluetoothAFHMode](bluetoothafhmode.md)
+- [BluetoothAirMode](bluetoothairmode.md)
+- [BluetoothAllowRoleSwitch](bluetoothallowroleswitch.md)
+- [BluetoothAuthenticationRequirements](bluetoothauthenticationrequirements.md)
+- [BluetoothAuthenticationRequirementsValues](bluetoothauthenticationrequirementsvalues.md)
+- [BluetoothClassOfDevice](bluetoothclassofdevice.md)
+- [BluetoothClockOffset](bluetoothclockoffset.md)
+- [BluetoothCompanyIdentifers](bluetoothcompanyidentifers.md)
+- [BluetoothConnectionHandle](bluetoothconnectionhandle.md)
+- [BluetoothDeviceClassMajor](bluetoothdeviceclassmajor.md)
+- [BluetoothDeviceClassMinor](bluetoothdeviceclassminor.md)
+- [BluetoothDeviceName](bluetoothdevicename.md)
+- [BluetoothEncryptionEnable](bluetoothencryptionenable.md)
+- [BluetoothFeatureBits](bluetoothfeaturebits.md)
+- [BluetoothHCIACLDataByteCount](bluetoothhciacldatabytecount.md)

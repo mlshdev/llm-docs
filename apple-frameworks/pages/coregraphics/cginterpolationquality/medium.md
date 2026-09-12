@@ -1,0 +1,47 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coregraphics/cginterpolationquality/medium](https://developer.apple.com/documentation/coregraphics/cginterpolationquality/medium)
+
+# CGInterpolationQuality.medium (Swift)
+
+**Framework:** Core Graphics  
+**Kind:** Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+A medium level of interpolation quality. This setting is slower than the low setting but faster than the high setting.
+
+## Declaration
+
+```swift
+case medium
+```
+
+## See Also
+
+### Constants
+
+- [CGInterpolationQuality.default](default.md): The default level of quality.
+- [CGInterpolationQuality.none](none.md): No interpolation.
+- [CGInterpolationQuality.low](low.md): A low level of interpolation quality. This setting may speed up image rendering.
+- [CGInterpolationQuality.high](high.md): A high level of interpolation quality. This setting may slow down image rendering.
+
+# kCGInterpolationMedium (Objective-C)
+
+**Framework:** Core Graphics  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+A medium level of interpolation quality. This setting is slower than the low setting but faster than the high setting.
+
+## Declaration
+
+```objectivec
+kCGInterpolationMedium
+```
+
+## See Also
+
+### Constants
+
+- [kCGInterpolationDefault](default.md): The default level of quality.
+- [kCGInterpolationNone](none.md): No interpolation.
+- [kCGInterpolationLow](low.md): A low level of interpolation quality. This setting may speed up image rendering.
+- [kCGInterpolationHigh](high.md): A high level of interpolation quality. This setting may slow down image rendering.

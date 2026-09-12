@@ -1,0 +1,23 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/image/orientation/left](https://developer.apple.com/documentation/swiftui/image/orientation/left)
+
+# Image.Orientation.left
+
+**Framework:** SwiftUI  
+**Kind:** Case  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+A value that indicates a 90° counterclockwise rotation from the orientation of its original pixel data.
+
+## Declaration
+
+```swift
+case left
+```
+
+## See Also
+
+### Getting image orientations
+
+- [Image.Orientation.up](up.md): A value that indicates the original pixel data matches the image’s intended display orientation.
+- [Image.Orientation.down](down.md): A value that indicates a 180° rotation of the image from the orientation of its original pixel data.
+- [Image.Orientation.right](right.md): A value that indicates a 90° clockwise rotation of the image from the orientation of its original pixel data.

@@ -1,0 +1,43 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/intersecting-sets](https://developer.apple.com/documentation/appstoreconnectapi/intersecting-sets)
+
+# Intersecting sets
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Article
+
+Return the intersection of two or more arrays treated as sets.
+
+<a id="overview"></a>
+
+## Overview
+
+Use the `intersection()` function in the expression of a matchmaking rule to find the common items in arrays. For example, intersection `([[ ‘a’, ‘b’ ], [ ‘b’, ‘c’ ], [ ‘b’, ‘d’]])` returns `[ ‘b’ ]`.
+
+<a id="Declaration"></a>
+
+### Declaration
+
+```other
+array intersection(array[array[any]] $sets)
+```
+
+<a id="Parameters"></a>
+
+### Parameters
+
+-`sets`: An array of arrays that the function converts to sets and then intersects with each other.
+
+<a id="Return-value"></a>
+
+### Return value
+
+A set that’s the intersect of the set representation of the arrays in `sets`.
+
+## See Also
+
+### Array functions
+
+- [Converting arrays to sets](converting-arrays-to-sets.md): Return the content of a list, with duplicates removed and sorted, so that you can compare it to another set.
+- [Computing numeric differences](computing-numeric-differences.md): Return the absolute difference between the maximum and minimum numerical values in an array.

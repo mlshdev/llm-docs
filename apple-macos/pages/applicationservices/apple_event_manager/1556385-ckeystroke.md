@@ -1,0 +1,52 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/applicationservices/apple_event_manager/1556385-ckeystroke](https://developer.apple.com/documentation/applicationservices/apple_event_manager/1556385-ckeystroke)
+
+# cKeystroke
+
+**Framework:** Core Services
+
+## Topics
+
+### Constants
+
+- [cKeystroke](https://developer.apple.com/documentation/coreservices/ckeystroke)
+- [eCapsLockDown](https://developer.apple.com/documentation/coreservices/ecapslockdown)
+- [eClearKey](https://developer.apple.com/documentation/coreservices/eclearkey)
+- [eCommandDown](https://developer.apple.com/documentation/coreservices/ecommanddown)
+- [eControlDown](https://developer.apple.com/documentation/coreservices/econtroldown)
+- [eDeleteKey](https://developer.apple.com/documentation/coreservices/edeletekey)
+- [eDownArrowKey](https://developer.apple.com/documentation/coreservices/edownarrowkey)
+- [eEndKey](https://developer.apple.com/documentation/coreservices/eendkey)
+- [eEnterKey](https://developer.apple.com/documentation/coreservices/eenterkey)
+- [eEscapeKey](https://developer.apple.com/documentation/coreservices/eescapekey)
+- [eF10Key](https://developer.apple.com/documentation/coreservices/ef10key)
+- [eF11Key](https://developer.apple.com/documentation/coreservices/ef11key)
+- [eF12Key](https://developer.apple.com/documentation/coreservices/ef12key)
+- [eF13Key](https://developer.apple.com/documentation/coreservices/ef13key)
+- [eF14Key](https://developer.apple.com/documentation/coreservices/ef14key)
+- [eF15Key](https://developer.apple.com/documentation/coreservices/ef15key)
+- [eF1Key](https://developer.apple.com/documentation/coreservices/ef1key)
+- [eF2Key](https://developer.apple.com/documentation/coreservices/ef2key)
+- [eF3Key](https://developer.apple.com/documentation/coreservices/ef3key)
+- [eF4Key](https://developer.apple.com/documentation/coreservices/ef4key)
+- [eF5Key](https://developer.apple.com/documentation/coreservices/ef5key)
+- [eF6Key](https://developer.apple.com/documentation/coreservices/ef6key)
+- [eF7Key](https://developer.apple.com/documentation/coreservices/ef7key)
+- [eF8Key](https://developer.apple.com/documentation/coreservices/ef8key)
+- [eF9Key](https://developer.apple.com/documentation/coreservices/ef9key)
+- [eForwardDelKey](https://developer.apple.com/documentation/coreservices/eforwarddelkey)
+- [eHelpKey](https://developer.apple.com/documentation/coreservices/ehelpkey)
+- [eHomeKey](https://developer.apple.com/documentation/coreservices/ehomekey)
+- [eKeyKind](https://developer.apple.com/documentation/coreservices/ekeykind)
+- [eLeftArrowKey](https://developer.apple.com/documentation/coreservices/eleftarrowkey)
+- [eModifiers](https://developer.apple.com/documentation/coreservices/emodifiers)
+- [eOptionDown](https://developer.apple.com/documentation/coreservices/eoptiondown)
+- [ePageDownKey](https://developer.apple.com/documentation/coreservices/epagedownkey)
+- [ePageUpKey](https://developer.apple.com/documentation/coreservices/epageupkey)
+- [eReturnKey](https://developer.apple.com/documentation/coreservices/ereturnkey)
+- [eRightArrowKey](https://developer.apple.com/documentation/coreservices/erightarrowkey)
+- [eShiftDown](https://developer.apple.com/documentation/coreservices/eshiftdown)
+- [eTabKey](https://developer.apple.com/documentation/coreservices/etabkey)
+- [eUpArrowKey](https://developer.apple.com/documentation/coreservices/euparrowkey)
+- [pKeyKind](https://developer.apple.com/documentation/coreservices/pkeykind)
+- [pKeystrokeKey](https://developer.apple.com/documentation/coreservices/pkeystrokekey)
+- [pModifiers](https://developer.apple.com/documentation/coreservices/pmodifiers)

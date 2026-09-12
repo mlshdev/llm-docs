@@ -1,0 +1,46 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode-release-notes/xcode-26_0_1-release-notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-26_0_1-release-notes)
+
+# Xcode 26.0.1 Release Notes
+
+**Kind:** Article
+
+Update your apps to use new features, and test your apps against API changes.
+
+<a id="Overview"></a>
+
+## Overview
+
+Xcode 26.0.1 includes Swift 6.2 and SDKs for iOS 26, iPadOS 26, tvOS 26, watchOS 26, macOS 26, and visionOS 26. Xcode 26.0.1 supports on-device debugging in iOS 15 and later, tvOS 15 and later, watchOS 8 and later, and visionOS. Xcode 26.0.1 requires a Mac running macOS Sequoia 15.6 or later.
+
+<a id="Asset-Catalog"></a>
+
+### Asset Catalog
+
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Fixed: Icon Composer documents that use “Lighten”, “Darken” or “Screen” blend modes incorrectly encode as “Normal” when compiled. Blend modes will look correct in Icon Composer, but not at runtime.  (160717295)
+
+<a id="Coding-Intelligence"></a>
+
+### Coding Intelligence
+
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Fixed: Users interacting with Claude in Xcode might receive an error message about their OAuth token being expired.  (159566701) (FB20014334)
+
+## See Also
+
+### Xcode 26
+
+- [Xcode 26.6 Release Notes](xcode-26_6-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 26.5 Release Notes](xcode-26_5-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 26.4.1 Release Notes](xcode-26_4_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 26.4 Release Notes](xcode-26_4-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 26.3 Release Notes](xcode-26_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 26.2 Release Notes](xcode-26_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 26.1.1 Release Notes](xcode-26_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 26 Release Notes](xcode-26-release-notes.md): Update your apps to use new features, and test your apps against API changes.

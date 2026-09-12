@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avcapturebroadcastvideooutput/droppedframereplacementpolicy-swift.enum/blackframe](https://developer.apple.com/documentation/avfoundation/avcapturebroadcastvideooutput/droppedframereplacementpolicy-swift.enum/blackframe)
+
+# AVCaptureBroadcastVideoOutput.DroppedFrameReplacementPolicy.blackFrame (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Case  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+
+
+Insert a black frame as replacement. When a frame is dropped, a black frame is inserted at the expected presentation time. This maintains output timing continuity while providing a clear visual indication of the dropped frame.
+
+## Declaration
+
+```swift
+case blackFrame
+```
+
+# AVCaptureBroadcastVideoOutputDroppedFrameReplacementPolicyBlackFrame (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Enumeration Case  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+
+
+Insert a black frame as replacement. When a frame is dropped, a black frame is inserted at the expected presentation time. This maintains output timing continuity while providing a clear visual indication of the dropped frame.
+
+## Declaration
+
+```objectivec
+AVCaptureBroadcastVideoOutputDroppedFrameReplacementPolicyBlackFrame
+```

@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metrickit/osversion](https://developer.apple.com/documentation/metrickit/osversion)
+
+# OSVersion
+
+**Framework:** MetricKit  
+**Kind:** Structure  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+The version of the operating system on the device.
+
+## Declaration
+
+```swift
+struct OSVersion
+```
+
+## Topics
+
+### Instance Properties
+
+- [buildNumber](osversion/buildnumber.md): The build number of the operating system (e.g., “23F75”).
+- [number](osversion/number.md): The version number of the operating system (e.g., “26.5”).
+- [platform](osversion/platform.md): The name of the operating system platform (e.g., “iPhone OS”).
+
+## Relationships
+
+### Conforms To
+
+- [Decodable](https://developer.apple.com/documentation/swift/decodable)
+- [Encodable](https://developer.apple.com/documentation/swift/encodable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Supporting types
+
+- [Histogram](histogram.md): A distribution of values organized into buckets.
+- [AverageStatistics](averagestatistics.md): A value that encapsulates an average measurement with supporting statistical data.
+- [SignalBars](signalbars.md): A unit for cellular signal strength measurements in bars.
+- [HitchTimeRatio](hitchtimeratio.md): A unit for animation hitch time ratio measurements.

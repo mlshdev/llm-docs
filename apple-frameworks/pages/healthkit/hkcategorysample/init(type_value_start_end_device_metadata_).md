@@ -1,0 +1,203 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/healthkit/hkcategorysample/init(type:value:start:end:device:metadata:)](https://developer.apple.com/documentation/healthkit/hkcategorysample/init(type:value:start:end:device:metadata:))
+
+# init(type:value:start:end:device:metadata:) (Swift)
+
+**Framework:** HealthKit  
+**Kind:** Initializer  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.0+ · macOS 13.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Creates a newly instantiated category sample including the provided device and metadata.
+
+## Declaration
+
+```swift
+convenience init(type: HKCategoryType, value: Int, start startDate: Date, end endDate: Date, device: HKDevice?, metadata: [String : Any]?)
+```
+
+## Parameters
+
+- `type`: The category type for this sample. For a complete list, see [HKCategoryTypeIdentifier](../hkcategorytypeidentifier.md).
+- `value`: The value for this sample. This value must come from the appropriate category value enumeration. Each category type uses its own enumeration. For more information, see Category Type Identifiers in [HealthKit Constants](../healthkit-constants.md).
+- `startDate`: The start date for the sample. This must be equal to or earlier than the end date; otherwise, this method throws an exception (`NSInvalidArgumentException`).
+- `endDate`: The end date for the sample. This must be equal to or later than the start date; otherwise, this method throws an exception (`NSInvalidArgumentException`).
+- `device`: An [HKDevice](../hkdevice.md) object representing the device that generated the data for this sample.
+- `metadata`: The metadata dictionary contains extra information describing this sample. The dictionary’s keys are all [NSString](../../foundation/nsstring.md) objects. The values may be [NSString](../../foundation/nsstring.md) objects, [NSNumber](../../foundation/nsnumber.md) objects or [NSDate](../../foundation/nsdate.md) objects. For a complete list of predefined metadata keys, see [Metadata Keys](../metadata-keys.md).
+
+  Using predefined keys helps facilitate sharing data between apps; however, you are also encouraged to create your own, custom keys as needed to extend the HealthKit category sample’s capabilities.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+HealthKit uses category samples to represent data that can be classified into a finite set of categories. To create a category sample, you must first create the corresponding category type, and then set its start date, end dates, device, and metadata. This produces a new category sample with both a device and metadata information, as shown below.
+
+**Swift**
+
+```swift
+let device = HKDevice(name: deviceName,
+                      manufacturer: manufacturerName,
+                      model: modelName,
+                      hardwareVersion: hardwareVersionNumber,
+                      firmwareVersion: firmwareVersionNumber,
+                      softwareVersion: softwareVersionNumber,
+                      localIdentifier: localIdentifier,
+                      UDIDeviceIdentifier: deviceIdentifier)
+ 
+let metadata : [String : AnyObject] =
+    [HKMetadataKeyDigitalSignature:digitalSignature,
+     HKMetadataKeyTimeZone:timeZone]
+ 
+guard let categoryType =
+    HKObjectType.categoryTypeForIdentifier(HKCategoryTypeIdentifierSleepAnalysis) else {
+        fatalError("*** Unable to create a sleep analysis category type ***")
+}
+ 
+let categorySample = HKCategorySample(type: categoryType,
+                                      value: HKCategoryValueSleepAnalysis.Asleep.rawValue,
+                                      startDate: start,
+                                      endDate: end,
+                                      device: device,
+                                      metadata:metadata)
+```
+
+**Objective-C**
+
+```objc
+HKDevice *device = [[HKDevice alloc] initWithName:deviceName
+                                     manufacturer:manufacturerName
+                                            model:modelName
+                                  hardwareVersion:hardwareVersionNumber
+                                  firmwareVersion:firmwareVersionNumber
+                                  softwareVersion:softwareVersionNumber
+                                  localIdentifier:localIdentifier
+                              UDIDeviceIdentifier:deviceIdentifier];
+ 
+NSDictionary *metadata = @{HKMetadataKeyDigitalSignature:digitalSignature,
+                           HKMetadataKeyTimeZone:timeZone};
+ 
+HKCategoryType *categoryType = [HKObjectType categoryTypeForIdentifier:HKCategoryTypeIdentifierSleepAnalysis];
+ 
+HKCategorySample *categorySample =
+[HKCategorySample categorySampleWithType:categoryType
+                                   value:HKCategoryValueSleepAnalysisAsleep
+                               startDate:start
+                                 endDate:end
+                                  device:device
+                                metadata:metadata];
+```
+
+## See Also
+
+### Related Documentation
+
+- [value](value.md): The category value for this sample.
+- [categoryType(forIdentifier:)](../hkobjecttype/categorytype%28foridentifier_%29.md): Deprecated. Returns the shared category type for the provided identifier.
+- [endDate](../hksample/enddate.md): The sample’s end date.
+- [categoryType](categorytype.md): The category type for this sample.
+- [startDate](../hksample/startdate.md): The sample’s start date.
+
+### Creating Category Samples
+
+- [init(type:value:start:end:)](init%28type_value_start_end_%29.md): Creates a newly instantiated category sample.
+- [init(type:value:start:end:metadata:)](init%28type_value_start_end_metadata_%29.md): Creates a newly instantiated category sample with the provided metadata.
+
+# categorySampleWithType:value:startDate:endDate:device:metadata: (Objective-C)
+
+**Framework:** HealthKit  
+**Kind:** Type Method  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.0+ · macOS 13.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Creates a newly instantiated category sample including the provided device and metadata.
+
+## Declaration
+
+```objectivec
++ (instancetype) categorySampleWithType:(HKCategoryType *) type value:(NSInteger) value startDate:(NSDate *) startDate endDate:(NSDate *) endDate device:(HKDevice *) device metadata:(NSDictionary<NSString *,id> *) metadata;
+```
+
+## Parameters
+
+- `type`: The category type for this sample. For a complete list, see [HKCategoryTypeIdentifier](../hkcategorytypeidentifier.md).
+- `value`: The value for this sample. This value must come from the appropriate category value enumeration. Each category type uses its own enumeration. For more information, see Category Type Identifiers in [HealthKit Constants](../healthkit-constants.md).
+- `startDate`: The start date for the sample. This must be equal to or earlier than the end date; otherwise, this method throws an exception (`NSInvalidArgumentException`).
+- `endDate`: The end date for the sample. This must be equal to or later than the start date; otherwise, this method throws an exception (`NSInvalidArgumentException`).
+- `device`: An [HKDevice](../hkdevice.md) object representing the device that generated the data for this sample.
+- `metadata`: The metadata dictionary contains extra information describing this sample. The dictionary’s keys are all [NSString](../../foundation/nsstring.md) objects. The values may be [NSString](../../foundation/nsstring.md) objects, [NSNumber](../../foundation/nsnumber.md) objects or [NSDate](../../foundation/nsdate.md) objects. For a complete list of predefined metadata keys, see [Metadata Keys](../metadata-keys.md).
+
+  Using predefined keys helps facilitate sharing data between apps; however, you are also encouraged to create your own, custom keys as needed to extend the HealthKit category sample’s capabilities.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+HealthKit uses category samples to represent data that can be classified into a finite set of categories. To create a category sample, you must first create the corresponding category type, and then set its start date, end dates, device, and metadata. This produces a new category sample with both a device and metadata information, as shown below.
+
+**Swift**
+
+```swift
+let device = HKDevice(name: deviceName,
+                      manufacturer: manufacturerName,
+                      model: modelName,
+                      hardwareVersion: hardwareVersionNumber,
+                      firmwareVersion: firmwareVersionNumber,
+                      softwareVersion: softwareVersionNumber,
+                      localIdentifier: localIdentifier,
+                      UDIDeviceIdentifier: deviceIdentifier)
+ 
+let metadata : [String : AnyObject] =
+    [HKMetadataKeyDigitalSignature:digitalSignature,
+     HKMetadataKeyTimeZone:timeZone]
+ 
+guard let categoryType =
+    HKObjectType.categoryTypeForIdentifier(HKCategoryTypeIdentifierSleepAnalysis) else {
+        fatalError("*** Unable to create a sleep analysis category type ***")
+}
+ 
+let categorySample = HKCategorySample(type: categoryType,
+                                      value: HKCategoryValueSleepAnalysis.Asleep.rawValue,
+                                      startDate: start,
+                                      endDate: end,
+                                      device: device,
+                                      metadata:metadata)
+```
+
+**Objective-C**
+
+```objc
+HKDevice *device = [[HKDevice alloc] initWithName:deviceName
+                                     manufacturer:manufacturerName
+                                            model:modelName
+                                  hardwareVersion:hardwareVersionNumber
+                                  firmwareVersion:firmwareVersionNumber
+                                  softwareVersion:softwareVersionNumber
+                                  localIdentifier:localIdentifier
+                              UDIDeviceIdentifier:deviceIdentifier];
+ 
+NSDictionary *metadata = @{HKMetadataKeyDigitalSignature:digitalSignature,
+                           HKMetadataKeyTimeZone:timeZone};
+ 
+HKCategoryType *categoryType = [HKObjectType categoryTypeForIdentifier:HKCategoryTypeIdentifierSleepAnalysis];
+ 
+HKCategorySample *categorySample =
+[HKCategorySample categorySampleWithType:categoryType
+                                   value:HKCategoryValueSleepAnalysisAsleep
+                               startDate:start
+                                 endDate:end
+                                  device:device
+                                metadata:metadata];
+```
+
+## See Also
+
+### Related Documentation
+
+- [value](value.md): The category value for this sample.
+- [categoryTypeForIdentifier:](../hkobjecttype/categorytype%28foridentifier_%29.md): Deprecated. Returns the shared category type for the provided identifier.
+- [endDate](../hksample/enddate.md): The sample’s end date.
+- [categoryType](categorytype.md): The category type for this sample.
+- [startDate](../hksample/startdate.md): The sample’s start date.
+
+### Creating Category Samples
+
+- [categorySampleWithType:value:startDate:endDate:](init%28type_value_start_end_%29.md): Creates a newly instantiated category sample.
+- [categorySampleWithType:value:startDate:endDate:metadata:](init%28type_value_start_end_metadata_%29.md): Creates a newly instantiated category sample with the provided metadata.

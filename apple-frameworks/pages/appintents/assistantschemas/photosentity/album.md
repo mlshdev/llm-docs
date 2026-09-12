@@ -1,0 +1,47 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/assistantschemas/photosentity/album](https://developer.apple.com/documentation/appintents/assistantschemas/photosentity/album)
+
+# album
+
+**Framework:** App Intents  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+ · watchOS 9.0+
+
+The app entity describes an album.
+
+## Declaration
+
+```swift
+var album: some AssistantSchemas.Entity { get }
+```
+
+<a id="Overview"></a>
+
+## Overview
+
+Use Swift macros that generate additional properties and add protocol conformance for your app entity implementation.The following example shows an app entity that conforms to the `.photos.album` schema:
+
+```swift
+@AppEntity(schema: .photos.album)
+struct PhotoAlbumEntity: AppEntity {
+    struct Query: EntityStringQuery {
+        func entities(for identifiers: [PhotoAlbumEntity.ID]) async throws -> [PhotoAlbumEntity] { [] }
+        func entities(matching string: String) async throws -> [PhotoAlbumEntity] { [] }
+    }
+
+    static var defaultQuery = Query()
+    var displayRepresentation: DisplayRepresentation { "Photo Album" }
+
+    let id = UUID()
+
+    @Property
+    var name: String
+
+    @Property
+    var creationDate: Date?
+
+    @Property
+    var albumType: PhotoAlbumType
+}
+```
+
+For more information about the `.photos` app intent domain, see [Photos](../../app-schema-domain-photos.md). For general information about app intent domains, see [Making actions and content discoverable by Apple Intelligence](../../making-actions-and-content-discoverable-by-apple-intelligence.md).

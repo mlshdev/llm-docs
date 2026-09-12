@@ -1,0 +1,130 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avassetwriterinputgroup](https://developer.apple.com/documentation/avfoundation/avassetwriterinputgroup)
+
+# AVAssetWriterInputGroup (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Class  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+
+
+A group of inputs with tracks that are mutually exclusive to each other for playback or processing.
+
+## Declaration
+
+```swift
+class AVAssetWriterInputGroup
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Assets may contain multiple tracks of media that are mutually exclusive to each other when you play or process them. For example, an asset may contain multiple audio tracks for different spoken languages, but only one of them should play at a time. You use an input group to mark a collection of tracks as mutually exclusive to each other in the file the asset writer outputs.
+
+> **Note**
+
+>  After associating several tracks by calling [addTrackAssociation(withTrackOf:type:)](avassetwriterinput/addtrackassociation%28withtrackof_type_%29.md), you can examine the media selection options an asset writer outputs before it writes the file.
+
+## Topics
+
+### Creating an input group
+
+- [init(inputs:defaultInput:)](avassetwriterinputgroup/init%28inputs_defaultinput_%29.md): Creates a group for the asset writer inputs.
+
+### Accessing the inputs
+
+- [inputs](avassetwriterinputgroup/inputs.md): The inputs with tracks that are mutually exclusive to each other for playback or processing.
+- [defaultInput](avassetwriterinputgroup/defaultinput.md): The default input for the group.
+
+## Relationships
+
+### Inherits From
+
+- [AVMediaSelectionGroup](avmediaselectiongroup.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSCopying](../foundation/nscopying.md)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Media writing
+
+- [Converting projected video to Apple Projected Media Profile](converting-projected-video-to-apple-projected-media-profile.md): Convert content with equirectangular or half-equirectangular projection to APMP.
+- [Converting side-by-side 3D video to multiview HEVC and spatial video](converting-side-by-side-3d-video-to-multiview-hevc-and-spatial-video.md): Create video content for visionOS by converting an existing 3D HEVC file to a multiview HEVC format, optionally adding spatial metadata to create a spatial video.
+- [Adding a display mask rectangle metadata track to a movie file](adding-a-display-mask-rectangle-metadata-track-to-a-movie-file.md): Show a specific area of a video by using timed display mask rectangle metadata.
+- [Writing fragmented MPEG-4 files for HTTP Live Streaming](writing-fragmented-mpeg-4-files-for-http-live-streaming.md): Create an HTTP Live Streaming presentation by turning a movie file into a sequence of fragmented MPEG-4 files.
+- [Creating spatial photos and videos with spatial metadata](../imageio/creating-spatial-photos-and-videos-with-spatial-metadata.md): Add spatial metadata to stereo photos and videos to create spatial media for viewing on Apple Vision Pro.
+- [Tagging media with video color information](tagging-media-with-video-color-information.md): Inspect and set video color space information when writing and transcoding media.
+- [Evaluating an app’s video color](evaluating-an-app-s-video-color.md): Check color reproduction for a video in your app by using test patterns, video test equipment, and light-measurement instruments.
+- [AVOutputSettingsAssistant](avoutputsettingsassistant.md): An object that builds audio and video output settings dictionaries.
+- [AVAssetWriter](avassetwriter.md): An object that writes media data to a container file.
+- [AVAssetWriterInput](avassetwriterinput.md): An object that appends media samples to a track in an asset writer’s output file.
+- [AVAssetWriterInputPixelBufferAdaptor](avassetwriterinputpixelbufferadaptor.md): Deprecated. An object that appends video samples to an asset writer input.
+- [AVAssetWriterInputTaggedPixelBufferGroupAdaptor](avassetwriterinputtaggedpixelbuffergroupadaptor.md): Deprecated. An object that appends tagged buffer groups to an asset writer input.
+- [AVAssetWriterInputMetadataAdaptor](avassetwriterinputmetadataadaptor.md): Deprecated. An object that appends timed metadata groups to an asset writer input.
+
+# AVAssetWriterInputGroup (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Class  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+
+
+A group of inputs with tracks that are mutually exclusive to each other for playback or processing.
+
+## Declaration
+
+```objectivec
+@interface AVAssetWriterInputGroup : AVMediaSelectionGroup
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Assets may contain multiple tracks of media that are mutually exclusive to each other when you play or process them. For example, an asset may contain multiple audio tracks for different spoken languages, but only one of them should play at a time. You use an input group to mark a collection of tracks as mutually exclusive to each other in the file the asset writer outputs.
+
+> **Note**
+
+>  After associating several tracks by calling [addTrackAssociationWithTrackOfInput:type:](avassetwriterinput/addtrackassociation%28withtrackof_type_%29.md), you can examine the media selection options an asset writer outputs before it writes the file.
+
+## Topics
+
+### Creating an input group
+
+- [assetWriterInputGroupWithInputs:defaultInput:](avassetwriterinputgroup/assetwriterinputgroupwithinputs_defaultinput_.md): Returns a new group for the asset writer inputs.
+- [initWithInputs:defaultInput:](avassetwriterinputgroup/init%28inputs_defaultinput_%29.md): Creates a group for the asset writer inputs.
+
+### Accessing the inputs
+
+- [inputs](avassetwriterinputgroup/inputs.md): The inputs with tracks that are mutually exclusive to each other for playback or processing.
+- [defaultInput](avassetwriterinputgroup/defaultinput.md): The default input for the group.
+
+## Relationships
+
+### Inherits From
+
+- [AVMediaSelectionGroup](avmediaselectiongroup.md)
+
+## See Also
+
+### Media writing
+
+- [Converting projected video to Apple Projected Media Profile](converting-projected-video-to-apple-projected-media-profile.md): Convert content with equirectangular or half-equirectangular projection to APMP.
+- [Converting side-by-side 3D video to multiview HEVC and spatial video](converting-side-by-side-3d-video-to-multiview-hevc-and-spatial-video.md): Create video content for visionOS by converting an existing 3D HEVC file to a multiview HEVC format, optionally adding spatial metadata to create a spatial video.
+- [Adding a display mask rectangle metadata track to a movie file](adding-a-display-mask-rectangle-metadata-track-to-a-movie-file.md): Show a specific area of a video by using timed display mask rectangle metadata.
+- [Writing fragmented MPEG-4 files for HTTP Live Streaming](writing-fragmented-mpeg-4-files-for-http-live-streaming.md): Create an HTTP Live Streaming presentation by turning a movie file into a sequence of fragmented MPEG-4 files.
+- [Creating spatial photos and videos with spatial metadata](../imageio/creating-spatial-photos-and-videos-with-spatial-metadata.md): Add spatial metadata to stereo photos and videos to create spatial media for viewing on Apple Vision Pro.
+- [Tagging media with video color information](tagging-media-with-video-color-information.md): Inspect and set video color space information when writing and transcoding media.
+- [Evaluating an app’s video color](evaluating-an-app-s-video-color.md): Check color reproduction for a video in your app by using test patterns, video test equipment, and light-measurement instruments.
+- [AVOutputSettingsAssistant](avoutputsettingsassistant.md): An object that builds audio and video output settings dictionaries.
+- [AVAssetWriter](avassetwriter.md): An object that writes media data to a container file.
+- [AVAssetWriterInput](avassetwriterinput.md): An object that appends media samples to a track in an asset writer’s output file.
+- [AVAssetWriterInputPixelBufferAdaptor](avassetwriterinputpixelbufferadaptor.md): Deprecated. An object that appends video samples to an asset writer input.
+- [AVAssetWriterInputTaggedPixelBufferGroupAdaptor](avassetwriterinputtaggedpixelbuffergroupadaptor.md): Deprecated. An object that appends tagged buffer groups to an asset writer input.
+- [AVAssetWriterInputMetadataAdaptor](avassetwriterinputmetadataadaptor.md): Deprecated. An object that appends timed metadata groups to an asset writer input.

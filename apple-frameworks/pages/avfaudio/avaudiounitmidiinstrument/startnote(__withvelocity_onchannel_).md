@@ -1,0 +1,53 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfaudio/avaudiounitmidiinstrument/startnote(_:withvelocity:onchannel:)](https://developer.apple.com/documentation/avfaudio/avaudiounitmidiinstrument/startnote(_:withvelocity:onchannel:))
+
+# startNote(\_:withVelocity:onChannel:) (Swift)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+
+
+Sends a MIDI Note On event to the instrument.
+
+## Declaration
+
+```swift
+func startNote(_ note: UInt8, withVelocity velocity: UInt8, onChannel channel: UInt8)
+```
+
+## Parameters
+
+- `note`: The note number (key) to play. The valid range is `0` to `127`.
+- `velocity`: Specifies the volume to play the note at. The valid range is `0` to `127`.
+- `channel`: The channel number to send the event to. The valid range is `0` to `15`.
+
+## See Also
+
+### Starting and stopping play
+
+- [stopNote(\_:onChannel:)](stopnote%28__onchannel_%29.md): Sends a MIDI Note Off event to the instrument.
+
+# startNote:withVelocity:onChannel: (Objective-C)
+
+**Framework:** AVFAudio  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+
+
+Sends a MIDI Note On event to the instrument.
+
+## Declaration
+
+```objectivec
+- (void) startNote:(uint8_t) note withVelocity:(uint8_t) velocity onChannel:(uint8_t) channel;
+```
+
+## Parameters
+
+- `note`: The note number (key) to play. The valid range is `0` to `127`.
+- `velocity`: Specifies the volume to play the note at. The valid range is `0` to `127`.
+- `channel`: The channel number to send the event to. The valid range is `0` to `15`.
+
+## See Also
+
+### Starting and stopping play
+
+- [stopNote:onChannel:](stopnote%28__onchannel_%29.md): Sends a MIDI Note Off event to the instrument.

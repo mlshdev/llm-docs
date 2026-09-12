@@ -20,18 +20,68 @@ export const projectIds = [
   "bun",
   "trigger-dev",
   "aria2",
+  "apple-swift",
+  "apple-swiftui",
+  "apple-webkit",
+  "apple-xcode",
+  "apple-ios",
+  "apple-macos",
+  "apple-watchos",
+  "apple-frameworks",
 ] as const;
 
 export type ProjectId = (typeof projectIds)[number];
 
-export interface SourceProject {
-  readonly id: ProjectId;
+// Which slice of Apple's documentation catalog a project publishes. Every page
+// Apple serves belongs to exactly one catalog, so the projects together carry
+// the whole corpus without storing a page twice.
+export const doccCatalogIds = [
+  "swift",
+  "swiftui",
+  "webkit",
+  "xcode",
+  "ios",
+  "macos",
+  "watchos",
+  "shared",
+] as const;
+
+export type DoccCatalogId = (typeof doccCatalogIds)[number];
+
+export const doccProjectCatalogs = {
+  "apple-swift": "swift",
+  "apple-swiftui": "swiftui",
+  "apple-webkit": "webkit",
+  "apple-xcode": "xcode",
+  "apple-ios": "ios",
+  "apple-macos": "macos",
+  "apple-watchos": "watchos",
+  "apple-frameworks": "shared",
+} as const satisfies Readonly<Partial<Record<ProjectId, DoccCatalogId>>>;
+
+export type DoccProjectId = keyof typeof doccProjectCatalogs;
+export type GithubProjectId = Exclude<ProjectId, DoccProjectId>;
+
+interface BaseSourceProject<T extends ProjectId> {
+  readonly id: T;
   readonly title: string;
+  readonly homepage: string;
+}
+
+export interface GithubSourceProject
+  extends BaseSourceProject<GithubProjectId> {
+  readonly kind: "github";
   readonly repository: string;
   readonly docsRepository?: string;
   readonly branch?: string;
-  readonly homepage: string;
 }
+
+export interface DoccSourceProject extends BaseSourceProject<DoccProjectId> {
+  readonly kind: "docc";
+  readonly catalog: DoccCatalogId;
+}
+
+export type SourceProject = GithubSourceProject | DoccSourceProject;
 
 export interface SourcesConfig {
   readonly schemaVersion: 1;
@@ -46,6 +96,9 @@ export interface ReleaseLockedSource {
   readonly docsCommit?: string;
   readonly branch?: never;
   readonly sourceCommittedAt?: never;
+  readonly snapshotDigest?: never;
+  readonly contentDigest?: never;
+  readonly capturedAt?: never;
 }
 
 export interface BranchLockedSource {
@@ -56,9 +109,60 @@ export interface BranchLockedSource {
   readonly docsCommit?: never;
   readonly releaseId?: never;
   readonly releasePublishedAt?: never;
+  readonly snapshotDigest?: never;
+  readonly contentDigest?: never;
+  readonly capturedAt?: never;
 }
 
-export type LockedSource = ReleaseLockedSource | BranchLockedSource;
+// Apple serves documentation from a live endpoint rather than a repository, so
+// there is no commit to pin. `snapshotDigest` pins the catalog inventory, which
+// a daily run can re-derive from a few hundred index documents; `contentDigest`
+// pins the render payloads the published pages were converted from and is
+// computed by the build that converted them, so it is absent until a project
+// has been built at least once since content addressing was introduced.
+export interface SnapshotLockedSource {
+  readonly tag: string;
+  readonly snapshotDigest: string;
+  readonly contentDigest?: string;
+  readonly capturedAt: string;
+  readonly sourceCommit?: never;
+  readonly branch?: never;
+  readonly sourceCommittedAt?: never;
+  readonly docsCommit?: never;
+  readonly releaseId?: never;
+  readonly releasePublishedAt?: never;
+}
+
+export type LockedSource =
+  | ReleaseLockedSource
+  | BranchLockedSource
+  | SnapshotLockedSource;
+
+export type GithubLockedSource = ReleaseLockedSource | BranchLockedSource;
+
+export function isBranchLockedSource(
+  source: LockedSource,
+): source is BranchLockedSource {
+  return source.branch !== undefined;
+}
+
+export function isSnapshotLockedSource(
+  source: LockedSource,
+): source is SnapshotLockedSource {
+  return source.snapshotDigest !== undefined;
+}
+
+export function isGithubLockedSource(
+  source: LockedSource,
+): source is GithubLockedSource {
+  return !isSnapshotLockedSource(source);
+}
+
+export function isGithubSourceProject(
+  project: SourceProject,
+): project is GithubSourceProject {
+  return project.kind === "github";
+}
 
 // A lock may omit a project that was added to the configuration but not yet
 // resolved against its upstream releases, which is the state `update` starts
@@ -88,6 +192,9 @@ export interface ProjectBuild {
   readonly quarantined: readonly QuarantinedDocument[];
   readonly notes: readonly string[];
   readonly licenseText: string;
+  // Corpora too large to enumerate page by page supply their own index body;
+  // the default index lists every document.
+  readonly indexOverride?: readonly string[];
 }
 
 export interface GithubRelease {

@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/combine/future/value-5iprp](https://developer.apple.com/documentation/combine/future/value-5iprp)
+
+# value
+
+**Framework:** Combine  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+
+The published value of the future or an error, delivered asynchronously.
+
+## Declaration
+
+```swift
+final var value: Output { get async throws }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This property subscribes to the `Future` and delivers the value asynchronously when the `Future` publishes it. If the `Future` terminates with an error, the awaiting caller receives the error instead. Use this property when you want to the `async`-`await` syntax with a `Future` whose [Failure](../publisher/failure.md) type is not [Never](https://developer.apple.com/documentation/swift/never).
+
+## See Also
+
+### Accessing the value asynchronously
+
+- [value](value-9iwjz.md): Conforms when `Failure` is `Never`. The published value of the future, delivered asynchronously.

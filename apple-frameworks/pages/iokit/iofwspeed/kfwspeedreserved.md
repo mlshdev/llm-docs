@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/iofwspeed/kfwspeedreserved](https://developer.apple.com/documentation/iokit/iofwspeed/kfwspeedreserved)
+
+# kFWSpeedReserved
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.2+
+
+## Declaration
+
+```objectivec
+kFWSpeedReserved = 3
+```

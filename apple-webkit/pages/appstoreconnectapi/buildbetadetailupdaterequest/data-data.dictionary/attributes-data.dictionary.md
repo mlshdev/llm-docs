@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/buildbetadetailupdaterequest/data-data.dictionary/attributes-data.dictionary](https://developer.apple.com/documentation/appstoreconnectapi/buildbetadetailupdaterequest/data-data.dictionary/attributes-data.dictionary)
+
+# BuildBetaDetailUpdateRequest.Data.Attributes
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.0+
+
+Attributes whose values you’re changing as part of the update request.
+
+## Declaration
+
+```
+object BuildBetaDetailUpdateRequest.Data.Attributes
+```
+
+## Properties
+
+- `autoNotifyEnabled` — `boolean`: A Boolean value that enables you to send test invitations to users automatically when the build is available to external groups.
+
+## See Also
+
+### Related Documentation
+
+- [Build Beta Details](../../build-beta-details.md): TestFlight-specific information about beta builds.

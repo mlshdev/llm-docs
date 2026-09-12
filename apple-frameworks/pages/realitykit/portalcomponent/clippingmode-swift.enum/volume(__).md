@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/portalcomponent/clippingmode-swift.enum/volume(_:)](https://developer.apple.com/documentation/realitykit/portalcomponent/clippingmode-swift.enum/volume(_:))
+
+# PortalComponent.ClippingMode.volume(\_:)
+
+**Framework:** RealityKit  
+**Kind:** Case  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 18.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+Clips the contents within the portal to a box-shaped region.
+
+## Declaration
+
+```swift
+case volume(PortalComponent.Volume)
+```
+
+## Parameters
+
+- `volume`: A [PortalComponent.Volume](../volume.md) describing the box’s center and extents in portal-local space.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this case for room-sized portals and other bounded portal spaces where content shouldn’t extend infinitely behind the portal surface. RealityKit hides any portal world content outside the volume.
+
+For portals where the box should enclose the portal surface, [enclosingBox(depth:)](../boundarystyle/enclosingbox%28depth_%29.md) is a convenient way to configure this case alongside the matching [PortalComponent.CrossingMode.volume(\_:)](../crossingmode-swift.enum/volume%28__%29.md).

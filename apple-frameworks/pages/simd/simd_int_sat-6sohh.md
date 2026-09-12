@@ -1,0 +1,30 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/simd/simd_int_sat-6sohh](https://developer.apple.com/documentation/simd/simd_int_sat-6sohh)
+
+# simd_int_sat
+
+**Interface language:** Objective-C
+
+**Framework:** simd  
+**Kind:** Function
+
+Returns a new vector from the specified vector of 64-bit, floating-point elements.
+
+## Declaration
+
+```objectivec
+static simd_int2 simd_int_sat(simd_double2 __x);
+```
+
+## See Also
+
+### Functions to Perform Saturating Conversion From Vectors of Other Types
+
+- [simd_int_sat](simd_int_sat-6swof.md): Returns a new vector from the specified vector of 8-bit, signed integer elements.
+- [simd_int_sat](simd_int_sat-6smr3.md): Returns a new vector from the specified vector of 8-bit, unsigned integer elements.
+- [simd_int_sat](simd_int_sat-6t1vz.md): Returns a new vector from the specified vector of 16-bit, signed integer elements.
+- [simd_int_sat](simd_int_sat-6srpr.md): Returns a new vector from the specified vector of 16-bit, unsigned integer elements.
+- [simd_int_sat](simd_int_sat-6sztn.md): Returns a new vector from the specified vector of 32-bit, signed integer elements.
+- [simd_int_sat](simd_int_sat-6sq1n.md): Returns a new vector from the specified vector of 32-bit, unsigned integer elements.
+- [simd_int_sat](simd_int_sat-6t0ud.md): Returns a new vector from the specified vector of 64-bit, signed integer elements.
+- [simd_int_sat](simd_int_sat-6sqyt.md): Returns a new vector from the specified vector of 64-bit, unsigned integer elements.
+- [simd_int_sat](simd_int_sat-6snv1.md): Returns a new vector from the specified vector of 32-bit, floating-point elements.

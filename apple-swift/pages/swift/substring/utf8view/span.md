@@ -1,0 +1,53 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/substring/utf8view/span](https://developer.apple.com/documentation/swift/substring/utf8view/span)
+
+# span
+
+**Framework:** Swift  
+**Kind:** Instance Property  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
+
+A span over the UTF-8 code units that make up this substring.
+
+## Declaration
+
+```swift
+var span: Span<UTF8.CodeUnit> { get }
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+A `Span` over the UTF-8 code units of this `Substring`.
+
+<a id="discussion"></a>
+
+## Discussion
+
+> **Note**
+
+> On Apple platforms, this property must transcode the code units of bridged UTF-16 `String` instances on every access.
+>
+> For example, if `string` has the bridged UTF-16 representation,
+
+```swift
+  for word in string.split(separator: " ") {
+      useSpan(word.span)
+  }
+```
+
+is accidentally quadratic because of this issue. A workaround is to explicitly convert the string into its native UTF-8 representation:
+
+```swift
+  var nativeString = consume string
+  nativeString.makeContiguousUTF8()
+  for word in nativeString.split(separator: " ") {
+      useSpan(word.span)
+  }
+```
+
+This second option has linear time complexity, as expected.
+
+> **Complexity**
+
+> O(1) for native UTF-8 strings, O(*n*) for bridged UTF-16 strings.

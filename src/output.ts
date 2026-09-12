@@ -11,10 +11,13 @@ import path from "node:path";
 import { rootDirectory } from "./config.ts";
 import { exists, listFiles, writeUtf8 } from "./files.ts";
 import { normalizeSpacing } from "./markdown.ts";
-import { projectIds } from "./types.ts";
+import {
+  isBranchLockedSource,
+  isSnapshotLockedSource,
+  projectIds,
+} from "./types.ts";
 import type { QuarantinedDocument } from "./quarantine.ts";
 import type {
-  BranchLockedSource,
   CompleteSourcesLock,
   Document,
   LockedSource,
@@ -23,19 +26,35 @@ import type {
   SourceProject,
 } from "./types.ts";
 
+// GitHub rejects any file above 100 MiB, and a corpus that cannot be pushed is
+// not published at all. Corpora past this size are written as numbered volumes
+// behind an index file that keeps the documented `llms-full.txt` entry point.
+const maximumCorpusVolumeBytes = 45 * 1024 * 1024;
+const maximumPagesSiteBytes = 1024 * 1024 * 1024;
+
+// A directory listing is a navigation aid; past this many entries it is a
+// megabytes-large page nobody can use, and llms.txt is the better entry point.
+const maximumHtmlIndexEntries = 2_000;
+
 interface ProjectManifest {
   readonly schemaVersion: 1;
   readonly project: string;
   readonly title: string;
-  readonly repository: string;
+  readonly homepage: string;
+  readonly repository?: string;
+  readonly catalog?: string;
   readonly tag: string;
   readonly releaseId?: number;
   readonly releasePublishedAt?: string;
   readonly branch?: string;
   readonly sourceCommittedAt?: string;
-  readonly sourceCommit: string;
+  readonly sourceCommit?: string;
   readonly docsCommit?: string;
+  readonly snapshotDigest?: string;
+  readonly contentDigest?: string;
+  readonly capturedAt?: string;
   readonly documentCount: number;
+  readonly corpusVolumes?: readonly string[];
   readonly quarantined?: readonly QuarantinedDocument[];
   readonly notes: readonly string[];
 }
@@ -80,33 +99,23 @@ async function stageProject(
     path.join(destination, "llms.txt"),
     renderProjectIndex(build),
   );
-  await writeUtf8(
-    path.join(destination, "llms-full.txt"),
-    renderProjectFull(build),
-  );
+  const corpusVolumes = await writeProjectCorpus(build, destination);
   await writeUtf8(
     path.join(destination, "LICENSE.upstream"),
     build.licenseText,
   );
-  const sourceDetails = isBranchLockedSource(build.lock)
-    ? {
-        branch: build.lock.branch,
-        sourceCommittedAt: build.lock.sourceCommittedAt,
-      }
-    : {
-        releaseId: build.lock.releaseId,
-        releasePublishedAt: build.lock.releasePublishedAt,
-      };
   const manifest: ProjectManifest = {
     schemaVersion: 1,
     project: build.project.id,
     title: build.project.title,
-    repository: build.project.repository,
+    homepage: build.project.homepage,
+    ...(build.project.kind === "github"
+      ? { repository: build.project.repository }
+      : { catalog: build.project.catalog }),
     tag: build.lock.tag,
-    ...sourceDetails,
-    sourceCommit: build.lock.sourceCommit,
-    ...(build.lock.docsCommit ? { docsCommit: build.lock.docsCommit } : {}),
+    ...lockDetails(build.lock),
     documentCount: build.documents.length,
+    ...(corpusVolumes.length > 1 ? { corpusVolumes } : {}),
     ...(build.quarantined.length > 0 ? { quarantined: build.quarantined } : {}),
     notes: build.notes,
   };
@@ -123,7 +132,7 @@ export async function writeRootIndexes(
   const summary = [
     "# Source-pinned LLM documentation",
     "",
-    "> LLM-friendly documentation generated from immutable upstream commits. Projects track stable releases unless their source repository is explicitly branch-pinned. Each project includes provenance, normalized pages, an index, and a full concatenated corpus.",
+    "> LLM-friendly documentation generated from immutable upstream commits or content-addressed public documentation catalogs. GitHub projects track stable releases unless explicitly branch-pinned. Each project includes provenance, normalized pages, an index, and a complete corpus.",
     "",
     "## Projects",
     "",
@@ -139,19 +148,31 @@ export async function writeRootIndexes(
     "- Docker documentation tracks the latest `main` commit because docker/docs does not publish current GitHub releases.",
     "- n8n documentation tracks the latest `main` commit because n8n-docs does not publish releases or tags.",
     "- NetBird updates only after the separate documentation repository contains the API-generation commit for the same product tag.",
+    "- Apple documentation is captured from the public DocC index and render endpoints. Its live catalog has no release identifier, so each catalog is pinned by a SHA-256 digest of its index inventory and HTTP publication validators.",
   ];
   await writeUtf8(path.join(rootDirectory, "llms.txt"), summary.join("\n"));
 
   const full: string[] = [
     "# Source-pinned LLM documentation",
     "",
-    "This file combines the complete project corpora listed below.",
+    "This file combines the commit-backed project corpora listed below. DocC catalogs and corpora published as numbered volumes are referenced rather than inlined, because a combined file above 100 MiB cannot be pushed to GitHub.",
   ];
   for (const project of projects) {
+    const volumes = await corpusVolumesOf(project.id);
+    full.push("", `# ${project.title} ${lock.projects[project.id].tag}`, "");
+    if (project.kind === "docc" || volumes.length > 1) {
+      full.push(
+        volumes.length > 1
+          ? `Published as ${volumes.length - 1} volumes:`
+          : "Complete corpus:",
+        "",
+        ...(volumes.length > 1 ? volumes.slice(1) : volumes).map(
+          (volume) => `- ${project.id}/${volume}`,
+        ),
+      );
+      continue;
+    }
     full.push(
-      "",
-      `# ${project.title} ${lock.projects[project.id].tag}`,
-      "",
       await readFile(
         path.join(rootDirectory, project.id, "llms-full.txt"),
         "utf8",
@@ -179,18 +200,53 @@ export async function buildSite(
   );
   for (const project of projects) {
     const source = path.join(rootDirectory, project.id);
-    await assertNoSymlinks(source);
-    await cp(source, path.join(destination, project.id), { recursive: true });
+    const projectDestination = path.join(destination, project.id);
+    if (project.kind === "docc") {
+      await copyDoccCorporaToSite(project.id, source, projectDestination);
+    } else {
+      await assertNoSymlinks(source);
+      await cp(source, projectDestination, { recursive: true });
+    }
     await writeUtf8(
-      path.join(destination, project.id, "index.html"),
+      path.join(projectDestination, "index.html"),
       await renderProjectHtmlIndex(project),
     );
-    await writeUtf8(
-      path.join(destination, project.id, "pages/index.html"),
-      await renderPagesHtmlIndex(project),
-    );
+    if (project.kind === "github") {
+      await writeUtf8(
+        path.join(projectDestination, "pages/index.html"),
+        await renderPagesHtmlIndex(project),
+      );
+    }
   }
   await writeUtf8(path.join(destination, ".nojekyll"), "");
+  const siteBytes = await directorySize(destination);
+  if (siteBytes > maximumPagesSiteBytes) {
+    throw new Error(
+      `GitHub Pages artifact is ${siteBytes} bytes, above the GitHub-supported 1 GiB limit`,
+    );
+  }
+}
+
+async function copyDoccCorporaToSite(
+  projectId: ProjectId,
+  source: string,
+  destination: string,
+): Promise<void> {
+  await mkdir(destination, { recursive: true });
+  const files = new Set([
+    "llms.txt",
+    "manifest.json",
+    "LICENSE.upstream",
+    ...(await corpusVolumesOf(projectId)),
+  ]);
+  for (const fileName of files) {
+    const sourceFile = path.join(source, fileName);
+    const details = await lstat(sourceFile);
+    if (!details.isFile()) {
+      throw new Error(`Refusing to publish non-file: ${sourceFile}`);
+    }
+    await cp(sourceFile, path.join(destination, fileName));
+  }
 }
 
 // Whether the snapshot currently on disk is the one this pin describes. The
@@ -211,7 +267,10 @@ export async function snapshotMatchesPin(
   return (
     manifest.tag === expected.tag &&
     manifest.sourceCommit === expected.sourceCommit &&
-    manifest.docsCommit === expected.docsCommit
+    manifest.docsCommit === expected.docsCommit &&
+    manifest.snapshotDigest === expected.snapshotDigest &&
+    manifest.contentDigest === expected.contentDigest &&
+    manifest.capturedAt === expected.capturedAt
   );
 }
 
@@ -242,7 +301,10 @@ export async function verifyOutputs(
       manifest.releaseId !== expected.releaseId ||
       manifest.releasePublishedAt !== expected.releasePublishedAt ||
       manifest.branch !== expected.branch ||
-      manifest.sourceCommittedAt !== expected.sourceCommittedAt
+      manifest.sourceCommittedAt !== expected.sourceCommittedAt ||
+      manifest.snapshotDigest !== expected.snapshotDigest ||
+      manifest.contentDigest !== expected.contentDigest ||
+      manifest.capturedAt !== expected.capturedAt
     ) {
       throw new Error(
         `${project.id}/manifest.json does not match sources.lock.json`,
@@ -277,7 +339,7 @@ function renderDocument(
 ): string {
   return normalizeSpacing(
     [
-      `> ${source.branch ? "Commit-pinned" : "Release-pinned"} source for ${project.title} ${source.tag}: [${document.sourcePath}](${document.canonicalUrl})`,
+      `> ${pinKind(source)} source for ${project.title} ${source.tag}: [${document.sourcePath}](${document.canonicalUrl})`,
       "",
       document.body,
     ].join("\n"),
@@ -307,10 +369,10 @@ function renderProjectIndex(build: ProjectBuild): string {
   const lines = [
     `# ${build.project.title} ${build.lock.tag}`,
     "",
-    `> Documentation generated from ${build.lock.branch ? `the latest \`${build.lock.branch}\` branch commit of` : "the latest stable release of"} [${build.project.repository}](https://github.com/${build.project.repository}) and pinned to immutable source commit \`${build.lock.sourceCommit}\`.`,
+    `> ${describeSource(build)}`,
     "",
     `- [Full documentation](llms-full.txt): Complete normalized corpus for ${build.project.title} ${build.lock.tag}.`,
-    `- [Provenance manifest](manifest.json): ${build.lock.branch ? "Source ref" : "Release"}, commit, document count, and generation notes.`,
+    `- [Provenance manifest](manifest.json): ${isSnapshotLockedSource(build.lock) ? "Snapshot digest, capture time" : isBranchLockedSource(build.lock) ? "Source ref, commit" : "Release, commit"}, document count, and generation notes.`,
   ];
   for (const note of build.notes) {
     lines.push(`- ${note}`);
@@ -319,6 +381,9 @@ function renderProjectIndex(build: ProjectBuild): string {
     lines.push(
       `- Quarantined sources (${build.quarantined.length}): upstream pages using constructs this generator cannot convert yet are omitted and listed in \`manifest.json\`.`,
     );
+  }
+  if (build.indexOverride) {
+    return [...lines, "", ...build.indexOverride].join("\n");
   }
   const sections = groupBySection(build.documents);
   for (const [section, documents] of sections) {
@@ -332,32 +397,165 @@ function renderProjectIndex(build: ProjectBuild): string {
   return lines.join("\n");
 }
 
-function renderProjectFull(build: ProjectBuild): string {
-  const lines = [
-    `# ${build.project.title} ${build.lock.tag}: full documentation`,
+function corpusHeader(build: ProjectBuild): readonly string[] {
+  const lock = build.lock;
+  if (isSnapshotLockedSource(lock)) {
+    return [
+      `# ${build.project.title} ${lock.tag}: full documentation`,
+      "",
+      `Source: ${build.project.homepage}`,
+      `Catalog snapshot: ${lock.snapshotDigest}`,
+      ...(lock.contentDigest ? [`Content digest: ${lock.contentDigest}`] : []),
+      `Captured at: ${lock.capturedAt}`,
+      "",
+    ];
+  }
+  return [
+    `# ${build.project.title} ${lock.tag}: full documentation`,
     "",
-    `Source repository: https://github.com/${build.project.repository}`,
-    build.lock.branch
-      ? `Tracked branch: ${build.lock.branch}`
-      : `Release tag: ${build.lock.tag}`,
-    `Source commit: ${build.lock.sourceCommit}`,
-    ...(build.lock.docsCommit
-      ? [`Documentation commit: ${build.lock.docsCommit}`]
+    ...(build.project.kind === "github"
+      ? [`Source repository: https://github.com/${build.project.repository}`]
       : []),
+    isBranchLockedSource(lock)
+      ? `Tracked branch: ${lock.branch}`
+      : `Release tag: ${lock.tag}`,
+    `Source commit: ${lock.sourceCommit}`,
+    ...(lock.docsCommit ? [`Documentation commit: ${lock.docsCommit}`] : []),
     "",
   ];
-  for (const document of build.documents) {
-    lines.push(
-      `# Document: ${document.title}`,
-      "",
-      `Source path: ${document.sourcePath}`,
-      `Canonical source: ${document.canonicalUrl}`,
-      "",
-      document.body,
-      "",
+}
+
+function renderCorpusDocument(document: Document): string {
+  return [
+    `# Document: ${document.title}`,
+    "",
+    `Source path: ${document.sourcePath}`,
+    `Canonical source: ${document.canonicalUrl}`,
+    "",
+    document.body,
+    "",
+  ].join("\n");
+}
+
+// Returns the corpus files written, in order. A corpus that fits in one file
+// keeps the single `llms-full.txt`; a larger one turns that path into an index
+// of the numbered volumes that carry it.
+async function writeProjectCorpus(
+  build: ProjectBuild,
+  destination: string,
+): Promise<readonly string[]> {
+  const header = corpusHeader(build).join("\n");
+  const rendered = build.documents.map(renderCorpusDocument);
+  const total =
+    Buffer.byteLength(header) +
+    rendered.reduce((sum, entry) => sum + Buffer.byteLength(entry) + 1, 0);
+  if (total <= maximumCorpusVolumeBytes) {
+    await writeUtf8(
+      path.join(destination, "llms-full.txt"),
+      [header, ...rendered].join("\n"),
     );
+    return ["llms-full.txt"];
   }
-  return lines.join("\n");
+  const volumes: { readonly name: string; readonly documents: number }[] = [];
+  let buffer: string[] = [];
+  let bufferBytes = 0;
+  let documents = 0;
+  const volumeHeaderBytes = Buffer.byteLength(header) + 64;
+  for (const entry of rendered) {
+    const entryBytes = Buffer.byteLength(entry) + 1;
+    if (entryBytes + volumeHeaderBytes > maximumCorpusVolumeBytes) {
+      throw new Error(
+        `${build.project.id} document exceeds the ${maximumCorpusVolumeBytes}-byte corpus volume limit`,
+      );
+    }
+    if (
+      bufferBytes > 0 &&
+      volumeHeaderBytes + bufferBytes + entryBytes > maximumCorpusVolumeBytes
+    ) {
+      volumes.push(await flush(buffer, documents));
+      buffer = [];
+      bufferBytes = 0;
+      documents = 0;
+    }
+    buffer.push(entry);
+    bufferBytes += entryBytes;
+    documents += 1;
+  }
+  if (buffer.length > 0) {
+    volumes.push(await flush(buffer, documents));
+  }
+  await writeUtf8(
+    path.join(destination, "llms-full.txt"),
+    [
+      header,
+      `This corpus is published as ${volumes.length} volumes because a single file would exceed the 100 MiB GitHub file limit. Read the volumes in order for the complete corpus.`,
+      "",
+      ...volumes.map(
+        (volume, index) =>
+          `- [Volume ${index + 1}](${volume.name}): ${volume.documents} documents.`,
+      ),
+      "",
+    ].join("\n"),
+  );
+  return ["llms-full.txt", ...volumes.map((volume) => volume.name)];
+
+  async function flush(
+    entries: readonly string[],
+    count: number,
+  ): Promise<{ name: string; documents: number }> {
+    const name = `llms-full.${String(volumes.length + 1).padStart(3, "0")}.txt`;
+    await writeUtf8(
+      path.join(destination, name),
+      [
+        `${header.trimEnd()}`,
+        `Volume ${volumes.length + 1}`,
+        "",
+        ...entries,
+      ].join("\n"),
+    );
+    return { name, documents: count };
+  }
+}
+
+function pinKind(source: LockedSource): string {
+  return isSnapshotLockedSource(source)
+    ? "Snapshot-pinned"
+    : isBranchLockedSource(source)
+      ? "Commit-pinned"
+      : "Release-pinned";
+}
+
+function lockDetails(source: LockedSource): Partial<ProjectManifest> {
+  if (isSnapshotLockedSource(source)) {
+    return {
+      snapshotDigest: source.snapshotDigest,
+      ...(source.contentDigest ? { contentDigest: source.contentDigest } : {}),
+      capturedAt: source.capturedAt,
+    };
+  }
+  if (isBranchLockedSource(source)) {
+    return {
+      branch: source.branch,
+      sourceCommittedAt: source.sourceCommittedAt,
+      sourceCommit: source.sourceCommit,
+    };
+  }
+  return {
+    releaseId: source.releaseId,
+    releasePublishedAt: source.releasePublishedAt,
+    sourceCommit: source.sourceCommit,
+    ...(source.docsCommit ? { docsCommit: source.docsCommit } : {}),
+  };
+}
+
+function describeSource(build: ProjectBuild): string {
+  const lock = build.lock;
+  if (isSnapshotLockedSource(lock)) {
+    return `Documentation generated from Apple's public DocC endpoints at [${build.project.homepage}](${build.project.homepage}) and pinned to catalog snapshot \`${lock.snapshotDigest}\` captured at ${lock.capturedAt}.`;
+  }
+  const repository =
+    build.project.kind === "github" ? build.project.repository : "";
+  return `Documentation generated from ${isBranchLockedSource(lock) ? `the latest \`${lock.branch}\` branch commit of` : "the latest stable release of"} [${repository}](https://github.com/${repository}) and pinned to immutable source commit \`${lock.sourceCommit}\`.`;
 }
 
 function groupBySection(
@@ -381,8 +579,8 @@ function renderHtmlIndex(projects: readonly SourceProject[]): string {
     )
     .join("\n");
   return htmlPage(
-    "Release-pinned LLM documentation",
-    `<p>Normalized documentation from immutable stable upstream releases.</p><ul>${items}</ul><p><a href="./llms.txt">Root llms.txt</a> <a href="./llms-full.txt">Root llms-full.txt</a></p>`,
+    "Source-pinned LLM documentation",
+    `<p>Normalized documentation from immutable upstream commits and content-addressed public catalogs.</p><ul>${items}</ul><p><a href="./llms.txt">Root llms.txt</a> <a href="./llms-full.txt">Root llms-full.txt</a></p>`,
   );
 }
 
@@ -395,13 +593,33 @@ async function renderProjectHtmlIndex(project: SourceProject): Promise<string> {
   ) as ProjectManifest;
   return htmlPage(
     `${project.title} ${manifest.tag}`,
-    `<p>Release-pinned documentation from <a href="https://github.com/${escapeHtml(project.repository)}">${escapeHtml(project.repository)}</a>.</p><ul><li><a href="./llms.txt">llms.txt</a></li><li><a href="./llms-full.txt">llms-full.txt</a></li><li><a href="./manifest.json">manifest.json</a></li><li><a href="./pages/">Normalized pages</a></li></ul><p><a href="../">All projects</a></p>`,
+    `<p>${project.kind === "github" ? `${manifest.branch ? "Commit" : "Release"}-pinned documentation from <a href="https://github.com/${escapeHtml(project.repository)}">${escapeHtml(project.repository)}</a>` : `Snapshot-pinned documentation from <a href="${escapeHtml(project.homepage)}">${escapeHtml(project.homepage)}</a>`}.</p><ul><li><a href="./llms.txt">llms.txt</a></li><li><a href="./llms-full.txt">llms-full.txt</a></li><li><a href="./manifest.json">manifest.json</a></li>${project.kind === "github" ? '<li><a href="./pages/">Normalized pages</a></li>' : ""}</ul><p><a href="../">All projects</a></p>`,
   );
 }
 
+async function corpusVolumesOf(
+  projectId: ProjectId,
+): Promise<readonly string[]> {
+  const manifest = JSON.parse(
+    await readFile(
+      path.join(rootDirectory, projectId, "manifest.json"),
+      "utf8",
+    ),
+  ) as Partial<ProjectManifest>;
+  return manifest.corpusVolumes ?? ["llms-full.txt"];
+}
+
 async function renderPagesHtmlIndex(project: SourceProject): Promise<string> {
-  const pages = (await listFiles(path.join(rootDirectory, project.id, "pages")))
-    .filter((file) => file.endsWith(".md"))
+  const files = (
+    await listFiles(path.join(rootDirectory, project.id, "pages"))
+  ).filter((file) => file.endsWith(".md"));
+  if (files.length > maximumHtmlIndexEntries) {
+    return htmlPage(
+      `${project.title} normalized pages`,
+      `<p><a href="../">${escapeHtml(project.title)} index</a></p><p>${files.length} pages are published under this directory. Browsing them one by one is not useful at this size: use <a href="../llms.txt">llms.txt</a> for the catalog index, or the corpus volumes listed in <a href="../manifest.json">manifest.json</a>.</p>`,
+    );
+  }
+  const pages = files
     .map((file) => {
       const href = file.split("/").map(encodeURIComponent).join("/");
       return `<li><a href="./${href}">${escapeHtml(file)}</a></li>`;
@@ -439,12 +657,6 @@ function escapeHtml(value: string): string {
   });
 }
 
-function isBranchLockedSource(
-  source: LockedSource,
-): source is BranchLockedSource {
-  return source.branch !== undefined;
-}
-
 async function assertNoSymlinks(directory: string): Promise<void> {
   for (const entry of await readdir(directory, { withFileTypes: true })) {
     const entryPath = path.join(directory, entry.name);
@@ -456,6 +668,21 @@ async function assertNoSymlinks(directory: string): Promise<void> {
       await assertNoSymlinks(entryPath);
     }
   }
+}
+
+async function directorySize(directory: string): Promise<number> {
+  let total = 0;
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    const entryPath = path.join(directory, entry.name);
+    const details = await lstat(entryPath);
+    if (details.isSymbolicLink()) {
+      throw new Error(`Refusing to size symlink: ${entryPath}`);
+    }
+    total += details.isDirectory()
+      ? await directorySize(entryPath)
+      : details.size;
+  }
+  return total;
 }
 
 export function orderedLock(

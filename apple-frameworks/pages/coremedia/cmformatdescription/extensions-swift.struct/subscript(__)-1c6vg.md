@@ -1,0 +1,19 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremedia/cmformatdescription/extensions-swift.struct/subscript(_:)-1c6vg](https://developer.apple.com/documentation/coremedia/cmformatdescription/extensions-swift.struct/subscript(_:)-1c6vg)
+
+# subscript(\_:)
+
+**Framework:** Core Media  
+**Kind:** Instance Subscript  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+## Declaration
+
+```swift
+subscript(key: CFString) -> CFPropertyList? { get set }
+```
+
+## See Also
+
+### Finding Extension Elements
+
+- [subscript(\_:)](subscript%28__%29-80zh8.md)

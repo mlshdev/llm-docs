@@ -1,0 +1,65 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsstandardkeybindingresponding/showcontextmenuforselection(_:)](https://developer.apple.com/documentation/appkit/nsstandardkeybindingresponding/showcontextmenuforselection(_:))
+
+# showContextMenuForSelection(\_:) (Swift)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS 15.0+
+
+## Declaration
+
+```swift
+optional func showContextMenuForSelection(_ sender: Any?)
+```
+
+## Parameters
+
+- `sender`: The object that originated the display of the context menu.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Present a context menu at the text cursor position, selection, or wherever is appropriate for your responder.
+
+NSView has a default implementation of this method. For any view that returns a non-nil value from `-menuForEvent:`, the default implementation will display that menu automatically. The NSView implementation uses the `selectionAnchorRect` method in the `NSViewContentSelectionInfo` protocol to determine the location of the selection and of the menu. The NSView implementation determines the menu to display by calling `menuForEvent:` with a right-mouse-down event that is centered on the anchor rect. If `selectionAnchorRect` is not implemented, then the NSView implementation calls `menuForEvent` with a right-mouse-down event that is centered on the view’s bounds, and also displays the menu at that location.
+
+You should only override this method in a custom view if you need full control over the display of a context menu from the keyboard or Accessibility, beyond what is provided by default by NSView.
+
+If the view does not support a context menu, then you should call `[[self nextResponder] tryToPerform:_cmd with:sender]` to pass the request up the responder chain.
+
+> **Note**
+
+> In some cases, this method will be called without a prior call to `contextMenuKeyDown:`. This occurs when a view receives an Accessibility ShowMenu action, or when the user has created a Cocoa Text key binding to map a different key combination to the `showContextMenuForSelection:` action.
+
+# showContextMenuForSelection: (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS 15.0+
+
+## Declaration
+
+```objectivec
+- (void) showContextMenuForSelection:(id) sender;
+```
+
+## Parameters
+
+- `sender`: The object that originated the display of the context menu.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Present a context menu at the text cursor position, selection, or wherever is appropriate for your responder.
+
+NSView has a default implementation of this method. For any view that returns a non-nil value from `-menuForEvent:`, the default implementation will display that menu automatically. The NSView implementation uses the `selectionAnchorRect` method in the `NSViewContentSelectionInfo` protocol to determine the location of the selection and of the menu. The NSView implementation determines the menu to display by calling `menuForEvent:` with a right-mouse-down event that is centered on the anchor rect. If `selectionAnchorRect` is not implemented, then the NSView implementation calls `menuForEvent` with a right-mouse-down event that is centered on the view’s bounds, and also displays the menu at that location.
+
+You should only override this method in a custom view if you need full control over the display of a context menu from the keyboard or Accessibility, beyond what is provided by default by NSView.
+
+If the view does not support a context menu, then you should call `[[self nextResponder] tryToPerform:_cmd with:sender]` to pass the request up the responder chain.
+
+> **Note**
+
+> In some cases, this method will be called without a prior call to `contextMenuKeyDown:`. This occurs when a view receives an Accessibility ShowMenu action, or when the user has created a Cocoa Text key binding to map a different key combination to the `showContextMenuForSelection:` action.

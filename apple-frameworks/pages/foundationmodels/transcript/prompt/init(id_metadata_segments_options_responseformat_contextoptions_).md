@@ -1,0 +1,30 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundationmodels/transcript/prompt/init(id:metadata:segments:options:responseformat:contextoptions:)](https://developer.apple.com/documentation/foundationmodels/transcript/prompt/init(id:metadata:segments:options:responseformat:contextoptions:))
+
+# init(id:metadata:segments:options:responseFormat:contextOptions:)
+
+**Framework:** Foundation Models  
+**Kind:** Initializer  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+Creates a prompt.
+
+## Declaration
+
+```swift
+init(id: String = UUID().uuidString, metadata: [String : any ConvertibleToGeneratedContent] = [:], segments: [Transcript.Segment], options: GenerationOptions = GenerationOptions(), responseFormat: Transcript.ResponseFormat? = nil, contextOptions: ContextOptions = ContextOptions())
+```
+
+## Parameters
+
+- `id`: A [Generable](../../generable.md) type to use as the response format.
+- `metadata`: Metadata provided as part of this prompt.
+- `segments`: An array of segments that make up the prompt.
+- `options`: Options that control how tokens are sampled from the distribution the model produces.
+- `responseFormat`: A response format that describes the output structure.
+- `contextOptions`: Settings that configure how the model is prompted.
+
+## See Also
+
+### Creating a prompt
+
+- [init(id:segments:options:responseFormat:)](init%28id_segments_options_responseformat_%29.md): Creates a prompt.

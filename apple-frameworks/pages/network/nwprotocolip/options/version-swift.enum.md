@@ -1,0 +1,36 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/network/nwprotocolip/options/version-swift.enum](https://developer.apple.com/documentation/network/nwprotocolip/options/version-swift.enum)
+
+# NWProtocolIP.Options.Version
+
+**Framework:** Network  
+**Kind:** Enumeration  
+**Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 12.0+ · macOS 10.14+ · tvOS 12.0+ · visionOS 1.0+ · watchOS 5.0+
+
+IP versions to require on connections and listeners.
+
+## Declaration
+
+```swift
+enum Version
+```
+
+## Topics
+
+### Versions
+
+- [NWProtocolIP.Options.Version.any](version-swift.enum/any.md): Allow any IP version.
+- [NWProtocolIP.Options.Version.v4](version-swift.enum/v4.md): Require IP version 4.
+- [NWProtocolIP.Options.Version.v6](version-swift.enum/v6.md): Require IP version 6.
+
+## Relationships
+
+### Conforms To
+
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+
+## See Also
+
+### Selecting an IP Version
+
+- [version](version-swift.property.md): A required IP version that disables all other versions for a connection.

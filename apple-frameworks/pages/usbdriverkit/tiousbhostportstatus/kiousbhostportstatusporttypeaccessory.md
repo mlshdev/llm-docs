@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/usbdriverkit/tiousbhostportstatus/kiousbhostportstatusporttypeaccessory](https://developer.apple.com/documentation/usbdriverkit/tiousbhostportstatus/kiousbhostportstatusporttypeaccessory)
+
+# kIOUSBHostPortStatusPortTypeAccessory
+
+**Interface language:** Objective-C
+
+**Framework:** USBDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit 19.0+
+
+A device that might require authentication before drivers can access it.
+
+## Declaration
+
+```objectivec
+kIOUSBHostPortStatusPortTypeAccessory
+```
+
+## See Also
+
+### Getting the Port Status Flags
+
+- [kIOUSBHostPortStatusPortTypeMask](kiousbhostportstatusporttypemask.md): A mask for isolating the port bits.
+- [kIOUSBHostPortStatusPortTypePhase](kiousbhostportstatusporttypephase.md): The starting phase for port types.
+- [kIOUSBHostPortStatusPortTypeStandard](kiousbhostportstatusporttypestandard.md): A general-purpose USB port.
+- [kIOUSBHostPortStatusPortTypeCaptive](kiousbhostportstatusporttypecaptive.md): A device that cannot be physically disconnected from the port.
+- [kIOUSBHostPortStatusPortTypeInternal](kiousbhostportstatusporttypeinternal.md): A device that cannot be physically disconnected from the host machine.
+- [kIOUSBHostPortStatusPortTypeReserved](kiousbhostportstatusporttypereserved.md): A mask for isolating reserved port types.
+- [kIOUSBHostPortStatusConnectedSpeedMask](kiousbhostportstatusconnectedspeedmask.md): A mask for isolating the connection state bits.
+- [kIOUSBHostPortStatusConnectedSpeedPhase](kiousbhostportstatusconnectedspeedphase.md): The initial phase for connected state bits.
+- [kIOUSBHostPortStatusConnectedSpeedNone](kiousbhostportstatusconnectedspeednone.md): A port with no device connected to it.
+- [kIOUSBHostPortStatusConnectedSpeedFull](kiousbhostportstatusconnectedspeedfull.md): A port with a full-speed device connected to it.
+- [kIOUSBHostPortStatusConnectedSpeedLow](kiousbhostportstatusconnectedspeedlow.md): A port with a low-speed device connected to it.
+- [kIOUSBHostPortStatusConnectedSpeedHigh](kiousbhostportstatusconnectedspeedhigh.md): A port with a high-speed device connected to it.
+- [kIOUSBHostPortStatusConnectedSpeedSuper](kiousbhostportstatusconnectedspeedsuper.md): A port with a super-speed device connected to it.
+- [kIOUSBHostPortStatusConnectedSpeedSuperPlus](kiousbhostportstatusconnectedspeedsuperplus.md): A port with a super-speed plus device connected to it.
+- [kIOUSBHostPortStatusConnectedSpeedSuperPlusBy2](kiousbhostportstatusconnectedspeedsuperplusby2.md): A port with a super-speed plus two device connected to it.

@@ -1,0 +1,170 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/corenfc/nfctagreadersession](https://developer.apple.com/documentation/corenfc/nfctagreadersession)
+
+# NFCTagReaderSession (Swift)
+
+**Framework:** Core NFC  
+**Kind:** Class  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+
+
+A reader session for detecting ISO7816, ISO15693, FeliCa, and MIFARE tags.
+
+## Declaration
+
+```swift
+class NFCTagReaderSession
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use NFCTagReaderSession to interact with one of the tag types listed in [NFCTagType](nfctagtype.md). To use this reader session, you must:
+
+- Include the [Near Field Communication Tag Reader Session Formats Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.nfc.readersession.formats) in your app.
+- Provide a non-empty string for the [NFCReaderUsageDescription](https://developer.apple.com/documentation/bundleresources/information-property-list/nfcreaderusagedescription) key in your app’s information property list file.
+
+To interact with ISO 7816 tags, add the list of the application identifiers supported in your app to the [ISO7816 application identifiers for NFC Tag Reader Session](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.nfc.readersession.iso7816.select-identifiers) information property list key. If you include the application identifier `D2760000850101`—the identifier for the NDEF application on MIFARE DESFire tags (NFC Forum T4T tag platform)—and the reader session finds a tag matching this identifier, it sends the delegate an [NFCISO7816Tag](nfciso7816tag.md) tag object. To get the MIFARE DESFire tag as an [NFCMiFareTag](nfcmifaretag.md) object, don’t include `D2760000850101` in the application identifier list.
+
+Only one reader session of any type can be active in the system at a time. The system puts additional sessions in a queue and processes them in first-in, first-out (FIFO) order.
+
+> **Important**
+
+>  `NFCTagReaderSession` doesn’t support selection of payment-related application IDs. In the European Union (EU), you can use [NFCPaymentTagReaderSession](nfcpaymenttagreadersession.md), as described in that class’s documentation.
+
+## Topics
+
+### Creating a Tag Reader Session
+
+- [init(pollingOption:delegate:queue:)](nfctagreadersession/init%28pollingoption_delegate_queue_%29.md): Deprecated. Creates an NFC tag reader session.
+- [NFCTagReaderSession.PollingOption](nfctagreadersession/pollingoption.md): Options that determine the type of tags that a reader session should detect during a polling sequence.
+- [NFCTagReaderSessionDelegate](nfctagreadersessiondelegate-2joku.md): A protocol that an object implements to receive callbacks sent from an NFC tag reader session.
+
+### Connecting to a Tag
+
+- [connect(to:completionHandler:)](nfctagreadersession/connect%28to_completionhandler_%29.md): Connects the reader session to a tag and activates that tag.
+- [connectedTag](nfctagreadersession/connectedtag-3mlqu.md): The tag connected to the reader session.
+
+### Restarting the Polling Sequence
+
+- [restartPolling()](nfctagreadersession/restartpolling%28%29.md): Restarts the polling sequence so the reader session can discover new tags.
+
+### Structures
+
+- [NFCTagReaderSession.Configuration](nfctagreadersession/configuration.md)
+
+### Initializers
+
+- [init(configuration:delegate:queue:)](nfctagreadersession/init%28configuration_delegate_queue_%29-8g6tm.md)
+- [init(configuration:delegate:queue:)](nfctagreadersession/init%28configuration_delegate_queue_%29-soy8.md): Creates a new NFCTagReaderSession instance.
+
+### Instance Methods
+
+- [connect(to:)](nfctagreadersession/connect%28to_%29.md)
+- [restartPolling(configuration:)](nfctagreadersession/restartpolling%28configuration_%29.md): Restart the polling sequence in this session to discover new tags using the provided configuration. New tags discovered from polling will return in the subsequent `NFCTagReaderSessionDelegate.tagReaderSession(_:, didDetect:)` call. Tags that are returned previously by `NFCTagReaderSessionDelegate.tagReaderSession(_:, didDetect:)` will become invalid, and all references to these tags shall be removed to properly release the resources. Calling this method on an invalidated session will have no effect; a new reader session is required to restart the reader.
+- [restartPolling(with:)](nfctagreadersession/restartpolling%28with_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [NFCReaderSession](nfcreadersession-swift.class.md)
+
+### Inherited By
+
+- [NFCPaymentTagReaderSession](nfcpaymenttagreadersession.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NFCReaderSessionProtocol](nfcreadersessionprotocol.md)
+- [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
+
+## See Also
+
+### Reader sessions
+
+- [NFCNDEFReaderSession](nfcndefreadersession.md): A reader session for detecting NFC Data Exchange Format (NDEF) tags.
+- [NFCPaymentTagReaderSession](nfcpaymenttagreadersession.md): A reader session that supports the use of payment tags.
+- [NFCVASReaderSession](nfcvasreadersession.md): A reader session for processing Value Added Service (VAS) tags.
+- [NFCReaderSession](nfcreadersession-swift.class.md): The abstract base class that represents a reader session for detecting NFC tags.
+- [NFCReaderSessionProtocol](nfcreadersessionprotocol.md): A general interface for interacting with a reader session.
+- [Near Field Communication Tag Reader Session Formats Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.nfc.readersession.formats): The Near Field Communication data formats an app can read.
+
+# NFCTagReaderSession (Objective-C)
+
+**Framework:** Core NFC  
+**Kind:** Class  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+
+
+A reader session for detecting ISO7816, ISO15693, FeliCa, and MIFARE tags.
+
+## Declaration
+
+```objectivec
+@interface NFCTagReaderSession : NFCReaderSession
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use NFCTagReaderSession to interact with one of the tag types listed in [NFCTagType](nfctagtype.md). To use this reader session, you must:
+
+- Include the [Near Field Communication Tag Reader Session Formats Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.nfc.readersession.formats) in your app.
+- Provide a non-empty string for the [NFCReaderUsageDescription](https://developer.apple.com/documentation/bundleresources/information-property-list/nfcreaderusagedescription) key in your app’s information property list file.
+
+To interact with ISO 7816 tags, add the list of the application identifiers supported in your app to the [ISO7816 application identifiers for NFC Tag Reader Session](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.nfc.readersession.iso7816.select-identifiers) information property list key. If you include the application identifier `D2760000850101`—the identifier for the NDEF application on MIFARE DESFire tags (NFC Forum T4T tag platform)—and the reader session finds a tag matching this identifier, it sends the delegate an [NFCISO7816Tag](nfciso7816tag.md) tag object. To get the MIFARE DESFire tag as an [NFCMiFareTag](nfcmifaretag.md) object, don’t include `D2760000850101` in the application identifier list.
+
+Only one reader session of any type can be active in the system at a time. The system puts additional sessions in a queue and processes them in first-in, first-out (FIFO) order.
+
+> **Important**
+
+>  `NFCTagReaderSession` doesn’t support selection of payment-related application IDs. In the European Union (EU), you can use [NFCPaymentTagReaderSession](nfcpaymenttagreadersession.md), as described in that class’s documentation.
+
+## Topics
+
+### Creating a Tag Reader Session
+
+- [initWithPollingOption:delegate:queue:](nfctagreadersession/initwithpollingoption_delegate_queue_.md): Intializes an NFC tag reader session.
+- [NFCPollingOption](nfctagreadersession/pollingoption.md): Options that determine the type of tags that a reader session should detect during a polling sequence.
+- [NFCTagReaderSessionDelegate](nfctagreadersessiondelegate-5gxiw.md): A protocol that an object implements to receive callbacks sent from an NFC tag reader session.
+
+### Connecting to a Tag
+
+- [connectToTag:completionHandler:](nfctagreadersession/connecttotag_completionhandler_.md): Connects the reader session to a tag and activates that tag.
+- [connectedTag](nfctagreadersession/connectedtag-1mnjc.md): The tag connected to the reader session.
+
+### Restarting the Polling Sequence
+
+- [restartPolling](nfctagreadersession/restartpolling%28%29.md): Restarts the polling sequence so the reader session can discover new tags.
+
+### Instance Methods
+
+- [initWithConfiguration:delegate:queue:](nfctagreadersession/init%28configuration_delegate_queue_%29-8g6tm.md)
+- [restartPollingWithConfiguration:](nfctagreadersession/restartpolling%28with_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [NFCReaderSession](nfcreadersession-swift.class.md)
+
+### Inherited By
+
+- [NFCPaymentTagReaderSession](nfcpaymenttagreadersession.md)
+
+## See Also
+
+### Reader sessions
+
+- [NFCNDEFReaderSession](nfcndefreadersession.md): A reader session for detecting NFC Data Exchange Format (NDEF) tags.
+- [NFCPaymentTagReaderSession](nfcpaymenttagreadersession.md): A reader session that supports the use of payment tags.
+- [NFCVASReaderSession](nfcvasreadersession.md): A reader session for processing Value Added Service (VAS) tags.
+- [NFCReaderSession](nfcreadersession-swift.class.md): The abstract base class that represents a reader session for detecting NFC tags.
+- [NFCReaderSession](nfcreadersessionprotocol.md): A general interface for interacting with a reader session.
+- [NFCReaderSessionDelegate](nfcreadersessiondelegate.md): A collection of callbacks that provide information about the status of an NFC reader session.
+- [Near Field Communication Tag Reader Session Formats Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.nfc.readersession.formats): The Near Field Communication data formats an app can read.

@@ -1,0 +1,16 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corevideo/cvtimestamp/init(videotime:hosttime:ratescaler:videorefreshperiod:smptetime:topfield:bottomfield:)](https://developer.apple.com/documentation/corevideo/cvtimestamp/init(videotime:hosttime:ratescaler:videorefreshperiod:smptetime:topfield:bottomfield:))
+
+# init(videoTime:hostTime:rateScaler:videoRefreshPeriod:smpteTime:topField:bottomField:)
+
+**Framework:** Core Video  
+**Kind:** Initializer  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 4.0+ · macOS 10.4+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 4.0+
+
+Initialize a CVTimeStamp containing specified fields. The bits corrsrponding to non-nil arguments are set in `CVTimeStamp.flags`.
+
+## Declaration
+
+```swift
+@backDeployed(before: macOS 26.0, iOS 26.0, tvOS 26.0, watchOS 26.0, visionOS 26.0)
+init(videoTime: CVTime? = nil, hostTime: UInt64? = nil, rateScaler: Double? = nil, videoRefreshPeriod: Int64? = nil, smpteTime: CVSMPTETime? = nil, topField: Bool = false, bottomField: Bool = false)
+```

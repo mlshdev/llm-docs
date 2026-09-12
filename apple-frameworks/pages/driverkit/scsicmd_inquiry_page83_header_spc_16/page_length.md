@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/scsicmd_inquiry_page83_header_spc_16/page_length](https://developer.apple.com/documentation/driverkit/scsicmd_inquiry_page83_header_spc_16/page_length)
+
+# PAGE_LENGTH
+
+**Interface language:** Objective-C
+
+**Framework:** DriverKit  
+**Kind:** Instance Property  
+**Availability:** DriverKit · iOS · iPadOS · macOS
+
+## Declaration
+
+```objectivec
+UInt16 PAGE_LENGTH;
+```

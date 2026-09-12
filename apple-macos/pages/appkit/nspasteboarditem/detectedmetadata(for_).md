@@ -1,0 +1,60 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nspasteboarditem/detectedmetadata(for:)](https://developer.apple.com/documentation/appkit/nspasteboarditem/detectedmetadata(for:))
+
+# detectedMetadata(for:)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS 15.4+
+
+Determines available metadata from the specified metadata types for this pasteboard item, without notifying the person using the app.
+
+## Declaration
+
+```swift
+func detectedMetadata(for keyPaths: Set<PartialKeyPath<NSPasteboardItem.DetectedMetadata>>) async throws -> NSPasteboardItem.DetectedMetadata
+```
+
+## Parameters
+
+- `keyPaths`: The metadata types to detect on the pasteboard item.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An [NSPasteboard.DetectedMetadata](../nspasteboard/detectedmetadata.md) instance containing the metadata for the metadata types detected on the pasteboard item.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This method only gives access to limited types of metadata and doesn’t allow the app to access the item’s contents. As a result, the system doesn’t notify the person using the app about reading the contents of the pasteboard.
+
+For details about the metadata returned for each type, see [NSPasteboard.DetectedMetadata](../nspasteboard/detectedmetadata.md).
+
+The following example shows how to iterate over each pasteboard item and, if the item is a URL that points to a file, get its content type with this method.
+
+```swift
+guard let pasteboardItems = NSPasteboard.general.pasteboardItems else { return }
+for (index, item) in pasteboardItems.enumerated() {
+    do {
+        let metadataResults = try await item.detectedMetadata(for: [\.contentType])
+        if let contentType = metadataResults.contentType {
+            print("Item \(index) - Content type is: \(contentType.identifier).")
+        } else {
+            print("Item \(index) - Couldn't get content type.")
+        }
+    } catch {
+        print("Item \(index) - Error: \(error).")
+    }
+}
+```
+
+## See Also
+
+### Detecting patterns and metadata in pasteboard items
+
+- [detectedPatterns(for:)](detectedpatterns%28for_%29.md): Determines whether the pasteboard item matches the specified patterns, without notifying the person using the app.
+- [detectedValues(for:)](detectedvalues%28for_%29.md): Determines whether this pasteboard item matches the specified patterns, reading the contents if it finds a match.
+- [NSPasteboardItem.DetectedValues](detectedvalues.md)
+- [NSPasteboardItem.DetectedMetadata](detectedmetadata.md)

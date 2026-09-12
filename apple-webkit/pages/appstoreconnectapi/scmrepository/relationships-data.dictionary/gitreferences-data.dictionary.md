@@ -1,0 +1,19 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/scmrepository/relationships-data.dictionary/gitreferences-data.dictionary](https://developer.apple.com/documentation/appstoreconnectapi/scmrepository/relationships-data.dictionary/gitreferences-data.dictionary)
+
+# ScmRepository.Relationships.GitReferences
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 3.6+
+
+## Declaration
+
+```
+object ScmRepository.Relationships.GitReferences
+```
+
+## Properties
+
+- `links` — `RelationshipLinks`:

@@ -1,0 +1,191 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/technotes/tn3159-migrating-sign-in-with-apple-users-for-an-app-transfer](https://developer.apple.com/documentation/technotes/tn3159-migrating-sign-in-with-apple-users-for-an-app-transfer)
+
+# TN3159: Migrating Sign in with Apple users for an app transfer
+
+**Kind:** Technote
+
+Migrate existing Sign in with Apple user identifiers and private email relay addresses by exchanging transfer identifiers from one developer team to another with the user migration info endpoint.
+
+<a id="Overview"></a>
+
+## Overview
+
+Sign in with Apple allows you to set up a user account in your system, complete with name, verified email address, and unique stable identifiers that allow the user to sign in to your app with their Apple ID. It works on iOS, macOS, tvOS, watchOS, and visionOS, by using the native app’s bundle identifier (or App ID) as its client identifier. You can also add Sign in with Apple to your website or versions of your app running on other platforms by using the Services ID as its client identifier.
+
+A developer team may decide to transfer a Sign in with Apple enabled app when they’ve sold the app to another developer, or want to move it to another App Store Connect account or organization. For Sign in with Apple apps, you have a sixty (60) days transfer period from the date you complete the app transfer. The user migration endpoint is active for both developer accounts—the transferring team and the recipient team–—during this 60-day app transfer period. You may obtain access tokens and generate and/or exchange transfer identifiers during this time for developer team-scoped user identifiers and private email addresses (if applicable).
+
+To guide you through the user migration process, we’ll discuss the most common scenarios for an app transfer:
+
+- Preparing to migrate users for an app transfer
+- Migrating users within the 60-day app transfer period
+- Migrating users after the 60-day app transfer period
+
+If you’re encountering errors during user migration, see [TN3107: Resolving Sign in with Apple response errors](tn3107-resolving-sign-in-with-apple-response-errors.md) to learn more about the underlying cause of common errors. If you are still unable to resolve your errors, please continue to the scenario that matches the state of your app transfer below.
+
+<a id="Preparing-to-migrate-users-for-an-app-transfer"></a>
+
+## Preparing to migrate users for an app transfer
+
+To prepare your team-scoped user data for the recipient for the app transfer, you need to [generate a transfer identifier](https://developer.apple.com/documentation/signinwithapple/transferring-your-apps-and-users-to-another-team) (transfer ID) for each user in your database. If you have grouped your apps for Sign in with Apple, you will need to ungroup them before initiating the transfer. The Services ID associated with a primary App ID that has configured Sign in with Apple will also be transferred. If you don’t want the Service ID to be transferred to the recipient team, [remove its association](https://developer.apple.com/help/account/configure-app-capabilities/configure-sign-in-with-apple-for-the-web) before initiating the transfer.
+
+Once the transfer IDs have been generated and the private user data has been prepared for the recipient team, you may initiate your app transfer. For more information about the app transfer process, see [App Store Connect Help: Transfer an app – Overview of app transfer](https://developer.apple.com/help/app-store-connect/transfer-an-app/overview-of-app-transfer).
+
+If you have not obtained access tokens or generated transfer identifiers, but have completed your app transfer within 60 days, see [Migrating users within the 60-day app transfer period](tn3159-migrating-sign-in-with-apple-users-for-an-app-transfer.md#Migrating-users-within-the-60-day-app-transfer-period). Otherwise, see [Migrating users after the 60-day app transfer period](tn3159-migrating-sign-in-with-apple-users-for-an-app-transfer.md#Migrating-users-after-the-60-day-app-transfer-period) to learn how to proceed with your user migration.
+
+<a id="Migrating-users-within-the-60-day-app-transfer-period"></a>
+
+## Migrating users within the 60-day app transfer period
+
+If you are migrating users within the app transfer period, the auth token and user migration info endpoints are active for both developer teams. For teams transferring their app to another team, see [Transferring existing users to a recipient team](tn3159-migrating-sign-in-with-apple-users-for-an-app-transfer.md#Transferring-existing-users-to-a-recipient-team). For teams receiving a transferred app from another team, see [Bringing users from the transferring team into your team](tn3159-migrating-sign-in-with-apple-users-for-an-app-transfer.md#Bringing-users-from-the-transferring-team-into-your-team).
+
+<a id="Migrating-users-after-the-60-day-app-transfer-period"></a>
+
+## Migrating users after the 60-day app transfer period
+
+If you’ve missed the app transfer period, then you’ll need to transfer the app back to the initial team and back to reactivate the auth token and user migrations info endpoints for both developer teams.
+
+For example, if Team A transferred the app to Team B more than 60 days ago, then Team B should transfer the app back to Team A. Once the original transfer has been reversed, Team A should properly prepare for the migration as described in [Preparing to migrate users for an app transfer](tn3159-migrating-sign-in-with-apple-users-for-an-app-transfer.md#Preparing-to-migrate-users-for-an-app-transfer). Once Team A prepares the transfer IDs and user data for Team B, they should initiate the app transfer to Team B. Then, Team B can exchange transfer IDs for team-scoped user credentials as described in [Bringing users from the transferring team into your team](tn3159-migrating-sign-in-with-apple-users-for-an-app-transfer.md#Bringing-users-from-the-transferring-team-into-your-team).
+
+<a id="Transferring-existing-users-to-a-recipient-team"></a>
+
+## Transferring existing users to a recipient team
+
+Please follow the following steps to process the user migration from your team (Team A) to the recipient team (Team B):
+
+1. Team A obtains access token(s)
+2. Team A generates transfer identifiers
+3. Team A initiates app transfer to Team B
+
+For more information about steps above, please see [Transferring your apps and users to another team](https://developer.apple.com/documentation/signinwithapple/transferring-your-apps-and-users-to-another-team).
+
+> **Note**
+
+> If you receive errors while obtaining access tokens or generating transfer identifiers, but have completed your app transfer within 60 days, see [TN3107: Resolving Sign in with Apple response errors](tn3107-resolving-sign-in-with-apple-response-errors.md). Otherwise, see [Migrating users after the 60-day app transfer period](tn3159-migrating-sign-in-with-apple-users-for-an-app-transfer.md#Migrating-users-after-the-60-day-app-transfer-period) to learn how to proceed with your user migration.
+
+<a id="1-Team-A-obtains-access-tokens"></a>
+
+### \1. Team A obtains access token(s)
+
+There are two ways of obtaining access tokens for user migration:
+
+- fetching the access token for the entire developer team; or
+- using the access token received for each user when [validating auth or refresh tokens](https://developer.apple.com/documentation/signinwithapplerestapi/generate-and-validate-tokens) after the user authorization.
+
+The request below fetches the access token for Team A. The request also contains the following:
+
+- the client ID for the transferred app or web service; and
+- the client secret created by Team A.
+
+```shell
+curl -v POST "https://appleid.apple.com/auth/token" \
+-H 'Content-Type: application/x-www-form-urlencoded' \
+-d 'grant_type=client_credentials' \
+-d 'scope=user.migration' \
+-d 'client_id=CLIENT_ID' \
+-d 'client_secret=CLIENT_SECRET_ISSUED_BY_TEAM_A'
+```
+
+You can use this approach to migrate users in batches instead of individually when validating their user session. There is also no rate limiting for this endpoint. To learn more about generating a client secret for your team, please see [Creating a client secret](https://developer.apple.com/documentation/accountorganizationaldatasharing/creating-a-client-secret).
+
+<a id="2-Team-A-generates-transfer-identifiers"></a>
+
+### \2. Team A generates transfer identifiers
+
+The request below uses the access token for Team A, then generates an existing user’s transfer ID for Team B. The request also contains the following:
+
+- the existing user ID for Team A;
+- the developer team ID for Team B;
+- the client ID for the transferred app or web service; and
+- the client secret created by Team A.
+
+```shell
+curl -v POST "https://appleid.apple.com/auth/usermigrationinfo" \
+-H 'Content-Type: application/x-www-form-urlencoded' \
+-H 'Authorization: Bearer ACCESS_TOKEN_FOR_TEAM_A_OR_EXISTING_USER_ID' \
+-d 'sub=EXISTING_USER_ID_FOR_TEAM_A' \
+-d 'target=DEVELOPER_TEAM_ID_FOR_TEAM_B' \
+-d 'client_id=CLIENT_ID' \
+-d 'client_secret=CLIENT_SECRET_ISSUED_BY_TEAM_A'
+```
+
+<a id="3-Team-A-initiates-app-transfer-to-Team-B"></a>
+
+### \3. Team A initiates app transfer to Team B
+
+Once the transfer IDs have been generated and the private user data has been prepared for the recipient team, you may initiate your app transfer. For more information about the app transfer process, see [App Store Connect Help: Transfer an app – Overview of app transfer](https://developer.apple.com/help/app-store-connect/transfer-an-app/overview-of-app-transfer).
+
+<a id="Bringing-users-from-the-transferring-team-into-your-team"></a>
+
+## Bringing users from the transferring team into your team
+
+Please follow the following steps to process the user migration from the transferring team (Team A) to your team (Team B):
+
+4. Team B obtains access token(s)
+5. Team B exchanges transfer identifiers
+6. Team B confirms successful user migration
+
+For more information about steps above, please see [https://developer.apple.com/documentation/signinwithapple/bringing-new-apps-and-users-into-your-team](https://developer.apple.com/documentation/signinwithapple/bringing-new-apps-and-users-into-your-team).
+
+<a id="4-Team-B-obtains-access-tokens"></a>
+
+### \4. Team B obtains access token(s)
+
+There are two ways of obtaining access tokens for user migration:
+
+- fetching the access token for the entire developer team; or
+- using the access token received for each user when [validating auth or refresh tokens](https://developer.apple.com/documentation/signinwithapplerestapi/generate-and-validate-tokens) after the user authorization.
+
+The request below fetches the access token for Team B. The request also contains the following:
+
+- the client ID for the transferred app or web service; and
+- the client secret created by Team B.
+
+```shell
+curl -v POST "https://appleid.apple.com/auth/token" \
+-H 'Content-Type: application/x-www-form-urlencoded' \
+-d 'grant_type=client_credentials' \
+-d 'scope=user.migration' \
+-d 'client_id=CLIENT_ID' \
+-d 'client_secret=CLIENT_SECRET_ISSUED_BY_TEAM_B'
+```
+
+You can use this approach to migrate users in batches instead of individually when validating their user session. There is also no rate limiting for this endpoint. To learn more about generating a client secret for your team, please see [Creating a client secret](https://developer.apple.com/documentation/accountorganizationaldatasharing/creating-a-client-secret).
+
+<a id="5-Team-B-exchanges-transfer-identifiers"></a>
+
+### \5. Team B exchanges transfer identifiers
+
+The request below uses the access token for Team B, then exchanges the transfer ID provided by Team A. The request also contains the following:
+
+- the transfer ID obtained from Team A;
+- the client ID for the transferred app or web service; and
+- the client secret created by Team B.
+
+```shell
+curl -v POST "https://appleid.apple.com/auth/usermigrationinfo" \
+-H 'Content-Type: application/x-www-form-urlencoded' \
+-H 'Authorization: Bearer ACCESS_TOKEN_FOR_TEAM_B_OR_TRANSFER_ID' \
+-d 'transfer_sub=TRANSFER_ID_OBTAINED_FROM_TEAM_A' \
+-d 'client_id=CLIENT_ID' \
+-d 'client_secret=CLIENT_SECRET_ISSUED_BY_TEAM_B'
+```
+
+<a id="6-Team-B-confirms-successful-user-migration"></a>
+
+### \6. Team B confirms successful user migration
+
+Within your app or web service, you can confirm the user migration was successful by checking the credential state of the user. Its value should be [`.transferred`](https://developer.apple.com/documentation/authenticationservices/asauthorizationappleidprovider/credentialstate/transferred). To learn more about this step, see [Confirm the transferred credential state](https://developer.apple.com/documentation/signinwithapple/bringing-new-apps-and-users-into-your-team).
+
+<a id="Revision-History"></a>
+
+## Revision History
+
+- **2024-02-07** Corrected title.
+- **2024-01-09** First published.
+
+## See Also
+
+### Related Documentation
+
+- [TN3107: Resolving Sign in with Apple response errors](tn3107-resolving-sign-in-with-apple-response-errors.md): Diagnose errors received by the Sign in with Apple client, or its server infrastructure, by identifying the underlying causes of common error codes and explore their potential solutions.
+- [TN3194: Handling account deletions and revoking tokens for Sign in with Apple](tn3194-handling-account-deletions-and-revoking-tokens-for-sign-in-with-apple.md): Learn the best techniques for managing Sign in with Apple user sessions and responding to account deletion requests.

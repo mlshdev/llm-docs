@@ -1,0 +1,48 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/errorcodepairingtokenmissing](https://developer.apple.com/documentation/devicemanagement/errorcodepairingtokenmissing)
+
+# ErrorCodePairingTokenMissing
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Object  
+**Availability:** watchOS 10.0+
+
+An error response that indicates a missing pairing token.
+
+## Declaration
+
+```
+object ErrorCodePairingTokenMissing
+```
+
+## Properties
+
+- `code` — `string` (required): Indicates that the pairing token, which the system requires to enroll the watch, is missing.
+  **Allowed values:** `com.apple.watch.pairing.token.missing`
+- `description` — `string`: A description of the error. Only use this for logging purposes and don’t display it to the user.
+- `details` — `ErrorCodePairingTokenMissing.Details` (required): A dictionary that contains additional data about the error code.
+- `message` — `string`: A description of the error to display to the user.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The schema for a JSON or property list XML document that an MDM server’s 403 response body contains. The response headers need to include a “Content-Type” header that indicates whether the response returns JSON or XML.
+
+The system returns this response when an Apple Watch enrolls in MDM, but the watch doesn’t include a `PAIRING_TOKEN` in the [MachineInfo](machineinfo.md) request. After the watch receives this response, it fetches a pairing token from the phone’s MDM server through a request to the phone. Then, the watch repeats the enrollment request and includes the pairing token.
+
+## Topics
+
+### Objects
+
+- [ErrorCodePairingTokenMissing.Details](errorcodepairingtokenmissing/details-data.dictionary.md): A dictionary that contains additional data about the token-missing error code.
+
+## See Also
+
+### Enrollment errors
+
+- [ErrorCodePlatformSSORequired](errorcodeplatformssorequired.md): An error response that indicates Platform SSO is required.
+- [ErrorCodeSoftwareUpdateRequired](errorcodesoftwareupdaterequired.md): An error response that indicates the system requires a software update.
+- [ErrorUnrecognizedDevice](errorunrecognizeddevice.md): An error response that indicates a device needs to unenroll.
+- [ErrorWellKnownFailed](errorwellknownfailed.md): An error response that indicates a well-known service discovery request failed.

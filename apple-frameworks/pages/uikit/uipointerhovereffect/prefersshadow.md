@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uipointerhovereffect/prefersshadow](https://developer.apple.com/documentation/uikit/uipointerhovereffect/prefersshadow)
+
+# prefersShadow
+
+**Interface language:** Objective-C
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 13.4+ · iPadOS 13.4+ · Mac Catalyst 13.4+ · visionOS 1.0+
+
+A Boolean value that determines whether to add a shadow.
+
+## Declaration
+
+```objectivec
+@property (nonatomic) BOOL prefersShadow;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The default value of this property is [false](https://developer.apple.com/documentation/swift/false).
+
+## See Also
+
+### Customizing the effect
+
+- [prefersScaledContent](prefersscaledcontent.md): A Boolean value that determines whether to scale the content.

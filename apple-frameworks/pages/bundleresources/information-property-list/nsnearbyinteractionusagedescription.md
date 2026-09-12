@@ -1,0 +1,32 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/bundleresources/information-property-list/nsnearbyinteractionusagedescription](https://developer.apple.com/documentation/bundleresources/information-property-list/nsnearbyinteractionusagedescription)
+
+# NSNearbyInteractionUsageDescription
+
+**Interface languages:** Swift, Objective-C
+
+**Framework:** Bundle Resources  
+**Kind:** Property List Key  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · watchOS 8.0+
+
+A request for user permission to begin an interaction session with nearby devices.
+
+## Details
+
+`NSNearbyInteractionUsageDescription`
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This property defines localizable text that explains your interaction session’s purpose to the user.
+
+Before an app starts an interaction session, the system checks whether the user agrees to share their relative distance and direction with a nearby peer. The first time the app runs, the framework presents a prompt that displays the value of this key contained in your project’s `Info.plist`. The system persists the user’s choice in Settings. After your app runs for the first time, it consults the user preference in Settings before it begins a new interaction session.
+
+For more information, see [Initiating and maintaining a session](../../nearbyinteraction/initiating-and-maintaining-a-session.md).
+
+## See Also
+
+### Networking
+
+- [NSLocalNetworkUsageDescription](nslocalnetworkusagedescription.md): A message that tells people why the app is requesting access to the local network.
+- [NSNearbyInteractionAllowOnceUsageDescription](nsnearbyinteractionallowonceusagedescription.md): Deprecated. A one-time request for user permission to begin an interaction session with nearby devices.

@@ -1,0 +1,53 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtlpixelformat/rg32uint](https://developer.apple.com/documentation/metal/mtlpixelformat/rg32uint)
+
+# MTLPixelFormat.rg32Uint (Swift)
+
+**Framework:** Metal  
+**Kind:** Case  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
+
+Ordinary format with two 32-bit unsigned integer components.
+
+## Declaration
+
+```swift
+case rg32Uint
+```
+
+## See Also
+
+### Ordinary 64-bit pixel formats
+
+- [MTLPixelFormat.rg32Sint](rg32sint.md): Ordinary format with two 32-bit signed integer components.
+- [MTLPixelFormat.rg32Float](rg32float.md): Ordinary format with two 32-bit floating-point components.
+- [MTLPixelFormat.rgba16Unorm](rgba16unorm.md): Ordinary format with four 16-bit normalized unsigned integer components in RGBA order.
+- [MTLPixelFormat.rgba16Snorm](rgba16snorm.md): Ordinary format with four 16-bit normalized signed integer components in RGBA order.
+- [MTLPixelFormat.rgba16Uint](rgba16uint.md): Ordinary format with four 16-bit unsigned integer components in RGBA order.
+- [MTLPixelFormat.rgba16Sint](rgba16sint.md): Ordinary format with four 16-bit signed integer components in RGBA order.
+- [MTLPixelFormat.rgba16Float](rgba16float.md): Ordinary format with four 16-bit floating-point components in RGBA order.
+
+# MTLPixelFormatRG32Uint (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Enumeration Case  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS · visionOS 1.0+
+
+Ordinary format with two 32-bit unsigned integer components.
+
+## Declaration
+
+```objectivec
+MTLPixelFormatRG32Uint
+```
+
+## See Also
+
+### Ordinary 64-bit pixel formats
+
+- [MTLPixelFormatRG32Sint](rg32sint.md): Ordinary format with two 32-bit signed integer components.
+- [MTLPixelFormatRG32Float](rg32float.md): Ordinary format with two 32-bit floating-point components.
+- [MTLPixelFormatRGBA16Unorm](rgba16unorm.md): Ordinary format with four 16-bit normalized unsigned integer components in RGBA order.
+- [MTLPixelFormatRGBA16Snorm](rgba16snorm.md): Ordinary format with four 16-bit normalized signed integer components in RGBA order.
+- [MTLPixelFormatRGBA16Uint](rgba16uint.md): Ordinary format with four 16-bit unsigned integer components in RGBA order.
+- [MTLPixelFormatRGBA16Sint](rgba16sint.md): Ordinary format with four 16-bit signed integer components in RGBA order.
+- [MTLPixelFormatRGBA16Float](rgba16float.md): Ordinary format with four 16-bit floating-point components in RGBA order.

@@ -1,0 +1,36 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/picker/init(_:systemimage:selection:content:)](https://developer.apple.com/documentation/swiftui/picker/init(_:systemimage:selection:content:))
+
+# init(\_:systemImage:selection:content:)
+
+**Framework:** SwiftUI  
+**Kind:** Initializer  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS 1.0+ · watchOS 7.0+
+
+Creates a picker that generates its label from a localized string key and system image.
+
+## Declaration
+
+```swift
+@export(implementation) nonisolated init(_ titleKey: LocalizedStringKey, systemImage: String, selection: Binding<SelectionValue>, @ContentBuilder content: () -> Content)
+```
+
+## Parameters
+
+- `titleKey`: A localized string key that describes the purpose of selecting an option.
+- `systemImage`: The name of the image resource to lookup.
+- `selection`: A binding to a property that determines the currently-selected option.
+- `content`: A view that contains the set of options.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This initializer creates a [Text](../text.md) view on your behalf, and treats the localized key similar to [init(\_:tableName:bundle:comment:)](../text/init%28__tablename_bundle_comment_%29.md). See [Text](../text.md) for more information about localizing strings.
+
+## See Also
+
+### Creating a picker with an image label
+
+- [init(\_:image:selection:content:)](init%28__image_selection_content_%29.md): Conforms when `Label` is `Label<Text, Image>`, `SelectionValue` conforms to `Hashable`, and `Content` conforms to `View`. Creates a picker that generates its label from a localized string resource and image resource
+- [init(\_:image:sources:selection:content:)](init%28__image_sources_selection_content_%29.md): Conforms when `Label` is `Label<Text, Image>`, `SelectionValue` conforms to `Hashable`, and `Content` conforms to `View`. Creates a picker that generates its label from a localized string resource and image resource.
+- [init(\_:systemImage:sources:selection:content:)](init%28__systemimage_sources_selection_content_%29.md): Conforms when `Label` is `Label<Text, Image>`, `SelectionValue` conforms to `Hashable`, and `Content` conforms to `View`. Creates a picker bound to a collection of bindings that generates its label from a string.

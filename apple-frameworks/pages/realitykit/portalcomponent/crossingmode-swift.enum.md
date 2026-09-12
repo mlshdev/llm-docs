@@ -1,0 +1,44 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/portalcomponent/crossingmode-swift.enum](https://developer.apple.com/documentation/realitykit/portalcomponent/crossingmode-swift.enum)
+
+# PortalComponent.CrossingMode
+
+**Framework:** RealityKit  
+**Kind:** Enumeration  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
+
+Specifies the mode of crossing for a portal.
+
+## Declaration
+
+```swift
+enum CrossingMode
+```
+
+<a id="overview"></a>
+
+## Overview
+
+You pass this type to [crossingMode](crossingmode-swift.property.md) to configure the portal component’s crossing feature.
+
+Use [PortalComponent.CrossingMode.disabled](crossingmode-swift.enum/disabled.md) to disallow contents within the portal to cross out of the portal boundary.
+
+Use [PortalComponent.CrossingMode.plane(\_:)](crossingmode-swift.enum/plane%28__%29.md) to allow contents within the portal world with a [PortalCrossingComponent](../portalcrossingcomponent.md) to cross out of this planar definition of the portal boundary.
+
+Use [PortalComponent.CrossingMode.volume(\_:)](crossingmode-swift.enum/volume%28__%29.md) to allow contents to cross using a volumetric box boundary.
+
+## Topics
+
+### Setting the crossing mode
+
+- [PortalComponent.CrossingMode.volume(\_:)](crossingmode-swift.enum/volume%28__%29.md): Allows contents within the portal to cross a box-shaped boundary.
+
+### Enumeration Cases
+
+- [PortalComponent.CrossingMode.disabled](crossingmode-swift.enum/disabled.md): Disallows contents within the portal to cross out of the portal boundary.
+- [PortalComponent.CrossingMode.plane(\_:)](crossingmode-swift.enum/plane%28__%29.md): Allows contents within the portal to cross out of the portal along the provided plane.
+
+## Relationships
+
+### Conforms To
+
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)

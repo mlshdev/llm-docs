@@ -1,0 +1,93 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsmenuitemvalidation/validatemenuitem(_:)](https://developer.apple.com/documentation/appkit/nsmenuitemvalidation/validatemenuitem(_:))
+
+# validateMenuItem(\_:) (Swift)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS
+
+Implemented to override the default action of enabling or disabling a specific menu item.
+
+## Declaration
+
+```swift
+@MainActor func validateMenuItem(_ menuItem: NSMenuItem) -> Bool
+```
+
+## Parameters
+
+- `menuItem`: An [NSMenuItem](../nsmenuitem.md) object that represents the menu item.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[true](https://developer.apple.com/documentation/swift/true) to enable `menuItem`, [false](https://developer.apple.com/documentation/swift/false) to disable it.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The object implementing this method must be the target of `menuItem`. You can determine which menu item `menuItem` is by querying it for its tag or action.
+
+The following example disables the menu item associated with the `nextRecord` action method when the selected line in a table view is the last one; conversely, it disables the menu item with `priorRecord` as its action method when the selected row is the first one in the table view. (The `countryOrRegionKeys` array contains names that appear in the table view.)
+
+```objc
+- (BOOL)validateMenuItem:(NSMenuItem *)item {
+    int row = [tableView selectedRow];
+    if ([item action] == @selector(nextRecord) &&
+        (row == [countryOrRegionKeys indexOfObject:[countryOrRegionKeys lastObject]])) {
+        return NO;
+    }
+    if ([item action] == @selector(priorRecord) && row == 0) {
+        return NO;
+    }
+    return YES;
+}
+```
+
+# validateMenuItem: (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS
+
+Implemented to override the default action of enabling or disabling a specific menu item.
+
+## Declaration
+
+```objectivec
+- (BOOL) validateMenuItem:(NSMenuItem *) menuItem;
+```
+
+## Parameters
+
+- `menuItem`: An [NSMenuItem](../nsmenuitem.md) object that represents the menu item.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[true](https://developer.apple.com/documentation/swift/true) to enable `menuItem`, [false](https://developer.apple.com/documentation/swift/false) to disable it.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The object implementing this method must be the target of `menuItem`. You can determine which menu item `menuItem` is by querying it for its tag or action.
+
+The following example disables the menu item associated with the `nextRecord` action method when the selected line in a table view is the last one; conversely, it disables the menu item with `priorRecord` as its action method when the selected row is the first one in the table view. (The `countryOrRegionKeys` array contains names that appear in the table view.)
+
+```objc
+- (BOOL)validateMenuItem:(NSMenuItem *)item {
+    int row = [tableView selectedRow];
+    if ([item action] == @selector(nextRecord) &&
+        (row == [countryOrRegionKeys indexOfObject:[countryOrRegionKeys lastObject]])) {
+        return NO;
+    }
+    if ([item action] == @selector(priorRecord) && row == 0) {
+        return NO;
+    }
+    return YES;
+}
+```

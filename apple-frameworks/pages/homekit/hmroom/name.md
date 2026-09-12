@@ -1,0 +1,55 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/homekit/hmroom/name](https://developer.apple.com/documentation/homekit/hmroom/name)
+
+# name (Swift)
+
+**Framework:** HomeKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 8.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 2.0+
+
+The name of the room.
+
+## Declaration
+
+```swift
+var name: String { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Allow the user to choose room names. Room names must be unique within a home.
+
+## See Also
+
+### Identifying a room
+
+- [updateName(\_:completionHandler:)](updatename%28__completionhandler_%29.md): Updates the name of the room.
+- [uniqueIdentifier](uniqueidentifier.md): The unique identifier for a room.
+
+# name (Objective-C)
+
+**Framework:** HomeKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 14.0+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 2.0+
+
+The name of the room.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, readonly) NSString * name;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Allow the user to choose room names. Room names must be unique within a home.
+
+## See Also
+
+### Identifying a room
+
+- [updateName:completionHandler:](updatename%28__completionhandler_%29.md): Updates the name of the room.
+- [uniqueIdentifier](uniqueidentifier.md): The unique identifier for a room.

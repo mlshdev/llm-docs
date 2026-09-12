@@ -1,0 +1,47 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/webkitcssmatrix/1631528-multiply](https://developer.apple.com/documentation/webkitjs/webkitcssmatrix/1631528-multiply)
+
+# multiply
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+Returns the result of multiplying this matrix by a given matrix that is on the right.
+
+## Declaration
+
+```
+WebKitCSSMatrix multiply(
+    optional WebKitCSSMatrix? secondMatrix
+);
+```
+
+## Parameters
+
+- `secondMatrix`: The matrix to multiply.
+
+<a id="return_value"></a>
+
+## Return Value
+
+A new matrix that is the result of multiplying this matrix by the given matrix.
+
+<a id="discussion"></a>
+
+## Discussion
+
+The given matrix is on the right of the multiplication. This matrix is not modified by this method.
+
+## See Also
+
+### Applying Operations
+
+- [inverse](1633805-inverse.md): Returns the inverse of this matrix.
+- [translate](1630758-translate.md): Returns the result of translating this matrix by a given vector.
+- [scale](1632184-scale.md): Returns the result of scaling this matrix by a given vector.
+- [rotate](1629773-rotate.md): Returns the result of rotating this matrix by a given vector.
+- [rotateAxisAngle](1632317-rotateaxisangle.md): Returns the result of rotating this matrix by a given vector and angle.
+- [skewX](1633353-skewx.md): Specifies a skew transformation along the x-axis by the given angle.
+- [skewY](1631022-skewy.md): Specifies a skew transformation along the y-axis by the given angle.

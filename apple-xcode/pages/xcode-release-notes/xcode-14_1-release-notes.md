@@ -1,0 +1,134 @@
+> Snapshot-pinned source for Apple Xcode and developer tools snapshot-ef15f2517b3c: [documentation/xcode-release-notes/xcode-14_1-release-notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-14_1-release-notes)
+
+# Xcode 14.1 Release Notes
+
+**Kind:** Article
+
+Update your apps to use new features, and test your apps against API changes.
+
+<a id="overview"></a>
+
+## Overview
+
+---
+
+<a id="Overview"></a>
+
+## Overview
+
+Xcode 14.1 includes Swift 5.7 and SDKs for iOS 16.1, iPadOS 16.1, tvOS 16.1, watchOS 9.1, and macOS Ventura. The Xcode 14.1 release supports on-device debugging in iOS 11 and later, tvOS 11 and later, and watchOS 4 and later. Xcode 14.1 requires a Mac running macOS Monterey 12.5 or later.
+
+<a id="General"></a>
+
+### General
+
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Fixed: The `ActivityAuthorizationInfo.activityEnablementUpdates` AsyncSream doesn’t send a new update when it’s changed in Settings.app (96630169)
+- Fixed: iOS simulators may stop showing Live Activities and Dynamic Island features. (99108857)
+- Fixed: Building a Matter Extension template results in a compiler error: `Cannot find type 'HMMatterRequestHandler' in scope` (99751983)
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- After Running a widget extension, users will need to manually start the debugging session with Debug -\> Attach to Process. (99285608)
+- RealityKit’s FromToByAnimation may cause an app built with iOS 16 or macOS 13 SDKs to fail to launch on iOS 15 or macOS 12. (100228035)
+
+  **Workaround**: Use the non-deprecated FromToByAnimation initializer which takes a `bindTarget:` parameter. If you encounter an ambiguous use error with the OrbitAnimation, using a `bindTarget:` parameter will resolve the ambiguity.
+- App Shortcuts don’t support the use of compiler directives such as `#if` within the definition of the `appShortcuts` list. (100468932)
+
+  **Workaround**: Avoid the use of compiler directives in App Shortcuts definitions. Consider having a AppShortcutProvider unique to each platform if there are differences in App Shortcuts between platforms.
+
+<a id="Build-System"></a>
+
+### Build System
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- When removing a condition from the variant editor, the value won’t be persisted. (98149034)
+
+  **Workaround**: Use the Build Settings Editor to remove the condition.
+
+<a id="Interface-Builder"></a>
+
+### Interface Builder
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- Interface Builder shows iPhone 14 and Apple Watch Ultra size models in the device bar. (99504634)
+
+<a id="Simulator"></a>
+
+### Simulator
+
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Starting in iPadOS 16.1, developers can turn on Stage Manager in the Simulator by using the appropriate setting in the Home Screen & Multitasking section of the Settings app. (95712631)
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- Previously released simulators may not appear in Platforms pane after logging out and back in. (100815609)
+
+  **Workaround**: Rebooting the system restores the list of previously released simulators.
+
+<a id="Source-Control"></a>
+
+### Source Control
+
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Fixed: Onboarding a product to Xcode Cloud may get stuck after selecting a product in the onboarding sheet. (100432349)
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- WatchOS apps can’t be onboarded to Xcode Cloud from Xcode. (96313262)
+
+<a id="Source-Editor"></a>
+
+### Source Editor
+
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Fixed an issue that affected reliability of dragging the program counter when debugging. (99465275)
+
+<a id="StoreKit"></a>
+
+### StoreKit
+
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Fixed: Using the following StoreKit properties and methods on apps with a minimum deployment target below iOS 16, macOS 13, watchOS 9, and tvOS 16 will cause the app to crash at launch when running on systems earlier than iOS 16, macOS 13, watchOS 9 and tvOS 16:
+
+  - `priceFormatStyle` and `subscriptionPeriodFormatStyle` on `Product` values
+  - `environmentStringRepresentation` and `recentSubscriptionStartDate` on `Product.SubscriptionInfo.RenewalInfo` values
+  - `environmentStringRepresentation` on `Transaction` values
+  - `dateRange(referenceDate:)` and `formatted(_:referenceDate:)` on `Product.SubscriptionPeriod` values (99962885) (FB11516463)
+
+## See Also
+
+### Xcode 14
+
+- [Xcode 14.3.1 Release Notes](xcode-14_3_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 14.3 Release Notes](xcode-14_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 14.2 Release Notes](xcode-14_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 14.0.1 Release Notes](xcode-14_0_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [Xcode 14 Release Notes](xcode-14-release-notes.md): Update your apps to use new features, and test your apps against API changes.

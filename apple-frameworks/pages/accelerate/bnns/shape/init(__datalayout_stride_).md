@@ -1,0 +1,44 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/bnns/shape/init(_:datalayout:stride:)](https://developer.apple.com/documentation/accelerate/bnns/shape/init(_:datalayout:stride:))
+
+# init(\_:dataLayout:stride:)
+
+**Framework:** Accelerate  
+**Kind:** Initializer  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · macOS 11.0+ · tvOS 14.0+ · visionOS · watchOS 7.0+
+
+Returns a new shape with the specified size, data layout, and stride.
+
+## Declaration
+
+```swift
+init(_ size: [Int], dataLayout: BNNS.DataLayout? = nil, stride: [Int]? = nil)
+```
+
+## Parameters
+
+- `size`: An array that specifies the number of values in each dimension.
+- `dataLayout`: The number of dimensions of the array, and how it stores the data.
+- `stride`: An array specifying the increment, in values, between a value and the next in each dimension.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Pass `nil` to `dataLayout` to have `init(size:dataLayout:stride:)` return a shape with the default layout for the rank that’s equal to the count of `size`. The default layouts for each dimensionality are:
+
+- **1D**: [BNNS.DataLayout.vector](../datalayout/vector.md)
+- **2D**: [BNNS.DataLayout.matrixFirstMajor](../datalayout/matrixfirstmajor.md)
+- **3D**: [BNNS.DataLayout.tensor3DFirstMajor](../datalayout/tensor3dfirstmajor.md)
+- **4D**: [BNNS.DataLayout.tensor4DFirstMajor](../datalayout/tensor4dfirstmajor.md)
+- **5D**: [BNNS.DataLayout.tensor5DFirstMajor](../datalayout/tensor5dfirstmajor.md)
+- **6D**: [BNNS.DataLayout.tensor6DFirstMajor](../datalayout/tensor6dfirstmajor.md)
+- **7D**: [BNNS.DataLayout.tensor7DFirstMajor](../datalayout/tensor7dfirstmajor.md)
+- **8D**: [BNNS.DataLayout.tensor8DFirstMajor](../datalayout/tensor8dfirstmajor.md)
+
+This initializer interprets a stride value of `0` to mean that values are contiguous for that axis.
+
+## See Also
+
+### Creating a Shape
+
+- [init(arrayLiteral:)](init%28arrayliteral_%29.md): Returns a new shape with the specified size.

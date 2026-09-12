@@ -1,0 +1,39 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/speech/speechanalyzer/cancelanalysis(before:)](https://developer.apple.com/documentation/speech/speechanalyzer/cancelanalysis(before:))
+
+# cancelAnalysis(before:)
+
+**Framework:** Speech  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+Stops analyzing audio predating the given time.
+
+## Declaration
+
+```swift
+final func cancelAnalysis(before: CMTime)
+```
+
+## Parameters
+
+- `before`: An audio time that marks audio that remains of interest.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This method is useful in live-audio cases where you are no longer interested in results predating a certain time. For example, when you are captioning video and the scene changes, you do not need pending captions from the previous scene.
+
+This method can also be used to force “catch-up” if the analyzer is taking too long. By calling [finalize(through:)](finalize%28through_%29.md), you indicate that you will *wait* for pending results. By calling `cancelAnalysis(before:)`, you indicate that you *cannot wait* any longer for certain pending results.
+
+Analysis will continue normally at and after the given time.
+
+If you know in advance that you do not need results for a given range of audio, it is preferable to simply not provide that audio as input.
+
+This is a best-effort cancellation. The implementation may still publish results from before the given time.
+
+## See Also
+
+### Finalizing and cancelling results
+
+- [finalize(through:)](finalize%28through_%29.md): Finalizes the modules’ analyses.

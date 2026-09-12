@@ -1,0 +1,105 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/audiocodecproduceoutputpackets(_:_:_:_:_:_:)](https://developer.apple.com/documentation/audiotoolbox/audiocodecproduceoutputpackets(_:_:_:_:_:_:))
+
+# AudioCodecProduceOutputPackets(\_:\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Function  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.1+ · macOS 10.2+ · tvOS 9.0+ · visionOS 1.0+
+
+Retrieves output data from a codec.
+
+## Declaration
+
+```swift
+func AudioCodecProduceOutputPackets(_ inCodec: AudioCodec, _ outOutputData: UnsafeMutableRawPointer, _ ioOutputDataByteSize: UnsafeMutablePointer<UInt32>, _ ioNumberPackets: UnsafeMutablePointer<UInt32>, _ outPacketDescription: UnsafeMutablePointer<AudioStreamPacketDescription>?, _ outStatus: UnsafeMutablePointer<UInt32>) -> OSStatus
+```
+
+## Parameters
+
+- `inCodec`: An audio codec object. Because an audio codec object is a Component Manger component instance, you can use the Component Manager (for example, the functions [FindNextComponent](../coreservices/1516552-findnextcomponent.md) and OpenAComponent) to obtain an audio codec object.
+- `outOutputData`: The output data buffer.
+- `ioOutputDataByteSize`: Indicates the size of the output data buffer.
+- `ioNumberPackets`: On input, the number of packets desired. On output, the number of packets actually placed in the output buffer.
+- `outPacketDescription`: An array of `AudioStreamPacketDescription` structures that describes the packet layout of the data returned by the `outOutputData` parameter. Pass `NULL` if you do not want this information returned. Note that this information is provided only when the output format is not linear PCM.
+- `outStatus`: On output, information about the codec’s status to allow for proper data management. See [Output Status Constants](1494122-output-status-constants.md) for the possible values that can be returned.
+
+<a id="return-value"></a>
+
+## Return Value
+
+Returns `NoErr` if successful. Returns `kAudioCodecStateError` if the codec has not been initialized. Returns `kAudioCodecNotEnoughBufferSpaceError` if the output buffer is not large enough for the requested number of packets. See `Result Codes` for other possible values.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This function causes the codec to produce as many output packets as requested, provided there is sufficient input data. If there is not enough input data to produce the requested number of output packets, the `outStatus` parameter returns the value `kAudioCodecProduceOutputPacketNeedsMoreInputData` and the `ioNumberPackets` parameter indicates the actual number of packets produced. On the other hand, if there is enough input data to produce at least one additional full packet, the `outStatus` parameter returns the value `kAudioCodecProduceOutputPacketSuccessHasMore`.
+
+Note that decoders produce linear PCM data only in multiples of the number of frames in a packet of the encoded format. (See the [AudioCodecAppendInputData(\_:\_:\_:\_:\_:)](audiocodecappendinputdata%28__________%29.md) function for definitions of *packet* and *frame* as used by this API.) You can use the [AudioCodecGetProperty(\_:\_:\_:\_:)](audiocodecgetproperty%28________%29.md) function to obtain this value from the [kAudioCodecPropertyPacketFrameSize](kaudiocodecpropertypacketframesize.md) property. Similarly, this property indicates how many frames of linear PCM data an encoder needs in order to produce a packet of the specified output format.
+
+Output data can be produced only in multiples of whole packets.
+
+The combination of the [AudioCodecAppendInputData(\_:\_:\_:\_:\_:)](audiocodecappendinputdata%28__________%29.md) and [AudioCodecProduceOutputPackets(\_:\_:\_:\_:\_:\_:)](audiocodecproduceoutputpackets%28____________%29.md) functions implement a “push-pull” model of data handling. First, the input data is pushed into the codec, then the resulting output data is pulled out of that same codec.
+
+## See Also
+
+### Related Documentation
+
+- [AudioCodecInitialize(\_:\_:\_:\_:\_:)](audiocodecinitialize%28__________%29.md): Sets up the specified codec to perform a data format translation.
+- [AudioCodecGetProperty(\_:\_:\_:\_:)](audiocodecgetproperty%28________%29.md): Retrieves the value of a codec property.
+
+### Accessing the Data
+
+- [AudioCodecAppendInputData(\_:\_:\_:\_:\_:)](audiocodecappendinputdata%28__________%29.md): Appends audio data to the codec’s input buffer.
+
+# AudioCodecProduceOutputPackets (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Function  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.1+ · macOS 10.2+ · tvOS 9.0+ · visionOS 1.0+
+
+Retrieves output data from a codec.
+
+## Declaration
+
+```objectivec
+extern OSStatus AudioCodecProduceOutputPackets(AudioCodec inCodec, void *outOutputData, UInt32 *ioOutputDataByteSize, UInt32 *ioNumberPackets, AudioStreamPacketDescription *outPacketDescription, UInt32 *outStatus);
+```
+
+## Parameters
+
+- `inCodec`: An audio codec object. Because an audio codec object is a Component Manger component instance, you can use the Component Manager (for example, the functions [FindNextComponent](../coreservices/1516552-findnextcomponent.md) and OpenAComponent) to obtain an audio codec object.
+- `outOutputData`: The output data buffer.
+- `ioOutputDataByteSize`: Indicates the size of the output data buffer.
+- `ioNumberPackets`: On input, the number of packets desired. On output, the number of packets actually placed in the output buffer.
+- `outPacketDescription`: An array of `AudioStreamPacketDescription` structures that describes the packet layout of the data returned by the `outOutputData` parameter. Pass `NULL` if you do not want this information returned. Note that this information is provided only when the output format is not linear PCM.
+- `outStatus`: On output, information about the codec’s status to allow for proper data management. See [Output Status Constants](1494122-output-status-constants.md) for the possible values that can be returned.
+
+<a id="return-value"></a>
+
+## Return Value
+
+Returns `NoErr` if successful. Returns `kAudioCodecStateError` if the codec has not been initialized. Returns `kAudioCodecNotEnoughBufferSpaceError` if the output buffer is not large enough for the requested number of packets. See `Result Codes` for other possible values.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This function causes the codec to produce as many output packets as requested, provided there is sufficient input data. If there is not enough input data to produce the requested number of output packets, the `outStatus` parameter returns the value `kAudioCodecProduceOutputPacketNeedsMoreInputData` and the `ioNumberPackets` parameter indicates the actual number of packets produced. On the other hand, if there is enough input data to produce at least one additional full packet, the `outStatus` parameter returns the value `kAudioCodecProduceOutputPacketSuccessHasMore`.
+
+Note that decoders produce linear PCM data only in multiples of the number of frames in a packet of the encoded format. (See the [AudioCodecAppendInputData](audiocodecappendinputdata%28__________%29.md) function for definitions of *packet* and *frame* as used by this API.) You can use the [AudioCodecGetProperty](audiocodecgetproperty%28________%29.md) function to obtain this value from the [kAudioCodecPropertyPacketFrameSize](kaudiocodecpropertypacketframesize.md) property. Similarly, this property indicates how many frames of linear PCM data an encoder needs in order to produce a packet of the specified output format.
+
+Output data can be produced only in multiples of whole packets.
+
+The combination of the [AudioCodecAppendInputData](audiocodecappendinputdata%28__________%29.md) and [AudioCodecProduceOutputPackets](audiocodecproduceoutputpackets%28____________%29.md) functions implement a “push-pull” model of data handling. First, the input data is pushed into the codec, then the resulting output data is pulled out of that same codec.
+
+## See Also
+
+### Related Documentation
+
+- [AudioCodecInitialize](audiocodecinitialize%28__________%29.md): Sets up the specified codec to perform a data format translation.
+- [AudioCodecGetProperty](audiocodecgetproperty%28________%29.md): Retrieves the value of a codec property.
+
+### Accessing the Data
+
+- [AudioCodecAppendInputData](audiocodecappendinputdata%28__________%29.md): Appends audio data to the codec’s input buffer.

@@ -1,0 +1,73 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/hypervisor/hv_gic_get_distributor_size(_:)](https://developer.apple.com/documentation/hypervisor/hv_gic_get_distributor_size(_:))
+
+# hv_gic_get_distributor_size(\_:) (Swift)
+
+**Framework:** Hypervisor  
+**Kind:** Function  
+**Availability:** macOS 15.0+
+
+Gets the size of the generic interrupt controller (GIC) distributor region, in bytes.
+
+## Declaration
+
+```swift
+func hv_gic_get_distributor_size(_ distributor_size: UnsafeMutablePointer<Int>) -> hv_return_t
+```
+
+## Parameters
+
+- `distributor_size`: A pointer to the GIC distributor region size value that the framework writes to upon success.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[HV_SUCCESS](hv_success.md) on success; otherwise, an error code.
+
+## See Also
+
+### Getting GIC device parameters
+
+- [hv_gic_get_redistributor_region_size(\_:)](hv_gic_get_redistributor_region_size%28__%29.md): Gets the total size in bytes of the generic interrupt controller (GIC) redistributor region.
+- [hv_gic_get_redistributor_size(\_:)](hv_gic_get_redistributor_size%28__%29.md): Gets the size in bytes of a single generic interrupt controller (GIC) redistributor.
+- [hv_gic_get_distributor_base_alignment(\_:)](hv_gic_get_distributor_base_alignment%28__%29.md): Gets the alignment for the base address of the generic interrupt controller (GIC) distributor region, in bytes.
+- [hv_gic_get_redistributor_base_alignment(\_:)](hv_gic_get_redistributor_base_alignment%28__%29.md): Gets the alignment for the base address of the generic interrupt controller (GIC) redistributor region, in bytes.
+- [hv_gic_get_msi_region_base_alignment(\_:)](hv_gic_get_msi_region_base_alignment%28__%29.md): Gets the alignment, in bytes, for the base address of the generic interrupt controller’s message signaled interrupts (MSI) region.
+- [hv_gic_get_msi_region_size(\_:)](hv_gic_get_msi_region_size%28__%29.md): Gets the size in bytes of the generic interrupt controller’s (GIC) message signaled interrupts (MSI) region.
+- [hv_gic_get_spi_interrupt_range(\_:\_:)](hv_gic_get_spi_interrupt_range%28____%29.md): Gets the range of shared peripheral interrupts (SPIs) the generic interrupt controller supports.
+
+# hv_gic_get_distributor_size (Objective-C)
+
+**Framework:** Hypervisor  
+**Kind:** Function  
+**Availability:** macOS 15.0+
+
+Gets the size of the generic interrupt controller (GIC) distributor region, in bytes.
+
+## Declaration
+
+```objectivec
+extern hv_return_t hv_gic_get_distributor_size(size_t *distributor_size);
+```
+
+## Parameters
+
+- `distributor_size`: A pointer to the GIC distributor region size value that the framework writes to upon success.
+
+<a id="return-value"></a>
+
+## Return Value
+
+[HV_SUCCESS](hv_success.md) on success; otherwise, an error code.
+
+## See Also
+
+### Getting GIC device parameters
+
+- [hv_gic_get_redistributor_region_size](hv_gic_get_redistributor_region_size%28__%29.md): Gets the total size in bytes of the generic interrupt controller (GIC) redistributor region.
+- [hv_gic_get_redistributor_size](hv_gic_get_redistributor_size%28__%29.md): Gets the size in bytes of a single generic interrupt controller (GIC) redistributor.
+- [hv_gic_get_distributor_base_alignment](hv_gic_get_distributor_base_alignment%28__%29.md): Gets the alignment for the base address of the generic interrupt controller (GIC) distributor region, in bytes.
+- [hv_gic_get_redistributor_base_alignment](hv_gic_get_redistributor_base_alignment%28__%29.md): Gets the alignment for the base address of the generic interrupt controller (GIC) redistributor region, in bytes.
+- [hv_gic_get_msi_region_base_alignment](hv_gic_get_msi_region_base_alignment%28__%29.md): Gets the alignment, in bytes, for the base address of the generic interrupt controller’s message signaled interrupts (MSI) region.
+- [hv_gic_get_msi_region_size](hv_gic_get_msi_region_size%28__%29.md): Gets the size in bytes of the generic interrupt controller’s (GIC) message signaled interrupts (MSI) region.
+- [hv_gic_get_spi_interrupt_range](hv_gic_get_spi_interrupt_range%28____%29.md): Gets the range of shared peripheral interrupts (SPIs) the generic interrupt controller supports.

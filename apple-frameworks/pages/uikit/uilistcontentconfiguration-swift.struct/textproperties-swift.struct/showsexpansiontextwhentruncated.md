@@ -1,0 +1,40 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uilistcontentconfiguration-swift.struct/textproperties-swift.struct/showsexpansiontextwhentruncated](https://developer.apple.com/documentation/uikit/uilistcontentconfiguration-swift.struct/textproperties-swift.struct/showsexpansiontextwhentruncated)
+
+# showsExpansionTextWhenTruncated
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 16.0+ · tvOS 14.0+ · visionOS
+
+A Boolean value that determines whether the full text displays when the pointer hovers over the truncated text.
+
+## Declaration
+
+```swift
+var showsExpansionTextWhenTruncated: Bool { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The default value is [true](https://developer.apple.com/documentation/swift/true).
+
+## See Also
+
+### Configuring text properties
+
+- [font](font.md): The font for the text.
+- [color](color.md): The color of the text.
+- [colorTransformer](colortransformer.md): The color transformer for resolving the text color.
+- [resolvedColor()](resolvedcolor%28%29.md): Generates the resolved color for the specified color, using the text color and color transformer.
+- [alignment](alignment.md): The alignment for the text.
+- [lineBreakMode](linebreakmode.md): The line break mode to use for the text.
+- [numberOfLines](numberoflines.md): The maximum number of lines for the text.
+- [adjustsFontSizeToFitWidth](adjustsfontsizetofitwidth.md): A Boolean value that determines whether the configuration automatically adjusts the font size of the text when necessary to fit in the available width.
+- [minimumScaleFactor](minimumscalefactor.md): The smallest multiplier for the font size that the configuration uses to make the text fit.
+- [allowsDefaultTighteningForTruncation](allowsdefaulttighteningfortruncation.md): A Boolean value that determines whether the configuration tightens the text before truncating.
+- [adjustsFontForContentSizeCategory](adjustsfontforcontentsizecategory.md): A Boolean value that determines whether the configuration automatically updates the font when the content size category changes.
+- [UIListContentConfiguration.TextProperties.TextAlignment](textalignment.md): Constants that specify the visual alignment of the text.
+- [transform](transform.md): The transform to apply to the text.
+- [UIListContentConfiguration.TextProperties.TextTransform](texttransform.md): Constants that specify the transform to apply to the text.

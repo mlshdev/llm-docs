@@ -1,0 +1,31 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/urlrequest/networkservicetype-swift.property](https://developer.apple.com/documentation/foundation/urlrequest/networkservicetype-swift.property)
+
+# networkServiceType
+
+**Framework:** Foundation  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 8.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+The type of network service for all tasks within network sessions to enable Cellular Network Slicing.
+
+## Declaration
+
+```swift
+var networkServiceType: URLRequest.NetworkServiceType { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+There are two steps to enable Cellular Network Slicing:
+
+- Set the entitlements in your property list for [5G Network Slicing App Category](../../bundleresources/entitlements/com.apple.developer.networking.slicing.appcategory.md) and [5G Network Slicing Traffic Category](../../bundleresources/entitlements/com.apple.developer.networking.slicing.trafficcategory.md). If you don’t entitle your app by specifying both these entitlements, your apps network connections won’t be using Cellular Network Slicing, even if supported by the carrier.
+- At the time of network flow creation, set this to the appropriate [NSURLRequest.NetworkServiceType](../nsurlrequest/networkservicetype-swift.enum.md) for your application type.
+
+## See Also
+
+### Accessing the service type
+
+- [URLRequest.NetworkServiceType](networkservicetype-swift.typealias.md): An alias for the network service type.
+- [NSURLRequest.NetworkServiceType](../nsurlrequest/networkservicetype-swift.enum.md): Constants that specify how a request uses network resources.

@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/compositorservices/cp_drawable_get_rasterization_rate_map](https://developer.apple.com/documentation/compositorservices/cp_drawable_get_rasterization_rate_map)
+
+# cp_drawable_get_rasterization_rate_map
+
+**Interface language:** Objective-C
+
+**Framework:** Compositor Services  
+**Kind:** Function  
+**Availability:** macOS 26.0+ · visionOS 1.0+
+
+Returns the rasterization rate map at the specified index in the drawable.
+
+## Declaration
+
+```objectivec
+id<MTLRasterizationRateMap>cp_drawable_get_rasterization_rate_map(cp_drawable_t drawable, size_t index);
+```
+
+## Parameters
+
+- `drawable`: The drawable for a frame.
+- `index`: The index of the rasterization rate map you want. The index must be greater than or equal to `0` and less than the value that [cp_drawable_get_rasterization_rate_map_count](cp_drawable_get_rasterization_rate_map_count.md) returns.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The rasterization rate map at the specified index.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Apply the rasterization rate map to your render descriptor when you set up your drawing environment. A rate map defines how the GPU scales different parts of the texture to fill the display. You use these rate maps to save time and render less important parts of your scene at lower resolutions. For example, when foveation is enabled, the drawable includes a rasterization rate map to render the portions of the texture in someone’s peripheral vision at a lower resolution.
+
+## See Also
+
+### Getting the rasterization rate map
+
+- [cp_drawable_get_rasterization_rate_map_count](cp_drawable_get_rasterization_rate_map_count.md): Returns the number of rasterization rate maps associated with the drawable.
+- [cp_drawable_get_flipped_rasterization_rate_map](cp_drawable_get_flipped_rasterization_rate_map.md): Returns the flipped rasterization rate map at the specified index in the drawable.

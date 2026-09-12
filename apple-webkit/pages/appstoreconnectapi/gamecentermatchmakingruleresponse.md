@@ -1,0 +1,30 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/gamecentermatchmakingruleresponse](https://developer.apple.com/documentation/appstoreconnectapi/gamecentermatchmakingruleresponse)
+
+# GameCenterMatchmakingRuleResponse
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 3.1+
+
+The response body for endpoints that create or modify a rule.
+
+## Declaration
+
+```
+object GameCenterMatchmakingRuleResponse
+```
+
+## Properties
+
+- `data` — `GameCenterMatchmakingRule` (required): The rule that you create or modify.
+- `links` — `DocumentLinks` (required):
+
+## See Also
+
+### Objects
+
+- [GameCenterMatchmakingRuleCreateRequest](gamecentermatchmakingrulecreaterequest.md): The request body you use to create a rule.
+- [GameCenterMatchmakingRuleUpdateRequest](gamecentermatchmakingruleupdaterequest.md): The request body you use to modify a rule.
+- [GameCenterMatchmakingRule](gamecentermatchmakingrule.md): A JavaScript expression evaluated during Game Center matchmaking to determine player compatibility.

@@ -1,0 +1,61 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/marketplacekit/appdistributor](https://developer.apple.com/documentation/marketplacekit/appdistributor)
+
+# AppDistributor
+
+**Framework:** MarketplaceKit  
+**Kind:** Enumeration  
+**Availability:** iOS 17.4+ · iPadOS 17.4+
+
+Options that describe the marketplace from which the app installs.
+
+## Declaration
+
+```swift
+enum AppDistributor
+```
+
+## Mentioned In
+
+- [Distributing your app on an alternative app marketplace](distributing-your-app-on-an-alternative-marketplace.md)
+
+<a id="overview"></a>
+
+## Overview
+
+Apps on alternative app marketplaces need to use APIs that vary from apps on the App Store. Specifically, use:
+
+- [AdAttributionKit](../adattributionkit.md) for ads.
+- An e-commerce solution other than the App Store’s [In-App Purchase](https://developer.apple.com/documentation/storekit/in-app-purchase) system.
+- A social gaming network other than [Game Center](https://developer.apple.com/documentation/appstoreconnectapi/game-center) unless your app is also on the App Store.
+- [Background Assets](https://developer.apple.com/documentation/backgroundassets) to download large files in the background rather than [On Demand Resources](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/On_Demand_Resources_Guide/).
+
+To observe API differences, check the value of the app distributor’s static ([current](appdistributor/current.md)) property to determine the installation source:
+
+| App distributor case | Installation source |
+| --- | --- |
+| [AppDistributor.appStore](appdistributor/appstore.md) | The App Store |
+| [AppDistributor.testFlight](appdistributor/testflight.md) | TestFlight |
+| [AppDistributor.marketplace(\_:)](appdistributor/marketplace%28__%29.md) | Alternative app marketplace; the argument `String` identifies the marketplace bundle ID |
+| [AppDistributor.web](appdistributor/web.md) | The developer’s website |
+| [AppDistributor.other](appdistributor/other.md) | Enterprise or education developer programs |
+
+API availability varies depending on the source, so your app needs to check the current source at each launch — not just at the first launch — and adjust the APIs it uses accordingly.
+
+In addition, for apps that aren’t marketplaces, use [eligibilityRegion](appdistributor/eligibilityregion.md) to determine if an Apple Account is signed in that has a region eligible for transaction reporting.
+
+For more information, see [Distributing your app on an alternative app marketplace](distributing-your-app-on-an-alternative-marketplace.md).
+
+## Topics
+
+### Enumeration Cases
+
+- [AppDistributor.appStore](appdistributor/appstore.md)
+- [AppDistributor.marketplace(\_:)](appdistributor/marketplace%28__%29.md)
+- [AppDistributor.other](appdistributor/other.md)
+- [AppDistributor.testFlight](appdistributor/testflight.md)
+- [AppDistributor.web](appdistributor/web.md)
+
+### Type Properties
+
+- [current](appdistributor/current.md): The source from which the app installs.
+- [eligibilityRegion](appdistributor/eligibilityregion.md): A country code for the device’s current region.

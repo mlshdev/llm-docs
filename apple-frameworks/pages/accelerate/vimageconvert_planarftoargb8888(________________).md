@@ -1,0 +1,97 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimageconvert_planarftoargb8888(_:_:_:_:_:_:_:_:)](https://developer.apple.com/documentation/accelerate/vimageconvert_planarftoargb8888(_:_:_:_:_:_:_:_:))
+
+# vImageConvert_PlanarFToARGB8888(\_:\_:\_:\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.6+ · tvOS 5.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Interleaves four 32-bit planar buffers into an 8-bit-per-channel, 4-channel interleaved buffer.
+
+## Declaration
+
+```swift
+func vImageConvert_PlanarFToARGB8888(_ alpha: UnsafePointer<vImage_Buffer>, _ red: UnsafePointer<vImage_Buffer>, _ green: UnsafePointer<vImage_Buffer>, _ blue: UnsafePointer<vImage_Buffer>, _ dest: UnsafePointer<vImage_Buffer>, _ maxFloat: UnsafePointer<Float>, _ minFloat: UnsafePointer<Float>, _ flags: vImage_Flags) -> vImage_Error
+```
+
+## Parameters
+
+- `alpha`: The source vImage buffer that contains the alpha channel.
+- `red`: The source vImage buffer that contains the red channel.
+- `green`: The source vImage buffer that contains the green channel.
+- `blue`: The source vImage buffer that contains the blue channel.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the [height](vimage_buffer/height.md), [width](vimage_buffer/width.md), and [rowBytes](vimage_buffer/rowbytes.md) fields of this structure, and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+- `maxFloat`: The maximum pixel value for the destination image.
+- `minFloat`: The minimum pixel value for the destination image.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes in [Data Types and Constants](data-types-and-constants.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The function uses the following calculation to perform the conversion:
+
+```objc
+uint8_t result = SATURATED_CLIP_0_to_255( 255.0f * ( srcPixel - minFloat ) / (maxFloat - minFloat) + 0.5f );
+```
+
+## See Also
+
+### Interleaving four floating-point 32-bit planar buffers
+
+- [vImageConvert_PlanarFtoARGBFFFF(\_:\_:\_:\_:\_:\_:)](vimageconvert_planarftoargbffff%28____________%29.md): Interleaves four floating-point 32-bit planar buffers into a floating-point 32-bit-per-channel, 4-channel ARGB interleaved buffer.
+- [vImageConvert_PlanarFToBGRXFFFF(\_:\_:\_:\_:\_:\_:)](vimageconvert_planarftobgrxffff%28____________%29.md): Interleaves four floating-point 32-bit planar buffers into a floating-point 32-bit-per-channel, 4-channel BGRXARGB interleaved buffer.
+
+# vImageConvert_PlanarFToARGB8888 (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.6+ · tvOS 5.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Interleaves four 32-bit planar buffers into an 8-bit-per-channel, 4-channel interleaved buffer.
+
+## Declaration
+
+```objectivec
+vImage_Error vImageConvert_PlanarFToARGB8888(const vImage_Buffer *alpha, const vImage_Buffer *red, const vImage_Buffer *green, const vImage_Buffer *blue, const vImage_Buffer *dest, const Pixel_FFFF maxFloat, const Pixel_FFFF minFloat, vImage_Flags flags);
+```
+
+## Parameters
+
+- `alpha`: The source vImage buffer that contains the alpha channel.
+- `red`: The source vImage buffer that contains the red channel.
+- `green`: The source vImage buffer that contains the green channel.
+- `blue`: The source vImage buffer that contains the blue channel.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the [height](vimage_buffer/height.md), [width](vimage_buffer/width.md), and [rowBytes](vimage_buffer/rowbytes.md) fields of this structure, and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+- `maxFloat`: The maximum pixel value for the destination image.
+- `minFloat`: The minimum pixel value for the destination image.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes in [Data Types and Constants](data-types-and-constants.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The function uses the following calculation to perform the conversion:
+
+```objc
+uint8_t result = SATURATED_CLIP_0_to_255( 255.0f * ( srcPixel - minFloat ) / (maxFloat - minFloat) + 0.5f );
+```
+
+## See Also
+
+### Interleaving four floating-point 32-bit planar buffers
+
+- [vImageConvert_PlanarFtoARGBFFFF](vimageconvert_planarftoargbffff%28____________%29.md): Interleaves four floating-point 32-bit planar buffers into a floating-point 32-bit-per-channel, 4-channel ARGB interleaved buffer.
+- [vImageConvert_PlanarFToBGRXFFFF](vimageconvert_planarftobgrxffff%28____________%29.md): Interleaves four floating-point 32-bit planar buffers into a floating-point 32-bit-per-channel, 4-channel BGRXARGB interleaved buffer.

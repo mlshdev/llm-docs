@@ -4,12 +4,14 @@ import { Readable, Transform } from "node:stream";
 import { pipeline } from "node:stream/promises";
 import { setTimeout as sleep } from "node:timers/promises";
 import type { ReadableStream as NodeReadableStream } from "node:stream/web";
+import { resolveDoccSnapshot } from "./projects/apple.ts";
 import { describeError } from "./quarantine.ts";
 import type {
   BranchLockedSource,
   ReleaseLockedSource,
   GithubCommit,
   GithubRelease,
+  GithubSourceProject,
   LockedSource,
   SourceProject,
 } from "./types.ts";
@@ -119,7 +121,12 @@ export async function resolveLatestSources(
   const entries = await Promise.all(
     projects.map(async (project) => {
       try {
-        return await resolveSource(project, current);
+        return project.kind === "docc"
+          ? ([
+              project.id,
+              await resolveDoccSnapshot(project, current[project.id]),
+            ] as const)
+          : await resolveSource(project, current);
       } catch (error) {
         const previous = current[project.id];
         if (!previous) {
@@ -146,7 +153,7 @@ export async function resolveLatestSources(
 }
 
 async function resolveSource(
-  project: SourceProject,
+  project: GithubSourceProject,
   current: Readonly<Partial<Record<SourceProject["id"], LockedSource>>>,
 ): Promise<readonly [SourceProject["id"], LockedSource]> {
   if (project.branch) {

@@ -1,0 +1,32 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/sdpattributedeviceidentificationrecord](https://developer.apple.com/documentation/kernel/sdpattributedeviceidentificationrecord)
+
+# SDPAttributeDeviceIdentificationRecord
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Availability:** macOS 10.6+
+
+## Declaration
+
+```objectivec
+enum SDPAttributeDeviceIdentificationRecord : unsigned int {
+    ...
+};
+```
+
+## Topics
+
+### Constants
+
+- [kBluetoothSDPAttributeDeviceIdentifierClientExecutableURL](sdpattributedeviceidentificationrecord/kbluetoothsdpattributedeviceidentifierclientexecutableurl.md)
+- [kBluetoothSDPAttributeDeviceIdentifierDocumentationURL](sdpattributedeviceidentificationrecord/kbluetoothsdpattributedeviceidentifierdocumentationurl.md)
+- [kBluetoothSDPAttributeDeviceIdentifierPrimaryRecord](sdpattributedeviceidentificationrecord/kbluetoothsdpattributedeviceidentifierprimaryrecord.md)
+- [kBluetoothSDPAttributeDeviceIdentifierProductID](sdpattributedeviceidentificationrecord/kbluetoothsdpattributedeviceidentifierproductid.md)
+- [kBluetoothSDPAttributeDeviceIdentifierReservedRangeEnd](sdpattributedeviceidentificationrecord/kbluetoothsdpattributedeviceidentifierreservedrangeend.md)
+- [kBluetoothSDPAttributeDeviceIdentifierReservedRangeStart](sdpattributedeviceidentificationrecord/kbluetoothsdpattributedeviceidentifierreservedrangestart.md)
+- [kBluetoothSDPAttributeDeviceIdentifierServiceDescription](sdpattributedeviceidentificationrecord/kbluetoothsdpattributedeviceidentifierservicedescription.md)
+- [kBluetoothSDPAttributeDeviceIdentifierSpecificationID](sdpattributedeviceidentificationrecord/kbluetoothsdpattributedeviceidentifierspecificationid.md)
+- [kBluetoothSDPAttributeDeviceIdentifierVendorID](sdpattributedeviceidentificationrecord/kbluetoothsdpattributedeviceidentifiervendorid.md)
+- [kBluetoothSDPAttributeDeviceIdentifierVendorIDSource](sdpattributedeviceidentificationrecord/kbluetoothsdpattributedeviceidentifiervendoridsource.md)
+- [kBluetoothSDPAttributeDeviceIdentifierVersion](sdpattributedeviceidentificationrecord/kbluetoothsdpattributedeviceidentifierversion.md)

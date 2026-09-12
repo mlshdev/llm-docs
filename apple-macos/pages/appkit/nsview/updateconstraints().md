@@ -1,0 +1,103 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsview/updateconstraints()](https://developer.apple.com/documentation/appkit/nsview/updateconstraints())
+
+# updateConstraints() (Swift)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS 10.7+
+
+Update constraints for the view.
+
+## Declaration
+
+```swift
+func updateConstraints()
+```
+
+## Mentioned In
+
+- [Updating views automatically with observation tracking in AppKit](../updating-views-automatically-with-observation-tracking-in-appkit.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Override this method to optimize changes to your constraints.
+
+> **Note**
+
+>  It is almost always cleaner and easier to update a constraint immediately after the affecting change has occurred. For example, if you want to change a constraint in response to a button press, make that change directly in the button’s action method.
+>
+> You should only override this method when changing constraints in place is too slow, or when a view is producing a number of redundant changes.
+
+To schedule a change, set the view’s [needsUpdateConstraints](needsupdateconstraints.md) property to [true](https://developer.apple.com/documentation/swift/true). The system then calls your implementation of [updateConstraints()](updateconstraints%28%29.md) before the layout occurs. This lets you verify that all necessary constraints for your content are in place at a time when your custom view’s properties are not changing.
+
+Your implementation must be as efficient as possible. Do not deactivate all your constraints, then reactivate the ones you need. Instead, your app must have some way of tracking your constraints, and validating them during each update pass. Only change items that need to be changed. During each update pass, you must ensure that you have the appropriate constraints for the app’s current state.
+
+Do not set the [needsUpdateConstraints](needsupdateconstraints.md) property inside your implementation. Setting [needsUpdateConstraints](needsupdateconstraints.md) to [true](https://developer.apple.com/documentation/swift/true) schedules another update pass, creating a feedback loop.
+
+This method supports automatic observation tracking. For more information, see [Updating views automatically with observation tracking in AppKit](../updating-views-automatically-with-observation-tracking-in-appkit.md).
+
+> **Important**
+
+>  Call `[super updateConstraints]` as the final step in your implementation.
+
+## See Also
+
+### Observing data in views
+
+- [Updating views automatically with observation tracking in AppKit](../updating-views-automatically-with-observation-tracking-in-appkit.md): Use Swift Observation and automatic tracking to update your views in response to model data updates.
+- [layout()](layout%28%29.md): Perform layout in concert with the constraint-based layout system.
+- [updateLayer()](updatelayer%28%29.md): Updates the view’s content by modifying its underlying layer.
+- [draw(\_:)](draw%28__%29.md): Overridden by subclasses to draw the view’s image within the specified rectangle.
+
+# updateConstraints (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS 10.7+
+
+Update constraints for the view.
+
+## Declaration
+
+```objectivec
+- (void) updateConstraints;
+```
+
+## Mentioned In
+
+- [Updating views automatically with observation tracking in AppKit](../updating-views-automatically-with-observation-tracking-in-appkit.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Override this method to optimize changes to your constraints.
+
+> **Note**
+
+>  It is almost always cleaner and easier to update a constraint immediately after the affecting change has occurred. For example, if you want to change a constraint in response to a button press, make that change directly in the button’s action method.
+>
+> You should only override this method when changing constraints in place is too slow, or when a view is producing a number of redundant changes.
+
+To schedule a change, set the view’s [needsUpdateConstraints](needsupdateconstraints.md) property to [true](https://developer.apple.com/documentation/swift/true). The system then calls your implementation of [updateConstraints](updateconstraints%28%29.md) before the layout occurs. This lets you verify that all necessary constraints for your content are in place at a time when your custom view’s properties are not changing.
+
+Your implementation must be as efficient as possible. Do not deactivate all your constraints, then reactivate the ones you need. Instead, your app must have some way of tracking your constraints, and validating them during each update pass. Only change items that need to be changed. During each update pass, you must ensure that you have the appropriate constraints for the app’s current state.
+
+Do not set the [needsUpdateConstraints](needsupdateconstraints.md) property inside your implementation. Setting [needsUpdateConstraints](needsupdateconstraints.md) to [true](https://developer.apple.com/documentation/swift/true) schedules another update pass, creating a feedback loop.
+
+This method supports automatic observation tracking. For more information, see [Updating views automatically with observation tracking in AppKit](../updating-views-automatically-with-observation-tracking-in-appkit.md).
+
+> **Important**
+
+>  Call `[super updateConstraints]` as the final step in your implementation.
+
+## See Also
+
+### Observing data in views
+
+- [Updating views automatically with observation tracking in AppKit](../updating-views-automatically-with-observation-tracking-in-appkit.md): Use Swift Observation and automatic tracking to update your views in response to model data updates.
+- [layout](layout%28%29.md): Perform layout in concert with the constraint-based layout system.
+- [updateLayer](updatelayer%28%29.md): Updates the view’s content by modifying its underlying layer.
+- [drawRect:](draw%28__%29.md): Overridden by subclasses to draw the view’s image within the specified rectangle.

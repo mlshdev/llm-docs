@@ -1,0 +1,71 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/backgroundassets/baurldownload/init(identifier:request:essential:filesize:applicationgroupidentifier:priority:)](https://developer.apple.com/documentation/backgroundassets/baurldownload/init(identifier:request:essential:filesize:applicationgroupidentifier:priority:))
+
+# init(identifier:request:essential:fileSize:applicationGroupIdentifier:priority:) (Swift)
+
+**Framework:** Background Assets  
+**Kind:** Initializer  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 18.4+ · visionOS 2.4+
+
+## Declaration
+
+```swift
+init(identifier: String, request: URLRequest, essential: Bool, fileSize: Int, applicationGroupIdentifier: String, priority: BADownload.Priority)
+```
+
+## Parameters
+
+- `identifier`: A unique identifier that is used to track the download across the app and extension.
+- `request`: The request used to perform the download. The URL provided inside of the request must be a https scheme.
+- `essential`: Whether the download is essential. See @c BADownload.isEssential. Default is false.
+- `fileSize`: The size of the file to download. This field must be accurate in order to show the user accurate progress during app installation. If the size does not match the file being downloaded, then the download will fail.
+- `applicationGroupIdentifier`: The identifier of the application group that should used to store the finished download.
+- `priority`: A priority between @c BADownloaderPriorityMin - @c BADownloaderPriorityMax which is used to order the downloads for this process. It is recommended to use  @c BADownloaderPriorityDefault if download priority does not matter.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Constructs a download object to represent the download of a asset located inside of the provided @c request.
+
+## See Also
+
+### Creating a download
+
+- [init(identifier:request:fileSize:applicationGroupIdentifier:)](init%28identifier_request_filesize_applicationgroupidentifier_%29.md)
+- [init(identifier:request:applicationGroupIdentifier:)](init%28identifier_request_applicationgroupidentifier_%29.md): Deprecated. Creates a download that uses the specified identifier and App Group.
+- [init(identifier:request:applicationGroupIdentifier:priority:)](init%28identifier_request_applicationgroupidentifier_priority_%29.md): Deprecated. Creates a prioritized download that uses the specified identifier and App Group.
+
+# initWithIdentifier:request:essential:fileSize:applicationGroupIdentifier:priority: (Objective-C)
+
+**Framework:** Background Assets  
+**Kind:** Instance Method  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 18.4+ · visionOS 2.4+
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithIdentifier:(NSString *) identifier request:(NSURLRequest *) request essential:(BOOL) essential fileSize:(NSUInteger) fileSize applicationGroupIdentifier:(NSString *) applicationGroupIdentifier priority:(BADownloaderPriority) priority;
+```
+
+## Parameters
+
+- `identifier`: A unique identifier that is used to track the download across the app and extension.
+- `request`: The request used to perform the download. The URL provided inside of the request must be a https scheme.
+- `essential`: Whether the download is essential. See @c BADownload.isEssential. Default is false.
+- `fileSize`: The size of the file to download. This field must be accurate in order to show the user accurate progress during app installation. If the size does not match the file being downloaded, then the download will fail.
+- `applicationGroupIdentifier`: The identifier of the application group that should used to store the finished download.
+- `priority`: A priority between @c BADownloaderPriorityMin - @c BADownloaderPriorityMax which is used to order the downloads for this process. It is recommended to use  @c BADownloaderPriorityDefault if download priority does not matter.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Constructs a download object to represent the download of a asset located inside of the provided @c request.
+
+## See Also
+
+### Creating a download
+
+- [initWithIdentifier:request:fileSize:applicationGroupIdentifier:](init%28identifier_request_filesize_applicationgroupidentifier_%29.md)
+- [initWithIdentifier:request:applicationGroupIdentifier:](init%28identifier_request_applicationgroupidentifier_%29.md): Deprecated. Creates a download that uses the specified identifier and App Group.
+- [initWithIdentifier:request:applicationGroupIdentifier:priority:](init%28identifier_request_applicationgroupidentifier_priority_%29.md): Deprecated. Creates a prioritized download that uses the specified identifier and App Group.

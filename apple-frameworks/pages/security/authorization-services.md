@@ -1,0 +1,173 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/authorization-services](https://developer.apple.com/documentation/security/authorization-services)
+
+# Authorization Services (Swift)
+
+**Framework:** Security  
+**Kind:** API Collection
+
+Access restricted areas of the operating system, and control access to particular features of your macOS app.
+
+<a id="Overview"></a>
+
+## Overview
+
+The `Security.Authorization` API is a programming interface to the Security Server and its policy database. This API facilitates access control to restricted areas of the operating system and allows you to restrict a user’s access to particular features in your macOS app. Use authorization services in:
+
+- Software that restricts access to its own tools
+- Applications that call system tools
+- Software installers that install privileged tools or require access to restricted areas of the operating system
+
+As shown in the image below, the Security Server is a daemon running in the operating system that provides a trusted implementation of various security protocols, including authorization computation. In turn, the Security Server relies on the Security Agent to interface with users when authentication is needed. Thus an app can verify credentials (usernames and passwords) without ever accessing them directly. This authorization process also allows the means of authentication to change in the future (such as adding Touch ID) without your having to modify your app.
+
+![Diagram showing your app sitting above the Security framework, which in turn sits above the Security Server and the Security Agent.](https://developer.apple.com/images/com.apple.security/media-2891901@2x.png)
+
+> **Note**
+
+>  For a simplified, class-based version of this API, consider using the [SFAuthorization](https://developer.apple.com/documentation/securityfoundation/sfauthorization) class instead. When you need a user interface that enables display and control of the current authorization state for a particular set of rights, use the [SFAuthorizationView](https://developer.apple.com/documentation/securityinterface/sfauthorizationview) class.
+
+> **Important**
+
+>  The Authorization Services API is not supported within an App Sandbox because the API allows privilege escalation.
+
+## Topics
+
+### Authorization References
+
+- [AuthorizationCreate(\_:\_:\_:\_:)](authorizationcreate%28________%29.md): Creates a new authorization reference and provides an option to authorize or preauthorize rights.
+- [AuthorizationFree(\_:\_:)](authorizationfree%28____%29.md): Frees the memory associated with an authorization reference.
+- [AuthorizationFlags](authorizationflags.md): The flags used to specify authorization options.
+- [AuthorizationRef](authorizationref.md): A pointer to an opaque authorization reference structure.
+
+### Authorization Items
+
+Use authorization items (alone or in sets) to represent rights and environment information.
+
+- [AuthorizationItem](authorizationitem.md): A structure containing information about an authorization right or the authorization environment.
+- [AuthorizationItemSet](authorizationitemset.md): A structure containing a set of authorization items.
+- [AuthorizationRights](authorizationrights.md): An authorization item set designated to represent a set of rights.
+- [AuthorizationEnvironment](authorizationenvironment.md): An authorization item set designated to hold environment information relevant to authorization decisions.
+- [Authorization Name Tags](authorization-name-tags.md): Use name tags to define authorization security items.
+- [AuthorizationFreeItemSet(\_:)](authorizationfreeitemset%28__%29.md): Frees the memory associated with a set of authorization items.
+
+### Rights and Credentials
+
+- [AuthorizationCopyInfo(\_:\_:\_:)](authorizationcopyinfo%28______%29.md): Retrieves supporting data such as the user name and other information gathered during evaluation of authorization.
+- [AuthorizationCopyRights(\_:\_:\_:\_:\_:)](authorizationcopyrights%28__________%29.md): Authorizes and preauthorizes rights synchronously.
+- [AuthorizationCopyRightsAsync(\_:\_:\_:\_:\_:)](authorizationcopyrightsasync%28__________%29.md): Authorizes and preauthorizes rights asynchronously.
+- [AuthorizationAsyncCallback](authorizationasynccallback.md): A block used as a callback for the asynchronous version of copying authorization rights.
+- [AuthorizationString](authorizationstring.md): A zero-terminated string in UTF-8 encoding.
+- [Authorization Rights Flags](authorization-rights-flags.md): Recognize the values the Security Server sets in an authorization item’s flag field.
+
+### Import and Export
+
+- [AuthorizationMakeExternalForm(\_:\_:)](authorizationmakeexternalform%28____%29.md): Creates an external representation of an authorization reference.
+- [AuthorizationCreateFromExternalForm(\_:\_:)](authorizationcreatefromexternalform%28____%29.md): Internalizes the external representation of an authorization reference.
+- [AuthorizationExternalForm](authorizationexternalform.md): The external representation of an authorization reference.
+- [kAuthorizationExternalFormLength](kauthorizationexternalformlength.md): The number of bytes in an external form structure’s array.
+
+### The Policy Database
+
+- [AuthorizationRightGet(\_:\_:)](authorizationrightget%28____%29.md): Retrieves a right definition as a dictionary.
+- [AuthorizationRightSet(\_:\_:\_:\_:\_:\_:)](authorizationrightset%28____________%29.md): Creates or updates a right entry in the policy database.
+- [AuthorizationRightRemove(\_:\_:)](authorizationrightremove%28____%29.md): Removes a right from the policy database.
+- [Policy Database Constants](policy-database-constants.md): Use these constants to set rights and rules in the policy database.
+
+### Result Codes
+
+- [Authorization Services Result Codes](authorization-services-result-codes.md): Recognize result codes specific to the authorization services API.
+
+## See Also
+
+### Related Documentation
+
+- [Authentication, Authorization, and Permissions Guide](https://developer.apple.com/library/archive/documentation/Security/Conceptual/AuthenticationAndAuthorizationGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40011200)
+- [Authorization Services Programming Guide](https://developer.apple.com/library/archive/documentation/Security/Conceptual/authorization_concepts/01introduction/introduction.html#//apple_ref/doc/uid/TP30000995)
+
+# Authorization Services (Objective-C)
+
+**Framework:** Security  
+**Kind:** API Collection
+
+Access restricted areas of the operating system, and control access to particular features of your macOS app.
+
+<a id="Overview"></a>
+
+## Overview
+
+The `Security.Authorization` API is a programming interface to the Security Server and its policy database. This API facilitates access control to restricted areas of the operating system and allows you to restrict a user’s access to particular features in your macOS app. Use authorization services in:
+
+- Software that restricts access to its own tools
+- Applications that call system tools
+- Software installers that install privileged tools or require access to restricted areas of the operating system
+
+As shown in the image below, the Security Server is a daemon running in the operating system that provides a trusted implementation of various security protocols, including authorization computation. In turn, the Security Server relies on the Security Agent to interface with users when authentication is needed. Thus an app can verify credentials (usernames and passwords) without ever accessing them directly. This authorization process also allows the means of authentication to change in the future (such as adding Touch ID) without your having to modify your app.
+
+![Diagram showing your app sitting above the Security framework, which in turn sits above the Security Server and the Security Agent.](https://developer.apple.com/images/com.apple.security/media-2891901@2x.png)
+
+> **Note**
+
+>  For a simplified, class-based version of this API, consider using the [SFAuthorization](https://developer.apple.com/documentation/securityfoundation/sfauthorization) class instead. When you need a user interface that enables display and control of the current authorization state for a particular set of rights, use the [SFAuthorizationView](https://developer.apple.com/documentation/securityinterface/sfauthorizationview) class.
+
+> **Important**
+
+>  The Authorization Services API is not supported within an App Sandbox because the API allows privilege escalation.
+
+## Topics
+
+### Authorization References
+
+- [AuthorizationCreate](authorizationcreate%28________%29.md): Creates a new authorization reference and provides an option to authorize or preauthorize rights.
+- [AuthorizationFree](authorizationfree%28____%29.md): Frees the memory associated with an authorization reference.
+- [AuthorizationFlags](authorizationflags.md): The flags used to specify authorization options.
+- [AuthorizationRef](authorizationref.md): A pointer to an opaque authorization reference structure.
+- [kAuthorizationEmptyEnvironment](kauthorizationemptyenvironment.md): A constant you use in functions with an environment parameter if you have no environment data to provide.
+
+### Authorization Items
+
+Use authorization items (alone or in sets) to represent rights and environment information.
+
+- [AuthorizationItem](authorizationitem.md): A structure containing information about an authorization right or the authorization environment.
+- [AuthorizationItemSet](authorizationitemset.md): A structure containing a set of authorization items.
+- [AuthorizationRights](authorizationrights.md): An authorization item set designated to represent a set of rights.
+- [AuthorizationEnvironment](authorizationenvironment.md): An authorization item set designated to hold environment information relevant to authorization decisions.
+- [Authorization Name Tags](authorization-name-tags.md): Use name tags to define authorization security items.
+- [AuthorizationFreeItemSet](authorizationfreeitemset%28__%29.md): Frees the memory associated with a set of authorization items.
+
+### Rights and Credentials
+
+- [AuthorizationCopyInfo](authorizationcopyinfo%28______%29.md): Retrieves supporting data such as the user name and other information gathered during evaluation of authorization.
+- [AuthorizationCopyRights](authorizationcopyrights%28__________%29.md): Authorizes and preauthorizes rights synchronously.
+- [AuthorizationCopyRightsAsync](authorizationcopyrightsasync%28__________%29.md): Authorizes and preauthorizes rights asynchronously.
+- [AuthorizationAsyncCallback](authorizationasynccallback.md): A block used as a callback for the asynchronous version of copying authorization rights.
+- [AuthorizationString](authorizationstring.md): A zero-terminated string in UTF-8 encoding.
+- [Authorization Rights Flags](authorization-rights-flags.md): Recognize the values the Security Server sets in an authorization item’s flag field.
+
+### Import and Export
+
+- [AuthorizationMakeExternalForm](authorizationmakeexternalform%28____%29.md): Creates an external representation of an authorization reference.
+- [AuthorizationCreateFromExternalForm](authorizationcreatefromexternalform%28____%29.md): Internalizes the external representation of an authorization reference.
+- [AuthorizationExternalForm](authorizationexternalform.md): The external representation of an authorization reference.
+- [kAuthorizationExternalFormLength](kauthorizationexternalformlength.md): The number of bytes in an external form structure’s array.
+
+### The Policy Database
+
+- [AuthorizationRightGet](authorizationrightget%28____%29.md): Retrieves a right definition as a dictionary.
+- [AuthorizationRightSet](authorizationrightset%28____________%29.md): Creates or updates a right entry in the policy database.
+- [AuthorizationRightRemove](authorizationrightremove%28____%29.md): Removes a right from the policy database.
+- [Policy Database Constants](policy-database-constants.md): Use these constants to set rights and rules in the policy database.
+
+### Executing with Root Privileges
+
+- [AuthorizationExecuteWithPrivileges](authorizationexecutewithprivileges.md): Deprecated. Runs an executable tool with root privileges.
+- [AuthorizationCopyPrivilegedReference](authorizationcopyprivilegedreference.md): Deprecated. Retrieves the authorization reference passed by the AuthorizationExecuteWithPrivileges function.
+
+### Result Codes
+
+- [Authorization Services Result Codes](authorization-services-result-codes.md): Recognize result codes specific to the authorization services API.
+
+## See Also
+
+### Related Documentation
+
+- [Authentication, Authorization, and Permissions Guide](https://developer.apple.com/library/archive/documentation/Security/Conceptual/AuthenticationAndAuthorizationGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40011200)
+- [Authorization Services Programming Guide](https://developer.apple.com/library/archive/documentation/Security/Conceptual/authorization_concepts/01introduction/introduction.html#//apple_ref/doc/uid/TP30000995)

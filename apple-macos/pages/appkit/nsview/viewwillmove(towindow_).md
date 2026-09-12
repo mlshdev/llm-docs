@@ -1,0 +1,77 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsview/viewwillmove(towindow:)](https://developer.apple.com/documentation/appkit/nsview/viewwillmove(towindow:))
+
+# viewWillMove(toWindow:) (Swift)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS
+
+Informs the view that it’s being added to the view hierarchy of the specified window object (which may be `nil`).
+
+## Declaration
+
+```swift
+func viewWillMove(toWindow newWindow: NSWindow?)
+```
+
+## Parameters
+
+- `newWindow`: The window object that will be at the root of the view’s new view hierarchy. If the view is being removed from a window and there is no new window, this parameter is `nil`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+AppKit calls this method when the window of a view changes. It also calls it in cases where a view stays in the same window but its position in its view hierarchy changes. The view that moved also calls this method on all of its subviews, giving each of them a chance to respond to the change.
+
+Subclasses can override this method to perform whatever actions are necessary. For example, when a window is deallocated, you can use this method to remove notification observers and bindings associated with the view.
+
+When a window is deallocated, AppKit calls this method for each view in the window, passing `nil` for the `newWindow` parameter. AppKit does not necessarily call this method when closing a window, though. Closing a window usually just hides the window. Closed windows are deallocated only if their [isReleasedWhenClosed](../nswindow/isreleasedwhenclosed.md) method returns [true](https://developer.apple.com/documentation/swift/true).
+
+## See Also
+
+### Responding to View-Related Notifications
+
+- [didAddSubview(\_:)](didaddsubview%28__%29.md): Overridden by subclasses to perform additional actions when subviews are added to the view.
+- [viewDidMoveToSuperview()](viewdidmovetosuperview%28%29.md): Informs the view that its superview has changed (possibly to `nil`).
+- [viewDidMoveToWindow()](viewdidmovetowindow%28%29.md): Informs the view that it has been added to a new view hierarchy.
+- [viewWillMove(toSuperview:)](viewwillmove%28tosuperview_%29.md): Informs the view that its superview is about to change to the specified superview (which may be `nil`).
+- [willRemoveSubview(\_:)](willremovesubview%28__%29.md): Overridden by subclasses to perform additional actions before subviews are removed from the view.
+
+# viewWillMoveToWindow: (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Method  
+**Availability:** macOS
+
+Informs the view that it’s being added to the view hierarchy of the specified window object (which may be `nil`).
+
+## Declaration
+
+```objectivec
+- (void) viewWillMoveToWindow:(NSWindow *) newWindow;
+```
+
+## Parameters
+
+- `newWindow`: The window object that will be at the root of the view’s new view hierarchy. If the view is being removed from a window and there is no new window, this parameter is `nil`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+AppKit calls this method when the window of a view changes. It also calls it in cases where a view stays in the same window but its position in its view hierarchy changes. The view that moved also calls this method on all of its subviews, giving each of them a chance to respond to the change.
+
+Subclasses can override this method to perform whatever actions are necessary. For example, when a window is deallocated, you can use this method to remove notification observers and bindings associated with the view.
+
+When a window is deallocated, AppKit calls this method for each view in the window, passing `nil` for the `newWindow` parameter. AppKit does not necessarily call this method when closing a window, though. Closing a window usually just hides the window. Closed windows are deallocated only if their [releasedWhenClosed](../nswindow/isreleasedwhenclosed.md) method returns [true](https://developer.apple.com/documentation/swift/true).
+
+## See Also
+
+### Responding to View-Related Notifications
+
+- [didAddSubview:](didaddsubview%28__%29.md): Overridden by subclasses to perform additional actions when subviews are added to the view.
+- [viewDidMoveToSuperview](viewdidmovetosuperview%28%29.md): Informs the view that its superview has changed (possibly to `nil`).
+- [viewDidMoveToWindow](viewdidmovetowindow%28%29.md): Informs the view that it has been added to a new view hierarchy.
+- [viewWillMoveToSuperview:](viewwillmove%28tosuperview_%29.md): Informs the view that its superview is about to change to the specified superview (which may be `nil`).
+- [willRemoveSubview:](willremovesubview%28__%29.md): Overridden by subclasses to perform additional actions before subviews are removed from the view.

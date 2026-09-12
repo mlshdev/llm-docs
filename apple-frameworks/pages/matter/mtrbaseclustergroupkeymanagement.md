@@ -1,0 +1,206 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclustergroupkeymanagement](https://developer.apple.com/documentation/matter/mtrbaseclustergroupkeymanagement)
+
+# MTRBaseClusterGroupKeyManagement (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```swift
+class MTRBaseClusterGroupKeyManagement
+```
+
+## Topics
+
+### Initializers
+
+- [init(device:endpoint:queue:)](mtrbaseclustergroupkeymanagement/init%28device_endpoint_queue_%29.md): Deprecated.
+- [init(device:endpointID:queue:)](mtrbaseclustergroupkeymanagement/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [keySetRead(with:completion:)](mtrbaseclustergroupkeymanagement/keysetread%28with_completion_%29.md)
+- [keySetRead(with:completionHandler:)](mtrbaseclustergroupkeymanagement/keysetread%28with_completionhandler_%29.md): Deprecated.
+- [keySetReadAllIndices(completion:)](mtrbaseclustergroupkeymanagement/keysetreadallindices%28completion_%29.md)
+- [keySetReadAllIndices(with:completion:)](mtrbaseclustergroupkeymanagement/keysetreadallindices%28with_completion_%29.md)
+- [keySetReadAllIndices(with:completionHandler:)](mtrbaseclustergroupkeymanagement/keysetreadallindices%28with_completionhandler_%29.md): Deprecated.
+- [keySetRemove(with:completion:)](mtrbaseclustergroupkeymanagement/keysetremove%28with_completion_%29.md)
+- [keySetRemove(with:completionHandler:)](mtrbaseclustergroupkeymanagement/keysetremove%28with_completionhandler_%29.md): Deprecated.
+- [keySetWrite(with:completion:)](mtrbaseclustergroupkeymanagement/keysetwrite%28with_completion_%29.md)
+- [keySetWrite(with:completionHandler:)](mtrbaseclustergroupkeymanagement/keysetwrite%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandList(completion:)](mtrbaseclustergroupkeymanagement/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandList(completionHandler:)](mtrbaseclustergroupkeymanagement/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(completion:)](mtrbaseclustergroupkeymanagement/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeList(completionHandler:)](mtrbaseclustergroupkeymanagement/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(completion:)](mtrbaseclustergroupkeymanagement/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevision(completionHandler:)](mtrbaseclustergroupkeymanagement/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(completion:)](mtrbaseclustergroupkeymanagement/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMap(completionHandler:)](mtrbaseclustergroupkeymanagement/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(completion:)](mtrbaseclustergroupkeymanagement/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandList(completionHandler:)](mtrbaseclustergroupkeymanagement/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeGroupKeyMap(with:completion:)](mtrbaseclustergroupkeymanagement/readattributegroupkeymap%28with_completion_%29.md)
+- [readAttributeGroupKeyMap(with:completionHandler:)](mtrbaseclustergroupkeymanagement/readattributegroupkeymap%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeGroupTable(with:completion:)](mtrbaseclustergroupkeymanagement/readattributegrouptable%28with_completion_%29.md)
+- [readAttributeGroupTable(with:completionHandler:)](mtrbaseclustergroupkeymanagement/readattributegrouptable%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeMaxGroupKeysPerFabric(completion:)](mtrbaseclustergroupkeymanagement/readattributemaxgroupkeysperfabric%28completion_%29.md)
+- [readAttributeMaxGroupKeysPerFabric(completionHandler:)](mtrbaseclustergroupkeymanagement/readattributemaxgroupkeysperfabric%28completionhandler_%29.md): Deprecated.
+- [readAttributeMaxGroupsPerFabric(completion:)](mtrbaseclustergroupkeymanagement/readattributemaxgroupsperfabric%28completion_%29.md)
+- [readAttributeMaxGroupsPerFabric(completionHandler:)](mtrbaseclustergroupkeymanagement/readattributemaxgroupsperfabric%28completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclustergroupkeymanagement/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustergroupkeymanagement/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeList(with:subscriptionEstablished:reportHandler:)](mtrbaseclustergroupkeymanagement/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustergroupkeymanagement/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevision(with:subscriptionEstablished:reportHandler:)](mtrbaseclustergroupkeymanagement/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevision(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustergroupkeymanagement/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMap(with:subscriptionEstablished:reportHandler:)](mtrbaseclustergroupkeymanagement/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMap(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustergroupkeymanagement/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclustergroupkeymanagement/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustergroupkeymanagement/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGroupKeyMap(with:subscriptionEstablished:reportHandler:)](mtrbaseclustergroupkeymanagement/subscribeattributegroupkeymap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGroupKeyMap(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustergroupkeymanagement/subscribeattributegroupkeymap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGroupTable(with:subscriptionEstablished:reportHandler:)](mtrbaseclustergroupkeymanagement/subscribeattributegrouptable%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGroupTable(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustergroupkeymanagement/subscribeattributegrouptable%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMaxGroupKeysPerFabric(with:subscriptionEstablished:reportHandler:)](mtrbaseclustergroupkeymanagement/subscribeattributemaxgroupkeysperfabric%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMaxGroupKeysPerFabric(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustergroupkeymanagement/subscribeattributemaxgroupkeysperfabric%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMaxGroupsPerFabric(with:subscriptionEstablished:reportHandler:)](mtrbaseclustergroupkeymanagement/subscribeattributemaxgroupsperfabric%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMaxGroupsPerFabric(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustergroupkeymanagement/subscribeattributemaxgroupsperfabric%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [writeAttributeGroupKeyMap(withValue:completion:)](mtrbaseclustergroupkeymanagement/writeattributegroupkeymap%28withvalue_completion_%29.md)
+- [writeAttributeGroupKeyMap(withValue:completionHandler:)](mtrbaseclustergroupkeymanagement/writeattributegroupkeymap%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeGroupKeyMap(withValue:params:completion:)](mtrbaseclustergroupkeymanagement/writeattributegroupkeymap%28withvalue_params_completion_%29.md)
+- [writeAttributeGroupKeyMap(withValue:params:completionHandler:)](mtrbaseclustergroupkeymanagement/writeattributegroupkeymap%28withvalue_params_completionhandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustergroupkeymanagement/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustergroupkeymanagement/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustergroupkeymanagement/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustergroupkeymanagement/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevision(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustergroupkeymanagement/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustergroupkeymanagement/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMap(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustergroupkeymanagement/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustergroupkeymanagement/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustergroupkeymanagement/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustergroupkeymanagement/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGroupKeyMap(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustergroupkeymanagement/readattributegroupkeymap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGroupKeyMap(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustergroupkeymanagement/readattributegroupkeymap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGroupTable(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustergroupkeymanagement/readattributegrouptable%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGroupTable(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustergroupkeymanagement/readattributegrouptable%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMaxGroupKeysPerFabric(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustergroupkeymanagement/readattributemaxgroupkeysperfabric%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMaxGroupKeysPerFabric(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustergroupkeymanagement/readattributemaxgroupkeysperfabric%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMaxGroupsPerFabric(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustergroupkeymanagement/readattributemaxgroupsperfabric%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMaxGroupsPerFabric(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustergroupkeymanagement/readattributemaxgroupsperfabric%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRBaseClusterGroupKeyManagement (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```objectivec
+@interface MTRBaseClusterGroupKeyManagement : MTRGenericBaseCluster
+```
+
+## Topics
+
+### Initializers
+
+- [initWithDevice:endpoint:queue:](mtrbaseclustergroupkeymanagement/init%28device_endpoint_queue_%29.md): Deprecated.
+- [initWithDevice:endpointID:queue:](mtrbaseclustergroupkeymanagement/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [keySetReadWithParams:completion:](mtrbaseclustergroupkeymanagement/keysetread%28with_completion_%29.md)
+- [keySetReadWithParams:completionHandler:](mtrbaseclustergroupkeymanagement/keysetread%28with_completionhandler_%29.md): Deprecated.
+- [keySetReadAllIndicesWithCompletion:](mtrbaseclustergroupkeymanagement/keysetreadallindices%28completion_%29.md)
+- [keySetReadAllIndicesWithParams:completion:](mtrbaseclustergroupkeymanagement/keysetreadallindices%28with_completion_%29.md)
+- [keySetReadAllIndicesWithParams:completionHandler:](mtrbaseclustergroupkeymanagement/keysetreadallindices%28with_completionhandler_%29.md): Deprecated.
+- [keySetRemoveWithParams:completion:](mtrbaseclustergroupkeymanagement/keysetremove%28with_completion_%29.md)
+- [keySetRemoveWithParams:completionHandler:](mtrbaseclustergroupkeymanagement/keysetremove%28with_completionhandler_%29.md): Deprecated.
+- [keySetWriteWithParams:completion:](mtrbaseclustergroupkeymanagement/keysetwrite%28with_completion_%29.md)
+- [keySetWriteWithParams:completionHandler:](mtrbaseclustergroupkeymanagement/keysetwrite%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandListWithCompletion:](mtrbaseclustergroupkeymanagement/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandListWithCompletionHandler:](mtrbaseclustergroupkeymanagement/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithCompletion:](mtrbaseclustergroupkeymanagement/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeListWithCompletionHandler:](mtrbaseclustergroupkeymanagement/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithCompletion:](mtrbaseclustergroupkeymanagement/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevisionWithCompletionHandler:](mtrbaseclustergroupkeymanagement/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithCompletion:](mtrbaseclustergroupkeymanagement/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMapWithCompletionHandler:](mtrbaseclustergroupkeymanagement/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithCompletion:](mtrbaseclustergroupkeymanagement/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandListWithCompletionHandler:](mtrbaseclustergroupkeymanagement/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeGroupKeyMapWithParams:completion:](mtrbaseclustergroupkeymanagement/readattributegroupkeymap%28with_completion_%29.md)
+- [readAttributeGroupKeyMapWithParams:completionHandler:](mtrbaseclustergroupkeymanagement/readattributegroupkeymap%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeGroupTableWithParams:completion:](mtrbaseclustergroupkeymanagement/readattributegrouptable%28with_completion_%29.md)
+- [readAttributeGroupTableWithParams:completionHandler:](mtrbaseclustergroupkeymanagement/readattributegrouptable%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeMaxGroupKeysPerFabricWithCompletion:](mtrbaseclustergroupkeymanagement/readattributemaxgroupkeysperfabric%28completion_%29.md)
+- [readAttributeMaxGroupKeysPerFabricWithCompletionHandler:](mtrbaseclustergroupkeymanagement/readattributemaxgroupkeysperfabric%28completionhandler_%29.md): Deprecated.
+- [readAttributeMaxGroupsPerFabricWithCompletion:](mtrbaseclustergroupkeymanagement/readattributemaxgroupsperfabric%28completion_%29.md)
+- [readAttributeMaxGroupsPerFabricWithCompletionHandler:](mtrbaseclustergroupkeymanagement/readattributemaxgroupsperfabric%28completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustergroupkeymanagement/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustergroupkeymanagement/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustergroupkeymanagement/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustergroupkeymanagement/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevisionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustergroupkeymanagement/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevisionWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustergroupkeymanagement/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMapWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustergroupkeymanagement/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMapWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustergroupkeymanagement/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustergroupkeymanagement/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustergroupkeymanagement/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGroupKeyMapWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustergroupkeymanagement/subscribeattributegroupkeymap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGroupKeyMapWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustergroupkeymanagement/subscribeattributegroupkeymap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGroupTableWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustergroupkeymanagement/subscribeattributegrouptable%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGroupTableWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustergroupkeymanagement/subscribeattributegrouptable%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMaxGroupKeysPerFabricWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustergroupkeymanagement/subscribeattributemaxgroupkeysperfabric%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMaxGroupKeysPerFabricWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustergroupkeymanagement/subscribeattributemaxgroupkeysperfabric%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeMaxGroupsPerFabricWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustergroupkeymanagement/subscribeattributemaxgroupsperfabric%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeMaxGroupsPerFabricWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustergroupkeymanagement/subscribeattributemaxgroupsperfabric%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [writeAttributeGroupKeyMapWithValue:completion:](mtrbaseclustergroupkeymanagement/writeattributegroupkeymap%28withvalue_completion_%29.md)
+- [writeAttributeGroupKeyMapWithValue:completionHandler:](mtrbaseclustergroupkeymanagement/writeattributegroupkeymap%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeGroupKeyMapWithValue:params:completion:](mtrbaseclustergroupkeymanagement/writeattributegroupkeymap%28withvalue_params_completion_%29.md)
+- [writeAttributeGroupKeyMapWithValue:params:completionHandler:](mtrbaseclustergroupkeymanagement/writeattributegroupkeymap%28withvalue_params_completionhandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustergroupkeymanagement/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustergroupkeymanagement/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustergroupkeymanagement/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustergroupkeymanagement/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevisionWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustergroupkeymanagement/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustergroupkeymanagement/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMapWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustergroupkeymanagement/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustergroupkeymanagement/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustergroupkeymanagement/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustergroupkeymanagement/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGroupKeyMapWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustergroupkeymanagement/readattributegroupkeymap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGroupKeyMapWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustergroupkeymanagement/readattributegroupkeymap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGroupTableWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustergroupkeymanagement/readattributegrouptable%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGroupTableWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustergroupkeymanagement/readattributegrouptable%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMaxGroupKeysPerFabricWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustergroupkeymanagement/readattributemaxgroupkeysperfabric%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMaxGroupKeysPerFabricWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustergroupkeymanagement/readattributemaxgroupkeysperfabric%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeMaxGroupsPerFabricWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustergroupkeymanagement/readattributemaxgroupsperfabric%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeMaxGroupsPerFabricWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustergroupkeymanagement/readattributemaxgroupsperfabric%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)

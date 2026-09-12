@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/gamecenterdetail/relationships-data.dictionary/activityreleases-data.dictionary](https://developer.apple.com/documentation/appstoreconnectapi/gamecenterdetail/relationships-data.dictionary/activityreleases-data.dictionary)
+
+# GameCenterDetail.Relationships.ActivityReleases
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API
+
+## Declaration
+
+```
+object GameCenterDetail.Relationships.ActivityReleases
+```
+
+## Properties
+
+- `data` — `[GameCenterDetail.Relationships.ActivityReleases.Data]`:
+- `links` — `RelationshipLinks`:
+- `meta` — `PagingInformation`:
+
+## Topics
+
+### Dictionaries
+
+- [GameCenterDetail.Relationships.ActivityReleases.Data](activityreleases-data.dictionary/data-data.dictionary.md): Deprecated.

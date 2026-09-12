@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/osset/init](https://developer.apple.com/documentation/driverkit/osset/init)
+
+# init
+
+**Interface language:** Objective-C
+
+**Framework:** DriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit · iOS · iPadOS · macOS
+
+## Declaration
+
+```objectivec
+virtual bool init();
+```

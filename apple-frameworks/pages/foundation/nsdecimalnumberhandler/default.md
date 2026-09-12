@@ -1,0 +1,69 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsdecimalnumberhandler/default](https://developer.apple.com/documentation/foundation/nsdecimalnumberhandler/default)
+
+# default (Swift)
+
+**Framework:** Foundation  
+**Kind:** Type Property  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.0+ · macOS 10.0+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Returns the default instance of `NSDecimalNumberHandler`.
+
+## Declaration
+
+```swift
+class var `default`: NSDecimalNumberHandler { get }
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+The default instance of `NSDecimalNumberHandler`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This default decimal number handler rounds to the closest possible return value. It assumes your need for precision does not exceed 38 significant digits, and it raises an exception when its `NSDecimalNumber` object tries to divide by `0` or when its `NSDecimalNumber` object produces a number too big or too small to be represented.
+
+## See Also
+
+### Related Documentation
+
+- [Number and Value Programming Topics](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/NumbersandValues/NumbersandValues.html#//apple_ref/doc/uid/10000038i)
+
+# defaultDecimalNumberHandler (Objective-C)
+
+**Framework:** Foundation  
+**Kind:** Type Property  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.0+ · macOS 10.0+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Returns the default instance of `NSDecimalNumberHandler`.
+
+## Declaration
+
+```objectivec
+@property (class, strong, readonly) NSDecimalNumberHandler * defaultDecimalNumberHandler;
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+The default instance of `NSDecimalNumberHandler`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This default decimal number handler rounds to the closest possible return value. It assumes your need for precision does not exceed 38 significant digits, and it raises an exception when its `NSDecimalNumber` object tries to divide by `0` or when its `NSDecimalNumber` object produces a number too big or too small to be represented.
+
+## See Also
+
+### Related Documentation
+
+- [Number and Value Programming Topics](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/NumbersandValues/NumbersandValues.html#//apple_ref/doc/uid/10000038i)
+
+### Creating a Decimal Number Handler
+
+- [decimalNumberHandlerWithRoundingMode:scale:raiseOnExactness:raiseOnOverflow:raiseOnUnderflow:raiseOnDivideByZero:](decimalnumberhandlerwithroundingmode_scale_raiseonexactness_raiseonoverflow_raiseonunderflow_raiseondividebyzero_.md): Returns an `NSDecimalNumberHandler` object with customized behavior.

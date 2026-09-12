@@ -1,0 +1,61 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cloudkit/ckfetchrecordzonesoperation/fetchrecordzonescompletionblock](https://developer.apple.com/documentation/cloudkit/ckfetchrecordzonesoperation/fetchrecordzonescompletionblock)
+
+# fetchRecordZonesCompletionBlock (Swift)
+
+**Framework:** CloudKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ (deprecated in 15.0) · iPadOS 8.0+ (deprecated in 15.0) · Mac Catalyst 13.1+ (deprecated in 15.0) · macOS 10.10+ (deprecated in 12.0) · tvOS 9.0+ (deprecated in 15.0) · visionOS 1.0+ (deprecated in 1.0) · watchOS 3.0+ (deprecated in 8.0)
+
+The closure to execute after CloudKit retrieves all of the record zones.
+
+> Use fetchRecordZonesResultBlock instead
+
+## Declaration
+
+```swift
+var fetchRecordZonesCompletionBlock: (([CKRecordZone.ID : CKRecordZone]?, (any Error)?) -> Void)? { get set }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This property is a closure that returns no value and has the following parameters:
+
+- A dictionary that maps the zone IDs you request to the results. The keys in the dictionary are [CKRecordZone.ID](../ckrecordzone/id.md) objects, and the values are the corresponding [CKRecordZone](../ckrecordzone.md) objects that CloudKit returns.
+- If CloudKit can’t retrieve any of the record zones, an error that provides information about the failure; otherwise, `nil`.
+
+The operation executes the closure only once, and it’s your only chance to process the results. You must provide a closure capable of executing on a background thread, so any tasks that require access to the main thread must redirect accordingly.
+
+The closure reports an error of type [CKError.Code.partialFailure](../ckerror/code/partialfailure.md) when it retrieves only some of the record zones successfully. The [userInfo](../../foundation/nserror/userinfo.md) dictionary of the error contains a [CKPartialErrorsByItemIDKey](../ckpartialerrorsbyitemidkey.md) key that has a dictionary as its value. The keys of the dictionary are the IDs of the record zones that the operation can’t retrieve, and the corresponding values are errors that contain information about the failures.
+
+If you intend to use this closure to process results, set it before you execute the operation or submit the operation to a queue.
+
+# fetchRecordZonesCompletionBlock (Objective-C)
+
+**Framework:** CloudKit  
+**Kind:** Instance Property  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS · visionOS 1.0+ · watchOS 3.0+
+
+The closure to execute after CloudKit retrieves all of the record zones.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) void (^fetchRecordZonesCompletionBlock)(NSDictionary<CKRecordZoneID *,CKRecordZone *> *recordZonesByZoneID, NSError *operationError);
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This property is a closure that returns no value and has the following parameters:
+
+- A dictionary that maps the zone IDs you request to the results. The keys in the dictionary are [CKRecordZoneID](../ckrecordzone/id.md) objects, and the values are the corresponding [CKRecordZone](../ckrecordzone.md) objects that CloudKit returns.
+- If CloudKit can’t retrieve any of the record zones, an error that provides information about the failure; otherwise, `nil`.
+
+The operation executes the closure only once, and it’s your only chance to process the results. You must provide a closure capable of executing on a background thread, so any tasks that require access to the main thread must redirect accordingly.
+
+The closure reports an error of type [CKErrorPartialFailure](../ckerror/code/partialfailure.md) when it retrieves only some of the record zones successfully. The [userInfo](../../foundation/nserror/userinfo.md) dictionary of the error contains a [CKPartialErrorsByItemIDKey](../ckpartialerrorsbyitemidkey.md) key that has a dictionary as its value. The keys of the dictionary are the IDs of the record zones that the operation can’t retrieve, and the corresponding values are errors that contain information about the failures.
+
+If you intend to use this closure to process results, set it before you execute the operation or submit the operation to a queue.

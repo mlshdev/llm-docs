@@ -1,0 +1,62 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/cameraanchor(isactive:)](https://developer.apple.com/documentation/swiftui/view/cameraanchor(isactive:))
+
+# cameraAnchor(isActive:)
+
+**Framework:** AVKit  
+**Kind:** Instance Method  
+**Availability:** visionOS 2.0+
+
+Specifies the view that should act as the virtual camera for Apple Vision Pro 2D Persona stream.
+
+## Declaration
+
+```swift
+@MainActor func cameraAnchor(isActive: Bool = true) -> some View
+
+```
+
+## Parameters
+
+- `isActive`: Whether or not the camera anchor is active.
+
+  You can use this value to ensure that only one camera anchor is active at a time if you want to create multiple views that could act as the anchor in your app.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This modifier can be used by visionOS apps to specify the placement of the virtual camera used to create a 2D stream of the user’s Persona. For example, a video conferencing app might add this modifier to the view that shows the other participants during a call. Then when the participant on visionOS looks at that view their Persona will make eye contact with the other participants on the call. The anchor will be at the center of the modified View.
+
+```swift
+ExampleAppVideoView()
+    .cameraAnchor()
+```
+
+You might want to create multiple views with an anchor and then only activate the one that has focus.
+
+```swift
+struct ExampleSelfPreviewWhenFocusedView: View {
+   @Environment(\.isFocused) var isFocused: Bool
+
+   var body: some View {
+       ExampleAppVideoView()
+        #if os(visionOS)
+            .cameraAnchor(isActive: isFocused)
+        #endif
+   }
+}
+```
+
+> **Important**
+
+>  You should avoid creating multiple views with simultaneously active camera anchors. If multiple views with active camera anchors are found, the first created will have its parent View be used as the camera anchor, and a runtime error will be emitted.
+
+## See Also
+
+### Displaying media
+
+- [CameraView](https://developer.apple.com/documentation/homekit/cameraview): A SwiftUI view into which a video stream or an image snapshot is rendered.
+- [NowPlayingView](https://developer.apple.com/documentation/watchkit/nowplayingview): A view that displays the system’s Now Playing interface so that the user can control audio.
+- [VideoPlayer](https://developer.apple.com/documentation/avkit/videoplayer): A view that displays content from a player and a native user interface to control playback.
+- [continuityDevicePicker(isPresented:onDidConnect:)](continuitydevicepicker%28ispresented_ondidconnect_%29.md): A `continuityDevicePicker` should be used to discover and connect nearby continuity device through a button interface or other form of activation. On tvOS, this presents a fullscreen continuity device picker experience when selected. The modal view covers as much the screen of `self` as possible when a given condition is true.
+- [foveatedStreamingPauseSheet(session:)](foveatedstreamingpausesheet%28session_%29.md): Tells the system to present a sheet with controls for resuming or ending the foveated streaming session when it pauses.

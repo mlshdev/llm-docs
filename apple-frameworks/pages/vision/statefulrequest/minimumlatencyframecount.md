@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/vision/statefulrequest/minimumlatencyframecount](https://developer.apple.com/documentation/vision/statefulrequest/minimumlatencyframecount)
+
+# minimumLatencyFrameCount
+
+**Framework:** Vision  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+The minimum number of frames that the request has to process before reporting any observations.
+
+## Declaration
+
+```swift
+var minimumLatencyFrameCount: Int { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The request provides this information after it’s initialized with its required parameters.
+
+Video-based requests often need a minimum number of frames before they can report any observations. For example, for movement detection that requires at least `5` frames, the [minimumLatencyFrameCount](minimumlatencyframecount.md) for the request reports `5`, and after the request processes `5` frames, an observation returns the results.
+
+## Default Implementations
+
+### StatefulRequest Implementations
+
+- [minimumLatencyFrameCount](minimumlatencyframecount-2h8se.md)
+
+## See Also
+
+### Inspecting the request
+
+- [frameAnalysisSpacing](frameanalysisspacing.md): The reciprocal of the maximum rate to process buffers.

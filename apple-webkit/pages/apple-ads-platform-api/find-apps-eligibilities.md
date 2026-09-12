@@ -1,0 +1,170 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/find-apps-eligibilities](https://developer.apple.com/documentation/apple-ads-platform-api/find-apps-eligibilities)
+
+# Check App Eligibility
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Web Service Endpoint  
+**Availability:** Apple Ads Platform API 1.0+
+
+Check whether an app is eligible to run on certain Apple Ads placements and in specific countries or regions.
+
+## URL
+
+```http
+POST https://api.ads.apple.com/v1/eligibilities/apps/query
+```
+
+## Header Parameters
+
+- `X-Ap-Context` — `string` (required):
+
+## HTTP Body
+
+Content type: `application/json`
+
+Type: `EligibilityQueryRequest`
+
+See [EligibilityQueryRequest](eligibilityqueryrequest.md).
+
+## Response Codes
+
+- `200` OK — `EligibilityQueryResponse`:
+- `400` Bad Request — `Error`:
+- `401` Unauthorized — `Error`:
+- `403` Forbidden — `Error`:
+- `404` Not Found — `Error`:
+- `429` Too Many Requests — `Error`:
+- `500` Internal Server Error — `Error`:
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This endpoint checks whether an app is eligible to run Apple Ads campaigns in specified countries or regions. The response contains per-app eligibility status, along with the specific supply placements and markets where advertising is allowed or blocked.
+
+To confirm that your app can be promoted in the target markets, use this endpoint before creating campaigns. Attempting to run campaigns in ineligible markets will result in zero delivery. Calling this endpoint early in the campaign setup workflow avoids wasted configuration.
+
+Ineligibility reasons can include: the app is not available in that market, regional distribution restrictions set in App Store Connect, or Apple Ads policy violations.
+
+See [QueryFilterOperator](queryfilteroperator.md) for the full set of supported comparison operators.
+
+<a id="Filterable-Fields"></a>
+
+### Filterable Fields
+
+| Field | Type | Operators | Sortable | Description |
+| --- | --- | --- | --- | --- |
+| `adamId` | integer (int64) | `EQUALS` | No | The Adam ID of the app |
+| `supplyPlacement` | string | `EQUALS`, `IN` | Yes | The supply placement being checked |
+| `state` | string | `EQUALS`, `IN` | Yes | Eligibility state: `ELIGIBLE` or `INELIGIBLE` |
+| `countryOrRegion` | string | `EQUALS`, `IN` | Yes | The country or region evaluated |
+| `deviceClass` | string | `EQUALS`, `IN` | Yes | The device class evaluated |
+
+See [EligibilityQueryRequest](eligibilityqueryrequest.md) for the full field list. The request body is a [QueryRequest](queryrequest.md)-shaped object composed of [QueryFilter](queryfilter.md) conditions and [QuerySort](querysort.md) directives ([QuerySortOrder](querysortorder.md)), controlled by [QueryPagination](querypagination.md).
+
+<a id="Request-Body"></a>
+
+## Request Body
+
+The `state` field resolves to one of the following values:
+
+| Status | Description |
+| --- | --- |
+| `ELIGIBLE` | The app is approved to run ads in the specified country or region. |
+| `INELIGIBLE` | The app cannot run ads in the specified country or region. |
+
+<a id="Response-Structure"></a>
+
+### Response Structure
+
+Each item in `result` is a flat `EligibilityResponse` row for a specific combination of app, supply placement, supply source, country, and device class.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `adamId` | integer (int64) | The Adam ID of the app |
+| `supplyPlacement` | string | The supply placement being checked |
+| `supplySource` | string | The supply source being checked |
+| `minAge` | number | The minimum age rating required to serve ads for this app in this market |
+| `state` | string | Eligibility state: `ELIGIBLE` or `INELIGIBLE` (default `ELIGIBLE`) |
+| `countryOrRegion` | string | The country or region evaluated |
+| `deviceClass` | string | The device class evaluated |
+| `creationTime` | string (ISO 8601) | When this eligibility record was created |
+| `modificationTime` | string (ISO 8601) | When this eligibility record was last modified |
+
+An app that is eligible in some placements and ineligible in others appears as multiple rows, one per combination.
+
+Keep the following constraints in mind when checking eligibility:
+
+| Constraint | Detail |
+| --- | --- |
+| Pre-campaign check | Always call this endpoint before creating campaigns in new markets. |
+| Distribution restrictions | Ineligibility may reflect App Store Connect distribution settings, not just policy violations. |
+
+<a id="Payload-Examples"></a>
+
+## Payload Examples
+
+**Check App Eligibility**
+
+<a id="Request"></a>
+
+### Request
+
+```json
+POST /v1/eligibilities/apps/query
+
+{
+ "filters": [
+   {
+     "field": "adamId",
+     "operator": "EQUALS",
+     "value": 123456789
+   }
+ ],
+ "pagination": {
+   "offset": 0,
+   "pageSize": 20
+ }
+}
+```
+
+<a id="Response"></a>
+
+### Response
+
+```json
+{
+ "result": [
+   {
+     "adamId": 123456789,
+     "supplyPlacement": "APPSTORE_SEARCH_RESULTS",
+     "supplySource": "APPSTORE",
+     "minAge": 4,
+     "state": "ELIGIBLE",
+     "countryOrRegion": "US",
+     "deviceClass": "IPHONE"
+   },
+   {
+     "adamId": 123456789,
+     "supplyPlacement": "APPSTORE_SEARCH_RESULTS",
+     "supplySource": "APPSTORE",
+     "minAge": 4,
+     "state": "ELIGIBLE",
+     "countryOrRegion": "GB",
+     "deviceClass": "IPHONE"
+   }
+ ],
+ "pagination": {
+   "totalCount": 2,
+   "offset": 0,
+   "pageSize": 20
+ }
+}
+```
+
+## See Also
+
+- [Query Rejection Reasons](find-rejection-reasons.md): Query ad creative rejection reasons for apps and return why each ad creative failed approval.
+- [Get Rejection Reasons](gets-rejection-reasons-by-id.md): Retrieve the details of an ad creative rejection reason by ID.

@@ -1,0 +1,43 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applemusicapi/librarysongs/relationships-data.dictionary](https://developer.apple.com/documentation/applemusicapi/librarysongs/relationships-data.dictionary)
+
+# LibrarySongs.Relationships
+
+**Interface language:** Data
+
+**Framework:** Apple Music API  
+**Kind:** Object  
+**Availability:** Apple Music 1.0+
+
+The relationships for a library song resource.
+
+## Declaration
+
+```
+object LibrarySongs.Relationships
+```
+
+## Properties
+
+- `albums` — `LibrarySongs.Relationships.LibrarySongsAlbumsRelationship`: The library albums associated with the song. By default, `albums` not included.
+
+  Fetch limits: 10 default, 10 maximum.
+- `artists` — `LibrarySongs.Relationships.LibrarySongsArtistsRelationship`: The library artists associated with the song. By default, `artists` not included.
+
+  Fetch limits: 10 default, 10 maximum.
+- `catalog` — `LibrarySongs.Relationships.LibrarySongsCatalogRelationship`: The song in the Apple Music catalog the library song is associated with, when known.
+
+  Fetch limits: None.
+
+## Topics
+
+### Related Objects
+
+- [LibrarySongs.Relationships.LibrarySongsAlbumsRelationship](relationships-data.dictionary/librarysongsalbumsrelationship.md): A relationship from the library song to its albums.
+- [LibrarySongs.Relationships.LibrarySongsArtistsRelationship](relationships-data.dictionary/librarysongsartistsrelationship.md): A relationship from the library song to its artists.
+- [LibrarySongs.Relationships.LibrarySongsCatalogRelationship](relationships-data.dictionary/librarysongscatalogrelationship.md): A relationship from the library song to its associated catalog content.
+
+## See Also
+
+### Related Objects
+
+- [LibrarySongs.Attributes](attributes-data.dictionary.md): The attributes for a library song resource.

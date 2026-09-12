@@ -1,0 +1,31 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/networkextension/neurlfiltermanager/parsingconfiguration/queryoptions/parameters](https://developer.apple.com/documentation/networkextension/neurlfiltermanager/parsingconfiguration/queryoptions/parameters)
+
+# parameters
+
+**Framework:** Network Extension  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+
+
+An array of parameter names to extract.
+
+## Declaration
+
+```swift
+var parameters: [String]?
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use a value of `nil` to include all query items.
+
+If you specify an array for `parameters`, the parser includes the query items in the result, in the specified order.
+
+For example, setting `parameters` to `["id", "external"]` parses URL `http://example.com/a/b/c?external&id=123&type=abc` into `http://example.com/a/b/c?id=123&external`. Note in this example that the query separates items with the `&` character, and query items don’t necessarily have a value (such as `external` in this example).
+
+## See Also
+
+### Working with query options
+
+- [excluded](excluded.md): A Boolean value that indicates whether to exclude the query component from URL parsing.

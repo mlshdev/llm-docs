@@ -1,0 +1,34 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applepayontheweb/applepayrequestbase/billingcontact](https://developer.apple.com/documentation/applepayontheweb/applepayrequestbase/billingcontact)
+
+# billingContact
+
+**Interface language:** Data
+
+**Framework:** Apple Pay on the Web  
+**Kind:** Instance Property  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+A prepopulated billing address.
+
+## Declaration
+
+```
+ApplePayPaymentContact billingContact;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If you have an up-to-date billing address for the customer on file, you can set it here. This billing address appears in the payment sheet. The user can either use the address you specify or select a different address.
+
+> **Note**
+
+>  If you supply a billing address, you must also request `“postalAddress”` in [requiredBillingContactFields](../applepaypaymentrequest/requiredbillingcontactfields.md).
+
+## See Also
+
+### Setting contact information
+
+- [shippingContact](shippingcontact.md): The customer’s address, used for sending products or services for to the person.
+- [shippingContactEditingMode](shippingcontacteditingmode.md): A value that indicates whether the shipping mode prevents the user from editing the shipping address.

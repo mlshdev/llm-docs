@@ -1,0 +1,17 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplaybackuserinterfacetimecontrollable-62fq2/segments](https://developer.apple.com/documentation/avkit/avplaybackuserinterfacetimecontrollable-62fq2/segments)
+
+# segments
+
+**Interface language:** Objective-C
+
+**Framework:** AVKit  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+
+
+Segments representing different content types within the timeline. All segments should be contiguous and collectively cover the entire timeline duration without gaps or overlaps. Each segment defines a specific portion of content (such as main program, advertisements, or bonus material) with its own playback characteristics. Must be key-value observable.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, readonly) NSArray<AVPlaybackUserInterfaceTimelineSegment *> * segments;
+```

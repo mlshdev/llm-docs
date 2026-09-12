@@ -1,0 +1,60 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tabletopkit/tabletopnetworksession](https://developer.apple.com/documentation/tabletopkit/tabletopnetworksession)
+
+# TabletopNetworkSession
+
+**Framework:** TabletopKit  
+**Kind:** Class  
+**Availability:** visionOS 2.0+
+
+An object that coordinates network-related tasks in multiplayer games.
+
+## Declaration
+
+```swift
+class TabletopNetworkSession<Coordinator> where Coordinator : TabletopNetworkSessionCoordinator
+```
+
+<a id="overview"></a>
+
+## Overview
+
+To start a multiplayer game for a local player, use the [start()](tabletopnetworksession/start%28%29.md) method. TabletopKit syncs the current table state between all peers in the session, so update the table state before invoking this method.
+
+After invoking the [start()](tabletopnetworksession/start%28%29.md) method, the local player becomes the arbiter who ensures that TabletopKit applies actions in order for all players. To switch the arbiter role between players, use the [becomeArbiter()](tabletopnetworksession/becomearbiter%28%29.md) and [followArbiter(\_:)](tabletopnetworksession/followarbiter%28__%29.md) methods.
+
+To join an existing game, use the [join()](tabletopnetworksession/join%28%29.md) method, and to pass incoming messages to the game, use the [processIncomingMessage(\_:from:)](tabletopnetworksession/processincomingmessage%28__from_%29.md) method.
+
+To get all the people who join the session, not just the players, use the [peers](tabletopnetworksession/peers.md) property.
+
+## Topics
+
+### Joining multiplayer games
+
+- [start()](tabletopnetworksession/start%28%29.md): Start a new multiplayer game, promoting the local state of the table to all connected peers
+- [join()](tabletopnetworksession/join%28%29.md): Join an existing game started between the connected peers
+- [leave()](tabletopnetworksession/leave%28%29.md): Leave the current multiplayer game
+- [terminate()](tabletopnetworksession/terminate%28%29.md)
+
+### Changing the arbiter role between players
+
+- [becomeArbiter()](tabletopnetworksession/becomearbiter%28%29.md)
+- [followArbiter(\_:)](tabletopnetworksession/followarbiter%28__%29.md)
+
+### Managing network session peers
+
+- [peers](tabletopnetworksession/peers.md): The set of peers known by the game
+- [addPeer(\_:)](tabletopnetworksession/addpeer%28__%29.md): Notify the game that a new peer has connected
+- [removePeer(\_:)](tabletopnetworksession/removepeer%28__%29.md): Notify the game that an existing peer disconnected
+- [TabletopNetworkSession.Peer](tabletopnetworksession/peer.md)
+
+### Receiving messages from peers
+
+- [processIncomingMessage(\_:from:)](tabletopnetworksession/processincomingmessage%28__from_%29.md): Pass incoming messages from the reliable channel to the game.
+- [processIncomingUnreliableMessage(\_:from:)](tabletopnetworksession/processincomingunreliablemessage%28__from_%29.md): Pass incoming messages from the unreliable channel to the game.
+
+## See Also
+
+### Multiplayer network session
+
+- [TabletopNetworkSessionCoordinator](tabletopnetworksessioncoordinator.md): A protocol for objects that manage network sessions between peers.
+- [TabletopSendMessageResult](tabletopsendmessageresult.md): The possible results of sending messages in a network session.

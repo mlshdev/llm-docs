@@ -1,0 +1,577 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coregraphics/core-graphics-functions](https://developer.apple.com/documentation/coregraphics/core-graphics-functions)
+
+# Core Graphics Functions (Swift)
+
+**Framework:** Core Graphics  
+**Kind:** API Collection
+
+## Topics
+
+### Functions
+
+- [CGAcquireDisplayFadeReservation(\_:\_:)](cgacquiredisplayfadereservation%28____%29.md): Reserves the fade hardware for a specified time interval.
+- [CGAssociateMouseAndMouseCursorPosition(\_:)](cgassociatemouseandmousecursorposition%28__%29.md): Connects or disconnects the mouse and cursor while an application is in the foreground.
+- [CGBeginDisplayConfiguration(\_:)](cgbegindisplayconfiguration%28__%29.md): Begins a new set of display configuration changes.
+- [CGCancelDisplayConfiguration(\_:)](cgcanceldisplayconfiguration%28__%29.md): Cancels a set of display configuration changes.
+- [CGCaptureAllDisplays()](cgcapturealldisplays%28%29.md): Obtains exclusive use of all active displays, preventing other applications and system services from using the display or changing its configuration.
+- [CGCaptureAllDisplaysWithOptions(\_:)](cgcapturealldisplayswithoptions%28__%29.md): Captures all attached displays, using the specified options.
+- [CGCompleteDisplayConfiguration(\_:\_:)](cgcompletedisplayconfiguration%28____%29.md): Completes a set of display configuration changes.
+- [CGConfigureDisplayFadeEffect(\_:\_:\_:\_:\_:\_:)](cgconfiguredisplayfadeeffect%28____________%29.md): Modifies the settings of the built-in fade effect that occurs during a display configuration.
+- [CGConfigureDisplayMirrorOfDisplay(\_:\_:\_:)](cgconfiguredisplaymirrorofdisplay%28______%29.md): Changes the configuration of a mirroring set.
+- [CGConfigureDisplayMode(\_:\_:\_:)](cgconfiguredisplaymode%28______%29.md): Deprecated. Configures the display mode of a display.
+- [CGConfigureDisplayOrigin(\_:\_:\_:\_:)](cgconfiguredisplayorigin%28________%29.md): Configures the origin of a display relative to the global display coordinate space.
+- [CGConfigureDisplayStereoOperation(\_:\_:\_:\_:)](cgconfiguredisplaystereooperation%28________%29.md): Enables or disables stereo operation for a display, as part of a display configuration.
+- [CGConfigureDisplayWithDisplayMode(\_:\_:\_:\_:)](cgconfiguredisplaywithdisplaymode%28________%29.md): Configures the display mode of a display.
+- [CGCursorIsDrawnInFramebuffer()](cgcursorisdrawninframebuffer%28%29.md): Deprecated. Returns a Boolean value indicating whether the mouse cursor is drawn in framebuffer memory.
+- [CGCursorIsVisible()](cgcursorisvisible%28%29.md): Deprecated. Returns a Boolean value indicating whether the mouse cursor is visible.
+- [CGDirectDisplayCopyCurrentMetalDevice(\_:)](cgdirectdisplaycopycurrentmetaldevice%28__%29.md): Returns the GPU device instance that’s currently driving a display.
+- [CGDisplayAvailableModes(\_:)](cgdisplayavailablemodes%28__%29.md): Deprecated. Returns information about the currently available display modes.
+- [CGDisplayBestModeForParameters(\_:\_:\_:\_:\_:)](cgdisplaybestmodeforparameters%28__________%29.md): Deprecated. Returns information about the display mode closest to a specified depth and screen size.
+- [CGDisplayBestModeForParametersAndRefreshRate(\_:\_:\_:\_:\_:\_:)](cgdisplaybestmodeforparametersandrefreshrate%28____________%29.md): Deprecated. Returns information about the display mode closest to a specified depth, screen size, and refresh rate.
+- [CGDisplayBounds(\_:)](cgdisplaybounds%28__%29.md): Returns the bounds of a display in the global display coordinate space.
+- [CGDisplayCapture(\_:)](cgdisplaycapture%28__%29.md): Obtains exclusive use of a display, preventing other applications and system services from using the display or changing its configuration.
+- [CGDisplayCaptureWithOptions(\_:\_:)](cgdisplaycapturewithoptions%28____%29.md): Obtains exclusive use of a display for an application using the options you specify.
+- [CGDisplayCopyAllDisplayModes(\_:\_:)](cgdisplaycopyalldisplaymodes%28____%29.md): Returns information about the currently available display modes.
+- [CGDisplayCopyColorSpace(\_:)](cgdisplaycopycolorspace%28__%29.md): Returns the color space for a display.
+- [CGDisplayCopyDisplayMode(\_:)](cgdisplaycopydisplaymode%28__%29.md): Returns information about a display’s current configuration.
+- [CGDisplayCurrentMode(\_:)](cgdisplaycurrentmode%28__%29.md): Deprecated. Returns information about the current display mode.
+- [CGDisplayFade(\_:\_:\_:\_:\_:\_:\_:\_:)](cgdisplayfade%28________________%29.md): Performs a single fade operation.
+- [CGDisplayFadeOperationInProgress()](cgdisplayfadeoperationinprogress%28%29.md): Deprecated. Returns a Boolean value indicating whether a fade operation is currently in progress.
+- [CGDisplayGammaTableCapacity(\_:)](cgdisplaygammatablecapacity%28__%29.md): Returns the capacity, or number of entries, in the gamma table for a display.
+- [CGDisplayGetDrawingContext(\_:)](cgdisplaygetdrawingcontext%28__%29.md): Returns a graphics context suitable for drawing to a captured display.
+- [CGDisplayHideCursor(\_:)](cgdisplayhidecursor%28__%29.md): Hides the mouse cursor, and increments the hide cursor count.
+- [CGDisplayIDToOpenGLDisplayMask(\_:)](cgdisplayidtoopengldisplaymask%28__%29.md): Maps a display ID to an OpenGL display mask.
+- [CGDisplayIOServicePort(\_:)](cgdisplayioserviceport%28__%29.md): Deprecated. Returns the I/O Kit service port of the specified display.
+- [CGDisplayIsActive(\_:)](cgdisplayisactive%28__%29.md): Returns a Boolean value indicating whether a display is active.
+- [CGDisplayIsAlwaysInMirrorSet(\_:)](cgdisplayisalwaysinmirrorset%28__%29.md): Returns a Boolean value indicating whether a display is always in a mirroring set.
+- [CGDisplayIsAsleep(\_:)](cgdisplayisasleep%28__%29.md): Returns a Boolean value indicating whether a display is sleeping (and is therefore not drawable).
+- [CGDisplayIsBuiltin(\_:)](cgdisplayisbuiltin%28__%29.md): Returns a Boolean value indicating whether a display is built-in, such as the internal display in portable systems.
+- [CGDisplayIsCaptured(\_:)](cgdisplayiscaptured%28__%29.md): Deprecated. Returns a Boolean value indicating whether a display is captured.
+- [CGDisplayIsInHWMirrorSet(\_:)](cgdisplayisinhwmirrorset%28__%29.md): Returns a Boolean value indicating whether a display is in a hardware mirroring set.
+- [CGDisplayIsInMirrorSet(\_:)](cgdisplayisinmirrorset%28__%29.md): Returns a Boolean value indicating whether a display is in a mirroring set.
+- [CGDisplayIsMain(\_:)](cgdisplayismain%28__%29.md): Returns a Boolean value indicating whether a display is the main display.
+- [CGDisplayIsOnline(\_:)](cgdisplayisonline%28__%29.md): Returns a Boolean value indicating whether a display is connected or online.
+- [CGDisplayIsStereo(\_:)](cgdisplayisstereo%28__%29.md): Returns a Boolean value indicating whether a display is running in a stereo graphics mode.
+- [CGDisplayMirrorsDisplay(\_:)](cgdisplaymirrorsdisplay%28__%29.md): For a secondary display in a mirroring set, returns the primary display.
+- [pixelEncoding](cgdisplaymode/pixelencoding.md): Deprecated. Returns the pixel encoding of the specified display mode.
+- [height](cgdisplaymode/height.md): Returns the height of the specified display mode.
+- [ioDisplayModeID](cgdisplaymode/iodisplaymodeid.md): Returns the I/O Kit display mode ID of the specified display mode.
+- [ioFlags](cgdisplaymode/ioflags.md): Returns the I/O Kit flags of the specified display mode.
+- [pixelWidth](cgdisplaymode/pixelwidth.md)
+- [refreshRate](cgdisplaymode/refreshrate.md): Returns the refresh rate of the specified display mode.
+- [typeID](cgdisplaymode/typeid.md): Returns the type identifier of Quartz display modes.
+- [width](cgdisplaymode/width.md): Returns the width of the specified display mode.
+- [isUsableForDesktopGUI()](cgdisplaymode/isusablefordesktopgui%28%29.md): Returns a Boolean value indicating whether the specified display mode is usable for a desktop graphical user interface.
+- [CGDisplayModelNumber(\_:)](cgdisplaymodelnumber%28__%29.md): Returns the model number of a display monitor.
+- [CGDisplayMoveCursorToPoint(\_:\_:)](cgdisplaymovecursortopoint%28____%29.md): Moves the mouse cursor to a specified point relative to the upper-left corner of the display.
+- [CGDisplayPixelsHigh(\_:)](cgdisplaypixelshigh%28__%29.md): Returns the display height in pixel units.
+- [CGDisplayPixelsWide(\_:)](cgdisplaypixelswide%28__%29.md): Returns the display width in pixel units.
+- [CGDisplayPrimaryDisplay(\_:)](cgdisplayprimarydisplay%28__%29.md): Returns the primary display in a hardware mirroring set.
+- [CGDisplayRegisterReconfigurationCallback(\_:\_:)](cgdisplayregisterreconfigurationcallback%28____%29.md): Registers a callback function to be invoked whenever a local display is reconfigured.
+- [CGDisplayRelease(\_:)](cgdisplayrelease%28__%29.md): Releases a captured display.
+- [CGDisplayRemoveReconfigurationCallback(\_:\_:)](cgdisplayremovereconfigurationcallback%28____%29.md): Removes the registration of a callback function that’s invoked whenever a local display is reconfigured.
+- [CGDisplayRestoreColorSyncSettings()](cgdisplayrestorecolorsyncsettings%28%29.md): Restores the gamma tables to the values in the user’s ColorSync display profile.
+- [CGDisplayRotation(\_:)](cgdisplayrotation%28__%29.md): Returns the rotation angle of a display in degrees.
+- [CGDisplayScreenSize(\_:)](cgdisplayscreensize%28__%29.md): Returns the width and height of a display in millimeters.
+- [CGDisplaySerialNumber(\_:)](cgdisplayserialnumber%28__%29.md): Returns the serial number of a display monitor.
+- [CGDisplaySetDisplayMode(\_:\_:\_:)](cgdisplaysetdisplaymode%28______%29.md): Switches a display to a different mode.
+- [CGDisplaySetStereoOperation(\_:\_:\_:\_:)](cgdisplaysetstereooperation%28________%29.md): Immediately enables or disables stereo operation for a display.
+- [CGDisplayShowCursor(\_:)](cgdisplayshowcursor%28__%29.md): Decrements the hide cursor count, and shows the mouse cursor if the count is `0`.
+- [CGDisplaySwitchToMode(\_:\_:)](cgdisplayswitchtomode%28____%29.md): Deprecated. Switches a display to a different mode.
+- [CGDisplayUnitNumber(\_:)](cgdisplayunitnumber%28__%29.md): Returns the logical unit number of a display.
+- [CGDisplayUsesOpenGLAcceleration(\_:)](cgdisplayusesopenglacceleration%28__%29.md): Returns a Boolean value indicating whether Quartz is using OpenGL-based window acceleration (Quartz Extreme) to render in a display.
+- [CGDisplayVendorNumber(\_:)](cgdisplayvendornumber%28__%29.md): Returns the vendor number of the specified display’s monitor.
+- [CGEnableEventStateCombining(\_:)](cgenableeventstatecombining%28__%29.md): Deprecated. Enables or disables the merging of actual key and mouse state with the application-specified state in a synthetic event.
+- [init(source:)](cgevent/init%28source_%29.md): Returns a new Quartz event.
+- [copy()](cgevent/copy%28%29.md): Returns a copy of an existing Quartz event.
+- [init(withDataAllocator:data:)](cgevent/init%28withdataallocator_data_%29.md): Returns a Quartz event created from a flattened data representation of the event.
+- [init(keyboardEventSource:virtualKey:keyDown:)](cgevent/init%28keyboardeventsource_virtualkey_keydown_%29.md): Returns a new Quartz keyboard event.
+- [init(mouseEventSource:mouseType:mouseCursorPosition:mouseButton:)](cgevent/init%28mouseeventsource_mousetype_mousecursorposition_mousebutton_%29.md): Returns a new Quartz mouse event.
+- [init(event:)](cgeventsource/init%28event_%29.md): Returns a Quartz event source created from an existing Quartz event.
+- [getDoubleValueField(\_:)](cgevent/getdoublevaluefield%28__%29.md): Returns the floating-point value of a field in a Quartz event.
+- [flags](cgevent/flags.md): Returns the event flags of a Quartz event.
+- [getIntegerValueField(\_:)](cgevent/getintegervaluefield%28__%29.md): Returns the integer value of a field in a Quartz event.
+- [location](cgevent/location.md): Returns the location of a Quartz mouse event.
+- [timestamp](cgevent/timestamp.md): Returns the timestamp of a Quartz event.
+- [type](cgevent/type.md): Returns the event type of a Quartz event (left mouse down, for example).
+- [typeID](cgevent/typeid.md): Returns the type identifier for the opaque type `CGEventRef`.
+- [unflippedLocation](cgevent/unflippedlocation.md): Returns the location of a Quartz mouse event.
+- [keyboardGetUnicodeString(maxStringLength:actualStringLength:unicodeString:)](cgevent/keyboardgetunicodestring%28maxstringlength_actualstringlength_unicodestring_%29.md): Returns the Unicode string associated with a Quartz keyboard event.
+- [keyboardSetUnicodeString(stringLength:unicodeString:)](cgevent/keyboardsetunicodestring%28stringlength_unicodestring_%29.md): Sets the Unicode string associated with a Quartz keyboard event.
+- [post(tap:)](cgevent/post%28tap_%29.md): Posts a Quartz event into the event stream at a specified location.
+- [postToPSN(processSerialNumber:)](cgevent/posttopsn%28processserialnumber_%29.md): Posts a Quartz event into the event stream for a specific application.
+- [postToPid(\_:)](cgevent/posttopid%28__%29.md)
+- [setDoubleValueField(\_:value:)](cgevent/setdoublevaluefield%28__value_%29.md): Sets the floating-point value of a field in a Quartz event.
+- [setIntegerValueField(\_:value:)](cgevent/setintegervaluefield%28__value_%29.md): Sets the integer value of a field in a Quartz event.
+- [setSource(\_:)](cgevent/setsource%28__%29.md): Sets the event source of a Quartz event.
+- [buttonState(\_:button:)](cgeventsource/buttonstate%28__button_%29.md): Returns a Boolean value indicating the current button state of a Quartz event source.
+- [counterForEventType(\_:eventType:)](cgeventsource/counterforeventtype%28__eventtype_%29.md): Returns a count of events of a given type seen since the window server started.
+- [init(stateID:)](cgeventsource/init%28stateid_%29.md): Returns a Quartz event source created with a specified source state.
+- [flagsState(\_:)](cgeventsource/flagsstate%28__%29.md): Returns the current flags of a Quartz event source.
+- [keyboardType](cgeventsource/keyboardtype.md): Returns the keyboard type to be used with a Quartz event source.
+- [getLocalEventsFilterDuringSuppressionState(\_:)](cgeventsource/getlocaleventsfilterduringsuppressionstate%28__%29.md): Returns the mask that indicates which classes of local hardware events are enabled during event suppression.
+- [pixelsPerLine](cgeventsource/pixelsperline.md): Gets the scale of pixels per line in a scrolling event source.
+- [sourceStateID](cgeventsource/sourcestateid.md): Returns the source state associated with a Quartz event source.
+- [typeID](cgeventsource/typeid.md): Returns the type identifier for the opaque type `CGEventSourceRef`.
+- [userData](cgeventsource/userdata.md): Returns the 64-bit user-specified data for a Quartz event source.
+- [keyState(\_:key:)](cgeventsource/keystate%28__key_%29.md): Returns a Boolean value indicating the current keyboard state of a Quartz event source.
+- [secondsSinceLastEventType(\_:eventType:)](cgeventsource/secondssincelasteventtype%28__eventtype_%29.md): Returns the elapsed time since the last event for a Quartz event source.
+- [setLocalEventsFilterDuringSuppressionState(\_:state:)](cgeventsource/setlocaleventsfilterduringsuppressionstate%28__state_%29.md): Sets the mask that indicates which classes of local hardware events are enabled during event suppression.
+- [tapCreate(tap:place:options:eventsOfInterest:callback:userInfo:)](cgevent/tapcreate%28tap_place_options_eventsofinterest_callback_userinfo_%29.md): Creates an event tap.
+- [tapCreateForPSN(processSerialNumber:place:options:eventsOfInterest:callback:userInfo:)](cgevent/tapcreateforpsn%28processserialnumber_place_options_eventsofinterest_callback_userinfo_%29.md): Creates an event tap for a specified process.
+- [tapCreateForPid(pid:place:options:eventsOfInterest:callback:userInfo:)](cgevent/tapcreateforpid%28pid_place_options_eventsofinterest_callback_userinfo_%29.md)
+- [tapEnable(tap:enable:)](cgevent/tapenable%28tap_enable_%29.md): Enables or disables an event tap.
+- [tapIsEnabled(tap:)](cgevent/tapisenabled%28tap_%29.md): Returns a Boolean value indicating whether an event tap is enabled.
+- [tapPostEvent(\_:)](cgevent/tappostevent%28__%29.md): Posts a Quartz event from an event tap into the event stream.
+- [CGGetActiveDisplayList(\_:\_:\_:)](cggetactivedisplaylist%28______%29.md): Provides a list of displays that are active for drawing.
+- [CGGetDisplayTransferByFormula(\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:)](cggetdisplaytransferbyformula%28____________________%29.md): Gets the coefficients of the gamma transfer formula for a display.
+- [CGGetDisplayTransferByTable(\_:\_:\_:\_:\_:\_:)](cggetdisplaytransferbytable%28____________%29.md): Gets the values in the RGB gamma tables for a display.
+- [CGGetDisplaysWithOpenGLDisplayMask(\_:\_:\_:\_:)](cggetdisplayswithopengldisplaymask%28________%29.md): Provides a list of displays that corresponds to the bits set in an OpenGL display mask.
+- [CGGetDisplaysWithPoint(\_:\_:\_:\_:)](cggetdisplayswithpoint%28________%29.md): Provides a list of online displays with bounds that include the specified point.
+- [CGGetDisplaysWithRect(\_:\_:\_:\_:)](cggetdisplayswithrect%28________%29.md): Gets a list of online displays with bounds that intersect the specified rectangle.
+- [CGGetEventTapList(\_:\_:\_:)](cggeteventtaplist%28______%29.md): Gets a list of currently installed event taps.
+- [CGGetLastMouseDelta()](cggetlastmousedelta%28%29.md): Reports the change in mouse position since the last mouse movement event received by the application.
+- [CGGetOnlineDisplayList(\_:\_:\_:)](cggetonlinedisplaylist%28______%29.md): Provides a list of displays that are online (active, mirrored, or sleeping).
+- [utType](cgimage/uttype.md): The Universal Type Identifier for the image.
+- [CGInhibitLocalEvents(\_:)](cginhibitlocalevents%28__%29.md): Deprecated. Turns off local hardware events in the current session.
+- [CGMainDisplayID()](cgmaindisplayid%28%29.md): Returns the display ID of the main display.
+- [CGOpenGLDisplayMaskToDisplayID(\_:)](cgopengldisplaymasktodisplayid%28__%29.md): Maps an OpenGL display mask to a display ID.
+- [CGPointEqualToPoint(\_:\_:)](cgpointequaltopoint%28____%29.md): Deprecated. Returns whether two points are equal.
+- [CGPostKeyboardEvent(\_:\_:\_:)](cgpostkeyboardevent%28______%29.md): Deprecated. Synthesizes a low-level keyboard event on the local machine.
+- [CGRegisterScreenRefreshCallback(\_:\_:)](cgregisterscreenrefreshcallback%28____%29.md): Deprecated. Registers a callback function to be invoked when local displays are refreshed or modified.
+- [CGReleaseAllDisplays()](cgreleasealldisplays%28%29.md): Releases all captured displays.
+- [CGReleaseDisplayFadeReservation(\_:)](cgreleasedisplayfadereservation%28__%29.md): Releases a display fade reservation, and unfades the display if needed.
+- [CGReleaseScreenRefreshRects(\_:)](cgreleasescreenrefreshrects%28__%29.md): Deprecated. Deallocates a list of rectangles that represent changed areas on local displays.
+- [CGRestorePermanentDisplayConfiguration()](cgrestorepermanentdisplayconfiguration%28%29.md): Restores the permanent display configuration settings for the current user.
+- [CGScreenRegisterMoveCallback(\_:\_:)](cgscreenregistermovecallback%28____%29.md): Deprecated. Registers a callback function to be invoked when an area of the display is moved.
+- [CGScreenUnregisterMoveCallback(\_:\_:)](cgscreenunregistermovecallback%28____%29.md): Deprecated. Removes a previously registered callback function invoked when an area of the display is moved.
+- [CGSessionCopyCurrentDictionary()](cgsessioncopycurrentdictionary%28%29.md): Returns information about the caller’s window server session.
+- [CGSetDisplayTransferByByteTable(\_:\_:\_:\_:\_:)](cgsetdisplaytransferbybytetable%28__________%29.md): Sets the byte values in the 8-bit RGB gamma tables for a display.
+- [CGSetDisplayTransferByFormula(\_:\_:\_:\_:\_:\_:\_:\_:\_:\_:)](cgsetdisplaytransferbyformula%28____________________%29.md): Sets the gamma function for a display by specifying the coefficients of the gamma transfer formula.
+- [CGSetDisplayTransferByTable(\_:\_:\_:\_:\_:)](cgsetdisplaytransferbytable%28__________%29.md): Sets the color gamma function for a display by specifying the values in the RGB gamma tables.
+- [CGSetLocalEventsFilterDuringSuppressionState(\_:\_:)](cgsetlocaleventsfilterduringsuppressionstate%28____%29.md): Deprecated. Filters local hardware events from the keyboard and mouse during the short interval after a synthetic event is posted.
+- [CGSetLocalEventsSuppressionInterval(\_:)](cgsetlocaleventssuppressioninterval%28__%29.md): Deprecated. Sets the time interval in seconds that local hardware events are suppressed after posting a synthetic event.
+- [CGShieldingWindowID(\_:)](cgshieldingwindowid%28__%29.md): Returns the window ID of the shield window for a captured display.
+- [CGShieldingWindowLevel()](cgshieldingwindowlevel%28%29.md): Returns the window level of the shield window for a captured display.
+- [CGSizeEqualToSize(\_:\_:)](cgsizeequaltosize%28____%29.md): Deprecated. Returns whether two sizes are equal.
+- [CGUnregisterScreenRefreshCallback(\_:\_:)](cgunregisterscreenrefreshcallback%28____%29.md): Deprecated. Removes a previously registered callback function invoked when local displays are refreshed or modified.
+- [CGWaitForScreenRefreshRects(\_:\_:)](cgwaitforscreenrefreshrects%28____%29.md): Deprecated. Waits for screen refresh operations.
+- [CGWaitForScreenUpdateRects(\_:\_:\_:\_:\_:)](cgwaitforscreenupdaterects%28__________%29.md): Deprecated. Waits for screen update operations.
+- [CGWarpMouseCursorPosition(\_:)](cgwarpmousecursorposition%28__%29.md): Moves the mouse cursor without generating events.
+- [CGWindowLevelForKey(\_:)](cgwindowlevelforkey%28__%29.md): Returns the window level that corresponds to one of the standard window types.
+- [CGWindowListCopyWindowInfo(\_:\_:)](cgwindowlistcopywindowinfo%28____%29.md): Generates and returns information about the selected windows in the current user session.
+- [CGWindowListCreateDescriptionFromArray(\_:)](cgwindowlistcreatedescriptionfromarray%28__%29.md): Generates and returns information about windows with the specified window IDs.
+- [CGWindowServerCFMachPort()](cgwindowservercfmachport%28%29.md): Deprecated. Returns a Core Foundation Mach port (CFMachPort) that corresponds to the macOS window server.
+- [CGWindowServerCreateServerPort()](cgwindowservercreateserverport%28%29.md)
+- [acos(\_:)](acos%28__%29.md)
+- [acosh(\_:)](acosh%28__%29.md)
+- [asin(\_:)](asin%28__%29.md)
+- [asinh(\_:)](asinh%28__%29.md)
+- [atan(\_:)](atan%28__%29.md)
+- [atan2(\_:\_:)](atan2%28____%29.md)
+- [atanh(\_:)](atanh%28__%29.md)
+- [cbrt(\_:)](cbrt%28__%29.md)
+- [copysign(\_:\_:)](copysign%28____%29.md)
+- [cos(\_:)](cos%28__%29.md)
+- [cosh(\_:)](cosh%28__%29.md)
+- [erf(\_:)](erf%28__%29.md)
+- [erfc(\_:)](erfc%28__%29.md)
+- [exp(\_:)](exp%28__%29.md)
+- [exp2(\_:)](exp2%28__%29.md)
+- [expm1(\_:)](expm1%28__%29.md)
+- [fdim(\_:\_:)](fdim%28____%29.md)
+- [fmax(\_:\_:)](fmax%28____%29.md)
+- [fmin(\_:\_:)](fmin%28____%29.md)
+- [hypot(\_:\_:)](hypot%28____%29.md)
+- [ilogb(\_:)](ilogb%28__%29.md): Deprecated.
+- [CGColorSpaceCreateLinearized(\_:)](cgcolorspacecreatelinearized%28__%29.md)
+- [init(src:dst:)](cgcolorconversioninfo/init%28src_dst_%29.md): Creates a conversion between two specified color spaces.
+- [j0(\_:)](j0%28__%29.md)
+- [j1(\_:)](j1%28__%29.md)
+- [jn(\_:\_:)](jn%28____%29.md)
+- [ldexp(\_:\_:)](ldexp%28____%29.md): Deprecated.
+- [lgamma(\_:)](lgamma%28__%29.md)
+- [log(\_:)](log%28__%29.md)
+- [log10(\_:)](log10%28__%29.md)
+- [log1p(\_:)](log1p%28__%29.md)
+- [log2(\_:)](log2%28__%29.md)
+- [logb(\_:)](logb%28__%29.md)
+- [nan(\_:)](nan%28__%29.md): Deprecated.
+- [nearbyint(\_:)](nearbyint%28__%29.md)
+- [nextafter(\_:\_:)](nextafter%28____%29.md)
+- [pow(\_:\_:)](pow%28____%29.md)
+- [remquo(\_:\_:)](remquo%28____%29.md)
+- [rint(\_:)](rint%28__%29.md)
+- [sin(\_:)](sin%28__%29.md)
+- [sinh(\_:)](sinh%28__%29.md)
+- [tan(\_:)](tan%28__%29.md)
+- [tanh(\_:)](tanh%28__%29.md)
+- [tgamma(\_:)](tgamma%28__%29.md)
+- [localEventsSuppressionInterval](cgeventsource/localeventssuppressioninterval.md): Returns the interval that local hardware events may be suppressed following the posting of a Quartz event.
+- [pixelHeight](cgdisplaymode/pixelheight.md)
+- [typeID](cgcolorconversioninfo/typeid.md): Returns the Core Foundation type identifier for a color conversion info data type.
+- [y0(\_:)](y0%28__%29.md)
+- [y1(\_:)](y1%28__%29.md)
+- [yn(\_:\_:)](yn%28____%29.md)
+- [CGAffineTransformMake(\_:\_:\_:\_:\_:\_:)](cgaffinetransformmake%28____________%29.md): Returns an affine transformation matrix constructed from values you provide.
+- [CGColorSpaceCopyBaseColorSpace(\_:)](cgcolorspacecopybasecolorspace%28__%29.md)
+- [CGColorSpaceCreateCopyWithStandardRange(\_:)](cgcolorspacecreatecopywithstandardrange%28__%29.md)
+- [CGColorSpaceCreateExtended(\_:)](cgcolorspacecreateextended%28__%29.md)
+- [CGColorSpaceCreateExtendedLinearized(\_:)](cgcolorspacecreateextendedlinearized%28__%29.md)
+- [CGColorSpaceCreateWithColorSyncProfile(\_:\_:)](cgcolorspacecreatewithcolorsyncprofile%28____%29.md)
+- [CGColorSpaceIsHLGBased(\_:)](cgcolorspaceishlgbased%28__%29.md)
+- [CGColorSpaceIsPQBased(\_:)](cgcolorspaceispqbased%28__%29.md)
+- [CGColorSpaceUsesITUR_2100TF(\_:)](cgcolorspaceusesitur_2100tf%28__%29.md)
+- [CGContextDrawConicGradient(\_:\_:\_:\_:)](cgcontextdrawconicgradient%28________%29.md)
+- [CGContextGetEDRTargetHeadroom(\_:)](cgcontextgetedrtargetheadroom%28__%29.md)
+- [CGConvertColorDataWithFormat(\_:\_:\_:\_:\_:\_:\_:)](cgconvertcolordatawithformat%28______________%29.md)
+- [CGEnableEventStateCombining(\_:)](cgenableeventstatecombining%28__%29.md): Deprecated. Enables or disables the merging of actual key and mouse state with the application-specified state in a synthetic event.
+- [CGErrorSetCallback(\_:)](cgerrorsetcallback%28__%29.md)
+- [CGImageCreateCopyWithContentHeadroom(\_:\_:)](cgimagecreatecopywithcontentheadroom%28____%29.md)
+- [CGInhibitLocalEvents(\_:)](cginhibitlocalevents%28__%29.md): Deprecated. Turns off local hardware events in the current session.
+- [CGPDFArrayApplyBlock(\_:\_:\_:)](cgpdfarrayapplyblock%28______%29.md)
+- [CGPDFContextBeginTag(\_:\_:\_:)](cgpdfcontextbegintag%28______%29.md)
+- [CGPDFContextEndTag(\_:)](cgpdfcontextendtag%28__%29.md)
+- [CGPDFContextSetIDTree(\_:\_:)](cgpdfcontextsetidtree%28____%29.md)
+- [CGPDFContextSetOutline(\_:\_:)](cgpdfcontextsetoutline%28____%29.md)
+- [CGPDFContextSetPageTagStructureTree(\_:\_:)](cgpdfcontextsetpagetagstructuretree%28____%29.md)
+- [CGPDFContextSetParentTree(\_:\_:)](cgpdfcontextsetparenttree%28____%29.md)
+- [CGPDFDictionaryApplyBlock(\_:\_:\_:)](cgpdfdictionaryapplyblock%28______%29.md)
+- [CGPDFScannerStop(\_:)](cgpdfscannerstop%28__%29.md)
+- [CGPointMake(\_:\_:)](cgpointmake%28____%29.md): Returns a point with the specified coordinates.
+- [CGPointMakeWithDictionaryRepresentation(\_:\_:)](cgpointmakewithdictionaryrepresentation%28____%29.md): Fills in a point using the contents of the specified dictionary.
+- [CGPostKeyboardEvent(\_:\_:\_:)](cgpostkeyboardevent%28______%29.md): Deprecated. Synthesizes a low-level keyboard event on the local machine.
+- [CGPreflightListenEventAccess()](cgpreflightlisteneventaccess%28%29.md)
+- [CGPreflightPostEventAccess()](cgpreflightposteventaccess%28%29.md)
+- [CGPreflightScreenCaptureAccess()](cgpreflightscreencaptureaccess%28%29.md)
+- [CGRectMake(\_:\_:\_:\_:)](cgrectmake%28________%29.md): Returns a rectangle with the specified coordinate and size values.
+- [CGRectMakeWithDictionaryRepresentation(\_:\_:)](cgrectmakewithdictionaryrepresentation%28____%29.md): Fills in a rectangle using the contents of the specified dictionary.
+- [CGRegisterScreenRefreshCallback(\_:\_:)](cgregisterscreenrefreshcallback%28____%29.md): Deprecated. Registers a callback function to be invoked when local displays are refreshed or modified.
+- [CGReleaseScreenRefreshRects(\_:)](cgreleasescreenrefreshrects%28__%29.md): Deprecated. Deallocates a list of rectangles that represent changed areas on local displays.
+- [CGRequestListenEventAccess()](cgrequestlisteneventaccess%28%29.md)
+- [CGRequestPostEventAccess()](cgrequestposteventaccess%28%29.md)
+- [CGRequestScreenCaptureAccess()](cgrequestscreencaptureaccess%28%29.md)
+- [CGScreenRegisterMoveCallback(\_:\_:)](cgscreenregistermovecallback%28____%29.md): Deprecated. Registers a callback function to be invoked when an area of the display is moved.
+- [CGScreenUnregisterMoveCallback(\_:\_:)](cgscreenunregistermovecallback%28____%29.md): Deprecated. Removes a previously registered callback function invoked when an area of the display is moved.
+- [CGSetLocalEventsFilterDuringSuppressionState(\_:\_:)](cgsetlocaleventsfilterduringsuppressionstate%28____%29.md): Deprecated. Filters local hardware events from the keyboard and mouse during the short interval after a synthetic event is posted.
+- [CGSetLocalEventsSuppressionInterval(\_:)](cgsetlocaleventssuppressioninterval%28__%29.md): Deprecated. Sets the time interval in seconds that local hardware events are suppressed after posting a synthetic event.
+- [CGSizeMake(\_:\_:)](cgsizemake%28____%29.md): Returns a size with the specified dimension values.
+- [CGSizeMakeWithDictionaryRepresentation(\_:\_:)](cgsizemakewithdictionaryrepresentation%28____%29.md): Fills in a size using the contents of the specified dictionary.
+- [CGUnregisterScreenRefreshCallback(\_:\_:)](cgunregisterscreenrefreshcallback%28____%29.md): Deprecated. Removes a previously registered callback function invoked when local displays are refreshed or modified.
+- [CGVectorMake(\_:\_:)](cgvectormake%28____%29.md): Returns a vector with the specified dimension values.
+- [CGWaitForScreenRefreshRects(\_:\_:)](cgwaitforscreenrefreshrects%28____%29.md): Deprecated. Waits for screen refresh operations.
+- [CGWaitForScreenUpdateRects(\_:\_:\_:\_:\_:)](cgwaitforscreenupdaterects%28__________%29.md): Deprecated. Waits for screen update operations.
+- [accessPermissions](cgpdfdocument/accesspermissions.md)
+- [applyWithBlock(\_:)](cgpath/applywithblock%28__%29.md)
+- [byteOrderInfo](cgimage/byteorderinfo.md)
+- [containsImageSpecificToneMappingMetadata](cgimage/containsimagespecifictonemappingmetadata.md)
+- [contentHeadroom](cgimage/contentheadroom.md)
+- [convert(width:height:to:format:from:format:options:)](cgcolorconversioninfo/convert%28width_height_to_format_from_format_options_%29.md)
+- [copyPropertyList()](cgcolorspace/copypropertylist%28%29.md): Returns a copy of the color space’s properties.
+- [info](cgdataprovider/info.md)
+- [init(genericGrayGamma2_2Gray:alpha:)](cgcolor/init%28genericgraygamma2_2gray_alpha_%29.md): Creates a color in the Generic gray color space with a gamma ramp of 2.2.
+- [init(headroom:width:height:bitsPerComponent:bitsPerPixel:bytesPerRow:space:bitmapInfo:provider:decode:shouldInterpolate:intent:)](cgimage/init%28headroom_width_height_bitspercomponent_bitsperpixel_bytesperrow_space_bitmapinfo_provider_decode_shouldinterpolate_intent_%29.md)
+- [init(iccData:)](cgcolorspace/init%28iccdata_%29.md): Creates an ICC-based color space using the ICC profile contained in the specified data.
+- [init(optionsSrc:dst:options:)](cgcolorconversioninfo/init%28optionssrc_dst_options_%29.md)
+- [init(propertyListPlist:)](cgcolorspace/init%28propertylistplist_%29.md): Creates a color space from a property list.
+- [init(scrollWheelEvent2Source:units:wheelCount:wheel1:wheel2:wheel3:)](cgevent/init%28scrollwheelevent2source_units_wheelcount_wheel1_wheel2_wheel3_%29.md)
+- [isHDR()](cgcolorspace/ishdr%28%29.md)
+- [name](cgpdftagtype/name.md)
+- [outline](cgpdfdocument/outline.md)
+- [pixelFormatInfo](cgimage/pixelformatinfo.md)
+- [resetClip()](cgcontext/resetclip%28%29.md)
+- [setEDRTargetHeadroom(\_:)](cgcontext/setedrtargetheadroom%28__%29.md)
+- [shouldToneMap](cgimage/shouldtonemap.md)
+- [CGColorSpaceUsesExtendedRange(\_:)](cgcolorspaceusesextendedrange%28__%29.md)
+
+## See Also
+
+### Reference
+
+- [Core Graphics Structures](core-graphics-structures.md)
+- [Core Graphics Enumerations](core-graphics-enumerations.md)
+- [Core Graphics Constants](core-graphics-constants.md)
+- [Core Graphics Data Types](core-graphics-data-types.md)
+
+# Core Graphics Functions (Objective-C)
+
+**Framework:** Core Graphics  
+**Kind:** API Collection
+
+## Topics
+
+### Functions
+
+- [CGAcquireDisplayFadeReservation](cgacquiredisplayfadereservation%28____%29.md): Reserves the fade hardware for a specified time interval.
+- [CGAssociateMouseAndMouseCursorPosition](cgassociatemouseandmousecursorposition%28__%29.md): Connects or disconnects the mouse and cursor while an application is in the foreground.
+- [CGBeginDisplayConfiguration](cgbegindisplayconfiguration%28__%29.md): Begins a new set of display configuration changes.
+- [CGCancelDisplayConfiguration](cgcanceldisplayconfiguration%28__%29.md): Cancels a set of display configuration changes.
+- [CGCaptureAllDisplays](cgcapturealldisplays%28%29.md): Obtains exclusive use of all active displays, preventing other applications and system services from using the display or changing its configuration.
+- [CGCaptureAllDisplaysWithOptions](cgcapturealldisplayswithoptions%28__%29.md): Captures all attached displays, using the specified options.
+- [CGColorConversionInfoCreateFromList](cgcolorconversioninfocreatefromlist.md): Creates a conversion between an arbitrary number of specified color spaces.
+- [CGCompleteDisplayConfiguration](cgcompletedisplayconfiguration%28____%29.md): Completes a set of display configuration changes.
+- [CGConfigureDisplayFadeEffect](cgconfiguredisplayfadeeffect%28____________%29.md): Modifies the settings of the built-in fade effect that occurs during a display configuration.
+- [CGConfigureDisplayMirrorOfDisplay](cgconfiguredisplaymirrorofdisplay%28______%29.md): Changes the configuration of a mirroring set.
+- [CGConfigureDisplayMode](cgconfiguredisplaymode%28______%29.md): Deprecated. Configures the display mode of a display.
+- [CGConfigureDisplayOrigin](cgconfiguredisplayorigin%28________%29.md): Configures the origin of a display relative to the global display coordinate space.
+- [CGConfigureDisplayStereoOperation](cgconfiguredisplaystereooperation%28________%29.md): Enables or disables stereo operation for a display, as part of a display configuration.
+- [CGConfigureDisplayWithDisplayMode](cgconfiguredisplaywithdisplaymode%28________%29.md): Configures the display mode of a display.
+- [CGContextDrawPDFDocument](cgcontextdrawpdfdocument.md): Deprecated.
+- [CGCursorIsDrawnInFramebuffer](cgcursorisdrawninframebuffer%28%29.md): Deprecated. Returns a Boolean value indicating whether the mouse cursor is drawn in framebuffer memory.
+- [CGCursorIsVisible](cgcursorisvisible%28%29.md): Deprecated. Returns a Boolean value indicating whether the mouse cursor is visible.
+- [CGDirectDisplayCopyCurrentMetalDevice](cgdirectdisplaycopycurrentmetaldevice%28__%29.md): Returns the GPU device instance that’s currently driving a display.
+- [CGDisplayAvailableModes](cgdisplayavailablemodes%28__%29.md): Deprecated. Returns information about the currently available display modes.
+- [CGDisplayBestModeForParameters](cgdisplaybestmodeforparameters%28__________%29.md): Deprecated. Returns information about the display mode closest to a specified depth and screen size.
+- [CGDisplayBestModeForParametersAndRefreshRate](cgdisplaybestmodeforparametersandrefreshrate%28____________%29.md): Deprecated. Returns information about the display mode closest to a specified depth, screen size, and refresh rate.
+- [CGDisplayBounds](cgdisplaybounds%28__%29.md): Returns the bounds of a display in the global display coordinate space.
+- [CGDisplayCapture](cgdisplaycapture%28__%29.md): Obtains exclusive use of a display, preventing other applications and system services from using the display or changing its configuration.
+- [CGDisplayCaptureWithOptions](cgdisplaycapturewithoptions%28____%29.md): Obtains exclusive use of a display for an application using the options you specify.
+- [CGDisplayCopyAllDisplayModes](cgdisplaycopyalldisplaymodes%28____%29.md): Returns information about the currently available display modes.
+- [CGDisplayCopyColorSpace](cgdisplaycopycolorspace%28__%29.md): Returns the color space for a display.
+- [CGDisplayCopyDisplayMode](cgdisplaycopydisplaymode%28__%29.md): Returns information about a display’s current configuration.
+- [CGDisplayCurrentMode](cgdisplaycurrentmode%28__%29.md): Deprecated. Returns information about the current display mode.
+- [CGDisplayFade](cgdisplayfade%28________________%29.md): Performs a single fade operation.
+- [CGDisplayFadeOperationInProgress](cgdisplayfadeoperationinprogress%28%29.md): Deprecated. Returns a Boolean value indicating whether a fade operation is currently in progress.
+- [CGDisplayGammaTableCapacity](cgdisplaygammatablecapacity%28__%29.md): Returns the capacity, or number of entries, in the gamma table for a display.
+- [CGDisplayGetDrawingContext](cgdisplaygetdrawingcontext%28__%29.md): Returns a graphics context suitable for drawing to a captured display.
+- [CGDisplayHideCursor](cgdisplayhidecursor%28__%29.md): Hides the mouse cursor, and increments the hide cursor count.
+- [CGDisplayIDToOpenGLDisplayMask](cgdisplayidtoopengldisplaymask%28__%29.md): Maps a display ID to an OpenGL display mask.
+- [CGDisplayIOServicePort](cgdisplayioserviceport%28__%29.md): Deprecated. Returns the I/O Kit service port of the specified display.
+- [CGDisplayIsActive](cgdisplayisactive%28__%29.md): Returns a Boolean value indicating whether a display is active.
+- [CGDisplayIsAlwaysInMirrorSet](cgdisplayisalwaysinmirrorset%28__%29.md): Returns a Boolean value indicating whether a display is always in a mirroring set.
+- [CGDisplayIsAsleep](cgdisplayisasleep%28__%29.md): Returns a Boolean value indicating whether a display is sleeping (and is therefore not drawable).
+- [CGDisplayIsBuiltin](cgdisplayisbuiltin%28__%29.md): Returns a Boolean value indicating whether a display is built-in, such as the internal display in portable systems.
+- [CGDisplayIsCaptured](cgdisplayiscaptured%28__%29.md): Deprecated. Returns a Boolean value indicating whether a display is captured.
+- [CGDisplayIsInHWMirrorSet](cgdisplayisinhwmirrorset%28__%29.md): Returns a Boolean value indicating whether a display is in a hardware mirroring set.
+- [CGDisplayIsInMirrorSet](cgdisplayisinmirrorset%28__%29.md): Returns a Boolean value indicating whether a display is in a mirroring set.
+- [CGDisplayIsMain](cgdisplayismain%28__%29.md): Returns a Boolean value indicating whether a display is the main display.
+- [CGDisplayIsOnline](cgdisplayisonline%28__%29.md): Returns a Boolean value indicating whether a display is connected or online.
+- [CGDisplayIsStereo](cgdisplayisstereo%28__%29.md): Returns a Boolean value indicating whether a display is running in a stereo graphics mode.
+- [CGDisplayMirrorsDisplay](cgdisplaymirrorsdisplay%28__%29.md): For a secondary display in a mirroring set, returns the primary display.
+- [CGDisplayModeCopyPixelEncoding](cgdisplaymode/pixelencoding.md): Deprecated. Returns the pixel encoding of the specified display mode.
+- [CGDisplayModeGetHeight](cgdisplaymode/height.md): Returns the height of the specified display mode.
+- [CGDisplayModeGetIODisplayModeID](cgdisplaymode/iodisplaymodeid.md): Returns the I/O Kit display mode ID of the specified display mode.
+- [CGDisplayModeGetIOFlags](cgdisplaymode/ioflags.md): Returns the I/O Kit flags of the specified display mode.
+- [CGDisplayModeGetPixelWidth](cgdisplaymode/pixelwidth.md)
+- [CGDisplayModeGetRefreshRate](cgdisplaymode/refreshrate.md): Returns the refresh rate of the specified display mode.
+- [CGDisplayModeGetTypeID](cgdisplaymode/typeid.md): Returns the type identifier of Quartz display modes.
+- [CGDisplayModeGetWidth](cgdisplaymode/width.md): Returns the width of the specified display mode.
+- [CGDisplayModeIsUsableForDesktopGUI](cgdisplaymode/isusablefordesktopgui%28%29.md): Returns a Boolean value indicating whether the specified display mode is usable for a desktop graphical user interface.
+- [CGDisplayModeRelease](cgdisplaymoderelease.md): Releases a Core Graphics display mode.
+- [CGDisplayModeRetain](cgdisplaymoderetain.md): Retains a Core Graphics display mode.
+- [CGDisplayModelNumber](cgdisplaymodelnumber%28__%29.md): Returns the model number of a display monitor.
+- [CGDisplayMoveCursorToPoint](cgdisplaymovecursortopoint%28____%29.md): Moves the mouse cursor to a specified point relative to the upper-left corner of the display.
+- [CGDisplayPixelsHigh](cgdisplaypixelshigh%28__%29.md): Returns the display height in pixel units.
+- [CGDisplayPixelsWide](cgdisplaypixelswide%28__%29.md): Returns the display width in pixel units.
+- [CGDisplayPrimaryDisplay](cgdisplayprimarydisplay%28__%29.md): Returns the primary display in a hardware mirroring set.
+- [CGDisplayRegisterReconfigurationCallback](cgdisplayregisterreconfigurationcallback%28____%29.md): Registers a callback function to be invoked whenever a local display is reconfigured.
+- [CGDisplayRelease](cgdisplayrelease%28__%29.md): Releases a captured display.
+- [CGDisplayRemoveReconfigurationCallback](cgdisplayremovereconfigurationcallback%28____%29.md): Removes the registration of a callback function that’s invoked whenever a local display is reconfigured.
+- [CGDisplayRestoreColorSyncSettings](cgdisplayrestorecolorsyncsettings%28%29.md): Restores the gamma tables to the values in the user’s ColorSync display profile.
+- [CGDisplayRotation](cgdisplayrotation%28__%29.md): Returns the rotation angle of a display in degrees.
+- [CGDisplayScreenSize](cgdisplayscreensize%28__%29.md): Returns the width and height of a display in millimeters.
+- [CGDisplaySerialNumber](cgdisplayserialnumber%28__%29.md): Returns the serial number of a display monitor.
+- [CGDisplaySetDisplayMode](cgdisplaysetdisplaymode%28______%29.md): Switches a display to a different mode.
+- [CGDisplaySetStereoOperation](cgdisplaysetstereooperation%28________%29.md): Immediately enables or disables stereo operation for a display.
+- [CGDisplayShowCursor](cgdisplayshowcursor%28__%29.md): Decrements the hide cursor count, and shows the mouse cursor if the count is `0`.
+- [CGDisplaySwitchToMode](cgdisplayswitchtomode%28____%29.md): Deprecated. Switches a display to a different mode.
+- [CGDisplayUnitNumber](cgdisplayunitnumber%28__%29.md): Returns the logical unit number of a display.
+- [CGDisplayUsesOpenGLAcceleration](cgdisplayusesopenglacceleration%28__%29.md): Returns a Boolean value indicating whether Quartz is using OpenGL-based window acceleration (Quartz Extreme) to render in a display.
+- [CGDisplayVendorNumber](cgdisplayvendornumber%28__%29.md): Returns the vendor number of the specified display’s monitor.
+- [CGEnableEventStateCombining](cgenableeventstatecombining%28__%29.md): Deprecated. Enables or disables the merging of actual key and mouse state with the application-specified state in a synthetic event.
+- [CGEventCreate](cgevent/init%28source_%29.md): Returns a new Quartz event.
+- [CGEventCreateCopy](cgevent/copy%28%29.md): Returns a copy of an existing Quartz event.
+- [CGEventCreateData](cgeventcreatedata.md): Returns a flattened data representation of a Quartz event.
+- [CGEventCreateFromData](cgevent/init%28withdataallocator_data_%29.md): Returns a Quartz event created from a flattened data representation of the event.
+- [CGEventCreateKeyboardEvent](cgevent/init%28keyboardeventsource_virtualkey_keydown_%29.md): Returns a new Quartz keyboard event.
+- [CGEventCreateMouseEvent](cgevent/init%28mouseeventsource_mousetype_mousecursorposition_mousebutton_%29.md): Returns a new Quartz mouse event.
+- [CGEventCreateScrollWheelEvent](cgeventcreatescrollwheelevent.md): Returns a new Quartz scrolling event.
+- [CGEventCreateSourceFromEvent](cgeventsource/init%28event_%29.md): Returns a Quartz event source created from an existing Quartz event.
+- [CGEventGetDoubleValueField](cgevent/getdoublevaluefield%28__%29.md): Returns the floating-point value of a field in a Quartz event.
+- [CGEventGetFlags](cgevent/flags.md): Returns the event flags of a Quartz event.
+- [CGEventGetIntegerValueField](cgevent/getintegervaluefield%28__%29.md): Returns the integer value of a field in a Quartz event.
+- [CGEventGetLocation](cgevent/location.md): Returns the location of a Quartz mouse event.
+- [CGEventGetTimestamp](cgevent/timestamp.md): Returns the timestamp of a Quartz event.
+- [CGEventGetType](cgevent/type.md): Returns the event type of a Quartz event (left mouse down, for example).
+- [CGEventGetTypeID](cgevent/typeid.md): Returns the type identifier for the opaque type `CGEventRef`.
+- [CGEventGetUnflippedLocation](cgevent/unflippedlocation.md): Returns the location of a Quartz mouse event.
+- [CGEventKeyboardGetUnicodeString](cgevent/keyboardgetunicodestring%28maxstringlength_actualstringlength_unicodestring_%29.md): Returns the Unicode string associated with a Quartz keyboard event.
+- [CGEventKeyboardSetUnicodeString](cgevent/keyboardsetunicodestring%28stringlength_unicodestring_%29.md): Sets the Unicode string associated with a Quartz keyboard event.
+- [CGEventPost](cgevent/post%28tap_%29.md): Posts a Quartz event into the event stream at a specified location.
+- [CGEventPostToPSN](cgevent/posttopsn%28processserialnumber_%29.md): Posts a Quartz event into the event stream for a specific application.
+- [CGEventPostToPid](cgevent/posttopid%28__%29.md)
+- [CGEventSetDoubleValueField](cgevent/setdoublevaluefield%28__value_%29.md): Sets the floating-point value of a field in a Quartz event.
+- [CGEventSetFlags](cgeventsetflags.md): Sets the event flags of a Quartz event.
+- [CGEventSetIntegerValueField](cgevent/setintegervaluefield%28__value_%29.md): Sets the integer value of a field in a Quartz event.
+- [CGEventSetLocation](cgeventsetlocation.md): Sets the location of a Quartz mouse event.
+- [CGEventSetSource](cgevent/setsource%28__%29.md): Sets the event source of a Quartz event.
+- [CGEventSetTimestamp](cgeventsettimestamp.md): Sets the timestamp of a Quartz event.
+- [CGEventSetType](cgeventsettype.md): Sets the event type of a Quartz event (left mouse down, for example).
+- [CGEventSourceButtonState](cgeventsource/buttonstate%28__button_%29.md): Returns a Boolean value indicating the current button state of a Quartz event source.
+- [CGEventSourceCounterForEventType](cgeventsource/counterforeventtype%28__eventtype_%29.md): Returns a count of events of a given type seen since the window server started.
+- [CGEventSourceCreate](cgeventsource/init%28stateid_%29.md): Returns a Quartz event source created with a specified source state.
+- [CGEventSourceFlagsState](cgeventsource/flagsstate%28__%29.md): Returns the current flags of a Quartz event source.
+- [CGEventSourceGetKeyboardType](cgeventsource/keyboardtype.md): Returns the keyboard type to be used with a Quartz event source.
+- [CGEventSourceGetLocalEventsFilterDuringSuppressionState](cgeventsource/getlocaleventsfilterduringsuppressionstate%28__%29.md): Returns the mask that indicates which classes of local hardware events are enabled during event suppression.
+- [CGEventSourceGetPixelsPerLine](cgeventsource/pixelsperline.md): Gets the scale of pixels per line in a scrolling event source.
+- [CGEventSourceGetSourceStateID](cgeventsource/sourcestateid.md): Returns the source state associated with a Quartz event source.
+- [CGEventSourceGetTypeID](cgeventsource/typeid.md): Returns the type identifier for the opaque type `CGEventSourceRef`.
+- [CGEventSourceGetUserData](cgeventsource/userdata.md): Returns the 64-bit user-specified data for a Quartz event source.
+- [CGEventSourceKeyState](cgeventsource/keystate%28__key_%29.md): Returns a Boolean value indicating the current keyboard state of a Quartz event source.
+- [CGEventSourceSecondsSinceLastEventType](cgeventsource/secondssincelasteventtype%28__eventtype_%29.md): Returns the elapsed time since the last event for a Quartz event source.
+- [CGEventSourceSetKeyboardType](cgeventsourcesetkeyboardtype.md): Sets the keyboard type to be used with a Quartz event source.
+- [CGEventSourceSetLocalEventsFilterDuringSuppressionState](cgeventsource/setlocaleventsfilterduringsuppressionstate%28__state_%29.md): Sets the mask that indicates which classes of local hardware events are enabled during event suppression.
+- [CGEventSourceSetLocalEventsSuppressionInterval](cgeventsourcesetlocaleventssuppressioninterval.md): Sets the interval that local hardware events may be suppressed following the posting of a Quartz event.
+- [CGEventSourceSetPixelsPerLine](cgeventsourcesetpixelsperline.md): Sets the scale of pixels per line in a scrolling event source.
+- [CGEventSourceSetUserData](cgeventsourcesetuserdata.md): Sets the 64-bit user-specified data for a Quartz event source.
+- [CGEventTapCreate](cgevent/tapcreate%28tap_place_options_eventsofinterest_callback_userinfo_%29.md): Creates an event tap.
+- [CGEventTapCreateForPSN](cgevent/tapcreateforpsn%28processserialnumber_place_options_eventsofinterest_callback_userinfo_%29.md): Creates an event tap for a specified process.
+- [CGEventTapCreateForPid](cgevent/tapcreateforpid%28pid_place_options_eventsofinterest_callback_userinfo_%29.md)
+- [CGEventTapEnable](cgevent/tapenable%28tap_enable_%29.md): Enables or disables an event tap.
+- [CGEventTapIsEnabled](cgevent/tapisenabled%28tap_%29.md): Returns a Boolean value indicating whether an event tap is enabled.
+- [CGEventTapPostEvent](cgevent/tappostevent%28__%29.md): Posts a Quartz event from an event tap into the event stream.
+- [CGGetActiveDisplayList](cggetactivedisplaylist%28______%29.md): Provides a list of displays that are active for drawing.
+- [CGGetDisplayTransferByFormula](cggetdisplaytransferbyformula%28____________________%29.md): Gets the coefficients of the gamma transfer formula for a display.
+- [CGGetDisplayTransferByTable](cggetdisplaytransferbytable%28____________%29.md): Gets the values in the RGB gamma tables for a display.
+- [CGGetDisplaysWithOpenGLDisplayMask](cggetdisplayswithopengldisplaymask%28________%29.md): Provides a list of displays that corresponds to the bits set in an OpenGL display mask.
+- [CGGetDisplaysWithPoint](cggetdisplayswithpoint%28________%29.md): Provides a list of online displays with bounds that include the specified point.
+- [CGGetDisplaysWithRect](cggetdisplayswithrect%28________%29.md): Gets a list of online displays with bounds that intersect the specified rectangle.
+- [CGGetEventTapList](cggeteventtaplist%28______%29.md): Gets a list of currently installed event taps.
+- [CGGetLastMouseDelta](cggetlastmousedelta.md): Reports the change in mouse position since the last mouse movement event received by the application.
+- [CGGetOnlineDisplayList](cggetonlinedisplaylist%28______%29.md): Provides a list of displays that are online (active, mirrored, or sleeping).
+- [CGImageGetUTType](cgimage/uttype.md): The Universal Type Identifier for the image.
+- [CGInhibitLocalEvents](cginhibitlocalevents%28__%29.md): Deprecated. Turns off local hardware events in the current session.
+- [CGMainDisplayID](cgmaindisplayid%28%29.md): Returns the display ID of the main display.
+- [CGOpenGLDisplayMaskToDisplayID](cgopengldisplaymasktodisplayid%28__%29.md): Maps an OpenGL display mask to a display ID.
+- [CGPointEqualToPoint](cgpointequaltopoint%28____%29.md): Deprecated. Returns whether two points are equal.
+- [CGPostKeyboardEvent](cgpostkeyboardevent%28______%29.md): Deprecated. Synthesizes a low-level keyboard event on the local machine.
+- [CGPostMouseEvent](cgpostmouseevent.md): Deprecated. Synthesizes a low-level mouse-button event on the local machine.
+- [CGPostScrollWheelEvent](cgpostscrollwheelevent.md): Deprecated. Synthesizes a low-level scrolling event on the local machine.
+- [CGRegisterScreenRefreshCallback](cgregisterscreenrefreshcallback%28____%29.md): Deprecated. Registers a callback function to be invoked when local displays are refreshed or modified.
+- [CGReleaseAllDisplays](cgreleasealldisplays%28%29.md): Releases all captured displays.
+- [CGReleaseDisplayFadeReservation](cgreleasedisplayfadereservation%28__%29.md): Releases a display fade reservation, and unfades the display if needed.
+- [CGReleaseScreenRefreshRects](cgreleasescreenrefreshrects%28__%29.md): Deprecated. Deallocates a list of rectangles that represent changed areas on local displays.
+- [CGRestorePermanentDisplayConfiguration](cgrestorepermanentdisplayconfiguration%28%29.md): Restores the permanent display configuration settings for the current user.
+- [CGScreenRegisterMoveCallback](cgscreenregistermovecallback%28____%29.md): Deprecated. Registers a callback function to be invoked when an area of the display is moved.
+- [CGScreenUnregisterMoveCallback](cgscreenunregistermovecallback%28____%29.md): Deprecated. Removes a previously registered callback function invoked when an area of the display is moved.
+- [CGSessionCopyCurrentDictionary](cgsessioncopycurrentdictionary%28%29.md): Returns information about the caller’s window server session.
+- [CGSetDisplayTransferByByteTable](cgsetdisplaytransferbybytetable%28__________%29.md): Sets the byte values in the 8-bit RGB gamma tables for a display.
+- [CGSetDisplayTransferByFormula](cgsetdisplaytransferbyformula%28____________________%29.md): Sets the gamma function for a display by specifying the coefficients of the gamma transfer formula.
+- [CGSetDisplayTransferByTable](cgsetdisplaytransferbytable%28__________%29.md): Sets the color gamma function for a display by specifying the values in the RGB gamma tables.
+- [CGSetLocalEventsFilterDuringSuppressionState](cgsetlocaleventsfilterduringsuppressionstate%28____%29.md): Deprecated. Filters local hardware events from the keyboard and mouse during the short interval after a synthetic event is posted.
+- [CGSetLocalEventsSuppressionInterval](cgsetlocaleventssuppressioninterval%28__%29.md): Deprecated. Sets the time interval in seconds that local hardware events are suppressed after posting a synthetic event.
+- [CGShieldingWindowID](cgshieldingwindowid%28__%29.md): Returns the window ID of the shield window for a captured display.
+- [CGShieldingWindowLevel](cgshieldingwindowlevel%28%29.md): Returns the window level of the shield window for a captured display.
+- [CGSizeEqualToSize](cgsizeequaltosize%28____%29.md): Deprecated. Returns whether two sizes are equal.
+- [CGUnregisterScreenRefreshCallback](cgunregisterscreenrefreshcallback%28____%29.md): Deprecated. Removes a previously registered callback function invoked when local displays are refreshed or modified.
+- [CGWaitForScreenRefreshRects](cgwaitforscreenrefreshrects%28____%29.md): Deprecated. Waits for screen refresh operations.
+- [CGWaitForScreenUpdateRects](cgwaitforscreenupdaterects%28__________%29.md): Deprecated. Waits for screen update operations.
+- [CGWarpMouseCursorPosition](cgwarpmousecursorposition%28__%29.md): Moves the mouse cursor without generating events.
+- [CGWindowLevelForKey](cgwindowlevelforkey%28__%29.md): Returns the window level that corresponds to one of the standard window types.
+- [CGWindowListCopyWindowInfo](cgwindowlistcopywindowinfo%28____%29.md): Generates and returns information about the selected windows in the current user session.
+- [CGWindowListCreate](cgwindowlistcreate.md): Returns the list of window IDs associated with the specified windows in the current user session.
+- [CGWindowListCreateDescriptionFromArray](cgwindowlistcreatedescriptionfromarray%28__%29.md): Generates and returns information about windows with the specified window IDs.
+- [CGWindowServerCFMachPort](cgwindowservercfmachport%28%29.md): Deprecated. Returns a Core Foundation Mach port (CFMachPort) that corresponds to the macOS window server.
+- [CGWindowServerCreateServerPort](cgwindowservercreateserverport%28%29.md)
+- [CGColorSpaceCreateLinearized](cgcolorspacecreatelinearized%28__%29.md)
+- [CGColorConversionInfoCreate](cgcolorconversioninfo/init%28src_dst_%29.md): Creates a conversion between two specified color spaces.
+- [CGEventSourceGetLocalEventsSuppressionInterval](cgeventsource/localeventssuppressioninterval.md): Returns the interval that local hardware events may be suppressed following the posting of a Quartz event.
+- [CGDisplayModeGetPixelHeight](cgdisplaymode/pixelheight.md)
+- [CGColorConversionInfoGetTypeID](cgcolorconversioninfo/typeid.md): Returns the Core Foundation type identifier for a color conversion info data type.
+- [CGAffineTransformMake](cgaffinetransformmake%28____________%29.md): Returns an affine transformation matrix constructed from values you provide.
+- [CGColorConversionInfoCreateFromListWithArguments](cgcolorconversioninfocreatefromlistwitharguments.md)
+- [CGColorSpaceCopyBaseColorSpace](cgcolorspacecopybasecolorspace%28__%29.md)
+- [CGColorSpaceCreateCopyWithStandardRange](cgcolorspacecreatecopywithstandardrange%28__%29.md)
+- [CGColorSpaceCreateExtended](cgcolorspacecreateextended%28__%29.md)
+- [CGColorSpaceCreateExtendedLinearized](cgcolorspacecreateextendedlinearized%28__%29.md)
+- [CGColorSpaceCreateWithColorSyncProfile](cgcolorspacecreatewithcolorsyncprofile%28____%29.md)
+- [CGColorSpaceGetName](cgcolorspacegetname.md)
+- [CGColorSpaceIsHLGBased](cgcolorspaceishlgbased%28__%29.md)
+- [CGColorSpaceIsPQBased](cgcolorspaceispqbased%28__%29.md)
+- [CGColorSpaceUsesITUR_2100TF](cgcolorspaceusesitur_2100tf%28__%29.md)
+- [CGContextDrawConicGradient](cgcontextdrawconicgradient%28________%29.md)
+- [CGContextDrawImageApplyingToneMapping](cgcontextdrawimageapplyingtonemapping.md)
+- [CGContextGetEDRTargetHeadroom](cgcontextgetedrtargetheadroom%28__%29.md)
+- [CGConvertColorDataWithFormat](cgconvertcolordatawithformat%28______________%29.md)
+- [CGEnableEventStateCombining](cgenableeventstatecombining%28__%29.md): Deprecated. Enables or disables the merging of actual key and mouse state with the application-specified state in a synthetic event.
+- [CGErrorSetCallback](cgerrorsetcallback%28__%29.md)
+- [CGImageCreateCopyWithContentHeadroom](cgimagecreatecopywithcontentheadroom%28____%29.md)
+- [CGInhibitLocalEvents](cginhibitlocalevents%28__%29.md): Deprecated. Turns off local hardware events in the current session.
+- [CGPDFArrayApplyBlock](cgpdfarrayapplyblock%28______%29.md)
+- [CGPDFContextBeginTag](cgpdfcontextbegintag%28______%29.md)
+- [CGPDFContextEndTag](cgpdfcontextendtag%28__%29.md)
+- [CGPDFContextSetIDTree](cgpdfcontextsetidtree%28____%29.md)
+- [CGPDFContextSetOutline](cgpdfcontextsetoutline%28____%29.md)
+- [CGPDFContextSetPageTagStructureTree](cgpdfcontextsetpagetagstructuretree%28____%29.md)
+- [CGPDFContextSetParentTree](cgpdfcontextsetparenttree%28____%29.md)
+- [CGPDFDictionaryApplyBlock](cgpdfdictionaryapplyblock%28______%29.md)
+- [CGPDFScannerStop](cgpdfscannerstop%28__%29.md)
+- [CGPointMake](cgpointmake%28____%29.md): Returns a point with the specified coordinates.
+- [CGPointMakeWithDictionaryRepresentation](cgpointmakewithdictionaryrepresentation%28____%29.md): Fills in a point using the contents of the specified dictionary.
+- [CGPostKeyboardEvent](cgpostkeyboardevent%28______%29.md): Deprecated. Synthesizes a low-level keyboard event on the local machine.
+- [CGPathCreateCopyByFlattening](cgpathcreatecopybyflattening.md)
+- [CGPathCreateCopyByIntersectingPath](cgpathcreatecopybyintersectingpath.md)
+- [CGPathCreateCopyByNormalizing](cgpathcreatecopybynormalizing.md)
+- [CGPathCreateCopyBySubtractingPath](cgpathcreatecopybysubtractingpath.md)
+- [CGPathCreateCopyBySymmetricDifferenceOfPath](cgpathcreatecopybysymmetricdifferenceofpath.md)
+- [CGPathCreateCopyByUnioningPath](cgpathcreatecopybyunioningpath.md)
+- [CGPathCreateCopyOfLineByIntersectingPath](cgpathcreatecopyoflinebyintersectingpath.md)
+- [CGPathCreateCopyOfLineBySubtractingPath](cgpathcreatecopyoflinebysubtractingpath.md)
+- [CGPathCreateSeparateComponents](cgpathcreateseparatecomponents.md)
+- [CGPathIntersectsPath](cgpathintersectspath.md)
+- [CGPreflightListenEventAccess](cgpreflightlisteneventaccess%28%29.md)
+- [CGPreflightPostEventAccess](cgpreflightposteventaccess%28%29.md)
+- [CGPreflightScreenCaptureAccess](cgpreflightscreencaptureaccess%28%29.md)
+- [CGRectMake](cgrectmake%28________%29.md): Returns a rectangle with the specified coordinate and size values.
+- [CGRectMakeWithDictionaryRepresentation](cgrectmakewithdictionaryrepresentation%28____%29.md): Fills in a rectangle using the contents of the specified dictionary.
+- [CGRegisterScreenRefreshCallback](cgregisterscreenrefreshcallback%28____%29.md): Deprecated. Registers a callback function to be invoked when local displays are refreshed or modified.
+- [CGReleaseScreenRefreshRects](cgreleasescreenrefreshrects%28__%29.md): Deprecated. Deallocates a list of rectangles that represent changed areas on local displays.
+- [CGRequestListenEventAccess](cgrequestlisteneventaccess%28%29.md)
+- [CGRequestPostEventAccess](cgrequestposteventaccess%28%29.md)
+- [CGRequestScreenCaptureAccess](cgrequestscreencaptureaccess%28%29.md)
+- [CGScreenRegisterMoveCallback](cgscreenregistermovecallback%28____%29.md): Deprecated. Registers a callback function to be invoked when an area of the display is moved.
+- [CGScreenUnregisterMoveCallback](cgscreenunregistermovecallback%28____%29.md): Deprecated. Removes a previously registered callback function invoked when an area of the display is moved.
+- [CGSetLocalEventsFilterDuringSuppressionState](cgsetlocaleventsfilterduringsuppressionstate%28____%29.md): Deprecated. Filters local hardware events from the keyboard and mouse during the short interval after a synthetic event is posted.
+- [CGSetLocalEventsSuppressionInterval](cgsetlocaleventssuppressioninterval%28__%29.md): Deprecated. Sets the time interval in seconds that local hardware events are suppressed after posting a synthetic event.
+- [CGSizeMake](cgsizemake%28____%29.md): Returns a size with the specified dimension values.
+- [CGSizeMakeWithDictionaryRepresentation](cgsizemakewithdictionaryrepresentation%28____%29.md): Fills in a size using the contents of the specified dictionary.
+- [CGUnregisterScreenRefreshCallback](cgunregisterscreenrefreshcallback%28____%29.md): Deprecated. Removes a previously registered callback function invoked when local displays are refreshed or modified.
+- [CGVectorMake](cgvectormake%28____%29.md): Returns a vector with the specified dimension values.
+- [CGWaitForScreenRefreshRects](cgwaitforscreenrefreshrects%28____%29.md): Deprecated. Waits for screen refresh operations.
+- [CGWaitForScreenUpdateRects](cgwaitforscreenupdaterects%28__________%29.md): Deprecated. Waits for screen update operations.
+- [CGPDFDocumentGetAccessPermissions](cgpdfdocument/accesspermissions.md)
+- [CGPathApplyWithBlock](cgpath/applywithblock%28__%29.md)
+- [CGImageGetByteOrderInfo](cgimage/byteorderinfo.md)
+- [CGImageContainsImageSpecificToneMappingMetadata](cgimage/containsimagespecifictonemappingmetadata.md)
+- [CGImageGetContentHeadroom](cgimage/contentheadroom.md)
+- [CGColorConversionInfoConvertData](cgcolorconversioninfo/convert%28width_height_to_format_from_format_options_%29.md)
+- [CGColorSpaceCopyPropertyList](cgcolorspace/copypropertylist%28%29.md): Returns a copy of the color space’s properties.
+- [CGAffineTransformDecompose](cgaffinetransformdecompose.md)
+- [CGDataProviderGetInfo](cgdataprovider/info.md)
+- [CGAffineTransformMakeWithComponents](cgaffinetransformmakewithcomponents.md)
+- [CGColorCreateGenericGrayGamma2_2](cgcolor/init%28genericgraygamma2_2gray_alpha_%29.md): Creates a color in the Generic gray color space with a gamma ramp of 2.2.
+- [CGImageCreateWithContentHeadroom](cgimage/init%28headroom_width_height_bitspercomponent_bitsperpixel_bytesperrow_space_bitmapinfo_provider_decode_shouldinterpolate_intent_%29.md)
+- [CGColorSpaceCreateWithICCData](cgcolorspace/init%28iccdata_%29.md): Creates an ICC-based color space using the ICC profile contained in the specified data.
+- [CGColorConversionInfoCreateWithOptions](cgcolorconversioninfo/init%28optionssrc_dst_options_%29.md)
+- [CGColorSpaceCreateWithPropertyList](cgcolorspace/init%28propertylistplist_%29.md): Creates a color space from a property list.
+- [CGEventCreateScrollWheelEvent2](cgevent/init%28scrollwheelevent2source_units_wheelcount_wheel1_wheel2_wheel3_%29.md)
+- [CGColorSpaceIsHDR](cgcolorspace/ishdr%28%29.md)
+- [CGPDFTagTypeGetName](cgpdftagtype/name.md)
+- [CGPDFDocumentGetOutline](cgpdfdocument/outline.md)
+- [CGImageGetPixelFormatInfo](cgimage/pixelformatinfo.md)
+- [CGContextResetClip](cgcontext/resetclip%28%29.md)
+- [CGContextSetEDRTargetHeadroom](cgcontext/setedrtargetheadroom%28__%29.md)
+- [CGImageShouldToneMap](cgimage/shouldtonemap.md)
+- [CGColorSpaceUsesExtendedRange](cgcolorspaceusesextendedrange%28__%29.md)
+
+## See Also
+
+### Reference
+
+- [CGAffineTransform](cgaffinetransform.md): An affine transformation matrix for use in drawing 2D graphics.
+- [CGGeometry](cggeometry.md): Various structures and associated functions for 2D geometric primitives.
+- [Core Graphics Structures](core-graphics-structures.md)
+- [Core Graphics Enumerations](core-graphics-enumerations.md)
+- [Core Graphics Constants](core-graphics-constants.md)
+- [Core Graphics Data Types](core-graphics-data-types.md)
+- [Core Graphics Macros](core-graphics-macros.md)

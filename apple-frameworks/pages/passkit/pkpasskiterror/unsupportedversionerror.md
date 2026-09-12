@@ -1,0 +1,24 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/passkit/pkpasskiterror/unsupportedversionerror](https://developer.apple.com/documentation/passkit/pkpasskiterror/unsupportedversionerror)
+
+# unsupportedVersionError
+
+**Framework:** PassKit (Apple Pay and Wallet)  
+**Kind:** Type Property  
+**Availability:** iOS 6.0+ · iPadOS 6.0+ · Mac Catalyst 13.1+ · macOS 10.12+ · visionOS 1.0+ · watchOS 3.0+
+
+## Declaration
+
+```swift
+static var unsupportedVersionError: PKPassKitError.Code { get }
+```
+
+## See Also
+
+### Error codes
+
+- [invalidDataError](invaliddataerror.md)
+- [invalidSignature](invalidsignature.md)
+- [notEntitledError](notentitlederror.md)
+- [unknownError](unknownerror.md)
+- [PKPassKitError.Code](code.md): Errors that the PassKit framework uses.
+- [PKAddPaymentPassError](../pkaddpaymentpasserror.md): Error codes for adding payment passes.

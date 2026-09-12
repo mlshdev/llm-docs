@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/declaredagerange/agerangeservice/requiredregulatoryfeatures](https://developer.apple.com/documentation/declaredagerange/agerangeservice/requiredregulatoryfeatures)
+
+# requiredRegulatoryFeatures
+
+**Framework:** Declared Age Range  
+**Kind:** Instance Property  
+**Availability:** iOS 26.4+ · iPadOS 26.4+ · Mac Catalyst 26.4+ · macOS 26.4+
+
+A set of regulatory features that are required for the person.
+
+## Declaration
+
+```swift
+var requiredRegulatoryFeatures: Set<AgeRangeService.RegulatoryFeature> { get async throws }
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+A set of [AgeRangeService.RegulatoryFeature](regulatoryfeature.md) values indicating which regulatory requirements apply to the person.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this property to determine which regulatory features apply to a person using your app based on their region and account settings. This helps you comply with regional requirements when distributing apps on the App Store. For more information, refer to [Next steps for apps distributed in Texas](https://developer.apple.com/news/?id=2ezb6jhj).
+
+> **Throws**
+
+> [AgeRangeService.Error.notAvailable](error/notavailable.md) if the regulatory feature’s service is unavailable.
+
+## See Also
+
+### Defining regulatory features
+
+- [AgeRangeService.RegulatoryFeature](regulatoryfeature.md): Defines the regulatory features that your app may need to support.

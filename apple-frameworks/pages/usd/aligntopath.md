@@ -1,0 +1,32 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/usd/aligntopath](https://developer.apple.com/documentation/usd/aligntopath)
+
+# alignToPath
+
+**Kind:** Article
+
+An option that controls the prim’s orientation as it revolves.
+
+<a id="overview"></a>
+
+## Overview
+
+The default value is `false`, in which the object maintains its orientation as it travels along the orbit path. Set a value of `true` to reorient the object to face the center as it orbits.
+
+<a id="Declaration"></a>
+
+### Declaration
+
+```other
+uniform bool alignToPath = false
+```
+
+## See Also
+
+### Properties
+
+- [info:id](info-id.md): The action’s unique identifier.
+- [affectedObjects](affectedobjects.md): A list of prims that respond to the notification.
+- [center](center.md): A prim around which the affected objects orbit.
+- [duration](duration.md): The amount of time that the objects face the camera.
+- [revolutions](revolutions.md): The number of rotations to complete.
+- [axis](axis.md): A vector that describes the axis of rotation.

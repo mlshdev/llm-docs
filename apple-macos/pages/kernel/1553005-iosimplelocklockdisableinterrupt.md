@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1553005-iosimplelocklockdisableinterrupt](https://developer.apple.com/documentation/kernel/1553005-iosimplelocklockdisableinterrupt)
+
+# IOSimpleLockLockDisableInterrupt
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Function  
+**Availability:** macOS 10.0+
+
+Lock a spin lock.
+
+## Declaration
+
+```objectivec
+IOInterruptState IOSimpleLockLockDisableInterrupt(IOSimpleLock *lock);
+```
+
+## Parameters
+
+- `lock`: Pointer to the lock.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Lock the spin lock. If the lock is held, spin waiting for its unlock. Simple locks disable preemption, cannot be held across any blocking operation, and should be held for very short periods. When used to synchronize between interrupt context and thread context they should be locked with interrupts disabled - IOSimpleLockLockDisableInterrupt() will do both. Locking the lock recursively from one thread will result in deadlock.
+
+## See Also
+
+### Simple Locks
+
+- [IOSimpleLockAlloc](1553017-iosimplelockalloc.md): Allocates and initializes a spin lock.
+- [IOSimpleLockInit](1552990-iosimplelockinit.md): Initialize a spin lock.
+- [IOSimpleLockDestroy](3380136-iosimplelockdestroy.md)
+- [IOSimpleLockFree](1553035-iosimplelockfree.md): Frees a spin lock.
+- [IOSimpleLockGetMachLock](1553019-iosimplelockgetmachlock.md): Accessor to a Mach spin lock.
+- [IOSimpleLockLock](1552997-iosimplelocklock.md): Lock a spin lock.
+- [IOSimpleLockTryLock](1553029-iosimplelocktrylock.md): Attempt to lock a spin lock.
+- [IOSimpleLockUnlock](1553015-iosimplelockunlock.md): Unlock a spin lock.
+- [IOSimpleLockUnlockEnableInterrupt](1552998-iosimplelockunlockenableinterrup.md): Unlock a spin lock, and restore interrupt state.

@@ -1,0 +1,101 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corehaptics/chhapticengine/resethandler-swift.property](https://developer.apple.com/documentation/corehaptics/chhapticengine/resethandler-swift.property)
+
+# resetHandler (Swift)
+
+**Framework:** Core Haptics  
+**Kind:** Instance Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 14.0+ · visionOS 1.0+
+
+A block that the haptic engine calls after recovering from a haptic server error.
+
+## Declaration
+
+```swift
+var resetHandler: CHHapticEngine.ResetHandler { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If the handler has to reset itself after a server failure, the system calls this block asynchronously. In this block, release all haptic pattern players and recreate them. The system preserves [CHHapticPattern](../chhapticpattern.md) objects and [CHHapticEngine](../chhapticengine.md) properties across restarts. Consider trying to restart the engine inside the reset block.
+
+**Swift**
+
+```swift
+self.hapticEngine.resetHandler = {
+    print("Engine reset --> Restarting!")
+    do {
+        try self.hapticEngine.start()
+    } catch {
+        print("Failed to restart the engine: \(error)")
+    }
+}
+```
+
+**Objective-C**
+
+```objc
+self.hapticEngine.resetHandler = ^{ 
+    NSLog(@"Engine reset --> Restarting!");
+    [self.hapticEngine startAndReturnError:&error];
+};
+```
+
+Callbacks to this block arrive on a non-main thread, so handle them in a thread-safe manner.
+
+## See Also
+
+### Handling Haptic Engine Resets
+
+- [CHHapticEngine.ResetHandler](resethandler-swift.typealias.md): A typealias for the block that the haptic engine calls after being reset.
+
+# resetHandler (Objective-C)
+
+**Framework:** Core Haptics  
+**Kind:** Instance Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 14.0+ · visionOS 1.0+
+
+A block that the haptic engine calls after recovering from a haptic server error.
+
+## Declaration
+
+```objectivec
+@property (atomic, readwrite) CHHapticEngineResetHandler resetHandler;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If the handler has to reset itself after a server failure, the system calls this block asynchronously. In this block, release all haptic pattern players and recreate them. The system preserves [CHHapticPattern](../chhapticpattern.md) objects and [CHHapticEngine](../chhapticengine.md) properties across restarts. Consider trying to restart the engine inside the reset block.
+
+**Swift**
+
+```swift
+self.hapticEngine.resetHandler = {
+    print("Engine reset --> Restarting!")
+    do {
+        try self.hapticEngine.start()
+    } catch {
+        print("Failed to restart the engine: \(error)")
+    }
+}
+```
+
+**Objective-C**
+
+```objc
+self.hapticEngine.resetHandler = ^{ 
+    NSLog(@"Engine reset --> Restarting!");
+    [self.hapticEngine startAndReturnError:&error];
+};
+```
+
+Callbacks to this block arrive on a non-main thread, so handle them in a thread-safe manner.
+
+## See Also
+
+### Handling Haptic Engine Resets
+
+- [CHHapticEngineResetHandler](resethandler-swift.typealias.md): A typealias for the block that the haptic engine calls after being reset.

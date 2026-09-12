@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/appcustomproductpagecreaterequest/data-data.dictionary/relationships-data.dictionary/appstoreversiontemplate-data.dictionary](https://developer.apple.com/documentation/appstoreconnectapi/appcustomproductpagecreaterequest/data-data.dictionary/relationships-data.dictionary/appstoreversiontemplate-data.dictionary)
+
+# AppCustomProductPageCreateRequest.Data.Relationships.AppStoreVersionTemplate
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.7+
+
+## Declaration
+
+```
+object AppCustomProductPageCreateRequest.Data.Relationships.AppStoreVersionTemplate
+```
+
+## Properties
+
+- `data` — `AppCustomProductPageCreateRequest.Data.Relationships.AppStoreVersionTemplate.Data`:
+
+## Topics
+
+### Objects
+
+- [AppCustomProductPageCreateRequest.Data.Relationships.AppStoreVersionTemplate.Data](appstoreversiontemplate-data.dictionary/data-data.dictionary.md): The request body you use to create an app custom product page.
+
+## See Also
+
+### Objects
+
+- [AppCustomProductPageCreateRequest.Data.Relationships.App](app-data.dictionary.md)
+- [AppCustomProductPageCreateRequest.Data.Relationships.AppCustomProductPageVersions](appcustomproductpageversions-data.dictionary.md)
+- [AppCustomProductPageCreateRequest.Data.Relationships.CustomProductPageTemplate](customproductpagetemplate-data.dictionary.md)

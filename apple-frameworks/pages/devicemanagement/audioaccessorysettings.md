@@ -1,0 +1,96 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/audioaccessorysettings](https://developer.apple.com/documentation/devicemanagement/audioaccessorysettings)
+
+# AudioAccessorySettings
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Object  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
+
+The declaration to configure audio accessory settings.
+
+## Declaration
+
+```
+object AudioAccessorySettings
+```
+
+## Properties
+
+- `TemporaryPairing` — `AudioAccessorySettingsTemporaryPairingObject`: A dictionary that describes audio accessory temporary pairing behavior. The device enables temporary pairing when this key is present and the `Disabled` key isn’t `false`. The device doesn’t synchronize pairing information with iCloud when temporary pairing is active.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Specify `com.apple.configuration.audio-accessory.settings` as the declaration type.
+
+Setting `TemporaryPairing` to `false` disables only the temporary pairing feature, without impacting any other use of audio accessories, so users can still:
+
+- Pair and use audio accessories - the device records the pairing and synchronizes it to their iCloud account.
+- Use the audio accessory AirPods Sharing feature.
+
+<a id="Configuration-availability"></a>
+
+### Configuration availability
+
+|  |  |
+| --- | --- |
+| Allowed in supervised enrollment | iOS, Shared iPad |
+| Allowed in device enrollment | N/A |
+| Allowed in user enrollment | N/A |
+| Allowed in local enrollment | N/A |
+| Allowed in system scope | iOS, Shared iPad |
+| Allowed in user scope | N/A |
+| Apply | Multiple configurations are combined and applied as a single effective configuration |
+
+<a id="Configuration-example"></a>
+
+### Configuration example
+
+This configuration enables temporary pairing and sets an unpairing time of 6 pm.
+
+```json
+{
+    "Type": "com.apple.configuration.audio-accessory.settings",
+    "Identifier": "EB13EE2B-5D63-4EBA-810F-5B81D07F5017",
+    "ServerToken": "E180CA9A-F089-4FA3-BBDF-94CC159C4AE8",
+    "Payload": {
+        "TemporaryPairing": {
+            "Configuration": {
+                "UnpairingTime": {
+                    "Policy": "Hour",
+                    "Hour": 18
+                }
+            }
+        }
+    }
+}
+```
+
+## Topics
+
+### Objects
+
+- [AudioAccessorySettingsTemporaryPairingObject](audioaccessorysettingstemporarypairingobject.md): A dictionary that describes audio accessory temporary pairing behavior. The device enables temporary pairing when this key is present and the `Disabled` key isn’t `false`. The device doesn’t synchronize pairing information with iCloud when temporary pairing is active.
+
+## See Also
+
+### Configurations
+
+- [AccessibilitySettings](accessibilitysettings.md): The declaration to configure accessibility settings.
+- [AccountCalDAV](accountcaldav.md): The declaration to configure a Calendar account.
+- [AccountCardDAV](accountcarddav.md): The declaration to configure a Contacts account.
+- [AccountExchange](accountexchange.md): The declaration to configure an Exchange account.
+- [AccountGoogle](accountgoogle.md): The declaration to configure a Google account.
+- [AccountLDAP](accountldap.md): The declaration to configure a Lightweight Directory Access Protocol (LDAP) account.
+- [AccountMail](accountmail.md): The declaration to configure a Mail account.
+- [AccountSubscribedCalendar](accountsubscribedcalendar.md): The declaration to configure a subscribed calendar.
+- [AppManaged](appmanaged.md): The declaration to configure a managed app.
+- [AppSettings](appsettings.md): The declaration to configure app settings.
+- [ContentCaching](contentcaching.md): The declaration to configure the Content Caching service.
+- [DiskManagementSettings](diskmanagementsettings.md): The declaration to configure disk management settings on the device.
+- [ExtensibleSSO](extensiblesso.md): The declaration to configure Extensible Single Sign-On.
+- [ExternalIntelligenceSettings](externalintelligencesettings.md): The declaration to configure External Intelligence Integrations settings.
+- [IntelligenceSettings](intelligencesettings.md): The declaration to configure Apple Intelligence settings.

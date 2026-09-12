@@ -1,0 +1,43 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatial/point3d/vector](https://developer.apple.com/documentation/spatial/point3d/vector)
+
+# vector (Swift)
+
+**Framework:** Spatial  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+ · watchOS 9.0+
+
+## Declaration
+
+```swift
+var vector: simd_double3 { get set }
+```
+
+## See Also
+
+### Inspecting a 3D point’s properties
+
+- [x](x.md): The x-coordinate value.
+- [y](y.md): The y-coordinate value.
+- [z](z.md): The z-coordinate value.
+- [magnitudeSquared](magnitudesquared.md)
+
+# vector (Objective-C)
+
+**Framework:** Spatial  
+**Kind:** Instance Property  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+## Declaration
+
+```objectivec
+simd_double3 vector;
+```
+
+## See Also
+
+### Inspecting a 3D point’s properties
+
+- [x](../sppoint3d/x.md): The x-coordinate value.
+- [y](../sppoint3d/y.md): The y-coordinate value.
+- [z](../sppoint3d/z.md): The z-coordinate value.
+- [SPPoint3DGetVector](../sppoint3dgetvector.md): A simd three-element vector that contains the x-, y-, and z-coordinate values.

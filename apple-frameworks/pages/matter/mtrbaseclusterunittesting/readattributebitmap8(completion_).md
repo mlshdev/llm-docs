@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclusterunittesting/readattributebitmap8(completion:)](https://developer.apple.com/documentation/matter/mtrbaseclusterunittesting/readattributebitmap8(completion:))
+
+# readAttributeBitmap8(completion:) (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+func readAttributeBitmap8(completion: @escaping @Sendable (NSNumber?, (any Error)?) -> Void)
+```
+
+```swift
+func readAttributeBitmap8() async throws -> NSNumber
+```
+
+# readAttributeBitmap8WithCompletion: (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+- (void) readAttributeBitmap8WithCompletion:(void (^)(NSNumber *value, NSError *error)) completion;
+```

@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/transaction/jsonrepresentation](https://developer.apple.com/documentation/storekit/transaction/jsonrepresentation)
+
+# jsonRepresentation
+
+**Framework:** StoreKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+
+The JSON representation of the transaction information.
+
+## Declaration
+
+```swift
+var jsonRepresentation: Data { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The [jsonRepresentation](jsonrepresentation.md) is UTF-8 string data that has the same JSON schema as the [JWSTransactionDecodedPayload](../../appstoreserverapi/jwstransactiondecodedpayload.md) object. You can use this data to decode the transaction information into your own data type instead of using the [Transaction](../transaction.md) value and its [Transaction properties](../transaction-properties.md) directly.
+
+The JSON Web Signature (JWS) Compact Serialization for the transaction is available in the [jwsRepresentation](../verificationresult/jwsrepresentation-21vgo.md) property of the [VerificationResult](../verificationresult.md). The JWS string consists of three Base64URL-encoded components, separated by a period: a header, a payload, and a signature. The [jsonRepresentation](jsonrepresentation.md) is the Base64URL-decoded payload component.
+
+> **Note**
+
+>  If you send the transaction to your server or store it, use the [jwsRepresentation](../verificationresult/jwsrepresentation-21vgo.md) and validate the signature before parsing it.

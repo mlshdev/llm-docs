@@ -1,0 +1,123 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/8021xthirdactiveethernet](https://developer.apple.com/documentation/devicemanagement/8021xthirdactiveethernet)
+
+# 8021XThirdActiveEthernet
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Device Management Profile  
+**Availability:** macOS 10.7+
+
+The payload that configures the third wired, active Ethernet interface.
+
+## Declaration
+
+```
+WiFi.EAPClientConfiguration 8021XThirdActiveEthernet
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Specify `com.apple.thirdactiveethernet.managed` as the payload type.
+
+This payload’s contents contain these profile-specific keys:
+
+- Interface (String): This payload uses the value `ThirdActiveEthernet`.
+- EAPClientConfiguration ([WiFi.EAPClientConfiguration](wifi/eapclientconfiguration-data.dictionary.md)): The dictionary that defines the enterprise profile for the network.
+- SetupModes (String): The type of connection mode, which is either “System” or “Loginwindow.” “System” is the default.
+
+Payloads with `active` in their name apply to Ethernet interfaces that are working at the time of profile installation. If there’s no active Ethernet interface working, this payload configures the interface with the highest service-order priority.
+
+<a id="Profile-availability"></a>
+
+### Profile availability
+
+|  |  |
+| --- | --- |
+| Device channel | macOS |
+| User channel | macOS |
+| Allow manual install | macOS |
+| Requires supervision | N/A |
+| Requires user-approved MDM | N/A |
+| Allowed in user enrollment | macOS |
+| Allow multiple payloads | N/A |
+
+<a id="Profile-example"></a>
+
+### Profile example
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>AuthenticationMethod</key>
+            <string></string>
+            <key>AutoJoin</key>
+            <true/>
+            <key>CaptiveBypass</key>
+            <false/>
+            <key>EAPClientConfiguration</key>
+            <dict>
+                <key>AcceptEAPTypes</key>
+                <array>
+                    <integer>25</integer>
+                </array>
+                <key>UserName</key>
+                <string>user</string>
+                <key>UserPassword</key>
+                <string>password</string>
+            </dict>
+            <key>EncryptionType</key>
+            <string>WPA2</string>
+            <key>HIDDEN_NETWORK</key>
+            <false/>
+            <key>Interface</key>
+            <string>ThirdActiveEthernet</string>
+            <key>Password</key>
+            <string>password</string>
+            <key>ProxyType</key>
+            <string>None</string>
+            <key>SetupModes</key>
+            <array>
+                <string>System</string>
+            </array>
+            <key>PayloadIdentifier</key>
+            <string>com.example.my8021xthirdaepayload</string>
+            <key>PayloadType</key>
+            <string>com.apple.thirdactiveethernet.managed</string>
+            <key>PayloadUUID</key>
+            <string>a001a09a-d40d-4535-83ea-b21c409a5949</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+    </array>
+    <key>PayloadDisplayName</key>
+    <string>802.1x Third Active Ethernet</string>
+    <key>PayloadIdentifier</key>
+    <string>com.example.myprofile</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>77d92cd3-d303-4e2e-8c67-b6e67b30ba2c</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>
+```
+
+## See Also
+
+### Ethernet
+
+- [8021XGlobalEthernet](8021xglobalethernet.md): The payload that configures the default fallback global Ethernet interface.
+- [8021XFirstActiveEthernet](8021xfirstactiveethernet.md): The payload that configures the first wired, active Ethernet interface.
+- [8021XFirstEthernet](8021xfirstethernet.md): The payload that configures the first wired Ethernet interface.
+- [8021XSecondActiveEthernet](8021xsecondactiveethernet.md): The payload that configures the second wired, active Ethernet interface.
+- [8021XSecondEthernet](8021xsecondethernet.md): The payload that configures the second wired Ethernet interface.
+- [8021XThirdEthernet](8021xthirdethernet.md): The payload that configures the third wired Ethernet interface.

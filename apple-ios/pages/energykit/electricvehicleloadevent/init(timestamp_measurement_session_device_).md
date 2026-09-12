@@ -1,0 +1,30 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/energykit/electricvehicleloadevent/init(timestamp:measurement:session:device:)](https://developer.apple.com/documentation/energykit/electricvehicleloadevent/init(timestamp:measurement:session:device:))
+
+# init(timestamp:measurement:session:device:)
+
+**Framework:** EnergyKit  
+**Kind:** Initializer  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst
+
+Creates an electric vehicle load event.
+
+## Declaration
+
+```swift
+init(timestamp: Date, measurement: ElectricVehicleLoadEvent.ElectricalMeasurement, session: ElectricVehicleLoadEvent.Session, device: ElectricalLoadDevice)
+```
+
+## Parameters
+
+- `timestamp`: The time when the event occurs.
+- `measurement`: The electricity consumption or generation of the device.
+- `session`: The session information.
+- `device`: The identifier of the [ElectricalLoadDevice](../electricalloaddevice.md) instance.
+
+<a id="discussion"></a>
+
+## Discussion
+
+> **Throws**
+
+>  [EnergyKitError.invalidLoadEvent](../energykiterror/invalidloadevent.md)

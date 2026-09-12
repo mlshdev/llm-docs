@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkit/wkusercontentcontroller/addbuffer(_:name:to:)](https://developer.apple.com/documentation/webkit/wkusercontentcontroller/addbuffer(_:name:to:))
+
+# addBuffer(\_:name:to:)
+
+**Framework:** WebKit  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+Adds a data buffer that will be available to JavaScript through the `window.webkit.buffers` object.
+
+## Declaration
+
+```swift
+@MainActor @preconcurrency func addBuffer(_ buffer: RawSpan, name: String, to contentWorld: WKContentWorld)
+```
+
+## Parameters
+
+- `buffer`: The buffer to add.
+- `name`: The name of the buffer to be referenced from JavaScript. e.g. with a `name` parameter of `"mybuffer"`, JavaScript can reference the buffer via `window.webkit.buffers.mybuffer`.
+- `contentWorld`: The `WKContentWorld` to add the buffer to. The buffer will only be visible to JavaScript executing in that content world.

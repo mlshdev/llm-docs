@@ -1,0 +1,67 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/game-development-character-skeletons](https://developer.apple.com/documentation/realitykit/game-development-character-skeletons)
+
+# Character control, skeletons, and inverse kinematics
+
+**Framework:** RealityKit  
+**Kind:** API Collection
+
+Direct the movements and animation of models.
+
+<a id="Overview"></a>
+
+## Overview
+
+Games and immersive game-like experiences often rely on animated character models to represent the player or non-player characters. The `CharacterControllerComponent` simplifies the process of moving a character around a scene. It handles basic movement, including navigating up and down stairs and slopes and jumping. It also allows you to sync the character movement with specific animations.
+
+To further animate models in the scene, you may need to define a [SkeletalPose](skeletalpose.md) or adopt a full inverse kinematics solution with [IKComponent](ikcomponent.md).
+
+## Topics
+
+### Character control
+
+- [CharacterControllerComponent](charactercontrollercomponent.md): A component that manages character movement.
+- [CharacterControllerComponent.Collision](charactercontrollercomponent/collision.md): A container that holds collision state for the character controller.
+- [CharacterControllerComponent.CollisionFlags](charactercontrollercomponent/collisionflags.md): An option set that specifies which parts of the character capsule have collided with other objects.
+- [CharacterControllerStateComponent](charactercontrollerstatecomponent.md): A component that represents the state of a character controller.
+
+### Skeletons
+
+- [SkeletalPosesComponent](skeletalposescomponent.md): A component that exposes the collection of named animation skeletal poses.
+- [SkeletalPose](skeletalpose.md): A container that holds the position and orientation of each joint in a single animation skeleton.
+- [SkeletalPoseSet](skeletalposeset.md): A collection of named skeletal poses.
+
+### Inverse kinematics components
+
+- [IKComponent](ikcomponent.md): A component that allows you to procedurally animate a skeletal model using a full body inverse kinematics solver.
+- [IKComponent.Joint](ikcomponent/joint.md): The update stage object that lets you read and update the current settings of a single joint in an IK solver.
+- [IKComponent.JointCollection](ikcomponent/jointcollection.md): Ordered dictionary like container with fixed size.
+- [IKComponent.Solver](ikcomponent/solver.md): The update stage object that lets you read and update the current settings of a single solver instance.
+- [IKComponent.SolverCollection](ikcomponent/solvercollection.md): Ordered dictionary like container with fixed size.
+- [IKComponent.Constraint](ikcomponent/constraint.md): The update stage object that lets you read and update the current settings of a single constraint in an IK solver.
+- [IKComponent.ConstraintCollection](ikcomponent/constraintcollection.md): Ordered dictionary like container with fixed size.
+- [IKResource](ikresource.md): A reference counted immutable resource which contains one or more inverse kinematics solver rigs.
+- [IKSolverDefinition](iksolverdefinition.md): A container describing a solver instance.
+
+### Inverse kinematics rigs
+
+- [IKRig](ikrig.md): A full body inverse kinematics rig definition for a single skeleton.
+- [IKRig.Joint](ikrig/joint.md): A definition of a rig joint and its IK solver settings.
+- [IKRig.JointCollection](ikrig/jointcollection.md): Ordered dictionary-like container with a fixed size.
+- [IKRig.Constraint](ikrig/constraint.md): A definition of a rig constraint.
+- [IKRig.ConstraintsCollection](ikrig/constraintscollection.md): Ordered dictionary-like container.
+
+### Skeletons and retargeting
+
+- [SkeletonResource](skeletonresource.md): A self-contained skeleton asset for animating characters and articulated objects.
+- [RetargetingConfiguration](retargetingconfiguration.md): A configuration for retargeting skeletal animations between different skeletons.
+
+## See Also
+
+### Game development
+
+- [Gaming sample code projects](game-development-sample-code.md): Explore a collection of projects relating to game development.
+- [Entity animations](game-development-entity-animations.md): Dynamically move, rotate, and scale entities at runtime.
+- [NavigationComponent](navigationcomponent.md): A component that defines which areas of a navigation mesh an entity can move through.
+- [NavigationMeshComponent](navigationmeshcomponent.md): A component that provides the navigation meshes an entity uses to find paths through a scene.
+- [NavigationController](navigationcontroller.md): An interface for finding paths for an entity moving across a scene’s navigation mesh.
+- [NavigationMeshResource](navigationmeshresource.md): A representation of a scene’s navigable surfaces that the system uses to compute paths.

@@ -1,0 +1,36 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/hiddriverkit/iohidelementcommitdirection](https://developer.apple.com/documentation/hiddriverkit/iohidelementcommitdirection)
+
+# IOHIDElementCommitDirection
+
+**Interface language:** Objective-C
+
+**Framework:** HIDDriverKit  
+**Kind:** Enumeration  
+**Availability:** DriverKit · macOS
+
+The commit direction for an HID element.
+
+## Declaration
+
+```objectivec
+typedef enum { ... } IOHIDElementCommitDirection;
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Passing a value of [kIOHIDElementCommitDirectionOut](iohidelementcommitdirection/kiohidelementcommitdirectionout.md) issues a [setReport](iohiddevice/setreport.md) call to the device. Before issuing this call, set your desired value on the element with the [setValue](iohidelement/setvalue.md) or [setDataValue](iohidelement/setdatavalue.md) functions.
+
+## Topics
+
+### Getting the Commit Directions
+
+- [kIOHIDElementCommitDirectionIn](iohidelementcommitdirection/kiohidelementcommitdirectionin.md): Causes the retrieval of information from the device, and the populating of the element with the resulting data.
+- [kIOHIDElementCommitDirectionOut](iohidelementcommitdirection/kiohidelementcommitdirectionout.md): Causes the element data to be sent to the device.
+
+## See Also
+
+### Committing Changes to Elements
+
+- [commit](iohidelement/commit.md): Commits the element value to and from the device.

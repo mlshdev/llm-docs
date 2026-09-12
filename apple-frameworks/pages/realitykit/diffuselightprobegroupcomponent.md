@@ -1,0 +1,59 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/diffuselightprobegroupcomponent](https://developer.apple.com/documentation/realitykit/diffuselightprobegroupcomponent)
+
+# DiffuseLightProbeGroupComponent
+
+**Framework:** RealityKit  
+**Kind:** Structure  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+A component that stores diffuse probe data for a spatial region.
+
+## Declaration
+
+```swift
+struct DiffuseLightProbeGroupComponent
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Attach this component to an entity to designate it as a diffuse probe group — a positioned source of baked diffuse lighting. Other entities can reference this group via [DiffuseLightProbeReceiverComponent](diffuselightprobereceivercomponent.md) to receive spatially-varying diffuse illumination.
+
+This follows the same source/receiver pattern as `ImageBasedLightComponent` / `ImageBasedLightReceiverComponent`.
+
+```swift
+let probeGroup = Entity()
+probeGroup.components[DiffuseLightProbeGroupComponent.self] =
+    DiffuseLightProbeGroupComponent(resource: probeResource)
+```
+
+## Topics
+
+### Initializers
+
+- [init(resource:)](diffuselightprobegroupcomponent/init%28resource_%29.md): Creates a diffuse light probe group component.
+
+### Instance Properties
+
+- [resource](diffuselightprobegroupcomponent/resource.md): The diffuse probe resource containing baked lighting data for this group.
+
+## Relationships
+
+### Conforms To
+
+- [Component](component.md)
+
+## See Also
+
+### Related Documentation
+
+- [DiffuseProbeResource](diffuseproberesource.md): A resource containing baked diffuse lighting data organized as a tetrahedral probe mesh.
+- [DiffuseLightProbeReceiverComponent](diffuselightprobereceivercomponent.md): A component that receives diffuse lighting from a referenced probe group.
+
+### Lightmaps and light probes
+
+- [LightmapResource](lightmapresource.md): A resource containing references to lightmap texture atlases and descriptions of how parts of the atlases map to meshes in the scene.
+- [LightmapComponent](lightmapcomponent.md): Describes how a lightmap is applied to parts of the scene.
+- [DiffuseProbeResource](diffuseproberesource.md): A resource containing baked diffuse lighting data organized as a tetrahedral probe mesh.
+- [DiffuseLightProbeReceiverComponent](diffuselightprobereceivercomponent.md): A component that receives diffuse lighting from a referenced probe group.

@@ -1,0 +1,82 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/virtualization/using-icloud-with-macos-virtual-machines](https://developer.apple.com/documentation/virtualization/using-icloud-with-macos-virtual-machines)
+
+# Using iCloud with macOS virtual machines (Swift)
+
+**Framework:** Virtualization  
+**Kind:** Article
+
+Access iCloud from macOS guest virtual machines.
+
+<a id="overview"></a>
+
+## Overview
+
+In macOS 15 and later, Virtualization supports access to iCloud accounts and resources when running macOS in a virtual machine (VM) on Apple silicon. When you create a VM in macOS 15 from a macOS 15 software image (an `.ipsw` file) using a [VZMacHardwareModel](vzmachardwaremodel.md) that you obtain from a [VZMacOSRestoreImage](vzmacosrestoreimage.md), Virtualization configures an identity for the VM that it derives from security information in the host’s Secure Enclave. Just as individual physical devices have distinct identities based on their Secure Enclaves, this identity is distinct from other VMs.
+
+If someone moves a VM to a different Mac host and restarts it, the Virtualization framework automatically creates a new identity for the VM using the information from the Secure Enclave of the new Mac host. This identity change requires the person using the VM to reauthenticate to allow iCloud to restart syncing data to the VM.
+
+Additionally, the Virtualization framework detects attempts to start multiple copies of the same VM simultaneously on the same Mac host. For example, when someone duplicates the files that make up a VM, the framework treats the copy of the VM as a clone of the first one. Starting a second clone while another clone is already running causes the Virtualization framework to automatically construct a new identity for the second clone. This preserves the integrity that different VMs have distinct identities, and requires that the person using the VM reauthenticate to use iCloud services.
+
+<a id="Migrate-data-from-older-VMs-to-new-VMs-to-access-iCloud"></a>
+
+### Migrate data from older VMs to new VMs to access iCloud
+
+iCloud support for VMs is available in macOS 15 and later. Be sure to let anyone using your virtualization-enabled app know that they need to migrate their data from older VMs to a macOS 15 or later VM. Using a macOS 15 installer to upgrade an older VM doesn’t provide support for iCloud.
+
+<a id="Let-people-know-where-to-look-for-additional-iCloud-support"></a>
+
+### Let people know where to look for additional iCloud support
+
+Adding information to your app about additional [iCloud support resources](https://support.apple.com/icloud), such as in your app’s help and tips, can help people using your app understand how to troubleshoot any issues when accessing iCloud from the VMs your app supports.
+
+## See Also
+
+### Related Documentation
+
+- [TipKit](https://developer.apple.com/documentation/tipkit): Display tips that help people discover features in your app.
+- [NSHelpManager](../appkit/nshelpmanager.md): An object for displaying online help for an app.
+
+### Essentials
+
+- [Adding the Virtualization Entitlement to Your Project](adding-the-virtualization-entitlement-to-your-project.md): Configure your project to use the Virtualization framework.
+- [com.apple.security.virtualization](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.security.virtualization): A Boolean value that indicates whether your app can use the Virtualization framework.
+
+# Using iCloud with macOS virtual machines (Objective-C)
+
+**Framework:** Virtualization  
+**Kind:** Article
+
+Access iCloud from macOS guest virtual machines.
+
+<a id="overview"></a>
+
+## Overview
+
+In macOS 15 and later, Virtualization supports access to iCloud accounts and resources when running macOS in a virtual machine (VM) on Apple silicon. When you create a VM in macOS 15 from a macOS 15 software image (an `.ipsw` file) using a [VZMacHardwareModel](vzmachardwaremodel.md) that you obtain from a [VZMacOSRestoreImage](vzmacosrestoreimage.md), Virtualization configures an identity for the VM that it derives from security information in the host’s Secure Enclave. Just as individual physical devices have distinct identities based on their Secure Enclaves, this identity is distinct from other VMs.
+
+If someone moves a VM to a different Mac host and restarts it, the Virtualization framework automatically creates a new identity for the VM using the information from the Secure Enclave of the new Mac host. This identity change requires the person using the VM to reauthenticate to allow iCloud to restart syncing data to the VM.
+
+Additionally, the Virtualization framework detects attempts to start multiple copies of the same VM simultaneously on the same Mac host. For example, when someone duplicates the files that make up a VM, the framework treats the copy of the VM as a clone of the first one. Starting a second clone while another clone is already running causes the Virtualization framework to automatically construct a new identity for the second clone. This preserves the integrity that different VMs have distinct identities, and requires that the person using the VM reauthenticate to use iCloud services.
+
+<a id="Migrate-data-from-older-VMs-to-new-VMs-to-access-iCloud"></a>
+
+### Migrate data from older VMs to new VMs to access iCloud
+
+iCloud support for VMs is available in macOS 15 and later. Be sure to let anyone using your virtualization-enabled app know that they need to migrate their data from older VMs to a macOS 15 or later VM. Using a macOS 15 installer to upgrade an older VM doesn’t provide support for iCloud.
+
+<a id="Let-people-know-where-to-look-for-additional-iCloud-support"></a>
+
+### Let people know where to look for additional iCloud support
+
+Adding information to your app about additional [iCloud support resources](https://support.apple.com/icloud), such as in your app’s help and tips, can help people using your app understand how to troubleshoot any issues when accessing iCloud from the VMs your app supports.
+
+## See Also
+
+### Related Documentation
+
+- [NSHelpManager](../appkit/nshelpmanager.md): An object for displaying online help for an app.
+
+### Essentials
+
+- [Adding the Virtualization Entitlement to Your Project](adding-the-virtualization-entitlement-to-your-project.md): Configure your project to use the Virtualization framework.
+- [com.apple.security.virtualization](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.security.virtualization): A Boolean value that indicates whether your app can use the Virtualization framework.

@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtldrawindexedprimitivesindirectarguments/init()](https://developer.apple.com/documentation/metal/mtldrawindexedprimitivesindirectarguments/init())
+
+# init()
+
+**Framework:** Metal  
+**Kind:** Initializer  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS
+
+Returns a new data layout for drawing indexed primitives via indirect buffer calls.
+
+## Declaration
+
+```swift
+init()
+```

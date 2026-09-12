@@ -1,0 +1,44 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/sequence/suffix(_:)](https://developer.apple.com/documentation/swift/sequence/suffix(_:))
+
+# suffix(\_:)
+
+**Framework:** Swift  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Returns a subsequence, up to the given maximum length, containing the final elements of the sequence.
+
+## Declaration
+
+```swift
+func suffix(_ maxLength: Int) -> [Self.Element]
+```
+
+## Parameters
+
+- `maxLength`: The maximum number of elements to return. The value of `maxLength` must be greater than or equal to zero.
+
+<a id="discussion"></a>
+
+## Discussion
+
+The sequence must be finite. If the maximum length exceeds the number of elements in the sequence, the result contains all the elements in the sequence.
+
+```swift
+let numbers = [1, 2, 3, 4, 5]
+print(numbers.suffix(2))
+// Prints "[4, 5]"
+print(numbers.suffix(10))
+// Prints "[1, 2, 3, 4, 5]"
+```
+
+> **Complexity**
+
+> O(*n*), where *n* is the length of the sequence.
+
+## See Also
+
+### Selecting Elements
+
+- [prefix(\_:)](prefix%28__%29.md): Returns a sequence, up to the specified maximum length, containing the initial elements of the sequence.
+- [prefix(while:)](prefix%28while_%29.md): Returns a sequence containing the initial, consecutive elements that satisfy the given predicate.

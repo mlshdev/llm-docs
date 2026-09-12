@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/if_linkheuristics/4520141-iflh_lqm_min_viable_cnt](https://developer.apple.com/documentation/kernel/if_linkheuristics/4520141-iflh_lqm_min_viable_cnt)
+
+# iflh_lqm_min_viable_cnt
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Instance Property  
+**Availability:** macOS 15.4+
+
+## Declaration
+
+```objectivec
+u_int64_t iflh_lqm_min_viable_cnt;
+```

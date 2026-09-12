@@ -1,0 +1,85 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/contentshape(_:_:eofill:)](https://developer.apple.com/documentation/swiftui/view/contentshape(_:_:eofill:))
+
+# contentShape(\_:\_:eoFill:)
+
+**Framework:** SwiftUI  
+**Kind:** Instance Method  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+
+Sets the content shape for this view.
+
+## Declaration
+
+```swift
+nonisolated func contentShape<S>(_ kind: ContentShapeKinds, _ shape: S, eoFill: Bool = false) -> some View where S : Shape
+
+```
+
+## Parameters
+
+- `kind`: The kinds to apply to this content shape.
+- `shape`: The shape to use.
+- `eoFill`: A Boolean that indicates whether the shape is interpreted with the even-odd winding number rule.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A view that uses the given shape for the specified kind.
+
+## Mentioned In
+
+- [Making a view into a drag source](../making-a-view-into-a-drag-source.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+The content shape has a variety of uses. You can control the kind of the content shape by specifying one in `kind`. The following example sets the focus ring shape of the view, without affecting its shape for hit-testing:
+
+```swift
+MyFocusableView()
+    .contentShape(.focusEffect, Circle())
+```
+
+You can apply multiple kinds of content shapes to the same view. For example, apply a [interaction](../contentshapekinds/interaction.md) shape and [focusEffect](../contentshapekinds/focuseffect.md) shape together to set both the hit-testing shape and focus ring shape on a view.
+
+<a id="Context-Menu--Drag-Previews"></a>
+
+## Context Menu & Drag Previews
+
+You can control the preview shown by the system for context menus or drags using the relevant content shape kind, like [dragPreview](../contentshapekinds/dragpreview.md) and [contextMenuPreview](../contentshapekinds/contextmenupreview.md).
+
+The following example creates a [VStack](../vstack.md) of an [Image](../image.md) and [Text](../text.md) that has a context menu with a custom content shape:
+
+```swift
+VStack {
+    Image("turtlerock")
+        .contentShape(.contextMenuPreview,
+                      RoundedRectangle(cornerRadius: 10))
+    Text("Turtle Rock")
+}
+.contextMenu {
+    Button {
+        // Add this item to a list of favorites.
+    } label: {
+        Label("Add to Favorites", systemImage: "heart")
+    }
+}
+```
+
+When someone activates the context menu with an action like touch and hold in iOS or iPadOS, the system uses the [Image](../image.md) as the preview for the context menu, applying the requested corner radius.
+
+The content shape also supports applying modifiers such as [inset(by:)](../insettableshape/inset%28by_%29.md) to add padding.
+
+> **Note**
+
+> Similar to [focusEffect](../contentshapekinds/focuseffect.md), the [contextMenuPreview](../contentshapekinds/contextmenupreview.md) and [dragPreview](../contentshapekinds/dragpreview.md) content shapes do not impact the hit-testing shape. In this example, someone can touch and hold anywhere on the [VStack](../vstack.md) to activate the menu. If you only want the [Image](../image.md) to activate the menu, apply [contextMenu(menuItems:)](contextmenu%28menuitems_%29.md) to the [Image](../image.md) instead.
+
+## See Also
+
+### Controlling hit testing
+
+- [allowsTightening(\_:)](allowstightening%28__%29.md): Sets whether text in this view can compress the space between characters when necessary to fit text in a line.
+- [contentShape(\_:eoFill:)](contentshape%28__eofill_%29.md): Defines the content shape for hit testing.
+- [ContentShapeKinds](../contentshapekinds.md): A kind for the content shape of a view.

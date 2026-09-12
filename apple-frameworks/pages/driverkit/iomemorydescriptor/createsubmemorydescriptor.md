@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/iomemorydescriptor/createsubmemorydescriptor](https://developer.apple.com/documentation/driverkit/iomemorydescriptor/createsubmemorydescriptor)
+
+# CreateSubMemoryDescriptor
+
+**Interface language:** Objective-C
+
+**Framework:** DriverKit  
+**Kind:** Static Method  
+**Availability:** DriverKit 20.0+ · iOS · iPadOS · macOS
+
+## Declaration
+
+```objectivec
+static kern_return_t CreateSubMemoryDescriptor(uint64_t memoryDescriptorCreateOptions, uint64_t offset, uint64_t length, IOMemoryDescriptor *ofDescriptor, IOMemoryDescriptor **memory);
+```
+
+## See Also
+
+### Type Methods
+
+- [CreateWithMemoryDescriptors](createwithmemorydescriptors.md)

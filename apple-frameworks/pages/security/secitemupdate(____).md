@@ -1,0 +1,137 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/secitemupdate(_:_:)](https://developer.apple.com/documentation/security/secitemupdate(_:_:))
+
+# SecItemUpdate(\_:\_:) (Swift)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.1+ · macOS 10.6+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Modifies items that match a search query.
+
+## Declaration
+
+```swift
+func SecItemUpdate(_ query: CFDictionary, _ attributesToUpdate: CFDictionary) -> OSStatus
+```
+
+## Parameters
+
+- `query`: A dictionary that describes the search for the keychain items you want to update. A typical `query` dictionary consists of:
+
+  - **The item’s class.** Specify the kind of item you want, for example a password, a certificate, or a cryptographic key, using one of the class values in [Item class keys and values](item-class-keys-and-values.md).
+  - **Attributes.** Narrow the search by indicating the attributes that the found item or items should have. The more attributes you specify, the more refined the results, but not all attributes apply to all item classes. For the attributes applicable to the keychain item you’re updating, see the entry for the item’s class in [Item class values](item-class-keys-and-values.md#Item-class-values).
+  - **Search parameters.** Condition the search in a variety of ways. For example, you can limit the results to a specific number of items, control case sensitivity when matching string attributes, or search only among a particular set of items. See [Search attribute keys and values](search-attribute-keys-and-values.md) for the complete list of possible search parameters.
+- `attributesToUpdate`: A dictionary containing the attributes whose values should update, along with the new values. Only real keychain attributes are permitted in this dictionary (no “meta” attributes are allowed.) For the attributes applicable to the keychain item you’re updating, see the entry for the item’s class in [Item class values](item-class-keys-and-values.md#Item-class-values).
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md).
+
+## Mentioned In
+
+- [Updating and deleting keychain items](updating-and-deleting-keychain-items.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The query dictionary for update can’t contain [Item return result keys](item-return-result-keys.md), because [SecItemUpdate(\_:\_:)](secitemupdate%28____%29.md) only returns a status.
+
+<a id="Performance-considerations"></a>
+
+### Performance considerations
+
+`SecItemUpdate` blocks the calling thread, so it can cause your app’s UI to hang if called from the main thread. Instead, call `SecItemUpdate` from a background dispatch queue or `async` function:
+
+**Swift**
+
+```swift
+private func updateKeychainItem(searchAttributes attrs: CFDictionary, update updateAttrs: CFDictionary, _ completion: @escaping (OSStatus) -> Void) {
+    queue.async {
+        let result = SecItemUpdate(attrs, updateAttrs)
+        completion(result)
+    }
+}
+
+```
+
+**Objective-C**
+
+```objc
+- (void)updateKeyChainItemWithAttributes:(CFDictionaryRef)attrs update:(CFDictionaryRef)update completion:(void(^)(OSStatus status))completion {
+    dispatch_async(backgroundQueue, ^{
+        OSStatus updateResult = SecItemUpdate(attrs, update);
+        completion(updateResult);
+    });
+}
+```
+
+# SecItemUpdate (Objective-C)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.1+ · macOS 10.6+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Modifies items that match a search query.
+
+## Declaration
+
+```objectivec
+OSStatus SecItemUpdate(CFDictionaryRef query, CFDictionaryRef attributesToUpdate);
+```
+
+## Parameters
+
+- `query`: A dictionary that describes the search for the keychain items you want to update. A typical `query` dictionary consists of:
+
+  - **The item’s class.** Specify the kind of item you want, for example a password, a certificate, or a cryptographic key, using one of the class values in [Item class keys and values](item-class-keys-and-values.md).
+  - **Attributes.** Narrow the search by indicating the attributes that the found item or items should have. The more attributes you specify, the more refined the results, but not all attributes apply to all item classes. For the attributes applicable to the keychain item you’re updating, see the entry for the item’s class in [Item class values](item-class-keys-and-values.md#Item-class-values).
+  - **Search parameters.** Condition the search in a variety of ways. For example, you can limit the results to a specific number of items, control case sensitivity when matching string attributes, or search only among a particular set of items. See [Search attribute keys and values](search-attribute-keys-and-values.md) for the complete list of possible search parameters.
+- `attributesToUpdate`: A dictionary containing the attributes whose values should update, along with the new values. Only real keychain attributes are permitted in this dictionary (no “meta” attributes are allowed.) For the attributes applicable to the keychain item you’re updating, see the entry for the item’s class in [Item class values](item-class-keys-and-values.md#Item-class-values).
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See [Security Framework Result Codes](security-framework-result-codes.md).
+
+## Mentioned In
+
+- [Updating and deleting keychain items](updating-and-deleting-keychain-items.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The query dictionary for update can’t contain [Item return result keys](item-return-result-keys.md), because [SecItemUpdate](secitemupdate%28____%29.md) only returns a status.
+
+<a id="Performance-considerations"></a>
+
+### Performance considerations
+
+`SecItemUpdate` blocks the calling thread, so it can cause your app’s UI to hang if called from the main thread. Instead, call `SecItemUpdate` from a background dispatch queue or `async` function:
+
+**Swift**
+
+```swift
+private func updateKeychainItem(searchAttributes attrs: CFDictionary, update updateAttrs: CFDictionary, _ completion: @escaping (OSStatus) -> Void) {
+    queue.async {
+        let result = SecItemUpdate(attrs, updateAttrs)
+        completion(result)
+    }
+}
+
+```
+
+**Objective-C**
+
+```objc
+- (void)updateKeyChainItemWithAttributes:(CFDictionaryRef)attrs update:(CFDictionaryRef)update completion:(void(^)(OSStatus status))completion {
+    dispatch_async(backgroundQueue, ^{
+        OSStatus updateResult = SecItemUpdate(attrs, update);
+        completion(updateResult);
+    });
+}
+```

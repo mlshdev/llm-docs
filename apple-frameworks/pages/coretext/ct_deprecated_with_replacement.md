@@ -1,0 +1,28 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coretext/ct_deprecated_with_replacement](https://developer.apple.com/documentation/coretext/ct_deprecated_with_replacement)
+
+# CT_DEPRECATED_WITH_REPLACEMENT
+
+**Interface language:** Objective-C
+
+**Framework:** Core Text  
+**Kind:** Macro  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+## Declaration
+
+```objectivec
+#define CT_DEPRECATED_WITH_REPLACEMENT(...)
+```
+
+## See Also
+
+### Macros
+
+- [CT_AVAILABLE](ct_available.md)
+- [CT_DEPRECATED](ct_deprecated.md)
+- [CT_ENUM_AVAILABLE](ct_enum_available.md)
+- [CT_ENUM_DEPRECATED](ct_enum_deprecated.md)
+- [CT_ENUM_UNAVAILABLE](ct_enum_unavailable.md)
+- [CT_EXPORT](ct_export.md)
+- [CT_SWIFT_SENDABLE](ct_swift_sendable.md)
+- [CT_UNAVAILABLE](ct_unavailable.md)

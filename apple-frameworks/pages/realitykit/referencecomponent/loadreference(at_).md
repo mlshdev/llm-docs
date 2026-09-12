@@ -1,0 +1,19 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/referencecomponent/loadreference(at:)](https://developer.apple.com/documentation/realitykit/referencecomponent/loadreference(at:))
+
+# loadReference(at:)
+
+**Framework:** RealityKit  
+**Kind:** Type Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 2.0+
+
+Asynchronously loads another entity file that an entity depends on.
+
+## Declaration
+
+```swift
+@MainActor static func loadReference(at entity: Entity) async throws
+```
+
+## Parameters
+
+- `entity`: The entity that holds the [ReferenceComponent](../referencecomponent.md) to load.

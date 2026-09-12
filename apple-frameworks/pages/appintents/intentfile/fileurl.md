@@ -1,0 +1,30 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/intentfile/fileurl](https://developer.apple.com/documentation/appintents/intentfile/fileurl)
+
+# fileURL
+
+**Framework:** App Intents  
+**Kind:** Instance Property  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS · watchOS 9.0+
+
+URL to the file on disk, if any. If the file isn’t stored on disk, access the contents using the `data` property.
+
+## Declaration
+
+```swift
+var fileURL: URL? { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+If the file was created elsewhere on the system, make sure to surround access to file contents with `startAccessingSecurityScopedResource()` and `stopAccessingSecurityScopedResource()`.
+
+## See Also
+
+### Getting the file information
+
+- [filename](filename.md): The human-readable name of the file, which will be displayed to the user.
+- [type](type.md): The uniform type identifier of the file. (i.e. “public.json”, “public.png”, or any custom type) More information about uniform type identifiers can be found in \<CoreServices/UTCoreTypes.h\>
+- [data](data.md): The contents of the file. If the file was created with a URL, accessing this property will memory map the file contents.
+- [removedOnCompletion](removedoncompletion.md): Indicates whether the file should be automatically deleted from disk when the Shortcut is done running. `false` by default.

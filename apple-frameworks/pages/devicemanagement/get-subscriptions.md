@@ -1,0 +1,102 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/get-subscriptions](https://developer.apple.com/documentation/devicemanagement/get-subscriptions)
+
+# Get Subscriptions
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Web Service Endpoint
+
+Get the subscriptions that your organization manages.
+
+## URL
+
+```http
+GET https://vpp.itunes.apple.com/mdm/v2/subscriptions
+```
+
+## Query Parameters
+
+- `parentAdamId` — `[int64]`: The filter for subscriptions by parent Adam ID.
+- `adamId` — `[int64]`: The filter for subscriptions by Adam ID.
+- `cursor` — `string`: The cursor for pagination to fetch the next page of results.
+
+## Response Codes
+
+- `200` OK — `GetSubscriptionsResponse`:
+- `400` Bad Request — `ErrorResponse`:
+- `401` Unauthorized — `ErrorResponse`: The provided token is invalid. It may either be missing or expired.
+- `500` Internal Server Error — `ErrorResponse`: An internal server error occurred. Try again later.
+
+## Mentioned In
+
+- [Getting started with the management API](getting-started-with-the-management-api.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+<a id="Example-Request-and-Response"></a>
+
+### Example Request and Response
+
+**Request**
+
+```
+?parentAdamId=54321&adamId=12345
+```
+
+**Response**
+
+```json
+{
+    "subscriptions": [
+        {
+            "parentAdamId": 54321,
+            "adamId": 12345,
+            "counts": {
+                "assigned": {
+                    "renewing": 0,
+                    "expiring": 0
+                },
+                "available": {
+                    "renewing": 0,
+                    "expiring": 0
+                },
+                "total": {
+                    "renewing": 0,
+                    "expiring": 0
+                }
+            }
+        }
+    ],
+    "nextCursor": "NjY5MjY0ODEtZTA4ZC00MmRhLTkxYjItMzdmMDI1MTVkYjQy",
+    "uId": "2049025000431439",
+    "tokenExpirationDate": "2030-11-08T22:33:22+0000",
+    "versionId": "7760f54d-fd4a-4bad-b768-bc1cbb28af9a"
+}
+```
+
+## Topics
+
+### Response
+
+- [GetSubscriptionsResponse](getsubscriptionsresponse.md): The response that contains the requested subscriptions.
+- [ErrorResponse](errorresponse.md): The response that contains the error that occurs.
+
+### Content Metadata
+
+- [Managing subscriptions](managing-subscriptions.md): Administer auto-renewable subscription seats for your organization.
+
+## See Also
+
+### Subscription management
+
+- [Enable Subscriptions](enable-subscriptions.md): Declare that your device management service supports subscription management.
+- [Disable Subscriptions](disable-subscriptions.md): Declare that your device management service doesn’t support subscription management.
+- [Get Subscription Assignments](get-subscription-assignments.md): Get the subscription assignments for users in your organization.
+- [Associate Subscriptions](associate-subscriptions.md): Associate subscriptions with client user IDs.
+- [Disassociate Subscriptions](disassociate-subscriptions.md): Disassociate subscriptions from client user IDs.
+- [Get Subscription Administrators](get-subscription-administrators.md): Get the administrators for subscriptions that your organization manages.
+- [Add Subscription Administrators](add-subscription-administrators.md): Add administrators for subscriptions.
+- [Remove Subscription Administrators](remove-subscription-administrators.md): Remove administrators from subscriptions.

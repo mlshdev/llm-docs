@@ -1,0 +1,65 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/kbluetoothlesecuritymanagerreasoncodepairingnotsupported](https://developer.apple.com/documentation/iobluetooth/kbluetoothlesecuritymanagerreasoncodepairingnotsupported)
+
+# kBluetoothLESecurityManagerReasonCodePairingNotSupported (Swift)
+
+**Framework:** IOBluetooth  
+**Kind:** Global Variable  
+**Availability:** macOS
+
+## Declaration
+
+```swift
+var kBluetoothLESecurityManagerReasonCodePairingNotSupported: BluetoothLESecurityManagerPairingFailedReasonCode { get }
+```
+
+## See Also
+
+### Constants
+
+- [kBluetoothLESecurityManagerReasonCodeAuthenticationRequirements](kbluetoothlesecuritymanagerreasoncodeauthenticationrequirements.md)
+- [kBluetoothLESecurityManagerReasonCodeBREDRPairingInProgress](kbluetoothlesecuritymanagerreasoncodebredrpairinginprogress.md)
+- [kBluetoothLESecurityManagerReasonCodeCommandNotSupported](kbluetoothlesecuritymanagerreasoncodecommandnotsupported.md)
+- [kBluetoothLESecurityManagerReasonCodeConfirmValueFailed](kbluetoothlesecuritymanagerreasoncodeconfirmvaluefailed.md)
+- [kBluetoothLESecurityManagerReasonCodeCrossTransportKeyDerivationGenerationNotAllowed](kbluetoothlesecuritymanagerreasoncodecrosstransportkeyderivationgenerationnotallowed.md)
+- [kBluetoothLESecurityManagerReasonCodeDHKeyCheckFailed](kbluetoothlesecuritymanagerreasoncodedhkeycheckfailed.md)
+- [kBluetoothLESecurityManagerReasonCodeEncryptionKeySize](kbluetoothlesecuritymanagerreasoncodeencryptionkeysize.md)
+- [kBluetoothLESecurityManagerReasonCodeInvalidParameters](kbluetoothlesecuritymanagerreasoncodeinvalidparameters.md)
+- [kBluetoothLESecurityManagerReasonCodeNumericComparisonFailed](kbluetoothlesecuritymanagerreasoncodenumericcomparisonfailed.md)
+- [kBluetoothLESecurityManagerReasonCodeOOBNotAvailbale](kbluetoothlesecuritymanagerreasoncodeoobnotavailbale.md)
+- [kBluetoothLESecurityManagerReasonCodePasskeyEntryFailed](kbluetoothlesecuritymanagerreasoncodepasskeyentryfailed.md)
+- [kBluetoothLESecurityManagerReasonCodeRepeatedAttempts](kbluetoothlesecuritymanagerreasoncoderepeatedattempts.md)
+- [kBluetoothLESecurityManagerReasonCodeReserved](kbluetoothlesecuritymanagerreasoncodereserved.md)
+- [kBluetoothLESecurityManagerReasonCodeReservedEnd](kbluetoothlesecuritymanagerreasoncodereservedend.md)
+- [kBluetoothLESecurityManagerReasonCodeReservedStart](kbluetoothlesecuritymanagerreasoncodereservedstart.md)
+
+# kBluetoothLESecurityManagerReasonCodePairingNotSupported (Objective-C)
+
+**Framework:** IOBluetooth  
+**Kind:** Enumeration Case  
+**Availability:** macOS
+
+## Declaration
+
+```objectivec
+kBluetoothLESecurityManagerReasonCodePairingNotSupported
+```
+
+## See Also
+
+### Constants
+
+- [kBluetoothLESecurityManagerReasonCodeAuthenticationRequirements](kbluetoothlesecuritymanagerreasoncodeauthenticationrequirements.md)
+- [kBluetoothLESecurityManagerReasonCodeBREDRPairingInProgress](kbluetoothlesecuritymanagerreasoncodebredrpairinginprogress.md)
+- [kBluetoothLESecurityManagerReasonCodeCommandNotSupported](kbluetoothlesecuritymanagerreasoncodecommandnotsupported.md)
+- [kBluetoothLESecurityManagerReasonCodeConfirmValueFailed](kbluetoothlesecuritymanagerreasoncodeconfirmvaluefailed.md)
+- [kBluetoothLESecurityManagerReasonCodeCrossTransportKeyDerivationGenerationNotAllowed](kbluetoothlesecuritymanagerreasoncodecrosstransportkeyderivationgenerationnotallowed.md)
+- [kBluetoothLESecurityManagerReasonCodeDHKeyCheckFailed](kbluetoothlesecuritymanagerreasoncodedhkeycheckfailed.md)
+- [kBluetoothLESecurityManagerReasonCodeEncryptionKeySize](kbluetoothlesecuritymanagerreasoncodeencryptionkeysize.md)
+- [kBluetoothLESecurityManagerReasonCodeInvalidParameters](kbluetoothlesecuritymanagerreasoncodeinvalidparameters.md)
+- [kBluetoothLESecurityManagerReasonCodeNumericComparisonFailed](kbluetoothlesecuritymanagerreasoncodenumericcomparisonfailed.md)
+- [kBluetoothLESecurityManagerReasonCodeOOBNotAvailbale](kbluetoothlesecuritymanagerreasoncodeoobnotavailbale.md)
+- [kBluetoothLESecurityManagerReasonCodePasskeyEntryFailed](kbluetoothlesecuritymanagerreasoncodepasskeyentryfailed.md)
+- [kBluetoothLESecurityManagerReasonCodeRepeatedAttempts](kbluetoothlesecuritymanagerreasoncoderepeatedattempts.md)
+- [kBluetoothLESecurityManagerReasonCodeReserved](kbluetoothlesecuritymanagerreasoncodereserved.md)
+- [kBluetoothLESecurityManagerReasonCodeReservedEnd](kbluetoothlesecuritymanagerreasoncodereservedend.md)
+- [kBluetoothLESecurityManagerReasonCodeReservedStart](kbluetoothlesecuritymanagerreasoncodereservedstart.md)

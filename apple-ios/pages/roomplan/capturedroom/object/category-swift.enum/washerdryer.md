@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/roomplan/capturedroom/object/category-swift.enum/washerdryer](https://developer.apple.com/documentation/roomplan/capturedroom/object/category-swift.enum/washerdryer)
+
+# CapturedRoom.Object.Category.washerDryer
+
+**Framework:** RoomPlan  
+**Kind:** Case  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+
+
+A category for an object that represents a clothes washer or dryer.
+
+## Declaration
+
+```swift
+case washerDryer
+```
+
+## See Also
+
+### Determining the object category
+
+- [CapturedRoom.Object.Category.bathtub](bathtub.md): A category for an object that represents a bathtub.
+- [CapturedRoom.Object.Category.bed](bed.md): A category for an object that represents a bed.
+- [CapturedRoom.Object.Category.chair](chair.md): A category for an object that represents a chair.
+- [CapturedRoom.Object.Category.dishwasher](dishwasher.md): A category for an object that represents a dishwasher.
+- [CapturedRoom.Object.Category.fireplace](fireplace.md): A category for an object that represents a fireplace.
+- [CapturedRoom.Object.Category.oven](oven.md): A category for an object that represents an oven.
+- [CapturedRoom.Object.Category.refrigerator](refrigerator.md): A category for an object that represents a refrigerator.
+- [CapturedRoom.Object.Category.sink](sink.md): A category for an object that represents a sink.
+- [CapturedRoom.Object.Category.sofa](sofa.md): A category for an object that represents a sofa.
+- [CapturedRoom.Object.Category.stairs](stairs.md): A category for an object that represents stairs.
+- [CapturedRoom.Object.Category.storage](storage.md): A category for an object that represents a storage area.
+- [CapturedRoom.Object.Category.stove](stove.md): A category for an object that represents a stove.
+- [CapturedRoom.Object.Category.table](table.md): A category for an object that represents a table.
+- [CapturedRoom.Object.Category.television](television.md): A category for an object that represents a television.
+- [CapturedRoom.Object.Category.toilet](toilet.md): A category for an object that represents a toilet.

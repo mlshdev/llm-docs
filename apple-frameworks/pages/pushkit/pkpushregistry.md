@@ -1,0 +1,176 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/pushkit/pkpushregistry](https://developer.apple.com/documentation/pushkit/pkpushregistry)
+
+# PKPushRegistry (Swift)
+
+**Framework:** PushKit  
+**Kind:** Class  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 8.0+ · macOS 10.15+ · visionOS 1.0+ · watchOS 6.0+
+
+An object that requests the delivery and handles the receipt of PushKit notifications.
+
+## Declaration
+
+```swift
+class PKPushRegistry
+```
+
+## Mentioned In
+
+- [Supporting PushKit Notifications in Your App](supporting-pushkit-notifications-in-your-app.md)
+- [Responding to VoIP Notifications from PushKit](responding-to-voip-notifications-from-pushkit.md)
+
+<a id="overview"></a>
+
+## Overview
+
+A `PKPushRegistry` object manages only certain types of notifications, such as high-priority notifications needed by a VoIP app. PushKit wakes up your app as needed to deliver incoming notifications and delivers the notifications directly to the push registry object that requested them.
+
+Every time your app launches, whether in the foreground or in the background, create a push registry object and configure it. Typically, you keep the push registry object running for the duration of your app. Each push registry object delivers incoming notifications to its [delegate](pkpushregistry/delegate.md) object, which also handles the responses for registration requests. Listing 1 shows how to create a push registry object and request VoIP notifications. Always assign an appropriate delegate object before modifying the [desiredPushTypes](pkpushregistry/desiredpushtypes.md) property.
+
+Listing 1. Creating and configuring a push registry object
+
+**Swift**
+
+```swift
+func registerForVoIPPushes() {
+    self.voipRegistry = PKPushRegistry(queue: nil)
+    self.voipRegistry.delegate = self
+    self.voipRegistry.desiredPushTypes = [PKPushTypeVoIP]
+}
+```
+
+**Objective-C**
+
+```objc
+- (void) registerForVoIPPushes {
+   self.voipRegistry = [[PKPushRegistry alloc] initWithQueue:nil];
+   self.voipRegistry.delegate = self;
+ 
+   // Initiate registration.
+   self.voipRegistry.desiredPushTypes = [NSSet setWithObject:PKPushTypeVoIP];
+}
+```
+
+Assigning a new value to the [desiredPushTypes](pkpushregistry/desiredpushtypes.md) property registers the push registry object with the PushKit servers. The server reports the success or failure of your registration attempts asynchronously to the push registry, which then reports those results to its delegate object. The push registry also delivers all received notifications to the delegate object. For more information about the delegate methods, see [PKPushRegistryDelegate](pkpushregistrydelegate.md).
+
+## Topics
+
+### Initializing a Push Registry
+
+- [init(queue:)](pkpushregistry/init%28queue_%29.md): Creates a push registry with the specified dispatch queue.
+
+### Receiving the Notification Data
+
+- [delegate](pkpushregistry/delegate.md): The delegate object that receives notifications coming from the push registry object.
+- [PKPushRegistryDelegate](pkpushregistrydelegate.md): The methods that you use to handle incoming PushKit notifications and registration events.
+
+### Managing the Push Registry
+
+- [desiredPushTypes](pkpushregistry/desiredpushtypes.md): Registers the push types for this push registry object.
+- [pushToken(for:)](pkpushregistry/pushtoken%28for_%29.md): Retrieves the locally cached push token for the specified push type.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Registration
+
+- [Supporting PushKit Notifications in Your App](supporting-pushkit-notifications-in-your-app.md): Declare the types of PushKit notifications your app supports and configure objects to respond to them.
+- [PKPushRegistryDelegate](pkpushregistrydelegate.md): The methods that you use to handle incoming PushKit notifications and registration events.
+- [PKPushCredentials](pkpushcredentials.md): An object that encapsulates the device token you use to deliver push notifications to your app.
+
+# PKPushRegistry (Objective-C)
+
+**Framework:** PushKit  
+**Kind:** Class  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · visionOS 1.0+ · watchOS 6.0+
+
+An object that requests the delivery and handles the receipt of PushKit notifications.
+
+## Declaration
+
+```objectivec
+@interface PKPushRegistry : NSObject
+```
+
+## Mentioned In
+
+- [Supporting PushKit Notifications in Your App](supporting-pushkit-notifications-in-your-app.md)
+- [Responding to VoIP Notifications from PushKit](responding-to-voip-notifications-from-pushkit.md)
+
+<a id="overview"></a>
+
+## Overview
+
+A `PKPushRegistry` object manages only certain types of notifications, such as high-priority notifications needed by a VoIP app. PushKit wakes up your app as needed to deliver incoming notifications and delivers the notifications directly to the push registry object that requested them.
+
+Every time your app launches, whether in the foreground or in the background, create a push registry object and configure it. Typically, you keep the push registry object running for the duration of your app. Each push registry object delivers incoming notifications to its [delegate](pkpushregistry/delegate.md) object, which also handles the responses for registration requests. Listing 1 shows how to create a push registry object and request VoIP notifications. Always assign an appropriate delegate object before modifying the [desiredPushTypes](pkpushregistry/desiredpushtypes.md) property.
+
+Listing 1. Creating and configuring a push registry object
+
+**Swift**
+
+```swift
+func registerForVoIPPushes() {
+    self.voipRegistry = PKPushRegistry(queue: nil)
+    self.voipRegistry.delegate = self
+    self.voipRegistry.desiredPushTypes = [PKPushTypeVoIP]
+}
+```
+
+**Objective-C**
+
+```objc
+- (void) registerForVoIPPushes {
+   self.voipRegistry = [[PKPushRegistry alloc] initWithQueue:nil];
+   self.voipRegistry.delegate = self;
+ 
+   // Initiate registration.
+   self.voipRegistry.desiredPushTypes = [NSSet setWithObject:PKPushTypeVoIP];
+}
+```
+
+Assigning a new value to the [desiredPushTypes](pkpushregistry/desiredpushtypes.md) property registers the push registry object with the PushKit servers. The server reports the success or failure of your registration attempts asynchronously to the push registry, which then reports those results to its delegate object. The push registry also delivers all received notifications to the delegate object. For more information about the delegate methods, see [PKPushRegistryDelegate](pkpushregistrydelegate.md).
+
+## Topics
+
+### Initializing a Push Registry
+
+- [initWithQueue:](pkpushregistry/init%28queue_%29.md): Creates a push registry with the specified dispatch queue.
+
+### Receiving the Notification Data
+
+- [delegate](pkpushregistry/delegate.md): The delegate object that receives notifications coming from the push registry object.
+- [PKPushRegistryDelegate](pkpushregistrydelegate.md): The methods that you use to handle incoming PushKit notifications and registration events.
+
+### Managing the Push Registry
+
+- [desiredPushTypes](pkpushregistry/desiredpushtypes.md): Registers the push types for this push registry object.
+- [pushTokenForType:](pkpushregistry/pushtoken%28for_%29.md): Retrieves the locally cached push token for the specified push type.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+## See Also
+
+### Registration
+
+- [Supporting PushKit Notifications in Your App](supporting-pushkit-notifications-in-your-app.md): Declare the types of PushKit notifications your app supports and configure objects to respond to them.
+- [PKPushRegistryDelegate](pkpushregistrydelegate.md): The methods that you use to handle incoming PushKit notifications and registration events.
+- [PKPushCredentials](pkpushcredentials.md): An object that encapsulates the device token you use to deliver push notifications to your app.

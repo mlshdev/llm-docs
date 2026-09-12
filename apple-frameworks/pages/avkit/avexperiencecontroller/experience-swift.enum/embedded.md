@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avexperiencecontroller/experience-swift.enum/embedded](https://developer.apple.com/documentation/avkit/avexperiencecontroller/experience-swift.enum/embedded)
+
+# AVExperienceController.Experience.embedded
+
+**Framework:** AVKit  
+**Kind:** Case  
+**Availability:** visionOS 2.0+
+
+An experience where the video embeds within its original container.
+
+## Declaration
+
+```swift
+case embedded
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This experience is the starting state and is valid on all platforms. You may embed video in the original container even if that container isn’t visible or not in the view hierarchy. It’s valid to transition to this experience from any other experience, even when the player view controller isn’t in the view hierarchy.
+
+It’s the app’s responsibility to correctly manage the player view controller’s view lifecycle.
+
+> **Note**
+
+> This experience to is analogous to a player view controller’s inline state.
+
+## See Also
+
+### Supported experiences
+
+- [AVExperienceController.Experience.expanded](expanded.md): An experience where the system places the video outside of its original container.
+- [AVExperienceController.Experience.multiview](multiview.md): An experience where multiple videos play together.
+- [AVExperienceController.Experience.immersive](immersive.md): Indicates an experience in which the video extends beyond the app window boundaries/container.

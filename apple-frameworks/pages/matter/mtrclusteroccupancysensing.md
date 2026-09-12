@@ -1,0 +1,162 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrclusteroccupancysensing](https://developer.apple.com/documentation/matter/mtrclusteroccupancysensing)
+
+# MTRClusterOccupancySensing (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```swift
+class MTRClusterOccupancySensing
+```
+
+## Topics
+
+### Initializers
+
+- [init(device:endpoint:queue:)](mtrclusteroccupancysensing/init%28device_endpoint_queue_%29.md): Deprecated.
+- [init(device:endpointID:queue:)](mtrclusteroccupancysensing/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandList(with:)](mtrclusteroccupancysensing/readattributeacceptedcommandlist%28with_%29.md)
+- [readAttributeAttributeList(with:)](mtrclusteroccupancysensing/readattributeattributelist%28with_%29.md)
+- [readAttributeClusterRevision(with:)](mtrclusteroccupancysensing/readattributeclusterrevision%28with_%29.md)
+- [readAttributeFeatureMap(with:)](mtrclusteroccupancysensing/readattributefeaturemap%28with_%29.md)
+- [readAttributeGeneratedCommandList(with:)](mtrclusteroccupancysensing/readattributegeneratedcommandlist%28with_%29.md)
+- [readAttributeOccupancy(with:)](mtrclusteroccupancysensing/readattributeoccupancy%28with_%29.md)
+- [readAttributeOccupancySensorType(with:)](mtrclusteroccupancysensing/readattributeoccupancysensortype%28with_%29.md)
+- [readAttributeOccupancySensorTypeBitmap(with:)](mtrclusteroccupancysensing/readattributeoccupancysensortypebitmap%28with_%29.md)
+- [readAttributePIROccupiedToUnoccupiedDelay(with:)](mtrclusteroccupancysensing/readattributepiroccupiedtounoccupieddelay%28with_%29-8y6de.md)
+- [readAttributePIRUnoccupiedToOccupiedDelay(with:)](mtrclusteroccupancysensing/readattributepirunoccupiedtooccupieddelay%28with_%29-9921w.md)
+- [readAttributePIRUnoccupiedToOccupiedThreshold(with:)](mtrclusteroccupancysensing/readattributepirunoccupiedtooccupiedthreshold%28with_%29-4hcda.md)
+- [readAttributePhysicalContactOccupiedToUnoccupiedDelay(with:)](mtrclusteroccupancysensing/readattributephysicalcontactoccupiedtounoccupieddelay%28with_%29.md)
+- [readAttributePhysicalContactUnoccupiedToOccupiedDelay(with:)](mtrclusteroccupancysensing/readattributephysicalcontactunoccupiedtooccupieddelay%28with_%29.md)
+- [readAttributePhysicalContactUnoccupiedToOccupiedThreshold(with:)](mtrclusteroccupancysensing/readattributephysicalcontactunoccupiedtooccupiedthreshold%28with_%29.md)
+- [readAttributePirOccupiedToUnoccupiedDelay(with:)](mtrclusteroccupancysensing/readattributepiroccupiedtounoccupieddelay%28with_%29-34lvb.md): Deprecated.
+- [readAttributePirUnoccupiedToOccupiedDelay(with:)](mtrclusteroccupancysensing/readattributepirunoccupiedtooccupieddelay%28with_%29-689um.md): Deprecated.
+- [readAttributePirUnoccupiedToOccupiedThreshold(with:)](mtrclusteroccupancysensing/readattributepirunoccupiedtooccupiedthreshold%28with_%29-9lalt.md): Deprecated.
+- [readAttributeUltrasonicOccupiedToUnoccupiedDelay(with:)](mtrclusteroccupancysensing/readattributeultrasonicoccupiedtounoccupieddelay%28with_%29.md)
+- [readAttributeUltrasonicUnoccupiedToOccupiedDelay(with:)](mtrclusteroccupancysensing/readattributeultrasonicunoccupiedtooccupieddelay%28with_%29.md)
+- [readAttributeUltrasonicUnoccupiedToOccupiedThreshold(with:)](mtrclusteroccupancysensing/readattributeultrasonicunoccupiedtooccupiedthreshold%28with_%29.md)
+- [writeAttributePIROccupiedToUnoccupiedDelay(withValue:expectedValueInterval:)](mtrclusteroccupancysensing/writeattributepiroccupiedtounoccupieddelay%28withvalue_expectedvalueinterval_%29-7uivi.md)
+- [writeAttributePIROccupiedToUnoccupiedDelay(withValue:expectedValueInterval:params:)](mtrclusteroccupancysensing/writeattributepiroccupiedtounoccupieddelay%28withvalue_expectedvalueinterval_params_%29-5qnw2.md)
+- [writeAttributePIRUnoccupiedToOccupiedDelay(withValue:expectedValueInterval:)](mtrclusteroccupancysensing/writeattributepirunoccupiedtooccupieddelay%28withvalue_expectedvalueinterval_%29-4e9dc.md)
+- [writeAttributePIRUnoccupiedToOccupiedDelay(withValue:expectedValueInterval:params:)](mtrclusteroccupancysensing/writeattributepirunoccupiedtooccupieddelay%28withvalue_expectedvalueinterval_params_%29-1lbjc.md)
+- [writeAttributePIRUnoccupiedToOccupiedThreshold(withValue:expectedValueInterval:)](mtrclusteroccupancysensing/writeattributepirunoccupiedtooccupiedthreshold%28withvalue_expectedvalueinterval_%29-1gpdu.md)
+- [writeAttributePIRUnoccupiedToOccupiedThreshold(withValue:expectedValueInterval:params:)](mtrclusteroccupancysensing/writeattributepirunoccupiedtooccupiedthreshold%28withvalue_expectedvalueinterval_params_%29-7cch4.md)
+- [writeAttributePhysicalContactOccupiedToUnoccupiedDelay(withValue:expectedValueInterval:)](mtrclusteroccupancysensing/writeattributephysicalcontactoccupiedtounoccupieddelay%28withvalue_expectedvalueinterval_%29.md)
+- [writeAttributePhysicalContactOccupiedToUnoccupiedDelay(withValue:expectedValueInterval:params:)](mtrclusteroccupancysensing/writeattributephysicalcontactoccupiedtounoccupieddelay%28withvalue_expectedvalueinterval_params_%29.md)
+- [writeAttributePhysicalContactUnoccupiedToOccupiedDelay(withValue:expectedValueInterval:)](mtrclusteroccupancysensing/writeattributephysicalcontactunoccupiedtooccupieddelay%28withvalue_expectedvalueinterval_%29.md)
+- [writeAttributePhysicalContactUnoccupiedToOccupiedDelay(withValue:expectedValueInterval:params:)](mtrclusteroccupancysensing/writeattributephysicalcontactunoccupiedtooccupieddelay%28withvalue_expectedvalueinterval_params_%29.md)
+- [writeAttributePhysicalContactUnoccupiedToOccupiedThreshold(withValue:expectedValueInterval:)](mtrclusteroccupancysensing/writeattributephysicalcontactunoccupiedtooccupiedthreshold%28withvalue_expectedvalueinterval_%29.md)
+- [writeAttributePhysicalContactUnoccupiedToOccupiedThreshold(withValue:expectedValueInterval:params:)](mtrclusteroccupancysensing/writeattributephysicalcontactunoccupiedtooccupiedthreshold%28withvalue_expectedvalueinterval_params_%29.md)
+- [writeAttributePirOccupiedToUnoccupiedDelay(withValue:expectedValueInterval:)](mtrclusteroccupancysensing/writeattributepiroccupiedtounoccupieddelay%28withvalue_expectedvalueinterval_%29-464r9.md): Deprecated.
+- [writeAttributePirOccupiedToUnoccupiedDelay(withValue:expectedValueInterval:params:)](mtrclusteroccupancysensing/writeattributepiroccupiedtounoccupieddelay%28withvalue_expectedvalueinterval_params_%29-7ksgk.md): Deprecated.
+- [writeAttributePirUnoccupiedToOccupiedDelay(withValue:expectedValueInterval:)](mtrclusteroccupancysensing/writeattributepirunoccupiedtooccupieddelay%28withvalue_expectedvalueinterval_%29-1zbkq.md): Deprecated.
+- [writeAttributePirUnoccupiedToOccupiedDelay(withValue:expectedValueInterval:params:)](mtrclusteroccupancysensing/writeattributepirunoccupiedtooccupieddelay%28withvalue_expectedvalueinterval_params_%29-d0k3.md): Deprecated.
+- [writeAttributePirUnoccupiedToOccupiedThreshold(withValue:expectedValueInterval:)](mtrclusteroccupancysensing/writeattributepirunoccupiedtooccupiedthreshold%28withvalue_expectedvalueinterval_%29-6neal.md): Deprecated.
+- [writeAttributePirUnoccupiedToOccupiedThreshold(withValue:expectedValueInterval:params:)](mtrclusteroccupancysensing/writeattributepirunoccupiedtooccupiedthreshold%28withvalue_expectedvalueinterval_params_%29-7e46a.md): Deprecated.
+- [writeAttributeUltrasonicOccupiedToUnoccupiedDelay(withValue:expectedValueInterval:)](mtrclusteroccupancysensing/writeattributeultrasonicoccupiedtounoccupieddelay%28withvalue_expectedvalueinterval_%29.md)
+- [writeAttributeUltrasonicOccupiedToUnoccupiedDelay(withValue:expectedValueInterval:params:)](mtrclusteroccupancysensing/writeattributeultrasonicoccupiedtounoccupieddelay%28withvalue_expectedvalueinterval_params_%29.md)
+- [writeAttributeUltrasonicUnoccupiedToOccupiedDelay(withValue:expectedValueInterval:)](mtrclusteroccupancysensing/writeattributeultrasonicunoccupiedtooccupieddelay%28withvalue_expectedvalueinterval_%29.md)
+- [writeAttributeUltrasonicUnoccupiedToOccupiedDelay(withValue:expectedValueInterval:params:)](mtrclusteroccupancysensing/writeattributeultrasonicunoccupiedtooccupieddelay%28withvalue_expectedvalueinterval_params_%29.md)
+- [writeAttributeUltrasonicUnoccupiedToOccupiedThreshold(withValue:expectedValueInterval:)](mtrclusteroccupancysensing/writeattributeultrasonicunoccupiedtooccupiedthreshold%28withvalue_expectedvalueinterval_%29.md)
+- [writeAttributeUltrasonicUnoccupiedToOccupiedThreshold(withValue:expectedValueInterval:params:)](mtrclusteroccupancysensing/writeattributeultrasonicunoccupiedtooccupiedthreshold%28withvalue_expectedvalueinterval_params_%29.md)
+- [readAttributeHoldTime(with:)](mtrclusteroccupancysensing/readattributeholdtime%28with_%29.md)
+- [readAttributeHoldTimeLimits(with:)](mtrclusteroccupancysensing/readattributeholdtimelimits%28with_%29.md)
+- [writeAttributeHoldTime(withValue:expectedValueInterval:)](mtrclusteroccupancysensing/writeattributeholdtime%28withvalue_expectedvalueinterval_%29.md)
+- [writeAttributeHoldTime(withValue:expectedValueInterval:params:)](mtrclusteroccupancysensing/writeattributeholdtime%28withvalue_expectedvalueinterval_params_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericCluster](mtrgenericcluster.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRClusterOccupancySensing (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```objectivec
+@interface MTRClusterOccupancySensing : MTRGenericCluster
+```
+
+## Topics
+
+### Initializers
+
+- [initWithDevice:endpoint:queue:](mtrclusteroccupancysensing/init%28device_endpoint_queue_%29.md): Deprecated.
+- [initWithDevice:endpointID:queue:](mtrclusteroccupancysensing/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandListWithParams:](mtrclusteroccupancysensing/readattributeacceptedcommandlist%28with_%29.md)
+- [readAttributeAttributeListWithParams:](mtrclusteroccupancysensing/readattributeattributelist%28with_%29.md)
+- [readAttributeClusterRevisionWithParams:](mtrclusteroccupancysensing/readattributeclusterrevision%28with_%29.md)
+- [readAttributeFeatureMapWithParams:](mtrclusteroccupancysensing/readattributefeaturemap%28with_%29.md)
+- [readAttributeGeneratedCommandListWithParams:](mtrclusteroccupancysensing/readattributegeneratedcommandlist%28with_%29.md)
+- [readAttributeOccupancyWithParams:](mtrclusteroccupancysensing/readattributeoccupancy%28with_%29.md)
+- [readAttributeOccupancySensorTypeWithParams:](mtrclusteroccupancysensing/readattributeoccupancysensortype%28with_%29.md)
+- [readAttributeOccupancySensorTypeBitmapWithParams:](mtrclusteroccupancysensing/readattributeoccupancysensortypebitmap%28with_%29.md)
+- [readAttributePIROccupiedToUnoccupiedDelayWithParams:](mtrclusteroccupancysensing/readattributepiroccupiedtounoccupieddelay%28with_%29-8y6de.md)
+- [readAttributePIRUnoccupiedToOccupiedDelayWithParams:](mtrclusteroccupancysensing/readattributepirunoccupiedtooccupieddelay%28with_%29-9921w.md)
+- [readAttributePIRUnoccupiedToOccupiedThresholdWithParams:](mtrclusteroccupancysensing/readattributepirunoccupiedtooccupiedthreshold%28with_%29-4hcda.md)
+- [readAttributePhysicalContactOccupiedToUnoccupiedDelayWithParams:](mtrclusteroccupancysensing/readattributephysicalcontactoccupiedtounoccupieddelay%28with_%29.md)
+- [readAttributePhysicalContactUnoccupiedToOccupiedDelayWithParams:](mtrclusteroccupancysensing/readattributephysicalcontactunoccupiedtooccupieddelay%28with_%29.md)
+- [readAttributePhysicalContactUnoccupiedToOccupiedThresholdWithParams:](mtrclusteroccupancysensing/readattributephysicalcontactunoccupiedtooccupiedthreshold%28with_%29.md)
+- [readAttributePirOccupiedToUnoccupiedDelayWithParams:](mtrclusteroccupancysensing/readattributepiroccupiedtounoccupieddelay%28with_%29-34lvb.md): Deprecated.
+- [readAttributePirUnoccupiedToOccupiedDelayWithParams:](mtrclusteroccupancysensing/readattributepirunoccupiedtooccupieddelay%28with_%29-689um.md): Deprecated.
+- [readAttributePirUnoccupiedToOccupiedThresholdWithParams:](mtrclusteroccupancysensing/readattributepirunoccupiedtooccupiedthreshold%28with_%29-9lalt.md): Deprecated.
+- [readAttributeUltrasonicOccupiedToUnoccupiedDelayWithParams:](mtrclusteroccupancysensing/readattributeultrasonicoccupiedtounoccupieddelay%28with_%29.md)
+- [readAttributeUltrasonicUnoccupiedToOccupiedDelayWithParams:](mtrclusteroccupancysensing/readattributeultrasonicunoccupiedtooccupieddelay%28with_%29.md)
+- [readAttributeUltrasonicUnoccupiedToOccupiedThresholdWithParams:](mtrclusteroccupancysensing/readattributeultrasonicunoccupiedtooccupiedthreshold%28with_%29.md)
+- [writeAttributePIROccupiedToUnoccupiedDelayWithValue:expectedValueInterval:](mtrclusteroccupancysensing/writeattributepiroccupiedtounoccupieddelay%28withvalue_expectedvalueinterval_%29-7uivi.md)
+- [writeAttributePIROccupiedToUnoccupiedDelayWithValue:expectedValueInterval:params:](mtrclusteroccupancysensing/writeattributepiroccupiedtounoccupieddelay%28withvalue_expectedvalueinterval_params_%29-5qnw2.md)
+- [writeAttributePIRUnoccupiedToOccupiedDelayWithValue:expectedValueInterval:](mtrclusteroccupancysensing/writeattributepirunoccupiedtooccupieddelay%28withvalue_expectedvalueinterval_%29-4e9dc.md)
+- [writeAttributePIRUnoccupiedToOccupiedDelayWithValue:expectedValueInterval:params:](mtrclusteroccupancysensing/writeattributepirunoccupiedtooccupieddelay%28withvalue_expectedvalueinterval_params_%29-1lbjc.md)
+- [writeAttributePIRUnoccupiedToOccupiedThresholdWithValue:expectedValueInterval:](mtrclusteroccupancysensing/writeattributepirunoccupiedtooccupiedthreshold%28withvalue_expectedvalueinterval_%29-1gpdu.md)
+- [writeAttributePIRUnoccupiedToOccupiedThresholdWithValue:expectedValueInterval:params:](mtrclusteroccupancysensing/writeattributepirunoccupiedtooccupiedthreshold%28withvalue_expectedvalueinterval_params_%29-7cch4.md)
+- [writeAttributePhysicalContactOccupiedToUnoccupiedDelayWithValue:expectedValueInterval:](mtrclusteroccupancysensing/writeattributephysicalcontactoccupiedtounoccupieddelay%28withvalue_expectedvalueinterval_%29.md)
+- [writeAttributePhysicalContactOccupiedToUnoccupiedDelayWithValue:expectedValueInterval:params:](mtrclusteroccupancysensing/writeattributephysicalcontactoccupiedtounoccupieddelay%28withvalue_expectedvalueinterval_params_%29.md)
+- [writeAttributePhysicalContactUnoccupiedToOccupiedDelayWithValue:expectedValueInterval:](mtrclusteroccupancysensing/writeattributephysicalcontactunoccupiedtooccupieddelay%28withvalue_expectedvalueinterval_%29.md)
+- [writeAttributePhysicalContactUnoccupiedToOccupiedDelayWithValue:expectedValueInterval:params:](mtrclusteroccupancysensing/writeattributephysicalcontactunoccupiedtooccupieddelay%28withvalue_expectedvalueinterval_params_%29.md)
+- [writeAttributePhysicalContactUnoccupiedToOccupiedThresholdWithValue:expectedValueInterval:](mtrclusteroccupancysensing/writeattributephysicalcontactunoccupiedtooccupiedthreshold%28withvalue_expectedvalueinterval_%29.md)
+- [writeAttributePhysicalContactUnoccupiedToOccupiedThresholdWithValue:expectedValueInterval:params:](mtrclusteroccupancysensing/writeattributephysicalcontactunoccupiedtooccupiedthreshold%28withvalue_expectedvalueinterval_params_%29.md)
+- [writeAttributePirOccupiedToUnoccupiedDelayWithValue:expectedValueInterval:](mtrclusteroccupancysensing/writeattributepiroccupiedtounoccupieddelay%28withvalue_expectedvalueinterval_%29-464r9.md): Deprecated.
+- [writeAttributePirOccupiedToUnoccupiedDelayWithValue:expectedValueInterval:params:](mtrclusteroccupancysensing/writeattributepiroccupiedtounoccupieddelay%28withvalue_expectedvalueinterval_params_%29-7ksgk.md): Deprecated.
+- [writeAttributePirUnoccupiedToOccupiedDelayWithValue:expectedValueInterval:](mtrclusteroccupancysensing/writeattributepirunoccupiedtooccupieddelay%28withvalue_expectedvalueinterval_%29-1zbkq.md): Deprecated.
+- [writeAttributePirUnoccupiedToOccupiedDelayWithValue:expectedValueInterval:params:](mtrclusteroccupancysensing/writeattributepirunoccupiedtooccupieddelay%28withvalue_expectedvalueinterval_params_%29-d0k3.md): Deprecated.
+- [writeAttributePirUnoccupiedToOccupiedThresholdWithValue:expectedValueInterval:](mtrclusteroccupancysensing/writeattributepirunoccupiedtooccupiedthreshold%28withvalue_expectedvalueinterval_%29-6neal.md): Deprecated.
+- [writeAttributePirUnoccupiedToOccupiedThresholdWithValue:expectedValueInterval:params:](mtrclusteroccupancysensing/writeattributepirunoccupiedtooccupiedthreshold%28withvalue_expectedvalueinterval_params_%29-7e46a.md): Deprecated.
+- [writeAttributeUltrasonicOccupiedToUnoccupiedDelayWithValue:expectedValueInterval:](mtrclusteroccupancysensing/writeattributeultrasonicoccupiedtounoccupieddelay%28withvalue_expectedvalueinterval_%29.md)
+- [writeAttributeUltrasonicOccupiedToUnoccupiedDelayWithValue:expectedValueInterval:params:](mtrclusteroccupancysensing/writeattributeultrasonicoccupiedtounoccupieddelay%28withvalue_expectedvalueinterval_params_%29.md)
+- [writeAttributeUltrasonicUnoccupiedToOccupiedDelayWithValue:expectedValueInterval:](mtrclusteroccupancysensing/writeattributeultrasonicunoccupiedtooccupieddelay%28withvalue_expectedvalueinterval_%29.md)
+- [writeAttributeUltrasonicUnoccupiedToOccupiedDelayWithValue:expectedValueInterval:params:](mtrclusteroccupancysensing/writeattributeultrasonicunoccupiedtooccupieddelay%28withvalue_expectedvalueinterval_params_%29.md)
+- [writeAttributeUltrasonicUnoccupiedToOccupiedThresholdWithValue:expectedValueInterval:](mtrclusteroccupancysensing/writeattributeultrasonicunoccupiedtooccupiedthreshold%28withvalue_expectedvalueinterval_%29.md)
+- [writeAttributeUltrasonicUnoccupiedToOccupiedThresholdWithValue:expectedValueInterval:params:](mtrclusteroccupancysensing/writeattributeultrasonicunoccupiedtooccupiedthreshold%28withvalue_expectedvalueinterval_params_%29.md)
+- [readAttributeHoldTimeWithParams:](mtrclusteroccupancysensing/readattributeholdtime%28with_%29.md)
+- [readAttributeHoldTimeLimitsWithParams:](mtrclusteroccupancysensing/readattributeholdtimelimits%28with_%29.md)
+- [writeAttributeHoldTimeWithValue:expectedValueInterval:](mtrclusteroccupancysensing/writeattributeholdtime%28withvalue_expectedvalueinterval_%29.md)
+- [writeAttributeHoldTimeWithValue:expectedValueInterval:params:](mtrclusteroccupancysensing/writeattributeholdtime%28withvalue_expectedvalueinterval_params_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericCluster](mtrgenericcluster.md)

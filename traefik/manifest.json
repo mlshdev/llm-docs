@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "project": "traefik",
   "title": "Traefik Proxy",
+  "homepage": "https://doc.traefik.io/traefik/",
   "repository": "traefik/traefik",
   "tag": "v3.7.13",
   "releaseId": 382715786,

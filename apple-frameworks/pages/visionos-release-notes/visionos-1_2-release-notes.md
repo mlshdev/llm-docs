@@ -1,0 +1,63 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/visionos-release-notes/visionos-1_2-release-notes](https://developer.apple.com/documentation/visionos-release-notes/visionos-1_2-release-notes)
+
+# visionOS 1.2 Release Notes
+
+**Kind:** Article
+
+Update your apps to use new features, and test your apps against API changes.
+
+<a id="Overview"></a>
+
+## Overview
+
+The visionOS 1.2 SDK provides support for developing apps for Apple Vision Pro devices running visionOS 1.2. The SDK comes bundled with Xcode 15.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 15.4, see [Xcode 15.4 Release Notes](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_4-release-notes).
+
+<a id="FaceTime"></a>
+
+### FaceTime
+
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Fixed: Recent calls from an iPhone, iPad, or Apple Watch will not sync to Vision Pro and vice versa.  (125375528)
+
+<a id="Keyboards"></a>
+
+### Keyboards
+
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Fixed: Trying to access the emoji keyplane from the mini keyboard redirects the user to a letter keyplane with extra platter space.  (125951731)
+
+<a id="Notifications"></a>
+
+### Notifications
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- Developers might see session interruption notifications that are not relevant to their app.  (125360716)
+
+  **Workaround:** Developers should filter notifications against their audio session of choice like so: `NotificationCenter.default.addObserver(forName: AVAudioSession.interruptionNotification, object: AVAudioSession.sharedInstance(), queue: nil) { ... }`
+
+<a id="StoreKit"></a>
+
+### StoreKit
+
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Fixed: When testing a compatible iOS or iPadOS app on visionOS, the UI presented from the App Store review request APIs will now render correctly.  (125912511)
+
+## See Also
+
+### visionOS
+
+- [visionOS 1.3 Release Notes](visionos-1_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [visionOS 1.1 Release Notes](visionos-1_1-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [visionOS Release Notes](visionos-release-notes.md): Update your apps to use new features, and test your apps against API changes.

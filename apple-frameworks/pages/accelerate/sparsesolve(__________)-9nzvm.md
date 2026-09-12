@@ -1,0 +1,177 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/sparsesolve(_:_:_:_:_:)-9nzvm](https://developer.apple.com/documentation/accelerate/sparsesolve(_:_:_:_:_:)-9nzvm)
+
+# SparseSolve(\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+ · watchOS 4.0+
+
+Solves the equation *Ax = b* for vectors of single-precision values using the specified iterative method and preconditioner type.
+
+## Declaration
+
+```swift
+func SparseSolve(_ method: SparseIterativeMethod, _ A: SparseMatrix_Float, _ b: DenseVector_Float, _ x: DenseVector_Float, _ Preconditioner: SparsePreconditioner_t) -> SparseIterativeStatus_t
+```
+
+## Parameters
+
+- `method`: The iterative method.
+- `A`: The matrix *A*.
+- `b`: The vector *b*.
+- `x`: The vector *x*.
+- `Preconditioner`: The preconditioner to apply.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A [SparseIterativeStatus_t](sparseiterativestatus_t.md) enumeration that represents the status of the iterative solve.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this function to solve a system of linear equations using a factored coefficient matrix. Preconditioning the coefficient matrix can reduce the number of iterations the function requires to converge the system.
+
+The following figure shows two systems of equations where the coefficient matrix is sparse:
+
+![A mathematical equation that has one set of three simultaneous equations on the left. Each equation has three unknowns. The same set of simultaneous equations appears on the right as a single matrix equation, A x equals B. The single matrix equation consists of a three-by-three matrix multiplied by a three-element column matrix that equals a three-element column matrix.](https://developer.apple.com/images/com.apple.accelerate/media-3703936@2x.png)
+
+The following code solves this system by applying a diagonal scaling preconditioner and using the least squares minimum residual method:
+
+```swift
+/// Create the coefficient matrix _A_.
+let rowIndices: [Int32] =    [ 0,  1, 1,  2]
+let columnIndices: [Int32] = [ 2,  0, 2,  1]
+let aValues: [Float] =       [10, 20, 5, 50]
+
+let A = SparseConvertFromCoordinate(3, 3,
+                                    4, 1,
+                                    SparseAttributes_t(),
+                                    rowIndices, columnIndices,
+                                    aValues)
+
+defer {
+    SparseCleanup(A)
+}
+
+/// Create the right-hand-side vector, _b_.
+var bValues: [Float] = [30, 35, 100]
+var xValues = [Float](repeating: .nan, count: bValues.count)
+
+bValues.withUnsafeMutableBufferPointer { bPtr in
+    xValues.withUnsafeMutableBufferPointer { xPtr in
+        
+        let b = DenseVector_Float(count: 3,
+                                  data: bPtr.baseAddress!)
+        
+        let x = DenseVector_Float(count: 3,
+                                  data: xPtr.baseAddress!)
+        
+        SparseSolve(SparseLSMR(),
+                    A, b, x,
+                    SparsePreconditionerDiagScaling)
+    }
+}
+```
+
+On return, x`Values` contains the values `[1.0, 2.0, 3.0]`.
+
+## See Also
+
+### Iterative sparse solve functions with preconditioner
+
+- [SparseSolve(\_:\_:\_:\_:\_:)](sparsesolve%28__________%29-1qwax.md): Solves the equation *Ax = b* for vectors of double-precision values using the specified iterative method and opaque preconditioner.
+- [SparseSolve(\_:\_:\_:\_:\_:)](sparsesolve%28__________%29-3aphv.md): Solves the equation *Ax = b* for vectors of single-precision values using the specified iterative method and opaque preconditioner.
+- [SparseSolve(\_:\_:\_:\_:\_:)](sparsesolve%28__________%29-5vs11.md): Solves the equation *Ax = b* for vectors of double-precision values using the specified iterative method and preconditioner type.
+- [SparseSolve(\_:\_:\_:\_:\_:)](sparsesolve%28__________%29-6i1nx.md): Solves the equation *Ax = b* for vectors of double-precision values, treating *A* as an operator and using the specified iterative method and preconditioner.
+- [SparseSolve(\_:\_:\_:\_:\_:)](sparsesolve%28__________%29-7wnum.md): Solves the equation *Ax = b* for vectors of single-precision values, treating *A* as an operator and using the specified iterative method and preconditioner.
+
+# SparseSolve (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 10.13+ · tvOS 11.0+ · visionOS 1.0+ · watchOS 4.0+
+
+Solves the equation *Ax = b* for vectors of single-precision values using the specified iterative method and preconditioner type.
+
+## Declaration
+
+```objectivec
+static SparseIterativeStatus_t SparseSolve(SparseIterativeMethod method, SparseMatrix_Float A, DenseVector_Float b, DenseVector_Float x, SparsePreconditioner_t Preconditioner);
+```
+
+## Parameters
+
+- `method`: The iterative method.
+- `A`: The matrix *A*.
+- `b`: The vector *b*.
+- `x`: The vector *x*.
+- `Preconditioner`: The preconditioner to apply.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A [SparseIterativeStatus_t](sparseiterativestatus_t.md) enumeration that represents the status of the iterative solve.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this function to solve a system of linear equations using a factored coefficient matrix. Preconditioning the coefficient matrix can reduce the number of iterations the function requires to converge the system.
+
+The following figure shows two systems of equations where the coefficient matrix is sparse:
+
+![A mathematical equation that has one set of three simultaneous equations on the left. Each equation has three unknowns. The same set of simultaneous equations appears on the right as a single matrix equation, A x equals B. The single matrix equation consists of a three-by-three matrix multiplied by a three-element column matrix that equals a three-element column matrix.](https://developer.apple.com/images/com.apple.accelerate/media-3703936@2x.png)
+
+The following code solves this system by applying a diagonal scaling preconditioner and using the least squares minimum residual method:
+
+```swift
+/// Create the coefficient matrix _A_.
+let rowIndices: [Int32] =    [ 0,  1, 1,  2]
+let columnIndices: [Int32] = [ 2,  0, 2,  1]
+let aValues: [Float] =       [10, 20, 5, 50]
+
+let A = SparseConvertFromCoordinate(3, 3,
+                                    4, 1,
+                                    SparseAttributes_t(),
+                                    rowIndices, columnIndices,
+                                    aValues)
+
+defer {
+    SparseCleanup(A)
+}
+
+/// Create the right-hand-side vector, _b_.
+var bValues: [Float] = [30, 35, 100]
+var xValues = [Float](repeating: .nan, count: bValues.count)
+
+bValues.withUnsafeMutableBufferPointer { bPtr in
+    xValues.withUnsafeMutableBufferPointer { xPtr in
+        
+        let b = DenseVector_Float(count: 3,
+                                  data: bPtr.baseAddress!)
+        
+        let x = DenseVector_Float(count: 3,
+                                  data: xPtr.baseAddress!)
+        
+        SparseSolve(SparseLSMR(),
+                    A, b, x,
+                    SparsePreconditionerDiagScaling)
+    }
+}
+```
+
+On return, x`Values` contains the values `[1.0, 2.0, 3.0]`.
+
+## See Also
+
+### Iterative sparse solve functions with preconditioner
+
+- [SparseSolve](sparsesolve%28__________%29-1qwax.md): Solves the equation *Ax = b* for vectors of double-precision values using the specified iterative method and opaque preconditioner.
+- [SparseSolve](sparsesolve%28__________%29-3aphv.md): Solves the equation *Ax = b* for vectors of single-precision values using the specified iterative method and opaque preconditioner.
+- [SparseSolve](sparsesolve%28__________%29-5vs11.md): Solves the equation *Ax = b* for vectors of double-precision values using the specified iterative method and preconditioner type.
+- [SparseSolve](sparsesolve%28__________%29-6i1nx.md): Solves the equation *Ax = b* for vectors of double-precision values, treating *A* as an operator and using the specified iterative method and preconditioner.
+- [SparseSolve](sparsesolve%28__________%29-7wnum.md): Solves the equation *Ax = b* for vectors of single-precision values, treating *A* as an operator and using the specified iterative method and preconditioner.

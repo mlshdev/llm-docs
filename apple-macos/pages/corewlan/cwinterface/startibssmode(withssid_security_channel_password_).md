@@ -1,0 +1,72 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/corewlan/cwinterface/startibssmode(withssid:security:channel:password:)](https://developer.apple.com/documentation/corewlan/cwinterface/startibssmode(withssid:security:channel:password:))
+
+# startIBSSMode(withSSID:security:channel:password:) (Swift)
+
+**Framework:** Core WLAN  
+**Kind:** Instance Method  
+**Availability:** macOS 10.7+ (deprecated in 11.0)
+
+Creates a computer-to-computer (ad-hoc) network with the given network name, security type, and password on the specified channel.
+
+## Declaration
+
+```swift
+func startIBSSMode(withSSID ssidData: Data, security: CWIBSSModeSecurity, channel: Int, password: String?) throws
+```
+
+## Parameters
+
+- `security`: The security type to be used.
+- `channel`: The channel on which the network will be created.
+- `password`: The password to be used. This paramter is not applicable to open system authentication.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If *name* is *nil*, the machine name will be used as the network name. This operation may require an administrator password.
+
+> **Handling Errors in Swift**
+
+>  In Swift, this method returns `Void` and is marked with the `throws` keyword to indicate that it throws an error in cases of failure.
+>
+> You call this method in a `try` expression and handle any errors in the `catch` clauses of a `do` statement, as described in [Error Handling](https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html) in [The Swift Programming Language](https://docs.swift.org/swift-book/) and `About Imported Cocoa Error Parameters`.
+
+# startIBSSModeWithSSID:security:channel:password:error: (Objective-C)
+
+**Framework:** Core WLAN  
+**Kind:** Instance Method  
+**Availability:** macOS 10.7+ (deprecated in 11.0)
+
+Creates a computer-to-computer (ad-hoc) network with the given network name, security type, and password on the specified channel.
+
+## Declaration
+
+```objectivec
+- (BOOL) startIBSSModeWithSSID:(NSData *) ssidData security:(CWIBSSModeSecurity) security channel:(NSUInteger) channel password:(NSString *) password error:(NSError **) error;
+```
+
+## Parameters
+
+- `security`: The security type to be used.
+- `channel`: The channel on which the network will be created.
+- `password`: The password to be used. This paramter is not applicable to open system authentication.
+- `error`: On output, a pointer to an error object that describes why the method failed, or `nil` if no error occurred. If you are not interested in the error information, pass `nil` for this parameter.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A Boolean value which will indicate whether or not a failure occurred during execution. *YES* indicates no error occurred.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If *name* is *nil*, the machine name will be used as the network name. This operation may require an administrator password.
+
+> **Handling Errors in Swift**
+
+>  In Swift, this method returns `Void` and is marked with the `throws` keyword to indicate that it throws an error in cases of failure.
+>
+> You call this method in a `try` expression and handle any errors in the `catch` clauses of a `do` statement, as described in [Error Handling](https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html) in [The Swift Programming Language](https://docs.swift.org/swift-book/) and `About Imported Cocoa Error Parameters`.

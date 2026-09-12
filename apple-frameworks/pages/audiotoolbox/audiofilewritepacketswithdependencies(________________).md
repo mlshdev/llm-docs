@@ -1,0 +1,75 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/audiofilewritepacketswithdependencies(_:_:_:_:_:_:_:_:)](https://developer.apple.com/documentation/audiotoolbox/audiofilewritepacketswithdependencies(_:_:_:_:_:_:_:_:))
+
+# AudioFileWritePacketsWithDependencies(\_:\_:\_:\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** Function  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+## Declaration
+
+```swift
+func AudioFileWritePacketsWithDependencies(_ inAudioFile: AudioFileID, _ inUseCache: Bool, _ inNumBytes: UInt32, _ inPacketDescriptions: UnsafePointer<AudioStreamPacketDescription>?, _ inPacketDependencies: UnsafePointer<AudioStreamPacketDependencyDescription>, _ inStartingPacket: Int64, _ ioNumPackets: UnsafeMutablePointer<UInt32>, _ inBuffer: UnsafeRawPointer) -> OSStatus
+```
+
+## Parameters
+
+- `inAudioFile`: The audio file to write to.
+- `inUseCache`: Set to `true` if you want to cache the data. Otherwise, set to `false`.
+- `inNumBytes`: The number of bytes of audio data being written.
+- `inPacketDescriptions`: A pointer to an array of packet descriptions for the audio data. Not all formats require packet descriptions. If no packet descriptions are required, for instance, if you are writing CBR data,  pass `NULL`.
+- `inPacketDependencies`: A pointer to an array of packet dependencies for the audio data. This must not be `NULL`.  To write packets without dependencies, use [AudioFileWritePackets(\_:\_:\_:\_:\_:\_:\_:)](audiofilewritepackets%28______________%29.md) instead.
+- `inStartingPacket`: The packet index for the placement of the first provided packet.
+- `ioNumPackets`: On input, a pointer to the number of packets to write. On output, a pointer to the number of packets actually written.
+- `inBuffer`: A pointer to user-allocated memory containing the new audio data to write to the audio data file.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See Result Codes.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Write packets of audio data with corresponding packet dependencies to an audio data file.
+
+For all uncompressed formats, `packets == frames`.
+
+# AudioFileWritePacketsWithDependencies (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** Function  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+## Declaration
+
+```objectivec
+extern OSStatus AudioFileWritePacketsWithDependencies(AudioFileID inAudioFile, Boolean inUseCache, UInt32 inNumBytes, const AudioStreamPacketDescription *inPacketDescriptions, const AudioStreamPacketDependencyDescription *inPacketDependencies, SInt64 inStartingPacket, UInt32 *ioNumPackets, const void *inBuffer);
+```
+
+## Parameters
+
+- `inAudioFile`: The audio file to write to.
+- `inUseCache`: Set to `true` if you want to cache the data. Otherwise, set to `false`.
+- `inNumBytes`: The number of bytes of audio data being written.
+- `inPacketDescriptions`: A pointer to an array of packet descriptions for the audio data. Not all formats require packet descriptions. If no packet descriptions are required, for instance, if you are writing CBR data,  pass `NULL`.
+- `inPacketDependencies`: A pointer to an array of packet dependencies for the audio data. This must not be `NULL`.  To write packets without dependencies, use [AudioFileWritePackets](audiofilewritepackets%28______________%29.md) instead.
+- `inStartingPacket`: The packet index for the placement of the first provided packet.
+- `ioNumPackets`: On input, a pointer to the number of packets to write. On output, a pointer to the number of packets actually written.
+- `inBuffer`: A pointer to user-allocated memory containing the new audio data to write to the audio data file.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A result code. See Result Codes.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Write packets of audio data with corresponding packet dependencies to an audio data file.
+
+For all uncompressed formats, `packets == frames`.

@@ -1,0 +1,85 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/sectrustcopyexceptions(_:)](https://developer.apple.com/documentation/security/sectrustcopyexceptions(_:))
+
+# SecTrustCopyExceptions(\_:) (Swift)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Returns an opaque cookie containing exceptions to trust policies that will allow future evaluations of the current certificate to succeed.
+
+## Declaration
+
+```swift
+func SecTrustCopyExceptions(_ trust: SecTrust) -> CFData?
+```
+
+## Parameters
+
+- `trust`: The evaluated trust management object whose policies you wish to retrieve.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An opaque cookie. If you pass this cookie to [SecTrustSetExceptions(\_:\_:)](sectrustsetexceptions%28____%29.md), that function sets a list of exceptions for future processing of the certificate. Once this list of exceptions are set, a subsequent call to [SecTrustEvaluateWithError(\_:\_:)](sectrustevaluatewitherror%28____%29.md) for that certificate will return `true`.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Note: If a new error occurs that did not occur when this function was called originally, the subsequent call to [SecTrustEvaluateWithError(\_:\_:)](sectrustevaluatewitherror%28____%29.md) can still fail. For example, if the certificate expires between calling `SecTrustCopyExceptions` and [SecTrustEvaluateWithError(\_:\_:)](sectrustevaluatewitherror%28____%29.md), evaluation will fail.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Normally this API should only be called after asking the user how to proceed, and even then, only if the user explicitly tells your application to trust the current certificate chain in spite of the errors presented.
+
+## See Also
+
+### Related Documentation
+
+- [SecTrustSetPolicies(\_:\_:)](sectrustsetpolicies%28____%29.md): Sets the policies to use in an evaluation.
+
+# SecTrustCopyExceptions (Objective-C)
+
+**Framework:** Security  
+**Kind:** Function  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Returns an opaque cookie containing exceptions to trust policies that will allow future evaluations of the current certificate to succeed.
+
+## Declaration
+
+```objectivec
+CFDataRefSecTrustCopyExceptions(SecTrustRef trust);
+```
+
+## Parameters
+
+- `trust`: The evaluated trust management object whose policies you wish to retrieve.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An opaque cookie. If you pass this cookie to [SecTrustSetExceptions](sectrustsetexceptions%28____%29.md), that function sets a list of exceptions for future processing of the certificate. Once this list of exceptions are set, a subsequent call to [SecTrustEvaluateWithError](sectrustevaluatewitherror%28____%29.md) for that certificate will return `true`.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Note: If a new error occurs that did not occur when this function was called originally, the subsequent call to [SecTrustEvaluateWithError](sectrustevaluatewitherror%28____%29.md) can still fail. For example, if the certificate expires between calling `SecTrustCopyExceptions` and [SecTrustEvaluateWithError](sectrustevaluatewitherror%28____%29.md), evaluation will fail.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Normally this API should only be called after asking the user how to proceed, and even then, only if the user explicitly tells your application to trust the current certificate chain in spite of the errors presented.
+
+## See Also
+
+### Related Documentation
+
+- [SecTrustSetPolicies](sectrustsetpolicies%28____%29.md): Sets the policies to use in an evaluation.

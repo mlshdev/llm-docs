@@ -1,0 +1,24 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/realityrenderer/updateandrender(deltatime:cameraoutput:whenscheduled:oncomplete:actionsbeforerender:actionsafterrender:)](https://developer.apple.com/documentation/realitykit/realityrenderer/updateandrender(deltatime:cameraoutput:whenscheduled:oncomplete:actionsbeforerender:actionsafterrender:))
+
+# updateAndRender(deltaTime:cameraOutput:whenScheduled:onComplete:actionsBeforeRender:actionsAfterRender:)
+
+**Framework:** RealityKit  
+**Kind:** Instance Method  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 26.0+ · visionOS 1.0+
+
+Tick the simulation and render using activeCamera and the camera rendering output.
+
+## Declaration
+
+```swift
+@MainActor @preconcurrency func updateAndRender(deltaTime: TimeInterval, cameraOutput: RealityRenderer.CameraOutput, whenScheduled: (@Sendable (RealityRenderer) -> Void)? = nil, onComplete: (@Sendable (RealityRenderer) -> Void)? = nil, actionsBeforeRender: [RealityRenderer.MetalEventAction] = [], actionsAfterRender: [RealityRenderer.MetalEventAction] = []) throws
+```
+
+## Parameters
+
+- `deltaTime`: The delta time to advance the simulation
+- `cameraOutput`: Specifies output for rendering with [activeCamera](activecamera.md)
+- `whenScheduled`: A handler that is called when the corresponding MTLCommandBuffer is scheduled
+- `onComplete`: A handler that is called when the corresponding MTLCommandBuffer is complete
+- `actionsBeforeRender`: Array of events and values to wait before GPU rendering work
+- `actionsAfterRender`: Array of events and values to signal after GPU rendering work

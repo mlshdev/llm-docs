@@ -1,0 +1,103 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/applicationservices/applicationservices_enumerations/1570866-anonymous](https://developer.apple.com/documentation/applicationservices/applicationservices_enumerations/1570866-anonymous)
+
+# Anonymous
+
+**Framework:** Application Services
+
+## Topics
+
+### Constants
+
+- [kPMAllocationFailure](../kpmallocationfailure.md)
+- [kPMCVMSymbolNotFound](../kpmcvmsymbolnotfound.md)
+- [kPMCloseFailed](../kpmclosefailed.md)
+- [kPMCreateMessageFailed](../kpmcreatemessagefailed.md)
+- [kPMDeleteSubTicketFailed](../kpmdeletesubticketfailed.md)
+- [kPMDocumentNotFound](../kpmdocumentnotfound.md)
+- [kPMDontSwitchPDEError](../kpmdontswitchpdeerror.md)
+- [kPMEditRequestFailed](../kpmeditrequestfailed.md)
+- [kPMFeatureNotInstalled](../kpmfeaturenotinstalled.md)
+- [kPMFileOrDirOperationFailed](../kpmfileordiroperationfailed.md)
+- [kPMFontNameTooLong](../kpmfontnametoolong.md)
+- [kPMFontNotFound](../kpmfontnotfound.md)
+- [kPMGeneralCGError](../kpmgeneralcgerror.md)
+- [kPMIOAttrNotAvailable](../kpmioattrnotavailable.md)
+- [kPMIOMSymbolNotFound](../kpmiomsymbolnotfound.md)
+- [kPMInternalError](../kpminternalerror.md)
+- [kPMInvalidAllocator](../kpminvalidallocator.md): The specified memory allocator is invalid.
+- [kPMInvalidCVMContext](../kpminvalidcvmcontext.md)
+- [kPMInvalidCalibrationTarget](../kpminvalidcalibrationtarget.md): The dictionary specifying a printer calibration target is invalid.
+- [kPMInvalidConnection](../kpminvalidconnection.md): The printer connection type is invalid.
+- [kPMInvalidFileType](../kpminvalidfiletype.md): The file type is invalid.
+- [kPMInvalidIOMContext](../kpminvalidiomcontext.md)
+- [kPMInvalidIndex](../kpminvalidindex.md): An array index is invalid.
+- [kPMInvalidItem](../kpminvaliditem.md): The item being added to a ticket is invalid.
+- [kPMInvalidJobID](../kpminvalidjobid.md)
+- [kPMInvalidJobTemplate](../kpminvalidjobtemplate.md): An internal error occurred while creating a job template.
+- [kPMInvalidKey](../kpminvalidkey.md): The key in a ticket, job template, or dictionary is invalid.
+- [kPMInvalidLookupSpec](../kpminvalidlookupspec.md)
+- [kPMInvalidObject](../kpminvalidobject.md): The object is invalid.
+- [kPMInvalidPBMRef](../kpminvalidpbmref.md)
+- [kPMInvalidPDEContext](../kpminvalidpdecontext.md)
+- [kPMInvalidPMContext](../kpminvalidpmcontext.md)
+- [kPMInvalidPaper](../kpminvalidpaper.md): Your application passed an invalid paper object.
+- [kPMInvalidPrinterAddress](../kpminvalidprinteraddress.md)
+- [kPMInvalidPrinterInfo](../kpminvalidprinterinfo.md): The printer information is invalid.
+- [kPMInvalidReply](../kpminvalidreply.md): A remote server or client sent an invalid reply.
+- [kPMInvalidState](../kpminvalidstate.md)
+- [kPMInvalidSubTicket](../kpminvalidsubticket.md)
+- [kPMInvalidTicket](../kpminvalidticket.md): The job ticket is invalid.
+- [kPMInvalidType](../kpminvalidtype.md): The data type in a ticket, job template, or dictionary is not the expected type.
+- [kPMInvalidValue](../kpminvalidvalue.md): The value in a ticket, job template, or dictionary is missing.
+- [kPMItemIsLocked](../kpmitemislocked.md)
+- [kPMJobBusy](../kpmjobbusy.md)
+- [kPMJobCanceled](../kpmjobcanceled.md)
+- [kPMJobGetTicketBadFormatError](../kpmjobgetticketbadformaterror.md)
+- [kPMJobGetTicketReadError](../kpmjobgetticketreaderror.md)
+- [kPMJobManagerAborted](../kpmjobmanageraborted.md)
+- [kPMJobNotFound](../kpmjobnotfound.md)
+- [kPMJobStreamEndError](../kpmjobstreamenderror.md)
+- [kPMJobStreamOpenFailed](../kpmjobstreamopenfailed.md)
+- [kPMJobStreamReadFailed](../kpmjobstreamreadfailed.md)
+- [kPMKeyNotFound](../kpmkeynotfound.md)
+- [kPMKeyNotUnique](../kpmkeynotunique.md)
+- [kPMKeyOrValueNotFound](../kpmkeyorvaluenotfound.md)
+- [kPMLastErrorCodeToMakeMaintenanceOfThisListEasier](../kpmlasterrorcodetomakemaintenanceofthislisteasier.md)
+- [kPMMessagingError](../kpmmessagingerror.md)
+- [kPMNoDefaultItem](../kpmnodefaultitem.md)
+- [kPMNoDefaultSettings](../kpmnodefaultsettings.md)
+- [kPMNoPrinterJobID](../kpmnoprinterjobid.md)
+- [kPMNoSelectedPrinters](../kpmnoselectedprinters.md)
+- [kPMOpenFailed](../kpmopenfailed.md)
+- [kPMPMSymbolNotFound](../kpmpmsymbolnotfound.md)
+- [kPMPermissionError](../kpmpermissionerror.md)
+- [kPMPluginNotFound](../kpmpluginnotfound.md)
+- [kPMPluginRegisterationFailed](../kpmpluginregisterationfailed.md)
+- [kPMPrBrowserNoUI](../kpmprbrowsernoui.md)
+- [kPMQueueAlreadyExists](../kpmqueuealreadyexists.md)
+- [kPMQueueJobFailed](../kpmqueuejobfailed.md)
+- [kPMQueueNotFound](../kpmqueuenotfound.md)
+- [kPMReadFailed](../kpmreadfailed.md)
+- [kPMReadGotZeroData](../kpmreadgotzerodata.md)
+- [kPMServerAlreadyRunning](../kpmserveralreadyrunning.md)
+- [kPMServerAttributeRestricted](../kpmserverattributerestricted.md)
+- [kPMServerCommunicationFailed](../kpmservercommunicationfailed.md)
+- [kPMServerNotFound](../kpmservernotfound.md)
+- [kPMServerSuspended](../kpmserversuspended.md)
+- [kPMStatusFailed](../kpmstatusfailed.md)
+- [kPMStringConversionFailure](../kpmstringconversionfailure.md): An internal error occurred while converting a string.
+- [kPMSubTicketNotFound](../kpmsubticketnotfound.md)
+- [kPMSyncRequestFailed](../kpmsyncrequestfailed.md)
+- [kPMTemplateIsLocked](../kpmtemplateislocked.md)
+- [kPMTicketIsLocked](../kpmticketislocked.md)
+- [kPMTicketTypeNotFound](../kpmtickettypenotfound.md)
+- [kPMUnableToFindProcess](../kpmunabletofindprocess.md)
+- [kPMUnexpectedImagingError](../kpmunexpectedimagingerror.md)
+- [kPMUnknownDataType](../kpmunknowndatatype.md)
+- [kPMUnknownMessage](../kpmunknownmessage.md)
+- [kPMUnsupportedConnection](../kpmunsupportedconnection.md)
+- [kPMUpdateTicketFailed](../kpmupdateticketfailed.md)
+- [kPMUserOrGroupNotFound](../kpmuserorgroupnotfound.md)
+- [kPMValidateTicketFailed](../kpmvalidateticketfailed.md)
+- [kPMWriteFailed](../kpmwritefailed.md)
+- [kPMXMLParseError](../kpmxmlparseerror.md): An error occurred while parsing XML data.

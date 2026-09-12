@@ -53,8 +53,27 @@ async function buildAll(): Promise<void> {
   const config = await loadConfig();
   const lock = await requireLock();
   for (const project of config.projects) {
-    console.log(`Building ${project.id} ${lock.projects[project.id].tag}`);
-    await writeProject(await buildProject(project, lock.projects[project.id]));
+    if (
+      project.kind === "docc" &&
+      process.env.DOCC_REBUILD !== "1" &&
+      (await snapshotMatchesPin(project.id, lock.projects[project.id]))
+    ) {
+      console.log(
+        `Keeping captured ${project.id} ${lock.projects[project.id].tag}`,
+      );
+      continue;
+    }
+    const pin = lock.projects[project.id];
+    console.log(`Building ${project.id} ${pin.tag}`);
+    const build = await buildProject(project, pin);
+    // `build` reproduces a pin, it never mints one: a snapshot pin that predates
+    // content addressing has to be completed by a reconciliation run instead.
+    if (build.lock.contentDigest !== pin.contentDigest) {
+      throw new Error(
+        `${project.id} is pinned without a content digest; run bun run update`,
+      );
+    }
+    await writeProject(build);
   }
   await writeRootIndexes(config.projects, lock);
   await verifyOutputs(config.projects, lock);
@@ -81,7 +100,11 @@ async function update(): Promise<void> {
     const target = pins[project.id];
     console.log(`Updating ${project.id} to ${target.tag}`);
     try {
-      await writeProject(await buildProject(project, target));
+      // A snapshot pin is only complete once the build has hashed the payloads
+      // it converted, so the pin recorded is the one the build produced.
+      const build = await buildProject(project, target);
+      await writeProject(build);
+      pins[project.id] = build.lock;
     } catch (error) {
       const previous = current?.projects[project.id];
       if (!previous) {
@@ -91,10 +114,13 @@ async function update(): Promise<void> {
       // snapshot that this run already replaced has to be regenerated at the
       // pin being retained. Either failing leaves nothing publishable, so it
       // propagates.
-      if (!(await snapshotMatchesPin(project.id, previous))) {
-        await writeProject(await buildProject(project, previous));
+      if (await snapshotMatchesPin(project.id, previous)) {
+        pins[project.id] = previous;
+      } else {
+        const rebuilt = await buildProject(project, previous);
+        await writeProject(rebuilt);
+        pins[project.id] = rebuilt.lock;
       }
-      pins[project.id] = previous;
       const reason = describeError(error);
       retained.push({
         project: project.id,

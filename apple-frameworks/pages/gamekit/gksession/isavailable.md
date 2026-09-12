@@ -1,0 +1,45 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/gamekit/gksession/isavailable](https://developer.apple.com/documentation/gamekit/gksession/isavailable)
+
+# isAvailable (Swift)
+
+**Framework:** GameKit  
+**Kind:** Instance Property  
+**Availability:** iOS 3.0+ (deprecated in 7.0) · iPadOS 3.0+ (deprecated in 7.0) · Mac Catalyst 3.0+ (deprecated in 7.0) · macOS 10.8+ (deprecated in 10.10) · visionOS 1.0+ (deprecated in 1.0) · watchOS 2.0+ (deprecated in 2.0)
+
+A Boolean value that determines whether or not the session wants to connect to new peers.
+
+## Declaration
+
+```swift
+var isAvailable: Bool { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When [isAvailable](isavailable.md) is [true](https://developer.apple.com/documentation/swift/true), the session is visible to other peers based on its [sessionMode](sessionmode.md) property. When [isAvailable](isavailable.md) is set to [false](https://developer.apple.com/documentation/swift/false), it remains connected to peers, but is no longer visible to nonconnected peers. The default is [false](https://developer.apple.com/documentation/swift/false).
+
+Typically, your application configures the session object with a delegate and data receiver, and then sets [isAvailable](isavailable.md) to [true](https://developer.apple.com/documentation/swift/true). When the delegate finishes connecting to peers, it should set the session’s [isAvailable](isavailable.md) property to [false](https://developer.apple.com/documentation/swift/false).
+
+# available (Objective-C)
+
+**Framework:** GameKit  
+**Kind:** Instance Property  
+**Availability:** iOS 3.0+ (deprecated in 7.0) · iPadOS 3.0+ (deprecated in 7.0) · Mac Catalyst 13.1+ (deprecated in 13.1) · macOS 10.8+ (deprecated in 10.10) · visionOS 1.0+ (deprecated in 1.0) · watchOS 2.0+ (deprecated in 2.0)
+
+A Boolean value that determines whether or not the session wants to connect to new peers.
+
+## Declaration
+
+```objectivec
+@property (getter=isAvailable) BOOL available;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When [available](isavailable.md) is [true](https://developer.apple.com/documentation/swift/true), the session is visible to other peers based on its [sessionMode](sessionmode.md) property. When [available](isavailable.md) is set to [false](https://developer.apple.com/documentation/swift/false), it remains connected to peers, but is no longer visible to nonconnected peers. The default is [false](https://developer.apple.com/documentation/swift/false).
+
+Typically, your application configures the session object with a delegate and data receiver, and then sets [available](isavailable.md) to [true](https://developer.apple.com/documentation/swift/true). When the delegate finishes connecting to peers, it should set the session’s [available](isavailable.md) property to [false](https://developer.apple.com/documentation/swift/false).

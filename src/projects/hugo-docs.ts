@@ -11,7 +11,11 @@ import {
 } from "../markdown.ts";
 import { isRecord } from "../config.ts";
 import { DocumentCollector } from "../quarantine.ts";
-import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
+import type {
+  GithubLockedSource,
+  GithubSourceProject,
+  ProjectBuild,
+} from "../types.ts";
 
 // The VictoriaMetrics projects publish their documentation from a Hugo `docs/`
 // tree that declares navigation through `menu.docs` and shares fragments
@@ -44,8 +48,8 @@ export interface ShortcodeContext {
 }
 
 export async function buildHugoDocs(
-  project: SourceProject,
-  lock: LockedSource,
+  project: GithubSourceProject,
+  lock: GithubLockedSource,
   options: HugoDocsOptions,
 ): Promise<ProjectBuild> {
   return withRepositoryArchive(

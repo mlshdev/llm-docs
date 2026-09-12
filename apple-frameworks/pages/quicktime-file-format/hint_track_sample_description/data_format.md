@@ -1,0 +1,26 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/hint_track_sample_description/data_format](https://developer.apple.com/documentation/quicktime-file-format/hint_track_sample_description/data_format)
+
+# Data format
+
+**Framework:** QuickTime File Format  
+**Kind:** Data field
+
+A four-character code indicating the data format of the hint track samples.
+
+<a id="Overview"></a>
+
+## Overview
+
+Only `'rtp '` is currently defined. Note that the fourth character in `'rtp '` is an ASCII blank space (`0x20`). Do not attempt to packetize data whose format you do not recognize.
+
+## See Also
+
+### Data fields
+
+- [Size](size.md): A 32-bit integer specifying the size of this sample description in bytes.
+- [Reserved](reserved.md): Six bytes.
+- [Data reference index](data_reference_index.md): A field that indirectly specifies where to find the hint track sample data.
+- [Hint track version](hint_track_version.md): A 16-bit unsigned integer indicating the version of the hint track specification.
+- [Last compatible hint track version](last_compatible_hint_track_version.md): A 16-bit unsigned integer indicating the oldest hint track version with which this hint track is backward-compatible.
+- [Max packet size](max_packet_size.md): A 32-bit integer indicating the packet size limit, in bytes, used when creating this hint track.
+- [Additional data table](additional_data_table.md): A table of variable length containing additional information.

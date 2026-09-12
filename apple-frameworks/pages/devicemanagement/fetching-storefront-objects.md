@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/fetching-storefront-objects](https://developer.apple.com/documentation/devicemanagement/fetching-storefront-objects)
+
+# Fetching storefront objects
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** API Collection
+
+Pick a region-specific geographic location to retrieve catalog information from.
+
+<a id="overview"></a>
+
+## Overview
+
+Apple services operate in many countries, regions, and languages. Content varies from one geographic region to another, so each request needs to contain a *storefront object* that defines the region and the supported languages for that region. For most requests, you specify the storefront associated with the current user, but you may also specify other storefronts as needed. For example, you might specify a storefront that better matches the user’s preferred language.
+
+Each storefront has a default language and may support one or more additional languages. For example, the United States storefront includes American English as the default language, but also includes Mexican Spanish as an additional supported language. Apple services automatically localize responses using the storefront’s default language, but you can localize to a different language using the `l query` parameter. The value of that parameter needs to be one of the values in the `supportedLanguageTags` attribute of the storefront object. For example, the following request asks the U.S. storefront to return an album in the Mexican Spanish (`es-MX`) localization:
+
+```html
+GET https://api.ent.apple.com/v1/catalog/us/stoken-authenticated-apps?ids=2001350931&platform=iphone&l=es-MX
+```
+
+## Topics
+
+### Requesting a catalog storefront
+
+- [Get a Storefront](get-a-storefront.md): Fetch a single storefront by using its identifier.
+- [Get Multiple Storefronts](get-multiple-storefronts.md): Fetch one or more storefronts by using their identifiers.
+- [Get All Storefronts](get-all-storefronts.md): Fetch all the storefronts in alphabetical order.
+
+### Handling the response
+
+- [StorefrontsResponse](storefrontsresponse.md): The response to a storefront request.
+- [Storefronts](storefronts.md): A resource object that represents a region that the content is available in, and supported languages for that region.
+
+## See Also
+
+### Fetching information
+
+- [Fetching resources with extended attributes](fetching-resources-with-extended-attributes.md): Specify additional attributes for the API to include in a response.

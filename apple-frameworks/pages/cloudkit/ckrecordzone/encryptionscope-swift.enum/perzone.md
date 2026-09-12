@@ -1,0 +1,53 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cloudkit/ckrecordzone/encryptionscope-swift.enum/perzone](https://developer.apple.com/documentation/cloudkit/ckrecordzone/encryptionscope-swift.enum/perzone)
+
+# CKRecordZone.EncryptionScope.perZone (Swift)
+
+**Framework:** CloudKit  
+**Kind:** Case  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
+
+Zone uses per-zone encryption keys for encrypted values across all records and the zone-wide share, if present.
+
+## Declaration
+
+```swift
+case perZone
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This is an optional optimization that can reduce the overall storage used by encryption keys in a zone. Note that:
+
+- Record zones using per-zone encryption only support zone-wide sharing.
+- Encryption scope can only be assigned at zone creation and cannot be changed for the lifetime of the zone.
+- The server does not return zones using per-zone encryption to device OS versions older than the corresponding API availability version.
+- An older OS trying to overwrite an existing zone using per-zone encryption due to a naming collision results in a `.serverRejectedRequest` error.
+- On device OS upgrade, your application is responsible for fetching database changes via `CKFetchDatabaseChangesOperation` with a nil sync token to verify it has received all the zones available to it from the server.
+
+# CKRecordZoneEncryptionScopePerZone (Objective-C)
+
+**Framework:** CloudKit  
+**Kind:** Enumeration Case  
+**Availability:** iOS · iPadOS · Mac Catalyst · macOS · tvOS · visionOS · watchOS
+
+Zone uses per-zone encryption keys for encrypted values across all records and the zone-wide share, if present.
+
+## Declaration
+
+```objectivec
+CKRecordZoneEncryptionScopePerZone
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This is an optional optimization that can reduce the overall storage used by encryption keys in a zone. Note that:
+
+- Record zones using per-zone encryption only support zone-wide sharing.
+- Encryption scope can only be assigned at zone creation and cannot be changed for the lifetime of the zone.
+- The server does not return zones using per-zone encryption to device OS versions older than the corresponding API availability version.
+- An older OS trying to overwrite an existing zone using per-zone encryption due to a naming collision results in a `.serverRejectedRequest` error.
+- On device OS upgrade, your application is responsible for fetching database changes via `CKFetchDatabaseChangesOperation` with a nil sync token to verify it has received all the zones available to it from the server.

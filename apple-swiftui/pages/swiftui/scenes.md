@@ -1,0 +1,73 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/scenes](https://developer.apple.com/documentation/swiftui/scenes)
+
+# Scenes
+
+**Framework:** SwiftUI  
+**Kind:** API Collection
+
+Declare the user interface groupings that make up the parts of your app.
+
+<a id="Overview"></a>
+
+## Overview
+
+A scene represents a part of your app’s user interface that has a life cycle that the system manages. An [App](app.md) instance presents the scenes it contains, while each [Scene](scene.md) acts as the root element of a [View](view.md) hierarchy.
+
+![](https://developer.apple.com/images/com.apple.SwiftUI/scenes-hero@2x.png)
+
+The system presents scenes in different ways depending on the type of scene, the platform, and the context. A scene might fill the entire display, part of the display, a window, a tab in a window, or something else. In some cases, your app might also be able to display more than one instance of the scene at a time, like when a user simultaneously opens multiple windows based on a single [WindowGroup](windowgroup.md) declaration in your app. For more information about the primary built-in scene types, see [Windows](windows.md) and [Documents](documents.md).
+
+You configure scenes using modifiers, similar to how you configure views. For example, you can adjust the appearance of the window that contains a scene — if the scene happens to appear in a window — using the [windowStyle(\_:)](scene/windowstyle%28__%29.md) modifier. Similarly, you can add menu commands that become available when the scene is in the foreground on certain platforms using the [commands(content:)](scene/commands%28content_%29.md) modifier.
+
+## Topics
+
+### Creating scenes
+
+- [Scene](scene.md): A part of an app’s user interface with a life cycle managed by the system.
+- [SceneBuilder](scenebuilder.md): A result builder for composing a collection of scenes into a single composite scene.
+
+### Monitoring scene life cycle
+
+- [scenePhase](environmentvalues/scenephase.md): The current phase of the scene.
+- [ScenePhase](scenephase.md): An indication of a scene’s operational state.
+
+### Managing a settings window
+
+- [Settings](settings.md): A scene that presents an interface for viewing and modifying an app’s settings.
+- [SettingsLink](settingslink.md): A view that opens the Settings scene defined by an app.
+- [OpenSettingsAction](opensettingsaction.md): An action that presents the settings scene for an app.
+- [openSettings](environmentvalues/opensettings.md): A Settings presentation action stored in a view’s environment.
+
+### Building a menu bar
+
+- [Building and customizing the menu bar with SwiftUI](building-and-customizing-the-menu-bar-with-swiftui.md): Provide a seamless, cross-platform user experience by building a native menu bar for iPadOS and macOS.
+
+### Creating a menu bar extra
+
+- [MenuBarExtra](menubarextra.md): A scene that renders itself as a persistent control in the system menu bar.
+- [menuBarExtraStyle(\_:)](scene/menubarextrastyle%28__%29.md): Sets the style for menu bar extra created by this scene.
+- [MenuBarExtraStyle](menubarextrastyle.md): A specification for the appearance and behavior of a menu bar extra scene.
+
+### Creating watch notifications
+
+- [WKNotificationScene](wknotificationscene.md): A scene which appears in response to receiving the specified category of remote or local notifications.
+
+### Presenting content on an external display
+
+- [sceneAccessory(content:)](view/sceneaccessory%28content_%29.md): Defines any scene accessories associated with `self`.
+- [SceneAccessoryContent](sceneaccessorycontent.md): Conforming types represent items which define content for scene accessories.
+- [ExternalNonInteractiveAccessory](externalnoninteractiveaccessory.md): A scene accessory that presents non-interactive content on an external display.
+
+## See Also
+
+### App structure
+
+- [App organization](app-organization.md): Define the entry point and top-level structure of your app.
+- [Windows](windows.md): Display user interface content in a window or a collection of windows.
+- [Immersive spaces](immersive-spaces.md): Display unbounded content in a person’s surroundings.
+- [Documents](documents.md): Enable people to open and manage documents.
+- [Navigation](navigation.md): Enable people to move between different parts of your app’s view hierarchy within a scene.
+- [Modal presentations](modal-presentations.md): Present content in a separate view that offers focused interaction.
+- [Toolbars](toolbars.md): Provide immediate access to frequently used commands and controls.
+- [Search](search.md): Enable people to search for text or other content within your app.
+- [App extensions](app-extensions.md): Extend your app’s basic functionality to other parts of the system, like by adding a Widget.

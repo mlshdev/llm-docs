@@ -1,0 +1,184 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclustertimeformatlocalization](https://developer.apple.com/documentation/matter/mtrbaseclustertimeformatlocalization)
+
+# MTRBaseClusterTimeFormatLocalization (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```swift
+class MTRBaseClusterTimeFormatLocalization
+```
+
+## Topics
+
+### Initializers
+
+- [init(device:endpoint:queue:)](mtrbaseclustertimeformatlocalization/init%28device_endpoint_queue_%29.md): Deprecated.
+- [init(device:endpointID:queue:)](mtrbaseclustertimeformatlocalization/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandList(completion:)](mtrbaseclustertimeformatlocalization/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandList(completionHandler:)](mtrbaseclustertimeformatlocalization/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeActiveCalendarType(completion:)](mtrbaseclustertimeformatlocalization/readattributeactivecalendartype%28completion_%29.md)
+- [readAttributeActiveCalendarType(completionHandler:)](mtrbaseclustertimeformatlocalization/readattributeactivecalendartype%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(completion:)](mtrbaseclustertimeformatlocalization/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeList(completionHandler:)](mtrbaseclustertimeformatlocalization/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(completion:)](mtrbaseclustertimeformatlocalization/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevision(completionHandler:)](mtrbaseclustertimeformatlocalization/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(completion:)](mtrbaseclustertimeformatlocalization/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMap(completionHandler:)](mtrbaseclustertimeformatlocalization/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(completion:)](mtrbaseclustertimeformatlocalization/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandList(completionHandler:)](mtrbaseclustertimeformatlocalization/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeHourFormat(completion:)](mtrbaseclustertimeformatlocalization/readattributehourformat%28completion_%29.md)
+- [readAttributeHourFormat(completionHandler:)](mtrbaseclustertimeformatlocalization/readattributehourformat%28completionhandler_%29.md): Deprecated.
+- [readAttributeSupportedCalendarTypes(completion:)](mtrbaseclustertimeformatlocalization/readattributesupportedcalendartypes%28completion_%29.md)
+- [readAttributeSupportedCalendarTypes(completionHandler:)](mtrbaseclustertimeformatlocalization/readattributesupportedcalendartypes%28completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclustertimeformatlocalization/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustertimeformatlocalization/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeActiveCalendarType(with:subscriptionEstablished:reportHandler:)](mtrbaseclustertimeformatlocalization/subscribeattributeactivecalendartype%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeActiveCalendarType(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustertimeformatlocalization/subscribeattributeactivecalendartype%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeList(with:subscriptionEstablished:reportHandler:)](mtrbaseclustertimeformatlocalization/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustertimeformatlocalization/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevision(with:subscriptionEstablished:reportHandler:)](mtrbaseclustertimeformatlocalization/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevision(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustertimeformatlocalization/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMap(with:subscriptionEstablished:reportHandler:)](mtrbaseclustertimeformatlocalization/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMap(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustertimeformatlocalization/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclustertimeformatlocalization/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustertimeformatlocalization/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeHourFormat(with:subscriptionEstablished:reportHandler:)](mtrbaseclustertimeformatlocalization/subscribeattributehourformat%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeHourFormat(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustertimeformatlocalization/subscribeattributehourformat%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSupportedCalendarTypes(with:subscriptionEstablished:reportHandler:)](mtrbaseclustertimeformatlocalization/subscribeattributesupportedcalendartypes%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSupportedCalendarTypes(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclustertimeformatlocalization/subscribeattributesupportedcalendartypes%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [writeAttributeActiveCalendarType(withValue:completion:)](mtrbaseclustertimeformatlocalization/writeattributeactivecalendartype%28withvalue_completion_%29.md)
+- [writeAttributeActiveCalendarType(withValue:completionHandler:)](mtrbaseclustertimeformatlocalization/writeattributeactivecalendartype%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeActiveCalendarType(withValue:params:completion:)](mtrbaseclustertimeformatlocalization/writeattributeactivecalendartype%28withvalue_params_completion_%29.md)
+- [writeAttributeActiveCalendarType(withValue:params:completionHandler:)](mtrbaseclustertimeformatlocalization/writeattributeactivecalendartype%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeHourFormat(withValue:completion:)](mtrbaseclustertimeformatlocalization/writeattributehourformat%28withvalue_completion_%29.md)
+- [writeAttributeHourFormat(withValue:completionHandler:)](mtrbaseclustertimeformatlocalization/writeattributehourformat%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeHourFormat(withValue:params:completion:)](mtrbaseclustertimeformatlocalization/writeattributehourformat%28withvalue_params_completion_%29.md)
+- [writeAttributeHourFormat(withValue:params:completionHandler:)](mtrbaseclustertimeformatlocalization/writeattributehourformat%28withvalue_params_completionhandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustertimeformatlocalization/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustertimeformatlocalization/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeActiveCalendarType(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustertimeformatlocalization/readattributeactivecalendartype%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeActiveCalendarType(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustertimeformatlocalization/readattributeactivecalendartype%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustertimeformatlocalization/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustertimeformatlocalization/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevision(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustertimeformatlocalization/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustertimeformatlocalization/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMap(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustertimeformatlocalization/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustertimeformatlocalization/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustertimeformatlocalization/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustertimeformatlocalization/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeHourFormat(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustertimeformatlocalization/readattributehourformat%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeHourFormat(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustertimeformatlocalization/readattributehourformat%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSupportedCalendarTypes(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclustertimeformatlocalization/readattributesupportedcalendartypes%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSupportedCalendarTypes(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclustertimeformatlocalization/readattributesupportedcalendartypes%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRBaseClusterTimeFormatLocalization (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```objectivec
+@interface MTRBaseClusterTimeFormatLocalization : MTRGenericBaseCluster
+```
+
+## Topics
+
+### Initializers
+
+- [initWithDevice:endpoint:queue:](mtrbaseclustertimeformatlocalization/init%28device_endpoint_queue_%29.md): Deprecated.
+- [initWithDevice:endpointID:queue:](mtrbaseclustertimeformatlocalization/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeAcceptedCommandListWithCompletion:](mtrbaseclustertimeformatlocalization/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandListWithCompletionHandler:](mtrbaseclustertimeformatlocalization/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeActiveCalendarTypeWithCompletion:](mtrbaseclustertimeformatlocalization/readattributeactivecalendartype%28completion_%29.md)
+- [readAttributeActiveCalendarTypeWithCompletionHandler:](mtrbaseclustertimeformatlocalization/readattributeactivecalendartype%28completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithCompletion:](mtrbaseclustertimeformatlocalization/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeListWithCompletionHandler:](mtrbaseclustertimeformatlocalization/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithCompletion:](mtrbaseclustertimeformatlocalization/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevisionWithCompletionHandler:](mtrbaseclustertimeformatlocalization/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithCompletion:](mtrbaseclustertimeformatlocalization/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMapWithCompletionHandler:](mtrbaseclustertimeformatlocalization/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithCompletion:](mtrbaseclustertimeformatlocalization/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandListWithCompletionHandler:](mtrbaseclustertimeformatlocalization/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeHourFormatWithCompletion:](mtrbaseclustertimeformatlocalization/readattributehourformat%28completion_%29.md)
+- [readAttributeHourFormatWithCompletionHandler:](mtrbaseclustertimeformatlocalization/readattributehourformat%28completionhandler_%29.md): Deprecated.
+- [readAttributeSupportedCalendarTypesWithCompletion:](mtrbaseclustertimeformatlocalization/readattributesupportedcalendartypes%28completion_%29.md)
+- [readAttributeSupportedCalendarTypesWithCompletionHandler:](mtrbaseclustertimeformatlocalization/readattributesupportedcalendartypes%28completionhandler_%29.md): Deprecated.
+- [subscribeAttributeAcceptedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustertimeformatlocalization/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustertimeformatlocalization/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeActiveCalendarTypeWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustertimeformatlocalization/subscribeattributeactivecalendartype%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeActiveCalendarTypeWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustertimeformatlocalization/subscribeattributeactivecalendartype%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustertimeformatlocalization/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustertimeformatlocalization/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevisionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustertimeformatlocalization/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevisionWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustertimeformatlocalization/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMapWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustertimeformatlocalization/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMapWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustertimeformatlocalization/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustertimeformatlocalization/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustertimeformatlocalization/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeHourFormatWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustertimeformatlocalization/subscribeattributehourformat%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeHourFormatWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustertimeformatlocalization/subscribeattributehourformat%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSupportedCalendarTypesWithParams:subscriptionEstablished:reportHandler:](mtrbaseclustertimeformatlocalization/subscribeattributesupportedcalendartypes%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSupportedCalendarTypesWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclustertimeformatlocalization/subscribeattributesupportedcalendartypes%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [writeAttributeActiveCalendarTypeWithValue:completion:](mtrbaseclustertimeformatlocalization/writeattributeactivecalendartype%28withvalue_completion_%29.md)
+- [writeAttributeActiveCalendarTypeWithValue:completionHandler:](mtrbaseclustertimeformatlocalization/writeattributeactivecalendartype%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeActiveCalendarTypeWithValue:params:completion:](mtrbaseclustertimeformatlocalization/writeattributeactivecalendartype%28withvalue_params_completion_%29.md)
+- [writeAttributeActiveCalendarTypeWithValue:params:completionHandler:](mtrbaseclustertimeformatlocalization/writeattributeactivecalendartype%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeHourFormatWithValue:completion:](mtrbaseclustertimeformatlocalization/writeattributehourformat%28withvalue_completion_%29.md)
+- [writeAttributeHourFormatWithValue:completionHandler:](mtrbaseclustertimeformatlocalization/writeattributehourformat%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeHourFormatWithValue:params:completion:](mtrbaseclustertimeformatlocalization/writeattributehourformat%28withvalue_params_completion_%29.md)
+- [writeAttributeHourFormatWithValue:params:completionHandler:](mtrbaseclustertimeformatlocalization/writeattributehourformat%28withvalue_params_completionhandler_%29.md): Deprecated.
+
+### Type Methods
+
+- [readAttributeAcceptedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustertimeformatlocalization/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustertimeformatlocalization/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeActiveCalendarTypeWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustertimeformatlocalization/readattributeactivecalendartype%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeActiveCalendarTypeWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustertimeformatlocalization/readattributeactivecalendartype%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAttributeListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustertimeformatlocalization/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustertimeformatlocalization/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevisionWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustertimeformatlocalization/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustertimeformatlocalization/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMapWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustertimeformatlocalization/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustertimeformatlocalization/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustertimeformatlocalization/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustertimeformatlocalization/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeHourFormatWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustertimeformatlocalization/readattributehourformat%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeHourFormatWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustertimeformatlocalization/readattributehourformat%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSupportedCalendarTypesWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclustertimeformatlocalization/readattributesupportedcalendartypes%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSupportedCalendarTypesWithClusterStateCache:endpoint:queue:completion:](mtrbaseclustertimeformatlocalization/readattributesupportedcalendartypes%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)

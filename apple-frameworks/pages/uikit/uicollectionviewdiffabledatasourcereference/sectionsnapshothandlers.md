@@ -1,0 +1,103 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uicollectionviewdiffabledatasourcereference/sectionsnapshothandlers](https://developer.apple.com/documentation/uikit/uicollectionviewdiffabledatasourcereference/sectionsnapshothandlers)
+
+# sectionSnapshotHandlers (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · tvOS 14.0+ · visionOS 1.0+
+
+The diffable data source’s handlers for expanding and collapsing items.
+
+## Declaration
+
+```swift
+@NSCopying var sectionSnapshotHandlers: __UICollectionViewDiffableDataSourceSectionSnapshotHandlers { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Provide section snapshot handlers to support the expanding or collapsing of items in your collection view.
+
+Use the [snapshotForExpandingParentItemHandler](../uicollectionviewdiffabledatasourcesectionsnapshothandlers/snapshotforexpandingparentitemhandler.md) handler to customize the snapshot that returns when a particular parent item is expanded.
+
+**Swift**
+
+```swift
+// Allow every item to be collapsed
+dataSource.sectionSnapshotHandlers.shouldCollapseItem = { item in return true }
+
+dataSource.sectionSnapshotHandlers.snapshotForExpandingParent = {
+    parent, currentChildSnapshot -> NSDiffableDataSourceSectionSnapshot<String> in
+    
+    // Return child snapshot for the parent, or just currentChildSnapshot
+}
+```
+
+**Objective-C**
+
+```objc
+// Allow every item to be collapsed.
+[dataSource.sectionSnapshotHandlers setShouldCollapseItemHandler:^BOOL(NSString *item) {
+    return YES;
+}];
+
+[dataSource.sectionSnapshotHandlers setSnapshotForExpandingParentItemHandler:^NSDiffableDataSourceSectionSnapshot<NSString *> * (NSString *parent, NSDiffableDataSourceSectionSnapshot<NSString *> *currentChildSnapshot) {
+    // Return child snapshot for the parent, or just currentChildSnapshot.
+}];
+```
+
+# sectionSnapshotHandlers (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+ · tvOS 14.0+ · visionOS 1.0+
+
+The diffable data source’s handlers for expanding and collapsing items.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy) UICollectionViewDiffableDataSourceSectionSnapshotHandlers<id> * sectionSnapshotHandlers;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Provide section snapshot handlers to support the expanding or collapsing of items in your collection view.
+
+Use the [snapshotForExpandingParentItemHandler](../uicollectionviewdiffabledatasourcesectionsnapshothandlers/snapshotforexpandingparentitemhandler.md) handler to customize the snapshot that returns when a particular parent item is expanded.
+
+**Swift**
+
+```swift
+// Allow every item to be collapsed
+dataSource.sectionSnapshotHandlers.shouldCollapseItem = { item in return true }
+
+dataSource.sectionSnapshotHandlers.snapshotForExpandingParent = {
+    parent, currentChildSnapshot -> NSDiffableDataSourceSectionSnapshot<String> in
+    
+    // Return child snapshot for the parent, or just currentChildSnapshot
+}
+```
+
+**Objective-C**
+
+```objc
+// Allow every item to be collapsed.
+[dataSource.sectionSnapshotHandlers setShouldCollapseItemHandler:^BOOL(NSString *item) {
+    return YES;
+}];
+
+[dataSource.sectionSnapshotHandlers setSnapshotForExpandingParentItemHandler:^NSDiffableDataSourceSectionSnapshot<NSString *> * (NSString *parent, NSDiffableDataSourceSectionSnapshot<NSString *> *currentChildSnapshot) {
+    // Return child snapshot for the parent, or just currentChildSnapshot.
+}];
+```
+
+## See Also
+
+### Supporting expanding and collapsing
+
+- [UICollectionViewDiffableDataSourceSectionSnapshotHandlers](../uicollectionviewdiffabledatasourcesectionsnapshothandlers.md): Handlers for expanding and collapsing items.

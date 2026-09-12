@@ -1,0 +1,67 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/dnssd/dnsserviceconstructfullname(_:_:_:_:)](https://developer.apple.com/documentation/dnssd/dnsserviceconstructfullname(_:_:_:_:))
+
+# DNSServiceConstructFullName(\_:\_:\_:\_:) (Swift)
+
+**Framework:** dnssd  
+**Kind:** Function  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.12+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.0+
+
+Concatenates a three-part domain name (as returned by the above callbacks) into a properly-escaped full domain name.
+
+## Declaration
+
+```swift
+func DNSServiceConstructFullName(_ fullName: UnsafeMutablePointer<CChar>!, _ service: UnsafePointer<CChar>!, _ regtype: UnsafePointer<CChar>!, _ domain: UnsafePointer<CChar>!) -> DNSServiceErrorType
+```
+
+## Parameters
+
+- `fullName`: A pointer to a buffer that where the resulting full domain name is to be written. The buffer must be [kDNSServiceMaxDomainName](kdnsservicemaxdomainname.md) (1009) bytes in length to accommodate the longest legal domain name without buffer overrun.
+- `service`: The service name - any dots or backslashes must NOT be escaped. May be NULL (to construct a PTR record name, e.g. “\_ftp.\_tcp.apple.com.”).
+- `regtype`: The service type followed by the protocol, separated by a dot (e.g. “\_ftp.\_tcp”).
+- `domain`: The domain name, e.g. “apple.com.”. Literal dots or backslashes, if any, must be escaped, e.g. “1st. Floor.apple.com.”
+
+<a id="return-value"></a>
+
+## Return Value
+
+Returns [kDNSServiceErr_NoError](kdnsserviceerr_noerror.md) (0) on success, kDNSServiceErr_BadParam on error.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Note that callbacks in the above functions ALREADY ESCAPE strings where necessary.
+
+# DNSServiceConstructFullName (Objective-C)
+
+**Framework:** dnssd  
+**Kind:** Function  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.0+ · macOS 10.12+ · tvOS 10.0+ · visionOS 1.0+ · watchOS 3.0+
+
+Concatenates a three-part domain name (as returned by the above callbacks) into a properly-escaped full domain name.
+
+## Declaration
+
+```objectivec
+DNSServiceErrorType DNSServiceConstructFullName(char * constfullName, const char * constservice, const char * constregtype, const char * constdomain);
+```
+
+## Parameters
+
+- `fullName`: A pointer to a buffer that where the resulting full domain name is to be written. The buffer must be [kDNSServiceMaxDomainName](kdnsservicemaxdomainname.md) (1009) bytes in length to accommodate the longest legal domain name without buffer overrun.
+- `service`: The service name - any dots or backslashes must NOT be escaped. May be NULL (to construct a PTR record name, e.g. “\_ftp.\_tcp.apple.com.”).
+- `regtype`: The service type followed by the protocol, separated by a dot (e.g. “\_ftp.\_tcp”).
+- `domain`: The domain name, e.g. “apple.com.”. Literal dots or backslashes, if any, must be escaped, e.g. “1st. Floor.apple.com.”
+
+<a id="return-value"></a>
+
+## Return Value
+
+Returns [kDNSServiceErr_NoError](kdnsserviceerr_noerror.md) (0) on success, kDNSServiceErr_BadParam on error.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Note that callbacks in the above functions ALREADY ESCAPE strings where necessary.

@@ -1,0 +1,49 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/ifnet_output_func](https://developer.apple.com/documentation/kernel/ifnet_output_func)
+
+# ifnet_output_func
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Type Alias  
+**Availability:** macOS 10.4+
+
+## Declaration
+
+```objectivec
+typedef errno_t (*ifnet_output_func)(ifnet_t interface, mbuf_t data);
+```
+
+## Parameters
+
+- `interface`: The interface being sent on.
+- `data`: The packet to be sent.
+
+<a id="discussion"></a>
+
+## Discussion
+
+ifnet_output_func is used to transmit packets. The stack will pass fully formed packets, including frame header, to the ifnet_output function for an interface. The driver is responsible for freeing the mbuf.
+
+## See Also
+
+### ifnet
+
+- [ifnet_add_proto_func](ifnet_add_proto_func.md)
+- [ifnet_attach_proto_param](ifnet_attach_proto_param.md)
+- [ifnet_attach_proto_param_v2](ifnet_attach_proto_param_v2.md)
+- [ifnet_check_multi](ifnet_check_multi.md)
+- [ifnet_del_proto_func](ifnet_del_proto_func.md)
+- [ifnet_demux_desc](ifnet_demux_desc.md)
+- [ifnet_demux_func](ifnet_demux_func.md)
+- [ifnet_detached_func](ifnet_detached_func.md)
+- [ifnet_event_func](ifnet_event_func.md)
+- [ifnet_family_t](ifnet_family_t.md): Storage type for the interface family.
+- [ifnet_framer_func](ifnet_framer_func.md)
+- [ifnet_init_params](ifnet_init_params.md)
+- [ifnet_ioctl_func](ifnet_ioctl_func.md)
+- [ifnet_offload_t](ifnet_offload_t.md): Flags indicating the offload support of the interface.
+- [ifnet_set_bpf_tap](ifnet_set_bpf_tap.md)
+- [ifnet_stat_increment_param](ifnet_stat_increment_param.md)
+- [ifnet_stats_param](ifnet_stats_param.md)
+- [ifnet_t](ifnet_t.md)

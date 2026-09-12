@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/bnns/norm/linfinity](https://developer.apple.com/documentation/accelerate/bnns/norm/linfinity)
+
+# lInfinity
+
+**Framework:** Accelerate  
+**Kind:** Type Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS · watchOS 8.0+
+
+A constant that represents the maximum norm.
+
+> Use the BNNSGraph API instead.
+
+## Declaration
+
+```swift
+static var lInfinity: BNNS.Norm { get }
+```
+
+## See Also
+
+### Norm Types
+
+- [taxicab](taxicab.md): Deprecated. A constant that represents the taxicab norm.
+- [l1](l1.md): Deprecated. A constant that represents the L1 norm.
+- [euclidean](euclidean.md): Deprecated. A constant that represents the Euclidean norm.
+- [l2](l2.md): Deprecated. A constant that represents the L2 norm.
+- [maximum](maximum.md): Deprecated. A constant that represents the maximum norm.

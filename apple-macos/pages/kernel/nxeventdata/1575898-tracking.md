@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/nxeventdata/1575898-tracking](https://developer.apple.com/documentation/kernel/nxeventdata/1575898-tracking)
+
+# tracking
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Availability:** macOS 10.6+
+
+## Declaration
+
+```objectivec
+struct tracking;
+```
+
+## See Also
+
+### Miscellaneous
+
+- [compound](1575902-compound.md)
+- [key](1575833-key.md)
+- [mouse](1575741-mouse.md)
+- [mouseMove](1575846-mousemove.md)
+- [proximity](1575761-proximity.md)
+- [scrollWheel](1575822-scrollwheel.md)
+- [tablet](1575803-tablet.md)
+- [zoom](1575739-zoom.md)

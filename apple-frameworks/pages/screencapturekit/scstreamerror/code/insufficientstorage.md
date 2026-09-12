@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/screencapturekit/scstreamerror/code/insufficientstorage](https://developer.apple.com/documentation/screencapturekit/scstreamerror/code/insufficientstorage)
+
+# SCStreamError.Code.insufficientStorage (Swift)
+
+**Framework:** ScreenCaptureKit  
+**Kind:** Case  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+## Declaration
+
+```swift
+case insufficientStorage
+```
+
+# SCStreamErrorInsufficientStorage (Objective-C)
+
+**Framework:** ScreenCaptureKit  
+**Kind:** Enumeration Case  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+## Declaration
+
+```objectivec
+SCStreamErrorInsufficientStorage
+```

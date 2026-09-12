@@ -1,0 +1,69 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appstoreservernotifications/data](https://developer.apple.com/documentation/appstoreservernotifications/data)
+
+# data
+
+**Interface language:** Data
+
+**Framework:** App Store Server Notifications  
+**Kind:** Object  
+**Availability:** App Store Server Notifications 2.0+
+
+The payload data that contains app metadata and the signed renewal and transaction information.
+
+## Declaration
+
+```
+object data
+```
+
+## Properties
+
+- `appAppleId` — `appAppleId`: The unique identifier of the app that the notification applies to. This property is available for apps that users download from the App Store. It isn’t present in the sandbox environment.
+- `bundleId` — `bundleId`: The bundle identifier of the app.
+- `bundleVersion` — `bundleVersion`: The version of the build that identifies an iteration of the bundle.
+- `consumptionRequestReason` — `consumptionRequestReason`: The reason the customer requested the refund. This field appears only for `CONSUMPTION_REQUEST` notifications, which the server sends when a customer initiates a refund request for a consumable in-app purchase or auto-renewable subscription.
+- `environment` — `environment`: The server environment that the notification applies to, either `sandbox` or `production`.
+- `signedRenewalInfo` — `JWSRenewalInfo`: Subscription renewal information signed by the App Store, in JSON Web Signature (JWS) format. This field appears only for notifications that apply to auto-renewable subscriptions.
+- `signedTransactionInfo` — `JWSTransaction`: Transaction information signed by the App Store, in JSON Web Signature (JWS) format.
+- `status` — `status`: The status of an auto-renewable subscription as of the `signedDate` in the [responseBodyV2DecodedPayload](responsebodyv2decodedpayload.md). This field appears only for notifications sent for auto-renewable subscriptions.
+
+## Mentioned In
+
+- [App Store Server Notifications changelog](app-store-server-notifications-changelog.md)
+- [Receiving App Store Server Notifications](receiving-app-store-server-notifications.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The `data` object is part of the [responseBodyV2DecodedPayload](responsebodyv2decodedpayload.md). It’s present in the payload for [notificationType](notificationtype.md) values related to in-app purchases, except for the `RENEWAL_EXTENSION` notification type with a `SUMMARY` [subtype](subtype.md), and the `EXTERNAL_PURCHASE_TOKEN` notification type.
+
+Use the notification type along with the transaction and subscription renewal information in the `data` object to update a user’s service or present promotional offers according to your business logic.
+
+## Topics
+
+### App metadata and environment
+
+- [appAppleId](appappleid.md): The unique identifier of an app in the App Store.
+- [bundleId](bundleid.md): The bundle identifier of an app.
+- [bundleVersion](bundleversion.md): The version of the build that identifies an iteration of the bundle.
+- [environment](environment.md): The server environment, either sandbox or production.
+- [status](status.md): The status of an auto-renewable subscription at the time the App Store signs the notification.
+
+### JWS transaction and renewal info
+
+- [JWSRenewalInfo](jwsrenewalinfo.md): Subscription renewal information signed by the App Store, in JSON Web Signature (JWS) format.
+- [JWSRenewalInfoDecodedPayload](jwsrenewalinfodecodedpayload.md): A decoded payload containing subscription renewal information for an auto-renewable subscription.
+- [JWSTransaction](jwstransaction.md): Transaction information signed by the App Store, in JSON Web Signature (JWS) Compact Serialization format.
+- [JWSTransactionDecodedPayload](jwstransactiondecodedpayload.md): A decoded payload that contains transaction information.
+
+### Consumption request info
+
+- [consumptionRequestReason](consumptionrequestreason.md): The customer-provided reason for a refund request.
+
+## See Also
+
+### Response objects for in-app purchases
+
+- [summary](summary.md): The payload data for a subscription-renewal-date extension notification.
+- [appData](appdata.md): The object that contains the app metadata and signed app transaction information.

@@ -1,0 +1,51 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/toolbarcontent/visibilitypriority(_:)](https://developer.apple.com/documentation/swiftui/toolbarcontent/visibilitypriority(_:))
+
+# visibilityPriority(\_:)
+
+**Framework:** SwiftUI  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 26.1+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+Defines the visibility priority for a toolbar item.
+
+## Declaration
+
+```swift
+@MainActor @preconcurrency func visibilityPriority(_ priority: ToolbarItemVisibilityPriority) -> some ToolbarContent
+
+```
+
+## Parameters
+
+- `priority`: The visibility priority for this toolbar item.
+
+<a id="discussion"></a>
+
+## Discussion
+
+When toolbar space is limited, items with a lower priority move into the overflow menu before items with a higher priority. The default is [automatic](../toolbaritemvisibilitypriority/automatic.md).
+
+For example, an important control can appear at the trailing edge of the toolbar, but still be shown as the window is made smaller:
+
+```swift
+struct RootView: View {
+    var body: some View {
+        ContentView()
+            .toolbar {
+                ToolbarItem {
+                    SecondaryControl()
+                }
+                ToolbarItem {
+                    PrimaryControl()
+                }
+                .visibilityPriority(.high)
+            }
+    }
+}
+```
+
+## See Also
+
+### Controlling item visibility
+
+- [ToolbarItemVisibilityPriority](../toolbaritemvisibilitypriority.md): A value that defines the visibility priority of a toolbar item.

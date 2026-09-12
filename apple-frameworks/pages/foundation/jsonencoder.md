@@ -1,0 +1,104 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/jsonencoder](https://developer.apple.com/documentation/foundation/jsonencoder)
+
+# JSONEncoder
+
+**Framework:** Foundation  
+**Kind:** Class  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 8.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+An object that encodes instances of a data type as JSON objects.
+
+## Declaration
+
+```swift
+class JSONEncoder
+```
+
+## Mentioned In
+
+- [Uploading data to a website](uploading-data-to-a-website.md)
+- [Encoding and Decoding Custom Types](encoding-and-decoding-custom-types.md)
+
+<a id="overview"></a>
+
+## Overview
+
+The example below shows how to encode an instance of a simple `GroceryProduct` type from a JSON object. The type adopts [Codable](https://developer.apple.com/documentation/swift/codable) so that it’s encodable as JSON using a [JSONEncoder](jsonencoder.md) instance.
+
+```swift
+struct GroceryProduct: Codable {
+    var name: String
+    var points: Int
+    var description: String?
+}
+
+let pear = GroceryProduct(name: "Pear", points: 250, description: "A ripe pear.")
+
+let encoder = JSONEncoder()
+encoder.outputFormatting = .prettyPrinted
+
+let data = try encoder.encode(pear)
+print(String(data: data, encoding: .utf8)!)
+
+/* Prints:
+ {
+   "name" : "Pear",
+   "points" : 250,
+   "description" : "A ripe pear."
+ }
+*/
+```
+
+## Topics
+
+### First Steps
+
+- [init()](jsonencoder/init%28%29.md): Creates a new, reusable JSON encoder with the default formatting settings and encoding strategies.
+- [encode(\_:)](jsonencoder/encode%28__%29.md): Returns a JSON-encoded representation of the value you supply.
+
+### Customizing Encoding
+
+- [outputFormatting](jsonencoder/outputformatting-swift.property.md): A value that determines the readability, size, and element order of the encoded JSON object.
+- [JSONEncoder.OutputFormatting](jsonencoder/outputformatting-swift.struct.md): The output formatting options that determine the readability, size, and element order of an encoded JSON object.
+- [keyEncodingStrategy](jsonencoder/keyencodingstrategy-swift.property.md): A value that determines how to encode a type’s coding keys as JSON keys.
+- [JSONEncoder.KeyEncodingStrategy](jsonencoder/keyencodingstrategy-swift.enum.md): The values that determine how to encode a type’s coding keys as JSON keys.
+- [userInfo](jsonencoder/userinfo.md): A dictionary you use to customize the encoding process by providing contextual information.
+
+### Encoding Dates
+
+- [dateEncodingStrategy](jsonencoder/dateencodingstrategy-swift.property.md): The strategy used when encoding dates as part of a JSON object.
+- [JSONEncoder.DateEncodingStrategy](jsonencoder/dateencodingstrategy-swift.enum.md): The formatting strategies available for formatting dates when encoding a date as JSON.
+
+### Encoding Raw Data
+
+- [dataEncodingStrategy](jsonencoder/dataencodingstrategy-swift.property.md): The strategy that an encoder uses to encode raw data.
+- [JSONEncoder.DataEncodingStrategy](jsonencoder/dataencodingstrategy-swift.enum.md): The strategies for encoding raw data.
+
+### Encoding Exceptional Numbers
+
+- [nonConformingFloatEncodingStrategy](jsonencoder/nonconformingfloatencodingstrategy-swift.property.md): The strategy used by an encoder when it encounters exceptional floating-point values.
+- [JSONEncoder.NonConformingFloatEncodingStrategy](jsonencoder/nonconformingfloatencodingstrategy-swift.enum.md): The strategies for encoding nonconforming floating-point numbers, also known as IEEE 754 exceptional values.
+
+### Instance Methods
+
+- [encode(\_:configuration:)](jsonencoder/encode%28__configuration_%29-721tx.md)
+- [encode(\_:configuration:)](jsonencoder/encode%28__configuration_%29-8l39i.md)
+
+## Relationships
+
+### Conforms To
+
+- [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [Escapable](https://developer.apple.com/documentation/swift/escapable)
+- [NetworkEncoder](../network/networkencoder.md)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+- [TopLevelEncoder](../combine/toplevelencoder.md)
+
+## See Also
+
+### JSON
+
+- [Using JSON with custom types](using-json-with-custom-types.md): Encode and decode JSON data, regardless of its structure, using Swift’s JSON support.
+- [JSONDecoder](jsondecoder.md): An object that decodes instances of a data type from JSON objects.
+- [JSONSerialization](jsonserialization.md): An object that converts between JSON and the equivalent Foundation objects.

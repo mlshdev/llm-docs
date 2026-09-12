@@ -1,0 +1,87 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/scenekit/scnactionable/runaction(_:forkey:completionhandler:)](https://developer.apple.com/documentation/scenekit/scnactionable/runaction(_:forkey:completionhandler:))
+
+# runAction(\_:forKey:completionHandler:) (Swift)
+
+**Framework:** SceneKit  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ (deprecated in 26.0) · iPadOS 8.0+ (deprecated in 26.0) · Mac Catalyst 13.1+ (deprecated in 26.0) · macOS 10.8+ (deprecated in 26.0) · tvOS 9.0+ (deprecated in 26.0) · visionOS 1.0+ (deprecated in 26.0) · watchOS 3.0+ (deprecated in 26.0)
+
+Adds an identifiable action to the list of actions executed by the node. SceneKit calls the specified block when the action completes.
+
+## Declaration
+
+```swift
+func runAction(_ action: SCNAction, forKey key: String?, completionHandler block: (@Sendable () -> Void)? = nil)
+```
+
+```swift
+func runAction(_ action: SCNAction, forKey key: String?) async
+```
+
+## Parameters
+
+- `action`: The action to be performed.
+- `key`: A unique key used to identify the action.
+- `block`: A completion block called when the action completes.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method is identical to [runAction(\_:completionHandler:)](runaction%28__completionhandler_%29.md), but the action is stored and identified so that you can retrieve or cancel it later. If an action using the same key is already running, SceneKit removes it before adding the new action.
+
+SceneKit calls your block after the action’s duration is complete. For example, you can use this method with a wait action to execute some code after a timed delay. If during the delay period you need to prevent the code from running, use the [removeAction(forKey:)](removeaction%28forkey_%29.md) method to cancel it.
+
+## See Also
+
+### Related Documentation
+
+- [action(forKey:)](action%28forkey_%29.md): Returns an action associated with a specific key.
+- [removeAction(forKey:)](removeaction%28forkey_%29.md): Removes an action associated with a specific key.
+
+### Running Actions
+
+- [runAction(\_:)](runaction%28__%29.md): Adds an action to the list of actions executed by the node.
+- [runAction(\_:completionHandler:)](runaction%28__completionhandler_%29.md): Adds an action to the list of actions executed by the node. SceneKit calls the specified block when the action completes.
+- [runAction(\_:forKey:)](runaction%28__forkey_%29.md): Adds an identifiable action to the list of actions executed by the node.
+
+# runAction:forKey:completionHandler: (Objective-C)
+
+**Framework:** SceneKit  
+**Kind:** Instance Method  
+**Availability:** iOS · iPadOS · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS · visionOS · watchOS
+
+Adds an identifiable action to the list of actions executed by the node. SceneKit calls the specified block when the action completes.
+
+## Declaration
+
+```objectivec
+- (void) runAction:(SCNAction *) action forKey:(NSString *) key completionHandler:(void (^)()) block;
+```
+
+## Parameters
+
+- `action`: The action to be performed.
+- `key`: A unique key used to identify the action.
+- `block`: A completion block called when the action completes.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method is identical to [runAction:completionHandler:](runaction%28__completionhandler_%29.md), but the action is stored and identified so that you can retrieve or cancel it later. If an action using the same key is already running, SceneKit removes it before adding the new action.
+
+SceneKit calls your block after the action’s duration is complete. For example, you can use this method with a wait action to execute some code after a timed delay. If during the delay period you need to prevent the code from running, use the [removeActionForKey:](removeaction%28forkey_%29.md) method to cancel it.
+
+## See Also
+
+### Related Documentation
+
+- [actionForKey:](action%28forkey_%29.md): Returns an action associated with a specific key.
+- [removeActionForKey:](removeaction%28forkey_%29.md): Removes an action associated with a specific key.
+
+### Running Actions
+
+- [runAction:](runaction%28__%29.md): Adds an action to the list of actions executed by the node.
+- [runAction:completionHandler:](runaction%28__completionhandler_%29.md): Adds an action to the list of actions executed by the node. SceneKit calls the specified block when the action completes.
+- [runAction:forKey:](runaction%28__forkey_%29.md): Adds an identifiable action to the list of actions executed by the node.

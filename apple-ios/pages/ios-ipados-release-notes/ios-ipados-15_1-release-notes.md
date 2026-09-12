@@ -1,0 +1,93 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/ios-ipados-release-notes/ios-ipados-15_1-release-notes](https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-15_1-release-notes)
+
+# iOS & iPadOS 15.1 Release Notes
+
+**Kind:** Article
+
+Update your apps to use new features, and test your apps against API changes.
+
+<a id="Overview"></a>
+
+## Overview
+
+The iOS & iPadOS 15 SDK provides support to develop apps for iPhone, iPad, and iPod touch devices running iOS & iPadOS 15.1. The SDK comes bundled with Xcode 13, available from the Mac App Store. For information on the compatibility requirements for Xcode 13, see [Xcode 13 Release Notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-13-release-notes).
+
+<a id="CoreData"></a>
+
+### CoreData
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- `NSExpression` immediately forbids certain operations that have significant side effects, like creating and destroying objects. Additionally, casting string class names into Class objects with `NSConstantValueExpression` is deprecated. (84017178)
+
+  **Workaround:** Pass temporary objects to `NSExpression` in the context parameter of [expressionValue(with:context:)](https://developer.apple.com/documentation/foundation/nsexpression/expressionvalue%28with:context:%29), or with `NSPredicate` as the `substitutionVariables` parameter of [evaluate(with:substitutionVariables:)](https://developer.apple.com/documentation/foundation/nspredicate/evaluate%28with:substitutionvariables:%29). You can create a derived predicate with all the substitution variables replaced (bound), using [withSubstitutionVariables(\_:)](https://developer.apple.com/documentation/foundation/nspredicate/withsubstitutionvariables%28_:%29) on an existing `NSPredicate` so that code using the object can continue to use a simple `evaluate(with object: Any?)` invocation.
+
+<a id="Home"></a>
+
+### Home
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- The query for the connected admin list isn’t supported by Matter accessories. (82398328)
+- Matter accessory notifications don’t work. (82634464)
+
+  **Workaround:** Relaunch the Home app to force a refresh of the Matter accessory state.
+
+<a id="SharePlay"></a>
+
+### SharePlay
+
+<a id="New-Features"></a>
+
+#### New Features
+
+- SharePlay is now available in iOS 15.1, iPadOS 15.1, and tvOS 15.1. You can submit your apps that support SharePlay now. It’s also enabled in macOS 12.1 beta, so you can build SharePlay experiences across Apple platforms using the  [Group Activities](https://developer.apple.com/documentation/groupactivities) entitlement, without the need for the SharePlay Development Profile.
+
+<a id="SwiftUI"></a>
+
+### SwiftUI
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- The [BorderedButtonStyle](https://developer.apple.com/documentation/swiftui/borderedbuttonstyle) no longer has a default hover effect.
+
+  **Workaround:** Use the [HoverEffect](https://developer.apple.com/documentation/swiftui/hovereffect) modifier on the [Button](https://developer.apple.com/documentation/swiftui/button). (81759097)
+
+<a id="Telephony"></a>
+
+### Telephony
+
+<a id="Known-Issues"></a>
+
+#### Known Issues
+
+- Users might experience loss of audio during calls, followed by the call being dropped in some conditions. (83381816)
+
+  **Workaround:** Toggle Airplane Mode on and off, or reboot.
+
+<a id="VoiceOver"></a>
+
+### VoiceOver
+
+<a id="Resolved-Issues"></a>
+
+#### Resolved Issues
+
+- Alarms now activate correctly in the Clock app. (82968832)
+
+## See Also
+
+### iOS & iPadOS 15
+
+- [iOS & iPadOS 15.6 Release Notes](ios-ipados-15_6-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 15.5 Release Notes](ios-ipados-15_5-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 15.4 Release Notes](ios-ipados-15_4-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 15.3 Release Notes](ios-ipados-15_3-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 15.2 Release Notes](ios-ipados-15_2-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [iOS & iPadOS 15 Release Notes](ios-ipados-15-release-notes.md): Update your apps to use new features, and test your apps against API changes.

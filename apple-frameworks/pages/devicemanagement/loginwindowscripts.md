@@ -1,0 +1,114 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/loginwindowscripts](https://developer.apple.com/documentation/devicemanagement/loginwindowscripts)
+
+# LoginWindowScripts
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Device Management Profile  
+**Availability:** macOS 10.7+
+
+The payload that configures scripts to run at login and logout.
+
+## Declaration
+
+```
+object LoginWindowScripts
+```
+
+## Properties
+
+- `loginscripts` — `[LoginWindowScripts.ScriptsItems]`: An array of one or more dictionaries of scripts to run at user login time.
+- `logoutscripts` — `[LoginWindowScripts.ScriptsItems]`: An array of one or more dictionaries of scripts to run at user logout time.
+- `skipLoginHook` — `boolean`: If `true`, the system doesn’t execute the login scripts during login.
+  **Default:** `false`
+- `skipLogoutHook` — `boolean`: If `true`, the system doesn’t execute the logout scripts during logout.
+  **Default:** `false`
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Specify `com.apple.mcxloginscripts` as the payload type.
+
+The MCX login and logout managed-scripts payload contains information about executable scripts that can run at user login and logout. To use this payload, set `EnableMCXLoginScripts` to `true` in `/var/root/Library/Preferences/com.apple.loginwindow.plist`; otherwise, the system ignores this payload.
+
+`Loginwindow` uses the `LoginHook` and `LogoutHook` string keys in `/var/root/Library/Preferences/com.apple.loginwindow.plist` to indicate a path to the executable script files, which run during user login and logout. The system passes the current user name as an argument to the file.
+
+<a id="Profile-availability"></a>
+
+### Profile availability
+
+|  |  |
+| --- | --- |
+| Device channel | macOS |
+| User channel | N/A |
+| Allow manual install | macOS |
+| Requires supervision | N/A |
+| Requires user-approved MDM | N/A |
+| Allowed in user enrollment | N/A |
+| Allow multiple payloads | N/A |
+
+<a id="Profile-example"></a>
+
+### Profile example
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>loginscripts</key>
+            <array>
+                <dict>
+                    <key>filedata</key>
+                    <data>ExampleD</data>
+                    <key>filename</key>
+                    <string>ping.sh</string>
+                </dict>
+            </array>
+            <key>skipLoginHook</key>
+            <true/>
+            <key>skipLogoutHook</key>
+            <true/>
+            <key>PayloadIdentifier</key>
+            <string>com.example.myloginwindowscriptspayload</string>
+            <key>PayloadType</key>
+            <string>com.apple.mcxloginscripts</string>
+            <key>PayloadUUID</key>
+            <string>2bcd5563-f44d-4f74-b706-050a628c0caf</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+    </array>
+    <key>PayloadDisplayName</key>
+    <string>Login Window Scripts</string>
+    <key>PayloadIdentifier</key>
+    <string>com.example.myprofile</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>5cbf617d-16a5-4564-ba2c-728fd7f7d732</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>
+```
+
+## Topics
+
+### Objects
+
+- [LoginWindowScripts.ScriptsItems](loginwindowscripts/scriptsitems.md): A dictionary of login scripts.
+
+## See Also
+
+### Login
+
+- [LoginItemsManagedItems](loginitemsmanageditems.md): The payload that configures a device’s login items.
+- [LoginWindowLoginItems](loginwindowloginitems.md): The payload that configures login behavior.
+- [LoginWindow](loginwindow.md): The payload that configures Login Window behavior.
+- [ServiceManagementManagedLoginItems](servicemanagementmanagedloginitems.md): This payload that configures managed login items, which auto-enables and auto-allows matched items.

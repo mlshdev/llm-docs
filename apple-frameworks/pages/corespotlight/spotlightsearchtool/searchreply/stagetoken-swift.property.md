@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corespotlight/spotlightsearchtool/searchreply/stagetoken-swift.property](https://developer.apple.com/documentation/corespotlight/spotlightsearchtool/searchreply/stagetoken-swift.property)
+
+# stageToken
+
+**Framework:** CoreSpotlight  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+An opaque value you use to identify the pipeline stage that generated the reply.
+
+## Declaration
+
+```swift
+let stageToken: SpotlightSearchTool.SearchReply.StageToken
+```
+
+## Mentioned In
+
+- [Making your indexed content available to Foundation Models](../../making-your-indexed-content-available-to-foundation-models.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+The Spotlight search tool provides several ways to search content, and implements each technique as an independent stage. For a given query, a model can run multiple stages to generate the results of the query. Use this property to associate search reply structures with a specific stage. The token itself is an opaque value you save and compare against tokens in other search replies. You might use this value to partition the data you receive.
+
+## See Also
+
+### Getting the tokens
+
+- [queryToken](querytoken-swift.property.md): An opaque value you use to identify the query that generated the reply.
+- [SpotlightSearchTool.SearchReply.QueryToken](querytoken-swift.struct.md): An opaque type you use to identify a single call to the Spotlight search tool.
+- [SpotlightSearchTool.SearchReply.StageToken](stagetoken-swift.struct.md): An opaque type you use to identify a single pipeline stage within the Spotlight search tool.

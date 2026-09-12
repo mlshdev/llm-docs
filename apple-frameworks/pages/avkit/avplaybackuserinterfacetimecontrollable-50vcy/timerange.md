@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avkit/avplaybackuserinterfacetimecontrollable-50vcy/timerange](https://developer.apple.com/documentation/avkit/avplaybackuserinterfacetimecontrollable-50vcy/timerange)
+
+# timeRange
+
+**Framework:** AVKit  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+
+
+The time range representing the total duration and bounds of the media content.
+
+## Declaration
+
+```swift
+@MainActor var timeRange: CMTimeRange { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+For on-demand content, `start` is typically zero and `duration` is the total length of the content.
+
+For live content without DVR, set [timeRange](timerange.md) to a zero-duration range at the current live edge and advance it as the edge moves; [seekableTimeRanges](seekabletimeranges.md) must be nil or empty.
+
+For live content with DVR, set [timeRange](timerange.md) to the available DVR window and advance both `start` and `end` as the window rolls. Use [seekableTimeRanges](seekabletimeranges.md) to indicate which portion is seekable.
+
+The duration is always a finite, non-negative value.

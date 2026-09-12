@@ -1,0 +1,55 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsscriptcoercionhandler/registercoercer(_:selector:toconvertfrom:to:)](https://developer.apple.com/documentation/foundation/nsscriptcoercionhandler/registercoercer(_:selector:toconvertfrom:to:))
+
+# registerCoercer(\_:selector:toConvertFrom:to:) (Swift)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+Registers a given object (typically a class) to handle coercions (conversions) from one given class to another.
+
+## Declaration
+
+```swift
+func registerCoercer(_ coercer: Any, selector: Selector, toConvertFrom fromClass: AnyClass, to toClass: AnyClass)
+```
+
+## Parameters
+
+- `coercer`: The object that performs the coercion. `coercer` should typically be a class object.
+- `selector`: A selector that specifies the method to perform the coercion. `selector` should typically be a factory method, and must take two arguments. The first is the value to be converted. The second is the class to convert it to.
+- `fromClass`: The class for which instances are coerced.
+- `toClass`: The class to which instances of `fromClass` are coerced.
+
+## See Also
+
+### Working with handlers
+
+- [coerceValue(\_:to:)](coercevalue%28__to_%29.md): Returns an object of a given class representing a given value.
+
+# registerCoercer:selector:toConvertFromClass:toClass: (Objective-C)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+Registers a given object (typically a class) to handle coercions (conversions) from one given class to another.
+
+## Declaration
+
+```objectivec
+- (void) registerCoercer:(id) coercer selector:(SEL) selector toConvertFromClass:(Class) fromClass toClass:(Class) toClass;
+```
+
+## Parameters
+
+- `coercer`: The object that performs the coercion. `coercer` should typically be a class object.
+- `selector`: A selector that specifies the method to perform the coercion. `selector` should typically be a factory method, and must take two arguments. The first is the value to be converted. The second is the class to convert it to.
+- `fromClass`: The class for which instances are coerced.
+- `toClass`: The class to which instances of `fromClass` are coerced.
+
+## See Also
+
+### Working with handlers
+
+- [coerceValue:toClass:](coercevalue%28__to_%29.md): Returns an object of a given class representing a given value.

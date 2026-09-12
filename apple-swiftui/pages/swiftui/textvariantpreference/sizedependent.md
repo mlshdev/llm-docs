@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/textvariantpreference/sizedependent](https://developer.apple.com/documentation/swiftui/textvariantpreference/sizedependent)
+
+# sizeDependent
+
+**Framework:** SwiftUI  
+**Kind:** Type Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
+
+The size dependent preference allows the text to take the available space into account when choosing the size variant to display.
+
+## Declaration
+
+```swift
+static var sizeDependent: SizeDependentTextVariant { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+When a [Text](../text.md) provides different size options for its content, the size dependent preference chooses the largest option that fits into the available space without truncating or clipping its content.
+
+> **Note**
+
+> Only use this option where needed as it incurs a performance cost on every [Text](../text.md) it is applied to, even if the concrete text initializer cannot provide multiple size variants and there is no visual impact.
+
+<a id="Difference-to-ViewThatFits"></a>
+
+## Difference to ViewThatFits
+
+The [sizeDependent](sizedependent.md) text variant preference differs from [ViewThatFits](../viewthatfits.md) both in usage and in behavior. [ViewThatFits](../viewthatfits.md) chooses the first child where the **ideal** size fits the available space. For [Text](../text.md) this means that it will only choose texts that can fit their contents into the available space **without a line break**. With this text variant preference, on the other hand, the largest variant is chosen that can fit the available space while respecting all the regular layout rules, such as [lineLimit](../environmentvalues/linelimit.md).
+
+To use [ViewThatFits](../viewthatfits.md), multiple different views have to be provided as the different size options. With this text variant preference, a single [Text](../text.md) provides the different size variants intrinsically. The way it generates these size variants and how many size variants are available depends on the text initializer used.

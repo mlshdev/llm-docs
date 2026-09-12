@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/devicefitstatus/valid](https://developer.apple.com/documentation/arkit/devicefitstatus/valid)
+
+# DeviceFitStatus.valid
+
+**Framework:** ARKit  
+**Kind:** Case  
+**Availability:** visionOS 27.0+
+
+User’s eyes are properly positioned within the optimal device fit range.
+
+## Declaration
+
+```swift
+case valid
+```

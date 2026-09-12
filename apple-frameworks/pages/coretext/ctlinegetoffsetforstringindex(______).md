@@ -1,0 +1,79 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coretext/ctlinegetoffsetforstringindex(_:_:_:)](https://developer.apple.com/documentation/coretext/ctlinegetoffsetforstringindex(_:_:_:))
+
+# CTLineGetOffsetForStringIndex(\_:\_:\_:) (Swift)
+
+**Framework:** Core Text  
+**Kind:** Function  
+**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Determines the graphical offset or offsets for a string index.
+
+## Declaration
+
+```swift
+func CTLineGetOffsetForStringIndex(_ line: CTLine, _ charIndex: CFIndex, _ secondaryOffset: UnsafeMutablePointer<CGFloat>?) -> CGFloat
+```
+
+## Parameters
+
+- `line`: The line from which the offset is requested.
+- `charIndex`: The string index corresponding to the desired position.
+- `secondaryOffset`: On output, the secondary offset along the baseline for `charIndex`. When a single caret is sufficient for a string index, this value will be the same as the primary offset, which is the return value of this function. May be `NULL`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The primary offset along the baseline for `charIndex`, or `0.0` if the line does not support string access.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This function returns the graphical offset or offsets corresponding to a string index, suitable for movement between adjacent lines or for drawing a custom caret. For moving between adjacent lines, the primary offset can be adjusted for any relative indentation of the two lines; a [CGPoint](../corefoundation/cgpoint.md) constructed with the adjusted offset for its `x` value and `0.0` for its `y` value is suitable for passing to [CTLineGetStringIndexForPosition(\_:\_:)](ctlinegetstringindexforposition%28____%29.md). For drawing a custom caret, the returned primary offset corresponds to the portion of the caret that represents the visual insertion location for a character whose direction matches the line’s writing direction.
+
+## See Also
+
+### Getting Line Positioning
+
+- [CTLineGetStringIndexForPosition(\_:\_:)](ctlinegetstringindexforposition%28____%29.md): Performs hit testing.
+- [CTLineEnumerateCaretOffsets(\_:\_:)](ctlineenumeratecaretoffsets%28____%29.md): Enumerates caret offsets for characters in a line.
+
+# CTLineGetOffsetForStringIndex (Objective-C)
+
+**Framework:** Core Text  
+**Kind:** Function  
+**Availability:** iOS 3.2+ · iPadOS 3.2+ · Mac Catalyst 13.1+ · macOS 10.5+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Determines the graphical offset or offsets for a string index.
+
+## Declaration
+
+```objectivec
+extern CGFloat CTLineGetOffsetForStringIndex(CTLineRef line, CFIndex charIndex, CGFloat *secondaryOffset);
+```
+
+## Parameters
+
+- `line`: The line from which the offset is requested.
+- `charIndex`: The string index corresponding to the desired position.
+- `secondaryOffset`: On output, the secondary offset along the baseline for `charIndex`. When a single caret is sufficient for a string index, this value will be the same as the primary offset, which is the return value of this function. May be `NULL`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The primary offset along the baseline for `charIndex`, or `0.0` if the line does not support string access.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This function returns the graphical offset or offsets corresponding to a string index, suitable for movement between adjacent lines or for drawing a custom caret. For moving between adjacent lines, the primary offset can be adjusted for any relative indentation of the two lines; a [CGPoint](../corefoundation/cgpoint.md) constructed with the adjusted offset for its `x` value and `0.0` for its `y` value is suitable for passing to [CTLineGetStringIndexForPosition](ctlinegetstringindexforposition%28____%29.md). For drawing a custom caret, the returned primary offset corresponds to the portion of the caret that represents the visual insertion location for a character whose direction matches the line’s writing direction.
+
+## See Also
+
+### Getting Line Positioning
+
+- [CTLineGetStringIndexForPosition](ctlinegetstringindexforposition%28____%29.md): Performs hit testing.
+- [CTLineEnumerateCaretOffsets](ctlineenumeratecaretoffsets%28____%29.md): Enumerates caret offsets for characters in a line.

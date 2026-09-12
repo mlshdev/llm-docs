@@ -1,0 +1,117 @@
+> Snapshot-pinned source for Apple watchOS snapshot-49fd8d0a44e2: [documentation/watchkit/building-watchos-app-interfaces-using-the-storyboard](https://developer.apple.com/documentation/watchkit/building-watchos-app-interfaces-using-the-storyboard)
+
+# Building watchOS app Interfaces Using the Storyboard (Swift)
+
+**Framework:** WatchKit
+
+Create the user interface for your watchOS app by nesting stacks.
+
+<a id="overview"></a>
+
+## Overview
+
+watchOS apps use a simplified, stack-based layout model for their user interfaces. Xcode automatically groups elements into horizontal and vertical stacks, and you can fine-tune the layout by modifying the element’s attributes. Additionally, you can ensure that your interface works as expected on all Apple Watch sizes by using resizable elements and size-specific customizations.
+
+As you add items to the storyboard, Xcode stacks them vertically, with each item on its own line ([Figure 1](https://developer.apple.com/documentation/watchkit/storyboard_support/building_watchos_app_interfaces_using_the_storyboard#3295988)).
+
+![A screenshot of a storyboard scene with three buttons stacked horizontally.](https://developer.apple.com/images/com.apple.watchkit/media-3295988@2x.png)
+
+Use Groups to create horizontal or vertical stacks ([Figure 2](https://developer.apple.com/documentation/watchkit/storyboard_support/building_watchos_app_interfaces_using_the_storyboard#3172421)). Groups don’t have a default visual representation, but you can configure a background color or image as needed. Nest Groups, as necessary, to create more complex layouts.
+
+![A screenshot with a Group containing a horizontal stack of buttons.](https://developer.apple.com/images/com.apple.watchkit/media-3172421@2x.png)
+
+<a id="Customize-the-Layout-Using-Attributes"></a>
+
+### Customize the Layout Using Attributes
+
+You can fine-tune an interface element’s size and layout using the Attributes inspector. All interface elements have the following attributes:
+
+- **Horizontal**: Configures the horizontal position of the item within the space provided by its container.
+- **Vertical**: Configures the vertical position of the item within the space provided by its container.
+- **Width**: Determines how the system calculates the object’s width. This attribute has three possible values: Size to Fit Content, Relative to Container, and Fixed. Size to Fit Content sets the width based on the object’s content. Relative to Container sets the width to a percentage of the container’s width. Fixed sets the width to the specified size in points.
+- **Height**: Determines how the system calculates the object’s height. This attribute has three possible values: Size to Fit Content, Relative to Container, and Fixed. Size to Fit Content sets the height based on the object’s content. Relative to Container sets the height to a percentage of the container’s height. Fixed sets the height to the specified size in points.
+
+Groups provide additional options to manage their content:
+
+- **Layout**: Specifies the layout direction for items in the group. You can stack items horizontally or vertically, or have them overlap.
+- **Insets**: Sets the amount of space (in points) between the edges of the group and its child elements. Use Custom to specify different values for the top, bottom, left, and right edges.
+- **Spacing**: Sets the spacing (in points) between child elements in the group. The default spacing is 2 points.
+
+## Topics
+
+### Controls
+
+- [Connecting Your User Interface to Your Code](connecting-your-user-interface-to-your-code.md): Connect the interface objects in your storyboard to outlets and action methods in your WatchKit extension.
+
+### Navigation
+
+- [Navigating Between Scenes](navigating-between-scenes.md): Help users navigate between interface controllers.
+
+## See Also
+
+### User interface basics
+
+- [WKInterfaceObject](wkinterfaceobject.md): An object that provides information that is common to all interface objects in your watchOS app.
+- [WKInterfaceController](wkinterfacecontroller.md): A class that provides the infrastructure for managing the interface in a watchOS app.
+- [WKAlertAction](wkalertaction.md): An object that encapsulates information about a button displayed in an alert or action sheet.
+- [WKAccessibilityImageRegion](wkaccessibilityimageregion.md): An object that defines a portion of an image that you want to call out separately to an assistive app.
+- [WKAccessibilityIsVoiceOverRunning()](wkaccessibilityisvoiceoverrunning%28%29.md): Returns a Boolean value indicating whether VoiceOver is running.
+- [WKAccessibilityIsReduceMotionEnabled()](wkaccessibilityisreducemotionenabled%28%29.md): Returns a Boolean value indicating whether reduced motion is enabled.
+
+# Building watchOS app Interfaces Using the Storyboard (Objective-C)
+
+**Framework:** WatchKit
+
+Create the user interface for your watchOS app by nesting stacks.
+
+<a id="overview"></a>
+
+## Overview
+
+watchOS apps use a simplified, stack-based layout model for their user interfaces. Xcode automatically groups elements into horizontal and vertical stacks, and you can fine-tune the layout by modifying the element’s attributes. Additionally, you can ensure that your interface works as expected on all Apple Watch sizes by using resizable elements and size-specific customizations.
+
+As you add items to the storyboard, Xcode stacks them vertically, with each item on its own line ([Figure 1](https://developer.apple.com/documentation/watchkit/storyboard_support/building_watchos_app_interfaces_using_the_storyboard#3295988)).
+
+![A screenshot of a storyboard scene with three buttons stacked horizontally.](https://developer.apple.com/images/com.apple.watchkit/media-3295988@2x.png)
+
+Use Groups to create horizontal or vertical stacks ([Figure 2](https://developer.apple.com/documentation/watchkit/storyboard_support/building_watchos_app_interfaces_using_the_storyboard#3172421)). Groups don’t have a default visual representation, but you can configure a background color or image as needed. Nest Groups, as necessary, to create more complex layouts.
+
+![A screenshot with a Group containing a horizontal stack of buttons.](https://developer.apple.com/images/com.apple.watchkit/media-3172421@2x.png)
+
+<a id="Customize-the-Layout-Using-Attributes"></a>
+
+### Customize the Layout Using Attributes
+
+You can fine-tune an interface element’s size and layout using the Attributes inspector. All interface elements have the following attributes:
+
+- **Horizontal**: Configures the horizontal position of the item within the space provided by its container.
+- **Vertical**: Configures the vertical position of the item within the space provided by its container.
+- **Width**: Determines how the system calculates the object’s width. This attribute has three possible values: Size to Fit Content, Relative to Container, and Fixed. Size to Fit Content sets the width based on the object’s content. Relative to Container sets the width to a percentage of the container’s width. Fixed sets the width to the specified size in points.
+- **Height**: Determines how the system calculates the object’s height. This attribute has three possible values: Size to Fit Content, Relative to Container, and Fixed. Size to Fit Content sets the height based on the object’s content. Relative to Container sets the height to a percentage of the container’s height. Fixed sets the height to the specified size in points.
+
+Groups provide additional options to manage their content:
+
+- **Layout**: Specifies the layout direction for items in the group. You can stack items horizontally or vertically, or have them overlap.
+- **Insets**: Sets the amount of space (in points) between the edges of the group and its child elements. Use Custom to specify different values for the top, bottom, left, and right edges.
+- **Spacing**: Sets the spacing (in points) between child elements in the group. The default spacing is 2 points.
+
+## Topics
+
+### Controls
+
+- [Connecting Your User Interface to Your Code](connecting-your-user-interface-to-your-code.md): Connect the interface objects in your storyboard to outlets and action methods in your WatchKit extension.
+
+### Navigation
+
+- [Navigating Between Scenes](navigating-between-scenes.md): Help users navigate between interface controllers.
+
+## See Also
+
+### User interface basics
+
+- [WKInterfaceObject](wkinterfaceobject.md): An object that provides information that is common to all interface objects in your watchOS app.
+- [WKInterfaceController](wkinterfacecontroller.md): A class that provides the infrastructure for managing the interface in a watchOS app.
+- [WKAlertAction](wkalertaction.md): An object that encapsulates information about a button displayed in an alert or action sheet.
+- [WKAccessibilityImageRegion](wkaccessibilityimageregion.md): An object that defines a portion of an image that you want to call out separately to an assistive app.
+- [WKAccessibilityIsVoiceOverRunning](wkaccessibilityisvoiceoverrunning%28%29.md): Returns a Boolean value indicating whether VoiceOver is running.
+- [WKAccessibilityIsReduceMotionEnabled](wkaccessibilityisreducemotionenabled%28%29.md): Returns a Boolean value indicating whether reduced motion is enabled.

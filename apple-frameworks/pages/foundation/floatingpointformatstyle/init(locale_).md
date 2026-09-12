@@ -1,0 +1,34 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/floatingpointformatstyle/init(locale:)](https://developer.apple.com/documentation/foundation/floatingpointformatstyle/init(locale:))
+
+# init(locale:)
+
+**Framework:** Foundation  
+**Kind:** Initializer  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+
+Creates a floating-point format style that uses the given locale.
+
+## Declaration
+
+```swift
+init(locale: Locale = .autoupdatingCurrent)
+```
+
+## Parameters
+
+- `locale`: The locale to use when formatting or parsing floating-point values. Defaults to [autoupdatingCurrent](../locale/autoupdatingcurrent.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Create a [FloatingPointFormatStyle](../floatingpointformatstyle.md) when you intend to apply a given style to multiple floating-point values. The following example creates a style that uses the `en_US` locale, which uses three-based grouping and comma separators. It then applies this style to all the [Double](https://developer.apple.com/documentation/swift/double) values in an array.
+
+```swift
+let enUSstyle = FloatingPointFormatStyle<Double>(locale: Locale(identifier: "en_US"))
+let nums = [100.1, 1000.2, 10000.3, 100000.4, 1000000.5]
+let formattedNums = nums.map { enUSstyle.format($0) } // ["100.1", "1,000.2", "10,000.3", "100,000.4", "1,000,000.5"]
+
+```
+
+To format a single integer, you can use the [BinaryFloatingPoint](https://developer.apple.com/documentation/swift/binaryfloatingpoint) instance method [formatted(\_:)](https://developer.apple.com/documentation/swift/binaryfloatingpoint/formatted%28_:%29-83x4n), passing in an instance of [FloatingPointFormatStyle](../floatingpointformatstyle.md).

@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreai/inferencevalue/mutableviewrepresentable](https://developer.apple.com/documentation/coreai/inferencevalue/mutableviewrepresentable)
+
+# InferenceValue.MutableViewRepresentable
+
+**Framework:** Core AI  
+**Kind:** Protocol  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+A type that can provide a mutable view of itself as an inference value.
+
+## Declaration
+
+```swift
+protocol MutableViewRepresentable : ~Copyable
+```
+
+## Topics
+
+### Creating a mutable view
+
+- [mutableView()](mutableviewrepresentable/mutableview%28%29.md)
+
+## Relationships
+
+### Conforming Types
+
+- [NDArray](../ndarray.md)
+
+## See Also
+
+### Adopting representable protocols
+
+- [InferenceValue.ViewRepresentable](viewrepresentable.md): A type that can provide a read-only view of itself as an inference value.

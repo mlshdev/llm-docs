@@ -1,0 +1,95 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/sparse_extract_block_double(_:_:_:_:_:_:)](https://developer.apple.com/documentation/accelerate/sparse_extract_block_double(_:_:_:_:_:_:))
+
+# sparse_extract_block_double(\_:\_:\_:\_:\_:\_:) (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 3.0+
+
+Extracts values from a specified block of a double-precision matrix.
+
+## Declaration
+
+```swift
+func sparse_extract_block_double(_ A: sparse_matrix_double!, _ bi: sparse_index, _ bj: sparse_index, _ row_stride: sparse_dimension, _ col_stride: sparse_dimension, _ val: UnsafeMutablePointer<Double>!) -> sparse_status
+```
+
+## Parameters
+
+- `A`: The sparse matrix, *A*, which must have been created with [sparse_matrix_block_create_double(\_:\_:\_:\_:)](sparse_matrix_block_create_double%28________%29.md) or [sparse_matrix_variable_block_create_double(\_:\_:\_:\_:)](sparse_matrix_variable_block_create_double%28________%29.md). [SPARSE_ILLEGAL_PARAMETER](sparse_illegal_parameter.md) is returned if not met. `A` holds block dimensions (fixed or variable) set with matrix object creation routine.
+- `bi`: The block row index for value extraction. Indices are 0 based (first block of matrix is `A[0,0]`).  Indices expected to be in the bounds of matrix dimensions, undefined behavior if not met.
+- `bj`: The block column index for value extraction. Indices are 0 based (first block of matrix is `A[0,0]`).  Indices expected to be in the bounds of matrix dimensions, undefined behavior if not met.
+- `row_stride`: The row stride in number of elements to move from one row to the next for the block `val`.
+- `col_stride`: The column stride in number of elements to move from one column to the next for the block `val`.
+- `val`: Pointer to dense block to place the extracted values.  Expected to be of size `K * L` where `K * L` is the block size for the matrix object at block index `bi,bj`. This dimensions is set at matrix object creation time.
+
+<a id="return-value"></a>
+
+## Return Value
+
+On success [SPARSE_SUCCESS](sparse_success.md) is return and val has been updated with the block from block index `bi,bj`. If `A` creation requirements are not met, [SPARSE_ILLEGAL_PARAMETER](sparse_illegal_parameter.md) is returned and `val` is unchanged.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Extract the `bi,bj`’th block from the sparse matrix `A`.
+
+> **Important**
+
+>  Apple provides the BLAS and LAPACK libraries under the Accelerate framework to be in line with LAPACK 3.9.1. Starting with iOS 26, iPadOS 26, macOS 26, tvOS 26, visionOS 26, and watchOS 26, the libraries are in line with LAPACK 3.12.0. These new interfaces provide additional functionality, as well as a new ILP64 interface. To use the new interfaces, define `ACCELERATE_NEW_LAPACK` before including the Accelerate or vecLib headers. For ILP64 interfaces, also define `ACCELERATE_LAPACK_ILP64`. For Swift projects, specify `ACCELERATE_NEW_LAPACK=1` and `ACCELERATE_LAPACK_ILP64=1` as preprocessor macros in Xcode build settings under Apple Clang - Preprocessing \> Preprocessor Macros.
+
+## See Also
+
+### Value extraction
+
+- [sparse_extract_block_float(\_:\_:\_:\_:\_:\_:)](sparse_extract_block_float%28____________%29.md): Extracts values from a specified block of a single-precision matrix.
+- [sparse_extract_block_double_complex(\_:\_:\_:\_:\_:\_:)](sparse_extract_block_double_complex%28____________%29.md)
+- [sparse_extract_block_float_complex(\_:\_:\_:\_:\_:\_:)](sparse_extract_block_float_complex%28____________%29.md)
+
+# sparse_extract_block_double (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 3.0+
+
+Extracts values from a specified block of a double-precision matrix.
+
+## Declaration
+
+```objectivec
+sparse_status sparse_extract_block_double(sparse_matrix_double A, sparse_index bi, sparse_index bj, sparse_dimension row_stride, sparse_dimension col_stride, double * restrictval);
+```
+
+## Parameters
+
+- `A`: The sparse matrix, *A*, which must have been created with [sparse_matrix_block_create_double](sparse_matrix_block_create_double%28________%29.md) or [sparse_matrix_variable_block_create_double](sparse_matrix_variable_block_create_double%28________%29.md). [SPARSE_ILLEGAL_PARAMETER](sparse_illegal_parameter.md) is returned if not met. `A` holds block dimensions (fixed or variable) set with matrix object creation routine.
+- `bi`: The block row index for value extraction. Indices are 0 based (first block of matrix is `A[0,0]`).  Indices expected to be in the bounds of matrix dimensions, undefined behavior if not met.
+- `bj`: The block column index for value extraction. Indices are 0 based (first block of matrix is `A[0,0]`).  Indices expected to be in the bounds of matrix dimensions, undefined behavior if not met.
+- `row_stride`: The row stride in number of elements to move from one row to the next for the block `val`.
+- `col_stride`: The column stride in number of elements to move from one column to the next for the block `val`.
+- `val`: Pointer to dense block to place the extracted values.  Expected to be of size `K * L` where `K * L` is the block size for the matrix object at block index `bi,bj`. This dimensions is set at matrix object creation time.
+
+<a id="return-value"></a>
+
+## Return Value
+
+On success [SPARSE_SUCCESS](sparse_success.md) is return and val has been updated with the block from block index `bi,bj`. If `A` creation requirements are not met, [SPARSE_ILLEGAL_PARAMETER](sparse_illegal_parameter.md) is returned and `val` is unchanged.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Extract the `bi,bj`’th block from the sparse matrix `A`.
+
+> **Important**
+
+>  Apple provides the BLAS and LAPACK libraries under the Accelerate framework to be in line with LAPACK 3.9.1. Starting with iOS 26, iPadOS 26, macOS 26, tvOS 26, visionOS 26, and watchOS 26, the libraries are in line with LAPACK 3.12.0. These new interfaces provide additional functionality, as well as a new ILP64 interface. To use the new interfaces, define `ACCELERATE_NEW_LAPACK` before including the Accelerate or vecLib headers. For ILP64 interfaces, also define `ACCELERATE_LAPACK_ILP64`. For Swift projects, specify `ACCELERATE_NEW_LAPACK=1` and `ACCELERATE_LAPACK_ILP64=1` as preprocessor macros in Xcode build settings under Apple Clang - Preprocessing \> Preprocessor Macros.
+
+## See Also
+
+### Value extraction
+
+- [sparse_extract_block_float](sparse_extract_block_float%28____________%29.md): Extracts values from a specified block of a single-precision matrix.
+- [sparse_extract_block_double_complex](sparse_extract_block_double_complex%28____________%29.md)
+- [sparse_extract_block_float_complex](sparse_extract_block_float_complex%28____________%29.md)

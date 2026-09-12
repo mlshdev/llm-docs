@@ -1,0 +1,183 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/classkit/building-missing-contexts](https://developer.apple.com/documentation/classkit/building-missing-contexts)
+
+# Building missing contexts (Swift)
+
+**Framework:** ClassKit  
+**Kind:** Article
+
+Create and initialize missing contexts.
+
+<a id="overview"></a>
+
+## Overview
+
+When you request a context with a call to the [descendant(matchingIdentifierPath:completion:)](clscontext/descendant%28matchingidentifierpath_completion_%29.md) method, whether you are declaring it or because you want to do something with it, the data store returns the context indicated by the identifier path. But if that context or any of its ancestors doesn’t already exist, the data store asks its delegate to create new ones.
+
+<a id="Adopt-the-data-store-delegate-protocol"></a>
+
+### Adopt the data store delegate protocol
+
+To enable the delegate to create a context, you adopt the [CLSDataStoreDelegate](clsdatastoredelegate.md) protocol in your app.
+
+```swift
+// Extension to MyClass for adopting the data store delegate protocol.
+extension MyClass: CLSDataStoreDelegate {
+
+    // Call this once at app launch.
+    func setupClassKit() {
+        CLSDataStore.shared.delegate = self
+    }
+
+    // The delegate callback for creating new contexts.
+    func createContext(forIdentifier identifier: String, parentContext: CLSContext, parentIdentifierPath: [String]) -> CLSContext? {
+        let identifierPath = parentIdentifierPath + [identifier]
+        
+        let object = <# A model object based on identifierPath #>
+        let context = CLSContext(type: object.contextType, identifier: identifier, title: object.title)
+        
+        return context
+    }
+}
+```
+
+The data store uses the delegate callback to ask for each new context it encounters. You use the identifier path to determine exactly what the new context should look like. A good way to do this is to map the identifier path to a model object you already have and use its properties to inform context creation. For example, your model objects might represent books, chapters, sections, and quizzes, all of which implement a `title` parameter suitable for use on the context. By also storing a `contextType` parameter on each model instance, with values like [CLSContextType.book](clscontexttype/book.md), [CLSContextType.chapter](clscontexttype/chapter.md), [CLSContextType.section](clscontexttype/section.md), or [CLSContextType.quiz](clscontexttype/quiz.md), you can create contexts based entirely on model instances, as shown above.
+
+<a id="Provide-descriptive-titles"></a>
+
+### Provide descriptive titles
+
+The title you provide at context initialization is what teachers see when browsing your content in the Schoolwork app. Make it easy for teachers to understand what your app offers by choosing good context titles and localizing them, as appropriate. Because titles are the most visible aspect of your hierarchy, it’s important that you make them both clear and descriptive. The title “Thermodynamics Quiz” is much more self-explanatory than “Quiz 8,” for example.
+
+<a id="Optionally-indicate-display-order"></a>
+
+### Optionally, indicate display order
+
+If appropriate, provide guidance for ordering your contexts using the [displayOrder](clscontext/displayorder.md) property. For example, immediately after instantiating a context that represents a chapter, you might indicate its position as the chapter number:
+
+```swift
+if let chapter = object as? Chapter {
+    context.displayOrder = chapter.number
+}
+```
+
+<a id="Classify-contexts-by-subject"></a>
+
+### Classify contexts by subject
+
+You can further classify a context with an optional topic using one of the values from [CLSContextTopic](clscontexttopic.md), like [math](clscontexttopic/math.md) or [socialScience](clscontexttopic/socialscience.md). For apps covering a variety of different subject matters, topics help teachers differentiate between the various parts of your app. An app that has a singular focus can simply set its top-level context to the topic that best matches that subject. For example, for a book reader:
+
+```swift
+dataStore.mainAppContext.topic = .literacyAndWriting
+```
+
+<a id="Return-the-context"></a>
+
+### Return the context
+
+After you create and configure the context, return it to the data store. The data store associates the context with the appropriate parent and keeps it in memory. The next time you ask the data store for that context, it returns the previously generated one instead of requesting a new one from the delegate. Additionally, for a user logged in as a teacher, the data store saves the changes to an internal database that’s shared with the Schoolwork app and synchronized over iCloud. This allows the context to persist even across launches of your app, but only for teachers. For privacy reasons, other users don’t record contexts in the database.
+
+<a id="Adopt-the-data-store-delegate-protocol"></a>
+
+### Adopt the data store delegate protocol
+
+The data store delegate ensures you only create new contexts when they don’t already exist in the local data store. While it’s possible to manually build a context hierarchy by initializing contexts and assigning them as children, this approach creates unnecessary iCloud sync traffic when contexts already exist from previous app launches.
+
+To enable the delegate to create a context, you adopt the [CLSDataStoreDelegate](clsdatastoredelegate.md) protocol in your app.
+
+## See Also
+
+### Managing the delegate
+
+- [delegate](clsdatastore/delegate.md): The data store delegate instance.
+- [CLSDataStoreDelegate](clsdatastoredelegate.md): An interface the data store uses to request new contexts.
+
+# Building missing contexts (Objective-C)
+
+**Framework:** ClassKit  
+**Kind:** Article
+
+Create and initialize missing contexts.
+
+<a id="overview"></a>
+
+## Overview
+
+When you request a context with a call to the [descendantMatchingIdentifierPath:completion:](clscontext/descendant%28matchingidentifierpath_completion_%29.md) method, whether you are declaring it or because you want to do something with it, the data store returns the context indicated by the identifier path. But if that context or any of its ancestors doesn’t already exist, the data store asks its delegate to create new ones.
+
+<a id="Adopt-the-data-store-delegate-protocol"></a>
+
+### Adopt the data store delegate protocol
+
+To enable the delegate to create a context, you adopt the [CLSDataStoreDelegate](clsdatastoredelegate.md) protocol in your app.
+
+```swift
+// Extension to MyClass for adopting the data store delegate protocol.
+extension MyClass: CLSDataStoreDelegate {
+
+    // Call this once at app launch.
+    func setupClassKit() {
+        CLSDataStore.shared.delegate = self
+    }
+
+    // The delegate callback for creating new contexts.
+    func createContext(forIdentifier identifier: String, parentContext: CLSContext, parentIdentifierPath: [String]) -> CLSContext? {
+        let identifierPath = parentIdentifierPath + [identifier]
+        
+        let object = <# A model object based on identifierPath #>
+        let context = CLSContext(type: object.contextType, identifier: identifier, title: object.title)
+        
+        return context
+    }
+}
+```
+
+The data store uses the delegate callback to ask for each new context it encounters. You use the identifier path to determine exactly what the new context should look like. A good way to do this is to map the identifier path to a model object you already have and use its properties to inform context creation. For example, your model objects might represent books, chapters, sections, and quizzes, all of which implement a `title` parameter suitable for use on the context. By also storing a `contextType` parameter on each model instance, with values like [CLSContextTypeBook](clscontexttype/book.md), [CLSContextTypeChapter](clscontexttype/chapter.md), [CLSContextTypeSection](clscontexttype/section.md), or [CLSContextTypeQuiz](clscontexttype/quiz.md), you can create contexts based entirely on model instances, as shown above.
+
+<a id="Provide-descriptive-titles"></a>
+
+### Provide descriptive titles
+
+The title you provide at context initialization is what teachers see when browsing your content in the Schoolwork app. Make it easy for teachers to understand what your app offers by choosing good context titles and localizing them, as appropriate. Because titles are the most visible aspect of your hierarchy, it’s important that you make them both clear and descriptive. The title “Thermodynamics Quiz” is much more self-explanatory than “Quiz 8,” for example.
+
+<a id="Optionally-indicate-display-order"></a>
+
+### Optionally, indicate display order
+
+If appropriate, provide guidance for ordering your contexts using the [displayOrder](clscontext/displayorder.md) property. For example, immediately after instantiating a context that represents a chapter, you might indicate its position as the chapter number:
+
+```swift
+if let chapter = object as? Chapter {
+    context.displayOrder = chapter.number
+}
+```
+
+<a id="Classify-contexts-by-subject"></a>
+
+### Classify contexts by subject
+
+You can further classify a context with an optional topic using one of the values from [CLSContextTopic](clscontexttopic.md), like [CLSContextTopicMath](clscontexttopic/math.md) or [CLSContextTopicSocialScience](clscontexttopic/socialscience.md). For apps covering a variety of different subject matters, topics help teachers differentiate between the various parts of your app. An app that has a singular focus can simply set its top-level context to the topic that best matches that subject. For example, for a book reader:
+
+```swift
+dataStore.mainAppContext.topic = .literacyAndWriting
+```
+
+<a id="Return-the-context"></a>
+
+### Return the context
+
+After you create and configure the context, return it to the data store. The data store associates the context with the appropriate parent and keeps it in memory. The next time you ask the data store for that context, it returns the previously generated one instead of requesting a new one from the delegate. Additionally, for a user logged in as a teacher, the data store saves the changes to an internal database that’s shared with the Schoolwork app and synchronized over iCloud. This allows the context to persist even across launches of your app, but only for teachers. For privacy reasons, other users don’t record contexts in the database.
+
+<a id="Adopt-the-data-store-delegate-protocol"></a>
+
+### Adopt the data store delegate protocol
+
+The data store delegate ensures you only create new contexts when they don’t already exist in the local data store. While it’s possible to manually build a context hierarchy by initializing contexts and assigning them as children, this approach creates unnecessary iCloud sync traffic when contexts already exist from previous app launches.
+
+To enable the delegate to create a context, you adopt the [CLSDataStoreDelegate](clsdatastoredelegate.md) protocol in your app.
+
+## See Also
+
+### Managing the delegate
+
+- [delegate](clsdatastore/delegate.md): The data store delegate instance.
+- [CLSDataStoreDelegate](clsdatastoredelegate.md): An interface the data store uses to request new contexts.

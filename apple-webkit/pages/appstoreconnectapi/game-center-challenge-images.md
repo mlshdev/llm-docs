@@ -1,0 +1,39 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/game-center-challenge-images](https://developer.apple.com/documentation/appstoreconnectapi/game-center-challenge-images)
+
+# Game Center challenge images
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** API Collection
+
+Manage image assets for your Game Center challenges.
+
+## Topics
+
+### Managing challenge images
+
+- [Read Image Information for a Challenge Localization](get-v1-gamecenterchallengelocalizations-_id_-image.md): Get details about the image for a specific Game Center challenge localization.
+- [Read Challenge Image Information](get-v1-gamecenterchallengeimages-_id_.md): Get information for a specific Game Center challenge image.
+- [Create a Challenge Image](post-v1-gamecenterchallengeimages.md): Reserve an image for a Game Center challenge.
+- [Commit an Image for a Challenge](patch-v1-gamecenterchallengeimages-_id_.md): Commit an uploaded image asset as a Game Center challenge image.
+- [Delete a Challenge Image](delete-v1-gamecenterchallengeimages-_id_.md): Remove a specific image from a Game Center challenge.
+
+### Objects
+
+- [GameCenterChallengeImage](gamecenterchallengeimage.md): An image asset used to represent a Game Center challenge in the player interface.
+- [GameCenterChallengeImageCreateRequest](gamecenterchallengeimagecreaterequest.md): The request body for uploading an image asset for a Game Center challenge.
+- [GameCenterChallengeImageResponse](gamecenterchallengeimageresponse.md): A response containing a single image asset for a Game Center challenge.
+- [GameCenterChallengeImageUpdateRequest](gamecenterchallengeimageupdaterequest.md): The request body you use to update a challenge.
+- [GameCenterChallengeLocalizationImageLinkageResponse](gamecenterchallengelocalizationimagelinkageresponse.md)
+- [GameCenterChallengeVersionDefaultImageLinkageResponse](gamecenterchallengeversiondefaultimagelinkageresponse.md)
+
+## See Also
+
+### Challenges
+
+- [Configuring Game Center challenges](configuring-game-center-challenges.md): Setup and configure social experiences around leaderboards for friendly competition.
+- [Game Center challenges](game-center-challenges.md): Manage Game Center challenges for your apps.
+- [Game Center challenge versions](game-center-challenges-versions.md): Manage compatible Game Center challenge versions.
+- [Game Center challenge version releases](game-center-challenges-version-releases.md): Manage compatible Game Center challenge version releases.
+- [Game Center challenges localizations](game-center-challenges-localizations.md): Manage compatible Game Center-enabled versions.

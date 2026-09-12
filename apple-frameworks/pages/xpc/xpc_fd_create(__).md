@@ -1,0 +1,85 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/xpc/xpc_fd_create(_:)](https://developer.apple.com/documentation/xpc/xpc_fd_create(_:))
+
+# xpc_fd_create(\_:) (Swift)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Creates an XPC object that represents a POSIX file descriptor.
+
+## Declaration
+
+```swift
+func xpc_fd_create(_ fd: Int32) -> xpc_object_t?
+```
+
+## Parameters
+
+- `fd`: The file descriptor which is to be boxed.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new file descriptor object. `NULL` if sufficient memory could not be allocated or if the given file descriptor was not valid.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method performs the equivalent of a `dup(2)` on the descriptor, so it is safe to call `close(2)` on the descriptor after boxing it with a file descriptor object.
+
+> **Important**
+
+>  Pointer equality is the ONLY valid test for equality between two file descriptor objects. There is no reliable way to determine whether two file descriptors refer to the same inode with the same capabilities, so two file descriptor objects created from the same underlying file descriptor number will not compare equally with [xpc_equal(\_:\_:)](xpc_equal%28____%29.md). This is also true of a file descriptor object created using [xpc_copy(\_:)](xpc_copy%28__%29.md) and the original.
+
+This also implies that two collections containing file descriptor objects cannot be equal unless the exact same object was inserted into both.
+
+## See Also
+
+### File Descriptor objects
+
+- [xpc_fd_dup(\_:)](xpc_fd_dup%28__%29.md): Returns a file descriptor that is equivalent to the one that the specified file descriptor object boxes.
+
+# xpc_fd_create (Objective-C)
+
+**Framework:** XPC  
+**Kind:** Function  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Creates an XPC object that represents a POSIX file descriptor.
+
+## Declaration
+
+```objectivec
+extern xpc_object_txpc_fd_create(int fd);
+```
+
+## Parameters
+
+- `fd`: The file descriptor which is to be boxed.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A new file descriptor object. `NULL` if sufficient memory could not be allocated or if the given file descriptor was not valid.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method performs the equivalent of a `dup(2)` on the descriptor, so it is safe to call `close(2)` on the descriptor after boxing it with a file descriptor object.
+
+> **Important**
+
+>  Pointer equality is the ONLY valid test for equality between two file descriptor objects. There is no reliable way to determine whether two file descriptors refer to the same inode with the same capabilities, so two file descriptor objects created from the same underlying file descriptor number will not compare equally with [xpc_equal](xpc_equal%28____%29.md). This is also true of a file descriptor object created using [xpc_copy](xpc_copy%28__%29.md) and the original.
+
+This also implies that two collections containing file descriptor objects cannot be equal unless the exact same object was inserted into both.
+
+## See Also
+
+### File Descriptor objects
+
+- [xpc_fd_dup](xpc_fd_dup%28__%29.md): Returns a file descriptor that is equivalent to the one that the specified file descriptor object boxes.

@@ -1,0 +1,7 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/oscollection/oscollectionflags/kimmutable](https://developer.apple.com/documentation/kernel/oscollection/oscollectionflags/kimmutable)
+
+# kImmutable
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel

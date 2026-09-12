@@ -1,0 +1,46 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiodriverkit/iouseraudioselectorcontrol/getcurrentselectedvalues](https://developer.apple.com/documentation/audiodriverkit/iouseraudioselectorcontrol/getcurrentselectedvalues)
+
+# GetCurrentSelectedValues
+
+**Interface language:** Objective-C
+
+**Framework:** AudioDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit 21.0+
+
+Gets the current selections of the selector.
+
+## Declaration
+
+```objectivec
+size_t GetCurrentSelectedValues(IOUserAudioSelectorValue *out_values, size_t in_num_values);
+```
+
+## Parameters
+
+- `out_values`: A pointer to a buffer of type [IOUserAudioSelectorValue](../iouseraudioselectorvalue.md), with a size of `in_num_values`. On return, this buffer contains the selected values.
+- `in_num_values`: The size of the `out_values` array.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The number of values populated in the `out_values` buffer.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method synchronizes by using the work queue created by the object.
+
+## See Also
+
+### Accessing the Selected Values
+
+- [SetCurrentSelectedValues](setcurrentselectedvalues.md): Sets the current selections of the selector.
+- [GetControlValuesCount](getcontrolvaluescount.md): Gets the number of available selector values.
+- [IOUserAudioSelectorValue](../iouseraudioselectorvalue.md): The type of values managed by a selector control.
+- [AddControlValueDescriptions](addcontrolvaluedescriptions.md): Add value descriptions to the selector control.
+- [RemoveControlValueDescriptions](removecontrolvaluedescriptions.md): Removes value descriptions from the selector control.
+- [GetControlValueDescriptions](getcontrolvaluedescriptions.md): Gets value descriptions used by the selector control.
+- [IOUserAudioSelectorValueDescription](../iouseraudioselectorvaluedescription.md): A type that describes a value in a selection control.

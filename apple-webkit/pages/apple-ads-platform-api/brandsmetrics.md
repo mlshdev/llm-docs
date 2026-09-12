@@ -1,0 +1,140 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/brandsmetrics](https://developer.apple.com/documentation/apple-ads-platform-api/brandsmetrics)
+
+# BrandsMetrics
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Object  
+**Availability:** Apple Ads Platform API 1.0+
+
+Metrics for brands promoted object type.
+
+## Declaration
+
+```
+object BrandsMetrics
+```
+
+## Properties
+
+- `date` — `date`: Report date in YYYY-MM-DD format.
+- `localSpend` — `Money`: Total spend. See [Money](money.md).
+- `impressions` — `int64`: Total ad impressions.
+- `taps` — `int64`: Total ad taps.
+- `ttr` — `number`: Tap-through rate.
+- `cpt` — `Money`: Average cost per tap. See [Money](money.md).
+- `cpm` — `Money`: Average cost per thousand impressions. See [Money](money.md).
+- `firstActions` — `ActionMetrics`: First-time action counts. See [ActionMetrics](actionmetrics.md).
+- `firstActionsPerTap` — `RateMetrics`: First-action rates per tap. See [RateMetrics](ratemetrics.md).
+- `firstActionsPerImpression` — `RateMetrics`: First-action rates per impression. See [RateMetrics](ratemetrics.md).
+- `costPerFirstAction` — `CostMetrics`: Cost per first action. See [CostMetrics](costmetrics.md).
+- `actions` — `ActionMetrics`: Total action counts. See [ActionMetrics](actionmetrics.md).
+- `costPerAction` — `CostMetrics`: Cost per action. See [CostMetrics](costmetrics.md).
+- `getDirections` — `ActionMetrics`: Get-directions action counts. See [ActionMetrics](actionmetrics.md).
+- `tapURL` — `ActionMetrics`: Tap-URL action counts. See [ActionMetrics](actionmetrics.md).
+- `call` — `ActionMetrics`: Call action counts. See [ActionMetrics](actionmetrics.md).
+- `share` — `ActionMetrics`: Share action counts. See [ActionMetrics](actionmetrics.md).
+- `getTheApp` — `ActionMetrics`: Get-the-app action counts. See [ActionMetrics](actionmetrics.md).
+- `galleryEngagement` — `ActionMetrics`: Gallery engagement action counts. See [ActionMetrics](actionmetrics.md).
+- `actionsPerTap` — `RateMetrics`: Total actions per tap rate. See [RateMetrics](ratemetrics.md).
+- `actionsPerImpression` — `RateMetrics`: Total actions per impression rate. See [RateMetrics](ratemetrics.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The `BrandsMetrics` object is the base metrics for brands campaign reports. It includes spend, impression, and tap metrics shared with apps, plus brands-specific engagement actions (get directions, tap URL, call, share, get the app, gallery engagement) and their associated rate and cost breakdowns.
+
+All action count fields reference [ActionMetrics](actionmetrics.md) objects. Cost fields reference [CostMetrics](costmetrics.md). Rate fields reference [RateMetrics](ratemetrics.md). Monetary spend fields reference [Money](money.md).
+
+<a id="Example"></a>
+
+### Example
+
+```json
+{
+  "date": "2025-01-10",
+  "localSpend": {
+    "amount": "845.50",
+    "currency": "USD"
+  },
+  "impressions": 620000,
+  "taps": 9800,
+  "ttr": 0.0158,
+  "cpt": {
+    "amount": "0.09",
+    "currency": "USD"
+  },
+  "cpm": {
+    "amount": "1.36",
+    "currency": "USD"
+  },
+  "firstActions": {
+    "tap": 1450
+  },
+  "firstActionsPerTap": {
+    "tap": 0.1480
+  },
+  "firstActionsPerImpression": {
+    "tap": 0.0023
+  },
+  "costPerFirstAction": {
+    "tap": {
+      "amount": "0.58",
+      "currency": "USD"
+    }
+  },
+  "actions": {
+    "tap": 2100
+  },
+  "costPerAction": {
+    "tap": {
+      "amount": "0.40",
+      "currency": "USD"
+    }
+  },
+  "getDirections": {
+    "tap": 320
+  },
+  "tapURL": {
+    "tap": 610
+  },
+  "call": {
+    "tap": 145
+  },
+  "share": {
+    "tap": 95
+  },
+  "getTheApp": {
+    "tap": 780
+  },
+  "galleryEngagement": {
+    "tap": 150
+  },
+  "actionsPerTap": {
+    "tap": 0.2143
+  },
+  "actionsPerImpression": {
+    "tap": 0.0034
+  }
+}
+```
+
+## See Also
+
+- [BrandsReportingRequest](brandsreportingrequest.md): Request body for brands reporting queries.
+- [BrandsReportingCampaign](brandsreportingcampaign.md): Campaign metadata for Apple Maps report rows.
+- [BrandsReportingAdGroup](brandsreportingadgroup.md): Ad group metadata for brands report rows.
+- [BrandsReportingAd](brandsreportingad.md): Ad metadata for brands report rows.
+- [BrandsReportingCreative](brandsreportingcreative.md): Creative metadata for brands ads.
+- [BrandsReportingKeyword](brandsreportingkeyword.md): Keyword metadata for brands report rows, extending the base reporting keyword with brands-only internal fields.
+- [BrandsReportingSearchTerm](brandsreportingsearchterm.md): Search term metadata for brands report rows, extending the base reporting search term with brands-only internal fields.
+- [BrandsCampaignReportResponse](brandscampaignreportresponse.md): The top-level response envelope for Apple Maps campaign-level reports.
+- [BrandsCampaignReportRow](brandscampaignreportrow.md): A single row in an Apple Maps campaign report, containing campaign metadata, total metrics, and optional granular time-series metrics.
+- [BrandsCampaignReportSummary](brandscampaignreportsummary.md): The grand-total metrics aggregated across all rows in an Apple Maps campaign report.
+- [BrandsCampaignResultContainer](brandscampaignresultcontainer.md): Wraps the array of Apple Maps campaign report rows along with a grand-total summary.
+- [BrandsAdGroupReportResponse](brandsadgroupreportresponse.md): The top-level response envelope for brands ad group reports.
+- [BrandsAdGroupReportRow](brandsadgroupreportrow.md): A single row in a Brands (Apple Maps) ad group report, pairing ad group metadata with total and granular performance metrics.
+- [BrandsAdGroupReportSummary](brandsadgroupreportsummary.md): The grand-total metrics aggregated across all rows in a Brands ad group report.
+- [BrandsAdGroupResultContainer](brandsadgroupresultcontainer.md): Wraps the array of Brands ad group report rows along with a grand-total summary.

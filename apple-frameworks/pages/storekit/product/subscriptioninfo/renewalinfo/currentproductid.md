@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/storekit/product/subscriptioninfo/renewalinfo/currentproductid](https://developer.apple.com/documentation/storekit/product/subscriptioninfo/renewalinfo/currentproductid)
+
+# currentProductID
+
+**Framework:** StoreKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+
+The subscription product ID that the customer is subscribed to.
+
+## Declaration
+
+```swift
+let currentProductID: String
+```

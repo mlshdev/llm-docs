@@ -1,0 +1,19 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/idbobjectstore/1630021-createindex](https://developer.apple.com/documentation/webkitjs/idbobjectstore/1630021-createindex)
+
+# createIndex
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Instance Method  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+## Declaration
+
+```
+IDBIndex createIndex(
+    DOMString name, 
+    (DOMString or sequence<DOMString>) keyPath, 
+    optional IDBIndexParameters options
+);
+```

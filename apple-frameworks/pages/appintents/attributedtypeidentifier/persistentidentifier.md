@@ -1,0 +1,21 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/appintents/attributedtypeidentifier/persistentidentifier](https://developer.apple.com/documentation/appintents/attributedtypeidentifier/persistentidentifier)
+
+# persistentIdentifier
+
+**Framework:** App Intents  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+The persistent identifier for this entity type.
+
+## Declaration
+
+```swift
+let persistentIdentifier: String
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This identifier typically corresponds to the struct name of the original entity declaration (for example, `LandmarkEntity`). The system uses this value to uniquely identify the entity type within its bundle.

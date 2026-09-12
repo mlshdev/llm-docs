@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "project": "yt-dlp",
   "title": "yt-dlp",
+  "homepage": "https://github.com/yt-dlp/yt-dlp#readme",
   "repository": "yt-dlp/yt-dlp",
   "tag": "2026.08.19",
   "releaseId": 373411891,

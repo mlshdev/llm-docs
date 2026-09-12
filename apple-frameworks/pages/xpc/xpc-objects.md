@@ -1,0 +1,394 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/xpc/xpc-objects](https://developer.apple.com/documentation/xpc/xpc-objects)
+
+# XPC objects (Swift)
+
+**Framework:** XPC  
+**Kind:** API Collection
+
+Encapsulate data in objects that represent primitive types, collections, and more.
+
+## Topics
+
+### Objects
+
+- [xpc_object_t](xpc_object_t.md): A type that can describe all XPC objects, including dictionaries, arrays, strings, and numbers.
+- [xpc_type_t](xpc_type_t.md): A type that describes XPC object types.
+- [OS_xpc_object](os_xpc_object.md): The interface for an XPC object.
+- [OS_xpc_listener](os_xpc_listener-swift.class.md)
+
+### Identity
+
+- [xpc_get_type(\_:)](xpc_get_type%28__%29.md): Returns the type of an object.
+- [xpc_type_get_name(\_:)](xpc_type_get_name%28__%29.md): Returns a string that describes an XPC object type.
+- [xpc_hash(\_:)](xpc_hash%28__%29.md): Calculates a hash value for the specified object.
+
+### Comparison
+
+- [xpc_equal(\_:\_:)](xpc_equal%28____%29.md): Compares two objects for equality.
+
+### Copying
+
+- [xpc_copy(\_:)](xpc_copy%28__%29.md): Creates a copy of the object.
+- [xpc_copy_description(\_:)](xpc_copy_description%28__%29.md): Copies a debug string that describes the object.
+
+### Boolean objects
+
+- [xpc_bool_create(\_:)](xpc_bool_create%28__%29.md): Creates an XPC Boolean object.
+- [xpc_bool_get_value(\_:)](xpc_bool_get_value%28__%29.md): Returns the underlying Boolean value from the object.
+- [XPC_BOOL_TRUE](xpc_bool_true-swift.var.md): A constant that represents a Boolean value of true.
+- [XPC_BOOL_FALSE](xpc_bool_false-swift.var.md): A constant that represents a Boolean value of false.
+
+### Data objects
+
+- [xpc_data_create(\_:\_:)](xpc_data_create%28____%29.md): Creates an XPC object that represents a buffer of bytes.
+- [xpc_data_create_with_dispatch_data(\_:)](xpc_data_create_with_dispatch_data%28__%29.md): Creates an XPC object that represents a buffer of bytes that the specified GCD data object describes.
+- [xpc_data_get_bytes(\_:\_:\_:\_:)](xpc_data_get_bytes%28________%29.md): Copies the bytes in a data object into the specified buffer.
+- [xpc_data_get_bytes_ptr(\_:)](xpc_data_get_bytes_ptr%28__%29.md): Returns a pointer to the internal storage of a data object.
+- [xpc_data_get_length(\_:)](xpc_data_get_length%28__%29.md): Returns the length of the data that an XPC data object encapsulates.
+
+### Number objects
+
+- [xpc_double_create(\_:)](xpc_double_create%28__%29.md): Creates an XPC double object.
+- [xpc_double_get_value(\_:)](xpc_double_get_value%28__%29.md): Returns the underlying double-precision floating point value from an object.
+- [xpc_int64_create(\_:)](xpc_int64_create%28__%29.md): Creates an XPC signed integer object.
+- [xpc_int64_get_value(\_:)](xpc_int64_get_value%28__%29.md): Returns the underlying signed 64-bit integer value from an object.
+- [xpc_uint64_create(\_:)](xpc_uint64_create%28__%29.md): Creates an XPC unsigned integer object.
+- [xpc_uint64_get_value(\_:)](xpc_uint64_get_value%28__%29.md): Returns the underlying unsigned 64-bit integer value from an object.
+
+### Array objects
+
+- [XPCArray](xpcarray.md): An ordered random-access collection of XPC objects.
+- [xpc_array_create(\_:\_:)](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_empty()](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection(\_:\_:)](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value(\_:\_:\_:)](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value(\_:\_:)](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value(\_:\_:)](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_get_count(\_:)](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
+- [xpc_array_apply(\_:\_:)](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_dup_fd(\_:\_:)](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
+- [xpc_array_get_array(\_:\_:)](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
+- [xpc_array_get_bool(\_:\_:)](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
+- [xpc_array_get_data(\_:\_:\_:)](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
+- [xpc_array_get_date(\_:\_:)](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
+- [xpc_array_get_dictionary(\_:\_:)](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
+- [xpc_array_get_double(\_:\_:)](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
+- [xpc_array_get_int64(\_:\_:)](xpc_array_get_int64%28____%29.md): Gets a 64-bit integer primitive value from an array directly.
+- [xpc_array_get_string(\_:\_:)](xpc_array_get_string%28____%29.md): Gets a C-string value from an array directly.
+- [xpc_array_get_uint64(\_:\_:)](xpc_array_get_uint64%28____%29.md): Gets a 64-bit unsigned integer primitive value from an array directly.
+- [xpc_array_get_uuid(\_:\_:)](xpc_array_get_uuid%28____%29.md): Gets a UUID value from an array directly.
+- [xpc_array_set_bool(\_:\_:\_:)](xpc_array_set_bool%28______%29.md): Inserts a Boolean primitive value into an array.
+- [xpc_array_set_connection(\_:\_:\_:)](xpc_array_set_connection%28______%29.md): Inserts a connection into an array.
+- [xpc_array_set_data(\_:\_:\_:\_:)](xpc_array_set_data%28________%29.md): Inserts a raw data value into an array.
+- [xpc_array_set_date(\_:\_:\_:)](xpc_array_set_date%28______%29.md): Inserts a date value into an array.
+- [xpc_array_set_double(\_:\_:\_:)](xpc_array_set_double%28______%29.md): Inserts a double-precision floating point primitive value into an array.
+- [xpc_array_set_fd(\_:\_:\_:)](xpc_array_set_fd%28______%29.md): Inserts a file descriptor into an array.
+- [xpc_array_set_int64(\_:\_:\_:)](xpc_array_set_int64%28______%29.md): Inserts a 64-bit integer primitive value into an array.
+- [xpc_array_set_string(\_:\_:\_:)](xpc_array_set_string%28______%29.md): Inserts a C-string into an array.
+- [xpc_array_set_uint64(\_:\_:\_:)](xpc_array_set_uint64%28______%29.md): Inserts a 64-bit unsigned integer primitive value into an array.
+- [xpc_array_set_uuid(\_:\_:\_:)](xpc_array_set_uuid%28______%29.md): Inserts a UUID primitive value into an array.
+- [xpc_array_applier_t](xpc_array_applier_t.md): A block to invoke for every value in the array.
+- [XPC_ARRAY_APPEND](xpc_array_append-swift.var.md): A constant to pass as the destination index to the class of primitive XPC array setters indicating that the specified primitive needs to append to the array.
+
+### Dictionary objects
+
+- [XPCDictionary](xpcdictionary.md): A type that contains key-value pairs, notably used as the container of messages between a client and listener.
+- [xpc_dictionary_create(\_:\_:\_:)](xpc_dictionary_create%28______%29.md): Creates an XPC object that represents a dictionary of XPC objects keyed to C-strings.
+- [xpc_dictionary_create_empty()](xpc_dictionary_create_empty%28%29.md): Creates an XPC object that represents a dictionary of XPC objects keyed to C-strings.
+- [xpc_dictionary_create_connection(\_:\_:)](xpc_dictionary_create_connection%28____%29.md): Creates a connection from a dictionary directly.
+- [xpc_dictionary_create_reply(\_:)](xpc_dictionary_create_reply%28__%29.md): Creates a dictionary that is in reply to the specified dictionary.
+- [xpc_dictionary_set_value(\_:\_:\_:)](xpc_dictionary_set_value%28______%29.md): Sets the value for the specified key to the specified object.
+- [xpc_dictionary_get_count(\_:)](xpc_dictionary_get_count%28__%29.md): Returns the number of values in the dictionary.
+- [xpc_dictionary_get_value(\_:\_:)](xpc_dictionary_get_value%28____%29.md): Returns the value for the specified key.
+- [xpc_dictionary_apply(\_:\_:)](xpc_dictionary_apply%28____%29.md): Invokes the specified block for every key-value pair in the dictionary.
+- [xpc_dictionary_dup_fd(\_:\_:)](xpc_dictionary_dup_fd%28____%29.md): Creates a file descriptor from a dictionary directly.
+- [xpc_dictionary_get_array(\_:\_:)](xpc_dictionary_get_array%28____%29.md): Returns the array value for the specified key.
+- [xpc_dictionary_get_bool(\_:\_:)](xpc_dictionary_get_bool%28____%29.md): Gets a Boolean primitive value from a dictionary directly.
+- [xpc_dictionary_get_data(\_:\_:\_:)](xpc_dictionary_get_data%28______%29.md): Gets a raw data value from a dictionary directly.
+- [xpc_dictionary_get_date(\_:\_:)](xpc_dictionary_get_date%28____%29.md): Gets a date value from a dictionary directly.
+- [xpc_dictionary_get_dictionary(\_:\_:)](xpc_dictionary_get_dictionary%28____%29.md): Returns the dictionary value for the specified key.
+- [xpc_dictionary_get_double(\_:\_:)](xpc_dictionary_get_double%28____%29.md): Gets a double-precision floating point primitive value from a dictionary directly.
+- [xpc_dictionary_get_int64(\_:\_:)](xpc_dictionary_get_int64%28____%29.md): Gets a 64-bit integer primitive value from a dictionary directly.
+- [xpc_dictionary_get_remote_connection(\_:)](xpc_dictionary_get_remote_connection%28__%29.md): Returns the connection that receives the dictionary.
+- [xpc_dictionary_get_string(\_:\_:)](xpc_dictionary_get_string%28____%29.md): Gets a C-string value from a dictionary directly.
+- [xpc_dictionary_get_uint64(\_:\_:)](xpc_dictionary_get_uint64%28____%29.md): Gets a 64-bit unsigned integer primitive value from a dictionary directly.
+- [xpc_dictionary_get_uuid(\_:\_:)](xpc_dictionary_get_uuid%28____%29.md): Gets a UUID value from a dictionary directly.
+- [xpc_dictionary_set_bool(\_:\_:\_:)](xpc_dictionary_set_bool%28______%29.md): Inserts a Boolean primitive value into a dictionary.
+- [xpc_dictionary_set_connection(\_:\_:\_:)](xpc_dictionary_set_connection%28______%29.md): Inserts a connection into a dictionary.
+- [xpc_dictionary_set_data(\_:\_:\_:\_:)](xpc_dictionary_set_data%28________%29.md): Inserts a raw data value into a dictionary.
+- [xpc_dictionary_set_date(\_:\_:\_:)](xpc_dictionary_set_date%28______%29.md): Inserts a date primitive value into a dictionary.
+- [xpc_dictionary_set_double(\_:\_:\_:)](xpc_dictionary_set_double%28______%29.md): Inserts a double-precision floating point primitive value into a dictionary.
+- [xpc_dictionary_set_fd(\_:\_:\_:)](xpc_dictionary_set_fd%28______%29.md): Inserts a file descriptor into a dictionary.
+- [xpc_dictionary_set_int64(\_:\_:\_:)](xpc_dictionary_set_int64%28______%29.md): Inserts a 64-bit integer primitive value into a dictionary.
+- [xpc_dictionary_set_string(\_:\_:\_:)](xpc_dictionary_set_string%28______%29.md): Inserts a C-string value into a dictionary.
+- [xpc_dictionary_set_uint64(\_:\_:\_:)](xpc_dictionary_set_uint64%28______%29.md): Inserts a 64-bit unsigned integer primitive value into a dictionary.
+- [xpc_dictionary_set_uuid(\_:\_:\_:)](xpc_dictionary_set_uuid%28______%29.md): Inserts a UUID primitive value into an array.
+- [xpc_dictionary_applier_t](xpc_dictionary_applier_t.md): A block to invoke for every key-value pair in the dictionary.
+- [xpc_dictionary_copy_mach_send(\_:\_:)](xpc_dictionary_copy_mach_send%28____%29.md)
+- [xpc_dictionary_set_mach_send(\_:\_:\_:)](xpc_dictionary_set_mach_send%28______%29.md)
+
+### String objects
+
+- [xpc_string_create(\_:)](xpc_string_create%28__%29.md): Creates an XPC object that represents a null-terminated C-string.
+- [xpc_string_create_with_format_and_arguments(\_:\_:)](xpc_string_create_with_format_and_arguments%28____%29.md): Creates an XPC object that represents a C-string that the specified format string and argument list pointer generate.
+- [xpc_string_get_length(\_:)](xpc_string_get_length%28__%29.md): Returns the length of the underlying string.
+- [xpc_string_get_string_ptr(\_:)](xpc_string_get_string_ptr%28__%29.md): Returns a pointer to the internal storage of a string object.
+
+### File Descriptor objects
+
+- [xpc_fd_create(\_:)](xpc_fd_create%28__%29.md): Creates an XPC object that represents a POSIX file descriptor.
+- [xpc_fd_dup(\_:)](xpc_fd_dup%28__%29.md): Returns a file descriptor that is equivalent to the one that the specified file descriptor object boxes.
+
+### Date objects
+
+- [xpc_date_create(\_:)](xpc_date_create%28__%29.md): Creates an XPC date object.
+- [xpc_date_create_from_current()](xpc_date_create_from_current%28%29.md): Creates an XPC date object that represents the current date.
+- [xpc_date_get_value(\_:)](xpc_date_get_value%28__%29.md): Returns the underlying date interval from an object.
+
+### UUID objects
+
+- [xpc_uuid_create(\_:)](xpc_uuid_create%28__%29.md): Creates an XPC object that represents a universally unique identifier (UUID).
+- [xpc_uuid_get_bytes(\_:)](xpc_uuid_get_bytes%28__%29.md): Copies the UUID that an XPC UUID object boxes into the specified UUID buffer.
+
+### Shared memory objects
+
+- [xpc_shmem_create(\_:\_:)](xpc_shmem_create%28____%29.md): Creates an XPC object that represents the specified shared memory region.
+- [xpc_shmem_map(\_:\_:)](xpc_shmem_map%28____%29.md): Maps the region that the XPC shared memory object boxes into the caller’s address space.
+
+### Null objects
+
+- [xpc_null_create()](xpc_null_create%28%29.md): Creates an XPC object that represents the null object.
+
+### Object life cycle
+
+- [xpc_retain(\_:)](xpc_retain%28__%29.md): Deprecated.
+- [xpc_release(\_:)](xpc_release%28__%29.md): Deprecated.
+
+### Types of objects
+
+- [XPC_TYPE_ACTIVITY](xpc_type_activity-swift.var.md): A type that represents the XPC activity object.
+- [XPC_TYPE_ARRAY](xpc_type_array-swift.var.md): A type that represents an array of XPC objects.
+- [XPC_TYPE_BOOL](xpc_type_bool-swift.var.md): A type that represents a Boolean value.
+- [XPC_TYPE_CONNECTION](xpc_type_connection-swift.var.md): A type that represents a connection to a named service.
+- [XPC_TYPE_DATA](xpc_type_data-swift.var.md): A type that represents an arbitrary buffer of bytes.
+- [XPC_TYPE_DATE](xpc_type_date-swift.var.md): A type that represents a date interval.
+- [XPC_TYPE_DICTIONARY](xpc_type_dictionary-swift.var.md): A type that represents a dictionary of XPC objects keyed off of C-strings.
+- [XPC_TYPE_DOUBLE](xpc_type_double-swift.var.md): A type that represents an IEEE-compliant, double-precision floating point value.
+- [XPC_TYPE_ENDPOINT](xpc_type_endpoint-swift.var.md): A type that represents a connection in serialized form.
+- [XPC_TYPE_FD](xpc_type_fd-swift.var.md): A type that represents a POSIX file descriptor.
+- [XPC_TYPE_INT64](xpc_type_int64-swift.var.md): A type that represents a signed, 64-bit integer value.
+- [XPC_TYPE_NULL](xpc_type_null-swift.var.md): A type that represents a null object.
+- [XPC_TYPE_SHMEM](xpc_type_shmem-swift.var.md): A type that represents a region of shared memory.
+- [XPC_TYPE_STRING](xpc_type_string-swift.var.md): A type that represents a null-terminated C-string.
+- [XPC_TYPE_UINT64](xpc_type_uint64-swift.var.md): A type that represents an unsigned, 64-bit integer value.
+- [XPC_TYPE_UUID](xpc_type_uuid-swift.var.md): A type that represents a universally unique identifier.
+
+### Errors
+
+- [XPCRichError](xpcricherror.md): An error that contains a description and indicates if you can retry the operation that caused the error.
+- [XPC_TYPE_RICH_ERROR](xpc_type_rich_error-swift.var.md): A type that represents a rich error object.
+- [XPC_TYPE_ERROR](xpc_type_error-swift.var.md): A type that represents an error object.
+- [XPC_ERROR_KEY_DESCRIPTION](xpc_error_key_description-swift.var.md): A key for querying an error dictionary to retrieve a string with a human-readable description of the error.
+- [XPC_ERROR_PEER_CODE_SIGNING_REQUIREMENT](xpc_error_peer_code_signing_requirement-swift.var.md)
+
+## See Also
+
+### Additional Types
+
+- [Utilities](utilities.md): Browse debugging utilities and constants to use with the XPC APIs.
+- [XPC connections](xpc-connections.md): Create and manage connections to services using connection-based APIs.
+
+# XPC objects (Objective-C)
+
+**Framework:** XPC  
+**Kind:** API Collection
+
+Encapsulate data in objects that represent primitive types, collections, and more.
+
+## Topics
+
+### Objects
+
+- [xpc_object_t](xpc_object_t.md): A type that can describe all XPC objects, including dictionaries, arrays, strings, and numbers.
+- [xpc_type_t](xpc_type_t.md): A type that describes XPC object types.
+- [OS_xpc_object](os_xpc_object.md): The interface for an XPC object.
+- [OS_xpc_listener](os_xpc_listener-c.protocol.md)
+
+### Identity
+
+- [xpc_get_type](xpc_get_type%28__%29.md): Returns the type of an object.
+- [xpc_type_get_name](xpc_type_get_name%28__%29.md): Returns a string that describes an XPC object type.
+- [xpc_hash](xpc_hash%28__%29.md): Calculates a hash value for the specified object.
+
+### Comparison
+
+- [xpc_equal](xpc_equal%28____%29.md): Compares two objects for equality.
+
+### Copying
+
+- [xpc_copy](xpc_copy%28__%29.md): Creates a copy of the object.
+- [xpc_copy_description](xpc_copy_description%28__%29.md): Copies a debug string that describes the object.
+
+### Boolean objects
+
+- [xpc_bool_create](xpc_bool_create%28__%29.md): Creates an XPC Boolean object.
+- [xpc_bool_get_value](xpc_bool_get_value%28__%29.md): Returns the underlying Boolean value from the object.
+- [XPC_BOOL_TRUE](xpc_bool_true-c.macro.md): A constant that represents a Boolean value of true.
+- [XPC_BOOL_FALSE](xpc_bool_false-c.macro.md): A constant that represents a Boolean value of false.
+
+### Data objects
+
+- [xpc_data_create](xpc_data_create%28____%29.md): Creates an XPC object that represents a buffer of bytes.
+- [xpc_data_create_with_dispatch_data](xpc_data_create_with_dispatch_data%28__%29.md): Creates an XPC object that represents a buffer of bytes that the specified GCD data object describes.
+- [xpc_data_get_bytes](xpc_data_get_bytes%28________%29.md): Copies the bytes in a data object into the specified buffer.
+- [xpc_data_get_bytes_ptr](xpc_data_get_bytes_ptr%28__%29.md): Returns a pointer to the internal storage of a data object.
+- [xpc_data_get_length](xpc_data_get_length%28__%29.md): Returns the length of the data that an XPC data object encapsulates.
+
+### Number objects
+
+- [xpc_double_create](xpc_double_create%28__%29.md): Creates an XPC double object.
+- [xpc_double_get_value](xpc_double_get_value%28__%29.md): Returns the underlying double-precision floating point value from an object.
+- [xpc_int64_create](xpc_int64_create%28__%29.md): Creates an XPC signed integer object.
+- [xpc_int64_get_value](xpc_int64_get_value%28__%29.md): Returns the underlying signed 64-bit integer value from an object.
+- [xpc_uint64_create](xpc_uint64_create%28__%29.md): Creates an XPC unsigned integer object.
+- [xpc_uint64_get_value](xpc_uint64_get_value%28__%29.md): Returns the underlying unsigned 64-bit integer value from an object.
+
+### Array objects
+
+- [xpc_array_create](xpc_array_create%28____%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_empty](xpc_array_create_empty%28%29.md): Creates an XPC object that represents an array of XPC objects.
+- [xpc_array_create_connection](xpc_array_create_connection%28____%29.md): Creates a connection object from an array directly.
+- [xpc_array_set_value](xpc_array_set_value%28______%29.md): Inserts the specified object into the array at the specified index.
+- [xpc_array_get_value](xpc_array_get_value%28____%29.md): Returns the value at the specified index in the array.
+- [xpc_array_append_value](xpc_array_append_value%28____%29.md): Appends an object to an XPC array.
+- [xpc_array_get_count](xpc_array_get_count%28__%29.md): Returns the count of values in the array.
+- [xpc_array_apply](xpc_array_apply%28____%29.md): Invokes the specified block for every value in the array.
+- [xpc_array_dup_fd](xpc_array_dup_fd%28____%29.md): Gets a file descriptor from an array directly.
+- [xpc_array_get_array](xpc_array_get_array%28____%29.md): Returns the array at the specified index in the array.
+- [xpc_array_get_bool](xpc_array_get_bool%28____%29.md): Gets a Boolean primitive value from an array directly.
+- [xpc_array_get_data](xpc_array_get_data%28______%29.md): Gets a pointer to the raw bytes of a data object from an array directly.
+- [xpc_array_get_date](xpc_array_get_date%28____%29.md): Gets a date interval from an array directly.
+- [xpc_array_get_dictionary](xpc_array_get_dictionary%28____%29.md): Returns the dictionary at the specified index in the array.
+- [xpc_array_get_double](xpc_array_get_double%28____%29.md): Gets a double-precision floating point primitive value from an array directly.
+- [xpc_array_get_int64](xpc_array_get_int64%28____%29.md): Gets a 64-bit integer primitive value from an array directly.
+- [xpc_array_get_string](xpc_array_get_string%28____%29.md): Gets a C-string value from an array directly.
+- [xpc_array_get_uint64](xpc_array_get_uint64%28____%29.md): Gets a 64-bit unsigned integer primitive value from an array directly.
+- [xpc_array_get_uuid](xpc_array_get_uuid%28____%29.md): Gets a UUID value from an array directly.
+- [xpc_array_set_bool](xpc_array_set_bool%28______%29.md): Inserts a Boolean primitive value into an array.
+- [xpc_array_set_connection](xpc_array_set_connection%28______%29.md): Inserts a connection into an array.
+- [xpc_array_set_data](xpc_array_set_data%28________%29.md): Inserts a raw data value into an array.
+- [xpc_array_set_date](xpc_array_set_date%28______%29.md): Inserts a date value into an array.
+- [xpc_array_set_double](xpc_array_set_double%28______%29.md): Inserts a double-precision floating point primitive value into an array.
+- [xpc_array_set_fd](xpc_array_set_fd%28______%29.md): Inserts a file descriptor into an array.
+- [xpc_array_set_int64](xpc_array_set_int64%28______%29.md): Inserts a 64-bit integer primitive value into an array.
+- [xpc_array_set_string](xpc_array_set_string%28______%29.md): Inserts a C-string into an array.
+- [xpc_array_set_uint64](xpc_array_set_uint64%28______%29.md): Inserts a 64-bit unsigned integer primitive value into an array.
+- [xpc_array_set_uuid](xpc_array_set_uuid%28______%29.md): Inserts a UUID primitive value into an array.
+- [xpc_array_applier_t](xpc_array_applier_t.md): A block to invoke for every value in the array.
+- [XPC_ARRAY_APPEND](xpc_array_append-c.macro.md): A constant to pass as the destination index to the class of primitive XPC array setters indicating that the specified primitive needs to append to the array.
+
+### Dictionary objects
+
+- [xpc_dictionary_create](xpc_dictionary_create%28______%29.md): Creates an XPC object that represents a dictionary of XPC objects keyed to C-strings.
+- [xpc_dictionary_create_empty](xpc_dictionary_create_empty%28%29.md): Creates an XPC object that represents a dictionary of XPC objects keyed to C-strings.
+- [xpc_dictionary_create_connection](xpc_dictionary_create_connection%28____%29.md): Creates a connection from a dictionary directly.
+- [xpc_dictionary_create_reply](xpc_dictionary_create_reply%28__%29.md): Creates a dictionary that is in reply to the specified dictionary.
+- [xpc_dictionary_set_value](xpc_dictionary_set_value%28______%29.md): Sets the value for the specified key to the specified object.
+- [xpc_dictionary_get_count](xpc_dictionary_get_count%28__%29.md): Returns the number of values in the dictionary.
+- [xpc_dictionary_get_value](xpc_dictionary_get_value%28____%29.md): Returns the value for the specified key.
+- [xpc_dictionary_apply](xpc_dictionary_apply%28____%29.md): Invokes the specified block for every key-value pair in the dictionary.
+- [xpc_dictionary_dup_fd](xpc_dictionary_dup_fd%28____%29.md): Creates a file descriptor from a dictionary directly.
+- [xpc_dictionary_get_array](xpc_dictionary_get_array%28____%29.md): Returns the array value for the specified key.
+- [xpc_dictionary_get_bool](xpc_dictionary_get_bool%28____%29.md): Gets a Boolean primitive value from a dictionary directly.
+- [xpc_dictionary_get_data](xpc_dictionary_get_data%28______%29.md): Gets a raw data value from a dictionary directly.
+- [xpc_dictionary_get_date](xpc_dictionary_get_date%28____%29.md): Gets a date value from a dictionary directly.
+- [xpc_dictionary_get_dictionary](xpc_dictionary_get_dictionary%28____%29.md): Returns the dictionary value for the specified key.
+- [xpc_dictionary_get_double](xpc_dictionary_get_double%28____%29.md): Gets a double-precision floating point primitive value from a dictionary directly.
+- [xpc_dictionary_get_int64](xpc_dictionary_get_int64%28____%29.md): Gets a 64-bit integer primitive value from a dictionary directly.
+- [xpc_dictionary_get_remote_connection](xpc_dictionary_get_remote_connection%28__%29.md): Returns the connection that receives the dictionary.
+- [xpc_dictionary_get_string](xpc_dictionary_get_string%28____%29.md): Gets a C-string value from a dictionary directly.
+- [xpc_dictionary_get_uint64](xpc_dictionary_get_uint64%28____%29.md): Gets a 64-bit unsigned integer primitive value from a dictionary directly.
+- [xpc_dictionary_get_uuid](xpc_dictionary_get_uuid%28____%29.md): Gets a UUID value from a dictionary directly.
+- [xpc_dictionary_set_bool](xpc_dictionary_set_bool%28______%29.md): Inserts a Boolean primitive value into a dictionary.
+- [xpc_dictionary_set_connection](xpc_dictionary_set_connection%28______%29.md): Inserts a connection into a dictionary.
+- [xpc_dictionary_set_data](xpc_dictionary_set_data%28________%29.md): Inserts a raw data value into a dictionary.
+- [xpc_dictionary_set_date](xpc_dictionary_set_date%28______%29.md): Inserts a date primitive value into a dictionary.
+- [xpc_dictionary_set_double](xpc_dictionary_set_double%28______%29.md): Inserts a double-precision floating point primitive value into a dictionary.
+- [xpc_dictionary_set_fd](xpc_dictionary_set_fd%28______%29.md): Inserts a file descriptor into a dictionary.
+- [xpc_dictionary_set_int64](xpc_dictionary_set_int64%28______%29.md): Inserts a 64-bit integer primitive value into a dictionary.
+- [xpc_dictionary_set_string](xpc_dictionary_set_string%28______%29.md): Inserts a C-string value into a dictionary.
+- [xpc_dictionary_set_uint64](xpc_dictionary_set_uint64%28______%29.md): Inserts a 64-bit unsigned integer primitive value into a dictionary.
+- [xpc_dictionary_set_uuid](xpc_dictionary_set_uuid%28______%29.md): Inserts a UUID primitive value into an array.
+- [xpc_dictionary_applier_t](xpc_dictionary_applier_t.md): A block to invoke for every key-value pair in the dictionary.
+- [xpc_dictionary_copy_mach_send](xpc_dictionary_copy_mach_send%28____%29.md)
+- [xpc_dictionary_set_mach_send](xpc_dictionary_set_mach_send%28______%29.md)
+
+### String objects
+
+- [xpc_string_create](xpc_string_create%28__%29.md): Creates an XPC object that represents a null-terminated C-string.
+- [xpc_string_create_with_format](xpc_string_create_with_format.md): Creates an XPC object that represents a C-string that the specified format string and arguments generate.
+- [xpc_string_create_with_format_and_arguments](xpc_string_create_with_format_and_arguments%28____%29.md): Creates an XPC object that represents a C-string that the specified format string and argument list pointer generate.
+- [xpc_string_get_length](xpc_string_get_length%28__%29.md): Returns the length of the underlying string.
+- [xpc_string_get_string_ptr](xpc_string_get_string_ptr%28__%29.md): Returns a pointer to the internal storage of a string object.
+
+### File Descriptor objects
+
+- [xpc_fd_create](xpc_fd_create%28__%29.md): Creates an XPC object that represents a POSIX file descriptor.
+- [xpc_fd_dup](xpc_fd_dup%28__%29.md): Returns a file descriptor that is equivalent to the one that the specified file descriptor object boxes.
+
+### Date objects
+
+- [xpc_date_create](xpc_date_create%28__%29.md): Creates an XPC date object.
+- [xpc_date_create_from_current](xpc_date_create_from_current%28%29.md): Creates an XPC date object that represents the current date.
+- [xpc_date_get_value](xpc_date_get_value%28__%29.md): Returns the underlying date interval from an object.
+
+### UUID objects
+
+- [xpc_uuid_create](xpc_uuid_create%28__%29.md): Creates an XPC object that represents a universally unique identifier (UUID).
+- [xpc_uuid_get_bytes](xpc_uuid_get_bytes%28__%29.md): Copies the UUID that an XPC UUID object boxes into the specified UUID buffer.
+
+### Shared memory objects
+
+- [xpc_shmem_create](xpc_shmem_create%28____%29.md): Creates an XPC object that represents the specified shared memory region.
+- [xpc_shmem_map](xpc_shmem_map%28____%29.md): Maps the region that the XPC shared memory object boxes into the caller’s address space.
+
+### Null objects
+
+- [xpc_null_create](xpc_null_create%28%29.md): Creates an XPC object that represents the null object.
+
+### Object life cycle
+
+- [xpc_retain](xpc_retain.md): Increments the reference count of an object.
+- [xpc_release](xpc_release.md): Decrements the reference count of an object.
+
+### Types of objects
+
+- [XPC_TYPE_ACTIVITY](xpc_type_activity-c.macro.md): A type that represents the XPC activity object.
+- [XPC_TYPE_ARRAY](xpc_type_array-c.macro.md): A type that represents an array of XPC objects.
+- [XPC_TYPE_BOOL](xpc_type_bool-c.macro.md): A type that represents a Boolean value.
+- [XPC_TYPE_CONNECTION](xpc_type_connection-c.macro.md): A type that represents a connection to a named service.
+- [XPC_TYPE_DATA](xpc_type_data-c.macro.md): A type that represents an arbitrary buffer of bytes.
+- [XPC_TYPE_DATE](xpc_type_date-c.macro.md): A type that represents a date interval.
+- [XPC_TYPE_DICTIONARY](xpc_type_dictionary-c.macro.md): A type that represents a dictionary of XPC objects keyed off of C-strings.
+- [XPC_TYPE_DOUBLE](xpc_type_double-c.macro.md): A type that represents an IEEE-compliant, double-precision floating point value.
+- [XPC_TYPE_ENDPOINT](xpc_type_endpoint-c.macro.md): A type that represents a connection in serialized form.
+- [XPC_TYPE_FD](xpc_type_fd-c.macro.md): A type that represents a POSIX file descriptor.
+- [XPC_TYPE_INT64](xpc_type_int64-c.macro.md): A type that represents a signed, 64-bit integer value.
+- [XPC_TYPE_NULL](xpc_type_null-c.macro.md): A type that represents a null object.
+- [XPC_TYPE_SHMEM](xpc_type_shmem-c.macro.md): A type that represents a region of shared memory.
+- [XPC_TYPE_STRING](xpc_type_string-c.macro.md): A type that represents a null-terminated C-string.
+- [XPC_TYPE_UINT64](xpc_type_uint64-c.macro.md): A type that represents an unsigned, 64-bit integer value.
+- [XPC_TYPE_UUID](xpc_type_uuid-c.macro.md): A type that represents a universally unique identifier.
+
+### Errors
+
+- [XPC_TYPE_ERROR](xpc_type_error-c.macro.md): A type that represents an error object.
+- [XPC_ERROR_KEY_DESCRIPTION](xpc_error_key_description-c.macro.md): A key for querying an error dictionary to retrieve a string with a human-readable description of the error.
+
+## See Also
+
+### Additional types
+
+- [launchd](launchd.md): Browse APIs for interacting with `launchd`.
+- [Utilities](utilities.md): Browse debugging utilities and constants to use with the XPC APIs.
+- [XPC connections](xpc-connections.md): Create and manage connections to services using connection-based APIs.

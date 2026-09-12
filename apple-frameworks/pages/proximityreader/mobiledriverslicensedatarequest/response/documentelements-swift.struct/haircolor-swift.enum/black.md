@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/proximityreader/mobiledriverslicensedatarequest/response/documentelements-swift.struct/haircolor-swift.enum/black](https://developer.apple.com/documentation/proximityreader/mobiledriverslicensedatarequest/response/documentelements-swift.struct/haircolor-swift.enum/black)
+
+# MobileDriversLicenseDataRequest.Response.DocumentElements.HairColor.black
+
+**Framework:** ProximityReader  
+**Kind:** Case  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+
+
+A hair color of black.
+
+## Declaration
+
+```swift
+case black
+```

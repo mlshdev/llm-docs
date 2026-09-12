@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1580008-vdsp_zvdiv](https://developer.apple.com/documentation/kernel/1580008-vdsp_zvdiv)
+
+# vDSP_zvdiv
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Function  
+**Availability:** macOS 10.4+
+
+Complex vector_vector divide; single precision.
+
+## Declaration
+
+```objectivec
+void vDSP_zvdiv(const DSPSplitComplex *__B, vDSP_Stride __IB, const DSPSplitComplex *__A, vDSP_Stride __IA, const DSPSplitComplex *__C, vDSP_Stride __IC, vDSP_Length __N);
+```
+
+## Parameters
+
+- `__B`: Single-precision complex input vector. Note that `B` comes before `A`!
+- `__IB`: Stride for `B`.
+- `__A`: Single-precision complex input vector.
+- `__IA`: Stride for `A`.
+- `__C`: Single-precision complex output vector.
+- `__IC`: Stride for `C`.
+- `__N`: The number of elements to process.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This function divides the first `N` elements of `A` by corresponding elements of `B`, leaving the result in `C`.
+
+![](https://docs-assets.developer.apple.com/published/097ccd4f03/vdsp_89_2x_abf73575-fde7-41b3-a1a5-cf6b3c3813bd.png)

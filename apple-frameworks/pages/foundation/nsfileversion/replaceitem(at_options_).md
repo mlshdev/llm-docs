@@ -1,0 +1,90 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/nsfileversion/replaceitem(at:options:)](https://developer.apple.com/documentation/foundation/nsfileversion/replaceitem(at:options:))
+
+# replaceItem(at:options:) (Swift)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Replace the contents of the specified file with the contents of the current version’s file.
+
+## Declaration
+
+```swift
+func replaceItem(at url: URL, options: NSFileVersion.ReplacingOptions = []) throws -> URL
+```
+
+## Parameters
+
+- `url`: The file whose contents you want to replace. If the file at this URL does not exist, a new file is created at the location.
+- `options`: Specify `0` to overwrite the file in place; otherwise, specify one of the constants described in [NSFileVersion.ReplacingOptions](replacingoptions.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+The URL of the file that was written, which may be different than the one specified in the `url` parameter.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When replacing the contents of the file, this method does not normally replace the display name associated with the file. The only exception is when the file at `url` is of a different type than the file associated with this version object. In such a case, the file name remains the same but its filename extension changes to match the type of the new contents. (Of course, if filename extension hiding is enabled, this change is not noticeable to users.)
+
+> **Handling Errors in Swift**
+
+>  In Swift, this method returns a nonoptional result and is marked with the `throws` keyword to indicate that it throws an error in cases of failure.
+>
+> You call this method in a `try` expression and handle any errors in the `catch` clauses of a `do` statement, as described in [Error Handling](https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html) in [The Swift Programming Language](https://docs.swift.org/swift-book/) and `About Imported Cocoa Error Parameters`.
+
+## See Also
+
+### Replacing and Deleting Versions
+
+- [remove()](remove%28%29.md): Remove this version object and its associated file from the version store.
+- [removeOtherVersionsOfItem(at:)](removeotherversionsofitem%28at_%29.md): Removes all versions of a file, except the current one, from the version store.
+
+# replaceItemAtURL:options:error: (Objective-C)
+
+**Framework:** Foundation  
+**Kind:** Instance Method  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · macOS 10.7+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Replace the contents of the specified file with the contents of the current version’s file.
+
+## Declaration
+
+```objectivec
+- (NSURL *) replaceItemAtURL:(NSURL *) url options:(NSFileVersionReplacingOptions) options error:(NSError **) error;
+```
+
+## Parameters
+
+- `url`: The file whose contents you want to replace. If the file at this URL does not exist, a new file is created at the location.
+- `options`: Specify `0` to overwrite the file in place; otherwise, specify one of the constants described in [NSFileVersionReplacingOptions](replacingoptions.md).
+- `error`: On input, a pointer to an error object. If an error occurs, this pointer is set to an [NSError](../nserror.md) object with information about the error.
+
+<a id="return-value"></a>
+
+## Return Value
+
+The URL of the file that was written, which may be different than the one specified in the `url` parameter. On failure, this method returns `nil`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When replacing the contents of the file, this method does not normally replace the display name associated with the file. The only exception is when the file at `url` is of a different type than the file associated with this version object. In such a case, the file name remains the same but its filename extension changes to match the type of the new contents. (Of course, if filename extension hiding is enabled, this change is not noticeable to users.)
+
+> **Handling Errors in Swift**
+
+>  In Swift, this method returns a nonoptional result and is marked with the `throws` keyword to indicate that it throws an error in cases of failure.
+>
+> You call this method in a `try` expression and handle any errors in the `catch` clauses of a `do` statement, as described in [Error Handling](https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html) in [The Swift Programming Language](https://docs.swift.org/swift-book/) and `About Imported Cocoa Error Parameters`.
+
+## See Also
+
+### Replacing and Deleting Versions
+
+- [removeAndReturnError:](remove%28%29.md): Remove this version object and its associated file from the version store.
+- [removeOtherVersionsOfItemAtURL:error:](removeotherversionsofitem%28at_%29.md): Removes all versions of a file, except the current one, from the version store.

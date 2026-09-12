@@ -1,0 +1,50 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/app-store-connect-api-2-2-release-notes](https://developer.apple.com/documentation/appstoreconnectapi/app-store-connect-api-2-2-release-notes)
+
+# App Store Connect API 2.2 release notes
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Article
+
+Update your server-side code to use new features, and test your code against API changes.
+
+<a id="overview"></a>
+
+## Overview
+
+App Store Connect API version 2.2 provides resources that enable you to automate actions you take in App Store Connect.
+
+<a id="New-features"></a>
+
+### New features
+
+- Added support for getting information about and editing [Sandbox Testers](sandbox-testers.md) and clearing [Sandbox Testers](sandbox-testers.md) purchase history.
+- Expanded support around [App Encryption Declarations](app-encryption-declarations.md), state and documents.
+- [Billing Grace Periods](billing-grace-periods.md) now has additional parameters including 3 distinct durations.
+
+<a id="Deprecations"></a>
+
+### Deprecations
+
+- The [List all in-app purchases for an app v1](get-v1-apps-_id_-inapppurchases.md) endpoint is now deprecated and replaced with the [List all in-app purchases for an app](get-v1-apps-_id_-inapppurchasesv2.md) endpoint.
+
+## See Also
+
+### Versions
+
+- [App Store Connect API 4.4.1 release notes](app-store-connect-api-4-4-1-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
+- [App Store Connect API 4.4 release notes](app-store-connect-api-4-4-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
+- [App Store Connect API 4.3.1 release notes](app-store-connect-api-4-3-1-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
+- [App Store Connect API 4.3 release notes](app-store-connect-api-4-3-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
+- [App Store Connect API 4.2 release notes](app-store-connect-api-4-2-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
+- [App Store Connect API 4.1 release notes](app-store-connect-api-4-1-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
+- [App Store Connect API 4.0 release notes](app-store-connect-api-4-0-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
+- [App Store Connect API 3.8 release notes](app-store-connect-api-3-8-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
+- [App Store Connect API 3.7 release notes](app-store-connect-api-3-7-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
+- [App Store Connect API 3.6 release notes](app-store-connect-api-3-6-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
+- [App Store Connect API 3.5 release notes](app-store-connect-api-3-5-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
+- [App Store Connect API 3.4 release notes](app-store-connect-api-3-4-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
+- [App Store Connect API 3.3 release notes](app-store-connect-api-3-3-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
+- [App Store Connect API 3.2 release notes](app-store-connect-api-3-2-release-notes.md): Update your server-side code to use new features, and test your code against API changes.
+- [App Store Connect API 3.1 release notes](app-store-connect-api-3-1-release-notes.md): Update your server-side code to use new features, and test your code against API changes.

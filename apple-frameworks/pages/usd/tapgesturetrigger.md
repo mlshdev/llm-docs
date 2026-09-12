@@ -1,0 +1,36 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/usd/tapgesturetrigger](https://developer.apple.com/documentation/usd/tapgesturetrigger)
+
+# TapGestureTrigger
+
+A trigger that fires when the user taps.
+
+<a id="overview"></a>
+
+## Overview
+
+For an example, see [Trigger animation for a tapped cube](preliminary-behavior.md#Trigger-animation-for-a-tapped-cube).
+
+<a id="Declaration"></a>
+
+### Declaration
+
+```other
+class Preliminary_Trigger "TapGestureTrigger"
+```
+
+## Topics
+
+### Properties
+
+- [info:id](info-id.md): The action’s unique identifier.
+- [affectedObjects](affectedobjects.md): A list of prims that respond to the notification.
+
+## See Also
+
+### Triggers
+
+- [Preliminary_Trigger](preliminary-trigger.md): A condition that, when met, performs an action.
+- [CollideTrigger](collidetrigger.md): A trigger that activates when specified objects collide.
+- [ProximityToCameraTrigger](proximitytocameratrigger.md): A trigger that fires when the camera crosses the distance threshold of an object.
+- [SceneTransitionTrigger](scenetransitiontrigger.md): A trigger that fires during scene transitions.
+- [NotificationTrigger](notificationtrigger.md): A trigger that fires when an app posts a notification.

@@ -1,0 +1,135 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/campaignupdate](https://developer.apple.com/documentation/apple-ads-platform-api/campaignupdate)
+
+# CampaignUpdate
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Object  
+**Availability:** Apple Ads Platform API 1.0+
+
+The request body for updating an existing Campaign object.
+
+## Declaration
+
+```
+object CampaignUpdate
+```
+
+## Properties
+
+- `name` — `string`: The advertiser-given name of this campaign. Maximum 200 characters. Must be non-empty. Mutable.
+  **Minimum length:** `1`
+- `startTime` — `date-time`: The scheduled start date and time of the campaign. Format: `yyyy-MM-dd'T'HH:mm:ss.SSS` in UTC (for example, `2026-06-07T00:00:00.000`). Mutable.
+- `endTime` — `date-time`: The scheduled end date and time. Format: `yyyy-MM-dd'T'HH:mm:ss.SSS` in UTC (for example, `2026-12-31T00:00:00.000`). Omit to keep the campaign running indefinitely. Mutable.
+- `status` — `CampaignUpdate.Status`: Advertiser-configurable serving status. Use to pause or resume the campaign. See [CampaignStatus](campaignstatus.md). Mutable.
+- `dailyBudget` — `CampaignUpdate.DailyBudget`: The daily spend cap for this campaign. See [DailyBudgetUpdate](dailybudgetupdate.md). Mutable.
+- `sharedBudgets` — `[SharedBudgetAssignmentUpdate]`: One or more budget order assignments for this campaign. See [SharedBudgetAssignmentUpdate](sharedbudgetassignmentupdate.md). Mutable.
+- `targeting` — `CampaignUpdate.Targeting`: Country or region, supply source, and placement targeting for this campaign. Mutable.
+- `bidStrategy` — `CampaignUpdate.BidStrategy`: The bid strategy governing how this campaign competes in auctions. `bidStrategyType` and `bidStrategyGoal` must be sent together and matched per the pairings in [BidStrategy](bidstrategy.md). See [BidStrategyUpdate](bidstrategyupdate.md). Mutable.
+- `invoiceDetail` — `CampaignUpdate.InvoiceDetail`: Invoice and billing contact details for Line of Credit accounts. Mutable.
+- `regulationResponses` — `[RegulationResponseUpdate]`: Regulatory consent acknowledgments required in certain markets. See [RegulationResponseUpdate](regulationresponseupdate.md). Mutable.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The `CampaignUpdate` object is the request payload for modifying an existing campaign. Only the fields listed here can be changed after creation. Immutable fields such as `billingEvent`, `promotedObjectType`, and `promotedObjectId` aren’t present. Include only the fields you want to modify.
+
+Both `dailyBudget` and `sharedBudgets` can be present on a campaign and function independently: `dailyBudget` caps daily spending. Each shared budget enforces a flight-period cap defined by its `startTime` and `endTime`.
+
+To pause (`PAUSED`) or resume (`ENABLED`) delivery without deleting the campaign, use `status`.
+
+<a id="Example"></a>
+
+### Example
+
+```json
+{
+  "name": "AwayFinder Apple Maps Campaign",
+  "startTime": "2025-09-01T00:00:00.000",
+  "endTime": "2025-12-31T23:59:59.000",
+  "status": "ENABLED",
+  "dailyBudget": {
+    "value": {
+      "amount": "1200.00",
+      "currency": "USD"
+    }
+  },
+  "sharedBudgets": [
+    {
+      "budgetId": 555666777
+    }
+  ],
+  "targeting": {
+    "supplySource": {
+      "include": [
+        "MAPS"
+      ]
+    },
+    "supplyPlacement": {
+      "include": [
+        "MAPS_SEARCH_RESULTS"
+      ]
+    },
+    "countryOrRegion": {
+      "include": [
+        "US"
+      ]
+    }
+  },
+  "bidStrategy": {
+    "bidStrategyType": "MANUAL_CPT",
+    "bidStrategyGoal": "TAP",
+    "bid": {
+      "amount": "2.50",
+      "currency": "USD"
+    }
+  },
+  "invoiceDetail": {
+    "name": "AwayFinder Q3 Invoice",
+    "orderNumber": "PO-555666777",
+    "clientName": "AwayFinder",
+    "primaryBuyerName": "Jordan Lee",
+    "primaryBuyerEmail": "jordan.lee@awayfinder.com",
+    "billingEmail": "billing@awayfinder.com"
+  },
+  "regulationResponses": [
+    {
+      "regulationType": "CAMPAIGN_SAPIN_LAW",
+      "responseValue": "NOT_ANSWERED"
+    }
+  ]
+}
+```
+
+## Topics
+
+### Dictionaries
+
+- [CampaignUpdate.BidStrategy](campaignupdate/bidstrategy-data.dictionary.md): The request body for updating a bid strategy on an ad group or campaign.
+- [CampaignUpdate.DailyBudget](campaignupdate/dailybudget-data.dictionary.md): Request wrapper for updating a campaign’s daily budget amount.
+- [CampaignUpdate.InvoiceDetail](campaignupdate/invoicedetail-data.dictionary.md): The request body for updating the invoice details of a budget order.
+- [CampaignUpdate.Targeting](campaignupdate/targeting-data.dictionary.md): Targeting configuration for updating an existing campaign’s supply source, placement, and geographic markets.
+
+### Type Aliases
+
+- [CampaignUpdate.Status](campaignupdate/status-data.typealias.md): Advertiser-configurable run state for a campaign.
+
+## See Also
+
+- [Campaign](campaign.md): The top-level container that defines a campaign’s promoted object, billing, scheduling, and targeting.
+- [CampaignCreate](campaigncreate.md): The request body for creating a new campaign.
+- [CampaignResponse](campaignresponse.md): The response object for a Campaign operation.
+- [CampaignQueryResponse](campaignqueryresponse.md): The response object for a Campaign query, containing matched results and pagination metadata.
+- [CampaignTargeting](campaigntargeting.md): Defines where a campaign is eligible to serve ads, including supply source, placement, and geographic markets.
+- [CampaignTargetingCreate](campaigntargetingcreate.md): Targeting configuration supplied when creating a campaign.
+- [DailyBudget](dailybudget.md): Daily budget cap for a campaign.
+- [DailyBudgetCreate](dailybudgetcreate.md): Request wrapper for setting a campaign’s daily budget at creation time.
+- [Money](money.md): Monetary representation with currency.
+- [InvoiceDetailCreate](invoicedetailcreate.md): Invoice billing contact details supplied when creating a campaign or budget order.
+- [LegacyAppLimitedStatusReasonDetailsResponse](legacyapplimitedstatusreasondetailsresponse.md): Response wrapper returning per-country or per-region limited-status reasons for legacy app campaigns.
+- [CampaignTargetingUpdate](campaigntargetingupdate.md): Targeting configuration for updating an existing campaign’s supply source, placement, and geographic markets.
+- [DailyBudgetUpdate](dailybudgetupdate.md): Request wrapper for updating a campaign’s daily budget amount.
+- [LegacyAppLimitedStatusReasonDetails](legacyapplimitedstatusreasondetails.md): Per-country or per-region limited-status reasons for legacy app campaigns.
+- [ResponsePagination](responsepagination.md): Pagination metadata returned in Campaign list responses, supporting offset-based navigation.

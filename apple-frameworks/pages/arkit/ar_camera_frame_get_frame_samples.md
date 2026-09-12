@@ -1,0 +1,40 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/arkit/ar_camera_frame_get_frame_samples](https://developer.apple.com/documentation/arkit/ar_camera_frame_get_frame_samples)
+
+# ar_camera_frame_get_frame_samples
+
+**Interface language:** Objective-C
+
+**Framework:** ARKit  
+**Kind:** Function  
+**Availability:** visionOS 26.0+
+
+Get the collection of camera frame samples for this camera frame.
+
+## Declaration
+
+```objectivec
+extern ar_camera_frame_samples_tar_camera_frame_get_frame_samples(ar_camera_frame_t camera_frame);
+```
+
+## Parameters
+
+- `camera_frame`: The camera frame.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An instance of `ar_camera_frame_samples_t`.
+
+## See Also
+
+### Camera sampling
+
+- [ar_camera_frame_sample_enumerator_function_t](ar_camera_frame_sample_enumerator_function_t.md): Function for enumerating camera frame samples.
+- [ar_camera_frame_sample_enumerator_t](ar_camera_frame_sample_enumerator_t.md): Handler for enumerating camera frame samples.
+- [ar_camera_frame_samples_t](ar_camera_frame_samples_t.md): A collection of camera frame samples.
+- [ar_camera_frame_samples_enumerate_frame_samples](ar_camera_frame_samples_enumerate_frame_samples.md): Enumerate all camera frame samples in this collection.
+- [ar_camera_frame_samples_enumerate_frame_samples_f](ar_camera_frame_samples_enumerate_frame_samples_f.md): Enumerate all supported camera frame samples for this configuration using a function.
+- [ar_camera_frame_samples_get_count](ar_camera_frame_samples_get_count.md): Get the count of camera frame samples in the collection.
+- [ar_camera_video_format_get_camera_rectification_type](ar_camera_video_format_get_camera_rectification_type.md): Get the camera rectification type for this video format.
+- [ar_camera_rectification_type_t](ar_camera_rectification_type_t.md): A value describing the type of rectification applied to a video format.

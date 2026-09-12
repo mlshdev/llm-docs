@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/graphicscontext/addfilter(_:options:)](https://developer.apple.com/documentation/swiftui/graphicscontext/addfilter(_:options:))
+
+# addFilter(\_:options:)
+
+**Framework:** SwiftUI  
+**Kind:** Instance Method  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+
+Adds a filter that applies to subsequent drawing operations.
+
+## Declaration
+
+```swift
+mutating func addFilter(_ filter: GraphicsContext.Filter, options: GraphicsContext.FilterOptions = FilterOptions())
+```
+
+## Parameters
+
+- `filter`: A graphics context filter that you create by calling one of the [GraphicsContext.Filter](filter.md) factory methods.
+- `options`: A set of options from [GraphicsContext.FilterOptions](filteroptions.md) that you can use to configure filter operations.
+
+<a id="discussion"></a>
+
+## Discussion
+
+To draw with filtering, SwiftUI:
+
+- Rasterizes the drawing operation to an implicit transparency layer without blending, adjusting opacity, or applying any clipping.
+- Applies the filter to the layer containing the rasterized image.
+- Composites the layer onto the background, using the context’s current blend mode, opacity setting, and clip shapes.
+
+When SwiftUI draws with a filter, the blend mode might apply to regions outside the drawing operation’s intrinsic shape, but inside its clip shape. That might result in unexpected behavior for certain blend modes like [copy](blendmode-swift.struct/copy.md), where the drawing operation completely overwrites the background even if the source alpha is zero.
+
+## See Also
+
+### Filtering
+
+- [GraphicsContext.Filter](filter.md): A type that applies image processing operations to rendered content.
+- [GraphicsContext.FilterOptions](filteroptions.md): Options that configure a filter that you add to a graphics context.
+- [GraphicsContext.BlurOptions](bluroptions.md): Options that configure the graphics context filter that creates blur.
+- [GraphicsContext.ShadowOptions](shadowoptions.md): Options that configure the graphics context filter that creates shadows.

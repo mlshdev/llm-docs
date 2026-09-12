@@ -1,0 +1,49 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrotasoftwareupdateproviderclusternotifyupdateappliedparams-6s1jv/serversideprocessingtimeout](https://developer.apple.com/documentation/matter/mtrotasoftwareupdateproviderclusternotifyupdateappliedparams-6s1jv/serversideprocessingtimeout)
+
+# serverSideProcessingTimeout (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.1+ (deprecated in 9.4)
+
+Controls how much time, in seconds, we will allow for the server to process the command.
+
+> Please use MTROTASoftwareUpdateProviderClusterNotifyUpdateAppliedParams
+
+## Declaration
+
+```swift
+@NSCopying var serverSideProcessingTimeout: NSNumber? { get set }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The command will then time out if that much time, plus an allowance for retransmits due to network failures, passes.
+
+If nil, the framework will try to select an appropriate timeout value itself.
+
+# serverSideProcessingTimeout (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Property  
+**Availability:** iOS 16.1+ (deprecated in 16.4) · iPadOS 16.1+ (deprecated in 16.4) · Mac Catalyst 16.1+ (deprecated in 16.4) · macOS 13.0+ (deprecated in 13.3) · tvOS 16.1+ (deprecated in 16.4) · visionOS 1.0+ (deprecated in 1.0) · watchOS 9.1+ (deprecated in 9.4)
+
+Controls how much time, in seconds, we will allow for the server to process the command.
+
+> Please use MTROTASoftwareUpdateProviderClusterNotifyUpdateAppliedParams
+
+## Declaration
+
+```objectivec
+@property (nonatomic, copy, nullable) NSNumber * serverSideProcessingTimeout;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The command will then time out if that much time, plus an allowance for retransmits due to network failures, passes.
+
+If nil, the framework will try to select an appropriate timeout value itself.

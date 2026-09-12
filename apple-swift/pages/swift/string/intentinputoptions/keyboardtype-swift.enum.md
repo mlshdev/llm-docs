@@ -1,0 +1,32 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/string/intentinputoptions/keyboardtype-swift.enum](https://developer.apple.com/documentation/swift/string/intentinputoptions/keyboardtype-swift.enum)
+
+# String.IntentInputOptions.KeyboardType
+
+**Framework:** Swift  
+**Kind:** Enumeration  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+ · watchOS 9.0+
+
+Describes the types of keyboard to use for text entry.
+
+## Declaration
+
+```swift
+enum KeyboardType
+```
+
+## Topics
+
+### Enumeration Cases
+
+- [String.IntentInputOptions.KeyboardType.URL](keyboardtype-swift.enum/url.md): A keyboard that provides URL entry.
+- [String.IntentInputOptions.KeyboardType.asciiCapable](keyboardtype-swift.enum/asciicapable.md): A keyboard that displays standard ASCII characters.
+- [String.IntentInputOptions.KeyboardType.default](keyboardtype-swift.enum/default.md)
+- [String.IntentInputOptions.KeyboardType.numberPad](keyboardtype-swift.enum/numberpad.md): A numeric keypad.
+- [String.IntentInputOptions.KeyboardType.numbersAndPunctuation](keyboardtype-swift.enum/numbersandpunctuation.md): A keyboard that displays numbers and punctuation.
+
+## Relationships
+
+### Conforms To
+
+- [Equatable](../../equatable.md)
+- [Hashable](../../hashable.md)

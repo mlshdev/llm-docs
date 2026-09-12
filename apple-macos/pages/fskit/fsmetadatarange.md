@@ -1,0 +1,131 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/fskit/fsmetadatarange](https://developer.apple.com/documentation/fskit/fsmetadatarange)
+
+# FSMetadataRange (Swift)
+
+**Framework:** FSKit  
+**Kind:** Class  
+**Availability:** macOS 15.4+
+
+A range that describes contiguous metadata segments on disk.
+
+## Declaration
+
+```swift
+class FSMetadataRange
+```
+
+<a id="overview"></a>
+
+## Overview
+
+This type represents a range that begins at `startOffset` and ends at `startOffset + segmentLength * segmentCount`. Each segment in the range represents a single block in the resource’s buffer cache.
+
+For example, given an `FSMetadataRange` with the following properties:
+
+- `startOffset = 0`
+- `segmentLength = 512`
+- `segmentCount = 8`
+
+The range represents eight segments: from 0 to 511, then from 512 to 1023, and so on until a final segment of 3584 to 4095.
+
+Ensure that each metadata segment represents a range that’s already present in the resource’s buffer cache. Similarly, ensure that each segment’s offset and length matches the offset and length of the corresponding block in the buffer cache.
+
+## Topics
+
+### Creating a metadata range
+
+- [init(offset:segmentLength:segmentCount:)](fsmetadatarange/init%28offset_segmentlength_segmentcount_%29.md): Initializes a metadata range with the given properties.
+
+### Accessing range properties
+
+- [startOffset](fsmetadatarange/startoffset.md): The start offset of the range in bytes.
+- [segmentLength](fsmetadatarange/segmentlength.md): The segment length in bytes.
+- [segmentCount](fsmetadatarange/segmentcount.md): The number of segments in the range.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](https://developer.apple.com/documentation/objectivec/nsobject-swift.class)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](https://developer.apple.com/documentation/objectivec/nsobjectprotocol)
+
+## See Also
+
+### Supporting types
+
+- [FSBlockmapFlags](fsblockmapflags.md): Flags that describe the behavior of a blockmap operation.
+- [FSCompleteIOFlags](fscompleteioflags.md): Flags that describe the behavior of an I/O completion operation.
+- [FSEntityIdentifier](fsentityidentifier.md): A base type that identifies containers and volumes.
+- [FSExtentPacker](fsextentpacker.md): A type that directs the kernel to map space on disk to a specific file managed by this file system.
+- [FSExtentType](fsextenttype.md): An enumeration of types of extents.
+- [FSMatchResult](fsmatchresult.md): A type that represents the recognition and usability of a probed resource.
+- [FSProbeResult](fsproberesult.md): An object that represents the results of a specific probe.
+
+# FSMetadataRange (Objective-C)
+
+**Framework:** FSKit  
+**Kind:** Class  
+**Availability:** macOS 15.4+
+
+A range that describes contiguous metadata segments on disk.
+
+## Declaration
+
+```objectivec
+@interface FSMetadataRange : NSObject
+```
+
+<a id="overview"></a>
+
+## Overview
+
+This type represents a range that begins at `startOffset` and ends at `startOffset + segmentLength * segmentCount`. Each segment in the range represents a single block in the resource’s buffer cache.
+
+For example, given an `FSMetadataRange` with the following properties:
+
+- `startOffset = 0`
+- `segmentLength = 512`
+- `segmentCount = 8`
+
+The range represents eight segments: from 0 to 511, then from 512 to 1023, and so on until a final segment of 3584 to 4095.
+
+Ensure that each metadata segment represents a range that’s already present in the resource’s buffer cache. Similarly, ensure that each segment’s offset and length matches the offset and length of the corresponding block in the buffer cache.
+
+## Topics
+
+### Creating a metadata range
+
+- [initWithOffset:segmentLength:segmentCount:](fsmetadatarange/init%28offset_segmentlength_segmentcount_%29.md): Initializes a metadata range with the given properties.
+- [rangeWithOffset:segmentLength:segmentCount:](fsmetadatarange/rangewithoffset_segmentlength_segmentcount_.md): Creates a metadata range with the given properties.
+
+### Accessing range properties
+
+- [startOffset](fsmetadatarange/startoffset.md): The start offset of the range in bytes.
+- [segmentLength](fsmetadatarange/segmentlength.md): The segment length in bytes.
+- [segmentCount](fsmetadatarange/segmentcount.md): The number of segments in the range.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](https://developer.apple.com/documentation/objectivec/nsobject-swift.class)
+
+## See Also
+
+### Supporting types
+
+- [FSBlockmapFlags](fsblockmapflags.md): Flags that describe the behavior of a blockmap operation.
+- [FSCompleteIOFlags](fscompleteioflags.md): Flags that describe the behavior of an I/O completion operation.
+- [FSEntityIdentifier](fsentityidentifier.md): A base type that identifies containers and volumes.
+- [FSExtentPacker](fsextentpacker.md): A type that directs the kernel to map space on disk to a specific file managed by this file system.
+- [FSExtentType](fsextenttype.md): An enumeration of types of extents.
+- [FSMatchResult](fsmatchresult.md): A type that represents the recognition and usability of a probed resource.
+- [FSProbeResult](fsproberesult.md): An object that represents the results of a specific probe.

@@ -1,0 +1,22 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/subscriptionintroductoryofferinlinecreate/relationships-data.dictionary/subscriptionpricepoint-data.dictionary/data-data.dictionary](https://developer.apple.com/documentation/appstoreconnectapi/subscriptionintroductoryofferinlinecreate/relationships-data.dictionary/subscriptionpricepoint-data.dictionary/data-data.dictionary)
+
+# SubscriptionIntroductoryOfferInlineCreate.Relationships.SubscriptionPricePoint.Data
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 2.0+
+
+The request body you use to update a subscription introductory offer inline create.
+
+## Declaration
+
+```
+object SubscriptionIntroductoryOfferInlineCreate.Relationships.SubscriptionPricePoint.Data
+```
+
+## Properties
+
+- `id` — `string` (required):
+- `type` — `string` (required): **Allowed values:** `subscriptionPricePoints`

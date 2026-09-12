@@ -1,0 +1,111 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsbutton/bezelstyle-swift.enum/helpbutton](https://developer.apple.com/documentation/appkit/nsbutton/bezelstyle-swift.enum/helpbutton)
+
+# NSButton.BezelStyle.helpButton (Swift)
+
+**Framework:** AppKit  
+**Kind:** Case  
+**Availability:** macOS
+
+A round button with a question mark, providing the standard help button look.
+
+## Declaration
+
+```swift
+case helpButton
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+A help button appears within a view and opens app-specific help documentation.
+
+![A screenshot displaying a voice over dialog. The main content of the dialog explains what voice over is. In the lower right corner of the dialog there is a help button.](https://developer.apple.com/images/com.apple.appkit/media-4306763@2x.png)
+
+These are circular, consistently sized buttons that contain a question mark.
+
+**Swift**
+
+```swift
+let button = NSButton()
+button.title = ""
+button.bezelStyle = .helpButton
+```
+
+**Objective-C**
+
+```objc
+NSButton *button = [[NSButton alloc] init];
+button.title = @"";
+button.bezelStyle = NSBezelStyleHelpButton;
+```
+
+Use the system-provided help button to display your help documentation. People are familiar with the appearance of the standard help button and know that choosing it opens help content.
+
+Include no more than one help button per window. Multiple help buttons in the same context make it hard for people to predict the result of clicking one.
+
+Avoid displaying text that introduces a help button. People know what a help button does, so they don’t need additional descriptive text.
+
+For design guidance, see [Human Interface Guidelines \> Buttons](https://developer.apple.com/design/human-interface-guidelines/buttons).
+
+## See Also
+
+### Informational
+
+- [NSButton.BezelStyle.badge](badge.md): A button style suitable for displaying additional information.
+- [NSButton.BezelStyle.circular](circular.md): A round button that can contain either a single character or an icon.
+
+# NSBezelStyleHelpButton (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Enumeration Case  
+**Availability:** macOS
+
+A round button with a question mark, providing the standard help button look.
+
+## Declaration
+
+```objectivec
+NSBezelStyleHelpButton
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+A help button appears within a view and opens app-specific help documentation.
+
+![A screenshot displaying a voice over dialog. The main content of the dialog explains what voice over is. In the lower right corner of the dialog there is a help button.](https://developer.apple.com/images/com.apple.appkit/media-4306763@2x.png)
+
+These are circular, consistently sized buttons that contain a question mark.
+
+**Swift**
+
+```swift
+let button = NSButton()
+button.title = ""
+button.bezelStyle = .helpButton
+```
+
+**Objective-C**
+
+```objc
+NSButton *button = [[NSButton alloc] init];
+button.title = @"";
+button.bezelStyle = NSBezelStyleHelpButton;
+```
+
+Use the system-provided help button to display your help documentation. People are familiar with the appearance of the standard help button and know that choosing it opens help content.
+
+Include no more than one help button per window. Multiple help buttons in the same context make it hard for people to predict the result of clicking one.
+
+Avoid displaying text that introduces a help button. People know what a help button does, so they don’t need additional descriptive text.
+
+For design guidance, see [Human Interface Guidelines \> Buttons](https://developer.apple.com/design/human-interface-guidelines/buttons).
+
+## See Also
+
+### Informational
+
+- [NSBezelStyleBadge](badge.md): A button style suitable for displaying additional information.
+- [NSBezelStyleCircular](circular.md): A round button that can contain either a single character or an icon.

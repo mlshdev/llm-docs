@@ -1,0 +1,42 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/app-store-version-submissions](https://developer.apple.com/documentation/appstoreconnectapi/app-store-version-submissions)
+
+# App Store version submissions
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** API Collection
+
+Submit versions of your app to App Review.
+
+<a id="overview"></a>
+
+## Overview
+
+An `appStoreVersionSubmissions` resource enables you to submit a version of your app to App Review. This resource is the equivalent of clicking the Submit for Review button in the App Store Connect UI.
+
+If your version submission is incomplete due to missing required information or other issues, you receive an error when you attempt to submit to App Review.
+
+The `appStoreVersionSubmissions` resource is available while your submission request is live. For more information, see [Submit for review](https://developer.apple.com/help/app-store-connect/manage-submissions-to-app-review/submit-for-review).
+
+## Topics
+
+### Managing Review Submissions
+
+- [Delete an app store version submission](delete-v1-appstoreversionsubmissions-_id_.md): Deprecated. Remove a version from App Store review.
+
+### Objects
+
+- [AppStoreVersionSubmission](appstoreversionsubmission.md): Deprecated. A submission of an App Store version to Apple’s review queue, triggering the review process.
+- [AppStoreVersionSubmissionResponse](appstoreversionsubmissionresponse.md): Deprecated. The response body for endpoints that submit an App Store version for review.
+
+## See Also
+
+### App Store Review Submissions
+
+- [Review submissions](review-submissions.md): Create and manage your submissions for review, which can include your App Store version, App Store version experiments, custom product page versions, and in-app events.
+- [Review submission items](review-submission-items.md): Manage the contents of your review submission, which can include your App Store version, App Store version experiments, custom product page versions, and in-app events.
+- [App Store review details](app-store-review-details.md): Manage the required information you provide for App Review.
+- [App Clip App Store review details](app-clip-app-store-review-details.md): Manage required App Clip information you provide for App Review.
+- [App Store review attachments](app-store-review-attachments.md): Manage the attachments you upload to App Store Connect for App Review.
+- [Actors](actors.md): Get information about who or which service made a review submission.

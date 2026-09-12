@@ -1,0 +1,23 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cloudkit/cksyncenginesendchangesscope/zoneids](https://developer.apple.com/documentation/cloudkit/cksyncenginesendchangesscope/zoneids)
+
+# zoneIDs
+
+**Interface language:** Objective-C
+
+**Framework:** CloudKit  
+**Kind:** Instance Property  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+The scope of zone IDs in which to send changes.
+
+## Declaration
+
+```objectivec
+@property (copy, readonly, nullable) NSSet<CKRecordZoneID *> * zoneIDs;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+If you only want to send changes for a particular set of zones, you can initialize your scope with those zone IDs. When creating the next batch of changes to send to the server, consult this, and only send changes within these zones. If this and [recordIDs](recordids.md) are `nil`, then you should send all changes.

@@ -1,0 +1,154 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/mapkit/mkoverlaypathrenderer](https://developer.apple.com/documentation/mapkit/mkoverlaypathrenderer)
+
+# MKOverlayPathRenderer (Swift)
+
+**Framework:** MapKit  
+**Kind:** Class  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.2+ · visionOS 1.0+
+
+The visual representation of a path-based overlay.
+
+## Declaration
+
+```swift
+class MKOverlayPathRenderer
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use this renderer when a [CGPath](../coregraphics/cgpath.md) object defines your overlay’s shape. By default, this renderer fills the overlay’s shape and represents the strokes of the path using its current attributes.
+
+You can use this class as-is or subclass it to define additional drawing behaviors. If you subclass it, override the [createPath()](mkoverlaypathrenderer/createpath%28%29.md) method and use that method to build the appropriate path object. To change the path, invalidate it and recreate the path using the new data your subclass obtains.
+
+## Topics
+
+### Creating and managing the path
+
+- [path](mkoverlaypathrenderer/path.md): The path representing the overlay’s shape.
+- [createPath()](mkoverlaypathrenderer/createpath%28%29.md): Creates the path for the overlay.
+- [invalidatePath()](mkoverlaypathrenderer/invalidatepath%28%29.md): Updates the path associated with the overlay renderer.
+
+### Accessing the drawing attributes
+
+- [fillColor](mkoverlaypathrenderer/fillcolor.md): The fill color to use for the path.
+- [strokeColor](mkoverlaypathrenderer/strokecolor.md): The stroke color to use for the path.
+- [lineWidth](mkoverlaypathrenderer/linewidth.md): The stroke width to use for the path.
+- [lineJoin](mkoverlaypathrenderer/linejoin.md): The line join style to apply to the corners of the path.
+- [lineCap](mkoverlaypathrenderer/linecap.md): The line cap style to apply to the open ends of the path.
+- [miterLimit](mkoverlaypathrenderer/miterlimit.md): The limiting value that helps avoid spikes at junctions between connected line segments.
+- [lineDashPhase](mkoverlaypathrenderer/linedashphase.md): The offset (in points) at which to start drawing the dash pattern.
+- [lineDashPattern](mkoverlaypathrenderer/linedashpattern.md): An array of numbers specifying the dash pattern to use for the path.
+
+### Drawing the path
+
+- [applyStrokeProperties(to:atZoomScale:)](mkoverlaypathrenderer/applystrokeproperties%28to_atzoomscale_%29.md): Applies the renderer’s stroke-related drawing properties to the specified graphics context.
+- [applyFillProperties(to:atZoomScale:)](mkoverlaypathrenderer/applyfillproperties%28to_atzoomscale_%29.md): Applies the receiver’s fill-related drawing properties to the specified graphics context.
+- [strokePath(\_:in:)](mkoverlaypathrenderer/strokepath%28__in_%29.md): Draws a line along the specified path.
+- [fillPath(\_:in:)](mkoverlaypathrenderer/fillpath%28__in_%29.md): Fills the area that the specified path encloses.
+- [shouldRasterize](mkoverlaypathrenderer/shouldrasterize.md): A Boolean value that determines whether the overlay path renderer renders the overlay as a bitmap before compositing.
+
+## Relationships
+
+### Inherits From
+
+- [MKOverlayRenderer](mkoverlayrenderer.md)
+
+### Inherited By
+
+- [MKCircleRenderer](mkcirclerenderer.md)
+- [MKMultiPolygonRenderer](mkmultipolygonrenderer.md)
+- [MKMultiPolylineRenderer](mkmultipolylinerenderer.md)
+- [MKPolygonRenderer](mkpolygonrenderer.md)
+- [MKPolylineRenderer](mkpolylinerenderer.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Custom shape overlays
+
+- [MKPolygon](mkpolygon.md): A closed polygon overlay.
+- [MKPolygonRenderer](mkpolygonrenderer.md): The visual representation of a single polygon overlay.
+- [MKMultiPolygon](mkmultipolygon.md): A collection of multiple closed polygon overlays.
+- [MKMultiPolygonRenderer](mkmultipolygonrenderer.md): The visual representation of multiple polygon overlays.
+
+# MKOverlayPathRenderer (Objective-C)
+
+**Framework:** MapKit  
+**Kind:** Class  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.2+ · visionOS 1.0+
+
+The visual representation of a path-based overlay.
+
+## Declaration
+
+```objectivec
+@interface MKOverlayPathRenderer : MKOverlayRenderer
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use this renderer when a [CGPathRef](../coregraphics/cgpath.md) object defines your overlay’s shape. By default, this renderer fills the overlay’s shape and represents the strokes of the path using its current attributes.
+
+You can use this class as-is or subclass it to define additional drawing behaviors. If you subclass it, override the [createPath](mkoverlaypathrenderer/createpath%28%29.md) method and use that method to build the appropriate path object. To change the path, invalidate it and recreate the path using the new data your subclass obtains.
+
+## Topics
+
+### Creating and managing the path
+
+- [path](mkoverlaypathrenderer/path.md): The path representing the overlay’s shape.
+- [createPath](mkoverlaypathrenderer/createpath%28%29.md): Creates the path for the overlay.
+- [invalidatePath](mkoverlaypathrenderer/invalidatepath%28%29.md): Updates the path associated with the overlay renderer.
+
+### Accessing the drawing attributes
+
+- [fillColor](mkoverlaypathrenderer/fillcolor.md): The fill color to use for the path.
+- [strokeColor](mkoverlaypathrenderer/strokecolor.md): The stroke color to use for the path.
+- [lineWidth](mkoverlaypathrenderer/linewidth.md): The stroke width to use for the path.
+- [lineJoin](mkoverlaypathrenderer/linejoin.md): The line join style to apply to the corners of the path.
+- [lineCap](mkoverlaypathrenderer/linecap.md): The line cap style to apply to the open ends of the path.
+- [miterLimit](mkoverlaypathrenderer/miterlimit.md): The limiting value that helps avoid spikes at junctions between connected line segments.
+- [lineDashPhase](mkoverlaypathrenderer/linedashphase.md): The offset (in points) at which to start drawing the dash pattern.
+- [lineDashPattern](mkoverlaypathrenderer/linedashpattern.md): An array of numbers specifying the dash pattern to use for the path.
+
+### Drawing the path
+
+- [applyStrokePropertiesToContext:atZoomScale:](mkoverlaypathrenderer/applystrokeproperties%28to_atzoomscale_%29.md): Applies the renderer’s stroke-related drawing properties to the specified graphics context.
+- [applyFillPropertiesToContext:atZoomScale:](mkoverlaypathrenderer/applyfillproperties%28to_atzoomscale_%29.md): Applies the receiver’s fill-related drawing properties to the specified graphics context.
+- [strokePath:inContext:](mkoverlaypathrenderer/strokepath%28__in_%29.md): Draws a line along the specified path.
+- [fillPath:inContext:](mkoverlaypathrenderer/fillpath%28__in_%29.md): Fills the area that the specified path encloses.
+- [shouldRasterize](mkoverlaypathrenderer/shouldrasterize.md): A Boolean value that determines whether the overlay path renderer renders the overlay as a bitmap before compositing.
+
+## Relationships
+
+### Inherits From
+
+- [MKOverlayRenderer](mkoverlayrenderer.md)
+
+### Inherited By
+
+- [MKCircleRenderer](mkcirclerenderer.md)
+- [MKMultiPolygonRenderer](mkmultipolygonrenderer.md)
+- [MKMultiPolylineRenderer](mkmultipolylinerenderer.md)
+- [MKPolygonRenderer](mkpolygonrenderer.md)
+- [MKPolylineRenderer](mkpolylinerenderer.md)
+
+## See Also
+
+### Custom shape overlays
+
+- [MKPolygon](mkpolygon.md): A closed polygon overlay.
+- [MKPolygonRenderer](mkpolygonrenderer.md): The visual representation of a single polygon overlay.
+- [MKMultiPolygon](mkmultipolygon.md): A collection of multiple closed polygon overlays.
+- [MKMultiPolygonRenderer](mkmultipolygonrenderer.md): The visual representation of multiple polygon overlays.

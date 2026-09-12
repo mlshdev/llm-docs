@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/sensorkit/srauthorizationstatus/authorized](https://developer.apple.com/documentation/sensorkit/srauthorizationstatus/authorized)
+
+# SRAuthorizationStatus.authorized (Swift)
+
+**Framework:** SensorKit  
+**Kind:** Case  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
+
+User has granted authorization to this application
+
+## Declaration
+
+```swift
+case authorized
+```
+
+# SRAuthorizationStatusAuthorized (Objective-C)
+
+**Framework:** SensorKit  
+**Kind:** Enumeration Case  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
+
+User has granted authorization to this application
+
+## Declaration
+
+```objectivec
+SRAuthorizationStatusAuthorized
+```

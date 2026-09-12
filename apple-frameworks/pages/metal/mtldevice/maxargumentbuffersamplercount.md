@@ -1,0 +1,61 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtldevice/maxargumentbuffersamplercount](https://developer.apple.com/documentation/metal/mtldevice/maxargumentbuffersamplercount)
+
+# maxArgumentBufferSamplerCount (Swift)
+
+**Framework:** Metal  
+**Kind:** Instance Property  
+**Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+ · macOS 10.14+ · tvOS 12.0+ · visionOS 1.0+
+
+The maximum number of unique argument buffer samplers per app.
+
+## Declaration
+
+```swift
+var maxArgumentBufferSamplerCount: Int { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This limit only applies to samplers that support argument buffers (see [supportArgumentBuffers](../mtlsamplerdescriptor/supportargumentbuffers.md)). An [MTLSamplerState](../mtlsamplerstate.md) instance is only unique if the properties of the [MTLSamplerDescriptor](../mtlsamplerdescriptor.md) instance that created it are unique. For example, two samplers with equal [minFilter](../mtlsamplerdescriptor/minfilter.md) values but different [magFilter](../mtlsamplerdescriptor/magfilter.md) values are unique.
+
+See [Improving CPU performance by using argument buffers](../improving-cpu-performance-by-using-argument-buffers.md) for more information about argument buffer tiers, limits, and capabilities.
+
+## See Also
+
+### Creating argument buffer encoders
+
+- [argumentBuffersSupport](argumentbufferssupport.md): Returns the GPU device’s support tier for argument buffers.
+- [makeArgumentEncoder(arguments:)](makeargumentencoder%28arguments_%29.md): Creates a new argument encoder for an array of arguments.
+- [makeArgumentEncoder(bufferBinding:)](makeargumentencoder%28bufferbinding_%29.md): Creates a new argument encoder for a buffer binding.
+
+# maxArgumentBufferSamplerCount (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Instance Property  
+**Availability:** iOS 12.0+ · iPadOS 12.0+ · Mac Catalyst 13.1+ · macOS 10.14+ · tvOS 12.0+ · visionOS 1.0+
+
+The maximum number of unique argument buffer samplers per app.
+
+## Declaration
+
+```objectivec
+@property (readonly) NSUInteger maxArgumentBufferSamplerCount;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This limit only applies to samplers that support argument buffers (see [supportArgumentBuffers](../mtlsamplerdescriptor/supportargumentbuffers.md)). An [MTLSamplerState](../mtlsamplerstate.md) instance is only unique if the properties of the [MTLSamplerDescriptor](../mtlsamplerdescriptor.md) instance that created it are unique. For example, two samplers with equal [minFilter](../mtlsamplerdescriptor/minfilter.md) values but different [magFilter](../mtlsamplerdescriptor/magfilter.md) values are unique.
+
+See [Improving CPU performance by using argument buffers](../improving-cpu-performance-by-using-argument-buffers.md) for more information about argument buffer tiers, limits, and capabilities.
+
+## See Also
+
+### Creating argument buffer encoders
+
+- [argumentBuffersSupport](argumentbufferssupport.md): Returns the GPU device’s support tier for argument buffers.
+- [newArgumentEncoderWithArguments:](makeargumentencoder%28arguments_%29.md): Creates a new argument encoder for an array of arguments.
+- [newArgumentEncoderWithBufferBinding:](makeargumentencoder%28bufferbinding_%29.md): Creates a new argument encoder for a buffer binding.

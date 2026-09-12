@@ -1,0 +1,93 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicklookthumbnailing/qlthumbnailreply/init(contextsize:drawing:)](https://developer.apple.com/documentation/quicklookthumbnailing/qlthumbnailreply/init(contextsize:drawing:))
+
+# init(contextSize:drawing:) (Swift)
+
+**Framework:** Quick Look Thumbnailing  
+**Kind:** Initializer  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 10.15+ · visionOS 1.0+
+
+Creates a new thumbnail for a custom file type in the given context.
+
+## Declaration
+
+```swift
+convenience init(contextSize: CGSize, drawing drawingBlock: @escaping (CGContext) -> Bool)
+```
+
+## Parameters
+
+- `contextSize`: The desired size of the context that you pass to the drawing block. Set this value as close as possible to the [QLFileThumbnailRequest](../qlfilethumbnailrequest.md) class’s [maximumSize](../qlfilethumbnailrequest/maximumsize.md) value and greater than or equal to its [minimumSize](../qlfilethumbnailrequest/minimumsize.md) value.
+
+  This parameter indicates the preferred size of the thumbnail. The context’s width or its height matches the `width` or `height` of the [maximumSize](../qlfilethumbnailrequest/maximumsize.md), or, ideally, both.
+
+  The system scales the context size to the [QLFileThumbnailRequest](../qlfilethumbnailrequest.md) class’s [scale](../qlfilethumbnailrequest/scale.md) property. For example, if you pass a `contextSize` of `CGSize(10, 10)` to this method, the size of the context is `(scale * 10, scale * 10)`.
+- `drawingBlock`: The context for drawing the thumbnail. The block takes the following parameter:
+
+  - **context**: A context of type [CGContext](../../coregraphics/cgcontext.md) that uses the coordinate system provided by [Core Graphics](../../coregraphics.md).
+
+  Return [true](https://developer.apple.com/documentation/swift/true) if you successfully drew the thumbnail into the context. Return [false](https://developer.apple.com/documentation/swift/false) otherwise.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized reply object for a requested thumbnail.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this initializer if you’re drawing the thumbnail using [Core Graphics](../../coregraphics.md). If you’re using [UIKit](../../uikit.md) or [AppKit](https://developer.apple.com/documentation/appkit) to draw the thumbnail, use the initializer [init(contextSize:currentContextDrawing:)](init%28contextsize_currentcontextdrawing_%29.md). The context that this initializer provides uses the coordinate system of [Core Graphics](../../coregraphics.md).
+
+## See Also
+
+### Creating a Thumbnail
+
+- [init(contextSize:currentContextDrawing:)](init%28contextsize_currentcontextdrawing_%29.md): Creates a new thumbnail for a custom file type in the current context.
+- [init(imageFileURL:)](init%28imagefileurl_%29.md): Creates a new thumbnail for a custom file type using a file at the given URL.
+
+# replyWithContextSize:drawingBlock: (Objective-C)
+
+**Framework:** Quick Look Thumbnailing  
+**Kind:** Type Method  
+**Availability:** iOS 11.0+ · iPadOS 11.0+ · Mac Catalyst 13.1+ · macOS 10.15+ · visionOS 1.0+
+
+Creates a new thumbnail for a custom file type in the given context.
+
+## Declaration
+
+```objectivec
++ (instancetype) replyWithContextSize:(CGSize) contextSize drawingBlock:(BOOL (^)(CGContextRef context)) drawingBlock;
+```
+
+## Parameters
+
+- `contextSize`: The desired size of the context that you pass to the drawing block. Set this value as close as possible to the [QLFileThumbnailRequest](../qlfilethumbnailrequest.md) class’s [maximumSize](../qlfilethumbnailrequest/maximumsize.md) value and greater than or equal to its [minimumSize](../qlfilethumbnailrequest/minimumsize.md) value.
+
+  This parameter indicates the preferred size of the thumbnail. The context’s width or its height matches the `width` or `height` of the [maximumSize](../qlfilethumbnailrequest/maximumsize.md), or, ideally, both.
+
+  The system scales the context size to the [QLFileThumbnailRequest](../qlfilethumbnailrequest.md) class’s [scale](../qlfilethumbnailrequest/scale.md) property. For example, if you pass a `contextSize` of `CGSize(10, 10)` to this method, the size of the context is `(scale * 10, scale * 10)`.
+- `drawingBlock`: The context for drawing the thumbnail. The block takes the following parameter:
+
+  - **context**: A context of type [CGContextRef](../../coregraphics/cgcontext.md) that uses the coordinate system provided by [Core Graphics](../../coregraphics.md).
+
+  Return [true](https://developer.apple.com/documentation/swift/true) if you successfully drew the thumbnail into the context. Return [false](https://developer.apple.com/documentation/swift/false) otherwise.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An initialized reply object for a requested thumbnail.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this initializer if you’re drawing the thumbnail using [Core Graphics](../../coregraphics.md). If you’re using [UIKit](../../uikit.md) or [AppKit](https://developer.apple.com/documentation/appkit) to draw the thumbnail, use the initializer [replyWithContextSize:currentContextDrawingBlock:](init%28contextsize_currentcontextdrawing_%29.md). The context that this initializer provides uses the coordinate system of [Core Graphics](../../coregraphics.md).
+
+## See Also
+
+### Creating a Thumbnail
+
+- [replyWithContextSize:currentContextDrawingBlock:](init%28contextsize_currentcontextdrawing_%29.md): Creates a new thumbnail for a custom file type in the current context.
+- [replyWithImageFileURL:](init%28imagefileurl_%29.md): Creates a new thumbnail for a custom file type using a file at the given URL.

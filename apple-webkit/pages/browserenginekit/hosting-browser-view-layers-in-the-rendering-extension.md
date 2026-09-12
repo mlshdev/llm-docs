@@ -1,0 +1,209 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/browserenginekit/hosting-browser-view-layers-in-the-rendering-extension](https://developer.apple.com/documentation/browserenginekit/hosting-browser-view-layers-in-the-rendering-extension)
+
+# Hosting browser view layers in the rendering extension (Swift)
+
+**Framework:** BrowserEngineKit  
+**Kind:** Article
+
+Coordinate view-hierarchy and layer-hierarchy changes between processes.
+
+<a id="Overview"></a>
+
+## Overview
+
+When your browser app’s alternative browser engine is split between different extensions, you coordinate those extensions to prepare the browser’s UI. For example, your browser controls are rendered by the host app, and media is streamed in the rendering extension.
+
+Create layer hierarchies to manage [CALayer](https://developer.apple.com/documentation/quartzcore/calayer) objects in the rendering extension. Host those layers in a hosting view that you add to your view hierarchy. Indicate to the system that the view contains hosted layers, and coordinate changes to the layer hierarchy between your host app and rendering extension.
+
+> **Note**
+
+>  If you create images or render content to an [IOSurfaceRef](https://developer.apple.com/documentation/iosurface/iosurfaceref) in your rendering extension, you can send that object to the host object over XPC and don’t need to render a hosted layer. If you render UI in a web content extension, use `IOSurfaceRef` in the rendering extension, or generate any UI in the rendering extension other than a `CALayer`, you need to create a visibility propagation interaction for the view in the host app. For more information, see [Propagating view visibility information to extension processes](propagating-view-visibility-information-to-browser-extensions.md).
+
+<a id="Create-a-hosted-layer-hierarchy-and-a-hosting-view"></a>
+
+### Create a hosted layer hierarchy and a hosting view
+
+In the extension process that prepares the rendered content, create a [LayerHierarchy](layerhierarchy.md) and set its layer to the root layer in the content’s layer hierarchy. Get the layer hierarchy’s [LayerHierarchyHandle](layerhierarchyhandle.md), and send it over XPC to your browser app:
+
+```swift
+let layer: CALayer = // Create your content layer.
+if let hierarchy = try? LayerHierarchy() {
+  hierarchy.layer = layer
+  let xpcHandle = hierarchy.handle.createXPCRepresentation()
+  // Send the handle to your browser app, using XPC.
+  // Retain the hierarchy while your app's using it.
+  self.storedHierarchy = hierarchy 
+}
+```
+
+For more information on using XPC in browser apps and extensions, see [Using XPC to communicate with browser extensions](using-xpc-to-communicate-with-browser-extensions.md).
+
+In the host app, add the handle to a [LayerHierarchyHostingView](layerhierarchyhostingview.md):
+
+```swift
+let xpcHandle: xpc_object_t = // Get the handle from an XPC message.
+if let handle = try? LayerHierarchyHandle(xpcRepresentation: xpcHandle) {
+  let hostingView = LayerHierarchyHostingView()
+  hostingView.handle = handle
+  // Prepare the view for display.
+  self.view.addSubview(hostingView)
+}
+```
+
+<a id="Coordinate-updates-to-the-view-and-layer-hierarchy"></a>
+
+### Coordinate updates to the view and layer hierarchy
+
+When you need to make changes to the view hierarchy that involve the `LayerHierarchyHostingView`, coordinate the changes between the host app and the extension that controls the hosted layers.
+
+You can initiate the update in either the host app or the extension. To initiate the update in the host app, create a [LayerHierarchyHostingTransactionCoordinator](layerhierarchyhostingtransactioncoordinator.md), add the `LayerHierarchyHostingView`, and make changes to the view or its superviews. Use XPC to send a representation of the `LayerHierarchyHostingTransactionCoordinator` to the extension, then [commit()](layerhierarchyhostingtransactioncoordinator/commit%28%29.md) the transaction coordinator.
+
+```swift
+if let coordinator = try? LayerHierarchyHostingTransactionCoordinator() {
+  coordinator.add(hostingView)
+  // Make changes to the hosting view or its view hierarchy.
+  let xpcCoordinator = coordinator.createXPCRepresentation()
+  // Send the xpcCoordinator to the extension that's managing the view's layer.
+  coordinator.commit()
+}
+```
+
+In the extension, use the XPC representation of the coordinator to create a `LayerHierarchyHostingTransactionCoordinator`, and add the layer hierarchy to the transaction coordinator. Make changes to the layer or its sublayers, then commit the transaction coordinator.
+
+```swift
+let xpcCoordinator: xpc_object_t = // Get the object from an XPC message.
+if let coordinator = try? LayerHierarchyHostingTransactionCoordinator(xpcRepresentation: xpcCoordinator) {
+  coordinator.add(self.storedHierarchy)
+  // Make change to the layer or its sublayers.
+  coordinator.commit()
+}
+```
+
+> **Note**
+
+>  You need to add layers or views to the transaction coordinator before you manipulate those layers or views. Commit the transaction coordinator as the last action in the process of updating the views or layers, after you send the XPC representation of the transaction coordinator to the other process.
+
+To initiate the update in the extension, create a [LayerHierarchyHostingTransactionCoordinator](layerhierarchyhostingtransactioncoordinator.md) to track changes to the layer hierarchy, then send it to the host app to create the transaction coordinator you use to track changes to the view hierarchy.
+
+`LayerHierarchyHostingTransactionCoordinator` doesn’t communicate any information about the updates you make to the views and layers you add to them. Use your XPC communication channel to send the context of any changes to views and layers between your browser app and extension processes, along with the transaction coordinator.
+
+Keep the lifetime of transaction coordinators — from initialization until you call [commit()](layerhierarchyhostingtransactioncoordinator/commit%28%29.md) — as short as possible to avoid making your UI unresponsive. The system expects you to call `commit()` within a short interval, and stops coordinating transactions if you exceed this duration. A person using your browser app experiences this as glitches in your app’s user interface and inconsistent animations.
+
+<a id="Dispose-of-views-with-hosted-layers"></a>
+
+### Dispose of views with hosted layers
+
+When the layer that’s rendered in a `LayerHierarchyHostingView` is no longer needed, call [invalidate()](layerhierarchy/invalidate%28%29.md) on the layer hierarchy in the extension. Send an XPC message to notify the browser to remove the view from its superview. When you invalidate a `LayerHierarchy`, you can no longer use that hierarchy or its hosting view.
+
+## See Also
+
+### Layer hosting
+
+- [LayerHierarchy](layerhierarchy.md): An object that holds a reference to layers rendered in another process’s view.
+- [LayerHierarchyHostingView](layerhierarchyhostingview.md): A view that hosts a layer hierarchy you manage in another process.
+- [LayerHierarchyHostingTransactionCoordinator](layerhierarchyhostingtransactioncoordinator.md): A class that synchronizes updates to views and layers in different processes.
+- [LayerHierarchyHandle](layerhierarchyhandle.md): A reference to a layer hierarchy that your app shares between processes.
+
+# Hosting browser view layers in the rendering extension (Objective-C)
+
+**Framework:** BrowserEngineKit  
+**Kind:** Article
+
+Coordinate view-hierarchy and layer-hierarchy changes between processes.
+
+<a id="Overview"></a>
+
+## Overview
+
+When your browser app’s alternative browser engine is split between different extensions, you coordinate those extensions to prepare the browser’s UI. For example, your browser controls are rendered by the host app, and media is streamed in the rendering extension.
+
+Create layer hierarchies to manage [CALayer](https://developer.apple.com/documentation/quartzcore/calayer) objects in the rendering extension. Host those layers in a hosting view that you add to your view hierarchy. Indicate to the system that the view contains hosted layers, and coordinate changes to the layer hierarchy between your host app and rendering extension.
+
+> **Note**
+
+>  If you create images or render content to an [IOSurfaceRef](https://developer.apple.com/documentation/iosurface/iosurfaceref) in your rendering extension, you can send that object to the host object over XPC and don’t need to render a hosted layer. If you render UI in a web content extension, use `IOSurfaceRef` in the rendering extension, or generate any UI in the rendering extension other than a `CALayer`, you need to create a visibility propagation interaction for the view in the host app. For more information, see [Propagating view visibility information to extension processes](propagating-view-visibility-information-to-browser-extensions.md).
+
+<a id="Create-a-hosted-layer-hierarchy-and-a-hosting-view"></a>
+
+### Create a hosted layer hierarchy and a hosting view
+
+In the extension process that prepares the rendered content, create a [BELayerHierarchy](layerhierarchy.md) and set its layer to the root layer in the content’s layer hierarchy. Get the layer hierarchy’s [BELayerHierarchyHandle](layerhierarchyhandle.md), and send it over XPC to your browser app:
+
+```swift
+let layer: CALayer = // Create your content layer.
+if let hierarchy = try? LayerHierarchy() {
+  hierarchy.layer = layer
+  let xpcHandle = hierarchy.handle.createXPCRepresentation()
+  // Send the handle to your browser app, using XPC.
+  // Retain the hierarchy while your app's using it.
+  self.storedHierarchy = hierarchy 
+}
+```
+
+For more information on using XPC in browser apps and extensions, see [Using XPC to communicate with browser extensions](using-xpc-to-communicate-with-browser-extensions.md).
+
+In the host app, add the handle to a [BELayerHierarchyHostingView](layerhierarchyhostingview.md):
+
+```swift
+let xpcHandle: xpc_object_t = // Get the handle from an XPC message.
+if let handle = try? LayerHierarchyHandle(xpcRepresentation: xpcHandle) {
+  let hostingView = LayerHierarchyHostingView()
+  hostingView.handle = handle
+  // Prepare the view for display.
+  self.view.addSubview(hostingView)
+}
+```
+
+<a id="Coordinate-updates-to-the-view-and-layer-hierarchy"></a>
+
+### Coordinate updates to the view and layer hierarchy
+
+When you need to make changes to the view hierarchy that involve the `LayerHierarchyHostingView`, coordinate the changes between the host app and the extension that controls the hosted layers.
+
+You can initiate the update in either the host app or the extension. To initiate the update in the host app, create a [BELayerHierarchyHostingTransactionCoordinator](layerhierarchyhostingtransactioncoordinator.md), add the `LayerHierarchyHostingView`, and make changes to the view or its superviews. Use XPC to send a representation of the `LayerHierarchyHostingTransactionCoordinator` to the extension, then [commit](layerhierarchyhostingtransactioncoordinator/commit%28%29.md) the transaction coordinator.
+
+```swift
+if let coordinator = try? LayerHierarchyHostingTransactionCoordinator() {
+  coordinator.add(hostingView)
+  // Make changes to the hosting view or its view hierarchy.
+  let xpcCoordinator = coordinator.createXPCRepresentation()
+  // Send the xpcCoordinator to the extension that's managing the view's layer.
+  coordinator.commit()
+}
+```
+
+In the extension, use the XPC representation of the coordinator to create a `LayerHierarchyHostingTransactionCoordinator`, and add the layer hierarchy to the transaction coordinator. Make changes to the layer or its sublayers, then commit the transaction coordinator.
+
+```swift
+let xpcCoordinator: xpc_object_t = // Get the object from an XPC message.
+if let coordinator = try? LayerHierarchyHostingTransactionCoordinator(xpcRepresentation: xpcCoordinator) {
+  coordinator.add(self.storedHierarchy)
+  // Make change to the layer or its sublayers.
+  coordinator.commit()
+}
+```
+
+> **Note**
+
+>  You need to add layers or views to the transaction coordinator before you manipulate those layers or views. Commit the transaction coordinator as the last action in the process of updating the views or layers, after you send the XPC representation of the transaction coordinator to the other process.
+
+To initiate the update in the extension, create a [BELayerHierarchyHostingTransactionCoordinator](layerhierarchyhostingtransactioncoordinator.md) to track changes to the layer hierarchy, then send it to the host app to create the transaction coordinator you use to track changes to the view hierarchy.
+
+`LayerHierarchyHostingTransactionCoordinator` doesn’t communicate any information about the updates you make to the views and layers you add to them. Use your XPC communication channel to send the context of any changes to views and layers between your browser app and extension processes, along with the transaction coordinator.
+
+Keep the lifetime of transaction coordinators — from initialization until you call [commit](layerhierarchyhostingtransactioncoordinator/commit%28%29.md) — as short as possible to avoid making your UI unresponsive. The system expects you to call `commit()` within a short interval, and stops coordinating transactions if you exceed this duration. A person using your browser app experiences this as glitches in your app’s user interface and inconsistent animations.
+
+<a id="Dispose-of-views-with-hosted-layers"></a>
+
+### Dispose of views with hosted layers
+
+When the layer that’s rendered in a `LayerHierarchyHostingView` is no longer needed, call [invalidate](layerhierarchy/invalidate%28%29.md) on the layer hierarchy in the extension. Send an XPC message to notify the browser to remove the view from its superview. When you invalidate a `LayerHierarchy`, you can no longer use that hierarchy or its hosting view.
+
+## See Also
+
+### Layer hosting
+
+- [BELayerHierarchy](layerhierarchy.md): An object that holds a reference to layers rendered in another process’s view.
+- [BELayerHierarchyHostingView](layerhierarchyhostingview.md): A view that hosts a layer hierarchy you manage in another process.
+- [BELayerHierarchyHostingTransactionCoordinator](layerhierarchyhostingtransactioncoordinator.md): A class that synchronizes updates to views and layers in different processes.
+- [BELayerHierarchyHandle](layerhierarchyhandle.md): A reference to a layer hierarchy that your app shares between processes.

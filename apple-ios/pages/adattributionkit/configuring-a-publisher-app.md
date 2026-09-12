@@ -1,0 +1,45 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/adattributionkit/configuring-a-publisher-app](https://developer.apple.com/documentation/adattributionkit/configuring-a-publisher-app)
+
+# Configuring a publisher app
+
+**Framework:** AdAttributionKit  
+**Kind:** Article
+
+Set up a publisher app to participate in ad campaigns.
+
+<a id="Overview"></a>
+
+## Overview
+
+A *publisher app* is an app that participates in ad campaigns by displaying ads that an ad network signs. To participate in install validation, the publisher app needs to include ad network IDs in its Xcode project’s Information Property List. Ad networks are responsible for publishing or providing their ad network IDs to developers.
+
+Only ads from ad networks that have an entry in the app’s Information Property List are eligible for install validation. To work with multiple ad networks, include each of the ad network IDs in the publisher app’s information property list, as follows:
+
+1. Select Info tab in the Project navigator in Xcode.
+2. Click the Add button (+) beside a key in the property list editor and press Return.
+3. Type the key name `AdNetworkIdentifiers`.
+4. Choose Array from the pop-up menu in the Type column.
+5. Create string values for each ad network ID.
+
+> **Important**
+
+> Lowercase the ad network ID string; otherwise, the system doesn’t recognize it as a valid network.
+
+The following example shows an array with two strings that represent the example ad network IDs `"f2d92a.adattributionkit"` and `"2jida.adattributionkit"`:
+
+````
+"AdNetworkIdentifiers": [
+  "f2d92a.adattributionkit",
+  "2jida.adattributionkit"
+]```
+
+For more information about property lists, see [Edit property lists](https://help.apple.com/xcode/mac/current/#/dev3f399a2a6).
+````
+
+## See Also
+
+### Ad network registration and configuration
+
+- [Registering an ad network](registering-an-ad-network.md): Use the AdAttributionKit APIs for your ad campaigns after registering your ad network with Apple.
+- [Configuring an advertised app](configuring-an-advertised-app.md): Prepare an advertised app to participate in ad campaigns.
+- [Configuring attribution rules for your app](configuring-attribution-rules-for-your-app.md): Tune aspects of attribution flow, including the time available to register impressions and the minimum time your app is willing to accept conversions.

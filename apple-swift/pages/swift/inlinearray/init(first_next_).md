@@ -1,0 +1,32 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/inlinearray/init(first:next:)](https://developer.apple.com/documentation/swift/inlinearray/init(first:next:))
+
+# init(first:next:)
+
+**Framework:** Swift  
+**Kind:** Initializer  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
+
+Initializes every element in this array, by calling the given closure with each preceding element.
+
+## Declaration
+
+```swift
+init<E>(first: consuming Element, next: (borrowing Element) throws(E) -> Element) throws(E) where E : Error
+```
+
+## Parameters
+
+- `first`: The first value to emplace into the array.
+- `next`: A closure that takes an immutable borrow reference to the preceding element, and returns an owned `Element` instance to emplace into the array.
+
+<a id="discussion"></a>
+
+## Discussion
+
+This will call the closure `count - 1` times, where `count` is the static count of the array, to initialize every element by passing the closure an immutable borrow reference to the preceding element.
+
+```swift
+InlineArray<4, Int>(first: 1) { $0 * 2 }  // [1, 2, 4, 8]
+```
+
+The closure is allowed to throw an error at any point during initialization at which point the array will stop initialization, deinitialize every currently initialized element, and throw the given error back out to the caller.

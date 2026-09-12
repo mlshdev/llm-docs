@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/weatherkit/dailyweatherstatistics/subscript(_:)](https://developer.apple.com/documentation/weatherkit/dailyweatherstatistics/subscript(_:))
+
+# subscript(\_:)
+
+**Framework:** WeatherKit  
+**Kind:** Instance Subscript  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 11.0+
+
+The day weather statistics at the provided index.
+
+## Declaration
+
+```swift
+subscript(position: DailyWeatherStatistics<T>.Index) -> DailyWeatherStatistics<T>.Element { get }
+```

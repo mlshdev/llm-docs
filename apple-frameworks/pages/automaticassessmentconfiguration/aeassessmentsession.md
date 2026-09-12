@@ -1,0 +1,282 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/automaticassessmentconfiguration/aeassessmentsession](https://developer.apple.com/documentation/automaticassessmentconfiguration/aeassessmentsession)
+
+# AEAssessmentSession (Swift)
+
+**Framework:** Automatic Assessment Configuration  
+**Kind:** Class  
+**Availability:** iOS 13.4+ · iPadOS 13.4+ · Mac Catalyst 14.0+ · macOS 10.15.4+
+
+A session that your app uses to protect an assessment.
+
+## Declaration
+
+```swift
+class AEAssessmentSession
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use the [AEAssessmentSession](aeassessmentsession.md) class to manage an assessment session. The system allows only one active session at a time across all processes. The first session to run gets exclusive access to the system; subsequent session attempts fail until the first session ends.
+
+To create an assessment session, pass a new [AEAssessmentConfiguration](aeassessmentconfiguration.md) instance to the [init(configuration:)](aeassessmentsession/init%28configuration_%29.md) method. Then, provide the session with a delegate that conforms to the [AEAssessmentSessionDelegate](aeassessmentsessiondelegate.md) protocol:
+
+**Swift**
+
+```swift
+let config = AEAssessmentConfiguration()
+let session = AEAssessmentSession(configuration: config)
+session.delegate = self
+```
+
+**Objective-C**
+
+```objc
+AEAssessmentConfiguration *config = [AEAssessmentConfiguration new];
+AEAssessmentSession *session = [[AEAssessmentSession alloc] initWithConfiguration:config];
+session.delegate = self;
+```
+
+You can indicate exceptions to the restrictions imposed by an assessment session by setting the properties of the configuration instance, or you can use the default restrictions as shown above. The session tells its delegate about state changes during its life cycle. To start a session, call the session’s [begin()](aeassessmentsession/begin%28%29.md) method:
+
+**Swift**
+
+```swift
+session.begin()
+```
+
+**Objective-C**
+
+```objc
+[session begin];
+```
+
+The method returns immediately, and the session starts disabling system features. After achieving the desired state, the session calls its delegate’s [assessmentSessionDidBegin(\_:)](aeassessmentsessiondelegate/assessmentsessiondidbegin%28__%29.md) method. Only after receiving this callback is it safe to begin your assessment. Be sure to keep a strong reference to the session as long as you want it to remain active. If the system deallocates an active session, the session automatically ends.
+
+> **Important**
+
+>  Prior to macOS 12.1, a DNS lookup that your app initiates during a session might fail. Be sure your app resolves all required domain names before beginning a session so that the system can cache the results. You can do this by using [URLSession](../foundation/urlsession.md) to send a `HEAD` request to each domain name that your app needs to access.
+
+After completing an assessment and hiding all sensitive information, call the session’s [end()](aeassessmentsession/end%28%29.md) method:
+
+**Swift**
+
+```swift
+session.end()
+```
+
+**Objective-C**
+
+```objc
+[session end];
+```
+
+After making the call, wait for the session to call its delegate’s [assessmentSessionDidEnd(\_:)](aeassessmentsessiondelegate/assessmentsessiondidend%28__%29.md) method before reporting assessment completion to the user.
+
+During assessment, the session’s delegate might receive an [assessmentSession(\_:wasInterruptedWithError:)](aeassessmentsessiondelegate/assessmentsession%28__wasinterruptedwitherror_%29.md) callback to indicate a failure. If this happens, immediately stop the assessment, hide all sensitive content, and end the session. Because it might take time for your app to finalize the assessment, the session relies on your app to call the session’s [end()](aeassessmentsession/end%28%29.md) method:
+
+**Swift**
+
+```swift
+func assessmentSession(_ session: AEAssessmentSession, wasInterruptedWithError error: Error) {
+    // Hide sensitive UI and optionally store assessment progress.
+
+    // End the session.
+    session.end()
+}
+```
+
+**Objective-C**
+
+```objc
+- (void)assessmentSession:(AEAssessmentSession *)session wasInterruptedWithError:(NSError *)error {
+    // Hide sensitive UI and optionally store assessment progress.
+
+    // End the session.
+    [session end];
+}
+```
+
+## Topics
+
+### Creating a session
+
+- [init(configuration:)](aeassessmentsession/init%28configuration_%29.md): Creates a new assessment session.
+
+### Managing session configuration
+
+- [update(to:)](aeassessmentsession/update%28to_%29.md): Changes the session to use the specified configuration.
+- [configuration](aeassessmentsession/configuration.md): The current configuration of the session.
+- [supportsMultipleParticipants](aeassessmentsession/supportsmultipleparticipants.md): A Boolean that indicates whether the current device or platform supports a configuration with one or more participant applications.
+- [supportsConfigurationUpdates](aeassessmentsession/supportsconfigurationupdates.md): A Boolean that indicates whether the current device or platform supports updating a session’s configuration after the session has begun.
+
+### Responding to session updates
+
+- [delegate](aeassessmentsession/delegate.md): A delegate to which the session provides state change updates.
+- [AEAssessmentSessionDelegate](aeassessmentsessiondelegate.md): An interface that the session uses to provide information about session state changes to a delegate.
+
+### Starting and stopping a session
+
+- [begin()](aeassessmentsession/begin%28%29.md): Starts an assessment session.
+- [end()](aeassessmentsession/end%28%29.md): Ends an assessment session.
+- [isActive](aeassessmentsession/isactive.md): A Boolean that indicates whether an assessment session is running.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Sessions
+
+- [Preparing an educational assessment app for distribution](preparing-an-educational-assessment-app-for-distribution.md): Ensure your app maintains academic integrity by reviewing assessment practices and managing system capabilities.
+- [Build an Educational Assessment App](build-an-educational-assessment-app.md): Ensure the academic integrity of your assessment app by using Automatic Assessment Configuration.
+- [AEAssessmentConfiguration](aeassessmentconfiguration.md): Configuration information for an assessment session.
+
+# AEAssessmentSession (Objective-C)
+
+**Framework:** Automatic Assessment Configuration  
+**Kind:** Class  
+**Availability:** iOS 13.4+ · iPadOS 13.4+ · Mac Catalyst 14.0+ · macOS 10.15.4+
+
+A session that your app uses to protect an assessment.
+
+## Declaration
+
+```objectivec
+@interface AEAssessmentSession : NSObject
+```
+
+<a id="overview"></a>
+
+## Overview
+
+Use the [AEAssessmentSession](aeassessmentsession.md) class to manage an assessment session. The system allows only one active session at a time across all processes. The first session to run gets exclusive access to the system; subsequent session attempts fail until the first session ends.
+
+To create an assessment session, pass a new [AEAssessmentConfiguration](aeassessmentconfiguration.md) instance to the [initWithConfiguration:](aeassessmentsession/init%28configuration_%29.md) method. Then, provide the session with a delegate that conforms to the [AEAssessmentSessionDelegate](aeassessmentsessiondelegate.md) protocol:
+
+**Swift**
+
+```swift
+let config = AEAssessmentConfiguration()
+let session = AEAssessmentSession(configuration: config)
+session.delegate = self
+```
+
+**Objective-C**
+
+```objc
+AEAssessmentConfiguration *config = [AEAssessmentConfiguration new];
+AEAssessmentSession *session = [[AEAssessmentSession alloc] initWithConfiguration:config];
+session.delegate = self;
+```
+
+You can indicate exceptions to the restrictions imposed by an assessment session by setting the properties of the configuration instance, or you can use the default restrictions as shown above. The session tells its delegate about state changes during its life cycle. To start a session, call the session’s [begin](aeassessmentsession/begin%28%29.md) method:
+
+**Swift**
+
+```swift
+session.begin()
+```
+
+**Objective-C**
+
+```objc
+[session begin];
+```
+
+The method returns immediately, and the session starts disabling system features. After achieving the desired state, the session calls its delegate’s [assessmentSessionDidBegin:](aeassessmentsessiondelegate/assessmentsessiondidbegin%28__%29.md) method. Only after receiving this callback is it safe to begin your assessment. Be sure to keep a strong reference to the session as long as you want it to remain active. If the system deallocates an active session, the session automatically ends.
+
+> **Important**
+
+>  Prior to macOS 12.1, a DNS lookup that your app initiates during a session might fail. Be sure your app resolves all required domain names before beginning a session so that the system can cache the results. You can do this by using [NSURLSession](../foundation/urlsession.md) to send a `HEAD` request to each domain name that your app needs to access.
+
+After completing an assessment and hiding all sensitive information, call the session’s [end](aeassessmentsession/end%28%29.md) method:
+
+**Swift**
+
+```swift
+session.end()
+```
+
+**Objective-C**
+
+```objc
+[session end];
+```
+
+After making the call, wait for the session to call its delegate’s [assessmentSessionDidEnd:](aeassessmentsessiondelegate/assessmentsessiondidend%28__%29.md) method before reporting assessment completion to the user.
+
+During assessment, the session’s delegate might receive an [assessmentSession:wasInterruptedWithError:](aeassessmentsessiondelegate/assessmentsession%28__wasinterruptedwitherror_%29.md) callback to indicate a failure. If this happens, immediately stop the assessment, hide all sensitive content, and end the session. Because it might take time for your app to finalize the assessment, the session relies on your app to call the session’s [end](aeassessmentsession/end%28%29.md) method:
+
+**Swift**
+
+```swift
+func assessmentSession(_ session: AEAssessmentSession, wasInterruptedWithError error: Error) {
+    // Hide sensitive UI and optionally store assessment progress.
+
+    // End the session.
+    session.end()
+}
+```
+
+**Objective-C**
+
+```objc
+- (void)assessmentSession:(AEAssessmentSession *)session wasInterruptedWithError:(NSError *)error {
+    // Hide sensitive UI and optionally store assessment progress.
+
+    // End the session.
+    [session end];
+}
+```
+
+## Topics
+
+### Creating a session
+
+- [initWithConfiguration:](aeassessmentsession/init%28configuration_%29.md): Creates a new assessment session.
+
+### Managing session configuration
+
+- [updateToConfiguration:](aeassessmentsession/update%28to_%29.md): Changes the session to use the specified configuration.
+- [configuration](aeassessmentsession/configuration.md): The current configuration of the session.
+- [supportsMultipleParticipants](aeassessmentsession/supportsmultipleparticipants.md): A Boolean that indicates whether the current device or platform supports a configuration with one or more participant applications.
+- [supportsConfigurationUpdates](aeassessmentsession/supportsconfigurationupdates.md): A Boolean that indicates whether the current device or platform supports updating a session’s configuration after the session has begun.
+
+### Responding to session updates
+
+- [delegate](aeassessmentsession/delegate.md): A delegate to which the session provides state change updates.
+- [AEAssessmentSessionDelegate](aeassessmentsessiondelegate.md): An interface that the session uses to provide information about session state changes to a delegate.
+
+### Starting and stopping a session
+
+- [begin](aeassessmentsession/begin%28%29.md): Starts an assessment session.
+- [end](aeassessmentsession/end%28%29.md): Ends an assessment session.
+- [active](aeassessmentsession/isactive.md): A Boolean that indicates whether an assessment session is running.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobject-swift.class.md)
+
+## See Also
+
+### Sessions
+
+- [Preparing an educational assessment app for distribution](preparing-an-educational-assessment-app-for-distribution.md): Ensure your app maintains academic integrity by reviewing assessment practices and managing system capabilities.
+- [Build an Educational Assessment App](build-an-educational-assessment-app.md): Ensure the academic integrity of your assessment app by using Automatic Assessment Configuration.
+- [AEAssessmentConfiguration](aeassessmentconfiguration.md): Configuration information for an assessment session.

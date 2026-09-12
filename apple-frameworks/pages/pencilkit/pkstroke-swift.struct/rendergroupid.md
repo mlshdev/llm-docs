@@ -1,0 +1,26 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/pencilkit/pkstroke-swift.struct/rendergroupid](https://developer.apple.com/documentation/pencilkit/pkstroke-swift.struct/rendergroupid)
+
+# renderGroupID
+
+**Framework:** PencilKit  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+Strokes with certain inks (such as marker) can composite to look as if they were drawn while the previous stroke with the same ink was still wet. This UUID may be set to a single value for a run of strokes which should be rendered together in this manner.
+
+## Declaration
+
+```swift
+var renderGroupID: UUID? { get set }
+```
+
+## Mentioned In
+
+- [Controlling stroke rendering for animation and editing](../controlling-stroke-rendering-for-animation-and-editing.md)
+
+## See Also
+
+### Configuring rendering
+
+- [renderState](renderstate-swift.property.md): Contains information about the render details (such as particle positioning) of this stroke, which can be useful when manipulating the model in certain ways. For example, this may be set on substrokes returned by `substroke(range:)`. nil uses default rendering.
+- [PKStroke.RenderState](renderstate-swift.struct.md): A value that captures the render-time state of a stroke, such as grain texture position.

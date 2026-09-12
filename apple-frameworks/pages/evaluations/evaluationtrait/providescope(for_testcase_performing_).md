@@ -1,0 +1,27 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/evaluations/evaluationtrait/providescope(for:testcase:performing:)](https://developer.apple.com/documentation/evaluations/evaluationtrait/providescope(for:testcase:performing:))
+
+# provideScope(for:testCase:performing:)
+
+**Framework:** Evaluations  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+ · watchOS 27.0+ · Xcode 27.0+
+
+Runs the evaluation and makes its result available to the test body through an evaluation context.
+
+## Declaration
+
+```swift
+nonisolated(nonsending) func provideScope(for test: Test, testCase: Test.Case?, performing function: @Sendable () async throws -> Void) async throws
+```
+
+## Parameters
+
+- `test`: The test to which this trait is attached.
+- `testCase`: The specific test case being run, or `nil` when running the whole test.
+- `function`: The test body closure to invoke after the evaluation completes.
+
+<a id="discussion"></a>
+
+## Discussion
+
+The Swift Testing framework calls this method automatically when you attach the trait to a test. The evaluation runs first, the framework stores its result in [EvaluationContext](../evaluationcontext.md), and then the test body executes inside that context.

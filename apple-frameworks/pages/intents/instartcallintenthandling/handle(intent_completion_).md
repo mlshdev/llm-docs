@@ -1,0 +1,59 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/intents/instartcallintenthandling/handle(intent:completion:)](https://developer.apple.com/documentation/intents/instartcallintenthandling/handle(intent:completion:))
+
+# handle(intent:completion:) (Swift)
+
+**Framework:** Intents  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Handles handing off the call to your app.
+
+## Declaration
+
+```swift
+func handle(intent: INStartCallIntent, completion: @escaping @Sendable (INStartCallIntentResponse) -> Void)
+```
+
+```swift
+func handle(intent: INStartCallIntent) async -> INStartCallIntentResponse
+```
+
+## Parameters
+
+- `intent`: The intent object that contains details about the user’s request. The information in this object has already been resolved by the user.
+- `completion`: The handler block to execute with your response. You must execute this handler while implementing this method. This handler has no return value and takes the following parameter:
+
+  - **response**: The [INStartAudioCallIntentResponse](../instartaudiocallintentresponse.md) object that contains the status of the request. This parameter must not be `nil`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this method to transfer control of the call to your app. Perform any final checks and create a response object with the information needed to initiate the call in your app. Don’t try to initiate the call directly from this method. When your response object contains the [INStartAudioCallIntentResponseCode.continueInApp](../instartaudiocallintentresponsecode/continueinapp.md) code, Siri automatically launches your app and passes it the [NSUserActivity](../../foundation/nsuseractivity.md) object from your response object.
+
+# handleStartCall:completion: (Objective-C)
+
+**Framework:** Intents  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · macOS 12.0+ · visionOS 1.0+ · watchOS 6.0+
+
+Handles handing off the call to your app.
+
+## Declaration
+
+```objectivec
+- (void) handleStartCall:(INStartCallIntent *) intent completion:(void (^)(INStartCallIntentResponse *response)) completion;
+```
+
+## Parameters
+
+- `intent`: The intent object that contains details about the user’s request. The information in this object has already been resolved by the user.
+- `completion`: The handler block to execute with your response. You must execute this handler while implementing this method. This handler has no return value and takes the following parameter:
+
+  - **response**: The [INStartAudioCallIntentResponse](../instartaudiocallintentresponse.md) object that contains the status of the request. This parameter must not be `nil`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use this method to transfer control of the call to your app. Perform any final checks and create a response object with the information needed to initiate the call in your app. Don’t try to initiate the call directly from this method. When your response object contains the [INStartAudioCallIntentResponseCodeContinueInApp](../instartaudiocallintentresponsecode/continueinapp.md) code, Siri automatically launches your app and passes it the [NSUserActivity](../../foundation/nsuseractivity.md) object from your response object.

@@ -1,0 +1,79 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coregraphics/cgcontext/data](https://developer.apple.com/documentation/coregraphics/cgcontext/data)
+
+# data (Swift)
+
+**Framework:** Core Graphics  
+**Kind:** Instance Property  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.1+ · macOS 10.2+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Returns a pointer to the image data associated with a bitmap context.
+
+## Declaration
+
+```swift
+var data: UnsafeMutableRawPointer? { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If you provided the memory for the bitmap data, you can use this method to get that data pointer. If you passed `NULL` for the data pointer when creating your bitmap context, it is safe to get the data pointer in iOS 4.0 and later and macOS 10.6 and later only. In earlier versions of the operating system, passing `NULL` for the data parameter is not supported and may lead to crashes when attempting to access this data using this function.
+
+## See Also
+
+### Managing a Bitmap Graphics Context
+
+- [bitmapInfo](bitmapinfo.md): Obtains the bitmap information associated with a bitmap graphics context.
+- [alphaInfo](alphainfo.md): Returns the alpha information associated with the context, which indicates how a bitmap context handles the alpha component.
+- [bitsPerComponent](bitspercomponent.md): Returns the bits per component of a bitmap context.
+- [bitsPerPixel](bitsperpixel.md): Returns the bits per pixel of a bitmap context.
+- [bytesPerRow](bytesperrow.md): Returns the bytes per row of a bitmap context.
+- [colorSpace](colorspace.md): Returns the color space of a bitmap context.
+- [height](height.md): Returns the height in pixels of a bitmap context.
+- [width](width.md): Returns the width in pixels of a bitmap context.
+- [makeImage()](makeimage%28%29.md): Creates and returns a CGImage from the pixel data in a bitmap graphics context.
+
+# CGBitmapContextGetData (Objective-C)
+
+**Framework:** Core Graphics  
+**Kind:** Function  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.1+ · macOS 10.2+ · tvOS · visionOS 1.0+ · watchOS 2.0+
+
+Returns a pointer to the image data associated with a bitmap context.
+
+## Declaration
+
+```objectivec
+extern void *CGBitmapContextGetData(CGContextRef context);
+```
+
+## Parameters
+
+- `context`: The bitmap context to examine.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A pointer to the specified bitmap context’s image data, or `NULL` if the context is not a bitmap context.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+If you provided the memory for the bitmap data, you can use this method to get that data pointer. If you passed `NULL` for the data pointer when creating your bitmap context, it is safe to get the data pointer in iOS 4.0 and later and macOS 10.6 and later only. In earlier versions of the operating system, passing `NULL` for the data parameter is not supported and may lead to crashes when attempting to access this data using this function.
+
+## See Also
+
+### Managing a Bitmap Graphics Context
+
+- [CGBitmapContextGetBitmapInfo](bitmapinfo.md): Obtains the bitmap information associated with a bitmap graphics context.
+- [CGBitmapContextGetAlphaInfo](alphainfo.md): Returns the alpha information associated with the context, which indicates how a bitmap context handles the alpha component.
+- [CGBitmapContextGetBitsPerComponent](bitspercomponent.md): Returns the bits per component of a bitmap context.
+- [CGBitmapContextGetBitsPerPixel](bitsperpixel.md): Returns the bits per pixel of a bitmap context.
+- [CGBitmapContextGetBytesPerRow](bytesperrow.md): Returns the bytes per row of a bitmap context.
+- [CGBitmapContextGetColorSpace](colorspace.md): Returns the color space of a bitmap context.
+- [CGBitmapContextGetHeight](height.md): Returns the height in pixels of a bitmap context.
+- [CGBitmapContextGetWidth](width.md): Returns the width in pixels of a bitmap context.
+- [CGBitmapContextCreateImage](makeimage%28%29.md): Creates and returns a CGImage from the pixel data in a bitmap graphics context.

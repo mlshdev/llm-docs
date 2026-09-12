@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/float80/exponent-swift.property](https://developer.apple.com/documentation/swift/float80/exponent-swift.property)
+
+# exponent
+
+**Framework:** Swift  
+**Kind:** Instance Property  
+**Availability:** macOS 10.10+
+
+The exponent of the floating-point value.
+
+## Declaration
+
+```swift
+var exponent: Int { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+The *exponent* of a floating-point value is the integer part of the logarithm of the value’s magnitude. For a value `x` of a floating-point type `F`, the magnitude can be calculated as the following, where `**` is exponentiation:
+
+```swift
+x.significand * (F.radix ** x.exponent)
+```
+
+In the next example, `y` has a value of `21.5`, which is encoded as `1.34375 * 2 ** 4`. The significand of `y` is therefore 1.34375.
+
+```swift
+let y: Double = 21.5
+// y.significand == 1.34375
+// y.exponent == 4
+// Double.radix == 2
+```
+
+The `exponent` property has the following edge cases:
+
+- If `x` is zero, then `x.exponent` is `Int.min`.
+- If `x` is +/-infinity or NaN, then `x.exponent` is `Int.max`
+
+This property implements the `logB` operation defined by the [IEEE 754 specification](http://ieeexplore.ieee.org/servlet/opac?punumber=4610933).

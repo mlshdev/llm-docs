@@ -1,0 +1,65 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avcapturedevice/modelid](https://developer.apple.com/documentation/avfoundation/avcapturedevice/modelid)
+
+# modelID (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 14.0+ · macOS 10.7+ · tvOS 17.0+ · visionOS 2.1+
+
+A model identifier for the device.
+
+## Declaration
+
+```swift
+var modelID: String { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The value of this property is an identifier unique to all devices of the same model. The value is persistent across device connections and disconnections, and across different systems. For example, the model identifier of a built-in camera on two identical iPhone models is the same even though they’re different physical devices.
+
+## See Also
+
+### Identifying a device
+
+- [uniqueID](uniqueid.md): An identifier that uniquely identifies the device.
+- [localizedName](localizedname.md): A localized device name for display in the user interface.
+- [manufacturer](manufacturer.md): A human-readable string for the manufacturer of the device.
+- [deviceType](devicetype-swift.property.md): The type of device, such as a built-in microphone or wide-angle camera.
+- [AVCaptureDevice.DeviceType](devicetype-swift.struct.md): A structure that defines the device types the framework supports.
+- [position](position-swift.property.md): The physical position of the capture device hardware.
+- [AVCaptureDevice.Position](position-swift.enum.md): Constants that indicate the physical position of a capture device.
+
+# modelID (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 4.0+ · iPadOS 4.0+ · Mac Catalyst 14.0+ · macOS 10.7+ · tvOS 17.0+ · visionOS 2.1+
+
+A model identifier for the device.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly) NSString * modelID;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The value of this property is an identifier unique to all devices of the same model. The value is persistent across device connections and disconnections, and across different systems. For example, the model identifier of a built-in camera on two identical iPhone models is the same even though they’re different physical devices.
+
+## See Also
+
+### Identifying a device
+
+- [uniqueID](uniqueid.md): An identifier that uniquely identifies the device.
+- [localizedName](localizedname.md): A localized device name for display in the user interface.
+- [manufacturer](manufacturer.md): A human-readable string for the manufacturer of the device.
+- [deviceType](devicetype-swift.property.md): The type of device, such as a built-in microphone or wide-angle camera.
+- [AVCaptureDeviceType](devicetype-swift.struct.md): A structure that defines the device types the framework supports.
+- [position](position-swift.property.md): The physical position of the capture device hardware.
+- [AVCaptureDevicePosition](position-swift.enum.md): Constants that indicate the physical position of a capture device.

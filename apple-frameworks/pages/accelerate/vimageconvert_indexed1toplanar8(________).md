@@ -1,0 +1,87 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/vimageconvert_indexed1toplanar8(_:_:_:_:)](https://developer.apple.com/documentation/accelerate/vimageconvert_indexed1toplanar8(_:_:_:_:))
+
+# vImageConvert_Indexed1toPlanar8(\_:\_:\_:\_:) (Swift)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 7.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Converts an indexed 1-bit planar buffer to an 8-bit planar buffer.
+
+## Declaration
+
+```swift
+func vImageConvert_Indexed1toPlanar8(_ src: UnsafePointer<vImage_Buffer>, _ dest: UnsafePointer<vImage_Buffer>, _ colors: UnsafePointer<Pixel_8>, _ flags: vImage_Flags) -> vImage_Error
+```
+
+## Parameters
+
+- `src`: The source vImage buffer.
+
+  Because the source pixel format is smaller than a byte, there are multiple pixels in each byte of the data buffer. This function interprets pixels as big-endian order. That is, the low-indexed pixel is in the high-order bits of the byte. For example, the eight 1-bit pixels `0b11100011` map to the eight 8-bit pixels `[255, 255, 255, 0, 0, 0, 255, 255]`.
+
+  The conversion ignores any unused bits of the final byte of a row when a scanline ends in the middle of a byte.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the [height](vimage_buffer/height.md), [width](vimage_buffer/width.md), and [rowBytes](vimage_buffer/rowbytes.md) fields of this structure, and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+- `colors`: The lookup table.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes in [Data Types and Constants](data-types-and-constants.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+For each destination pixel, the conversion uses the lookup table value with the corresponding source pixel value as the index.
+
+## See Also
+
+### Converting from 1-bit buffers
+
+- [vImageConvert_Planar1toPlanar8(\_:\_:\_:)](vimageconvert_planar1toplanar8%28______%29.md): Converts a 1-bit planar buffer to an 8-bit planar buffer.
+
+# vImageConvert_Indexed1toPlanar8 (Objective-C)
+
+**Framework:** Accelerate  
+**Kind:** Function  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 7.0+ · visionOS 1.0+ · watchOS 1.0+
+
+Converts an indexed 1-bit planar buffer to an 8-bit planar buffer.
+
+## Declaration
+
+```objectivec
+vImage_Error vImageConvert_Indexed1toPlanar8(const vImage_Buffer *src, const vImage_Buffer *dest, const Pixel_8 colors[2], const vImage_Flags flags);
+```
+
+## Parameters
+
+- `src`: The source vImage buffer.
+
+  Because the source pixel format is smaller than a byte, there are multiple pixels in each byte of the data buffer. This function interprets pixels as big-endian order. That is, the low-indexed pixel is in the high-order bits of the byte. For example, the eight 1-bit pixels `0b11100011` map to the eight 8-bit pixels `[255, 255, 255, 0, 0, 0, 255, 255]`.
+
+  The conversion ignores any unused bits of the final byte of a row when a scanline ends in the middle of a byte.
+- `dest`: A pointer to the destination vImage buffer structure. You’re responsible for filling out the [height](vimage_buffer/height.md), [width](vimage_buffer/width.md), and [rowBytes](vimage_buffer/rowbytes.md) fields of this structure, and for allocating a data buffer of the appropriate size. On return, the data buffer this structure points to contains the destination image data. When you no longer need the data buffer, deallocate the memory to prevent memory leaks.
+- `colors`: The lookup table.
+- `flags`: The options to use when performing the operation. If your code implements its own tiling or its own multithreading, pass [kvImageDoNotTile](kvimagedonottile.md); otherwise, pass [kvImageNoFlags](kvimagenoflags.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+[kvImageNoError](kvimagenoerror.md); otherwise, one of the error codes in [Data Types and Constants](data-types-and-constants.md).
+
+<a id="Discussion"></a>
+
+## Discussion
+
+For each destination pixel, the conversion uses the lookup table value with the corresponding source pixel value as the index.
+
+## See Also
+
+### Converting from 1-bit buffers
+
+- [vImageConvert_Planar1toPlanar8](vimageconvert_planar1toplanar8%28______%29.md): Converts a 1-bit planar buffer to an 8-bit planar buffer.

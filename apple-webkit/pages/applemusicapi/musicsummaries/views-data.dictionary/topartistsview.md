@@ -1,0 +1,23 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applemusicapi/musicsummaries/views-data.dictionary/topartistsview](https://developer.apple.com/documentation/applemusicapi/musicsummaries/views-data.dictionary/topartistsview)
+
+# MusicSummaries.Views.TopArtistsView
+
+**Interface language:** Data
+
+**Framework:** Apple Music API  
+**Kind:** Object  
+**Availability:** Apple Music 1.0+
+
+The top artists that the user listened to for the given period.
+
+## Declaration
+
+```
+object MusicSummaries.Views.TopArtistsView
+```
+
+## Properties
+
+- `data` — `[ArtistPeriodSummaries]` (required): A paginated collection of resources in the view.
+- `href` — `string`: A relative location to fetch the view.
+- `next` — `string`: A relative cursor to fetch the next paginated collection of resources.

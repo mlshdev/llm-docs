@@ -1,0 +1,137 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/fileprovider/nsfileproviderreplicatedextension/createitem(basedon:fields:contents:options:request:completionhandler:)](https://developer.apple.com/documentation/fileprovider/nsfileproviderreplicatedextension/createitem(basedon:fields:contents:options:request:completionhandler:))
+
+# createItem(basedOn:fields:contents:options:request:completionHandler:) (Swift)
+
+**Framework:** File Provider  
+**Kind:** Instance Method  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 11.0+ · visionOS 1.0+
+
+Tells the file provider to create or import an item based on a template.
+
+## Declaration
+
+```swift
+func createItem(basedOn itemTemplate: NSFileProviderItem, fields: NSFileProviderItemFields, contents url: URL?, options: NSFileProviderCreateItemOptions = [], request: NSFileProviderRequest, completionHandler: @escaping (NSFileProviderItem?, NSFileProviderItemFields, Bool, (any Error)?) -> Void) -> Progress
+```
+
+## Parameters
+
+- `itemTemplate`: An object that defines the state of the new or imported item.
+- `fields`: The fields that you should apply to the new or imported item.
+- `url`: If the item is a file with the [contents](../nsfileprovideritemfields/contents.md) field set, this is the URL to the item’s content. Otherwise, it’s `nil`.
+- `options`: The item creation options.
+- `request`: An object that identifies the context of that request, such as the requesting app.
+- `completionHandler`: A block that you call after uploading the item to your remote storage. You pass the following parameters:
+
+  - **`createdItem`**: The newly created item.
+  - **`stillPendingFields`**: Any fields that you haven’t yet applied. If you can apply all the fields at once, pass an empty `NSFileProviderItemField` instance.
+  - **`shouldFetchContent`**: A Boolean value that indicates whether the system should fetch the item’s content from your remote storage.
+  - **`error`**: If an error occurs, this object contains information about the error; otherwise, it’s `nil`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A progress that tracks creating the item in your remote storage and uploading its content. The system automatically calls [cancel()](../../foundation/progress/cancel%28%29.md)  on the progress object when an error occurs.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The system calls this method when the user creates a new item or imports an item into the file provider. The system manages the local copy of the item. You’re responsible for syncing and saving the item to your remote storage.
+
+Implement this method to create an item in your remote storage that matches the template, and then call the callback handler.
+
+The `itemTemplate` parameter describes the item’s intended state, including:
+
+- **[filename](../nsfileprovideritemprotocol/filename.md)**: The item’s name.
+- **[contentType](../nsfileprovideritemprotocol/contenttype.md)**: The item’s type. The item can be a file, directory, symlink, or alias. [UTTypeFolder](../../uniformtypeidentifiers/uttypefolder.md), [UTTypeSymbolicLink](../../uniformtypeidentifiers/uttypesymboliclink.md), and [UTTypeAliasFile](../../uniformtypeidentifiers/uttypealiasfile.md) types typically need special handling.
+- **[parentItemIdentifier](../nsfileprovideritemprotocol/parentitemidentifier.md)**: The item’s location.
+
+The system sets the template’s [itemIdentifier](../nsfileprovideritemprotocol/itemidentifier.md) to a unique value and guarantees that it remains the same for the specified item. For example, the system can reuse the identifier to replay this method after a crash.
+
+In general, set the properties in your `createdItem` to match the `itemTemplate`. One exception is the [itemIdentifier](../nsfileprovideritemprotocol/itemidentifier.md) property; always provide your own identifier for the item. If you reuse an existing identifier, the system replaces the local copy of the old item with the new one.
+
+If the item is a document, fetch its contents from the `url` parameter. Otherwise, the `url` is `nil`. For symlinks, you can access the content using the template’s [symlinkTargetPath](../nsfileprovideritemprotocol/symlinktargetpath.md) parameter. For both symlinks and aliases, make sure to return the correct UTI for the item,  because the UTI can’t be inferred from the item’s filename.
+
+If you are reimporting an item and the system finds a local copy without any content, it sets the [mayAlreadyExist](../nsfileprovidercreateitemoptions/mayalreadyexist.md) option, and sets the `url` to nil. In this case, if you can’t match the item with an existing item from remote storage, pass `nil` as the completion handler’s `createdItem` parameter. The system then deletes the local copy of the item.
+
+If the attempt to create an item fails because the parent directory doesn’t exist, pass [NSFileProviderError.Code.noSuchItem](../nsfileprovidererror/code/nosuchitem.md) to the handler. The system attempts to create the parent directory, and then tries to create the item again.
+
+## See Also
+
+### Managing Items
+
+- [NSFileProviderCreateItemOptions](../nsfileprovidercreateitemoptions.md): Options for creating items.
+- [modifyItem(\_:baseVersion:changedFields:contents:options:request:completionHandler:)](modifyitem%28__baseversion_changedfields_contents_options_request_completionhandler_%29.md): Tells the file provider that an item’s content or metadata changed.
+- [NSFileProviderModifyItemOptions](../nsfileprovidermodifyitemoptions.md): Options for modifying items.
+- [deleteItem(identifier:baseVersion:options:request:completionHandler:)](deleteitem%28identifier_baseversion_options_request_completionhandler_%29.md): Tells the file provider to delete an item forever.
+- [NSFileProviderDeleteItemOptions](../nsfileproviderdeleteitemoptions.md): Options for deleting items.
+
+# createItemBasedOnTemplate:fields:contents:options:request:completionHandler: (Objective-C)
+
+**Framework:** File Provider  
+**Kind:** Instance Method  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · macOS 11.0+ · visionOS 1.0+
+
+Tells the file provider to create or import an item based on a template.
+
+## Declaration
+
+```objectivec
+- (NSProgress *) createItemBasedOnTemplate:(NSFileProviderItem) itemTemplate fields:(NSFileProviderItemFields) fields contents:(NSURL *) url options:(NSFileProviderCreateItemOptions) options request:(NSFileProviderRequest *) request completionHandler:(void (^)(NSFileProviderItem createdItem, NSFileProviderItemFields stillPendingFields, BOOL shouldFetchContent, NSError *error)) completionHandler;
+```
+
+## Parameters
+
+- `itemTemplate`: An object that defines the state of the new or imported item.
+- `fields`: The fields that you should apply to the new or imported item.
+- `url`: If the item is a file with the [NSFileProviderItemContents](../nsfileprovideritemfields/contents.md) field set, this is the URL to the item’s content. Otherwise, it’s `nil`.
+- `options`: The item creation options.
+- `request`: An object that identifies the context of that request, such as the requesting app.
+- `completionHandler`: A block that you call after uploading the item to your remote storage. You pass the following parameters:
+
+  - **`createdItem`**: The newly created item.
+  - **`stillPendingFields`**: Any fields that you haven’t yet applied. If you can apply all the fields at once, pass an empty `NSFileProviderItemField` instance.
+  - **`shouldFetchContent`**: A Boolean value that indicates whether the system should fetch the item’s content from your remote storage.
+  - **`error`**: If an error occurs, this object contains information about the error; otherwise, it’s `nil`.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A progress that tracks creating the item in your remote storage and uploading its content. The system automatically calls [cancel](../../foundation/progress/cancel%28%29.md)  on the progress object when an error occurs.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The system calls this method when the user creates a new item or imports an item into the file provider. The system manages the local copy of the item. You’re responsible for syncing and saving the item to your remote storage.
+
+Implement this method to create an item in your remote storage that matches the template, and then call the callback handler.
+
+The `itemTemplate` parameter describes the item’s intended state, including:
+
+- **[filename](../nsfileprovideritemprotocol/filename.md)**: The item’s name.
+- **[contentType](../nsfileprovideritemprotocol/contenttype.md)**: The item’s type. The item can be a file, directory, symlink, or alias. [UTTypeFolder](../../uniformtypeidentifiers/uttypefolder.md), [UTTypeSymbolicLink](../../uniformtypeidentifiers/uttypesymboliclink.md), and [UTTypeAliasFile](../../uniformtypeidentifiers/uttypealiasfile.md) types typically need special handling.
+- **[parentItemIdentifier](../nsfileprovideritemprotocol/parentitemidentifier.md)**: The item’s location.
+
+The system sets the template’s [itemIdentifier](../nsfileprovideritemprotocol/itemidentifier.md) to a unique value and guarantees that it remains the same for the specified item. For example, the system can reuse the identifier to replay this method after a crash.
+
+In general, set the properties in your `createdItem` to match the `itemTemplate`. One exception is the [itemIdentifier](../nsfileprovideritemprotocol/itemidentifier.md) property; always provide your own identifier for the item. If you reuse an existing identifier, the system replaces the local copy of the old item with the new one.
+
+If the item is a document, fetch its contents from the `url` parameter. Otherwise, the `url` is `nil`. For symlinks, you can access the content using the template’s [symlinkTargetPath](../nsfileprovideritemprotocol/symlinktargetpath.md) parameter. For both symlinks and aliases, make sure to return the correct UTI for the item,  because the UTI can’t be inferred from the item’s filename.
+
+If you are reimporting an item and the system finds a local copy without any content, it sets the [NSFileProviderCreateItemMayAlreadyExist](../nsfileprovidercreateitemoptions/mayalreadyexist.md) option, and sets the `url` to nil. In this case, if you can’t match the item with an existing item from remote storage, pass `nil` as the completion handler’s `createdItem` parameter. The system then deletes the local copy of the item.
+
+If the attempt to create an item fails because the parent directory doesn’t exist, pass [NSFileProviderErrorNoSuchItem](../nsfileprovidererror/code/nosuchitem.md) to the handler. The system attempts to create the parent directory, and then tries to create the item again.
+
+## See Also
+
+### Managing Items
+
+- [NSFileProviderCreateItemOptions](../nsfileprovidercreateitemoptions.md): Options for creating items.
+- [modifyItem:baseVersion:changedFields:contents:options:request:completionHandler:](modifyitem%28__baseversion_changedfields_contents_options_request_completionhandler_%29.md): Tells the file provider that an item’s content or metadata changed.
+- [NSFileProviderModifyItemOptions](../nsfileprovidermodifyitemoptions.md): Options for modifying items.
+- [deleteItemWithIdentifier:baseVersion:options:request:completionHandler:](deleteitem%28identifier_baseversion_options_request_completionhandler_%29.md): Tells the file provider to delete an item forever.
+- [NSFileProviderDeleteItemOptions](../nsfileproviderdeleteitemoptions.md): Options for deleting items.

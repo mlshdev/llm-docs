@@ -1,0 +1,57 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/videotoolbox/vtcompressionsessionencodemultiimageframe(_:taggedbuffers:presentationtimestamp:duration:frameproperties:infoflagsout:outputhandler:)](https://developer.apple.com/documentation/videotoolbox/vtcompressionsessionencodemultiimageframe(_:taggedbuffers:presentationtimestamp:duration:frameproperties:infoflagsout:outputhandler:))
+
+# VTCompressionSessionEncodeMultiImageFrame(\_:taggedBuffers:presentationTimeStamp:duration:frameProperties:infoFlagsOut:outputHandler:)
+
+**Framework:** Video Toolbox  
+**Kind:** Function  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · visionOS 1.0+
+
+Passes a multi-image frame to a compression session for encoding and provides a callback to handle the output.
+
+## Declaration
+
+```swift
+func VTCompressionSessionEncodeMultiImageFrame(_ session: VTCompressionSession, taggedBuffers: [CMTaggedBuffer], presentationTimeStamp: CMTime, duration: CMTime, frameProperties: CFDictionary?, infoFlagsOut: UnsafeMutablePointer<VTEncodeInfoFlags>?, outputHandler: @escaping VTCompressionOutputHandler) -> OSStatus
+```
+
+## Parameters
+
+- `session`: The compression session.
+- `taggedBuffers`: An array of [CMTaggedBuffer](../coremedia/cmtaggedbuffer.md) structures that contains the multiple images for a video frame to compress.
+- `presentationTimeStamp`: The presentation timestamp for this frame to attach to the sample buffer. Each presentation timestamp that you pass to a session must be greater than the previous one.
+- `duration`: The presentation duration for this frame to attach to the sample buffer. Pass a value of [invalid](../coremedia/cmtime/invalid.md) if you don’t have duration information.
+- `frameProperties`: A dictionary that specifies additional properties for encoding this frame. Some session properties may also change between frames, which affect subsequently encoded frames.
+- `infoFlagsOut`: Points to a [VTEncodeInfoFlags](vtencodeinfoflags.md) value to receive information about the encode operation.
+
+  The system sets the [asynchronous](vtencodeinfoflags/asynchronous.md) flag if the encode runs asynchronously.
+
+  The system sets the [frameDropped](vtencodeinfoflags/framedropped.md) flag if the encoding process dropped a frame (synchronously).
+
+  Pass `NULL` if you don’t want to receive this information.
+- `outputHandler`: A callback the system invokes when it completes encoding a frame.
+
+  The system may invoke this callback asynchronously, on a different thread from the one that calls [VTCompressionSessionEncodeMultiImageFrame(\_:taggedBuffers:presentationTimeStamp:duration:frameProperties:infoFlagsOut:outputHandler:)](vtcompressionsessionencodemultiimageframe%28__taggedbuffers_presentationtimestamp_duration_frameproperties_infoflagsout_outputhandler_%29.md).
+
+<a id="return-value"></a>
+
+## Return Value
+
+An `OSStatus` value that indicates the result of the operation.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The system doesn’t guarantee that encoded frames be output before the function returns. The session and encoder retain the image buffer as long as necessary.
+
+You can’t call this function on a session created with a [VTCompressionOutputCallback](vtcompressionoutputcallback.md).
+
+> **Important**
+
+>  Don’t modify the pixel data after making this call.
+
+## See Also
+
+### Encoding Multi-Image Frames
+
+- [VTIsStereoMVHEVCEncodeSupported()](vtisstereomvhevcencodesupported%28%29.md): Returns a Boolean value that indicates whether the system supports MV-HEVC encoding.

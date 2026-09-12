@@ -1,0 +1,59 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iousbhost/iousbhostdevicepropertykey/containerid](https://developer.apple.com/documentation/iousbhost/iousbhostdevicepropertykey/containerid)
+
+# containerID (Swift)
+
+**Framework:** IOUSBHost  
+**Kind:** Type Property  
+**Availability:** Mac Catalyst 14.0+ · macOS 10.15+
+
+The device’s container ID.
+
+## Declaration
+
+```swift
+static let containerID: IOUSBHostDevicePropertyKey
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+See USB 3.2, 9.6.2.3 for more information.
+
+## See Also
+
+### Properties
+
+- [currentConfiguration](currentconfiguration.md): The device’s current configuration value.
+- [serialNumberString](serialnumberstring.md): The device’s serial number as a string.
+- [vendorString](vendorstring.md): The device’s vendor name.
+- [IOUSBHostPropertyKey](../iousbhostpropertykey.md): Properties that the USB host device and interface classes share.
+
+# IOUSBHostDevicePropertyKeyContainerID (Objective-C)
+
+**Framework:** IOUSBHost  
+**Kind:** Global Variable  
+**Availability:** Mac Catalyst 14.0+ · macOS 10.15+
+
+The device’s container ID.
+
+## Declaration
+
+```objectivec
+extern IOUSBHostDevicePropertyKey IOUSBHostDevicePropertyKeyContainerID;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+See USB 3.2, 9.6.2.3 for more information.
+
+## See Also
+
+### Properties
+
+- [IOUSBHostDevicePropertyKeyCurrentConfiguration](currentconfiguration.md): The device’s current configuration value.
+- [IOUSBHostDevicePropertyKeySerialNumberString](serialnumberstring.md): The device’s serial number as a string.
+- [IOUSBHostDevicePropertyKeyVendorString](vendorstring.md): The device’s vendor name.
+- [IOUSBHostPropertyKey](../iousbhostpropertykey.md): Properties that the USB host device and interface classes share.

@@ -1,6 +1,6 @@
 # Source-pinned LLM documentation
 
-This repository converts documentation from immutable upstream commits into deterministic, LLM-friendly Markdown. Projects track stable releases unless explicitly documented otherwise. Each upstream has its own directory with normalized pages, `llms.txt`, `llms-full.txt`, a provenance manifest, and its upstream license.
+This repository converts documentation from immutable upstream commits or content-addressed public catalogs into LLM-friendly Markdown. GitHub projects track stable releases unless explicitly documented otherwise. Each upstream has its own directory with normalized pages, `llms.txt`, `llms-full.txt`, a provenance manifest, and its upstream license or copyright notice.
 
 ## Included projects
 
@@ -23,17 +23,26 @@ This repository converts documentation from immutable upstream commits into dete
 - [Bun](https://github.com/oven-sh/bun)
 - [Trigger.dev](https://github.com/triggerdotdev/trigger.dev)
 - [aria2](https://github.com/aria2/aria2)
+- [Apple Swift](https://developer.apple.com/documentation/swift)
+- [Apple SwiftUI](https://developer.apple.com/documentation/swiftui)
+- [Apple WebKit and Safari](https://developer.apple.com/documentation/webkit)
+- [Apple Xcode and developer tools](https://developer.apple.com/documentation/xcode)
+- [Apple iOS and iPadOS](https://developer.apple.com/ios/)
+- [Apple macOS](https://developer.apple.com/macos/)
+- [Apple watchOS](https://developer.apple.com/watchos/)
+- [Apple cross-platform frameworks](https://developer.apple.com/documentation/technologies)
 
 ## Release policy
 
 - Drafts and prereleases are ignored.
-- The GitHub Actions workflow polls public GitHub releases every 15 minutes because GitHub cannot subscribe one repository directly to release events from unrelated repositories.
+- The GitHub Actions workflow polls public GitHub releases once daily at 20:00 Europe/Warsaw because GitHub cannot subscribe one repository directly to release events from unrelated repositories.
 - Release source is downloaded from immutable tags and recorded with the resolved commit SHA in `sources.lock.json`.
 - Docker tracks the latest `docker/docs` `main` commit because that repository does not publish current GitHub releases or release tags.
 - n8n tracks the latest `n8n-io/n8n-docs` `main` commit because that repository does not publish releases or tags.
 - FFmpeg and SearXNG track their latest `master` commits because they do not publish stable GitHub releases.
 - NetBird public documentation is maintained in the separate, untagged `netbirdio/docs` repository. A NetBird update is accepted only after that repository contains the exact `Update API pages with <tag>` commit. Until then, the previous complete product/docs pair remains published.
-- Generated files are committed so GitHub, raw-content clients, and local tools all expose the same corpus. The same files are published through GitHub Pages.
+- Apple exposes a live DocC catalog rather than release tags or an immutable repository. The generator checks the public index and render JSON endpoints daily, partitions every indexed page into one non-overlapping catalog, and pins each catalog with two SHA-256 digests: a `snapshotDigest` over the catalog inventory, which a daily run re-derives from a few hundred index documents, and a `contentDigest` over the exact render payload bytes every published page was converted from, which the build that converted them computes. The daily check therefore costs hundreds of requests rather than one per page, while each committed snapshot still names the bytes it came from. A captured Apple snapshot remains committed when the live endpoint changes, but Apple does not provide historical render JSON from which an old snapshot can be regenerated.
+- Generated files are committed so GitHub, raw-content clients, and local tools all expose the same corpus. GitHub Pages publishes the Apple corpus volumes without duplicating the normalized page tree, keeping the deployment within GitHub's site-size limit.
 
 ## Upstream drift policy
 
@@ -76,12 +85,15 @@ llms-full.txt
 <project>/
   llms.txt
   llms-full.txt
+  llms-full.001.txt  # present when the corpus requires volumes
   manifest.json
   LICENSE.upstream
   pages/
 ```
 
-Project directories are named after the identifiers in `config/sources.json`: `traefik`, `netbird`, `podman`, `docker`, `container`, `n8n`, `grafana`, `victoriametrics`, `victorialogs`, `victoriametrics-datasource`, `victorialogs-datasource`, `vmestimator`, `zitadel`, `ffmpeg`, `yt-dlp`, `searxng`, `bun`, `trigger-dev`, and `aria2`.
+Project directories are named after the identifiers in `config/sources.json`: `traefik`, `netbird`, `podman`, `docker`, `container`, `n8n`, `grafana`, `victoriametrics`, `victorialogs`, `victoriametrics-datasource`, `victorialogs-datasource`, `vmestimator`, `zitadel`, `ffmpeg`, `yt-dlp`, `searxng`, `bun`, `trigger-dev`, `aria2`, `apple-swift`, `apple-swiftui`, `apple-webkit`, `apple-xcode`, `apple-ios`, `apple-macos`, `apple-watchos`, and `apple-frameworks`.
+
+Corpora below GitHub's 100 MiB file limit use one `llms-full.txt`. Larger corpora keep `llms-full.txt` as an ordered volume index and store the complete text in numbered files capped at 45 MiB.
 
 ## Source-specific conversion
 
@@ -101,6 +113,7 @@ Project directories are named after the identifiers in `config/sources.json`: `t
 - Bun follows the checked-in Mintlify MDX documentation tree, inlines documentation partials, converts presentation components to Markdown, and resolves published links to `https://bun.com/docs`.
 - Trigger.dev publishes the pages its `docs/docs.json` navigation declares, renders each API reference page from the OpenAPI operation the page names in front matter, inlines snippets with the attributes they are rendered with, and resolves published links to `https://trigger.dev/docs`.
 - aria2 converts the release-pinned English Sphinx sources for the aria2c manual, project guide, libaria2 reference, and technical notes without executing Sphinx or upstream Python. The libaria2 API is generated deterministically from the pinned public C++ header.
+- Apple walks every internal page in the public DocC framework indexes and converts render JSON directly to Markdown without a browser. The eight catalogs cover Swift, SwiftUI, WebKit and Safari, Xcode and developer tools, platform-exclusive iOS/macOS/watchOS frameworks, and every remaining cross-platform, tvOS, visionOS, DriverKit, and hardware framework without duplicating pages between catalogs. Same-path Swift, Objective-C, and data variants are materialized from DocC JSON patches and combined in one page. Declarations, availability, prose, lists, tables, asides, REST schemas, relationships, topic groups, media, samples, and stable anchors are preserved; internal links stay local within a catalog and cross-catalog links resolve to Apple.
 
 ## Local commands
 
@@ -111,7 +124,7 @@ bun run check
 bun run site
 ```
 
-`bun run update` contacts the GitHub API and downloads source archives only when stable pins change, and writes `build-report.json` describing anything it had to hold back. `bun run build` rebuilds every project from `sources.lock.json`. `bun run src/cli.ts report` renders the last report as the tracking-issue body.
+`bun run update` contacts the GitHub API, checks Apple's DocC catalogs, downloads source archives only when stable pins change, and writes `build-report.json` describing anything it had to hold back. `bun run build` rebuilds commit-backed projects from `sources.lock.json` and retains already-captured DocC projects because Apple does not serve historical snapshots. `bun run src/cli.ts report` renders the last report as the tracking-issue body. Set `DOCC_CONCURRENCY` to control concurrent Apple reads, `DOCC_CACHE_DIR` to retain render JSON between interrupted runs, `DOCC_CACHE_TTL` to control cache freshness in seconds, `DOCC_REFRESH=1` to bypass the cache, or `DOCC_REBUILD=1` to rebuild a captured catalog when its exact render JSON remains cached.
 
 ## Adding a project
 

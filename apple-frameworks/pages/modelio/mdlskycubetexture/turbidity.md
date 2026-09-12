@@ -1,0 +1,61 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/modelio/mdlskycubetexture/turbidity](https://developer.apple.com/documentation/modelio/mdlskycubetexture/turbidity)
+
+# turbidity (Swift)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The cloudiness or haziness of the simulated sky.
+
+## Declaration
+
+```swift
+var turbidity: Float { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+A value of `0.0` simulates a clear sky—that is, the sun has little effect on the color of the sky around it. Values closer to `1.0` simulate increasing amounts of dust and moisture in the sky, causing the sun’s color to spread across the atmosphere.
+
+## See Also
+
+### Working with Sky Simulation Parameters
+
+- [sunElevation](sunelevation.md): The sun’s position in the simulated sky.
+- [upperAtmosphereScattering](upperatmospherescattering.md): A factor that influences the color of the simulated sky.
+- [groundAlbedo](groundalbedo.md): A factor that influences the clarity of the simulated sky.
+- [groundColor](groundcolor.md): The color of the simulated ground.
+- [horizonElevation](horizonelevation.md): The angle, in radians relative to center, below which to render the ground color.
+
+# turbidity (Objective-C)
+
+**Framework:** Model I/O  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+
+
+The cloudiness or haziness of the simulated sky.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, assign) float turbidity;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+A value of `0.0` simulates a clear sky—that is, the sun has little effect on the color of the sky around it. Values closer to `1.0` simulate increasing amounts of dust and moisture in the sky, causing the sun’s color to spread across the atmosphere.
+
+## See Also
+
+### Working with Sky Simulation Parameters
+
+- [sunElevation](sunelevation.md): The sun’s position in the simulated sky.
+- [upperAtmosphereScattering](upperatmospherescattering.md): A factor that influences the color of the simulated sky.
+- [groundAlbedo](groundalbedo.md): A factor that influences the clarity of the simulated sky.
+- [groundColor](groundcolor.md): The color of the simulated ground.
+- [horizonElevation](horizonelevation.md): The angle, in radians relative to center, below which to render the ground color.

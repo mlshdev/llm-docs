@@ -1,0 +1,60 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/gamecenterachievementlocalizationv2](https://developer.apple.com/documentation/appstoreconnectapi/gamecenterachievementlocalizationv2)
+
+# GameCenterAchievementLocalizationV2
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 3.6+
+
+The data structure that represents a Game Center achievement localization v2 resource.
+
+## Declaration
+
+```
+object GameCenterAchievementLocalizationV2
+```
+
+## Properties
+
+- `attributes` — `GameCenterAchievementLocalizationV2.Attributes`:
+- `id` — `string` (required):
+- `links` — `ResourceLinks`:
+- `relationships` — `GameCenterAchievementLocalizationV2.Relationships`:
+- `type` — `string` (required): **Allowed values:** `gameCenterAchievementLocalizations`
+
+<a id="overview"></a>
+
+## Overview
+
+- attributes:
+- id:
+- links:
+- relationships:
+- type:
+
+## Topics
+
+### Dictionaries
+
+- [GameCenterAchievementLocalizationV2.Attributes](gamecenterachievementlocalizationv2/attributes-data.dictionary.md): Attributes that describe a Game Center achievement localization v2 resource.
+- [GameCenterAchievementLocalizationV2.Relationships](gamecenterachievementlocalizationv2/relationships-data.dictionary.md): The relationships you include in the request and those you can operate on.
+
+## See Also
+
+### Objects
+
+- [GameCenterAchievementLocalizationV2CreateRequest](gamecenterachievementlocalizationv2createrequest.md): The request body you use to create a Game Center achievement localization v2.
+- [GameCenterAchievementLocalizationV2Response](gamecenterachievementlocalizationv2response.md): A response that contains a single Game Center achievement localization v2 resource.
+- [GameCenterAchievementLocalizationV2UpdateRequest](gamecenterachievementlocalizationv2updaterequest.md): The request body you use to update a Game Center achievement localization v2.
+- [GameCenterAchievementLocalizationsV2Response](gamecenterachievementlocalizationsv2response.md): A response that contains a single Game Center achievement localization v2 resource.
+- [GameCenterAchievementLocalizationV2ImageLinkageResponse](gamecenterachievementlocalizationv2imagelinkageresponse.md): A response that contains a single Game Center achievement localization v2 image linkage resource.
+- [GameCenterAchievementLocalization](gamecenterachievementlocalization.md): Deprecated. The localized name, description, and badge image for a Game Center achievement in a specific language.
+- [GameCenterAchievementLocalizationCreateRequest](gamecenterachievementlocalizationcreaterequest.md): Deprecated. The request body you use to create a Game Center achievement localization.
+- [GameCenterAchievementLocalizationResponse](gamecenterachievementlocalizationresponse.md): Deprecated. The response body for endpoints that create, read, or modify a single Game Center achievement localization.
+- [GameCenterAchievementLocalizationUpdateRequest](gamecenterachievementlocalizationupdaterequest.md): Deprecated. The request body you use to update a achievement.
+- [GameCenterAchievementLocalizationsResponse](gamecenterachievementlocalizationsresponse.md): Deprecated. The response body for endpoints that list Game Center achievement localizations.
+- [GameCenterAchievementLocalizationGameCenterAchievementImageLinkageResponse](gamecenterachievementlocalizationgamecenterachievementimagelinkageresponse.md): Deprecated.
+- [GameCenterAchievementLocalizationGameCenterAchievementLinkageResponse](gamecenterachievementlocalizationgamecenterachievementlinkageresponse.md): Deprecated.
+- [GameCenterAchievementLocalizationsLinkagesResponse](gamecenterachievementlocalizationslinkagesresponse.md): Deprecated.

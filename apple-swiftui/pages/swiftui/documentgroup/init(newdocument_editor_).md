@@ -1,0 +1,51 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/documentgroup/init(newdocument:editor:)](https://developer.apple.com/documentation/swiftui/documentgroup/init(newdocument:editor:))
+
+# init(newDocument:editor:)
+
+**Framework:** SwiftUI  
+**Kind:** Initializer  
+**Availability:** iOS 14.0+ (deprecated in 27.0) · iPadOS 14.0+ (deprecated in 27.0) · Mac Catalyst 14.0+ (deprecated in 27.0) · macOS 11.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+
+Creates a document group for creating and editing file documents.
+
+> Conform your type to Document instead.
+
+## Declaration
+
+```swift
+@preconcurrency nonisolated init(newDocument: @autoclosure @escaping @Sendable () -> Document, @ContentBuilder editor: @escaping (FileDocumentConfiguration<Document>) -> Content)
+```
+
+## Parameters
+
+- `newDocument`: The initial document to use when a user creates a new document.
+- `editor`: The editing UI for the provided document.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use a [DocumentGroup](../documentgroup.md) scene to tell SwiftUI what kinds of documents your app can open when you declare your app using the [App](../app.md) protocol. You initialize a document group scene by passing in the document model and a view capable of displaying the document’s contents. The document types you supply to [DocumentGroup](../documentgroup.md) must conform to [FileDocument](../filedocument.md) or [ReferenceFileDocument](../referencefiledocument.md). SwiftUI uses the model to add document support to your app. In macOS this includes document-based menu support including the ability to open multiple documents. On iOS this includes a document browser that can navigate to the documents stored on the file system and multiwindow support:
+
+```swift
+@main
+struct MyApp: App {
+    var body: some Scene {
+        DocumentGroup(newDocument: TextFile()) { file in
+            ContentView(document: file.$document)
+        }
+    }
+}
+```
+
+The document types you supply to [DocumentGroup](../documentgroup.md) must conform to [FileDocument](../filedocument.md) or [ReferenceFileDocument](../referencefiledocument.md). Your app can support multiple document types by adding additional [DocumentGroup](../documentgroup.md) scenes.
+
+With the `newDocument:` initializer, SwiftUI considers your app as an editor of documents of given content types (`FileDocument.writableContentTypes`). On macOS, this adds a File \> New menu item and enables the standard document commands.
+
+On iOS, it shows a New Document button in the document browser. The [isEditable](../filedocumentconfiguration/iseditable.md) property is `true`. Use the `DocumentGroup/init(viewing:editor:)` initializer instead if your app should only display documents without modifying them.
+
+## See Also
+
+### Deprecated
+
+- [init(viewing:viewer:)](init%28viewing_viewer_%29.md): Deprecated. Conforms when `Document` conforms to `FileDocument` and `Content` conforms to `View`. Creates a document group capable of viewing file documents.

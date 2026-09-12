@@ -1,0 +1,67 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applepayontheweb/applepayshippingmethodupdate](https://developer.apple.com/documentation/applepayontheweb/applepayshippingmethodupdate)
+
+# ApplePayShippingMethodUpdate
+
+**Interface language:** Data
+
+**Framework:** Apple Pay on the Web  
+**Kind:** Structure  
+**Availability:** Safari Desktop 10.0+ · Safari Mobile 10.0+
+
+Updated transaction details that result from a change in shipping method.
+
+## Declaration
+
+```
+dictionary ApplePayShippingMethodUpdate {
+	required ApplePayLineItem newTotal;
+	sequence <ApplePayLineItem> newLineItems;
+	sequence <ApplePayPaymentTokenContext> newMultiTokenContexts;
+	ApplePayAutomaticReloadPaymentRequest newAutomaticReloadPaymentRequest;
+	ApplePayRecurringPaymentRequest newRecurringPaymentRequest;
+	ApplePayDeferredPaymentRequest newDeferredPaymentRequest;
+	sequence <ApplePayShippingMethod> newShippingMethods;
+};
+```
+
+## Mentioned In
+
+- [Apple Pay on the Web Version 3 Release Notes](apple-pay-on-the-web-version-3-release-notes.md)
+
+<a id="overview"></a>
+
+## Overview
+
+Provide updated transaction details if the user changes the shipping method in the payment sheet. Recalculate the total for the payment, because it may change as a result of shipping method changes. The [newTotal](applepayshippingcontactupdate/newtotal.md) value is required.
+
+## Topics
+
+### Updating shipping method properties
+
+- [newLineItems](applepayshippingmethodupdate/newlineitems.md): An optional list of updated line items.
+- [newTotal](applepayshippingmethodupdate/newtotal.md): The new total that results from a change in the shipping method.
+- [newShippingMethods](applepayshippingmethodupdate/newshippingmethods.md): An updated list of new shipping methods.
+
+### Updating automatic reload payments
+
+- [newAutomaticReloadPaymentRequest](applepayshippingmethodupdate/newautomaticreloadpaymentrequest.md): An updated request for an automatic reload payment.
+
+### Updating multitoken or multimerchant payment
+
+- [newMultiTokenContexts](applepayshippingmethodupdate/newmultitokencontexts.md): An array of updated multitoken contexts for a multimerchant payment request.
+
+### Updating recurring payments
+
+- [newRecurringPaymentRequest](applepayshippingmethodupdate/newrecurringpaymentrequest.md): An updated request for a recurring payment.
+
+### Updating deferred payments
+
+- [newDeferredPaymentRequest](applepayshippingmethodupdate/newdeferredpaymentrequest.md): An updated request for a deferred payment.
+
+## See Also
+
+### Handling shipping method updates
+
+- [onshippingmethodselected](applepaysession/onshippingmethodselected.md): An event handler to call when the user selects a shipping method.
+- [completeShippingMethodSelection](applepaysession/completeshippingmethodselection.md): Completes the selection of a shipping method with an update.
+- [ApplePayShippingMethodSelectedEvent](applepayshippingmethodselectedevent.md): An event object that contains the shipping method.

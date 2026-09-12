@@ -1,0 +1,115 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreimage/cifilter-swift.class/smoothlineargradient()](https://developer.apple.com/documentation/coreimage/cifilter-swift.class/smoothlineargradient())
+
+# smoothLinearGradient() (Swift)
+
+**Framework:** Core Image  
+**Kind:** Type Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
+
+Generates a gradient that blends colors along a linear axis between two defined endpoints.
+
+## Declaration
+
+```swift
+class func smoothLinearGradient() -> any CIFilter & CISmoothLinearGradient
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+The generated image.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method generates a smooth linear-gradient image. The effect creates a gradient by gradually blending colors between `point0` and `point1` using the sigmoid curve function.
+
+The smooth linear-gradient filter uses the following properties:
+
+- **`point0`**: A [CGPoint](../../corefoundation/cgpoint.md) representing the starting position of the gradient.
+- **`point1`**: A [CGPoint](../../corefoundation/cgpoint.md) representing the ending position of the gradient.
+- **`color0`**: A [CIColor](../cicolor.md) representing the first color used in the gradient.
+- **`color1`**: A [CIColor](../cicolor.md) representing the second color used in the gradient.
+
+The following code creates a filter that generates a gradient image:
+
+```swift
+func smoothLinear() -> CIImage {
+    let smoothLinearGradient = CIFilter.smoothLinearGradient()
+    smoothLinearGradient.point0 = CGPoint(x: 0, y: 0)
+    smoothLinearGradient.point1 = CGPoint(x: 200, y: 200)
+    smoothLinearGradient.color0 = CIColor(red: 0/255, green: 112/255, blue: 201/255)
+    smoothLinearGradient.color1 = CIColor(red: 216/255, green: 232/255, blue: 146/255)
+    return smoothLinearGradient.outputImage!
+}
+```
+
+![An image that gradually changes in color from yellow in the bottom left corner to light blue in the top right corner.](https://developer.apple.com/images/com.apple.coreimage/media-3558802@2x.png)
+
+## See Also
+
+### Filters
+
+- [gaussianGradient()](gaussiangradient%28%29.md): Generates a gradient that varies from one color to another using a Gaussian distribution.
+- [hueSaturationValueGradient()](huesaturationvaluegradient%28%29.md): Generates a gradient representing a specified color space.
+- [linearGradient()](lineargradient%28%29.md): Generates a color gradient that varies along a linear axis between two defined endpoints.
+- [radialGradient()](radialgradient%28%29.md): Generates a gradient that varies radially between two circles having the same center.
+
+# smoothLinearGradientFilter (Objective-C)
+
+**Framework:** Core Image  
+**Kind:** Type Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.1+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+
+
+Generates a gradient that blends colors along a linear axis between two defined endpoints.
+
+## Declaration
+
+```objectivec
++ (CIFilter<CISmoothLinearGradient> *) smoothLinearGradientFilter;
+```
+
+<a id="return-value"></a>
+
+## Return Value
+
+The generated image.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+This method generates a smooth linear-gradient image. The effect creates a gradient by gradually blending colors between `point0` and `point1` using the sigmoid curve function.
+
+The smooth linear-gradient filter uses the following properties:
+
+- **`point0`**: A [CGPoint](../../corefoundation/cgpoint.md) representing the starting position of the gradient.
+- **`point1`**: A [CGPoint](../../corefoundation/cgpoint.md) representing the ending position of the gradient.
+- **`color0`**: A [CIColor](../cicolor.md) representing the first color used in the gradient.
+- **`color1`**: A [CIColor](../cicolor.md) representing the second color used in the gradient.
+
+The following code creates a filter that generates a gradient image:
+
+```swift
+func smoothLinear() -> CIImage {
+    let smoothLinearGradient = CIFilter.smoothLinearGradient()
+    smoothLinearGradient.point0 = CGPoint(x: 0, y: 0)
+    smoothLinearGradient.point1 = CGPoint(x: 200, y: 200)
+    smoothLinearGradient.color0 = CIColor(red: 0/255, green: 112/255, blue: 201/255)
+    smoothLinearGradient.color1 = CIColor(red: 216/255, green: 232/255, blue: 146/255)
+    return smoothLinearGradient.outputImage!
+}
+```
+
+![An image that gradually changes in color from yellow in the bottom left corner to light blue in the top right corner.](https://developer.apple.com/images/com.apple.coreimage/media-3558802@2x.png)
+
+## See Also
+
+### Filters
+
+- [gaussianGradientFilter](gaussiangradient%28%29.md): Generates a gradient that varies from one color to another using a Gaussian distribution.
+- [hueSaturationValueGradientFilter](huesaturationvaluegradient%28%29.md): Generates a gradient representing a specified color space.
+- [linearGradientFilter](lineargradient%28%29.md): Generates a color gradient that varies along a linear axis between two defined endpoints.
+- [radialGradientFilter](radialgradient%28%29.md): Generates a gradient that varies radially between two circles having the same center.

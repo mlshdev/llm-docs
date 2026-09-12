@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/usdkit/usdprim/attribute/spec/permission](https://developer.apple.com/documentation/usdkit/usdprim/attribute/spec/permission)
+
+# permission
+
+**Framework:** USDKit  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+The attribute’s permission level (public, restricted, private).
+
+## Declaration
+
+```swift
+var permission: USDLayer.Permission { get nonmutating set }
+```

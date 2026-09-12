@@ -1,0 +1,43 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreaudiotypes/audiostreampacketdescription/mdatabytesize](https://developer.apple.com/documentation/coreaudiotypes/audiostreampacketdescription/mdatabytesize)
+
+# mDataByteSize (Swift)
+
+**Framework:** Core Audio Types  
+**Kind:** Instance Property  
+**Availability:** iOS 2.0+ · iPadOS 2.0+ · Mac Catalyst 13.0+ · macOS 10.2+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 3.0+
+
+The number of bytes in the packet.
+
+## Declaration
+
+```swift
+var mDataByteSize: UInt32
+```
+
+## See Also
+
+### Inspecting an audio stream packet description
+
+- [mStartOffset](mstartoffset.md): The number of bytes from the start of the buffer to the beginning of the packet.
+- [mVariableFramesInPacket](mvariableframesinpacket.md): The number of sample frames of data in the packet.
+
+# mDataByteSize (Objective-C)
+
+**Framework:** Core Audio Types  
+**Kind:** Instance Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+The number of bytes in the packet.
+
+## Declaration
+
+```objectivec
+UInt32 mDataByteSize;
+```
+
+## See Also
+
+### Inspecting an audio stream packet description
+
+- [mStartOffset](mstartoffset.md): The number of bytes from the start of the buffer to the beginning of the packet.
+- [mVariableFramesInPacket](mvariableframesinpacket.md): The number of sample frames of data in the packet.

@@ -1,0 +1,82 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/apple-ads-platform-api/creativerejectionreason](https://developer.apple.com/documentation/apple-ads-platform-api/creativerejectionreason)
+
+# CreativeRejectionReason
+
+**Interface language:** Data
+
+**Framework:** Apple Ads Platform API  
+**Kind:** Object  
+**Availability:** Apple Ads Platform API 1.0+
+
+Detailed rejection reason for an ad creative that failed Apple review.
+
+## Declaration
+
+```
+object CreativeRejectionReason
+```
+
+## Properties
+
+- `id` — `int64` (required): System-assigned identifier for this rejection reason record. Read-only.
+- `adamId` — `int64`: The Adam ID of the app whose product page triggered the rejection, if applicable. Read-only.
+- `productPageId` — `string`: The product page ID associated with the rejection, if applicable. Read-only.
+- `assetId` — `string`: The UUID of the asset that triggered the rejection, if applicable. Read-only.
+- `supplySource` — `string`: Supply source for the rejection. Read-only.
+- `supplyPlacement` — `string`: Supply placement for the rejection. Read-only.
+- `countryOrRegion` — `string`: Country or region code. Read-only.
+- `languageCode` — `string`: Language code. Read-only.
+- `reasonType` — `string`: Type of rejection reason. Read-only.
+- `reasonCode` — `string`: Code for the specific rejection reason. Read-only.
+- `comment` — `string`: Additional context for the rejection. Nullable. Read-only.
+- `reasonLevel` — `string`: The level at which the rejection applies. Possible values: `DEFAULT_PRODUCT_PAGE`, `DEFAULT_PRODUCT_PAGE_LOCALE`, `CUSTOM_PRODUCT_PAGE`, `CUSTOM_PRODUCT_PAGE_LOCALE`. Read-only.
+  **Allowed values:** `DEFAULT_PRODUCT_PAGE`, `DEFAULT_PRODUCT_PAGE_LOCALE`, `CUSTOM_PRODUCT_PAGE`, `CUSTOM_PRODUCT_PAGE_LOCALE`
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The `CreativeRejectionReason` object represents a record returned by the rejection reasons endpoint, describing why a specific ad creative was rejected. Each record includes the scope of rejection (by `adamId`, `productPageId`, or `assetId`) and the policy categories that were violated. To diagnose and remediate rejected ad creatives, use these records alongside `systemStatusReasons` on the [Creative](creative.md).
+
+The endpoints that query and fetch `CreativeRejectionReason` records, `POST /v1/rejection-reasons/apps/query` ([Query Rejection Reasons](find-rejection-reasons.md)) and `GET /v1/rejection-reasons/apps/{rejectionReasonId}` ([Get Rejection Reasons](gets-rejection-reasons-by-id.md)), are documented under Apps \> App Eligibility. See [Query Rejection Reasons](find-rejection-reasons.md) and [Get Rejection Reasons](gets-rejection-reasons-by-id.md).
+
+<a id="Example"></a>
+
+### Example
+
+```json
+{
+  "id": 555666777,
+  "adamId": 123456789,
+  "creativeId": 666777888,
+  "productPageId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "assetId": null,
+  "supplySource": "APPSTORE",
+  "supplyPlacement": "APPSTORE_SEARCH_TAB",
+  "countryOrRegion": "US",
+  "languageCode": "en-US",
+  "reasonType": "REJECTION_REASON",
+  "reasonCode": "SCREENSHOT_NOT_REPRESENTATIVE",
+  "comment": "Screenshot does not accurately represent the AwayFinder app experience.",
+  "reasonLevel": "CUSTOM_PRODUCT_PAGE_LOCALE",
+  "creationTime": "2025-01-10T08:00:00.000",
+  "modificationTime": "2025-01-10T08:00:00.000"
+}
+```
+
+## See Also
+
+- [Creative](creative.md): Ad creative containing all data for visually rendering an ad.
+- [CreativeCreate](creativecreate.md): The request body for creating a new Creative object.
+- [CreativeUpdate](creativeupdate.md): The request body for updating an existing Creative object.
+- [CreativeResponse](creativeresponse.md): The response object for an ad creative operation.
+- [CreativeQueryResponse](creativequeryresponse.md): The response object for a Creative query, containing matched results and pagination metadata.
+- [CreativeEligibility](creativeeligibility.md): Eligibility state for an ad creative across supply sources and placements.
+- [AssetReference](assetreference.md): A reference to an asset by its UUID.
+- [AssetImage](assetimage.md): Image-specific asset detail fields.
+- [Destination](destination.md): Post-tap destination entity embedded in a Creative.
+- [DestinationCreate](destinationcreate.md): Request payload for specifying the post-tap destination when creating an ad creative.
+- [DestinationParameter](destinationparameter.md): Destination-specific identifiers used when linking an ad creative to an App Store product page.
+- [CreativeRejectionReasonQueryRequest](creativerejectionreasonqueryrequest.md): The request body for querying ad creative rejection reasons.
+- [CreativeRejectionReasonQueryResponse](creativerejectionreasonqueryresponse.md): The response object for a creative rejection reason query, containing matched results and pagination metadata.
+- [LocaleInfo](localeinfo.md): Represents a specific language and its corresponding language code.

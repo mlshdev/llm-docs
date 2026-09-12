@@ -1,0 +1,65 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avplayerlooper/loopingplayeritems](https://developer.apple.com/documentation/avfoundation/avplayerlooper/loopingplayeritems)
+
+# loopingPlayerItems (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 10.12+ · tvOS 10.0+ · visionOS 1.0+
+
+An array containing replicas of the template player item used to accomplish the looping.
+
+## Declaration
+
+```swift
+var loopingPlayerItems: [AVPlayerItem] { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+`AVPlayerLooper` creates replicas of the template [AVPlayerItem](../avplayeritem.md) using the [copyWithZone:](../../objectivec/nsobject-swift.class/copywithzone_.md) method and inserts them in the queue player’s queue to accomplish the looping. You can determine the number of replicas created and can listen for notifications and property changes from the replicas if desired.
+
+Access to the [AVPlayerItem](../avplayeritem.md) replicas are for informational purposes and to allow you to apply any configuration that is not transferred from the template player item to the replicas. For instance, any instances of [AVPlayerItemOutput](../avplayeritemoutput.md) and [AVPlayerItemMediaDataCollector](../avplayeritemmediadatacollector.md) attached to the template player item are not transferred to the replicas so you should add them to each replica item if needed.
+
+> **Important**
+
+>  You should not modify any properties of the replicas that would disrupt looping playback. This includes properties such as the playhead time/date, selected media option, and forward playback end time.
+
+## See Also
+
+### Configuring looping
+
+- [disableLooping()](disablelooping%28%29.md): Disables looping for the player queue.
+
+# loopingPlayerItems (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 10.0+ · iPadOS 10.0+ · Mac Catalyst 13.1+ · macOS 10.12+ · tvOS 10.0+ · visionOS 1.0+
+
+An array containing replicas of the template player item used to accomplish the looping.
+
+## Declaration
+
+```objectivec
+@property (readonly) NSArray<AVPlayerItem *> * loopingPlayerItems;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+`AVPlayerLooper` creates replicas of the template [AVPlayerItem](../avplayeritem.md) using the [copyWithZone:](../../objectivec/nsobject-swift.class/copywithzone_.md) method and inserts them in the queue player’s queue to accomplish the looping. You can determine the number of replicas created and can listen for notifications and property changes from the replicas if desired.
+
+Access to the [AVPlayerItem](../avplayeritem.md) replicas are for informational purposes and to allow you to apply any configuration that is not transferred from the template player item to the replicas. For instance, any instances of [AVPlayerItemOutput](../avplayeritemoutput.md) and [AVPlayerItemMediaDataCollector](../avplayeritemmediadatacollector.md) attached to the template player item are not transferred to the replicas so you should add them to each replica item if needed.
+
+> **Important**
+
+>  You should not modify any properties of the replicas that would disrupt looping playback. This includes properties such as the playhead time/date, selected media option, and forward playback end time.
+
+## See Also
+
+### Configuring looping
+
+- [disableLooping](disablelooping%28%29.md): Disables looping for the player queue.

@@ -1,0 +1,34 @@
+> Snapshot-pinned source for Apple Swift snapshot-eebba30a4ab9: [documentation/swift/unsafemutablerawpointer/allocate(bytecount:alignment:)](https://developer.apple.com/documentation/swift/unsafemutablerawpointer/allocate(bytecount:alignment:))
+
+# allocate(byteCount:alignment:)
+
+**Framework:** Swift  
+**Kind:** Type Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Allocates uninitialized memory with the specified size and alignment.
+
+## Declaration
+
+```swift
+static func allocate(byteCount: Int, alignment: Int) -> UnsafeMutableRawPointer
+```
+
+## Parameters
+
+- `byteCount`: The number of bytes to allocate. `byteCount` must not be negative.
+- `alignment`: The alignment of the new region of allocated memory, in bytes. `alignment` must be a whole power of 2.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A pointer to a newly allocated region of memory. The memory is allocated, but not initialized.
+
+<a id="discussion"></a>
+
+## Discussion
+
+You are in charge of managing the allocated memory. Be sure to deallocate any memory that you manually allocate.
+
+The allocated memory is not bound to any specific type and must be bound before performing any typed operations. If you are using the memory for a specific type, allocate memory using the `UnsafeMutablePointer.allocate(capacity:)` static method instead.

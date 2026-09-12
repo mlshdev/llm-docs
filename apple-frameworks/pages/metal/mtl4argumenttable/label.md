@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtl4argumenttable/label](https://developer.apple.com/documentation/metal/mtl4argumenttable/label)
+
+# label (Swift)
+
+**Framework:** Metal  
+**Kind:** Instance Property  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+Assigns an optional label with this argument table for debugging purposes.
+
+## Declaration
+
+```swift
+var label: String? { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+You set this label by setting property [label](../mtl4argumenttabledescriptor/label.md) on the descriptor object, prior to creating this table instance.
+
+# label (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Instance Property  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+Assigns an optional label with this argument table for debugging purposes.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, readonly, nullable) NSString * label;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+You set this label by setting property [label](../mtl4argumenttabledescriptor/label.md) on the descriptor object, prior to creating this table instance.

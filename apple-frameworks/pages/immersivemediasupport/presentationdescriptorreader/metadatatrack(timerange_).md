@@ -1,0 +1,31 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/immersivemediasupport/presentationdescriptorreader/metadatatrack(timerange:)](https://developer.apple.com/documentation/immersivemediasupport/presentationdescriptorreader/metadatatrack(timerange:))
+
+# metadataTrack(timeRange:)
+
+**Framework:** Immersive Media Support  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+Retrieves all metadata items to write to an output metadata track, optionally clipped to a segment time range. Pass a `timeRange` to produce one item per segment (e.g. per IDR group or per fixed-length interval).
+
+## Declaration
+
+```swift
+func metadataTrack(timeRange: CMTimeRange? = nil) throws -> [AVMetadataItem]
+```
+
+## Parameters
+
+- `timeRange`: The segment range to filter to, or `nil` to return all items.
+
+<a id="return-value"></a>
+
+## Return Value
+
+An array of `AVMetadataItem` objects sorted by start time.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Note: the last item’s `duration` may be invalid, since the descriptor itself doesn’t know where the video ends. If you need a concrete duration (e.g. to extend the final segment to the end of the video), copy the returned item and overwrite `duration` with the valid value. Also, use the same timescale for `timeRange` as the [PresentationCommand](../presentationcommand.md) values to avoid timescale mismatches.

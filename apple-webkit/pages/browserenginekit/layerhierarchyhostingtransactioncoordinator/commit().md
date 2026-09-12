@@ -1,0 +1,91 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/browserenginekit/layerhierarchyhostingtransactioncoordinator/commit()](https://developer.apple.com/documentation/browserenginekit/layerhierarchyhostingtransactioncoordinator/commit())
+
+# commit() (Swift)
+
+**Framework:** BrowserEngineKit  
+**Kind:** Instance Method  
+**Availability:** iOS 17.4+ · iPadOS 17.4+
+
+Notifies the render server to coordinate transactions for the added views and layer hierarchies.
+
+## Declaration
+
+```swift
+@MainActor func commit()
+```
+
+## Mentioned In
+
+- [Hosting browser view layers in the rendering extension](../hosting-browser-view-layers-in-the-rendering-extension.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+In all processes that share a transaction coordinator instance, call this method as the last interaction with the instance.
+
+Before calling this method:
+
+- Add the relevant views and layer hierarchies to the transaction coordinator.
+- Share the coordinator between processes.
+- Perform the necessary transactions.
+
+Use the instance only once; after you call this method, discard the instance.
+
+> **Note**
+
+> This method synchronizes changes committed in [CATransaction](https://developer.apple.com/documentation/quartzcore/catransaction) objects that affect the added views and layer hierarchies; it doesn’t commit the transactions.
+>
+> Call [commit()](https://developer.apple.com/documentation/quartzcore/catransaction/commit%28%29) on each relevant transaction.
+
+## See Also
+
+### Synchronizing transactions
+
+- [add(\_:)](add%28__%29-7day0.md): Notifies the transaction coordinator to start coordinating transactions for the given view.
+- [add(\_:)](add%28__%29-i66q.md): Notifies the transaction coordinator to start coordinating transactions for the given layer hierarchy.
+
+# commit (Objective-C)
+
+**Framework:** BrowserEngineKit  
+**Kind:** Instance Method  
+**Availability:** iOS 17.4+ · iPadOS 17.4+
+
+Notifies the render server to coordinate transactions for the added views and layer hierarchies.
+
+## Declaration
+
+```objectivec
+- (void) commit;
+```
+
+## Mentioned In
+
+- [Hosting browser view layers in the rendering extension](../hosting-browser-view-layers-in-the-rendering-extension.md)
+
+<a id="discussion"></a>
+
+## Discussion
+
+In all processes that share a transaction coordinator instance, call this method as the last interaction with the instance.
+
+Before calling this method:
+
+- Add the relevant views and layer hierarchies to the transaction coordinator.
+- Share the coordinator between processes.
+- Perform the necessary transactions.
+
+Use the instance only once; after you call this method, discard the instance.
+
+> **Note**
+
+> This method synchronizes changes committed in [CATransaction](https://developer.apple.com/documentation/quartzcore/catransaction) objects that affect the added views and layer hierarchies; it doesn’t commit the transactions.
+>
+> Call [commit](https://developer.apple.com/documentation/quartzcore/catransaction/commit%28%29) on each relevant transaction.
+
+## See Also
+
+### Synchronizing transactions
+
+- [addLayerHierarchyHostingView:](add%28__%29-7day0.md): Notifies the transaction coordinator to start coordinating transactions for the given view.
+- [addLayerHierarchy:](add%28__%29-i66q.md): Notifies the transaction coordinator to start coordinating transactions for the given layer hierarchy.

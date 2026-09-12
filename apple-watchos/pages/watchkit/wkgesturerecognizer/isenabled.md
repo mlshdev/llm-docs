@@ -1,0 +1,57 @@
+> Snapshot-pinned source for Apple watchOS snapshot-49fd8d0a44e2: [documentation/watchkit/wkgesturerecognizer/isenabled](https://developer.apple.com/documentation/watchkit/wkgesturerecognizer/isenabled)
+
+# isEnabled (Swift)
+
+**Framework:** WatchKit  
+**Kind:** Instance Property  
+**Availability:** watchOS 3.0+
+
+A Boolean value indicating whether the gesture recognizer is enabled.
+
+## Declaration
+
+```swift
+var isEnabled: Bool { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When the value of this property is [true](https://developer.apple.com/documentation/swift/true), the gesture recognizer actively tracks touches and reports state changes to its action method. When the value of this property is [false](https://developer.apple.com/documentation/swift/false), the gesture recognizer does not track events or call its action method. The default value of this property is [true](https://developer.apple.com/documentation/swift/true).
+
+If you change the value of this property to [false](https://developer.apple.com/documentation/swift/false) while the gesture recognizer is in the middle of tracking touch events, the gesture recognizer transitions to the [WKGestureRecognizerState.cancelled](../wkgesturerecognizerstate/cancelled.md) state.
+
+## See Also
+
+### Getting the Gesture Recognizer’s State
+
+- [state](state.md): The current state of the gesture recognizer.
+
+# enabled (Objective-C)
+
+**Framework:** WatchKit  
+**Kind:** Instance Property  
+**Availability:** watchOS 3.0+
+
+A Boolean value indicating whether the gesture recognizer is enabled.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, getter=isEnabled) BOOL enabled;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+When the value of this property is [true](https://developer.apple.com/documentation/swift/true), the gesture recognizer actively tracks touches and reports state changes to its action method. When the value of this property is [false](https://developer.apple.com/documentation/swift/false), the gesture recognizer does not track events or call its action method. The default value of this property is [true](https://developer.apple.com/documentation/swift/true).
+
+If you change the value of this property to [false](https://developer.apple.com/documentation/swift/false) while the gesture recognizer is in the middle of tracking touch events, the gesture recognizer transitions to the [WKGestureRecognizerStateCancelled](../wkgesturerecognizerstate/cancelled.md) state.
+
+## See Also
+
+### Getting the Gesture Recognizer’s State
+
+- [state](state.md): The current state of the gesture recognizer.

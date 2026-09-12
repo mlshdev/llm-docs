@@ -1,0 +1,40 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/driverkit/scsitaskstatus/kscsitaskstatus_intermediate_condition_met](https://developer.apple.com/documentation/driverkit/scsitaskstatus/kscsitaskstatus_intermediate_condition_met)
+
+# kSCSITaskStatus_INTERMEDIATE_CONDITION_MET
+
+**Interface language:** Objective-C
+
+**Framework:** DriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit · iOS · iPadOS · macOS
+
+## Declaration
+
+```objectivec
+kSCSITaskStatus_INTERMEDIATE_CONDITION_MET
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The task completed with a status of INTERMEDIATE_CONDITION_MET.
+
+## See Also
+
+### Constants
+
+- [kSCSITaskStatus_GOOD](kscsitaskstatus_good.md)
+- [kSCSITaskStatus_CHECK_CONDITION](kscsitaskstatus_check_condition.md)
+- [kSCSITaskStatus_CONDITION_MET](kscsitaskstatus_condition_met.md)
+- [kSCSITaskStatus_BUSY](kscsitaskstatus_busy.md)
+- [kSCSITaskStatus_INTERMEDIATE](kscsitaskstatus_intermediate.md)
+- [kSCSITaskStatus_RESERVATION_CONFLICT](kscsitaskstatus_reservation_conflict.md)
+- [kSCSITaskStatus_TASK_SET_FULL](kscsitaskstatus_task_set_full.md)
+- [kSCSITaskStatus_ACA_ACTIVE](kscsitaskstatus_aca_active.md)
+- [kSCSITaskStatus_TaskTimeoutOccurred](kscsitaskstatus_tasktimeoutoccurred.md)
+- [kSCSITaskStatus_ProtocolTimeoutOccurred](kscsitaskstatus_protocoltimeoutoccurred.md)
+- [kSCSITaskStatus_DeviceNotResponding](kscsitaskstatus_devicenotresponding.md)
+- [kSCSITaskStatus_DeviceNotPresent](kscsitaskstatus_devicenotpresent.md)
+- [kSCSITaskStatus_DeliveryFailure](kscsitaskstatus_deliveryfailure.md)
+- [kSCSITaskStatus_No_Status](kscsitaskstatus_no_status.md)

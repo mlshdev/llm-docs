@@ -1,0 +1,39 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1535623-mbuf_copyback](https://developer.apple.com/documentation/kernel/1535623-mbuf_copyback)
+
+# mbuf_copyback
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Function  
+**Availability:** macOS 10.4+ (deprecated in 10.15.4)
+
+## Declaration
+
+```objectivec
+errno_t mbuf_copyback(mbuf_t mbuf, size_t offset, size_t length, const void *data, mbuf_how_t how);
+```
+
+## Parameters
+
+- `mbuf`: The first mbuf in the chain to copy the data in to.
+- `offset`: Offset in bytes to skip before copying data.
+- `length`: The length, in bytes, of the data to copy in to the mbuf chain.
+- `data`: A pointer to data in the kernel's address space.
+- `how`: Blocking or non-blocking.
+
+<a id="return_value"></a>
+
+## Return Value
+
+0 upon success, EINVAL or ENOBUFS upon failure.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Copies data from a buffer to an mbuf chain. mbuf_copyback will grow the chain to fit the specified buffer.
+
+If mbuf_copydata is unable to allocate enough mbufs to grow the chain, ENOBUFS will be returned. The mbuf chain will be shorter than expected but all of the data up to the end of the mbuf chain will be valid.
+
+If an offset is specified, mbuf_copyback will skip that many bytes in the mbuf chain before starting to write the buffer in to the chain. If the mbuf chain does not contain this many bytes, mbufs will be allocated to create the space.

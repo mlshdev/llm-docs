@@ -1,0 +1,71 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coreimage/cicontext/createcgimage(_:from:format:colorspace:deferred:calculatehdrstats:)](https://developer.apple.com/documentation/coreimage/cicontext/createcgimage(_:from:format:colorspace:deferred:calculatehdrstats:))
+
+# createCGImage(\_:from:format:colorSpace:deferred:calculateHDRStats:) (Swift)
+
+**Framework:** Core Image  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+Creates a Core Graphics image from a region of a Core Image image instance with an option for calculating HDR statistics.
+
+## Declaration
+
+```swift
+func createCGImage(_ image: CIImage, from fromRect: CGRect, format: CIFormat, colorSpace: CGColorSpace?, deferred: Bool, calculateHDRStats: Bool) -> CGImage?
+```
+
+## Parameters
+
+- `image`: A [CIImage](../ciimage.md) image instance for which to create a `CGImage`.
+- `fromRect`: The `CGRect` region of the `image` to use. This region relative to the cartesean coordinate system of `image`. This region will be intersected with integralized and intersected with `image.extent`.
+- `format`: A [CIFormat](../ciformat.md) to specify the pixel format of the created `CGImage`. For example, if `kCIFormatRGBX16` is specified, then the created `CGImage` will be 16 bits-per-component and opaque.
+- `colorSpace`: The `CGColorSpace` for the output image. This color space must have either `CGColorSpaceModel.rgb` or `CGColorSpaceModel.monochrome` and be compatible with the specified pixel format.
+- `deferred`: Controls when Core Image renders `image`.
+
+  - True: rendering of `image` is deferred until the created `CGImage` rendered.
+  - False: the `image` is rendered immediately.
+- `calculateHDRStats`: Controls if Core Image calculates HDR statistics.
+
+  - True: Core Image will immediately render `image`, calculate the HDR statistics and create a `CGImage` that has the calculated values.
+  - False:  the created `CGImage` will not have any HDR statistics.
+
+<a id="return-value"></a>
+
+## Return Value
+
+ Returns a new `CGImage` instance. You are responsible for releasing the returned image when you no longer need it. The returned value will be `null` if the extent is empty or too big.
+
+# createCGImage:fromRect:format:colorSpace:deferred:calculateHDRStats: (Objective-C)
+
+**Framework:** Core Image  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+Creates a Core Graphics image from a region of a Core Image image instance with an option for calculating HDR statistics.
+
+## Declaration
+
+```objectivec
+- (CGImageRef) createCGImage:(CIImage *) image fromRect:(CGRect) fromRect format:(CIFormat) format colorSpace:(CGColorSpaceRef) colorSpace deferred:(BOOL) deferred calculateHDRStats:(BOOL) calculateHDRStats;
+```
+
+## Parameters
+
+- `image`: A [CIImage](../ciimage.md) image instance for which to create a `CGImage`.
+- `fromRect`: The `CGRect` region of the `image` to use. This region relative to the cartesean coordinate system of `image`. This region will be intersected with integralized and intersected with `image.extent`.
+- `format`: A [CIFormat](../ciformat.md) to specify the pixel format of the created `CGImage`. For example, if `kCIFormatRGBX16` is specified, then the created `CGImage` will be 16 bits-per-component and opaque.
+- `colorSpace`: The `CGColorSpace` for the output image. This color space must have either `CGColorSpaceModel.rgb` or `CGColorSpaceModel.monochrome` and be compatible with the specified pixel format.
+- `deferred`: Controls when Core Image renders `image`.
+
+  - True: rendering of `image` is deferred until the created `CGImage` rendered.
+  - False: the `image` is rendered immediately.
+- `calculateHDRStats`: Controls if Core Image calculates HDR statistics.
+
+  - True: Core Image will immediately render `image`, calculate the HDR statistics and create a `CGImage` that has the calculated values.
+  - False:  the created `CGImage` will not have any HDR statistics.
+
+<a id="return-value"></a>
+
+## Return Value
+
+ Returns a new `CGImage` instance. You are responsible for releasing the returned image when you no longer need it. The returned value will be `null` if the extent is empty or too big.

@@ -1,0 +1,101 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/loginitemsmanageditems](https://developer.apple.com/documentation/devicemanagement/loginitemsmanageditems)
+
+# LoginItemsManagedItems
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Device Management Profile  
+**Availability:** macOS 10.13+
+
+The payload that configures a device’s login items.
+
+## Declaration
+
+```
+object LoginItemsManagedItems
+```
+
+## Properties
+
+- `AutoLaunchedApplicationDictionary-managed` — `[LoginItemsManagedItems.LoginItem]` (required): An array of login item dictionaries.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Specify `com.apple.loginitems.managed` as the payload type.
+
+<a id="Profile-availability"></a>
+
+### Profile availability
+
+|  |  |
+| --- | --- |
+| Device channel | macOS |
+| User channel | macOS |
+| Allow manual install | macOS |
+| Requires supervision | N/A |
+| Requires user-approved MDM | N/A |
+| Allowed in user enrollment | macOS |
+| Allow multiple payloads | macOS |
+
+<a id="Profile-example"></a>
+
+### Profile example
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>AutoLaunchedApplicationDictionary-managed</key>
+            <array>
+                <dict>
+                    <key>Path</key>
+                    <string>/System/Applications/Example.app</string>
+                    <key>Hide</key>
+                    <false/>
+                </dict>
+            </array>
+            <key>PayloadIdentifier</key>
+            <string>com.example.myloginitemsmanageditemspayload</string>
+            <key>PayloadType</key>
+            <string>com.apple.loginitems.managed</string>
+            <key>PayloadUUID</key>
+            <string>f19d4636-fa34-4a7c-8e8b-e92de516c893</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+    </array>
+    <key>PayloadDisplayName</key>
+    <string>Login Items Managed Items</string>
+    <key>PayloadIdentifier</key>
+    <string>com.example.myprofile</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>98128de8-d76c-44fa-9509-5601c0d66281</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>
+```
+
+## Topics
+
+### Objects
+
+- [LoginItemsManagedItems.LoginItem](loginitemsmanageditems/loginitem.md): A dictionary with the details about a login item.
+
+## See Also
+
+### Login
+
+- [LoginWindowLoginItems](loginwindowloginitems.md): The payload that configures login behavior.
+- [LoginWindow](loginwindow.md): The payload that configures Login Window behavior.
+- [LoginWindowScripts](loginwindowscripts.md): The payload that configures scripts to run at login and logout.
+- [ServiceManagementManagedLoginItems](servicemanagementmanagedloginitems.md): This payload that configures managed login items, which auto-enables and auto-allows matched items.

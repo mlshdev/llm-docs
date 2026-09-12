@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/text/speechannouncementsqueued(_:)](https://developer.apple.com/documentation/swiftui/text/speechannouncementsqueued(_:))
+
+# speechAnnouncementsQueued(\_:)
+
+**Framework:** SwiftUI  
+**Kind:** Instance Method  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+
+Controls whether to queue pending announcements behind existing speech rather than interrupting speech in progress.
+
+## Declaration
+
+```swift
+func speechAnnouncementsQueued(_ value: Bool = true) -> Text
+```
+
+## Parameters
+
+- `value`: A Boolean value that determines if VoiceOver speaks changes to text immediately or enqueues them behind existing speech. Defaults to `true`.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Use this modifier when you want affect the order in which the accessibility system delivers spoken text. Announcements can occur automatically when the label or value of an accessibility element changes.
+
+## See Also
+
+### Configuring voiceover
+
+- [speechAdjustedPitch(\_:)](speechadjustedpitch%28__%29.md): Raises or lowers the pitch of spoken text.
+- [speechAlwaysIncludesPunctuation(\_:)](speechalwaysincludespunctuation%28__%29.md): Sets whether VoiceOver should always speak all punctuation in the text view.
+- [speechSpellsOutCharacters(\_:)](speechspellsoutcharacters%28__%29.md): Sets whether VoiceOver should speak the contents of the text view character by character.

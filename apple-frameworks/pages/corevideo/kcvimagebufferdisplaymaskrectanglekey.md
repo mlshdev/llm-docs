@@ -1,0 +1,95 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corevideo/kcvimagebufferdisplaymaskrectanglekey](https://developer.apple.com/documentation/corevideo/kcvimagebufferdisplaymaskrectanglekey)
+
+# kCVImageBufferDisplayMaskRectangleKey (Swift)
+
+**Framework:** Core Video  
+**Kind:** Global Variable  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
+
+Specifies the rectangular display area within the image.
+
+## Declaration
+
+```swift
+let kCVImageBufferDisplayMaskRectangleKey: CFString
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Specify the left, width, top, and height metrics relative to a reference raster width and height scaled to the image buffer dimensions.
+
+The value is a dictionary containing these keys for the raster rectangle:
+
+- [kCVImageBufferDisplayMaskRectangle_ReferenceRasterWidthKey](kcvimagebufferdisplaymaskrectangle_referencerasterwidthkey.md)
+- [kCVImageBufferDisplayMaskRectangle_ReferenceRasterHeightKey](kcvimagebufferdisplaymaskrectangle_referencerasterheightkey.md)
+- [kCVImageBufferDisplayMaskRectangle_RectangleLeftKey](kcvimagebufferdisplaymaskrectangle_rectangleleftkey.md)
+- [kCVImageBufferDisplayMaskRectangle_RectangleWidthKey](kcvimagebufferdisplaymaskrectangle_rectanglewidthkey.md)
+- [kCVImageBufferDisplayMaskRectangle_RectangleTopKey](kcvimagebufferdisplaymaskrectangle_rectangletopkey.md)
+- [kCVImageBufferDisplayMaskRectangle_RectangleHeightKey](kcvimagebufferdisplaymaskrectangle_rectangleheightkey.md)
+
+## See Also
+
+### Constants
+
+- [Image Buffer Attachment Keys](image-buffer-attachment-keys.md): Keys that describe the attachment types associated with image buffers.
+- [Image Buffer Clean Aperture Keys](image-buffer-clean-aperture-keys.md): Keys that describe the clean aperture of an image buffer.
+- [Image Buffer Pixel Aspect Ratio Keys](image-buffer-pixel-aspect-ratio-keys.md): Keys that describe the pixel aspect ratio of an image buffer.
+- [Image Buffer Display Dimensions Keys](image-buffer-display-dimensions-keys.md): Keys that describe the display dimensions of an image buffer.
+- [Image Buffer Field Detail Constants](image-buffer-field-detail-constants.md): Constants that indicate the field order of interlaced video in an image buffer.
+- [Image Buffer YCbCr Matrix Constants](image-buffer-ycbcr-matrix-constants.md): Constants that indicate the type of conversion matrix Core Video uses when it converts image buffer data from the YCbCr color space to the RGB color space.
+- [Image Buffer Color Primaries Constants](image-buffer-color-primaries-constants.md): Constants that indicate the color primaries gamut for the image buffer.
+- [Image Buffer Transfer Function Constants](image-buffer-transfer-function-constants.md): Constants that indicate the transfer function for the image buffer.
+- [Image Buffer Chroma Location Constants](image-buffer-chroma-location-constants.md): Constants that indicate locations for chroma samples in the image buffer.
+- [Image Buffer Chroma Subsampling Constants](image-buffer-chroma-subsampling-constants.md): Constants that indicate the original format of subsampled data in the image buffer before conversion to 422/2vuy format.
+- [Image Buffer Display Mask Rectangle Keys](image-buffer-display-mask-rectangle-keys.md): Keys that describe the display dimensions of an image buffer mask.
+- [kCVImageBufferDisplayMaskRectangleStereoLeftKey](kcvimagebufferdisplaymaskrectanglestereoleftkey.md): Specifies the rectangular display area within the left-eye view of stereo images, using the same keys as `kCVImageBufferDisplayMaskRectangleKey`.
+- [kCVImageBufferDisplayMaskRectangleStereoRightKey](kcvimagebufferdisplaymaskrectanglestereorightkey.md): Specifies the rectangular display area within the right-eye view of stereo images, using the same keys as `kCVImageBufferDisplayMaskRectangleKey`.
+
+# kCVImageBufferDisplayMaskRectangleKey (Objective-C)
+
+**Framework:** Core Video  
+**Kind:** Global Variable  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
+
+Specifies the rectangular display area within the image.
+
+## Declaration
+
+```objectivec
+extern CFStringRef const kCVImageBufferDisplayMaskRectangleKey;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Specify the left, width, top, and height metrics relative to a reference raster width and height scaled to the image buffer dimensions.
+
+The value is a dictionary containing these keys for the raster rectangle:
+
+- [kCVImageBufferDisplayMaskRectangle_ReferenceRasterWidthKey](kcvimagebufferdisplaymaskrectangle_referencerasterwidthkey.md)
+- [kCVImageBufferDisplayMaskRectangle_ReferenceRasterHeightKey](kcvimagebufferdisplaymaskrectangle_referencerasterheightkey.md)
+- [kCVImageBufferDisplayMaskRectangle_RectangleLeftKey](kcvimagebufferdisplaymaskrectangle_rectangleleftkey.md)
+- [kCVImageBufferDisplayMaskRectangle_RectangleWidthKey](kcvimagebufferdisplaymaskrectangle_rectanglewidthkey.md)
+- [kCVImageBufferDisplayMaskRectangle_RectangleTopKey](kcvimagebufferdisplaymaskrectangle_rectangletopkey.md)
+- [kCVImageBufferDisplayMaskRectangle_RectangleHeightKey](kcvimagebufferdisplaymaskrectangle_rectangleheightkey.md)
+
+## See Also
+
+### Constants
+
+- [Image Buffer Attachment Keys](image-buffer-attachment-keys.md): Keys that describe the attachment types associated with image buffers.
+- [Image Buffer Clean Aperture Keys](image-buffer-clean-aperture-keys.md): Keys that describe the clean aperture of an image buffer.
+- [Image Buffer Pixel Aspect Ratio Keys](image-buffer-pixel-aspect-ratio-keys.md): Keys that describe the pixel aspect ratio of an image buffer.
+- [Image Buffer Display Dimensions Keys](image-buffer-display-dimensions-keys.md): Keys that describe the display dimensions of an image buffer.
+- [Image Buffer Field Detail Constants](image-buffer-field-detail-constants.md): Constants that indicate the field order of interlaced video in an image buffer.
+- [Image Buffer YCbCr Matrix Constants](image-buffer-ycbcr-matrix-constants.md): Constants that indicate the type of conversion matrix Core Video uses when it converts image buffer data from the YCbCr color space to the RGB color space.
+- [Image Buffer Color Primaries Constants](image-buffer-color-primaries-constants.md): Constants that indicate the color primaries gamut for the image buffer.
+- [Image Buffer Transfer Function Constants](image-buffer-transfer-function-constants.md): Constants that indicate the transfer function for the image buffer.
+- [Image Buffer Chroma Location Constants](image-buffer-chroma-location-constants.md): Constants that indicate locations for chroma samples in the image buffer.
+- [Image Buffer Chroma Subsampling Constants](image-buffer-chroma-subsampling-constants.md): Constants that indicate the original format of subsampled data in the image buffer before conversion to 422/2vuy format.
+- [Image Buffer Display Mask Rectangle Keys](image-buffer-display-mask-rectangle-keys.md): Keys that describe the display dimensions of an image buffer mask.
+- [kCVImageBufferDisplayMaskRectangleStereoLeftKey](kcvimagebufferdisplaymaskrectanglestereoleftkey.md): Specifies the rectangular display area within the left-eye view of stereo images, using the same keys as `kCVImageBufferDisplayMaskRectangleKey`.
+- [kCVImageBufferDisplayMaskRectangleStereoRightKey](kcvimagebufferdisplaymaskrectanglestereorightkey.md): Specifies the rectangular display area within the right-eye view of stereo images, using the same keys as `kCVImageBufferDisplayMaskRectangleKey`.

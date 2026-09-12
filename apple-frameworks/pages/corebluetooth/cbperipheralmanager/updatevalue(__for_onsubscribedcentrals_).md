@@ -1,0 +1,69 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/corebluetooth/cbperipheralmanager/updatevalue(_:for:onsubscribedcentrals:)](https://developer.apple.com/documentation/corebluetooth/cbperipheralmanager/updatevalue(_:for:onsubscribedcentrals:))
+
+# updateValue(\_:for:onSubscribedCentrals:) (Swift)
+
+**Framework:** Core Bluetooth  
+**Kind:** Instance Method  
+**Availability:** iOS 6.0+ · iPadOS 6.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Send an updated characteristic value to one or more subscribed centrals, using a notification or indication.
+
+## Declaration
+
+```swift
+func updateValue(_ value: Data, for characteristic: CBMutableCharacteristic, onSubscribedCentrals centrals: [CBCentral]?) -> Bool
+```
+
+## Parameters
+
+- `value`: The characteristic value you want to send via a notification or indication.
+- `characteristic`: The characteristic whose value has changed.
+- `centrals`: A list of centrals (represented by [CBCentral](../cbcentral.md) objects) that have subscribed to receive updates of the characteristic’s value. If `nil`, the manager updates all subscribed centrals. The manager ignores any centrals that haven’t subscribed to the characteristic’s value.
+
+<a id="return-value"></a>
+
+## Return Value
+
+This value is [true](https://developer.apple.com/documentation/swift/true) if the update is successfully sent to the subscribed central or centrals. [false](https://developer.apple.com/documentation/swift/false) if the update isn’t successfully sent because the underlying transmit queue is full.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You use this method to send updates of a characteristic’s value—through a notification or indication—to selected centrals that have subscribed to that characteristic’s value. If the method returns [false](https://developer.apple.com/documentation/swift/false) because the underlying transmit queue is full, the peripheral manager calls the [peripheralManagerIsReady(toUpdateSubscribers:)](../cbperipheralmanagerdelegate/peripheralmanagerisready%28toupdatesubscribers_%29.md) method of its delegate object when more space in the transmit queue becomes available. After you receive this delegate method callback, you may resend the update.
+
+If the length of the `value` parameter exceeds the length of the [maximumUpdateValueLength](../cbcentral/maximumupdatevaluelength.md) property of a subscribed [CBCentral](../cbcentral.md), the `value` parameter truncates accordingly.
+
+# updateValue:forCharacteristic:onSubscribedCentrals: (Objective-C)
+
+**Framework:** Core Bluetooth  
+**Kind:** Instance Method  
+**Availability:** iOS 6.0+ · iPadOS 6.0+ · Mac Catalyst 13.1+ · macOS 10.9+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Send an updated characteristic value to one or more subscribed centrals, using a notification or indication.
+
+## Declaration
+
+```objectivec
+- (BOOL) updateValue:(NSData *) value forCharacteristic:(CBMutableCharacteristic *) characteristic onSubscribedCentrals:(NSArray<CBCentral *> *) centrals;
+```
+
+## Parameters
+
+- `value`: The characteristic value you want to send via a notification or indication.
+- `characteristic`: The characteristic whose value has changed.
+- `centrals`: A list of centrals (represented by [CBCentral](../cbcentral.md) objects) that have subscribed to receive updates of the characteristic’s value. If `nil`, the manager updates all subscribed centrals. The manager ignores any centrals that haven’t subscribed to the characteristic’s value.
+
+<a id="return-value"></a>
+
+## Return Value
+
+This value is [true](https://developer.apple.com/documentation/swift/true) if the update is successfully sent to the subscribed central or centrals. [false](https://developer.apple.com/documentation/swift/false) if the update isn’t successfully sent because the underlying transmit queue is full.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You use this method to send updates of a characteristic’s value—through a notification or indication—to selected centrals that have subscribed to that characteristic’s value. If the method returns [false](https://developer.apple.com/documentation/swift/false) because the underlying transmit queue is full, the peripheral manager calls the [peripheralManagerIsReadyToUpdateSubscribers:](../cbperipheralmanagerdelegate/peripheralmanagerisready%28toupdatesubscribers_%29.md) method of its delegate object when more space in the transmit queue becomes available. After you receive this delegate method callback, you may resend the update.
+
+If the length of the `value` parameter exceeds the length of the [maximumUpdateValueLength](../cbcentral/maximumupdatevaluelength.md) property of a subscribed [CBCentral](../cbcentral.md), the `value` parameter truncates accordingly.

@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avmutablemovie/iscompatiblewithsavedphotosalbum](https://developer.apple.com/documentation/avfoundation/avmutablemovie/iscompatiblewithsavedphotosalbum)
+
+# isCompatibleWithSavedPhotosAlbum
+
+**Framework:** AVFoundation  
+**Kind:** Instance Property  
+**Availability:** iOS 5.0+ · iPadOS 5.0+ · Mac Catalyst 13.1+ · visionOS 1.0+
+
+A Boolean value that indicates whether you can write the composition to the Saved Photos album.
+
+## Declaration
+
+```swift
+var isCompatibleWithSavedPhotosAlbum: Bool { get }
+```
+
+## See Also
+
+### Determining suitability
+
+- [isPlayable](isplayable.md): A Boolean value that indicates whether the asset has playable content.
+- [isReadable](isreadable.md): A Boolean value that indicates whether you can extract the asset’s media data using an asset reader.
+- [isExportable](isexportable.md): A Boolean value that indicates whether you can export this asset using an export session.
+- [isComposable](iscomposable.md): A Boolean value that indicates whether you can use the asset as a segment of a composition track.
+- [isCompatibleWithAirPlayVideo](iscompatiblewithairplayvideo.md): A Boolean value that indicates whether the asset is compatible with AirPlay Video.

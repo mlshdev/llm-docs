@@ -1,0 +1,57 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/screencapturekit/scclipbufferingoutput/exportclip(to:duration:completionhandler:)](https://developer.apple.com/documentation/screencapturekit/scclipbufferingoutput/exportclip(to:duration:completionhandler:))
+
+# exportClip(to:duration:completionHandler:) (Swift)
+
+**Framework:** ScreenCaptureKit  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+## Declaration
+
+```swift
+func exportClip(to url: URL, duration: TimeInterval, completionHandler: (@Sendable ((any Error)?) -> Void)? = nil)
+```
+
+```swift
+func exportClip(to url: URL, duration: TimeInterval) async throws
+```
+
+## Parameters
+
+- `url`: URL containing absolute path for where to save the clip. Must be a file URL. The file will be created; if it already exists, it will be overwritten.
+- `duration`: Length of time in seconds for clip export. The clip will contain the most recent samples from the buffer for this duration. Maximum duration is 15 seconds. If the requested duration exceeds available buffered content, the clip will contain all available buffered content.
+- `completionHandler`: Handler called after clip export completes or fails. Will be passed an optional NSError in the SCStreamErrorDomain domain if there was an issue exporting the clip.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Export buffered content as a clip to the specified URL
+
+This method exports the most recent buffered samples as a video file. The export happens asynchronously and does not interrupt ongoing buffering - new samples continue to be buffered during export. The clip buffering output must be added to a stream before exports can be requested.
+
+# exportClipToURL:duration:completionHandler: (Objective-C)
+
+**Framework:** ScreenCaptureKit  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+## Declaration
+
+```objectivec
+- (void) exportClipToURL:(NSURL *) url duration:(NSTimeInterval) duration completionHandler:(void (^)(NSError *error)) completionHandler;
+```
+
+## Parameters
+
+- `url`: URL containing absolute path for where to save the clip. Must be a file URL. The file will be created; if it already exists, it will be overwritten.
+- `duration`: Length of time in seconds for clip export. The clip will contain the most recent samples from the buffer for this duration. Maximum duration is 15 seconds. If the requested duration exceeds available buffered content, the clip will contain all available buffered content.
+- `completionHandler`: Handler called after clip export completes or fails. Will be passed an optional NSError in the SCStreamErrorDomain domain if there was an issue exporting the clip.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Export buffered content as a clip to the specified URL
+
+This method exports the most recent buffered samples as a video file. The export happens asynchronously and does not interrupt ongoing buffering - new samples continue to be buffered during export. The clip buffering output must be added to a stream before exports can be requested.

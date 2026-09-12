@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/dvdregionplaybackcontrolinfo/1564326-rpcscheme](https://developer.apple.com/documentation/kernel/dvdregionplaybackcontrolinfo/1564326-rpcscheme)
+
+# rpcScheme
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Instance Property  
+**Availability:** macOS 10.1+
+
+## Declaration
+
+```objectivec
+DVDRegionalPlaybackControlScheme rpcScheme;
+```

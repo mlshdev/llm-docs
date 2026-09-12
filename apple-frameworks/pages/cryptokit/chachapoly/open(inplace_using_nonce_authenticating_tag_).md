@@ -1,0 +1,28 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/cryptokit/chachapoly/open(inplace:using:nonce:authenticating:tag:)](https://developer.apple.com/documentation/cryptokit/chachapoly/open(inplace:using:nonce:authenticating:tag:))
+
+# open(inPlace:using:nonce:authenticating:tag:)
+
+**Framework:** Apple CryptoKit  
+**Kind:** Type Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+ · watchOS 27.0+
+
+Decrypts the message and verifies the authenticity of both the encrypted message and additional data.
+
+## Declaration
+
+```swift
+static func open(inPlace message: inout MutableRawSpan, using key: SymmetricKey, nonce: ChaChaPoly.Nonce, authenticating authenticatedData: RawSpan? = nil, tag: RawSpan) throws
+```
+
+## Parameters
+
+- `message`: The message, which will be decrypted in place.
+- `key`: The cryptographic key that was used to seal the message.
+- `nonce`: The nonce used to encrypt the message.
+- `authenticatedData`: Additional data that was authenticated.
+
+<a id="discussion"></a>
+
+## Discussion
+
+The call throws an error if decryption or authentication fail.

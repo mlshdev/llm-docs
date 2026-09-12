@@ -1,0 +1,53 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/coremedia/cmstereoviewinterpretationoptions/stereoorderreversed](https://developer.apple.com/documentation/coremedia/cmstereoviewinterpretationoptions/stereoorderreversed)
+
+# stereoOrderReversed (Swift)
+
+**Framework:** Core Media  
+**Kind:** Type Property  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+Changes the default ordering of eye data, switching it from left-to-right to right-to-left.
+
+## Declaration
+
+```swift
+static var stereoOrderReversed: CMStereoViewInterpretationOptions { get }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Setting the [stereoOrderReversed](stereoorderreversed.md) flag changes interpretations of geometry and affects internal storage.
+
+## See Also
+
+### Stereo View Options
+
+- [additionalViews](additionalviews.md): A flag indicating that the video content contains additional views beyond the left or right eye.
+
+# kCMStereoViewInterpretation_StereoOrderReversed (Objective-C)
+
+**Framework:** Core Media  
+**Kind:** Enumeration Case  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+Changes the default ordering of eye data, switching it from left-to-right to right-to-left.
+
+## Declaration
+
+```objectivec
+kCMStereoViewInterpretation_StereoOrderReversed
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Setting the [kCMStereoViewInterpretation_StereoOrderReversed](stereoorderreversed.md) flag changes interpretations of geometry and affects internal storage.
+
+## See Also
+
+### Stereo View Options
+
+- [kCMStereoViewInterpretation_AdditionalViews](additionalviews.md): A flag indicating that the video content contains additional views beyond the left or right eye.

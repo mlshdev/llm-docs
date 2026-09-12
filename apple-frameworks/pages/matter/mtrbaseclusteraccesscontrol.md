@@ -1,0 +1,222 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclusteraccesscontrol](https://developer.apple.com/documentation/matter/mtrbaseclusteraccesscontrol)
+
+# MTRBaseClusterAccessControl (Swift)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```swift
+class MTRBaseClusterAccessControl
+```
+
+## Topics
+
+### Initializers
+
+- [init(device:endpoint:queue:)](mtrbaseclusteraccesscontrol/init%28device_endpoint_queue_%29.md): Deprecated.
+- [init(device:endpointID:queue:)](mtrbaseclusteraccesscontrol/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeACL(with:completion:)](mtrbaseclusteraccesscontrol/readattributeacl%28with_completion_%29.md)
+- [readAttributeAcceptedCommandList(completion:)](mtrbaseclusteraccesscontrol/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandList(completionHandler:)](mtrbaseclusteraccesscontrol/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAccessControlEntriesPerFabric(completion:)](mtrbaseclusteraccesscontrol/readattributeaccesscontrolentriesperfabric%28completion_%29.md)
+- [readAttributeAccessControlEntriesPerFabric(completionHandler:)](mtrbaseclusteraccesscontrol/readattributeaccesscontrolentriesperfabric%28completionhandler_%29.md): Deprecated.
+- [readAttributeAcl(with:completionHandler:)](mtrbaseclusteraccesscontrol/readattributeacl%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(completion:)](mtrbaseclusteraccesscontrol/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeList(completionHandler:)](mtrbaseclusteraccesscontrol/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(completion:)](mtrbaseclusteraccesscontrol/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevision(completionHandler:)](mtrbaseclusteraccesscontrol/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeExtension(with:completion:)](mtrbaseclusteraccesscontrol/readattributeextension%28with_completion_%29.md)
+- [readAttributeExtension(with:completionHandler:)](mtrbaseclusteraccesscontrol/readattributeextension%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(completion:)](mtrbaseclusteraccesscontrol/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMap(completionHandler:)](mtrbaseclusteraccesscontrol/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(completion:)](mtrbaseclusteraccesscontrol/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandList(completionHandler:)](mtrbaseclusteraccesscontrol/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeSubjectsPerAccessControlEntry(completion:)](mtrbaseclusteraccesscontrol/readattributesubjectsperaccesscontrolentry%28completion_%29.md)
+- [readAttributeSubjectsPerAccessControlEntry(completionHandler:)](mtrbaseclusteraccesscontrol/readattributesubjectsperaccesscontrolentry%28completionhandler_%29.md): Deprecated.
+- [readAttributeTargetsPerAccessControlEntry(completion:)](mtrbaseclusteraccesscontrol/readattributetargetsperaccesscontrolentry%28completion_%29.md)
+- [readAttributeTargetsPerAccessControlEntry(completionHandler:)](mtrbaseclusteraccesscontrol/readattributetargetsperaccesscontrolentry%28completionhandler_%29.md): Deprecated.
+- [subscribeAttributeACL(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteraccesscontrol/subscribeattributeacl%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteraccesscontrol/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusteraccesscontrol/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAccessControlEntriesPerFabric(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteraccesscontrol/subscribeattributeaccesscontrolentriesperfabric%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAccessControlEntriesPerFabric(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusteraccesscontrol/subscribeattributeaccesscontrolentriesperfabric%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAcl(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusteraccesscontrol/subscribeattributeacl%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteraccesscontrol/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusteraccesscontrol/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevision(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteraccesscontrol/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevision(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusteraccesscontrol/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeExtension(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteraccesscontrol/subscribeattributeextension%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeExtension(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusteraccesscontrol/subscribeattributeextension%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMap(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteraccesscontrol/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMap(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusteraccesscontrol/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandList(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteraccesscontrol/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandList(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusteraccesscontrol/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSubjectsPerAccessControlEntry(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteraccesscontrol/subscribeattributesubjectsperaccesscontrolentry%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSubjectsPerAccessControlEntry(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusteraccesscontrol/subscribeattributesubjectsperaccesscontrolentry%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeTargetsPerAccessControlEntry(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteraccesscontrol/subscribeattributetargetsperaccesscontrolentry%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeTargetsPerAccessControlEntry(withMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:)](mtrbaseclusteraccesscontrol/subscribeattributetargetsperaccesscontrolentry%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [writeAttributeACL(withValue:completion:)](mtrbaseclusteraccesscontrol/writeattributeacl%28withvalue_completion_%29.md)
+- [writeAttributeACL(withValue:params:completion:)](mtrbaseclusteraccesscontrol/writeattributeacl%28withvalue_params_completion_%29.md)
+- [writeAttributeAcl(withValue:completionHandler:)](mtrbaseclusteraccesscontrol/writeattributeacl%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeAcl(withValue:params:completionHandler:)](mtrbaseclusteraccesscontrol/writeattributeacl%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeExtension(withValue:completion:)](mtrbaseclusteraccesscontrol/writeattributeextension%28withvalue_completion_%29.md)
+- [writeAttributeExtension(withValue:completionHandler:)](mtrbaseclusteraccesscontrol/writeattributeextension%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeExtension(withValue:params:completion:)](mtrbaseclusteraccesscontrol/writeattributeextension%28withvalue_params_completion_%29.md)
+- [writeAttributeExtension(withValue:params:completionHandler:)](mtrbaseclusteraccesscontrol/writeattributeextension%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [readAttributeARL(with:completion:)](mtrbaseclusteraccesscontrol/readattributearl%28with_completion_%29.md)
+- [readAttributeCommissioningARL(completion:)](mtrbaseclusteraccesscontrol/readattributecommissioningarl%28completion_%29.md)
+- [reviewFabricRestrictions(with:completion:)](mtrbaseclusteraccesscontrol/reviewfabricrestrictions%28with_completion_%29.md): Command ReviewFabricRestrictions
+- [subscribeAttributeARL(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteraccesscontrol/subscribeattributearl%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCommissioningARL(with:subscriptionEstablished:reportHandler:)](mtrbaseclusteraccesscontrol/subscribeattributecommissioningarl%28with_subscriptionestablished_reporthandler_%29.md)
+
+### Type Methods
+
+- [readAttributeACL(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteraccesscontrol/readattributeacl%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAcceptedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusteraccesscontrol/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteraccesscontrol/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAccessControlEntriesPerFabric(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusteraccesscontrol/readattributeaccesscontrolentriesperfabric%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAccessControlEntriesPerFabric(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteraccesscontrol/readattributeaccesscontrolentriesperfabric%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAcl(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusteraccesscontrol/readattributeacl%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusteraccesscontrol/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteraccesscontrol/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevision(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusteraccesscontrol/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevision(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteraccesscontrol/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeExtension(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusteraccesscontrol/readattributeextension%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeExtension(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteraccesscontrol/readattributeextension%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMap(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusteraccesscontrol/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMap(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteraccesscontrol/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandList(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusteraccesscontrol/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandList(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteraccesscontrol/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSubjectsPerAccessControlEntry(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusteraccesscontrol/readattributesubjectsperaccesscontrolentry%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSubjectsPerAccessControlEntry(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteraccesscontrol/readattributesubjectsperaccesscontrolentry%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeTargetsPerAccessControlEntry(withAttributeCache:endpoint:queue:completionHandler:)](mtrbaseclusteraccesscontrol/readattributetargetsperaccesscontrolentry%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeTargetsPerAccessControlEntry(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteraccesscontrol/readattributetargetsperaccesscontrolentry%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeARL(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteraccesscontrol/readattributearl%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCommissioningARL(withClusterStateCache:endpoint:queue:completion:)](mtrbaseclusteraccesscontrol/readattributecommissioningarl%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)
+
+### Conforms To
+
+- [CVarArg](https://developer.apple.com/documentation/swift/cvararg)
+- [CustomDebugStringConvertible](https://developer.apple.com/documentation/swift/customdebugstringconvertible)
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+# MTRBaseClusterAccessControl (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Class  
+**Availability:** iOS 16.1+ · iPadOS 16.1+ · Mac Catalyst 16.1+ · macOS 13.0+ · tvOS 16.1+ · visionOS 1.0+ · watchOS 9.1+
+
+## Declaration
+
+```objectivec
+@interface MTRBaseClusterAccessControl : MTRGenericBaseCluster
+```
+
+## Topics
+
+### Initializers
+
+- [initWithDevice:endpoint:queue:](mtrbaseclusteraccesscontrol/init%28device_endpoint_queue_%29.md): Deprecated.
+- [initWithDevice:endpointID:queue:](mtrbaseclusteraccesscontrol/init%28device_endpointid_queue_%29.md)
+
+### Instance Methods
+
+- [readAttributeACLWithParams:completion:](mtrbaseclusteraccesscontrol/readattributeacl%28with_completion_%29.md)
+- [readAttributeAcceptedCommandListWithCompletion:](mtrbaseclusteraccesscontrol/readattributeacceptedcommandlist%28completion_%29.md)
+- [readAttributeAcceptedCommandListWithCompletionHandler:](mtrbaseclusteraccesscontrol/readattributeacceptedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeAccessControlEntriesPerFabricWithCompletion:](mtrbaseclusteraccesscontrol/readattributeaccesscontrolentriesperfabric%28completion_%29.md)
+- [readAttributeAccessControlEntriesPerFabricWithCompletionHandler:](mtrbaseclusteraccesscontrol/readattributeaccesscontrolentriesperfabric%28completionhandler_%29.md): Deprecated.
+- [readAttributeAclWithParams:completionHandler:](mtrbaseclusteraccesscontrol/readattributeacl%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithCompletion:](mtrbaseclusteraccesscontrol/readattributeattributelist%28completion_%29.md)
+- [readAttributeAttributeListWithCompletionHandler:](mtrbaseclusteraccesscontrol/readattributeattributelist%28completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithCompletion:](mtrbaseclusteraccesscontrol/readattributeclusterrevision%28completion_%29.md)
+- [readAttributeClusterRevisionWithCompletionHandler:](mtrbaseclusteraccesscontrol/readattributeclusterrevision%28completionhandler_%29.md): Deprecated.
+- [readAttributeExtensionWithParams:completion:](mtrbaseclusteraccesscontrol/readattributeextension%28with_completion_%29.md)
+- [readAttributeExtensionWithParams:completionHandler:](mtrbaseclusteraccesscontrol/readattributeextension%28with_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithCompletion:](mtrbaseclusteraccesscontrol/readattributefeaturemap%28completion_%29.md)
+- [readAttributeFeatureMapWithCompletionHandler:](mtrbaseclusteraccesscontrol/readattributefeaturemap%28completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithCompletion:](mtrbaseclusteraccesscontrol/readattributegeneratedcommandlist%28completion_%29.md)
+- [readAttributeGeneratedCommandListWithCompletionHandler:](mtrbaseclusteraccesscontrol/readattributegeneratedcommandlist%28completionhandler_%29.md): Deprecated.
+- [readAttributeSubjectsPerAccessControlEntryWithCompletion:](mtrbaseclusteraccesscontrol/readattributesubjectsperaccesscontrolentry%28completion_%29.md)
+- [readAttributeSubjectsPerAccessControlEntryWithCompletionHandler:](mtrbaseclusteraccesscontrol/readattributesubjectsperaccesscontrolentry%28completionhandler_%29.md): Deprecated.
+- [readAttributeTargetsPerAccessControlEntryWithCompletion:](mtrbaseclusteraccesscontrol/readattributetargetsperaccesscontrolentry%28completion_%29.md)
+- [readAttributeTargetsPerAccessControlEntryWithCompletionHandler:](mtrbaseclusteraccesscontrol/readattributetargetsperaccesscontrolentry%28completionhandler_%29.md): Deprecated.
+- [subscribeAttributeACLWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteraccesscontrol/subscribeattributeacl%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteraccesscontrol/subscribeattributeacceptedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAcceptedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusteraccesscontrol/subscribeattributeacceptedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAccessControlEntriesPerFabricWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteraccesscontrol/subscribeattributeaccesscontrolentriesperfabric%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAccessControlEntriesPerFabricWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusteraccesscontrol/subscribeattributeaccesscontrolentriesperfabric%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAclWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusteraccesscontrol/subscribeattributeacl%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeAttributeListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteraccesscontrol/subscribeattributeattributelist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeAttributeListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusteraccesscontrol/subscribeattributeattributelist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeClusterRevisionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteraccesscontrol/subscribeattributeclusterrevision%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeClusterRevisionWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusteraccesscontrol/subscribeattributeclusterrevision%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeExtensionWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteraccesscontrol/subscribeattributeextension%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeExtensionWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusteraccesscontrol/subscribeattributeextension%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeFeatureMapWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteraccesscontrol/subscribeattributefeaturemap%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeFeatureMapWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusteraccesscontrol/subscribeattributefeaturemap%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeGeneratedCommandListWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteraccesscontrol/subscribeattributegeneratedcommandlist%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeGeneratedCommandListWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusteraccesscontrol/subscribeattributegeneratedcommandlist%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeSubjectsPerAccessControlEntryWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteraccesscontrol/subscribeattributesubjectsperaccesscontrolentry%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeSubjectsPerAccessControlEntryWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusteraccesscontrol/subscribeattributesubjectsperaccesscontrolentry%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [subscribeAttributeTargetsPerAccessControlEntryWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteraccesscontrol/subscribeattributetargetsperaccesscontrolentry%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeTargetsPerAccessControlEntryWithMinInterval:maxInterval:params:subscriptionEstablished:reportHandler:](mtrbaseclusteraccesscontrol/subscribeattributetargetsperaccesscontrolentry%28withmininterval_maxinterval_params_subscriptionestablished_reporthandler_%29.md): Deprecated.
+- [writeAttributeACLWithValue:completion:](mtrbaseclusteraccesscontrol/writeattributeacl%28withvalue_completion_%29.md)
+- [writeAttributeACLWithValue:params:completion:](mtrbaseclusteraccesscontrol/writeattributeacl%28withvalue_params_completion_%29.md)
+- [writeAttributeAclWithValue:completionHandler:](mtrbaseclusteraccesscontrol/writeattributeacl%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeAclWithValue:params:completionHandler:](mtrbaseclusteraccesscontrol/writeattributeacl%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [writeAttributeExtensionWithValue:completion:](mtrbaseclusteraccesscontrol/writeattributeextension%28withvalue_completion_%29.md)
+- [writeAttributeExtensionWithValue:completionHandler:](mtrbaseclusteraccesscontrol/writeattributeextension%28withvalue_completionhandler_%29.md): Deprecated.
+- [writeAttributeExtensionWithValue:params:completion:](mtrbaseclusteraccesscontrol/writeattributeextension%28withvalue_params_completion_%29.md)
+- [writeAttributeExtensionWithValue:params:completionHandler:](mtrbaseclusteraccesscontrol/writeattributeextension%28withvalue_params_completionhandler_%29.md): Deprecated.
+- [readAttributeARLWithParams:completion:](mtrbaseclusteraccesscontrol/readattributearl%28with_completion_%29.md)
+- [readAttributeCommissioningARLWithCompletion:](mtrbaseclusteraccesscontrol/readattributecommissioningarl%28completion_%29.md)
+- [reviewFabricRestrictionsWithParams:completion:](mtrbaseclusteraccesscontrol/reviewfabricrestrictions%28with_completion_%29.md): Command ReviewFabricRestrictions
+- [subscribeAttributeARLWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteraccesscontrol/subscribeattributearl%28with_subscriptionestablished_reporthandler_%29.md)
+- [subscribeAttributeCommissioningARLWithParams:subscriptionEstablished:reportHandler:](mtrbaseclusteraccesscontrol/subscribeattributecommissioningarl%28with_subscriptionestablished_reporthandler_%29.md)
+
+### Type Methods
+
+- [readAttributeACLWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteraccesscontrol/readattributeacl%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAcceptedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusteraccesscontrol/readattributeacceptedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAcceptedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteraccesscontrol/readattributeacceptedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAccessControlEntriesPerFabricWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusteraccesscontrol/readattributeaccesscontrolentriesperfabric%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAccessControlEntriesPerFabricWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteraccesscontrol/readattributeaccesscontrolentriesperfabric%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeAclWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusteraccesscontrol/readattributeacl%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusteraccesscontrol/readattributeattributelist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeAttributeListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteraccesscontrol/readattributeattributelist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeClusterRevisionWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusteraccesscontrol/readattributeclusterrevision%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeClusterRevisionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteraccesscontrol/readattributeclusterrevision%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeExtensionWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusteraccesscontrol/readattributeextension%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeExtensionWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteraccesscontrol/readattributeextension%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeFeatureMapWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusteraccesscontrol/readattributefeaturemap%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeFeatureMapWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteraccesscontrol/readattributefeaturemap%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeGeneratedCommandListWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusteraccesscontrol/readattributegeneratedcommandlist%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeGeneratedCommandListWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteraccesscontrol/readattributegeneratedcommandlist%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeSubjectsPerAccessControlEntryWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusteraccesscontrol/readattributesubjectsperaccesscontrolentry%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeSubjectsPerAccessControlEntryWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteraccesscontrol/readattributesubjectsperaccesscontrolentry%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeTargetsPerAccessControlEntryWithAttributeCache:endpoint:queue:completionHandler:](mtrbaseclusteraccesscontrol/readattributetargetsperaccesscontrolentry%28withattributecache_endpoint_queue_completionhandler_%29.md): Deprecated.
+- [readAttributeTargetsPerAccessControlEntryWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteraccesscontrol/readattributetargetsperaccesscontrolentry%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeARLWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteraccesscontrol/readattributearl%28withclusterstatecache_endpoint_queue_completion_%29.md)
+- [readAttributeCommissioningARLWithClusterStateCache:endpoint:queue:completion:](mtrbaseclusteraccesscontrol/readattributecommissioningarl%28withclusterstatecache_endpoint_queue_completion_%29.md)
+
+## Relationships
+
+### Inherits From
+
+- [MTRGenericBaseCluster](mtrgenericbasecluster.md)

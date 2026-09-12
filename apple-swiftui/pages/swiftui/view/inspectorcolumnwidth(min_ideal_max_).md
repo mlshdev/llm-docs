@@ -1,0 +1,47 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/view/inspectorcolumnwidth(min:ideal:max:)](https://developer.apple.com/documentation/swiftui/view/inspectorcolumnwidth(min:ideal:max:))
+
+# inspectorColumnWidth(min:ideal:max:)
+
+**Framework:** SwiftUI  
+**Kind:** Instance Method  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+
+
+Sets a flexible, preferred width for the inspector in a trailing-column presentation.
+
+## Declaration
+
+```swift
+nonisolated func inspectorColumnWidth(min: CGFloat? = nil, ideal: CGFloat, max: CGFloat? = nil) -> some View
+
+```
+
+## Parameters
+
+- `min`: The minimum allowed width for the trailing column inspector
+- `ideal`: The initial width of the inspector in the absence of state restoration. `ideal` influences the resulting width on macOS when a user double-clicks the divider on the leading edge of the inspector. clicks a divider to readjust
+- `max`: The maximum allowed width for the trailing column inspector
+
+<a id="discussion"></a>
+
+## Discussion
+
+Apply this modifier on the content of a [inspector(isPresented:content:)](inspector%28ispresented_content_%29.md) to specify a preferred flexible width for the column. Use [inspectorColumnWidth(\_:)](inspectorcolumnwidth%28__%29.md) if you need to specify a fixed width.
+
+The following example shows an editor interface with an inspector, which when presented as a trailing-column, has a preferred width of 225 points, maximum of 400, and a minimum of 150 at which point it will collapse, if allowed.
+
+```swift
+MyEditorView()
+    .inspector {
+        TextTraitsInspectorView()
+            .inspectorColumnWidth(min: 150, ideal: 225, max: 400)
+    }
+```
+
+Only some platforms enable flexible inspector columns. If you specify a width that the current presentation environment doesn’t support, SwiftUI may use a different width for your column.
+
+## See Also
+
+### Presenting an inspector
+
+- [inspector(isPresented:content:)](inspector%28ispresented_content_%29.md): Inserts an inspector at the applied position in the view hierarchy.
+- [inspectorColumnWidth(\_:)](inspectorcolumnwidth%28__%29.md): Sets a fixed, preferred width for the inspector containing this view when presented as a trailing column.

@@ -1,0 +1,24 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatial/euleranglesfloat/init(x:y:z:order:)](https://developer.apple.com/documentation/spatial/euleranglesfloat/init(x:y:z:order:))
+
+# init(x:y:z:order:)
+
+**Framework:** Spatial  
+**Kind:** Initializer  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+ · watchOS 26.0+
+
+Returns a new Euler angles structure from three angle structures.
+
+## Declaration
+
+```swift
+init(x: Angle2DFloat, y: Angle2DFloat, z: Angle2DFloat, order: EulerAngles.Order)
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+- Parameter x The first angle.
+- Parameter y The second angle.
+- Parameter z The third angle.
+- Parameter order The Euler angle ordering.

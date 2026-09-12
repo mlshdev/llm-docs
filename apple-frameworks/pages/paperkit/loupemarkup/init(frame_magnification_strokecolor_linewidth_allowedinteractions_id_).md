@@ -1,0 +1,24 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/paperkit/loupemarkup/init(frame:magnification:strokecolor:linewidth:allowedinteractions:id:)](https://developer.apple.com/documentation/paperkit/loupemarkup/init(frame:magnification:strokecolor:linewidth:allowedinteractions:id:))
+
+# init(frame:magnification:strokeColor:lineWidth:allowedInteractions:id:)
+
+**Framework:** PaperKit  
+**Kind:** Initializer  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · visionOS 27.0+
+
+Initializes and returns a new loupe markup from the specified parameters.
+
+## Declaration
+
+```swift
+init(frame: CGRect, magnification: CGFloat = 1.5, strokeColor: CGColor? = nil, lineWidth: CGFloat = 2.0, allowedInteractions: MarkupInteractions = .all, id: MarkupID<LoupeMarkup> = MarkupID())
+```
+
+## Parameters
+
+- `frame`: The frame of the shape.
+- `magnification`: The magnification level used to zoom the content below the loupe. Defaults to `1.5`.
+- `strokeColor`: The color of the loupe’s border. Defaults to `nil` for no border.
+- `lineWidth`: The width of the loupe’s border in points. Defaults to `2.0`.
+- `allowedInteractions`: The flags controlling the interactions people can perform. Defaults to `.all`.
+- `id`: The identity of the loupe. Defaults to a unique id.

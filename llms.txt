@@ -1,6 +1,6 @@
 # Source-pinned LLM documentation
 
-> LLM-friendly documentation generated from immutable upstream commits. Projects track stable releases unless their source repository is explicitly branch-pinned. Each project includes provenance, normalized pages, an index, and a full concatenated corpus.
+> LLM-friendly documentation generated from immutable upstream commits or content-addressed public documentation catalogs. GitHub projects track stable releases unless explicitly branch-pinned. Each project includes provenance, normalized pages, an index, and a complete corpus.
 
 ## Projects
 
@@ -23,6 +23,14 @@
 - [Bun bun-v1.4.2](bun/llms.txt): [full corpus](bun/llms-full.txt), [manifest](bun/manifest.json)
 - [Trigger.dev v4.5.16](trigger-dev/llms.txt): [full corpus](trigger-dev/llms-full.txt), [manifest](trigger-dev/manifest.json)
 - [aria2 release-1.37.0](aria2/llms.txt): [full corpus](aria2/llms-full.txt), [manifest](aria2/manifest.json)
+- [Apple Swift snapshot-eebba30a4ab9](apple-swift/llms.txt): [full corpus](apple-swift/llms-full.txt), [manifest](apple-swift/manifest.json)
+- [Apple SwiftUI snapshot-5ae2cd850b20](apple-swiftui/llms.txt): [full corpus](apple-swiftui/llms-full.txt), [manifest](apple-swiftui/manifest.json)
+- [Apple WebKit and Safari snapshot-3530be43aacd](apple-webkit/llms.txt): [full corpus](apple-webkit/llms-full.txt), [manifest](apple-webkit/manifest.json)
+- [Apple Xcode and developer tools snapshot-ef15f2517b3c](apple-xcode/llms.txt): [full corpus](apple-xcode/llms-full.txt), [manifest](apple-xcode/manifest.json)
+- [Apple iOS and iPadOS snapshot-3d18b70026fe](apple-ios/llms.txt): [full corpus](apple-ios/llms-full.txt), [manifest](apple-ios/manifest.json)
+- [Apple macOS snapshot-0b0d8b1a4a77](apple-macos/llms.txt): [full corpus](apple-macos/llms-full.txt), [manifest](apple-macos/manifest.json)
+- [Apple watchOS snapshot-49fd8d0a44e2](apple-watchos/llms.txt): [full corpus](apple-watchos/llms-full.txt), [manifest](apple-watchos/manifest.json)
+- [Apple cross-platform frameworks snapshot-75c95c22eb2a](apple-frameworks/llms.txt): [full corpus](apple-frameworks/llms-full.txt), [manifest](apple-frameworks/manifest.json)
 
 ## Update policy
 
@@ -31,3 +39,4 @@
 - Docker documentation tracks the latest `main` commit because docker/docs does not publish current GitHub releases.
 - n8n documentation tracks the latest `main` commit because n8n-docs does not publish releases or tags.
 - NetBird updates only after the separate documentation repository contains the API-generation commit for the same product tag.
+- Apple documentation is captured from the public DocC index and render endpoints. Its live catalog has no release identifier, so each catalog is pinned by a SHA-256 digest of its index inventory and HTTP publication validators.

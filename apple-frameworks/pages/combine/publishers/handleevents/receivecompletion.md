@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/combine/publishers/handleevents/receivecompletion](https://developer.apple.com/documentation/combine/publishers/handleevents/receivecompletion)
+
+# receiveCompletion
+
+**Framework:** Combine  
+**Kind:** Instance Property  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+A closure that executes when the upstream publisher finishes normally or terminates with an error.
+
+## Declaration
+
+```swift
+var receiveCompletion: ((Subscribers.Completion<Publishers.HandleEvents<Upstream>.Failure>) -> Void)?
+```
+
+## See Also
+
+### Inspecting publisher properties
+
+- [upstream](upstream.md): The publisher from which this publisher receives elements.
+- [receiveSubscription](receivesubscription.md): A closure that executes when the publisher receives the subscription from the upstream publisher.
+- [receiveOutput](receiveoutput.md): A closure that executes when the publisher receives a value from the upstream publisher.
+- [receiveCancel](receivecancel.md): A closure that executes when the downstream receiver cancels publishing.
+- [receiveRequest](receiverequest.md): A closure that executes when the publisher receives a request for more elements.

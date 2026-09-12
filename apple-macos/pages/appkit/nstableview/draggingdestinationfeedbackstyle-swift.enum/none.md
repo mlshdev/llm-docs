@@ -1,0 +1,45 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nstableview/draggingdestinationfeedbackstyle-swift.enum/none](https://developer.apple.com/documentation/appkit/nstableview/draggingdestinationfeedbackstyle-swift.enum/none)
+
+# NSTableView.DraggingDestinationFeedbackStyle.none (Swift)
+
+**Framework:** AppKit  
+**Kind:** Case  
+**Availability:** macOS 10.6+
+
+Provides no feedback when the user drags over the table view. This option exists to allow subclasses to implement their dragging destination highlighting, or to make it not show anything all.
+
+## Declaration
+
+```swift
+case none
+```
+
+## See Also
+
+### Constants
+
+- [NSTableView.DraggingDestinationFeedbackStyle.regular](regular.md): Draws a solid round-rect background on drop target rows, and an insertion marker between rows. This style should be used in most cases.
+- [NSTableView.DraggingDestinationFeedbackStyle.sourceList](sourcelist.md): Draws an outline on drop target rows, and an insertion marker between rows. This style will automatically be set for source lists when the table’s [unhideRows(at:withAnimation:)](../unhiderows%28at_withanimation_%29.md) is set to [NSTableView.DraggingDestinationFeedbackStyle.sourceList](sourcelist.md). This is the standard look for Source Lists, but may be used in other areas as needed.
+- [NSTableView.DraggingDestinationFeedbackStyle.gap](gap.md): Provides a gap insertion when dragging over the table. Note that this style is only officially supported for [NSView](../../nsview.md)-based table views, but may partially work in Cell Based TableViews. The decision to use the gap style (compared to another style) can be made in [tableView(\_:draggingSession:willBeginAt:forRowIndexes:)](../../nstableviewdatasource/tableview%28__draggingsession_willbeginat_forrowindexes_%29.md), or it can dynamically be changed.
+
+# NSTableViewDraggingDestinationFeedbackStyleNone (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Enumeration Case  
+**Availability:** macOS 10.6+
+
+Provides no feedback when the user drags over the table view. This option exists to allow subclasses to implement their dragging destination highlighting, or to make it not show anything all.
+
+## Declaration
+
+```objectivec
+NSTableViewDraggingDestinationFeedbackStyleNone
+```
+
+## See Also
+
+### Constants
+
+- [NSTableViewDraggingDestinationFeedbackStyleRegular](regular.md): Draws a solid round-rect background on drop target rows, and an insertion marker between rows. This style should be used in most cases.
+- [NSTableViewDraggingDestinationFeedbackStyleSourceList](sourcelist.md): Draws an outline on drop target rows, and an insertion marker between rows. This style will automatically be set for source lists when the table’s [unhideRowsAtIndexes:withAnimation:](../unhiderows%28at_withanimation_%29.md) is set to [NSTableViewDraggingDestinationFeedbackStyleSourceList](sourcelist.md). This is the standard look for Source Lists, but may be used in other areas as needed.
+- [NSTableViewDraggingDestinationFeedbackStyleGap](gap.md): Provides a gap insertion when dragging over the table. Note that this style is only officially supported for [NSView](../../nsview.md)-based table views, but may partially work in Cell Based TableViews. The decision to use the gap style (compared to another style) can be made in [tableView:draggingSession:willBeginAtPoint:forRowIndexes:](../../nstableviewdatasource/tableview%28__draggingsession_willbeginat_forrowindexes_%29.md), or it can dynamically be changed.

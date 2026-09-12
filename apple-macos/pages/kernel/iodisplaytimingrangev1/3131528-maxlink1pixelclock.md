@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/iodisplaytimingrangev1/3131528-maxlink1pixelclock](https://developer.apple.com/documentation/kernel/iodisplaytimingrangev1/3131528-maxlink1pixelclock)
+
+# maxLink1PixelClock
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Instance Property  
+**Availability:** macOS 10.15+
+
+## Declaration
+
+```objectivec
+UInt32 maxLink1PixelClock;
+```

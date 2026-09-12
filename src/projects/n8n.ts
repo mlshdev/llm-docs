@@ -11,7 +11,11 @@ import {
   titleCase,
 } from "../markdown.ts";
 import { DocumentCollector } from "../quarantine.ts";
-import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
+import type {
+  GithubLockedSource,
+  GithubSourceProject,
+  ProjectBuild,
+} from "../types.ts";
 
 interface N8nPage {
   readonly label: string;
@@ -22,8 +26,8 @@ interface N8nPage {
 interface N8nContext {
   readonly root: string;
   readonly files: ReadonlySet<string>;
-  readonly project: SourceProject;
-  readonly lock: LockedSource;
+  readonly project: GithubSourceProject;
+  readonly lock: GithubLockedSource;
   readonly spaceFolders: ReadonlyMap<string, string>;
   readonly reusableBlocks: ReadonlyMap<string, string>;
 }
@@ -42,8 +46,8 @@ const docsSite = "https://docs.n8n.io";
 const spaceTablePath = "docs/contribute/style-guide-for-n8n-docs.md";
 
 export async function buildN8n(
-  project: SourceProject,
-  lock: LockedSource,
+  project: GithubSourceProject,
+  lock: GithubLockedSource,
 ): Promise<ProjectBuild> {
   if (!lock.branch) {
     throw new Error("n8n documentation must be pinned to a branch commit");

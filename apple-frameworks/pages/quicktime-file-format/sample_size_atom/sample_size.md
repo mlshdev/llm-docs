@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/sample_size_atom/sample_size](https://developer.apple.com/documentation/quicktime-file-format/sample_size_atom/sample_size)
+
+# Sample size
+
+**Framework:** QuickTime File Format  
+**Kind:** Data field
+
+A 32-bit integer specifying the sample size.
+
+<a id="Overview"></a>
+
+## Overview
+
+If all the samples are the same size, this field contains that size value. If this field is set to `0`, then the samples have different sizes, and those sizes are stored in the sample size table.
+
+## See Also
+
+### Data fields
+
+- [Size](size.md): A 32-bit integer that specifies the number of bytes in this sample size atom.
+- [Type](type.md): A 32-bit integer that identifies the atom type.
+- [Version](version.md): A 1-byte specification of the version of this sample size atom.
+- [Flags](flags.md): A 3-byte space for sample size flags.
+- [Number of entries](number_of_entries.md): A 32-bit integer containing the count of entries in the sample size table.
+- [Sample size table](sample_size_table.md): A table containing the sample size information.

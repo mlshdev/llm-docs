@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/security/cssm_sample_type_protected_biometric](https://developer.apple.com/documentation/security/cssm_sample_type_protected_biometric)
+
+# CSSM_SAMPLE_TYPE_PROTECTED_BIOMETRIC (Swift)
+
+**Framework:** Security  
+**Kind:** Global Variable  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+## Declaration
+
+```swift
+var CSSM_SAMPLE_TYPE_PROTECTED_BIOMETRIC: Int { get }
+```
+
+# CSSM_SAMPLE_TYPE_PROTECTED_BIOMETRIC (Objective-C)
+
+**Framework:** Security  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.0+
+
+## Declaration
+
+```objectivec
+CSSM_SAMPLE_TYPE_PROTECTED_BIOMETRIC
+```

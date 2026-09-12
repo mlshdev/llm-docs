@@ -1,0 +1,79 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/audiotoolbox/1618427-audio-session-categories](https://developer.apple.com/documentation/audiotoolbox/1618427-audio-session-categories)
+
+# Audio Session Categories (Swift)
+
+**Framework:** Audio Toolbox  
+**Kind:** API Collection
+
+Category identifiers for audio sessions, used as values for the [kAudioSessionProperty_AudioCategory](kaudiosessionproperty_audiocategory.md) property.
+
+<a id="overview"></a>
+
+## Overview
+
+Each app running in iOS has a single audio session, which in turn has a single category. You can change your audio session’s category while your app is running.
+
+You can refine the configuration provided by the [kAudioSessionCategory_RecordAudio](kaudiosessioncategory_recordaudio.md) and [kAudioSessionCategory_PlayAndRecord](kaudiosessioncategory_playandrecord.md) categories by using an audio session mode, as described in [Audio Session Modes](1618405-audio-session-modes.md).
+
+Use the [kAudioSessionCategory_AmbientSound](kaudiosessioncategory_ambientsound.md) category when you want your sounds to mix with other audio (such as from the iPod app). Use one of the other playback categories when you want audio from other apps to be silenced when your session is active. However, you can enable mixing for the [kAudioSessionCategory_MediaPlayback](kaudiosessioncategory_mediaplayback.md) and [kAudioSessionCategory_PlayAndRecord](kaudiosessioncategory_playandrecord.md) categories by using the [kAudioSessionProperty_OverrideCategoryMixWithOthers](kaudiosessionproperty_overridecategorymixwithothers.md) property. For more information on audio session categories, see [Audio Session Programming Guide](https://developer.apple.com/library/archive/documentation/Audio/Conceptual/AudioSessionProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007875).
+
+## Topics
+
+### Constants
+
+- [kAudioSessionCategory_AmbientSound](kaudiosessioncategory_ambientsound.md): Deprecated. For an app in which sound playback is nonprimary—that is, your app can be used successfully with the sound turned off.
+- [kAudioSessionCategory_SoloAmbientSound](kaudiosessioncategory_soloambientsound.md): The default category, used unless you set a category with the [AudioSessionSetProperty(\_:\_:\_:)](audiosessionsetproperty%28______%29.md) function.
+- [kAudioSessionCategory_MediaPlayback](kaudiosessioncategory_mediaplayback.md): For playing recorded music or other sounds that are central to the successful use of your app.
+- [kAudioSessionCategory_RecordAudio](kaudiosessioncategory_recordaudio.md): For recording audio; this category silences playback audio. Recording continues with the screen locked.
+- [kAudioSessionCategory_PlayAndRecord](kaudiosessioncategory_playandrecord.md): Allows recording (input) and playback (output) of audio, such as for a VOIP (voice over IP) app.
+- [kAudioSessionCategory_AudioProcessing](kaudiosessioncategory_audioprocessing.md): For using an audio hardware codec or signal processor while not playing or recording audio. Use this category, for example, when performing offline audio format conversion.
+
+## See Also
+
+### Audio Session Support
+
+- [Audio Session Property Identifiers](1618455-audio-session-property-identifie.md): Property identifiers used with Audio Session Services in iOS.
+- [Audio Session Modes](1618405-audio-session-modes.md): Mode identifiers for audio sessions, used as values for the [kAudioSessionProperty_Mode](kaudiosessionproperty_mode.md) property.
+- [Audio Session Category Route Overrides](1618372-audio-session-category-route-ove.md): Specifies whether the default audio route for the `PlayAndRecord` category should be overridden.
+- [Audio Session Activation Flags](1618357-audio-session-activation-flags.md): Flags that provide additional information about your app’s audio intentions upon session activation or deactivation.
+- [Audio Session Interruption States](1618425-audio-session-interruption-state.md): Identifiers used with the [AudioSessionInterruptionListener](audiosessioninterruptionlistener.md) callback function in iOS to indicate that an audio interruption has started or stopped.
+- [AudioSessionInterruptionType](audiosessioninterruptiontype.md): Values that indicate the nature of the interruption that ended.
+
+# Audio Session Categories (Objective-C)
+
+**Framework:** Audio Toolbox  
+**Kind:** API Collection
+
+Category identifiers for audio sessions, used as values for the [kAudioSessionProperty_AudioCategory](kaudiosessionproperty_audiocategory.md) property.
+
+<a id="overview"></a>
+
+## Overview
+
+Each app running in iOS has a single audio session, which in turn has a single category. You can change your audio session’s category while your app is running.
+
+You can refine the configuration provided by the [kAudioSessionCategory_RecordAudio](kaudiosessioncategory_recordaudio.md) and [kAudioSessionCategory_PlayAndRecord](kaudiosessioncategory_playandrecord.md) categories by using an audio session mode, as described in [Audio Session Modes](1618405-audio-session-modes.md).
+
+Use the [kAudioSessionCategory_AmbientSound](kaudiosessioncategory_ambientsound.md) category when you want your sounds to mix with other audio (such as from the iPod app). Use one of the other playback categories when you want audio from other apps to be silenced when your session is active. However, you can enable mixing for the [kAudioSessionCategory_MediaPlayback](kaudiosessioncategory_mediaplayback.md) and [kAudioSessionCategory_PlayAndRecord](kaudiosessioncategory_playandrecord.md) categories by using the [kAudioSessionProperty_OverrideCategoryMixWithOthers](kaudiosessionproperty_overridecategorymixwithothers.md) property. For more information on audio session categories, see [Audio Session Programming Guide](https://developer.apple.com/library/archive/documentation/Audio/Conceptual/AudioSessionProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007875).
+
+## Topics
+
+### Constants
+
+- [kAudioSessionCategory_AmbientSound](kaudiosessioncategory_ambientsound.md): Deprecated. For an app in which sound playback is nonprimary—that is, your app can be used successfully with the sound turned off.
+- [kAudioSessionCategory_SoloAmbientSound](kaudiosessioncategory_soloambientsound.md): The default category, used unless you set a category with the [AudioSessionSetProperty](audiosessionsetproperty%28______%29.md) function.
+- [kAudioSessionCategory_MediaPlayback](kaudiosessioncategory_mediaplayback.md): For playing recorded music or other sounds that are central to the successful use of your app.
+- [kAudioSessionCategory_RecordAudio](kaudiosessioncategory_recordaudio.md): For recording audio; this category silences playback audio. Recording continues with the screen locked.
+- [kAudioSessionCategory_PlayAndRecord](kaudiosessioncategory_playandrecord.md): Allows recording (input) and playback (output) of audio, such as for a VOIP (voice over IP) app.
+- [kAudioSessionCategory_AudioProcessing](kaudiosessioncategory_audioprocessing.md): For using an audio hardware codec or signal processor while not playing or recording audio. Use this category, for example, when performing offline audio format conversion.
+
+## See Also
+
+### Audio Session Support
+
+- [Audio Session Property Identifiers](1618455-audio-session-property-identifie.md): Property identifiers used with Audio Session Services in iOS.
+- [Audio Session Modes](1618405-audio-session-modes.md): Mode identifiers for audio sessions, used as values for the [kAudioSessionProperty_Mode](kaudiosessionproperty_mode.md) property.
+- [Audio Session Category Route Overrides](1618372-audio-session-category-route-ove.md): Specifies whether the default audio route for the `PlayAndRecord` category should be overridden.
+- [Audio Session Activation Flags](1618357-audio-session-activation-flags.md): Flags that provide additional information about your app’s audio intentions upon session activation or deactivation.
+- [Audio Session Interruption States](1618425-audio-session-interruption-state.md): Identifiers used with the [AudioSessionInterruptionListener](audiosessioninterruptionlistener.md) callback function in iOS to indicate that an audio interruption has started or stopped.
+- [AudioSessionInterruptionType](audiosessioninterruptiontype.md): Values that indicate the nature of the interruption that ended.

@@ -1,0 +1,51 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/audio/material/scalingabsorption(by:)](https://developer.apple.com/documentation/realitykit/audio/material/scalingabsorption(by:))
+
+# scalingAbsorption(by:)
+
+**Framework:** RealityKit  
+**Kind:** Instance Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+Scale the absorption data by a frequency-dependent scalar value between -1 and 1.
+
+## Declaration
+
+```swift
+func scalingAbsorption(by frequencyDependentScalar: (Float) -> Float) -> Audio.Material
+```
+
+## Parameters
+
+- `frequencyDependentScalar`: A function with frequency as input and coefficient scalar as output.
+
+<a id="return-value"></a>
+
+## Return Value
+
+Audio material with absorption data scaled by the frequency-dependent scaling function.
+
+<a id="discussion"></a>
+
+## Discussion
+
+- No adjustment is made to the coefficient when the scalar is 0.
+- The coefficient is set to 0 when the scalar is -1.
+- The coefficient is set to 1 when the scalar is +1.
+- If the scalar value is between -1 and 0, the coefficient is adjusted by the percentage defined by the absolute value of the scalar between the original coefficient and 0.
+- If the scalar value is between 0 and 1, the coefficient is adjusted by the percentage defined by the scalar between the original coefficient and 1.
+
+Example usage:
+
+```
+// Make a generic carpet material more absorptive by making it thicker.
+// Below 1000Hz, the absorption remains the same. Above 1000Hz, the absorption is increased.
+let thickCarpet: Audio.Material = .carpet.scalingAbsorption { frequency in
+    frequency > 1000 ? 0.5 : .zero
+}
+```
+
+## See Also
+
+### Adjusting acoustic properties
+
+- [scalingScattering(by:)](scalingscattering%28by_%29.md): Scale the scattering data by a frequency-dependent scalar value between -1 and 1.

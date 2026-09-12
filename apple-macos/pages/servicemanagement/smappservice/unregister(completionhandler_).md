@@ -1,0 +1,83 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/servicemanagement/smappservice/unregister(completionhandler:)](https://developer.apple.com/documentation/servicemanagement/smappservice/unregister(completionhandler:))
+
+# unregister(completionHandler:) (Swift)
+
+**Framework:** Service Management  
+**Kind:** Instance Method  
+**Availability:** Mac Catalyst 16.0+ · macOS 13.0+
+
+Unregisters the service so the system no longer launches it and calls a completion handler you provide with the resulting error value.
+
+## Declaration
+
+```swift
+func unregister(completionHandler handler: @escaping @Sendable ((any Error)?) -> Void)
+```
+
+```swift
+func unregister() async throws
+```
+
+## Parameters
+
+- `handler`: A completion handler to call with the result of the unregistration operation. Upon an unsuccessful return, the handler contains a new [NSError](https://developer.apple.com/documentation/foundation/nserror) object describing the error. Upon successful return, this argument is `NULL`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+> **Important**
+
+>  You can call this method from synchronous code using a completion handler, as shown on this page, or you can call it as an asynchronous method that has the following declaration:
+>
+> ```swift
+> func unregister() async throws
+> ```
+>
+> For information about concurrency and asynchronous code in Swift, see [Calling Objective-C APIs Asynchronously](https://developer.apple.com/documentation/swift/calling-objective-c-apis-asynchronously).
+
+## See Also
+
+### Registering services
+
+- [register()](register%28%29.md): Registers the service so it can begin launching subject to user approval.
+- [unregister()](unregister%28%29.md): Unregisters the service so the system no longer launches it.
+
+# unregisterWithCompletionHandler: (Objective-C)
+
+**Framework:** Service Management  
+**Kind:** Instance Method  
+**Availability:** Mac Catalyst 16.0+ · macOS 13.0+
+
+Unregisters the service so the system no longer launches it and calls a completion handler you provide with the resulting error value.
+
+## Declaration
+
+```objectivec
+- (void) unregisterWithCompletionHandler:(void (^)(NSError *error)) handler;
+```
+
+## Parameters
+
+- `handler`: A completion handler to call with the result of the unregistration operation. Upon an unsuccessful return, the handler contains a new [NSError](https://developer.apple.com/documentation/foundation/nserror) object describing the error. Upon successful return, this argument is `NULL`.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+> **Important**
+
+>  You can call this method from synchronous code using a completion handler, as shown on this page, or you can call it as an asynchronous method that has the following declaration:
+>
+> ```swift
+> func unregister() async throws
+> ```
+>
+> For information about concurrency and asynchronous code in Swift, see [Calling Objective-C APIs Asynchronously](https://developer.apple.com/documentation/swift/calling-objective-c-apis-asynchronously).
+
+## See Also
+
+### Registering services
+
+- [registerAndReturnError:](register%28%29.md): Registers the service so it can begin launching subject to user approval.
+- [unregisterAndReturnError:](unregister%28%29.md): Unregisters the service so the system no longer launches it.

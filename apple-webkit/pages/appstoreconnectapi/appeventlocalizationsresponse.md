@@ -1,0 +1,36 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/appstoreconnectapi/appeventlocalizationsresponse](https://developer.apple.com/documentation/appstoreconnectapi/appeventlocalizationsresponse)
+
+# AppEventLocalizationsResponse
+
+**Interface language:** Data
+
+**Framework:** App Store Connect API  
+**Kind:** Object  
+**Availability:** App Store Connect API 1.7+
+
+The response body for endpoints that list localized entries for an in-app event.
+
+## Declaration
+
+```
+object AppEventLocalizationsResponse
+```
+
+## Properties
+
+- `data` — `[AppEventLocalization]` (required):
+- `included` — `[*]`: **Allowed types:** `AppEventScreenshot`, `AppEventVideoClip`, `AppEvent`
+- `links` — `PagedDocumentLinks` (required):
+- `meta` — `PagingInformation`:
+
+## See Also
+
+### Objects
+
+- [AppEventLocalization](appeventlocalization.md): The localized name, short description, and long description for an App Store app event in a specific language.
+- [AppEventLocalizationCreateRequest](appeventlocalizationcreaterequest.md): The request body you use to create an app event localization.
+- [AppEventLocalizationResponse](appeventlocalizationresponse.md): The response body for endpoints that create, read, or modify a localized in-app event entry.
+- [AppEventLocalizationUpdateRequest](appeventlocalizationupdaterequest.md): The request body you use to update an app event localization update request.
+- [AppEventLocalizationAppEventScreenshotsLinkagesResponse](appeventlocalizationappeventscreenshotslinkagesresponse.md)
+- [AppEventLocalizationAppEventVideoClipsLinkagesResponse](appeventlocalizationappeventvideoclipslinkagesresponse.md)
+- [AppEventLocalizationsLinkagesResponse](appeventlocalizationslinkagesresponse.md)

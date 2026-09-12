@@ -1,0 +1,13 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/network/nwprotocolframer/instance/writeoutput(data:)-9axn3](https://developer.apple.com/documentation/network/nwprotocolframer/instance/writeoutput(data:)-9axn3)
+
+# writeOutput(data:)
+
+**Framework:** Network  
+**Kind:** Instance Method  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+## Declaration
+
+```swift
+final func writeOutput<Output>(data: Output) where Output : DataProtocol
+```

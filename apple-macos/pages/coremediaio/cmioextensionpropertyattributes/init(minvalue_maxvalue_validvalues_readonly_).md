@@ -1,0 +1,71 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/coremediaio/cmioextensionpropertyattributes/init(minvalue:maxvalue:validvalues:readonly:)](https://developer.apple.com/documentation/coremediaio/cmioextensionpropertyattributes/init(minvalue:maxvalue:validvalues:readonly:))
+
+# init(minValue:maxValue:validValues:readOnly:) (Swift)
+
+**Framework:** Core Media I/O  
+**Kind:** Initializer  
+**Availability:** Mac Catalyst 15.4+ · macOS 12.3+
+
+Creates a property attributes object with the specified configuration.
+
+## Declaration
+
+```swift
+init(minValue: ObjectType?, maxValue: ObjectType?, validValues: [ObjectType]?, readOnly: Bool)
+```
+
+## Parameters
+
+- `minValue`: An optional minimum value for the property.
+- `maxValue`: An optional maximum value for the property.
+- `validValues`: An optional array of valid values for the property.
+- `readOnly`: A Boolean value that indicates whether the property is read-only.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Configure the attributes of a property by optionally specifying:
+
+- A minimum or maximum value to restrict the range of values a property supports.
+- An array of valid values to restrict the property to discrete values.
+
+If you don’t specify minimum, maximum, or valid values, the property supports any value.
+
+# initWithMinValue:maxValue:validValues:readOnly: (Objective-C)
+
+**Framework:** Core Media I/O  
+**Kind:** Instance Method  
+**Availability:** Mac Catalyst 15.4+ · macOS 12.3+
+
+Creates a property attributes object with the specified configuration.
+
+## Declaration
+
+```objectivec
+- (instancetype) initWithMinValue:(ObjectType) minValue maxValue:(ObjectType) maxValue validValues:(NSArray<id> *) validValues readOnly:(BOOL) readOnly;
+```
+
+## Parameters
+
+- `minValue`: An optional minimum value for the property.
+- `maxValue`: An optional maximum value for the property.
+- `validValues`: An optional array of valid values for the property.
+- `readOnly`: A Boolean value that indicates whether the property is read-only.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Configure the attributes of a property by optionally specifying:
+
+- A minimum or maximum value to restrict the range of values a property supports.
+- An array of valid values to restrict the property to discrete values.
+
+If you don’t specify minimum, maximum, or valid values, the property supports any value.
+
+## See Also
+
+### Creating Property Attributes
+
+- [propertyAttributesWithMinValue:maxValue:validValues:readOnly:](propertyattributeswithminvalue_maxvalue_validvalues_readonly_.md): Returns a new property attributes object with the specified configuration.

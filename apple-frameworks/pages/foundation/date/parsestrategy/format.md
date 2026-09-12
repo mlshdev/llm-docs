@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/date/parsestrategy/format](https://developer.apple.com/documentation/foundation/date/parsestrategy/format)
+
+# format
+
+**Framework:** Foundation  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · macOS 12.0+ · tvOS 15.0+ · visionOS 1.0+ · watchOS 8.0+
+
+The string representation of the fixed format conforming to Unicode Technical Standard #35.
+
+## Declaration
+
+```swift
+var format: String { get }
+```

@@ -1,0 +1,127 @@
+> Snapshot-pinned source for Apple SwiftUI snapshot-5ae2cd850b20: [documentation/swiftui/spacer](https://developer.apple.com/documentation/swiftui/spacer)
+
+# Spacer
+
+**Framework:** SwiftUI  
+**Kind:** Structure  
+**Availability:** iOS 13.0+ · iPadOS 13.0+ · Mac Catalyst 13.0+ · macOS 10.15+ · tvOS 13.0+ · visionOS 1.0+ · watchOS 6.0+
+
+A flexible space that expands along the major axis of its containing stack layout, or on both axes if not contained in a stack.
+
+## Declaration
+
+```swift
+@frozen struct Spacer
+```
+
+## Mentioned In
+
+- [Building layouts with stack views](building-layouts-with-stack-views.md)
+- [Adding a background to your view](adding-a-background-to-your-view.md)
+- [Picking container views for your content](picking-container-views-for-your-content.md)
+
+<a id="overview"></a>
+
+## Overview
+
+A spacer creates an adaptive view with no content that expands as much as it can. For example, when placed within an [HStack](hstack.md), a spacer expands horizontally as much as the stack allows, moving sibling views out of the way, within the limits of the stack’s size. SwiftUI sizes a stack that doesn’t contain a spacer up to the combined ideal widths of the content of the stack’s child views.
+
+The following example provides a simple checklist row to illustrate how you can use a spacer:
+
+```swift
+struct ChecklistRow: View {
+    let name: String
+
+    var body: some View {
+        HStack {
+            Image(systemName: "checkmark")
+            Text(name)
+        }
+        .border(Color.blue)
+    }
+}
+```
+
+![A figure of a blue rectangular border that marks the boundary of an](https://developer.apple.com/images/com.apple.SwiftUI/Spacer-1@2x.png)
+
+Adding a spacer before the image creates an adaptive view with no content that expands to push the image and text to the right side of the stack. The stack also now expands to take as much space as the parent view allows, shown by the blue border that indicates the boundary of the stack:
+
+```swift
+struct ChecklistRow: View {
+    let name: String
+
+    var body: some View {
+        HStack {
+            Spacer()
+            Image(systemName: "checkmark")
+            Text(name)
+        }
+        .border(Color.blue)
+    }
+}
+```
+
+![A figure of a blue rectangular border that marks the boundary of an](https://developer.apple.com/images/com.apple.SwiftUI/Spacer-2@2x.png)
+
+Moving the spacer between the image and the name pushes those elements to the left and right sides of the [HStack](hstack.md), respectively. Because the stack contains the spacer, it expands to take as much horizontal space as the parent view allows; the blue border indicates its size:
+
+```swift
+struct ChecklistRow: View {
+    let name: String
+
+    var body: some View {
+        HStack {
+            Image(systemName: "checkmark")
+            Spacer()
+            Text(name)
+        }
+        .border(Color.blue)
+    }
+}
+```
+
+![A figure of a blue rectangular border that marks the boundary of an](https://developer.apple.com/images/com.apple.SwiftUI/Spacer-3@2x.png)
+
+Adding two spacer views on the outside of the stack leaves the image and text together, while the stack expands to take as much horizontal space as the parent view allows:
+
+```swift
+struct ChecklistRow: View {
+    let name: String
+
+    var body: some View {
+        HStack {
+            Spacer()
+            Image(systemName: "checkmark")
+            Text(name)
+            Spacer()
+        }
+        .border(Color.blue)
+    }
+}
+```
+
+![A figure of a blue rectangular border marks the boundary of an HStack,](https://developer.apple.com/images/com.apple.SwiftUI/Spacer-4@2x.png)
+
+## Topics
+
+### Creating a spacer
+
+- [init(minLength:)](spacer/init%28minlength_%29.md)
+- [minLength](spacer/minlength.md): The minimum length this spacer can be shrunk to, along the axis or axes of expansion.
+
+## Relationships
+
+### Conforms To
+
+- [BitwiseCopyable](https://developer.apple.com/documentation/swift/bitwisecopyable)
+- [Copyable](https://developer.apple.com/documentation/swift/copyable)
+- [Escapable](https://developer.apple.com/documentation/swift/escapable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+- [View](view.md)
+
+## See Also
+
+### Separators
+
+- [Divider](divider.md): A visual element that can be used to separate other content.

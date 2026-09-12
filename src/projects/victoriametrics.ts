@@ -1,11 +1,15 @@
 import { buildHugoDocs } from "./hugo-docs.ts";
-import type { LockedSource, ProjectBuild, SourceProject } from "../types.ts";
+import type {
+  GithubLockedSource,
+  GithubSourceProject,
+  ProjectBuild,
+} from "../types.ts";
 
 // VictoriaMetrics, VictoriaLogs, and vmestimator publish one Hugo site from the
 // docs/ tree of each repository.
 export function buildVictoriametricsDocs(
-  project: SourceProject,
-  lock: LockedSource,
+  project: GithubSourceProject,
+  lock: GithubLockedSource,
 ): Promise<ProjectBuild> {
   return buildHugoDocs(project, lock, {
     label: project.title,

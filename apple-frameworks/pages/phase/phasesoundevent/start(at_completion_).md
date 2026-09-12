@@ -1,0 +1,55 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/phase/phasesoundevent/start(at:completion:)](https://developer.apple.com/documentation/phase/phasesoundevent/start(at:completion:))
+
+# start(at:completion:) (Swift)
+
+**Framework:** PHASE  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+## Declaration
+
+```swift
+func start(at when: AVAudioTime?, completion handler: (@Sendable (PHASESoundEvent.StartHandlerReason) -> Void)? = nil)
+```
+
+```swift
+func start(at when: AVAudioTime?) async -> PHASESoundEvent.StartHandlerReason
+```
+
+## Parameters
+
+- `when`: The desired start time based on the engine time retrieved from \[PHASEEngine lastRenderTime\] If the sound event starts immediately with an audible sound, it will begin rendering at this time.  The sound event will otherwise begin operating at this time. A nil value will start the sound event immediately This time is not scaled by unitsPerSecond.
+- `handler`: The block that will be called when the sound event has stopped.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Start the sound event
+
+This function notifies the engine to start the sound event, then returns immediately. Once the sound event is playing (or has failed to start), you will receive a callback via the completion. Playback will begin at the requested time if the sound event has finished preparing in time. You may wait for preparation to finish with the \[PHASESoundEvent prepare:completion\] method before calling startAtTime, to ensure that the sound event will start at the desired time. However if the desired time is far enough into the future to allow for preparation to happen, you may skip calling prepare entirely and just call startAtTime.
+
+# startAtTime:completion: (Objective-C)
+
+**Framework:** PHASE  
+**Kind:** Instance Method  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+## Declaration
+
+```objectivec
+- (void) startAtTime:(AVAudioTime *) when completion:(void (^)(PHASESoundEventStartHandlerReason reason)) handler;
+```
+
+## Parameters
+
+- `when`: The desired start time based on the engine time retrieved from \[PHASEEngine lastRenderTime\] If the sound event starts immediately with an audible sound, it will begin rendering at this time.  The sound event will otherwise begin operating at this time. A nil value will start the sound event immediately This time is not scaled by unitsPerSecond.
+- `handler`: The block that will be called when the sound event has stopped.
+
+<a id="discussion"></a>
+
+## Discussion
+
+Start the sound event
+
+This function notifies the engine to start the sound event, then returns immediately. Once the sound event is playing (or has failed to start), you will receive a callback via the completion. Playback will begin at the requested time if the sound event has finished preparing in time. You may wait for preparation to finish with the \[PHASESoundEvent prepare:completion\] method before calling startAtTime, to ensure that the sound event will start at the desired time. However if the desired time is far enough into the future to allow for preparation to happen, you may skip calling prepare entirely and just call startAtTime.

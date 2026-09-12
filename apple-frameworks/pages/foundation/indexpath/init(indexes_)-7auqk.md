@@ -1,0 +1,25 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/foundation/indexpath/init(indexes:)-7auqk](https://developer.apple.com/documentation/foundation/indexpath/init(indexes:)-7auqk)
+
+# init(indexes:)
+
+**Framework:** Foundation  
+**Kind:** Initializer  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 8.0+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+Creates an index path from an array of elements.
+
+## Declaration
+
+```swift
+init(indexes: Array<IndexPath.Element>)
+```
+
+## See Also
+
+### Creating Index Paths
+
+- [init()](init%28%29.md): Creates an empty index path.
+- [init(index:)](init%28index_%29.md): Creates an index path with a single element.
+- [init(arrayLiteral:)](init%28arrayliteral_%29.md): Creates an index path from an array literal.
+- [init(indexes:)](init%28indexes_%29-55we8.md): Creates an index path from a sequence of integers.
+- [IndexPath.Element](element.md): A type that represents one node of an index path.

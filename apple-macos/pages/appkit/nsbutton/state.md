@@ -1,0 +1,69 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/appkit/nsbutton/state](https://developer.apple.com/documentation/appkit/nsbutton/state)
+
+# state (Swift)
+
+**Framework:** AppKit  
+**Kind:** Instance Property  
+**Availability:** macOS
+
+The button’s state.
+
+## Declaration
+
+```swift
+var state: NSControl.StateValue { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The value of this property represents the button’s state. A button can have two or three states.  If it has two, this value is either on (`NSOnState`) or off (`NSOffState`). If it has three, this value is on, off, or mixed (`NSMixedState`). A three-state button can be enabled by calling the [allowsMixedState](allowsmixedstate.md) method. On and off states (also referred to as alternate and normal) indicate that the button is either clicked or not clicked. Mixed state is typically used for checkboxes or radio buttons, which allow for an additional intermediate state. For example, suppose the state of a checkbox is used to denote whether a text field contains bold text. If all of the text in the text field is bold, then the checkbox appears checked (on). If none of the text is bold, then the checkbox appears unchecked (off). If some of the text is bold, then the checkbox contains a dash (mixed).
+
+Note that if the button has only two states and you set the value of [state](state.md) to mixed, the button’s state changes to on. Setting this property redraws the button, if necessary.
+
+Although using the enumerated constants is preferred, you can also set [state](state.md) to an integer value. If the button has two states, `0` is treated as `NSOffState`, and a nonzero value is treated as `NSOnState`. If the button has three states, `0` is treated as `NSOffState`; a negative value, as `NSMixedState`; and a positive value, as `NSOnState`.
+
+To check whether the button uses the mixed state, use the [allowsMixedState](allowsmixedstate.md) property.
+
+## See Also
+
+### Managing button state
+
+- [allowsMixedState](allowsmixedstate.md): A Boolean value that indicates whether the button allows a mixed state.
+- [setNextState()](setnextstate%28%29.md): Sets the button to its next state.
+- [highlight(\_:)](highlight%28__%29.md): Highlights (or unhighlights) the button.
+
+# state (Objective-C)
+
+**Framework:** AppKit  
+**Kind:** Instance Property  
+**Availability:** macOS
+
+The button’s state.
+
+## Declaration
+
+```objectivec
+@property NSControlStateValue state;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The value of this property represents the button’s state. A button can have two or three states.  If it has two, this value is either on (`NSOnState`) or off (`NSOffState`). If it has three, this value is on, off, or mixed (`NSMixedState`). A three-state button can be enabled by calling the [allowsMixedState](allowsmixedstate.md) method. On and off states (also referred to as alternate and normal) indicate that the button is either clicked or not clicked. Mixed state is typically used for checkboxes or radio buttons, which allow for an additional intermediate state. For example, suppose the state of a checkbox is used to denote whether a text field contains bold text. If all of the text in the text field is bold, then the checkbox appears checked (on). If none of the text is bold, then the checkbox appears unchecked (off). If some of the text is bold, then the checkbox contains a dash (mixed).
+
+Note that if the button has only two states and you set the value of [state](state.md) to mixed, the button’s state changes to on. Setting this property redraws the button, if necessary.
+
+Although using the enumerated constants is preferred, you can also set [state](state.md) to an integer value. If the button has two states, `0` is treated as `NSOffState`, and a nonzero value is treated as `NSOnState`. If the button has three states, `0` is treated as `NSOffState`; a negative value, as `NSMixedState`; and a positive value, as `NSOnState`.
+
+To check whether the button uses the mixed state, use the [allowsMixedState](allowsmixedstate.md) property.
+
+## See Also
+
+### Managing button state
+
+- [allowsMixedState](allowsmixedstate.md): A Boolean value that indicates whether the button allows a mixed state.
+- [setNextState](setnextstate%28%29.md): Sets the button to its next state.
+- [highlight:](highlight%28__%29.md): Highlights (or unhighlights) the button.

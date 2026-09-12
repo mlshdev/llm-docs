@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/phase/phasesoundevent/pullstreamnodes](https://developer.apple.com/documentation/phase/phasesoundevent/pullstreamnodes)
+
+# pullStreamNodes (Swift)
+
+**Framework:** PHASE  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
+
+## Declaration
+
+```swift
+var pullStreamNodes: [String : PHASEPullStreamNode] { get }
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+A Dictionary containing the pull stream nodes associated with this sound event, for setting renderBlocks on.
+
+# pullStreamNodes (Objective-C)
+
+**Framework:** PHASE  
+**Kind:** Instance Property  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+
+
+## Declaration
+
+```objectivec
+@property (copy, readonly) NSDictionary<NSString *,PHASEPullStreamNode *> * pullStreamNodes;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+A Dictionary containing the pull stream nodes associated with this sound event, for setting renderBlocks on.

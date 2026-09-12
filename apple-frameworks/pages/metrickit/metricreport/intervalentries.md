@@ -1,0 +1,45 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metrickit/metricreport/intervalentries](https://developer.apple.com/documentation/metrickit/metricreport/intervalentries)
+
+# intervalEntries
+
+**Framework:** MetricKit  
+**Kind:** Instance Property  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · Mac Catalyst 27.0+ · macOS 27.0+
+
+The interval entries in this metric report, including the full-day aggregate.
+
+## Declaration
+
+```swift
+let intervalEntries: [MetricReport.IntervalEntry]
+```
+
+## Mentioned In
+
+- [Monitoring app performance with MetricKit](../monitoring-app-performance-with-metrickit.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Use the [fullDayEntry](https://developer.apple.com/documentation/swift/array/fulldayentry) convenience property on the collection to access the entry covering the entire 24-hour reporting period. This is the entry with the longest [duration](intervalentry/duration.md):
+
+```swift
+let entry = report.intervalEntries.fullDayEntry
+for result in entry.values {
+    switch result {
+    case .cpuTime(let metric): process(metric)
+    @unknown default: break
+    }
+}
+```
+
+When state reporting is enabled, `intervalEntries` may also include shorter sub-interval entries alongside the full-day entry. Use `byStateReportingDomain` on the collection to group all states across all interval entries by domain.
+
+## See Also
+
+### Metric data
+
+- [stateEntries](stateentries.md): The state entries in this metric report, populated when state reporting is enabled.
+- [encodingFormatKey](encodingformatkey.md): A `CodingUserInfoKey` for selecting the JSON encoding format of a metric report.
+- [MetricReport.EncodingFormat](encodingformat.md): A value that controls the JSON structure used when encoding a metric report.

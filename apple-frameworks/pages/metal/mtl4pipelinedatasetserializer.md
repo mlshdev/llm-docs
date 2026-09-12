@@ -1,0 +1,109 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/metal/mtl4pipelinedatasetserializer](https://developer.apple.com/documentation/metal/mtl4pipelinedatasetserializer)
+
+# MTL4PipelineDataSetSerializer (Swift)
+
+**Framework:** Metal  
+**Kind:** Protocol  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+A fast-addition container for collecting data during pipeline state creation.
+
+## Declaration
+
+```swift
+protocol MTL4PipelineDataSetSerializer : NSObjectProtocol
+```
+
+## Mentioned In
+
+- [Using the Metal 4 compilation API](using-the-metal-4-compilation-api.md)
+
+<a id="overview"></a>
+
+## Overview
+
+Pipeline data serializer instances allow you to create binary archives and serialize pipeline scripts to use with the offline Metal binary generator (`metal-tt`) doc:compiling-binary-archives-from-a-custom-configuration-script.md.
+
+You capture and retain all relevant data for all pipelines a compiler instance creates by providing an instance of this object to its [MTL4CompilerDescriptor](mtl4compilerdescriptor.md).
+
+After capturing data, you can serialize it to a binary archive to persist its contents offline by calling [serializeAsArchiveAndFlush(url:)](mtl4pipelinedatasetserializer/serializeasarchiveandflush%28url_%29.md). You can also serialize a pipeline script suitable for the offline binary generator (`metal-tt`) by calling [serializeAsPipelinesScript()](mtl4pipelinedatasetserializer/serializeaspipelinesscript%28%29.md)
+
+> **Note**
+
+> The objects [MTL4PipelineDataSetSerializer](mtl4pipelinedatasetserializer.md) contains are opaque and can’t accelerate compilation for compilers they are not attached to. Additionally, your program can’t read data out of data set serializer instances.
+
+## Topics
+
+### Instance Methods
+
+- [serializeAsArchiveAndFlush(url:)](mtl4pipelinedatasetserializer/serializeasarchiveandflush%28url_%29.md): Serializes a pipeline data set to an archive.
+- [serializeAsPipelinesScript()](mtl4pipelinedatasetserializer/serializeaspipelinesscript%28%29.md): Serializes a serializer data set to a pipeline script as raw data.
+
+## Relationships
+
+### Inherits From
+
+- [NSObjectProtocol](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Pipeline harvesting
+
+- [MTL4PipelineDataSetSerializerConfiguration](mtl4pipelinedatasetserializerconfiguration.md): Configuration options for pipeline dataset serializer objects.
+- [MTL4PipelineDataSetSerializerDescriptor](mtl4pipelinedatasetserializerdescriptor.md): Groups together properties to create a pipeline data set serializer.
+- [MTL4PipelineDescriptor](mtl4pipelinedescriptor.md): Base type for descriptors you use for building pipeline state objects.
+- [MTL4PipelineOptions](mtl4pipelineoptions.md): Provides options controlling how to compile a pipeline state.
+
+# MTL4PipelineDataSetSerializer (Objective-C)
+
+**Framework:** Metal  
+**Kind:** Protocol  
+**Availability:** iOS 26.0+ · iPadOS 26.0+ · Mac Catalyst 26.0+ · macOS 26.0+ · tvOS 26.0+ · visionOS 26.0+
+
+A fast-addition container for collecting data during pipeline state creation.
+
+## Declaration
+
+```objectivec
+@protocol MTL4PipelineDataSetSerializer <NSObject>
+```
+
+## Mentioned In
+
+- [Using the Metal 4 compilation API](using-the-metal-4-compilation-api.md)
+
+<a id="overview"></a>
+
+## Overview
+
+Pipeline data serializer instances allow you to create binary archives and serialize pipeline scripts to use with the offline Metal binary generator (`metal-tt`) doc:compiling-binary-archives-from-a-custom-configuration-script.md.
+
+You capture and retain all relevant data for all pipelines a compiler instance creates by providing an instance of this object to its [MTL4CompilerDescriptor](mtl4compilerdescriptor.md).
+
+After capturing data, you can serialize it to a binary archive to persist its contents offline by calling [serializeAsArchiveAndFlushToURL:error:](mtl4pipelinedatasetserializer/serializeasarchiveandflush%28url_%29.md). You can also serialize a pipeline script suitable for the offline binary generator (`metal-tt`) by calling [serializeAsPipelinesScriptWithError:](mtl4pipelinedatasetserializer/serializeaspipelinesscript%28%29.md)
+
+> **Note**
+
+> The objects [MTL4PipelineDataSetSerializer](mtl4pipelinedatasetserializer.md) contains are opaque and can’t accelerate compilation for compilers they are not attached to. Additionally, your program can’t read data out of data set serializer instances.
+
+## Topics
+
+### Instance Methods
+
+- [serializeAsArchiveAndFlushToURL:error:](mtl4pipelinedatasetserializer/serializeasarchiveandflush%28url_%29.md): Serializes a pipeline data set to an archive.
+- [serializeAsPipelinesScriptWithError:](mtl4pipelinedatasetserializer/serializeaspipelinesscript%28%29.md): Serializes a serializer data set to a pipeline script as raw data.
+
+## Relationships
+
+### Inherits From
+
+- [NSObject](../objectivec/nsobjectprotocol.md)
+
+## See Also
+
+### Pipeline harvesting
+
+- [MTL4PipelineDataSetSerializerConfiguration](mtl4pipelinedatasetserializerconfiguration.md): Configuration options for pipeline dataset serializer objects.
+- [MTL4PipelineDataSetSerializerDescriptor](mtl4pipelinedatasetserializerdescriptor.md): Groups together properties to create a pipeline data set serializer.
+- [MTL4PipelineDescriptor](mtl4pipelinedescriptor.md): Base type for descriptors you use for building pipeline state objects.
+- [MTL4PipelineOptions](mtl4pipelineoptions.md): Provides options controlling how to compile a pipeline state.

@@ -1,0 +1,29 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/matter/mtrbaseclusterunittesting/readattributebitmap16(completion:)](https://developer.apple.com/documentation/matter/mtrbaseclusterunittesting/readattributebitmap16(completion:))
+
+# readAttributeBitmap16(completion:) (Swift)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```swift
+func readAttributeBitmap16(completion: @escaping @Sendable (NSNumber?, (any Error)?) -> Void)
+```
+
+```swift
+func readAttributeBitmap16() async throws -> NSNumber
+```
+
+# readAttributeBitmap16WithCompletion: (Objective-C)
+
+**Framework:** Matter  
+**Kind:** Instance Method  
+**Availability:** iOS 16.4+ · iPadOS 16.4+ · Mac Catalyst 16.4+ · macOS 13.3+ · tvOS 16.4+ · visionOS 1.0+ · watchOS 9.4+
+
+## Declaration
+
+```objectivec
+- (void) readAttributeBitmap16WithCompletion:(void (^)(NSNumber *value, NSError *error)) completion;
+```

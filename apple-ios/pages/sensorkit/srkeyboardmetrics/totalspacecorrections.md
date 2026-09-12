@@ -1,0 +1,69 @@
+> Snapshot-pinned source for Apple iOS and iPadOS snapshot-3d18b70026fe: [documentation/sensorkit/srkeyboardmetrics/totalspacecorrections](https://developer.apple.com/documentation/sensorkit/srkeyboardmetrics/totalspacecorrections)
+
+# totalSpaceCorrections (Swift)
+
+**Framework:** SensorKit  
+**Kind:** Instance Property  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
+
+The total number of space corrections for the keyboard.
+
+## Declaration
+
+```swift
+var totalSpaceCorrections: Int { get }
+```
+
+## See Also
+
+### Quantifying Key Use
+
+- [totalWords](totalwords.md): The total number of typed words for the keyboard.
+- [totalAlteredWords](totalalteredwords.md): The total number of altered words for the keyboard.
+- [totalTaps](totaltaps.md): The total number of taps for the keyboard.
+- [totalDrags](totaldrags.md): The total number of drags for the keyboard.
+- [totalDeletes](totaldeletes.md): The total number of deletions for the keyboard.
+- [totalEmojis](totalemojis.md): The total number of emojis for the keyboard.
+- [totalPaths](totalpaths.md): The total number of completed paths for the keyboard.
+- [totalPathTime](totalpathtime.md): The total time to complete paths for the keyboard.
+- [totalPathLength](totalpathlength.md): The total length of completed paths for the keyboard.
+- [totalAutoCorrections](totalautocorrections.md): The total number of autocorrections for the keyboard.
+- [totalRetroCorrections](totalretrocorrections.md): The total number of retro corrections for the keyboard.
+- [totalTranspositionCorrections](totaltranspositioncorrections.md): The total number of transposition corrections for the keyboard.
+- [totalInsertKeyCorrections](totalinsertkeycorrections.md): The total number of Insert key corrections for the keyboard.
+- [totalSkipTouchCorrections](totalskiptouchcorrections.md): The total number of skip touch corrections for the keyboard.
+- [totalNearKeyCorrections](totalnearkeycorrections.md): The total number of near key corrections for the keyboard.
+
+# totalSpaceCorrections (Objective-C)
+
+**Framework:** SensorKit  
+**Kind:** Instance Property  
+**Availability:** iOS 14.0+ · iPadOS 14.0+ · Mac Catalyst 14.0+
+
+The total number of space corrections for the keyboard.
+
+## Declaration
+
+```objectivec
+@property (readonly) NSInteger totalSpaceCorrections;
+```
+
+## See Also
+
+### Quantifying Key Use
+
+- [totalWords](totalwords.md): The total number of typed words for the keyboard.
+- [totalAlteredWords](totalalteredwords.md): The total number of altered words for the keyboard.
+- [totalTaps](totaltaps.md): The total number of taps for the keyboard.
+- [totalDrags](totaldrags.md): The total number of drags for the keyboard.
+- [totalDeletes](totaldeletes.md): The total number of deletions for the keyboard.
+- [totalEmojis](totalemojis.md): The total number of emojis for the keyboard.
+- [totalPaths](totalpaths.md): The total number of completed paths for the keyboard.
+- [totalPathTime](totalpathtime.md): The total time to complete paths for the keyboard.
+- [totalPathLength](totalpathlength.md): The total length of completed paths for the keyboard.
+- [totalAutoCorrections](totalautocorrections.md): The total number of autocorrections for the keyboard.
+- [totalRetroCorrections](totalretrocorrections.md): The total number of retro corrections for the keyboard.
+- [totalTranspositionCorrections](totaltranspositioncorrections.md): The total number of transposition corrections for the keyboard.
+- [totalInsertKeyCorrections](totalinsertkeycorrections.md): The total number of Insert key corrections for the keyboard.
+- [totalSkipTouchCorrections](totalskiptouchcorrections.md): The total number of skip touch corrections for the keyboard.
+- [totalNearKeyCorrections](totalnearkeycorrections.md): The total number of near key corrections for the keyboard.

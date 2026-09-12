@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/pcidriverkit/kiopcicapabilityidmsi](https://developer.apple.com/documentation/pcidriverkit/kiopcicapabilityidmsi)
+
+# kIOPCICapabilityIDMSI
+
+**Interface language:** Objective-C
+
+**Framework:** PCIDriverKit  
+**Kind:** Enumeration Case  
+**Availability:** DriverKit · macOS
+
+The identifier for the MSI capability.
+
+## Declaration
+
+```objectivec
+kIOPCICapabilityIDMSI
+```
+
+## See Also
+
+### Capability Bits
+
+- [kIOPCICapabilityIDOffset](kiopcicapabilityidoffset.md): The offset to the location of the device’s capability ID.
+- [kIOPCINextCapabilityOffset](kiopcinextcapabilityoffset.md): The offset to the next PCI capability structure.
+- [kIOPCICapabilityIDPowerManagement](kiopcicapabilityidpowermanagement.md): The identifier for the power management interface.
+- [kIOPCICapabilityIDAGP](kiopcicapabilityidagp.md): The identifier for the AGP capability.
+- [kIOPCICapabilityIDVitalProductData](kiopcicapabilityidvitalproductdata.md): The identifier for the vital product data capability.
+- [kIOPCICapabilityIDSlotID](kiopcicapabilityidslotid.md): The identifier for the slot identification capability.
+- [kIOPCICapabilityIDCPCIHotswap](kiopcicapabilityidcpcihotswap.md): The identifier for the CompactPCI hot swap capability.
+- [kIOPCICapabilityIDPCIX](kiopcicapabilityidpcix.md): The identifier for the PCI-X capability.
+- [kIOPCICapabilityIDLDT](kiopcicapabilityidldt.md): The identifier for the HyperTransport capability.
+- [kIOPCICapabilityIDVendorSpecific](kiopcicapabilityidvendorspecific.md): The identifier for any vendor-specific capabilities.
+- [kIOPCICapabilityIDDebugPort](kiopcicapabilityiddebugport.md): The identifier for the debug port capability.
+- [kIOPCICapabilityIDCPCIResourceControl](kiopcicapabilityidcpciresourcecontrol.md): The identifier for the CompactPCI central resource control capability.
+- [kIOPCICapabilityIDHotplug](kiopcicapabilityidhotplug.md): The identifier for the PCI hot plug capability.
+- [kIOPCICapabilityIDAGP8](kiopcicapabilityidagp8.md): The identifier for the AGP 8x capability.
+- [kIOPCICapabilityIDSecure](kiopcicapabilityidsecure.md): The identifer for the secure device capability.

@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uiapplication/isdefault(_:)](https://developer.apple.com/documentation/uikit/uiapplication/isdefault(_:))
+
+# isDefault(\_:)
+
+**Framework:** UIKit  
+**Kind:** Instance Method  
+**Availability:** iOS 18.2+ · iPadOS 18.2+
+
+Reports whether this app is the person’s default app in the given category.
+
+## Declaration
+
+```swift
+nonisolated func isDefault(_ category: UIApplication.Category) throws -> Bool
+```
+
+## Parameters
+
+- `category`: The type of app for which you test whether your app is the default.
+
+<a id="return-value"></a>
+
+## Return Value
+
+If the system determines the status of the app, this method returns `true` if the app is the default app in the category, and `false` otherwise. If the system doesn’t determine the status, or the app exceeds the threshold rate for calling this method, it throws an error.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+To reduce the likelihood that users face continuous requests to set a browser as their default, this API only tells the browser app if it’s the default up to four times in a year. If you call the method too frequently, it throws an error with the domain [UIApplicationCategoryDefaultErrorDomain](../uiapplicationcategorydefaulterrordomain.md) and the code [rateLimited](categorydefaulterror/ratelimited.md). The error’s user information dictionary contains these keys:
+
+- **[statusLastProvidedDateErrorKey](categorydefaulterror/statuslastprovideddateerrorkey.md)**: The date at which the app most recently received a `true` or `false` response from this method.
+- **[retryAvailableDateErrorKey](categorydefaulterror/retryavailabledateerrorkey.md)**: The date at which the app can next request an updated response.
+
+## See Also
+
+### Discovering if your app is the default app in a category
+
+- [UIApplication.Category](category.md): Constants that describe the types of apps in the system.
+- [UIApplication.CategoryDefaultError](categorydefaulterror.md): Errors that can happen when the system checks if your app is the default app in a category.

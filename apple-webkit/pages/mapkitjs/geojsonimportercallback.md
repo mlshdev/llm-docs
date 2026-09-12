@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/mapkitjs/geojsonimportercallback](https://developer.apple.com/documentation/mapkitjs/geojsonimportercallback)
+
+# GeoJSONImporterCallback
+
+**Interface language:** Data
+
+**Framework:** MapKit JS  
+**Kind:** Type  
+**Availability:** MapKit JS 5.0+
+
+A callback function that MapKit JS invokes when importing a GeoJSON object.
+
+## Declaration
+
+```
+type GeoJSONImporterCallback = (
+    ...args:
+        | [GeoJSONImportError, GeoJSONTypes.GeoJSON | undefined]
+        | [null, ItemCollection]
+) => void;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+MapKit JS invokes this callback with two arguments, `error` on failure and `result` on success, as follows:
+
+- **`error`**: A [GeoJSONImportError](geojsonimporterror.md) that contains an error code and a descriptive message.
+- **`result`**: An [ItemCollection](itemcollection.md) in which MapKit JS stores the raw GeoJSON to use for generating the object in the object’s `data` property.
+
+## See Also
+
+### Geographical features
+
+- [importGeoJSON()](mapkit/importgeojson.md): Converts imported GeoJSON data to MapKit JS compatible items.
+- [GeoJSONDelegate](geojsondelegate.md): A delegate object that controls a GeoJSON import to override default behavior and provide custom style.
+- [Item](item.md): A type alias that represents all objects that the framework sets in an item collection.
+- [ItemCollection](itemcollection.md): A tree structure containing annotations, overlays, and nested item collection objects.
+- [GeoJSONImportError](geojsonimporterror.md): An error object that indicates an error occurred while importing a GeoJSON object.
+- [Displaying Indoor Maps with MapKit JS](displaying-indoor-maps-with-mapkit-js.md): Use the Indoor Mapping Data Format (IMDF) to show an indoor map with custom overlays and points of interest in your browser.

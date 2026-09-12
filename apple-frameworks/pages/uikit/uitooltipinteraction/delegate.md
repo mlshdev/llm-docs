@@ -1,0 +1,79 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/uikit/uitooltipinteraction/delegate](https://developer.apple.com/documentation/uikit/uitooltipinteraction/delegate)
+
+# delegate (Swift)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · visionOS 1.0+
+
+An object that provides text that a tooltip displays instead of the default text.
+
+## Declaration
+
+```swift
+weak var delegate: (any UIToolTipInteractionDelegate)? { get set }
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+To provide tooltip text based on the current state or unique logic of your app, set the [delegate](delegate.md) property to an object that conforms to the [UIToolTipInteractionDelegate](../uitooltipinteractiondelegate.md) protocol and implements the [toolTipInteraction(\_:configurationAt:)](../uitooltipinteractiondelegate/tooltipinteraction%28__configurationat_%29.md) method. The method returns a [UIToolTipConfiguration](../uitooltipconfiguration.md) object containing the text to display in the tooltip. For example, the following code listing instructs the tooltip to show the name of the view’s background color instead of the [defaultToolTip](defaulttooltip.md) text. If the color name is unavailable, the method returns `nil`, which disables the display of the tooltip.
+
+```swift
+func toolTipInteraction(_ interaction: UIToolTipInteraction, configurationAt point: CGPoint) -> UIToolTipConfiguration? {
+    let configuration: UIToolTipConfiguration?
+    if let accessibilityName = backgroundColor?.accessibilityName {
+        configuration = UIToolTipConfiguration(toolTip: "The color is \(accessibilityName).")
+    } else {
+        configuration = nil
+    }
+    
+    return configuration
+}
+```
+
+## See Also
+
+### Providing tooltip configurations
+
+- [UIToolTipInteractionDelegate](../uitooltipinteractiondelegate.md): An interface that provides tooltip settings to an interaction.
+
+# delegate (Objective-C)
+
+**Framework:** UIKit  
+**Kind:** Instance Property  
+**Availability:** iOS 15.0+ · iPadOS 15.0+ · Mac Catalyst 15.0+ · visionOS 1.0+
+
+An object that provides text that a tooltip displays instead of the default text.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, weak, nullable) id<UIToolTipInteractionDelegate> delegate;
+```
+
+<a id="Discussion"></a>
+
+## Discussion
+
+To provide tooltip text based on the current state or unique logic of your app, set the [delegate](delegate.md) property to an object that conforms to the [UIToolTipInteractionDelegate](../uitooltipinteractiondelegate.md) protocol and implements the [toolTipInteraction:configurationAtPoint:](../uitooltipinteractiondelegate/tooltipinteraction%28__configurationat_%29.md) method. The method returns a [UIToolTipConfiguration](../uitooltipconfiguration.md) object containing the text to display in the tooltip. For example, the following code listing instructs the tooltip to show the name of the view’s background color instead of the [defaultToolTip](defaulttooltip.md) text. If the color name is unavailable, the method returns `nil`, which disables the display of the tooltip.
+
+```swift
+func toolTipInteraction(_ interaction: UIToolTipInteraction, configurationAt point: CGPoint) -> UIToolTipConfiguration? {
+    let configuration: UIToolTipConfiguration?
+    if let accessibilityName = backgroundColor?.accessibilityName {
+        configuration = UIToolTipConfiguration(toolTip: "The color is \(accessibilityName).")
+    } else {
+        configuration = nil
+    }
+    
+    return configuration
+}
+```
+
+## See Also
+
+### Providing tooltip configurations
+
+- [UIToolTipInteractionDelegate](../uitooltipinteractiondelegate.md): An interface that provides tooltip settings to an interaction.

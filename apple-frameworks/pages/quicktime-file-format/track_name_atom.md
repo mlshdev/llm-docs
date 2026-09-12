@@ -1,0 +1,31 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/quicktime-file-format/track_name_atom](https://developer.apple.com/documentation/quicktime-file-format/track_name_atom)
+
+# Track name atom ('tnam')
+
+**Framework:** QuickTime File Format  
+**Kind:** Atom
+
+An atom that provides a name for a track.
+
+<a id="Overview"></a>
+
+## Overview
+
+A movie atom’s user data atom may contain a track name atom (`'tnam'`).
+
+A track can have multiple `'tnam'` atoms with different language codes. Normally it is sufficient for each track to have a single `'tnam'` atom in the same language as the track content. Alternate tracks might also have `'tnam'` atoms; their presence implies only that the name is a good user-readable label for the track.
+
+## Topics
+
+### Data fields
+
+- [Reserved](track_name_atom/reserved.md): A 32-bit integer.
+- [Language](track_name_atom/language.md): A 16-bit integer holding a packed ISO 639-2/T code.
+- [Name](track_name_atom/name.md): A string holding the track name.
+
+## See Also
+
+### Atoms for user data
+
+- [User data atom](user_data_atom.md): An atom where you define and store data associated with a QuickTime object.
+- [Print to video atom](print_to_video_atom.md): An atom you use to play the movie in full-screen mode, with no window and no visible controller.

@@ -1,0 +1,54 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/tvmljs/player/1627354-requestseektotime](https://developer.apple.com/documentation/tvmljs/player/1627354-requestseektotime)
+
+# requestSeekToTime
+
+**Interface language:** Data
+
+**Framework:** TVMLKit JS  
+**Kind:** Instance Property  
+**Availability:** tvOS 9.0+
+
+An event that indicates whether a seek-to-time request was accomplished.
+
+## Declaration
+
+```
+attribute  requestSeekToTime;
+```
+
+<a id="discussion"></a>
+
+## Discussion
+
+This event is called after the left or right edge of the Siri Remote is pressed and released. Use [shouldHandleStateChange](1627428-shouldhandlestatechange.md) for press and hold events.
+
+Only a single `requestSeekToTime` listener can be active at a time. If multiple listeners are set to listen for `requestSeekToTime`, only the last one will be updated. The listener is passed an event object with the following attributes:
+
+- `currentTime`—The current playback time in seconds.
+- `requestedTime`—The requested playback time in seconds.
+- `target`—The event object, which is the [Player](../player.md) object.
+- `timeStamp`—The time that the event occurred.
+- `type`—The name of the event.
+
+The listener must return one of the following values:
+
+- `true`. The seek performed as requested.
+- `false` or `null`. The seek was not performed.
+- An integer value. The seek will be performed to the stated value and not the initial requested value.
+
+## See Also
+
+### Responding to Events
+
+- [mediaItemDidChange](1627385-mediaitemdidchange.md): An event notifying the listener that the player changed a media item.
+- [mediaItemWillChange](1627345-mediaitemwillchange.md): An event notifying the listener that the player is about to changed a media item.
+- [playbackDidStall](1682114-playbackdidstall.md): An event that indicates that playback has stalled.
+- [playbackError](1682115-playbackerror.md): An event that indicates an error has occurred during playback.
+- [shouldChangeToMediaAtIndex](1682117-shouldchangetomediaatindex.md): An event that indicates a request to play a media item in a different index is received.
+- [shouldHandleStateChange](1627428-shouldhandlestatechange.md): An event that indicates a state change request has occurred.
+- [stateDidChange](1627390-statedidchange.md): An event that indicates the state of the player has changed.
+- [stateWillChange](1627331-statewillchange.md): An event that indicates the state of the player is about to change.
+- [timeBoundaryDidCross](1627443-timeboundarydidcross.md): An event that indicates a specific playback time in the media item has been crossed.
+- [timeDidChange](1627344-timedidchange.md): An event that happens at a specified interval.
+- [timedMetadata](1627384-timedmetadata.md): An event that is triggered whenever a specified piece of metadata is encountered.
+- [transportBarVisibilityDidChange](1682120-transportbarvisibilitydidchange.md): An event that indicates the state of the transport bar has changed.

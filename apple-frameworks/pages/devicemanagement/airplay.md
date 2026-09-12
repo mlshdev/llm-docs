@@ -1,0 +1,112 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/devicemanagement/airplay](https://developer.apple.com/documentation/devicemanagement/airplay)
+
+# AirPlay
+
+**Interface language:** Data
+
+**Framework:** Device Management  
+**Kind:** Device Management Profile  
+**Availability:** iOS 7.0+ · iPadOS 7.0+ · Mac Catalyst 7.0+ · macOS 10.10+
+
+The payload that configures AirPlay settings.
+
+## Declaration
+
+```
+object AirPlay
+```
+
+## Properties
+
+- `AllowList` — `[AirPlay.AllowListItem]`: If present, only AirPlay destinations in this list are available to the device. This allow list applies to supervised devices.
+
+  Available: iOS 14.5+ | iPadOS 14.5+ | macOS 11.3+
+- `Passwords` — `[AirPlay.PasswordsItem]`: If present, sets passwords for known AirPlay destinations. Using multiple entries for the same destination, whether within the same payload or across multiple installed payloads, is an error and results in undefined behavior.
+- `Whitelist` — `[AirPlay.AllowListItem]`: Use `AllowList` instead. This key is deprecated in iOS 14.5 and macOS 11.3.
+
+  Deprecated: iOS 14.5+ | iPadOS 14.5+ | macOS 11.3+
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Specify `com.apple.airplay` as the payload type.
+
+<a id="Profile-availability"></a>
+
+### Profile availability
+
+|  |  |
+| --- | --- |
+| Device channel | iOS, macOS, Shared iPad |
+| User channel | macOS |
+| Allow manual install | iOS, macOS |
+| Requires supervision | N/A |
+| Requires user-approved MDM | N/A |
+| Allowed in user enrollment | iOS, macOS |
+| Allow multiple payloads | iOS, macOS, Shared iPad |
+
+<a id="Profile-example"></a>
+
+### Profile example
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>Passwords</key>
+            <array>
+                <dict>
+                    <key>DeviceName</key>
+                    <string>Juan&apos;s Apple TV</string>
+                    <key>Password</key>
+                    <string>Password123</string>
+                </dict>
+            </array>
+            <key>Whitelist</key>
+            <array>
+                <dict>
+                    <key>DeviceID</key>
+                    <string>64:C7:53:EB:DB:B4</string>
+                </dict>
+            </array>
+            <key>PayloadIdentifier</key>
+            <string>com.example.myairplaysettingspayload</string>
+            <key>PayloadType</key>
+            <string>com.apple.airplay</string>
+            <key>PayloadUUID</key>
+            <string>dfb67669-67eb-4ed4-ad4f-1f8861029b42</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+    </array>
+    <key>PayloadDisplayName</key>
+    <string>AirPlay</string>
+    <key>PayloadIdentifier</key>
+    <string>com.example.myprofile</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>c6ec425e-b224-45fb-8889-7475cb3814cb</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>
+```
+
+## Topics
+
+### Objects
+
+- [AirPlay.AllowListItem](airplay/allowlistitem.md): Deprecated. The dictionary that defines allowed destinations.
+- [AirPlay.PasswordsItem](airplay/passwordsitem.md): The dictionary that defines passwords for AirPlay destinations.
+
+## See Also
+
+### AirPlay
+
+- [AirPlaySecurity](airplaysecurity.md): The payload that configures Apple TV for a particular style of AirPlay security.

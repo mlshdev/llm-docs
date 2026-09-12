@@ -1,0 +1,67 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/iobluetooth/obexsession/obexconnectresponse(_:flags:maxpacketlength:optionalheaders:optionalheaderslength:eventselector:selectortarget:refcon:)](https://developer.apple.com/documentation/iobluetooth/obexsession/obexconnectresponse(_:flags:maxpacketlength:optionalheaders:optionalheaderslength:eventselector:selectortarget:refcon:))
+
+# obexConnectResponse(\_:flags:maxPacketLength:optionalHeaders:optionalHeadersLength:eventSelector:selectorTarget:refCon:) (Swift)
+
+**Framework:** IOBluetooth  
+**Kind:** Instance Method  
+**Availability:** macOS
+
+Send a connect response to a session’s target.
+
+## Declaration
+
+```swift
+func obexConnectResponse(_ inResponseOpCode: OBEXOpCode, flags inFlags: OBEXFlags, maxPacketLength inMaxPacketLength: OBEXMaxPacketLength, optionalHeaders inOptionalHeaders: UnsafeMutableRawPointer!, optionalHeadersLength inOptionalHeadersLength: Int, eventSelector inSelector: Selector!, selectorTarget inTarget: Any!, refCon inUserRefCon: UnsafeMutableRawPointer!) -> OBEXError
+```
+
+## Parameters
+
+- `inResponseOpCode`: OBEX response constant. See OBEX.h for possibilities.
+- `inFlags`: OBEX connect flags. See OBEX.h for possibilities.
+- `inMaxPacketLength`: Maximum packet size you want your OBEX session to communicate with. This MUST be lower than the max packet size the client has reported to you in the connect command you received from it.
+- `inOptionalHeaders`: Can be NULL. Ptr to some data you want to send as your optional headers. Use the provided header contruction kit in OBEX.h and OBEXHeadersToBytes() for convenience.
+- `inOptionalHeadersLength`: Length of data in ptr passed in above.
+- `inSelector`: A VALID selector to be called when something interesting happens due to this call. Selector in your target object MUST have the following signature, or it will not be called properly (look for error messages in Console.app):
+
+  - (void)OBEXConnectResponseHandler:(const OBEXSessionEvent\*)inSessionEvent;
+- `inTarget`: A VALID target object for the selector.
+- `inUserRefCon`: Whatever you want to pass here. It will be passed back to you in the refCon portion of the OBEXSessionEvent struct. nil is, of course, OK here.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+A NULL selector or target will result in an error. After return, the data passed in will have been sent over the underlying OBEX transport. You will receive any responses to your command response on your selector.
+
+# OBEXConnectResponse:flags:maxPacketLength:optionalHeaders:optionalHeadersLength:eventSelector:selectorTarget:refCon: (Objective-C)
+
+**Framework:** IOBluetooth  
+**Kind:** Instance Method  
+**Availability:** macOS
+
+Send a connect response to a session’s target.
+
+## Declaration
+
+```objectivec
+- (OBEXError) OBEXConnectResponse:(OBEXOpCode) inResponseOpCode flags:(OBEXFlags) inFlags maxPacketLength:(OBEXMaxPacketLength) inMaxPacketLength optionalHeaders:(void *) inOptionalHeaders optionalHeadersLength:(size_t) inOptionalHeadersLength eventSelector:(SEL) inSelector selectorTarget:(id) inTarget refCon:(void *) inUserRefCon;
+```
+
+## Parameters
+
+- `inResponseOpCode`: OBEX response constant. See OBEX.h for possibilities.
+- `inFlags`: OBEX connect flags. See OBEX.h for possibilities.
+- `inMaxPacketLength`: Maximum packet size you want your OBEX session to communicate with. This MUST be lower than the max packet size the client has reported to you in the connect command you received from it.
+- `inOptionalHeaders`: Can be NULL. Ptr to some data you want to send as your optional headers. Use the provided header contruction kit in OBEX.h and OBEXHeadersToBytes() for convenience.
+- `inOptionalHeadersLength`: Length of data in ptr passed in above.
+- `inSelector`: A VALID selector to be called when something interesting happens due to this call. Selector in your target object MUST have the following signature, or it will not be called properly (look for error messages in Console.app):
+
+  - (void)OBEXConnectResponseHandler:(const OBEXSessionEvent\*)inSessionEvent;
+- `inTarget`: A VALID target object for the selector.
+- `inUserRefCon`: Whatever you want to pass here. It will be passed back to you in the refCon portion of the OBEXSessionEvent struct. nil is, of course, OK here.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+A NULL selector or target will result in an error. After return, the data passed in will have been sent over the underlying OBEX transport. You will receive any responses to your command response on your selector.

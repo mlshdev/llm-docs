@@ -1,0 +1,48 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/updates/lightweightcoderequirements](https://developer.apple.com/documentation/updates/lightweightcoderequirements)
+
+# LightweightCodeRequirements updates
+
+**Framework:** Updates  
+**Kind:** Article
+
+Learn about important changes to LightweightCodeRequirements.
+
+<a id="Overview"></a>
+
+## Overview
+
+Browse notable changes in [LightweightCodeRequirements](https://developer.apple.com/documentation/lightweightcoderequirements).
+
+<a id="June-2024"></a>
+
+## June 2024
+
+<a id="General"></a>
+
+### General
+
+- Use fields on [ValidationResult](https://developer.apple.com/documentation/lightweightcoderequirements/validationresult) to find out whether a code file has a valid signature, and whether the signature satisfies your lightweight code requirement.
+- Combine multiple [EntitlementsQuery](https://developer.apple.com/documentation/lightweightcoderequirements/entitlementsquery) constraints using the `anyOf` and `allOf` operators.
+- Use the [Equatable](https://developer.apple.com/documentation/swift/equatable) protocol to compare instances of [LaunchCodeRequirement](https://developer.apple.com/documentation/lightweightcoderequirements/launchcoderequirement), [ProcessCodeRequirement](https://developer.apple.com/documentation/lightweightcoderequirements/processcoderequirement), and [OnDiskCodeRequirement](https://developer.apple.com/documentation/lightweightcoderequirements/ondiskcoderequirement).
+- Use [SecCodeCheckValidityWithOnDiskRequirement(code:flags:requirement:)](https://developer.apple.com/documentation/lightweightcoderequirements/seccodecheckvaliditywithondiskrequirement%28code:flags:requirement:%29) to test a [SecCode](https://developer.apple.com/documentation/security/seccode) instance using an on-disk code requirement.
+- Use [SecCodeCheckValidityWithProcessRequirement(code:flags:requirement:)](https://developer.apple.com/documentation/lightweightcoderequirements/seccodecheckvaliditywithprocessrequirement%28code:flags:requirement:%29) to test a [SecCode](https://developer.apple.com/documentation/security/seccode) instance using a process code requirement.
+
+## See Also
+
+### Technology and frameworks
+
+- [Accelerate updates](accelerate.md): Learn about important changes to Accelerate.
+- [Accessibility updates](accessibility.md): Learn about important changes to Accessibility.
+- [ActivityKit updates](activitykit.md): Learn about important changes in ActivityKit.
+- [AdAttributionKit Updates](adattributionkit.md): Learn about important changes to AdAttributionKit.
+- [App Clips updates](appclips.md): Learn about important changes in App Clips.
+- [App Intents updates](appintents.md): Learn about important changes in App Intents.
+- [AppKit updates](appkit.md): Learn about important changes to AppKit.
+- [Apple Intelligence updates](apple-intelligence.md): Learn about important changes to Apple Intelligence.
+- [AppleMapsServerAPI Updates](applemapsserverapi.md): Learn about important changes to AppleMapsServerAPI.
+- [Apple Pencil updates](applepencil.md): Learn about important changes to Apple Pencil.
+- [ARKit updates](arkit.md): Learn about important changes to ARKit.
+- [Audio Toolbox updates](audiotoolbox.md): Learn about important changes to Audio Toolbox.
+- [AuthenticationServices updates](authenticationservices.md): Learn about important changes to AuthenticationServices.
+- [AVFAudio updates](avfaudio.md): Learn about important changes to AVFAudio.
+- [AVFoundation updates](avfoundation.md): Learn about important changes to AVFoundation.

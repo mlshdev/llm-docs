@@ -1,0 +1,41 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/applepaymerchanttokenusageinformation/recurringpaymentdetails](https://developer.apple.com/documentation/applepaymerchanttokenusageinformation/recurringpaymentdetails)
+
+# RecurringPaymentDetails
+
+**Interface language:** Data
+
+**Framework:** Apple Pay Merchant Token Usage Information API  
+**Kind:** Object
+
+Details about a recurring payment, typically a subscription.
+
+## Declaration
+
+```
+object RecurringPaymentDetails
+```
+
+## Properties
+
+- `endsAfterLastPayment` — `boolean`: A flag that indicates whether the recurring payment ends after the last scheduled payment. The default value is `false`. Set value to `true` for installments that include all payments of the plan in `scheduledPayments`.
+- `interval` — `RecurringPaymentDetails.Interval` (required): The payment interval.
+- `recurringPaymentType` — `string` (required): The recurring payment’s type.
+  **Allowed values:** `subscription`, `billing`, `installment`, `other`
+- `scheduledPayments` — `[RecurringPaymentDetails.ScheduledPayments]`: Future occurrences of the recurring payment. For installments, include all payments of the plan.
+
+## Topics
+
+### Dictionaries
+
+- [RecurringPaymentDetails.Interval](recurringpaymentdetails/interval-data.dictionary.md): The payment interval.
+- [RecurringPaymentDetails.ScheduledPayments](recurringpaymentdetails/scheduledpayments-data.dictionary.md): Future occurrences of the recurring payment.
+
+## See Also
+
+### Getting payment details
+
+- [AutomaticReloadPaymentDetails](automaticreloadpaymentdetails.md): Details about an automatic reload payment.
+- [DeferredPaymentDetails](deferredpaymentdetails.md): Details about a deferred payment, such as a hotel booking or a preorder.
+- [PastPayment](pastpayment.md): A past payment.
+- [PaymentIssueDetails](paymentissuedetails.md): Details about a payment issue, such as a declined payment.
+- [UpcomingPayment](upcomingpayment.md): An upcoming payment.

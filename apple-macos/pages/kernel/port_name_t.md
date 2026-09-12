@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/port_name_t](https://developer.apple.com/documentation/kernel/port_name_t)
+
+# port_name_t
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Type Alias  
+**Availability:** macOS 10.6+
+
+## Declaration
+
+```objectivec
+typedef mach_port_name_t port_name_t;
+```

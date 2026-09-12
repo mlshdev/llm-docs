@@ -1,0 +1,55 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/ecs-scenes](https://developer.apple.com/documentation/realitykit/ecs-scenes)
+
+# Scenes
+
+**Framework:** RealityKit  
+**Kind:** API Collection
+
+The context that holds all RealityKit entities.
+
+<a id="Overview"></a>
+
+## Overview
+
+The system adds an [Entity](entity.md) to a [Scene](scene.md) when you add it to a [RealityView](realityview.md) with a [RealityViewCameraContent](realityviewcameracontent.md) or [RealityViewContent](realityviewcontent.md) instance. These scenes contain anchors and a hierarchy of entities that make up your RealityKit content.
+
+The [Scene](scene.md) instance has helpful methods to perform ray casts to help you better understand your scene, and methods that find entities either by name or by components they own.
+
+## Topics
+
+### Scene management
+
+- [Scene](scene.md): A container that holds the collection of entities that an AR view renders.
+- [Scene.AnchorCollection](scene/anchorcollection.md): A collection of anchor entities.
+
+### Entity searches
+
+- [QueryPredicate](querypredicate.md): An object that defines the criteria for an entity query.
+- [PixelCastHit](pixelcasthit.md)
+
+### Event publishers and subscription
+
+- [SceneEvents](sceneevents.md): Events the scene invokes.
+- [Scene.Publisher](scene/publisher.md): A publisher for the given event type in the scene.
+
+### Scene reconstructions and analysis
+
+- [Creating a game with scene understanding](creating-a-game-with-scene-understanding.md): Create AR games and experiences that interact with real-world objects on LiDAR-equipped iOS devices.
+- [Implementing scene understanding and reconstruction in your RealityKit app](realitykit-scene-understanding.md): Detect real-world objects and surfaces to create precise AR interactions.
+- [Visualizing and interacting with a reconstructed scene](../arkit/visualizing-and-interacting-with-a-reconstructed-scene.md): Estimate the shape of the physical environment using a polygonal mesh.
+- [sceneReconstruction](../arkit/arworldtrackingconfiguration/scenereconstruction.md): A flag that enables scene reconstruction.
+- [supportsSceneReconstruction(\_:)](../arkit/arworldtrackingconfiguration/supportsscenereconstruction%28__%29.md): Checks if the device supports scene reconstruction.
+- [SceneUnderstandingComponent](sceneunderstandingcomponent.md): A component that specifies an entity is participating in the system’s scene-understanding features.
+- [ARView.Environment.SceneUnderstanding](arview/environment-swift.struct/sceneunderstanding-swift.struct.md): An object that holds scene-understanding options for the view.
+- [ARView.Environment.SceneUnderstanding.Options](arview/environment-swift.struct/sceneunderstanding-swift.struct/options-swift.struct.md): Available scene-understanding options.
+- [HasSceneUnderstanding](hassceneunderstanding.md): A specification that detects and reacts to features of the physical environment.
+- [SceneReconstructionProvider](../arkit/scenereconstructionprovider.md): A source of live data about the shape of a person’s surroundings.
+- [ARSession](../arkit/arsession.md): Deprecated. The object that manages the major tasks associated with every AR experience, such as motion tracking, camera passthrough, and image analysis.
+
+## See Also
+
+### Scene management and logic
+
+- [Systems](ecs-systems.md): Apply behaviors and physical effects to the entities in a RealityKit scene.
+- [Events](ecs-events.md): Respond to things happening in your RealityKit scene by subscribing to specific event types.
+- [Entity actions](ecs-entity-actions.md): Create simple, reusable actions that can change your app state, RealityKit scene, or animate an entity.

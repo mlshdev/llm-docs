@@ -1,0 +1,64 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/lowlevelmeshresource/vertexsemantic](https://developer.apple.com/documentation/realitykit/lowlevelmeshresource/vertexsemantic)
+
+# LowLevelMeshResource.VertexSemantic
+
+**Framework:** RealityKit  
+**Kind:** Enumeration  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+The intended usage of a vertex attribute.
+
+## Declaration
+
+```swift
+enum VertexSemantic
+```
+
+<a id="overview"></a>
+
+## Overview
+
+The renderer consults the vertex semantic when interpreting the data in a `LowLevelMeshResource`. For example, an attribute with the semantic value of [LowLevelMeshResource.VertexSemantic.position](vertexsemantic/position.md) determines the position of a vertex.
+
+## Topics
+
+### Identifying geometric attributes
+
+- [LowLevelMeshResource.VertexSemantic.position](vertexsemantic/position.md): The semantic for vertex position data.
+- [LowLevelMeshResource.VertexSemantic.normal](vertexsemantic/normal.md): The semantic for surface normal data.
+- [LowLevelMeshResource.VertexSemantic.tangent](vertexsemantic/tangent.md): The semantic for surface tangent vector data.
+- [LowLevelMeshResource.VertexSemantic.bitangent](vertexsemantic/bitangent.md): The semantic for surface bitangent vector data.
+- [LowLevelMeshResource.VertexSemantic.color](vertexsemantic/color.md): The semantic for per-vertex color data.
+
+### Identifying texture coordinates
+
+- [LowLevelMeshResource.VertexSemantic.uv0](vertexsemantic/uv0.md): The semantic for the first UV channel (UV0).
+- [LowLevelMeshResource.VertexSemantic.uv1](vertexsemantic/uv1.md): The semantic for the second UV channel (UV1). A shader can access this generic data.
+- [LowLevelMeshResource.VertexSemantic.uv2](vertexsemantic/uv2.md): The semantic for the third UV channel (UV2). A shader can access this generic data.
+- [LowLevelMeshResource.VertexSemantic.uv3](vertexsemantic/uv3.md): The semantic for the fourth UV channel (UV3). A shader can access this generic data.
+- [LowLevelMeshResource.VertexSemantic.uv4](vertexsemantic/uv4.md): The semantic for the fifth UV channel (UV4). A shader can access this generic data.
+- [LowLevelMeshResource.VertexSemantic.uv5](vertexsemantic/uv5.md): The semantic for the sixth UV channel (UV5). A shader can access this generic data.
+- [LowLevelMeshResource.VertexSemantic.uv6](vertexsemantic/uv6.md): The semantic for the seventh UV channel (UV6). A shader can access this generic data.
+- [LowLevelMeshResource.VertexSemantic.uv7](vertexsemantic/uv7.md): The semantic for the eighth UV channel (UV7). A shader can access this generic data.
+
+### Handling unspecified semantics
+
+- [LowLevelMeshResource.VertexSemantic.unspecified](vertexsemantic/unspecified.md): A semantic that doesn’t specify the role of the vertex.
+
+## Relationships
+
+### Conforms To
+
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+
+## See Also
+
+### Describing the mesh layout
+
+- [descriptor](descriptor-swift.property.md): The descriptor used to create this mesh resource.
+- [LowLevelMeshResource.Descriptor](descriptor-swift.struct.md): An object that describes the data format and layout of the buffers in a low-level mesh.
+- [LowLevelMeshResource.Layout](layout.md): An object that describes a set of attributes that share a buffer index, offset, and stride.
+- [LowLevelMeshResource.Attribute](attribute.md): An object that determines how to store vertex attribute data in memory and map it to RealityKit custom shader attributes.

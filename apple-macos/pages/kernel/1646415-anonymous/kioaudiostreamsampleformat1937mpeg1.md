@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple macOS snapshot-0b0d8b1a4a77: [documentation/kernel/1646415-anonymous/kioaudiostreamsampleformat1937mpeg1](https://developer.apple.com/documentation/kernel/1646415-anonymous/kioaudiostreamsampleformat1937mpeg1)
+
+# kIOAudioStreamSampleFormat1937MPEG1
+
+**Interface language:** Objective-C
+
+**Framework:** Kernel  
+**Kind:** Enumeration Case  
+**Availability:** macOS 10.12+
+
+## Declaration
+
+```objectivec
+kIOAudioStreamSampleFormat1937MPEG1 = 'mpg1'
+```

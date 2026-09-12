@@ -1,0 +1,15 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/iokit/1591932-anonymous/khidpage_monitorenumerated](https://developer.apple.com/documentation/iokit/1591932-anonymous/khidpage_monitorenumerated)
+
+# kHIDPage_MonitorEnumerated
+
+**Interface language:** Objective-C
+
+**Framework:** IOKit  
+**Kind:** Enumeration Case  
+**Availability:** Mac Catalyst 13.0+ · macOS 10.10+
+
+## Declaration
+
+```objectivec
+kHIDPage_MonitorEnumerated = 0x81
+```

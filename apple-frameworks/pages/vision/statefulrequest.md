@@ -1,0 +1,69 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/vision/statefulrequest](https://developer.apple.com/documentation/vision/statefulrequest)
+
+# StatefulRequest
+
+**Framework:** Vision  
+**Kind:** Protocol  
+**Availability:** iOS 18.0+ · iPadOS 18.0+ · Mac Catalyst 18.0+ · macOS 15.0+ · tvOS 18.0+ · visionOS 2.0+ · watchOS 27.0+
+
+The protocol for a type that builds evidence of a condition over time.
+
+## Declaration
+
+```swift
+protocol StatefulRequest : VisionRequest
+```
+
+## Topics
+
+### Inspecting the request
+
+- [frameAnalysisSpacing](statefulrequest/frameanalysisspacing.md): The reciprocal of the maximum rate to process buffers.
+- [minimumLatencyFrameCount](statefulrequest/minimumlatencyframecount.md): The minimum number of frames that the request has to process before reporting any observations.
+
+### Comparing the request
+
+- [==(\_:\_:)](statefulrequest/==%28____%29.md): Returns a Boolean value indicating whether two values are equal.
+
+### Hashing the request
+
+- [hash(into:)](statefulrequest/hash%28into_%29.md): Hashes the essential components of this value by feeding them into the given hasher.
+
+### Default Implementations
+
+- [Equatable Implementations](statefulrequest/equatable-implementations.md)
+- [Hashable Implementations](statefulrequest/hashable-implementations.md)
+
+## Relationships
+
+### Inherits From
+
+- [CustomStringConvertible](https://developer.apple.com/documentation/swift/customstringconvertible)
+- [Equatable](https://developer.apple.com/documentation/swift/equatable)
+- [Hashable](https://developer.apple.com/documentation/swift/hashable)
+- [Sendable](https://developer.apple.com/documentation/swift/sendable)
+- [SendableMetatype](https://developer.apple.com/documentation/swift/sendablemetatype)
+- [VisionRequest](visionrequest.md)
+
+### Conforming Types
+
+- [DetectHumanBodyPose3DRequest](detecthumanbodypose3drequest.md)
+- [DetectTrajectoriesRequest](detecttrajectoriesrequest.md)
+- [GeneratePersonSegmentationRequest](generatepersonsegmentationrequest.md)
+- [TrackHomographicImageRegistrationRequest](trackhomographicimageregistrationrequest.md)
+- [TrackObjectRequest](trackobjectrequest.md)
+- [TrackOpticalFlowRequest](trackopticalflowrequest.md)
+- [TrackRectangleRequest](trackrectanglerequest.md)
+- [TrackTranslationalImageRegistrationRequest](tracktranslationalimageregistrationrequest.md)
+
+## See Also
+
+### Protocols
+
+- [ImageProcessingRequest](imageprocessingrequest.md): A type for image-analysis requests that focus on a specific part of an image.
+- [PoseProviding](poseproviding.md): An observation that provides a collection of joints that make up a pose.
+- [TargetedRequest](targetedrequest.md): A type for analyzing two images together.
+- [VisionObservation](visionobservation.md): A type for objects produced by image-analysis requests.
+- [VisionRequest](visionrequest.md): A type for image-analysis requests.
+- [DownloadableAssetsRequest](downloadableassetsrequest.md): A request whose execution depends on assets that may need to be downloaded.
+- [DownloadableAssetsRequestStatus](downloadableassetsrequeststatus.md): The status of the assets required by a [DownloadableAssetsRequest](downloadableassetsrequest.md).

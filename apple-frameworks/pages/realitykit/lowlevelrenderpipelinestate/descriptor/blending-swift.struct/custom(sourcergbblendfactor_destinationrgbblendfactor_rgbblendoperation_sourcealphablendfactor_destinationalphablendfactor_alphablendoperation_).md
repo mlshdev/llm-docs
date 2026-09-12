@@ -1,0 +1,30 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/realitykit/lowlevelrenderpipelinestate/descriptor/blending-swift.struct/custom(sourcergbblendfactor:destinationrgbblendfactor:rgbblendoperation:sourcealphablendfactor:destinationalphablendfactor:alphablendoperation:)](https://developer.apple.com/documentation/realitykit/lowlevelrenderpipelinestate/descriptor/blending-swift.struct/custom(sourcergbblendfactor:destinationrgbblendfactor:rgbblendoperation:sourcealphablendfactor:destinationalphablendfactor:alphablendoperation:))
+
+# custom(sourceRGBBlendFactor:destinationRGBBlendFactor:rgbBlendOperation:sourceAlphaBlendFactor:destinationAlphaBlendFactor:alphaBlendOperation:)
+
+**Framework:** RealityKit  
+**Kind:** Type Method  
+**Availability:** iOS 27.0+ · iPadOS 27.0+ · tvOS 27.0+ · visionOS 27.0+
+
+Creates a custom blending configuration with explicit Metal blend factors and operations.
+
+## Declaration
+
+```swift
+static func custom(sourceRGBBlendFactor: MTLBlendFactor = .one, destinationRGBBlendFactor: MTLBlendFactor = .zero, rgbBlendOperation: MTLBlendOperation = .add, sourceAlphaBlendFactor: MTLBlendFactor = .one, destinationAlphaBlendFactor: MTLBlendFactor = .zero, alphaBlendOperation: MTLBlendOperation = .add) -> LowLevelRenderPipelineState.Descriptor.Blending
+```
+
+## Parameters
+
+- `sourceRGBBlendFactor`: The blend factor applied to the source RGB values.
+- `destinationRGBBlendFactor`: The blend factor applied to the destination RGB values.
+- `rgbBlendOperation`: The blend operation used to combine source and destination RGB values.
+- `sourceAlphaBlendFactor`: The blend factor applied to the source alpha value.
+- `destinationAlphaBlendFactor`: The blend factor applied to the destination alpha value.
+- `alphaBlendOperation`: The blend operation used to combine source and destination alpha values.
+
+<a id="return-value"></a>
+
+## Return Value
+
+A [LowLevelRenderPipelineState.Descriptor.Blending](../blending-swift.struct.md) with the specified configuration.

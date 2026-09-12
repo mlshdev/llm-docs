@@ -3,12 +3,14 @@
   "projects": [
     {
       "id": "traefik",
+      "kind": "github",
       "title": "Traefik Proxy",
       "repository": "traefik/traefik",
       "homepage": "https://doc.traefik.io/traefik/"
     },
     {
       "id": "netbird",
+      "kind": "github",
       "title": "NetBird",
       "repository": "netbirdio/netbird",
       "docsRepository": "netbirdio/docs",
@@ -16,12 +18,14 @@
     },
     {
       "id": "podman",
+      "kind": "github",
       "title": "Podman",
       "repository": "podman-container-tools/podman",
       "homepage": "https://docs.podman.io/"
     },
     {
       "id": "docker",
+      "kind": "github",
       "title": "Docker",
       "repository": "docker/docs",
       "branch": "main",
@@ -29,12 +33,14 @@
     },
     {
       "id": "container",
+      "kind": "github",
       "title": "Apple container",
       "repository": "apple/container",
       "homepage": "https://github.com/apple/container"
     },
     {
       "id": "n8n",
+      "kind": "github",
       "title": "n8n",
       "repository": "n8n-io/n8n-docs",
       "branch": "main",
@@ -42,48 +48,56 @@
     },
     {
       "id": "grafana",
+      "kind": "github",
       "title": "Grafana",
       "repository": "grafana/grafana",
       "homepage": "https://grafana.com/docs/grafana/latest/"
     },
     {
       "id": "victoriametrics",
+      "kind": "github",
       "title": "VictoriaMetrics",
       "repository": "VictoriaMetrics/VictoriaMetrics",
       "homepage": "https://docs.victoriametrics.com/"
     },
     {
       "id": "victorialogs",
+      "kind": "github",
       "title": "VictoriaLogs",
       "repository": "VictoriaMetrics/VictoriaLogs",
       "homepage": "https://docs.victoriametrics.com/victorialogs/"
     },
     {
       "id": "victoriametrics-datasource",
+      "kind": "github",
       "title": "VictoriaMetrics datasource for Grafana",
       "repository": "VictoriaMetrics/victoriametrics-datasource",
       "homepage": "https://grafana.com/grafana/plugins/victoriametrics-metrics-datasource/"
     },
     {
       "id": "victorialogs-datasource",
+      "kind": "github",
       "title": "VictoriaLogs datasource for Grafana",
       "repository": "VictoriaMetrics/victorialogs-datasource",
       "homepage": "https://grafana.com/grafana/plugins/victoriametrics-logs-datasource/"
     },
     {
       "id": "vmestimator",
+      "kind": "github",
       "title": "vmestimator",
       "repository": "VictoriaMetrics/vmestimator",
       "homepage": "https://docs.victoriametrics.com/victoriametrics/vmestimator/"
     },
     {
       "id": "zitadel",
+      "kind": "github",
       "title": "ZITADEL",
       "repository": "zitadel/zitadel",
       "homepage": "https://zitadel.com/docs"
     },
     {
       "id": "ffmpeg",
+      "kind": "github",
       "title": "FFmpeg",
       "repository": "FFmpeg/FFmpeg",
       "branch": "master",
@@ -91,12 +105,14 @@
     },
     {
       "id": "yt-dlp",
+      "kind": "github",
       "title": "yt-dlp",
       "repository": "yt-dlp/yt-dlp",
       "homepage": "https://github.com/yt-dlp/yt-dlp#readme"
     },
     {
       "id": "searxng",
+      "kind": "github",
       "title": "SearXNG",
       "repository": "searxng/searxng",
       "branch": "master",
@@ -104,21 +120,80 @@
     },
     {
       "id": "bun",
+      "kind": "github",
       "title": "Bun",
       "repository": "oven-sh/bun",
       "homepage": "https://bun.com/docs"
     },
     {
       "id": "trigger-dev",
+      "kind": "github",
       "title": "Trigger.dev",
       "repository": "triggerdotdev/trigger.dev",
       "homepage": "https://trigger.dev/docs"
     },
     {
       "id": "aria2",
+      "kind": "github",
       "title": "aria2",
       "repository": "aria2/aria2",
       "homepage": "https://aria2.github.io/manual/en/html/"
+    },
+    {
+      "id": "apple-swift",
+      "kind": "docc",
+      "catalog": "swift",
+      "title": "Apple Swift",
+      "homepage": "https://developer.apple.com/documentation/swift"
+    },
+    {
+      "id": "apple-swiftui",
+      "kind": "docc",
+      "catalog": "swiftui",
+      "title": "Apple SwiftUI",
+      "homepage": "https://developer.apple.com/documentation/swiftui"
+    },
+    {
+      "id": "apple-webkit",
+      "kind": "docc",
+      "catalog": "webkit",
+      "title": "Apple WebKit and Safari",
+      "homepage": "https://developer.apple.com/documentation/webkit"
+    },
+    {
+      "id": "apple-xcode",
+      "kind": "docc",
+      "catalog": "xcode",
+      "title": "Apple Xcode and developer tools",
+      "homepage": "https://developer.apple.com/documentation/xcode"
+    },
+    {
+      "id": "apple-ios",
+      "kind": "docc",
+      "catalog": "ios",
+      "title": "Apple iOS and iPadOS",
+      "homepage": "https://developer.apple.com/ios/"
+    },
+    {
+      "id": "apple-macos",
+      "kind": "docc",
+      "catalog": "macos",
+      "title": "Apple macOS",
+      "homepage": "https://developer.apple.com/macos/"
+    },
+    {
+      "id": "apple-watchos",
+      "kind": "docc",
+      "catalog": "watchos",
+      "title": "Apple watchOS",
+      "homepage": "https://developer.apple.com/watchos/"
+    },
+    {
+      "id": "apple-frameworks",
+      "kind": "docc",
+      "catalog": "shared",
+      "title": "Apple cross-platform frameworks",
+      "homepage": "https://developer.apple.com/documentation/technologies"
     }
   ]
 }

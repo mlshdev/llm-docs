@@ -1,0 +1,17 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/webkitjs/domrectreadonly/2871442-fromrect](https://developer.apple.com/documentation/webkitjs/domrectreadonly/2871442-fromrect)
+
+# fromRect
+
+**Interface language:** Data
+
+**Framework:** WebKit JS  
+**Kind:** Type Method  
+**Availability:** Safari Desktop 10.1+ · Safari Mobile 10.1+
+
+## Declaration
+
+```
+static DOMRectReadOnly fromRect(
+    optional DOMRectInit other
+);
+```

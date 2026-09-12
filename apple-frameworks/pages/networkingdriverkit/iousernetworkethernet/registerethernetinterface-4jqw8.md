@@ -1,0 +1,37 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/networkingdriverkit/iousernetworkethernet/registerethernetinterface-4jqw8](https://developer.apple.com/documentation/networkingdriverkit/iousernetworkethernet/registerethernetinterface-4jqw8)
+
+# RegisterEthernetInterface
+
+**Interface language:** Objective-C
+
+**Framework:** NetworkingDriverKit  
+**Kind:** Instance Method  
+**Availability:** DriverKit
+
+Registers your driver with the networking stack.
+
+## Declaration
+
+```objectivec
+virtual kern_return_t RegisterEthernetInterface(IOUserNetworkMACAddress macAddress, IOUserNetworkPacketBufferPool *pool, IOUserNetworkPacketQueue **queues, uint32_t queueCount);
+```
+
+## Parameters
+
+- `macAddress`: The MAC address of the hardware your driver supports.
+- `pool`: The buffer pool you use to store incoming and outgoing packets.
+- `queues`: An array containing the four queues you use to process incoming and outgoing network packets. This array must contain one queue each of types [IOUserNetworkRxSubmissionQueue](../iousernetworkrxsubmissionqueue.md), [IOUserNetworkRxCompletionQueue](../iousernetworkrxcompletionqueue.md), [IOUserNetworkTxSubmissionQueue](../iousernetworktxsubmissionqueue.md), and [IOUserNetworkTxCompletionQueue](../iousernetworktxcompletionqueue.md). The order of the queues in the array doesn’t matter.
+- `queueCount`: The number of queues in the `queues` parameter. The `queues` parameter must contain 4 items.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+Call this method toward the end of your [Start](../../driverkit/ioservice/start.md) method when your driver is ready to begin processing incoming and outgoing network packets.
+
+## See Also
+
+### Configuring the Driver Service
+
+- [init](init.md): Handles the basic initialization of the service.
+- [free](free.md): Performs any final cleanup for the service.

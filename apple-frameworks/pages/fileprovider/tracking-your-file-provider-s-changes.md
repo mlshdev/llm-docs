@@ -1,0 +1,85 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/fileprovider/tracking-your-file-provider-s-changes](https://developer.apple.com/documentation/fileprovider/tracking-your-file-provider-s-changes)
+
+# Tracking Your File Provider’s Changes (Swift)
+
+**Framework:** File Provider
+
+Create an enumerator to track changes to your file provider’s content.
+
+<a id="overview"></a>
+
+## Overview
+
+While an enumerator is active, it also tracks any changes to its contents. The system only tracks changes to a document or folder while it has an active enumerator for that item (for example, while a document is open or a folder is being browsed).
+
+> **Note**
+
+>  The system always tracks changes to the working set. If it doesn’t have an active enumerator for the working set, it creates a new one.
+
+![The flow of information between your File Provider and the system. ](https://developer.apple.com/images/com.apple.fileprovider/media-2910269@2x.png)
+
+When your file provider app or extension identifies a change to its content:
+
+- Call the [NSFileProviderManager](nsfileprovidermanager.md) class’s [signalEnumerator(for:completionHandler:)](nsfileprovidermanager/signalenumerator%28for_completionhandler_%29.md) method to notify the system of the change. Pass the item’s identifier as the `containerItemIdentifier` property.
+- If the change affects the working set, call [signalEnumerator(for:completionHandler:)](nsfileprovidermanager/signalenumerator%28for_completionhandler_%29.md) a second time. Pass the [workingSet](nsfileprovideritemidentifier/workingset.md) constant as the `containerItemIdentifier` property. This tells the system to update the working set.
+
+After the system is alerted to the change, it calls [enumerateChanges(for:from:)](nsfileproviderenumerator/enumeratechanges%28for_from_%29.md) on any affected, active enumerations and updates the browser’s user interface as needed. This method is asynchronous. When it’s called, the enumerator gathers information about the items (perhaps from a remote server) in the background, and returns the results to the specified observer (an object that adopts the [NSFileProviderChangeObserver](nsfileproviderchangeobserver.md) protocol).
+
+## Topics
+
+### Tracking Document Changes
+
+- [Tracking Changes to Documents](tracking-changes-to-documents.md): Track and report changes to open documents.
+
+### Signaling Changes with Push Notifications
+
+- [Using push notifications to signal changes](using-push-notifications-to-signal-changes.md): Send push notifications to a device to signal changes from your server.
+
+## See Also
+
+### Change Tracking
+
+- [NSFileProviderChangeObserver](nsfileproviderchangeobserver.md): An observer that receives changes and deletions during enumeration.
+- [NSFileProviderSyncAnchor](nsfileprovidersyncanchor.md): A synchronization point that represents the last batch of changes returned by the enumerator.
+
+# Tracking Your File Provider’s Changes (Objective-C)
+
+**Framework:** File Provider
+
+Create an enumerator to track changes to your file provider’s content.
+
+<a id="overview"></a>
+
+## Overview
+
+While an enumerator is active, it also tracks any changes to its contents. The system only tracks changes to a document or folder while it has an active enumerator for that item (for example, while a document is open or a folder is being browsed).
+
+> **Note**
+
+>  The system always tracks changes to the working set. If it doesn’t have an active enumerator for the working set, it creates a new one.
+
+![The flow of information between your File Provider and the system. ](https://developer.apple.com/images/com.apple.fileprovider/media-2910269@2x.png)
+
+When your file provider app or extension identifies a change to its content:
+
+- Call the [NSFileProviderManager](nsfileprovidermanager.md) class’s [signalEnumeratorForContainerItemIdentifier:completionHandler:](nsfileprovidermanager/signalenumerator%28for_completionhandler_%29.md) method to notify the system of the change. Pass the item’s identifier as the `containerItemIdentifier` property.
+- If the change affects the working set, call [signalEnumeratorForContainerItemIdentifier:completionHandler:](nsfileprovidermanager/signalenumerator%28for_completionhandler_%29.md) a second time. Pass the [NSFileProviderWorkingSetContainerItemIdentifier](nsfileprovideritemidentifier/workingset.md) constant as the `containerItemIdentifier` property. This tells the system to update the working set.
+
+After the system is alerted to the change, it calls [enumerateChangesForObserver:fromSyncAnchor:](nsfileproviderenumerator/enumeratechanges%28for_from_%29.md) on any affected, active enumerations and updates the browser’s user interface as needed. This method is asynchronous. When it’s called, the enumerator gathers information about the items (perhaps from a remote server) in the background, and returns the results to the specified observer (an object that adopts the [NSFileProviderChangeObserver](nsfileproviderchangeobserver.md) protocol).
+
+## Topics
+
+### Tracking Document Changes
+
+- [Tracking Changes to Documents](tracking-changes-to-documents.md): Track and report changes to open documents.
+
+### Signaling Changes with Push Notifications
+
+- [Using push notifications to signal changes](using-push-notifications-to-signal-changes.md): Send push notifications to a device to signal changes from your server.
+
+## See Also
+
+### Change Tracking
+
+- [NSFileProviderChangeObserver](nsfileproviderchangeobserver.md): An observer that receives changes and deletions during enumeration.
+- [NSFileProviderSyncAnchor](nsfileprovidersyncanchor.md): A synchronization point that represents the last batch of changes returned by the enumerator.

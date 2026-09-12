@@ -1,0 +1,83 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/avfoundation/avassetreaderoutput/reset(forreadingtimeranges:)](https://developer.apple.com/documentation/avfoundation/avassetreaderoutput/reset(forreadingtimeranges:))
+
+# reset(forReadingTimeRanges:) (Swift)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ (deprecated in 27.0) · iPadOS 8.0+ (deprecated in 27.0) · Mac Catalyst 13.1+ (deprecated in 27.0) · macOS 10.10+ (deprecated in 27.0) · tvOS 9.0+ (deprecated in 27.0) · visionOS 1.0+ (deprecated in 27.0)
+
+Restarts reading with a new set of time ranges.
+
+> Use RandomAccessController.resetForReading(timeRanges:) instead
+
+## Declaration
+
+```swift
+func reset(forReadingTimeRanges timeRanges: [NSValue])
+```
+
+## Parameters
+
+- `timeRanges`: An array of [NSValue](../../foundation/nsvalue.md) objects, each representing a single [CMTimeRange](../../coremedia/cmtimerange.md) structure.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You may only call this method if the value of the [supportsRandomAccess](supportsrandomaccess.md) property is [true](https://developer.apple.com/documentation/swift/true). You can’t call it after invoking [markConfigurationAsFinal()](markconfigurationasfinal%28%29.md).
+
+A typical time to call this method is when performing multi-pass encoding using an instance of [AVAssetWriter](../avassetwriter.md). In this case, call the [copyNextSampleBuffer()](copynextsamplebuffer%28%29.md) method until it returns `nil`, and then ask the asset writer’s input for a set of time ranges to reencode. You pass the time ranges to this method to prepare the output for the next pass.
+
+The time ranges that you set here override the value of the asset reader’s [timeRange](../avassetreader/timerange.md) property. If the start times of the time range in the array don’t strictly increase, or if two or more time ranges in the array overlap, the system throws an exception. It’s an error to include a time range with a nonnumeric start time or duration, unless the duration is [positiveInfinity](../../coremedia/cmtime/positiveinfinity.md).
+
+If you call this method while the asset reader is in an [AVAssetReader.Status.failed](../avassetreader/status-swift.enum/failed.md) or [AVAssetReader.Status.cancelled](../avassetreader/status-swift.enum/cancelled.md) state, its [status](../avassetreader/status-swift.property.md) property value doesn’t change, and the result of the next call to [copyNextSampleBuffer()](copynextsamplebuffer%28%29.md) is `nil`.
+
+If you call this method while there’s still media data to read, the system throws an exception. You can only call it after the asset reader starts reading.
+
+## See Also
+
+### Configuring reading
+
+- [alwaysCopiesSampleData](alwayscopiessampledata.md): Deprecated. A Boolean value that indicates whether the output vends copied sample data.
+- [supportsRandomAccess](supportsrandomaccess.md): Deprecated. A Boolean value that indicates whether the output supports reconfiguring the time ranges it reads.
+- [markConfigurationAsFinal()](markconfigurationasfinal%28%29.md): Deprecated. Tells the output that it’s finished reconfiguring time ranges, and allows the asset reader to advance to a completed state.
+
+# resetForReadingTimeRanges: (Objective-C)
+
+**Framework:** AVFoundation  
+**Kind:** Instance Method  
+**Availability:** iOS 8.0+ · iPadOS 8.0+ · Mac Catalyst 13.1+ · macOS 10.10+ · tvOS 9.0+ · visionOS 1.0+
+
+Restarts reading with a new set of time ranges.
+
+## Declaration
+
+```objectivec
+- (void) resetForReadingTimeRanges:(NSArray<NSValue *> *) timeRanges;
+```
+
+## Parameters
+
+- `timeRanges`: An array of [NSValue](../../foundation/nsvalue.md) objects, each representing a single [CMTimeRange](../../coremedia/cmtimerange.md) structure.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+You may only call this method if the value of the [supportsRandomAccess](supportsrandomaccess.md) property is [true](https://developer.apple.com/documentation/swift/true). You can’t call it after invoking [markConfigurationAsFinal](markconfigurationasfinal%28%29.md).
+
+A typical time to call this method is when performing multi-pass encoding using an instance of [AVAssetWriter](../avassetwriter.md). In this case, call the [copyNextSampleBuffer](copynextsamplebuffer%28%29.md) method until it returns `nil`, and then ask the asset writer’s input for a set of time ranges to reencode. You pass the time ranges to this method to prepare the output for the next pass.
+
+The time ranges that you set here override the value of the asset reader’s [timeRange](../avassetreader/timerange.md) property. If the start times of the time range in the array don’t strictly increase, or if two or more time ranges in the array overlap, the system throws an exception. It’s an error to include a time range with a nonnumeric start time or duration, unless the duration is [kCMTimePositiveInfinity](../../coremedia/cmtime/positiveinfinity.md).
+
+If you call this method while the asset reader is in an [AVAssetReaderStatusFailed](../avassetreader/status-swift.enum/failed.md) or [AVAssetReaderStatusCancelled](../avassetreader/status-swift.enum/cancelled.md) state, its [status](../avassetreader/status-swift.property.md) property value doesn’t change, and the result of the next call to [copyNextSampleBuffer](copynextsamplebuffer%28%29.md) is `nil`.
+
+If you call this method while there’s still media data to read, the system throws an exception. You can only call it after the asset reader starts reading.
+
+## See Also
+
+### Configuring reading
+
+- [alwaysCopiesSampleData](alwayscopiessampledata.md): Deprecated. A Boolean value that indicates whether the output vends copied sample data.
+- [supportsRandomAccess](supportsrandomaccess.md): Deprecated. A Boolean value that indicates whether the output supports reconfiguring the time ranges it reads.
+- [markConfigurationAsFinal](markconfigurationasfinal%28%29.md): Deprecated. Tells the output that it’s finished reconfiguring time ranges, and allows the asset reader to advance to a completed state.

@@ -1,0 +1,31 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatial/sprect3dcontainsanypoint](https://developer.apple.com/documentation/spatial/sprect3dcontainsanypoint)
+
+# SPRect3DContainsAnyPoint
+
+**Interface language:** Objective-C
+
+**Framework:** Spatial  
+**Kind:** Function  
+**Availability:** iOS 16.0+ · iPadOS 16.0+ · Mac Catalyst 16.0+ · macOS 13.0+ · tvOS 16.0+ · visionOS 1.0+ · watchOS 9.0+
+
+Returns a Boolean value that indicates whether the rectangle contains any of the specified points.
+
+## Declaration
+
+```objectivec
+static bool SPRect3DContainsAnyPoint(SPRect3D rect, const SPPoint3D *points, int pointCount);
+```
+
+## See Also
+
+### Checking characteristics
+
+- [SPRect3DIntersectsRect](rect3d/intersects%28__%29.md): Returns a Boolean value that indicates whether two rectangles intersect.
+- [SPRect3DIsEmpty](rect3d/isempty.md): A Boolean value that indicates whether two or three of the dimensions are zero.
+- [SPRect3DContainsPoint](sprect3dcontainspoint.md): Returns a Boolean value that indicates whether the rectangle contains the specified point.
+- [SPRect3DContainsRect](sprect3dcontainsrect.md): Returns a Boolean value that indicates whether the rectangle contains the specified rectangle.
+- [SPRect3DDistanceToRect](sprect3ddistancetorect.md): Deprecated.
+- [SPRect3DIsFinite](sprect3disfinite.md): A Boolean value that indicates whether all of the coordinates and dimensions of the rectangle are finite.
+- [SPRect3DIsNaN](sprect3disnan.md): A Boolean value that indicates whether any of the coordinates and dimensions of the rectangle are NaN.
+- [SPRect3DIsNull](sprect3disnull.md): A Boolean value that indicates whether the rectangle is equal to the null rectangle.
+- [SPRect3DIsZero](sprect3diszero.md): A Boolean value that indicates whether the rectangle’s origin and size are zero.

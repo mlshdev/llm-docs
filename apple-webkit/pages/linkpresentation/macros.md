@@ -1,0 +1,32 @@
+> Snapshot-pinned source for Apple WebKit and Safari snapshot-3530be43aacd: [documentation/linkpresentation/macros](https://developer.apple.com/documentation/linkpresentation/macros)
+
+# LinkPresentation Macros (Swift)
+
+**Framework:** Link Presentation  
+**Kind:** API Collection
+
+## See Also
+
+### Reference
+
+- [LinkPresentation Errors](errors.md)
+
+# LinkPresentation Macros (Objective-C)
+
+**Framework:** Link Presentation  
+**Kind:** API Collection
+
+## Topics
+
+### Macros
+
+- [LP_EXTERN](lp_extern.md)
+- [LP_EXTERN_C](lp_extern_c.md)
+- [LP_EXTERN_C_BEGIN](lp_extern_c_begin.md)
+- [LP_EXTERN_C_END](lp_extern_c_end.md)
+
+## See Also
+
+### Reference
+
+- [LinkPresentation Errors](errors.md)

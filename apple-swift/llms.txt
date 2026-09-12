@@ -1,0 +1,19 @@
+# Apple Swift snapshot-eebba30a4ab9
+
+> Documentation generated from Apple's public DocC endpoints at [https://developer.apple.com/documentation/swift](https://developer.apple.com/documentation/swift) and pinned to catalog snapshot `eebba30a4ab9373b19010bdf3b1cdcfadf5599b64611c1dd07958482a85ddfa6` captured at 2026-09-12T21:04:59.660Z.
+
+- [Full documentation](llms-full.txt): Complete normalized corpus for Apple Swift snapshot-eebba30a4ab9.
+- [Provenance manifest](manifest.json): Snapshot digest, capture time, document count, and generation notes.
+- Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.
+- 6 frameworks in this catalog, captured at 2026-09-12T21:04:59.660Z.
+- Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.
+- Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream.
+
+## Frameworks
+
+- [Distributed](pages/distributed.md): 93 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, watchOS.
+- [Observation](pages/observation.md): 37 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [PackageDescription](pages/packagedescription.md): 465 pages.
+- [RegexBuilder](pages/regexbuilder.md): 462 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, watchOS.
+- [Swift](pages/swift.md): 18439 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.
+- [Synchronization](pages/synchronization.md): 196 pages. Platforms: iOS, iPadOS, Mac Catalyst, macOS, tvOS, visionOS, watchOS.

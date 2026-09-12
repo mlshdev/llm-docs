@@ -1,0 +1,35 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spatial/spray3dapplyaffinetransform](https://developer.apple.com/documentation/spatial/spray3dapplyaffinetransform)
+
+# SPRay3DApplyAffineTransform
+
+**Interface language:** Objective-C
+
+**Framework:** Spatial  
+**Kind:** Function  
+**Availability:** iOS 17.0+ · iPadOS 17.0+ · Mac Catalyst 17.0+ · macOS 14.0+ · tvOS 17.0+ · visionOS 1.0+ · watchOS 10.0+
+
+Returns a ray that results from applying the specified affine transform.
+
+## Declaration
+
+```objectivec
+static SPRay3D SPRay3DApplyAffineTransform(SPRay3D ray, SPAffineTransform3D transform);
+```
+
+## See Also
+
+### Transforming a 3D ray structure
+
+- [SPRay3DApplyProjectiveTransform](spray3dapplyprojectivetransform.md): Returns a ray that results from applying the specified projective transform.
+- [SPRay3DTranslate](spray3dtranslate-13y4m.md): Deprecated. Returns a ray with an origin that’s offset by the specified size.
+- [SPRay3DTranslate](spray3dtranslate-2t6zr.md): Returns a ray with an origin that’s offset by the specified vector.
+- [SPRay3DApplyPose](spray3dapplypose.md): Returns a ray that results from applying the specified pose.
+- [SPRay3DUnapplyAffineTransform](spray3dunapplyaffinetransform.md): Returns a ray that results from unapplying the specified affine transform.
+- [SPRay3DUnapplyProjectiveTransform](spray3dunapplyprojectivetransform.md): Returns a ray that results from unapplying the specified projective transform.
+- [SPRay3DUnapplyPose](spray3dunapplypose.md): Returns a ray that results from unapplying the specified projective transform.
+- [SPRay3DRotate](spray3drotate.md): Returns a ray that results from applying the specified rotation.
+- [SPRay3DRotateAroundPoint](spray3drotatearoundpoint.md): Returns a ray that’s rotated by the specified rotation around a specified pivot.
+- [SPRay3DRotateByQuaternion](spray3drotatebyquaternion.md): Returns a ray that results from rotating with the specified quaternion.
+- [SPRay3DRotateByQuaternionAroundPoint](spray3drotatebyquaternionaroundpoint.md): Returns a ray that’s rotated by the specified quaternion around a specified pivot.
+- [SPRay3DApplyScaledPose](spray3dapplyscaledpose.md): Returns a ray that’s transformed by the specified scaled pose.
+- [SPRay3DUnapplyScaledPose](spray3dunapplyscaledpose.md): Returns a ray that’s transformed by the inverse of the specified scaled pose.

@@ -1,0 +1,38 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/accelerate/bnnslayerparameterslossbase/init(function:i_desc:o_desc:reduction:)](https://developer.apple.com/documentation/accelerate/bnnslayerparameterslossbase/init(function:i_desc:o_desc:reduction:))
+
+# init(function:i_desc:o_desc:reduction:)
+
+**Framework:** Accelerate  
+**Kind:** Initializer  
+**Availability:** iOS 14.0+ (deprecated in 18.0) · iPadOS 14.0+ (deprecated in 18.0) · Mac Catalyst 14.0+ (deprecated in 18.0) · macOS 11.0+ (deprecated in 15.0) · tvOS 14.0+ (deprecated in 18.0) · visionOS 1.0+ (deprecated in 2.0) · watchOS 7.0+ (deprecated in 11.0)
+
+Returns a new loss layer parameters structure from the specified parameters.
+
+> Use BNNSGraph\* APIs
+
+## Declaration
+
+```swift
+init(function: BNNSLossFunction, i_desc: BNNSNDArrayDescriptor, o_desc: BNNSNDArrayDescriptor, reduction: BNNSLossReductionFunction)
+```
+
+## Parameters
+
+- `function`: The function that’s used to compute loss.
+- `i_desc`: The descriptor of the input.
+- `o_desc`: The descriptor of the output.
+- `reduction`: The function that’s used to reduce the computed loss.
+
+<a id="Discussion"></a>
+
+## Discussion
+
+> **Important**
+
+>  The input data type and output data type must be `float`. The output size must be `1`, unless the reduction is [BNNS.LossReduction.none](../bnns/lossreduction/none.md).
+
+## See Also
+
+### Initializers
+
+- [init()](init%28%29.md): Deprecated. Returns a new loss layer parameters structure.

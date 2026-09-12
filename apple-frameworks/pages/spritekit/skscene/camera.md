@@ -1,0 +1,101 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/spritekit/skscene/camera](https://developer.apple.com/documentation/spritekit/skscene/camera)
+
+# camera (Swift)
+
+**Framework:** SpriteKit  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+The camera node in the scene that determines what part of the scene’s coordinate space is visible in the view.
+
+## Declaration
+
+```swift
+weak var camera: SKCameraNode? { get set }
+```
+
+## Mentioned In
+
+- [Getting Started with a Camera](../getting-started-with-a-camera.md)
+- [Positioning a Scene’s Origin Within its View](../positioning-a-scene-s-origin-within-its-view.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The default value of this property is `nil`, which means that the scene’s [anchorPoint](anchorpoint.md) and [size](size.md) properties determine what portion of the scene is visible. If set to point to a camera node contained in the scene, the [anchorPoint](anchorpoint.md) property is ignored and the scene is rendered using the camera node’s properties instead.
+
+A camera must be added as a child of the scene for it to render that scene.
+
+Listing 1 shows, in Swift, how to add a camera to an [SKScene](../skscene.md) named `scene`. The camera is positioned in the center of the scene which gives the same result as rendering a camera-less scene with an [anchorPoint](anchorpoint.md) of [zero](../../corefoundation/cgpoint/zero.md).
+
+Listing 1. Adding a camera to a scene
+
+```swift
+let cameraNode = SKCameraNode()
+    
+cameraNode.position = CGPoint(x: scene.size.width / 2,
+                              y: scene.size.height / 2)
+    
+scene.addChild(cameraNode)
+scene.camera = cameraNode
+```
+
+For more information, see [SKCameraNode](../skcameranode.md).
+
+## See Also
+
+### Configuring the Viewport
+
+- [Positioning a Scene’s Origin Within its View](../positioning-a-scene-s-origin-within-its-view.md): Try the different ways to configure the scene’s origin inside its view.
+- [anchorPoint](anchorpoint.md): The point in the view’s frame that corresponds to the scene’s origin.
+
+# camera (Objective-C)
+
+**Framework:** SpriteKit  
+**Kind:** Instance Property  
+**Availability:** iOS 9.0+ · iPadOS 9.0+ · Mac Catalyst 13.1+ · macOS 10.11+ · tvOS 9.0+ · visionOS 1.0+ · watchOS 2.0+
+
+The camera node in the scene that determines what part of the scene’s coordinate space is visible in the view.
+
+## Declaration
+
+```objectivec
+@property (nonatomic, weak, nullable) SKCameraNode * camera;
+```
+
+## Mentioned In
+
+- [Getting Started with a Camera](../getting-started-with-a-camera.md)
+- [Positioning a Scene’s Origin Within its View](../positioning-a-scene-s-origin-within-its-view.md)
+
+<a id="Discussion"></a>
+
+## Discussion
+
+The default value of this property is `nil`, which means that the scene’s [anchorPoint](anchorpoint.md) and [size](size.md) properties determine what portion of the scene is visible. If set to point to a camera node contained in the scene, the [anchorPoint](anchorpoint.md) property is ignored and the scene is rendered using the camera node’s properties instead.
+
+A camera must be added as a child of the scene for it to render that scene.
+
+Listing 1 shows, in Swift, how to add a camera to an [SKScene](../skscene.md) named `scene`. The camera is positioned in the center of the scene which gives the same result as rendering a camera-less scene with an [anchorPoint](anchorpoint.md) of [zero](../../corefoundation/cgpoint/zero.md).
+
+Listing 1. Adding a camera to a scene
+
+```swift
+let cameraNode = SKCameraNode()
+    
+cameraNode.position = CGPoint(x: scene.size.width / 2,
+                              y: scene.size.height / 2)
+    
+scene.addChild(cameraNode)
+scene.camera = cameraNode
+```
+
+For more information, see [SKCameraNode](../skcameranode.md).
+
+## See Also
+
+### Configuring the Viewport
+
+- [Positioning a Scene’s Origin Within its View](../positioning-a-scene-s-origin-within-its-view.md): Try the different ways to configure the scene’s origin inside its view.
+- [anchorPoint](anchorpoint.md): The point in the view’s frame that corresponds to the scene’s origin.

@@ -1,0 +1,33 @@
+> Snapshot-pinned source for Apple cross-platform frameworks snapshot-75c95c22eb2a: [documentation/usd/xformtarget](https://developer.apple.com/documentation/usd/xformtarget)
+
+# xformTarget
+
+**Kind:** Article
+
+A prim that provides the transform to which this action animates.
+
+<a id="overview"></a>
+
+## Overview
+
+To provide a transform, assign an [Xformable](https://openusd.org/docs/api/class_usd_geom_xformable.html) prim to this property.
+
+The prims in the list of [affectedObjects](affectedobjects.md) animate from their current transform to the transform that this prim specifies. Include in the prim the transformational operations that implement the transform animation. For more information, see [xformOp](https://openusd.org/docs/api/class_usd_geom_xform_op.html).
+
+<a id="Declaration"></a>
+
+### Declaration
+
+```other
+rel xformTarget
+```
+
+## See Also
+
+### Properties
+
+- [info:id](info-id.md): The action’s unique identifier.
+- [affectedObjects](affectedobjects.md): A list of prims that respond to the notification.
+- [duration](duration.md): The amount of time that the objects face the camera.
+- [type](type.md): An option that controls the order in which the actions execute.
+- [easeType](easetype.md): An option that describes the animation’s change in pace over time.
