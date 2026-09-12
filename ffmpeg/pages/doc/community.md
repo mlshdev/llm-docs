@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/community.texi](https://github.com/FFmpeg/FFmpeg/blob/709f8fececd0ec6586208010e1d578abf3340dfc/doc/community.texi)
+> Commit-pinned source for FFmpeg master: [doc/community.texi](https://github.com/FFmpeg/FFmpeg/blob/e15ddb7f9a2f9b3ab8ac305efb6f94ddc18463d0/doc/community.texi)
 
 <a id="organisation"></a>
 
