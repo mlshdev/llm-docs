@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/e15ddb7f9a2f9b3ab8ac305efb6f94ddc18463d0/doc/general.texi)
+> Commit-pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/61cabd62cbf0d240620ef7caa382d665268e61b4/doc/general.texi)
 
 # External libraries
 
