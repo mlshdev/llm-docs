@@ -1,0 +1,201 @@
+> Commit-pinned source for Runpod main: [serverless/vllm/vllm-requests.mdx](https://docs.runpod.io/serverless/vllm/vllm-requests)
+
+# Send requests to vLLM workers
+
+Use Runpod's native API to send requests to vLLM workers. Review setup, configuration, deployment, and operations guidance for Runpod Serverless.
+
+vLLM workers use the same `/run` and `/runsync` operations as other Runpod Serverless endpoints. The difference is the input format: vLLM expects prompts, messages, and sampling parameters for text generation.
+
+## Input formats
+
+### Messages (chat models)
+
+Use for instruction-tuned models. The worker automatically applies the model's chat template.
+
+```json
+{
+  "input": {
+    "messages": [
+      {"role": "system", "content": "You are a helpful assistant."},
+      {"role": "user", "content": "What is the capital of France?"}
+    ],
+    "sampling_params": {
+      "temperature": 0.7,
+      "max_tokens": 100
+    }
+  }
+}
+```
+
+### Prompt (text completion)
+
+Use for base models or when providing raw text without a chat template.
+
+```json
+{
+  "input": {
+    "prompt": "The capital of France is",
+    "sampling_params": {
+      "temperature": 0.7,
+      "max_tokens": 50
+    }
+  }
+}
+```
+
+To apply the model's chat template to a prompt, add `"apply_chat_template": true`.
+
+## Send requests
+
+Submit a job that processes in the background. Poll `/status/{job_id}` for results.
+
+```python
+import requests
+
+response = requests.post(
+    "https://api.runpod.ai/v2/ENDPOINT_ID/run",
+    headers={
+        "Authorization": "Bearer RUNPOD_API_KEY",
+        "Content-Type": "application/json"
+    },
+    json={
+        "input": {
+            "messages": [{"role": "user", "content": "Explain quantum computing."}],
+            "sampling_params": {"temperature": 0.7, "max_tokens": 200}
+        }
+    }
+)
+
+job_id = response.json()["id"]
+print(f"Job ID: {job_id}")
+
+# Poll for results
+status = requests.get(
+    f"https://api.runpod.ai/v2/ENDPOINT_ID/status/{job_id}",
+    headers={"Authorization": "Bearer RUNPOD_API_KEY"}
+)
+print(status.json())
+```
+
+Wait for the complete response in a single request.
+
+```python
+import requests
+
+response = requests.post(
+    "https://api.runpod.ai/v2/ENDPOINT_ID/runsync",
+    headers={
+        "Authorization": "Bearer RUNPOD_API_KEY",
+        "Content-Type": "application/json"
+    },
+    json={
+        "input": {
+            "messages": [{"role": "user", "content": "Explain quantum computing."}],
+            "sampling_params": {"temperature": 0.7, "max_tokens": 200}
+        }
+    }
+)
+
+print(response.json())
+```
+
+For more on request operations, see [Send requests to Serverless endpoints](https://docs.runpod.io/serverless/endpoints/send-requests).
+
+## Streaming
+
+Receive tokens as they're generated instead of waiting for the complete response.
+
+```python
+import requests
+import json
+
+# Submit with streaming enabled
+response = requests.post(
+    "https://api.runpod.ai/v2/ENDPOINT_ID/run",
+    headers={
+        "Authorization": "Bearer RUNPOD_API_KEY",
+        "Content-Type": "application/json"
+    },
+    json={
+        "input": {
+            "prompt": "Write a short story about a robot.",
+            "sampling_params": {"temperature": 0.8, "max_tokens": 500},
+            "stream": True
+        }
+    }
+)
+
+job_id = response.json()["id"]
+
+# Stream results
+stream_url = f"https://api.runpod.ai/v2/ENDPOINT_ID/stream/{job_id}"
+with requests.get(stream_url, headers={"Authorization": "Bearer RUNPOD_API_KEY"}, stream=True) as r:
+    for line in r.iter_lines():
+        if line:
+            print(json.loads(line))
+```
+
+See [streaming documentation](https://docs.runpod.io/serverless/endpoints/send-requests#stream) for more details.
+
+## Sampling parameters
+
+Add parameters to control how the model generates text. Include these in the `sampling_params` object in your request.
+
+| Parameter           | Type               | Default | Description                                         |
+| ------------------- | ------------------ | ------- | --------------------------------------------------- |
+| `max_tokens`        | `int`              | `16`    | Maximum tokens to generate.                         |
+| `temperature`       | `float`            | `1.0`   | Randomness of sampling. Lower = more deterministic. |
+| `top_p`             | `float`            | `1.0`   | Cumulative probability of top tokens to consider.   |
+| `top_k`             | `int`              | `-1`    | Number of top tokens to consider. -1 = all.         |
+| `stop`              | `string` or `list` | `None`  | Stop generation when these strings are produced.    |
+| `presence_penalty`  | `float`            | `0.0`   | Penalize tokens based on presence in output.        |
+| `frequency_penalty` | `float`            | `0.0`   | Penalize tokens based on frequency in output.       |
+
+| Parameter                       | Type        | Default | Description                                                 |
+| ------------------------------- | ----------- | ------- | ----------------------------------------------------------- |
+| `n`                             | `int`       | `1`     | Number of output sequences to generate.                     |
+| `best_of`                       | `int`       | `n`     | Generate this many sequences, return top `n`.               |
+| `repetition_penalty`            | `float`     | `1.0`   | Penalize repeated tokens. Values > 1 discourage repetition. |
+| `min_p`                         | `float`     | `0.0`   | Minimum probability threshold relative to top token.        |
+| `min_tokens`                    | `int`       | `0`     | Minimum tokens before allowing EOS.                         |
+| `use_beam_search`               | `bool`      | `false` | Use beam search instead of sampling.                        |
+| `length_penalty`                | `float`     | `1.0`   | Length penalty for beam search.                             |
+| `early_stopping`                | `bool`      | `false` | Stop beam search early.                                     |
+| `stop_token_ids`                | `list[int]` | `None`  | Token IDs that stop generation.                             |
+| `ignore_eos`                    | `bool`      | `false` | Continue generating after EOS token.                        |
+| `skip_special_tokens`           | `bool`      | `true`  | Omit special tokens from output.                            |
+| `spaces_between_special_tokens` | `bool`      | `true`  | Add spaces between special tokens.                          |
+| `truncate_prompt_tokens`        | `int`       | `None`  | Truncate prompt to this many tokens.                        |
+
+| Parameter                  | Type   | Default     | Description                     |
+| -------------------------- | ------ | ----------- | ------------------------------- |
+| `stream`                   | `bool` | `false`     | Enable streaming output.        |
+| `max_batch_size`           | `int`  | env default | Max tokens per streaming chunk. |
+| `min_batch_size`           | `int`  | env default | Min tokens per streaming chunk. |
+| `batch_size_growth_factor` | `int`  | env default | Growth factor for batch size.   |
+
+## Error handling
+
+Implement retry logic with exponential backoff to handle network issues, rate limits, and cold starts.
+
+```python
+import requests
+import time
+
+def send_request(url, headers, payload, max_retries=3):
+    for attempt in range(max_retries):
+        try:
+            response = requests.post(url, headers=headers, json=payload, timeout=300)
+            response.raise_for_status()
+            return response.json()
+        except requests.exceptions.HTTPError as e:
+            if e.response.status_code == 429:  # Rate limit
+                time.sleep(5)
+            elif e.response.status_code >= 500:
+                time.sleep(2 ** attempt)
+            else:
+                raise
+        except requests.exceptions.RequestException:
+            time.sleep(2 ** attempt)
+    raise Exception("Max retries exceeded")
+```

@@ -1,0 +1,60 @@
+> Commit-pinned source for Vast.ai main: [host/cli/metrics-gpu.mdx](https://docs.vast.ai/host/cli/metrics-gpu)
+
+# vastai metrics gpu
+
+Host command
+
+Show current GPU market metrics (supply, demand, pricing)
+
+> **Note**
+>
+> This is a&#x20;
+>
+> **host**
+>
+> &#x20;command, used for managing machines you are renting out on Vast.ai.
+
+## Usage
+
+```bash
+vastai metrics gpu [OPTIONS]
+```
+
+## Options
+
+**Property (type: string)**
+
+Filter by verification status (`true`, `false`, or `all`). Defaults to `all`.
+
+**Property (type: string)**
+
+Filter by datacenter hosting type (`true`, `false`, or `all`). Defaults to `all`.
+
+## Description
+
+Returns a current snapshot of supply, demand, and pricing across all GPU types on the Vast marketplace. Use filters to narrow results to verified or datacenter machines.
+
+## Examples
+
+```bash
+# All GPU types
+vastai metrics gpu
+
+# Verified datacenter GPUs only
+vastai metrics gpu --verified true --datacenter true
+
+# JSON output
+vastai metrics gpu --raw
+```
+
+## Global Options
+
+The following options are available for all commands:
+
+| Option          | Description                                           |
+| --------------- | ----------------------------------------------------- |
+| `--url URL`     | Server REST API URL                                   |
+| `--retry N`     | Retry limit                                           |
+| `--raw`         | Output machine-readable JSON                          |
+| `--explain`     | Verbose explanation of API calls                      |
+| `--api-key KEY` | API key (defaults to `~/.config/vastai/vast_api_key`) |

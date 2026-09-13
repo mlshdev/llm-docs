@@ -1,0 +1,141 @@
+> Commit-pinned source for Runpod main: [public-endpoints/models/wan-2-6-t2i.mdx](https://docs.runpod.io/public-endpoints/models/wan-2-6-t2i)
+
+# WAN 2.6 T2I
+
+High-quality text-to-image with strong prompt adherence and clean composition. See model inputs and outputs on Runpod Public Endpoints.
+
+WAN 2.6 Text-to-Image generates high-quality images from natural-language prompts with strong prompt adherence and clean composition. It produces detailed, coherent images across a variety of styles.
+
+- [Try in playground](https://console.runpod.io/hub/playground/image/wan-2-6-t2i)
+
+  Test WAN 2.6 T2I in the Runpod Hub playground.
+
+|              |                                                |
+| ------------ | ---------------------------------------------- |
+| **Endpoint** | `https://api.runpod.ai/v2/wan-2-6-t2i/runsync` |
+| **Pricing**  | $0.03 per image                                |
+| **Type**     | Image generation                               |
+
+## Request
+
+All parameters are passed within the `input` object in the request body.
+
+**Property (type: string; required)**
+
+Text description of the desired image.
+
+**Property (type: string)**
+
+Image dimensions. Options: `1024*1024`, `1024*768`, `1440*1024`.
+
+**Property (type: integer)**
+
+Seed for reproducible results. Set to -1 for random.
+
+**Property (type: boolean)**
+
+Enable content safety checking.
+
+```bash cURL
+curl -X POST "https://api.runpod.ai/v2/wan-2-6-t2i/runsync" \
+  -H "Authorization: Bearer $RUNPOD_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "input": {
+      "prompt": "A modern tea shop interior, warm afternoon light, minimalist wood design",
+      "size": "1024*1024",
+      "seed": -1,
+      "enable_safety_checker": true
+    }
+  }'
+```
+
+```python Python
+import requests
+
+response = requests.post(
+    "https://api.runpod.ai/v2/wan-2-6-t2i/runsync",
+    headers={
+        "Authorization": f"Bearer {RUNPOD_API_KEY}",
+        "Content-Type": "application/json",
+    },
+    json={
+        "input": {
+            "prompt": "A modern tea shop interior, warm afternoon light, minimalist wood design",
+            "size": "1024*1024",
+            "seed": -1,
+            "enable_safety_checker": True,
+        }
+    },
+)
+
+result = response.json()
+print(result["output"]["image_url"])
+```
+
+```javascript JavaScript
+const response = await fetch(
+  "https://api.runpod.ai/v2/wan-2-6-t2i/runsync",
+  {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${RUNPOD_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      input: {
+        prompt: "A modern tea shop interior, warm afternoon light, minimalist wood design",
+        size: "1024*1024",
+        seed: -1,
+        enable_safety_checker: true,
+      },
+    }),
+  }
+);
+
+const result = await response.json();
+console.log(result.output.image_url);
+```
+
+## Response
+
+**id (type: string)**
+
+Unique identifier for the request.
+
+**status (type: string)**
+
+Request status. Returns `COMPLETED` on success, `FAILED` on error.
+
+**output (type: object)**
+
+The generation result containing the image URL and cost.
+
+**output.image\_url (type: string)**
+
+URL of the generated image. This URL expires after 7 days.
+
+**output.cost (type: float)**
+
+Cost of the generation in USD.
+
+```json 200
+{
+  "id": "sync-a1b2c3d4-e5f6-7890-abcd-ef1234567890-u1",
+  "status": "COMPLETED",
+  "delayTime": 15,
+  "executionTime": 3254,
+  "output": {
+    "image_url": "https://image.runpod.ai/abc123/output.png",
+    "cost": 0.03
+  }
+}
+```
+
+> **Warning**
+>
+> Image URLs expire after 7 days. Download and store generated images immediately if you need to keep them.
+
+## Cost calculation
+
+WAN 2.6 T2I charges $0.03 per image generated.

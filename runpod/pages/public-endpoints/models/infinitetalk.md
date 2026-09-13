@@ -1,0 +1,174 @@
+> Commit-pinned source for Runpod main: [public-endpoints/models/infinitetalk.mdx](https://docs.runpod.io/public-endpoints/models/infinitetalk)
+
+# InfiniteTalk
+
+Audio-driven video generation that creates talking or singing videos from a single image. See model inputs and outputs on Runpod Public Endpoints.
+
+InfiniteTalk is an audio-driven video generation model that creates talking or singing videos from a single image and audio input. It animates faces and bodies to match the audio, making it ideal for creating talking head videos, virtual presenters, or lip-synced content.
+
+- [Try in playground](https://console.runpod.io/hub/playground/video/infinitetalk)
+
+  Test InfiniteTalk in the Runpod Hub playground.
+
+|              |                                                 |
+| ------------ | ----------------------------------------------- |
+| **Endpoint** | `https://api.runpod.ai/v2/infinitetalk/runsync` |
+| **Pricing**  | $0.25–$0.50 per video                           |
+| **Type**     | Video generation                                |
+
+## Request
+
+All parameters are passed within the `input` object in the request body.
+
+**Property (type: string; required)**
+
+Text description of the desired video.
+
+**Property (type: string; required)**
+
+URL of the source image to animate.
+
+**Property (type: string; required)**
+
+URL of the audio file to drive the animation.
+
+**Property (type: string; required)**
+
+Output video resolution. Valid options: `480p` or `720p`.
+
+**Property (type: boolean)**
+
+Enable content safety checking.
+
+```bash cURL
+curl -X POST "https://api.runpod.ai/v2/infinitetalk/runsync" \
+  -H "Authorization: Bearer $RUNPOD_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "input": {
+      "prompt": "a cartoon computer talking",
+      "image": "https://example.com/avatar.jpg",
+      "audio": "https://example.com/speech.wav",
+      "size": "480p",
+      "enable_safety_checker": true
+    }
+  }'
+```
+
+```python Python
+import requests
+
+response = requests.post(
+    "https://api.runpod.ai/v2/infinitetalk/runsync",
+    headers={
+        "Authorization": f"Bearer {RUNPOD_API_KEY}",
+        "Content-Type": "application/json",
+    },
+    json={
+        "input": {
+            "prompt": "a cartoon computer talking",
+            "image": "https://example.com/avatar.jpg",
+            "audio": "https://example.com/speech.wav",
+            "size": "480p",
+            "enable_safety_checker": True,
+        }
+    },
+)
+
+result = response.json()
+print(result["output"]["video_url"])
+```
+
+```javascript JavaScript
+const response = await fetch(
+  "https://api.runpod.ai/v2/infinitetalk/runsync",
+  {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${RUNPOD_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      input: {
+        prompt: "a cartoon computer talking",
+        image: "https://example.com/avatar.jpg",
+        audio: "https://example.com/speech.wav",
+        size: "480p",
+        enable_safety_checker: true,
+      },
+    }),
+  }
+);
+
+const result = await response.json();
+console.log(result.output.video_url);
+```
+
+## Response
+
+**id (type: string)**
+
+Unique identifier for the request.
+
+**status (type: string)**
+
+Request status. Returns `COMPLETED` on success, `FAILED` on error.
+
+**delayTime (type: integer)**
+
+Time in milliseconds the request spent in queue before processing began.
+
+**executionTime (type: integer)**
+
+Time in milliseconds the model took to generate the video.
+
+**workerId (type: string)**
+
+Identifier of the worker that processed the request.
+
+**output (type: object)**
+
+The generation result containing the video URL and cost.
+
+**output.video\_url (type: string)**
+
+URL of the generated video. This URL expires after 7 days.
+
+**output.cost (type: float)**
+
+Cost of the generation in USD.
+
+```json 200
+{
+  "id": "sync-a1b2c3d4-e5f6-7890-abcd-ef1234567890-u1",
+  "status": "COMPLETED",
+  "delayTime": 25,
+  "executionTime": 45678,
+  "workerId": "oqk7ao1uomckye",
+  "output": {
+    "video_url": "https://video.runpod.ai/abc123/output.mp4",
+    "cost": 0.25
+  }
+}
+```
+
+```json 400
+{
+  "id": "sync-a1b2c3d4-e5f6-7890-abcd-ef1234567890-u1",
+  "status": "FAILED",
+  "error": "Invalid audio URL"
+}
+```
+
+> **Warning**
+>
+> Video URLs expire after 7 days. Download and store generated videos immediately if you need to keep them.
+
+## Cost calculation
+
+InfiniteTalk pricing varies by resolution:
+
+| Resolution | Cost  |
+| ---------- | ----- |
+| 480p       | $0.25 |
+| 720p       | $0.50 |

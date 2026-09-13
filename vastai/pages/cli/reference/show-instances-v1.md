@@ -1,0 +1,105 @@
+> Commit-pinned source for Vast.ai main: [cli/reference/show-instances-v1.mdx](https://docs.vast.ai/cli/reference/show-instances-v1)
+
+# vastai show instances-v1
+
+Show instances with pagination and filtering (v1).
+
+## Usage
+
+```bash
+vastai show instances-v1 [OPTIONS]
+```
+
+## Options
+
+**Property (type: boolean)**
+
+Only print instance IDs, one per line (alias: `--quiet`)
+
+**Property (type: boolean)**
+
+Show additional columns (SSH, location, template, etc.) (alias: `--verbose`)
+
+**Property (type: boolean)**
+
+Fetch all pages automatically and send to pager (alias: `--all`)
+
+**Property (type: string)**
+
+Filter by container status. Choices: `running`, `loading`, `exited`
+
+**Property (type: string)**
+
+Filter by instance label; pass empty string to match unlabeled
+
+**Property (type: string)**
+
+Filter by GPU model name (e.g. `RTX A5000`)
+
+**Property (type: string)**
+
+Filter by machine verification. Choices: `verified`, `unverified`, `deverified`
+
+**Property (type: integer)**
+
+Max instances per page (1-25, default 25)
+
+**Property (type: string)**
+
+Resume from a pagination token from a previous page
+
+**Property (type: string)**
+
+Sort column with optional direction, e.g. `start_date desc`
+
+**Property (type: string)**
+
+Override displayed columns with a comma-separated list
+
+## Description
+
+Returns a paginated list of instance objects. Key status fields per instance:
+
+**actual\_status**, current container state:
+
+| Value       | Meaning                                                                  |
+| ----------- | ------------------------------------------------------------------------ |
+| `null`      | Instance is being provisioned                                            |
+| `loading`   | Docker image is downloading or container is starting up                  |
+| `running`   | Container is actively executing. GPU charges apply.                      |
+| `stopped`   | Container is halted. Disk charges continue; no GPU charges.              |
+| `frozen`    | Container is paused with memory preserved. GPU charges apply.            |
+| `exited`    | Container process exited unexpectedly                                    |
+| `rebooting` | Container is restarting (transient)                                      |
+| `unknown`   | No recent heartbeat from the host                                        |
+| `offline`   | Host machine disconnected from Vast servers (computed, not stored in DB) |
+
+**intended\_status**, user's desired target state: `running`, `stopped`, or `frozen`.
+
+**cur\_state**, machine contract / hardware allocation state: `running`, `stopped`, or `unloaded` (released on destroy).
+
+**status\_msg**, human-readable detail on the current status.
+
+## Examples
+
+```bash
+vastai show instances-v1
+
+vastai show instances-v1 --status running --limit 10
+
+vastai show instances-v1 --all --verbose
+
+vastai show instances-v1 --next-token <token_from_previous_page>
+```
+
+## Global Options
+
+The following options are available for all commands:
+
+| Option          | Description                                           |
+| --------------- | ----------------------------------------------------- |
+| `--url URL`     | Server REST API URL                                   |
+| `--retry N`     | Retry limit                                           |
+| `--raw`         | Output machine-readable JSON                          |
+| `--explain`     | Verbose explanation of API calls                      |
+| `--api-key KEY` | API key (defaults to `~/.config/vastai/vast_api_key`) |

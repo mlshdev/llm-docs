@@ -1,0 +1,112 @@
+> Commit-pinned source for Runpod main: [flash/cli/overview.mdx](https://docs.runpod.io/flash/cli/overview)
+
+# CLI overview
+
+Learn how to use the Flash CLI for local development and deployment. Review setup, configuration, deployment, and usage guidance for Runpod Flash.
+
+The Flash CLI provides commands for initializing projects, running local development servers, building deployment artifacts, and managing your applications on Runpod Serverless.
+
+Before using the CLI, make sure you've [installed Flash](https://docs.runpod.io/flash/overview#install-flash).
+
+## Available commands
+
+| Command                                                       | Description                                               |
+| ------------------------------------------------------------- | --------------------------------------------------------- |
+| [`flash init`](https://docs.runpod.io/flash/cli/init)         | Create a new Flash project with a template structure      |
+| [`flash login`](https://docs.runpod.io/flash/cli/login)       | Authenticate with Runpod using your API key               |
+| [`flash dev`](https://docs.runpod.io/flash/cli/dev)           | Start the local development server with automatic updates |
+| [`flash build`](https://docs.runpod.io/flash/cli/build)       | Build a deployment artifact without deploying             |
+| [`flash deploy`](https://docs.runpod.io/flash/cli/deploy)     | Build and deploy your application to Runpod               |
+| [`flash env`](https://docs.runpod.io/flash/cli/env)           | Manage deployment environments                            |
+| [`flash app`](https://docs.runpod.io/flash/cli/app)           | Manage Flash applications                                 |
+| [`flash undeploy`](https://docs.runpod.io/flash/cli/undeploy) | Remove deployed endpoints                                 |
+| [`flash update`](https://docs.runpod.io/flash/cli/update)     | Update Flash to the latest or a specific version          |
+
+## Getting help
+
+View help for any command by adding `--help`:
+
+```bash
+flash --help
+flash deploy --help
+flash env --help
+```
+
+## Authentication
+
+Authenticate with Runpod:
+
+```bash
+flash login
+```
+
+This command opens your browser to authenticate with Runpod. After you approve the request, your API key is saved locally for future CLI operations. See [`flash login`](https://docs.runpod.io/flash/cli/login) for details.
+
+Alternatively, set the `RUNPOD_API_KEY` environment variable:
+
+```bash
+export RUNPOD_API_KEY=your_api_key_here
+```
+
+## Using uv
+
+If you installed Flash with [uv](https://docs.astral.sh/uv/), prefix all Flash commands with `uv run`:
+
+```bash
+uv run flash login
+uv run flash dev
+uv run flash deploy
+```
+
+## Common workflows
+
+### Local development
+
+```bash
+# Create a new project
+flash init PROJECT_NAME
+cd PROJECT_NAME
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Add your API key to .env
+# Start the development server
+flash dev
+```
+
+### Deploy to production
+
+```bash
+# Build and deploy
+flash deploy
+
+# Deploy to a specific environment
+flash deploy --env ENVIRONMENT_NAME
+```
+
+### Manage deployments
+
+```bash
+# List environments
+flash env list
+
+# Check environment status
+flash env get ENVIRONMENT_NAME
+
+# Remove an environment
+flash env delete ENVIRONMENT_NAME
+```
+
+### Clean up endpoints
+
+```bash
+# List deployed endpoints
+flash undeploy list
+
+# Remove specific endpoint
+flash undeploy ENDPOINT_NAME
+
+# Remove all endpoints
+flash undeploy --all
+```

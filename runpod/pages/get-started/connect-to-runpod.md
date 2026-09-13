@@ -1,0 +1,45 @@
+> Commit-pinned source for Runpod main: [get-started/connect-to-runpod.mdx](https://docs.runpod.io/get-started/connect-to-runpod)
+
+# Choose a workflow
+
+Review available methods for accessing and managing Runpod resources. Review setup steps and core concepts for building on Runpod.
+
+Runpod offers multiple ways to access and manage your compute resources. Choose the method that best fits your workflow:
+
+If you are deciding between Pods, Serverless, Public Endpoints, and Clusters, start with the [Runpod product overview](https://docs.runpod.io/get-started/products).
+
+## Runpod console
+
+The Runpod console provides an intuitive web interface to manage Pods and endpoints, access Pod terminals, send endpoint requests, monitor resource usage, and view billing and usage history.
+
+[Launch the Runpod console →](https://www.console.runpod.io)
+
+## Connect directly to Pods
+
+You can connect directly to your running Pods and execute code on them using a variety of methods, including a built-in web terminal, an SSH connection from your local machine, a JupyterLab instance, or a remote VSCode/Cursor development environment.
+
+[Learn more about Pod connection options →](https://docs.runpod.io/pods/connect-to-a-pod)
+
+## REST API
+
+The Runpod REST API allows you to programmatically manage and control compute resources. Use the API to manage Pod lifecycles and Serverless endpoints, monitor resource utilization, and integrate Runpod into your applications.
+
+[Explore the API reference →](https://docs.runpod.io/api-reference/docs/GET/openapi-json)
+
+## SDKs
+
+Runpod provides SDKs in Python, JavaScript, Go, and GraphQL to help you integrate Runpod services into your applications.
+
+[Explore the SDKs →](https://docs.runpod.io/serverless/sdks)
+
+## Command-line interface (CLI)
+
+The Runpod CLI allows you to manage Pods from your terminal, execute code on Pods, transfer data between Runpod and local systems, and programmatically manage Serverless endpoints.
+
+Every Pod comes pre-installed with the `runpodctl` command and includes a Pod-scoped API key for seamless command-line management.
+
+[Learn more about runpodctl →](https://docs.runpod.io/runpodctl/overview)
+
+## Coding agents
+
+Use the [agent onboarding guide](https://docs.runpod.io/agent-setup) to install Runpod skills and connect the Runpod MCP server to a supported coding agent.

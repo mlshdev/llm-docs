@@ -1,0 +1,132 @@
+> Commit-pinned source for Vast.ai main: [guides/get-started/agents.mdx](https://docs.vast.ai/guides/get-started/agents)
+
+# Using Vast.ai with Agents
+
+Manage Vast.ai GPU instances, serverless endpoints, volumes, and billing from coding agents like Claude Code, Codex, and Cursor.
+
+Vast.ai works with AI coding agents at two layers. A **skill** or **plugin** lets an agent operate your **account** — find, rent, launch, and tear down instances. Once a box is running, it **describes itself** to any agent that connects, so the agent can operate the **machine** too. Together they cover the whole loop, from renting a GPU to a working result, hands-off.
+
+## Agent Skills
+
+The `vastai` agent skill lets AI coding assistants drive Vast.ai on your behalf — create instances, deploy endpoints, manage SSH keys, check balances, and more — by calling the [Vast CLI](https://docs.vast.ai/cli/hello-world) under the hood. These skills work with [Claude Code](https://claude.com/claude-code), Cursor, GitHub Copilot, Windsurf, Cline, and 17+ other AI agents that support the [skills.sh](https://www.skills.sh) framework.
+
+Install the skill into your coding agent with one command:
+
+```bash
+npx skills add vast-ai/vast-cli --skill vastai
+```
+
+Restart your coding tool after installing so it picks up the new skill.
+
+The skill calls the `vastai` CLI under the hood. If it isn't already installed, run `curl -fsSL https://vast.ai/install.sh | bash` (or your agent will install it on first use) — see the [CLI getting-started guide](https://docs.vast.ai/cli/hello-world) for alternatives, including `pip install vastai` on Windows.
+
+### Authenticate
+
+The skill needs an API key to act on your account. Generate one on the [API keys page](https://cloud.vast.ai/account/) and set it once:
+
+```bash
+vastai set api-key <YOUR_API_KEY>
+```
+
+See [API keys](https://docs.vast.ai/guides/reference/api-keys) for scoping and rotation guidance.
+
+## Agent Plugins
+
+The `npx skills add` flow above works in any agent that supports the skills framework. If you'd rather install a native plugin for your editor — with slash commands and skills that auto-load on intent — Vast publishes dedicated plugins for Claude Code, Codex, and Cursor.
+
+Every plugin bundles the same two skills:
+
+- **`vastai`** — renter operations: search and launch instances, SSH, copy, logs, exec, destroy, volumes, serverless, env vars, billing.
+- **`vastai-host`** — GPU provider operations: list/unlist machines, pricing, maintenance windows, self-tests, earnings, marketplace metrics. Auto-loads on host-intent prompts.
+
+Each plugin runs `vastai` with `--raw`, so responses come back as parseable JSON.
+
+### Slash commands
+
+The Claude Code and Codex plugins add five slash commands that wrap the most common renter operations with safe defaults. Anything they don't cover still works through the skills in natural language. (Cursor is natural-language only — see its tab below.)
+
+| Command  | What it does                                                                                                                                                                                       |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `setup`  | Stores your API key, registers your SSH public key with Vast, and verifies the credential. Run this once before anything else — launching before a key is registered produces an unreachable host. |
+| `status` | Snapshots one instance or all of them, flagging terminal states (`exited`, `offline`, `unknown`) so an agent's polling loop actually terminates.                                                   |
+| `cost`   | Account balance, current burn rate ($/hr across active instances), and projected 24-hour spend — a useful pre-flight check before launching anything large.                                        |
+| `search` | Finds the cheapest **rentable** offers for a filter, sorted by $/hr. Detects `spot`/`bid` in the filter and switches to interruptible pricing automatically.                                       |
+| `launch` | Launches an offer with safe defaults (PyTorch image, 20 GB disk, direct SSH, JSON output) and parses back the contract ID so later commands can reference it.                                      |
+
+Invoke them as **`/vastai:<command>`** in Claude Code and **`/prompts:vast-<command>`** in Codex.
+
+### Install
+
+Inside Claude Code, add the marketplace and install the plugin:
+
+```text
+/plugin marketplace add vast-ai/vast-claude-plugin
+/plugin install vastai
+```
+
+Then run `/vastai:setup` once to store your API key, register your SSH public key, and verify the credential. Source: [`vast-ai/vast-claude-plugin`](https://github.com/vast-ai/vast-claude-plugin).
+
+In your terminal, add the marketplace and open the plugin browser:
+
+```bash
+codex plugin marketplace add vast-ai/vast-codex-plugin
+codex plugin        # plugin browser → pick "Vast.ai" → Install
+```
+
+Restart your Codex session, then run `/prompts:vast-setup` once. Source: [`vast-ai/vast-codex-plugin`](https://github.com/vast-ai/vast-codex-plugin).
+
+No slash commands — Cursor is natural-language driven. The plugin adds both skills plus an auto-attach rule that points Cursor at the renter skill when you edit infrastructure files (`*.tf`, `*.yaml`, `infra/`, `deploy/`).
+
+Install it from the Cursor Dashboard → **Settings → Plugins → Team Marketplaces → Import**, then paste:
+
+```text
+https://github.com/vast-ai/vast-cursor-plugin
+```
+
+Then say *"Configure my Vast.ai CLI."* in Agent chat to walk through setup. Source: [`vast-ai/vast-cursor-plugin`](https://github.com/vast-ai/vast-cursor-plugin).
+
+## Instances explain themselves to AI agents
+
+Point an AI agent at a Vast instance over SSH — or run the agent directly on the instance — and it can discover the setup on its own. Every Vast image drops an **`AGENTS.md`** (and an identical **`CLAUDE.md`**) in the home and workspace directories — the exact files Claude Code, Cursor, and similar tools already read on their own, so orientation often happens with zero prompting. For anything live, the same images ship a **`vast-capabilities`** command that reports what's installed, what's running, and how to reach it. The agent reads these instead of probing the machine.
+
+```bash
+vast-capabilities
+```
+
+This gives the agent enough context to:
+
+- **See running services and how to connect to them**, so it doesn't waste time scanning ports or guessing endpoints.
+- **Expose new apps safely** by placing them behind Vast's authenticated proxy on the correct ports.
+- **Tell what persists across a reboot** and what doesn't, so nothing important is discarded.
+- **Use image-specific knowledge** — each image (PyTorch, ComfyUI, vLLM, SGLang, Ollama, and more) carries its own notes, so the agent knows how to serve a model or run a workflow on that particular box.
+
+The result is less back-and-forth: you spend less time explaining the machine to your tools and more time using it.
+
+## What you can do
+
+Ask your agent in natural language — it will pick the right `vastai` command and run it for you.
+
+| Task               | Example prompt                                                            |
+| ------------------ | ------------------------------------------------------------------------- |
+| Find GPUs          | "Find the cheapest 4× H100 offers with at least 200 GB disk."             |
+| Launch an instance | "Rent the first matching offer and start it with the PyTorch template."   |
+| Manage instances   | "List my running instances and stop anything idle for more than an hour." |
+| SSH access         | "Upload my `~/.ssh/id_ed25519.pub` public key to my account."             |
+| Templates          | "Show my templates and create a new one for vLLM with port 8000 exposed." |
+| Serverless         | "Create an autoscaler endpoint for my Qwen3-8B worker group."             |
+| Billing            | "How much credit do I have left and what did I spend last week?"          |
+
+## Learn more
+
+- [vast-cli on GitHub](https://github.com/vast-ai/vast-cli)
+
+  Source for the CLI and the skill manifest.
+- [CLI reference](https://docs.vast.ai/cli/hello-world)
+
+  Every `vastai` command, flag, and example.
+- [Python SDK reference](https://docs.vast.ai/sdk/python/reference/vastai)
+
+  Call the same operations from Python via the `vastai-sdk` package.
+- [API keys](https://docs.vast.ai/guides/reference/api-keys)
+
+  Create, scope, and rotate the keys the skill uses to authenticate.

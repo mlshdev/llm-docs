@@ -1,0 +1,79 @@
+> Commit-pinned source for Runpod main: [serverless/workers/overview.mdx](https://docs.runpod.io/serverless/workers/overview)
+
+# Overview
+
+Package your handler function for deployment. Review setup, configuration, deployment, and operations guidance for Runpod Serverless.
+
+Workers are containerized environments that run your code on Runpod Serverless.
+
+## Deployment workflow
+
+After creating your [handler function](https://docs.runpod.io/serverless/workers/handler-functions), package it into a Docker image and deploy it to an endpoint:
+
+1. Package your handler function and all its dependencies [into a Docker image](https://docs.runpod.io/serverless/workers/create-dockerfile).
+2. Push your image and create an endpoint using one of two methods:
+
+   - [Deploy from Docker Hub](https://docs.runpod.io/serverless/workers/deploy): Build locally and push to a container registry.
+   - [Deploy from GitHub](https://docs.runpod.io/serverless/workers/github-integration): Auto-build and deploy directly from your repository.
+
+## Model deployment
+
+To deploy workers with AI/ML models, follow this order of preference:
+
+1. [**Use cached models**](https://docs.runpod.io/serverless/endpoints/model-caching): For models on Hugging Face (public or gated), this is the recommended approach. Cached models provide the fastest cold starts and persist across worker restarts.
+
+2. [**Bake the model into your Docker image**](https://docs.runpod.io/serverless/workers/create-dockerfile#including-models-and-files): For private models not on Hugging Face, embed them directly in your container image. This increases image size and initialization time, but ensures the model is stored directly on machine disk before the worker starts, so it's ready to serve requests quickly after billing begins.
+
+3. [**Use network volumes**](https://docs.runpod.io/storage/network-volumes): For development workflows or very large models (500GB+), store models on a network volume. Reading from network volume will occur after a worker starts running and billing begins, and will be slower than reading cached or baked models directly from machine disk. However, worker initialization time will be faster, and changes to the underlying image will not require rebuilding and repushing the image with the model artifact, making it faster to iterate during development.
+
+## Worker types
+
+Workers can run in two modes depending on your latency and cost requirements:
+
+- **Active workers** run continuously (24/7) and are always ready to process requests instantly. They eliminate cold starts entirely, making them ideal for latency-sensitive or high-traffic applications.
+
+- **Flex workers** scale dynamically based on demand, spinning down to zero when idle. They incur cold starts when scaling up but cost nothing when not in use, making them ideal for variable or sporadic workloads.
+
+The system may also spin up **extra workers** during traffic spikes when Docker images are cached on hosts (default: 2).
+
+## Worker states
+
+| State            | Description                                                                             | Billing                |
+| ---------------- | --------------------------------------------------------------------------------------- | ---------------------- |
+| **Initializing** | Downloading image, loading code, and downloading cached models (if using model caching) | No                     |
+| **Idle**         | Scaled down, waiting for requests                                                       | No                     |
+| **Running**      | Processing requests                                                                     | Yes                    |
+| **Throttled**    | Temporarily unable to run due to host machine resource constraints                      | No                     |
+| **Outdated**     | Marked for replacement after update                                                     | Yes (while processing) |
+| **Unhealthy**    | Crashed; auto-retries for up to 7 days                                                  | No                     |
+
+> **Note**
+>
+> If an endpoint repeatedly produces unhealthy workers, Runpod automatically scales it down; see [My endpoint was scaled down unexpectedly](https://docs.runpod.io/serverless/troubleshooting#my-endpoint-was-scaled-down-unexpectedly).
+
+View worker states in the **Workers** tab of your endpoint in the [Runpod console](https://www.console.runpod.io/serverless).
+
+## Max worker limits
+
+Account balance determines your maximum workers (flex + active combined):
+
+| Balance | Max workers |
+| ------- | ----------- |
+| Default | 5           |
+| $100+   | 10          |
+| $200+   | 20          |
+| $300+   | 30          |
+| $500+   | 40          |
+| $700+   | 50          |
+| $900+   | 60          |
+
+Need more capacity? [Contact support](https://www.runpod.io/contact).
+
+## Best practices
+
+| Practice                                                                           | Benefit                               |
+| ---------------------------------------------------------------------------------- | ------------------------------------- |
+| [Optimize image size](https://docs.runpod.io/serverless/workers/create-dockerfile) | Faster downloads, reduced cold starts |
+| [Use model caching](https://docs.runpod.io/serverless/endpoints/model-caching)     | Fastest cold starts                   |
+| [Test locally first](https://docs.runpod.io/serverless/development/local-testing)  | Catch issues before deployment        |
+| [Use logs and SSH](https://docs.runpod.io/serverless/development/logs)             | Debug and optimize effectively        |

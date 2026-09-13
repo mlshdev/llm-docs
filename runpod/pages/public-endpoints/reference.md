@@ -1,0 +1,80 @@
+> Commit-pinned source for Runpod main: [public-endpoints/reference.mdx](https://docs.runpod.io/public-endpoints/reference)
+
+# Available models
+
+Browse all available models for Runpod Public Endpoints. Review setup, model selection, request options, and usage guidance for Runpod Public Endpoints.
+
+This page lists all available models for Runpod Public Endpoints. Select a model below to view its parameters, pricing, and usage examples. You can also browse and test models in the [Runpod Hub playground](https://console.runpod.io/hub?tabSelected=public_endpoints).
+
+## Image models
+
+Generate and edit images with text prompts or reference images.
+
+| Model                                                                                                 | Description                                                      | Price                |
+| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | -------------------- |
+| [Flux Dev](https://docs.runpod.io/public-endpoints/models/flux-dev)                                   | High-quality image generation with exceptional prompt adherence. | $0.02/megapixel      |
+| [Flux Schnell](https://docs.runpod.io/public-endpoints/models/flux-schnell)                           | Fast, lightweight generation for prototyping.                    | $0.0024/megapixel    |
+| [Flux Kontext Dev](https://docs.runpod.io/public-endpoints/models/flux-kontext-dev)                   | Edit images based on text instructions.                          | $0.025/image         |
+| [P-Image T2I](https://docs.runpod.io/public-endpoints/models/p-image-t2i)                             | Ultra-fast text-to-image with automatic prompt enhancement.      | $0.005/image         |
+| [P-Image Edit](https://docs.runpod.io/public-endpoints/models/p-image-edit)                           | Premium image editing with complex compositions.                 | $0.01/image          |
+| [Qwen Image](https://docs.runpod.io/public-endpoints/models/qwen-image)                               | Image generation with advanced text rendering.                   | $0.02/image          |
+| [Qwen Image LoRA](https://docs.runpod.io/public-endpoints/models/qwen-image-lora)                     | Image generation with LoRA customization.                        | $0.025/image         |
+| [Qwen Image Edit](https://docs.runpod.io/public-endpoints/models/qwen-image-edit)                     | Image editing with text rendering capabilities.                  | $0.02/image          |
+| [Qwen Image Edit 2511](https://docs.runpod.io/public-endpoints/models/qwen-image-edit-2511)           | Enhanced image editing with improved consistency.                | $0.02/image          |
+| [Qwen Image Edit 2511 LoRA](https://docs.runpod.io/public-endpoints/models/qwen-image-edit-2511-lora) | Advanced editing with LoRA support.                              | $0.025/image         |
+| [Seedream 4.0 T2I](https://docs.runpod.io/public-endpoints/models/seedream-4-t2i)                     | New-generation text-to-image creation.                           | $0.027/image         |
+| [Seedream 4.0 Edit](https://docs.runpod.io/public-endpoints/models/seedream-4-edit)                   | New-generation image editing.                                    | $0.027/image         |
+| [WAN 2.6 T2I](https://docs.runpod.io/public-endpoints/models/wan-2-6-t2i)                             | Open-source text-to-image at 1024x1024.                          | $0.03/image          |
+| [Z-Image Turbo](https://docs.runpod.io/public-endpoints/models/z-image-turbo)                         | Fast 6B parameter image generation.                              | $0.005/image         |
+| [Nano Banana Edit](https://docs.runpod.io/public-endpoints/models/nano-banana-edit)                   | Google's model for combining multiple images.                    | $0.038/image         |
+| [Nano Banana Pro Edit](https://docs.runpod.io/public-endpoints/models/nano-banana-pro-edit)           | Advanced multi-image editing with resolution options.            | $0.14–$0.24/image    |
+| [Nano Banana 2 Edit](https://docs.runpod.io/public-endpoints/models/nano-banana-2-edit)               | Google's latest multi-image editing with resolution options.     | $0.0875–$0.175/image |
+
+## Video models
+
+Create videos from images or text prompts. Pricing varies by resolution and duration.
+
+| Model                                                                                                 | Description                                         | Price                               |
+| ----------------------------------------------------------------------------------------------------- | --------------------------------------------------- | ----------------------------------- |
+| [InfiniteTalk](https://docs.runpod.io/public-endpoints/models/infinitetalk)                           | Audio-driven talking/singing video generation.      | $0.25 (480p), $0.50 (720p)          |
+| [Kling v2.1 I2V Pro](https://docs.runpod.io/public-endpoints/models/kling-v2-1)                       | Professional image-to-video with enhanced fidelity. | $0.45/5s, $0.90/10s                 |
+| [Kling v2.6 Motion Control](https://docs.runpod.io/public-endpoints/models/kling-v2-6-motion-control) | Motion transfer from reference videos.              | $0.21/3s, $0.63/10s                 |
+| [Kling Video O1 R2V](https://docs.runpod.io/public-endpoints/models/kling-video-o1-r2v)               | Creative video with multi-reference images.         | $0.112/second                       |
+| [Seedance 1.5 Pro I2V](https://docs.runpod.io/public-endpoints/models/seedance-1-5-pro)               | Cinematic image-to-video with expressive motion.    | $0.024–$0.052/second                |
+| [SORA 2 I2V](https://docs.runpod.io/public-endpoints/models/sora-2)                                   | OpenAI's video and audio generation.                | $0.40 (4s), $0.80 (8s), $1.20 (12s) |
+| [SORA 2 Pro I2V](https://docs.runpod.io/public-endpoints/models/sora-2-pro)                           | Professional-grade SORA video generation.           | From $1.20 (720p/4s)                |
+| [WAN 2.6 T2V](https://docs.runpod.io/public-endpoints/models/wan-2-6-t2v)                             | Text-to-video with resolution options.              | $0.50/5s (480p), $2.25/10s (720p)   |
+| [WAN 2.5](https://docs.runpod.io/public-endpoints/models/wan-2-5)                                     | Image-to-video with prompt expansion.               | From $0.25/5s                       |
+| [WAN 2.2 I2V LoRA](https://docs.runpod.io/public-endpoints/models/wan-2-2-i2v-lora)                   | Image-to-video with LoRA camera controls.           | $0.35/5s, $0.56/8s                  |
+| [WAN 2.2 I2V](https://docs.runpod.io/public-endpoints/models/wan-2-2-i2v)                             | Open-source image-to-video at 720p.                 | $0.30/5s                            |
+| [WAN 2.1 I2V](https://docs.runpod.io/public-endpoints/models/wan-2-1-i2v)                             | Image-to-video at 720p.                             | $0.30/5s                            |
+| [WAN 2.6 I2V](https://docs.runpod.io/public-endpoints/models/wan-2-6-i2v)                             | Image-to-video with audio support up to 1080p.      | $0.10/s (720p), $0.15/s (1080p)     |
+| [Pruna Video](https://docs.runpod.io/public-endpoints/models/p-video)                                 | Premium AI video from text, images, and audio.      | $0.02/s (720p), $0.04/s (1080p)     |
+| [Vidu Q3 I2V](https://docs.runpod.io/public-endpoints/models/vidu-q3-i2v)                             | Animate reference images with text-driven motion.   | $0.15/second                        |
+| [Vidu Q3 T2V](https://docs.runpod.io/public-endpoints/models/vidu-q3-t2v)                             | High-quality video from text with audio support.    | $0.15/second                        |
+
+## Text models
+
+Generate text with large language models.
+
+| Model                                                                         | Description                                                         | Price                  |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------- |
+| [IBM Granite 4.0](https://docs.runpod.io/public-endpoints/models/granite-4)   | 32B parameter long-context instruct model.                          | $10.00/1M tokens       |
+| [Moonshot Kimi](https://docs.runpod.io/public-endpoints/models/moonshot-kimi) | Kimi family for reasoning, chat, and coding with extended thinking. | $4.00–$15.00/1M tokens |
+| [Qwen3 32B AWQ](https://docs.runpod.io/public-endpoints/models/qwen3-32b)     | Advanced reasoning and multilingual support. OpenAI-compatible.     | $10.00/1M tokens       |
+
+## Audio models
+
+Generate audio from text.
+
+| Model                                                                                 | Description                                       | Price          |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------- | -------------- |
+| [Chatterbox Turbo](https://docs.runpod.io/public-endpoints/models/chatterbox-turbo)   | Fast TTS with 20 preset voices and voice cloning. | $0.001/second  |
+| [Minimax Speech 02 HD](https://docs.runpod.io/public-endpoints/models/minimax-speech) | Text-to-speech with emotional control.            | $0.05/1K chars |
+
+## Next steps
+
+- [Quickstart](https://docs.runpod.io/public-endpoints/quickstart): Get started with your first API request.
+- [Make API requests](https://docs.runpod.io/public-endpoints/requests): Learn about request/response formats.
+- [Vercel AI SDK](https://docs.runpod.io/public-endpoints/ai-sdk): Use the TypeScript SDK for easier integration.
+- [Build a text-to-video pipeline](https://docs.runpod.io/tutorials/public-endpoints/text-to-video-pipeline): Chain multiple endpoints in a Python application.

@@ -93,7 +93,7 @@ llms-full.txt
   pages/
 ```
 
-Project directories are named after the identifiers in `config/sources.json`: `traefik`, `netbird`, `podman`, `docker`, `container`, `n8n`, `grafana`, `victoriametrics`, `victorialogs`, `victoriametrics-datasource`, `victorialogs-datasource`, `vmestimator`, `zitadel`, `ffmpeg`, `yt-dlp`, `searxng`, `bun`, `trigger-dev`, `aria2`, `postgres-18`, `apple-swift`, `apple-swiftui`, `apple-webkit`, `apple-xcode`, `apple-ios`, `apple-macos`, `apple-watchos`, and `apple-frameworks`.
+Project directories are named after the identifiers in `config/sources.json`: `traefik`, `netbird`, `podman`, `docker`, `container`, `n8n`, `grafana`, `victoriametrics`, `victorialogs`, `victoriametrics-datasource`, `victorialogs-datasource`, `vmestimator`, `zitadel`, `ffmpeg`, `yt-dlp`, `searxng`, `bun`, `trigger-dev`, `aria2`, `postgres-18`, `vastai`, `runpod`, `apple-swift`, `apple-swiftui`, `apple-webkit`, `apple-xcode`, `apple-ios`, `apple-macos`, `apple-watchos`, and `apple-frameworks`.
 
 Corpora below GitHub's 100 MiB file limit use one `llms-full.txt`. Larger corpora keep `llms-full.txt` as an ordered volume index and store the complete text in numbered files capped at 45 MiB.
 
@@ -116,6 +116,9 @@ Corpora below GitHub's 100 MiB file limit use one `llms-full.txt`. Larger corpor
 - Trigger.dev publishes the pages its `docs/docs.json` navigation declares, renders each API reference page from the OpenAPI operation the page names in front matter, inlines snippets with the attributes they are rendered with, and resolves published links to `https://trigger.dev/docs`.
 - aria2 converts the release-pinned English Sphinx sources for the aria2c manual, project guide, libaria2 reference, and technical notes without executing Sphinx or upstream Python. The libaria2 API is generated deterministically from the pinned public C++ header.
 - PostgreSQL assembles the DocBook book from the entities `doc/src/sgml/postgres.sgml` declares and converts it to Markdown without executing the upstream Make, Meson, Perl, or XSLT toolchain. Pages are split the way the manual is published — one per part, chapter, top-level section, and reference entry — and cross references, links, and footnote references resolve against the whole book. The error-code, wait-event, SQL-conformance, key-word, and Meson-target tables that the upstream build generates are reproduced from the same checked-in data files outside `doc/`.
+- Vast.ai publishes the pages its `docs.json` navigation declares and, for the navigation group that names a specification without listing pages, generates one page per endpoint the way the site itself does — routed by tag and operation summary from `api-reference/openapi.yaml`.
+- Runpod publishes the pages its `docs.json` navigation declares, renders each API reference page from the OpenAPI operation the page names in front matter, and substitutes each glossary tooltip with the term it labels, parsed from the checked-in module rather than executed.
+- Neither Vast.ai nor Runpod publishes its documentation repository under a license; both snapshots carry a copyright notice in `LICENSE.upstream` instead of a grant.
 - Apple walks every internal page in the public DocC framework indexes and converts render JSON directly to Markdown without a browser. The eight catalogs cover Swift, SwiftUI, WebKit and Safari, Xcode and developer tools, platform-exclusive iOS/macOS/watchOS frameworks, and every remaining cross-platform, tvOS, visionOS, DriverKit, and hardware framework without duplicating pages between catalogs. Same-path Swift, Objective-C, and data variants are materialized from DocC JSON patches and combined in one page. Declarations, availability, prose, lists, tables, asides, REST schemas, relationships, topic groups, media, samples, and stable anchors are preserved; internal links stay local within a catalog and cross-catalog links resolve to Apple.
 
 ## Local commands
@@ -135,4 +138,4 @@ Add project metadata to `config/sources.json`, extend the `ProjectId` type, and 
 
 ## License
 
-The generator is MIT licensed. Generated project directories include the corresponding upstream license in `LICENSE.upstream`; upstream documentation remains governed by its original project license.
+The generator is MIT licensed. Generated project directories carry the upstream terms in `LICENSE.upstream`: the project's own license where one is published, and otherwise a copyright notice naming the source and stating that no license was granted. Upstream documentation remains governed by its original terms, and a snapshot taken without a license grant is reproduced as a machine-readable reference only.

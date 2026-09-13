@@ -1,0 +1,135 @@
+> Commit-pinned source for Runpod main: [public-endpoints/models/p-image-t2i.mdx](https://docs.runpod.io/public-endpoints/models/p-image-t2i)
+
+# P-Image T2I
+
+Ultra-fast text-to-image with automatic prompt enhancement and 2-stage refinement. See model inputs and outputs on Runpod Public Endpoints.
+
+P-Image is Pruna's ultra-fast text-to-image model with automatic prompt enhancement and 2-stage refinement. It generates high-quality images quickly with minimal configuration.
+
+- [Try in playground](https://console.runpod.io/hub/playground/image/p-image-t2i)
+
+  Test P-Image T2I in the Runpod Hub playground.
+
+|              |                                                |
+| ------------ | ---------------------------------------------- |
+| **Endpoint** | `https://api.runpod.ai/v2/p-image-t2i/runsync` |
+| **Pricing**  | $0.005 per image                               |
+| **Type**     | Image generation                               |
+
+## Request
+
+All parameters are passed within the `input` object in the request body.
+
+**Property (type: string; required)**
+
+Text description of the desired image.
+
+**Property (type: string)**
+
+Output aspect ratio. Options: `1:1`, `16:9`, `9:16`, `4:3`, `3:4`, `3:2`, `2:3`.
+
+**Property (type: integer)**
+
+Seed for reproducible results.
+
+**Property (type: boolean)**
+
+Disable content safety filtering.
+
+```bash cURL
+curl -X POST "https://api.runpod.ai/v2/p-image-t2i/runsync" \
+  -H "Authorization: Bearer $RUNPOD_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "input": {
+      "prompt": "A majestic lion standing on a rocky cliff at sunset",
+      "aspect_ratio": "16:9"
+    }
+  }'
+```
+
+```python Python
+import requests
+
+response = requests.post(
+    "https://api.runpod.ai/v2/p-image-t2i/runsync",
+    headers={
+        "Authorization": f"Bearer {RUNPOD_API_KEY}",
+        "Content-Type": "application/json",
+    },
+    json={
+        "input": {
+            "prompt": "A majestic lion standing on a rocky cliff at sunset",
+            "aspect_ratio": "16:9",
+        }
+    },
+)
+
+result = response.json()
+print(result["output"]["image_url"])
+```
+
+```javascript JavaScript
+const response = await fetch(
+  "https://api.runpod.ai/v2/p-image-t2i/runsync",
+  {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${RUNPOD_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      input: {
+        prompt: "A majestic lion standing on a rocky cliff at sunset",
+        aspect_ratio: "16:9",
+      },
+    }),
+  }
+);
+
+const result = await response.json();
+console.log(result.output.image_url);
+```
+
+## Response
+
+**id (type: string)**
+
+Unique identifier for the request.
+
+**status (type: string)**
+
+Request status. Returns `COMPLETED` on success, `FAILED` on error.
+
+**output (type: object)**
+
+The generation result containing the image URL and cost.
+
+**output.image\_url (type: string)**
+
+URL of the generated image. This URL expires after 7 days.
+
+**output.cost (type: float)**
+
+Cost of the generation in USD.
+
+```json 200
+{
+  "id": "sync-a1b2c3d4-e5f6-7890-abcd-ef1234567890-u1",
+  "status": "COMPLETED",
+  "delayTime": 10,
+  "executionTime": 1245,
+  "output": {
+    "image_url": "https://image.runpod.ai/abc123/output.png",
+    "cost": 0.005
+  }
+}
+```
+
+> **Warning**
+>
+> Image URLs expire after 7 days. Download and store generated images immediately if you need to keep them.
+
+## Cost calculation
+
+P-Image T2I charges $0.005 per image generated.

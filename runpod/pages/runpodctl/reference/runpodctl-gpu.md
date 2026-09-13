@@ -1,0 +1,72 @@
+> Commit-pinned source for Runpod main: [runpodctl/reference/runpodctl-gpu.mdx](https://docs.runpod.io/runpodctl/reference/runpodctl-gpu)
+
+# gpu
+
+Use runpodctl to list available GPU types, include unavailable options, and review hardware specifications from the command line.
+
+List available GPU types and their specifications.
+
+```bash Command
+runpodctl gpu <subcommand> [flags]
+```
+
+## Subcommands
+
+### List available GPUs
+
+List GPUs that are currently available:
+
+```bash
+runpodctl gpu list
+```
+
+Include unavailable GPUs in the list:
+
+```bash
+runpodctl gpu list --include-unavailable
+```
+
+#### List flags
+
+**--include-unavailable (type: bool)**
+
+Include GPUs that are currently unavailable.
+
+## Example output
+
+```json
+[
+  {
+    "available": true,
+    "communityCloud": true,
+    "displayName": "RTX 4090",
+    "gpuId": "NVIDIA GeForce RTX 4090",
+    "memoryInGb": 24,
+    "secureCloud": true,
+    "stockStatus": "High"
+  },
+  {
+    "available": true,
+    "communityCloud": true,
+    "displayName": "A100 PCIe",
+    "gpuId": "NVIDIA A100 80GB PCIe",
+    "memoryInGb": 80,
+    "secureCloud": true,
+    "stockStatus": "High"
+  }
+]
+```
+
+## Using GPU IDs
+
+When creating Pods or Serverless endpoints, use the GPU ID from the list with the `--gpu-id` flag:
+
+```bash
+runpodctl pod create --template-id runpod-torch-v21 --gpu-id "NVIDIA RTX 4090"
+```
+
+## Related commands
+
+- [`runpodctl pod create`](https://docs.runpod.io/runpodctl/reference/runpodctl-pod)
+- [`runpodctl serverless create`](https://docs.runpod.io/runpodctl/reference/runpodctl-serverless)
+- [`runpodctl datacenter list`](https://docs.runpod.io/runpodctl/reference/runpodctl-datacenter)

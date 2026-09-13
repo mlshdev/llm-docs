@@ -1,0 +1,189 @@
+> Commit-pinned source for Vast.ai main: [linux-virtual-desktop.mdx](https://docs.vast.ai/linux-virtual-desktop)
+
+# Linux Virtual Desktop
+
+# Guide: Linux Virtual Desktop on Vast.ai
+
+This guide will help you set up and use a Linux Virtual Desktop environment on Vast.ai using the Ubuntu Desktop (VM) template.
+
+## Prerequisites
+
+- A Vast.ai account
+- [(Optional) Install TLS Certificate for Jupyter](https://docs.vast.ai/guides/instances/jupyter)&#x20;
+- [(Optional) SSH client installed on your local machine and SSH public key added the Keys section at cloud.vast.ai](https://docs.vast.ai/guides/instances/sshscp)&#x20;
+
+## Initial Setup
+
+### Creating Your Instance
+
+1. Navigate to the [Templates tab](https://cloud.vast.ai/templates/)&#x20;
+2. In the search bar at the top, type "Ubuntu Desktop (VM)" to find the template. Make sure you're searching across all templates and not only recommended templates.
+3. Select the template by clicking the play button
+4. Choose your preferred GPU from the search results. Try to find a GPU close to you if possible
+5. Click "Rent" to create your instance
+6. Go to Instances tab and wait for the blue button on the instance card to say "Open". It can take a good amount of time to load if the docker image isn't cached on the machine.
+
+### Accessing Your Instance
+
+After launching your instance, you have several ways to connect:
+
+- **Browser Access** (Recommended)
+  - Click the 'Open' button on your instance card to launch the Instance Portal
+  - Choose between two browser-based viewers:
+    - Selkies WebRTC: More responsive, better performance
+    - NoVNC: Alternative option if WebRTC isn't working well
+- **VNC Client**
+  - Connect using any VNC client
+  - Address: instance\_ip:5900
+  - Password: Your OPEN\_BUTTON\_TOKEN
+- **SSH Access**
+  - Connect via SSH using the command provided in the Vast.ai console
+  - For non-root access:&#x20;
+
+```linux Linux
+ssh -p mapped_port user@instance_ip
+```
+
+### First-Time Setup
+
+- Change the default password by executing the following command in Linux terminal and go along with rest of the prompts:
+
+```linux Linux
+#Default username: user
+#Default password: password
+passwd
+```
+
+- Configure TLS (Optional):
+  - [Install the 'Jupyter' certificate](https://docs.vast.ai/guides/instances/jupyter) following the instance setup guide&#x20;
+  - This eliminates certificate warnings in your browser
+
+## Features and Capabilities
+
+### Pre-installed Software
+
+The environment comes with several applications ready to use:
+
+- **Web Browsers**
+  - Firefox
+  - Chrome
+- **Development Tools**
+  - Docker (pre-configured for non-root use)
+  - Terminal emulator
+  - Common development utilities
+- **Creative Software**
+  - Blender (3D creation suite)
+  - Wine (Windows application compatibility layer)
+- **Gaming Support**
+  - Steam (with Proton compatibility for Windows games)
+  - Sunshine streaming server
+
+### Remote Desktop Options
+
+### Selkies WebRTC (Recommended)
+
+- Access via port 6100
+- Best performance for most users
+- Hardware-accelerated graphics
+- Audio support
+
+### NoVNC
+
+- Access via port 6200
+- Backup option if WebRTC isn't working
+- More compatible with different browsers
+
+### VNC Client
+
+- Traditional VNC connection
+- Use your preferred VNC client
+- Port: 5900
+
+### Advanced Features
+
+### Tailscale Integration
+
+1. [Install Tailscale](https://tailscale.com/kb/1347/installation) on your local device. Password is "password" if you haven't changed it.&#x20;
+2. On the instance, run: &#x20;
+
+```linux Linux
+sudo tailscale up
+```
+
+&#x20;Follow rest of the prompts to connect to your tailnet.
+
+### Game Streaming with Moonlight
+
+1. Set up Tailscale (required)
+2. Configure the pre-installed Sunshine server
+3. Connect using the Moonlight client on your local device
+
+### Cloudflare Tunnels
+
+- Create [secure tunnels](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/) without exposing ports and having to create a new instance
+- Manage via the Instance Portal
+- Perfect for temporary application sharing
+
+## Security Considerations
+
+### Port Management
+
+The following ports are exposed by default:
+
+- 22: SSH
+- 1111: Instance Portal
+- 3478: TURN Server
+- 5900: VNC Server
+- 6100: Selkies WebRTC
+- 6200: NoVNC
+- 741641: Tailscale
+
+Consider:
+
+- Using Tailscale for secure access
+- Creating Cloudflare tunnels for HTTP access
+- Closing unnecessary ports
+
+### Authentication
+
+- Instance Portal&#x20;
+  - username: vastai
+  - password: Your OPEN\_BUTTON\_TOKEN
+- Change the default user password immediately
+- Use SSH keys for remote access
+
+## Troubleshooting
+
+- **Connection Issues**
+  - Try different connection methods (WebRTC, NoVNC, VNC)
+  - Check if ports are accessible
+  - Verify your authentication credentials
+- **Performance Problems**
+  - Ensure you're using hardware acceleration
+  - Try WebRTC for better performance
+  - Check your internet connection quality
+- **Application Problems**
+  - Check system logs: `/var/log/portal/`
+  - Restart Caddy if needed: `systemctl restart caddy`
+  - Verify application configurations in `/etc/portal.yaml`
+
+## Best Practices
+
+- **Security**
+  - Change default passwords immediately
+  - Use Tailscale or Cloudflare tunnels when possible
+  - Keep unnecessary ports closed
+- **Performance**
+  - Use WebRTC for best desktop performance
+  - Enable hardware acceleration when available
+  - Close unused applications
+- **Data Management**
+  - Keep important data backed up
+  - Use version control for development
+  - Monitor instance storage usage
+
+## Additional Resources
+
+- [Vast.ai Documentation](https://docs.vast.ai)
+- [Tailscale Documentation](https://tailscale.com/kb/)
+- [Cloudflare Tunnels](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/)

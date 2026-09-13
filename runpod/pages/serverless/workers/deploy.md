@@ -1,0 +1,106 @@
+> Commit-pinned source for Runpod main: [serverless/workers/deploy.mdx](https://docs.runpod.io/serverless/workers/deploy)
+
+# Deploy workers from Docker Hub
+
+Build, test, and deploy your worker image from Docker Hub. Review setup, configuration, deployment, and operations guidance for Runpod Serverless.
+
+After [creating a Dockerfile](https://docs.runpod.io/serverless/workers/create-dockerfile) for your worker, you can build the image, test it locally, and deploy it to a Serverless endpoint.
+
+## Requirements
+
+- A [Dockerfile](https://docs.runpod.io/serverless/workers/create-dockerfile) that packages your handler function.
+- [Docker](https://docs.docker.com/get-started/get-docker/) installed on your development machine.
+- A [Docker Hub](https://hub.docker.com/) account.
+
+## Build the Docker image
+
+From your terminal, navigate to your project directory and build the Docker image:
+
+```sh
+docker build --platform linux/amd64 \
+    -t DOCKER_USERNAME/WORKER_NAME:VERSION .
+```
+
+Replace `DOCKER_USERNAME` with your Docker Hub username, `WORKER_NAME` with a descriptive name for your worker, and `VERSION` with an appropriate version tag.
+
+> **Warning**
+>
+> The `--platform linux/amd64` flag is required to ensure compatibility with Runpod's infrastructure. This is especially important if you're building on an ARM-based system (like Apple Silicon Macs), as the default platform would be incompatible with Runpod's infrastructure.
+
+## Test the image locally
+
+Before pushing it to the registry, you should test your Docker image locally:
+
+```sh
+docker run -it DOCKER_USERNAME/WORKER_NAME:VERSION
+```
+
+If your handler is properly configured with a [test input](https://docs.runpod.io/serverless/workers/handler-functions#local-testing), you should see it process the test input and provide output.
+
+## Push the image to Docker Hub
+
+Make your image available to Runpod by pushing it to Docker Hub:
+
+```sh
+# Log in to Docker Hub
+docker login
+
+# Push the image
+docker push DOCKER_USERNAME/WORKER_NAME:VERSION
+```
+
+Once your image is in the Docker container registry, you can [create a Serverless endpoint](https://docs.runpod.io/serverless/endpoints/overview#create-an-endpoint) through the Runpod console.
+
+## Image versioning
+
+For production workloads, use SHA tags for absolute reproducibility:
+
+```sh
+# Get the SHA after pushing
+docker inspect --format='{{index .RepoDigests 0}}' DOCKER_USERNAME/WORKER_NAME:VERSION
+
+# Use the SHA when deploying
+# DOCKER_USERNAME/WORKER_NAME:VERSION@sha256:4d3d4b3c5a5c2b3a5a5c3b2a5a4d2b3a2b3c5a3b2a5d2b3a3b4c3d3b5c3d4a3
+```
+
+Versioning best practices:
+
+- **Avoid the `:latest` tag for production.** The `:latest` tag is mutable—it changes every time you push a new image without specifying a version. This creates several problems:
+  - **Unpredictable deployments**: You can't guarantee which version of your code is running, making it difficult to reproduce issues or roll back to a known-good state.
+  - **Debugging difficulties**: When problems occur, you won't know which exact image version caused them.
+  - **Caching conflicts**: Runpod caches images for faster worker startup. If you push a new `:latest` image, workers may continue using the cached version, leading to confusion about which code is actually running.
+- Use semantic versioning (e.g., `v1.0.0`, `v1.0.1`) for clarity and easy rollbacks.
+- Use SHA tags for absolute reproducibility in critical deployments.
+- Document the specific image version or SHA in your deployment documentation.
+- Keep images as small as possible for faster startup times.
+
+Runpod validates your image name when you create an endpoint, and a reference that doesn't resolve to a published image is rejected at creation time. For example, `runpod/pytorch:latest` is rejected because `:latest` is not a published tag for Runpod's base images. When you deploy a Runpod base image, specify a tag that actually exists. You can browse the available tags for each image on [Docker Hub](https://hub.docker.com/u/runpod). For your own worker images, use a specific version or SHA tag as described above rather than `:latest`.
+
+## Deploy an endpoint
+
+> **Tip**
+>
+> If your files are hosted on GitHub, you can [deploy your worker directly from a GitHub repository](https://docs.runpod.io/serverless/workers/github-integration) through the Runpod console.
+
+You can deploy your worker image directly from a Docker registry through the Runpod console:
+
+1. Navigate to the [Serverless section](https://www.console.runpod.io/serverless) of the Runpod console.
+2. Click **New Endpoint**.
+3. Click **Import from Docker Registry**.
+4. In the **Container Image** field, enter your Docker image URL (e.g., `docker.io/yourusername/worker-name:v1.0.0`), then click **Next**.
+5. Configure your endpoint settings:
+   - Enter an **Endpoint Name**.
+   - Choose your **Endpoint Type**: select **Queue** for traditional queue-based processing or **Load Balancer** for direct HTTP access (see [Load balancing endpoints](https://docs.runpod.io/serverless/load-balancing/overview) for details).
+   - Under **GPU Configuration**, select the appropriate GPU types for your workload.
+   - Configure [other settings](https://docs.runpod.io/serverless/endpoints/endpoint-configurations) as needed (active/max workers, timeouts, environment variables).
+6. Click **Deploy Endpoint** to deploy your worker.
+
+## Troubleshoot deployment issues
+
+If your worker fails to start or process requests:
+
+1. Check the [logs](https://docs.runpod.io/serverless/development/logs) in the Runpod console for error messages.
+2. Verify your handler function works correctly in [local testing](https://docs.runpod.io/serverless/development/local-testing).
+3. Ensure all dependencies are properly installed in the [Docker image](https://docs.runpod.io/serverless/workers/create-dockerfile).
+4. Check that your Docker image is compatible with the selected GPU type.
+5. Verify your [input format](https://docs.runpod.io/serverless/endpoints/send-requests) matches what your handler expects.

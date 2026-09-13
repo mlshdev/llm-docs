@@ -98,6 +98,7 @@ const calloutTitles = new Map([
   ["caution", "Caution"],
   ["danger", "Danger"],
   ["error", "Error"],
+  ["important", "Important"],
   ["info", "Note"],
   ["note", "Note"],
   ["success", "Success"],
@@ -387,6 +388,32 @@ function rewriteJsx(
     return children.map((child) =>
       child.type === "list" ? { ...child, ordered: true } : child,
     );
+  }
+  // A file tree is a nested list of names: its entries already grouped
+  // themselves into one, so the wrapper only has to hand that list on.
+  if (name === "Tree") {
+    return children;
+  }
+  if (name === "Tree.Folder" || name === "Tree.File") {
+    const entry = requiredString(
+      props.name,
+      `${name}.name`,
+      context.sourcePath,
+    );
+    const comment = staticString(props.comment);
+    return [
+      {
+        type: "listItem",
+        spread: false,
+        children: [
+          paragraph([
+            { type: "inlineCode", value: entry },
+            ...(comment ? [text(` — ${comment}`)] : []),
+          ]),
+          ...children,
+        ],
+      },
+    ];
   }
   if (name === "GithubCodeBlock") {
     const url = requiredString(

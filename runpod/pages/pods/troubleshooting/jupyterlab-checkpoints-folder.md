@@ -1,0 +1,50 @@
+> Commit-pinned source for Runpod main: [pods/troubleshooting/jupyterlab-checkpoints-folder.mdx](https://docs.runpod.io/pods/troubleshooting/jupyterlab-checkpoints-folder)
+
+# JupyterLab checkpoints folder access
+
+Access folders named checkpoints in JupyterLab by renaming them, moving files through the interface, or using terminal commands.
+
+If you're unable to open a folder named "checkpoints" in JupyterLab, this is a known issue where JupyterLab treats "checkpoints" as a reserved keyword.
+
+## The issue
+
+JupyterLab cannot open any directory named exactly "checkpoints". When you try to click on it, nothing happens because the system triggers its internal `listCheckpoints` function instead of opening the directory. This commonly affects ML model directories and ComfyUI installations.
+
+## Solutions
+
+### Option 1: Temporarily rename via terminal
+
+Access the terminal in JupyterLab or through SSH and rename the folder:
+
+```bash Rename to access
+# Rename to make it accessible
+mv checkpoints checkpoint
+
+# After working with the files, rename back
+mv checkpoint checkpoints
+```
+
+The `mv` command only renames the folder, it doesn't delete any data.
+
+### Option 2: Drag and drop method
+
+Download your files to a different directory, then use JupyterLab's interface to drag and drop files into the checkpoints folder. The folder won't open, but it will accept dropped files.
+
+### Option 3: Use the terminal for file operations
+
+Work with the checkpoints folder entirely through the terminal:
+
+```bash Access checkpoints via terminal
+# List contents
+ls -la checkpoints/
+
+# Copy files in
+cp /path/to/model.safetensors checkpoints/
+
+# Move files in
+mv ~/downloaded-model.ckpt checkpoints/
+```
+
+## Related information
+
+This issue has been reported in multiple GitHub issues and affects both JupyterLab and classic Jupyter Notebook. The folder name "checkpoints" conflicts with Jupyter's internal checkpoint system for notebook files.

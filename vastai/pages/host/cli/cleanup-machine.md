@@ -1,0 +1,52 @@
+> Commit-pinned source for Vast.ai main: [host/cli/cleanup-machine.mdx](https://docs.vast.ai/host/cli/cleanup-machine)
+
+# vastai cleanup machine
+
+Host command
+
+Remove all expired storage instances from the machine, freeing up space
+
+> **Note**
+>
+> This is a&#x20;
+>
+> **host**
+>
+> &#x20;command, used for managing machines you are renting out on Vast.ai.
+
+## Usage
+
+```bash
+vastai cleanup machine ID [options]
+```
+
+## Arguments
+
+**Property (type: integer; required)**
+
+id of machine to cleanup
+
+## Description
+
+Instances expire on their end date. Expired instances still pay storage fees, but can not start.
+Since hosts are still paid storage fees for expired instances, we do not auto delete them.
+Instead you can use this CLI/API function to delete all expired storage instances for a machine.
+This is useful if you are running low on storage, want to do maintenance, or are subsidizing storage, etc.
+
+## Examples
+
+```bash
+vastai cleanup machine <ID>
+```
+
+## Global Options
+
+The following options are available for all commands:
+
+| Option          | Description                                           |
+| --------------- | ----------------------------------------------------- |
+| `--url URL`     | Server REST API URL                                   |
+| `--retry N`     | Retry limit                                           |
+| `--raw`         | Output machine-readable JSON                          |
+| `--explain`     | Verbose explanation of API calls                      |
+| `--api-key KEY` | API key (defaults to `~/.config/vastai/vast_api_key`) |

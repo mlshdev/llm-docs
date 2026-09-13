@@ -1,0 +1,252 @@
+> Commit-pinned source for Runpod main: [serverless/development/environment-variables.mdx](https://docs.runpod.io/serverless/development/environment-variables)
+
+# Environment variables
+
+Configure your Serverless endpoints with environment variables. Review configuration and operations guidance for Runpod Serverless.
+
+Environment variables let you configure your endpoints without hardcoding credentials or settings in your code. They're ideal for managing API keys, service URLs, feature flags, and other configuration that changes between development and production.
+
+## How environment variables work
+
+Environment variables are set in the Runpod console and are available to your handler at runtime through `os.environ`. Your handler can read these variables to configure its behavior.
+
+## Set environment variables
+
+You can set environment variables in the Runpod console when [creating or editing your endpoint](https://docs.runpod.io/serverless/endpoints/overview):
+
+1. Navigate to your endpoint in the [Runpod console](https://console.runpod.io/serverless).
+2. Click on the **Settings** tab.
+3. Scroll to the **Environment Variables** section.
+4. Add your variables as key-value pairs.
+5. Click **Save** to apply the changes.
+
+These environment variables will be available to all workers running on your endpoint.
+
+### Access environment variables in your handler
+
+You can access environment variables in your handler function at runtime using `os.environ.get("VARIABLE_NAME")`. For example:
+
+```python title="handler.py"
+import os
+import runpod
+
+def handler(job):
+    # Read environment variables
+    api_key = os.environ.get("API_KEY")
+    service_url = os.environ.get("SERVICE_URL", "https://default-url.com")
+    
+    # Use the configuration
+    result = call_external_service(service_url, api_key)
+    return {"output": result}
+
+runpod.serverless.start({"handler": handler})
+```
+
+## Build-time vs runtime variables
+
+There are two types of environment variables:
+
+### Build-time variables
+
+Build-time variables are set in your Dockerfile using the `ENV` instruction. These are baked into your Docker image during the build:
+
+```dockerfile title="Dockerfile"
+FROM runpod/base:0.4.0-cuda11.8.0
+
+# Build-time environment variables
+ENV MODEL_NAME="llama-2-7b"
+ENV DEFAULT_TEMPERATURE="0.7"
+
+COPY handler.py /handler.py
+CMD ["python", "-u", "/handler.py"]
+```
+
+Build-time variables are useful for setting default configuration values, values that rarely change, and non-sensitive information.
+
+### Runtime variables
+
+Runtime variables are set in the Runpod console and can be changed without rebuilding your image. These override build-time variables with the same name:
+
+Runtime variables are useful for:
+
+- API keys and secrets.
+- Environment-specific configuration (dev, staging, prod).
+- Values that change frequently.
+- Sensitive information that shouldn't be in your image.
+
+## Common use cases
+
+### API keys and secrets
+
+Store sensitive credentials as runtime environment variables:
+
+```python title="handler.py"
+import os
+import runpod
+import requests
+
+def handler(event):
+    # Read API keys from environment
+    openai_key = os.environ.get("OPENAI_API_KEY")
+    anthropic_key = os.environ.get("ANTHROPIC_API_KEY")
+    
+    # Use them in your code
+    if not openai_key:
+        return {"error": "OPENAI_API_KEY not configured"}
+    
+    # Your API call here
+    result = call_openai(openai_key, event["input"]["prompt"])
+    return {"output": result}
+
+runpod.serverless.start({"handler": handler})
+```
+
+> **Warning**
+>
+> Never hardcode API keys or secrets in your code. Always use environment variables to keep credentials secure.
+
+### S3 bucket configuration
+
+Configure S3 or S3-compatible storage for uploading results:
+
+```python title="handler.py"
+import os
+import runpod
+from runpod.serverless.utils import rp_upload
+
+def handler(event):
+    # S3 credentials are read from environment variables:
+    # - BUCKET_ENDPOINT_URL
+    # - BUCKET_ACCESS_KEY_ID
+    # - BUCKET_SECRET_ACCESS_KEY
+    
+    # Process your input
+    result_image_path = generate_image(event["input"]["prompt"])
+    
+    # Upload to S3
+    image_url = rp_upload.upload_image(event["id"], result_image_path)
+    
+    return {"output": {"image_url": image_url}}
+
+runpod.serverless.start({"handler": handler})
+```
+
+Set these variables in the Runpod console:
+
+- `BUCKET_ENDPOINT_URL`: Your bucket endpoint (e.g., `https://your-bucket.s3.us-west-2.amazonaws.com`)
+- `BUCKET_ACCESS_KEY_ID`: Your access key ID
+- `BUCKET_SECRET_ACCESS_KEY`: Your secret access key
+
+> **Note**
+>
+> The `BUCKET_ENDPOINT_URL` should include your bucket name in the URL.
+
+### Feature flags
+
+Use environment variables to enable or disable features:
+
+```python title="handler.py"
+import os
+import runpod
+
+def handler(event):
+    # Read feature flags
+    enable_caching = os.environ.get("ENABLE_CACHING", "false").lower() == "true"
+    enable_logging = os.environ.get("ENABLE_LOGGING", "true").lower() == "true"
+    
+    if enable_logging:
+        print(f"Processing request: {event['id']}")
+    
+    # Your processing logic
+    result = process_input(event["input"], use_cache=enable_caching)
+    
+    return {"output": result}
+
+runpod.serverless.start({"handler": handler})
+```
+
+### Model configuration
+
+Configure model parameters without changing code:
+
+```python title="handler.py"
+import os
+import runpod
+
+def handler(event):
+    # Read model configuration from environment
+    model_name = os.environ.get("MODEL_NAME", "default-model")
+    max_tokens = int(os.environ.get("MAX_TOKENS", "1024"))
+    temperature = float(os.environ.get("TEMPERATURE", "0.7"))
+    
+    # Use configuration in your model
+    result = generate_text(
+        model=model_name,
+        prompt=event["input"]["prompt"],
+        max_tokens=max_tokens,
+        temperature=temperature
+    )
+    
+    return {"output": result}
+
+runpod.serverless.start({"handler": handler})
+```
+
+## Best practices
+
+### Use defaults
+
+Always provide default values for non-critical environment variables:
+
+```python title="handler.py"
+# Good: Provides a default
+service_url = os.environ.get("SERVICE_URL", "https://api.example.com")
+
+# Good: Fails explicitly if missing
+api_key = os.environ.get("API_KEY")
+if not api_key:
+    raise ValueError("API_KEY environment variable is required")
+```
+
+### Validate on startup
+
+Validate critical environment variables when your handler starts:
+
+```python title="handler.py"
+import os
+import runpod
+
+# Validate environment variables on startup
+required_vars = ["API_KEY", "SERVICE_URL"]
+missing_vars = [var for var in required_vars if not os.environ.get(var)]
+
+if missing_vars:
+    raise ValueError(f"Missing required environment variables: {', '.join(missing_vars)}")
+
+def handler(event):
+    # Your handler logic here
+    pass
+
+runpod.serverless.start({"handler": handler})
+```
+
+### Document your variables
+
+Document the environment variables your handler expects in your README:
+
+```markdown README.md
+## Environment Variables
+
+| Variable | Required | Default | Description |
+|----------|----------|---------|-------------|
+| `API_KEY` | Yes | N/A | Your API key for the external service |
+| `SERVICE_URL` | No | `https://api.example.com` | The service endpoint URL |
+| `MAX_WORKERS` | No | `4` | Maximum number of concurrent workers |
+```
+
+### Separate secrets from config
+
+Use different approaches for secrets vs configuration:
+
+- **Secrets**: Only set as runtime variables in the Runpod console.
+- **Configuration**: Can use build-time defaults with runtime overrides.

@@ -1,0 +1,223 @@
+> Commit-pinned source for Vast.ai main: [sdk/python/quickstart.mdx](https://docs.vast.ai/sdk/python/quickstart)
+
+# SDK Hello World
+
+The Vast.ai SDK gives you programmatic access to the entire platform from Python, authentication, GPU search, instance lifecycle, templates, volumes, serverless endpoints, and more. Anything you can do in the web console, you can automate from a Python script.
+
+This guide walks through the core workflow: install the SDK, authenticate, search for a GPU, rent it, wait for it to boot, connect to it, copy data, and clean up. By the end you'll understand the method calls needed to manage instances without touching the web console.
+
+## Prerequisites
+
+- A Vast.ai account with credit (\~$0.01-0.05, depending on test instance run time)
+- Python 3 installed
+
+## 1. Install the SDK
+
+Install from PyPI:
+
+```bash
+pip install vastai
+```
+
+## 2. Authenticate
+
+Import the SDK and create a client with your API key. Generate an API key from the [Keys page](https://cloud.vast.ai/manage-keys/) by clicking **+New**. Copy the key, you'll only see it once.
+
+```python
+from vastai import VastAI
+
+vast = VastAI(api_key="YOUR_API_KEY")
+```
+
+If you've previously set a key via the CLI (`vastai set api-key`), the SDK reads it automatically from `~/.config/vastai/vast_api_key`, no need to pass it explicitly:
+
+```python
+vast = VastAI()
+```
+
+> **Tip**
+>
+> The console creates a full-access key by default. You can also create scoped keys with limited permissions using `vast.create_api_key()`, useful for CI/CD or shared tooling. See the [permissions guide](https://docs.vast.ai/sdk/python/permissions) for details.
+
+## 3. Verify Authentication
+
+Confirm your key works by fetching your account info:
+
+```python
+user = vast.show_user()
+print(user)
+```
+
+This returns your user ID, email, balance, and SSH key. If you see an authentication error, double-check your API key.
+
+## 4. Search for GPUs
+
+Find available machines using `search_offers`. This query returns on-demand RTX 4090s on verified machines with direct port access, sorted by deep learning performance per dollar:
+
+```python
+offers = vast.search_offers(
+    query="gpu_name=RTX_4090 num_gpus=1 verified=true direct_port_count>=1 rentable=true",
+    order="dlperf_usd-",
+    limit="5",
+)
+print(offers)
+```
+
+Each parameter in the query string controls a different filter:
+
+| Parameter              | Meaning                                                     |
+| ---------------------- | ----------------------------------------------------------- |
+| `gpu_name=RTX_4090`    | Filter to a specific GPU model                              |
+| `num_gpus=1`           | Exactly 1 GPU per instance                                  |
+| `verified=true`        | Only machines verified by Vast.ai (identity-checked hosts)  |
+| `direct_port_count>=1` | At least 1 directly accessible port (needed for direct SSH) |
+| `rentable=true`        | Only machines currently available to rent                   |
+| `order="dlperf_usd-"`  | Sort by DL performance per dollar, best value first         |
+
+Note the `id` of the offer you want, you'll use it in the next step. If no offers are returned, try relaxing your filters (e.g. a different GPU model or removing `direct_port_count`).
+
+> **Tip**
+>
+> Use `help(vast.search_offers)` for the full list of filter fields and options, or see the [search\_offers reference](https://docs.vast.ai/sdk/python/reference/search-offers).
+
+## 5. Create an Instance
+
+Rent the machine using `create_instance` with the offer ID from step 4:
+
+```python
+result = vast.create_instance(
+    id=OFFER_ID,
+    image="pytorch/pytorch:2.4.0-cuda12.4-cudnn9-runtime",
+    disk=20,
+    onstart_cmd="echo hello && nvidia-smi",
+    ssh=True,
+    direct=True,
+)
+print(result)
+```
+
+| Parameter               | Meaning                                          |
+| ----------------------- | ------------------------------------------------ |
+| `image`                 | Docker image to launch                           |
+| `disk`                  | Disk storage in GB                               |
+| `onstart_cmd`           | Command to run when the instance boots           |
+| `ssh=True, direct=True` | Direct SSH access (lower latency than proxy SSH) |
+
+The output includes the new instance ID:
+
+```json
+{"success": true, "new_contract": 12345678}
+```
+
+Save the `new_contract` value, this is your instance ID.
+
+> **Note**
+>
+> Storage charges begin at creation. GPU charges begin when the instance reaches the `running` state.
+
+## 6. Wait Until Ready
+
+The instance needs time to pull the Docker image and boot. Check the status:
+
+```python
+import time
+
+instance_id = result["new_contract"]
+
+while True:
+    info = vast.show_instance(id=instance_id)
+    status = info.get("actual_status")
+    print(f"Status: {status}")
+    if status == "running":
+        break
+    time.sleep(10)
+```
+
+The status progresses through these states:
+
+| Status    | Meaning                     |
+| --------- | --------------------------- |
+| `loading` | Docker image is downloading |
+| `running` | Ready to use                |
+
+Boot time is typically 1-5 minutes depending on the Docker image size.
+
+> **Warning**
+>
+> Always handle non-happy-path statuses in your poll loop. If `actual_status` becomes `"exited"` (container crashed), `"unknown"` (no heartbeat from host), or `"offline"` (host disconnected), it will never reach `"running"`. Without a timeout or error check, your script will loop forever while the instance continues accruing disk charges. Destroy the instance and retry with a different offer if you see these states.
+
+## 7. Connect via SSH
+
+Once the instance is running, get the SSH connection details:
+
+```python
+ssh_url = vast.ssh_url(id=instance_id)
+print(ssh_url)
+```
+
+Then connect from your terminal:
+
+```bash
+ssh root@SSH_HOST -p SSH_PORT
+```
+
+## 8. Copy Data
+
+Use `copy` to transfer files between your local machine and the instance:
+
+```python
+# Upload to instance
+vast.copy(src="local:./data/", dst=f"{instance_id}:/workspace/data/")
+
+# Download from instance
+vast.copy(src=f"{instance_id}:/workspace/results/", dst="local:./results/")
+```
+
+You can also copy between instances or to/from cloud storage:
+
+```python
+# Instance to instance
+vast.copy(src=f"{instance_a}:/workspace/", dst=f"{instance_b}:/workspace/")
+
+# Cloud storage (requires a configured cloud connection)
+vast.cloud_copy(src=f"s3.CONNECTION_ID:/bucket/data/", dst=f"{instance_id}:/workspace/")
+```
+
+For cloud storage syncing and instance-to-instance transfers, see the [data movement guide](https://docs.vast.ai/guides/instances/storage/data-movement).
+
+## 9. Clean Up
+
+When you're done, destroy the instance to stop all billing.
+
+Alternatively, to pause an instance temporarily instead of destroying it, you can **stop** it. Stopping halts compute billing but disk storage charges continue.
+
+**Destroy** (removes everything):
+
+```python
+vast.destroy_instance(id=instance_id)
+```
+
+**Stop** (pauses compute, disk charges continue):
+
+```python
+vast.stop_instance(id=instance_id)
+```
+
+## Getting Help
+
+Use Python's built-in `help()` to view detailed documentation for any SDK method:
+
+```python
+help(vast.search_offers)
+```
+
+Your IDE will also surface type hints and available methods automatically.
+
+## Next Steps
+
+You've now completed the full instance lifecycle through the SDK: installation, authentication, search, creation, polling, data transfer, and teardown. From here:
+
+- **SSH setup**, See the [SSH guide](https://docs.vast.ai/guides/instances/connect/ssh) for key configuration and advanced connection options.
+- **Full method reference**, See the [SDK reference](https://docs.vast.ai/sdk/python/reference/vastai) for every available method.
+- **Use templates**, Avoid repeating image and config parameters on every create call. See the [templates guide](https://docs.vast.ai/sdk/python/templates) for creating and managing templates.
+- **Permissions**, Create scoped API keys for CI/CD or shared tooling. See the [permissions guide](https://docs.vast.ai/sdk/python/permissions).

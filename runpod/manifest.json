@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "project": "runpod",
+  "title": "Runpod",
+  "homepage": "https://docs.runpod.io/",
+  "repository": "runpod/docs",
+  "tag": "main",
+  "branch": "main",
+  "sourceCommittedAt": "2026-09-11T18:27:44Z",
+  "sourceCommit": "361c96910f23cbab97220f94f7a751b12e4b09ea",
+  "documentCount": 324,
+  "notes": [
+    "Pages follow the navigation declared in docs.json at the pinned commit; snippets are inlined into the pages that import them rather than published separately.",
+    "API reference pages are rendered from the OpenAPI specification in the directory the page lives under, since the upstream page carries no prose of its own.",
+    "Glossary tooltips are replaced by the term they label, and static MDX cards, tabs, accordions, steps, file trees, callouts, and parameter fields are normalized to Markdown without executing JavaScript.",
+    "Published page links resolve to https://docs.runpod.io; source assets point at the pinned commit."
+  ]
+}

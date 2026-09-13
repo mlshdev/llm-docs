@@ -1,0 +1,41 @@
+> Commit-pinned source for Runpod main: [serverless/storage/overview.mdx](https://docs.runpod.io/serverless/storage/overview)
+
+# Storage options
+
+Storage options for Serverless workers: container disks, network volumes, and S3-compatible storage.
+
+## Storage types
+
+### Container disk
+
+Temporary storage that exists only while a worker is running. Data is lost when the worker stops or scales down. Fast read/write speeds since storage is locally attached. Cost is included in the worker's running cost.
+
+All data saved by a worker's [handler function](https://docs.runpod.io/serverless/workers/handler-functions) is stored in the container disk by default. To persist data beyond the current worker session, use a network volume or S3-compatible storage.
+
+### Network volume
+
+Persistent storage that can be attached to multiple workers. Ideal for sharing datasets, storing large models, and preserving data beyond individual worker sessions. Available in Standard and [High-Performance](https://docs.runpod.io/storage/high-performance-storage) tiers.
+
+See [Network volumes for Serverless](https://docs.runpod.io/storage/network-volumes#network-volumes-for-serverless).
+
+### S3-compatible storage
+
+Connect to external object storage (AWS S3, MinIO, Backblaze B2, DigitalOcean Spaces, etc.) using your own credentials. Useful for large files exceeding API payload limits. Storage exists outside Runpod infrastructure with billing based on your provider.
+
+See [S3-compatible storage](https://docs.runpod.io/serverless/endpoints/send-requests#s3-compatible-storage).
+
+## Comparison
+
+| Feature         | Container Disk           | Network Volume               | S3-Compatible Storage        |
+| --------------- | ------------------------ | ---------------------------- | ---------------------------- |
+| **Persistence** | Temporary (lost on stop) | Permanent                    | Permanent (external)         |
+| **Sharing**     | Not shareable            | Multi-worker                 | Via S3 credentials           |
+| **Speed**       | Fastest (local)          | Fast (networked NVMe)        | Varies by provider           |
+| **Cost**        | Included in worker cost  | $0.05-$0.07/GB/month         | Varies by provider           |
+| **Best for**    | Temporary processing     | Multi-worker sharing, models | Large files, external access |
+
+## Behavior notes
+
+- **Data isolation**: Workers don't share data unless a network volume is attached.
+- **Caching**: Docker images cache locally on container disk, but loading large models into GPU memory still impacts cold start times. See [Reducing worker startup times](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#reducing-worker-startup-times).
+- **Location constraints**: Network volumes constrain deployments to the volume's data center, which may impact GPU availability.

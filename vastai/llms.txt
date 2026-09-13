@@ -1,0 +1,631 @@
+# Vast.ai main
+
+> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `175a318c27750ea64da94f043dda39ec5cb26259`.
+
+- [Full documentation](llms-full.txt): Complete normalized corpus for Vast.ai main.
+- [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
+- Pages follow the navigation declared in docs.json at the pinned commit; snippets are inlined into the pages that import them rather than published separately.
+- Endpoint pages are generated from api-reference/openapi.yaml, which is how the site itself publishes them: the navigation group naming the specification lists no pages.
+- Static MDX cards, tabs, accordions, steps, callouts, and parameter fields are normalized to Markdown without executing JavaScript.
+- Published page links resolve to https://docs.vast.ai; source assets point at the pinned commit.
+- Quarantined sources (1): upstream pages using constructs this generator cannot convert yet are omitted and listed in `manifest.json`.
+
+## Getting started
+
+- [Welcome](pages/guides/get-started/index.md): Source `guides/get-started/index.mdx`.
+- [Sign up and rent your first GPU](pages/guides/get-started/quickstart.md): Source `guides/get-started/quickstart.mdx`.
+- [Concepts](pages/guides/concepts.md): Source `guides/concepts.mdx`.
+- [Manage API keys](pages/guides/reference/api-keys.md): Source `guides/reference/api-keys.mdx`.
+- [Quick Start](pages/guides/templates/quickstart.md): Source `guides/templates/quickstart.mdx`.
+- [Using Vast.ai with Agents](pages/guides/get-started/agents.md): Source `guides/get-started/agents.mdx`.
+- [Teams Quickstart](pages/guides/teams/teams-quickstart.md): Source `guides/teams/teams-quickstart.mdx`.
+
+## Instances
+
+- [Overview](pages/guides/instances/overview.md): Source `guides/instances/overview.mdx`.
+- [Pricing](pages/guides/instances/pricing.md): Source `guides/instances/pricing.mdx`.
+- [Choosing Instances Overview](pages/guides/instances/choosing/overview.md): Source `guides/instances/choosing/overview.mdx`.
+- [Finding & Renting Instances](pages/guides/instances/choosing/find-and-rent.md): Source `guides/instances/choosing/find-and-rent.mdx`.
+- [Instance Types](pages/guides/instances/choosing/instance-types.md): Source `guides/instances/choosing/instance-types.mdx`.
+- [Choosing a Template](pages/guides/instances/choosing/templates.md): Source `guides/instances/choosing/templates.mdx`.
+- [Reserved Instances](pages/guides/instances/choosing/reserved-instances.md): Source `guides/instances/choosing/reserved-instances.mdx`.
+- [Overview](pages/guides/instances/connect/overview.md): Source `guides/instances/connect/overview.mdx`.
+- [SSH Connection](pages/guides/instances/connect/ssh.md): Source `guides/instances/connect/ssh.mdx`.
+- [Jupyter](pages/guides/instances/connect/jupyter.md): Source `guides/instances/connect/jupyter.mdx`.
+- [Windows SSH Guide](pages/guides/instances/connect/windows-guide.md): Source `guides/instances/connect/windows-guide.mdx`.
+- [Instance Portal](pages/guides/instances/connect/instance-portal.md): Source `guides/instances/connect/instance-portal.mdx`.
+- [Networking & Ports](pages/guides/instances/connect/networking.md): Source `guides/instances/connect/networking.mdx`.
+- [Storage Types](pages/guides/instances/storage/types.md): Source `guides/instances/storage/types.mdx`.
+- [Volumes](pages/guides/instances/storage/volumes.md): Source `guides/instances/storage/volumes.mdx`.
+- [Data Movement](pages/guides/instances/storage/data-movement.md): Source `guides/instances/storage/data-movement.mdx`.
+- [Cloud Sync](pages/guides/instances/storage/cloud-sync.md): Source `guides/instances/storage/cloud-sync.mdx`.
+- [Scheduled Cloud Backups](pages/guides/instances/storage/cloud-backups.md): Source `guides/instances/storage/cloud-backups.mdx`.
+- [Managing Instances](pages/guides/instances/manage-instances.md): Source `guides/instances/manage-instances.mdx`.
+- [Docker Execution Environment](pages/guides/instances/docker-environment.md): Source `guides/instances/docker-environment.mdx`.
+- [Virtual Machines](pages/guides/instances/virtual-machines.md): Source `guides/instances/virtual-machines.mdx`.
+
+## Serverless
+
+- [Serverless](pages/guides/serverless/index.md): Source `guides/serverless/index.mdx`.
+- [Quickstart](pages/guides/serverless/quickstart.md): Source `guides/serverless/quickstart.mdx`.
+- [Setting Up Endpoints](pages/guides/serverless/setting-up-endpoints.md): Source `guides/serverless/setting-up-endpoints.mdx`.
+- [Architecture](pages/guides/serverless/architecture.md): Source `guides/serverless/architecture.mdx`.
+- [The PyWorker](pages/guides/serverless/overview.md): Source `guides/serverless/overview.mdx`.
+- [The SDK](pages/guides/serverless/sdk-overview.md): Source `guides/serverless/sdk-overview.mdx`.
+- [OpenAI API-compatible Interface](pages/guides/serverless/openai-compatible-api.md): Source `guides/serverless/openai-compatible-api.mdx`.
+- [Automated Performance Testing](pages/guides/serverless/automated-performance-testing.md): Source `guides/serverless/automated-performance-testing.mdx`.
+- [Deployments Overview](pages/guides/serverless/deployments/index.md): Source `guides/serverless/deployments/index.mdx`.
+- [Architecture Overview](pages/guides/serverless/deployments/architecture.md): Source `guides/serverless/deployments/architecture.mdx`.
+- [Configuring Deployments](pages/guides/serverless/deployments/configuration.md): Source `guides/serverless/deployments/configuration.mdx`.
+- [@remote Functions](pages/guides/serverless/deployments/remote-functions.md): Source `guides/serverless/deployments/remote-functions.mdx`.
+- [@context Classes](pages/guides/serverless/deployments/context.md): Source `guides/serverless/deployments/context.mdx`.
+- [Endpoint Parameters](pages/guides/serverless/serverless-parameters.md): Source `guides/serverless/serverless-parameters.mdx`.
+- [Managing Scale](pages/guides/serverless/managing-scale.md): Source `guides/serverless/managing-scale.mdx`.
+- [Workergroup Parameters](pages/guides/serverless/workergroup-parameters.md): Source `guides/serverless/workergroup-parameters.mdx`.
+- [Choosing GPUs for Your Workload](pages/guides/serverless/choosing-gpus.md): Source `guides/serverless/choosing-gpus.mdx`.
+- [Creating Custom PyWorkers](pages/guides/serverless/creating-new-pyworkers.md): Source `guides/serverless/creating-new-pyworkers.mdx`.
+- [Using Worker Sessions](pages/guides/serverless/sessions.md): Source `guides/serverless/sessions.mdx`.
+- [Worker States](pages/guides/serverless/worker-states.md): Source `guides/serverless/worker-states.mdx`.
+- [Zero Downtime Worker Update](pages/guides/serverless/zero-downtime-worker-update.md): Source `guides/serverless/zero-downtime-worker-update.mdx`.
+- [Endpoint and Worker Logs](pages/guides/serverless/logging.md): Source `guides/serverless/logging.mdx`.
+- [Pricing](pages/guides/serverless/pricing.md): Source `guides/serverless/pricing.mdx`.
+- [vLLM](pages/guides/serverless/vllm.md): Source `guides/serverless/vllm.mdx`.
+- [Text Generation Inference (TGI)](pages/guides/serverless/text-generation-inference-tgi.md): Source `guides/serverless/text-generation-inference-tgi.mdx`.
+- [Comfy UI](pages/guides/serverless/comfy-ui.md): Source `guides/serverless/comfy-ui.mdx`.
+- [ComfyUI Wan 2.2](pages/guides/serverless/comfyui-wan-2.2.md): Source `guides/serverless/comfyui-wan-2.2.mdx`.
+- [ComfyUI ACE Step](pages/guides/serverless/comfyui-acestep.md): Source `guides/serverless/comfyui-acestep.mdx`.
+
+## Serverless deployments
+
+- [Square Function](pages/guides/serverless/deployments/examples/square.md): Source `guides/serverless/deployments/examples/square.mdx`.
+- [MNIST Training & Inference](pages/guides/serverless/deployments/examples/train-mnist.md): Source `guides/serverless/deployments/examples/train-mnist.mdx`.
+- [vLLM Text Generation](pages/guides/serverless/deployments/examples/vllm.md): Source `guides/serverless/deployments/examples/vllm.mdx`.
+
+## Templates
+
+- [Templates](pages/guides/templates/introduction.md): Source `guides/templates/introduction.mdx`.
+- [Creating Templates](pages/guides/templates/creating-templates.md): Source `guides/templates/creating-templates.mdx`.
+- [Managing Templates](pages/guides/templates/managing-templates.md): Source `guides/templates/managing-templates.mdx`.
+- [Template Settings](pages/guides/templates/template-settings.md): Source `guides/templates/template-settings.mdx`.
+- [Advanced Setup](pages/guides/templates/advanced-setup.md): Source `guides/templates/advanced-setup.mdx`.
+- [Creating Templates for GROBID](pages/guides/templates/examples/grobid.md): Source `guides/templates/examples/grobid.mdx`.
+
+## Teams
+
+- [Teams Overview](pages/guides/teams/teams-overview.md): Source `guides/teams/teams-overview.mdx`.
+- [Managing Your Team](pages/guides/teams/managing-teams.md): Source `guides/teams/managing-teams.mdx`.
+- [Teams Roles](pages/guides/teams/teams-roles.md): Source `guides/teams/teams-roles.mdx`.
+- [Legacy Teams](pages/guides/teams/legacy-teams.md): Source `guides/teams/legacy-teams.mdx`.
+
+## Account & billing
+
+- [Pricing overview](pages/guides/pricing.md): Source `guides/pricing.mdx`.
+- [Account Settings](pages/guides/reference/account-settings.md): Source `guides/reference/account-settings.mdx`.
+- [Billing](pages/guides/reference/billing.md): Source `guides/reference/billing.mdx`.
+- [Notifications](pages/guides/reference/notifications.md): Source `guides/reference/notifications.mdx`.
+- [Notification Webhooks](pages/guides/reference/notification-webhooks.md): Source `guides/reference/notification-webhooks.mdx`.
+- [Keys](pages/guides/reference/keys.md): Source `guides/reference/keys.mdx`.
+- [Two-Factor Authentication](pages/guides/reference/two-factor-authentication.md): Source `guides/reference/two-factor-authentication.mdx`.
+- [Referral Program](pages/guides/reference/referral-program.md): Source `guides/reference/referral-program.mdx`.
+- [Troubleshooting](pages/guides/reference/troubleshooting.md): Source `guides/reference/troubleshooting.mdx`.
+
+## FAQ
+
+- [FAQ Overview](pages/guides/reference/faq/index.md): Source `guides/reference/faq/index.mdx`.
+- [General FAQ](pages/guides/reference/faq/general.md): Source `guides/reference/faq/general.mdx`.
+- [Instances FAQ](pages/guides/reference/faq/instances.md): Source `guides/reference/faq/instances.mdx`.
+- [Rental Types FAQ](pages/guides/reference/faq/rental-types.md): Source `guides/reference/faq/rental-types.mdx`.
+- [Jupyter & SSH FAQ](pages/guides/reference/faq/jupyter-ssh.md): Source `guides/reference/faq/jupyter-ssh.mdx`.
+- [Billing](pages/guides/reference/faq/billing.md): Source `guides/reference/faq/billing.mdx`.
+- [Security FAQ](pages/guides/reference/faq/security.md): Source `guides/reference/faq/security.mdx`.
+- [Technical FAQ](pages/guides/reference/faq/technical.md): Source `guides/reference/faq/technical.mdx`.
+- [Networking](pages/guides/reference/faq/networking.md): Source `guides/reference/faq/networking.mdx`.
+
+## CLI
+
+- [CLI Hello World](pages/cli/hello-world.md): Source `cli/hello-world.mdx`.
+- [CLI Authentication](pages/cli/authentication.md): Source `cli/authentication.mdx`.
+- [CLI Permissions](pages/cli/permissions.md): Source `cli/permissions.mdx`.
+- [CLI Rate Limits and Errors](pages/cli/rate-limits.md): Source `cli/rate-limits.mdx`.
+- [CLI Templates](pages/cli/templates.md): Source `cli/templates.mdx`.
+- [vastai create api-key](pages/cli/reference/create-api-key.md): Source `cli/reference/create-api-key.mdx`.
+- [vastai delete api-key](pages/cli/reference/delete-api-key.md): Source `cli/reference/delete-api-key.mdx`.
+- [vastai set api-key](pages/cli/reference/set-api-key.md): Source `cli/reference/set-api-key.mdx`.
+- [vastai show api-keys](pages/cli/reference/show-api-keys.md): Source `cli/reference/show-api-keys.mdx`.
+- [vastai create ssh-key](pages/cli/reference/create-ssh-key.md): Source `cli/reference/create-ssh-key.mdx`.
+- [vastai delete ssh-key](pages/cli/reference/delete-ssh-key.md): Source `cli/reference/delete-ssh-key.mdx`.
+- [vastai show ssh-keys](pages/cli/reference/show-ssh-keys.md): Source `cli/reference/show-ssh-keys.mdx`.
+- [vastai update ssh-key](pages/cli/reference/update-ssh-key.md): Source `cli/reference/update-ssh-key.mdx`.
+- [vastai create env-var](pages/cli/reference/create-env-var.md): Source `cli/reference/create-env-var.mdx`.
+- [vastai delete env-var](pages/cli/reference/delete-env-var.md): Source `cli/reference/delete-env-var.mdx`.
+- [vastai show env-vars](pages/cli/reference/show-env-vars.md): Source `cli/reference/show-env-vars.mdx`.
+- [vastai update env-var](pages/cli/reference/update-env-var.md): Source `cli/reference/update-env-var.mdx`.
+- [vastai show user](pages/cli/reference/show-user.md): Source `cli/reference/show-user.mdx`.
+- [vastai set user](pages/cli/reference/set-user.md): Source `cli/reference/set-user.mdx`.
+- [vastai create subaccount](pages/cli/reference/create-subaccount.md): Source `cli/reference/create-subaccount.mdx`.
+- [vastai show subaccounts](pages/cli/reference/show-subaccounts.md): Source `cli/reference/show-subaccounts.mdx`.
+- [vastai show connections](pages/cli/reference/show-connections.md): Source `cli/reference/show-connections.mdx`.
+- [vastai show ipaddrs](pages/cli/reference/show-ipaddrs.md): Source `cli/reference/show-ipaddrs.mdx`.
+- [vastai show audit-logs](pages/cli/reference/show-audit-logs.md): Source `cli/reference/show-audit-logs.mdx`.
+- [vastai show deposit](pages/cli/reference/show-deposit.md): Source `cli/reference/show-deposit.mdx`.
+- [vastai show earnings](pages/cli/reference/show-earnings.md): Source `cli/reference/show-earnings.mdx`.
+- [vastai show invoices-v1](pages/cli/reference/show-invoices-v1.md): Source `cli/reference/show-invoices-v1.mdx`.
+- [vastai transfer credit](pages/cli/reference/transfer-credit.md): Source `cli/reference/transfer-credit.mdx`.
+- [vastai reports](pages/cli/reference/reports.md): Source `cli/reference/reports.mdx`.
+- [vastai create instance](pages/cli/reference/create-instance.md): Source `cli/reference/create-instance.mdx`.
+- [vastai launch instance](pages/cli/reference/launch-instance.md): Source `cli/reference/launch-instance.mdx`.
+- [vastai start instance](pages/cli/reference/start-instance.md): Source `cli/reference/start-instance.mdx`.
+- [vastai start instances](pages/cli/reference/start-instances.md): Source `cli/reference/start-instances.mdx`.
+- [vastai stop instance](pages/cli/reference/stop-instance.md): Source `cli/reference/stop-instance.mdx`.
+- [vastai stop instances](pages/cli/reference/stop-instances.md): Source `cli/reference/stop-instances.mdx`.
+- [vastai reboot instance](pages/cli/reference/reboot-instance.md): Source `cli/reference/reboot-instance.mdx`.
+- [vastai recycle instance](pages/cli/reference/recycle-instance.md): Source `cli/reference/recycle-instance.mdx`.
+- [vastai destroy instance](pages/cli/reference/destroy-instance.md): Source `cli/reference/destroy-instance.mdx`.
+- [vastai destroy instances](pages/cli/reference/destroy-instances.md): Source `cli/reference/destroy-instances.mdx`.
+- [vastai label instance](pages/cli/reference/label-instance.md): Source `cli/reference/label-instance.mdx`.
+- [vastai prepay instance](pages/cli/reference/prepay-instance.md): Source `cli/reference/prepay-instance.mdx`.
+- [vastai update instance](pages/cli/reference/update-instance.md): Source `cli/reference/update-instance.mdx`.
+- [vastai change bid](pages/cli/reference/change-bid.md): Source `cli/reference/change-bid.mdx`.
+- [vastai show instance](pages/cli/reference/show-instance.md): Source `cli/reference/show-instance.mdx`.
+- [vastai show instances](pages/cli/reference/show-instances.md): Source `cli/reference/show-instances.mdx`.
+- [vastai show instances-v1](pages/cli/reference/show-instances-v1.md): Source `cli/reference/show-instances-v1.mdx`.
+- [vastai logs](pages/cli/reference/logs.md): Source `cli/reference/logs.mdx`.
+- [vastai execute](pages/cli/reference/execute.md): Source `cli/reference/execute.mdx`.
+- [vastai attach ssh](pages/cli/reference/attach-ssh.md): Source `cli/reference/attach-ssh.mdx`.
+- [vastai detach ssh](pages/cli/reference/detach-ssh.md): Source `cli/reference/detach-ssh.mdx`.
+- [vastai ssh-url](pages/cli/reference/ssh-url.md): Source `cli/reference/ssh-url.mdx`.
+- [vastai scp-url](pages/cli/reference/scp-url.md): Source `cli/reference/scp-url.mdx`.
+- [vastai copy](pages/cli/reference/copy.md): Source `cli/reference/copy.mdx`.
+- [vastai cloud copy](pages/cli/reference/cloud-copy.md): Source `cli/reference/cloud-copy.mdx`.
+- [vastai cancel copy](pages/cli/reference/cancel-copy.md): Source `cli/reference/cancel-copy.mdx`.
+- [vastai cancel sync](pages/cli/reference/cancel-sync.md): Source `cli/reference/cancel-sync.mdx`.
+- [vastai run benchmarks](pages/cli/reference/run-benchmarks.md): Source `cli/reference/run-benchmarks.mdx`.
+- [vastai search offers](pages/cli/reference/search-offers.md): Source `cli/reference/search-offers.mdx`.
+- [vastai search benchmarks](pages/cli/reference/search-benchmarks.md): Source `cli/reference/search-benchmarks.mdx`.
+- [vastai search instances](pages/cli/reference/search-instances.md): Source `cli/reference/search-instances.mdx`.
+- [vastai search invoices](pages/cli/reference/search-invoices.md): Source `cli/reference/search-invoices.mdx`.
+- [vastai search templates](pages/cli/reference/search-templates.md): Source `cli/reference/search-templates.mdx`.
+- [vastai search volumes](pages/cli/reference/search-volumes.md): Source `cli/reference/search-volumes.mdx`.
+- [vastai create template](pages/cli/reference/create-template.md): Source `cli/reference/create-template.mdx`.
+- [vastai update template](pages/cli/reference/update-template.md): Source `cli/reference/update-template.mdx`.
+- [vastai delete template](pages/cli/reference/delete-template.md): Source `cli/reference/delete-template.mdx`.
+- [vastai create endpoint](pages/cli/reference/create-endpoint.md): Source `cli/reference/create-endpoint.mdx`.
+- [vastai update endpoint](pages/cli/reference/update-endpoint.md): Source `cli/reference/update-endpoint.mdx`.
+- [vastai delete endpoint](pages/cli/reference/delete-endpoint.md): Source `cli/reference/delete-endpoint.mdx`.
+- [vastai show endpoints](pages/cli/reference/show-endpoints.md): Source `cli/reference/show-endpoints.mdx`.
+- [vastai create workergroup](pages/cli/reference/create-workergroup.md): Source `cli/reference/create-workergroup.mdx`.
+- [vastai update workergroup](pages/cli/reference/update-workergroup.md): Source `cli/reference/update-workergroup.mdx`.
+- [vastai update workers](pages/cli/reference/update-workers.md): Source `cli/reference/update-workers.mdx`.
+- [vastai delete workergroup](pages/cli/reference/delete-workergroup.md): Source `cli/reference/delete-workergroup.mdx`.
+- [vastai show workergroups](pages/cli/reference/show-workergroups.md): Source `cli/reference/show-workergroups.mdx`.
+- [vastai get endpt-logs](pages/cli/reference/get-endpt-logs.md): Source `cli/reference/get-endpt-logs.mdx`.
+- [vastai get wrkgrp-logs](pages/cli/reference/get-wrkgrp-logs.md): Source `cli/reference/get-wrkgrp-logs.mdx`.
+- [vastai show scheduled-jobs](pages/cli/reference/show-scheduled-jobs.md): Source `cli/reference/show-scheduled-jobs.mdx`.
+- [vastai delete scheduled-job](pages/cli/reference/delete-scheduled-job.md): Source `cli/reference/delete-scheduled-job.mdx`.
+- [vastai delete deployment](pages/cli/reference/delete-deployment.md): Source `cli/reference/delete-deployment.mdx`.
+- [vastai show deployment](pages/cli/reference/show-deployment.md): Source `cli/reference/show-deployment.mdx`.
+- [vastai show deployment-versions](pages/cli/reference/show-deployment-versions.md): Source `cli/reference/show-deployment-versions.mdx`.
+- [vastai show deployments](pages/cli/reference/show-deployments.md): Source `cli/reference/show-deployments.mdx`.
+- [vastai create team](pages/cli/reference/create-team.md): Source `cli/reference/create-team.mdx`.
+- [vastai destroy team](pages/cli/reference/destroy-team.md): Source `cli/reference/destroy-team.mdx`.
+- [vastai invite member](pages/cli/reference/invite-member.md): Source `cli/reference/invite-member.mdx`.
+- [vastai remove member](pages/cli/reference/remove-member.md): Source `cli/reference/remove-member.mdx`.
+- [vastai show members](pages/cli/reference/show-members.md): Source `cli/reference/show-members.mdx`.
+- [vastai create team-role](pages/cli/reference/create-team-role.md): Source `cli/reference/create-team-role.mdx`.
+- [vastai show team-role](pages/cli/reference/show-team-role.md): Source `cli/reference/show-team-role.mdx`.
+- [vastai show team-roles](pages/cli/reference/show-team-roles.md): Source `cli/reference/show-team-roles.mdx`.
+- [vastai update team-role](pages/cli/reference/update-team-role.md): Source `cli/reference/update-team-role.mdx`.
+- [vastai remove team-role](pages/cli/reference/remove-team-role.md): Source `cli/reference/remove-team-role.mdx`.
+- [vastai create volume](pages/cli/reference/create-volume.md): Source `cli/reference/create-volume.mdx`.
+- [vastai clone volume](pages/cli/reference/clone-volume.md): Source `cli/reference/clone-volume.mdx`.
+- [vastai list volume](pages/cli/reference/list-volume.md): Source `cli/reference/list-volume.mdx`.
+- [vastai list volumes](pages/cli/reference/list-volumes.md): Source `cli/reference/list-volumes.mdx`.
+- [vastai show volumes](pages/cli/reference/show-volumes.md): Source `cli/reference/show-volumes.mdx`.
+- [vastai unlist volume](pages/cli/reference/unlist-volume.md): Source `cli/reference/unlist-volume.mdx`.
+- [vastai delete volume](pages/cli/reference/delete-volume.md): Source `cli/reference/delete-volume.mdx`.
+- [vastai cleanup machine](pages/cli/reference/cleanup-machine.md): Source `cli/reference/cleanup-machine.mdx`.
+- [vastai delete machine](pages/cli/reference/delete-machine.md): Source `cli/reference/delete-machine.mdx`.
+- [vastai list machine](pages/cli/reference/list-machine.md): Source `cli/reference/list-machine.mdx`.
+- [vastai list machines](pages/cli/reference/list-machines.md): Source `cli/reference/list-machines.mdx`.
+- [vastai show machine](pages/cli/reference/show-machine.md): Source `cli/reference/show-machine.mdx`.
+- [vastai show machines](pages/cli/reference/show-machines.md): Source `cli/reference/show-machines.mdx`.
+- [vastai set defjob](pages/cli/reference/set-defjob.md): Source `cli/reference/set-defjob.mdx`.
+- [vastai remove defjob](pages/cli/reference/remove-defjob.md): Source `cli/reference/remove-defjob.mdx`.
+- [vastai set min-bid](pages/cli/reference/set-min-bid.md): Source `cli/reference/set-min-bid.mdx`.
+- [vastai schedule maint](pages/cli/reference/schedule-maint.md): Source `cli/reference/schedule-maint.mdx`.
+- [vastai cancel maint](pages/cli/reference/cancel-maint.md): Source `cli/reference/cancel-maint.mdx`.
+- [vastai show maints](pages/cli/reference/show-maints.md): Source `cli/reference/show-maints.mdx`.
+- [vastai unlist machine](pages/cli/reference/unlist-machine.md): Source `cli/reference/unlist-machine.mdx`.
+- [vastai defrag machines](pages/cli/reference/defrag-machines.md): Source `cli/reference/defrag-machines.mdx`.
+- [vastai self-test machine](pages/cli/reference/self-test-machine.md): Source `cli/reference/self-test-machine.mdx`.
+- [vastai metrics gpu](pages/cli/reference/metrics-gpu.md): Source `cli/reference/metrics-gpu.mdx`.
+- [vastai metrics gpu-trends](pages/cli/reference/metrics-gpu-trends.md): Source `cli/reference/metrics-gpu-trends.mdx`.
+- [vastai metrics gpu-locations](pages/cli/reference/metrics-gpu-locations.md): Source `cli/reference/metrics-gpu-locations.mdx`.
+- [vastai cleanup machine](pages/host/cli/cleanup-machine.md): Source `host/cli/cleanup-machine.mdx`.
+- [vastai delete machine](pages/host/cli/delete-machine.md): Source `host/cli/delete-machine.mdx`.
+- [vastai list machine](pages/host/cli/list-machine.md): Source `host/cli/list-machine.mdx`.
+- [vastai list machines](pages/host/cli/list-machines.md): Source `host/cli/list-machines.mdx`.
+- [vastai show machine](pages/host/cli/show-machine.md): Source `host/cli/show-machine.mdx`.
+- [vastai show machines](pages/host/cli/show-machines.md): Source `host/cli/show-machines.mdx`.
+- [vastai set defjob](pages/host/cli/set-defjob.md): Source `host/cli/set-defjob.mdx`.
+- [vastai remove defjob](pages/host/cli/remove-defjob.md): Source `host/cli/remove-defjob.mdx`.
+- [vastai set min-bid](pages/host/cli/set-min-bid.md): Source `host/cli/set-min-bid.mdx`.
+- [vastai schedule maint](pages/host/cli/schedule-maint.md): Source `host/cli/schedule-maint.mdx`.
+- [vastai cancel maint](pages/host/cli/cancel-maint.md): Source `host/cli/cancel-maint.mdx`.
+- [vastai show maints](pages/host/cli/show-maints.md): Source `host/cli/show-maints.mdx`.
+- [vastai unlist machine](pages/host/cli/unlist-machine.md): Source `host/cli/unlist-machine.mdx`.
+- [vastai defrag machines](pages/host/cli/defrag-machines.md): Source `host/cli/defrag-machines.mdx`.
+- [vastai self-test machine](pages/host/cli/self-test-machine.md): Source `host/cli/self-test-machine.mdx`.
+- [vastai metrics gpu](pages/host/cli/metrics-gpu.md): Source `host/cli/metrics-gpu.mdx`.
+- [vastai metrics gpu-trends](pages/host/cli/metrics-gpu-trends.md): Source `host/cli/metrics-gpu-trends.mdx`.
+- [vastai metrics gpu-locations](pages/host/cli/metrics-gpu-locations.md): Source `host/cli/metrics-gpu-locations.mdx`.
+
+## SDK
+
+- [SDK Hello World](pages/sdk/python/quickstart.md): Source `sdk/python/quickstart.mdx`.
+- [VastAI](pages/sdk/python/reference/vastai.md): Source `sdk/python/reference/vastai.mdx`.
+- [SDK Authentication](pages/sdk/python/authentication.md): Source `sdk/python/authentication.mdx`.
+- [SDK Permissions](pages/sdk/python/permissions.md): Source `sdk/python/permissions.mdx`.
+- [SDK Rate Limits and Errors](pages/sdk/python/rate-limits.md): Source `sdk/python/rate-limits.mdx`.
+- [VastAI.create_api_key](pages/sdk/python/reference/create-api-key.md): Source `sdk/python/reference/create-api-key.mdx`.
+- [VastAI.delete_api_key](pages/sdk/python/reference/delete-api-key.md): Source `sdk/python/reference/delete-api-key.mdx`.
+- [VastAI.reset_api_key](pages/sdk/python/reference/reset-api-key.md): Source `sdk/python/reference/reset-api-key.mdx`.
+- [VastAI.show_api_key](pages/sdk/python/reference/show-api-key.md): Source `sdk/python/reference/show-api-key.mdx`.
+- [VastAI.show_api_keys](pages/sdk/python/reference/show-api-keys.md): Source `sdk/python/reference/show-api-keys.mdx`.
+- [VastAI.set_api_key](pages/sdk/python/reference/set-api-key.md): Source `sdk/python/reference/set-api-key.mdx`.
+- [VastAI.create_ssh_key](pages/sdk/python/reference/create-ssh-key.md): Source `sdk/python/reference/create-ssh-key.mdx`.
+- [VastAI.delete_ssh_key](pages/sdk/python/reference/delete-ssh-key.md): Source `sdk/python/reference/delete-ssh-key.mdx`.
+- [VastAI.show_ssh_keys](pages/sdk/python/reference/show-ssh-keys.md): Source `sdk/python/reference/show-ssh-keys.mdx`.
+- [VastAI.update_ssh_key](pages/sdk/python/reference/update-ssh-key.md): Source `sdk/python/reference/update-ssh-key.mdx`.
+- [VastAI.create_env_var](pages/sdk/python/reference/create-env-var.md): Source `sdk/python/reference/create-env-var.mdx`.
+- [VastAI.show_env_vars](pages/sdk/python/reference/show-env-vars.md): Source `sdk/python/reference/show-env-vars.mdx`.
+- [VastAI.update_env_var](pages/sdk/python/reference/update-env-var.md): Source `sdk/python/reference/update-env-var.mdx`.
+- [VastAI.delete_env_var](pages/sdk/python/reference/delete-env-var.md): Source `sdk/python/reference/delete-env-var.mdx`.
+- [VastAI.show_user](pages/sdk/python/reference/show-user.md): Source `sdk/python/reference/show-user.mdx`.
+- [VastAI.set_user](pages/sdk/python/reference/set-user.md): Source `sdk/python/reference/set-user.mdx`.
+- [VastAI.create_subaccount](pages/sdk/python/reference/create-subaccount.md): Source `sdk/python/reference/create-subaccount.mdx`.
+- [VastAI.show_subaccounts](pages/sdk/python/reference/show-subaccounts.md): Source `sdk/python/reference/show-subaccounts.mdx`.
+- [VastAI.show_connections](pages/sdk/python/reference/show-connections.md): Source `sdk/python/reference/show-connections.mdx`.
+- [VastAI.show_ipaddrs](pages/sdk/python/reference/show-ipaddrs.md): Source `sdk/python/reference/show-ipaddrs.mdx`.
+- [VastAI.show_audit_logs](pages/sdk/python/reference/show-audit-logs.md): Source `sdk/python/reference/show-audit-logs.mdx`.
+- [VastAI.show_deposit](pages/sdk/python/reference/show-deposit.md): Source `sdk/python/reference/show-deposit.mdx`.
+- [VastAI.show_earnings](pages/sdk/python/reference/show-earnings.md): Source `sdk/python/reference/show-earnings.mdx`.
+- [VastAI.show_invoices](pages/sdk/python/reference/show-invoices.md): Source `sdk/python/reference/show-invoices.mdx`.
+- [VastAI.generate_pdf_invoices](pages/sdk/python/reference/generate-pdf-invoices.md): Source `sdk/python/reference/generate-pdf-invoices.mdx`.
+- [VastAI.transfer_credit](pages/sdk/python/reference/transfer-credit.md): Source `sdk/python/reference/transfer-credit.mdx`.
+- [VastAI.reports](pages/sdk/python/reference/reports.md): Source `sdk/python/reference/reports.mdx`.
+- [VastAI.create_instance](pages/sdk/python/reference/create-instance.md): Source `sdk/python/reference/create-instance.mdx`.
+- [VastAI.create_instances](pages/sdk/python/reference/create-instances.md): Source `sdk/python/reference/create-instances.mdx`.
+- [VastAI.launch_instance](pages/sdk/python/reference/launch-instance.md): Source `sdk/python/reference/launch-instance.mdx`.
+- [VastAI.start_instance](pages/sdk/python/reference/start-instance.md): Source `sdk/python/reference/start-instance.mdx`.
+- [VastAI.start_instances](pages/sdk/python/reference/start-instances.md): Source `sdk/python/reference/start-instances.mdx`.
+- [VastAI.stop_instance](pages/sdk/python/reference/stop-instance.md): Source `sdk/python/reference/stop-instance.mdx`.
+- [VastAI.stop_instances](pages/sdk/python/reference/stop-instances.md): Source `sdk/python/reference/stop-instances.mdx`.
+- [VastAI.reboot_instance](pages/sdk/python/reference/reboot-instance.md): Source `sdk/python/reference/reboot-instance.mdx`.
+- [VastAI.recycle_instance](pages/sdk/python/reference/recycle-instance.md): Source `sdk/python/reference/recycle-instance.mdx`.
+- [VastAI.destroy_instance](pages/sdk/python/reference/destroy-instance.md): Source `sdk/python/reference/destroy-instance.mdx`.
+- [VastAI.destroy_instances](pages/sdk/python/reference/destroy-instances.md): Source `sdk/python/reference/destroy-instances.mdx`.
+- [VastAI.label_instance](pages/sdk/python/reference/label-instance.md): Source `sdk/python/reference/label-instance.mdx`.
+- [VastAI.prepay_instance](pages/sdk/python/reference/prepay-instance.md): Source `sdk/python/reference/prepay-instance.mdx`.
+- [VastAI.update_instance](pages/sdk/python/reference/update-instance.md): Source `sdk/python/reference/update-instance.mdx`.
+- [VastAI.show_instance](pages/sdk/python/reference/show-instance.md): Source `sdk/python/reference/show-instance.mdx`.
+- [VastAI.show_instances](pages/sdk/python/reference/show-instances.md): Source `sdk/python/reference/show-instances.mdx`.
+- [VastAI.show_instances_v1](pages/sdk/python/reference/show-instances-v1.md): Source `sdk/python/reference/show-instances-v1.mdx`.
+- [VastAI.change_bid](pages/sdk/python/reference/change-bid.md): Source `sdk/python/reference/change-bid.mdx`.
+- [VastAI.logs](pages/sdk/python/reference/logs.md): Source `sdk/python/reference/logs.mdx`.
+- [VastAI.execute](pages/sdk/python/reference/execute.md): Source `sdk/python/reference/execute.mdx`.
+- [VastAI.attach_ssh](pages/sdk/python/reference/attach-ssh.md): Source `sdk/python/reference/attach-ssh.mdx`.
+- [VastAI.detach_ssh](pages/sdk/python/reference/detach-ssh.md): Source `sdk/python/reference/detach-ssh.mdx`.
+- [VastAI.ssh_url](pages/sdk/python/reference/ssh-url.md): Source `sdk/python/reference/ssh-url.mdx`.
+- [VastAI.scp_url](pages/sdk/python/reference/scp-url.md): Source `sdk/python/reference/scp-url.mdx`.
+- [VastAI.copy](pages/sdk/python/reference/copy.md): Source `sdk/python/reference/copy.mdx`.
+- [VastAI.cloud_copy](pages/sdk/python/reference/cloud-copy.md): Source `sdk/python/reference/cloud-copy.mdx`.
+- [VastAI.cancel_copy](pages/sdk/python/reference/cancel-copy.md): Source `sdk/python/reference/cancel-copy.mdx`.
+- [VastAI.cancel_sync](pages/sdk/python/reference/cancel-sync.md): Source `sdk/python/reference/cancel-sync.mdx`.
+- [VastAI.search_offers](pages/sdk/python/reference/search-offers.md): Source `sdk/python/reference/search-offers.mdx`.
+- [VastAI.search_benchmarks](pages/sdk/python/reference/search-benchmarks.md): Source `sdk/python/reference/search-benchmarks.mdx`.
+- [VastAI.search_invoices](pages/sdk/python/reference/search-invoices.md): Source `sdk/python/reference/search-invoices.mdx`.
+- [VastAI.search_templates](pages/sdk/python/reference/search-templates.md): Source `sdk/python/reference/search-templates.mdx`.
+- [VastAI.search_volumes](pages/sdk/python/reference/search-volumes.md): Source `sdk/python/reference/search-volumes.mdx`.
+- [VastAI.create_template](pages/sdk/python/reference/create-template.md): Source `sdk/python/reference/create-template.mdx`.
+- [VastAI.update_template](pages/sdk/python/reference/update-template.md): Source `sdk/python/reference/update-template.mdx`.
+- [VastAI.delete_template](pages/sdk/python/reference/delete-template.md): Source `sdk/python/reference/delete-template.mdx`.
+- [VastAI.create_endpoint](pages/sdk/python/reference/create-endpoint.md): Source `sdk/python/reference/create-endpoint.mdx`.
+- [VastAI.update_endpoint](pages/sdk/python/reference/update-endpoint.md): Source `sdk/python/reference/update-endpoint.mdx`.
+- [VastAI.delete_endpoint](pages/sdk/python/reference/delete-endpoint.md): Source `sdk/python/reference/delete-endpoint.mdx`.
+- [VastAI.show_endpoints](pages/sdk/python/reference/show-endpoints.md): Source `sdk/python/reference/show-endpoints.mdx`.
+- [VastAI.create_workergroup](pages/sdk/python/reference/create-workergroup.md): Source `sdk/python/reference/create-workergroup.mdx`.
+- [VastAI.update_workergroup](pages/sdk/python/reference/update-workergroup.md): Source `sdk/python/reference/update-workergroup.mdx`.
+- [VastAI.update_workers](pages/sdk/python/reference/update-workers.md): Source `sdk/python/reference/update-workers.mdx`.
+- [VastAI.delete_workergroup](pages/sdk/python/reference/delete-workergroup.md): Source `sdk/python/reference/delete-workergroup.mdx`.
+- [VastAI.show_workergroups](pages/sdk/python/reference/show-workergroups.md): Source `sdk/python/reference/show-workergroups.mdx`.
+- [VastAI.get_endpt_logs](pages/sdk/python/reference/get-endpt-logs.md): Source `sdk/python/reference/get-endpt-logs.mdx`.
+- [VastAI.get_wrkgrp_logs](pages/sdk/python/reference/get-wrkgrp-logs.md): Source `sdk/python/reference/get-wrkgrp-logs.mdx`.
+- [VastAI.show_scheduled_jobs](pages/sdk/python/reference/show-scheduled-jobs.md): Source `sdk/python/reference/show-scheduled-jobs.mdx`.
+- [VastAI.delete_scheduled_job](pages/sdk/python/reference/delete-scheduled-job.md): Source `sdk/python/reference/delete-scheduled-job.mdx`.
+- [VastAI.delete_deployment](pages/sdk/python/reference/delete-deployment.md): Source `sdk/python/reference/delete-deployment.mdx`.
+- [VastAI.show_deployment](pages/sdk/python/reference/show-deployment.md): Source `sdk/python/reference/show-deployment.mdx`.
+- [VastAI.show_deployment_versions](pages/sdk/python/reference/show-deployment-versions.md): Source `sdk/python/reference/show-deployment-versions.mdx`.
+- [VastAI.show_deployments](pages/sdk/python/reference/show-deployments.md): Source `sdk/python/reference/show-deployments.mdx`.
+- [Serverless](pages/sdk/python/serverless/serverless.md): Source `sdk/python/serverless/serverless.mdx`.
+- [ServerlessRequest](pages/sdk/python/serverless/serverless-request.md): Source `sdk/python/serverless/serverless-request.mdx`.
+- [Endpoint](pages/sdk/python/serverless/endpoint.md): Source `sdk/python/serverless/endpoint.mdx`.
+- [Session](pages/sdk/python/serverless/session.md): Source `sdk/python/serverless/session.mdx`.
+- [Worker](pages/sdk/python/serverless/client-worker.md): Source `sdk/python/serverless/client-worker.mdx`.
+- [Worker](pages/sdk/python/serverless/server-worker.md): Source `sdk/python/serverless/server-worker.mdx`.
+- [WorkerConfig](pages/sdk/python/serverless/worker-config.md): Source `sdk/python/serverless/worker-config.mdx`.
+- [HandlerConfig](pages/sdk/python/serverless/handler-config.md): Source `sdk/python/serverless/handler-config.mdx`.
+- [LogActionConfig](pages/sdk/python/serverless/log-action-config.md): Source `sdk/python/serverless/log-action-config.mdx`.
+- [BenchmarkConfig](pages/sdk/python/serverless/benchmark-config.md): Source `sdk/python/serverless/benchmark-config.mdx`.
+- [VastAI.create_team](pages/sdk/python/reference/create-team.md): Source `sdk/python/reference/create-team.mdx`.
+- [VastAI.destroy_team](pages/sdk/python/reference/destroy-team.md): Source `sdk/python/reference/destroy-team.mdx`.
+- [VastAI.invite_member](pages/sdk/python/reference/invite-member.md): Source `sdk/python/reference/invite-member.mdx`.
+- [VastAI.remove_member](pages/sdk/python/reference/remove-member.md): Source `sdk/python/reference/remove-member.mdx`.
+- [VastAI.show_members](pages/sdk/python/reference/show-members.md): Source `sdk/python/reference/show-members.mdx`.
+- [VastAI.create_team_role](pages/sdk/python/reference/create-team-role.md): Source `sdk/python/reference/create-team-role.mdx`.
+- [VastAI.show_team_role](pages/sdk/python/reference/show-team-role.md): Source `sdk/python/reference/show-team-role.mdx`.
+- [VastAI.show_team_roles](pages/sdk/python/reference/show-team-roles.md): Source `sdk/python/reference/show-team-roles.mdx`.
+- [VastAI.update_team_role](pages/sdk/python/reference/update-team-role.md): Source `sdk/python/reference/update-team-role.mdx`.
+- [VastAI.remove_team_role](pages/sdk/python/reference/remove-team-role.md): Source `sdk/python/reference/remove-team-role.mdx`.
+- [VastAI.create_volume](pages/sdk/python/reference/create-volume.md): Source `sdk/python/reference/create-volume.mdx`.
+- [VastAI.clone_volume](pages/sdk/python/reference/clone-volume.md): Source `sdk/python/reference/clone-volume.mdx`.
+- [VastAI.list_volume](pages/sdk/python/reference/list-volume.md): Source `sdk/python/reference/list-volume.mdx`.
+- [VastAI.list_volumes](pages/sdk/python/reference/list-volumes.md): Source `sdk/python/reference/list-volumes.mdx`.
+- [VastAI.show_volumes](pages/sdk/python/reference/show-volumes.md): Source `sdk/python/reference/show-volumes.mdx`.
+- [VastAI.unlist_volume](pages/sdk/python/reference/unlist-volume.md): Source `sdk/python/reference/unlist-volume.mdx`.
+- [VastAI.delete_volume](pages/sdk/python/reference/delete-volume.md): Source `sdk/python/reference/delete-volume.mdx`.
+- [VastAI.cleanup_machine](pages/sdk/python/reference/cleanup-machine.md): Source `sdk/python/reference/cleanup-machine.mdx`.
+- [VastAI.delete_machine](pages/sdk/python/reference/delete-machine.md): Source `sdk/python/reference/delete-machine.mdx`.
+- [VastAI.list_machine](pages/sdk/python/reference/list-machine.md): Source `sdk/python/reference/list-machine.mdx`.
+- [VastAI.list_machines](pages/sdk/python/reference/list-machines.md): Source `sdk/python/reference/list-machines.mdx`.
+- [VastAI.show_machine](pages/sdk/python/reference/show-machine.md): Source `sdk/python/reference/show-machine.mdx`.
+- [VastAI.show_machines](pages/sdk/python/reference/show-machines.md): Source `sdk/python/reference/show-machines.mdx`.
+- [VastAI.set_defjob](pages/sdk/python/reference/set-defjob.md): Source `sdk/python/reference/set-defjob.mdx`.
+- [VastAI.remove_defjob](pages/sdk/python/reference/remove-defjob.md): Source `sdk/python/reference/remove-defjob.mdx`.
+- [VastAI.set_min_bid](pages/sdk/python/reference/set-min-bid.md): Source `sdk/python/reference/set-min-bid.mdx`.
+- [VastAI.schedule_maint](pages/sdk/python/reference/schedule-maint.md): Source `sdk/python/reference/schedule-maint.mdx`.
+- [VastAI.cancel_maint](pages/sdk/python/reference/cancel-maint.md): Source `sdk/python/reference/cancel-maint.mdx`.
+- [VastAI.show_maints](pages/sdk/python/reference/show-maints.md): Source `sdk/python/reference/show-maints.mdx`.
+- [VastAI.unlist_machine](pages/sdk/python/reference/unlist-machine.md): Source `sdk/python/reference/unlist-machine.mdx`.
+- [VastAI.defrag_machines](pages/sdk/python/reference/defrag-machines.md): Source `sdk/python/reference/defrag-machines.mdx`.
+- [VastAI.self_test_machine](pages/sdk/python/reference/self-test-machine.md): Source `sdk/python/reference/self-test-machine.mdx`.
+- [VastAI.cleanup_machine](pages/host/sdk/cleanup-machine.md): Source `host/sdk/cleanup-machine.mdx`.
+- [VastAI.delete_machine](pages/host/sdk/delete-machine.md): Source `host/sdk/delete-machine.mdx`.
+- [VastAI.list_machine](pages/host/sdk/list-machine.md): Source `host/sdk/list-machine.mdx`.
+- [VastAI.list_machines](pages/host/sdk/list-machines.md): Source `host/sdk/list-machines.mdx`.
+- [VastAI.show_machine](pages/host/sdk/show-machine.md): Source `host/sdk/show-machine.mdx`.
+- [VastAI.show_machines](pages/host/sdk/show-machines.md): Source `host/sdk/show-machines.mdx`.
+- [VastAI.set_defjob](pages/host/sdk/set-defjob.md): Source `host/sdk/set-defjob.mdx`.
+- [VastAI.remove_defjob](pages/host/sdk/remove-defjob.md): Source `host/sdk/remove-defjob.mdx`.
+- [VastAI.set_min_bid](pages/host/sdk/set-min-bid.md): Source `host/sdk/set-min-bid.mdx`.
+- [VastAI.schedule_maint](pages/host/sdk/schedule-maint.md): Source `host/sdk/schedule-maint.mdx`.
+- [VastAI.cancel_maint](pages/host/sdk/cancel-maint.md): Source `host/sdk/cancel-maint.mdx`.
+- [VastAI.show_maints](pages/host/sdk/show-maints.md): Source `host/sdk/show-maints.mdx`.
+- [VastAI.unlist_machine](pages/host/sdk/unlist-machine.md): Source `host/sdk/unlist-machine.mdx`.
+- [VastAI.defrag_machines](pages/host/sdk/defrag-machines.md): Source `host/sdk/defrag-machines.mdx`.
+- [VastAI.self_test_machine](pages/host/sdk/self-test-machine.md): Source `host/sdk/self-test-machine.mdx`.
+
+## Overview
+
+- [API Hello World](pages/api-reference/hello-world.md): Source `api-reference/hello-world.mdx`.
+- [API Reference](pages/api-reference/introduction.md): Source `api-reference/introduction.mdx`.
+- [Authentication](pages/api-reference/authentication.md): Source `api-reference/authentication.mdx`.
+- [Permissions](pages/api-reference/permissions.md): Source `api-reference/permissions.mdx`.
+- [Two-Factor Authentication Endpoints](pages/api-reference/two-factor-authentication-endpoints.md): Source `api-reference/two-factor-authentication-endpoints.mdx`.
+- [Rate Limits and Errors](pages/api-reference/rate-limits-and-errors.md): Source `api-reference/rate-limits-and-errors.mdx`.
+
+## Common workflows
+
+- [Creating Instances with the API](pages/api-reference/creating-instances-with-api.md): Source `api-reference/creating-instances-with-api.mdx`.
+- [Creating and Using Templates with API](pages/api-reference/creating-and-using-templates-with-api.md): Source `api-reference/creating-and-using-templates-with-api.mdx`.
+
+## Concepts
+
+- [Hosting Overview](pages/host/hosting-overview.md): Source `host/hosting-overview.mdx`.
+- [Understanding Verification](pages/host/understanding-verification.md): Source `host/understanding-verification.mdx`.
+- [Earning](pages/host/earning.md): Source `host/earning.mdx`.
+
+## Guides
+
+- [Optimize Your Earnings](pages/host/optimization-guide.md): Source `host/optimization-guide.mdx`.
+- [Verification Stages](pages/host/verification-stages.md): Source `host/verification-stages.mdx`.
+- [How to Self-Test](pages/host/how-to-self-test.md): Source `host/how-to-self-test.mdx`.
+- [Host Notifications](pages/host/notifications.md): Source `host/notifications.mdx`.
+- [Machine Metrics](pages/host/machine-metrics.md): Source `host/machine-metrics.mdx`.
+- [GPU Market Metrics](pages/host/market-metrics.md): Source `host/market-metrics.mdx`.
+- [Datacenter Status](pages/host/datacenter-status.md): Source `host/datacenter-status.mdx`.
+- [Host Payouts](pages/host/payment.md): Source `host/payment.mdx`.
+- [Tax Guide for Hosts](pages/host/guide-to-taxes.md): Source `host/guide-to-taxes.mdx`.
+- [VMs](pages/host/vms.md): Source `host/vms.mdx`.
+- [Upgrade the Kernel](pages/host/upgrade-kernel.md): Source `host/upgrade-kernel.mdx`.
+- [Disable SSH Password Login](pages/host/disable-ssh-password-login.md): Source `host/disable-ssh-password-login.mdx`.
+- [Offline Machine - Troubleshooting Steps](pages/host/machine-offline.md): Source `host/machine-offline.mdx`.
+
+## AI/ML frameworks
+
+- [PyTorch](pages/pytorch.md): Source `pytorch.mdx`.
+- [Multi-Node training using Torch + NCCL](pages/multi-node-training-using-torch-nccl.md): Source `multi-node-training-using-torch-nccl.mdx`.
+- [Unsloth Studio](pages/examples/ai-ml-frameworks/unsloth-studio.md): Source `examples/ai-ml-frameworks/unsloth-studio.mdx`.
+- [Fine-Tune LLMs with Axolotl](pages/examples/ai-ml-frameworks/axolotl-fine-tuning.md): Source `examples/ai-ml-frameworks/axolotl-fine-tuning.mdx`.
+
+## Serving infrastructure
+
+- [dstack + vLLM](pages/examples/serving-infrastructure/dstack-vllm.md): Source `examples/serving-infrastructure/dstack-vllm.mdx`.
+- [SGLang Router](pages/examples/serving-infrastructure/sglang-router-vast.md): Source `examples/serving-infrastructure/sglang-router-vast.mdx`.
+
+## Notifications
+
+- [Send Notifications to Slack](pages/examples/notifications/slack-webhook.md): Source `examples/notifications/slack-webhook.mdx`.
+- [Send Notifications to Google Chat](pages/examples/notifications/google-chat-webhook.md): Source `examples/notifications/google-chat-webhook.mdx`.
+
+## Migration guides
+
+- [Migrate from Runpod to Vast.ai](pages/examples/migrations/runpod-to-vast.md): Source `examples/migrations/runpod-to-vast.mdx`.
+- [Migrate from Salad Cloud to Vast.ai](pages/examples/migrations/salad-to-vast.md): Source `examples/migrations/salad-to-vast.mdx`.
+
+## AI agents
+
+- [Autonomous AI Research with Autoresearch on Vast.ai](pages/examples/ai-agents/autoresearch.md): Source `examples/ai-agents/autoresearch.mdx`.
+- [Langflow + Ollama](pages/langflow-ollama.md): Source `langflow-ollama.mdx`.
+- [BrowseSafe Prompt Injection Detection](pages/examples/ai-agents/browsesafe.md): Source `examples/ai-agents/browsesafe.mdx`.
+- [OpenClaw AI Assistant with vLLM on Vast.ai](pages/examples/ai-agents/openclaw.md): Source `examples/ai-agents/openclaw.mdx`.
+- [Budget-Friendly Alternative to Claude Code - Overnight Ralph Loop Guide](pages/examples/ai-agents/overnight-ralph-loop.md): Source `examples/ai-agents/overnight-ralph-loop.mdx`.
+
+## MCP
+
+- [DR-Tulu Research Agent](pages/examples/mcp/dr-tulu.md): Source `examples/mcp/dr-tulu.mdx`.
+
+## Text generation
+
+- [Ollama + Webui](pages/ollama-webui.md): Source `ollama-webui.mdx`.
+- [Oobabooga (LLM webui)](pages/oobabooga-llm-webui.md): Source `oobabooga-llm-webui.mdx`.
+- [Huggingface TGI with LLama3](pages/huggingface-tgi-with-llama3.md): Source `huggingface-tgi-with-llama3.mdx`.
+- [Quantized GGUF models (cloned)](pages/quantized-gguf-models-cloned.md): Source `quantized-gguf-models-cloned.mdx`.
+- [vLLM (LLM inference and serving)](pages/vllm-llm-inference-and-serving.md): Source `vllm-llm-inference-and-serving.mdx`.
+- [MiniMax-M2](pages/examples/text-generation/minimax-m2.md): Source `examples/text-generation/minimax-m2.mdx`.
+- [GLM-4.7-Flash](pages/examples/text-generation/glm-47-flash.md): Source `examples/text-generation/glm-47-flash.mdx`.
+- [NVIDIA Nemotron 3 Super](pages/examples/text-generation/nemotron-3-super.md): Source `examples/text-generation/nemotron-3-super.mdx`.
+
+## Image generation
+
+- [Image Generation](pages/image-generation.md): Source `image-generation.mdx`.
+- [Stable Diffusion](pages/stable-diffusion.md): Source `stable-diffusion.mdx`.
+- [Disco Diffusion](pages/disco-diffusion.md): Source `disco-diffusion.mdx`.
+
+## Video generation
+
+- [Video Generation](pages/video-generation.md): Source `video-generation.mdx`.
+- [Generating Video with LTX-2.3 and ComfyUI](pages/examples/video-generation/ltx-video-2-3.md): Source `examples/video-generation/ltx-video-2-3.mdx`.
+
+## Audio & transcription
+
+- [TTS with Nari Labs Dia](pages/tts-with-nari-labs-dia.md): Source `tts-with-nari-labs-dia.mdx`.
+- [Whisper ASR Guide](pages/whisper-asr-guide.md): Source `whisper-asr-guide.mdx`.
+- [Speaker Diarization with Pyannote](pages/examples/transcription/speaker-diarization-pyannote.md): Source `examples/transcription/speaker-diarization-pyannote.mdx`.
+
+## Information extraction
+
+- [Running RolmOCR](pages/examples/ocr/rolmocr.md): Source `examples/ocr/rolmocr.mdx`.
+- [GLiNER2](pages/examples/ner/gliner2.md): Source `examples/ner/gliner2.mdx`.
+- [Infinity Embeddings](pages/infinity-embeddings.md): Source `infinity-embeddings.mdx`.
+- [Serving Rerankers with vLLM](pages/examples/embeddings/serving-rerankers-vllm.md): Source `examples/embeddings/serving-rerankers-vllm.mdx`.
+
+## Virtual desktops & VMs
+
+- [Linux Virtual Desktop](pages/linux-virtual-desktop.md): Source `linux-virtual-desktop.mdx`.
+- [Linux Virtual Machines](pages/linux-virtual-machines.md): Source `linux-virtual-machines.mdx`.
+
+## Graphics & GPU programming
+
+- [Blender in the Cloud](pages/blender-in-the-cloud.md): Source `blender-in-the-cloud.mdx`.
+- [Blender Batch Rendering](pages/blender-batch-rendering.md): Source `blender-batch-rendering.mdx`.
+- [CUDA](pages/cuda.md): Source `cuda.mdx`.
+- [RTX 5 Series](pages/rtx-5-series.md): Source `rtx-5-series.mdx`.
+
+## Other
+
+- [Mining on Bittensor](pages/mining-on-bittensor.md): Source `mining-on-bittensor.mdx`.
+- [Google Colab](pages/google-colab.md): Source `google-colab.mdx`.
+
+## Endpoints
+
+- [show ssh-keys](pages/api-reference/instances/show-ssh-keys.md): Source `api-reference/openapi.yaml#get /api/v0/instances/{id}/ssh`.
+- [attach ssh-key](pages/api-reference/instances/attach-ssh-key.md): Source `api-reference/openapi.yaml#post /api/v0/instances/{id}/ssh`.
+- [copy](pages/api-reference/instances/copy.md): Source `api-reference/openapi.yaml#put /api/v0/commands/copy_direct`.
+- [cancel copy](pages/api-reference/instances/cancel-copy.md): Source `api-reference/openapi.yaml#delete /api/v0/commands/copy_direct`.
+- [cancel maint](pages/api-reference/machines/cancel-maint.md): Source `api-reference/openapi.yaml#put /api/v0/machines/{machine_id}/cancel_maint`.
+- [cloud copy](pages/api-reference/instances/cloud-copy.md): Source `api-reference/openapi.yaml#post /api/v0/commands/rclone`.
+- [cancel sync](pages/api-reference/instances/cancel-sync.md): Source `api-reference/openapi.yaml#delete /api/v0/commands/rclone`.
+- [change bid](pages/api-reference/instances/change-bid.md): Source `api-reference/openapi.yaml#put /api/v0/instances/bid_price/{id}`.
+- [cleanup machine](pages/api-reference/machines/cleanup-machine.md): Source `api-reference/openapi.yaml#put /api/v0/machines/{machine_id}/cleanup`.
+- [show api keys](pages/api-reference/accounts/show-api-keys.md): Source `api-reference/openapi.yaml#get /api/v0/auth/apikeys`.
+- [create api-key](pages/api-reference/accounts/create-api-key.md): Source `api-reference/openapi.yaml#post /api/v0/auth/apikeys`.
+- [show workergroup](pages/api-reference/serverless/show-workergroup.md): Source `api-reference/openapi.yaml#get /api/v0/workergroups`.
+- [create workergroup](pages/api-reference/serverless/create-workergroup.md): Source `api-reference/openapi.yaml#post /api/v0/workergroups`.
+- [show endpoints](pages/api-reference/serverless/show-endpoints.md): Source `api-reference/openapi.yaml#get /api/v0/endptjobs`.
+- [create endpoint](pages/api-reference/serverless/create-endpoint.md): Source `api-reference/openapi.yaml#post /api/v0/endptjobs`.
+- [show env vars](pages/api-reference/accounts/show-env-vars.md): Source `api-reference/openapi.yaml#get /api/v0/secrets`.
+- [create env-var](pages/api-reference/accounts/create-env-var.md): Source `api-reference/openapi.yaml#post /api/v0/secrets`.
+- [update env var](pages/api-reference/accounts/update-env-var.md): Source `api-reference/openapi.yaml#put /api/v0/secrets`.
+- [delete env var](pages/api-reference/accounts/delete-env-var.md): Source `api-reference/openapi.yaml#delete /api/v0/secrets`.
+- [create instance](pages/api-reference/instances/create-instance.md): Source `api-reference/openapi.yaml#put /api/v0/asks/{id}`.
+- [show ssh keys](pages/api-reference/accounts/show-ssh-keys.md): Source `api-reference/openapi.yaml#get /api/v0/ssh`.
+- [create ssh-key](pages/api-reference/accounts/create-ssh-key.md): Source `api-reference/openapi.yaml#post /api/v0/ssh`.
+- [create subaccount](pages/api-reference/accounts/create-subaccount.md): Source `api-reference/openapi.yaml#post /api/v0/users`.
+- [set user](pages/api-reference/accounts/set-user.md): Source `api-reference/openapi.yaml#put /api/v0/users`.
+- [create team](pages/api-reference/team/create-team.md): Source `api-reference/openapi.yaml#post /api/v0/team`.
+- [destroy team](pages/api-reference/team/destroy-team.md): Source `api-reference/openapi.yaml#delete /api/v0/team`.
+- [create team role](pages/api-reference/team/create-team-role.md): Source `api-reference/openapi.yaml#post /api/v0/team/roles`.
+- [search templates](pages/api-reference/search/search-templates.md): Source `api-reference/openapi.yaml#get /api/v0/template`.
+- [create template](pages/api-reference/templates/create-template.md): Source `api-reference/openapi.yaml#post /api/v0/template`.
+- [edit template](pages/api-reference/templates/edit-template.md): Source `api-reference/openapi.yaml#put /api/v0/template`.
+- [delete template](pages/api-reference/templates/delete-template.md): Source `api-reference/openapi.yaml#delete /api/v0/template`.
+- [delete api key](pages/api-reference/accounts/delete-api-key.md): Source `api-reference/openapi.yaml#delete /api/v0/auth/apikeys/{id}`.
+- [update workergroup](pages/api-reference/serverless/update-workergroup.md): Source `api-reference/openapi.yaml#put /api/v0/workergroups/{id}`.
+- [delete workergroup](pages/api-reference/serverless/delete-workergroup.md): Source `api-reference/openapi.yaml#delete /api/v0/workergroups/{id}`.
+- [update endpoint](pages/api-reference/serverless/update-endpoint.md): Source `api-reference/openapi.yaml#put /api/v0/endptjobs/{id}`.
+- [delete endpoint](pages/api-reference/serverless/delete-endpoint.md): Source `api-reference/openapi.yaml#delete /api/v0/endptjobs/{id}`.
+- [update ssh key](pages/api-reference/accounts/update-ssh-key.md): Source `api-reference/openapi.yaml#put /api/v0/ssh/{id}`.
+- [delete ssh key](pages/api-reference/accounts/delete-ssh-key.md): Source `api-reference/openapi.yaml#delete /api/v0/ssh/{id}`.
+- [list volumes](pages/api-reference/volumes/list-volumes.md): Source `api-reference/openapi.yaml#get /api/v0/volumes`.
+- [rent volume](pages/api-reference/volumes/rent-volume.md): Source `api-reference/openapi.yaml#put /api/v0/volumes`.
+- [delete volume](pages/api-reference/volumes/delete-volume.md): Source `api-reference/openapi.yaml#delete /api/v0/volumes`.
+- [show instance](pages/api-reference/instances/show-instance.md): Source `api-reference/openapi.yaml#get /api/v0/instances/{id}`.
+- [manage instance](pages/api-reference/instances/manage-instance.md): Source `api-reference/openapi.yaml#put /api/v0/instances/{id}`.
+- [destroy instance](pages/api-reference/instances/destroy-instance.md): Source `api-reference/openapi.yaml#delete /api/v0/instances/{id}`.
+- [detach ssh-key](pages/api-reference/instances/detach-ssh-key.md): Source `api-reference/openapi.yaml#delete /api/v0/instances/{id}/ssh/{ssh_key_id}`.
+- [execute](pages/api-reference/instances/execute.md): Source `api-reference/openapi.yaml#put /api/v0/instances/command/{id}`.
+- [get workergroup logs](pages/api-reference/serverless/get-workergroup-logs.md): Source `api-reference/openapi.yaml#post /get_workergroup_logs`.
+- [get workergroup workers](pages/api-reference/serverless/get-workergroup-workers.md): Source `api-reference/openapi.yaml#post /get_workergroup_workers`.
+- [get endpoint logs](pages/api-reference/serverless/get-endpoint-logs.md): Source `api-reference/openapi.yaml#post /get_endpoint_logs`.
+- [get endpoint workers](pages/api-reference/serverless/get-endpoint-workers.md): Source `api-reference/openapi.yaml#post /get_endpoint_workers`.
+- [invite team member](pages/api-reference/team/invite-team-member.md): Source `api-reference/openapi.yaml#post /api/v0/team/invite`.
+- [list machine](pages/api-reference/machines/list-machine.md): Source `api-reference/openapi.yaml#put /api/v0/machines/create_asks`.
+- [show logs](pages/api-reference/instances/show-logs.md): Source `api-reference/openapi.yaml#put /api/v0/instances/request_logs/{id}`.
+- [show gpu metrics](pages/api-reference/machines/show-gpu-metrics.md): Source `api-reference/openapi.yaml#get /api/v0/metrics/gpu/current`.
+- [show gpu locations](pages/api-reference/machines/show-gpu-locations.md): Source `api-reference/openapi.yaml#get /api/v0/metrics/gpu/locations`.
+- [show gpu trends](pages/api-reference/machines/show-gpu-trends.md): Source `api-reference/openapi.yaml#get /api/v0/metrics/gpu/history`.
+- [list notification types](pages/api-reference/notifications/list-notification-types.md): Source `api-reference/openapi.yaml#get /api/v0/notification-types`.
+- [get notification preferences](pages/api-reference/notifications/get-notification-preferences.md): Source `api-reference/openapi.yaml#get /api/v0/users/{user_id}/notification-prefs`.
+- [update notification preferences](pages/api-reference/notifications/update-notification-preferences.md): Source `api-reference/openapi.yaml#put /api/v0/users/{user_id}/notification-prefs`.
+- [list notification webhooks](pages/api-reference/notifications/list-notification-webhooks.md): Source `api-reference/openapi.yaml#get /api/v0/webhooks`.
+- [create notification webhook](pages/api-reference/notifications/create-notification-webhook.md): Source `api-reference/openapi.yaml#post /api/v0/webhooks`.
+- [update notification webhook](pages/api-reference/notifications/update-notification-webhook.md): Source `api-reference/openapi.yaml#put /api/v0/webhooks/{id}`.
+- [delete notification webhook](pages/api-reference/notifications/delete-notification-webhook.md): Source `api-reference/openapi.yaml#delete /api/v0/webhooks/{id}`.
+- [rotate notification webhook secret](pages/api-reference/notifications/rotate-notification-webhook-secret.md): Source `api-reference/openapi.yaml#post /api/v0/webhooks/{id}/rotate-secret`.
+- [test notification webhook](pages/api-reference/notifications/test-notification-webhook.md): Source `api-reference/openapi.yaml#post /api/v0/webhooks/{id}/test`.
+- [prepay instance](pages/api-reference/instances/prepay-instance.md): Source `api-reference/openapi.yaml#put /api/v0/instances/prepay/{id}`.
+- [reboot instance](pages/api-reference/instances/reboot-instance.md): Source `api-reference/openapi.yaml#put /api/v0/instances/reboot/{id}`.
+- [recycle instance](pages/api-reference/instances/recycle-instance.md): Source `api-reference/openapi.yaml#put /api/v0/instances/recycle/{id}`.
+- [remove defjob](pages/api-reference/machines/remove-defjob.md): Source `api-reference/openapi.yaml#delete /api/v0/machines/{machine_id}/defjob`.
+- [remove team member](pages/api-reference/team/remove-team-member.md): Source `api-reference/openapi.yaml#delete /api/v0/team/members/{id}`.
+- [show team role](pages/api-reference/team/show-team-role.md): Source `api-reference/openapi.yaml#get /api/v0/team/roles/{name}`.
+- [update team role](pages/api-reference/team/update-team-role.md): Source `api-reference/openapi.yaml#put /api/v0/team/roles/{name}`.
+- [remove team role](pages/api-reference/team/remove-team-role.md): Source `api-reference/openapi.yaml#delete /api/v0/team/roles/{name}`.
+- [show reports](pages/api-reference/machines/show-reports.md): Source `api-reference/openapi.yaml#get /api/v0/machines/{machine_id}/reports`.
+- [route](pages/api-reference/serverless/route.md): Source `api-reference/openapi.yaml#post /route`.
+- [schedule maint](pages/api-reference/machines/schedule-maint.md): Source `api-reference/openapi.yaml#put /api/v0/machines/{machine_id}/dnotify`.
+- [search benchmarks](pages/api-reference/search/search-benchmarks.md): Source `api-reference/openapi.yaml#get /api/v0/benchmarks`.
+- [search offers](pages/api-reference/search/search-offers.md): Source `api-reference/openapi.yaml#post /api/v0/bundles`.
+- [search volumes](pages/api-reference/volumes/search-volumes.md): Source `api-reference/openapi.yaml#post /api/v0/volumes/search`.
+- [set defjob](pages/api-reference/machines/set-defjob.md): Source `api-reference/openapi.yaml#put /api/v0/machines/create_bids`.
+- [set min-bid](pages/api-reference/machines/set-min-bid.md): Source `api-reference/openapi.yaml#put /api/v0/machines/{machine_id}/minbid`.
+- [show charges](pages/api-reference/billing/show-charges.md): Source `api-reference/openapi.yaml#get /api/v0/charges`.
+- [show connections](pages/api-reference/accounts/show-connections.md): Source `api-reference/openapi.yaml#get /api/v0/users/cloud_integrations`.
+- [show deployment](pages/api-reference/serverless/show-deployment.md): Source `api-reference/openapi.yaml#get /api/v0/deployment/{id}`.
+- [show deployments](pages/api-reference/serverless/show-deployments.md): Source `api-reference/openapi.yaml#get /api/v0/deployments`.
+- [show deposit](pages/api-reference/billing/show-deposit.md): Source `api-reference/openapi.yaml#get /api/v0/instances/balance/{id}`.
+- [show earnings](pages/api-reference/billing/show-earnings.md): Source `api-reference/openapi.yaml#get /api/v0/users/{user_id}/machine-earnings`.
+- [show instances](pages/api-reference/instances/show-instances.md): Source `api-reference/openapi.yaml#get /api/v1/instances`.
+- [show invoices](pages/api-reference/billing/show-invoices.md): Source `api-reference/openapi.yaml#get /api/v1/invoices`.
+- [show ipaddrs](pages/api-reference/accounts/show-ipaddrs.md): Source `api-reference/openapi.yaml#get /api/v0/users/{user_id}/ipaddrs`.
+- [show machines](pages/api-reference/machines/show-machines.md): Source `api-reference/openapi.yaml#get /api/v0/machines`.
+- [show subaccounts](pages/api-reference/accounts/show-subaccounts.md): Source `api-reference/openapi.yaml#get /api/v0/subaccounts`.
+- [show team members](pages/api-reference/team/show-team-members.md): Source `api-reference/openapi.yaml#get /api/v0/team/members`.
+- [show team roles](pages/api-reference/team/show-team-roles.md): Source `api-reference/openapi.yaml#get /api/v0/team/roles-full`.
+- [show user](pages/api-reference/accounts/show-user.md): Source `api-reference/openapi.yaml#get /api/v0/users/current`.
+- [start deployment](pages/api-reference/serverless/start-deployment.md): Source `api-reference/openapi.yaml#post /api/v0/deployment/{id}/start`.
+- [stop deployment](pages/api-reference/serverless/stop-deployment.md): Source `api-reference/openapi.yaml#post /api/v0/deployment/{id}/stop`.
+- [transfer credit](pages/api-reference/accounts/transfer-credit.md): Source `api-reference/openapi.yaml#put /api/v0/commands/transfer_credit`.
+- [unlist machine](pages/api-reference/machines/unlist-machine.md): Source `api-reference/openapi.yaml#delete /api/v0/machines/{machine_id}/asks`.
+- [unlist volume](pages/api-reference/volumes/unlist-volume.md): Source `api-reference/openapi.yaml#post /api/v0/volumes/unlist`.

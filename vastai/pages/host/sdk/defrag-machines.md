@@ -1,0 +1,39 @@
+> Commit-pinned source for Vast.ai main: [host/sdk/defrag-machines.mdx](https://docs.vast.ai/host/sdk/defrag-machines)
+
+# VastAI.defrag_machines
+
+Defragment machines.
+
+> **Note**
+>
+> This is a&#x20;
+>
+> **host**
+>
+> &#x20;method, used for managing machines you are renting out on Vast.ai.
+
+## Signature
+
+```python
+VastAI.defrag_machines(ids: List[int]) -> dict
+```
+
+## Parameters
+
+**Property (type: List\[int]; required)**
+
+Machine IDs to defragment.
+
+## Returns
+
+`dict`
+
+## Example
+
+```python
+from vastai import VastAI
+
+client = VastAI(api_key="YOUR_API_KEY")
+result = client.defrag_machines(ids=[12345])
+print(result)
+```

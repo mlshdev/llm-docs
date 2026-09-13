@@ -30,7 +30,9 @@ export interface FrontmatterResult {
 
 export function parseFrontmatter(source: string): FrontmatterResult {
   const normalized = normalizeNewlines(source).replace(/^\uFEFF/, "");
-  const match = normalized.match(/^---[ \t]*\n([\s\S]*?)\n---[ \t]*\n/);
+  // A page whose whole content is frontmatter ends at the closing fence, so the
+  // fence is allowed to end the file rather than be followed by a body.
+  const match = normalized.match(/^---[ \t]*\n([\s\S]*?)\n---[ \t]*(?:\n|$)/);
   if (!match) {
     return { attributes: {}, body: normalized };
   }

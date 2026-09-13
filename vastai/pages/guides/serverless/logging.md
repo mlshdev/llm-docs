@@ -1,0 +1,49 @@
+> Commit-pinned source for Vast.ai main: [guides/serverless/logging.mdx](https://docs.vast.ai/guides/serverless/logging)
+
+# Endpoint and Worker Logs
+
+Learn how to access Vast serverless logs
+
+Endpoint and worker logs provide real-time visibility into the behavior of your serverless infrastructure. These logs are primarily intended for debugging issues with endpoints, workergroups, and individual workers.
+
+## Endpoint Logs
+
+Endpoint logs are available under the **"All Workergroups"** tab in the Serverless endpoint, within the Vast console UI.
+
+![Endpoint Log](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/endpoint-log.webp)
+
+These logs include low-level details about scaling decisions made by the serverless engine. They are useful for understanding how the system responds to traffic and workload changes, and include:
+
+- Summarized performance for all workers and workergroups
+- Measured and estimated performance and worker load
+- Marketplace offer details used in worker recruitment
+
+## Worker Logs
+
+Worker logs are accessible on a per-worker basis. To view worker logs, navigate to the serverless endpoint in question and click on this icon next to the worker.
+
+![Worker Log](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/worker-log.webp)
+
+Worker logs provide detailed runtime output for individual workers, helping you debug model loading, request handling, container behavior, and other worker-specific events.
+
+## Log Characteristics and Retention
+
+- Logs are **streaming outputs**, typically only a few seconds behind real-time.
+- Logs are **not permanently maintained** and are intended for near real-time debugging of issues.
+- Users who need longer retention should **periodically download logs** to store them externally.
+
+## Accessing Logs Through the CLI
+
+In addition to accessing these logs through the UI, you can use the vastai CLI to check endpoint and worker group logs at different log levels (level 0 is the highest detail, level 3 the lowest).
+
+## Endpoint logs
+
+```cli CLI Command
+vastai get endpt-logs <endpoint_id> --level (0-3)
+```
+
+## Workergroup logs
+
+```cli CLI Command
+vastai get wrkgrp-logs <worker_group_id> --level (0-3)
+```

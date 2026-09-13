@@ -1,0 +1,137 @@
+> Commit-pinned source for Runpod main: [accounts-billing/billing.mdx](https://docs.runpod.io/accounts-billing/billing)
+
+# Billing overview
+
+Understand how Runpod billing works, manage your credits, and configure payment methods. Review account, billing, and management details for Runpod.
+
+Runpod uses a credit-based billing system where you add funds to your account and charges are deducted as you use resources. All compute and storage charges are billed per second, with no fees for data transfer.
+
+## Credits and balance
+
+Your Runpod account balance represents prepaid credits that are consumed as you use resources. Credits are deducted in real-time based on your active Pods, Serverless endpoints, and storage.
+
+To add credits to your account:
+
+1. Navigate to the [Billing page](https://www.console.runpod.io/user/billing) in the Runpod console.
+2. Select a dollar amount for credits to add (or click **Other** to enter a custom amount).
+3. Complete the payment using your preferred payment method.
+
+You can view your current balance and recent transactions on the Billing page at any time.
+
+### Low balance behavior
+
+Runpod monitors your account balance in real time. Billing runs every 5 minutes, and charges are deducted continuously based on the resources you have running.
+
+When your balance reaches $0, Runpod automatically stops all of your running Pods. What happens to your data depends on whether the Pod has a network volume attached:
+
+- Pods with a network volume attached are stopped, and your data is preserved on the network volume.
+- Pods without a network volume are terminated, and their data can't be recovered.
+
+Storage charges continue to accrue on network volumes while your Pods are stopped. If your balance stays at $0 and these charges can't be covered, the network volume may eventually be terminated, and its data can't be recovered.
+
+> **Important**
+>
+> To avoid unexpected interruptions, enable [low balance notifications](#low-balance-notifications) or set up [auto-pay](#auto-pay).
+
+### Low balance notifications
+
+Low balance notifications alert you when your account balance drops below a threshold you define, giving you time to add funds before your workloads are interrupted.
+
+To enable low balance notifications:
+
+1. Navigate to the [Billing page](https://www.console.runpod.io/user/billing) in the Runpod console.
+2. Under **Notifications**, enable **Low balance alert**.
+3. Set the balance threshold at which you want to be notified.
+
+Runpod sends an email when your balance falls below the threshold you set. This is separate from auto-pay, so you can use one or both.
+
+### Auto-pay
+
+Auto-pay automatically reloads your account balance when it falls below a threshold, helping you avoid service interruptions from low funds.
+
+To configure auto-pay:
+
+1. Navigate to the [Billing page](https://www.console.runpod.io/user/billing) in the Runpod console.
+2. Add a credit card to your account if you haven't already.
+3. Enable auto-pay and configure your settings:
+   - **Threshold**: The balance at which auto-pay triggers.
+   - **Amount**: The dollar amount to add when triggered.
+
+When your balance drops near your configured threshold, Runpod charges your default saved card for the auto-pay amount. To prevent excessive charges, auto-pay attempts are limited to once per hour.
+
+### Minimum balance requirements
+
+To deploy a new Pod, your account must have at least one hour's worth of credits for your selected configuration. If your balance is insufficient, you can deposit additional funds or select a lower-cost GPU.
+
+## Payment methods
+
+Runpod accepts several payment methods:
+
+| Method             | Details                                                                                                                                                                                      |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Credit card        | Visa, Mastercard, American Express, and other cards [supported by Stripe](https://docs.stripe.com/payments/cards). Prepaid cards should deposit at least $100 per transaction.               |
+| Cryptocurrency     | Accepted via integrated payment processors. Complete any required KYC verification before your first crypto payment.                                                                         |
+| Business invoicing | Available for transactions over $5,000. Supports ACH, wire transfer, and credit card. [Contact our sales team](https://ecykq.share.hsforms.com/2MZdZATC3Rb62Dgci7knjbA) to set up invoicing. |
+
+If your card is declined, see [Manage payment card declines](https://docs.runpod.io/accounts-billing/manage-payment-cards) for troubleshooting steps.
+
+## Spending limits
+
+Runpod accounts have a default spend limit of $80 per hour across all resources. This limit protects your account from unexpected charges due to misconfigured workloads or runaway processes.
+
+Spending limits increase automatically over time based on your account history. If you need a higher limit immediately, [contact support](https://www.runpod.io/contact) with details about your use case.
+
+## Pricing by product
+
+Each Runpod product has its own pricing structure. See the detailed pricing pages for rates and billing specifics:
+
+- [Pods pricing](https://docs.runpod.io/pods/pricing)
+
+  On-demand and savings plan pricing for GPU Pods.
+- [Serverless pricing](https://docs.runpod.io/serverless/pricing)
+
+  Pay-per-second pricing for flex and active workers.
+
+### Storage pricing summary
+
+Storage is billed based on type and usage:
+
+| Storage type                  | Rate           | Billing frequency |
+| ----------------------------- | -------------- | ----------------- |
+| Container disk (running Pods) | $0.10/GB/month | Per second        |
+| Volume disk (running Pods)    | $0.10/GB/month | Per second        |
+| Volume disk (stopped Pods)    | $0.20/GB/month | Per second        |
+| Network volumes (under 1TB)   | $0.07/GB/month | Hourly            |
+| Network volumes (over 1TB)    | $0.05/GB/month | Hourly            |
+
+You are not charged for storage when the host machine is unavailable.
+
+> **Warning**
+>
+> Runpod is not designed for long-term data storage. Storage supports active compute workloads. If your account runs out of funds, storage may be deleted and cannot be recovered. Back up critical data regularly to external storage.
+
+## View spending history
+
+To review your spending and payment history:
+
+1. Navigate to the [Billing page](https://www.console.runpod.io/user/billing).
+2. Review recent spending in the **Billing Explorer** section.
+
+For detailed cost attribution by team or project, see [Cost centers](https://docs.runpod.io/accounts-billing/cost-centers).
+
+## Refunds and credits
+
+Runpod credits are non-refundable and cannot be withdrawn once deposited. Credits can only be used for Runpod services.
+
+If you're new to Runpod and want to evaluate the platform, you can start with as little as $10. Visit the [Discord community](https://discord.com/invite/pJ3P2DbUUq) to ask questions before committing to a larger deposit.
+
+## Billing support
+
+If you have questions about billing or believe you've been charged incorrectly, [contact support](https://www.runpod.io/contact) with the following information:
+
+- Your account email address.
+- The resource type (Pod, Serverless endpoint, or storage).
+- The resource ID or name.
+- The date and approximate time of the charge in question.
+
+For general questions about planning your Runpod expenses, email <help@runpod.io>.

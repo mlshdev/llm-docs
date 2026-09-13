@@ -1,0 +1,97 @@
+> Commit-pinned source for Runpod main: [pods/choose-a-pod.mdx](https://docs.runpod.io/pods/choose-a-pod)
+
+# Choose a Pod
+
+Select the right Pod by evaluating your resource requirements. Review setup, configuration, and operations guidance for Runpod Pods.
+
+Selecting the right Pod configuration maximizes performance and cost efficiency for your workload. This guide helps you match your requirements to the right GPU, VRAM, and storage configuration.
+
+## Quick selection by workload
+
+Start by identifying your primary workload type:
+
+| Workload                           | Recommended GPU tier                        | Minimum VRAM | Notes                                |
+| ---------------------------------- | ------------------------------------------- | ------------ | ------------------------------------ |
+| **LLM inference** (7B–13B params)  | Mid-range (RTX 4090, L4, PRO 6000 MIG 24GB) | 24 GB        | Sufficient for most quantized models |
+| **LLM inference** (30B–70B params) | High-end (A100, H100, PRO 6000 MIG 48GB)    | 48–80 GB     | May require multi-GPU setup          |
+| **LLM training/fine-tuning**       | High-end (A100, H100)                       | 40–80 GB     | Memory bandwidth critical            |
+| **Image generation** (SDXL, Flux)  | Mid-range (RTX 4090, L4, PRO 6000 MIG 24GB) | 16–24 GB     | Benefits from fast inference         |
+| **Computer vision**                | Entry to mid-range                          | 8–16 GB      | Depends on model and batch size      |
+| **3D rendering**                   | Mid-range with RT cores                     | 16–24 GB     | RT cores accelerate ray tracing      |
+| **Data processing**                | CPU-focused or entry GPU                    | 8 GB+        | Prioritize CPU cores and RAM         |
+
+For a full list of available GPUs and their specifications, see [GPU types](https://docs.runpod.io/references/gpu-types).
+
+> **Note**
+>
+> RTX PRO 6000 Multi-Instance GPU (MIG) slices are partitioned GPU instances with dedicated memory and compute. Available on Secure Cloud only. All MIG slices use Blackwell architecture. Verify your CUDA version and framework versions support Blackwell before deploying.
+
+## Estimate VRAM requirements
+
+VRAM is the most common bottleneck. Use these guidelines:
+
+**For LLMs:** Allocate approximately **2 GB of VRAM per billion parameters**. For example:
+
+- 7B model → \~14 GB VRAM
+- 13B model → \~26 GB VRAM
+- 70B model → \~140 GB VRAM (requires multi-GPU)
+
+> **Tip**
+>
+> Quantization reduces VRAM requirements significantly. A 4-bit quantized 70B model can run on \~35 GB VRAM.
+
+**For image models:** SDXL requires \~8 GB minimum, but 16–24 GB provides headroom for larger batch sizes and LoRA training.
+
+### Resource calculators
+
+Use these tools to estimate your specific requirements:
+
+- [Hugging Face Model Memory Calculator](https://huggingface.co/spaces/hf-accelerate/model-memory-usage): Memory estimates for transformer models
+- [Can it run LLM?](https://huggingface.co/spaces/Vokturz/can-it-run-llm): Check if hardware can run specific language models
+- [VRAM Estimator](https://vram.asmirnov.xyz): GPU memory requirement approximations
+
+## Storage configuration
+
+Choose storage based on your data persistence needs:
+
+| Storage type       | Persists after stop? | Persists after delete? | Best for                                   |
+| ------------------ | -------------------- | ---------------------- | ------------------------------------------ |
+| **Container disk** | No                   | No                     | OS, temporary files                        |
+| **Volume disk**    | Yes                  | No                     | Working files, checkpoints                 |
+| **Network volume** | Yes                  | Yes                    | Datasets, model weights, long-term storage |
+
+For data-intensive workloads, ensure sufficient volume disk or network volume capacity for your datasets, model weights, and output files.
+
+## Optimize for cost
+
+1. **Right-size your resources**: Start with the minimum viable configuration, then scale up based on actual usage. Development and testing often need less power than production.
+
+2. **Consider savings plans**: For extended usage, Runpod's [savings plans](https://docs.runpod.io/pods/pricing#savings-plans) reduce costs for committed usage.
+
+## Secure Cloud vs Community Cloud
+
+|                    | Secure Cloud               | Community Cloud          |
+| ------------------ | -------------------------- | ------------------------ |
+| **Infrastructure** | T3/T4 data centers         | Peer-to-peer providers   |
+| **Reliability**    | High redundancy            | Variable                 |
+| **Best for**       | Production, sensitive data | Cost-sensitive workloads |
+| **Pricing**        | Standard                   | Competitive              |
+
+> **Note**
+>
+> Runpod is no longer accepting new hosts for Community Cloud. Existing Community Cloud resources remain available.
+
+## Next steps
+
+- [Deploy a Pod](https://docs.runpod.io/get-started)
+
+  Create your first Pod with your chosen configuration.
+- [GPU types reference](https://docs.runpod.io/references/gpu-types)
+
+  Compare all available GPUs and specifications.
+- [Storage options](https://docs.runpod.io/pods/storage/types)
+
+  Learn more about storage types and pricing.
+- [Manage Pods](https://docs.runpod.io/pods/manage-pods)
+
+  Learn how to create, start, stop, and delete Pods.
