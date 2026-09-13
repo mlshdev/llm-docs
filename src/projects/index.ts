@@ -9,6 +9,7 @@ import { buildGrafana } from "./grafana.ts";
 import { buildNetbird } from "./netbird.ts";
 import { buildN8n } from "./n8n.ts";
 import { buildPodman } from "./podman.ts";
+import { buildPostgres } from "./postgres.ts";
 import { buildSearxng } from "./searxng.ts";
 import { buildTraefik } from "./traefik.ts";
 import { buildTriggerDev } from "./trigger-dev.ts";
@@ -93,5 +94,7 @@ function runAdapter(
       return buildTriggerDev(project, lock);
     case "aria2":
       return buildAria2(project, lock);
+    case "postgres-18":
+      return buildPostgres(project, lock);
   }
 }

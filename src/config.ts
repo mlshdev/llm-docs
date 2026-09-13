@@ -71,7 +71,13 @@ function isSourceKind(project: Record<string, unknown>): boolean {
       (project.docsRepository === undefined ||
         typeof project.docsRepository === "string") &&
       (project.branch === undefined ||
-        (typeof project.branch === "string" && project.branch.trim() !== ""))
+        (typeof project.branch === "string" && project.branch.trim() !== "")) &&
+      // A project follows a branch head or a maintenance-release tag series,
+      // never both.
+      (project.tagSeries === undefined ||
+        (typeof project.tagSeries === "string" &&
+          /^[A-Za-z0-9._-]+$/.test(project.tagSeries) &&
+          project.branch === undefined))
     );
   }
   if (project.kind === "docc") {
@@ -81,7 +87,8 @@ function isSourceKind(project: Record<string, unknown>): boolean {
         project.catalog &&
       project.repository === undefined &&
       project.docsRepository === undefined &&
-      project.branch === undefined
+      project.branch === undefined &&
+      project.tagSeries === undefined
     );
   }
   return false;
@@ -118,6 +125,7 @@ function isLockedSource(value: unknown): value is LockedSource {
       value.sourceCommit === undefined &&
       value.branch === undefined &&
       value.sourceCommittedAt === undefined &&
+      value.taggedAt === undefined &&
       value.docsCommit === undefined &&
       value.releaseId === undefined &&
       value.releasePublishedAt === undefined
@@ -131,6 +139,16 @@ function isLockedSource(value: unknown): value is LockedSource {
       typeof value.branch === "string" &&
       value.branch === value.tag &&
       typeof value.sourceCommittedAt === "string" &&
+      value.taggedAt === undefined &&
+      value.releaseId === undefined &&
+      value.releasePublishedAt === undefined &&
+      value.docsCommit === undefined
+    );
+  }
+  if (value.taggedAt !== undefined) {
+    return (
+      typeof value.taggedAt === "string" &&
+      value.sourceCommittedAt === undefined &&
       value.releaseId === undefined &&
       value.releasePublishedAt === undefined &&
       value.docsCommit === undefined

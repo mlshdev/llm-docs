@@ -140,6 +140,14 @@
       "homepage": "https://aria2.github.io/manual/en/html/"
     },
     {
+      "id": "postgres-18",
+      "kind": "github",
+      "title": "PostgreSQL 18",
+      "repository": "postgres/postgres",
+      "tagSeries": "REL_18",
+      "homepage": "https://www.postgresql.org/docs/18/"
+    },
+    {
       "id": "apple-swift",
       "kind": "docc",
       "catalog": "swift",

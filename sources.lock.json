@@ -116,6 +116,11 @@
       "releasePublishedAt": "2023-11-15T12:07:32Z",
       "sourceCommit": "02f2d0d8472b3c38c29b4dba8c75ebd5fdd2899a"
     },
+    "postgres-18": {
+      "tag": "REL_18_6",
+      "sourceCommit": "724edf9bde9d356724ad384a2e196edc3c9f80f7",
+      "taggedAt": "2026-08-11T18:38:31Z"
+    },
     "apple-swift": {
       "tag": "snapshot-eebba30a4ab9",
       "snapshotDigest": "eebba30a4ab9373b19010bdf3b1cdcfadf5599b64611c1dd07958482a85ddfa6",

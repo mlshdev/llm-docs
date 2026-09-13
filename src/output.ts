@@ -14,6 +14,7 @@ import { normalizeSpacing } from "./markdown.ts";
 import {
   isBranchLockedSource,
   isSnapshotLockedSource,
+  isTagLockedSource,
   projectIds,
 } from "./types.ts";
 import type { QuarantinedDocument } from "./quarantine.ts";
@@ -48,6 +49,7 @@ interface ProjectManifest {
   readonly releasePublishedAt?: string;
   readonly branch?: string;
   readonly sourceCommittedAt?: string;
+  readonly taggedAt?: string;
   readonly sourceCommit?: string;
   readonly docsCommit?: string;
   readonly snapshotDigest?: string;
@@ -302,6 +304,7 @@ export async function verifyOutputs(
       manifest.releasePublishedAt !== expected.releasePublishedAt ||
       manifest.branch !== expected.branch ||
       manifest.sourceCommittedAt !== expected.sourceCommittedAt ||
+      manifest.taggedAt !== expected.taggedAt ||
       manifest.snapshotDigest !== expected.snapshotDigest ||
       manifest.contentDigest !== expected.contentDigest ||
       manifest.capturedAt !== expected.capturedAt
@@ -418,7 +421,9 @@ function corpusHeader(build: ProjectBuild): readonly string[] {
       : []),
     isBranchLockedSource(lock)
       ? `Tracked branch: ${lock.branch}`
-      : `Release tag: ${lock.tag}`,
+      : isTagLockedSource(lock)
+        ? `Maintenance release tag: ${lock.tag}`
+        : `Release tag: ${lock.tag}`,
     `Source commit: ${lock.sourceCommit}`,
     ...(lock.docsCommit ? [`Documentation commit: ${lock.docsCommit}`] : []),
     "",
@@ -522,7 +527,9 @@ function pinKind(source: LockedSource): string {
     ? "Snapshot-pinned"
     : isBranchLockedSource(source)
       ? "Commit-pinned"
-      : "Release-pinned";
+      : isTagLockedSource(source)
+        ? "Tag-pinned"
+        : "Release-pinned";
 }
 
 function lockDetails(source: LockedSource): Partial<ProjectManifest> {
@@ -540,6 +547,9 @@ function lockDetails(source: LockedSource): Partial<ProjectManifest> {
       sourceCommit: source.sourceCommit,
     };
   }
+  if (isTagLockedSource(source)) {
+    return { taggedAt: source.taggedAt, sourceCommit: source.sourceCommit };
+  }
   return {
     releaseId: source.releaseId,
     releasePublishedAt: source.releasePublishedAt,
@@ -555,7 +565,12 @@ function describeSource(build: ProjectBuild): string {
   }
   const repository =
     build.project.kind === "github" ? build.project.repository : "";
-  return `Documentation generated from ${isBranchLockedSource(lock) ? `the latest \`${lock.branch}\` branch commit of` : "the latest stable release of"} [${repository}](https://github.com/${repository}) and pinned to immutable source commit \`${lock.sourceCommit}\`.`;
+  const origin = isBranchLockedSource(lock)
+    ? `the latest \`${lock.branch}\` branch commit of`
+    : isTagLockedSource(lock)
+      ? `the \`${lock.tag}\` maintenance-release tag of`
+      : "the latest stable release of";
+  return `Documentation generated from ${origin} [${repository}](https://github.com/${repository}) and pinned to immutable source commit \`${lock.sourceCommit}\`.`;
 }
 
 function groupBySection(

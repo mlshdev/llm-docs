@@ -1,0 +1,1424 @@
+# PostgreSQL 18 REL_18_6
+
+> Documentation generated from the `REL_18_6` maintenance-release tag of [postgres/postgres](https://github.com/postgres/postgres) and pinned to immutable source commit `724edf9bde9d356724ad384a2e196edc3c9f80f7`.
+
+- [Full documentation](llms-full.txt): Complete normalized corpus for PostgreSQL 18 REL_18_6.
+- [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
+- PostgreSQL 18 tracks the highest `REL_18_<minor>` maintenance-release tag; betas and release candidates are ignored.
+- DocBook XML sources are assembled from their declared entities and converted without executing the upstream Make, Meson, Perl, or XSLT toolchain.
+- Error-code, wait-event, SQL-conformance, key-word, and Meson-target tables the upstream build generates are reproduced from the same checked-in data files.
+
+## Preface
+
+- [Preface](pages/preface.md): Source `doc/src/sgml/intro.sgml#preface`.
+- [What Is PostgreSQL?](pages/intro-whatis.md): Source `doc/src/sgml/intro.sgml#intro-whatis`.
+- [A Brief History of PostgreSQL](pages/history.md): Source `doc/src/sgml/history.sgml#history`.
+- [Conventions](pages/notation.md): Source `doc/src/sgml/notation.sgml#notation`.
+- [Further Information](pages/resources.md): Source `doc/src/sgml/info.sgml#resources`.
+- [Bug Reporting Guidelines](pages/bug-reporting.md): Source `doc/src/sgml/problems.sgml#bug-reporting`.
+
+## Tutorial
+
+- [Tutorial](pages/tutorial.md): Source `doc/src/sgml/postgres.sgml#tutorial`.
+- [Getting Started](pages/tutorial-start.md): Source `doc/src/sgml/start.sgml#tutorial-start`.
+- [The SQL Language](pages/tutorial-sql.md): Source `doc/src/sgml/query.sgml#tutorial-sql`.
+- [Advanced Features](pages/tutorial-advanced.md): Source `doc/src/sgml/advanced.sgml#tutorial-advanced`.
+
+## Getting Started
+
+- [Installation](pages/tutorial-install.md): Source `doc/src/sgml/start.sgml#tutorial-install`.
+- [Architectural Fundamentals](pages/tutorial-arch.md): Source `doc/src/sgml/start.sgml#tutorial-arch`.
+- [Creating a Database](pages/tutorial-createdb.md): Source `doc/src/sgml/start.sgml#tutorial-createdb`.
+- [Accessing a Database](pages/tutorial-accessdb.md): Source `doc/src/sgml/start.sgml#tutorial-accessdb`.
+
+## The SQL Language
+
+- [Introduction](pages/tutorial-sql-intro.md): Source `doc/src/sgml/query.sgml#tutorial-sql-intro`.
+- [Concepts](pages/tutorial-concepts.md): Source `doc/src/sgml/query.sgml#tutorial-concepts`.
+- [Creating a New Table](pages/tutorial-table.md): Source `doc/src/sgml/query.sgml#tutorial-table`.
+- [Populating a Table With Rows](pages/tutorial-populate.md): Source `doc/src/sgml/query.sgml#tutorial-populate`.
+- [Querying a Table](pages/tutorial-select.md): Source `doc/src/sgml/query.sgml#tutorial-select`.
+- [Joins Between Tables](pages/tutorial-join.md): Source `doc/src/sgml/query.sgml#tutorial-join`.
+- [Aggregate Functions](pages/tutorial-agg.md): Source `doc/src/sgml/query.sgml#tutorial-agg`.
+- [Updates](pages/tutorial-update.md): Source `doc/src/sgml/query.sgml#tutorial-update`.
+- [Deletions](pages/tutorial-delete.md): Source `doc/src/sgml/query.sgml#tutorial-delete`.
+- [The SQL Language](pages/sql.md): Source `doc/src/sgml/postgres.sgml#sql`.
+- [SQL Syntax](pages/sql-syntax.md): Source `doc/src/sgml/syntax.sgml#sql-syntax`.
+- [Data Definition](pages/ddl.md): Source `doc/src/sgml/ddl.sgml#ddl`.
+- [Data Manipulation](pages/dml.md): Source `doc/src/sgml/dml.sgml#dml`.
+- [Queries](pages/queries.md): Source `doc/src/sgml/queries.sgml#queries`.
+- [Data Types](pages/datatype.md): Source `doc/src/sgml/datatype.sgml#datatype`.
+- [Functions and Operators](pages/functions.md): Source `doc/src/sgml/func.sgml#functions`.
+- [Type Conversion](pages/typeconv.md): Source `doc/src/sgml/typeconv.sgml#typeconv`.
+- [Indexes](pages/indexes.md): Source `doc/src/sgml/indices.sgml#indexes`.
+- [Full Text Search](pages/textsearch.md): Source `doc/src/sgml/textsearch.sgml#textsearch`.
+- [Concurrency Control](pages/mvcc.md): Source `doc/src/sgml/mvcc.sgml#mvcc`.
+- [Performance Tips](pages/performance-tips.md): Source `doc/src/sgml/perform.sgml#performance-tips`.
+- [Parallel Query](pages/parallel-query.md): Source `doc/src/sgml/parallel.sgml#parallel-query`.
+
+## Advanced Features
+
+- [Introduction](pages/tutorial-advanced-intro.md): Source `doc/src/sgml/advanced.sgml#tutorial-advanced-intro`.
+- [Views](pages/tutorial-views.md): Source `doc/src/sgml/advanced.sgml#tutorial-views`.
+- [Foreign Keys](pages/tutorial-fk.md): Source `doc/src/sgml/advanced.sgml#tutorial-fk`.
+- [Transactions](pages/tutorial-transactions.md): Source `doc/src/sgml/advanced.sgml#tutorial-transactions`.
+- [Window Functions](pages/tutorial-window.md): Source `doc/src/sgml/advanced.sgml#tutorial-window`.
+- [Inheritance](pages/tutorial-inheritance.md): Source `doc/src/sgml/advanced.sgml#tutorial-inheritance`.
+- [Conclusion](pages/tutorial-conclusion.md): Source `doc/src/sgml/advanced.sgml#tutorial-conclusion`.
+
+## SQL Syntax
+
+- [Lexical Structure](pages/sql-syntax-lexical.md): Source `doc/src/sgml/syntax.sgml#sql-syntax-lexical`.
+- [Value Expressions](pages/sql-expressions.md): Source `doc/src/sgml/syntax.sgml#sql-expressions`.
+- [Calling Functions](pages/sql-syntax-calling-funcs.md): Source `doc/src/sgml/syntax.sgml#sql-syntax-calling-funcs`.
+
+## Data Definition
+
+- [Table Basics](pages/ddl-basics.md): Source `doc/src/sgml/ddl.sgml#ddl-basics`.
+- [Default Values](pages/ddl-default.md): Source `doc/src/sgml/ddl.sgml#ddl-default`.
+- [Identity Columns](pages/ddl-identity-columns.md): Source `doc/src/sgml/ddl.sgml#ddl-identity-columns`.
+- [Generated Columns](pages/ddl-generated-columns.md): Source `doc/src/sgml/ddl.sgml#ddl-generated-columns`.
+- [Constraints](pages/ddl-constraints.md): Source `doc/src/sgml/ddl.sgml#ddl-constraints`.
+- [System Columns](pages/ddl-system-columns.md): Source `doc/src/sgml/ddl.sgml#ddl-system-columns`.
+- [Modifying Tables](pages/ddl-alter.md): Source `doc/src/sgml/ddl.sgml#ddl-alter`.
+- [Privileges](pages/ddl-priv.md): Source `doc/src/sgml/ddl.sgml#ddl-priv`.
+- [Row Security Policies](pages/ddl-rowsecurity.md): Source `doc/src/sgml/ddl.sgml#ddl-rowsecurity`.
+- [Schemas](pages/ddl-schemas.md): Source `doc/src/sgml/ddl.sgml#ddl-schemas`.
+- [Inheritance](pages/ddl-inherit.md): Source `doc/src/sgml/ddl.sgml#ddl-inherit`.
+- [Table Partitioning](pages/ddl-partitioning.md): Source `doc/src/sgml/ddl.sgml#ddl-partitioning`.
+- [Foreign Data](pages/ddl-foreign-data.md): Source `doc/src/sgml/ddl.sgml#ddl-foreign-data`.
+- [Other Database Objects](pages/ddl-others.md): Source `doc/src/sgml/ddl.sgml#ddl-others`.
+- [Dependency Tracking](pages/ddl-depend.md): Source `doc/src/sgml/ddl.sgml#ddl-depend`.
+
+## Data Manipulation
+
+- [Inserting Data](pages/dml-insert.md): Source `doc/src/sgml/dml.sgml#dml-insert`.
+- [Updating Data](pages/dml-update.md): Source `doc/src/sgml/dml.sgml#dml-update`.
+- [Deleting Data](pages/dml-delete.md): Source `doc/src/sgml/dml.sgml#dml-delete`.
+- [Returning Data from Modified Rows](pages/dml-returning.md): Source `doc/src/sgml/dml.sgml#dml-returning`.
+
+## Queries
+
+- [Overview](pages/queries-overview.md): Source `doc/src/sgml/queries.sgml#queries-overview`.
+- [Table Expressions](pages/queries-table-expressions.md): Source `doc/src/sgml/queries.sgml#queries-table-expressions`.
+- [Select Lists](pages/queries-select-lists.md): Source `doc/src/sgml/queries.sgml#queries-select-lists`.
+- [Combining Queries (UNION, INTERSECT, EXCEPT)](pages/queries-union.md): Source `doc/src/sgml/queries.sgml#queries-union`.
+- [Sorting Rows (ORDER BY)](pages/queries-order.md): Source `doc/src/sgml/queries.sgml#queries-order`.
+- [LIMIT and OFFSET](pages/queries-limit.md): Source `doc/src/sgml/queries.sgml#queries-limit`.
+- [VALUES Lists](pages/queries-values.md): Source `doc/src/sgml/queries.sgml#queries-values`.
+- [WITH Queries (Common Table Expressions)](pages/queries-with.md): Source `doc/src/sgml/queries.sgml#queries-with`.
+
+## Data Types
+
+- [Numeric Types](pages/datatype-numeric.md): Source `doc/src/sgml/datatype.sgml#datatype-numeric`.
+- [Monetary Types](pages/datatype-money.md): Source `doc/src/sgml/datatype.sgml#datatype-money`.
+- [Character Types](pages/datatype-character.md): Source `doc/src/sgml/datatype.sgml#datatype-character`.
+- [Binary Data Types](pages/datatype-binary.md): Source `doc/src/sgml/datatype.sgml#datatype-binary`.
+- [Date/Time Types](pages/datatype-datetime.md): Source `doc/src/sgml/datatype.sgml#datatype-datetime`.
+- [Boolean Type](pages/datatype-boolean.md): Source `doc/src/sgml/datatype.sgml#datatype-boolean`.
+- [Enumerated Types](pages/datatype-enum.md): Source `doc/src/sgml/datatype.sgml#datatype-enum`.
+- [Geometric Types](pages/datatype-geometric.md): Source `doc/src/sgml/datatype.sgml#datatype-geometric`.
+- [Network Address Types](pages/datatype-net-types.md): Source `doc/src/sgml/datatype.sgml#datatype-net-types`.
+- [Bit String Types](pages/datatype-bit.md): Source `doc/src/sgml/datatype.sgml#datatype-bit`.
+- [Text Search Types](pages/datatype-textsearch.md): Source `doc/src/sgml/datatype.sgml#datatype-textsearch`.
+- [UUID Type](pages/datatype-uuid.md): Source `doc/src/sgml/datatype.sgml#datatype-uuid`.
+- [XML Type](pages/datatype-xml.md): Source `doc/src/sgml/datatype.sgml#datatype-xml`.
+- [JSON Types](pages/datatype-json.md): Source `doc/src/sgml/json.sgml#datatype-json`.
+- [Arrays](pages/arrays.md): Source `doc/src/sgml/array.sgml#arrays`.
+- [Composite Types](pages/rowtypes.md): Source `doc/src/sgml/rowtypes.sgml#rowtypes`.
+- [Range Types](pages/rangetypes.md): Source `doc/src/sgml/rangetypes.sgml#rangetypes`.
+- [Domain Types](pages/domains.md): Source `doc/src/sgml/datatype.sgml#domains`.
+- [Object Identifier Types](pages/datatype-oid.md): Source `doc/src/sgml/datatype.sgml#datatype-oid`.
+- [pg_lsn Type](pages/datatype-pg-lsn.md): Source `doc/src/sgml/datatype.sgml#datatype-pg-lsn`.
+- [Pseudo-Types](pages/datatype-pseudo.md): Source `doc/src/sgml/datatype.sgml#datatype-pseudo`.
+
+## Functions and Operators
+
+- [Logical Operators](pages/functions-logical.md): Source `doc/src/sgml/func.sgml#functions-logical`.
+- [Comparison Functions and Operators](pages/functions-comparison.md): Source `doc/src/sgml/func.sgml#functions-comparison`.
+- [Mathematical Functions and Operators](pages/functions-math.md): Source `doc/src/sgml/func.sgml#functions-math`.
+- [String Functions and Operators](pages/functions-string.md): Source `doc/src/sgml/func.sgml#functions-string`.
+- [Binary String Functions and Operators](pages/functions-binarystring.md): Source `doc/src/sgml/func.sgml#functions-binarystring`.
+- [Bit String Functions and Operators](pages/functions-bitstring.md): Source `doc/src/sgml/func.sgml#functions-bitstring`.
+- [Pattern Matching](pages/functions-matching.md): Source `doc/src/sgml/func.sgml#functions-matching`.
+- [Data Type Formatting Functions](pages/functions-formatting.md): Source `doc/src/sgml/func.sgml#functions-formatting`.
+- [Date/Time Functions and Operators](pages/functions-datetime.md): Source `doc/src/sgml/func.sgml#functions-datetime`.
+- [Enum Support Functions](pages/functions-enum.md): Source `doc/src/sgml/func.sgml#functions-enum`.
+- [Geometric Functions and Operators](pages/functions-geometry.md): Source `doc/src/sgml/func.sgml#functions-geometry`.
+- [Network Address Functions and Operators](pages/functions-net.md): Source `doc/src/sgml/func.sgml#functions-net`.
+- [Text Search Functions and Operators](pages/functions-textsearch.md): Source `doc/src/sgml/func.sgml#functions-textsearch`.
+- [UUID Functions](pages/functions-uuid.md): Source `doc/src/sgml/func.sgml#functions-uuid`.
+- [XML Functions](pages/functions-xml.md): Source `doc/src/sgml/func.sgml#functions-xml`.
+- [JSON Functions and Operators](pages/functions-json.md): Source `doc/src/sgml/func.sgml#functions-json`.
+- [Sequence Manipulation Functions](pages/functions-sequence.md): Source `doc/src/sgml/func.sgml#functions-sequence`.
+- [Conditional Expressions](pages/functions-conditional.md): Source `doc/src/sgml/func.sgml#functions-conditional`.
+- [Array Functions and Operators](pages/functions-array.md): Source `doc/src/sgml/func.sgml#functions-array`.
+- [Range/Multirange Functions and Operators](pages/functions-range.md): Source `doc/src/sgml/func.sgml#functions-range`.
+- [Aggregate Functions](pages/functions-aggregate.md): Source `doc/src/sgml/func.sgml#functions-aggregate`.
+- [Window Functions](pages/functions-window.md): Source `doc/src/sgml/func.sgml#functions-window`.
+- [Merge Support Functions](pages/functions-merge-support.md): Source `doc/src/sgml/func.sgml#functions-merge-support`.
+- [Subquery Expressions](pages/functions-subquery.md): Source `doc/src/sgml/func.sgml#functions-subquery`.
+- [Row and Array Comparisons](pages/functions-comparisons.md): Source `doc/src/sgml/func.sgml#functions-comparisons`.
+- [Set Returning Functions](pages/functions-srf.md): Source `doc/src/sgml/func.sgml#functions-srf`.
+- [System Information Functions and Operators](pages/functions-info.md): Source `doc/src/sgml/func.sgml#functions-info`.
+- [System Administration Functions](pages/functions-admin.md): Source `doc/src/sgml/func.sgml#functions-admin`.
+- [Trigger Functions](pages/functions-trigger.md): Source `doc/src/sgml/func.sgml#functions-trigger`.
+- [Event Trigger Functions](pages/functions-event-triggers.md): Source `doc/src/sgml/func.sgml#functions-event-triggers`.
+- [Statistics Information Functions](pages/functions-statistics.md): Source `doc/src/sgml/func.sgml#functions-statistics`.
+
+## Type Conversion
+
+- [Overview](pages/typeconv-overview.md): Source `doc/src/sgml/typeconv.sgml#typeconv-overview`.
+- [Operators](pages/typeconv-oper.md): Source `doc/src/sgml/typeconv.sgml#typeconv-oper`.
+- [Functions](pages/typeconv-func.md): Source `doc/src/sgml/typeconv.sgml#typeconv-func`.
+- [Value Storage](pages/typeconv-query.md): Source `doc/src/sgml/typeconv.sgml#typeconv-query`.
+- [UNION, CASE, and Related Constructs](pages/typeconv-union-case.md): Source `doc/src/sgml/typeconv.sgml#typeconv-union-case`.
+- [SELECT Output Columns](pages/typeconv-select.md): Source `doc/src/sgml/typeconv.sgml#typeconv-select`.
+
+## Indexes
+
+- [Introduction](pages/indexes-intro.md): Source `doc/src/sgml/indices.sgml#indexes-intro`.
+- [Index Types](pages/indexes-types.md): Source `doc/src/sgml/indices.sgml#indexes-types`.
+- [Multicolumn Indexes](pages/indexes-multicolumn.md): Source `doc/src/sgml/indices.sgml#indexes-multicolumn`.
+- [Indexes and ORDER BY](pages/indexes-ordering.md): Source `doc/src/sgml/indices.sgml#indexes-ordering`.
+- [Combining Multiple Indexes](pages/indexes-bitmap-scans.md): Source `doc/src/sgml/indices.sgml#indexes-bitmap-scans`.
+- [Unique Indexes](pages/indexes-unique.md): Source `doc/src/sgml/indices.sgml#indexes-unique`.
+- [Indexes on Expressions](pages/indexes-expressional.md): Source `doc/src/sgml/indices.sgml#indexes-expressional`.
+- [Partial Indexes](pages/indexes-partial.md): Source `doc/src/sgml/indices.sgml#indexes-partial`.
+- [Index-Only Scans and Covering Indexes](pages/indexes-index-only-scans.md): Source `doc/src/sgml/indices.sgml#indexes-index-only-scans`.
+- [Operator Classes and Operator Families](pages/indexes-opclass.md): Source `doc/src/sgml/indices.sgml#indexes-opclass`.
+- [Indexes and Collations](pages/indexes-collations.md): Source `doc/src/sgml/indices.sgml#indexes-collations`.
+- [Examining Index Usage](pages/indexes-examine.md): Source `doc/src/sgml/indices.sgml#indexes-examine`.
+
+## Full Text Search
+
+- [Introduction](pages/textsearch-intro.md): Source `doc/src/sgml/textsearch.sgml#textsearch-intro`.
+- [Tables and Indexes](pages/textsearch-tables.md): Source `doc/src/sgml/textsearch.sgml#textsearch-tables`.
+- [Controlling Text Search](pages/textsearch-controls.md): Source `doc/src/sgml/textsearch.sgml#textsearch-controls`.
+- [Additional Features](pages/textsearch-features.md): Source `doc/src/sgml/textsearch.sgml#textsearch-features`.
+- [Parsers](pages/textsearch-parsers.md): Source `doc/src/sgml/textsearch.sgml#textsearch-parsers`.
+- [Dictionaries](pages/textsearch-dictionaries.md): Source `doc/src/sgml/textsearch.sgml#textsearch-dictionaries`.
+- [Configuration Example](pages/textsearch-configuration.md): Source `doc/src/sgml/textsearch.sgml#textsearch-configuration`.
+- [Testing and Debugging Text Search](pages/textsearch-debugging.md): Source `doc/src/sgml/textsearch.sgml#textsearch-debugging`.
+- [Preferred Index Types for Text Search](pages/textsearch-indexes.md): Source `doc/src/sgml/textsearch.sgml#textsearch-indexes`.
+- [psql Support](pages/textsearch-psql.md): Source `doc/src/sgml/textsearch.sgml#textsearch-psql`.
+- [Limitations](pages/textsearch-limitations.md): Source `doc/src/sgml/textsearch.sgml#textsearch-limitations`.
+
+## Concurrency Control
+
+- [Introduction](pages/mvcc-intro.md): Source `doc/src/sgml/mvcc.sgml#mvcc-intro`.
+- [Transaction Isolation](pages/transaction-iso.md): Source `doc/src/sgml/mvcc.sgml#transaction-iso`.
+- [Explicit Locking](pages/explicit-locking.md): Source `doc/src/sgml/mvcc.sgml#explicit-locking`.
+- [Data Consistency Checks at the Application Level](pages/applevel-consistency.md): Source `doc/src/sgml/mvcc.sgml#applevel-consistency`.
+- [Serialization Failure Handling](pages/mvcc-serialization-failure-handling.md): Source `doc/src/sgml/mvcc.sgml#mvcc-serialization-failure-handling`.
+- [Caveats](pages/mvcc-caveats.md): Source `doc/src/sgml/mvcc.sgml#mvcc-caveats`.
+- [Locking and Indexes](pages/locking-indexes.md): Source `doc/src/sgml/mvcc.sgml#locking-indexes`.
+
+## Performance Tips
+
+- [Using EXPLAIN](pages/using-explain.md): Source `doc/src/sgml/perform.sgml#using-explain`.
+- [Statistics Used by the Planner](pages/planner-stats.md): Source `doc/src/sgml/perform.sgml#planner-stats`.
+- [Controlling the Planner with Explicit JOIN Clauses](pages/explicit-joins.md): Source `doc/src/sgml/perform.sgml#explicit-joins`.
+- [Populating a Database](pages/populate.md): Source `doc/src/sgml/perform.sgml#populate`.
+- [Non-Durable Settings](pages/non-durability.md): Source `doc/src/sgml/perform.sgml#non-durability`.
+
+## Parallel Query
+
+- [How Parallel Query Works](pages/how-parallel-query-works.md): Source `doc/src/sgml/parallel.sgml#how-parallel-query-works`.
+- [When Can Parallel Query Be Used?](pages/when-can-parallel-query-be-used.md): Source `doc/src/sgml/parallel.sgml#when-can-parallel-query-be-used`.
+- [Parallel Plans](pages/parallel-plans.md): Source `doc/src/sgml/parallel.sgml#parallel-plans`.
+- [Parallel Safety](pages/parallel-safety.md): Source `doc/src/sgml/parallel.sgml#parallel-safety`.
+
+## Server Administration
+
+- [Server Administration](pages/admin.md): Source `doc/src/sgml/postgres.sgml#admin`.
+- [Installation from Binaries](pages/install-binaries.md): Source `doc/src/sgml/install-binaries.sgml#install-binaries`.
+- [Installation from Source Code](pages/installation.md): Source `doc/src/sgml/installation.sgml#installation`.
+- [Server Setup and Operation](pages/runtime.md): Source `doc/src/sgml/runtime.sgml#runtime`.
+- [Server Configuration](pages/runtime-config.md): Source `doc/src/sgml/config.sgml#runtime-config`.
+- [Client Authentication](pages/client-authentication.md): Source `doc/src/sgml/client-auth.sgml#client-authentication`.
+- [Database Roles](pages/user-manag.md): Source `doc/src/sgml/user-manag.sgml#user-manag`.
+- [Managing Databases](pages/managing-databases.md): Source `doc/src/sgml/manage-ag.sgml#managing-databases`.
+- [Localization](pages/charset.md): Source `doc/src/sgml/charset.sgml#charset`.
+- [Routine Database Maintenance Tasks](pages/maintenance.md): Source `doc/src/sgml/maintenance.sgml#maintenance`.
+- [Backup and Restore](pages/backup.md): Source `doc/src/sgml/backup.sgml#backup`.
+- [High Availability, Load Balancing, and Replication](pages/high-availability.md): Source `doc/src/sgml/high-availability.sgml#high-availability`.
+- [Monitoring Database Activity](pages/monitoring.md): Source `doc/src/sgml/monitoring.sgml#monitoring`.
+- [Reliability and the Write-Ahead Log](pages/wal.md): Source `doc/src/sgml/wal.sgml#wal`.
+- [Logical Replication](pages/logical-replication.md): Source `doc/src/sgml/logical-replication.sgml#logical-replication`.
+- [Just-in-Time Compilation (JIT)](pages/jit.md): Source `doc/src/sgml/jit.sgml#jit`.
+- [Regression Tests](pages/regress.md): Source `doc/src/sgml/regress.sgml#regress`.
+
+## Installation from Source Code
+
+- [Requirements](pages/install-requirements.md): Source `doc/src/sgml/installation.sgml#install-requirements`.
+- [Getting the Source](pages/install-getsource.md): Source `doc/src/sgml/installation.sgml#install-getsource`.
+- [Building and Installation with Autoconf and Make](pages/install-make.md): Source `doc/src/sgml/installation.sgml#install-make`.
+- [Building and Installation with Meson](pages/install-meson.md): Source `doc/src/sgml/installation.sgml#install-meson`.
+- [Post-Installation Setup](pages/install-post.md): Source `doc/src/sgml/installation.sgml#install-post`.
+- [Supported Platforms](pages/supported-platforms.md): Source `doc/src/sgml/installation.sgml#supported-platforms`.
+- [Platform-Specific Notes](pages/installation-platform-notes.md): Source `doc/src/sgml/installation.sgml#installation-platform-notes`.
+
+## Server Setup and Operation
+
+- [The PostgreSQL User Account](pages/postgres-user.md): Source `doc/src/sgml/runtime.sgml#postgres-user`.
+- [Creating a Database Cluster](pages/creating-cluster.md): Source `doc/src/sgml/runtime.sgml#creating-cluster`.
+- [Starting the Database Server](pages/server-start.md): Source `doc/src/sgml/runtime.sgml#server-start`.
+- [Managing Kernel Resources](pages/kernel-resources.md): Source `doc/src/sgml/runtime.sgml#kernel-resources`.
+- [Shutting Down the Server](pages/server-shutdown.md): Source `doc/src/sgml/runtime.sgml#server-shutdown`.
+- [Upgrading a PostgreSQL Cluster](pages/upgrading.md): Source `doc/src/sgml/runtime.sgml#upgrading`.
+- [Preventing Server Spoofing](pages/preventing-server-spoofing.md): Source `doc/src/sgml/runtime.sgml#preventing-server-spoofing`.
+- [Encryption Options](pages/encryption-options.md): Source `doc/src/sgml/runtime.sgml#encryption-options`.
+- [Secure TCP/IP Connections with SSL](pages/ssl-tcp.md): Source `doc/src/sgml/runtime.sgml#ssl-tcp`.
+- [Secure TCP/IP Connections with GSSAPI Encryption](pages/gssapi-enc.md): Source `doc/src/sgml/runtime.sgml#gssapi-enc`.
+- [Secure TCP/IP Connections with SSH Tunnels](pages/ssh-tunnels.md): Source `doc/src/sgml/runtime.sgml#ssh-tunnels`.
+- [Registering Event Log on Windows](pages/event-log-registration.md): Source `doc/src/sgml/runtime.sgml#event-log-registration`.
+
+## Server Configuration
+
+- [Setting Parameters](pages/config-setting.md): Source `doc/src/sgml/config.sgml#config-setting`.
+- [File Locations](pages/runtime-config-file-locations.md): Source `doc/src/sgml/config.sgml#runtime-config-file-locations`.
+- [Connections and Authentication](pages/runtime-config-connection.md): Source `doc/src/sgml/config.sgml#runtime-config-connection`.
+- [Resource Consumption](pages/runtime-config-resource.md): Source `doc/src/sgml/config.sgml#runtime-config-resource`.
+- [Write Ahead Log](pages/runtime-config-wal.md): Source `doc/src/sgml/config.sgml#runtime-config-wal`.
+- [Replication](pages/runtime-config-replication.md): Source `doc/src/sgml/config.sgml#runtime-config-replication`.
+- [Query Planning](pages/runtime-config-query.md): Source `doc/src/sgml/config.sgml#runtime-config-query`.
+- [Error Reporting and Logging](pages/runtime-config-logging.md): Source `doc/src/sgml/config.sgml#runtime-config-logging`.
+- [Run-time Statistics](pages/runtime-config-statistics.md): Source `doc/src/sgml/config.sgml#runtime-config-statistics`.
+- [Vacuuming](pages/runtime-config-vacuum.md): Source `doc/src/sgml/config.sgml#runtime-config-vacuum`.
+- [Client Connection Defaults](pages/runtime-config-client.md): Source `doc/src/sgml/config.sgml#runtime-config-client`.
+- [Lock Management](pages/runtime-config-locks.md): Source `doc/src/sgml/config.sgml#runtime-config-locks`.
+- [Version and Platform Compatibility](pages/runtime-config-compatible.md): Source `doc/src/sgml/config.sgml#runtime-config-compatible`.
+- [Error Handling](pages/runtime-config-error-handling.md): Source `doc/src/sgml/config.sgml#runtime-config-error-handling`.
+- [Preset Options](pages/runtime-config-preset.md): Source `doc/src/sgml/config.sgml#runtime-config-preset`.
+- [Customized Options](pages/runtime-config-custom.md): Source `doc/src/sgml/config.sgml#runtime-config-custom`.
+- [Developer Options](pages/runtime-config-developer.md): Source `doc/src/sgml/config.sgml#runtime-config-developer`.
+- [Short Options](pages/runtime-config-short.md): Source `doc/src/sgml/config.sgml#runtime-config-short`.
+
+## Client Authentication
+
+- [The pg_hba.conf File](pages/auth-pg-hba-conf.md): Source `doc/src/sgml/client-auth.sgml#auth-pg-hba-conf`.
+- [User Name Maps](pages/auth-username-maps.md): Source `doc/src/sgml/client-auth.sgml#auth-username-maps`.
+- [Authentication Methods](pages/auth-methods.md): Source `doc/src/sgml/client-auth.sgml#auth-methods`.
+- [Trust Authentication](pages/auth-trust.md): Source `doc/src/sgml/client-auth.sgml#auth-trust`.
+- [Password Authentication](pages/auth-password.md): Source `doc/src/sgml/client-auth.sgml#auth-password`.
+- [GSSAPI Authentication](pages/gssapi-auth.md): Source `doc/src/sgml/client-auth.sgml#gssapi-auth`.
+- [SSPI Authentication](pages/sspi-auth.md): Source `doc/src/sgml/client-auth.sgml#sspi-auth`.
+- [Ident Authentication](pages/auth-ident.md): Source `doc/src/sgml/client-auth.sgml#auth-ident`.
+- [Peer Authentication](pages/auth-peer.md): Source `doc/src/sgml/client-auth.sgml#auth-peer`.
+- [LDAP Authentication](pages/auth-ldap.md): Source `doc/src/sgml/client-auth.sgml#auth-ldap`.
+- [RADIUS Authentication](pages/auth-radius.md): Source `doc/src/sgml/client-auth.sgml#auth-radius`.
+- [Certificate Authentication](pages/auth-cert.md): Source `doc/src/sgml/client-auth.sgml#auth-cert`.
+- [PAM Authentication](pages/auth-pam.md): Source `doc/src/sgml/client-auth.sgml#auth-pam`.
+- [BSD Authentication](pages/auth-bsd.md): Source `doc/src/sgml/client-auth.sgml#auth-bsd`.
+- [OAuth Authorization/Authentication](pages/auth-oauth.md): Source `doc/src/sgml/client-auth.sgml#auth-oauth`.
+- [Authentication Problems](pages/client-authentication-problems.md): Source `doc/src/sgml/client-auth.sgml#client-authentication-problems`.
+
+## Database Roles
+
+- [Database Roles](pages/database-roles.md): Source `doc/src/sgml/user-manag.sgml#database-roles`.
+- [Role Attributes](pages/role-attributes.md): Source `doc/src/sgml/user-manag.sgml#role-attributes`.
+- [Role Membership](pages/role-membership.md): Source `doc/src/sgml/user-manag.sgml#role-membership`.
+- [Dropping Roles](pages/role-removal.md): Source `doc/src/sgml/user-manag.sgml#role-removal`.
+- [Predefined Roles](pages/predefined-roles.md): Source `doc/src/sgml/user-manag.sgml#predefined-roles`.
+- [Function Security](pages/perm-functions.md): Source `doc/src/sgml/user-manag.sgml#perm-functions`.
+
+## Managing Databases
+
+- [Overview](pages/manage-ag-overview.md): Source `doc/src/sgml/manage-ag.sgml#manage-ag-overview`.
+- [Creating a Database](pages/manage-ag-createdb.md): Source `doc/src/sgml/manage-ag.sgml#manage-ag-createdb`.
+- [Template Databases](pages/manage-ag-templatedbs.md): Source `doc/src/sgml/manage-ag.sgml#manage-ag-templatedbs`.
+- [Database Configuration](pages/manage-ag-config.md): Source `doc/src/sgml/manage-ag.sgml#manage-ag-config`.
+- [Destroying a Database](pages/manage-ag-dropdb.md): Source `doc/src/sgml/manage-ag.sgml#manage-ag-dropdb`.
+- [Tablespaces](pages/manage-ag-tablespaces.md): Source `doc/src/sgml/manage-ag.sgml#manage-ag-tablespaces`.
+
+## Localization
+
+- [Locale Support](pages/locale.md): Source `doc/src/sgml/charset.sgml#locale`.
+- [Collation Support](pages/collation.md): Source `doc/src/sgml/charset.sgml#collation`.
+- [Character Set Support](pages/multibyte.md): Source `doc/src/sgml/charset.sgml#multibyte`.
+
+## Routine Database Maintenance Tasks
+
+- [Routine Vacuuming](pages/routine-vacuuming.md): Source `doc/src/sgml/maintenance.sgml#routine-vacuuming`.
+- [Routine Reindexing](pages/routine-reindex.md): Source `doc/src/sgml/maintenance.sgml#routine-reindex`.
+- [Log File Maintenance](pages/logfile-maintenance.md): Source `doc/src/sgml/maintenance.sgml#logfile-maintenance`.
+
+## Backup and Restore
+
+- [SQL Dump](pages/backup-dump.md): Source `doc/src/sgml/backup.sgml#backup-dump`.
+- [File System Level Backup](pages/backup-file.md): Source `doc/src/sgml/backup.sgml#backup-file`.
+- [Continuous Archiving and Point-in-Time Recovery (PITR)](pages/continuous-archiving.md): Source `doc/src/sgml/backup.sgml#continuous-archiving`.
+
+## High Availability, Load Balancing, and Replication
+
+- [Comparison of Different Solutions](pages/different-replication-solutions.md): Source `doc/src/sgml/high-availability.sgml#different-replication-solutions`.
+- [Log-Shipping Standby Servers](pages/warm-standby.md): Source `doc/src/sgml/high-availability.sgml#warm-standby`.
+- [Failover](pages/warm-standby-failover.md): Source `doc/src/sgml/high-availability.sgml#warm-standby-failover`.
+- [Hot Standby](pages/hot-standby.md): Source `doc/src/sgml/high-availability.sgml#hot-standby`.
+
+## Monitoring Database Activity
+
+- [Standard Unix Tools](pages/monitoring-ps.md): Source `doc/src/sgml/monitoring.sgml#monitoring-ps`.
+- [The Cumulative Statistics System](pages/monitoring-stats.md): Source `doc/src/sgml/monitoring.sgml#monitoring-stats`.
+- [Viewing Locks](pages/monitoring-locks.md): Source `doc/src/sgml/monitoring.sgml#monitoring-locks`.
+- [Progress Reporting](pages/progress-reporting.md): Source `doc/src/sgml/monitoring.sgml#progress-reporting`.
+- [Dynamic Tracing](pages/dynamic-trace.md): Source `doc/src/sgml/monitoring.sgml#dynamic-trace`.
+- [Monitoring Disk Usage](pages/diskusage.md): Source `doc/src/sgml/monitoring.sgml#diskusage`.
+
+## Reliability and the Write-Ahead Log
+
+- [Reliability](pages/wal-reliability.md): Source `doc/src/sgml/wal.sgml#wal-reliability`.
+- [Data Checksums](pages/checksums.md): Source `doc/src/sgml/wal.sgml#checksums`.
+- [Write-Ahead Logging (WAL)](pages/wal-intro.md): Source `doc/src/sgml/wal.sgml#wal-intro`.
+- [Asynchronous Commit](pages/wal-async-commit.md): Source `doc/src/sgml/wal.sgml#wal-async-commit`.
+- [WAL Configuration](pages/wal-configuration.md): Source `doc/src/sgml/wal.sgml#wal-configuration`.
+- [WAL Internals](pages/wal-internals.md): Source `doc/src/sgml/wal.sgml#wal-internals`.
+
+## Logical Replication
+
+- [Publication](pages/logical-replication-publication.md): Source `doc/src/sgml/logical-replication.sgml#logical-replication-publication`.
+- [Subscription](pages/logical-replication-subscription.md): Source `doc/src/sgml/logical-replication.sgml#logical-replication-subscription`.
+- [Logical Replication Failover](pages/logical-replication-failover.md): Source `doc/src/sgml/logical-replication.sgml#logical-replication-failover`.
+- [Row Filters](pages/logical-replication-row-filter.md): Source `doc/src/sgml/logical-replication.sgml#logical-replication-row-filter`.
+- [Column Lists](pages/logical-replication-col-lists.md): Source `doc/src/sgml/logical-replication.sgml#logical-replication-col-lists`.
+- [Generated Column Replication](pages/logical-replication-gencols.md): Source `doc/src/sgml/logical-replication.sgml#logical-replication-gencols`.
+- [Conflicts](pages/logical-replication-conflicts.md): Source `doc/src/sgml/logical-replication.sgml#logical-replication-conflicts`.
+- [Restrictions](pages/logical-replication-restrictions.md): Source `doc/src/sgml/logical-replication.sgml#logical-replication-restrictions`.
+- [Architecture](pages/logical-replication-architecture.md): Source `doc/src/sgml/logical-replication.sgml#logical-replication-architecture`.
+- [Monitoring](pages/logical-replication-monitoring.md): Source `doc/src/sgml/logical-replication.sgml#logical-replication-monitoring`.
+- [Security](pages/logical-replication-security.md): Source `doc/src/sgml/logical-replication.sgml#logical-replication-security`.
+- [Configuration Settings](pages/logical-replication-config.md): Source `doc/src/sgml/logical-replication.sgml#logical-replication-config`.
+- [Upgrade](pages/logical-replication-upgrade.md): Source `doc/src/sgml/logical-replication.sgml#logical-replication-upgrade`.
+- [Quick Setup](pages/logical-replication-quick-setup.md): Source `doc/src/sgml/logical-replication.sgml#logical-replication-quick-setup`.
+
+## Just-in-Time Compilation (JIT)
+
+- [What Is JIT compilation?](pages/jit-reason.md): Source `doc/src/sgml/jit.sgml#jit-reason`.
+- [When to JIT?](pages/jit-decision.md): Source `doc/src/sgml/jit.sgml#jit-decision`.
+- [Configuration](pages/jit-configuration.md): Source `doc/src/sgml/jit.sgml#jit-configuration`.
+- [Extensibility](pages/jit-extensibility.md): Source `doc/src/sgml/jit.sgml#jit-extensibility`.
+
+## Regression Tests
+
+- [Running the Tests](pages/regress-run.md): Source `doc/src/sgml/regress.sgml#regress-run`.
+- [Test Evaluation](pages/regress-evaluation.md): Source `doc/src/sgml/regress.sgml#regress-evaluation`.
+- [Variant Comparison Files](pages/regress-variant.md): Source `doc/src/sgml/regress.sgml#regress-variant`.
+- [TAP Tests](pages/regress-tap.md): Source `doc/src/sgml/regress.sgml#regress-tap`.
+- [Test Coverage Examination](pages/regress-coverage.md): Source `doc/src/sgml/regress.sgml#regress-coverage`.
+
+## Client Interfaces
+
+- [Client Interfaces](pages/client-interfaces.md): Source `doc/src/sgml/postgres.sgml#client-interfaces`.
+- [libpq — C Library](pages/libpq.md): Source `doc/src/sgml/libpq.sgml#libpq`.
+- [Large Objects](pages/largeobjects.md): Source `doc/src/sgml/lobj.sgml#largeobjects`.
+- [ECPG — Embedded SQL in C](pages/ecpg.md): Source `doc/src/sgml/ecpg.sgml#ecpg`.
+- [The Information Schema](pages/information-schema.md): Source `doc/src/sgml/information_schema.sgml#information-schema`.
+
+## libpq — C Library
+
+- [Database Connection Control Functions](pages/libpq-connect.md): Source `doc/src/sgml/libpq.sgml#libpq-connect`.
+- [Connection Status Functions](pages/libpq-status.md): Source `doc/src/sgml/libpq.sgml#libpq-status`.
+- [Command Execution Functions](pages/libpq-exec.md): Source `doc/src/sgml/libpq.sgml#libpq-exec`.
+- [Asynchronous Command Processing](pages/libpq-async.md): Source `doc/src/sgml/libpq.sgml#libpq-async`.
+- [Pipeline Mode](pages/libpq-pipeline-mode.md): Source `doc/src/sgml/libpq.sgml#libpq-pipeline-mode`.
+- [Retrieving Query Results in Chunks](pages/libpq-single-row-mode.md): Source `doc/src/sgml/libpq.sgml#libpq-single-row-mode`.
+- [Canceling Queries in Progress](pages/libpq-cancel.md): Source `doc/src/sgml/libpq.sgml#libpq-cancel`.
+- [The Fast-Path Interface](pages/libpq-fastpath.md): Source `doc/src/sgml/libpq.sgml#libpq-fastpath`.
+- [Asynchronous Notification](pages/libpq-notify.md): Source `doc/src/sgml/libpq.sgml#libpq-notify`.
+- [Functions Associated with the COPY Command](pages/libpq-copy.md): Source `doc/src/sgml/libpq.sgml#libpq-copy`.
+- [Control Functions](pages/libpq-control.md): Source `doc/src/sgml/libpq.sgml#libpq-control`.
+- [Miscellaneous Functions](pages/libpq-misc.md): Source `doc/src/sgml/libpq.sgml#libpq-misc`.
+- [Notice Processing](pages/libpq-notice-processing.md): Source `doc/src/sgml/libpq.sgml#libpq-notice-processing`.
+- [Event System](pages/libpq-events.md): Source `doc/src/sgml/libpq.sgml#libpq-events`.
+- [Environment Variables](pages/libpq-envars.md): Source `doc/src/sgml/libpq.sgml#libpq-envars`.
+- [The Password File](pages/libpq-pgpass.md): Source `doc/src/sgml/libpq.sgml#libpq-pgpass`.
+- [The Connection Service File](pages/libpq-pgservice.md): Source `doc/src/sgml/libpq.sgml#libpq-pgservice`.
+- [LDAP Lookup of Connection Parameters](pages/libpq-ldap.md): Source `doc/src/sgml/libpq.sgml#libpq-ldap`.
+- [SSL Support](pages/libpq-ssl.md): Source `doc/src/sgml/libpq.sgml#libpq-ssl`.
+- [OAuth Support](pages/libpq-oauth.md): Source `doc/src/sgml/libpq.sgml#libpq-oauth`.
+- [Behavior in Threaded Programs](pages/libpq-threading.md): Source `doc/src/sgml/libpq.sgml#libpq-threading`.
+- [Building libpq Programs](pages/libpq-build.md): Source `doc/src/sgml/libpq.sgml#libpq-build`.
+- [Example Programs](pages/libpq-example.md): Source `doc/src/sgml/libpq.sgml#libpq-example`.
+
+## Large Objects
+
+- [Introduction](pages/lo-intro.md): Source `doc/src/sgml/lobj.sgml#lo-intro`.
+- [Implementation Features](pages/lo-implementation.md): Source `doc/src/sgml/lobj.sgml#lo-implementation`.
+- [Client Interfaces](pages/lo-interfaces.md): Source `doc/src/sgml/lobj.sgml#lo-interfaces`.
+- [Server-Side Functions](pages/lo-funcs.md): Source `doc/src/sgml/lobj.sgml#lo-funcs`.
+- [Example Program](pages/lo-examplesect.md): Source `doc/src/sgml/lobj.sgml#lo-examplesect`.
+
+## ECPG — Embedded SQL in C
+
+- [The Concept](pages/ecpg-concept.md): Source `doc/src/sgml/ecpg.sgml#ecpg-concept`.
+- [Managing Database Connections](pages/ecpg-connect.md): Source `doc/src/sgml/ecpg.sgml#ecpg-connect`.
+- [Running SQL Commands](pages/ecpg-commands.md): Source `doc/src/sgml/ecpg.sgml#ecpg-commands`.
+- [Using Host Variables](pages/ecpg-variables.md): Source `doc/src/sgml/ecpg.sgml#ecpg-variables`.
+- [Dynamic SQL](pages/ecpg-dynamic.md): Source `doc/src/sgml/ecpg.sgml#ecpg-dynamic`.
+- [pgtypes Library](pages/ecpg-pgtypes.md): Source `doc/src/sgml/ecpg.sgml#ecpg-pgtypes`.
+- [Using Descriptor Areas](pages/ecpg-descriptors.md): Source `doc/src/sgml/ecpg.sgml#ecpg-descriptors`.
+- [Error Handling](pages/ecpg-errors.md): Source `doc/src/sgml/ecpg.sgml#ecpg-errors`.
+- [Preprocessor Directives](pages/ecpg-preproc.md): Source `doc/src/sgml/ecpg.sgml#ecpg-preproc`.
+- [Processing Embedded SQL Programs](pages/ecpg-process.md): Source `doc/src/sgml/ecpg.sgml#ecpg-process`.
+- [Library Functions](pages/ecpg-library.md): Source `doc/src/sgml/ecpg.sgml#ecpg-library`.
+- [Large Objects](pages/ecpg-lo.md): Source `doc/src/sgml/ecpg.sgml#ecpg-lo`.
+- [C++ Applications](pages/ecpg-cpp.md): Source `doc/src/sgml/ecpg.sgml#ecpg-cpp`.
+- [Embedded SQL Commands](pages/ecpg-sql-commands.md): Source `doc/src/sgml/ecpg.sgml#ecpg-sql-commands`.
+- [Informix Compatibility Mode](pages/ecpg-informix-compat.md): Source `doc/src/sgml/ecpg.sgml#ecpg-informix-compat`.
+- [Oracle Compatibility Mode](pages/ecpg-oracle-compat.md): Source `doc/src/sgml/ecpg.sgml#ecpg-oracle-compat`.
+- [Internals](pages/ecpg-develop.md): Source `doc/src/sgml/ecpg.sgml#ecpg-develop`.
+
+## Embedded SQL Commands
+
+- [ALLOCATE DESCRIPTOR](pages/ecpg-sql-allocate-descriptor.md): Source `doc/src/sgml/ecpg.sgml#ecpg-sql-allocate-descriptor`.
+- [CONNECT](pages/ecpg-sql-connect.md): Source `doc/src/sgml/ecpg.sgml#ecpg-sql-connect`.
+- [DEALLOCATE DESCRIPTOR](pages/ecpg-sql-deallocate-descriptor.md): Source `doc/src/sgml/ecpg.sgml#ecpg-sql-deallocate-descriptor`.
+- [DECLARE](pages/ecpg-sql-declare.md): Source `doc/src/sgml/ecpg.sgml#ecpg-sql-declare`.
+- [DECLARE STATEMENT](pages/ecpg-sql-declare-statement.md): Source `doc/src/sgml/ecpg.sgml#ecpg-sql-declare-statement`.
+- [DESCRIBE](pages/ecpg-sql-describe.md): Source `doc/src/sgml/ecpg.sgml#ecpg-sql-describe`.
+- [DISCONNECT](pages/ecpg-sql-disconnect.md): Source `doc/src/sgml/ecpg.sgml#ecpg-sql-disconnect`.
+- [EXECUTE IMMEDIATE](pages/ecpg-sql-execute-immediate.md): Source `doc/src/sgml/ecpg.sgml#ecpg-sql-execute-immediate`.
+- [GET DESCRIPTOR](pages/ecpg-sql-get-descriptor.md): Source `doc/src/sgml/ecpg.sgml#ecpg-sql-get-descriptor`.
+- [OPEN](pages/ecpg-sql-open.md): Source `doc/src/sgml/ecpg.sgml#ecpg-sql-open`.
+- [PREPARE](pages/ecpg-sql-prepare.md): Source `doc/src/sgml/ecpg.sgml#ecpg-sql-prepare`.
+- [SET AUTOCOMMIT](pages/ecpg-sql-set-autocommit.md): Source `doc/src/sgml/ecpg.sgml#ecpg-sql-set-autocommit`.
+- [SET CONNECTION](pages/ecpg-sql-set-connection.md): Source `doc/src/sgml/ecpg.sgml#ecpg-sql-set-connection`.
+- [SET DESCRIPTOR](pages/ecpg-sql-set-descriptor.md): Source `doc/src/sgml/ecpg.sgml#ecpg-sql-set-descriptor`.
+- [TYPE](pages/ecpg-sql-type.md): Source `doc/src/sgml/ecpg.sgml#ecpg-sql-type`.
+- [VAR](pages/ecpg-sql-var.md): Source `doc/src/sgml/ecpg.sgml#ecpg-sql-var`.
+- [WHENEVER](pages/ecpg-sql-whenever.md): Source `doc/src/sgml/ecpg.sgml#ecpg-sql-whenever`.
+
+## The Information Schema
+
+- [The Schema](pages/infoschema-schema.md): Source `doc/src/sgml/information_schema.sgml#infoschema-schema`.
+- [Data Types](pages/infoschema-datatypes.md): Source `doc/src/sgml/information_schema.sgml#infoschema-datatypes`.
+- [information_schema_catalog_name](pages/infoschema-information-schema-catalog-name.md): Source `doc/src/sgml/information_schema.sgml#infoschema-information-schema-catalog-name`.
+- [administrable_role_&#x200B;authorizations](pages/infoschema-administrable-role-authorizations.md): Source `doc/src/sgml/information_schema.sgml#infoschema-administrable-role-authorizations`.
+- [applicable_roles](pages/infoschema-applicable-roles.md): Source `doc/src/sgml/information_schema.sgml#infoschema-applicable-roles`.
+- [attributes](pages/infoschema-attributes.md): Source `doc/src/sgml/information_schema.sgml#infoschema-attributes`.
+- [character_sets](pages/infoschema-character-sets.md): Source `doc/src/sgml/information_schema.sgml#infoschema-character-sets`.
+- [check_constraint_routine_usage](pages/infoschema-check-constraint-routine-usage.md): Source `doc/src/sgml/information_schema.sgml#infoschema-check-constraint-routine-usage`.
+- [check_constraints](pages/infoschema-check-constraints.md): Source `doc/src/sgml/information_schema.sgml#infoschema-check-constraints`.
+- [collations](pages/infoschema-collations.md): Source `doc/src/sgml/information_schema.sgml#infoschema-collations`.
+- [collation_character_set_&#x200B;applicability](pages/infoschema-collation-character-set-applicab.md): Source `doc/src/sgml/information_schema.sgml#infoschema-collation-character-set-applicab`.
+- [column_column_usage](pages/infoschema-column-column-usage.md): Source `doc/src/sgml/information_schema.sgml#infoschema-column-column-usage`.
+- [column_domain_usage](pages/infoschema-column-domain-usage.md): Source `doc/src/sgml/information_schema.sgml#infoschema-column-domain-usage`.
+- [column_options](pages/infoschema-column-options.md): Source `doc/src/sgml/information_schema.sgml#infoschema-column-options`.
+- [column_privileges](pages/infoschema-column-privileges.md): Source `doc/src/sgml/information_schema.sgml#infoschema-column-privileges`.
+- [column_udt_usage](pages/infoschema-column-udt-usage.md): Source `doc/src/sgml/information_schema.sgml#infoschema-column-udt-usage`.
+- [columns](pages/infoschema-columns.md): Source `doc/src/sgml/information_schema.sgml#infoschema-columns`.
+- [constraint_column_usage](pages/infoschema-constraint-column-usage.md): Source `doc/src/sgml/information_schema.sgml#infoschema-constraint-column-usage`.
+- [constraint_table_usage](pages/infoschema-constraint-table-usage.md): Source `doc/src/sgml/information_schema.sgml#infoschema-constraint-table-usage`.
+- [data_type_privileges](pages/infoschema-data-type-privileges.md): Source `doc/src/sgml/information_schema.sgml#infoschema-data-type-privileges`.
+- [domain_constraints](pages/infoschema-domain-constraints.md): Source `doc/src/sgml/information_schema.sgml#infoschema-domain-constraints`.
+- [domain_udt_usage](pages/infoschema-domain-udt-usage.md): Source `doc/src/sgml/information_schema.sgml#infoschema-domain-udt-usage`.
+- [domains](pages/infoschema-domains.md): Source `doc/src/sgml/information_schema.sgml#infoschema-domains`.
+- [element_types](pages/infoschema-element-types.md): Source `doc/src/sgml/information_schema.sgml#infoschema-element-types`.
+- [enabled_roles](pages/infoschema-enabled-roles.md): Source `doc/src/sgml/information_schema.sgml#infoschema-enabled-roles`.
+- [foreign_data_wrapper_options](pages/infoschema-foreign-data-wrapper-options.md): Source `doc/src/sgml/information_schema.sgml#infoschema-foreign-data-wrapper-options`.
+- [foreign_data_wrappers](pages/infoschema-foreign-data-wrappers.md): Source `doc/src/sgml/information_schema.sgml#infoschema-foreign-data-wrappers`.
+- [foreign_server_options](pages/infoschema-foreign-server-options.md): Source `doc/src/sgml/information_schema.sgml#infoschema-foreign-server-options`.
+- [foreign_servers](pages/infoschema-foreign-servers.md): Source `doc/src/sgml/information_schema.sgml#infoschema-foreign-servers`.
+- [foreign_table_options](pages/infoschema-foreign-table-options.md): Source `doc/src/sgml/information_schema.sgml#infoschema-foreign-table-options`.
+- [foreign_tables](pages/infoschema-foreign-tables.md): Source `doc/src/sgml/information_schema.sgml#infoschema-foreign-tables`.
+- [key_column_usage](pages/infoschema-key-column-usage.md): Source `doc/src/sgml/information_schema.sgml#infoschema-key-column-usage`.
+- [parameters](pages/infoschema-parameters.md): Source `doc/src/sgml/information_schema.sgml#infoschema-parameters`.
+- [referential_constraints](pages/infoschema-referential-constraints.md): Source `doc/src/sgml/information_schema.sgml#infoschema-referential-constraints`.
+- [role_column_grants](pages/infoschema-role-column-grants.md): Source `doc/src/sgml/information_schema.sgml#infoschema-role-column-grants`.
+- [role_routine_grants](pages/infoschema-role-routine-grants.md): Source `doc/src/sgml/information_schema.sgml#infoschema-role-routine-grants`.
+- [role_table_grants](pages/infoschema-role-table-grants.md): Source `doc/src/sgml/information_schema.sgml#infoschema-role-table-grants`.
+- [role_udt_grants](pages/infoschema-role-udt-grants.md): Source `doc/src/sgml/information_schema.sgml#infoschema-role-udt-grants`.
+- [role_usage_grants](pages/infoschema-role-usage-grants.md): Source `doc/src/sgml/information_schema.sgml#infoschema-role-usage-grants`.
+- [routine_column_usage](pages/infoschema-routine-column-usage.md): Source `doc/src/sgml/information_schema.sgml#infoschema-routine-column-usage`.
+- [routine_privileges](pages/infoschema-routine-privileges.md): Source `doc/src/sgml/information_schema.sgml#infoschema-routine-privileges`.
+- [routine_routine_usage](pages/infoschema-routine-routine-usage.md): Source `doc/src/sgml/information_schema.sgml#infoschema-routine-routine-usage`.
+- [routine_sequence_usage](pages/infoschema-routine-sequence-usage.md): Source `doc/src/sgml/information_schema.sgml#infoschema-routine-sequence-usage`.
+- [routine_table_usage](pages/infoschema-routine-table-usage.md): Source `doc/src/sgml/information_schema.sgml#infoschema-routine-table-usage`.
+- [routines](pages/infoschema-routines.md): Source `doc/src/sgml/information_schema.sgml#infoschema-routines`.
+- [schemata](pages/infoschema-schemata.md): Source `doc/src/sgml/information_schema.sgml#infoschema-schemata`.
+- [sequences](pages/infoschema-sequences.md): Source `doc/src/sgml/information_schema.sgml#infoschema-sequences`.
+- [sql_features](pages/infoschema-sql-features.md): Source `doc/src/sgml/information_schema.sgml#infoschema-sql-features`.
+- [sql_implementation_info](pages/infoschema-sql-implementation-info.md): Source `doc/src/sgml/information_schema.sgml#infoschema-sql-implementation-info`.
+- [sql_parts](pages/infoschema-sql-parts.md): Source `doc/src/sgml/information_schema.sgml#infoschema-sql-parts`.
+- [sql_sizing](pages/infoschema-sql-sizing.md): Source `doc/src/sgml/information_schema.sgml#infoschema-sql-sizing`.
+- [table_constraints](pages/infoschema-table-constraints.md): Source `doc/src/sgml/information_schema.sgml#infoschema-table-constraints`.
+- [table_privileges](pages/infoschema-table-privileges.md): Source `doc/src/sgml/information_schema.sgml#infoschema-table-privileges`.
+- [tables](pages/infoschema-tables.md): Source `doc/src/sgml/information_schema.sgml#infoschema-tables`.
+- [transforms](pages/infoschema-transforms.md): Source `doc/src/sgml/information_schema.sgml#infoschema-transforms`.
+- [triggered_update_columns](pages/infoschema-triggered-update-columns.md): Source `doc/src/sgml/information_schema.sgml#infoschema-triggered-update-columns`.
+- [triggers](pages/infoschema-triggers.md): Source `doc/src/sgml/information_schema.sgml#infoschema-triggers`.
+- [udt_privileges](pages/infoschema-udt-privileges.md): Source `doc/src/sgml/information_schema.sgml#infoschema-udt-privileges`.
+- [usage_privileges](pages/infoschema-usage-privileges.md): Source `doc/src/sgml/information_schema.sgml#infoschema-usage-privileges`.
+- [user_defined_types](pages/infoschema-user-defined-types.md): Source `doc/src/sgml/information_schema.sgml#infoschema-user-defined-types`.
+- [user_mapping_options](pages/infoschema-user-mapping-options.md): Source `doc/src/sgml/information_schema.sgml#infoschema-user-mapping-options`.
+- [user_mappings](pages/infoschema-user-mappings.md): Source `doc/src/sgml/information_schema.sgml#infoschema-user-mappings`.
+- [view_column_usage](pages/infoschema-view-column-usage.md): Source `doc/src/sgml/information_schema.sgml#infoschema-view-column-usage`.
+- [view_routine_usage](pages/infoschema-view-routine-usage.md): Source `doc/src/sgml/information_schema.sgml#infoschema-view-routine-usage`.
+- [view_table_usage](pages/infoschema-view-table-usage.md): Source `doc/src/sgml/information_schema.sgml#infoschema-view-table-usage`.
+- [views](pages/infoschema-views.md): Source `doc/src/sgml/information_schema.sgml#infoschema-views`.
+
+## Server Programming
+
+- [Server Programming](pages/server-programming.md): Source `doc/src/sgml/postgres.sgml#server-programming`.
+- [Extending SQL](pages/extend.md): Source `doc/src/sgml/extend.sgml#extend`.
+- [Triggers](pages/triggers.md): Source `doc/src/sgml/trigger.sgml#triggers`.
+- [Event Triggers](pages/event-triggers.md): Source `doc/src/sgml/event-trigger.sgml#event-triggers`.
+- [The Rule System](pages/rules.md): Source `doc/src/sgml/rules.sgml#rules`.
+- [Procedural Languages](pages/xplang.md): Source `doc/src/sgml/xplang.sgml#xplang`.
+- [PL/pgSQL — SQL Procedural Language](pages/plpgsql.md): Source `doc/src/sgml/plpgsql.sgml#plpgsql`.
+- [PL/Tcl — Tcl Procedural Language](pages/pltcl.md): Source `doc/src/sgml/pltcl.sgml#pltcl`.
+- [PL/Perl — Perl Procedural Language](pages/plperl.md): Source `doc/src/sgml/plperl.sgml#plperl`.
+- [PL/Python — Python Procedural Language](pages/plpython.md): Source `doc/src/sgml/plpython.sgml#plpython`.
+- [Server Programming Interface](pages/spi.md): Source `doc/src/sgml/spi.sgml#spi`.
+- [Background Worker Processes](pages/bgworker.md): Source `doc/src/sgml/bgworker.sgml#bgworker`.
+- [Logical Decoding](pages/logicaldecoding.md): Source `doc/src/sgml/logicaldecoding.sgml#logicaldecoding`.
+- [Replication Progress Tracking](pages/replication-origins.md): Source `doc/src/sgml/replication-origins.sgml#replication-origins`.
+- [Archive Modules](pages/archive-modules.md): Source `doc/src/sgml/archive-modules.sgml#archive-modules`.
+- [OAuth Validator Modules](pages/oauth-validators.md): Source `doc/src/sgml/oauth-validators.sgml#oauth-validators`.
+
+## Extending SQL
+
+- [How Extensibility Works](pages/extend-how.md): Source `doc/src/sgml/extend.sgml#extend-how`.
+- [The PostgreSQL Type System](pages/extend-type-system.md): Source `doc/src/sgml/extend.sgml#extend-type-system`.
+- [User-Defined Functions](pages/xfunc.md): Source `doc/src/sgml/xfunc.sgml#xfunc`.
+- [User-Defined Procedures](pages/xproc.md): Source `doc/src/sgml/xfunc.sgml#xproc`.
+- [Query Language (SQL) Functions](pages/xfunc-sql.md): Source `doc/src/sgml/xfunc.sgml#xfunc-sql`.
+- [Function Overloading](pages/xfunc-overload.md): Source `doc/src/sgml/xfunc.sgml#xfunc-overload`.
+- [Function Volatility Categories](pages/xfunc-volatility.md): Source `doc/src/sgml/xfunc.sgml#xfunc-volatility`.
+- [Procedural Language Functions](pages/xfunc-pl.md): Source `doc/src/sgml/xfunc.sgml#xfunc-pl`.
+- [Internal Functions](pages/xfunc-internal.md): Source `doc/src/sgml/xfunc.sgml#xfunc-internal`.
+- [C-Language Functions](pages/xfunc-c.md): Source `doc/src/sgml/xfunc.sgml#xfunc-c`.
+- [Function Optimization Information](pages/xfunc-optimization.md): Source `doc/src/sgml/xfunc.sgml#xfunc-optimization`.
+- [User-Defined Aggregates](pages/xaggr.md): Source `doc/src/sgml/xaggr.sgml#xaggr`.
+- [User-Defined Types](pages/xtypes.md): Source `doc/src/sgml/xtypes.sgml#xtypes`.
+- [User-Defined Operators](pages/xoper.md): Source `doc/src/sgml/xoper.sgml#xoper`.
+- [Operator Optimization Information](pages/xoper-optimization.md): Source `doc/src/sgml/xoper.sgml#xoper-optimization`.
+- [Interfacing Extensions to Indexes](pages/xindex.md): Source `doc/src/sgml/xindex.sgml#xindex`.
+- [Packaging Related Objects into an Extension](pages/extend-extensions.md): Source `doc/src/sgml/extend.sgml#extend-extensions`.
+- [Extension Building Infrastructure](pages/extend-pgxs.md): Source `doc/src/sgml/extend.sgml#extend-pgxs`.
+
+## Triggers
+
+- [Overview of Trigger Behavior](pages/trigger-definition.md): Source `doc/src/sgml/trigger.sgml#trigger-definition`.
+- [Visibility of Data Changes](pages/trigger-datachanges.md): Source `doc/src/sgml/trigger.sgml#trigger-datachanges`.
+- [Writing Trigger Functions in C](pages/trigger-interface.md): Source `doc/src/sgml/trigger.sgml#trigger-interface`.
+- [A Complete Trigger Example](pages/trigger-example.md): Source `doc/src/sgml/trigger.sgml#trigger-example`.
+
+## Event Triggers
+
+- [Overview of Event Trigger Behavior](pages/event-trigger-definition.md): Source `doc/src/sgml/event-trigger.sgml#event-trigger-definition`.
+- [Writing Event Trigger Functions in C](pages/event-trigger-interface.md): Source `doc/src/sgml/event-trigger.sgml#event-trigger-interface`.
+- [A Complete Event Trigger Example](pages/event-trigger-example.md): Source `doc/src/sgml/event-trigger.sgml#event-trigger-example`.
+- [A Table Rewrite Event Trigger Example](pages/event-trigger-table-rewrite-example.md): Source `doc/src/sgml/event-trigger.sgml#event-trigger-table-rewrite-example`.
+- [A Database Login Event Trigger Example](pages/event-trigger-database-login-example.md): Source `doc/src/sgml/event-trigger.sgml#event-trigger-database-login-example`.
+
+## The Rule System
+
+- [The Query Tree](pages/querytree.md): Source `doc/src/sgml/rules.sgml#querytree`.
+- [Views and the Rule System](pages/rules-views.md): Source `doc/src/sgml/rules.sgml#rules-views`.
+- [Materialized Views](pages/rules-materializedviews.md): Source `doc/src/sgml/rules.sgml#rules-materializedviews`.
+- [Rules on INSERT, UPDATE, and DELETE](pages/rules-update.md): Source `doc/src/sgml/rules.sgml#rules-update`.
+- [Rules and Privileges](pages/rules-privileges.md): Source `doc/src/sgml/rules.sgml#rules-privileges`.
+- [Rules and Command Status](pages/rules-status.md): Source `doc/src/sgml/rules.sgml#rules-status`.
+- [Rules Versus Triggers](pages/rules-triggers.md): Source `doc/src/sgml/rules.sgml#rules-triggers`.
+
+## Procedural Languages
+
+- [Installing Procedural Languages](pages/xplang-install.md): Source `doc/src/sgml/xplang.sgml#xplang-install`.
+
+## PL/pgSQL — SQL Procedural Language
+
+- [Overview](pages/plpgsql-overview.md): Source `doc/src/sgml/plpgsql.sgml#plpgsql-overview`.
+- [Structure of PL/pgSQL](pages/plpgsql-structure.md): Source `doc/src/sgml/plpgsql.sgml#plpgsql-structure`.
+- [Declarations](pages/plpgsql-declarations.md): Source `doc/src/sgml/plpgsql.sgml#plpgsql-declarations`.
+- [Expressions](pages/plpgsql-expressions.md): Source `doc/src/sgml/plpgsql.sgml#plpgsql-expressions`.
+- [Basic Statements](pages/plpgsql-statements.md): Source `doc/src/sgml/plpgsql.sgml#plpgsql-statements`.
+- [Control Structures](pages/plpgsql-control-structures.md): Source `doc/src/sgml/plpgsql.sgml#plpgsql-control-structures`.
+- [Cursors](pages/plpgsql-cursors.md): Source `doc/src/sgml/plpgsql.sgml#plpgsql-cursors`.
+- [Transaction Management](pages/plpgsql-transactions.md): Source `doc/src/sgml/plpgsql.sgml#plpgsql-transactions`.
+- [Errors and Messages](pages/plpgsql-errors-and-messages.md): Source `doc/src/sgml/plpgsql.sgml#plpgsql-errors-and-messages`.
+- [Trigger Functions](pages/plpgsql-trigger.md): Source `doc/src/sgml/plpgsql.sgml#plpgsql-trigger`.
+- [PL/pgSQL under the Hood](pages/plpgsql-implementation.md): Source `doc/src/sgml/plpgsql.sgml#plpgsql-implementation`.
+- [Tips for Developing in PL/pgSQL](pages/plpgsql-development-tips.md): Source `doc/src/sgml/plpgsql.sgml#plpgsql-development-tips`.
+- [Porting from Oracle PL/SQL](pages/plpgsql-porting.md): Source `doc/src/sgml/plpgsql.sgml#plpgsql-porting`.
+
+## PL/Tcl — Tcl Procedural Language
+
+- [Overview](pages/pltcl-overview.md): Source `doc/src/sgml/pltcl.sgml#pltcl-overview`.
+- [PL/Tcl Functions and Arguments](pages/pltcl-functions.md): Source `doc/src/sgml/pltcl.sgml#pltcl-functions`.
+- [Data Values in PL/Tcl](pages/pltcl-data.md): Source `doc/src/sgml/pltcl.sgml#pltcl-data`.
+- [Global Data in PL/Tcl](pages/pltcl-global.md): Source `doc/src/sgml/pltcl.sgml#pltcl-global`.
+- [Database Access from PL/Tcl](pages/pltcl-dbaccess.md): Source `doc/src/sgml/pltcl.sgml#pltcl-dbaccess`.
+- [Trigger Functions in PL/Tcl](pages/pltcl-trigger.md): Source `doc/src/sgml/pltcl.sgml#pltcl-trigger`.
+- [Event Trigger Functions in PL/Tcl](pages/pltcl-event-trigger.md): Source `doc/src/sgml/pltcl.sgml#pltcl-event-trigger`.
+- [Error Handling in PL/Tcl](pages/pltcl-error-handling.md): Source `doc/src/sgml/pltcl.sgml#pltcl-error-handling`.
+- [Explicit Subtransactions in PL/Tcl](pages/pltcl-subtransactions.md): Source `doc/src/sgml/pltcl.sgml#pltcl-subtransactions`.
+- [Transaction Management](pages/pltcl-transactions.md): Source `doc/src/sgml/pltcl.sgml#pltcl-transactions`.
+- [PL/Tcl Configuration](pages/pltcl-config.md): Source `doc/src/sgml/pltcl.sgml#pltcl-config`.
+- [Tcl Procedure Names](pages/pltcl-procnames.md): Source `doc/src/sgml/pltcl.sgml#pltcl-procnames`.
+
+## PL/Perl — Perl Procedural Language
+
+- [PL/Perl Functions and Arguments](pages/plperl-funcs.md): Source `doc/src/sgml/plperl.sgml#plperl-funcs`.
+- [Data Values in PL/Perl](pages/plperl-data.md): Source `doc/src/sgml/plperl.sgml#plperl-data`.
+- [Built-in Functions](pages/plperl-builtins.md): Source `doc/src/sgml/plperl.sgml#plperl-builtins`.
+- [Global Values in PL/Perl](pages/plperl-global.md): Source `doc/src/sgml/plperl.sgml#plperl-global`.
+- [Trusted and Untrusted PL/Perl](pages/plperl-trusted.md): Source `doc/src/sgml/plperl.sgml#plperl-trusted`.
+- [PL/Perl Triggers](pages/plperl-triggers.md): Source `doc/src/sgml/plperl.sgml#plperl-triggers`.
+- [PL/Perl Event Triggers](pages/plperl-event-triggers.md): Source `doc/src/sgml/plperl.sgml#plperl-event-triggers`.
+- [PL/Perl Under the Hood](pages/plperl-under-the-hood.md): Source `doc/src/sgml/plperl.sgml#plperl-under-the-hood`.
+
+## PL/Python — Python Procedural Language
+
+- [PL/Python Functions](pages/plpython-funcs.md): Source `doc/src/sgml/plpython.sgml#plpython-funcs`.
+- [Data Values](pages/plpython-data.md): Source `doc/src/sgml/plpython.sgml#plpython-data`.
+- [Sharing Data](pages/plpython-sharing.md): Source `doc/src/sgml/plpython.sgml#plpython-sharing`.
+- [Anonymous Code Blocks](pages/plpython-do.md): Source `doc/src/sgml/plpython.sgml#plpython-do`.
+- [Trigger Functions](pages/plpython-trigger.md): Source `doc/src/sgml/plpython.sgml#plpython-trigger`.
+- [Database Access](pages/plpython-database.md): Source `doc/src/sgml/plpython.sgml#plpython-database`.
+- [Explicit Subtransactions](pages/plpython-subtransaction.md): Source `doc/src/sgml/plpython.sgml#plpython-subtransaction`.
+- [Transaction Management](pages/plpython-transactions.md): Source `doc/src/sgml/plpython.sgml#plpython-transactions`.
+- [Utility Functions](pages/plpython-util.md): Source `doc/src/sgml/plpython.sgml#plpython-util`.
+- [Python 2 vs. Python 3](pages/plpython-python23.md): Source `doc/src/sgml/plpython.sgml#plpython-python23`.
+- [Environment Variables](pages/plpython-envar.md): Source `doc/src/sgml/plpython.sgml#plpython-envar`.
+
+## Server Programming Interface
+
+- [Interface Functions](pages/spi-interface.md): Source `doc/src/sgml/spi.sgml#spi-interface`.
+- [Interface Support Functions](pages/spi-interface-support.md): Source `doc/src/sgml/spi.sgml#spi-interface-support`.
+- [Memory Management](pages/spi-memory.md): Source `doc/src/sgml/spi.sgml#spi-memory`.
+- [Transaction Management](pages/spi-transaction.md): Source `doc/src/sgml/spi.sgml#spi-transaction`.
+- [Visibility of Data Changes](pages/spi-visibility.md): Source `doc/src/sgml/spi.sgml#spi-visibility`.
+- [Examples](pages/spi-examples.md): Source `doc/src/sgml/spi.sgml#spi-examples`.
+
+## Interface Functions
+
+- [SPI_connect](pages/spi-spi-connect.md): Source `doc/src/sgml/spi.sgml#spi-spi-connect`.
+- [SPI_finish](pages/spi-spi-finish.md): Source `doc/src/sgml/spi.sgml#spi-spi-finish`.
+- [SPI_execute](pages/spi-spi-execute.md): Source `doc/src/sgml/spi.sgml#spi-spi-execute`.
+- [SPI_exec](pages/spi-spi-exec.md): Source `doc/src/sgml/spi.sgml#spi-spi-exec`.
+- [SPI_execute_extended](pages/spi-spi-execute-extended.md): Source `doc/src/sgml/spi.sgml#spi-spi-execute-extended`.
+- [SPI_execute_with_args](pages/spi-spi-execute-with-args.md): Source `doc/src/sgml/spi.sgml#spi-spi-execute-with-args`.
+- [SPI_prepare](pages/spi-spi-prepare.md): Source `doc/src/sgml/spi.sgml#spi-spi-prepare`.
+- [SPI_prepare_cursor](pages/spi-spi-prepare-cursor.md): Source `doc/src/sgml/spi.sgml#spi-spi-prepare-cursor`.
+- [SPI_prepare_extended](pages/spi-spi-prepare-extended.md): Source `doc/src/sgml/spi.sgml#spi-spi-prepare-extended`.
+- [SPI_prepare_params](pages/spi-spi-prepare-params.md): Source `doc/src/sgml/spi.sgml#spi-spi-prepare-params`.
+- [SPI_getargcount](pages/spi-spi-getargcount.md): Source `doc/src/sgml/spi.sgml#spi-spi-getargcount`.
+- [SPI_getargtypeid](pages/spi-spi-getargtypeid.md): Source `doc/src/sgml/spi.sgml#spi-spi-getargtypeid`.
+- [SPI_is_cursor_plan](pages/spi-spi-is-cursor-plan.md): Source `doc/src/sgml/spi.sgml#spi-spi-is-cursor-plan`.
+- [SPI_execute_plan](pages/spi-spi-execute-plan.md): Source `doc/src/sgml/spi.sgml#spi-spi-execute-plan`.
+- [SPI_execute_plan_extended](pages/spi-spi-execute-plan-extended.md): Source `doc/src/sgml/spi.sgml#spi-spi-execute-plan-extended`.
+- [SPI_execute_plan_with_paramlist](pages/spi-spi-execute-plan-with-paramlist.md): Source `doc/src/sgml/spi.sgml#spi-spi-execute-plan-with-paramlist`.
+- [SPI_execp](pages/spi-spi-execp.md): Source `doc/src/sgml/spi.sgml#spi-spi-execp`.
+- [SPI_cursor_open](pages/spi-spi-cursor-open.md): Source `doc/src/sgml/spi.sgml#spi-spi-cursor-open`.
+- [SPI_cursor_open_with_args](pages/spi-spi-cursor-open-with-args.md): Source `doc/src/sgml/spi.sgml#spi-spi-cursor-open-with-args`.
+- [SPI_cursor_open_with_paramlist](pages/spi-spi-cursor-open-with-paramlist.md): Source `doc/src/sgml/spi.sgml#spi-spi-cursor-open-with-paramlist`.
+- [SPI_cursor_parse_open](pages/spi-spi-cursor-parse-open.md): Source `doc/src/sgml/spi.sgml#spi-spi-cursor-parse-open`.
+- [SPI_cursor_find](pages/spi-spi-cursor-find.md): Source `doc/src/sgml/spi.sgml#spi-spi-cursor-find`.
+- [SPI_cursor_fetch](pages/spi-spi-cursor-fetch.md): Source `doc/src/sgml/spi.sgml#spi-spi-cursor-fetch`.
+- [SPI_cursor_move](pages/spi-spi-cursor-move.md): Source `doc/src/sgml/spi.sgml#spi-spi-cursor-move`.
+- [SPI_scroll_cursor_fetch](pages/spi-spi-scroll-cursor-fetch.md): Source `doc/src/sgml/spi.sgml#spi-spi-scroll-cursor-fetch`.
+- [SPI_scroll_cursor_move](pages/spi-spi-scroll-cursor-move.md): Source `doc/src/sgml/spi.sgml#spi-spi-scroll-cursor-move`.
+- [SPI_cursor_close](pages/spi-spi-cursor-close.md): Source `doc/src/sgml/spi.sgml#spi-spi-cursor-close`.
+- [SPI_keepplan](pages/spi-spi-keepplan.md): Source `doc/src/sgml/spi.sgml#spi-spi-keepplan`.
+- [SPI_saveplan](pages/spi-spi-saveplan.md): Source `doc/src/sgml/spi.sgml#spi-spi-saveplan`.
+- [SPI_register_relation](pages/spi-spi-register-relation.md): Source `doc/src/sgml/spi.sgml#spi-spi-register-relation`.
+- [SPI_unregister_relation](pages/spi-spi-unregister-relation.md): Source `doc/src/sgml/spi.sgml#spi-spi-unregister-relation`.
+- [SPI_register_trigger_data](pages/spi-spi-register-trigger-data.md): Source `doc/src/sgml/spi.sgml#spi-spi-register-trigger-data`.
+
+## Interface Support Functions
+
+- [SPI_fname](pages/spi-spi-fname.md): Source `doc/src/sgml/spi.sgml#spi-spi-fname`.
+- [SPI_fnumber](pages/spi-spi-fnumber.md): Source `doc/src/sgml/spi.sgml#spi-spi-fnumber`.
+- [SPI_getvalue](pages/spi-spi-getvalue.md): Source `doc/src/sgml/spi.sgml#spi-spi-getvalue`.
+- [SPI_getbinval](pages/spi-spi-getbinval.md): Source `doc/src/sgml/spi.sgml#spi-spi-getbinval`.
+- [SPI_gettype](pages/spi-spi-gettype.md): Source `doc/src/sgml/spi.sgml#spi-spi-gettype`.
+- [SPI_gettypeid](pages/spi-spi-gettypeid.md): Source `doc/src/sgml/spi.sgml#spi-spi-gettypeid`.
+- [SPI_getrelname](pages/spi-spi-getrelname.md): Source `doc/src/sgml/spi.sgml#spi-spi-getrelname`.
+- [SPI_getnspname](pages/spi-spi-getnspname.md): Source `doc/src/sgml/spi.sgml#spi-spi-getnspname`.
+- [SPI_result_code_string](pages/spi-spi-result-code-string.md): Source `doc/src/sgml/spi.sgml#spi-spi-result-code-string`.
+
+## Memory Management
+
+- [SPI_palloc](pages/spi-spi-palloc.md): Source `doc/src/sgml/spi.sgml#spi-spi-palloc`.
+- [SPI_repalloc](pages/spi-realloc.md): Source `doc/src/sgml/spi.sgml#spi-realloc`.
+- [SPI_pfree](pages/spi-spi-pfree.md): Source `doc/src/sgml/spi.sgml#spi-spi-pfree`.
+- [SPI_copytuple](pages/spi-spi-copytuple.md): Source `doc/src/sgml/spi.sgml#spi-spi-copytuple`.
+- [SPI_returntuple](pages/spi-spi-returntuple.md): Source `doc/src/sgml/spi.sgml#spi-spi-returntuple`.
+- [SPI_modifytuple](pages/spi-spi-modifytuple.md): Source `doc/src/sgml/spi.sgml#spi-spi-modifytuple`.
+- [SPI_freetuple](pages/spi-spi-freetuple.md): Source `doc/src/sgml/spi.sgml#spi-spi-freetuple`.
+- [SPI_freetuptable](pages/spi-spi-freetupletable.md): Source `doc/src/sgml/spi.sgml#spi-spi-freetupletable`.
+- [SPI_freeplan](pages/spi-spi-freeplan.md): Source `doc/src/sgml/spi.sgml#spi-spi-freeplan`.
+
+## Transaction Management
+
+- [SPI_commit](pages/spi-spi-commit.md): Source `doc/src/sgml/spi.sgml#spi-spi-commit`.
+- [SPI_rollback](pages/spi-spi-rollback.md): Source `doc/src/sgml/spi.sgml#spi-spi-rollback`.
+- [SPI_start_transaction](pages/spi-spi-start-transaction.md): Source `doc/src/sgml/spi.sgml#spi-spi-start-transaction`.
+
+## Logical Decoding
+
+- [Logical Decoding Examples](pages/logicaldecoding-example.md): Source `doc/src/sgml/logicaldecoding.sgml#logicaldecoding-example`.
+- [Logical Decoding Concepts](pages/logicaldecoding-explanation.md): Source `doc/src/sgml/logicaldecoding.sgml#logicaldecoding-explanation`.
+- [Streaming Replication Protocol Interface](pages/logicaldecoding-walsender.md): Source `doc/src/sgml/logicaldecoding.sgml#logicaldecoding-walsender`.
+- [Logical Decoding SQL Interface](pages/logicaldecoding-sql.md): Source `doc/src/sgml/logicaldecoding.sgml#logicaldecoding-sql`.
+- [System Catalogs Related to Logical Decoding](pages/logicaldecoding-catalogs.md): Source `doc/src/sgml/logicaldecoding.sgml#logicaldecoding-catalogs`.
+- [Logical Decoding Output Plugins](pages/logicaldecoding-output-plugin.md): Source `doc/src/sgml/logicaldecoding.sgml#logicaldecoding-output-plugin`.
+- [Logical Decoding Output Writers](pages/logicaldecoding-writer.md): Source `doc/src/sgml/logicaldecoding.sgml#logicaldecoding-writer`.
+- [Synchronous Replication Support for Logical Decoding](pages/logicaldecoding-synchronous.md): Source `doc/src/sgml/logicaldecoding.sgml#logicaldecoding-synchronous`.
+- [Streaming of Large Transactions for Logical Decoding](pages/logicaldecoding-streaming.md): Source `doc/src/sgml/logicaldecoding.sgml#logicaldecoding-streaming`.
+- [Two-phase Commit Support for Logical Decoding](pages/logicaldecoding-two-phase-commits.md): Source `doc/src/sgml/logicaldecoding.sgml#logicaldecoding-two-phase-commits`.
+
+## Archive Modules
+
+- [Initialization Functions](pages/archive-module-init.md): Source `doc/src/sgml/archive-modules.sgml#archive-module-init`.
+- [Archive Module Callbacks](pages/archive-module-callbacks.md): Source `doc/src/sgml/archive-modules.sgml#archive-module-callbacks`.
+
+## OAuth Validator Modules
+
+- [Safely Designing a Validator Module](pages/oauth-validator-design.md): Source `doc/src/sgml/oauth-validators.sgml#oauth-validator-design`.
+- [Initialization Functions](pages/oauth-validator-init.md): Source `doc/src/sgml/oauth-validators.sgml#oauth-validator-init`.
+- [OAuth Validator Callbacks](pages/oauth-validator-callbacks.md): Source `doc/src/sgml/oauth-validators.sgml#oauth-validator-callbacks`.
+
+## Reference
+
+- [Reference](pages/reference.md): Source `doc/src/sgml/reference.sgml#reference`.
+- [ABORT](pages/sql-abort.md): Source `doc/src/sgml/ref/abort.sgml#sql-abort`.
+- [ALTER AGGREGATE](pages/sql-alteraggregate.md): Source `doc/src/sgml/ref/alter_aggregate.sgml#sql-alteraggregate`.
+- [ALTER COLLATION](pages/sql-altercollation.md): Source `doc/src/sgml/ref/alter_collation.sgml#sql-altercollation`.
+- [ALTER CONVERSION](pages/sql-alterconversion.md): Source `doc/src/sgml/ref/alter_conversion.sgml#sql-alterconversion`.
+- [ALTER DATABASE](pages/sql-alterdatabase.md): Source `doc/src/sgml/ref/alter_database.sgml#sql-alterdatabase`.
+- [ALTER DEFAULT PRIVILEGES](pages/sql-alterdefaultprivileges.md): Source `doc/src/sgml/ref/alter_default_privileges.sgml#sql-alterdefaultprivileges`.
+- [ALTER DOMAIN](pages/sql-alterdomain.md): Source `doc/src/sgml/ref/alter_domain.sgml#sql-alterdomain`.
+- [ALTER EVENT TRIGGER](pages/sql-altereventtrigger.md): Source `doc/src/sgml/ref/alter_event_trigger.sgml#sql-altereventtrigger`.
+- [ALTER EXTENSION](pages/sql-alterextension.md): Source `doc/src/sgml/ref/alter_extension.sgml#sql-alterextension`.
+- [ALTER FOREIGN DATA WRAPPER](pages/sql-alterforeigndatawrapper.md): Source `doc/src/sgml/ref/alter_foreign_data_wrapper.sgml#sql-alterforeigndatawrapper`.
+- [ALTER FOREIGN TABLE](pages/sql-alterforeigntable.md): Source `doc/src/sgml/ref/alter_foreign_table.sgml#sql-alterforeigntable`.
+- [ALTER FUNCTION](pages/sql-alterfunction.md): Source `doc/src/sgml/ref/alter_function.sgml#sql-alterfunction`.
+- [ALTER GROUP](pages/sql-altergroup.md): Source `doc/src/sgml/ref/alter_group.sgml#sql-altergroup`.
+- [ALTER INDEX](pages/sql-alterindex.md): Source `doc/src/sgml/ref/alter_index.sgml#sql-alterindex`.
+- [ALTER LANGUAGE](pages/sql-alterlanguage.md): Source `doc/src/sgml/ref/alter_language.sgml#sql-alterlanguage`.
+- [ALTER LARGE OBJECT](pages/sql-alterlargeobject.md): Source `doc/src/sgml/ref/alter_large_object.sgml#sql-alterlargeobject`.
+- [ALTER MATERIALIZED VIEW](pages/sql-altermaterializedview.md): Source `doc/src/sgml/ref/alter_materialized_view.sgml#sql-altermaterializedview`.
+- [ALTER OPERATOR](pages/sql-alteroperator.md): Source `doc/src/sgml/ref/alter_operator.sgml#sql-alteroperator`.
+- [ALTER OPERATOR CLASS](pages/sql-alteropclass.md): Source `doc/src/sgml/ref/alter_opclass.sgml#sql-alteropclass`.
+- [ALTER OPERATOR FAMILY](pages/sql-alteropfamily.md): Source `doc/src/sgml/ref/alter_opfamily.sgml#sql-alteropfamily`.
+- [ALTER POLICY](pages/sql-alterpolicy.md): Source `doc/src/sgml/ref/alter_policy.sgml#sql-alterpolicy`.
+- [ALTER PROCEDURE](pages/sql-alterprocedure.md): Source `doc/src/sgml/ref/alter_procedure.sgml#sql-alterprocedure`.
+- [ALTER PUBLICATION](pages/sql-alterpublication.md): Source `doc/src/sgml/ref/alter_publication.sgml#sql-alterpublication`.
+- [ALTER ROLE](pages/sql-alterrole.md): Source `doc/src/sgml/ref/alter_role.sgml#sql-alterrole`.
+- [ALTER ROUTINE](pages/sql-alterroutine.md): Source `doc/src/sgml/ref/alter_routine.sgml#sql-alterroutine`.
+- [ALTER RULE](pages/sql-alterrule.md): Source `doc/src/sgml/ref/alter_rule.sgml#sql-alterrule`.
+- [ALTER SCHEMA](pages/sql-alterschema.md): Source `doc/src/sgml/ref/alter_schema.sgml#sql-alterschema`.
+- [ALTER SEQUENCE](pages/sql-altersequence.md): Source `doc/src/sgml/ref/alter_sequence.sgml#sql-altersequence`.
+- [ALTER SERVER](pages/sql-alterserver.md): Source `doc/src/sgml/ref/alter_server.sgml#sql-alterserver`.
+- [ALTER STATISTICS](pages/sql-alterstatistics.md): Source `doc/src/sgml/ref/alter_statistics.sgml#sql-alterstatistics`.
+- [ALTER SUBSCRIPTION](pages/sql-altersubscription.md): Source `doc/src/sgml/ref/alter_subscription.sgml#sql-altersubscription`.
+- [ALTER SYSTEM](pages/sql-altersystem.md): Source `doc/src/sgml/ref/alter_system.sgml#sql-altersystem`.
+- [ALTER TABLE](pages/sql-altertable.md): Source `doc/src/sgml/ref/alter_table.sgml#sql-altertable`.
+- [ALTER TABLESPACE](pages/sql-altertablespace.md): Source `doc/src/sgml/ref/alter_tablespace.sgml#sql-altertablespace`.
+- [ALTER TEXT SEARCH CONFIGURATION](pages/sql-altertsconfig.md): Source `doc/src/sgml/ref/alter_tsconfig.sgml#sql-altertsconfig`.
+- [ALTER TEXT SEARCH DICTIONARY](pages/sql-altertsdictionary.md): Source `doc/src/sgml/ref/alter_tsdictionary.sgml#sql-altertsdictionary`.
+- [ALTER TEXT SEARCH PARSER](pages/sql-altertsparser.md): Source `doc/src/sgml/ref/alter_tsparser.sgml#sql-altertsparser`.
+- [ALTER TEXT SEARCH TEMPLATE](pages/sql-altertstemplate.md): Source `doc/src/sgml/ref/alter_tstemplate.sgml#sql-altertstemplate`.
+- [ALTER TRIGGER](pages/sql-altertrigger.md): Source `doc/src/sgml/ref/alter_trigger.sgml#sql-altertrigger`.
+- [ALTER TYPE](pages/sql-altertype.md): Source `doc/src/sgml/ref/alter_type.sgml#sql-altertype`.
+- [ALTER USER](pages/sql-alteruser.md): Source `doc/src/sgml/ref/alter_user.sgml#sql-alteruser`.
+- [ALTER USER MAPPING](pages/sql-alterusermapping.md): Source `doc/src/sgml/ref/alter_user_mapping.sgml#sql-alterusermapping`.
+- [ALTER VIEW](pages/sql-alterview.md): Source `doc/src/sgml/ref/alter_view.sgml#sql-alterview`.
+- [ANALYZE](pages/sql-analyze.md): Source `doc/src/sgml/ref/analyze.sgml#sql-analyze`.
+- [BEGIN](pages/sql-begin.md): Source `doc/src/sgml/ref/begin.sgml#sql-begin`.
+- [CALL](pages/sql-call.md): Source `doc/src/sgml/ref/call.sgml#sql-call`.
+- [CHECKPOINT](pages/sql-checkpoint.md): Source `doc/src/sgml/ref/checkpoint.sgml#sql-checkpoint`.
+- [CLOSE](pages/sql-close.md): Source `doc/src/sgml/ref/close.sgml#sql-close`.
+- [CLUSTER](pages/sql-cluster.md): Source `doc/src/sgml/ref/cluster.sgml#sql-cluster`.
+- [COMMENT](pages/sql-comment.md): Source `doc/src/sgml/ref/comment.sgml#sql-comment`.
+- [COMMIT](pages/sql-commit.md): Source `doc/src/sgml/ref/commit.sgml#sql-commit`.
+- [COMMIT PREPARED](pages/sql-commit-prepared.md): Source `doc/src/sgml/ref/commit_prepared.sgml#sql-commit-prepared`.
+- [COPY](pages/sql-copy.md): Source `doc/src/sgml/ref/copy.sgml#sql-copy`.
+- [CREATE ACCESS METHOD](pages/sql-create-access-method.md): Source `doc/src/sgml/ref/create_access_method.sgml#sql-create-access-method`.
+- [CREATE AGGREGATE](pages/sql-createaggregate.md): Source `doc/src/sgml/ref/create_aggregate.sgml#sql-createaggregate`.
+- [CREATE CAST](pages/sql-createcast.md): Source `doc/src/sgml/ref/create_cast.sgml#sql-createcast`.
+- [CREATE COLLATION](pages/sql-createcollation.md): Source `doc/src/sgml/ref/create_collation.sgml#sql-createcollation`.
+- [CREATE CONVERSION](pages/sql-createconversion.md): Source `doc/src/sgml/ref/create_conversion.sgml#sql-createconversion`.
+- [CREATE DATABASE](pages/sql-createdatabase.md): Source `doc/src/sgml/ref/create_database.sgml#sql-createdatabase`.
+- [CREATE DOMAIN](pages/sql-createdomain.md): Source `doc/src/sgml/ref/create_domain.sgml#sql-createdomain`.
+- [CREATE EVENT TRIGGER](pages/sql-createeventtrigger.md): Source `doc/src/sgml/ref/create_event_trigger.sgml#sql-createeventtrigger`.
+- [CREATE EXTENSION](pages/sql-createextension.md): Source `doc/src/sgml/ref/create_extension.sgml#sql-createextension`.
+- [CREATE FOREIGN DATA WRAPPER](pages/sql-createforeigndatawrapper.md): Source `doc/src/sgml/ref/create_foreign_data_wrapper.sgml#sql-createforeigndatawrapper`.
+- [CREATE FOREIGN TABLE](pages/sql-createforeigntable.md): Source `doc/src/sgml/ref/create_foreign_table.sgml#sql-createforeigntable`.
+- [CREATE FUNCTION](pages/sql-createfunction.md): Source `doc/src/sgml/ref/create_function.sgml#sql-createfunction`.
+- [CREATE GROUP](pages/sql-creategroup.md): Source `doc/src/sgml/ref/create_group.sgml#sql-creategroup`.
+- [CREATE INDEX](pages/sql-createindex.md): Source `doc/src/sgml/ref/create_index.sgml#sql-createindex`.
+- [CREATE LANGUAGE](pages/sql-createlanguage.md): Source `doc/src/sgml/ref/create_language.sgml#sql-createlanguage`.
+- [CREATE MATERIALIZED VIEW](pages/sql-creatematerializedview.md): Source `doc/src/sgml/ref/create_materialized_view.sgml#sql-creatematerializedview`.
+- [CREATE OPERATOR](pages/sql-createoperator.md): Source `doc/src/sgml/ref/create_operator.sgml#sql-createoperator`.
+- [CREATE OPERATOR CLASS](pages/sql-createopclass.md): Source `doc/src/sgml/ref/create_opclass.sgml#sql-createopclass`.
+- [CREATE OPERATOR FAMILY](pages/sql-createopfamily.md): Source `doc/src/sgml/ref/create_opfamily.sgml#sql-createopfamily`.
+- [CREATE POLICY](pages/sql-createpolicy.md): Source `doc/src/sgml/ref/create_policy.sgml#sql-createpolicy`.
+- [CREATE PROCEDURE](pages/sql-createprocedure.md): Source `doc/src/sgml/ref/create_procedure.sgml#sql-createprocedure`.
+- [CREATE PUBLICATION](pages/sql-createpublication.md): Source `doc/src/sgml/ref/create_publication.sgml#sql-createpublication`.
+- [CREATE ROLE](pages/sql-createrole.md): Source `doc/src/sgml/ref/create_role.sgml#sql-createrole`.
+- [CREATE RULE](pages/sql-createrule.md): Source `doc/src/sgml/ref/create_rule.sgml#sql-createrule`.
+- [CREATE SCHEMA](pages/sql-createschema.md): Source `doc/src/sgml/ref/create_schema.sgml#sql-createschema`.
+- [CREATE SEQUENCE](pages/sql-createsequence.md): Source `doc/src/sgml/ref/create_sequence.sgml#sql-createsequence`.
+- [CREATE SERVER](pages/sql-createserver.md): Source `doc/src/sgml/ref/create_server.sgml#sql-createserver`.
+- [CREATE STATISTICS](pages/sql-createstatistics.md): Source `doc/src/sgml/ref/create_statistics.sgml#sql-createstatistics`.
+- [CREATE SUBSCRIPTION](pages/sql-createsubscription.md): Source `doc/src/sgml/ref/create_subscription.sgml#sql-createsubscription`.
+- [CREATE TABLE](pages/sql-createtable.md): Source `doc/src/sgml/ref/create_table.sgml#sql-createtable`.
+- [CREATE TABLE AS](pages/sql-createtableas.md): Source `doc/src/sgml/ref/create_table_as.sgml#sql-createtableas`.
+- [CREATE TABLESPACE](pages/sql-createtablespace.md): Source `doc/src/sgml/ref/create_tablespace.sgml#sql-createtablespace`.
+- [CREATE TEXT SEARCH CONFIGURATION](pages/sql-createtsconfig.md): Source `doc/src/sgml/ref/create_tsconfig.sgml#sql-createtsconfig`.
+- [CREATE TEXT SEARCH DICTIONARY](pages/sql-createtsdictionary.md): Source `doc/src/sgml/ref/create_tsdictionary.sgml#sql-createtsdictionary`.
+- [CREATE TEXT SEARCH PARSER](pages/sql-createtsparser.md): Source `doc/src/sgml/ref/create_tsparser.sgml#sql-createtsparser`.
+- [CREATE TEXT SEARCH TEMPLATE](pages/sql-createtstemplate.md): Source `doc/src/sgml/ref/create_tstemplate.sgml#sql-createtstemplate`.
+- [CREATE TRANSFORM](pages/sql-createtransform.md): Source `doc/src/sgml/ref/create_transform.sgml#sql-createtransform`.
+- [CREATE TRIGGER](pages/sql-createtrigger.md): Source `doc/src/sgml/ref/create_trigger.sgml#sql-createtrigger`.
+- [CREATE TYPE](pages/sql-createtype.md): Source `doc/src/sgml/ref/create_type.sgml#sql-createtype`.
+- [CREATE USER](pages/sql-createuser.md): Source `doc/src/sgml/ref/create_user.sgml#sql-createuser`.
+- [CREATE USER MAPPING](pages/sql-createusermapping.md): Source `doc/src/sgml/ref/create_user_mapping.sgml#sql-createusermapping`.
+- [CREATE VIEW](pages/sql-createview.md): Source `doc/src/sgml/ref/create_view.sgml#sql-createview`.
+- [DEALLOCATE](pages/sql-deallocate.md): Source `doc/src/sgml/ref/deallocate.sgml#sql-deallocate`.
+- [DECLARE](pages/sql-declare.md): Source `doc/src/sgml/ref/declare.sgml#sql-declare`.
+- [DELETE](pages/sql-delete.md): Source `doc/src/sgml/ref/delete.sgml#sql-delete`.
+- [DISCARD](pages/sql-discard.md): Source `doc/src/sgml/ref/discard.sgml#sql-discard`.
+- [DO](pages/sql-do.md): Source `doc/src/sgml/ref/do.sgml#sql-do`.
+- [DROP ACCESS METHOD](pages/sql-drop-access-method.md): Source `doc/src/sgml/ref/drop_access_method.sgml#sql-drop-access-method`.
+- [DROP AGGREGATE](pages/sql-dropaggregate.md): Source `doc/src/sgml/ref/drop_aggregate.sgml#sql-dropaggregate`.
+- [DROP CAST](pages/sql-dropcast.md): Source `doc/src/sgml/ref/drop_cast.sgml#sql-dropcast`.
+- [DROP COLLATION](pages/sql-dropcollation.md): Source `doc/src/sgml/ref/drop_collation.sgml#sql-dropcollation`.
+- [DROP CONVERSION](pages/sql-dropconversion.md): Source `doc/src/sgml/ref/drop_conversion.sgml#sql-dropconversion`.
+- [DROP DATABASE](pages/sql-dropdatabase.md): Source `doc/src/sgml/ref/drop_database.sgml#sql-dropdatabase`.
+- [DROP DOMAIN](pages/sql-dropdomain.md): Source `doc/src/sgml/ref/drop_domain.sgml#sql-dropdomain`.
+- [DROP EVENT TRIGGER](pages/sql-dropeventtrigger.md): Source `doc/src/sgml/ref/drop_event_trigger.sgml#sql-dropeventtrigger`.
+- [DROP EXTENSION](pages/sql-dropextension.md): Source `doc/src/sgml/ref/drop_extension.sgml#sql-dropextension`.
+- [DROP FOREIGN DATA WRAPPER](pages/sql-dropforeigndatawrapper.md): Source `doc/src/sgml/ref/drop_foreign_data_wrapper.sgml#sql-dropforeigndatawrapper`.
+- [DROP FOREIGN TABLE](pages/sql-dropforeigntable.md): Source `doc/src/sgml/ref/drop_foreign_table.sgml#sql-dropforeigntable`.
+- [DROP FUNCTION](pages/sql-dropfunction.md): Source `doc/src/sgml/ref/drop_function.sgml#sql-dropfunction`.
+- [DROP GROUP](pages/sql-dropgroup.md): Source `doc/src/sgml/ref/drop_group.sgml#sql-dropgroup`.
+- [DROP INDEX](pages/sql-dropindex.md): Source `doc/src/sgml/ref/drop_index.sgml#sql-dropindex`.
+- [DROP LANGUAGE](pages/sql-droplanguage.md): Source `doc/src/sgml/ref/drop_language.sgml#sql-droplanguage`.
+- [DROP MATERIALIZED VIEW](pages/sql-dropmaterializedview.md): Source `doc/src/sgml/ref/drop_materialized_view.sgml#sql-dropmaterializedview`.
+- [DROP OPERATOR](pages/sql-dropoperator.md): Source `doc/src/sgml/ref/drop_operator.sgml#sql-dropoperator`.
+- [DROP OPERATOR CLASS](pages/sql-dropopclass.md): Source `doc/src/sgml/ref/drop_opclass.sgml#sql-dropopclass`.
+- [DROP OPERATOR FAMILY](pages/sql-dropopfamily.md): Source `doc/src/sgml/ref/drop_opfamily.sgml#sql-dropopfamily`.
+- [DROP OWNED](pages/sql-drop-owned.md): Source `doc/src/sgml/ref/drop_owned.sgml#sql-drop-owned`.
+- [DROP POLICY](pages/sql-droppolicy.md): Source `doc/src/sgml/ref/drop_policy.sgml#sql-droppolicy`.
+- [DROP PROCEDURE](pages/sql-dropprocedure.md): Source `doc/src/sgml/ref/drop_procedure.sgml#sql-dropprocedure`.
+- [DROP PUBLICATION](pages/sql-droppublication.md): Source `doc/src/sgml/ref/drop_publication.sgml#sql-droppublication`.
+- [DROP ROLE](pages/sql-droprole.md): Source `doc/src/sgml/ref/drop_role.sgml#sql-droprole`.
+- [DROP ROUTINE](pages/sql-droproutine.md): Source `doc/src/sgml/ref/drop_routine.sgml#sql-droproutine`.
+- [DROP RULE](pages/sql-droprule.md): Source `doc/src/sgml/ref/drop_rule.sgml#sql-droprule`.
+- [DROP SCHEMA](pages/sql-dropschema.md): Source `doc/src/sgml/ref/drop_schema.sgml#sql-dropschema`.
+- [DROP SEQUENCE](pages/sql-dropsequence.md): Source `doc/src/sgml/ref/drop_sequence.sgml#sql-dropsequence`.
+- [DROP SERVER](pages/sql-dropserver.md): Source `doc/src/sgml/ref/drop_server.sgml#sql-dropserver`.
+- [DROP STATISTICS](pages/sql-dropstatistics.md): Source `doc/src/sgml/ref/drop_statistics.sgml#sql-dropstatistics`.
+- [DROP SUBSCRIPTION](pages/sql-dropsubscription.md): Source `doc/src/sgml/ref/drop_subscription.sgml#sql-dropsubscription`.
+- [DROP TABLE](pages/sql-droptable.md): Source `doc/src/sgml/ref/drop_table.sgml#sql-droptable`.
+- [DROP TABLESPACE](pages/sql-droptablespace.md): Source `doc/src/sgml/ref/drop_tablespace.sgml#sql-droptablespace`.
+- [DROP TEXT SEARCH CONFIGURATION](pages/sql-droptsconfig.md): Source `doc/src/sgml/ref/drop_tsconfig.sgml#sql-droptsconfig`.
+- [DROP TEXT SEARCH DICTIONARY](pages/sql-droptsdictionary.md): Source `doc/src/sgml/ref/drop_tsdictionary.sgml#sql-droptsdictionary`.
+- [DROP TEXT SEARCH PARSER](pages/sql-droptsparser.md): Source `doc/src/sgml/ref/drop_tsparser.sgml#sql-droptsparser`.
+- [DROP TEXT SEARCH TEMPLATE](pages/sql-droptstemplate.md): Source `doc/src/sgml/ref/drop_tstemplate.sgml#sql-droptstemplate`.
+- [DROP TRANSFORM](pages/sql-droptransform.md): Source `doc/src/sgml/ref/drop_transform.sgml#sql-droptransform`.
+- [DROP TRIGGER](pages/sql-droptrigger.md): Source `doc/src/sgml/ref/drop_trigger.sgml#sql-droptrigger`.
+- [DROP TYPE](pages/sql-droptype.md): Source `doc/src/sgml/ref/drop_type.sgml#sql-droptype`.
+- [DROP USER](pages/sql-dropuser.md): Source `doc/src/sgml/ref/drop_user.sgml#sql-dropuser`.
+- [DROP USER MAPPING](pages/sql-dropusermapping.md): Source `doc/src/sgml/ref/drop_user_mapping.sgml#sql-dropusermapping`.
+- [DROP VIEW](pages/sql-dropview.md): Source `doc/src/sgml/ref/drop_view.sgml#sql-dropview`.
+- [END](pages/sql-end.md): Source `doc/src/sgml/ref/end.sgml#sql-end`.
+- [EXECUTE](pages/sql-execute.md): Source `doc/src/sgml/ref/execute.sgml#sql-execute`.
+- [EXPLAIN](pages/sql-explain.md): Source `doc/src/sgml/ref/explain.sgml#sql-explain`.
+- [FETCH](pages/sql-fetch.md): Source `doc/src/sgml/ref/fetch.sgml#sql-fetch`.
+- [GRANT](pages/sql-grant.md): Source `doc/src/sgml/ref/grant.sgml#sql-grant`.
+- [IMPORT FOREIGN SCHEMA](pages/sql-importforeignschema.md): Source `doc/src/sgml/ref/import_foreign_schema.sgml#sql-importforeignschema`.
+- [INSERT](pages/sql-insert.md): Source `doc/src/sgml/ref/insert.sgml#sql-insert`.
+- [LISTEN](pages/sql-listen.md): Source `doc/src/sgml/ref/listen.sgml#sql-listen`.
+- [LOAD](pages/sql-load.md): Source `doc/src/sgml/ref/load.sgml#sql-load`.
+- [LOCK](pages/sql-lock.md): Source `doc/src/sgml/ref/lock.sgml#sql-lock`.
+- [MERGE](pages/sql-merge.md): Source `doc/src/sgml/ref/merge.sgml#sql-merge`.
+- [MOVE](pages/sql-move.md): Source `doc/src/sgml/ref/move.sgml#sql-move`.
+- [NOTIFY](pages/sql-notify.md): Source `doc/src/sgml/ref/notify.sgml#sql-notify`.
+- [PREPARE](pages/sql-prepare.md): Source `doc/src/sgml/ref/prepare.sgml#sql-prepare`.
+- [PREPARE TRANSACTION](pages/sql-prepare-transaction.md): Source `doc/src/sgml/ref/prepare_transaction.sgml#sql-prepare-transaction`.
+- [REASSIGN OWNED](pages/sql-reassign-owned.md): Source `doc/src/sgml/ref/reassign_owned.sgml#sql-reassign-owned`.
+- [REFRESH MATERIALIZED VIEW](pages/sql-refreshmaterializedview.md): Source `doc/src/sgml/ref/refresh_materialized_view.sgml#sql-refreshmaterializedview`.
+- [REINDEX](pages/sql-reindex.md): Source `doc/src/sgml/ref/reindex.sgml#sql-reindex`.
+- [RELEASE SAVEPOINT](pages/sql-release-savepoint.md): Source `doc/src/sgml/ref/release_savepoint.sgml#sql-release-savepoint`.
+- [RESET](pages/sql-reset.md): Source `doc/src/sgml/ref/reset.sgml#sql-reset`.
+- [REVOKE](pages/sql-revoke.md): Source `doc/src/sgml/ref/revoke.sgml#sql-revoke`.
+- [ROLLBACK](pages/sql-rollback.md): Source `doc/src/sgml/ref/rollback.sgml#sql-rollback`.
+- [ROLLBACK PREPARED](pages/sql-rollback-prepared.md): Source `doc/src/sgml/ref/rollback_prepared.sgml#sql-rollback-prepared`.
+- [ROLLBACK TO SAVEPOINT](pages/sql-rollback-to.md): Source `doc/src/sgml/ref/rollback_to.sgml#sql-rollback-to`.
+- [SAVEPOINT](pages/sql-savepoint.md): Source `doc/src/sgml/ref/savepoint.sgml#sql-savepoint`.
+- [SECURITY LABEL](pages/sql-security-label.md): Source `doc/src/sgml/ref/security_label.sgml#sql-security-label`.
+- [SELECT](pages/sql-select.md): Source `doc/src/sgml/ref/select.sgml#sql-select`.
+- [SELECT INTO](pages/sql-selectinto.md): Source `doc/src/sgml/ref/select_into.sgml#sql-selectinto`.
+- [SET](pages/sql-set.md): Source `doc/src/sgml/ref/set.sgml#sql-set`.
+- [SET CONSTRAINTS](pages/sql-set-constraints.md): Source `doc/src/sgml/ref/set_constraints.sgml#sql-set-constraints`.
+- [SET ROLE](pages/sql-set-role.md): Source `doc/src/sgml/ref/set_role.sgml#sql-set-role`.
+- [SET SESSION AUTHORIZATION](pages/sql-set-session-authorization.md): Source `doc/src/sgml/ref/set_session_auth.sgml#sql-set-session-authorization`.
+- [SET TRANSACTION](pages/sql-set-transaction.md): Source `doc/src/sgml/ref/set_transaction.sgml#sql-set-transaction`.
+- [SHOW](pages/sql-show.md): Source `doc/src/sgml/ref/show.sgml#sql-show`.
+- [START TRANSACTION](pages/sql-start-transaction.md): Source `doc/src/sgml/ref/start_transaction.sgml#sql-start-transaction`.
+- [TRUNCATE](pages/sql-truncate.md): Source `doc/src/sgml/ref/truncate.sgml#sql-truncate`.
+- [UNLISTEN](pages/sql-unlisten.md): Source `doc/src/sgml/ref/unlisten.sgml#sql-unlisten`.
+- [UPDATE](pages/sql-update.md): Source `doc/src/sgml/ref/update.sgml#sql-update`.
+- [VACUUM](pages/sql-vacuum.md): Source `doc/src/sgml/ref/vacuum.sgml#sql-vacuum`.
+- [VALUES](pages/sql-values.md): Source `doc/src/sgml/ref/values.sgml#sql-values`.
+- [clusterdb](pages/app-clusterdb.md): Source `doc/src/sgml/ref/clusterdb.sgml#app-clusterdb`.
+- [createdb](pages/app-createdb.md): Source `doc/src/sgml/ref/createdb.sgml#app-createdb`.
+- [createuser](pages/app-createuser.md): Source `doc/src/sgml/ref/createuser.sgml#app-createuser`.
+- [dropdb](pages/app-dropdb.md): Source `doc/src/sgml/ref/dropdb.sgml#app-dropdb`.
+- [dropuser](pages/app-dropuser.md): Source `doc/src/sgml/ref/dropuser.sgml#app-dropuser`.
+- [ecpg](pages/app-ecpg.md): Source `doc/src/sgml/ref/ecpg-ref.sgml#app-ecpg`.
+- [pg_amcheck](pages/app-pgamcheck.md): Source `doc/src/sgml/ref/pg_amcheck.sgml#app-pgamcheck`.
+- [pg_basebackup](pages/app-pgbasebackup.md): Source `doc/src/sgml/ref/pg_basebackup.sgml#app-pgbasebackup`.
+- [pgbench](pages/pgbench.md): Source `doc/src/sgml/ref/pgbench.sgml#pgbench`.
+- [pg_combinebackup](pages/app-pgcombinebackup.md): Source `doc/src/sgml/ref/pg_combinebackup.sgml#app-pgcombinebackup`.
+- [pg_config](pages/app-pgconfig.md): Source `doc/src/sgml/ref/pg_config-ref.sgml#app-pgconfig`.
+- [pg_dump](pages/app-pgdump.md): Source `doc/src/sgml/ref/pg_dump.sgml#app-pgdump`.
+- [pg_dumpall](pages/app-pg-dumpall.md): Source `doc/src/sgml/ref/pg_dumpall.sgml#app-pg-dumpall`.
+- [pg_isready](pages/app-pg-isready.md): Source `doc/src/sgml/ref/pg_isready.sgml#app-pg-isready`.
+- [pg_receivewal](pages/app-pgreceivewal.md): Source `doc/src/sgml/ref/pg_receivewal.sgml#app-pgreceivewal`.
+- [pg_recvlogical](pages/app-pgrecvlogical.md): Source `doc/src/sgml/ref/pg_recvlogical.sgml#app-pgrecvlogical`.
+- [pg_restore](pages/app-pgrestore.md): Source `doc/src/sgml/ref/pg_restore.sgml#app-pgrestore`.
+- [pg_verifybackup](pages/app-pgverifybackup.md): Source `doc/src/sgml/ref/pg_verifybackup.sgml#app-pgverifybackup`.
+- [psql](pages/app-psql.md): Source `doc/src/sgml/ref/psql-ref.sgml#app-psql`.
+- [reindexdb](pages/app-reindexdb.md): Source `doc/src/sgml/ref/reindexdb.sgml#app-reindexdb`.
+- [vacuumdb](pages/app-vacuumdb.md): Source `doc/src/sgml/ref/vacuumdb.sgml#app-vacuumdb`.
+- [initdb](pages/app-initdb.md): Source `doc/src/sgml/ref/initdb.sgml#app-initdb`.
+- [pg_archivecleanup](pages/pgarchivecleanup.md): Source `doc/src/sgml/ref/pgarchivecleanup.sgml#pgarchivecleanup`.
+- [pg_checksums](pages/app-pgchecksums.md): Source `doc/src/sgml/ref/pg_checksums.sgml#app-pgchecksums`.
+- [pg_controldata](pages/app-pgcontroldata.md): Source `doc/src/sgml/ref/pg_controldata.sgml#app-pgcontroldata`.
+- [pg_createsubscriber](pages/app-pgcreatesubscriber.md): Source `doc/src/sgml/ref/pg_createsubscriber.sgml#app-pgcreatesubscriber`.
+- [pg_ctl](pages/app-pg-ctl.md): Source `doc/src/sgml/ref/pg_ctl-ref.sgml#app-pg-ctl`.
+- [pg_resetwal](pages/app-pgresetwal.md): Source `doc/src/sgml/ref/pg_resetwal.sgml#app-pgresetwal`.
+- [pg_rewind](pages/app-pgrewind.md): Source `doc/src/sgml/ref/pg_rewind.sgml#app-pgrewind`.
+- [pg_test_fsync](pages/pgtestfsync.md): Source `doc/src/sgml/ref/pgtestfsync.sgml#pgtestfsync`.
+- [pg_test_timing](pages/pgtesttiming.md): Source `doc/src/sgml/ref/pgtesttiming.sgml#pgtesttiming`.
+- [pg_upgrade](pages/pgupgrade.md): Source `doc/src/sgml/ref/pgupgrade.sgml#pgupgrade`.
+- [pg_waldump](pages/pgwaldump.md): Source `doc/src/sgml/ref/pg_waldump.sgml#pgwaldump`.
+- [pg_walsummary](pages/app-pgwalsummary.md): Source `doc/src/sgml/ref/pg_walsummary.sgml#app-pgwalsummary`.
+- [postgres](pages/app-postgres.md): Source `doc/src/sgml/ref/postgres-ref.sgml#app-postgres`.
+
+## Internals
+
+- [Internals](pages/internals.md): Source `doc/src/sgml/postgres.sgml#internals`.
+- [Overview of PostgreSQL Internals](pages/overview.md): Source `doc/src/sgml/arch-dev.sgml#overview`.
+- [System Catalogs](pages/catalogs.md): Source `doc/src/sgml/catalogs.sgml#catalogs`.
+- [System Views](pages/views.md): Source `doc/src/sgml/system-views.sgml#views`.
+- [Frontend/Backend Protocol](pages/protocol.md): Source `doc/src/sgml/protocol.sgml#protocol`.
+- [PostgreSQL Coding Conventions](pages/source.md): Source `doc/src/sgml/sources.sgml#source`.
+- [Native Language Support](pages/nls.md): Source `doc/src/sgml/nls.sgml#nls`.
+- [Writing a Procedural Language Handler](pages/plhandler.md): Source `doc/src/sgml/plhandler.sgml#plhandler`.
+- [Writing a Foreign Data Wrapper](pages/fdwhandler.md): Source `doc/src/sgml/fdwhandler.sgml#fdwhandler`.
+- [Writing a Table Sampling Method](pages/tablesample-method.md): Source `doc/src/sgml/tablesample-method.sgml#tablesample-method`.
+- [Writing a Custom Scan Provider](pages/custom-scan.md): Source `doc/src/sgml/custom-scan.sgml#custom-scan`.
+- [Genetic Query Optimizer](pages/geqo.md): Source `doc/src/sgml/geqo.sgml#geqo`.
+- [Table Access Method Interface Definition](pages/tableam.md): Source `doc/src/sgml/tableam.sgml#tableam`.
+- [Index Access Method Interface Definition](pages/indexam.md): Source `doc/src/sgml/indexam.sgml#indexam`.
+- [Write Ahead Logging for Extensions](pages/wal-for-extensions.md): Source `doc/src/sgml/wal-for-extensions.sgml#wal-for-extensions`.
+- [Built-in Index Access Methods](pages/indextypes.md): Source `doc/src/sgml/indextypes.sgml#indextypes`.
+- [Database Physical Storage](pages/storage.md): Source `doc/src/sgml/storage.sgml#storage`.
+- [Transaction Processing](pages/transactions.md): Source `doc/src/sgml/xact.sgml#transactions`.
+- [System Catalog Declarations and Initial Contents](pages/bki.md): Source `doc/src/sgml/bki.sgml#bki`.
+- [How the Planner Uses Statistics](pages/planner-stats-details.md): Source `doc/src/sgml/planstats.sgml#planner-stats-details`.
+- [Backup Manifest Format](pages/backup-manifest-format.md): Source `doc/src/sgml/backup-manifest.sgml#backup-manifest-format`.
+
+## Overview of PostgreSQL Internals
+
+- [The Path of a Query](pages/query-path.md): Source `doc/src/sgml/arch-dev.sgml#query-path`.
+- [How Connections Are Established](pages/connect-estab.md): Source `doc/src/sgml/arch-dev.sgml#connect-estab`.
+- [The Parser Stage](pages/parser-stage.md): Source `doc/src/sgml/arch-dev.sgml#parser-stage`.
+- [The PostgreSQL Rule System](pages/rule-system.md): Source `doc/src/sgml/arch-dev.sgml#rule-system`.
+- [Planner/Optimizer](pages/planner-optimizer.md): Source `doc/src/sgml/arch-dev.sgml#planner-optimizer`.
+- [Executor](pages/executor.md): Source `doc/src/sgml/arch-dev.sgml#executor`.
+
+## System Catalogs
+
+- [Overview](pages/catalogs-overview.md): Source `doc/src/sgml/catalogs.sgml#catalogs-overview`.
+- [pg_aggregate](pages/catalog-pg-aggregate.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-aggregate`.
+- [pg_am](pages/catalog-pg-am.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-am`.
+- [pg_amop](pages/catalog-pg-amop.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-amop`.
+- [pg_amproc](pages/catalog-pg-amproc.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-amproc`.
+- [pg_attrdef](pages/catalog-pg-attrdef.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-attrdef`.
+- [pg_attribute](pages/catalog-pg-attribute.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-attribute`.
+- [pg_authid](pages/catalog-pg-authid.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-authid`.
+- [pg_auth_members](pages/catalog-pg-auth-members.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-auth-members`.
+- [pg_cast](pages/catalog-pg-cast.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-cast`.
+- [pg_class](pages/catalog-pg-class.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-class`.
+- [pg_collation](pages/catalog-pg-collation.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-collation`.
+- [pg_constraint](pages/catalog-pg-constraint.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-constraint`.
+- [pg_conversion](pages/catalog-pg-conversion.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-conversion`.
+- [pg_database](pages/catalog-pg-database.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-database`.
+- [pg_db_role_setting](pages/catalog-pg-db-role-setting.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-db-role-setting`.
+- [pg_default_acl](pages/catalog-pg-default-acl.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-default-acl`.
+- [pg_depend](pages/catalog-pg-depend.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-depend`.
+- [pg_description](pages/catalog-pg-description.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-description`.
+- [pg_enum](pages/catalog-pg-enum.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-enum`.
+- [pg_event_trigger](pages/catalog-pg-event-trigger.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-event-trigger`.
+- [pg_extension](pages/catalog-pg-extension.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-extension`.
+- [pg_foreign_data_wrapper](pages/catalog-pg-foreign-data-wrapper.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-foreign-data-wrapper`.
+- [pg_foreign_server](pages/catalog-pg-foreign-server.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-foreign-server`.
+- [pg_foreign_table](pages/catalog-pg-foreign-table.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-foreign-table`.
+- [pg_index](pages/catalog-pg-index.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-index`.
+- [pg_inherits](pages/catalog-pg-inherits.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-inherits`.
+- [pg_init_privs](pages/catalog-pg-init-privs.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-init-privs`.
+- [pg_language](pages/catalog-pg-language.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-language`.
+- [pg_largeobject](pages/catalog-pg-largeobject.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-largeobject`.
+- [pg_largeobject_metadata](pages/catalog-pg-largeobject-metadata.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-largeobject-metadata`.
+- [pg_namespace](pages/catalog-pg-namespace.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-namespace`.
+- [pg_opclass](pages/catalog-pg-opclass.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-opclass`.
+- [pg_operator](pages/catalog-pg-operator.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-operator`.
+- [pg_opfamily](pages/catalog-pg-opfamily.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-opfamily`.
+- [pg_parameter_acl](pages/catalog-pg-parameter-acl.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-parameter-acl`.
+- [pg_partitioned_table](pages/catalog-pg-partitioned-table.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-partitioned-table`.
+- [pg_policy](pages/catalog-pg-policy.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-policy`.
+- [pg_proc](pages/catalog-pg-proc.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-proc`.
+- [pg_publication](pages/catalog-pg-publication.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-publication`.
+- [pg_publication_namespace](pages/catalog-pg-publication-namespace.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-publication-namespace`.
+- [pg_publication_rel](pages/catalog-pg-publication-rel.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-publication-rel`.
+- [pg_range](pages/catalog-pg-range.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-range`.
+- [pg_replication_origin](pages/catalog-pg-replication-origin.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-replication-origin`.
+- [pg_rewrite](pages/catalog-pg-rewrite.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-rewrite`.
+- [pg_seclabel](pages/catalog-pg-seclabel.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-seclabel`.
+- [pg_sequence](pages/catalog-pg-sequence.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-sequence`.
+- [pg_shdepend](pages/catalog-pg-shdepend.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-shdepend`.
+- [pg_shdescription](pages/catalog-pg-shdescription.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-shdescription`.
+- [pg_shseclabel](pages/catalog-pg-shseclabel.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-shseclabel`.
+- [pg_statistic](pages/catalog-pg-statistic.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-statistic`.
+- [pg_statistic_ext](pages/catalog-pg-statistic-ext.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-statistic-ext`.
+- [pg_statistic_ext_data](pages/catalog-pg-statistic-ext-data.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-statistic-ext-data`.
+- [pg_subscription](pages/catalog-pg-subscription.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-subscription`.
+- [pg_subscription_rel](pages/catalog-pg-subscription-rel.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-subscription-rel`.
+- [pg_tablespace](pages/catalog-pg-tablespace.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-tablespace`.
+- [pg_transform](pages/catalog-pg-transform.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-transform`.
+- [pg_trigger](pages/catalog-pg-trigger.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-trigger`.
+- [pg_ts_config](pages/catalog-pg-ts-config.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-ts-config`.
+- [pg_ts_config_map](pages/catalog-pg-ts-config-map.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-ts-config-map`.
+- [pg_ts_dict](pages/catalog-pg-ts-dict.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-ts-dict`.
+- [pg_ts_parser](pages/catalog-pg-ts-parser.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-ts-parser`.
+- [pg_ts_template](pages/catalog-pg-ts-template.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-ts-template`.
+- [pg_type](pages/catalog-pg-type.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-type`.
+- [pg_user_mapping](pages/catalog-pg-user-mapping.md): Source `doc/src/sgml/catalogs.sgml#catalog-pg-user-mapping`.
+
+## System Views
+
+- [Overview](pages/views-overview.md): Source `doc/src/sgml/system-views.sgml#views-overview`.
+- [pg_aios](pages/view-pg-aios.md): Source `doc/src/sgml/system-views.sgml#view-pg-aios`.
+- [pg_available_extensions](pages/view-pg-available-extensions.md): Source `doc/src/sgml/system-views.sgml#view-pg-available-extensions`.
+- [pg_available_extension_versions](pages/view-pg-available-extension-versions.md): Source `doc/src/sgml/system-views.sgml#view-pg-available-extension-versions`.
+- [pg_backend_memory_contexts](pages/view-pg-backend-memory-contexts.md): Source `doc/src/sgml/system-views.sgml#view-pg-backend-memory-contexts`.
+- [pg_config](pages/view-pg-config.md): Source `doc/src/sgml/system-views.sgml#view-pg-config`.
+- [pg_cursors](pages/view-pg-cursors.md): Source `doc/src/sgml/system-views.sgml#view-pg-cursors`.
+- [pg_file_settings](pages/view-pg-file-settings.md): Source `doc/src/sgml/system-views.sgml#view-pg-file-settings`.
+- [pg_group](pages/view-pg-group.md): Source `doc/src/sgml/system-views.sgml#view-pg-group`.
+- [pg_hba_file_rules](pages/view-pg-hba-file-rules.md): Source `doc/src/sgml/system-views.sgml#view-pg-hba-file-rules`.
+- [pg_ident_file_mappings](pages/view-pg-ident-file-mappings.md): Source `doc/src/sgml/system-views.sgml#view-pg-ident-file-mappings`.
+- [pg_indexes](pages/view-pg-indexes.md): Source `doc/src/sgml/system-views.sgml#view-pg-indexes`.
+- [pg_locks](pages/view-pg-locks.md): Source `doc/src/sgml/system-views.sgml#view-pg-locks`.
+- [pg_matviews](pages/view-pg-matviews.md): Source `doc/src/sgml/system-views.sgml#view-pg-matviews`.
+- [pg_policies](pages/view-pg-policies.md): Source `doc/src/sgml/system-views.sgml#view-pg-policies`.
+- [pg_prepared_statements](pages/view-pg-prepared-statements.md): Source `doc/src/sgml/system-views.sgml#view-pg-prepared-statements`.
+- [pg_prepared_xacts](pages/view-pg-prepared-xacts.md): Source `doc/src/sgml/system-views.sgml#view-pg-prepared-xacts`.
+- [pg_publication_tables](pages/view-pg-publication-tables.md): Source `doc/src/sgml/system-views.sgml#view-pg-publication-tables`.
+- [pg_replication_origin_status](pages/view-pg-replication-origin-status.md): Source `doc/src/sgml/system-views.sgml#view-pg-replication-origin-status`.
+- [pg_replication_slots](pages/view-pg-replication-slots.md): Source `doc/src/sgml/system-views.sgml#view-pg-replication-slots`.
+- [pg_roles](pages/view-pg-roles.md): Source `doc/src/sgml/system-views.sgml#view-pg-roles`.
+- [pg_rules](pages/view-pg-rules.md): Source `doc/src/sgml/system-views.sgml#view-pg-rules`.
+- [pg_seclabels](pages/view-pg-seclabels.md): Source `doc/src/sgml/system-views.sgml#view-pg-seclabels`.
+- [pg_sequences](pages/view-pg-sequences.md): Source `doc/src/sgml/system-views.sgml#view-pg-sequences`.
+- [pg_settings](pages/view-pg-settings.md): Source `doc/src/sgml/system-views.sgml#view-pg-settings`.
+- [pg_shadow](pages/view-pg-shadow.md): Source `doc/src/sgml/system-views.sgml#view-pg-shadow`.
+- [pg_shmem_allocations](pages/view-pg-shmem-allocations.md): Source `doc/src/sgml/system-views.sgml#view-pg-shmem-allocations`.
+- [pg_shmem_allocations_numa](pages/view-pg-shmem-allocations-numa.md): Source `doc/src/sgml/system-views.sgml#view-pg-shmem-allocations-numa`.
+- [pg_stats](pages/view-pg-stats.md): Source `doc/src/sgml/system-views.sgml#view-pg-stats`.
+- [pg_stats_ext](pages/view-pg-stats-ext.md): Source `doc/src/sgml/system-views.sgml#view-pg-stats-ext`.
+- [pg_stats_ext_exprs](pages/view-pg-stats-ext-exprs.md): Source `doc/src/sgml/system-views.sgml#view-pg-stats-ext-exprs`.
+- [pg_tables](pages/view-pg-tables.md): Source `doc/src/sgml/system-views.sgml#view-pg-tables`.
+- [pg_timezone_abbrevs](pages/view-pg-timezone-abbrevs.md): Source `doc/src/sgml/system-views.sgml#view-pg-timezone-abbrevs`.
+- [pg_timezone_names](pages/view-pg-timezone-names.md): Source `doc/src/sgml/system-views.sgml#view-pg-timezone-names`.
+- [pg_user](pages/view-pg-user.md): Source `doc/src/sgml/system-views.sgml#view-pg-user`.
+- [pg_user_mappings](pages/view-pg-user-mappings.md): Source `doc/src/sgml/system-views.sgml#view-pg-user-mappings`.
+- [pg_views](pages/view-pg-views.md): Source `doc/src/sgml/system-views.sgml#view-pg-views`.
+- [pg_wait_events](pages/view-pg-wait-events.md): Source `doc/src/sgml/system-views.sgml#view-pg-wait-events`.
+
+## Frontend/Backend Protocol
+
+- [Overview](pages/protocol-overview.md): Source `doc/src/sgml/protocol.sgml#protocol-overview`.
+- [Message Flow](pages/protocol-flow.md): Source `doc/src/sgml/protocol.sgml#protocol-flow`.
+- [SASL Authentication](pages/sasl-authentication.md): Source `doc/src/sgml/protocol.sgml#sasl-authentication`.
+- [Streaming Replication Protocol](pages/protocol-replication.md): Source `doc/src/sgml/protocol.sgml#protocol-replication`.
+- [Logical Streaming Replication Protocol](pages/protocol-logical-replication.md): Source `doc/src/sgml/protocol.sgml#protocol-logical-replication`.
+- [Message Data Types](pages/protocol-message-types.md): Source `doc/src/sgml/protocol.sgml#protocol-message-types`.
+- [Message Formats](pages/protocol-message-formats.md): Source `doc/src/sgml/protocol.sgml#protocol-message-formats`.
+- [Error and Notice Message Fields](pages/protocol-error-fields.md): Source `doc/src/sgml/protocol.sgml#protocol-error-fields`.
+- [Logical Replication Message Formats](pages/protocol-logicalrep-message-formats.md): Source `doc/src/sgml/protocol.sgml#protocol-logicalrep-message-formats`.
+- [Summary of Changes since Protocol 2.0](pages/protocol-changes.md): Source `doc/src/sgml/protocol.sgml#protocol-changes`.
+
+## PostgreSQL Coding Conventions
+
+- [Formatting](pages/source-format.md): Source `doc/src/sgml/sources.sgml#source-format`.
+- [Reporting Errors Within the Server](pages/error-message-reporting.md): Source `doc/src/sgml/sources.sgml#error-message-reporting`.
+- [Error Message Style Guide](pages/error-style-guide.md): Source `doc/src/sgml/sources.sgml#error-style-guide`.
+- [Miscellaneous Coding Conventions](pages/source-conventions.md): Source `doc/src/sgml/sources.sgml#source-conventions`.
+
+## Native Language Support
+
+- [For the Translator](pages/nls-translator.md): Source `doc/src/sgml/nls.sgml#nls-translator`.
+- [For the Programmer](pages/nls-programmer.md): Source `doc/src/sgml/nls.sgml#nls-programmer`.
+
+## Writing a Foreign Data Wrapper
+
+- [Foreign Data Wrapper Functions](pages/fdw-functions.md): Source `doc/src/sgml/fdwhandler.sgml#fdw-functions`.
+- [Foreign Data Wrapper Callback Routines](pages/fdw-callbacks.md): Source `doc/src/sgml/fdwhandler.sgml#fdw-callbacks`.
+- [Foreign Data Wrapper Helper Functions](pages/fdw-helpers.md): Source `doc/src/sgml/fdwhandler.sgml#fdw-helpers`.
+- [Foreign Data Wrapper Query Planning](pages/fdw-planning.md): Source `doc/src/sgml/fdwhandler.sgml#fdw-planning`.
+- [Row Locking in Foreign Data Wrappers](pages/fdw-row-locking.md): Source `doc/src/sgml/fdwhandler.sgml#fdw-row-locking`.
+
+## Writing a Table Sampling Method
+
+- [Sampling Method Support Functions](pages/tablesample-support-functions.md): Source `doc/src/sgml/tablesample-method.sgml#tablesample-support-functions`.
+
+## Writing a Custom Scan Provider
+
+- [Creating Custom Scan Paths](pages/custom-scan-path.md): Source `doc/src/sgml/custom-scan.sgml#custom-scan-path`.
+- [Creating Custom Scan Plans](pages/custom-scan-plan.md): Source `doc/src/sgml/custom-scan.sgml#custom-scan-plan`.
+- [Executing Custom Scans](pages/custom-scan-execution.md): Source `doc/src/sgml/custom-scan.sgml#custom-scan-execution`.
+
+## Genetic Query Optimizer
+
+- [Query Handling as a Complex Optimization Problem](pages/geqo-intro.md): Source `doc/src/sgml/geqo.sgml#geqo-intro`.
+- [Genetic Algorithms](pages/geqo-intro2.md): Source `doc/src/sgml/geqo.sgml#geqo-intro2`.
+- [Genetic Query Optimization (GEQO) in PostgreSQL](pages/geqo-pg-intro.md): Source `doc/src/sgml/geqo.sgml#geqo-pg-intro`.
+- [Further Reading](pages/geqo-biblio.md): Source `doc/src/sgml/geqo.sgml#geqo-biblio`.
+
+## Index Access Method Interface Definition
+
+- [Basic API Structure for Indexes](pages/index-api.md): Source `doc/src/sgml/indexam.sgml#index-api`.
+- [Index Access Method Functions](pages/index-functions.md): Source `doc/src/sgml/indexam.sgml#index-functions`.
+- [Index Scanning](pages/index-scanning.md): Source `doc/src/sgml/indexam.sgml#index-scanning`.
+- [Index Locking Considerations](pages/index-locking.md): Source `doc/src/sgml/indexam.sgml#index-locking`.
+- [Index Uniqueness Checks](pages/index-unique-checks.md): Source `doc/src/sgml/indexam.sgml#index-unique-checks`.
+- [Index Cost Estimation Functions](pages/index-cost-estimation.md): Source `doc/src/sgml/indexam.sgml#index-cost-estimation`.
+
+## Write Ahead Logging for Extensions
+
+- [Generic WAL Records](pages/generic-wal.md): Source `doc/src/sgml/generic-wal.sgml#generic-wal`.
+- [Custom WAL Resource Managers](pages/custom-rmgr.md): Source `doc/src/sgml/custom-rmgr.sgml#custom-rmgr`.
+
+## Built-in Index Access Methods
+
+- [B-Tree Indexes](pages/btree.md): Source `doc/src/sgml/btree.sgml#btree`.
+- [GiST Indexes](pages/gist.md): Source `doc/src/sgml/gist.sgml#gist`.
+- [SP-GiST Indexes](pages/spgist.md): Source `doc/src/sgml/spgist.sgml#spgist`.
+- [GIN Indexes](pages/gin.md): Source `doc/src/sgml/gin.sgml#gin`.
+- [BRIN Indexes](pages/brin.md): Source `doc/src/sgml/brin.sgml#brin`.
+- [Hash Indexes](pages/hash-index.md): Source `doc/src/sgml/hash.sgml#hash-index`.
+
+## Database Physical Storage
+
+- [Database File Layout](pages/storage-file-layout.md): Source `doc/src/sgml/storage.sgml#storage-file-layout`.
+- [TOAST](pages/storage-toast.md): Source `doc/src/sgml/storage.sgml#storage-toast`.
+- [Free Space Map](pages/storage-fsm.md): Source `doc/src/sgml/storage.sgml#storage-fsm`.
+- [Visibility Map](pages/storage-vm.md): Source `doc/src/sgml/storage.sgml#storage-vm`.
+- [The Initialization Fork](pages/storage-init.md): Source `doc/src/sgml/storage.sgml#storage-init`.
+- [Database Page Layout](pages/storage-page-layout.md): Source `doc/src/sgml/storage.sgml#storage-page-layout`.
+- [Heap-Only Tuples (HOT)](pages/storage-hot.md): Source `doc/src/sgml/storage.sgml#storage-hot`.
+
+## Transaction Processing
+
+- [Transactions and Identifiers](pages/transaction-id.md): Source `doc/src/sgml/xact.sgml#transaction-id`.
+- [Transactions and Locking](pages/xact-locking.md): Source `doc/src/sgml/xact.sgml#xact-locking`.
+- [Subtransactions](pages/subxacts.md): Source `doc/src/sgml/xact.sgml#subxacts`.
+- [Two-Phase Transactions](pages/two-phase.md): Source `doc/src/sgml/xact.sgml#two-phase`.
+
+## System Catalog Declarations and Initial Contents
+
+- [System Catalog Declaration Rules](pages/system-catalog-declarations.md): Source `doc/src/sgml/bki.sgml#system-catalog-declarations`.
+- [System Catalog Initial Data](pages/system-catalog-initial-data.md): Source `doc/src/sgml/bki.sgml#system-catalog-initial-data`.
+- [BKI File Format](pages/bki-format.md): Source `doc/src/sgml/bki.sgml#bki-format`.
+- [BKI Commands](pages/bki-commands.md): Source `doc/src/sgml/bki.sgml#bki-commands`.
+- [Structure of the Bootstrap BKI File](pages/bki-structure.md): Source `doc/src/sgml/bki.sgml#bki-structure`.
+- [BKI Example](pages/bki-example.md): Source `doc/src/sgml/bki.sgml#bki-example`.
+
+## How the Planner Uses Statistics
+
+- [Row Estimation Examples](pages/row-estimation-examples.md): Source `doc/src/sgml/planstats.sgml#row-estimation-examples`.
+- [Multivariate Statistics Examples](pages/multivariate-statistics-examples.md): Source `doc/src/sgml/planstats.sgml#multivariate-statistics-examples`.
+- [Planner Statistics and Security](pages/planner-stats-security.md): Source `doc/src/sgml/planstats.sgml#planner-stats-security`.
+
+## Backup Manifest Format
+
+- [Backup Manifest Top-level Object](pages/backup-manifest-toplevel.md): Source `doc/src/sgml/backup-manifest.sgml#backup-manifest-toplevel`.
+- [Backup Manifest File Object](pages/backup-manifest-files.md): Source `doc/src/sgml/backup-manifest.sgml#backup-manifest-files`.
+- [Backup Manifest WAL Range Object](pages/backup-manifest-wal-ranges.md): Source `doc/src/sgml/backup-manifest.sgml#backup-manifest-wal-ranges`.
+
+## Appendixes
+
+- [Appendixes](pages/appendixes.md): Source `doc/src/sgml/postgres.sgml#appendixes`.
+- [PostgreSQL Error Codes](pages/errcodes-appendix.md): Source `doc/src/sgml/errcodes.sgml#errcodes-appendix`.
+- [Date/Time Support](pages/datetime-appendix.md): Source `doc/src/sgml/datetime.sgml#datetime-appendix`.
+- [SQL Key Words](pages/sql-keywords-appendix.md): Source `doc/src/sgml/keywords.sgml#sql-keywords-appendix`.
+- [SQL Conformance](pages/features.md): Source `doc/src/sgml/features.sgml#features`.
+- [Release Notes](pages/release.md): Source `doc/src/sgml/release.sgml#release`.
+- [Additional Supplied Modules and Extensions](pages/contrib.md): Source `doc/src/sgml/contrib.sgml#contrib`.
+- [Additional Supplied Programs](pages/contrib-prog.md): Source `doc/src/sgml/contrib.sgml#contrib-prog`.
+- [External Projects](pages/external-projects.md): Source `doc/src/sgml/external-projects.sgml#external-projects`.
+- [The Source Code Repository](pages/sourcerepo.md): Source `doc/src/sgml/sourcerepo.sgml#sourcerepo`.
+- [Documentation](pages/docguide.md): Source `doc/src/sgml/docguide.sgml#docguide`.
+- [PostgreSQL Limits](pages/limits.md): Source `doc/src/sgml/limits.sgml#limits`.
+- [Acronyms](pages/acronyms.md): Source `doc/src/sgml/acronyms.sgml#acronyms`.
+- [Glossary](pages/glossary.md): Source `doc/src/sgml/glossary.sgml#glossary`.
+- [Color Support](pages/color.md): Source `doc/src/sgml/color.sgml#color`.
+- [Obsolete or Renamed Features](pages/appendix-obsolete.md): Source `doc/src/sgml/appendix-obsolete.sgml#appendix-obsolete`.
+
+## Date/Time Support
+
+- [Date/Time Input Interpretation](pages/datetime-input-rules.md): Source `doc/src/sgml/datetime.sgml#datetime-input-rules`.
+- [Handling of Invalid or Ambiguous Timestamps](pages/datetime-invalid-input.md): Source `doc/src/sgml/datetime.sgml#datetime-invalid-input`.
+- [Date/Time Key Words](pages/datetime-keywords.md): Source `doc/src/sgml/datetime.sgml#datetime-keywords`.
+- [Date/Time Configuration Files](pages/datetime-config-files.md): Source `doc/src/sgml/datetime.sgml#datetime-config-files`.
+- [POSIX Time Zone Specifications](pages/datetime-posix-timezone-specs.md): Source `doc/src/sgml/datetime.sgml#datetime-posix-timezone-specs`.
+- [History of Units](pages/datetime-units-history.md): Source `doc/src/sgml/datetime.sgml#datetime-units-history`.
+- [Julian Dates](pages/datetime-julian-dates.md): Source `doc/src/sgml/datetime.sgml#datetime-julian-dates`.
+
+## SQL Conformance
+
+- [Supported Features](pages/features-sql-standard.md): Source `doc/src/sgml/features.sgml#features-sql-standard`.
+- [Unsupported Features](pages/unsupported-features-sql-standard.md): Source `doc/src/sgml/features.sgml#unsupported-features-sql-standard`.
+- [XML Limits and Conformance to SQL/XML](pages/xml-limits-conformance.md): Source `doc/src/sgml/features.sgml#xml-limits-conformance`.
+
+## Release Notes
+
+- [Release 18.6](pages/release-18-6.md): Source `doc/src/sgml/release-18.sgml#release-18-6`.
+- [Release 18.4](pages/release-18-4.md): Source `doc/src/sgml/release-18.sgml#release-18-4`.
+- [Release 18.3](pages/release-18-3.md): Source `doc/src/sgml/release-18.sgml#release-18-3`.
+- [Release 18.2](pages/release-18-2.md): Source `doc/src/sgml/release-18.sgml#release-18-2`.
+- [Release 18.1](pages/release-18-1.md): Source `doc/src/sgml/release-18.sgml#release-18-1`.
+- [Release 18](pages/release-18.md): Source `doc/src/sgml/release-18.sgml#release-18`.
+- [Prior Releases](pages/release-prior.md): Source `doc/src/sgml/release.sgml#release-prior`.
+
+## Additional Supplied Modules and Extensions
+
+- [amcheck — tools to verify table and index consistency](pages/amcheck.md): Source `doc/src/sgml/amcheck.sgml#amcheck`.
+- [auth_delay — pause on authentication failure](pages/auth-delay.md): Source `doc/src/sgml/auth-delay.sgml#auth-delay`.
+- [auto_explain — log execution plans of slow queries](pages/auto-explain.md): Source `doc/src/sgml/auto-explain.sgml#auto-explain`.
+- [basebackup_to_shell — example "shell" pg_basebackup module](pages/basebackup-to-shell.md): Source `doc/src/sgml/basebackup-to-shell.sgml#basebackup-to-shell`.
+- [basic_archive — an example WAL archive module](pages/basic-archive.md): Source `doc/src/sgml/basic-archive.sgml#basic-archive`.
+- [bloom — bloom filter index access method](pages/bloom.md): Source `doc/src/sgml/bloom.sgml#bloom`.
+- [btree_gin — GIN operator classes with B-tree behavior](pages/btree-gin.md): Source `doc/src/sgml/btree-gin.sgml#btree-gin`.
+- [btree_gist — GiST operator classes with B-tree behavior](pages/btree-gist.md): Source `doc/src/sgml/btree-gist.sgml#btree-gist`.
+- [citext — a case-insensitive character string type](pages/citext.md): Source `doc/src/sgml/citext.sgml#citext`.
+- [cube — a multi-dimensional cube data type](pages/cube.md): Source `doc/src/sgml/cube.sgml#cube`.
+- [dblink — connect to other PostgreSQL databases](pages/dblink.md): Source `doc/src/sgml/dblink.sgml#dblink`.
+- [dict_int — example full-text search dictionary for integers](pages/dict-int.md): Source `doc/src/sgml/dict-int.sgml#dict-int`.
+- [dict_xsyn — example synonym full-text search dictionary](pages/dict-xsyn.md): Source `doc/src/sgml/dict-xsyn.sgml#dict-xsyn`.
+- [earthdistance — calculate great-circle distances](pages/earthdistance.md): Source `doc/src/sgml/earthdistance.sgml#earthdistance`.
+- [file_fdw — access data files in the server's file system](pages/file-fdw.md): Source `doc/src/sgml/file-fdw.sgml#file-fdw`.
+- [fuzzystrmatch — determine string similarities and distance](pages/fuzzystrmatch.md): Source `doc/src/sgml/fuzzystrmatch.sgml#fuzzystrmatch`.
+- [hstore — hstore key/value datatype](pages/hstore.md): Source `doc/src/sgml/hstore.sgml#hstore`.
+- [intagg — integer aggregator and enumerator](pages/intagg.md): Source `doc/src/sgml/intagg.sgml#intagg`.
+- [intarray — manipulate arrays of integers](pages/intarray.md): Source `doc/src/sgml/intarray.sgml#intarray`.
+- [isn — data types for international standard numbers (ISBN, EAN, UPC, etc.)](pages/isn.md): Source `doc/src/sgml/isn.sgml#isn`.
+- [lo — manage large objects](pages/lo.md): Source `doc/src/sgml/lo.sgml#lo`.
+- [ltree — hierarchical tree-like data type](pages/ltree.md): Source `doc/src/sgml/ltree.sgml#ltree`.
+- [pageinspect — low-level inspection of database pages](pages/pageinspect.md): Source `doc/src/sgml/pageinspect.sgml#pageinspect`.
+- [passwordcheck — verify password strength](pages/passwordcheck.md): Source `doc/src/sgml/passwordcheck.sgml#passwordcheck`.
+- [pg_buffercache — inspect PostgreSQL buffer cache state](pages/pgbuffercache.md): Source `doc/src/sgml/pgbuffercache.sgml#pgbuffercache`.
+- [pgcrypto — cryptographic functions](pages/pgcrypto.md): Source `doc/src/sgml/pgcrypto.sgml#pgcrypto`.
+- [pg_freespacemap — examine the free space map](pages/pgfreespacemap.md): Source `doc/src/sgml/pgfreespacemap.sgml#pgfreespacemap`.
+- [pg_logicalinspect — logical decoding components inspection](pages/pglogicalinspect.md): Source `doc/src/sgml/pglogicalinspect.sgml#pglogicalinspect`.
+- [pg_overexplain — allow EXPLAIN to dump even more details](pages/pgoverexplain.md): Source `doc/src/sgml/pgoverexplain.sgml#pgoverexplain`.
+- [pg_prewarm — preload relation data into buffer caches](pages/pgprewarm.md): Source `doc/src/sgml/pgprewarm.sgml#pgprewarm`.
+- [pgrowlocks — show a table's row locking information](pages/pgrowlocks.md): Source `doc/src/sgml/pgrowlocks.sgml#pgrowlocks`.
+- [pg_stat_statements — track statistics of SQL planning and execution](pages/pgstatstatements.md): Source `doc/src/sgml/pgstatstatements.sgml#pgstatstatements`.
+- [pgstattuple — obtain tuple-level statistics](pages/pgstattuple.md): Source `doc/src/sgml/pgstattuple.sgml#pgstattuple`.
+- [pg_surgery — perform low-level surgery on relation data](pages/pgsurgery.md): Source `doc/src/sgml/pgsurgery.sgml#pgsurgery`.
+- [pg_trgm — support for similarity of text using trigram matching](pages/pgtrgm.md): Source `doc/src/sgml/pgtrgm.sgml#pgtrgm`.
+- [pg_visibility — visibility map information and utilities](pages/pgvisibility.md): Source `doc/src/sgml/pgvisibility.sgml#pgvisibility`.
+- [pg_walinspect — low-level WAL inspection](pages/pgwalinspect.md): Source `doc/src/sgml/pgwalinspect.sgml#pgwalinspect`.
+- [postgres_fdw — access data stored in external PostgreSQL servers](pages/postgres-fdw.md): Source `doc/src/sgml/postgres-fdw.sgml#postgres-fdw`.
+- [seg — a datatype for line segments or floating point intervals](pages/seg.md): Source `doc/src/sgml/seg.sgml#seg`.
+- [sepgsql — SELinux-, label-based mandatory access control (MAC) security module](pages/sepgsql.md): Source `doc/src/sgml/sepgsql.sgml#sepgsql`.
+- [spi — Server Programming Interface features/examples](pages/contrib-spi.md): Source `doc/src/sgml/contrib-spi.sgml#contrib-spi`.
+- [sslinfo — obtain client SSL information](pages/sslinfo.md): Source `doc/src/sgml/sslinfo.sgml#sslinfo`.
+- [tablefunc — functions that return tables (crosstab and others)](pages/tablefunc.md): Source `doc/src/sgml/tablefunc.sgml#tablefunc`.
+- [tcn — a trigger function to notify listeners of changes to table content](pages/tcn.md): Source `doc/src/sgml/tcn.sgml#tcn`.
+- [test_decoding — SQL-based test/example module for WAL logical decoding](pages/test-decoding.md): Source `doc/src/sgml/test-decoding.sgml#test-decoding`.
+- [tsm_system_rows — the SYSTEM_ROWS sampling method for TABLESAMPLE](pages/tsm-system-rows.md): Source `doc/src/sgml/tsm-system-rows.sgml#tsm-system-rows`.
+- [tsm_system_time — the SYSTEM_TIME sampling method for TABLESAMPLE](pages/tsm-system-time.md): Source `doc/src/sgml/tsm-system-time.sgml#tsm-system-time`.
+- [unaccent — a text search dictionary which removes diacritics](pages/unaccent.md): Source `doc/src/sgml/unaccent.sgml#unaccent`.
+- [uuid-ossp — a UUID generator](pages/uuid-ossp.md): Source `doc/src/sgml/uuid-ossp.sgml#uuid-ossp`.
+- [xml2 — XPath querying and XSLT functionality](pages/xml2.md): Source `doc/src/sgml/xml2.sgml#xml2`.
+
+## dblink — connect to other PostgreSQL databases
+
+- [dblink_connect](pages/contrib-dblink-connect.md): Source `doc/src/sgml/dblink.sgml#contrib-dblink-connect`.
+- [dblink_connect_u](pages/contrib-dblink-connect-u.md): Source `doc/src/sgml/dblink.sgml#contrib-dblink-connect-u`.
+- [dblink_disconnect](pages/contrib-dblink-disconnect.md): Source `doc/src/sgml/dblink.sgml#contrib-dblink-disconnect`.
+- [dblink](pages/contrib-dblink-function.md): Source `doc/src/sgml/dblink.sgml#contrib-dblink-function`.
+- [dblink_exec](pages/contrib-dblink-exec.md): Source `doc/src/sgml/dblink.sgml#contrib-dblink-exec`.
+- [dblink_open](pages/contrib-dblink-open.md): Source `doc/src/sgml/dblink.sgml#contrib-dblink-open`.
+- [dblink_fetch](pages/contrib-dblink-fetch.md): Source `doc/src/sgml/dblink.sgml#contrib-dblink-fetch`.
+- [dblink_close](pages/contrib-dblink-close.md): Source `doc/src/sgml/dblink.sgml#contrib-dblink-close`.
+- [dblink_get_connections](pages/contrib-dblink-get-connections.md): Source `doc/src/sgml/dblink.sgml#contrib-dblink-get-connections`.
+- [dblink_error_message](pages/contrib-dblink-error-message.md): Source `doc/src/sgml/dblink.sgml#contrib-dblink-error-message`.
+- [dblink_send_query](pages/contrib-dblink-send-query.md): Source `doc/src/sgml/dblink.sgml#contrib-dblink-send-query`.
+- [dblink_is_busy](pages/contrib-dblink-is-busy.md): Source `doc/src/sgml/dblink.sgml#contrib-dblink-is-busy`.
+- [dblink_get_notify](pages/contrib-dblink-get-notify.md): Source `doc/src/sgml/dblink.sgml#contrib-dblink-get-notify`.
+- [dblink_get_result](pages/contrib-dblink-get-result.md): Source `doc/src/sgml/dblink.sgml#contrib-dblink-get-result`.
+- [dblink_cancel_query](pages/contrib-dblink-cancel-query.md): Source `doc/src/sgml/dblink.sgml#contrib-dblink-cancel-query`.
+- [dblink_get_pkey](pages/contrib-dblink-get-pkey.md): Source `doc/src/sgml/dblink.sgml#contrib-dblink-get-pkey`.
+- [dblink_build_sql_insert](pages/contrib-dblink-build-sql-insert.md): Source `doc/src/sgml/dblink.sgml#contrib-dblink-build-sql-insert`.
+- [dblink_build_sql_delete](pages/contrib-dblink-build-sql-delete.md): Source `doc/src/sgml/dblink.sgml#contrib-dblink-build-sql-delete`.
+- [dblink_build_sql_update](pages/contrib-dblink-build-sql-update.md): Source `doc/src/sgml/dblink.sgml#contrib-dblink-build-sql-update`.
+
+## Additional Supplied Programs
+
+- [Client Applications](pages/contrib-prog-client.md): Source `doc/src/sgml/contrib.sgml#contrib-prog-client`.
+- [Server Applications](pages/contrib-prog-server.md): Source `doc/src/sgml/contrib.sgml#contrib-prog-server`.
+
+## Client Applications
+
+- [oid2name](pages/oid2name.md): Source `doc/src/sgml/oid2name.sgml#oid2name`.
+- [vacuumlo](pages/vacuumlo.md): Source `doc/src/sgml/vacuumlo.sgml#vacuumlo`.
+
+## External Projects
+
+- [Client Interfaces](pages/external-interfaces.md): Source `doc/src/sgml/external-projects.sgml#external-interfaces`.
+- [Administration Tools](pages/external-admin-tools.md): Source `doc/src/sgml/external-projects.sgml#external-admin-tools`.
+- [Procedural Languages](pages/external-pl.md): Source `doc/src/sgml/external-projects.sgml#external-pl`.
+- [Extensions](pages/external-extensions.md): Source `doc/src/sgml/external-projects.sgml#external-extensions`.
+
+## The Source Code Repository
+
+- [Getting the Source via Git](pages/git.md): Source `doc/src/sgml/sourcerepo.sgml#git`.
+
+## Documentation
+
+- [DocBook](pages/docguide-docbook.md): Source `doc/src/sgml/docguide.sgml#docguide-docbook`.
+- [Tool Sets](pages/docguide-toolsets.md): Source `doc/src/sgml/docguide.sgml#docguide-toolsets`.
+- [Building the Documentation with Make](pages/docguide-build.md): Source `doc/src/sgml/docguide.sgml#docguide-build`.
+- [Building the Documentation with Meson](pages/docguide-build-meson.md): Source `doc/src/sgml/docguide.sgml#docguide-build-meson`.
+- [Documentation Authoring](pages/docguide-authoring.md): Source `doc/src/sgml/docguide.sgml#docguide-authoring`.
+- [Style Guide](pages/docguide-style.md): Source `doc/src/sgml/docguide.sgml#docguide-style`.
+
+## Color Support
+
+- [When Color is Used](pages/color-when.md): Source `doc/src/sgml/color.sgml#color-when`.
+- [Configuring the Colors](pages/color-which.md): Source `doc/src/sgml/color.sgml#color-which`.
+
+## Obsolete or Renamed Features
+
+- [recovery.conf file merged into postgresql.conf](pages/recovery-config.md): Source `doc/src/sgml/appendix-obsolete-recovery-config.sgml#recovery-config`.
+- [Default Roles Renamed to Predefined Roles](pages/default-roles.md): Source `doc/src/sgml/appendix-obsolete-default-roles.sgml#default-roles`.
+- [pg_xlogdump renamed to pg_waldump](pages/pgxlogdump.md): Source `doc/src/sgml/appendix-obsolete-pgxlogdump.sgml#pgxlogdump`.
+- [pg_resetxlog renamed to pg_resetwal](pages/app-pgresetxlog.md): Source `doc/src/sgml/appendix-obsolete-pgresetxlog.sgml#app-pgresetxlog`.
+- [pg_receivexlog renamed to pg_receivewal](pages/app-pgreceivexlog.md): Source `doc/src/sgml/appendix-obsolete-pgreceivexlog.sgml#app-pgreceivexlog`.
+
+## Bibliography
+
+- [Bibliography](pages/biblio.md): Source `doc/src/sgml/biblio.sgml#biblio`.

@@ -57,6 +57,10 @@ const unresolvedSyntax: Record<ProjectId, RegExp> = {
     /<\/?(?:Accordion|Card|CardGroup|CodeGroup|Expandable|Frame|Info|Note|ParamField|ResponseField|Step|Steps|Tab|Tabs|Tip|Update|Warning)\b/,
   aria2:
     /^\s*\.\.\s+[a-zA-Z][\w:-]*::|:[a-zA-Z][\w:-]*:`|`[^`\n]+`_|^\s*=+(?:\s+=+)+\s*$/m,
+  // The manual documents XML and C, so a bare `&name;` is ordinary content;
+  // only the two entities the build substitutes indicate an unresolved include.
+  "postgres-18":
+    /<\/?(?:para|sect[1-5]|xref|literal|varlistentry|programlisting|refsect[1-3])\b|&(?:version|majorversion);/,
   "apple-swift": /(?!)/,
   "apple-swiftui": /(?!)/,
   "apple-webkit": /(?!)/,
@@ -209,6 +213,9 @@ function reasonKind(reason: string): string {
   return reason.split(/\s+in\s+|:/)[0]?.trim() ?? reason;
 }
 
+// Code samples legitimately contain what looks like unconverted markup: the
+// PostgreSQL manual shows C address-of expressions (`&intval;`) and SGML
+// fragments, so its fences are excluded from the scan like Docker's and n8n's.
 function rejectionReason(
   projectId: ProjectId,
   document: Document,
@@ -216,7 +223,9 @@ function rejectionReason(
   const source =
     projectId === "searxng" && document.sourcePath === "docs/dev/reST.rst"
       ? ""
-      : projectId === "docker" || projectId === "n8n"
+      : projectId === "docker" ||
+          projectId === "n8n" ||
+          projectId === "postgres-18"
         ? withoutFencedCode(document.body)
         : document.body;
   const match = unresolvedSyntax[projectId].exec(source);

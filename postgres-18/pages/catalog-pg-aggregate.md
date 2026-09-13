@@ -1,0 +1,139 @@
+> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/catalogs.sgml#catalog-pg-aggregate](https://www.postgresql.org/docs/18/catalog-pg-aggregate.html)
+
+# pg_aggregate
+
+The catalog `pg_aggregate` stores information about aggregate functions. An aggregate function is a function that operates on a set of values (typically one column from each row that matches a query condition) and returns a single value computed from all these values. Typical aggregate functions are `sum`, `count`, and `max`. Each entry in `pg_aggregate` is an extension of an entry in [`pg_proc`](./catalog-pg-proc.md). The `pg_proc` entry carries the aggregate's name, input and output data types, and other information that is similar to ordinary functions.
+
+**pg_aggregate Columns**
+
+`aggfnoid` `regproc` (references [`pg_proc`](./catalog-pg-proc.md).`oid`)
+
+`pg_proc` OID of the aggregate function
+
+---
+
+`aggkind` `char`
+
+Aggregate kind: `n` for “normal” aggregates, `o` for “ordered-set” aggregates, or `h` for “hypothetical-set” aggregates
+
+---
+
+`aggnumdirectargs` `int2`
+
+Number of direct (non-aggregated) arguments of an ordered-set or hypothetical-set aggregate, counting a variadic array as one argument. If equal to `pronargs`, the aggregate must be variadic and the variadic array describes the aggregated arguments as well as the final direct arguments. Always zero for normal aggregates.
+
+---
+
+`aggtransfn` `regproc` (references [`pg_proc`](./catalog-pg-proc.md).`oid`)
+
+Transition function
+
+---
+
+`aggfinalfn` `regproc` (references [`pg_proc`](./catalog-pg-proc.md).`oid`)
+
+Final function (zero if none)
+
+---
+
+`aggcombinefn` `regproc` (references [`pg_proc`](./catalog-pg-proc.md).`oid`)
+
+Combine function (zero if none)
+
+---
+
+`aggserialfn` `regproc` (references [`pg_proc`](./catalog-pg-proc.md).`oid`)
+
+Serialization function (zero if none)
+
+---
+
+`aggdeserialfn` `regproc` (references [`pg_proc`](./catalog-pg-proc.md).`oid`)
+
+Deserialization function (zero if none)
+
+---
+
+`aggmtransfn` `regproc` (references [`pg_proc`](./catalog-pg-proc.md).`oid`)
+
+Forward transition function for moving-aggregate mode (zero if none)
+
+---
+
+`aggminvtransfn` `regproc` (references [`pg_proc`](./catalog-pg-proc.md).`oid`)
+
+Inverse transition function for moving-aggregate mode (zero if none)
+
+---
+
+`aggmfinalfn` `regproc` (references [`pg_proc`](./catalog-pg-proc.md).`oid`)
+
+Final function for moving-aggregate mode (zero if none)
+
+---
+
+`aggfinalextra` `bool`
+
+True to pass extra dummy arguments to `aggfinalfn`
+
+---
+
+`aggmfinalextra` `bool`
+
+True to pass extra dummy arguments to `aggmfinalfn`
+
+---
+
+`aggfinalmodify` `char`
+
+Whether `aggfinalfn` modifies the transition state value: `r` if it is read-only, `s` if the `aggtransfn` cannot be applied after the `aggfinalfn`, or `w` if it writes on the value
+
+---
+
+`aggmfinalmodify` `char`
+
+Like `aggfinalmodify`, but for the `aggmfinalfn`
+
+---
+
+`aggsortop` `oid` (references [`pg_operator`](./catalog-pg-operator.md).`oid`)
+
+Associated sort operator (zero if none)
+
+---
+
+`aggtranstype` `oid` (references [`pg_type`](./catalog-pg-type.md).`oid`)
+
+Data type of the aggregate function's internal transition (state) data
+
+---
+
+`aggtransspace` `int4`
+
+Approximate average size (in bytes) of the transition state data, or zero to use a default estimate
+
+---
+
+`aggmtranstype` `oid` (references [`pg_type`](./catalog-pg-type.md).`oid`)
+
+Data type of the aggregate function's internal transition (state) data for moving-aggregate mode (zero if none)
+
+---
+
+`aggmtransspace` `int4`
+
+Approximate average size (in bytes) of the transition state data for moving-aggregate mode, or zero to use a default estimate
+
+---
+
+`agginitval` `text`
+
+The initial value of the transition state. This is a text field containing the initial value in its external string representation. If this field is null, the transition state value starts out null.
+
+---
+
+`aggminitval` `text`
+
+The initial value of the transition state for moving-aggregate mode. This is a text field containing the initial value in its external string representation. If this field is null, the transition state value starts out null.
+
+New aggregate functions are registered with the [`CREATE AGGREGATE`](./sql-createaggregate.md) command. See [User-Defined Aggregates](./xaggr.md) for more information about writing aggregate functions and the meaning of the transition functions, etc.
