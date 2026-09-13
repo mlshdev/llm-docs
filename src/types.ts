@@ -20,6 +20,7 @@ export const projectIds = [
   "bun",
   "trigger-dev",
   "aria2",
+  "postgres-18",
   "apple-swift",
   "apple-swiftui",
   "apple-webkit",
@@ -74,6 +75,10 @@ export interface GithubSourceProject
   readonly repository: string;
   readonly docsRepository?: string;
   readonly branch?: string;
+  // A repository that publishes no GitHub releases but tags every maintenance
+  // release pins the highest `<series>_<minor>` tag, which is how a major
+  // version tracks its own minor versions and nothing else.
+  readonly tagSeries?: string;
 }
 
 export interface DoccSourceProject extends BaseSourceProject<DoccProjectId> {
@@ -96,6 +101,7 @@ export interface ReleaseLockedSource {
   readonly docsCommit?: string;
   readonly branch?: never;
   readonly sourceCommittedAt?: never;
+  readonly taggedAt?: never;
   readonly snapshotDigest?: never;
   readonly contentDigest?: never;
   readonly capturedAt?: never;
@@ -106,6 +112,24 @@ export interface BranchLockedSource {
   readonly branch: string;
   readonly sourceCommit: string;
   readonly sourceCommittedAt: string;
+  readonly docsCommit?: never;
+  readonly releaseId?: never;
+  readonly releasePublishedAt?: never;
+  readonly taggedAt?: never;
+  readonly snapshotDigest?: never;
+  readonly contentDigest?: never;
+  readonly capturedAt?: never;
+}
+
+// A maintenance-release tag in a repository that publishes no GitHub releases.
+// `taggedAt` is the pinned commit's author date and distinguishes this pin from
+// a release pin, which carries the release's own publication time instead.
+export interface TagLockedSource {
+  readonly tag: string;
+  readonly sourceCommit: string;
+  readonly taggedAt: string;
+  readonly branch?: never;
+  readonly sourceCommittedAt?: never;
   readonly docsCommit?: never;
   readonly releaseId?: never;
   readonly releasePublishedAt?: never;
@@ -128,6 +152,7 @@ export interface SnapshotLockedSource {
   readonly sourceCommit?: never;
   readonly branch?: never;
   readonly sourceCommittedAt?: never;
+  readonly taggedAt?: never;
   readonly docsCommit?: never;
   readonly releaseId?: never;
   readonly releasePublishedAt?: never;
@@ -136,14 +161,24 @@ export interface SnapshotLockedSource {
 export type LockedSource =
   | ReleaseLockedSource
   | BranchLockedSource
+  | TagLockedSource
   | SnapshotLockedSource;
 
-export type GithubLockedSource = ReleaseLockedSource | BranchLockedSource;
+export type GithubLockedSource =
+  | ReleaseLockedSource
+  | BranchLockedSource
+  | TagLockedSource;
 
 export function isBranchLockedSource(
   source: LockedSource,
 ): source is BranchLockedSource {
   return source.branch !== undefined;
+}
+
+export function isTagLockedSource(
+  source: LockedSource,
+): source is TagLockedSource {
+  return source.taggedAt !== undefined;
 }
 
 export function isSnapshotLockedSource(

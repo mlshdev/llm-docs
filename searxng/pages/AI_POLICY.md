@@ -1,4 +1,4 @@
-> Commit-pinned source for SearXNG master: [AI_POLICY.rst](https://github.com/searxng/searxng/blob/d4f00d15d4c2b8260124a9039b80bc9c1c26499b/AI_POLICY.rst)
+> Commit-pinned source for SearXNG master: [AI_POLICY.rst](https://github.com/searxng/searxng/blob/230c3632d927599c4a8f6bf109bc094f95598181/AI_POLICY.rst)
 
 .. SPDX-License-Identifier: AGPL-3.0-or-later
 

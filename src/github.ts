@@ -6,6 +6,7 @@ import { setTimeout as sleep } from "node:timers/promises";
 import type { ReadableStream as NodeReadableStream } from "node:stream/web";
 import { resolveDoccSnapshot } from "./projects/apple.ts";
 import { describeError } from "./quarantine.ts";
+import { isTagLockedSource } from "./types.ts";
 import type {
   BranchLockedSource,
   ReleaseLockedSource,
@@ -156,6 +157,9 @@ async function resolveSource(
   project: GithubSourceProject,
   current: Readonly<Partial<Record<SourceProject["id"], LockedSource>>>,
 ): Promise<readonly [SourceProject["id"], LockedSource]> {
+  if (project.tagSeries) {
+    return resolveTagSeries(project, project.tagSeries, current[project.id]);
+  }
   if (project.branch) {
     const sourceCommit = await getCommit(project.repository, project.branch);
     const previous = current[project.id];
@@ -241,6 +245,66 @@ async function resolveSource(
       docsCommit: docsCommitDetails.sha,
     },
   ] as const;
+}
+
+// A major version tracks only its own maintenance releases: every tag in the
+// series is `<series>_<minor>`, and the highest minor is the current one.
+// Prereleases (`REL_18_BETA1`, `REL_18_RC1`) do not match and are ignored.
+async function resolveTagSeries(
+  project: GithubSourceProject,
+  series: string,
+  previous: LockedSource | undefined,
+): Promise<readonly [SourceProject["id"], LockedSource]> {
+  const refs = await githubJson<readonly { readonly ref: string }[]>(
+    `/repos/${project.repository}/git/matching-refs/tags/${encodeURIComponent(`${series}_`)}`,
+  );
+  const pattern = new RegExp(`^refs/tags/${escapeRegExp(series)}_(\\d+)$`);
+  const minors = refs
+    .map((entry) => Number(pattern.exec(entry.ref)?.[1]))
+    .filter((minor) => Number.isInteger(minor));
+  if (minors.length === 0) {
+    throw new Error(
+      `${project.repository} has no ${series}_<minor> maintenance tags`,
+    );
+  }
+  const tag = `${series}_${Math.max(...minors)}`;
+  if (previous && isTagLockedSource(previous)) {
+    const previousMinor = Number(
+      new RegExp(`^${escapeRegExp(series)}_(\\d+)$`).exec(previous.tag)?.[1],
+    );
+    if (
+      Number.isInteger(previousMinor) &&
+      previousMinor > Math.max(...minors)
+    ) {
+      console.warn(
+        `${project.repository} highest ${series} tag ${tag} is older than locked ${previous.tag}; retaining the locked version`,
+      );
+      return [project.id, previous] as const;
+    }
+  }
+  const sourceCommit = await getCommit(project.repository, tag);
+  if (previous && isTagLockedSource(previous) && previous.tag === tag) {
+    if (previous.sourceCommit !== sourceCommit.sha) {
+      throw new Error(
+        `${project.repository} tag ${tag} moved from ${previous.sourceCommit} to ${sourceCommit.sha}`,
+      );
+    }
+    return [project.id, previous] as const;
+  }
+  const taggedAt = sourceCommit.commit.author?.date;
+  if (!taggedAt) {
+    throw new Error(
+      `${project.repository} tag ${tag} commit has no author date`,
+    );
+  }
+  return [
+    project.id,
+    { tag, sourceCommit: sourceCommit.sha, taggedAt },
+  ] as const;
+}
+
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function isBranchLockedSource(

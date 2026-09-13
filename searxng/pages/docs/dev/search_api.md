@@ -1,4 +1,4 @@
-> Commit-pinned source for SearXNG master: [docs/dev/search_api.rst](https://github.com/searxng/searxng/blob/d4f00d15d4c2b8260124a9039b80bc9c1c26499b/docs/dev/search_api.rst)
+> Commit-pinned source for SearXNG master: [docs/dev/search_api.rst](https://github.com/searxng/searxng/blob/230c3632d927599c4a8f6bf109bc094f95598181/docs/dev/search_api.rst)
 
 .. \_search API:
 
