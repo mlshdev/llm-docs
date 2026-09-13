@@ -490,7 +490,6 @@
 - [Using build policies](pages/manuals/build/policies/usage.md): Source `content/manuals/build/policies/usage.md`.
 - [Validating Git repositories](pages/manuals/build/policies/validate-git.md): Source `content/manuals/build/policies/validate-git.md`.
 - [Validating image inputs](pages/manuals/build/policies/validate-images.md): Source `content/manuals/build/policies/validate-images.md`.
-- [Release Notes](pages/manuals/build/release-notes.md): Source `content/manuals/build/release-notes.md`.
 
 ## Compose
 
@@ -509,7 +508,6 @@
 - [Set, use, and manage variables in a Compose file with interpolation](pages/manuals/compose/how-tos/environment-variables/variable-interpolation.md): Source `content/manuals/compose/how-tos/environment-variables/variable-interpolation.md`.
 - [Use Compose Watch](pages/manuals/compose/how-tos/file-watch.md): Source `content/manuals/compose/how-tos/file-watch.md`.
 - [Run Docker Compose services with GPU access](pages/manuals/compose/how-tos/gpu-support.md): Source `content/manuals/compose/how-tos/gpu-support.md`.
-- [Index](pages/manuals/compose/how-tos/index.md): Source `content/manuals/compose/how-tos/_index.md`.
 - [Use init containers in Compose](pages/manuals/compose/how-tos/init-containers.md): Source `content/manuals/compose/how-tos/init-containers.md`.
 - [Using lifecycle hooks with Compose](pages/manuals/compose/how-tos/lifecycle.md): Source `content/manuals/compose/how-tos/lifecycle.md`.
 - [Extend your Compose file](pages/manuals/compose/how-tos/multiple-compose-files/extends.md): Source `content/manuals/compose/how-tos/multiple-compose-files/extends.md`.
@@ -532,10 +530,8 @@
 - [How Compose works](pages/manuals/compose/intro/compose-application-model.md): Source `content/manuals/compose/intro/compose-application-model.md`.
 - [Why use Compose?](pages/manuals/compose/intro/features-uses.md): Source `content/manuals/compose/intro/features-uses.md`.
 - [History and development of Docker Compose](pages/manuals/compose/intro/history.md): Source `content/manuals/compose/intro/history.md`.
-- [Release Notes](pages/manuals/compose/release-notes.md): Source `content/manuals/compose/release-notes.md`.
 - [Frequently asked questions about Docker Compose](pages/manuals/compose/support-and-feedback/faq.md): Source `content/manuals/compose/support-and-feedback/faq.md`.
 - [Give feedback](pages/manuals/compose/support-and-feedback/feedback.md): Source `content/manuals/compose/support-and-feedback/feedback.md`.
-- [Index](pages/manuals/compose/support-and-feedback/index.md): Source `content/manuals/compose/support-and-feedback/_index.md`.
 - [Trust model for Compose files](pages/manuals/compose/trust-model.md): Source `content/manuals/compose/trust-model.md`.
 
 ## Desktop
@@ -543,7 +539,6 @@
 - [containerd image store](pages/manuals/desktop/features/containerd.md): Source `content/manuals/desktop/features/containerd.md`.
 - [Use the Docker Desktop CLI](pages/manuals/desktop/features/desktop-cli.md): Source `content/manuals/desktop/features/desktop-cli.md`.
 - [GPU support in Docker Desktop for Windows](pages/manuals/desktop/features/gpu.md): Source `content/manuals/desktop/features/gpu.md`.
-- [Index](pages/manuals/desktop/features/index.md): Source `content/manuals/desktop/features/_index.md`.
 - [Networking on Docker Desktop](pages/manuals/desktop/features/networking/index.md): Source `content/manuals/desktop/features/networking/_index.md`.
 - [Explore networking how-tos on Docker Desktop](pages/manuals/desktop/features/networking/networking-how-tos.md): Source `content/manuals/desktop/features/networking/networking-how-tos.md`.
 - [Synchronized file shares](pages/manuals/desktop/features/synchronized-file-sharing.md): Source `content/manuals/desktop/features/synchronized-file-sharing.md`.
@@ -557,10 +552,8 @@
 - [Docker Desktop](pages/manuals/desktop/index.md): Source `content/manuals/desktop/_index.md`.
 - [Docker Desktop release notes](pages/manuals/desktop/release-notes.md): Source `content/manuals/desktop/release-notes.md`.
 - [How to back up and restore your Docker Desktop data](pages/manuals/desktop/settings-and-maintenance/backup-and-restore.md): Source `content/manuals/desktop/settings-and-maintenance/backup-and-restore.md`.
-- [Index](pages/manuals/desktop/settings-and-maintenance/index.md): Source `content/manuals/desktop/settings-and-maintenance/_index.md`.
 - [Change your Docker Desktop settings](pages/manuals/desktop/settings-and-maintenance/settings.md): Source `content/manuals/desktop/settings-and-maintenance/settings.md`.
 - [Allowlist for Docker Desktop](pages/manuals/desktop/setup/allow-list.md): Source `content/manuals/desktop/setup/allow-list.md`.
-- [Index](pages/manuals/desktop/setup/index.md): Source `content/manuals/desktop/setup/_index.md`.
 - [Install Docker Desktop on Arch-based distributions](pages/manuals/desktop/setup/install/linux/archlinux.md): Source `content/manuals/desktop/setup/install/linux/archlinux.md`.
 - [Install Docker Desktop on Debian](pages/manuals/desktop/setup/install/linux/debian.md): Source `content/manuals/desktop/setup/install/linux/debian.md`.
 - [Install Docker Desktop on Fedora](pages/manuals/desktop/setup/install/linux/fedora.md): Source `content/manuals/desktop/setup/install/linux/fedora.md`.
@@ -579,7 +572,6 @@
 - [FAQs on Docker Desktop releases](pages/manuals/desktop/troubleshoot-and-support/faqs/releases.md): Source `content/manuals/desktop/troubleshoot-and-support/faqs/releases.md`.
 - [FAQs for Docker Desktop for Windows](pages/manuals/desktop/troubleshoot-and-support/faqs/windowsfaqs.md): Source `content/manuals/desktop/troubleshoot-and-support/faqs/windowsfaqs.md`.
 - [Give feedback](pages/manuals/desktop/troubleshoot-and-support/feedback.md): Source `content/manuals/desktop/troubleshoot-and-support/feedback.md`.
-- [Index](pages/manuals/desktop/troubleshoot-and-support/index.md): Source `content/manuals/desktop/troubleshoot-and-support/_index.md`.
 - [Troubleshoot Docker Desktop](pages/manuals/desktop/troubleshoot-and-support/troubleshoot/index.md): Source `content/manuals/desktop/troubleshoot-and-support/troubleshoot/_index.md`.
 - [Known issues](pages/manuals/desktop/troubleshoot-and-support/troubleshoot/known-issues.md): Source `content/manuals/desktop/troubleshoot-and-support/troubleshoot/known-issues.md`.
 - [Fix "Docker.app is damaged and can't be opened" on macOS](pages/manuals/desktop/troubleshoot-and-support/troubleshoot/mac-damaged-dialog.md): Source `content/manuals/desktop/troubleshoot-and-support/troubleshoot/mac-damaged-dialog.md`.
@@ -999,7 +991,6 @@
 - [Policy Evaluation](pages/manuals/scout/policy/index.md): Source `content/manuals/scout/policy/_index.md`.
 - [Evaluate policies](pages/manuals/scout/policy/local.md): Source `content/manuals/scout/policy/local.md`.
 - [Docker Scout quickstart](pages/manuals/scout/quickstart.md): Source `content/manuals/scout/quickstart.md`.
-- [Cli](pages/manuals/scout/release-notes/cli.md): Source `content/manuals/scout/release-notes/cli.md`.
 - [Docker Scout release notes](pages/manuals/scout/release-notes/platform.md): Source `content/manuals/scout/release-notes/platform.md`.
 
 ## Security
@@ -1118,7 +1109,6 @@
 - [Deprecated Docker Hub API endpoints](pages/reference/api/hub/deprecated.md): Source `content/reference/api/hub/deprecated.md`.
 - [Docker Hub API reference](pages/reference/api/hub/latest.md): Source `content/reference/api/hub/latest.md`.
 - [Registry authentication](pages/reference/api/registry/auth.md): Source `content/reference/api/registry/auth.md`.
-- [Index](pages/reference/api/registry/index.md): Source `content/reference/api/registry/_index.md`.
 - [Supported registry API for Docker Hub](pages/reference/api/registry/latest.md): Source `content/reference/api/registry/latest.md`.
 - [ConsistentInstructionCasing](pages/reference/build-checks/consistent-instruction-casing.md): Source `_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/consistent-instruction-casing.md`.
 - [CopyIgnoredFile](pages/reference/build-checks/copy-ignored-file.md): Source `_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/copy-ignored-file.md`.
