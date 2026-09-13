@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/tablegen.txt](https://github.com/FFmpeg/FFmpeg/blob/2b822b7fb6ed195546bc9fd9bdb794e98222bdce/doc/tablegen.txt)
+> Commit-pinned source for FFmpeg master: [doc/tablegen.txt](https://github.com/FFmpeg/FFmpeg/blob/7523428c26bdb0b2302303534be591fe73178ab6/doc/tablegen.txt)
 
 Writing a table generator
 
@@ -14,7 +14,7 @@ the tables as a header file using the tableprint.h helpers.
 Both of these files will be compiled for the host system, so to avoid
 breakage with cross-compilation neither of them may include, directly
 or indirectly, config.h or avconfig.h.
-This means that e.g. libavutil/mathematics.h is ok but libavutil/libm.h is not.
+This means that e.g. libavutil/mathematics.h is ok but libavutil/internal.h is not.
 Due to this, the .c file or Makefile may have to provide additional defines
 or stubs, though if possible this should be avoided.
 In particular, CONFIG\_HARDCODED\_TABLES should always be defined to 0.

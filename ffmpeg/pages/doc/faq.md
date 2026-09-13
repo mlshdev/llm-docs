@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/faq.texi](https://github.com/FFmpeg/FFmpeg/blob/2b822b7fb6ed195546bc9fd9bdb794e98222bdce/doc/faq.texi)
+> Commit-pinned source for FFmpeg master: [doc/faq.texi](https://github.com/FFmpeg/FFmpeg/blob/7523428c26bdb0b2302303534be591fe73178ab6/doc/faq.texi)
 
 # General Questions
 
