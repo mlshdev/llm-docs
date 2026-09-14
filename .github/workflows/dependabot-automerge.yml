@@ -1,0 +1,27 @@
+name: Dependabot auto-merge
+
+on: pull_request
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  automerge:
+    runs-on: ubuntu-slim
+    timeout-minutes: 15
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    steps:
+      # Only queues the merge. Branch protection on main requires the `check`
+      # job, so a dependency bump that breaks the rebuild or the determinism
+      # check stays open rather than merging itself.
+      - name: Fetch Dependabot metadata
+        uses: dependabot/fetch-metadata@25dd0e34f4fe68f24cc83900b1fe3fe149efef98 # v3.1.0
+        id: metadata
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Enable auto-merge
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
