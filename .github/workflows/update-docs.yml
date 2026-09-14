@@ -114,7 +114,12 @@ jobs:
         run: |
           set -euo pipefail
           bun run src/cli.ts paths > generated-paths.txt
-          xargs -a generated-paths.txt -d '\n' git add --
+          generated=()
+          while IFS= read -r target; do
+            [[ -n "${target}" ]] || continue
+            generated+=("${target}")
+          done < generated-paths.txt
+          git add -- "${generated[@]}"
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else

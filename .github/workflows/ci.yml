@@ -41,5 +41,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: bun run build
+      # Derived from the configuration rather than listed here, so a project
+      # added without touching this file is still held to determinism.
       - name: Verify deterministic generated output
-        run: git diff --exit-code -- sources.lock.json llms.txt llms-full.txt traefik netbird podman docker container n8n grafana victoriametrics victorialogs victoriametrics-datasource victorialogs-datasource vmestimator zitadel ffmpeg yt-dlp searxng bun trigger-dev aria2 apple-swift apple-swiftui apple-webkit apple-xcode apple-ios apple-macos apple-watchos apple-frameworks
+        shell: bash
+        run: |
+          set -euo pipefail
+          generated=()
+          while IFS= read -r target; do
+            [[ -n "${target}" ]] || continue
+            generated+=("${target}")
+          done < <(bun run src/cli.ts paths)
+          git diff --exit-code -- "${generated[@]}"
