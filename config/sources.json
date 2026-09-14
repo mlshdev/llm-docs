@@ -164,6 +164,21 @@
       "homepage": "https://docs.runpod.io/"
     },
     {
+      "id": "discord-py-self",
+      "kind": "github",
+      "title": "discord.py-self",
+      "repository": "dolfies/discord.py-self",
+      "homepage": "https://discordpy-self.readthedocs.io/"
+    },
+    {
+      "id": "discord-py",
+      "kind": "github",
+      "title": "discord.py",
+      "repository": "Rapptz/discord.py",
+      "semanticTags": true,
+      "homepage": "https://discordpy.readthedocs.io/"
+    },
+    {
       "id": "apple-swift",
       "kind": "docc",
       "catalog": "swift",

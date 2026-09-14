@@ -1,0 +1,10 @@
+> Tag-pinned source for discord.py v2.7.1: [docs/ext/commands/index.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/ext/commands/index.rst)
+
+<a id="discord-ext-commands"></a>
+
+# `discord.ext.commands` -- Bot commands framework
+
+`discord.py` offers a lower level aspect on interacting with Discord. Often times, the library is used for the creation of
+bots. However this task can be daunting and confusing to get correctly the first time. Many times there comes a repetition in
+creating a bot command framework that is extensible, flexible, and powerful. For this reason, `discord.py` comes with an
+extension library that handles this for you.

@@ -133,6 +133,17 @@
       "sourceCommit": "361c96910f23cbab97220f94f7a751b12e4b09ea",
       "sourceCommittedAt": "2026-09-11T18:27:44Z"
     },
+    "discord-py-self": {
+      "tag": "v2.1.0",
+      "releaseId": 277765876,
+      "releasePublishedAt": "2026-01-18T23:36:41Z",
+      "sourceCommit": "6de18b4cb40dd42625a535f52d9715c71399ffb3"
+    },
+    "discord-py": {
+      "tag": "v2.7.1",
+      "sourceCommit": "dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee",
+      "taggedAt": "2026-03-03T18:38:56Z"
+    },
     "apple-swift": {
       "tag": "snapshot-eebba30a4ab9",
       "snapshotDigest": "eebba30a4ab9373b19010bdf3b1cdcfadf5599b64611c1dd07958482a85ddfa6",

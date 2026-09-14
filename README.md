@@ -24,6 +24,8 @@ This repository converts documentation from immutable upstream commits or conten
 - [Trigger.dev](https://github.com/triggerdotdev/trigger.dev)
 - [aria2](https://github.com/aria2/aria2)
 - [PostgreSQL 18](https://github.com/postgres/postgres)
+- [discord.py-self](https://github.com/dolfies/discord.py-self)
+- [discord.py](https://github.com/Rapptz/discord.py)
 - [Apple Swift](https://developer.apple.com/documentation/swift)
 - [Apple SwiftUI](https://developer.apple.com/documentation/swiftui)
 - [Apple WebKit and Safari](https://developer.apple.com/documentation/webkit)
@@ -42,6 +44,7 @@ This repository converts documentation from immutable upstream commits or conten
 - n8n tracks the latest `n8n-io/n8n-docs` `main` commit because that repository does not publish releases or tags.
 - FFmpeg and SearXNG track their latest `master` commits because they do not publish stable GitHub releases.
 - PostgreSQL 18 tracks the highest `REL_18_<minor>` tag in `postgres/postgres`, which publishes no GitHub releases. The series pin follows that major version's own maintenance releases and nothing else: beta and release-candidate tags do not match, a pin never moves backwards, and a tag that is repointed at a different commit fails the update rather than silently changing the corpus.
+- discord.py tracks the highest final `vX.Y.Z` tag because the repository publishes stable tags but does not create GitHub Releases. Prerelease and unrelated tags are ignored, a pin never moves backwards, and a moved tag fails reconciliation.
 - NetBird public documentation is maintained in the separate, untagged `netbirdio/docs` repository. A NetBird update is accepted only after that repository contains the exact `Update API pages with <tag>` commit. Until then, the previous complete product/docs pair remains published.
 - Apple exposes a live DocC catalog rather than release tags or an immutable repository. The generator checks the public index and render JSON endpoints daily, partitions every indexed page into one non-overlapping catalog, and pins each catalog with two SHA-256 digests: a `snapshotDigest` over the catalog inventory, which a daily run re-derives from a few hundred index documents, and a `contentDigest` over the exact render payload bytes every published page was converted from, which the build that converted them computes. The daily check therefore costs hundreds of requests rather than one per page, while each committed snapshot still names the bytes it came from. A captured Apple snapshot remains committed when the live endpoint changes, but Apple does not provide historical render JSON from which an old snapshot can be regenerated.
 - Generated files are committed so GitHub, raw-content clients, and local tools all expose the same corpus. GitHub Pages publishes the Apple corpus volumes without duplicating the normalized page tree, keeping the deployment within GitHub's site-size limit.
@@ -93,7 +96,7 @@ llms-full.txt
   pages/
 ```
 
-Project directories are named after the identifiers in `config/sources.json`: `traefik`, `netbird`, `podman`, `docker`, `container`, `n8n`, `grafana`, `victoriametrics`, `victorialogs`, `victoriametrics-datasource`, `victorialogs-datasource`, `vmestimator`, `zitadel`, `ffmpeg`, `yt-dlp`, `searxng`, `bun`, `trigger-dev`, `aria2`, `postgres-18`, `vastai`, `runpod`, `apple-swift`, `apple-swiftui`, `apple-webkit`, `apple-xcode`, `apple-ios`, `apple-macos`, `apple-watchos`, and `apple-frameworks`.
+Project directories are named after the identifiers in `config/sources.json`: `traefik`, `netbird`, `podman`, `docker`, `container`, `n8n`, `grafana`, `victoriametrics`, `victorialogs`, `victoriametrics-datasource`, `victorialogs-datasource`, `vmestimator`, `zitadel`, `ffmpeg`, `yt-dlp`, `searxng`, `bun`, `trigger-dev`, `aria2`, `postgres-18`, `vastai`, `runpod`, `discord-py-self`, `discord-py`, `apple-swift`, `apple-swiftui`, `apple-webkit`, `apple-xcode`, `apple-ios`, `apple-macos`, `apple-watchos`, and `apple-frameworks`.
 
 Corpora below GitHub's 100 MiB file limit use one `llms-full.txt`. Larger corpora keep `llms-full.txt` as an ordered volume index and store the complete text in numbered files capped at 45 MiB.
 
@@ -118,6 +121,7 @@ Corpora below GitHub's 100 MiB file limit use one `llms-full.txt`. Larger corpor
 - PostgreSQL assembles the DocBook book from the entities `doc/src/sgml/postgres.sgml` declares and converts it to Markdown without executing the upstream Make, Meson, Perl, or XSLT toolchain. Pages are split the way the manual is published — one per part, chapter, top-level section, and reference entry — and cross references, links, and footnote references resolve against the whole book. The error-code, wait-event, SQL-conformance, key-word, and Meson-target tables that the upstream build generates are reproduced from the same checked-in data files outside `doc/`.
 - Vast.ai publishes the pages its `docs.json` navigation declares and, for the navigation group that names a specification without listing pages, generates one page per endpoint the way the site itself does — routed by tag and operation summary from `api-reference/openapi.yaml`.
 - Runpod publishes the pages its `docs.json` navigation declares, renders each API reference page from the OpenAPI operation the page names in front matter, and substitutes each glossary tooltip with the term it labels, parsed from the checked-in module rather than executed.
+- discord.py-self and discord.py convert their release-pinned Sphinx RST guides and API-reference layout directly. Autodoc descriptions and public members are reproduced by statically extracting checked-in Python signatures and docstrings; Sphinx, extension modules, and library code are never executed.
 - Neither Vast.ai nor Runpod publishes its documentation repository under a license; both snapshots carry a copyright notice in `LICENSE.upstream` instead of a grant.
 - Apple walks every internal page in the public DocC framework indexes and converts render JSON directly to Markdown without a browser. The eight catalogs cover Swift, SwiftUI, WebKit and Safari, Xcode and developer tools, platform-exclusive iOS/macOS/watchOS frameworks, and every remaining cross-platform, tvOS, visionOS, DriverKit, and hardware framework without duplicating pages between catalogs. Same-path Swift, Objective-C, and data variants are materialized from DocC JSON patches and combined in one page. Declarations, availability, prose, lists, tables, asides, REST schemas, relationships, topic groups, media, samples, and stable anchors are preserved; internal links stay local within a catalog and cross-catalog links resolve to Apple.
 

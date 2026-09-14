@@ -1,0 +1,48 @@
+# discord.py v2.7.1
+
+> Documentation generated from the `v2.7.1` maintenance-release tag of [Rapptz/discord.py](https://github.com/Rapptz/discord.py) and pinned to immutable source commit `dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee`.
+
+- [Full documentation](llms-full.txt): Complete normalized corpus for discord.py v2.7.1.
+- [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
+- Release-pinned Sphinx RST is converted without executing Sphinx or importing upstream Python modules.
+- Autodoc class, function, exception, and member descriptions are reproduced from statically extracted Python docstrings.
+- Translations, theme assets, generated indexes, and non-documentation source are omitted.
+
+## Project
+
+- [discord.py](pages/README.md): Source `README.rst`.
+
+## API reference
+
+- [API Reference](pages/api.md): Source `docs/api.rst`.
+
+## Guide
+
+- [Creating a Bot Account](pages/discord.md): Source `docs/discord.rst`.
+- [Frequently Asked Questions](pages/faq.md): Source `docs/faq.rst`.
+- [Welcome to discord.py](pages/index.md): Source `docs/index.rst`.
+- [A Primer to Gateway Intents](pages/intents.md): Source `docs/intents.rst`.
+- [Introduction](pages/intro.md): Source `docs/intro.rst`.
+- [Setting Up Logging](pages/logging.md): Source `docs/logging.rst`.
+- [Migrating to v2.0](pages/migrating.md): Source `docs/migrating.rst`.
+- [Migrating to v0.10.0](pages/migrating_to_async.md): Source `docs/migrating_to_async.rst`.
+- [Migrating to v1.0](pages/migrating_to_v1.md): Source `docs/migrating_to_v1.rst`.
+- [Quickstart](pages/quickstart.md): Source `docs/quickstart.rst`.
+- [Version Guarantees](pages/version_guarantees.md): Source `docs/version_guarantees.rst`.
+- [Changelog](pages/whats_new.md): Source `docs/whats_new.rst`.
+
+## Commands extension
+
+- [API Reference](pages/ext/commands/api.md): Source `docs/ext/commands/api.rst`.
+- [Cogs](pages/ext/commands/cogs.md): Source `docs/ext/commands/cogs.rst`.
+- [Commands](pages/ext/commands/commands.md): Source `docs/ext/commands/commands.rst`.
+- [Extensions](pages/ext/commands/extensions.md): Source `docs/ext/commands/extensions.rst`.
+- [discord.ext.commands -- Bot commands framework](pages/ext/commands/index.md): Source `docs/ext/commands/index.rst`.
+
+## Tasks extension
+
+- [discord.ext.tasks -- asyncio.Task helpers](pages/ext/tasks/index.md): Source `docs/ext/tasks/index.rst`.
+
+## Interactions
+
+- [Interactions API Reference](pages/interactions/api.md): Source `docs/interactions/api.rst`.

@@ -72,12 +72,16 @@ function isSourceKind(project: Record<string, unknown>): boolean {
         typeof project.docsRepository === "string") &&
       (project.branch === undefined ||
         (typeof project.branch === "string" && project.branch.trim() !== "")) &&
-      // A project follows a branch head or a maintenance-release tag series,
-      // never both.
+      (project.semanticTags === undefined || project.semanticTags === true) &&
+      // A project follows a branch head or one stable-tag selection mode,
+      // never more than one of them.
       (project.tagSeries === undefined ||
         (typeof project.tagSeries === "string" &&
           /^[A-Za-z0-9._-]+$/.test(project.tagSeries) &&
-          project.branch === undefined))
+          project.branch === undefined)) &&
+      [project.branch, project.tagSeries, project.semanticTags].filter(
+        (value) => value !== undefined,
+      ).length <= 1
     );
   }
   if (project.kind === "docc") {
@@ -88,6 +92,7 @@ function isSourceKind(project: Record<string, unknown>): boolean {
       project.repository === undefined &&
       project.docsRepository === undefined &&
       project.branch === undefined &&
+      project.semanticTags === undefined &&
       project.tagSeries === undefined
     );
   }

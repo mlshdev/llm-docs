@@ -67,6 +67,10 @@ const unresolvedSyntax: Record<ProjectId, RegExp> = {
   // `*Tooltip` element means the glossary module stopped being readable.
   runpod:
     /<\/?(?:Accordion|AccordionGroup|Card|CardGroup|CodeGroup|Columns|Expandable|Frame|Icon|Info|Note|ParamField|RequestExample|ResponseExample|ResponseField|Step|Steps|Tab|Tabs|Tip|Tree|Update|Warning)\b|<[A-Z][\w]*Tooltip\b/,
+  "discord-py-self":
+    /^\s*\.\.\s+[a-zA-Z][\w:-]*::|(?:^|[^`\\]):[a-zA-Z][\w:-]*:`|`[^`\n]+`_|\|(?:coro|maybecoro|coroutine_link)\|/m,
+  "discord-py":
+    /^\s*\.\.\s+[a-zA-Z][\w:-]*::|(?:^|[^`\\]):[a-zA-Z][\w:-]*:`|`[^`\n]+`_|\|(?:coro|maybecoro|coroutine_link)\|/m,
   "apple-swift": /(?!)/,
   "apple-swiftui": /(?!)/,
   "apple-webkit": /(?!)/,

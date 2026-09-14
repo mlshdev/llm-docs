@@ -1,0 +1,43 @@
+# discord.py-self v2.1.0
+
+> Documentation generated from the latest stable release of [dolfies/discord.py-self](https://github.com/dolfies/discord.py-self) and pinned to immutable source commit `6de18b4cb40dd42625a535f52d9715c71399ffb3`.
+
+- [Full documentation](llms-full.txt): Complete normalized corpus for discord.py-self v2.1.0.
+- [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
+- Release-pinned Sphinx RST is converted without executing Sphinx or importing upstream Python modules.
+- Autodoc class, function, exception, and member descriptions are reproduced from statically extracted Python docstrings.
+- Translations, theme assets, generated indexes, and non-documentation source are omitted.
+
+## Project
+
+- [discord.py-self](pages/README.md): Source `README.rst`.
+
+## API reference
+
+- [API Reference](pages/api.md): Source `docs/api.rst`.
+
+## Guide
+
+- [Authenticating](pages/authenticating.md): Source `docs/authenticating.rst`.
+- [Frequently Asked Questions](pages/faq.md): Source `docs/faq.rst`.
+- [Guild Subscriptions](pages/guild_subscriptions.md): Source `docs/guild_subscriptions.rst`.
+- [Welcome to discord.py-self](pages/index.md): Source `docs/index.rst`.
+- [Introduction](pages/intro.md): Source `docs/intro.rst`.
+- [Setting Up Logging](pages/logging.md): Source `docs/logging.rst`.
+- [Migrating to v2.0](pages/migrating.md): Source `docs/migrating.rst`.
+- [Migrating to This Library](pages/migrating_from_dpy.md): Source `docs/migrating_from_dpy.rst`.
+- [Quickstart](pages/quickstart.md): Source `docs/quickstart.rst`.
+- [Version Guarantees](pages/version_guarantees.md): Source `docs/version_guarantees.rst`.
+- [Changelog](pages/whats_new.md): Source `docs/whats_new.rst`.
+
+## Commands extension
+
+- [API Reference](pages/ext/commands/api.md): Source `docs/ext/commands/api.rst`.
+- [Cogs](pages/ext/commands/cogs.md): Source `docs/ext/commands/cogs.rst`.
+- [Commands](pages/ext/commands/commands.md): Source `docs/ext/commands/commands.rst`.
+- [Extensions](pages/ext/commands/extensions.md): Source `docs/ext/commands/extensions.rst`.
+- [discord.ext.commands -- Bot commands framework](pages/ext/commands/index.md): Source `docs/ext/commands/index.rst`.
+
+## Tasks extension
+
+- [discord.ext.tasks -- asyncio.Task helpers](pages/ext/tasks/index.md): Source `docs/ext/tasks/index.rst`.

@@ -4,6 +4,7 @@ import { buildDatasourcePlugin } from "./datasource-plugin.ts";
 import { buildBun } from "./bun.ts";
 import { buildContainer } from "./container.ts";
 import { buildDocker } from "./docker.ts";
+import { buildDiscordPy } from "./discord-py.ts";
 import { buildFfmpeg } from "./ffmpeg.ts";
 import { buildGrafana } from "./grafana.ts";
 import { buildNetbird } from "./netbird.ts";
@@ -102,5 +103,8 @@ function runAdapter(
       return buildVastai(project, lock);
     case "runpod":
       return buildRunpod(project, lock);
+    case "discord-py-self":
+    case "discord-py":
+      return buildDiscordPy(project, lock);
   }
 }

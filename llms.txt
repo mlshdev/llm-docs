@@ -26,6 +26,8 @@
 - [PostgreSQL 18 REL_18_6](postgres-18/llms.txt): [full corpus](postgres-18/llms-full.txt), [manifest](postgres-18/manifest.json)
 - [Vast.ai main](vastai/llms.txt): [full corpus](vastai/llms-full.txt), [manifest](vastai/manifest.json)
 - [Runpod main](runpod/llms.txt): [full corpus](runpod/llms-full.txt), [manifest](runpod/manifest.json)
+- [discord.py-self v2.1.0](discord-py-self/llms.txt): [full corpus](discord-py-self/llms-full.txt), [manifest](discord-py-self/manifest.json)
+- [discord.py v2.7.1](discord-py/llms.txt): [full corpus](discord-py/llms-full.txt), [manifest](discord-py/manifest.json)
 - [Apple Swift snapshot-eebba30a4ab9](apple-swift/llms.txt): [full corpus](apple-swift/llms-full.txt), [manifest](apple-swift/manifest.json)
 - [Apple SwiftUI snapshot-5ae2cd850b20](apple-swiftui/llms.txt): [full corpus](apple-swiftui/llms-full.txt), [manifest](apple-swiftui/manifest.json)
 - [Apple WebKit and Safari snapshot-3530be43aacd](apple-webkit/llms.txt): [full corpus](apple-webkit/llms-full.txt), [manifest](apple-webkit/manifest.json)
@@ -41,5 +43,6 @@
 - Stable releases are discovered by scheduled GitHub API reconciliation.
 - Docker documentation tracks the latest `main` commit because docker/docs does not publish current GitHub releases.
 - n8n documentation tracks the latest `main` commit because n8n-docs does not publish releases or tags.
+- discord.py tracks the latest final semantic-version tag because the repository publishes tags but no GitHub Releases.
 - NetBird updates only after the separate documentation repository contains the API-generation commit for the same product tag.
 - Apple documentation is captured from the public DocC index and render endpoints. Its live catalog has no release identifier, so each catalog is pinned by a SHA-256 digest of its index inventory and HTTP publication validators.

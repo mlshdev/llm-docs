@@ -23,6 +23,8 @@ export const projectIds = [
   "postgres-18",
   "vastai",
   "runpod",
+  "discord-py-self",
+  "discord-py",
   "apple-swift",
   "apple-swiftui",
   "apple-webkit",
@@ -77,6 +79,9 @@ export interface GithubSourceProject
   readonly repository: string;
   readonly docsRepository?: string;
   readonly branch?: string;
+  // Some repositories publish stable semver tags but do not create GitHub
+  // Releases. These sources pin the highest final vX.Y.Z tag.
+  readonly semanticTags?: true;
   // A repository that publishes no GitHub releases but tags every maintenance
   // release pins the highest `<series>_<minor>` tag, which is how a major
   // version tracks its own minor versions and nothing else.
@@ -123,9 +128,9 @@ export interface BranchLockedSource {
   readonly capturedAt?: never;
 }
 
-// A maintenance-release tag in a repository that publishes no GitHub releases.
-// `taggedAt` is the pinned commit's author date and distinguishes this pin from
-// a release pin, which carries the release's own publication time instead.
+// A stable tag in a repository that publishes no GitHub releases. `taggedAt`
+// is the pinned commit's author date and distinguishes this pin from a release
+// pin, which carries the release's own publication time instead.
 export interface TagLockedSource {
   readonly tag: string;
   readonly sourceCommit: string;

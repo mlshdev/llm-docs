@@ -160,6 +160,9 @@ async function resolveSource(
   if (project.tagSeries) {
     return resolveTagSeries(project, project.tagSeries, current[project.id]);
   }
+  if (project.semanticTags) {
+    return resolveSemanticTag(project, current[project.id]);
+  }
   if (project.branch) {
     const sourceCommit = await getCommit(project.repository, project.branch);
     const previous = current[project.id];
@@ -245,6 +248,64 @@ async function resolveSource(
       docsCommit: docsCommitDetails.sha,
     },
   ] as const;
+}
+
+// GitHub's releases endpoint is not useful for projects that publish releases
+// only as tags. Restricting this mode to final vX.Y.Z tags keeps prereleases,
+// moving branch heads, and unrelated historical tag formats out of the pin.
+async function resolveSemanticTag(
+  project: GithubSourceProject,
+  previous: LockedSource | undefined,
+): Promise<readonly [SourceProject["id"], LockedSource]> {
+  const refs: string[] = [];
+  for (let page = 1; ; page += 1) {
+    const tags = await githubJson<readonly { readonly name: string }[]>(
+      `/repos/${project.repository}/tags?per_page=100&page=${page}`,
+    );
+    refs.push(...tags.map((entry) => `refs/tags/${entry.name}`));
+    if (tags.length < 100) break;
+  }
+  const tag = latestSemanticTag(refs);
+  if (!tag) {
+    throw new Error(`${project.repository} has no stable vX.Y.Z tags`);
+  }
+  if (
+    previous &&
+    isTagLockedSource(previous) &&
+    compareVersions(tag, previous.tag) < 0
+  ) {
+    console.warn(
+      `${project.repository} latest semantic tag ${tag} is older than locked ${previous.tag}; retaining the locked version`,
+    );
+    return [project.id, previous] as const;
+  }
+  const sourceCommit = await getCommit(project.repository, tag);
+  if (previous && isTagLockedSource(previous) && previous.tag === tag) {
+    if (previous.sourceCommit !== sourceCommit.sha) {
+      throw new Error(
+        `${project.repository} tag ${tag} moved from ${previous.sourceCommit} to ${sourceCommit.sha}`,
+      );
+    }
+    return [project.id, previous] as const;
+  }
+  const taggedAt = sourceCommit.commit.author?.date;
+  if (!taggedAt) {
+    throw new Error(
+      `${project.repository} tag ${tag} commit has no author date`,
+    );
+  }
+  return [
+    project.id,
+    { tag, sourceCommit: sourceCommit.sha, taggedAt },
+  ] as const;
+}
+
+export function latestSemanticTag(refs: readonly string[]): string | undefined {
+  return refs
+    .map((ref) => ref.match(/^refs\/tags\/(v\d+\.\d+\.\d+)$/)?.[1])
+    .filter((tag): tag is string => tag !== undefined)
+    .sort(compareVersions)
+    .at(-1);
 }
 
 // A major version tracks only its own maintenance releases: every tag in the
