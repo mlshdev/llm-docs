@@ -83,8 +83,8 @@
     "ffmpeg": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "7523428c26bdb0b2302303534be591fe73178ab6",
-      "sourceCommittedAt": "2026-08-30T16:20:00Z"
+      "sourceCommit": "6efe500d2e9e24a81bffda8825511f6bc9760cb1",
+      "sourceCommittedAt": "2026-09-03T23:42:12Z"
     },
     "yt-dlp": {
       "tag": "2026.08.19",
@@ -95,8 +95,8 @@
     "searxng": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "230c3632d927599c4a8f6bf109bc094f95598181",
-      "sourceCommittedAt": "2026-09-13T08:31:34Z"
+      "sourceCommit": "d4ce87c23431f607162fc5c39ce52c538d64588f",
+      "sourceCommittedAt": "2026-09-12T18:29:15Z"
     },
     "bun": {
       "tag": "bun-v1.4.2",
