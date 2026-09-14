@@ -1,5 +1,7 @@
 {
   "schemaVersion": 2,
+  "generatorVersion": 3,
+  "generatorDigest": "bb68184ba540b16dfa9c5f50082107ac280b8961a72151b19aeaa84c52820827",
   "project": "apple-watchos",
   "title": "Apple watchOS",
   "homepage": "https://developer.apple.com/watchos/",
@@ -9,14 +11,6 @@
   "contentDigest": "247a97a075abca066d1def114ccaa31eefa15185c7671552447dc209f44b2559",
   "capturedAt": "2026-09-12T21:04:59.695Z",
   "documentCount": 820,
-  "notes": [
-    "Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.",
-    "3 frameworks in this catalog, captured at 2026-09-12T21:04:59.695Z.",
-    "Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.",
-    "Daily reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive daily check.",
-    "Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream."
-  ],
-  "generatorVersion": 3,
   "indexComplete": false,
   "corpusVolumes": [
     {
@@ -27,5 +21,11 @@
     }
   ],
   "outputDigest": "0e897959d692508036b88ae01ed57791bfbb07c31ca3f9d7aa9d35fba95c3b08",
-  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
+  "notes": [
+    "Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.",
+    "3 frameworks in this catalog, captured at 2026-09-12T21:04:59.695Z.",
+    "Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.",
+    "Daily reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive daily check.",
+    "Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream."
+  ]
 }

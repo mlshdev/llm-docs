@@ -9,12 +9,7 @@ import { isRecord } from "./config.ts";
 import { normalizeSpacing, parseFrontmatter, titleCase } from "./markdown.ts";
 
 type StaticValue =
-  | null
-  | boolean
-  | number
-  | string
-  | StaticValue[]
-  | StaticObject;
+  null | boolean | number | string | StaticValue[] | StaticObject;
 
 interface StaticObject {
   [key: string]: StaticValue;

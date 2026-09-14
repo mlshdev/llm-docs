@@ -24,6 +24,7 @@ import {
   generatorVersion,
   manifestSchemaVersion,
   parseProjectManifest,
+  serializeProjectManifest,
 } from "./manifest.ts";
 import type { CorpusVolumeManifest, ProjectManifest } from "./manifest.ts";
 import {
@@ -121,7 +122,7 @@ export async function stageProject(
   };
   await writeUtf8(
     path.join(destination, "manifest.json"),
-    JSON.stringify(manifest, null, 2),
+    serializeProjectManifest(manifest),
   );
 }
 
@@ -972,7 +973,7 @@ export async function upgradeProjectManifest(
       `${projectId}/manifest.json identifies project ${upgraded.project}`,
     );
   }
-  await writeUtf8Atomic(manifestPath, JSON.stringify(upgraded, null, 2));
+  await writeUtf8Atomic(manifestPath, serializeProjectManifest(upgraded));
   return upgraded;
 }
 
@@ -1036,7 +1037,7 @@ export async function repackageProjectCorpus(
     }
     await writeUtf8(
       path.join(staging, "manifest.json"),
-      JSON.stringify(manifest, null, 2),
+      serializeProjectManifest(manifest),
     );
   });
   return parseProjectManifest(

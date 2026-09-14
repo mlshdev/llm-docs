@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { parseProjectManifest } from "./manifest.ts";
+import { parseProjectManifest, serializeProjectManifest } from "./manifest.ts";
 
 const manifest = {
   schemaVersion: 2,
@@ -62,5 +62,31 @@ describe("project manifest validation", () => {
         ],
       }),
     ).toThrow("must be llms-full.001.txt");
+  });
+
+  // The determinism check compares manifests as bytes, so a writer that emits
+  // the declared fields in a different order fails CI while every local check
+  // passes: parsing discards key order.
+  test("serializes field order independently of construction order", () => {
+    const migrated = parseProjectManifest({
+      ...Object.fromEntries(
+        Object.entries(manifest).filter(([key]) => key !== "generatorDigest"),
+      ),
+      generatorDigest: manifest.generatorDigest,
+    });
+    expect(serializeProjectManifest(migrated)).toBe(
+      serializeProjectManifest(parseProjectManifest(manifest)),
+    );
+    const keys = Object.keys(
+      JSON.parse(serializeProjectManifest(migrated)) as Record<string, unknown>,
+    );
+    expect(keys.indexOf("generatorDigest")).toBe(2);
+    expect(keys.at(-1)).toBe("notes");
+  });
+
+  test("omits absent optional fields rather than emitting null", () => {
+    expect(
+      serializeProjectManifest(parseProjectManifest(manifest)),
+    ).not.toContain("undefined");
   });
 });

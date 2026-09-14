@@ -346,7 +346,15 @@ export async function extractArchive(
     }
   });
   try {
-    await pipeline(createReadStream(archivePath), createGunzip(), archive);
+    // tar-stream 3.2.1 ships its own typings, where Extract extends streamx's
+    // Writable rather than node:stream's. The two are duck-compatible at
+    // runtime — this is how tar-stream is meant to be piped — but structurally
+    // different types, so node:stream/promises cannot accept it directly.
+    await pipeline(
+      createReadStream(archivePath),
+      createGunzip(),
+      archive as unknown as NodeJS.WritableStream,
+    );
     return archiveFiles;
   } catch (error) {
     await rm(destination, { recursive: true, force: true });

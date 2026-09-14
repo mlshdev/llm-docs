@@ -1,5 +1,7 @@
 {
   "schemaVersion": 2,
+  "generatorVersion": 3,
+  "generatorDigest": "bb68184ba540b16dfa9c5f50082107ac280b8961a72151b19aeaa84c52820827",
   "project": "apple-xcode",
   "title": "Apple Xcode and developer tools",
   "homepage": "https://developer.apple.com/documentation/xcode",
@@ -9,14 +11,6 @@
   "contentDigest": "20d06e06127ece2f7d714ef2ec558df44009dbb37983eadee49466036bf397f9",
   "capturedAt": "2026-09-12T21:04:59.670Z",
   "documentCount": 3293,
-  "notes": [
-    "Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.",
-    "21 frameworks in this catalog, captured at 2026-09-12T21:04:59.670Z.",
-    "Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.",
-    "Daily reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive daily check.",
-    "Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream."
-  ],
-  "generatorVersion": 3,
   "indexComplete": false,
   "corpusVolumes": [
     {
@@ -39,5 +33,11 @@
     }
   ],
   "outputDigest": "60373bde4b6a3c22be805f58a0dca29c31814f1a3f4aa20a4ba999106064fa81",
-  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
+  "notes": [
+    "Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.",
+    "21 frameworks in this catalog, captured at 2026-09-12T21:04:59.670Z.",
+    "Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.",
+    "Daily reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive daily check.",
+    "Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream."
+  ]
 }
