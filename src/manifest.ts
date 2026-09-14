@@ -42,7 +42,12 @@ export interface ProjectManifest {
   readonly notes: readonly string[];
 }
 
-const manifestKeys = new Set([
+// Declaration order is the serialized order. Manifests are compared as bytes by
+// the determinism check, and the migration paths build `{ ...legacy, ... }`,
+// which keeps pre-existing keys in place and appends new ones. Rebuilding
+// against this list before writing is what stops those two paths from emitting
+// the same manifest with different key order.
+const manifestFieldOrder = [
   "schemaVersion",
   "generatorVersion",
   "generatorDigest",
@@ -69,7 +74,21 @@ const manifestKeys = new Set([
   "outputDigest",
   "quarantined",
   "notes",
-]);
+] as const satisfies readonly (keyof ProjectManifest)[];
+
+const manifestKeys: ReadonlySet<string> = new Set(manifestFieldOrder);
+
+// The single serialization point for every manifest writer.
+export function serializeProjectManifest(manifest: ProjectManifest): string {
+  const ordered: Record<string, unknown> = {};
+  for (const field of manifestFieldOrder) {
+    const value = manifest[field];
+    if (value !== undefined) {
+      ordered[field] = value;
+    }
+  }
+  return JSON.stringify(ordered, null, 2);
+}
 
 const digestPattern = /^[0-9a-f]{64}$/;
 const commitPattern = /^[0-9a-f]{40}$/;

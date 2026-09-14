@@ -1,5 +1,7 @@
 {
   "schemaVersion": 2,
+  "generatorVersion": 3,
+  "generatorDigest": "bb68184ba540b16dfa9c5f50082107ac280b8961a72151b19aeaa84c52820827",
   "project": "apple-macos",
   "title": "Apple macOS",
   "homepage": "https://developer.apple.com/macos/",
@@ -9,6 +11,7 @@
   "contentDigest": "261899149f391f58bc46c468881d82ec07fe2e3d04902a9c297d1c68eece64b1",
   "capturedAt": "2026-09-12T21:04:59.695Z",
   "documentCount": 77999,
+  "indexComplete": false,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
@@ -119,15 +122,12 @@
       "sha256": "107501a2ba67ca8602233228a944781c7621cef56a2ee1c80007552475d870ba"
     }
   ],
+  "outputDigest": "b6050780f259f47b0c0c3def5feb693995fd11efa0e19a20dd35b39515533b19",
   "notes": [
     "Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.",
     "39 frameworks in this catalog, captured at 2026-09-12T21:04:59.695Z.",
     "Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.",
     "Daily reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive daily check.",
     "Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream."
-  ],
-  "generatorVersion": 3,
-  "indexComplete": false,
-  "outputDigest": "b6050780f259f47b0c0c3def5feb693995fd11efa0e19a20dd35b39515533b19",
-  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
+  ]
 }

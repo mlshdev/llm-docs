@@ -73,8 +73,7 @@ interface BaseSourceProject<T extends ProjectId> {
   readonly homepage: string;
 }
 
-export interface GithubSourceProject
-  extends BaseSourceProject<GithubProjectId> {
+export interface GithubSourceProject extends BaseSourceProject<GithubProjectId> {
   readonly kind: "github";
   readonly repository: string;
   readonly docsRepository?: string;
@@ -178,9 +177,7 @@ export type LockedSource =
   | SnapshotLockedSource;
 
 export type GithubLockedSource =
-  | ReleaseLockedSource
-  | BranchLockedSource
-  | TagLockedSource;
+  ReleaseLockedSource | BranchLockedSource | TagLockedSource;
 
 export function isBranchLockedSource(
   source: LockedSource,

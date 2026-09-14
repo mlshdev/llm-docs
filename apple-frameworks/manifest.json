@@ -1,5 +1,7 @@
 {
   "schemaVersion": 2,
+  "generatorVersion": 3,
+  "generatorDigest": "bb68184ba540b16dfa9c5f50082107ac280b8961a72151b19aeaa84c52820827",
   "project": "apple-frameworks",
   "title": "Apple cross-platform frameworks",
   "homepage": "https://developer.apple.com/documentation/technologies",
@@ -9,6 +11,7 @@
   "contentDigest": "e6d3efcb96fcdebbc411a497a66265ee7cc6bedd94b4398515f60b69812f30c4",
   "capturedAt": "2026-09-12T21:04:59.784Z",
   "documentCount": 246870,
+  "indexComplete": false,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
@@ -395,15 +398,12 @@
       "sha256": "2c2ba9c366aeef51da5767be88601f0d517a54656dcfa44aa81bd0cfbc4ddf5d"
     }
   ],
+  "outputDigest": "05c7997583a9480cfa1562fd8f359052beb72ad0a42c3de7d6de1261af46ceda",
   "notes": [
     "Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.",
     "269 frameworks in this catalog, captured at 2026-09-12T21:04:59.784Z.",
     "Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.",
     "Daily reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive daily check.",
     "Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream."
-  ],
-  "generatorVersion": 3,
-  "indexComplete": false,
-  "outputDigest": "05c7997583a9480cfa1562fd8f359052beb72ad0a42c3de7d6de1261af46ceda",
-  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
+  ]
 }
