@@ -1,6 +1,7 @@
 {
   "schemaVersion": 2,
   "generatorVersion": 3,
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4",
   "project": "traefik",
   "title": "Traefik Proxy",
   "homepage": "https://doc.traefik.io/traefik/",
@@ -23,6 +24,5 @@
   "notes": [
     "Pages follow docs/mkdocs.yml navigation order from the immutable release tag.",
     "MkDocs include fragments are expanded; repeated commercial callouts and non-text assets are omitted."
-  ],
-  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
+  ]
 }

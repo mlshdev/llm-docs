@@ -1,6 +1,7 @@
 {
   "schemaVersion": 2,
   "generatorVersion": 3,
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4",
   "project": "yt-dlp",
   "title": "yt-dlp",
   "homepage": "https://github.com/yt-dlp/yt-dlp#readme",
@@ -23,6 +24,5 @@
   "notes": [
     "Release-authored Markdown is normalized directly; generated binaries, man pages, and shell completions are omitted.",
     "The supported-site catalog is retained as a separate reference page."
-  ],
-  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
+  ]
 }

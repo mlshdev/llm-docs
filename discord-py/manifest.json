@@ -1,6 +1,7 @@
 {
   "schemaVersion": 2,
   "generatorVersion": 3,
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4",
   "project": "discord-py",
   "title": "discord.py",
   "homepage": "https://discordpy.readthedocs.io/",
@@ -23,6 +24,5 @@
     "Release-pinned Sphinx RST is converted without executing Sphinx or importing upstream Python modules.",
     "Autodoc class, function, exception, and member descriptions are reproduced from statically extracted Python docstrings.",
     "Translations, theme assets, generated indexes, and non-documentation source are omitted."
-  ],
-  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
+  ]
 }

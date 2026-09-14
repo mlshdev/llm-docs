@@ -1,6 +1,7 @@
 {
   "schemaVersion": 2,
   "generatorVersion": 3,
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4",
   "project": "podman",
   "title": "Podman",
   "homepage": "https://docs.podman.io/",
@@ -23,6 +24,5 @@
   "notes": [
     "Podman man-page templates are expanded by a non-executing implementation of the tagged repository's documented preprocessing rules.",
     "Generated aliases, duplicate rootless/troubleshooting pages, translations, assets, and vendored code are omitted."
-  ],
-  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
+  ]
 }

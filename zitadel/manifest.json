@@ -1,6 +1,7 @@
 {
   "schemaVersion": 2,
   "generatorVersion": 3,
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4",
   "project": "zitadel",
   "title": "ZITADEL",
   "homepage": "https://zitadel.com/docs",
@@ -24,6 +25,5 @@
     "Pages come from the Fumadocs content tree in apps/docs/content; underscore-prefixed partials are inlined into the pages that import them.",
     "Interactive elements the site renders from JavaScript - framework pickers, benchmark charts, permission and PII tables, and React partials such as the quick start console walkthroughs - are omitted because they carry no static prose.",
     "Cross-references keep their published form on https://zitadel.com/docs; images and imported sample files point at the pinned commit on GitHub."
-  ],
-  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
+  ]
 }

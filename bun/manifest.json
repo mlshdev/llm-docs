@@ -1,6 +1,7 @@
 {
   "schemaVersion": 2,
   "generatorVersion": 3,
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4",
   "project": "bun",
   "title": "Bun",
   "homepage": "https://bun.com/docs",
@@ -24,6 +25,5 @@
     "Pages and their order come from the release-tagged Mintlify navigation in docs/docs.json; unreferenced files are excluded and snippets are inlined rather than published as duplicate pages.",
     "Static MDX cards, tabs, accordions, steps, callouts, and media frames are normalized to Markdown without executing JavaScript.",
     "Published page links resolve to https://bun.com/docs; source assets point at the immutable release commit."
-  ],
-  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
+  ]
 }

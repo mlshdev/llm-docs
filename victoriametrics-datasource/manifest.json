@@ -1,6 +1,7 @@
 {
   "schemaVersion": 2,
   "generatorVersion": 3,
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4",
   "project": "victoriametrics-datasource",
   "title": "VictoriaMetrics datasource for Grafana",
   "homepage": "https://grafana.com/grafana/plugins/victoriametrics-metrics-datasource/",
@@ -23,6 +24,5 @@
   "notes": [
     "Pages are the plugin catalog documentation, the repository guide, and the changelog at the immutable release tag.",
     "Links and screenshots that upstream pins to a branch are rewritten to the released commit."
-  ],
-  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
+  ]
 }

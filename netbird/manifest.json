@@ -1,6 +1,7 @@
 {
   "schemaVersion": 2,
   "generatorVersion": 3,
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4",
   "project": "netbird",
   "title": "NetBird",
   "homepage": "https://docs.netbird.io/",
@@ -25,6 +26,5 @@
     "Public docs are pinned to netbirdio/docs commit d905fda2a3f04a2066746875d09e51a3fe62dfed; its commit message matches v0.77.1 and it changes generated API resource pages.",
     "NetBird does not tag its public docs repository; non-API pages are an evergreen snapshot at that exact commit, not a formally versioned manual.",
     "Release-tagged technical architecture documents are included separately from the public documentation snapshot."
-  ],
-  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
+  ]
 }

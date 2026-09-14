@@ -1,6 +1,7 @@
 {
   "schemaVersion": 2,
   "generatorVersion": 3,
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4",
   "project": "postgres-18",
   "title": "PostgreSQL 18",
   "homepage": "https://www.postgresql.org/docs/18/",
@@ -23,6 +24,5 @@
     "PostgreSQL 18 tracks the highest `REL_18_<minor>` maintenance-release tag; betas and release candidates are ignored.",
     "DocBook XML sources are assembled from their declared entities and converted without executing the upstream Make, Meson, Perl, or XSLT toolchain.",
     "Error-code, wait-event, SQL-conformance, key-word, and Meson-target tables the upstream build generates are reproduced from the same checked-in data files."
-  ],
-  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
+  ]
 }

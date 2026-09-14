@@ -1,6 +1,7 @@
 {
   "schemaVersion": 2,
   "generatorVersion": 3,
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4",
   "project": "grafana",
   "title": "Grafana",
   "homepage": "https://grafana.com/docs/grafana/latest/",
@@ -25,6 +26,5 @@
     "Shared fragments referenced by `docs/shared` and `shared-snippet` are inlined into the pages that render them and are not published separately.",
     "Hugo shortcodes are expanded to plain Markdown; version placeholders are replaced with the pinned release version.",
     "Content that only exists as a website widget is omitted: `docs/ignore` blocks, the `docs/whats-new` release feed, and shared fragments owned by other Grafana products."
-  ],
-  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
+  ]
 }

@@ -1,6 +1,7 @@
 {
   "schemaVersion": 2,
   "generatorVersion": 3,
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4",
   "project": "trigger-dev",
   "title": "Trigger.dev",
   "homepage": "https://trigger.dev/docs",
@@ -25,6 +26,5 @@
     "API reference pages are rendered from the OpenAPI specification the page names in its `openapi` frontmatter, since the upstream page carries no prose of its own.",
     "Static MDX cards, tabs, accordions, steps, callouts, and parameter fields are normalized to Markdown without executing JavaScript.",
     "Published page links resolve to https://trigger.dev/docs; source assets point at the immutable release commit."
-  ],
-  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
+  ]
 }
