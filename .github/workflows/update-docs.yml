@@ -159,8 +159,10 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    # The push authenticates with PUBLISH_TOKEN, not github.token, which now
+    # only needs to read the repository for the checkout below.
     permissions:
-      contents: write
+      contents: read
     steps:
       - name: Check out main without persisted credentials
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -173,10 +175,15 @@ jobs:
         with:
           name: "generated-documentation"
           path: "_generated"
+      # main requires the `check` status check, which a direct push cannot
+      # satisfy, so this pushes as the repository owner rather than as
+      # github-actions[bot]: the ruleset grants admins a bypass. Unlike
+      # github.token, a personal access token also triggers CI on the pushed
+      # commit, so a non-deterministic snapshot fails loudly on main.
       - name: Commit the generated paths this run produced
         shell: bash
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
           BASE_SHA: ${{ needs.build.outputs.base-sha }}
         run: |
           set -euo pipefail
