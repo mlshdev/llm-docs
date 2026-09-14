@@ -276,6 +276,21 @@ export async function snapshotMatchesPin(
   );
 }
 
+// Every path the pipeline writes, so the publishing workflow does not keep its
+// own copy of the project list. A hand-maintained allowlist that misses a new
+// project publishes root indexes describing it while its directory is managed
+// by nobody, which is how a merged project once lost its pin.
+export function generatedPaths(
+  projects: readonly { readonly id: ProjectId }[],
+): readonly string[] {
+  return [
+    "sources.lock.json",
+    "llms.txt",
+    "llms-full.txt",
+    ...projects.map((project) => project.id),
+  ];
+}
+
 export async function verifyOutputs(
   projects: readonly SourceProject[],
   lock: CompleteSourcesLock,

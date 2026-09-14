@@ -3,6 +3,7 @@ import { loadConfig, loadLock, lockPath } from "./config.ts";
 import { resolveLatestSources } from "./github.ts";
 import {
   buildSite,
+  generatedPaths,
   orderedLock,
   snapshotMatchesPin,
   verifyOutputs,
@@ -43,9 +44,12 @@ switch (command) {
   case "report":
     await report();
     break;
+  case "paths":
+    await paths();
+    break;
   default:
     throw new Error(
-      "Usage: bun run src/cli.ts <build|update|verify|site|report>",
+      "Usage: bun run src/cli.ts <build|update|verify|site|report|paths>",
     );
 }
 
@@ -152,6 +156,11 @@ async function update(): Promise<void> {
 // Renders the tracking-issue body for the last `update` run.
 async function report(): Promise<void> {
   console.log(renderIssueBody(await loadPipelineReport()));
+}
+
+async function paths(): Promise<void> {
+  const config = await loadConfig();
+  console.log(generatedPaths(config.projects).join("\n"));
 }
 
 async function verify(): Promise<void> {
