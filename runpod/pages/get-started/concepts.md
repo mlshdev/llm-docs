@@ -1,0 +1,69 @@
+> Commit-pinned source for Runpod main: [get-started/concepts.mdx](https://docs.runpod.io/get-started/concepts)
+
+# Concepts
+
+Key concepts and terminology for understanding Runpod's platform and products. Review setup steps and core concepts for building on Runpod.
+
+## [Runpod console](https://console.runpod.io)
+
+The web interface for managing your compute resources, account, teams, and billing.
+
+## [Serverless](https://docs.runpod.io/serverless/overview)
+
+A pay-as-you-go compute solution designed for dynamic autoscaling in production AI/ML apps.
+
+## [Flash](https://docs.runpod.io/flash/overview)
+
+A framework for building distributed GPU applications using local Python scripts. Write functions with the `@Endpoint` decorator, and Flash automatically executes them on Runpod's infrastructure.
+
+## [Pod](https://docs.runpod.io/pods/overview)
+
+A dedicated GPU or CPU instance for containerized AI/ML workloads, such as training models, running inference, or other compute-intensive tasks.
+
+## [Public Endpoint](https://docs.runpod.io/public-endpoints/overview)
+
+An AI model API hosted by Runpod that you can access directly without deploying your own infrastructure.
+
+## [Instant Cluster](https://docs.runpod.io/instant-clusters)
+
+A managed compute cluster with high-speed networking for multi-node distributed workloads like training large AI models.
+
+## [Network volume](https://docs.runpod.io/storage/network-volumes)
+
+Persistent storage that exists independently of your other compute resources and can be attached to multiple Pods or Serverless endpoints to share data between machines. Available in standard and [high-performance](https://docs.runpod.io/storage/high-performance-storage) tiers.
+
+## [S3-compatible API](https://docs.runpod.io/storage/s3-api)
+
+A storage interface compatible with Amazon S3 for uploading, downloading, and managing files in your network volumes.
+
+## [Runpod Hub](https://docs.runpod.io/hub/overview)
+
+A repository for discovering, deploying, and sharing preconfigured AI projects optimized for Runpod.
+
+## Container
+
+A Docker-based environment that packages your code, dependencies, and runtime into a portable unit that runs consistently across machines.
+
+## Data center
+
+Physical facilities where Runpod's GPU and CPU hardware is located. Your choice of data center can affect latency, available GPU types, and pricing.
+
+## Machine
+
+The physical server hardware within a data center that hosts your workloads. Each machine contains CPUs, GPUs, memory, and storage.
+
+## Training
+
+The foundational phase of AI development, where a model analyzes a massive dataset to learn patterns and relationships.
+
+## Fine-tuning
+
+The process of adapting a pre-trained model to a specific task using a smaller, specialized dataset.
+
+## Inference
+
+The execution phase where a trained model makes predictions on new data. When you prompt a model and it responds, that's inference.
+
+## Serving
+
+The process of deploying and managing a model for inference. When you deploy a model to a Serverless endpoint, that's serving.

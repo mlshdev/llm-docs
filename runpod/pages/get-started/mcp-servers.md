@@ -1,0 +1,367 @@
+> Commit-pinned source for Runpod main: [get-started/mcp-servers.mdx](https://docs.runpod.io/get-started/mcp-servers)
+
+# Use Runpod's MCP servers
+
+Connect AI tools to Runpod using the Model Context Protocol for infrastructure management and documentation access.
+
+Runpod provides two [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) servers that connect AI tools and coding agents directly to Runpod:
+
+- **[Runpod API MCP server](#runpod-api-mcp-server):** Manage Pods, endpoints, templates, volumes, and registries through the Runpod REST API. Authenticate with Sign in with Runpod or a [Runpod API key](https://docs.runpod.io/get-started/api-keys).
+- **[Runpod docs MCP server](#runpod-docs-mcp-server):** Search Runpod documentation for features, code examples, and guides. No authentication required.
+
+## Runpod API MCP server
+
+The Runpod API MCP server gives AI tools access to the [Runpod REST API](https://docs.runpod.io/api-reference/overview), letting you create and manage Pods, Serverless endpoints, templates, network volumes, and container registries through natural language.
+
+**Hosted endpoint:** `https://mcp.getrunpod.io/` (Streamable HTTP transport)
+
+**Local package:** `@runpod/mcp-server` (via npx)
+
+**Source code:** [github.com/runpod/runpod-mcp](https://github.com/runpod/runpod-mcp)
+
+**Authentication:** Sign in with Runpod (OAuth) for the hosted server, or a [Runpod API key](https://docs.runpod.io/get-started/api-keys) for the local server or as a hosted-server override.
+
+You can connect in two ways: the recommended hosted server, or a local server that runs from an npm package with an API key.
+
+### Hosted server (recommended)
+
+The hosted server runs at `https://mcp.getrunpod.io/` and provides the same capabilities as the local server. OAuth-capable clients run a "Sign in with Runpod" flow on first connect: a browser opens, you log in to the Runpod console and approve the request, and the server obtains a session-scoped API key. Nothing is stored on disk.
+
+The guided installer is the recommended path for supported clients. It detects your installed clients — Claude Code, Claude Desktop, Cursor, Windsurf, and VS Code — and configures each one, handling client-specific config-key differences automatically:
+
+```bash
+npx @runpod/mcp-server@latest add
+```
+
+To undo these changes, run `npx @runpod/mcp-server@latest remove`.
+
+#### Claude Code (hosted)
+
+```bash
+claude mcp add --transport http runpod -s user https://mcp.getrunpod.io/
+```
+
+#### Claude Desktop (hosted)
+
+1. Open **Settings** in Claude Desktop.
+2. Navigate to **Connectors** and select **Add custom connector**.
+3. Enter `https://mcp.getrunpod.io/` as the URL and click **Add**.
+
+#### VS Code with Copilot (hosted)
+
+1. Open the Command Palette (Ctrl+Shift+P on Windows/Linux or Cmd+Shift+P on macOS).
+2. Run **MCP: Add Server** and select **HTTP**.
+3. Enter `https://mcp.getrunpod.io/` as the URL and `Runpod` as the name.
+4. Select **Global** or **Workspace** and click **Add**.
+
+#### Other clients (hosted)
+
+For any other MCP-compatible client, use the remote URL `https://mcp.getrunpod.io/`:
+
+```json
+{
+  "mcpServers": {
+    "runpod": {
+      "url": "https://mcp.getrunpod.io/"
+    }
+  }
+}
+```
+
+Clients differ in the exact key name they use for a remote server URL. For the clients the guided installer supports, it writes the correct configuration automatically; for any other client, consult that client's MCP documentation for how to add a remote HTTP server, using the URL above.
+
+> **Note**
+>
+> To skip the OAuth flow, pass your API key as a bearer header. For example, in Claude Code:
+>
+> ```bash
+> claude mcp add --transport http runpod -s user https://mcp.getrunpod.io/ \
+>   --header "Authorization: Bearer $RUNPOD_API_KEY"
+> ```
+>
+> Clients configured with JSON use a `headers` block instead.
+
+### Local server (API key)
+
+Use this method to run the server locally with an API key stored in your client config — for example, if your client doesn't support the hosted server's sign-in flow, or you prefer to manage the credential yourself.
+
+#### Supported clients
+
+- [Claude Code](#claude-code)
+- [Codex CLI](#codex-cli)
+- [Cursor](#cursor)
+- [VS Code with Copilot](#vs-code-with-copilot)
+- [Claude Desktop](#claude-desktop)
+- [Windsurf](#windsurf)
+- [Cline](#cline)
+- [Gemini CLI](#gemini-cli)
+
+#### Claude Code
+
+```bash
+claude mcp add runpod --scope user -e RUNPOD_API_KEY=your_api_key_here -- npx -y @runpod/mcp-server@latest
+```
+
+Replace `your_api_key_here` with your Runpod API key. The `--scope user` flag makes the server available across all your projects. Run `/mcp` inside Claude Code to verify the connection.
+
+#### Codex CLI
+
+[Codex CLI](https://github.com/openai/codex) is OpenAI's terminal-based coding agent.
+
+```bash
+codex mcp add runpod --env RUNPOD_API_KEY=your_api_key_here -- npx -y @runpod/mcp-server@latest
+```
+
+#### Cursor
+
+Add the following to `.cursor/mcp.json` (project-level) or `~/.cursor/mcp.json` (global). This configuration works with both the Cursor IDE and the [Cursor Agent](https://cursor.com/docs/cli/mcp):
+
+```json
+{
+  "mcpServers": {
+    "runpod": {
+      "command": "npx",
+      "args": ["-y", "@runpod/mcp-server@latest"],
+      "env": {
+        "RUNPOD_API_KEY": "your_api_key_here"
+      }
+    }
+  }
+}
+```
+
+#### VS Code with Copilot
+
+1. Open the Command Palette (Ctrl+Shift+P on Windows/Linux or Cmd+Shift+P on macOS).
+2. Run **MCP: Add Server** and select **stdio**.
+3. Enter the following details:
+   - **Name:** `Runpod`
+   - **Command:** `npx`
+   - **Arguments:** `-y @runpod/mcp-server@latest`
+4. Add environment variable `RUNPOD_API_KEY` with your Runpod API key.
+5. Select **Global** or **Workspace** and click **Add**.
+
+#### Claude Desktop
+
+Add the following to your Claude Desktop config file:
+
+- **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+- **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+
+```json
+{
+  "mcpServers": {
+    "runpod": {
+      "command": "npx",
+      "args": ["-y", "@runpod/mcp-server@latest"],
+      "env": {
+        "RUNPOD_API_KEY": "your_api_key_here"
+      }
+    }
+  }
+}
+```
+
+Restart Claude Desktop after saving the file.
+
+#### Windsurf
+
+Edit `~/.codeium/windsurf/mcp_config.json` (or open from **Settings** > **Cascade** > **MCP Servers** > **View raw config**):
+
+```json
+{
+  "mcpServers": {
+    "runpod": {
+      "command": "npx",
+      "args": ["-y", "@runpod/mcp-server@latest"],
+      "env": {
+        "RUNPOD_API_KEY": "your_api_key_here"
+      }
+    }
+  }
+}
+```
+
+#### Cline
+
+Open the Cline sidebar in VS Code, click the **MCP Servers** icon, then select **Configure MCP Servers** to edit `cline_mcp_settings.json`:
+
+```json
+{
+  "mcpServers": {
+    "runpod": {
+      "command": "npx",
+      "args": ["-y", "@runpod/mcp-server@latest"],
+      "env": {
+        "RUNPOD_API_KEY": "your_api_key_here"
+      },
+      "disabled": false
+    }
+  }
+}
+```
+
+#### Gemini CLI
+
+Add to `~/.gemini/settings.json` (global) or `.gemini/settings.json` (project-level):
+
+```json
+{
+  "mcpServers": {
+    "runpod": {
+      "command": "npx",
+      "args": ["-y", "@runpod/mcp-server@latest"],
+      "env": {
+        "RUNPOD_API_KEY": "your_api_key_here"
+      }
+    }
+  }
+}
+```
+
+#### Other clients
+
+For any other MCP-compatible client, use the following connection details:
+
+- **Command:** `npx`
+- **Args:** `-y @runpod/mcp-server@latest`
+- **Environment:** `RUNPOD_API_KEY=your_api_key_here`
+
+### Usage examples
+
+Once connected, you can interact with your Runpod resources using natural language:
+
+```
+List all my Runpod Pods
+```
+
+```
+Create a new Runpod Pod with the following specifications:
+- Name: ml-training-pod
+- Image: runpod/pytorch:2.1.0-py3.10-cuda11.8.0-devel-ubuntu22.04
+- GPU Type: NVIDIA GeForce RTX 4090
+- GPU Count: 1
+- Cloud Type: SECURE
+```
+
+```
+Create a Runpod Serverless endpoint with the following configuration:
+- Name: image-generation-endpoint
+- Template ID: 30zmvf89kd
+- Minimum workers: 0
+- Maximum workers: 5
+```
+
+```
+Stop the Pod named "ml-training-pod"
+```
+
+## Runpod docs MCP server
+
+The Runpod docs MCP server provides access to Runpod's documentation knowledge base, making it easier to get answers about features and how to use them.
+
+**Endpoint:** `https://docs.runpod.io/mcp`
+
+**Authentication:** None required
+
+### Claude Code
+
+```bash
+claude mcp add runpod-docs --scope user --transport http https://docs.runpod.io/mcp
+```
+
+### Codex CLI
+
+```bash
+codex mcp add runpod-docs --url https://docs.runpod.io/mcp
+```
+
+### Cursor
+
+Add to your `.cursor/mcp.json` file:
+
+```json
+{
+  "mcpServers": {
+    "runpod-docs": {
+      "url": "https://docs.runpod.io/mcp"
+    }
+  }
+}
+```
+
+### VS Code with Copilot
+
+1. Open the Command Palette (Ctrl+Shift+P on Windows/Linux or Cmd+Shift+P on macOS).
+2. Run **MCP: Add Server** and select **HTTP**.
+3. Enter `https://docs.runpod.io/mcp` as the URL and `Runpod Docs` as the name.
+4. Select **Global** or **Workspace** and click **Add**.
+
+### Claude Desktop
+
+1. Open **Settings** in Claude Desktop.
+2. Navigate to **Connectors** and select **Add custom connector**.
+3. Enter `https://docs.runpod.io/mcp` as the URL and click **Add**.
+
+### Windsurf
+
+Add to `~/.codeium/windsurf/mcp_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "runpod-docs": {
+      "serverUrl": "https://docs.runpod.io/mcp"
+    }
+  }
+}
+```
+
+### Cline
+
+Add to `cline_mcp_settings.json`:
+
+```json
+{
+  "mcpServers": {
+    "runpod-docs": {
+      "url": "https://docs.runpod.io/mcp",
+      "disabled": false
+    }
+  }
+}
+```
+
+### Gemini CLI
+
+Add to `~/.gemini/settings.json`. Note that Gemini CLI uses `httpUrl` instead of `url`:
+
+```json
+{
+  "mcpServers": {
+    "runpod-docs": {
+      "httpUrl": "https://docs.runpod.io/mcp"
+    }
+  }
+}
+```
+
+### Other clients
+
+For any other MCP-compatible client, use URL `https://docs.runpod.io/mcp` (HTTP transport).
+
+### Usage examples
+
+With the docs MCP server connected, you can ask questions about Runpod features:
+
+```
+Explain the Runpod Serverless model caching feature
+```
+
+```
+How do I configure environment variables for a Serverless endpoint?
+```
+
+```
+How does global networking work in Runpod?
+```

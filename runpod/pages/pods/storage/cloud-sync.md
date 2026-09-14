@@ -1,0 +1,145 @@
+> Commit-pinned source for Runpod main: [pods/storage/cloud-sync.mdx](https://docs.runpod.io/pods/storage/cloud-sync)
+
+# Sync Pod data with cloud storage providers
+
+Learn how to sync your Pod data with popular cloud storage providers. Review setup, configuration, and operations guidance for Runpod Pods.
+
+Cloud Sync uploads and downloads data between your Pod and external cloud storage providers.
+
+## Supported providers
+
+| Provider                                                   | Auth method          | Setup complexity |
+| ---------------------------------------------------------- | -------------------- | ---------------- |
+| [**Amazon S3**](#amazon-s3)                                | Access Key + Secret  | Low              |
+| [**Google Cloud Storage**](#google-cloud-platform-storage) | Service Account JSON | Medium           |
+| [**Microsoft Azure**](#microsoft-azure-blob-storage)       | Account Name + Key   | Medium           |
+| [**Backblaze B2**](#backblaze-b2-cloud-storage)            | Application Key      | Low              |
+| [**Dropbox**](#dropbox)                                    | OAuth Access Token   | Medium           |
+
+> **Note**
+>
+> Cloud Sync works with Google Cloud Storage, not Google Drive. For Drive transfers, see [file transfer methods](https://docs.runpod.io/pods/storage/transfer-files#transfer-with-google-drive).
+
+## Security best practices
+
+When using Cloud Sync, follow these security guidelines to protect your data and credentials:
+
+- Keep all access keys, tokens, and credentials confidential.
+- Use dedicated service accounts or application-specific credentials when possible.
+- Grant only the minimum permissions required for data transfer.
+- Regularly rotate your access credentials.
+- Monitor your cloud storage logs for unauthorized access.
+
+## Amazon S3
+
+Amazon S3 provides scalable object storage that integrates seamlessly with Runpod through Cloud Sync.
+
+Follow the steps below to sync your data with Amazon S3:
+
+1. Navigate to the [Amazon S3 bucket creation form](https://s3.console.aws.amazon.com/s3/bucket/create?region=us-east-1) in your AWS console.
+
+   Provide a descriptive name for your bucket and select your preferred AWS Region (this affects data storage location and access speeds).
+
+   If you need your bucket to be publicly accessible, uncheck the **Block public access** option at the bottom of the form. For most use cases, keeping this checked provides better security.
+2. Go to **Security credentials** in your AWS account settings. Create a new Access Key on the Security credentials page.
+
+   Your Secret Access Key will be displayed only once during creation, so make sure to save it securely.
+3. In the Runpod console, navigate to the [Pods page](https://console.runpod.io/pods) and select the Pod containing your data. Click **Cloud Sync**, then select **AWS S3** from the available providers.
+
+   Enter your **AWS Access Key ID** and **Secret Access Key** in the provided fields. Specify the **AWS Region** where your bucket is located and provide the complete bucket path where you want to store your data.
+
+   Click **Copy to/from AWS S3** to initiate the transfer. The transfer progress will be displayed in the Runpod interface. Large datasets may take time depending on your Pod's network connection.
+
+## Google Cloud Platform Storage
+
+Google Cloud Storage offers high-performance object storage with global availability and strong consistency.
+
+Follow the steps below to sync your data with Google Cloud Storage:
+
+1. Access the Google Cloud Storage dashboard and click **Buckets → Create** to start the bucket creation process.
+
+   Choose a globally unique name for your bucket. Leave most configuration options at their default settings unless you have specific requirements.
+
+   To allow public access to your bucket contents, uncheck **Enforce Public Access Prevention On This Bucket**. Keep this checked for better security unless public access is required.
+2. Create a service account specifically for Runpod access. This provides better security than using your primary account credentials.
+
+   Follow [Google's guide on creating service account keys](https://docs.cloud.google.com/iam/docs/keys-create-delete) to generate a JSON key file. This key contains all necessary authentication information.
+3. In the Runpod console, navigate to the [Pods page](https://console.runpod.io/pods) and select the Pod containing your data. Click **Cloud Sync**, then select **Google Cloud Storage** from the available providers.
+
+   Paste the entire contents of your Service Account JSON key into the provided field. Specify the source/destination path within your bucket and select which folders from your Pod to transfer.
+
+   Click **Copy to/from Google Cloud Storage** to initiate the transfer. The transfer progress will be displayed in the Runpod interface. Large datasets may take time depending on your Pod's network connection.
+
+## Microsoft Azure Blob Storage
+
+Azure Blob Storage provides massively scalable object storage for unstructured data, with seamless integration into the Azure ecosystem.
+
+Follow the steps below to sync your data with Microsoft Azure Blob Storage:
+
+1. Start by creating a Resource Group to organize your Azure resources. Navigate to [Resource Groups](https://portal.azure.com/#view/HubsExtension/BrowseResourceGroups) in the Azure portal and click **Create**.
+2. Next, set up a Storage Account under [Storage Accounts](https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.Storage%2FStorageAccounts). Click **Create** and assign it to your newly created Resource Group.
+3. Navigate to **Security + Networking → Access Keys** in your storage account to retrieve the authentication key.
+4. Create a Blob Container by going to **Storage Browser → Blob Containers** and clicking **Add Container**. Consider creating folders within the container for better organization if you plan to sync data to/from multiple Pods.
+5. In the Runpod console, navigate to the [Pods page](https://console.runpod.io/pods) and select the Pod containing your data. Click **Cloud Sync**, then select **Azure Blob Storage** from the available providers.
+
+   Enter your **Azure Account Name** and **Account Key** in the provided fields. Specify the source/destination path in your blob storage where you want to store your data.
+
+   Click **Copy to/from Azure Blob Storage** to initiate the transfer. The transfer progress will be displayed in the Runpod interface. Large datasets may take time depending on your Pod's network connection.
+
+## Backblaze B2 Cloud Storage
+
+Backblaze B2 offers affordable cloud storage with S3-compatible APIs and straightforward pricing.
+
+Follow the steps below to sync your data with Backblaze B2 Cloud Storage:
+
+1. Navigate to [B2 Cloud Storage Buckets](https://secure.backblaze.com/b2_buckets.htm) and click **Create a Bucket**.
+
+   Set the bucket visibility to **Public** to allow Runpod access. You can restrict access later using application keys if needed.
+2. Visit [App Keys](https://secure.backblaze.com/app_keys.htm) to create a new application key. This key provides authenticated access to your bucket.
+
+   Save both the KeyID and applicationKey securely—the applicationKey cannot be retrieved after creation.
+3. In the Runpod console, navigate to the [Pods page](https://console.runpod.io/pods) and select the Pod containing your data. Click **Cloud Sync**, then select **Backblaze B2** from the available providers.
+
+   Enter your **Backblaze B2 Account ID**, **Application Key**, and **bucket path** as shown in the Backblaze interface.
+
+   Click **Copy to/from Backblaze B2** to initiate the transfer. The transfer progress will be displayed in the Runpod interface.
+
+## Dropbox
+
+Dropbox integration allows you to sync your Pod data with your Dropbox account using OAuth authentication.
+
+Follow the steps below to sync your data with Dropbox:
+
+1. Go to the [Dropbox App Console](https://www.dropbox.com/developers/apps/create) to create a new app.
+
+   Select **Scoped Access** for API options and **Full Dropbox** for access type. Choose a descriptive name for your app.
+2. In the Dropbox App Console, navigate to the **Permissions** tab. Enable all required checkboxes for read and write access to ensure Cloud Sync can transfer files properly.
+3. Return to the **Settings** tab of your app. In the OAuth2 section, click **Generate** under Generated Access Token.
+
+   Save this token immediately—it won't be shown again after you leave the page. This token authenticates Runpod's access to your Dropbox.
+4. In the Runpod console, navigate to the [Pods page](https://console.runpod.io/pods) and select the Pod containing your data. Click **Cloud Sync**, then select **Dropbox** from the available providers.
+
+   Paste your **Dropbox Access Token** and specify the remote path where you want to store the data. Creating a dedicated folder in Dropbox beforehand helps with organization.
+
+   Click **Copy to/from Dropbox** to initiate the transfer. The transfer progress will be displayed in the Runpod interface.
+
+## Alternative transfer methods
+
+While Cloud Sync provides the easiest way to sync data with cloud providers, you can also transfer files between your Pod and other destinations using:
+
+- **runpodctl**: A built-in CLI tool for peer-to-peer transfers using one-time codes.
+- **SSH-based tools**: Use SCP or rsync for direct transfers to your local machine.
+- **Network volumes**: For persistent storage across multiple Pods.
+
+For detailed instructions on these methods, see our [file transfer guide](https://docs.runpod.io/pods/storage/transfer-files).
+
+## Troubleshooting
+
+If you encounter issues during syncing:
+
+- **Transfer fails immediately**: Verify your credentials are correct and have the necessary permissions.
+- **Slow transfer speeds**: Large datasets take time to transfer. Consider compressing data before syncing or using incremental transfers.
+- **Permission denied errors**: Ensure your bucket or container has the correct access policies. Some providers require specific permission configurations for external access.
+- **Connection timeouts**: Check that your Pod has stable network connectivity. You may need to retry the transfer.
+
+For additional support, consult your cloud provider's documentation or contact Runpod support.

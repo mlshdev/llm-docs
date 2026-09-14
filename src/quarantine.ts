@@ -61,6 +61,12 @@ const unresolvedSyntax: Record<ProjectId, RegExp> = {
   // only the two entities the build substitutes indicate an unresolved include.
   "postgres-18":
     /<\/?(?:para|sect[1-5]|xref|literal|varlistentry|programlisting|refsect[1-3])\b|&(?:version|majorversion);/,
+  vastai:
+    /<\/?(?:Accordion|AccordionGroup|Card|CardGroup|CodeGroup|Columns|Expandable|Frame|Icon|Info|Note|ParamField|ResponseField|Step|Steps|Tab|Tabs|Tip|Update|Warning)\b/,
+  // A glossary tooltip is substituted by the term it labels, so any surviving
+  // `*Tooltip` element means the glossary module stopped being readable.
+  runpod:
+    /<\/?(?:Accordion|AccordionGroup|Card|CardGroup|CodeGroup|Columns|Expandable|Frame|Icon|Info|Note|ParamField|RequestExample|ResponseExample|ResponseField|Step|Steps|Tab|Tabs|Tip|Tree|Update|Warning)\b|<[A-Z][\w]*Tooltip\b/,
   "apple-swift": /(?!)/,
   "apple-swiftui": /(?!)/,
   "apple-webkit": /(?!)/,

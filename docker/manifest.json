@@ -8,7 +8,7 @@
   "branch": "main",
   "sourceCommittedAt": "2026-09-11T15:53:13Z",
   "sourceCommit": "bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81",
-  "documentCount": 1640,
+  "documentCount": 1630,
   "quarantined": [
     {
       "sourcePath": "content/get-started/tutorials/run-an-agent.md",

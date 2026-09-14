@@ -10,9 +10,11 @@ import { buildNetbird } from "./netbird.ts";
 import { buildN8n } from "./n8n.ts";
 import { buildPodman } from "./podman.ts";
 import { buildPostgres } from "./postgres.ts";
+import { buildRunpod } from "./runpod.ts";
 import { buildSearxng } from "./searxng.ts";
 import { buildTraefik } from "./traefik.ts";
 import { buildTriggerDev } from "./trigger-dev.ts";
+import { buildVastai } from "./vastai.ts";
 import { buildVictoriametricsDocs } from "./victoriametrics.ts";
 import { buildZitadel } from "./zitadel.ts";
 import { buildYtDlp } from "./yt-dlp.ts";
@@ -96,5 +98,9 @@ function runAdapter(
       return buildAria2(project, lock);
     case "postgres-18":
       return buildPostgres(project, lock);
+    case "vastai":
+      return buildVastai(project, lock);
+    case "runpod":
+      return buildRunpod(project, lock);
   }
 }

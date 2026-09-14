@@ -1,0 +1,145 @@
+> Commit-pinned source for Runpod main: [public-endpoints/models/p-image-edit.mdx](https://docs.runpod.io/public-endpoints/models/p-image-edit)
+
+# P-Image Edit
+
+Premium image editing with complex compositions, style transfers, and targeted edits. See model inputs and outputs on Runpod Public Endpoints.
+
+P-Image Edit is Pruna's premium image editing model that supports complex compositions, style transfers, and targeted edits with text instructions. It can process up to 5 images in a single request.
+
+- [Try in playground](https://console.runpod.io/hub/playground/image/p-image-edit)
+
+  Test P-Image Edit in the Runpod Hub playground.
+
+|              |                                                 |
+| ------------ | ----------------------------------------------- |
+| **Endpoint** | `https://api.runpod.ai/v2/p-image-edit/runsync` |
+| **Pricing**  | $0.01 per image                                 |
+| **Type**     | Image editing                                   |
+
+## Request
+
+All parameters are passed within the `input` object in the request body.
+
+**Property (type: string; required)**
+
+Text instructions for editing the image.
+
+**Property (type: array; required)**
+
+Array of 1-5 image URLs for batch processing.
+
+**Property (type: string)**
+
+Output aspect ratio. Options: `match_input_image`, `1:1`, `16:9`, `9:16`, `4:3`, `3:4`, `3:2`, `2:3`.
+
+**Property (type: integer)**
+
+Seed for reproducible results. Set to -1 for random.
+
+**Property (type: boolean)**
+
+Disable content safety filtering.
+
+```bash cURL
+curl -X POST "https://api.runpod.ai/v2/p-image-edit/runsync" \
+  -H "Authorization: Bearer $RUNPOD_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "input": {
+      "prompt": "Transform into a watercolor painting style",
+      "images": ["https://example.com/photo.jpg"],
+      "aspect_ratio": "match_input_image",
+      "seed": -1
+    }
+  }'
+```
+
+```python Python
+import requests
+
+response = requests.post(
+    "https://api.runpod.ai/v2/p-image-edit/runsync",
+    headers={
+        "Authorization": f"Bearer {RUNPOD_API_KEY}",
+        "Content-Type": "application/json",
+    },
+    json={
+        "input": {
+            "prompt": "Transform into a watercolor painting style",
+            "images": ["https://example.com/photo.jpg"],
+            "aspect_ratio": "match_input_image",
+            "seed": -1,
+        }
+    },
+)
+
+result = response.json()
+print(result["output"]["image_url"])
+```
+
+```javascript JavaScript
+const response = await fetch(
+  "https://api.runpod.ai/v2/p-image-edit/runsync",
+  {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${RUNPOD_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      input: {
+        prompt: "Transform into a watercolor painting style",
+        images: ["https://example.com/photo.jpg"],
+        aspect_ratio: "match_input_image",
+        seed: -1,
+      },
+    }),
+  }
+);
+
+const result = await response.json();
+console.log(result.output.image_url);
+```
+
+## Response
+
+**id (type: string)**
+
+Unique identifier for the request.
+
+**status (type: string)**
+
+Request status. Returns `COMPLETED` on success, `FAILED` on error.
+
+**output (type: object)**
+
+The generation result containing the image URL and cost.
+
+**output.image\_url (type: string)**
+
+URL of the edited image. This URL expires after 7 days.
+
+**output.cost (type: float)**
+
+Cost of the generation in USD.
+
+```json 200
+{
+  "id": "sync-a1b2c3d4-e5f6-7890-abcd-ef1234567890-u1",
+  "status": "COMPLETED",
+  "delayTime": 12,
+  "executionTime": 2456,
+  "output": {
+    "image_url": "https://image.runpod.ai/abc123/output.png",
+    "cost": 0.01
+  }
+}
+```
+
+> **Warning**
+>
+> Image URLs expire after 7 days. Download and store edited images immediately if you need to keep them.
+
+## Cost calculation
+
+P-Image Edit charges $0.01 per image edited.

@@ -21,6 +21,8 @@ export const projectIds = [
   "trigger-dev",
   "aria2",
   "postgres-18",
+  "vastai",
+  "runpod",
   "apple-swift",
   "apple-swiftui",
   "apple-webkit",

@@ -215,13 +215,187 @@ export function parseOpenApiSpec(
   return parsed;
 }
 
+// Maps the Mintlify component library onto the small set of components the
+// MDX converter renders as prose.
+export function normalizeMintlifyComponents(source: string): string {
+  return (
+    source
+      // Search engines read the JSON-LD a page embeds for them; a reader of the
+      // prose never sees it. Only this one metadata form is dropped, so a page
+      // carrying executable script still fails conversion rather than passing
+      // silently into the corpus.
+      .replace(
+        /<script\s+type="application\/ld\+json"[\s\S]*?(?:\/>|<\/script>)/g,
+        "",
+      )
+      .replace(/<Icon\b[^>]*\/>/g, "")
+      .replace(/<Icon\b[^>]*>[\s\S]*?<\/Icon>/g, "")
+      .replace(/<Danger(?:\s+[^>]*)?>/g, '<Callout type="danger">')
+      .replace(/<\/Danger>/g, "</Callout>")
+      .replace(/<Important(?:\s+[^>]*)?>/g, '<Callout type="important">')
+      .replace(/<\/Important>/g, "</Callout>")
+      .replace(/<Warn\b/g, "<Warning")
+      .replace(/<\/Warn>/g, "</Warning>")
+      .replace(/<Check\b/g, "<Success")
+      .replace(/<\/Check>/g, "</Success>")
+      .replace(/<(?:Request|Response)Example(?:\s+[^>]*)?>/g, "<Column>")
+      .replace(/<\/(?:Request|Response)Example>/g, "</Column>")
+      .replace(/<CardGroup(?:\s+[^>]*)?>/g, "<Cards>")
+      .replace(/<\/CardGroup>/g, "</Cards>")
+      .replace(/<AccordionGroup(?:\s+[^>]*)?>/g, "<Tabs>")
+      .replace(/<\/AccordionGroup>/g, "</Tabs>")
+      .replace(/<Accordion\b/g, "<Tab")
+      .replace(/<\/Accordion>/g, "</Tab>")
+      .replace(/<Expandable\b/g, "<Tab")
+      .replace(/<\/Expandable>/g, "</Tab>")
+      .replace(/<Update\b/g, "<Tab")
+      .replace(/<\/Update>/g, "</Tab>")
+      .replace(/<Frame(?:\s+[^>]*)?>/g, "<div>")
+      .replace(/<\/Frame>/g, "</div>")
+      .replace(/<Tip(?:\s+[^>]*)?>/g, '<Callout type="tip">')
+      .replace(/<\/Tip>/g, "</Callout>")
+      .replace(/<Info(?:\s+[^>]*)?>/g, '<Callout type="info">')
+      .replace(/<\/Info>/g, "</Callout>")
+      .replace(/<Columns(?:\s+[^>]*)?>/g, "<Column>")
+      .replace(/<\/Columns>/g, "</Column>")
+      .replace(/<Image\b/g, "<img")
+      .replace(/<\/Image>/g, "</img>")
+      .replace(/<(?:ParamField|ResponseField)\b/g, "<Property")
+      .replace(/<\/(?:ParamField|ResponseField)>/g, "</Property>")
+  );
+}
+
+// The slug Mintlify gives a path segment it derives from spec text: word
+// boundaries inside an identifier become separators before every run of
+// non-alphanumerics collapses to a single hyphen.
+export function mintlifySlug(value: string): string {
+  return value
+    .replace(/([a-z0-9])([A-Z])/g, "$1-$2")
+    .replace(/[^A-Za-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .toLowerCase();
+}
+
+// A navigation group that names a specification and lists no pages publishes
+// one page per operation instead, which only the specification enumerates.
+export interface MintlifyGeneratedGroup {
+  readonly specPath: string;
+  readonly section: string;
+}
+
+export function mintlifyGeneratedGroups(
+  navigation: unknown,
+): readonly MintlifyGeneratedGroup[] {
+  const groups: MintlifyGeneratedGroup[] = [];
+  walk(navigation, undefined);
+  return groups;
+
+  function walk(node: unknown, container: string | undefined): void {
+    if (Array.isArray(node)) {
+      for (const child of node) {
+        walk(child, container);
+      }
+      return;
+    }
+    if (!isRecord(node)) {
+      return;
+    }
+    let nextContainer = container;
+    for (const key of navigationContainerKeys) {
+      const value = node[key];
+      if (typeof value === "string") {
+        nextContainer = value;
+      }
+    }
+    const group = typeof node.group === "string" ? node.group : undefined;
+    if (typeof node.openapi === "string" && !Array.isArray(node.pages)) {
+      groups.push({
+        specPath: node.openapi,
+        section: group ?? nextContainer ?? "API reference",
+      });
+    }
+    for (const key of navigationChildKeys) {
+      if (Array.isArray(node[key])) {
+        walk(node[key], group ?? nextContainer);
+      }
+    }
+  }
+}
+
+export interface OpenApiOperation {
+  readonly method: string;
+  readonly route: string;
+  readonly operationId: string;
+  readonly summary?: string;
+  readonly tag?: string;
+}
+
+// Every operation a specification declares, in document order, so a site that
+// generates its endpoint pages publishes them in the order the spec lists.
+export function openApiOperations(
+  spec: Readonly<Record<string, unknown>>,
+  specPath: string,
+): readonly OpenApiOperation[] {
+  const paths = spec.paths;
+  if (!isRecord(paths)) {
+    throw new Error(`OpenAPI specification ${specPath} declares no paths`);
+  }
+  const operations: OpenApiOperation[] = [];
+  for (const [route, item] of Object.entries(paths)) {
+    if (!isRecord(item)) {
+      continue;
+    }
+    for (const method of httpMethods) {
+      const operation = item[method];
+      if (!isRecord(operation)) {
+        continue;
+      }
+      const operationId = operation.operationId;
+      if (typeof operationId !== "string" || !operationId.trim()) {
+        throw new Error(
+          `OpenAPI specification ${specPath} has no operationId for ${method.toUpperCase()} ${route}`,
+        );
+      }
+      const summary = operation.summary;
+      const tag = Array.isArray(operation.tags) ? operation.tags[0] : undefined;
+      operations.push({
+        method,
+        route,
+        operationId,
+        ...(typeof summary === "string" && summary.trim()
+          ? { summary: summary.trim() }
+          : {}),
+        ...(typeof tag === "string" && tag.trim() ? { tag: tag.trim() } : {}),
+      });
+    }
+  }
+  return operations;
+}
+
+// Mintlify roots generated endpoint pages at the directory holding the
+// specification and names each one after the operation's summary, falling back
+// to its identifier; the operation's first tag groups them underneath.
+export function generatedOperationRoute(
+  operation: OpenApiOperation,
+  specPath: string,
+): string {
+  const segments = [path.posix.dirname(specPath)];
+  if (operation.tag) {
+    segments.push(mintlifySlug(operation.tag));
+  }
+  segments.push(mintlifySlug(operation.summary ?? operation.operationId));
+  return segments.filter((segment) => segment && segment !== ".").join("/");
+}
+
 // Renders the fields of one operation for a page whose frontmatter names it
-// directly, so the page's own title already identifies it.
+// directly, so the page's own title already identifies it. A generated page is
+// titled with the summary itself, and repeats nothing by omitting it here.
 export function renderOpenApiOperationBody(
   spec: Readonly<Record<string, unknown>>,
   specPath: string,
   method: string,
   route: string,
+  includeSummary = true,
 ): string {
   const item = resolveOpenApiRef(
     spec,
@@ -245,7 +419,14 @@ export function renderOpenApiOperationBody(
   const sharedParameters = Array.isArray(item.parameters)
     ? item.parameters
     : [];
-  renderOperationBody(lines, spec, specPath, operation, sharedParameters);
+  renderOperationBody(
+    lines,
+    spec,
+    specPath,
+    operation,
+    sharedParameters,
+    includeSummary,
+  );
   return normalizeSpacing(lines.join("\n"));
 }
 
@@ -255,8 +436,13 @@ function renderOperationBody(
   specPath: string,
   operation: Readonly<Record<string, unknown>>,
   sharedParameters: readonly unknown[],
+  includeSummary: boolean,
 ): void {
-  if (typeof operation.summary === "string" && operation.summary.trim()) {
+  if (
+    includeSummary &&
+    typeof operation.summary === "string" &&
+    operation.summary.trim()
+  ) {
     lines.push("", `**${operation.summary.trim()}**`);
   }
   if (

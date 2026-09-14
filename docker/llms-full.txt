@@ -109893,14 +109893,6 @@ continue learning:
 - Check the [Input reference](https://docs.docker.com/build/policies/inputs/) for all available image fields
 
 
-# Document: Release Notes
-
-Source path: content/manuals/build/release-notes.md
-Canonical source: https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build/release-notes.md
-
-# Release Notes
-
-
 # Document: Customize Compose Bridge
 
 Source path: content/manuals/compose/bridge/customize.md
@@ -112451,14 +112443,6 @@ services:
             capabilities: [gpu]
 
 ```
-
-
-# Document: Index
-
-Source path: content/manuals/compose/how-tos/_index.md
-Canonical source: https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/how-tos/_index.md
-
-# Index
 
 
 # Document: Use init containers in Compose
@@ -115221,14 +115205,6 @@ To make migration easier, Compose v2 and v5 has backwards compatibility for cert
 - [Compose Specification reference](https://docs.docker.com/reference/compose-file/)
 
 
-# Document: Release Notes
-
-Source path: content/manuals/compose/release-notes.md
-Canonical source: https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/release-notes.md
-
-# Release Notes
-
-
 # Document: Frequently asked questions about Docker Compose
 
 Source path: content/manuals/compose/support-and-feedback/faq.md
@@ -115356,14 +115332,6 @@ To report bugs or problems, visit [Docker Compose on GitHub](https://github.com/
 ### Feedback via Community Slack channels
 
 You can also provide feedback through the `#docker-compose` [Docker Community Slack](https://dockr.ly/comm-slack) channel.
-
-
-# Document: Index
-
-Source path: content/manuals/compose/support-and-feedback/_index.md
-Canonical source: https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/support-and-feedback/_index.md
-
-# Index
 
 
 # Document: Trust model for Compose files
@@ -115715,14 +115683,6 @@ Run the model:
 $ docker model run ai/smollm2-vllm hi
 Hello! I'm sure everything goes smoothly here. How can I assist you today?
 ```
-
-
-# Document: Index
-
-Source path: content/manuals/desktop/features/_index.md
-Canonical source: https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/desktop/features/_index.md
-
-# Index
 
 
 # Document: Networking on Docker Desktop
@@ -122487,14 +122447,6 @@ If Docker Desktop cannot launch and must be reinstalled, you can back up its VM 
    After reinstalling Docker Desktop, restore the `Docker.raw` to the same location.
 
 
-# Document: Index
-
-Source path: content/manuals/desktop/settings-and-maintenance/_index.md
-Canonical source: https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/desktop/settings-and-maintenance/_index.md
-
-# Index
-
-
 # Document: Change your Docker Desktop settings
 
 Source path: content/manuals/desktop/settings-and-maintenance/settings.md
@@ -122883,14 +122835,6 @@ This page contains the domain URLs that you need to add to a firewall allowlist 
 | <https://dhi.io>                                 | Docker Hardened Images                       |
 | <https://registry.scout.docker.com>              | Docker Scout registry for DHI attestations   |
 | <https://ai-backend-service.docker.com>          | [Gordon](https://docs.docker.com/ai/gordon/) |
-
-
-# Document: Index
-
-Source path: content/manuals/desktop/setup/_index.md
-Canonical source: https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/desktop/setup/_index.md
-
-# Index
 
 
 # Document: Install Docker Desktop on Arch-based distributions
@@ -125501,14 +125445,6 @@ You can also provide feedback through the following [Docker Community Slack](htt
 - \#docker-desktop-windows
 - \#docker-desktop-linux
 - \#extensions
-
-
-# Document: Index
-
-Source path: content/manuals/desktop/troubleshoot-and-support/_index.md
-Canonical source: https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/desktop/troubleshoot-and-support/_index.md
-
-# Index
 
 
 # Document: Troubleshoot Docker Desktop
@@ -202179,14 +202115,6 @@ Check out the following sections:
 - [Policy evaluation](https://docs.docker.com/scout/policy/)
 
 
-# Document: Cli
-
-Source path: content/manuals/scout/release-notes/cli.md
-Canonical source: https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/scout/release-notes/cli.md
-
-# Cli
-
-
 # Document: Docker Scout release notes
 
 Source path: content/manuals/scout/release-notes/platform.md
@@ -250330,14 +250258,6 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IkJWM0Q6MkFWWj
 ```
 
 This is also described in [Section 2.1 of RFC 6750: The OAuth 2.0 Authorization Framework: Bearer Token Usage](https://tools.ietf.org/html/rfc6750#section-2.1)
-
-
-# Document: Index
-
-Source path: content/reference/api/registry/_index.md
-Canonical source: https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/reference/api/registry/_index.md
-
-# Index
 
 
 # Document: Supported registry API for Docker Hub

@@ -1,0 +1,181 @@
+> Commit-pinned source for Runpod main: [serverless/troubleshooting.mdx](https://docs.runpod.io/serverless/troubleshooting)
+
+# Troubleshooting
+
+Common issues and solutions for Serverless endpoints and workers. Review configuration and operations guidance for Runpod Serverless.
+
+## Deployment issues
+
+### Worker fails to start
+
+If your worker fails to start or initialize:
+
+1. **Check logs**: View endpoint logs in the [Runpod console](https://www.console.runpod.io/serverless) for error messages.
+2. **Verify local testing**: Ensure your handler works in [local testing](https://docs.runpod.io/serverless/development/local-testing) before deploying.
+3. **Check dependencies**: Verify all dependencies are installed in your [Docker image](https://docs.runpod.io/serverless/workers/create-dockerfile).
+4. **GPU compatibility**: Ensure your Docker image is compatible with the selected GPU type.
+5. **Input format**: Verify your [input format](https://docs.runpod.io/serverless/endpoints/send-requests) matches what your handler expects.
+
+### Worker initializes but fails on requests
+
+| Issue                   | Solution                                                                    |
+| ----------------------- | --------------------------------------------------------------------------- |
+| Input validation errors | Add input validation in your handler and check logs for the expected format |
+| Missing dependencies    | Verify all required packages are in your Dockerfile                         |
+| Model loading failures  | Check GPU memory requirements and model path                                |
+| Permission errors       | Ensure files are readable and directories are writable                      |
+
+## Job issues
+
+### Jobs stuck in queue
+
+If jobs remain `IN_QUEUE` for extended periods:
+
+- **No workers available**: Check if `max_workers` is set appropriately.
+- **Workers throttled**: Your endpoint may be hitting rate limits. Check the Workers tab for throttled workers.
+- **Cold start delays**: First requests after idle periods require worker initialization. Consider increasing `min_workers` or enabling [FlashBoot](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#flashboot).
+
+### Jobs funneled to a single worker
+
+If your endpoint has multiple workers but nearly all jobs run on one worker while the others sit idle, and jobs stay `IN_QUEUE` even though workers are available, you may be running an affected version of the Runpod Python SDK.
+
+Versions 1.7.11 through 1.10.0 could corrupt per-worker job tracking on endpoints that use a network volume, causing most workers to stop pulling new jobs. This most often appeared on network volume endpoints such as ComfyUI workers.
+
+To fix this, upgrade the Runpod Python SDK to version 1.10.1 or later:
+
+```bash
+pip install --upgrade "runpod>=1.10.1"
+```
+
+Then rebuild and redeploy your worker image so the fix takes effect. No configuration or code changes are required.
+
+### Jobs timing out
+
+| Cause                     | Solution                                                                                                                       |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Processing takes too long | Increase `executionTimeout` in your [job policy](https://docs.runpod.io/serverless/endpoints/send-requests#execution-policies) |
+| Model loading too slow    | Use [model caching](https://docs.runpod.io/serverless/endpoints/model-caching) or bake models into your image                  |
+| TTL too short             | Set `ttl` to cover both queue time and execution time                                                                          |
+
+### Jobs failing
+
+Check the job status response for error details. Common causes:
+
+- **Handler exceptions**: Unhandled exceptions in your handler code. Add try/catch blocks and return structured errors.
+- **OOM (Out of Memory)**: Model or batch size exceeds GPU memory. Reduce batch size or use a larger GPU.
+- **Timeout**: Job exceeded execution timeout. Increase timeout or optimize processing.
+
+## Endpoint scaling issues
+
+### My endpoint was scaled down unexpectedly
+
+If your endpoint's max workers dropped without any change on your end, Runpod scaled the endpoint down automatically. This happens in two situations:
+
+- **Prolonged inactivity**: When an endpoint receives no requests for 3 days, its max workers is reduced to 2, and after 7 days its max workers is set to 0. Runpod emails you when the first reduction happens. For more details, see [idle endpoint scale-down](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#idle-endpoint-scale-down).
+- **Repeated unhealthy workers**: When an endpoint consistently produces unhealthy (crashing) workers, Runpod scales it down to stop billing and reduce thrashing, and sends you an email.
+
+To bring the endpoint back, increase its max workers in the [Runpod console](https://www.console.runpod.io/serverless). If the scale-down was caused by unhealthy workers, fix the underlying problem first, or the endpoint may be scaled down again. Check the [logs](https://docs.runpod.io/serverless/development/logs) for crash errors, and verify your worker using [local testing](https://docs.runpod.io/serverless/development/local-testing).
+
+## Cold start issues
+
+### Slow cold starts
+
+Cold start time includes container startup, model loading, and initialization. To reduce cold starts:
+
+1. **Use model caching**: Store models on [network volumes](https://docs.runpod.io/serverless/endpoints/model-caching) instead of downloading on each start.
+2. **Enable FlashBoot**: Use [FlashBoot](https://docs.runpod.io/serverless/endpoints/endpoint-configurations#flashboot) for faster container initialization.
+3. **Optimize image size**: Use smaller base images and remove unnecessary dependencies.
+4. **Initialize outside handler**: Load models at module level, not inside the handler function.
+
+```python
+# Good: Load model once at startup
+model = load_model()
+
+def handler(job):
+    return model.predict(job["input"])
+
+# Bad: Load model on every request
+def handler(job):
+    model = load_model()  # Slow!
+    return model.predict(job["input"])
+```
+
+### Too many cold starts
+
+If you're seeing frequent cold starts:
+
+- **Increase idle timeout**: Set a longer `idle_timeout` to keep workers warm between requests.
+- **Set minimum workers**: Configure `min_workers` > 0 to maintain warm workers.
+- **Check traffic patterns**: Sporadic traffic causes more cold starts than steady traffic.
+
+## Logging issues
+
+### Missing logs
+
+If logs aren't appearing in the console:
+
+1. **Check throttling**: Excessive logging triggers throttling. Reduce log verbosity.
+2. **Verify output streams**: Ensure you're writing to stdout/stderr, not just files.
+3. **Check worker status**: Logs only appear for successfully initialized workers.
+4. **Retention period**: Logs older than 90 days are automatically removed.
+
+### Log throttling
+
+To avoid log throttling:
+
+- Reduce log verbosity in production.
+- Use structured logging for efficiency.
+- Store detailed logs on [network volumes](https://docs.runpod.io/serverless/storage/overview) instead of console output.
+
+## vLLM-specific issues
+
+### OOM errors
+
+If your vLLM worker runs out of memory:
+
+- Lower `GPU_MEMORY_UTILIZATION` from 0.90 to 0.85.
+- Reduce `MAX_MODEL_LEN` to limit context window.
+- Use a GPU with more VRAM.
+
+### Model not loading
+
+| Issue                     | Solution                                                                                   |
+| ------------------------- | ------------------------------------------------------------------------------------------ |
+| Model not found           | Verify `MODEL_NAME` matches the Hugging Face model ID exactly                              |
+| Gated model access denied | Set `HF_TOKEN` with a token that has access to the model                                   |
+| Incompatible model        | Check [vLLM supported models](https://docs.vllm.ai/en/latest/models/supported_models.html) |
+
+### OpenAI API errors
+
+| Error              | Cause              | Solution                                                        |
+| ------------------ | ------------------ | --------------------------------------------------------------- |
+| 401 Unauthorized   | Invalid API key    | Verify `RUNPOD_API_KEY` is correct                              |
+| 404 Not Found      | Wrong endpoint URL | Use the format `https://api.runpod.ai/v2/ENDPOINT_ID/openai/v1` |
+| Connection refused | Endpoint not ready | Wait for workers to initialize                                  |
+
+## Load balancing endpoint issues
+
+### "No workers available" error
+
+This means workers didn't initialize in time. Common causes:
+
+- **First request**: Workers need time to start. Retry the request. (See [Handling cold starts](https://docs.runpod.io/serverless/load-balancing/overview#handling-cold-starts) for more information.)
+- **All workers busy**: Increase `max_workers` to handle more concurrent requests.
+- **Workers crashing**: Check logs for initialization errors.
+
+### Requests not reaching workers
+
+Verify your HTTP server is:
+
+- Listening on port 8000 (or the port specified in your configuration).
+- Binding to `0.0.0.0`, not `127.0.0.1`.
+- Returning proper HTTP responses.
+
+## Getting help
+
+If you're still experiencing issues:
+
+1. **Check endpoint logs** for detailed error messages.
+2. **SSH into workers** using [SSH access](https://docs.runpod.io/serverless/development/ssh-into-workers) to debug in real-time.
+3. **Review metrics** in the Metrics tab to identify patterns.
+4. **Contact support** at <help@runpod.io> with your endpoint ID and error details.

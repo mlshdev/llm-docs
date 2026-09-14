@@ -1,0 +1,76 @@
+> Commit-pinned source for Runpod main: [references/gpu-types.mdx](https://docs.runpod.io/references/gpu-types)
+
+# GPU types
+
+Explore the GPUs available on Runpod. Review supported options, requirements, and reference information for the Runpod platform.
+
+For information on pricing, see [GPU pricing](https://www.runpod.io/pricing).
+
+## GPU types
+
+This table lists all GPU types available on Runpod:
+
+| GPU ID                                                   | Display Name      | Memory (GB) |
+| -------------------------------------------------------- | ----------------- | ----------- |
+| AMD Instinct MI300X OAM                                  | MI300X            | 192         |
+| NVIDIA A100 80GB PCIe                                    | A100 PCIe         | 80          |
+| NVIDIA A100-SXM4-80GB                                    | A100 SXM          | 80          |
+| NVIDIA A30                                               | A30               | 24          |
+| NVIDIA A40                                               | A40               | 48          |
+| NVIDIA B200                                              | B200              | 180         |
+| NVIDIA B300 SXM6 AC                                      | B300              | 288         |
+| NVIDIA GeForce RTX 3070                                  | RTX 3070          | 8           |
+| NVIDIA GeForce RTX 3080                                  | RTX 3080          | 10          |
+| NVIDIA GeForce RTX 3080 Ti                               | RTX 3080 Ti       | 12          |
+| NVIDIA GeForce RTX 3090                                  | RTX 3090          | 24          |
+| NVIDIA GeForce RTX 3090 Ti                               | RTX 3090 Ti       | 24          |
+| NVIDIA GeForce RTX 4070 Ti                               | RTX 4070 Ti       | 12          |
+| NVIDIA GeForce RTX 4080                                  | RTX 4080          | 16          |
+| NVIDIA GeForce RTX 4080 SUPER                            | RTX 4080 SUPER    | 16          |
+| NVIDIA GeForce RTX 4090                                  | RTX 4090          | 24          |
+| NVIDIA GeForce RTX 5080                                  | RTX 5080          | 16          |
+| NVIDIA GeForce RTX 5090                                  | RTX 5090          | 32          |
+| NVIDIA H100 80GB HBM3                                    | H100 SXM          | 80          |
+| NVIDIA H100 NVL                                          | H100 NVL          | 94          |
+| NVIDIA H100 PCIe                                         | H100 PCIe         | 80          |
+| NVIDIA H200                                              | H200 SXM          | 141         |
+| NVIDIA H200 NVL                                          | NVIDIA H200 NVL   | 143         |
+| NVIDIA L4                                                | L4                | 24          |
+| NVIDIA L40                                               | L40               | 48          |
+| NVIDIA L40S                                              | L40S              | 48          |
+| NVIDIA RTX 2000 Ada Generation                           | RTX 2000 Ada      | 16          |
+| NVIDIA RTX 4000 Ada Generation                           | RTX 4000 Ada      | 20          |
+| NVIDIA RTX 4000 SFF Ada Generation                       | RTX 4000 Ada SFF  | 20          |
+| NVIDIA RTX 5000 Ada Generation                           | RTX 5000 Ada      | 32          |
+| NVIDIA RTX 6000 Ada Generation                           | RTX 6000 Ada      | 48          |
+| NVIDIA RTX A2000                                         | RTX A2000         | 6           |
+| NVIDIA RTX A4000                                         | RTX A4000         | 16          |
+| NVIDIA RTX A4500                                         | RTX A4500         | 20          |
+| NVIDIA RTX A5000                                         | RTX A5000         | 24          |
+| NVIDIA RTX A6000                                         | RTX A6000         | 48          |
+| NVIDIA RTX PRO 4500 Blackwell                            | RTX PRO 4500      | 32          |
+| NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition  | RTX PRO 6000 MaxQ | 96          |
+| NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 1g.24gb | PRO 6000 MIG 24GB | 24          |
+| NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 2g.48gb | PRO 6000 MIG 48GB | 48          |
+| NVIDIA RTX PRO 6000 Blackwell Server Edition             | RTX PRO 6000      | 96          |
+| NVIDIA RTX PRO 6000 Blackwell Workstation Edition        | RTX PRO 6000 WK   | 96          |
+| Tesla V100-PCIE-16GB                                     | Tesla V100        | 16          |
+| Tesla V100-SXM2-16GB                                     | V100 SXM2         | 16          |
+| Tesla V100-SXM2-32GB                                     | V100 SXM2 32GB    | 32          |
+
+## GPU pools
+
+The table below lists the GPU pools that you can use to define which GPUs are available to workers on an endpoint after deployment.
+
+Use GPU pools when defining requirements for repositories published to the [Runpod Hub](https://docs.runpod.io/hub/publishing-guide#runpod-configuration), or when specifying GPU requirements for an endpoint with the [Runpod GraphQL API](https://graphql-spec.runpod.io/).
+
+| Pool ID      | GPUs Included                    | Memory (GB) |
+| :----------- | :------------------------------- | :---------- |
+| `AMPERE_16`  | A4000, A4500, RTX 4000, RTX 2000 | 16 GB       |
+| `AMPERE_24`  | L4, A5000, 3090                  | 24 GB       |
+| `ADA_24`     | 4090                             | 24 GB       |
+| `AMPERE_48`  | A6000, A40                       | 48 GB       |
+| `ADA_48_PRO` | L40, L40S, 6000 Ada              | 48 GB       |
+| `AMPERE_80`  | A100                             | 80 GB       |
+| `ADA_80_PRO` | H100                             | 80 GB       |
+| `HOPPER_141` | H200                             | 141 GB      |

@@ -1,0 +1,247 @@
+> Commit-pinned source for Runpod main: [runpodctl/reference/runpodctl-serverless.mdx](https://docs.runpod.io/runpodctl/reference/runpodctl-serverless)
+
+# serverless
+
+Use runpodctl to create, list, inspect, update, and delete Serverless endpoints, including Hub-based deployments and templates.
+
+Manage Serverless endpoints, including creating, listing, updating, and deleting endpoints.
+
+```bash
+runpodctl serverless <subcommand> [flags]
+```
+
+## Alias
+
+You can use `sls` as a shorthand for `serverless`:
+
+```bash
+runpodctl sls list
+```
+
+## Subcommands
+
+### List endpoints
+
+List all your Serverless endpoints:
+
+```bash
+runpodctl serverless list
+```
+
+#### List flags
+
+**--include-template (type: bool)**
+
+Include template information in the output.
+
+**--include-workers (type: bool)**
+
+Include workers information in the output.
+
+### Get endpoint details
+
+Get detailed information about a specific endpoint:
+
+```bash
+runpodctl serverless get <endpoint-id>
+```
+
+#### Get flags
+
+**--include-template (type: bool)**
+
+Include template information in the output.
+
+**--include-workers (type: bool)**
+
+Include workers information in the output.
+
+### Create an endpoint
+
+Create a new Serverless endpoint from a template or from a Hub repo:
+
+```bash
+# Create from a template
+runpodctl serverless create --template-id "tpl_abc123" --gpu-id "NVIDIA GeForce RTX 4090"
+
+# Create from a template with a model reference
+runpodctl serverless create --template-id "tpl_abc123" --gpu-id "NVIDIA GeForce RTX 4090" \
+  --model-reference https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct:main
+
+# Create a CPU endpoint
+runpodctl serverless create --template-id "tpl_abc123" --compute-type CPU
+
+# Create from a Hub repo
+runpodctl hub search vllm                                         # Find the hub ID
+runpodctl serverless create --hub-id cm8h09d9n000008jvh2rqdsmb --name "my-vllm"
+
+# Create from a Hub repo and attach a model reference
+runpodctl serverless create --hub-id cm8h09d9n000008jvh2rqdsmb --gpu-id "NVIDIA GeForce RTX 4090" \
+  --model-reference https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct:main
+
+# Create from a Hub repo with custom environment variables
+runpodctl serverless create --hub-id cm8h09d9n000008jvh2rqdsmb --name "my-vllm" \
+  --env MODEL_NAME=meta-llama/Llama-3.1-8B-Instruct \
+  --env MAX_TOKENS=4096
+```
+
+When using `--hub-id`, GPU IDs and container disk size are automatically pulled from the Hub release config. You can override the GPU type with `--gpu-id`. Environment variables from the Hub release are included automatically, and you can override or add to them with `--env`.
+
+> **Note**
+>
+> **Serverless templates vs Pod templates**: Serverless endpoints require a Serverless-specific template. Pod templates (like `runpod-torch-v21`) cannot be used because they include volume disk configuration, which Serverless does not support. When creating a template with [`runpodctl template create`](https://docs.runpod.io/runpodctl/reference/runpodctl-template), use the `--serverless` flag to create a Serverless template.
+>
+> Each Serverless template can only be bound to one endpoint at a time. To create multiple endpoints with the same configuration, create separate templates for each.
+
+#### Create flags
+
+**--name (type: string)**
+
+Name for the endpoint. Must be at least 3 characters. If omitted, a name is auto-generated in the format `endpoint-XXXXXXXX`.
+
+**--template-id (type: string)**
+
+Template ID to use (required if `--hub-id` is not specified). Use [`runpodctl template search`](https://docs.runpod.io/runpodctl/reference/runpodctl-template) to find templates.
+
+**--hub-id (type: string)**
+
+Hub listing ID to deploy from (alternative to `--template-id`). Use [`runpodctl hub search`](https://docs.runpod.io/runpodctl/reference/runpodctl-hub) to find repos.
+
+**--gpu-id (type: string)**
+
+GPU type for workers. Accepts either a GPU type ID (e.g., `NVIDIA A40`, `NVIDIA GeForce RTX 4090`) or a GPU pool ID (e.g., `ADA_24`, `AMPERE_48`). Use [`runpodctl gpu list`](https://docs.runpod.io/runpodctl/reference/runpodctl-gpu) to see available GPUs.
+
+**--gpu-count (type: int)**
+
+Number of GPUs per worker.
+
+**--compute-type (type: string)**
+
+Compute type (`GPU` or `CPU`). For CPU endpoints, use `--instance-id` to specify the CPU instance type.
+
+**--instance-id (type: string)**
+
+CPU instance ID when using `--compute-type CPU`. If omitted, defaults to `cpu3g-4-16`. Only valid with `--compute-type CPU`.
+
+**--workers-min (type: int)**
+
+Minimum number of workers.
+
+**--workers-max (type: int)**
+
+Maximum number of workers.
+
+**--data-center-ids (type: string)**
+
+Comma-separated list of preferred datacenter IDs. Use [`runpodctl datacenter list`](https://docs.runpod.io/runpodctl/reference/runpodctl-datacenter) to see available datacenters.
+
+**--network-volume-id (type: string)**
+
+Network volume ID to attach for single-region deployments. Use [`runpodctl network-volume list`](https://docs.runpod.io/runpodctl/reference/runpodctl-network-volume) to see available network volumes. Mutually exclusive with `--network-volume-ids`.
+
+**--network-volume-ids (type: string)**
+
+Comma-separated list of network volume IDs for multi-region deployments. Mutually exclusive with `--network-volume-id`.
+
+**--min-cuda-version (type: string)**
+
+Minimum CUDA version required for workers (e.g., `12.4`). Workers will only be scheduled on machines that meet this CUDA version requirement.
+
+**--scale-by (type: string)**
+
+Autoscaling strategy: `delay` (scales based on queue wait time in seconds) or `requests` (scales based on pending request count).
+
+**--scale-threshold (type: int)**
+
+Trigger point for the autoscaler. For `delay`, this is the target queue wait time in seconds. For `requests`, this is the pending request count that triggers scaling.
+
+**--idle-timeout (type: int)**
+
+Idle timeout in seconds. Workers shut down after being idle for this duration. Valid range: 1-3600 seconds.
+
+**--flash-boot (type: bool)**
+
+Enable or disable flash boot for faster worker startup. When enabled, workers start from cached container images.
+
+**--execution-timeout (type: int)**
+
+Execution timeout in seconds. Jobs that exceed this duration are terminated. The CLI accepts seconds but converts to milliseconds internally.
+
+**--env (type: string)**
+
+Environment variable in `KEY=VALUE` format. Use multiple `--env` flags to set multiple variables. These values only apply when deploying from `--hub-id`, where they override the Hub release defaults. With `--template-id`, environment variables come from the template, so `--env` is ignored and the CLI prints a note to that effect.
+
+**--model-reference (type: string)**
+
+Model reference URL to attach to the endpoint. Use multiple `--model-reference` flags to attach multiple models. Works with both `--template-id` and `--hub-id`, and requires GPU compute type.
+
+### Update an endpoint
+
+Update endpoint configuration:
+
+```bash
+runpodctl serverless update <endpoint-id> --workers-max 5
+```
+
+#### Update flags
+
+**--name (type: string)**
+
+New name for the endpoint.
+
+**--template-id (type: string)**
+
+New template ID to swap to. Use this to change the template attached to an existing endpoint without recreating it.
+
+**--workers-min (type: int)**
+
+New minimum number of workers.
+
+**--workers-max (type: int)**
+
+New maximum number of workers.
+
+**--idle-timeout (type: int)**
+
+New idle timeout in seconds.
+
+**--scaler-type (type: string)**
+
+Scaler type (`QUEUE_DELAY` or `REQUEST_COUNT`).
+
+**--scaler-value (type: int)**
+
+Scaler value.
+
+**--flash-boot (type: bool)**
+
+Enable or disable flash boot for faster worker startup.
+
+**--execution-timeout (type: int)**
+
+Execution timeout in seconds. Jobs that exceed this duration are terminated.
+
+### Delete an endpoint
+
+Delete an endpoint:
+
+```bash
+runpodctl serverless delete <endpoint-id>
+```
+
+## Serverless URLs
+
+Access your Serverless endpoint using these URL patterns:
+
+| Operation     | URL                                                      |
+| ------------- | -------------------------------------------------------- |
+| Async request | `https://api.runpod.ai/v2/<endpoint-id>/run`             |
+| Sync request  | `https://api.runpod.ai/v2/<endpoint-id>/runsync`         |
+| Health check  | `https://api.runpod.ai/v2/<endpoint-id>/health`          |
+| Job status    | `https://api.runpod.ai/v2/<endpoint-id>/status/<job-id>` |
+
+## Related commands
+
+- [`runpodctl hub`](https://docs.runpod.io/runpodctl/reference/runpodctl-hub)
+- [`runpodctl template`](https://docs.runpod.io/runpodctl/reference/runpodctl-template)
+- [`runpodctl gpu list`](https://docs.runpod.io/runpodctl/reference/runpodctl-gpu)

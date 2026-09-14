@@ -1,0 +1,90 @@
+> Commit-pinned source for Runpod main: [tutorials/pods/run-ollama.mdx](https://docs.runpod.io/tutorials/pods/run-ollama)
+
+# Set up Ollama on a Pod
+
+Install and run Ollama on a Pod with HTTP API access. Follow implementation steps, configuration guidance, and examples in this Runpod tutorial.
+
+This tutorial shows you how to set up [Ollama](https://ollama.com), a platform for running large language models, on a Runpod GPU Pod. By the end, you'll have Ollama running with HTTP API access for external requests.
+
+## Requirements
+
+- A Runpod account with credits.
+
+## Step 1: Deploy a Pod
+
+1. Navigate to [Pods](https://www.console.runpod.io/pods) and select **Deploy**.
+2. Choose a GPU (for example, A40).
+3. Select the latest **PyTorch** template.
+4. Under **Pod Template**, select **Edit**:
+
+- Under **Expose HTTP Ports (Max 10)**, add port `11434`.
+- Under **environment variables**, add a variable with key `OLLAMA_HOST` and value `0.0.0.0`.
+
+5. Click **Set Overrides** and then **Deploy On-Demand**.
+
+## Step 2: Install Ollama
+
+1. Once the Pod is running, click the Pod to open the connection options panel and select **Enable Web Terminal** and then **Open Web Terminal**.
+
+2. Update packages and install dependencies:
+
+   ```bash
+   apt update && apt install -y lshw zstd
+   ```
+
+3. Install Ollama and start the server in the background:
+
+   ```bash
+   (curl -fsSL https://ollama.com/install.sh | sh && ollama serve > ollama.log 2>&1) &
+   ```
+
+## Step 3: Run a model
+
+Download and run a model using the `ollama run` command:
+
+```bash
+ollama run llama2
+```
+
+Replace `llama2` with any model from the [Ollama library](https://ollama.com/library). You can now interact with the model directly from the terminal.
+
+## Step 4: Make HTTP API requests
+
+With Ollama running, you can make HTTP requests to your Pod from external clients. Try running the following commands, replacing `OLLAMA_POD_ID` with your actual Pod ID:
+
+**List available models:**
+
+```bash
+curl https://OLLAMA_POD_ID-11434.proxy.runpod.net/api/tags
+```
+
+**Generate a response:**
+
+```bash
+curl -X POST https://OLLAMA_POD_ID-11434.proxy.runpod.net/api/generate -d '{
+  "model": "llama2",
+  "prompt": "Tell me a story about llamas"
+}'
+```
+
+Ollama returns streaming responses by default. To get a non-streaming response, add the `stream: false` parameter to the request body:
+
+```bash
+curl -X POST https://OLLAMA_POD_ID-11434.proxy.runpod.net/api/generate -d '{
+  "model": "llama2",
+  "prompt": "Tell me a story about llamas",
+  "stream": false
+}'
+```
+
+> **Success**
+>
+> Congratulations! You've set up Ollama on a Runpod Pod and made HTTP API requests to it.
+
+For more API options, see the [Ollama API documentation](https://github.com/ollama/ollama/blob/main/docs/api.md).
+
+## Next steps
+
+- Learn about [exposing ports](https://docs.runpod.io/pods/configuration/expose-ports) on Pods.
+- Connect [VSCode to Runpod](https://www.runpod.io/articles/guides) for remote development.
+- Explore more models in the [Ollama library](https://ollama.com/library).

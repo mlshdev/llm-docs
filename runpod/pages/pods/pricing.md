@@ -1,0 +1,60 @@
+> Commit-pinned source for Runpod main: [pods/pricing.mdx](https://docs.runpod.io/pods/pricing)
+
+# Pricing
+
+Explore pricing options for Pods, including on-demand and savings plans. Review setup, configuration, and operations guidance for Runpod Pods.
+
+> **Tip**
+>
+> Runpod offers custom pricing plans for large scale and enterprise workloads. [Contact our sales team](https://ecykq.share.hsforms.com/2MZdZATC3Rb62Dgci7knjbA) to learn more.
+
+Pods are billed by the second for compute and storage, with no fees for data ingress or egress. Find the latest GPU pricing on the [Runpod console](https://www.console.runpod.io/pods) during Pod deployment.
+
+## Pricing options
+
+|                | On-demand                                | Savings plan                      |
+| -------------- | ---------------------------------------- | --------------------------------- |
+| **Pricing**    | Standard hourly rate                     | Discounted (prepaid)              |
+| **Commitment** | None                                     | 3 or 6 months upfront             |
+| **Best for**   | Development, testing, variable workloads | Long-running production workloads |
+
+### On-demand
+
+Pay-as-you-go pricing. Resources are dedicated to your Pod and cannot be displaced by other users.
+
+> **Warning**
+>
+> You must have at least one hour's worth of credits for your selected configuration to deploy an on-demand instance.
+
+### Savings plans
+
+Commit to a 3-month or 6-month term upfront for significant discounts on compute costs. When you stop a Pod, the savings plan automatically applies to your next deployment of the same GPU type.
+
+> **Warning**
+>
+> Savings plans only cover GPU compute costs—[storage costs](https://docs.runpod.io/pods/storage/types) are billed at standard rates. Storage charges continue to accrue on stopped Pods. If your balance reaches $0, your Pods stop: those with a network volume are preserved, while those without one are terminated and their data cannot be recovered. Plans are non-refundable and have fixed expiration dates.
+
+## Storage pricing
+
+| Storage type       | Running Pod            | Stopped Pod    | Notes                                  |
+| ------------------ | ---------------------- | -------------- | -------------------------------------- |
+| **Container disk** | $0.10/GB/month         | Not charged    | Temporary; erased when Pod stops       |
+| **Volume disk**    | $0.10/GB/month         | $0.20/GB/month | Persistent; retained until Pod deleted |
+| **Network volume** | $0.07/GB/month (< 1TB) | $0.07/GB/month | Permanent; portable between Pods       |
+|                    | $0.05/GB/month (> 1TB) | $0.05/GB/month |                                        |
+
+Storage is billed per-second for container and volume disks, and hourly for network volumes. You are not charged if the host machine is unavailable.
+
+> **Note**
+>
+> Runpod is not designed for long-term cloud storage. Back up critical data to your local machine or a dedicated storage provider.
+
+## Account limits
+
+- **Minimum balance**: Pods are automatically stopped when your account balance reaches $0. Pods with a network volume are stopped and their data is preserved, while Pods without a network volume are terminated and their data cannot be recovered. To avoid interruptions, enable [low balance notifications](https://docs.runpod.io/accounts-billing/billing#low-balance-notifications) or set up [auto-pay](https://www.console.runpod.io/user/billing).
+- **Spend limit**: Default limit of $80/hour across all resources. [Contact support](https://www.runpod.io/contact) to increase.
+
+## Track your costs
+
+- **Savings plans**: Monitor active plans, commitment periods, and expiration dates in the [Savings plans](https://www.console.runpod.io/savings-plans) section.
+- **Billing**: Track usage and charges in the [Billing section](https://www.console.runpod.io/user/billing).

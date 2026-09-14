@@ -1,0 +1,98 @@
+> Commit-pinned source for Runpod main: [serverless/vllm/configuration.mdx](https://docs.runpod.io/serverless/vllm/configuration)
+
+# Configure vLLM to work with your model
+
+Learn how to set up vLLM endpoints to work with your chosen model. Review configuration and operations guidance for Runpod Serverless.
+
+Most LLMs need specific configuration to run properly on vLLM. Default settings work for some models, but many require custom tokenization, attention mechanisms, or feature flags. Without the right settings, workers may fail to load or produce incorrect outputs.
+
+When deploying a model, check its Hugging Face README and the [vLLM documentation](https://docs.vllm.ai/en/latest/usage/) for required settings.
+
+## Environment variables
+
+vLLM is configured using [command-line flags](https://docs.vllm.ai/en/latest/configuration/engine_args/). On Runpod, set these as [environment variables](https://docs.runpod.io/serverless/vllm/environment-variables) instead.
+
+Convert flag names to uppercase with underscores.
+
+For example:
+
+```bash
+--tokenizer_mode mistral
+```
+
+Becomes:
+
+```bash
+TOKENIZER_MODE=mistral
+```
+
+### Example: Deploying Mistral
+
+CLI command:
+
+```bash
+vllm serve mistralai/Ministral-8B-Instruct-2410 \
+  --tokenizer_mode mistral \
+  --config_format mistral \
+  --load_format mistral \
+  --enable-auto-tool-choice \
+  --tool-call-parser mistral
+```
+
+Equivalent Runpod environment variables:
+
+| Variable                  | Value                                  |
+| ------------------------- | -------------------------------------- |
+| `MODEL_NAME`              | `mistralai/Ministral-8B-Instruct-2410` |
+| `TOKENIZER_MODE`          | `mistral`                              |
+| `CONFIG_FORMAT`           | `mistral`                              |
+| `LOAD_FORMAT`             | `mistral`                              |
+| `ENABLE_AUTO_TOOL_CHOICE` | `true`                                 |
+| `TOOL_CALL_PARSER`        | `mistral`                              |
+
+## Model-specific configurations
+
+Recommended environment variables for popular model families. Check your model's documentation for exact requirements.
+
+| Model family | Example model                             | Key environment variables                                                                                                        | Notes                                                                          |
+| ------------ | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Qwen3        | `Qwen/Qwen3-8B`                           | `ENABLE_AUTO_TOOL_CHOICE=true` `TOOL_CALL_PARSER=hermes`                                                                         | For AWQ/GPTQ versions, set `QUANTIZATION` accordingly.                         |
+| OpenChat     | `openchat/openchat-3.5-0106`              | None required                                                                                                                    | Use `CUSTOM_CHAT_TEMPLATE` if default templates produce poor results.          |
+| Gemma        | `google/gemma-3-1b-it`                    | None required                                                                                                                    | Requires `HF_TOKEN`. Set `DTYPE=bfloat16` for best results.                    |
+| DeepSeek-R1  | `deepseek-ai/DeepSeek-R1-Distill-Qwen-7B` | `REASONING_PARSER=deepseek_r1`                                                                                                   | Enables reasoning mode for chain-of-thought outputs.                           |
+| Phi-4        | `microsoft/Phi-4-mini-instruct`           | None required                                                                                                                    | `ENFORCE_EAGER=true` can resolve initialization issues on older CUDA versions. |
+| Llama 3      | `meta-llama/Llama-3.2-3B-Instruct`        | `TOOL_CALL_PARSER=llama3_json` `ENABLE_AUTO_TOOL_CHOICE=true`                                                                    | Use `MAX_MODEL_LEN` to prevent KV cache from exceeding GPU VRAM.               |
+| Mistral      | `mistralai/Ministral-8B-Instruct-2410`    | `TOKENIZER_MODE=mistral` `CONFIG_FORMAT=mistral` `LOAD_FORMAT=mistral` `TOOL_CALL_PARSER=mistral` `ENABLE_AUTO_TOOL_CHOICE=true` | Mistral models require specialized tokenizers.                                 |
+
+## GPU selection
+
+vLLM pre-allocates memory for its KV cache, so you need more VRAM than the minimum to load the model.
+
+### VRAM estimation
+
+- **FP16/BF16**: 2 bytes per parameter.
+- **INT8**: 1 byte per parameter.
+- **INT4 (AWQ/GPTQ)**: 0.5 bytes per parameter.
+- **KV cache**: vLLM reserves 10-30% of remaining VRAM for concurrent requests.
+
+| Model size           | Recommended GPUs    | VRAM      |
+| -------------------- | ------------------- | --------- |
+| **Small (<10B)**     | RTX 4090, A6000, L4 | 16-24 GB  |
+| **Medium (10B-30B)** | A6000, L40S         | 32-48 GB  |
+| **Large (30B-70B)**  | A100, H100, B200    | 80-180 GB |
+
+### Troubleshooting memory issues
+
+- **OOM errors**: Lower `GPU_MEMORY_UTILIZATION` from 0.90 to 0.85, or reduce `MAX_MODEL_LEN`.
+- **Context window limits**: More context means more KV cache. A 7B model that OOMs at 32k context often runs fine at 16k.
+- **Limited VRAM**: Use quantized models (AWQ/GPTQ) to reduce memory by 50-75%.
+
+> **Tip**
+>
+> For production workloads, select multiple GPU types in your [endpoint configuration](https://docs.runpod.io/serverless/endpoints/endpoint-configurations) for hardware fallback.
+
+## Additional resources
+
+- [vLLM recipes](https://docs.vllm.ai/projects/recipes/en/latest/index.html): Step-by-step deployment guides.
+- [Mistral + vLLM guide](https://docs.mistral.ai/models/deployment/local-deployment/vllm).
+- [Qwen + vLLM guide](https://qwen.readthedocs.io/en/latest/deployment/vllm.html).

@@ -1,0 +1,190 @@
+> Commit-pinned source for Runpod main: [get-started/agent-skills.mdx](https://docs.runpod.io/get-started/agent-skills)
+
+# Agent skills for AI coding tools
+
+Manage GPU workloads on Runpod with coding agents like Claude Code, Codex, and Cursor. Review setup steps and core concepts for building on Runpod.
+
+The Runpod skills plugin teaches your coding agent how to run GPU workloads on Runpod. Once installed, you can ask your agent to create Pods, deploy Serverless endpoints, transfer files, or deploy your own code with Flash, all in natural language. A built-in router sends each request to the right skill, so you don't need to know which tool applies.
+
+It works with [Claude Code](https://code.claude.com/docs), [Codex](https://github.com/openai/codex), [Cursor](https://cursor.com/), [GitHub Copilot](https://github.com/features/copilot), [Windsurf](https://codeium.com/windsurf), [Cline](https://github.com/cline/cline), and [many other AI agents](https://www.skills.sh/).
+
+## Quick start
+
+Install the skills with a single command that works with every agent:
+
+```bash
+npx skills add runpod/runpod-plugins-official
+```
+
+Next, install the Runpod CLI that the skills rely on (skip this if you already have it):
+
+```bash
+curl -sSL https://cli.runpod.net | bash
+# or with Homebrew:
+brew install runpod/runpodctl/runpodctl
+```
+
+Then authenticate with your [Runpod API key](https://docs.runpod.io/get-started/api-keys). The same key works for the CLI, Flash, and the bundled MCP server:
+
+```bash
+# Set the key for the current shell (add to ~/.zshrc or ~/.bashrc to persist):
+export RUNPOD_API_KEY=<key>
+
+# Or save it permanently to ~/.runpod/config.toml:
+runpodctl doctor
+```
+
+That's it — restart your agent and [get started](#getting-started).
+
+## Getting started
+
+There are no commands to memorize: describe what you want, and the router picks the right skill (prompting you if something like an API key is still missing). Confirm it's wired up by asking:
+
+- "List my Runpod endpoints"
+
+If your endpoints come back, you're set — see [What you can do](#what-you-can-do) for more examples.
+
+## What's included
+
+The plugin installs a router and a set of focused skills:
+
+| Skill              | Description                                                                                                                                                     |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **runpod**         | Router and entry point. Reads your task and hands it to the right skill.                                                                                        |
+| **runpod-mcp**     | Manages Pods, endpoints, templates, network volumes, registries, and billing through the Runpod MCP server.                                                     |
+| **runpodctl**      | Manages the same resources from the [Runpod CLI](https://docs.runpod.io/runpodctl/overview), plus Hub deployments, file transfers, SSH keys, and model caching. |
+| **flash**          | Writes and deploys your own Python code to Runpod Serverless using the [runpod-flash](https://docs.runpod.io/flash/overview) SDK.                               |
+| **companion-clis** | Uses supporting CLIs such as Hugging Face, Docker, and the AWS CLI when a task needs them.                                                                      |
+| **runpod-usage**   | Provides conceptual knowledge about Pods, Serverless, storage, and GPU selection.                                                                               |
+| **runpod-migrate** | Migrates a codebase from the GraphQL API or REST v1 to REST v2. It inventories which API each call site uses, rewrites the call sites, and verifies the result. |
+
+The plugin also includes a collection of worked, end-to-end reference tasks, such as deploying a Whisper endpoint or running a model on a Pod, that guide your agent through common workflows.
+
+## What you can do
+
+Once installed, you can ask your agent to perform tasks like the following:
+
+| Category          | Example prompt                                    |
+| ----------------- | ------------------------------------------------- |
+| Create resources  | "Create a Pod with an RTX 4090"                   |
+| List resources    | "List my Pods" or "Show my Serverless endpoints"  |
+| GPU availability  | "What GPUs are available?"                        |
+| Account info      | "Show my account balance"                         |
+| Deploy endpoints  | "Deploy a Serverless endpoint using my template"  |
+| Manage Pods       | "Stop my Pod" or "SSH into my Pod"                |
+| Deploy with Flash | "Deploy this function to a remote GPU with Flash" |
+| Local development | "Start a local dev server with Flash"             |
+
+## Migrate an existing integration
+
+If you already have an integration built on the GraphQL API or REST v1, the `/runpod:migrate` command moves it to REST v2. It inventories which API version each part of your code uses, then rewrites the call sites, flags breaking changes, and verifies the result. It migrates one file at a time, with one commit per file.
+
+Because it edits and commits your code as it goes, run it on a feature branch and review each commit before you merge or deploy.
+
+The command takes an optional scope and path:
+
+```bash
+/runpod:migrate [scope: all | rest | graphql] [path]
+```
+
+`scope` defaults to `all`, which covers both REST v1 and GraphQL. Use `rest` to target REST v1 only, or `graphql` to target GraphQL only. `path` defaults to the current directory. For example, to migrate only the REST v1 code under `src/`:
+
+```bash
+/runpod:migrate rest src/
+```
+
+Running the command requires the Runpod skills plugin installed in your coding agent (see [Quick start](#quick-start)). For a manual walkthrough of the API changes, see the [migration guide](https://docs.runpod.io/api-reference-v2/migrate-from-v1).
+
+## Native install options
+
+The `npx skills add` command above works everywhere. If you'd rather install the plugin through your agent's native marketplace, use the route for your agent below. Each route installs the same router and skills.
+
+### Claude Code
+
+Add the marketplace, install the plugin, then reload:
+
+```bash
+/plugin marketplace add runpod/runpod-plugins-official
+/plugin install runpod@runpod
+/reload-plugins
+```
+
+Installing the plugin also wires up the hosted Runpod MCP server. To authenticate it, run `/mcp`, select **runpod**, and choose **Sign in with Runpod**.
+
+### Codex
+
+```bash
+codex plugin marketplace add https://github.com/runpod/runpod-plugins-official.git
+```
+
+Run `codex /plugins`, open the **Runpod** tab, and install (reload if prompted). If the Runpod MCP tools don't appear, add the hosted server manually:
+
+```bash
+codex mcp add runpod --transport http https://mcp.getrunpod.io/
+```
+
+### Gemini
+
+Gemini can install the plugin natively through the bundled `gemini-extension.json`. Follow your client's extension documentation to add it.
+
+## Connecting the MCP server on other agents
+
+The hosted Runpod MCP server gives your agent structured control-plane tools for managing Pods, endpoints, and other resources. Claude Code sets it up automatically during a native install. On other agents, run the guided installer, which detects your agent and configures the connection:
+
+```bash
+npx @runpod/mcp-server@latest add
+```
+
+The installer authenticates the MCP server for you. To reuse the API key you already set instead, pass it as a bearer header when you add the server. For example, in Claude Code:
+
+```bash
+claude mcp add --transport http runpod -s user https://mcp.getrunpod.io/ \
+  --header "Authorization: Bearer $RUNPOD_API_KEY"
+```
+
+## Update and uninstall
+
+To update the plugin to the latest version:
+
+```bash
+# Claude Code:
+/plugin marketplace update runpod
+
+# Codex:
+codex plugin marketplace upgrade runpod
+
+# skills.sh:
+npx skills add runpod/runpod-plugins-official
+```
+
+In Claude Code, run `/reload-plugins` after updating.
+
+To uninstall:
+
+```bash
+# Claude Code:
+/plugin uninstall runpod@runpod
+
+# Codex:
+codex plugin marketplace remove runpod
+
+# skills.sh:
+npx skills remove runpod
+```
+
+If a command reports a name mismatch, list what's installed first with `/plugin marketplace list` (Claude Code), `codex plugin marketplace list` (Codex), or `npx skills list` (skills.sh), then use the name shown.
+
+## Learn more
+
+- [Runpod skills repository](https://github.com/runpod/runpod-plugins-official)
+
+  Source code and full skill definitions.
+- [skills.sh](https://www.skills.sh/)
+
+  The skills platform with the full list of compatible AI agents.
+- [Runpod CLI reference](https://docs.runpod.io/runpodctl/overview)
+
+  Full runpodctl documentation.
+- [MCP servers](https://docs.runpod.io/get-started/mcp-servers)
+
+  Another way to integrate AI tools with Runpod.

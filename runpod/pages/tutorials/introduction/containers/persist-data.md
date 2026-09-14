@@ -1,0 +1,284 @@
+> Commit-pinned source for Runpod main: [tutorials/introduction/containers/persist-data.mdx](https://docs.runpod.io/tutorials/introduction/containers/persist-data)
+
+# Persist data with volumes
+
+Learn how to use Docker volumes to persist data outside of containers for machine learning and data processing workflows.
+
+By default, containers are ephemeral—when a container stops, any data written inside it is lost. For many use cases, especially machine learning training and data processing, you need data to persist beyond a container's lifecycle. Docker volumes solve this problem by providing persistent storage that exists outside the container filesystem.
+
+This guide shows you how to use volumes to persist data, a fundamental concept for working with Runpod's [Serverless](https://docs.runpod.io/serverless/workers/overview) and [Pods](https://docs.runpod.io/pods/overview) platforms.
+
+## Requirements
+
+Before starting, you should have:
+
+- Completed the [Dockerfile creation guide](https://docs.runpod.io/tutorials/introduction/containers/create-dockerfiles).
+- Docker Desktop installed and running.
+- Basic familiarity with Docker commands.
+
+## Why persist data outside containers?
+
+Containers are designed to be immutable and ephemeral. When a container stops or is removed, everything inside it—including files, data, and state—is deleted. This design makes containers portable and reproducible, but it creates a challenge when you need to preserve data.
+
+Consider these scenarios where persistence matters:
+
+**Machine learning training**: You train a model over hours or days. If the container stops, you lose all training progress, checkpoints, and the final model unless you save them outside the container.
+
+**Data processing pipelines**: You process large datasets and generate results. Without persistent storage, you'd need to reprocess everything if the container restarts.
+
+**Application state**: Databases, logs, user uploads, and configuration changes need to survive container restarts.
+
+**Development workflows**: You want to edit code on your host machine and have changes immediately available inside the container without rebuilding the image.
+
+Docker volumes provide the solution by storing data outside the container on the host system. When a container stops, the volume data remains intact and can be mounted to new containers.
+
+## Step 1: Create a named volume
+
+Start by creating a Docker volume that will store your persistent data:
+
+```bash
+docker volume create my-data
+```
+
+This creates a named volume called `my-data` managed by Docker. The volume exists independently of any container and persists until you explicitly delete it.
+
+You can verify the volume was created:
+
+```bash
+docker volume ls
+```
+
+You should see `my-data` in the list of volumes.
+
+### Understanding volume storage
+
+Docker stores volumes in a Docker-managed location on your host system (typically `/var/lib/docker/volumes/` on Linux). You don't need to worry about the exact location—Docker handles the storage details. The key point is that this storage exists outside any container's filesystem.
+
+## Step 2: Create your project files
+
+For this example, you'll modify the Dockerfile from the previous guide to write data to a volume instead of just printing output.
+
+Create a new directory and navigate to it:
+
+```bash
+mkdir volume-example
+cd volume-example
+```
+
+Create a `Dockerfile`:
+
+```dockerfile
+FROM busybox
+WORKDIR /data
+COPY entrypoint.sh /
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+```
+
+This Dockerfile:
+
+- Uses `busybox` as the base image.
+- Sets `/data` as the working directory (where our script will write files).
+- Copies and makes the entrypoint script executable.
+- Configures the script to run when containers start.
+
+Create an `entrypoint.sh` script:
+
+```sh
+#!/bin/sh
+timestamp=$(date '+%Y-%m-%d %H:%M:%S')
+echo "Container started at: $timestamp" >> /data/timestamps.txt
+echo "Data written to /data/timestamps.txt"
+cat /data/timestamps.txt
+```
+
+This script:
+
+- Generates a timestamp.
+- Appends it to `/data/timestamps.txt` (using `>>` to append, not overwrite).
+- Prints confirmation and shows all timestamps.
+
+## Step 3: Build the image
+
+Build a Docker image from your Dockerfile:
+
+```bash
+docker build -t timestamp-logger .
+```
+
+This creates an image called `timestamp-logger` that you can use to demonstrate persistent storage.
+
+## Step 4: Run a container with a mounted volume
+
+Now run a container and mount your volume to the `/data` directory:
+
+```bash
+docker run -v my-data:/data timestamp-logger
+```
+
+Breaking down this command:
+
+- `docker run`: Creates and starts a new container.
+- `-v my-data:/data`: Mounts the `my-data` volume to `/data` inside the container.
+- `timestamp-logger`: The image to use.
+
+The `-v` flag creates a mount point. Files written to `/data` inside the container are actually written to the `my-data` volume on the host. This means the data persists even after the container exits.
+
+You should see output showing the timestamp was written and displaying the contents of the file.
+
+## Step 5: Verify data persistence
+
+Run the container again several times to see data persist across container instances:
+
+```bash
+docker run -v my-data:/data timestamp-logger
+docker run -v my-data:/data timestamp-logger
+docker run -v my-data:/data timestamp-logger
+```
+
+Each run creates a new container, but they all share the same volume. You should see the list of timestamps grow with each execution, proving that data persists beyond individual container lifecycles.
+
+This demonstrates the key benefit of volumes: data written by one container is available to other containers that mount the same volume.
+
+## Step 6: Access volume data from another container
+
+You can access the persisted data from any container that mounts the volume, even using a completely different image:
+
+```bash
+docker run --rm -v my-data:/data busybox cat /data/timestamps.txt
+```
+
+This command:
+
+- Runs a new `busybox` container (different from our custom image).
+- Mounts the same `my-data` volume to `/data`.
+- Runs `cat` to display the file contents.
+- Removes the container after it exits (`--rm` flag).
+
+You'll see all the timestamps from previous runs, demonstrating that volumes enable data sharing between containers.
+
+## Step 7: Inspect the volume
+
+You can get detailed information about a volume:
+
+```bash
+docker volume inspect my-data
+```
+
+This shows the volume's mount point on the host system, when it was created, and other metadata. While you can technically access files directly at the mount point, it's better to interact with volumes through containers to avoid permission and compatibility issues.
+
+## Understanding volume mount syntax
+
+When using volumes, you specify mounts with the `-v` or `--mount` flag. The basic syntax is:
+
+```bash
+-v volume-name:/container/path
+```
+
+Or for bind mounts (mounting host directories directly):
+
+```bash
+-v /host/absolute/path:/container/path
+```
+
+**Named volumes** (like `my-data`) are managed by Docker and recommended for most use cases. **Bind mounts** map specific host directories and are useful for development when you want live code reloading.
+
+### Volume mount options
+
+You can specify additional mount options:
+
+```bash
+# Mount read-only
+docker run -v my-data:/data:ro timestamp-logger
+
+# Create volume if it doesn't exist
+docker run -v new-volume:/data timestamp-logger
+```
+
+The `:ro` suffix makes the mount read-only inside the container, preventing accidental data modification.
+
+## Applying volumes to real-world scenarios
+
+### Machine learning training
+
+For ML training workflows, mount a volume to store:
+
+- **Training checkpoints**: Save model state at intervals so you can resume if interrupted.
+- **Final models**: Persist trained models for deployment.
+- **Training logs**: Keep TensorBoard logs or custom metrics.
+- **Datasets**: Store large datasets that don't change often.
+
+Example:
+
+```bash
+docker run -v ml-models:/models -v training-data:/data myapp/train
+```
+
+### Data processing pipelines
+
+For data processing, use volumes to:
+
+- **Store input data**: Mount datasets that multiple containers process.
+- **Save results**: Write processed data to a volume for downstream tasks.
+- **Cache intermediates**: Store intermediate processing results to avoid recomputation.
+
+### Development workflows
+
+During development, mount your source code as a volume for live reloading:
+
+```bash
+docker run -v $(pwd)/src:/app/src -p 8000:8000 myapp/dev
+```
+
+Changes to files in your local `src` directory immediately reflect inside the container without rebuilding the image.
+
+## Volumes and Runpod
+
+Runpod provides volume-like functionality through [network volumes](https://docs.runpod.io/storage/network-volumes), which work similarly to Docker volumes but with cloud-native features:
+
+**For Serverless**: Network volumes allow your workers to access shared data like models or datasets. Multiple workers can read from the same volume, avoiding the need to include large files in your container image. See [Serverless storage](https://docs.runpod.io/serverless/storage/overview) for details.
+
+**For Pods**: You can [attach network volumes](https://docs.runpod.io/storage/network-volumes) to Pods to persist data across Pod restarts or share data between Pods. This is essential for training workflows where you need to preserve checkpoints and models. See [Pod storage types](https://docs.runpod.io/pods/storage/types) for more information.
+
+Network volumes provide persistent storage that survives beyond individual containers, similar to the Docker volumes you've used in this guide, but optimized for cloud deployment.
+
+## Cleaning up volumes
+
+Volumes persist until you explicitly remove them. To clean up:
+
+```bash
+# Remove a specific volume
+docker volume rm my-data
+
+# Remove all unused volumes
+docker volume prune
+```
+
+Be careful with `docker volume prune`—it removes all volumes not currently in use by containers, potentially deleting important data.
+
+## Troubleshooting
+
+**Volume is empty after mounting**: If you mount a volume to a directory that exists in the image, the volume contents will appear instead of the image's original directory contents. The image directory contents aren't copied to the volume automatically.
+
+**Permission errors**: If you get permission errors when writing to a volume, it might be due to user ID mismatches. The container process runs as a specific user, and the volume permissions must allow that user to write. You may need to change permissions or run the container as a different user.
+
+**Volume doesn't persist after reboot**: Docker volumes persist across Docker restarts and system reboots. If you're losing data, verify you're using named volumes (not anonymous volumes) and not removing them accidentally.
+
+**Can't remove volume**: If you can't remove a volume, a container might be using it even if stopped. List all containers with `docker ps -a`, remove containers using the volume, then try removing the volume again.
+
+## Learning more
+
+For deeper coverage of Docker storage concepts, see Docker's official documentation:
+
+- [Volumes documentation](https://docs.docker.com/engine/storage/volumes/)
+- [Bind mounts](https://docs.docker.com/engine/storage/bind-mounts/)
+- [Storage drivers](https://docs.docker.com/engine/storage/drivers/)
+
+## Next steps
+
+You now understand how to persist data with Docker volumes, a critical skill for production deployments. Continue your learning:
+
+- Review the [Docker commands reference](https://docs.runpod.io/tutorials/introduction/containers/docker-commands) for volume management commands.
+- Explore [Runpod network volumes](https://docs.runpod.io/storage/network-volumes) for cloud-native persistent storage.
+- Learn about [Serverless storage options](https://docs.runpod.io/serverless/storage/overview) for your workers.
+- Understand [Pod storage types](https://docs.runpod.io/pods/storage/types) for long-running workloads.

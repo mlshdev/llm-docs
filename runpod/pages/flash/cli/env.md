@@ -1,0 +1,252 @@
+> Commit-pinned source for Runpod main: [flash/cli/env.mdx](https://docs.runpod.io/flash/cli/env)
+
+# env
+
+Create, inspect, list, and delete isolated Flash deployment environments for development, staging, and production applications.
+
+Manage deployment environments for Flash applications. Environments are isolated deployment contexts (like `dev`, `staging`, `production`) within a Flash app.
+
+```bash Command
+flash env <subcommand> [OPTIONS]
+```
+
+## Subcommands
+
+| Subcommand | Description                             |
+| ---------- | --------------------------------------- |
+| `list`     | Show all environments for an app        |
+| `create`   | Create a new environment                |
+| `get`      | Show details of an environment          |
+| `delete`   | Delete an environment and its resources |
+
+***
+
+## env list
+
+Show all available environments for an app.
+
+```bash Command
+flash env list [OPTIONS]
+```
+
+### Example
+
+```bash
+# List environments for current app
+flash env list
+
+# List environments for specific app
+flash env list --app APP_NAME
+```
+
+### Flags
+
+**--app, -a (type: string)**
+
+Flash app name. Auto-detected from current directory if not specified.
+
+### Output
+
+```text
+┏━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┓
+┃ Name       ┃ ID                  ┃ Active Build      ┃ Created At       ┃
+┡━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━┩
+│ dev        │ env_abc123          │ build_xyz789      │ 2024-01-15 10:30 │
+│ staging    │ env_def456          │ build_uvw456      │ 2024-01-16 14:20 │
+│ production │ env_ghi789          │ build_rst123      │ 2024-01-20 09:15 │
+└────────────┴─────────────────────┴───────────────────┴──────────────────┘
+```
+
+***
+
+## env create
+
+Create a new deployment environment.
+
+```bash Command
+flash env create <NAME> [OPTIONS]
+```
+
+### Example
+
+```bash
+# Create staging environment
+flash env create staging
+
+# Create environment in specific app
+flash env create production --app APP_NAME
+```
+
+### Arguments
+
+**NAME (type: string; required)**
+
+Name for the new environment (e.g., `dev`, `staging`, `production`).
+
+### Flags
+
+**--app, -a (type: string)**
+
+Flash app name. Auto-detected from current directory if not specified.
+
+### Notes
+
+- If the app doesn't exist, it's created automatically.
+- Environment names must be unique within an app.
+- Newly created environments have no active build until first deployment.
+
+> **Note**
+>
+> You don't always need to create environments explicitly. Running `flash deploy --env <name>` creates the environment automatically if it doesn't exist.
+
+***
+
+## env get
+
+Show detailed information about a deployment environment.
+
+```bash Command
+flash env get <NAME> [OPTIONS]
+```
+
+### Example
+
+```bash
+# Get details for production environment
+flash env get production
+
+# Get details for specific app's environment
+flash env get staging --app APP_NAME
+```
+
+### Arguments
+
+**NAME (type: string; required)**
+
+Name of the environment to inspect.
+
+### Flags
+
+**--app, -a (type: string)**
+
+Flash app name. Auto-detected from current directory if not specified.
+
+### Output
+
+```text
+╭────────────────────────────────────╮
+│ Environment: production            │
+├────────────────────────────────────┤
+│ ID: env_ghi789                     │
+│ State: DEPLOYED                    │
+│ Active Build: build_rst123         │
+│ Created: 2024-01-20 09:15:00       │
+╰────────────────────────────────────╯
+
+           Associated Endpoints
+┏━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┓
+┃ Name           ┃ ID                 ┃
+┡━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━┩
+│ my-gpu         │ ep_abc123          │
+│ my-cpu         │ ep_def456          │
+└────────────────┴────────────────────┘
+
+       Associated Network Volumes
+┏━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┓
+┃ Name           ┃ ID                 ┃
+┡━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━┩
+│ model-cache    │ nv_xyz789          │
+└────────────────┴────────────────────┘
+```
+
+***
+
+## env delete
+
+Delete a deployment environment and all its associated resources.
+
+```bash Command
+flash env delete <NAME> [OPTIONS]
+```
+
+### Examples
+
+```bash
+# Delete development environment
+flash env delete dev
+
+# Delete environment in specific app
+flash env delete staging --app APP_NAME
+```
+
+### Arguments
+
+**NAME (type: string; required)**
+
+Name of the environment to delete.
+
+### Flags
+
+**--app, -a (type: string)**
+
+Flash app name. Auto-detected from current directory if not specified.
+
+### Process
+
+1. Shows environment details and resources to be deleted.
+2. Prompts for confirmation (required).
+3. Undeploys all associated endpoints.
+4. Removes all associated network volumes.
+5. Deletes the environment from the app.
+
+> **Warning**
+>
+> This operation is irreversible. All endpoints, volumes, and configuration associated with the environment will be permanently deleted.
+
+***
+
+## Environment states
+
+| State     | Description                          |
+| --------- | ------------------------------------ |
+| PENDING   | Environment created but not deployed |
+| DEPLOYING | Deployment in progress               |
+| DEPLOYED  | Successfully deployed and running    |
+| FAILED    | Deployment or health check failed    |
+| DELETING  | Deletion in progress                 |
+
+## Common workflows
+
+### Three-tier deployment
+
+```bash
+# Create environments
+flash env create dev
+flash env create staging
+flash env create production
+
+# Deploy to each
+flash deploy --env dev
+flash deploy --env staging
+flash deploy --env production
+```
+
+### Feature branch testing
+
+```bash
+# Create feature environment
+flash env create FEATURE_NAME
+
+# Deploy feature branch
+git checkout FEATURE_NAME
+flash deploy --env FEATURE_NAME
+
+# Clean up after merge
+flash env delete FEATURE_NAME
+```
+
+## Related commands
+
+- [`flash deploy`](https://docs.runpod.io/flash/cli/deploy) - Deploy to an environment
+- [`flash app`](https://docs.runpod.io/flash/cli/app) - Manage applications
+- [`flash undeploy`](https://docs.runpod.io/flash/cli/undeploy) - Remove specific endpoints

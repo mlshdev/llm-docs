@@ -16,6 +16,7 @@ import type {
 import {
   mintlifyOpenApiSpecs,
   mintlifySections,
+  normalizeMintlifyComponents,
   parseMintlifyOpenApiOperation,
   parseOpenApiSpec,
   renderOpenApiOperationBody,
@@ -147,7 +148,7 @@ function convertPage(
   context: PageContext,
 ): ReturnType<typeof convertMdx> {
   try {
-    return convertMdx(normalizeMintlifyMdx(source), sourcePath, {
+    return convertMdx(normalizeMintlifyComponents(source), sourcePath, {
       resolveImport: (specifier, fromPath) =>
         resolveImport(specifier, fromPath, context.sources),
     });
@@ -224,42 +225,6 @@ function resolveImport(
 ): MdxImport | undefined {
   const resolved = resolveMintlifyImport(specifier, fromPath, sources);
   return resolved
-    ? { ...resolved, source: normalizeMintlifyMdx(resolved.source) }
+    ? { ...resolved, source: normalizeMintlifyComponents(resolved.source) }
     : undefined;
-}
-
-// Maps the Mintlify component library onto the small set of components the
-// MDX converter renders as prose.
-function normalizeMintlifyMdx(source: string): string {
-  return source
-    .replace(/<Icon\b[^>]*\/>/g, "")
-    .replace(/<Icon\b[^>]*>[\s\S]*?<\/Icon>/g, "")
-    .replace(/<Warn\b/g, "<Warning")
-    .replace(/<\/Warn>/g, "</Warning>")
-    .replace(/<Check\b/g, "<Success")
-    .replace(/<\/Check>/g, "</Success>")
-    .replace(/<(?:Request|Response)Example(?:\s+[^>]*)?>/g, "<Column>")
-    .replace(/<\/(?:Request|Response)Example>/g, "</Column>")
-    .replace(/<CardGroup(?:\s+[^>]*)?>/g, "<Cards>")
-    .replace(/<\/CardGroup>/g, "</Cards>")
-    .replace(/<AccordionGroup(?:\s+[^>]*)?>/g, "<Tabs>")
-    .replace(/<\/AccordionGroup>/g, "</Tabs>")
-    .replace(/<Accordion\b/g, "<Tab")
-    .replace(/<\/Accordion>/g, "</Tab>")
-    .replace(/<Expandable\b/g, "<Tab")
-    .replace(/<\/Expandable>/g, "</Tab>")
-    .replace(/<Update\b/g, "<Tab")
-    .replace(/<\/Update>/g, "</Tab>")
-    .replace(/<Frame(?:\s+[^>]*)?>/g, "<div>")
-    .replace(/<\/Frame>/g, "</div>")
-    .replace(/<Tip(?:\s+[^>]*)?>/g, '<Callout type="tip">')
-    .replace(/<\/Tip>/g, "</Callout>")
-    .replace(/<Info(?:\s+[^>]*)?>/g, '<Callout type="info">')
-    .replace(/<\/Info>/g, "</Callout>")
-    .replace(/<Columns(?:\s+[^>]*)?>/g, "<Column>")
-    .replace(/<\/Columns>/g, "</Column>")
-    .replace(/<Image\b/g, "<img")
-    .replace(/<\/Image>/g, "</img>")
-    .replace(/<(?:ParamField|ResponseField)\b/g, "<Property")
-    .replace(/<\/(?:ParamField|ResponseField)>/g, "</Property>");
 }

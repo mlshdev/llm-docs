@@ -1,0 +1,241 @@
+> Commit-pinned source for Runpod main: [tutorials/introduction/containers/create-dockerfiles.mdx](https://docs.runpod.io/tutorials/introduction/containers/create-dockerfiles)
+
+# Create Dockerfiles
+
+Learn how to write Dockerfiles, build custom images, and run your first containers. Follow the implementation steps in this Runpod tutorial.
+
+A Dockerfile is a text file containing instructions for building a Docker image. By creating a Dockerfile, you can package your application with its dependencies and configuration, making it easy to deploy anywhere Docker runs. This guide walks you through creating your first Dockerfile, building an image, and running a container.
+
+## Requirements
+
+Before starting, you need:
+
+- Docker Desktop installed and running (see the [overview](https://docs.runpod.io/tutorials/introduction/containers) for installation instructions).
+- Basic command-line familiarity.
+- A text editor for creating files.
+
+## Step 1: Verify Docker installation
+
+First, verify that Docker is installed correctly by checking the version:
+
+```bash
+docker version
+```
+
+You should see output showing both the client and server versions. If you see an error about the Docker daemon not running, make sure Docker Desktop is started.
+
+To test that Docker can pull and run images, run a simple command using the `busybox` image:
+
+```bash
+docker run busybox echo "Hello from Docker!"
+```
+
+This command downloads the lightweight `busybox` image (if not already present), starts a container from it, runs the `echo` command inside the container, and then exits. You should see "Hello from Docker!" printed to your terminal.
+
+Breaking down what happened:
+
+- `docker run`: Creates and starts a new container.
+- `busybox`: The image to use (automatically pulled from Docker Hub if needed).
+- `echo "Hello from Docker!"`: The command to run inside the container.
+
+## Step 2: Create a project directory
+
+Create a new directory for this tutorial and navigate into it:
+
+```bash
+mkdir my-first-container
+cd my-first-container
+```
+
+This keeps your Dockerfile and related files organized in one place.
+
+## Step 3: Write a Dockerfile
+
+Create a file named `Dockerfile` (no file extension) with the following content:
+
+```dockerfile
+FROM busybox
+COPY entrypoint.sh /
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+```
+
+Let's understand each instruction:
+
+**FROM busybox**: This specifies the base image for your container. `busybox` is a minimal Linux image with basic utilities. Every Dockerfile must start with a `FROM` instruction. For real applications, you might use images like `python:3.11`, `node:20`, or `nvidia/cuda:12.0.0-runtime-ubuntu22.04`.
+
+**COPY entrypoint.sh /**: This copies the `entrypoint.sh` file from your local directory into the root directory of the container's filesystem. The `COPY` instruction is how you add your application code and files to the image.
+
+**RUN chmod +x /entrypoint.sh**: This executes a command during the image build process to make the script executable. `RUN` instructions execute commands and save the results as a new layer in the image.
+
+**ENTRYPOINT \["/entrypoint.sh"]**: This specifies the command that runs when a container starts from this image. Using the JSON array syntax (with brackets and quotes) is recommended as it prevents shell processing quirks.
+
+## Step 4: Create the entrypoint script
+
+Create a file named `entrypoint.sh` in the same directory:
+
+```sh
+#!/bin/sh
+echo "Container started at: $(date)"
+echo "Running on: $(uname -a)"
+```
+
+This simple script prints the current date/time and system information when the container starts.
+
+### Understanding entrypoint scripts
+
+An entrypoint script is the command that runs when your container starts. Think of it as the "main" function of your container. Common uses include:
+
+- **Starting applications**: Launch a web server, API, or background process.
+- **Setup tasks**: Initialize databases, check configurations, or [set environment variables](https://docs.runpod.io/pods/templates/environment-variables).
+- **Processing workflows**: Run data processing pipelines or batch jobs.
+
+For Runpod Serverless workers, your entrypoint typically starts a Python script that imports the `runpod` library and defines your [handler function](https://docs.runpod.io/serverless/workers/handler-functions). For example, you might run `python handler.py` which calls `runpod.serverless.start()`. For Pods, the entrypoint might start [JupyterLab](https://docs.runpod.io/tutorials/pods/run-your-first), a training script, or a development environment like VS Code.
+
+> **Note**
+>
+> While we named this script `entrypoint.sh`, you'll see various naming conventions in Docker projects:
+>
+> - `start.sh`
+> - `docker-entrypoint.sh`
+> - `run.sh`
+> - `cmd.sh`
+>
+> These scripts are often placed in a `/scripts` or `/app` directory, depending on the project structure.
+
+## Step 5: Build the image
+
+Now build a Docker image from your Dockerfile:
+
+```bash
+docker build -t my-time-image .
+```
+
+Breaking down this command:
+
+- `docker build`: Initiates the image build process.
+- `-t my-time-image`: Tags the image with a name for easy reference. Without a tag, you'd have to use the image ID.
+- `.`: Specifies the build context (current directory). Docker looks for a Dockerfile here and can access files in this directory.
+
+You'll see output showing each Dockerfile instruction being executed. Docker builds images in layers, and each instruction creates a new layer. These layers are cached, so rebuilding after small changes is fast.
+
+### Why build custom images?
+
+Custom images let you:
+
+- **Package dependencies**: Install specific libraries, frameworks, or tools your application needs.
+- **Configure environments**: Set [environment variables](https://docs.runpod.io/serverless/development/environment-variables), create directories, or configure settings.
+- **Include application code**: Bundle your code so it's ready to run anywhere.
+- **Version applications**: Tag images with version numbers to track changes over time.
+- **Ensure consistency**: Eliminate "works on my machine" problems by standardizing the environment.
+
+For Runpod deployments, custom images are essential:
+
+- **Serverless workers** need images with your [handler code](https://docs.runpod.io/serverless/workers/handler-functions), inference libraries, and optionally [cached models](https://docs.runpod.io/serverless/endpoints/model-caching).
+- **Pods** might need images with specific ML frameworks, CUDA versions, development tools, or [custom configurations saved as templates](https://docs.runpod.io/pods/templates/create-custom-template).
+
+## Step 6: Run the container
+
+Run a container from your newly built image:
+
+```bash
+docker run my-time-image
+```
+
+You should see output showing the container start time and system information, confirming that your entrypoint script ran successfully.
+
+The container executes the script and then exits. This is normal behavior for containers that complete their task. In production, containers often run continuously (like web servers) or process tasks and exit (like batch jobs or Serverless functions).
+
+## Step 7: Experiment with your container
+
+Try a few variations to understand how containers work:
+
+**Run the container multiple times** to see different timestamps:
+
+```bash
+docker run my-time-image
+docker run my-time-image
+```
+
+Each invocation creates a new container instance with a fresh environment.
+
+**View running containers** (in another terminal, run a long-running command):
+
+```bash
+docker run busybox sleep 30
+```
+
+Then in another terminal:
+
+```bash
+docker ps
+```
+
+This shows currently running containers with their IDs, names, and status.
+
+**See all containers**, including stopped ones:
+
+```bash
+docker ps -a
+```
+
+You'll see all the containers you've created, even those that have exited.
+
+## Understanding Dockerfile best practices
+
+As you create more complex Dockerfiles, keep these practices in mind:
+
+**Use specific base image tags**: Instead of `FROM python:3`, use `FROM python:3.11-slim` to ensure consistent builds.
+
+**Minimize layers**: Combine related `RUN` commands with `&&` to reduce image size:
+
+```dockerfile
+RUN apt-get update && \
+    apt-get install -y package1 package2 && \
+    apt-get clean
+```
+
+**Order instructions by change frequency**: Put instructions that change rarely (like installing system packages) before instructions that change often (like copying application code). This maximizes layer caching.
+
+**Clean up in the same layer**: Remove temporary files in the same `RUN` command that creates them:
+
+```dockerfile
+RUN wget https://example.com/file.tar.gz && \
+    tar -xzf file.tar.gz && \
+    rm file.tar.gz
+```
+
+For more best practices, see Docker's [Dockerfile reference documentation](https://docs.docker.com/reference/dockerfile/).
+
+## Building for Runpod
+
+When building images for Runpod, keep these platform-specific considerations in mind:
+
+**Use the correct architecture**: Runpod's infrastructure uses `linux/amd64` architecture. If you're building on an Apple Silicon Mac (ARM64), specify the platform:
+
+```bash
+docker build --platform=linux/amd64 -t my-image .
+```
+
+**Optimize for cold starts**: Smaller images start faster, reducing [cold start times](https://docs.runpod.io/serverless/overview#cold-starts) for Serverless workers. Use minimal base images like `-slim` or `-alpine` variants when possible.
+
+**Include model caching**: For ML models, consider using Runpod's [model caching feature](https://docs.runpod.io/serverless/endpoints/model-caching) instead of baking large models into your image. This dramatically reduces cold starts and deployment costs.
+
+**Configure GPU access**: For GPU workloads, ensure your base image includes the correct [CUDA version for your framework](https://docs.runpod.io/pods/choose-a-pod#gpu-compatibility).
+
+For detailed guidance on creating Dockerfiles for Serverless workers, see [creating Dockerfiles for Serverless](https://docs.runpod.io/serverless/workers/create-dockerfile).
+
+## Next steps
+
+Now that you can create Dockerfiles and build images, continue learning:
+
+**Continue the tutorial series:**
+
+- [Master Docker commands](https://docs.runpod.io/tutorials/introduction/containers/docker-commands) for building, running, and managing containers.
+- [Learn about data persistence](https://docs.runpod.io/tutorials/introduction/containers/persist-data) with Docker volumes.
+
+**Deploy on Runpod:**
+
+- For Serverless: [Deploy your first endpoint](https://docs.runpod.io/serverless/quickstart) and learn about [worker deployment](https://docs.runpod.io/serverless/workers/deploy).
+- For Pods: [Run your first Pod](https://docs.runpod.io/tutorials/pods/run-your-first) and explore [connecting to Pods](https://docs.runpod.io/pods/connect-to-a-pod).
+- Review [creating Dockerfiles for Serverless](https://docs.runpod.io/serverless/workers/create-dockerfile) with production best practices.

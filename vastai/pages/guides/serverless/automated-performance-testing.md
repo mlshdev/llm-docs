@@ -1,0 +1,31 @@
+> Commit-pinned source for Vast.ai main: [guides/serverless/automated-performance-testing.mdx](https://docs.vast.ai/guides/serverless/automated-performance-testing)
+
+# Automated Performance Testing
+
+Learn about the performance testing process in Vast.ai Serverless.
+
+Vast Serverless relies on **benchmark testing** to determine the most cost-effective GPU when scaling up (which workers to recruit), routing requests (which workers have available capacity), and scaling down (which workers to release).
+
+This benchmark is part of the **PyWorker configuration** within the SDK and is an integral component of how Vast Serverless operates.
+
+## How Benchmark Testing Works
+
+When a new Workergroup is created, the serverless engine enters a **learning phase**. During this phase, it recruits a variety of machine types from those specified in `search_params`. Each new worker runs the user-configured benchmark and evaluates performance, which are reported to the serverless engine.
+
+As traffic scales up and down, the serverless engine builds an **application-specific understanding of cost vs. performance**, which it then uses to make informed decisions about future worker recruitment and release.
+
+## Best Practices for Initial Scaling
+
+The speed at which the serverless engine “settles” into the most cost-effective mix of workers can vary depending on how quickly workers are recruited and released. Because of this, it is recommended to apply a **test load during the first day of operation** to help the system efficiently explore and converge on optimal hardware choices.
+
+Best practice is to scale to double the number of expected required workers, then scale back down, 3 separate times.
+
+## Simulating Load
+
+For examples of how to simulate load against your endpoint, see the client examples in the Vast SDK repository:
+
+<https://github.com/vast-ai/vast-sdk/blob/main/examples/client/vllm_load_example.py>
+
+## Running the Benchmark Yourself
+
+The same benchmark workload can be invoked on demand from the CLI against any list of GPU classes, before (or independent of) creating a Workergroup. See [Choosing GPUs for Your Workload](https://docs.vast.ai/guides/serverless/choosing-gpus) under **Instances → Find & rent** for the walkthrough.

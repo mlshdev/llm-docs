@@ -1,0 +1,87 @@
+> Commit-pinned source for Runpod main: [pods/storage/types.mdx](https://docs.runpod.io/pods/storage/types)
+
+# Storage options
+
+Choose the right type of storage for your Pods. Review setup, configuration, storage, networking, and operations guidance for Runpod Pods.
+
+Pods offer three storage types optimized for different use cases. Choose based on your data persistence, performance, and sharing needs.
+
+## Comparison
+
+|                 | Container disk        | Volume disk                   | Network volume                      |
+| --------------- | --------------------- | ----------------------------- | ----------------------------------- |
+| **Persistence** | Lost on stop/restart  | Retained until Pod deleted    | Retained independently              |
+| **Mount path**  | System-managed        | `/workspace` (default)        | `/workspace` (replaces volume disk) |
+| **Performance** | Fastest (local)       | Fast (local)                  | Variable (network)                  |
+| **Shareable**   | No                    | No                            | Yes (across Pods)                   |
+| **Resizable**   | Yes                   | Increase only                 | Yes                                 |
+| **Cost**        | $0.10/GB/month        | $0.10/GB/month (running)      | $0.07/GB/month                      |
+|                 |                       | $0.20/GB/month (stopped)      |                                     |
+| **Best for**    | OS, temp files, cache | Models, datasets, checkpoints | Shared data, portable storage       |
+
+## Container disk
+
+The container disk provides temporary storage for the operating system and session data. It's created when a Pod launches and is cleared when the Pod stops. Use it for temporary files, caches, and data that doesn't need to persist between sessions.
+
+## Volume disk
+
+The volume disk provides persistent storage that is retained throughout the Pod's lease. Data stored in the `/workspace` directory survives Pod stops and restarts, but is deleted when the Pod is terminated. This is ideal for storing models, datasets, and checkpoints that you need to access across multiple sessions.
+
+### Encrypted volumes
+
+You can encrypt your volume disk to protect sensitive data. When encryption is enabled, the volume is encrypted at rest on the host machine, and only your Pod can access the data.
+
+To enable encryption when creating a Pod, select the **Encrypt volume** checkbox in the Pod creation flow.
+
+> **Warning**
+>
+> Your encryption key cannot be retrieved, and bring your own key is not supported. Runpod securely stores your key and passes it only to your container image at runtime.
+
+> **Note**
+>
+> Encryption applies only to volume disk. Container disk and network volumes cannot be encrypted.
+
+## Network volume
+
+Network volumes provide permanent storage that exists independently from any Pod. You can attach a network volume to multiple Pods, transfer it between machines, and retain your data even after deleting a Pod. This makes network volumes ideal for shared datasets, collaborative workflows, and portable storage.
+
+Network volumes are available in two tiers:
+
+- **Standard storage**: Cost-effective for general-purpose work.
+- **[High-performance storage](https://docs.runpod.io/storage/high-performance-storage)**: Premium tier with up to 3x throughput and 4x IOPS for demanding workloads.
+
+[Learn more about network volumes](https://docs.runpod.io/storage/network-volumes).
+
+> **Note**
+>
+> Network volumes must be attached during Pod creation and cannot be detached later. When attached, the network volume replaces the volume disk at `/workspace`.
+
+## Modify storage capacity
+
+You can adjust your Pod's storage capacity at any time:
+
+1. Navigate to the [Pods page](https://console.runpod.io/pods).
+2. Click the three dots next to your Pod and select **Edit Pod**.
+3. Adjust the container or volume disk size. Note that volume disk size can only be increased, not decreased.
+4. Click **Save** to apply your changes.
+
+> **Warning**
+>
+> Editing a running Pod resets it completely, erasing all data that isn't stored in your `/workspace` directory.
+
+## Transfer data
+
+You can export data from your Pod to external cloud providers including AWS S3, Google Cloud Storage, Azure, and Dropbox. Click the **Cloud Sync** button on the Pod page to get started. For detailed instructions, see [Export data](https://docs.runpod.io/pods/storage/cloud-sync).
+
+> **Note**
+>
+> Runpod is not designed for long-term cloud storage. We recommend backing up critical data to your local machine or a dedicated cloud storage provider.
+
+## Next steps
+
+- [Create a network volume](https://docs.runpod.io/storage/network-volumes)
+
+  Learn how to set up portable, persistent storage for your Pods.
+- [Transfer files](https://docs.runpod.io/pods/storage/transfer-files)
+
+  Learn how to move data to and from your Pod.

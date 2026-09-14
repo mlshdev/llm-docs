@@ -1,0 +1,266 @@
+> Commit-pinned source for Vast.ai main: [examples/ai-agents/autoresearch.mdx](https://docs.vast.ai/examples/ai-agents/autoresearch)
+
+# Autonomous AI Research with Autoresearch on Vast.ai
+
+## Introduction
+
+[Autoresearch](https://github.com/karpathy/autoresearch) is Andrej Karpathy's framework for autonomous AI-driven ML research. The idea is simple: point an AI agent (Claude Code) at a small but real LLM training setup and let it experiment autonomously overnight. The agent modifies the model code, trains for 5 minutes, checks if the result improved, keeps or discards, and repeats, running \~12 experiments per hour, \~100 overnight.
+
+This guide walks you through setting up autoresearch on a Vast.ai GPU instance with [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) as the autonomous research agent.
+
+## Prerequisites
+
+- A [Vast.ai](https://cloud.vast.ai/) account with credits
+- An [Anthropic](https://console.anthropic.com/) account for Claude Code
+- SSH key pair ([add your public key](https://cloud.vast.ai/account/) in your Vast account settings)
+- [Vast CLI installed](https://docs.vast.ai/cli/hello-world) on your local machine
+
+Install the Vast CLI if you haven't already:
+
+```bash
+curl -fsSL https://vast.ai/install.sh | bash
+vastai set api-key YOUR_API_KEY
+```
+
+## Rent a GPU Instance and Set Up
+
+Autoresearch requires a single NVIDIA GPU with 80GB VRAM (H100 or A100 80GB). It needs CUDA 12.8+ and about 50GB of disk for the repo, data, and dependencies.
+
+Use the [Autoresearcher template](https://cloud.vast.ai/?ref_id=146798\&creator_id=146798\&name=Autoresearcher%20\(Claude%20Code\)) to launch a pre-configured instance with uv, Claude Code, and autoresearch already installed.
+
+- [Learn more about templates](https://docs.vast.ai/guides/templates/introduction)
+
+  Templates are reusable configurations that bundle a Docker image, environment variables, and startup scripts into a one-click launch.
+
+Search for available instances:
+
+```bash
+vastai search offers 'gpu_ram>=70 num_gpus=1 cuda_vers>=12.8 disk_space>=50 reliability>0.95' -o 'dph+'
+```
+
+Pick an instance ID from the results and rent it using the template:
+
+```bash
+vastai create instance INSTANCE_ID \
+  --template_hash 934769670bfd9bc5e05d8696ef340c2b \
+  --disk 50
+```
+
+Wait for the instance to be ready, then SSH in:
+
+```bash
+vastai show instances
+ssh -p PORT root@HOST_IP
+```
+
+> **Tip**
+>
+> The template installs everything on first boot (\~10 minutes). You can monitor progress with `tail -f /var/log/provisioning.log`.
+
+The template automatically configures Claude Code permissions (`Read`, `Edit`, `Write`, `Bash`) in `.claude/settings.json` so it can run experiments without prompting, no manual setup needed.
+
+Once provisioning completes, skip ahead to [Launch Autonomous Research](#launch-autonomous-research).
+
+Search for available instances:
+
+```bash
+vastai search offers 'gpu_ram>=70 num_gpus=1 cuda_vers>=12.8 disk_space>=50 reliability>0.95' -o 'dph+'
+```
+
+Pick an instance ID from the results and rent it:
+
+```bash
+vastai create instance INSTANCE_ID \
+  --image vastai/pytorch \
+  --disk 50 \
+  --ssh \
+  --direct
+```
+
+Wait for the instance to be ready:
+
+```bash
+vastai show instances
+```
+
+Once the status shows `running`, get your SSH connection details:
+
+```bash
+vastai ssh-url INSTANCE_ID
+```
+
+### SSH in
+
+```bash
+ssh -p PORT root@HOST_IP
+```
+
+> **Tip**
+>
+> Vast instances start in a tmux session by default. This keeps your processes running if your SSH connection drops, essential for overnight research runs.
+
+### Install uv
+
+[uv](https://docs.astral.sh/uv/) is the package manager used by autoresearch:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+source $HOME/.local/bin/env
+```
+
+### Install Claude Code
+
+Claude Code requires Node.js:
+
+```bash
+curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
+apt-get install -y nodejs
+npm install -g @anthropic-ai/claude-code
+```
+
+### Clone and install
+
+```bash
+cd /workspace
+git clone https://github.com/karpathy/autoresearch.git
+cd autoresearch
+uv sync
+```
+
+### Prepare the data
+
+This downloads training data from HuggingFace and trains a BPE tokenizer. Takes about 2 minutes:
+
+```bash
+uv run prepare.py
+```
+
+Data is cached in `~/.cache/autoresearch/`, you only need to run this once.
+
+### Run a baseline experiment
+
+Verify everything works by running a single 5-minute training experiment:
+
+```bash
+uv run train.py
+```
+
+After \~5 minutes you'll see output like:
+
+```
+---
+val_bpb:          0.995583
+training_seconds: 300.3
+total_seconds:    349.8
+peak_vram_mb:     45060.2
+mfu_percent:      39.57
+total_tokens_M:   497.0
+num_steps:        948
+num_params_M:     50.3
+depth:            8
+```
+
+The key metric is `val_bpb` (validation bits per byte), lower is better. Note this baseline number; Claude will try to beat it.
+
+### Configure permissions
+
+Claude Code normally asks for permission before running commands or editing files. For autonomous overnight research, you need to pre-approve the tools Claude will use. Create a settings file in the autoresearch directory:
+
+```bash
+mkdir -p /workspace/autoresearch/.claude
+cat > /workspace/autoresearch/.claude/settings.json << 'EOF'
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash"
+    ]
+  }
+}
+EOF
+```
+
+This tells Claude Code to run these commands without asking, essential for unattended operation.
+
+## Launch Autonomous Research
+
+### Start Claude Code
+
+```bash
+cd /workspace/autoresearch
+claude
+```
+
+When Claude Code starts, log in to your Anthropic account:
+
+```
+/login
+```
+
+This will give you a URL to open in your browser. Follow the prompts to authenticate, then you're ready to go.
+
+Kick off the research loop:
+
+```
+Hi have a look at program.md and let's kick off a new experiment! let's do the setup first.
+```
+
+Claude will:
+
+1. Read `program.md` for the research guidelines
+2. Create a fresh git branch (e.g. `autoresearch/mar10`)
+3. Run the baseline experiment
+4. Begin the autonomous loop, modifying `train.py`, training for 5 minutes, evaluating, keeping improvements, discarding regressions
+5. Log all results to `results.tsv`
+
+> **Warning**
+>
+> Claude runs indefinitely until manually stopped. Each experiment takes \~5 minutes, so you can expect \~12 experiments/hour and \~100 experiments overnight. Each iteration also uses Claude API tokens.
+
+### What Claude can modify
+
+Claude has full freedom to edit `train.py`, the model architecture, optimizer, hyperparameters, batch size, model size, training loop. The only constraints are:
+
+- **`prepare.py` is read-only**, the evaluation harness and data loading are fixed
+- **No new packages**, only dependencies in `pyproject.toml`
+- **5-minute time budget**, every experiment runs for exactly 5 minutes
+
+### Monitoring progress
+
+In another tmux pane (`Ctrl+b` then `%`), you can watch the experiment log:
+
+```bash
+watch -n 30 cat /workspace/autoresearch/results.tsv
+```
+
+Or check the git log to see what Claude has tried:
+
+```bash
+cd /workspace/autoresearch
+git log --oneline -20
+```
+
+## Cleanup
+
+When you're done, download your results and destroy the instance:
+
+```bash
+# From your local machine — copy results
+scp -P PORT root@HOST_IP:/workspace/autoresearch/results.tsv ./results.tsv
+
+# Destroy the instance
+vastai destroy instance INSTANCE_ID
+```
+
+> **Warning**
+>
+> Destroying an instance permanently deletes all data on it. Make sure to copy any results you want to keep before destroying.
+
+## Additional Resources
+
+- [Autoresearch GitHub repo](https://github.com/karpathy/autoresearch)
+- [Nanochat](https://github.com/karpathy/nanochat), the full training framework autoresearch is derived from
+- [Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code/overview)
+- [Vast.ai CLI reference](https://docs.vast.ai/cli/hello-world)

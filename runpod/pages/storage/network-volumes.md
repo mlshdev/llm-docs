@@ -1,0 +1,180 @@
+> Commit-pinned source for Runpod main: [storage/network-volumes.mdx](https://docs.runpod.io/storage/network-volumes)
+
+# Network volumes
+
+Persistent, portable storage for your AI workloads. Review configuration, access methods, and usage guidance for managing storage on Runpod.
+
+Network volumes provide persistent storage that exists independently of your compute resources. Data is retained when Pods terminate or Serverless workers scale to zero. Use them to share data across multiple machines and Runpod products.
+
+Network volumes are backed by high-performance NVMe SSDs with transfer speeds of 200-400 MB/s (up to 10 GB/s peak).
+
+## Storage tiers
+
+Network volumes are available in two tiers:
+
+- **Standard storage**: Cost-effective storage for general-purpose work, development, and workloads where storage isn't the bottleneck.
+- **[High-performance storage](https://docs.runpod.io/storage/high-performance-storage)**: Premium tier with up to 3x throughput and 4x IOPS, optimized for training, fine-tuning, and latency-sensitive inference.
+
+Select the storage tier when creating a network volume. For details on choosing between tiers, see [High-performance storage](https://docs.runpod.io/storage/high-performance-storage).
+
+## Pricing
+
+**Standard storage:**
+
+- **First 1 TB**: $0.07/GB/month
+- **Beyond 1 TB**: $0.05/GB/month
+
+**High-performance storage** is priced at a premium. See the [High-performance storage](https://docs.runpod.io/storage/high-performance-storage#pricing) page for details.
+
+> **Warning**
+>
+> When your account balance reaches $0, Pods with an attached network volume are stopped and your data is preserved on the volume. Storage charges continue to accrue while the Pod is stopped, so if your balance stays at $0 and these charges can't be covered, the network volume may eventually be terminated and its data cannot be recovered. Enable [low balance notifications](https://docs.runpod.io/accounts-billing/billing#low-balance-notifications) to get alerted before this happens.
+
+## Create a network volume
+
+> **Note**
+>
+> Volume size can be increased later but cannot be decreased. For volumes beyond 4 TB, [contact support](https://www.runpod.io/contact).
+
+1. Navigate to the [Storage page](https://www.console.runpod.io/user/storage).
+2. Click **New Network Volume**.
+3. Select a data center, enter a name, and specify size in GB.
+4. Select a storage tier: **Standard** or **High-Performance** (available in select data centers).
+5. Click **Create Network Volume**.
+
+```bash
+curl --request POST \
+  --url https://rest.runpod.io/v1/networkvolumes \
+  --header 'Authorization: Bearer RUNPOD_API_KEY' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "name": "my-network-volume",
+  "size": 100,
+  "dataCenterId": "US-KS-2"
+}'
+```
+
+See [network volumes API reference](https://docs.runpod.io/api-reference/network-volumes/POST/networkvolumes) for details.
+
+## Network volumes for Serverless
+
+Network volumes mount at `/runpod-volume` within Serverless workers. Benefits include reduced cold start times (no re-downloading models), lower costs, and centralized data management.
+
+**Attach to an endpoint:**
+
+1. Go to [Serverless](https://www.console.runpod.io/serverless/user/endpoints) and select your endpoint.
+2. Click **Manage** → **Edit Endpoint**.
+3. Expand **Advanced**, click **Network Volumes**, and select volumes to attach.
+4. Click **Save Endpoint**.
+
+> **Warning**
+>
+> Writing to the same volume from multiple workers simultaneously may cause data corruption. Handle concurrent write access in your application logic.
+
+### Attach multiple volumes
+
+Attaching a single network volume constrains worker deployments to that volume's datacenter, which may limit GPU availability and reduce failover options.
+
+To improve availability and reduce downtime during datacenter maintenance, attach multiple network volumes from different datacenters. Workers are distributed across these datacenters, with each worker receiving exactly one volume based on its assigned location.
+
+> **Note**
+>
+> You can only select one network volume per datacenter.
+
+> **Warning**
+>
+> **Data does not sync automatically between volumes.** To make the same data available to all workers regardless of datacenter, manually copy data using the [S3-compatible API](https://docs.runpod.io/storage/s3-api) or [runpodctl](#using-runpodctl).
+
+## Network volumes for Pods
+
+Network volumes replace the Pod's default volume disk, typically mounted at `/workspace`.
+
+> **Note**
+>
+> Network volumes are only available for Pods in the [Secure Cloud](https://docs.runpod.io/pods/overview#pod-types).
+
+**Attach to a Pod:**
+
+1. Navigate to [Pods](https://www.console.runpod.io/pods) and click **Deploy**.
+2. Select **Network Volume** and choose your volume.
+3. Select a GPU type (available options depend on volume location).
+4. Configure template and other settings, then click **Deploy On-Demand**.
+
+Network volumes must be attached during Pod deployment. They cannot be attached or detached later without deleting the Pod.
+
+## Network volumes for Instant Clusters
+
+Network volumes for Instant Clusters work like Pods. Attach during cluster creation; mounts at `/workspace` on each node.
+
+1. Go to [Instant Clusters](https://www.console.runpod.io/cluster) and click **Create Cluster**.
+2. Click **Network Volume** and select the volume to attach.
+3. Configure other settings and click **Deploy Cluster**.
+
+## S3-compatible API
+
+The [S3-compatible API](https://docs.runpod.io/storage/s3-api) lets you manage files on network volumes without launching compute resources. Upload datasets before launching Pods, automate workflows with standard S3 tools, or pre-populate volumes to improve cold start performance.
+
+## Migrate files between volumes
+
+### Using runpodctl
+
+The simplest way to migrate files between network volumes is to use `runpodctl send` and `receive` on two running Pods:
+
+1. Deploy Pods with the source and destination volumes attached. Open web terminals on both.
+2. On the source Pod:
+
+   ```bash
+   cd /workspace
+   runpodctl send *
+   ```
+
+   Copy the receive command from the output.
+3. On the destination Pod:
+
+   ```bash
+   cd /workspace
+   runpodctl receive 8338-galileo-collect-fidel  # Use your code
+   ```
+
+### Using rsync over SSH
+
+For faster migration speed and more reliability for large transfers, you can use `rsync` over SSH on two running Pods:
+
+1. Deploy Pods with source and destination volumes attached.
+2. On the source Pod, install required packages and generate an SSH key pair:
+
+   ```bash
+   apt update && apt install -y rsync
+   ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -N "" -q
+   cat ~/.ssh/id_ed25519.pub
+   ```
+
+   Copy the public key.
+3. On the destination Pod, install required packages and add the source Pod's public key to `authorized_keys`:
+
+   ```bash
+   apt update && apt install -y vim rsync && \
+   ip=$(printenv RUNPOD_PUBLIC_IP) && \
+   port=$(printenv RUNPOD_TCP_PORT_22) && \
+   echo "rsync -avzP --inplace -e \"ssh -p $port\" /workspace/ root@$ip:/workspace" && \
+   vi ~/.ssh/authorized_keys
+   ```
+
+   In the editor that opens, paste the public key you copied from the source Pod, then save and exit (press `Esc`, type `:wq`, and press `Enter`).
+
+   The command above also displays the `rsync` command you'll need to run on the source Pod. Copy this command for the next step.
+4. On the source Pod, run the `rsync` command from the previous step.
+
+   If you didn't copy it, you can construct it manually using the destination Pod's IP address and port number:
+
+   ```bash
+   # Replace DESTINATION_PORT and DESTINATION_IP with values from the destination Pod
+   rsync -avzP --inplace -e "ssh -p DESTINATION_PORT" /workspace/ root@DESTINATION_IP:/workspace
+
+   # Example:
+   rsync -avzP --inplace -e "ssh -p 18598" /workspace/ root@157.66.254.13:/workspace
+   ```
+
+   > **Tip**
+   >
+   > You can run the `rsync` command multiple times if the transfer is interrupted. The `--inplace` flag ensures that `rsync` resumes from where it left off rather than starting over.

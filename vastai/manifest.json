@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "project": "vastai",
+  "title": "Vast.ai",
+  "homepage": "https://docs.vast.ai/",
+  "repository": "vast-ai/docs",
+  "tag": "main",
+  "branch": "main",
+  "sourceCommittedAt": "2026-09-10T04:31:00Z",
+  "sourceCommit": "175a318c27750ea64da94f043dda39ec5cb26259",
+  "documentCount": 533,
+  "quarantined": [
+    {
+      "sourcePath": "sdk/python/reference/show-invoices-v1.mdx",
+      "reason": "Unable to convert Vast.ai page sdk/python/reference/show-invoices-v1.mdx: Unsupported expression type: SequenceExpression"
+    }
+  ],
+  "notes": [
+    "Pages follow the navigation declared in docs.json at the pinned commit; snippets are inlined into the pages that import them rather than published separately.",
+    "Endpoint pages are generated from api-reference/openapi.yaml, which is how the site itself publishes them: the navigation group naming the specification lists no pages.",
+    "Static MDX cards, tabs, accordions, steps, callouts, and parameter fields are normalized to Markdown without executing JavaScript.",
+    "Published page links resolve to https://docs.vast.ai; source assets point at the pinned commit."
+  ]
+}

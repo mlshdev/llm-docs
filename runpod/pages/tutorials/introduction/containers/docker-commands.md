@@ -1,0 +1,471 @@
+> Commit-pinned source for Runpod main: [tutorials/introduction/containers/docker-commands.mdx](https://docs.runpod.io/tutorials/introduction/containers/docker-commands)
+
+# Docker command reference
+
+Essential Docker CLI commands for building, running, managing, and debugging containers. Follow the implementation steps in this Runpod tutorial.
+
+This reference guide covers the most commonly used Docker commands for working with images and containers. Use this as a quick reference when building and deploying applications, especially for Runpod's bring-your-own-container (BYOC) workflows with [Serverless](https://docs.runpod.io/serverless/workers/overview) and [Pods](https://docs.runpod.io/pods/overview).
+
+## Building images
+
+These commands help you create and manage Docker images.
+
+### docker build
+
+Builds a Docker image from a Dockerfile. This is how you create custom images with your application code and dependencies.
+
+```bash
+# Build an image from the current directory
+docker build -t myapp:latest .
+
+# Build with a specific Dockerfile
+docker build -f Dockerfile.prod -t myapp:prod .
+
+# Build for a specific platform (important for Runpod)
+docker build --platform=linux/amd64 -t myapp:latest .
+```
+
+**Common options:**
+
+- `-t, --tag`: Name and optionally tag the image in `name:tag` format.
+- `-f, --file`: Specify a Dockerfile (default is `./Dockerfile`).
+- `--platform`: Set target platform for the build (use `linux/amd64` for Runpod).
+- `--no-cache`: Build without using cache from previous builds.
+- `--build-arg`: Set build-time variables defined in the Dockerfile.
+
+> **Note**
+>
+> **For Runpod deployments**: Always use `--platform=linux/amd64` when building on Apple Silicon Macs or ARM systems. Runpod's infrastructure requires AMD64 (x86\_64) architecture images.
+
+### docker images
+
+Lists Docker images available on your local system.
+
+```bash
+# List all images
+docker images
+
+# List images with specific name
+docker images myapp
+
+# Show all images including intermediate layers
+docker images -a
+```
+
+Each image shows its repository, tag, image ID, creation date, and size. Image IDs are useful when you need to reference an untagged image or want to be precise about which image to use.
+
+### docker tag
+
+Creates a new tag for an existing image, useful for versioning or preparing images for registry pushes.
+
+```bash
+# Tag an image for Docker Hub
+docker tag myapp:latest username/myapp:v1.0
+
+# Tag an image for a private registry
+docker tag myapp:latest registry.example.com/myapp:latest
+```
+
+Tags don't create copies of images; they're just additional names pointing to the same image data.
+
+### docker rmi
+
+Removes Docker images from your local system. Useful for cleaning up unused images and freeing disk space.
+
+```bash
+# Remove an image by name
+docker rmi myapp:latest
+
+# Remove an image by ID
+docker rmi abc123def456
+
+# Force remove an image even if containers use it
+docker rmi -f myapp:latest
+
+# Remove all unused images
+docker image prune
+```
+
+You can't remove an image if running containers are using it (unless you force it with `-f`).
+
+## Managing images in registries
+
+These commands help you share images via Docker registries.
+
+### docker login
+
+Authenticates with a Docker registry to push or pull private images.
+
+```bash
+# Log in to Docker Hub
+docker login
+
+# Log in with username
+docker login -u myusername
+
+# Log in to a private registry
+docker login registry.example.com
+```
+
+Credentials are stored locally, so you only need to log in once per registry. For Runpod, you'll typically push images to Docker Hub or a private registry, then configure your endpoint or Pod to pull from that registry.
+
+### docker push
+
+Uploads a Docker image to a registry, making it available for deployment.
+
+```bash
+# Push to Docker Hub
+docker push username/myapp:latest
+
+# Push a specific version
+docker push username/myapp:v1.0
+```
+
+Before pushing, make sure you've tagged your image with your registry username or private registry URL. For Runpod:
+
+- **Serverless**: After pushing your image, specify the image name when [deploying your worker](https://docs.runpod.io/serverless/workers/deploy). Runpod pulls the image when creating workers.
+- **Pods**: Reference your registry image when [choosing a Pod template](https://docs.runpod.io/pods/choose-a-pod) or [creating a custom template](https://docs.runpod.io/pods/templates/create-custom-template).
+
+### docker pull
+
+Downloads a Docker image from a registry to your local system.
+
+```bash
+# Pull latest version
+docker pull nginx
+
+# Pull specific version
+docker pull nginx:1.25
+
+# Pull from a private registry
+docker pull registry.example.com/myapp:latest
+```
+
+If you don't specify a tag, Docker pulls the `latest` tag by default. Be aware that `latest` doesn't necessarily mean the most recent version—it's just a tag name that image maintainers choose to use or not.
+
+> **Warning**
+>
+> **Avoid using `:latest` for production deployments.** The `:latest` tag changes every time someone pushes a new image without specifying a version. This can cause several problems:
+>
+> - **Unpredictable deployments**: You can't guarantee which version of your code is running.
+> - **Debugging difficulties**: When problems occur, you can't easily determine which image version caused them.
+> - **Caching conflicts**: Runpod caches images for faster startup. If you push a new `:latest` image, your workers or Pods may continue using the cached version.
+> - **No rollback path**: Without version tags, you can't quickly revert to a previous working version.
+>
+> Instead, use semantic versioning (e.g., `myapp:v1.0.0`) or commit-based tags (e.g., `myapp:abc123`). This makes deployments predictable and debugging straightforward.
+
+## Running containers
+
+These commands create and manage running containers.
+
+### docker run
+
+Creates and starts a new container from an image. This is the most commonly used Docker command.
+
+```bash
+# Run a simple command
+docker run busybox echo "Hello World"
+
+# Run in detached mode (background)
+docker run -d nginx
+
+# Run with a name
+docker run --name my-container nginx
+
+# Run with port mapping
+docker run -p 8080:80 nginx
+
+# Run with volume mount
+docker run -v $(pwd)/data:/data myapp
+
+# Run with environment variables
+docker run -e API_KEY=secret myapp
+
+# Run interactively with a shell
+docker run -it ubuntu /bin/bash
+```
+
+**Common options:**
+
+- `-d, --detach`: Run container in background.
+- `-p, --publish`: Map host port to container port (`host:container`).
+- `-v, --volume`: Mount a volume (`host_path:container_path`).
+- `-e, --env`: Set environment variables.
+- `--name`: Assign a name to the container.
+- `-it`: Interactive mode with terminal (for shells).
+- `--rm`: Automatically remove container when it exits.
+- `--gpus all`: Enable GPU access (relevant for Runpod Pods).
+
+### docker ps
+
+Lists running containers. Use this to check container status and get container IDs.
+
+```bash
+# List running containers
+docker ps
+
+# List all containers (including stopped)
+docker ps -a
+
+# Show only container IDs
+docker ps -q
+```
+
+The output shows container ID, image, command, creation time, status, ports, and name. Container IDs and names are useful for other commands like `docker stop`, `docker logs`, or `docker exec`.
+
+### docker stop
+
+Gracefully stops a running container by sending a SIGTERM signal, then SIGKILL if it doesn't stop within a timeout.
+
+```bash
+# Stop a container by name
+docker stop my-container
+
+# Stop a container by ID
+docker stop abc123
+
+# Stop multiple containers
+docker stop container1 container2 container3
+
+# Stop all running containers
+docker stop $(docker ps -q)
+```
+
+Stopped containers remain on your system until you remove them with `docker rm`.
+
+### docker start
+
+Starts a stopped container. Unlike `docker run`, this restarts an existing container rather than creating a new one.
+
+```bash
+# Start a stopped container
+docker start my-container
+
+# Start and attach to container output
+docker start -a my-container
+```
+
+### docker restart
+
+Stops and then starts a container. Useful for applying configuration changes or resolving issues.
+
+```bash
+docker restart my-container
+```
+
+### docker rm
+
+Removes stopped containers from your system.
+
+```bash
+# Remove a stopped container
+docker rm my-container
+
+# Force remove a running container
+docker rm -f my-container
+
+# Remove all stopped containers
+docker container prune
+```
+
+## Debugging containers
+
+These commands help you inspect and troubleshoot running containers.
+
+### docker logs
+
+Shows the stdout and stderr output from a container. Essential for debugging and monitoring.
+
+```bash
+# View logs
+docker logs my-container
+
+# Follow logs in real-time
+docker logs -f my-container
+
+# View last 100 lines
+docker logs --tail 100 my-container
+
+# View logs with timestamps
+docker logs -t my-container
+```
+
+For Runpod Serverless, you can view worker logs through the [web console](https://docs.runpod.io/serverless/development/logs). For Pods, `docker logs` helps debug containers you're running during development.
+
+### docker exec
+
+Executes a command in a running container. Extremely useful for debugging and inspecting container state.
+
+```bash
+# Open a shell in a running container
+docker exec -it my-container /bin/bash
+
+# Run a command and see output
+docker exec my-container ls -la /app
+
+# Run as a specific user
+docker exec -u root my-container apt-get update
+```
+
+This is invaluable when you need to inspect files, check processes, or debug issues in a running container.
+
+### docker inspect
+
+Returns detailed low-level information about containers or images in JSON format.
+
+```bash
+# Inspect a container
+docker inspect my-container
+
+# Get specific information with formatting
+docker inspect --format='{{.State.Status}}' my-container
+
+# Inspect an image
+docker inspect nginx:latest
+```
+
+Useful for getting IP addresses, environment variables, mount points, and other configuration details.
+
+## Volumes
+
+These commands manage persistent storage for containers.
+
+### docker volume create
+
+Creates a named volume that can persist data beyond container lifecycles.
+
+```bash
+# Create a volume
+docker volume create my-data
+
+# Create with specific driver
+docker volume create --driver local my-data
+```
+
+Named volumes are managed by Docker and stored in a Docker-managed location on the host. For more on volumes, see the [persist data guide](https://docs.runpod.io/tutorials/introduction/containers/persist-data).
+
+### docker volume ls
+
+Lists all volumes on your system.
+
+```bash
+docker volume ls
+```
+
+### docker volume rm
+
+Removes a volume. The volume must not be in use by any containers.
+
+```bash
+docker volume rm my-data
+```
+
+> **Note**
+>
+> When working with Runpod, see how to [attach network volumes](https://docs.runpod.io/storage/network-volumes) to persist data across Serverless workers or Pod instances. Network volumes provide persistent storage that survives container restarts and can be accessed by multiple workers or Pods.
+
+## Networks
+
+These commands manage Docker networks for container communication.
+
+### docker network create
+
+Creates a custom network that allows containers to communicate with each other.
+
+```bash
+# Create a bridge network
+docker network create my-network
+
+# Create with specific driver
+docker network create --driver bridge my-network
+```
+
+### docker network connect
+
+Connects a container to a network.
+
+```bash
+docker network connect my-network my-container
+```
+
+Containers on the same network can communicate using container names as hostnames.
+
+## Common workflows
+
+Here are typical command sequences for common tasks.
+
+### Build, tag, and push a custom image
+
+```bash
+# Build for Runpod with a version tag
+docker build --platform=linux/amd64 -t myapp:v1.0.0 .
+
+# Tag for Docker Hub
+docker tag myapp:v1.0.0 username/myapp:v1.0.0
+
+# Log in to Docker Hub
+docker login
+
+# Push to registry
+docker push username/myapp:v1.0.0
+```
+
+Use semantic versioning (e.g., `v1.0.0`) instead of `:latest` to ensure predictable deployments and easy rollbacks.
+
+### Develop with live code reloading
+
+```bash
+# Mount source code as a volume
+docker run -v $(pwd):/app -p 8000:8000 myapp
+
+# Changes to local files are reflected in the container
+```
+
+### Clean up unused resources
+
+```bash
+# Remove stopped containers
+docker container prune -f
+
+# Remove unused images
+docker image prune -a -f
+
+# Remove unused volumes
+docker volume prune -f
+
+# Remove everything unused (be careful!)
+docker system prune -a --volumes -f
+```
+
+### Debug a failing container
+
+```bash
+# Check if container is running
+docker ps -a
+
+# View logs
+docker logs my-container
+
+# Inspect container state
+docker inspect my-container
+
+# Execute shell for manual inspection
+docker exec -it my-container /bin/bash
+```
+
+## Learning more
+
+This reference covers the most essential Docker commands. For comprehensive documentation on all Docker CLI commands, see:
+
+- [Docker CLI reference](https://docs.docker.com/reference/cli/docker/)
+- [Dockerfile reference](https://docs.docker.com/reference/dockerfile/)
+- [Docker Compose reference](https://docs.docker.com/reference/compose-file/)
+
+## Next steps
+
+Now that you're familiar with Docker commands, explore:
+
+- [Persisting data with volumes](https://docs.runpod.io/tutorials/introduction/containers/persist-data) for machine learning workflows.
+- [Serverless worker deployment](https://docs.runpod.io/serverless/workers/deploy) to run your containers on Runpod.
+- [Creating Dockerfiles for Serverless](https://docs.runpod.io/serverless/workers/create-dockerfile) with Runpod-specific best practices.
+- [Pods overview](https://docs.runpod.io/pods/overview) to run long-running GPU containers.

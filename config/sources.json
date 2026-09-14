@@ -148,6 +148,22 @@
       "homepage": "https://www.postgresql.org/docs/18/"
     },
     {
+      "id": "vastai",
+      "kind": "github",
+      "title": "Vast.ai",
+      "repository": "vast-ai/docs",
+      "branch": "main",
+      "homepage": "https://docs.vast.ai/"
+    },
+    {
+      "id": "runpod",
+      "kind": "github",
+      "title": "Runpod",
+      "repository": "runpod/docs",
+      "branch": "main",
+      "homepage": "https://docs.runpod.io/"
+    },
+    {
       "id": "apple-swift",
       "kind": "docc",
       "catalog": "swift",

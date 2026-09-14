@@ -1,0 +1,178 @@
+> Commit-pinned source for Runpod main: [serverless/vllm/openai-compatibility.mdx](https://docs.runpod.io/serverless/vllm/openai-compatibility)
+
+# OpenAI API compatibility
+
+Use OpenAI client libraries with your vLLM workers. Review setup, configuration, deployment, and operations guidance for Runpod Serverless.
+
+vLLM workers implement OpenAI API compatibility, so you can use [OpenAI client libraries](https://developers.openai.com/api/docs/libraries) with your deployed models.
+
+To integrate with OpenAI-compatible tools, just configure the base URL and API key using your Runpod API key and Serverless endpoint ID.
+
+## Setup
+
+```python
+from openai import OpenAI
+
+client = OpenAI(
+    api_key="RUNPOD_API_KEY",
+    base_url="https://api.runpod.ai/v2/ENDPOINT_ID/openai/v1"
+)
+```
+
+```javascript
+import { OpenAI } from "openai";
+
+const client = new OpenAI({
+  apiKey: "RUNPOD_API_KEY",
+  baseURL: "https://api.runpod.ai/v2/ENDPOINT_ID/openai/v1"
+});
+```
+
+Replace `ENDPOINT_ID` and `RUNPOD_API_KEY` with your actual values.
+
+## Supported endpoints
+
+| Endpoint            | Description                                       |
+| ------------------- | ------------------------------------------------- |
+| `/chat/completions` | Chat model completions (instruction-tuned models) |
+| `/completions`      | Text completions (base models)                    |
+| `/models`           | List available models                             |
+
+## Chat completions
+
+For instruction-tuned models that follow a chat format.
+
+```python
+response = client.chat.completions.create(
+    model="mistralai/Mistral-7B-Instruct-v0.2",
+    messages=[
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": "Hello, who are you?"}
+    ],
+    temperature=0.7,
+    max_tokens=500
+)
+
+print(response.choices[0].message.content)
+```
+
+```python
+stream = client.chat.completions.create(
+    model="mistralai/Mistral-7B-Instruct-v0.2",
+    messages=[
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": "Write a short poem about stars."}
+    ],
+    temperature=0.7,
+    max_tokens=200,
+    stream=True
+)
+
+for chunk in stream:
+    if chunk.choices[0].delta.content:
+        print(chunk.choices[0].delta.content, end="", flush=True)
+```
+
+## Text completions
+
+For base models and raw text completion.
+
+```python
+response = client.completions.create(
+    model="mistralai/Mistral-7B-Instruct-v0.2",
+    prompt="Write a poem about artificial intelligence:",
+    temperature=0.7,
+    max_tokens=150
+)
+
+print(response.choices[0].text)
+```
+
+```python
+stream = client.completions.create(
+    model="mistralai/Mistral-7B-Instruct-v0.2",
+    prompt="The future of AI is",
+    temperature=0.7,
+    max_tokens=100,
+    stream=True
+)
+
+for chunk in stream:
+    print(chunk.choices[0].text or "", end="", flush=True)
+```
+
+## Model name
+
+The `model` parameter must match either:
+
+- The Hugging Face model you deployed (e.g., `mistralai/Mistral-7B-Instruct-v0.2`)
+- A custom name set via the `OPENAI_SERVED_MODEL_NAME_OVERRIDE` environment variable
+
+List available models:
+
+```python
+models = client.models.list()
+print([model.id for model in models])
+```
+
+## Parameters
+
+Standard OpenAI parameters are supported. Include them directly in your request.
+
+| Parameter           | Type               | Default  | Description                                      |
+| ------------------- | ------------------ | -------- | ------------------------------------------------ |
+| `model`             | `string`           | Required | Your deployed model name.                        |
+| `messages`          | `list`             | Required | Chat messages with `role` and `content`.         |
+| `prompt`            | `string`           | Required | Text completion prompt.                          |
+| `temperature`       | `float`            | `0.7`    | Sampling randomness. Lower = more deterministic. |
+| `max_tokens`        | `int`              | `16`     | Maximum tokens to generate.                      |
+| `top_p`             | `float`            | `1.0`    | Nucleus sampling threshold.                      |
+| `n`                 | `int`              | `1`      | Number of completions to generate.               |
+| `stop`              | `string` or `list` | None     | Stop sequences.                                  |
+| `stream`            | `bool`             | `false`  | Enable streaming.                                |
+| `presence_penalty`  | `float`            | `0.0`    | Penalize tokens already present.                 |
+| `frequency_penalty` | `float`            | `0.0`    | Penalize frequent tokens.                        |
+
+| Parameter             | Type    | Default | Description                          |
+| --------------------- | ------- | ------- | ------------------------------------ |
+| `best_of`             | `int`   | None    | Generate this many, return top `n`.  |
+| `top_k`               | `int`   | `-1`    | Top-k sampling. -1 = all tokens.     |
+| `repetition_penalty`  | `float` | `1.0`   | Penalize repeated tokens.            |
+| `min_p`               | `float` | `0.0`   | Minimum probability threshold.       |
+| `use_beam_search`     | `bool`  | `false` | Use beam search instead of sampling. |
+| `length_penalty`      | `float` | `1.0`   | Length penalty for beam search.      |
+| `ignore_eos`          | `bool`  | `false` | Continue after EOS token.            |
+| `skip_special_tokens` | `bool`  | `true`  | Omit special tokens from output.     |
+| `echo`                | `bool`  | `false` | Include prompt in output.            |
+
+## Environment variables
+
+Use these environment variables to customize the OpenAI compatibility:
+
+| Variable                            | Default     | Description                                 |
+| ----------------------------------- | ----------- | ------------------------------------------- |
+| `RAW_OPENAI_OUTPUT`                 | `1`         | Enable raw OpenAI SSE format for streaming. |
+| `OPENAI_SERVED_MODEL_NAME_OVERRIDE` | None        | Override model name in responses.           |
+| `OPENAI_RESPONSE_ROLE`              | `assistant` | Role for chat completion responses.         |
+
+See [environment variables reference](https://docs.runpod.io/serverless/vllm/environment-variables) for all options.
+
+## Differences from OpenAI
+
+- **Token counting** may differ due to different tokenizers.
+- **Rate limits** follow Runpod's policies, not OpenAI's.
+- **Function/tool calling** depends on model and vLLM support.
+- **Vision/multimodal** depends on underlying model support.
+
+## Troubleshooting
+
+| Issue                      | Solution                                    |
+| -------------------------- | ------------------------------------------- |
+| "Invalid model" error      | Verify model name matches your deployment.  |
+| Authentication error       | Use your Runpod API key, not an OpenAI key. |
+| Timeout errors             | Increase client timeout for large models.   |
+| Unexpected response format | Set `RAW_OPENAI_OUTPUT=1`.                  |
+
+## Integrate with workflow tools
+
+Follow the [n8n integration guide](https://docs.runpod.io/integrations/n8n-integration) to connect an OpenAI-compatible Runpod endpoint to an automated workflow.

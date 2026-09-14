@@ -1,0 +1,94 @@
+> Commit-pinned source for Runpod main: [instant-clusters/slurm-clusters.mdx](https://docs.runpod.io/instant-clusters/slurm-clusters)
+
+# Slurm Clusters
+
+Deploy Slurm Clusters on Runpod with zero configuration. Review setup, configuration, scaling, and operations guidance for Runpod Clusters.
+
+Runpod Slurm Clusters provide a managed high-performance computing and scheduling solution that enables you to rapidly create and manage Slurm Clusters with minimal setup.
+
+Slurm Clusters provide:
+
+- **Zero configuration setup:** Slurm and munge are pre-installed and fully configured.
+- **Instant provisioning:** Clusters deploy rapidly with minimal setup.
+- **Automatic role assignment:** Runpod automatically designates controller and agent nodes.
+
+For more information on working with Slurm, refer to the [Slurm documentation](https://slurm.schedmd.com/documentation.html).
+
+## Deploy a Slurm Cluster
+
+> **Tip**
+>
+> If you prefer to manually configure your Slurm deployment, see [Deploy an Instant Cluster with Slurm (unmanaged)](https://docs.runpod.io/instant-clusters/slurm) for a step-by-step guide.
+
+1. Open the [Instant Clusters page](https://console.runpod.io/cluster) on the Runpod console.
+2. Click **Create Cluster**.
+3. Select **Slurm Cluster** from the cluster type dropdown menu.
+4. Configure your cluster specifications:
+   - **Cluster name**: Enter a descriptive name for your cluster.
+   - **Pod count**: Choose the number of Pods in your cluster.
+   - **GPU type**: Select your preferred [GPU type](https://docs.runpod.io/references/gpu-types).
+   - **Region**: Choose your deployment region.
+   - **Network volume** (optional): Add a [network volume](https://docs.runpod.io/storage/network-volumes) for persistent/shared storage. If using a network volume, ensure the region matches your cluster region.
+   - **Pod template**: Select a [Pod template](https://docs.runpod.io/pods/templates/overview) or click **Edit Template** to customize start commands, environment variables, ports, or [container/volume disk](https://docs.runpod.io/pods/storage/types) capacity.
+     > **Warning**
+     >
+     > Slurm Clusters currently only support official Runpod Pytorch images. If you deploy using a different image, the Slurm process will not start.
+5. Click **Deploy Cluster**.
+
+## Connect to a Slurm Cluster
+
+Once deployment completes, you can access your cluster from the [Instant Clusters page](https://console.runpod.io/cluster).
+
+From this page you can select a cluster to view it's component nodes, including a label indicating the **Slurm controller** (primary node) and **Slurm agents** (secondary nodes). Expand a node to view details like availability, GPU/storage utilization, and options for connection and management.
+
+Connect to a node using the **Connect** button, or using any of the [connection methods supported by Pods](https://docs.runpod.io/pods/connect-to-a-pod).
+
+## Submit and manage jobs
+
+All standard Slurm commands are available without configuration. For example, you can:
+
+Check cluster status and available resources:
+
+```bash
+sinfo
+```
+
+Submit a job to the cluster from the Slurm controller node:
+
+```bash
+sbatch your-job-script.sh
+```
+
+Monitor job queue and status:
+
+```bash
+squeue
+```
+
+View detailed job information from the Slurm controller node:
+
+```bash
+scontrol show job JOB_ID
+```
+
+You can find the output of Slurm agents in their individual container logs.
+
+## Advanced configuration
+
+While Runpod's Slurm Clusters work out-of-the-box, you can customize your configuration by connecting to the Slurm controller node using the [web terminal or SSH](https://docs.runpod.io/pods/connect-to-a-pod).
+
+Access Slurm configuration files in their standard locations:
+
+- `/etc/slurm/slurm.conf` - Main configuration file.
+- `/etc/slurm/gres.conf` - Generic resource configuration.
+
+Modify these files as needed for your specific requirements.
+
+## Troubleshooting
+
+If you encounter issues with your Slurm Cluster, try the following:
+
+- **Jobs stuck in pending state:** Check resource availability with `sinfo` and ensure requested resources are available. If you need more resources, you can add more nodes to your cluster.
+- **Authentication errors:** Munge is pre-configured, but if issues arise, verify the munge service is running on all nodes.
+
+For additional support, contact [Runpod support](https://contact.runpod.io/hc/en-us) with your cluster ID and specific error messages.

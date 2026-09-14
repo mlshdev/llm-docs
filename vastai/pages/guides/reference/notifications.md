@@ -1,0 +1,138 @@
+> Commit-pinned source for Vast.ai main: [guides/reference/notifications.mdx](https://docs.vast.ai/guides/reference/notifications)
+
+# Notifications
+
+Choose which Vast.ai account, billing, and instance events reach you by email or through webhooks.
+
+Notifications let you decide which Vast.ai events you want to be told about, and where those messages go. A renter may only need low-balance and instance lifecycle alerts by email. An automated platform can subscribe to the same events through webhooks and route them into its own incident, billing, or orchestration system.
+
+The notification system is shared across the web console and the API. The console gives you a settings page for choosing events and destinations. The API gives developers access to the same notification types, preferences, and webhook tools.
+
+> **Note**
+>
+> This page covers renter notifications. If you also provide machines on Vast.ai, see [Host Notifications](https://docs.vast.ai/host/notifications) for host machine, verification, and maintenance events.
+
+## Where to Find Notification Settings
+
+Open [Account Settings](https://cloud.vast.ai/account/) and go to **Notification Settings**.
+
+![Notification Settings page with Account, Billing, and Instance notification groups](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/console-notifications-settings.png)
+
+The page groups events by the part of Vast.ai they affect:
+
+| Group        | What it covers                                                                                                                   |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| **Account**  | Email verification, password resets, email changes, team invitations, and similar account events                                 |
+| **Billing**  | Low balance, payment receipts, billing failures, and other payment events                                                        |
+| **Instance** | Instance creation, startup, stops, resumes, outbid events, offline/online state, contract end dates, downtime, and disk warnings |
+
+Some events are only shown when they apply to your account. For example, team-invitation events only appear if you belong to a team.
+
+For a description of every event in these groups, see the [full list of renter notifications](#all-renter-notifications) at the end of this page.
+
+## How Delivery Works
+
+Each notification type can be delivered over one or more channels:
+
+| Channel      | Use it for                                                |
+| ------------ | --------------------------------------------------------- |
+| **Email**    | Human-readable messages for events you want in your inbox |
+| **Webhooks** | Machine-readable HTTP events for your own systems         |
+
+Some emails are mandatory because they are tied to account access, billing protection, or imminent service disruption. Mandatory email notifications cannot be fully disabled from the settings page.
+
+> **Note**
+>
+> Email and webhook preferences are set per notification type.
+
+## Update Notifications in the Console
+
+1. Open **Account Settings**.
+2. Go to **Notification Settings**.
+3. Review each Account, Billing, and Instance section.
+4. Turn off email for any optional event you do not want in your inbox.
+5. For low-balance notifications, set the credit threshold that should trigger the warning.
+6. Select events that should be sent to a webhook, then create or edit the webhook destination.
+7. Click **Save**.
+
+> **Tip**
+>
+> Set your low-balance threshold below your autobilling threshold. That gives you an early warning if an automatic charge fails before your balance reaches zero.
+
+## Webhooks
+
+Webhooks are part of the notification system. They use the same event catalog and preferences as email notifications, but deliver events to an HTTPS endpoint that you operate.
+
+Use webhooks when you want to:
+
+- Trigger cleanup or orchestration when an instance changes state.
+- Mirror billing or account events into your own tools.
+- Build an audit trail outside the Vast console.
+
+See [Notification Webhooks](https://docs.vast.ai/guides/reference/notification-webhooks) for setup, payloads, signing, retries, and API examples.
+
+## Notification Type Keys
+
+Notification types are identified by a `key` with a context prefix. Renter events use the `client:` prefix, such as `client:low_credit` or `client:outbid`.
+
+Use the full `key` when subscribing webhooks or updating preferences. Because a similar event can exist for both renters and hosts, the full key avoids ambiguity. For the complete list of types, display names, and default channel settings, call [`GET /notification-types/`](https://docs.vast.ai/api-reference/notifications/list-notification-types).
+
+## Programmatic Access
+
+Building your own notification settings UI or automation? The full set of notification, preference, and webhook endpoints is documented in the [Notifications API](https://docs.vast.ai/api-reference/notifications/list-notification-types).
+
+## Good Defaults
+
+Start with this setup:
+
+| If you are...                         | Recommended setup                                                                    |
+| ------------------------------------- | ------------------------------------------------------------------------------------ |
+| Renting GPU instances manually        | Keep low balance, outbid, downtime, and contract end date emails enabled             |
+| Running automated workloads           | Add a webhook for instance lifecycle, downtime, outbid, and billing events           |
+| Building your own platform on Vast.ai | Use notification type keys, verify webhook signatures, and deduplicate by `event_id` |
+
+Review the settings periodically, especially after enabling autobilling or connecting a new automation workflow.
+
+## All Renter Notifications
+
+Every renter notification, grouped as it appears in Notification Settings.
+
+### Account
+
+| Notification           | What it tells you                                                                           |
+| ---------------------- | ------------------------------------------------------------------------------------------- |
+| **Email verification** | Confirms your email address when you sign up or change it. Required to secure your account. |
+| **Password reset**     | A password reset was requested for your account. If you didn't request it, contact support. |
+| **Email change**       | Confirms a change to the email address on your account.                                     |
+| **Team invitation**    | You've been invited to join a team on Vast.ai.                                              |
+
+### Billing
+
+| Notification                 | What it tells you                                                                     |
+| ---------------------------- | ------------------------------------------------------------------------------------- |
+| **Payment receipt**          | A record of each successful payment on your account.                                  |
+| **Credit transfer received** | Another user sent credits to your account.                                            |
+| **Payment failed**           | A payment on your account failed. Resolve it promptly to keep your instances running. |
+
+Low-balance warnings are configured on the [Billing page](https://cloud.vast.ai/billing/), alongside your credit threshold.
+
+### Instance
+
+| Notification                       | What it tells you                                                                                                                                                                                      |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Instance created**               | Your instance was created and is being set up.                                                                                                                                                         |
+| **Instance started**               | Your instance is up and running for the first time. Useful when large images take a while to load.                                                                                                     |
+| **Instance stopped**               | Your instance was stopped. Stopped instances still incur storage charges.                                                                                                                              |
+| **Instance resumed**               | Your interruptible instance got its GPU back and is running again. Reconnect and pick up your work without having to watch the console.                                                                |
+| **Instance deleted**               | Your instance was destroyed and its data removed.                                                                                                                                                      |
+| **Instance outbid**                | Your interruptible instance was outbid and paused. Know right away that your job has stopped, so you can raise your bid or move the work.                                                              |
+| **Instance maintenance scheduled** | The host of your machine scheduled maintenance that will affect your instance. Checkpoint your work ahead of the window.                                                                               |
+| **Upcoming instance downtime**     | Advance notice of downtime that will affect your instance.                                                                                                                                             |
+| **Instance offline**               | Your instance went down because of a problem on the host machine.                                                                                                                                      |
+| **Instance back online**           | Your instance recovered after an outage. Pairs with "Instance offline."                                                                                                                                |
+| **Instance error detected**        | Errors were detected on your instance, such as a container that failed to start.                                                                                                                       |
+| **Instance disk space low**        | Your instance's disk is running low on space. Free up space before jobs start failing.                                                                                                                 |
+| **Instance storage full**          | Your instance's disk is at 98%+ — the point where jobs start failing. Catching this early can save an overnight run.                                                                                   |
+| **Instance GPU idle**              | Your instance has been running for 24+ hours with its GPU doing almost nothing. You're billed whenever an instance is running, so this is your reminder to stop or destroy instances you're done with. |
+| **Instance expiring soon**         | Your rental contract is nearing its end date. Extend it or retrieve your data before it expires.                                                                                                       |
+| **Instance contract extended**     | Your instance's contract end date was extended.                                                                                                                                                        |

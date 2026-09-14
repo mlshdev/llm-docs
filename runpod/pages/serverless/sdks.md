@@ -1,0 +1,123 @@
+> Commit-pinned source for Runpod main: [serverless/sdks.mdx](https://docs.runpod.io/serverless/sdks)
+
+# Install the Runpod Serverless SDK
+
+Install and configure the Serverless SDK for Python, JavaScript, or Go to interact with Serverless endpoints programmatically.
+
+## Python
+
+The Python SDK requires Python 3.10 or higher.
+
+### Install
+
+Create a virtual environment and install the SDK:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install runpod
+```
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+pip install runpod
+```
+
+To verify the installation:
+
+```bash
+python -c "import runpod; print(runpod.__version__)"
+```
+
+### Configure your API key
+
+Set your API key as an environment variable and reference it in your code:
+
+```python
+import runpod
+import os
+
+runpod.api_key = os.getenv("RUNPOD_API_KEY")
+```
+
+> **Warning**
+>
+> Never hardcode your API key directly in your code. Always use environment variables or a secrets manager.
+
+For more information, see the [Python SDK on GitHub](https://github.com/runpod/runpod-python).
+
+## JavaScript
+
+The JavaScript SDK supports Node.js and modern JavaScript environments using ES modules.
+
+### Install
+
+```bash
+npm install --save runpod-sdk
+# or
+yarn add runpod-sdk
+```
+
+### Configure your API key
+
+```javascript
+import runpodSdk from "runpod-sdk";
+const { RUNPOD_API_KEY, ENDPOINT_ID } = process.env;
+
+const runpod = runpodSdk(RUNPOD_API_KEY);
+const endpoint = runpod.endpoint(ENDPOINT_ID);
+```
+
+For more information, see the [JavaScript SDK on GitHub](https://github.com/runpod/js-sdk) and the [npm package](https://www.npmjs.com/package/runpod-sdk).
+
+## Go
+
+### Install
+
+```bash
+go get github.com/runpod/go-sdk
+go mod tidy
+```
+
+### Configure your API key
+
+```go
+package main
+
+import (
+    "os"
+
+    "github.com/runpod/go-sdk/pkg/sdk/config"
+    rpEndpoint "github.com/runpod/go-sdk/pkg/sdk/endpoint"
+)
+
+func main() {
+    apiKey := os.Getenv("RUNPOD_API_KEY")
+    endpointId := os.Getenv("ENDPOINT_ID")
+
+    endpoint, err := rpEndpoint.New(
+        &config.Config{ApiKey: &apiKey},
+        &rpEndpoint.Option{EndpointId: &endpointId},
+    )
+    if err != nil {
+        panic(err)
+    }
+
+    // Use the endpoint...
+}
+```
+
+For more information, see the [Go SDK on GitHub](https://github.com/runpod/go-sdk) and the [Go package documentation](https://pkg.go.dev/github.com/runpod/go-sdk/pkg/sdk).
+
+## Use the SDKs
+
+For detailed examples of how to use the SDKs to interact with Serverless endpoints, see [Send API requests](https://docs.runpod.io/serverless/endpoints/send-requests).
+
+## Next steps
+
+Once you've installed and configured the SDK, you're ready to send requests to your Serverless endpoints:
+
+- [Send API requests](https://docs.runpod.io/serverless/endpoints/send-requests): Learn how to submit jobs, check status, and stream results.
+- [Create handler functions](https://docs.runpod.io/serverless/workers/handler-functions): Build custom workers to process your jobs.
+- [API reference](https://docs.runpod.io/api-reference/overview): Explore the full Runpod API for managing Pods, endpoints, and other resources.

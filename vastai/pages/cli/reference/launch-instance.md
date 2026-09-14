@@ -1,0 +1,148 @@
+> Commit-pinned source for Vast.ai main: [cli/reference/launch-instance.mdx](https://docs.vast.ai/cli/reference/launch-instance)
+
+# vastai launch instance
+
+Launch the top instance from the search offers based on the given parameters
+
+## Usage
+
+```bash
+vastai launch instance [--help] [--api-key API_KEY] <gpu_name> <num_gpus> <image> [geolocation] [disk_space]
+```
+
+## Options
+
+**Property (type: string)**
+
+Name of the GPU model, replace spaces with underscores (alias: `--gpu-name`) Choices: `A10`, `A100_PCIE`, `A100_SXM4`, `A100X`, `A10g`, `A40`, `A800_PCIE`, `B200`, `CMP_50HX`, `GTX_1050`, `GTX_1050_Ti`, `GTX_1060`, `GTX_1070`, `GTX_1070_Ti`, `GTX_1080`, `GTX_1080_Ti`, `GTX_1650`, `GTX_1650_S`, `GTX_1660`, `GTX_1660_S`, `GTX_1660_Ti`, `H100_NVL`, `H100_PCIE`, `H100_SXM`, `H200`, `H200_NVL`, `L4`, `L40`, `L40S`, `Q_RTX_4000`, `Q_RTX_5000`, `Q_RTX_6000`, `Q_RTX_8000`, `Quadro_P2000`, `Quadro_P4000`, `RTX_2000Ada`, `RTX_2060`, `RTX_2060S`, `RTX_2070`, `RTX_2070S`, `RTX_2080`, `RTX_2080S`, `RTX_2080_Ti`, `RTX_3050`, `RTX_3060`, `RTX_3060_laptop`, `RTX_3060_Ti`, `RTX_3070`, `RTX_3070_laptop`, `RTX_3070_Ti`, `RTX_3080`, `RTX_3080_Ti`, `RTX_3090`, `RTX_3090_Ti`, `RTX_4000Ada`, `RTX_4060`, `RTX_4060_Ti`, `RTX_4070`, `RTX_4070S`, `RTX_4070S_Ti`, `RTX_4070_Ti`, `RTX_4080`, `RTX_4080S`, `RTX_4090`, `RTX_4090D`, `RTX_4500Ada`, `RTX_5000Ada`, `RTX_5060`, `RTX_5060_Ti`, `RTX_5070`, `RTX_5070_Ti`, `RTX_5080`, `RTX_5090`, `RTX_5880Ada`, `RTX_6000Ada`, `RTX_A2000`, `RTX_A4000`, `RTX_A4500`, `RTX_A5000`, `RTX_A6000`, `RTX_PRO_4000`, `RTX_PRO_4500`, `RTX_PRO_5000`, `RTX_PRO_6000_S`, `RTX_PRO_6000_WS`, `Tesla_P100`, `Tesla_P4`, `Tesla_P40`, `Tesla_T4`, `Tesla_V100`, `Titan_RTX`, `Titan_V`, `Titan_Xp`
+
+**Property (type: string)**
+
+Number of GPUs required (alias: `--num-gpus`) Choices: `1`, `2`, `4`, `8`, `12`, `14`
+
+**Property (type: string)**
+
+Geographical location of the instance (alias: `--region`)
+
+**Property (type: string)**
+
+Name of the image to use for instance (alias: `--image`)
+
+**Property (type: number)**
+
+Disk space required in GB (alias: `--disk`)
+
+**Property (type: integer)**
+
+**Property (type: string)**
+
+Comma-separated list of fields to sort on. postfix field with - to sort desc. ex: -o 'num\_gpus,total\_flops-'.  default='score-' (alias: `--order`)
+
+**Property (type: string)**
+
+docker login arguments for private repo authentication, surround with ''
+
+**Property (type: string)**
+
+label to set on the instance
+
+**Property (type: string)**
+
+filename to use as onstart script
+
+**Property (type: string)**
+
+contents of onstart script as single argument
+
+**Property (type: string)**
+
+override entrypoint for args launch instance
+
+**Property (type: boolean)**
+
+Launch as an ssh instance type
+
+**Property (type: boolean)**
+
+Launch as a jupyter instance instead of an ssh instance
+
+**Property (type: boolean)**
+
+Use (faster) direct connections for jupyter & ssh
+
+**Property (type: string)**
+
+For runtype 'jupyter', directory in instance to use to launch jupyter. Defaults to image's working directory
+
+**Property (type: boolean)**
+
+For runtype 'jupyter', Launch instance with jupyter lab
+
+**Property (type: boolean)**
+
+Workaround for images with locale problems: install and generate locales before instance launch, and set locale to C.UTF-8
+
+**Property (type: boolean)**
+
+Workaround for images with locale problems: set python's locale to C.UTF-8
+
+**Property (type: string)**
+
+env variables and port mapping options, surround with ''
+
+**Property (type: string)**
+
+list of arguments passed to container ENTRYPOINT. Onstart is recommended for this purpose. (must be last argument)
+
+**Property (type: boolean)**
+
+Return error if scheduling fails (rather than creating a stopped instance)
+
+**Property (type: string)**
+
+template hash which contains all relevant information about an instance. This can be used as a replacement for other parameters describing the instance configuration
+
+## Description
+
+Launches an instance based on the given parameters. The instance will be created with the top offer from the search results.
+Besides the gpu\_name and num\_gpus, you must pass in an '`--image`' argument as a minimum.
+
+If you use args/entrypoint launch mode, we create a container from your image as is, without attempting to inject ssh and or jupyter.
+If you use the args launch mode, you can override the entrypoint with `--entrypoint`, and pass arguments to the entrypoint with `--args`.
+If you use `--args`, that must be the last argument, as any following tokens are consumed into the args string.
+For ssh/jupyter launch types, use `--onstart-cmd` to pass in startup script, instead of `--entrypoint` and `--args`.
+
+## Examples
+
+```bash
+# launch a single RTX 3090 instance with the pytorch image and 16 GB of disk space located anywhere
+vastai launch instance -g RTX_3090 -n 1 -i pytorch/pytorch
+
+# launch a 4x RTX 3090 instance with the pytorch image and 32 GB of disk space located in North America
+vastai launch instance -g RTX_3090 -n 4 -i pytorch/pytorch -d 32.0 -r North_America
+```
+
+## Key Options
+
+| Field                      | Type   | Description                                                                    |
+| -------------------------- | ------ | ------------------------------------------------------------------------------ |
+| `num_gpus`                 | int    | number of GPUs                                                                 |
+| `gpu_name`                 | string | GPU model name                                                                 |
+| `region`                   | string | region of the instance                                                         |
+| `image`                    | string | Docker image name                                                              |
+| `disk_space`               | float  | disk space in GB                                                               |
+| `ssh`, `jupyter`, `direct` | bool   | flags to specify instance type and connection method                           |
+| `env`                      | string | environment variables and port mappings, encapsulated in single quotes         |
+| `args`                     | list   | arguments passed to the container's ENTRYPOINT (only if `--args` is specified) |
+
+## Global Options
+
+The following options are available for all commands:
+
+| Option          | Description                                           |
+| --------------- | ----------------------------------------------------- |
+| `--url URL`     | Server REST API URL                                   |
+| `--retry N`     | Retry limit                                           |
+| `--raw`         | Output machine-readable JSON                          |
+| `--explain`     | Verbose explanation of API calls                      |
+| `--api-key KEY` | API key (defaults to `~/.config/vastai/vast_api_key`) |

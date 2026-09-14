@@ -1,8 +1,12 @@
 import { describe, expect, test } from "bun:test";
 import {
+  generatedOperationRoute,
+  mintlifyGeneratedGroups,
   mintlifyOpenApiSpecs,
   mintlifyRoute,
   mintlifySections,
+  mintlifySlug,
+  openApiOperations,
   parseMintlifyOpenApiOperation,
   parseOpenApiSpec,
   renderOpenApiOperationBody,
@@ -341,5 +345,172 @@ paths:
         "/api/v1/runs",
       ),
     ).toThrow("external reference");
+  });
+});
+
+describe("mintlifySlug", () => {
+  test("separates words inside an identifier", () => {
+    expect(mintlifySlug("createApiKey")).toBe("create-api-key");
+    expect(mintlifySlug("getMachines")).toBe("get-machines");
+  });
+
+  // An acronym is one run of capitals, so it stays one segment; every route the
+  // live site serves is reproduced without splitting it further.
+  test("keeps an acronym whole", () => {
+    expect(mintlifySlug("showSSHKeys")).toBe("show-sshkeys");
+  });
+
+  test("collapses every run of separators into one hyphen", () => {
+    expect(mintlifySlug("Network Volumes")).toBe("network-volumes");
+    expect(mintlifySlug("  cancel / copy  ")).toBe("cancel-copy");
+  });
+});
+
+describe("mintlifyGeneratedGroups", () => {
+  const navigation = {
+    tabs: [
+      {
+        tab: "API",
+        groups: [
+          { group: "Overview", pages: ["api-reference/introduction"] },
+          { group: "Endpoints", openapi: "api-reference/openapi.yaml" },
+        ],
+      },
+    ],
+  };
+
+  test("finds a group that names a specification and lists no pages", () => {
+    expect(mintlifyGeneratedGroups(navigation)).toEqual([
+      { specPath: "api-reference/openapi.yaml", section: "Endpoints" },
+    ]);
+  });
+
+  test("ignores a group that lists its pages itself", () => {
+    expect(
+      mintlifyGeneratedGroups({
+        groups: [
+          {
+            group: "Endpoints",
+            openapi: "openapi.yaml",
+            pages: ["api-reference/introduction"],
+          },
+        ],
+      }),
+    ).toEqual([]);
+  });
+});
+
+describe("openApiOperations", () => {
+  const spec = parseOpenApiSpec(
+    `
+paths:
+  /api/v0/users:
+    get:
+      operationId: showUser
+      summary: show user
+      tags: [Accounts]
+    post:
+      operationId: setUser
+      tags: [Accounts]
+`,
+    "openapi.yaml",
+  );
+
+  test("reads every operation a path declares", () => {
+    expect(openApiOperations(spec, "openapi.yaml")).toEqual([
+      {
+        method: "get",
+        route: "/api/v0/users",
+        operationId: "showUser",
+        summary: "show user",
+        tag: "Accounts",
+      },
+      {
+        method: "post",
+        route: "/api/v0/users",
+        operationId: "setUser",
+        tag: "Accounts",
+      },
+    ]);
+  });
+
+  test("refuses an operation the site could not name a page after", () => {
+    const unnamed = parseOpenApiSpec(
+      `
+paths:
+  /api/v0/users:
+    get:
+      summary: show user
+`,
+      "openapi.yaml",
+    );
+    expect(() => openApiOperations(unnamed, "openapi.yaml")).toThrow(
+      "no operationId",
+    );
+  });
+});
+
+describe("generatedOperationRoute", () => {
+  test("names the page after the summary, under the spec directory", () => {
+    expect(
+      generatedOperationRoute(
+        {
+          method: "get",
+          route: "/api/v0/machines",
+          operationId: "getMachines",
+          summary: "show machines",
+          tag: "Machines",
+        },
+        "api-reference/openapi.yaml",
+      ),
+    ).toBe("api-reference/machines/show-machines");
+  });
+
+  test("falls back to the identifier when an operation has no summary", () => {
+    expect(
+      generatedOperationRoute(
+        {
+          method: "get",
+          route: "/api/v0/machines",
+          operationId: "getMachines",
+          tag: "Machines",
+        },
+        "api-reference/openapi.yaml",
+      ),
+    ).toBe("api-reference/machines/get-machines");
+  });
+
+  test("omits the tag segment for an untagged operation", () => {
+    expect(
+      generatedOperationRoute(
+        { method: "get", route: "/x", operationId: "getX", summary: "get x" },
+        "openapi.yaml",
+      ),
+    ).toBe("get-x");
+  });
+});
+
+describe("renderOpenApiOperationBody", () => {
+  const spec = parseOpenApiSpec(
+    `
+paths:
+  /api/v0/users:
+    get:
+      summary: show user
+      description: Reads the current user.
+`,
+    "openapi.yaml",
+  );
+
+  test("omits the summary a generated page already carries as its title", () => {
+    const body = renderOpenApiOperationBody(
+      spec,
+      "openapi.yaml",
+      "get",
+      "/api/v0/users",
+      false,
+    );
+    expect(body).not.toContain("**show user**");
+    expect(body).toContain("Reads the current user.");
   });
 });

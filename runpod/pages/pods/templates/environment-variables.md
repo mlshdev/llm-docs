@@ -1,0 +1,95 @@
+> Commit-pinned source for Runpod main: [pods/templates/environment-variables.mdx](https://docs.runpod.io/pods/templates/environment-variables)
+
+# Environment variables
+
+Configure Pods with environment variables for settings, secrets, and runtime information. See setup and usage details for Runpod Pods.
+
+Environment variables are key-value pairs accessible within your Pods container. Use them to pass configuration settings, secrets, and runtime information without hardcoding values into your code or container image.
+
+## Set environment variables
+
+You can configure up to 50 environment variables per Pod.
+
+**During Pod creation:**
+
+1. Click **Edit Template** and expand **Environment Variables**.
+2. Click **Add Environment Variable** and enter the key-value pair.
+
+**In Pod templates:**
+
+1. Navigate to [My Templates](https://www.console.runpod.io/user/templates).
+2. Create or edit a template and add variables in the **Environment Variables** section.
+
+**Using secrets:**
+
+Reference [Runpod secrets](https://docs.runpod.io/pods/templates/secrets) for sensitive data:
+
+```
+API_KEY={{ RUNPOD_SECRET_my_api_key }}
+DATABASE_PASSWORD={{ RUNPOD_SECRET_db_password }}
+```
+
+## Update environment variables
+
+1. Go to [Pods](https://www.console.runpod.io/user/pods) and click the three dots next to your Pod.
+2. Select **Edit Pod** and expand **Environment Variables**.
+3. Add or update variables and click **Save**.
+
+> **Warning**
+>
+> Updating environment variables restarts your Pod, clearing all data outside your volume mount path (`/workspace` by default).
+
+## Access environment variables
+
+**In your Pod's terminal:**
+
+```bash
+echo $VARIABLE_NAME     # View specific variable
+env | grep RUNPOD       # List Runpod variables
+```
+
+**In your code:**
+
+```python
+import os
+
+model_name = os.environ.get('MODEL_NAME', 'default-model')
+api_key = os.environ['API_KEY']  # Raises error if not set
+```
+
+```javascript
+const modelName = process.env.MODEL_NAME || 'default-model';
+const apiKey = process.env.API_KEY;
+```
+
+```bash
+MODEL_NAME=${MODEL_NAME:-"default-model"}
+echo "Using model: $MODEL_NAME"
+```
+
+## Runpod-provided variables
+
+Runpod automatically sets these environment variables:
+
+| Variable              | Description                       |
+| --------------------- | --------------------------------- |
+| `RUNPOD_POD_ID`       | Unique Pod identifier.            |
+| `RUNPOD_DC_ID`        | Data center identifier.           |
+| `RUNPOD_POD_HOSTNAME` | Server hostname.                  |
+| `RUNPOD_GPU_COUNT`    | Number of GPUs available.         |
+| `RUNPOD_CPU_COUNT`    | Number of CPUs available.         |
+| `RUNPOD_PUBLIC_IP`    | Public IP address (if available). |
+| `RUNPOD_TCP_PORT_22`  | Public port mapped to SSH.        |
+| `RUNPOD_VOLUME_ID`    | Attached network volume ID.       |
+| `RUNPOD_API_KEY`      | Pod-scoped API key.               |
+| `PUBLIC_KEY`          | Authorized SSH public keys.       |
+| `CUDA_VERSION`        | Installed CUDA version.           |
+| `PYTORCH_VERSION`     | Installed PyTorch version.        |
+
+## Best practices
+
+- **Use secrets for sensitive data**: Never hardcode API keys or passwords. Use [Runpod secrets](https://docs.runpod.io/pods/templates/secrets).
+- **Validate required variables**: Check that critical variables are set before your application starts.
+- **Provide defaults**: Use fallback values for non-critical configuration.
+- **Use descriptive names**: Prefer `DATABASE_PASSWORD` over `DB_PASS`.
+- **Group related variables**: Use consistent prefixes like `DB_HOST`, `DB_PORT`, `DB_NAME`.
