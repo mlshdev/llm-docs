@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/_index.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/_index.md)
+> Pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/_index.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/_index.md)
 
 **Hardened Docker Desktop requirements**
 
@@ -118,7 +118,7 @@ $ docker run -it --rm --userns=host alpine
          0     100000      65536
 ```
 
-Docker build operations using `--network-host` and Docker buildx entitlements (`network.host`,
+Docker build operations using `--network-host` and Docker Buildx entitlements (`network.host`,
 `security.insecure`) are also blocked.
 
 ### Protected bind mounts

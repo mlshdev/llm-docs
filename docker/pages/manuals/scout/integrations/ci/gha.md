@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/scout/integrations/ci/gha.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/scout/integrations/ci/gha.md)
+> Pinned source for Docker main: [content/manuals/scout/integrations/ci/gha.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/scout/integrations/ci/gha.md)
 
 # Integrate Docker Scout with GitHub Actions
 
@@ -95,7 +95,7 @@ jobs:
 
 This creates workflow steps to:
 
-1. Set up Docker buildx.
+1. Set up Docker Buildx.
 2. Authenticate to the registry.
 3. Extract metadata from Git reference and GitHub events.
 4. Build and push the Docker image to the registry.
@@ -147,11 +147,11 @@ showing only what's changed.
 The GitHub Action outputs the comparison results in a pull request comment by
 default.
 
-![A screenshot showing the results of Docker Scout output in a GitHub Action](https://raw.githubusercontent.com/docker/docs/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/scout/images/gha-output.webp)
+![A screenshot showing the results of Docker Scout output in a GitHub Action](https://raw.githubusercontent.com/docker/docs/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/scout/images/gha-output.webp)
 
 Expand the **Policies** section to view the difference in policy compliance
 between the two images. Note that while the new image in this example isn't
 fully compliant, the output shows that the standing for the new image has
 improved compared to the baseline.
 
-![GHA policy evaluation output](https://raw.githubusercontent.com/docker/docs/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/scout/images/gha-policy-eval.webp)
+![GHA policy evaluation output](https://raw.githubusercontent.com/docker/docs/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/scout/images/gha-policy-eval.webp)

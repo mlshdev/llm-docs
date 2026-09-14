@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/deployment/preview-branches.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/deployment/preview-branches.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/deployment/preview-branches.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/deployment/preview-branches.mdx)
 > Canonical documentation: https://trigger.dev/docs/deployment/preview-branches
 
 # Preview branches
@@ -9,7 +9,7 @@ Create isolated environments for each branch of your code, allowing you to test 
 
 The preview environment is special – you create branches from it. The branches you create live under the preview environment and have all the features you're used to from other environments (like staging or production). That means you can trigger runs, have schedules, test them, use Realtime, etc.
 
-![Preview environment and branches](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/deployment/preview-environment-branches.png)
+![Preview environment and branches](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/deployment/preview-environment-branches.png)
 
 We recommend you automatically create a preview branch for each git branch when a Pull Request is opened and then archive it automatically when the PR is merged/closed.
 
@@ -17,7 +17,7 @@ The process to use preview branches looks like this:
 
 1. Create a preview branch
 2. Deploy to the preview branch (1+ times)
-3. Trigger runs using your Preview API key (`TRIGGER_SECRET_KEY`) and the branch name (`TRIGGER_PREVIEW_BRANCH`).
+3. Create a named **Trigger only** API key in the Preview environment, then trigger runs using the key (`TRIGGER_SECRET_KEY`) and branch name (`TRIGGER_PREVIEW_BRANCH`).
 4. Archive the preview branch when the branch is done.
 
 There are two main ways to do this:
@@ -43,12 +43,12 @@ For full details see our [pricing page](https://trigger.dev/pricing).
 
 ## Triggering runs and using the SDK
 
-Before we talk about how to deploy to preview branches, one important thing to understand is that you must set the `TRIGGER_PREVIEW_BRANCH` environment variable as well as the `TRIGGER_SECRET_KEY` environment variable.
+Create a named API key in the Preview environment and set it as `TRIGGER_SECRET_KEY`. Set `TRIGGER_PREVIEW_BRANCH` to select the branch that receives the runs.
 
 When deploying to somewhere that supports `process.env` (like Node.js runtimes) you can just set the environment variables:
 
 ```bash
-TRIGGER_SECRET_KEY="tr_preview_1234567890"
+TRIGGER_SECRET_KEY="tr_preview_sk_1234567890"
 TRIGGER_PREVIEW_BRANCH="your-branch-name"
 ```
 
@@ -59,7 +59,7 @@ import { configure } from "@trigger.dev/sdk";
 import { myTask } from "./trigger/myTasks";
 
 configure({
-  secretKey: "tr_preview_1234567890", // WARNING: Never actually hardcode your secret key like this
+  secretKey: "tr_preview_sk_1234567890", // WARNING: Never actually hardcode your secret key like this
   previewBranch: "your-branch-name",
 });
 
@@ -166,18 +166,18 @@ Again we will try auto-detect the current branch. But you can specify the branch
 
 From the "Preview branches" page you can create a branch:
 
-![Preview branches page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/deployment/preview-branches.png)
-![Create preview branch](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/deployment/preview-branches-new.png)
+![Preview branches page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/deployment/preview-branches.png)
+![Create preview branch](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/deployment/preview-branches-new.png)
 
 You can also archive a branch:
 
-![Archive preview branch](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/deployment/preview-branches-archive.png)
+![Archive preview branch](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/deployment/preview-branches-archive.png)
 
 ## Environment variables
 
 You can set environment variables for "Preview" and they will get applied to all branches (existing and new). You can also set environment variables for a specific branch. If they are set for both then the branch-specific variables will take precedence.
 
-![Environment variables](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/deployment/preview-environment-variables.png)
+![Environment variables](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/deployment/preview-environment-variables.png)
 
 These can be set manually in the dashboard, or automatically at deploy time using the [syncEnvVars()](https://trigger.dev/docs/config/extensions/syncEnvVars) or [syncVercelEnvVars()](https://trigger.dev/docs/config/extensions/syncEnvVars#syncvercelenvvars) build extensions.
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/ai-chat/side-channels.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/ai-chat/side-channels.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/ai-chat/side-channels.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/ai-chat/side-channels.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/side-channels
 
 # Side channels
@@ -139,7 +139,7 @@ A side channel's streams are bounded by the same retention as the rest of your r
 
 ## Auth
 
-A side channel is covered by the session's public access token: a token scoped to `read:sessions:{id}` / `write:sessions:{id}` grants every channel of that session. Mint a narrower token scoped to a single channel with `read:sessions:{id}:channels:{name}`. Writing a channel's `.out` requires secret-key auth (only the agent run), so a browser cannot forge frames; `.in` is writable with the session token. See [Realtime auth](https://trigger.dev/docs/realtime/auth).
+A side channel is covered by the session's public access token: a token scoped to `read:sessions:{id}` / `write:sessions:{id}` grants every channel of that session. Mint a narrower token scoped to a single channel with `read:sessions:{id}:channels:{name}`, or to one direction of it with `read:sessions:{id}:channels:{name}:out`. Writing a channel's `.out` requires secret-key auth (only the agent run), so a browser cannot forge frames; `.in` is writable with the session token. See [Realtime auth](https://trigger.dev/docs/realtime/auth).
 
 ### Scope tokens to the channel, not the whole session
 

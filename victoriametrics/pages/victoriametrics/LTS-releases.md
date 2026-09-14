@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/LTS-releases.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/LTS-releases.md)
+> Pinned source for VictoriaMetrics v1.152.0: [docs/victoriametrics/LTS-releases.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/LTS-releases.md)
 
 [Enterprise version of VictoriaMetrics](https://docs.victoriametrics.com/victoriametrics/enterprise/) provides long-term support lines of releases (aka LTS releases).
 Every LTS line receives bugfixes and [security fixes](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/SECURITY.md) for 12 months after
@@ -14,5 +14,5 @@ to [the latest available releases](https://docs.victoriametrics.com/victoriametr
 
 ## Currently supported LTS release lines
 
-- v1.148.x - the latest one is [v1.148.2 LTS release](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.148.2)
-- v1.136.x - the latest one is [v1.136.16 LTS release](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.136.16)
+- v1.148.x - the latest one is [v1.148.3 LTS release](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.148.3)
+- v1.136.x - the latest one is [v1.136.17 LTS release](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.136.17)

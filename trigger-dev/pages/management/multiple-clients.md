@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/management/multiple-clients.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/management/multiple-clients.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/management/multiple-clients.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/management/multiple-clients.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/multiple-clients
 
 # Multiple SDK clients
@@ -25,12 +25,12 @@ await preview.runs.list({ status: ["COMPLETED"] });
 
 `TriggerClient` accepts the same fields as `configure()`:
 
-| Field            | Description                                                                                        | Env-var fallback                                       |
-| ---------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
-| `accessToken`    | Secret key (`tr_dev_*`, `tr_prod_*`, `tr_preview_*`) or personal access token (`tr_pat_*`).        | `TRIGGER_SECRET_KEY`, then `TRIGGER_ACCESS_TOKEN`      |
-| `previewBranch`  | Preview branch name when using a `tr_preview_*` key.                                               | `TRIGGER_PREVIEW_BRANCH`, then `VERCEL_GIT_COMMIT_REF` |
-| `baseURL`        | Override the Trigger.dev API URL. Defaults to `https://api.trigger.dev`.                           | `TRIGGER_API_URL`                                      |
-| `requestOptions` | Request-level options (retry policy, additional headers, etc.) — see the `ApiRequestOptions` type. | —                                                      |
+| Field            | Description                                                                                                   | Env-var fallback                                       |
+| ---------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| `accessToken`    | Environment API key (`tr_dev_sk_*`, `tr_prod_sk_*`, `tr_preview_sk_*`) or personal access token (`tr_pat_*`). | `TRIGGER_SECRET_KEY`, then `TRIGGER_ACCESS_TOKEN`      |
+| `previewBranch`  | Preview branch name when using a `tr_preview_sk_*` key.                                                       | `TRIGGER_PREVIEW_BRANCH`, then `VERCEL_GIT_COMMIT_REF` |
+| `baseURL`        | Override the Trigger.dev API URL. Defaults to `https://api.trigger.dev`.                                      | `TRIGGER_API_URL`                                      |
+| `requestOptions` | Request-level options (retry policy, additional headers, etc.) — see the `ApiRequestOptions` type.            | —                                                      |
 
 Fields not passed to the constructor fall back to the matching env var (and then to a sensible default for `baseURL`). Explicit constructor values always win, so you can mix env-var-backed clients and fully explicit clients in the same process.
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/ai-chat/upgrade-guide.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/ai-chat/upgrade-guide.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/ai-chat/upgrade-guide.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/ai-chat/upgrade-guide.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/upgrade-guide
 
 # Upgrade Guide: prerelease → Sessions-as-run-manager
@@ -295,8 +295,8 @@ and direct API consumers.
   fire at the same lifecycle points.
 - `onAction` is still defined the same way, but its semantics changed
   in the [May 6 prerelease](https://trigger.dev/docs/ai-chat/changelog) — actions are no longer
-  turns, and `onAction` returning a `StreamTextResult` produces a model
-  response.
+  turns. To answer after an action's edit, return `chat.turn()`; returning
+  a `StreamTextResult` is no longer supported.
 - `chat.customAgent({...})` and the `chat.createSession(payload, ...)`
   helper for building a session loop manually inside a custom agent.
 - `chat.defer` (deferred work) and `chat.history` (imperative history

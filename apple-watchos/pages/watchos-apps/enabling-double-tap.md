@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple watchOS snapshot-49fd8d0a44e2: [documentation/watchos-apps/enabling-double-tap](https://developer.apple.com/documentation/watchos-apps/enabling-double-tap)
+> Snapshot-pinned source payload for Apple watchOS snapshot-2bb3946a9b15; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/watchos-apps/enabling-double-tap
 
 # Enabling the double-tap gesture on Apple Watch
 

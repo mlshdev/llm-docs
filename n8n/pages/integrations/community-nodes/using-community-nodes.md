@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/community-nodes/using-community-nodes.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/community-nodes/using-community-nodes.md)
+> Pinned source for n8n main: [docs/integrations/community-nodes/using-community-nodes.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/integrations/community-nodes/using-community-nodes.md)
 
 # Using community nodes <a id="using-community-nodes"></a>
 
@@ -6,7 +6,7 @@ To use community nodes, you first need to [install](https://docs.n8n.io/integrat
 
 ## Adding community nodes to your workflow <a id="adding-community-nodes-to-your-workflow"></a>
 
-After installing a community node, you can use it like any other node. n8n displays the node in search results in the **Nodes** panel. n8n marks community nodes with a **Package** ![Package icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/.gitbook/assets/package.png) icon in the nodes panel.
+After installing a community node, you can use it like any other node. n8n displays the node in search results in the **Nodes** panel. n8n marks community nodes with a **Package** ![Package icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/integrations/.gitbook/assets/package.png) icon in the nodes panel.
 
 ## Community nodes with duplicate names <a id="community-nodes-with-duplicate-names"></a>
 

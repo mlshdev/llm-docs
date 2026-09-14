@@ -1,6 +1,6 @@
 # FFmpeg master
 
-> Documentation generated from the latest `master` branch commit of [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) and pinned to immutable source commit `6efe500d2e9e24a81bffda8825511f6bc9760cb1`.
+> Documentation generated from the latest `master` branch commit of [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) and pinned to immutable source commit `639ee849526cfe61ceb312776335c245b98bd9d4`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for FFmpeg master.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -16,8 +16,8 @@
 - [Description](pages/doc/ffmpeg-utils.md): This document describes some generic features and utilities provided by the libavutil library. (22298 bytes)
 - [Description](pages/doc/ffmpeg-scaler.md): The FFmpeg rescaler provides a high-level interface to the libswscale library image conversion utilities. In particular it allows one to perform image rescaling and pixel format conversion. (5815 bytes)
 - [Description](pages/doc/ffmpeg-resampler.md): The FFmpeg resampler provides a high-level interface to the libswresample library audio resampling utilities. In particular it allows one to perform audio resampling, audio channel layout rematrixing, and convert audio… (7850 bytes)
-- [Description](pages/doc/ffmpeg-codecs.md): This document describes the codecs (decoders and encoders) provided by the libavcodec library. (172824 bytes)
-- [Description](pages/doc/ffmpeg-formats.md): This document describes the supported formats (muxers and demuxers) provided by the libavformat library. (192563 bytes)
+- [Description](pages/doc/ffmpeg-codecs.md): This document describes the codecs (decoders and encoders) provided by the libavcodec library. (177326 bytes)
+- [Description](pages/doc/ffmpeg-formats.md): This document describes the supported formats (muxers and demuxers) provided by the libavformat library. (194345 bytes)
 - [Description](pages/doc/ffmpeg-devices.md): This document describes the input and output devices provided by the libavdevice library. (60331 bytes)
 - [Description](pages/doc/ffmpeg-filters.md): This document describes filters, sources, and sinks provided by the libavfilter library. (889656 bytes)
 - [Description](pages/doc/ffmpeg-protocols.md): This document describes the input and output protocols provided by the libavformat library. (77673 bytes)
@@ -25,7 +25,7 @@
 - [Introduction](pages/doc/developer.md): This text is concerned with the development of FFmpeg itself. Information on using the FFmpeg libraries in other programs can be found elsewhere, e.g. in: ----------------------------------------------------------------… (43485 bytes)
 - [General Questions](pages/doc/faq.md): Because no one has taken on that task yet. FFmpeg development is driven by the tasks that are important to the individual developers. If there is a feature that is important to you, the best way to get it implemented is… (23687 bytes)
 - [Introduction](pages/doc/fate.md): FATE is an extended regression suite on the client-side and a means for results aggregation and presentation on the server-side. (8956 bytes)
-- [External libraries](pages/doc/general.md): FFmpeg can be hooked up with a number of external libraries to add support for more formats. None of them are used by default, their use has to be explicitly requested by passing the appropriate flags to ./configure. (62018 bytes)
+- [External libraries](pages/doc/general.md): FFmpeg can be hooked up with a number of external libraries to add support for more formats. None of them are used by default, their use has to be explicitly requested by passing the appropriate flags to ./configure. (64231 bytes)
 - [Organisation](pages/doc/community.md): The FFmpeg project is organized through a community working on global consensus. (7960 bytes)
 - [Introduction](pages/doc/git-howto.md): This document aims in giving some quick references on a set of useful Git commands. You should always use the extensive and detailed documentation provided directly by Git: (12310 bytes)
 - [General Questions](pages/doc/mailing-list-faq.md): A mailing list is not much different than emailing someone, but the main difference is that your message is received by everyone who subscribes to the list. It is somewhat like a forum but in email form. (12136 bytes)

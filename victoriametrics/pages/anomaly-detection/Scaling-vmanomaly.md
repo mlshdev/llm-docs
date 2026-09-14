@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/Scaling-vmanomaly.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/Scaling-vmanomaly.md)
+> Pinned source for VictoriaMetrics v1.152.0: [docs/anomaly-detection/Scaling-vmanomaly.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/Scaling-vmanomaly.md)
 
 ## Overview
 
@@ -67,7 +67,7 @@ Additionally, a replication factor `R ≥ 1` ensures [high availability](#high-a
 
 The global configuration is split into `N` independently valid sub-configurations. Deterministic placement distributes them across `K` members, and each sub-configuration is assigned to exactly `R` members when replication is enabled. Member `k` processes only its assigned subset.
 
-![vmanomaly sharding and high availability: a global configuration is split into N sub-configurations and replicated across K members](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-sharding-ha-diagram.svg)
+![vmanomaly sharding and high availability: a global configuration is split into N sub-configurations and replicated across K members](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/vmanomaly-sharding-ha-diagram.svg)
 
 > \[!WARNING]
 > Please [refer to deployment options section](#deployment-options) for the examples (Docker, Docker Compose, Helm). To avoid duplicate metrics being reported from each vmanomaly service used in sharded mode, make sure that [deduplication](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#deduplication) is configured on vmsingle or vmselect and vmstorage for the VictoriaMetrics instance used in the [writer section of the configuration](https://docs.victoriametrics.com/anomaly-detection/components/writer/).
@@ -288,7 +288,7 @@ When `VMANOMALY_REPLICATION_FACTOR` > 1, each [sub-config](#sub-configuration) `
 
 The global configuration is split into `N` independently valid sub-configurations. Deterministic placement distributes them across `K` members, and each sub-configuration is assigned to exactly `R` members when replication is enabled. Member `k` processes only its assigned subset.
 
-![vmanomaly sharding and high availability: a global configuration is split into N sub-configurations and replicated across K members](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/vmanomaly-sharding-ha-diagram.svg)
+![vmanomaly sharding and high availability: a global configuration is split into N sub-configurations and replicated across K members](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/vmanomaly-sharding-ha-diagram.svg)
 
 > \[!WARNING]
 > Please [refer to deployment options section](#deployment-options) for the examples (Docker, Docker Compose, Helm). To avoid duplicate metrics being reported from each vmanomaly service used in sharded mode, make sure that [deduplication](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#deduplication) is configured on vmsingle or vmselect and vmstorage for the VictoriaMetrics instance used in the [writer section of the configuration](https://docs.victoriametrics.com/anomaly-detection/components/writer/).

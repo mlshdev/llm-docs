@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/components/models.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/models.md)
+> Pinned source for VictoriaMetrics v1.152.0: [docs/anomaly-detection/components/models.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/components/models.md)
 
 This section covers the `Models` component of VictoriaMetrics Anomaly Detection (commonly referred to as [`vmanomaly`](https://docs.victoriametrics.com/anomaly-detection/)) and provides a guide on how to configure the service.
 
@@ -130,7 +130,7 @@ The `detection_direction` argument *(available from vmanomaly v1.13.0)* can redu
 
 Here's how the three options differ:
 
-![detection\_direction comparison](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/schema_detection_direction.webp)
+![detection\_direction comparison](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/components/schema_detection_direction.webp)
 
 With the default, backward-compatible `both` value, anomalies are tracked in both directions (`y > yhat` or `y < yhat`). This is useful when there is no domain expertise to filter the required direction.
 
@@ -184,7 +184,7 @@ models:
 
 The visualization below demonstrates this concept. The narrow blue model prediction boundary is nested inside the wider green business protection boundary. Actual values outside the prediction boundary but still within `[yhat - min_dev_from_expected, yhat + min_dev_from_expected]` receive `anomaly_score = 0`; only values outside the green boundary remain anomalous.
 
-![min\_dev\_from\_expected](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/schema_min_dev_from_expected.webp)
+![min\_dev\_from\_expected](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/components/schema_min_dev_from_expected.webp)
 
 Example config of how to use this param based on query results:
 
@@ -220,7 +220,7 @@ Parameter can be a list of two float values, *allowing separate thresholds for u
 
 The green business protection boundary below scales with `|yhat|`, while the model prediction boundary remains visible inside it. Actual values outside the blue boundary but inside the proportional green boundary receive `anomaly_score = 0`.
 
-![min\_rel\_dev\_from\_expected](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/schema_min_rel_dev_from_expected.webp)
+![min\_rel\_dev\_from\_expected](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/components/schema_min_rel_dev_from_expected.webp)
 
 *Example*: Consider a scenario of monitoring incoming traffic to websites that typically receives *unknown in advance* requests per second (from tens to thousands). Setting absolute deviation threshold with `min_dev_from_expected` *may not be effective in reducing false positives*, as even a small increase in traffic (e.g., from 10 to 20 requests per second) can represent a 100% relative increase, which may be significant for that website. Instead, setting `min_rel_dev_from_expected` to smaller relative value - `[20, 40]` (20/40%) - will ensure that traffic drop from 10 to 8 requests per second (20% decrease) and traffic spike from 10 to 14 requests per second (40% increase) won't be considered anomalous, even if they exceed confidence intervals, thus, reducing false positives for small absolute deviations that are relatively significant.
 
@@ -319,7 +319,7 @@ For example, setting `scale: [1.2, 0.75]` for particular model will:
 
 Alternative visualization:
 
-![two-sided scale comparison](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/schema_scale_overview_v2.webp)
+![two-sided scale comparison](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/components/schema_scale_overview_v2.webp)
 
 The most common **use case** is when there is a preference to **widen one side** to blacklist smaller false positives (which otherwise would have [anomaly scores](https://docs.victoriametrics.com/anomaly-detection/faq/#how-is-anomaly-score-calculated) **only slightly higher than 1.0**, still making such data points **anomalous**), while **tightening the other side** to avoid missing true positives due to an overly loose margin (leading to [anomaly scores](https://docs.victoriametrics.com/anomaly-detection/faq/#how-is-anomaly-score-calculated) being slightly less than 1.0, making such data points **non-anomalous**).
 
@@ -505,7 +505,7 @@ If during an inference, you got a series having **new labelset** (not present in
 
 **Examples:** [Temporal Envelope](#temporal-envelope), [Online MAD](#online-mad), [Online Z-score](#online-z-score), [Online Seasonal Quantile](#online-seasonal-quantile)
 
-![Univariate model lifecycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/model-lifecycle-univariate.svg)
+![Univariate model lifecycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/components/model-lifecycle-univariate.svg)
 
 ### Multivariate Models
 
@@ -523,7 +523,7 @@ If during an inference, you got a **different amount of series** or some series 
 
 **Recommended:** [Temporal Envelope](#temporal-envelope). Existing [Isolation Forest](#isolation-forest-multivariate) configurations can migrate to its multivariate form.
 
-![Multivariate model lifecycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/model-lifecycle-multivariate.svg)
+![Multivariate model lifecycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/components/model-lifecycle-multivariate.svg)
 
 The following configuration applies a multivariate Temporal Envelope model to the same aligned input series:
 
@@ -683,24 +683,29 @@ models:
   # ...
 ```
 
-![AutoTunedModel tuning and inference lifecycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/autotune.svg)
+![AutoTunedModel tuning and inference lifecycle](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/components/autotune.svg)
 
 #### Shared asynchronous autotune workflow
 
 *(available from vmanomaly v1.30.0)* Agents, the UI, and external automation can tune one shared configuration across a bounded sample of query results without adding an `auto` wrapper to the production configuration:
 
 1. Inspect the query with `GET /api/v1/timeseries/characteristics` to identify trend, calendar seasonality, changepoints, gaps, and intermittent behavior.
-2. Start a task with `POST /api/v1/autotune/tasks`. Provide the actual query, the candidate model class, the same query `step` used in production, and a bounded `limit`.
+2. Start a task with `POST /api/v1/autotune/tasks`. Provide the actual query (or named queries), the candidate model class, the same query `step` used in production, and a bounded `limit`.
 3. Poll `GET /api/v1/autotune/tasks/{task_id}` until `status` is `done`; cancel unnecessary work with `DELETE` on the same path.
 4. Validate and deploy `result_data.data.modelConfig`, which is a concrete configuration for the selected model class.
 
 > \[!TIP]
-> Use [skills](https://docs.victoriametrics.com/ai-tools/#agent-skills) where abovementioned workflow is automated. Also, [AI Copilot](https://docs.victoriametrics.com/anomaly-detection/ui/#ai-assistant) can generate a tuned model configuration to interactively backtest in UI, based on the query data characteristics and user's anomaly expectations.
+> Use [skills](https://docs.victoriametrics.com/ai-tools/#agent-skills) where abovementioned workflow is automated. Also, [AI Copilot](https://docs.victoriametrics.com/anomaly-detection/ui/#ai-assistance) can generate a tuned model configuration to interactively backtest in UI, based on the query data characteristics and user's anomaly expectations.
 
-Example request for an online model:
+The examples below are JSON bodies for `POST /api/v1/autotune/tasks`. Replace the example `datasource_url` with an address reachable from vmanomaly and adjust `start` and `end` (Unix seconds) to your data. The examples select 2026-08-10 00:00 UTC through 2026-09-09 00:00 UTC. See the server’s [interactive API reference](https://docs.victoriametrics.com/anomaly-detection/components/server/#interactive-api-reference) for the running version’s request schemas.
+
+**Univariate online-model example**
 
 ```json
 {
+  "datasource_url": "http://victoriametrics:8428",
+  "start": 1786320000,
+  "end": 1788912000,
   "query": "sum(rate(http_requests_total[5m])) by (service)",
   "tuned_class_name": "temporal_envelope",
   "anomaly_percentage": 0.01,
@@ -715,10 +720,63 @@ Example request for an online model:
     "optimize_complexity": true
   },
   "frozen_params": {
-    "holidays": {"countries": ["US"], "group": true}
+    "holidays": {
+      "countries": [
+        "US"
+      ],
+      "group": true
+    }
   }
 }
 ```
+
+**Multivariate named-query example with grouping**
+
+*(available from vmanomaly v1.30.5)* Tune request rate and error rate jointly, with one multivariate input group per `service`. Both expressions must return data for every service included in the study; an absent error series is not automatically treated as zero.
+
+```json
+{
+  "datasource_url": "http://victoriametrics:8428",
+  "start": 1786320000,
+  "end": 1788912000,
+  "queries": {
+    "request_rate": {
+      "expr": "sum by (service) (rate(http_requests_total{service!=\"\"}[5m]))",
+      "data_range": [
+        0,
+        "inf"
+      ]
+    },
+    "error_rate": {
+      "expr": "sum by (service) (rate(http_requests_total{service!=\"\",status=~\"5..\"}[5m]))",
+      "data_range": [
+        0,
+        "inf"
+      ],
+      "detection_direction": "above_expected"
+    }
+  },
+  "tuned_class_name": "temporal_envelope_multivariate",
+  "anomaly_percentage": 0.01,
+  "step": "5m",
+  "limit": 100,
+  "optimization_params": {
+    "exact": true,
+    "n_splits": 3,
+    "n_trials": 64,
+    "timeout": 60,
+    "optimize_complexity": true
+  },
+  "frozen_params": {
+    "groupby": [
+      "service"
+    ],
+    "score_aggregation": "l2"
+  }
+}
+```
+
+For each candidate configuration, the server fits and evaluates separate models for the aligned service groups and aggregates their validation scores in one study. The result is one shared model configuration for all groups. `frozen_params.groupby` keeps grouping fixed, while the named queries retain their individual business policies. `limit` applies separately to each expression; ensure it is large enough to retain all required channels for the intended groups.
 
 The requested anomaly percentage is treated as an alert-volume constraint rather than a target that must be reached in every validation fold. Model-specific search ranges may be narrowed using the sampled characteristics, while `frozen_params` preserves operator-supplied context. For online models, `exact: true` usually gives the most representative choice when production inference is causal.
 
@@ -1487,7 +1545,7 @@ See the [component configuration reference](https://docs.victoriametrics.com/ano
 Pull the `vmanomaly` image:
 
 ```sh
-docker pull victoriametrics/vmanomaly:v1.30.4
+docker pull victoriametrics/vmanomaly:v1.30.5
 ```
 
 Mount the module at `/vmanomaly/src/model/custom.py`, which matches the configured import path `model.custom.CustomModel`. Validate the complete configuration with `--dryRun` before starting the long-running service.
@@ -1497,7 +1555,7 @@ docker run --rm \
   -v "$PWD/license:/license:ro" \
   -v "$PWD/custom_model.py:/vmanomaly/src/model/custom.py:ro" \
   -v "$PWD/config.yaml:/config.yaml:ro" \
-  victoriametrics/vmanomaly:v1.30.4 \
+  victoriametrics/vmanomaly:v1.30.5 \
   /config.yaml \
   --licenseFile=/license \
   --dryRun
@@ -1540,7 +1598,7 @@ Such models put **more pressure** on your reader's source, i.e. if your model sh
 
 **Examples:** [RollingQuantile](#rolling-quantile), **prior to [v1.28.0](https://docs.victoriametrics.com/anomaly-detection/changelog/#v1280)** where it become online model.
 
-![vmanomaly-model-type-rolling](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/model-type-rolling.webp)
+![vmanomaly-model-type-rolling](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/components/model-type-rolling.webp)
 
 #### Non-Rolling Models
 
@@ -1558,7 +1616,7 @@ Produced model instances are **stored in-memory** between consecutive re-fit cal
 
 **Examples:** [Prophet](#prophet)
 
-![vmanomaly-model-type-non-rolling](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/model-type-non-rolling.webp)
+![vmanomaly-model-type-non-rolling](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/components/model-type-non-rolling.webp)
 
 ### Deprecated models
 

@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple watchOS snapshot-49fd8d0a44e2: [documentation/watchos-apps/designing-your-app-for-the-always-on-state](https://developer.apple.com/documentation/watchos-apps/designing-your-app-for-the-always-on-state)
+> Snapshot-pinned source payload for Apple watchOS snapshot-2bb3946a9b15; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/watchos-apps/designing-your-app-for-the-always-on-state
 
 # Designing your app for the Always On state
 

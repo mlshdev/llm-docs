@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/6efe500d2e9e24a81bffda8825511f6bc9760cb1/doc/ffmpeg-formats.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-formats.texi](https://github.com/FFmpeg/FFmpeg/blob/639ee849526cfe61ceb312776335c245b98bd9d4/doc/ffmpeg-formats.texi)
 
 # Description
 
@@ -353,6 +353,13 @@ This demuxer is used to demux ASF files and MMS network streams.
 
 - -no\_resync\_search *bool*
   Do not try to resynchronize by looking for a certain optional start code.
+
+## astc
+
+ASTC (Adaptive Scalable Texture Compression) demuxer.
+
+This demuxer reads the 16-byte `.astc` header, hands it to the decoder as
+extradata, and emits the compressed image as a single packet.
 
 <a id="concat"></a>
 
@@ -1001,6 +1008,15 @@ terminating with the ".png" suffix:
 ```text
 ffmpeg -framerate 10 -pattern_type glob -i "*.png" out.mkv
 ```
+
+## ktx
+
+Khronos Texture 1.0 demuxer for ASTC textures.
+
+This demuxer reads the KTX 1.0 header and maps the ASTC GL internal format to
+the block footprint the decoder needs, so only files using the ASTC formats
+are accepted. A `KTXorientation` key is preserved as stream display
+metadata, and the texture is emitted as a single packet.
 
 ## libgme
 
@@ -2394,6 +2410,18 @@ options.
   Specify loop end position expressed in milliseconds, from `0` to
   `INT_MAX`, default is `0`, in case `0` is set it
   assumes the total stream duration.
+
+## astc
+
+ASTC (Adaptive Scalable Texture Compression) muxer.
+
+This muxer accepts a single `libastcenc` video stream and writes one
+image: the 16-byte `.astc` header, taken from the encoder's extradata,
+followed by the raw ASTC bitstream. The block footprint and the image
+dimensions come from the same extradata, and a second packet is rejected.
+
+Use the `.ktx` container for a texture that also needs its color space
+or row order recorded.
 
 ## au
 
@@ -4414,6 +4442,31 @@ This muxer accepts a single `jacosub` subtitles stream.
 
 For more information about the format, see
 <http://unicorn.us.com/jacosub/jscripts.html>.
+
+## ktx
+
+Khronos Texture 1.0 muxer for ASTC textures.
+
+This muxer accepts a single `libastcenc` video stream and writes one
+image: the ASTC block size and the image dimensions are taken from the
+encoder's extradata, and a second packet is rejected. The stored row order
+is recorded in a `KTXorientation` key.
+
+### Options
+
+- srgb *integer*
+  Select the GL internal format color space. Possible values:
+  - auto
+    Use the color profile published by the encoder, which is the default.
+  - linear
+    Write the linear ASTC format.
+  - srgb
+    Write the sRGB ASTC format.
+
+An explicit value that contradicts a known encoder profile is rejected.
+A raw `.astc` input does not carry a color profile, so remuxing it to
+`.ktx` with `auto` writes the sRGB format; pass
+`-srgb linear` to keep a linear texture.
 
 ## kvag
 

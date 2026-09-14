@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple watchOS snapshot-49fd8d0a44e2: [documentation/watchkit/wkinterfacecontroller/scroll(to:at:animated:)](https://developer.apple.com/documentation/watchkit/wkinterfacecontroller/scroll(to:at:animated:))
+> Snapshot-pinned source payload for Apple watchOS snapshot-2bb3946a9b15; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/watchkit/wkinterfacecontroller/scroll(to:at:animated:)
 
 # scroll(to:at:animated:) (Swift)
 

@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/credentials/storyblok.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/credentials/storyblok.md)
+> Pinned source for n8n main: [docs/integrations/builtin/credentials/storyblok.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/integrations/builtin/credentials/storyblok.md)
 
 # Storyblok credentials <a id="storyblok-credentials"></a>
 
@@ -22,7 +22,7 @@ Create a [Storyblok](https://www.storyblok.com/) account.
 
 ## Related resources <a id="related-resources"></a>
 
-Refer to Storyblok's [Content v1 API documentation](https://www.storyblok.com/docs/api/content-delivery/v1) and [Management API documentation](https://www.storyblok.com/docs/api/management/getting-started/introduction) for more information about the services.
+Refer to Storyblok's [Content v1 API documentation](https://www.storyblok.com/docs/api/content-delivery/v1) and [Management API documentation](https://www.storyblok.com/docs/api/management) for more information about the services.
 
 ## Using Content API key <a id="using-content-api-key"></a>
 

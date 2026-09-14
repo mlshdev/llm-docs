@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/ai-chat/frontend.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/ai-chat/frontend.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/ai-chat/frontend.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/ai-chat/frontend.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/frontend
 
 # Frontend
@@ -137,6 +137,8 @@ const transport = useTriggerChatTransport<typeof myChat>({
 On page load, fetch both the messages and the session state from your database, then pass them to `useChat` and the transport. Pass `resume: true` to `useChat` when there's an existing conversation — this tells the AI SDK to reconnect to the stream via the transport.
 
 Because the underlying Session row outlives individual runs, a chat you were in yesterday resumes against the same chat — even if the original run has long since exited. The transport hydrates from the persisted state and uses `lastEventId` to resubscribe; if the client tries to send a new message and no run is alive, the server triggers a fresh continuation run on the same session before the message is appended.
+
+If you do not keep your own copy of the conversation, load it from the agent's [transcript storage](https://trigger.dev/docs/ai-chat/transcript-storage#reading-the-transcript) instead: `chat.createLoadTranscriptAction(storage)` on the server and `useLoadTranscript(chatId, action, { transport })` in the browser return the messages and seed the transport's resume cursor, for the default storage and your own alike.
 
 ```tsx app/chat/[chatId]/ChatPage.tsx
 "use client";
@@ -443,46 +445,49 @@ function Chat({ chatId, transport }) {
 
 ## Sending actions
 
-Send custom actions (undo, rollback, edit) to the agent via `transport.sendAction()`. Actions wake the agent and fire only `hydrateMessages` (if configured) and `onAction` — they're not turns, so `onTurnStart` / `prepareMessages` / `onBeforeTurnComplete` / `onTurnComplete` and `run()` do not fire.
-
-For optimistic UI, mirror the action's effect on the `useChat` state via `setMessages` while the request is in flight:
+Send custom actions (undo, rollback, edit, regenerate) as `useChat` requests, with the action in the request `body`. The transport recognises `body.action` and sends it as an action rather than a message, and because `useChat` made the request it owns the response: an action that returns `chat.turn()` on the server streams its answer into the message list like any turn, with `status`, `error` and `stop` behaving as for a message. An action that returns nothing completes with no message added.
 
 ```tsx
+import { useChat } from "@ai-sdk/react";
+import { useChatActions, useTriggerChatTransport } from "@trigger.dev/sdk/chat/react";
+
 function ChatControls({ chatId }: { chatId: string }) {
   const transport = useTriggerChatTransport({
     task: "my-chat",
     accessToken: ({ chatId }) => mintChatAccessToken(chatId),
-    startSession: ({ chatId, clientData }) =>
-      startChatSession({ chatId, clientData }),
+    startSession: ({ chatId, clientData }) => startChatSession({ chatId, clientData }),
   });
-
-  const { setMessages } = useChat({ transport });
+  const { sendMessage, regenerate, setMessages } = useChat({ id: chatId, transport });
+  const { sendAction } = useChatActions({ sendMessage });
 
   return (
     <div>
       <button
         onClick={() => {
-          void transport.sendAction(chatId, { type: "undo" });
+          // Mirror the server-side edit optimistically; the server does not
+          // push history changes back.
           setMessages((prev) => prev.slice(0, -2));
+          void sendAction({ type: "undo" });
         }}
       >
         Undo last exchange
       </button>
-      <button
-        onClick={() => transport.sendAction(chatId, { type: "rollback", targetMessageId: "msg-5" })}
-      >
-        Rollback to message
+      {/* regenerate() removes the trailing answer locally; the server does the same before its turn */}
+      <button onClick={() => regenerate({ body: { action: { type: "regenerate" } } })}>
+        Regenerate
       </button>
     </div>
   );
 }
 ```
 
-The action payload is validated against the agent's `actionSchema` on the backend — invalid actions are rejected. See [Actions](https://trigger.dev/docs/ai-chat/actions) for the backend setup.
+`useChatActions` is a two-line convenience over `sendMessage(undefined, { body: { action } })`. Any `useChat` request can carry an action the same way, `regenerate({ body })` included.
+
+The action payload is validated against the agent's `actionSchema` on the backend; invalid actions are rejected. See [Actions](https://trigger.dev/docs/ai-chat/actions) for the backend setup.
 
 > **Note**
 >
-> `sendAction` returns a `ReadableStream<UIMessageChunk>`. For side-effect-only actions (where `onAction` returns `void`), the stream completes immediately with `trigger:turn-complete`. For actions where `onAction` returns a `StreamTextResult`, the stream carries the assistant chunks the same way `sendMessages` does — `useChat` consumes them automatically.
+> `transport.sendAction()` still exists for callers outside `useChat` (server to server, or a custom client). It returns the response as a raw `ReadableStream<UIMessageChunk>` that the caller must read; `useChat` does not consume it.
 
 For server-to-server usage, `AgentChat` has the same method:
 

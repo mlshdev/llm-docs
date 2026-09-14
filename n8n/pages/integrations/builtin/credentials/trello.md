@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/credentials/trello.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/credentials/trello.md)
+> Pinned source for n8n main: [docs/integrations/builtin/credentials/trello.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/integrations/builtin/credentials/trello.md)
 
 # Trello credentials <a id="trello-credentials"></a>
 
@@ -40,4 +40,4 @@ To generate both the API Key and API Token, create a Trello Power-Up:
 14. When prompted, select **Allow** to grant all the permissions asked for.
 15. Copy the Trello **Token** and enter it as the n8n **API Token**.
 
-Refer to Trello's [API Introduction](https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/#api-introduction) for more information on API keys and tokens. Refer to Trello's [Power-Up Admin Portal](https://developer.atlassian.com/cloud/trello/guides/power-ups/managing-power-ups/#power-up-admin-portal) for more information on creating Power-Ups.
+Refer to Trello's [API Introduction](https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/#api-introduction) for more information on API keys and tokens. Refer to Trello's [Power-Up Admin Portal](https://developer.atlassian.com/cloud/trello/guides/power-ups/managing-apps/) for more information on creating Power-Ups.

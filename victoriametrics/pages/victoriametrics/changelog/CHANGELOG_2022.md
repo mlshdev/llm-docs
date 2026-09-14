@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/changelog/CHANGELOG_2022.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/CHANGELOG_2022.md)
+> Pinned source for VictoriaMetrics v1.152.0: [docs/victoriametrics/changelog/CHANGELOG_2022.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/changelog/CHANGELOG_2022.md)
 
 ## [v1.85.3](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.85.3)
 

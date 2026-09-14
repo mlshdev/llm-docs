@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-openshift-local-crc.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-openshift-local-crc.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-openshift-local-crc.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-openshift-local-crc.md)
 
 # Hosting n8n on OpenShift Local (CRC) <a id="hosting-n8n-on-openshift-local-crc"></a>
 

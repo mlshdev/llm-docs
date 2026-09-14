@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/ai-chat/client-protocol.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/ai-chat/client-protocol.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/ai-chat/client-protocol.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/ai-chat/client-protocol.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/client-protocol
 
 # Client Protocol
@@ -55,7 +55,7 @@ A single-shell walk-through of the whole protocol — copy, fill in `BASE_URL` /
 
 ```bash
 BASE_URL="https://api.trigger.dev"   # or your local webapp
-SECRET_KEY="tr_dev_..."              # secret API key for the env
+SECRET_KEY="tr_dev_sk_..."              # secret API key for the env
 TASK_ID="ai-chat"                    # your chat.agent task id
 CHAT_ID=$(uuidgen | tr '[:upper:]' '[:lower:]')
 
@@ -197,20 +197,21 @@ Pick `"preload"` when the UI has rendered but the user hasn't typed (warms the a
 
 ### Optional fields
 
-| Field                                | Type                | Description                                                                                                             |
-| ------------------------------------ | ------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `externalId`                         | `string`            | Your stable chat ID. Strongly recommended — without it, repeat calls create new sessions. Cannot start with `session_`. |
-| `tags`                               | `string[]`          | Up to 10 dashboard tags.                                                                                                |
-| `metadata`                           | `object`            | Arbitrary JSON metadata stored on the session row (separate from `basePayload.metadata`, which goes to the agent).      |
-| `expiresAt`                          | `string` (ISO date) | Retention cap.                                                                                                          |
-| `triggerConfig.machine`              | `string`            | Machine preset (`micro`, `small-1x`, …) for every run.                                                                  |
-| `triggerConfig.queue`                | `string`            | Queue name.                                                                                                             |
-| `triggerConfig.tags`                 | `string[]`          | Tags applied to every run (in addition to session-level `tags`).                                                        |
-| `triggerConfig.maxAttempts`          | `number`            | Per-run retry cap (1–10).                                                                                               |
-| `triggerConfig.maxDuration`          | `number`            | Per-run wall-clock cap, seconds.                                                                                        |
-| `triggerConfig.lockToVersion`        | `string`            | Pin every run to a specific worker version.                                                                             |
-| `triggerConfig.region`               | `string`            | Region preference.                                                                                                      |
-| `triggerConfig.idleTimeoutInSeconds` | `number`            | Surfaced to the agent through the wire payload (1–3600).                                                                |
+| Field                                | Type                | Description                                                                                                                                                                                                                |
+| ------------------------------------ | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `externalId`                         | `string`            | Your stable chat ID. Strongly recommended — without it, repeat calls create new sessions. Cannot start with `session_`.                                                                                                    |
+| `tags`                               | `string[]`          | Up to 10 dashboard tags.                                                                                                                                                                                                   |
+| `metadata`                           | `object`            | Arbitrary JSON metadata stored on the session row (separate from `basePayload.metadata`, which goes to the agent).                                                                                                         |
+| `expiresAt`                          | `string` (ISO date) | Retention cap.                                                                                                                                                                                                             |
+| `triggerConfig.machine`              | `string`            | Machine preset (`micro`, `small-1x`, …) for every run.                                                                                                                                                                     |
+| `triggerConfig.queue`                | `string`            | Queue name.                                                                                                                                                                                                                |
+| `triggerConfig.tags`                 | `string[]`          | Tags applied to every run (in addition to session-level `tags`).                                                                                                                                                           |
+| `triggerConfig.maxAttempts`          | `number`            | Per-run retry cap (1–10).                                                                                                                                                                                                  |
+| `triggerConfig.maxDuration`          | `number`            | Per-run wall-clock cap, seconds.                                                                                                                                                                                           |
+| `triggerConfig.lockToVersion`        | `string`            | Pin every run to a specific worker version.                                                                                                                                                                                |
+| `triggerConfig.externalDeploymentId` | `string \| null`    | Pin every run to the deployment carrying this [external deployment id](https://trigger.dev/docs/deployment/version-skew-protection#chat-sessions). Discovered from the environment when omitted; `null` opts the chat out. |
+| `triggerConfig.region`               | `string`            | Region preference.                                                                                                                                                                                                         |
+| `triggerConfig.idleTimeoutInSeconds` | `number`            | Surfaced to the agent through the wire payload (1–3600).                                                                                                                                                                   |
 
 ### What goes in `basePayload`
 
@@ -265,7 +266,7 @@ x-trigger-jwt-claims: {"sub":"...","scopes":["read:runs:run_abc123","write:input
 Re-calling `POST /api/v1/sessions` with the same `(taskIdentifier, externalId)` pair is **idempotent for the lifetime of the session**:
 
 - If the session is still alive: returns the existing row with `isCached: true`, `runId` unchanged, and a **fresh** 60-minute `publicAccessToken`. No duplicate run is triggered. (Idle/exited runs are different — see [Continuations](#continuations).)
-- If the session has been closed (`POST /api/v1/sessions/{id}/close`): returns **HTTP 409**. Closed is one-way; reuse a different `externalId` to start a new conversation.
+- If the session has been closed (`POST /api/v1/sessions/{id}/close`, or `chat.close()` from inside the agent): returns **HTTP 409**. Closed is one-way; reuse a different `externalId` to start a new conversation.
 - Any tags / metadata / expiresAt / triggerConfig fields you send on the cached path are written through to the row, so you can update e.g. `triggerConfig.basePayload.metadata` mid-conversation. The new fields apply to **future** runs (continuations); the currently-live run keeps its original config.
 
 > **Warning**
@@ -694,7 +695,7 @@ The body is a JSON-serialized [`ChatInputChunk`](#chatinputchunk), a tagged unio
 | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `401`  | Missing or invalid `Authorization` header.                                                                                                                                                                                                                                                                                                |
 | `403`  | Token doesn't carry `write:sessions:{externalId}`.                                                                                                                                                                                                                                                                                        |
-| `409`  | The session is closed — `{ "ok": false, "error": "Cannot append to a closed session" }`.                                                                                                                                                                                                                                                  |
+| `409`  | The session is closed: `{ "ok": false, "error": "Cannot append to a closed session", "code": "session_closed", "closedReason": "<reason or null>" }`. Key on `code`, not the message. Terminal: do not retry, and stop reconnecting to `.out`.                                                                                            |
 | `413`  | Body exceeds 1 MiB **or** the wrapped record would exceed S2's \~1 MiB per-record metered ceiling. A normal `kind: "message"` payload is a few KB; if you hit this you're shipping more than one message per record or pushing a single tool output that's itself oversized. Carries CORS headers so browser fetches can read the status. |
 | `500`  | Transient backend failure on the durable stream. Safe to retry — appends are idempotent on `(externalId, X-Part-Id)` if you set the optional `X-Part-Id` request header (the built-in clients set it from a UUID).                                                                                                                        |
 
@@ -833,7 +834,7 @@ Custom actions (undo, rollback, edit) ride on the same `.in` channel using `kind
 }
 ```
 
-For managed `chat.agent()` tasks, actions wake the agent from suspension (same as messages) and fire the `onAction` hook — they are not turns, so `run()` and turn lifecycle hooks do not fire. If `onAction` returns a `StreamTextResult`, the response is auto-piped to the frontend (but still no `run()` or `onTurnComplete`). The `action` payload is validated against the agent's `actionSchema`. If the agent didn't register an `actionSchema` (or your `action` payload doesn't match it), validation fails the same way `metadata` does — `.in/append` returns `200 OK`, but the run trace shows `chat turn N [ERROR]` and the wire emits a `turn-complete` control record with no other chunks. See [Actions](https://trigger.dev/docs/ai-chat/actions) for the agent-side schema setup.
+For managed `chat.agent()` tasks, actions wake the agent from suspension (same as messages) and fire the `onAction` hook — they are not turns, so `run()` and turn lifecycle hooks do not fire. If `onAction` returns `chat.turn()`, a turn runs on the edited history and its chunks follow on `.out` like any turn's.
 
 Raw `chat.customAgent()` tasks receive `action` as `unknown` and must validate it in their own loop.
 

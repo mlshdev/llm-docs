@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/management/schedules/activate.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/management/schedules/activate.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/management/schedules/activate.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/management/schedules/activate.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/schedules/activate
 
 # Activate Schedule
@@ -42,6 +42,10 @@ Activate a schedule by its ID. This will only work on `IMPERATIVE` schedules tha
         - Example: `America/New_York`
       - `nextRun` (string; format: date-time): The next time the schedule will run
         - Example: `2024-04-01T00:00:00Z`
+      - `appliedSchedulePolicy` (object): Present only when a non-overridable plan policy applies a minimum window to this schedule (for example, a free-plan schedule's minimum run interval). The configured `window` is returned separately and unchanged.
+        - `minimumWindowSeconds` (number): The minimum window, in seconds, applied on top of the configured window.
+          - Example: `3600`
+        - `reason` (string; enum: `free_schedule`): Why the minimum window is applied.
       - `environments` (array)
         - `items` (object)
           - `id` (string)

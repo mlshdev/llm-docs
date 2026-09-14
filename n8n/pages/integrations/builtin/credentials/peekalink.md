@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/credentials/peekalink.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/credentials/peekalink.md)
+> Pinned source for n8n main: [docs/integrations/builtin/credentials/peekalink.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/integrations/builtin/credentials/peekalink.md)
 
 # Peekalink credentials <a id="peekalink-credentials"></a>
 
@@ -22,4 +22,4 @@ Refer to [Peekalink's API documentation](https://docs.peekalink.io/) for more in
 
 To configure this credential, you'll need:
 
-- An **API Key**: To get your API key, access your Peekalink [dashboard](https://www.peekalink.io/app/overview) and copy the key in the **Your API Key** section. Refer to [Get your API key](https://docs.peekalink.io/setup#get-your-api-key) for more information.
+- An **API Key**: To get your API key, access your Peekalink [dashboard](https://www.peekalink.io/app/overview) and copy the key in the **Your API Key** section. Refer to [Get your API key](https://docs.peekalink.io/quickstart#1-get-your-api-key) for more information.

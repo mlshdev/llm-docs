@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/ai-chat/prompt-caching.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/ai-chat/prompt-caching.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/ai-chat/prompt-caching.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/ai-chat/prompt-caching.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/prompt-caching
 
 # Prompt caching
@@ -15,11 +15,11 @@ Caching is provider-specific. This guide covers Anthropic (`@ai-sdk/anthropic`),
 
 A request renders as `tools` → `system` → `messages`. There are three prefix regions worth caching, in order:
 
-| Region                  | How to cache it                                                                                                       | Stability                                                   |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| System prompt (+ tools) | `cacheControl` / `systemProviderOptions` on `chat.toStreamTextOptions()`, or `providerOptions` on `chat.prompt.set()` | Set once, never changes — the highest-value target          |
-| Conversation history    | `prepareMessages` adds a breakpoint to the last message                                                               | Grows append-only across turns                              |
-| Tool definitions        | Stable as long as your tool set doesn't change between turns                                                          | Render at position 0 — changing them invalidates everything |
+| Region                  | How to cache it                                                                                         | Stability                                                   |
+| ----------------------- | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| System prompt (+ tools) | `cacheControl` / `systemProviderOptions` on `chat.agent()`, or `providerOptions` on `chat.prompt.set()` | Set once, never changes — the highest-value target          |
+| Conversation history    | `prepareMessages` adds a breakpoint to the last message                                                 | Grows append-only across turns                              |
+| Tool definitions        | Stable as long as your tool set doesn't change between turns                                            | Render at position 0 — changing them invalidates everything |
 
 `chat.agent` preserves `providerOptions` through message persistence and rehydration, so a breakpoint you place survives a suspend/resume or a page refresh. The recommended way to place message breakpoints is `prepareMessages` (below) rather than baking `cacheControl` into stored messages — `prepareMessages` runs on every prompt-assembly path, including after compaction, so the breakpoint is always in the right place.
 
@@ -33,23 +33,22 @@ The system prompt (your `chat.prompt` text plus any skills preamble) is usually 
 
 Three ways to opt in, depending on where you'd rather express it.
 
-**`cacheControl` at the `streamText` call site** — the Anthropic-flavored one-liner:
+**`cacheControl` on the agent** — the Anthropic-flavored one-liner:
 
 ```ts /trigger/chat.ts
 import { chat } from "@trigger.dev/sdk/ai";
-import { streamText } from "ai";
 import { anthropic } from "@ai-sdk/anthropic";
 
 export const myChat = chat.agent({
   id: "my-chat",
+  cacheControl: { type: "ephemeral" },
   onChatStart: async () => {
     chat.prompt.set(SYSTEM_PROMPT); // a large, stable instruction block
   },
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     return streamText({
       model: anthropic("claude-sonnet-4-6"),
       // Caches the system block with a 5-minute breakpoint.
-      ...chat.toStreamTextOptions({ cacheControl: { type: "ephemeral" } }),
       messages,
       abortSignal: signal,
     });
@@ -60,17 +59,19 @@ export const myChat = chat.agent({
 **`systemProviderOptions`** is the provider-agnostic form — pass the raw `providerOptions` so it composes with any provider:
 
 ```ts /trigger/chat.ts
-return streamText({
-  model: anthropic("claude-sonnet-4-6"),
-  ...chat.toStreamTextOptions({
-    systemProviderOptions: { anthropic: { cacheControl: { type: "ephemeral" } } },
-  }),
-  messages,
-  abortSignal: signal,
+export const myChat = chat.agent({
+  id: "my-chat",
+  systemProviderOptions: { anthropic: { cacheControl: { type: "ephemeral" } } },
+  run: async ({ messages, signal, streamText }) =>
+    streamText({
+      model: anthropic("claude-sonnet-4-6"),
+      messages,
+      abortSignal: signal,
+    }),
 });
 ```
 
-**`providerOptions` on `chat.prompt.set()`** co-locates the intent with where the prompt is defined. It carries through to `toStreamTextOptions()` with no call-site change:
+**`providerOptions` on `chat.prompt.set()`** co-locates the intent with where the prompt is defined. It carries through to the managed `streamText` with no call-site change:
 
 ```ts /trigger/chat.ts
 onChatStart: async () => {
@@ -78,17 +79,16 @@ onChatStart: async () => {
     providerOptions: { anthropic: { cacheControl: { type: "ephemeral" } } },
   });
 },
-run: async ({ messages, signal }) => {
+run: async ({ messages, signal, streamText }) => {
   return streamText({
     model: anthropic("claude-sonnet-4-6"),
-    ...chat.toStreamTextOptions(), // already cached
     messages,
     abortSignal: signal,
   });
 },
 ```
 
-If more than one is set, the call-site option wins: `systemProviderOptions` overrides `cacheControl`, and both override `chat.prompt.set`'s `providerOptions`. There's no deep merge — the most specific option replaces the rest.
+If more than one is set, the most specific wins: `systemProviderOptions` overrides `cacheControl`, and both override `chat.prompt.set`'s `providerOptions`. There's no deep merge — the most specific option replaces the rest.
 
 > **Note**
 >
@@ -101,6 +101,7 @@ Place a breakpoint on the last message and the entire conversation prefix up to 
 ```ts /trigger/chat.ts
 export const myChat = chat.agent({
   id: "my-chat",
+  cacheControl: { type: "ephemeral" },
   prepareMessages: async ({ messages }) => {
     if (messages.length === 0) return messages;
     const last = messages[messages.length - 1];
@@ -115,10 +116,9 @@ export const myChat = chat.agent({
       },
     ];
   },
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     return streamText({
       model: anthropic("claude-sonnet-4-6"),
-      ...chat.toStreamTextOptions({ cacheControl: { type: "ephemeral" } }),
       messages,
       abortSignal: signal,
     });
@@ -150,11 +150,10 @@ Caching is provider-specific, and most providers don't use per-block breakpoints
 
 ```ts /trigger/chat.ts
 // Amazon Bedrock
-return streamText({
-  ...chat.toStreamTextOptions({
-    systemProviderOptions: { bedrock: { cachePoint: { type: "default" } } },
-  }),
-  messages,
+export const myChat = chat.agent({
+  id: "my-chat",
+  systemProviderOptions: { bedrock: { cachePoint: { type: "default" } } },
+  run: async ({ messages, streamText }) => streamText({ messages }),
 });
 ```
 
@@ -167,14 +166,13 @@ Usage reporting is normalized. Each provider reports cache tokens under its own 
 The turn's usage carries cache token counts. `chat.agent` accumulates them across turns and hands them to `run` as `previousTurnUsage` (last turn) and `totalUsage` (whole chat), both `LanguageModelUsage`:
 
 ```ts /trigger/chat.ts
-run: async ({ messages, signal, previousTurnUsage }) => {
+run: async ({ messages, signal, previousTurnUsage, streamText }) => {
   // After turn 1, cacheReadTokens should be > 0 on a stable prefix.
   console.log("cache read", previousTurnUsage?.inputTokenDetails?.cacheReadTokens);
   console.log("cache write", previousTurnUsage?.inputTokenDetails?.cacheWriteTokens);
 
   return streamText({
     model: anthropic("claude-sonnet-4-6"),
-    ...chat.toStreamTextOptions({ cacheControl: { type: "ephemeral" } }),
     messages,
     abortSignal: signal,
   });

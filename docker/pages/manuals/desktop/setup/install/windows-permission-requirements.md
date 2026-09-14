@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/setup/install/windows-permission-requirements.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/desktop/setup/install/windows-permission-requirements.md)
+> Pinned source for Docker main: [content/manuals/desktop/setup/install/windows-permission-requirements.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/desktop/setup/install/windows-permission-requirements.md)
 
 # Understand permission requirements for Windows
 
@@ -63,7 +63,7 @@ The service performs the following functionalities:
 - Ensuring that `host.docker.internal` and `gateway.docker.internal` are defined in the Win32 hosts file. They point to the host local IP address and allow an application to resolve the host IP using the same name from either the host itself or a container.
 - Creating the Hyper-V VM `"DockerDesktopVM"` and managing its lifecycle - starting, stopping, and destroying it. The VM name is hard coded in the service code so the service cannot be used for creating or manipulating any other VMs.
 - Moving the VHDX file or folder.
-- Starting and stopping the Windows Docker engine and querying whether it's running.
+- Starting and stopping Windows Docker Engine and querying whether it's running.
 - Deleting all Windows containers data files.
 - Checking if Hyper-V is enabled.
 - Checking if the bootloader activates Hyper-V.

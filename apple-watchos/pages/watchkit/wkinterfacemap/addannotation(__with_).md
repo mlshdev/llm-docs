@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple watchOS snapshot-49fd8d0a44e2: [documentation/watchkit/wkinterfacemap/addannotation(_:with:)](https://developer.apple.com/documentation/watchkit/wkinterfacemap/addannotation(_:with:))
+> Snapshot-pinned source payload for Apple watchOS snapshot-2bb3946a9b15; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/watchkit/wkinterfacemap/addannotation(_:with:)
 
 # addAnnotation(\_:with:) (Swift)
 

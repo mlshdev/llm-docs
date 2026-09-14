@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/advanced.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/docker-hub/repos/manage/builds/advanced.md)
+> Pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/advanced.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/docker-hub/repos/manage/builds/advanced.md)
 
 # Advanced options for autobuild and autotest
 
@@ -30,7 +30,7 @@ hooks.
 - `SOURCE_COMMIT`: the SHA1 hash of the commit being tested.
 - `COMMIT_MSG`: the message from the commit being tested and built.
 - `DOCKER_REPO`: the name of the Docker repository being built.
-- `DOCKERFILE_PATH`: the dockerfile currently being built.
+- `DOCKERFILE_PATH`: the Dockerfile currently being built.
 - `DOCKER_TAG`: the Docker repository tag being built.
 - `IMAGE_NAME`: the name and tag of the Docker repository being built. (This variable is a combination of `DOCKER_REPO`:`DOCKER_TAG`.)
 

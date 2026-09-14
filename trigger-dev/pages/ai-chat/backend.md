@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/ai-chat/backend.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/ai-chat/backend.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/ai-chat/backend.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/ai-chat/backend.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/backend
 
 # Backend
@@ -31,14 +31,13 @@ Return the `streamText` result from `run` and it's automatically piped to the fr
 
 ```ts
 import { chat } from "@trigger.dev/sdk/ai";
-import { streamText, stepCountIs } from "ai";
+import { stepCountIs } from "ai";
 import { anthropic } from "@ai-sdk/anthropic";
 
 export const simpleChat = chat.agent({
   id: "simple-chat",
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     return streamText({
-      ...chat.toStreamTextOptions(), // prepareStep, system, telemetry (see note below)
       model: anthropic("claude-sonnet-4-5"),
       system: "You are a helpful assistant.",
       messages,
@@ -49,29 +48,64 @@ export const simpleChat = chat.agent({
 });
 ```
 
-> **Warning**
+> **Note**
 >
-> **Always spread `chat.toStreamTextOptions()` first** (as above) so your explicit overrides win. It wires up the `prepareStep` callback behind [compaction](https://trigger.dev/docs/ai-chat/compaction), [steering](https://trigger.dev/docs/ai-chat/pending-messages), and [background injection](https://trigger.dev/docs/ai-chat/background-injection), all of which silently no-op without it, and injects the system prompt from `chat.prompt()`, the resolved model (when you pass a `registry`), and telemetry metadata. Examples below keep the spread implicit for brevity, so include it in real code.
+> The `streamText` destructured from `run`'s argument is the SDK's, not the one
+> imported from `ai`. It carries the agent's managed options, so nothing has to be
+> spread in. [The managed streamText](#the-managed-streamtext) covers what those
+> options are and what happens when yours collide with them.
+
+### The managed streamText
+
+`run()` is handed a `streamText` that already carries everything the spread provides, so the managed state cannot be lost by leaving the spread out:
+
+```ts
+export const simpleChat = chat.agent({
+  id: "simple-chat",
+  run: async ({ messages, signal, streamText }) =>
+    streamText({
+      model: anthropic("claude-sonnet-4-5"),
+      messages,
+      abortSignal: signal,
+      stopWhen: stepCountIs(15),
+    }),
+});
+```
+
+Note the destructured `streamText`: it shadows the one imported from `ai` inside `run`, so the managed options apply without a spread. Spreading `chat.toStreamTextOptions()` into the imported `streamText` is still supported and equivalent.
+
+It differs from the spread in three ways, all of them about what happens when your options collide with the managed ones:
+
+| Option        | Spread                                                                                                            | Managed `streamText`                       |
+| ------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| `tools`       | Passing `tools` after the spread replaces the skill tools                                                         | Merged, so skill tools survive             |
+| `prepareStep` | Passing your own after the spread replaces the managed one, silently disabling steering, compaction and injection | Composed, yours runs after the managed one |
+| `system`      | Yours replaces the managed prompt and any injected instructions                                                   | Throws                                     |
+
+`system` throws rather than merging because there is no shape that combines two system values on every supported AI SDK version: v5 rejects an array of blocks, and a structured block carries the provider options that make [prompt caching](https://trigger.dev/docs/ai-chat/prompt-caching) work, so concatenating discards the cache entry. Set a static prompt with [`chat.prompt.set()`](#using-prompts) and add per-turn context with [`chat.inject()`](https://trigger.dev/docs/ai-chat/background-injection).
+
+If the managed prompt names a model, pass a registry on the agent so the runtime can resolve it: `chat.agent({ registry, run })`.
 
 ### Using chat.pipe() for complex flows
 
 For complex agent flows where `streamText` is called deep inside your code, use `chat.pipe()`. It works from **anywhere inside a task** — even nested function calls.
 
 ```ts trigger/agent-chat.ts
-import { chat } from "@trigger.dev/sdk/ai";
-import { streamText } from "ai";
+import { chat, type ChatStreamText } from "@trigger.dev/sdk/ai";
 import { anthropic } from "@ai-sdk/anthropic";
-import type { ModelMessage } from "ai";
+import { stepCountIs, type ModelMessage } from "ai";
 
 export const agentChat = chat.agent({
   id: "agent-chat",
-  run: async ({ messages }) => {
-    // Don't return anything — chat.pipe is called inside
-    await runAgentLoop(messages);
+  run: async ({ messages, streamText }) => {
+    // Don't return anything, chat.pipe is called inside
+    await runAgentLoop(messages, streamText);
   },
 });
 
-async function runAgentLoop(messages: ModelMessage[]) {
+// A loop factored out of `run` takes `streamText` as an argument so it keeps the
+// managed options. `ChatStreamText` types the parameter.
+async function runAgentLoop(messages: ModelMessage[], streamText: ChatStreamText) {
   // ... agent logic, tool calls, etc.
 
   const result = streamText({
@@ -103,7 +137,7 @@ export const myChat = chat.agent({
     // responseMessage.parts includes the data-metadata part
     await db.messages.save(responseMessage);
   },
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     // Also works from run() via chat.response
     chat.response.write({
       type: "data-context",
@@ -178,9 +212,9 @@ const tools = { searchDocs };
 export const myChat = chat.agent({
   id: "my-chat",
   tools,
-  run: async ({ messages, tools, signal }) =>
+  run: async ({ messages, tools, signal, streamText }) =>
     streamText({
-      ...chat.toStreamTextOptions({ tools }),
+      tools,
       model: anthropic("claude-sonnet-4-5"),
       messages,
       abortSignal: signal,
@@ -201,12 +235,12 @@ See [Tools](https://trigger.dev/docs/ai-chat/tools) for `toModelOutput` across t
 
 ### Using prompts
 
-Use [AI Prompts](https://trigger.dev/docs/ai/prompts) to manage your system prompt as versioned, overridable config. Store the resolved prompt in a lifecycle hook with `chat.prompt.set()`, then spread `chat.toStreamTextOptions()` into `streamText` — it includes the system prompt, model, config, and telemetry automatically.
+Use [AI Prompts](https://trigger.dev/docs/ai/prompts) to manage your system prompt as versioned, overridable config. Store the resolved prompt in a lifecycle hook with `chat.prompt.set()`. The `streamText` from `run`'s argument picks it up: system prompt, model, config and telemetry.
 
 ```ts
 import { chat } from "@trigger.dev/sdk/ai";
 import { prompts } from "@trigger.dev/sdk";
-import { streamText, createProviderRegistry } from "ai";
+import { createProviderRegistry } from "ai";
 import { anthropic } from "@ai-sdk/anthropic";
 import { z } from "zod";
 
@@ -222,15 +256,15 @@ const systemPrompt = prompts.define({
 
 export const myChat = chat.agent({
   id: "my-chat",
+  registry,
   clientDataSchema: z.object({ userId: z.string() }),
   onChatStart: async ({ clientData }) => {
     const user = await db.user.findUnique({ where: { id: clientData.userId } });
     const resolved = await systemPrompt.resolve({ name: user.name });
     chat.prompt.set(resolved);
   },
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     return streamText({
-      ...chat.toStreamTextOptions({ registry }), // system, model, config, telemetry
       messages,
       abortSignal: signal,
       stopWhen: stepCountIs(15),
@@ -239,16 +273,9 @@ export const myChat = chat.agent({
 });
 ```
 
-`chat.toStreamTextOptions()` returns an object with `system`, `model` (resolved via the registry), `temperature`, and `experimental_telemetry` — all from the stored prompt. Properties you set after the spread (like a client-selected model) take precedence.
+The managed `streamText` carries the stored prompt's `system`, `model` (resolved through the agent's `registry`), sampling config, and `experimental_telemetry`. Options you pass at the call site win, apart from `system`, which throws when the prompt already set one.
 
-**Which form to call:**
-
-| Form                                            | Use when                                                                                                                                                                                                                                                      |
-| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `chat.toStreamTextOptions()`                    | Default. Wires up `prepareStep` (compaction, steering, background injection), the stored prompt's `system` / `model` / `config`, and telemetry metadata.                                                                                                      |
-| `chat.toStreamTextOptions({ registry })`        | You're using [Prompts](https://trigger.dev/docs/ai/prompts) with a provider-prefixed model string (e.g. `"anthropic:claude-sonnet-4-5"`). The registry resolves the prefix to a real model instance via `createProviderRegistry({ anthropic, openai, ... })`. |
-| `chat.toStreamTextOptions({ tools })`           | You want HITL tool approvals — pass the same `tools` object you give to `streamText`. The SDK then knows which tool calls need to pause on `needsApproval: true`.                                                                                             |
-| `chat.toStreamTextOptions({ registry, tools })` | Both of the above.                                                                                                                                                                                                                                            |
+`chat.toStreamTextOptions()` remains available for the same job, and is the only option in a [custom agent](#custom-agents), which has no `run` argument to take a bound `streamText` from. A `chat.headStart` route does get one, and there it also owns `messages`, `stopWhen` and `abortSignal`, since the handover depends on them. Pass `{ registry }` when a prompt names a provider-prefixed model, and `{ tools }` when you want HITL tool approvals, so the SDK knows which calls pause on `needsApproval`.
 
 > **Tip**
 >
@@ -274,7 +301,7 @@ The `run` function receives three abort signals:
 ```ts
 export const myChat = chat.agent({
   id: "my-chat",
-  run: async ({ messages, signal, stopSignal, cancelSignal }) => {
+  run: async ({ messages, signal, stopSignal, cancelSignal, streamText }) => {
     return streamText({
       model: anthropic("claude-sonnet-4-5"),
       messages,
@@ -303,7 +330,7 @@ export const myChat = chat.agent({
       data: { messages: uiMessages, lastStoppedAt: stopped ? new Date() : undefined },
     });
   },
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     return streamText({ model: anthropic("claude-sonnet-4-5"), messages, abortSignal: signal });
   },
 });
@@ -313,11 +340,10 @@ You can also check stop status from **anywhere** during a turn using `chat.isSto
 
 ```ts
 import { chat } from "@trigger.dev/sdk/ai";
-import { streamText } from "ai";
 
 export const myChat = chat.agent({
   id: "my-chat",
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     return streamText({
       model: anthropic("claude-sonnet-4-5"),
       messages,
@@ -370,7 +396,7 @@ const sendEmail = tool({
 
 export const myChat = chat.agent({
   id: "my-chat",
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     return streamText({
       model: anthropic("claude-sonnet-4-5"),
       messages,
@@ -406,12 +432,12 @@ Users can send messages while the agent is executing tool calls. With `pendingMe
 ```ts
 export const myChat = chat.agent({
   id: "my-chat",
+  registry,
   pendingMessages: {
     shouldInject: ({ steps }) => steps.length > 0,
   },
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     return streamText({
-      ...chat.toStreamTextOptions({ registry }),
       messages,
       tools: {
         /* ... */
@@ -437,6 +463,7 @@ Inject context from background work into the conversation using `chat.inject()`.
 ```ts
 export const myChat = chat.agent({
   id: "my-chat",
+  registry,
   onTurnComplete: async ({ messages }) => {
     chat.defer(
       (async () => {
@@ -454,8 +481,8 @@ export const myChat = chat.agent({
       })()
     );
   },
-  run: async ({ messages, signal }) => {
-    return streamText({ ...chat.toStreamTextOptions({ registry }), messages, abortSignal: signal });
+  run: async ({ messages, signal, streamText }) => {
+    return streamText({ messages, abortSignal: signal });
   },
 });
 ```
@@ -566,7 +593,7 @@ export const myChat = chat.agent({
       },
     ];
   },
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     return streamText({ model: anthropic("claude-sonnet-4-5"), messages, abortSignal: signal });
   },
 });
@@ -591,7 +618,7 @@ By default, a chat agent stays idle after each turn waiting for the next user me
 ```ts
 chat.agent({
   id: "one-shot",
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     // Single-response agent — exit after this turn.
     chat.endRun();
     return streamText({ model: anthropic("claude-sonnet-4-5"), messages, abortSignal: signal });
@@ -607,6 +634,57 @@ Use this when the agent knows its work is done (budget exhausted, goal achieved,
 >
 > If you persist `lastEventId` to your own storage for cross-page-load resume, **don't clear it on `chat.endRun()`**. The cursor is sessionId-keyed and stays valid across Run boundaries — clearing it forces the next `sendMessages` to subscribe from `seq_num=0`, where it may hit the prior turn's stale `turn-complete` record and close the stream empty before the new Run's chunks arrive.
 
+### Ending the conversation
+
+`chat.close()` ends the whole conversation. The session row is marked closed, further appends are refused with HTTP 409, and no continuation run is scheduled. Call it from `run()`, `prepareStep`, or `onBeforeTurnComplete`.
+
+```ts
+chat.agent({
+  id: "budgeted-agent",
+  run: async ({ messages, signal }) =>
+    streamText({ model: anthropic("claude-sonnet-4-5"), messages, abortSignal: signal }),
+  // onBeforeTurnComplete carries the same fields as onTurnComplete, including
+  // `usage`, and still runs while the response stream is open.
+  onBeforeTurnComplete: async ({ chatId }) => {
+    if (await overBudget(chatId)) {
+      chat.close({ reason: "Monthly budget reached" });
+    }
+  },
+});
+```
+
+The current turn finishes and streams through normally. Called mid-step, `chat.close()` aborts the in-flight `streamText` the same way the stop signal does, so the partial response is still captured and delivered. The transport then flips to a closed state, carrying `reason` so you can render why the conversation ended.
+
+> **Warning**
+>
+> **Decide before the turn ends, not in `onTurnComplete`.** The closed state reaches the browser on the turn's final `turn-complete` record. `onTurnComplete` runs after that record is written and after the response stream has closed, so a close decided there does not reach a reader that is already done with the turn: the user sees a normal answer and learns the conversation ended only when their next message is refused. Use `onBeforeTurnComplete` for the same information one step earlier, and the user sees the closed state as soon as the answer finishes.
+
+Closing is one-way. A closed session cannot be reopened, and its transcript stays readable. Start a new conversation under a different `chatId` to continue.
+
+On the client, read the closed state off the transport:
+
+```tsx app/components/Chat.tsx
+if (transport.sessionStatus(chatId) === "closed") {
+  return <p>This conversation has ended: {transport.sessionClosedReason(chatId)}</p>;
+}
+```
+
+### Three levels of stopping
+
+`chat.agent` stops at three levels, each with a different "what happens next".
+
+| Level   | Primitive                                                                                                    | What stops                    | What happens next                                                     |
+| ------- | ------------------------------------------------------------------------------------------------------------ | ----------------------------- | --------------------------------------------------------------------- |
+| Turn    | `stopWhen`, or the [stop signal](https://trigger.dev/docs/ai-chat/backend#stop-generation) aborting `signal` | The current `streamText`      | The turn completes, the agent idles for the next message              |
+| Run     | `chat.endRun()`                                                                                              | The current worker            | The next message on the same `chatId` starts a fresh continuation run |
+| Session | `chat.close()`                                                                                               | The conversation, permanently | Nothing. Appends are refused with 409 and no run is triggered         |
+
+Reach for the narrowest level that does the job: a turn budget is a `stopWhen`, a finished one-shot answer is `chat.endRun()`, and an exhausted account or a signed-out user is `chat.close()`.
+
+`chat.close()` is available to [custom agents](https://trigger.dev/docs/ai-chat/custom-agents#ending-the-conversation) too, where the close is performed when your `run()` returns.
+
+A session can also be closed from outside the run: `sessions.close(chatId)` from your backend, or the Close action in the dashboard. A live run is told either way: the close lands on the session's input channel, so an idle or suspended agent leaves its loop on the next wake instead of waiting out its idle timeout.
+
 ### Runtime configuration
 
 #### chat.setTurnTimeout()
@@ -614,7 +692,7 @@ Use this when the agent knows its work is done (budget exhausted, goal achieved,
 Override how long the run stays suspended waiting for the next message. Call from inside `run()`:
 
 ```ts
-run: async ({ messages, signal }) => {
+run: async ({ messages, signal, streamText }) => {
   chat.setTurnTimeout("2h"); // Wait longer for this conversation
   return streamText({ model: anthropic("claude-sonnet-4-5"), messages, abortSignal: signal });
 },
@@ -625,7 +703,7 @@ run: async ({ messages, signal }) => {
 Override how long the run stays idle (active, using compute) after each turn:
 
 ```ts
-run: async ({ messages, signal }) => {
+run: async ({ messages, signal, streamText }) => {
   chat.setIdleTimeoutInSeconds(60); // Stay idle for 1 minute
   return streamText({ model: anthropic("claude-sonnet-4-5"), messages, abortSignal: signal });
 },
@@ -660,7 +738,7 @@ export const myChat = chat.agent({
       return "Something went wrong. Please try again.";
     },
   },
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     return streamText({ model: anthropic("claude-sonnet-4-5"), messages, abortSignal: signal });
   },
 });
@@ -691,7 +769,7 @@ export const myChat = chat.agent({
     sendReasoning: true, // Forward model reasoning (default: true)
     sendSources: true, // Forward source citations (default: false)
   },
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     return streamText({ model: anthropic("claude-sonnet-4-5"), messages, abortSignal: signal });
   },
 });
@@ -709,7 +787,7 @@ export const myChat = chat.agent({
   uiMessageStreamOptions: {
     generateMessageId: () => uuidv7(),
   },
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     return streamText({ model: anthropic("claude-sonnet-4-5"), messages, abortSignal: signal });
   },
 });
@@ -729,7 +807,7 @@ export const myChat = chat
   })
   .agent({
     id: "my-chat",
-    run: async ({ messages, signal }) => {
+    run: async ({ messages, signal, streamText }) => {
       return streamText({ model: anthropic("claude-sonnet-4-5"), messages, abortSignal: signal });
     },
   });
@@ -747,7 +825,7 @@ export const myChat = chat
 Override per-turn with `chat.setUIMessageStreamOptions()` — per-turn values merge with the static config (per-turn wins on conflicts). The override is cleared automatically after each turn.
 
 ```ts
-run: async ({ messages, clientData, signal }) => {
+run: async ({ messages, clientData, signal, streamText }) => {
   // Enable reasoning only for certain models
   if (clientData.model?.includes("claude")) {
     chat.setUIMessageStreamOptions({ sendReasoning: true });
@@ -773,7 +851,6 @@ If you need full control over task options, use the standard `task()` with `Chat
 ```ts
 import { task } from "@trigger.dev/sdk";
 import { chat, type ChatTaskPayload } from "@trigger.dev/sdk/ai";
-import { streamText } from "ai";
 import { anthropic } from "@ai-sdk/anthropic";
 
 export const manualChat = task({

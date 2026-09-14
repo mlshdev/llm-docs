@@ -1,19 +1,19 @@
-# Trigger.dev v4.5.16
+# Trigger.dev v4.6.0
 
-> Documentation generated from the latest stable release of [triggerdotdev/trigger.dev](https://github.com/triggerdotdev/trigger.dev) and pinned to immutable source commit `ee34a4b13710742ae26d94831547fa2b6cddc9bd`.
+> Documentation generated from the latest stable release of [triggerdotdev/trigger.dev](https://github.com/triggerdotdev/trigger.dev) and pinned to immutable source commit `6172bcd1bc67044a295aa41acb49d92db954de3d`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Trigger.dev v4.5.16.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Trigger.dev v4.6.0.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages follow the navigation declared in docs/docs.json at the immutable release tag; snippets are inlined into the pages that import them rather than published separately.
 - API reference pages are rendered from the OpenAPI specification the page names in its `openapi` frontmatter, since the upstream page carries no prose of its own.
 - Static MDX cards, tabs, accordions, steps, callouts, and parameter fields are normalized to Markdown without executing JavaScript.
 - Published page links resolve to https://trigger.dev/docs; source assets point at the immutable release commit.
+- Quarantined sources (1): upstream pages using constructs this generator cannot convert yet are omitted and listed in `manifest.json`.
 
 ## Getting started
 
-- [Welcome to the Trigger.dev docs](pages/introduction.md): Find all the resources and guides you need to get started (7936 bytes)
-- [Quick start: add Trigger.dev to your project](pages/quick-start.md): Set up Trigger.dev in your existing project in under 3 minutes. Install the SDK, create your first background task, and trigger it from your code. (6235 bytes)
-- [Manual setup](pages/manual-setup.md): How to manually setup Trigger.dev in your project. (13868 bytes)
+- [Quick start: add Trigger.dev to your project](pages/quick-start.md): Set up Trigger.dev in your existing project in under 3 minutes. Install the SDK, create your first background task, and trigger it from your code. (6285 bytes)
+- [Manual setup](pages/manual-setup.md): How to manually setup Trigger.dev in your project. (13973 bytes)
 - [Video walkthrough](pages/video-walkthrough.md): Go from zero to a working task in your Next.js app in 10 minutes. (1246 bytes)
 - [How Trigger.dev works](pages/how-it-works.md): Understand how Trigger.dev works and how it can help you. (18114 bytes)
 - [Limits](pages/limits.md): There are some hard and soft limits that you might hit. (11386 bytes)
@@ -23,16 +23,16 @@
 
 - [Tasks: Overview](pages/tasks/overview.md): Tasks are functions that can run for a long time and provide strong resilience to failure. (22334 bytes)
 - [schemaTask](pages/tasks/schemaTask.md): Define tasks with a runtime payload schema and validate the payload before running the task. (12080 bytes)
-- [Scheduled tasks (cron)](pages/tasks/scheduled.md): A task that is triggered on a recurring schedule using cron syntax. (19030 bytes)
-- [Triggering](pages/triggering.md): Tasks need to be triggered in order to run. (47671 bytes)
+- [Scheduled tasks (cron)](pages/tasks/scheduled.md): A task that is triggered on a recurring schedule using cron syntax. (20580 bytes)
+- [Triggering](pages/triggering.md): Tasks need to be triggered in order to run. (47623 bytes)
 - [Runs](pages/runs.md): Understanding the lifecycle of task run execution in Trigger.dev (13210 bytes)
-- [API keys](pages/apikeys.md): Authenticate backend requests with environment-specific API keys. (8781 bytes)
+- [API keys](pages/apikeys.md): Authenticate backend requests with environment-specific API keys. (8059 bytes)
 
 ## Building with AI
 
 - [Building with AI: overview](pages/building-with-ai.md): Tools and resources for building Trigger.dev projects with AI coding assistants. (8772 bytes)
 - [MCP Introduction](pages/mcp-introduction.md): Learn how to install and configure the Trigger.dev MCP Server (8668 bytes)
-- [MCP Tools](pages/mcp-tools.md): Learn about how to use the tools available in the Trigger.dev MCP Server (9791 bytes)
+- [MCP Tools](pages/mcp-tools.md): Learn about how to use the tools available in the Trigger.dev MCP Server (10352 bytes)
 - [Skills](pages/skills.md): Install Trigger.dev agent skills to teach any AI coding assistant how to write tasks, realtime frontends, and chat.agent AI agents. (5645 bytes)
 - [Agent rules](pages/mcp-agent-rules.md): Trigger.dev agent rules are now agent skills, installed with the trigger.dev CLI. (1807 bytes)
 
@@ -63,47 +63,50 @@
 ## Agents
 
 - [AI Agents](pages/ai-chat/overview.md): Durable multi-turn AI chats — one Trigger.dev task per conversation, surviving refreshes, deploys, and crashes. (4875 bytes)
-- [Quick Start](pages/ai-chat/quick-start.md): Get a working AI agent in 3 steps — define an agent, generate a token, and wire up the frontend. (6824 bytes)
-- [Migrate from an AI SDK route handler](pages/ai-chat/migrating-from-a-route-handler.md): Move an existing useChat + streamText chat app to chat.agent — what stays identical, what you delete, and a prompt you can hand to a coding agent. (33805 bytes)
-- [Anatomy of an agent](pages/ai-chat/anatomy.md): The moving parts of a chat agent — the agent task, the session, the frontend transport — and which page covers each. (3994 bytes)
-- [Backend](pages/ai-chat/backend.md): Three approaches to building your chat backend — chat.agent(), session iterator, or raw task primitives. (38366 bytes)
-- [Lifecycle hooks](pages/ai-chat/lifecycle-hooks.md): Hook into every stage of a chat agent's run: preload, turn start, turn complete, suspend, resume, and more. (41341 bytes)
-- [Tools](pages/ai-chat/tools.md): Declare tools on chat.agent so toModelOutput survives across turns, get them back typed in run(), and type your messages from them. (9882 bytes)
-- [Frontend](pages/ai-chat/frontend.md): Transport setup, session management, client data, and frontend patterns for AI Chat. (28259 bytes)
+- [Quick Start](pages/ai-chat/quick-start.md): Get a working AI agent in 3 steps — define an agent, generate a token, and wire up the frontend. (6641 bytes)
+- [Migrate from an AI SDK route handler](pages/ai-chat/migrating-from-a-route-handler.md): Move an existing useChat + streamText chat app to chat.agent — what stays identical, what you delete, and a prompt you can hand to a coding agent. (33833 bytes)
+- [Anatomy of an agent](pages/ai-chat/anatomy.md): The three parts of a chat agent — the agent task that runs the turn loop, the durable session that carries messages, and the frontend transport — what each does and where it's documented. (4793 bytes)
+- [Backend](pages/ai-chat/backend.md): Three approaches to building your chat backend — chat.agent(), session iterator, or raw task primitives. (43034 bytes)
+- [Lifecycle hooks](pages/ai-chat/lifecycle-hooks.md): Hook into every stage of a chat agent's run: preload, turn start, turn complete, suspend, resume, and more. (42081 bytes)
+- [Tools](pages/ai-chat/tools.md): Declare tools on chat.agent so toModelOutput survives across turns, get them back typed in run(), and type your messages from them. (10766 bytes)
+- [Frontend](pages/ai-chat/frontend.md): Transport setup, session management, client data, and frontend patterns for AI Chat. (29186 bytes)
 - [Server-Side Chat](pages/ai-chat/server-chat.md): Use AgentChat to interact with chat agents from server-side code — tasks, webhooks, scripts, or other agents. (13037 bytes)
-- [Sessions](pages/ai-chat/sessions.md): A Session is a stateful execution of an agent, with two-way streaming and durable compute. A single Session can have multiple runs associated with it. (18424 bytes)
-- [Side channels](pages/ai-chat/side-channels.md): Named, durable stream pairs on a Session, separate from the chat transcript. A side channel outlives a single run, is shared across runs, and its input does not wake a run. (8574 bytes)
+- [Sessions](pages/ai-chat/sessions.md): A Session is a stateful execution of an agent, with two-way streaming and durable compute. A single Session can have multiple runs associated with it. (20417 bytes)
+- [Side channels](pages/ai-chat/side-channels.md): Named, durable stream pairs on a Session, separate from the chat transcript. A side channel outlives a single run, is shared across runs, and its input does not wake a run. (8647 bytes)
 - [chat.local](pages/ai-chat/chat-local.md): Typed, run-scoped data accessible from hooks, run(), tools, and subtasks. Survives across turns, auto-cleared between runs, auto-hydrated into subtasks. (6798 bytes)
 - [Types](pages/ai-chat/types.md): TypeScript types for AI Agents, UI messages, and the frontend transport. (9950 bytes)
-- [Custom agents](pages/ai-chat/custom-agents.md): Build chat agents without chat.agent()'s managed lifecycle: register with chat.customAgent(), then drive turns with the createSession iterator or a hand-rolled loop. (32796 bytes)
-- [How the AI Agents SDK works](pages/ai-chat/how-it-works.md): End-to-end mechanics of a chat.agent turn: the two durable channels per session, the long-lived task that reads and writes them, and how a chat survives refreshes, deploys, and idle gaps. (20354 bytes)
+- [Custom agents](pages/ai-chat/custom-agents.md): Build chat agents without chat.agent()'s managed lifecycle: register with chat.customAgent(), then drive turns with the createSession iterator or a hand-rolled loop. (33993 bytes)
+- [How the AI Agents SDK works](pages/ai-chat/how-it-works.md): End-to-end mechanics of a chat.agent turn: the two durable channels per session, the long-lived task that reads and writes them, and how a chat survives refreshes, deploys, and idle gaps. (20773 bytes)
 - [Prompts](pages/ai/prompts.md): Define prompt templates as code, version them on deploy, and override from the dashboard without redeploying. (13688 bytes)
 - [LLM observability](pages/ai/observability.md): Capture Vercel AI SDK calls in a task as spans in the run trace, with model, token usage, cost, and latency. Opt in per call, link calls to prompt versions, and query usage across runs. (6993 bytes)
-- [Fast starts](pages/ai-chat/fast-starts.md): Two ways to cut first-turn TTFC: Preload eagerly triggers the run before the first message; Head Start runs step 1 in your warm server while the agent boots in parallel. (38537 bytes)
-- [Compaction](pages/ai-chat/compaction.md): Automatic context compaction to keep long conversations within token limits. (14679 bytes)
-- [Prompt caching](pages/ai-chat/prompt-caching.md): Cache the stable prefix of your agent's prompt with Anthropic prompt caching to cut token cost and latency on every turn. (12498 bytes)
-- [Pending Messages](pages/ai-chat/pending-messages.md): Inject user messages mid-execution to steer agents between tool-call steps. (15174 bytes)
-- [Background injection](pages/ai-chat/background-injection.md): Inject context from background work into the agent's conversation — self-review, RAG augmentation, or any async analysis. (9091 bytes)
-- [Actions](pages/ai-chat/actions.md): Custom commands sent from the frontend that mutate chat state without consuming a turn — undo, rollback, edit, regenerate. (5233 bytes)
+- [Fast starts](pages/ai-chat/fast-starts.md): Two ways to cut first-turn TTFC: Preload eagerly triggers the run before the first message; Head Start runs step 1 in your warm server while the agent boots in parallel. (39472 bytes)
+- [Compaction](pages/ai-chat/compaction.md): Automatic context compaction to keep long conversations within token limits. (15529 bytes)
+- [Prompt caching](pages/ai-chat/prompt-caching.md): Cache the stable prefix of your agent's prompt with Anthropic prompt caching to cut token cost and latency on every turn. (12352 bytes)
+- [Pending Messages](pages/ai-chat/pending-messages.md): Inject user messages mid-execution to steer agents between tool-call steps. (15137 bytes)
+- [Background injection](pages/ai-chat/background-injection.md): Inject context from background work into the agent's conversation: self-review, RAG augmentation, or any async analysis. (16433 bytes)
+- [Actions](pages/ai-chat/actions.md): Custom commands sent from the frontend that mutate chat state without consuming a turn: undo, rollback, edit, regenerate. (7877 bytes)
+- [Transcript storage](pages/ai-chat/transcript-storage.md): Where a chat.agent conversation is kept: the UIMessages the runtime saves, the platform default, reading history back, and bringing your own database through the TranscriptStorage adapter. (18480 bytes)
+- [Migrate from hydrateMessages to transcript storage](pages/ai-chat/migrating-from-hydrate-messages.md): Move a chat.agent that persists its own history through hydrateMessages onto a TranscriptStorage: map your tables, implement load and save, decide whether you need loadContext, and delete the recovery and compaction cod… (17101 bytes)
 - [Error handling](pages/ai-chat/error-handling.md): How errors flow through chat.agent — stream errors, hook errors, run failures — and how to recover. (16635 bytes)
 - [Sub-Agents](pages/ai-chat/patterns/sub-agents.md): Delegate work to durable sub-agents from within a parent agent's tool calls, with streaming preliminary results. (15130 bytes)
-- [Version upgrades](pages/ai-chat/patterns/version-upgrades.md): Gracefully migrate chat agents to a new deployment using chat.requestUpgrade(), chat.endAndContinue(), and the continuation mechanism. (9301 bytes)
-- [Database persistence for chat](pages/ai-chat/patterns/database-persistence.md): Split conversation state and live session metadata across hooks — preload, turn start, turn complete — without tying the pattern to a specific ORM or schema. (18724 bytes)
-- [Persistence and replay](pages/ai-chat/patterns/persistence-and-replay.md): How chat.agent rebuilds conversation history at run boot — durable JSON snapshot in object storage plus session.out replay, with a hydrateMessages short-circuit for backend-owned history. (13421 bytes)
+- [Version upgrades](pages/ai-chat/patterns/version-upgrades.md): Gracefully migrate chat agents to a new deployment using chat.requestUpgrade(), chat.endAndContinue(), and the continuation mechanism. (13278 bytes)
+- [Database persistence for chat](pages/ai-chat/patterns/database-persistence.md): Split conversation state and live session metadata across hooks — preload, turn start, turn complete — without tying the pattern to a specific ORM or schema. (20580 bytes)
+- [Persistence and replay](pages/ai-chat/patterns/persistence-and-replay.md): How chat.agent rebuilds conversation history at run boot — the transcript storage's persisted conversation plus session.out replay, and what changes when your app owns the model's context. (15518 bytes)
 - [Branching conversations](pages/ai-chat/patterns/branching-conversations.md): Build ChatGPT-style conversation trees with edit, regenerate, undo, and branch switching using hydrateMessages, chat.history, and actions. (10764 bytes)
 - [Code execution sandbox](pages/ai-chat/patterns/code-sandbox.md): Warm an isolated sandbox on each chat turn, run an AI SDK executeCode tool, and tear down right before the run suspends — using chat.agent hooks and chat.local. (5339 bytes)
 - [Human-in-the-loop](pages/ai-chat/patterns/human-in-the-loop.md): Pause the agent mid-response to ask the user a clarifying question, then resume with their answer. (12586 bytes)
 - [Tool result auditing](pages/ai-chat/patterns/tool-result-auditing.md): Fire side effects exactly once per resolved tool call — audit logs, billing, notifications — using extractNewToolResults inside hydrateMessages or onTurnComplete. (7313 bytes)
 - [Large payloads in chat.agent](pages/ai-chat/patterns/large-payloads.md): Why a single chunk on the chat stream is capped at \1 MiB, what error you'll see, and how to work around it with ID references. (6613 bytes)
-- [Agent Skills](pages/ai-chat/patterns/skills.md): Ship reusable capabilities (folders with SKILL.md + scripts) that a chat agent discovers and invokes on demand. (10188 bytes)
+- [Agent Skills](pages/ai-chat/patterns/skills.md): Ship reusable capabilities (folders with SKILL.md + scripts) that a chat agent discovers and invokes on demand. (10098 bytes)
 - [OOM resilience](pages/ai-chat/patterns/oom-resilience.md): Recover from out-of-memory errors mid-turn by automatically retrying the failed turn on a larger machine — without losing the in-flight user message or re-processing completed turns. (7043 bytes)
 - [Recovery boot](pages/ai-chat/patterns/recovery-boot.md): Recover from cancel-mid-stream, crashes, and OOM kills with full conversational context. The smart default Just Works; the onRecoveryBoot hook is the override path for advanced policies. (11689 bytes)
 - [Trusted edge signals](pages/ai-chat/patterns/trusted-edge-signals.md): How to safely deliver server-trusted signals (bot scores, JA4, ASN, ReCAPTCHA verdicts) to a chat.agent run via an edge proxy. (15855 bytes)
-- [API Reference](pages/ai-chat/reference.md): Complete API reference for the AI Agents SDK — backend options, events, frontend transport, and hooks. (115503 bytes)
-- [Client Protocol](pages/ai-chat/client-protocol.md): The wire protocol for building custom chat transports — how clients communicate with chat agents over Sessions and SSE. (75113 bytes)
-- [Testing](pages/ai-chat/testing.md): Drive a chat.agent through real turns in unit tests — no network, no task runtime, no mocking the SDK. (31937 bytes)
+- [Native compaction & provider fallback](pages/ai-chat/patterns/native-compaction.md): Persist provider-native compaction (Anthropic context editing, OpenAI stored responses) across chat.agent turns so history is never re-sent, and fall back between providers without losing the conversation. (15385 bytes)
+- [API Reference](pages/ai-chat/reference.md): Complete API reference for the AI Agents SDK — backend options, events, frontend transport, and hooks. (137986 bytes)
+- [Client Protocol](pages/ai-chat/client-protocol.md): The wire protocol for building custom chat transports — how clients communicate with chat agents over Sessions and SSE. (76362 bytes)
+- [Testing](pages/ai-chat/testing.md): Drive a chat.agent through real turns in unit tests — no network, no task runtime, no mocking the SDK. (32125 bytes)
 - [MCP Server](pages/ai-chat/mcp.md): Chat with your agents from any AI coding tool using the Trigger.dev MCP server. (4246 bytes)
-- [Upgrade Guide: prerelease → Sessions-as-run-manager](pages/ai-chat/upgrade-guide.md): Migrating chat.agent code from the prerelease API to the Sessions-as-run-manager release. (23472 bytes)
+- [Upgrade Guide: prerelease → Sessions-as-run-manager](pages/ai-chat/upgrade-guide.md): Migrating chat.agent code from the prerelease API to the Sessions-as-run-manager release. (23510 bytes)
 - [AI Agents SDK changelog](pages/ai-chat/changelog.md): Changelog for the AI Agents SDK. (62163 bytes)
 
 ## Configuration
@@ -119,7 +122,7 @@
 - [apt-get](pages/config/extensions/aptGet.md): Use the aptGet build extension to install system packages into the deployed image (795 bytes)
 - [Additional Files](pages/config/extensions/additionalFiles.md): Use the additionalFiles build extension to copy additional files to the build directory (1471 bytes)
 - [Additional Packages](pages/config/extensions/additionalPackages.md): Use the additionalPackages build extension to include additional packages in the build (1648 bytes)
-- [Sync env vars](pages/config/extensions/syncEnvVars.md): Use the syncEnvVars build extension to automatically sync environment variables to Trigger.dev (11631 bytes)
+- [Sync env vars](pages/config/extensions/syncEnvVars.md): Use the syncEnvVars build extension to automatically sync environment variables to Trigger.dev (11963 bytes)
 - [esbuild Plugin](pages/config/extensions/esbuildPlugin.md): Use the esbuildPlugin build extension to add existing or custom esbuild plugins to your build process (929 bytes)
 - [Emit Decorator Metadata](pages/config/extensions/emitDecoratorMetadata.md): Use the emitDecoratorMetadata build extension to enable support for the emitDecoratorMetadata TypeScript compiler option (1722 bytes)
 - [Audio Waveform](pages/config/extensions/audioWaveform.md): Use the audioWaveform build extension to add support for Audio Waveform in your project (582 bytes)
@@ -127,12 +130,12 @@
 
 ## Deployment
 
-- [Deployment](pages/deployment/overview.md): Learn how to deploy your tasks to Trigger.dev. (11393 bytes)
-- [Environment Variables](pages/deploy-environment-variables.md): Any environment variables used in your tasks need to be added so the deployed code will run successfully. (15713 bytes)
+- [Deployment](pages/deployment/overview.md): Learn how to deploy your tasks to Trigger.dev. (11225 bytes)
+- [Environment Variables](pages/deploy-environment-variables.md): Any environment variables used in your tasks need to be added so the deployed code will run successfully. (17232 bytes)
 - [CI / GitHub Actions](pages/github-actions.md): You can easily deploy your tasks with GitHub actions and other CI environments. (8039 bytes)
-- [Preview branches](pages/deployment/preview-branches.md): Create isolated environments for each branch of your code, allowing you to test changes before merging to production. You can create preview branches manually or automatically from your git branches. (9334 bytes)
+- [Preview branches](pages/deployment/preview-branches.md): Create isolated environments for each branch of your code, allowing you to test changes before merging to production. You can create preview branches manually or automatically from your git branches. (9337 bytes)
 - [Development branches](pages/deployment/dev-branches.md): Run multiple local dev sessions in isolation by giving each one its own development branch. Use branches to keep parallel work (in separate worktrees, directories, or agents) from clashing. (2437 bytes)
-- [Version skew protection](pages/deployment/version-skew-protection.md): Pin task runs to the deployment that matches the release of your app that triggered them. (28605 bytes)
+- [Version skew protection](pages/deployment/version-skew-protection.md): Pin task runs to the deployment that matches the release of your app that triggered them. (34077 bytes)
 - [Atomic deploys](pages/deployment/atomic-deployment.md): Use atomic deploys to coordinate changes to your tasks and your application. (8286 bytes)
 - [GitHub integration](pages/github-integration.md): Automatically deploy your tasks on every push to your GitHub repository. (6554 bytes)
 - [Vercel integration](pages/vercel-integration.md): Automatically deploy your tasks whenever you deploy to Vercel. (12182 bytes)
@@ -148,7 +151,7 @@
 - [Realtime overview](pages/realtime/overview.md): Get live run updates and stream data from background tasks to your frontend or backend. No polling. (4535 bytes)
 - [How Realtime works](pages/realtime/how-it-works.md): Technical architecture behind Trigger.dev's real-time run updates, built on Electric SQL and PostgreSQL syncing. (4425 bytes)
 - [The run object](pages/realtime/run-object.md): The run object schema for Realtime subscriptions (5868 bytes)
-- [Realtime authentication](pages/realtime/auth.md): Authenticating real-time API requests with Public Access Tokens or Trigger Tokens (8313 bytes)
+- [Realtime authentication](pages/realtime/auth.md): Authenticating real-time API requests with Public Access Tokens or Trigger Tokens (8279 bytes)
 - [React hooks for real-time task updates](pages/realtime/react-hooks/overview.md): Subscribe to background task progress, stream AI responses, and trigger tasks from React components using @trigger.dev/react-hooks. (2790 bytes)
 - [Trigger tasks from React](pages/realtime/react-hooks/triggering.md): Trigger background tasks from React components and optionally subscribe to their progress or stream their output. (6649 bytes)
 - [Run updates in React](pages/realtime/react-hooks/subscribe.md): Build progress bars, status indicators, and live dashboards by subscribing to background task updates from React components. (19866 bytes)
@@ -179,6 +182,7 @@
 
 - [Query](pages/observability/query.md): Query allows you to write custom queries against your data using TRQL (Trigger.dev Query Language), a SQL-style language based on ClickHouse SQL. You can query your data through the dashboard, SDK, or REST API. (15621 bytes)
 - [Dashboards](pages/observability/dashboards.md): Create custom dashboards with real-time metrics powered by TRQL queries. (3942 bytes)
+- [Project health report](pages/reports.md): Get a deterministic verdict on your project's health — split into Flow, Execution, and Liveness — from the CLI, an MCP tool or prompt, or the HTTP API. (10083 bytes)
 
 ## Using the Dashboard
 
@@ -195,6 +199,7 @@
 - [How to reduce your spend](pages/how-to-reduce-your-spend.md): Tips and best practices to reduce your costs on Trigger.dev (7032 bytes)
 - [Debugging in VS Code](pages/troubleshooting-debugging-in-vscode.md): Attach the VS Code debugger to your Trigger.dev tasks to set breakpoints and step through your code. (808 bytes)
 - [How to upgrade the Trigger.dev packages](pages/upgrading-packages.md): When we release fixes and new features we recommend you upgrade your Trigger.dev packages. (2080 bytes)
+- [Zod](pages/troubleshooting-zod.md): Resolve Zod typechecking, test, and deployment errors when upgrading to Trigger.dev v4.6. (6741 bytes)
 - [Uptime Status](pages/troubleshooting-uptime-status.md): Subscribe to email notifications for Trigger.dev platform incidents and status updates. (238 bytes)
 - [GitHub Issues](pages/troubleshooting-github-issues.md): Please join our community on Discord to report bugs, request features, or get help from the team and other developers. (167 bytes)
 - [Request a feature](pages/request-feature.md): If you have a feature request or idea for Trigger, we'd love to hear it! You can submit your ideas on our public roadmap. We're always looking for feedback on what to build next, so feel free to submit your ideas or vot… (293 bytes)
@@ -204,7 +209,7 @@
 - [Self-hosting overview](pages/self-hosting/overview.md): You can self-host Trigger.dev on your own infrastructure. (5913 bytes)
 - [Docker compose](pages/self-hosting/docker.md): You can self-host Trigger.dev on your own infrastructure using Docker. (18552 bytes)
 - [Kubernetes](pages/self-hosting/kubernetes.md): Deploy Trigger.dev to Kubernetes with our official Helm chart - one command for evaluation, external datastores for production. (23990 bytes)
-- [Security & vulnerability reporting](pages/self-hosting/security.md): How to report security issues in Trigger.dev, our response targets, and how self-hosters receive security notices. (2213 bytes)
+- [Security & vulnerability reporting](pages/self-hosting/security.md): How to report security issues in Trigger.dev, our response targets, and how self-hosters receive security notices. (3641 bytes)
 - [Webapp](pages/self-hosting/env/webapp.md): Environment variables for the webapp container. (62084 bytes)
 - [Supervisor](pages/self-hosting/env/supervisor.md): Environment variables for the supervisor container. (9420 bytes)
 
@@ -224,17 +229,17 @@
 ## API reference
 
 - [Management API overview](pages/management/overview.md): Using the Trigger.dev management API (1768 bytes)
-- [Authentication](pages/management/authentication.md): Authenticating with the Trigger.dev management API (11176 bytes)
-- [Multiple SDK clients](pages/management/multiple-clients.md): Use TriggerClient to talk to multiple Trigger.dev projects, environments, or preview branches from a single process. (5271 bytes)
+- [Authentication](pages/management/authentication.md): Authenticating with the Trigger.dev management API (11785 bytes)
+- [Multiple SDK clients](pages/management/multiple-clients.md): Use TriggerClient to talk to multiple Trigger.dev projects, environments, or preview branches from a single process. (5337 bytes)
 - [Errors and retries](pages/management/errors-and-retries.md): Handling errors and retries with the Trigger.dev management API (1798 bytes)
 - [Auto-pagination](pages/management/auto-pagination.md): Using auto-pagination with the Trigger.dev management API (846 bytes)
 - [Advanced usage](pages/management/advanced-usage.md): Advanced usage of the Trigger.dev management API (608 bytes)
 
 ## Tasks API
 
-- [Trigger](pages/management/tasks/trigger.md): POST /api/v1/tasks/{taskIdentifier}/trigger (3525 bytes)
+- [Trigger](pages/management/tasks/trigger.md): POST /api/v1/tasks/{taskIdentifier}/trigger (3703 bytes)
 - [Batch trigger](pages/management/tasks/batch-trigger.md): POST /api/v1/tasks/batch (4086 bytes)
-- [Trigger task batch](pages/management/tasks/trigger-batch.md): POST /api/v1/tasks/{taskIdentifier}/batch (3968 bytes)
+- [Trigger task batch](pages/management/tasks/trigger-batch.md): POST /api/v1/tasks/{taskIdentifier}/batch (4146 bytes)
 
 ## Batches API
 
@@ -281,13 +286,13 @@
 
 ## Schedules API
 
-- [List Schedules](pages/management/schedules/list.md): GET /api/v1/schedules (2461 bytes)
-- [Create Schedule](pages/management/schedules/create.md): POST /api/v1/schedules (2562 bytes)
-- [Retrieve Schedule](pages/management/schedules/retrieve.md): GET /api/v1/schedules/{scheduleid} (2163 bytes)
-- [Update Schedule](pages/management/schedules/update.md): PUT /api/v1/schedules/{scheduleid} (2748 bytes)
+- [List Schedules](pages/management/schedules/list.md): GET /api/v1/schedules (2962 bytes)
+- [Create Schedule](pages/management/schedules/create.md): POST /api/v1/schedules (3047 bytes)
+- [Retrieve Schedule](pages/management/schedules/retrieve.md): GET /api/v1/schedules/{scheduleid} (2648 bytes)
+- [Update Schedule](pages/management/schedules/update.md): PUT /api/v1/schedules/{scheduleid} (3233 bytes)
 - [Delete Schedule](pages/management/schedules/delete.md): DELETE /api/v1/schedules/{scheduleid} (486 bytes)
-- [Deactivate Schedule](pages/management/schedules/deactivate.md): POST /api/v1/schedules/{scheduleid}/deactivate (2318 bytes)
-- [Activate Schedule](pages/management/schedules/activate.md): POST /api/v1/schedules/{scheduleid}/activate (2309 bytes)
+- [Deactivate Schedule](pages/management/schedules/deactivate.md): POST /api/v1/schedules/{scheduleid}/deactivate (2803 bytes)
+- [Activate Schedule](pages/management/schedules/activate.md): POST /api/v1/schedules/{scheduleid}/activate (2794 bytes)
 - [Get timezones](pages/management/schedules/timezones.md): GET /api/v1/timezones (8323 bytes)
 
 ## Env Vars API
@@ -301,8 +306,8 @@
 
 ## Deployments API
 
-- [List deployments](pages/management/deployments/list.md): List all deployments for the authenticated environment, ordered by most recent first. (2203 bytes)
-- [Get deployment](pages/management/deployments/retrieve.md): GET /api/v1/deployments/{deploymentId} (1458 bytes)
+- [List deployments](pages/management/deployments/list.md): List all deployments for the authenticated environment, ordered by most recent first. (2414 bytes)
+- [Get deployment](pages/management/deployments/retrieve.md): GET /api/v1/deployments/{deploymentId} (1665 bytes)
 - [Get latest deployment](pages/management/deployments/get-latest.md): GET /api/v1/deployments/latest (1288 bytes)
 - [Promote deployment](pages/management/deployments/promote.md): POST /api/v1/deployments/{version}/promote (863 bytes)
 
@@ -321,7 +326,7 @@
 - [Retrieve session](pages/management/sessions/retrieve.md): GET /api/v1/sessions/{session} (3151 bytes)
 - [Update session](pages/management/sessions/update.md): PATCH /api/v1/sessions/{session} (4681 bytes)
 - [Close session](pages/management/sessions/close.md): POST /api/v1/sessions/{session}/close (3539 bytes)
-- [Session channels](pages/management/sessions/channels.md): The raw HTTP endpoints behind a session's .in and .out streams: append records, read them over SSE, and drain them non-streaming. (7069 bytes)
+- [Session channels](pages/management/sessions/channels.md): The raw HTTP endpoints behind a session's .in and .out streams: append records, read them over SSE, and drain them non-streaming. (7518 bytes)
 
 ## Query API
 
@@ -331,14 +336,14 @@
 
 ## Introduction
 
-- [Frameworks, guides and examples](pages/guides/introduction.md): A growing list of guides and examples to get the most out of Trigger.dev. (20911 bytes)
+- [Frameworks, guides and examples](pages/guides/introduction.md): A growing list of guides and examples to get the most out of Trigger.dev. (22043 bytes)
 
 ## Frameworks
 
 - [Bun guide](pages/guides/frameworks/bun.md): This guide will show you how to setup Trigger.dev in your existing Bun project, test an example task, and view the run. (4694 bytes)
-- [Next.js setup guide](pages/guides/frameworks/nextjs.md): This guide will show you how to setup Trigger.dev in your existing Next.js project, test an example task, and view the run. (22451 bytes)
+- [Next.js setup guide](pages/guides/frameworks/nextjs.md): This guide will show you how to setup Trigger.dev in your existing Next.js project, test an example task, and view the run. (22213 bytes)
 - [Node.js setup guide](pages/guides/frameworks/nodejs.md): This guide will show you how to setup Trigger.dev in your existing Node.js project, test an example task, and view the run. (3750 bytes)
-- [Remix setup guide](pages/guides/frameworks/remix.md): This guide will show you how to setup Trigger.dev in your existing Remix project, test an example task, and view the run. (11989 bytes)
+- [Remix setup guide](pages/guides/frameworks/remix.md): This guide will show you how to setup Trigger.dev in your existing Remix project, test an example task, and view the run. (11641 bytes)
 
 ## Community packages
 
@@ -349,7 +354,7 @@
 
 ## Guides
 
-- [AI agents overview](pages/guides/ai-agents/overview.md): Real world AI agent example tasks using Trigger.dev (3432 bytes)
+- [AI agents overview](pages/guides/ai-agents/overview.md): Real world AI agent example tasks using Trigger.dev (4460 bytes)
 - [Build a chat agent](pages/guides/ai-agents/chat-agent.md): Create a durable, multi-turn chat agent with chat.agent(), then add tools to it like any AI SDK agent. (5376 bytes)
 - [Generate and translate copy](pages/guides/ai-agents/generate-translate-copy.md): Create an AI agent workflow that generates and translates copy (4019 bytes)
 - [Route a question to a different AI model](pages/guides/ai-agents/route-question.md): Create an AI agent workflow that routes a question to a different AI model depending on its complexity (3197 bytes)
@@ -359,17 +364,17 @@
 - [Claude Agent SDK setup guide](pages/guides/ai-agents/claude-code-trigger.md): Build AI agents that can read files, run commands, and edit code using the Claude Agent SDK and Trigger.dev. (5944 bytes)
 - [Drizzle setup guide](pages/guides/frameworks/drizzle.md): This guide will show you how to set up Drizzle ORM with Trigger.dev (7487 bytes)
 - [Prisma setup guide](pages/guides/frameworks/prisma.md): This guide will show you how to set up Prisma with Trigger.dev (8530 bytes)
-- [Nango OAuth with Trigger.dev](pages/guides/frameworks/nango.md): Use Nango to authenticate API calls inside a Trigger.dev task, no token management required. (9272 bytes)
-- [Sequin database triggers](pages/guides/frameworks/sequin.md): This guide will show you how to trigger tasks from database changes using Sequin (12886 bytes)
+- [Nango OAuth with Trigger.dev](pages/guides/frameworks/nango.md): Use Nango to authenticate API calls inside a Trigger.dev task, no token management required. (9283 bytes)
+- [Sequin database triggers](pages/guides/frameworks/sequin.md): This guide will show you how to trigger tasks from database changes using Sequin (12873 bytes)
 - [Supabase overview](pages/guides/frameworks/supabase-guides-overview.md): Guides and examples for using Supabase with Trigger.dev. (1228 bytes)
-- [Triggering tasks from Supabase edge functions](pages/guides/frameworks/supabase-edge-functions-basic.md): This guide will show you how to trigger a task from a Supabase edge function, and then view the run in our dashboard. (12256 bytes)
-- [Triggering tasks from Supabase Database Webhooks](pages/guides/frameworks/supabase-edge-functions-database-webhooks.md): This guide shows you how to trigger a transcribing task when a row is added to a table in a Supabase database, using a Database Webhook and Edge Function. (19305 bytes)
+- [Triggering tasks from Supabase edge functions](pages/guides/frameworks/supabase-edge-functions-basic.md): This guide will show you how to trigger a task from a Supabase edge function, and then view the run in our dashboard. (12021 bytes)
+- [Triggering tasks from Supabase Database Webhooks](pages/guides/frameworks/supabase-edge-functions-database-webhooks.md): This guide shows you how to trigger a transcribing task when a row is added to a table in a Supabase database, using a Database Webhook and Edge Function. (19217 bytes)
 - [Authenticating Supabase tasks: JWTs and service roles](pages/guides/frameworks/supabase-authentication.md): Learn how to authenticate Supabase tasks using JWTs for Row Level Security (RLS) or service role keys for admin access. (4264 bytes)
 - [Using webhooks with Trigger.dev](pages/guides/frameworks/webhooks-guides-overview.md): Guides for using webhooks with Trigger.dev. (1428 bytes)
 - [Triggering tasks with webhooks in Next.js](pages/guides/frameworks/nextjs-webhooks.md): Learn how to trigger a task from a webhook in a Next.js app. (5058 bytes)
 - [Triggering tasks with webhooks in Remix](pages/guides/frameworks/remix-webhooks.md): Learn how to trigger a task from a webhook in a Remix app. (2818 bytes)
-- [Trigger a task from Stripe webhook events](pages/guides/examples/stripe-webhook.md): This example demonstrates how to handle Stripe webhook events using Trigger.dev. (5181 bytes)
-- [Trigger tasks from Hookdeck webhooks](pages/guides/examples/hookdeck-webhook.md): This example demonstrates how to use Hookdeck to receive webhooks and trigger Trigger.dev tasks. (2759 bytes)
+- [Trigger a task from Stripe webhook events](pages/guides/examples/stripe-webhook.md): This example demonstrates how to handle Stripe webhook events using Trigger.dev. (5233 bytes)
+- [Trigger tasks from Hookdeck webhooks](pages/guides/examples/hookdeck-webhook.md): This example demonstrates how to use Hookdeck to receive webhooks and trigger Trigger.dev tasks. (2799 bytes)
 
 ## Migration guides
 
@@ -387,12 +392,14 @@
 ## Example projects
 
 - [Automated website monitoring with Anchor Browser](pages/guides/example-projects/anchor-browser-web-scraper.md): Automated web monitoring using Trigger.dev's task scheduling and Anchor Browser's AI-powered browser automation. (5193 bytes)
+- [Ask Trigger chat agent](pages/guides/example-projects/ask-trigger-chat-agent.md): Build a chat agent that teaches Trigger.dev by drawing interactive node-graphs, quizzes and cards, using chat.agent(), generative UI with json-render, live docs grounding through an MCP server, and a Next.js frontend. (18641 bytes)
 - [Next.js Batch LLM Evaluator](pages/guides/example-projects/batch-llm-evaluator.md): This example Next.js project evaluates multiple LLM models using the Vercel AI SDK and streams updates to the frontend using Trigger.dev Realtime. (3516 bytes)
 - [Changelog generator using Claude Agent SDK](pages/guides/example-projects/claude-changelog-generator.md): Automatically generate changelogs from your git commit history using the Claude Agent SDK and Trigger.dev. (4447 bytes)
 - [Claude GitHub wiki](pages/guides/example-projects/claude-github-wiki.md): Ask questions about any public GitHub repository and get AI-powered analysis using the Claude Agent SDK and Trigger.dev. (4615 bytes)
 - [Claude 3.7 thinking chatbot](pages/guides/example-projects/claude-thinking-chatbot.md): This example Next.js project uses Vercel's AI SDK and Anthropic's Claude 3.7 model to create a thinking chatbot. (2376 bytes)
-- [ClickHouse chat agent](pages/guides/example-projects/clickhouse-chat-agent.md): Build a chat agent that answers questions about your ClickHouse data with charts, tables and maps instead of text, using chat.agent(), generative UI with json-render, and a Next.js frontend. (14289 bytes)
+- [ClickHouse chat agent](pages/guides/example-projects/clickhouse-chat-agent.md): Build a chat agent that answers questions about your ClickHouse data with charts, tables and maps instead of text, using chat.agent(), generative UI with json-render, and a Next.js frontend. (14369 bytes)
 - [Background Cursor agent using the Cursor CLI](pages/guides/example-projects/cursor-background-agent.md): Run Cursor's headless CLI agent in a Trigger.dev task and stream the live output to the frontend using Trigger.dev Realtime Streams. (5892 bytes)
+- [ElevenLabs Voice agent](pages/guides/example-projects/elevenlabs-voice-agent.md): Build a spoken-conversation voice assistant on a Trigger.dev chat agent, with streaming speech-to-text and text-to-speech from ElevenLabs, server-side voice activity detection, and Head Start for a fast first reply. (13973 bytes)
 - [Human-in-the-loop workflow with ReactFlow and Trigger.dev waitpoint tokens](pages/guides/example-projects/human-in-the-loop-workflow.md): This example project creates audio summaries of newspaper articles using a human-in-the-loop workflow built with ReactFlow and Trigger.dev waitpoint tokens. (5242 bytes)
 - [Mastra agents with memory sharing + Trigger.dev task orchestration](pages/guides/example-projects/mastra-agents-with-memory.md): Multi-agent workflow with persistent memory sharing using Mastra and Trigger.dev for clothing recommendations based on weather data. (6036 bytes)
 - [Meme generator with human-in-the-loop approval](pages/guides/example-projects/meme-generator-human-in-the-loop.md): This example project creates memes using OpenAI's DALL-E 3 with a human-in-the-loop approval workflow built using Trigger.dev waitpoint tokens. (2877 bytes)
@@ -425,10 +432,11 @@
 - [Convert documents to PDF using LibreOffice](pages/guides/examples/libreoffice-pdf-conversion.md): This example demonstrates how to convert documents to PDF using LibreOffice with Trigger.dev. (4215 bytes)
 - [Call OpenAI with retrying](pages/guides/examples/open-ai-with-retrying.md): This example will show you how to call OpenAI with retrying using Trigger.dev. (1426 bytes)
 - [Turn a PDF into an image using MuPDF](pages/guides/examples/pdf-to-image.md): This example will show you how to turn a PDF into an image using MuPDF and Trigger.dev. (3168 bytes)
+- [Connect to a private GCP resource from a deployed task](pages/guides/examples/private-gcp-resource.md): Reach a Cloud SQL database or any private-IP-only resource inside a GCP VPC from a deployed task, using a build extension, a userspace tunnel, and a SOCKS5 proxy. No changes to Trigger.dev required. (26027 bytes)
 - [Puppeteer examples with Trigger.dev](pages/guides/examples/puppeteer.md): These examples demonstrate how to use Puppeteer with Trigger.dev. (7808 bytes)
 - [Generate a PDF using react-pdf and save it to R2](pages/guides/examples/react-pdf.md): This example will show you how to generate a PDF using Trigger.dev. (2295 bytes)
 - [Send emails using React Email](pages/guides/examples/react-email.md): Learn how to send beautiful emails using React Email and Trigger.dev. (10031 bytes)
-- [Image-to-image generation using Replicate and nano-banana](pages/guides/examples/replicate-image-generation.md): Learn how to generate images from source image URLs using Replicate and Trigger.dev. (3223 bytes)
+- [Image-to-image generation using Replicate and nano-banana](pages/guides/examples/replicate-image-generation.md): Learn how to generate images from source image URLs using Replicate and Trigger.dev. (3297 bytes)
 - [Send a sequence of emails using Resend](pages/guides/examples/resend-email-sequence.md): This example will show you how to send a sequence of emails over several days using Resend with Trigger.dev. (2387 bytes)
 - [Generate OG Images using Satori](pages/guides/examples/satori.md): Learn how to generate dynamic Open Graph images using Satori and Trigger.dev. (3630 bytes)
 - [Scrape the top 3 articles from Hacker News and email yourself a summary every weekday](pages/guides/examples/scrape-hacker-news.md): This example demonstrates how to scrape the top 3 articles from Hacker News using BrowserBase and Puppeteer, summarize them with ChatGPT and send a nicely formatted email summary to yourself every weekday using Resend. (9193 bytes)

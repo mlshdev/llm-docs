@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/ai-chat/compaction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/ai-chat/compaction.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/ai-chat/compaction.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/ai-chat/compaction.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/compaction
 
 # Compaction
@@ -20,11 +20,12 @@ Provide `shouldCompact` to decide when to compact and `summarize` to generate th
 
 ```ts
 import { chat } from "@trigger.dev/sdk/ai";
-import { streamText, generateText, stepCountIs } from "ai";
+import { generateText, stepCountIs } from "ai";
 import { anthropic } from "@ai-sdk/anthropic";
 
 export const myChat = chat.agent({
   id: "my-chat",
+  registry,
   compaction: {
     shouldCompact: ({ totalTokens }) => (totalTokens ?? 0) > 80_000,
     summarize: async ({ messages }) => {
@@ -35,9 +36,8 @@ export const myChat = chat.agent({
       return result.text;
     },
   },
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     return streamText({
-      ...chat.toStreamTextOptions({ registry }),
       messages,
       abortSignal: signal,
       stopWhen: stepCountIs(15),
@@ -61,6 +61,12 @@ After each turn completes:
 5. The `onCompacted` hook fires if configured
 
 On the next turn, the LLM receives the compact summary instead of the full history — dramatically reducing token usage while preserving context.
+
+The compacted context is durable. The runtime writes it to the [transcript storage](https://trigger.dev/docs/ai-chat/transcript-storage)'s `state` alongside the messages, so a new run that boots to continue the conversation starts from the summary rather than re-reading the whole transcript and summarising it again. An undo or edit that reaches into the summarised part of the conversation clears the stored summary, and compaction runs again from the edited history when the threshold is next crossed.
+
+> **Note**
+>
+> This is Trigger.dev's provider-agnostic compaction. To persist a **provider's own** compaction across turns instead (Anthropic context editing or OpenAI stored responses), and to fall back between providers without re-sending history, see [Native compaction & provider fallback](https://trigger.dev/docs/ai-chat/patterns/native-compaction).
 
 ## Customizing what gets persisted
 
@@ -92,7 +98,7 @@ export const myChat = chat.agent({
       ...uiMessages.slice(-4), // Keep the last 4 messages
     ],
   },
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     return streamText({ model: anthropic("claude-sonnet-4-5"), messages, abortSignal: signal });
   },
 });
@@ -186,7 +192,7 @@ export const myChat = chat.agent({
       data: { chatId, summary, totalTokens, messageCount },
     });
   },
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     return streamText({ model: anthropic("claude-sonnet-4-5"), messages, abortSignal: signal });
   },
 });
@@ -202,7 +208,7 @@ Define a `compact` action that reuses your existing `summarize` function:
 
 ```ts
 import { chat } from "@trigger.dev/sdk/ai";
-import { streamText, generateText, generateId, convertToModelMessages } from "ai";
+import { generateText, generateId, convertToModelMessages } from "ai";
 import { anthropic } from "@ai-sdk/anthropic";
 import { z } from "zod";
 
@@ -244,7 +250,7 @@ export const myChat = chat.agent({
     ]);
   },
 
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     return streamText({ model: anthropic("claude-sonnet-4-5"), messages, abortSignal: signal });
   },
 });

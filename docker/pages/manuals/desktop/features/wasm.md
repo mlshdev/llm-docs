@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/features/wasm.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/desktop/features/wasm.md)
+> Pinned source for Docker main: [content/manuals/desktop/features/wasm.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/desktop/features/wasm.md)
 
 # Wasm workloads
 
@@ -61,7 +61,7 @@ If you are receiving an error message, see the [troubleshooting section](#troubl
 
 Note the `--runtime` and `--platform` flags used in this command:
 
-- `--runtime=io.containerd.wasmedge.v1`: Informs the Docker engine that you want
+- `--runtime=io.containerd.wasmedge.v1`: Informs Docker Engine that you want
   to use the Wasm containerd shim instead of the standard Linux container
   runtime
 - `--platform=wasi/wasm`: Specifies the architecture of the image you want to

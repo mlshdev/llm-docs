@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmalert.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert.md)
+> Pinned source for VictoriaMetrics v1.152.0: [docs/victoriametrics/vmalert.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/vmalert.md)
 
 `vmalert` executes a list of the given [alerting](https://docs.victoriametrics.com/victoriametrics/vmalert/#alerting-rules)
 or [recording](https://docs.victoriametrics.com/victoriametrics/vmalert/#recording-rules)
@@ -619,7 +619,7 @@ rules execution, storing recording rules results and alerts state.
     -notifier.url=http://alertmanager:9093          # AlertManager addr to send alerts when they trigger
 ```
 
-![vmalert single](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert_single.webp)
+![vmalert single](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/vmalert_single.webp)
 
 ### Cluster VictoriaMetrics
 
@@ -639,7 +639,7 @@ Cluster mode could have multiple `vminsert` and `vmselect` components.
     -notifier.url=http://alertmanager:9093                      # AlertManager addr to send alerts when they trigger
 ```
 
-![vmalert cluster](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert_cluster.webp)
+![vmalert cluster](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/vmalert_cluster.webp)
 
 In case when you want to spread the load on these components - add balancers before them and configure
 `vmalert` with balancer addresses. Please, see more about [VictoriaMetrics cluster architecture](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#architecture-overview).
@@ -662,7 +662,7 @@ Alertmanagers.
     -notifier.url=http://alertmanagerN:9093         # The same alert will be sent to all configured notifiers
 ```
 
-![vmalert ha](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert_ha.webp)
+![vmalert ha](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/vmalert_ha.webp)
 
 To avoid recording rules results and alerts state duplication in VictoriaMetrics server
 don't forget to configure [deduplication](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#deduplication).
@@ -738,7 +738,7 @@ or reducing resolution) and push results to "cold" cluster.
     -remoteWrite.url=http://aggregated-cluster-vminsert:8480/insert/0/prometheus    # vminsert addr to persist recording rules results
 ```
 
-![vmalert multi cluster](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert_multicluster.webp)
+![vmalert multi cluster](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/vmalert_multicluster.webp)
 
 Please note, [replay](#rules-backfilling) feature may be used for transforming historical data.
 
@@ -752,7 +752,7 @@ For persisting recording or alerting rule results `vmalert` requires `-remoteWri
 But this flag supports only one destination. To persist rule results to multiple destinations
 we recommend using [vmagent](https://docs.victoriametrics.com/victoriametrics/vmagent/) as fan-out proxy:
 
-![vmalert multiple remote write destinations](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert_multiple_rw.webp)
+![vmalert multiple remote write destinations](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/vmalert_multiple_rw.webp)
 
 In this topology, `vmalert` is configured to persist rule results to `vmagent`. And `vmagent`
 is configured to fan-out received data to two or more destinations.
@@ -1023,7 +1023,7 @@ for each rule. You can see these updates in vmalert's [web UI](#web):
 2. Find the Group and rule you're interested in
 3. Click the `Details` link next to rule's name and look at the `Last N updates` section:
 
-![vmalert state](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert_state.webp)
+![vmalert state](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/vmalert_state.webp)
 
 The rows in this section show the rule's evaluations in order, along with their results.
 
@@ -1087,12 +1087,12 @@ Data delay is one of the most common problems when running rules.
 vmalert runs the configured rules at specific timestamps.
 It expects that the needed data is already available in the configured `-datasource.url` **at the time** the rule is evaluated.
 
-![vmalert expected evaluation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert_ts_normal.gif)
+![vmalert expected evaluation](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/vmalert_ts_normal.gif)
 
 Usually, troubles begin when data in `-datasource.url` is delayed or absent. In such cases, evaluations
 may get an empty response from the datasource, produce empty recording rules or reset alerts state:
 
-![vmalert evaluation when data is delayed](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert_ts_data_delay.gif)
+![vmalert evaluation when data is delayed](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/vmalert_ts_data_delay.gif)
 
 > Please note, data delay is inevitable in distributed systems. And it is better to account for it rather than ignore it.
 
@@ -1387,7 +1387,7 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/vmalert/ .
   -httpAuth.username string
      Username for HTTP server's Basic Auth. The authentication is disabled if empty. See also -httpAuth.password
   -httpListenAddr array
-     Address to listen for incoming http requests. See also -tls and -httpListenAddr.useProxyProtocol
+     Address to listen for incoming http requests. Use unix:/path/to/socket to listen on Unix domain socket. Note that -tls and -httpListenAddr.useProxyProtocol cannot be used with Unix sockets
      Supports an array of values separated by comma or specified via multiple flags.
      Each array item can contain comma inside single-quoted or double-quoted string, {}, [] and () braces.
   -httpListenAddr.useProxyProtocol array

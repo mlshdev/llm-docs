@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/6efe500d2e9e24a81bffda8825511f6bc9760cb1/doc/ffmpeg-codecs.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-codecs.texi](https://github.com/FFmpeg/FFmpeg/blob/639ee849526cfe61ceb312776335c245b98bd9d4/doc/ffmpeg-codecs.texi)
 
 # Description
 
@@ -1391,6 +1391,40 @@ This decoder aims to implement the complete FLAC specification from Xiph.
   The lavc FLAC encoder used to produce buggy streams with high lpc values
   (like the default value). This option makes it possible to decode such streams
   correctly by using lavc's old buggy lpc logic for decoding.
+
+## libastcenc
+
+ARM ASTC Encoder wrapper for decoding ASTC textures.
+
+This decoder requires the Arm ASTC Encoder (astc-encoder) library version
+5.4 or newer, installed as `astcenc/astcenc.h` next to a library that
+`-lastcenc` finds. Pass `--enable-version3` together with
+`--enable-libastcenc` to configure.
+
+The `.astc` header does not record the intended decoding profile.
+Individual blocks identify their endpoint encodings, but this does not
+establish the sRGB versus linear interpretation. The decoder therefore uses
+the container metadata or `dec_profile`: a KTX sRGB texture is decoded
+as `ldr-srgb`, while a KTX texture in the linear format is sampled with
+HDR precision (`hdr-ldr-a`, half-float output) because the linear GL
+internal format says nothing about LDR. A raw `.astc` file carries no
+profile at all, so it falls back to `ldr-srgb`; use `dec_profile`
+for a raw HDR image:
+
+```text
+ffmpeg -dec_profile hdr-ldr-a -i input.astc output.png
+```
+
+### Options
+
+- dec\_profile *int*
+  Color profile to decode with, overriding the container metadata. It must
+  match the profile the texture was encoded with: `astcenc` substitutes
+  a fixed magenta error color for blocks whose endpoints do not fit the
+  selected profile. The values are `ldr`, `ldr-srgb`,
+  `hdr-ldr-a` and `hdr`. Without this option the profile published
+  by the container is used; a raw `.astc` stream, which publishes none,
+  falls back to `ldr-srgb`.
 
 ## ffwavesynth
 
@@ -4143,6 +4177,86 @@ convenience.
     Small-sized colorful images
   - text
     Text-like
+
+## libastcenc
+
+ARM ASTC Encoder wrapper.
+
+This encoder requires the Arm ASTC Encoder (astc-encoder) library version
+5.4 or newer, which provides high-quality GPU texture compression to the
+ASTC format, installed as `astcenc/astcenc.h` next to a library that
+`-lastcenc` finds. Pass `--enable-version3` together with
+`--enable-libastcenc` to configure.
+
+The encoder supports both LDR (8-bit RGBA/RGB) and HDR (float/half RGBA)
+input. When float or half input is detected with an LDR profile, the
+profile is automatically promoted to HDR RGB with LDR alpha
+(`HDR_RGB_LDR_A`); an explicitly selected HDR profile is kept.
+
+The raw bitstream can be packaged in the `.astc` container (16-byte
+header + compressed blocks) or in the Khronos Texture 1.0 container
+(`.ktx`). This implementation writes LDR 2D textures only through the
+`.ktx` muxer: HDR ASTC and 3D block footprints are not supported by
+the muxer and `.astc` must be used for them instead. The KTX 1.0
+linear ASTC GL enums do not imply LDR either, so a linear `.ktx`
+texture may still hold HDR endpoints; such a texture is decoded with HDR
+precision by default.
+The `.ktx` muxer records its row order in a `KTXorientation` key.
+
+### Pixel Format
+
+The encoder accepts the following pixel formats:
+
+- `rgba` -- 8-bit packed RGBA (LDR).
+- `rgb24` -- 8-bit packed RGB (LDR, opaque alpha synthesized).
+- `rgbaf16` -- 16-bit floating-point RGBA (HDR).
+- `rgbaf32` -- 32-bit floating-point RGBA (HDR).
+- `gbrapf32` -- planar 32-bit floating-point GBR+Alpha (HDR).
+
+swscale cannot convert *to* the packed floating-point formats
+(`rgbaf16`, `rgbaf32`); to encode ordinary image formats as HDR,
+produce a planar floating-point source instead, for example with
+`-vf format=gbrapf32`. The packed formats are accepted when they are
+supplied directly, such as from a decoder or a custom filter graph.
+
+### Options
+
+- block\_size *string*
+  ASTC block size specified as *W*x*H*\[`x`*D*].
+  When the third dimension is omitted it defaults to 1 (2D block).
+  Valid 2D: 4x4, 5x4, 5x5, 6x5, 6x6, 8x5, 8x6, 8x8, 10x5, 10x6,
+  10x8, 10x10, 12x10, 12x12.  Valid 3D: 3x3x3, 4x3x3, 4x4x3, 4x4x4,
+  5x4x4, 5x5x4, 5x5x5, 6x5x5, 6x6x5, 6x6x6.
+  Default is `8x8`.
+
+- quality *float*
+  Compression quality from 0 (fastest) to 100 (slowest, exhaustive search).
+  Default is `60`.
+
+- profile *int*
+  Color profile. Possible values:
+  - ldr
+    Linear LDR.
+  - ldr-srgb
+    sRGB LDR (default).
+  - hdr-ldr-a
+    HDR RGB channels with LDR alpha channel.
+  - hdr
+    Full HDR.
+
+When float/half input is detected with an LDR profile, the profile is
+automatically promoted to `hdr-ldr-a`. Conversely, selecting an HDR
+profile with 8-bit input is rejected.
+This option overrides `AVCodecContext.profile`. When it is not set, the
+profile is taken from `AVCodecContext.profile` (`AV_PROFILE_ASTC_*`),
+where `AV_PROFILE_UNKNOWN` selects `ldr-srgb` as before.
+
+- perceptual *boolean*
+  Use the perceptual (PSNR-weighted) error metric instead of peak-SNR.
+  Default is `0`.
+
+- alpha\_weight *boolean*
+  Enable per-texel alpha weighting. Default is `1`.
 
 ## libx264, libx264rgb
 

@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/credentials/amqp.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/credentials/amqp.md)
+> Pinned source for n8n main: [docs/integrations/builtin/credentials/amqp.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/integrations/builtin/credentials/amqp.md)
 
 # AMQP credentials <a id="amqp-credentials"></a>
 
@@ -9,7 +9,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites <a id="prerequisites"></a>
 
-Install an AMQP 1.0-compatible message broker like [ActiveMQ](https://activemq.apache.org/). Refer to [AMQP Products](https://www.amqp.org/about/examples) for a list of options.
+Install an AMQP 1.0-compatible message broker like [ActiveMQ](https://activemq.apache.org/). Refer to [AMQP Products](https://www.amqp.org/about/examples.html) for a list of options.
 
 ## Supported authentication methods <a id="supported-authentication-methods"></a>
 

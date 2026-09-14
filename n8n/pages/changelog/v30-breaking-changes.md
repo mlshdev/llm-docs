@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/changelog/v30-breaking-changes.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/changelog/v30-breaking-changes.md)
+> Pinned source for n8n main: [docs/changelog/v30-breaking-changes.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/changelog/v30-breaking-changes.md)
 
 # n8n 3.0 breaking changes <a id="n8n-v30-breaking-changes"></a>
 
@@ -24,6 +24,7 @@ n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replace
 - **Function Item** node (legacy)
 - **Item Lists** node (legacy)
 - **LangChain Code** node (legacy)
+- **AI Transform** node: n8n automatically migrates existing nodes to [Code](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code) nodes on upgrade, keeping the same generated JavaScript, so existing workflows keep working without changes. You can no longer add an **AI Transform** node. Write JavaScript directly in the **Code** node instead.
 - **What to do:** Migrate affected workflows to the current recommended alternatives before upgrading:
   - Replace **Function** and **Function Item** nodes with the [Code](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code) node. Use **Run Once for All Items** mode in place of **Function**, and **Run Once for Each Item** mode in place of **Function Item**.
   - Replace the **Item Lists** node with the node matching the operation you use: [Split Out](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.splitout), [Aggregate](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.aggregate), [Sort](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.sort), [Limit](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.limit), [Remove Duplicates](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates), or [Summarize](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.summarize).
@@ -60,6 +61,7 @@ n8n 3.0 retires some legacy or lower-usage product capabilities. n8n will provid
 - **Workflow import from URL in the editor**: n8n 3.0 removes this. Other [import methods](https://docs.n8n.io/build/manage-workflows/export-and-import) remain supported: copy-paste, **Import from File** in the editor UI menu, the CLI, and the n8n API.
 - **Non-functional nodes**: n8n 3.0 removes these.
 - **Enable external secrets for project roles setting**: n8n 3.0 removes this. Project editors and admins now get external-secrets access in their projects by default. To keep restricting project roles, use [custom project roles](https://docs.n8n.io/administer/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-project-roles) instead. This applies to n8n Enterprise, where external secrets are available.
+- **Ask AI tab in the Code node**: n8n 3.0 removes this.
 
 ***
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/ai-chat/quick-start.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/ai-chat/quick-start.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/ai-chat/quick-start.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/ai-chat/quick-start.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/quick-start
 
 # Quick Start
@@ -15,19 +15,16 @@ The chat surface works with Vercel AI SDK **v5, v6, or v7**; install whichever m
 
    ```ts trigger/chat.ts
    import { chat } from "@trigger.dev/sdk/ai";
-   import { streamText, stepCountIs } from "ai";
+   import { stepCountIs } from "ai";
    import { anthropic } from "@ai-sdk/anthropic";
 
    export const myChat = chat.agent({
      id: "my-chat",
-     run: async ({ messages, signal }) => {
+     // `streamText` here is the SDK's, not the one from `ai`: it carries
+     // compaction, steering, background injection, the system prompt and
+     // telemetry, so none of them have to be wired up by hand.
+     run: async ({ messages, signal, streamText }) => {
        return streamText({
-         // Spread chat.toStreamTextOptions() FIRST — it wires up
-         // prepareStep (compaction, steering, background injection),
-         // the system prompt set via chat.prompt(), and telemetry.
-         // Skipping this is the single most common cause of subtle
-         // bugs (silent broken compaction, missing steering, etc.).
-         ...chat.toStreamTextOptions(),
          model: anthropic("claude-sonnet-4-5"),
          messages,
          abortSignal: signal,
@@ -37,9 +34,12 @@ The chat surface works with Vercel AI SDK **v5, v6, or v7**; install whichever m
    });
    ```
 
-   > **Warning**
+   > **Note**
    >
-   > **Always spread `chat.toStreamTextOptions()` into your `streamText` call.** It wires up the `prepareStep` callback that drives compaction, mid-turn steering, and background injection — features that silently no-op if the spread is missing. Spread it **first** so any explicit overrides (e.g. a custom `prepareStep`) win.
+   > Take `streamText` from `run`'s argument rather than importing it from `ai`. The
+   > imported one drives no `prepareStep`, so compaction, mid-turn steering and
+   > background injection never run, and nothing reports it. Spreading
+   > `chat.toStreamTextOptions()` into the imported one does the same job by hand.
 
    > **Tip**
    >

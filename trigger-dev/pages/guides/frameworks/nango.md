@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/guides/frameworks/nango.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/guides/frameworks/nango.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/guides/frameworks/nango.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/guides/frameworks/nango.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/frameworks/nango
 
 # Nango OAuth with Trigger.dev
@@ -238,7 +238,7 @@ Add the following to your `.env.local` file:
 
 ```bash
 NANGO_SECRET_KEY=      # From Nango dashboard → Environment → Secret key
-TRIGGER_SECRET_KEY=    # From Trigger.dev dashboard → API keys
+TRIGGER_SECRET_KEY=    # Named environment API key with Trigger only access
 ANTHROPIC_API_KEY=     # From Anthropic console
 ```
 

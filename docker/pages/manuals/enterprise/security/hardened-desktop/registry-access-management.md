@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/registry-access-management.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/enterprise/security/hardened-desktop/registry-access-management.md)
+> Pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/registry-access-management.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/enterprise/security/hardened-desktop/registry-access-management.md)
 
 **Registry access management requirements**
 
@@ -110,8 +110,8 @@ Registry Access Management has these limits and platform-specific behaviors:
 
 These scenarios aren't restricted by Registry Access Management:
 
-- Docker buildx with the Kubernetes driver
-- Docker buildx with a custom Docker-container driver
+- Docker Buildx with the Kubernetes driver
+- Docker Buildx with a custom Docker-container driver
 - Some Docker Debug and Kubernetes image pulls (even if Docker Hub is blocked)
 - Images previously cached by registry mirrors may still be blocked if the
   source registry is restricted

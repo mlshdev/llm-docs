@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/deploy-environment-variables.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/deploy-environment-variables.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/deploy-environment-variables.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/deploy-environment-variables.mdx)
 > Canonical documentation: https://trigger.dev/docs/deploy-environment-variables
 
 # Environment Variables
@@ -14,9 +14,9 @@ We deploy your tasks and scale them up and down when they are triggered. So any 
 ### Setting environment variables
 
 1. In the sidebar select the "Environment Variables" page, then press the "New environment variable"
-   button. ![Environment variables page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/environment-variables-page.jpg)
+   button. ![Environment variables page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/environment-variables-page.jpg)
 2. You can add values for your local dev environment, staging and prod. ![Environment variables
-   page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/environment-variables-panel.jpg)
+   page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/environment-variables-panel.jpg)
 
 > **Note**
 >
@@ -36,8 +36,8 @@ When creating an environment variable, you can mark it as a **Secret**. Secret v
 
 You can edit an environment variable's values. You cannot edit the key name, you must delete and create a new one.
 
-1. ![Environment variables page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/environment-variables-actions.png)
-2. ![Environment variables page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/environment-variables-edit-popover.png)
+1. ![Environment variables page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/environment-variables-actions.png)
+2. ![Environment variables page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/environment-variables-edit-popover.png)
 
 ### Deleting environment variables
 
@@ -46,9 +46,9 @@ You can edit an environment variable's values. You cannot edit the key name, you
 > Environment variables are fetched and injected before a runs begins. So if you delete one you can
 > cause runs to fail that are expecting variables to be set.
 
-1. ![Environment variables page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/environment-variables-actions.png)
+1. ![Environment variables page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/environment-variables-actions.png)
 2. This will immediately delete the variable. ![Environment variables
-   page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/environment-variables-delete-popover.png)
+   page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/environment-variables-delete-popover.png)
 
 ## Local development
 
@@ -160,14 +160,35 @@ For more information about the context object, see the [Context documentation](h
 
 ### Sync env vars from another service
 
-You could use the SDK functions above but it's much easier to use our `syncEnvVars` build extension in your `trigger.config` file.
+There are two ways to pull secrets from another service into Trigger.dev: a native **Secret Sync** (currently [Infisical](https://infisical.com)), or the `syncEnvVars` build extension for any other service.
+
+#### Infisical Secret Sync
+
+If your secrets live in [Infisical](https://infisical.com), sync them natively, without a build extension or a redeploy. You configure the sync in the Infisical dashboard, and it pushes secrets straight to your [Environment Variables page](#in-the-dashboard) in Trigger.dev. When a secret changes in Infisical the sync updates the matching variable, and your tasks pick up the new value on their next run.
+
+Set it up in Infisical in two steps:
+
+1. Add a **Trigger.dev App Connection** using a Trigger.dev Personal Access Token from your account settings. Self-hosted instances are supported.
+2. Create a **Secret Sync**: choose the connection, pick the target organization, project and environment (Production, Staging, Development, or Preview), and set the secret path to sync.
+
+Follow the [Trigger.dev Secret Sync guide](https://infisical.com/docs/integrations/secret-syncs/trigger-dev) in the Infisical docs for the full walkthrough.
+
+> **Note**
+>
+> A Secret Sync only overwrites the keys it manages, leaving variables you set manually untouched.
+> Synced variables are marked as [secret](#secret-environment-variables) by default, so they appear
+> redacted on the Environment Variables page.
+
+#### Using the `syncEnvVars` build extension
+
+For any other service, use our `syncEnvVars` build extension in your `trigger.config` file to resolve secrets at deploy time.
 
 > **Note**
 >
 > To use the `syncEnvVars` build extension, you should first install the `@trigger.dev/build`
 > package into your devDependencies.
 
-In this example we're using env vars from [Infisical](https://infisical.com).
+In this example we're using env vars from [Infisical](https://infisical.com), but you can adapt it to any secrets manager.
 
 ```ts trigger.config.ts
 import { defineConfig } from "@trigger.dev/sdk";

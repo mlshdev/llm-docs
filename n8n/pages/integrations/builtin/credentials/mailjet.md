@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/credentials/mailjet.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/credentials/mailjet.md)
+> Pinned source for n8n main: [docs/integrations/builtin/credentials/mailjet.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/integrations/builtin/credentials/mailjet.md)
 
 # Mailjet credentials <a id="mailjet-credentials"></a>
 
@@ -18,7 +18,7 @@ Create a [Mailjet](https://www.mailjet.com/) account.
 
 ## Related resources <a id="related-resources"></a>
 
-Refer to [Mailjet's Email API documentation](https://dev.mailjet.com/email/guides/) and [Mailjet's SMS API documentation](https://dev.mailjet.com/sms/reference/send-message/) for more information about each service.
+Refer to [Mailjet's Email API documentation](https://dev.mailjet.com/email/guides/) and [Mailjet's SMS API documentation](https://dev.mailjet.com/guides-sms/) for more information about each service.
 
 ## Using Email API key <a id="using-email-api-key"></a>
 

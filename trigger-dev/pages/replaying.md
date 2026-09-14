@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/replaying.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/replaying.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/replaying.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/replaying.mdx)
 > Canonical documentation: https://trigger.dev/docs/replaying
 
 # Replaying
@@ -8,15 +8,15 @@ A replay is a copy of a run with the same payload but against the latest version
 ### Replaying from the UI
 
 1. ![Select a task, then in the bottom right
-   click "Replay"](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/replay-run-action.png)
+   click "Replay"](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/replay-run-action.png)
 2. You can edit the payload  (if available) and choose the environment  to replay the run in.
 
    ![Select a task, then in the bottom right
-   click "Replay"](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/replay-run-modal.png)
+   click "Replay"](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/replay-run-modal.png)
 
-1) ![On the runs page, press the triple dot button](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/replay-runs-list.png)
+1) ![On the runs page, press the triple dot button](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/replay-runs-list.png)
 
-- ![Click replay](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/replay-runs-list-popover.png)
+- ![Click replay](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/replay-runs-list-popover.png)
 
 ### Detecting replays in your task
 

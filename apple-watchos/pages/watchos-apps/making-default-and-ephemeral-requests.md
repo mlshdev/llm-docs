@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple watchOS snapshot-49fd8d0a44e2: [documentation/watchos-apps/making-default-and-ephemeral-requests](https://developer.apple.com/documentation/watchos-apps/making-default-and-ephemeral-requests)
+> Snapshot-pinned source payload for Apple watchOS snapshot-2bb3946a9b15; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/watchos-apps/making-default-and-ephemeral-requests
 
 # Making default and ephemeral requests
 

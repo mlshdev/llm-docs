@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/quick-start.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/quick-start.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/quick-start.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/quick-start.mdx)
 > Canonical documentation: https://trigger.dev/docs/quick-start
 
 # Quick start: add Trigger.dev to your project
@@ -20,7 +20,7 @@ Help me add Trigger.dev to this project.
    - Install the "Hello World" example task when prompted.
 3. Run `npx trigger.dev@latest dev` to start the dev server.
 4. Once the dev server is running, test the example task from the Trigger.dev dashboard.
-5. Set TRIGGER_SECRET_KEY in my .env file (or .env.local for Next.js). I can find it on the API Keys page in the dashboard.
+5. Create a named API key in my Development environment with **Trigger only** access. Set it as TRIGGER_SECRET_KEY in my .env file (or .env.local for Next.js).
 6. Ask me what framework I'm using and show me how to trigger the task from my backend code.
 
 If I've already run init and want the MCP server, run: npx trigger.dev@latest install-mcp
@@ -100,22 +100,22 @@ If I've already run init and want the MCP server, run: npx trigger.dev@latest in
 
    Press the "Run test" button.
 
-   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/test-dashboard.png)
+   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/test-dashboard.png)
 
 1. Congratulations, you should see the run page which will live reload showing you the current state of the run.
 
-   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/run-page.png)
+   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/run-page.png)
 
    If you go back to your terminal you'll see that the dev command also shows the task status and links to the run log.
 
-   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/terminal-completed-run.png)
+   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/terminal-completed-run.png)
 
 ## Triggering tasks from your app
 
-The test page in the dashboard is great for verifying your task works. To trigger tasks from your own code, you'll need to set the `TRIGGER_SECRET_KEY` environment variable. Grab it from the API Keys page in the dashboard and add it to your `.env` file.
+The test page in the dashboard verifies that your task works. To trigger tasks from your own code, open the API Keys page for your Development environment and create a named key with **Trigger only** access. Set the key as `TRIGGER_SECRET_KEY` in your `.env` file.
 
 ```bash .env
-TRIGGER_SECRET_KEY=tr_dev_...
+TRIGGER_SECRET_KEY=tr_dev_sk_...
 ```
 
 See [Triggering](https://trigger.dev/docs/triggering) for the full guide, or jump straight to framework-specific setup for [Next.js](https://trigger.dev/docs/guides/frameworks/nextjs), [Remix](https://trigger.dev/docs/guides/frameworks/remix), or [Node.js](https://trigger.dev/docs/guides/frameworks/nodejs).

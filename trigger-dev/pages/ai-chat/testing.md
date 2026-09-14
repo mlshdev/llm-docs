@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/ai-chat/testing.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/ai-chat/testing.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/ai-chat/testing.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/ai-chat/testing.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/testing
 
 # Testing
@@ -204,7 +204,7 @@ Equivalent to the frontend's `useChat().regenerate()` — replays a turn with th
 
 ### sendAction
 
-Routes a payload through `actionSchema` + `onAction`. Actions are not turns: only `hydrateMessages` and `onAction` fire on the agent side — no turn lifecycle hooks, no `run()`. The returned `turn.rawChunks` contains whatever `onAction` produced (a streamed model response if it returned a `StreamTextResult`, otherwise just `trigger:turn-complete`):
+Routes a payload through `actionSchema` + `onAction`. An action is a state edit: only `hydrateMessages` and `onAction` fire, unless `onAction` returns `chat.turn()`, in which case a turn runs on the edited history and the returned `turn.rawChunks` carries that turn's answer.
 
 ```ts
 const turn = await harness.sendAction({ type: "undo" });
@@ -635,6 +635,7 @@ The harness's initial wire payload depends on `mode`:
 | `sendHandover({ partialAssistantMessage, isFinal?, messageId? })` | Dispatch a `handover` signal — only meaningful when started with `mode: "handover-prepare"`. The agent picks up partial assistant messages and continues the turn.                              |
 | `sendHandoverSkip()`                                              | Dispatch a `handover-skip` signal — only meaningful when started with `mode: "handover-prepare"`. The agent exits cleanly without firing turn hooks.                                            |
 | `sendAction(action)`                                              | Route a custom action through `actionSchema` + `onAction`.                                                                                                                                      |
+| `sendPendingMessage(message)`                                     | Append a user message mid-turn without waiting for a turn to complete, so it reaches the running turn as a steering message. Resolves once the record has landed on `session.in`.               |
 | `sendStop(message?)`                                              | Fire a stop signal. Does not wait for the turn — the run's `signal.aborted` becomes `true`.                                                                                                     |
 | `seedSnapshot(snapshot)`                                          | Pre-seed the snapshot read for the next boot. Effective on the next run boot only.                                                                                                              |
 | `seedSessionOutTail(chunks?)`                                     | Pre-seed `session.out` chunks for the next boot's replay. Reduces to settled assistant turns.                                                                                                   |

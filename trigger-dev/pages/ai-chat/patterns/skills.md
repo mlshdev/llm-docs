@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/ai-chat/patterns/skills.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/ai-chat/patterns/skills.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/ai-chat/patterns/skills.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/ai-chat/patterns/skills.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/patterns/skills
 
 # Agent Skills
@@ -80,7 +80,7 @@ The **body** is loaded on demand via the `loadSkill` tool when the agent decides
 ```ts trigger/chat.ts
 import { chat } from "@trigger.dev/sdk/ai";
 import { skills } from "@trigger.dev/sdk";
-import { streamText, stepCountIs } from "ai";
+import { stepCountIs } from "ai";
 import { anthropic } from "@ai-sdk/anthropic";
 
 const timeUtilsSkill = skills.define({
@@ -93,12 +93,11 @@ export const agent = chat.agent({
   onChatStart: async () => {
     chat.skills.set([await timeUtilsSkill.local()]);
   },
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     return streamText({
       model: anthropic("claude-sonnet-4-5"),
       messages,
       abortSignal: signal,
-      ...chat.toStreamTextOptions(),
       stopWhen: stepCountIs(15),
     });
   },
@@ -112,7 +111,7 @@ export const agent = chat.agent({
 
 `skill.local()` reads the bundled `SKILL.md` from disk and returns a `ResolvedSkill` with the parsed frontmatter + body + on-disk path.
 
-`chat.skills.set([...])` stores the resolved skills for the current run. `chat.toStreamTextOptions()` spreads them into `streamText` automatically:
+`chat.skills.set([...])` stores the resolved skills for the current run. The `streamText` from `run`'s argument picks them up automatically:
 
 - The frontmatter `description` lands in the system prompt under "Available skills:".
 - Three tools are added: `loadSkill`, `readFile`, `bash` — scoped per skill.
@@ -170,12 +169,10 @@ return streamText({
   model: anthropic("claude-sonnet-4-5"),
   messages,
   abortSignal: signal,
-  ...chat.toStreamTextOptions({
-    tools: {
-      webFetch,       // your tool
-      deepResearch,   // your tool
-    },
-  }),
+  tools: {
+    webFetch,       // your tool
+    deepResearch,   // your tool
+  },
   stopWhen: stepCountIs(15),
 });
 ```

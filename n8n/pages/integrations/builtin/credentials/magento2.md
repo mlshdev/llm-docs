@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/credentials/magento2.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/credentials/magento2.md)
+> Pinned source for n8n main: [docs/integrations/builtin/credentials/magento2.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/integrations/builtin/credentials/magento2.md)
 
 # Magento 2 credentials <a id="magento-2-credentials"></a>
 
@@ -18,7 +18,7 @@ You can use these credentials to authenticate the following node:
     bin/magento config:set oauth/consumer/enable_integration_as_bearer 1
     ```
 
-This step is necessary until n8n updates the Magento 2 credentials to use OAuth. Refer to [Integration Tokens](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-token/#integration-tokens) for more information.
+This step is necessary until n8n updates the Magento 2 credentials to use OAuth. Refer to [Integration Tokens](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-token#integration-tokens) for more information.
 
 ## Supported authentication methods <a id="supported-authentication-methods"></a>
 

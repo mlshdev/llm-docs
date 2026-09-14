@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/triggering.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/triggering.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/triggering.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/triggering.mdx)
 > Canonical documentation: https://trigger.dev/docs/triggering
 
 # Triggering
@@ -29,7 +29,7 @@ Trigger tasks **from inside a another task**:
 
 ## Triggering from your backend
 
-When you trigger a task from your backend code, you need to set the `TRIGGER_SECRET_KEY` environment variable. If you're [using a preview branch](https://trigger.dev/docs/deployment/preview-branches), you also need to set the `TRIGGER_PREVIEW_BRANCH` environment variable. You can find the value on the API keys page in the Trigger.dev dashboard. [More info on API keys](https://trigger.dev/docs/apikeys).
+When you trigger a task from your backend code, create a named API key with **Trigger only** access in the environment you want to target and set it as `TRIGGER_SECRET_KEY`. If you're [using a preview branch](https://trigger.dev/docs/deployment/preview-branches), also set `TRIGGER_PREVIEW_BRANCH`. [More info on API keys](https://trigger.dev/docs/apikeys).
 
 If a single process needs to trigger across multiple projects, environments, or preview branches, use [`new TriggerClient({...})`](https://trigger.dev/docs/management/multiple-clients) for each target instead of relying on the global env vars.
 
@@ -689,7 +689,7 @@ await myTask.trigger({ some: "data" }, { delay: new Date("2024-07-23T11:50:00+02
 
 Runs that are delayed and have not been enqueued yet will display in the dashboard with a "Delayed" status:
 
-![Delayed run in the dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/delayed-runs.png)
+![Delayed run in the dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/delayed-runs.png)
 
 > **Note**
 >
@@ -747,7 +747,7 @@ await myTask.trigger({ some: "data" }, { ttl: 3600 }); // 1 hour
 
 When a run is expired, it will be marked as "Expired" in the dashboard:
 
-![Expired runs in the dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/expired-runs.png)
+![Expired runs in the dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/expired-runs.png)
 
 When you use both `delay` and `ttl`, the TTL will start counting down from the time the run is enqueued, not from the time the run is triggered.
 

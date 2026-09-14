@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple watchOS snapshot-49fd8d0a44e2: [documentation/watchkit/wkurlsessionrefreshbackgroundtask](https://developer.apple.com/documentation/watchkit/wkurlsessionrefreshbackgroundtask)
+> Snapshot-pinned source payload for Apple watchOS snapshot-2bb3946a9b15; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/watchkit/wkurlsessionrefreshbackgroundtask
 
 # WKURLSessionRefreshBackgroundTask (Swift)
 
@@ -36,6 +37,7 @@ config.sessionSendsLaunchEvents = true
 let urlSession = URLSession(configuration: config,
                             delegate: self,
                             delegateQueue: nil)
+
 
 let backgroundTask = urlSession.downloadTask(with: url)
 backgroundTask.earliestBeginDate = Date().addingTimeInterval(15 * 60)
@@ -132,6 +134,7 @@ config.sessionSendsLaunchEvents = true
 let urlSession = URLSession(configuration: config,
                             delegate: self,
                             delegateQueue: nil)
+
 
 let backgroundTask = urlSession.downloadTask(with: url)
 backgroundTask.earliestBeginDate = Date().addingTimeInterval(15 * 60)

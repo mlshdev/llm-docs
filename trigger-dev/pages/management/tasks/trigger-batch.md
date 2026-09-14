@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/management/tasks/trigger-batch.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/management/tasks/trigger-batch.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/management/tasks/trigger-batch.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/management/tasks/trigger-batch.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/tasks/trigger-batch
 
 # Trigger task batch
@@ -13,7 +13,7 @@ Batch trigger a specific task with up to 1,000 payloads. All items in the batch 
 
 **Parameters**
 
-- `taskIdentifier` (path; required; string): The id of a task
+- `taskIdentifier` (path; required; string): The id of a task. If the id contains characters that are reserved in a URL path, such as a slash (`/`), percent-encode it when building the request path (e.g. `types/zod` becomes `types%2Fzod`).
   - Example: `my-task`
 
 **Request body** (required)

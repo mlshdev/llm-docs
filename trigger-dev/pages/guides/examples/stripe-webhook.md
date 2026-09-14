@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/guides/examples/stripe-webhook.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/guides/examples/stripe-webhook.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/guides/examples/stripe-webhook.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/guides/examples/stripe-webhook.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/examples/stripe-webhook
 
 # Trigger a task from Stripe webhook events
@@ -20,7 +20,7 @@ You'll need to configure the following environment variables for this example to
 
 - `STRIPE_WEBHOOK_SECRET` The secret key used to verify the Stripe webhook signature.
 - `TRIGGER_API_URL` Your Trigger.dev API url: `https://api.trigger.dev`
-- `TRIGGER_SECRET_KEY` Your Trigger.dev secret key
+- `TRIGGER_SECRET_KEY` A named **Trigger only** API key from the Trigger.dev environment your app uses
 
 ## Setting up the Stripe webhook handler
 

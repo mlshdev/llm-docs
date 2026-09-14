@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/trigger-nodes/n8n-nodes-base.awssnstrigger.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/trigger-nodes/n8n-nodes-base.awssnstrigger.md)
+> Pinned source for n8n main: [docs/integrations/builtin/trigger-nodes/n8n-nodes-base.awssnstrigger.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/integrations/builtin/trigger-nodes/n8n-nodes-base.awssnstrigger.md)
 
 # AWS SNS Trigger node <a id="aws-sns-trigger-node"></a>
 
@@ -24,4 +24,4 @@ n8n provides an app node for AWS SNS. You can find the node docs [here](https://
 
 View [example workflows and related content](https://n8n.io/integrations/aws-sns-trigger/) on n8n's website.
 
-Refer to [AWS SNS's documentation](https://docs.aws.amazon.com/sns/latest/api/welcome.html) for details about their API.
+Refer to [AWS SNS's documentation](https://docs.aws.amazon.com/sns/latest/api/Welcome.html) for details about their API.

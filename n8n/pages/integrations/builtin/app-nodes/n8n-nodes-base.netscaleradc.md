@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.netscaleradc.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/app-nodes/n8n-nodes-base.netscaleradc.md)
+> Pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.netscaleradc.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/integrations/builtin/app-nodes/n8n-nodes-base.netscaleradc.md)
 
 # Netscaler ADC node <a id="netscaler-adc-node"></a>
 
@@ -23,7 +23,7 @@ On this page, you'll find a list of operations the Netscaler ADC node supports a
 
 ## Templates and examples <a id="templates-and-examples"></a>
 
-[Browse Netscaler ADC node documentation integration templates](https://n8n.io/integrations/netscaler-adc) or [search all templates](https://n8n.io/workflows/)
+[Browse Netscaler ADC node documentation integration templates](https://n8n.io/integrations/citrix-adc/) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a id="related-resources"></a>
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/ai-chat/lifecycle-hooks.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/ai-chat/lifecycle-hooks.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/ai-chat/lifecycle-hooks.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/ai-chat/lifecycle-hooks.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/lifecycle-hooks
 
 # Lifecycle hooks
@@ -87,7 +87,7 @@ export const myChat = chat.agent({
 
 Fires once on a continuation boot when the dead predecessor was mid-stream — a partial assistant survives on `session.out`. The runtime reconstructs context automatically via a smart default; this hook is the override path for policies that need something different.
 
-The hook does NOT fire when there's no partial — clean continuations after `chat.endRun()` or `chat.requestUpgrade()`, fresh chats, OOM retries on top of a complete snapshot. Those paths dispatch any in-flight user message as a normal turn on the new run without involving the hook. It also does NOT fire when [`hydrateMessages`](#hydratemessages) is registered (the customer owns persistence).
+The hook does NOT fire when there's no partial — clean continuations after `chat.endRun()` or `chat.requestUpgrade()`, fresh chats, OOM retries on top of a complete snapshot. Those paths dispatch any in-flight user message as a normal turn on the new run without involving the hook. It fires regardless of whether [`hydrateMessages`](#hydratemessages) or a [transcript storage](https://trigger.dev/docs/ai-chat/transcript-storage) is registered: crash recovery is runtime-owned for every agent.
 
 ```ts
 export const myChat = chat.agent({
@@ -261,6 +261,10 @@ export const myChat = chat.agent({
 
 ## hydrateMessages
 
+> **Warning**
+>
+> `hydrateMessages` is deprecated. Give the agent a [transcript storage](https://trigger.dev/docs/ai-chat/transcript-storage) instead: `loadContext` on the storage decides the model's context, and `save` persists every change, so crash recovery and durable compaction cover it. Existing agents keep working with a one-time warning. Setting `hydrateMessages` together with `storage` is an error.
+
 Load the full message history from your backend on every turn, replacing the built-in linear accumulator. When set, the hook's return value becomes the accumulated state; the normal accumulation logic (append for submit, replace for regenerate) is skipped entirely.
 
 Use this when the backend should be the source of truth for message history: abuse prevention, branching conversations (DAGs), or rollback/undo support.
@@ -317,7 +321,7 @@ After the hook returns, the runtime overlays the wire's tool-state advances (`ou
 
 > **Tip**
 >
-> Registering `hydrateMessages` short-circuits the runtime's [snapshot + replay](https://trigger.dev/docs/ai-chat/patterns/persistence-and-replay) reconstruction at run boot — your hook is the single source of truth for history, so the runtime skips reading or writing the snapshot entirely. No object storage traffic, no replay cost. The trade-off is that you own persistence end-to-end.
+> Registering `hydrateMessages` turns off the runtime's transcript reads and writes: your hook is the source of truth for history, and the runtime does not read or write its [snapshot](https://trigger.dev/docs/ai-chat/patterns/persistence-and-replay). Crash recovery still runs. When a new run boots, the dead run's unfinished answer and unacknowledged messages are replayed from the session streams, `onRecoveryBoot` fires, and the hook receives the recovered tail in `previousMessages`. Persisting that tail is yours to do; a [transcript storage](https://trigger.dev/docs/ai-chat/transcript-storage) does it for you.
 
 > **Note**
 >

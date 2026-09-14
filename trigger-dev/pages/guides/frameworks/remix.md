@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/guides/frameworks/remix.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/guides/frameworks/remix.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/guides/frameworks/remix.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/guides/frameworks/remix.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/frameworks/remix
 
 # Remix setup guide
@@ -67,21 +67,19 @@ This guide will show you how to setup Trigger.dev in your existing Remix project
 
    Press the "Run test" button.
 
-   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/test-dashboard.png)
+   ![Test page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/test-dashboard.png)
 
 1) Congratulations, you should see the run page which will live reload showing you the current state of the run.
 
-   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/run-page.png)
+   ![Run page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/run-page.png)
 
    If you go back to your terminal you'll see that the dev command also shows the task status and links to the run log.
 
-   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/terminal-completed-run.png)
+   ![Terminal showing completed run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/terminal-completed-run.png)
 
-## Set your secret key locally
+## Create an API key for local development
 
-Set your `TRIGGER_SECRET_KEY` environment variable in your `.env` file. This key is used to authenticate with Trigger.dev, so you can trigger runs from your Remix app. Visit the API Keys page in the dashboard and select the DEV secret key.
-
-![How to find your secret key](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/api-keys.png)
+Open the API Keys page for your Development environment and create a named key with **Trigger only** access. Set the key as `TRIGGER_SECRET_KEY` in your `.env` file so your Remix app can trigger runs.
 
 For more information on authenticating with Trigger.dev, see the [API keys page](https://trigger.dev/docs/apikeys).
 
@@ -138,7 +136,7 @@ For more information on authenticating with Trigger.dev, see the [API keys page]
 
    You should see the CLI log the task run with a link to view the logs in the dashboard.
 
-   ![Trigger.dev CLI showing a successful run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/trigger-cli-run-success.png)
+   ![Trigger.dev CLI showing a successful run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/trigger-cli-run-success.png)
 
    Visit the [Trigger.dev dashboard](https://cloud.trigger.dev) to see your run.
 
@@ -147,10 +145,10 @@ For more information on authenticating with Trigger.dev, see the [API keys page]
 If you have any environment variables in your tasks, be sure to add them in the dashboard so deployed code runs successfully. In Node.js, these environment variables are accessed in your code using `process.env.MY_ENV_VAR`.
 
 In the sidebar select the "Environment Variables" page, then press the "New environment variable"
-button. ![Environment variables page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/environment-variables-page.jpg)
+button. ![Environment variables page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/environment-variables-page.jpg)
 
 You can add values for your local dev environment, staging and prod. ![Environment variables
-page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/environment-variables-panel.jpg)
+page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/environment-variables-panel.jpg)
 
 You can also add environment variables in code by following the steps on the [Environment Variables page](https://trigger.dev/docs/deploy-environment-variables#in-your-code).
 
@@ -229,15 +227,11 @@ There are a few extra steps to follow to deploy your `/api/hello-world` API endp
    },
    ```
 4. Push your code to a Git repository and create a new project in the Vercel dashboard. Select your repository and follow the prompts to complete the deployment.
-5. In the Vercel project settings, add your Trigger.dev secret key:
+5. Open the Trigger.dev API Keys page for the environment your Vercel deployment uses. Create a named key with **Trigger only** access, then add it to the Vercel project settings:
 
    ```bash
-   TRIGGER_SECRET_KEY=your-secret-key
+   TRIGGER_SECRET_KEY=tr_prod_sk_xxxxxxxxxx
    ```
-
-   You can find this key in the Trigger.dev dashboard under API Keys and select the environment key you want to use.
-
-   ![How to find your secret key](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/api-keys.png)
 6. Once you've added the environment variable, deploy your project to Vercel.
 
    > **Note**

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/management/deployments/list.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/management/deployments/list.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/management/deployments/list.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/management/deployments/list.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/deployments/list
 
 # List deployments
@@ -39,6 +39,7 @@ List deployments for the authenticated environment, ordered by most recent first
           - `deployedAt` (string; format: date-time; nullable): When the deployment was promoted to DEPLOYED
           - `git` (object; nullable): Git metadata associated with the deployment
           - `error` (object; nullable): Error data if the deployment failed
+          - `externalId` (string): The external deployment id this deployment was deployed under (`--external-id`), used by version skew protection to pin runs. Absent if the deployment was deployed without one
       - `pagination` (object)
         - `next` (string): Cursor for the next page. Pass as `page[after]` to get the next page. Omitted if there are no more results.
 - `401`: Unauthorized - Access token is missing or invalid

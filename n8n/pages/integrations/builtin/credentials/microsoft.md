@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/credentials/microsoft.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/credentials/microsoft.md)
+> Pinned source for n8n main: [docs/integrations/builtin/credentials/microsoft.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/integrations/builtin/credentials/microsoft.md)
 
 # Microsoft credentials <a id="microsoft-credentials"></a>
 
@@ -208,6 +208,18 @@ Microsoft OneDrive credentials use the following scopes by default:
 - `openid`
 - `offline_access`
 - `Files.ReadWrite.All`
+
+#### Default scopes for Microsoft Teams
+
+Microsoft Teams credentials use the following scopes by default:
+
+- `openid`
+- `offline_access`
+- `User.Read.All`
+- `Group.ReadWrite.All`
+- `Chat.ReadWrite`
+- `ChannelMessage.Read.All`
+- `OnlineMeetings.ReadWrite` (available from n8n 2.39.0)
 
 ### Service-specific settings <a id="service-specific-settings"></a>
 

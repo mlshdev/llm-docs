@@ -23,10 +23,10 @@
     "docker": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81",
-      "sourceCommittedAt": "2026-09-11T15:53:13Z",
-      "documentationDigest": "34a8db9130bd069f0addb12f4b09f2403e8947c1f0b6fcc8226406e619b0b886",
-      "observedCommit": "bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81"
+      "sourceCommit": "5541c4e3130a6de70be53bba50dfef4f203e4026",
+      "sourceCommittedAt": "2026-09-14T09:24:00Z",
+      "observedCommit": "5541c4e3130a6de70be53bba50dfef4f203e4026",
+      "documentationDigest": "b6a85b345a25a29b78cb8e34eed54b424358330c5636193a92658c65eb84dbf9"
     },
     "container": {
       "tag": "1.4.1",
@@ -37,10 +37,10 @@
     "n8n": {
       "tag": "main",
       "branch": "main",
-      "sourceCommit": "1247f3fde1db33494b74ebf428a768e28c4ee27b",
-      "sourceCommittedAt": "2026-09-11T15:51:15Z",
-      "documentationDigest": "dea223c2d29aa7e4914660ac269957128c86eb4ed9cc7eb8472cef5bad5eb6aa",
-      "observedCommit": "1247f3fde1db33494b74ebf428a768e28c4ee27b"
+      "sourceCommit": "851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59",
+      "sourceCommittedAt": "2026-09-14T15:12:34Z",
+      "observedCommit": "851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59",
+      "documentationDigest": "4a434952565a0fab65dca24ce55fa4c28d6e352de7b01a0d4319be9acb01dcd9"
     },
     "grafana": {
       "tag": "v13.2.1",
@@ -49,10 +49,10 @@
       "sourceCommit": "56cd3e9288d8255fecebe5d05b48d191f50674b5"
     },
     "victoriametrics": {
-      "tag": "v1.151.0",
-      "releaseId": 378581196,
-      "releasePublishedAt": "2026-08-31T10:58:41Z",
-      "sourceCommit": "83fc70c6aced8c99a0a445a872ee891191b98517"
+      "tag": "v1.152.0",
+      "releaseId": 387088407,
+      "releasePublishedAt": "2026-09-14T10:36:37Z",
+      "sourceCommit": "540b91da031aa8b7d53d3784693bb451e2be980a"
     },
     "victorialogs": {
       "tag": "v1.52.0",
@@ -87,10 +87,10 @@
     "ffmpeg": {
       "tag": "master",
       "branch": "master",
-      "sourceCommit": "6efe500d2e9e24a81bffda8825511f6bc9760cb1",
-      "sourceCommittedAt": "2026-09-03T23:42:12Z",
-      "documentationDigest": "a974a120e1a5e2362c2ef1ed5f619bbf837acaed08bbe545bdffb9d3c09a7380",
-      "observedCommit": "6efe500d2e9e24a81bffda8825511f6bc9760cb1"
+      "sourceCommit": "639ee849526cfe61ceb312776335c245b98bd9d4",
+      "sourceCommittedAt": "2026-09-12T01:24:37Z",
+      "observedCommit": "639ee849526cfe61ceb312776335c245b98bd9d4",
+      "documentationDigest": "a0bc009ad52f3f66e7428c2515c914ac88b59ce796d2c404f57c1fcde9d8f1fb"
     },
     "yt-dlp": {
       "tag": "2026.08.19",
@@ -104,7 +104,7 @@
       "sourceCommit": "d4ce87c23431f607162fc5c39ce52c538d64588f",
       "sourceCommittedAt": "2026-09-12T18:29:15Z",
       "documentationDigest": "ae2c8c30c6354eb9063067784b1f30ee0b11fea851fe3fa7285fa36a31eb96e6",
-      "observedCommit": "d4ce87c23431f607162fc5c39ce52c538d64588f"
+      "observedCommit": "ef05645f09bd4cc466aec37e0f5e4547ed9497ed"
     },
     "bun": {
       "tag": "bun-v1.4.2",
@@ -113,10 +113,10 @@
       "sourceCommit": "744846f844374847c902b5e7fd59b4342a51ef99"
     },
     "trigger-dev": {
-      "tag": "v4.5.16",
-      "releaseId": 381460886,
-      "releasePublishedAt": "2026-09-02T17:47:49Z",
-      "sourceCommit": "ee34a4b13710742ae26d94831547fa2b6cddc9bd"
+      "tag": "v4.6.0",
+      "releaseId": 388414420,
+      "releasePublishedAt": "2026-09-14T13:21:59Z",
+      "sourceCommit": "6172bcd1bc67044a295aa41acb49d92db954de3d"
     },
     "aria2": {
       "tag": "release-1.37.0",
@@ -193,10 +193,10 @@
       "contentDigest": "261899149f391f58bc46c468881d82ec07fe2e3d04902a9c297d1c68eece64b1"
     },
     "apple-watchos": {
-      "tag": "snapshot-49fd8d0a44e2",
-      "snapshotDigest": "49fd8d0a44e27da75b7933530cfa5505d9b13fb8ae49b84c40e9186ba4f090e4",
-      "capturedAt": "2026-09-12T21:04:59.695Z",
-      "contentDigest": "247a97a075abca066d1def114ccaa31eefa15185c7671552447dc209f44b2559"
+      "tag": "snapshot-2bb3946a9b15",
+      "snapshotDigest": "2bb3946a9b15cc8ceb5f7b1ca7876717dce6cec8a1d63e63162a599dc521ee18",
+      "capturedAt": "2026-09-14T18:21:41.403Z",
+      "contentDigest": "3eb712b8054721d0f1ca6e28086c17a048719696d888268474ffc8299bf8a73f"
     },
     "apple-frameworks": {
       "tag": "snapshot-75c95c22eb2a",

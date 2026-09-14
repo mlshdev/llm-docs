@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/credentials/brevo.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/credentials/brevo.md)
+> Pinned source for n8n main: [docs/integrations/builtin/credentials/brevo.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/integrations/builtin/credentials/brevo.md)
 
 # Brevo credentials <a id="brevo-credentials"></a>
 
@@ -17,7 +17,7 @@ Create a [Brevo](https://www.brevo.com/) developer account.
 
 ## Related resources <a id="related-resources"></a>
 
-Refer to [Brevo's API documentation](https://developers.brevo.com/reference/getting-started-1) for more information about authenticating with the service.
+Refer to [Brevo's API documentation](https://developers.brevo.com/docs/api-key-authentication) for more information about authenticating with the service.
 
 ## API key <a id="api-key"></a>
 

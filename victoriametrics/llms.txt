@@ -1,8 +1,8 @@
-# VictoriaMetrics v1.151.0
+# VictoriaMetrics v1.152.0
 
-> Documentation generated from the latest stable release of [VictoriaMetrics/VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) and pinned to immutable source commit `83fc70c6aced8c99a0a445a872ee891191b98517`.
+> Documentation generated from the latest stable release of [VictoriaMetrics/VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) and pinned to immutable source commit `540b91da031aa8b7d53d3784693bb451e2be980a`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for VictoriaMetrics v1.151.0.
+- [Full documentation](llms-full.txt): Complete normalized corpus for VictoriaMetrics v1.152.0.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Pages follow the Hugo `menu.docs` navigation declared in docs/ at the immutable release tag.
 - Fragments pulled in by `{{% content %}}` are inlined into the page that renders them and are not published separately.
@@ -10,13 +10,13 @@
 
 ## VictoriaMetrics
 
-- [VictoriaMetrics](pages/victoriametrics/index.md): VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes. (278775 bytes)
+- [VictoriaMetrics](pages/victoriametrics/index.md): VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes. (279005 bytes)
 - [Quick start](pages/victoriametrics/Quick-Start.md): There are two ways to get started with VictoriaMetrics: (31599 bytes)
-- [Single-node version](pages/victoriametrics/Single-server-VictoriaMetrics.md): VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes. (278775 bytes)
-- [Cluster version](pages/victoriametrics/Cluster-VictoriaMetrics.md): VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes. (245191 bytes)
-- [vmagent](pages/victoriametrics/vmagent.md): vmagent is a tiny agent that helps you collect metrics from various sources, relabel and filter the collected metrics and store them in VictoriaMetrics or any other storage systems via the Prometheus remotewrite protoco… (198785 bytes)
-- [vmalert](pages/victoriametrics/vmalert.md): vmalert executes a list of the given alerting or recording rules against configured -datasource.url. For sending alerting notifications vmalert relies on Alertmanager configured via -notifier.url flag. Recording rules r… (148743 bytes)
-- [vmauth](pages/victoriametrics/vmauth.md): vmauth is an HTTP proxy, which can authorize, route, and load balance requests across VictoriaMetrics components or any other HTTP backends. (108281 bytes)
+- [Single-node version](pages/victoriametrics/Single-server-VictoriaMetrics.md): VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes. (279005 bytes)
+- [Cluster version](pages/victoriametrics/Cluster-VictoriaMetrics.md): VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes. (245716 bytes)
+- [vmagent](pages/victoriametrics/vmagent.md): vmagent is a tiny agent that helps you collect metrics from various sources, relabel and filter the collected metrics and store them in VictoriaMetrics or any other storage systems via the Prometheus remotewrite protoco… (198952 bytes)
+- [vmalert](pages/victoriametrics/vmalert.md): vmalert executes a list of the given alerting or recording rules against configured -datasource.url. For sending alerting notifications vmalert relies on Alertmanager configured via -notifier.url flag. Recording rules r… (148835 bytes)
+- [vmauth](pages/victoriametrics/vmauth.md): vmauth is an HTTP proxy, which can authorize, route, and load balance requests across VictoriaMetrics components or any other HTTP backends. (109883 bytes)
 - [vmbackup](pages/victoriametrics/vmbackup.md): vmbackup creates backups of VictoriaMetrics data to protect against hardware failures and accidental data loss. Whether you are using a single-node or a cluster version, it is recommended to use vmbackup to perform peri… (42264 bytes)
 - [vmrestore](pages/victoriametrics/vmrestore.md): vmrestore restores data from backups created by vmbackup. (24289 bytes)
 - [vmctl](pages/victoriametrics/vmctl/index.md): VictoriaMetrics command-line tool (vmctl) provides the following migration modes: (19677 bytes)
@@ -56,11 +56,11 @@
 - [OpenTelemetry Collector](pages/victoriametrics/data-ingestion/OpenTelemetry-Collector.md): OpenTelemetry Collector is a vendor-agnostic agent for receiving, processing, and exporting telemetry data. VictoriaMetrics supports the OTLP metrics protocol natively, so the collector can push metrics directly using t… (1269 bytes)
 - [Best practices](pages/victoriametrics/BestPractices.md): It is recommended to run the latest available release of VictoriaMetrics from this page, since it contains all the bugfixes and enhancements. (5927 bytes)
 - [MetricsQL](pages/victoriametrics/MetricsQL.md): VictoriaMetrics implements MetricsQL - query language inspired by PromQL. MetricsQL is backwards-compatible with PromQL, so Grafana dashboards backed by Prometheus datasource should work the same after switching from Pr… (141014 bytes)
-- [FAQ](pages/victoriametrics/FAQ.md): To be the best tool for monitoring and observability. (54846 bytes)
+- [FAQ](pages/victoriametrics/FAQ.md): To be the best tool for monitoring and observability. (54978 bytes)
 - [Case studies and talks](pages/victoriametrics/CaseStudies.md): Below please find public case studies and talks from VictoriaMetrics users. You can also join our community Slack channel where you can chat with VictoriaMetrics users to get additional references, reviews and case stud… (48329 bytes)
 - [Articles](pages/victoriametrics/Articles.md): See also case studies. (26580 bytes)
 - [API examples](pages/victoriametrics/url-examples.md): This page contains copy-paste examples for the most commonly used VictoriaMetrics APIs. (41336 bytes)
-- [Key concepts](pages/victoriametrics/keyConcepts/index.md): Simply put, metric is a numeric measure or observation of something. (51965 bytes)
+- [Key concepts](pages/victoriametrics/keyConcepts/index.md): Simply put, metric is a numeric measure or observation of something. (52213 bytes)
 - [Troubleshooting](pages/victoriametrics/Troubleshooting.md): This document contains troubleshooting guides for the most common issues when working with VictoriaMetrics. (39399 bytes)
 - [Prometheus service discovery](pages/victoriametrics/sd_configs.md): vmagent and single-node VictoriaMetrics supports the following Prometheus-compatible service discovery options for Prometheus-compatible scrape targets in the file pointed by -promscrape.config command-line flag: (111629 bytes)
 - [Scrape config examples](pages/victoriametrics/scrape_config_examples.md): Let's start from a simple case with scraping targets at pre-defined addresses. Create a scrape.yaml file with the following contents: (18380 bytes)
@@ -70,8 +70,8 @@
 - [Enterprise](pages/victoriametrics/enterprise.md): VictoriaMetrics, VictoriaLogs and VictoriaTraces components are provided in two kinds - Community edition and Enterprise edition. (20931 bytes)
 - [Cluster Per Tenant Statistic](pages/victoriametrics/PerTenantStatistic.md): The per-tenant statistic is a part of enterprise package. It is available for download and evaluation at releases page. To get the license key you can request a free trial license. (5128 bytes)
 - [Query execution stats](pages/victoriametrics/query-stats.md): VictoriaMetrics Enterprise supports logging statistics (available from v1.116.0) for read queries made through the /api/v1/query and /api/v1/query\range APIs. (4962 bytes)
-- [CHANGELOG](pages/victoriametrics/changelog/index.md): The following tip changes can be tested by building VictoriaMetrics components from the latest commits according to the following docs: (336450 bytes)
-- [Year 2026](pages/victoriametrics/changelog/CHANGELOG_2026.md): The following tip changes can be tested by building VictoriaMetrics components from the latest commits according to the following docs: (336450 bytes)
+- [CHANGELOG](pages/victoriametrics/changelog/index.md): The following tip changes can be tested by building VictoriaMetrics components from the latest commits according to the following docs: (354739 bytes)
+- [Year 2026](pages/victoriametrics/changelog/CHANGELOG_2026.md): The following tip changes can be tested by building VictoriaMetrics components from the latest commits according to the following docs: (354739 bytes)
 - [Year 2025](pages/victoriametrics/changelog/CHANGELOG_2025.md): Released at 2025-12-12 (341988 bytes)
 - [Year 2024](pages/victoriametrics/changelog/CHANGELOG_2024.md): Released at 2024-12-18 (290913 bytes)
 - [Year 2023](pages/victoriametrics/changelog/CHANGELOG_2023.md): Released at 2023-12-13 (235232 bytes)
@@ -110,22 +110,22 @@
 - [Anomaly Detection](pages/anomaly-detection/index.md): In today's fast-paced and complex landscape of system monitoring, VictoriaMetrics Anomaly Detection (vmanomaly), a part of our Enterprise offering, serves as an observability layer for SREs and DevOps teams atop of coll… (12147 bytes)
 - [Quick Start](pages/anomaly-detection/QuickStart.md): For a broader overview please visit the navigation page. (28176 bytes)
 - [Presets](pages/anomaly-detection/Presets.md): Preset (available from vmanomaly v1.13.0) mode allows for simpler configuration and anomaly detection with vmanomaly on widely-recognized metrics, such as those generated by node\exporter, which are typically challengin… (27111 bytes)
-- [UI](pages/anomaly-detection/UI.md): (available from vmanomaly v1.26.0) vmanomaly includes a built-in vmui-like UI for exploring queries, comparing anomaly detection models, and tuning model or domain settings before production deployment. (57664 bytes)
+- [UI](pages/anomaly-detection/UI.md): (available from vmanomaly v1.26.0) vmanomaly includes a built-in vmui-like UI for exploring queries, comparing anomaly detection models, and tuning model or domain settings before production deployment. (66750 bytes)
 - [Components](pages/anomaly-detection/components/index.md): This chapter describes the configuration sections used to run VictoriaMetrics Anomaly Detection, or vmanomaly: (17140 bytes)
-- [Models](pages/anomaly-detection/components/models.md): This section covers the Models component of VictoriaMetrics Anomaly Detection (commonly referred to as vmanomaly) and provides a guide on how to configure the service. (115308 bytes)
+- [Models](pages/anomaly-detection/components/models.md): This section covers the Models component of VictoriaMetrics Anomaly Detection (commonly referred to as vmanomaly) and provides a guide on how to configure the service. (117585 bytes)
 - [Reader](pages/anomaly-detection/components/reader.md): VictoriaMetrics Anomaly Detection (vmanomaly) reads Prometheus-compatible metrics from VictoriaMetrics through VmReader and MetricsQL. It can also derive metrics from VictoriaLogs or VictoriaTraces through VLogsReader a… (46806 bytes)
 - [Scheduler](pages/anomaly-detection/components/scheduler.md): Scheduler defines how often to run and make inferences, as well as what timerange to use to train the model. Is specified in scheduler section of a config for VictoriaMetrics Anomaly Detection. (24841 bytes)
 - [Writer](pages/anomaly-detection/components/writer.md): For exporting data, VictoriaMetrics Anomaly Detection (vmanomaly) primarily employs the VmWriter, which writes produced anomaly scores (preserving initial labelset and optionally applying additional ones) back to Victor… (13238 bytes)
-- [Monitoring](pages/anomaly-detection/components/monitoring.md): There are 2 models to monitor VictoriaMetrics Anomaly Detection behavior - push and pull. Parameters for each of them should be specified in the config file, monitoring section. (38992 bytes)
+- [Monitoring](pages/anomaly-detection/components/monitoring.md): There are 2 models to monitor VictoriaMetrics Anomaly Detection behavior - push and pull. Parameters for each of them should be specified in the config file, monitoring section. (45568 bytes)
 - [Settings](pages/anomaly-detection/components/settings.md): Through the Settings section of a config, you can configure the following parameters of the anomaly detection service: (23506 bytes)
-- [Server](pages/anomaly-detection/components/server.md): Server component of VictoriaMetrics Anomaly Detection (vmanomaly) is responsible for serving the REST API (e.g. /metrics endpoint) and the web UI for anomaly detection. (5398 bytes)
+- [Server](pages/anomaly-detection/components/server.md): Server component of VictoriaMetrics Anomaly Detection (vmanomaly) is responsible for serving the REST API (e.g. /metrics endpoint) and the web UI for anomaly detection. (7262 bytes)
 - [Guides](pages/anomaly-detection/guides/index.md): This section holds guides of how to set up and use VictoriaMetrics Anomaly Detection (or simply vmanomaly) service, integrating it with different observability components. (362 bytes)
 - [Anomaly Detection and Alerting Setup](pages/anomaly-detection/guides/guide-vmanomaly-vmalert/index.md): Prerequisites: (26921 bytes)
 - [Scaling vmanomaly](pages/anomaly-detection/Scaling-vmanomaly.md): Ensuring high availability and horizontal scalability is important for maintaining reliable anomaly detection in distributed environments. Horizontal scalability allows vmanomaly to distribute workloads across multiple… (32175 bytes)
-- [Self-monitoring](pages/anomaly-detection/Self-monitoring.md): Self-monitoring refers to the ability of the service to track and report its own health, operational performance, and any potential issues in real time. This process enables proactive maintenance and problem identificat… (13383 bytes)
-- [Migration](pages/anomaly-detection/Migration.md): This document provides guidelines for migrating to the latest version of VictoriaMetrics Anomaly Detection (vmanomaly). It covers the key changes, compatibility considerations, and best practices to ensure a smooth tran… (20513 bytes)
+- [Self-monitoring](pages/anomaly-detection/Self-monitoring.md): Self-monitoring refers to the ability of the service to track and report its own health, operational performance, and any potential issues in real time. This process enables proactive maintenance and problem identificat… (13841 bytes)
+- [Migration](pages/anomaly-detection/Migration.md): This document provides guidelines for migrating to the latest version of VictoriaMetrics Anomaly Detection (vmanomaly). It covers the key changes, compatibility considerations, and best practices to ensure a smooth tran… (17172 bytes)
 - [FAQ](pages/anomaly-detection/FAQ.md): VictoriaMetrics Anomaly Detection, also known as vmanomaly, is a service for detecting unexpected changes in time series data. Utilizing machine learning models, it computes and pushes back an "anomaly score" for user-s… (54017 bytes)
-- [CHANGELOG](pages/anomaly-detection/CHANGELOG.md): Please find the changelog for VictoriaMetrics Anomaly Detection below. (119443 bytes)
+- [CHANGELOG](pages/anomaly-detection/CHANGELOG.md): Please find the changelog for VictoriaMetrics Anomaly Detection below. (121093 bytes)
 
 ## OpenTelemetry
 

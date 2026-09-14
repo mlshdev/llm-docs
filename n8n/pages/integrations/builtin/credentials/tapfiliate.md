@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/credentials/tapfiliate.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/credentials/tapfiliate.md)
+> Pinned source for n8n main: [docs/integrations/builtin/credentials/tapfiliate.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/integrations/builtin/credentials/tapfiliate.md)
 
 # Tapfiliate credentials <a id="tapfiliate-credentials"></a>
 
@@ -24,4 +24,4 @@ To configure this credential, you'll need:
 
 - An **API Key**: Get your API Key from your [**Profile Settings**](https://app.tapfiliate.com/a/profile/) **> API Key**.
 
-Refer to [Your API key](https://support.tapfiliate.com/en/articles/1441950-your-api-key) for more information.
+Refer to [How to find Account ID and API key](https://support.tapfiliate.com/en/articles/12793297-how-to-find-account-id-and-api-key) for more information.

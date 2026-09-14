@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/agentic-platform/sandboxes.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/agentic-platform/sandboxes.md)
+> Pinned source for Docker main: [content/manuals/agentic-platform/sandboxes.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/agentic-platform/sandboxes.md)
 
 # Sandboxes
 
@@ -57,7 +57,8 @@ A sandbox can be running or paused:
 
 When you create a sandbox, set a lifecycle timer from 1 to 24 hours and choose
 what happens when it expires. **Stop** stops the sandbox, while **Delete**
-deletes the sandbox and its files.
+deletes the sandbox and its files. When a sandbox stops, all processes running
+inside it stop too, including background processes.
 
 The sandbox's authentication, tools, access policy, and compute size are fixed
 when the sandbox is created and cannot be changed while it runs.

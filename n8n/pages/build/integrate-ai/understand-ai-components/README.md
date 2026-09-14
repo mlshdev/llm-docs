@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/integrate-ai/understand-ai-components/README.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/integrate-ai/understand-ai-components/README.md)
+> Pinned source for n8n main: [docs/build/integrate-ai/understand-ai-components/README.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/build/integrate-ai/understand-ai-components/README.md)
 
 # Understand AI components <a id="understand-ai-components"></a>
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/idempotency.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/idempotency.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/idempotency.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/idempotency.mdx)
 > Canonical documentation: https://trigger.dev/docs/idempotency
 
 # Idempotency
@@ -280,7 +280,7 @@ The `idempotencyKeyTTL` option defines a time window during which a task with th
 2. During this window, any subsequent triggers with the same idempotency key will return the original task run instead of creating a new one.
 3. Once the TTL window expires, the next trigger with that idempotency key will create a new task run and start a new time window.
 
-![idempotency-key-ttl](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/idempotency-key-ttl.png)
+![idempotency-key-ttl](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/idempotency-key-ttl.png)
 
 By default idempotency keys are stored for 30 days. You can change this by passing the `idempotencyKeyTTL` option when triggering a task:
 
@@ -481,7 +481,7 @@ You can also reset idempotency keys directly from the Trigger.dev dashboard:
 
 This is useful when you need to manually allow a task to be re-triggered without writing code.
 
-![Idempotency section in the run details pane showing the key, scope, and expiration time](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/idempotency-key-dashboard.png)
+![Idempotency section in the run details pane showing the key, scope, and expiration time](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/idempotency-key-dashboard.png)
 
 > **Note**
 >

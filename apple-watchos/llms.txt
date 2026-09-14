@@ -1,12 +1,13 @@
-# Apple watchOS snapshot-49fd8d0a44e2
+# Apple watchOS snapshot-2bb3946a9b15
 
-> Documentation generated from Apple's public DocC endpoints at [https://developer.apple.com/watchos/](https://developer.apple.com/watchos/) and pinned to catalog snapshot `49fd8d0a44e27da75b7933530cfa5505d9b13fb8ae49b84c40e9186ba4f090e4` captured at 2026-09-12T21:04:59.695Z.
+> Documentation generated from Apple's public DocC endpoints at [https://developer.apple.com/watchos/](https://developer.apple.com/watchos/) and pinned to catalog snapshot `2bb3946a9b15cc8ceb5f7b1ca7876717dce6cec8a1d63e63162a599dc521ee18` captured at 2026-09-14T18:21:41.403Z.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Apple watchOS snapshot-49fd8d0a44e2.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Apple watchOS snapshot-2bb3946a9b15.
 - [Provenance manifest](manifest.json): Snapshot digest, capture time, document count, and generation notes.
 - Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.
-- 3 frameworks in this catalog, captured at 2026-09-12T21:04:59.695Z.
+- 3 frameworks in this catalog, captured at 2026-09-14T18:21:41.403Z.
 - Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.
+- Daily reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive daily check.
 - Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream.
 
 ## Frameworks

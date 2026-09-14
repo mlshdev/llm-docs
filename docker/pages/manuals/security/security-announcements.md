@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/security/security-announcements.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/security/security-announcements.md)
+> Pinned source for Docker main: [content/manuals/security/security-announcements.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/security/security-announcements.md)
 
 # Docker security announcements
 
@@ -159,7 +159,7 @@ If you are unable to update to an unaffected version promptly, follow these best
   - [Enhanced Container Isolation](https://docs.docker.com/enterprise/security/hardened-desktop/enhanced-container-isolation/), which mitigates the impact of CVE-2024-21626 in the case of running containers from malicious images.
   - [Image Access Management](https://docs.docker.com/enterprise/security/hardened-desktop/image-access-management/), and [Registry Access Management](https://docs.docker.com/enterprise/security/hardened-desktop/registry-access-management/), which give organizations control over which images and repositories their users can access.
 - For CVE-2024-23650, CVE-2024-23651, CVE-2024-23652, and CVE-2024-23653, avoid using BuildKit frontend from an untrusted source. A frontend image is usually specified as the #syntax line on your Dockerfile, or with `--frontend` flag when using the `buildctl build` command.
-- To mitigate CVE-2024-24557, make sure to either use BuildKit or disable caching when building images. From the CLI this can be done via the `DOCKER_BUILDKIT=1` environment variable (default for Moby >= v23.0 if the buildx plugin is installed) or the `--no-cache flag`. If you are using the HTTP API directly or through a client, the same can be done by setting `nocache` to `true` or `version` to `2` for the [/build API endpoint](https://docs.docker.com/reference/api/engine/version/v1.44/#tag/Image/operation/ImageBuild).
+- To mitigate CVE-2024-24557, make sure to either use BuildKit or disable caching when building images. From the CLI this can be done via the `DOCKER_BUILDKIT=1` environment variable (default for Moby >= v23.0 if the Buildx plugin is installed) or the `--no-cache flag`. If you are using the HTTP API directly or through a client, the same can be done by setting `nocache` to `true` or `version` to `2` for the [/build API endpoint](https://docs.docker.com/reference/api/engine/version/v1.44/#tag/Image/operation/ImageBuild).
 
 ### Technical details and impact
 

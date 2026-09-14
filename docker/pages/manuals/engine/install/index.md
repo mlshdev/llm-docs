@@ -1,9 +1,9 @@
-> Pinned source for Docker main: [content/manuals/engine/install/_index.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/install/_index.md)
+> Pinned source for Docker main: [content/manuals/engine/install/_index.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/engine/install/_index.md)
 
 # Install Docker Engine
 
-This section describes how to install Docker Engine on Linux, also known as
-Docker CE. Docker Engine is also available for Windows, macOS, and Linux,
+This section describes how to install Docker Engine on Linux. Docker Engine is
+also available for Windows, macOS, and Linux,
 through Docker Desktop. For instructions on how to install Docker Desktop,
 see: [Overview of Docker Desktop](https://docs.docker.com/desktop/).
 

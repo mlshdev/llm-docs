@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/guides/frameworks/supabase-edge-functions-database-webhooks.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/guides/frameworks/supabase-edge-functions-database-webhooks.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/guides/frameworks/supabase-edge-functions-database-webhooks.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/guides/frameworks/supabase-edge-functions-database-webhooks.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/frameworks/supabase-edge-functions-database-webhooks
 
 # Triggering tasks from Supabase Database Webhooks
@@ -104,13 +104,13 @@ First, in the Supabase project dashboard, you'll need to create a new table to s
 
 To do this, click on 'Table Editor'  in the left-hand menu and create a new table.
 
-![How to create a new Supabase table](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/supabase-new-table-1.png)
+![How to create a new Supabase table](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/supabase-new-table-1.png)
 
 Call your table `video_transcriptions`.
 
 Add two new columns, one called `video_url` with the type `text` , and another called `transcription`, also with the type `text` .
 
-![How to create a new Supabase table 2](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/supabase-new-table-2.png)
+![How to create a new Supabase table 2](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/supabase-new-table-2.png)
 
 ## Create and deploy the Trigger.dev task
 
@@ -304,7 +304,7 @@ If you are modifying this example and using popular FFmpeg libraries like `fluen
 
 You will need to add your `DEEPGRAM_SECRET_KEY`, `SUPABASE_PROJECT_URL` and `SUPABASE_SERVICE_ROLE_KEY` as environment variables in your Trigger.dev project. This can be done in the 'Environment Variables' page in your project dashboard.
 
-![Adding environment variables](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/environment-variables-page.jpg)
+![Adding environment variables](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/environment-variables-page.jpg)
 
 ### Deploying your task
 
@@ -324,17 +324,15 @@ yarn dlx trigger.dev@latest deploy
 
 ## Create and deploy the Supabase Edge Function
 
-### Add your Trigger.dev prod secret key to the Supabase dashboard
+### Create a Trigger.dev API key for Supabase
 
-Go to your Trigger.dev [project dashboard](https://cloud.trigger.dev) and copy the `prod` secret key from the API keys page.
-
-![How to find your prod secret key](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/api-key-prod.png)
+Open the API Keys page for your Production environment in the Trigger.dev [project dashboard](https://cloud.trigger.dev). Create a named key with **Trigger only** access and copy it. Trigger.dev shows the complete value only once.
 
 Then, in [Supabase](https://supabase.com/dashboard/projects), select the project you want to use, navigate to 'Project settings' , click 'Edge Functions'  in the configurations menu, and then click the 'Add new secret'  button.
 
-Add `TRIGGER_SECRET_KEY`  with the pasted value of your Trigger.dev `prod` secret key.
+Add `TRIGGER_SECRET_KEY`  with the environment API key you created.
 
-![Add secret key in Supabase](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/supabase-keys-1.png)
+![Add secret key in Supabase](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/supabase-keys-1.png)
 
 ### Create a new Edge Function using the Supabase CLI
 
@@ -382,7 +380,7 @@ Now deploy your new Edge Function with the following command:
 supabase functions deploy video-processing-handler
 ```
 
-Follow the CLI instructions, selecting the same project you added your `prod` secret key to, and once complete you should see your new Edge Function deployment in your Supabase Edge Functions dashboard.
+Follow the CLI instructions, selecting the same project where you created the Production environment API key. Once complete, you should see your new Edge Function deployment in your Supabase Edge Functions dashboard.
 
 There will be a link to the dashboard in your terminal output.
 
@@ -390,11 +388,11 @@ There will be a link to the dashboard in your terminal output.
 
 In your Supabase project dashboard, click 'Project settings' , then the 'API' tab , and copy the `anon` `public` API key from the table .
 
-![How to find your Supabase API keys](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/supabase-api-key.png)
+![How to find your Supabase API keys](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/supabase-api-key.png)
 
 Then, go to 'Database'  click on 'Webhooks' , and then click 'Create a new hook' .
 
-![How to create a new webhook](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/supabase-create-webhook-1.png)
+![How to create a new webhook](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/supabase-create-webhook-1.png)
 
 Call the hook `edge-function-hook`.
 
@@ -403,7 +401,7 @@ Select the new table you have created:
 
 Choose the `insert` event.
 
-![How to create a new webhook 2](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/supabase-create-webhook-2.png)
+![How to create a new webhook 2](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/supabase-create-webhook-2.png)
 
 Under 'Webhook configuration', select
 'Supabase Edge Functions'&#x20;
@@ -421,7 +419,7 @@ Under 'HTTP Headers', add a new header with the key `Authorization` and the valu
 
 Click 'Create webhook'.&#x20;
 
-![How to create a new webhook 3](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/supabase-create-webhook-3.png)
+![How to create a new webhook 3](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/supabase-create-webhook-3.png)
 
 Your Database Webhook is now ready to use.
 
@@ -431,21 +429,21 @@ Your `video-processing-handler` Edge Function is now set up to trigger the `vide
 
 To do this, go back to your Supabase project dashboard, click on 'Table Editor'  in the left-hand menu, click on the `video_transcriptions` table  , and then click 'Insert', 'Insert Row' .
 
-![How to insert a new row 1](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/supabase-new-table-3.png)
+![How to insert a new row 1](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/supabase-new-table-3.png)
 
 Add a new item under `video_url`, with a public video url. .
 
 You can use the following public video URL for testing: `https://content.trigger.dev/Supabase%20Edge%20Functions%20Quickstart.mp4`.
 
-![How to insert a new row 2](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/supabase-new-table-4.png)
+![How to insert a new row 2](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/supabase-new-table-4.png)
 
 Once the new table row has been inserted, check your [cloud.trigger.dev](https://cloud.trigger.dev) project 'Runs' list  and you should see a processing `videoProcessAndUpdate` task  which has been triggered when you added a new row with the video url to your `video_transcriptions` table.
 
-![Supabase successful run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/supabase-run-result.png)
+![Supabase successful run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/supabase-run-result.png)
 
 Once the run has completed successfully, go back to your Supabase `video_transcriptions` table, and you should see that in the row containing the original video URL, the transcription has now been added to the `transcription` column.
 
-![Supabase successful table update](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/supabase-table-result.png)
+![Supabase successful table update](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/supabase-table-result.png)
 
 **Congratulations! You have completed the full workflow from Supabase to Trigger.dev and back again.**
 

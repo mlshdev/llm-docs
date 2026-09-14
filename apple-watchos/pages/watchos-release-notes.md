@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple watchOS snapshot-49fd8d0a44e2: [documentation/watchos-release-notes](https://developer.apple.com/documentation/watchos-release-notes)
+> Snapshot-pinned source payload for Apple watchOS snapshot-2bb3946a9b15; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/watchos-release-notes
 
 # watchOS Release Notes
 
@@ -20,7 +21,7 @@ For issues not mentioned in release notes, file bugs through [Feedback Assistant
 
 ### watchOS 27
 
-- [watchOS 27 RC Release Notes](watchos-release-notes/watchos-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
+- [watchOS 27 Release Notes](watchos-release-notes/watchos-27-release-notes.md): Update your apps to use new features, and test your apps against API changes.
 
 ### watchOS 26
 

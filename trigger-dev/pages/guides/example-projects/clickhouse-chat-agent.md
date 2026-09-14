@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/guides/example-projects/clickhouse-chat-agent.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/guides/example-projects/clickhouse-chat-agent.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/guides/example-projects/clickhouse-chat-agent.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/guides/example-projects/clickhouse-chat-agent.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/example-projects/clickhouse-chat-agent
 
 # ClickHouse chat agent
@@ -248,11 +248,11 @@ const runQuery = tool({
 
 ### Running it
 
-The example needs `CLICKHOUSE_URL` and `ANTHROPIC_API_KEY` set in the Trigger.dev dashboard on the [Environment Variables page](https://trigger.dev/docs/deploy-environment-variables), and `TRIGGER_PROJECT_REF` plus `TRIGGER_SECRET_KEY` in the local `.env` for the Next.js server actions:
+The example needs `CLICKHOUSE_URL` and `ANTHROPIC_API_KEY` set in the Trigger.dev dashboard on the [Environment Variables page](https://trigger.dev/docs/deploy-environment-variables). Create a named **Trigger only** API key in your Development environment, then set `TRIGGER_PROJECT_REF` and `TRIGGER_SECRET_KEY` in the local `.env` for the Next.js server actions:
 
 ```bash .env
 TRIGGER_PROJECT_REF=proj_xxxxxxxxxxxxxxxxxxxxxxxx
-TRIGGER_SECRET_KEY=tr_dev_xxxxxxxxxxxxxxxxxxxxxxxx
+TRIGGER_SECRET_KEY=tr_dev_sk_xxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 Run the agent and the app in two terminals, then open <http://localhost:3000>:

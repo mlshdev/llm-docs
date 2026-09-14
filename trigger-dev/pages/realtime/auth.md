@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/realtime/auth.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/realtime/auth.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/realtime/auth.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/realtime/auth.mdx)
 > Canonical documentation: https://trigger.dev/docs/realtime/auth
 
 # Realtime authentication
@@ -132,7 +132,7 @@ const publicToken = await auth.createPublicToken({
 - If `expirationTime` is a number, it will be treated as a Unix timestamp in **seconds**
 - If `expirationTime` is a `Date`, it will be treated as a date
 
-When using non-root API keys (recommended), the expiration cannot be more than 30 days in the future.
+Public Access Tokens cannot expire more than 30 days in the future.
 
 The format used for a time span is the same as the [jose package](https://github.com/panva/jose), which is a number followed by a unit. Valid units are: "sec", "secs", "second", "seconds", "s", "minute", "minutes", "min", "mins", "m", "hour", "hours", "hr", "hrs", "h", "day", "days", "d", "week", "weeks", "w", "year", "years", "yr", "yrs", and "y". It is not possible to specify months. 365.25 days is used as an alias for a year. If the string is suffixed with "ago", or prefixed with a "-", the resulting time span gets subtracted from the current unix timestamp. A "from now" suffix can also be used for readability when adding to the current unix timestamp.
 

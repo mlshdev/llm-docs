@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/builders/drivers/kubernetes.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build/builders/drivers/kubernetes.md)
+> Pinned source for Docker main: [content/manuals/build/builders/drivers/kubernetes.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/build/builders/drivers/kubernetes.md)
 
 # Kubernetes driver
 
@@ -350,7 +350,7 @@ Prerequisites:
    specified namespace (in this case, `buildkit`), while keeping your driver
    configuration locally.
 
-5. Use your new builder by including the `--builder` flag when running buildx
+5. Use your new builder by including the `--builder` flag when running Buildx
    commands. For example: :
 
    ```console

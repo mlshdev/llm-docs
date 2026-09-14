@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.151.0: [docs/guides/k8s-monitoring-via-vm-single/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-monitoring-via-vm-single/_index.md)
+> Pinned source for VictoriaMetrics v1.152.0: [docs/guides/k8s-monitoring-via-vm-single/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/540b91da031aa8b7d53d3784693bb451e2be980a/docs/guides/k8s-monitoring-via-vm-single/_index.md)
 
 > \[!NOTE] Tip
 > Store every configuration file you use during this guide in version control. You may need them for reference or to change the configuration of your installation.
@@ -22,7 +22,7 @@ We will use:
 
   > We use a GKE cluster from [GCP](https://cloud.google.com/), but this guide also applies to any Kubernetes cluster. For example, [Amazon EKS](https://aws.amazon.com/ru/eks/) or an on-premises cluster.
 
-![VictoriaMetrics Single on Kubernetes cluster](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-monitoring-via-vm-single/k8s-scheme.webp)
+![VictoriaMetrics Single on Kubernetes cluster](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/guides/k8s-monitoring-via-vm-single/k8s-scheme.webp)
 
 ## 1. VictoriaMetrics Helm repository
 
@@ -296,19 +296,19 @@ To check that VictoriaMetrics has collected metrics from the Kubernetes cluster,
 
 Use `admin` as the username and the password you obtained earlier using `kubectl get secret ...`.
 
-![Single and Kubernetes dashboards in Grafana](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-monitoring-via-vm-single/grafana-dashboards.webp)
+![Single and Kubernetes dashboards in Grafana](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/guides/k8s-monitoring-via-vm-single/grafana-dashboards.webp)
 
 <figcaption style="text-align: center; font-style: italic;">List of pre-installed dashboards in Grafana</figcaption>
 
 You should see the metrics for your Kubernetes dashboard:
 
-![Kubernetes dashboard](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-monitoring-via-vm-single/grafana-k8s-dashboard.webp)
+![Kubernetes dashboard](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/guides/k8s-monitoring-via-vm-single/grafana-k8s-dashboard.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Grafana dashboard showing the Kubernetes cluster metrics</figcaption>
 
 The VictoriaMetrics dashboard shows metrics on telemetry ingestion and resource utilization:
 
-![VictoriaMetrics Single dashboard](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-monitoring-via-vm-single/grafana.webp)
+![VictoriaMetrics Single dashboard](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/guides/k8s-monitoring-via-vm-single/grafana.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Grafana dashboard for the VictoriaMetrics single-node service</figcaption>
 

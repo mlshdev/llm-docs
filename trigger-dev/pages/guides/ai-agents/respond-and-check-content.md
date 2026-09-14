@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/guides/ai-agents/respond-and-check-content.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/guides/ai-agents/respond-and-check-content.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/guides/ai-agents/respond-and-check-content.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/guides/ai-agents/respond-and-check-content.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/ai-agents/respond-and-check-content
 
 # Respond to customer inquiry and check for inappropriate content
@@ -8,7 +8,7 @@ Create an AI agent workflow that responds to customer inquiries while checking i
 ## Overview
 
 **Parallelization** is a workflow pattern where multiple tasks or processes run simultaneously instead of sequentially, allowing for more efficient use of resources and faster overall execution. It's particularly valuable when different parts of a task can be handled independently, such as running content analysis and response generation at the same time.
-![Parallelization](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/guides/ai-agents/parallelization.png)
+![Parallelization](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/guides/ai-agents/parallelization.png)
 
 ## Example task
 

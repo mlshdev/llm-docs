@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/integrations/datadog.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/datadog.md)
+> Pinned source for VictoriaMetrics v1.152.0: [docs/victoriametrics/integrations/datadog.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/integrations/datadog.md)
 
 VictoriaMetrics components like **vmagent**, **vminsert** or **single-node** accepts data from [DataDog agent](https://docs.datadoghq.com/agent/),
 [DogStatsD](https://docs.datadoghq.com/developers/dogstatsd/) and [DataDog Lambda Extension](https://docs.datadoghq.com/serverless/libraries_integrations/extension/)
@@ -21,7 +21,7 @@ The imported data can be read via [export API](https://docs.victoriametrics.com/
 DataDog agent allows configuring destinations for metrics sending via ENV variable `DD_DD_URL`
 or via [configuration file](https://docs.datadoghq.com/agent/guide/agent-configuration-files/) in section `dd_url`.
 
-![DD to VM](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/datadog_sending_metrics_to_VM.webp)
+![DD to VM](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/integrations/datadog_sending_metrics_to_VM.webp)
 
 To configure DataDog agent via ENV variable add the following prefix:
 
@@ -54,7 +54,7 @@ dd_url: http://<victoriametrics-addr>:8428/datadog
 DataDog allows configuring [Dual Shipping](https://docs.datadoghq.com/agent/guide/dual-shipping/) via ENV variable
 `DD_ADDITIONAL_ENDPOINTS` or via configuration file `additional_endpoints`.
 
-![DD to VM](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/datadog_sending_metrics_to_VM_and_DD.webp)
+![DD to VM](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/integrations/datadog_sending_metrics_to_VM_and_DD.webp)
 
 Run DataDog agent using the following ENV variable with VictoriaMetrics as additional metrics receiver:
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/ai-chat/pending-messages.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/ai-chat/pending-messages.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/ai-chat/pending-messages.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/ai-chat/pending-messages.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/pending-messages
 
 # Pending Messages
@@ -31,18 +31,18 @@ Add `pendingMessages` to your `chat.agent` configuration:
 
 ```ts
 import { chat } from "@trigger.dev/sdk/ai";
-import { streamText, stepCountIs } from "ai";
+import { stepCountIs } from "ai";
 import { anthropic } from "@ai-sdk/anthropic";
 
 export const myChat = chat.agent({
   id: "my-chat",
+  registry,
   pendingMessages: {
     // Only inject when there are completed steps (tool calls happened)
     shouldInject: ({ steps }) => steps.length > 0,
   },
-  run: async ({ messages, signal }) => {
+  run: async ({ messages, signal, streamText }) => {
     return streamText({
-      ...chat.toStreamTextOptions({ registry }),
       messages,
       tools: { /* ... */ },
       abortSignal: signal,

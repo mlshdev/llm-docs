@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.airtop.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/app-nodes/n8n-nodes-base.airtop.md)
+> Pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.airtop.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/integrations/builtin/app-nodes/n8n-nodes-base.airtop.md)
 
 # Airtop node <a id="airtop-node"></a>
 
@@ -13,14 +13,19 @@ On this page, you'll find a list of operations the Airtop node supports, and lin
 
 ## Operations <a id="operations"></a>
 
+- Agent
+  - Run an agent
 - Session
   - Create session
   - Save profile on termination
   - Terminate session
+  - Wait for download
 - Window
   - Create a new browser window
   - Load URL
   - Take screenshot
+  - Get live view
+  - List windows
   - Close window
 - Extraction
   - Query page
@@ -28,8 +33,16 @@ On this page, you'll find a list of operations the Airtop node supports, and lin
   - Smart scrape page
 - Interaction
   - Click an element
+  - Fill form
   - Hover on an element
+  - Scroll
   - Type
+- File
+  - Upload a file
+  - Get a file
+  - Get many files
+  - Load a file
+  - Delete a file
 
 ## Templates and examples <a id="templates-and-examples"></a>
 
@@ -55,9 +68,23 @@ Contact [Airtop's Support](https://docs.airtop.ai/guides/misc/support) for assis
 
 ## Node reference <a id="node-reference"></a>
 
+### Run an agent
+
+Run a published Airtop agent. In the **Agent** field, select the agent to run, then map its input parameters. To run the agent against a specific browser profile, enter its ID in the optional **Browser Profile ID** field. Leave it empty to use the agent's default profile.
+
 ### Create a session and window <a id="create-a-session-and-window"></a>
 
 Create an Airtop browser session to get a **Session ID**, then use it to create a new browser window. After this, you can use any extraction or interaction operation.
+
+### Manage windows
+
+Work with the browser windows in a session:
+
+- **Load URL**: Navigate a window to a page.
+- **Get live view**: Get a Live View URL to watch and control a window in real time.
+- **Take screenshot**: Capture an image of a window.
+- **List windows**: List the windows open in a session.
+- **Close window**: Close a specific window.
 
 ### Extract content <a id="extract-content"></a>
 
@@ -71,7 +98,24 @@ Get JSON responses by using the **JSON Output Schema** parameter in query operat
 
 ### Interacting with pages <a id="interacting-with-pages"></a>
 
-Click, hover, or type on elements by describing the element you want to interact with.
+Interact with a page in a session by describing the element you want to act on in natural language:
+
+- **Click an element**, **Hover on an element**, or **Type** text.
+- **Fill form**: Fill several fields at once from a plain-language description of the values.
+- **Scroll**: Scroll to a described element, or by a set amount toward a page edge.
+
+### Work with files
+
+Upload files to Airtop and use them in your browser automations:
+
+- **Upload a file**: Upload a file from a URL or binary data, and optionally attach it to a page's file input in a session.
+- **Load a file**: Attach a previously uploaded file to a page's file input in an existing session.
+- **Get a file** and **Get many files**: Retrieve file details, or download a ready file as binary data.
+- **Delete a file**: Permanently remove an uploaded file by its **File ID**.
+
+### Wait for a download
+
+After you trigger a download in a session, use **Wait for download** to wait until the file is ready, then get its file ID and download URL.
 
 ### Terminate a session <a id="terminate-a-session"></a>
 

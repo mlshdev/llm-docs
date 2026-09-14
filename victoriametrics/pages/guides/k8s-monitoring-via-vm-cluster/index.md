@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.151.0: [docs/guides/k8s-monitoring-via-vm-cluster/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-monitoring-via-vm-cluster/_index.md)
+> Pinned source for VictoriaMetrics v1.152.0: [docs/guides/k8s-monitoring-via-vm-cluster/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/540b91da031aa8b7d53d3784693bb451e2be980a/docs/guides/k8s-monitoring-via-vm-cluster/_index.md)
 
 > \[!NOTE] Tip
 > Store every configuration file you use during this guide in version control. You may need them for reference or to change the configuration of your installation.
@@ -52,7 +52,7 @@ A [VictoriaMetrics cluster](https://docs.victoriametrics.com/victoriametrics/clu
 - `vmstorage`: stores raw data and serves queries filtered by time range and labels.
 - `vmselect`: executes queries by fetching data across all configured `vmstorage` nodes.
 
-![VictoriaMetrics Cluster on Kubernetes](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-monitoring-via-vm-cluster/scheme.webp)
+![VictoriaMetrics Cluster on Kubernetes](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/guides/k8s-monitoring-via-vm-cluster/scheme.webp)
 
 To get started, create a config file for the VictoriaMetrics Helm chart:
 
@@ -349,25 +349,25 @@ To check that [VictoriaMetrics](https://victoriametrics.com) collects metrics fr
 
 You should see three dashboards installed. Select "Kubernetes Cluster Monitoring".
 
-![Dashboards](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-monitoring-via-vm-cluster/dashes-agent.webp)
+![Dashboards](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/guides/k8s-monitoring-via-vm-cluster/dashes-agent.webp)
 
 <figcaption style="text-align: center; font-style: italic;">List of pre-installed dashboards in Grafana</figcaption>
 
 This is the main dashboard, which shows activity across your Kubernetes cluster:
 
-![Kubernetes Cluster Dashboard](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-monitoring-via-vm-cluster/dashboard.webp)
+![Kubernetes Cluster Dashboard](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/guides/k8s-monitoring-via-vm-cluster/dashboard.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Grafana dashboard for Kubernetes metrics</figcaption>
 
 The VictoriaMetrics cluster dashboard is also available to monitor telemetry ingestion and resource utilization:
 
-![VMCluster dashboard](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-monitoring-via-vm-cluster/grafana-dash-vmcluster.webp)
+![VMCluster dashboard](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/guides/k8s-monitoring-via-vm-cluster/grafana-dash-vmcluster.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Grafana dashboard for VictoriaMetrics services</figcaption>
 
 And vmagent has a separate dashboard to monitor scraping and queue activity:
 
-![VMAgent dashboard](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-monitoring-via-vm-cluster/grafana-dash-vmagent.webp)
+![VMAgent dashboard](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/guides/k8s-monitoring-via-vm-cluster/grafana-dash-vmagent.webp)
 
 <figcaption style="text-align: center; font-style: italic;">Grafana dashboard for vmagent ingestion and resource usage</figcaption>
 

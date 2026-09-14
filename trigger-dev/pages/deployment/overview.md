@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/deployment/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/deployment/overview.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/deployment/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/deployment/overview.mdx)
 > Canonical documentation: https://trigger.dev/docs/deployment/overview
 
 # Deployment
@@ -55,7 +55,7 @@ Trigger.dev (3.3.16)
 
 Now if you visit your Trigger.dev dashboard you should see the new version deployed:
 
-![Trigger.dev dashboard showing the latest version deployed](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/deployment/my-first-deployment.png)
+![Trigger.dev dashboard showing the latest version deployed](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/deployment/my-first-deployment.png)
 
 > **Note**
 >
@@ -64,14 +64,10 @@ Now if you visit your Trigger.dev dashboard you should see the new version deplo
 
 ## Triggering deployed tasks
 
-Once you have deployed your tasks, you can trigger tasks exactly the same way you did locally, but with the "PROD" API key:
-
-![Trigger.dev dashboard showing the API key](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/deployment/api-key.png)
-
-Copy the API key from the dashboard and set the `TRIGGER_SECRET_KEY` environment variable, and then any tasks you trigger will run against the deployed version:
+Once you have deployed your tasks, open the API Keys page for the Production environment and create a named key with **Trigger only** access. Set the key as `TRIGGER_SECRET_KEY` in your backend environment. Tasks triggered with this key run against the deployed Production version:
 
 ```txt .env
-TRIGGER_SECRET_KEY="tr_prod_abc123"
+TRIGGER_SECRET_KEY="tr_prod_sk_abc123"
 ```
 
 Now you can trigger your tasks:
@@ -144,7 +140,7 @@ npx trigger.dev deploy --skip-promotion
 
 This will create a new deployment version but not promote it to the current version:
 
-![Trigger.dev dashboard showing the latest version deployed but not promoted](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/deployment/skip-promotion.png)
+![Trigger.dev dashboard showing the latest version deployed but not promoted](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/deployment/skip-promotion.png)
 
 This allows you to deploy and test a new version without affecting new task runs. When you want to promote the version, you can do so from the CLI:
 
@@ -154,7 +150,7 @@ npx trigger.dev promote 20250228.1
 
 Or from the dashboard:
 
-![Trigger.dev dashboard showing the promote button](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/deployment/promote-button.png)
+![Trigger.dev dashboard showing the promote button](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/deployment/promote-button.png)
 
 To learn more about skipping promotion and how this enables atomic deployments, see our [Atomic deployment](https://trigger.dev/docs/deployment/atomic-deployment) guide. To keep your app and tasks in sync without coordinating promotion at all, see [version skew protection](https://trigger.dev/docs/deployment/version-skew-protection).
 
@@ -173,12 +169,12 @@ npx trigger.dev deploy --env staging
 
 This will create an entirely new version of your tasks for the `staging` environment, with a new version number and an independent current version:
 
-![Trigger.dev dashboard showing the staging environment](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/deployment/staging-deploy.png)
+![Trigger.dev dashboard showing the staging environment](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/deployment/staging-deploy.png)
 
-Now you can trigger tasks against the staging environment by setting the `TRIGGER_SECRET_KEY` environment variable to the staging API key:
+To trigger tasks against Staging, create a named key in the Staging environment with **Trigger only** access and set it as `TRIGGER_SECRET_KEY`:
 
 ```txt .env
-TRIGGER_SECRET_KEY="tr_stg_abcd123"
+TRIGGER_SECRET_KEY="tr_stg_sk_abcd123"
 ```
 
 For additional environments beyond `prod` and `staging`, you can use [preview branches](https://trigger.dev/docs/deployment/preview-branches), which allow you to create isolated environments for each branch of your code.

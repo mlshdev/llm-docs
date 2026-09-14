@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/6efe500d2e9e24a81bffda8825511f6bc9760cb1/doc/general.texi)
+> Pinned source for FFmpeg master: [doc/general.texi](https://github.com/FFmpeg/FFmpeg/blob/639ee849526cfe61ceb312776335c245b98bd9d4/doc/general.texi)
 
 # External libraries
 
@@ -14,6 +14,49 @@ FFmpeg can make use of the AOM library for AV1 decoding and encoding.
 Go to <http://aomedia.org/> and follow the instructions for
 installing the library. Then pass `--enable-libaom` to configure to
 enable it.
+
+## ARM ASTC Encoder
+
+FFmpeg can make use of the Arm ASTC Encoder library for ASTC image
+compression and decompression in the `libastcenc` encoder and
+decoder.
+
+Go to <https://github.com/ARM-software/astc-encoder> to obtain the
+sources. Version 5.4 or newer is required, because the wrappers use the
+four-argument `astcenc_context_alloc()` interface introduced in
+that release.
+
+The upstream build does not install the public header, and the library file
+name depends on the configured SIMD and linkage variants, so install the
+pieces manually in a layout that configure can detect: the header as
+`astcenc/astcenc.h` and a library that can be linked with
+`-lastcenc`. Keep the library's own file name, which is the SONAME
+recorded in the binary, and provide the plain name as an alias:
+
+```text
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DASTCENC_SHAREDLIB=ON
+cmake --build build
+install -Dm644 Source/astcenc.h /usr/local/include/astcenc/astcenc.h
+install -Dm755 build/Source/libastcenc-native-shared.so \
+              /usr/local/lib/libastcenc-native-shared.so
+ln -sf libastcenc-native-shared.so /usr/local/lib/libastcenc.so
+```
+
+Use the platform's shared library suffix, and adjust the built library name
+for other variants (for example `libastcenc-neon-shared.so` or a static
+`libastcenc.a`), or pass `--extra-cflags` and
+`--extra-ldflags` to configure if the files are installed elsewhere.
+Installing only under the plain name breaks linking at run time, and the
+installation directory has to be in the runtime loader's search path.
+
+On big-endian systems, also pass `-DASTCENC_ISA_NONE=ON` and
+`-DASTCENC_BIG_ENDIAN=ON` to CMake. For this variant, install
+`libastcenc-none-shared.so` under its own name and provide
+`libastcenc.so` as an alias, as in the example above.
+
+The library is licensed under Apache-2.0, which requires version 3 of
+the (L)GPL, so pass `--enable-version3` and
+`--enable-libastcenc` to configure to enable it.
 
 ## AMD AMF/VCE
 
@@ -472,6 +515,8 @@ library:
 - ADS/SS2                    |     |  X
   \|  Audio format used on the PS2.
 - APNG                       |  X  |  X
+- .astc                      |  X  |  X
+  \|  Raw ASTC texture container.
 - ASF                        |  X  |  X
   \|  Advanced / Active Streaming Format.
 - AST                        |  X  |  X
@@ -807,6 +852,8 @@ library:
   \|  Multimedia format used in Westwood Studios games.
 - Wideband Single-bit Data (WSD)  |     |  X
 - WVE                        |     |  X
+- KTX                        |  X  |  X
+  \|  Khronos Texture 1.0 container for ASTC.
 - Konami XMD                 |     |  X
 - XMV                        |     |  X
   \|  Microsoft video container used in Xbox games.
@@ -833,6 +880,8 @@ following image formats are supported:
 - animated GIF  |  X  |  X
 - APNG          |  X  |  X
   \|  Animated Portable Network Graphics
+- ASTC          |  E  |  E
+  \|  Adaptive Scalable Texture Compression, through external library libastcenc
 - BMP           |  X  |  X
   \|  Microsoft BMP image
 - BRender PIX   |     |  X

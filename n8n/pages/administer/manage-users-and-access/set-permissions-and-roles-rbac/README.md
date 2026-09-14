@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/README.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/README.md)
+> Pinned source for n8n main: [docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/README.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/README.md)
 
 # Role-based access control (RBAC) <a id="role-based-access-control-rbac"></a>
 

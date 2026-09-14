@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/credentials/quickbase.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/credentials/quickbase.md)
+> Pinned source for n8n main: [docs/integrations/builtin/credentials/quickbase.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/integrations/builtin/credentials/quickbase.md)
 
 # Quick Base credentials <a id="quick-base-credentials"></a>
 
@@ -23,4 +23,4 @@ Refer to [Quick Base's API documentation](https://developer.quickbase.com/auth/)
 To configure this credential, you'll need:
 
 - A **Hostname**: The string of characters located between `https://` and `/db` in your Quick Base URL.
-- A **User Token**: To generate a token, select your **Profile > My preferences > My User Information > Manage my user tokens**. Refer to [Creating and using user tokens](https://helpv2.quickbase.com/hc/en-us/articles/4570374095124-Creating-and-using-user-tokens) for detailed instructions.
+- A **User Token**: To generate a token, select your **Profile > My preferences > My User Information > Manage my user tokens**. Refer to [Create and use user tokens](https://help.quickbase.com/docs/create-and-use-user-tokens) for detailed instructions.

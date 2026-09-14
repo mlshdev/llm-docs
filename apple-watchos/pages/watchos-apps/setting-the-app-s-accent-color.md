@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple watchOS snapshot-49fd8d0a44e2: [documentation/watchos-apps/setting-the-app-s-accent-color](https://developer.apple.com/documentation/watchos-apps/setting-the-app-s-accent-color)
+> Snapshot-pinned source payload for Apple watchOS snapshot-2bb3946a9b15; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/watchos-apps/setting-the-app-s-accent-color
 
 # Setting the app’s accent color
 

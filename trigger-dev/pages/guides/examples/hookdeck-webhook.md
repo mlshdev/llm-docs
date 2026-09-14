@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/guides/examples/hookdeck-webhook.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/guides/examples/hookdeck-webhook.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/guides/examples/hookdeck-webhook.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/guides/examples/hookdeck-webhook.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/examples/hookdeck-webhook
 
 # Trigger tasks from Hookdeck webhooks
@@ -25,7 +25,7 @@ In Hookdeck, create a new [destination](https://hookdeck.com/docs/destinations) 
 
 - **URL**: `https://api.trigger.dev/api/v1/tasks/<task-id>/trigger` (replace `<task-id>` with your task ID)
 - **Method**: POST
-- **Authentication**: Bearer token (use your `TRIGGER_SECRET_KEY` from Trigger.dev)
+- **Authentication**: Bearer token (create a named **Trigger only** environment API key and use it as `TRIGGER_SECRET_KEY`)
 
 ### 2. Add a transformation
 

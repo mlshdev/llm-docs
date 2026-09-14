@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple watchOS snapshot-49fd8d0a44e2: [documentation/watchkit/wkextensiondelegate/deviceorientationdidchange()](https://developer.apple.com/documentation/watchkit/wkextensiondelegate/deviceorientationdidchange())
+> Snapshot-pinned source payload for Apple watchOS snapshot-2bb3946a9b15; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/watchkit/wkextensiondelegate/deviceorientationdidchange()
 
 # deviceOrientationDidChange() (Swift)
 

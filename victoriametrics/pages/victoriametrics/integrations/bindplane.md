@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/integrations/bindplane.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/bindplane.md)
+> Pinned source for VictoriaMetrics v1.152.0: [docs/victoriametrics/integrations/bindplane.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/integrations/bindplane.md)
 
 VictoriaMetrics integrates with [Bindplane](https://docs.bindplane.com/) via the [Bindplane application](https://app.bindplane.com/).
 
@@ -10,7 +10,7 @@ VictoriaMetrics integrates with [Bindplane](https://docs.bindplane.com/) via the
 4. Configure hostname, port, and headers.
 5. Name the destination and click on Save.
 
-![Bindplane Library view with Add Destination option for VictoriaMetrics](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/bindplane-library.webp)
+![Bindplane Library view with Add Destination option for VictoriaMetrics](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/integrations/bindplane-library.webp)
 
 ## Add a configuration
 
@@ -19,10 +19,10 @@ VictoriaMetrics integrates with [Bindplane](https://docs.bindplane.com/) via the
 3. Add your telemetry sources such as OTLP, Prometheus scrape, or cloud services.
 4. Select the destination.
 
-![Bindplane configuration editor with telemetry sources and VictoriaMetrics destination](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/bindplane-add-sources.webp)
+![Bindplane configuration editor with telemetry sources and VictoriaMetrics destination](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/integrations/bindplane-add-sources.webp)
 
 After that Bindplane will start sending metrics to VictoriaMetrics, and you can query them with PromQL/MetricsQL.
-![VictoriaMetrics metrics view showing data received from Bindplane via OpenTelemetry](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/bindplane-metrics-otel.webp)
+![VictoriaMetrics metrics view showing data received from Bindplane via OpenTelemetry](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/integrations/bindplane-metrics-otel.webp)
 
 You can check the global view in the Library to view the resource type, component type, and configurations.
 

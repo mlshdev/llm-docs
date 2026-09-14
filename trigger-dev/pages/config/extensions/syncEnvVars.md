@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/config/extensions/syncEnvVars.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/config/extensions/syncEnvVars.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/config/extensions/syncEnvVars.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/config/extensions/syncEnvVars.mdx)
 > Canonical documentation: https://trigger.dev/docs/config/extensions/syncEnvVars
 
 # Sync env vars
@@ -63,6 +63,12 @@ export default defineConfig({
 ### Example: Sync env vars from Infisical
 
 In this example we're using env vars from [Infisical](https://infisical.com).
+
+> **Tip**
+>
+> Infisical also offers a native [Secret Sync](https://trigger.dev/docs/deploy-environment-variables#infisical-secret-sync)
+> that pushes secrets to Trigger.dev without a build extension or a redeploy. Use `syncEnvVars` when
+> you want to resolve secrets at deploy time in code, or for a service without a native sync.
 
 ```ts trigger.config.ts
 import { defineConfig } from "@trigger.dev/sdk";

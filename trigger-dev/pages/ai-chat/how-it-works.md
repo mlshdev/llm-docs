@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/ai-chat/how-it-works.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/ai-chat/how-it-works.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/ai-chat/how-it-works.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/ai-chat/how-it-works.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/how-it-works
 
 # How the AI Agents SDK works
@@ -69,7 +69,7 @@ Here is a typical cold turn — user opens the page, types "What's the weather?"
 8. Your code calls `streamText({ model, messages })`. Each `UIMessageChunk` it produces is appended to `s2://sessions/:chatId/out` as a record. The browser sees them arrive on the SSE stream and the AI SDK renders them.
 9. When `streamText()` finishes, the agent writes a record with header `trigger:turn-complete` and an empty body. The browser transport sees this header and closes the per-turn readable stream.
 10. Immediately after writing the new turn-complete marker, the agent issues an S2 trim command targeting the *previous* turn-complete's sequence number. This bounds the stream's storage to roughly one turn of chunks plus the latest control record.
-11. `onTurnComplete` runs (your hook for persistence). Then the agent writes `ChatSnapshotV1` — `{ version: 1, messages, lastOutEventId, lastOutTimestamp }` — to S3 at `sessions/:chatId/snapshot.json`. This write is awaited, not fire-and-forget, so the next run is guaranteed to find it.
+11. `onTurnComplete` runs (your hook for persistence). Then the agent writes the transcript to S3 at `sessions/:chatId/snapshot.json`: a header line carrying the stream cursors and the runtime's own state, one line per message, and an index of the messages at the end so a page of history can be read without downloading the whole conversation. Once [compaction](https://trigger.dev/docs/ai-chat/compaction) has run, only the most recent messages are kept, so the file stops growing with the conversation. If you need the full history, keep your own [transcript storage](https://trigger.dev/docs/ai-chat/transcript-storage). This write is awaited, not fire-and-forget, so the next run is guaranteed to find it.
 12. The agent re-enters the waitpoint on `.in`. After `idleTimeoutInSeconds` of nothing arriving, `onChatSuspend` fires and the engine snapshots the run. Compute is freed.
 
 ## Three layers of persistence

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/manual-setup.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/manual-setup.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/manual-setup.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/manual-setup.mdx)
 > Canonical documentation: https://trigger.dev/docs/manual-setup
 
 # Manual setup
@@ -53,15 +53,15 @@ bun add -D @trigger.dev/build@latest
 
 ## Environment variables
 
-For local development, you need to set up the `TRIGGER_SECRET_KEY` environment variable. This key authenticates your application with Trigger.dev.
+For local development, create a named environment API key and set it as `TRIGGER_SECRET_KEY`:
 
-1. Go to your project dashboard in Trigger.dev
-2. Navigate to the "API Keys" page
-3. Copy the **DEV** secret key
-4. Add it to your local environment file:
+1. Open your project's Development environment in the Trigger.dev dashboard.
+2. Open the **API Keys** page.
+3. Click **New API key**, give it a descriptive name, and select **Trigger only** access.
+4. Copy the key and add it to your local environment file. Trigger.dev shows the complete value only once.
 
-```bash
-TRIGGER_SECRET_KEY=tr_dev_xxxxxxxxxx
+```bash .env
+TRIGGER_SECRET_KEY=tr_dev_sk_xxxxxxxxxx
 ```
 
 ### Self-hosted instances

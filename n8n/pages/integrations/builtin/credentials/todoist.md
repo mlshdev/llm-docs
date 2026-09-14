@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/credentials/todoist.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/credentials/todoist.md)
+> Pinned source for n8n main: [docs/integrations/builtin/credentials/todoist.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/integrations/builtin/credentials/todoist.md)
 
 # Todoist credentials <a id="todoist-credentials"></a>
 
@@ -23,7 +23,7 @@ To configure this credential, you'll need a [Todoist](https://todoist.com/) acco
 
 To get your **API Key**:
 
-1. In Todoist, open your [**Integration settings**](https://todoist.com/prefs/integrations).
+1. In Todoist, open your [**Settings > Integrations**](https://app.todoist.com/app/settings/integrations).
 2. Select the **Developer** tab.
 3. Copy your **API token** and enter it as the **API Key** in your n8n credential.
 

@@ -1,11 +1,11 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/management/authentication.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/management/authentication.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/management/authentication.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/management/authentication.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/authentication
 
 # Authentication
 
 Authenticating with the Trigger.dev management API
 
-There are two methods of authenticating with the management API: using a secret key associated with a specific environment in a project (`secretKey`), or using a personal access token (`personalAccessToken`). Both methods should only be used in a backend server, as they provide full access to the project.
+There are two methods of authenticating with the management API: using a named API key associated with a specific environment in a project (`secretKey`), or using a personal access token (`personalAccessToken`). Use both methods only on a backend server. An environment API key's access is limited by the preset and task restrictions selected when you create it.
 
 > **Note**
 >
@@ -20,7 +20,7 @@ import { configure, runs } from "@trigger.dev/sdk";
 
 // Using secretKey authentication
 configure({
-  secretKey: process.env["TRIGGER_SECRET_KEY"], // starts with tr_dev_, tr_prod_, or tr_preview_
+  secretKey: process.env["TRIGGER_SECRET_KEY"], // starts with tr_dev_sk_, tr_prod_sk_, or tr_preview_sk_
 });
 
 function secretKeyExample() {
@@ -69,9 +69,9 @@ Consult the following table to see which endpoints support each authentication m
 | `schedules.deactivate` | ✅          |                       |
 | `schedules.del`        | ✅          |                       |
 
-### Secret key
+### Environment API key
 
-Secret key authentication scopes the API access to a specific environment in a project, and works with certain endpoints. You can read our [API Keys guide](https://trigger.dev/docs/apikeys) for more information.
+Create a named environment API key with the narrowest access preset that supports your integration. Pass it through the `secretKey` option or `TRIGGER_SECRET_KEY` environment variable. Read the [API Keys guide](https://trigger.dev/docs/apikeys) for available presets and task restrictions.
 
 ### Personal Access Token (PAT)
 
@@ -186,14 +186,16 @@ Unlike `TriggerClient` instances (which stay isolated unless you opt in), `auth.
 
 [Sessions](https://trigger.dev/docs/ai-chat/sessions) are addressed by a session-scoped public access token — a short-lived JWT you mint in your backend and pass to frontend or server-side clients. The token carries one or both of two scopes, each pinned to a session by its friendly ID (`session_…`) or your `externalId`:
 
-| Scope                 | Grants                                                                                                                                                       |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `read:sessions:{id}`  | Retrieve the session, list its runs, and subscribe to and drain both its `.in` and `.out` [channels](https://trigger.dev/docs/management/sessions/channels). |
-| `write:sessions:{id}` | Append to the session's `.in` channel, and create runs on the session (including the create call itself).                                                    |
+| Scope                    | Grants                                                                                                                                                                 |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `read:sessions:{id}`     | Retrieve the session, list its runs, and subscribe to and drain its `.out` [channel](https://trigger.dev/docs/management/sessions/channels) (and every named channel). |
+| `read:sessions:{id}:out` | Subscribe to and drain the session's `.out` channel only. The bearer cannot retrieve the session row or read named channels.                                           |
+| `write:sessions:{id}`    | Append to the session's `.in` channel, and create runs on the session (including the create call itself).                                                              |
 
-Two boundaries follow from the table, and both are enforced server-side:
+Three boundaries follow from the table, and all are enforced server-side:
 
 - **`write:sessions` does not grant `.out` append.** The `.out` channel is the task's to write. Appending to `.out` requires a **secret key**; a public token gets `403`.
+- **No public token grants `.in` read.** The `.in` channel is the task's to read. Subscribing to or draining `.in` requires a **secret key**; a public token gets `403`, whichever session scopes it carries.
 - **Updating or closing a session requires a secret key.** A session public token cannot call `PATCH /api/v1/sessions/{session}` or `POST /api/v1/sessions/{session}/close` — those are admin operations.
 
 Mint a token with `auth.createPublicToken` in your backend:

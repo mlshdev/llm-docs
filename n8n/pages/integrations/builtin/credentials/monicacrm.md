@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/credentials/monicacrm.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/credentials/monicacrm.md)
+> Pinned source for n8n main: [docs/integrations/builtin/credentials/monicacrm.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/integrations/builtin/credentials/monicacrm.md)
 
 # Monica CRM credentials <a id="monica-crm-credentials"></a>
 
@@ -16,7 +16,7 @@ Sign up for a [Monica CRM](https://www.monicahq.com/) account or self-host an in
 
 ## Related resources <a id="related-resources"></a>
 
-Refer to [Monica's API documentation](https://www.monicahq.com/api) for more information about the service.
+Refer to [Monica's documentation](https://docs.monicahq.com/) for more information about the service.
 
 ## Using API token <a id="using-api-token"></a>
 

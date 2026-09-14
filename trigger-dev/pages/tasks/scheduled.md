@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/tasks/scheduled.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/tasks/scheduled.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/tasks/scheduled.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/tasks/scheduled.mdx)
 > Canonical documentation: https://trigger.dev/docs/tasks/scheduled
 
 # Scheduled tasks (cron)
@@ -186,6 +186,30 @@ const createdSchedule = await schedules.create({
 > times. When you retrieve a schedule, `nextRun` is the nominal cron time and `nextRunEffectiveAt`
 > is the assigned time the run will actually start.
 
+### Free-plan minimum window
+
+Schedules created while an organization is on a free plan run no more than once per hour and use a minimum 60-minute window.
+
+- The minimum applies to the **cron cadence**: creating or deploying a schedule whose cron fires more often than once an hour is rejected with an actionable error. Change the cron expression or upgrade before saving.
+- Omitted, zero (`"0m"` / `"0%"`), or smaller windows are treated as the 60-minute minimum. A larger configured window still wins, subject to the usual cap at the next cron occurrence.
+- The policy applies to **all environment types**, including Development.
+- It is captured when the schedule is created. Existing schedules — and schedules created while paid, even after a later downgrade — are **grandfathered** and keep running unchanged.
+- Upgrading does not immediately rewrite existing schedules. A free-created restriction is cleared the next time the schedule is saved (imperative/dashboard) or redeployed (declarative) while the organization is paying.
+- No runs are ever skipped or coalesced: unsupported high-frequency schedules are rejected at create/update time rather than silently thinned out.
+- Self-hosted deployments, and any case where the billing plan can't be determined, are unrestricted.
+
+When a schedule is subject to this policy, the API returns an `appliedSchedulePolicy` object alongside the configured `window`:
+
+```json
+{
+  "window": "0m",
+  "appliedSchedulePolicy": {
+    "minimumWindowSeconds": 3600,
+    "reason": "free_schedule"
+  }
+}
+```
+
 ## Supported cron syntax
 
 ```
@@ -227,9 +251,9 @@ You need to attach a schedule to a task before it will run on a schedule. You ca
 
 1. In the sidebar select the "Tasks" page, then select the scheduled task you want to attach a
    schedule to (scheduled tasks have a clock icon, and you can filter the list to Scheduled).
-   ![Scheduled task page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/schedules-blank.png)
+   ![Scheduled task page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/schedules-blank.png)
 2. Press the "Create schedule" button, fill in the form, and press "Create schedule" when you're
-   done. ![Create schedule form](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/schedules-create.png)
+   done. ![Create schedule form](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/schedules-create.png)
 
    These are the options when creating a schedule:
 
@@ -372,9 +396,9 @@ You can test a scheduled task in the dashboard. Note that the `scheduleId` will 
 > open it on the Tasks page and press the "Test schedule" button.
 
 1. On the "Tasks" page, open your scheduled task and press the "Test schedule" button.
-   ![Scheduled task page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/schedules-test.png)
+   ![Scheduled task page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/schedules-test.png)
 2. Fill in the form \[1]. You can select from a recent run \[2] to pre-populate the fields. Press "Run
-   test" when you're ready ![Schedule test form](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/schedules-test-form.png)
+   test" when you're ready ![Schedule test form](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/schedules-test-form.png)
 
 ## Managing schedules with the SDK
 

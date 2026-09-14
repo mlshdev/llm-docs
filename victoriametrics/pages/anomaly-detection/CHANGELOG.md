@@ -1,8 +1,23 @@
-> Pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/CHANGELOG.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/CHANGELOG.md)
+> Pinned source for VictoriaMetrics v1.152.0: [docs/anomaly-detection/CHANGELOG.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/CHANGELOG.md)
 
 Please find the changelog for VictoriaMetrics Anomaly Detection below.
 
+> \[!TIP]
+> See the directional [compatibility matrix](https://docs.victoriametrics.com/anomaly-detection/migration/#compatibility-matrix) before upgrading or rolling back, particularly when restoring persisted model state.
+
 **2026**
+
+## v1.30.5
+
+Released: 2026-09-10
+
+- UI: Updated the [vmanomaly UI](https://docs.victoriametrics.com/anomaly-detection/ui/#v190) to v1.9.0 with multiple named queries, per-query business policies, and an experimental [multivariate investigation workspace](https://docs.victoriametrics.com/anomaly-detection/ui/#multivariate-investigation). Explore aligned signals and a joint anomaly score separately for each model group.
+
+- FEATURE: Shared [autotune](https://docs.victoriametrics.com/anomaly-detection/components/server/#time-series-analysis-and-autotune-api) accepts named queries and evaluates aligned multivariate groups in one study, returning one shared model configuration.
+
+- IMPROVEMENT: Reduced duplicate [AI Copilot](https://docs.victoriametrics.com/anomaly-detection/ui/#ai-assistance) context, added configurable context/output budgets, and exposed bounded [AI Copilot metrics](https://docs.victoriametrics.com/anomaly-detection/components/monitoring/#ai-copilot-metrics) for request size, reported tokens, finish reasons and local budget refusals.
+
+- BUGFIX: Applied query-level data ranges, detection directions and minimum deviations consistently in [multiprocessing mode](https://docs.victoriametrics.com/anomaly-detection/components/settings/#parallelization). Explicit query policies take precedence over model fallbacks; observations outside the configured range retain their out-of-range anomaly score.
 
 ## v1.30.4
 

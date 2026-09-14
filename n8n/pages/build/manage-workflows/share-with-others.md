@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/manage-workflows/share-with-others.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/manage-workflows/share-with-others.md)
+> Pinned source for n8n main: [docs/build/manage-workflows/share-with-others.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/build/manage-workflows/share-with-others.md)
 
 # Workflow sharing <a id="workflow-sharing"></a>
 
@@ -23,7 +23,7 @@ Users can share workflows they created. Instance owners, and users with the admi
 
 **Note:** This option is only available when sharing a workflow that is inside a **Personal** workspace. When trying to use the "Add users" option for a workflow that's **inside a project**, you'll get this pop-up instead:
 
-![Pop-up explaining that the project shares this workflow with everyone in it](https://raw.githubusercontent.com/n8n-io/n8n-docs/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/.gitbook/assets/sharing-within-projects.png)
+![Pop-up explaining that the project shares this workflow with everyone in it](https://raw.githubusercontent.com/n8n-io/n8n-docs/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/build/.gitbook/assets/sharing-within-projects.png)
 
 This is intended behavior, and it means that the workflow is shared with everyone inside that specific project. Instead of adding the user directly to the workflow, you need to add the user to the project in which the workflow is located.
 

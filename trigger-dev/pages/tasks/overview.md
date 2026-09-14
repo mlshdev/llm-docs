@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/tasks/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/tasks/overview.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/tasks/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/tasks/overview.mdx)
 > Canonical documentation: https://trigger.dev/docs/tasks/overview
 
 # Tasks: Overview
@@ -211,7 +211,7 @@ tasks.onStartAttempt(({ ctx, payload, task }) => {
 
 ## Lifecycle functions
 
-![Lifecycle functions](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/images/lifecycle-functions.png)
+![Lifecycle functions](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/lifecycle-functions.png)
 
 ### `middleware` and `locals` functions
 

@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/Articles.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/Articles.md)
+> Pinned source for VictoriaMetrics v1.152.0: [docs/victoriametrics/Articles.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/Articles.md)
 
 See also [case studies](https://docs.victoriametrics.com/victoriametrics/casestudies/).
 

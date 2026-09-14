@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.html.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/core-nodes/n8n-nodes-base.html.md)
+> Pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.html.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/integrations/builtin/core-nodes/n8n-nodes-base.html.md)
 
 # HTML <a id="html"></a>
 
@@ -12,7 +12,7 @@ The HTML node provides operations to help you work with HTML in n8n.
 > **Warning**
 > **Cross-site scripting**
 >
-> When using the HTML node to generate an HTML template you can introduce [XSS (cross-site scripting)](https://owasp.org/www-community/attacks/xss/). This is a security risk. Be careful with un-trusted inputs.
+> When using the HTML node to generate an HTML template you can introduce [XSS (cross-site scripting)](https://community.owasp.org/attacks/xss/). This is a security risk. Be careful with un-trusted inputs.
 
 ## Operations <a id="operations"></a>
 

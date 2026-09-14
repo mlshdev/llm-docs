@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/FAQ.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/FAQ.md)
+> Pinned source for VictoriaMetrics v1.152.0: [docs/victoriametrics/FAQ.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/540b91da031aa8b7d53d3784693bb451e2be980a/docs/victoriametrics/FAQ.md)
 
 ## What is the main purpose of VictoriaMetrics?
 
@@ -383,7 +383,7 @@ a large number of unique values, which presents a big share of the ingested time
 - `url`
 - `ip`
 
-The solution is to identify and remove the source of high cardinality with the help of [cardinality explorer](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#cardinality-explorer).
+The solution is to identify and remove the source of high cardinality with the help of [cardinality explorer](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#cardinality-explorer). For monitoring or alerting on cardinality spikes, use [vmestimator](https://docs.victoriametrics.com/victoriametrics/vmestimator/).
 
 The official Grafana dashboards for VictoriaMetrics contain graphs, which show the number of active time series -
 see [these docs](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#monitoring) for details.

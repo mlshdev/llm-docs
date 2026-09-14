@@ -1,4 +1,5 @@
-> Snapshot-pinned source for Apple watchOS snapshot-49fd8d0a44e2: [documentation/watchos-apps/updating-your-app-and-widgets-for-watchos-10](https://developer.apple.com/documentation/watchos-apps/updating-your-app-and-widgets-for-watchos-10)
+> Snapshot-pinned source payload for Apple watchOS snapshot-2bb3946a9b15; integrity is recorded in the provenance manifest.
+> Canonical documentation: https://developer.apple.com/documentation/watchos-apps/updating-your-app-and-widgets-for-watchos-10
 
 # Updating your app and widgets for watchOS 10
 

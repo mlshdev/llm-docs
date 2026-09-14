@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/mcp-tools.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/mcp-tools.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/mcp-tools.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/mcp-tools.mdx)
 > Canonical documentation: https://trigger.dev/docs/mcp-tools
 
 # MCP Tools
@@ -210,6 +210,16 @@ Execute a single widget query from a built-in dashboard. Use `list_dashboards` f
 
 - `"Run the total runs widget from the overview dashboard"`
 - `"Show me the LLM cost over time from the AI dashboard"`
+
+### get\_report
+
+Render an interpreted [health report](https://trigger.dev/docs/reports) — a deterministic verdict, not a raw panel — as text with sparklines. The `health` report answers whether work is flowing, whether the runs that start are healthy, and whether the telemetry is fresh, with a headline verdict and a suggested next action. Returns markdown by default, or ANSI when `color` is set. Read-only.
+
+**Example usage:**
+
+- `"Is my production project healthy?"`
+- `"Run the health report for the last 24 hours"`
+- `"Why are my runs backing up?"`
 
 ## Dev Server Tools
 

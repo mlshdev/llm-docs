@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/swarm/key-concepts.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/swarm/key-concepts.md)
+> Pinned source for Docker main: [content/manuals/engine/swarm/key-concepts.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/engine/swarm/key-concepts.md)
 
 # Swarm mode key concepts
 
@@ -44,7 +44,7 @@ including nodes, services, tasks, and load balancing.
 
 ## Nodes
 
-A node is an instance of the Docker engine participating in the swarm. You can also think of this as a Docker node. You can run one or more nodes on a single physical computer or cloud server, but production swarm deployments typically include Docker nodes distributed across multiple physical and cloud machines.
+A node is an instance of Docker Engine participating in the swarm. You can also think of this as a Docker node. You can run one or more nodes on a single physical computer or cloud server, but production swarm deployments typically include Docker nodes distributed across multiple physical and cloud machines.
 
 To deploy your application to a swarm, you submit a service definition to a
 manager node. The manager node dispatches units of work called

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/ai-chat/custom-agents.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/ai-chat/custom-agents.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/ai-chat/custom-agents.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/ai-chat/custom-agents.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/custom-agents
 
 # Custom agents
@@ -290,6 +290,29 @@ Read `turn.stopped` to tell a user stop from a full run cancel:
 - **Run cancel** (cancelled, expired, or `maxDuration` exceeded): `turn.signal` aborts, `turn.stopped` is `false`, and `turn.complete()` returns without accumulating because the run is ending.
 
 A hand-rolled loop wires this itself with `chat.createStopSignal()` and `chat.cleanupAbortedParts()`. Two things `createSession` handles for you are easy to get wrong there — see the [hand-rolled loop checklist](#hand-rolled-loop-checklist).
+
+### Ending the conversation
+
+`chat.close({ reason })` works in a custom agent exactly as it does in [`chat.agent`](https://trigger.dev/docs/ai-chat/backend#ending-the-conversation): the session row is closed, further sends are refused with HTTP 409, and no continuation run is scheduled. Call it from anywhere in your loop.
+
+```ts trigger/my-chat.ts
+for await (const turn of session) {
+  const result = streamText({ model, messages: turn.messages, abortSignal: turn.signal });
+
+  // Close BEFORE turn.complete(): that call writes the turn boundary the
+  // browser stops reading at, and it carries the closed state out with it.
+  if (await overBudget(turn.chatId)) {
+    chat.close({ reason: "Monthly budget reached" });
+  }
+
+  await turn.complete(result);
+  if (turn.stopped) break;
+}
+```
+
+The close is performed when your `run()` returns, so it lands whether you `break` out of the loop, return early, or keep iterating. A hand-rolled loop with no iterator at all works the same way, as long as you call `chat.close()` before the `chat.writeTurnComplete()` that ends the turn.
+
+Only `chat.agent` and `chat.customAgent` bind the run to its Session, so `chat.close()` throws in a plain `task()`.
 
 ## Hand-rolled loop with primitives
 

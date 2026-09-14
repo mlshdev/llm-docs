@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.airtable/README.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/app-nodes/n8n-nodes-base.airtable/README.md)
+> Pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.airtable/README.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/integrations/builtin/app-nodes/n8n-nodes-base.airtable/README.md)
 
 # Airtable node <a id="airtable-node"></a>
 
@@ -66,7 +66,7 @@ To filter records from your Airtable base, use the **Filter By Formula** option.
 
 Similarly, if you want to return all the users that don't belong to the organization `n8n`, use the following formula: `NOT({Organization}='n8n')`.
 
-Refer to the Airtable [documentation](https://support.airtable.com/hc/en-us/articles/203255215-Formula-Field-Reference) to learn more about the formulas.
+Refer to the Airtable [documentation](https://support.airtable.com/docs/formula-field-reference) to learn more about the formulas.
 
 ## Common issues <a id="common-issues"></a>
 

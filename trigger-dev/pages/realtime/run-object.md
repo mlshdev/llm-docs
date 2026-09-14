@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/realtime/run-object.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/realtime/run-object.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/realtime/run-object.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/realtime/run-object.mdx)
 > Canonical documentation: https://trigger.dev/docs/realtime/run-object
 
 # The run object

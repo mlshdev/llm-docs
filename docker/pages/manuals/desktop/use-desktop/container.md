@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/use-desktop/container.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/desktop/use-desktop/container.md)
+> Pinned source for Docker main: [content/manuals/desktop/use-desktop/container.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/desktop/use-desktop/container.md)
 
 # Explore the Containers view in Docker Desktop
 

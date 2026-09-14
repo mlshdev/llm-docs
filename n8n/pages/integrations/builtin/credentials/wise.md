@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/credentials/wise.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/credentials/wise.md)
+> Pinned source for n8n main: [docs/integrations/builtin/credentials/wise.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/integrations/builtin/credentials/wise.md)
 
 # Wise credentials <a id="wise-credentials"></a>
 
@@ -28,11 +28,11 @@ To configure this credential, you'll need:
   - If you're using a Wise test sandbox account, select **Test**.
   - Otherwise, select **Live**.
 - **Private Key (Optional)**: For live endpoints requiring Strong Customer Authentication (SCA), generate a public and private key. Enter the private key here. Refer to [Add a private key](#add-a-private-key) for more information.
-  - If you're using a **Test** environment, you'll only need to enter a Private Key if you've enabled Strong Customer Authentication on the [public keys management page](https://sandbox.transferwise.tech/public-keys).
+  - If you're using a **Test** environment, you'll only need to enter a Private Key if you've enabled Strong Customer Authentication on the [public keys management page](https://wise-sandbox.com/your-account/integrations-and-tools/api-tokens/public-keys).
 
 ## Add a private key <a id="add-a-private-key"></a>
 
-Wise protects some live endpoints and operations with Strong Customer Authentication (SCA). Refer to [Strong Customer Authentication & 2FA](https://docs.wise.com/api-docs/features/strong-customer-authentication-2fa) for details.
+Wise protects some live endpoints and operations with Strong Customer Authentication (SCA). Refer to [Strong Customer Authentication & 2FA](https://docs.wise.com/guides/developer/auth-and-security/sca-and-2fa) for details.
 
 If you make a request to an endpoint that requires SCA, Wise returns a 403 Forbidden HTTP status code. The error returned will look like this:
 
@@ -51,4 +51,4 @@ To use endpoints requiring SCA, generate an RSA key pair and add the relevant ke
 
 3. Add the content of the private key `private.pem` in n8n to the **Private Key (Optional)**.
 
-Refer to [Personal Token SCA](https://docs.wise.com/api-docs/guides/strong-customer-authentication-2fa/personal-token-sca) for more information.
+Refer to [Personal API tokens](https://docs.wise.com/guides/developer/auth-and-security/personal-api-token) for more information.

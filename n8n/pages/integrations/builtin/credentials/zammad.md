@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/credentials/zammad.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/credentials/zammad.md)
+> Pinned source for n8n main: [docs/integrations/builtin/credentials/zammad.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/integrations/builtin/credentials/zammad.md)
 
 # Zammad credentials <a id="zammad-credentials"></a>
 
@@ -9,7 +9,7 @@ You can use these credentials to authenticate the following nodes:
 ## Prerequisites <a id="prerequisites"></a>
 
 - Create a hosted [Zammad](https://zammad.com/) account or set up your own Zammad instance.
-- For token authentication, enable **API Token Access** in **Settings > System > API**. Refer to [Setting up a Zammad](https://admin-docs.zammad.org/en/latest/system/integrations/zabbix.html?#setting-up-a-zammad) for more information.
+- For token authentication, enable **API Token Access** in **Settings > System > API**. Refer to [Zammad API introduction](https://docs.zammad.org/en/latest/api/intro.html) for more information.
 
 ## Supported authentication methods <a id="supported-authentication-methods"></a>
 

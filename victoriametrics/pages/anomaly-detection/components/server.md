@@ -1,4 +1,4 @@
-> Pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/components/server.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/server.md)
+> Pinned source for VictoriaMetrics v1.152.0: [docs/anomaly-detection/components/server.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/540b91da031aa8b7d53d3784693bb451e2be980a/docs/anomaly-detection/components/server.md)
 
 Server component of VictoriaMetrics Anomaly Detection (`vmanomaly`) is responsible for serving the REST API (e.g. `/metrics` endpoint) and the [web UI](https://docs.victoriametrics.com/anomaly-detection/ui/) for anomaly detection.
 
@@ -52,16 +52,26 @@ After starting the `vmanomaly` server with the above configuration, UI can be ac
 
 Rest API endpoints (e.g. `/metrics`) can be accessed at `<vmanomaly-host>:8490/vmanomaly/metrics` (e.g. `http://localhost:8490/vmanomaly/metrics`).
 
+### Interactive API reference
+
+Open `/docs` on your running vmanomaly server to inspect generated request and response schemas and try API calls. For a local instance without a path prefix, use <http://localhost:8490/docs>. With the example configuration above, use `http://localhost:8490/vmanomaly/docs`. Replace the host, port and optional prefix to match your deployment. ReDoc is available at `/redoc`, and the OpenAPI schema at `/openapi.json`, under the same prefix.
+
+The reference describes the API exposed in that runtime’s OpenAPI schema; separately mounted applications may expose their own routes. **Try it out** sends real requests and can start or cancel tasks. Restrict access to these documentation routes together with the API through your deployment’s authentication proxy or network controls. Hiding the documentation alone does not secure the API.
+
 ### Time-series analysis and autotune API
 
 *(available from vmanomaly v1.30.0)* The server exposes bounded endpoints for UI, MCP, and automation workflows:
 
 - `GET /api/v1/timeseries/characteristics` samples the supplied query and summarizes trend, calendar seasonality, changepoints, gaps, and intermittent or spiky behavior. Use `limit` (default 100) to cap sampled series and pass the production `step` and timezone.
-- `POST /api/v1/autotune/tasks` starts asynchronous shared-model tuning. The request contains the query, candidate `tuned_class_name`, expected `anomaly_percentage`, data-source settings, and optimization parameters.
+- `POST /api/v1/autotune/tasks` starts asynchronous shared-model tuning. The request contains the input query, candidate `tuned_class_name`, expected `anomaly_percentage`, data-source settings, and optimization parameters.
 - `GET /api/v1/autotune/tasks/{task_id}` returns progress and the concrete suggested `modelConfig` when complete.
 - `DELETE /api/v1/autotune/tasks/{task_id}` cancels pending work cooperatively.
 
 *(available from vmanomaly v1.30.1)* Seasonality analysis preserves the original timestamp grid when samples are offset from whole step boundaries. This avoids missing daily or weekly patterns solely because timestamps are shifted within the configured sampling interval.
 
+*(available from vmanomaly v1.30.5)* Shared autotune accepts exactly one of a legacy `query` expression or a `queries` object keyed by alias. Each named entry contains `expr` and optional `data_range`, `detection_direction`, `min_dev_from_expected`, and `min_rel_dev_from_expected`. Named input supports 1–50 queries; `limit` caps sampled series separately for each expression. Queries share the same resolved time window.
+
+For multivariate tuning, request the multivariate class directly and supply grouping labels in `frozen_params.groupby`. The server aligns channels before evaluating each candidate across groups in one study; the result is one shared `modelConfig`, not a different hyperparameter configuration per group. Per-query policies remain attached to their channels. An assembled group missing a requested alias fails rather than silently tuning a partial input set. Inspect `inputQueryCount` and `tunedInputCount` in result data for input-query and assembled-input counts.
+
 > \[!TIP]
-> For a complete request and recommended workflow, see [Shared asynchronous autotune workflow](https://docs.victoriametrics.com/anomaly-detection/components/models/#shared-asynchronous-autotune-workflow). OpenAPI schemas for the running version are available at `/docs` endpoint of a running `vmanomaly` instance.
+> For a complete request and recommended workflow, see [Shared asynchronous autotune workflow](https://docs.victoriametrics.com/anomaly-detection/components/models/#shared-asynchronous-autotune-workflow). See the [interactive API reference](#interactive-api-reference) for schemas from your running version.

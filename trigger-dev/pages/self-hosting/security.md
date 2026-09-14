@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/self-hosting/security.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/self-hosting/security.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/self-hosting/security.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/self-hosting/security.mdx)
 > Canonical documentation: https://trigger.dev/docs/self-hosting/security
 
 # Security & vulnerability reporting
@@ -7,9 +7,26 @@ How to report security issues in Trigger.dev, our response targets, and how self
 
 We take the security of Trigger.dev seriously, for both Cloud and self-hosted deployments. This page covers how to report a vulnerability, what to expect, and how to stay informed about security releases.
 
+> **Note**
+>
+> Unlike Trigger.dev Cloud, the self-hosted setup is optimized for single-tenant use, with code and
+> users you trust. It is not designed to run untrusted code or untrusted payloads.
+
 > **Warning**
 >
 > Do not report security vulnerabilities through public GitHub issues, pull requests, or Discord. Use one of the private channels below.
+
+## What is in scope
+
+A self-hosted deployment is a single trust domain: as above, it is built for code and users you trust. Role separation inside an organization is therefore not a security boundary there. Role-based access control comes from a plugin that is not part of the open-source distribution, and without it the permission layer falls back to a permissive ability for session users and personal access tokens. That is deliberate.
+
+**Out of scope for self-hosted:** a member of an organization performing a privileged action inside that same organization, such as renaming or deleting the organization or managing other members. Control who you invite, or use Cloud, if you need that separation.
+
+**In scope from any deployment:** reaching data or actions belonging to an organization the caller is not a member of, or bypassing authentication. Organization is a hard boundary on Trigger.dev Cloud, and Cloud runs this same code, so report these even though your own install is single-tenant.
+
+Tell us which deployment you tested against. The same report can be out of scope for self-hosting and in scope for Cloud.
+
+The [security policy](https://github.com/triggerdotdev/trigger.dev/blob/main/SECURITY.md) is canonical.
 
 ## Reporting a vulnerability
 

@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/guides/ai-agents/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/guides/ai-agents/overview.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/guides/ai-agents/overview.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/guides/ai-agents/overview.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/ai-agents/overview
 
 # AI agents overview
@@ -37,6 +37,14 @@ Real world AI agent example tasks using Trigger.dev
 - [Smart Spreadsheet](https://trigger.dev/docs/guides/example-projects/smart-spreadsheet)
 
   Enrich company data using Exa search and Claude with real-time streaming results.
+- [Batch LLM Evaluator](https://trigger.dev/docs/guides/example-projects/batch-llm-evaluator)
+
+  Evaluate multiple LLM models in parallel with the Vercel AI SDK and stream the results to a
+  Next.js frontend using Trigger.dev Realtime.
+- [Claude thinking chatbot](https://trigger.dev/docs/guides/example-projects/claude-thinking-chatbot)
+
+  Build a Next.js chatbot that streams Claude's extended thinking to the frontend with the Vercel
+  AI SDK and Trigger.dev Realtime.
 
 ## Chat agents
 
@@ -45,6 +53,14 @@ Build a durable, multi-turn chat agent with [`chat.agent()`](https://trigger.dev
 - [Chat agent](https://trigger.dev/docs/guides/ai-agents/chat-agent)
 
   Create a durable, multi-turn chat agent with `chat.agent()`, then add tools to it.
+- [ElevenLabs Voice agent](https://trigger.dev/docs/guides/example-projects/elevenlabs-voice-agent)
+
+  Build a spoken-conversation voice assistant on `chat.agent()`, with streaming speech-to-text and
+  text-to-speech from ElevenLabs and server-side voice activity detection.
+- [Ask Trigger chat agent](https://trigger.dev/docs/guides/example-projects/ask-trigger-chat-agent)
+
+  Build a chat agent that teaches Trigger.dev with interactive node-graphs, quizzes and cards,
+  using `chat.agent()`, generative UI and live docs grounding through an MCP server.
 
 ## Agent fundamentals
 

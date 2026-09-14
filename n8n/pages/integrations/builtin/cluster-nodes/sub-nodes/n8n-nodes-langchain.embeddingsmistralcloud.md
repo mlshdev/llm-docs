@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud.md)
+> Pinned source for n8n main: [docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud.md)
 
 # Embeddings Mistral Cloud node <a id="embeddings-mistral-cloud-node"></a>
 
@@ -24,7 +24,7 @@ On this page, you'll find the node parameters for the Embeddings Mistral Cloud n
 
 - **Model**: Select the model to use to generate the embedding.
 
-Learn more about available models in [Mistral's models documentation](https://docs.mistral.ai/platform/pricing/).
+Learn more about available models in [Mistral's models documentation](https://docs.mistral.ai/models/).
 
 ## Node options <a id="node-options"></a>
 

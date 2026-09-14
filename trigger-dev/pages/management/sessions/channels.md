@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/management/sessions/channels.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/management/sessions/channels.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/management/sessions/channels.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/management/sessions/channels.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/sessions/channels
 
 # Session channels
@@ -98,14 +98,16 @@ Each record carries `data`, `id`, `seqNum`, and an optional `headers` array (pre
 
 The action you can take depends on your token and the channel:
 
-| Action           | Endpoint               | Required authorization                                |
-| ---------------- | ---------------------- | ----------------------------------------------------- |
-| Subscribe (SSE)  | `GET .../{io}`         | `read:sessions:{id}` — works on both `.in` and `.out` |
-| Drain records    | `GET .../{io}/records` | `read:sessions:{id}` — works on both `.in` and `.out` |
-| Append to `.in`  | `POST .../in/append`   | `write:sessions:{id}`                                 |
-| Append to `.out` | `POST .../out/append`  | Secret key only                                       |
+| Action                    | Endpoint              | Required authorization                           |
+| ------------------------- | --------------------- | ------------------------------------------------ |
+| Subscribe to `.out` (SSE) | `GET .../out`         | `read:sessions:{id}` or `read:sessions:{id}:out` |
+| Drain `.out` records      | `GET .../out/records` | `read:sessions:{id}` or `read:sessions:{id}:out` |
+| Subscribe to `.in` (SSE)  | `GET .../in`          | Secret key only                                  |
+| Drain `.in` records       | `GET .../in/records`  | Secret key only                                  |
+| Append to `.in`           | `POST .../in/append`  | `write:sessions:{id}`                            |
+| Append to `.out`          | `POST .../out/append` | Secret key only                                  |
 
-Reads work in both directions for a `read:sessions` token. Writes split by direction: a `write:sessions` token can append to `.in`, but `.out` is reserved for the task and requires a secret key. See [session scopes](https://trigger.dev/docs/management/authentication#session-scopes) for how to mint a token.
+Each direction has one side that is the task's alone: `.out` is written by the task and read by clients, `.in` is written by clients and read by the task. A public token can read `.out` and append to `.in`; reading `.in` or appending to `.out` requires a secret key. `read:sessions:{id}:out` narrows a read token to the `.out` stream, so a browser-held token cannot also retrieve the session row or read named channels. See [session scopes](https://trigger.dev/docs/management/authentication#session-scopes) for how to mint a token.
 
 ## Using the SDK instead
 

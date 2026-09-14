@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/changelog/release-notes-0.x.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/changelog/release-notes-0.x.md)
+> Pinned source for n8n main: [docs/changelog/release-notes-0.x.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/changelog/release-notes-0.x.md)
 
 # Release notes 0.x
 
@@ -17,7 +17,7 @@ Features and bug fixes for n8n before the release of 1.0.0.
 > n8n releases a new minor version most weeks. The `stable` version is for production use. `beta` is the most recent release. The `beta` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 >
 > Current `stable`: 2.38.7
-> Current `beta`: 2.39.4
+> Current `beta`: 2.39.5
 
 ## How to update n8n
 
@@ -1502,7 +1502,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.210.1...n8n@0.210
 >
 > When using [expressions](https://docs.n8n.io/build/work-with-data/expressions-versus-data-nodes), n8n will now offer you suggestions as you type.
 >
-> !["Animated GIF showing typeahead in action"](https://raw.githubusercontent.com/n8n-io/n8n-docs/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/changelog/.gitbook/assets/0.210.2-expressions-type-ahead.gif)
+> !["Animated GIF showing typeahead in action"](https://raw.githubusercontent.com/n8n-io/n8n-docs/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/changelog/.gitbook/assets/0.210.2-expressions-type-ahead.gif)
 
 ### Bug fixes <a id="bug-fixes"></a>
 
@@ -1722,7 +1722,7 @@ This release introduces a new inline expressions editor, and a new node: OpenAI.
 >
 > You can now quickly write expressions inline in a node parameter. You can still choose to open the full expressions editor.
 >
-> !["Screenshot of the inline expressions editors"](https://raw.githubusercontent.com/n8n-io/n8n-docs/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/changelog/.gitbook/assets/0.208.0-inline-expressions.png)
+> !["Screenshot of the inline expressions editors"](https://raw.githubusercontent.com/n8n-io/n8n-docs/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/changelog/.gitbook/assets/0.208.0-inline-expressions.png)
 
 - Add workflow sharing telemetry.
 - Core: allow for hiding page usage with environment variables (for upcoming feature)

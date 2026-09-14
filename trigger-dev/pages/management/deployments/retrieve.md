@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.5.16: [docs/management/deployments/retrieve.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/management/deployments/retrieve.mdx)
+> Pinned source for Trigger.dev v4.6.0: [docs/management/deployments/retrieve.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/management/deployments/retrieve.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/deployments/retrieve
 
 # Get deployment
@@ -27,6 +27,7 @@ Retrieve information about a specific deployment by its ID.
       - `version` (string): The deployment version (e.g., "20250228.1")
       - `imageReference` (string; nullable): Reference to the deployment image
       - `imagePlatform` (string): Platform of the deployment image
+      - `externalId` (string): The external deployment id this deployment was deployed under (`--external-id`), used by version skew protection to pin runs. Absent if the deployment was deployed without one
       - `externalBuildData` (object; nullable): External build data if applicable
       - `errorData` (object; nullable): Error data if the deployment failed
       - `worker` (object; nullable): Worker information if available
