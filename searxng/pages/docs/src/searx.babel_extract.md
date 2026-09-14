@@ -1,8 +1,9 @@
-> Commit-pinned source for SearXNG master: [docs/src/searx.babel_extract.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/src/searx.babel_extract.rst)
+> Pinned source for SearXNG master: [docs/src/searx.babel_extract.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/src/searx.babel_extract.rst)
 
-.. \_searx.babel\_extract:
+<a id="searx-babel-extract"></a>
 
 # Custom message extractor (i18n)
 
-.. automodule:: searx.babel\_extract
-:members:
+#### `searx.babel_extract`
+
+Static Python API reference (`automodule`).

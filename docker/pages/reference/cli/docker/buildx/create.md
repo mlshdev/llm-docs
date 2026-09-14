@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/buildx/docker_buildx_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_create.yaml)
+> Pinned source for Docker main: [data/cli/buildx/docker_buildx_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_create.yaml)
 
 # docker buildx create
 
@@ -20,26 +20,26 @@ Docker contexts also get the default builder instance.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--append` |  | Append a node to builder instead of changing it |
-| `--bootstrap` |  | Boot builder after creation |
-| `--buildkitd-config` |  | BuildKit daemon config file |
-| `--buildkitd-flags` |  | BuildKit daemon flags |
-| `--driver` |  | Driver to use (available: `cloud`, `docker-container`, `kubernetes`, `remote`) |
-| `--driver-opt` |  | Options for the driver |
-| `--leave` |  | Remove a node from builder instead of changing it |
-| `--name` |  | Builder instance name |
-| `--node` |  | Create/modify node with given name |
-| `--platform` |  | Fixed platforms for current node |
-| `--timeout` | `20s` | Override the default timeout for loading builder status |
-| `--use` |  | Set the current builder instance |
+| Option               | Default | Description                                                                    |
+| -------------------- | ------- | ------------------------------------------------------------------------------ |
+| `--append`           |         | Append a node to builder instead of changing it                                |
+| `--bootstrap`        |         | Boot builder after creation                                                    |
+| `--buildkitd-config` |         | BuildKit daemon config file                                                    |
+| `--buildkitd-flags`  |         | BuildKit daemon flags                                                          |
+| `--driver`           |         | Driver to use (available: `cloud`, `docker-container`, `kubernetes`, `remote`) |
+| `--driver-opt`       |         | Options for the driver                                                         |
+| `--leave`            |         | Remove a node from builder instead of changing it                              |
+| `--name`             |         | Builder instance name                                                          |
+| `--node`             |         | Create/modify node with given name                                             |
+| `--platform`         |         | Fixed platforms for current node                                               |
+| `--timeout`          | `20s`   | Override the default timeout for loading builder status                        |
+| `--use`              |         | Set the current builder instance                                               |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option          | Default | Description          |
+| --------------- | ------- | -------------------- |
+| `-D`, `--debug` |         | Enable debug logging |
 
 ## Examples
 
@@ -64,14 +64,14 @@ eager_beaver
 ```
 
 Specifies the configuration file for the BuildKit daemon to use. The
-configuration can be overridden by [`--buildkitd-flags`](#buildkitd-flags).
+configuration can be overridden by `--buildkitd-flags`.
 See an [example BuildKit daemon configuration file](https://github.com/moby/buildkit/blob/master/docs/buildkitd.toml.md).
 
 If you don't specify a configuration file, Buildx looks for one by default in:
 
-* `$BUILDX_CONFIG/buildkitd.default.toml`
-* `$DOCKER_CONFIG/buildx/buildkitd.default.toml`
-* `~/.docker/buildx/buildkitd.default.toml`
+- `$BUILDX_CONFIG/buildkitd.default.toml`
+- `$DOCKER_CONFIG/buildx/buildkitd.default.toml`
+- `~/.docker/buildx/buildkitd.default.toml`
 
 Note that if you create a `docker-container` builder and have specified
 certificates for registries in the `buildkitd.toml` configuration, the files
@@ -85,7 +85,7 @@ will be updated to reflect that.
 ```
 
 Adds flags when starting the BuildKit daemon. They take precedence over the
-configuration file specified by [`--buildkitd-config`](#buildkitd-config). See
+configuration file specified by `--buildkitd-config`. See
 `buildkitd --help` for the available flags.
 
 ```text
@@ -95,7 +95,7 @@ configuration file specified by [`--buildkitd-config`](#buildkitd-config). See
 #### BuildKit daemon network mode
 
 You can specify the network mode for the BuildKit daemon with either the
-configuration file specified by [`--buildkitd-config`](#buildkitd-config) using the
+configuration file specified by `--buildkitd-config` using the
 `worker.oci.networkMode` option or `--oci-worker-net` flag here. The default
 value is `auto` and can be one of `bridge`, `cni`, `host`:
 
@@ -103,7 +103,7 @@ value is `auto` and can be one of `bridge`, `cni`, `host`:
 --buildkitd-flags '--oci-worker-net bridge'
 ```
 
-> [!NOTE]
+> \[!NOTE]
 > Network mode "bridge" is supported since BuildKit v0.13 and will become the
 > default in next v0.14.
 
@@ -116,26 +116,26 @@ value is `auto` and can be one of `bridge`, `cni`, `host`:
 Sets the builder driver to be used. A driver is a configuration of a BuildKit
 backend. Buildx supports the following drivers:
 
-* `docker` (default)
-* `cloud`
-* `docker-container`
-* `kubernetes`
-* `remote`
+- `docker` (default)
+- `cloud`
+- `docker-container`
+- `kubernetes`
+- `remote`
 
-For more information about build drivers, see [here](/build/builders/drivers/).
+For more information about build drivers, see [here](https://docs.docker.com/build/builders/drivers/).
 
 #### `docker` driver
 
 Uses the builder that is built into the Docker daemon. With this driver,
-the [`--load`](/reference/cli/docker/buildx/build/#load) flag is implied by default on
+the [`--load`](https://docs.docker.com/reference/cli/docker/buildx/build/#load) flag is implied by default on
 `buildx build`. However, building multi-platform images or exporting cache is
 not currently supported.
 
 #### `cloud` driver
 
 Uses Docker Build Cloud builders. For Docker Build Cloud access and setup, see
-[Docker Build Cloud setup](/build-cloud/setup/). For
-build examples, see [Building with Docker Build Cloud](/build-cloud/usage/).
+[Docker Build Cloud setup](https://docs.docker.com/build-cloud/setup/). For
+build examples, see [Building with Docker Build Cloud](https://docs.docker.com/build-cloud/usage/).
 
 Connect Buildx to an existing cloud builder with `--driver cloud` and the
 builder name in the form `<account>/<builder>` or
@@ -151,7 +151,7 @@ When you don't specify an output, an untagged result remains in the cloud build
 cache. If you use `--tag`, Buildx automatically loads the image when the build
 targets a single platform and runs on one cloud node. For details about loading
 behavior, Docker contexts, and other output configurations, see
-[Load results from Docker Build Cloud](/build/exporters/).
+[Load results from Docker Build Cloud](https://docs.docker.com/build/exporters/).
 
 When `buildx create` resolves a Build Cloud builder group, each service instance
 becomes a Buildx node. `--append` requires the resolved instance names to be
@@ -165,7 +165,7 @@ Uses a BuildKit container that will be spawned via Docker. With this driver,
 both building multi-platform images and exporting cache are supported.
 
 Unlike `docker` driver, built images will not automatically appear in
-`docker images` and [`build --load`](/reference/cli/docker/buildx/build/#load) needs to be used
+`docker images` and [`build --load`](https://docs.docker.com/reference/cli/docker/buildx/build/#load) needs to be used
 to achieve that.
 
 #### `kubernetes` driver
@@ -174,7 +174,7 @@ Uses Kubernetes pods. With this driver, you can spin up pods with defined
 BuildKit container image to build your images.
 
 Unlike `docker` driver, built images will not automatically appear in
-`docker images` and [`build --load`](/reference/cli/docker/buildx/build/#load) needs to be used
+`docker images` and [`build --load`](https://docs.docker.com/reference/cli/docker/buildx/build/#load) needs to be used
 to achieve that.
 
 #### `remote` driver
@@ -184,7 +184,7 @@ this driver, you manually create and manage instances of buildkit yourself, and
 configure buildx to point at it.
 
 Unlike `docker` driver, built images will not automatically appear in
-`docker images` and [`build --load`](/reference/cli/docker/buildx/build/#load) needs to be used
+`docker images` and [`build --load`](https://docs.docker.com/reference/cli/docker/buildx/build/#load) needs to be used
 to achieve that.
 
 ### Set additional driver-specific options (--driver-opt) {#driver-opt}
@@ -197,10 +197,10 @@ Passes additional driver-specific options.
 For information about available driver options, refer to the detailed
 documentation for the specific driver:
 
-* [`docker` driver](/build/builders/drivers/docker/)
-* [`docker-container` driver](/build/builders/drivers/docker-container/)
-* [`kubernetes` driver](/build/builders/drivers/kubernetes/)
-* [`remote` driver](/build/builders/drivers/remote/)
+- [`docker` driver](https://docs.docker.com/build/builders/drivers/docker/)
+- [`docker-container` driver](https://docs.docker.com/build/builders/drivers/docker-container/)
+- [`kubernetes` driver](https://docs.docker.com/build/builders/drivers/kubernetes/)
+- [`remote` driver](https://docs.docker.com/build/builders/drivers/remote/)
 
 With `BUILDX_DEFAULT_POLICY=1`, the `docker-container` driver verifies signed
 `moby/buildkit` builder image tags before creating the builder. To explicitly

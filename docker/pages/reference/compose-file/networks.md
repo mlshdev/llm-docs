@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/reference/compose-file/networks.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/reference/compose-file/networks.md)
+> Pinned source for Docker main: [content/reference/compose-file/networks.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/reference/compose-file/networks.md)
 
 # Define and manage networks in Docker Compose
 
@@ -74,16 +74,16 @@ services:
   some-service:
     image: foo
     networks:
-      default: {}
+      default: {}  
 networks:
-  default: {}
+  default: {}      
 ```
 
 You can customize the `default` network with an explicit declaration:
 
 ```yml
 networks:
-  default:
+  default: 
     name: a_network # Use a custom name
     driver_opts:    # pass options to driver for network creation
       com.docker.network.bridge.host_binding_ipv4: 127.0.0.1

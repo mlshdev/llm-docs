@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/mcp/docker_mcp_secret.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp_secret.yaml)
+> Pinned source for Docker main: [data/cli/mcp/docker_mcp_secret.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp_secret.yaml)
 
 # docker mcp secret
 
@@ -19,4 +19,4 @@ Manage secrets in the local OS Keychain
 ### Pass the secret via STDIN
 
 > echo my-secret-password > pwd.txt
-> cat pwd.txt | docker mcp secret set POSTGRES_PASSWORD
+> cat pwd.txt | docker mcp secret set POSTGRES\_PASSWORD

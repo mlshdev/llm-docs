@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/test/discovery.mdx](https://bun.com/docs/test/discovery)
+> Pinned source for Bun bun-v1.4.2: [docs/test/discovery.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/test/discovery.mdx)
+> Canonical documentation: https://bun.com/docs/test/discovery
 
 `bun test` decides which files to run as tests by matching their paths against a set of patterns.
 

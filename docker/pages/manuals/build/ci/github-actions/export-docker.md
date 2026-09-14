@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/ci/github-actions/export-docker.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build/ci/github-actions/export-docker.md)
+> Pinned source for Docker main: [content/manuals/build/ci/github-actions/export-docker.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build/ci/github-actions/export-docker.md)
 
 # Export to Docker with GitHub Actions
 
@@ -17,13 +17,13 @@ jobs:
     steps:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
-
+      
       - name: Build
         uses: docker/build-push-action@v7
         with:
           load: true
           tags: myimage:latest
-
+      
       - name: Inspect
         run: |
           docker image inspect myimage:latest

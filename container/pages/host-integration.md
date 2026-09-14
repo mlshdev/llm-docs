@@ -1,4 +1,4 @@
-> Release-pinned source for Apple container 1.4.1: [docs/host-integration.md](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/host-integration.md)
+> Pinned source for Apple container 1.4.1: [docs/host-integration.md](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/host-integration.md)
 
 # Host integration
 
@@ -12,7 +12,7 @@ Use the `--ssh` option to mount the macOS SSH authentication socket into your co
 When you use `--ssh`, it performs the equivalent of the options `--volume "${SSH_AUTH_SOCK}:/var/host-services/ssh-auth.sock" --env SSH_AUTH_SOCK=/var/host-services/ssh-auth.sock"`. The added benefit of `--ssh` is that when you stop your container, log out, log back in, and restart your container, the system automatically updates the target path for the socket mount to the new value of `SSH_AUTH_SOCK`, so that socket forwarding continues to function.
 
 ```console
-% container run -it --rm --ssh alpine:latest sh
+% container run -it --rm --ssh alpine:latest sh 
 / # env
 SHLVL=1
 HOME=/root

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/grafana-mcp-server-gemini.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/grafana-mcp-server-gemini.md)
+> Pinned source for Docker main: [content/guides/grafana-mcp-server-gemini.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/grafana-mcp-server-gemini.md)
 
 # Connect Gemini to Grafana via MCP
 

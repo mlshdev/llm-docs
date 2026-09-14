@@ -1,7 +1,9 @@
-> Commit-pinned source for SearXNG master: [docs/dev/result_types/main/paper.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/result_types/main/paper.rst)
+> Pinned source for SearXNG master: [docs/dev/result_types/main/paper.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/result_types/main/paper.rst)
 
-.. \_result\_types.paper:
+<a id="result-types-paper"></a>
 
 # Paper Results
 
-.. automodule:: searx.result\_types.paper
+#### `searx.result_types.paper`
+
+Static Python API reference (`automodule`).

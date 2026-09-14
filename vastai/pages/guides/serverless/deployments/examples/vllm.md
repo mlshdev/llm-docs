@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [guides/serverless/deployments/examples/vllm.mdx](https://docs.vast.ai/guides/serverless/deployments/examples/vllm)
+> Pinned source for Vast.ai main: [guides/serverless/deployments/examples/vllm.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/serverless/deployments/examples/vllm.mdx)
+> Canonical documentation: https://docs.vast.ai/guides/serverless/deployments/examples/vllm
 
 # vLLM Text Generation
 
@@ -35,6 +36,7 @@ class VLLMEngine:
     async def __aexit__(self, *exc):
         self.engine.shutdown_background_loop()
 
+
 @app.remote(benchmark_dataset=[{"prompt": "Hello"}])
 async def generate(prompt: str, max_tokens: int = 128) -> str:
     from vllm import SamplingParams
@@ -47,6 +49,7 @@ async def generate(prompt: str, max_tokens: int = 128) -> str:
     async for output in engine.engine.generate(prompt, params, request_id=request_id):
         result = output
     return result.outputs[0].text
+
 
 image = app.image("vastai/vllm:v0.11.0-cuda-12.8-mvc-cuda-12.0", 32)
 image.use_system_python()

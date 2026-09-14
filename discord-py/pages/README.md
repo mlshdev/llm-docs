@@ -1,4 +1,4 @@
-> Tag-pinned source for discord.py v2.7.1: [README.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/README.rst)
+> Pinned source for discord.py v2.7.1: [README.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/README.rst)
 
 # discord.py
 

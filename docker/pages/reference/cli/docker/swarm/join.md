@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_swarm_join.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_swarm_join.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_swarm_join.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_swarm_join.yaml)
 
 # docker swarm join
 
@@ -14,13 +14,13 @@ pass a worker token, the node joins as a worker.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--advertise-addr` |  | Advertised address (format: `<ip\|interface>[:port]`) |
-| `--availability` | `active` | Availability of the node (`active`, `pause`, `drain`) |
-| `--data-path-addr` |  | Address or interface to use for data path traffic (format: `<ip\|interface>`) (API 1.31+) |
-| `--listen-addr` | `0.0.0.0:2377` | Listen address (format: `<ip\|interface>[:port]`) |
-| `--token` |  | Token for entry into the swarm |
+| Option             | Default        | Description                                                                               |
+| ------------------ | -------------- | ----------------------------------------------------------------------------------------- |
+| `--advertise-addr` |                | Advertised address (format: `<ip\|interface>[:port]`)                                     |
+| `--availability`   | `active`       | Availability of the node (`active`, `pause`, `drain`)                                     |
+| `--data-path-addr` |                | Address or interface to use for data path traffic (format: `<ip\|interface>`) (API 1.31+) |
+| `--listen-addr`    | `0.0.0.0:2377` | Listen address (format: `<ip\|interface>[:port]`)                                         |
+| `--token`          |                | Token for entry into the swarm                                                            |
 
 ## Examples
 

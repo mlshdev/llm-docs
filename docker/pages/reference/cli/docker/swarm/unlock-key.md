@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_swarm_unlock-key.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_swarm_unlock-key.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_swarm_unlock-key.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_swarm_unlock-key.yaml)
 
 # docker swarm unlock-key
 
@@ -15,18 +15,18 @@ swarm.
 You can view or rotate the unlock key using `swarm unlock-key`. To view the key,
 run the `docker swarm unlock-key` command without any arguments:
 
-> [!NOTE]
+> \[!NOTE]
 > This is a cluster management command, and must be executed on a swarm
 > manager node. To learn about managers and workers, refer to the
-> [Swarm mode section](/engine/swarm/) in the
+> [Swarm mode section](https://docs.docker.com/engine/swarm/) in the
 > documentation.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-q`, `--quiet` |  | Only display token |
-| `--rotate` |  | Rotate unlock key |
+| Option          | Default | Description        |
+| --------------- | ------- | ------------------ |
+| `-q`, `--quiet` |         | Only display token |
+| `--rotate`      |         | Rotate unlock key  |
 
 ## Examples
 

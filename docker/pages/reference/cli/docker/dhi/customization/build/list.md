@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/dhi/docker_dhi_customization_build_list.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/dhi/docker_dhi_customization_build_list.yaml)
+> Pinned source for Docker main: [data/cli/dhi/docker_dhi_customization_build_list.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/dhi/docker_dhi_customization_build_list.yaml)
 
 # docker dhi customization build list
 
@@ -12,12 +12,12 @@ List all builds of a Docker Hardened Images customization by its ID
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--json` |  | Output in JSON format |
+| Option   | Default | Description           |
+| -------- | ------- | --------------------- |
+| `--json` |         | Output in JSON format |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--org` |  | Docker Hub organization (overrides config) |
+| Option  | Default | Description                                |
+| ------- | ------- | ------------------------------------------ |
+| `--org` |         | Docker Hub organization (overrides config) |

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/compose/models-and-compose.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/ai/compose/models-and-compose.md)
+> Pinned source for Docker main: [content/manuals/ai/compose/models-and-compose.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/ai/compose/models-and-compose.md)
 
 # Define AI Models in Docker Compose applications
 

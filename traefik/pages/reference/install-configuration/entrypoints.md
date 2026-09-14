@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/reference/install-configuration/entrypoints.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/entrypoints.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/reference/install-configuration/entrypoints.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/entrypoints.md)
 
 Listening for Incoming Connections/Requests
 
@@ -45,7 +45,7 @@ entryPoints:
       accessLogs = false
       metrics = false
       tracing = false
-
+      
   [entryPoints.websecure]
     address = ":443"
     [entryPoints.websecure.http]

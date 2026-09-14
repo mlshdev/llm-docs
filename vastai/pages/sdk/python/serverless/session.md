@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [sdk/python/serverless/session.mdx](https://docs.vast.ai/sdk/python/serverless/session)
+> Pinned source for Vast.ai main: [sdk/python/serverless/session.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/sdk/python/serverless/session.mdx)
+> Canonical documentation: https://docs.vast.ai/sdk/python/serverless/session
 
 # Session
 

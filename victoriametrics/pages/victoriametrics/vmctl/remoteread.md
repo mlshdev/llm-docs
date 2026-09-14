@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmctl/remoteread.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/remoteread.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmctl/remoteread.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/remoteread.md)
 
 `vmctl` supports `remote-read` mode for migrating data from remote databases that support
 [Prometheus remote read API](https://prometheus.io/docs/prometheus/latest/querying/remote_read_api/).
@@ -99,8 +99,8 @@ OPTIONS:
    --remote-read-user value                                                           Remote read username for basic auth [$REMOTE_READ_USERNAME]
    --remote-read-password value                                                       Remote read password for basic auth [$REMOTE_READ_PASSWORD]
    --remote-read-http-timeout value                                                   Timeout defines timeout for HTTP requests made by remote read client (default: 0s)
-   --remote-read-headers value                                                        Optional HTTP headers to send with each request to the corresponding remote source storage
-      For example, --remote-read-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding remote source storage.
+   --remote-read-headers value                                                        Optional HTTP headers to send with each request to the corresponding remote source storage 
+      For example, --remote-read-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding remote source storage. 
       Multiple headers must be delimited by '^^': --remote-read-headers='header1:value1^^header2:value2'
    --remote-read-cert-file value       Optional path to client-side TLS certificate file to use when connecting to -remote-read-src-addr
    --remote-read-key-file value        Optional path to client-side TLS key to use when connecting to -remote-read-src-addr
@@ -108,19 +108,19 @@ OPTIONS:
    --remote-read-server-name value     Optional TLS server name to use for connections to remoteReadSrcAddr. By default, the server name from -remote-read-src-addr is used
    --remote-read-insecure-skip-verify  Whether to skip TLS certificate verification when connecting to the remote read address (default: false)
    --remote-read-disable-path-append   Whether to disable automatic appending of the /api/v1/read suffix to --remote-read-src-addr (default: false)
-   --vm-addr value                     VictoriaMetrics address to perform import requests.
-      Should be the same as --httpListenAddr value for single-node version or vminsert component.
-      When importing into the clustered version do not forget to set additionally --vm-account-id flag.
+   --vm-addr value                     VictoriaMetrics address to perform import requests. 
+      Should be the same as --httpListenAddr value for single-node version or vminsert component. 
+      When importing into the clustered version do not forget to set additionally --vm-account-id flag. 
       Please note, that vmctl performs initial readiness check for the given address by checking /health endpoint. (default: "http://localhost:8428")
    --vm-user value      VictoriaMetrics username for basic auth [$VM_USERNAME]
    --vm-password value  VictoriaMetrics password for basic auth [$VM_PASSWORD]
-   --vm-headers value   Optional HTTP headers to send with each request to the corresponding destination address.
-      For example, --vm-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding destination address.
+   --vm-headers value   Optional HTTP headers to send with each request to the corresponding destination address. 
+      For example, --vm-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding destination address. 
       Multiple headers must be delimited by '^^': --vm-headers='header1:value1^^header2:value2'
    --vm-bearer-token value  Optional bearer auth token to use for the corresponding --vm-addr
-   --vm-account-id value    AccountID is an arbitrary 32-bit integer identifying namespace for data ingestion (aka tenant).
-      AccountID is required when importing into the clustered version of VictoriaMetrics.
-      It is possible to set it as accountID:projectID, where projectID is also arbitrary 32-bit integer.
+   --vm-account-id value    AccountID is an arbitrary 32-bit integer identifying namespace for data ingestion (aka tenant). 
+      AccountID is required when importing into the clustered version of VictoriaMetrics. 
+      It is possible to set it as accountID:projectID, where projectID is also arbitrary 32-bit integer. 
       If projectID isn't set, then it equals to 0
    --vm-concurrency value                             Number of workers concurrently performing import requests to VM (default: 2)
    --vm-compress                                      Whether to apply gzip compression to import requests (default: true)

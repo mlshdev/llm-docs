@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [examples/mcp/dr-tulu.mdx](https://docs.vast.ai/examples/mcp/dr-tulu)
+> Pinned source for Vast.ai main: [examples/mcp/dr-tulu.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/examples/mcp/dr-tulu.mdx)
+> Canonical documentation: https://docs.vast.ai/examples/mcp/dr-tulu
 
 # DR-Tulu Research Agent
 

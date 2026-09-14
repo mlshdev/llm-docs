@@ -1,35 +1,43 @@
-> Commit-pinned source for SearXNG master: [docs/src/searx.search.processors.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/src/searx.search.processors.rst)
+> Pinned source for SearXNG master: [docs/src/searx.search.processors.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/src/searx.search.processors.rst)
 
-.. \_searx.search.processors:
+<a id="searx-search-processors"></a>
 
 # Search processors
 
 # Abstract processor class
 
-.. automodule:: searx.search.processors.abstract
-:members:
+<a id="api-searx-search-processors-abstract"></a>
+
+#### `abstract`
+
+Abstract of the file.
 
 # Offline processor
 
-.. automodule:: searx.search.processors.offline
-:members:
+#### `searx.search.processors.offline`
+
+Static Python API reference (`automodule`).
 
 # Online processor
 
-.. automodule:: searx.search.processors.online
-:members:
+#### `searx.search.processors.online`
+
+Static Python API reference (`automodule`).
 
 # Online currency processor
 
-.. automodule:: searx.search.processors.online\_currency
-:members:
+#### `searx.search.processors.online_currency`
+
+Static Python API reference (`automodule`).
 
 # Online dictionary processor
 
-.. automodule:: searx.search.processors.online\_dictionary
-:members:
+#### `searx.search.processors.online_dictionary`
+
+Static Python API reference (`automodule`).
 
 # Online URL search processor
 
-.. automodule:: searx.search.processors.online\_url\_search
-:members:
+#### `searx.search.processors.online_url_search`
+
+Static Python API reference (`automodule`).

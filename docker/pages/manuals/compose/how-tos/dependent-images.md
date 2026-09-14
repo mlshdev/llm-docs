@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/how-tos/dependent-images.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/how-tos/dependent-images.md)
+> Pinned source for Docker main: [content/manuals/compose/how-tos/dependent-images.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/how-tos/dependent-images.md)
 
 **Compose dependent images requirements**
 
@@ -70,7 +70,7 @@ Compose file:
 ```yaml
 services:
   a:
-     image: service_a
+     image: service_a 
      build:
        dockerfile: a.Dockerfile
   b:
@@ -91,7 +91,7 @@ Compose file:
 services:
   a:
      image: service_a
-     build:
+     build: 
        dockerfile: a.Dockerfile
   b:
      image: service_b
@@ -108,7 +108,7 @@ b.Dockerfile:
 
 ```dockerfile
 
-FROM base_image
+FROM base_image  
 # `base_image` doesn't resolve to an actual image. This is used to point to a named additional context
 
 # build service b
@@ -119,7 +119,7 @@ Compose file:
 ```yaml
 services:
   a:
-     build:
+     build: 
        dockerfile: a.Dockerfile
        # built image will be tagged <project_name>_a
   b:
@@ -139,12 +139,12 @@ To enable this feature, run Compose with the `COMPOSE_BAKE=true` variable set in
 
 ```console
 $ COMPOSE_BAKE=true docker compose build
-[+] Building 0.0s (0/1)
+[+] Building 0.0s (0/1)                                                         
  => [internal] load local bake definitions                                 0.0s
 ...
 [+] Building 2/2 manifest list sha256:4bd2e88a262a02ddef525c381a5bdb08c83  0.0s
- ✔ service_b  Built                                                        0.7s
- ✔ service_a  Built
+ ✔ service_b  Built                                                        0.7s 
+ ✔ service_a  Built    
 ```
 
 Bake can also be selected as the default builder by editing your `$HOME/.docker/config.json` config file:

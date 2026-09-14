@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [tutorials/flash/image-generation-with-sdxl.mdx](https://docs.runpod.io/tutorials/flash/image-generation-with-sdxl)
+> Pinned source for Runpod main: [tutorials/flash/image-generation-with-sdxl.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/tutorials/flash/image-generation-with-sdxl.mdx)
+> Canonical documentation: https://docs.runpod.io/tutorials/flash/image-generation-with-sdxl
 
 # Generate images with Flash and SDXL
 

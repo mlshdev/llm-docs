@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/migrating-from-v3.mdx](https://trigger.dev/docs/migrating-from-v3)
+> Pinned source for Trigger.dev v4.5.16: [docs/migrating-from-v3.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/migrating-from-v3.mdx)
+> Canonical documentation: https://trigger.dev/docs/migrating-from-v3
 
 # Migrating from v3
 
@@ -210,10 +211,13 @@ We've made several breaking changes that require code updates:
 
 **Queue changes**: Queues must now be defined ahead of time using the `queue` function. You can no longer create queues "on-demand" when triggering tasks. This is the old version:
 
+
 // Old v3 way - creating queue on-demand
 await myTask.trigger({ foo: "bar" }, { queue: { name: "my-queue", concurrencyLimit: 10 } });
 
+
 This is the new version:
+
 
 // New v4 way - define queue first
 import { queue, task } from "@trigger.dev/sdk";
@@ -235,7 +239,9 @@ await myTask.trigger({ foo: "bar" });
 // Or specify queue by name
 await myTask.trigger({ foo: "bar" }, { queue: "my-queue" });
 
+
 **Lifecycle hooks**: Function signatures have changed to use a single object parameter instead of separate parameters. Prefer `onStartAttempt` over the deprecated `onStart` when you need code to run before each attempt. This is the old version:
+
 
 // Old v3 way
 export const myTask = task({
@@ -247,7 +253,9 @@ export const myTask = task({
   run: async (payload, { ctx }) => {},
 });
 
+
 This is the new version:
+
 
 // New v4 way - single object parameter for hooks
 export const myTask = task({
@@ -259,7 +267,9 @@ export const myTask = task({
   run: async (payload, { ctx }) => {}, // run function unchanged
 });
 
+
 **BatchTrigger changes**: The `batchTrigger` function no longer returns runs directly. This is the old version:
+
 
 // Old v3 way
 const batchHandle = await tasks.batchTrigger([
@@ -269,7 +279,9 @@ const batchHandle = await tasks.batchTrigger([
 
 console.log(batchHandle.runs); // Direct access
 
+
 This is the new version:
+
 
 // New v4 way
 const batchHandle = await tasks.batchTrigger([
@@ -280,9 +292,12 @@ const batchHandle = await tasks.batchTrigger([
 const batch = await batch.retrieve(batchHandle.batchId); // Use batch.retrieve()
 console.log(batch.runs);
 
+
 **triggerAndWait / batchTriggerAndWait**: In v4 these return a Result object, not the raw output. Use `if (result.ok) { ... result.output }` or call `.unwrap()` to get the output (throws if the run failed). Do not wrap `triggerAndWait` or `batchTriggerAndWait` in `Promise.all` — this is not supported.
 
+
 **Context (ctx) changes**: `ctx.attempt.id` and `ctx.attempt.status` have been removed; use `ctx.attempt.number` where needed. `ctx.task.exportName` has been removed.
+
 
 Can you help me convert the following code from v3 to v4? Please include the full converted code in the answer, do not truncate it anywhere.
 

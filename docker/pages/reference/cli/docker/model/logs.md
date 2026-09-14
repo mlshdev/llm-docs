@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_logs.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_logs.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_logs.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_logs.yaml)
 
 # docker model logs
 
@@ -12,7 +12,7 @@ Fetch the Docker Model Runner logs
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--follow` |  | View logs with real-time streaming |
-| `--no-engines` |  | Exclude inference engine logs from the output |
+| Option           | Default | Description                                   |
+| ---------------- | ------- | --------------------------------------------- |
+| `-f`, `--follow` |         | View logs with real-time streaming            |
+| `--no-engines`   |         | Exclude inference engine logs from the output |

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/keep-n8n-running/set-up-logging.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/keep-n8n-running/set-up-logging.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/keep-n8n-running/set-up-logging.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/keep-n8n-running/set-up-logging.md)
 
 # Logging in n8n <a id="logging-in-n8n"></a>
 
@@ -22,19 +22,19 @@ To set up logging in n8n, you need to set the following environment variables (y
 | n8n.log.file.fileCountMax         | N8N\_LOG\_FILE\_COUNT\_MAX  | The maximum number of log files to keep. The default value is 100. This value should be set when using workers.                                                                                           |
 
 ```bash
-# Set the logging level to 'debug' <a id="set-the-logging-level-to-debug"></a>
+# Set the logging level to 'debug' <a href="#set-the-logging-level-to-debug" id="set-the-logging-level-to-debug"></a>
 export N8N_LOG_LEVEL=debug
 
-# Set log output to both console and a log file <a id="set-log-output-to-both-console-and-a-log-file"></a>
+# Set log output to both console and a log file <a href="#set-log-output-to-both-console-and-a-log-file" id="set-log-output-to-both-console-and-a-log-file"></a>
 export N8N_LOG_OUTPUT=console,file
 
-# Set a save location for the log file <a id="set-a-save-location-for-the-log-file"></a>
+# Set a save location for the log file <a href="#set-a-save-location-for-the-log-file" id="set-a-save-location-for-the-log-file"></a>
 export N8N_LOG_FILE_LOCATION=/home/jim/n8n/logs/n8n.log
 
-# Set a 50 MB maximum size for each log file <a id="set-a-50-mb-maximum-size-for-each-log-file"></a>
+# Set a 50 MB maximum size for each log file <a href="#set-a-50-mb-maximum-size-for-each-log-file" id="set-a-50-mb-maximum-size-for-each-log-file"></a>
 export N8N_LOG_FILE_SIZE_MAX=50
 
-# Set 60 as the maximum number of log files to be kept <a id="set-60-as-the-maximum-number-of-log-files-to-be-kept"></a>
+# Set 60 as the maximum number of log files to be kept <a href="#set-60-as-the-maximum-number-of-log-files-to-be-kept" id="set-60-as-the-maximum-number-of-log-files-to-be-kept"></a>
 export N8N_LOG_FILE_COUNT_MAX=60
 ```
 

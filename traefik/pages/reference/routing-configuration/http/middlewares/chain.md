@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/http/middlewares/chain.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/chain.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/http/middlewares/chain.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/chain.md)
 
 The `chain` middleware enables you to define reusable combinations of other pieces of middleware.
 It makes it effortless to reuse the same groups.

@@ -1,4 +1,5 @@
-> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/concepts/features/custom-domain.mdx](https://zitadel.com/docs/concepts/features/custom-domain)
+> Pinned source for ZITADEL v4.17.3: [apps/docs/content/concepts/features/custom-domain.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/concepts/features/custom-domain.mdx)
+> Canonical documentation: https://zitadel.com/docs/concepts/features/custom-domain
 
 A ZITADEL Custom Domain refers to the ability for organizations to personalize the authentication experience by using their own domain name rather than the default ZITADEL domain.
 

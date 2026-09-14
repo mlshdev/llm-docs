@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/mcp/docker_mcp_catalog_server_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp_catalog_server_ls.yaml)
+> Pinned source for Docker main: [data/cli/mcp/docker_mcp_catalog_server_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp_catalog_server_ls.yaml)
 
 # docker mcp catalog server ls
 
@@ -17,21 +17,25 @@ Filters use key=value format (e.g., name=github).
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--filter` |  | Filter output (e.g., name=github) |
-| `--format` | `human` | Supported: json, yaml, human. |
+| Option           | Default | Description                       |
+| ---------------- | ------- | --------------------------------- |
+| `-f`, `--filter` |         | Filter output (e.g., name=github) |
+| `--format`       | `human` | Supported: json, yaml, human.     |
 
 ## Examples
 
 # List all servers in a catalog
-  docker mcp catalog server ls mcp/docker-mcp-catalog:latest
 
-  # Filter servers by name
-  docker mcp catalog server ls mcp/docker-mcp-catalog:latest --filter name=github
+docker mcp catalog server ls mcp/docker-mcp-catalog:latest
 
-  # Combine multiple filters (using short flag)
-  docker mcp catalog server ls mcp/docker-mcp-catalog:latest -f name=slack -f name=github
+# Filter servers by name
 
-  # Output in JSON format
-  docker mcp catalog server ls mcp/docker-mcp-catalog:latest --format json
+docker mcp catalog server ls mcp/docker-mcp-catalog:latest --filter name=github
+
+# Combine multiple filters (using short flag)
+
+docker mcp catalog server ls mcp/docker-mcp-catalog:latest -f name=slack -f name=github
+
+# Output in JSON format
+
+docker mcp catalog server ls mcp/docker-mcp-catalog:latest --format json

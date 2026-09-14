@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [infinity-embeddings.mdx](https://docs.vast.ai/infinity-embeddings)
+> Pinned source for Vast.ai main: [infinity-embeddings.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/infinity-embeddings.mdx)
+> Canonical documentation: https://docs.vast.ai/infinity-embeddings
 
 # Infinity Embeddings
 

@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [examples/video-generation/ltx-video-2-3.mdx](https://docs.vast.ai/examples/video-generation/ltx-video-2-3)
+> Pinned source for Vast.ai main: [examples/video-generation/ltx-video-2-3.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/examples/video-generation/ltx-video-2-3.mdx)
+> Canonical documentation: https://docs.vast.ai/examples/video-generation/ltx-video-2-3
 
 # Generating Video with LTX-2.3 and ComfyUI
 

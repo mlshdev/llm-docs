@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "project": "apple-swiftui",
   "title": "Apple SwiftUI",
   "homepage": "https://developer.apple.com/documentation/swiftui",
@@ -13,6 +13,31 @@
     "Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.",
     "1 framework in this catalog, captured at 2026-09-12T21:04:59.662Z.",
     "Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.",
+    "Daily reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive daily check.",
     "Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream."
-  ]
+  ],
+  "generatorVersion": 3,
+  "indexComplete": false,
+  "corpusVolumes": [
+    {
+      "name": "llms-full.txt",
+      "byteLength": 706,
+      "documentCount": 0,
+      "sha256": "ef88205d97386ee73c47182731318ed6d4353bcd8886604d73344328681cf769"
+    },
+    {
+      "name": "llms-full.001.txt",
+      "byteLength": 8388365,
+      "documentCount": 5104,
+      "sha256": "ab2abfbeb0af42de6dc23ebace0df2942410c27cbe1b0f4db6085a2eb981fc06"
+    },
+    {
+      "name": "llms-full.002.txt",
+      "byteLength": 4399410,
+      "documentCount": 2000,
+      "sha256": "52f36a24daaaa9ee89c2b6b5721dc602a5c56fea120b04ea2183d98b02acca7c"
+    }
+  ],
+  "outputDigest": "1c46ed0746d24bd91aa621f8c530a18f3f9eaf4b5edb9b50e01621f4796478de",
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
 }

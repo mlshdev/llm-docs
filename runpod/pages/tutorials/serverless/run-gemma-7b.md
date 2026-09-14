@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [tutorials/serverless/run-gemma-7b.mdx](https://docs.runpod.io/tutorials/serverless/run-gemma-7b)
+> Pinned source for Runpod main: [tutorials/serverless/run-gemma-7b.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/tutorials/serverless/run-gemma-7b.mdx)
+> Canonical documentation: https://docs.runpod.io/tutorials/serverless/run-gemma-7b
 
 # Deploy a Gemma 3 chatbot with the OpenAI API
 
@@ -119,11 +120,13 @@ messages = [
     }
 ]
 
+
 def display_chat_history(messages):
     """Display the conversation history."""
     for message in messages:
         if message["role"] != "system":
             print(f"{message['role'].capitalize()}: {message['content']}")
+
 
 def get_assistant_response(messages):
     """Get a response from the Gemma model."""
@@ -135,6 +138,7 @@ def get_assistant_response(messages):
         max_tokens=256,
     )
     return response.choices[0].message.content
+
 
 def main():
     print("Gemma 3 Chatbot")
@@ -156,6 +160,7 @@ def main():
         messages.append({"role": "assistant", "content": response})
 
         print(f"Assistant: {response}\n")
+
 
 if __name__ == "__main__":
     main()

@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/lobj.sgml#lo-examplesect](https://www.postgresql.org/docs/18/lo-examplesect.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/lobj.sgml#lo-examplesect](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/lobj.sgml%23lo-examplesect)
+> Canonical documentation: https://www.postgresql.org/docs/18/lo-examplesect.html
 
 # Example Program
 
@@ -148,6 +149,7 @@ overwrite(PGconn *conn, Oid lobjId, int start, int len)
     fprintf(stderr, "\n");
     lo_close(conn, lobj_fd);
 }
+
 
 /*
  * exportFile -

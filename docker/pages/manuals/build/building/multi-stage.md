@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/building/multi-stage.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build/building/multi-stage.md)
+> Pinned source for Docker main: [content/manuals/build/building/multi-stage.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build/building/multi-stage.md)
 
 Multi-stage builds are useful to anyone who has struggled to optimize
 Dockerfiles while keeping them easy to read and maintain.
@@ -158,7 +158,7 @@ There is no dependency on `stage1`, so it's skipped.
 
 ```console
 $ DOCKER_BUILDKIT=1 docker build --no-cache -f Dockerfile --target stage2 .
-[+] Building 0.4s (7/7) FINISHED
+[+] Building 0.4s (7/7) FINISHED                                                                    
  => [internal] load build definition from Dockerfile                                            0.0s
  => => transferring dockerfile: 36B                                                             0.0s
  => [internal] load .dockerignore                                                               0.0s

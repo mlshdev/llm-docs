@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_port.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_port.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_port.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_port.yaml)
 
 # docker compose port
 
@@ -12,13 +12,13 @@ Prints the public port for a port binding
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--index` |  | Index of the container if service has multiple replicas |
-| `--protocol` | `tcp` | tcp or udp |
+| Option       | Default | Description                                             |
+| ------------ | ------- | ------------------------------------------------------- |
+| `--index`    |         | Index of the container if service has multiple replicas |
+| `--protocol` | `tcp`   | tcp or udp                                              |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--dry-run` |  | Execute command in dry run mode |
+| Option      | Default | Description                     |
+| ----------- | ------- | ------------------------------- |
+| `--dry-run` |         | Execute command in dry run mode |

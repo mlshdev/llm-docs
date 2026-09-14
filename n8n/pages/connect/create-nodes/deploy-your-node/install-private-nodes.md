@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/deploy-your-node/install-private-nodes.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/connect/create-nodes/deploy-your-node/install-private-nodes.md)
+> Pinned source for n8n main: [docs/connect/create-nodes/deploy-your-node/install-private-nodes.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/connect/create-nodes/deploy-your-node/install-private-nodes.md)
 
 # Install private nodes <a id="install-private-nodes"></a>
 
@@ -32,6 +32,7 @@ If you're running n8n using Docker, you need to create a Docker image with the n
        apk del build-dependencies \
        && rm -rf /root /tmp/* /var/cache/apk/* && mkdir /root;
 
+
    # Install fonts
    RUN apk --no-cache add --virtual fonts msttcorefonts-installer fontconfig && \
        update-ms-fonts && \
@@ -57,7 +58,7 @@ If you're running n8n using Docker, you need to create a Docker image with the n
 4. Build your Docker image:
 
    ```Dockerfile
-   # Replace <n8n-version-number> with the n8n release version number.
+   # Replace <n8n-version-number> with the n8n release version number. 
    # For example, N8N_VERSION=0.177.0
    docker build --build-arg N8N_VERSION=<n8n-version-number> --tag=customizedn8n .
    ```

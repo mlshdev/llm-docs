@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_context_rm.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_context_rm.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_context_rm.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_context_rm.yaml)
 
 # docker context rm
 
@@ -14,6 +14,6 @@ Remove one or more contexts
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--force` |  | Force the removal of a context in use |
+| Option          | Default | Description                           |
+| --------------- | ------- | ------------------------------------- |
+| `-f`, `--force` |         | Force the removal of a context in use |

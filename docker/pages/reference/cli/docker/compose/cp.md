@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_cp.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_cp.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_cp.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_cp.yaml)
 
 # docker compose cp
 
@@ -13,15 +13,15 @@ Copy files/folders between a service container and the local filesystem
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--all` |  | Include containers created by the run command |
-| `-a`, `--archive` |  | Archive mode (copy all uid/gid information) |
-| `-L`, `--follow-link` |  | Always follow symbol link in SRC_PATH |
-| `--index` |  | Index of the container if service has multiple replicas |
+| Option                | Default | Description                                             |
+| --------------------- | ------- | ------------------------------------------------------- |
+| `--all`               |         | Include containers created by the run command           |
+| `-a`, `--archive`     |         | Archive mode (copy all uid/gid information)             |
+| `-L`, `--follow-link` |         | Always follow symbol link in SRC\_PATH                  |
+| `--index`             |         | Index of the container if service has multiple replicas |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--dry-run` |  | Execute command in dry run mode |
+| Option      | Default | Description                     |
+| ----------- | ------- | ------------------------------- |
+| `--dry-run` |         | Execute command in dry run mode |

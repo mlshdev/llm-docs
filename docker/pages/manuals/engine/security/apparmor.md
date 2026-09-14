@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/security/apparmor.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/security/apparmor.md)
+> Pinned source for Docker main: [content/manuals/engine/security/apparmor.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/security/apparmor.md)
 
 AppArmor (Application Armor) is a Linux security module that protects an
 operating system and its applications from security threats. To use it, a system
@@ -155,6 +155,7 @@ custom profile.
 ```c
 #include <tunables/global>
 
+
 profile docker-nginx flags=(attach_disconnected,mediate_deleted) {
   #include <abstractions/base>
 
@@ -196,6 +197,7 @@ profile docker-nginx flags=(attach_disconnected,mediate_deleted) {
   deny /bin/dash mrwklx,
   deny /bin/sh mrwklx,
   deny /usr/bin/top mrwklx,
+
 
   capability chown,
   capability dac_override,

@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [examples/ai-agents/openclaw.mdx](https://docs.vast.ai/examples/ai-agents/openclaw)
+> Pinned source for Vast.ai main: [examples/ai-agents/openclaw.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/examples/ai-agents/openclaw.mdx)
+> Canonical documentation: https://docs.vast.ai/examples/ai-agents/openclaw
 
 # OpenClaw AI Assistant with vLLM on Vast.ai
 
@@ -260,7 +261,7 @@ Create `~/.openclaw/openclaw.json`:
   },
   "agents": {
     "defaults": {
-      "model": { "primary": "vllm/Qwen/Qwen3-8B" }
+      "model": `{ "primary": "vllm/Qwen/Qwen3-8B" }`
     }
   }
 }

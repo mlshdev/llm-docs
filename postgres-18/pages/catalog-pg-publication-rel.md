@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/catalogs.sgml#catalog-pg-publication-rel](https://www.postgresql.org/docs/18/catalog-pg-publication-rel.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/catalogs.sgml#catalog-pg-publication-rel](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/catalogs.sgml%23catalog-pg-publication-rel)
+> Canonical documentation: https://www.postgresql.org/docs/18/catalog-pg-publication-rel.html
 
 # pg_publication_rel
 

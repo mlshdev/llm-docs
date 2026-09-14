@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/scout/docker_scout_compare.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_compare.yaml)
+> Pinned source for Docker main: [data/cli/scout/docker_scout_compare.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_compare.yaml)
 
 # docker scout compare
 
@@ -8,7 +8,7 @@ Compare two images and display differences (experimental)
 
 **Aliases:** docker scout compare, docker scout diff
 
-> [!NOTE]
+> \[!NOTE]
 > This command is experimental.
 
 ## Description
@@ -49,36 +49,36 @@ or if you want to control from where the image will be resolved, you must prefix
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-x`, `--exit-on` |  | Comma separated list of conditions to fail the action step if worse or changed, options are: vulnerability, policy, package |
-| `--format` | `text` | Output format of the generated vulnerability report: - text: default output, plain text with or without colors depending on the terminal - markdown: Markdown output - json: JSON output |
-| `--hide-policies` |  | Hide policy status from the output |
-| `--ignore-base` |  | Filter out CVEs introduced from base image |
-| `--ignore-suppressed` |  | Filter CVEs found in Scout exceptions based on the specified exception scope |
-| `--ignore-unchanged` |  | Filter out unchanged packages |
-| `--multi-stage` |  | Show packages from multi-stage Docker builds |
-| `--only-fixed` |  | Filter to fixable CVEs |
-| `--only-package-type` |  | Comma separated list of package types (like apk, deb, rpm, npm, pypi, golang, etc) |
-| `--only-policy` |  | Comma separated list of policies to evaluate |
-| `--only-severity` |  | Comma separated list of severities (critical, high, medium, low, unspecified) to filter CVEs by |
-| `--only-stage` |  | Comma separated list of multi-stage Docker build stage names |
-| `--only-unfixed` |  | Filter to unfixed CVEs |
-| `--only-vex-affected` |  | Filter CVEs by VEX statements with status not affected |
-| `--org` |  | Namespace of the Docker organization |
-| `-o`, `--output` |  | Write the report to a file |
-| `--platform` |  | Platform of image to analyze |
-| `--policy-bundle` |  | OCI reference of a policy bundle to evaluate (repeatable) |
-| `--policy-config` |  | Path or http(s) URL to a JSON file configuring policy enablement and inputs |
-| `--policy-dir` |  | Path to a directory of local .rego policy files (repeatable) |
-| `--policy-file` |  | Path or http(s) URL to a .rego policy file (repeatable) |
-| `--ref` |  | Reference to use if the provided tarball contains multiple references. Can only be used with archive |
-| `--to` |  | Image, directory, or archive to compare to |
-| `--to-env` |  | Name of environment to compare to |
-| `--to-latest` |  | Latest image processed to compare to |
-| `--to-ref` |  | Reference to use if the provided tarball contains multiple references. Can only be used with archive. |
-| `--vex-author` | `[<.*@docker.com>]` | List of VEX statement authors to accept |
-| `--vex-location` |  | File location of directory or file containing VEX statements |
+| Option                | Default             | Description                                                                                                                                                                              |
+| --------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `-x`, `--exit-on`     |                     | Comma separated list of conditions to fail the action step if worse or changed, options are: vulnerability, policy, package                                                              |
+| `--format`            | `text`              | Output format of the generated vulnerability report: - text: default output, plain text with or without colors depending on the terminal - markdown: Markdown output - json: JSON output |
+| `--hide-policies`     |                     | Hide policy status from the output                                                                                                                                                       |
+| `--ignore-base`       |                     | Filter out CVEs introduced from base image                                                                                                                                               |
+| `--ignore-suppressed` |                     | Filter CVEs found in Scout exceptions based on the specified exception scope                                                                                                             |
+| `--ignore-unchanged`  |                     | Filter out unchanged packages                                                                                                                                                            |
+| `--multi-stage`       |                     | Show packages from multi-stage Docker builds                                                                                                                                             |
+| `--only-fixed`        |                     | Filter to fixable CVEs                                                                                                                                                                   |
+| `--only-package-type` |                     | Comma separated list of package types (like apk, deb, rpm, npm, pypi, golang, etc)                                                                                                       |
+| `--only-policy`       |                     | Comma separated list of policies to evaluate                                                                                                                                             |
+| `--only-severity`     |                     | Comma separated list of severities (critical, high, medium, low, unspecified) to filter CVEs by                                                                                          |
+| `--only-stage`        |                     | Comma separated list of multi-stage Docker build stage names                                                                                                                             |
+| `--only-unfixed`      |                     | Filter to unfixed CVEs                                                                                                                                                                   |
+| `--only-vex-affected` |                     | Filter CVEs by VEX statements with status not affected                                                                                                                                   |
+| `--org`               |                     | Namespace of the Docker organization                                                                                                                                                     |
+| `-o`, `--output`      |                     | Write the report to a file                                                                                                                                                               |
+| `--platform`          |                     | Platform of image to analyze                                                                                                                                                             |
+| `--policy-bundle`     |                     | OCI reference of a policy bundle to evaluate (repeatable)                                                                                                                                |
+| `--policy-config`     |                     | Path or http(s) URL to a JSON file configuring policy enablement and inputs                                                                                                              |
+| `--policy-dir`        |                     | Path to a directory of local .rego policy files (repeatable)                                                                                                                             |
+| `--policy-file`       |                     | Path or http(s) URL to a .rego policy file (repeatable)                                                                                                                                  |
+| `--ref`               |                     | Reference to use if the provided tarball contains multiple references. Can only be used with archive                                                                                     |
+| `--to`                |                     | Image, directory, or archive to compare to                                                                                                                                               |
+| `--to-env`            |                     | Name of environment to compare to                                                                                                                                                        |
+| `--to-latest`         |                     | Latest image processed to compare to                                                                                                                                                     |
+| `--to-ref`            |                     | Reference to use if the provided tarball contains multiple references. Can only be used with archive.                                                                                    |
+| `--vex-author`        | `[<.*@docker.com>]` | List of VEX statement authors to accept                                                                                                                                                  |
+| `--vex-location`      |                     | File location of directory or file containing VEX statements                                                                                                                             |
 
 ## Examples
 

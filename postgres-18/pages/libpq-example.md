@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/libpq.sgml#libpq-example](https://www.postgresql.org/docs/18/libpq-example.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/libpq.sgml#libpq-example](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/libpq.sgml%23libpq-example)
+> Canonical documentation: https://www.postgresql.org/docs/18/libpq-example.html
 
 # Example Programs
 
@@ -342,6 +343,7 @@ main(int argc, char **argv)
 /* for ntohl/htonl */
 #include <netinet/in.h>
 #include <arpa/inet.h>
+
 
 static void
 exit_nicely(PGconn *conn)

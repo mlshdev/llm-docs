@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/get-started/docker-concepts/the-basics/what-is-docker-compose.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/get-started/docker-concepts/the-basics/what-is-docker-compose.md)
+> Pinned source for Docker main: [content/get-started/docker-concepts/the-basics/what-is-docker-compose.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/get-started/docker-concepts/the-basics/what-is-docker-compose.md)
 
 # What is Docker Compose?
 
@@ -33,7 +33,7 @@ Follow the instructions to run the to-do list app on your system.
 2. Open a terminal and [clone this sample application](https://github.com/dockersamples/todo-list-app).
 
    ```console
-   git clone https://github.com/dockersamples/todo-list-app
+   git clone https://github.com/dockersamples/todo-list-app 
    ```
 
 3. Navigate into the `todo-list-app` directory:

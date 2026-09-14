@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/manage-credentials/use-external-secret-stores.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/administer/manage-credentials/use-external-secret-stores.md)
+> Pinned source for n8n main: [docs/administer/manage-credentials/use-external-secret-stores.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/administer/manage-credentials/use-external-secret-stores.md)
 
 # External secrets <a id="external-secrets"></a>
 
@@ -188,7 +188,7 @@ By default, n8n autodiscovers KV secret engines by reading `sys/mounts`. If your
 Your Vault token still needs read and list access to the KV path itself. The following example shows a minimal Vault policy for a KV v2 mount at `secret/`:
 
 ```hcl
-# Read and list secrets at the "secret/" KV v2 mount <a id="read-and-list-secrets-at-the-secret-kv-v2-mount"></a>
+# Read and list secrets at the "secret/" KV v2 mount <a href="#read-and-list-secrets-at-the-secret-kv-v2-mount" id="read-and-list-secrets-at-the-secret-kv-v2-mount"></a>
 path "secret/data/*" {
   capabilities = ["read"]
 }
@@ -200,7 +200,7 @@ path "secret/metadata/*" {
 For KV v1, you only need a single policy path:
 
 ```hcl
-# Read and list secrets at the "kv/" KV v1 mount <a id="read-and-list-secrets-at-the-kv-kv-v1-mount"></a>
+# Read and list secrets at the "kv/" KV v1 mount <a href="#read-and-list-secrets-at-the-kv-kv-v1-mount" id="read-and-list-secrets-at-the-kv-kv-v1-mount"></a>
 path "kv/*" {
   capabilities = ["read", "list"]
 }

@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/components/models.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/models.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/components/models.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/models.md)
 
 This section covers the `Models` component of VictoriaMetrics Anomaly Detection (commonly referred to as [`vmanomaly`](https://docs.victoriametrics.com/anomaly-detection/)) and provides a guide on how to configure the service.
 
@@ -358,7 +358,7 @@ The primary use case is to **align domain knowledge** about data behavior (defin
 reader:
   # ...
   queries:
-    q1_clipped:
+    q1_clipped: 
       expr: 'q1_metricsql'
       data_range: [0, "inf"]
     q2_no_clip:
@@ -384,11 +384,11 @@ models:
     z_threshold: 3
     # if not set, by default resolved to `clip_predictions: False`
     queries: [
-      # `yhat`, `yhat_lower`, `yhat_upper` won't be clipped to [0, inf]
+      # `yhat`, `yhat_lower`, `yhat_upper` won't be clipped to [0, inf] 
       # even though `data_range` for `q1_clipped` is set
       # however, anomaly scores > 1 will still be produced for y outside of data_range
       'q1_clipped',
-      # there will be no (explicit) clip of yhat, yhat_lower, yhat_upper
+      # there will be no (explicit) clip of yhat, yhat_lower, yhat_upper  
       # for all `zscore_mixed` instances that are fit on series returned by `q2_no_clip` query
       # as `clip_predictions` arg is not set, regardless of data_range for `q2_no_clip`
       'q2_no_clip',
@@ -440,7 +440,7 @@ models:
   model_higher_out_of_data_range_score:
     class: 'zscore_online'
     # explicitly set, takes priority over `settings`'s value
-    anomaly_score_outside_data_range: 3.0
+    anomaly_score_outside_data_range: 3.0  
 ```
 
 **Decay**
@@ -1350,6 +1350,7 @@ from model.model import (
     deserialize_basic,
 )
 
+
 class CustomModel(Model):
     """Simple univariate, offline custom model."""
 
@@ -1419,6 +1420,7 @@ For a custom many-to-one model, derive from `MultivariateModel` and declare the 
 ```python
 from model.model import MultivariateModel
 from model.topology import ModelTopology
+
 
 class CustomMultivariateModel(MultivariateModel):
     topology = ModelTopology.MANY_TO_ONE

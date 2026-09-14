@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [sdk/python/reference/stop-instance.mdx](https://docs.vast.ai/sdk/python/reference/stop-instance)
+> Pinned source for Vast.ai main: [sdk/python/reference/stop-instance.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/sdk/python/reference/stop-instance.mdx)
+> Canonical documentation: https://docs.vast.ai/sdk/python/reference/stop-instance
 
 # VastAI.stop_instance
 

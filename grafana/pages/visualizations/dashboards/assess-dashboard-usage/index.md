@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.1: [docs/sources/visualizations/dashboards/assess-dashboard-usage/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/visualizations/dashboards/assess-dashboard-usage/index.md)
+> Pinned source for Grafana v13.2.1: [docs/sources/visualizations/dashboards/assess-dashboard-usage/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/visualizations/dashboards/assess-dashboard-usage/index.md)
 
 # Assess dashboard usage
 
@@ -84,6 +84,7 @@ To disable the presence indicator, edit the [configuration](https://grafana.com/
 
 ```ini
 [analytics.views]
+
 
 # Disables the presence indicator
 recent_users_age = 0

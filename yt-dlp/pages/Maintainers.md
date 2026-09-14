@@ -1,4 +1,4 @@
-> Release-pinned source for yt-dlp 2026.08.19: [Maintainers.md](https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ead017ac81fe8486cf/Maintainers.md)
+> Pinned source for yt-dlp 2026.08.19: [Maintainers.md](https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ead017ac81fe8486cf/Maintainers.md)
 
 # Maintainers
 

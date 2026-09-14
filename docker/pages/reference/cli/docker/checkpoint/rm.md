@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_checkpoint_rm.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_checkpoint_rm.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_checkpoint_rm.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_checkpoint_rm.yaml)
 
 # docker checkpoint rm
 
@@ -8,7 +8,7 @@ Remove a checkpoint
 
 **Aliases:** docker checkpoint rm, docker checkpoint remove
 
-> [!NOTE]
+> \[!NOTE]
 > This command is experimental.
 
 ## Description
@@ -17,6 +17,6 @@ Remove a checkpoint
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--checkpoint-dir` |  | Use a custom checkpoint storage directory |
+| Option             | Default | Description                               |
+| ------------------ | ------- | ----------------------------------------- |
+| `--checkpoint-dir` |         | Use a custom checkpoint storage directory |

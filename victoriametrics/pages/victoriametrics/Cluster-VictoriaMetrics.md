@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/Cluster-VictoriaMetrics.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/Cluster-VictoriaMetrics.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/Cluster-VictoriaMetrics.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/Cluster-VictoriaMetrics.md)
 
 VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes.
 

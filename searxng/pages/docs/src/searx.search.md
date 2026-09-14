@@ -1,38 +1,67 @@
-> Commit-pinned source for SearXNG master: [docs/src/searx.search.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/src/searx.search.rst)
+> Pinned source for SearXNG master: [docs/src/searx.search.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/src/searx.search.rst)
 
-.. \_searx.search:
+<a id="searx-search"></a>
 
 # Search
 
-.. autoclass:: searx.search.models.EngineRef
-:members:
+<a id="api-searx-search-models-engineref"></a>
 
-.. autoclass:: searx.search.models.SearchQuery
-:members:
+#### `EngineRef`
 
-.. autoclass:: searx.search.Search
+Reference by names to an engine and category
 
-.. attribute:: search\_query
-:type: searx.search.SearchQuery
+<a id="api-searx-search-models-searchquery"></a>
 
-.. attribute:: result\_container
-:type: searx.results.ResultContainer
+#### `SearchQuery`
 
-.. automethod:: search() -> searx.results.ResultContainer
+container for all the search parameters (query, language, etc...)
 
-.. autoclass:: searx.search.SearchWithPlugins
-:members:
+<a id="api-searx-search-search"></a>
 
-.. attribute:: search\_query
-:type: searx.search.SearchQuery
+#### `Search`
 
-.. attribute:: result\_container
-:type: searx.results.ResultContainer
+Search information container
 
-.. attribute:: ordered\_plugin\_list
-:type: typing.List
+<a id="attribute-search-query"></a>
 
-.. attribute:: request
-:type: flask.request
+##### `search_query`
 
-.. automethod:: search() -> searx.results.ResultContainer
+<a id="attribute-result-container"></a>
+
+##### `result_container`
+
+<a id="api-search-searx-results-resultcontainer"></a>
+
+#### `ResultContainer`
+
+In the result container, the results are collected, sorted and duplicates
+will be merged.
+
+<a id="api-searx-search-searchwithplugins"></a>
+
+#### `SearchWithPlugins(Search)`
+
+Inherit from the Search class, add calls to the plugins.
+
+<a id="attribute-search-query"></a>
+
+##### `search_query`
+
+<a id="attribute-result-container"></a>
+
+##### `result_container`
+
+<a id="attribute-ordered-plugin-list"></a>
+
+##### `ordered_plugin_list`
+
+<a id="attribute-request"></a>
+
+##### `request`
+
+<a id="api-search-searx-results-resultcontainer"></a>
+
+#### `ResultContainer`
+
+In the result container, the results are collected, sorted and duplicates
+will be merged.

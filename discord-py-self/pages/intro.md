@@ -1,4 +1,4 @@
-> Release-pinned source for discord.py-self v2.1.0: [docs/intro.rst](https://github.com/dolfies/discord.py-self/blob/6de18b4cb40dd42625a535f52d9715c71399ffb3/docs/intro.rst)
+> Pinned source for discord.py-self v2.1.0: [docs/intro.rst](https://github.com/dolfies/discord.py-self/blob/6de18b4cb40dd42625a535f52d9715c71399ffb3/docs/intro.rst)
 
 - **Orphan:**
 
@@ -57,7 +57,7 @@ libraries than the ones installed on the system. You might also not have permiss
 For this purpose, the standard library as of Python 3.3 comes with a concept called "Virtual Environment"s to
 help maintain these separate versions.
 
-A more in-depth tutorial is found on [py:tutorial/venv](https://discordpy-self.readthedocs.io/py:tutorial/venv.html).
+A more in-depth tutorial is found on [py:tutorial/venv](https://docs.python.org/3/tutorial/venv.html).
 
 However, for the quick and dirty:
 

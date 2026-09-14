@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/information_schema.sgml#infoschema-triggered-update-columns](https://www.postgresql.org/docs/18/infoschema-triggered-update-columns.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/information_schema.sgml#infoschema-triggered-update-columns](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/information_schema.sgml%23infoschema-triggered-update-columns)
+> Canonical documentation: https://www.postgresql.org/docs/18/infoschema-triggered-update-columns.html
 
 # triggered_update_columns
 

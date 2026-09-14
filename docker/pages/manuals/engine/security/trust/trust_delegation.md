@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/security/trust/trust_delegation.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/security/trust/trust_delegation.md)
+> Pinned source for Docker main: [content/manuals/engine/security/trust/trust_delegation.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/security/trust/trust_delegation.md)
 
 # Delegations for content trust
 
@@ -110,8 +110,8 @@ the delegation private key in to the local Docker trust store.
 $ docker trust key generate jeff
 
 Generating key for jeff...
-Enter passphrase for new jeff key with ID 9deed25:
-Repeat passphrase for new jeff key with ID 9deed25:
+Enter passphrase for new jeff key with ID 9deed25: 
+Repeat passphrase for new jeff key with ID 9deed25: 
 Successfully generated and loaded private key. Corresponding public key available: /home/ubuntu/Documents/mytrustdir/jeff.pub
 ```
 
@@ -160,8 +160,8 @@ Finally you will need to add the private key into your local Docker trust store.
 $ docker trust key load delegation.key --name jeff
 
 Loading key from "delegation.key"...
-Enter passphrase for new jeff key with ID 8ae710e:
-Repeat passphrase for new jeff key with ID 8ae710e:
+Enter passphrase for new jeff key with ID 8ae710e: 
+Repeat passphrase for new jeff key with ID 8ae710e: 
 Successfully imported key from delegation.key
 ```
 
@@ -211,9 +211,9 @@ $ docker trust signer add --key cert.pem jeff registry.example.com/admin/demo
 
 Adding signer "jeff" to registry.example.com/admin/demo...
 Initializing signed repository for registry.example.com/admin/demo...
-Enter passphrase for root key with ID f6c6a4b:
-Enter passphrase for new repository key with ID b0014f8:
-Repeat passphrase for new repository key with ID b0014f8:
+Enter passphrase for root key with ID f6c6a4b: 
+Enter passphrase for new repository key with ID b0014f8: 
+Repeat passphrase for new repository key with ID b0014f8: 
 Successfully initialized "registry.example.com/admin/demo"
 Successfully added signer: jeff to registry.example.com/admin/demo
 ```
@@ -225,6 +225,7 @@ with the `$ docker trust inspect` command.
 $ docker trust inspect --pretty registry.example.com/admin/demo
 
 No signatures for registry.example.com/admin/demo
+
 
 List of signers and their keys for registry.example.com/admin/demo
 
@@ -246,8 +247,8 @@ $ notary delegation list registry.example.com/admin/demo
 ROLE                PATHS             KEY IDS                                                             THRESHOLD
 ----                -----             -------                                                             ---------
 targets/jeff        "" <all paths>    1091060d7bfd938dfa5be703fa057974f9322a4faef6f580334f3d6df44c02d1    1
-
-targets/releases    "" <all paths>    1091060d7bfd938dfa5be703fa057974f9322a4faef6f580334f3d6df44c02d1    1
+                                          
+targets/releases    "" <all paths>    1091060d7bfd938dfa5be703fa057974f9322a4faef6f580334f3d6df44c02d1    1 
 ```
 
 ### Adding additional signers
@@ -264,7 +265,7 @@ the `targets/release` role.
 $ docker trust signer add --key ben.pub ben registry.example.com/admin/demo
 
 Adding signer "ben" to registry.example.com/admin/demo...
-Enter passphrase for repository key with ID b0014f8:
+Enter passphrase for repository key with ID b0014f8: 
 Successfully added signer: ben to registry.example.com/admin/demo
 ```
 
@@ -303,7 +304,7 @@ will automatically handle adding this new key to `targets/releases`.
 $ docker trust signer add --key cert2.pem jeff registry.example.com/admin/demo
 
 Adding signer "jeff" to registry.example.com/admin/demo...
-Enter passphrase for repository key with ID b0014f8:
+Enter passphrase for repository key with ID b0014f8: 
 Successfully added signer: jeff to registry.example.com/admin/demo
 ```
 
@@ -313,6 +314,7 @@ Check to prove that the delegation (Signer) now contains multiple Key IDs.
 $ docker trust inspect --pretty registry.example.com/admin/demo
 
 No signatures for registry.example.com/admin/demo
+
 
 List of signers and their keys for registry.example.com/admin/demo
 
@@ -339,7 +341,7 @@ attached to the `targets/releases` role, you can use the
 ```console
 $ docker trust signer remove ben registry.example.com/admin/demo
 Removing signer "ben" from registry.example.com/admin/demo...
-Enter passphrase for repository key with ID b0014f8:
+Enter passphrase for repository key with ID b0014f8: 
 Successfully removed ben from registry.example.com/admin/demo
 ```
 
@@ -358,7 +360,7 @@ Successfully removed ben from registry.example.com/admin/demo
    to resign the `targets/releases` delegation file with the Notary CLI.
 
    ```text
-   WARN[0000] Error getting targets/releases: valid signatures did not meet threshold for targets/releases
+   WARN[0000] Error getting targets/releases: valid signatures did not meet threshold for targets/releases 
    ```
 
    Resigning the delegation file is done with the `$ notary witness` command
@@ -386,9 +388,9 @@ and the role specific to that signer `targets/<name>`.
    ROLE                PATHS             KEY IDS                                                             THRESHOLD
    ----                -----             -------                                                             ---------
    targets/jeff        "" <all paths>    8fb597cbaf196f0781628b2f52bff6b3912e4e8075720378fda60d17232bbcf9    1
-                                         1091060d7bfd938dfa5be703fa057974f9322a4faef6f580334f3d6df44c02d1
+                                         1091060d7bfd938dfa5be703fa057974f9322a4faef6f580334f3d6df44c02d1    
    targets/releases    "" <all paths>    8fb597cbaf196f0781628b2f52bff6b3912e4e8075720378fda60d17232bbcf9    1
-                                         1091060d7bfd938dfa5be703fa057974f9322a4faef6f580334f3d6df44c02d1
+                                         1091060d7bfd938dfa5be703fa057974f9322a4faef6f580334f3d6df44c02d1    
    ```
 
 2. Remove from the `targets/releases` delegation
@@ -398,8 +400,8 @@ and the role specific to that signer `targets/<name>`.
 
    Auto-publishing changes to registry.example.com/admin/demo
    Enter username: admin
-   Enter password:
-   Enter passphrase for targets key with ID b0014f8:
+   Enter password: 
+   Enter passphrase for targets key with ID b0014f8: 
    Successfully published changes for repository registry.example.com/admin/demo
    ```
 
@@ -411,9 +413,9 @@ and the role specific to that signer `targets/<name>`.
    Removal of delegation role targets/jeff with keys [5570b88df0736c468493247a07e235e35cf3641270c944d0e9e8899922fc6f99], to repository "registry.example.com/admin/demo" staged for next publish.
 
    Auto-publishing changes to registry.example.com/admin/demo
-   Enter username: admin
-   Enter password:
-   Enter passphrase for targets key with ID b0014f8:
+   Enter username: admin    
+   Enter password: 
+   Enter passphrase for targets key with ID b0014f8: 
    Successfully published changes for repository registry.example.com/admin/demo
    ```
 
@@ -424,8 +426,8 @@ and the role specific to that signer `targets/<name>`.
 
    ROLE                PATHS             KEY IDS                                                             THRESHOLD
    ----                -----             -------                                                             ---------
-   targets/jeff        "" <all paths>    8fb597cbaf196f0781628b2f52bff6b3912e4e8075720378fda60d17232bbcf9    1
-   targets/releases    "" <all paths>    8fb597cbaf196f0781628b2f52bff6b3912e4e8075720378fda60d17232bbcf9    1
+   targets/jeff        "" <all paths>    8fb597cbaf196f0781628b2f52bff6b3912e4e8075720378fda60d17232bbcf9    1    
+   targets/releases    "" <all paths>    8fb597cbaf196f0781628b2f52bff6b3912e4e8075720378fda60d17232bbcf9    1    
    ```
 
 ### Removing a local delegation private key
@@ -470,7 +472,7 @@ $ notary delete registry.example.com/admin/demo --remote
 
 Deleting trust data for repository registry.example.com/admin/demo
 Enter username: admin
-Enter password:
+Enter password: 
 Successfully deleted local and remote trust data for repository registry.example.com/admin/demo
 
 $ docker trust inspect --pretty registry.example.com/admin/demo

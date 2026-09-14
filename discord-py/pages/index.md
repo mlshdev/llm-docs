@@ -1,4 +1,4 @@
-> Tag-pinned source for discord.py v2.7.1: [docs/index.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/index.rst)
+> Pinned source for discord.py v2.7.1: [docs/index.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/index.rst)
 
 sphinx-quickstart on Fri Aug 21 05:43:30 2015.
 You can adapt this file completely to your liking, but it should at least

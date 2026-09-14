@@ -80,4 +80,30 @@ See :class:\`Client\` and :issue:\`42\`.
     );
     expect(body).not.toContain(".. autoclass::");
   });
+
+  test("resolves local and intersphinx documentation targets", () => {
+    const body = convertDiscordRst(
+      `See :doc:\`the tutorial <py:tutorial/venv>\`,
+:doc:\`aiohttp <aio:index>\`, :doc:\`Requests <req:index>\`, and
+\`coroutines <py:library/asyncio-task.html>\`_.
+
+Continue with :doc:\`./ext/commands/index\`.
+`,
+      projectContext(""),
+    );
+    expect(body).toContain(
+      "[the tutorial](https://docs.python.org/3/tutorial/venv.html)",
+    );
+    expect(body).toContain("[aiohttp](https://docs.aiohttp.org/en/stable/)");
+    expect(body).toContain(
+      "[Requests](https://requests.readthedocs.io/en/latest/)",
+    );
+    expect(body).toContain(
+      "[coroutines](https://docs.python.org/3/library/asyncio-task.html)",
+    );
+    expect(body).toContain(
+      "[./ext/commands/index](https://discordpy.readthedocs.io/ext/commands/index.html)",
+    );
+    expect(body).not.toContain("$1index");
+  });
 });

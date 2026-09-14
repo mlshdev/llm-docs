@@ -1,8 +1,9 @@
-> Commit-pinned source for SearXNG master: [docs/src/searx.exceptions.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/src/searx.exceptions.rst)
+> Pinned source for SearXNG master: [docs/src/searx.exceptions.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/src/searx.exceptions.rst)
 
-.. \_searx.exceptions:
+<a id="searx-exceptions"></a>
 
 # SearXNG Exceptions
 
-.. automodule:: searx.exceptions
-:members:
+#### `searx.exceptions`
+
+Static Python API reference (`automodule`).

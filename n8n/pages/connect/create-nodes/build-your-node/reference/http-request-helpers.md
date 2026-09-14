@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/http-request-helpers.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/connect/create-nodes/build-your-node/reference/http-request-helpers.md)
+> Pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/http-request-helpers.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/connect/create-nodes/build-your-node/reference/http-request-helpers.md)
 
 # HTTP request helper for node builders <a id="http-request-helper-for-node-builders"></a>
 
@@ -19,7 +19,7 @@ const response = await this.helpers.httpRequest(options);
 
 // If auth needed
 const response = await this.helpers.httpRequestWithAuthentication.call(
-    this,
+    this, 
     'credentialTypeName', // For example: pipedriveApi
     options,
 );
@@ -54,7 +54,7 @@ const response = await this.helpers.httpRequestWithAuthentication.call(
     };
     timeout?: number;
     json?: boolean;
-}
+}	
 ```
 
 `url` is required. The other fields are optional. The default method is `GET`.

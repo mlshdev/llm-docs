@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [guides/serverless/deployments/examples/train-mnist.mdx](https://docs.vast.ai/guides/serverless/deployments/examples/train-mnist)
+> Pinned source for Vast.ai main: [guides/serverless/deployments/examples/train-mnist.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/serverless/deployments/examples/train-mnist.mdx)
+> Canonical documentation: https://docs.vast.ai/guides/serverless/deployments/examples/train-mnist
 
 # MNIST Training & Inference
 
@@ -14,6 +15,7 @@ from vastai import Deployment
 from vastai.data.query import gpu_name, RTX_4090, RTX_5090
 
 app = Deployment(name="train-mnist")
+
 
 @app.context()
 class MNISTModel:
@@ -74,6 +76,7 @@ class MNISTModel:
     async def __aexit__(self, *exc):
         pass
 
+
 @app.remote(benchmark_dataset=[{"pixel_values": [[0.0] * 28] * 28}])
 async def infer(pixel_values: list[list[float]]) -> dict:
     """Classify a 28x28 grayscale MNIST image.
@@ -100,6 +103,7 @@ async def infer(pixel_values: list[list[float]]) -> dict:
 
     return {"digit": digit.item(), "probability": prob.item()}
 
+
 image = app.image("vastai/pytorch:@vastai-automatic-tag", 16)
 image.venv("/venv/main")
 image.require(gpu_name.in_([RTX_4090, RTX_5090]))
@@ -115,6 +119,7 @@ import asyncio
 import random
 from deploy import app, infer
 
+
 async def main():
     from torchvision import datasets, transforms
 
@@ -128,6 +133,7 @@ async def main():
     print(f"True label:  {true_label}")
     print(f"Predicted:   {result['digit']}")
     print(f"Confidence:  {result['probability']:.4f}")
+
 
 if __name__ == "__main__":
     asyncio.run(main())

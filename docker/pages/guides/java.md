@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/java.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/java.md)
+> Pinned source for Docker main: [content/guides/java.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/java.md)
 
 The Java getting started guide teaches you how to create a containerized Spring Boot application using Docker. In this module, you’ll learn how to:
 

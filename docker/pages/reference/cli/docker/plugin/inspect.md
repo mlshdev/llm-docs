@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_plugin_inspect.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_plugin_inspect.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_plugin_inspect.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_plugin_inspect.yaml)
 
 # docker plugin inspect
 
@@ -13,9 +13,9 @@ in a JSON array.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--format` |  | Format output using a custom template: 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to https://docs.docker.com/go/formatting/ for more information about formatting output with templates |
+| Option           | Default | Description                                                                                                                                                                                                                             |
+| ---------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `-f`, `--format` |         | Format output using a custom template: 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to <https://docs.docker.com/go/formatting/> for more information about formatting output with templates |
 
 ## Examples
 

@@ -191,6 +191,7 @@ export async function buildApple(
       `Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.`,
       `${frameworks.length} ${frameworks.length === 1 ? "framework" : "frameworks"} in this catalog, captured at ${lock.capturedAt}.`,
       "Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.",
+      "Daily reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive daily check.",
       "Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream.",
     ],
     licenseText: licenseNotice(project),

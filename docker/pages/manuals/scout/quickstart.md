@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/scout/quickstart.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/scout/quickstart.md)
+> Pinned source for Docker main: [content/manuals/scout/quickstart.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/scout/quickstart.md)
 
 # Docker Scout quickstart
 
@@ -106,18 +106,20 @@ $ docker scout cves --only-package express
     ✓ Indexed 79 packages
     ✓ No vulnerable package detected
 
+
   ## Overview
 
-                      │                  Analyzed Image
+                      │                  Analyzed Image                   
   ────────────────────┼───────────────────────────────────────────────────
-    Target            │  mobywhale/scout-demo:v2
-      digest          │  ef68417b2866
-      platform        │ linux/arm64
-      provenance      │ https://github.com/docker/scout-demo-service.git
-                      │  7c3a06793fc8f97961b4a40c73e0f7ed85501857
-      vulnerabilities │    0C     0H     0M     0L
-      size            │ 19 MB
-      packages        │ 1
+    Target            │  mobywhale/scout-demo:v2                   
+      digest          │  ef68417b2866                                     
+      platform        │ linux/arm64                                       
+      provenance      │ https://github.com/docker/scout-demo-service.git  
+                      │  7c3a06793fc8f97961b4a40c73e0f7ed85501857         
+      vulnerabilities │    0C     0H     0M     0L                        
+      size            │ 19 MB                                             
+      packages        │ 1                                                 
+
 
   ## Packages and Vulnerabilities
 

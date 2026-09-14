@@ -1,4 +1,5 @@
-> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/self-hosting/manage/cli/overview.mdx](https://zitadel.com/docs/self-hosting/manage/cli/overview)
+> Pinned source for ZITADEL v4.17.3: [apps/docs/content/self-hosting/manage/cli/overview.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/self-hosting/manage/cli/overview.mdx)
+> Canonical documentation: https://zitadel.com/docs/self-hosting/manage/cli/overview
 
 This documentation serves as your guide to interacting with Zitadel through the command line interface (CLI). The Zitadel CLI empowers you to manage various aspects of your Zitadel system efficiently from your terminal.
 

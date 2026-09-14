@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [api-reference/pods/POST/pods.mdx](https://docs.runpod.io/api-reference/pods/POST/pods)
+> Pinned source for Runpod main: [api-reference/pods/POST/pods.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/api-reference/pods/POST/pods.mdx)
+> Canonical documentation: https://docs.runpod.io/api-reference/pods/POST/pods
 
 # Create a new Pod
 
@@ -6,11 +7,204 @@
 
 **Create a new Pod**
 
-Creates a new [Pod](#/components/schemas/Pod) and optionally deploys it. Review parameters and responses for this Runpod API operation in detail.
+Creates a new Pod and optionally deploys it. Review parameters and responses for this Runpod API operation in detail.
 
-**Request body**: Input for Pod creation.
+**Authentication:** `ApiKey`
+
+**Request body** (required): Input for Pod creation.
+
+- Media type: `application/json`
+  - Schema (object)
+    - `allowedCudaVersions` (array): If the created Pod is a GPU Pod, a list of acceptable CUDA versions on the Pod. If not set, any CUDA version is acceptable.
+      - `items` (string; enum: `13.0`, `12.9`, `12.8`, `12.7`, `12.6`, `12.5`, `12.4`, `12.3`, `12.2`, `12.1`, `12.0`, `11.8`)
+    - `cloudType` (string; enum: `SECURE`, `COMMUNITY`; default: `SECURE`): Set to SECURE to create the Pod in Secure Cloud. Set to COMMUNITY to create the Pod in Community Cloud. To determine which one suits your needs, see <https://docs.runpod.io/pods/overview#pod-types>.
+    - `computeType` (string; enum: `GPU`, `CPU`; default: `GPU`): Set to GPU to create a GPU Pod. Set to CPU to create a CPU Pod. If set to CPU, the Pod will not have a GPU attached and properties related to GPUs such as gpuTypeIds will be ignored. If set to GPU, the Pod will have a GPU attached and properties related to CPUs such as cpuFlavorIds will be ignored.
+    - `containerDiskInGb` (integer; nullable; default: `50`): The amount of disk space, in gigabytes (GB), to allocate on the container disk for the created Pod. The data on the container disk is wiped when the Pod restarts. To persist data across Pod restarts, set volumeInGb to configure the Pod network volume.
+    - `containerRegistryAuthId` (string): Registry credentials ID.
+      - Example: `clzdaifot0001l90809257ynb`
+    - `countryCodes` (array): A list of country codes where the created Pod can be located. If not set, the Pod can be located in any country.
+      - `items` (string)
+    - `cpuFlavorIds` (array): If the created Pod is a CPU Pod, a list of Runpod CPU flavors which can be attached to the Pod. The order of the list determines the order to rent CPU flavors. See cpuFlavorPriority for how the order of the list affects Pod creation.
+      - `items` (string; enum: `cpu3c`, `cpu3g`, `cpu3m`, `cpu5c`, `cpu5g`, `cpu5m`)
+    - `cpuFlavorPriority` (string; enum: `availability`, `custom`; default: `availability`): If the created Pod is a CPU Pod, set to availability to respond to current CPU flavor availability. Set to custom to always try to rent CPU flavors in the order specified in cpuFlavorIds.
+    - `dataCenterIds` (array; default: `["EU-RO-1","CA-MTL-1","EU-SE-1","US-IL-1","EUR-IS-1","EU-CZ-1","US-TX-3","EUR-IS-2","US-KS-2","US-GA-2","US-WA-1","US-TX-1","CA-MTL-3","EU-NL-1","US-TX-4","US-CA-2","US-NC-1","OC-AU-1","US-DE-1","EUR-IS-3","CA-MTL-2","AP-JP-1","EUR-NO-1","EU-FR-1","US-KS-3","US-GA-1"]`): A list of Runpod data center IDs where the created Pod can be located. See `dataCenterPriority` for information on how the order of the list affects Pod creation.
+      - Example: `["EU-RO-1","CA-MTL-1"]`
+      - `items` (string; enum: `EU-RO-1`, `CA-MTL-1`, `EU-SE-1`, `US-IL-1`, `EUR-IS-1`, `EU-CZ-1`, `US-TX-3`, `EUR-IS-2`, `US-KS-2`, `US-GA-2`, `US-WA-1`, `US-TX-1`, `CA-MTL-3`, `EU-NL-1`, `US-TX-4`, `US-CA-2`, `US-NC-1`, `OC-AU-1`, `US-DE-1`, `EUR-IS-3`, `CA-MTL-2`, `AP-JP-1`, `EUR-NO-1`, `EU-FR-1`, `US-KS-3`, `US-GA-1`)
+    - `dataCenterPriority` (string; enum: `availability`, `custom`; default: `availability`): Set to availability to respond to current machine availability. Set to custom to always try to rent machines from data centers in the order specified in dataCenterIds.
+    - `dockerEntrypoint` (array; default: `[]`): If specified, overrides the ENTRYPOINT for the Docker image run on the created Pod. If \[], uses the ENTRYPOINT defined in the image.
+      - `items` (string)
+    - `dockerStartCmd` (array; default: `[]`): If specified, overrides the start CMD for the Docker image run on the created Pod. If \[], uses the start CMD defined in the image.
+      - `items` (string)
+    - `env` (object; default: `{}`)
+      - Example: `{"ENV_VAR":"value"}`
+      - `items` (string)
+    - `globalNetworking` (boolean; default: `false`): Set to true to enable global networking for the created Pod. Currently only available for On-Demand GPU Pods on some Secure Cloud data centers.
+      - Example: `true`
+    - `gpuCount` (integer; default: `1`; minimum: `1`): If the created Pod is a GPU Pod, the number of GPUs attached to the created Pod.
+    - `gpuTypeIds` (array): If the created Pod is a GPU Pod, a list of Runpod GPU types which can be attached to the created Pod. The order of the list determines the order to rent GPU types. See `gpuTypePriority` for information on how the order of the list affects Pod creation.
+      - `items` (string; enum: `NVIDIA GeForce RTX 4090`, `NVIDIA A40`, `NVIDIA RTX A5000`, `NVIDIA GeForce RTX 5090`, `NVIDIA H100 80GB HBM3`, `NVIDIA GeForce RTX 3090`, `NVIDIA RTX A4500`, `NVIDIA L40S`, `NVIDIA H200`, `NVIDIA L4`, `NVIDIA RTX 6000 Ada Generation`, `NVIDIA A100-SXM4-80GB`, `NVIDIA RTX 4000 Ada Generation`, `NVIDIA RTX A6000`, `NVIDIA A100 80GB PCIe`, `NVIDIA RTX 2000 Ada Generation`, `NVIDIA RTX A4000`, `NVIDIA RTX PRO 6000 Blackwell Server Edition`, `NVIDIA H100 PCIe`, `NVIDIA H100 NVL`, `NVIDIA L40`, `NVIDIA B200`, `NVIDIA GeForce RTX 3080 Ti`, `NVIDIA RTX PRO 6000 Blackwell Workstation Edition`, `NVIDIA GeForce RTX 3080`, `NVIDIA GeForce RTX 3070`, `AMD Instinct MI300X OAM`, `NVIDIA GeForce RTX 4080 SUPER`, `Tesla V100-PCIE-16GB`, `Tesla V100-SXM2-32GB`, `NVIDIA RTX 5000 Ada Generation`, `NVIDIA GeForce RTX 4070 Ti`, `NVIDIA RTX 4000 SFF Ada Generation`, `NVIDIA GeForce RTX 3090 Ti`, `NVIDIA RTX A2000`, `NVIDIA GeForce RTX 4080`, `NVIDIA A30`, `NVIDIA GeForce RTX 5080`, `Tesla V100-FHHL-16GB`, `NVIDIA H200 NVL`, `Tesla V100-SXM2-16GB`, `NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition`, `NVIDIA A5000 Ada`, `Tesla V100-PCIE-32GB`, `NVIDIA RTX A4500`, `NVIDIA A30`, `NVIDIA GeForce RTX 3080TI`, `Tesla T4`, `NVIDIA RTX A30`)
+    - `gpuTypePriority` (string; enum: `availability`, `custom`; default: `availability`): If the created Pod is a GPU Pod, set to availability to respond to current GPU type availability. Set to custom to always try to rent GPU types in the order specified in gpuTypeIds.
+    - `imageName` (string): The image tag for the container run on the created Pod.
+      - Example: `runpod/pytorch:2.1.0-py3.10-cuda11.8.0-devel-ubuntu22.04`
+    - `interruptible` (boolean; default: `false`): Set to true to create an interruptible or spot Pod. An interruptible Pod can be rented at a lower cost but can be stopped at any time to free up resources for another Pod. A reserved Pod is rented at a higher cost but runs until it exits or is manually stopped.
+    - `locked` (boolean; default: `false`): Set to true to lock a Pod. Locking a Pod disables stopping or resetting the Pod.
+    - `minDiskBandwidthMBps` (number): The minimum disk bandwidth, in megabytes per second (MBps), for the created Pod.
+    - `minDownloadMbps` (number): The minimum download speed, in megabits per second (Mbps), for the created Pod.
+    - `minRAMPerGPU` (integer; default: `8`): If the created Pod is a GPU Pod, the minimum amount of RAM, in gigabytes (GB), allocated to the created Pod for each GPU attached to the Pod.
+    - `minUploadMbps` (number): The minimum upload speed, in megabits per second (Mbps), for the created Pod.
+    - `minVCPUPerGPU` (integer; default: `2`): If the created Pod is a GPU Pod, the minimum number of virtual CPUs allocated to the created Pod for each GPU attached to the Pod.
+    - `name` (string; default: `my pod`; maximum length: `191`): A user-defined name for the created Pod. The name does not need to be unique.
+    - `networkVolumeId` (string): The unique string identifying the network volume to attach to the created Pod. If attached, a network volume replaces the Pod network volume.
+    - `ports` (array; default: `8888/http,22/tcp`): A list of ports exposed on the created Pod. Each port is formatted as \[port number]/\[protocol]. Protocol can be either http or tcp.
+      - Example: `["8888/http","22/tcp"]`
+      - `items` (string)
+    - `supportPublicIp` (boolean): If the created Pod is on Community Cloud, set to true if you need the Pod to expose a public IP address. If null, the Pod might not have a public IP address. On Secure Cloud, the Pod will always have a public IP address.
+      - Example: `true`
+    - `templateId` (string): If the Pod is created with a template, the unique string identifying that template.
+      - Example: `null`
+    - `vcpuCount` (integer; default: `2`): If the created Pod is a CPU Pod, the number of vCPUs allocated to the Pod.
+    - `volumeInGb` (integer; nullable; default: `20`): The amount of disk space, in gigabytes (GB), to allocate on the Pod volume for the created Pod. The data on the Pod volume is persisted across Pod restarts. To persist data so that future Pods can access it, create a network volume and set networkVolumeId to attach it to the Pod.
+    - `volumeMountPath` (string; default: `/workspace`): If either a Pod volume or a network volume is attached to a Pod, the absolute path where the network volume will be mounted in the filesystem.
 
 **Responses**
 
 - `201`: Pod successfully created.
+  - Media type: `application/json`
+    - Schema (object)
+      - `adjustedCostPerHr` (number): The effective cost in Runpod credits per hour of running a Pod, adjusted by active Savings Plans.
+        - Example: `0.69`
+      - `aiApiId` (string): Synonym for endpointId (legacy name).
+        - Example: `null`
+      - `consumerUserId` (string): A unique string identifying the Runpod user who rents a Pod.
+        - Example: `user_2PyTJrLzeuwfZilRZ7JhCQDuSqo`
+      - `containerDiskInGb` (integer): The amount of disk space, in gigabytes (GB), to allocate on the container disk for a Pod. The data on the container disk is wiped when the Pod restarts. To persist data across Pod restarts, set volumeInGb to configure the Pod network volume.
+        - Example: `50`
+      - `containerRegistryAuthId` (string): If a Pod is created with a container registry auth, the unique string identifying that container registry auth.
+        - Example: `clzdaifot0001l90809257ynb`
+      - `costPerHr` (number; format: currency): The cost in Runpod credits per hour of running a Pod. Note that the actual cost may be lower if Savings Plans are applied.
+        - Example: `0.74`
+      - `cpuFlavorId` (string): If the Pod is a CPU Pod, the unique string identifying the CPU flavor the Pod is running on.
+        - Example: `cpu3c`
+      - `desiredStatus` (string; enum: `RUNNING`, `EXITED`, `TERMINATED`): The current expected status of a Pod.
+      - `dockerEntrypoint` (array): If specified, overrides the ENTRYPOINT for the Docker image run on the created Pod. If \[], uses the ENTRYPOINT defined in the image.
+        - `items` (string)
+      - `dockerStartCmd` (array): If specified, overrides the start CMD for the Docker image run on the created Pod. If \[], uses the start CMD defined in the image.
+        - `items` (string)
+      - `endpointId` (string): If the Pod is a Serverless worker, a unique string identifying the associated endpoint.
+        - Example: `null`
+      - `env` (object; default: `{}`)
+        - Example: `{"ENV_VAR":"value"}`
+        - `items` (string)
+      - `gpu` (object)
+        - `id` (string)
+        - `count` (integer): The number of GPUs attached to a Pod.
+          - Example: `1`
+        - `displayName` (string)
+        - `securePrice` (number)
+        - `communityPrice` (number)
+        - `oneMonthPrice` (number)
+        - `threeMonthPrice` (number)
+        - `sixMonthPrice` (number)
+        - `oneWeekPrice` (number)
+        - `communitySpotPrice` (number)
+        - `secureSpotPrice` (number)
+      - `id` (string): A unique string identifying a Pod.
+        - Example: `xedezhzb9la3ye`
+      - `image` (string): The image tag for the container run on a Pod.
+        - Example: `runpod/pytorch:2.1.0-py3.10-cuda11.8.0-devel-ubuntu22.04`
+      - `interruptible` (boolean): Describes how a Pod is rented. An interruptible Pod can be rented at a lower cost but can be stopped at any time to free up resources for another Pod. A reserved Pod is rented at a higher cost but runs until it exits or is manually stopped.
+        - Example: `false`
+      - `lastStartedAt` (string): The UTC timestamp when a Pod was last started.
+        - Example: `2024-07-12T19:14:40.144Z`
+      - `lastStatusChange` (string): A string describing the last lifecycle event on a Pod.
+        - Example: `Rented by User: Fri Jul 12 2024 15:14:40 GMT-0400 (Eastern Daylight Time)`
+      - `locked` (boolean): Set to true to lock a Pod. Locking a Pod disables stopping or resetting the Pod.
+        - Example: `false`
+      - `machine` (object): Information about the machine a Pod is running on (see Machine).
+        - `minPodGpuCount` (integer)
+        - `gpuTypeId` (string)
+        - `gpuType` (object)
+          - `id` (string)
+          - `count` (integer): The number of GPUs attached to a Pod.
+            - Example: `1`
+          - `displayName` (string)
+          - `securePrice` (number)
+          - `communityPrice` (number)
+          - `oneMonthPrice` (number)
+          - `threeMonthPrice` (number)
+          - `sixMonthPrice` (number)
+          - `oneWeekPrice` (number)
+          - `communitySpotPrice` (number)
+          - `secureSpotPrice` (number)
+        - `cpuCount` (integer)
+        - `cpuTypeId` (string)
+        - `cpuType` (object)
+          - `id` (string)
+          - `displayName` (string)
+          - `cores` (number)
+          - `threadsPerCore` (number)
+          - `groupId` (string)
+        - `location` (string)
+        - `dataCenterId` (string)
+        - `diskThroughputMBps` (integer)
+        - `maxDownloadSpeedMbps` (integer)
+        - `maxUploadSpeedMbps` (integer)
+        - `supportPublicIp` (boolean)
+        - `secureCloud` (boolean)
+        - `maintenanceStart` (string)
+        - `maintenanceEnd` (string)
+        - `maintenanceNote` (string)
+        - `note` (string)
+        - `costPerHr` (number)
+        - `currentPricePerGpu` (number)
+        - `gpuAvailable` (integer)
+        - `gpuDisplayName` (string)
+      - `machineId` (string): A unique string identifying the host machine a Pod is running on.
+        - Example: `s194cr8pls2z`
+      - `memoryInGb` (number): The amount of RAM, in gigabytes (GB), attached to a Pod.
+        - Example: `62`
+      - `name` (string; maximum length: `191`): A user-defined name for the created Pod. The name does not need to be unique.
+      - `networkVolume` (object): If a network volume is attached to a Pod, information about the network volume (see network volume schema).
+        - `id` (string): A unique string identifying a network volume.
+          - Example: `agv6w2qcg7`
+        - `name` (string): A user-defined name for a network volume. The name does not need to be unique.
+          - Example: `my network volume`
+        - `size` (integer): The amount of disk space, in gigabytes (GB), allocated to a network volume.
+          - Example: `50`
+        - `dataCenterId` (string): The Runpod data center ID where a network volume is located.
+          - Example: `EU-RO-1`
+      - `portMappings` (object; nullable): A mapping of internal ports to public ports on a Pod. For example, { "22": 10341 } means that port 22 on the Pod is mapped to port 10341 and is publicly accessible at \[public ip]:10341. If the Pod is still initializing, this mapping is not yet determined and will be empty.
+        - Example: `{"22":10341}`
+        - `items` (integer)
+      - `ports` (array): A list of ports exposed on a Pod. Each port is formatted as \[port number]/\[protocol]. Protocol can be either http or tcp.
+        - Example: `["8888/http","22/tcp"]`
+        - `items` (string)
+      - `publicIp` (string; format: ipv4; nullable): The public IP address of a Pod. If the Pod is still initializing, this IP is not yet determined and will be empty.
+        - Example: `100.65.0.119`
+      - `savingsPlans` (array): The list of active Savings Plans applied to a Pod (see Savings Plans). If none are applied, the list is empty.
+        - `items` (object)
+          - `costPerHr` (number)
+            - Example: `0.21`
+          - `endTime` (string)
+            - Example: `2024-07-12T19:14:40.144Z`
+          - `gpuTypeId` (string)
+            - Example: `NVIDIA GeForce RTX 4090`
+          - `id` (string)
+            - Example: `clkrb4qci0000mb09c7sualzo`
+          - `podId` (string)
+            - Example: `xedezhzb9la3ye`
+          - `startTime` (string)
+            - Example: `2024-05-12T19:14:40.144Z`
+      - `slsVersion` (integer): If the Pod is a Serverless worker, the version of the associated endpoint (see Endpoint Version).
+        - Example: `0`
+      - `templateId` (string): If a Pod is created with a template, the unique string identifying that template.
+        - Example: `null`
+      - `vcpuCount` (number): The number of virtual CPUs attached to a Pod.
+        - Example: `24`
+      - `volumeEncrypted` (boolean): Set to true if the local network volume of a Pod is encrypted. Can only be set when creating a Pod.
+        - Example: `false`
+      - `volumeInGb` (integer): The amount of disk space, in gigabytes (GB), to allocate on the Pod volume for a Pod. The data on the Pod volume is persisted across Pod restarts. To persist data so that future Pods can access it, create a network volume and set networkVolumeId to attach it to the Pod.
+        - Example: `20`
+      - `volumeMountPath` (string): If either a Pod volume or a network volume is attached to a Pod, the absolute path where the network volume is mounted in the filesystem.
+        - Example: `/workspace`
 - `400`: Invalid input.

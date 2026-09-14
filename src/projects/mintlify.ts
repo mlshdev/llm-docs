@@ -1,8 +1,9 @@
 import path from "node:path";
 import { parse as parseYaml } from "yaml";
 import { isRecord } from "../config.ts";
-import { githubBlobUrl, githubRawUrl, normalizeSpacing } from "../markdown.ts";
+import { githubBlobUrl, githubRawUrl } from "../markdown.ts";
 import type { MdxImport } from "../mdx.ts";
+export { renderOpenApiOperationBody } from "../openapi.ts";
 
 // Both sites publish a page at exactly its file path relative to the
 // repository root, minus extension; Mintlify performs no directory-index
@@ -385,134 +386,4 @@ export function generatedOperationRoute(
   }
   segments.push(mintlifySlug(operation.summary ?? operation.operationId));
   return segments.filter((segment) => segment && segment !== ".").join("/");
-}
-
-// Renders the fields of one operation for a page whose frontmatter names it
-// directly, so the page's own title already identifies it. A generated page is
-// titled with the summary itself, and repeats nothing by omitting it here.
-export function renderOpenApiOperationBody(
-  spec: Readonly<Record<string, unknown>>,
-  specPath: string,
-  method: string,
-  route: string,
-  includeSummary = true,
-): string {
-  const item = resolveOpenApiRef(
-    spec,
-    isRecord(spec.paths) ? spec.paths[route] : undefined,
-    specPath,
-  );
-  if (!isRecord(item)) {
-    throw new Error(`OpenAPI specification ${specPath} has no path ${route}`);
-  }
-  const operation = resolveOpenApiRef(
-    spec,
-    item[method.toLowerCase()],
-    specPath,
-  );
-  if (!isRecord(operation)) {
-    throw new Error(
-      `OpenAPI specification ${specPath} has no ${method} operation for ${route}`,
-    );
-  }
-  const lines = [`\`${method.toUpperCase()} ${route}\``];
-  const sharedParameters = Array.isArray(item.parameters)
-    ? item.parameters
-    : [];
-  renderOperationBody(
-    lines,
-    spec,
-    specPath,
-    operation,
-    sharedParameters,
-    includeSummary,
-  );
-  return normalizeSpacing(lines.join("\n"));
-}
-
-function renderOperationBody(
-  lines: string[],
-  spec: Readonly<Record<string, unknown>>,
-  specPath: string,
-  operation: Readonly<Record<string, unknown>>,
-  sharedParameters: readonly unknown[],
-  includeSummary: boolean,
-): void {
-  if (
-    includeSummary &&
-    typeof operation.summary === "string" &&
-    operation.summary.trim()
-  ) {
-    lines.push("", `**${operation.summary.trim()}**`);
-  }
-  if (
-    typeof operation.description === "string" &&
-    operation.description.trim()
-  ) {
-    lines.push("", operation.description.trim());
-  }
-  const parameters = [
-    ...sharedParameters,
-    ...(Array.isArray(operation.parameters) ? operation.parameters : []),
-  ];
-  if (parameters.length > 0) {
-    lines.push("", "**Parameters**", "");
-    for (const rawParameter of parameters) {
-      const parameter = resolveOpenApiRef(spec, rawParameter, specPath);
-      if (!isRecord(parameter) || typeof parameter.name !== "string") {
-        continue;
-      }
-      const location =
-        typeof parameter.in === "string" ? parameter.in : "parameter";
-      lines.push(
-        `- \`${parameter.name}\` (${location}${parameter.required ? ", required" : ""})${typeof parameter.description === "string" ? `: ${singleLine(parameter.description)}` : ""}`,
-      );
-    }
-  }
-  const requestBody = resolveOpenApiRef(spec, operation.requestBody, specPath);
-  if (isRecord(requestBody)) {
-    lines.push(
-      "",
-      `**Request body**${typeof requestBody.description === "string" ? `: ${singleLine(requestBody.description)}` : ""}`,
-    );
-  }
-  if (isRecord(operation.responses)) {
-    lines.push("", "**Responses**", "");
-    for (const [status, rawResponse] of Object.entries(operation.responses)) {
-      const response = resolveOpenApiRef(spec, rawResponse, specPath);
-      lines.push(
-        `- \`${status}\`${isRecord(response) && typeof response.description === "string" ? `: ${singleLine(response.description)}` : ""}`,
-      );
-    }
-  }
-}
-
-function resolveOpenApiRef(
-  spec: Readonly<Record<string, unknown>>,
-  value: unknown,
-  specPath: string,
-): unknown {
-  if (!isRecord(value) || typeof value.$ref !== "string") {
-    return value;
-  }
-  if (!value.$ref.startsWith("#/")) {
-    throw new Error(
-      `OpenAPI specification ${specPath} uses external reference ${value.$ref}`,
-    );
-  }
-  let current: unknown = spec;
-  for (const encoded of value.$ref.slice(2).split("/")) {
-    const key = encoded.replaceAll("~1", "/").replaceAll("~0", "~");
-    if (!isRecord(current) || !(key in current)) {
-      throw new Error(
-        `OpenAPI specification ${specPath} has unresolved reference ${value.$ref}`,
-      );
-    }
-    current = current[key];
-  }
-  return current;
-}
-
-function singleLine(value: string): string {
-  return value.replace(/\s+/g, " ").trim();
 }

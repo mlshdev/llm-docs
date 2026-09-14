@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/ci/github-actions/copy-image-registries.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build/ci/github-actions/copy-image-registries.md)
+> Pinned source for Docker main: [content/manuals/build/ci/github-actions/copy-image-registries.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build/ci/github-actions/copy-image-registries.md)
 
 # Copy image between registries with GitHub Actions
 
@@ -30,7 +30,7 @@ jobs:
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v4
-
+      
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
 

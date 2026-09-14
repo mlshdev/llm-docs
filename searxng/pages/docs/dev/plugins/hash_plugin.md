@@ -1,8 +1,18 @@
-> Commit-pinned source for SearXNG master: [docs/dev/plugins/hash_plugin.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/plugins/hash_plugin.rst)
+> Pinned source for SearXNG master: [docs/dev/plugins/hash_plugin.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/plugins/hash_plugin.rst)
 
-.. \_hash\_plugin plugin:
+<a id="hash-plugin-plugin"></a>
 
 # Hash Values
 
-.. autoclass:: searx.plugins.hash\_plugin.SXNGPlugin
-:members:
+<a id="api-searx-plugins-hash-plugin-sxngplugin"></a>
+
+#### `SXNGPlugin(Plugin)`
+
+Plugin converts strings to different hash digests.  The results are
+displayed in area for the "answers".
+
+<a id="api-searx-plugins-hash-plugin-sxngplugin-post-search"></a>
+
+##### `post_search(self, request: "SXNG_Request", search: "SearchWithPlugins") -> EngineResults`
+
+Returns a result list only for the first page.

@@ -667,6 +667,16 @@ function resolveN8nLink(
         if (sourcePath === spaceTablePath) {
           return undefined;
         }
+        // This pinned page predates the rename to `n8n-assistant.md`; the
+        // original relative target was never committed to the documentation
+        // repository. Preserve the intended published destination explicitly.
+        if (
+          sourcePath ===
+            "docs/build/ways-of-building-workflows/use-the-ai-assistant.md" &&
+          pathname === "ai-assistant.md"
+        ) {
+          return `${docsSite}/build/ways-of-building-workflows/n8n-assistant${suffix}`;
+        }
         throw new Error(
           `Missing n8n documentation target ${markdownTarget} from ${sourcePath}`,
         );

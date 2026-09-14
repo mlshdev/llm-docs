@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/file-fdw.sgml#file-fdw](https://www.postgresql.org/docs/18/file-fdw.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/file-fdw.sgml#file-fdw](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/file-fdw.sgml%23file-fdw)
+> Canonical documentation: https://www.postgresql.org/docs/18/file-fdw.html
 
 # file_fdw — access data files in the server's file system
 

@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/logql-to-logsql.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/logql-to-logsql.md)
+> Pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/logql-to-logsql.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/logql-to-logsql.md)
 
 Loki provides [LogQL](https://grafana.com/docs/loki/latest/query/) query language, while VictoriaLogs provides [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/)
 query language. Both languages are optimized for querying logs. The docs below show how to convert typical LogQL queries to LogsQL queries.

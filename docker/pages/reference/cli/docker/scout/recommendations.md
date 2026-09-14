@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/scout/docker_scout_recommendations.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_recommendations.yaml)
+> Pinned source for Docker main: [data/cli/scout/docker_scout_recommendations.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_recommendations.yaml)
 
 # docker scout recommendations
 
@@ -40,15 +40,15 @@ or if you want to control from where the image will be resolved, you must prefix
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--only-refresh` |  | Only display base image refresh recommendations |
-| `--only-update` |  | Only display base image update recommendations |
-| `--org` |  | Namespace of the Docker organization |
-| `-o`, `--output` |  | Write the report to a file |
-| `--platform` |  | Platform of image to analyze |
-| `--ref` |  | Reference to use if the provided tarball contains multiple references. Can only be used with archive |
-| `--tag` |  | Specify tag |
+| Option           | Default | Description                                                                                          |
+| ---------------- | ------- | ---------------------------------------------------------------------------------------------------- |
+| `--only-refresh` |         | Only display base image refresh recommendations                                                      |
+| `--only-update`  |         | Only display base image update recommendations                                                       |
+| `--org`          |         | Namespace of the Docker organization                                                                 |
+| `-o`, `--output` |         | Write the report to a file                                                                           |
+| `--platform`     |         | Platform of image to analyze                                                                         |
+| `--ref`          |         | Reference to use if the provided tarball contains multiple references. Can only be used with archive |
+| `--tag`          |         | Specify tag                                                                                          |
 
 ## Examples
 

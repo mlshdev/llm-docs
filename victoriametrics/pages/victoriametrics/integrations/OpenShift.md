@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/integrations/OpenShift.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/OpenShift.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/integrations/OpenShift.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/OpenShift.md)
 
 ## OpenShift Container Platform (OCP)
 

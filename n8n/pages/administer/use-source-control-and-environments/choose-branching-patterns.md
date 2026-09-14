@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/use-source-control-and-environments/choose-branching-patterns.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/administer/use-source-control-and-environments/choose-branching-patterns.md)
+> Pinned source for n8n main: [docs/administer/use-source-control-and-environments/choose-branching-patterns.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/administer/use-source-control-and-environments/choose-branching-patterns.md)
 
 # Branch patterns <a id="branch-patterns"></a>
 

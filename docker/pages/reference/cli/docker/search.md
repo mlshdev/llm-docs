@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_search.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_search.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_search.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_search.yaml)
 
 # docker search
 
@@ -12,12 +12,12 @@ Search [Docker Hub](https://hub.docker.com) for images
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--filter` |  | Filter output based on conditions provided |
-| `--format` |  | Pretty-print search using a Go template |
-| `--limit` |  | Max number of search results |
-| `--no-trunc` |  | Don't truncate output |
+| Option           | Default | Description                                |
+| ---------------- | ------- | ------------------------------------------ |
+| `-f`, `--filter` |         | Filter output based on conditions provided |
+| `--format`       |         | Pretty-print search using a Go template    |
+| `--limit`        |         | Max number of search results               |
+| `--no-trunc`     |         | Don't truncate output                      |
 
 ## Examples
 
@@ -119,12 +119,12 @@ using a Go template.
 
 Valid placeholders for the Go template are:
 
-| Placeholder    | Description                                    |
-|----------------|------------------------------------------------|
-| `.Name`        | Image Name                                     |
-| `.Description` | Image description                              |
-| `.StarCount`   | Number of stars for the image                  |
-| `.IsOfficial`  | "OK" if image is official                      |
+| Placeholder    | Description                   |
+| -------------- | ----------------------------- |
+| `.Name`        | Image Name                    |
+| `.Description` | Image description             |
+| `.StarCount`   | Number of stars for the image |
+| `.IsOfficial`  | "OK" if image is official     |
 
 When you use the `--format` option, the `search` command will
 output the data exactly as the template declares. If you use the

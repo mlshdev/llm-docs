@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/opentelemetry/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/opentelemetry/_index.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/opentelemetry/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/opentelemetry/_index.md)
 
 VictoriaMetrics software provides native [OpenTelemetry](https://opentelemetry.io/) ingestion across **metrics**, **logs**, and **traces** via dedicated components.
 This allows running OpenTelemetry-based observability pipeline with VictoriaMetrics software as your backend.

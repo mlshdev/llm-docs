@@ -1,4 +1,4 @@
-> Release-pinned source for discord.py-self v2.1.0: [docs/faq.rst](https://github.com/dolfies/discord.py-self/blob/6de18b4cb40dd42625a535f52d9715c71399ffb3/docs/faq.rst)
+> Pinned source for discord.py-self v2.1.0: [docs/faq.rst](https://github.com/dolfies/discord.py-self/blob/6de18b4cb40dd42625a535f52d9715c71399ffb3/docs/faq.rst)
 
 - **Orphan:**
 
@@ -48,11 +48,10 @@ time.sleep(10)
 await asyncio.sleep(10)
 ```
 
-Another common source of blocking for too long is using HTTP requests with the famous module [req:index](https://discordpy-self.readthedocs.io/req:index.html).
-While [req:index](https://discordpy-self.readthedocs.io/req:index.html) is an amazing module for non-asynchronous programming, it is not a good choice for
-
-- **Mod:** `asyncio` because certain requests can block the event loop too long. Instead, use the [aiohttp](https://discordpy-self.readthedocs.io/aio:index.html) library which
-  is installed on the side with this library.
+Another common source of blocking for too long is using HTTP requests with the famous module [req:index](https://requests.readthedocs.io/en/latest/).
+While [req:index](https://requests.readthedocs.io/en/latest/) is an amazing module for non-asynchronous programming, it is not a good choice for
+`asyncio` because certain requests can block the event loop too long. Instead, use the [aiohttp](https://docs.aiohttp.org/en/stable/) library which
+is installed on the side with this library.
 
 Consider the following example: :
 
@@ -131,8 +130,8 @@ await message.author.send('👋')
 
 ### How do I get the ID of a sent message?
 
-- **Meth:** `abc.Messageable.send` returns the `Message` that was sent.
-  The ID of a message can be accessed via `Message.id`: :
+`abc.Messageable.send` returns the `Message` that was sent.
+The ID of a message can be accessed via `Message.id`: :
 
 ```python
 message = await channel.send('hmm…')
@@ -169,7 +168,7 @@ my_files = [
 await channel.send(files=my_files)
 ```
 
-If you want to upload something from a URL, you will have to use an HTTP request using [aiohttp](https://discordpy-self.readthedocs.io/aio:index.html)
+If you want to upload something from a URL, you will have to use an HTTP request using [aiohttp](https://docs.aiohttp.org/en/stable/)
 and then pass an `io.BytesIO` instance to `File` like so:
 
 ```python3
@@ -207,8 +206,7 @@ to do anything special. You **cannot** send `':thumbsup:'` style shorthands.
 
 For custom emoji, you should pass an instance of `Emoji`. You can also pass a `'<:name:id>'` string, but if you
 can use said emoji, you should be able to use `Client.get_emoji` to get an emoji via ID or use `utils.find`/
-
-- **Func:** `utils.get` on `Client.emojis` or `Guild.emojis` collections.
+`utils.get` on `Client.emojis` or `Guild.emojis` collections.
 
 The name and ID of a custom emoji can be found with the client by prefixing `:custom_emoji:` with a backslash.
 For example, sending the message `\:python3:` with the client will result in `<:python3:232720527448342530>`.
@@ -302,7 +300,7 @@ if guild is not None:
 ### How do I make a web request?
 
 To make a request, you should use a non-blocking library.
-This library already uses and requires a 3rd party library for making requests, [aiohttp](https://discordpy-self.readthedocs.io/aio:index.html).
+This library already uses and requires a 3rd party library for making requests, [aiohttp](https://docs.aiohttp.org/en/stable/).
 
 Quick example:
 

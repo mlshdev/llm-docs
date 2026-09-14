@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/reference/install-configuration/observability/logs-and-accesslogs.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/observability/logs-and-accesslogs.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/reference/install-configuration/observability/logs-and-accesslogs.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/observability/logs-and-accesslogs.md)
 
 ## Logs
 
@@ -368,8 +368,8 @@ It's the default format provided by Traefik.
 Below the fields displayed with the Traefik CLF format:
 
 ```html
-<remote_IP_address> - <client_user_name_if_available> [<timestamp>]
-"<request_method> <request_path> <request_protocol>" <HTTP_status> <content-length>
+<remote_IP_address> - <client_user_name_if_available> [<timestamp>] 
+"<request_method> <request_path> <request_protocol>" <HTTP_status> <content-length> 
 "<request_referrer>" "<request_user_agent>" <number_of_requests_received_since_Traefik_started>
 "<Traefik_router_name>" "<Traefik_server_URL>" <request_duration_in_ms>ms
 ```
@@ -383,8 +383,8 @@ Below the fields displayed with the Traefik CLF format:
 Below the fields displayed with the generic CLF format:
 
 ```html
-<remote_IP_address> - <client_user_name_if_available> [<timestamp>]
-"<request_method> <request_path> <request_protocol>" <HTTP_status> <content-length>
+<remote_IP_address> - <client_user_name_if_available> [<timestamp>] 
+"<request_method> <request_path> <request_protocol>" <HTTP_status> <content-length> 
 "<request_referrer>" "<request_user_agent>"
 ```
 

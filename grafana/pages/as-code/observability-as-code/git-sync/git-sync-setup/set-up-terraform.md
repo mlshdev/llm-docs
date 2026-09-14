@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.1: [docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-terraform.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-terraform.md)
+> Pinned source for Grafana v13.2.1: [docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-terraform.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/as-code/observability-as-code/git-sync/git-sync-setup/set-up-terraform.md)
 
 # Set up Git Sync with Terraform
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_service_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_service_create.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_service_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_service_create.yaml)
 
 # docker service create
 
@@ -10,91 +10,91 @@ Create a new service
 
 Creates a service as described by the specified parameters.
 
-> [!NOTE]
+> \[!NOTE]
 > This is a cluster management command, and must be executed on a swarm
 > manager node. To learn about managers and workers, refer to the
-> [Swarm mode section](/engine/swarm/) in the
+> [Swarm mode section](https://docs.docker.com/engine/swarm/) in the
 > documentation.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--cap-add` |  | Add Linux capabilities (API 1.41+) |
-| `--cap-drop` |  | Drop Linux capabilities (API 1.41+) |
-| `--config` |  | Specify configurations to expose to the service (API 1.30+) |
-| `--constraint` |  | Placement constraints |
-| `--container-label` |  | Container labels |
-| `--credential-spec` |  | Credential spec for managed service account (Windows only) (API 1.29+) |
-| `-d`, `--detach` |  | Exit immediately instead of waiting for the service to converge (API 1.29+) |
-| `--dns` |  | Set custom DNS servers (API 1.25+) |
-| `--dns-option` |  | Set DNS options (API 1.25+) |
-| `--dns-search` |  | Set custom DNS search domains (API 1.25+) |
-| `--endpoint-mode` | `vip` | Endpoint mode (vip or dnsrr) |
-| `--entrypoint` |  | Overwrite the default ENTRYPOINT of the image |
-| `-e`, `--env` |  | Set environment variables |
-| `--env-file` |  | Read in a file of environment variables |
-| `--generic-resource` |  | User defined resources |
-| `--group` |  | Set one or more supplementary user groups for the container (API 1.25+) |
-| `--health-cmd` |  | Command to run to check health (API 1.25+) |
-| `--health-interval` |  | Time between running the check (ms\|s\|m\|h) (API 1.25+) |
-| `--health-retries` |  | Consecutive failures needed to report unhealthy (API 1.25+) |
-| `--health-start-interval` |  | Time between running the check during the start period (ms\|s\|m\|h) (API 1.44+) |
-| `--health-start-period` |  | Start period for the container to initialize before counting retries towards unstable (ms\|s\|m\|h) (API 1.29+) |
-| `--health-timeout` |  | Maximum time to allow one check to run (ms\|s\|m\|h) (API 1.25+) |
-| `--host` |  | Set one or more custom host-to-IP mappings (host:ip) (API 1.25+) |
-| `--hostname` |  | Container hostname (API 1.25+) |
-| `--init` |  | Use an init inside each service container to forward signals and reap processes (API 1.37+) |
-| `--isolation` |  | Service container isolation mode (API 1.35+) |
-| `-l`, `--label` |  | Service labels |
-| `--limit-cpu` |  | Limit CPUs |
-| `--limit-memory` |  | Limit Memory |
-| `--limit-pids` |  | Limit maximum number of processes (default 0 = unlimited) (API 1.41+) |
-| `--log-driver` |  | Logging driver for service |
-| `--log-opt` |  | Logging driver options |
-| `--max-concurrent` |  | Number of job tasks to run concurrently (default equal to --replicas) (API 1.41+) |
-| `--memory-swap` |  | Swap Bytes (-1 for unlimited) (API 1.52+) |
-| `--memory-swappiness` | `-1` | Tune memory swappiness (0-100), -1 to reset to default (API 1.52+) |
-| `--mode` | `replicated` | Service mode (`replicated`, `global`, `replicated-job`, `global-job`) |
-| `--mount` |  | Attach a filesystem mount to the service |
-| `--name` |  | Service name |
-| `--network` |  | Network attachments |
-| `--no-healthcheck` |  | Disable any container-specified HEALTHCHECK (API 1.25+) |
-| `--no-resolve-image` |  | Do not query the registry to resolve image digest and supported platforms (API 1.30+) |
-| `--oom-score-adj` |  | Tune host's OOM preferences (-1000 to 1000) (API 1.46+) |
-| `--placement-pref` |  | Add a placement preference (API 1.28+) |
-| `-p`, `--publish` |  | Publish a port as a node port |
-| `-q`, `--quiet` |  | Suppress progress output |
-| `--read-only` |  | Mount the container's root filesystem as read only (API 1.28+) |
-| `--replicas` |  | Number of tasks |
-| `--replicas-max-per-node` |  | Maximum number of tasks per node (default 0 = unlimited) (API 1.40+) |
-| `--reserve-cpu` |  | Reserve CPUs |
-| `--reserve-memory` |  | Reserve Memory |
-| `--restart-condition` |  | Restart when condition is met (`none`, `on-failure`, `any`) (default `any`) |
-| `--restart-delay` |  | Delay between restart attempts (ns\|us\|ms\|s\|m\|h) (default 5s) |
-| `--restart-max-attempts` |  | Maximum number of restarts before giving up |
-| `--restart-window` |  | Window used to evaluate the restart policy (ns\|us\|ms\|s\|m\|h) |
-| `--rollback-delay` |  | Delay between task rollbacks (ns\|us\|ms\|s\|m\|h) (default 0s) (API 1.28+) |
-| `--rollback-failure-action` |  | Action on rollback failure (`pause`, `continue`) (default `pause`) (API 1.28+) |
-| `--rollback-max-failure-ratio` |  | Failure rate to tolerate during a rollback (default 0) (API 1.28+) |
-| `--rollback-monitor` |  | Duration after each task rollback to monitor for failure (ns\|us\|ms\|s\|m\|h) (default 5s) (API 1.28+) |
-| `--rollback-order` |  | Rollback order (`start-first`, `stop-first`) (default `stop-first`) (API 1.29+) |
-| `--rollback-parallelism` | `1` | Maximum number of tasks rolled back simultaneously (0 to roll back all at once) (API 1.28+) |
-| `--secret` |  | Specify secrets to expose to the service (API 1.25+) |
-| `--stop-grace-period` |  | Time to wait before force killing a container (ns\|us\|ms\|s\|m\|h) (default 10s) |
-| `--stop-signal` |  | Signal to stop the container (API 1.28+) |
-| `--sysctl` |  | Sysctl options (API 1.40+) |
-| `-t`, `--tty` |  | Allocate a pseudo-TTY (API 1.25+) |
-| `--ulimit` |  | Ulimit options (API 1.41+) |
-| `--update-delay` |  | Delay between updates (ns\|us\|ms\|s\|m\|h) (default 0s) |
-| `--update-failure-action` |  | Action on update failure (`pause`, `continue`, `rollback`) (default `pause`) |
-| `--update-max-failure-ratio` |  | Failure rate to tolerate during an update (default 0) (API 1.25+) |
-| `--update-monitor` |  | Duration after each task update to monitor for failure (ns\|us\|ms\|s\|m\|h) (default 5s) (API 1.25+) |
-| `--update-order` |  | Update order (`start-first`, `stop-first`) (default `stop-first`) (API 1.29+) |
-| `--update-parallelism` | `1` | Maximum number of tasks updated simultaneously (0 to update all at once) |
-| `-u`, `--user` |  | Username or UID (format: <name\|uid>[:<group\|gid>]) |
-| `--with-registry-auth` |  | Send registry authentication details to swarm agents |
-| `-w`, `--workdir` |  | Working directory inside the container |
+| Option                         | Default      | Description                                                                                                     |
+| ------------------------------ | ------------ | --------------------------------------------------------------------------------------------------------------- |
+| `--cap-add`                    |              | Add Linux capabilities (API 1.41+)                                                                              |
+| `--cap-drop`                   |              | Drop Linux capabilities (API 1.41+)                                                                             |
+| `--config`                     |              | Specify configurations to expose to the service (API 1.30+)                                                     |
+| `--constraint`                 |              | Placement constraints                                                                                           |
+| `--container-label`            |              | Container labels                                                                                                |
+| `--credential-spec`            |              | Credential spec for managed service account (Windows only) (API 1.29+)                                          |
+| `-d`, `--detach`               |              | Exit immediately instead of waiting for the service to converge (API 1.29+)                                     |
+| `--dns`                        |              | Set custom DNS servers (API 1.25+)                                                                              |
+| `--dns-option`                 |              | Set DNS options (API 1.25+)                                                                                     |
+| `--dns-search`                 |              | Set custom DNS search domains (API 1.25+)                                                                       |
+| `--endpoint-mode`              | `vip`        | Endpoint mode (vip or dnsrr)                                                                                    |
+| `--entrypoint`                 |              | Overwrite the default ENTRYPOINT of the image                                                                   |
+| `-e`, `--env`                  |              | Set environment variables                                                                                       |
+| `--env-file`                   |              | Read in a file of environment variables                                                                         |
+| `--generic-resource`           |              | User defined resources                                                                                          |
+| `--group`                      |              | Set one or more supplementary user groups for the container (API 1.25+)                                         |
+| `--health-cmd`                 |              | Command to run to check health (API 1.25+)                                                                      |
+| `--health-interval`            |              | Time between running the check (ms\|s\|m\|h) (API 1.25+)                                                        |
+| `--health-retries`             |              | Consecutive failures needed to report unhealthy (API 1.25+)                                                     |
+| `--health-start-interval`      |              | Time between running the check during the start period (ms\|s\|m\|h) (API 1.44+)                                |
+| `--health-start-period`        |              | Start period for the container to initialize before counting retries towards unstable (ms\|s\|m\|h) (API 1.29+) |
+| `--health-timeout`             |              | Maximum time to allow one check to run (ms\|s\|m\|h) (API 1.25+)                                                |
+| `--host`                       |              | Set one or more custom host-to-IP mappings (host:ip) (API 1.25+)                                                |
+| `--hostname`                   |              | Container hostname (API 1.25+)                                                                                  |
+| `--init`                       |              | Use an init inside each service container to forward signals and reap processes (API 1.37+)                     |
+| `--isolation`                  |              | Service container isolation mode (API 1.35+)                                                                    |
+| `-l`, `--label`                |              | Service labels                                                                                                  |
+| `--limit-cpu`                  |              | Limit CPUs                                                                                                      |
+| `--limit-memory`               |              | Limit Memory                                                                                                    |
+| `--limit-pids`                 |              | Limit maximum number of processes (default 0 = unlimited) (API 1.41+)                                           |
+| `--log-driver`                 |              | Logging driver for service                                                                                      |
+| `--log-opt`                    |              | Logging driver options                                                                                          |
+| `--max-concurrent`             |              | Number of job tasks to run concurrently (default equal to --replicas) (API 1.41+)                               |
+| `--memory-swap`                |              | Swap Bytes (-1 for unlimited) (API 1.52+)                                                                       |
+| `--memory-swappiness`          | `-1`         | Tune memory swappiness (0-100), -1 to reset to default (API 1.52+)                                              |
+| `--mode`                       | `replicated` | Service mode (`replicated`, `global`, `replicated-job`, `global-job`)                                           |
+| `--mount`                      |              | Attach a filesystem mount to the service                                                                        |
+| `--name`                       |              | Service name                                                                                                    |
+| `--network`                    |              | Network attachments                                                                                             |
+| `--no-healthcheck`             |              | Disable any container-specified HEALTHCHECK (API 1.25+)                                                         |
+| `--no-resolve-image`           |              | Do not query the registry to resolve image digest and supported platforms (API 1.30+)                           |
+| `--oom-score-adj`              |              | Tune host's OOM preferences (-1000 to 1000) (API 1.46+)                                                         |
+| `--placement-pref`             |              | Add a placement preference (API 1.28+)                                                                          |
+| `-p`, `--publish`              |              | Publish a port as a node port                                                                                   |
+| `-q`, `--quiet`                |              | Suppress progress output                                                                                        |
+| `--read-only`                  |              | Mount the container's root filesystem as read only (API 1.28+)                                                  |
+| `--replicas`                   |              | Number of tasks                                                                                                 |
+| `--replicas-max-per-node`      |              | Maximum number of tasks per node (default 0 = unlimited) (API 1.40+)                                            |
+| `--reserve-cpu`                |              | Reserve CPUs                                                                                                    |
+| `--reserve-memory`             |              | Reserve Memory                                                                                                  |
+| `--restart-condition`          |              | Restart when condition is met (`none`, `on-failure`, `any`) (default `any`)                                     |
+| `--restart-delay`              |              | Delay between restart attempts (ns\|us\|ms\|s\|m\|h) (default 5s)                                               |
+| `--restart-max-attempts`       |              | Maximum number of restarts before giving up                                                                     |
+| `--restart-window`             |              | Window used to evaluate the restart policy (ns\|us\|ms\|s\|m\|h)                                                |
+| `--rollback-delay`             |              | Delay between task rollbacks (ns\|us\|ms\|s\|m\|h) (default 0s) (API 1.28+)                                     |
+| `--rollback-failure-action`    |              | Action on rollback failure (`pause`, `continue`) (default `pause`) (API 1.28+)                                  |
+| `--rollback-max-failure-ratio` |              | Failure rate to tolerate during a rollback (default 0) (API 1.28+)                                              |
+| `--rollback-monitor`           |              | Duration after each task rollback to monitor for failure (ns\|us\|ms\|s\|m\|h) (default 5s) (API 1.28+)         |
+| `--rollback-order`             |              | Rollback order (`start-first`, `stop-first`) (default `stop-first`) (API 1.29+)                                 |
+| `--rollback-parallelism`       | `1`          | Maximum number of tasks rolled back simultaneously (0 to roll back all at once) (API 1.28+)                     |
+| `--secret`                     |              | Specify secrets to expose to the service (API 1.25+)                                                            |
+| `--stop-grace-period`          |              | Time to wait before force killing a container (ns\|us\|ms\|s\|m\|h) (default 10s)                               |
+| `--stop-signal`                |              | Signal to stop the container (API 1.28+)                                                                        |
+| `--sysctl`                     |              | Sysctl options (API 1.40+)                                                                                      |
+| `-t`, `--tty`                  |              | Allocate a pseudo-TTY (API 1.25+)                                                                               |
+| `--ulimit`                     |              | Ulimit options (API 1.41+)                                                                                      |
+| `--update-delay`               |              | Delay between updates (ns\|us\|ms\|s\|m\|h) (default 0s)                                                        |
+| `--update-failure-action`      |              | Action on update failure (`pause`, `continue`, `rollback`) (default `pause`)                                    |
+| `--update-max-failure-ratio`   |              | Failure rate to tolerate during an update (default 0) (API 1.25+)                                               |
+| `--update-monitor`             |              | Duration after each task update to monitor for failure (ns\|us\|ms\|s\|m\|h) (default 5s) (API 1.25+)           |
+| `--update-order`               |              | Update order (`start-first`, `stop-first`) (default `stop-first`) (API 1.29+)                                   |
+| `--update-parallelism`         | `1`          | Maximum number of tasks updated simultaneously (0 to update all at once)                                        |
+| `-u`, `--user`                 |              | Username or UID (format: \<name\|uid>\[:\<group\|gid>])                                                         |
+| `--with-registry-auth`         |              | Send registry authentication details to swarm agents                                                            |
+| `-w`, `--workdir`              |              | Working directory inside the container                                                                          |
 
 ## Examples
 
@@ -175,7 +175,7 @@ ID            NAME   MODE        REPLICAS  IMAGE
 ### Create a service with secrets (--secret) {#secret}
 
 Use the `--secret` flag to give a container access to a
-[secret](/reference/cli/docker/secret/create/).
+[secret](https://docs.docker.com/reference/cli/docker/secret/create/).
 
 Create a service specifying a secret:
 
@@ -207,7 +207,7 @@ example above, two files are created: `/run/secrets/ssh` and
 ### Create a service with configs (--config) {#config}
 
 Use the `--config` flag to give a container access to a
-[config](/reference/cli/docker/config/create/).
+[config](https://docs.docker.com/reference/cli/docker/config/create/).
 
 Create a service with a config. The config will be mounted into `redis-config`,
 be owned by the user who runs the command inside the container (often `root`),
@@ -244,10 +244,10 @@ $ docker service create \
   redis:7.4.1
 ```
 
-When you run a [service update](/reference/cli/docker/service/update/), the scheduler updates a
+When you run a [service update](https://docs.docker.com/reference/cli/docker/service/update/), the scheduler updates a
 maximum of 2 tasks at a time, with `10s` between updates. For more information,
 refer to the [rolling updates
-tutorial](/engine/swarm/swarm-tutorial/rolling-update/).
+tutorial](https://docs.docker.com/engine/swarm/swarm-tutorial/rolling-update/).
 
 ### Set environment variables (-e, --env) {#env}
 
@@ -296,7 +296,7 @@ $ docker service create \
 ```
 
 For more information about labels, refer to [apply custom
-metadata](/config/labels-custom-metadata/).
+metadata](https://docs.docker.com/config/labels-custom-metadata/).
 
 ### Add bind mounts, volumes or memory filesystems (--mount) {#mount}
 
@@ -318,7 +318,7 @@ container from the image used to create the container and from the host machine.
 Named volumes are created and managed by Docker, and a named volume persists
 even when no container is currently using it. Data in named volumes can be
 shared between a container and the host machine, as well as between multiple
-containers. Docker uses a _volume driver_ to create, manage, and mount volumes.
+containers. Docker uses a *volume driver* to create, manage, and mount volumes.
 You can back up or restore volumes using Docker commands.
 
 A **tmpfs** mounts a tmpfs inside a container for volatile data.
@@ -334,7 +334,7 @@ your web server containers when they start. To update the website, you just
 update the named volume.
 
 For more information about named volumes, see
-[Data Volumes](/storage/volumes/).
+[Data Volumes](https://docs.docker.com/storage/volumes/).
 
 The following table describes options which apply to both bind mounts and named
 volumes in a service:
@@ -351,7 +351,7 @@ volumes in a service:
     <td>
       <p>The type of mount, can be either <tt>volume</tt>, <tt>bind</tt>, <tt>tmpfs</tt>, or <tt>npipe</tt>. Defaults to <tt>volume</tt> if no type is specified.</p>
       <ul>
-        <li><tt>volume</tt>: mounts a <a href="/reference/cli/docker/volume/create/">managed volume</a>
+        <li><tt>volume</tt>: mounts a <a href="https://docs.docker.com/reference/cli/docker/volume/create/">managed volume</a>
         into the container.</li> <li><tt>bind</tt>:
         bind-mounts a directory or file from the host into the container.</li>
         <li><tt>tmpfs</tt>: mount a tmpfs in the container</li>
@@ -489,24 +489,24 @@ volume mounts, and is only configurable for bind mounts. In other words, named
 volumes do not support bind propagation.
 
 - **`shared`**: Sub-mounts of the original mount are exposed to replica mounts,
-                and sub-mounts of replica mounts are also propagated to the
-                original mount.
+  and sub-mounts of replica mounts are also propagated to the
+  original mount.
 - **`slave`**: similar to a shared mount, but only in one direction. If the
-               original mount exposes a sub-mount, the replica mount can see it.
-               However, if the replica mount exposes a sub-mount, the original
-               mount cannot see it.
+  original mount exposes a sub-mount, the replica mount can see it.
+  However, if the replica mount exposes a sub-mount, the original
+  mount cannot see it.
 - **`private`**: The mount is private. Sub-mounts within it are not exposed to
-                 replica mounts, and sub-mounts of replica mounts are not
-                 exposed to the original mount.
+  replica mounts, and sub-mounts of replica mounts are not
+  exposed to the original mount.
 - **`rshared`**: The same as shared, but the propagation also extends to and from
-                 mount points nested within any of the original or replica mount
-                 points.
+  mount points nested within any of the original or replica mount
+  points.
 - **`rslave`**: The same as `slave`, but the propagation also extends to and from
-                 mount points nested within any of the original or replica mount
-                 points.
+  mount points nested within any of the original or replica mount
+  points.
 - **`rprivate`**: The default. The same as `private`, meaning that no mount points
-                  anywhere within the original or replica mount points propagate
-                  in either direction.
+  anywhere within the original or replica mount points propagate
+  in either direction.
 
 For more information about bind propagation, see the
 [Linux kernel documentation for shared subtree](https://www.kernel.org/doc/Documentation/filesystems/sharedsubtree.txt).
@@ -535,7 +535,7 @@ The following options can only be used for named volumes (`type=volume`):
       creation. For example,
       <tt>volume-label=mylabel=hello-world,my-other-label=hello-mars</tt>. For more
       information about labels, refer to
-      <a href="/config/labels-custom-metadata/">apply custom metadata</a>.
+      <a href="https://docs.docker.com/config/labels-custom-metadata/">apply custom metadata</a>.
     </td>
   </tr>
   <tr>
@@ -669,7 +669,7 @@ $ docker service create \
 
 ### Set service mode (--mode)
 
-The service mode determines whether this is a _replicated_ service or a _global_
+The service mode determines whether this is a *replicated* service or a *global*
 service. A replicated service runs as many tasks as specified, while a global
 service runs one task on each active node in the swarm. Placement
 `--constraint` expressions still apply: a global service only schedules
@@ -688,13 +688,13 @@ $ docker service create \
 
 You can limit the set of nodes where a task can be scheduled by defining
 constraint expressions. They apply to both replicated and global services
-(and to jobs). Constraint expressions can either use a _match_ (`==`)
-or _exclude_ (`!=`) rule. Multiple constraints find nodes that satisfy every
+(and to jobs). Constraint expressions can either use a *match* (`==`)
+or *exclude* (`!=`) rule. Multiple constraints find nodes that satisfy every
 expression (AND match). Constraints can match node or Docker Engine labels as
 follows:
 
 | node attribute       | matches                        | example                                       |
-|----------------------|--------------------------------|-----------------------------------------------|
+| -------------------- | ------------------------------ | --------------------------------------------- |
 | `node.id`            | Node ID                        | `node.id==2ivku8v2gvtg4`                      |
 | `node.hostname`      | Node hostname                  | `node.hostname!=node-2`                       |
 | `node.role`          | Node role (`manager`/`worker`) | `node.role==manager`                          |
@@ -705,7 +705,7 @@ follows:
 
 `engine.labels` apply to Docker Engine labels like operating system, drivers,
 etc. Swarm administrators add `node.labels` for operational purposes by using
-the [`docker node update`](/reference/cli/docker/node/update/) command.
+the [`docker node update`](https://docs.docker.com/reference/cli/docker/node/update/) command.
 
 For example, the following limits tasks for the redis service to nodes where the
 node type label equals queue:
@@ -943,7 +943,7 @@ $ docker service create \
 The swarm extends my-network to each node running the service.
 
 Containers on the same network can access each other using
-[service discovery](/engine/network/drivers/overlay/#container-discovery).
+[service discovery](https://docs.docker.com/engine/network/drivers/overlay/#container-discovery).
 
 Long form syntax of `--network` allows to specify list of aliases and driver options:
 `--network name=my-network,alias=web1,driver-opt=field1=value1`
@@ -1017,7 +1017,7 @@ there is a task for the service running on the node. If you use `host` mode,
 the port is only bound on nodes where the service is running, and a given port
 on a node can only be bound once. You can only set the publication mode using
 the long syntax. For more information refer to
-[Use swarm mode routing mesh](/engine/swarm/ingress/).
+[Use swarm mode routing mesh](https://docs.docker.com/engine/swarm/ingress/).
 
 ### Provide credential specs for managed service accounts (--credentials-spec) {#credentials-spec}
 
@@ -1034,7 +1034,9 @@ When using the `registry://<value-name>` format, the credential spec is
 read from the Windows registry on the daemon's host. The specified
 registry value must be located in:
 
-    HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization\Containers\CredentialSpecs
+```
+HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization\Containers\CredentialSpecs
+```
 
 ### Create services using templates
 
@@ -1122,6 +1124,7 @@ $ docker service create --name myservice --isolation=process microsoft/nanoserve
 ```
 
 Supported isolation modes on Windows are:
+
 - `default`: use default settings specified on the node running the task
 - `process`: use process isolation (Windows server only)
 - `hyperv`: use Hyper-V isolation

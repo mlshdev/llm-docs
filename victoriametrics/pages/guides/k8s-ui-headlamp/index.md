@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/k8s-ui-headlamp/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-ui-headlamp/_index.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/guides/k8s-ui-headlamp/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-ui-headlamp/_index.md)
 
 [Headlamp](https://headlamp.dev/) is a user-friendly Kubernetes UI with a built-in Prometheus plugin that can show metrics from VictoriaMetrics.
 

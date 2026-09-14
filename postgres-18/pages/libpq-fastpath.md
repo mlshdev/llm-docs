@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/libpq.sgml#libpq-fastpath](https://www.postgresql.org/docs/18/libpq-fastpath.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/libpq.sgml#libpq-fastpath](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/libpq.sgml%23libpq-fastpath)
+> Canonical documentation: https://www.postgresql.org/docs/18/libpq-fastpath.html
 
 # The Fast-Path Interface
 

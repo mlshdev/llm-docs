@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/planstats.sgml#row-estimation-examples](https://www.postgresql.org/docs/18/row-estimation-examples.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/planstats.sgml#row-estimation-examples](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/planstats.sgml%23row-estimation-examples)
+> Canonical documentation: https://www.postgresql.org/docs/18/row-estimation-examples.html
 
 # Row Estimation Examples
 

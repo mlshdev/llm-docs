@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/kubernetes/crd/tcp/ingressroutetcp.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/crd/tcp/ingressroutetcp.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/kubernetes/crd/tcp/ingressroutetcp.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/crd/tcp/ingressroutetcp.md)
 
 `IngressRouteTCP` is the CRD implementation of a [Traefik TCP router](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/routing/rules-and-priority).
 
@@ -48,7 +48,7 @@ spec:
     certResolver: foo
     domains:
     - main: example.net
-      sans:
+      sans:                       
       - a.example.net
       - b.example.net
     passthrough: false

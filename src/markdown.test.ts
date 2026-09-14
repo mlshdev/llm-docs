@@ -2,6 +2,8 @@ import { describe, expect, test } from "bun:test";
 import {
   cleanMarkdown,
   convertRst,
+  documentLinks,
+  markdownLinks,
   parseFrontmatter,
   rewriteMarkdownLinks,
 } from "./markdown.ts";
@@ -48,6 +50,30 @@ title: Example
     expect(cleaned).toContain("{: keep-inside-code }");
   });
 
+  test("preserves comments, anchors, and blank lines inside long fences", () => {
+    const source = `# Example
+
+\`\`\`\`html
+<!-- keep -->
+<a id="inside">value</a>
+
+
+
+\`\`\`
+still code
+\`\`\`\`
+
+<!-- remove -->
+<a id="outside">value</a>
+`;
+    const cleaned = cleanMarkdown(source);
+    expect(cleaned).toContain(
+      '<!-- keep -->\n<a id="inside">value</a>\n\n\n\n```\nstill code',
+    );
+    expect(cleaned).not.toContain("<!-- remove -->");
+    expect(cleaned).toContain('<a id="outside"></a>value');
+  });
+
   test("rewrites Markdown links and rejects relative resolver output", () => {
     expect(
       rewriteMarkdownLinks(
@@ -64,6 +90,36 @@ title: Example
     expect(
       rewriteMarkdownLinks("![Diagram](missing.png)", () => undefined),
     ).toBe("\\[Image unavailable: Diagram]\n");
+  });
+
+  test("extracts a link whose target contains balanced parentheses", () => {
+    expect(markdownLinks("[All items](pages/(node-name).all.md)")).toEqual([
+      {
+        kind: "link",
+        syntax: "markdown",
+        url: "pages/(node-name).all.md",
+      },
+    ]);
+  });
+
+  test("extracts HTML links outside fenced examples", () => {
+    expect(
+      documentLinks(
+        '<figure><img src="asset.png"></figure>\n<a href="guide.md">Guide</a>\n`<a href="/literal">Found</a>`\n```html\n<img src="example.png">\n```',
+      ),
+    ).toEqual([
+      { kind: "image", syntax: "html", url: "asset.png" },
+      { kind: "link", syntax: "html", url: "guide.md" },
+    ]);
+  });
+
+  test("rewrites links and media sources inside raw HTML", () => {
+    const rewritten = rewriteMarkdownLinks(
+      '<a href="guide.md">Guide</a><video src="movie.mp4"></video>',
+      (url) => `https://example.com/${url}`,
+    );
+    expect(rewritten).toContain('href="https://example.com/guide.md"');
+    expect(rewritten).toContain('src="https://example.com/movie.mp4"');
   });
 
   test("preserves paragraph and list boundaries", () => {

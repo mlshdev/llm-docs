@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/guides/example-projects/meme-generator-human-in-the-loop.mdx](https://trigger.dev/docs/guides/example-projects/meme-generator-human-in-the-loop)
+> Pinned source for Trigger.dev v4.5.16: [docs/guides/example-projects/meme-generator-human-in-the-loop.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/guides/example-projects/meme-generator-human-in-the-loop.mdx)
+> Canonical documentation: https://trigger.dev/docs/guides/example-projects/meme-generator-human-in-the-loop
 
 # Meme generator with human-in-the-loop approval
 

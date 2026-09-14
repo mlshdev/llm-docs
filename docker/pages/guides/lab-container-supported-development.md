@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/lab-container-supported-development.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/lab-container-supported-development.md)
+> Pinned source for Docker main: [content/guides/lab-container-supported-development.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/lab-container-supported-development.md)
 
 # Lab: Container-Supported Development
 

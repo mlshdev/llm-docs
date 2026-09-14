@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_config_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_config_ls.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_config_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_config_ls.yaml)
 
 # docker config ls
 
@@ -12,21 +12,21 @@ List configs
 
 Run this command on a manager node to list the configs in the Swarm.
 
-For detailed information about using configs, refer to [store configuration data using Docker Configs](/engine/swarm/configs/).
+For detailed information about using configs, refer to [store configuration data using Docker Configs](https://docs.docker.com/engine/swarm/configs/).
 
-> [!NOTE]
+> \[!NOTE]
 > This is a cluster management command, and must be executed on a Swarm
 > manager node. To learn about managers and workers, refer to the
-> [Swarm mode section](/engine/swarm/) in the
+> [Swarm mode section](https://docs.docker.com/engine/swarm/) in the
 > documentation.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--filter` |  | Filter output based on conditions provided |
-| `--format` |  | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to https://docs.docker.com/go/formatting/ for more information about formatting output with templates |
-| `-q`, `--quiet` |  | Only display IDs |
+| Option           | Default | Description                                                                                                                                                                                                                                                                                                                                                                            |
+| ---------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `-f`, `--filter` |         | Filter output based on conditions provided                                                                                                                                                                                                                                                                                                                                             |
+| `--format`       |         | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to <https://docs.docker.com/go/formatting/> for more information about formatting output with templates |
+| `-q`, `--quiet`  |         | Only display IDs                                                                                                                                                                                                                                                                                                                                                                       |
 
 ## Examples
 
@@ -106,14 +106,14 @@ using a Go template.
 
 Valid placeholders for the Go template are listed below:
 
-| Placeholder  | Description                                                                          |
-|--------------|--------------------------------------------------------------------------------------|
-| `.ID`        | Config ID                                                                            |
-| `.Name`      | Config name                                                                          |
-| `.CreatedAt` | Time when the config was created                                                     |
-| `.UpdatedAt` | Time when the config was updated                                                     |
-| `.Labels`    | All labels assigned to the config                                                    |
-| `.Label`     | Value of a specific label for this config. For example `{{.Label "my-label"}}`       |
+| Placeholder  | Description                                                                    |
+| ------------ | ------------------------------------------------------------------------------ |
+| `.ID`        | Config ID                                                                      |
+| `.Name`      | Config name                                                                    |
+| `.CreatedAt` | Time when the config was created                                               |
+| `.UpdatedAt` | Time when the config was updated                                               |
+| `.Labels`    | All labels assigned to the config                                              |
+| `.Label`     | Value of a specific label for this config. For example `{{.Label "my-label"}}` |
 
 When using the `--format` option, the `config ls` command will either
 output the data exactly as the template declares or, when using the

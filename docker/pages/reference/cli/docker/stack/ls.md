@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_stack_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_stack_ls.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_stack_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_stack_ls.yaml)
 
 # docker stack ls
 
@@ -12,17 +12,17 @@ List stacks
 
 Lists the stacks.
 
-> [!NOTE]
+> \[!NOTE]
 > This is a cluster management command, and must be executed on a swarm
 > manager node. To learn about managers and workers, refer to the
-> [Swarm mode section](/engine/swarm/) in the
+> [Swarm mode section](https://docs.docker.com/engine/swarm/) in the
 > documentation.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--format` |  | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to https://docs.docker.com/go/formatting/ for more information about formatting output with templates |
+| Option     | Default | Description                                                                                                                                                                                                                                                                                                                                                                            |
+| ---------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--format` |         | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to <https://docs.docker.com/go/formatting/> for more information about formatting output with templates |
 
 ## Examples
 
@@ -43,7 +43,7 @@ The formatting option (`--format`) pretty-prints stacks using a Go template.
 Valid placeholders for the Go template are listed below:
 
 | Placeholder     | Description        |
-|-----------------|--------------------|
+| --------------- | ------------------ |
 | `.Name`         | Stack name         |
 | `.Services`     | Number of services |
 | `.Orchestrator` | Orchestrator name  |

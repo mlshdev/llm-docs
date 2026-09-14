@@ -1,39 +1,26 @@
-> Commit-pinned source for SearXNG master: [README.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/README.rst)
+> Pinned source for SearXNG master: [README.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/README.rst)
 
-.. SPDX-License-Identifier: AGPL-3.0-or-later
+<a id="metasearch-engine"></a> <a id="installation-guide"></a> <a id="configuration-guide"></a> <a id="contributing"></a> <a id="license"></a>
 
-.. figure:: <https://raw.githubusercontent.com/searxng/searxng/master/client/simple/src/brand/searxng.svg>
-:target: <https://searxng.org>
-:alt: SearXNG
-:width: 512px
+![SearXNG](https://raw.githubusercontent.com/searxng/searxng/master/client/simple/src/brand/searxng.svg)
 
-SearXNG is a [metasearch engine](https://en.wikipedia.org/wiki/Metasearch_engine). Users are neither tracked nor profiled.
+SearXNG is a [metasearch engine](https://docs.searxng.org/README.html#metasearch-engine). Users are neither tracked nor profiled.
 
-![](https://img.shields.io/badge/organization-3050ff?style=flat-square\&logo=searxng\&logoColor=fff\&cacheSeconds=86400)
-:target: <https://github.com/searxng>
-:alt: Organization
+![Organization](https://img.shields.io/badge/organization-3050ff?style=flat-square\&logo=searxng\&logoColor=fff\&cacheSeconds=86400)
 
-![](https://img.shields.io/badge/documentation-3050ff?style=flat-square\&logo=readthedocs\&logoColor=fff\&cacheSeconds=86400)
-:target: <https://docs.searxng.org>
-:alt: Documentation
+![Documentation](https://img.shields.io/badge/documentation-3050ff?style=flat-square\&logo=readthedocs\&logoColor=fff\&cacheSeconds=86400)
 
-![](https://img.shields.io/github/license/searxng/searxng?style=flat-square\&label=license\&color=3050ff\&cacheSeconds=86400)
-:target: <https://github.com/searxng/searxng/blob/master/LICENSE>
-:alt: License
+![License](https://img.shields.io/github/license/searxng/searxng?style=flat-square\&label=license\&color=3050ff\&cacheSeconds=86400)
 
-![](https://img.shields.io/github/commit-activity/y/searxng/searxng/master?style=flat-square\&label=commits\&color=3050ff\&cacheSeconds=3600)
-:target: <https://github.com/searxng/searxng/commits/master/>
-:alt: Commits
+![Commits](https://img.shields.io/github/commit-activity/y/searxng/searxng/master?style=flat-square\&label=commits\&color=3050ff\&cacheSeconds=3600)
 
-![](https://img.shields.io/weblate/progress/searxng?server=https%3A%2F%2Ftranslate.codeberg.org\&style=flat-square\&label=translated\&color=3050ff\&cacheSeconds=86400)
-:target: <https://translate.codeberg.org/projects/searxng/>
-:alt: Translated
+![Translated](https://img.shields.io/weblate/progress/searxng?server=https%3A%2F%2Ftranslate.codeberg.org\&style=flat-square\&label=translated\&color=3050ff\&cacheSeconds=86400)
 
 # Setup
 
-To install SearXNG, see [Installation guide](https://docs.searxng.org/admin/installation.html).
+To install SearXNG, see [Installation guide](https://docs.searxng.org/README.html#installation-guide).
 
-To fine-tune SearXNG, see [Configuration guide](https://docs.searxng.org/admin/settings/index.html).
+To fine-tune SearXNG, see [Configuration guide](https://docs.searxng.org/README.html#configuration-guide).
 
 Further information on *how-to* can be found [here](https://docs.searxng.org/admin/index.html).
 
@@ -45,9 +32,9 @@ If you have questions or want to connect with others in the community:
 
 # Contributing
 
-See CONTRIBUTING for more details.
+See CONTRIBUTING\_ for more details.
 
 # License
 
 This project is licensed under the GNU Affero General Public License (AGPL-3.0).
-See LICENSE for more details.
+See LICENSE\_ for more details.

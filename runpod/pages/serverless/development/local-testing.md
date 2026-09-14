@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [serverless/development/local-testing.mdx](https://docs.runpod.io/serverless/development/local-testing)
+> Pinned source for Runpod main: [serverless/development/local-testing.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/serverless/development/local-testing.mdx)
+> Canonical documentation: https://docs.runpod.io/serverless/development/local-testing
 
 # Local testing
 
@@ -107,11 +108,13 @@ from threading import Lock
 counter = 0
 counter_lock = Lock()
 
+
 def handler(event):
     global counter
     with counter_lock:
         counter += 1
         return {"counter": counter}
+
 
 runpod.serverless.start({"handler": handler})
 ```

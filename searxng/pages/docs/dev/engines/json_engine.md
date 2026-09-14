@@ -1,8 +1,9 @@
-> Commit-pinned source for SearXNG master: [docs/dev/engines/json_engine.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/json_engine.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/json_engine.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/json_engine.rst)
 
-.. \_json\_engine engine:
+<a id="json-engine-engine"></a>
 
 # JSON Engine
 
-.. automodule:: searx.engines.json\_engine
-:members:
+#### `searx.engines.json_engine`
+
+Static Python API reference (`automodule`).

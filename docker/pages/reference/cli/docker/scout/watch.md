@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/scout/docker_scout_watch.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_watch.yaml)
+> Pinned source for Docker main: [data/cli/scout/docker_scout_watch.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_watch.yaml)
 
 # docker scout watch
 
@@ -12,18 +12,18 @@ The docker scout watch command watches repositories in a registry and pushes ima
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--all-images` |  | Push all images instead of only the ones pushed during the watch command is running |
-| `--dry-run` |  | Watch images and prepare them, but do not push them |
-| `--interval` | `60` | Interval in seconds between checks |
-| `--org` |  | Namespace of the Docker organization to which image will be pushed |
-| `--refresh-registry` |  | Refresh the list of repositories of a registry at every run. Only with --registry. |
-| `--registry` |  | Registry to watch |
-| `--repository` |  | Repository to watch |
-| `--sbom` | `true` | Create and upload SBOMs |
-| `--tag` |  | Regular expression to match tags to watch |
-| `--workers` | `3` | Number of concurrent workers |
+| Option               | Default | Description                                                                         |
+| -------------------- | ------- | ----------------------------------------------------------------------------------- |
+| `--all-images`       |         | Push all images instead of only the ones pushed during the watch command is running |
+| `--dry-run`          |         | Watch images and prepare them, but do not push them                                 |
+| `--interval`         | `60`    | Interval in seconds between checks                                                  |
+| `--org`              |         | Namespace of the Docker organization to which image will be pushed                  |
+| `--refresh-registry` |         | Refresh the list of repositories of a registry at every run. Only with --registry.  |
+| `--registry`         |         | Registry to watch                                                                   |
+| `--repository`       |         | Repository to watch                                                                 |
+| `--sbom`             | `true`  | Create and upload SBOMs                                                             |
+| `--tag`              |         | Regular expression to match tags to watch                                           |
+| `--workers`          | `3`     | Number of concurrent workers                                                        |
 
 ## Examples
 

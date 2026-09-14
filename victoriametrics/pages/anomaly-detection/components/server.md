@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/components/server.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/server.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/components/server.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/server.md)
 
 Server component of VictoriaMetrics Anomaly Detection (`vmanomaly`) is responsible for serving the REST API (e.g. `/metrics` endpoint) and the [web UI](https://docs.victoriametrics.com/anomaly-detection/ui/) for anomaly detection.
 
@@ -26,7 +26,7 @@ server:
   addr: '0.0.0.0'
   port: 8490
   path_prefix: '/vmanomaly'  # optional path prefix for all HTTP routes
-
+  
   # see https://docs.victoriametrics.com/anomaly-detection/ui/#default-state section for details on constructing the value from UI state
   ui_default_state: '#/?anomaly_threshold=1.0&anomaly_consecutive=true&fit_window=3d'  # optional default UI state opened on /vmui/
   max_concurrent_tasks: 4  # maximum number of concurrent anomaly detection tasks processed by backend

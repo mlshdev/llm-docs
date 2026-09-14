@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmgateway.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmgateway.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmgateway.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmgateway.md)
 
 ***vmgateway is a part of [enterprise package](https://docs.victoriametrics.com/victoriametrics/enterprise/).
 It is available for download and evaluation at [releases page](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/latest).

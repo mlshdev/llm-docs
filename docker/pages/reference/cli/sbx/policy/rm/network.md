@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_policy_rm_network.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_policy_rm_network.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_policy_rm_network.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_policy_rm_network.yaml)
 
 # sbx policy rm network
 
@@ -10,7 +10,7 @@ Remove a network rule
 
 Remove a network rule by rule ID, resource, or both.
 
---id takes the RULE_ID value shown by "sbx policy ls --wide" and
+\--id takes the RULE\_ID value shown by "sbx policy ls --wide" and
 "sbx policy inspect" — the rule's identifier, not its name. Passing a rule
 name fails with an error that names the actual rule ID and, for removable
 rules, the exact corrected command.
@@ -23,19 +23,19 @@ Use "sbx policy ls --wide" to see active rule IDs and resources, or
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--id` |  | Remove by rule ID |
-| `--resource` |  | Remove by resource value(s), comma-separated |
-| `--sandbox` |  | Scope the removal to a specific sandbox (default: global policy) |
+| Option       | Default | Description                                                      |
+| ------------ | ------- | ---------------------------------------------------------------- |
+| `--id`       |         | Remove by rule ID                                                |
+| `--resource` |         | Remove by resource value(s), comma-separated                     |
+| `--sandbox`  |         | Scope the removal to a specific sandbox (default: global policy) |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--cloud` |  | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (https://api.sandboxes-cloud.docker.com). Set DOCKER_CLOUD_API_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option            | Default                                  | Description                                                                                                                                                                                                             |
+| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
+| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
+| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
 
 ## Examples
 

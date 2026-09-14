@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/client-auth.sgml#auth-oauth](https://www.postgresql.org/docs/18/auth-oauth.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/client-auth.sgml#auth-oauth](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/client-auth.sgml%23auth-oauth)
+> Canonical documentation: https://www.postgresql.org/docs/18/auth-oauth.html
 
 # OAuth Authorization/Authentication
 

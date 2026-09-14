@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/scout/docker_scout_version.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_version.yaml)
+> Pinned source for Docker main: [data/cli/scout/docker_scout_version.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_version.yaml)
 
 # docker scout version
 
@@ -30,6 +30,8 @@ $ docker scout version
  ⡯⣎⢯⡺⣪⡳⣝⢖⣄⣀        ⡀⡠⡢⡣⡣⡣⡣⡣⡃
 ⢸⢝⢮⡳⣝⢮⡺⣪⡳⠕⠗⠉⠁    ⠘⠜⡜⡜⡜⡜⡜⡜⠜⠈
 ⡯⡳⠳⠝⠊⠓⠉             ⠈⠈⠈⠈
+
+
 
 version: v1.0.9 (go1.21.3 - darwin/arm64)
 git commit: 8bf95bf60d084af341f70e8263342f71b0a3cd16

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_search.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_search.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_search.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_search.yaml)
 
 # docker model search
 
@@ -14,17 +14,17 @@ When no search term is provided, lists all available models.
 When a search term is provided, filters models by name/description.
 
 Examples:
-  docker model search                       # List available models from Docker Hub
-  docker model search llama                 # Search for models containing "llama"
-  docker model search --source=all          # Search both Docker Hub and HuggingFace
-  docker model search --source=huggingface  # Only search HuggingFace
-  docker model search --limit=50 phi        # Search with custom limit
-  docker model search --json llama          # Output as JSON
+docker model search                       # List available models from Docker Hub
+docker model search llama                 # Search for models containing "llama"
+docker model search --source=all          # Search both Docker Hub and HuggingFace
+docker model search --source=huggingface  # Only search HuggingFace
+docker model search --limit=50 phi        # Search with custom limit
+docker model search --json llama          # Output as JSON
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--json` |  | Output results as JSON |
-| `-n`, `--limit` | `32` | Maximum number of results to show |
-| `--source` | `all` | Source to search: all, dockerhub, huggingface |
+| Option          | Default | Description                                   |
+| --------------- | ------- | --------------------------------------------- |
+| `--json`        |         | Output results as JSON                        |
+| `-n`, `--limit` | `32`    | Maximum number of results to show             |
+| `--source`      | `all`   | Source to search: all, dockerhub, huggingface |

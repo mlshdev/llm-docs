@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/management/auto-pagination.mdx](https://trigger.dev/docs/management/auto-pagination)
+> Pinned source for Trigger.dev v4.5.16: [docs/management/auto-pagination.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/management/auto-pagination.mdx)
+> Canonical documentation: https://trigger.dev/docs/management/auto-pagination
 
 # Auto-pagination
 

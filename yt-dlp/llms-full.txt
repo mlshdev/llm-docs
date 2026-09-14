@@ -7,7 +7,9 @@ Source commit: 3a08beaf031ab68f966401ead017ac81fe8486cf
 # Document: INSTALLATION
 
 Source path: README.md
-Canonical source: https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ead017ac81fe8486cf/README.md
+Pinned source: https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ead017ac81fe8486cf/README.md
+Canonical documentation: https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ead017ac81fe8486cf/README.md
+Description: ![Release version](#installation "Installation") ![Python Version](https://github.com/yt-dlp/yt-dlp/blob/master/pyproject.toml "Python Version") ![PyPI](https://pypi.org/project/yt-dlp "PyPI") ![Discord](https://discord…
 
 <div align="center">
 
@@ -1731,6 +1733,7 @@ $ yt-dlp -f "bv*+mergeall[vcodec=none]" --audio-multistreams
 # and the best 2 audio-only formats into one file
 $ yt-dlp -f "bv*+ba+ba.2" --audio-multistreams
 
+
 # The following examples show the old method (without -S) of format selection
 # and how to use -S to achieve a similar but (generally) better result
 
@@ -1743,12 +1746,16 @@ $ yt-dlp -S "+res"
 # Download the smallest video available
 $ yt-dlp -S "+size,+br"
 
+
+
 # Download the best mp4 video available, or the best video if no mp4 available
 $ yt-dlp -f "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b"
 
 # Download the best video with the best extension
 # (For video, mp4 > mov > webm > flv. For audio, m4a > aac > mp3 ...)
 $ yt-dlp -S "ext"
+
+
 
 # Download the best video available but no better than 480p,
 # or the worst video if there is no video under 480p
@@ -1764,6 +1771,8 @@ $ yt-dlp -S "height:480"
 # So this works correctly for vertical videos as well
 $ yt-dlp -S "res:480"
 
+
+
 # Download the best video (that also has audio) but no bigger than 50 MB,
 # or the worst video (that also has audio) if there is no video under 50 MB
 $ yt-dlp -f "b[filesize<50M] / w"
@@ -1775,6 +1784,8 @@ $ yt-dlp -f "b" -S "filesize:50M"
 # Download the best video (that also has audio) that is closest in size to 50 MB
 $ yt-dlp -f "b" -S "filesize~50M"
 
+
+
 # Download best video available via direct link over HTTP/HTTPS protocol,
 # or the best video available via any protocol if there is no such video
 $ yt-dlp -f "(bv*+ba/b)[protocol^=http][protocol!*=dash] / (bv*+ba/b)"
@@ -1782,6 +1793,8 @@ $ yt-dlp -f "(bv*+ba/b)[protocol^=http][protocol!*=dash] / (bv*+ba/b)"
 # Download best video available via the best protocol
 # (https/ftps > http/ftp > m3u8_native > m3u8 > http_dash_segments ...)
 $ yt-dlp -S "proto"
+
+
 
 # Download the best video with either h264 or h265 codec,
 # or the best video if there is no such video
@@ -1795,6 +1808,8 @@ $ yt-dlp -S "codec:h264"
 # or the best video with best codec if there is no such video
 $ yt-dlp -S "+codec:h264"
 
+
+
 # More complex examples
 
 # Download the best video no better than 720p preferring framerate greater than 30,
@@ -1805,6 +1820,8 @@ $ yt-dlp -f "((bv*[fps>30]/bv*)[height<=720]/(wv*[fps>30]/wv*)) + ba / (b[fps>30
 # or the video with the smallest resolution available if there is no such video,
 # preferring larger framerate for formats with the same resolution
 $ yt-dlp -S "res:720,fps"
+
+
 
 # Download the video with smallest resolution no worse than 480p,
 # or the video with the largest resolution available if there is no such video,
@@ -2241,10 +2258,12 @@ class MyLogger:
     def error(self, msg):
         print(msg)
 
+
 # ℹ️ See "progress_hooks" in help(yt_dlp.YoutubeDL)
 def my_hook(d):
     if d['status'] == 'finished':
         print('Done downloading, now post-processing ...')
+
 
 ydl_opts = {
     'logger': MyLogger(),
@@ -2267,6 +2286,7 @@ class MyCustomPP(yt_dlp.postprocessor.PostProcessor):
     def run(self, info):
         self.to_screen('Doing stuff')
         return [], info
+
 
 with yt_dlp.YoutubeDL() as ydl:
     # ℹ️ "when" can take any value in yt_dlp.utils.POSTPROCESS_WHEN
@@ -2306,6 +2326,7 @@ def format_selector(ctx):
         # Must be + separated list of protocols
         'protocol': f'{best_video["protocol"]}+{best_audio["protocol"]}'
     }
+
 
 ydl_opts = {
     'format': format_selector,
@@ -2589,7 +2610,9 @@ See the [Wiki](https://github.com/yt-dlp/yt-dlp/wiki) for more information
 # Document: CONTRIBUTING TO YT-DLP
 
 Source path: CONTRIBUTING.md
-Canonical source: https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ead017ac81fe8486cf/CONTRIBUTING.md
+Pinned source: https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ead017ac81fe8486cf/CONTRIBUTING.md
+Canonical documentation: https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ead017ac81fe8486cf/CONTRIBUTING.md
+Description: This project strictly forbids the usage of LLMs, agents, or any other AI tools for any kind of contribution.
 
 # CONTRIBUTING TO YT-DLP
 
@@ -2832,6 +2855,7 @@ After you have ensured this site is distributing its content legally, you can fo
 
    ```python
    from .common import InfoExtractor
+
 
    class YourExtractorIE(InfoExtractor):
        _VALID_URL = r'https?://(?:www\.)?yourextractor\.com/watch/(?P<id>[0-9]+)'
@@ -3391,7 +3415,9 @@ See [README.md#embedding-yt-dlp](https://github.com/yt-dlp/yt-dlp/blob/3a08beaf0
 # Document: Maintainers
 
 Source path: Maintainers.md
-Canonical source: https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ead017ac81fe8486cf/Maintainers.md
+Pinned source: https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ead017ac81fe8486cf/Maintainers.md
+Canonical documentation: https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ead017ac81fe8486cf/Maintainers.md
+Description: This file lists the maintainers of yt-dlp and their major contributions. See the Changelog for more details.
 
 # Maintainers
 
@@ -3488,7 +3514,9 @@ Triage Maintainers are frequent contributors who can manage issues and pull requ
 # Document: Changelog
 
 Source path: Changelog.md
-Canonical source: https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ead017ac81fe8486cf/Changelog.md
+Pinned source: https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ead017ac81fe8486cf/Changelog.md
+Canonical documentation: https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ead017ac81fe8486cf/Changelog.md
+Description: Adds support for HTTPS proxies and persistent connections (keep-alive)
 
 # Changelog
 
@@ -10272,7 +10300,9 @@ Canonical source: https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ea
 # Document: Supported sites
 
 Source path: supportedsites.md
-Canonical source: https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ead017ac81fe8486cf/supportedsites.md
+Pinned source: https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ead017ac81fe8486cf/supportedsites.md
+Canonical documentation: https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ead017ac81fe8486cf/supportedsites.md
+Description: Below is a list of all extractors that are currently included with yt-dlp. If a site is not listed here, it might still be supported by yt-dlp's embed extraction or generic extractor. Not all sites listed here are guara…
 
 # Supported sites
 

@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/alter_user_mapping.sgml#sql-alterusermapping](https://www.postgresql.org/docs/18/sql-alterusermapping.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/alter_user_mapping.sgml#sql-alterusermapping](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/alter_user_mapping.sgml%23sql-alterusermapping)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-alterusermapping.html
 
 # ALTER USER MAPPING
 

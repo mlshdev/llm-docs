@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.form.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/core-nodes/n8n-nodes-base.form.md)
+> Pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.form.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/core-nodes/n8n-nodes-base.form.md)
 
 # n8n Form node <a id="n8n-form-node"></a>
 
@@ -352,7 +352,7 @@ An example JSON that shows the general format required and the keys available:
 // Use the "requiredField" key on any field to mark it as mandatory
 // Use the "placeholder" key to specify placeholder data for all fields
 // except 'dropdown', 'checkbox', 'radio', 'date' and 'file'
-// Use the "defaultValue" key to pre-fill a form field or pre-select a
+// Use the "defaultValue" key to pre-fill a form field or pre-select a 
 // value in 'checkbox', 'radio' or 'dropdown' fields
 
 [

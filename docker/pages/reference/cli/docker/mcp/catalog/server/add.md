@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/mcp/docker_mcp_catalog_server_add.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp_catalog_server_add.yaml)
+> Pinned source for Docker main: [data/cli/mcp/docker_mcp_catalog_server_add.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp_catalog_server_add.yaml)
 
 # docker mcp catalog server add
 
@@ -12,20 +12,24 @@ Add MCP servers to a catalog using various URI schemes.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--server` |  | Server to include specified with a URI: https:// (MCP Registry reference) or docker:// (Docker Image reference) or catalog:// (Catalog reference) or file:// (Local file path). Can be specified multiple times. |
+| Option     | Default | Description                                                                                                                                                                                                       |
+| ---------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--server` |         | Server to include specified with a URI: https\:// (MCP Registry reference) or docker:// (Docker Image reference) or catalog:// (Catalog reference) or file:// (Local file path). Can be specified multiple times. |
 
 ## Examples
 
 # Add servers from another catalog
-  docker mcp catalog server add mcp/my-catalog:latest --server catalog://mcp/docker-mcp-catalog:latest/github
 
-  # Add servers with OCI references
-  docker mcp catalog server add mcp/my-catalog:latest --server docker://my-server:latest
+docker mcp catalog server add mcp/my-catalog:latest --server catalog://mcp/docker-mcp-catalog:latest/github
 
-  # Add servers with MCP Registry references
-  docker mcp catalog server add mcp/my-catalog:latest --server https://registry.modelcontextprotocol.io/v0/servers/71de5a2a-6cfb-4250-a196-f93080ecc860
+# Add servers with OCI references
 
-  # Mix server references
-  docker mcp catalog server add mcp/my-catalog:latest --server catalog://mcp/docker-mcp-catalog:latest/github --server docker://my-server:latest
+docker mcp catalog server add mcp/my-catalog:latest --server docker://my-server:latest
+
+# Add servers with MCP Registry references
+
+docker mcp catalog server add mcp/my-catalog:latest --server <https://registry.modelcontextprotocol.io/v0/servers/71de5a2a-6cfb-4250-a196-f93080ecc860>
+
+# Mix server references
+
+docker mcp catalog server add mcp/my-catalog:latest --server catalog://mcp/docker-mcp-catalog:latest/github --server docker://my-server:latest

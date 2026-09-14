@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_mcp_add.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_mcp_add.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_add.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_mcp_add.yaml)
 
 # sbx mcp add
 
@@ -16,152 +16,156 @@ server to a running sandbox, use 'sbx mcp load'.
 
 The --url flag accepts four input formats; the type is auto-detected:
 
-  - Remote MCP endpoint URL (https://host/mcp — talks MCP at the URL;
-    OAuth metadata is discovered via RFC 9728/8414).
-  - MCP community-registry URL (https://registry.modelcontextprotocol.io/v0/servers/<name>...)
-    — fetches the registry envelope and resolves the OCI image.
-  - Server-manifest URL (any URL returning a server.json or server.yaml
-    body shaped like the MCP community-registry schema — GitHub raw URLs,
-    internal HTTP servers, ad-hoc CDN links all work).
-  - Docker Hardened Images (DHI) image ref (dhi.io/<name>:<tag> or
-    dhi.io/<name>@sha256:... — the server.json manifest is extracted
-    from the image's in-toto attestation via the OCI Referrers API).
+- Remote MCP endpoint URL (<https://host/mcp> — talks MCP at the URL;
+  OAuth metadata is discovered via RFC 9728/8414).
+- MCP community-registry URL (<https://registry.modelcontextprotocol.io/v0/servers/><name>...)
+  — fetches the registry envelope and resolves the OCI image.
+- Server-manifest URL (any URL returning a server.json or server.yaml
+  body shaped like the MCP community-registry schema — GitHub raw URLs,
+  internal HTTP servers, ad-hoc CDN links all work).
+- Docker Hardened Images (DHI) image ref (dhi.io/<name>:<tag> or
+  dhi.io/<name>@sha256:... — the server.json manifest is extracted
+  from the image's in-toto attestation via the OCI Referrers API).
 
 Other image refs (inputs without "://" that are not dhi.io, e.g.
 docker.io/foo:tag) are no longer accepted. Use a server manifest instead.
 
 SSRF guard and --skip-ssrf-check:
-  A --url whose host resolves to a private/RFC1918, loopback, link-local, or
-  cloud-metadata address is fetched anyway, but flagged: the add proceeds and
-  a warning naming the resolved address is printed (this protects against
-  manifest URLs that reach internal services, cloud metadata, or
-  DNS-rebinding targets by making them visible, not by blocking them). Some
-  legitimate servers live on private networks (split-horizon DNS, internal
-  load balancers, VPN-only endpoints, PrivateLink), so their public hostname
-  resolves to a private address and the warning is expected noise for them.
-  Pass --skip-ssrf-check to silence the check entirely for a single add when
-  you trust the host; use it only for URLs you control.
+A --url whose host resolves to a private/RFC1918, loopback, link-local, or
+cloud-metadata address is fetched anyway, but flagged: the add proceeds and
+a warning naming the resolved address is printed (this protects against
+manifest URLs that reach internal services, cloud metadata, or
+DNS-rebinding targets by making them visible, not by blocking them). Some
+legitimate servers live on private networks (split-horizon DNS, internal
+load balancers, VPN-only endpoints, PrivateLink), so their public hostname
+resolves to a private address and the warning is expected noise for them.
+Pass --skip-ssrf-check to silence the check entirely for a single add when
+you trust the host; use it only for URLs you control.
 
 OAuth for remote endpoints (--oauth-authorization-server / --client-id):
-  Two related options configure OAuth for a remote --url server (both are
-  only valid with --url):
+Two related options configure OAuth for a remote --url server (both are
+only valid with --url):
 
-  --oauth-authorization-server hand-supplies the authorization-server
-  metadata for a server that publishes no well-known RFC 9728/8414 metadata
-  (e.g. Gmail). It is a local file path or an http(s) URL to a JSON document
-  conforming to the RFC 8414 oauth-authorization-server shape
-  (authorization_endpoint and token_endpoint are required). --client-id is
-  required alongside it UNLESS the metadata document itself advertises a
-  registration_endpoint, in which case a client is registered dynamically
-  (RFC 7591) and --client-id may be omitted.
+\--oauth-authorization-server hand-supplies the authorization-server
+metadata for a server that publishes no well-known RFC 9728/8414 metadata
+(e.g. Gmail). It is a local file path or an http(s) URL to a JSON document
+conforming to the RFC 8414 oauth-authorization-server shape
+(authorization\_endpoint and token\_endpoint are required). --client-id is
+required alongside it UNLESS the metadata document itself advertises a
+registration\_endpoint, in which case a client is registered dynamically
+(RFC 7591) and --client-id may be omitted.
 
-  --client-id supplies a PRE-REGISTERED OAuth client. It may be given WITHOUT
-  --oauth-authorization-server: the server's authorization metadata is then
-  discovered normally and the supplied client is attached to it. This is the
-  right mode for a server whose discoverable metadata exposes no
-  registration_endpoint (so Dynamic Client Registration is impossible) but
-  which accepts a client id the operator registered ahead of time.
+\--client-id supplies a PRE-REGISTERED OAuth client. It may be given WITHOUT
+\--oauth-authorization-server: the server's authorization metadata is then
+discovered normally and the supplied client is attached to it. This is the
+right mode for a server whose discoverable metadata exposes no
+registration\_endpoint (so Dynamic Client Registration is impossible) but
+which accepts a client id the operator registered ahead of time.
 
-  Client secrets (confidential clients):
-    There is no --client-secret flag. The secret for a confidential client
-    lives in the secret store in the global scope under the
-    service name "mcp:<server>.client_secret", and is read from there
-    whenever the server is used:
+Client secrets (confidential clients):
+There is no --client-secret flag. The secret for a confidential client
+lives in the secret store in the global scope under the
+service name "mcp:<server>.client\_secret", and is read from there
+whenever the server is used:
 
-      sbx secret set mcp:<server>.client_secret
+```
+  sbx secret set mcp:<server>.client_secret
 
-    Run it with no -t so the value is read from stdin instead of landing in
-    your shell history. The secret is never written to the MCP registration
-    on disk. Remove it later with 'sbx secret rm mcp:<server>.client_secret'.
+Run it with no -t so the value is read from stdin instead of landing in
+your shell history. The secret is never written to the MCP registration
+on disk. Remove it later with 'sbx secret rm mcp:<server>.client_secret'.
 
-    The stored secret is bound to the OAuth identity (client id, issuer and
-    token endpoint) that first used it. Re-registering the same server name
-    against a different client or authorization server therefore does NOT
-    reuse it — store the secret again for the new client. To let a new
-    identity claim the existing secret, drop the recorded binding with
-    'sbx secret rm mcp:<server>.client_secret.identity'.
+The stored secret is bound to the OAuth identity (client id, issuer and
+token endpoint) that first used it. Re-registering the same server name
+against a different client or authorization server therefore does NOT
+reuse it — store the secret again for the new client. To let a new
+identity claim the existing secret, drop the recorded binding with
+'sbx secret rm mcp:<server>.client_secret.identity'.
+```
 
-  Two rules apply on the discovered path (they do not affect a server that
-  advertises a registration_endpoint, the hand-supplied
-  --oauth-authorization-server path, or --command servers):
+Two rules apply on the discovered path (they do not affect a server that
+advertises a registration\_endpoint, the hand-supplied
+\--oauth-authorization-server path, or --command servers):
 
-    - If the discovered authorization metadata has NO registration_endpoint,
-      Dynamic Client Registration is impossible, so --client-id is REQUIRED;
-      the add fails without it. This is the Slack shape (discoverable metadata,
-      no DCR, a pre-registered client).
-    - A stored client secret is REQUIRED when the server's advertised
-      token_endpoint_auth_methods_supported (RFC 8414) does NOT include "none"
-      — i.e. it accepts only confidential clients (client_secret_basic /
-      client_secret_post). Registration still succeeds without one, but the
-      add-time authorization is skipped; store the secret and run
-      'sbx mcp auth <server>' to finish. When the list includes "none" a
-      public/PKCE client is allowed and --client-id alone is enough. If the
-      server advertises no token_endpoint_auth_methods_supported at all (the
-      field is optional in RFC 8414), the requirement cannot be determined and
-      the add proceeds as usual.
+```
+- If the discovered authorization metadata has NO registration_endpoint,
+  Dynamic Client Registration is impossible, so --client-id is REQUIRED;
+  the add fails without it. This is the Slack shape (discoverable metadata,
+  no DCR, a pre-registered client).
+- A stored client secret is REQUIRED when the server's advertised
+  token_endpoint_auth_methods_supported (RFC 8414) does NOT include "none"
+  — i.e. it accepts only confidential clients (client_secret_basic /
+  client_secret_post). Registration still succeeds without one, but the
+  add-time authorization is skipped; store the secret and run
+  'sbx mcp auth <server>' to finish. When the list includes "none" a
+  public/PKCE client is allowed and --client-id alone is enough. If the
+  server advertises no token_endpoint_auth_methods_supported at all (the
+  field is optional in RFC 8414), the requirement cannot be determined and
+  the add proceeds as usual.
+```
 
 Default OAuth scopes (--scope / --no-scope):
-  --scope records the DEFAULT set of scopes to request at consent time for a
-  remote --url OAuth server (repeatable). Precedence at authorization time is
-  --no-scope > an explicit 'sbx mcp auth --scope' > the set recorded here > the
-  scope set the RESOURCE itself says it requires (from its RFC 9728
-  protected-resource metadata or its WWW-Authenticate challenge) > nothing, and
-  "nothing" means the 'scope' parameter is OMITTED so the authorization server
-  applies its own default grant (RFC 6749 §3.3). The server's advertised set is
-  never requested wholesale.
+\--scope records the DEFAULT set of scopes to request at consent time for a
+remote --url OAuth server (repeatable). Precedence at authorization time is
+\--no-scope > an explicit 'sbx mcp auth --scope' > the set recorded here > the
+scope set the RESOURCE itself says it requires (from its RFC 9728
+protected-resource metadata or its WWW-Authenticate challenge) > nothing, and
+"nothing" means the 'scope' parameter is OMITTED so the authorization server
+applies its own default grant (RFC 6749 §3.3). The server's advertised set is
+never requested wholesale.
 
-  A resource that publishes a required set therefore gets it requested with no
-  flag at all, and the consent block marks that set as derived rather than
-  chosen. --no-scope suppresses it and takes the server's default grant.
+A resource that publishes a required set therefore gets it requested with no
+flag at all, and the consent block marks that set as derived rather than
+chosen. --no-scope suppresses it and takes the server's default grant.
 
-  Scopes you name are validated only when the authorization server advertises a
-  supported set (RFC 8414 scopes_supported): then every scope must be a member or
-  the add fails naming the offending scope(s). If the server advertises no
-  supported set (the field is optional in RFC 8414), the requested scopes are
-  accepted as given. A set derived from the resource's own required list is never
-  validated — it is the server's statement about itself, and scopes_supported is
-  allowed to be non-exhaustive. Validation is a spelling check, not a promise: scopes_supported is what
-  the server SUPPORTS, not what it will grant this client, so a scope it
-  advertises can still be refused at consent time.
+Scopes you name are validated only when the authorization server advertises a
+supported set (RFC 8414 scopes\_supported): then every scope must be a member or
+the add fails naming the offending scope(s). If the server advertises no
+supported set (the field is optional in RFC 8414), the requested scopes are
+accepted as given. A set derived from the resource's own required list is never
+validated — it is the server's statement about itself, and scopes\_supported is
+allowed to be non-exhaustive. Validation is a spelling check, not a promise: scopes\_supported is what
+the server SUPPORTS, not what it will grant this client, so a scope it
+advertises can still be refused at consent time.
 
-  Scope values may be URN-shaped (urn:ietf:params:oauth:scope:mail) or
-  URL-shaped (https://www.fastmail.com/dev/mcp). Neither needs quoting — a scope
-  token cannot contain a space or a quote — and both are percent-encoded
-  normally on the wire. --scope applies both to a hand-supplied override and to
-  a plain --url server whose OAuth metadata is discovered.
+Scope values may be URN-shaped (urn:ietf:params:oauth:scope:mail) or
+URL-shaped (<https://www.fastmail.com/dev/mcp>). Neither needs quoting — a scope
+token cannot contain a space or a quote — and both are percent-encoded
+normally on the wire. --scope applies both to a hand-supplied override and to
+a plain --url server whose OAuth metadata is discovered.
 
 Alternative input — local stdio command (--command + --args):
-  The command runs as a subprocess on the HOST, outside the sandbox.
+The command runs as a subprocess on the HOST, outside the sandbox.
 
-  WARNING: Local servers are for ad-hoc development only. They have
-  no identity, no verifiable supply chain, and no sandboxing. The
-  process runs with your host user's full permissions — it can read
-  your filesystem, access your network, and call any API your user
-  can. Do not use --command with untrusted executables.
+WARNING: Local servers are for ad-hoc development only. They have
+no identity, no verifiable supply chain, and no sandboxing. The
+process runs with your host user's full permissions — it can read
+your filesystem, access your network, and call any API your user
+can. Do not use --command with untrusted executables.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--args` |  | Command-line arguments for the command |
-| `--client-id` |  | OAuth client id for a pre-registered client (with --url; may be used with or without --oauth-authorization-server). A confidential client's secret comes from 'sbx secret set mcp:<server>.client_secret' |
-| `--command` |  | Executable to run for a local stdio server |
-| `--dir` |  | Working directory (cwd) for a --command host server |
-| `--local` |  | Run registry OCI server locally via docker run |
-| `--no-scope` |  | Request no scopes during add-time authorization, so the authorization server applies its own default grant. Suppresses the resource's required set; cannot be combined with --scope. Applies to --url remote OAuth servers. |
-| `--oauth-authorization-server` |  | Path or http(s) URL to an RFC 8414 oauth-authorization-server metadata JSON document |
-| `--scope` |  | Default OAuth scope to request at consent time (repeatable; must be advertised by the server's authorization metadata, which does not promise the server will grant it). With no --scope, the scope set the resource itself requires is requested; with neither, no scopes are requested and the authorization server applies its own default grant. Applies to --url remote OAuth servers. |
-| `--skip-auth` |  | Register an OAuth server without starting the hosted OAuth flow |
-| `--skip-ssrf-check` |  | Silence the SSRF check for this add: a --url whose host resolves to a private/metadata address is registered either way, but with this flag no warning is printed (operator asserts the host is trusted) |
-| `--url` |  | MCP server manifest URL, remote endpoint URL, or dhi.io image ref |
+| Option                         | Default | Description                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--args`                       |         | Command-line arguments for the command                                                                                                                                                                                                                                                                                                                                                      |
+| `--client-id`                  |         | OAuth client id for a pre-registered client (with --url; may be used with or without --oauth-authorization-server). A confidential client's secret comes from 'sbx secret set mcp:<server>.client\_secret'                                                                                                                                                                                  |
+| `--command`                    |         | Executable to run for a local stdio server                                                                                                                                                                                                                                                                                                                                                  |
+| `--dir`                        |         | Working directory (cwd) for a --command host server                                                                                                                                                                                                                                                                                                                                         |
+| `--local`                      |         | Run registry OCI server locally via docker run                                                                                                                                                                                                                                                                                                                                              |
+| `--no-scope`                   |         | Request no scopes during add-time authorization, so the authorization server applies its own default grant. Suppresses the resource's required set; cannot be combined with --scope. Applies to --url remote OAuth servers.                                                                                                                                                                 |
+| `--oauth-authorization-server` |         | Path or http(s) URL to an RFC 8414 oauth-authorization-server metadata JSON document                                                                                                                                                                                                                                                                                                        |
+| `--scope`                      |         | Default OAuth scope to request at consent time (repeatable; must be advertised by the server's authorization metadata, which does not promise the server will grant it). With no --scope, the scope set the resource itself requires is requested; with neither, no scopes are requested and the authorization server applies its own default grant. Applies to --url remote OAuth servers. |
+| `--skip-auth`                  |         | Register an OAuth server without starting the hosted OAuth flow                                                                                                                                                                                                                                                                                                                             |
+| `--skip-ssrf-check`            |         | Silence the SSRF check for this add: a --url whose host resolves to a private/metadata address is registered either way, but with this flag no warning is printed (operator asserts the host is trusted)                                                                                                                                                                                    |
+| `--url`                        |         | MCP server manifest URL, remote endpoint URL, or dhi.io image ref                                                                                                                                                                                                                                                                                                                           |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--cloud` |  | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (https://api.sandboxes-cloud.docker.com). Set DOCKER_CLOUD_API_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option            | Default                                  | Description                                                                                                                                                                                                             |
+| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
+| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
+| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
 
 ## Examples
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_mcp_auth.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_mcp_auth.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_auth.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_mcp_auth.yaml)
 
 # sbx mcp auth
 
@@ -35,15 +35,15 @@ wholesale.
 
 A resource that publishes a required set therefore gets it requested without any
 flag, and the consent block marks that set as derived rather than chosen. Pass
---no-scope to suppress it and take the server's default grant instead.
+\--no-scope to suppress it and take the server's default grant instead.
 
 Scopes you choose are validated only when the server advertises a supported set
-(RFC 8414 scopes_supported); each scope must then be a member or the command
+(RFC 8414 scopes\_supported); each scope must then be a member or the command
 fails. If the server advertises no supported set, the requested scopes are
 accepted as given. A set derived from the resource's own required list is never
-validated: it is the server's statement about itself, and scopes_supported is
+validated: it is the server's statement about itself, and scopes\_supported is
 allowed to be non-exhaustive.
-Membership is not a promise: scopes_supported is what the server SUPPORTS, not
+Membership is not a promise: scopes\_supported is what the server SUPPORTS, not
 what it will grant this client, so an advertised scope can still be refused at
 consent time. In local data-plane mode a refusal prints the requested set, the
 advertised set, the scopes the server named, and a narrower retry command; the
@@ -55,26 +55,26 @@ authorization server may grant less than was asked for; when it restates no set
 at all, RFC 6749 §5.1 makes that the set that was requested.
 
 Scope values may be URN-shaped (urn:ietf:params:oauth:scope:mail) or URL-shaped
-(https://www.fastmail.com/dev/mcp); neither needs quoting.
+(<https://www.fastmail.com/dev/mcp>); neither needs quoting.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--all` |  | Apply to all registered OAuth servers |
-| `--format` | `text` | Output format: "text" or "json" |
-| `--json` |  | Output in JSON format (alias for --format json) |
-| `--no-scope` |  | Request no scopes at all for this run, so the authorization server applies its own default grant. Suppresses both the recorded default and the resource's required set; cannot be combined with --scope |
-| `--scope` |  | OAuth scope to authorize for this run (repeatable; overrides the recorded default; must be advertised by the server's authorization metadata, which does not promise the server will grant it). With no --scope and no recorded default, the scope set the resource itself requires is requested; with none of those, no scopes are requested and the authorization server applies its own default grant |
-| `--verbose` |  | Print authorization polling progress |
+| Option       | Default | Description                                                                                                                                                                                                                                                                                                                                                                                              |
+| ------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--all`      |         | Apply to all registered OAuth servers                                                                                                                                                                                                                                                                                                                                                                    |
+| `--format`   | `text`  | Output format: "text" or "json"                                                                                                                                                                                                                                                                                                                                                                          |
+| `--json`     |         | Output in JSON format (alias for --format json)                                                                                                                                                                                                                                                                                                                                                          |
+| `--no-scope` |         | Request no scopes at all for this run, so the authorization server applies its own default grant. Suppresses both the recorded default and the resource's required set; cannot be combined with --scope                                                                                                                                                                                                  |
+| `--scope`    |         | OAuth scope to authorize for this run (repeatable; overrides the recorded default; must be advertised by the server's authorization metadata, which does not promise the server will grant it). With no --scope and no recorded default, the scope set the resource itself requires is requested; with none of those, no scopes are requested and the authorization server applies its own default grant |
+| `--verbose`  |         | Print authorization polling progress                                                                                                                                                                                                                                                                                                                                                                     |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--cloud` |  | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (https://api.sandboxes-cloud.docker.com). Set DOCKER_CLOUD_API_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option            | Default                                  | Description                                                                                                                                                                                                             |
+| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
+| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
+| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
 
 ## Examples
 

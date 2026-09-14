@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [examples/text-generation/minimax-m2.mdx](https://docs.vast.ai/examples/text-generation/minimax-m2)
+> Pinned source for Vast.ai main: [examples/text-generation/minimax-m2.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/examples/text-generation/minimax-m2.mdx)
+> Canonical documentation: https://docs.vast.ai/examples/text-generation/minimax-m2
 
 # MiniMax-M2
 

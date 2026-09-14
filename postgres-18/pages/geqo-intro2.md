@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/geqo.sgml#geqo-intro2](https://www.postgresql.org/docs/18/geqo-intro2.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/geqo.sgml#geqo-intro2](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/geqo.sgml%23geqo-intro2)
+> Canonical documentation: https://www.postgresql.org/docs/18/geqo-intro2.html
 
 # Genetic Algorithms
 

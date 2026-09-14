@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_trust_key_load.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_trust_key_load.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_trust_key_load.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_trust_key_load.yaml)
 
 # docker trust key load
 
@@ -14,8 +14,8 @@ To add a signer to a repository use `docker trust signer add`.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
+| Option   | Default  | Description             |
+| -------- | -------- | ----------------------- |
 | `--name` | `signer` | Name for the loaded key |
 
 ## Examples

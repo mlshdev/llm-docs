@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/config/extensions/audioWaveform.mdx](https://trigger.dev/docs/config/extensions/audioWaveform)
+> Pinned source for Trigger.dev v4.5.16: [docs/config/extensions/audioWaveform.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/config/extensions/audioWaveform.mdx)
+> Canonical documentation: https://trigger.dev/docs/config/extensions/audioWaveform
 
 # Audio Waveform
 

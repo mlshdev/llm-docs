@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [video-generation.mdx](https://docs.vast.ai/video-generation)
+> Pinned source for Vast.ai main: [video-generation.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/video-generation.mdx)
+> Canonical documentation: https://docs.vast.ai/video-generation
 
 # Video Generation
 

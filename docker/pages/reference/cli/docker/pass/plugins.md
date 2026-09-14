@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/secrets/docker_pass_plugins.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/secrets/docker_pass_plugins.yaml)
+> Pinned source for Docker main: [data/cli/secrets/docker_pass_plugins.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/secrets/docker_pass_plugins.yaml)
 
 # docker pass plugins
 
@@ -6,7 +6,7 @@ Manage secrets engine plugins.
 
 **Usage:** `docker pass plugins`
 
-> [!NOTE]
+> \[!NOTE]
 > This command is experimental.
 
 ## Description

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/wise.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/credentials/wise.md)
+> Pinned source for n8n main: [docs/integrations/builtin/credentials/wise.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/credentials/wise.md)
 
 # Wise credentials <a id="wise-credentials"></a>
 
@@ -43,7 +43,7 @@ To use endpoints requiring SCA, generate an RSA key pair and add the relevant ke
 1. Generate an RSA key pair:
 
    ```sh
-   $ openssl genrsa -out private.pem 2048
+   $ openssl genrsa -out private.pem 2048 
    $ openssl rsa -pubout -in private.pem -out public.pem
    ```
 

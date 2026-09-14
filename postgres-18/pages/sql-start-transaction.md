@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/start_transaction.sgml#sql-start-transaction](https://www.postgresql.org/docs/18/sql-start-transaction.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/start_transaction.sgml#sql-start-transaction](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/start_transaction.sgml%23sql-start-transaction)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-start-transaction.html
 
 # START TRANSACTION
 

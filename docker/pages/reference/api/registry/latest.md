@@ -1,10 +1,10 @@
-> Commit-pinned source for Docker main: [content/reference/api/registry/latest.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/reference/api/registry/latest.md)
+> Pinned source for Docker main: [content/reference/api/registry/latest.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/reference/api/registry/latest.md)
 
 # Supported registry API for Docker Hub
 
 ## API specification
 
-- Base URL: `https://registry-1.docker.io`
+**Supported registry API for Docker Hub**
 
 Docker Hub is an OCI-compliant registry, which means it adheres to the open
 standards defined by the Open Container Initiative (OCI) for distributing
@@ -15,6 +15,8 @@ This reference documents the Docker Hub-supported subset of the Registry HTTP AP
 It focuses on pulling, pushing, and deleting images. It does not cover the full OCI Distribution Specification.
 
 For the complete OCI specification, see [OCI Distribution Specification](https://github.com/opencontainers/distribution-spec).
+
+- Base URL: `https://registry-1.docker.io`
 
 ## Endpoints
 
@@ -30,14 +32,41 @@ This endpoint requires authentication. Use the `Authorization: Bearer <token>` h
 
 **Parameters**
 
-- `name` (path, required): Name of the target repository
-- `reference` (path, required): Tag or digest of the target manifest
-- `Authorization` (header, required): RFC7235-compliant authorization header (e.g., `Bearer <token>`).
-- `Accept` (header): Media type(s) the client supports for the manifest. The registry supports the following media types: - application/vnd.docker.distribution.manifest.v2+json - application/vnd.docker.distribution.manifest.list.v2+json - application/vnd.oci.image.manifest.v1+json - application/vnd.oci.image.index.v1+json
+- `name` (path; required; string): Name of the target repository
+  - Example: `library/ubuntu`
+- `reference` (path; required; string): Tag or digest of the target manifest
+  - Example `by-tag`: `latest`
+  - Example `by-digest`: `sha256:abc123def456...`
+- `Authorization` (header; required; string): RFC7235-compliant authorization header (e.g., `Bearer <token>`).
+- `Accept` (header; string): Media type(s) the client supports for the manifest. The registry supports the following media types: - application/vnd.docker.distribution.manifest.v2+json - application/vnd.docker.distribution.manifest.list.v2+json - application/vnd.oci.image.manifest.v1+json - application/vnd.oci.image.index.v1+json
 
 **Responses**
 
 - `200`: Manifest fetched successfully.
+  - Header `Docker-Content-Digest` (string): Digest of the returned manifest content.
+  - Header `Content-Type` (string): Media type of the returned manifest.
+  - Media type: `application/vnd.docker.distribution.manifest.v2+json`
+    - Schema (object)
+      - `schemaVersion` (required; integer)
+        - Example: `2`
+      - `mediaType` (required; string)
+        - Example: `application/vnd.docker.distribution.manifest.v2+json`
+      - `config` (required; object)
+        - `mediaType` (string)
+          - Example: `application/vnd.docker.container.image.v1+json`
+        - `size` (integer)
+          - Example: `7023`
+        - `digest` (string)
+          - Example: `sha256:a3f3e...c1234`
+      - `layers` (required; array)
+        - `items` (object)
+          - `mediaType` (string)
+            - Example: `application/vnd.docker.image.rootfs.diff.tar.gzip`
+          - `size` (integer)
+            - Example: `32654`
+          - `digest` (string)
+            - Example: `sha256:bcf2...78901`
+    - Example `docker-manifest`: `{"schemaVersion":2,"mediaType":"application/vnd.docker.distribution.manifest.v2+json","config":{"mediaType":"application/vnd.docker.container.image.v1+json","size":7023,"digest":"sha256:123456abcdef..."},"layers":[{"mediaType":"application/vnd.docker.image.rootfs.diff.tar.gzip","size":32654,"digest":"sha256:abcdef123456..."},{"mediaType":"application/vnd.docker.image.rootfs.diff.tar.gzip","size":16724,"digest":"sha256:7890abcdef12..."}]}`
 - `400`: Invalid name or reference.
 - `401`: Authentication required.
 - `403`: Access denied.
@@ -59,16 +88,45 @@ Requires authentication via a bearer token with `push` scope for the target repo
 
 **Parameters**
 
-- `name` (path, required): Name of the target Repository
-- `reference` (path, required): Tag or digest to associate with the uploaded Manifest
-- `Authorization` (header, required): RFC7235-compliant authorization header (e.g., `Bearer <token>`).
-- `Content-Type` (header, required): Media type of the manifest being uploaded.
+- `name` (path; required; string): Name of the target Repository
+  - Example: `library/ubuntu`
+- `reference` (path; required; string): Tag or digest to associate with the uploaded Manifest
+  - Example `by-tag`: `latest`
+  - Example `by-digest`: `sha256:abc123def456...`
+- `Authorization` (header; required; string): RFC7235-compliant authorization header (e.g., `Bearer <token>`).
+- `Content-Type` (header; required; string): Media type of the manifest being uploaded.
 
-**Request body**
+**Request body** (required)
+
+- Media type: `application/vnd.docker.distribution.manifest.v2+json`
+  - Schema (object)
+    - `schemaVersion` (required; integer)
+      - Example: `2`
+    - `mediaType` (required; string)
+      - Example: `application/vnd.docker.distribution.manifest.v2+json`
+    - `config` (required; object)
+      - `mediaType` (required; string)
+        - Example: `application/vnd.docker.container.image.v1+json`
+      - `size` (required; integer)
+        - Example: `7023`
+      - `digest` (required; string)
+        - Example: `sha256:123456abcdef...`
+    - `layers` (required; array)
+      - `items` (object)
+        - `mediaType` (required; string)
+          - Example: `application/vnd.docker.image.rootfs.diff.tar.gzip`
+        - `size` (required; integer)
+          - Example: `32654`
+        - `digest` (required; string)
+          - Example: `sha256:abcdef123456...`
+  - Example `sample-manifest`: `{"schemaVersion":2,"mediaType":"application/vnd.docker.distribution.manifest.v2+json","config":{"mediaType":"application/vnd.docker.container.image.v1+json","size":7023,"digest":"sha256:123456abcdef..."},"layers":[{"mediaType":"application/vnd.docker.image.rootfs.diff.tar.gzip","size":32654,"digest":"sha256:abcdef123456..."}]}`
 
 **Responses**
 
 - `201`: Manifest created successfully.
+  - Header `Docker-Content-Digest` (string): Digest of the stored manifest.
+  - Header `Location` (string): Canonical location of the uploaded manifest.
+  - Header `Content-Length` (integer): Always zero.
 - `400`: Invalid name, reference, or manifest.
 - `401`: Authentication required.
 - `403`: Access denied.
@@ -92,9 +150,11 @@ This operation requires `delete` access to the repository.
 
 **Parameters**
 
-- `name` (path, required): Name of the repository
-- `reference` (path, required): Digest of the manifest to delete (e.g., `sha256:...`)
-- `Authorization` (header, required): Bearer token with `delete` access
+- `name` (path; required; string): Name of the repository
+  - Example: `yourusername/helloworld`
+- `reference` (path; required; string): Digest of the manifest to delete (e.g., `sha256:...`)
+  - Example: `sha256:abc123def456...`
+- `Authorization` (header; required; string): Bearer token with `delete` access
 
 **Responses**
 
@@ -120,14 +180,20 @@ This endpoint requires authentication with pull scope.
 
 **Parameters**
 
-- `name` (path, required): Name of the Repository
-- `reference` (path, required): Tag or digest to check
-- `Authorization` (header, required): Bearer token for authentication
-- `Accept` (header): Media type of the manifest to check. The response will match one of the accepted types.
+- `name` (path; required; string): Name of the Repository
+  - Example: `library/ubuntu`
+- `reference` (path; required; string): Tag or digest to check
+  - Example `by-tag`: `latest`
+  - Example `by-digest`: `sha256:abc123def456...`
+- `Authorization` (header; required; string): Bearer token for authentication
+- `Accept` (header; string): Media type of the manifest to check. The response will match one of the accepted types.
 
 **Responses**
 
 - `200`: Manifest exists.
+  - Header `Content-Length` (integer): Size of the manifest in bytes
+  - Header `Docker-Content-Digest` (string): Digest of the manifest
+  - Header `Content-Type` (string): Media type of the manifest
 - `401`: Authentication required.
 - `403`: Access denied.
 - `404`: Manifest not found.
@@ -151,15 +217,25 @@ You must authenticate with `push` access to the target repository.
 
 **Parameters**
 
-- `name` (path, required): Name of the target repository
-- `mount` (query): Digest of the blob to mount from another repository
-- `from` (query): Source repository to mount the blob from
-- `Authorization` (header, required): Bearer token for authentication with `push` scope
+- `name` (path; required; string): Name of the target repository
+  - Example: `library/ubuntu`
+- `mount` (query; string): Digest of the blob to mount from another repository
+  - Example: `sha256:abc123def456...`
+- `from` (query; string): Source repository to mount the blob from
+  - Example: `library/busybox`
+- `Authorization` (header; required; string): Bearer token for authentication with `push` scope
 
 **Responses**
 
 - `201`: Blob successfully mounted from another repository.
+  - Header `Location` (string): URL where the mounted blob is accessible
+  - Header `Docker-Content-Digest` (string): Canonical digest of the mounted blob
+  - Header `Content-Length` (integer): Always zero
 - `202`: Upload initiated successfully (fallback if mount fails).
+  - Header `Location` (string): Upload location URL for `PATCH` or `PUT` requests
+  - Header `Docker-Upload-UUID` (string): Server-generated UUID for the upload session
+  - Header `Range` (string): Current upload byte range (typically `0-0` at init)
+  - Header `Content-Length` (integer): Always zero
 - `401`: Authentication required.
 - `403`: Access denied.
 - `404`: Repository not found.
@@ -179,14 +255,24 @@ The blob content is typically a gzipped tarball (for layers) or JSON (for config
 
 **Parameters**
 
-- `name` (path, required): Repository Name
-- `digest` (path, required): Digest of the Blob
-- `Authorization` (header, required): Bearer token with pull scope
+- `name` (path; required; string): Repository Name
+  - Example: `library/ubuntu`
+- `digest` (path; required; string): Digest of the Blob
+  - Example: `sha256:abc123def456...`
+- `Authorization` (header; required; string): Bearer token with pull scope
+  - Example: `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6...`
 
 **Responses**
 
 - `200`: Blob content returned directly
+  - Header `Content-Length` (integer): Size of the blob in bytes
+  - Header `Content-Type` (string): MIME type of the blob
+  - Header `Docker-Content-Digest` (string): Digest of the returned blob
+  - Media type: `application/octet-stream`
+    - Schema (string; format: binary)
+    - Example `small-layer`: `<binary data not shown>`
 - `307`: Temporary redirect to blob location
+  - Header `Location` (string): Redirect URL for blob download (e.g., S3 or CDN)
 - `401`: Authentication required
 - `403`: Access denied
 - `404`: Blob not found
@@ -206,13 +292,22 @@ If the blob does not exist, the response will be `404 Not Found`.
 
 **Parameters**
 
-- `name` (path, required): Name of the Repository
-- `digest` (path, required): Digest of the blob
-- `Authorization` (header, required): Bearer token with pull or push scope
+- `name` (path; required; string): Name of the Repository
+  - Example: `library/ubuntu`
+- `digest` (path; required; string): Digest of the blob
+  - Example: `sha256:abc123def4567890...`
+- `Authorization` (header; required; string): Bearer token with pull or push scope
+  - Example: `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6...`
 
 **Responses**
 
 - `200`: Blob exists
+  - Header `Content-Length` (integer): Size of the blob in bytes
+  - Header `Docker-Content-Digest` (string): Digest of the blob
+  - Header `Content-Type` (string): MIME type of the blob content
+  - Media type: `application/json`
+    - Example `blob-check-request`: `{"method":"HEAD","url":"/v2/library/ubuntu/blobs/sha256:abc123def4567890...","headers":{"Authorization":"Bearer <token>","Accept":"*/*"}}`
+    - Example `blob-check-response`: `{"status":"200 OK","headers":{"Docker-Content-Digest":"sha256:abc123def4567890...","Content-Length":32654,"Content-Type":"application/octet-stream"}}`
 - `401`: Authentication required
 - `403`: Access denied
 - `404`: Blob not found
@@ -234,13 +329,19 @@ The response includes the `Range` header indicating the byte range received so f
 
 **Parameters**
 
-- `name` (path, required): Repository Name
-- `uuid` (path, required): Upload session UUID
-- `Authorization` (header, required)
+- `name` (path; required; string): Repository Name
+  - Example: `library/ubuntu`
+- `uuid` (path; required; string): Upload session UUID
+  - Example: `abc123`
+- `Authorization` (header; required; string)
+  - Example: `Bearer eyJhbGciOi...`
 
 **Responses**
 
 - `204`: Upload in progress. No body is returned.
+  - Header `Range` (string): Current byte range uploaded (inclusive)
+  - Header `Docker-Upload-UUID` (string): UUID of the upload session
+  - Header `Location` (string): URL to continue or complete the upload
 - `401`: Authentication required
 - `403`: Access denied
 - `404`: Upload session not found
@@ -261,16 +362,27 @@ This endpoint supports:
 
 **Parameters**
 
-- `name` (path, required): Repository name
-- `uuid` (path, required): Upload session UUID returned from the POST request
-- `digest` (query, required): Digest of the uploaded blob
-- `Authorization` (header, required)
+- `name` (path; required; string): Repository name
+  - Example: `library/ubuntu`
+- `uuid` (path; required; string): Upload session UUID returned from the POST request
+  - Example: `abc123`
+- `digest` (query; required; string): Digest of the uploaded blob
+  - Example: `sha256:abcd1234...`
+- `Authorization` (header; required; string)
+  - Example: `Bearer eyJhbGciOi...`
 
 **Request body**
+
+- Media type: `application/octet-stream`
+  - Schema (string; format: binary)
+  - Example `layer-upload`: `<binary data not shown>`
 
 **Responses**
 
 - `201`: Upload completed successfully
+  - Header `Docker-Content-Digest` (string): Canonical digest of the stored blob
+  - Header `Location` (string): URL where the blob is now accessible
+  - Header `Content-Length` (integer): Always zero for completed uploads
 - `400`: Invalid digest or missing parameters
 - `401`: Authentication required
 - `403`: Access denied
@@ -296,16 +408,27 @@ After each chunk is accepted, the registry returns a `202 Accepted` response wit
 
 **Parameters**
 
-- `name` (path, required): Repository name
-- `uuid` (path, required): Upload session UUID
-- `Authorization` (header, required)
-- `Content-Range` (header): Optional. Byte range of the chunk being sent
+- `name` (path; required; string): Repository name
+  - Example: `library/ubuntu`
+- `uuid` (path; required; string): Upload session UUID
+  - Example: `abc123`
+- `Authorization` (header; required; string)
+  - Example: `Bearer eyJhbGciOi...`
+- `Content-Range` (header; string): Optional. Byte range of the chunk being sent
+  - Example: `bytes 0-65535`
 
-**Request body**
+**Request body** (required)
+
+- Media type: `application/octet-stream`
+  - Schema (string; format: binary)
+  - Example `chunk-0`: `<binary data not shown>`
 
 **Responses**
 
 - `202`: Chunk accepted and stored
+  - Header `Location` (string): URL to continue or finalize the upload
+  - Header `Range` (string): Byte range uploaded so far (inclusive)
+  - Header `Docker-Upload-UUID` (string): Upload session UUID
 - `400`: Malformed content or range
 - `401`: Authentication required
 - `403`: Access denied
@@ -330,13 +453,17 @@ After cancellation, the UUID is no longer valid and a new `POST` must be issued 
 
 **Parameters**
 
-- `name` (path, required): Name of the repository
-- `uuid` (path, required): Upload session UUID
-- `Authorization` (header, required)
+- `name` (path; required; string): Name of the repository
+  - Example: `library/ubuntu`
+- `uuid` (path; required; string): Upload session UUID
+  - Example: `abc123`
+- `Authorization` (header; required; string)
+  - Example: `Bearer eyJhbGciOi...`
 
 **Responses**
 
 - `204`: Upload session cancelled successfully. No body is returned.
+  - Header `Content-Length` (integer): Always zero
 - `401`: Authentication required
 - `403`: Access denied
 - `404`: Upload session not found

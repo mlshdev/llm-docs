@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/secrets](https://docs.vast.ai/api-reference/accounts/show-env-vars)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/secrets](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/api-reference/openapi.yaml%23get%20/api/v0/secrets)
+> Canonical documentation: https://docs.vast.ai/api-reference/accounts/show-env-vars
 
 # show env vars
 
@@ -8,9 +9,34 @@ Retrieve a list of environment variables (secrets) for the authenticated user.
 
 CLI Usage: `vastai show env-vars [-s]`
 
+**Authentication:** `BearerAuth`
+
 **Responses**
 
 - `200`: Success response with user secrets
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `true`
+      - `secrets` (object)
+        - `additional properties` (string)
+          - Example: `*****`
 - `401`: Unauthorized
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `false`
+      - `error` (string)
+      - `msg` (string)
 - `403`: Forbidden
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `false`
+      - `error` (string)
+      - `msg` (string)
 - `429`: Too Many Requests
+  - Media type: `application/json`
+    - Schema (object)
+      - `detail` (string)
+        - Example: `API requests too frequent endpoint threshold=5.0`

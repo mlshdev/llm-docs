@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/management/advanced-usage.mdx](https://trigger.dev/docs/management/advanced-usage)
+> Pinned source for Trigger.dev v4.5.16: [docs/management/advanced-usage.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/management/advanced-usage.mdx)
+> Canonical documentation: https://trigger.dev/docs/management/advanced-usage
 
 # Advanced usage
 

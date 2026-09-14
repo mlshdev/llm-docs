@@ -1,5 +1,6 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
+  "generatorVersion": 3,
   "project": "vmestimator",
   "title": "vmestimator",
   "homepage": "https://docs.victoriametrics.com/victoriametrics/vmestimator/",
@@ -9,9 +10,20 @@
   "releasePublishedAt": "2026-09-08T11:47:39Z",
   "sourceCommit": "1c2c6af816c60586dcc6b58c9fd92d5c0bd66c4f",
   "documentCount": 1,
+  "indexComplete": true,
+  "corpusVolumes": [
+    {
+      "name": "llms-full.txt",
+      "byteLength": 43726,
+      "documentCount": 1,
+      "sha256": "c359517baace7d739c2ab54002aa298ad9756bab215a8323e3e12c4d09295e14"
+    }
+  ],
+  "outputDigest": "9c58c1d2cb06483ce9359a1fe301aa16bdf62611397fdf9b910830e2ca8338d1",
   "notes": [
     "Pages follow the Hugo `menu.docs` navigation declared in docs/ at the immutable release tag.",
     "Fragments pulled in by `{{% content %}}` are inlined into the page that renders them and are not published separately.",
     "Hugo shortcodes are expanded to plain Markdown; presentation-only attribute lists are dropped."
-  ]
+  ],
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
 }

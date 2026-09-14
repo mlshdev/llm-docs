@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [api-reference/creating-and-using-templates-with-api.mdx](https://docs.vast.ai/api-reference/creating-and-using-templates-with-api)
+> Pinned source for Vast.ai main: [api-reference/creating-and-using-templates-with-api.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/api-reference/creating-and-using-templates-with-api.mdx)
+> Canonical documentation: https://docs.vast.ai/api-reference/creating-and-using-templates-with-api
 
 # Creating and Using Templates with API
 
@@ -159,7 +160,7 @@ api_key = "your_api_key"
 # Search for recommended templates with SSH support
 select_filters = {
     "use_ssh": {"eq": True},
-    "recommended": {"eq": True}
+    "recommended": `{"eq": True}`
 }
 
 response = requests.get(
@@ -175,7 +176,7 @@ for template in result.get("templates", []):
 # Search for popular templates by specific creators
 select_filters = {
     "count_created": {"gt": 100},
-    "creator_id": {"in": [38382, 48982]}
+    "creator_id": `{"in": [38382, 48982]}`
 }
 
 response = requests.get(
@@ -428,7 +429,7 @@ curl -X PUT "https://console.vast.ai/api/v0/asks/12345678/" \
   -H "Content-Type: application/json" \
   -d '{
     "template_hash_id": "4e17788f74f075dd9aab7d0d4427968f",
-    "env": {"MODEL_ID": "mistralai/Mistral-7B-Instruct-v0.2", "HF_TOKEN": "hf_xxxYourTokenHere", "-p 8000:8000": "1"}
+    "env": `{"MODEL_ID": "mistralai/Mistral-7B-Instruct-v0.2", "HF_TOKEN": "hf_xxxYourTokenHere", "-p 8000:8000": "1"}`
   }'
 ```
 

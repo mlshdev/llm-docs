@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/show.sgml#sql-show](https://www.postgresql.org/docs/18/sql-show.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/show.sgml#sql-show](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/show.sgml%23sql-show)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-show.html
 
 # SHOW
 

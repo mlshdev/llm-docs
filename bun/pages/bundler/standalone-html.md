@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/bundler/standalone-html.mdx](https://bun.com/docs/bundler/standalone-html)
+> Pinned source for Bun bun-v1.4.2: [docs/bundler/standalone-html.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/bundler/standalone-html.mdx)
+> Canonical documentation: https://bun.com/docs/bundler/standalone-html
 
 # Standalone HTML
 

@@ -1,10 +1,11 @@
+import { randomUUID } from "node:crypto";
 import { createReadStream, createWriteStream } from "node:fs";
 import {
   lstat,
   mkdtemp,
   mkdir,
   readdir,
-  readFile,
+  rename,
   rm,
   stat,
   writeFile,
@@ -32,11 +33,10 @@ export async function withRepositoryArchive<T>(
   includePath: (relativePath: string) => boolean = () => true,
 ): Promise<T> {
   const temporary = await mkdtemp(path.join(tmpdir(), "llm-docs-"));
-  const archivePath = path.join(temporary, "source.tar.gz");
   const sourcePath = path.join(temporary, "source");
   try {
     await mkdir(sourcePath);
-    await downloadArchive(repository, ref, archivePath);
+    const archivePath = await repositoryArchive(repository, ref);
     const archiveFiles = await extractArchive(
       archivePath,
       sourcePath,
@@ -46,6 +46,33 @@ export async function withRepositoryArchive<T>(
   } finally {
     await rm(temporary, { recursive: true, force: true });
   }
+}
+
+async function repositoryArchive(
+  repository: string,
+  ref: string,
+): Promise<string> {
+  if (!/^[^/\s]+\/[^/\s]+$/.test(repository) || !/^[0-9a-f]{40}$/.test(ref)) {
+    throw new Error(
+      `Repository archives must be addressed by owner/name and immutable commit SHA: ${repository}@${ref}`,
+    );
+  }
+  const cacheRoot =
+    process.env.GITHUB_ARCHIVE_CACHE_DIR ??
+    path.join(tmpdir(), "docs-llm-github-archives");
+  const directory = path.join(cacheRoot, repository.replace("/", "--"));
+  const archivePath = path.join(directory, `${ref}.tar.gz`);
+  await mkdir(directory, { recursive: true });
+  if (await exists(archivePath)) return archivePath;
+
+  const temporary = `${archivePath}.${process.pid}.${randomUUID()}.tmp`;
+  try {
+    await downloadArchive(repository, ref, temporary);
+    await rename(temporary, archivePath);
+  } finally {
+    await rm(temporary, { force: true });
+  }
+  return archivePath;
 }
 
 export async function listFiles(directory: string): Promise<string[]> {
@@ -82,7 +109,7 @@ export async function readUtf8(
   if (!details.isFile()) {
     throw new Error(`Expected a regular file: ${relativePath}`);
   }
-  return readFile(filePath, "utf8");
+  return Bun.file(filePath).text();
 }
 
 export async function writeUtf8(
@@ -90,11 +117,119 @@ export async function writeUtf8(
   content: string,
 ): Promise<void> {
   await mkdir(path.dirname(filePath), { recursive: true });
-  await writeFile(
-    filePath,
-    content.endsWith("\n") ? content : `${content}\n`,
-    "utf8",
-  );
+  await Bun.write(filePath, content.endsWith("\n") ? content : `${content}\n`);
+}
+
+export async function writeUtf8Atomic(
+  filePath: string,
+  content: string,
+): Promise<void> {
+  await mkdir(path.dirname(filePath), { recursive: true });
+  const temporary = `${filePath}.${process.pid}.${randomUUID()}.tmp`;
+  try {
+    await writeFile(
+      temporary,
+      content.endsWith("\n") ? content : `${content}\n`,
+      { encoding: "utf8", flag: "wx", mode: 0o644 },
+    );
+    await rename(temporary, filePath);
+  } finally {
+    await rm(temporary, { force: true });
+  }
+}
+
+export async function replaceDirectoryAtomically(
+  destination: string,
+  populate: (staging: string) => Promise<void>,
+): Promise<void> {
+  await stageDirectoryReplacement(destination, populate);
+  await commitDirectoryReplacements([destination], async () => {});
+}
+
+export async function stageDirectoryReplacement(
+  destination: string,
+  populate: (staging: string) => Promise<void>,
+): Promise<void> {
+  const staging = `${destination}.staging`;
+  await recoverAtomicDirectory(destination);
+  await rm(staging, { recursive: true, force: true });
+  await mkdir(staging, { recursive: true });
+  try {
+    await populate(staging);
+  } catch (error) {
+    await rm(staging, { recursive: true, force: true });
+    throw error;
+  }
+}
+
+// Commit a set of fully staged directories as one in-process transaction. Old
+// snapshots remain in sibling backups until the caller's root indexes, lock,
+// and verification callback has also succeeded; any failure rolls every swap
+// back in reverse order.
+export async function commitDirectoryReplacements(
+  destinations: readonly string[],
+  finalize: () => Promise<void>,
+): Promise<void> {
+  const committed: { destination: string; retainedPrevious: boolean }[] = [];
+  try {
+    for (const destination of destinations) {
+      const staging = `${destination}.staging`;
+      const backup = `${destination}.backup`;
+      if (!(await exists(staging))) {
+        throw new Error(`Missing staged directory: ${staging}`);
+      }
+      const retainedPrevious = await exists(destination);
+      if (retainedPrevious) await rename(destination, backup);
+      try {
+        await rename(staging, destination);
+      } catch (error) {
+        if (retainedPrevious) await rename(backup, destination);
+        throw error;
+      }
+      committed.push({ destination, retainedPrevious });
+    }
+    await finalize();
+  } catch (error) {
+    for (const entry of committed.reverse()) {
+      const backup = `${entry.destination}.backup`;
+      await rm(entry.destination, { recursive: true, force: true });
+      if (entry.retainedPrevious) await rename(backup, entry.destination);
+    }
+    throw error;
+  } finally {
+    for (const destination of destinations) {
+      await rm(`${destination}.staging`, { recursive: true, force: true });
+    }
+  }
+  for (const entry of committed) {
+    if (entry.retainedPrevious) {
+      await rm(`${entry.destination}.backup`, { recursive: true, force: true });
+    }
+  }
+}
+
+export async function discardDirectoryReplacements(
+  destinations: readonly string[],
+): Promise<void> {
+  for (const destination of destinations) {
+    await rm(`${destination}.staging`, { recursive: true, force: true });
+  }
+}
+
+export async function recoverAtomicDirectory(
+  destination: string,
+): Promise<void> {
+  const staging = `${destination}.staging`;
+  const backup = `${destination}.backup`;
+  await rm(staging, { recursive: true, force: true });
+  if (!(await exists(backup))) {
+    return;
+  }
+  if (await exists(destination)) {
+    await rm(backup, { recursive: true, force: true });
+  } else {
+    await rename(backup, destination);
+  }
 }
 
 export async function exists(filePath: string): Promise<boolean> {
@@ -107,10 +242,6 @@ export async function exists(filePath: string): Promise<boolean> {
     }
     throw error;
   }
-}
-
-export function toPosixPath(value: string): string {
-  return value.split(path.sep).join("/");
 }
 
 export function resolveWithin(root: string, relativePath: string): string {
@@ -132,13 +263,14 @@ export function resolveWithin(root: string, relativePath: string): string {
   return resolved;
 }
 
-async function extractArchive(
+export async function extractArchive(
   archivePath: string,
   destination: string,
   includePath: (relativePath: string) => boolean,
 ): Promise<ReadonlySet<string>> {
   const archive = extract();
   const archiveFiles = new Set<string>();
+  let archiveRoot: string | undefined;
   let fileCount = 0;
   let extractedBytes = 0;
   let archiveEntries = 0;
@@ -150,6 +282,22 @@ async function extractArchive(
 
     async function handleEntry(): Promise<void> {
       const relativePath = archiveRelativePath(header.name);
+      const root = header.name.replace(/\/$/, "").split("/")[0];
+      if (root) {
+        if (archiveRoot !== undefined && root !== archiveRoot) {
+          throw new Error(
+            `Source archive has multiple roots: ${archiveRoot}, ${root}`,
+          );
+        }
+        archiveRoot = root;
+      }
+      if (
+        relativePath &&
+        includePath(relativePath) &&
+        (header.type === "symlink" || header.type === "link")
+      ) {
+        throw new Error(`Source archive contains a link: ${relativePath}`);
+      }
       const size = header.size ?? 0;
       if (!Number.isSafeInteger(size) || size < 0) {
         throw new Error(
@@ -165,6 +313,9 @@ async function extractArchive(
         throw new Error("Source archive exceeds entry or declared-size limits");
       }
       if (relativePath && header.type === "file") {
+        if (archiveFiles.has(relativePath)) {
+          throw new Error(`Source archive repeats file: ${relativePath}`);
+        }
         archiveFiles.add(relativePath);
       }
       if (
@@ -194,17 +345,26 @@ async function extractArchive(
       next();
     }
   });
-  await pipeline(createReadStream(archivePath), createGunzip(), archive);
-  return archiveFiles;
+  try {
+    await pipeline(createReadStream(archivePath), createGunzip(), archive);
+    return archiveFiles;
+  } catch (error) {
+    await rm(destination, { recursive: true, force: true });
+    throw error;
+  }
 }
 
-function archiveRelativePath(name: string): string | undefined {
+export function archiveRelativePath(name: string): string | undefined {
   if (
     !name ||
     name.includes("\\") ||
     name.includes("\0") ||
     path.posix.isAbsolute(name)
   ) {
+    throw new Error(`Unsafe archive path: ${name}`);
+  }
+  const rawParts = name.replace(/\/$/, "").split("/");
+  if (rawParts.some((part) => part === "" || part === "." || part === "..")) {
     throw new Error(`Unsafe archive path: ${name}`);
   }
   const normalized = path.posix.normalize(name);

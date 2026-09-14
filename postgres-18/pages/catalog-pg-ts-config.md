@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/catalogs.sgml#catalog-pg-ts-config](https://www.postgresql.org/docs/18/catalog-pg-ts-config.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/catalogs.sgml#catalog-pg-ts-config](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/catalogs.sgml%23catalog-pg-ts-config)
+> Canonical documentation: https://www.postgresql.org/docs/18/catalog-pg-ts-config.html
 
 # pg_ts_config
 

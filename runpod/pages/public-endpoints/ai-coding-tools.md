@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [public-endpoints/ai-coding-tools.mdx](https://docs.runpod.io/public-endpoints/ai-coding-tools)
+> Pinned source for Runpod main: [public-endpoints/ai-coding-tools.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/public-endpoints/ai-coding-tools.mdx)
+> Canonical documentation: https://docs.runpod.io/public-endpoints/ai-coding-tools
 
 # Connect AI coding tools with Public Endpoints
 

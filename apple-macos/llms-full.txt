@@ -4,9 +4,22 @@ Source: https://developer.apple.com/macos/
 Catalog snapshot: 0b0d8b1a4a77841dabe3408abb94affbfce2598ab3f91e5ee497688ed5532de6
 Content digest: 261899149f391f58bc46c468881d82ec07fe2e3d04902a9c297d1c68eece64b1
 Captured at: 2026-09-12T21:04:59.695Z
+This corpus is published as 17 retrieval-sized volumes. Read the volumes in order for the complete corpus.
 
-This corpus is published as 3 volumes because a single file would exceed the 100 MiB GitHub file limit. Read the volumes in order for the complete corpus.
-
-- [Volume 1](llms-full.001.txt): 17635 documents.
-- [Volume 2](llms-full.002.txt): 30892 documents.
-- [Volume 3](llms-full.003.txt): 29472 documents.
+- [Volume 1](llms-full.001.txt): 2608 documents, 8385177 bytes, SHA-256 `126555a062054b2147a64ba6f6b609b6136c044cef528f9ae5f85f6bde70c236`.
+- [Volume 2](llms-full.002.txt): 2823 documents, 8372473 bytes, SHA-256 `f202004c492d26f84fdbbcacec058f57020b23d764bf58ec902fabc079649bc0`.
+- [Volume 3](llms-full.003.txt): 2777 documents, 8387764 bytes, SHA-256 `2ff0d45fcc958b778bb6f30c94f09fe8cca58b99764e5953524371821efcd377`.
+- [Volume 4](llms-full.004.txt): 3168 documents, 8385133 bytes, SHA-256 `95c4fc00b192bf17b217220ad543201028b0b59eda2ece4e60e06985c2f1f028`.
+- [Volume 5](llms-full.005.txt): 2552 documents, 8387618 bytes, SHA-256 `3f355596a7ffe5c6f56adcd85fb79282125a49cfef5611dc750957b3f12453dc`.
+- [Volume 6](llms-full.006.txt): 8212 documents, 8388199 bytes, SHA-256 `c37023122c3472d7bda3a0e3d875f64257a29064e7f24926906925afaef52529`.
+- [Volume 7](llms-full.007.txt): 4616 documents, 8385166 bytes, SHA-256 `f9319c0f2fc65385e63213061a0ea0003d46899d1db73e15fb1dd7106788e984`.
+- [Volume 8](llms-full.008.txt): 2573 documents, 8385990 bytes, SHA-256 `7779a8c77c3d15043543ac5f311d9a180dc3ed6aa1f835edf99c8b125887d065`.
+- [Volume 9](llms-full.009.txt): 3577 documents, 8385755 bytes, SHA-256 `f54a79baa70b6ecff5afd771f82c8a3cfd6ddca756ab04f8f198129421a5ac5b`.
+- [Volume 10](llms-full.010.txt): 3361 documents, 8385523 bytes, SHA-256 `05b51ec5c6c94e84edec8bb07b1226b51338ec22c79b9502a12b7155de4b55ce`.
+- [Volume 11](llms-full.011.txt): 10449 documents, 8388344 bytes, SHA-256 `1b8bd552fda4419f7a8f2df6cf89b213c66b9b05d2be96678a049cd9605d4a92`.
+- [Volume 12](llms-full.012.txt): 7574 documents, 8387730 bytes, SHA-256 `c3f02579bb03e9962c378a62e5b3c42ee4403545632668dbee8c1b19780edfa5`.
+- [Volume 13](llms-full.013.txt): 6874 documents, 8382417 bytes, SHA-256 `1b988f34f529ccda5901357cf4c70b67bb9106c443ee47bbd5d9ab06e29bea52`.
+- [Volume 14](llms-full.014.txt): 4582 documents, 8388391 bytes, SHA-256 `b2ed65dc82b8fa1ff88ceafd0e862c8c7150cf0ab8f6e1aa46fb46cc26d79aa5`.
+- [Volume 15](llms-full.015.txt): 7897 documents, 8376550 bytes, SHA-256 `ab8fc3387e3db36abb94181e8106709985325aa0c87feec07ec4dc7000d90a22`.
+- [Volume 16](llms-full.016.txt): 2914 documents, 8379414 bytes, SHA-256 `d50bd198d62181ea694338f2c89d7cabc7c3a0646ea2a070d6d31d83493ee5f5`.
+- [Volume 17](llms-full.017.txt): 1442 documents, 4270685 bytes, SHA-256 `107501a2ba67ca8602233228a944781c7621cef56a2ee1c80007552475d870ba`.

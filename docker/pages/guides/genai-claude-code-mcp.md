@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/genai-claude-code-mcp.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/genai-claude-code-mcp.md)
+> Pinned source for Docker main: [content/guides/genai-claude-code-mcp.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/genai-claude-code-mcp.md)
 
 # Generate Docker Compose Files with Claude Code and Docker MCP Toolkit
 

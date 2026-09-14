@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/n8n-api/pagination.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/connect/n8n-api/pagination.md)
+> Pinned source for n8n main: [docs/connect/n8n-api/pagination.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/connect/n8n-api/pagination.md)
 
 # API pagination <a id="api-pagination"></a>
 
@@ -11,13 +11,13 @@ For example, say you want to get all active workflows, 150 at a time.
 Get the first page:
 
 ```shell
-# For a self-hosted n8n instance <a id="for-a-self-hosted-n8n-instance"></a>
+# For a self-hosted n8n instance <a href="#for-a-self-hosted-n8n-instance" id="for-a-self-hosted-n8n-instance"></a>
 curl -X 'GET' \
   '<N8N_HOST>:<N8N_PORT>/<N8N_PATH>/api/v<version-number>/workflows?active=true&limit=150' \
   -H 'accept: application/json' \
   -H 'X-N8N-API-KEY: <your-api-key>'
 
-# For n8n Cloud <a id="for-n8n-cloud"></a>
+# For n8n Cloud <a href="#for-n8n-cloud" id="for-n8n-cloud"></a>
 curl -X 'GET' \
   '<your-cloud-instance>/api/v<version-number>/workflows?active=true&limit=150' \
   -H 'accept: application/json' \
@@ -41,12 +41,12 @@ The response is in JSON format, and includes a `nextCursor` value. This is an ex
 Then to request the next page:
 
 ```bash
-# For a self-hosted n8n instance <a id="for-a-self-hosted-n8n-instance"></a>
+# For a self-hosted n8n instance <a href="#for-a-self-hosted-n8n-instance" id="for-a-self-hosted-n8n-instance"></a>
 curl -X 'GET' \
   '<N8N_HOST>:<N8N_PORT>/<N8N_PATH>/api/v<version-number>/workflows?active=true&limit=150&cursor=MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA' \
   -H 'accept: application/json'
 
-# For n8n Cloud <a id="for-n8n-cloud"></a>
+# For n8n Cloud <a href="#for-n8n-cloud" id="for-n8n-cloud"></a>
 curl -X 'GET' \
   '<your-cloud-instance>/api/v<version-number>/workflows?active=true&limit=150&cursor=MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA' \
   -H 'accept: application/json'

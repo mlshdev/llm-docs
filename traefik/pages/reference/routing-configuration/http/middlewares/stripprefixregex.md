@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/http/middlewares/stripprefixregex.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/stripprefixregex.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/http/middlewares/stripprefixregex.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/stripprefixregex.md)
 
 The `stripPrefixRegex` middleware strips the matching path prefix and stores it in an `X-Forwarded-Prefix` header.
 
@@ -42,7 +42,7 @@ labels:
     "traefik.http.middlewares.test-stripprefixregex.stripprefixregex.regex=/foo/[a-z0-9]+/[0-9]+/"
   ]
 }
--
+- 
 ```
 
 **Kubernetes**

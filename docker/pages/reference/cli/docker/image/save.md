@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_image_save.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_image_save.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_image_save.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_image_save.yaml)
 
 # docker image save
 
@@ -16,10 +16,10 @@ each argument provided.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-o`, `--output` |  | Write to a file, instead of STDOUT |
-| `--platform` |  | Save only the given platform(s). Formatted as a comma-separated list of `os[/arch[/variant]]` (e.g., `linux/amd64,linux/arm64/v8`) (API 1.48+) |
+| Option           | Default | Description                                                                                                                                    |
+| ---------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `-o`, `--output` |         | Write to a file, instead of STDOUT                                                                                                             |
+| `--platform`     |         | Save only the given platform(s). Formatted as a comma-separated list of `os[/arch[/variant]]` (e.g., `linux/amd64,linux/arm64/v8`) (API 1.48+) |
 
 ## Examples
 

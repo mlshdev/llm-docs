@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/plpgsql.sgml#plpgsql-porting](https://www.postgresql.org/docs/18/plpgsql-porting.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/plpgsql.sgml#plpgsql-porting](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/plpgsql.sgml%23plpgsql-porting)
+> Canonical documentation: https://www.postgresql.org/docs/18/plpgsql-porting.html
 
 # Porting from Oracle PL/SQL
 
@@ -358,6 +359,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql STRICT IMMUTABLE;
 
+
 CREATE FUNCTION instr(string varchar, string_to_search_for varchar,
                       beg_index integer)
 RETURNS integer AS $$
@@ -397,6 +399,7 @@ BEGIN
     END IF;
 END;
 $$ LANGUAGE plpgsql STRICT IMMUTABLE;
+
 
 CREATE FUNCTION instr(string varchar, string_to_search_for varchar,
                       beg_index integer, occur_index integer)

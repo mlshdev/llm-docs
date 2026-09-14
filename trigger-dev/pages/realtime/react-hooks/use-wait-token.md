@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/realtime/react-hooks/use-wait-token.mdx](https://trigger.dev/docs/realtime/react-hooks/use-wait-token)
+> Pinned source for Trigger.dev v4.5.16: [docs/realtime/react-hooks/use-wait-token.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/realtime/react-hooks/use-wait-token.mdx)
+> Canonical documentation: https://trigger.dev/docs/realtime/react-hooks/use-wait-token
 
 # useWaitToken
 

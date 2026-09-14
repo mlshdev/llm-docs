@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/alter_tsdictionary.sgml#sql-altertsdictionary](https://www.postgresql.org/docs/18/sql-altertsdictionary.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/alter_tsdictionary.sgml#sql-altertsdictionary](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/alter_tsdictionary.sgml%23sql-altertsdictionary)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-altertsdictionary.html
 
 # ALTER TEXT SEARCH DICTIONARY
 

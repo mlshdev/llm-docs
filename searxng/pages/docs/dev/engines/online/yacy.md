@@ -1,8 +1,9 @@
-> Commit-pinned source for SearXNG master: [docs/dev/engines/online/yacy.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/yacy.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/online/yacy.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/yacy.rst)
 
-.. \_yacy engine:
+<a id="yacy-engine"></a>
 
 # Yacy
 
-.. automodule:: searx.engines.yacy
-:members:
+#### `searx.engines.yacy`
+
+Static Python API reference (`automodule`).

@@ -1,5 +1,6 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
+  "generatorVersion": 3,
   "project": "podman",
   "title": "Podman",
   "homepage": "https://docs.podman.io/",
@@ -9,8 +10,19 @@
   "releasePublishedAt": "2026-09-02T16:35:51Z",
   "sourceCommit": "8303f2e25b675ea7f82099d615c60969aec15870",
   "documentCount": 231,
+  "indexComplete": true,
+  "corpusVolumes": [
+    {
+      "name": "llms-full.txt",
+      "byteLength": 2907889,
+      "documentCount": 231,
+      "sha256": "ea9d73ddf5af1c962c9c29b0693418156e072ec6bb44609fb78d6419c7edd02a"
+    }
+  ],
+  "outputDigest": "7fca14c489cca90aa51f894496719546dbfcd580d9c97687ec249cc15248df93",
   "notes": [
     "Podman man-page templates are expanded by a non-executing implementation of the tagged repository's documented preprocessing rules.",
     "Generated aliases, duplicate rootless/troubleshooting pages, translations, assets, and vendored code are omitted."
-  ]
+  ],
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
 }

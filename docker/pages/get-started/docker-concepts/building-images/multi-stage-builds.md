@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/get-started/docker-concepts/building-images/multi-stage-builds.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/get-started/docker-concepts/building-images/multi-stage-builds.md)
+> Pinned source for Docker main: [content/get-started/docker-concepts/building-images/multi-stage-builds.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/get-started/docker-concepts/building-images/multi-stage-builds.md)
 
 [Watch the video](https://www.youtube.com/watch?v=vR185cjwxZ8)
 
@@ -17,16 +17,16 @@ Here's a simplified example of a multi-stage build structure using pseudo-code. 
 
 ```dockerfile
 # Stage 1: Build Environment
-FROM builder-image AS build-stage
+FROM builder-image AS build-stage 
 # Install build tools (e.g., Maven, Gradle)
 # Copy source code
 # Build commands (e.g., compile, package)
 
 # Stage 2: Runtime environment
-FROM runtime-image AS final-stage
+FROM runtime-image AS final-stage  
 #  Copy application artifacts from the build stage (e.g., JAR file)
 COPY --from=build-stage /path/in/build/stage /path/to/place/in/final/stage
-# Define runtime configuration (e.g., CMD, ENTRYPOINT)
+# Define runtime configuration (e.g., CMD, ENTRYPOINT) 
 ```
 
 This Dockerfile uses two stages:
@@ -102,6 +102,7 @@ daunting. Thankfully, you don't yet need to understand every intricacy to use it
    import org.springframework.boot.autoconfigure.SpringBootApplication;
    import org.springframework.web.bind.annotation.RequestMapping;
    import org.springframework.web.bind.annotation.RestController;
+
 
    @RestController
    @SpringBootApplication

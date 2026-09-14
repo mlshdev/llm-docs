@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { isSourcesLock } from "./config.ts";
+import { isSourcesConfig, isSourcesLock } from "./config.ts";
 
 const pin = {
   tag: "v1.150.0",
@@ -48,6 +48,18 @@ describe("sources lock validation", () => {
 
   test("accepts a branch-pinned source", () => {
     expect(isSourcesLock(lock({ docker: branchPin }))).toBe(true);
+    expect(
+      isSourcesLock(
+        lock({
+          docker: {
+            ...branchPin,
+            documentationDigest:
+              "fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210",
+            observedCommit: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          },
+        }),
+      ),
+    ).toBe(true);
   });
 
   test("accepts a DocC catalog snapshot with or without a content digest", () => {
@@ -103,6 +115,11 @@ describe("sources lock validation", () => {
     ).toBe(false);
     expect(
       isSourcesLock(
+        lock({ docker: { ...branchPin, documentationDigest: "deadbeef" } }),
+      ),
+    ).toBe(false);
+    expect(
+      isSourcesLock(
         lock({
           "apple-swift": { ...snapshotPin, tag: "snapshot-wrong" },
         }),
@@ -120,5 +137,41 @@ describe("sources lock validation", () => {
   test("rejects a foreign schema version", () => {
     expect(isSourcesLock({ schemaVersion: 2, projects: {} })).toBe(false);
     expect(isSourcesLock({ projects: {} })).toBe(false);
+  });
+
+  test("rejects invalid timestamps and unknown pin properties", () => {
+    expect(
+      isSourcesLock(
+        lock({ traefik: { ...pin, releasePublishedAt: "sometime" } }),
+      ),
+    ).toBe(false);
+    expect(isSourcesLock(lock({ traefik: { ...pin, extra: true } }))).toBe(
+      false,
+    );
+  });
+});
+
+describe("source configuration validation", () => {
+  test("rejects blank fields, unsafe URLs, repository typos, and unknown keys", async () => {
+    const current = JSON.parse(
+      await Bun.file(new URL("../config/sources.json", import.meta.url)).text(),
+    ) as { schemaVersion: number; projects: Record<string, unknown>[] };
+    for (const mutation of [
+      { title: "" },
+      { homepage: "javascript:alert(1)" },
+      { repository: "traefik" },
+      { repository: "traefik/traefik.git" },
+      { surprise: true },
+    ]) {
+      expect(
+        isSourcesConfig({
+          ...current,
+          projects: [
+            { ...current.projects[0], ...mutation },
+            ...current.projects.slice(1),
+          ],
+        }),
+      ).toBe(false);
+    }
   });
 });

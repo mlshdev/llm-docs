@@ -1,383 +1,335 @@
-> Commit-pinned source for SearXNG master: [docs/admin/installation-apache.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/installation-apache.rst)
+> Pinned source for SearXNG master: [docs/admin/installation-apache.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/installation-apache.rst)
 
-.. \_installation apache:
+<a id="installation-apache"></a>
 
 # Apache
 
-.. \_Apache Debian:
-<https://cwiki.apache.org/confluence/display/HTTPD/DistrosDefaultLayout#DistrosDefaultLayout-Debian,Ubuntu(Apachehttpd2.x)>:
-.. \_apache2.README.Debian:
-<https://salsa.debian.org/apache-team/apache2/raw/master/debian/apache2.README.Debian>
-.. \_Apache Arch Linux:
-<https://wiki.archlinux.org/index.php/Apache_HTTP_Server>
-.. \_Apache Fedora:
-<https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-apache-http-server/index.html>
-.. \_Apache directives:
-<https://httpd.apache.org/docs/trunk/mod/directives.html>
-.. \_Getting Started:
-<https://httpd.apache.org/docs/current/en/getting-started.html>
-.. \_Terms Used to Describe Directives:
-<https://httpd.apache.org/docs/current/en/mod/directive-dict.html>
-.. \_Configuration Files:
-<https://httpd.apache.org/docs/current/en/configuring.html>
-.. \_LoadModule:
-<https://httpd.apache.org/docs/mod/mod_so.html#loadmodule>
-.. \_IncludeOptional:
-<https://httpd.apache.org/docs/mod/core.html#includeoptional>
-.. \_DocumentRoot:
-<https://httpd.apache.org/docs/trunk/mod/core.html#documentroot>
-.. \_Location:
-<https://httpd.apache.org/docs/trunk/mod/core.html#location>
-.. \_uWSGI Apache support:
-<https://uwsgi-docs.readthedocs.io/en/latest/Apache.html>
-.. \_mod\_proxy\_uwsgi:
-<https://uwsgi-docs.readthedocs.io/en/latest/Apache.html#mod-proxy-uwsgi>
-.. \_mod\_proxy\_http:
-<https://httpd.apache.org/docs/current/mod/mod_proxy_http.html>
-.. \_mod\_proxy:
+<a id="apache"></a> <a id="apache-debian"></a>
+<https://cwiki.apache.org/confluence/display/HTTPD/DistrosDefaultLayout#DistrosDefaultLayout-Debian,Ubuntu(Apachehttpd2.x)>: <a id="apache2-readme-debian"></a>
+<https://salsa.debian.org/apache-team/apache2/raw/master/debian/apache2.README.Debian> <a id="apache-arch-linux"></a>
+<https://wiki.archlinux.org/index.php/Apache_HTTP_Server> <a id="apache-fedora"></a>
+<https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-apache-http-server/index.html> <a id="apache-directives"></a>
+<https://httpd.apache.org/docs/trunk/mod/directives.html> <a id="getting-started"></a>
+<https://httpd.apache.org/docs/current/en/getting-started.html> <a id="terms-used-to-describe-directives"></a>
+<https://httpd.apache.org/docs/current/en/mod/directive-dict.html> <a id="configuration-files"></a>
+<https://httpd.apache.org/docs/current/en/configuring.html> <a id="proxypreservehost"></a> <a id="loadmodule"></a>
+<https://httpd.apache.org/docs/mod/mod_so.html#loadmodule> <a id="includeoptional"></a>
+<https://httpd.apache.org/docs/mod/core.html#includeoptional> <a id="documentroot"></a>
+<https://httpd.apache.org/docs/trunk/mod/core.html#documentroot> <a id="location"></a>
+<https://httpd.apache.org/docs/trunk/mod/core.html#location> <a id="uwsgi-apache-support"></a>
+<https://uwsgi-docs.readthedocs.io/en/latest/Apache.html> <a id="mod-proxy-uwsgi"></a>
+<https://uwsgi-docs.readthedocs.io/en/latest/Apache.html#mod-proxy-uwsgi> <a id="mod-proxy-http"></a>
+<https://httpd.apache.org/docs/current/mod/mod_proxy_http.html> <a id="mod-proxy"></a>
 <https://httpd.apache.org/docs/current/mod/mod_proxy.html>
 
-This section explains how to set up a SearXNG instance using the HTTP server Apache.
-If you did use the \[installation scripts]\(#installation scripts) and do not have any special preferences
-you can install the \[SearXNG site]\(#apache searxng site) using
-\[searxng.sh]\(#searxng.sh overview):
+This section explains how to set up a SearXNG instance using the HTTP server Apache\_.
+If you did use the [installation scripts](https://docs.searxng.org/admin/installation-scripts.html#installation-scripts) and do not have any special preferences
+you can install the [SearXNG site](https://docs.searxng.org/admin/installation-apache.html#apache-searxng-site) using
+[searxng.sh](https://docs.searxng.org/utils/searxng.sh.html#searxng-sh-overview):
 
-.. code:: bash
-
+```bash
 $ sudo -H ./utils/searxng.sh install apache
+```
 
 If you have special interests or problems with setting up Apache, the following
 section might give you some guidance.
 
 ### further read
 
-- Apache Arch Linux
-- Apache Debian
-- apache2.README.Debian
-- Apache Fedora
-- Apache directives
+- [Apache Arch Linux](https://docs.searxng.org/admin/installation-apache.html#apache-arch-linux)
+- [Apache Debian](https://docs.searxng.org/admin/installation-apache.html#apache-debian)
+- [apache2.README.Debian](https://docs.searxng.org/admin/installation-apache.html#apache2-readme-debian)
+- [Apache Fedora](https://docs.searxng.org/admin/installation-apache.html#apache-fedora)
+- [Apache directives](https://docs.searxng.org/admin/installation-apache.html#apache-directives)
 
 # The Apache HTTP server
 
-If Apache is not installed, install it now. If apache is new to you, the
-Getting Started, Configuration Files and `Terms Used to Describe
+If Apache\_ is not installed, install it now. If apache\_ is new to you, the
+[Getting Started](https://docs.searxng.org/admin/installation-apache.html#getting-started), [Configuration Files](https://docs.searxng.org/admin/installation-apache.html#configuration-files) and `Terms Used to Describe
 Directives`\_ documentation gives first orientation.  There is also a list of
-Apache directives *to keep in the pocket*.
+[Apache directives](https://docs.searxng.org/admin/installation-apache.html#apache-directives) *to keep in the pocket*.
 
-.. tabs:
+**Ubuntu / debian**
 
-```text
-.. group-tab:: Ubuntu / debian
+```bash
+sudo -H apt-get install apache2
+```
 
-  .. code:: bash
+**Arch Linux**
 
-     sudo -H apt-get install apache2
+```bash
+sudo -H pacman -S apache
+sudo -H systemctl enable httpd
+sudo -H systemctl start http
+```
 
-.. group-tab:: Arch Linux
+**Fedora / RHEL**
 
-  .. code:: bash
-
-     sudo -H pacman -S apache
-     sudo -H systemctl enable httpd
-     sudo -H systemctl start http
-
-.. group-tab::  Fedora / RHEL
-
-  .. code:: bash
-
-     sudo -H dnf install httpd
-     sudo -H systemctl enable httpd
-     sudo -H systemctl start httpd
-
+```bash
+sudo -H dnf install httpd
+sudo -H systemctl enable httpd
+sudo -H systemctl start httpd
 ```
 
 Now at <http://localhost> you should see some kind of *Welcome* or *Test* page.
 How this default site is configured, depends on the linux distribution
-(compare Apache directives).
+(compare [Apache directives](https://docs.searxng.org/admin/installation-apache.html#apache-directives)).
 
-.. tabs:
+**Ubuntu / debian**
 
-```text
-.. group-tab:: Ubuntu / debian
-
-  .. code:: bash
-
-     less /etc/apache2/sites-enabled/000-default.conf
-
-  In this file, there is a line setting the `DocumentRoot`_ directive:
-
-  .. code:: apache
-
-     DocumentRoot /var/www/html
-
-  And the *welcome* page is the HTML file at ``/var/www/html/index.html``.
-
-.. group-tab:: Arch Linux
-
-  .. code:: bash
-
-     less /etc/httpd/conf/httpd.conf
-
-  In this file, there is a line setting the `DocumentRoot`_ directive:
-
-  .. code:: apache
-
-     DocumentRoot "/srv/http"
-     <Directory "/srv/http">
-         Options Indexes FollowSymLinks
-         AllowOverride None
-         Require all granted
-     </Directory>
-
-  The *welcome* page of Arch Linux is a page showing the directory located
-  at ``DocumentRoot``.  This *directory* page is generated by the Module
-  `mod_autoindex <https://httpd.apache.org/docs/2.4/mod/mod_autoindex.html>`_:
-
-  .. code:: apache
-
-     LoadModule autoindex_module modules/mod_autoindex.so
-     ...
-     Include conf/extra/httpd-autoindex.conf
-
-.. group-tab::  Fedora / RHEL
-
-  .. code:: bash
-
-     less /etc/httpd/conf/httpd.conf
-
-  In this file, there is a line setting the ``DocumentRoot`` directive:
-
-  .. code:: apache
-
-      DocumentRoot "/var/www/html"
-      ...
-      <Directory "/var/www">
-          AllowOverride None
-          # Allow open access:
-          Require all granted
-      </Directory>
-
-  On fresh installations, the ``/var/www`` is empty and the *default
-  welcome page* is shown, the configuration is located at::
-
-    less /etc/httpd/conf.d/welcome.conf
-
+```bash
+less /etc/apache2/sites-enabled/000-default.conf
 ```
 
-.. \_Debian's Apache layout:
+In this file, there is a line setting the [DocumentRoot](https://docs.searxng.org/admin/installation-apache.html#documentroot) directive:
+
+```apache
+DocumentRoot /var/www/html
+```
+
+And the *welcome* page is the HTML file at `/var/www/html/index.html`.
+
+**Arch Linux**
+
+```bash
+less /etc/httpd/conf/httpd.conf
+```
+
+In this file, there is a line setting the [DocumentRoot](https://docs.searxng.org/admin/installation-apache.html#documentroot) directive:
+
+```apache
+DocumentRoot "/srv/http"
+<Directory "/srv/http">
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
+</Directory>
+```
+
+The *welcome* page of Arch Linux is a page showing the directory located
+at `DocumentRoot`.  This *directory* page is generated by the Module
+[mod\_autoindex](https://httpd.apache.org/docs/2.4/mod/mod_autoindex.html):
+
+```apache
+LoadModule autoindex_module modules/mod_autoindex.so
+...
+Include conf/extra/httpd-autoindex.conf
+```
+
+**Fedora / RHEL**
+
+```bash
+less /etc/httpd/conf/httpd.conf
+```
+
+In this file, there is a line setting the `DocumentRoot` directive:
+
+```apache
+DocumentRoot "/var/www/html"
+...
+<Directory "/var/www">
+    AllowOverride None
+    # Allow open access:
+    Require all granted
+</Directory>
+```
+
+On fresh installations, the `/var/www` is empty and the *default
+welcome page* is shown, the configuration is located at:
+
+```python
+less /etc/httpd/conf.d/welcome.conf
+```
+
+<a id="debian-s-apache-layout"></a>
 
 ## Debian's Apache layout
 
 Be aware, Debian's Apache layout is quite different from the standard Apache
-configuration.  For details look at the apache2.README.Debian
+configuration.  For details look at the apache2.README.Debian\_
 (`/usr/share/doc/apache2/README.Debian.gz`).  Some commands you should know on
 Debian:
 
-- :man:`apache2ctl`:  Apache HTTP server control interface
-- :man:`a2enmod`, :man:`a2dismod`: switch on/off modules
-- :man:`a2enconf`, :man:`a2disconf`: switch on/off configurations
-- :man:`a2ensite`, :man:`a2dissite`: switch on/off sites
+- `apache2ctl(1)`:  Apache HTTP server control interface
+- `a2enmod(1)`, `a2dismod(1)`: switch on/off modules
+- `a2enconf(1)`, `a2disconf(1)`: switch on/off configurations
+- `a2ensite(1)`, `a2dissite(1)`: switch on/off sites
 
-.. \_apache modules:
+<a id="apache-modules"></a>
 
 ## Apache modules
 
 To load additional modules, in most distributions you have to uncomment the
-lines with the corresponding LoadModule directive, except in :ref:`Debian's
-Apache layout`.
+lines with the corresponding LoadModule\_ directive, except in [Debian's Apache layout](https://docs.searxng.org/admin/installation-apache.html#debian-s-apache-layout).
 
-.. tabs:
+**Ubuntu / debian**
 
-```text
-.. group-tab:: Ubuntu / debian
+activate or disable modules:
 
-  :ref:`Debian's Apache layout` uses :man:`a2enmod` and :man:`a2dismod` to
-  activate or disable modules:
-
-  .. code:: bash
-
-     sudo -H a2enmod ssl
-     sudo -H a2enmod headers
-     sudo -H a2enmod proxy
-     sudo -H a2enmod proxy_http
-     sudo -H a2enmod proxy_uwsgi
-
-.. group-tab:: Arch Linux
-
-  In the ``/etc/httpd/conf/httpd.conf`` file, activate LoadModule_
-  directives:
-
-  .. code:: apache
-
-     LoadModule ssl_module           modules/mod_ssl.so
-     LoadModule headers_module       modules/mod_headers.so
-     LoadModule proxy_module         modules/mod_proxy.so
-     LoadModule proxy_http_module    modules/mod_proxy_http.so
-     LoadModule proxy_uwsgi_module   modules/mod_proxy_uwsgi.so
-
-.. group-tab::  Fedora / RHEL
-
-  In the ``/etc/httpd/conf/httpd.conf`` file, activate LoadModule_
-  directives:
-
-  .. code:: apache
-
-     LoadModule ssl_module           modules/mod_ssl.so
-     LoadModule headers_module       modules/mod_headers.so
-     LoadModule proxy_module         modules/mod_proxy.so
-     LoadModule proxy_http_module    modules/mod_proxy_http.so
-     LoadModule proxy_uwsgi_module   modules/mod_proxy_uwsgi.so
-
+```bash
+sudo -H a2enmod ssl
+sudo -H a2enmod headers
+sudo -H a2enmod proxy
+sudo -H a2enmod proxy_http
+sudo -H a2enmod proxy_uwsgi
 ```
 
-.. \_apache sites:
+**Arch Linux**
+
+In the `/etc/httpd/conf/httpd.conf` file, activate LoadModule\_
+directives:
+
+```apache
+LoadModule ssl_module           modules/mod_ssl.so
+LoadModule headers_module       modules/mod_headers.so
+LoadModule proxy_module         modules/mod_proxy.so
+LoadModule proxy_http_module    modules/mod_proxy_http.so
+LoadModule proxy_uwsgi_module   modules/mod_proxy_uwsgi.so
+```
+
+**Fedora / RHEL**
+
+In the `/etc/httpd/conf/httpd.conf` file, activate LoadModule\_
+directives:
+
+```apache
+LoadModule ssl_module           modules/mod_ssl.so
+LoadModule headers_module       modules/mod_headers.so
+LoadModule proxy_module         modules/mod_proxy.so
+LoadModule proxy_http_module    modules/mod_proxy_http.so
+LoadModule proxy_uwsgi_module   modules/mod_proxy_uwsgi.so
+```
+
+<a id="apache-sites"></a>
 
 ## Apache sites
 
-.. tabs:
+**Ubuntu / debian**
 
-```text
-.. group-tab:: Ubuntu / debian
+In [Debian's Apache layout](https://docs.searxng.org/admin/installation-apache.html#debian-s-apache-layout) you create a `searxng.conf` with the
+`<Location /searxng >` directive and save this file in the *sites
+available* folder at `/etc/apache2/sites-available`.  To enable the
+`searxng.conf` use `a2ensite(1)`:
 
-  In :ref:`Debian's Apache layout` you create a ``searxng.conf`` with the
-  ``<Location /searxng >`` directive and save this file in the *sites
-  available* folder at ``/etc/apache2/sites-available``.  To enable the
-  ``searxng.conf`` use :man:`a2ensite`:
-
-  .. code:: bash
-
-     sudo -H a2ensite searxng.conf
-
-.. group-tab:: Arch Linux
-
-  In the ``/etc/httpd/conf/httpd.conf`` file add a IncludeOptional_
-  directive:
-
-  .. code:: apache
-
-     IncludeOptional sites-enabled/*.conf
-
-  Create two folders, one for the *available sites* and one for the *enabled sites*:
-
-  .. code:: bash
-
-     mkdir -p /etc/httpd/sites-available
-     mkdir -p /etc/httpd/sites-enabled
-
-  Create configuration at ``/etc/httpd/sites-available`` and place a
-  symlink to ``sites-enabled``:
-
-  .. code:: bash
-
-     sudo -H ln -s /etc/httpd/sites-available/searxng.conf \
-                   /etc/httpd/sites-enabled/searxng.conf
-
-.. group-tab::  Fedora / RHEL
-
-  In the ``/etc/httpd/conf/httpd.conf`` file add a IncludeOptional_
-  directive:
-
-  .. code:: apache
-
-     IncludeOptional sites-enabled/*.conf
-
-  Create two folders, one for the *available sites* and one for the *enabled sites*:
-
-  .. code:: bash
-
-     mkdir -p /etc/httpd/sites-available
-     mkdir -p /etc/httpd/sites-enabled
-
-  Create configuration at ``/etc/httpd/sites-available`` and place a
-  symlink to ``sites-enabled``:
-
-  .. code:: bash
-
-     sudo -H ln -s /etc/httpd/sites-available/searxng.conf \
-                   /etc/httpd/sites-enabled/searxng.conf
-
+```bash
+sudo -H a2ensite searxng.conf
 ```
 
-.. \_apache searxng site:
+**Arch Linux**
+
+In the `/etc/httpd/conf/httpd.conf` file add a IncludeOptional\_
+directive:
+
+```apache
+IncludeOptional sites-enabled/*.conf
+```
+
+Create two folders, one for the *available sites* and one for the *enabled sites*:
+
+```bash
+mkdir -p /etc/httpd/sites-available
+mkdir -p /etc/httpd/sites-enabled
+```
+
+Create configuration at `/etc/httpd/sites-available` and place a
+symlink to `sites-enabled`:
+
+```bash
+sudo -H ln -s /etc/httpd/sites-available/searxng.conf \
+              /etc/httpd/sites-enabled/searxng.conf
+```
+
+**Fedora / RHEL**
+
+In the `/etc/httpd/conf/httpd.conf` file add a IncludeOptional\_
+directive:
+
+```apache
+IncludeOptional sites-enabled/*.conf
+```
+
+Create two folders, one for the *available sites* and one for the *enabled sites*:
+
+```bash
+mkdir -p /etc/httpd/sites-available
+mkdir -p /etc/httpd/sites-enabled
+```
+
+Create configuration at `/etc/httpd/sites-available` and place a
+symlink to `sites-enabled`:
+
+```bash
+sudo -H ln -s /etc/httpd/sites-available/searxng.conf \
+              /etc/httpd/sites-enabled/searxng.conf
+```
+
+<a id="apache-searxng-site"></a>
 
 # Apache's SearXNG site
+
+<a id="mod-uwsgi"></a>
 
 ### uWSGI
 
 Use mod\_proxy\_uwsgi\_ / don't use the old mod\_uwsgi\_ anymore.
 
 To proxy the incoming requests to the SearXNG instance Apache needs the
-mod\_proxy\_ module (\[apache modules]\(#apache modules)).
+mod\_proxy\_ module ([apache modules](https://docs.searxng.org/admin/installation-apache.html#apache-modules)).
 
 ### HTTP headers
 
-With ProxyPreserveHost the incoming `Host` header is passed to the proxied
+With ProxyPreserveHost\_ the incoming `Host` header is passed to the proxied
 host.
 
 Depending on what your SearXNG installation is listening on, you need a http
 mod\_proxy\_http\_) or socket (mod\_proxy\_uwsgi\_) communication to upstream.
 
-The \[installation scripts]\(#installation scripts) installs the :ref:`reference setup <use_default_settings.yml>` and a \[uwsgi setup]\(#uwsgi setup) that listens on a socket by default.
+The [installation scripts](https://docs.searxng.org/admin/installation-scripts.html#installation-scripts) installs the [reference setup](https://docs.searxng.org/admin/installation-searxng.html#use-default-settings-yml) and a [uwsgi setup](https://docs.searxng.org/admin/installation-uwsgi.html#uwsgi-setup) that listens on a socket by default.
 You can install and activate your own `searxng.conf` like shown in
-\[apache sites]\(#apache sites).
+[apache sites](https://docs.searxng.org/admin/installation-apache.html#apache-sites).
 
-.. tabs:
+**socket**
 
-```text
-.. group-tab:: socket
+Build-time include: `$DOCS_BUILD/includes/searxng.rst`
 
-  .. kernel-include:: $DOCS_BUILD/includes/searxng.rst
-     :start-after: START apache socket
-     :end-before: END apache socket
+**http**
 
-.. group-tab:: http
+Build-time include: `$DOCS_BUILD/includes/searxng.rst`
 
-  .. kernel-include:: $DOCS_BUILD/includes/searxng.rst
-     :start-after: START apache http
-     :end-before: END apache http
-
-```
-
-.. \_restart apache:
+<a id="restart-apache"></a>
 
 Restart service:
 
-.. tabs:
+**Ubuntu / debian**
 
-```text
-.. group-tab:: Ubuntu / debian
+```bash
+sudo -H systemctl restart apache2
+sudo -H service uwsgi restart searxng
+```
 
-  .. code:: bash
+**Arch Linux**
 
-     sudo -H systemctl restart apache2
-     sudo -H service uwsgi restart searxng
+```bash
+sudo -H systemctl restart httpd
+sudo -H systemctl restart uwsgi@searxng
+```
 
-.. group-tab:: Arch Linux
+**Fedora / RHEL**
 
-  .. code:: bash
-
-     sudo -H systemctl restart httpd
-     sudo -H systemctl restart uwsgi@searxng
-
-.. group-tab::  Fedora / RHEL
-
-  .. code:: bash
-
-     sudo -H systemctl restart httpd
-     sudo -H touch /etc/uwsgi.d/searxng.ini
-
+```bash
+sudo -H systemctl restart httpd
+sudo -H touch /etc/uwsgi.d/searxng.ini
 ```
 
 # disable logs
 
 For better privacy you can disable Apache logs.  In the examples above activate
-one of the lines and restart apache:
+one of the lines and [restart apache](https://docs.searxng.org/admin/installation-apache.html#restart-apache):
 
-.. code:: apache
-
-SetEnvIf Request\_URI "/searxng" dontlog
-
+```apache
+SetEnvIf Request_URI "/searxng" dontlog
 # CustomLog /dev/null combined env=dontlog
+```
 
 The `CustomLog` directive disables logs for the entire (virtual) server, use it
 when the URL of the service does not have a path component (`/searxng`), so when

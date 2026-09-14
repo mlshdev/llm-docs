@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_build.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_build.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_build.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_build.yaml)
 
 # docker compose build
 
@@ -20,24 +20,24 @@ run `docker compose build` to rebuild it.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--build-arg` |  | Set build-time variables for services |
-| `--builder` |  | Set builder to use |
-| `--check` |  | Check build configuration |
-| `-m`, `--memory` |  | Set memory limit for the build container. Not supported by BuildKit. |
-| `--no-cache` |  | Do not use cache when building the image |
-| `--print` |  | Print equivalent bake file |
-| `--provenance` |  | Add a provenance attestation |
-| `--pull` |  | Always attempt to pull a newer version of the image |
-| `--push` |  | Push service images |
-| `-q`, `--quiet` |  | Suppress the build output |
-| `--sbom` |  | Add a SBOM attestation |
-| `--ssh` |  | Set SSH authentications used when building service images. (use 'default' for using your default SSH Agent) |
-| `--with-dependencies` |  | Also build dependencies (transitively) |
+| Option                | Default | Description                                                                                                 |
+| --------------------- | ------- | ----------------------------------------------------------------------------------------------------------- |
+| `--build-arg`         |         | Set build-time variables for services                                                                       |
+| `--builder`           |         | Set builder to use                                                                                          |
+| `--check`             |         | Check build configuration                                                                                   |
+| `-m`, `--memory`      |         | Set memory limit for the build container. Not supported by BuildKit.                                        |
+| `--no-cache`          |         | Do not use cache when building the image                                                                    |
+| `--print`             |         | Print equivalent bake file                                                                                  |
+| `--provenance`        |         | Add a provenance attestation                                                                                |
+| `--pull`              |         | Always attempt to pull a newer version of the image                                                         |
+| `--push`              |         | Push service images                                                                                         |
+| `-q`, `--quiet`       |         | Suppress the build output                                                                                   |
+| `--sbom`              |         | Add a SBOM attestation                                                                                      |
+| `--ssh`               |         | Set SSH authentications used when building service images. (use 'default' for using your default SSH Agent) |
+| `--with-dependencies` |         | Also build dependencies (transitively)                                                                      |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--dry-run` |  | Execute command in dry run mode |
+| Option      | Default | Description                     |
+| ----------- | ------- | ------------------------------- |
+| `--dry-run` |         | Execute command in dry run mode |

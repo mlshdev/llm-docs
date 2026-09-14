@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/setup/kubernetes.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/setup/kubernetes.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/setup/kubernetes.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/setup/kubernetes.md)
 
 This guide provides an in-depth walkthrough for installing and configuring Traefik Proxy within a Kubernetes cluster using the official Helm chart. In this guide, we'll cover the following:
 
@@ -169,7 +169,7 @@ gateway:
       namespacePolicy:
         from: All
       mode: Terminate
-      certificateRefs:
+      certificateRefs:    
         - kind: Secret
           name: local-selfsigned-tls  # the Secret we created before the installation
           group: ""

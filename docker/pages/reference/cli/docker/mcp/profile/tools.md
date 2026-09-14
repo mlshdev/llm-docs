@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/mcp/docker_mcp_profile_tools.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp_profile_tools.yaml)
+> Pinned source for Docker main: [data/cli/mcp/docker_mcp_profile_tools.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp_profile_tools.yaml)
 
 # docker mcp profile tools
 
@@ -20,29 +20,35 @@ To view enabled tools, use: docker mcp profile show <profile-id>
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--disable` |  | Disable specific tools: <serverName>.<toolName> (repeatable) |
-| `--disable-all` |  | Disable all tools for a server: <serverName> (repeatable) |
-| `--enable` |  | Enable specific tools: <serverName>.<toolName> (repeatable) |
-| `--enable-all` |  | Enable all tools for a server: <serverName> (repeatable) |
+| Option          | Default | Description                                                  |
+| --------------- | ------- | ------------------------------------------------------------ |
+| `--disable`     |         | Disable specific tools: <serverName>.<toolName> (repeatable) |
+| `--disable-all` |         | Disable all tools for a server: <serverName> (repeatable)    |
+| `--enable`      |         | Enable specific tools: <serverName>.<toolName> (repeatable)  |
+| `--enable-all`  |         | Enable all tools for a server: <serverName> (repeatable)     |
 
 ## Examples
 
 # Enable specific tools for a server
-  docker mcp profile tools my-profile --enable github.create_issue --enable github.list_repos
 
-  # Disable specific tools for a server
-  docker mcp profile tools my-profile --disable github.create_issue --disable github.search_code
+docker mcp profile tools my-profile --enable github.create\_issue --enable github.list\_repos
 
-  # Enable and disable in one command
-  docker mcp profile tools my-profile --enable github.create_issue --disable github.search_code
+# Disable specific tools for a server
 
-  # Enable all tools for a server
-  docker mcp profile tools my-profile --enable-all github
+docker mcp profile tools my-profile --disable github.create\_issue --disable github.search\_code
 
-  # Disable all tools for a server
-  docker mcp profile tools my-profile --disable-all github
+# Enable and disable in one command
 
-  # View all enabled tools in the profile
-  docker mcp profile show my-profile
+docker mcp profile tools my-profile --enable github.create\_issue --disable github.search\_code
+
+# Enable all tools for a server
+
+docker mcp profile tools my-profile --enable-all github
+
+# Disable all tools for a server
+
+docker mcp profile tools my-profile --disable-all github
+
+# View all enabled tools in the profile
+
+docker mcp profile show my-profile

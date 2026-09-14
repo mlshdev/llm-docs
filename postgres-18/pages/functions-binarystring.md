@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/func.sgml#functions-binarystring](https://www.postgresql.org/docs/18/functions-binarystring.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/func.sgml#functions-binarystring](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/func.sgml%23functions-binarystring)
+> Canonical documentation: https://www.postgresql.org/docs/18/functions-binarystring.html
 
 # Binary String Functions and Operators
 

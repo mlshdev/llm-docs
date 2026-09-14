@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.1: [docs/sources/developer-resources/api-reference/http-api/api-legacy/dashboard_versions.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/developer-resources/api-reference/http-api/api-legacy/dashboard_versions.md)
+> Pinned source for Grafana v13.2.1: [docs/sources/developer-resources/api-reference/http-api/api-legacy/dashboard_versions.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/developer-resources/api-reference/http-api/api-legacy/dashboard_versions.md)
 
 # Dashboard Versions
 

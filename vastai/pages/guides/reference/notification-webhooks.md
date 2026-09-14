@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [guides/reference/notification-webhooks.mdx](https://docs.vast.ai/guides/reference/notification-webhooks)
+> Pinned source for Vast.ai main: [guides/reference/notification-webhooks.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/reference/notification-webhooks.mdx)
+> Canonical documentation: https://docs.vast.ai/guides/reference/notification-webhooks
 
 # Notification Webhooks
 
@@ -117,6 +118,7 @@ Python example:
 import hmac
 import hashlib
 import time
+
 
 def verify_vast_signature(headers, raw_body: bytes, webhook_secret: str) -> bool:
     timestamp = headers.get("X-Vast-Timestamp", "")

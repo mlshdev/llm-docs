@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/guides/example-projects/openai-agent-sdk-guardrails.mdx](https://trigger.dev/docs/guides/example-projects/openai-agent-sdk-guardrails)
+> Pinned source for Trigger.dev v4.5.16: [docs/guides/example-projects/openai-agent-sdk-guardrails.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/guides/example-projects/openai-agent-sdk-guardrails.mdx)
+> Canonical documentation: https://trigger.dev/docs/guides/example-projects/openai-agent-sdk-guardrails
 
 # OpenAI Agents SDK for Python guardrails
 

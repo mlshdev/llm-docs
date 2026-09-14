@@ -1,7 +1,10 @@
-import { createHash } from "node:crypto";
-import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
+import { createHash, randomUUID } from "node:crypto";
+import { mkdir, readFile, rename, rm, stat, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
+import { recordRequestAttempt } from "./request-metrics.ts";
+
+export { mapWithConcurrency } from "./concurrency.ts";
 
 export const doccOrigin = "https://developer.apple.com";
 const dataRoot = `${doccOrigin}/tutorials/data`;
@@ -11,6 +14,8 @@ const baseRetryDelayMs = 500;
 const maximumRetryDelayMs = 30_000;
 const defaultConcurrency = 12;
 const defaultCacheTtlSeconds = 86_400;
+const requestTimeoutMs = 30_000;
+const missingResponseAttempts = 3;
 
 export interface DoccIndexNode {
   readonly title: string;
@@ -166,31 +171,6 @@ export function digestOf(parts: readonly string[]): string {
   return hash.digest("hex");
 }
 
-export async function mapWithConcurrency<T, R>(
-  items: readonly T[],
-  limit: number,
-  worker: (item: T, index: number) => Promise<R>,
-): Promise<R[]> {
-  const results = new Array<R>(items.length);
-  let cursor = 0;
-  const runners = Array.from(
-    { length: Math.min(Math.max(limit, 1), items.length) },
-    async () => {
-      while (cursor < items.length) {
-        const index = cursor;
-        cursor += 1;
-        const item = items[index];
-        if (item === undefined) {
-          continue;
-        }
-        results[index] = await worker(item, index);
-      }
-    },
-  );
-  await Promise.all(runners);
-  return results;
-}
-
 function readIndexNodes(value: unknown): DoccIndexNode[] {
   if (!Array.isArray(value)) {
     return [];
@@ -238,6 +218,7 @@ async function fetchWithRetry(url: string): Promise<string | undefined> {
   let lastError: unknown;
   for (let attempt = 1; attempt <= maximumAttempts; attempt += 1) {
     try {
+      recordRequestAttempt();
       const response = await fetch(url, {
         method: "GET",
         headers: {
@@ -246,9 +227,19 @@ async function fetchWithRetry(url: string): Promise<string | undefined> {
           "user-agent":
             "llm-docs (+https://github.com/mlshdev/docs-llm) documentation snapshot",
         },
+        signal: AbortSignal.timeout(requestTimeoutMs),
       });
       if (response.status === 404 || response.status === 410) {
         await response.body?.cancel();
+        if (attempt < missingResponseAttempts) {
+          lastError = new DoccRequestError(
+            url,
+            response.status,
+            `${url} temporarily responded ${response.status}`,
+          );
+          await delay(retryDelay(attempt, response.headers.get("retry-after")));
+          continue;
+        }
         return undefined;
       }
       if (response.ok) {
@@ -344,14 +335,23 @@ async function readCache(url: string): Promise<string | undefined> {
   return readCacheFile(cachePath(url));
 }
 
-async function readCacheFile(file: string): Promise<string | undefined> {
+export async function readCacheFile(file: string): Promise<string | undefined> {
   try {
     const details = await stat(file);
     const ttl = cacheTtlSeconds();
     if (ttl > 0 && Date.now() - details.mtimeMs > ttl * 1000) {
       return undefined;
     }
-    return await readFile(file, "utf8");
+    const body = await readFile(file, "utf8");
+    if (body !== "") {
+      try {
+        JSON.parse(body);
+      } catch {
+        await rm(file, { force: true });
+        return undefined;
+      }
+    }
+    return body;
   } catch (error) {
     if (error instanceof Error && "code" in error && error.code === "ENOENT") {
       return undefined;
@@ -364,7 +364,20 @@ async function writeCache(url: string, body: string): Promise<void> {
   await writeCacheFile(cachePath(url), body);
 }
 
-async function writeCacheFile(file: string, body: string): Promise<void> {
+export async function writeCacheFile(
+  file: string,
+  body: string,
+): Promise<void> {
   await mkdir(path.dirname(file), { recursive: true });
-  await writeFile(file, body, "utf8");
+  const temporary = `${file}.${process.pid}.${randomUUID()}.tmp`;
+  try {
+    await writeFile(temporary, body, {
+      encoding: "utf8",
+      flag: "wx",
+      mode: 0o600,
+    });
+    await rename(temporary, file);
+  } finally {
+    await rm(temporary, { force: true });
+  }
 }

@@ -1,4 +1,5 @@
-> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/tools/apache2.mdx](https://zitadel.com/docs/guides/integrate/tools/apache2)
+> Pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/tools/apache2.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/guides/integrate/tools/apache2.mdx)
+> Canonical documentation: https://zitadel.com/docs/guides/integrate/tools/apache2
 
 This integration guide shows you the basic OpenID Connect integration with ZITADEL and an Apache 2.0 server.
 

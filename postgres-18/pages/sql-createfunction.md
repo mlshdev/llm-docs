@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/create_function.sgml#sql-createfunction](https://www.postgresql.org/docs/18/sql-createfunction.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/create_function.sgml#sql-createfunction](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/create_function.sgml%23sql-createfunction)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-createfunction.html
 
 # CREATE FUNCTION
 

@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [serverless/vllm/get-started.mdx](https://docs.runpod.io/serverless/vllm/get-started)
+> Pinned source for Runpod main: [serverless/vllm/get-started.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/serverless/vllm/get-started.mdx)
+> Canonical documentation: https://docs.runpod.io/serverless/vllm/get-started
 
 # Deploy vLLM on Runpod Serverless
 

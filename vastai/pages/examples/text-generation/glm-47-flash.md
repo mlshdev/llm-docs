@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [examples/text-generation/glm-47-flash.mdx](https://docs.vast.ai/examples/text-generation/glm-47-flash)
+> Pinned source for Vast.ai main: [examples/text-generation/glm-47-flash.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/examples/text-generation/glm-47-flash.mdx)
+> Canonical documentation: https://docs.vast.ai/examples/text-generation/glm-47-flash
 
 # GLM-4.7-Flash
 
@@ -157,7 +158,7 @@ curl http://<INSTANCE_IP>:<PORT>/v1/chat/completions \
     },
     "finish_reason": "stop"
   }],
-  "usage": {"prompt_tokens": 12, "completion_tokens": 73}
+  "usage": `{"prompt_tokens": 12, "completion_tokens": 73}`
 }
 ```
 

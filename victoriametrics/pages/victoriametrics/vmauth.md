@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmauth.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmauth.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmauth.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmauth.md)
 
 `vmauth` is an HTTP proxy, which can [authorize](https://docs.victoriametrics.com/victoriametrics/vmauth/#authorization), [route](https://docs.victoriametrics.com/victoriametrics/vmauth/#routing), and [load balance](https://docs.victoriametrics.com/victoriametrics/vmauth/#load-balancing) requests across [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) components or any other HTTP backends.
 

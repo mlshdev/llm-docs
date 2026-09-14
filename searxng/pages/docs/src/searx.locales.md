@@ -1,8 +1,9 @@
-> Commit-pinned source for SearXNG master: [docs/src/searx.locales.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/src/searx.locales.rst)
+> Pinned source for SearXNG master: [docs/src/searx.locales.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/src/searx.locales.rst)
 
-.. \_searx.locales:
+<a id="searx-locales"></a>
 
 # Locales
 
-.. automodule:: searx.locales
-:members:
+#### `searx.locales`
+
+Static Python API reference (`automodule`).

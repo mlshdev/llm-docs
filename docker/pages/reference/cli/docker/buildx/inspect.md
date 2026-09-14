@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/buildx/docker_buildx_inspect.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_inspect.yaml)
+> Pinned source for Docker main: [data/cli/buildx/docker_buildx_inspect.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_inspect.yaml)
 
 # docker buildx inspect
 
@@ -12,17 +12,17 @@ Shows information about the current or specified builder.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--bootstrap` |  | Ensure builder has booted before inspecting |
-| `--timeout` | `20s` | Override the default timeout for loading builder status |
+| Option        | Default | Description                                             |
+| ------------- | ------- | ------------------------------------------------------- |
+| `--bootstrap` |         | Ensure builder has booted before inspecting             |
+| `--timeout`   | `20s`   | Override the default timeout for loading builder status |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--builder` |  | Override the configured builder instance |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option          | Default | Description                              |
+| --------------- | ------- | ---------------------------------------- |
+| `--builder`     |         | Override the configured builder instance |
+| `-D`, `--debug` |         | Enable debug logging                     |
 
 ## Examples
 
@@ -37,7 +37,7 @@ displayed in `buildx ls`).
 
 ### Override the configured builder instance (--builder) {#builder}
 
-Same as [`buildx --builder`](/reference/cli/docker/buildx/#builder).
+Same as [`buildx --builder`](https://docs.docker.com/reference/cli/docker/buildx/#builder).
 
 ### Get information about a builder instance
 
@@ -46,7 +46,7 @@ name of the builder to inspect to get information about that builder.
 The following example shows information about a builder instance named
 `elated_tesla`:
 
-> [!NOTE]
+> \[!NOTE]
 > The asterisk (`*`) next to node build platform(s) indicate they have been
 > manually set during `buildx create`. Otherwise the platforms were
 > automatically detected.

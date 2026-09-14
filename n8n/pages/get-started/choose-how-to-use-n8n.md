@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/get-started/choose-how-to-use-n8n.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/get-started/choose-how-to-use-n8n.md)
+> Pinned source for n8n main: [docs/get-started/choose-how-to-use-n8n.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/get-started/choose-how-to-use-n8n.md)
 
 # Choose your n8n <a id="choose-your-n8n"></a>
 

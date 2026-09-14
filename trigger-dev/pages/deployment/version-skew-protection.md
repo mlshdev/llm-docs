@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/deployment/version-skew-protection.mdx](https://trigger.dev/docs/deployment/version-skew-protection)
+> Pinned source for Trigger.dev v4.5.16: [docs/deployment/version-skew-protection.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/deployment/version-skew-protection.mdx)
+> Canonical documentation: https://trigger.dev/docs/deployment/version-skew-protection
 
 # Version skew protection
 

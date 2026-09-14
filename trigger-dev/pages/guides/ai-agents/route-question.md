@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/guides/ai-agents/route-question.mdx](https://trigger.dev/docs/guides/ai-agents/route-question)
+> Pinned source for Trigger.dev v4.5.16: [docs/guides/ai-agents/route-question.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/guides/ai-agents/route-question.mdx)
+> Canonical documentation: https://trigger.dev/docs/guides/ai-agents/route-question
 
 # Route a question to a different AI model
 

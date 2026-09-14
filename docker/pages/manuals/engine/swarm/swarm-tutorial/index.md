@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/swarm/swarm-tutorial/_index.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/swarm/swarm-tutorial/_index.md)
+> Pinned source for Docker main: [content/manuals/engine/swarm/swarm-tutorial/_index.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/swarm/swarm-tutorial/_index.md)
 
 This tutorial introduces you to the features of Docker Engine Swarm mode. You
 may want to familiarize yourself with the [key concepts](https://docs.docker.com/engine/swarm/key-concepts/)

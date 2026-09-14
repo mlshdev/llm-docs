@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/secrets/docker_pass_rm.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/secrets/docker_pass_rm.yaml)
+> Pinned source for Docker main: [data/cli/secrets/docker_pass_rm.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/secrets/docker_pass_rm.yaml)
 
 # docker pass rm
 
@@ -12,9 +12,9 @@ Removes one or more named secrets from the local OS keychain. Use `--all` to rem
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--all` |  | Remove all secrets |
+| Option  | Default | Description        |
+| ------- | ------- | ------------------ |
+| `--all` |         | Remove all secrets |
 
 ## Examples
 

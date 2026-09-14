@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker.yaml)
 
 # docker
 
@@ -12,7 +12,7 @@ each `docker` command with `sudo`. To avoid having to use `sudo` with the
 `docker` and add users to it.
 
 For more information about installing Docker or `sudo` configuration, refer to
-the [installation](/install/) instructions for your operating system.
+the [installation](https://docs.docker.com/install/) instructions for your operating system.
 
 ### Display help text
 
@@ -37,9 +37,9 @@ Options:
 The following environment variables control the behavior of the `docker` command-line client:
 
 | Variable                      | Description                                                                                                                                                                                                                                                       |
-| :---------------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| :---------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `DOCKER_API_VERSION`          | Override the negotiated API version to use for debugging (e.g. `1.19`)                                                                                                                                                                                            |
-| `DOCKER_CERT_PATH`            | Location of your authentication keys. This variable is used both by the `docker` CLI and the [`dockerd` daemon](/reference/cli/dockerd/)                                                                                                   |
+| `DOCKER_CERT_PATH`            | Location of your authentication keys. This variable is used both by the `docker` CLI and the [`dockerd` daemon](https://docs.docker.com/reference/cli/dockerd/)                                                                                                   |
 | `DOCKER_CONFIG`               | The location of your client configuration files.                                                                                                                                                                                                                  |
 | `DOCKER_CONTEXT`              | Name of the `docker context` to use (overrides `DOCKER_HOST` env var and default context set with `docker context use`)                                                                                                                                           |
 | `DOCKER_CUSTOM_HEADERS`       | (Experimental) Configure [custom HTTP headers](#custom-http-headers) to be sent by the client. Headers must be provided as a comma-separated list of `name=value` pairs. This is the equivalent to the `HttpHeaders` field in the configuration file.             |
@@ -47,16 +47,19 @@ The following environment variables control the behavior of the `docker` command
 | `DOCKER_HIDE_LEGACY_COMMANDS` | When set, Docker hides "legacy" top-level commands (such as `docker rm`, and `docker pull`) in `docker help` output, and only `Management commands` per object-type (e.g., `docker container`) are printed. This may become the default in a future release.      |
 | `DOCKER_HOST`                 | Daemon socket to connect to.                                                                                                                                                                                                                                      |
 | `DOCKER_TLS`                  | Enable TLS for connections made by the `docker` CLI (equivalent of the `--tls` command-line option). Set to a non-empty value to enable TLS. Note that TLS is enabled automatically if any of the other TLS options are set.                                      |
-| `DOCKER_TLS_VERIFY`           | When set Docker uses TLS and verifies the remote. This variable is used both by the `docker` CLI and the [`dockerd` daemon](/reference/cli/dockerd/)                                                                                       |
-| `BUILDKIT_PROGRESS`           | Set type of progress output (`auto`, `plain`, `tty`, `rawjson`) when [building](/reference/cli/docker/image/build/) with [BuildKit backend](/build/buildkit/). Use plain to show container output (default `auto`). |
-| `NO_COLOR`                    | Disable any ANSI escape codes in the output in accordance with https://no-color.org/
-                                                                                                             |
+| `DOCKER_TLS_VERIFY`           | When set Docker uses TLS and verifies the remote. This variable is used both by the `docker` CLI and the [`dockerd` daemon](https://docs.docker.com/reference/cli/dockerd/)                                                                                       |
+| `BUILDKIT_PROGRESS`           | Set type of progress output (`auto`, `plain`, `tty`, `rawjson`) when [building](https://docs.docker.com/reference/cli/docker/image/build/) with [BuildKit backend](https://docs.docker.com/build/buildkit/). Use plain to show container output (default `auto`). |
+| `NO_COLOR`                    | Disable any ANSI escape codes in the output in accordance with <https://no-color.org/>                                                                                                                                                                            |
+
+```
+                                                                                                         |
+```
 
 Because Docker is developed using Go, you can also use any environment
 variables used by the Go runtime. In particular, you may find these useful:
 
 | Variable      | Description                                                                    |
-|:--------------|:-------------------------------------------------------------------------------|
+| :------------ | :----------------------------------------------------------------------------- |
 | `HTTP_PROXY`  | Proxy URL for HTTP requests unless overridden by NoProxy.                      |
 | `HTTPS_PROXY` | Proxy URL for HTTPS requests unless overridden by NoProxy.                     |
 | `NO_PROXY`    | Comma-separated values specifying hosts that should be excluded from proxying. |
@@ -105,7 +108,7 @@ Sometimes, multiple options can call for a more complex value string as for
 $ docker run -v /host:/container example/mysql
 ```
 
-> [!NOTE]
+> \[!NOTE]
 > Do not use the `-t` and `-a stderr` options together due to
 > limitations in the `pty` implementation. All `stderr` in `pty` mode
 > simply goes to `stdout`.
@@ -165,7 +168,7 @@ By default, configuration file is stored in `~/.docker/config.json`. Refer to th
 [change the `.docker` directory](#change-the-docker-directory) section to use a
 different location.
 
-> [!WARNING]
+> \[!WARNING]
 > The configuration file and other files inside the `~/.docker` configuration
 > directory may contain sensitive information, such as authentication information
 > for proxies or, depending on your credential store, credentials for your image
@@ -179,18 +182,18 @@ if no `--format` flag is provided.
 
 | Property               | Description                                                                                                                                                                                                    |
 | :--------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `configFormat`         | Custom default format for `docker config ls` output. See [`docker config ls`](/reference/cli/docker/config/ls/#format) for a list of supported formatting directives.                   |
-| `imagesFormat`         | Custom default format for `docker images` / `docker image ls` output. See [`docker images`](/reference/cli/docker/image/ls/#format) for a list of supported formatting directives.      |
-| `networksFormat`       | Custom default format for `docker network ls` output. See [`docker network ls`](/reference/cli/docker/network/ls/#format) for a list of supported formatting directives.                |
-| `nodesFormat`          | Custom default format for `docker node ls` output. See [`docker node ls`](/reference/cli/docker/node/ls/#format) for a list of supported formatting directives.                         |
-| `pluginsFormat`        | Custom default format for `docker plugin ls` output. See [`docker plugin ls`](/reference/cli/docker/plugin/ls/#format) for a list of supported formatting directives.                   |
-| `psFormat`             | Custom default format for `docker ps` / `docker container ps` output. See [`docker ps`](/reference/cli/docker/container/ls/#format) for a list of supported formatting directives.      |
-| `secretFormat`         | Custom default format for `docker secret ls` output. See [`docker secret ls`](/reference/cli/docker/secret/ls/#format) for a list of supported formatting directives.                   |
-| `serviceInspectFormat` | Custom default format for `docker service inspect` output. See [`docker service inspect`](/reference/cli/docker/service/inspect/#format) for a list of supported formatting directives. |
-| `servicesFormat`       | Custom default format for `docker service ls` output. See [`docker service ls`](/reference/cli/docker/service/ls/#format) for a list of supported formatting directives.                |
-| `statsFormat`          | Custom default format for `docker stats` output. See [`docker stats`](/reference/cli/docker/container/stats/#format) for a list of supported formatting directives.                     |
-| `tasksFormat`          | Custom default format for `docker stack ps` output. See [`docker stack ps`](/reference/cli/docker/stack/ps/#format) for a list of supported formatting directives.                      |
-| `volumesFormat`        | Custom default format for `docker volume ls` output. See [`docker volume ls`](/reference/cli/docker/volume/ls/#format) for a list of supported formatting directives.                   |
+| `configFormat`         | Custom default format for `docker config ls` output. See [`docker config ls`](https://docs.docker.com/reference/cli/docker/config/ls/#format) for a list of supported formatting directives.                   |
+| `imagesFormat`         | Custom default format for `docker images` / `docker image ls` output. See [`docker images`](https://docs.docker.com/reference/cli/docker/image/ls/#format) for a list of supported formatting directives.      |
+| `networksFormat`       | Custom default format for `docker network ls` output. See [`docker network ls`](https://docs.docker.com/reference/cli/docker/network/ls/#format) for a list of supported formatting directives.                |
+| `nodesFormat`          | Custom default format for `docker node ls` output. See [`docker node ls`](https://docs.docker.com/reference/cli/docker/node/ls/#format) for a list of supported formatting directives.                         |
+| `pluginsFormat`        | Custom default format for `docker plugin ls` output. See [`docker plugin ls`](https://docs.docker.com/reference/cli/docker/plugin/ls/#format) for a list of supported formatting directives.                   |
+| `psFormat`             | Custom default format for `docker ps` / `docker container ps` output. See [`docker ps`](https://docs.docker.com/reference/cli/docker/container/ls/#format) for a list of supported formatting directives.      |
+| `secretFormat`         | Custom default format for `docker secret ls` output. See [`docker secret ls`](https://docs.docker.com/reference/cli/docker/secret/ls/#format) for a list of supported formatting directives.                   |
+| `serviceInspectFormat` | Custom default format for `docker service inspect` output. See [`docker service inspect`](https://docs.docker.com/reference/cli/docker/service/inspect/#format) for a list of supported formatting directives. |
+| `servicesFormat`       | Custom default format for `docker service ls` output. See [`docker service ls`](https://docs.docker.com/reference/cli/docker/service/ls/#format) for a list of supported formatting directives.                |
+| `statsFormat`          | Custom default format for `docker stats` output. See [`docker stats`](https://docs.docker.com/reference/cli/docker/container/stats/#format) for a list of supported formatting directives.                     |
+| `tasksFormat`          | Custom default format for `docker stack ps` output. See [`docker stack ps`](https://docs.docker.com/reference/cli/docker/stack/ps/#format) for a list of supported formatting directives.                      |
+| `volumesFormat`        | Custom default format for `docker volume ls` output. See [`docker volume ls`](https://docs.docker.com/reference/cli/docker/volume/ls/#format) for a list of supported formatting directives.                   |
 
 #### Custom HTTP headers
 
@@ -210,14 +213,14 @@ credential store. When this property is set, `docker login` will attempt to
 store credentials in the binary specified by `docker-credential-<value>` which
 is visible on `$PATH`. If this property isn't set, credentials are stored
 in the `auths` property of the CLI configuration file. For more information,
-see the [**Credential stores** section in the `docker login` documentation](/reference/cli/docker/login/#credential-stores)
+see the [**Credential stores** section in the `docker login` documentation](https://docs.docker.com/reference/cli/docker/login/#credential-stores)
 
 The property `credHelpers` specifies a set of credential helpers to use
 preferentially over `credsStore` or `auths` when storing and retrieving
 credentials for specific registries. If this property is set, the binary
 `docker-credential-<value>` will be used when storing or retrieving credentials
 for a specific registry. For more information, see the
-[**Credential helpers** section in the `docker login` documentation](/reference/cli/docker/login/#credential-helpers)
+[**Credential helpers** section in the `docker login` documentation](https://docs.docker.com/reference/cli/docker/login/#credential-helpers)
 
 #### Automatic proxy configuration for containers
 
@@ -228,20 +231,20 @@ daemon that the client connects to, or a configuration per host (Docker daemon),
 for example, `https://docker-daemon1.example.com`. The following properties can
 be set for each environment:
 
-| Property       | Description                                                                                             |
-|:---------------|:--------------------------------------------------------------------------------------------------------|
-| `httpProxy`    | Default value of `HTTP_PROXY` and `http_proxy` for containers, and as `--build-arg` on `docker build`   |
-| `httpsProxy`   | Default value of `HTTPS_PROXY` and `https_proxy` for containers, and as `--build-arg` on `docker build` |
-| `ftpProxy`     | Default value of `FTP_PROXY` and `ftp_proxy` for containers, and as `--build-arg` on `docker build`     |
-| `noProxy`      | Default value of `NO_PROXY` and `no_proxy` for containers, and as `--build-arg` on `docker build`       |
-| `allProxy`     | Default value of `ALL_PROXY` and `all_proxy` for containers, and as `--build-arg` on `docker build`     |
+| Property     | Description                                                                                             |
+| :----------- | :------------------------------------------------------------------------------------------------------ |
+| `httpProxy`  | Default value of `HTTP_PROXY` and `http_proxy` for containers, and as `--build-arg` on `docker build`   |
+| `httpsProxy` | Default value of `HTTPS_PROXY` and `https_proxy` for containers, and as `--build-arg` on `docker build` |
+| `ftpProxy`   | Default value of `FTP_PROXY` and `ftp_proxy` for containers, and as `--build-arg` on `docker build`     |
+| `noProxy`    | Default value of `NO_PROXY` and `no_proxy` for containers, and as `--build-arg` on `docker build`       |
+| `allProxy`   | Default value of `ALL_PROXY` and `all_proxy` for containers, and as `--build-arg` on `docker build`     |
 
 These settings are used to configure proxy settings for containers only, and not
 used as proxy settings for the `docker` CLI or the `dockerd` daemon. Refer to the
-[environment variables](#environment-variables) section and the [Daemon proxy configuration](/engine/daemon/proxy/)
+[environment variables](#environment-variables) section and the [Daemon proxy configuration](https://docs.docker.com/engine/daemon/proxy/)
 guide for configuring proxy settings for the CLI and daemon.
 
-> [!WARNING]
+> \[!WARNING]
 > Proxy settings may contain sensitive information (for example, if the proxy
 > requires authentication). Environment variables are stored as plain text in
 > the container's configuration, and as such can be inspected through the remote
@@ -253,14 +256,14 @@ Once attached to a container, users detach from it and leave it running using
 the using `CTRL-p CTRL-q` key sequence. This detach key sequence is customizable
 using the `detachKeys` property. Specify a `<sequence>` value for the
 property. The format of the `<sequence>` is a comma-separated list of either
-a letter [a-Z], or the `ctrl-` combined with any of the following:
+a letter \[a-Z], or the `ctrl-` combined with any of the following:
 
-* `a-z` (a single lowercase alpha character )
-* `@` (at sign)
-* `[` (left bracket)
-* `\\` (two backward slashes)
-* `_` (underscore)
-* `^` (caret)
+- `a-z` (a single lowercase alpha character )
+- `@` (at sign)
+- `[` (left bracket)
+- `\\` (two backward slashes)
+- `_` (underscore)
+- `^` (caret)
 
 Your customization applies to all containers started in with your Docker client.
 Users can override your custom or the default key sequence on a per-container
@@ -343,18 +346,18 @@ list of root Certificate Authorities.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--config` | `/root/.docker` | Location of client config files |
-| `-c`, `--context` |  | Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default context set with `docker context use`) |
-| `-D`, `--debug` |  | Enable debug mode |
-| `-H`, `--host` |  | Daemon socket to connect to |
-| `-l`, `--log-level` | `info` | Set the logging level (`debug`, `info`, `warn`, `error`, `fatal`) |
-| `--tls` |  | Use TLS; implied by --tlsverify |
-| `--tlscacert` | `/root/.docker/ca.pem` | Trust certs signed only by this CA |
-| `--tlscert` | `/root/.docker/cert.pem` | Path to TLS certificate file |
-| `--tlskey` | `/root/.docker/key.pem` | Path to TLS key file |
-| `--tlsverify` |  | Use TLS and verify the remote |
+| Option              | Default                  | Description                                                                                                                            |
+| ------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `--config`          | `/root/.docker`          | Location of client config files                                                                                                        |
+| `-c`, `--context`   |                          | Name of the context to use to connect to the daemon (overrides DOCKER\_HOST env var and default context set with `docker context use`) |
+| `-D`, `--debug`     |                          | Enable debug mode                                                                                                                      |
+| `-H`, `--host`      |                          | Daemon socket to connect to                                                                                                            |
+| `-l`, `--log-level` | `info`                   | Set the logging level (`debug`, `info`, `warn`, `error`, `fatal`)                                                                      |
+| `--tls`             |                          | Use TLS; implied by --tlsverify                                                                                                        |
+| `--tlscacert`       | `/root/.docker/ca.pem`   | Trust certs signed only by this CA                                                                                                     |
+| `--tlscert`         | `/root/.docker/cert.pem` | Path to TLS certificate file                                                                                                           |
+| `--tlskey`          | `/root/.docker/key.pem`  | Path to TLS key file                                                                                                                   |
+| `--tlsverify`       |                          | Use TLS and verify the remote                                                                                                          |
 
 ## Subcommands
 
@@ -424,26 +427,26 @@ You can use the `-H`, `--host` flag to specify a socket to use when you invoke
 a `docker` command. You can use the following protocols:
 
 | Scheme                                 | Description               | Example                          |
-|----------------------------------------|---------------------------|----------------------------------|
+| -------------------------------------- | ------------------------- | -------------------------------- |
 | `unix://[<path>]`                      | Unix socket               | `unix:///var/run/docker.sock`    |
 | `tcp://[<IP or host>[:port]]`          | TCP connection            | `tcp://174.17.0.1:2376`          |
 | `ssh://[username@]<IP or host>[:port]` | SSH connection            | `ssh://user@192.168.64.5`        |
 | `npipe://[<name>]`                     | Named pipe (Windows only) | `npipe:////./pipe/docker_engine` |
 
 If you don't specify the `-H` flag, and you're not using a custom
-[context](/engine/context/working-with-contexts),
+[context](https://docs.docker.com/engine/context/working-with-contexts/),
 commands use the following default sockets:
 
 - `unix:///var/run/docker.sock` on macOS and Linux
 - `npipe:////./pipe/docker_engine` on Windows
 
 To achieve a similar effect without having to specify the `-H` flag for every
-command, you could also [create a context](/reference/cli/docker/context/create/),
+command, you could also [create a context](https://docs.docker.com/reference/cli/docker/context/create/),
 or alternatively, use the
 [`DOCKER_HOST` environment variable](#environment-variables).
 
 For more information about the `-H` flag, see
-[Daemon socket option](/reference/cli/dockerd/#daemon-socket-option).
+[Daemon socket option](https://docs.docker.com/reference/cli/dockerd/#daemon-socket-option).
 
 #### Using TCP sockets
 
@@ -454,7 +457,7 @@ daemon with IP address `174.17.0.1`, listening on port `2376`:
 $ docker -H tcp://174.17.0.1:2376 ps
 ```
 
-> [!NOTE]
+> \[!NOTE]
 > By convention, the Docker daemon uses port `2376` for secure TLS connections,
 > and port `2375` for insecure, non-TLS connections.
 

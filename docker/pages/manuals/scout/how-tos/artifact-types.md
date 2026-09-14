@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/scout/how-tos/artifact-types.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/scout/how-tos/artifact-types.md)
+> Pinned source for Docker main: [content/manuals/scout/how-tos/artifact-types.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/scout/how-tos/artifact-types.md)
 
 # Use Scout with different artifact types
 
@@ -121,6 +121,7 @@ WARN 'docker scout compare' is experimental and its behaviour might change in th
     ✓ Indexed 268 packages
     ✓ SBOM of image already cached, 234 packages indexed
 
+
   ## Overview
 
                            │              Analyzed File System              │              Comparison Image
@@ -136,7 +137,9 @@ WARN 'docker scout compare' is experimental and its behaviour might change in th
       packages             │ 268 (+34)                                      │ 234
                            │                                                │
 
+
   ## Packages and Vulnerabilities
+
 
     +   55 packages added
     -   21 packages removed
@@ -155,9 +158,9 @@ and the SBOM is exported to file `sbom.spdx.json` in SPDX format.
 ```console
 $ docker pull docker/scout-cli:latest
 latest: Pulling from docker/scout-cli
-257973a141f5: Download complete
-1f2083724dd1: Download complete
-5c8125a73507: Download complete
+257973a141f5: Download complete 
+1f2083724dd1: Download complete 
+5c8125a73507: Download complete 
 Digest: sha256:13318bb059b0f8b0b87b35ac7050782462b5d0ac3f96f9f23d165d8ed68d0894
 $ docker save docker/scout-cli:latest -o scout-cli.tar
 $ docker scout sbom --format spdx -o sbom.spdx.json archive://scout-cli.tar

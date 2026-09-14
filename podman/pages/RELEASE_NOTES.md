@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.1.1: [RELEASE_NOTES.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/RELEASE_NOTES.md)
+> Pinned source for Podman v6.1.1: [RELEASE_NOTES.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/RELEASE_NOTES.md)
 
 # Release Notes
 

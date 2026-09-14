@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/how-tos/networking.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/how-tos/networking.md)
+> Pinned source for Docker main: [content/manuals/compose/how-tos/networking.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/how-tos/networking.md)
 
 Compose handles networking for you by default, but gives you fine-grained control when you need it. This page explains how the default network works and how containers discover each other by name. It also covers when and how to define custom networks, connect services across separate Compose projects, map custom hostnames, and debug connectivity issues.
 

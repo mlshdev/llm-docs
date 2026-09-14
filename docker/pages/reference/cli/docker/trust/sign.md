@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_trust_sign.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_trust_sign.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_trust_sign.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_trust_sign.yaml)
 
 # docker trust sign
 
@@ -12,9 +12,9 @@ Sign an image
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--local` |  | Sign a locally tagged image |
+| Option    | Default | Description                 |
+| --------- | ------- | --------------------------- |
+| `--local` |         | Sign a locally tagged image |
 
 ## Examples
 
@@ -75,6 +75,7 @@ Given an image:
 $ docker trust inspect --pretty example/trust-demo
 
 No signatures for example/trust-demo
+
 
 List of signers and their keys for example/trust-demo:
 

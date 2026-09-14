@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/configuration/user-settings/index.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/docker-agent/docs/configuration/user-settings/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/configuration/user-settings/index.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/docker-agent/docs/configuration/user-settings/index.md)
 
 *Full reference for the global settings block in your user config file.*
 

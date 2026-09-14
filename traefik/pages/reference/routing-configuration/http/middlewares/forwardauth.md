@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/http/middlewares/forwardauth.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/forwardauth.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/http/middlewares/forwardauth.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/forwardauth.md)
 
 The `forwardAuth` middleware delegates authentication to an external service.
 If the service answers with a 2XX code, access is granted, and the original request is performed.
@@ -110,7 +110,7 @@ It is strongly recommended to set an appropriate `maxBodySize` value for your us
 # For most web applications (1MB limit)
 maxBodySize: 1048576  # 1MB in bytes
 
-# For API endpoints expecting larger payloads (10MB limit)
+# For API endpoints expecting larger payloads (10MB limit)  
 maxBodySize: 10485760  # 10MB in bytes
 
 # For file upload authentication (100MB limit)

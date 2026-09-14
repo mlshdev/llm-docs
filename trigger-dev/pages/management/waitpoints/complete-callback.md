@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/management/waitpoints/complete-callback.mdx](https://trigger.dev/docs/management/waitpoints/complete-callback)
+> Pinned source for Trigger.dev v4.5.16: [docs/management/waitpoints/complete-callback.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/management/waitpoints/complete-callback.mdx)
+> Canonical documentation: https://trigger.dev/docs/management/waitpoints/complete-callback
 
 # Complete a waitpoint token via HTTP callback
 
@@ -14,14 +15,22 @@ If the token is already completed, this is a no-op and returns `success: true`.
 
 **Parameters**
 
-- `waitpointId` (path, required): The ID of the waitpoint token.
-- `callbackHash` (path, required): The HMAC hash that authenticates the request. This is embedded in the `url` returned when creating the token — do not construct it manually.
+- `waitpointId` (path; required; string): The ID of the waitpoint token.
+  - Example: `waitpoint_abc123`
+- `callbackHash` (path; required; string): The HMAC hash that authenticates the request. This is embedded in the `url` returned when creating the token — do not construct it manually.
 
 **Request body**
+
+- Media type: `application/json`
+  - Schema (object): Any JSON object. The entire body is passed as the output data to the run waiting on this token. If the body is not valid JSON, an empty object is used.
+    - Example: `{"status":"approved","comment":"Looks good to me!"}`
 
 **Responses**
 
 - `200`: Waitpoint token completed successfully
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (required; boolean; enum: `true`): Always `true` when the request succeeds.
 - `401`: Invalid callback URL or hash mismatch
 - `404`: Waitpoint token not found
 - `405`: Method not allowed

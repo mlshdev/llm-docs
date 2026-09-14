@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_container_run.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_run.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_container_run.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_run.yaml)
 
 # docker container run
 
@@ -17,110 +17,110 @@ Use `docker ps -a` to view a list of all containers, including those that are st
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--add-host` |  | Add a custom host-to-IP mapping (host:ip) |
-| `--annotation` |  | Add an annotation to the container (passed through to the OCI runtime) (API 1.43+) |
-| `-a`, `--attach` |  | Attach to STDIN, STDOUT or STDERR |
-| `--blkio-weight` |  | Block IO (relative weight), between 10 and 1000, or 0 to disable (default 0) |
-| `--blkio-weight-device` |  | Block IO weight (relative device weight) |
-| `--cap-add` |  | Add Linux capabilities |
-| `--cap-drop` |  | Drop Linux capabilities |
-| `--cgroup-parent` |  | Optional parent cgroup for the container |
-| `--cgroupns` |  | Cgroup namespace to use (host\|private) 'host': Run the container in the Docker host's cgroup namespace 'private': Run the container in its own private cgroup namespace '': Use the cgroup namespace as configured by the default-cgroupns-mode option on the daemon (default) (API 1.41+) |
-| `--cidfile` |  | Write the container ID to the file |
-| `--cpu-count` |  | CPU count (Windows only) |
-| `--cpu-percent` |  | CPU percent (Windows only) |
-| `--cpu-period` |  | Limit CPU CFS (Completely Fair Scheduler) period |
-| `--cpu-quota` |  | Limit CPU CFS (Completely Fair Scheduler) quota |
-| `--cpu-rt-period` |  | Limit CPU real-time period in microseconds (API 1.25+) |
-| `--cpu-rt-runtime` |  | Limit CPU real-time runtime in microseconds (API 1.25+) |
-| `-c`, `--cpu-shares` |  | CPU shares (relative weight) |
-| `--cpus` |  | Number of CPUs (API 1.25+) |
-| `--cpuset-cpus` |  | CPUs in which to allow execution (0-3, 0,1) |
-| `--cpuset-mems` |  | MEMs in which to allow execution (0-3, 0,1) |
-| `-d`, `--detach` |  | Run container in background and print container ID |
-| `--detach-keys` |  | Override the key sequence for detaching a container |
-| `--device` |  | Add a host device to the container |
-| `--device-cgroup-rule` |  | Add a rule to the cgroup allowed devices list |
-| `--device-read-bps` |  | Limit read rate (bytes per second) from a device |
-| `--device-read-iops` |  | Limit read rate (IO per second) from a device |
-| `--device-write-bps` |  | Limit write rate (bytes per second) to a device |
-| `--device-write-iops` |  | Limit write rate (IO per second) to a device |
-| `--dns` |  | Set custom DNS servers |
-| `--dns-option` |  | Set DNS options |
-| `--dns-search` |  | Set custom DNS search domains |
-| `--domainname` |  | Container NIS domain name |
-| `--entrypoint` |  | Overwrite the default ENTRYPOINT of the image |
-| `-e`, `--env` |  | Set environment variables |
-| `--env-file` |  | Read in a file of environment variables |
-| `--expose` |  | Expose a port or a range of ports |
-| `--gpus` |  | GPU devices to add to the container ('all' to pass all GPUs) (API 1.40+) |
-| `--group-add` |  | Add additional groups to join |
-| `--health-cmd` |  | Command to run to check health |
-| `--health-interval` |  | Time between running the check (ms\|s\|m\|h) (default 0s) |
-| `--health-retries` |  | Consecutive failures needed to report unhealthy |
-| `--health-start-interval` |  | Time between running the check during the start period (ms\|s\|m\|h) (default 0s) (API 1.44+) |
-| `--health-start-period` |  | Start period for the container to initialize before starting health-retries countdown (ms\|s\|m\|h) (default 0s) (API 1.29+) |
-| `--health-timeout` |  | Maximum time to allow one check to run (ms\|s\|m\|h) (default 0s) |
-| `-h`, `--hostname` |  | Container host name |
-| `--init` |  | Run an init inside the container that forwards signals and reaps processes (API 1.25+) |
-| `-i`, `--interactive` |  | Keep STDIN open even if not attached |
-| `--io-maxbandwidth` |  | Maximum IO bandwidth limit for the system drive (Windows only) |
-| `--io-maxiops` |  | Maximum IOps limit for the system drive (Windows only) |
-| `--ip` | `<nil>` | IPv4 address (e.g., 172.30.100.104) |
-| `--ip6` | `<nil>` | IPv6 address (e.g., 2001:db8::33) |
-| `--ipc` |  | IPC mode to use |
-| `--isolation` |  | Container isolation technology |
-| `-l`, `--label` |  | Set meta data on a container |
-| `--label-file` |  | Read in a line delimited file of labels |
-| `--link` |  | Add link to another container |
-| `--link-local-ip` |  | Container IPv4/IPv6 link-local addresses |
-| `--log-driver` |  | Logging driver for the container |
-| `--log-opt` |  | Log driver options |
-| `--mac-address` |  | Container MAC address (e.g., 92:d0:c6:0a:29:33) |
-| `-m`, `--memory` |  | Memory limit |
-| `--memory-reservation` |  | Memory soft limit |
-| `--memory-swap` |  | Swap limit equal to memory plus swap: '-1' to enable unlimited swap |
-| `--memory-swappiness` | `-1` | Tune container memory swappiness (0 to 100) |
-| `--mount` |  | Attach a filesystem mount to the container |
-| `--name` |  | Assign a name to the container |
-| `--network` |  | Connect a container to a network |
-| `--network-alias` |  | Add network-scoped alias for the container |
-| `--no-healthcheck` |  | Disable any container-specified HEALTHCHECK |
-| `--oom-kill-disable` |  | Disable OOM Killer |
-| `--oom-score-adj` |  | Tune host's OOM preferences (-1000 to 1000) |
-| `--pid` |  | PID namespace to use |
-| `--pids-limit` |  | Tune container pids limit (set -1 for unlimited) |
-| `--platform` |  | Set platform if server is multi-platform capable (API 1.32+) |
-| `--privileged` |  | Give extended privileges to this container |
-| `-p`, `--publish` |  | Publish a container's port(s) to the host |
-| `-P`, `--publish-all` |  | Publish all exposed ports to random ports |
-| `--pull` | `missing` | Pull image before running (`always`, `missing`, `never`) |
-| `-q`, `--quiet` |  | Suppress the pull output |
-| `--read-only` |  | Mount the container's root filesystem as read only |
-| `--restart` | `no` | Restart policy to apply when a container exits |
-| `--rm` |  | Automatically remove the container and its associated anonymous volumes when it exits |
-| `--runtime` |  | Runtime to use for this container |
-| `--security-opt` |  | Security Options |
-| `--shm-size` |  | Size of /dev/shm |
-| `--sig-proxy` | `true` | Proxy received signals to the process |
-| `--stop-signal` |  | Signal to stop the container |
-| `--stop-timeout` |  | Timeout (in seconds) to stop a container (API 1.25+) |
-| `--storage-opt` |  | Storage driver options for the container |
-| `--sysctl` |  | Sysctl options |
-| `--tmpfs` |  | Mount a tmpfs directory |
-| `-t`, `--tty` |  | Allocate a pseudo-TTY |
-| `--ulimit` |  | Ulimit options |
-| `--umask` | `<nil>` | Set umask for the container (API 1.56+) |
-| `--use-api-socket` |  | Bind mount Docker API socket and required auth |
-| `-u`, `--user` |  | Username or UID (format: <name\|uid>[:<group\|gid>]) |
-| `--userns` |  | User namespace to use |
-| `--uts` |  | UTS namespace to use |
-| `-v`, `--volume` |  | Bind mount a volume |
-| `--volume-driver` |  | Optional volume driver for the container |
-| `--volumes-from` |  | Mount volumes from the specified container(s) |
-| `-w`, `--workdir` |  | Working directory inside the container |
+| Option                    | Default   | Description                                                                                                                                                                                                                                                                                 |
+| ------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--add-host`              |           | Add a custom host-to-IP mapping (host:ip)                                                                                                                                                                                                                                                   |
+| `--annotation`            |           | Add an annotation to the container (passed through to the OCI runtime) (API 1.43+)                                                                                                                                                                                                          |
+| `-a`, `--attach`          |           | Attach to STDIN, STDOUT or STDERR                                                                                                                                                                                                                                                           |
+| `--blkio-weight`          |           | Block IO (relative weight), between 10 and 1000, or 0 to disable (default 0)                                                                                                                                                                                                                |
+| `--blkio-weight-device`   |           | Block IO weight (relative device weight)                                                                                                                                                                                                                                                    |
+| `--cap-add`               |           | Add Linux capabilities                                                                                                                                                                                                                                                                      |
+| `--cap-drop`              |           | Drop Linux capabilities                                                                                                                                                                                                                                                                     |
+| `--cgroup-parent`         |           | Optional parent cgroup for the container                                                                                                                                                                                                                                                    |
+| `--cgroupns`              |           | Cgroup namespace to use (host\|private) 'host': Run the container in the Docker host's cgroup namespace 'private': Run the container in its own private cgroup namespace '': Use the cgroup namespace as configured by the default-cgroupns-mode option on the daemon (default) (API 1.41+) |
+| `--cidfile`               |           | Write the container ID to the file                                                                                                                                                                                                                                                          |
+| `--cpu-count`             |           | CPU count (Windows only)                                                                                                                                                                                                                                                                    |
+| `--cpu-percent`           |           | CPU percent (Windows only)                                                                                                                                                                                                                                                                  |
+| `--cpu-period`            |           | Limit CPU CFS (Completely Fair Scheduler) period                                                                                                                                                                                                                                            |
+| `--cpu-quota`             |           | Limit CPU CFS (Completely Fair Scheduler) quota                                                                                                                                                                                                                                             |
+| `--cpu-rt-period`         |           | Limit CPU real-time period in microseconds (API 1.25+)                                                                                                                                                                                                                                      |
+| `--cpu-rt-runtime`        |           | Limit CPU real-time runtime in microseconds (API 1.25+)                                                                                                                                                                                                                                     |
+| `-c`, `--cpu-shares`      |           | CPU shares (relative weight)                                                                                                                                                                                                                                                                |
+| `--cpus`                  |           | Number of CPUs (API 1.25+)                                                                                                                                                                                                                                                                  |
+| `--cpuset-cpus`           |           | CPUs in which to allow execution (0-3, 0,1)                                                                                                                                                                                                                                                 |
+| `--cpuset-mems`           |           | MEMs in which to allow execution (0-3, 0,1)                                                                                                                                                                                                                                                 |
+| `-d`, `--detach`          |           | Run container in background and print container ID                                                                                                                                                                                                                                          |
+| `--detach-keys`           |           | Override the key sequence for detaching a container                                                                                                                                                                                                                                         |
+| `--device`                |           | Add a host device to the container                                                                                                                                                                                                                                                          |
+| `--device-cgroup-rule`    |           | Add a rule to the cgroup allowed devices list                                                                                                                                                                                                                                               |
+| `--device-read-bps`       |           | Limit read rate (bytes per second) from a device                                                                                                                                                                                                                                            |
+| `--device-read-iops`      |           | Limit read rate (IO per second) from a device                                                                                                                                                                                                                                               |
+| `--device-write-bps`      |           | Limit write rate (bytes per second) to a device                                                                                                                                                                                                                                             |
+| `--device-write-iops`     |           | Limit write rate (IO per second) to a device                                                                                                                                                                                                                                                |
+| `--dns`                   |           | Set custom DNS servers                                                                                                                                                                                                                                                                      |
+| `--dns-option`            |           | Set DNS options                                                                                                                                                                                                                                                                             |
+| `--dns-search`            |           | Set custom DNS search domains                                                                                                                                                                                                                                                               |
+| `--domainname`            |           | Container NIS domain name                                                                                                                                                                                                                                                                   |
+| `--entrypoint`            |           | Overwrite the default ENTRYPOINT of the image                                                                                                                                                                                                                                               |
+| `-e`, `--env`             |           | Set environment variables                                                                                                                                                                                                                                                                   |
+| `--env-file`              |           | Read in a file of environment variables                                                                                                                                                                                                                                                     |
+| `--expose`                |           | Expose a port or a range of ports                                                                                                                                                                                                                                                           |
+| `--gpus`                  |           | GPU devices to add to the container ('all' to pass all GPUs) (API 1.40+)                                                                                                                                                                                                                    |
+| `--group-add`             |           | Add additional groups to join                                                                                                                                                                                                                                                               |
+| `--health-cmd`            |           | Command to run to check health                                                                                                                                                                                                                                                              |
+| `--health-interval`       |           | Time between running the check (ms\|s\|m\|h) (default 0s)                                                                                                                                                                                                                                   |
+| `--health-retries`        |           | Consecutive failures needed to report unhealthy                                                                                                                                                                                                                                             |
+| `--health-start-interval` |           | Time between running the check during the start period (ms\|s\|m\|h) (default 0s) (API 1.44+)                                                                                                                                                                                               |
+| `--health-start-period`   |           | Start period for the container to initialize before starting health-retries countdown (ms\|s\|m\|h) (default 0s) (API 1.29+)                                                                                                                                                                |
+| `--health-timeout`        |           | Maximum time to allow one check to run (ms\|s\|m\|h) (default 0s)                                                                                                                                                                                                                           |
+| `-h`, `--hostname`        |           | Container host name                                                                                                                                                                                                                                                                         |
+| `--init`                  |           | Run an init inside the container that forwards signals and reaps processes (API 1.25+)                                                                                                                                                                                                      |
+| `-i`, `--interactive`     |           | Keep STDIN open even if not attached                                                                                                                                                                                                                                                        |
+| `--io-maxbandwidth`       |           | Maximum IO bandwidth limit for the system drive (Windows only)                                                                                                                                                                                                                              |
+| `--io-maxiops`            |           | Maximum IOps limit for the system drive (Windows only)                                                                                                                                                                                                                                      |
+| `--ip`                    | `<nil>`   | IPv4 address (e.g., 172.30.100.104)                                                                                                                                                                                                                                                         |
+| `--ip6`                   | `<nil>`   | IPv6 address (e.g., 2001:db8::33)                                                                                                                                                                                                                                                           |
+| `--ipc`                   |           | IPC mode to use                                                                                                                                                                                                                                                                             |
+| `--isolation`             |           | Container isolation technology                                                                                                                                                                                                                                                              |
+| `-l`, `--label`           |           | Set meta data on a container                                                                                                                                                                                                                                                                |
+| `--label-file`            |           | Read in a line delimited file of labels                                                                                                                                                                                                                                                     |
+| `--link`                  |           | Add link to another container                                                                                                                                                                                                                                                               |
+| `--link-local-ip`         |           | Container IPv4/IPv6 link-local addresses                                                                                                                                                                                                                                                    |
+| `--log-driver`            |           | Logging driver for the container                                                                                                                                                                                                                                                            |
+| `--log-opt`               |           | Log driver options                                                                                                                                                                                                                                                                          |
+| `--mac-address`           |           | Container MAC address (e.g., 92:d0:c6:0a:29:33)                                                                                                                                                                                                                                             |
+| `-m`, `--memory`          |           | Memory limit                                                                                                                                                                                                                                                                                |
+| `--memory-reservation`    |           | Memory soft limit                                                                                                                                                                                                                                                                           |
+| `--memory-swap`           |           | Swap limit equal to memory plus swap: '-1' to enable unlimited swap                                                                                                                                                                                                                         |
+| `--memory-swappiness`     | `-1`      | Tune container memory swappiness (0 to 100)                                                                                                                                                                                                                                                 |
+| `--mount`                 |           | Attach a filesystem mount to the container                                                                                                                                                                                                                                                  |
+| `--name`                  |           | Assign a name to the container                                                                                                                                                                                                                                                              |
+| `--network`               |           | Connect a container to a network                                                                                                                                                                                                                                                            |
+| `--network-alias`         |           | Add network-scoped alias for the container                                                                                                                                                                                                                                                  |
+| `--no-healthcheck`        |           | Disable any container-specified HEALTHCHECK                                                                                                                                                                                                                                                 |
+| `--oom-kill-disable`      |           | Disable OOM Killer                                                                                                                                                                                                                                                                          |
+| `--oom-score-adj`         |           | Tune host's OOM preferences (-1000 to 1000)                                                                                                                                                                                                                                                 |
+| `--pid`                   |           | PID namespace to use                                                                                                                                                                                                                                                                        |
+| `--pids-limit`            |           | Tune container pids limit (set -1 for unlimited)                                                                                                                                                                                                                                            |
+| `--platform`              |           | Set platform if server is multi-platform capable (API 1.32+)                                                                                                                                                                                                                                |
+| `--privileged`            |           | Give extended privileges to this container                                                                                                                                                                                                                                                  |
+| `-p`, `--publish`         |           | Publish a container's port(s) to the host                                                                                                                                                                                                                                                   |
+| `-P`, `--publish-all`     |           | Publish all exposed ports to random ports                                                                                                                                                                                                                                                   |
+| `--pull`                  | `missing` | Pull image before running (`always`, `missing`, `never`)                                                                                                                                                                                                                                    |
+| `-q`, `--quiet`           |           | Suppress the pull output                                                                                                                                                                                                                                                                    |
+| `--read-only`             |           | Mount the container's root filesystem as read only                                                                                                                                                                                                                                          |
+| `--restart`               | `no`      | Restart policy to apply when a container exits                                                                                                                                                                                                                                              |
+| `--rm`                    |           | Automatically remove the container and its associated anonymous volumes when it exits                                                                                                                                                                                                       |
+| `--runtime`               |           | Runtime to use for this container                                                                                                                                                                                                                                                           |
+| `--security-opt`          |           | Security Options                                                                                                                                                                                                                                                                            |
+| `--shm-size`              |           | Size of /dev/shm                                                                                                                                                                                                                                                                            |
+| `--sig-proxy`             | `true`    | Proxy received signals to the process                                                                                                                                                                                                                                                       |
+| `--stop-signal`           |           | Signal to stop the container                                                                                                                                                                                                                                                                |
+| `--stop-timeout`          |           | Timeout (in seconds) to stop a container (API 1.25+)                                                                                                                                                                                                                                        |
+| `--storage-opt`           |           | Storage driver options for the container                                                                                                                                                                                                                                                    |
+| `--sysctl`                |           | Sysctl options                                                                                                                                                                                                                                                                              |
+| `--tmpfs`                 |           | Mount a tmpfs directory                                                                                                                                                                                                                                                                     |
+| `-t`, `--tty`             |           | Allocate a pseudo-TTY                                                                                                                                                                                                                                                                       |
+| `--ulimit`                |           | Ulimit options                                                                                                                                                                                                                                                                              |
+| `--umask`                 | `<nil>`   | Set umask for the container (API 1.56+)                                                                                                                                                                                                                                                     |
+| `--use-api-socket`        |           | Bind mount Docker API socket and required auth                                                                                                                                                                                                                                              |
+| `-u`, `--user`            |           | Username or UID (format: \<name\|uid>\[:\<group\|gid>])                                                                                                                                                                                                                                     |
+| `--userns`                |           | User namespace to use                                                                                                                                                                                                                                                                       |
+| `--uts`                   |           | UTS namespace to use                                                                                                                                                                                                                                                                        |
+| `-v`, `--volume`          |           | Bind mount a volume                                                                                                                                                                                                                                                                         |
+| `--volume-driver`         |           | Optional volume driver for the container                                                                                                                                                                                                                                                    |
+| `--volumes-from`          |           | Mount volumes from the specified container(s)                                                                                                                                                                                                                                               |
+| `-w`, `--workdir`         |           | Working directory inside the container                                                                                                                                                                                                                                                      |
 
 ## Examples
 
@@ -128,7 +128,7 @@ Use `docker ps -a` to view a list of all containers, including those that are st
 
 The `--name` flag lets you specify a custom identifier for a container. The
 following example runs a container named `test` using the `nginx:alpine` image
-in [detached mode](#detach).
+in [detached mode](#detached-mode--d---detach-detach).
 
 ```console
 $ docker run --name test -d nginx:alpine
@@ -274,7 +274,7 @@ docker run --userns=host hello-world
 
 `host` is the only valid value for the `--userns` flag.
 
-For more information, refer to [Isolate containers with a user namespace](/engine/security/userns-remap/).
+For more information, refer to [Isolate containers with a user namespace](https://docs.docker.com/engine/security/userns-remap/).
 
 ### UTS settings (--uts) {#uts}
 
@@ -288,7 +288,7 @@ running processes in that namespace. By default, all containers, including
 those with `--network=host`, have their own UTS namespace. Setting `--uts` to
 `host` results in the container using the same UTS namespace as the host.
 
-> [!NOTE]
+> \[!NOTE]
 > Docker disallows combining the `--hostname` and `--domainname` flags with
 > `--uts=host`. This is to prevent containers running in the host's UTS
 > namespace from attempting to change the hosts' configuration.
@@ -305,14 +305,14 @@ advanced use case would be changing the host's hostname from a container.
 
 The `--ipc` flag accepts the following values:
 
-| Value                      | Description                                                                       |
-|:---------------------------|:----------------------------------------------------------------------------------|
-| ""                         | Use daemon's default.                                                             |
-| "none"                     | Own private IPC namespace, with /dev/shm not mounted.                             |
-| "private"                  | Own private IPC namespace.                                                        |
-| "shareable"                | Own private IPC namespace, with a possibility to share it with other containers.  |
-| "container:<_name-or-ID_>" | Join another ("shareable") container's IPC namespace.                             |
-| "host"                     | Use the host system's IPC namespace.                                              |
+| Value                      | Description                                                                      |
+| :------------------------- | :------------------------------------------------------------------------------- |
+| ""                         | Use daemon's default.                                                            |
+| "none"                     | Own private IPC namespace, with /dev/shm not mounted.                            |
+| "private"                  | Own private IPC namespace.                                                       |
+| "shareable"                | Own private IPC namespace, with a possibility to share it with other containers. |
+| "container:<*name-or-ID*>" | Join another ("shareable") container's IPC namespace.                            |
+| "host"                     | Use the host system's IPC namespace.                                             |
 
 If not specified, daemon default is used, which can either be `"private"`
 or `"shareable"`, depending on the daemon version and configuration.
@@ -346,7 +346,7 @@ In other words, the container can then do almost everything that the host can
 do. This flag exists to allow special use-cases, like running Docker within
 Docker.
 
-> [!WARNING]
+> \[!WARNING]
 > Use the `--privileged` flag with caution.
 > A container with `--privileged` is not a securely sandboxed process.
 > Containers in this mode can get a root shell on the host
@@ -358,7 +358,7 @@ Docker.
 > for example by adding individual kernel capabilities with `--cap-add`.
 >
 > For more information, see
-> [Runtime privilege and Linux capabilities](/engine/containers/run/#runtime-privilege-and-linux-capabilities)
+> [Runtime privilege and Linux capabilities](https://docs.docker.com/engine/containers/run/#runtime-privilege-and-linux-capabilities)
 
 The following example doesn't work, because by default, Docker drops most
 potentially dangerous kernel capabilities, including `CAP_SYS_ADMIN ` (which is
@@ -418,7 +418,7 @@ container with the `rw`, `noexec`, `nosuid`, `size=65536k` options.
 $ docker run -d --tmpfs /run:rw,noexec,nosuid,size=65536k my_image
 ```
 
-For more information, see [tmpfs mounts](/storage/tmpfs/).
+For more information, see [tmpfs mounts](https://docs.docker.com/storage/tmpfs/).
 
 ### Mount volume (-v) {#volume}
 
@@ -464,7 +464,7 @@ $ docker run -t -i -v /var/run/docker.sock:/var/run/docker.sock -v /path/to/stat
 ```
 
 By bind-mounting the Docker Unix socket and statically linked Docker
-binary (refer to [get the Linux binary](/engine/install/binaries/#install-static-binaries)),
+binary (refer to [get the Linux binary](https://docs.docker.com/engine/install/binaries/#install-static-binaries)),
 you give the container the full access to create and manipulate the host's
 Docker daemon.
 
@@ -492,7 +492,7 @@ docker run -v c:\foo:c: ...
 docker run -v c:\foo:c:\existing-directory-with-contents ...
 ```
 
-For in-depth information about volumes, refer to [manage data in containers](/storage/volumes/)
+For in-depth information about volumes, refer to [manage data in containers](https://docs.docker.com/storage/volumes/)
 
 ### Add bind mounts or volumes using the --mount flag {#mount}
 
@@ -502,7 +502,7 @@ mounts in a container.
 The `--mount` flag supports most options supported by the `-v` or the
 `--volume` flag, but uses a different syntax. For in-depth information on the
 `--mount` flag, and a comparison between `--volume` and `--mount`, refer to
-[Bind mounts](/storage/bind-mounts/).
+[Bind mounts](https://docs.docker.com/storage/bind-mounts/).
 
 Even though there is no plan to deprecate `--volume`, usage of `--mount` is recommended.
 
@@ -524,16 +524,16 @@ $ docker run -p 127.0.0.1:80:8080/tcp nginx:alpine
 
 This binds port `8080` of the container to TCP port `80` on `127.0.0.1` of the
 host. You can also specify `udp` and `sctp` ports. The [Networking overview
-page](/network/) explains in detail how to publish ports
+page](https://docs.docker.com/network/) explains in detail how to publish ports
 with Docker.
 
-> [!NOTE]
+> \[!NOTE]
 > If you don't specify an IP address (i.e., `-p 80:80` instead of `-p
 > 127.0.0.1:80:80`) when publishing a container's ports, Docker publishes the
 > port on all interfaces (address `0.0.0.0`) by default. These ports are
 > externally accessible. This also applies if you configured UFW to block this
 > specific port, as Docker manages its own iptables rules. [Read
-> more](/network/packet-filtering-firewalls/)
+> more](https://docs.docker.com/network/packet-filtering-firewalls/)
 
 ```console
 $ docker run --expose 80 nginx:alpine
@@ -567,7 +567,7 @@ the container.
 The `--pull` flag can take one of these values:
 
 | Value               | Description                                                                                                       |
-|:--------------------|:------------------------------------------------------------------------------------------------------------------|
+| :------------------ | :---------------------------------------------------------------------------------------------------------------- |
 | `missing` (default) | Pull the image if it was not found in the image cache, or use the cached image otherwise.                         |
 | `never`             | Do not pull the image, even if it's missing, and produce an error if the image does not exist in the image cache. |
 | `always`            | Always perform a pull before creating the container.                                                              |
@@ -694,7 +694,7 @@ com.example.label3
 You can load multiple label-files by supplying multiple  `--label-file` flags.
 
 For additional information on working with labels, see
-[Labels](/config/labels-custom-metadata/).
+[Labels](https://docs.docker.com/config/labels-custom-metadata/).
 
 ### Connect a container to a network (--network) {#network}
 
@@ -708,7 +708,7 @@ or name. For `overlay` networks or custom plugins that support multi-host
 connectivity, containers connected to the same multi-host network but launched
 from different Engines can also communicate in this way.
 
-> [!NOTE]
+> \[!NOTE]
 > The default bridge network only allows containers to communicate with each other using
 > internal IP addresses. User-created bridge networks provide DNS resolution between
 > containers using container names.
@@ -746,7 +746,7 @@ for the `--network` flag. Comma-separated options that can be specified in the e
 `--network` syntax are:
 
 | Option          | Top-level Equivalent                  | Description                                                                             |
-|-----------------|---------------------------------------|-----------------------------------------------------------------------------------------|
+| --------------- | ------------------------------------- | --------------------------------------------------------------------------------------- |
 | `name`          |                                       | The name of the network (mandatory)                                                     |
 | `alias`         | `--network-alias`                     | Add network-scoped alias for the container                                              |
 | `ip`            | `--ip`                                | IPv4 address (e.g., 172.30.100.104)                                                     |
@@ -777,12 +777,12 @@ $ docker network create --subnet 192.0.2.0/24 my-net
 $ docker run -itd --network=name=my-net,\"driver-opt=com.docker.network.endpoint.sysctls=net.ipv4.conf.IFNAME.log_martians=1,net.ipv4.conf.IFNAME.forwarding=0\",ip=192.0.2.42 busybox
 ```
 
-> [!NOTE]
+> \[!NOTE]
 > Network drivers may restrict the sysctl settings that can be modified and, to protect
 > the operation of the network, new restrictions may be added in the future.
 
 For more information on connecting a container to a network when using the `run` command,
-see the [Docker network overview](/network/).
+see the [Docker network overview](https://docs.docker.com/network/).
 
 ### Mount volumes from container (--volumes-from) {#volumes-from}
 
@@ -849,19 +849,19 @@ entire configuration.
 
 To override the sequence for an individual container, use the
 `--detach-keys="<sequence>"` flag with the `docker attach` command. The format of
-the `<sequence>` is either a letter [a-Z], or the `ctrl-` combined with any of
+the `<sequence>` is either a letter \[a-Z], or the `ctrl-` combined with any of
 the following:
 
-* `a-z` (a single lowercase alpha character )
-* `@` (at sign)
-* `[` (left bracket)
-* `\\` (two backward slashes)
-*  `_` (underscore)
-* `^` (caret)
+- `a-z` (a single lowercase alpha character )
+- `@` (at sign)
+- `[` (left bracket)
+- `\\` (two backward slashes)
+- `_` (underscore)
+- `^` (caret)
 
 These `a`, `ctrl-a`, `X`, or `ctrl-\\` values are all examples of valid key
 sequences. To configure a different configuration default key sequence for all
-containers, see [**Configuration file** section](/reference/cli/docker/#configuration-files).
+containers, see [**Configuration file** section](https://docs.docker.com/reference/cli/docker/#configuration-files).
 
 ### Add host device to container (--device) {#device}
 
@@ -904,7 +904,7 @@ $ docker run --device=/dev/sda:/dev/xvdc:m --rm -it ubuntu fdisk  /dev/xvdc
 fdisk: unable to open /dev/xvdc: Operation not permitted
 ```
 
-> [!NOTE]
+> \[!NOTE]
 > The `--device` option cannot be safely used with ephemeral devices. You shouldn't
 > add block devices that may be removed to untrusted containers with `--device`.
 
@@ -918,7 +918,7 @@ docs](https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-c
 for a list of container-supported device interface class GUIDs.
 
 If you specify this option for a process-isolated Windows container, Docker makes
-_all_ devices that implement the requested device interface class GUID
+*all* devices that implement the requested device interface class GUID
 available in the container. For example, the command below makes all COM
 ports on the host visible in the container.
 
@@ -926,7 +926,7 @@ ports on the host visible in the container.
 PS C:\> docker run --device=class/86E0D1E0-8089-11D0-9CE4-08003E301F73 mcr.microsoft.com/windows/servercore:ltsc2019
 ```
 
-> [!NOTE]
+> \[!NOTE]
 > The `--device` option is only supported on process-isolated Windows containers,
 > and produces an error if the container isolation is `hyperv`.
 
@@ -960,7 +960,7 @@ This starts an `ubuntu` container with access to the specified CDI device,
   available on the system running the daemon, in one of the configured CDI
   specification directories.
 - The CDI feature has been enabled in the daemon; see [Enable CDI
-  devices](/reference/cli/dockerd/#configure-cdi-devices).
+  devices](https://docs.docker.com/reference/cli/dockerd/#configure-cdi-devices).
 
 ### Attach to STDIN/STDOUT/STDERR (-a, --attach) {#attach}
 
@@ -998,12 +998,12 @@ ID once the container has finished running.
 $ cat somefile | docker run -i -a stdin mybuilder dobuild
 ```
 
-> [!NOTE]
+> \[!NOTE]
 > A process running as PID 1 inside a container is treated specially by
 > Linux: it ignores any signal with the default action. So, the process
 > doesn't terminate on `SIGINT` or `SIGTERM` unless it's coded to do so.
 
-See also [the `docker cp` command](/reference/cli/docker/container/cp/).
+See also [the `docker cp` command](https://docs.docker.com/reference/cli/docker/container/cp/).
 
 ### Keep STDIN open (-i, --interactive) {#interactive}
 
@@ -1017,7 +1017,7 @@ hello
 
 The `-i` flag is most often used together with the `--tty` flag to bind the I/O
 streams of the container to a pseudo terminal, creating an interactive terminal
-session for the container. See [Allocate a pseudo-TTY](#tty) for more examples.
+session for the container. See Allocate a pseudo-TTY for more examples.
 
 ```console
 $ docker run -it debian
@@ -1111,7 +1111,7 @@ $ docker run -d --device-cgroup-rule='c 42:* rmw' --name my-container my-image
 Then, a user could ask `udev` to execute a script that would `docker exec my-container mknod newDevX c 42 <minor>`
 the required device when it is added.
 
-> [!NOTE]
+> \[!NOTE]
 > You still need to explicitly add initially present devices to the
 > `docker run` / `docker create` command.
 
@@ -1120,11 +1120,11 @@ the required device when it is added.
 The `--gpus` flag allows you to access NVIDIA GPU resources. First you need to
 install the [nvidia-container-runtime](https://nvidia.github.io/nvidia-container-runtime/).
 
-> [!NOTE]
+> \[!NOTE]
 > You can also specify a GPU as a CDI device with the `--device` flag, see
 > [CDI devices](#cdi-devices).
 
-Read [Specify a container's resources](/config/containers/resource_constraints/)
+Read [Specify a container's resources](https://docs.docker.com/config/containers/resource_constraints/)
 for more information.
 
 To use `--gpus`, specify which GPUs (or all) to use. If you provide no value, Docker uses all
@@ -1168,8 +1168,8 @@ This runs the `redis` container with a restart policy of **always**.
 If the container exits, Docker restarts it.
 
 When a restart policy is active on a container, it shows as either `Up` or
-`Restarting` in [`docker ps`](/reference/cli/docker/container/ls/). It can also be useful to use
-[`docker events`](/reference/cli/docker/system/events/) to see the restart policy in effect.
+`Restarting` in [`docker ps`](https://docs.docker.com/reference/cli/docker/container/ls/). It can also be useful to use
+[`docker events`](https://docs.docker.com/reference/cli/docker/system/events/) to see the restart policy in effect.
 
 An increasing delay (double the previous delay, starting at 100 milliseconds)
 is added before each restart to prevent flooding the server. This means the
@@ -1200,7 +1200,7 @@ restart limit is only valid for the **on-failure** policy.
 #### Inspect container restarts
 
 The number of (attempted) restarts for a container can be obtained using the
-[`docker inspect`](/reference/cli/docker/inspect/) command. For example, to get the number of
+[`docker inspect`](https://docs.docker.com/reference/cli/docker/inspect/) command. For example, to get the number of
 restarts for container "my-container";
 
 ```console
@@ -1233,7 +1233,7 @@ the container and remove the file system when the container exits, use the
 --rm: Automatically remove the container and its associated anonymous volumes when it exits
 ```
 
-> [!NOTE]
+> \[!NOTE]
 > If you set the `--rm` flag, Docker also removes the anonymous volumes
 > associated with the container when the container is removed. This is similar
 > to running `docker rm -v my-container`. Only volumes that are specified
@@ -1279,9 +1279,9 @@ connect to services running on the host machine.
 
 It's conventional to use `host.docker.internal` as the hostname referring to
 `host-gateway`. Docker Desktop automatically resolves this hostname, see
-[Explore networking how-tos on Docker Desktop](/desktop/features/networking/networking-how-tos/#connect-a-container-to-a-service-on-the-host)
+[Explore networking how-tos on Docker Desktop](https://docs.docker.com/desktop/features/networking/networking-how-tos/#connect-a-container-to-a-service-on-the-host)
 and
-[Configure host gateway IP](/reference/cli/dockerd/#configure-host-gateway-ip).
+[Configure host gateway IP](https://docs.docker.com/reference/cli/dockerd/#configure-host-gateway-ip).
 
 The following example shows how the special `host-gateway` value works. The
 example runs an HTTP server that serves a file from host to container over the
@@ -1310,7 +1310,7 @@ the `--log-driver=<DRIVER>` with the `docker run` command to configure the
 container's logging driver.
 
 To learn about the supported logging drivers and how to use them, refer to
-[Configure logging drivers](/engine/logging/configure/).
+[Configure logging drivers](https://docs.docker.com/engine/logging/configure/).
 
 To disable logging for a container, set the `--log-driver` flag to `none`:
 
@@ -1333,12 +1333,12 @@ $ docker run --ulimit nofile=1024:1024 --rm debian sh -c "ulimit -n"
 1024
 ```
 
-> [!NOTE]
+> \[!NOTE]
 > If you don't provide a hard limit value, Docker uses the soft limit value
 > for both values. If you don't provide any values, they are inherited from
 > the default `ulimits` set on the daemon.
 
-> [!NOTE]
+> \[!NOTE]
 > The `as` option is deprecated.
 > In other words, the following script is not supported:
 >
@@ -1349,7 +1349,7 @@ $ docker run --ulimit nofile=1024:1024 --rm debian sh -c "ulimit -n"
 #### Supported options for `--ulimit`:
 
 | Option       | Description                                               |
-|:-------------|:----------------------------------------------------------|
+| :----------- | :-------------------------------------------------------- |
 | `core`       | Maximum size of core files created (`RLIMIT_CORE`)        |
 | `cpu`        | CPU time limit in seconds (`RLIMIT_CPU`)                  |
 | `data`       | Maximum data segment size (`RLIMIT_DATA`)                 |
@@ -1385,7 +1385,7 @@ $ docker run -d -u daemon --ulimit nproc=3 busybox top
 $ docker run -d -u daemon --ulimit nproc=3 busybox top
 ```
 
-The 4th container fails and reports a "[8] System error: resource temporarily unavailable" error.
+The 4th container fails and reports a "\[8] System error: resource temporarily unavailable" error.
 This fails because the caller set `nproc=3` resulting in the first three containers using up
 the three processes quota set for the `daemon` user.
 
@@ -1446,13 +1446,13 @@ container to exit. This signal can be a signal name in the format `SIG<NAME>`,
 for instance `SIGKILL`, or an unsigned number that matches a position in the
 kernel's syscall table, for instance `9`.
 
-The default value is defined by [`STOPSIGNAL`](/reference/dockerfile/#stopsignal)
+The default value is defined by [`STOPSIGNAL`](https://docs.docker.com/reference/dockerfile/#stopsignal)
 in the image, or `SIGTERM` if the image has no `STOPSIGNAL` defined.
 
 ### Optional security options (--security-opt) {#security-opt}
 
 | Option                                    | Description                                                                                                                                                                                                      |
-|:------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| :---------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `--security-opt="label=user:USER"`        | Set the label user for the container                                                                                                                                                                             |
 | `--security-opt="label=role:ROLE"`        | Set the label role for the container                                                                                                                                                                             |
 | `--security-opt="label=type:TYPE"`        | Set the label type for the container                                                                                                                                                                             |
@@ -1463,7 +1463,7 @@ in the image, or `SIGTERM` if the image has no `STOPSIGNAL` defined.
 | `--security-opt="seccomp=unconfined"`     | Turn off seccomp confinement for the container                                                                                                                                                                   |
 | `--security-opt="seccomp=builtin"`        | Use the default (built-in) seccomp profile for the container. This can be used to enable seccomp for a container running on a daemon with a custom default profile set, or with seccomp disabled ("unconfined"). |
 | `--security-opt="seccomp=profile.json"`   | White-listed syscalls seccomp Json file to be used as a seccomp filter                                                                                                                                           |
-| `--security-opt="systempaths=unconfined"` | Turn off confinement for system paths (masked paths, read-only paths) for the container                                                                                                                           |
+| `--security-opt="systempaths=unconfined"` | Turn off confinement for system paths (masked paths, read-only paths) for the container                                                                                                                          |
 
 The `--security-opt` flag lets you override the default labeling scheme for a
 container. Specifying the level in the following command allows you to share
@@ -1473,7 +1473,7 @@ the same content between containers.
 $ docker run --security-opt label=level:s0:c100,c200 -it fedora bash
 ```
 
-> [!NOTE]
+> \[!NOTE]
 > Automatic translation of MLS labels isn't supported.
 
 To disable the security labeling for a container entirely, you can use
@@ -1491,7 +1491,7 @@ that's only allowed to listen on Apache ports:
 $ docker run --security-opt label=type:svirt_apache_t -it ubuntu bash
 ```
 
-> [!NOTE]
+> \[!NOTE]
 > You would have to write policy defining a `svirt_apache_t` type.
 
 To prevent your container processes from gaining additional privileges, you can
@@ -1537,7 +1537,7 @@ $ docker run -d --isolation default busybox top
 On Windows, `--isolation` can take one of these values:
 
 | Value     | Description                                                                                |
-|:----------|:-------------------------------------------------------------------------------------------|
+| :-------- | :----------------------------------------------------------------------------------------- |
 | `default` | Use the value specified by the Docker daemon's `--exec-opt` or system default (see below). |
 | `process` | Shared-kernel namespace isolation.                                                         |
 | `hyperv`  | Hyper-V hypervisor partition-based isolation.                                              |
@@ -1574,33 +1574,33 @@ On Windows, this affects containers differently depending on what type of isolat
 
 - With `process` isolation, Windows reports the full memory of the host system, not the limit to applications running inside the container
 
-    ```powershell
-    PS C:\> docker run -it -m 2GB --isolation=process microsoft/nanoserver powershell Get-ComputerInfo *memory*
+  ```powershell
+  PS C:\> docker run -it -m 2GB --isolation=process microsoft/nanoserver powershell Get-ComputerInfo *memory*
 
-    CsTotalPhysicalMemory      : 17064509440
-    CsPhyicallyInstalledMemory : 16777216
-    OsTotalVisibleMemorySize   : 16664560
-    OsFreePhysicalMemory       : 14646720
-    OsTotalVirtualMemorySize   : 19154928
-    OsFreeVirtualMemory        : 17197440
-    OsInUseVirtualMemory       : 1957488
-    OsMaxProcessMemorySize     : 137438953344
-    ```
+  CsTotalPhysicalMemory      : 17064509440
+  CsPhyicallyInstalledMemory : 16777216
+  OsTotalVisibleMemorySize   : 16664560
+  OsFreePhysicalMemory       : 14646720
+  OsTotalVirtualMemorySize   : 19154928
+  OsFreeVirtualMemory        : 17197440
+  OsInUseVirtualMemory       : 1957488
+  OsMaxProcessMemorySize     : 137438953344
+  ```
 
 - With `hyperv` isolation, Windows creates a utility VM that is big enough to hold the memory limit, plus the minimal OS needed to host the container. That size is reported as "Total Physical Memory."
 
-    ```powershell
-    PS C:\> docker run -it -m 2GB --isolation=hyperv microsoft/nanoserver powershell Get-ComputerInfo *memory*
+  ```powershell
+  PS C:\> docker run -it -m 2GB --isolation=hyperv microsoft/nanoserver powershell Get-ComputerInfo *memory*
 
-    CsTotalPhysicalMemory      : 2683355136
-    CsPhyicallyInstalledMemory :
-    OsTotalVisibleMemorySize   : 2620464
-    OsFreePhysicalMemory       : 2306552
-    OsTotalVirtualMemorySize   : 2620464
-    OsFreeVirtualMemory        : 2356692
-    OsInUseVirtualMemory       : 263772
-    OsMaxProcessMemorySize     : 137438953344
-    ```
+  CsTotalPhysicalMemory      : 2683355136
+  CsPhyicallyInstalledMemory :
+  OsTotalVisibleMemorySize   : 2620464
+  OsFreePhysicalMemory       : 2306552
+  OsTotalVirtualMemorySize   : 2620464
+  OsFreeVirtualMemory        : 2356692
+  OsInUseVirtualMemory       : 263772
+  OsMaxProcessMemorySize     : 137438953344
+  ```
 
 ### Configure namespaced kernel parameters (sysctls) at runtime (--sysctl) {#sysctl}
 
@@ -1612,7 +1612,7 @@ network namespace, run this command:
 $ docker run --sysctl net.ipv4.ip_forward=1 someimage
 ```
 
-> [!NOTE]
+> \[!NOTE]
 > Not all sysctls are namespaced. Docker does not support changing sysctls
 > inside of a container that also modify the host system. As the kernel
 > evolves we expect to see more sysctls become namespaced.

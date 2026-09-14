@@ -1,5 +1,7 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
+  "generatorVersion": 3,
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4",
   "project": "docker",
   "title": "Docker",
   "homepage": "https://docs.docker.com/",
@@ -8,13 +10,36 @@
   "branch": "main",
   "sourceCommittedAt": "2026-09-11T15:53:13Z",
   "sourceCommit": "bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81",
-  "documentCount": 1630,
-  "quarantined": [
+  "documentationDigest": "34a8db9130bd069f0addb12f4b09f2403e8947c1f0b6fcc8226406e619b0b886",
+  "documentCount": 1631,
+  "indexComplete": true,
+  "corpusVolumes": [
     {
-      "sourcePath": "content/get-started/tutorials/run-an-agent.md",
-      "reason": "Unsupported Docker shortcode sandbox-auth in content/get-started/tutorials/run-an-agent.md"
+      "name": "llms-full.txt",
+      "byteLength": 687,
+      "documentCount": 0,
+      "sha256": "37236dd42f9ef3773bd72da32da2e57a2afab0232897a7b66f69bcd29607ef8a"
+    },
+    {
+      "name": "llms-full.001.txt",
+      "byteLength": 8384732,
+      "documentCount": 789,
+      "sha256": "b1f2f3671684219d32f01beb0950b917146051c43d2c8da499e1ae8cba658922"
+    },
+    {
+      "name": "llms-full.002.txt",
+      "byteLength": 8287398,
+      "documentCount": 194,
+      "sha256": "082cd16c352926506167f0d160f5a490fbeb05d54fb281722f7289907f5eda46"
+    },
+    {
+      "name": "llms-full.003.txt",
+      "byteLength": 6672359,
+      "documentCount": 648,
+      "sha256": "ec3d0506aa91c76f3947264968de84f3b227fee2ddf8dbf03de706825ca656a5"
     }
   ],
+  "outputDigest": "a91a06af1e33520f7a0f5fc73b2e9ce18b8a8bd55ddb51c7e43dbe5bfa8e46b2",
   "notes": [
     "Docker tracks the latest main-branch commit because docker/docs does not publish current releases.",
     "Hugo content and vendored Markdown mounts are normalized without executing Hugo; includes and documentation shortcodes are expanded into plain Markdown.",

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/manage-users-and-access/verify-user-identity/use-saml/set-up-okta-workforce-identity-saml.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/administer/manage-users-and-access/verify-user-identity/use-saml/set-up-okta-workforce-identity-saml.md)
+> Pinned source for n8n main: [docs/administer/manage-users-and-access/verify-user-identity/use-saml/set-up-okta-workforce-identity-saml.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/administer/manage-users-and-access/verify-user-identity/use-saml/set-up-okta-workforce-identity-saml.md)
 
 # Okta Workforce Identity SAML setup <a id="okta-workforce-identity-saml-setup"></a>
 

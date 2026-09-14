@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/get-started/get-docker.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/get-started/get-docker.md)
+> Pinned source for Docker main: [content/get-started/get-docker.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/get-started/get-docker.md)
 
 # Get Docker
 
@@ -21,14 +21,11 @@ section and choose the best installation path for you.
 > employees OR more than $10 million USD in annual revenue) requires a [paid
 > subscription](https://www.docker.com/pricing?ref=Docs\&refAction=DocsGetDocker).
 
-<div class="not-prose">
-[Docker Desktop for Mac](/desktop/setup/install/mac-install/): A native application using the macOS sandbox security model that delivers all Docker tools to your Mac.
+[Docker Desktop for Mac](https://docs.docker.com/desktop/setup/install/mac-install/): A native application using the macOS sandbox security model that delivers all Docker tools to your Mac.
 
 [Docker Desktop for Windows](https://docs.docker.com/desktop/setup/install/windows-install/): A native Windows application that delivers all Docker tools to your Windows computer.
 
 [Docker Desktop for Linux](https://docs.docker.com/desktop/setup/install/linux/): A native Linux application that delivers all Docker tools to your Linux computer.
-
-</div>
 
 > \[!NOTE]
 >

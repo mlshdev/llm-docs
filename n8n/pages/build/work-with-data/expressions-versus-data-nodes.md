@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/work-with-data/expressions-versus-data-nodes.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/work-with-data/expressions-versus-data-nodes.md)
+> Pinned source for n8n main: [docs/build/work-with-data/expressions-versus-data-nodes.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/work-with-data/expressions-versus-data-nodes.md)
 
 # Expressions versus data nodes <a id="expressions-versus-data-nodes"></a>
 

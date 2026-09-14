@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/scout/docker_scout_repo_enable.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_repo_enable.yaml)
+> Pinned source for Docker main: [data/cli/scout/docker_scout_repo_enable.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_repo_enable.yaml)
 
 # docker scout repo enable
 
@@ -12,13 +12,13 @@ The docker scout repo enable command enables Docker Scout on repositories.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--all` |  | Enable all repositories of the organization. Can not be used with --filter. |
-| `--filter` |  | Regular expression to filter repositories by name |
-| `--integration` |  | Name of the integration to use for enabling an image |
-| `--org` |  | Namespace of the Docker organization |
-| `--registry` |  | Container Registry |
+| Option          | Default | Description                                                                 |
+| --------------- | ------- | --------------------------------------------------------------------------- |
+| `--all`         |         | Enable all repositories of the organization. Can not be used with --filter. |
+| `--filter`      |         | Regular expression to filter repositories by name                           |
+| `--integration` |         | Name of the integration to use for enabling an image                        |
+| `--org`         |         | Namespace of the Docker organization                                        |
+| `--registry`    |         | Container Registry                                                          |
 
 ## Examples
 

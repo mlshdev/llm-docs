@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/integrate-ai/understand-ai-components/how-tools-work.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/integrate-ai/understand-ai-components/how-tools-work.md)
+> Pinned source for n8n main: [docs/build/integrate-ai/understand-ai-components/how-tools-work.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/integrate-ai/understand-ai-components/how-tools-work.md)
 
 # What's a tool in AI? <a id="whats-a-tool-in-ai"></a>
 

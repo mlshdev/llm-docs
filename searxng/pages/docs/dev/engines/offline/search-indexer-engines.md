@@ -1,4 +1,4 @@
-> Commit-pinned source for SearXNG master: [docs/dev/engines/offline/search-indexer-engines.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/offline/search-indexer-engines.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/offline/search-indexer-engines.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/offline/search-indexer-engines.rst)
 
 # Local Search APIs
 
@@ -8,7 +8,7 @@
 
 ### info
 
-Initial sponsored by `Search and Discovery Fund    <https://nlnet.nl/discovery>`\_ of [NLnet Foundation](https://nlnet.nl/).
+Initial sponsored by `Search and Discovery Fund <https://nlnet.nl/discovery>`\_ of [NLnet Foundation](https://nlnet.nl/).
 
 Administrators might find themselves wanting to integrate locally running search
 engines.  The following ones are supported for now:
@@ -26,25 +26,28 @@ enable HTTP requests by setting `enable_http` to `True`.
 
 Furthermore, if you do not want to expose these engines on a public instance,
 you can still add them and limit the access by setting `tokens` as described
-in section \[private engines]\(#private engines).
+in section [private engines](https://docs.searxng.org/admin/settings/settings_engines.html#private-engines).
 
-.. \_engine meilisearch:
+<a id="engine-meilisearch"></a>
 
 # MeiliSearch Engine
 
-.. automodule:: searx.engines.meilisearch
-:members:
+#### `searx.engines.meilisearch`
 
-.. \_engine elasticsearch:
+Static Python API reference (`automodule`).
+
+<a id="engine-elasticsearch"></a>
 
 # Elasticsearch Engine
 
-.. automodule:: searx.engines.elasticsearch
-:members:
+#### `searx.engines.elasticsearch`
 
-.. \_engine solr:
+Static Python API reference (`automodule`).
+
+<a id="engine-solr"></a>
 
 # Solr Engine
 
-.. automodule:: searx.engines.solr
-:members:
+#### `searx.engines.solr`
+
+Static Python API reference (`automodule`).

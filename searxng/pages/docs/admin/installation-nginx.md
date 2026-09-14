@@ -1,251 +1,214 @@
-> Commit-pinned source for SearXNG master: [docs/admin/installation-nginx.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/installation-nginx.rst)
+> Pinned source for SearXNG master: [docs/admin/installation-nginx.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/installation-nginx.rst)
 
-.. \_installation nginx:
+<a id="installation-nginx"></a>
 
 # NGINX
 
-.. \_nginx:
-<https://docs.nginx.com/nginx/admin-guide/>
-.. \_nginx server configuration:
-<https://docs.nginx.com/nginx/admin-guide/web-server/web-server/#setting-up-virtual-servers>
-.. \_nginx beginners guide:
-<https://nginx.org/en/docs/beginners_guide.html>
-.. \_Getting Started wiki:
-<https://www.nginx.com/resources/wiki/start/>
-.. \_uWSGI support from nginx:
-<https://uwsgi-docs.readthedocs.io/en/latest/Nginx.html>
-.. \_uwsgi\_params:
-<https://uwsgi-docs.readthedocs.io/en/latest/Nginx.html#configuring-nginx>
-.. \_SCRIPT\_NAME:
+<a id="nginx"></a>
+<https://docs.nginx.com/nginx/admin-guide/> <a id="nginx-server-configuration"></a>
+<https://docs.nginx.com/nginx/admin-guide/web-server/web-server/#setting-up-virtual-servers> <a id="nginx-beginners-guide"></a>
+<https://nginx.org/en/docs/beginners_guide.html> <a id="getting-started-wiki"></a>
+<https://www.nginx.com/resources/wiki/start/> <a id="uwsgi-support-from-nginx"></a>
+<https://uwsgi-docs.readthedocs.io/en/latest/Nginx.html> <a id="uwsgi-params"></a>
+<https://uwsgi-docs.readthedocs.io/en/latest/Nginx.html#configuring-nginx> <a id="script-name"></a>
 <https://werkzeug.palletsprojects.com/en/1.0.x/wsgi/#werkzeug.wsgi.get_script_name>
 
-This section explains how to set up a SearXNG instance using the HTTP server nginx.
-If you have used the \[installation scripts]\(#installation scripts) and do not have any special preferences
-you can install the \[SearXNG site]\(#nginx searxng site) using
-\[searxng.sh]\(#searxng.sh overview):
+This section explains how to set up a SearXNG instance using the HTTP server nginx\_.
+If you have used the [installation scripts](https://docs.searxng.org/admin/installation-scripts.html#installation-scripts) and do not have any special preferences
+you can install the [SearXNG site](https://docs.searxng.org/admin/installation-nginx.html#nginx-searxng-site) using
+[searxng.sh](https://docs.searxng.org/utils/searxng.sh.html#searxng-sh-overview):
 
-.. code:: bash
-
+```bash
 $ sudo -H ./utils/searxng.sh install nginx
+```
 
 If you have special interests or problems with setting up nginx, the following
 section might give you some guidance.
 
 ### further reading
 
-- nginx
-- nginx beginners guide
-- nginx server configuration
-- Getting Started wiki
-- uWSGI support from nginx
+- nginx\_
+- [nginx beginners guide](https://docs.searxng.org/admin/installation-nginx.html#nginx-beginners-guide)
+- [nginx server configuration](https://docs.searxng.org/admin/installation-nginx.html#nginx-server-configuration)
+- [Getting Started wiki](https://docs.searxng.org/admin/installation-nginx.html#getting-started-wiki)
+- [uWSGI support from nginx](https://docs.searxng.org/admin/installation-nginx.html#uwsgi-support-from-nginx)
 
 # The nginx HTTP server
 
-If nginx is not installed, install it now.
+If nginx\_ is not installed, install it now.
 
-.. tabs:
+**Ubuntu / debian**
 
-```text
-.. group-tab:: Ubuntu / debian
+```bash
+sudo -H apt-get install nginx
+```
 
-  .. code:: bash
+**Arch Linux**
 
-     sudo -H apt-get install nginx
+```sh
+sudo -H pacman -S nginx-mainline
+sudo -H systemctl enable nginx
+sudo -H systemctl start nginx
+```
 
-.. group-tab:: Arch Linux
+**Fedora / RHEL**
 
-  .. code-block:: sh
-
-     sudo -H pacman -S nginx-mainline
-     sudo -H systemctl enable nginx
-     sudo -H systemctl start nginx
-
-.. group-tab::  Fedora / RHEL
-
-  .. code-block:: sh
-
-     sudo -H dnf install nginx
-     sudo -H systemctl enable nginx
-     sudo -H systemctl start nginx
-
+```sh
+sudo -H dnf install nginx
+sudo -H systemctl enable nginx
+sudo -H systemctl start nginx
 ```
 
 Now at <http://localhost> you should see a *Welcome to nginx!* page, on Fedora you
 see a *Fedora Webserver - Test Page*.  The test page comes from the default
-nginx server configuration.  How this default site is configured,
+[nginx server configuration](https://docs.searxng.org/admin/installation-nginx.html#nginx-server-configuration).  How this default site is configured,
 depends on the linux distribution:
 
-.. tabs:
+**Ubuntu / debian**
 
-```text
-.. group-tab:: Ubuntu / debian
-
-  .. code:: bash
-
-     less /etc/nginx/nginx.conf
-
-  There is one line that includes site configurations from:
-
-  .. code:: nginx
-
-     include /etc/nginx/sites-enabled/*;
-
-.. group-tab:: Arch Linux
-
-  .. code-block:: sh
-
-     less /etc/nginx/nginx.conf
-
-  There is a configuration section named ``server``:
-
-  .. code-block:: nginx
-
-     server {
-         listen       80;
-         server_name  localhost;
-         # ...
-     }
-
-.. group-tab::  Fedora / RHEL
-
-  .. code-block:: sh
-
-     less /etc/nginx/nginx.conf
-
-  There is one line that includes site configurations from:
-
-  .. code:: nginx
-
-      include /etc/nginx/conf.d/*.conf;
-
+```bash
+less /etc/nginx/nginx.conf
 ```
 
-.. \_nginx searxng site:
+There is one line that includes site configurations from:
+
+```nginx
+include /etc/nginx/sites-enabled/*;
+```
+
+**Arch Linux**
+
+```sh
+less /etc/nginx/nginx.conf
+```
+
+There is a configuration section named `server`:
+
+```nginx
+server {
+    listen       80;
+    server_name  localhost;
+    # ...
+}
+```
+
+**Fedora / RHEL**
+
+```sh
+less /etc/nginx/nginx.conf
+```
+
+There is one line that includes site configurations from:
+
+```nginx
+include /etc/nginx/conf.d/*.conf;
+```
+
+<a id="nginx-searxng-site"></a>
 
 # NGINX's SearXNG site
 
 Now you have to create a configuration file (`searxng.conf`) for the SearXNG
-site.  If nginx is new to you, the nginx beginners guide is a good starting
-point and the Getting Started wiki is always a good resource *to keep in the
+site.  If nginx\_ is new to you, the [nginx beginners guide](https://docs.searxng.org/admin/installation-nginx.html#nginx-beginners-guide) is a good starting
+point and the [Getting Started wiki](https://docs.searxng.org/admin/installation-nginx.html#getting-started-wiki) is always a good resource *to keep in the
 pocket*.
 
 Depending on what your SearXNG installation is listening on, you need a http or socket
 communication to upstream.
 
-.. tabs:
+**socket**
 
-```text
-.. group-tab:: socket
+Build-time include: `$DOCS_BUILD/includes/searxng.rst`
 
-  .. kernel-include:: $DOCS_BUILD/includes/searxng.rst
-     :start-after: START nginx socket
-     :end-before: END nginx socket
+**http**
 
-.. group-tab:: http
+Build-time include: `$DOCS_BUILD/includes/searxng.rst`
 
-  .. kernel-include:: $DOCS_BUILD/includes/searxng.rst
-     :start-after: START nginx http
-     :end-before: END nginx http
+The [installation scripts](https://docs.searxng.org/admin/installation-scripts.html#installation-scripts) installs the [reference setup](https://docs.searxng.org/admin/installation-searxng.html#use-default-settings-yml) and a [uwsgi setup](https://docs.searxng.org/admin/installation-uwsgi.html#uwsgi-setup) that listens on a socket by default.
 
+**Ubuntu / debian**
+
+Create configuration at `/etc/nginx/sites-available/` and place a
+symlink to `sites-enabled`:
+
+```bash
+sudo -H ln -s /etc/nginx/sites-available/searxng.conf \
+              /etc/nginx/sites-enabled/searxng.conf
 ```
 
-The \[installation scripts]\(#installation scripts) installs the :ref:`reference setup <use_default_settings.yml>` and a \[uwsgi setup]\(#uwsgi setup) that listens on a socket by default.
+**Arch Linux**
 
-.. tabs:
+In the `/etc/nginx/nginx.conf` file, in the `server` section add a
+[include](https://nginx.org/en/docs/ngx_core_module.html#include)
+directive:
 
-```text
-.. group-tab:: Ubuntu / debian
+```nginx
+server {
+    # ...
+    include /etc/nginx/default.d/*.conf;
+    # ...
+}
+```
 
-  Create configuration at ``/etc/nginx/sites-available/`` and place a
-  symlink to ``sites-enabled``:
+Create two folders, one for the *available sites* and one for the *enabled sites*:
 
-  .. code:: bash
+```bash
+mkdir -p /etc/nginx/default.d
+mkdir -p /etc/nginx/default.apps-available
+```
 
-     sudo -H ln -s /etc/nginx/sites-available/searxng.conf \
-                   /etc/nginx/sites-enabled/searxng.conf
+Create configuration at `/etc/nginx/default.apps-available` and place a
+symlink to `default.d`:
 
-.. group-tab:: Arch Linux
+```bash
+sudo -H ln -s /etc/nginx/default.apps-available/searxng.conf \
+              /etc/nginx/default.d/searxng.conf
+```
 
-  In the ``/etc/nginx/nginx.conf`` file, in the ``server`` section add a
-  `include <https://nginx.org/en/docs/ngx_core_module.html#include>`_
-  directive:
+**Fedora / RHEL**
 
-  .. code:: nginx
+Create a folder for the *available sites*:
 
-     server {
-         # ...
-         include /etc/nginx/default.d/*.conf;
-         # ...
-     }
+```bash
+mkdir -p /etc/nginx/default.apps-available
+```
 
-  Create two folders, one for the *available sites* and one for the *enabled sites*:
+Create configuration at `/etc/nginx/default.apps-available` and place a
+symlink to `conf.d`:
 
-  .. code:: bash
-
-     mkdir -p /etc/nginx/default.d
-     mkdir -p /etc/nginx/default.apps-available
-
-  Create configuration at ``/etc/nginx/default.apps-available`` and place a
-  symlink to ``default.d``:
-
-  .. code:: bash
-
-     sudo -H ln -s /etc/nginx/default.apps-available/searxng.conf \
-                   /etc/nginx/default.d/searxng.conf
-
-.. group-tab::  Fedora / RHEL
-
-  Create a folder for the *available sites*:
-
-  .. code:: bash
-
-     mkdir -p /etc/nginx/default.apps-available
-
-  Create configuration at ``/etc/nginx/default.apps-available`` and place a
-  symlink to ``conf.d``:
-
-  .. code:: bash
-
-     sudo -H ln -s /etc/nginx/default.apps-available/searxng.conf \
-                   /etc/nginx/conf.d/searxng.conf
-
+```bash
+sudo -H ln -s /etc/nginx/default.apps-available/searxng.conf \
+              /etc/nginx/conf.d/searxng.conf
 ```
 
 Restart services:
 
-.. tabs:
+**Ubuntu / debian**
 
-```text
-.. group-tab:: Ubuntu / debian
+```bash
+sudo -H systemctl restart nginx
+sudo -H service uwsgi restart searxng
+```
 
-  .. code:: bash
+**Arch Linux**
 
-     sudo -H systemctl restart nginx
-     sudo -H service uwsgi restart searxng
+```bash
+sudo -H systemctl restart nginx
+sudo -H systemctl restart uwsgi@searxng
+```
 
-.. group-tab:: Arch Linux
+**Fedora / RHEL**
 
-  .. code:: bash
-
-     sudo -H systemctl restart nginx
-     sudo -H systemctl restart uwsgi@searxng
-
-.. group-tab:: Fedora / RHEL
-
-  .. code:: bash
-
-     sudo -H systemctl restart nginx
-     sudo -H touch /etc/uwsgi.d/searxng.ini
-
+```bash
+sudo -H systemctl restart nginx
+sudo -H touch /etc/uwsgi.d/searxng.ini
 ```
 
 # Disable logs
 
 For better privacy you can disable nginx logs in `/etc/nginx/nginx.conf`.
 
-.. code:: nginx
-
-```
+```nginx
 http {
     # ...
     access_log /dev/null;

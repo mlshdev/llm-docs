@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/how-tos/provider-services.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/how-tos/provider-services.md)
+> Pinned source for Docker main: [content/manuals/compose/how-tos/provider-services.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/how-tos/provider-services.md)
 
 # Use provider services
 
@@ -35,9 +35,9 @@ services:
       type: awesomecloud
       options:
         type: mysql
-        foo: bar
+        foo: bar  
   app:
-    image: myapp
+    image: myapp 
     depends_on:
        - database
 ```

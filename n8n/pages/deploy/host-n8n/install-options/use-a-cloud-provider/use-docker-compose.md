@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/use-docker-compose.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/install-options/use-a-cloud-provider/use-docker-compose.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/use-docker-compose.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/install-options/use-a-cloud-provider/use-docker-compose.md)
 
 # Docker-Compose <a id="docker-compose"></a>
 
@@ -50,7 +50,7 @@ To grant access to the user you're logged in as (assuming they have `sudo` acces
 
 ```shell
 sudo usermod -aG docker ${USER}
-# Register the `docker` group membership with current session without changing your primary group <a id="register-the-docker-group-membership-with-current-session-without-changing-your-primary-group"></a>
+# Register the `docker` group membership with current session without changing your primary group <a href="#register-the-docker-group-membership-with-current-session-without-changing-your-primary-group" id="register-the-docker-group-membership-with-current-session-without-changing-your-primary-group"></a>
 exec sg docker newgrp
 ```
 
@@ -90,20 +90,20 @@ cd n8n-compose
 Inside the `n8n-compose` directory, create an `.env` file to customize your n8n instance's details. Change it to match your own information:
 
 ```shell title=".env file"
-# DOMAIN_NAME and SUBDOMAIN together determine where n8n will be reachable from <a id="domainname-and-subdomain-together-determine-where-n8n-will-be-reachable-from"></a>
-# The top level domain to serve from <a id="the-top-level-domain-to-serve-from"></a>
+# DOMAIN_NAME and SUBDOMAIN together determine where n8n will be reachable from <a href="#domainname-and-subdomain-together-determine-where-n8n-will-be-reachable-from" id="domainname-and-subdomain-together-determine-where-n8n-will-be-reachable-from"></a>
+# The top level domain to serve from <a href="#the-top-level-domain-to-serve-from" id="the-top-level-domain-to-serve-from"></a>
 DOMAIN_NAME=example.com
 
-# The subdomain to serve from <a id="the-subdomain-to-serve-from"></a>
+# The subdomain to serve from <a href="#the-subdomain-to-serve-from" id="the-subdomain-to-serve-from"></a>
 SUBDOMAIN=n8n
 
-# The above example serve n8n at: https://n8n.example.com <a id="the-above-example-serve-n8n-at-httpsn8nexamplecom"></a>
+# The above example serve n8n at: https://n8n.example.com <a href="#the-above-example-serve-n8n-at-httpsn8nexamplecom" id="the-above-example-serve-n8n-at-httpsn8nexamplecom"></a>
 
-# Optional timezone to set which gets used by Cron and other scheduling nodes <a id="optional-timezone-to-set-which-gets-used-by-cron-and-other-scheduling-nodes"></a>
-# New York is the default value if not set <a id="new-york-is-the-default-value-if-not-set"></a>
+# Optional timezone to set which gets used by Cron and other scheduling nodes <a href="#optional-timezone-to-set-which-gets-used-by-cron-and-other-scheduling-nodes" id="optional-timezone-to-set-which-gets-used-by-cron-and-other-scheduling-nodes"></a>
+# New York is the default value if not set <a href="#new-york-is-the-default-value-if-not-set" id="new-york-is-the-default-value-if-not-set"></a>
 GENERIC_TIMEZONE=Europe/Berlin
 
-# The email address to use for the TLS/SSL certificate creation <a id="the-email-address-to-use-for-the-tlsssl-certificate-creation"></a>
+# The email address to use for the TLS/SSL certificate creation <a href="#the-email-address-to-use-for-the-tlsssl-certificate-creation" id="the-email-address-to-use-for-the-tlsssl-certificate-creation"></a>
 SSL_EMAIL=user@example.com
 ```
 
@@ -168,7 +168,7 @@ services:
       - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
       - N8N_HOST=${SUBDOMAIN}.${DOMAIN_NAME}
       - N8N_PORT=5678
-      - N8N_PROTOCOL=https
+      - N8N_PROTOCOL=https  
       - NODE_ENV=production
       - WEBHOOK_URL=https://${SUBDOMAIN}.${DOMAIN_NAME}/
       - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}

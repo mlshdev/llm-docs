@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/grafana-vmgateway-openid-configuration/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/_index.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/guides/grafana-vmgateway-openid-configuration/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/_index.md)
 
 > vmgateway access control feature has been deprecated. Consider following the vmauth guide [Setup vmauth - Multi-Tenant Access with Grafana & OIDC](https://docs.victoriametrics.com/guides/grafana-vmauth-openid-configuration/) instead. See [migration](https://docs.victoriametrics.com/victoriametrics/vmgateway/#access-control-migration-to-vmauth) docs.
 

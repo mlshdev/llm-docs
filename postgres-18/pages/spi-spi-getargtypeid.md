@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/spi.sgml#spi-spi-getargtypeid](https://www.postgresql.org/docs/18/spi-spi-getargtypeid.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/spi.sgml#spi-spi-getargtypeid](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/spi.sgml%23spi-spi-getargtypeid)
+> Canonical documentation: https://www.postgresql.org/docs/18/spi-spi-getargtypeid.html
 
 # SPI_getargtypeid
 

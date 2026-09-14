@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_policy_init.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_policy_init.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_policy_init.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_policy_init.yaml)
 
 # sbx policy init
 
@@ -19,26 +19,26 @@ it later. Per-sandbox rules, including those added by kits such as the
 built-in agent kits, apply on top for individual sandboxes.
 
 Available policies:
-  allow-all   All outbound network traffic is allowed
-  balanced    Typical development traffic is allowed, such as AI services and package registries
-  deny-all    All outbound network traffic is blocked
+allow-all   All outbound network traffic is allowed
+balanced    Typical development traffic is allowed, such as AI services and package registries
+deny-all    All outbound network traffic is blocked
 
 After initializing, use "sbx policy allow/deny/rm" to change the global policy.
 Use "sbx policy reset" to clear all policies and start over.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--sandbox` |  | Target a single cloud sandbox's policy (cloud only) |
+| Option      | Default | Description                                         |
+| ----------- | ------- | --------------------------------------------------- |
+| `--sandbox` |         | Target a single cloud sandbox's policy (cloud only) |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--cloud` |  | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (https://api.sandboxes-cloud.docker.com). Set DOCKER_CLOUD_API_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option            | Default                                  | Description                                                                                                                                                                                                             |
+| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
+| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
+| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
 
 ## Examples
 

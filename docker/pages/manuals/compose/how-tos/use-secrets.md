@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/how-tos/use-secrets.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/how-tos/use-secrets.md)
+> Pinned source for Docker main: [content/manuals/compose/how-tos/use-secrets.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/how-tos/use-secrets.md)
 
 # Manage secrets securely in Docker Compose
 
@@ -66,6 +66,7 @@ services:
        WORDPRESS_DB_PASSWORD_FILE: /run/secrets/db_password
      secrets:
        - db_password
+
 
 secrets:
    db_password:

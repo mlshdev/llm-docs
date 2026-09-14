@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/func.sgml#functions-json](https://www.postgresql.org/docs/18/functions-json.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/func.sgml#functions-json](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/func.sgml%23functions-json)
+> Canonical documentation: https://www.postgresql.org/docs/18/functions-json.html
 
 # JSON Functions and Operators
 
@@ -1541,6 +1542,7 @@ JSON_TABLE (
     COLUMNS ( json_table_column , ... )
      { ERROR | EMPTY ARRAY} ON ERROR 
 )
+
 
 where json_table_column is:
 

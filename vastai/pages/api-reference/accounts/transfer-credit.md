@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/commands/transfer_credit](https://docs.vast.ai/api-reference/accounts/transfer-credit)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/commands/transfer_credit](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/api-reference/openapi.yaml%23put%20/api/v0/commands/transfer_credit)
+> Canonical documentation: https://docs.vast.ai/api-reference/accounts/transfer-credit
 
 # transfer credit
 
@@ -10,11 +11,44 @@ The recipient can be specified by either email address or user ID.
 
 CLI Usage: `vastai transfer credit <recipient_email> <amount>`
 
-**Request body**
+**Authentication:** `BearerAuth`
+
+**Request body** (required)
+
+- Media type: `application/json`
+  - Schema (object)
+    - `recipient` (required; string): Email address or user ID of the recipient
+      - Example: `user@example.com`
+    - `amount` (required; number; format: float; minimum: `0.01`): Amount of credits to transfer (must be positive)
+      - Example: `100`
+    - `client_id` (string): Client identifier (usually "me")
+      - Example: `me`
+    - `apikey_id` (string): Optional API key identifier for audit logging
 
 **Responses**
 
 - `200`: Transfer completed successfully
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `true`
 - `400`: Bad Request
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `false`
+      - `error` (string; enum: `invalid_args`, `invalid_params`, `invalid_recipient`, `insufficient_balance`)
+      - `msg` (string)
+        - Example: `Invalid amount`
 - `401`: Unauthorized
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `false`
+      - `error` (string)
+      - `msg` (string)
 - `429`: Too Many Requests
+  - Media type: `application/json`
+    - Schema (object)
+      - `detail` (string)
+        - Example: `API requests too frequent endpoint threshold=2.5`

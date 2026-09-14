@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_trust_inspect.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_trust_inspect.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_trust_inspect.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_trust_inspect.yaml)
 
 # docker trust inspect
 
@@ -14,9 +14,9 @@ new tags.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--pretty` |  | Print the information in a human friendly format |
+| Option     | Default | Description                                      |
+| ---------- | ------- | ------------------------------------------------ |
+| `--pretty` |         | Print the information in a human friendly format |
 
 ## Examples
 
@@ -430,6 +430,7 @@ However, if other tags are signed in the same image repository,
 $ docker trust inspect --pretty alpine:unsigned
 
 No signatures for alpine:unsigned
+
 
 Administrative keys for alpine:unsigned:
 Repository Key: 5a46c9aaa82ff150bb7305a2d17d0c521c2d784246807b2dc611f436a69041fd

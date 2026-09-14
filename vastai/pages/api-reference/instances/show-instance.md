@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/instances/{id}](https://docs.vast.ai/api-reference/instances/show-instance)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v0/instances/{id}](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/api-reference/openapi.yaml%23get%20/api/v0/instances/%7Bid%7D)
+> Canonical documentation: https://docs.vast.ai/api-reference/instances/show-instance
 
 # show instance
 
@@ -8,13 +9,222 @@ Retrieves the details of a specific instance for the authenticated user.
 
 CLI Usage: `vastai show instance [--api-key <api_key>] [--raw]`
 
+**Authentication:** `BearerAuth`
+
 **Parameters**
 
-- `id` (path, required): The instance (contract) ID to retrieve.
+- `id` (path; required; integer): The instance (contract) ID to retrieve.
 
 **Responses**
 
 - `200`: Success response with instance details.
+  - Media type: `application/json`
+    - Schema (object)
+      - `instances` (object): Detailed information about an instance.
+        - `id` (integer): Unique identifier for the instance.
+          - Example: `883`
+        - `actual_status` (nullable): Current status of the instance container.
+          - Example: `running`
+        - `intended_status` (string): Intended status of the instance container.
+          - Example: `running`
+        - `cur_state` (string): Current state of the machine contract.
+          - Example: `running`
+        - `next_state` (string): Next scheduled state for the machine contract.
+          - Example: `running`
+        - `label` (nullable): User-defined label for the instance.
+          - Example: `null`
+        - `template_id` (nullable): Identifier for the instance template.
+          - Example: `null`
+        - `template_hash_id` (nullable): Hash identifier for the instance template.
+          - Example: `null`
+        - `template_name` (nullable): Name of the template (if available).
+          - Example: `null`
+        - `image_uuid` (string): Docker image used for the instance.
+          - Example: `tensorflow/tensorflow:latest-gpu`
+        - `image_args` (array): Arguments passed to the container.
+          - Example: `[]`
+          - `items` (string)
+        - `image_runtype` (string): How the container is launched (ssh, jupyter, etc.).
+          - Example: `ssh`
+        - `extra_env` (array): Additional environment variables.
+          - Example: `[]`
+          - `items` (string)
+        - `onstart` (nullable): Script or command run at container start.
+          - Example: `null`
+        - `jupyter_token` (string): Jupyter token for the instance.
+          - Example: `53fc448d6644aa7535c6fa5498cdbedc782753e88d81b44090e54dcf1332ed30`
+        - `status_msg` (nullable): Status message for the instance.
+          - Example: `null`
+        - `local_ipaddrs` (string): Local IP addresses for the instance (space-separated).
+          - Example: `10.2.202.31 172.17.0.1`
+        - `ssh_host` (string): Host (or IP) used for SSH connection.
+          - Example: `ssh2281.vast.ai`
+        - `ssh_idx` (string): Identifier for the SSH forwarder used.
+          - Example: `2281`
+        - `ssh_port` (integer): Port used for SSH connection.
+          - Example: `10882`
+        - `machine_dir_ssh_port` (integer): Calculated SSH port for accessing the machine directory.
+          - Example: `5300`
+        - `machine_id` (integer): ID of the physical machine.
+          - Example: `178`
+        - `bundle_id` (integer): ID of the bundle this instance belongs to.
+          - Example: `617`
+        - `start_date` (number; format: float): Instance start time (epoch seconds).
+          - Example: `1761008618.225083`
+        - `end_date` (number; format: float): Instance end time (epoch seconds).
+          - Example: `2034617753`
+        - `uptime_mins` (nullable): Uptime of the instance in minutes.
+          - Example: `null`
+        - `duration` (number; format: float): Duration of the instance in seconds.
+          - Example: `273608757.18784523`
+        - `cpu_arch` (string): CPU architecture.
+          - Example: `amd64`
+        - `cpu_cores` (integer): Number of CPU cores.
+          - Example: `32`
+        - `cpu_cores_effective` (number; format: float): Effective number of CPU cores allocated.
+          - Example: `4`
+        - `cpu_name` (string): Name of the CPU.
+          - Example: `Xeon® Silver 4110`
+        - `cpu_ram` (integer): Total system RAM in MB.
+          - Example: `128576`
+        - `cpu_util` (number; format: float): CPU utilization as a fraction.
+          - Example: `0`
+        - `mem_limit` (nullable): Memory limit in megabytes.
+          - Example: `null`
+        - `mem_usage` (nullable): Memory usage in megabytes.
+          - Example: `null`
+        - `vmem_usage` (nullable): Virtual memory usage in megabytes.
+          - Example: `null`
+        - `gpu_name` (string): Name of the GPU.
+          - Example: `RTX A5000`
+        - `gpu_arch` (string): GPU architecture.
+          - Example: `nvidia`
+        - `gpu_totalram` (integer): Total GPU RAM in MB.
+          - Example: `24564`
+        - `gpu_ram` (integer): Allocated GPU RAM in MB.
+          - Example: `24564`
+        - `gpu_util` (nullable): GPU utilization as a fraction.
+          - Example: `null`
+        - `gpu_temp` (nullable): Current GPU temperature in Celsius.
+          - Example: `null`
+        - `gpu_frac` (number; format: float): Fraction of GPU allocated.
+          - Example: `0.125`
+        - `gpu_lanes` (integer): Number of PCIe lanes for the GPU.
+          - Example: `16`
+        - `gpu_mem_bw` (number; format: float): GPU memory bandwidth in GB/s.
+          - Example: `628.8`
+        - `bw_nvlink` (number; format: float): NVLink bandwidth in GB/s.
+          - Example: `0`
+        - `disk_name` (string): Name of the disk.
+          - Example: `Samsung SSD 860`
+        - `disk_space` (number; format: float): Disk space allocated in GB.
+          - Example: `10`
+        - `disk_bw` (number; format: float): Disk bandwidth in MB/s.
+          - Example: `500.55`
+        - `disk_util` (number; format: float): Disk utilization percentage.
+          - Example: `-1`
+        - `disk_usage` (number; format: float): Disk usage percentage.
+          - Example: `-1`
+        - `direct_port_count` (integer): Number of direct ports available.
+          - Example: `12`
+        - `direct_port_start` (integer): Start of direct port range.
+          - Example: `-1`
+        - `direct_port_end` (integer): End of direct port range.
+          - Example: `-1`
+        - `ports` (array): List of additional ports exposed by the instance.
+          - Example: `[8080,8081]`
+          - `items` (integer)
+        - `static_ip` (boolean): Whether the instance has a static public IP.
+          - Example: `true`
+        - `public_ipaddr` (string): Public IP address of the instance.
+          - Example: `63.135.50.11`
+        - `geolocation` (string): Geographical location of the instance.
+          - Example: `Washington, US`
+        - `verification` (string): Verification status of the instance.
+          - Example: `verified`
+        - `rentable` (boolean): Whether the instance is currently rentable.
+          - Example: `true`
+        - `host_id` (integer): Host ID for the instance.
+          - Example: `2`
+        - `hosting_type` (integer): Hosting type code.
+          - Example: `1`
+        - `min_bid` (number; format: float): Minimum bid price for the instance.
+          - Example: `0.02`
+        - `is_bid` (boolean): Whether the instance was created via bidding.
+          - Example: `false`
+        - `dph_base` (number; format: float): Base dollars per hour.
+          - Example: `1`
+        - `dph_total` (number; format: float): Total dollars per hour.
+          - Example: `1.0020740740740741`
+        - `dlperf` (number; format: float): Deep learning performance score.
+          - Example: `22.229415`
+        - `dlperf_per_dphtotal` (number; format: float): DLPerf per total DPH.
+          - Example: `22.183404974866942`
+        - `flops_per_dphtotal` (number; format: float): FLOPS per total DPH.
+          - Example: `27.46814902424601`
+        - `total_flops` (number; format: float): Total FLOPS.
+          - Example: `27.52512`
+        - `score` (number; format: float): Instance score.
+          - Example: `22.043656178546772`
+        - `reliability2` (number; format: float): Reliability score.
+          - Example: `0.9993661`
+        - `os_version` (string): Operating system version.
+          - Example: `18.04`
+        - `mobo_name` (string): Motherboard name.
+          - Example: `S7109GM2NR`
+        - `pci_gen` (number; format: float): PCIe generation.
+          - Example: `3`
+        - `pcie_bw` (number; format: float): PCIe bandwidth in GB/s.
+          - Example: `11.7`
+        - `num_gpus` (integer): Number of GPUs allocated.
+          - Example: `1`
+        - `logo` (string): URL to the logo image.
+          - Example: `/static/logos/vastai_small2.png`
+        - `webpage` (nullable): URL to the instance's webpage, if available.
+          - Example: `null`
+        - `search` (object): Search pricing details.
+          - Example: `{"gpuCostPerHour":1,"diskHour":0.002074074074074074,"totalHour":1.0020740740740741,"discountTotalHour":0,"discountedTotalPerHour":1.0020740740740741}`
+        - `instance` (object): Instance pricing details.
+          - Example: `{"gpuCostPerHour":0,"diskHour":0.002074074074074074,"totalHour":0.002074074074074074,"discountTotalHour":0,"discountedTotalPerHour":0.002074074074074074}`
+        - `storage_cost` (number; format: float): Storage cost per hour.
+          - Example: `0.14933333333333335`
+        - `storage_total_cost` (number; format: float): Total storage cost.
+          - Example: `0.002074074074074074`
+        - `vram_costperhour` (number; format: float): VRAM cost per hour.
+          - Example: `0.00004079441760601181`
+        - `credit_balance` (nullable): User's credit balance.
+          - Example: `null`
+        - `credit_discount` (nullable): User's credit discount.
+          - Example: `null`
+        - `credit_discount_max` (number): Maximum credit discount.
+          - Example: `0.4`
+        - `client_run_time` (number; format: float): Client run time in hours.
+          - Example: `1.1`
+        - `host_run_time` (number; format: float): Host run time in hours.
+          - Example: `2592000`
+        - `external` (boolean): Whether the instance is external.
+          - Example: `false`
+        - `time_remaining` (string): Time remaining for the instance (if applicable).
+          - Example: \`\`
+        - `time_remaining_isbid` (string): Time remaining for the instance if it is a bid.
+          - Example: \`\`
 - `400`: Bad Request – Invalid instance ID or invalid arguments.
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `false`
+      - `error` (string)
+      - `msg` (string)
 - `401`: Unauthorized – Invalid or missing authentication.
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `false`
+      - `error` (string)
+      - `msg` (string)
+    - Example: `{"success":false,"error":"auth_error","msg":"Invalid user key"}`
 - `429`: Too Many Requests – API requests are too frequent.
+  - Media type: `application/json`
+    - Schema (object)
+      - `detail` (string)
+        - Example: `API requests too frequent endpoint threshold=2.0`

@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/tasks/scheduled.mdx](https://trigger.dev/docs/tasks/scheduled)
+> Pinned source for Trigger.dev v4.5.16: [docs/tasks/scheduled.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/tasks/scheduled.mdx)
+> Canonical documentation: https://trigger.dev/docs/tasks/scheduled
 
 # Scheduled tasks (cron)
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_up.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_up.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_up.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_up.yaml)
 
 # docker compose up
 
@@ -43,40 +43,40 @@ hook runs again. Running `compose down` also removes them.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--abort-on-container-exit` |  | Stops all containers if any container was stopped. Incompatible with -d |
-| `--abort-on-container-failure` |  | Stops all containers if any container exited with failure. Incompatible with -d |
-| `--always-recreate-deps` |  | Recreate dependent containers. Incompatible with --no-recreate. |
-| `--attach` |  | Restrict attaching to the specified services. Incompatible with --attach-dependencies. |
-| `--attach-dependencies` |  | Automatically attach to log output of dependent services |
-| `--build` |  | Build images before starting containers |
-| `-d`, `--detach` |  | Detached mode: Run containers in the background |
-| `--exit-code-from` |  | Return the exit code of the selected service container. Implies --abort-on-container-exit |
-| `--force-recreate` |  | Recreate containers even if their configuration and image haven't changed |
-| `--menu` |  | Enable interactive shortcuts when running attached. Incompatible with --detach. Can also be enable/disable by setting COMPOSE_MENU environment var. |
-| `--no-attach` |  | Do not attach (stream logs) to the specified services |
-| `--no-build` |  | Don't build an image, even if it's policy |
-| `--no-color` |  | Produce monochrome output |
-| `--no-deps` |  | Don't start linked services |
-| `--no-log-prefix` |  | Don't print prefix in logs |
-| `--no-recreate` |  | If containers already exist, don't recreate them. Incompatible with --force-recreate. |
-| `--no-start` |  | Don't start the services after creating them |
-| `--pull` | `policy` | Pull image before running ("always"\|"missing"\|"never") |
-| `--quiet-build` |  | Suppress the build output |
-| `--quiet-pull` |  | Pull without printing progress information |
-| `--remove-orphans` |  | Remove containers for services not defined in the Compose file |
-| `-V`, `--renew-anon-volumes` |  | Recreate anonymous volumes instead of retrieving data from the previous containers |
-| `--scale` |  | Scale SERVICE to NUM instances. Overrides the `scale` setting in the Compose file if present. |
-| `-t`, `--timeout` |  | Use this timeout in seconds for container shutdown when attached or when containers are already running |
-| `--timestamps` |  | Show timestamps |
-| `--wait` |  | Wait for services to be running\|healthy. Implies detached mode. |
-| `--wait-timeout` |  | Maximum duration in seconds to wait for the project to be running\|healthy |
-| `-w`, `--watch` |  | Watch source code and rebuild/refresh containers when files are updated. |
-| `-y`, `--yes` |  | Assume "yes" as answer to all prompts and run non-interactively |
+| Option                         | Default  | Description                                                                                                                                          |
+| ------------------------------ | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--abort-on-container-exit`    |          | Stops all containers if any container was stopped. Incompatible with -d                                                                              |
+| `--abort-on-container-failure` |          | Stops all containers if any container exited with failure. Incompatible with -d                                                                      |
+| `--always-recreate-deps`       |          | Recreate dependent containers. Incompatible with --no-recreate.                                                                                      |
+| `--attach`                     |          | Restrict attaching to the specified services. Incompatible with --attach-dependencies.                                                               |
+| `--attach-dependencies`        |          | Automatically attach to log output of dependent services                                                                                             |
+| `--build`                      |          | Build images before starting containers                                                                                                              |
+| `-d`, `--detach`               |          | Detached mode: Run containers in the background                                                                                                      |
+| `--exit-code-from`             |          | Return the exit code of the selected service container. Implies --abort-on-container-exit                                                            |
+| `--force-recreate`             |          | Recreate containers even if their configuration and image haven't changed                                                                            |
+| `--menu`                       |          | Enable interactive shortcuts when running attached. Incompatible with --detach. Can also be enable/disable by setting COMPOSE\_MENU environment var. |
+| `--no-attach`                  |          | Do not attach (stream logs) to the specified services                                                                                                |
+| `--no-build`                   |          | Don't build an image, even if it's policy                                                                                                            |
+| `--no-color`                   |          | Produce monochrome output                                                                                                                            |
+| `--no-deps`                    |          | Don't start linked services                                                                                                                          |
+| `--no-log-prefix`              |          | Don't print prefix in logs                                                                                                                           |
+| `--no-recreate`                |          | If containers already exist, don't recreate them. Incompatible with --force-recreate.                                                                |
+| `--no-start`                   |          | Don't start the services after creating them                                                                                                         |
+| `--pull`                       | `policy` | Pull image before running ("always"\|"missing"\|"never")                                                                                             |
+| `--quiet-build`                |          | Suppress the build output                                                                                                                            |
+| `--quiet-pull`                 |          | Pull without printing progress information                                                                                                           |
+| `--remove-orphans`             |          | Remove containers for services not defined in the Compose file                                                                                       |
+| `-V`, `--renew-anon-volumes`   |          | Recreate anonymous volumes instead of retrieving data from the previous containers                                                                   |
+| `--scale`                      |          | Scale SERVICE to NUM instances. Overrides the `scale` setting in the Compose file if present.                                                        |
+| `-t`, `--timeout`              |          | Use this timeout in seconds for container shutdown when attached or when containers are already running                                              |
+| `--timestamps`                 |          | Show timestamps                                                                                                                                      |
+| `--wait`                       |          | Wait for services to be running\|healthy. Implies detached mode.                                                                                     |
+| `--wait-timeout`               |          | Maximum duration in seconds to wait for the project to be running\|healthy                                                                           |
+| `-w`, `--watch`                |          | Watch source code and rebuild/refresh containers when files are updated.                                                                             |
+| `-y`, `--yes`                  |          | Assume "yes" as answer to all prompts and run non-interactively                                                                                      |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--dry-run` |  | Execute command in dry run mode |
+| Option      | Default | Description                     |
+| ----------- | ------- | ------------------------------- |
+| `--dry-run` |         | Execute command in dry run mode |

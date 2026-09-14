@@ -1,4 +1,5 @@
-> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/login/oidc/device-authorization.mdx](https://zitadel.com/docs/guides/integrate/login/oidc/device-authorization)
+> Pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/login/oidc/device-authorization.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/guides/integrate/login/oidc/device-authorization.mdx)
+> Canonical documentation: https://zitadel.com/docs/guides/integrate/login/oidc/device-authorization
 
 ZITADEL implements device authorization as per [RFC 8628](https://datatracker.ietf.org/doc/html/rfc8628). This document demonstrates its use.
 

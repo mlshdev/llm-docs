@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_volume_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_volume_create.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_volume_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_volume_create.yaml)
 
 # docker volume create
 
@@ -13,21 +13,21 @@ not specified, Docker generates a random name.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--availability` | `active` | Cluster Volume availability (`active`, `pause`, `drain`) (API 1.42+) |
-| `-d`, `--driver` | `local` | Specify volume driver name |
-| `--group` |  | Cluster Volume group (cluster volumes) (API 1.42+) |
-| `--label` |  | Set metadata for a volume |
-| `--limit-bytes` |  | Minimum size of the Cluster Volume in bytes (API 1.42+) |
-| `-o`, `--opt` |  | Set driver specific options |
-| `--required-bytes` |  | Maximum size of the Cluster Volume in bytes (API 1.42+) |
-| `--scope` | `single` | Cluster Volume access scope (`single`, `multi`) (API 1.42+) |
-| `--secret` |  | Cluster Volume secrets (API 1.42+) |
-| `--sharing` | `none` | Cluster Volume access sharing (`none`, `readonly`, `onewriter`, `all`) (API 1.42+) |
-| `--topology-preferred` |  | A topology that the Cluster Volume would be preferred in (API 1.42+) |
-| `--topology-required` |  | A topology that the Cluster Volume must be accessible from (API 1.42+) |
-| `--type` | `block` | Cluster Volume access type (`mount`, `block`) (API 1.42+) |
+| Option                 | Default  | Description                                                                        |
+| ---------------------- | -------- | ---------------------------------------------------------------------------------- |
+| `--availability`       | `active` | Cluster Volume availability (`active`, `pause`, `drain`) (API 1.42+)               |
+| `-d`, `--driver`       | `local`  | Specify volume driver name                                                         |
+| `--group`              |          | Cluster Volume group (cluster volumes) (API 1.42+)                                 |
+| `--label`              |          | Set metadata for a volume                                                          |
+| `--limit-bytes`        |          | Minimum size of the Cluster Volume in bytes (API 1.42+)                            |
+| `-o`, `--opt`          |          | Set driver specific options                                                        |
+| `--required-bytes`     |          | Maximum size of the Cluster Volume in bytes (API 1.42+)                            |
+| `--scope`              | `single` | Cluster Volume access scope (`single`, `multi`) (API 1.42+)                        |
+| `--secret`             |          | Cluster Volume secrets (API 1.42+)                                                 |
+| `--sharing`            | `none`   | Cluster Volume access sharing (`none`, `readonly`, `onewriter`, `all`) (API 1.42+) |
+| `--topology-preferred` |          | A topology that the Cluster Volume would be preferred in (API 1.42+)               |
+| `--topology-required`  |          | A topology that the Cluster Volume must be accessible from (API 1.42+)             |
+| `--type`               | `block`  | Cluster Volume access type (`mount`, `block`) (API 1.42+)                          |
 
 ## Examples
 

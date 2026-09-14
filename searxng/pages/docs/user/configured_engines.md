@@ -1,75 +1,54 @@
-> Commit-pinned source for SearXNG master: [docs/user/configured_engines.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/user/configured_engines.rst)
+> Pinned source for SearXNG master: [docs/user/configured_engines.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/user/configured_engines.rst)
 
-.. \_configured engines:
+<a id="configured-engines"></a>
 
 # Configured Engines
 
 ### Further reading ..
 
-- \[settings categories\_as\_tabs]\(#settings categories\_as\_tabs)
-- engines-dev
-- \[settings engines]\(#settings engines)
-- \[general engine configuration]\(#general engine configuration)
+- [settings categories\_as\_tabs](https://docs.searxng.org/admin/settings/settings_categories_as_tabs.html#settings-categories-as-tabs)
+- [engines-dev](https://docs.searxng.org/dev/engines/engine_overview.html#engines-dev)
+- [settings engines](https://docs.searxng.org/admin/settings/settings_engines.html#settings-engines)
+- [general engine configuration](https://docs.searxng.org/dev/engines/engine_overview.html#general-engine-configuration)
 
-{% for category, engines in categories\_as\_tabs.items() %}
+SearXNG supports available search engines of which
+available are enabled by default.
+
+Engines can be assigned to multiple [categories](https://docs.searxng.org/admin/settings/settings_engines.html#engine-categories).
+The UI displays the tabs that are configured in [categories\_as\_tabs](https://docs.searxng.org/admin/settings/settings_categories_as_tabs.html#settings-categories-as-tabs).  In addition to these UI categories (also
+called *tabs*), engines can be queried by their name or the categories they
+belong to, by using a [!bing syntax](https://docs.searxng.org/user/search-syntax.html#search-syntax).
 
 ## tab `!available`
 
-{% for group, group\_bang, engines in engines | group\_engines\_in\_tab %}
+```
 
-{% if loop.length > 1 %}
+* - `5` Engines configured by default (in [settings.yml](https://docs.searxng.org/dev/engines/engine_overview.html#engine-settings))
+  - `3` [Supported features](https://docs.searxng.org/dev/engines/engine_overview.html#engine-file)
 
-### {% if group\_bang %}group `available`{% else %}available{% endif %}
+* - Name
+  - !bang
+  - Module
+  - Disabled
+  - Timeout
+  - Weight
+  - Paging
+  - Locale
+  - Safe search
+  - Time range
 
-{% endif %}
 
-.. flat-table:
-
-```text
-  :header-rows: 2
-  :stub-columns: 1
-  :widths: 10 1 10 1 1 1 1 1 1 1
-
-  * - :cspan:`5` Engines configured by default (in :ref:`settings.yml <engine settings>`)
-    - :cspan:`3` :ref:`Supported features <engine file>`
-
-  * - Name
-    - !bang
-    - Module
-    - Disabled
-    - Timeout
-    - Weight
-    - Paging
-    - Locale
-    - Safe search
-    - Time range
-
-  {% for mod in engines %}
-
-  * - `available <available>`_
-      {%- if mod.language %}
-      (available)
-      {%- endif %}
-    - ``!available``
-    - {%- if 'searx.engines.' + mod.__name__ in documented_modules %}
-      :py:mod:`~searx.engines.available`
-      {%- else %}
-      :origin:`available <searx/engines/available.py>`
-      {%- endif %}
-    - available
-    - available
-    - available
-    {% if mod.engine_type == 'online' %}
-    - available
-    - available
-    - available
-    - available
-    {% else %}
-    - :cspan:`3` not applicable (available)
-    {% endif %}
-
- {% endfor %}
- {% endfor %}
- {% endfor %}
-
+* - [available](available)
+    (available)
+  - `!available`
+    `searx.engines.available`
+    [available](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/engines/available.py)
+  - available
+  - available
+  - available
+  - available
+  - available
+  - available
+  - available
+  - `3` not applicable (available)
 ```

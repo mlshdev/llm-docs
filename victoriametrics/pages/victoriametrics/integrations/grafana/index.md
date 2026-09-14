@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/integrations/grafana/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/grafana/_index.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/integrations/grafana/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/grafana/_index.md)
 
 VictoriaMetrics integrates with Grafana using either [Prometheus datasource](https://grafana.com/docs/grafana/latest/datasources/prometheus/)
 or [VictoriaMetrics datasource](https://grafana.com/grafana/plugins/victoriametrics-metrics-datasource/) plugins.

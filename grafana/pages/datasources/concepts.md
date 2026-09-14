@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.1: [docs/sources/datasources/concepts.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/datasources/concepts.md)
+> Pinned source for Grafana v13.2.1: [docs/sources/datasources/concepts.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/datasources/concepts.md)
 
 # Data sources, plugins, and integrations
 
@@ -55,6 +55,37 @@ Use an integration when:
 Data sources, plugins, and integrations work together to build observability solutions. The following diagram shows two paths: the custom path where you install plugins and configure data sources yourself, and the integration path where Grafana Cloud provides a pre-packaged setup.
 
 ![Diagram showing the custom path and integration path for working with data in Grafana](https://grafana.com/media/docs/datasources/concepts-diagram-1.png)
+
+<!-- ```text
+  CUSTOM PATH                      INTEGRATION PATH
+  (Self-hosted & Cloud)            (Cloud only)
+
+  ┌────────────────────┐           ┌────────────────────┐
+  │  Install plugin    │           │  Add integration   │
+  └─────────┬──────────┘           └─────────┬──────────┘
+            │ enables                        │ bundles
+            ▼                                ▼
+  ┌────────────────────┐           ┌────────────────────┐
+  │  Configure data    │           │  Collection config, │
+  │  source (URL,      │           │  dashboards,       │
+  │  auth, endpoint)   │           │  alerts, rules     │
+  └─────────┬──────────┘           └─────────┬──────────┘
+            │ connects to                    │ ingests into
+            ▼                                ▼
+  ┌────────────────────┐           ┌────────────────────┐
+  │  External backend  │           │  Grafana Cloud     │
+  │  (Prometheus,      │           │  managed backends  │
+  │   MySQL, etc.)     │           │  (metrics, logs,   │
+  │                    │           │   traces)          │
+  └─────────┬──────────┘           └─────────┬──────────┘
+            │ queries                        │ queries
+            ▼                                ▼
+  ┌────────────────────┐           ┌────────────────────┐
+  │  Build your own    │           │  Ready-to-use      │
+  │  panels and        │           │  dashboards and    │
+  │  dashboards        │           │  alerts            │
+  └────────────────────┘           └────────────────────┘
+``` -->
 
 App plugins can combine both paths by bundling data source plugins, panel plugins, and custom pages into a single package.
 

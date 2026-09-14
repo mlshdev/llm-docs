@@ -119,6 +119,12 @@ export interface BranchLockedSource {
   readonly branch: string;
   readonly sourceCommit: string;
   readonly sourceCommittedAt: string;
+  // Hash of the normalized documentation content with the commit token
+  // removed. It prevents unrelated branch commits from churning snapshots.
+  readonly documentationDigest?: string;
+  // Latest branch head already inspected. It may advance while sourceCommit
+  // stays pinned when the normalized documentation digest is unchanged.
+  readonly observedCommit?: string;
   readonly docsCommit?: never;
   readonly releaseId?: never;
   readonly releasePublishedAt?: never;
@@ -200,12 +206,6 @@ export function isGithubLockedSource(
   return !isSnapshotLockedSource(source);
 }
 
-export function isGithubSourceProject(
-  project: SourceProject,
-): project is GithubSourceProject {
-  return project.kind === "github";
-}
-
 // A lock may omit a project that was added to the configuration but not yet
 // resolved against its upstream releases, which is the state `update` starts
 // from. Everything that reads pins requires the complete form.
@@ -223,8 +223,16 @@ export interface Document {
   readonly outputPath: string;
   readonly title: string;
   readonly body: string;
+  // Immutable input location. For GitHub adapters this defaults to a blob URL
+  // at the locked commit; adapters may override it for secondary repositories.
+  readonly sourceUrl?: string;
+  // Live documentation URL, which may move independently of the pinned input.
   readonly canonicalUrl: string;
   readonly section?: string;
+  readonly description?: string;
+  readonly documentType?: string;
+  readonly beta?: boolean;
+  readonly deprecated?: boolean;
 }
 
 export interface ProjectBuild {

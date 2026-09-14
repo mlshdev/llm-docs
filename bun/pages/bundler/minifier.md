@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/bundler/minifier.mdx](https://bun.com/docs/bundler/minifier)
+> Pinned source for Bun bun-v1.4.2: [docs/bundler/minifier.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/bundler/minifier.mdx)
+> Canonical documentation: https://bun.com/docs/bundler/minifier
 
 Bun includes a fast JavaScript and TypeScript minifier. Depending on the codebase, it can reduce bundle sizes by 80% or more. It can also make output code run faster. The minifier performs dozens of optimizations including constant folding, dead code elimination, and syntax transformations. Unlike other minifiers, Bun's minifier makes `bun build` run faster since there's less code to print.
 

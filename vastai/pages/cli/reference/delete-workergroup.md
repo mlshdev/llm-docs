@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [cli/reference/delete-workergroup.mdx](https://docs.vast.ai/cli/reference/delete-workergroup)
+> Pinned source for Vast.ai main: [cli/reference/delete-workergroup.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/cli/reference/delete-workergroup.mdx)
+> Canonical documentation: https://docs.vast.ai/cli/reference/delete-workergroup
 
 # vastai delete workergroup
 

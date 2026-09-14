@@ -1,9 +1,12 @@
 import { createHash } from "node:crypto";
-import { appendFile, readFile, writeFile } from "node:fs/promises";
+import { appendFile, readFile } from "node:fs/promises";
 import path from "node:path";
 import { rootDirectory } from "./config.ts";
-import { exists } from "./files.ts";
-import type { SourceResolutionFailure } from "./github.ts";
+import { exists, writeUtf8Atomic } from "./files.ts";
+import type {
+  SourceResolutionFailure,
+  SourceResolutionMetric,
+} from "./github.ts";
 import type { QuarantinedDocument } from "./quarantine.ts";
 import type { ProjectId, SourceProject } from "./types.ts";
 
@@ -26,36 +29,49 @@ export interface ProjectQuarantine {
 }
 
 export interface PipelineReport {
-  readonly schemaVersion: 1;
+  readonly schemaVersion: 2;
   readonly generatedAt: string;
   readonly healthy: boolean;
   readonly unresolvedSources: readonly SourceResolutionFailure[];
   readonly retainedProjects: readonly RetainedProject[];
   readonly quarantine: readonly ProjectQuarantine[];
+  readonly sourceResolution: readonly SourceResolutionMetric[];
 }
 
 export async function writePipelineReport(
   projects: readonly SourceProject[],
   unresolvedSources: readonly SourceResolutionFailure[],
   retainedProjects: readonly RetainedProject[],
+  sourceResolution: readonly SourceResolutionMetric[],
 ): Promise<PipelineReport> {
   const quarantine = await collectQuarantine(projects);
   const report: PipelineReport = {
-    schemaVersion: 1,
+    schemaVersion: 2,
     generatedAt: new Date().toISOString(),
-    // Health is about publication: a source that would not reconcile or build
-    // holds a project at an older pin and needs a handler written. Quarantined
-    // pages are disclosed in the run summary and in every project manifest,
-    // but a page upstream itself cannot render must not hold a tracking issue
-    // open forever against work this repository cannot do.
-    healthy: unresolvedSources.length === 0 && retainedProjects.length === 0,
+    // A healthy report means the published corpus is complete according to the
+    // conversion policy. Every omission remains actionable until it is either
+    // converted or represented by an explicit future approved-omission policy.
+    healthy: pipelineIsHealthy(unresolvedSources, retainedProjects, quarantine),
     unresolvedSources,
     retainedProjects,
     quarantine,
+    sourceResolution,
   };
-  await writeFile(reportPath, `${JSON.stringify(report, null, 2)}\n`, "utf8");
+  await writeUtf8Atomic(reportPath, JSON.stringify(report, null, 2));
   await publishSummary(report);
   return report;
+}
+
+export function pipelineIsHealthy(
+  unresolvedSources: readonly SourceResolutionFailure[],
+  retainedProjects: readonly RetainedProject[],
+  quarantine: readonly ProjectQuarantine[],
+): boolean {
+  return (
+    unresolvedSources.length === 0 &&
+    retainedProjects.length === 0 &&
+    quarantine.length === 0
+  );
 }
 
 // Read back from the manifests rather than from this run so the report stays
@@ -111,7 +127,7 @@ export function renderSummary(report: PipelineReport): string[] {
       "| --- | --- | --- | --- |",
       ...report.retainedProjects.map(
         (entry) =>
-          `| ${entry.project} | ${entry.attemptedTag} | ${entry.retainedTag} | ${escapeCell(entry.reason)} |`,
+          `| ${entry.project} | ${escapeCell(entry.attemptedTag)} | ${escapeCell(entry.retainedTag)} | ${escapeCell(entry.reason)} |`,
       ),
       "",
     );
@@ -121,7 +137,7 @@ export function renderSummary(report: PipelineReport): string[] {
       "### Sources that could not be reconciled",
       "",
       ...report.unresolvedSources.map(
-        (entry) => `- \`${entry.project}\`: ${entry.reason}`,
+        (entry) => `- \`${entry.project}\`: ${safeText(entry.reason)}`,
       ),
       "",
     );
@@ -130,12 +146,13 @@ export function renderSummary(report: PipelineReport): string[] {
     lines.push("### Quarantined pages", "");
     for (const entry of report.quarantine) {
       lines.push(
-        `<details><summary><code>${entry.project}</code> ${entry.tag} — ${entry.documents.length} page(s)</summary>`,
+        `<details><summary><code>${entry.project}</code> ${safeText(entry.tag)} — ${entry.documents.length} page(s)</summary>`,
         "",
       );
       lines.push(
         ...entry.documents.map(
-          (document) => `- \`${document.sourcePath}\`: ${document.reason}`,
+          (document) =>
+            `- \`${safeCode(document.sourcePath)}\`: ${safeText(document.reason)}`,
         ),
       );
       lines.push("", "</details>", "");
@@ -145,7 +162,25 @@ export function renderSummary(report: PipelineReport): string[] {
 }
 
 function escapeCell(value: string): string {
-  return value.replaceAll("|", "\\|");
+  return safeText(value).replaceAll("|", "\\|");
+}
+
+function safeCode(value: string): string {
+  return safeText(value).replaceAll("`", "\\`");
+}
+
+// Error text and upstream identifiers are rendered into a public GitHub issue.
+// Keep them single-line, bounded, inert as HTML, and unable to mention users.
+function safeText(value: string): string {
+  const safe = value
+    .replace(/[\u0000-\u001f\u007f]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll("@", "@\u200b");
+  return safe.length <= 400 ? safe : `${safe.slice(0, 399)}…`;
 }
 
 export async function loadPipelineReport(): Promise<PipelineReport> {

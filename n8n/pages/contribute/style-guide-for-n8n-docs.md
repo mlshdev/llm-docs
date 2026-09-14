@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/contribute/style-guide-for-n8n-docs.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/contribute/style-guide-for-n8n-docs.md)
+> Pinned source for n8n main: [docs/contribute/style-guide-for-n8n-docs.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/contribute/style-guide-for-n8n-docs.md)
 
 # Style guide for n8n Docs
 
@@ -466,7 +466,7 @@ Write headings as plain Markdown (`## Heading text`), in sentence case. GitBook 
 You'll see explicit anchor tags on existing pages, like:
 
 ```
-## Heading text <a id="heading-text"></a>
+## Heading text <a href="#heading-text" id="heading-text"></a>
 ```
 
 These pin a stable anchor, so links to the heading keep working even if its text changes later. It is not necessary to add them to new headings, but leave the existing ones in place. If you reword a heading that already has one, keep its anchor tag so existing links don't break.

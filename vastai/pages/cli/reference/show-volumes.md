@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [cli/reference/show-volumes.mdx](https://docs.vast.ai/cli/reference/show-volumes)
+> Pinned source for Vast.ai main: [cli/reference/show-volumes.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/cli/reference/show-volumes.mdx)
+> Canonical documentation: https://docs.vast.ai/cli/reference/show-volumes
 
 # vastai show volumes
 

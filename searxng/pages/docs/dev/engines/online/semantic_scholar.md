@@ -1,8 +1,9 @@
-> Commit-pinned source for SearXNG master: [docs/dev/engines/online/semantic_scholar.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/semantic_scholar.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/online/semantic_scholar.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/semantic_scholar.rst)
 
-.. \_semantic\_scholar engine:
+<a id="semantic-scholar-engine"></a>
 
 # Semantic Scholar
 
-.. automodule:: searx.engines.semantic\_scholar
-:members:
+#### `searx.engines.semantic_scholar`
+
+Static Python API reference (`automodule`).

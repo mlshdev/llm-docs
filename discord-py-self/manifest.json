@@ -1,5 +1,6 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
+  "generatorVersion": 3,
   "project": "discord-py-self",
   "title": "discord.py-self",
   "homepage": "https://discordpy-self.readthedocs.io/",
@@ -9,9 +10,20 @@
   "releasePublishedAt": "2026-01-18T23:36:41Z",
   "sourceCommit": "6de18b4cb40dd42625a535f52d9715c71399ffb3",
   "documentCount": 19,
+  "indexComplete": true,
+  "corpusVolumes": [
+    {
+      "name": "llms-full.txt",
+      "byteLength": 1585133,
+      "documentCount": 19,
+      "sha256": "849528befc6be2962d95761c4c0e2c4f9ccc6238fc1afbeee112186b759fa7d4"
+    }
+  ],
+  "outputDigest": "460d40cb823668fbd710decdfbfbb9d84502b8790a7a1381887a095e3a7b81dd",
   "notes": [
     "Release-pinned Sphinx RST is converted without executing Sphinx or importing upstream Python modules.",
     "Autodoc class, function, exception, and member descriptions are reproduced from statically extracted Python docstrings.",
     "Translations, theme assets, generated indexes, and non-documentation source are omitted."
-  ]
+  ],
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
 }

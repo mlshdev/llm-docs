@@ -1,8 +1,8 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_image_tag.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_image_tag.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_image_tag.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_image_tag.yaml)
 
 # docker image tag
 
-Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+Create a tag TARGET\_IMAGE that refers to SOURCE\_IMAGE
 
 **Usage:** `docker image tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]`
 
@@ -19,20 +19,20 @@ image is stored and its identity. These components are:
 
 `HOST`
 : Specifies the registry location where the image resides. If omitted, Docker
-  defaults to Docker Hub (`docker.io`).
+defaults to Docker Hub (`docker.io`).
 
 `PORT`
 : An optional port number for the registry, if necessary (for example, `:5000`).
 
 `NAMESPACE/REPOSITORY`
 : The namespace (optional) usually represents a user or organization. The
-  repository is required and identifies the specific image. If the namespace is
-  omitted, Docker defaults to `library`, the namespace reserved for Docker
-  Official Images.
+repository is required and identifies the specific image. If the namespace is
+omitted, Docker defaults to `library`, the namespace reserved for Docker
+Official Images.
 
 `TAG`
 : An optional identifier used to specify a particular version or variant of the
-  image. If no tag is provided, Docker defaults to `latest`.
+image. If no tag is provided, Docker defaults to `latest`.
 
 ### Example image references
 

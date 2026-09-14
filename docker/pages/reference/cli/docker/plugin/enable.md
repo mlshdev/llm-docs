@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_plugin_enable.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_plugin_enable.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_plugin_enable.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_plugin_enable.yaml)
 
 # docker plugin enable
 
@@ -9,13 +9,13 @@ Enable a plugin
 ## Description
 
 Enables a plugin. The plugin must be installed before it can be enabled,
-see [`docker plugin install`](/reference/cli/docker/plugin/install/).
+see [`docker plugin install`](https://docs.docker.com/reference/cli/docker/plugin/install/).
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--timeout` | `30` | HTTP client timeout (in seconds) |
+| Option      | Default | Description                      |
+| ----------- | ------- | -------------------------------- |
+| `--timeout` | `30`    | HTTP client timeout (in seconds) |
 
 ## Examples
 

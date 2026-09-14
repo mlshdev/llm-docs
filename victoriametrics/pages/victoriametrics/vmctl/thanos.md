@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmctl/thanos.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/thanos.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmctl/thanos.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/thanos.md)
 
 `vmctl` provides a dedicated `thanos` mode for migrating data from Thanos blocks to VictoriaMetrics.
 This mode supports both raw blocks (resolution=0) and downsampled blocks with all aggregate types.
@@ -295,19 +295,19 @@ OPTIONS:
    --thanos-filter-label value                                        Thanos label name to filter timeseries by. E.g. '__name__' will filter timeseries by name.
    --thanos-filter-label-value value                                  Thanos regular expression to filter label from "thanos-filter-label" flag. (default: ".*")
    --thanos-aggr-types value [ --thanos-aggr-types value ]            Aggregate types to import from Thanos downsampled blocks. Supported values: count, sum, min, max, counter. Each aggregate will be imported as a separate metric with the aggregate type as suffix (e.g., metric_name:5m:count). If not specified, all aggregate types will be imported from downsampled blocks.
-   --vm-addr value                                                    VictoriaMetrics address to perform import requests.
-      Should be the same as --httpListenAddr value for single-node version or vminsert component.
-      When importing into the clustered version do not forget to set additionally --vm-account-id flag.
+   --vm-addr value                                                    VictoriaMetrics address to perform import requests. 
+      Should be the same as --httpListenAddr value for single-node version or vminsert component. 
+      When importing into the clustered version do not forget to set additionally --vm-account-id flag. 
       Please note, that vmctl performs initial readiness check for the given address by checking /health endpoint. (default: "http://localhost:8428")
    --vm-user value      VictoriaMetrics username for basic auth [$VM_USERNAME]
    --vm-password value  VictoriaMetrics password for basic auth [$VM_PASSWORD]
-   --vm-headers value   Optional HTTP headers to send with each request to the corresponding destination address.
-      For example, --vm-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding destination address.
+   --vm-headers value   Optional HTTP headers to send with each request to the corresponding destination address. 
+      For example, --vm-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding destination address. 
       Multiple headers must be delimited by '^^': --vm-headers='header1:value1^^header2:value2'
    --vm-bearer-token value  Optional bearer auth token to use for the corresponding --vm-addr
-   --vm-account-id value    AccountID is an arbitrary 32-bit integer identifying namespace for data ingestion (aka tenant).
-      AccountID is required when importing into the clustered version of VictoriaMetrics.
-      It is possible to set it as accountID:projectID, where projectID is also arbitrary 32-bit integer.
+   --vm-account-id value    AccountID is an arbitrary 32-bit integer identifying namespace for data ingestion (aka tenant). 
+      AccountID is required when importing into the clustered version of VictoriaMetrics. 
+      It is possible to set it as accountID:projectID, where projectID is also arbitrary 32-bit integer. 
       If projectID isn't set, then it equals to 0
    --vm-concurrency value                             Number of workers concurrently performing import requests to VM (default: 2)
    --vm-compress                                      Whether to apply gzip compression to import requests (default: true)

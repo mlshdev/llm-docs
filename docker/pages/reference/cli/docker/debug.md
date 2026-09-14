@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/debug/docker_debug.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/debug/docker_debug.yaml)
+> Pinned source for Docker main: [data/cli/debug/docker_debug.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/debug/docker_debug.yaml)
 
 # docker debug
 
@@ -18,17 +18,18 @@ You don't need to modify the image to use Docker Debug.
 However, using Docker Debug still won't modify your image.
 Docker Debug brings its own toolbox that you can easily customize.
 The toolbox comes with many standard Linux tools pre-installed, such as `vim`, `nano`, `htop`, and `curl`.
-Use the builtin `install` command to add additional tools available on https://search.nixos.org/packages.
+Use the builtin `install` command to add additional tools available on <https://search.nixos.org/packages>.
 Docker Debug supports `bash`, `fish`, and `zsh`.
 By default it tries to auto-detect your shell.
 
 Custom builtin tools:
-- `install [tool1] [tool2]`: Add Nix packages from: https://search.nixos.org/packages, see [example](#managing-your-toolbox-using-the-install-command).
+
+- `install [tool1] [tool2]`: Add Nix packages from: <https://search.nixos.org/packages>, see [example](#managing-your-toolbox-using-the-install-command).
 - `uninstall [tool1] [tool2]`: Uninstall Nix packages.
 - `entrypoint`: Print, lint, or run the entrypoint, see [example](#understanding-the-default-startup-command-of-a-container-entry-points).
 - `builtins`: Show custom builtin tools.
 
-> [!NOTE]
+> \[!NOTE]
 >
 > For images and stopped containers, all changes are discarded when leaving the shell.
 > At no point, do changes affect the actual image or container.
@@ -37,11 +38,11 @@ Custom builtin tools:
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--shell` | `auto` | Select a shell. Supported: `bash`, `fish`, `zsh`, `auto`. |
-| `-c`, `--command` |  | Evaluate the specified commands instead of starting an interactive session, see [example](#running-commands-directly-eg-for-scripting). |
-| `--host` |  | Daemon docker socket to connect to. E.g.: `ssh://root@example.org`, `unix:///some/path/docker.sock`, see [example](#remote-debugging-using-the---host-option). |
+| Option            | Default | Description                                                                                                                                                    |
+| ----------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--shell`         | `auto`  | Select a shell. Supported: `bash`, `fish`, `zsh`, `auto`.                                                                                                      |
+| `-c`, `--command` |         | Evaluate the specified commands instead of starting an interactive session, see [example](#running-commands-directly-eg-for-scripting).                        |
+| `--host`          |         | Daemon docker socket to connect to. E.g.: `ssh://root@example.org`, `unix:///some/path/docker.sock`, see [example](#remote-debugging-using-the---host-option). |
 
 ## Examples
 
@@ -104,7 +105,7 @@ $ docker run -d --name web-app -p 8080:80 nginx
 d3d6074d0ea901c96cac8e49e6dad21359616bef3dc0623b3c2dfa536c31dfdb
 ```
 
-To confirm nginx is running, open a browser and navigate to http://localhost:8080.
+To confirm nginx is running, open a browser and navigate to <http://localhost:8080>.
 You should see the default nginx page.
 Now, change it using vim:
 
@@ -117,7 +118,7 @@ Now, reload the page in the browser and you should see the updated page.
 
 ### Managing your toolbox using the `install` command
 
-The builtin `install` command lets you add any tool from https://search.nixos.org/packages to the toolbox.
+The builtin `install` command lets you add any tool from <https://search.nixos.org/packages> to the toolbox.
 Keep in mind adding a tool never modifies the actual image or container.
 Tools get added to only your toolbox.
 Run `docker debug` and then install `nmap`:
@@ -175,7 +176,7 @@ docker > entrypoint --print
 
 The `entrypoint` command evaluates the `ENTRYPOINT` and `CMD` statement of the underlying image
 and lets you print, lint, or run the resulting entrypoint.
-However, it can be difficult to understand all the corner cases from [Understand how CMD and ENTRYPOINT interact](/reference/dockerfile/#understand-how-cmd-and-entrypoint-interact).
+However, it can be difficult to understand all the corner cases from [Understand how CMD and ENTRYPOINT interact](https://docs.docker.com/reference/dockerfile/#understand-how-cmd-and-entrypoint-interact).
 In these situations, `entrypoint` can help.
 
 Use `entrypoint` to investigate what actually happens when you run a container from the Nginx image:

@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/reference/install-configuration/api-dashboard.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/api-dashboard.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/reference/install-configuration/api-dashboard.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/api-dashboard.md)
 
 Traefik exposes a number of information through API endpoints, such as the configuration of your routers, services, middlewares, etc.
 

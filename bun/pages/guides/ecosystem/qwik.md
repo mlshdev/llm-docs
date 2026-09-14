@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/qwik.mdx](https://bun.com/docs/guides/ecosystem/qwik)
+> Pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/qwik.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/guides/ecosystem/qwik.mdx)
+> Canonical documentation: https://bun.com/docs/guides/ecosystem/qwik
 
 # Build an app with Qwik and Bun
 
@@ -23,6 +24,7 @@ bun create qwik
     .:::::::::. :-:.
      ..::::::::::::
              ...::::
+
 
 ┌  Let's create a  Qwik App  ✨ (v1.20.0)
 │

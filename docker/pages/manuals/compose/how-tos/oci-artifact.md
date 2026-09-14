@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/how-tos/oci-artifact.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/how-tos/oci-artifact.md)
+> Pinned source for Docker main: [content/manuals/compose/how-tos/oci-artifact.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/how-tos/oci-artifact.md)
 
 # Package and deploy Docker Compose applications as OCI artifacts
 
@@ -74,7 +74,7 @@ Service/Config  serviceB
 FOO=bar
 QUIX=
 BAR=baz
-Are you ok to publish these environment variables? [y/N]:
+Are you ok to publish these environment variables? [y/N]: 
 ```
 
 If you decline, the publish process stops without sending anything to the registry.
@@ -116,17 +116,17 @@ $ REGISTRY=myregistry.com docker compose -f oci://docker.io/username/my-compose-
 
 Found the following variables in configuration:
 VARIABLE     VALUE                SOURCE        REQUIRED    DEFAULT
-REGISTRY     myregistry.com      command-line   yes
+REGISTRY     myregistry.com      command-line   yes         
 TAG          v1.0                environment    no          latest
 DOCKERFILE   Dockerfile          default        no          Dockerfile
-API_KEY      <unset>             none           no
+API_KEY      <unset>             none           no          
 
 Do you want to proceed with these variables? [Y/n]:y
 
 Warning: This Compose project includes files from remote sources:
 - oci://registry.example.com/stack:latest
 Remote includes could potentially be malicious. Make sure you trust the source.
-Do you want to continue? [y/N]:
+Do you want to continue? [y/N]: 
 ```
 
 If you agree to start the application, Compose displays the directory where all the resources from the OCI artifact have been downloaded:

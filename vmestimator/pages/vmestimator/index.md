@@ -1,4 +1,4 @@
-> Release-pinned source for vmestimator v0.1.16: [docs/vmestimator/_index.md](https://github.com/VictoriaMetrics/vmestimator/blob/1c2c6af816c60586dcc6b58c9fd92d5c0bd66c4f/docs/vmestimator/_index.md)
+> Pinned source for vmestimator v0.1.16: [docs/vmestimator/_index.md](https://github.com/VictoriaMetrics/vmestimator/blob/1c2c6af816c60586dcc6b58c9fd92d5c0bd66c4f/docs/vmestimator/_index.md)
 
 `vmestimator` measures metrics cardinality across arbitrary label dimensions in real time and exposes the results as metrics.
 

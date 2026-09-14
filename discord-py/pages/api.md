@@ -1,4 +1,4 @@
-> Tag-pinned source for discord.py v2.7.1: [docs/api.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/api.rst)
+> Pinned source for discord.py v2.7.1: [docs/api.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/api.rst)
 
 # API Reference
 
@@ -180,10 +180,9 @@ This allows you to check requests the library is using. For more information, ch
 
 The maximum number of seconds to wait when a non-global rate limit is encountered.
 If a request requires sleeping for more than the seconds passed in, then
-
-- **Exc:** `~discord.RateLimited` will be raised. By default, there is no timeout limit.
-  In order to prevent misuse and unnecessary bans, the minimum value this can be
-  set to is `30.0` seconds.
+`discord.RateLimited` will be raised. By default, there is no timeout limit.
+In order to prevent misuse and unnecessary bans, the minimum value this can be
+set to is `30.0` seconds.
 
 > **Added in version 2.0**
 
@@ -204,7 +203,7 @@ The websocket gateway the client is currently connected to. Could be `None`.
 
 ##### `latency(self) -> float`
 
-- **Class:** `float`: Measures latency between a HEARTBEAT and a HEARTBEAT\_ACK in seconds.
+`float`: Measures latency between a HEARTBEAT and a HEARTBEAT\_ACK in seconds.
 
 This could be referred to as the Discord WebSocket protocol latency.
 
@@ -212,7 +211,7 @@ This could be referred to as the Discord WebSocket protocol latency.
 
 ##### `is_ws_ratelimited(self) -> bool`
 
-- **Class:** `bool`: Whether the websocket is currently rate limited.
+`bool`: Whether the websocket is currently rate limited.
 
 This can be useful to know when deciding whether you should query members
 using HTTP or via the gateway.
@@ -300,7 +299,7 @@ is called.
 
 ##### `application_flags(self) -> ApplicationFlags`
 
-- **Class:** `~discord.ApplicationFlags`: The client's application flags.
+`discord.ApplicationFlags`: The client's application flags.
 
 > **Added in version 2.0**
 
@@ -324,7 +323,7 @@ This is `None` if accessed before `discord.Client.login` is called.
 
 ##### `is_ready(self) -> bool`
 
-- **Class:** `bool`: Specifies if the client's internal cache is ready for use.
+`bool`: Specifies if the client's internal cache is ready for use.
 
 <a id="api-client-on-error"></a>
 
@@ -567,7 +566,7 @@ Defaults to `False`.
 
 ##### `is_closed(self) -> bool`
 
-- **Class:** `bool`: Indicates if the websocket connection is closed.
+`bool`: Indicates if the websocket connection is closed.
 
 <a id="api-client-activity"></a>
 
@@ -580,8 +579,8 @@ logging in.
 
 ##### `status(self) -> Status`
 
-- **Class:** `.Status`:
-  The status being used upon logging on to Discord.
+`.Status`:
+The status being used upon logging on to Discord.
 
 <a id="api-client-allowed-mentions"></a>
 
@@ -595,7 +594,7 @@ Optional\[`discord.AllowedMentions`]: The allowed mention configuration.
 
 ##### `intents(self) -> Intents`
 
-- **Class:** `~discord.Intents`: The intents configured for this connection.
+`discord.Intents`: The intents configured for this connection.
 
 > **Added in version 1.5**
 
@@ -648,9 +647,8 @@ The channel ID to create a partial messageable for.
 The optional guild ID to create a partial messageable for.
 
 This is not required to actually send messages, but it does allow the
-
-- **Meth:** `~discord.PartialMessageable.jump_url` and
-- **Attr:** `~discord.PartialMessageable.guild` properties to function properly.
+`discord.PartialMessageable.jump_url` and
+`discord.PartialMessageable.guild` properties to function properly.
 
 **type: Optional\[`.ChannelType`]**
 
@@ -853,15 +851,13 @@ way.
 
 The `timeout` parameter is passed onto `asyncio.wait_for`. By default,
 it does not timeout. Note that this does propagate the
-
-- **Exc:** `asyncio.TimeoutError` for you in case of timeout and is provided for
-  ease of use.
+`asyncio.TimeoutError` for you in case of timeout and is provided for
+ease of use.
 
 In case the event returns multiple arguments, a `tuple` containing those
 arguments is returned instead. Please check the
-
-- **Ref:** `documentation <discord-api-events>` for a list of events and their
-  parameters.
+[documentation](https://discordpy.readthedocs.io/api.html#discord-api-events) for a list of events and their
+parameters.
 
 This function returns the **first event that meets the requirements**.
 
@@ -921,8 +917,7 @@ parameters of the event being waited for.
 **timeout: Optional\[`float`]**
 
 The number of seconds to wait before timing out and raising
-
-- **Exc:** `asyncio.TimeoutError`.
+`asyncio.TimeoutError`.
 
 ## Raises
 
@@ -936,8 +931,7 @@ If a timeout is provided and it was reached.
 
 Returns no arguments, a single argument, or a `tuple` of multiple
 arguments that mirrors the parameters passed in the
-
-- **Ref:** `event reference <discord-api-events>`.
+[event reference](https://discordpy.readthedocs.io/api.html#discord-api-events).
 
 <a id="api-client-change-presence"></a>
 
@@ -970,8 +964,7 @@ The activity being done. `None` if no currently active activity is done.
 **status: Optional\[`.Status`]**
 
 Indicates what status to change to. If `None`, then
-
-- **Attr:** `.Status.online` is used.
+`.Status.online` is used.
 
 ## Raises
 
@@ -987,9 +980,8 @@ Retrieves an `asynchronous iterator` that enables receiving your guilds.
 
 > **Note**
 > Using this, you will only receive `.Guild.owner`, `.Guild.icon`,
->
-> - **Attr:** `.Guild.id`, `.Guild.name`, `.Guild.approximate_member_count`,
->   and `.Guild.approximate_presence_count` per `.Guild`.
+> `.Guild.id`, `.Guild.name`, `.Guild.approximate_member_count`,
+> and `.Guild.approximate_presence_count` per `.Guild`.
 
 > **Note**
 > This method is an API call. For general usage, consider `guilds` instead.
@@ -1039,9 +1031,8 @@ If the datetime is naive, it is assumed to be local time.
 **with\_counts: `bool`**
 
 Whether to include count information in the guilds. This fills the
-
-- **Attr:** `.Guild.approximate_member_count` and `.Guild.approximate_presence_count`
-  attributes without needing any privileged intents. Defaults to `True`.
+`.Guild.approximate_member_count` and `.Guild.approximate_presence_count`
+attributes without needing any privileged intents. Defaults to `True`.
 
 > **Added in version 2.3**
 
@@ -1097,8 +1088,7 @@ Retrieves a `.Guild` from an ID.
 
 > **Note**
 > Using this, you will **not** receive `.Guild.channels`, `.Guild.members`,
->
-> - **Attr:** `.Member.activity` and `.Member.voice` per `.Member`.
+> `.Member.activity` and `.Member.voice` per `.Member`.
 
 > **Note**
 > This method is an API call. For general usage, consider `get_guild` instead.
@@ -1115,9 +1105,8 @@ The guild's ID to fetch from.
 **with\_counts: `bool`**
 
 Whether to include count information in the guild. This fills the
-
-- **Attr:** `.Guild.approximate_member_count` and `.Guild.approximate_presence_count`
-  attributes without needing any privileged intents. Defaults to `True`.
+`.Guild.approximate_member_count` and `.Guild.approximate_presence_count`
+attributes without needing any privileged intents. Defaults to `True`.
 
 > **Added in version 2.0**
 
@@ -1261,8 +1250,7 @@ Gets an `.Invite` from a discord.gg URL or ID.
 > **Note**
 > If the invite is for a guild you have not joined, the guild and channel
 > attributes of the returned `.Invite` will be `.PartialInviteGuild` and
->
-> - **Class:** `.PartialInviteChannel` respectively.
+> `.PartialInviteChannel` respectively.
 
 ## Parameters
 
@@ -1273,15 +1261,13 @@ The Discord invite ID or URL (must be a discord.gg URL).
 **with\_counts: `bool`**
 
 Whether to include count information in the invite. This fills the
-
-- **Attr:** `.Invite.approximate_member_count` and `.Invite.approximate_presence_count`
-  fields.
+`.Invite.approximate_member_count` and `.Invite.approximate_presence_count`
+fields.
 
 **with\_expiration: `bool`**
 
 Whether to include the expiration date of the invite. This fills the
-
-- **Attr:** `.Invite.expires_at` field.
+`.Invite.expires_at` field.
 
 > **Added in version 2.0**
 
@@ -2056,10 +2042,9 @@ of sharding for the user into a more manageable and transparent single
 process bot.
 
 When using this client, you will be able to use it as-if it was a regular
-
-- **Class:** `Client` with a single shard when implementation wise internally it
-  is split up into multiple shards. This allows you to not have to deal with
-  IPC or other complicated infrastructure.
+`Client` with a single shard when implementation wise internally it
+is split up into multiple shards. This allows you to not have to deal with
+IPC or other complicated infrastructure.
 
 It is recommended to use this client only if you have surpassed at least
 1000 guilds.
@@ -2097,12 +2082,11 @@ Defaults to 180 seconds.
 
 ##### `latency(self) -> float`
 
-- **Class:** `float`: Measures latency between a HEARTBEAT and a HEARTBEAT\_ACK in seconds.
+`float`: Measures latency between a HEARTBEAT and a HEARTBEAT\_ACK in seconds.
 
 This operates similarly to `Client.latency` except it uses the average
 latency of every shard's latency. To get a list of shard latency, check the
-
-- **Attr:** `latencies` property. Returns `nan` if there are no shards ready.
+`latencies` property. Returns `nan` if there are no shards ready.
 
 <a id="api-autoshardedclient-latencies"></a>
 
@@ -2186,8 +2170,7 @@ The activity being done. `None` if no currently active activity is done.
 **status: Optional\[`Status`]**
 
 Indicates what status to change to. If `None`, then
-
-- **Attr:** `Status.online` is used.
+`Status.online` is used.
 
 **shard\_id: Optional\[`int`]**
 
@@ -2205,7 +2188,7 @@ If the `activity` parameter is not of proper type.
 
 ##### `is_ws_ratelimited(self) -> bool`
 
-- **Class:** `bool`: Whether the websocket is currently rate limited.
+`bool`: Whether the websocket is currently rate limited.
 
 This can be useful to know when deciding whether you should query members
 using HTTP or via the gateway.
@@ -2381,7 +2364,7 @@ this field will be the guild to which it has been linked
 
 ##### `flags(self) -> ApplicationFlags`
 
-- **Class:** `ApplicationFlags`: The application's flags.
+`ApplicationFlags`: The application's flags.
 
 > **Added in version 2.0**
 
@@ -2440,9 +2423,8 @@ The new permissions of the `install_params`. Can be `None` to remove the permiss
 **flags: Optional\[`ApplicationFlags`]**
 
 The new application’s flags. Only limited intent flags (`ApplicationFlags.gateway_presence_limited`,
-
-- **Attr:** `~ApplicationFlags.gateway_guild_members_limited`, `ApplicationFlags.gateway_message_content_limited`)
-  can be edited. Can be `None` to remove the flags.
+`ApplicationFlags.gateway_guild_members_limited`, `ApplicationFlags.gateway_message_content_limited`)
+can be edited. Can be `None` to remove the flags.
 
 > **Warning**
 > Editing the limited intent flags leads to the termination of the bot.
@@ -2593,7 +2575,7 @@ This is only available if the application is a game sold on Discord.
 
 ##### `flags(self) -> ApplicationFlags`
 
-- **Class:** `ApplicationFlags`: The application's flags.
+`ApplicationFlags`: The application's flags.
 
 > **Added in version 2.0**
 
@@ -2788,19 +2770,19 @@ The voice channel connected to.
 
 ##### `guild(self) -> Guild`
 
-- **Class:** `Guild`: The guild we're connected to.
+`Guild`: The guild we're connected to.
 
 <a id="api-voiceclient-user"></a>
 
 ##### `user(self) -> ClientUser`
 
-- **Class:** `ClientUser`: The user connected to voice (i.e. ourselves).
+`ClientUser`: The user connected to voice (i.e. ourselves).
 
 <a id="api-voiceclient-voice-privacy-code"></a>
 
 ##### `voice_privacy_code(self) -> Optional[str]`
 
-- **Class:** `str`: Get the voice privacy code of this E2EE session's group.
+`str`: Get the voice privacy code of this E2EE session's group.
 
 A new privacy code is created and cached each time a new transition is executed.
 This can be None if there is no active DAVE session happening.
@@ -2811,7 +2793,7 @@ This can be None if there is no active DAVE session happening.
 
 ##### `latency(self) -> float`
 
-- **Class:** `float`: Latency between a HEARTBEAT and a HEARTBEAT\_ACK in seconds.
+`float`: Latency between a HEARTBEAT and a HEARTBEAT\_ACK in seconds.
 
 This could be referred to as the Discord Voice WebSocket latency and is
 an analogue of user's voice latencies as seen in the Discord client.
@@ -2822,7 +2804,7 @@ an analogue of user's voice latencies as seen in the Discord client.
 
 ##### `average_latency(self) -> float`
 
-- **Class:** `float`: Average of most recent 20 HEARTBEAT latencies in seconds.
+`float`: Average of most recent 20 HEARTBEAT latencies in seconds.
 
 > **Added in version 1.4**
 
@@ -3092,9 +3074,8 @@ some point then `disconnect` is called.
 
 Within this method, to start the voice connection flow it is recommended to
 use `Guild.change_voice_state` to start the flow. After which,
-
-- **Meth:** `on_voice_server_update` and `on_voice_state_update` will be called.
-  The order that these two are called is unspecified.
+`on_voice_server_update` and `on_voice_state_update` will be called.
+The order that these two are called is unspecified.
 
 ## Parameters
 
@@ -3170,8 +3151,7 @@ Reads 20ms worth of audio.
 Subclasses must implement this.
 
 If the audio is complete, then returning an empty
-
-- **Term:** `py:bytes-like object` to signal this is the way to do so.
+`py:bytes-like object` to signal this is the way to do so.
 
 If `AudioSource.is_opus` method returns `True`, then it must return
 20ms worth of Opus encoded audio. Otherwise, it must be 20ms
@@ -3222,8 +3202,7 @@ A file-like object that reads byte data representing raw PCM.
 Represents an FFmpeg (or AVConv) based AudioSource.
 
 User created AudioSources using FFmpeg differently from how `FFmpegPCMAudio` and
-
-- **Class:** `FFmpegOpusAudio` work should subclass this.
+`FFmpegOpusAudio` work should subclass this.
 
 > **Added in version 1.3**
 
@@ -3293,12 +3272,11 @@ producing PCM packets like `FFmpegPCMAudio` does that need to be encoded to
 Opus, this class produces Opus packets, skipping the encoding step done by the library.
 
 Alternatively, instead of instantiating this class directly, you can use
-
-- **Meth:** `FFmpegOpusAudio.from_probe` to probe for bitrate and codec information.  This
-  can be used to opportunistically skip pointless re-encoding of existing Opus audio data
-  for a boost in performance at the cost of a short initial delay to gather the information.
-  The same can be achieved by passing `copy` to the `codec` parameter, but only if you
-  know that the input source is Opus encoded beforehand.
+`FFmpegOpusAudio.from_probe` to probe for bitrate and codec information.  This
+can be used to opportunistically skip pointless re-encoding of existing Opus audio data
+for a boost in performance at the cost of a short initial delay to gather the information.
+The same can be achieved by passing `copy` to the `codec` parameter, but only if you
+know that the input source is Opus encoded beforehand.
 
 > **Added in version 1.3**
 
@@ -3519,8 +3497,7 @@ Retrieves or sets the volume as a floating point percentage (e.g. `1.0` for 100%
 Loads the libopus shared library for use with voice.
 
 If this function is not called then the library uses the function
-
-- **Func:** `ctypes.util.find_library` and then loads that one if available.
+`ctypes.util.find_library` and then loads that one if available.
 
 Not loading a library and attempting to use PCM based AudioSources will
 lead to voice not working.
@@ -3571,9 +3548,8 @@ Indicates if the opus library has been loaded.
 This section outlines the different types of events listened by `Client`.
 
 There are two ways to register an event, the first way is through the use of
-
-- **Meth:** `Client.event`. The second way is through subclassing `Client` and
-  overriding the specific events. For example: :
+`Client.event`. The second way is through subclassing `Client` and
+overriding the specific events. For example: :
 
 ```python
 import discord
@@ -3755,8 +3731,7 @@ Called when someone begins typing a message.
 
 The `channel` parameter can be a `abc.Messageable` instance.
 Which could either be `TextChannel`, `GroupChannel`, or
-
-- **Class:** `DMChannel`.
+`DMChannel`.
 
 If the `channel` is a `TextChannel` then the `user` parameter
 is a `Member`, otherwise it is a `User`.
@@ -3851,9 +3826,8 @@ be retrieved with a standard call to `sys.exc_info`.
 > `on_error` will only be dispatched to `Client.event`.
 >
 > It will not be received by `Client.wait_for`, or, if used,
->
-> - **Ref:** `ext_commands_api_bot` listeners such as
-> - **Meth:** `~ext.commands.Bot.listen` or `ext.commands.Cog.listener`.
+> [ext\_commands\_api\_bot](https://discordpy.readthedocs.io/ext/commands/api.html#ext-commands-api-bot) listeners such as
+> `ext.commands.Bot.listen` or `ext.commands.Cog.listener`.
 
 > **Changed in version 2.0**
 > The traceback is now logged rather than printed.
@@ -3963,9 +3937,8 @@ Called when a users subscription to a SKU is cancelled. This is typically only c
 
 > **Warning**
 > This event won't be called if the user cancels their subscription manually, instead
->
-> - **Func:** `on_entitlement_update` will be called with `Entitlement.ends_at` set to the end of the
->   current billing period.
+> `on_entitlement_update` will be called with `Entitlement.ends_at` set to the end of the
+> current billing period.
 
 > **Added in version 2.4**
 
@@ -4035,8 +4008,7 @@ This requires `Intents.guilds` to be enabled.
 #### `on_guild_join(guild)`
 
 Called when a `Guild` is either created by the `Client` or when the
-
-- **Class:** `Client` joins a guild.
+`Client` joins a guild.
 
 This requires `Intents.guilds` to be enabled.
 
@@ -4130,8 +4102,7 @@ This requires `Intents.moderation` to be enabled.
 > from cache rather than REST. This means that some data might not be present
 > when you expect it to be. For example, the `AuditLogEntry.target`
 > attribute will usually be a `discord.Object` and the
->
-> - **Attr:** `AuditLogEntry.user` attribute will depend on user and member cache.
+> `AuditLogEntry.user` attribute will depend on user and member cache.
 >
 > To get the user ID of entry, `AuditLogEntry.user_id` can be used instead.
 
@@ -5168,8 +5139,7 @@ makes this function return a `coroutine`.
 
 A helper that returns the first element in the iterable that meets
 all the traits passed in `attrs`. This is an alternative for
-
-- **Func:** `~discord.utils.find`.
+`discord.utils.find`.
 
 When multiple attributes are specified, they are checked using
 logical AND, not logical OR. Meaning they have to meet every
@@ -5522,8 +5492,7 @@ Resolves an invite from a `discord.Invite`, URL or code.
 
 > **Changed in version 2.0**
 > Now returns a `.ResolvedInvite` instead of a
->
-> - **Class:** `str`.
+> `str`.
 
 ## Parameters
 
@@ -6639,8 +6608,7 @@ When this is the action, the type of `AuditLogEntry.target` is
 an `Object` with an ID.
 
 A more filled out object can be found by using the
-
-- **Attr:** `~AuditLogEntry.before` object.
+`AuditLogEntry.before` object.
 
 Possible attributes for `AuditLogDiff`:
 
@@ -6681,9 +6649,8 @@ A channel permission overwrite was changed, this is typically
 when the permission values change.
 
 See `overwrite_create` for more information on how the
-
-- **Attr:** `~AuditLogEntry.target` and `AuditLogEntry.extra` fields
-  are set.
+`AuditLogEntry.target` and `AuditLogEntry.extra` fields
+are set.
 
 Possible attributes for `AuditLogDiff`:
 
@@ -6699,9 +6666,8 @@ Possible attributes for `AuditLogDiff`:
 A channel permission overwrite was deleted.
 
 See `overwrite_create` for more information on how the
-
-- **Attr:** `~AuditLogEntry.target` and `AuditLogEntry.extra` fields
-  are set.
+`AuditLogEntry.target` and `AuditLogEntry.extra` fields
+are set.
 
 Possible attributes for `AuditLogDiff`:
 
@@ -7388,10 +7354,9 @@ were updated.
 
 When this is the action, the type of `AuditLogEntry.target` is
 a `PartialIntegration` for an integrations general permissions,
-
-- **Class:** `~discord.app_commands.AppCommand` for a specific commands permissions,
-  or `Object` with the ID of the command or integration which
-  was updated.
+`discord.app_commands.AppCommand` for a specific commands permissions,
+or `Object` with the ID of the command or integration which
+was updated.
 
 When this is the action, the type of `AuditLogEntry.extra` is
 set to an `PartialIntegration` or `Object` with the ID of
@@ -9119,7 +9084,7 @@ which actions have this field filled out.
 
 ##### `created_at(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: Returns the entry's creation time in UTC.
+`datetime.datetime`: Returns the entry's creation time in UTC.
 
 <a id="api-auditlogentry-category"></a>
 
@@ -9131,19 +9096,19 @@ Optional\[`AuditLogActionCategory`]: The category of the action, if applicable.
 
 ##### `changes(self) -> AuditLogChanges`
 
-- **Class:** `AuditLogChanges`: The list of changes this entry has.
+`AuditLogChanges`: The list of changes this entry has.
 
 <a id="api-auditlogentry-before"></a>
 
 ##### `before(self) -> AuditLogDiff`
 
-- **Class:** `AuditLogDiff`: The target's prior state.
+`AuditLogDiff`: The target's prior state.
 
 <a id="api-auditlogentry-after"></a>
 
 ##### `after(self) -> AuditLogDiff`
 
-- **Class:** `AuditLogDiff`: The target's subsequent state.
+`AuditLogDiff`: The target's subsequent state.
 
 ### AuditLogChanges
 
@@ -9160,9 +9125,8 @@ An audit log change set.
 The old value. The attribute has the type of `AuditLogDiff`.
 
 Depending on the `AuditLogActionCategory` retrieved by
-
-- **Attr:** `~AuditLogEntry.category`, the data retrieved by this
-  attribute differs:
+`AuditLogEntry.category`, the data retrieved by this
+attribute differs:
 
 | Category                        | Description                                       |
 | ------------------------------- | ------------------------------------------------- |
@@ -9178,9 +9142,8 @@ Depending on the `AuditLogActionCategory` retrieved by
 The new value. The attribute has the type of `AuditLogDiff`.
 
 Depending on the `AuditLogActionCategory` retrieved by
-
-- **Attr:** `~AuditLogEntry.category`, the data retrieved by this
-  attribute differs:
+`AuditLogEntry.category`, the data retrieved by this
+attribute differs:
 
 | Category                        | Description                                      |
 | ------------------------------- | ------------------------------------------------ |
@@ -9437,8 +9400,7 @@ See also `VoiceChannel.bitrate`.
 ##### `overwrites`
 
 A list of permission overwrite tuples that represents a target and a
-
-- **Class:** `PermissionOverwrite` for said target.
+`PermissionOverwrite` for said target.
 
 The first element is the object being targeted, which can either
 be a `Member` or `User` or `Role`. If this object
@@ -9732,8 +9694,7 @@ See also `Role.unicode_emoji`.
 The description of a guild, a sticker, or a scheduled event.
 
 See also `Guild.description`, `GuildSticker.description`, or
-
-- **Attr:** `ScheduledEvent.description`.
+`ScheduledEvent.description`.
 
 - **Type:** `str`
 
@@ -10148,17 +10109,15 @@ bot user or authentication.
 
 There are two main ways to use Webhooks. The first is through the ones
 received by the library such as `.Guild.webhooks`,
-
-- **Meth:** `.TextChannel.webhooks`, `.VoiceChannel.webhooks`
-  and `.ForumChannel.webhooks`.
-  The ones received by the library will automatically be
-  bound using the library's internal HTTP session.
+`.TextChannel.webhooks`, `.VoiceChannel.webhooks`
+and `.ForumChannel.webhooks`.
+The ones received by the library will automatically be
+bound using the library's internal HTTP session.
 
 The second form involves creating a webhook object manually using the
+`.Webhook.from_url` or `.Webhook.partial` classmethods.
 
-- **Meth:** `~.Webhook.from_url` or `.Webhook.partial` classmethods.
-
-For example, creating a webhook from a URL and using [aiohttp](https://discordpy.readthedocs.io/aio:index.html):
+For example, creating a webhook from a URL and using [aiohttp](https://docs.aiohttp.org/en/stable/):
 
 ```python3
 from discord import Webhook
@@ -10245,7 +10204,7 @@ Only given if `type` is `WebhookType.channel_follower`.
 
 ##### `url(self) -> str`
 
-- **Class:** `str` : Returns the webhook's url.
+`str` : Returns the webhook's url.
 
 <a id="api-webhook-partial"></a>
 
@@ -10369,9 +10328,8 @@ This could be used to get a full webhook from a partial webhook.
 
 > **Note**
 > When fetching with an unauthenticated webhook, i.e.
->
-> - **Meth:** `is_authenticated` returns `False`, then the
->   returned webhook does not contain any user information.
+> `is_authenticated` returns `False`, then the
+> returned webhook does not contain any user information.
 
 ## Parameters
 
@@ -10863,8 +10821,7 @@ This allows you to edit or delete a message sent by your
 webhook.
 
 This inherits from `discord.Message` with changes to
-
-- **Meth:** `edit` and `delete` to work.
+`edit` and `delete` to work.
 
 > **Added in version 1.6**
 
@@ -11130,7 +11087,7 @@ Only given if `type` is `WebhookType.channel_follower`.
 
 ##### `url(self) -> str`
 
-- **Class:** `str` : Returns the webhook's url.
+`str` : Returns the webhook's url.
 
 <a id="api-syncwebhook-partial"></a>
 
@@ -11214,9 +11171,8 @@ This could be used to get a full webhook from a partial webhook.
 
 > **Note**
 > When fetching with an unauthenticated webhook, i.e.
->
-> - **Meth:** `is_authenticated` returns `False`, then the
->   returned webhook does not contain any user information.
+> `is_authenticated` returns `False`, then the
+> returned webhook does not contain any user information.
 
 ## Parameters
 
@@ -11650,8 +11606,7 @@ This allows you to edit or delete a message sent by your
 webhook.
 
 This inherits from `discord.Message` with changes to
-
-- **Meth:** `edit` and `delete` to work.
+`edit` and `delete` to work.
 
 > **Added in version 2.0**
 
@@ -11663,8 +11618,7 @@ Edits the message.
 
 > **Changed in version 2.0**
 > This function will now raise `TypeError` or
->
-> - **Exc:** `ValueError` instead of `InvalidArgument`.
+> `ValueError` instead of `InvalidArgument`.
 
 ## Parameters
 
@@ -11831,8 +11785,7 @@ to get their behaviour. **Abstract base classes should not be instantiated**.
 They are mainly there for usage with `isinstance` and `issubclass`.
 
 This library has a module related to abstract base classes, in which all the ABCs are subclasses of
-
-- **Class:** `typing.Protocol`.
+`typing.Protocol`.
 
 ### Snowflake
 
@@ -11846,8 +11799,7 @@ Almost all [Discord models](https://discordpy.readthedocs.io/api.html#discord-ap
 abstract base class.
 
 If you want to create a snowflake on your own, consider using
-
-- **Class:** `.Object`.
+`.Object`.
 
 ## Attributes
 
@@ -11897,13 +11849,13 @@ If the user is a system account.
 
 ##### `display_name(self) -> str`
 
-- **Class:** `str`: Returns the user's display name.
+`str`: Returns the user's display name.
 
 <a id="api-discord-abc-user-mention"></a>
 
 ##### `mention(self) -> str`
 
-- **Class:** `str`: Returns a string that allows you to mention the given user.
+`str`: Returns a string that allows you to mention the given user.
 
 <a id="api-discord-abc-user-avatar"></a>
 
@@ -11931,13 +11883,13 @@ Optional\[`int`]: Returns an integer that represents the user's avatar decoratio
 
 ##### `default_avatar(self) -> Asset`
 
-- **Class:** `~discord.Asset`: Returns the default avatar for a given user.
+`discord.Asset`: Returns the default avatar for a given user.
 
 <a id="api-discord-abc-user-display-avatar"></a>
 
 ##### `display_avatar(self) -> Asset`
 
-- **Class:** `~discord.Asset`: Returns the user's display avatar.
+`discord.Asset`: Returns the user's display avatar.
 
 For regular users this is just their default avatar or uploaded avatar.
 
@@ -12026,13 +11978,13 @@ their default values in the `discord.Guild.roles` attribute.
 
 ##### `mention(self) -> str`
 
-- **Class:** `str`: The string that allows you to mention the channel.
+`str`: The string that allows you to mention the channel.
 
 <a id="api-discord-abc-guildchannel-jump-url"></a>
 
 ##### `jump_url(self) -> str`
 
-- **Class:** `str`: Returns a URL that allows the client to jump to the channel.
+`str`: Returns a URL that allows the client to jump to the channel.
 
 > **Added in version 2.0**
 
@@ -12040,7 +11992,7 @@ their default values in the `discord.Guild.roles` attribute.
 
 ##### `created_at(self) -> datetime`
 
-- **Class:** `datetime.datetime`: Returns the channel's creation time in UTC.
+`datetime.datetime`: Returns the channel's creation time in UTC.
 
 <a id="api-discord-abc-guildchannel-overwrites-for"></a>
 
@@ -12091,8 +12043,8 @@ If there is no category then this is `None`.
 
 ##### `permissions_synced(self) -> bool`
 
-- **Class:** `bool`: Whether or not the permissions for this channel are synced with the
-  category it belongs to.
+`bool`: Whether or not the permissions for this channel are synced with the
+category it belongs to.
 
 If there is no category then this is `False`.
 
@@ -12190,15 +12142,13 @@ Sets the channel specific permission overwrites for a target in the
 channel.
 
 The `target` parameter should either be a `discord.Member` or a
-
-- **Class:** `~discord.Role` that belongs to guild.
+`discord.Role` that belongs to guild.
 
 The `overwrite` parameter, if given, must either be `None` or
-
-- **Class:** `~discord.PermissionOverwrite`. For convenience, you can pass in
-  keyword arguments denoting `discord.Permissions` attributes. If this is
-  done, then you cannot mix the keyword arguments with the `overwrite`
-  parameter.
+`discord.PermissionOverwrite`. For convenience, you can pass in
+keyword arguments denoting `discord.Permissions` attributes. If this is
+done, then you cannot mix the keyword arguments with the `overwrite`
+parameter.
 
 If the `overwrite` parameter is `None`, then the permission
 overwrites are deleted.
@@ -12273,8 +12223,7 @@ The role or member being edited is not part of the guild.
 **TypeError**
 
 The `overwrite` parameter was invalid or the target type was not
-
-- **Class:** `~discord.Role` or `discord.Member`.
+`discord.Role` or `discord.Member`.
 
 **ValueError**
 
@@ -12348,8 +12297,7 @@ You must have `discord.Permissions.manage_channels` to do this.
 
 > **Changed in version 2.0**
 > This function will now raise `TypeError` or
->
-> - **Exc:** `ValueError` instead of `InvalidArgument`.
+> `ValueError` instead of `InvalidArgument`.
 
 ## Parameters
 
@@ -12564,8 +12512,7 @@ parameter should be used with a `list` of `discord.Embed` objects.
 
 > **Changed in version 2.0**
 > This function will now raise `TypeError` or
->
-> - **Exc:** `ValueError` instead of `InvalidArgument`.
+> `ValueError` instead of `InvalidArgument`.
 
 ## Parameters
 
@@ -12620,11 +12567,10 @@ are used instead.
 **reference: Union\[`discord.Message`, `discord.MessageReference`, `discord.PartialMessage`]**
 
 A reference to the `discord.Message` to which you are referencing, this can be created using
-
-- **Meth:** `~discord.Message.to_reference` or passed directly as a `discord.Message`.
-  In the event of a replying reference, you can control whether this mentions the author of the referenced
-  message using the `discord.AllowedMentions.replied_user` attribute of `allowed_mentions` or by
-  setting `mention_author`.
+`discord.Message.to_reference` or passed directly as a `discord.Message`.
+In the event of a replying reference, you can control whether this mentions the author of the referenced
+message using the `discord.AllowedMentions.replied_user` attribute of `allowed_mentions` or by
+setting `mention_author`.
 
 > **Added in version 1.6**
 
@@ -12689,8 +12635,7 @@ The `files` or `embeds` list is not of the appropriate size.
 You specified both `file` and `files`,
 or you specified both `embed` and `embeds`,
 or the `reference` object is not a `discord.Message`,
-
-- **Class:** `~discord.MessageReference` or `discord.PartialMessage`.
+`discord.MessageReference` or `discord.PartialMessage`.
 
 ## Returns
 
@@ -12739,8 +12684,7 @@ The message asked for.
 Retrieves an `asynchronous iterator` of the pinned messages in the channel.
 
 You must have `discord.Permissions.view_channel` and
-
-- **Attr:** `~discord.Permissions.read_message_history` in order to use this.
+`discord.Permissions.read_message_history` in order to use this.
 
 > **Changed in version 2.6**
 > Due to a change in Discord's API, this now returns a paginated iterator instead of a list.
@@ -12751,8 +12695,7 @@ You must have `discord.Permissions.view_channel` and
 > **Note**
 > Due to a limitation with the Discord API, the `.Message`
 > object returned by this method does not contain complete
->
-> - **Attr:** `.Message.reactions` data.
+> `.Message.reactions` data.
 
 ## Examples
 
@@ -13015,8 +12958,7 @@ the user of the library.
 > If you want to get one of these model classes instances they'd have to be through
 > the cache, and a common way of doing so is through the `utils.find` function
 > or attributes of model classes that you receive from the events specified in the
->
-> - **Ref:** `discord-api-events`.
+> [discord-api-events](https://discordpy.readthedocs.io/api.html#discord-api-events).
 
 > **Note**
 > Nearly all classes here have py:slots defined which means that it is
@@ -13231,8 +13173,7 @@ Specifies if the user is a system user (i.e. represents Discord officially).
 Optional\[`DMChannel`]: Returns the channel associated with this user if it exists.
 
 If this returns `None`, you can create a DM channel by calling the
-
-- **Meth:** `create_dm` coroutine function.
+`create_dm` coroutine function.
 
 <a id="api-user-mutual-guilds"></a>
 
@@ -13532,7 +13473,7 @@ Requires the `Intents.message_content` or it will always return `None`.
 
 ##### `guild(self) -> Guild`
 
-- **Class:** `Guild`: The guild this action was taken in.
+`Guild`: The guild this action was taken in.
 
 <a id="api-automodaction-channel"></a>
 
@@ -13680,19 +13621,19 @@ The normalised version of the attachment's filename.
 
 ##### `flags(self) -> AttachmentFlags`
 
-- **Class:** `AttachmentFlags`: The attachment's flags.
+`AttachmentFlags`: The attachment's flags.
 
 <a id="api-attachment-is-spoiler"></a>
 
 ##### `is_spoiler(self) -> bool`
 
-- **Class:** `bool`: Whether this attachment contains a spoiler.
+`bool`: Whether this attachment contains a spoiler.
 
 <a id="api-attachment-is-voice-message"></a>
 
 ##### `is_voice_message(self) -> bool`
 
-- **Class:** `bool`: Whether this attachment is a voice message.
+`bool`: Whether this attachment is a voice message.
 
 <a id="api-attachment-save"></a>
 
@@ -13788,8 +13729,7 @@ The contents of the attachment.
 *coroutine*
 
 Converts the attachment into a `File` suitable for sending via
-
-- **Meth:** `abc.Messageable.send`.
+`abc.Messageable.send`.
 
 > **Added in version 1.3**
 
@@ -13888,19 +13828,19 @@ Returns the hash of the asset.
 
 ##### `url(self) -> str`
 
-- **Class:** `str`: Returns the underlying URL of the asset.
+`str`: Returns the underlying URL of the asset.
 
 <a id="api-asset-key"></a>
 
 ##### `key(self) -> str`
 
-- **Class:** `str`: Returns the identifying key of the asset.
+`str`: Returns the identifying key of the asset.
 
 <a id="api-asset-is-animated"></a>
 
 ##### `is_animated(self) -> bool`
 
-- **Class:** `bool`: Returns whether the asset is animated.
+`bool`: Returns whether the asset is animated.
 
 <a id="api-asset-replace"></a>
 
@@ -14125,9 +14065,8 @@ Specifies if the message mentions everyone.
 
 A list of `Member` that were mentioned. If the message is in a private message
 then the list will be of `User` instead. For messages that are not of type
-
-- **Attr:** `MessageType.default`, this array can be used to aid in system messages.
-  For more information, see `system_content`.
+`MessageType.default`, this array can be used to aid in system messages.
+For more information, see `system_content`.
 
 > **Warning**
 > The order of the mentions list is not in any particular order so you should
@@ -14206,8 +14145,7 @@ unless the bot is mentioned or the message is a direct message.
 **role\_subscription: Optional\[`RoleSubscriptionInfo`]**
 
 The data of the role subscription purchase or renewal that prompted this
-
-- **Attr:** `MessageType.role_subscription_purchase` message.
+`MessageType.role_subscription_purchase` message.
 
 > **Added in version 2.2**
 
@@ -14287,10 +14225,10 @@ the syntax of `<@&role_id>` in the message content.
 
 ##### `clean_content(self) -> str`
 
-- **Class:** `str`: A property that returns the content in a "cleaned up"
-  manner. This basically means that mentions are transformed
-  into the way the client shows it. e.g. `<#id>` will transform
-  into `#name`.
+`str`: A property that returns the content in a "cleaned up"
+manner. This basically means that mentions are transformed
+into the way the client shows it. e.g. `<#id>` will transform
+into `#name`.
 
 This will also transform @everyone and @here mentions into
 non-mentions.
@@ -14304,7 +14242,7 @@ non-mentions.
 
 ##### `created_at(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: The message's creation time in UTC.
+`datetime.datetime`: The message's creation time in UTC.
 
 <a id="api-message-edited-at"></a>
 
@@ -14351,7 +14289,7 @@ Optional\[`discord.MessageInteraction`]: The interaction that this message is a 
 
 ##### `is_system(self) -> bool`
 
-- **Class:** `bool`: Whether the message is a system message.
+`bool`: Whether the message is a system message.
 
 A system message is a message that is constructed entirely by the Discord API
 in response to something.
@@ -14362,8 +14300,8 @@ in response to something.
 
 ##### `system_content(self) -> str`
 
-- **Class:** `str`: A property that returns the content that is rendered
-  regardless of the `Message.type`.
+`str`: A property that returns the content that is rendered
+regardless of the `Message.type`.
 
 In the case of `MessageType.default` and `MessageType.reply`,
 this just returns the regular `Message.content`. Otherwise this
@@ -14545,7 +14483,7 @@ The newly edited message.
 
 ##### `is_forwardable(self) -> bool`
 
-- **Class:** `bool`: Whether the message can be forwarded using `Message.forward`.
+`bool`: Whether the message can be forwarded using `Message.forward`.
 
 A message is forwardable only if it is a basic message type and does not
 contain a poll, call, or activity, and is not a system message.
@@ -14570,13 +14508,13 @@ fetched and those that were previously fetched but have since been deleted.
 
 ##### `id(self) -> int`
 
-- **Class:** `int`: The message ID of the deleted referenced message.
+`int`: The message ID of the deleted referenced message.
 
 <a id="api-deletedreferencedmessage-channel-id"></a>
 
 ##### `channel_id(self) -> int`
 
-- **Class:** `int`: The channel ID of the deleted referenced message.
+`int`: The channel ID of the deleted referenced message.
 
 <a id="api-deletedreferencedmessage-guild-id"></a>
 
@@ -14665,7 +14603,7 @@ or `on_reaction_remove`.
 
 ##### `is_custom_emoji(self) -> bool`
 
-- **Class:** `bool`: If this is a custom emoji.
+`bool`: If this is a custom emoji.
 
 <a id="api-reaction-remove"></a>
 
@@ -14676,8 +14614,7 @@ or `on_reaction_remove`.
 Remove the reaction by the provided `User` from the message.
 
 If the reaction is not your own (i.e. `user` parameter is not you) then
-
-- **Attr:** `~Permissions.manage_messages` is needed.
+`Permissions.manage_messages` is needed.
 
 The `user` parameter must represent a user or member and meet
 the `abc.Snowflake` abc.
@@ -14957,8 +14894,7 @@ using `Client.fetch_guild` or `Client.fetch_guilds` with `with_counts=True`.
 
 The approximate number of members currently active in the guild.
 Offline members are excluded. This is `None` unless the guild is obtained using
-
-- **Meth:** `Client.fetch_guild` or `Client.fetch_guilds` with `with_counts=True`.
+`Client.fetch_guild` or `Client.fetch_guilds` with `with_counts=True`.
 
 > **Changed in version 2.0**
 
@@ -14998,7 +14934,7 @@ Sequence\[`Thread`]: A list of threads that you have permission to view.
 
 ##### `large(self) -> bool`
 
-- **Class:** `bool`: Indicates if the guild is a 'large' guild.
+`bool`: Indicates if the guild is a 'large' guild.
 
 A large guild is defined as having more than `large_threshold` count
 members, which for this library is set to the maximum of 250.
@@ -15025,8 +14961,8 @@ This is sorted by the position and are in UI order from top to bottom.
 
 ##### `me(self) -> Member`
 
-- **Class:** `Member`: Similar to `Client.user` except an instance of `Member`.
-  This is essentially used to get the member version of yourself.
+`Member`: Similar to `Client.user` except an instance of `Member`.
+This is essentially used to get the member version of yourself.
 
 <a id="api-guild-voice-client"></a>
 
@@ -15183,7 +15119,7 @@ If no channel is set, then this returns `None`.
 
 ##### `system_channel_flags(self) -> SystemChannelFlags`
 
-- **Class:** `SystemChannelFlags`: Returns the guild's system channel settings.
+`SystemChannelFlags`: Returns the guild's system channel settings.
 
 <a id="api-guild-rules-channel"></a>
 
@@ -15233,13 +15169,13 @@ If no channel is set, then this returns `None`.
 
 ##### `emoji_limit(self) -> int`
 
-- **Class:** `int`: The maximum number of emoji slots this guild has.
+`int`: The maximum number of emoji slots this guild has.
 
 <a id="api-guild-sticker-limit"></a>
 
 ##### `sticker_limit(self) -> int`
 
-- **Class:** `int`: The maximum number of sticker slots this guild has.
+`int`: The maximum number of sticker slots this guild has.
 
 > **Added in version 2.0**
 
@@ -15247,13 +15183,13 @@ If no channel is set, then this returns `None`.
 
 ##### `bitrate_limit(self) -> float`
 
-- **Class:** `float`: The maximum bitrate for voice channels this guild can have.
+`float`: The maximum bitrate for voice channels this guild can have.
 
 <a id="api-guild-filesize-limit"></a>
 
 ##### `filesize_limit(self) -> int`
 
-- **Class:** `int`: The maximum number of bytes files can have when uploaded to this guild.
+`int`: The maximum number of bytes files can have when uploaded to this guild.
 
 <a id="api-guild-members"></a>
 
@@ -15322,7 +15258,7 @@ The role or `None` if not found.
 
 ##### `default_role(self) -> Role`
 
-- **Class:** `Role`: Gets the @everyone role that all members have by default.
+`Role`: Gets the @everyone role that all members have by default.
 
 <a id="api-guild-premium-subscriber-role"></a>
 
@@ -15472,7 +15408,7 @@ Optional\[`int`]: Returns the member count if available.
 
 ##### `chunked(self) -> bool`
 
-- **Class:** `bool`: Returns a boolean indicating if the guild is "chunked".
+`bool`: Returns a boolean indicating if the guild is "chunked".
 
 A chunked guild means that `member_count` is equal to the
 number of members stored in the internal `members` cache.
@@ -15484,13 +15420,13 @@ offline members.
 
 ##### `shard_id(self) -> int`
 
-- **Class:** `int`: Returns the shard ID for this guild if applicable.
+`int`: Returns the shard ID for this guild if applicable.
 
 <a id="api-guild-created-at"></a>
 
 ##### `created_at(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: Returns the guild's creation time in UTC.
+`datetime.datetime`: Returns the guild's creation time in UTC.
 
 <a id="api-guild-get-member-named"></a>
 
@@ -15579,9 +15515,8 @@ The channel's name.
 **overwrites: Dict\[Union\[`Role`, `Member`], `PermissionOverwrite`]**
 
 A `dict` of target (either a role or a member) to
-
-- **Class:** `PermissionOverwrite` to apply upon creation of a channel.
-  Useful for creating secret channels.
+`PermissionOverwrite` to apply upon creation of a channel.
+Useful for creating secret channels.
 
 **category: Optional\[`CategoryChannel`]**
 
@@ -15671,9 +15606,8 @@ The channel's name.
 **overwrites: Dict\[Union\[`Role`, `Member`], `PermissionOverwrite`]**
 
 A `dict` of target (either a role or a member) to
-
-- **Class:** `PermissionOverwrite` to apply upon creation of a channel.
-  Useful for creating secret channels.
+`PermissionOverwrite` to apply upon creation of a channel.
+Useful for creating secret channels.
 
 **category: Optional\[`CategoryChannel`]**
 
@@ -15760,9 +15694,8 @@ The channel's name.
 **overwrites: Dict\[Union\[`Role`, `Member`], `PermissionOverwrite`]**
 
 A `dict` of target (either a role or a member) to
-
-- **Class:** `PermissionOverwrite` to apply upon creation of a channel.
-  Useful for creating secret channels.
+`PermissionOverwrite` to apply upon creation of a channel.
+Useful for creating secret channels.
 
 **category: Optional\[`CategoryChannel`]**
 
@@ -15890,9 +15823,8 @@ The channel's name.
 **overwrites: Dict\[Union\[`Role`, `Member`], `PermissionOverwrite`]**
 
 A `dict` of target (either a role or a member) to
-
-- **Class:** `PermissionOverwrite` to apply upon creation of a channel.
-  Useful for creating secret channels.
+`PermissionOverwrite` to apply upon creation of a channel.
+Useful for creating secret channels.
 
 **topic: `str`**
 
@@ -16039,8 +15971,7 @@ You must have `Permissions.manage_guild` to edit the guild.
 
 > **Changed in version 2.0**
 > This function will now raise `TypeError` or
->
-> - **Exc:** `ValueError` instead of `InvalidArgument`.
+> `ValueError` instead of `InvalidArgument`.
 
 ## Parameters
 
@@ -16313,8 +16244,7 @@ The active threads
 ##### `fetch_members(self, *, limit: Optional[int] = 1000, after: SnowflakeTime = MISSING) -> AsyncIterator[Member]`
 
 Retrieves an `asynchronous iterator` that enables receiving the guild's members. In order to use this,
-
-- **Meth:** `Intents.members` must be enabled.
+`Intents.members` must be enabled.
 
 > **Note**
 > This method is an API call. For general usage, consider `members` instead.
@@ -17063,8 +16993,7 @@ a `StageInstance` or `VoiceChannel` then
 it automatically sets the entity type.
 
 Required if `entity_type` is either `EntityType.voice` or
-
-- **Attr:** `EntityType.stage_instance`.
+`EntityType.stage_instance`.
 
 **start\_time: `datetime.datetime`**
 
@@ -17085,11 +17014,10 @@ The privacy level of the scheduled event.
 **entity\_type: `EntityType`**
 
 The entity type of the scheduled event. If the channel is a
-
-- **Class:** `StageInstance` or `VoiceChannel` then this is
-  automatically set to the appropriate entity type. If no channel
-  is passed then the entity type is assumed to be
-- **Attr:** `EntityType.external`
+`StageInstance` or `VoiceChannel` then this is
+automatically set to the appropriate entity type. If no channel
+is passed then the entity type is assumed to be
+`EntityType.external`
 
 **image: `bytes`**
 
@@ -17111,10 +17039,9 @@ The reason for creating this scheduled event. Shows up on the audit log.
 
 `image` was not a `py:bytes-like object`, or `privacy_level`
 was not a `PrivacyLevel`, or `entity_type` was not an
-
-- **Class:** `EntityType`, `status` was not an `EventStatus`,
-  or an argument was provided that was incompatible with the provided
-  `entity_type`.
+`EntityType`, `status` was not an `EventStatus`,
+or an argument was provided that was incompatible with the provided
+`entity_type`.
 
 **ValueError**
 
@@ -17926,8 +17853,7 @@ Editing the widget failed.
 *coroutine*
 
 Requests all members that belong to this guild. In order to use this,
-
-- **Meth:** `Intents.members` must be enabled.
+`Intents.members` must be enabled.
 
 This is a websocket operation and can be slow.
 
@@ -18182,7 +18108,7 @@ will get enabled in UTC, otherwise returns None.
 
 ##### `dm_spam_detected_at(self) -> Optional[datetime.datetime]`
 
-- **Class:** `datetime.datetime`: Returns the time when DM spam was detected in the guild.
+`datetime.datetime`: Returns the time when DM spam was detected in the guild.
 
 > **Added in version 2.5**
 
@@ -18198,7 +18124,7 @@ Optional\[`datetime.datetime`]: Returns the time when a raid was detected in the
 
 ##### `invites_paused(self) -> bool`
 
-- **Class:** `bool`: Whether invites are paused in the guild.
+`bool`: Whether invites are paused in the guild.
 
 > **Added in version 2.4**
 
@@ -18206,7 +18132,7 @@ Optional\[`datetime.datetime`]: Returns the time when a raid was detected in the
 
 ##### `dms_paused(self) -> bool`
 
-- **Class:** `bool`: Whether DMs are paused in the guild.
+`bool`: Whether DMs are paused in the guild.
 
 > **Added in version 2.4**
 
@@ -18214,7 +18140,7 @@ Optional\[`datetime.datetime`]: Returns the time when a raid was detected in the
 
 ##### `is_dm_spam_detected(self) -> bool`
 
-- **Class:** `bool`: Whether DM spam was detected in the guild.
+`bool`: Whether DM spam was detected in the guild.
 
 > **Added in version 2.5**
 
@@ -18222,7 +18148,7 @@ Optional\[`datetime.datetime`]: Returns the time when a raid was detected in the
 
 ##### `is_raid_detected(self) -> bool`
 
-- **Class:** `bool`: Whether a raid was detected in the guild.
+`bool`: Whether a raid was detected in the guild.
 
 > **Added in version 2.5**
 
@@ -18363,8 +18289,7 @@ The onboarding configuration that was fetched.
 Edits the onboarding configuration for this guild.
 
 You must have `Permissions.manage_guild` and
-
-- **Attr:** `Permissions.manage_roles` to do this.
+`Permissions.manage_roles` to do this.
 
 > **Added in version 2.6**
 
@@ -18529,7 +18454,7 @@ The approximate number of members currently active in in the guild. Offline memb
 
 ##### `created_at(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: Returns the guild's creation time in UTC.
+`datetime.datetime`: Returns the guild's creation time in UTC.
 
 <a id="api-guildpreview-icon"></a>
 
@@ -18655,7 +18580,7 @@ Optional\[Union\[`VoiceChannel`, `StageChannel`]]: The channel this scheduled ev
 
 ##### `url(self) -> str`
 
-- **Class:** `str`: The url for the scheduled event.
+`str`: The url for the scheduled event.
 
 <a id="api-scheduledevent-start"></a>
 
@@ -18804,8 +18729,7 @@ a `StageInstance` or `VoiceChannel` then
 it automatically sets the entity type.
 
 Required if the entity type is either `EntityType.voice` or
-
-- **Attr:** `EntityType.stage_instance`.
+`EntityType.stage_instance`.
 
 **start\_time: `datetime.datetime`**
 
@@ -18818,9 +18742,8 @@ The time that the scheduled event will end. This must be a timezone-aware
 datetime object. Consider using `utils.utcnow`.
 
 If the entity type is either `EntityType.voice` or
-
-- **Attr:** `EntityType.stage_instance`, the end\_time can be cleared by
-  passing `None`.
+`EntityType.stage_instance`, the end\_time can be cleared by
+passing `None`.
 
 Required if the entity type is `EntityType.external`.
 
@@ -18858,10 +18781,9 @@ The reason for editing the scheduled event. Shows up on the audit log.
 
 `image` was not a `py:bytes-like object`, or `privacy_level`
 was not a `PrivacyLevel`, or `entity_type` was not an
-
-- **Class:** `EntityType`, `status` was not an `EventStatus`, or
-  an argument was provided that was incompatible with the scheduled event's
-  entity type.
+`EntityType`, `status` was not an `EventStatus`, or
+an argument was provided that was incompatible with the scheduled event's
+entity type.
 
 **ValueError**
 
@@ -19172,7 +19094,7 @@ The OAuth2 scopes the application has been authorized for.
 
 ##### `expire_behavior(self) -> ExpireBehaviour`
 
-- **Class:** `ExpireBehaviour`: An alias for `expire_behaviour`.
+`ExpireBehaviour`: An alias for `expire_behaviour`.
 
 <a id="api-streamintegration-role"></a>
 
@@ -19365,13 +19287,13 @@ Model which holds information about the status of the member on various clients/
 
 ##### `status(self) -> Status`
 
-- **Class:** `Status`: The member's overall status. If the value is unknown, then it will be a `str` instead.
+`Status`: The member's overall status. If the value is unknown, then it will be a `str` instead.
 
 <a id="api-member-raw-status"></a>
 
 ##### `raw_status(self) -> str`
 
-- **Class:** `str`: The member's overall status as a string value.
+`str`: The member's overall status as a string value.
 
 > **Added in version 1.5**
 
@@ -19379,19 +19301,19 @@ Model which holds information about the status of the member on various clients/
 
 ##### `mobile_status(self) -> Status`
 
-- **Class:** `Status`: The member's status on a mobile device, if applicable.
+`Status`: The member's status on a mobile device, if applicable.
 
 <a id="api-member-desktop-status"></a>
 
 ##### `desktop_status(self) -> Status`
 
-- **Class:** `Status`: The member's status on the desktop client, if applicable.
+`Status`: The member's status on the desktop client, if applicable.
 
 <a id="api-member-web-status"></a>
 
 ##### `web_status(self) -> Status`
 
-- **Class:** `Status`: The member's status on the web client, if applicable.
+`Status`: The member's status on the web client, if applicable.
 
 <a id="api-member-is-on-mobile"></a>
 
@@ -19401,15 +19323,15 @@ A helper function that determines if a member is active on a mobile device.
 
 ## Returns
 
-- **Class:** `bool`
+`bool`
 
 <a id="api-member-colour"></a>
 
 ##### `colour(self) -> Colour`
 
-- **Class:** `Colour`: A property that returns a colour denoting the rendered colour
-  for the member. If the default colour is the one rendered then an instance
-  of `Colour.default` is returned.
+`Colour`: A property that returns a colour denoting the rendered colour
+for the member. If the default colour is the one rendered then an instance
+of `Colour.default` is returned.
 
 There is an alias for this named `color`.
 
@@ -19417,9 +19339,9 @@ There is an alias for this named `color`.
 
 ##### `color(self) -> Colour`
 
-- **Class:** `Colour`: A property that returns a color denoting the rendered color for
-  the member. If the default color is the one rendered then an instance of `Colour.default`
-  is returned.
+`Colour`: A property that returns a color denoting the rendered color for
+the member. If the default color is the one rendered then an instance of `Colour.default`
+is returned.
 
 There is an alias for this named `colour`.
 
@@ -19446,13 +19368,13 @@ this member. If no icon is shown then `None` is returned.
 
 ##### `mention(self) -> str`
 
-- **Class:** `str`: Returns a string that allows you to mention the member.
+`str`: Returns a string that allows you to mention the member.
 
 <a id="api-member-display-name"></a>
 
 ##### `display_name(self) -> str`
 
-- **Class:** `str`: Returns the user's display name.
+`str`: Returns the user's display name.
 
 For regular users this is just their global name or their username,
 but if they have a guild specific nickname then that
@@ -19462,7 +19384,7 @@ is returned instead.
 
 ##### `display_avatar(self) -> Asset`
 
-- **Class:** `Asset`: Returns the member's display avatar.
+`Asset`: Returns the member's display avatar.
 
 For regular members this is just their avatar, but
 if they have a guild specific avatar then that
@@ -19536,7 +19458,7 @@ Indicates if the member is mentioned in the message.
 
 ##### `top_role(self) -> Role`
 
-- **Class:** `Role`: Returns the member's highest role.
+`Role`: Returns the member's highest role.
 
 This is useful for figuring where a member stands in the role
 hierarchy chain.
@@ -19545,7 +19467,7 @@ hierarchy chain.
 
 ##### `guild_permissions(self) -> Permissions`
 
-- **Class:** `Permissions`: Returns the member's guild permissions.
+`Permissions`: Returns the member's guild permissions.
 
 This only takes into consideration the guild permissions
 and not most of the implied permissions or any of the
@@ -19582,7 +19504,7 @@ Optional\[`VoiceState`]: Returns the member's current voice state.
 
 ##### `flags(self) -> MemberFlags`
 
-- **Class:** `MemberFlags`: Returns the member's flags.
+`MemberFlags`: Returns the member's flags.
 
 > **Added in version 2.2**
 
@@ -20008,8 +19930,7 @@ await channel.send('Done!')
 #### `Spotify`
 
 Represents a Spotify listening activity from Discord. This is a special case of
-
-- **Class:** `Activity` that makes it easier to work with the Spotify integration.
+`Activity` that makes it easier to work with the Spotify integration.
 
 <a id="describe-x-y"></a>
 
@@ -20039,7 +19960,7 @@ Returns the string 'Spotify'.
 
 ##### `type(self) -> ActivityType`
 
-- **Class:** `ActivityType`: Returns the activity's type. This is for compatibility with `Activity`.
+`ActivityType`: Returns the activity's type. This is for compatibility with `Activity`.
 
 It always returns `ActivityType.listening`.
 
@@ -20055,7 +19976,7 @@ Optional\[`datetime.datetime`]: When the user started listening in UTC.
 
 ##### `colour(self) -> Colour`
 
-- **Class:** `Colour`: Returns the Spotify integration colour, as a `Colour`.
+`Colour`: Returns the Spotify integration colour, as a `Colour`.
 
 There is an alias for this named `color`
 
@@ -20063,7 +19984,7 @@ There is an alias for this named `color`
 
 ##### `color(self) -> Colour`
 
-- **Class:** `Colour`: Returns the Spotify integration colour, as a `Colour`.
+`Colour`: Returns the Spotify integration colour, as a `Colour`.
 
 There is an alias for this named `colour`
 
@@ -20071,13 +19992,13 @@ There is an alias for this named `colour`
 
 ##### `name(self) -> str`
 
-- **Class:** `str`: The activity's name. This will always return "Spotify".
+`str`: The activity's name. This will always return "Spotify".
 
 <a id="api-spotify-title"></a>
 
 ##### `title(self) -> str`
 
-- **Class:** `str`: The title of the song being played.
+`str`: The title of the song being played.
 
 <a id="api-spotify-artists"></a>
 
@@ -20089,7 +20010,7 @@ List\[`str`]: The artists of the song being played.
 
 ##### `artist(self) -> str`
 
-- **Class:** `str`: The artist of the song being played.
+`str`: The artist of the song being played.
 
 This does not attempt to split the artist information into
 multiple artists. Useful if there's only a single artist.
@@ -20098,25 +20019,25 @@ multiple artists. Useful if there's only a single artist.
 
 ##### `album(self) -> str`
 
-- **Class:** `str`: The album that the song being played belongs to.
+`str`: The album that the song being played belongs to.
 
 <a id="api-spotify-album-cover-url"></a>
 
 ##### `album_cover_url(self) -> str`
 
-- **Class:** `str`: The album cover image URL from Spotify's CDN.
+`str`: The album cover image URL from Spotify's CDN.
 
 <a id="api-spotify-track-id"></a>
 
 ##### `track_id(self) -> str`
 
-- **Class:** `str`: The track ID used by Spotify to identify this song.
+`str`: The track ID used by Spotify to identify this song.
 
 <a id="api-spotify-track-url"></a>
 
 ##### `track_url(self) -> str`
 
-- **Class:** `str`: The track URL to listen on Spotify.
+`str`: The track URL to listen on Spotify.
 
 > **Added in version 2.0**
 
@@ -20124,25 +20045,25 @@ multiple artists. Useful if there's only a single artist.
 
 ##### `start(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: When the user started playing this song in UTC.
+`datetime.datetime`: When the user started playing this song in UTC.
 
 <a id="api-spotify-end"></a>
 
 ##### `end(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: When the user will stop playing this song in UTC.
+`datetime.datetime`: When the user will stop playing this song in UTC.
 
 <a id="api-spotify-duration"></a>
 
 ##### `duration(self) -> datetime.timedelta`
 
-- **Class:** `datetime.timedelta`: The duration of the song being played.
+`datetime.timedelta`: The duration of the song being played.
 
 <a id="api-spotify-party-id"></a>
 
 ##### `party_id(self) -> str`
 
-- **Class:** `str`: The party ID of the listening party.
+`str`: The party ID of the listening party.
 
 ### VoiceState
 
@@ -20292,13 +20213,13 @@ only be retrieved using `discord.Client.fetch_application_emoji` or `discord.Cli
 
 ##### `created_at(self) -> datetime`
 
-- **Class:** `datetime.datetime`: Returns the emoji's creation time in UTC.
+`datetime.datetime`: Returns the emoji's creation time in UTC.
 
 <a id="api-emoji-url"></a>
 
 ##### `url(self) -> str`
 
-- **Class:** `str`: Returns the URL of the emoji.
+`str`: Returns the URL of the emoji.
 
 <a id="api-emoji-roles"></a>
 
@@ -20312,13 +20233,13 @@ If roles is empty, the emoji is unrestricted.
 
 ##### `guild(self) -> Optional[Guild]`
 
-- **Class:** `Guild`: The guild this emoji belongs to.
+`Guild`: The guild this emoji belongs to.
 
 <a id="api-emoji-is-usable"></a>
 
 ##### `is_usable(self) -> bool`
 
-- **Class:** `bool`: Whether the bot can use this emoji.
+`bool`: Whether the bot can use this emoji.
 
 > **Added in version 1.3**
 
@@ -20331,8 +20252,7 @@ If roles is empty, the emoji is unrestricted.
 Deletes the custom emoji.
 
 You must have `Permissions.manage_emojis` to do this if
-
-- **Meth:** `.is_application_owned` is `False`.
+`.is_application_owned` is `False`.
 
 ## Parameters
 
@@ -20411,7 +20331,7 @@ The newly updated emoji.
 
 ##### `is_application_owned(self) -> bool`
 
-- **Class:** `bool`: Whether the emoji is owned by an application.
+`bool`: Whether the emoji is owned by an application.
 
 > **Added in version 2.5**
 
@@ -20508,13 +20428,13 @@ The partial emoji from this string.
 
 ##### `is_custom_emoji(self) -> bool`
 
-- **Class:** `bool`: Checks if this is a custom non-Unicode emoji.
+`bool`: Checks if this is a custom non-Unicode emoji.
 
 <a id="api-partialemoji-is-unicode-emoji"></a>
 
 ##### `is_unicode_emoji(self) -> bool`
 
-- **Class:** `bool`: Checks if this is a Unicode emoji.
+`bool`: Checks if this is a Unicode emoji.
 
 <a id="api-partialemoji-created-at"></a>
 
@@ -20528,7 +20448,7 @@ Optional\[`datetime.datetime`]: Returns the emoji's creation time in UTC, or Non
 
 ##### `url(self) -> str`
 
-- **Class:** `str`: Returns the URL of the emoji, if it is custom.
+`str`: Returns the URL of the emoji, if it is custom.
 
 If this isn't a custom emoji then an empty string is returned
 
@@ -20679,13 +20599,13 @@ The role tags associated with this role.
 
 ##### `is_default(self) -> bool`
 
-- **Class:** `bool`: Checks if the role is the default role.
+`bool`: Checks if the role is the default role.
 
 <a id="api-role-is-bot-managed"></a>
 
 ##### `is_bot_managed(self) -> bool`
 
-- **Class:** `bool`: Whether the role is associated with a bot.
+`bool`: Whether the role is associated with a bot.
 
 > **Added in version 1.6**
 
@@ -20693,7 +20613,7 @@ The role tags associated with this role.
 
 ##### `is_premium_subscriber(self) -> bool`
 
-- **Class:** `bool`: Whether the role is the premium subscriber, AKA "boost", role for the guild.
+`bool`: Whether the role is the premium subscriber, AKA "boost", role for the guild.
 
 > **Added in version 1.6**
 
@@ -20701,7 +20621,7 @@ The role tags associated with this role.
 
 ##### `is_integration(self) -> bool`
 
-- **Class:** `bool`: Whether the role is managed by an integration.
+`bool`: Whether the role is managed by an integration.
 
 > **Added in version 1.6**
 
@@ -20709,7 +20629,7 @@ The role tags associated with this role.
 
 ##### `is_assignable(self) -> bool`
 
-- **Class:** `bool`: Whether the role is able to be assigned or removed by the bot.
+`bool`: Whether the role is able to be assigned or removed by the bot.
 
 > **Added in version 2.0**
 
@@ -20749,19 +20669,19 @@ Optional\[`Colour`]: Alias for `tertiary_colour`.
 
 ##### `permissions(self) -> Permissions`
 
-- **Class:** `Permissions`: Returns the role's permissions.
+`Permissions`: Returns the role's permissions.
 
 <a id="api-role-colour"></a>
 
 ##### `colour(self) -> Colour`
 
-- **Class:** `Colour`: Returns the role's primary colour. An alias exists under `color`.
+`Colour`: Returns the role's primary colour. An alias exists under `color`.
 
 <a id="api-role-color"></a>
 
 ##### `color(self) -> Colour`
 
-- **Class:** `Colour`: Returns the role's primary colour. An alias exists under `colour`.
+`Colour`: Returns the role's primary colour. An alias exists under `colour`.
 
 <a id="api-role-icon"></a>
 
@@ -20789,13 +20709,13 @@ Optional\[Union\[`.Asset`, `str`]]: Returns the role's display icon, if availabl
 
 ##### `created_at(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: Returns the role's creation time in UTC.
+`datetime.datetime`: Returns the role's creation time in UTC.
 
 <a id="api-role-mention"></a>
 
 ##### `mention(self) -> str`
 
-- **Class:** `str`: Returns a string that allows you to mention a role.
+`str`: Returns a string that allows you to mention a role.
 
 <a id="api-role-members"></a>
 
@@ -20807,7 +20727,7 @@ List\[`Member`]: Returns all the members with this role.
 
 ##### `flags(self) -> RoleFlags`
 
-- **Class:** `RoleFlags`: Returns the role's flags.
+`RoleFlags`: Returns the role's flags.
 
 > **Added in version 2.4**
 
@@ -21022,8 +20942,7 @@ A role tag is a piece of extra information attached to a managed role
 that gives it context for the reason the role is managed.
 
 While this can be accessed, a useful interface is also provided in the
-
-- **Class:** `Role` and `Guild` classes as well.
+`Role` and `Guild` classes as well.
 
 > **Added in version 1.6**
 
@@ -21047,25 +20966,25 @@ The ID of this role's subscription SKU and listing.
 
 ##### `is_bot_managed(self) -> bool`
 
-- **Class:** `bool`: Whether the role is associated with a bot.
+`bool`: Whether the role is associated with a bot.
 
 <a id="api-roletags-is-premium-subscriber"></a>
 
 ##### `is_premium_subscriber(self) -> bool`
 
-- **Class:** `bool`: Whether the role is the premium subscriber, AKA "boost", role for the guild.
+`bool`: Whether the role is the premium subscriber, AKA "boost", role for the guild.
 
 <a id="api-roletags-is-integration"></a>
 
 ##### `is_integration(self) -> bool`
 
-- **Class:** `bool`: Whether the role is managed by an integration.
+`bool`: Whether the role is managed by an integration.
 
 <a id="api-roletags-is-available-for-purchase"></a>
 
 ##### `is_available_for_purchase(self) -> bool`
 
-- **Class:** `bool`: Whether the role is available for purchase.
+`bool`: Whether the role is available for purchase.
 
 > **Added in version 2.2**
 
@@ -21073,7 +20992,7 @@ The ID of this role's subscription SKU and listing.
 
 ##### `is_guild_connection(self) -> bool`
 
-- **Class:** `bool`: Whether the role is a guild's linked role.
+`bool`: Whether the role is a guild's linked role.
 
 > **Added in version 2.2**
 
@@ -21134,13 +21053,13 @@ Optional\[`Guild`]: The guild this partial messageable is in.
 
 ##### `jump_url(self) -> str`
 
-- **Class:** `str`: Returns a URL that allows the client to jump to the channel.
+`str`: Returns a URL that allows the client to jump to the channel.
 
 <a id="api-partialmessageable-created-at"></a>
 
 ##### `created_at(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: Returns the channel's creation time in UTC.
+`datetime.datetime`: Returns the channel's creation time in UTC.
 
 <a id="api-partialmessageable-permissions-for"></a>
 
@@ -21170,7 +21089,7 @@ The resolved permissions.
 
 ##### `mention(self) -> str`
 
-- **Class:** `str`: Returns a string that allows you to mention the channel.
+`str`: Returns a string that allows you to mention the channel.
 
 > **Added in version 2.5**
 
@@ -21285,7 +21204,7 @@ The default slowmode delay in seconds for threads created in this channel.
 
 ##### `type(self) -> Literal[ChannelType.text, ChannelType.news]`
 
-- **Class:** `ChannelType`: The channel's Discord type.
+`ChannelType`: The channel's Discord type.
 
 <a id="api-textchannel-members"></a>
 
@@ -21305,13 +21224,13 @@ List\[`Thread`]: Returns all the threads that you can see.
 
 ##### `is_nsfw(self) -> bool`
 
-- **Class:** `bool`: Checks if the channel is NSFW.
+`bool`: Checks if the channel is NSFW.
 
 <a id="api-textchannel-is-news"></a>
 
 ##### `is_news(self) -> bool`
 
-- **Class:** `bool`: Checks if the channel is a news channel.
+`bool`: Checks if the channel is a news channel.
 
 <a id="api-textchannel-last-message"></a>
 
@@ -21357,8 +21276,7 @@ You must have `Permissions.manage_channels` to do this.
 
 > **Changed in version 2.0**
 > This function will now raise `TypeError` or
->
-> - **Exc:** `ValueError` instead of `InvalidArgument`.
+> `ValueError` instead of `InvalidArgument`.
 
 ## Parameters
 
@@ -21396,9 +21314,8 @@ A value of `0` disables slowmode. The maximum value possible is `21600`.
 **type: `ChannelType`**
 
 Change the type of this text channel. Currently, only conversion between
-
-- **Attr:** `ChannelType.text` and `ChannelType.news` is supported. This
-  is only available to guilds that contain `NEWS` in `Guild.features`.
+`ChannelType.text` and `ChannelType.news` is supported. This
+is only available to guilds that contain `NEWS` in `Guild.features`.
 
 **reason: Optional\[`str`]**
 
@@ -21407,8 +21324,7 @@ The reason for editing this channel. Shows up on the audit log.
 **overwrites: `Mapping`**
 
 A `Mapping` of target (either a role or a member) to
-
-- **Class:** `PermissionOverwrite` to apply to the channel.
+`PermissionOverwrite` to apply to the channel.
 
 **default\_auto\_archive\_duration: `int`**
 
@@ -22022,7 +21938,7 @@ The default sort order for posts in this forum channel.
 
 ##### `type(self) -> Literal[ChannelType.forum, ChannelType.media]`
 
-- **Class:** `ChannelType`: The channel's Discord type.
+`ChannelType`: The channel's Discord type.
 
 <a id="api-forumchannel-members"></a>
 
@@ -22066,7 +21982,7 @@ List\[`Thread`]: Returns all the threads that you can see.
 
 ##### `flags(self) -> ChannelFlags`
 
-- **Class:** `ChannelFlags`: The flags associated with this thread.
+`ChannelFlags`: The flags associated with this thread.
 
 > **Added in version 2.1**
 
@@ -22102,13 +22018,13 @@ The tag with the given ID, or `None` if not found.
 
 ##### `is_nsfw(self) -> bool`
 
-- **Class:** `bool`: Checks if the forum is NSFW.
+`bool`: Checks if the forum is NSFW.
 
 <a id="api-forumchannel-is-media"></a>
 
 ##### `is_media(self) -> bool`
 
-- **Class:** `bool`: Checks if the channel is a media channel.
+`bool`: Checks if the channel is a media channel.
 
 > **Added in version 2.4**
 
@@ -22158,9 +22074,8 @@ A value of `0` disables slowmode. The maximum value possible is `21600`.
 **type: `ChannelType`**
 
 Change the type of this text forum. Currently, only conversion between
-
-- **Attr:** `ChannelType.text` and `ChannelType.news` is supported. This
-  is only available to guilds that contain `NEWS` in `Guild.features`.
+`ChannelType.text` and `ChannelType.news` is supported. This
+is only available to guilds that contain `NEWS` in `Guild.features`.
 
 **reason: Optional\[`str`]**
 
@@ -22169,8 +22084,7 @@ The reason for editing this forum. Shows up on the audit log.
 **overwrites: `Mapping`**
 
 A `Mapping` of target (either a role or a member) to
-
-- **Class:** `PermissionOverwrite` to apply to the forum.
+`PermissionOverwrite` to apply to the forum.
 
 **default\_auto\_archive\_duration: `int`**
 
@@ -22627,7 +22541,7 @@ An aware timestamp of when the thread's archived status was last updated in UTC.
 
 ##### `type(self) -> ThreadChannelType`
 
-- **Class:** `ChannelType`: The channel's Discord type.
+`ChannelType`: The channel's Discord type.
 
 <a id="api-thread-parent"></a>
 
@@ -22639,7 +22553,7 @@ Optional\[Union\[`ForumChannel`, `TextChannel`]]: The parent channel this thread
 
 ##### `flags(self) -> ChannelFlags`
 
-- **Class:** `ChannelFlags`: The flags associated with this thread.
+`ChannelFlags`: The flags associated with this thread.
 
 <a id="api-thread-owner"></a>
 
@@ -22651,13 +22565,13 @@ Optional\[`Member`]: The member this thread belongs to.
 
 ##### `mention(self) -> str`
 
-- **Class:** `str`: The string that allows you to mention the thread.
+`str`: The string that allows you to mention the thread.
 
 <a id="api-thread-jump-url"></a>
 
 ##### `jump_url(self) -> str`
 
-- **Class:** `str`: Returns a URL that allows the client to jump to the thread.
+`str`: Returns a URL that allows the client to jump to the thread.
 
 > **Added in version 2.0**
 
@@ -22767,7 +22681,7 @@ An aware timestamp of when the thread was created in UTC.
 
 ##### `is_private(self) -> bool`
 
-- **Class:** `bool`: Whether the thread is a private thread.
+`bool`: Whether the thread is a private thread.
 
 A private thread is only viewable by those that have been explicitly
 invited or have `.Permissions.manage_threads`.
@@ -22776,7 +22690,7 @@ invited or have `.Permissions.manage_threads`.
 
 ##### `is_news(self) -> bool`
 
-- **Class:** `bool`: Whether the thread is a news thread.
+`bool`: Whether the thread is a news thread.
 
 A news thread is a thread that has a parent that is a news channel,
 i.e. `.TextChannel.is_news` is `True`.
@@ -22785,7 +22699,7 @@ i.e. `.TextChannel.is_news` is `True`.
 
 ##### `is_nsfw(self) -> bool`
 
-- **Class:** `bool`: Whether the thread is NSFW or not.
+`bool`: Whether the thread is NSFW or not.
 
 An NSFW thread is a thread that has a parent that is an NSFW channel,
 i.e. `.TextChannel.is_nsfw` is `True`.
@@ -23035,8 +22949,7 @@ You must have `Permissions.manage_threads` to
 use this or the thread must be owned by you.
 
 Tags that have `ForumTag.moderated` set to `True` require
-
-- **Attr:** `~Permissions.manage_threads` to be added.
+`Permissions.manage_threads` to be added.
 
 The maximum number of tags that can be added to a thread is 5.
 
@@ -23373,7 +23286,7 @@ The time the member joined the thread in UTC.
 
 ##### `thread(self) -> Thread`
 
-- **Class:** `Thread`: The thread this member belongs to.
+`Thread`: The thread this member belongs to.
 
 ### VoiceChannel
 
@@ -23479,7 +23392,7 @@ Bots and users with `Permissions.bypass_slowmode` bypass slowmode.
 
 ##### `type(self) -> Literal[ChannelType.voice]`
 
-- **Class:** `ChannelType`: The channel's Discord type.
+`ChannelType`: The channel's Discord type.
 
 <a id="api-voicechannel-edit"></a>
 
@@ -23548,8 +23461,7 @@ The reason for editing this channel. Shows up on the audit log.
 **overwrites: `Mapping`**
 
 A `Mapping` of target (either a role or a member) to
-
-- **Class:** `PermissionOverwrite` to apply to the channel.
+`PermissionOverwrite` to apply to the channel.
 
 **rtc\_region: Optional\[`str`]**
 
@@ -23656,7 +23568,7 @@ The sound of the effect. Returns `None` if it's an emoji effect.
 
 ##### `is_sound(self) -> bool`
 
-- **Class:** `bool`: Whether the effect is a sound or not.
+`bool`: Whether the effect is a sound or not.
 
 <a id="class-voicechanneleffectanimation"></a>
 
@@ -23729,7 +23641,7 @@ Returns `None` if it's a default sound.
 
 ##### `is_default(self) -> bool`
 
-- **Class:** `bool`: Whether it's a default sound or not.
+`bool`: Whether it's a default sound or not.
 
 ### StageChannel
 
@@ -23866,7 +23778,7 @@ List\[`Member`]: A list of members who are moderating the stage channel.
 
 ##### `type(self) -> Literal[ChannelType.stage_voice]`
 
-- **Class:** `ChannelType`: The channel's Discord type.
+`ChannelType`: The channel's Discord type.
 
 <a id="api-stagechannel-instance"></a>
 
@@ -24028,8 +23940,7 @@ The reason for editing this channel. Shows up on the audit log.
 **overwrites: `Mapping`**
 
 A `Mapping` of target (either a role or a member) to
-
-- **Class:** `PermissionOverwrite` to apply to the channel.
+`PermissionOverwrite` to apply to the channel.
 
 **rtc\_region: Optional\[`str`]**
 
@@ -24263,13 +24174,13 @@ If the channel is marked as "not safe for work".
 
 ##### `type(self) -> Literal[ChannelType.category]`
 
-- **Class:** `ChannelType`: The channel's Discord type.
+`ChannelType`: The channel's Discord type.
 
 <a id="api-categorychannel-is-nsfw"></a>
 
 ##### `is_nsfw(self) -> bool`
 
-- **Class:** `bool`: Checks if the category is NSFW.
+`bool`: Checks if the category is NSFW.
 
 <a id="api-categorychannel-edit"></a>
 
@@ -24289,8 +24200,7 @@ You must have `Permissions.manage_channels` to do this.
 
 > **Changed in version 2.0**
 > This function will now raise `TypeError` or
->
-> - **Exc:** `ValueError` instead of `InvalidArgument`.
+> `ValueError` instead of `InvalidArgument`.
 
 ## Parameters
 
@@ -24313,8 +24223,7 @@ The reason for editing this category. Shows up on the audit log.
 **overwrites: `Mapping`**
 
 A `Mapping` of target (either a role or a member) to
-
-- **Class:** `PermissionOverwrite` to apply to the channel.
+`PermissionOverwrite` to apply to the channel.
 
 ## Raises
 
@@ -24495,7 +24404,7 @@ The direct message channel ID.
 
 ##### `type(self) -> Literal[ChannelType.private]`
 
-- **Class:** `ChannelType`: The channel's Discord type.
+`ChannelType`: The channel's Discord type.
 
 <a id="api-dmchannel-guild"></a>
 
@@ -24511,7 +24420,7 @@ This is mainly provided for compatibility purposes in duck typing.
 
 ##### `jump_url(self) -> str`
 
-- **Class:** `str`: Returns a URL that allows the client to jump to the channel.
+`str`: Returns a URL that allows the client to jump to the channel.
 
 > **Added in version 2.0**
 
@@ -24519,7 +24428,7 @@ This is mainly provided for compatibility purposes in duck typing.
 
 ##### `created_at(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: Returns the direct message channel's creation time in UTC.
+`datetime.datetime`: Returns the direct message channel's creation time in UTC.
 
 <a id="api-dmchannel-permissions-for"></a>
 
@@ -24681,7 +24590,7 @@ The group channel's name if provided.
 
 ##### `type(self) -> Literal[ChannelType.group]`
 
-- **Class:** `ChannelType`: The channel's Discord type.
+`ChannelType`: The channel's Discord type.
 
 <a id="api-groupchannel-guild"></a>
 
@@ -24703,13 +24612,13 @@ Optional\[`Asset`]: Returns the channel's icon asset if available.
 
 ##### `created_at(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: Returns the channel's creation time in UTC.
+`datetime.datetime`: Returns the channel's creation time in UTC.
 
 <a id="api-groupchannel-jump-url"></a>
 
 ##### `jump_url(self) -> str`
 
-- **Class:** `str`: Returns a URL that allows the client to jump to the channel.
+`str`: Returns a URL that allows the client to jump to the channel.
 
 > **Added in version 2.0**
 
@@ -24879,7 +24788,7 @@ The number of "boosts" the partial guild currently has.
 
 ##### `created_at(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: Returns the guild's creation time in UTC.
+`datetime.datetime`: Returns the guild's creation time in UTC.
 
 <a id="api-partialinviteguild-vanity-url"></a>
 
@@ -24960,13 +24869,13 @@ The partial channel's type.
 
 ##### `mention(self) -> str`
 
-- **Class:** `str`: The string that allows you to mention the channel.
+`str`: The string that allows you to mention the channel.
 
 <a id="api-partialinvitechannel-created-at"></a>
 
 ##### `created_at(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: Returns the channel's creation time in UTC.
+`datetime.datetime`: Returns the channel's creation time in UTC.
 
 ### Invite
 
@@ -25074,8 +24983,7 @@ This includes idle, dnd, online, and invisible members. Offline members are excl
 **expires\_at: Optional\[`datetime.datetime`]**
 
 The expiration date of the invite. If the value is `None` when received through
-
-- **Meth:** `Client.fetch_invite` with `with_expiration` enabled, the invite will never expire.
+`Client.fetch_invite` with `with_expiration` enabled, the invite will never expire.
 
 > **Added in version 2.0**
 
@@ -25121,19 +25029,19 @@ The ID of the scheduled event associated with this invite, if any.
 
 ##### `id(self) -> str`
 
-- **Class:** `str`: Returns the proper code portion of the invite.
+`str`: Returns the proper code portion of the invite.
 
 <a id="api-invite-url"></a>
 
 ##### `url(self) -> str`
 
-- **Class:** `str`: A property that retrieves the invite URL.
+`str`: A property that retrieves the invite URL.
 
 <a id="api-invite-flags"></a>
 
 ##### `flags(self) -> InviteFlags`
 
-- **Class:** `InviteFlags`: Returns the flags for this invite.
+`InviteFlags`: Returns the flags for this invite.
 
 > **Added in version 2.6**
 
@@ -25396,7 +25304,7 @@ This template does not exist.
 
 ##### `url(self) -> str`
 
-- **Class:** `str`: The template url.
+`str`: The template url.
 
 > **Added in version 2.0**
 
@@ -25424,7 +25332,7 @@ The channels shown on the welcome screen.
 
 ##### `enabled(self) -> bool`
 
-- **Class:** `bool`: Whether the welcome screen is displayed.
+`bool`: Whether the welcome screen is displayed.
 
 This is equivalent to checking if `WELCOME_SCREEN_ENABLED`
 is present in `Guild.features`.
@@ -25564,13 +25472,13 @@ The channel's position
 
 ##### `mention(self) -> str`
 
-- **Class:** `str`: The string that allows you to mention the channel.
+`str`: The string that allows you to mention the channel.
 
 <a id="api-widgetchannel-created-at"></a>
 
 ##### `created_at(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: Returns the channel's creation time in UTC.
+`datetime.datetime`: Returns the channel's creation time in UTC.
 
 ### WidgetMember
 
@@ -25664,7 +25572,7 @@ Which channel the member is connected to.
 
 ##### `display_name(self) -> str`
 
-- **Class:** `str`: Returns the member's display name.
+`str`: Returns the member's display name.
 
 ### Widget
 
@@ -25728,13 +25636,13 @@ Offline members are not included in this count.
 
 ##### `created_at(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: Returns the member's creation time in UTC.
+`datetime.datetime`: Returns the member's creation time in UTC.
 
 <a id="api-widget-json-url"></a>
 
 ##### `json_url(self) -> str`
 
-- **Class:** `str`: The JSON URL of the widget.
+`str`: The JSON URL of the widget.
 
 <a id="api-widget-invite-url"></a>
 
@@ -25757,9 +25665,8 @@ code is abstracted away.
 **with\_counts: `bool`**
 
 Whether to include count information in the invite. This fills the
-
-- **Attr:** `Invite.approximate_member_count` and `Invite.approximate_presence_count`
-  fields.
+`Invite.approximate_member_count` and `Invite.approximate_presence_count`
+fields.
 
 ## Returns
 
@@ -25829,7 +25736,7 @@ The sticker used for the cover of the sticker pack.
 
 ##### `banner(self) -> Optional[Asset]`
 
-- **Class:** `Asset`: The banner asset of the sticker pack.
+`Asset`: The banner asset of the sticker pack.
 
 ### StickerItem
 
@@ -25951,7 +25858,7 @@ The URL for the sticker's image.
 
 ##### `created_at(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: Returns the sticker's creation time in UTC.
+`datetime.datetime`: Returns the sticker's creation time in UTC.
 
 ### StandardSticker
 
@@ -26297,7 +26204,7 @@ Whether this prompt is in the onboarding flow.
 
 ##### `guild(self) -> Guild`
 
-- **Class:** `Guild`: The guild this prompt is related to.
+`Guild`: The guild this prompt is related to.
 
 ## Raises
 
@@ -26376,7 +26283,7 @@ The IDs of the roles the user will be given if this option is selected.
 
 ##### `guild(self) -> Guild`
 
-- **Class:** `Guild`: The guild this prompt option is related to.
+`Guild`: The guild this prompt option is related to.
 
 ## Raises
 
@@ -26450,7 +26357,7 @@ The volume of the sound as floating point percentage (e.g. `1.0` for 100%).
 
 ##### `url(self) -> str`
 
-- **Class:** `str`: Returns the URL of the sound.
+`str`: Returns the URL of the sound.
 
 ### SoundboardDefaultSound
 
@@ -26556,7 +26463,7 @@ Whether this sound is available for use.
 
 ##### `created_at(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: Returns the snowflake's creation time in UTC.
+`datetime.datetime`: Returns the snowflake's creation time in UTC.
 
 <a id="api-soundboardsound-user"></a>
 
@@ -26665,7 +26572,7 @@ The shard count for this cluster. If this is `None` then the bot has not started
 
 ##### `is_closed(self) -> bool`
 
-- **Class:** `bool`: Whether the shard connection is currently closed.
+`bool`: Whether the shard connection is currently closed.
 
 <a id="api-shardinfo-disconnect"></a>
 
@@ -26698,13 +26605,13 @@ Connects a shard. If the shard is already connected this does nothing.
 
 ##### `latency(self) -> float`
 
-- **Class:** `float`: Measures latency between a HEARTBEAT and a HEARTBEAT\_ACK in seconds for this shard.
+`float`: Measures latency between a HEARTBEAT and a HEARTBEAT\_ACK in seconds for this shard.
 
 <a id="api-shardinfo-is-ws-ratelimited"></a>
 
 ##### `is_ws_ratelimited(self) -> bool`
 
-- **Class:** `bool`: Whether the websocket is currently rate limited.
+`bool`: Whether the websocket is currently rate limited.
 
 This can be useful to know when deciding whether you should query members
 using HTTP or via the gateway.
@@ -26775,13 +26682,13 @@ A system-generated URL slug based on the SKU name.
 
 ##### `flags(self) -> SKUFlags`
 
-- **Class:** `SKUFlags`: Returns the flags of the SKU.
+`SKUFlags`: Returns the flags of the SKU.
 
 <a id="api-sku-created-at"></a>
 
 ##### `created_at(self) -> datetime`
 
-- **Class:** `datetime.datetime`: Returns the sku's creation time in UTC.
+`datetime.datetime`: Returns the sku's creation time in UTC.
 
 <a id="api-sku-fetch-subscription"></a>
 
@@ -26949,13 +26856,13 @@ Optional\[`Guild`]: The guild that is granted access to the entitlement.
 
 ##### `created_at(self) -> datetime`
 
-- **Class:** `datetime.datetime`: Returns the entitlement's creation time in UTC.
+`datetime.datetime`: Returns the entitlement's creation time in UTC.
 
 <a id="api-entitlement-is-expired"></a>
 
 ##### `is_expired(self) -> bool`
 
-- **Class:** `bool`: Returns `True` if the entitlement is expired. Will be always False for test entitlements.
+`bool`: Returns `True` if the entitlement is expired. Will be always False for test entitlements.
 
 <a id="api-entitlement-consume"></a>
 
@@ -27046,7 +26953,7 @@ The IDs of the SKUs that the user is going to be subscribed to when renewing.
 
 ##### `created_at(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: Returns the subscription's creation time in UTC.
+`datetime.datetime`: Returns the subscription's creation time in UTC.
 
 <a id="api-subscription-user"></a>
 
@@ -27154,8 +27061,7 @@ The updated message.
 #### `RawReactionActionEvent(_RawReprMixin)`
 
 Represents the payload for a `on_raw_reaction_add` or
-
-- **Func:** `on_raw_reaction_remove` event.
+`on_raw_reaction_remove` event.
 
 ## Attributes
 
@@ -27598,7 +27504,7 @@ The partial channel's name.
 
 ##### `mention(self) -> str`
 
-- **Class:** `str`: The string that allows you to mention the channel that the webhook is following.
+`str`: The string that allows you to mention the channel that the webhook is following.
 
 ### PollAnswer
 
@@ -27634,7 +27540,7 @@ Whether the current user has voted to this answer or not.
 
 ##### `text(self) -> str`
 
-- **Class:** `str`: Returns this answer's displayed text.
+`str`: Returns this answer's displayed text.
 
 <a id="api-pollanswer-emoji"></a>
 
@@ -27647,7 +27553,7 @@ emoji, if any.
 
 ##### `vote_count(self) -> int`
 
-- **Class:** `int`: Returns an approximate count of votes for this answer.
+`int`: Returns an approximate count of votes for this answer.
 
 If the poll is finished, the count is exact.
 
@@ -27655,14 +27561,14 @@ If the poll is finished, the count is exact.
 
 ##### `poll(self) -> Poll`
 
-- **Class:** `Poll`: Returns the parent poll of this answer.
+`Poll`: Returns the parent poll of this answer.
 
 <a id="api-pollanswer-victor"></a>
 
 ##### `victor(self) -> bool`
 
-- **Class:** `bool`: Whether the answer is the one that had the most
-  votes when the poll ended.
+`bool`: Whether the answer is the one that had the most
+votes when the poll ended.
 
 > **Added in version 2.5**
 
@@ -27818,37 +27724,37 @@ which holds information about the status of the user on various clients/platform
 
 ##### `status(self) -> Status`
 
-- **Class:** `Status`: The user's overall status. If the value is unknown, then it will be a `str` instead.
+`Status`: The user's overall status. If the value is unknown, then it will be a `str` instead.
 
 <a id="api-clientstatus-raw-status"></a>
 
 ##### `raw_status(self) -> str`
 
-- **Class:** `str`: The user's overall status as a string value.
+`str`: The user's overall status as a string value.
 
 <a id="api-clientstatus-mobile-status"></a>
 
 ##### `mobile_status(self) -> Status`
 
-- **Class:** `Status`: The user's status on a mobile device, if applicable.
+`Status`: The user's status on a mobile device, if applicable.
 
 <a id="api-clientstatus-desktop-status"></a>
 
 ##### `desktop_status(self) -> Status`
 
-- **Class:** `Status`: The user's status on the desktop client, if applicable.
+`Status`: The user's status on the desktop client, if applicable.
 
 <a id="api-clientstatus-web-status"></a>
 
 ##### `web_status(self) -> Status`
 
-- **Class:** `Status`: The user's status on the web client, if applicable.
+`Status`: The user's status on the web client, if applicable.
 
 <a id="api-clientstatus-is-on-mobile"></a>
 
 ##### `is_on_mobile(self) -> bool`
 
-- **Class:** `bool`: A helper function that determines if a user is active on a mobile device.
+`bool`: A helper function that determines if a user is active on a mobile device.
 
 ### PrimaryGuild
 
@@ -27909,8 +27815,7 @@ The label of the collectible.
 
 The palette of the collectible.
 This is only available if `type` is
-
-- **Class:** `CollectibleType.nameplate`.
+`CollectibleType.nameplate`.
 
 **sku\_id: `int`**
 
@@ -27928,13 +27833,13 @@ The expiration date of the collectible. If applicable.
 
 ##### `static(self) -> Asset`
 
-- **Class:** `Asset`: The static asset of the collectible.
+`Asset`: The static asset of the collectible.
 
 <a id="api-collectible-animated"></a>
 
 ##### `animated(self) -> Asset`
 
-- **Class:** `Asset`: The animated asset of the collectible.
+`Asset`: The animated asset of the collectible.
 
 ### CallMessage
 
@@ -27960,13 +27865,13 @@ A list of users that participated in the call.
 
 ##### `duration(self) -> datetime.timedelta`
 
-- **Class:** `datetime.timedelta`: The duration the call has lasted or is already ongoing.
+`datetime.timedelta`: The duration the call has lasted or is already ongoing.
 
 <a id="api-callmessage-is-ended"></a>
 
 ##### `is_ended(self) -> bool`
 
-- **Class:** `bool`: Whether the call is ended or not.
+`bool`: Whether the call is ended or not.
 
 <a id="discord-api-data"></a>
 
@@ -28040,7 +27945,7 @@ The discord.py model type of the object, if not specified, defaults to this clas
 
 ##### `created_at(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: Returns the snowflake's creation time in UTC.
+`datetime.datetime`: Returns the snowflake's creation time in UTC.
 
 ### Embed
 
@@ -28092,8 +27997,7 @@ Can only be up to 256 characters.
 The type of embed. Usually "rich".
 This can be set during initialisation.
 Possible strings for embed types can be found on discord's
-
-- **Ddocs:** `api docs <resources/message#embed-object-embed-types>`
+[api docs](https://discord.com/developers/docs/resources/message#embed-object-embed-types)
 
 **description: Optional\[`str`]**
 
@@ -28142,7 +28046,7 @@ Returns a shallow copy of the embed.
 
 ##### `flags(self) -> EmbedFlags`
 
-- **Class:** `EmbedFlags`: The flags of this embed.
+`EmbedFlags`: The flags of this embed.
 
 > **Added in version 2.5**
 
@@ -28619,7 +28523,7 @@ Optional\[`discord.Message`]: The cached message, if found in the internal messa
 
 ##### `jump_url(self) -> str`
 
-- **Class:** `str`: Returns a URL that allows the client to jump to the referenced message.
+`str`: Returns a URL that allows the client to jump to the referenced message.
 
 > **Added in version 1.7**
 
@@ -28681,13 +28585,13 @@ The guild that the partial message belongs to, if applicable.
 
 ##### `created_at(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: The partial message's creation time in UTC.
+`datetime.datetime`: The partial message's creation time in UTC.
 
 <a id="api-partialmessage-jump-url"></a>
 
 ##### `jump_url(self) -> str`
 
-- **Class:** `str`: Returns a URL that allows the client to jump to this message.
+`str`: Returns a URL that allows the client to jump to this message.
 
 <a id="api-partialmessage-thread"></a>
 
@@ -29010,8 +28914,7 @@ Remove a reaction by the member from the message.
 The emoji may be a unicode emoji or a custom guild `Emoji`.
 
 If the reaction is not your own (i.e. `member` parameter is not you) then
-
-- **Attr:** `~Permissions.manage_messages` is needed.
+`Permissions.manage_messages` is needed.
 
 The `member` parameter must represent a member and meet
 the `abc.Snowflake` abc.
@@ -29214,15 +29117,13 @@ The public thread attached to this message.
 *coroutine*
 
 A shortcut method to `.abc.Messageable.send` to reply to the
-
-- **Class:** `.Message`.
+`.Message`.
 
 > **Added in version 1.6**
 
 > **Changed in version 2.0**
 > This function will now raise `TypeError` or
->
-> - **Exc:** `ValueError` instead of `InvalidArgument`.
+> `ValueError` instead of `InvalidArgument`.
 
 ## Raises
 
@@ -29557,7 +29458,7 @@ except `presences`, `members`, and `message_content`.
 
 ##### `guilds(self)`
 
-- **Class:** `bool`: Whether guild related events are enabled.
+`bool`: Whether guild related events are enabled.
 
 This corresponds to the following events:
 
@@ -29587,7 +29488,7 @@ It is highly advisable to leave this intent enabled for your bot to function.
 
 ##### `members(self)`
 
-- **Class:** `bool`: Whether guild member related events are enabled.
+`bool`: Whether guild member related events are enabled.
 
 This corresponds to the following events:
 
@@ -29624,7 +29525,7 @@ For more information go to the [member intent documentation](https://discordpy.r
 
 ##### `moderation(self)`
 
-- **Class:** `bool`: Whether guild moderation related events are enabled.
+`bool`: Whether guild moderation related events are enabled.
 
 This corresponds to the following events:
 
@@ -29638,7 +29539,7 @@ This does not correspond to any attributes or classes in the library in terms of
 
 ##### `bans(self)`
 
-- **Class:** `bool`: An alias of `moderation`.
+`bool`: An alias of `moderation`.
 
 > **Changed in version 2.2**
 > Changed to an alias.
@@ -29647,7 +29548,7 @@ This does not correspond to any attributes or classes in the library in terms of
 
 ##### `emojis(self)`
 
-- **Class:** `bool`: Alias of `.expressions`.
+`bool`: Alias of `.expressions`.
 
 > **Changed in version 2.0**
 > Changed to an alias.
@@ -29656,7 +29557,7 @@ This does not correspond to any attributes or classes in the library in terms of
 
 ##### `emojis_and_stickers(self)`
 
-- **Class:** `bool`: Alias of `.expressions`.
+`bool`: Alias of `.expressions`.
 
 > **Added in version 2.0**
 
@@ -29667,7 +29568,7 @@ This does not correspond to any attributes or classes in the library in terms of
 
 ##### `expressions(self)`
 
-- **Class:** `bool`: Whether guild emoji, sticker, and soundboard sound related events are enabled.
+`bool`: Whether guild emoji, sticker, and soundboard sound related events are enabled.
 
 > **Added in version 2.5**
 
@@ -29698,7 +29599,7 @@ This also corresponds to the following attributes and classes in terms of cache:
 
 ##### `integrations(self)`
 
-- **Class:** `bool`: Whether guild integration related events are enabled.
+`bool`: Whether guild integration related events are enabled.
 
 This corresponds to the following events:
 
@@ -29713,7 +29614,7 @@ This does not correspond to any attributes or classes in the library in terms of
 
 ##### `webhooks(self)`
 
-- **Class:** `bool`: Whether guild webhook related events are enabled.
+`bool`: Whether guild webhook related events are enabled.
 
 This corresponds to the following events:
 
@@ -29725,7 +29626,7 @@ This does not correspond to any attributes or classes in the library in terms of
 
 ##### `invites(self)`
 
-- **Class:** `bool`: Whether guild invite related events are enabled.
+`bool`: Whether guild invite related events are enabled.
 
 This corresponds to the following events:
 
@@ -29738,7 +29639,7 @@ This does not correspond to any attributes or classes in the library in terms of
 
 ##### `voice_states(self)`
 
-- **Class:** `bool`: Whether guild voice state related events are enabled.
+`bool`: Whether guild voice state related events are enabled.
 
 This corresponds to the following events:
 
@@ -29757,7 +29658,7 @@ This also corresponds to the following attributes and classes in terms of cache:
 
 ##### `presences(self)`
 
-- **Class:** `bool`: Whether guild presence related events are enabled.
+`bool`: Whether guild presence related events are enabled.
 
 This corresponds to the following events:
 
@@ -29779,7 +29680,7 @@ For more information go to the [presence intent documentation](https://discordpy
 
 ##### `messages(self)`
 
-- **Class:** `bool`: Whether guild and direct message related events are enabled.
+`bool`: Whether guild and direct message related events are enabled.
 
 This is a shortcut to set or get both `guild_messages` and `dm_messages`.
 
@@ -29806,7 +29707,7 @@ Note that due to an implicit relationship this also corresponds to the following
 
 ##### `guild_messages(self)`
 
-- **Class:** `bool`: Whether guild message related events are enabled.
+`bool`: Whether guild message related events are enabled.
 
 See also `dm_messages` for DMs or `messages` for both.
 
@@ -29833,7 +29734,7 @@ Note that due to an implicit relationship this also corresponds to the following
 
 ##### `dm_messages(self)`
 
-- **Class:** `bool`: Whether direct message related events are enabled.
+`bool`: Whether direct message related events are enabled.
 
 See also `guild_messages` for guilds or `messages` for both.
 
@@ -29860,7 +29761,7 @@ Note that due to an implicit relationship this also corresponds to the following
 
 ##### `reactions(self)`
 
-- **Class:** `bool`: Whether guild and direct message reaction related events are enabled.
+`bool`: Whether guild and direct message reaction related events are enabled.
 
 This is a shortcut to set or get both `guild_reactions` and `dm_reactions`.
 
@@ -29881,7 +29782,7 @@ This also corresponds to the following attributes and classes in terms of cache:
 
 ##### `guild_reactions(self)`
 
-- **Class:** `bool`: Whether guild message reaction related events are enabled.
+`bool`: Whether guild message reaction related events are enabled.
 
 See also `dm_reactions` for DMs or `reactions` for both.
 
@@ -29902,7 +29803,7 @@ This also corresponds to the following attributes and classes in terms of cache:
 
 ##### `dm_reactions(self)`
 
-- **Class:** `bool`: Whether direct message reaction related events are enabled.
+`bool`: Whether direct message reaction related events are enabled.
 
 See also `guild_reactions` for guilds or `reactions` for both.
 
@@ -29923,7 +29824,7 @@ This also corresponds to the following attributes and classes in terms of cache:
 
 ##### `typing(self)`
 
-- **Class:** `bool`: Whether guild and direct message typing related events are enabled.
+`bool`: Whether guild and direct message typing related events are enabled.
 
 This is a shortcut to set or get both `guild_typing` and `dm_typing`.
 
@@ -29937,7 +29838,7 @@ This does not correspond to any attributes or classes in the library in terms of
 
 ##### `guild_typing(self)`
 
-- **Class:** `bool`: Whether guild and direct message typing related events are enabled.
+`bool`: Whether guild and direct message typing related events are enabled.
 
 See also `dm_typing` for DMs or `typing` for both.
 
@@ -29951,7 +29852,7 @@ This does not correspond to any attributes or classes in the library in terms of
 
 ##### `dm_typing(self)`
 
-- **Class:** `bool`: Whether guild and direct message typing related events are enabled.
+`bool`: Whether guild and direct message typing related events are enabled.
 
 See also `guild_typing` for guilds or `typing` for both.
 
@@ -29965,13 +29866,11 @@ This does not correspond to any attributes or classes in the library in terms of
 
 ##### `message_content(self)`
 
-- **Class:** `bool`: Whether message content, attachments, embeds and components will be available in messages
-  which do not meet the following criteria:
+`bool`: Whether message content, attachments, embeds and components will be available in messages
+which do not meet the following criteria:
 
 - The message was sent by the client
-
 - The message was sent in direct messages
-
 - The message mentions the client
 
 This applies to the following events:
@@ -29993,7 +29892,7 @@ For more information go to the [message content intent documentation](https://di
 
 ##### `guild_scheduled_events(self)`
 
-- **Class:** `bool`: Whether guild scheduled event related events are enabled.
+`bool`: Whether guild scheduled event related events are enabled.
 
 This corresponds to the following events:
 
@@ -30009,7 +29908,7 @@ This corresponds to the following events:
 
 ##### `auto_moderation(self)`
 
-- **Class:** `bool`: Whether auto moderation related events are enabled.
+`bool`: Whether auto moderation related events are enabled.
 
 This is a shortcut to set or get both `auto_moderation_configuration`
 and `auto_moderation_execution`.
@@ -30027,7 +29926,7 @@ This corresponds to the following events:
 
 ##### `auto_moderation_configuration(self)`
 
-- **Class:** `bool`: Whether auto moderation configuration related events are enabled.
+`bool`: Whether auto moderation configuration related events are enabled.
 
 This corresponds to the following events:
 
@@ -30041,7 +29940,7 @@ This corresponds to the following events:
 
 ##### `auto_moderation_execution(self)`
 
-- **Class:** `bool`: Whether auto moderation execution related events are enabled.
+`bool`: Whether auto moderation execution related events are enabled.
 
 This corresponds to the following events:
 
@@ -30053,7 +29952,7 @@ This corresponds to the following events:
 
 ##### `polls(self)`
 
-- **Class:** `bool`: Whether guild and direct messages poll related events are enabled.
+`bool`: Whether guild and direct messages poll related events are enabled.
 
 This is a shortcut to set or get both `guild_polls` and `dm_polls`.
 
@@ -30070,7 +29969,7 @@ This corresponds to the following events:
 
 ##### `guild_polls(self)`
 
-- **Class:** `bool`: Whether guild poll related events are enabled.
+`bool`: Whether guild poll related events are enabled.
 
 See also `dm_polls` and `polls`.
 
@@ -30087,7 +29986,7 @@ This corresponds to the following events:
 
 ##### `dm_polls(self)`
 
-- **Class:** `bool`: Whether direct messages poll related events are enabled.
+`bool`: Whether direct messages poll related events are enabled.
 
 See also `guild_polls` and `polls`.
 
@@ -30215,7 +30114,7 @@ A factory method that creates a `MemberCacheFlags` with everything disabled.
 
 ##### `voice(self)`
 
-- **Class:** `bool`: Whether to cache members that are in voice.
+`bool`: Whether to cache members that are in voice.
 
 This requires `Intents.voice_states`.
 
@@ -30225,8 +30124,8 @@ Members that leave voice are no longer cached.
 
 ##### `joined(self)`
 
-- **Class:** `bool`: Whether to cache members that joined the guild
-  or are chunked as part of the initial log in flow.
+`bool`: Whether to cache members that joined the guild
+or are chunked as part of the initial log in flow.
 
 This requires `Intents.members`.
 
@@ -30339,8 +30238,8 @@ rather than using this raw value.
 
 ##### `auto_mod_badge(self)`
 
-- **Class:** `bool`: Returns `True` if the application uses at least 100 automod rules across all guilds.
-  This shows up as a badge in the official client.
+`bool`: Returns `True` if the application uses at least 100 automod rules across all guilds.
+This shows up as a badge in the official client.
 
 > **Added in version 2.3**
 
@@ -30348,70 +30247,70 @@ rather than using this raw value.
 
 ##### `gateway_presence(self)`
 
-- **Class:** `bool`: Returns `True` if the application is verified and is allowed to
-  receive presence information over the gateway.
+`bool`: Returns `True` if the application is verified and is allowed to
+receive presence information over the gateway.
 
 <a id="api-applicationflags-gateway-presence-limited"></a>
 
 ##### `gateway_presence_limited(self)`
 
-- **Class:** `bool`: Returns `True` if the application is allowed to receive limited
-  presence information over the gateway.
+`bool`: Returns `True` if the application is allowed to receive limited
+presence information over the gateway.
 
 <a id="api-applicationflags-gateway-guild-members"></a>
 
 ##### `gateway_guild_members(self)`
 
-- **Class:** `bool`: Returns `True` if the application is verified and is allowed to
-  receive guild members information over the gateway.
+`bool`: Returns `True` if the application is verified and is allowed to
+receive guild members information over the gateway.
 
 <a id="api-applicationflags-gateway-guild-members-limited"></a>
 
 ##### `gateway_guild_members_limited(self)`
 
-- **Class:** `bool`: Returns `True` if the application is allowed to receive limited
-  guild members information over the gateway.
+`bool`: Returns `True` if the application is allowed to receive limited
+guild members information over the gateway.
 
 <a id="api-applicationflags-verification-pending-guild-limit"></a>
 
 ##### `verification_pending_guild_limit(self)`
 
-- **Class:** `bool`: Returns `True` if the application is currently pending verification
-  and has hit the guild limit.
+`bool`: Returns `True` if the application is currently pending verification
+and has hit the guild limit.
 
 <a id="api-applicationflags-embedded"></a>
 
 ##### `embedded(self)`
 
-- **Class:** `bool`: Returns `True` if the application is embedded within the Discord client.
+`bool`: Returns `True` if the application is embedded within the Discord client.
 
 <a id="api-applicationflags-gateway-message-content"></a>
 
 ##### `gateway_message_content(self)`
 
-- **Class:** `bool`: Returns `True` if the application is verified and is allowed to
-  read message content in guilds.
+`bool`: Returns `True` if the application is verified and is allowed to
+read message content in guilds.
 
 <a id="api-applicationflags-gateway-message-content-limited"></a>
 
 ##### `gateway_message_content_limited(self)`
 
-- **Class:** `bool`: Returns `True` if the application is unverified and is allowed to
-  read message content in guilds.
+`bool`: Returns `True` if the application is unverified and is allowed to
+read message content in guilds.
 
 <a id="api-applicationflags-app-commands-badge"></a>
 
 ##### `app_commands_badge(self)`
 
-- **Class:** `bool`: Returns `True` if the application has registered a global application
-  command. This shows up as a badge in the official client.
+`bool`: Returns `True` if the application has registered a global application
+command. This shows up as a badge in the official client.
 
 <a id="api-applicationflags-active"></a>
 
 ##### `active(self)`
 
-- **Class:** `bool`: Returns `True` if the application has had at least one global application
-  command used in the last 30 days.
+`bool`: Returns `True` if the application has had at least one global application
+command used in the last 30 days.
 
 > **Added in version 2.1**
 
@@ -30503,14 +30402,14 @@ rather than using this raw value.
 
 ##### `pinned(self)`
 
-- **Class:** `bool`: Returns `True` if the thread is pinned to the forum channel.
+`bool`: Returns `True` if the thread is pinned to the forum channel.
 
 <a id="api-channelflags-require-tag"></a>
 
 ##### `require_tag(self)`
 
-- **Class:** `bool`: Returns `True` if a tag is required to be specified when creating a thread
-  in a `ForumChannel`.
+`bool`: Returns `True` if a tag is required to be specified when creating a thread
+in a `ForumChannel`.
 
 > **Added in version 2.1**
 
@@ -30518,8 +30417,8 @@ rather than using this raw value.
 
 ##### `hide_media_download_options(self)`
 
-- **Class:** `bool`: Returns `True` if the client hides embedded media download options in a `ForumChannel`.
-  Only available in media channels.
+`bool`: Returns `True` if the client hides embedded media download options in a `ForumChannel`.
+Only available in media channels.
 
 > **Added in version 2.4**
 
@@ -30611,19 +30510,19 @@ rather than using this raw value.
 
 ##### `profanity(self)`
 
-- **Class:** `bool`: Whether to use the preset profanity filter.
+`bool`: Whether to use the preset profanity filter.
 
 <a id="api-automodpresets-sexual-content"></a>
 
 ##### `sexual_content(self)`
 
-- **Class:** `bool`: Whether to use the preset sexual content filter.
+`bool`: Whether to use the preset sexual content filter.
 
 <a id="api-automodpresets-slurs"></a>
 
 ##### `slurs(self)`
 
-- **Class:** `bool`: Whether to use the preset slurs filter.
+`bool`: Whether to use the preset slurs filter.
 
 ### AutoModRuleAction
 
@@ -30768,17 +30667,17 @@ The file description to display, currently only supported for images.
 
 ##### `filename(self) -> str`
 
-- **Class:** `str`: The filename to display when uploading to Discord.
-  If this is not given then it defaults to `fp.name` or if `fp` is
-  a string then the `filename` will default to the string given.
+`str`: The filename to display when uploading to Discord.
+If this is not given then it defaults to `fp.name` or if `fp` is
+a string then the `filename` will default to the string given.
 
 <a id="api-file-uri"></a>
 
 ##### `uri(self) -> str`
 
-- **Class:** `str`: Returns the `attachment://<filename>` URI for this file.
-  This is used in certain places such as embeds or components to refer
-  to an uploaded file via URL.
+`str`: Returns the `attachment://<filename>` URI for this file.
+This is used in certain places such as embeds or components to refer
+to an uploaded file via URL.
 
 > **Note**
 > Due to Discord's filename processing, the filename must be ASCII aphanumeric
@@ -30841,19 +30740,19 @@ The raw integer colour value.
 
 ##### `r(self) -> int`
 
-- **Class:** `int`: Returns the red component of the colour.
+`int`: Returns the red component of the colour.
 
 <a id="api-colour-g"></a>
 
 ##### `g(self) -> int`
 
-- **Class:** `int`: Returns the green component of the colour.
+`int`: Returns the green component of the colour.
 
 <a id="api-colour-b"></a>
 
 ##### `b(self) -> int`
 
-- **Class:** `int`: Returns the blue component of the colour.
+`int`: Returns the blue component of the colour.
 
 <a id="api-colour-to-rgb"></a>
 
@@ -31500,7 +31399,7 @@ It contains the following optional keys:
 
 ##### `type(self) -> ActivityType`
 
-- **Class:** `ActivityType`: Returns the game's type. This is for compatibility with `Activity`.
+`ActivityType`: Returns the game's type. This is for compatibility with `Activity`.
 
 It always returns `ActivityType.playing`.
 
@@ -31584,7 +31483,7 @@ A dictionary comprising of similar keys than those in `Activity.assets`.
 
 ##### `type(self) -> ActivityType`
 
-- **Class:** `ActivityType`: Returns the game's type. This is for compatibility with `Activity`.
+`ActivityType`: Returns the game's type. This is for compatibility with `Activity`.
 
 It always returns `ActivityType.streaming`.
 
@@ -31645,7 +31544,7 @@ The emoji to pass to the activity, if any.
 
 ##### `type(self) -> ActivityType`
 
-- **Class:** `ActivityType`: Returns the activity's type. This is for compatibility with `Activity`.
+`ActivityType`: Returns the activity's type. This is for compatibility with `Activity`.
 
 It always returns `ActivityType.custom`.
 
@@ -31832,17 +31731,15 @@ permissions are currently:
 
 > **Changed in version 2.0**
 > Added `create_public_threads`, `create_private_threads`, `manage_threads`,
->
-> - **Attr:** `use_external_stickers`, `send_messages_in_threads` and
-> - **Attr:** `request_to_speak` permissions.
+> `use_external_stickers`, `send_messages_in_threads` and
+> `request_to_speak` permissions.
 
 > **Changed in version 2.3**
 > Added `use_soundboard`, `create_expressions` permissions.
 
 > **Changed in version 2.4**
 > Added `send_polls`, `send_voice_messages`, attr:`use_external_sounds`,
->
-> - **Attr:** `use_embedded_activities`, and `use_external_apps` permissions.
+> `use_embedded_activities`, and `use_external_apps` permissions.
 
 > **Changed in version 2.7**
 > Added `pin_messages` and `bypass_slowmode` permissions.
@@ -31857,9 +31754,8 @@ A factory method that creates a `Permissions` with all
 > **Changed in version 1.7**
 > Permission `read_messages` is now included in the general permissions, but
 > permissions `administrator`, `create_instant_invite`, `kick_members`,
->
-> - **Attr:** `ban_members`, `change_nickname` and `manage_nicknames` are
->   no longer part of the general permissions.
+> `ban_members`, `change_nickname` and `manage_nicknames` are
+> no longer part of the general permissions.
 
 > **Changed in version 2.3**
 > Added `create_expressions` permission.
@@ -31889,8 +31785,7 @@ A factory method that creates a `Permissions` with all
 
 > **Changed in version 2.0**
 > Added `create_public_threads`, `create_private_threads`, `manage_threads`,
->
-> - **Attr:** `send_messages_in_threads` and `use_external_stickers` permissions.
+> `send_messages_in_threads` and `use_external_stickers` permissions.
 
 > **Changed in version 2.3**
 > Added `send_voice_messages` permission.
@@ -32004,25 +31899,25 @@ A list of key/value pairs to bulk update permissions with.
 
 ##### `create_instant_invite(self) -> int`
 
-- **Class:** `bool`: Returns `True` if the user can create instant invites.
+`bool`: Returns `True` if the user can create instant invites.
 
 <a id="api-permissions-kick-members"></a>
 
 ##### `kick_members(self) -> int`
 
-- **Class:** `bool`: Returns `True` if the user can kick users from the guild.
+`bool`: Returns `True` if the user can kick users from the guild.
 
 <a id="api-permissions-ban-members"></a>
 
 ##### `ban_members(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can ban users from the guild.
+`bool`: Returns `True` if a user can ban users from the guild.
 
 <a id="api-permissions-administrator"></a>
 
 ##### `administrator(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user is an administrator. This role overrides all other permissions.
+`bool`: Returns `True` if a user is an administrator. This role overrides all other permissions.
 
 This also bypasses all channel-specific overrides.
 
@@ -32030,7 +31925,7 @@ This also bypasses all channel-specific overrides.
 
 ##### `manage_channels(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can edit, delete, or create channels in the guild.
+`bool`: Returns `True` if a user can edit, delete, or create channels in the guild.
 
 This also corresponds to the "Manage Channel" channel-specific override.
 
@@ -32038,43 +31933,43 @@ This also corresponds to the "Manage Channel" channel-specific override.
 
 ##### `manage_guild(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can edit guild properties.
+`bool`: Returns `True` if a user can edit guild properties.
 
 <a id="api-permissions-add-reactions"></a>
 
 ##### `add_reactions(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can add reactions to messages.
+`bool`: Returns `True` if a user can add reactions to messages.
 
 <a id="api-permissions-view-audit-log"></a>
 
 ##### `view_audit_log(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can view the guild's audit log.
+`bool`: Returns `True` if a user can view the guild's audit log.
 
 <a id="api-permissions-priority-speaker"></a>
 
 ##### `priority_speaker(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can be more easily heard while talking.
+`bool`: Returns `True` if a user can be more easily heard while talking.
 
 <a id="api-permissions-stream"></a>
 
 ##### `stream(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can stream in a voice channel.
+`bool`: Returns `True` if a user can stream in a voice channel.
 
 <a id="api-permissions-read-messages"></a>
 
 ##### `read_messages(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can read messages from all or specific text channels.
+`bool`: Returns `True` if a user can read messages from all or specific text channels.
 
 <a id="api-permissions-view-channel"></a>
 
 ##### `view_channel(self) -> int`
 
-- **Class:** `bool`: An alias for `read_messages`.
+`bool`: An alias for `read_messages`.
 
 > **Added in version 1.3**
 
@@ -32082,19 +31977,19 @@ This also corresponds to the "Manage Channel" channel-specific override.
 
 ##### `send_messages(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can send messages from all or specific text channels.
+`bool`: Returns `True` if a user can send messages from all or specific text channels.
 
 <a id="api-permissions-send-tts-messages"></a>
 
 ##### `send_tts_messages(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can send TTS messages from all or specific text channels.
+`bool`: Returns `True` if a user can send TTS messages from all or specific text channels.
 
 <a id="api-permissions-manage-messages"></a>
 
 ##### `manage_messages(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can delete messages in a text channel.
+`bool`: Returns `True` if a user can delete messages in a text channel.
 
 > **Note**
 > Note that there are currently no ways to edit other people's messages.
@@ -32103,37 +31998,37 @@ This also corresponds to the "Manage Channel" channel-specific override.
 
 ##### `embed_links(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user's messages will automatically be embedded by Discord.
+`bool`: Returns `True` if a user's messages will automatically be embedded by Discord.
 
 <a id="api-permissions-attach-files"></a>
 
 ##### `attach_files(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can send files in their messages.
+`bool`: Returns `True` if a user can send files in their messages.
 
 <a id="api-permissions-read-message-history"></a>
 
 ##### `read_message_history(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can read a text channel's previous messages.
+`bool`: Returns `True` if a user can read a text channel's previous messages.
 
 <a id="api-permissions-mention-everyone"></a>
 
 ##### `mention_everyone(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user's @everyone or @here will mention everyone in the text channel.
+`bool`: Returns `True` if a user's @everyone or @here will mention everyone in the text channel.
 
 <a id="api-permissions-external-emojis"></a>
 
 ##### `external_emojis(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can use emojis from other guilds.
+`bool`: Returns `True` if a user can use emojis from other guilds.
 
 <a id="api-permissions-use-external-emojis"></a>
 
 ##### `use_external_emojis(self) -> int`
 
-- **Class:** `bool`: An alias for `external_emojis`.
+`bool`: An alias for `external_emojis`.
 
 > **Added in version 1.3**
 
@@ -32141,7 +32036,7 @@ This also corresponds to the "Manage Channel" channel-specific override.
 
 ##### `view_guild_insights(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can view the guild's insights.
+`bool`: Returns `True` if a user can view the guild's insights.
 
 > **Added in version 1.3**
 
@@ -32149,55 +32044,55 @@ This also corresponds to the "Manage Channel" channel-specific override.
 
 ##### `connect(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can connect to a voice channel.
+`bool`: Returns `True` if a user can connect to a voice channel.
 
 <a id="api-permissions-speak"></a>
 
 ##### `speak(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can speak in a voice channel.
+`bool`: Returns `True` if a user can speak in a voice channel.
 
 <a id="api-permissions-mute-members"></a>
 
 ##### `mute_members(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can mute other users.
+`bool`: Returns `True` if a user can mute other users.
 
 <a id="api-permissions-deafen-members"></a>
 
 ##### `deafen_members(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can deafen other users.
+`bool`: Returns `True` if a user can deafen other users.
 
 <a id="api-permissions-move-members"></a>
 
 ##### `move_members(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can move users between other voice channels.
+`bool`: Returns `True` if a user can move users between other voice channels.
 
 <a id="api-permissions-use-voice-activation"></a>
 
 ##### `use_voice_activation(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can use voice activation in voice channels.
+`bool`: Returns `True` if a user can use voice activation in voice channels.
 
 <a id="api-permissions-change-nickname"></a>
 
 ##### `change_nickname(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can change their nickname in the guild.
+`bool`: Returns `True` if a user can change their nickname in the guild.
 
 <a id="api-permissions-manage-nicknames"></a>
 
 ##### `manage_nicknames(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can change other user's nickname in the guild.
+`bool`: Returns `True` if a user can change other user's nickname in the guild.
 
 <a id="api-permissions-manage-roles"></a>
 
 ##### `manage_roles(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can create or edit roles less than their role's position.
+`bool`: Returns `True` if a user can create or edit roles less than their role's position.
 
 This also corresponds to the "Manage Permissions" channel-specific override.
 
@@ -32205,7 +32100,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `manage_permissions(self) -> int`
 
-- **Class:** `bool`: An alias for `manage_roles`.
+`bool`: An alias for `manage_roles`.
 
 > **Added in version 1.3**
 
@@ -32213,13 +32108,13 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `manage_webhooks(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can create, edit, or delete webhooks.
+`bool`: Returns `True` if a user can create, edit, or delete webhooks.
 
 <a id="api-permissions-manage-expressions"></a>
 
 ##### `manage_expressions(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can edit or delete emojis, stickers, and soundboard sounds.
+`bool`: Returns `True` if a user can edit or delete emojis, stickers, and soundboard sounds.
 
 > **Added in version 2.3**
 
@@ -32227,13 +32122,13 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `manage_emojis(self) -> int`
 
-- **Class:** `bool`: An alias for `manage_expressions`.
+`bool`: An alias for `manage_expressions`.
 
 <a id="api-permissions-manage-emojis-and-stickers"></a>
 
 ##### `manage_emojis_and_stickers(self) -> int`
 
-- **Class:** `bool`: An alias for `manage_expressions`.
+`bool`: An alias for `manage_expressions`.
 
 > **Added in version 2.0**
 
@@ -32241,7 +32136,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `use_application_commands(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can use slash commands.
+`bool`: Returns `True` if a user can use slash commands.
 
 > **Added in version 1.7**
 
@@ -32249,7 +32144,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `request_to_speak(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can request to speak in a stage channel.
+`bool`: Returns `True` if a user can request to speak in a stage channel.
 
 > **Added in version 1.7**
 
@@ -32257,7 +32152,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `manage_events(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can manage guild events.
+`bool`: Returns `True` if a user can manage guild events.
 
 > **Added in version 2.0**
 
@@ -32265,7 +32160,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `manage_threads(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can manage threads.
+`bool`: Returns `True` if a user can manage threads.
 
 > **Added in version 2.0**
 
@@ -32273,7 +32168,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `create_public_threads(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can create public threads.
+`bool`: Returns `True` if a user can create public threads.
 
 > **Added in version 2.0**
 
@@ -32281,7 +32176,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `create_private_threads(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can create private threads.
+`bool`: Returns `True` if a user can create private threads.
 
 > **Added in version 2.0**
 
@@ -32289,7 +32184,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `external_stickers(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can use stickers from other guilds.
+`bool`: Returns `True` if a user can use stickers from other guilds.
 
 > **Added in version 2.0**
 
@@ -32297,7 +32192,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `use_external_stickers(self) -> int`
 
-- **Class:** `bool`: An alias for `external_stickers`.
+`bool`: An alias for `external_stickers`.
 
 > **Added in version 2.0**
 
@@ -32305,7 +32200,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `send_messages_in_threads(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can send messages in threads.
+`bool`: Returns `True` if a user can send messages in threads.
 
 > **Added in version 2.0**
 
@@ -32313,7 +32208,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `use_embedded_activities(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can launch an embedded application in a Voice channel.
+`bool`: Returns `True` if a user can launch an embedded application in a Voice channel.
 
 > **Added in version 2.0**
 
@@ -32321,7 +32216,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `moderate_members(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can time out other members.
+`bool`: Returns `True` if a user can time out other members.
 
 > **Added in version 2.0**
 
@@ -32329,7 +32224,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `view_creator_monetization_analytics(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can view role subscription insights.
+`bool`: Returns `True` if a user can view role subscription insights.
 
 > **Added in version 2.4**
 
@@ -32337,7 +32232,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `use_soundboard(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can use the soundboard.
+`bool`: Returns `True` if a user can use the soundboard.
 
 > **Added in version 2.3**
 
@@ -32345,7 +32240,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `create_expressions(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can create emojis, stickers, and soundboard sounds.
+`bool`: Returns `True` if a user can create emojis, stickers, and soundboard sounds.
 
 > **Added in version 2.3**
 
@@ -32353,7 +32248,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `create_events(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can create guild events.
+`bool`: Returns `True` if a user can create guild events.
 
 > **Added in version 2.4**
 
@@ -32361,7 +32256,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `use_external_sounds(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can use sounds from other guilds.
+`bool`: Returns `True` if a user can use sounds from other guilds.
 
 > **Added in version 2.3**
 
@@ -32369,7 +32264,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `send_voice_messages(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can send voice messages.
+`bool`: Returns `True` if a user can send voice messages.
 
 > **Added in version 2.3**
 
@@ -32377,7 +32272,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `set_voice_channel_status(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can set voice channel status.
+`bool`: Returns `True` if a user can set voice channel status.
 
 > **Added in version 2.7**
 
@@ -32385,7 +32280,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `send_polls(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can send poll messages.
+`bool`: Returns `True` if a user can send poll messages.
 
 > **Added in version 2.4**
 
@@ -32393,7 +32288,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `create_polls(self) -> int`
 
-- **Class:** `bool`: An alias for `send_polls`.
+`bool`: An alias for `send_polls`.
 
 > **Added in version 2.4**
 
@@ -32401,7 +32296,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `use_external_apps(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can use external apps.
+`bool`: Returns `True` if a user can use external apps.
 
 > **Added in version 2.4**
 
@@ -32409,7 +32304,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `pin_messages(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can pin messages.
+`bool`: Returns `True` if a user can pin messages.
 
 > **Added in version 2.7**
 
@@ -32417,7 +32312,7 @@ This also corresponds to the "Manage Permissions" channel-specific override.
 
 ##### `bypass_slowmode(self) -> int`
 
-- **Class:** `bool`: Returns `True` if a user can bypass slowmode.
+`bool`: Returns `True` if a user can bypass slowmode.
 
 > **Added in version 2.7**
 
@@ -32602,19 +32497,19 @@ flags via the properties rather than using this raw value.
 
 ##### `join_notifications(self)`
 
-- **Class:** `bool`: Returns `True` if the system channel is used for member join notifications.
+`bool`: Returns `True` if the system channel is used for member join notifications.
 
 <a id="api-systemchannelflags-premium-subscriptions"></a>
 
 ##### `premium_subscriptions(self)`
 
-- **Class:** `bool`: Returns `True` if the system channel is used for "Nitro boosting" notifications.
+`bool`: Returns `True` if the system channel is used for "Nitro boosting" notifications.
 
 <a id="api-systemchannelflags-guild-reminder-notifications"></a>
 
 ##### `guild_reminder_notifications(self)`
 
-- **Class:** `bool`: Returns `True` if the system channel is used for server setup helpful tips notifications.
+`bool`: Returns `True` if the system channel is used for server setup helpful tips notifications.
 
 > **Added in version 2.0**
 
@@ -32622,8 +32517,8 @@ flags via the properties rather than using this raw value.
 
 ##### `join_notification_replies(self)`
 
-- **Class:** `bool`: Returns `True` if sticker reply button ("Wave to say hi!") is
-  shown for member join notifications.
+`bool`: Returns `True` if sticker reply button ("Wave to say hi!") is
+shown for member join notifications.
 
 > **Added in version 2.0**
 
@@ -32631,8 +32526,8 @@ flags via the properties rather than using this raw value.
 
 ##### `role_subscription_purchase_notifications(self)`
 
-- **Class:** `bool`: Returns `True` if role subscription purchase and renewal
-  notifications are enabled.
+`bool`: Returns `True` if role subscription purchase and renewal
+notifications are enabled.
 
 > **Added in version 2.2**
 
@@ -32640,8 +32535,8 @@ flags via the properties rather than using this raw value.
 
 ##### `role_subscription_purchase_notification_replies(self)`
 
-- **Class:** `bool`: Returns `True` if the role subscription notifications
-  have a sticker reply button.
+`bool`: Returns `True` if the role subscription notifications
+have a sticker reply button.
 
 > **Added in version 2.2**
 
@@ -32649,8 +32544,8 @@ flags via the properties rather than using this raw value.
 
 ##### `emoji_added(self)`
 
-- **Class:** `bool`: Returns `True` if the system channel is used for
-  emoji added notifications.
+`bool`: Returns `True` if the system channel is used for
+emoji added notifications.
 
 > **Added in version 2.7**
 
@@ -32746,31 +32641,31 @@ flags via the properties rather than using this raw value.
 
 ##### `crossposted(self)`
 
-- **Class:** `bool`: Returns `True` if the message is the original crossposted message.
+`bool`: Returns `True` if the message is the original crossposted message.
 
 <a id="api-messageflags-is-crossposted"></a>
 
 ##### `is_crossposted(self)`
 
-- **Class:** `bool`: Returns `True` if the message was crossposted from another channel.
+`bool`: Returns `True` if the message was crossposted from another channel.
 
 <a id="api-messageflags-suppress-embeds"></a>
 
 ##### `suppress_embeds(self)`
 
-- **Class:** `bool`: Returns `True` if the message's embeds have been suppressed.
+`bool`: Returns `True` if the message's embeds have been suppressed.
 
 <a id="api-messageflags-source-message-deleted"></a>
 
 ##### `source_message_deleted(self)`
 
-- **Class:** `bool`: Returns `True` if the source message for this crosspost has been deleted.
+`bool`: Returns `True` if the source message for this crosspost has been deleted.
 
 <a id="api-messageflags-urgent"></a>
 
 ##### `urgent(self)`
 
-- **Class:** `bool`: Returns `True` if the source message is an urgent message.
+`bool`: Returns `True` if the source message is an urgent message.
 
 An urgent message is one sent by Discord Trust and Safety.
 
@@ -32778,7 +32673,7 @@ An urgent message is one sent by Discord Trust and Safety.
 
 ##### `has_thread(self)`
 
-- **Class:** `bool`: Returns `True` if the source message is associated with a thread.
+`bool`: Returns `True` if the source message is associated with a thread.
 
 > **Added in version 2.0**
 
@@ -32786,7 +32681,7 @@ An urgent message is one sent by Discord Trust and Safety.
 
 ##### `ephemeral(self)`
 
-- **Class:** `bool`: Returns `True` if the source message is ephemeral.
+`bool`: Returns `True` if the source message is ephemeral.
 
 > **Added in version 2.0**
 
@@ -32794,8 +32689,8 @@ An urgent message is one sent by Discord Trust and Safety.
 
 ##### `loading(self)`
 
-- **Class:** `bool`: Returns `True` if the message is an interaction response and the bot
-  is "thinking".
+`bool`: Returns `True` if the message is an interaction response and the bot
+is "thinking".
 
 > **Added in version 2.0**
 
@@ -32803,8 +32698,8 @@ An urgent message is one sent by Discord Trust and Safety.
 
 ##### `failed_to_mention_some_roles_in_thread(self)`
 
-- **Class:** `bool`: Returns `True` if the message failed to mention some roles in a thread
-  and add their members to the thread.
+`bool`: Returns `True` if the message failed to mention some roles in a thread
+and add their members to the thread.
 
 > **Added in version 2.0**
 
@@ -32812,7 +32707,7 @@ An urgent message is one sent by Discord Trust and Safety.
 
 ##### `suppress_notifications(self)`
 
-- **Class:** `bool`: Returns `True` if the message will not trigger push and desktop notifications.
+`bool`: Returns `True` if the message will not trigger push and desktop notifications.
 
 > **Added in version 2.2**
 
@@ -32820,7 +32715,7 @@ An urgent message is one sent by Discord Trust and Safety.
 
 ##### `silent(self)`
 
-- **Class:** `bool`: Alias for `suppress_notifications`.
+`bool`: Alias for `suppress_notifications`.
 
 > **Added in version 2.2**
 
@@ -32828,7 +32723,7 @@ An urgent message is one sent by Discord Trust and Safety.
 
 ##### `voice(self)`
 
-- **Class:** `bool`: Returns `True` if the message is a voice message.
+`bool`: Returns `True` if the message is a voice message.
 
 > **Added in version 2.3**
 
@@ -32836,7 +32731,7 @@ An urgent message is one sent by Discord Trust and Safety.
 
 ##### `forwarded(self)`
 
-- **Class:** `bool`: Returns `True` if the message is a forwarded message.
+`bool`: Returns `True` if the message is a forwarded message.
 
 > **Added in version 2.5**
 
@@ -32844,7 +32739,7 @@ An urgent message is one sent by Discord Trust and Safety.
 
 ##### `components_v2(self)`
 
-- **Class:** `bool`: Returns `True` if the message has Discord's v2 components.
+`bool`: Returns `True` if the message has Discord's v2 components.
 
 Does not allow sending any `content`, `embed`, `embeds`, `stickers`, or `poll`.
 
@@ -32941,85 +32836,85 @@ flags via the properties rather than using this raw value.
 
 ##### `staff(self)`
 
-- **Class:** `bool`: Returns `True` if the user is a Discord Employee.
+`bool`: Returns `True` if the user is a Discord Employee.
 
 <a id="api-publicuserflags-partner"></a>
 
 ##### `partner(self)`
 
-- **Class:** `bool`: Returns `True` if the user is a Discord Partner.
+`bool`: Returns `True` if the user is a Discord Partner.
 
 <a id="api-publicuserflags-hypesquad"></a>
 
 ##### `hypesquad(self)`
 
-- **Class:** `bool`: Returns `True` if the user is a HypeSquad Events member.
+`bool`: Returns `True` if the user is a HypeSquad Events member.
 
 <a id="api-publicuserflags-bug-hunter"></a>
 
 ##### `bug_hunter(self)`
 
-- **Class:** `bool`: Returns `True` if the user is a Bug Hunter
+`bool`: Returns `True` if the user is a Bug Hunter
 
 <a id="api-publicuserflags-hypesquad-bravery"></a>
 
 ##### `hypesquad_bravery(self)`
 
-- **Class:** `bool`: Returns `True` if the user is a HypeSquad Bravery member.
+`bool`: Returns `True` if the user is a HypeSquad Bravery member.
 
 <a id="api-publicuserflags-hypesquad-brilliance"></a>
 
 ##### `hypesquad_brilliance(self)`
 
-- **Class:** `bool`: Returns `True` if the user is a HypeSquad Brilliance member.
+`bool`: Returns `True` if the user is a HypeSquad Brilliance member.
 
 <a id="api-publicuserflags-hypesquad-balance"></a>
 
 ##### `hypesquad_balance(self)`
 
-- **Class:** `bool`: Returns `True` if the user is a HypeSquad Balance member.
+`bool`: Returns `True` if the user is a HypeSquad Balance member.
 
 <a id="api-publicuserflags-early-supporter"></a>
 
 ##### `early_supporter(self)`
 
-- **Class:** `bool`: Returns `True` if the user is an Early Supporter.
+`bool`: Returns `True` if the user is an Early Supporter.
 
 <a id="api-publicuserflags-team-user"></a>
 
 ##### `team_user(self)`
 
-- **Class:** `bool`: Returns `True` if the user is a Team User.
+`bool`: Returns `True` if the user is a Team User.
 
 <a id="api-publicuserflags-system"></a>
 
 ##### `system(self)`
 
-- **Class:** `bool`: Returns `True` if the user is a system user (i.e. represents Discord officially).
+`bool`: Returns `True` if the user is a system user (i.e. represents Discord officially).
 
 <a id="api-publicuserflags-bug-hunter-level-2"></a>
 
 ##### `bug_hunter_level_2(self)`
 
-- **Class:** `bool`: Returns `True` if the user is a Bug Hunter Level 2
+`bool`: Returns `True` if the user is a Bug Hunter Level 2
 
 <a id="api-publicuserflags-verified-bot"></a>
 
 ##### `verified_bot(self)`
 
-- **Class:** `bool`: Returns `True` if the user is a Verified Bot.
+`bool`: Returns `True` if the user is a Verified Bot.
 
 <a id="api-publicuserflags-verified-bot-developer"></a>
 
 ##### `verified_bot_developer(self)`
 
-- **Class:** `bool`: Returns `True` if the user is an Early Verified Bot Developer.
+`bool`: Returns `True` if the user is an Early Verified Bot Developer.
 
 <a id="api-publicuserflags-early-verified-bot-developer"></a>
 
 ##### `early_verified_bot_developer(self)`
 
-- **Class:** `bool`: An alias for `verified_bot_developer`.
+`bool`: An alias for `verified_bot_developer`.
 
 > **Added in version 1.5**
 
@@ -33027,7 +32922,7 @@ flags via the properties rather than using this raw value.
 
 ##### `discord_certified_moderator(self)`
 
-- **Class:** `bool`: Returns `True` if the user is a Discord Certified Moderator.
+`bool`: Returns `True` if the user is a Discord Certified Moderator.
 
 > **Added in version 2.0**
 
@@ -33035,8 +32930,8 @@ flags via the properties rather than using this raw value.
 
 ##### `bot_http_interactions(self)`
 
-- **Class:** `bool`: Returns `True` if the user is a bot that only uses HTTP interactions
-  and is shown in the online member list.
+`bool`: Returns `True` if the user is a bot that only uses HTTP interactions
+and is shown in the online member list.
 
 > **Added in version 2.0**
 
@@ -33044,7 +32939,7 @@ flags via the properties rather than using this raw value.
 
 ##### `spammer(self)`
 
-- **Class:** `bool`: Returns `True` if the user is flagged as a spammer by Discord.
+`bool`: Returns `True` if the user is flagged as a spammer by Discord.
 
 > **Added in version 2.0**
 
@@ -33052,7 +32947,7 @@ flags via the properties rather than using this raw value.
 
 ##### `active_developer(self)`
 
-- **Class:** `bool`: Returns `True` if the user is an active developer.
+`bool`: Returns `True` if the user is an active developer.
 
 > **Added in version 2.1**
 
@@ -33142,32 +33037,32 @@ rather than using this raw value.
 
 ##### `did_rejoin(self)`
 
-- **Class:** `bool`: Returns `True` if the member left and rejoined the `discord.Member.guild`.
+`bool`: Returns `True` if the member left and rejoined the `discord.Member.guild`.
 
 <a id="api-memberflags-completed-onboarding"></a>
 
 ##### `completed_onboarding(self)`
 
-- **Class:** `bool`: Returns `True` if the member has completed onboarding.
+`bool`: Returns `True` if the member has completed onboarding.
 
 <a id="api-memberflags-bypasses-verification"></a>
 
 ##### `bypasses_verification(self)`
 
-- **Class:** `bool`: Returns `True` if the member can bypass the guild verification requirements.
+`bool`: Returns `True` if the member can bypass the guild verification requirements.
 
 <a id="api-memberflags-started-onboarding"></a>
 
 ##### `started_onboarding(self)`
 
-- **Class:** `bool`: Returns `True` if the member has started onboarding.
+`bool`: Returns `True` if the member has started onboarding.
 
 <a id="api-memberflags-guest"></a>
 
 ##### `guest(self)`
 
-- **Class:** `bool`: Returns `True` if the member is a guest and can only access
-  the voice channel they were invited to.
+`bool`: Returns `True` if the member is a guest and can only access
+the voice channel they were invited to.
 
 > **Added in version 2.5**
 
@@ -33175,7 +33070,7 @@ rather than using this raw value.
 
 ##### `started_home_actions(self)`
 
-- **Class:** `bool`: Returns `True` if the member has started Server Guide new member actions.
+`bool`: Returns `True` if the member has started Server Guide new member actions.
 
 > **Added in version 2.5**
 
@@ -33183,7 +33078,7 @@ rather than using this raw value.
 
 ##### `completed_home_actions(self)`
 
-- **Class:** `bool`: Returns `True` if the member has completed Server Guide new member actions.
+`bool`: Returns `True` if the member has completed Server Guide new member actions.
 
 > **Added in version 2.5**
 
@@ -33191,8 +33086,8 @@ rather than using this raw value.
 
 ##### `automod_quarantined_username(self)`
 
-- **Class:** `bool`: Returns `True` if the member's username, nickname, or global name has been
-  blocked by AutoMod.
+`bool`: Returns `True` if the member's username, nickname, or global name has been
+blocked by AutoMod.
 
 > **Added in version 2.5**
 
@@ -33200,8 +33095,8 @@ rather than using this raw value.
 
 ##### `automod_quarantined_guild_tag(self)`
 
-- **Class:** `bool`: Returns `True` if the member's guild tag has been
-  blocked by AutoMod.
+`bool`: Returns `True` if the member's guild tag has been
+blocked by AutoMod.
 
 > **Added in version 2.6**
 
@@ -33209,7 +33104,7 @@ rather than using this raw value.
 
 ##### `dm_settings_upsell_acknowledged(self)`
 
-- **Class:** `bool`: Returns `True` if the member has dismissed the DM settings upsell.
+`bool`: Returns `True` if the member has dismissed the DM settings upsell.
 
 > **Added in version 2.5**
 
@@ -33293,25 +33188,25 @@ rather than using this raw value.
 
 ##### `clip(self)`
 
-- **Class:** `bool`: Returns `True` if the attachment is a clip.
+`bool`: Returns `True` if the attachment is a clip.
 
 <a id="api-attachmentflags-thumbnail"></a>
 
 ##### `thumbnail(self)`
 
-- **Class:** `bool`: Returns `True` if the attachment is a thumbnail.
+`bool`: Returns `True` if the attachment is a thumbnail.
 
 <a id="api-attachmentflags-remix"></a>
 
 ##### `remix(self)`
 
-- **Class:** `bool`: Returns `True` if the attachment has been edited using the remix feature.
+`bool`: Returns `True` if the attachment has been edited using the remix feature.
 
 <a id="api-attachmentflags-spoiler"></a>
 
 ##### `spoiler(self)`
 
-- **Class:** `bool`: Returns `True` if the attachment was marked as a spoiler.
+`bool`: Returns `True` if the attachment was marked as a spoiler.
 
 > **Added in version 2.5**
 
@@ -33319,7 +33214,7 @@ rather than using this raw value.
 
 ##### `contains_explicit_media(self)`
 
-- **Class:** `bool`: Returns `True` if the attachment was flagged as sensitive content.
+`bool`: Returns `True` if the attachment was flagged as sensitive content.
 
 > **Added in version 2.5**
 
@@ -33327,7 +33222,7 @@ rather than using this raw value.
 
 ##### `animated(self)`
 
-- **Class:** `bool`: Returns `True` if the attachment is an animated image.
+`bool`: Returns `True` if the attachment is an animated image.
 
 > **Added in version 2.5**
 
@@ -33411,7 +33306,7 @@ rather than using this raw value.
 
 ##### `in_prompt(self)`
 
-- **Class:** `bool`: Returns `True` if the role can be selected by members in an onboarding prompt.
+`bool`: Returns `True` if the role can be selected by members in an onboarding prompt.
 
 ### SKUFlags
 
@@ -33493,19 +33388,19 @@ rather than using this raw value.
 
 ##### `available(self)`
 
-- **Class:** `bool`: Returns `True` if the SKU is available for purchase.
+`bool`: Returns `True` if the SKU is available for purchase.
 
 <a id="api-skuflags-guild-subscription"></a>
 
 ##### `guild_subscription(self)`
 
-- **Class:** `bool`: Returns `True` if the SKU is a guild subscription.
+`bool`: Returns `True` if the SKU is a guild subscription.
 
 <a id="api-skuflags-user-subscription"></a>
 
 ##### `user_subscription(self)`
 
-- **Class:** `bool`: Returns `True` if the SKU is a user subscription.
+`bool`: Returns `True` if the SKU is a user subscription.
 
 ### EmbedFlags
 
@@ -33580,14 +33475,14 @@ rather than using this raw value.
 
 ##### `contains_explicit_media(self)`
 
-- **Class:** `bool`: Returns `True` if the embed was flagged as sensitive content.
+`bool`: Returns `True` if the embed was flagged as sensitive content.
 
 <a id="api-embedflags-content-inventory-entry"></a>
 
 ##### `content_inventory_entry(self)`
 
-- **Class:** `bool`: Returns `True` if the embed is a reply to an activity card, and is no
-  longer displayed.
+`bool`: Returns `True` if the embed is a reply to an activity card, and is no
+longer displayed.
 
 ### InviteFlags
 
@@ -33662,7 +33557,7 @@ rather than using this raw value.
 
 ##### `guest(self)`
 
-- **Class:** `bool`: Returns `True` if this is a guest invite for a voice channel.
+`bool`: Returns `True` if this is a guest invite for a voice channel.
 
 ### ForumTag
 
@@ -33765,7 +33660,7 @@ The layout type of the poll.
 
 ##### `question(self) -> str`
 
-- **Class:** `str`: Returns this poll's question string.
+`str`: Returns this poll's question string.
 
 <a id="api-poll-answers"></a>
 
@@ -33823,7 +33718,7 @@ Optional\[`Message`]: The message this poll is from.
 
 ##### `total_votes(self) -> int`
 
-- **Class:** `int`: Returns the sum of all the answer votes.
+`int`: Returns the sum of all the answer votes.
 
 If the poll has not yet finished, this is an approximate vote count.
 
@@ -33834,7 +33729,7 @@ If the poll has not yet finished, this is an approximate vote count.
 
 ##### `is_finalised(self) -> bool`
 
-- **Class:** `bool`: Returns whether the poll has finalised.
+`bool`: Returns whether the poll has finalised.
 
 This always returns `False` for stateless polls.
 
@@ -34104,8 +33999,7 @@ The shard ID that got closed if applicable.
 #### `InteractionResponded(ClientException)`
 
 Exception that's raised when sending another interaction response using
-
-- **Class:** `InteractionResponse` when one has already been done before.
+`InteractionResponse` when one has already been done before.
 
 An interaction can only respond once.
 

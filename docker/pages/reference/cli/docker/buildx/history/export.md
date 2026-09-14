@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/buildx/docker_buildx_history_export.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_history_export.yaml)
+> Pinned source for Docker main: [data/cli/buildx/docker_buildx_history_export.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_history_export.yaml)
 
 # docker buildx history export
 
@@ -14,18 +14,18 @@ Desktop or shared across environments.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--all` |  | Export all build records for the builder |
-| `--finalize` |  | Ensure build records are finalized before exporting |
-| `-o`, `--output` |  | Output file path |
+| Option           | Default | Description                                         |
+| ---------------- | ------- | --------------------------------------------------- |
+| `--all`          |         | Export all build records for the builder            |
+| `--finalize`     |         | Ensure build records are finalized before exporting |
+| `-o`, `--output` |         | Output file path                                    |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--builder` |  | Override the configured builder instance |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option          | Default | Description                              |
+| --------------- | ------- | ---------------------------------------- |
+| `--builder`     |         | Override the configured builder instance |
+| `-D`, `--debug` |         | Enable debug logging                     |
 
 ## Examples
 

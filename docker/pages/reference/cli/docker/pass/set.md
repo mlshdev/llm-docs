@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/secrets/docker_pass_set.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/secrets/docker_pass_set.yaml)
+> Pinned source for Docker main: [data/cli/secrets/docker_pass_set.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/secrets/docker_pass_set.yaml)
 
 # docker pass set
 
@@ -11,9 +11,10 @@ Set a secret
 Stores a secret in the local OS keychain. The secret value can be provided inline (`NAME=VALUE`) or piped via STDIN.
 
 Behavior when a secret with the same id already exists is platform-dependent:
-  - macOS (Keychain): the command fails with a duplicate-item error.
-  - Linux (Secret Service) and Windows (Credential Manager): the existing
-    value is silently overwritten.
+
+- macOS (Keychain): the command fails with a duplicate-item error.
+- Linux (Secret Service) and Windows (Credential Manager): the existing
+  value is silently overwritten.
 
 Pass `--force` to overwrite an existing secret. On Linux and Windows the
 replacement is performed atomically. On macOS the Keychain API requires
@@ -21,10 +22,10 @@ a delete-then-add sequence.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--force` |  | Overwrite existing secret if it already exists |
-| `--metadata` |  | Non-sensitive key=value metadata (repeatable) |
+| Option          | Default | Description                                    |
+| --------------- | ------- | ---------------------------------------------- |
+| `-f`, `--force` |         | Overwrite existing secret if it already exists |
+| `--metadata`    |         | Non-sensitive key=value metadata (repeatable)  |
 
 ## Examples
 

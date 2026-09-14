@@ -1,8 +1,9 @@
-> Commit-pinned source for SearXNG master: [docs/dev/engines/online/exaapi.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/exaapi.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/online/exaapi.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/exaapi.rst)
 
-.. \_exaapi engine:
+<a id="exaapi-engine"></a>
 
 # Exa API Engine
 
-.. automodule:: searx.engines.exaapi
-:members:
+#### `searx.engines.exaapi`
+
+Static Python API reference (`automodule`).

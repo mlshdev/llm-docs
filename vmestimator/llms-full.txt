@@ -7,7 +7,9 @@ Source commit: 1c2c6af816c60586dcc6b58c9fd92d5c0bd66c4f
 # Document: vmestimator
 
 Source path: docs/vmestimator/_index.md
-Canonical source: https://github.com/VictoriaMetrics/vmestimator/blob/1c2c6af816c60586dcc6b58c9fd92d5c0bd66c4f/docs/vmestimator/_index.md
+Pinned source: https://github.com/VictoriaMetrics/vmestimator/blob/1c2c6af816c60586dcc6b58c9fd92d5c0bd66c4f/docs/vmestimator/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/vmestimator/blob/1c2c6af816c60586dcc6b58c9fd92d5c0bd66c4f/docs/vmestimator/_index.md
+Description: vmestimator measures metrics cardinality across arbitrary label dimensions in real time and exposes the results as metrics.
 
 `vmestimator` measures metrics cardinality across arbitrary label dimensions in real time and exposes the results as metrics.
 

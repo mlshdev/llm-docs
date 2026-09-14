@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/pre-configure-microsoft-oauth-credentials.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/pre-configure-microsoft-oauth-credentials.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/pre-configure-microsoft-oauth-credentials.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/pre-configure-microsoft-oauth-credentials.md)
 
 # Pre-configure Microsoft OAuth credentials <a id="pre-configure-microsoft-oauth-credentials"></a>
 
@@ -309,31 +309,31 @@ az keyvault secret set \
 Create a managed identity and establish the federated credential:
 
 ```bash
-# Create a managed identity <a id="create-a-managed-identity"></a>
+# Create a managed identity <a href="#create-a-managed-identity" id="create-a-managed-identity"></a>
 az identity create \
   --name n8n-workload-identity \
   --resource-group your-resource-group \
   --location your-region
 
-# Get the identity client ID <a id="get-the-identity-client-id"></a>
+# Get the identity client ID <a href="#get-the-identity-client-id" id="get-the-identity-client-id"></a>
 CLIENT_ID=$(az identity show \
   --name n8n-workload-identity \
   --resource-group your-resource-group \
   --query clientId -o tsv)
 
-# Grant the identity access to the Key Vault <a id="grant-the-identity-access-to-the-key-vault"></a>
+# Grant the identity access to the Key Vault <a href="#grant-the-identity-access-to-the-key-vault" id="grant-the-identity-access-to-the-key-vault"></a>
 az keyvault set-policy \
   --name n8n-credentials-vault \
   --secret-permissions get \
   --spn "$CLIENT_ID"
 
-# Get the OIDC issuer URL for your cluster <a id="get-the-oidc-issuer-url-for-your-cluster"></a>
+# Get the OIDC issuer URL for your cluster <a href="#get-the-oidc-issuer-url-for-your-cluster" id="get-the-oidc-issuer-url-for-your-cluster"></a>
 OIDC_ISSUER=$(az aks show \
   --name your-cluster \
   --resource-group your-resource-group \
   --query "oidcIssuerProfile.issuerUrl" -o tsv)
 
-# Create the federated credential <a id="create-the-federated-credential"></a>
+# Create the federated credential <a href="#create-the-federated-credential" id="create-the-federated-credential"></a>
 az identity credential create \
   --name n8n-workload-identity \
   --resource-group your-resource-group \
@@ -452,18 +452,18 @@ echo -n '{"microsoftOutlookOAuth2Api":{"clientId":"YOUR_CLIENT_ID","clientSecret
 **3. Set up Workload Identity Federation:**
 
 ```bash
-# Create a Google service account <a id="create-a-google-service-account"></a>
+# Create a Google service account <a href="#create-a-google-service-account" id="create-a-google-service-account"></a>
 gcloud iam service-accounts create n8n-secret-reader \
   --display-name="n8n Secret Reader" \
   --project your-project-id
 
-# Grant it access to the secret <a id="grant-it-access-to-the-secret"></a>
+# Grant it access to the secret <a href="#grant-it-access-to-the-secret" id="grant-it-access-to-the-secret"></a>
 gcloud secrets add-iam-policy-binding n8n-credentials-overwrite \
   --member="serviceAccount:n8n-secret-reader@your-project-id.iam.gserviceaccount.com" \
   --role="roles/secretmanager.secretAccessor" \
   --project your-project-id
 
-# Bind the Kubernetes service account to the Google service account <a id="bind-the-kubernetes-service-account-to-the-google-service-account"></a>
+# Bind the Kubernetes service account to the Google service account <a href="#bind-the-kubernetes-service-account-to-the-google-service-account" id="bind-the-kubernetes-service-account-to-the-google-service-account"></a>
 gcloud iam service-accounts add-iam-policy-binding \
   n8n-secret-reader@your-project-id.iam.gserviceaccount.com \
   --role="roles/iam.workloadIdentityUser" \
@@ -485,12 +485,12 @@ metadata:
 **5. Install the CSI Driver and GCP provider:**
 
 ```bash
-# Install the CSI driver <a id="install-the-csi-driver"></a>
+# Install the CSI driver <a href="#install-the-csi-driver" id="install-the-csi-driver"></a>
 helm repo add secrets-store-csi-driver https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts
 helm install csi-secrets-store secrets-store-csi-driver/secrets-store-csi-driver \
   --namespace kube-system
 
-# Install the GCP provider <a id="install-the-gcp-provider"></a>
+# Install the GCP provider <a href="#install-the-gcp-provider" id="install-the-gcp-provider"></a>
 kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/secrets-store-csi-driver-provider-gcp/main/deploy/provider-gcp-plugin.yaml
 ```
 

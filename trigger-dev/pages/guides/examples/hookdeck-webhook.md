@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/guides/examples/hookdeck-webhook.mdx](https://trigger.dev/docs/guides/examples/hookdeck-webhook)
+> Pinned source for Trigger.dev v4.5.16: [docs/guides/examples/hookdeck-webhook.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/guides/examples/hookdeck-webhook.mdx)
+> Canonical documentation: https://trigger.dev/docs/guides/examples/hookdeck-webhook
 
 # Trigger tasks from Hookdeck webhooks
 

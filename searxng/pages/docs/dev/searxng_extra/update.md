@@ -1,83 +1,93 @@
-> Commit-pinned source for SearXNG master: [docs/dev/searxng_extra/update.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/searxng_extra/update.rst)
+> Pinned source for SearXNG master: [docs/dev/searxng_extra/update.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/searxng_extra/update.rst)
 
 # `searxng_extra/update/`
 
-:origin:`[source] <searxng_extra/update/__init__.py>`
+[\[source\]](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searxng_extra/update/__init__.py)
 
-Scripts to update static data in :origin:`searx/data/`
+Scripts to update static data in [searx/data/](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/data/)
 
-.. \_update\_ahmia\_blacklist.py:
+<a id="update-ahmia-blacklist-py"></a>
 
 # `update_ahmia_blacklist.py`
 
-:origin:`[source] <searxng_extra/update/update_ahmia_blacklist.py>`
+[\[source\]](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searxng_extra/update/update_ahmia_blacklist.py)
 
-.. automodule:: searxng\_extra.update.update\_ahmia\_blacklist
-:members:
+#### `searxng_extra.update.update_ahmia_blacklist`
+
+Static Python API reference (`automodule`).
 
 # `update_currencies.py`
 
-:origin:`[source] <searxng_extra/update/update_currencies.py>`
+[\[source\]](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searxng_extra/update/update_currencies.py)
 
-.. automodule:: searxng\_extra.update.update\_currencies
-:members:
+#### `searxng_extra.update.update_currencies`
+
+Static Python API reference (`automodule`).
 
 # `update_engine_descriptions.py`
 
-:origin:`[source] <searxng_extra/update/update_engine_descriptions.py>`
+[\[source\]](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searxng_extra/update/update_engine_descriptions.py)
 
-.. automodule:: searxng\_extra.update.update\_engine\_descriptions
-:members:
+#### `searxng_extra.update.update_engine_descriptions`
+
+Static Python API reference (`automodule`).
 
 # `update_external_bangs.py`
 
-:origin:`[source] <searxng_extra/update/update_external_bangs.py>`
+[\[source\]](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searxng_extra/update/update_external_bangs.py)
 
-.. automodule:: searxng\_extra.update.update\_external\_bangs
-:members:
+#### `searxng_extra.update.update_external_bangs`
+
+Static Python API reference (`automodule`).
 
 # `update_firefox_version.py`
 
-:origin:`[source] <searxng_extra/update/update_firefox_version.py>`
+[\[source\]](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searxng_extra/update/update_firefox_version.py)
 
-.. automodule:: searxng\_extra.update.update\_firefox\_version
-:members:
+#### `searxng_extra.update.update_firefox_version`
+
+Static Python API reference (`automodule`).
 
 # `update_engine_traits.py`
 
-:origin:`[source] <searxng_extra/update/update_engine_traits.py>`
+[\[source\]](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searxng_extra/update/update_engine_traits.py)
 
-.. automodule:: searxng\_extra.update.update\_engine\_traits
-:members:
+#### `searxng_extra.update.update_engine_traits`
 
-.. \_update\_osm\_keys\_tags.py:
+Static Python API reference (`automodule`).
+
+<a id="update-osm-keys-tags-py"></a>
 
 # `update_osm_keys_tags.py`
 
-:origin:`[source] <searxng_extra/update/update_osm_keys_tags.py>`
+[\[source\]](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searxng_extra/update/update_osm_keys_tags.py)
 
-.. automodule:: searxng\_extra.update.update\_osm\_keys\_tags
-:members:
+#### `searxng_extra.update.update_osm_keys_tags`
+
+Static Python API reference (`automodule`).
 
 # `update_pygments.py`
 
-:origin:`[source] <searxng_extra/update/update_pygments.py>`
+[\[source\]](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searxng_extra/update/update_pygments.py)
 
-.. automodule:: searxng\_extra.update.update\_pygments
-:members:
+#### `searxng_extra.update.update_pygments`
 
-.. \_update\_locales.py:
+Static Python API reference (`automodule`).
+
+<a id="update-locales-py"></a>
 
 # `update_locales.py`
 
-:origin:`[source] <searxng_extra/update/update_locales.py>`
+[\[source\]](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searxng_extra/update/update_locales.py)
 
-.. automodule:: searxng\_extra.update.update\_locales
-:members:
+#### `searxng_extra.update.update_locales`
+
+Static Python API reference (`automodule`).
 
 # `update_wikidata.py`
 
-:origin:`[source] <searxng_extra/update/update_wikidata.py>`
+[\[source\]](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searxng_extra/update/update_wikidata.py)
 
-.. automodule:: searxng\_extra.update.update\_wikidata
-:members:
+#### `searxng_extra.update.update_wikidata`
+
+Static Python API reference (`automodule`).

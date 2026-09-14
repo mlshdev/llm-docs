@@ -1,45 +1,48 @@
-> Commit-pinned source for SearXNG master: [docs/dev/reST.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/reST.rst)
+> Pinned source for SearXNG master: [docs/dev/reST.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/reST.rst)
 
-.. \_reST primer:
+<a id="rest-primer"></a>
 
 # reST primer
 
-### [KISS](https://en.wikipedia.org/wiki/KISS_principle) and readability
+### KISS\_ and readability\_
 
 Instead of defining more and more roles, we at SearXNG encourage our
-contributors to follow principles like KISS and readability.
+contributors to follow principles like KISS\_ and readability\_.
 
-We at SearXNG are using reStructuredText (aka reST) markup for all kind of
-documentation.  With the builders from the Sphinx project a HTML output is
-generated and deployed at docs.searxng.org.  For build prerequisites read
-\[docs build]\(#docs build).
+We at SearXNG are using reStructuredText (aka reST\_) markup for all kind of
+documentation.  With the builders from the Sphinx\_ project a HTML output is
+generated and deployed at docs.searxng.org\_.  For build prerequisites read
+[docs build](https://docs.searxng.org/admin/buildhosts.html#docs-build).
 
-The source files of SearXNG's documentation are located at :origin:`docs`.
-Sphinx assumes source files to be encoded in UTF-8 by default.  Run :ref:`make
-docs.live <make docs.live>` to build HTML while editing.
+<a id="docs-searxng-org"></a>
+
+The source files of SearXNG's documentation are located at [docs](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs).
+Sphinx assumes source files to be encoded in UTF-8 by default.  Run [make docs.live](https://docs.searxng.org/dev/contribution_guide.html#make-docs-live) to build HTML while editing.
 
 ### Further reading
 
-- Sphinx-Primer
-- Sphinx markup constructs
-- [reST](https://docutils.sourceforge.io/rst.html), [docutils](http://docutils.sourceforge.net/docs/index.html), [docutils FAQ](http://docutils.sourceforge.net/FAQ.html)
-- [Sphinx](https://www.sphinx-doc.org), sphinx-doc FAQ
-- [sphinx config](https://www.sphinx-doc.org/en/stable/config.html), doctree
+- Sphinx-Primer\_
+- [Sphinx markup constructs](https://docs.searxng.org/dev/reST.html#sphinx-markup-constructs)
+- reST\_, docutils\_, [docutils FAQ](https://docs.searxng.org/dev/reST.html#docutils-faq)
+- Sphinx\_, sphinx-doc FAQ
+- [sphinx config](https://docs.searxng.org/dev/reST.html#sphinx-config), doctree\_
 - sphinx cross references
-- [linuxdoc](https://return42.github.io/linuxdoc)
-- [intersphinx](https://www.sphinx-doc.org/en/stable/ext/intersphinx.html)
-- [sphinx-jinja](https://github.com/tardyp/sphinx-jinja)
-- [Sphinx's autodoc](https://www.sphinx-doc.org/en/stable/ext/autodoc.html)
-- Sphinx's Python domain, Sphinx's C domain
-- [SVG](https://www.w3.org/TR/SVG11/expanded-toc.html), [ImageMagick](https://www.imagemagick.org)
-- [DOT](https://graphviz.gitlab.io/_pages/doc/info/lang.html), Graphviz's dot, [Graphviz](https://graphviz.gitlab.io)
+- linuxdoc\_
+- intersphinx\_
+- sphinx-jinja\_
+- [Sphinx's autodoc](https://docs.searxng.org/dev/reST.html#sphinx-s-autodoc)
+- [Sphinx's Python domain](https://docs.searxng.org/dev/reST.html#sphinx-s-python-domain), [Sphinx's C domain](https://docs.searxng.org/dev/reST.html#sphinx-s-c-domain)
+- SVG\_, ImageMagick\_
+- DOT\_, Graphviz's dot, Graphviz\_
 
-[Sphinx](https://www.sphinx-doc.org) and reST have their place in the python ecosystem.  Over that reST is
-used in popular projects, e.g the Linux kernel documentation [\[kernel doc\]](https://www.kernel.org/doc/html/latest/doc-guide/sphinx.html).
+Sphinx\_ and reST\_ have their place in the python ecosystem.  Over that reST is
+used in popular projects, e.g the Linux kernel documentation [\[kernel doc\]](https://docs.searxng.org/dev/reST.html#kernel-doc).
+
+<a id="kernel-doc"></a>
 
 ### Content matters
 
-The readability of the reST sources has its value, therefore we recommend to
+The readability\_ of the reST sources has its value, therefore we recommend to
 make sparse usage of reST markup / .. content matters!
 
 **reST** is a plaintext markup language, its markup is *mostly* intuitive and
@@ -59,237 +62,223 @@ trained author brings with, to reach a well feedback from readers:
   view.
 - Limit the subject, use cross links for any further reading.
 
-To be more concrete what a *point of view* means.  In the (:origin:`docs`)
+To be more concrete what a *point of view* means.  In the ([docs](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs))
 folder we have three sections (and the *blog* folder), each dedicate to a
 different group of audience.
 
-User's POV: :origin:`docs/user`
+**User's POV: [docs/user](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/user)**
+
 A typical user knows about search engines and might have heard about
 meta crawlers and privacy.
 
-Admin's POV: :origin:`docs/admin`
+**Admin's POV: [docs/admin](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin)**
+
 A typical Admin knows about setting up services on a linux system, but he does
 not know all the pros and cons of a SearXNG setup.
 
-Developer's POV: :origin:`docs/dev`
-Depending on the readability of code, a typical developer is able to read and
+**Developer's POV: [docs/dev](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev)**
+
+Depending on the readability\_ of code, a typical developer is able to read and
 understand source code.  Describe what a item aims to do (e.g. a function).
 If the chronological order matters, describe it.  Name the *out-of-limits
 conditions* and all the side effects a external developer will not know.
 
-.. \_reST inline markup:
+<a id="rest-inline-markup"></a>
 
 # Basic inline markup
 
 ### Inline markup
 
-- \[reST roles]\(#reST roles)
-- \[reST smart ref]\(#reST smart ref)
+- [reST roles](https://docs.searxng.org/dev/reST.html#rest-roles)
+- [reST smart ref](https://docs.searxng.org/dev/reST.html#rest-smart-ref)
 
 Basic inline markup is done with asterisks and backquotes.  If asterisks or
 backquotes appear in running text and could be confused with inline markup
 delimiters, they have to be escaped with a backslash (`\*pointer`).
 
-.. table:: basic inline markup
-:widths: 4 3 7
+**basic inline markup**
 
-\================================================ ==================== ========================
-description                                      rendered             markup
-\================================================ ==================== ========================
-one asterisk for emphasis                        *italics*            `*italics*`
-two asterisks for strong emphasis                **boldface**         `**boldface**`
-backquotes for code samples and literals         `foo()`            `foo()`
-quote asterisks or backquotes                    \*foo is a pointer   `\*foo is a pointer`
-\================================================ ==================== ========================
+| description                              | rendered           | markup               |
+| ---------------------------------------- | ------------------ | -------------------- |
+| one asterisk for emphasis                | *italics*          | `*italics*`          |
+| two asterisks for strong emphasis        | **boldface**       | `**boldface**`       |
+| backquotes for code samples and literals | `foo()`            | `foo()`              |
+| quote asterisks or backquotes            | \*foo is a pointer | `\*foo is a pointer` |
 
-.. \_reST basic structure:
+<a id="rest-basic-structure"></a>
 
 # Basic article structure
 
 The basic structure of an article makes use of heading adornments to markup
 chapter, sections and subsections.
 
-.. \_reST template:
+<a id="rest-template"></a>
 
 ## reST template
 
 reST template for an simple article:
 
-.. code:: reST
-
-```
+```reST
 .. _doc refname:
 
 ==============
-```
+Document title
+==============
 
-# Document title
-
-```
 Lorem ipsum dolor sit amet, consectetur adipisici elit ..  Further read
-[chapter refname](#chapter refname).
+:ref:`chapter refname`.
 
 .. _chapter refname:
-```
 
-# Chapter
+Chapter
+=======
 
-```
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 aliquid ex ea commodi consequat ...
 
 .. _section refname:
-```
 
-## Section
+Section
+-------
 
-```
 lorem ..
 
 .. _subsection refname:
-```
 
-### Subsection
+Subsection
+~~~~~~~~~~
 
-```
 lorem ..
 ```
 
 ## Headings
 
-\#. title - with overline for document title:
+**#. title - with overline for document title:**
 
-.. code:: reST
-
-```
+```reST
+==============
+Document title
 ==============
 ```
 
-# Document title
+**#. chapter - with anchor named `anchor name`:**
 
-\#. chapter - with anchor named `anchor name`:
+```reST
+.. _anchor name:
 
-.. code:: reST
-
+Chapter
+=======
 ```
-  .. _anchor name:
+
+**#. section**
+
+```reST
+Section
+-------
 ```
 
-# Chapter
+**#. subsection**
 
-\#. section
-
-.. code:: reST
-
-## Section
-
-\#. subsection
-
-.. code:: reST
-
-### Subsection
+```reST
+Subsection
+~~~~~~~~~~
+```
 
 # Anchors & Links
 
-.. \_reST anchor:
+<a id="rest-anchor"></a>
 
 ## Anchors
 
-.. \_ref role:
+<a id="ref-role"></a>
 <https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-ref>
 
-To refer a point in the documentation a anchor is needed.  The :ref:`reST
-template <reST template>` shows an example where a chapter titled *"Chapters"*
+To refer a point in the documentation a anchor is needed.  The [reST template](https://docs.searxng.org/dev/reST.html#rest-template) shows an example where a chapter titled *"Chapters"*
 gets an anchor named `chapter title`.  Another example from *this* document,
 where the anchor named `reST anchor`:
 
-.. code:: reST
+```reST
+.. _reST anchor:
 
-.. \_reST anchor:
-
-## Anchors
+Anchors
+-------
 
 To refer a point in the documentation a anchor is needed ...
+```
 
-To refer anchors use the ref role markup:
+To refer anchors use the [ref role](https://docs.searxng.org/dev/reST.html#ref-role) markup:
 
-.. code:: reST
+```reST
+Visit chapter :ref:`reST anchor`.  Or set hyperlink text manually :ref:`foo bar <reST anchor>`.
+```
 
-Visit chapter \[reST anchor]\(#reST anchor).  Or set hyperlink text manually :ref:`foo
-   bar <reST anchor>`.
+> **`:ref:` role**
+>
+> - **Class:** rst-example
+>
+> Visit chapter [reST anchor](https://docs.searxng.org/dev/reST.html#rest-anchor).  Or set hyperlink text manually [foo bar](https://docs.searxng.org/dev/reST.html#rest-anchor).
 
-.. admonition:: `:ref:` role
-:class: rst-example
-
-Visit chapter \[reST anchor]\(#reST anchor).  Or set hyperlink text manually :ref:`foo
-   bar <reST anchor>`.
-
-.. \_reST ordinary ref:
+<a id="rest-ordinary-ref"></a>
 
 ## Link ordinary URL
 
 If you need to reference external URLs use *named* hyperlinks to maintain
 readability of reST sources.  Here is a example taken from *this* article:
 
-.. code:: reST
+```reST
+.. _Sphinx Field Lists:
+   https://www.sphinx-doc.org/en/master/usage/restructuredtext/field-lists.html
 
-.. \_Sphinx Field Lists:
-<https://www.sphinx-doc.org/en/master/usage/restructuredtext/field-lists.html>
-
-With the *named* hyperlink Sphinx Field Lists, the raw text is much more
+With the *named* hyperlink `Sphinx Field Lists`_, the raw text is much more
 readable.
 
 And this shows the alternative (less readable) hyperlink markup `Sphinx Field
-   Lists    <https://www.sphinx-doc.org/en/master/usage/restructuredtext/field-lists.html>`\_\_.
+Lists
+<https://www.sphinx-doc.org/en/master/usage/restructuredtext/field-lists.html>`__.
+```
 
-.. admonition:: Named hyperlink
-:class: rst-example
+> **Named hyperlink**
+>
+> - **Class:** rst-example
+>
+> With the *named* hyperlink [Sphinx Field Lists](https://docs.searxng.org/dev/reST.html#sphinx-field-lists), the raw text is much more
+> readable.
+>
+> And this shows the alternative (less readable) hyperlink markup `Sphinx Field
+> Lists <https://www.sphinx-doc.org/en/master/usage/restructuredtext/field-lists.html>`\_\_.
 
-With the *named* hyperlink Sphinx Field Lists, the raw text is much more
-readable.
-
-And this shows the alternative (less readable) hyperlink markup `Sphinx Field
-   Lists    <https://www.sphinx-doc.org/en/master/usage/restructuredtext/field-lists.html>`\_\_.
-
-.. \_reST smart ref:
+<a id="rest-smart-ref"></a>
 
 ## Smart refs
 
-With the power of sphinx.ext.extlinks and intersphinx referencing external
+With the power of sphinx.ext.extlinks\_ and intersphinx\_ referencing external
 content becomes smart.
 
-.. table:: smart refs with sphinx.ext.extlinks and intersphinx
-:widths: 4 3 7
+**smart refs with sphinx.ext.extlinks\_ and intersphinx\_**
 
-\========================== ================================== ====================================
-refer ...                  rendered example                   markup
-\========================== ================================== ====================================
-:rst:role:`rfc`            :rfc:`822`                         ``:rfc:`822```
-   :rst:role:`pep`            :pep:`8`                           ``:pep:\`8\`\`\`
+| refer ...                  | rendered example                                                                                                        | markup                                                                                                                    |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `rfc`                      | [RFC 822](https://datatracker.ietf.org/doc/html/rfc822)                                                                 | `[RFC 822](https://datatracker.ietf.org/doc/html/rfc822)`                                                                 |
+| `pep`                      | [PEP 8](https://peps.python.org/pep-0008/)                                                                              | `[PEP 8](https://peps.python.org/pep-0008/)`                                                                              |
+| sphinx.ext.extlinks\_      |                                                                                                                         |                                                                                                                           |
+| -------------------------- | ----------------------------------                                                                                      | ------------------------------------                                                                                      |
+| project's wiki article     | [Offline-engines](https://en.wikipedia.org/wiki/Offline-engines)                                                        | `[Offline-engines](https://en.wikipedia.org/wiki/Offline-engines)`                                                        |
+| to docs public URL         | [dev/reST.html](https://docs.searxng.org/dev/reST.html)                                                                 | `[dev/reST.html](https://docs.searxng.org/dev/reST.html)`                                                                 |
+| files & folders origin     | [docs/dev/reST.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/reST.rst) | `[docs/dev/reST.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/reST.rst)` |
+| pull request               | [4](https://github.com/searxng/searxng/pull/4)                                                                          | `[4](https://github.com/searxng/searxng/pull/4)`                                                                          |
+| patch                      | [af2cae6](https://github.com/searxng/searxng/commit/af2cae6)                                                            | `[af2cae6](https://github.com/searxng/searxng/commit/af2cae6)`                                                            |
+| PyPi package               | [curl\_cffi](https://pypi.org/project/curl_cffi/)                                                                       | `[curl_cffi](https://pypi.org/project/curl_cffi/)`                                                                        |
+| manual page man            | `bash(1)`                                                                                                               | `bash(1)`                                                                                                                 |
+| intersphinx\_              |                                                                                                                         |                                                                                                                           |
+| -------------------------- | ----------------------------------                                                                                      | ------------------------------------                                                                                      |
+| external anchor            | python:and                                                                                                              | `python:and`                                                                                                              |
+| external doc anchor        | [jinja:templates](https://docs.searxng.org/jinja:templates.html)                                                        | `[jinja:templates](https://docs.searxng.org/jinja:templates.html)`                                                        |
+| python code object         | `datetime.datetime`                                                                                                     | `datetime.datetime`                                                                                                       |
+| flask code object          | `flask.Flask`                                                                                                           | `flask.Flask`                                                                                                             |
 
-## sphinx.ext.extlinks\_
+Intersphinx is configured in [docs/conf.py](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/conf.py):
 
-project's wiki article     :wiki:`Offline-engines`            ``:wiki:`Offline-engines```
-   to docs public URL         :docs:`dev/reST.html`              ``:docs:`dev/reST.html```
-   files & folders origin     :origin:`docs/dev/reST.rst`        ``:origin:`docs/dev/reST.rst```
-   pull request               :pull:`4`                          ``:pull:`4```
-patch                      :patch:`af2cae6`                   ``:patch:`af2cae6```
-   PyPi package               :pypi:`curl_cffi`                  ``:pypi:`curl_cffi```
-   manual page man            :man:`bash`                        ``:man:`bash\`\`\`
-
-## intersphinx\_
-
-external anchor            [python:and](#)                  `[python:and](#python:and)`
-external doc anchor        [jinja:templates](jinja:templates.md)             `[jinja:templates](jinja:templates.md)`
-python code object         :py:obj:`datetime.datetime`        ``:py:obj:`datetime.datetime```
-   flask code object          :py:obj:`flask.Flask`              ``:py:obj:\`flask.Flask\`\`\`
-\========================== ================================== ====================================
-
-Intersphinx is configured in :origin:`docs/conf.py`:
-
-.. code:: python
-
-```
+```python
 intersphinx_mapping = {
     "python": ("https://docs.python.org/3/", None),
     "flask": ("https://flask.palletsprojects.com/", None),
@@ -301,361 +290,336 @@ intersphinx_mapping = {
 
 To list all anchors of the inventory (e.g. `python`) use:
 
-.. code:: sh
-
-$ python -m sphinx.ext.intersphinx <https://docs.python.org/3/objects.inv>
+```sh
+$ python -m sphinx.ext.intersphinx https://docs.python.org/3/objects.inv
 ...
-$ python -m sphinx.ext.intersphinx <https://docs.searxng.org/objects.inv>
+$ python -m sphinx.ext.intersphinx https://docs.searxng.org/objects.inv
 ...
+```
 
 # Literal blocks
 
-The simplest form of :duref:`literal-blocks` is a indented block introduced by
-two colons (`::`).  For highlighting use :dudir:`highlight` or :ref:`reST
-code` directive.  To include literals from external files use
-:rst:dir:`literalinclude` or [kernel-include](#)
+The simplest form of [literal-blocks](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#literal-blocks) is a indented block introduced by
+two colons (`::`).  For highlighting use [highlight](https://docutils.sourceforge.io/docs/ref/rst/directives.html#highlight) or [reST code](https://docs.searxng.org/dev/reST.html#rest-code) directive.  To include literals from external files use
+`literalinclude` or kernel-include
 directive (latter one expands environment variables in the path name).
 
-.. \_reST literal:
+<a id="rest-literal"></a>
 
 ## `::`
 
-.. code:: reST
+```reST
+::
 
-:
-
-```text
- Literal block
+  Literal block
 
 Lorem ipsum dolor::
 
- Literal block
+  Literal block
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
 eirmod tempor invidunt ut labore ::
 
- Literal block
-
+  Literal block
 ```
 
-.. admonition:: Literal block
-:class: rst-example
+> **Literal block**
+>
+> - **Class:** rst-example
+>
+> ```python
+> Literal block
+> ```
+>
+> Lorem ipsum dolor:
+>
+> ```python
+> Literal block
+> ```
+>
+> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+> eirmod tempor invidunt ut labore :
+>
+> ```python
+> Literal block
+> ```
 
-:
-
-```text
- Literal block
-
-Lorem ipsum dolor::
-
- Literal block
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-eirmod tempor invidunt ut labore ::
-
- Literal block
-
-```
-
-.. \_reST code:
+<a id="rest-code"></a>
 
 ## `code-block`
 
+<a id="pygments"></a>
+
 ### Syntax highlighting
 
-is handled by pygments.
+is handled by pygments\_.
 
-The :rst:dir:`code-block` directive is a variant of the :dudir:`code` directive
+The `code-block` directive is a variant of the [code](https://docutils.sourceforge.io/docs/ref/rst/directives.html#code) directive
 with additional options.  To learn more about code literals visit
-[sphinx:code-examples](#).
+sphinx:code-examples.
 
-.. code-block:: reST
-
-The URL `/stats` handle is shown in [stats-handle](#)
-
-.. code-block:: Python
-:caption: python code block
-:name: stats-handle
-
-```
-  @app.route('/stats', methods=['GET'])
-  def stats():
-      """Render engine statistics page."""
-      stats = get_engines_stats()
-      return render(
-          'stats.html'
-          , stats = stats )
-```
-
-.. code-block:: reST
-
-.. admonition:: Code block
-:class: rst-example
-
-The URL `/stats` handle is shown in [stats-handle](#)
+```reST
+The URL ``/stats`` handle is shown in :ref:`stats-handle`
 
 .. code-block:: Python
-:caption: python code block
-:name: stats-handle
+   :caption: python code block
+   :name: stats-handle
 
+   @app.route('/stats', methods=['GET'])
+   def stats():
+       """Render engine statistics page."""
+       stats = get_engines_stats()
+       return render(
+           'stats.html'
+           , stats = stats )
 ```
-  @app.route('/stats', methods=['GET'])
-  def stats():
-      """Render engine statistics page."""
-      stats = get_engines_stats()
-      return render(
-          'stats.html'
-          , stats = stats )
+
+```reST
 ```
+
+> **Code block**
+>
+> - **Class:** rst-example
+>
+> The URL `/stats` handle is shown in stats-handle
+>
+> ```Python
+> @app.route('/stats', methods=['GET'])
+> def stats():
+>     """Render engine statistics page."""
+>     stats = get_engines_stats()
+>     return render(
+>         'stats.html'
+>         , stats = stats )
+> ```
 
 # Unicode substitution
 
-The :dudir:`unicode directive <unicode-character-codes>` converts Unicode
+The [unicode directive](https://docutils.sourceforge.io/docs/ref/rst/directives.html#unicode-character-codes) converts Unicode
 character codes (numerical values) to characters.  This directive can only be
 used within a substitution definition.
 
-.. code-block:: reST
-
+```reST
 .. |copy| unicode:: 0xA9 .. copyright sign
 .. |(TM)| unicode:: U+2122
 
 Trademark |(TM)| and copyright |copy| glyphs.
+```
 
-.. admonition:: Unicode
-:class: rst-example
+> **Unicode**
+>
+> - **Class:** rst-example
+>
+> Trademark |(TM)| and copyright `copy` glyphs.
 
-.. |copy| unicode:: 0xA9 .. copyright sign
-.. |(TM)| unicode:: U+2122
-
-Trademark |(TM)| and copyright |copy| glyphs.
-
-.. \_reST roles:
+<a id="rest-roles"></a>
 
 # Roles
 
 ### Further reading
 
-- Sphinx Roles
-- [sphinx:usage/restructuredtext/domains](sphinx:usage/restructuredtext/domains.md)
+- [Sphinx Roles](https://docs.searxng.org/dev/reST.html#sphinx-roles)
+- [sphinx:usage/restructuredtext/domains](https://docs.searxng.org/sphinx:usage/restructuredtext/domains.html)
 
-A *custom interpreted text role* (:duref:`ref <roles>`) is an inline piece of
+A *custom interpreted text role* ([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#roles)) is an inline piece of
 explicit markup.  It signifies that that the enclosed text should be interpreted
 in a specific way.
 
 The general markup is one of:
 
-.. code:: reST
+```reST
+```
 
-:rolename:`ref-name`
-:rolename:`ref text <ref-name>`
+**smart refs with sphinx.ext.extlinks\_ and intersphinx\_**
 
-.. table:: smart refs with sphinx.ext.extlinks and intersphinx
-:widths: 4 3 7
-
-\========================== ================================== ====================================
-role                       rendered example                   markup
-\========================== ================================== ====================================
-:rst:role:`guilabel`       :guilabel:`&Cancel`                ``:guilabel:`&Cancel```
-   :rst:role:`kbd`            :kbd:`C-x C-f`                     ``:kbd:`C-x C-f```
-   :rst:role:`menuselection`  :menuselection:`Open --> File`     ``:menuselection:`Open --> File```
-   :rst:role:`download`       :download:`this file <reST.rst>`   ``:download:`this file <reST.rst>```
-math                      :math:`a^2 + b^2 = c^2`            ``:math:`a^2 + b^2 = c^2```
-   :rst:role:`ref`            [svg image example](#svg image example)           `[svg image example](#svg image example)`
-   :rst:role:`command`        :command:`ls -la`                  ``:command:`ls -la```
-   :durole:`emphasis`         :emphasis:`italic`                 ``:emphasis:`italic```
-   :durole:`strong`           :strong:`bold`                     ``:strong:`bold```
-:durole:`literal`          :literal:`foo()`                   ``:literal:`foo()```
-   :durole:`subscript`        H\ :sub:`2`\ O                     ``H\ :sub:`2`\ O``    :durole:`superscript`      E = mc\ :sup:`2`                   ``E = mc\ :sup:`2```
-   :durole:`title-reference`  :title:`Time`                      ``:title:`Time\`\`\`
-\========================== ================================== ====================================
+| role                                                                                       | rendered example                                                              | markup                                                                          |
+| ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `guilabel`                                                                                 | `&Cancel`                                                                     | `&Cancel`                                                                       |
+| `kbd`                                                                                      | `C-x C-f`                                                                     | `C-x C-f`                                                                       |
+| `menuselection`                                                                            | `Open --> File`                                                               | `Open --> File`                                                                 |
+| `download`                                                                                 | `this file`                                                                   | `this file`                                                                     |
+| math\_                                                                                     | `a^2 + b^2 = c^2`                                                             | `a^2 + b^2 = c^2`                                                               |
+| `ref`                                                                                      | [svg image example](https://docs.searxng.org/dev/reST.html#svg-image-example) | `[svg image example](https://docs.searxng.org/dev/reST.html#svg-image-example)` |
+| `command`                                                                                  | `ls -la`                                                                      | `ls -la`                                                                        |
+| [emphasis](https://docutils.sourceforge.io/docs/ref/rst/roles.html#emphasis)               | `italic`                                                                      | `italic`                                                                        |
+| [strong](https://docutils.sourceforge.io/docs/ref/rst/roles.html#strong)                   | `bold`                                                                        | `bold`                                                                          |
+| [literal](https://docutils.sourceforge.io/docs/ref/rst/roles.html#literal)                 | `foo()`                                                                       | `foo()`                                                                         |
+| [subscript](https://docutils.sourceforge.io/docs/ref/rst/roles.html#subscript)             | H\ `2`\ O                                                                     | ``H\ `2`\ O``                                                                   |
+| [superscript](https://docutils.sourceforge.io/docs/ref/rst/roles.html#superscript)         | E = mc\ `2`                                                                   | \`\`E = mc\ \`2\`\`\`                                                           |
+| [title-reference](https://docutils.sourceforge.io/docs/ref/rst/roles.html#title-reference) | `Time`                                                                        | `Time`                                                                          |
 
 # Figures & Images
 
 ### Image processing
 
-With the directives from [linuxdoc](#) the build process
+With the directives from linuxdoc the build process
 is flexible.  To get best results in the generated output format, install
-[ImageMagick](https://www.imagemagick.org) and Graphviz.
+ImageMagick\_ and Graphviz\_.
 
-SearXNG's sphinx setup includes: [linuxdoc:kfigure](#).  Scalable here means;
+SearXNG's sphinx setup includes: linuxdoc:kfigure.  Scalable here means;
 scalable in sense of the build process.  Normally in absence of a converter
 tool, the build process will break.  From the authors POV it’s annoying to care
 about the build process when handling with images, especially since he has no
-access to the build process.  With [linuxdoc:kfigure](#) the build process
+access to the build process.  With linuxdoc:kfigure the build process
 continues and scales output quality in dependence of installed image processors.
 
 If you want to add an image, you should use the `kernel-figure` (inheritance
-of :dudir:`figure`) and `kernel-image` (inheritance of :dudir:`image`)
+of [figure](https://docutils.sourceforge.io/docs/ref/rst/directives.html#figure)) and `kernel-image` (inheritance of [image](https://docutils.sourceforge.io/docs/ref/rst/directives.html#image))
 directives.  E.g. to insert a figure with a scalable image format use SVG
-(\[svg image example]\(#svg image example)):
+([svg image example](https://docs.searxng.org/dev/reST.html#svg-image-example)):
 
-.. code:: reST
+```reST
+.. _svg image example:
 
-.. \_svg image example:
+.. kernel-figure:: svg_image.svg
+   :alt: SVG image example
 
-.. kernel-figure:: svg\_image.svg
-:alt: SVG image example
+   Simple SVG image
 
-```
-  Simple SVG image
-
-To refer the figure, a caption block is needed: [svg image example](#svg image example).
+ To refer the figure, a caption block is needed: :ref:`svg image example`.
 ```
 
-.. \_svg image example:
+<a id="svg-image-example"></a>
 
-.. kernel-figure:: svg\_image.svg
-:alt: SVG image example
+![SVG image example](https://raw.githubusercontent.com/searxng/searxng/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/svg_image.svg)
 
-Simple SVG image.
+*Simple SVG image.*
 
-To refer the figure, a caption block is needed: \[svg image example]\(#svg image example).
+To refer the figure, a caption block is needed: [svg image example](https://docs.searxng.org/dev/reST.html#svg-image-example).
 
 ## DOT files (aka Graphviz)
 
-With [linuxdoc:kernel-figure](#) reST support for **DOT** formatted files is
+With linuxdoc:kernel-figure reST support for **DOT** formatted files is
 given.
 
 - Graphviz's dot
-- [DOT](https://graphviz.gitlab.io/_pages/doc/info/lang.html)
-- [Graphviz](https://graphviz.gitlab.io)
+- DOT\_
+- Graphviz\_
 
-A simple example is shown in \[dot file example]\(#dot file example):
+A simple example is shown in [dot file example](https://docs.searxng.org/dev/reST.html#dot-file-example):
 
-.. code:: reST
-
-.. \_dot file example:
-
-.. kernel-figure:: hello.dot
-:alt: hello world
-
-```
-  DOT's hello world example
-```
-
-.. admonition:: hello.dot
-:class: rst-example
-
-.. \_dot file example:
+```reST
+.. _dot file example:
 
 .. kernel-figure:: hello.dot
-:alt: hello world
+   :alt: hello world
 
+   DOT's hello world example
 ```
-  DOT's hello world example
-```
+
+> **hello.dot**
+>
+> - **Class:** rst-example
+>
+> <a id="dot-file-example"></a>
+>
+> ![hello world](https://raw.githubusercontent.com/searxng/searxng/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/hello.dot)
+>
+> *DOT's hello world example*
 
 ## `kernel-render` DOT
 
 Embed *render* markups (or languages) like Graphviz's **DOT** is provided by the
-[linuxdoc:kernel-render](#) directive.  A simple example of embedded DOT is
-shown in figure \[dot render example]\(#dot render example):
+linuxdoc:kernel-render directive.  A simple example of embedded DOT\_ is
+shown in figure [dot render example](https://docs.searxng.org/dev/reST.html#dot-render-example):
 
-.. code:: reST
-
-.. \_dot render example:
+```reST
+.. _dot render example:
 
 .. kernel-render:: DOT
-:alt: digraph
-:caption: Embedded  DOT (Graphviz) code
+   :alt: digraph
+   :caption: Embedded  DOT (Graphviz) code
 
+   digraph foo {
+     "bar" -> "baz";
+   }
+
+Attribute ``caption`` is needed, if you want to refer the figure: :ref:`dot render example`.
 ```
-  digraph foo {
-    "bar" -> "baz";
-  }
-```
 
-Attribute `caption` is needed, if you want to refer the figure: :ref:`dot
-   render example`.
-
-Please note [build tools](#).  If Graphviz is
+Please note build tools.  If Graphviz\_ is
 installed, you will see an vector image.  If not, the raw markup is inserted as
 *literal-block*.
 
-.. admonition:: kernel-render DOT
-:class: rst-example
-
-.. \_dot render example:
-
-.. kernel-render:: DOT
-:alt: digraph
-:caption: Embedded  DOT (Graphviz) code
-
-```
-  digraph foo {
-    "bar" -> "baz";
-  }
-```
-
-Attribute `caption` is needed, if you want to refer the figure: :ref:`dot
-   render example`.
+> **kernel-render DOT**
+>
+> - **Class:** rst-example
+>
+> <a id="dot-render-example"></a>
+>
+> ```dot
+> digraph foo {
+>   "bar" -> "baz";
+> }
+> ```
+>
+> *Embedded  DOT (Graphviz) code*
+>
+> Attribute `caption` is needed, if you want to refer the figure: [dot render example](https://docs.searxng.org/dev/reST.html#dot-render-example).
 
 ## `kernel-render` SVG
 
-A simple example of embedded SVG is shown in figure \[svg render example]\(#svg render example):
+A simple example of embedded SVG\_ is shown in figure [svg render example](https://docs.searxng.org/dev/reST.html#svg-render-example):
 
-.. code:: reST
-
-.. \_svg render example:
+```reST
+.. _svg render example:
 
 .. kernel-render:: SVG
-:caption: Embedded **SVG** markup
-:alt: so-nw-arrow
+   :caption: Embedded **SVG** markup
+   :alt: so-nw-arrow
+```
+
 ..
 
-.. code:: xml
-
-```
-  <?xml version="1.0" encoding="UTF-8"?>
-  <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-       baseProfile="full" width="70px" height="40px"
-       viewBox="0 0 700 400"
-       >
-    <line x1="180" y1="370"
-          x2="500" y2="50"
-          stroke="black" stroke-width="15px"
-          />
-    <polygon points="585 0 525 25 585 50"
-             transform="rotate(135 525 25)"
-             />
-  </svg>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+     baseProfile="full" width="70px" height="40px"
+     viewBox="0 0 700 400"
+     >
+  <line x1="180" y1="370"
+        x2="500" y2="50"
+        stroke="black" stroke-width="15px"
+        />
+  <polygon points="585 0 525 25 585 50"
+           transform="rotate(135 525 25)"
+           />
+</svg>
 ```
 
-.. admonition:: kernel-render SVG
-:class: rst-example
+> **kernel-render SVG**
+>
+> - **Class:** rst-example
+>
+> <a id="svg-render-example"></a>
+>
+> ```svg
+> <?xml version="1.0" encoding="UTF-8"?>
+> <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+>      baseProfile="full" width="70px" height="40px"
+>      viewBox="0 0 700 400"
+>      >
+>   <line x1="180" y1="370"
+>         x2="500" y2="50"
+>         stroke="black" stroke-width="15px"
+>         />
+>   <polygon points="585 0 525 25 585 50"
+>            transform="rotate(135 525 25)"
+>            />
+> </svg>
+> ```
+>
+> *Embedded **SVG** markup*
 
-.. \_svg render example:
-
-.. kernel-render:: SVG
-:caption: Embedded **SVG** markup
-:alt: so-nw-arrow
-
-```
-  <?xml version="1.0" encoding="UTF-8"?>
-  <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-       baseProfile="full" width="70px" height="40px"
-       viewBox="0 0 700 400"
-       >
-    <line x1="180" y1="370"
-          x2="500" y2="50"
-          stroke="black" stroke-width="15px"
-          />
-    <polygon points="585 0 525 25 585 50"
-             transform="rotate(135 525 25)"
-             />
-  </svg>
-```
-
-.. \_reST lists:
+<a id="rest-lists"></a>
 
 # List markups
 
 ## Bullet list
 
-List markup (:duref:`ref <bullet-lists>`) is simple:
+List markup ([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#bullet-lists)) is simple:
 
-.. code:: reST
-
+```reST
 - This is a bulleted list.
 
   1. Nested lists are possible, but be aware that they must be separated from
@@ -665,56 +629,57 @@ List markup (:duref:`ref <bullet-lists>`) is simple:
 - It has two items, the second
   item uses two lines.
 
-\#. This is a numbered list.
-\#. It has two items too.
+#. This is a numbered list.
+#. It has two items too.
+```
 
-.. admonition:: bullet list
-:class: rst-example
-
-- This is a bulleted list.
-
-  1. Nested lists are possible, but be aware that they must be separated from
-     the parent list items by blank line
-  2. Second item of nested list
-
-- It has two items, the second
-  item uses two lines.
-
-\#. This is a numbered list.
-\#. It has two items too.
+> **bullet list**
+>
+> - **Class:** rst-example
+>
+> - This is a bulleted list.
+>
+>   1. Nested lists are possible, but be aware that they must be separated from
+>      the parent list items by blank line
+>   2. Second item of nested list
+>
+> - It has two items, the second
+>   item uses two lines.
+>
+> \#. This is a numbered list.
+> \#. It has two items too.
 
 ## Horizontal list
 
-The :rst:dir:`.. hlist:: <hlist>` transforms a bullet list into a more compact
+The `.. hlist::` transforms a bullet list into a more compact
 list.
 
-.. code:: reST
+```reST
+.. hlist::
 
-.. hlist:
-
-```text
-  - first list item
-  - second list item
-  - third list item
-  ...
-
+   - first list item
+   - second list item
+   - third list item
+   ...
 ```
 
-.. admonition:: hlist
-:class: rst-example
-
-.. hlist:
-
-```text
-  - first list item
-  - second list item
-  - third list item
-  - next list item
-  - next list item xxxx
-  - next list item yyyy
-  - next list item zzzz
-
-```
+> **hlist**
+>
+> - **Class:** rst-example
+>
+> - first list item
+>
+> - second list item
+>
+> - third list item
+>
+> - next list item
+>
+> - next list item xxxx
+>
+> - next list item yyyy
+>
+> - next list item zzzz
 
 ## Definition list
 
@@ -723,10 +688,10 @@ list.
 - the term cannot have more than one line of text
 
 - there is **no blank line between term and definition block** // this
-  distinguishes definition lists (:duref:`ref <definition-lists>`) from block
-  quotes (:duref:`ref <block-quotes>`).
+  distinguishes definition lists ([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#definition-lists)) from block
+  quotes ([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#block-quotes)).
 
-Each definition list (:duref:`ref <definition-lists>`) item contains a term,
+Each definition list ([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#definition-lists)) item contains a term,
 optional classifiers and a definition.  A term is a simple one-line word or
 phrase.  Optional classifiers may follow the term on the same line, each after
 an inline ' : ' (**space, colon, space**).  A definition is a block indented
@@ -738,270 +703,208 @@ optional in-between.
 
 Definition lists are created as follows:
 
-.. code:: reST
-
+```reST
 term 1 (up to a line of text)
-Definition 1.
+    Definition 1.
 
 See the typo : this line is not a term!
 
-```
- And this is not term's definition.  **There is a blank line** in between
- the line above and this paragraph.  That's why this paragraph is taken as
- **block quote** (:duref:`ref <block-quotes>`) and not as term's definition!
-```
+  And this is not term's definition.  **There is a blank line** in between
+  the line above and this paragraph.  That's why this paragraph is taken as
+  **block quote** (:duref:`ref <block-quotes>`) and not as term's definition!
 
 term 2
-Definition 2, paragraph 1.
+    Definition 2, paragraph 1.
 
-```
-   Definition 2, paragraph 2.
-```
+    Definition 2, paragraph 2.
 
 term 3 : classifier
-Definition 3.
+    Definition 3.
 
 term 4 : classifier one : classifier two
-Definition 4.
-
-.. admonition:: definition list
-:class: rst-example
-
-term 1 (up to a line of text)
-Definition 1.
-
-See the typo : this line is not a term!
-
-```
- And this is not term's definition.  **There is a blank line** in between
- the line above and this paragraph.  That's why this paragraph is taken as
- **block quote** (:duref:`ref <block-quotes>`) and not as term's definition!
+    Definition 4.
 ```
 
-term 2
-Definition 2, paragraph 1.
-
-```
-   Definition 2, paragraph 2.
-```
-
-term 3 : classifier
-Definition 3.
-
-term 4 : classifier one : classifier two
+> **definition list**
+>
+> - **Class:** rst-example
+>
+> **term 1 (up to a line of text)**
+>
+> Definition 1.
+>
+> See the typo : this line is not a term!
+>
+> And this is not term's definition.  **There is a blank line** in between
+> the line above and this paragraph.  That's why this paragraph is taken as
+> **block quote** ([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#block-quotes)) and not as term's definition!
+>
+> **term 2**
+>
+> Definition 2, paragraph 1.
+>
+> Definition 2, paragraph 2.
+>
+> **term 3 : classifier**
+>
+> Definition 3.
+>
+> term 4 : classifier one : classifier two
 
 ## Quoted paragraphs
 
-Quoted paragraphs (:duref:`ref <block-quotes>`) are created by just indenting
-them more than the surrounding paragraphs.  Line blocks (:duref:`ref <line-blocks>`) are a way of preserving line breaks:
+Quoted paragraphs ([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#block-quotes)) are created by just indenting
+them more than the surrounding paragraphs.  Line blocks ([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#line-blocks)) are a way of preserving line breaks:
 
-.. code:: reST
-
+```reST
 normal paragraph ...
 lorem ipsum.
 
-```
-  Quoted paragraph ...
-  lorem ipsum.
-```
+   Quoted paragraph ...
+   lorem ipsum.
 
-\| These lines are
-\| broken exactly like in
-\| the source file.
-
-.. admonition:: Quoted paragraph and line block
-:class: rst-example
-
-normal paragraph ...
-lorem ipsum.
-
-```
-  Quoted paragraph ...
-  lorem ipsum.
+| These lines are
+| broken exactly like in
+| the source file.
 ```
 
-\| These lines are
-\| broken exactly like in
-\| the source file.
+> **Quoted paragraph and line block**
+>
+> - **Class:** rst-example
+>
+> normal paragraph ...
+> lorem ipsum.
+>
+> Quoted paragraph ...
+> lorem ipsum.
+>
+> \| These lines are
+> \| broken exactly like in
+> \| the source file.
 
-.. \_reST field list:
+<a id="rest-field-list"></a>
 
 ## Field Lists
 
-.. \_Sphinx Field Lists:
+<a id="sphinx-field-lists"></a>
 <https://www.sphinx-doc.org/en/master/usage/restructuredtext/field-lists.html>
 
 ### bibliographic fields
 
-First lines fields are bibliographic fields, see Sphinx Field Lists.
+First lines fields are bibliographic fields, see [Sphinx Field Lists](https://docs.searxng.org/dev/reST.html#sphinx-field-lists).
 
 Field lists are used as part of an extension syntax, such as options for
 directives, or database-like records meant for further processing.  Field lists
 are mappings from field names to field bodies.  They marked up like this:
 
-.. code:: reST
-
-:fieldname: Field content
-:foo:       first paragraph in field foo
-
-```
-           second paragraph in field foo
+```reST
 ```
 
-:bar:       Field content
-
-.. admonition:: Field List
-:class: rst-example
-
-:fieldname: Field content
-:foo:       first paragraph in field foo
-
-```
-           second paragraph in field foo
-```
-
-:bar:       Field content
+> **Field List**
+>
+> - **Class:** rst-example
+>
+> - **Fieldname:** Field content
+>   **:foo:       first paragraph in field foo**
+>
+> second paragraph in field foo
+>
+> - **Bar:** Field content
 
 They are commonly used in Python documentation:
 
-.. code:: python
+```python
+def my_function(my_arg, my_other_arg):
+    """A function just for me.
 
-def my\_function(my\_arg, my\_other\_arg):
-"""A function just for me.
+    :param my_arg: The first of my arguments.
+    :param my_other_arg: The second of my arguments.
 
+    :returns: A message (just for me, of course).
+    """
 ```
-   :param my_arg: The first of my arguments.
-   :param my_other_arg: The second of my arguments.
-```
-
-### :returns: A message (just for me, of course).
 
 ## Further list blocks
 
-- field lists (:duref:`ref <field-lists>`, with caveats noted in
-  \[reST field list]\(#reST field list))
-- option lists (:duref:`ref <option-lists>`)
-- quoted literal blocks (:duref:`ref <quoted-literal-blocks>`)
-- doctest blocks (:duref:`ref <doctest-blocks>`)
+- field lists ([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#field-lists), with caveats noted in
+  [reST field list](https://docs.searxng.org/dev/reST.html#rest-field-list))
+- option lists ([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#option-lists))
+- quoted literal blocks ([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#quoted-literal-blocks))
+- doctest blocks ([ref](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#doctest-blocks))
 
 # Admonitions
 
 ## Sidebar
 
 Sidebar is an eye catcher, often used for admonitions pointing further stuff or
-site effects.  Here is the source of the sidebar :ref:`on top of this page <reST
-primer>`.
+site effects.  Here is the source of the sidebar [on top of this page](https://docs.searxng.org/dev/reST.html#rest-primer).
 
-.. code:: reST
+```reST
+.. sidebar:: KISS_ and readability_
 
-.. sidebar:: [KISS](https://en.wikipedia.org/wiki/KISS_principle) and readability
-
-```
-  Instead of defining more and more roles, we at SearXNG encourage our
-  contributors to follow principles like KISS and readability.
+   Instead of defining more and more roles, we at SearXNG encourage our
+   contributors to follow principles like KISS_ and readability_.
 ```
 
 ## Generic admonition
 
-The generic :dudir:`admonition <admonitions>` needs a title:
+The generic [admonition](https://docutils.sourceforge.io/docs/ref/rst/directives.html#admonitions) needs a title:
 
-.. code:: reST
-
+```reST
 .. admonition:: generic admonition title
 
-```
-  lorem ipsum ..
+   lorem ipsum ..
 ```
 
-.. admonition:: generic admonition title
-
-lorem ipsum ..
+> **generic admonition title**
+> lorem ipsum ..
 
 ## Specific admonitions
 
-Specific admonitions: :dudir:`hint`, :dudir:`note`, :dudir:`tip` :dudir:`attention`,
-:dudir:`caution`, :dudir:`danger`, :dudir:`error`, , :dudir:`important`, and
-:dudir:`warning` .
+Specific admonitions: [hint](https://docutils.sourceforge.io/docs/ref/rst/directives.html#hint), [note](https://docutils.sourceforge.io/docs/ref/rst/directives.html#note), [tip](https://docutils.sourceforge.io/docs/ref/rst/directives.html#tip) [attention](https://docutils.sourceforge.io/docs/ref/rst/directives.html#attention),
+[caution](https://docutils.sourceforge.io/docs/ref/rst/directives.html#caution), [danger](https://docutils.sourceforge.io/docs/ref/rst/directives.html#danger), [error](https://docutils.sourceforge.io/docs/ref/rst/directives.html#error), , [important](https://docutils.sourceforge.io/docs/ref/rst/directives.html#important), and
+[warning](https://docutils.sourceforge.io/docs/ref/rst/directives.html#warning) .
 
-.. code:: reST
+```reST
+.. hint::
 
-.. hint:
-
-```text
-  lorem ipsum ..
+   lorem ipsum ..
 
 .. note::
 
-  lorem ipsum ..
+   lorem ipsum ..
 
 .. warning::
 
-  lorem ipsum ..
-
+   lorem ipsum ..
 ```
 
-.. hint:
+> **Hint**
+> lorem ipsum ..
 
-```text
-lorem ipsum ..
+> **Note**
+> lorem ipsum ..
 
-```
+> **Tip**
+> lorem ipsum ..
 
-.. note:
+> **Attention**
+> lorem ipsum ..
 
-```text
-lorem ipsum ..
+> **Caution**
+> lorem ipsum ..
 
-```
+> **Danger**
+> lorem ipsum ..
 
-.. tip:
+> **Important**
+> lorem ipsum ..
 
-```text
-lorem ipsum ..
+> **Error**
+> lorem ipsum ..
 
-```
-
-.. attention:
-
-```text
-lorem ipsum ..
-
-```
-
-.. caution:
-
-```text
-lorem ipsum ..
-
-```
-
-.. danger:
-
-```text
-lorem ipsum ..
-
-```
-
-.. important:
-
-```text
-lorem ipsum ..
-
-```
-
-.. error:
-
-```text
-lorem ipsum ..
-
-```
-
-.. warning:
-
-```text
-lorem ipsum ..
-
-```
+> **Warning**
+> lorem ipsum ..
 
 # Tables
 
@@ -1010,7 +913,7 @@ lorem ipsum ..
 Nested tables are ugly! Not all builder support nested tables, don't use
 them!
 
-ASCII-art tables like \[reST simple table]\(#reST simple table) and \[reST grid table]\(#reST grid table) might
+ASCII-art tables like [reST simple table](https://docs.searxng.org/dev/reST.html#rest-simple-table) and [reST grid table](https://docs.searxng.org/dev/reST.html#rest-grid-table) might
 be comfortable for readers of the text-files, but they have huge disadvantages
 in the creation and modifying.  First, they are hard to edit.  Think about
 adding a row or a column to a ASCII-art table or adding a paragraph in a cell,
@@ -1018,7 +921,7 @@ it is a nightmare on big tables.
 
 ### List tables
 
-For meaningful patch and diff use \[reST flat table]\(#reST flat table).
+For meaningful patch and diff use [reST flat table](https://docs.searxng.org/dev/reST.html#rest-flat-table).
 
 Second the diff of modifying ASCII-art tables is not meaningful, e.g. widening a
 cell generates a diff in which also changes are included, which are only
@@ -1028,412 +931,369 @@ here are some helpers:
 - Emacs Table Mode
 - Online Tables Generator
 
-.. \_reST simple table:
+<a id="rest-simple-table"></a>
 
 ## Simple tables
 
-:duref:`Simple tables <simple-tables>` allow *colspan* but not *rowspan*.  If
-your table need some metadata (e.g. a title) you need to add the `.. table:
-directive` :dudir:`(ref) <table>` in front and place the table in its body:
+[Simple tables](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#simple-tables) allow *colspan* but not *rowspan*.  If
+your table need some metadata (e.g. a title) you need to add the \`\`.. table:
 
-.. code:: reST
+directive\`\` [(ref)](https://docutils.sourceforge.io/docs/ref/rst/directives.html#table) in front and place the table in its body:
 
+```reST
 .. table:: foo gate truth table
-:widths: grid
-:align: left
+   :widths: grid
+   :align: left
 
-```
-  ====== ====== ======
-      Inputs    Output
-  ------------- ------
-  A      B      A or B
-  ====== ====== ======
-```
-
-## False
-
-## True
-
-```
-  True   False  True
-         (foo)
-  ------ ------ ------
-  False  True
-         (foo)
-  ====== =============
+   ====== ====== ======
+       Inputs    Output
+   ------------- ------
+   A      B      A or B
+   ====== ====== ======
+   False
+   --------------------
+   True
+   --------------------
+   True   False  True
+          (foo)
+   ------ ------ ------
+   False  True
+          (foo)
+   ====== =============
 ```
 
-.. admonition:: Simple ASCII table
-:class: rst-example
+> **Simple ASCII table**
+>
+> - **Class:** rst-example
+>
+> **foo gate truth table**
+>
+> | In     | uts         | Output |
+> | ------ | ----------- | ------ |
+> | ------ | ------      | ------ |
+> | A      | B           | A or B |
+> | False  |             |        |
+> | ------ | ------      | ------ |
+> | True   |             |        |
+> | ------ | ------      | ------ |
+> | True   | False (foo) | True   |
+> | ------ | ------      | ------ |
+> | False  | True (foo)  |        |
+> | ====== | ======      | ====== |
 
-.. table:: foo gate truth table
-:widths: grid
-:align: left
-
-```
-  ====== ====== ======
-      Inputs    Output
-  ------------- ------
-  A      B      A or B
-  ====== ====== ======
-```
-
-## False
-
-## True
-
-```
-  True   False  True
-         (foo)
-  ------ ------ ------
-  False  True
-         (foo)
-  ====== =============
-```
-
-.. \_reST grid table:
+<a id="rest-grid-table"></a>
 
 ## Grid tables
 
-:duref:`Grid tables <grid-tables>` allow colspan *colspan* and *rowspan*:
+[Grid tables](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables) allow colspan *colspan* and *rowspan*:
 
-.. code:: reST
-
+```reST
 .. table:: grid table example
-:widths: 1 1 5
+   :widths: 1 1 5
 
-```
-  +------------+------------+-----------+
-  | Header 1   | Header 2   | Header 3  |
-  +============+============+===========+
-  | body row 1 | column 2   | column 3  |
-  +------------+------------+-----------+
-  | body row 2 | Cells may span columns.|
-  +------------+------------+-----------+
-  | body row 3 | Cells may  | - Cells   |
-  +------------+ span rows. | - contain |
-  | body row 4 |            | - blocks. |
-  +------------+------------+-----------+
-```
-
-.. admonition:: ASCII grid table
-:class: rst-example
-
-.. table:: grid table example
-:widths: 1 1 5
-
-```
-  +------------+------------+-----------+
-  | Header 1   | Header 2   | Header 3  |
-  +============+============+===========+
-  | body row 1 | column 2   | column 3  |
-  +------------+------------+-----------+
-  | body row 2 | Cells may span columns.|
-  +------------+------------+-----------+
-  | body row 3 | Cells may  | - Cells   |
-  +------------+ span rows. | - contain |
-  | body row 4 |            | - blocks. |
-  +------------+------------+-----------+
+   +------------+------------+-----------+
+   | Header 1   | Header 2   | Header 3  |
+   +============+============+===========+
+   | body row 1 | column 2   | column 3  |
+   +------------+------------+-----------+
+   | body row 2 | Cells may span columns.|
+   +------------+------------+-----------+
+   | body row 3 | Cells may  | - Cells   |
+   +------------+ span rows. | - contain |
+   | body row 4 |            | - blocks. |
+   +------------+------------+-----------+
 ```
 
-.. \_reST flat table:
+> **ASCII grid table**
+>
+> - **Class:** rst-example
+>
+> **grid table example**
+>
+> | Header 1   | Header 2    | Header 3    |
+> | ---------- | ----------- | ----------- |
+> | body row 1 | column 2    | column 3    |
+> | body row 2 | Cells may s | an columns. |
+>
+> +------------+ span rows. | - contain |
+> \| body row 4 |            | - blocks. |
+> +------------+------------+-----------+
+
+<a id="rest-flat-table"></a>
 
 ## flat-table
 
-The `flat-table` is a further developed variant of the :ref:`list tables <linuxdoc:list-table-directives>`.  It is a double-stage list similar to the
-:dudir:`list-table` with some additional features:
+The `flat-table` is a further developed variant of the list tables.  It is a double-stage list similar to the
+[list-table](https://docutils.sourceforge.io/docs/ref/rst/directives.html#list-table) with some additional features:
 
-column-span: `cspan`
+**column-span: `cspan`**
+
 with the role `cspan` a cell can be extended through additional columns
 
-row-span: `rspan`
+**row-span: `rspan`**
+
 with the role `rspan` a cell can be extended through additional rows
 
-auto-span:
+**auto-span:**
+
 spans rightmost cell of a table row over the missing cells on the right side
 of that table-row.  With Option `:fill-cells:` this behavior can changed
 from *auto span* to *auto fill*, which automatically inserts (empty) cells
 instead of spanning the last cell.
 
-options:
+**options:**
+
 :header-rows:   \[int] count of header rows
 :stub-columns:  \[int] count of stub columns
-:widths:        \[\[int] \[int] ... ] widths of columns
-:fill-cells:    instead of auto-span missing cells, insert missing cells
 
-roles:
-:cspan: \[int] additional columns (*morecols*)
-:rspan: \[int] additional rows (*morerows*)
+- **Widths:** \[\[int] \[int] ... ] widths of columns
+  :fill-cells:    instead of auto-span missing cells, insert missing cells
+
+**roles:**
+
+- **Cspan:** \[int] additional columns (*morecols*)
+- **Rspan:** \[int] additional rows (*morerows*)
 
 The example below shows how to use this markup.  The first level of the staged
 list is the *table-row*. In the *table-row* there is only one markup allowed,
 the list of the cells in this *table-row*. Exception are *comments* ( `..` )
-and *targets* (e.g. a ref to \[row 2 of table's body]\(#row body 2)).
+and *targets* (e.g. a ref to row 2 of table's body).
 
-.. code:: reST
+```reST
+.. flat-table:: ``flat-table`` example
+   :header-rows: 2
+   :stub-columns: 1
+   :widths: 1 1 1 1 2
 
-.. flat-table:: `flat-table` example
-:header-rows: 2
-:stub-columns: 1
-:widths: 1 1 1 1 2
+   * - :rspan:`1` head / stub
+     - :cspan:`3` head 1.1-4
 
-```
-  * - :rspan:`1` head / stub
-    - :cspan:`3` head 1.1-4
+   * - head 2.1
+     - head 2.2
+     - head 2.3
+     - head 2.4
 
-  * - head 2.1
-    - head 2.2
-    - head 2.3
-    - head 2.4
+   * .. row body 1 / this is a comment
 
-  * .. row body 1 / this is a comment
+     - row 1
+     - :rspan:`2` cell 1-3.1
+     - cell 1.2
+     - cell 1.3
+     - cell 1.4
 
-    - row 1
-    - :rspan:`2` cell 1-3.1
-    - cell 1.2
-    - cell 1.3
-    - cell 1.4
+   * .. Comments and targets are allowed on *table-row* stage.
+     .. _`row body 2`:
 
-  * .. Comments and targets are allowed on *table-row* stage.
-    .. _`row body 2`:
+     - row 2
+     - cell 2.2
+     - :rspan:`1` :cspan:`1`
+       cell 2.3 with a span over
 
-    - row 2
-    - cell 2.2
-    - :rspan:`1` :cspan:`1`
-      cell 2.3 with a span over
+       * col 3-4 &
+       * row 2-3
 
-      * col 3-4 &
-      * row 2-3
+   * - row 3
+     - cell 3.2
 
-  * - row 3
-    - cell 3.2
+   * - row 4
+     - cell 4.1
+     - cell 4.2
+     - cell 4.3
+     - cell 4.4
 
-  * - row 4
-    - cell 4.1
-    - cell 4.2
-    - cell 4.3
-    - cell 4.4
+   * - row 5
+     - cell 5.1 with automatic span to right end
 
-  * - row 5
-    - cell 5.1 with automatic span to right end
-
-  * - row 6
-    - cell 6.1
-    - ..
+   * - row 6
+     - cell 6.1
+     - ..
 ```
 
-.. admonition:: List table
-:class: rst-example
-
-.. flat-table:: `flat-table` example
-:header-rows: 2
-:stub-columns: 1
-:widths: 1 1 1 1 2
-
-```
-  * - :rspan:`1` head / stub
-    - :cspan:`3` head 1.1-4
-
-  * - head 2.1
-    - head 2.2
-    - head 2.3
-    - head 2.4
-
-  * .. row body 1 / this is a comment
-
-    - row 1
-    - :rspan:`2` cell 1-3.1
-    - cell 1.2
-    - cell 1.3
-    - cell 1.4
-
-  * .. Comments and targets are allowed on *table-row* stage.
-    .. _`row body 2`:
-
-    - row 2
-    - cell 2.2
-    - :rspan:`1` :cspan:`1`
-      cell 2.3 with a span over
-
-      * col 3-4 &
-      * row 2-3
-
-  * - row 3
-    - cell 3.2
-
-  * - row 4
-    - cell 4.1
-    - cell 4.2
-    - cell 4.3
-    - cell 4.4
-
-  * - row 5
-    - cell 5.1 with automatic span to right end
-
-  * - row 6
-    - cell 6.1
-    - ..
-```
+> **List table**
+>
+> - **Class:** rst-example
+>
+> **`flat-table` example**
+>
+> - - `1` head / stub
+>   - `3` head 1.1-4
+> - - head 2.1
+>   - head 2.2
+>   - head 2.3
+>   - head 2.4
+> - .. row body 1 / this is a comment
+>
+>   - row 1
+>   - `2` cell 1-3.1
+>   - cell 1.2
+>   - cell 1.3
+>   - cell 1.4
+> - .. Comments and targets are allowed on *table-row* stage. <a id="row-body-2"></a>
+>
+>   - row 2
+>   - cell 2.2
+>   - `1` `1`
+>     cell 2.3 with a span over
+>
+>     - col 3-4 &
+>     - row 2-3
+> - - row 3
+>   - cell 3.2
+> - - row 4
+>   - cell 4.1
+>   - cell 4.2
+>   - cell 4.3
+>   - cell 4.4
+> - - row 5
+>   - cell 5.1 with automatic span to right end
+> - - row 6
+>   - cell 6.1
+>   - ..
 
 ## CSV table
 
 CSV table might be the choice if you want to include CSV-data from a outstanding
 (build) process into your documentation.
 
-.. code:: reST
-
+```reST
 .. csv-table:: CSV table example
-:header: .. , Column 1, Column 2
-:widths: 2 5 5
-:stub-columns: 1
-:file: csv\_table.txt
+   :header: .. , Column 1, Column 2
+   :widths: 2 5 5
+   :stub-columns: 1
+   :file: csv_table.txt
+```
 
 Content of file `csv_table.txt`:
 
-.. literalinclude:: csv\_table.txt
+Build-time include: `csv_table.txt`
 
-.. admonition:: CSV table
-:class: rst-example
-
-.. csv-table:: CSV table example
-:header: .. , Column 1, Column 2
-:widths: 3 5 5
-:stub-columns: 1
-:file: csv\_table.txt
+> **CSV table**
+>
+> - **Class:** rst-example
+>
+> **CSV table example**
+>
+> ```csv
+> ```
 
 # Templating
 
 ### Build environment
 
-All *generic-doc* tasks are running in the \[make install]\(#make install).
+All *generic-doc* tasks are running in the [make install](https://docs.searxng.org/dev/makefile.html#make-install).
 
 Templating is suitable for documentation which is created generic at the build
-time.  The sphinx-jinja extension evaluates jinja templates in the :ref:`make
-install` (with SearXNG modules installed).  We use this e.g. to build chapter:
-\[configured engines]\(#configured engines).  Below the jinja directive from the
-:origin:`docs/admin/engines.rst` is shown:
+time.  The sphinx-jinja\_ extension evaluates jinja\_ templates in the [make install](https://docs.searxng.org/dev/makefile.html#make-install) (with SearXNG modules installed).  We use this e.g. to build chapter:
+[configured engines](https://docs.searxng.org/user/configured_engines.html#configured-engines).  Below the jinja directive from the
+[docs/admin/engines.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/engines.rst) is shown:
 
-.. literalinclude:: ../user/configured\_engines.rst
-:language: reST
-:start-after: .. \_configured engines:
+Build-time include: `../user/configured_engines.rst`
 
 The context for the template is selected in the line `.. jinja:: searx`.  In
-sphinx's build configuration (:origin:`docs/conf.py`) the `searx` context
+sphinx's build configuration ([docs/conf.py](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/conf.py)) the `searx` context
 contains the `engines` and `plugins`.
 
-.. code:: py
-
+```py
 import searx.search
 import searx.engines
 import searx.plugins
 searx.search.initialize()
-jinja\_contexts = {
-'searx': {
-'engines': searx.engines.engines,
-'plugins': searx.plugins.plugins
-},
+jinja_contexts = {
+   'searx': {
+      'engines': searx.engines.engines,
+      'plugins': searx.plugins.plugins
+   },
 }
+```
 
 # Tabbed views
 
-With [sphinx-tabs](https://github.com/djungelorm/sphinx-tabs) extension we have *tabbed views*.  To provide installation
-instructions with one tab per distribution we use the [group-tabs](https://github.com/djungelorm/sphinx-tabs#group-tabs) directive,
-others are basic-tabs and code-tabs.  Below a *group-tab* example from
-\[docs build]\(#docs build) is shown:
+<a id="sphinx-tabs"></a> <a id="basic-tabs"></a> <a id="group-tabs"></a> <a id="code-tabs"></a>
 
-.. literalinclude:: ../admin/buildhosts.rst
-:language: reST
-:start-after: .. SNIP sh lint requirements
-:end-before: .. SNAP sh lint requirements
+With [sphinx-tabs](https://docs.searxng.org/dev/reST.html#sphinx-tabs) extension we have *tabbed views*.  To provide installation
+instructions with one tab per distribution we use the [group-tabs](https://docs.searxng.org/dev/reST.html#group-tabs) directive,
+others are basic-tabs\_ and code-tabs\_.  Below a *group-tab* example from
+[docs build](https://docs.searxng.org/admin/buildhosts.html#docs-build) is shown:
 
-.. \_math:
+Build-time include: `../admin/buildhosts.rst`
+
+<a id="math"></a>
 
 # Math equations
 
-.. \_amsmath user guide:
+<a id="mathematics"></a> <a id="amsmath-user-guide"></a>
 <http://vesta.informatik.rwth-aachen.de/ftp/pub/mirror/ctan/macros/latex/required/amsmath/amsldoc.pdf>
 
 ### About LaTeX
 
-- amsmath user guide
-- [Mathematics](https://en.wikibooks.org/wiki/LaTeX/Mathematics)
-- \[docs build]\(#docs build)
+- [amsmath user guide](https://docs.searxng.org/dev/reST.html#amsmath-user-guide)
+- Mathematics\_
+- [docs build](https://docs.searxng.org/admin/buildhosts.html#docs-build)
 
-The input language for mathematics is LaTeX markup using the :ctan:`amsmath`
+The input language for mathematics is LaTeX markup using the [amsmath](https://ctan.org/pkg/amsmath)
 package.
 
-To embed LaTeX markup in reST documents, use role :rst:role:`:math: <math>` for
-inline and directive :rst:dir:`.. math:: <math>` for block markup.
+To embed LaTeX markup in reST documents, use role `:math:` for
+inline and directive `.. math::` for block markup.
 
-.. code:: reST
-
+```reST
 In :math:numref:`schroedinger general` the time-dependent Schrödinger equation
 is shown.
 
-.. math:
+.. math::
+   :label: schroedinger general
 
-```text
-  :label: schroedinger general
-
-   \mathrm{i}\hbar\dfrac{\partial}{\partial t} |\,\psi (t) \rangle =
-         \hat{H} |\,\psi (t) \rangle.
-
+    \mathrm{i}\hbar\dfrac{\partial}{\partial t} |\,\psi (t) \rangle =
+          \hat{H} |\,\psi (t) \rangle.
 ```
 
-.. admonition:: LaTeX math equation
-:class: rst-example
-
-In :math:numref:`schroedinger general` the time-dependent Schrödinger equation
-is shown.
-
-.. math:
-
-```text
-  :label: schroedinger general
-
-   \mathrm{i}\hbar\dfrac{\partial}{\partial t} |\,\psi (t) \rangle =
-         \hat{H} |\,\psi (t) \rangle.
-
-```
+> **LaTeX math equation**
+>
+> - **Class:** rst-example
+>
+> In `schroedinger general` the time-dependent Schrödinger equation
+> is shown.
+>
+> $$
+>
+> $$
 
 The next example shows the difference of `\tfrac` (*textstyle*) and `\dfrac`
 (*displaystyle*) used in a inline markup or another fraction.
 
-.. code:: reST
+```reST
+``\tfrac`` **inline example** :math:`\tfrac{\tfrac{1}{x}+\tfrac{1}{y}}{y-z}`
+``\dfrac`` **inline example** :math:`\dfrac{\dfrac{1}{x}+\dfrac{1}{y}}{y-z}`
+```
 
-`\tfrac` **inline example** :math:`\tfrac{\tfrac{1}{x}+\tfrac{1}{y}}{y-z}`
-`\dfrac` **inline example** :math:`\dfrac{\dfrac{1}{x}+\dfrac{1}{y}}{y-z}`
+> **Line spacing**
+>
+> - **Class:** rst-example
+>
+> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+> eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+> voluptua.  ...
+> `\tfrac` **inline example** `\tfrac{\tfrac{1}{x}+\tfrac{1}{y}}{y-z}`
+> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+> gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+>
+> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+> eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+> voluptua.  ...
+> `\tfrac` **inline example** `\dfrac{\dfrac{1}{x}+\dfrac{1}{y}}{y-z}`
+> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+> gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-.. admonition:: Line spacing
-:class: rst-example
+<a id="kiss"></a>
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-voluptua.  ...
-`\tfrac` **inline example** :math:`\tfrac{\tfrac{1}{x}+\tfrac{1}{y}}{y-z}`
-At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+<a id="readability"></a> <a id="sphinx-primer"></a>
+<https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html> <a id="rest"></a> <a id="sphinx-roles"></a>
+<https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html> <a id="sphinx"></a> <a id="sphinx-doc-faq"></a> <a id="sphinx-markup-constructs"></a>
+<https://www.sphinx-doc.org/en/stable/markup/index.html> <a id="sphinx-cross-references"></a>
+<https://www.sphinx-doc.org/en/stable/markup/inline.html#cross-referencing-arbitrary-locations> <a id="sphinx-ext-extlinks"></a>
+<https://www.sphinx-doc.org/en/master/usage/extensions/extlinks.html> <a id="intersphinx"></a> <a id="sphinx-config"></a> <a id="sphinx-s-autodoc"></a> <a id="sphinx-s-python-domain"></a>
+<https://www.sphinx-doc.org/en/stable/domains.html#the-python-domain> <a id="sphinx-s-c-domain"></a>
+<https://www.sphinx-doc.org/en/stable/domains.html#cross-referencing-c-constructs> <a id="doctree"></a>
+<https://www.sphinx-doc.org/en/master/extdev/tutorial.html?highlight=doctree#build-phases> <a id="docutils"></a> <a id="docutils-faq"></a> <a id="linuxdoc"></a> <a id="jinja"></a> <a id="sphinx-jinja"></a> <a id="svg"></a> <a id="dot"></a> <a id="graphviz-s-dot"></a> <a id="graphviz"></a> <a id="imagemagick"></a>
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-voluptua.  ...
-`\tfrac` **inline example** :math:`\dfrac{\dfrac{1}{x}+\dfrac{1}{y}}{y-z}`
-At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-.. \_Sphinx-Primer:
-<https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>
-.. \_Sphinx Roles:
-<https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html>
-.. \_Sphinx markup constructs:
-<https://www.sphinx-doc.org/en/stable/markup/index.html>
-.. \_`sphinx cross references`:
-<https://www.sphinx-doc.org/en/stable/markup/inline.html#cross-referencing-arbitrary-locations>
-.. \_sphinx.ext.extlinks:
-<https://www.sphinx-doc.org/en/master/usage/extensions/extlinks.html>
-.. \_Sphinx's Python domain:
-<https://www.sphinx-doc.org/en/stable/domains.html#the-python-domain>
-.. \_Sphinx's C domain:
-<https://www.sphinx-doc.org/en/stable/domains.html#cross-referencing-c-constructs>
-.. \_doctree:
-<https://www.sphinx-doc.org/en/master/extdev/tutorial.html?highlight=doctree#build-phases>
+<a id="emacs-table-mode"></a> <a id="online-tables-generator"></a> <a id="oasis-xml-exchange-table-model"></a>

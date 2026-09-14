@@ -1,4 +1,5 @@
-> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/onboarding/b2b.mdx](https://zitadel.com/docs/guides/integrate/onboarding/b2b)
+> Pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/onboarding/b2b.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/guides/integrate/onboarding/b2b.mdx)
+> Canonical documentation: https://zitadel.com/docs/guides/integrate/onboarding/b2b
 
 In this guide we will explain how you can create and set up new organizations in ZITADEL to help you with your onboarding flows.
 Creating a new organization is the best choice for multi-tenancy use cases that require separation of customers, teams, or groups of users.

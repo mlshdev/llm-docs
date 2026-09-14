@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_manifest_inspect.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_manifest_inspect.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_manifest_inspect.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_manifest_inspect.yaml)
 
 # docker manifest inspect
 
@@ -6,7 +6,7 @@ Display an image manifest, or manifest list
 
 **Usage:** `docker manifest inspect [OPTIONS] [MANIFEST_LIST] MANIFEST`
 
-> [!NOTE]
+> \[!NOTE]
 > This command is experimental.
 
 ## Description
@@ -15,7 +15,7 @@ Display an image manifest, or manifest list
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--insecure` |  | Allow communication with an insecure registry |
-| `-v`, `--verbose` |  | Output additional info including layers and platform |
+| Option            | Default | Description                                          |
+| ----------------- | ------- | ---------------------------------------------------- |
+| `--insecure`      |         | Allow communication with an insecure registry        |
+| `-v`, `--verbose` |         | Output additional info including layers and platform |

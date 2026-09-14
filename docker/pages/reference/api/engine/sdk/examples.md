@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/reference/api/engine/sdk/examples.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/reference/api/engine/sdk/examples.md)
+> Pinned source for Docker main: [content/reference/api/engine/sdk/examples.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/reference/api/engine/sdk/examples.md)
 
 # Examples using the Docker Engine SDKs and Docker API
 

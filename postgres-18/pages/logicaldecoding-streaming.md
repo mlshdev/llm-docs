@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/logicaldecoding.sgml#logicaldecoding-streaming](https://www.postgresql.org/docs/18/logicaldecoding-streaming.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/logicaldecoding.sgml#logicaldecoding-streaming](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/logicaldecoding.sgml%23logicaldecoding-streaming)
+> Canonical documentation: https://www.postgresql.org/docs/18/logicaldecoding-streaming.html
 
 # Streaming of Large Transactions for Logical Decoding
 
@@ -30,6 +31,7 @@ stream_start_cb(...);   <-- start of second block of changes
   stream_message_cb(...);
   stream_change_cb(...);
 stream_stop_cb(...);    <-- end of second block of changes
+
 
 [a. when using normal commit]
 stream_commit_cb(...);    <-- commit of the streamed transaction

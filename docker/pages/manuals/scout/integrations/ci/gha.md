@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/scout/integrations/ci/gha.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/scout/integrations/ci/gha.md)
+> Pinned source for Docker main: [content/manuals/scout/integrations/ci/gha.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/scout/integrations/ci/gha.md)
 
 # Integrate Docker Scout with GitHub Actions
 
@@ -60,7 +60,7 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ secrets.REGISTRY_USER }}
           password: ${{ secrets.REGISTRY_TOKEN }}
-
+      
       - name: Setup Docker buildx
         uses: docker/setup-buildx-action@v4
 

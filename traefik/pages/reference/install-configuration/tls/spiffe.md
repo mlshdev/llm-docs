@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/reference/install-configuration/tls/spiffe.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/tls/spiffe.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/reference/install-configuration/tls/spiffe.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/tls/spiffe.md)
 
 # SPIFFE
 
@@ -58,7 +58,7 @@ serversTransport:
     ids:
     - spiffe://trust-domain/id1
     - spiffe://trust-domain/id2
-    trustDomain: "spiffe://trust-domain"
+    trustDomain: "spiffe://trust-domain" 
 ```
 
 **File (TOML)**

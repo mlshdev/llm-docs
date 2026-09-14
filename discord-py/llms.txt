@@ -10,39 +10,39 @@
 
 ## Project
 
-- [discord.py](pages/README.md): Source `README.rst`.
+- [discord.py](pages/README.md): A modern, easy to use, feature-rich, and async ready API wrapper for Discord written in Python. (2752 bytes)
 
 ## API reference
 
-- [API Reference](pages/api.md): Source `docs/api.rst`.
+- [API Reference](pages/api.md): The following section outlines the API of discord.py. (751402 bytes)
 
 ## Guide
 
-- [Creating a Bot Account](pages/discord.md): Source `docs/discord.rst`.
-- [Frequently Asked Questions](pages/faq.md): Source `docs/faq.rst`.
-- [Welcome to discord.py](pages/index.md): Source `docs/index.rst`.
-- [A Primer to Gateway Intents](pages/intents.md): Source `docs/intents.rst`.
-- [Introduction](pages/intro.md): Source `docs/intro.rst`.
-- [Setting Up Logging](pages/logging.md): Source `docs/logging.rst`.
-- [Migrating to v2.0](pages/migrating.md): Source `docs/migrating.rst`.
-- [Migrating to v0.10.0](pages/migrating_to_async.md): Source `docs/migrating_to_async.rst`.
-- [Migrating to v1.0](pages/migrating_to_v1.md): Source `docs/migrating_to_v1.rst`.
-- [Quickstart](pages/quickstart.md): Source `docs/quickstart.rst`.
-- [Version Guarantees](pages/version_guarantees.md): Source `docs/version_guarantees.rst`.
-- [Changelog](pages/whats_new.md): Source `docs/whats_new.rst`.
+- [Creating a Bot Account](pages/discord.md): In order to work with the library and the Discord API in general, we must first create a Discord Bot account. (3997 bytes)
+- [Frequently Asked Questions](pages/faq.md): This is a list of Frequently Asked Questions regarding using discord.py and its extension modules. Feel free to suggest a new question or submit one via pull requests. (18992 bytes)
+- [Welcome to discord.py](pages/index.md): sphinx-quickstart on Fri Aug 21 05:43:30 2015. You can adapt this file completely to your liking, but it should at least contain the root toctree directive. (2141 bytes)
+- [A Primer to Gateway Intents](pages/intents.md): In version 1.5 comes the introduction of Intents. This is a radical change in how bots are written. An intent basically allows a bot to subscribe to specific buckets of events. The events that correspond to each intent… (9154 bytes)
+- [Introduction](pages/intro.md): This is the documentation for discord.py, a library for Python to aid in creating applications that utilise the Discord API. (3047 bytes)
+- [Setting Up Logging](pages/logging.md): discord.py logs errors and debug information via the logging python module. In order to streamline this process, the library provides default configuration for the discord logger when using Client.run. It is strongly re… (3159 bytes)
+- [Migrating to v2.0](pages/migrating.md): Compared to v1.0, v2.0 mostly has breaking changes related to better developer experience and API coverage. While the changes aren't as massive to require an entire rewrite, there are still many changes that need to be… (51961 bytes)
+- [Migrating to v0.10.0](pages/migrating_to_async.md): v0.10.0 is one of the biggest breaking changes in the library due to massive fundamental changes in how the library operates. (8818 bytes)
+- [Migrating to v1.0](pages/migrating_to_v1.md): v1.0 is one of the biggest breaking changes in the library due to a complete redesign. (47384 bytes)
+- [Quickstart](pages/quickstart.md): This page gives a brief introduction to the library. It assumes you have the library installed, if you don't check the installing portion. (2879 bytes)
+- [Version Guarantees](pages/version_guarantees.md): The library follows a semantic versioning principle which means that the major version is updated every time there is an incompatible API change. However due to the lack of guarantees on the Discord side when it comes t… (1518 bytes)
+- [Changelog](pages/whats_new.md): This page keeps a detailed human friendly rendering of what's new and changed in specific versions. (139970 bytes)
 
 ## Commands extension
 
-- [API Reference](pages/ext/commands/api.md): Source `docs/ext/commands/api.rst`.
-- [Cogs](pages/ext/commands/cogs.md): Source `docs/ext/commands/cogs.rst`.
-- [Commands](pages/ext/commands/commands.md): Source `docs/ext/commands/commands.rst`.
-- [Extensions](pages/ext/commands/extensions.md): Source `docs/ext/commands/extensions.rst`.
-- [discord.ext.commands -- Bot commands framework](pages/ext/commands/index.md): Source `docs/ext/commands/index.rst`.
+- [API Reference](pages/ext/commands/api.md): The following section outlines the API of discord.py's command extension module. (168982 bytes)
+- [Cogs](pages/ext/commands/cogs.md): There comes a point in your bot's development when you want to organize a collection of commands, listeners, and some state into one class. Cogs allow you to do just that. (5654 bytes)
+- [Commands](pages/ext/commands/commands.md): One of the most appealing aspects of the command extension is how easy it is to define commands and how you can arbitrarily nest groups and commands to have a rich sub-command system. (41452 bytes)
+- [Extensions](pages/ext/commands/extensions.md): There comes a time in the bot development when you want to extend the bot functionality at run-time and quickly unload and reload code (also called hot-reloading). The command framework comes with this ability built-in,… (2498 bytes)
+- [discord.ext.commands -- Bot commands framework](pages/ext/commands/index.md): discord.py offers a lower level aspect on interacting with Discord. Often times, the library is used for the creation of bots. However this task can be daunting and confusing to get correctly the first time. Many times… (502 bytes)
 
 ## Tasks extension
 
-- [discord.ext.tasks -- asyncio.Task helpers](pages/ext/tasks/index.md): Source `docs/ext/tasks/index.rst`.
+- [discord.ext.tasks -- asyncio.Task helpers](pages/ext/tasks/index.md): One of the most common operations when making a bot is having a loop run in the background at a specified interval. This pattern is very common but has a lot of things you need to look out for: (14178 bytes)
 
 ## Interactions
 
-- [Interactions API Reference](pages/interactions/api.md): Source `docs/interactions/api.rst`.
+- [Interactions API Reference](pages/interactions/api.md): The following section outlines the API of interactions, as implemented by the library. (255374 bytes)

@@ -9,12 +9,12 @@
 
 ## Plugin documentation
 
-- [VictoriaMetrics datasource for Grafana](pages/plugin.md): Source `src/README.md`.
+- [VictoriaMetrics datasource for Grafana](pages/plugin.md): The VictoriaMetrics Grafana plugin allows Grafana to query, visualize, and interact with VictoriaMetrics, a high-performance metrics storage and processing system. (11637 bytes)
 
 ## Repository
 
-- [VictoriaMetrics datasource for Grafana: repository guide](pages/repository.md): Source `README.md`.
+- [VictoriaMetrics datasource for Grafana: repository guide](pages/repository.md): The VictoriaMetrics datasource plugin allows to query and visualize data from VictoriaMetrics in Grafana. (17365 bytes)
 
 ## Release history
 
-- [VictoriaMetrics datasource for Grafana: changelog](pages/changelog.md): Source `CHANGELOG.md`.
+- [VictoriaMetrics datasource for Grafana: changelog](pages/changelog.md): Update Note 1: This is an alpha release. We do not recommend using it in production. (32518 bytes)

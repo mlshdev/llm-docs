@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/cli/docs/extend/_index.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/cli/docs/extend/_index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/cli/docs/extend/_index.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/cli/docs/extend/_index.md)
 
 # Docker Engine managed plugin system
 
@@ -52,7 +52,7 @@ enabled, and use it to create a volume.
     - mount: [/var/lib/docker-plugins/rclone/cache]
     - device: [/dev/fuse]
     - capabilities: [CAP_SYS_ADMIN]
-   Do you grant the above permissions? [y/N]
+   Do you grant the above permissions? [y/N] 
    ```
 
    The plugin requests 5 privileges:

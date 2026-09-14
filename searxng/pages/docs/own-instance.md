@@ -1,4 +1,4 @@
-> Commit-pinned source for SearXNG master: [docs/own-instance.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/own-instance.rst)
+> Pinned source for SearXNG master: [docs/own-instance.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/own-instance.rst)
 
 # Why use a private instance?
 
@@ -16,7 +16,7 @@ single-user instances, which run locally on the user's machine.
 To gain more insight on how these instances work, let's dive into how SearXNG
 protects its users.
 
-.. \_SearXNG protect privacy:
+<a id="searxng-protect-privacy"></a>
 
 # How does SearXNG protect privacy?
 
@@ -53,7 +53,7 @@ results.
 
 ## I see. What about private instances?
 
-If users run their own instances, everything is in their
+If users run their [own instances](https://docs.searxng.org/admin/installation.html#installation), everything is in their
 control: the source code, logging settings and private data.  Unknown instance
 administrators do not have to be trusted.
 

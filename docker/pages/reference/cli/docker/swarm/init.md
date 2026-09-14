@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_swarm_init.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_swarm_init.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_swarm_init.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_swarm_init.yaml)
 
 # docker swarm init
 
@@ -13,23 +13,23 @@ in the newly created single-node swarm.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--advertise-addr` |  | Advertised address (format: `<ip\|interface>[:port]`) |
-| `--autolock` |  | Enable manager autolocking (requiring an unlock key to start a stopped manager) |
-| `--availability` | `active` | Availability of the node (`active`, `pause`, `drain`) |
-| `--cert-expiry` | `2160h0m0s` | Validity period for node certificates (ns\|us\|ms\|s\|m\|h) |
-| `--data-path-addr` |  | Address or interface to use for data path traffic (format: `<ip\|interface>`) (API 1.31+) |
-| `--data-path-port` |  | Port number to use for data path traffic (1024 - 49151). If no value is set or is set to 0, the default port (4789) is used. (API 1.40+) |
-| `--default-addr-pool` |  | default address pool in CIDR format (API 1.39+) |
-| `--default-addr-pool-mask-length` | `24` | default address pool subnet mask length (API 1.39+) |
-| `--dispatcher-heartbeat` | `5s` | Dispatcher heartbeat period (ns\|us\|ms\|s\|m\|h) |
-| `--external-ca` |  | Specifications of one or more certificate signing endpoints |
-| `--force-new-cluster` |  | Force create a new cluster from current state |
-| `--listen-addr` | `0.0.0.0:2377` | Listen address (format: `<ip\|interface>[:port]`) |
-| `--max-snapshots` |  | Number of additional Raft snapshots to retain (API 1.25+) |
-| `--snapshot-interval` | `10000` | Number of log entries between Raft snapshots (API 1.25+) |
-| `--task-history-limit` | `5` | Task history retention limit |
+| Option                            | Default        | Description                                                                                                                              |
+| --------------------------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `--advertise-addr`                |                | Advertised address (format: `<ip\|interface>[:port]`)                                                                                    |
+| `--autolock`                      |                | Enable manager autolocking (requiring an unlock key to start a stopped manager)                                                          |
+| `--availability`                  | `active`       | Availability of the node (`active`, `pause`, `drain`)                                                                                    |
+| `--cert-expiry`                   | `2160h0m0s`    | Validity period for node certificates (ns\|us\|ms\|s\|m\|h)                                                                              |
+| `--data-path-addr`                |                | Address or interface to use for data path traffic (format: `<ip\|interface>`) (API 1.31+)                                                |
+| `--data-path-port`                |                | Port number to use for data path traffic (1024 - 49151). If no value is set or is set to 0, the default port (4789) is used. (API 1.40+) |
+| `--default-addr-pool`             |                | default address pool in CIDR format (API 1.39+)                                                                                          |
+| `--default-addr-pool-mask-length` | `24`           | default address pool subnet mask length (API 1.39+)                                                                                      |
+| `--dispatcher-heartbeat`          | `5s`           | Dispatcher heartbeat period (ns\|us\|ms\|s\|m\|h)                                                                                        |
+| `--external-ca`                   |                | Specifications of one or more certificate signing endpoints                                                                              |
+| `--force-new-cluster`             |                | Force create a new cluster from current state                                                                                            |
+| `--listen-addr`                   | `0.0.0.0:2377` | Listen address (format: `<ip\|interface>[:port]`)                                                                                        |
+| `--max-snapshots`                 |                | Number of additional Raft snapshots to retain (API 1.25+)                                                                                |
+| `--snapshot-interval`             | `10000`        | Number of log entries between Raft snapshots (API 1.25+)                                                                                 |
+| `--task-history-limit`            | `5`            | Task history retention limit                                                                                                             |
 
 ## Examples
 
@@ -48,10 +48,10 @@ To add a manager to this swarm, run 'docker swarm join-token manager' and follow
 The `docker swarm init` command generates two random tokens: a worker token and
 a manager token. When you join a new node to the swarm, the node joins as a
 worker or manager node based upon the token you pass to [swarm
-join](/reference/cli/docker/swarm/join/).
+join](https://docs.docker.com/reference/cli/docker/swarm/join/).
 
 After you create the swarm, you can display or rotate the token using
-[swarm join-token](/reference/cli/docker/swarm/join-token/).
+[swarm join-token](https://docs.docker.com/reference/cli/docker/swarm/join-token/).
 
 ### Protect manager keys and data (--autolock) {#autolock}
 

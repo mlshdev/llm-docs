@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_ports.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_ports.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_ports.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_ports.yaml)
 
 # sbx ports
 
@@ -12,11 +12,11 @@ Manage sandbox port publishing.
 
 List, publish, or unpublish sandbox ports. Publishing a local port starts a
 stopped sandbox before creating the host binding. Without --publish or
---unpublish flags, lists all published ports.
+\--unpublish flags, lists all published ports.
 
-Port spec format: [[HOST_IP:]HOST_PORT:]SANDBOX_PORT[/PROTOCOL]
-If HOST_PORT is omitted, an ephemeral port is allocated automatically.
-If HOST_IP is omitted, the port is bound on loopback, expanded based on
+Port spec format: \[\[HOST\_IP:]HOST\_PORT:]SANDBOX\_PORT\[/PROTOCOL]
+If HOST\_PORT is omitted, an ephemeral port is allocated automatically.
+If HOST\_IP is omitted, the port is bound on loopback, expanded based on
 PROTOCOL and the sandbox's address families: tcp/udp binds both 127.0.0.1
 and ::1 (or only 127.0.0.1 if the sandbox is IPv4-only); tcp4/udp4 binds
 only 127.0.0.1; tcp6/udp6 binds only ::1.
@@ -24,32 +24,32 @@ Supported protocols: tcp, tcp4, tcp6, udp, udp4, udp6.
 
 When publishing without a PROTOCOL, tcp4 is used — so a sandbox service
 listening only on IPv4 is reachable without a host client having to avoid
-::1 — or tcp6 when HOST_IP is an IPv6 address. Publish tcp explicitly to
+::1 — or tcp6 when HOST\_IP is an IPv6 address. Publish tcp explicitly to
 bind both families.
 
 When unpublishing without a PROTOCOL, the mapping is removed whether it was
 published with that same default or as dual-stack tcp. Name the protocol to
 remove a tcp6 or udp mapping; anything left behind is reported.
 
-In cloud mode (--cloud), the sandbox may be given by ID (sbx_*) or name, and
+In cloud mode (--cloud), the sandbox may be given by ID (sbx\_\*) or name, and
 only the sandbox port number is accepted. The cloud control plane assigns a
 publicly reachable URL for each exposed port.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--json` |  | Output in JSON format (for port listing) |
-| `--publish` |  | Publish a port (can be repeated): [[HOST_IP:]HOST_PORT:]SANDBOX_PORT[/PROTOCOL] (local) or SANDBOX_PORT (cloud) |
-| `--unpublish` |  | Unpublish a port (can be repeated): [HOST_IP:]HOST_PORT:SANDBOX_PORT[/PROTOCOL] (local) or SANDBOX_PORT (cloud) |
+| Option        | Default | Description                                                                                                            |
+| ------------- | ------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `--json`      |         | Output in JSON format (for port listing)                                                                               |
+| `--publish`   |         | Publish a port (can be repeated): \[\[HOST\_IP:]HOST\_PORT:]SANDBOX\_PORT\[/PROTOCOL] (local) or SANDBOX\_PORT (cloud) |
+| `--unpublish` |         | Unpublish a port (can be repeated): \[HOST\_IP:]HOST\_PORT:SANDBOX\_PORT\[/PROTOCOL] (local) or SANDBOX\_PORT (cloud)  |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--cloud` |  | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (https://api.sandboxes-cloud.docker.com). Set DOCKER_CLOUD_API_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option            | Default                                  | Description                                                                                                                                                                                                             |
+| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
+| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
+| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
 
 ## Examples
 

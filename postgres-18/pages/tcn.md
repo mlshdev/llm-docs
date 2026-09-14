@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/tcn.sgml#tcn](https://www.postgresql.org/docs/18/tcn.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/tcn.sgml#tcn](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/tcn.sgml%23tcn)
+> Canonical documentation: https://www.postgresql.org/docs/18/tcn.html
 
 # tcn — a trigger function to notify listeners of changes to table content
 

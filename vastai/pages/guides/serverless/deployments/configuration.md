@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [guides/serverless/deployments/configuration.mdx](https://docs.vast.ai/guides/serverless/deployments/configuration)
+> Pinned source for Vast.ai main: [guides/serverless/deployments/configuration.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/serverless/deployments/configuration.mdx)
+> Canonical documentation: https://docs.vast.ai/guides/serverless/deployments/configuration
 
 # Configuring Deployments
 

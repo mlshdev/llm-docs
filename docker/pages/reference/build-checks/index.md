@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/_index.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/_index.md)
+> Pinned source for Docker main: [_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/_index.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/_index.md)
 
 # Build checks
 
@@ -27,87 +27,87 @@ To learn more about how to use build checks, see
   </thead>
   <tbody>
     <tr>
-      <td><a href="./stage-name-casing/">StageNameCasing</a></td>
+      <td><a href="https://docs.docker.com/reference/build-checks/stage-name-casing/">StageNameCasing</a></td>
       <td>Stage names should be lowercase</td>
     </tr>
     <tr>
-      <td><a href="./from-as-casing/">FromAsCasing</a></td>
+      <td><a href="https://docs.docker.com/reference/build-checks/from-as-casing/">FromAsCasing</a></td>
       <td>The 'as' keyword should match the case of the 'from' keyword</td>
     </tr>
     <tr>
-      <td><a href="./no-empty-continuation/">NoEmptyContinuation</a></td>
+      <td><a href="https://docs.docker.com/reference/build-checks/no-empty-continuation/">NoEmptyContinuation</a></td>
       <td>Empty continuation lines will become errors in a future release</td>
     </tr>
     <tr>
-      <td><a href="./consistent-instruction-casing/">ConsistentInstructionCasing</a></td>
+      <td><a href="https://docs.docker.com/reference/build-checks/consistent-instruction-casing/">ConsistentInstructionCasing</a></td>
       <td>All commands within the Dockerfile should use the same casing (either upper or lower)</td>
     </tr>
     <tr>
-      <td><a href="./duplicate-stage-name/">DuplicateStageName</a></td>
+      <td><a href="https://docs.docker.com/reference/build-checks/duplicate-stage-name/">DuplicateStageName</a></td>
       <td>Stage names should be unique</td>
     </tr>
     <tr>
-      <td><a href="./reserved-stage-name/">ReservedStageName</a></td>
+      <td><a href="https://docs.docker.com/reference/build-checks/reserved-stage-name/">ReservedStageName</a></td>
       <td>Reserved words should not be used as stage names</td>
     </tr>
     <tr>
-      <td><a href="./json-args-recommended/">JSONArgsRecommended</a></td>
+      <td><a href="https://docs.docker.com/reference/build-checks/json-args-recommended/">JSONArgsRecommended</a></td>
       <td>JSON arguments recommended for ENTRYPOINT/CMD to prevent unintended behavior related to OS signals</td>
     </tr>
     <tr>
-      <td><a href="./maintainer-deprecated/">MaintainerDeprecated</a></td>
+      <td><a href="https://docs.docker.com/reference/build-checks/maintainer-deprecated/">MaintainerDeprecated</a></td>
       <td>The MAINTAINER instruction is deprecated, use a label instead to define an image author</td>
     </tr>
     <tr>
-      <td><a href="./undefined-arg-in-from/">UndefinedArgInFrom</a></td>
+      <td><a href="https://docs.docker.com/reference/build-checks/undefined-arg-in-from/">UndefinedArgInFrom</a></td>
       <td>FROM command must use declared ARGs</td>
     </tr>
     <tr>
-      <td><a href="./workdir-relative-path/">WorkdirRelativePath</a></td>
+      <td><a href="https://docs.docker.com/reference/build-checks/workdir-relative-path/">WorkdirRelativePath</a></td>
       <td>Relative workdir without an absolute workdir declared within the build can have unexpected results if the base image changes</td>
     </tr>
     <tr>
-      <td><a href="./undefined-var/">UndefinedVar</a></td>
+      <td><a href="https://docs.docker.com/reference/build-checks/undefined-var/">UndefinedVar</a></td>
       <td>Variables should be defined before their use</td>
     </tr>
     <tr>
-      <td><a href="./multiple-instructions-disallowed/">MultipleInstructionsDisallowed</a></td>
+      <td><a href="https://docs.docker.com/reference/build-checks/multiple-instructions-disallowed/">MultipleInstructionsDisallowed</a></td>
       <td>Multiple instructions of the same type should not be used in the same stage</td>
     </tr>
     <tr>
-      <td><a href="./legacy-key-value-format/">LegacyKeyValueFormat</a></td>
+      <td><a href="https://docs.docker.com/reference/build-checks/legacy-key-value-format/">LegacyKeyValueFormat</a></td>
       <td>Legacy key/value format with whitespace separator should not be used</td>
     </tr>
     <tr>
-      <td><a href="./redundant-target-platform/">RedundantTargetPlatform</a></td>
+      <td><a href="https://docs.docker.com/reference/build-checks/redundant-target-platform/">RedundantTargetPlatform</a></td>
       <td>Setting platform to predefined $TARGETPLATFORM in FROM is redundant as this is the default behavior</td>
     </tr>
     <tr>
-      <td><a href="./secrets-used-in-arg-or-env/">SecretsUsedInArgOrEnv</a></td>
+      <td><a href="https://docs.docker.com/reference/build-checks/secrets-used-in-arg-or-env/">SecretsUsedInArgOrEnv</a></td>
       <td>Sensitive data should not be used in the ARG or ENV commands</td>
     </tr>
     <tr>
-      <td><a href="./invalid-default-arg-in-from/">InvalidDefaultArgInFrom</a></td>
+      <td><a href="https://docs.docker.com/reference/build-checks/invalid-default-arg-in-from/">InvalidDefaultArgInFrom</a></td>
       <td>Default value for global ARG results in an empty or invalid base image name</td>
     </tr>
     <tr>
-      <td><a href="./from-platform-flag-const-disallowed/">FromPlatformFlagConstDisallowed</a></td>
+      <td><a href="https://docs.docker.com/reference/build-checks/from-platform-flag-const-disallowed/">FromPlatformFlagConstDisallowed</a></td>
       <td>FROM --platform flag should not use a constant value</td>
     </tr>
     <tr>
-      <td><a href="./copy-ignored-file/">CopyIgnoredFile</a></td>
+      <td><a href="https://docs.docker.com/reference/build-checks/copy-ignored-file/">CopyIgnoredFile</a></td>
       <td>Attempting to Copy file that is excluded by .dockerignore</td>
     </tr>
     <tr>
-      <td><a href="./invalid-definition-description/">InvalidDefinitionDescription (experimental)</a></td>
+      <td><a href="https://docs.docker.com/reference/build-checks/invalid-definition-description/">InvalidDefinitionDescription (experimental)</a></td>
       <td>Comment for build stage or argument should follow the format: `# <arg/stage name> <description>`. If this is not intended to be a description comment, add an empty line or comment between the instruction and the comment.</td>
     </tr>
     <tr>
-      <td><a href="./expose-proto-casing/">ExposeProtoCasing</a></td>
+      <td><a href="https://docs.docker.com/reference/build-checks/expose-proto-casing/">ExposeProtoCasing</a></td>
       <td>Protocol in EXPOSE instruction should be lowercase</td>
     </tr>
     <tr>
-      <td><a href="./expose-invalid-format/">ExposeInvalidFormat</a></td>
+      <td><a href="https://docs.docker.com/reference/build-checks/expose-invalid-format/">ExposeInvalidFormat</a></td>
       <td>IP address and host-port mapping should not be used in EXPOSE instruction. This will become an error in a future release</td>
     </tr>
   </tbody>

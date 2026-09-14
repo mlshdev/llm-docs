@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_volume_rm.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_volume_rm.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_volume_rm.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_volume_rm.yaml)
 
 # docker volume rm
 
@@ -14,9 +14,9 @@ Remove one or more volumes. You can't remove a volume that's in use by a contain
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--force` |  | Force the removal of one or more volumes (API 1.25+) |
+| Option          | Default | Description                                          |
+| --------------- | ------- | ---------------------------------------------------- |
+| `-f`, `--force` |         | Force the removal of one or more volumes (API 1.25+) |
 
 ## Examples
 

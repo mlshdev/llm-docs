@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_image_history.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_image_history.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_image_history.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_image_history.yaml)
 
 # docker image history
 
@@ -14,13 +14,13 @@ Show the history of an image
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--format` |  | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to https://docs.docker.com/go/formatting/ for more information about formatting output with templates |
-| `-H`, `--human` | `true` | Print sizes and dates in human readable format |
-| `--no-trunc` |  | Don't truncate output |
-| `--platform` |  | Show history for the given platform. Formatted as `os[/arch[/variant]]` (e.g., `linux/amd64`) (API 1.48+) |
-| `-q`, `--quiet` |  | Only show image IDs |
+| Option          | Default | Description                                                                                                                                                                                                                                                                                                                                                                            |
+| --------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--format`      |         | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to <https://docs.docker.com/go/formatting/> for more information about formatting output with templates |
+| `-H`, `--human` | `true`  | Print sizes and dates in human readable format                                                                                                                                                                                                                                                                                                                                         |
+| `--no-trunc`    |         | Don't truncate output                                                                                                                                                                                                                                                                                                                                                                  |
+| `--platform`    |         | Show history for the given platform. Formatted as `os[/arch[/variant]]` (e.g., `linux/amd64`) (API 1.48+)                                                                                                                                                                                                                                                                              |
+| `-q`, `--quiet` |         | Only show image IDs                                                                                                                                                                                                                                                                                                                                                                    |
 
 ## Examples
 
@@ -57,7 +57,7 @@ using a Go template.
 Valid placeholders for the Go template are listed below:
 
 | Placeholder     | Description                                                                                               |
-|-----------------|-----------------------------------------------------------------------------------------------------------|
+| --------------- | --------------------------------------------------------------------------------------------------------- |
 | `.ID`           | Image ID                                                                                                  |
 | `.CreatedSince` | Elapsed time since the image was created if `--human=true`, otherwise timestamp of when image was created |
 | `.CreatedAt`    | Timestamp of when image was created                                                                       |

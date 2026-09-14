@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/how-to/scan.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/dhi/how-to/scan.md)
+> Pinned source for Docker main: [content/manuals/dhi/how-to/scan.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/dhi/how-to/scan.md)
 
 # Scan Docker Hardened Images
 
@@ -192,7 +192,7 @@ jobs:
           context: .
           sbom: true
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.SHA }}
-
+      
       - name: Run Docker Scout CVE scan
         uses: docker/scout-action@v1
         with:

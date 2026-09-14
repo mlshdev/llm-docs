@@ -1,19 +1,23 @@
-> Commit-pinned source for SearXNG master: [docs/dev/engines/online/wikipedia.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/wikipedia.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/online/wikipedia.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/wikipedia.rst)
 
-.. \_wikimedia engines:
+<a id="wikimedia-engines"></a>
 
 # Wikimedia
 
-.. \_wikipedia engine:
+<a id="wikipedia-engine"></a>
 
 # Wikipedia
 
-.. automodule:: searx.engines.wikipedia
-:members:
+<a id="api-searx-engines-wikipedia"></a>
 
-.. \_wikidata engine:
+#### `wikipedia(query: str, sxng_locale: str) -> list[str]`
+
+Autocomplete from Wikipedia. Supports Wikipedia's languages (aka netloc).
+
+<a id="wikidata-engine"></a>
 
 # Wikidata
 
-.. automodule:: searx.engines.wikidata
-:members:
+#### `searx.engines.wikidata`
+
+Static Python API reference (`automodule`).

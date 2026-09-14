@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/reference/compose-file/models.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/reference/compose-file/models.md)
+> Pinned source for Docker main: [content/reference/compose-file/models.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/reference/compose-file/models.md)
 
 # Models
 
@@ -20,6 +20,7 @@ services:
     image: app
     models:
       - ai_model
+
 
 models:
   ai_model:
@@ -46,7 +47,7 @@ models:
   my_model:
     model: ai/model
     context_size: 1024
-    runtime_flags:
+    runtime_flags: 
       - "--a-flag"
       - "--another-flag=42"
 ```

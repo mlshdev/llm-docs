@@ -1,12 +1,12 @@
-> Commit-pinned source for Docker main: [data/cli/mcp/docker_mcp_client_disconnect.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp_client_disconnect.yaml)
+> Pinned source for Docker main: [data/cli/mcp/docker_mcp_client_disconnect.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp_client_disconnect.yaml)
 
 # docker mcp client disconnect
 
 Disconnect the Docker MCP Toolkit from a client. Supported clients: claude-code claude-desktop cline codex continue crush cursor gemini goose gordon kiro lmstudio opencode sema4 vscode zed
 
-**Usage:** `docker mcp client disconnect [OPTIONS] <mcp-client>
+**Usage:** \`docker mcp client disconnect \[OPTIONS] <mcp-client>
 
-Supported clients: claude-code claude-desktop cline codex continue crush cursor gemini goose gordon kiro lmstudio opencode sema4 vscode zed`
+Supported clients: claude-code claude-desktop cline codex continue crush cursor gemini goose gordon kiro lmstudio opencode sema4 vscode zed\`
 
 ## Description
 
@@ -14,7 +14,7 @@ Disconnect the Docker MCP Toolkit from a client. Supported clients: claude-code 
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-g`, `--global` |  | Change the system wide configuration or the clients setup in your current git repo. |
-| `-q`, `--quiet` |  | Only display errors. |
+| Option           | Default | Description                                                                         |
+| ---------------- | ------- | ----------------------------------------------------------------------------------- |
+| `-g`, `--global` |         | Change the system wide configuration or the clients setup in your current git repo. |
+| `-q`, `--quiet`  |         | Only display errors.                                                                |

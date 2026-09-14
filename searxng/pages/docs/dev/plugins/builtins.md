@@ -1,5 +1,14 @@
-> Commit-pinned source for SearXNG master: [docs/dev/plugins/builtins.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/plugins/builtins.rst)
+> Pinned source for SearXNG master: [docs/dev/plugins/builtins.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/plugins/builtins.rst)
 
-.. \_builtin plugins:
+<a id="builtin-plugins"></a>
 
 # Built-in Plugins
+
+- [calculator](https://docs.searxng.org/calculator.html)
+- [hash\_plugin](https://docs.searxng.org/hash_plugin.html)
+- [hostnames](https://docs.searxng.org/hostnames.html)
+- [infinite\_scroll](https://docs.searxng.org/infinite_scroll.html)
+- [self\_info](https://docs.searxng.org/self_info.html)
+- [tor\_check](https://docs.searxng.org/tor_check.html)
+- [unit\_converter](https://docs.searxng.org/unit_converter.html)
+- [time\_zone](https://docs.searxng.org/time_zone.html)

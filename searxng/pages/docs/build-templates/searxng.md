@@ -1,248 +1,162 @@
-> Commit-pinned source for SearXNG master: [docs/build-templates/searxng.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/build-templates/searxng.rst)
+> Pinned source for SearXNG master: [docs/build-templates/searxng.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/build-templates/searxng.rst)
 
-.. template evaluated by: ./utils/searxng.sh searxng.doc.rst
-.. hint: all dollar-names are variables, dollar sign itself is quoted by: \\$
+**Ubuntu / debian**
 
-.. START distro-packages
-
-.. tabs:
-
-```text
-.. group-tab:: Ubuntu / debian
-
-.. code-block:: sh
-
-  $ sudo -H apt-get install -y \\
+```sh
+$ sudo -H apt-get install -y \\
 ```
 
-${debian}
+**${debian}**
 
-.. group-tab:: Arch Linux
+**Arch Linux**
 
-```
-.. code-block:: sh
-
-  $ sudo -H pacman -S --noconfirm \\
+```sh
+$ sudo -H pacman -S --noconfirm \\
 ```
 
-${arch}
+**${arch}**
 
-.. group-tab::  Fedora / RHEL
+**Fedora / RHEL**
 
-```
-.. code-block:: sh
-
-  $ sudo -H dnf install -y \\
+```sh
+$ sudo -H dnf install -y \\
 ```
 
 ${fedora}
 
-.. END distro-packages
+**Ubuntu / debian**
 
-.. START build-packages
-
-.. tabs:
-
-```text
-.. group-tab:: Ubuntu / debian
-
-.. code-block:: sh
-
-  $ sudo -H apt-get install -y \\
+```sh
+$ sudo -H apt-get install -y \\
 ```
 
-${debian\_build}
+**${debian\_build}**
 
-.. group-tab:: Arch Linux
+**Arch Linux**
 
-```
-.. code-block:: sh
-
-  $ sudo -H pacman -S --noconfirm \\
+```sh
+$ sudo -H pacman -S --noconfirm \\
 ```
 
-${arch\_build}
+**${arch\_build}**
 
-.. group-tab::  Fedora / RHEL
+**Fedora / RHEL**
 
-```
-.. code-block:: sh
-
-  $ sudo -H dnf install -y \\
+```sh
+$ sudo -H dnf install -y \\
 ```
 
 ${fedora\_build}
 
-.. END build-packages
+**bash**
 
-.. START create user
+```sh
+$ sudo -H useradd --shell /bin/bash --system \\
+    --home-dir \"$SERVICE_HOME\" \\
+    --comment 'Privacy-respecting metasearch engine' \\
+    $SERVICE_USER
 
-.. tabs:
-
-```text
-.. group-tab:: bash
-
-.. code-block:: sh
-
-  $ sudo -H useradd --shell /bin/bash --system \\
-      --home-dir \"$SERVICE_HOME\" \\
-      --comment 'Privacy-respecting metasearch engine' \\
-      $SERVICE_USER
-
-  $ sudo -H mkdir \"$SERVICE_HOME\"
-  $ sudo -H chown -R \"$SERVICE_GROUP:$SERVICE_GROUP\" \"$SERVICE_HOME\"
-
+$ sudo -H mkdir \"$SERVICE_HOME\"
+$ sudo -H chown -R \"$SERVICE_GROUP:$SERVICE_GROUP\" \"$SERVICE_HOME\"
 ```
 
-.. END create user
+**bash**
 
-.. START clone searxng
-
-.. tabs:
-
-```text
-.. group-tab:: bash
-
-.. code-block:: sh
-
-   $ sudo -H -u ${SERVICE_USER} -i
-   (${SERVICE_USER})$ git clone \"$GIT_URL\" \\
-                      \"$SEARXNG_SRC\"
-
+```sh
+$ sudo -H -u ${SERVICE_USER} -i
+(${SERVICE_USER})$ git clone \"$GIT_URL\" \\
+                   \"$SEARXNG_SRC\"
 ```
 
-.. END clone searxng
+**bash**
 
-.. START create virtualenv
-
-.. tabs:
-
-```text
-.. group-tab:: bash
-
-.. code-block:: sh
-
-   (${SERVICE_USER})$ python3 -m venv \"${SEARXNG_PYENV}\"
-   (${SERVICE_USER})$ echo \". ${SEARXNG_PYENV}/bin/activate\" \\
-                      >>  \"$SERVICE_HOME/.profile\"
-
+```sh
+(${SERVICE_USER})$ python3 -m venv \"${SEARXNG_PYENV}\"
+(${SERVICE_USER})$ echo \". ${SEARXNG_PYENV}/bin/activate\" \\
+                   >>  \"$SERVICE_HOME/.profile\"
 ```
 
-.. END create virtualenv
+**bash**
 
-.. START manage.sh update\_packages
+```sh
+$ sudo -H -u ${SERVICE_USER} -i
 
-.. tabs:
+(${SERVICE_USER})$ command -v python && python --version
+$SEARXNG_PYENV/bin/python
+Python 3.11.10
 
-```text
-.. group-tab:: bash
+# update pip's boilerplate ..
+pip install -U pip
+pip install -U setuptools
+pip install -U wheel
 
-.. code-block:: sh
+# additional packages required for installation
+pip install -U pyyaml
+pip install -U msgspec
+pip install -U typing-extensions
+pip install -U pybind11
 
-   $ sudo -H -u ${SERVICE_USER} -i
-
-   (${SERVICE_USER})$ command -v python && python --version
-   $SEARXNG_PYENV/bin/python
-   Python 3.11.10
-
-   # update pip's boilerplate ..
-   pip install -U pip
-   pip install -U setuptools
-   pip install -U wheel
-
-   # additional packages required for installation
-   pip install -U pyyaml
-   pip install -U msgspec
-   pip install -U typing-extensions
-   pip install -U pybind11
-
-   # jump to SearXNG's working tree and install SearXNG into virtualenv
-   (${SERVICE_USER})$ cd \"$SEARXNG_SRC\"
-   (${SERVICE_USER})$ pip install --use-pep517 --no-build-isolation -e .
-
+# jump to SearXNG's working tree and install SearXNG into virtualenv
+(${SERVICE_USER})$ cd \"$SEARXNG_SRC\"
+(${SERVICE_USER})$ pip install --use-pep517 --no-build-isolation -e .
 ```
 
-.. END manage.sh update\_packages
+**Use default settings**
 
-.. START searxng config
-
-.. tabs:
-
-```text
-.. group-tab:: Use default settings
-
-.. code-block:: sh
-
-   $ sudo -H mkdir -p \"$(dirname ${SEARXNG_SETTINGS_PATH})\"
-   $ sudo -H cp \"$SEARXNG_SRC/utils/templates/etc/searxng/settings.yml\" \\
-                \"${SEARXNG_SETTINGS_PATH}\"
-
-.. group-tab:: minimal setup
-
-.. code-block:: sh
-
-   $ sudo -H sed -i -e \"s/ultrasecretkey/\$(openssl rand -hex 16)/g\" \\
-                 \"$SEARXNG_SETTINGS_PATH\"
-
+```sh
+$ sudo -H mkdir -p \"$(dirname ${SEARXNG_SETTINGS_PATH})\"
+$ sudo -H cp \"$SEARXNG_SRC/utils/templates/etc/searxng/settings.yml\" \\
+             \"${SEARXNG_SETTINGS_PATH}\"
 ```
 
-.. END searxng config
+**minimal setup**
 
-.. START check searxng installation
+```sh
+$ sudo -H sed -i -e \"s/ultrasecretkey/\$(openssl rand -hex 16)/g\" \\
+              \"$SEARXNG_SETTINGS_PATH\"
+```
 
-.. tabs:
+**bash**
 
-```text
-.. group-tab:: bash
+```sh
+# enable debug ..
+$ sudo -H sed -i -e \"s/debug : False/debug : True/g\" \"$SEARXNG_SETTINGS_PATH\"
 
-.. code-block:: sh
+# start webapp
+$ sudo -H -u ${SERVICE_USER} -i
+(${SERVICE_USER})$ cd ${SEARXNG_SRC}
+(${SERVICE_USER})$ export SEARXNG_SETTINGS_PATH=\"${SEARXNG_SETTINGS_PATH}\"
+(${SERVICE_USER})$ python -m searx.webapp
 
-   # enable debug ..
-   $ sudo -H sed -i -e \"s/debug : False/debug : True/g\" \"$SEARXNG_SETTINGS_PATH\"
-
-   # start webapp
-   $ sudo -H -u ${SERVICE_USER} -i
-   (${SERVICE_USER})$ cd ${SEARXNG_SRC}
-   (${SERVICE_USER})$ export SEARXNG_SETTINGS_PATH=\"${SEARXNG_SETTINGS_PATH}\"
-   (${SERVICE_USER})$ python -m searx.webapp
-
-   # disable debug
-   $ sudo -H sed -i -e \"s/debug : True/debug : False/g\" \"$SEARXNG_SETTINGS_PATH\"
-
+# disable debug
+$ sudo -H sed -i -e \"s/debug : True/debug : False/g\" \"$SEARXNG_SETTINGS_PATH\"
 ```
 
 Open WEB browser and visit http\://$SEARXNG\_INTERNAL\_HTTP .  If you are inside a
 container or in a script, test with curl:
 
-.. tabs:
+**WEB browser**
 
-```text
-.. group-tab:: WEB browser
-
-.. code-block:: sh
-
-   $ xdg-open http://$SEARXNG_INTERNAL_HTTP
-
-.. group-tab:: curl
-
-.. code-block:: none
-
-   $ curl --location --verbose --head --insecure $SEARXNG_INTERNAL_HTTP
-
-   *   Trying 127.0.0.1:8888...
-   * TCP_NODELAY set
-   * Connected to 127.0.0.1 (127.0.0.1) port 8888 (#0)
-   > HEAD / HTTP/1.1
-   > Host: 127.0.0.1:8888
-   > User-Agent: curl/7.68.0
-   > Accept: */*
-   >
-   * Mark bundle as not supporting multiuse
-   * HTTP 1.0, assume close after body
-   < HTTP/1.0 200 OK
-   HTTP/1.0 200 OK
-   ...
-
+```sh
+$ xdg-open http://$SEARXNG_INTERNAL_HTTP
 ```
 
-.. END check searxng installation
+**curl**
+
+```none
+$ curl --location --verbose --head --insecure $SEARXNG_INTERNAL_HTTP
+
+*   Trying 127.0.0.1:8888...
+* TCP_NODELAY set
+* Connected to 127.0.0.1 (127.0.0.1) port 8888 (#0)
+> HEAD / HTTP/1.1
+> Host: 127.0.0.1:8888
+> User-Agent: curl/7.68.0
+> Accept: */*
+>
+* Mark bundle as not supporting multiuse
+* HTTP 1.0, assume close after body
+< HTTP/1.0 200 OK
+HTTP/1.0 200 OK
+...
+```

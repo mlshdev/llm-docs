@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/buildx/docker_buildx_prune.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_prune.yaml)
+> Pinned source for Docker main: [data/cli/buildx/docker_buildx_prune.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_prune.yaml)
 
 # docker buildx prune
 
@@ -12,23 +12,23 @@ Clears the build cache of the selected builder.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-a`, `--all` |  | Include internal/frontend images |
-| `--filter` |  | Provide filter values |
-| `-f`, `--force` |  | Do not prompt for confirmation |
-| `--max-used-space` |  | Maximum amount of disk space allowed to keep for cache |
-| `--min-free-space` |  | Target amount of free disk space after pruning |
-| `--reserved-space` |  | Amount of disk space always allowed to keep for cache |
-| `--timeout` | `20s` | Override the default timeout for loading builder status |
-| `--verbose` |  | Provide a more verbose output |
+| Option             | Default | Description                                             |
+| ------------------ | ------- | ------------------------------------------------------- |
+| `-a`, `--all`      |         | Include internal/frontend images                        |
+| `--filter`         |         | Provide filter values                                   |
+| `-f`, `--force`    |         | Do not prompt for confirmation                          |
+| `--max-used-space` |         | Maximum amount of disk space allowed to keep for cache  |
+| `--min-free-space` |         | Target amount of free disk space after pruning          |
+| `--reserved-space` |         | Amount of disk space always allowed to keep for cache   |
+| `--timeout`        | `20s`   | Override the default timeout for loading builder status |
+| `--verbose`        |         | Provide a more verbose output                           |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--builder` |  | Override the configured builder instance |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option          | Default | Description                              |
+| --------------- | ------- | ---------------------------------------- |
+| `--builder`     |         | Override the configured builder instance |
+| `-D`, `--debug` |         | Enable debug logging                     |
 
 ## Examples
 
@@ -47,6 +47,7 @@ operators `=` for equality, `!=` for not equal and `~=` for a regular
 expression.
 
 Valid filter keys are:
+
 - `until` flag to keep records that have been used in the last duration time.
   Value is a duration string, e.g. `24h` or `2h30m`, with allowable units of
   `(h)ours`, `(m)inutes` and `(s)econds`.
@@ -80,7 +81,7 @@ docker buildx prune --filter "type=source.local"
 docker buildx prune --filter "type!=exec.cachemount"
 ```
 
-> [!NOTE]
+> \[!NOTE]
 > Multiple `--filter` flags are ANDed together.
 
 ### Maximum amount of disk space allowed to keep for cache (--max-used-space) {#max-used-space}
@@ -115,4 +116,4 @@ e.g. `128mb`, `2gb`, etc. Units are case-insensitive.
 
 ### Override the configured builder instance (--builder) {#builder}
 
-Same as [`buildx --builder`](/reference/cli/docker/buildx/#builder).
+Same as [`buildx --builder`](https://docs.docker.com/reference/cli/docker/buildx/#builder).

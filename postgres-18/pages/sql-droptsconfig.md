@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/drop_tsconfig.sgml#sql-droptsconfig](https://www.postgresql.org/docs/18/sql-droptsconfig.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/drop_tsconfig.sgml#sql-droptsconfig](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/drop_tsconfig.sgml%23sql-droptsconfig)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-droptsconfig.html
 
 # DROP TEXT SEARCH CONFIGURATION
 

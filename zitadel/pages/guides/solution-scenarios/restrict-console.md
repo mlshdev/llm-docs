@@ -1,4 +1,5 @@
-> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/solution-scenarios/restrict-console.mdx](https://zitadel.com/docs/guides/solution-scenarios/restrict-console)
+> Pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/solution-scenarios/restrict-console.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/guides/solution-scenarios/restrict-console.mdx)
+> Canonical documentation: https://zitadel.com/docs/guides/solution-scenarios/restrict-console
 
 ZITADEL includes a Management Console that allows administrators to configure all resources. By default, all users, including end users, can view and manage their profile information.
 In some cases, you may want to prevent users from accessing the Management Console. Common reasons include:

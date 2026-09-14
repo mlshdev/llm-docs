@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/swarm/configs.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/swarm/configs.md)
+> Pinned source for Docker main: [content/manuals/engine/swarm/configs.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/swarm/configs.md)
 
 # Store configuration data using Docker Configs
 
@@ -195,6 +195,7 @@ real-world example, continue to
 
    ID                          NAME                CREATED             UPDATED
    fzwcfuqjkvo5foqu7ts7ls578   hello               31 minutes ago      31 minutes ago
+
 
    $ docker config rm my-config
 

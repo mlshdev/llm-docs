@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [host/hosting-overview.mdx](https://docs.vast.ai/host/hosting-overview)
+> Pinned source for Vast.ai main: [host/hosting-overview.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/host/hosting-overview.mdx)
+> Canonical documentation: https://docs.vast.ai/host/hosting-overview
 
 # Hosting Overview
 

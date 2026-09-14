@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [accounts-billing/manage-accounts.mdx](https://docs.runpod.io/accounts-billing/manage-accounts)
+> Pinned source for Runpod main: [accounts-billing/manage-accounts.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/accounts-billing/manage-accounts.mdx)
+> Canonical documentation: https://docs.runpod.io/accounts-billing/manage-accounts
 
 # Manage accounts
 

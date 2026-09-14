@@ -1,6 +1,6 @@
-> Commit-pinned source for SearXNG master: [docs/dev/result_types/index.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/result_types/index.rst)
+> Pinned source for SearXNG master: [docs/dev/result_types/index.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/result_types/index.rst)
 
-.. \_result types:
+<a id="result-types"></a>
 
 # Result Types
 
@@ -11,70 +11,71 @@ displays them to the user.
 
 The **sources** can be:
 
-1. \[engines]\(#engine implementations)
-2. \[plugins]\(#dev plugin)
-3. \[answerers]\(#dev answerers)
+1. [engines](https://docs.searxng.org/dev/engines/index.html#engine-implementations)
+2. [plugins](https://docs.searxng.org/dev/plugins/development.html#dev-plugin)
+3. [answerers](https://docs.searxng.org/dev/answerers/development.html#dev-answerers)
 
 The sources provide the results, which are displayed in different **areas**
 depending on the type of result. The areas are:
 
-.. \_area main results:
+<a id="area-main-results"></a>
 
-\[area main results]\(#main search results)
+**[area main results](https://docs.searxng.org/dev/result_types/main_result.html#main-search-results)**
+
 It is the main area in which -- as is typical for search engines -- the
 results that a search engine has found for the search term are displayed.
 
-.. \_area answer results:
+<a id="area-answer-results"></a>
 
-[area answers](#result-types)
+**[area answers](https://docs.searxng.org/dev/result_types/answer.html#result-types-answer)**
+
 This area displays short answers that could be found for the search term.
 
-.. \_area info box:
+<a id="area-info-box"></a>
 
-[area info box](#result-types)
+**[area info box](https://docs.searxng.org/dev/result_types/infobox.html#result-types-infobox)**
+
 An area in which additional information can be displayed, e.g. excerpts from
 wikipedia or other sources such as maps.
 
-.. \_area suggestions results:
+<a id="area-suggestions-results"></a>
 
-[area suggestions](#result-types)
+**[area suggestions](https://docs.searxng.org/dev/result_types/suggestion.html#result-types-suggestion)**
+
 Suggestions for alternative search terms can be found in this area.  These can
 be clicked on and a search is carried out with these search terms.
 
-.. \_area corrections results:
+<a id="area-corrections-results"></a>
 
-[area corrections](#result-types)
+**[area corrections](https://docs.searxng.org/dev/result_types/correction.html#result-types-corrections)**
+
 Results in this area are like the suggestion of alternative search terms,
 which usually result from spelling corrections
 
 At this point it is important to note that all **sources** can contribute
 results to all of the areas mentioned above.
 
-In most cases, however, the \[engines]\(#engine implementations) will fill
-the *main results* and the \[answerers]\(#dev answerers) will generally
+In most cases, however, the [engines](https://docs.searxng.org/dev/engines/index.html#engine-implementations) will fill
+the *main results* and the [answerers](https://docs.searxng.org/dev/answerers/development.html#dev-answerers) will generally
 provide the contributions for the *answer* area.  Not necessary to mention here
 but for a better understanding: the plugins can also filter out or change
 results from the main results area (e.g. the URL of the link).
 
-The result items are organized in the :py:obj:`results.ResultContainer` and
+The result items are organized in the `results.ResultContainer` and
 after all sources have delivered their results, this container is passed to the
 templating to build a HTML output.  The output is usually HTML, but it is also
 possible to output the result lists as JSON or RSS feed. Thats quite all we need
 to know before we dive into typification of result items.
 
-.. hint:
-
-```text
-Typification of result items: we are at the very first beginng!
-
-```
+> **Hint**
+> Typification of result items: we are at the very first beginng!
 
 The first thing we have to realize is that there is no typification of the
 result items so far, we have to build it up first .. and that is quite a big
 task, which we will only be able to accomplish gradually.
 
 The foundation for the typeless results was laid back in 2013 in the very first
-commit :commit:`ae9fb1d7d`, and the principle has not changed since then.  At
+commit [ae9fb1d7d](https://github.com/searxng/searxng/commit/ae9fb1d7d), and the principle has not changed since then.  At
 the time, the approach was perfectly adequate, but we have since evolved and the
 demands on SearXNG increase with every feature request.
 
@@ -87,14 +88,17 @@ the application developer in his work.
 **Planning:** The procedure for subsequent typing will have to be based on the
 circumstances ..
 
-.. attention:
+> **Attention**
+> As long as there is no type defined for a kind of result the HTML template
+> specify what the properties of a type are.
+>
+> In this sense, you will either find a type definition here in the
+> documentation or, if this does not yet exist, a description of the HTML
+> template.
 
-```text
-As long as there is no type defined for a kind of result the HTML template
-specify what the properties of a type are.
-
-In this sense, you will either find a type definition here in the
-documentation or, if this does not yet exist, a description of the HTML
-template.
-
-```
+- [base\_result](https://docs.searxng.org/base_result.html)
+- [main\_result](https://docs.searxng.org/main_result.html)
+- [answer](https://docs.searxng.org/answer.html)
+- [correction](https://docs.searxng.org/correction.html)
+- [suggestion](https://docs.searxng.org/suggestion.html)
+- [infobox](https://docs.searxng.org/infobox.html)

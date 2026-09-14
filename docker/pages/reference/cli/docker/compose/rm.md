@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_rm.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_rm.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_rm.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_rm.yaml)
 
 # docker compose rm
 
@@ -26,14 +26,14 @@ Removing djangoquickstart_web_run_1 ... done
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--force` |  | Don't ask to confirm removal |
-| `-s`, `--stop` |  | Stop the containers, if required, before removing |
-| `-v`, `--volumes` |  | Remove any anonymous volumes attached to containers |
+| Option            | Default | Description                                         |
+| ----------------- | ------- | --------------------------------------------------- |
+| `-f`, `--force`   |         | Don't ask to confirm removal                        |
+| `-s`, `--stop`    |         | Stop the containers, if required, before removing   |
+| `-v`, `--volumes` |         | Remove any anonymous volumes attached to containers |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--dry-run` |  | Execute command in dry run mode |
+| Option      | Default | Description                     |
+| ----------- | ------- | ------------------------------- |
+| `--dry-run` |         | Execute command in dry run mode |

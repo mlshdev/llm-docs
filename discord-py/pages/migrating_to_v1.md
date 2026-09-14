@@ -1,4 +1,4 @@
-> Tag-pinned source for discord.py v2.7.1: [docs/migrating_to_v1.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/migrating_to_v1.rst)
+> Pinned source for discord.py v2.7.1: [docs/migrating_to_v1.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/migrating_to_v1.rst)
 
 - **Orphan:**
 
@@ -13,8 +13,7 @@ The amount of changes are so massive and long that for all intents and purposes,
 new library.
 
 Part of the redesign involves making things more easy to use and natural. Things are done on the
-
-- **Ref:** `models <discord_api_models>` instead of requiring a `Client` instance to do any work.
+[models](https://discordpy.readthedocs.io/api.html#discord-api-models) instead of requiring a `Client` instance to do any work.
 
 ## Python Version Change
 
@@ -169,8 +168,7 @@ The following views were changed to a list:
 ### Voice State Changes
 
 Earlier, in v0.11.0 a `VoiceState` class was added to refer to voice states along with a
-
-- **Attr:** `Member.voice` attribute to refer to it.
+`Member.voice` attribute to refer to it.
 
 However, it was transparent to the user. In an effort to make the library save more memory, the
 voice state change is now more visible.
@@ -395,8 +393,7 @@ await channel.send('Your images:', files=my_files)
 Prior to v1.0, certain functions like `Client.logs_from` would return a different type if done in Python 3.4 or 3.5+.
 
 In v1.0, this change has been reverted and will now return a singular type meeting an abstract concept called
-
-- **Class:** `AsyncIterator`.
+`AsyncIterator`.
 
 This allows you to iterate over it like normal: :
 
@@ -516,8 +513,7 @@ async def on_member_ban(guild, user)
 ```
 
 As part of the change, the event can either receive a `User` or `Member`. To help in the cases that have
-
-- **Class:** `User`, the `Guild` is provided as the first parameter.
+`User`, the `Guild` is provided as the first parameter.
 
 The `on_channel_` events have received a type level split (see [migrating\_1\_0\_channel\_split](https://discordpy.readthedocs.io/migrating_to_v1.html#migrating-1-0-channel-split)).
 
@@ -666,13 +662,12 @@ else:
 
 ## Upgraded Dependencies
 
-Following v1.0 of the library, we've updated our requirements to [aiohttp](https://discordpy.readthedocs.io/aio:index.html) v2.0 or higher.
+Following v1.0 of the library, we've updated our requirements to [aiohttp](https://docs.aiohttp.org/en/stable/) v2.0 or higher.
 
 Since this is a backwards incompatible change, it is recommended that you see the
 [changes](http://aiohttp.readthedocs.io/en/stable/changes.html#rc1-2017-03-15)
-and the [aio:migration\_to\_2xx](https://discordpy.readthedocs.io/aio:migration_to_2xx.html) pages for details on the breaking changes in
-
-- **Doc:** `aiohttp <aio:index>`.
+and the [aio:migration\_to\_2xx](https://docs.aiohttp.org/en/stable/migration_to_2xx.html) pages for details on the breaking changes in
+[aiohttp](https://docs.aiohttp.org/en/stable/).
 
 Of the most significant for common users is the removal of helper functions such as:
 
@@ -733,12 +728,12 @@ For users of the command extension, there is also `ext.commands.AutoShardedBot` 
 
 In v1.0, the auto reconnection logic has been powered up significantly.
 
-- **Meth:** `Client.connect` has gained a new keyword argument, `reconnect` that defaults to `True` which controls
-  the reconnect logic. When enabled, the client will automatically reconnect in all instances of your internet going
-  offline or Discord going offline with exponential back-off.
+`Client.connect` has gained a new keyword argument, `reconnect` that defaults to `True` which controls
+the reconnect logic. When enabled, the client will automatically reconnect in all instances of your internet going
+offline or Discord going offline with exponential back-off.
 
-- **Meth:** `Client.run` and `Client.start` gains this keyword argument as well, but for most cases you will not
-  need to specify it unless turning it off.
+`Client.run` and `Client.start` gains this keyword argument as well, but for most cases you will not
+need to specify it unless turning it off.
 
 <a id="migrating-1-0-commands"></a>
 
@@ -769,8 +764,7 @@ The reason for this is because `ext.commands.Context` now meets the requirements
 makes it have similar functionality to `TextChannel` or `DMChannel`. Using `.Context.send`
 will either DM the user in a DM context or send a message in the channel it was in, similar to the old `bot.say`
 functionality. The old helpers have been removed in favour of the new `abc.Messageable` interface. See
-
-- **Ref:** `migrating_1_0_removed_helpers` for more information.
+[migrating\_1\_0\_removed\_helpers](https://discordpy.readthedocs.io/migrating_to_v1.html#migrating-1-0-removed-helpers) for more information.
 
 Since the `ext.commands.Context` is now passed by default, several shortcuts have been added:
 
@@ -807,8 +801,7 @@ class MyContext(commands.Context):
 ```
 
 Then you can use `ext.commands.Bot.get_context` inside `on_message` with combination with
-
-- **Meth:** `~ext.commands.Bot.invoke` to use your custom context:
+`ext.commands.Bot.invoke` to use your custom context:
 
 ```python3
 class MyBot(commands.Bot):
@@ -1087,8 +1080,7 @@ class MyCog(commands.Cog):
 ```
 
 To check if a command failed in the after invocation hook, you can use
-
-- **Attr:** `.Context.command_failed`.
+`.Context.command_failed`.
 
 The invocation order is as follows:
 

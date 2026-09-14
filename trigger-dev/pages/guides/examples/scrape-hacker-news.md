@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/guides/examples/scrape-hacker-news.mdx](https://trigger.dev/docs/guides/examples/scrape-hacker-news)
+> Pinned source for Trigger.dev v4.5.16: [docs/guides/examples/scrape-hacker-news.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/guides/examples/scrape-hacker-news.mdx)
+> Canonical documentation: https://trigger.dev/docs/guides/examples/scrape-hacker-news
 
 # Scrape the top 3 articles from Hacker News and email yourself a summary every weekday
 

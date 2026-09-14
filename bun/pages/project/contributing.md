@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/project/contributing.mdx](https://bun.com/docs/project/contributing)
+> Pinned source for Bun bun-v1.4.2: [docs/project/contributing.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/project/contributing.mdx)
+> Canonical documentation: https://bun.com/docs/project/contributing
 
 Configuring a development environment for Bun can take 10-30 minutes depending on your internet connection and computer speed. You will need \~10GB of free disk space for the repository and build artifacts.
 

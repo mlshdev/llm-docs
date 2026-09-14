@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/fdwhandler.sgml#fdw-callbacks](https://www.postgresql.org/docs/18/fdw-callbacks.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/fdwhandler.sgml#fdw-callbacks](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/fdwhandler.sgml%23fdw-callbacks)
+> Canonical documentation: https://www.postgresql.org/docs/18/fdw-callbacks.html
 
 # Foreign Data Wrapper Callback Routines
 

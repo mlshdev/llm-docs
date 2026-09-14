@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_container_cp.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_cp.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_container_cp.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_cp.yaml)
 
 # docker container cp
 
@@ -41,27 +41,27 @@ Assuming a path separator of `/`, a first argument of `SRC_PATH` and second
 argument of `DEST_PATH`, the behavior is as follows:
 
 - `SRC_PATH` specifies a file
-    - `DEST_PATH` does not exist
-        - the file is saved to a file created at `DEST_PATH`
-    - `DEST_PATH` does not exist and ends with `/`
-        - Error condition: the destination directory must exist.
-    - `DEST_PATH` exists and is a file
-        - the destination is overwritten with the source file's contents
-    - `DEST_PATH` exists and is a directory
-        - the file is copied into this directory using the basename from
-          `SRC_PATH`
+  - `DEST_PATH` does not exist
+    - the file is saved to a file created at `DEST_PATH`
+  - `DEST_PATH` does not exist and ends with `/`
+    - Error condition: the destination directory must exist.
+  - `DEST_PATH` exists and is a file
+    - the destination is overwritten with the source file's contents
+  - `DEST_PATH` exists and is a directory
+    - the file is copied into this directory using the basename from
+      `SRC_PATH`
 - `SRC_PATH` specifies a directory
-    - `DEST_PATH` does not exist
-        - `DEST_PATH` is created as a directory and the *contents* of the source
-           directory are copied into this directory
-    - `DEST_PATH` exists and is a file
-        - Error condition: cannot copy a directory to a file
-    - `DEST_PATH` exists and is a directory
-        - `SRC_PATH` does not end with `/.` (that is: _slash_ followed by _dot_)
-            - the source directory is copied into this directory
-        - `SRC_PATH` does end with `/.` (that is: _slash_ followed by _dot_)
-            - the *content* of the source directory is copied into this
-              directory
+  - `DEST_PATH` does not exist
+    - `DEST_PATH` is created as a directory and the *contents* of the source
+      directory are copied into this directory
+  - `DEST_PATH` exists and is a file
+    - Error condition: cannot copy a directory to a file
+  - `DEST_PATH` exists and is a directory
+    - `SRC_PATH` does not end with `/.` (that is: *slash* followed by *dot*)
+      - the source directory is copied into this directory
+    - `SRC_PATH` does end with `/.` (that is: *slash* followed by *dot*)
+      - the *content* of the source directory is copied into this
+        directory
 
 The command requires `SRC_PATH` and `DEST_PATH` to exist according to the above
 rules. If `SRC_PATH` is local and is a symbolic link, the symbolic link, not
@@ -73,15 +73,17 @@ also use `:` when specifying paths to a `SRC_PATH` or `DEST_PATH` on a local
 machine, for example  `file:name.txt`. If you use a `:` in a local machine path,
 you must be explicit with a relative or absolute path, for example:
 
-    `/path/to/file:name.txt` or `./file:name.txt`
+```
+`/path/to/file:name.txt` or `./file:name.txt`
+```
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-a`, `--archive` |  | Archive mode (copy all uid/gid information) |
-| `-L`, `--follow-link` |  | Always follow symlinks in SRC_PATH |
-| `-q`, `--quiet` |  | Suppress progress output during copy. Progress output is automatically suppressed if no terminal is attached |
+| Option                | Default | Description                                                                                                  |
+| --------------------- | ------- | ------------------------------------------------------------------------------------------------------------ |
+| `-a`, `--archive`     |         | Archive mode (copy all uid/gid information)                                                                  |
+| `-L`, `--follow-link` |         | Always follow symlinks in SRC\_PATH                                                                          |
+| `-q`, `--quiet`       |         | Suppress progress output during copy. Progress output is automatically suppressed if no terminal is attached |
 
 ## Examples
 
@@ -106,7 +108,7 @@ $ docker cp CONTAINER:/var/logs/app.log - | tar x -O | grep "ERROR"
 ### Corner cases
 
 It isn't possible to copy certain system files such as resources under
-`/proc`, `/sys`, `/dev`, [tmpfs](/reference/cli/docker/container/run/#tmpfs), and mounts created by
+`/proc`, `/sys`, `/dev`, [tmpfs](https://docs.docker.com/reference/cli/docker/container/run/#tmpfs), and mounts created by
 the user in the container. However, you can still copy such files by manually
 running `tar` in `docker exec`. Both of the following examples do the same thing
 in different ways (consider `SRC_PATH` and `DEST_PATH` are directories):

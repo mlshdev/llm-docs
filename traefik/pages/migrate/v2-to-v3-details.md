@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/migrate/v2-to-v3-details.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/migrate/v2-to-v3-details.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/migrate/v2-to-v3-details.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/migrate/v2-to-v3-details.md)
 
 # Configuration Details for Migrating from Traefik v2 to v3
 
@@ -71,7 +71,7 @@ Docker provider `tls.CAOptional` option has been removed in v3, as TLS client au
 > ```yaml
 > providers:
 >   docker:
->     tls:
+>     tls: 
 >       caOptional: true
 > ```
 >
@@ -223,7 +223,7 @@ Consul provider `tls.CAOptional` option has been removed in v3, as TLS client au
 > ```yaml
 > providers:
 >   consul:
->     tls:
+>     tls: 
 >       caOptional: true
 > ```
 >
@@ -309,7 +309,7 @@ ConsulCatalog provider `endpoint.tls.CAOptional` option has been removed in v3, 
 > providers:
 >   consulCatalog:
 >     endpoint:
->       tls:
+>       tls: 
 >         caOptional: true
 > ```
 >
@@ -395,7 +395,7 @@ Nomad provider `endpoint.tls.CAOptional` option has been removed in v3, as TLS c
 > providers:
 >   nomad:
 >     endpoint:
->       tls:
+>       tls: 
 >         caOptional: true
 > ```
 >
@@ -493,7 +493,7 @@ HTTP provider `tls.CAOptional` option has been removed in v3, as TLS client auth
 > ```yaml
 > providers:
 >   http:
->     tls:
+>     tls: 
 >       caOptional: true
 > ```
 >
@@ -526,7 +526,7 @@ ETCD provider `tls.CAOptional` option has been removed in v3, as TLS client auth
 > ```yaml
 > providers:
 >   etcd:
->     tls:
+>     tls: 
 >       caOptional: true
 > ```
 >
@@ -559,7 +559,7 @@ Redis provider `tls.CAOptional` option has been removed in v3, as TLS client aut
 > ```yaml
 > providers:
 >   redis:
->     tls:
+>     tls: 
 >       caOptional: true
 > ```
 >

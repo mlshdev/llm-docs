@@ -1,3 +1,21 @@
-> Commit-pinned source for SearXNG master: [docs/admin/index.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/index.rst)
+> Pinned source for SearXNG master: [docs/admin/index.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/index.rst)
 
 # Administrator documentation
+
+- [settings/index](https://docs.searxng.org/settings/index.html)
+- [installation](https://docs.searxng.org/installation.html)
+- [installation-docker](https://docs.searxng.org/installation-docker.html)
+- [installation-scripts](https://docs.searxng.org/installation-scripts.html)
+- [installation-searxng](https://docs.searxng.org/installation-searxng.html)
+- [installation-granian](https://docs.searxng.org/installation-granian.html)
+- [installation-uwsgi](https://docs.searxng.org/installation-uwsgi.html)
+- [installation-nginx](https://docs.searxng.org/installation-nginx.html)
+- [installation-apache](https://docs.searxng.org/installation-apache.html)
+- [update-searxng](https://docs.searxng.org/update-searxng.html)
+- [answer-captcha](https://docs.searxng.org/answer-captcha.html)
+- [searx.favicons](https://docs.searxng.org/searx.favicons.html)
+- [searx.limiter](https://docs.searxng.org/searx.limiter.html)
+- [api](https://docs.searxng.org/api.html)
+- [architecture](https://docs.searxng.org/architecture.html)
+- [plugins](https://docs.searxng.org/plugins.html)
+- [buildhosts](https://docs.searxng.org/buildhosts.html)

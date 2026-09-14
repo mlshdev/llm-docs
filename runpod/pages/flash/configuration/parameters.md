@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [flash/configuration/parameters.mdx](https://docs.runpod.io/flash/configuration/parameters)
+> Pinned source for Runpod main: [flash/configuration/parameters.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/flash/configuration/parameters.mdx)
+> Canonical documentation: https://docs.runpod.io/flash/configuration/parameters
 
 # Endpoint parameters
 

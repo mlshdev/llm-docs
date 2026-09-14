@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/config.sgml#runtime-config-custom](https://www.postgresql.org/docs/18/runtime-config-custom.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/config.sgml#runtime-config-custom](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/config.sgml%23runtime-config-custom)
+> Canonical documentation: https://www.postgresql.org/docs/18/runtime-config-custom.html
 
 # Customized Options
 

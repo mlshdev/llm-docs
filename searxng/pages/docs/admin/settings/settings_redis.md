@@ -1,38 +1,34 @@
-> Commit-pinned source for SearXNG master: [docs/admin/settings/settings_redis.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/settings/settings_redis.rst)
+> Pinned source for SearXNG master: [docs/admin/settings/settings_redis.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/settings/settings_redis.rst)
 
-.. \_settings redis:
+<a id="settings-redis"></a>
 
 # `redis:`
 
-.. attention:
+<a id="valkey"></a>
 
-```text
-SearXNG is switching from the Redis DB to Valkey_. The configuration
-description of Valkey_ in SearXNG can be found here: :ref:`settings
-<settings valkey>`.
-
-```
+> **Attention**
+> SearXNG is switching from the Redis DB to Valkey\_. The configuration
+> description of Valkey\_ in SearXNG can be found here: [settings](https://docs.searxng.org/admin/settings/settings_valkey.html#settings-valkey).
 
 If you have built and installed a local Redis DB for SearXNG, it is recommended
-to uninstall it now and replace it with the installation of a Valkey DB.
+to uninstall it now and replace it with the installation of a Valkey\_ DB.
 
-.. \_Redis Developer Notes:
+<a id="redis-developer-notes"></a>
 
 # Redis Developer Notes
 
 To uninstall SearXNG's local Redis DB you can use:
 
-.. code:: sh
-
+```sh
 # stop your SearXNG instance
-
 $ ./utils/searxng.sh remove.redis
+```
 
 Remove the Redis DB in your YAML setting:
 
-.. code:: yaml
-
+```yaml
 redis:
-url: unix:///usr/local/searxng-redis/run/redis.sock?db=0
+  url: unix:///usr/local/searxng-redis/run/redis.sock?db=0
+```
 
-To install Valkey read: \[Valkey Developer Notes]\(#Valkey Developer Notes)
+To install Valkey\_ read: [Valkey Developer Notes](https://docs.searxng.org/admin/settings/settings_valkey.html#valkey-developer-notes)

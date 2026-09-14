@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/nodejs.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/nodejs.md)
+> Pinned source for Docker main: [content/guides/nodejs.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/nodejs.md)
 
 [Node.js](https://nodejs.org/en) is a JavaScript runtime for building server-side applications. This guide shows you how to containerize a TypeScript Node.js application using Docker, starting from a simple Express API and progressively adding features like a database.
 
@@ -277,6 +277,7 @@ RUN --mount=type=cache,target=/root/.npm \
 COPY . .
 RUN npm run build
 
+
 # Deps stage: install production dependencies only.
 FROM dhi.io/node:24-alpine3.23-dev AS deps
 
@@ -290,6 +291,7 @@ RUN --mount=type=cache,target=/root/.npm \
 #     --mount=type=bind,source=package.json,target=package.json \
 #     --mount=type=bind,source=package-lock.json,target=package-lock.json \
 #     npm ci --omit=dev
+
 
 # Runner stage: minimal runtime image with compiled app and production deps.
 FROM dhi.io/node:24-alpine3.23 AS runner
@@ -582,6 +584,7 @@ EXPOSE 3000
 # Run the application in development mode.
 CMD ["npm", "run", "dev"]
 
+
 # Deps stage: install production dependencies only.
 FROM dhi.io/node:24-alpine3.23-dev AS deps
 
@@ -595,6 +598,7 @@ RUN --mount=type=cache,target=/root/.npm \
 #     --mount=type=bind,source=package.json,target=package.json \
 #     --mount=type=bind,source=package-lock.json,target=package-lock.json \
 #     npm ci --omit=dev
+
 
 # Runner stage: minimal runtime image with compiled app and production deps.
 FROM dhi.io/node:24-alpine3.23 AS runner
@@ -1211,6 +1215,7 @@ RUN npm run build
 EXPOSE 3000
 CMD ["npm", "run", "dev"]
 
+
 FROM dhi.io/node:24-alpine3.23-dev AS deps
 WORKDIR /app
 RUN --mount=type=cache,target=/root/.npm \
@@ -1225,6 +1230,7 @@ COPY --from=dev --chown=node:node /app/dist ./dist
 
 EXPOSE 3000
 CMD ["node", "dist/index.js"]
+
 
 FROM dev AS test
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/integrate-ai/ai-examples/use-ai-for-parameters.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/integrate-ai/ai-examples/use-ai-for-parameters.md)
+> Pinned source for n8n main: [docs/build/integrate-ai/ai-examples/use-ai-for-parameters.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/integrate-ai/ai-examples/use-ai-for-parameters.md)
 
 # Let AI specify the tool parameters <a id="let-ai-specify-the-tool-parameters"></a>
 

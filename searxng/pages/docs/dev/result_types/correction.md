@@ -1,37 +1,34 @@
-> Commit-pinned source for SearXNG master: [docs/dev/result_types/correction.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/result_types/correction.rst)
+> Pinned source for SearXNG master: [docs/dev/result_types/correction.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/result_types/correction.rst)
 
-.. \_result\_types.corrections:
+<a id="result-types-corrections"></a>
 
 # Correction Results
 
-.. hint:
+> **Hint**
+> There is still no typing for these result items. The templates can be used as
+> orientation until the final typing is complete.
 
-```text
-There is still no typing for these result items. The templates can be used as
-orientation until the final typing is complete.
-
-```
-
-The \[area corrections results]\(#area corrections results) shows the user alternative search terms.
+The [area corrections results](https://docs.searxng.org/dev/result_types/index.html#area-corrections-results) shows the user alternative search terms.
 
 A result of this type is a very simple dictionary with only one key/value pair
 
-.. code:: python
-
+```python
 {"correction" : "lorem ipsum .."}
+```
 
 From this simple dict another dict is build up:
 
-.. code:: python
-
+```python
 # use RawTextQuery to get the corrections URLs with the same bang
-
 {"url" : "!bang lorem ipsum ..", "title": "lorem ipsum .." }
+```
 
-and used in the template :origin:`corrections.html <searx/templates/simple/elements/corrections.html>`:
+and used in the template [corrections.html](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/templates/simple/elements/corrections.html):
 
-title : :py:class:`str`
+**title : `str`**
+
 Corrected search term.
 
-url : :py:class:`str`
+**url : `str`**
+
 Not really an URL, its the value to insert in a HTML form for a SearXNG query.

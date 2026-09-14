@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.1: [docs/sources/as-code/infrastructure-as-code/grafana-operator/manage-dashboards-argocd.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/as-code/infrastructure-as-code/grafana-operator/manage-dashboards-argocd.md)
+> Pinned source for Grafana v13.2.1: [docs/sources/as-code/infrastructure-as-code/grafana-operator/manage-dashboards-argocd.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/as-code/infrastructure-as-code/grafana-operator/manage-dashboards-argocd.md)
 
 # Manage Grafana dashboards with GitOps using ArgoCD
 

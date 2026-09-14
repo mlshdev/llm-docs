@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_run.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_run.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_run.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_run.yaml)
 
 # docker model run
 
@@ -16,13 +16,13 @@ You can also use chat mode in the Docker Desktop Dashboard when you select the m
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--color` | `no` | Use colored output (auto\|yes\|no) |
-| `--debug` |  | Enable debug logging |
-| `-d`, `--detach` |  | Load the model in the background without interaction |
-| `--openaiurl` |  | OpenAI-compatible API endpoint URL to chat with |
-| `--websearch` |  | Enable web search tool during chat |
+| Option           | Default | Description                                          |
+| ---------------- | ------- | ---------------------------------------------------- |
+| `--color`        | `no`    | Use colored output (auto\|yes\|no)                   |
+| `--debug`        |         | Enable debug logging                                 |
+| `-d`, `--detach` |         | Load the model in the background without interaction |
+| `--openaiurl`    |         | OpenAI-compatible API endpoint URL to chat with      |
+| `--websearch`    |         | Enable web search tool during chat                   |
 
 ## Examples
 

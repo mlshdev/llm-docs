@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/UI.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/UI.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/UI.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/UI.md)
 
 ## Introduction
 
@@ -452,14 +452,14 @@ Based on expected usage patterns (quick experiments, internal team serving, numb
 server:
   # Port for the UI server (default: 8490)
   port: 8490
-  # Limit on concurrent tasks to manage UI load (default: 2)
+  # Limit on concurrent tasks to manage UI load (default: 2) 
   max_concurrent_tasks: 2
 
 settings:
   # Number of workers for single job speed-ups (default: 1)
   n_workers: 2
-  # Adjust logging levels to reduce verbosity
-  logger_levels:
+  # Adjust logging levels to reduce verbosity  
+  logger_levels: 
     vmanomaly: WARNING
     reader: INFO
     model: INFO
@@ -504,7 +504,7 @@ If mixing the UI alongside production jobs of anomaly detection is expected, it 
 
 settings:
   # Number of workers for mixed usage (numbers <= 0 mean number of available CPU cores)
-  n_workers: -1
+  n_workers: -1        
   # Adjust logging levels to reduce verbosity
   logger_levels:
     vmanomaly: WARNING

@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/pgfreespacemap.sgml#pgfreespacemap](https://www.postgresql.org/docs/18/pgfreespacemap.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/pgfreespacemap.sgml#pgfreespacemap](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/pgfreespacemap.sgml%23pgfreespacemap)
+> Canonical documentation: https://www.postgresql.org/docs/18/pgfreespacemap.html
 
 # pg_freespacemap — examine the free space map
 

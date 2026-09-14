@@ -10,364 +10,364 @@
 
 ## API reference
 
-- [Code examples](pages/apis/actions/code-examples.md): Source `apps/docs/content/apis/actions/code-examples.mdx`.
-- [Complement Token Flow](pages/apis/actions/complement-token.md): Source `apps/docs/content/apis/actions/complement-token.mdx`.
-- [Complement SAMLResponse](pages/apis/actions/customize-samlresponse.md): Source `apps/docs/content/apis/actions/customize-samlresponse.mdx`.
-- [External Authentication Flow](pages/apis/actions/external-authentication.md): Source `apps/docs/content/apis/actions/external-authentication.mdx`.
-- [Internal Authentication Flow](pages/apis/actions/internal-authentication.md): Source `apps/docs/content/apis/actions/internal-authentication.mdx`.
-- [Modules](pages/apis/actions/modules.md): Source `apps/docs/content/apis/actions/modules.mdx`.
-- [Objects](pages/apis/actions/objects.md): Source `apps/docs/content/apis/actions/objects.mdx`.
-- [Core Resources](pages/apis/apis.md): Source `apps/docs/content/apis/apis/index.mdx`.
-- [zitadel/assets](pages/apis/assets/assets.md): Source `apps/docs/content/apis/assets/assets.mdx`.
-- [Benchmarks](pages/apis/benchmarks.md): Source `apps/docs/content/apis/benchmarks/index.mdx`.
-- [machine jwt profile grant benchmark of zitadel v2.65.0](pages/apis/benchmarks/v2.65.0/machine_jwt_profile_grant.md): Source `apps/docs/content/apis/benchmarks/v2.65.0/machine_jwt_profile_grant/index.mdx`.
-- [machine jwt profile grant benchmark of zitadel v2.66.0](pages/apis/benchmarks/v2.66.0/machine_jwt_profile_grant.md): Source `apps/docs/content/apis/benchmarks/v2.66.0/machine_jwt_profile_grant/index.mdx`.
-- [machine jwt profile grant benchmark of zitadel v2.70.0](pages/apis/benchmarks/v2.70.0/machine_jwt_profile_grant.md): Source `apps/docs/content/apis/benchmarks/v2.70.0/machine_jwt_profile_grant/index.mdx`.
-- [oidc session benchmark of Zitadel v2.70.0](pages/apis/benchmarks/v2.70.0/oidc_session.md): Source `apps/docs/content/apis/benchmarks/v2.70.0/oidc_session/index.mdx`.
-- [create session benchmark of zitadel v4](pages/apis/benchmarks/v4/add_session.md): Source `apps/docs/content/apis/benchmarks/v4/add_session/index.mdx`.
-- [human password login benchmark of zitadel v4](pages/apis/benchmarks/v4/human_password_login.md): Source `apps/docs/content/apis/benchmarks/v4/human_password_login/index.mdx`.
-- [introspection benchmark of zitadel v4](pages/apis/benchmarks/v4/introspect.md): Source `apps/docs/content/apis/benchmarks/v4/introspect/index.mdx`.
-- [machine client credentials login benchmark of zitadel v4](pages/apis/benchmarks/v4/machine_client_credentials_login.md): Source `apps/docs/content/apis/benchmarks/v4/machine_client_credentials_login/index.mdx`.
-- [machine jwt profile grant benchmark of zitadel v4](pages/apis/benchmarks/v4/machine_jwt_profile_grant.md): Source `apps/docs/content/apis/benchmarks/v4/machine_jwt_profile_grant/index.mdx`.
-- [machine pat login benchmark of zitadel v4](pages/apis/benchmarks/v4/machine_pat_login.md): Source `apps/docs/content/apis/benchmarks/v4/machine_pat_login/index.mdx`.
-- [manipulate user benchmark of zitadel v4](pages/apis/benchmarks/v4/manipulate_user.md): Source `apps/docs/content/apis/benchmarks/v4/manipulate_user/index.mdx`.
-- [oidc session benchmark of zitadel v4](pages/apis/benchmarks/v4/oidc_session.md): Source `apps/docs/content/apis/benchmarks/v4/oidc_session/index.mdx`.
-- [otp session benchmark of zitadel v4](pages/apis/benchmarks/v4/otp_session.md): Source `apps/docs/content/apis/benchmarks/v4/otp_session/index.mdx`.
-- [session with password benchmark of zitadel v4](pages/apis/benchmarks/v4/password_session.md): Source `apps/docs/content/apis/benchmarks/v4/password_session/index.mdx`.
-- [user info benchmark of zitadel v4](pages/apis/benchmarks/v4/user_info.md): Source `apps/docs/content/apis/benchmarks/v4/user_info/index.mdx`.
-- [add session benchmark of zitadel v4.17.1](pages/apis/benchmarks/v4.17.1/add_session.md): Source `apps/docs/content/apis/benchmarks/v4.17.1/add_session/index.mdx`.
-- [human password login benchmark of zitadel v4.17.1](pages/apis/benchmarks/v4.17.1/human_password_login.md): Source `apps/docs/content/apis/benchmarks/v4.17.1/human_password_login/index.mdx`.
-- [introspect benchmark of zitadel v4.17.1](pages/apis/benchmarks/v4.17.1/introspect.md): Source `apps/docs/content/apis/benchmarks/v4.17.1/introspect/index.mdx`.
-- [machine client credentials login benchmark of zitadel v4.17.1](pages/apis/benchmarks/v4.17.1/machine_client_credentials_login.md): Source `apps/docs/content/apis/benchmarks/v4.17.1/machine_client_credentials_login/index.mdx`.
-- [machine jwt profile grant benchmark of zitadel v4.17.1](pages/apis/benchmarks/v4.17.1/machine_jwt_profile_grant.md): Source `apps/docs/content/apis/benchmarks/v4.17.1/machine_jwt_profile_grant/index.mdx`.
-- [machine pat login benchmark of zitadel v4.17.1](pages/apis/benchmarks/v4.17.1/machine_pat_login.md): Source `apps/docs/content/apis/benchmarks/v4.17.1/machine_pat_login/index.mdx`.
-- [manipulate user benchmark of zitadel v4.17.1](pages/apis/benchmarks/v4.17.1/manipulate_user.md): Source `apps/docs/content/apis/benchmarks/v4.17.1/manipulate_user/index.mdx`.
-- [oidc session benchmark of zitadel v4.17.1](pages/apis/benchmarks/v4.17.1/oidc_session.md): Source `apps/docs/content/apis/benchmarks/v4.17.1/oidc_session/index.mdx`.
-- [otp session benchmark of zitadel v4.17.1](pages/apis/benchmarks/v4.17.1/otp_session.md): Source `apps/docs/content/apis/benchmarks/v4.17.1/otp_session/index.mdx`.
-- [password session benchmark of zitadel v4.17.1](pages/apis/benchmarks/v4.17.1/password_session.md): Source `apps/docs/content/apis/benchmarks/v4.17.1/password_session/index.mdx`.
-- [user info benchmark of zitadel v4.17.1](pages/apis/benchmarks/v4.17.1/user_info.md): Source `apps/docs/content/apis/benchmarks/v4.17.1/user_info/index.mdx`.
-- [ZITADEL API Reference Overview](pages/apis/introduction.md): Source `apps/docs/content/apis/introduction.mdx`.
-- [Migrate from v1 APIs to v2 APIs](pages/apis/migration_v1_to_v2.md): Source `apps/docs/content/apis/migration_v1_to_v2.mdx`.
-- [ZITADEL Ready and Health Endpoints](pages/apis/observability/health.md): Source `apps/docs/content/apis/observability/health.mdx`.
-- [ZITADEL Metrics](pages/apis/observability/metrics.md): Source `apps/docs/content/apis/observability/metrics.mdx`.
-- [Authentication Methods in ZITADEL](pages/apis/openidoauth/authn-methods.md): Source `apps/docs/content/apis/openidoauth/authn-methods.mdx`.
-- [ZITADEL OIDC Authentication Request Playground](pages/apis/openidoauth/authrequest.md): Source `apps/docs/content/apis/openidoauth/authrequest.mdx`.
-- [Claims in ZITADEL](pages/apis/openidoauth/claims.md): Source `apps/docs/content/apis/openidoauth/claims.mdx`.
-- [OpenID Connect Endpoints in ZITADEL](pages/apis/openidoauth/endpoints.md): Source `apps/docs/content/apis/openidoauth/endpoints.mdx`.
-- [Grant Types in ZITADEL](pages/apis/openidoauth/grant-types.md): Source `apps/docs/content/apis/openidoauth/grant-types.mdx`.
-- [Scopes in ZITADEL](pages/apis/openidoauth/scopes.md): Source `apps/docs/content/apis/openidoauth/scopes.mdx`.
-- [SAML Endpoints in ZITADEL](pages/apis/saml/endpoints.md): Source `apps/docs/content/apis/saml/endpoints.mdx`.
-- [SCIM v2.0 (Preview)](pages/apis/scim2.md): Source `apps/docs/content/apis/scim2.mdx`.
-- [GRPC Status Codes in ZITADEL](pages/apis/statuscodes.md): Source `apps/docs/content/apis/statuscodes.mdx`.
-- [APIs V2 (Generally Available)](pages/apis/v2.md): Source `apps/docs/content/apis/v2.mdx`.
+- [Code examples](pages/apis/actions/code-examples.md): Actions are a powerful tool to extend ZITADEL, and you might wonder what use cases actions can be used for. (9971 bytes)
+- [Complement Token Flow](pages/apis/actions/complement-token.md): This flow is executed during the creation of tokens and token introspection. (3870 bytes)
+- [Complement SAMLResponse](pages/apis/actions/customize-samlresponse.md): This flow is executed before the return of the SAML Response. (1239 bytes)
+- [External Authentication Flow](pages/apis/actions/external-authentication.md): This flow is executed if the user logs in using an identity provider. (7013 bytes)
+- [Internal Authentication Flow](pages/apis/actions/internal-authentication.md): This flow is executed if the user logs in using the login UI hosted by ZITADEL. (5038 bytes)
+- [Modules](pages/apis/actions/modules.md): ZITADEL provides the following modules. (3637 bytes)
+- [Objects](pages/apis/actions/objects.md): A user grant is a role assignment for a user. (6690 bytes)
+- [Core Resources](pages/apis/apis.md): ZITADEL provides multiple APIs to manage the system, instances and resources such as users, projects and more. (174 bytes)
+- [zitadel/assets](pages/apis/assets/assets.md): POST: /instance/policy/label/font (3369 bytes)
+- [Benchmarks](pages/apis/benchmarks.md): Benchmarks are crucial to understand if ZITADEL fulfills your expected workload and what resources it needs to do so. (18577 bytes)
+- [machine jwt profile grant benchmark of zitadel v2.65.0](pages/apis/benchmarks/v2.65.0/machine_jwt_profile_grant.md): Tests are halted after this test run because of too many client read events on the database. (8313 bytes)
+- [machine jwt profile grant benchmark of zitadel v2.66.0](pages/apis/benchmarks/v2.66.0/machine_jwt_profile_grant.md): The tests showed heavy database load by time by the first two database queries. These queries need to be analyzed further. (10116 bytes)
+- [machine jwt profile grant benchmark of zitadel v2.70.0](pages/apis/benchmarks/v2.70.0/machine_jwt_profile_grant.md): The performance goals of this issue are reached. Next we will test linear scalability. (10160 bytes)
+- [oidc session benchmark of Zitadel v2.70.0](pages/apis/benchmarks/v2.70.0/oidc_session.md): The test implements Support for (OIDC) Standard in a Custom Login UI flow. (10902 bytes)
+- [create session benchmark of zitadel v4](pages/apis/benchmarks/v4/add_session.md): Benchmark results of v4 release of Zitadel. (9985 bytes)
+- [human password login benchmark of zitadel v4](pages/apis/benchmarks/v4/human_password_login.md): Benchmark results of v4 release of Zitadel. (10273 bytes)
+- [introspection benchmark of zitadel v4](pages/apis/benchmarks/v4/introspect.md): Benchmark results of v4 release of Zitadel. (10088 bytes)
+- [machine client credentials login benchmark of zitadel v4](pages/apis/benchmarks/v4/machine_client_credentials_login.md): Benchmark results of v4 release of Zitadel. (10298 bytes)
+- [machine jwt profile grant benchmark of zitadel v4](pages/apis/benchmarks/v4/machine_jwt_profile_grant.md): Benchmark results of v4 release of Zitadel. (9914 bytes)
+- [machine pat login benchmark of zitadel v4](pages/apis/benchmarks/v4/machine_pat_login.md): Benchmark results of v4 release of Zitadel. (10118 bytes)
+- [manipulate user benchmark of zitadel v4](pages/apis/benchmarks/v4/manipulate_user.md): Benchmark results of v4 release of Zitadel. (10260 bytes)
+- [oidc session benchmark of zitadel v4](pages/apis/benchmarks/v4/oidc_session.md): Benchmark results of v4 release of Zitadel. (10720 bytes)
+- [otp session benchmark of zitadel v4](pages/apis/benchmarks/v4/otp_session.md): Benchmark results of v4 release of Zitadel. (10244 bytes)
+- [session with password benchmark of zitadel v4](pages/apis/benchmarks/v4/password_session.md): Benchmark results of v4 release of Zitadel. (10299 bytes)
+- [user info benchmark of zitadel v4](pages/apis/benchmarks/v4/user_info.md): Benchmark results of v4 release of Zitadel. (9851 bytes)
+- [add session benchmark of zitadel v4.17.1](pages/apis/benchmarks/v4.17.1/add_session.md): Benchmark results of the v4.17.1 release of Zitadel. (26649 bytes)
+- [human password login benchmark of zitadel v4.17.1](pages/apis/benchmarks/v4.17.1/human_password_login.md): Benchmark results of the v4.17.1 release of Zitadel. (32888 bytes)
+- [introspect benchmark of zitadel v4.17.1](pages/apis/benchmarks/v4.17.1/introspect.md): Benchmark results of the v4.17.1 release of Zitadel. (26909 bytes)
+- [machine client credentials login benchmark of zitadel v4.17.1](pages/apis/benchmarks/v4.17.1/machine_client_credentials_login.md): Benchmark results of the v4.17.1 release of Zitadel. (26938 bytes)
+- [machine jwt profile grant benchmark of zitadel v4.17.1](pages/apis/benchmarks/v4.17.1/machine_jwt_profile_grant.md): Benchmark results of the v4.17.1 release of Zitadel. (26734 bytes)
+- [machine pat login benchmark of zitadel v4.17.1](pages/apis/benchmarks/v4.17.1/machine_pat_login.md): Benchmark results of the v4.17.1 release of Zitadel. (26667 bytes)
+- [manipulate user benchmark of zitadel v4.17.1](pages/apis/benchmarks/v4.17.1/manipulate_user.md): Benchmark results of the v4.17.1 release of Zitadel. (48472 bytes)
+- [oidc session benchmark of zitadel v4.17.1](pages/apis/benchmarks/v4.17.1/oidc_session.md): Benchmark results of the v4.17.1 release of Zitadel. (27352 bytes)
+- [otp session benchmark of zitadel v4.17.1](pages/apis/benchmarks/v4.17.1/otp_session.md): Benchmark results of the v4.17.1 release of Zitadel. (26953 bytes)
+- [password session benchmark of zitadel v4.17.1](pages/apis/benchmarks/v4.17.1/password_session.md): Benchmark results of the v4.17.1 release of Zitadel. (26918 bytes)
+- [user info benchmark of zitadel v4.17.1](pages/apis/benchmarks/v4.17.1/user_info.md): Benchmark results of the v4.17.1 release of Zitadel. (26557 bytes)
+- [ZITADEL API Reference Overview](pages/apis/introduction.md): ZITADEL exposes all features via different gRPC and REST APIs and provides SDKs for popular languages and frameworks. (13034 bytes)
+- [Migrate from v1 APIs to v2 APIs](pages/apis/migration_v1_to_v2.md): This guide helps you migrate from our v1 APIs to v2 APIs. Use v2 where the required resource is available, and keep using v1 for capabilities that are not yet migrated. The sections below explain the architectural chang… (8621 bytes)
+- [ZITADEL Ready and Health Endpoints](pages/apis/observability/health.md): ZITADEL exposes a Ready- and Healthy endpoint to allow external systems like load balancers, orchestration systems, uptime probes and others to check the status. (1016 bytes)
+- [ZITADEL Metrics](pages/apis/observability/metrics.md): ZITADEL provides a metrics endpoint with the help of the opentelemetry-go package. (1000 bytes)
+- [Authentication Methods in ZITADEL](pages/apis/openidoauth/authn-methods.md): When using clientsecretbasic on token or introspection endpoints, provide anAuthorization header with a Basic auth value in the following form: (3594 bytes)
+- [ZITADEL OIDC Authentication Request Playground](pages/apis/openidoauth/authrequest.md): The OIDC Playground is for testing OpenID Authentication Requests, giving you more insight how OpenID Connect works and how you can customize ZITADEL behavior with different parameters. (5410 bytes)
+- [Claims in ZITADEL](pages/apis/openidoauth/claims.md): ZITADEL asserts claims on different places according to the corresponding specifications or project and applications settings. Please check below the matrix for an overview where which scope is asserted. (20132 bytes)
+- [OpenID Connect Endpoints in ZITADEL](pages/apis/openidoauth/endpoints.md): The OpenID Connect Discovery Endpoint is located within the issuer domain. This would give us ${CUSTOMDOMAIN}/.well-known/openid-configuration. (52199 bytes)
+- [Grant Types in ZITADEL](pages/apis/openidoauth/grant-types.md): For a list of supported or unsupported Grant Types please have a look at the table below. (6080 bytes)
+- [Scopes in ZITADEL](pages/apis/openidoauth/scopes.md): ZITADEL supports the usage of scopes as way of requesting information from the instance and also instruct ZITADEL to do certain operations. (9390 bytes)
+- [SAML Endpoints in ZITADEL](pages/apis/saml/endpoints.md): The SAML Metadata is located within the issuer domain. This would give us ${CUSTOMDOMAIN}/saml/v2/metadata. (4909 bytes)
+- [SCIM v2.0 (Preview)](pages/apis/scim2.md): The Zitadel SCIM v2 service provider interface enables integration of identity and access management (instance) systems with Zitadel, following the System for Cross-domain Identity Management (SCIM) v2.0 specification.… (23089 bytes)
+- [GRPC Status Codes in ZITADEL](pages/apis/statuscodes.md): Normalized source from apps/docs/content/apis/statuscodes.mdx. (4228 bytes)
+- [APIs V2 (Generally Available)](pages/apis/v2.md): The v2 APIs are the recommended way to interact with ZITADEL resources. They are resource-based, automatically scope results to the caller's permissions, and replace the context-specific v1 APIs over time. (663 bytes)
 
 ## Concepts
 
-- [How ZITADEL Processes and Stores Secrets](pages/concepts/architecture/secrets.md): Source `apps/docs/content/concepts/architecture/secrets.mdx`.
-- [Zitadel's Software Architecture](pages/concepts/architecture/software.md): Source `apps/docs/content/concepts/architecture/software.mdx`.
-- [Zitadel's Deployment Architecture](pages/concepts/architecture/solution.md): Source `apps/docs/content/concepts/architecture/solution.mdx`.
-- [ZITADEL Database Structure](pages/concepts/eventstore/implementation.md): Source `apps/docs/content/concepts/eventstore/implementation.mdx`.
-- [ZITADEL Event Store](pages/concepts/eventstore/overview.md): Source `apps/docs/content/concepts/eventstore/overview.mdx`.
-- [Account linking](pages/concepts/features/account-linking.md): Source `apps/docs/content/concepts/features/account-linking.mdx`.
-- [ZITADEL Actions](pages/concepts/features/actions.md): Source `apps/docs/content/concepts/features/actions.mdx`.
-- [ZITADEL Actions v2](pages/concepts/features/actions_v2.md): Source `apps/docs/content/concepts/features/actions_v2.mdx`.
-- [ZITADEL's In-built Audit Trail](pages/concepts/features/audit-trail.md): Source `apps/docs/content/concepts/features/audit-trail.mdx`.
-- [Custom Domain](pages/concepts/features/custom-domain.md): Source `apps/docs/content/concepts/features/custom-domain.mdx`.
-- [External User Role Assignments](pages/concepts/features/external-user-grant.md): Source `apps/docs/content/concepts/features/external-user-grant.mdx`.
-- [Identity Brokering](pages/concepts/features/identity-brokering.md): Source `apps/docs/content/concepts/features/identity-brokering.mdx`.
-- [Features](pages/concepts/features.md): Source `apps/docs/content/concepts/features/index.mdx`.
-- [Passkeys & Passwordless Authentication in ZITADEL](pages/concepts/features/passkeys.md): Source `apps/docs/content/concepts/features/passkeys.mdx`.
-- [Self Service in ZITADEL](pages/concepts/features/selfservice.md): Source `apps/docs/content/concepts/features/selfservice.mdx`.
-- [Key Concepts](pages/concepts.md): Source `apps/docs/content/concepts/index.mdx`.
-- [Knowledge](pages/concepts/knowledge.md): Source `apps/docs/content/concepts/knowledge/index.mdx`.
-- [Opaque Tokens in Zitadel](pages/concepts/knowledge/opaque-tokens.md): Source `apps/docs/content/concepts/knowledge/opaque-tokens.mdx`.
-- [Principles](pages/concepts/principles.md): Source `apps/docs/content/concepts/principles.mdx`.
-- [Administrators](pages/concepts/structure/administrators.md): Source `apps/docs/content/concepts/structure/administrators.mdx`.
-- [ZITADEL's Granted Projects](pages/concepts/structure/granted_projects.md): Source `apps/docs/content/concepts/structure/granted_projects.mdx`.
-- [Structure](pages/concepts/structure.md): Source `apps/docs/content/concepts/structure/index.mdx`.
-- [Instances](pages/concepts/structure/instance.md): Source `apps/docs/content/concepts/structure/instance.mdx`.
-- [ZITADEL Settings and Policies](pages/concepts/structure/policies.md): Source `apps/docs/content/concepts/structure/policies.mdx`.
+- [How ZITADEL Processes and Stores Secrets](pages/concepts/architecture/secrets.md): In this chapter you can find information of how ZITADEL processes and stores secrets and credentials in a secure fashion. (4970 bytes)
+- [Zitadel's Software Architecture](pages/concepts/architecture/software.md): Zitadel is built with two essential patterns. Event Sourcing (ES) and Command and Query Responsibility Segregation (CQRS). Due to the nature of Event Sourcing Zitadel provides the unique capability to generate a strong… (8426 bytes)
+- [Zitadel's Deployment Architecture](pages/concepts/architecture/solution.md): Zitadel can be run as high available system with ease. Since the storage layer takes the heavy lifting of making sure that data in synched across, server, data centers or regions. (3997 bytes)
+- [ZITADEL Database Structure](pages/concepts/eventstore/implementation.md): This documentation gives you an insight into the structure of the ZITADEL database. The goal is to give you a rough overview, so you know where which data is stored and which database schemas and tables are used. (10942 bytes)
+- [ZITADEL Event Store](pages/concepts/eventstore/overview.md): ZITADEL is built on the Event Sourcing pattern, where changes are stored as events in an Event Store. (2282 bytes)
+- [Account linking](pages/concepts/features/account-linking.md): ZITADEL supports linking user accounts from different external identity providers, such as social logins or enterprise IdPs, to a single ZITADEL user profile. This enables users to be recognized as the same user in your… (2910 bytes)
+- [ZITADEL Actions](pages/concepts/features/actions.md): By using ZITADEL actions, you can manipulate ZITADELs behavior on specific Events. This is useful when you have special business requirements that ZITADEL doesn't support out-of-the-box. (1947 bytes)
+- [ZITADEL Actions v2](pages/concepts/features/actions_v2.md): By using ZITADEL Actions v2, you can modify ZITADEL's behavior on specific API calls, events, or functions. This is useful when you have special business requirements that ZITADEL does not support out-of-the-box. (3645 bytes)
+- [ZITADEL's In-built Audit Trail](pages/concepts/features/audit-trail.md): ZITADEL provides you with a built-in audit trail to track all changes and events over an unlimited period of time. Most other solutions replace a historical record and track changes in a separate log when information is… (3230 bytes)
+- [Custom Domain](pages/concepts/features/custom-domain.md): A ZITADEL Custom Domain refers to the ability for organizations to personalize the authentication experience by using their own domain name rather than the default ZITADEL domain. (1218 bytes)
+- [External User Role Assignments](pages/concepts/features/external-user-grant.md): ZITADEL's external user role assignment is a feature that allows you to grant access to projects within your organization to users from other organizations. This is useful in scenarios where you want to collaborate with… (2691 bytes)
+- [Identity Brokering](pages/concepts/features/identity-brokering.md): Link social logins and external identity providers with your identity management platform allowing users to log in with their preferred identity provider. (6067 bytes)
+- [Features](pages/concepts/features.md): Normalized source from apps/docs/content/concepts/features/index.mdx. (594 bytes)
+- [Passkeys & Passwordless Authentication in ZITADEL](pages/concepts/features/passkeys.md): ZITADEL's passkeys feature enables passwordless authentication, offering a smoother and more secure login experience for your users. This document explains the essential details for developers. (2613 bytes)
+- [Self Service in ZITADEL](pages/concepts/features/selfservice.md): ZITADEL allows users to perform many tasks themselves. For these tasks we either provide a user interface, or the tasks can be initiated or completed through ZITADEL's APIs. (8688 bytes)
+- [Key Concepts](pages/concepts.md): Normalized source from apps/docs/content/concepts/index.mdx. (510 bytes)
+- [Knowledge](pages/concepts/knowledge.md): Normalized source from apps/docs/content/concepts/knowledge/index.mdx. (77 bytes)
+- [Opaque Tokens in Zitadel](pages/concepts/knowledge/opaque-tokens.md): In the context of application security, robust authentication mechanisms are essential for safeguarding sensitive data and ensuring user trust. Opaque tokens, the default token type within the ZITADEL platform, play a c… (6826 bytes)
+- [Principles](pages/concepts/principles.md): Normalized source from apps/docs/content/concepts/principles.mdx. (824 bytes)
+- [Administrators](pages/concepts/structure/administrators.md): Administrators are users or service accounts who have permission to manage resources within ZITADEL. (1805 bytes)
+- [ZITADEL's Granted Projects](pages/concepts/structure/granted_projects.md): With ZITADEL you can grant selected roles within your project to an organization. The receiving organization can then create role assignments for their users on their own (self-service). (899 bytes)
+- [Structure](pages/concepts/structure.md): Normalized source from apps/docs/content/concepts/structure/index.mdx. (541 bytes)
+- [Instances](pages/concepts/structure/instance.md): An instance is the top node in ZITADEL's data hierarchy. Within an instance all the default settings, such as branding, login policy, password policy, etc. for the system can be configured. One instance normally runs on… (1963 bytes)
+- [ZITADEL Settings and Policies](pages/concepts/structure/policies.md): Settings and policies control the behavior of all the different parts of the instance or an organization. For all parts we have a suitable default in the instance. The default settings can be overridden for each organiz… (551 bytes)
 
 ## Examples
 
-- [OAuth 2.0 Proxy](pages/examples/identity-proxy/oauth2-proxy.md): Source `apps/docs/content/examples/identity-proxy/oauth2-proxy.mdx`.
-- [APIs / Backend Quickstart Guides](pages/examples/introduction/backend.md): Source `apps/docs/content/examples/introduction/backend/index.mdx`.
-- [Frontend (SPA) Quickstart Guides](pages/examples/introduction/frontend.md): Source `apps/docs/content/examples/introduction/frontend/index.mdx`.
-- [Full-Stack / SSR Quickstart Guides](pages/examples/introduction/fullstack.md): Source `apps/docs/content/examples/introduction/fullstack/index.mdx`.
-- [Example Applications](pages/examples/introduction.md): Source `apps/docs/content/examples/introduction/index.mdx`.
-- [Mobile & Native Quickstart Guides](pages/examples/introduction/mobile.md): Source `apps/docs/content/examples/introduction/mobile/index.mdx`.
-- [Web App (Server-Side) Quickstart Guides](pages/examples/introduction/webapp.md): Source `apps/docs/content/examples/introduction/webapp/index.mdx`.
-- [ZITADEL with Flutter](pages/examples/login/flutter.md): Source `apps/docs/content/examples/login/flutter.mdx`.
-- [Go Web Application Login with ZITADEL](pages/examples/login/go.md): Source `apps/docs/content/examples/login/go.mdx`.
-- [Next.js Multi-tenant B2B Application with ZITADEL](pages/examples/login/nextjs-b2b.md): Source `apps/docs/content/examples/login/nextjs-b2b.mdx`.
-- [Secure Go API Application with ZITADEL](pages/examples/secure-api/go.md): Source `apps/docs/content/examples/secure-api/go.mdx`.
-- [Secure Java Spring Boot API Application with ZITADEL](pages/examples/secure-api/java-spring.md): Source `apps/docs/content/examples/secure-api/java-spring.mdx`.
-- [Secure Nest.js API Application with ZITADEL](pages/examples/secure-api/nodejs-nestjs.md): Source `apps/docs/content/examples/secure-api/nodejs-nestjs.mdx`.
-- [Secure Pylon API Application with ZITADEL](pages/examples/secure-api/pylon.md): Source `apps/docs/content/examples/secure-api/pylon.mdx`.
-- [Secure Django (Python) API Application with ZITADEL](pages/examples/secure-api/python-django.md): Source `apps/docs/content/examples/secure-api/python-django.mdx`.
-- [Secure Flask (Python) API Application with ZITADEL](pages/examples/secure-api/python-flask.md): Source `apps/docs/content/examples/secure-api/python-flask.mdx`.
+- [OAuth 2.0 Proxy](pages/examples/identity-proxy/oauth2-proxy.md): OAuth2-proxy is a project which allows services to delegate the authentication flow to a IDP, for example ZITADEL (3392 bytes)
+- [APIs / Backend Quickstart Guides](pages/examples/introduction/backend.md): Normalized source from apps/docs/content/examples/introduction/backend/index.mdx. (348 bytes)
+- [Frontend (SPA) Quickstart Guides](pages/examples/introduction/frontend.md): Normalized source from apps/docs/content/examples/introduction/frontend/index.mdx. (227 bytes)
+- [Full-Stack / SSR Quickstart Guides](pages/examples/introduction/fullstack.md): Normalized source from apps/docs/content/examples/introduction/fullstack/index.mdx. (826 bytes)
+- [Example Applications](pages/examples/introduction.md): Normalized source from apps/docs/content/examples/introduction/index.mdx. (395 bytes)
+- [Mobile & Native Quickstart Guides](pages/examples/introduction/mobile.md): Normalized source from apps/docs/content/examples/introduction/mobile/index.mdx. (61 bytes)
+- [Web App (Server-Side) Quickstart Guides](pages/examples/introduction/webapp.md): Normalized source from apps/docs/content/examples/introduction/webapp/index.mdx. (224 bytes)
+- [ZITADEL with Flutter](pages/examples/login/flutter.md): This guide demonstrates how you integrate ZITADEL into a Flutter app. It refers to our example on GitHub (7391 bytes)
+- [Go Web Application Login with ZITADEL](pages/examples/login/go.md): This integration guide demonstrates the recommended way to incorporate ZITADEL into your Go web application. It explains how to enable user login in your application and how to fetch data from the user info endpoint. (7228 bytes)
+- [Next.js Multi-tenant B2B Application with ZITADEL](pages/examples/login/nextjs-b2b.md): This is our ZITADEL Next.js B2B template. It shows how to authenticate as a user with multiple organizations. The application shows your users' roles in the selected organizations, other projects your organization is al… (9433 bytes)
+- [Secure Go API Application with ZITADEL](pages/examples/secure-api/go.md): This integration guide shows you how to integrate ZITADEL into your Go API. It demonstrates how to secure your API using OAuth 2 Token Introspection. (8549 bytes)
+- [Secure Java Spring Boot API Application with ZITADEL](pages/examples/secure-api/java-spring.md): This integration guide shows you how to integrate ZITADEL into your Java Spring Boot API. It demonstrates how to secure your API using OAuth 2 Token Introspection. (10483 bytes)
+- [Secure Nest.js API Application with ZITADEL](pages/examples/secure-api/nodejs-nestjs.md): This documentation section guides you through the process of integrating ZITADEL into your Node.js backend using the NestJS framework. The provided example demonstrates authentication using an OIDC (OAuth2) token intros… (3183 bytes)
+- [Secure Pylon API Application with ZITADEL](pages/examples/secure-api/pylon.md): This integration guide demonstrates the recommended way to incorporate ZITADEL into your Pylon service. It explains how to check the token validity in the API and how to check for permissions. (15665 bytes)
+- [Secure Django (Python) API Application with ZITADEL](pages/examples/secure-api/python-django.md): This integration guide demonstrates the recommended way to incorporate ZITADEL into your Django Python application. It explains how to check the token validity in the API and how to check for permissions. (12431 bytes)
+- [Secure Flask (Python) API Application with ZITADEL](pages/examples/secure-api/python-flask.md): This example shows you how to secure a Python3 Flask API with both authentication and authorization using ZITADEL. (10465 bytes)
 
 ## Guides
 
-- [Migrate from Actions V1 to V2](pages/guides/integrate/actions/migrate-from-v1.md): Source `apps/docs/content/guides/integrate/actions/migrate-from-v1.mdx`.
-- [Test Actions Event](pages/guides/integrate/actions/testing-event.md): Source `apps/docs/content/guides/integrate/actions/testing-event.mdx`.
-- [Test Actions Function Manipulation](pages/guides/integrate/actions/testing-function-manipulation.md): Source `apps/docs/content/guides/integrate/actions/testing-function-manipulation.mdx`.
-- [Test Actions Function](pages/guides/integrate/actions/testing-function.md): Source `apps/docs/content/guides/integrate/actions/testing-function.mdx`.
-- [Test Actions Request Manipulation](pages/guides/integrate/actions/testing-request-manipulation.md): Source `apps/docs/content/guides/integrate/actions/testing-request-manipulation.mdx`.
-- [Verify Payload Integrity](pages/guides/integrate/actions/testing-request-signature.md): Source `apps/docs/content/guides/integrate/actions/testing-request-signature.mdx`.
-- [Test Actions Request](pages/guides/integrate/actions/testing-request.md): Source `apps/docs/content/guides/integrate/actions/testing-request.mdx`.
-- [Test Actions Response Manipulation](pages/guides/integrate/actions/testing-response-manipulation.md): Source `apps/docs/content/guides/integrate/actions/testing-response-manipulation.mdx`.
-- [Test Actions Response](pages/guides/integrate/actions/testing-response.md): Source `apps/docs/content/guides/integrate/actions/testing-response.mdx`.
-- [Using Actions](pages/guides/integrate/actions/usage.md): Source `apps/docs/content/guides/integrate/actions/usage.mdx`.
-- [Testing Actions V2 with Webhook.site](pages/guides/integrate/actions/webhook-site-setup.md): Source `apps/docs/content/guides/integrate/actions/webhook-site-setup.mdx`.
-- [Embed Authenticated MongoDB Charts Using ZITADEL](pages/guides/integrate/authenticated-mongodb-charts.md): Source `apps/docs/content/guides/integrate/authenticated-mongodb-charts.mdx`.
-- [OIDC Back-Channel Logout](pages/guides/integrate/back-channel-logout.md): Source `apps/docs/content/guides/integrate/back-channel-logout.mdx`.
-- [OAuth 2.0 Dynamic Client Registration](pages/guides/integrate/dynamic-client-registration.md): Source `apps/docs/content/guides/integrate/dynamic-client-registration.mdx`.
-- [Streaming audit logs to external systems (SIEM/SOC)](pages/guides/integrate/external-audit-log.md): Source `apps/docs/content/guides/integrate/external-audit-log.mdx`.
-- [Profile Pre-filling from External IdP](pages/guides/integrate/identity-providers/additional-information.md): Source `apps/docs/content/guides/integrate/identity-providers/additional-information.mdx`.
-- [Set up Apple as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/apple.md): Source `apps/docs/content/guides/integrate/identity-providers/apple.mdx`.
-- [Set up Entra ID as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/azure-ad-oidc.md): Source `apps/docs/content/guides/integrate/identity-providers/azure-ad-oidc.mdx`.
-- [Set up Entra ID as a SAML Service Provider in ZITADEL](pages/guides/integrate/identity-providers/azure-ad-saml.md): Source `apps/docs/content/guides/integrate/identity-providers/azure-ad-saml.mdx`.
-- [Configure a Generic OIDC Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/generic-oidc.md): Source `apps/docs/content/guides/integrate/identity-providers/generic-oidc.mdx`.
-- [Configure GitHub as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/github.md): Source `apps/docs/content/guides/integrate/identity-providers/github.mdx`.
-- [Configure GitLab as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/gitlab.md): Source `apps/docs/content/guides/integrate/identity-providers/gitlab.mdx`.
-- [Configure Google as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/google.md): Source `apps/docs/content/guides/integrate/identity-providers/google.mdx`.
-- [Let Users Login with Preferred Identity Provider](pages/guides/integrate/identity-providers/introduction.md): Source `apps/docs/content/guides/integrate/identity-providers/introduction.mdx`.
-- [JWT IdP](pages/guides/integrate/identity-providers/jwt_idp.md): Source `apps/docs/content/guides/integrate/identity-providers/jwt_idp.mdx`.
-- [Configure Keycloak as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/keycloak.md): Source `apps/docs/content/guides/integrate/identity-providers/keycloak.mdx`.
-- [Configure LDAP as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/ldap.md): Source `apps/docs/content/guides/integrate/identity-providers/ldap.mdx`.
-- [LinkedIn OAuth Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/linkedin_oauth.md): Source `apps/docs/content/guides/integrate/identity-providers/linkedin_oauth.mdx`.
-- [Migrate from Generic to Specific Identity Provider](pages/guides/integrate/identity-providers/migrate.md): Source `apps/docs/content/guides/integrate/identity-providers/migrate.mdx`.
-- [Set up MockSAML as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/mocksaml.md): Source `apps/docs/content/guides/integrate/identity-providers/mocksaml.mdx`.
-- [Set up OKTA as an OIDC Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/okta-oidc.md): Source `apps/docs/content/guides/integrate/identity-providers/okta-oidc.mdx`.
-- [Set up OKTA as a SAML Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/okta_saml.md): Source `apps/docs/content/guides/integrate/identity-providers/okta_saml.mdx`.
-- [Set up OneLogin as a SAML Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/onelogin-saml.md): Source `apps/docs/content/guides/integrate/identity-providers/onelogin-saml.mdx`.
-- [OpenLDAP Identity Provider Setup in ZITADEL](pages/guides/integrate/identity-providers/openldap.md): Source `apps/docs/content/guides/integrate/identity-providers/openldap.mdx`.
-- [PingFederate SAML Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/pingfederate-saml.md): Source `apps/docs/content/guides/integrate/identity-providers/pingfederate-saml.mdx`.
-- [Integrate](pages/guides/integrate.md): Source `apps/docs/content/guides/integrate/index.mdx`.
-- [Hosted Login UI: Authenticate Your Users](pages/guides/integrate/login/hosted-login.md): Source `apps/docs/content/guides/integrate/login/hosted-login.mdx`.
-- [Login users with ZITADEL](pages/guides/integrate/login.md): Source `apps/docs/content/guides/integrate/login/index.mdx`.
-- [User Authentication Options with ZITADEL](pages/guides/integrate/login/login-users.md): Source `apps/docs/content/guides/integrate/login/login-users.mdx`.
-- [Authentication Methods](pages/guides/integrate/login/oidc/authmethods.md): Source `apps/docs/content/guides/integrate/login/oidc/authmethods.mdx`.
-- [Integrating Your Application with ZITADEL using RFC 8628 OAuth 2.0 Device Authorization Flow](pages/guides/integrate/login/oidc/device-authorization.md): Source `apps/docs/content/guides/integrate/login/oidc/device-authorization.mdx`.
-- [Authenticate users with OpenID Connect (OIDC)](pages/guides/integrate/login/oidc.md): Source `apps/docs/content/guides/integrate/login/oidc/index.mdx`.
-- [OpenID Connect (OIDC) Authentication: Authorization Code Flow & PKCE guide](pages/guides/integrate/login/oidc/login-users.md): Source `apps/docs/content/guides/integrate/login/oidc/login-users.mdx`.
-- [Log Out Users from an Application with ZITADEL](pages/guides/integrate/login/oidc/logout.md): Source `apps/docs/content/guides/integrate/login/oidc/logout.mdx`.
-- [Native app links for passkeys](pages/guides/integrate/login/oidc/native-app-links.md): Source `apps/docs/content/guides/integrate/login/oidc/native-app-links.mdx`.
-- [Recommended authorization flows with OpenID Connect (OIDC) and OAuth 2.x](pages/guides/integrate/login/oidc/oauth-recommended-flows.md): Source `apps/docs/content/guides/integrate/login/oidc/oauth-recommended-flows.mdx`.
-- [OpenID Connect and OAuth2 web keys](pages/guides/integrate/login/oidc/webkeys.md): Source `apps/docs/content/guides/integrate/login/oidc/webkeys.mdx`.
-- [Authenticate users with SAML](pages/guides/integrate/login/saml.md): Source `apps/docs/content/guides/integrate/login/saml.mdx`.
-- [Device Authorization Grant in Custom Login UI](pages/guides/integrate/login-ui/device-auth.md): Source `apps/docs/content/guides/integrate/login-ui/device-auth.mdx`.
-- [Handle External Logins in a Custom Login UI](pages/guides/integrate/login-ui/external-login.md): Source `apps/docs/content/guides/integrate/login-ui/external-login.mdx`.
-- [Maintain and Deploy a Customized ZITADEL Login UI](pages/guides/integrate/login-ui/fork-and-deploy-login-app.md): Source `apps/docs/content/guides/integrate/login-ui/fork-and-deploy-login-app.mdx`.
-- [Build your own Login UI](pages/guides/integrate/login-ui.md): Source `apps/docs/content/guides/integrate/login-ui/index.mdx`.
-- [Login App](pages/guides/integrate/login-ui/login-app.md): Source `apps/docs/content/guides/integrate/login-ui/login-app.mdx`.
-- [Logging Out via a Custom Login UI](pages/guides/integrate/login-ui/logout.md): Source `apps/docs/content/guides/integrate/login-ui/logout.mdx`.
-- [Multi-Factor Authentication (MFA) in a Custom Login UI](pages/guides/integrate/login-ui/mfa.md): Source `apps/docs/content/guides/integrate/login-ui/mfa.mdx`.
-- [OpenID Connect (OIDC) in Custom Login UI](pages/guides/integrate/login-ui/oidc-standard.md): Source `apps/docs/content/guides/integrate/login-ui/oidc-standard.mdx`.
-- [Using Passkeys in a Custom Login UI](pages/guides/integrate/login-ui/passkey.md): Source `apps/docs/content/guides/integrate/login-ui/passkey.mdx`.
-- [Password Reset/Change in a Custom Login UI](pages/guides/integrate/login-ui/password-reset.md): Source `apps/docs/content/guides/integrate/login-ui/password-reset.mdx`.
-- [Support for the SAML Standard in a Custom Login UI](pages/guides/integrate/login-ui/saml-standard.md): Source `apps/docs/content/guides/integrate/login-ui/saml-standard.mdx`.
-- [Select Account in a Custom Login UI](pages/guides/integrate/login-ui/select-account.md): Source `apps/docs/content/guides/integrate/login-ui/select-account.mdx`.
-- [How to Handle Session Validation](pages/guides/integrate/login-ui/session-validation.md): Source `apps/docs/content/guides/integrate/login-ui/session-validation.mdx`.
-- [Username & Password Login in Custom Login UI](pages/guides/integrate/login-ui/username-password.md): Source `apps/docs/content/guides/integrate/login-ui/username-password.mdx`.
-- [Onboard B2B customers using organizations](pages/guides/integrate/onboarding/b2b.md): Source `apps/docs/content/guides/integrate/onboarding/b2b.mdx`.
-- [Onboard Users](pages/guides/integrate/onboarding/end-users.md): Source `apps/docs/content/guides/integrate/onboarding/end-users.mdx`.
-- [Onboard Customers and Users](pages/guides/integrate/onboarding.md): Source `apps/docs/content/guides/integrate/onboarding/index.mdx`.
-- [Retrieve User Roles in ZITADEL](pages/guides/integrate/retrieve-user-roles.md): Source `apps/docs/content/guides/integrate/retrieve-user-roles.mdx`.
-- [SCIM Provisioning from Okta](pages/guides/integrate/scim-okta-guide.md): Source `apps/docs/content/guides/integrate/scim-okta-guide.mdx`.
-- [Authenticate service accounts and client applications](pages/guides/integrate/service-accounts/authenticate-service-accounts.md): Source `apps/docs/content/guides/integrate/service-accounts/authenticate-service-accounts.mdx`.
-- [OAuth Client Credentials for Service Accounts](pages/guides/integrate/service-accounts/client-credentials.md): Source `apps/docs/content/guides/integrate/service-accounts/client-credentials.mdx`.
-- [Personal Access Token Auth for Service Accounts](pages/guides/integrate/service-accounts/personal-access-token.md): Source `apps/docs/content/guides/integrate/service-accounts/personal-access-token.mdx`.
-- [Private Key JWT Auth for Service Accounts](pages/guides/integrate/service-accounts/private-key-jwt.md): Source `apps/docs/content/guides/integrate/service-accounts/private-key-jwt.mdx`.
-- [Log in with ZITADEL on Atlassian through SAML 2.0](pages/guides/integrate/services/atlassian-saml.md): Source `apps/docs/content/guides/integrate/services/atlassian-saml.mdx`.
-- [Log in with ZITADEL on Auth0 through OIDC](pages/guides/integrate/services/auth0-oidc.md): Source `apps/docs/content/guides/integrate/services/auth0-oidc.mdx`.
-- [Log in with ZITADEL on Auth0 through SAML 2.0](pages/guides/integrate/services/auth0-saml.md): Source `apps/docs/content/guides/integrate/services/auth0-saml.mdx`.
-- [Log in with ZITADEL on AWS through SAML 2.0](pages/guides/integrate/services/aws-saml.md): Source `apps/docs/content/guides/integrate/services/aws-saml.mdx`.
-- [Cloudflare Zero Trust OIDC with ZITADEL](pages/guides/integrate/services/cloudflare-oidc.md): Source `apps/docs/content/guides/integrate/services/cloudflare-oidc.mdx`.
-- [Log in with ZITADEL on Gitlab through SAML 2.0](pages/guides/integrate/services/gitlab-saml.md): Source `apps/docs/content/guides/integrate/services/gitlab-saml.mdx`.
-- [Log in with ZITADEL on Gitlab OmniAuth Provider](pages/guides/integrate/services/gitlab-self-hosted.md): Source `apps/docs/content/guides/integrate/services/gitlab-self-hosted.mdx`.
-- [ZITADEL on Google Cloud Workforce Identity](pages/guides/integrate/services/google-cloud.md): Source `apps/docs/content/guides/integrate/services/google-cloud.mdx`.
-- [Google Workspace SSO with ZITADEL](pages/guides/integrate/services/google-workspace.md): Source `apps/docs/content/guides/integrate/services/google-workspace.mdx`.
-- [Integrate ZITADEL with your Favorite Services](pages/guides/integrate/services.md): Source `apps/docs/content/guides/integrate/services/index.mdx`.
-- [Log in with ZITADEL on Ping Identity through SAML 2.0](pages/guides/integrate/services/pingidentity-saml.md): Source `apps/docs/content/guides/integrate/services/pingidentity-saml.mdx`.
-- [OAuth 2.0 Token Exchange (RFC 8693): Impersonation & Delegation](pages/guides/integrate/token-exchange.md): Source `apps/docs/content/guides/integrate/token-exchange.mdx`.
-- [Basic Authentication in ZITADEL](pages/guides/integrate/token-introspection/basic-auth.md): Source `apps/docs/content/guides/integrate/token-introspection/basic-auth.mdx`.
-- [Token introspection](pages/guides/integrate/token-introspection.md): Source `apps/docs/content/guides/integrate/token-introspection/index.mdx`.
-- [Private Key JWT](pages/guides/integrate/token-introspection/private-key-jwt.md): Source `apps/docs/content/guides/integrate/token-introspection/private-key-jwt.mdx`.
-- [Apache 2.0](pages/guides/integrate/tools/apache2.md): Source `apps/docs/content/guides/integrate/tools/apache2.mdx`.
-- [Access ZITADEL APIs](pages/guides/integrate/zitadel-apis/access-zitadel-apis.md): Source `apps/docs/content/guides/integrate/zitadel-apis/access-zitadel-apis.mdx`.
-- [Access ZITADEL System API](pages/guides/integrate/zitadel-apis/access-zitadel-system-api.md): Source `apps/docs/content/guides/integrate/zitadel-apis/access-zitadel-system-api.mdx`.
-- [Get Events from ZITADEL](pages/guides/integrate/zitadel-apis/event-api.md): Source `apps/docs/content/guides/integrate/zitadel-apis/event-api.mdx`.
-- [Integrate ZITADEL APIs into a .NET Application](pages/guides/integrate/zitadel-apis/example-zitadel-api-with-dot-net.md): Source `apps/docs/content/guides/integrate/zitadel-apis/example-zitadel-api-with-dot-net.mdx`.
-- [Integrate ZITADEL APIs into a Go Application](pages/guides/integrate/zitadel-apis/example-zitadel-api-with-go.md): Source `apps/docs/content/guides/integrate/zitadel-apis/example-zitadel-api-with-go.mdx`.
-- [ZITADEL Cloud Egress IP Addresses](pages/guides/manage/cloud/egress.md): Source `apps/docs/content/guides/manage/cloud/egress.mdx`.
-- [Overview](pages/guides/manage/cloud/overview.md): Source `apps/docs/content/guides/manage/cloud/overview/index.mdx`.
-- [ZITADEL Support](pages/guides/manage/cloud/support.md): Source `apps/docs/content/guides/manage/cloud/support.mdx`.
-- [Actions](pages/guides/manage/console/actions-overview.md): Source `apps/docs/content/guides/manage/console/actions-overview.mdx`.
-- [ZITADEL Administrators](pages/guides/manage/console/administrators.md): Source `apps/docs/content/guides/manage/console/administrators.mdx`.
-- [Applications](pages/guides/manage/console/applications-overview.md): Source `apps/docs/content/guides/manage/console/applications-overview.mdx`.
-- [Management Console](pages/guides/manage/console/console-overview.md): Source `apps/docs/content/guides/manage/console/console-overview.mdx`.
-- [ZITADEL Default Settings](pages/guides/manage/console/default-settings.md): Source `apps/docs/content/guides/manage/console/default-settings.mdx`.
-- [Organizations](pages/guides/manage/console/organizations-overview.md): Source `apps/docs/content/guides/manage/console/organizations-overview.mdx`.
-- [ZITADEL Projects: Manage Apps, Services & Roles](pages/guides/manage/console/projects-overview.md): Source `apps/docs/content/guides/manage/console/projects-overview.mdx`.
-- [ZITADEL Roles and Role Assignments](pages/guides/manage/console/roles.md): Source `apps/docs/content/guides/manage/console/roles.mdx`.
-- [Users](pages/guides/manage/console/users-overview.md): Source `apps/docs/content/guides/manage/console/users-overview.mdx`.
-- [Behavior Customization](pages/guides/manage/customize/behavior.md): Source `apps/docs/content/guides/manage/customize/behavior.mdx`.
-- [Brand Customization](pages/guides/manage/customize/branding.md): Source `apps/docs/content/guides/manage/customize/branding.mdx`.
-- [SMS, SMTP and HTTP Provider for Notifications](pages/guides/manage/customize/notification-providers.md): Source `apps/docs/content/guides/manage/customize/notification-providers.mdx`.
-- [Feature Restrictions](pages/guides/manage/customize/restrictions.md): Source `apps/docs/content/guides/manage/customize/restrictions.mdx`.
-- [Customized Texts](pages/guides/manage/customize/texts.md): Source `apps/docs/content/guides/manage/customize/texts.mdx`.
-- [User Metadata](pages/guides/manage/customize/user-metadata.md): Source `apps/docs/content/guides/manage/customize/user-metadata.mdx`.
-- [ZITADEL Cloud Production Checklist](pages/guides/manage/production-checklist.md): Source `apps/docs/content/guides/manage/production-checklist.mdx`.
-- [ZITADEL Terraform Provider](pages/guides/manage/terraform-provider.md): Source `apps/docs/content/guides/manage/terraform-provider.mdx`.
-- [Register and Create User](pages/guides/manage/user/reg-create-user.md): Source `apps/docs/content/guides/manage/user/reg-create-user.mdx`.
-- [SCIM v2.0](pages/guides/manage/user/scim2.md): Source `apps/docs/content/guides/manage/user/scim2.mdx`.
-- [User Self-Deletion](pages/guides/manage/user/self-deletion.md): Source `apps/docs/content/guides/manage/user/self-deletion.mdx`.
-- [Migrate to ZITADEL](pages/guides/migrate/introduction.md): Source `apps/docs/content/guides/migrate/introduction.mdx`.
-- [Migrate from Auth0 to ZITADEL with Password Hashes](pages/guides/migrate/sources/auth0.md): Source `apps/docs/content/guides/migrate/sources/auth0.mdx`.
-- [Migrate from Firebase to ZITADEL](pages/guides/migrate/sources/firebase.md): Source `apps/docs/content/guides/migrate/sources/firebase.mdx`.
-- [Migrate from Keycloak](pages/guides/migrate/sources/keycloak.md): Source `apps/docs/content/guides/migrate/sources/keycloak.mdx`.
-- [Migrate from ZITADEL](pages/guides/migrate/sources/zitadel.md): Source `apps/docs/content/guides/migrate/sources/zitadel.mdx`.
-- [Migrate Users](pages/guides/migrate/users.md): Source `apps/docs/content/guides/migrate/users.mdx`.
-- [B2B Multi-Tenant Authentication with ZITADEL](pages/guides/solution-scenarios/b2b.md): Source `apps/docs/content/guides/solution-scenarios/b2b.mdx`.
-- [ZITADEL for B2C Scenarios](pages/guides/solution-scenarios/b2c.md): Source `apps/docs/content/guides/solution-scenarios/b2c.mdx`.
-- [Set up ZITADEL for your Scenario](pages/guides/solution-scenarios/configurations.md): Source `apps/docs/content/guides/solution-scenarios/configurations.mdx`.
-- [Domain Discovery in ZITADEL](pages/guides/solution-scenarios/domain-discovery.md): Source `apps/docs/content/guides/solution-scenarios/domain-discovery.mdx`.
-- [Frontend and Back-end API Communication in ZITADEL](pages/guides/solution-scenarios/frontend-calling-backend-API.md): Source `apps/docs/content/guides/solution-scenarios/frontend-calling-backend-API.mdx`.
-- [Guest users authentication](pages/guides/solution-scenarios/guest-auth.md): Source `apps/docs/content/guides/solution-scenarios/guest-auth.mdx`.
-- [Solution Scenarios](pages/guides/solution-scenarios.md): Source `apps/docs/content/guides/solution-scenarios/index.mdx`.
-- [Use Cases](pages/guides/solution-scenarios/introduction.md): Source `apps/docs/content/guides/solution-scenarios/introduction/index.mdx`.
-- [Prevent users from accessing ZITADEL Management Console](pages/guides/solution-scenarios/restrict-console.md): Source `apps/docs/content/guides/solution-scenarios/restrict-console.mdx`.
-- [SaaS Authentication and Authorization with ZITADEL](pages/guides/solution-scenarios/saas.md): Source `apps/docs/content/guides/solution-scenarios/saas.mdx`.
-- [The ZITADEL Quick Start Guide](pages/guides/start/quickstart.md): Source `apps/docs/content/guides/start/quickstart.mdx`.
+- [Migrate from Actions V1 to V2](pages/guides/integrate/actions/migrate-from-v1.md): This guide helps existing users understand the shift from Actions V1 (Embedded) to V2 (Webhook), and provides guidance for new users on how to work with Actions V2. (10663 bytes)
+- [Test Actions Event](pages/guides/integrate/actions/testing-event.md): This guide shows you how to leverage the ZITADEL actions feature to react to events in your ZITADEL instance. You can use the actions feature to create a target that will be called when a specific event occurs. This is… (6017 bytes)
+- [Test Actions Function Manipulation](pages/guides/integrate/actions/testing-function-manipulation.md): This guide shows you how to leverage the ZITADEL actions feature to enhance different functions in your ZITADEL instance. You can use the actions feature to create a target that will be called when a specific functional… (5519 bytes)
+- [Test Actions Function](pages/guides/integrate/actions/testing-function.md): This guide shows you how to leverage the ZITADEL actions feature to enhance different functions in your ZITADEL instance. You can use the actions feature to create a target that will be called when a specific functional… (6391 bytes)
+- [Test Actions Request Manipulation](pages/guides/integrate/actions/testing-request-manipulation.md): This guide shows you how to leverage the ZITADEL actions feature to manipulate API requests in your ZITADEL instance. You can use the actions feature to create a target that will be called when a specific API request oc… (7687 bytes)
+- [Verify Payload Integrity](pages/guides/integrate/actions/testing-request-signature.md): This guide shows you how to verify the integrity of the received data on your target. There are three options available, which will be demonstrated in the following sections. The examples are based on the request action… (16269 bytes)
+- [Test Actions Request](pages/guides/integrate/actions/testing-request.md): This guide shows you how to leverage the ZITADEL actions feature to react to API requests in your ZITADEL instance. You can use the actions feature to create a target that will be called when a specific API request occu… (6452 bytes)
+- [Test Actions Response Manipulation](pages/guides/integrate/actions/testing-response-manipulation.md): This guide shows you how to leverage the ZITADEL actions feature to manipulate API responses in your ZITADEL instance. You can use the actions feature to create a target that will be called when a specific API response… (12173 bytes)
+- [Test Actions Response](pages/guides/integrate/actions/testing-response.md): This guide shows you how to leverage the ZITADEL actions feature to react to API responses in your ZITADEL instance. You can use the actions feature to create a target that will be called when a specific API response oc… (6582 bytes)
+- [Using Actions](pages/guides/integrate/actions/usage.md): The Action API provides a flexible mechanism for customizing and extending the functionality of ZITADEL. By allowing you to define targets and executions, you can implement custom workflows triggered on an API requests… (16260 bytes)
+- [Testing Actions V2 with Webhook.site](pages/guides/integrate/actions/webhook-site-setup.md): This guide explains how to test ZITADEL Actions V2 locally using Webhook.site. We will use Webhook.site’s XHR Redirect feature to forward requests from ZITADEL to your local machine. (5650 bytes)
+- [Embed Authenticated MongoDB Charts Using ZITADEL](pages/guides/integrate/authenticated-mongodb-charts.md): This integration guide shows how you can embed authenticated MongoDB Charts in your web application using ZITADEL as authentication provider. (2994 bytes)
+- [OIDC Back-Channel Logout](pages/guides/integrate/back-channel-logout.md): The Back-Channel Logout implements OpenID Connect Back-Channel Logout 1.0 and can be used to notify applications about session termination at the OpenID Provider. This guide will explain how back-channel logout is imple… (10668 bytes)
+- [OAuth 2.0 Dynamic Client Registration](pages/guides/integrate/dynamic-client-registration.md): ZITADEL implements OAuth 2.0 Dynamic Client Registration (RFC 7591). It exposes a registrationendpoint that lets clients register themselves as OIDC applications at runtime, instead of being created upfront in the Manag… (14101 bytes)
+- [Streaming audit logs to external systems (SIEM/SOC)](pages/guides/integrate/external-audit-log.md): This document details integrating ZITADEL with external systems for streaming events and audit logs. This functionality allows you to centralize ZITADEL activity data alongside other security and operational information… (5695 bytes)
+- [Profile Pre-filling from External IdP](pages/guides/integrate/identity-providers/additional-information.md): You can use a ZITADEL action if you want to prefill the fields specific fields like firstname, lastname and email verified with your providers data. (695 bytes)
+- [Set up Apple as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/apple.md): This guides shows you how to connect Apple as an identity provider in ZITADEL. (7500 bytes)
+- [Set up Entra ID as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/azure-ad-oidc.md): This guides shows you how to connect Entra ID (former Azure Active Directory) as an identity provider in ZITADEL. (9632 bytes)
+- [Set up Entra ID as a SAML Service Provider in ZITADEL](pages/guides/integrate/identity-providers/azure-ad-saml.md): This guides shows you how to connect Entra ID (former Azure Active Directory) as an identity provider in ZITADEL. (8538 bytes)
+- [Configure a Generic OIDC Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/generic-oidc.md): This guides shows you how to connect your OIDC Provider as an identity provider in ZITADEL. (6364 bytes)
+- [Configure GitHub as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/github.md): This guides shows you how to connect GitHub as an identity provider in ZITADEL. (7926 bytes)
+- [Configure GitLab as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/gitlab.md): This guides shows you how to connect GitLab as an identity provider in ZITADEL. (7571 bytes)
+- [Configure Google as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/google.md): This guides shows you how to connect Google as an identity provider in ZITADEL. (6352 bytes)
+- [Let Users Login with Preferred Identity Provider](pages/guides/integrate/identity-providers/introduction.md): An Identity Provider (IdP) is a service that creates and maintains identity information and then provides authentication services to your applications. Incorporating SSO (Single Sign-On) authentication allows users to a… (15536 bytes)
+- [JWT IdP](pages/guides/integrate/identity-providers/jwt_idp.md): A JWT Identity Provider (JWT IdP) allows ZITADEL to accept a JSON Web Token (JWT) issued and signed by an external system as proof that a user has already been authenticated elsewhere. In this flow, ZITADEL does not per… (8204 bytes)
+- [Configure Keycloak as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/keycloak.md): This guides shows you how to connect Keycloak as an identity provider in ZITADEL. (6866 bytes)
+- [Configure LDAP as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/ldap.md): This guides shows you how to connect an LDAP server as an identity provider in ZITADEL. (7059 bytes)
+- [LinkedIn OAuth Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/linkedin_oauth.md): This guides shows you how to connect LinkedIn as an identity provider in ZITADEL. (7101 bytes)
+- [Migrate from Generic to Specific Identity Provider](pages/guides/integrate/identity-providers/migrate.md): You can migrate from a generic OIDC provider to the following supported templates: (2789 bytes)
+- [Set up MockSAML as an Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/mocksaml.md): This guides shows you how to connect MockSAML as an identity provider in ZITADEL. (12897 bytes)
+- [Set up OKTA as an OIDC Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/okta-oidc.md): This guides shows you how to connect OKTA as an identity provider in ZITADEL. (6961 bytes)
+- [Set up OKTA as a SAML Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/okta_saml.md): This guides shows you how to connect OKTA as an identity provider in ZITADEL. (9096 bytes)
+- [Set up OneLogin as a SAML Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/onelogin-saml.md): This guides shows you how to connect OneLogin as an identity provider in ZITADEL. (16238 bytes)
+- [OpenLDAP Identity Provider Setup in ZITADEL](pages/guides/integrate/identity-providers/openldap.md): This guides shows you how to connect a local OpenLDAP server as an identity provider in ZITADEL. (11483 bytes)
+- [PingFederate SAML Identity Provider in ZITADEL](pages/guides/integrate/identity-providers/pingfederate-saml.md): This guides shows you how to connect PingFederate as an identity provider in ZITADEL. (16376 bytes)
+- [Integrate](pages/guides/integrate.md): Normalized source from apps/docs/content/guides/integrate/index.mdx. (391 bytes)
+- [Hosted Login UI: Authenticate Your Users](pages/guides/integrate/login/hosted-login.md): ZITADEL provides a hosted single-sign-on page to securely sign-in users to your applications. ZITADEL's hosted login page serves as a centralized authentication interface provided for applications that integrate ZITADEL… (17121 bytes)
+- [Login users with ZITADEL](pages/guides/integrate/login.md): Normalized source from apps/docs/content/guides/integrate/login/index.mdx. (228 bytes)
+- [User Authentication Options with ZITADEL](pages/guides/integrate/login/login-users.md): ZITADEL is a comprehensive identity and access management platform designed to streamline user authentication, authorization, and management processes for your application. It offers a range of features, including singl… (11761 bytes)
+- [Authentication Methods](pages/guides/integrate/login/oidc/authmethods.md): ZITADEL supports various authentication methods for OIDC clients. (66 bytes)
+- [Integrating Your Application with ZITADEL using RFC 8628 OAuth 2.0 Device Authorization Flow](pages/guides/integrate/login/oidc/device-authorization.md): ZITADEL implements device authorization as per RFC 8628. This document demonstrates its use. (8836 bytes)
+- [Authenticate users with OpenID Connect (OIDC)](pages/guides/integrate/login/oidc.md): Normalized source from apps/docs/content/guides/integrate/login/oidc/index.mdx. (937 bytes)
+- [OpenID Connect (OIDC) Authentication: Authorization Code Flow & PKCE guide](pages/guides/integrate/login/oidc/login-users.md): This guide will show you how to use ZITADEL to login users into your application (authentication). It will guide you step-by-step through the basics and point out on how to customize process. (3353 bytes)
+- [Log Out Users from an Application with ZITADEL](pages/guides/integrate/login/oidc/logout.md): This guide shows you the different concepts and use cases of the logout process and how to use it in ZITADEL. (3626 bytes)
+- [Native app links for passkeys](pages/guides/integrate/login/oidc/native-app-links.md): Native mobile apps that create or use passkeys with platform WebAuthn APIs need the issuer domain to publish OS trust association files. ZITADEL serves those files from your instance based on iOS and Android settings on… (5574 bytes)
+- [Recommended authorization flows with OpenID Connect (OIDC) and OAuth 2.x](pages/guides/integrate/login/oidc/oauth-recommended-flows.md): In this guide we will go over some basics on how to obtain an authorization with OpenID Connect 1.x and OAuth 2.x. (8078 bytes)
+- [OpenID Connect and OAuth2 web keys](pages/guides/integrate/login/oidc/webkeys.md): Web Keys in ZITADEL are used to sign and verify JSON Web Tokens (JWT). ID tokens are created, signed and returned by ZITADEL when a OpenID connect (OIDC) or OAuth2 authorization flow completes and a user is authenticate… (15940 bytes)
+- [Authenticate users with SAML](pages/guides/integrate/login/saml.md): SAML stands for Security Assertion Markup Language. It is a standard commonly used for identity federation and single sign-on (SSO). It is one of the original and most popular standards for SSO. Although it is prone to… (20663 bytes)
+- [Device Authorization Grant in Custom Login UI](pages/guides/integrate/login-ui/device-auth.md): In case one of your applications requires the OAuth2 Device Authorization Grant this guide will show you how to implement this in your application as well as the custom login UI. (7700 bytes)
+- [Handle External Logins in a Custom Login UI](pages/guides/integrate/login-ui/external-login.md): The prerequisite for adding an external login (social and enterprise) to your user account is a registered identity provider on your ZITADEL instance or the organization of the user. If you haven’t added a provider yet,… (7817 bytes)
+- [Maintain and Deploy a Customized ZITADEL Login UI](pages/guides/integrate/login-ui/fork-and-deploy-login-app.md): The ZITADEL Login UI is an MIT-licensed Next.js application maintained in the ZITADEL monorepo. You can customize and deploy it independently, but your fork becomes an application that your team must build, test, secure… (16419 bytes)
+- [Build your own Login UI](pages/guides/integrate/login-ui.md): Normalized source from apps/docs/content/guides/integrate/login-ui/index.mdx. (1082 bytes)
+- [Login App](pages/guides/integrate/login-ui/login-app.md): To replace the old embedded Login built with Golang and to showcase the use of our session and OIDC APIs, we've created the new Login app. (8310 bytes)
+- [Logging Out via a Custom Login UI](pages/guides/integrate/login-ui/logout.md): When your user is done using your application and clicks on the logout button, you have to send a request to the terminate session endpoint. Terminate Session Documentation (1481 bytes)
+- [Multi-Factor Authentication (MFA) in a Custom Login UI](pages/guides/integrate/login-ui/mfa.md): Multi-factor authentication (MFA) is a multi-step account authentication which requires to user to enter more than only the password. It is highly recommended to use MFA or Passkeys to make your user accounts more secur… (24547 bytes)
+- [OpenID Connect (OIDC) in Custom Login UI](pages/guides/integrate/login-ui/oidc-standard.md): To build your own login ui for your own application it is not necessary to have the OIDC standard included or any additional work that has to be done. However, it might make sense, if you want to connect your login to d… (6828 bytes)
+- [Using Passkeys in a Custom Login UI](pages/guides/integrate/login-ui/passkey.md): Passkeys are a replacement for passwords that provide faster, easier, and more secure sign-ins to websites and apps even across multiple devices. Unlike passwords, passkeys are phishing-resistant and can improve the use… (10765 bytes)
+- [Password Reset/Change in a Custom Login UI](pages/guides/integrate/login-ui/password-reset.md): When a user is on the password screen and has forgotten the password you will probably want them to be able to reset it by themselves. (3585 bytes)
+- [Support for the SAML Standard in a Custom Login UI](pages/guides/integrate/login-ui/saml-standard.md): To build your own login ui for your own application it is not necessary to have the SAML standard included or any additional work that has to be done. However, it might make sense, if you want to connect your login to d… (7641 bytes)
+- [Select Account in a Custom Login UI](pages/guides/integrate/login-ui/select-account.md): If you want to build your own select account/account picker, you have to cache the session IDs. We recommend storing a list of the session Ids with the corresponding session token in a cookie. The list of session IDs ca… (1967 bytes)
+- [How to Handle Session Validation](pages/guides/integrate/login-ui/session-validation.md): Sessions represent the state of a user session in ZITADEL. They can be aggregated and updated over time to reflect the changes. (4456 bytes)
+- [Username & Password Login in Custom Login UI](pages/guides/integrate/login-ui/username-password.md): First, we create a new user with a username and password. In the example below we add a user with profile data, a verified email address, and a password. Create User Documentation (10769 bytes)
+- [Onboard B2B customers using organizations](pages/guides/integrate/onboarding/b2b.md): In this guide we will explain how you can create and set up new organizations in ZITADEL to help you with your onboarding flows. Creating a new organization is the best choice for multi-tenancy use cases that require se… (15845 bytes)
+- [Onboard Users](pages/guides/integrate/onboarding/end-users.md): End Users have three different possibilities on how to login with ZITADEL. (11359 bytes)
+- [Onboard Customers and Users](pages/guides/integrate/onboarding.md): Normalized source from apps/docs/content/guides/integrate/onboarding/index.mdx. (144 bytes)
+- [Retrieve User Roles in ZITADEL](pages/guides/integrate/retrieve-user-roles.md): This guide explains all the possible ways of retrieving user roles across different organizations and projects using ZITADEL's APIs. (19959 bytes)
+- [SCIM Provisioning from Okta](pages/guides/integrate/scim-okta-guide.md): This guide provides step-by-step instructions to configure SCIM provisioning from Okta into ZITADEL. (4667 bytes)
+- [Authenticate service accounts and client applications](pages/guides/integrate/service-accounts/authenticate-service-accounts.md): This guide explains ZITADEL service accounts and their role in facilitating secure machine-to-machine communication within your applications. (8920 bytes)
+- [OAuth Client Credentials for Service Accounts](pages/guides/integrate/service-accounts/client-credentials.md): This guide demonstrates how developers can leverage Client Credential authentication to secure communication between service accounts and client applications within ZITADEL. (5950 bytes)
+- [Personal Access Token Auth for Service Accounts](pages/guides/integrate/service-accounts/personal-access-token.md): A Personal Access Token (PAT) is a ready-to-use token that can be used as an Authorization header. (3729 bytes)
+- [Private Key JWT Auth for Service Accounts](pages/guides/integrate/service-accounts/private-key-jwt.md): This guide explains how developers can use private key JWT authentication to secure communication between service accounts and client applications in ZITADEL. (10601 bytes)
+- [Log in with ZITADEL on Atlassian through SAML 2.0](pages/guides/integrate/services/atlassian-saml.md): This guide shows how to enable login with ZITADEL on Atlassian. (5077 bytes)
+- [Log in with ZITADEL on Auth0 through OIDC](pages/guides/integrate/services/auth0-oidc.md): This guide shows how to enable login with ZITADEL on Auth0. (2844 bytes)
+- [Log in with ZITADEL on Auth0 through SAML 2.0](pages/guides/integrate/services/auth0-saml.md): This guide shows how to enable login with ZITADEL on Auth0. (4279 bytes)
+- [Log in with ZITADEL on AWS through SAML 2.0](pages/guides/integrate/services/aws-saml.md): This guide shows how to enable login with ZITADEL on AWS SSO. (4297 bytes)
+- [Cloudflare Zero Trust OIDC with ZITADEL](pages/guides/integrate/services/cloudflare-oidc.md): This guide shows how to configure ZITADEL as OpenID Connect identity provider for Cloudflare Zero Trust. (2094 bytes)
+- [Log in with ZITADEL on Gitlab through SAML 2.0](pages/guides/integrate/services/gitlab-saml.md): This guide shows how to enable login with ZITADEL on Gitlab. (3243 bytes)
+- [Log in with ZITADEL on Gitlab OmniAuth Provider](pages/guides/integrate/services/gitlab-self-hosted.md): This guide shows how to enable login with ZITADEL on self-hosted Gitlab instances. (1817 bytes)
+- [ZITADEL on Google Cloud Workforce Identity](pages/guides/integrate/services/google-cloud.md): This guide shows how to login users and assign roles with Workforce Identity Federation to Google Cloud. (5473 bytes)
+- [Google Workspace SSO with ZITADEL](pages/guides/integrate/services/google-workspace.md): This guide shows how to enable login with ZITADEL on Google Workspace. (10842 bytes)
+- [Integrate ZITADEL with your Favorite Services](pages/guides/integrate/services.md): Normalized source from apps/docs/content/guides/integrate/services/index.mdx. (1495 bytes)
+- [Log in with ZITADEL on Ping Identity through SAML 2.0](pages/guides/integrate/services/pingidentity-saml.md): This guide shows how to enable login with ZITADEL on Ping Identity. (4869 bytes)
+- [OAuth 2.0 Token Exchange (RFC 8693): Impersonation & Delegation](pages/guides/integrate/token-exchange.md): The Token Exchange grant implements RFC 8693, OAuth 2.0 Token Exchange and can be used to exchange tokens to a different scope, audience or subject. Changing the subject of an authenticated token is called impersonation… (58920 bytes)
+- [Basic Authentication in ZITADEL](pages/guides/integrate/token-introspection/basic-auth.md): This is a guide on how to secure your API using Basic Authentication. (5101 bytes)
+- [Token introspection](pages/guides/integrate/token-introspection.md): Token introspection is the process of checking whether an access token is valid and can be used to access protected resources. (2257 bytes)
+- [Private Key JWT](pages/guides/integrate/token-introspection/private-key-jwt.md): This guide explains how to use ZITADEL's Private Key JWT authentication method to authenticate your application and call the token introspection endpoint. This is not about securing an API, but about allowing your backe… (9227 bytes)
+- [Apache 2.0](pages/guides/integrate/tools/apache2.md): This integration guide shows you the basic OpenID Connect integration with ZITADEL and an Apache 2.0 server. (4771 bytes)
+- [Access ZITADEL APIs](pages/guides/integrate/zitadel-apis/access-zitadel-apis.md): This guide explains what ZITADEL APIs are and how to access ZITADEL APIs using a service account to manage all types of resources and settings. (12614 bytes)
+- [Access ZITADEL System API](pages/guides/integrate/zitadel-apis/access-zitadel-system-api.md): The System API works superordinate over all instances. Therefore, you need to define a separate users to get access to this API. You can do so by customizing the runtime settings. (5404 bytes)
+- [Get Events from ZITADEL](pages/guides/integrate/zitadel-apis/event-api.md): ZITADEL leverages the power of eventsourcing, meaning every action and change within the system generates a corresponding event that is stored in the database. To provide you with greater flexibility and access to these… (6238 bytes)
+- [Integrate ZITADEL APIs into a .NET Application](pages/guides/integrate/zitadel-apis/example-zitadel-api-with-dot-net.md): This integration guide shows you how to integrate ZITADEL into your .NET application. It demonstrates how to fetch some data from the ZITADEL management API. (6601 bytes)
+- [Integrate ZITADEL APIs into a Go Application](pages/guides/integrate/zitadel-apis/example-zitadel-api-with-go.md): This integration guide shows you how to integrate ZITADEL into your Go application. It demonstrates how to fetch some data from the ZITADEL management API. (3833 bytes)
+- [ZITADEL Cloud Egress IP Addresses](pages/guides/manage/cloud/egress.md): When configuring your firewall or network security groups, you may need to allow traffic from ZITADEL Cloud to your internal infrastructure. (2374 bytes)
+- [Overview](pages/guides/manage/cloud/overview.md): Normalized source from apps/docs/content/guides/manage/cloud/overview/index.mdx. (327 bytes)
+- [ZITADEL Support](pages/guides/manage/cloud/support.md): We always recommend first having a look at our documentation, discord chat and GitHub repository. You can also ask our AI assistant for help before contacting Support. (1941 bytes)
+- [Actions](pages/guides/manage/console/actions-overview.md): An Identity and Access Management system is a highly interactive environment. ZITADEL includes a powerful feature called Actions, which allows you to programmatically react to specific events within the system. (4943 bytes)
+- [ZITADEL Administrators](pages/guides/manage/console/administrators.md): Administrators are users or service accounts who have permission to manage resources within ZITADEL. (9057 bytes)
+- [Applications](pages/guides/manage/console/applications-overview.md): Applications are the entry point to your Project Overview . Users either login into one of your applications (Frontend) and interact with them directly, or use one of your APIs (Backend). (10921 bytes)
+- [Management Console](pages/guides/manage/console/console-overview.md): The ZITADEL Management Console is the web-based Dashboard UI designed to facilitate the management and administration of ZITADEL resources and settings. It serves as a central hub where Administrators can perform tasks… (4252 bytes)
+- [ZITADEL Default Settings](pages/guides/manage/console/default-settings.md): Default settings work as default or fallback settings for your organizational settings. Most of the time you only have to set default settings for the cases where you don't need specific behavior in the organizations th… (26395 bytes)
+- [Organizations](pages/guides/manage/console/organizations-overview.md): ZITADEL is organized around the idea of multi-tenancy. An Organization is the vessel where your projects and users live. It is comparable to a tenant in a SaaS system or an organizational unit (OU) in a directory-based… (9760 bytes)
+- [ZITADEL Projects: Manage Apps, Services & Roles](pages/guides/manage/console/projects-overview.md): The idea of projects is to have a vessel for all components who are closely related to each other. Multiple projects can exist within an organization. (8515 bytes)
+- [ZITADEL Roles and Role Assignments](pages/guides/manage/console/roles.md): If you built out the POS use case example, you would probably need an application for administration. In this application you would probably have somebody accessing as an accountant and somebody as an administrator, who… (2954 bytes)
+- [Users](pages/guides/manage/console/users-overview.md): ZITADEL supports authentication and authorization for different user types. We mainly differentiate between users (interactive) and Service Accounts (machine-to-machine). (9560 bytes)
+- [Behavior Customization](pages/guides/manage/customize/behavior.md): In this guide, you will create a ZITADEL action. After users register using an external identity provider, the action assigns them a role. (2049 bytes)
+- [Brand Customization](pages/guides/manage/customize/branding.md): ZITADEL offers various customization options for your projects brand design. The branding can be configured on two different levels. The settings on the instance level will set the default settings, which are triggered… (2867 bytes)
+- [SMS, SMTP and HTTP Provider for Notifications](pages/guides/manage/customize/notification-providers.md): ZITADEL can send messages to users via different notification providers, such as SMS, SMTP, or Webhook (HTTP Provider). While you can add multiple providers to different channels, messages will only be delivered via the… (6516 bytes)
+- [Feature Restrictions](pages/guides/manage/customize/restrictions.md): New self-hosted and ZITADEL Cloud instances are unrestricted by default. Self-hosters can change this default using the DefaultInstance.Restrictions settings section. Users with the role IAM\OWNER can change the restric… (1483 bytes)
+- [Customized Texts](pages/guides/manage/customize/texts.md): You are able to customize the texts used from ZITADEL. This is possibly on the instance or organization level. (3053 bytes)
+- [User Metadata](pages/guides/manage/customize/user-metadata.md): This guide shows you how to request metadata from a user. ZITADEL offers multiple methods to retrieve metadata. Pick the one that works best for your solution. (9210 bytes)
+- [ZITADEL Cloud Production Checklist](pages/guides/manage/production-checklist.md): This checklist is specifically designed for teams deploying on ZITADEL Cloud. Following these steps ensures your managed instance is resilient, branded and recovery-ready. (3321 bytes)
+- [ZITADEL Terraform Provider](pages/guides/manage/terraform-provider.md): The ZITADEL Terraform Provider is a tool that allows you to manage ZITADEL resources through Terraform. In other words, it lets you define and provision infrastructure for ZITADEL using Terraform configuration files. (2620 bytes)
+- [Register and Create User](pages/guides/manage/user/reg-create-user.md): The ZITADEL API has different possibilities to create users. This can be used, if you are building your own registration page. (2124 bytes)
+- [SCIM v2.0](pages/guides/manage/user/scim2.md): Zitadel’s SCIM v2 service provider interface enables standardized provisioning and lifecycle management of users and other instance resources. By implementing the official System for Cross-domain Identity Management (SC… (13511 bytes)
+- [User Self-Deletion](pages/guides/manage/user/self-deletion.md): ZITADEL lets a user delete their own account. This is useful if you are building a "Delete my account" feature into your application, or if you need to comply with data deletion requests (e.g. GDPR right to erasure). (2744 bytes)
+- [Migrate to ZITADEL](pages/guides/migrate/introduction.md): This section of guides shows you how to migrate from your current auth system to ZITADEL. The individual guides in this section should give you an overview of things to consider before you start the migration. (6347 bytes)
+- [Migrate from Auth0 to ZITADEL with Password Hashes](pages/guides/migrate/sources/auth0.md): This guide will walk you through the steps to migrate users from Auth0 to ZITADEL, including password hashes (which requires Auth0's support assistance), so users don't need to reset their passwords. (8572 bytes)
+- [Migrate from Firebase to ZITADEL](pages/guides/migrate/sources/firebase.md): This guide will walk you through the steps to migrate users from Firebase Authentication to ZITADEL. Due to Firebase's proprietary password hashing algorithm, you'll need to choose between two migration strategies based… (11879 bytes)
+- [Migrate from Keycloak](pages/guides/migrate/sources/keycloak.md): This guide will walk you through the steps to migrate users from Keycloak to ZITADEL, including password hashes, using the zitadel-tools CLI and the user import APIs. (7097 bytes)
+- [Migrate from ZITADEL](pages/guides/migrate/sources/zitadel.md): This guide explains how to migrate from ZITADEL, this includes (9894 bytes)
+- [Migrate Users](pages/guides/migrate/users.md): Migrating users from an existing system, while minimizing impact on said users, can be a challenging task. (8690 bytes)
+- [B2B Multi-Tenant Authentication with ZITADEL](pages/guides/solution-scenarios/b2b.md): B2B describes the situation where an organization interacts with other organizations. This multi-tenancy architecture usually adds some form of complexity to an Identity and Access Management System. In ZITADEL an organ… (6916 bytes)
+- [ZITADEL for B2C Scenarios](pages/guides/solution-scenarios/b2c.md): Users in general come with different needs. You may have end users, employees, or even customers from other parties (B2B). This groups of users usually don't share the same intentions and use applications differently. W… (7128 bytes)
+- [Set up ZITADEL for your Scenario](pages/guides/solution-scenarios/configurations.md): Each customer does have different needs and use-cases. In ZITADEL you are able to adjust settings depending on your needs. In this section we show you the different use-cases we have already experienced, that could inte… (8160 bytes)
+- [Domain Discovery in ZITADEL](pages/guides/solution-scenarios/domain-discovery.md): This guide should explain how domain discovery works and how to configure it in ZITADEL. (6482 bytes)
+- [Frontend and Back-end API Communication in ZITADEL](pages/guides/solution-scenarios/frontend-calling-backend-API.md): This guide contains a use case and ZITADEL integration. (7616 bytes)
+- [Guest users authentication](pages/guides/solution-scenarios/guest-auth.md): In certain scenarios, requiring users to create an account before they can interact with core features of your product often leads to increased drop-off rates. Whether it is an e-commerce platform requiring authenticati… (5295 bytes)
+- [Solution Scenarios](pages/guides/solution-scenarios.md): Learn how to use ZITADEL for different scenarios. (245 bytes)
+- [Use Cases](pages/guides/solution-scenarios/introduction.md): Normalized source from apps/docs/content/guides/solution-scenarios/introduction/index.mdx. (472 bytes)
+- [Prevent users from accessing ZITADEL Management Console](pages/guides/solution-scenarios/restrict-console.md): ZITADEL includes a Management Console that allows administrators to configure all resources. By default, all users, including end users, can view and manage their profile information. In some cases, you may want to prev… (5871 bytes)
+- [SaaS Authentication and Authorization with ZITADEL](pages/guides/solution-scenarios/saas.md): This is an example architecture for a typical SaaS product. To illustrate it, a fictional organization and project is used. (3573 bytes)
+- [The ZITADEL Quick Start Guide](pages/guides/start/quickstart.md): In this guide, you’ll set up a Zitadel account and configure it to work with our pre-built example applications. You can simply clone the repository, follow the console setup, and have a working authentication flow in m… (29313 bytes)
 
 ## Overview
 
-- [ZITADEL Documentation](pages/index.md): Source `apps/docs/content/index.mdx`.
+- [ZITADEL Documentation](pages/index.md): ZITADEL is the Identity Infrastructure for Developers. (2341 bytes)
 
 ## Legal
 
-- [Annex for ZITADEL Enterprise and Support Services](pages/legal/annex-support-services.md): Source `apps/docs/content/legal/annex-support-services.mdx`.
-- [Data Processing Agreement](pages/legal/data-processing-agreement.md): Source `apps/docs/content/legal/data-processing-agreement.mdx`.
-- [Legal Agreements](pages/legal.md): Source `apps/docs/content/legal/index.mdx`.
-- [Acceptable Use Policy](pages/legal/policies/acceptable-use-policy.md): Source `apps/docs/content/legal/policies/acceptable-use-policy.mdx`.
-- [ZITADEL Account Lockout Policy](pages/legal/policies/account-lockout-policy.md): Source `apps/docs/content/legal/policies/account-lockout-policy.mdx`.
-- [Use of brands and trademarks](pages/legal/policies/brand-trademark-policy.md): Source `apps/docs/content/legal/policies/brand-trademark-policy.mdx`.
-- [Feature Development Policy](pages/legal/policies/feature-development-policy.md): Source `apps/docs/content/legal/policies/feature-development-policy.mdx`.
-- [Policies](pages/legal/policies.md): Source `apps/docs/content/legal/policies/index.mdx`.
-- [Privacy Policy](pages/legal/policies/privacy-policy.md): Source `apps/docs/content/legal/policies/privacy-policy.mdx`.
-- [Rate Limit Policy](pages/legal/policies/rate-limit-policy.md): Source `apps/docs/content/legal/policies/rate-limit-policy.mdx`.
-- [ZITADEL Refund Policy](pages/legal/policies/refund-policy.md): Source `apps/docs/content/legal/policies/refund-policy.mdx`.
-- [Vulnerability Disclosure Policy](pages/legal/policies/vulnerability-disclosure-policy.md): Source `apps/docs/content/legal/policies/vulnerability-disclosure-policy.mdx`.
-- [ZITADEL Cloud & Enterprise Service Description](pages/legal/service-description/cloud-service-description.md): Source `apps/docs/content/legal/service-description/cloud-service-description.mdx`.
-- [Service description](pages/legal/service-description.md): Source `apps/docs/content/legal/service-description/index.mdx`.
-- [Service level description for ZITADEL Cloud](pages/legal/service-description/service-level-description.md): Source `apps/docs/content/legal/service-description/service-level-description.mdx`.
-- [Support service description for ZITADEL](pages/legal/service-description/support-services.md): Source `apps/docs/content/legal/service-description/support-services.mdx`.
-- [Third party sub-processors for ZITADEL](pages/legal/subprocessors.md): Source `apps/docs/content/legal/subprocessors.mdx`.
-- [Terms of Service Agreement](pages/legal/terms-of-service.md): Source `apps/docs/content/legal/terms-of-service.mdx`.
+- [Annex for ZITADEL Enterprise and Support Services](pages/legal/annex-support-services.md): Last updated on November 15, 2023 (4739 bytes)
+- [Data Processing Agreement](pages/legal/data-processing-agreement.md): Last updated on May 8, 2025 (34166 bytes)
+- [Legal Agreements](pages/legal.md): Normalized source from apps/docs/content/legal/index.mdx. (434 bytes)
+- [Acceptable Use Policy](pages/legal/policies/acceptable-use-policy.md): Last updated on November 15, 2023 (2767 bytes)
+- [ZITADEL Account Lockout Policy](pages/legal/policies/account-lockout-policy.md): Last updated on June 25, 2025 (3312 bytes)
+- [Use of brands and trademarks](pages/legal/policies/brand-trademark-policy.md): Last updated on November 15, 2023 (2125 bytes)
+- [Feature Development Policy](pages/legal/policies/feature-development-policy.md): Last updated on September 25, 2023 (3032 bytes)
+- [Policies](pages/legal/policies.md): Normalized source from apps/docs/content/legal/policies/index.mdx. (54 bytes)
+- [Privacy Policy](pages/legal/policies/privacy-policy.md): Last updated on October 23, 2025. (32218 bytes)
+- [Rate Limit Policy](pages/legal/policies/rate-limit-policy.md): Last updated on February 24, 2025 (2764 bytes)
+- [ZITADEL Refund Policy](pages/legal/policies/refund-policy.md): Last updated on August 11, 2026 (3542 bytes)
+- [Vulnerability Disclosure Policy](pages/legal/policies/vulnerability-disclosure-policy.md): Last updated on March 16, 2023 (4763 bytes)
+- [ZITADEL Cloud & Enterprise Service Description](pages/legal/service-description/cloud-service-description.md): Last updated on April 5, 2024 (5626 bytes)
+- [Service description](pages/legal/service-description.md): Normalized source from apps/docs/content/legal/service-description/index.mdx. (154 bytes)
+- [Service level description for ZITADEL Cloud](pages/legal/service-description/service-level-description.md): Last updated on November 15, 2023 (4774 bytes)
+- [Support service description for ZITADEL](pages/legal/service-description/support-services.md): Last updated on November 15, 2023 (18013 bytes)
+- [Third party sub-processors for ZITADEL](pages/legal/subprocessors.md): Last updated on December 5, 2025. (947 bytes)
+- [Terms of Service Agreement](pages/legal/terms-of-service.md): Last updated on November 15, 2023 (13431 bytes)
 
 ## Product
 
-- [Zitadel Roadmap](pages/product/roadmap.md): Source `apps/docs/content/product/roadmap.mdx`.
+- [Zitadel Roadmap](pages/product/roadmap.md): Identity has changed significantly since Zitadel was first built. (9175 bytes)
 
 ## SDK examples
 
-- [Angular](pages/sdk-examples/angular.md): Source `apps/docs/content/sdk-examples/angular.mdx`.
-- [Astro](pages/sdk-examples/astro.md): Source `apps/docs/content/sdk-examples/astro.mdx`.
-- [Java Client](pages/sdk-examples/client-libraries/java.md): Source `apps/docs/content/sdk-examples/client-libraries/java.mdx`.
-- [Node.js Client](pages/sdk-examples/client-libraries/node.md): Source `apps/docs/content/sdk-examples/client-libraries/node.mdx`.
-- [PHP Client](pages/sdk-examples/client-libraries/php.md): Source `apps/docs/content/sdk-examples/client-libraries/php.mdx`.
-- [Python Client](pages/sdk-examples/client-libraries/python.md): Source `apps/docs/content/sdk-examples/client-libraries/python.mdx`.
-- [Ruby Client](pages/sdk-examples/client-libraries/ruby.md): Source `apps/docs/content/sdk-examples/client-libraries/ruby.mdx`.
-- [Django](pages/sdk-examples/django.md): Source `apps/docs/content/sdk-examples/django.mdx`.
-- [ASP.NET Core](pages/sdk-examples/dotnet.md): Source `apps/docs/content/sdk-examples/dotnet.mdx`.
-- [Express.js](pages/sdk-examples/expressjs.md): Source `apps/docs/content/sdk-examples/expressjs.mdx`.
-- [FastAPI](pages/sdk-examples/fastapi.md): Source `apps/docs/content/sdk-examples/fastapi.mdx`.
-- [Fastify](pages/sdk-examples/fastify.md): Source `apps/docs/content/sdk-examples/fastify.mdx`.
-- [Flask](pages/sdk-examples/flask.md): Source `apps/docs/content/sdk-examples/flask.mdx`.
-- [Go](pages/sdk-examples/go.md): Source `apps/docs/content/sdk-examples/go.mdx`.
-- [Hono](pages/sdk-examples/hono.md): Source `apps/docs/content/sdk-examples/hono.mdx`.
-- [Examples and SDKs for ZITADEL](pages/sdk-examples/introduction.md): Source `apps/docs/content/sdk-examples/introduction.mdx`.
-- [Java Spring Boot](pages/sdk-examples/java.md): Source `apps/docs/content/sdk-examples/java.mdx`.
-- [Laravel](pages/sdk-examples/laravel.md): Source `apps/docs/content/sdk-examples/laravel.mdx`.
-- [NestJS](pages/sdk-examples/nestjs.md): Source `apps/docs/content/sdk-examples/nestjs.mdx`.
-- [Next.js](pages/sdk-examples/nextjs.md): Source `apps/docs/content/sdk-examples/nextjs.mdx`.
-- [Nuxt.js](pages/sdk-examples/nuxtjs.md): Source `apps/docs/content/sdk-examples/nuxtjs.mdx`.
-- [Integrating ZITADEL with Standard OIDC & OAuth2 Libraries](pages/sdk-examples/oidc-libraries.md): Source `apps/docs/content/sdk-examples/oidc-libraries.mdx`.
-- [Qwik](pages/sdk-examples/qwik.md): Source `apps/docs/content/sdk-examples/qwik.mdx`.
-- [React](pages/sdk-examples/react.md): Source `apps/docs/content/sdk-examples/react.mdx`.
-- [SolidStart](pages/sdk-examples/solidstart.md): Source `apps/docs/content/sdk-examples/solidstart.mdx`.
-- [Spring Boot](pages/sdk-examples/spring.md): Source `apps/docs/content/sdk-examples/spring.mdx`.
-- [SvelteKit](pages/sdk-examples/sveltekit.md): Source `apps/docs/content/sdk-examples/sveltekit.mdx`.
-- [Symfony](pages/sdk-examples/symfony.md): Source `apps/docs/content/sdk-examples/symfony.mdx`.
-- [Vue.js](pages/sdk-examples/vue.md): Source `apps/docs/content/sdk-examples/vue.mdx`.
+- [Angular](pages/sdk-examples/angular.md): Angular is a TypeScript-based framework for building web applications. This example demonstrates how to integrate Zitadel using the OAuth 2.0 PKCE flow to authenticate users securely and maintain sessions across your An… (4985 bytes)
+- [Astro](pages/sdk-examples/astro.md): Astro is a modern web framework that delivers lightning-fast performance with server-first architecture and seamless client-side hydration. This example demonstrates how to integrate Zitadel authentication using the OAu… (11722 bytes)
+- [Java Client](pages/sdk-examples/client-libraries/java.md): This guide covers the official Zitadel Management API Client for the JVM (Java 11+), which allows you to programmatically manage resources in your Zitadel instance. (6145 bytes)
+- [Node.js Client](pages/sdk-examples/client-libraries/node.md): This guide covers the official Zitadel Management API Client for Node.js (20+), which allows you to programmatically manage resources in your Zitadel instance. (5662 bytes)
+- [PHP Client](pages/sdk-examples/client-libraries/php.md): This guide covers the official Zitadel Management API Client for PHP, which allows you to programmatically manage resources in your Zitadel instance. (6142 bytes)
+- [Python Client](pages/sdk-examples/client-libraries/python.md): This guide covers the official Zitadel Management API Client for Python (3.9+), which allows you to programmatically manage resources in your Zitadel instance. (6071 bytes)
+- [Ruby Client](pages/sdk-examples/client-libraries/ruby.md): This guide covers the official Zitadel Management API Client for Ruby (3.1+), which allows you to programmatically manage resources in your Zitadel instance. (6276 bytes)
+- [Django](pages/sdk-examples/django.md): Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. It provides a robust set of features for web applications, making it one of the most popular choices for buildin… (6265 bytes)
+- [ASP.NET Core](pages/sdk-examples/dotnet.md): ASP.NET Core is a production-ready framework for building web applications. This example integrates Zitadel with the built-in OpenID Connect handler using the Authorization Code Flow + PKCE to authenticate users securel… (2562 bytes)
+- [Express.js](pages/sdk-examples/expressjs.md): Express.js is a fast, unopinionated, minimalist web framework for Node.js that provides a robust set of features for building web and mobile applications. This example demonstrates how to integrate Zitadel using the OAu… (7021 bytes)
+- [FastAPI](pages/sdk-examples/fastapi.md): FastAPI is a modern, fast (high-performance) web framework for building APIs with Python based on standard Python type hints. This example demonstrates how to integrate Zitadel using the OAuth 2.0 PKCE flow to authentic… (6216 bytes)
+- [Fastify](pages/sdk-examples/fastify.md): Fastify is a fast and low overhead web framework for Node.js, designed for building efficient server-side applications. This example demonstrates how to integrate Zitadel using the OAuth 2.0 PKCE flow to authenticate us… (7842 bytes)
+- [Flask](pages/sdk-examples/flask.md): Flask is a lightweight WSGI web application framework for Python. It's designed to make getting started quick and easy, with the ability to scale up to complex applications. This example demonstrates how to integrate Zi… (6193 bytes)
+- [Go](pages/sdk-examples/go.md): Go is an open-source, compiled programming language that is known for its simplicity, efficiency, and concurrency capabilities. Get started integrating authentication to your Go Application by checking out our zitadel-g… (4308 bytes)
+- [Hono](pages/sdk-examples/hono.md): Hono is a small, simple, and ultra-fast web framework for the Edges that works on Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Netlify, AWS Lambda, Lambda\@Edge, and Node.js. This example demonstrates how to i… (6624 bytes)
+- [Examples and SDKs for ZITADEL](pages/sdk-examples/introduction.md): You can integrate Zitadel quickly into your application and be up and running within minutes. To achieve your goals as fast as possible, we provide you with SDKs, Example Repositories and Guides. (8975 bytes)
+- [Java Spring Boot](pages/sdk-examples/java.md): Java is a general-purpose programming language designed for object-oriented programming. Spring Security is used to protect your applications from unauthorized access, protect sensitive data, and enforce access control… (4442 bytes)
+- [Laravel](pages/sdk-examples/laravel.md): Laravel is a web application framework with expressive, elegant syntax. It provides a robust set of features for web applications, making it one of the most popular choices for building server-side applications. This ex… (6017 bytes)
+- [NestJS](pages/sdk-examples/nestjs.md): NestJS is a progressive Node.js framework for building efficient, reliable, and scalable server-side applications using TypeScript. This example demonstrates how to integrate Zitadel using the OAuth 2.0 PKCE flow to aut… (9530 bytes)
+- [Next.js](pages/sdk-examples/nextjs.md): Next.js is a React framework for building full-stack web applications. This example demonstrates how to integrate Zitadel using the OAuth 2.0 PKCE flow to authenticate users securely and maintain sessions across your Ne… (5257 bytes)
+- [Nuxt.js](pages/sdk-examples/nuxtjs.md): Nuxt.js is the intuitive Vue.js framework that enables you to create full-stack web applications with server-side rendering, file-based routing, and auto-imports. This example demonstrates how to integrate Zitadel using… (7608 bytes)
+- [Integrating ZITADEL with Standard OIDC & OAuth2 Libraries](pages/sdk-examples/oidc-libraries.md): Since ZITADEL is a certified provider, you can use industry-standard tools to handle authentication and API protection in any language or framework without vendor lock-in. (3426 bytes)
+- [Qwik](pages/sdk-examples/qwik.md): Qwik is a framework for building resumable web applications with instant-on interactivity and optimal performance. This example demonstrates how to integrate Zitadel using the OAuth 2.0 PKCE flow to authenticate users s… (7573 bytes)
+- [React](pages/sdk-examples/react.md): React is a JavaScript library for building user interfaces with component composition, declarative views, and a rich ecosystem. This example demonstrates how to integrate Zitadel using the OAuth 2.0 PKCE flow to authent… (5644 bytes)
+- [SolidStart](pages/sdk-examples/solidstart.md): SolidStart is a full-stack web framework built on top of SolidJS that enables you to create performant web applications with a modern development experience. This example demonstrates how to integrate Zitadel using the… (6477 bytes)
+- [Spring Boot](pages/sdk-examples/spring.md): Spring Boot is a powerful, production-ready framework for building Java applications. This example shows how to integrate Zitadel into a Spring Boot web application using OpenID Connect (OIDC) and the Authorization Code… (3772 bytes)
+- [SvelteKit](pages/sdk-examples/sveltekit.md): SvelteKit is a framework for building web applications with flexible filesystem-based routing and a unified approach to server-side and client-side logic. This example demonstrates how to integrate Zitadel using the OAu… (6850 bytes)
+- [Symfony](pages/sdk-examples/symfony.md): Symfony is a set of reusable PHP components and a PHP framework for web projects. It provides a robust set of features for web applications, making it one of the most popular choices for building server-side application… (6024 bytes)
+- [Vue.js](pages/sdk-examples/vue.md): Vue.js is a progressive JavaScript framework for building user interfaces with reactive data binding, component composition, and a rich ecosystem. This example demonstrates how to integrate Zitadel using the OAuth 2.0 P… (7081 bytes)
 
 ## Self-hosting
 
-- [Set up ZITADEL with Docker Compose](pages/self-hosting/deploy/compose.md): Source `apps/docs/content/self-hosting/deploy/compose.mdx`.
-- [Developing ZITADEL with Dev Containers](pages/self-hosting/deploy/devcontainer.md): Source `apps/docs/content/self-hosting/deploy/devcontainer.mdx`.
-- [Caching](pages/self-hosting/deploy/kubernetes/caching.md): Source `apps/docs/content/self-hosting/deploy/kubernetes/caching.mdx`.
-- [Configuration](pages/self-hosting/deploy/kubernetes/configuration.md): Source `apps/docs/content/self-hosting/deploy/kubernetes/configuration.mdx`.
-- [Database](pages/self-hosting/deploy/kubernetes/database.md): Source `apps/docs/content/self-hosting/deploy/kubernetes/database.mdx`.
-- [Deploy ZITADEL on Kubernetes](pages/self-hosting/deploy/kubernetes.md): Source `apps/docs/content/self-hosting/deploy/kubernetes/index.mdx`.
-- [Ingress](pages/self-hosting/deploy/kubernetes/ingress.md): Source `apps/docs/content/self-hosting/deploy/kubernetes/ingress.mdx`.
-- [Observability](pages/self-hosting/deploy/kubernetes/observability.md): Source `apps/docs/content/self-hosting/deploy/kubernetes/observability.mdx`.
-- [Operations](pages/self-hosting/deploy/kubernetes/operations.md): Source `apps/docs/content/self-hosting/deploy/kubernetes/operations.mdx`.
-- [Uninstalling](pages/self-hosting/deploy/kubernetes/uninstalling.md): Source `apps/docs/content/self-hosting/deploy/kubernetes/uninstalling.mdx`.
-- [Install Zitadel on Linux](pages/self-hosting/deploy/linux.md): Source `apps/docs/content/self-hosting/deploy/linux.mdx`.
-- [Install ZITADEL on MacOS](pages/self-hosting/deploy/macos.md): Source `apps/docs/content/self-hosting/deploy/macos.mdx`.
-- [Deploy ZITADEL](pages/self-hosting/deploy/overview.md): Source `apps/docs/content/self-hosting/deploy/overview.mdx`.
-- [Troubleshoot ZITADEL](pages/self-hosting/deploy/troubleshooting/troubleshooting.md): Source `apps/docs/content/self-hosting/deploy/troubleshooting/troubleshooting.mdx`.
-- [Adopt Login V2 on an existing installation](pages/self-hosting/manage/adopt-login-v2.md): Source `apps/docs/content/self-hosting/manage/adopt-login-v2.mdx`.
-- [Caches](pages/self-hosting/manage/cache.md): Source `apps/docs/content/self-hosting/manage/cache.mdx`.
-- [Mirror data from cockroach to postgres](pages/self-hosting/manage/cli/mirror.md): Source `apps/docs/content/self-hosting/manage/cli/mirror.mdx`.
-- [ZITADEL Command Line Interface](pages/self-hosting/manage/cli/overview.md): Source `apps/docs/content/self-hosting/manage/cli/overview.mdx`.
-- [Self-Hosted ZITADEL Configuration: Runtime Settings & Environment Variables](pages/self-hosting/manage/configure/configure.md): Source `apps/docs/content/self-hosting/manage/configure/configure.mdx`.
-- [Configure ZITADEL](pages/self-hosting/manage/configure.md): Source `apps/docs/content/self-hosting/manage/configure/index.mdx`.
-- [External ZITADEL Access](pages/self-hosting/manage/custom-domain.md): Source `apps/docs/content/self-hosting/manage/custom-domain.mdx`.
-- [Database](pages/self-hosting/manage/database.md): Source `apps/docs/content/self-hosting/manage/database/index.mdx`.
-- [HTTP/2 Support in ZITADEL](pages/self-hosting/manage/http2.md): Source `apps/docs/content/self-hosting/manage/http2.mdx`.
-- [Connect your Self-Hosted Login UI to Zitadel](pages/self-hosting/manage/login-client.md): Source `apps/docs/content/self-hosting/manage/login-client.mdx`.
-- [Metrics](pages/self-hosting/manage/metrics/overview.md): Source `apps/docs/content/self-hosting/manage/metrics/overview.mdx`.
-- [Prometheus](pages/self-hosting/manage/metrics/prometheus.md): Source `apps/docs/content/self-hosting/manage/metrics/prometheus.mdx`.
-- [ZITADEL Production Setup](pages/self-hosting/manage/production.md): Source `apps/docs/content/self-hosting/manage/production.mdx`.
-- [ZITADEL Production Checklist](pages/self-hosting/manage/productionchecklist.md): Source `apps/docs/content/self-hosting/manage/productionchecklist.mdx`.
-- [ZITADEL Requirements](pages/self-hosting/manage/requirements.md): Source `apps/docs/content/self-hosting/manage/requirements.mdx`.
-- [Configure Zitadel with Caddy](pages/self-hosting/manage/reverseproxy/caddy.md): Source `apps/docs/content/self-hosting/manage/reverseproxy/caddy/index.mdx`.
-- [Configure Zitadel with Cloudflare](pages/self-hosting/manage/reverseproxy/cloudflare.md): Source `apps/docs/content/self-hosting/manage/reverseproxy/cloudflare/index.mdx`.
-- [Configure Zitadel with Cloudflare Tunnel](pages/self-hosting/manage/reverseproxy/cloudflare_tunnel.md): Source `apps/docs/content/self-hosting/manage/reverseproxy/cloudflare_tunnel/index.mdx`.
-- [Configure Zitadel with Apache httpd](pages/self-hosting/manage/reverseproxy/httpd.md): Source `apps/docs/content/self-hosting/manage/reverseproxy/httpd/index.mdx`.
-- [Configure Zitadel with NGINX](pages/self-hosting/manage/reverseproxy/nginx.md): Source `apps/docs/content/self-hosting/manage/reverseproxy/nginx/index.mdx`.
-- [Reverse Proxy Configuration](pages/self-hosting/manage/reverseproxy/reverse_proxy.md): Source `apps/docs/content/self-hosting/manage/reverseproxy/reverse_proxy.mdx`.
-- [Configure Zitadel with Traefik](pages/self-hosting/manage/reverseproxy/traefik.md): Source `apps/docs/content/self-hosting/manage/reverseproxy/traefik/index.mdx`.
-- [Front Zitadel Cloud with a CDN, WAF or Reverse Proxy](pages/self-hosting/manage/reverseproxy/zitadel_cloud.md): Source `apps/docs/content/self-hosting/manage/reverseproxy/zitadel_cloud/index.mdx`.
-- [Service Ping](pages/self-hosting/manage/service_ping.md): Source `apps/docs/content/self-hosting/manage/service_ping.mdx`.
-- [TLS Modes](pages/self-hosting/manage/tls_modes.md): Source `apps/docs/content/self-hosting/manage/tls_modes.mdx`.
-- [ZITADEL Performance Tuning](pages/self-hosting/manage/tuning.md): Source `apps/docs/content/self-hosting/manage/tuning.mdx`.
-- [Update and Scale ZITADEL](pages/self-hosting/manage/updating_scaling.md): Source `apps/docs/content/self-hosting/manage/updating_scaling.mdx`.
-- [Upgrade from ZITADEL v3 to v4](pages/self-hosting/manage/upgrade-v3-to-v4.md): Source `apps/docs/content/self-hosting/manage/upgrade-v3-to-v4.mdx`.
-- [Usage Control](pages/self-hosting/manage/usage_control.md): Source `apps/docs/content/self-hosting/manage/usage_control.mdx`.
+- [Set up ZITADEL with Docker Compose](pages/self-hosting/deploy/compose.md): This guide takes you from zero to a running ZITADEL instance in minutes and then shows you how to harden it for a homelab or semi-production deployment. (8918 bytes)
+- [Developing ZITADEL with Dev Containers](pages/self-hosting/deploy/devcontainer.md): Dev containers provide a convenient way to set up a development environment for ZITADEL with all the necessary dependencies pre-configured. This allows you to start contributing or working on ZITADEL locally with minima… (2064 bytes)
+- [Caching](pages/self-hosting/deploy/kubernetes/caching.md): This guide explains how to connect Zitadel caches to Redis or Valkey on Kubernetes. (2634 bytes)
+- [Configuration](pages/self-hosting/deploy/kubernetes/configuration.md): This guide covers the major configuration options for the Zitadel Helm chart. For a complete list of options, see the values.yaml in the chart repository. (8302 bytes)
+- [Database](pages/self-hosting/deploy/kubernetes/database.md): Zitadel requires PostgreSQL 14 or later. The chart supports multiple ways to connect to PostgreSQL depending on your security requirements. (2928 bytes)
+- [Deploy ZITADEL on Kubernetes](pages/self-hosting/deploy/kubernetes.md): This guide takes you from zero to a running ZITADEL instance on Kubernetes and then shows you how to harden it for production. (10352 bytes)
+- [Ingress](pages/self-hosting/deploy/kubernetes/ingress.md): The chart creates standard Kubernetes Ingress resources. There are separate Ingress resources for the Zitadel container and the Login container. (2473 bytes)
+- [Observability](pages/self-hosting/deploy/kubernetes/observability.md): This guide covers how to collect traces, metrics, and logs from the Zitadel and Login containers. (3838 bytes)
+- [Operations](pages/self-hosting/deploy/kubernetes/operations.md): This guide covers day-2 operations for Zitadel on Kubernetes. (4180 bytes)
+- [Uninstalling](pages/self-hosting/deploy/kubernetes/uninstalling.md): This guide covers how to remove Zitadel from your Kubernetes cluster. (1326 bytes)
+- [Install Zitadel on Linux](pages/self-hosting/deploy/linux.md): Download a postgresql binary as described in the PostgreSQL docs. Zitadel is tested against PostgreSQL latest stable tag and latest Ubuntu LTS. (3330 bytes)
+- [Install ZITADEL on MacOS](pages/self-hosting/deploy/macos.md): Download a postgresql binary as described in the PostgreSQL docs. ZITADEL is tested against PostgreSQL latest stable tag and latest Ubuntu LTS. (3045 bytes)
+- [Deploy ZITADEL](pages/self-hosting/deploy/overview.md): Choose your platform and run ZITADEL with the most minimal configuration possible. (1667 bytes)
+- [Troubleshoot ZITADEL](pages/self-hosting/deploy/troubleshooting/troubleshooting.md): ID=QUERY-n0wng Message=Instance not found (4968 bytes)
+- [Adopt Login V2 on an existing installation](pages/self-hosting/manage/adopt-login-v2.md): Self-hosted ZITADEL v4 deployments with existing instances that still use Login V1. (5176 bytes)
+- [Caches](pages/self-hosting/manage/cache.md): ZITADEL supports the use of a caches to speed up the lookup of frequently needed objects. As opposed to HTTP caches which might reside between ZITADEL and end-user applications, the cache build into ZITADEL uses active… (13852 bytes)
+- [Mirror data from cockroach to postgres](pages/self-hosting/manage/cli/mirror.md): The mirror command allows you to do database to database migrations. This functionality is useful to copy data from one database to another. (10577 bytes)
+- [ZITADEL Command Line Interface](pages/self-hosting/manage/cli/overview.md): This documentation serves as your guide to interacting with Zitadel through the command line interface (CLI). The Zitadel CLI empowers you to manage various aspects of your Zitadel system efficiently from your terminal. (1799 bytes)
+- [Self-Hosted ZITADEL Configuration: Runtime Settings & Environment Variables](pages/self-hosting/manage/configure/configure.md): This guide assumes you are familiar with running ZITADEL using the least amount of configuration possible. (162784 bytes)
+- [Configure ZITADEL](pages/self-hosting/manage/configure.md): Detailed configuration options for ZITADEL. (135 bytes)
+- [External ZITADEL Access](pages/self-hosting/manage/custom-domain.md): Also, ZITADEL has the concept of virtual instances. It uses a requests Host header to determine which virtual instance to use. This is useful for multi-tenancy and resource sharing, for example in SaaS scenarios. For mo… (3016 bytes)
+- [Database](pages/self-hosting/manage/database.md): PostgreSQL is the default database for ZITADEL due to its reliability, robustness, and adherence to SQL standards. It is well-suited for handling the complex data requirements of an identity management system. (5940 bytes)
+- [HTTP/2 Support in ZITADEL](pages/self-hosting/manage/http2.md): ZITADEL follows a strict API first approach and makes heavy use of the modern API framework called gRPC. Besides gRPC all APIs are also available in an openapi Rest fashion as well as in gRPC-web for compatibility towar… (1087 bytes)
+- [Connect your Self-Hosted Login UI to Zitadel](pages/self-hosting/manage/login-client.md): To enable your self-hosted Login UI to connect to the Zitadel API, it needs a token for a user with the IAM\LOGIN\CLIENT role. On new installations, the Zitadel setup job can be configured to automatically write a Perso… (2722 bytes)
+- [Metrics](pages/self-hosting/manage/metrics/overview.md): ZITADEL exposes operational and performance metrics to support monitoring, alerting, and capacity planning. (2594 bytes)
+- [Prometheus](pages/self-hosting/manage/metrics/prometheus.md): This page shows platform-agnostic ways to scrape ZITADEL metrics using: (14371 bytes)
+- [ZITADEL Production Setup](pages/self-hosting/manage/production.md): As soon as you successfully deployed ZITADEL as a proof of concept using one of our deployment guides, you are ready to configure ZITADEL for production usage. (12219 bytes)
+- [ZITADEL Production Checklist](pages/self-hosting/manage/productionchecklist.md): To apply best practices to your production setup we created a step by step checklist you may wish to follow. (3883 bytes)
+- [ZITADEL Requirements](pages/self-hosting/manage/requirements.md): This page lists the infrastructure versions that ZITADEL is tested against and officially supports. (1331 bytes)
+- [Configure Zitadel with Caddy](pages/self-hosting/manage/reverseproxy/caddy.md): With these examples, you create and run a minimal configuration for Zitadel with Docker Compose. Whereas the guide focuses on the configuration for Caddy, you can inspect the settings for the Zitadel API, the Zitadel lo… (8870 bytes)
+- [Configure Zitadel with Cloudflare](pages/self-hosting/manage/reverseproxy/cloudflare.md): If something is not working please check the Cloudflare WAF rules for potential violations. These two rules are known to be triggered: (1009 bytes)
+- [Configure Zitadel with Cloudflare Tunnel](pages/self-hosting/manage/reverseproxy/cloudflare_tunnel.md): Normalized source from apps/docs/content/self-hosting/manage/reverseproxy/cloudflare_tunnel/index.mdx. (187 bytes)
+- [Configure Zitadel with Apache httpd](pages/self-hosting/manage/reverseproxy/httpd.md): With these examples, you create and run a minimal configuration for Zitadel with Docker Compose. Whereas the guide focuses on the configuration for Apache httpd, you can inspect the settings for the Zitadel API, the Zit… (10018 bytes)
+- [Configure Zitadel with NGINX](pages/self-hosting/manage/reverseproxy/nginx.md): With these examples, you create and run a minimal configuration for Zitadel with Docker Compose. Whereas the guide focuses on the configuration for NGINX, you can inspect the settings for the Zitadel API, the Zitadel lo… (9145 bytes)
+- [Reverse Proxy Configuration](pages/self-hosting/manage/reverseproxy/reverse_proxy.md): ZITADEL exposes a single HTTP/2 port (default 8080) that serves both gRPC and HTTP APIs, as well as the management console. Running a reverse proxy in front of ZITADEL is the recommended approach for production deployme… (2959 bytes)
+- [Configure Zitadel with Traefik](pages/self-hosting/manage/reverseproxy/traefik.md): With these examples, you create and run a minimal configuration for Zitadel with Docker Compose. Whereas the guide focuses on the configuration for Traefik, you can inspect the settings for the Zitadel API, the Zitadel… (9801 bytes)
+- [Front Zitadel Cloud with a CDN, WAF or Reverse Proxy](pages/self-hosting/manage/reverseproxy/zitadel_cloud.md): You can use your reverse-proxy, content delivery network (CDN) or web application firewall (WAF) to front Zitadel Cloud. However, we currently do not recommend this for production settings. (658 bytes)
+- [Service Ping](pages/self-hosting/manage/service_ping.md): Service Ping is a feature that periodically sends anonymized analytics and usage data from your ZITADEL system to a central endpoint. This data helps improve ZITADEL by providing insights into its usage patterns. (3707 bytes)
+- [TLS Modes](pages/self-hosting/manage/tls_modes.md): To run ZITADEL on any kind of infrastructure, you can configure on how to handle TLS connections. There are three modes of operation: disabled, external, enabled. (2438 bytes)
+- [ZITADEL Performance Tuning](pages/self-hosting/manage/tuning.md): With ZITADEL being event sourced, a lot of the performance throughput depends on how the events table is accessed. The events table is an append-only table which will grow over the lifetime of a deployment. ZITADEL uses… (19829 bytes)
+- [Update and Scale ZITADEL](pages/self-hosting/manage/updating_scaling.md): For getting started easily, you can just combine the init, setup and runtime phases by executing the zitadel binary with the argument start-from-init. However, to improve day-two-operations, we recommend you run the ini… (5395 bytes)
+- [Upgrade from ZITADEL v3 to v4](pages/self-hosting/manage/upgrade-v3-to-v4.md): Upgrading from v3 to v4 is a normal ZITADEL upgrade: run setup (migrations), then start. Existing instances keep working with their current login setup. Switching to Login V2 is optional and can be done later. (2632 bytes)
+- [Usage Control](pages/self-hosting/manage/usage_control.md): If you have a self-hosted ZITADEL environment, you can limit the usage of your instances. For example, if you provide your customers their own virtual instances with access on their own domains, you can design a pricing… (8100 bytes)
 
 ## Support
 
-- [Technical Advisory 10000](pages/support/advisory/a10000.md): Source `apps/docs/content/support/advisory/a10000.mdx`.
-- [Technical Advisory 10001](pages/support/advisory/a10001.md): Source `apps/docs/content/support/advisory/a10001.mdx`.
-- [Technical Advisory 10002](pages/support/advisory/a10002.md): Source `apps/docs/content/support/advisory/a10002.mdx`.
-- [Technical Advisory 10003](pages/support/advisory/a10003.md): Source `apps/docs/content/support/advisory/a10003.mdx`.
-- [Technical Advisory 10004](pages/support/advisory/a10004.md): Source `apps/docs/content/support/advisory/a10004.mdx`.
-- [Technical Advisory 10005](pages/support/advisory/a10005.md): Source `apps/docs/content/support/advisory/a10005.mdx`.
-- [Technical Advisory 10006](pages/support/advisory/a10006.md): Source `apps/docs/content/support/advisory/a10006.mdx`.
-- [Technical Advisory 10007](pages/support/advisory/a10007.md): Source `apps/docs/content/support/advisory/a10007.mdx`.
-- [Technical Advisory 10008](pages/support/advisory/a10008.md): Source `apps/docs/content/support/advisory/a10008.mdx`.
-- [Technical Advisory 10009](pages/support/advisory/a10009.md): Source `apps/docs/content/support/advisory/a10009.mdx`.
-- [Technical Advisory 10010](pages/support/advisory/a10010.md): Source `apps/docs/content/support/advisory/a10010.mdx`.
-- [Technical Advisory 10011](pages/support/advisory/a10011.md): Source `apps/docs/content/support/advisory/a10011.mdx`.
-- [Technical Advisory 10012](pages/support/advisory/a10012.md): Source `apps/docs/content/support/advisory/a10012.mdx`.
-- [Technical Advisory 10013](pages/support/advisory/a10013.md): Source `apps/docs/content/support/advisory/a10013.mdx`.
-- [Technical Advisory 10014](pages/support/advisory/a10014.md): Source `apps/docs/content/support/advisory/a10014.mdx`.
-- [Technical Advisory 10015](pages/support/advisory/a10015.md): Source `apps/docs/content/support/advisory/a10015.mdx`.
-- [Technical Advisory 10016](pages/support/advisory/a10016.md): Source `apps/docs/content/support/advisory/a10016.mdx`.
-- [Technical Advisory 10017](pages/support/advisory/a10017.md): Source `apps/docs/content/support/advisory/a10017.mdx`.
-- [ZITADEL Technical Advisories](pages/support/technical_advisory.md): Source `apps/docs/content/support/technical_advisory.mdx`.
-- [Troubleshoot ZITADEL](pages/support/troubleshooting.md): Source `apps/docs/content/support/troubleshooting.mdx`.
+- [Technical Advisory 10000](pages/support/advisory/a10000.md): Version: 2.32.0 (1442 bytes)
+- [Technical Advisory 10001](pages/support/advisory/a10001.md): Version: 2.35.0 (1585 bytes)
+- [Technical Advisory 10002](pages/support/advisory/a10002.md): Version: 2.40.0 (1113 bytes)
+- [Technical Advisory 10003](pages/support/advisory/a10003.md): Version: 2.38.0 (2247 bytes)
+- [Technical Advisory 10004](pages/support/advisory/a10004.md): Version: 2.39.0 (1330 bytes)
+- [Technical Advisory 10005](pages/support/advisory/a10005.md): Version: 2.39.0 (1264 bytes)
+- [Technical Advisory 10006](pages/support/advisory/a10006.md): Version: 2.39.0 (897 bytes)
+- [Technical Advisory 10007](pages/support/advisory/a10007.md): Version: Upcoming (2355 bytes)
+- [Technical Advisory 10008](pages/support/advisory/a10008.md): Versions: 2.44.0, 2.43 >= 2.43.6, 2.42 > 2.42.12 (1781 bytes)
+- [Technical Advisory 10009](pages/support/advisory/a10009.md): Version: 2.53.0 (940 bytes)
+- [Technical Advisory 10010](pages/support/advisory/a10010.md): Version: 2.53.0 (1168 bytes)
+- [Technical Advisory 10011](pages/support/advisory/a10011.md): Version: 2.59.0 (1347 bytes)
+- [Technical Advisory 10012](pages/support/advisory/a10012.md): Version: 2.63.0 (2651 bytes)
+- [Technical Advisory 10013](pages/support/advisory/a10013.md): Date: 2024-12-09 (967 bytes)
+- [Technical Advisory 10014](pages/support/advisory/a10014.md): Versions: >= v2.67.3, v2.66 >= v2.66.6 (1704 bytes)
+- [Technical Advisory 10015](pages/support/advisory/a10015.md): Versions: >= v3.0.0 (779 bytes)
+- [Technical Advisory 10016](pages/support/advisory/a10016.md): Date: 2025-05-14 (3302 bytes)
+- [Technical Advisory 10017](pages/support/advisory/a10017.md): Versions: upgrades to >= v4.0.0 from installations that never activated OIDC web keys (1855 bytes)
+- [ZITADEL Technical Advisories](pages/support/technical_advisory.md): Technical advisories are notices that report major issues with ZITADEL Self-Hosted or the ZITADEL Cloud platform that could potentially impact security or stability in production environments. These advisories may inclu… (18108 bytes)
+- [Troubleshoot ZITADEL](pages/support/troubleshooting.md): You will find some possible error messages here, what the problem is and what some possible solutions can be. (7089 bytes)

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/builders/manage.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build/builders/manage.md)
+> Pinned source for Docker main: [content/manuals/build/builders/manage.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build/builders/manage.md)
 
 # Manage builders
 
@@ -50,7 +50,7 @@ You can add the `--bootstrap` flag to the command to start the builder.
 
 ```console
 $ docker buildx inspect --bootstrap my_builder
-[+] Building 1.7s (1/1) FINISHED
+[+] Building 1.7s (1/1) FINISHED                                                                  
  => [internal] booting buildkit                                                              1.7s
  => => pulling image moby/buildkit:buildx-stable-1                                           1.3s
  => => creating container buildx_buildkit_my_builder0                                        0.4s

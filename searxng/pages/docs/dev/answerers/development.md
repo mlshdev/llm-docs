@@ -1,7 +1,9 @@
-> Commit-pinned source for SearXNG master: [docs/dev/answerers/development.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/answerers/development.rst)
+> Pinned source for SearXNG master: [docs/dev/answerers/development.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/answerers/development.rst)
 
-.. \_dev answerers:
+<a id="dev-answerers"></a>
 
 # Answerer Development
 
-.. automodule:: searx.answerers
+#### `searx.answerers`
+
+Static Python API reference (`automodule`).

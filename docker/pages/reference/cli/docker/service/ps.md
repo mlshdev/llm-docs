@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_service_ps.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_service_ps.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_service_ps.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_service_ps.yaml)
 
 # docker service ps
 
@@ -10,21 +10,21 @@ List the tasks of one or more services
 
 Lists the tasks that are running as part of the specified services.
 
-> [!NOTE]
+> \[!NOTE]
 > This is a cluster management command, and must be executed on a swarm
 > manager node. To learn about managers and workers, refer to the
-> [Swarm mode section](/engine/swarm/) in the
+> [Swarm mode section](https://docs.docker.com/engine/swarm/) in the
 > documentation.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--filter` |  | Filter output based on conditions provided |
-| `--format` |  | Pretty-print tasks using a Go template |
-| `--no-resolve` |  | Do not map IDs to Names |
-| `--no-trunc` |  | Do not truncate output |
-| `-q`, `--quiet` |  | Only display task IDs |
+| Option           | Default | Description                                |
+| ---------------- | ------- | ------------------------------------------ |
+| `-f`, `--filter` |         | Filter output based on conditions provided |
+| `--format`       |         | Pretty-print tasks using a Go template     |
+| `--no-resolve`   |         | Do not map IDs to Names                    |
+| `--no-trunc`     |         | Do not truncate output                     |
+| `-q`, `--quiet`  |         | Only display task IDs                      |
 
 ## Examples
 
@@ -70,7 +70,7 @@ blkttv7zs8ee   \_ redis.4  redis:7.4.0  worker1   Shutdown       Shutdown 11 sec
 The number of items in the task history is determined by the
 `--task-history-limit` option that was set when initializing the swarm. You can
 change the task history retention limit using the
-[`docker swarm update`](/reference/cli/docker/swarm/update/) command.
+[`docker swarm update`](https://docs.docker.com/reference/cli/docker/swarm/update/) command.
 
 When deploying a service, docker resolves the digest for the service's image,
 and pins the service to that digest. The digest is not shown by default, but is
@@ -97,10 +97,10 @@ Multiple filter flags are combined as an `OR` filter. For example,
 
 The currently supported filters are:
 
-* [id](#id)
-* [name](#name)
-* [node](#node)
-* [desired-state](#desired-state)
+- [id](#id)
+- [name](#name)
+- [node](#node)
+- [desired-state](#desired-state)
 
 #### id
 
@@ -151,7 +151,7 @@ using a Go template.
 Valid placeholders for the Go template are listed below:
 
 | Placeholder     | Description                                                      |
-|-----------------|------------------------------------------------------------------|
+| --------------- | ---------------------------------------------------------------- |
 | `.ID`           | Task ID                                                          |
 | `.Name`         | Task name                                                        |
 | `.Image`        | Task image                                                       |

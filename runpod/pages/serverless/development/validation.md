@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [serverless/development/validation.mdx](https://docs.runpod.io/serverless/development/validation)
+> Pinned source for Runpod main: [serverless/development/validation.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/serverless/development/validation.mdx)
+> Canonical documentation: https://docs.runpod.io/serverless/development/validation
 
 # Validate inputs
 
@@ -61,6 +62,7 @@ schema = {
     },
 }
 
+
 def handler(event):
     try:
         # Validate the input against the schema
@@ -78,6 +80,7 @@ def handler(event):
         return {"output": result}
     except Exception as e:
         return {"error": str(e)}
+
 
 runpod.serverless.start({"handler": handler})
 ```

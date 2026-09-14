@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/configuration/agents/index.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/docker-agent/docs/configuration/agents/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/configuration/agents/index.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/docker-agent/docs/configuration/agents/index.md)
 
 *Complete reference for defining agents in your YAML configuration.*
 
@@ -378,12 +378,12 @@ agents:
       logs: "Show me the last 50 lines of system logs"
       greet: "Say hello to ${env.USER}"
       deploy: "Deploy ${env.PROJECT_NAME || 'app'} to ${env.ENV || 'staging'}"
-
+      
       # Advanced format with agent switching
       plan:
         agent: planner  # Switch to the 'planner' agent
         instruction: "Create a detailed plan for: ${args.join(\" \")}"  # Optional: send this prompt after switching
-
+      
       # Agent switching without instruction - forwards remaining text as prompt
       review:
         agent: reviewer  # Any text after /review is sent to the reviewer agent

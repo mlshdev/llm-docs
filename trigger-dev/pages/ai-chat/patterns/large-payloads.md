@@ -1,8 +1,9 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/ai-chat/patterns/large-payloads.mdx](https://trigger.dev/docs/ai-chat/patterns/large-payloads)
+> Pinned source for Trigger.dev v4.5.16: [docs/ai-chat/patterns/large-payloads.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/ai-chat/patterns/large-payloads.mdx)
+> Canonical documentation: https://trigger.dev/docs/ai-chat/patterns/large-payloads
 
 # Large payloads in chat.agent
 
-Why a single chunk on the chat stream is capped at ~1 MiB, what error you'll see, and how to work around it with ID references.
+Why a single chunk on the chat stream is capped at \~1 MiB, what error you'll see, and how to work around it with ID references.
 
 The realtime stream that backs `chat.agent` enforces a **per-record cap of \~1 MiB** (`1048576` bytes minus a small envelope reserve). Anything written through the chat output — auto-piped LLM chunks, `chat.response.write`, custom `writer.write` parts — counts as one record per chunk and is rejected if it crosses the cap.
 

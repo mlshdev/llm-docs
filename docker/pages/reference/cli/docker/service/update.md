@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_service_update.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_service_update.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_service_update.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_service_update.yaml)
 
 # docker service update
 
@@ -9,7 +9,7 @@ Update a service
 ## Description
 
 Updates a service as described by the specified parameters. The parameters are
-the same as [`docker service create`](/reference/cli/docker/service/create/). Refer to the description
+the same as [`docker service create`](https://docs.docker.com/reference/cli/docker/service/create/). Refer to the description
 there for further information.
 
 Normally, updating a service will only cause the service's tasks to be replaced with new ones if a change to the
@@ -18,110 +18,110 @@ service requires recreating the tasks for it to take effect. For example, only c
 setting. However, the `--force` flag will cause the tasks to be recreated anyway. This can be used to perform a
 rolling restart without any changes to the service parameters.
 
-> [!NOTE]
+> \[!NOTE]
 > This is a cluster management command, and must be executed on a swarm
 > manager node. To learn about managers and workers, refer to the
-> [Swarm mode section](/engine/swarm/) in the
+> [Swarm mode section](https://docs.docker.com/engine/swarm/) in the
 > documentation.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--args` |  | Service command args |
-| `--cap-add` |  | Add Linux capabilities (API 1.41+) |
-| `--cap-drop` |  | Drop Linux capabilities (API 1.41+) |
-| `--config-add` |  | Add or update a config file on a service (API 1.30+) |
-| `--config-rm` |  | Remove a configuration file (API 1.30+) |
-| `--constraint-add` |  | Add or update a placement constraint |
-| `--constraint-rm` |  | Remove a constraint |
-| `--container-label-add` |  | Add or update a container label |
-| `--container-label-rm` |  | Remove a container label by its key |
-| `--credential-spec` |  | Credential spec for managed service account (Windows only) (API 1.29+) |
-| `-d`, `--detach` |  | Exit immediately instead of waiting for the service to converge (API 1.29+) |
-| `--dns-add` |  | Add or update a custom DNS server (API 1.25+) |
-| `--dns-option-add` |  | Add or update a DNS option (API 1.25+) |
-| `--dns-option-rm` |  | Remove a DNS option (API 1.25+) |
-| `--dns-rm` |  | Remove a custom DNS server (API 1.25+) |
-| `--dns-search-add` |  | Add or update a custom DNS search domain (API 1.25+) |
-| `--dns-search-rm` |  | Remove a DNS search domain (API 1.25+) |
-| `--endpoint-mode` |  | Endpoint mode (vip or dnsrr) |
-| `--entrypoint` |  | Overwrite the default ENTRYPOINT of the image |
-| `--env-add` |  | Add or update an environment variable |
-| `--env-rm` |  | Remove an environment variable |
-| `--force` |  | Force update even if no changes require it (API 1.25+) |
-| `--generic-resource-add` |  | Add a Generic resource (API 1.32+) |
-| `--generic-resource-rm` |  | Remove a Generic resource (API 1.32+) |
-| `--group-add` |  | Add an additional supplementary user group to the container (API 1.25+) |
-| `--group-rm` |  | Remove a previously added supplementary user group from the container (API 1.25+) |
-| `--health-cmd` |  | Command to run to check health (API 1.25+) |
-| `--health-interval` |  | Time between running the check (ms\|s\|m\|h) (API 1.25+) |
-| `--health-retries` |  | Consecutive failures needed to report unhealthy (API 1.25+) |
-| `--health-start-interval` |  | Time between running the check during the start period (ms\|s\|m\|h) (API 1.44+) |
-| `--health-start-period` |  | Start period for the container to initialize before counting retries towards unstable (ms\|s\|m\|h) (API 1.29+) |
-| `--health-timeout` |  | Maximum time to allow one check to run (ms\|s\|m\|h) (API 1.25+) |
-| `--host-add` |  | Add a custom host-to-IP mapping (`host:ip`) (API 1.25+) |
-| `--host-rm` |  | Remove a custom host-to-IP mapping (`host:ip`) (API 1.25+) |
-| `--hostname` |  | Container hostname (API 1.25+) |
-| `--image` |  | Service image tag |
-| `--init` |  | Use an init inside each service container to forward signals and reap processes (API 1.37+) |
-| `--isolation` |  | Service container isolation mode (API 1.35+) |
-| `--label-add` |  | Add or update a service label |
-| `--label-rm` |  | Remove a label by its key |
-| `--limit-cpu` |  | Limit CPUs |
-| `--limit-memory` |  | Limit Memory |
-| `--limit-pids` |  | Limit maximum number of processes (default 0 = unlimited) (API 1.41+) |
-| `--log-driver` |  | Logging driver for service |
-| `--log-opt` |  | Logging driver options |
-| `--max-concurrent` |  | Number of job tasks to run concurrently (default equal to --replicas) (API 1.41+) |
-| `--memory-swap` |  | Swap Bytes (-1 for unlimited) (API 1.52+) |
-| `--memory-swappiness` | `-1` | Tune memory swappiness (0-100), -1 to reset to default (API 1.52+) |
-| `--mount-add` |  | Add or update a mount on a service |
-| `--mount-rm` |  | Remove a mount by its target path |
-| `--network-add` |  | Add a network (API 1.29+) |
-| `--network-rm` |  | Remove a network (API 1.29+) |
-| `--no-healthcheck` |  | Disable any container-specified HEALTHCHECK (API 1.25+) |
-| `--no-resolve-image` |  | Do not query the registry to resolve image digest and supported platforms (API 1.30+) |
-| `--oom-score-adj` |  | Tune host's OOM preferences (-1000 to 1000) (API 1.46+) |
-| `--placement-pref-add` |  | Add a placement preference (API 1.28+) |
-| `--placement-pref-rm` |  | Remove a placement preference (API 1.28+) |
-| `--publish-add` |  | Add or update a published port |
-| `--publish-rm` |  | Remove a published port by its target port |
-| `-q`, `--quiet` |  | Suppress progress output |
-| `--read-only` |  | Mount the container's root filesystem as read only (API 1.28+) |
-| `--replicas` |  | Number of tasks |
-| `--replicas-max-per-node` |  | Maximum number of tasks per node (default 0 = unlimited) (API 1.40+) |
-| `--reserve-cpu` |  | Reserve CPUs |
-| `--reserve-memory` |  | Reserve Memory |
-| `--restart-condition` |  | Restart when condition is met (`none`, `on-failure`, `any`) |
-| `--restart-delay` |  | Delay between restart attempts (ns\|us\|ms\|s\|m\|h) |
-| `--restart-max-attempts` |  | Maximum number of restarts before giving up |
-| `--restart-window` |  | Window used to evaluate the restart policy (ns\|us\|ms\|s\|m\|h) |
-| `--rollback` |  | Rollback to previous specification (API 1.25+) |
-| `--rollback-delay` |  | Delay between task rollbacks (ns\|us\|ms\|s\|m\|h) (API 1.28+) |
-| `--rollback-failure-action` |  | Action on rollback failure (`pause`, `continue`) (API 1.28+) |
-| `--rollback-max-failure-ratio` |  | Failure rate to tolerate during a rollback (API 1.28+) |
-| `--rollback-monitor` |  | Duration after each task rollback to monitor for failure (ns\|us\|ms\|s\|m\|h) (API 1.28+) |
-| `--rollback-order` |  | Rollback order (`start-first`, `stop-first`) (API 1.29+) |
-| `--rollback-parallelism` |  | Maximum number of tasks rolled back simultaneously (0 to roll back all at once) (API 1.28+) |
-| `--secret-add` |  | Add or update a secret on a service (API 1.25+) |
-| `--secret-rm` |  | Remove a secret (API 1.25+) |
-| `--stop-grace-period` |  | Time to wait before force killing a container (ns\|us\|ms\|s\|m\|h) |
-| `--stop-signal` |  | Signal to stop the container (API 1.28+) |
-| `--sysctl-add` |  | Add or update a Sysctl option (API 1.40+) |
-| `--sysctl-rm` |  | Remove a Sysctl option (API 1.40+) |
-| `-t`, `--tty` |  | Allocate a pseudo-TTY (API 1.25+) |
-| `--ulimit-add` |  | Add or update a ulimit option (API 1.41+) |
-| `--ulimit-rm` |  | Remove a ulimit option (API 1.41+) |
-| `--update-delay` |  | Delay between updates (ns\|us\|ms\|s\|m\|h) |
-| `--update-failure-action` |  | Action on update failure (`pause`, `continue`, `rollback`) |
-| `--update-max-failure-ratio` |  | Failure rate to tolerate during an update (API 1.25+) |
-| `--update-monitor` |  | Duration after each task update to monitor for failure (ns\|us\|ms\|s\|m\|h) (API 1.25+) |
-| `--update-order` |  | Update order (`start-first`, `stop-first`) (API 1.29+) |
-| `--update-parallelism` |  | Maximum number of tasks updated simultaneously (0 to update all at once) |
-| `-u`, `--user` |  | Username or UID (format: <name\|uid>[:<group\|gid>]) |
-| `--with-registry-auth` |  | Send registry authentication details to swarm agents |
-| `-w`, `--workdir` |  | Working directory inside the container |
+| Option                         | Default | Description                                                                                                     |
+| ------------------------------ | ------- | --------------------------------------------------------------------------------------------------------------- |
+| `--args`                       |         | Service command args                                                                                            |
+| `--cap-add`                    |         | Add Linux capabilities (API 1.41+)                                                                              |
+| `--cap-drop`                   |         | Drop Linux capabilities (API 1.41+)                                                                             |
+| `--config-add`                 |         | Add or update a config file on a service (API 1.30+)                                                            |
+| `--config-rm`                  |         | Remove a configuration file (API 1.30+)                                                                         |
+| `--constraint-add`             |         | Add or update a placement constraint                                                                            |
+| `--constraint-rm`              |         | Remove a constraint                                                                                             |
+| `--container-label-add`        |         | Add or update a container label                                                                                 |
+| `--container-label-rm`         |         | Remove a container label by its key                                                                             |
+| `--credential-spec`            |         | Credential spec for managed service account (Windows only) (API 1.29+)                                          |
+| `-d`, `--detach`               |         | Exit immediately instead of waiting for the service to converge (API 1.29+)                                     |
+| `--dns-add`                    |         | Add or update a custom DNS server (API 1.25+)                                                                   |
+| `--dns-option-add`             |         | Add or update a DNS option (API 1.25+)                                                                          |
+| `--dns-option-rm`              |         | Remove a DNS option (API 1.25+)                                                                                 |
+| `--dns-rm`                     |         | Remove a custom DNS server (API 1.25+)                                                                          |
+| `--dns-search-add`             |         | Add or update a custom DNS search domain (API 1.25+)                                                            |
+| `--dns-search-rm`              |         | Remove a DNS search domain (API 1.25+)                                                                          |
+| `--endpoint-mode`              |         | Endpoint mode (vip or dnsrr)                                                                                    |
+| `--entrypoint`                 |         | Overwrite the default ENTRYPOINT of the image                                                                   |
+| `--env-add`                    |         | Add or update an environment variable                                                                           |
+| `--env-rm`                     |         | Remove an environment variable                                                                                  |
+| `--force`                      |         | Force update even if no changes require it (API 1.25+)                                                          |
+| `--generic-resource-add`       |         | Add a Generic resource (API 1.32+)                                                                              |
+| `--generic-resource-rm`        |         | Remove a Generic resource (API 1.32+)                                                                           |
+| `--group-add`                  |         | Add an additional supplementary user group to the container (API 1.25+)                                         |
+| `--group-rm`                   |         | Remove a previously added supplementary user group from the container (API 1.25+)                               |
+| `--health-cmd`                 |         | Command to run to check health (API 1.25+)                                                                      |
+| `--health-interval`            |         | Time between running the check (ms\|s\|m\|h) (API 1.25+)                                                        |
+| `--health-retries`             |         | Consecutive failures needed to report unhealthy (API 1.25+)                                                     |
+| `--health-start-interval`      |         | Time between running the check during the start period (ms\|s\|m\|h) (API 1.44+)                                |
+| `--health-start-period`        |         | Start period for the container to initialize before counting retries towards unstable (ms\|s\|m\|h) (API 1.29+) |
+| `--health-timeout`             |         | Maximum time to allow one check to run (ms\|s\|m\|h) (API 1.25+)                                                |
+| `--host-add`                   |         | Add a custom host-to-IP mapping (`host:ip`) (API 1.25+)                                                         |
+| `--host-rm`                    |         | Remove a custom host-to-IP mapping (`host:ip`) (API 1.25+)                                                      |
+| `--hostname`                   |         | Container hostname (API 1.25+)                                                                                  |
+| `--image`                      |         | Service image tag                                                                                               |
+| `--init`                       |         | Use an init inside each service container to forward signals and reap processes (API 1.37+)                     |
+| `--isolation`                  |         | Service container isolation mode (API 1.35+)                                                                    |
+| `--label-add`                  |         | Add or update a service label                                                                                   |
+| `--label-rm`                   |         | Remove a label by its key                                                                                       |
+| `--limit-cpu`                  |         | Limit CPUs                                                                                                      |
+| `--limit-memory`               |         | Limit Memory                                                                                                    |
+| `--limit-pids`                 |         | Limit maximum number of processes (default 0 = unlimited) (API 1.41+)                                           |
+| `--log-driver`                 |         | Logging driver for service                                                                                      |
+| `--log-opt`                    |         | Logging driver options                                                                                          |
+| `--max-concurrent`             |         | Number of job tasks to run concurrently (default equal to --replicas) (API 1.41+)                               |
+| `--memory-swap`                |         | Swap Bytes (-1 for unlimited) (API 1.52+)                                                                       |
+| `--memory-swappiness`          | `-1`    | Tune memory swappiness (0-100), -1 to reset to default (API 1.52+)                                              |
+| `--mount-add`                  |         | Add or update a mount on a service                                                                              |
+| `--mount-rm`                   |         | Remove a mount by its target path                                                                               |
+| `--network-add`                |         | Add a network (API 1.29+)                                                                                       |
+| `--network-rm`                 |         | Remove a network (API 1.29+)                                                                                    |
+| `--no-healthcheck`             |         | Disable any container-specified HEALTHCHECK (API 1.25+)                                                         |
+| `--no-resolve-image`           |         | Do not query the registry to resolve image digest and supported platforms (API 1.30+)                           |
+| `--oom-score-adj`              |         | Tune host's OOM preferences (-1000 to 1000) (API 1.46+)                                                         |
+| `--placement-pref-add`         |         | Add a placement preference (API 1.28+)                                                                          |
+| `--placement-pref-rm`          |         | Remove a placement preference (API 1.28+)                                                                       |
+| `--publish-add`                |         | Add or update a published port                                                                                  |
+| `--publish-rm`                 |         | Remove a published port by its target port                                                                      |
+| `-q`, `--quiet`                |         | Suppress progress output                                                                                        |
+| `--read-only`                  |         | Mount the container's root filesystem as read only (API 1.28+)                                                  |
+| `--replicas`                   |         | Number of tasks                                                                                                 |
+| `--replicas-max-per-node`      |         | Maximum number of tasks per node (default 0 = unlimited) (API 1.40+)                                            |
+| `--reserve-cpu`                |         | Reserve CPUs                                                                                                    |
+| `--reserve-memory`             |         | Reserve Memory                                                                                                  |
+| `--restart-condition`          |         | Restart when condition is met (`none`, `on-failure`, `any`)                                                     |
+| `--restart-delay`              |         | Delay between restart attempts (ns\|us\|ms\|s\|m\|h)                                                            |
+| `--restart-max-attempts`       |         | Maximum number of restarts before giving up                                                                     |
+| `--restart-window`             |         | Window used to evaluate the restart policy (ns\|us\|ms\|s\|m\|h)                                                |
+| `--rollback`                   |         | Rollback to previous specification (API 1.25+)                                                                  |
+| `--rollback-delay`             |         | Delay between task rollbacks (ns\|us\|ms\|s\|m\|h) (API 1.28+)                                                  |
+| `--rollback-failure-action`    |         | Action on rollback failure (`pause`, `continue`) (API 1.28+)                                                    |
+| `--rollback-max-failure-ratio` |         | Failure rate to tolerate during a rollback (API 1.28+)                                                          |
+| `--rollback-monitor`           |         | Duration after each task rollback to monitor for failure (ns\|us\|ms\|s\|m\|h) (API 1.28+)                      |
+| `--rollback-order`             |         | Rollback order (`start-first`, `stop-first`) (API 1.29+)                                                        |
+| `--rollback-parallelism`       |         | Maximum number of tasks rolled back simultaneously (0 to roll back all at once) (API 1.28+)                     |
+| `--secret-add`                 |         | Add or update a secret on a service (API 1.25+)                                                                 |
+| `--secret-rm`                  |         | Remove a secret (API 1.25+)                                                                                     |
+| `--stop-grace-period`          |         | Time to wait before force killing a container (ns\|us\|ms\|s\|m\|h)                                             |
+| `--stop-signal`                |         | Signal to stop the container (API 1.28+)                                                                        |
+| `--sysctl-add`                 |         | Add or update a Sysctl option (API 1.40+)                                                                       |
+| `--sysctl-rm`                  |         | Remove a Sysctl option (API 1.40+)                                                                              |
+| `-t`, `--tty`                  |         | Allocate a pseudo-TTY (API 1.25+)                                                                               |
+| `--ulimit-add`                 |         | Add or update a ulimit option (API 1.41+)                                                                       |
+| `--ulimit-rm`                  |         | Remove a ulimit option (API 1.41+)                                                                              |
+| `--update-delay`               |         | Delay between updates (ns\|us\|ms\|s\|m\|h)                                                                     |
+| `--update-failure-action`      |         | Action on update failure (`pause`, `continue`, `rollback`)                                                      |
+| `--update-max-failure-ratio`   |         | Failure rate to tolerate during an update (API 1.25+)                                                           |
+| `--update-monitor`             |         | Duration after each task update to monitor for failure (ns\|us\|ms\|s\|m\|h) (API 1.25+)                        |
+| `--update-order`               |         | Update order (`start-first`, `stop-first`) (API 1.29+)                                                          |
+| `--update-parallelism`         |         | Maximum number of tasks updated simultaneously (0 to update all at once)                                        |
+| `-u`, `--user`                 |         | Username or UID (format: \<name\|uid>\[:\<group\|gid>])                                                         |
+| `--with-registry-auth`         |         | Send registry authentication details to swarm agents                                                            |
+| `-w`, `--workdir`              |         | Working directory inside the container                                                                          |
 
 ## Examples
 
@@ -156,7 +156,7 @@ point, effectively removing the `test-data` volume. Each command returns the
 service name.
 
 - The `--mount-add` flag takes the same parameters as the `--mount` flag on
-  `service create`. Refer to the [volumes and bind mounts](/reference/cli/docker/service/create/#mount)
+  `service create`. Refer to the [volumes and bind mounts](https://docs.docker.com/reference/cli/docker/service/create/#mount)
   section in the `service create` reference for details.
 
 - The `--mount-rm` flag takes the `target` path of the mount.
@@ -184,7 +184,7 @@ myservice
 
 Use the `--publish-add` or `--publish-rm` flags to add or remove a published
 port for a service. You can use the short or long syntax discussed in the
-[docker service create](/reference/cli/docker/service/create/#publish)
+[docker service create](https://docs.docker.com/reference/cli/docker/service/create/#publish)
 reference.
 
 The following example adds a published service port to an existing service.
@@ -199,7 +199,7 @@ $ docker service update \
 
 Use the `--network-add` or `--network-rm` flags to add or remove a network for
 a service. You can use the short or long syntax discussed in the
-[docker service create](/reference/cli/docker/service/create/#network)
+[docker service create](https://docs.docker.com/reference/cli/docker/service/create/#network)
 reference.
 
 The following example adds a new alias name to an existing service already connected to network my-network:
@@ -294,12 +294,12 @@ $ docker service update \
 ### Update services using templates
 
 Some flags of `service update` support the use of templating.
-See [`service create`](/reference/cli/docker/service/create/#create-services-using-templates) for the reference.
+See [`service create`](https://docs.docker.com/reference/cli/docker/service/create/#create-services-using-templates) for the reference.
 
 ### Specify isolation mode on Windows (--isolation) {#isolation}
 
 `service update` supports the same `--isolation` flag as `service create`
-See [`service create`](/reference/cli/docker/service/create/) for the reference.
+See [`service create`](https://docs.docker.com/reference/cli/docker/service/create/) for the reference.
 
 ### Updating Jobs
 

@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/CHANGELOG.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/CHANGELOG.md)
+> Pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/CHANGELOG.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/CHANGELOG.md)
 
 The following `tip` changes can be tested by building VictoriaLogs components from the latest commit of [VictoriaLogs](https://github.com/VictoriaMetrics/VictoriaLogs/) repository
 according to the following docs:

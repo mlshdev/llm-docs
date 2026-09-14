@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/buildx/docker_buildx_history_logs.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_history_logs.yaml)
+> Pinned source for Docker main: [data/cli/buildx/docker_buildx_history_logs.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_history_logs.yaml)
 
 # docker buildx history logs
 
@@ -20,16 +20,16 @@ You can also specify an earlier build using an offset. For example:
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
+| Option       | Default | Description                                       |
+| ------------ | ------- | ------------------------------------------------- |
 | `--progress` | `plain` | Set type of progress output (plain, rawjson, tty) |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--builder` |  | Override the configured builder instance |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option          | Default | Description                              |
+| --------------- | ------- | ---------------------------------------- |
+| `--builder`     |         | Override the configured builder instance |
+| `-D`, `--debug` |         | Enable debug logging                     |
 
 ## Examples
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_network_connect.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_network_connect.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_network_connect.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_network_connect.yaml)
 
 # docker network connect
 
@@ -14,15 +14,15 @@ the same network.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--alias` |  | Add network-scoped alias for the container |
-| `--driver-opt` |  | driver options for the network |
-| `--gw-priority` |  | Highest gw-priority provides the default gateway. Accepts positive and negative values. |
-| `--ip` | `<nil>` | IPv4 address (e.g., `172.30.100.104`) |
-| `--ip6` | `<nil>` | IPv6 address (e.g., `2001:db8::33`) |
-| `--link` |  | Add link to another container |
-| `--link-local-ip` |  | Add a link-local address for the container |
+| Option            | Default | Description                                                                             |
+| ----------------- | ------- | --------------------------------------------------------------------------------------- |
+| `--alias`         |         | Add network-scoped alias for the container                                              |
+| `--driver-opt`    |         | driver options for the network                                                          |
+| `--gw-priority`   |         | Highest gw-priority provides the default gateway. Accepts positive and negative values. |
+| `--ip`            | `<nil>` | IPv4 address (e.g., `172.30.100.104`)                                                   |
+| `--ip6`           | `<nil>` | IPv6 address (e.g., `2001:db8::33`)                                                     |
+| `--link`          |         | Add link to another container                                                           |
+| `--link-local-ip` |         | Add a link-local address for the container                                              |
 
 ## Examples
 
@@ -81,7 +81,7 @@ sets `net.ipv4.conf.eth3.log_martians=1` and `net.ipv4.conf.eth3.forwarding=0`.
 $ docker network connect --driver-opt=\"com.docker.network.endpoint.sysctls=net.ipv4.conf.IFNAME.log_martians=1,net.ipv4.conf.IFNAME.forwarding=0\" multi-host-network container2
 ```
 
-> [!NOTE]
+> \[!NOTE]
 > Network drivers may restrict the sysctl settings that can be modified and, to protect
 > the operation of the network, new restrictions may be added in the future.
 

@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/integrations/kafka.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/kafka.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/integrations/kafka.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/kafka.md)
 
 > This integration is supported only in [Enterprise version](https://docs.victoriametrics.com/victoriametrics/enterprise/) of vmagent.
 
@@ -38,10 +38,10 @@ Multiple brokers can be specified per each `-kafka.consumer.topic` by passing a 
 For example:
 
 ```sh
-./bin/vmagent
-      -kafka.consumer.topic='topic-a'
-      -kafka.consumer.topic.brokers='host1:9092;host2:9092'
-      -kafka.consumer.topic='topic-b'
+./bin/vmagent 
+      -kafka.consumer.topic='topic-a' 
+      -kafka.consumer.topic.brokers='host1:9092;host2:9092' 
+      -kafka.consumer.topic='topic-b' 
       -kafka.consumer.topic.brokers='host3:9092;host4:9092'
 ```
 
@@ -175,15 +175,15 @@ Each block is compressed with Snappy or ZSTD before being sent out by the remote
 To get the request rate of remote write (as the estimated produce rate of Kafka), use the following MetricsQL:
 
 ```metricsql
-sum(rate(vmagent_remotewrite_requests_total{}[1m]))
+sum(rate(vmagent_remotewrite_requests_total{}[1m])) 
 ```
 
 Similarly, the average size of the compressed block of remote write (serving as the estimated message size of Kafka) is as follows:
 
 ```metricsql
 sum(rate(vmagent_remotewrite_conn_bytes_written_total{}[1m]))
- /
-sum(rate(vmagent_remotewrite_requests_total{}[1m]))
+ / 
+sum(rate(vmagent_remotewrite_requests_total{}[1m])) 
 ```
 
 Please note that the remote write body and Kafka message need to use the same compression algorithm to serve as

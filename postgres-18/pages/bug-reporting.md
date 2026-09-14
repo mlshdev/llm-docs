@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/problems.sgml#bug-reporting](https://www.postgresql.org/docs/18/bug-reporting.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/problems.sgml#bug-reporting](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/problems.sgml%23bug-reporting)
+> Canonical documentation: https://www.postgresql.org/docs/18/bug-reporting.html
 
 # Bug Reporting Guidelines
 

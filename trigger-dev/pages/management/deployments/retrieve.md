@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/management/deployments/retrieve.mdx](https://trigger.dev/docs/management/deployments/retrieve)
+> Pinned source for Trigger.dev v4.5.16: [docs/management/deployments/retrieve.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/management/deployments/retrieve.mdx)
+> Canonical documentation: https://trigger.dev/docs/management/deployments/retrieve
 
 # Get deployment
 
@@ -8,12 +9,34 @@
 
 Retrieve information about a specific deployment by its ID.
 
+**Authentication:** `secretKey`
+
 **Parameters**
 
-- `deploymentId` (path, required): The deployment ID.
+- `deploymentId` (path; required; string): The deployment ID.
 
 **Responses**
 
 - `200`: Successful request
+  - Media type: `application/json`
+    - Schema (object)
+      - `id` (string): The deployment ID
+      - `status` (string; enum: `PENDING`, `INSTALLING`, `BUILDING`, `DEPLOYING`, `DEPLOYED`, `FAILED`, `CANCELED`, `TIMED_OUT`): The current status of the deployment
+      - `contentHash` (string): Hash of the deployment content
+      - `shortCode` (string): The short code for the deployment
+      - `version` (string): The deployment version (e.g., "20250228.1")
+      - `imageReference` (string; nullable): Reference to the deployment image
+      - `imagePlatform` (string): Platform of the deployment image
+      - `externalBuildData` (object; nullable): External build data if applicable
+      - `errorData` (object; nullable): Error data if the deployment failed
+      - `worker` (object; nullable): Worker information if available
+        - `id` (string)
+        - `version` (string)
+        - `tasks` (array)
+          - `items` (object)
+            - `id` (string)
+            - `slug` (string)
+            - `filePath` (string)
+            - `exportName` (string)
 - `401`: Unauthorized - Access token is missing or invalid
 - `404`: Deployment not found

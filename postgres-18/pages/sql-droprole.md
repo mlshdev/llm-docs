@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/drop_role.sgml#sql-droprole](https://www.postgresql.org/docs/18/sql-droprole.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/drop_role.sgml#sql-droprole](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/drop_role.sgml%23sql-droprole)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-droprole.html
 
 # DROP ROLE
 

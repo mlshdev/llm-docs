@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/understand-your-setup-size/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/understand-your-setup-size/_index.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/guides/understand-your-setup-size/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/understand-your-setup-size/_index.md)
 
 This guide is based on capacity planning for [Single-Node](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#capacity-planning),
 [Cluster](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#capacity-planning)
@@ -127,7 +127,7 @@ The Retention Period is the number of days or months for storing data. It affect
 The formula for calculating required disk space is the following:
 
 ```
-Bytes Per Sample * Ingestion rate * Replication Factor * (Retention Period in Seconds +1 Retention Cycle(day or month)) * 1.25 (recommended 20% of free space for merges )
+Bytes Per Sample * Ingestion rate * Replication Factor * (Retention Period in Seconds +1 Retention Cycle(day or month)) * 1.25 (recommended 20% of free space for merges ) 
 ```
 
 The **Retention Cycle** is one **day** or one **month**. If the retention period is higher than 30 days cycle is a month; otherwise day.

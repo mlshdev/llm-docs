@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_stack_services.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_stack_services.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_stack_services.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_stack_services.yaml)
 
 # docker stack services
 
@@ -10,19 +10,19 @@ List the services in the stack
 
 Lists the services that are running as part of the specified stack.
 
-> [!NOTE]
+> \[!NOTE]
 > This is a cluster management command, and must be executed on a swarm
 > manager node. To learn about managers and workers, refer to the
-> [Swarm mode section](/engine/swarm/) in the
+> [Swarm mode section](https://docs.docker.com/engine/swarm/) in the
 > documentation.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--filter` |  | Filter output based on conditions provided |
-| `--format` |  | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to https://docs.docker.com/go/formatting/ for more information about formatting output with templates |
-| `-q`, `--quiet` |  | Only display IDs |
+| Option           | Default | Description                                                                                                                                                                                                                                                                                                                                                                            |
+| ---------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `-f`, `--filter` |         | Filter output based on conditions provided                                                                                                                                                                                                                                                                                                                                             |
+| `--format`       |         | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to <https://docs.docker.com/go/formatting/> for more information about formatting output with templates |
+| `-q`, `--quiet`  |         | Only display IDs                                                                                                                                                                                                                                                                                                                                                                       |
 
 ## Examples
 
@@ -54,15 +54,15 @@ dn7m7nhhfb9y  myapp_db        1/1       mysql@sha256:a9a5b559f8821fe73d58c3606c8
 
 The currently supported filters are:
 
-* id / ID (`--filter id=7be5ei6sqeye`, or `--filter ID=7be5ei6sqeye`)
-* label (`--filter label=key=value`)
-* mode (`--filter mode=replicated`, or `--filter mode=global`)
-  * Swarm: not supported
-* name (`--filter name=myapp_web`)
-* node (`--filter node=mynode`)
-  * Swarm: not supported
-* service (`--filter service=web`)
-  * Swarm: not supported
+- id / ID (`--filter id=7be5ei6sqeye`, or `--filter ID=7be5ei6sqeye`)
+- label (`--filter label=key=value`)
+- mode (`--filter mode=replicated`, or `--filter mode=global`)
+  - Swarm: not supported
+- name (`--filter name=myapp_web`)
+- node (`--filter node=mynode`)
+  - Swarm: not supported
+- service (`--filter service=web`)
+  - Swarm: not supported
 
 ### Format the output (--format) {#format}
 
@@ -72,7 +72,7 @@ using a Go template.
 Valid placeholders for the Go template are listed below:
 
 | Placeholder | Description                       |
-|-------------|-----------------------------------|
+| ----------- | --------------------------------- |
 | `.ID`       | Service ID                        |
 | `.Name`     | Service name                      |
 | `.Mode`     | Service mode (replicated, global) |

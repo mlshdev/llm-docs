@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md)
+> Pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md)
 
 # n8n Form Trigger node <a id="n8n-form-trigger-node"></a>
 

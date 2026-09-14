@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_down.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_down.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_down.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_down.yaml)
 
 # docker compose down
 
@@ -36,15 +36,15 @@ $ docker ps -a --filter label=com.docker.compose.hook=pre_start
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--remove-orphans` |  | Remove containers for services not defined in the Compose file |
-| `--rmi` |  | Remove images used by services. "local" remove only images that don't have a custom tag ("local"\|"all") |
-| `-t`, `--timeout` |  | Specify a shutdown timeout in seconds |
-| `-v`, `--volumes` |  | Remove named volumes declared in the "volumes" section of the Compose file and anonymous volumes attached to containers |
+| Option             | Default | Description                                                                                                             |
+| ------------------ | ------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `--remove-orphans` |         | Remove containers for services not defined in the Compose file                                                          |
+| `--rmi`            |         | Remove images used by services. "local" remove only images that don't have a custom tag ("local"\|"all")                |
+| `-t`, `--timeout`  |         | Specify a shutdown timeout in seconds                                                                                   |
+| `-v`, `--volumes`  |         | Remove named volumes declared in the "volumes" section of the Compose file and anonymous volumes attached to containers |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--dry-run` |  | Execute command in dry run mode |
+| Option      | Default | Description                     |
+| ----------- | ------- | ------------------------------- |
+| `--dry-run` |         | Execute command in dry run mode |

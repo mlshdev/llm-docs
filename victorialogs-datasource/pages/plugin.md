@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaLogs datasource for Grafana v0.32.0: [src/README.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/9cce7548fe6771d542d86576e24ec63684197844/src/README.md)
+> Pinned source for VictoriaLogs datasource for Grafana v0.32.0: [src/README.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/9cce7548fe6771d542d86576e24ec63684197844/src/README.md)
 
 # VictoriaLogs datasource for Grafana
 
@@ -215,8 +215,8 @@ switch to `Range` query type and use [`histogram` stats function](https://docs.v
 Query example:
 
 ```logsql
-{collector="otel-collector", k8s.namespace.name="play-otel", service.name="checkout"} "duration:"
-  | extract "duration: <duration>"
+{collector="otel-collector", k8s.namespace.name="play-otel", service.name="checkout"} "duration:" 
+  | extract "duration: <duration>" 
   | stats histogram(duration)
 ```
 

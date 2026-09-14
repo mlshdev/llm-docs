@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_container_stats.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_stats.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_container_stats.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_stats.yaml)
 
 # docker container stats
 
@@ -18,7 +18,7 @@ containers do not return any data.
 If you need more detailed information about a container's resource usage, use
 the `/containers/(id)/stats` API endpoint.
 
-> [!NOTE]
+> \[!NOTE]
 > On Linux, the Docker CLI reports memory usage by subtracting cache usage from
 > the total memory usage. The API does not perform such a calculation but rather
 > provides the total memory usage and the amount from the cache so that clients
@@ -29,7 +29,7 @@ the `/containers/(id)/stats` API endpoint.
 > field. On cgroup v2 hosts, the cache usage is defined as the value of
 > `inactive_file` field.
 
-> [!NOTE]
+> \[!NOTE]
 > The `PIDS` column contains the number of processes and kernel threads created
 > by that container. Threads is the term used by Linux kernel. Other equivalent
 > terms are "lightweight process" or "kernel task", etc. A large number in the
@@ -38,12 +38,12 @@ the `/containers/(id)/stats` API endpoint.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-a`, `--all` |  | Show all containers (default shows just running) |
-| `--format` |  | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to https://docs.docker.com/go/formatting/ for more information about formatting output with templates |
-| `--no-stream` |  | Disable streaming stats and only pull the first result |
-| `--no-trunc` |  | Do not truncate output |
+| Option        | Default | Description                                                                                                                                                                                                                                                                                                                                                                            |
+| ------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `-a`, `--all` |         | Show all containers (default shows just running)                                                                                                                                                                                                                                                                                                                                       |
+| `--format`    |         | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to <https://docs.docker.com/go/formatting/> for more information about formatting output with templates |
+| `--no-stream` |         | Disable streaming stats and only pull the first result                                                                                                                                                                                                                                                                                                                                 |
+| `--no-trunc`  |         | Do not truncate output                                                                                                                                                                                                                                                                                                                                                                 |
 
 ## Examples
 
@@ -59,17 +59,17 @@ e5c383697914        test-1951.1.kay7x1lh1twk9c0oig50sd5tr   0.00%               
 4bda148efbc0        random.1.vnc8on831idyr42slu578u3cr      0.00%               1.672MiB / 1.952GiB   0.08%               110kB / 0B          578kB / 0B          2
 ```
 
-If you don't [specify a format string using `--format`](#format), the
+If you don't [specify a format string using `--format`](#format-the-output---format-format), the
 following columns are shown.
 
-| Column name               | Description                                                                                   |
-|---------------------------|-----------------------------------------------------------------------------------------------|
-| `CONTAINER ID` and `Name` | the ID and name of the container                                                              |
-| `CPU %` and `MEM %`       | the percentage of the host's CPU and memory the container is using                            |
-| `MEM USAGE / LIMIT`       | the total memory the container is using, and the total amount of memory it is allowed to use  |
-| `NET I/O`                 | The amount of data the container has received and sent over its network interface             |
-| `BLOCK I/O`               | The amount of data the container has written to and read from block devices on the host       |
-| `PIDs`                    | the number of processes or threads the container has created                                  |
+| Column name               | Description                                                                                  |
+| ------------------------- | -------------------------------------------------------------------------------------------- |
+| `CONTAINER ID` and `Name` | the ID and name of the container                                                             |
+| `CPU %` and `MEM %`       | the percentage of the host's CPU and memory the container is using                           |
+| `MEM USAGE / LIMIT`       | the total memory the container is using, and the total amount of memory it is allowed to use |
+| `NET I/O`                 | The amount of data the container has received and sent over its network interface            |
+| `BLOCK I/O`               | The amount of data the container has written to and read from block devices on the host      |
+| `PIDs`                    | the number of processes or threads the container has created                                 |
 
 Running `docker stats` on multiple containers by name and id against a Linux daemon.
 
@@ -135,7 +135,7 @@ using a Go template.
 Valid placeholders for the Go template are listed below:
 
 | Placeholder  | Description                                  |
-|--------------|----------------------------------------------|
+| ------------ | -------------------------------------------- |
 | `.Container` | Container name or ID (user input)            |
 | `.Name`      | Container name                               |
 | `.ID`        | Container ID                                 |
@@ -177,8 +177,12 @@ The default format is as follows:
 
 On Linux:
 
-    "table {{.ID}}\t{{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.MemPerc}}\t{{.NetIO}}\t{{.BlockIO}}\t{{.PIDs}}"
+```
+"table {{.ID}}\t{{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.MemPerc}}\t{{.NetIO}}\t{{.BlockIO}}\t{{.PIDs}}"
+```
 
 On Windows:
 
-    "table {{.ID}}\t{{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.NetIO}}\t{{.BlockIO}}"
+```
+"table {{.ID}}\t{{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.NetIO}}\t{{.BlockIO}}"
+```

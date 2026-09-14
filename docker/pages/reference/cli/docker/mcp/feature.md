@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/mcp/docker_mcp_feature.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp_feature.yaml)
+> Pinned source for Docker main: [data/cli/mcp/docker_mcp_feature.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp_feature.yaml)
 
 # docker mcp feature
 
@@ -8,7 +8,7 @@ Manage experimental features
 
 Manage experimental features for Docker MCP Gateway.
 
-Features are stored in your Docker configuration file (~/.docker/config.json)
+Features are stored in your Docker configuration file (\~/.docker/config.json)
 and control optional functionality that may change in future versions.
 
 ## Subcommands

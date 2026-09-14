@@ -4,8 +4,10 @@ import { Readable, Transform } from "node:stream";
 import { pipeline } from "node:stream/promises";
 import { setTimeout as sleep } from "node:timers/promises";
 import type { ReadableStream as NodeReadableStream } from "node:stream/web";
+import { mapWithConcurrency } from "./concurrency.ts";
 import { resolveDoccSnapshot } from "./projects/apple.ts";
 import { describeError } from "./quarantine.ts";
+import { recordRequestAttempt, withRequestMetrics } from "./request-metrics.ts";
 import { isTagLockedSource } from "./types.ts";
 import type {
   BranchLockedSource,
@@ -19,6 +21,9 @@ import type {
 
 const githubApi = "https://api.github.com";
 const maximumArchiveBytes = 500 * 1024 * 1024;
+const githubApiTimeoutMs = 30_000;
+const githubArchiveTimeoutMs = 5 * 60_000;
+const defaultSourceConcurrency = 4;
 
 // Every request here is an idempotent read, so transport faults, secondary
 // rate limits, and GitHub's own 5xx responses are retried rather than allowed
@@ -37,6 +42,14 @@ export interface SourceResolutionFailure {
 export interface ResolvedSources {
   readonly projects: Record<SourceProject["id"], LockedSource>;
   readonly failures: readonly SourceResolutionFailure[];
+  readonly metrics: readonly SourceResolutionMetric[];
+}
+
+export interface SourceResolutionMetric {
+  readonly project: SourceProject["id"];
+  readonly requestAttempts: number;
+  readonly elapsedMs: number;
+  readonly outcome: "resolved" | "retained";
 }
 
 class UnretryableRequestError extends Error {
@@ -60,6 +73,7 @@ async function withRetry<T>(
 ): Promise<T> {
   for (let attempt = 1; ; attempt += 1) {
     try {
+      recordRequestAttempt();
       return await operation();
     } catch (error) {
       if (
@@ -70,8 +84,9 @@ async function withRetry<T>(
       }
       const requested =
         error instanceof RetryableRequestError ? error.delayMs : undefined;
+      const backoff = 2 ** (attempt - 1) * 1000;
       const delay = Math.min(
-        requested ?? 2 ** (attempt - 1) * 1000,
+        requested ?? backoff * (0.75 + Math.random() * 0.5),
         maximumRetryDelayMs,
       );
       console.warn(
@@ -84,10 +99,20 @@ async function withRetry<T>(
 
 // GitHub answers a primary rate limit with 403 plus a reset timestamp and a
 // secondary rate limit with 403/429 plus `retry-after`.
-function retryDelayFor(response: Response): number | undefined {
-  const retryAfter = Number(response.headers.get("retry-after"));
-  if (Number.isFinite(retryAfter) && retryAfter > 0) {
-    return retryAfter * 1000;
+export function retryDelayFor(
+  response: Response,
+  now = Date.now(),
+): number | undefined {
+  const retryAfter = response.headers.get("retry-after");
+  if (retryAfter !== null) {
+    const seconds = Number(retryAfter);
+    if (Number.isFinite(seconds) && seconds >= 0) {
+      return seconds * 1000;
+    }
+    const date = Date.parse(retryAfter);
+    if (Number.isFinite(date)) {
+      return Math.max(0, date - now);
+    }
   }
   if (
     (response.status === 403 || response.status === 429) &&
@@ -95,19 +120,28 @@ function retryDelayFor(response: Response): number | undefined {
   ) {
     const reset = Number(response.headers.get("x-ratelimit-reset"));
     if (Number.isFinite(reset) && reset > 0) {
-      return Math.max(0, reset * 1000 - Date.now());
+      return Math.max(0, reset * 1000 - now);
     }
     return maximumRetryDelayMs;
   }
   return undefined;
 }
 
-function isRetryableResponse(response: Response): boolean {
+export function isRetryableResponse(response: Response): boolean {
   return (
     retryableStatuses.has(response.status) ||
     ((response.status === 403 || response.status === 429) &&
+      response.headers.has("retry-after")) ||
+    ((response.status === 403 || response.status === 429) &&
       response.headers.get("x-ratelimit-remaining") === "0")
   );
+}
+
+export function sourceResolutionConcurrency(): number {
+  const configured = Number.parseInt(process.env.SOURCE_CONCURRENCY ?? "", 10);
+  return Number.isInteger(configured) && configured > 0
+    ? configured
+    : defaultSourceConcurrency;
 }
 
 // One upstream repository that is unreachable, that has retired its releases,
@@ -118,38 +152,59 @@ export async function resolveLatestSources(
   projects: readonly SourceProject[],
   current: Readonly<Partial<Record<SourceProject["id"], LockedSource>>>,
 ): Promise<ResolvedSources> {
-  const failures: SourceResolutionFailure[] = [];
-  const entries = await Promise.all(
-    projects.map(async (project) => {
-      try {
-        return project.kind === "docc"
-          ? ([
-              project.id,
-              await resolveDoccSnapshot(project, current[project.id]),
-            ] as const)
-          : await resolveSource(project, current);
-      } catch (error) {
-        const previous = current[project.id];
-        if (!previous) {
-          throw error;
+  const results = await mapWithConcurrency(
+    projects,
+    sourceResolutionConcurrency(),
+    async (project) => {
+      const startedAt = performance.now();
+      const measured = await withRequestMetrics(async () => {
+        try {
+          const entry =
+            project.kind === "docc"
+              ? ([
+                  project.id,
+                  await resolveDoccSnapshot(project, current[project.id]),
+                ] as const)
+              : await resolveSource(project, current);
+          return { entry, outcome: "resolved" as const };
+        } catch (error) {
+          const previous = current[project.id];
+          if (!previous) {
+            throw error;
+          }
+          const reason = describeError(error);
+          console.warn(
+            `${project.id} could not be reconciled; retaining ${previous.tag}: ${reason}`,
+          );
+          return {
+            entry: [project.id, previous] as const,
+            outcome: "retained" as const,
+            failure: { project: project.id, reason },
+          };
         }
-        const reason = describeError(error);
-        failures.push({ project: project.id, reason });
-        console.warn(
-          `${project.id} could not be reconciled; retaining ${previous.tag}: ${reason}`,
-        );
-        return [project.id, previous] as const;
-      }
-    }),
+      });
+      return {
+        ...measured.value,
+        metric: {
+          project: project.id,
+          requestAttempts: measured.requestAttempts,
+          elapsedMs: Math.max(0, Math.round(performance.now() - startedAt)),
+          outcome: measured.value.outcome,
+        } satisfies SourceResolutionMetric,
+      };
+    },
   );
-  return {
-    projects: Object.fromEntries(entries) as Record<
-      SourceProject["id"],
-      LockedSource
-    >,
-    failures: [...failures].sort((left, right) =>
+  const failures = results
+    .flatMap((result) => (result.failure ? [result.failure] : []))
+    .sort((left, right) =>
       left.project < right.project ? -1 : left.project > right.project ? 1 : 0,
-    ),
+    );
+  return {
+    projects: Object.fromEntries(
+      results.map((result) => result.entry),
+    ) as Record<SourceProject["id"], LockedSource>,
+    failures,
+    metrics: results.map((result) => result.metric),
   };
 }
 
@@ -169,7 +224,8 @@ async function resolveSource(
     if (
       isBranchLockedSource(previous) &&
       previous.branch === project.branch &&
-      previous.sourceCommit === sourceCommit.sha
+      previous.documentationDigest !== undefined &&
+      (previous.observedCommit ?? previous.sourceCommit) === sourceCommit.sha
     ) {
       return [project.id, previous] as const;
     }
@@ -186,6 +242,7 @@ async function resolveSource(
         branch: project.branch,
         sourceCommit: sourceCommit.sha,
         sourceCommittedAt,
+        observedCommit: sourceCommit.sha,
       },
     ] as const;
   }
@@ -390,7 +447,9 @@ export function compareVersions(left: string, right: string): number {
   const leftVersion = semanticVersion(left);
   const rightVersion = semanticVersion(right);
   if (!leftVersion || !rightVersion) {
-    return 0;
+    throw new Error(
+      `Cannot compare non-semantic release tags ${JSON.stringify(left)} and ${JSON.stringify(right)}`,
+    );
   }
   for (let index = 0; index < leftVersion.length; index += 1) {
     const difference = (leftVersion[index] ?? 0) - (rightVersion[index] ?? 0);
@@ -404,7 +463,7 @@ export function compareVersions(left: string, right: string): number {
 function semanticVersion(
   value: string,
 ): readonly [number, number, number] | undefined {
-  const match = value.match(/^(?:release-|v)?(\d+)\.(\d+)\.(\d+)$/);
+  const match = value.match(/^(?:bun-v|release-|v)?(\d+)\.(\d+)\.(\d+)$/);
   if (!match) {
     return undefined;
   }
@@ -441,6 +500,7 @@ async function fetchArchive(
         ...(token ? { Authorization: `Bearer ${token}` } : {}),
       },
       redirect: "follow",
+      signal: AbortSignal.timeout(githubArchiveTimeoutMs),
     },
   );
   if (!response.ok) {
@@ -559,6 +619,7 @@ async function githubFetch(pathname: string): Promise<Response> {
         ...(token ? { Authorization: `Bearer ${token}` } : {}),
       },
       redirect: "follow",
+      signal: AbortSignal.timeout(githubApiTimeoutMs),
     });
     if (response.ok) {
       return response;

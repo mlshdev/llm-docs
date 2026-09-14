@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/MetricsQL.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/MetricsQL.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/MetricsQL.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/MetricsQL.md)
 
 [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) implements MetricsQL -
 query language inspired by [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/).

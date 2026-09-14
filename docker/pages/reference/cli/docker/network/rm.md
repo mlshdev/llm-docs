@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_network_rm.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_network_rm.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_network_rm.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_network_rm.yaml)
 
 # docker network rm
 
@@ -15,9 +15,9 @@ you must first disconnect any containers connected to it.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--force` |  | Do not error if the network does not exist |
+| Option          | Default | Description                                |
+| --------------- | ------- | ------------------------------------------ |
+| `-f`, `--force` |         | Do not error if the network does not exist |
 
 ## Examples
 

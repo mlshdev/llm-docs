@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmctl/mimir.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/mimir.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmctl/mimir.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/mimir.md)
 
 GrafanaLabs Mimir supports [Prometheus remote read API](https://prometheus.io/docs/prometheus/latest/querying/remote_read_api/).
 `vmctl` in [remote-read mode](https://docs.victoriametrics.com/victoriametrics/vmctl/remoteread/) can be used
@@ -17,7 +17,7 @@ Load balancer expose single port `:9090`. As you can see in the example we call 
 The importing process example for the local installation of Mimir and single-node VictoriaMetrics(`http://localhost:8428`):
 
 ```
-./vmctl remote-read
+./vmctl remote-read 
 --remote-read-src-addr=http://<mimir>:9009/prometheus \
 --remote-read-filter-time-start=2021-10-18T00:00:00Z \
 --remote-read-step-interval=hour \
@@ -78,7 +78,7 @@ use Prometheus converter to read and sent data to VictoriaMetrics.
 The following example shows how to read data from the file system and import it into VictoriaMetrics:
 
 ```sh
-./vmctl mimir --mimir-path="fs:///mimir/test_data/mimir-tsdb" \                                               ? ? orbstack
+./vmctl mimir --mimir-path="fs:///mimir/test_data/mimir-tsdb" \                                               ? ? orbstack 
   --mimir-tenant-id=anonymous \
   --mimir-filter-time-start=2024-12-01T00:00:00 \
   --mimir-filter-time-end=2024-12-18T23:59:59 \
@@ -111,12 +111,12 @@ When the process finishes, you will see the following:
 ```sh
 2025/01/18 13:01:59 Fetching blocks from remote storage
 Found 204 blocks to import. Continue? [Y/n] y
-VM worker 0:? 1589405 samples/s
-VM worker 1:? 1911834 samples/s
-VM worker 2:? 1849187 samples/s
-VM worker 3:? 1648820 samples/s
-VM worker 4:? 1539212 samples/s
-VM worker 5:? 1411485 samples/s
+VM worker 0:? 1589405 samples/s                                                                                                                                                                                     
+VM worker 1:? 1911834 samples/s                                                                                                                                                                                     
+VM worker 2:? 1849187 samples/s                                                                                                                                                                                     
+VM worker 3:? 1648820 samples/s                                                                                                                                                                                     
+VM worker 4:? 1539212 samples/s                                                                                                                                                                                     
+VM worker 5:? 1411485 samples/s                                                                                                                                                                                     
 Processing blocks: 204 / 204 [?????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????] 100.00%
 2025/01/18 13:02:18 Import finished!
 2025/01/18 13:02:18 VictoriaMetrics importer stats:
@@ -164,19 +164,19 @@ OPTIONS:
    --mimir-s3-tls-insecure-skip-verify                                Whether to skip TLS verification when connecting to the S3 endpoint. (default: false)
    --mimir-s3-sse-kms-key-id value                                    SSE KMS Key ID for use with S3-compatible storages.
    --mimir-s3-sse-algorithm value                                     SSE algorithm for use with S3-compatible storages.
-   --vm-addr value                                                    VictoriaMetrics address to perform import requests.
-      Should be the same as --httpListenAddr value for single-node version or vminsert component.
-      When importing into the clustered version do not forget to set additionally --vm-account-id flag.
+   --vm-addr value                                                    VictoriaMetrics address to perform import requests. 
+      Should be the same as --httpListenAddr value for single-node version or vminsert component. 
+      When importing into the clustered version do not forget to set additionally --vm-account-id flag. 
       Please note, that vmctl performs initial readiness check for the given address by checking /health endpoint. (default: "http://localhost:8428")
    --vm-user value      VictoriaMetrics username for basic auth [$VM_USERNAME]
    --vm-password value  VictoriaMetrics password for basic auth [$VM_PASSWORD]
-   --vm-headers value   Optional HTTP headers to send with each request to the corresponding destination address.
-      For example, --vm-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding destination address.
+   --vm-headers value   Optional HTTP headers to send with each request to the corresponding destination address. 
+      For example, --vm-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding destination address. 
       Multiple headers must be delimited by '^^': --vm-headers='header1:value1^^header2:value2'
    --vm-bearer-token value  Optional bearer auth token to use for the corresponding --vm-addr
-   --vm-account-id value    AccountID is an arbitrary 32-bit integer identifying namespace for data ingestion (aka tenant).
-      AccountID is required when importing into the clustered version of VictoriaMetrics.
-      It is possible to set it as accountID:projectID, where projectID is also arbitrary 32-bit integer.
+   --vm-account-id value    AccountID is an arbitrary 32-bit integer identifying namespace for data ingestion (aka tenant). 
+      AccountID is required when importing into the clustered version of VictoriaMetrics. 
+      It is possible to set it as accountID:projectID, where projectID is also arbitrary 32-bit integer. 
       If projectID isn't set, then it equals to 0
    --vm-concurrency value                             Number of workers concurrently performing import requests to VM (default: 2)
    --vm-compress                                      Whether to apply gzip compression to import requests (default: true)

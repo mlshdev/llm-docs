@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/cli/docs/reference/dockerd.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/cli/docs/reference/dockerd.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/cli/docs/reference/dockerd.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/cli/docs/reference/dockerd.md)
 
 # daemon
 
@@ -818,7 +818,7 @@ $ cat > /etc/docker/daemon.json
 { "host-gateway-ips": ["192.0.2.1", "2001:db8::1111"]}
 $ sudo systemctl restart docker
 $ docker run -it --add-host host.docker.internal:host-gateway \
-  busybox ping host.docker.internal
+  busybox ping host.docker.internal 
 PING host.docker.internal (192.0.2.1): 56 data bytes
 $ docker run -it --add-host host.docker.internal:host-gateway \
   busybox ping -6 host.docker.internal

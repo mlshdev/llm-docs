@@ -1,4 +1,4 @@
-> Tag-pinned source for discord.py v2.7.1: [docs/ext/commands/api.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/ext/commands/api.rst)
+> Pinned source for discord.py v2.7.1: [docs/ext/commands/api.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/ext/commands/api.rst)
 
 # API Reference
 
@@ -55,8 +55,7 @@ command invocations.
 The command prefix could also be an iterable of strings indicating that
 multiple checks for the prefix should be used and the first one to
 match will be the invocation prefix. You can get this prefix via
-
-- **Attr:** `.Context.prefix`.
+`.Context.prefix`.
 
 > **Note**
 > When passing multiple prefixes be careful to not pass a prefix
@@ -86,9 +85,8 @@ information on implementing a help command, see [ext\_commands\_help\_command](h
 **owner\_id: Optional\[`int`]**
 
 The user ID that owns the bot. If this is not set and is then queried via
-
-- **Meth:** `.is_owner` then it is fetched automatically using
-- **Meth:** `~.Bot.application_info`.
+`.is_owner` then it is fetched automatically using
+`.Bot.application_info`.
 
 **owner\_ids: Optional\[Collection\[`int`]]**
 
@@ -214,8 +212,7 @@ have been verified and applies to every command the bot has.
 
 Similar to a command `.check`, this takes a single parameter
 of type `.Context` and can only raise exceptions inherited from
-
-- **Exc:** `.CommandError`.
+`.CommandError`.
 
 ## Example
 
@@ -252,8 +249,7 @@ the default help command.
 
 Similar to a command `.check`, this takes a single parameter
 of type `.Context` and can only raise exceptions inherited from
-
-- **Exc:** `.CommandError`.
+`.CommandError`.
 
 ## Example
 
@@ -366,8 +362,7 @@ The function being listened to is not a coroutine.
 #### `AutoShardedBot(BotBase, discord.AutoShardedClient)`
 
 This is similar to `.Bot` except that it is inherited from
-
-- **Class:** `discord.AutoShardedClient` instead.
+`discord.AutoShardedClient` instead.
 
 <a id="describe-async-with-x"></a>
 
@@ -416,7 +411,7 @@ bot = commands.Bot(command_prefix=commands.when_mentioned_or('!'))
 
 ## See Also
 
-- **Func:** `.when_mentioned`
+`.when_mentioned`
 
 <a id="ext-commands-api-events"></a>
 
@@ -531,9 +526,8 @@ and one that is also a `app_commands.Command`.
 
 The callback being attached to the command must be representable as an
 application command callback. Converters are silently converted into a
-
-- **Class:** `~discord.app_commands.Transformer` with a
-- **Attr:** `discord.AppCommandOptionType.string` type.
+`discord.app_commands.Transformer` with a
+`discord.AppCommandOptionType.string` type.
 
 Checks and error handlers are dispatched and called as-if they were commands
 similar to `.Command`. This means that they take `Context` as
@@ -665,9 +659,8 @@ the application command.
 A list of predicates that take a `discord.Interaction` parameter
 to indicate whether the command callback should be executed. If an exception
 is necessary to be thrown to signal failure, then one inherited from
-
-- **Exc:** `AppCommandError` should be used. If all the checks fail without
-  propagating an exception, `CheckFailure` is raised.
+`AppCommandError` should be used. If all the checks fail without
+propagating an exception, `CheckFailure` is raised.
 
 **default\_permissions: Optional\[`discord.Permissions`]**
 
@@ -717,7 +710,7 @@ The library will not touch any values or keys within this dictionary.
 
 ##### `callback(self) -> CommandCallback[GroupT, P, T]`
 
-- **Ref:** `coroutine <coroutine>`: The coroutine that is executed when the command is called.
+coroutine: The coroutine that is executed when the command is called.
 
 <a id="api-discord-ext-commands-command-parameters"></a>
 
@@ -764,7 +757,7 @@ Optional\[`Group`]: The root parent of this command.
 
 ##### `qualified_name(self) -> str`
 
-- **Class:** `str`: Returns the fully qualified command name.
+`str`: Returns the fully qualified command name.
 
 The qualified name includes the parent name as well. For example,
 in a command like `/foo bar` the qualified name is `foo bar`.
@@ -779,9 +772,8 @@ The coroutine callback must have 2 parameters, the `discord.Interaction`,
 and the current value by the user (the string currently being typed by the user).
 
 To get the values from other parameters that may be filled in, accessing
-
-- **Attr:** `.Interaction.namespace` will give a `Namespace` object with those
-  values.
+`.Interaction.namespace` will give a `Namespace` object with those
+values.
 
 Parent `checks` are ignored within an autocomplete. However, checks can be added
 to the autocomplete callback and the ones added will be called. If the checks fail for any reason
@@ -1077,7 +1069,7 @@ Optional\[`Group`]: The parent of this group.
 
 ##### `qualified_name(self) -> str`
 
-- **Class:** `str`: Returns the fully qualified group name.
+`str`: Returns the fully qualified group name.
 
 The qualified name includes the parent name as well. For example,
 in a group like `/foo bar` the qualified name is `foo bar`.
@@ -1139,9 +1131,8 @@ The default implementation of this returns `True`.
 > **Note**
 > If an exception occurs within the body then the check
 > is considered a failure and error handlers such as
->
-> - **Meth:** `on_error` is called. See `AppCommandError`
->   for more information.
+> `on_error` is called. See `AppCommandError`
+> for more information.
 
 ## Parameters
 
@@ -1386,8 +1377,7 @@ Set\[`.Command`]: A unique set of commands without aliases that are registered.
 Adds a `.Command` into the internal list of commands.
 
 This is usually not called, instead the `.GroupMixin.command` or
-
-- **Meth:** `~.GroupMixin.group` shortcut decorators are used instead.
+`.GroupMixin.group` shortcut decorators are used instead.
 
 > **Changed in version 1.4**
 > Raise `.CommandRegistrationError` instead of generic `.ClientException`
@@ -1651,8 +1641,7 @@ The fallback command name's locale string, if available.
 Adds a `.HybridCommand` into the internal list of commands.
 
 This is usually not called, instead the `.GroupMixin.command` or
-
-- **Meth:** `~.GroupMixin.group` shortcut decorators are used instead.
+`.GroupMixin.group` shortcut decorators are used instead.
 
 ## Parameters
 
@@ -1855,13 +1844,13 @@ defined inside this cog, not including subcommands.
 
 ##### `qualified_name(self) -> str`
 
-- **Class:** `str`: Returns the cog's specified name, not the class name.
+`str`: Returns the cog's specified name, not the class name.
 
 <a id="api-discord-ext-commands-cog-description"></a>
 
 ##### `description(self) -> str`
 
-- **Class:** `str`: Returns the cog's description, typically the cleaned docstring.
+`str`: Returns the cog's description, typically the cleaned docstring.
 
 <a id="api-discord-ext-commands-cog-walk-commands"></a>
 
@@ -1933,7 +1922,7 @@ the name.
 
 ##### `has_error_handler(self) -> bool`
 
-- **Class:** `bool`: Checks whether the cog has an error handler.
+`bool`: Checks whether the cog has an error handler.
 
 > **Added in version 1.7**
 
@@ -1941,7 +1930,7 @@ the name.
 
 ##### `has_app_command_error_handler(self) -> bool`
 
-- **Class:** `bool`: Checks whether the cog has an app error handler.
+`bool`: Checks whether the cog has an app error handler.
 
 > **Added in version 2.1**
 
@@ -2608,8 +2597,7 @@ You can override this method to customise the behaviour.
 >
 > To get the commands that belong to this cog see `Cog.get_commands`.
 > The commands returned not filtered. To do the filtering you will have to call
->
-> - **Meth:** `filter_commands` yourself.
+> `filter_commands` yourself.
 
 > **Changed in version 2.0**
 > `cog` parameter is now positional-only.
@@ -2640,9 +2628,8 @@ You can override this method to customise the behaviour.
 > You can access the invocation context with `HelpCommand.context`.
 >
 > To get the commands that belong to this group without aliases see
->
-> - **Attr:** `Group.commands`. The commands returned not filtered. To do the
->   filtering you will have to call `filter_commands` yourself.
+> `Group.commands`. The commands returned not filtered. To do the
+> filtering you will have to call `filter_commands` yourself.
 
 > **Changed in version 2.0**
 > `group` parameter is now positional-only.
@@ -2832,7 +2819,7 @@ The paginator used to paginate the help command output.
 
 ##### `shorten_text(self, text: str, /) -> str`
 
-- **Class:** `str`: Shortens text to fit into the `width`.
+`str`: Shortens text to fit into the `width`.
 
 > **Changed in version 2.0**
 > `text` parameter is now positional-only.
@@ -2841,7 +2828,7 @@ The paginator used to paginate the help command output.
 
 ##### `get_ending_note(self) -> str`
 
-- **Class:** `str`: Returns help command's ending note. This is mainly useful to override for i18n purposes.
+`str`: Returns help command's ending note. This is mainly useful to override for i18n purposes.
 
 <a id="api-discord-ext-commands-defaulthelpcommand-get-command-signature"></a>
 
@@ -2875,10 +2862,9 @@ Indents a list of commands after the specified heading.
 The formatting is added to the `paginator`.
 
 The default implementation is the command name indented by
-
-- **Attr:** `indent` spaces, padded to `max_size` followed by
-  the command's `Command.short_doc` and then shortened
-  to fit into the `width`.
+`indent` spaces, padded to `max_size` followed by
+the command's `Command.short_doc` and then shortened
+to fit into the `width`.
 
 > **Changed in version 2.0**
 > `commands` parameter is now positional-only.
@@ -2907,12 +2893,11 @@ commands parameter.
 Indents a list of command arguments after the `.arguments_heading`.
 
 The default implementation is the argument `.commands.Parameter.name` indented by
-
-- **Attr:** `indent` spaces, padded to `max_size` using `HelpCommand.get_max_size`
-  followed by the argument's `.commands.Parameter.description` or
-- **Attr:** `.default_argument_description` and then shortened
-  to fit into the `width` and then `.commands.Parameter.displayed_default`
-  between () if one is present after that.
+`indent` spaces, padded to `max_size` using `HelpCommand.get_max_size`
+followed by the argument's `.commands.Parameter.description` or
+`.default_argument_description` and then shortened
+to fit into the `width` and then `.commands.Parameter.displayed_default`
+between () if one is present after that.
 
 > **Added in version 2.0**
 
@@ -2940,8 +2925,7 @@ A utility function to format the non-indented block of commands and groups.
 > `command` parameter is now positional-only.
 
 > **Changed in version 2.0**
->
-> - **Meth:** `.add_command_arguments` is now called if `.show_parameter_descriptions` is `True`.
+> `.add_command_arguments` is now called if `.show_parameter_descriptions` is `True`.
 
 ## Parameters
 
@@ -3389,8 +3373,7 @@ Note that this check operates on the current channel permissions, not the
 guild wide permissions.
 
 The permissions passed in must be exactly like the properties shown under
-
-- **Class:** `.discord.Permissions`.
+`.discord.Permissions`.
 
 This check raises a special exception, `.MissingPermissions`
 that is inherited from `.CheckFailure`.
@@ -3520,8 +3503,7 @@ Denoted by the third argument of `type` which must be of enum
 type `.BucketType`.
 
 If a cooldown is triggered, then `.CommandOnCooldown` is triggered in
-
-- **Func:** `.on_command_error` and the local error handler.
+`.on_command_error` and the local error handler.
 
 A command can only have a single cooldown.
 
@@ -3564,8 +3546,7 @@ Denoted by the third argument of `type` which must be of enum
 type `.BucketType`.
 
 If a cooldown is triggered, then `.CommandOnCooldown` is triggered in
-
-- **Func:** `.on_command_error` and the local error handler.
+`.on_command_error` and the local error handler.
 
 A command can only have a single cooldown.
 
@@ -3610,9 +3591,8 @@ it to be used up to `number` times per guild.
 
 Whether the command should wait for the queue to be over. If this is set to `False`
 then instead of waiting until the command can run again, the command raises
-
-- **Exc:** `.MaxConcurrencyReached` to its error handler. If this is set to `True`
-  then the command waits until it can be executed.
+`.MaxConcurrencyReached` to its error handler. If this is set to `True`
+then the command waits until it can be executed.
 
 <a id="api-discord-ext-commands-before-invoke-coro"></a>
 
@@ -3784,8 +3764,7 @@ then this list could be incomplete.
 
 A dictionary of transformed arguments that were passed into the command.
 Similar to `args`, if this is accessed in the
-
-- **Func:** `.on_command_error` event then this dict could be incomplete.
+`.on_command_error` event then this dict could be incomplete.
 
 **current\_parameter: Optional\[`Parameter`]**
 
@@ -3893,8 +3872,7 @@ The interaction client is not derived from `Bot` or `AutoShardedBot`.
 Calls a command with the arguments given.
 
 This is useful if you want to just call the callback that a
-
-- **Class:** `.Command` holds internally.
+`.Command` holds internally.
 
 > **Note**
 > This does not handle converters, checks, cooldowns, pre-invoke,
@@ -3967,13 +3945,13 @@ The context to reinvoke is not valid.
 
 ##### `valid(self) -> bool`
 
-- **Class:** `bool`: Checks if the invocation context is valid to be invoked with.
+`bool`: Checks if the invocation context is valid to be invoked with.
 
 <a id="api-discord-ext-commands-context-clean-prefix"></a>
 
 ##### `clean_prefix(self) -> str`
 
-- **Class:** `str`: The cleaned up invoke prefix. i.e. mentions are `@name` instead of `<@id>`.
+`str`: The cleaned up invoke prefix. i.e. mentions are `@name` instead of `<@id>`.
 
 > **Added in version 2.0**
 
@@ -3987,7 +3965,7 @@ Optional\[`.Cog`]: Returns the cog associated with this context's command. None 
 
 ##### `filesize_limit(self) -> int`
 
-- **Class:** `int`: Returns the maximum number of bytes files can have when uploaded to this guild or DM channel associated with this context.
+`int`: Returns the maximum number of bytes files can have when uploaded to this guild or DM channel associated with this context.
 
 > **Added in version 2.3**
 
@@ -4022,8 +4000,8 @@ Similar to `.Guild.me` except it may return the `.ClientUser` in private message
 
 ##### `permissions(self) -> Permissions`
 
-- **Class:** `.Permissions`: Returns the resolved permissions for the invoking user in this channel.
-  Shorthand for `.abc.GuildChannel.permissions_for` or `.Interaction.permissions`.
+`.Permissions`: Returns the resolved permissions for the invoking user in this channel.
+Shorthand for `.abc.GuildChannel.permissions_for` or `.Interaction.permissions`.
 
 > **Added in version 2.0**
 
@@ -4031,8 +4009,8 @@ Similar to `.Guild.me` except it may return the `.ClientUser` in private message
 
 ##### `bot_permissions(self) -> Permissions`
 
-- **Class:** `.Permissions`: Returns the resolved permissions for the bot in this channel.
-  Shorthand for `.abc.GuildChannel.permissions_for` or `.Interaction.app_permissions`.
+`.Permissions`: Returns the resolved permissions for the bot in this channel.
+Shorthand for `.abc.GuildChannel.permissions_for` or `.Interaction.app_permissions`.
 
 For interaction-based commands, this will reflect the effective permissions
 for `Context` calls, which may differ from calls through
@@ -4064,8 +4042,7 @@ If no entity is given, then it'll show help for the
 entire bot.
 
 If the entity is a string, then it looks up whether it's a
-
-- **Class:** `Cog` or a `Command`.
+`Cog` or a `Command`.
 
 > **Note**
 > Due to the way this function works, instead of returning
@@ -4091,8 +4068,7 @@ The result of the help command, if any.
 *coroutine*
 
 A shortcut method to `send` to reply to the
-
-- **Class:** `~discord.Message` referenced by this context.
+`discord.Message` referenced by this context.
 
 For interaction based contexts, this is the same as `send`.
 
@@ -4100,8 +4076,7 @@ For interaction based contexts, this is the same as `send`.
 
 > **Changed in version 2.0**
 > This function will now raise `TypeError` or
->
-> - **Exc:** `ValueError` instead of `InvalidArgument`.
+> `ValueError` instead of `InvalidArgument`.
 
 ## Raises
 
@@ -4174,8 +4149,7 @@ For interaction based contexts this does one of the following:
 
 > **Changed in version 2.0**
 > This function will now raise `TypeError` or
->
-> - **Exc:** `ValueError` instead of `InvalidArgument`.
+> `ValueError` instead of `InvalidArgument`.
 
 ## Parameters
 
@@ -4224,10 +4198,9 @@ are used instead.
 **reference: Union\[`discord.Message`, `discord.MessageReference`, `discord.PartialMessage`]**
 
 A reference to the `discord.Message` to which you are replying, this can be created using
-
-- **Meth:** `~discord.Message.to_reference` or passed directly as a `discord.Message`. You can control
-  whether this mentions the author of the referenced message using the `discord.AllowedMentions.replied_user`
-  attribute of `allowed_mentions` or by setting `mention_author`.
+`discord.Message.to_reference` or passed directly as a `discord.Message`. You can control
+whether this mentions the author of the referenced message using the `discord.AllowedMentions.replied_user`
+attribute of `allowed_mentions` or by setting `mention_author`.
 
 This is ignored for interaction based contexts.
 
@@ -4307,8 +4280,7 @@ The `files` list is not of the appropriate size.
 You specified both `file` and `files`,
 or you specified both `embed` and `embeds`,
 or the `reference` object is not a `discord.Message`,
-
-- **Class:** `~discord.MessageReference` or `discord.PartialMessage`.
+`discord.MessageReference` or `discord.PartialMessage`.
 
 ## Returns
 
@@ -4677,8 +4649,7 @@ The lookup strategy is as follows (in order):
 Converts to a `discord.Role`.
 
 All lookups are via the local guild. If in a DM context, the converter raises
-
-- **Exc:** `.NoPrivateMessage` exception.
+`.NoPrivateMessage` exception.
 
 The lookup strategy is as follows (in order):
 
@@ -4911,9 +4882,8 @@ Some example ranges:
 Inside a `HybridCommand` this functions equivalently to `discord.app_commands.Range`.
 
 If the value cannot be converted to the provided type or is outside the given range,
-
-- **Class:** `~.ext.commands.BadArgument` or `.ext.commands.RangeError` is raised to
-  the appropriate error handlers respectively.
+`.ext.commands.BadArgument` or `.ext.commands.RangeError` is raised to
+the appropriate error handlers respectively.
 
 > **Added in version 2.0**
 
@@ -4978,8 +4948,7 @@ A converter that allows for a user-friendly flag syntax.
 The flags are defined using [PEP 526](https://peps.python.org/pep-0526/) type annotations similar
 to the `dataclasses` Python module. For more information on
 how this converter works, check the appropriate
-
-- **Ref:** `documentation <ext_commands_flag_converter>`.
+[documentation](https://discordpy.readthedocs.io/ext/commands/commands.html#ext-commands-flag-converter).
 
 <a id="describe-iter-x"></a>
 
@@ -5101,7 +5070,7 @@ Whether the flag is positional or not. There can only be one positional flag.
 
 ##### `required(self) -> bool`
 
-- **Class:** `bool`: Whether the flag is required.
+`bool`: Whether the flag is required.
 
 A required flag has no default value.
 
@@ -5125,9 +5094,8 @@ Aliases to the flag name. If not given no aliases are set.
 **default: Any**
 
 The default parameter. This could be either a value or a callable that takes
-
-- **Class:** `Context` as its sole parameter. If not given then it defaults to
-  the default value given to the attribute.
+`Context` as its sole parameter. If not given then it defaults to
+the default value given to the attribute.
 
 **max\_args: `int`**
 
@@ -5572,8 +5540,7 @@ the `__cause__` attribute.
 #### `TooManyArguments(UserInputError)`
 
 Exception raised when the command was passed too many arguments and its
-
-- **Attr:** `.Command.ignore_extra` attribute was not set to `True`.
+`.Command.ignore_extra` attribute was not set to `True`.
 
 This inherits from `UserInputError`
 
@@ -5599,8 +5566,7 @@ This inherits from `CommandError`
 **cooldown: `discord.app_commands.Cooldown`**
 
 A class with attributes `rate` and `per` similar to the
-
-- **Func:** `.cooldown` decorator.
+`.cooldown` decorator.
 
 **type: `BucketType`**
 

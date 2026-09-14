@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [examples/ocr/rolmocr.mdx](https://docs.vast.ai/examples/ocr/rolmocr)
+> Pinned source for Vast.ai main: [examples/ocr/rolmocr.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/examples/ocr/rolmocr.mdx)
+> Canonical documentation: https://docs.vast.ai/examples/ocr/rolmocr
 
 # Running RolmOCR
 
@@ -172,14 +173,14 @@ for sample in subset:
 Example output:
 
 ```
-Expected: {'invoice_number': '40378170', 'invoice_amount': '$8,25'}
-Extracted: {'invoice_number': '40378170', 'invoice_amount': '$8.25'}
+Expected: `{'invoice_number': '40378170', 'invoice_amount': '$8,25'}`
+Extracted: `{'invoice_number': '40378170', 'invoice_amount': '$8.25'}`
 
-Expected: {'invoice_number': '61356291', 'invoice_amount': '$ 212,09'}
-Extracted: {'invoice_number': '61356291', 'invoice_amount': '$212.09'}
+Expected: `{'invoice_number': '61356291', 'invoice_amount': '$ 212,09'}`
+Extracted: `{'invoice_number': '61356291', 'invoice_amount': '$212.09'}`
 
-Expected: {'invoice_number': '49565075', 'invoice_amount': '$96,73'}
-Extracted: {'invoice_number': '49565075', 'invoice_amount': '$96,73'}
+Expected: `{'invoice_number': '49565075', 'invoice_amount': '$96,73'}`
+Extracted: `{'invoice_number': '49565075', 'invoice_amount': '$96,73'}`
 ```
 
 The model accurately extracts invoice data with minor formatting differences (comma vs decimal point) that can be normalized downstream.

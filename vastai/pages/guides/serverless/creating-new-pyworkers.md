@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [guides/serverless/creating-new-pyworkers.mdx](https://docs.vast.ai/guides/serverless/creating-new-pyworkers)
+> Pinned source for Vast.ai main: [guides/serverless/creating-new-pyworkers.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/serverless/creating-new-pyworkers.mdx)
+> Canonical documentation: https://docs.vast.ai/guides/serverless/creating-new-pyworkers
 
 # Creating Custom PyWorkers
 
@@ -338,8 +339,8 @@ completions_handler = HandlerConfig(
     - Translate “public API” shape into “backend API” shape:
       ```python
       def my_request_parser(json_msg: dict) -> dict:
-          # Client sends: {"prompt": "...", "max_tokens": 128}
-          # Backend expects: {"input_text": "...", "limit": 128}
+          # Client sends: `{"prompt": "...", "max_tokens": 128}`
+          # Backend expects: `{"input_text": "...", "limit": 128}`
           return {
               "input_text": json_msg["prompt"],
               "limit": json_msg.get("max_tokens", 0),

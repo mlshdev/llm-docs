@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics datasource for Grafana v0.26.1: [src/README.md](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58cb4614080bded813362124d4a808d0359a1ccb/src/README.md)
+> Pinned source for VictoriaMetrics datasource for Grafana v0.26.1: [src/README.md](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58cb4614080bded813362124d4a808d0359a1ccb/src/README.md)
 
 # VictoriaMetrics datasource for Grafana
 
@@ -42,7 +42,7 @@ datasources:
     access: proxy
     url: http://victoriametrics:8428
     isDefault: true
-
+    
   - name: VictoriaMetrics - cluster
     type: victoriametrics-metrics-datasource
     access: proxy

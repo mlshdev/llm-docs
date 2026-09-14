@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/guides/frameworks/supabase-edge-functions-basic.mdx](https://trigger.dev/docs/guides/frameworks/supabase-edge-functions-basic)
+> Pinned source for Trigger.dev v4.5.16: [docs/guides/frameworks/supabase-edge-functions-basic.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/guides/frameworks/supabase-edge-functions-basic.mdx)
+> Canonical documentation: https://trigger.dev/docs/guides/frameworks/supabase-edge-functions-basic
 
 # Triggering tasks from Supabase edge functions
 

@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [sdk/python/reference/update-workers.mdx](https://docs.vast.ai/sdk/python/reference/update-workers)
+> Pinned source for Vast.ai main: [sdk/python/reference/update-workers.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/sdk/python/reference/update-workers.mdx)
+> Canonical documentation: https://docs.vast.ai/sdk/python/reference/update-workers
 
 # VastAI.update_workers
 

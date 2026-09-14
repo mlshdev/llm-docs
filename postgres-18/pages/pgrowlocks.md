@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/pgrowlocks.sgml#pgrowlocks](https://www.postgresql.org/docs/18/pgrowlocks.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/pgrowlocks.sgml#pgrowlocks](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/pgrowlocks.sgml%23pgrowlocks)
+> Canonical documentation: https://www.postgresql.org/docs/18/pgrowlocks.html
 
 # pgrowlocks — show a table's row locking information
 

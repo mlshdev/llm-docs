@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.1: [docs/sources/tutorials/create-alerts-from-flux-queries/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/tutorials/create-alerts-from-flux-queries/index.md)
+> Pinned source for Grafana v13.2.1: [docs/sources/tutorials/create-alerts-from-flux-queries/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/tutorials/create-alerts-from-flux-queries/index.md)
 
 # How to create Grafana alerts with InfluxDB and the Flux query language
 

@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/pm/npmrc.mdx](https://bun.com/docs/pm/npmrc)
+> Pinned source for Bun bun-v1.4.2: [docs/pm/npmrc.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/pm/npmrc.mdx)
+> Canonical documentation: https://bun.com/docs/pm/npmrc
 
 Bun loads configuration options from [`.npmrc`](https://docs.npmjs.com/cli/v10/configuring-npm/npmrc) files, so you can reuse your existing registry and scope configuration.
 
@@ -62,6 +63,7 @@ myorg = "http://localhost:4873/"
 # set an auth token for the registry
 # ${...} is a placeholder for environment variables
 //http://localhost:4873/:_authToken=${NPM_TOKEN}
+
 
 # or you could set a username and password
 # note that the password is base64 encoded

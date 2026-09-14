@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_cp.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_cp.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_cp.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_cp.yaml)
 
 # sbx cp
 
@@ -10,7 +10,7 @@ Copy files or directories between a sandbox and the host
 
 Either SRC or DST must be a sandbox path, written as SANDBOX:PATH.
 The other must be a local path. Copying between two sandboxes is not supported. Or — with --cloud — the cloud sandbox
-ID (sbx_*) or name from "sbx --cloud ls". Cloud transfers go through the Docker
+ID (sbx\_\*) or name from "sbx --cloud ls". Cloud transfers go through the Docker
 Sandboxes Cloud file API instead of the local sandboxd.
 
 When copying a directory, the directory itself is placed at the destination.
@@ -19,17 +19,17 @@ as a directory, the source is placed inside it.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-L`, `--follow-link` |  | Follow symbolic links in the source path |
+| Option                | Default | Description                              |
+| --------------------- | ------- | ---------------------------------------- |
+| `-L`, `--follow-link` |         | Follow symbolic links in the source path |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--cloud` |  | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (https://api.sandboxes-cloud.docker.com). Set DOCKER_CLOUD_API_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option            | Default                                  | Description                                                                                                                                                                                                             |
+| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
+| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
+| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
 
 ## Examples
 

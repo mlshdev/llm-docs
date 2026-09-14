@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/network/drivers/ipvlan.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/network/drivers/ipvlan.md)
+> Pinned source for Docker main: [content/manuals/engine/network/drivers/ipvlan.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/network/drivers/ipvlan.md)
 
 The IPvlan driver gives users total control over both IPv4 and IPv6 addressing.
 The VLAN driver builds on top of that in giving operators complete control of
@@ -552,6 +552,7 @@ $ docker network create -d ipvlan \
     --ipv6 --subnet=2001:db8:abc6::/64 \
     -o parent=eth0 \
     -o ipvlan_mode=l3 ipnet110
+
 
 # Start a few of containers on the network (ipnet110)
 # in separate terminals and check connectivity

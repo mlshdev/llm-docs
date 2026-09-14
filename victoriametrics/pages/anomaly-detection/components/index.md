@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/components/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/_index.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/components/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/_index.md)
 
 This chapter describes the configuration sections used to run VictoriaMetrics Anomaly Detection, or [`vmanomaly`](https://docs.victoriametrics.com/anomaly-detection/):
 
@@ -97,7 +97,7 @@ reader:
   "offset": "0s"  # offset to apply to all queries, e.g. to account for data delays, can be overridden on per-query basis
   queries:  # aliases to MetricsQL expressions
     cpu_seconds_total:
-      expr: 'avg(rate(node_cpu_seconds_total[5m])) by (mode)'
+      expr: 'avg(rate(node_cpu_seconds_total[5m])) by (mode)' 
       # step: '30s'  # if not set, will be equal to reader-level sampling_period
       data_range: [0, 'inf']  # query-level business policy from v1.30.2
       detection_direction: 'above_expected'  # query-level from v1.30.2; detect spikes only
@@ -118,6 +118,7 @@ writer:
   metric_format:
     __name__: $VAR
     for: $QUERY_KEY
+    
 
 # enable self-monitoring in pull and/or push mode
 # https://docs.victoriametrics.com/anomaly-detection/components/monitoring/
@@ -191,7 +192,7 @@ reader:
       expr: 'rate(node_network_receive_errs_total[3m]) / rate(node_network_receive_packets_total[3m])'
       step: '15s'
       data_range: [0, 'inf']
-
+  
 models:
   zscore:
     class: 'zscore_online'

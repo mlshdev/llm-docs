@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/scout/integrations/environment/cli.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/scout/integrations/environment/cli.md)
+> Pinned source for Docker main: [content/manuals/scout/integrations/environment/cli.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/scout/integrations/environment/cli.md)
 
 # Generic environment integration with CLI
 
@@ -107,7 +107,7 @@ stage('Record environment') {
     steps {
         // Install Docker Scout
         sh 'curl -sSfL https://raw.githubusercontent.com/docker/scout-cli/main/install.sh | sh -s -- -b /usr/local/bin'
-
+        
         // Log into Docker Hub
         sh 'echo $DOCKER_SCOUT_HUB_PASSWORD | docker login -u $DOCKER_SCOUT_HUB_USER --password-stdin'
 

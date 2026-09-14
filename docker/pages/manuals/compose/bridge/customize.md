@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/bridge/customize.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/bridge/customize.md)
+> Pinned source for Docker main: [content/manuals/compose/bridge/customize.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/bridge/customize.md)
 
 **Compose bridge requirements**
 
@@ -114,7 +114,7 @@ $ docker build --tag mycompany/transform --push .
 Use your transformation as a replacement:
 
 ```console
-$ docker compose bridge convert --transformations mycompany/transform
+$ docker compose bridge convert --transformations mycompany/transform 
 ```
 
 #### Model Runner templates
@@ -160,7 +160,7 @@ metadata:
   name: virtual-host-ingress
   namespace: {{ $project }}
 spec:
-  rules:
+  rules:  
 {{ range $name, $service := .services }}
 {{ range index $service "x-virtual-host" }}
   - host: ${{ . }}
@@ -171,7 +171,7 @@ spec:
           service:
             name: ${{ name }}
             port:
-              number: 80
+              number: 80  
 {{ end }}
 {{ end }}
 ```
@@ -183,7 +183,7 @@ transformations:
 ```console
 $ docker compose bridge convert \
     --transformation docker/compose-bridge-kubernetes \
-    --transformation mycompany/transform
+    --transformation mycompany/transform 
 ```
 
 ### Build your own transformation

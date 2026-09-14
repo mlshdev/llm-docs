@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/scout/docker_scout_repo_list.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_repo_list.yaml)
+> Pinned source for Docker main: [data/cli/scout/docker_scout_repo_list.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_repo_list.yaml)
 
 # docker scout repo list
 
@@ -14,10 +14,10 @@ If ORG is not provided the default configured organization will be used.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--filter` |  | Regular expression to filter repositories by name |
-| `--only-disabled` |  | Filter to disabled repositories only |
-| `--only-enabled` |  | Filter to enabled repositories only |
-| `--only-registry` |  | Filter to a specific registry only: - hub.docker.com - ecr (AWS ECR) |
-| `--org` |  | Namespace of the Docker organization |
+| Option            | Default | Description                                                          |
+| ----------------- | ------- | -------------------------------------------------------------------- |
+| `--filter`        |         | Regular expression to filter repositories by name                    |
+| `--only-disabled` |         | Filter to disabled repositories only                                 |
+| `--only-enabled`  |         | Filter to enabled repositories only                                  |
+| `--only-registry` |         | Filter to a specific registry only: - hub.docker.com - ecr (AWS ECR) |
+| `--org`           |         | Namespace of the Docker organization                                 |

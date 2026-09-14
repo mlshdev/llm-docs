@@ -25,7 +25,6 @@ jobs:
       issues: write
     outputs:
       changed: ${{ steps.changes.outputs.changed }}
-      publish: ${{ steps.publish.outputs.publish }}
       base-sha: ${{ github.sha }}
     steps:
       - name: Check out repository without write credentials
@@ -86,7 +85,12 @@ jobs:
           fi
 
           bun run src/cli.ts report > issue-body.md
-          fingerprint="$(grep -o 'pipeline-fingerprint: [0-9a-f]*' issue-body.md | head -1)"
+          fingerprint="$(sed -nE 's/^<!-- pipeline-fingerprint: ([0-9a-f]{16}) -->$/\1/p' issue-body.md)"
+          if [[ ! "${fingerprint}" =~ ^[0-9a-f]{16}$ ]]; then
+            echo "::error::Generated issue body has no valid 16-character fingerprint."
+            exit 1
+          fi
+          fingerprint_marker="pipeline-fingerprint: ${fingerprint}"
 
           if [[ -z "${existing}" ]]; then
             gh label create pipeline-health --color "d93f0b" --description "Upstream documentation the generator cannot convert yet" --force
@@ -94,7 +98,7 @@ jobs:
             exit 0
           fi
 
-          if gh issue view "${existing}" --json body --jq '.body' | grep -qF "${fingerprint}"; then
+          if gh issue view "${existing}" --json body --jq '.body' | grep -qF "${fingerprint_marker}"; then
             echo "Tracking issue #${existing} already describes this drift."
             exit 0
           fi
@@ -148,28 +152,6 @@ jobs:
           name: "generated-documentation"
           path: "_publish"
           if-no-files-found: error
-          retention-days: "1"
-      - name: Decide whether to publish Pages
-        id: publish
-        shell: bash
-        env:
-          CHANGED: ${{ steps.changes.outputs.changed }}
-          EVENT_NAME: ${{ github.event_name }}
-        run: |
-          set -euo pipefail
-          if [[ "$CHANGED" == "true" || "$EVENT_NAME" != "schedule" ]]; then
-            echo "publish=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "publish=false" >> "$GITHUB_OUTPUT"
-          fi
-      - name: Prepare Pages artifact
-        if: steps.publish.outputs.publish == 'true'
-        run: bun run site
-      - name: Upload Pages artifact
-        if: steps.publish.outputs.publish == 'true'
-        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
-        with:
-          path: "_site"
           retention-days: "1"
 
   commit:
@@ -251,28 +233,3 @@ jobs:
 
           echo "::error::Could not push generated documentation after 3 attempts."
           exit 1
-
-  deploy:
-    if: >-
-      ${{ !cancelled()
-      && needs.build.result == 'success'
-      && needs.commit.result != 'failure'
-      && needs.commit.result != 'cancelled'
-      && needs.build.outputs.publish == 'true' }}
-    needs:
-      - build
-      - commit
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Configure Pages
-        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
-      - name: Deploy GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0

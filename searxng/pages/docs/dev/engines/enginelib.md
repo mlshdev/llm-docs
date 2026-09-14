@@ -1,15 +1,17 @@
-> Commit-pinned source for SearXNG master: [docs/dev/engines/enginelib.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/enginelib.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/enginelib.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/enginelib.rst)
 
-.. \_searx.enginelib:
+<a id="searx-enginelib"></a>
 
 # Engine Library
 
-.. automodule:: searx.enginelib
-:members:
+#### `searx.enginelib`
 
-.. \_searx.enginelib.traits:
+Static Python API reference (`automodule`).
+
+<a id="searx-enginelib-traits"></a>
 
 # Engine traits
 
-.. automodule:: searx.enginelib.traits
-:members:
+#### `searx.enginelib.traits`
+
+Static Python API reference (`automodule`).

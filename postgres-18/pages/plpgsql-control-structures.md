@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/plpgsql.sgml#plpgsql-control-structures](https://www.postgresql.org/docs/18/plpgsql-control-structures.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/plpgsql.sgml#plpgsql-control-structures](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/plpgsql.sgml%23plpgsql-control-structures)
+> Canonical documentation: https://www.postgresql.org/docs/18/plpgsql-control-structures.html
 
 # Control Structures
 
@@ -212,6 +213,7 @@ IF boolean-expression THEN
  ELSIF boolean-expression THEN
     statements
     ...
+
 
  ELSE
     statements 

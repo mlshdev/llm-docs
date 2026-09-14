@@ -7,7 +7,9 @@ Source commit: 83fc70c6aced8c99a0a445a872ee891191b98517
 # Document: VictoriaMetrics
 
 Source path: docs/victoriametrics/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/_index.md
+Description: VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes.
 
 VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes.
 
@@ -3429,7 +3431,9 @@ The VictoriaMetrics playgrounds have been moved to [Playgrounds](https://docs.vi
 # Document: Quick start
 
 Source path: docs/victoriametrics/Quick-Start.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/Quick-Start.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/Quick-Start.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/Quick-Start.md
+Description: There are two ways to get started with VictoriaMetrics:
 
 There are two ways to get started with VictoriaMetrics:
 
@@ -4076,7 +4080,9 @@ To avoid excessive resource usage or performance degradation, limits must be in 
 # Document: Single-node version
 
 Source path: docs/victoriametrics/Single-server-VictoriaMetrics.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/Single-server-VictoriaMetrics.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/Single-server-VictoriaMetrics.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/Single-server-VictoriaMetrics.md
+Description: VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes.
 
 VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes.
 
@@ -7498,7 +7504,9 @@ The VictoriaMetrics playgrounds have been moved to [Playgrounds](https://docs.vi
 # Document: Cluster version
 
 Source path: docs/victoriametrics/Cluster-VictoriaMetrics.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/Cluster-VictoriaMetrics.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/Cluster-VictoriaMetrics.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/Cluster-VictoriaMetrics.md
+Description: VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes.
 
 VictoriaMetrics is a fast, cost-effective, and scalable solution for monitoring and managing time series data. It delivers high performance and reliability, making it an ideal choice for businesses of all sizes.
 
@@ -9928,7 +9936,9 @@ These flags are available only in [VictoriaMetrics enterprise](https://docs.vict
 # Document: vmagent
 
 Source path: docs/victoriametrics/vmagent.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmagent.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmagent.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmagent.md
+Description: vmagent is a tiny agent that helps you collect metrics from various sources, relabel and filter the collected metrics and store them in VictoriaMetrics or any other storage systems via the Prometheus remotewrite protoco…
 
 `vmagent` is a tiny agent that helps you collect metrics from various sources,
 [relabel and filter the collected metrics](https://docs.victoriametrics.com/victoriametrics/relabeling/)
@@ -10647,7 +10657,7 @@ corresponding `-remoteWrite.url`. Separate multiple label names with `^^`.
   -remoteWrite.url=http://<external-service2> \
   -remoteWrite.obfuscateLabels='instance' \
   -remoteWrite.url=http://<internal-service> \
-  -remoteWrite.obfuscateLabels=''
+  -remoteWrite.obfuscateLabels='' 
 ```
 
 ## Automatically generated metrics
@@ -12272,7 +12282,9 @@ Moved to [integrations/kafka/#kafka-broker-authorization-and-authentication](htt
 # Document: vmalert
 
 Source path: docs/victoriametrics/vmalert.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert.md
+Description: vmalert executes a list of the given alerting or recording rules against configured -datasource.url. For sending alerting notifications vmalert relies on Alertmanager configured via -notifier.url flag. Recording rules r…
 
 `vmalert` executes a list of the given [alerting](https://docs.victoriametrics.com/victoriametrics/vmalert/#alerting-rules)
 or [recording](https://docs.victoriametrics.com/victoriametrics/vmalert/#recording-rules)
@@ -12531,7 +12543,7 @@ expr: <string>
 # Labels are merged with labels received from `expr` evaluation and uniquely identify each generated alert.
 #
 # In case of conflicts, original labels are kept with prefix `exported_`.
-# As a special case, specifying a label with an empty string value removes the label from the result if it exists
+# As a special case, specifying a label with an empty string value removes the label from the result if it exists 
 # in the original query result; otherwise, it is ignored.
 #
 # Labels only support limited templating variables in https://docs.victoriametrics.com/victoriametrics/vmalert/#templating,
@@ -12563,7 +12575,7 @@ expr: <string>
 # Labels to add or overwrite labels from other external label sources, such as group labels, before storing the result.
 #
 # In case of conflicts, original labels are kept with prefix `exported_`.
-# As a special case, specifying a label with an empty string value removes the label from the result if it exists
+# As a special case, specifying a label with an empty string value removes the label from the result if it exists 
 # in the original query result; otherwise, it is ignored.
 #
 # Labels do not support templating in https://docs.victoriametrics.com/victoriametrics/vmalert/#templating due to cardinality concerns. See https://github.com/VictoriaMetrics/VictoriaMetrics/issues/8171.
@@ -13856,7 +13868,7 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/vmalert/ .
   -remoteRead.oauth2.scopes string
      Optional OAuth2 scopes to use for -remoteRead.url. Scopes must be delimited by ';'.
   -remoteRead.oauth2.tokenUrl string
-     Optional OAuth2 tokenURL to use for -remoteRead.url.
+     Optional OAuth2 tokenURL to use for -remoteRead.url. 
   -remoteRead.showURL
      Whether to show -remoteRead.url in the exported metrics. It is hidden by default, since it can contain sensitive info such as auth key
   -remoteRead.tlsCAFile string
@@ -13953,16 +13965,16 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/vmalert/ .
      Examples:
       -rule="/path/to/file". Path to a single file with alerting rules.
       -rule="http://<some-server-addr>/path/to/rules". HTTP URL to a page with alerting rules.
-      -rule="dir/*.yaml" -rule="/*.yaml" -rule="gcs://vmalert-rules/tenant_%{TENANT_ID}/prod".
+      -rule="dir/*.yaml" -rule="/*.yaml" -rule="gcs://vmalert-rules/tenant_%{TENANT_ID}/prod". 
       -rule="dir/**/*.yaml". Includes all the .yaml files in "dir" subfolders recursively.
      Rule files support YAML multi-document. Files may contain %{ENV_VAR} placeholders, which are substituted by the corresponding env vars.
-
+     
      Enterprise version of vmalert supports S3 and GCS paths to rules.
      For example: gs://bucket/path/to/rules, s3://bucket/path/to/rules
      S3 and GCS paths support only matching by prefix, e.g. s3://bucket/dir/rule_ matches
      all files with prefix rule_ in folder dir.
      See https://docs.victoriametrics.com/victoriametrics/vmalert/#reading-rules-from-object-storage
-
+     
      Supports an array of values separated by comma or specified via multiple flags.
      Each array item can contain comma inside single-quoted or double-quoted string, {}, [] and () braces.
   -rule.defaultRuleType string
@@ -13984,7 +13996,7 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/vmalert/ .
       -rule.templates="dir/*.tpl" -rule.templates="/*.tpl". Relative path to all .tpl files in "dir" folder,
      absolute path to all .tpl files in root.
       -rule.templates="dir/**/*.tpl". Includes all the .tpl files in "dir" subfolders recursively.
-
+     
      Supports an array of values separated by comma or specified via multiple flags.
      Each array item can contain comma inside single-quoted or double-quoted string, {}, [] and () braces.
   -rule.updateEntriesLimit int
@@ -14439,7 +14451,9 @@ ARM build may run on Raspberry Pi or on [energy-efficient ARM servers](https://b
 # Document: vmauth
 
 Source path: docs/victoriametrics/vmauth.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmauth.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmauth.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmauth.md
+Description: vmauth is an HTTP proxy, which can authorize, route, and load balance requests across VictoriaMetrics components or any other HTTP backends.
 
 `vmauth` is an HTTP proxy, which can [authorize](https://docs.victoriametrics.com/victoriametrics/vmauth/#authorization), [route](https://docs.victoriametrics.com/victoriametrics/vmauth/#routing), and [load balance](https://docs.victoriametrics.com/victoriametrics/vmauth/#load-balancing) requests across [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) components or any other HTTP backends.
 
@@ -16385,7 +16399,9 @@ These flags are available only in [VictoriaMetrics enterprise](https://docs.vict
 # Document: vmbackup
 
 Source path: docs/victoriametrics/vmbackup.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmbackup.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmbackup.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmbackup.md
+Description: vmbackup creates backups of VictoriaMetrics data to protect against hardware failures and accidental data loss. Whether you are using a single-node or a cluster version, it is recommended to use vmbackup to perform peri…
 
 `vmbackup` creates backups of VictoriaMetrics data to protect against hardware failures and accidental data loss.
 Whether you are using a single-node  or a cluster version, it is recommended to use `vmbackup` to perform periodical data backup from instant snapshots.
@@ -16951,7 +16967,9 @@ ROOT_IMAGE=scratch make package-vmbackup
 # Document: vmrestore
 
 Source path: docs/victoriametrics/vmrestore.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmrestore.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmrestore.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmrestore.md
+Description: vmrestore restores data from backups created by vmbackup.
 
 `vmrestore` restores data from backups created by [vmbackup](https://docs.victoriametrics.com/victoriametrics/vmbackup/).
 
@@ -17216,7 +17234,9 @@ ROOT_IMAGE=scratch make package-vmrestore
 # Document: vmctl
 
 Source path: docs/victoriametrics/vmctl/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/_index.md
+Description: VictoriaMetrics command-line tool (vmctl) provides the following migration modes:
 
 VictoriaMetrics command-line tool (**vmctl**) provides the following migration modes:
 
@@ -17529,6 +17549,7 @@ NAME:
 USAGE:
    vmctl [global options] command [command options]
 
+
 COMMANDS:
    opentsdb      Migrate time series from OpenTSDB
    influx        Migrate time series from InfluxDB
@@ -17599,7 +17620,9 @@ Moved to [vmctl#migration-tips](https://docs.victoriametrics.com/victoriametrics
 # Document: Prometheus
 
 Source path: docs/victoriametrics/vmctl/prometheus.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/prometheus.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/prometheus.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/prometheus.md
+Description: vmctl can migrate historical data from Prometheus to VictoriaMetrics by reading Prometheus snapshot. See ./vmctl prometheus --help for details and full list of flags. Also see Prometheus related articles.
 
 `vmctl` can migrate historical data from Prometheus to VictoriaMetrics by reading [Prometheus snapshot](https://prometheus.io/docs/prometheus/latest/querying/api/#snapshot).
 See `./vmctl prometheus --help` for details and full list of flags. Also see Prometheus [related articles](https://docs.victoriametrics.com/victoriametrics/vmctl/#articles).
@@ -17733,19 +17756,19 @@ OPTIONS:
    --prom-filter-label value                                          Prometheus label name to filter timeseries by. E.g. '__name__' will filter timeseries by name.
    --prom-filter-label-value value                                    Prometheus regular expression to filter label from "prom-filter-label" flag. (default: ".*")
    --prom-tmp-dir-path value                                          Path to directory to be used for temporary files. (default: os.TempDir())
-   --vm-addr value                                                    VictoriaMetrics address to perform import requests.
-      Should be the same as --httpListenAddr value for single-node version or vminsert component.
-      When importing into the clustered version do not forget to set additionally --vm-account-id flag.
+   --vm-addr value                                                    VictoriaMetrics address to perform import requests. 
+      Should be the same as --httpListenAddr value for single-node version or vminsert component. 
+      When importing into the clustered version do not forget to set additionally --vm-account-id flag. 
       Please note, that vmctl performs initial readiness check for the given address by checking /health endpoint. (default: "http://localhost:8428")
    --vm-user value      VictoriaMetrics username for basic auth [$VM_USERNAME]
    --vm-password value  VictoriaMetrics password for basic auth [$VM_PASSWORD]
-   --vm-headers value   Optional HTTP headers to send with each request to the corresponding destination address.
-      For example, --vm-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding destination address.
+   --vm-headers value   Optional HTTP headers to send with each request to the corresponding destination address. 
+      For example, --vm-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding destination address. 
       Multiple headers must be delimited by '^^': --vm-headers='header1:value1^^header2:value2'
    --vm-bearer-token value  Optional bearer auth token to use for the corresponding --vm-addr
-   --vm-account-id value    AccountID is an arbitrary 32-bit integer identifying namespace for data ingestion (aka tenant).
-      AccountID is required when importing into the clustered version of VictoriaMetrics.
-      It is possible to set it as accountID:projectID, where projectID is also arbitrary 32-bit integer.
+   --vm-account-id value    AccountID is an arbitrary 32-bit integer identifying namespace for data ingestion (aka tenant). 
+      AccountID is required when importing into the clustered version of VictoriaMetrics. 
+      It is possible to set it as accountID:projectID, where projectID is also arbitrary 32-bit integer. 
       If projectID isn't set, then it equals to 0
    --vm-concurrency value                             Number of workers concurrently performing import requests to VM (default: 2)
    --vm-compress                                      Whether to apply gzip compression to import requests (default: true)
@@ -17770,7 +17793,9 @@ OPTIONS:
 # Document: InfluxDB
 
 Source path: docs/victoriametrics/vmctl/influxdb.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/influxdb.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/influxdb.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/influxdb.md
+Description: vmctl can migrate historical data from InfluxDB (v1) to VictoriaMetrics. See ./vmctl influx --help for details and full list of flags. Also see migrating data from InfluxDB to VictoriaMetrics article.
 
 `vmctl` can migrate historical data from InfluxDB (v1) to VictoriaMetrics. See `./vmctl influx --help` for details and
 full list of flags. Also see [migrating data from InfluxDB to VictoriaMetrics](https://docs.victoriametrics.com/guides/migrate-from-influx/) article.
@@ -17918,19 +17943,19 @@ OPTIONS:
    --influx-CA-file value                      Optional path to TLS CA file to use for verifying connections to -influx-addr. By default, system CA is used
    --influx-server-name value                  Optional TLS server name to use for connections to -influx-addr. By default, the server name from -influx-addr is used
    --influx-insecure-skip-verify               Whether to skip tls verification when connecting to -influx-addr (default: false)
-   --vm-addr value                             VictoriaMetrics address to perform import requests.
-      Should be the same as --httpListenAddr value for single-node version or vminsert component.
-      When importing into the clustered version do not forget to set additionally --vm-account-id flag.
+   --vm-addr value                             VictoriaMetrics address to perform import requests. 
+      Should be the same as --httpListenAddr value for single-node version or vminsert component. 
+      When importing into the clustered version do not forget to set additionally --vm-account-id flag. 
       Please note, that vmctl performs initial readiness check for the given address by checking /health endpoint. (default: "http://localhost:8428")
    --vm-user value      VictoriaMetrics username for basic auth [$VM_USERNAME]
    --vm-password value  VictoriaMetrics password for basic auth [$VM_PASSWORD]
-   --vm-headers value   Optional HTTP headers to send with each request to the corresponding destination address.
-      For example, --vm-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding destination address.
+   --vm-headers value   Optional HTTP headers to send with each request to the corresponding destination address. 
+      For example, --vm-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding destination address. 
       Multiple headers must be delimited by '^^': --vm-headers='header1:value1^^header2:value2'
    --vm-bearer-token value  Optional bearer auth token to use for the corresponding --vm-addr
-   --vm-account-id value    AccountID is an arbitrary 32-bit integer identifying namespace for data ingestion (aka tenant).
-      AccountID is required when importing into the clustered version of VictoriaMetrics.
-      It is possible to set it as accountID:projectID, where projectID is also arbitrary 32-bit integer.
+   --vm-account-id value    AccountID is an arbitrary 32-bit integer identifying namespace for data ingestion (aka tenant). 
+      AccountID is required when importing into the clustered version of VictoriaMetrics. 
+      It is possible to set it as accountID:projectID, where projectID is also arbitrary 32-bit integer. 
       If projectID isn't set, then it equals to 0
    --vm-concurrency value                             Number of workers concurrently performing import requests to VM (default: 2)
    --vm-compress                                      Whether to apply gzip compression to import requests (default: true)
@@ -17955,7 +17980,9 @@ OPTIONS:
 # Document: OpenTSDB
 
 Source path: docs/victoriametrics/vmctl/opentsdb.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/opentsdb.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/opentsdb.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/opentsdb.md
+Description: vmctl can migrate historical data from OpenTSDB to VictoriaMetrics. See ./vmctl opentsdb --help for details and full list of flags.
 
 `vmctl` can migrate historical data from OpenTSDB to VictoriaMetrics.
 See `./vmctl opentsdb --help` for details and full list of flags.
@@ -17991,7 +18018,7 @@ We can query multiple chunks at once, but we shouldn't perform too many chunks a
 
 ```sh
 $ ./vmctl opentsdb --otsdb-addr http://opentsdb:4242/ --otsdb-retentions sum-1m-avg:1h:1d \
-  --otsdb-filters system \
+  --otsdb-filters system \ 
   --otsdb-normalize \
   --vm-addr <victoriametrics-addr>:8428 \
 OpenTSDB import mode
@@ -18128,19 +18155,19 @@ OPTIONS:
    --otsdb-CA-file value                                              Optional path to TLS CA file to use for verifying connections to -otsdb-addr. By default, system CA is used
    --otsdb-server-name value                                          Optional TLS server name to use for connections to -otsdb-addr. By default, the server name from -otsdb-addr is used
    --otsdb-insecure-skip-verify                                       Whether to skip tls verification when connecting to -otsdb-addr (default: false)
-   --vm-addr value                                                    VictoriaMetrics address to perform import requests.
-      Should be the same as --httpListenAddr value for single-node version or vminsert component.
-      When importing into the clustered version do not forget to set additionally --vm-account-id flag.
+   --vm-addr value                                                    VictoriaMetrics address to perform import requests. 
+      Should be the same as --httpListenAddr value for single-node version or vminsert component. 
+      When importing into the clustered version do not forget to set additionally --vm-account-id flag. 
       Please note, that vmctl performs initial readiness check for the given address by checking /health endpoint. (default: "http://localhost:8428")
    --vm-user value      VictoriaMetrics username for basic auth [$VM_USERNAME]
    --vm-password value  VictoriaMetrics password for basic auth [$VM_PASSWORD]
-   --vm-headers value   Optional HTTP headers to send with each request to the corresponding destination address.
-      For example, --vm-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding destination address.
+   --vm-headers value   Optional HTTP headers to send with each request to the corresponding destination address. 
+      For example, --vm-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding destination address. 
       Multiple headers must be delimited by '^^': --vm-headers='header1:value1^^header2:value2'
    --vm-bearer-token value  Optional bearer auth token to use for the corresponding --vm-addr
-   --vm-account-id value    AccountID is an arbitrary 32-bit integer identifying namespace for data ingestion (aka tenant).
-      AccountID is required when importing into the clustered version of VictoriaMetrics.
-      It is possible to set it as accountID:projectID, where projectID is also arbitrary 32-bit integer.
+   --vm-account-id value    AccountID is an arbitrary 32-bit integer identifying namespace for data ingestion (aka tenant). 
+      AccountID is required when importing into the clustered version of VictoriaMetrics. 
+      It is possible to set it as accountID:projectID, where projectID is also arbitrary 32-bit integer. 
       If projectID isn't set, then it equals to 0
    --vm-concurrency value                             Number of workers concurrently performing import requests to VM (default: 2)
    --vm-compress                                      Whether to apply gzip compression to import requests (default: true)
@@ -18165,7 +18192,9 @@ OPTIONS:
 # Document: Remote Read
 
 Source path: docs/victoriametrics/vmctl/remoteread.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/remoteread.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/remoteread.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/remoteread.md
+Description: vmctl supports remote-read mode for migrating data from remote databases that support Prometheus remote read API.
 
 `vmctl` supports `remote-read` mode for migrating data from remote databases that support
 [Prometheus remote read API](https://prometheus.io/docs/prometheus/latest/querying/remote_read_api/).
@@ -18266,8 +18295,8 @@ OPTIONS:
    --remote-read-user value                                                           Remote read username for basic auth [$REMOTE_READ_USERNAME]
    --remote-read-password value                                                       Remote read password for basic auth [$REMOTE_READ_PASSWORD]
    --remote-read-http-timeout value                                                   Timeout defines timeout for HTTP requests made by remote read client (default: 0s)
-   --remote-read-headers value                                                        Optional HTTP headers to send with each request to the corresponding remote source storage
-      For example, --remote-read-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding remote source storage.
+   --remote-read-headers value                                                        Optional HTTP headers to send with each request to the corresponding remote source storage 
+      For example, --remote-read-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding remote source storage. 
       Multiple headers must be delimited by '^^': --remote-read-headers='header1:value1^^header2:value2'
    --remote-read-cert-file value       Optional path to client-side TLS certificate file to use when connecting to -remote-read-src-addr
    --remote-read-key-file value        Optional path to client-side TLS key to use when connecting to -remote-read-src-addr
@@ -18275,19 +18304,19 @@ OPTIONS:
    --remote-read-server-name value     Optional TLS server name to use for connections to remoteReadSrcAddr. By default, the server name from -remote-read-src-addr is used
    --remote-read-insecure-skip-verify  Whether to skip TLS certificate verification when connecting to the remote read address (default: false)
    --remote-read-disable-path-append   Whether to disable automatic appending of the /api/v1/read suffix to --remote-read-src-addr (default: false)
-   --vm-addr value                     VictoriaMetrics address to perform import requests.
-      Should be the same as --httpListenAddr value for single-node version or vminsert component.
-      When importing into the clustered version do not forget to set additionally --vm-account-id flag.
+   --vm-addr value                     VictoriaMetrics address to perform import requests. 
+      Should be the same as --httpListenAddr value for single-node version or vminsert component. 
+      When importing into the clustered version do not forget to set additionally --vm-account-id flag. 
       Please note, that vmctl performs initial readiness check for the given address by checking /health endpoint. (default: "http://localhost:8428")
    --vm-user value      VictoriaMetrics username for basic auth [$VM_USERNAME]
    --vm-password value  VictoriaMetrics password for basic auth [$VM_PASSWORD]
-   --vm-headers value   Optional HTTP headers to send with each request to the corresponding destination address.
-      For example, --vm-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding destination address.
+   --vm-headers value   Optional HTTP headers to send with each request to the corresponding destination address. 
+      For example, --vm-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding destination address. 
       Multiple headers must be delimited by '^^': --vm-headers='header1:value1^^header2:value2'
    --vm-bearer-token value  Optional bearer auth token to use for the corresponding --vm-addr
-   --vm-account-id value    AccountID is an arbitrary 32-bit integer identifying namespace for data ingestion (aka tenant).
-      AccountID is required when importing into the clustered version of VictoriaMetrics.
-      It is possible to set it as accountID:projectID, where projectID is also arbitrary 32-bit integer.
+   --vm-account-id value    AccountID is an arbitrary 32-bit integer identifying namespace for data ingestion (aka tenant). 
+      AccountID is required when importing into the clustered version of VictoriaMetrics. 
+      It is possible to set it as accountID:projectID, where projectID is also arbitrary 32-bit integer. 
       If projectID isn't set, then it equals to 0
    --vm-concurrency value                             Number of workers concurrently performing import requests to VM (default: 2)
    --vm-compress                                      Whether to apply gzip compression to import requests (default: true)
@@ -18312,7 +18341,9 @@ OPTIONS:
 # Document: Thanos
 
 Source path: docs/victoriametrics/vmctl/thanos.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/thanos.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/thanos.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/thanos.md
+Description: vmctl provides a dedicated thanos mode for migrating data from Thanos blocks to VictoriaMetrics. This mode supports both raw blocks (resolution=0) and downsampled blocks with all aggregate types.
 
 `vmctl` provides a dedicated `thanos` mode for migrating data from Thanos blocks to VictoriaMetrics.
 This mode supports both raw blocks (resolution=0) and downsampled blocks with all aggregate types.
@@ -18609,19 +18640,19 @@ OPTIONS:
    --thanos-filter-label value                                        Thanos label name to filter timeseries by. E.g. '__name__' will filter timeseries by name.
    --thanos-filter-label-value value                                  Thanos regular expression to filter label from "thanos-filter-label" flag. (default: ".*")
    --thanos-aggr-types value [ --thanos-aggr-types value ]            Aggregate types to import from Thanos downsampled blocks. Supported values: count, sum, min, max, counter. Each aggregate will be imported as a separate metric with the aggregate type as suffix (e.g., metric_name:5m:count). If not specified, all aggregate types will be imported from downsampled blocks.
-   --vm-addr value                                                    VictoriaMetrics address to perform import requests.
-      Should be the same as --httpListenAddr value for single-node version or vminsert component.
-      When importing into the clustered version do not forget to set additionally --vm-account-id flag.
+   --vm-addr value                                                    VictoriaMetrics address to perform import requests. 
+      Should be the same as --httpListenAddr value for single-node version or vminsert component. 
+      When importing into the clustered version do not forget to set additionally --vm-account-id flag. 
       Please note, that vmctl performs initial readiness check for the given address by checking /health endpoint. (default: "http://localhost:8428")
    --vm-user value      VictoriaMetrics username for basic auth [$VM_USERNAME]
    --vm-password value  VictoriaMetrics password for basic auth [$VM_PASSWORD]
-   --vm-headers value   Optional HTTP headers to send with each request to the corresponding destination address.
-      For example, --vm-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding destination address.
+   --vm-headers value   Optional HTTP headers to send with each request to the corresponding destination address. 
+      For example, --vm-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding destination address. 
       Multiple headers must be delimited by '^^': --vm-headers='header1:value1^^header2:value2'
    --vm-bearer-token value  Optional bearer auth token to use for the corresponding --vm-addr
-   --vm-account-id value    AccountID is an arbitrary 32-bit integer identifying namespace for data ingestion (aka tenant).
-      AccountID is required when importing into the clustered version of VictoriaMetrics.
-      It is possible to set it as accountID:projectID, where projectID is also arbitrary 32-bit integer.
+   --vm-account-id value    AccountID is an arbitrary 32-bit integer identifying namespace for data ingestion (aka tenant). 
+      AccountID is required when importing into the clustered version of VictoriaMetrics. 
+      It is possible to set it as accountID:projectID, where projectID is also arbitrary 32-bit integer. 
       If projectID isn't set, then it equals to 0
    --vm-concurrency value                             Number of workers concurrently performing import requests to VM (default: 2)
    --vm-compress                                      Whether to apply gzip compression to import requests (default: true)
@@ -18646,7 +18677,9 @@ OPTIONS:
 # Document: Cortex
 
 Source path: docs/victoriametrics/vmctl/cortex.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/cortex.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/cortex.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/cortex.md
+Description: Cortex supports Prometheus remote read API. vmctl in remote-read mode can be used for historical data migration from Cortex.
 
 Cortex supports [Prometheus remote read API](https://prometheus.io/docs/prometheus/latest/querying/remote_read_api/).
 `vmctl` in [remote-read mode](https://docs.victoriametrics.com/victoriametrics/vmctl/remoteread/) can be used
@@ -18666,7 +18699,7 @@ By default, Cortex exposes HTTP port on `:9009 `. The importing process example 
 and single-node VictoriaMetrics(`http://localhost:8428`):
 
 ```sh
-./vmctl remote-read \
+./vmctl remote-read \ 
 --remote-read-src-addr=http://127.0.0.1:9009/prometheus \
 --remote-read-filter-time-start=2021-10-18T00:00:00Z \
 --remote-read-step-interval=hour \
@@ -18712,7 +18745,9 @@ See also general [vmctl migration tips](https://docs.victoriametrics.com/victori
 # Document: Promscale
 
 Source path: docs/victoriametrics/vmctl/promscale.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/promscale.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/promscale.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/promscale.md
+Description: Promscale supports Prometheus Remote Read API. To migrate historical data from Promscale to VictoriaMetrics use vmctl in remote-read mode.
 
 [Promscale](https://github.com/timescale/promscale) supports [Prometheus Remote Read API](https://prometheus.io/docs/prometheus/latest/querying/remote_read_api/).
 To migrate historical data from Promscale to VictoriaMetrics use `vmctl` in [remote-read mode](https://docs.victoriametrics.com/victoriametrics/vmctl/remoteread/).
@@ -18727,12 +18762,12 @@ See the example of migration command below:
   --remote-read-filter-time-start=2023-08-21T00:00:00Z \
   --remote-read-disable-path-append=true # promscale has custom remote read API HTTP path
 Selected time range "2023-08-21 00:00:00 +0000 UTC" - "2023-08-21 14:11:41.561979 +0000 UTC" will be split into 1 ranges according to "day" step. Continue? [Y/n] y
-VM worker 0:↙ 82831 samples/s
-VM worker 1:↙ 54378 samples/s
-VM worker 2:↙ 121616 samples/s
-VM worker 3:↙ 59164 samples/s
-VM worker 4:↙ 59220 samples/s
-VM worker 5:↙ 102072 samples/s
+VM worker 0:↙ 82831 samples/s                                                                                                                                                                        
+VM worker 1:↙ 54378 samples/s                                                                                                                                                                        
+VM worker 2:↙ 121616 samples/s                                                                                                                                                                       
+VM worker 3:↙ 59164 samples/s                                                                                                                                                                        
+VM worker 4:↙ 59220 samples/s                                                                                                                                                                        
+VM worker 5:↙ 102072 samples/s                                                                                                                                                                       
 Processing ranges: 1 / 1 [████████████████████████████████████████████████████████████████████████████████████] 100.00%
 2023/08/21 16:11:55 Import finished!
 2023/08/21 16:11:55 VictoriaMetrics importer stats:
@@ -18764,7 +18799,9 @@ See also general [vmctl migration tips](https://docs.victoriametrics.com/victori
 # Document: Mimir
 
 Source path: docs/victoriametrics/vmctl/mimir.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/mimir.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/mimir.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/mimir.md
+Description: GrafanaLabs Mimir supports Prometheus remote read API. vmctl in remote-read mode can be used for historical data migration from Mimir.
 
 GrafanaLabs Mimir supports [Prometheus remote read API](https://prometheus.io/docs/prometheus/latest/querying/remote_read_api/).
 `vmctl` in [remote-read mode](https://docs.victoriametrics.com/victoriametrics/vmctl/remoteread/) can be used
@@ -18783,7 +18820,7 @@ Load balancer expose single port `:9090`. As you can see in the example we call 
 The importing process example for the local installation of Mimir and single-node VictoriaMetrics(`http://localhost:8428`):
 
 ```
-./vmctl remote-read
+./vmctl remote-read 
 --remote-read-src-addr=http://<mimir>:9009/prometheus \
 --remote-read-filter-time-start=2021-10-18T00:00:00Z \
 --remote-read-step-interval=hour \
@@ -18844,7 +18881,7 @@ use Prometheus converter to read and sent data to VictoriaMetrics.
 The following example shows how to read data from the file system and import it into VictoriaMetrics:
 
 ```sh
-./vmctl mimir --mimir-path="fs:///mimir/test_data/mimir-tsdb" \                                               ? ? orbstack
+./vmctl mimir --mimir-path="fs:///mimir/test_data/mimir-tsdb" \                                               ? ? orbstack 
   --mimir-tenant-id=anonymous \
   --mimir-filter-time-start=2024-12-01T00:00:00 \
   --mimir-filter-time-end=2024-12-18T23:59:59 \
@@ -18877,12 +18914,12 @@ When the process finishes, you will see the following:
 ```sh
 2025/01/18 13:01:59 Fetching blocks from remote storage
 Found 204 blocks to import. Continue? [Y/n] y
-VM worker 0:? 1589405 samples/s
-VM worker 1:? 1911834 samples/s
-VM worker 2:? 1849187 samples/s
-VM worker 3:? 1648820 samples/s
-VM worker 4:? 1539212 samples/s
-VM worker 5:? 1411485 samples/s
+VM worker 0:? 1589405 samples/s                                                                                                                                                                                     
+VM worker 1:? 1911834 samples/s                                                                                                                                                                                     
+VM worker 2:? 1849187 samples/s                                                                                                                                                                                     
+VM worker 3:? 1648820 samples/s                                                                                                                                                                                     
+VM worker 4:? 1539212 samples/s                                                                                                                                                                                     
+VM worker 5:? 1411485 samples/s                                                                                                                                                                                     
 Processing blocks: 204 / 204 [?????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????] 100.00%
 2025/01/18 13:02:18 Import finished!
 2025/01/18 13:02:18 VictoriaMetrics importer stats:
@@ -18930,19 +18967,19 @@ OPTIONS:
    --mimir-s3-tls-insecure-skip-verify                                Whether to skip TLS verification when connecting to the S3 endpoint. (default: false)
    --mimir-s3-sse-kms-key-id value                                    SSE KMS Key ID for use with S3-compatible storages.
    --mimir-s3-sse-algorithm value                                     SSE algorithm for use with S3-compatible storages.
-   --vm-addr value                                                    VictoriaMetrics address to perform import requests.
-      Should be the same as --httpListenAddr value for single-node version or vminsert component.
-      When importing into the clustered version do not forget to set additionally --vm-account-id flag.
+   --vm-addr value                                                    VictoriaMetrics address to perform import requests. 
+      Should be the same as --httpListenAddr value for single-node version or vminsert component. 
+      When importing into the clustered version do not forget to set additionally --vm-account-id flag. 
       Please note, that vmctl performs initial readiness check for the given address by checking /health endpoint. (default: "http://localhost:8428")
    --vm-user value      VictoriaMetrics username for basic auth [$VM_USERNAME]
    --vm-password value  VictoriaMetrics password for basic auth [$VM_PASSWORD]
-   --vm-headers value   Optional HTTP headers to send with each request to the corresponding destination address.
-      For example, --vm-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding destination address.
+   --vm-headers value   Optional HTTP headers to send with each request to the corresponding destination address. 
+      For example, --vm-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding destination address. 
       Multiple headers must be delimited by '^^': --vm-headers='header1:value1^^header2:value2'
    --vm-bearer-token value  Optional bearer auth token to use for the corresponding --vm-addr
-   --vm-account-id value    AccountID is an arbitrary 32-bit integer identifying namespace for data ingestion (aka tenant).
-      AccountID is required when importing into the clustered version of VictoriaMetrics.
-      It is possible to set it as accountID:projectID, where projectID is also arbitrary 32-bit integer.
+   --vm-account-id value    AccountID is an arbitrary 32-bit integer identifying namespace for data ingestion (aka tenant). 
+      AccountID is required when importing into the clustered version of VictoriaMetrics. 
+      It is possible to set it as accountID:projectID, where projectID is also arbitrary 32-bit integer. 
       If projectID isn't set, then it equals to 0
    --vm-concurrency value                             Number of workers concurrently performing import requests to VM (default: 2)
    --vm-compress                                      Whether to apply gzip compression to import requests (default: true)
@@ -18967,7 +19004,9 @@ OPTIONS:
 # Document: VictoriaMetrics
 
 Source path: docs/victoriametrics/vmctl/victoriametrics.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/victoriametrics.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/victoriametrics.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/victoriametrics.md
+Description: The simplest way to migrate data between VictoriaMetrics installations is to copy data between instances or to run single-node and cluster together. But when simple copy isn't possible (migration between single-node and…
 
 The simplest way to migrate data between VictoriaMetrics installations is [to copy data between instances](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#data-migration) or [to run single-node and cluster together](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#from-single-node-to-cluster).
 But when simple copy isn't possible (migration between single-node and cluster, or re-sharding) or when data needs to be
@@ -18995,12 +19034,12 @@ Migration in `vm-native` mode takes two steps:
     --vm-native-filter-match='{__name__!~"vm_.*"}'                   # match only metrics without `vm_` prefix
 VictoriaMetrics Native import mode
 
-2023/03/02 09:22:02 Initing import process from "http://127.0.0.1:8481/select/0/prometheus/api/v1/export/native"
-                    to "http://localhost:8428/api/v1/import/native" with filter
+2023/03/02 09:22:02 Initing import process from "http://127.0.0.1:8481/select/0/prometheus/api/v1/export/native" 
+                    to "http://localhost:8428/api/v1/import/native" with filter 
         filter: match[]={__name__!~"vm_.*"}
         start: 2022-11-20T00:00:00Z
 2023/03/02 09:22:02 Exploring metrics...
-Found 9 metrics to import. Continue? [Y/n]
+Found 9 metrics to import. Continue? [Y/n] 
 2023/03/02 09:22:04 Requests to make: 9
 Requests to make: 9 / 9 [█████████████████████████████████████████████████████████████████████████████] 100.00%
 2023/03/02 09:22:06 Import finished!
@@ -19033,18 +19072,18 @@ Usage example:
 
 ```sh
 ./vmctl vm-native \
-    --vm-native-src-addr=http://127.0.0.1:8481/select/0/prometheus \
+    --vm-native-src-addr=http://127.0.0.1:8481/select/0/prometheus \ 
     --vm-native-dst-addr=http://localhost:8428 \
     --vm-native-filter-time-start='2022-11-20T00:00:00Z' \
     --vm-native-step-interval=month \
-    --vm-native-filter-match='{__name__!~"vm_.*"}'
+    --vm-native-filter-match='{__name__!~"vm_.*"}'    
 VictoriaMetrics Native import mode
 
-2023/03/02 09:18:05 Initing import process from "http://127.0.0.1:8481/select/0/prometheus/api/v1/export/native" to "http://localhost:8428/api/v1/import/native" with filter
+2023/03/02 09:18:05 Initing import process from "http://127.0.0.1:8481/select/0/prometheus/api/v1/export/native" to "http://localhost:8428/api/v1/import/native" with filter 
         filter: match[]={__name__!~"vm_.*"}
         start: 2022-11-20T00:00:00Z
 2023/03/02 09:18:05 Exploring metrics...
-Found 9 metrics to import. Continue? [Y/n]
+Found 9 metrics to import. Continue? [Y/n] 
 2023/03/02 09:18:07 Selected time range will be split into 5 ranges according to "month" step. Requests to make: 45.
 ```
 
@@ -19062,26 +19101,26 @@ and `--vm-native-dst-addr` value to <http://vminsert:8480/>:
   --vm-native-dst-addr=http://127.0.0.1:8480/ \
   --vm-native-filter-match='{__name__="vm_app_uptime_seconds"}' \
   --vm-native-filter-time-start='2023-02-01T00:00:00Z' \
-  --vm-native-step-interval=day \
+  --vm-native-step-interval=day \  
   --vm-intercluster
-
+  
 VictoriaMetrics Native import mode
 2023/02/28 10:41:42 Discovering tenants...
 2023/02/28 10:41:42 The following tenants were discovered: [0:0 1:0 2:0 3:0 4:0]
-2023/02/28 10:41:42 Initing import process from "http://127.0.0.1:8481/select/0:0/prometheus/api/v1/export/native" to "http://127.0.0.1:8480/insert/0:0/prometheus/api/v1/import/native" with filter
+2023/02/28 10:41:42 Initing import process from "http://127.0.0.1:8481/select/0:0/prometheus/api/v1/export/native" to "http://127.0.0.1:8480/insert/0:0/prometheus/api/v1/import/native" with filter 
         filter: match[]={__name__="vm_app_uptime_seconds"}
-        start: 2023-02-01T00:00:00Z for tenant 0:0
+        start: 2023-02-01T00:00:00Z for tenant 0:0 
 2023/02/28 10:41:42 Exploring metrics...
-2023/02/28 10:41:42 Found 1 metrics to import
-2023/02/28 10:41:42 Selected time range will be split into 28 ranges according to "day" step.
+2023/02/28 10:41:42 Found 1 metrics to import 
+2023/02/28 10:41:42 Selected time range will be split into 28 ranges according to "day" step. 
 Requests to make for tenant 0:0: 28 / 28 [████████████████████████████████████████████████████████████████████] 100.00%
 
-2023/02/28 10:41:45 Initing import process from "http://127.0.0.1:8481/select/1:0/prometheus/api/v1/export/native" to "http://127.0.0.1:8480/insert/1:0/prometheus/api/v1/import/native" with filter
+2023/02/28 10:41:45 Initing import process from "http://127.0.0.1:8481/select/1:0/prometheus/api/v1/export/native" to "http://127.0.0.1:8480/insert/1:0/prometheus/api/v1/import/native" with filter 
         filter: match[]={__name__="vm_app_uptime_seconds"}
-        start: 2023-02-01T00:00:00Z for tenant 1:0
+        start: 2023-02-01T00:00:00Z for tenant 1:0 
 2023/02/28 10:41:45 Exploring metrics...
-2023/02/28 10:41:45 Found 1 metrics to import
-2023/02/28 10:41:45 Selected time range will be split into 28 ranges according to "day" step. Requests to make: 28
+2023/02/28 10:41:45 Found 1 metrics to import 
+2023/02/28 10:41:45 Selected time range will be split into 28 ranges according to "day" step. Requests to make: 28 
 Requests to make for tenant 1:0: 28 / 28 [████████████████████████████████████████████████████████████████████] 100.00%
 
 ...
@@ -19121,15 +19160,15 @@ Or manually specify addresses according to [URL format](https://docs.victoriamet
 # Migrating from cluster specific tenantID to single
 --vm-native-src-addr=http://<src-vmselect>:8481/select/0/prometheus
 --vm-native-dst-addr=http://<dst-vmsingle>:8428
-
+ 
 # Migrating from single to cluster specific tenantID
 --vm-native-src-addr=http://<src-vmsingle>:8428
 --vm-native-dst-addr=http://<dst-vminsert>:8480/insert/0/prometheus
-
+ 
 # Migrating single to single
 --vm-native-src-addr=http://<src-vmsingle>:8428
 --vm-native-dst-addr=http://<dst-vmsingle>:8428
-
+ 
 # Migrating cluster to cluster for specific tenant ID
 --vm-native-src-addr=http://<src-vmselect>:8481/select/0/prometheus
 --vm-native-dst-addr=http://<dst-vminsert>:8480/insert/0/prometheus
@@ -19179,12 +19218,12 @@ OPTIONS:
    --vm-native-step-interval value      The time interval to split the migration into steps. For example, to migrate 1y of data with '--vm-native-step-interval=month' vmctl will execute it in 12 separate requests from the beginning of the time range to its end. To reverse the order use '--vm-native-filter-time-reverse'. Requires setting '--vm-native-filter-time-start'. Valid values are 'month','week','day','hour','minute'. (default: "month")
    --vm-native-filter-time-reverse      Whether to reverse the order of time intervals split by '--vm-native-step-interval' cmd-line flag. When set, the migration will start from the newest to the oldest data. (default: false)
    --vm-native-disable-http-keep-alive  Disable HTTP persistent connections for requests made to VictoriaMetrics components during export (default: false)
-   --vm-native-src-addr value           VictoriaMetrics address to perform export from.
+   --vm-native-src-addr value           VictoriaMetrics address to perform export from. 
        Should be the same as --httpListenAddr value for single-node version or vmselect component. If exporting from cluster version see https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#url-format
    --vm-native-src-user value      VictoriaMetrics username for basic auth [$VM_NATIVE_SRC_USERNAME]
    --vm-native-src-password value  VictoriaMetrics password for basic auth [$VM_NATIVE_SRC_PASSWORD]
-   --vm-native-src-headers value   Optional HTTP headers to send with each request to the corresponding source address.
-      For example, --vm-native-src-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding source address.
+   --vm-native-src-headers value   Optional HTTP headers to send with each request to the corresponding source address. 
+      For example, --vm-native-src-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding source address. 
       Multiple headers must be delimited by '^^': --vm-native-src-headers='header1:value1^^header2:value2'
    --vm-native-src-bearer-token value    Optional bearer auth token to use for the corresponding --vm-native-src-addr
    --vm-native-src-cert-file value       Optional path to client-side TLS certificate file to use when connecting to --vm-native-src-addr
@@ -19192,12 +19231,12 @@ OPTIONS:
    --vm-native-src-ca-file value         Optional path to TLS CA file to use for verifying connections to --vm-native-src-addr. By default, system CA is used
    --vm-native-src-server-name value     Optional TLS server name to use for connections to --vm-native-src-addr. By default, the server name from --vm-native-src-addr is used
    --vm-native-src-insecure-skip-verify  Whether to skip TLS certificate verification when connecting to --vm-native-src-addr (default: false)
-   --vm-native-dst-addr value            VictoriaMetrics address to perform import to.
+   --vm-native-dst-addr value            VictoriaMetrics address to perform import to. 
        Should be the same as --httpListenAddr value for single-node version or vminsert component. If importing into cluster version see https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#url-format
    --vm-native-dst-user value      VictoriaMetrics username for basic auth [$VM_NATIVE_DST_USERNAME]
    --vm-native-dst-password value  VictoriaMetrics password for basic auth [$VM_NATIVE_DST_PASSWORD]
-   --vm-native-dst-headers value   Optional HTTP headers to send with each request to the corresponding destination address.
-      For example, --vm-native-dst-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding destination address.
+   --vm-native-dst-headers value   Optional HTTP headers to send with each request to the corresponding destination address. 
+      For example, --vm-native-dst-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding destination address. 
       Multiple headers must be delimited by '^^': --vm-native-dst-headers='header1:value1^^header2:value2'
    --vm-native-dst-bearer-token value                 Optional bearer auth token to use for the corresponding --vm-native-dst-addr
    --vm-native-dst-cert-file value                    Optional path to client-side TLS certificate file to use when connecting to --vm-native-dst-addr
@@ -19207,10 +19246,10 @@ OPTIONS:
    --vm-native-dst-insecure-skip-verify               Whether to skip TLS certificate verification when connecting to --vm-native-dst-addr (default: false)
    --vm-extra-label value [ --vm-extra-label value ]  Extra labels, that will be added to imported timeseries. In case of collision, label value defined by flag will have priority. Flag can be set multiple times, to add few additional labels.
    --vm-rate-limit value                              Optional data transfer rate limit in bytes per second.
-      By default, the rate limit is disabled. It can be useful for limiting load on source or destination databases.
+      By default, the rate limit is disabled. It can be useful for limiting load on source or destination databases. 
       Rate limit is applied per worker, see --vm-concurrency. (default: 0)
    --vm-intercluster  Enables cluster-to-cluster migration mode with automatic tenants data migration.
-       In this mode --vm-native-src-addr flag format is: 'http://vmselect:8481/'. --vm-native-dst-addr flag format is: http://vminsert:8480/.
+       In this mode --vm-native-src-addr flag format is: 'http://vmselect:8481/'. --vm-native-dst-addr flag format is: http://vminsert:8480/. 
        TenantID will be appended automatically after discovering tenants from src. (default: false)
    --vm-concurrency value                    Number of workers concurrently performing import requests to VM (default: 2)
    --vm-native-disable-per-metric-migration  Defines whether to disable per-metric migration and migrate all data via one connection. In this mode, vmctl makes less export/import requests, but can't provide a progress bar or retry failed requests. (default: false)
@@ -19225,7 +19264,9 @@ OPTIONS:
 # Document: vmgateway
 
 Source path: docs/victoriametrics/vmgateway.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmgateway.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmgateway.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmgateway.md
+Description: vmgateway is a part of enterprise package. It is available for download and evaluation at releases page. See how to request a free trial license.
 
 ***vmgateway is a part of [enterprise package](https://docs.victoriametrics.com/victoriametrics/enterprise/).
 It is available for download and evaluation at [releases page](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/latest).
@@ -19896,7 +19937,9 @@ Below is the list of configuration flags (it can be viewed by running `./vmgatew
 # Document: vmbackupmanager
 
 Source path: docs/victoriametrics/vmbackupmanager.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmbackupmanager.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmbackupmanager.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmbackupmanager.md
+Description: vmbackupmanager is a part of enterprise package. It is available for download and evaluation at releases page. See how to request a free trial license.
 
 ## vmbackupmanager
 
@@ -20629,7 +20672,9 @@ command-line flags:
 # Document: vmalert-tool
 
 Source path: docs/victoriametrics/vmalert-tool.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert-tool.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert-tool.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert-tool.md
+Description: VMAlert command-line tool
 
 VMAlert command-line tool
 
@@ -20954,7 +20999,9 @@ Run `vmalert-tool unittest --help` to get all configuration options:
 # Document: Integrations
 
 Source path: docs/victoriametrics/integrations/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/_index.md
+Description: VictoriaMetrics integrates with many popular monitoring solutions as remote storage or datasource:
 
 VictoriaMetrics integrates with many popular monitoring solutions as remote storage or datasource:
 
@@ -20983,7 +21030,9 @@ See also integrations with [metrics collectors](https://docs.victoriametrics.com
 # Document: Grafana
 
 Source path: docs/victoriametrics/integrations/grafana/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/grafana/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/grafana/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/grafana/_index.md
+Description: VictoriaMetrics integrates with Grafana using either Prometheus datasource or VictoriaMetrics datasource plugins.
 
 VictoriaMetrics integrates with Grafana using either [Prometheus datasource](https://grafana.com/docs/grafana/latest/datasources/prometheus/)
 or [VictoriaMetrics datasource](https://grafana.com/grafana/plugins/victoriametrics-metrics-datasource/) plugins.
@@ -21060,7 +21109,9 @@ and [JWT token auth proxy](https://docs.victoriametrics.com/victoriametrics/vmau
 # Document: Prometheus
 
 Source path: docs/victoriametrics/integrations/prometheus.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/prometheus.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/prometheus.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/prometheus.md
+Description: VictoriaMetrics integrates with Prometheus as remote storage for writes.
 
 VictoriaMetrics integrates with Prometheus as [remote storage for writes](https://prometheus.io/docs/operating/integrations/#remote-endpoints-and-storage).
 
@@ -21142,7 +21193,9 @@ to [VictoriaMetrics histogram format](https://valyala.medium.com/improving-histo
 # Document: Graphite
 
 Source path: docs/victoriametrics/integrations/graphite.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/graphite.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/graphite.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/graphite.md
+Description: VictoriaMetrics components like vmagent, vminsert or single-node can receive inserts from Graphite-compatible agents (such as StatsD). VictoriaMetrics single-node and vmselect support Graphite query language. It can be…
 
 VictoriaMetrics components like **vmagent**, **vminsert** or **single-node** can receive inserts from Graphite-compatible agents (such as [StatsD](https://github.com/etsy/statsd)).
 VictoriaMetrics **single-node** and **vmselect** support Graphite query language. It can be integrated with Grafana via [Graphite datasource](https://grafana.com/docs/grafana/latest/datasources/graphite/).
@@ -21299,7 +21352,9 @@ VictoriaMetrics supports the following handlers from [Graphite Tags API](https:/
 # Document: Datadog
 
 Source path: docs/victoriametrics/integrations/datadog.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/datadog.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/datadog.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/datadog.md
+Description: VictoriaMetrics components like vmagent, vminsert or single-node accepts data from DataDog agent, DogStatsD and DataDog Lambda Extension via "submit metrics" API at /datadog/api/v2/series or via "sketches" API at /datad…
 
 VictoriaMetrics components like **vmagent**, **vminsert** or **single-node** accepts data from [DataDog agent](https://docs.datadoghq.com/agent/),
 [DogStatsD](https://docs.datadoghq.com/developers/dogstatsd/) and [DataDog Lambda Extension](https://docs.datadoghq.com/serverless/libraries_integrations/extension/)
@@ -21411,7 +21466,9 @@ See [how to add labels to metrics](https://docs.victoriametrics.com/victoriametr
 # Document: InfluxDB
 
 Source path: docs/victoriametrics/integrations/influxdb.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/influxdb.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/influxdb.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/influxdb.md
+Description: VictoriaMetrics components like vmagent, vminsert or single-node can receive inserts via InfluxDB line protocol.
 
 VictoriaMetrics components like **vmagent**, **vminsert** or **single-node** can receive inserts via InfluxDB line protocol.
 
@@ -21629,7 +21686,9 @@ Just send plain Influx lines to the specified address.
 # Document: OpenTSDB
 
 Source path: docs/victoriametrics/integrations/opentsdb.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/opentsdb.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/opentsdb.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/opentsdb.md
+Description: VictoriaMetrics components like vmagent, vminsert or single-node can receive inserts via telnet put protocol and HTTP /api/put requests for ingesting OpenTSDB data. The same protocol is used for ingesting data in Kairos…
 
 VictoriaMetrics components like **vmagent**, **vminsert** or **single-node** can receive inserts via
 [telnet put protocol](http://opentsdb.net/docs/build/html/api_telnet/put.html) and [HTTP /api/put requests](http://opentsdb.net/docs/build/html/api_http/put.html)
@@ -21713,7 +21772,9 @@ For example, `/api/put?extra_label=foo=bar` would add `{foo="bar"}` label to all
 # Document: NewRelic
 
 Source path: docs/victoriametrics/integrations/newrelic.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/newrelic.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/newrelic.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/newrelic.md
+Description: VictoriaMetrics components like vmagent, vminsert or single-node can receive data from NewRelic infrastructure agent at /newrelic/infra/v2/metrics/events/bulk HTTP path.
 
 VictoriaMetrics components like **vmagent**, **vminsert** or **single-node** can receive data from
 [NewRelic infrastructure agent](https://docs.newrelic.com/docs/infrastructure/install-infrastructure-agent)
@@ -21808,7 +21869,9 @@ curl http://localhost:8428/api/v1/export -d 'match={eventType="SystemSample"}'
 # Document: Google PubSub
 
 Source path: docs/victoriametrics/integrations/pubsub.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/pubsub.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/pubsub.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/pubsub.md
+Description: vmagent can read/write metrics from/to Google PubSub.
 
 > This integration is supported only in [Enterprise version](https://docs.victoriametrics.com/victoriametrics/enterprise/) of vmagent.
 
@@ -21932,7 +21995,9 @@ Custom auth credentials can be specified via `-gcp.pubsub.subscribe.credentialsF
 # Document: Kafka
 
 Source path: docs/victoriametrics/integrations/kafka.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/kafka.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/kafka.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/kafka.md
+Description: vmagent can read/write metrics from/to Kafka.
 
 > This integration is supported only in [Enterprise version](https://docs.victoriametrics.com/victoriametrics/enterprise/) of vmagent.
 
@@ -21972,10 +22037,10 @@ Multiple brokers can be specified per each `-kafka.consumer.topic` by passing a 
 For example:
 
 ```sh
-./bin/vmagent
-      -kafka.consumer.topic='topic-a'
-      -kafka.consumer.topic.brokers='host1:9092;host2:9092'
-      -kafka.consumer.topic='topic-b'
+./bin/vmagent 
+      -kafka.consumer.topic='topic-a' 
+      -kafka.consumer.topic.brokers='host1:9092;host2:9092' 
+      -kafka.consumer.topic='topic-b' 
       -kafka.consumer.topic.brokers='host3:9092;host4:9092'
 ```
 
@@ -22109,15 +22174,15 @@ Each block is compressed with Snappy or ZSTD before being sent out by the remote
 To get the request rate of remote write (as the estimated produce rate of Kafka), use the following MetricsQL:
 
 ```metricsql
-sum(rate(vmagent_remotewrite_requests_total{}[1m]))
+sum(rate(vmagent_remotewrite_requests_total{}[1m])) 
 ```
 
 Similarly, the average size of the compressed block of remote write (serving as the estimated message size of Kafka) is as follows:
 
 ```metricsql
 sum(rate(vmagent_remotewrite_conn_bytes_written_total{}[1m]))
- /
-sum(rate(vmagent_remotewrite_requests_total{}[1m]))
+ / 
+sum(rate(vmagent_remotewrite_requests_total{}[1m])) 
 ```
 
 Please note that the remote write body and Kafka message need to use the same compression algorithm to serve as
@@ -22148,7 +22213,9 @@ Two types of auth are supported:
 # Document: OpenShift
 
 Source path: docs/victoriametrics/integrations/OpenShift.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/OpenShift.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/OpenShift.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/OpenShift.md
+Description: OpenShift uses Prometheus as a core monitoring solution. It cannot be replaced without violating the OpenShift support policy. However, OpenShift can be configured to use VictoriaMetrics as a remote write target.
 
 ## OpenShift Container Platform (OCP)
 
@@ -22323,7 +22390,9 @@ data:
 # Document: Zabbix Connector
 
 Source path: docs/victoriametrics/integrations/zabbixconnector.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/zabbixconnector.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/zabbixconnector.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/zabbixconnector.md
+Description: VictoriaMetrics components like vmagent, vminsert or single-node can receive data from Zabbix Connector streaming protocol at /zabbixconnector/api/v1/history HTTP path.
 
 VictoriaMetrics components like **vmagent**, **vminsert** or **single-node** can receive data from
 [Zabbix Connector streaming protocol](https://www.zabbix.com/documentation/current/en/manual/config/export/streaming#protocol)
@@ -22387,7 +22456,9 @@ curl http://localhost:8428/api/v1/export -d 'match={host="Zabbix server"}'
 # Document: Perses
 
 Source path: docs/victoriametrics/integrations/perses.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/perses.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/perses.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/perses.md
+Description: VictoriaMetrics integrates with Perses via Prometheus plugins.
 
 VictoriaMetrics integrates with [Perses](https://perses.dev/) via [Prometheus plugins](https://perses.dev/plugins/docs/prometheus/).
 
@@ -22435,7 +22506,9 @@ VictoriaMetrics integrates with [Perses](https://perses.dev/) via [Prometheus pl
 # Document: Bindplane
 
 Source path: docs/victoriametrics/integrations/bindplane.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/bindplane.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/bindplane.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/bindplane.md
+Description: VictoriaMetrics integrates with Bindplane via the Bindplane application.
 
 VictoriaMetrics integrates with [Bindplane](https://docs.bindplane.com/) via the [Bindplane application](https://app.bindplane.com/).
 
@@ -22469,7 +22542,9 @@ For VictoriaLogs with Bindplane integration, check [this page](https://docs.vict
 # Document: OpenTelemetry
 
 Source path: docs/victoriametrics/integrations/opentelemetry.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/opentelemetry.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/opentelemetry.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/opentelemetry.md
+Description: VictoriaMetrics supports data ingestion via OpenTelemetry protocol (OTLP) for metrics at /opentelemetry/v1/metrics path. It expects protobuf-encoded requests at /opentelemetry/v1/metrics. For gzip-compressed workload se…
 
 VictoriaMetrics supports data ingestion via [OpenTelemetry protocol (OTLP) for metrics](https://github.com/open-telemetry/opentelemetry-specification/blob/97c826b70e2f89cfdf655d5150791f3f0c2bae19/specification/metrics/data-model.md) at `/opentelemetry/v1/metrics` path.
 It expects `protobuf`-encoded requests at `/opentelemetry/v1/metrics`. For gzip-compressed workload set HTTP request header `Content-Encoding: gzip`.
@@ -22526,7 +22601,9 @@ VictoriaMetrics stores delta temporality metric values as is *(available from v1
 # Document: Data Ingestion
 
 Source path: docs/victoriametrics/data-ingestion/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/_index.md
+Description: In This Folder you will find instructions for sending data to VictoriaMetrics from a variety of platforms. If your tool is not listed it is likely you can ingest your data into VictoriaMetrics using one of the protocols…
 
 In This Folder you will find instructions for sending data to VictoriaMetrics from a variety of platforms.
 If your tool is not listed it is likely you can ingest your data into VictoriaMetrics using one of the protocols listed
@@ -22559,7 +22636,9 @@ so the urls in the rest of the documentation will look like `https://<victoriame
 # Document: vmagent
 
 Source path: docs/victoriametrics/data-ingestion/vmagent.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/vmagent.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/vmagent.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/vmagent.md
+Description: vmagent can receive data via the same protocols as VictoriaMetrics Single or Cluster versions, as well as scrape Prometheus endpoints. In other words, it supports both Push and Pull models.
 
 vmagent can receive data via the same protocols as VictoriaMetrics Single or Cluster versions,
 as well as scrape Prometheus endpoints. In other words,
@@ -22641,7 +22720,9 @@ to a file containing the self-signed CA certificate:
 # Document: Grafana Alloy
 
 Source path: docs/victoriametrics/data-ingestion/Alloy.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/Alloy.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/Alloy.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/Alloy.md
+Description: Grafana Alloy supports sending data via the Prometheus remote write protocol and OpenTelemetry Protocol (OTLP). Collecting metrics and forwarding them to VictoriaMetrics using Prometheus scraping and remote writing is m…
 
 [Grafana Alloy](https://grafana.com/docs/alloy/latest/) supports sending data via the Prometheus remote write protocol and OpenTelemetry Protocol (OTLP).
 Collecting metrics and forwarding them to VictoriaMetrics using Prometheus scraping and remote writing is more straightforward, but using OpenTelemetry enables more complex processing operations to occur before sending data to VictoriaMetrics.
@@ -22825,7 +22906,7 @@ prometheus.scrape "nodeexporter" {
 }
 
 otelcol.auth.bearer "otel_auth" {
-  token = "<token>"
+  token = "<token>"  
 }
 
 otelcol.receiver.prometheus "victoriametrics" {
@@ -22857,7 +22938,9 @@ otelcol.exporter.otlphttp "victoriametrics" {
 # Document: Vector
 
 Source path: docs/victoriametrics/data-ingestion/Vector.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/Vector.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/Vector.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/Vector.md
+Description: To Send data to Vector you need to configure with a Prometheus remote write sink and forward metrics to that sink from at least 1 source. You will need to replace the values in <> to match your setup.
 
 To Send data to Vector you need to configure with a Prometheus remote write sink and forward metrics to that sink from at least 1 source.
 You will need to replace the values in `<>` to match your setup.
@@ -22969,7 +23052,9 @@ sinks:
 # Document: Telegraf
 
 Source path: docs/victoriametrics/data-ingestion/Telegraf.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/Telegraf.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/Telegraf.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/Telegraf.md
+Description: This document covers various output configurations for Telegraf for shipping data via HTTP to VictoriaMetrics. All the options examples below can be combined to fit your use case.
 
 This document covers various output configurations for Telegraf for shipping data [via HTTP](https://docs.victoriametrics.com/victoriametrics/integrations/influxdb/#influxdb-compatible-agents-such-as-telegraf)
 to VictoriaMetrics. All the options examples below can be combined to fit your use case.
@@ -23074,7 +23159,9 @@ This is not recommended since it can allow sending metrics to a compromised site
 # Document: Proxmox
 
 Source path: docs/victoriametrics/data-ingestion/Proxmox.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/Proxmox.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/Proxmox.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/Proxmox.md
+Description: Since Proxmox Virtual Environment(PVE) and Proxmox Backup Server(PBS) support sending data using the InfluxDB we can use the InfluxDB write support built into VictoriaMetrics. Currently, PVE and PBS only support using a…
 
 Since Proxmox Virtual Environment(PVE) and Proxmox Backup Server(PBS) support sending data using the InfluxDB
 we can use the InfluxDB write support built into VictoriaMetrics.
@@ -23139,7 +23226,9 @@ or a username and password.
 # Document: OpenTelemetry Collector
 
 Source path: docs/victoriametrics/data-ingestion/OpenTelemetry-Collector.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/OpenTelemetry-Collector.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/OpenTelemetry-Collector.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/OpenTelemetry-Collector.md
+Description: OpenTelemetry Collector is a vendor-agnostic agent for receiving, processing, and exporting telemetry data. VictoriaMetrics supports the OTLP metrics protocol natively, so the collector can push metrics directly using t…
 
 [OpenTelemetry Collector](https://opentelemetry.io/docs/collector/) is a vendor-agnostic agent for receiving, processing, and exporting telemetry data.
 VictoriaMetrics supports the [OTLP metrics protocol](https://docs.victoriametrics.com/victoriametrics/integrations/opentelemetry/) natively,
@@ -23177,7 +23266,9 @@ See [OpenTelemetry integration](https://docs.victoriametrics.com/victoriametrics
 # Document: Best practices
 
 Source path: docs/victoriametrics/BestPractices.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/BestPractices.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/BestPractices.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/BestPractices.md
+Description: It is recommended to run the latest available release of VictoriaMetrics from this page, since it contains all the bugfixes and enhancements.
 
 ## Install Recommendation
 
@@ -23287,7 +23378,9 @@ We also provide [Enterprise support](https://docs.victoriametrics.com/victoriame
 # Document: MetricsQL
 
 Source path: docs/victoriametrics/MetricsQL.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/MetricsQL.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/MetricsQL.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/MetricsQL.md
+Description: VictoriaMetrics implements MetricsQL - query language inspired by PromQL. MetricsQL is backwards-compatible with PromQL, so Grafana dashboards backed by Prometheus datasource should work the same after switching from Pr…
 
 [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) implements MetricsQL -
 query language inspired by [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/).
@@ -25661,7 +25754,9 @@ VictoriaMetrics performs the following implicit conversions for incoming queries
 # Document: FAQ
 
 Source path: docs/victoriametrics/FAQ.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/FAQ.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/FAQ.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/FAQ.md
+Description: To be the best tool for monitoring and observability.
 
 ## What is the main purpose of VictoriaMetrics?
 
@@ -26245,7 +26340,9 @@ See also [how to calculate the needed disk space at VictoriaMetrics for the give
 # Document: Case studies and talks
 
 Source path: docs/victoriametrics/CaseStudies.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/CaseStudies.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/CaseStudies.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/CaseStudies.md
+Description: Below please find public case studies and talks from VictoriaMetrics users. You can also join our community Slack channel where you can chat with VictoriaMetrics users to get additional references, reviews and case stud…
 
 Below please find public case studies and talks from VictoriaMetrics users. You can also join our [community Slack channel](https://slack.victoriametrics.com/)
 where you can chat with VictoriaMetrics users to get additional references, reviews and case studies.
@@ -26966,7 +27063,9 @@ Read more about the migration journey in our blog - <https://blog.zomato.com/mig
 # Document: Articles
 
 Source path: docs/victoriametrics/Articles.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/Articles.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/Articles.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/Articles.md
+Description: See also case studies.
 
 See also [case studies](https://docs.victoriametrics.com/victoriametrics/casestudies/).
 
@@ -27165,7 +27264,9 @@ See [our guides](https://docs.victoriametrics.com/guides/) for the up-to-date gu
 # Document: API examples
 
 Source path: docs/victoriametrics/url-examples.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/url-examples.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/url-examples.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/url-examples.md
+Description: This page contains copy-paste examples for the most commonly used VictoriaMetrics APIs.
 
 ## General information
 
@@ -28444,7 +28545,9 @@ Moved to [/datadog](https://docs.victoriametrics.com/victoriametrics/url-example
 # Document: Key concepts
 
 Source path: docs/victoriametrics/keyConcepts/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/keyConcepts/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/keyConcepts/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/keyConcepts/_index.md
+Description: Simply put, metric is a numeric measure or observation of something.
 
 ## Data model
 
@@ -28473,8 +28576,8 @@ what is actually measured to every person who reads it, just like **variable nam
 Every metric can contain additional meta-information in the form of label-value pairs:
 
 ```
-requests_total{path="/", code="200"}
-requests_total{path="/", code="403"}
+requests_total{path="/", code="200"} 
+requests_total{path="/", code="403"} 
 ```
 
 The meta-information - a set of `labels` in curly braces - gives us a context for which `path` and with what `code`
@@ -28486,9 +28589,9 @@ Actually, the metric name is also a label with a special name `__name__`.
 The `__name__` key could be omitted *(available from v1.111.0)* for simplicity. So the following series are identical:
 
 ```
-requests_total{path="/", code="200"}
-{__name__="requests_total", path="/", code="200"}
-{"requests_total", path="/", code="200"}
+requests_total{path="/", code="200"} 
+{__name__="requests_total", path="/", code="200"} 
+{"requests_total", path="/", code="200"} 
 ```
 
 Labels can be automatically attached to the [time series](#time-series)
@@ -29224,14 +29327,14 @@ foo_bar
 A single metric name may correspond to multiple time series with distinct label sets. For example:
 
 ```metricsql
-requests_total{path="/", code="200"}
-requests_total{path="/", code="403"}
+requests_total{path="/", code="200"} 
+requests_total{path="/", code="403"} 
 ```
 
 To select only time series with a specific label value, specify the matching filter in curly braces:
 
 ```metricsql
-requests_total{code="200"}
+requests_total{code="200"} 
 ```
 
 The query above returns all time series with the name `requests_total` and label `code="200"`. We use the operator `=` to
@@ -29424,7 +29527,9 @@ VictoriaMetrics supports data downsampling. See [these docs](https://docs.victor
 # Document: Troubleshooting
 
 Source path: docs/victoriametrics/Troubleshooting.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/Troubleshooting.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/Troubleshooting.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/Troubleshooting.md
+Description: This document contains troubleshooting guides for the most common issues when working with VictoriaMetrics.
 
 This document contains troubleshooting guides for the most common issues when working with VictoriaMetrics.
 
@@ -29911,7 +30016,9 @@ It could be mitigated with the `--fs.disableMincore` flag:
 # Document: Prometheus service discovery
 
 Source path: docs/victoriametrics/sd_configs.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/sd_configs.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/sd_configs.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/sd_configs.md
+Description: vmagent and single-node VictoriaMetrics supports the following Prometheus-compatible service discovery options for Prometheus-compatible scrape targets in the file pointed by -promscrape.config command-line flag:
 
 # Supported service discovery configs
 
@@ -31766,6 +31873,7 @@ scrape_configs:
     # Additional HTTP API client options can be specified here.
     # See https://docs.victoriametrics.com/victoriametrics/sd_configs/#http-api-client-options
 
+
 ```
 
 Each discovered target has an [`__address__`](https://docs.victoriametrics.com/victoriametrics/relabeling/#how-to-modify-scrape-urls-in-targets) label set
@@ -32186,7 +32294,9 @@ and in the majority of [supported service discovery configs](#supported-service-
 # Document: Scrape config examples
 
 Source path: docs/victoriametrics/scrape_config_examples.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/scrape_config_examples.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/scrape_config_examples.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/scrape_config_examples.md
+Description: Let's start from a simple case with scraping targets at pre-defined addresses. Create a scrape.yaml file with the following contents:
 
 - [Static configs](#static-configs)
 - [File-based target discovery](#file-based-target-discovery)
@@ -32554,7 +32664,9 @@ See [relabeling docs](https://docs.victoriametrics.com/victoriametrics/relabelin
 # Document: Relabeling cookbook
 
 Source path: docs/victoriametrics/relabeling.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/relabeling.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/relabeling.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/relabeling.md
+Description: The relabeling cookbook provides practical examples and patterns for transforming your metrics data as it flows through VictoriaMetrics, helping you control what gets collected and how it's labeled.
 
 The relabeling cookbook provides practical examples and patterns for
 transforming your metrics data as it flows through VictoriaMetrics, helping you
@@ -33641,7 +33753,9 @@ section instead of `relabel_configs` section. They serve different purposes:
 # Document: Streaming aggregation
 
 Source path: docs/victoriametrics/stream-aggregation/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/stream-aggregation/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/stream-aggregation/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/stream-aggregation/_index.md
+Description: vmagent and single-node VictoriaMetrics can aggregate incoming samples in streaming mode by time and by labels before data is written to remote storage (or local storage for single-node VictoriaMetrics).
 
 [vmagent](https://docs.victoriametrics.com/victoriametrics/vmagent/) and [single-node VictoriaMetrics](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/)
 can aggregate incoming [samples](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#raw-samples) in streaming mode **by time** and **by labels** before data is written to remote storage
@@ -34554,7 +34668,9 @@ Moved to [stream-aggregation/configuration/#quantiles](https://docs.victoriametr
 # Document: Configuration
 
 Source path: docs/victoriametrics/stream-aggregation/configuration.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/stream-aggregation/configuration.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/stream-aggregation/configuration.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/stream-aggregation/configuration.md
+Description: Stream aggregation can be configured via the following command-line flags:
 
 Stream aggregation can be configured via the following command-line flags:
 
@@ -34653,7 +34769,7 @@ specified individually per each `-remoteWrite.url`:
   # - histogram_bucket
   #
   # ignore_first_sample_interval: 2m
-
+  
   # no_align_flush_to_interval disables aligning of flush times for the aggregated data to multiples of interval.
   # By default, flush times for the aggregated data is aligned to multiples of interval.
   # For example:
@@ -35181,7 +35297,9 @@ See also:
 # Document: Enterprise
 
 Source path: docs/victoriametrics/enterprise.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/enterprise.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/enterprise.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/enterprise.md
+Description: VictoriaMetrics, VictoriaLogs and VictoriaTraces components are provided in two kinds - Community edition and Enterprise edition.
 
 VictoriaMetrics, [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/) and [VictoriaTraces](https://docs.victoriametrics.com/victoriatraces/) components are provided
 in two kinds - [Community edition](https://victoriametrics.com/products/open-source/) and [Enterprise edition](https://victoriametrics.com/products/enterprise/).
@@ -35571,7 +35689,9 @@ groups:
 # Document: Cluster Per Tenant Statistic
 
 Source path: docs/victoriametrics/PerTenantStatistic.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/PerTenantStatistic.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/PerTenantStatistic.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/PerTenantStatistic.md
+Description: The per-tenant statistic is a part of enterprise package. It is available for download and evaluation at releases page. To get the license key you can request a free trial license.
 
 ![cluster-per-tenant-stat](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/PerTenantStatistic-stats.webp)
 
@@ -35678,7 +35798,9 @@ Here is an alert example for high churn rate by the tenant:
 # Document: Query execution stats
 
 Source path: docs/victoriametrics/query-stats.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/query-stats.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/query-stats.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/query-stats.md
+Description: VictoriaMetrics Enterprise supports logging statistics (available from v1.116.0) for read queries made through the /api/v1/query and /api/v1/query\range APIs.
 
 [VictoriaMetrics Enterprise](https://docs.victoriametrics.com/victoriametrics/enterprise/) supports logging statistics *(available from v1.116.0)* for
 read queries made through the [/api/v1/query](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#instant-query)
@@ -35766,7 +35888,9 @@ is available at the [query statistics dashboard](https://github.com/VictoriaMetr
 # Document: CHANGELOG
 
 Source path: docs/victoriametrics/changelog/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/_index.md
+Description: The following tip changes can be tested by building VictoriaMetrics components from the latest commits according to the following docs:
 
 The following `tip` changes can be tested by building VictoriaMetrics components from the latest commits according to the following docs:
 
@@ -38368,7 +38492,9 @@ See [releases page](https://github.com/VictoriaMetrics/VictoriaMetrics/releases)
 # Document: Year 2026
 
 Source path: docs/victoriametrics/changelog/CHANGELOG_2026.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/CHANGELOG_2026.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/CHANGELOG_2026.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/CHANGELOG_2026.md
+Description: The following tip changes can be tested by building VictoriaMetrics components from the latest commits according to the following docs:
 
 The following `tip` changes can be tested by building VictoriaMetrics components from the latest commits according to the following docs:
 
@@ -40970,7 +41096,9 @@ See [releases page](https://github.com/VictoriaMetrics/VictoriaMetrics/releases)
 # Document: Year 2025
 
 Source path: docs/victoriametrics/changelog/CHANGELOG_2025.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/CHANGELOG_2025.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/CHANGELOG_2025.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/CHANGELOG_2025.md
+Description: Released at 2025-12-12
 
 ## [v1.132.0](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.132.0)
 
@@ -43616,7 +43744,9 @@ See changes for older releases [here](https://docs.victoriametrics.com/victoriam
 # Document: Year 2024
 
 Source path: docs/victoriametrics/changelog/CHANGELOG_2024.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/CHANGELOG_2024.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/CHANGELOG_2024.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/CHANGELOG_2024.md
+Description: Released at 2024-12-18
 
 ## [v1.108.1](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.108.1)
 
@@ -45439,7 +45569,9 @@ See changes for older releases [here](https://docs.victoriametrics.com/victoriam
 # Document: Year 2023
 
 Source path: docs/victoriametrics/changelog/CHANGELOG_2023.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/CHANGELOG_2023.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/CHANGELOG_2023.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/CHANGELOG_2023.md
+Description: Released at 2023-12-13
 
 ## [v1.96.0](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.96.0)
 
@@ -46971,7 +47103,9 @@ See changes for older releases [here](https://docs.victoriametrics.com/victoriam
 # Document: Year 2022
 
 Source path: docs/victoriametrics/changelog/CHANGELOG_2022.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/CHANGELOG_2022.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/CHANGELOG_2022.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/CHANGELOG_2022.md
+Description: Released at 2022-12-20
 
 ## [v1.85.3](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.85.3)
 
@@ -48337,7 +48471,9 @@ See changes for older releases [here](https://docs.victoriametrics.com/victoriam
 # Document: Year 2021
 
 Source path: docs/victoriametrics/changelog/CHANGELOG_2021.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/CHANGELOG_2021.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/CHANGELOG_2021.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/CHANGELOG_2021.md
+Description: Released at 2021-12-20
 
 ## [v1.71.0](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.71.0)
 
@@ -49268,7 +49404,9 @@ See changes for older releases [here](https://docs.victoriametrics.com/victoriam
 # Document: Year 2020
 
 Source path: docs/victoriametrics/changelog/CHANGELOG_2020.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/CHANGELOG_2020.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/CHANGELOG_2020.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/CHANGELOG_2020.md
+Description: Released at 2020-12-27
 
 ## [v1.51.0](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.51.0)
 
@@ -49682,7 +49820,9 @@ See [releases page](https://github.com/VictoriaMetrics/VictoriaMetrics/releases)
 # Document: Long-term support releases
 
 Source path: docs/victoriametrics/LTS-releases.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/LTS-releases.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/LTS-releases.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/LTS-releases.md
+Description: Enterprise version of VictoriaMetrics provides long-term support lines of releases (aka LTS releases). Every LTS line receives bugfixes and security fixes for 12 months after the initial release. New LTS lines are publi…
 
 [Enterprise version of VictoriaMetrics](https://docs.victoriametrics.com/victoriametrics/enterprise/) provides long-term support lines of releases (aka LTS releases).
 Every LTS line receives bugfixes and [security fixes](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/SECURITY.md) for 12 months after
@@ -49705,7 +49845,9 @@ to [the latest available releases](https://docs.victoriametrics.com/victoriametr
 # Document: Release process guidance
 
 Source path: docs/victoriametrics/Release-Guide.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/Release-Guide.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/Release-Guide.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/Release-Guide.md
+Description: VictoriaMetrics releases follow a two-step process: a release candidate phase and a final release. Both the latest and LTS releases are typically done on a bi-weekly cadence.
 
 > To maintainers:
 >
@@ -49754,7 +49896,9 @@ Key steps:
 # Document: MetricsQL old page
 
 Source path: docs/victoriametrics/ExtendedPromQL.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/ExtendedPromQL.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/ExtendedPromQL.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/ExtendedPromQL.md
+Description: The page has been moved to MetricsQL.
 
 # MetricsQL old page
 
@@ -49764,7 +49908,9 @@ The page has been moved to [MetricsQL](https://docs.victoriametrics.com/victoria
 # Document: Grafana datasource
 
 Source path: docs/victoriametrics/victoriametrics-datasource.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/victoriametrics-datasource.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/victoriametrics-datasource.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/victoriametrics-datasource.md
+Description: Moved to victoriametrics/integrations/grafana.
 
 ###### VictoriaMetrics datasource
 
@@ -49778,7 +49924,9 @@ Moved to [victoriametrics/integrations/grafana](https://docs.victoriametrics.com
 # Document: Guides
 
 Source path: docs/guides/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/_index.md
+Description: Normalized source from docs/guides/_index.md.
 
 - [Kubernetes monitoring via VictoriaMetrics Single](https://docs.victoriametrics.com/guides/k8s-monitoring-via-vm-single/)
 - [Kubernetes monitoring with VictoriaMetrics Cluster](https://docs.victoriametrics.com/guides/k8s-monitoring-via-vm-cluster/)
@@ -49802,7 +49950,9 @@ Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70
 # Document: Kubernetes monitoring via VictoriaMetrics Single
 
 Source path: docs/guides/k8s-monitoring-via-vm-single/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-monitoring-via-vm-single/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-monitoring-via-vm-single/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-monitoring-via-vm-single/_index.md
+Description: This guide walks you through deploying a single-node version of VictoriaMetrics on Kubernetes using Helm.
 
 > \[!NOTE] Tip
 > Store every configuration file you use during this guide in version control. You may need them for reference or to change the configuration of your installation.
@@ -50055,6 +50205,7 @@ NOTES:
 
    kubectl get secret --namespace default my-grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
 
+
 2. The Grafana server can be accessed via port 80 on the following DNS name from within your cluster:
 
    my-grafana.default.svc.cluster.local
@@ -50135,7 +50286,9 @@ Consider reading these resources to complete your setup:
 # Document: Kubernetes monitoring with VictoriaMetrics Cluster
 
 Source path: docs/guides/k8s-monitoring-via-vm-cluster/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-monitoring-via-vm-cluster/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-monitoring-via-vm-cluster/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-monitoring-via-vm-cluster/_index.md
+Description: This guide walks you through deploying a VictoriaMetrics cluster version on Kubernetes.
 
 > \[!NOTE] Tip
 > Store every configuration file you use during this guide in version control. You may need them for reference or to change the configuration of your installation.
@@ -50269,6 +50422,7 @@ You need to specify select service URL into your Grafana:
 Input this URL field into Grafana
 
     http://<select-service>/select/0/prometheus/
+
 
 for example - inside the Kubernetes cluster:
 
@@ -50448,6 +50602,7 @@ NOTES:
 
    kubectl get secret --namespace default my-grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
 
+
 2. The Grafana server can be accessed via port 80 on the following DNS name from within your cluster:
 
    my-grafana.default.svc.cluster.local
@@ -50526,7 +50681,9 @@ Consider reading these resources to complete your setup:
 # Document: Getting started with VM Operator
 
 Source path: docs/guides/getting-started-with-vm-operator/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-vm-operator/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-vm-operator/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-vm-operator/_index.md
+Description: The VictoriaMetrics Kubernetes Operator simplifies deploying VictoriaMetrics Stack components on Kubernetes or OpenShift using declarative YAML custom resources.
 
 The [VictoriaMetrics Kubernetes Operator](https://docs.victoriametrics.com/operator/) simplifies deploying VictoriaMetrics Stack components on Kubernetes or OpenShift using declarative YAML [custom resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/).
 
@@ -50950,6 +51107,7 @@ NOTES:
 
    kubectl get secret --namespace default my-grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
 
+
 2. The Grafana server can be accessed via port 80 on the following DNS name from within your cluster:
 
    my-grafana.default.svc.cluster.local
@@ -51026,7 +51184,9 @@ Consider reading these resources to complete your setup:
 # Document: Connecting VictoriaMetrics components to cloud storage
 
 Source path: docs/guides/connecting-vm-components-to-cloud-storage/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/connecting-vm-components-to-cloud-storage/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/connecting-vm-components-to-cloud-storage/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/connecting-vm-components-to-cloud-storage/_index.md
+Description: Several VictoriaMetrics components can connect to cloud storage to read or write object data.
 
 Several VictoriaMetrics components can connect to cloud storage to read or write object data.
 
@@ -51454,7 +51614,9 @@ The table below shows how the same concept maps to different flag names across c
 # Document: How to use OpenTelemetry with VictoriaMetrics and VictoriaLogs
 
 Source path: docs/guides/getting-started-with-opentelemetry/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-opentelemetry/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-opentelemetry/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-opentelemetry/_index.md
+Description: This guide walks you through deploying VictoriaMetrics and VictoriaLogs on Kubernetes, and collecting metrics and logs from a Go application either directly or via the OpenTelemetry Collector.
 
 This guide walks you through deploying VictoriaMetrics and VictoriaLogs on Kubernetes, and collecting [metrics](https://docs.victoriametrics.com/victoriametrics/data-ingestion/opentelemetry-collector/) and [logs](https://docs.victoriametrics.com/victorialogs/data-ingestion/opentelemetry/) from a Go application either directly or via the [OpenTelemetry Collector](https://opentelemetry.io/docs/collector/).
 
@@ -51729,7 +51891,7 @@ go mod tidy
 The example implements a web server with two HTTP handlers: `/api/slow` and `/api/fast`. Start the application with:
 
 ```sh
-go run main.go
+go run main.go 
 2024/03/25 19:27:41 Starting web server...
 2024/03/25 19:27:41 web server started at localhost:8081.
 ```
@@ -51774,7 +51936,9 @@ using query `service.name: unknown_service:otel`.
 # Document: Setup vmagent - Multi-Tenant remote write & OIDC
 
 Source path: docs/guides/vmagent-openid-configuration/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmagent-openid-configuration/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmagent-openid-configuration/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmagent-openid-configuration/_index.md
+Description: Using vmagent with vmauth and OAuth authentication (available from v1.138.0) enables secure metric ingestion in multi-tenant environments, where vmagent authenticates to vmauth using JWT tokens issued by an external ide…
 
 Using [vmagent](https://docs.victoriametrics.com/victoriametrics/vmagent/) with [vmauth](https://docs.victoriametrics.com/victoriametrics/vmauth/) and OAuth authentication *(available from v1.138.0)* enables secure metric ingestion in multi-tenant environments, where vmagent authenticates to vmauth using [JWT tokens](https://en.wikipedia.org/wiki/JSON_Web_Token) issued by an external identity provider. These tokens include tenant information so that metrics are written to the correct tenant.
 
@@ -52063,7 +52227,9 @@ Vmagent uses the OAuth2 client credentials flow to obtain JWT tokens from Keyclo
 # Document: Setup vmauth - Multi-Tenant Access with Grafana & OIDC
 
 Source path: docs/guides/grafana-vmauth-openid-configuration/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmauth-openid-configuration/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmauth-openid-configuration/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmauth-openid-configuration/_index.md
+Description: Using Grafana with vmauth is an effective way to provide multi-tenant access to your metrics, logs, and traces. vmauth provides a way to authenticate users using JWT tokens (available from v1.138.0) issued by an externa…
 
 Using [Grafana](https://grafana.com/) with [vmauth](https://docs.victoriametrics.com/victoriametrics/vmauth/) is an effective way to provide [multi-tenant](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#multitenancy) access to your metrics, logs, and traces.
 vmauth provides a way to authenticate users using [JWT tokens](https://en.wikipedia.org/wiki/JSON_Web_Token) *(available from v1.138.0)* issued by an external identity provider.
@@ -52535,7 +52701,9 @@ In this guide, we demonstrated how to set up vmauth with OIDC authorization usin
 # Document: How to delete or replace metrics in VictoriaMetrics
 
 Source path: docs/guides/guide-delete-or-replace-metrics/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/guide-delete-or-replace-metrics/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/guide-delete-or-replace-metrics/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/guide-delete-or-replace-metrics/_index.md
+Description: Data deletion in VictoriaMetrics should be used only in specific, one-off cases, such as correcting malformed data or satisfying GDPR requirements. VictoriaMetrics architecture is optimized for appending data, not delet…
 
 ## Purpose
 
@@ -52967,7 +53135,9 @@ If you have problems interacting with the API, try these steps:
 # Document: Migrate from InfluxDB to VictoriaMetrics
 
 Source path: docs/guides/migrate-from-influx/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/migrate-from-influx/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/migrate-from-influx/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/migrate-from-influx/_index.md
+Description: InfluxDB is a well-known time series database built for IoT monitoring, Application Performance Monitoring (APM) and analytics. It has its query language, unique data model, and rich tooling for collecting and processin…
 
 InfluxDB is a well-known time series database built for
 [IoT](https://en.wikipedia.org/wiki/Internet_of_things) monitoring, Application Performance Monitoring (APM) and
@@ -53047,7 +53217,7 @@ curl -d 'census,location=klamath,scientist=anderson bees=23' -X POST 'http://<vi
 To check the written data export series matching the `location="klamath"` filter:
 
 ```sh
-curl -G 'http://<victoriametrics-addr>:8428/api/v1/export' -d 'match={location="klamath"}'
+curl -G 'http://<victoriametrics-addr>:8428/api/v1/export' -d 'match={location="klamath"}'   
 ```
 
 The expected response is the following:
@@ -53227,7 +53397,9 @@ Please note, data migration is a backfilling process, so read about [backfilling
 # Document: HA monitoring setup in Kubernetes via VictoriaMetrics Cluster
 
 Source path: docs/guides/k8s-ha-monitoring-via-vm-cluster/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-ha-monitoring-via-vm-cluster/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-ha-monitoring-via-vm-cluster/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-ha-monitoring-via-vm-cluster/_index.md
+Description: This guide walks you through deploying a VictoriaMetrics cluster version on Kubernetes in high-availability mode.
 
 This guide walks you through deploying a [VictoriaMetrics cluster](https://docs.victoriametrics.com/guides/k8s-monitoring-via-vm-cluster/) version on Kubernetes in high-availability mode.
 
@@ -53379,6 +53551,7 @@ You need to specify the service URL in your Grafana:
 Input this URL field into Grafana
 
     http://<select-service>/select/0/prometheus/
+
 
 for example - inside the Kubernetes cluster:
 
@@ -53662,7 +53835,9 @@ Next steps:
 # Document: Understand Your Setup Size
 
 Source path: docs/guides/understand-your-setup-size/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/understand-your-setup-size/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/understand-your-setup-size/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/understand-your-setup-size/_index.md
+Description: This guide is based on capacity planning for Single-Node, Cluster and VictoriaMetrics Cloud docs.
 
 This guide is based on capacity planning for [Single-Node](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/#capacity-planning),
 [Cluster](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#capacity-planning)
@@ -53791,7 +53966,7 @@ The Retention Period is the number of days or months for storing data. It affect
 The formula for calculating required disk space is the following:
 
 ```
-Bytes Per Sample * Ingestion rate * Replication Factor * (Retention Period in Seconds +1 Retention Cycle(day or month)) * 1.25 (recommended 20% of free space for merges )
+Bytes Per Sample * Ingestion rate * Replication Factor * (Retention Period in Seconds +1 Retention Cycle(day or month)) * 1.25 (recommended 20% of free space for merges ) 
 ```
 
 The **Retention Cycle** is one **day** or one **month**. If the retention period is higher than 30 days cycle is a month; otherwise day.
@@ -53850,7 +54025,9 @@ and Memory required to handle the Ingestion Rate, Active Time Series, Churn Rate
 # Document: Multi Retention Setup within VictoriaMetrics Cluster
 
 Source path: docs/guides/guide-vmcluster-multiple-retention-setup/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/guide-vmcluster-multiple-retention-setup/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/guide-vmcluster-multiple-retention-setup/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/guide-vmcluster-multiple-retention-setup/_index.md
+Description: This guide explains how to set up multiple retentions using an open-source VictoriaMetrics Cluster.
 
 > [VictoriaMetrics Enterprise](https://docs.victoriametrics.com/victoriametrics/enterprise/) supports specifying multiple retentions for distinct sets of time series and tenants. If you are an Enterprise user, [configure multiple retentions directly through retention filters](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#retention-filters) instead of following this guide.
 
@@ -53947,6 +54124,7 @@ vminsert:
 vmselect:
   enabled: false
 EOF
+
 
 cat <<EOF > vmcluster-c.yaml
 vmstorage:
@@ -54198,7 +54376,9 @@ This is useful for restricting access by team, environment, or tenant without ch
 # Document: VictoriaMetrics Multi-Regional Setup: Dedicated Monitoring
 
 Source path: docs/guides/multi-regional-setup-dedicated-regions/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/multi-regional-setup-dedicated-regions/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/multi-regional-setup-dedicated-regions/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/multi-regional-setup-dedicated-regions/_index.md
+Description: This guide shows how to run VictoriaMetrics across many regions in high-availability mode. Each workload runs a local vmagent and sends metrics to dedicated monitoring deployments, so metric data is duplicated and avail…
 
 ## Overview {#scenario}
 
@@ -54433,7 +54613,9 @@ If running in cluster mode, use this instead:
 # Document: Collecting OpenShift logs with Victoria Logs
 
 Source path: docs/guides/collecting-openshift-logs-with-victoria-logs/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/collecting-openshift-logs-with-victoria-logs/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/collecting-openshift-logs-with-victoria-logs/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/collecting-openshift-logs-with-victoria-logs/_index.md
+Description: This guide explains how to collect and store logs from an OpenShift cluster in VictoriaLogs.
 
 This guide explains how to collect and store logs from an OpenShift cluster in VictoriaLogs.
 
@@ -54760,7 +54942,9 @@ You can filter streams on the left side pane to filter logs and use [LogsQL](htt
 # Document: Headlamp Kubernetes UI and VictoriaMetrics
 
 Source path: docs/guides/k8s-ui-headlamp/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-ui-headlamp/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-ui-headlamp/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-ui-headlamp/_index.md
+Description: Headlamp is a user-friendly Kubernetes UI with a built-in Prometheus plugin that can show metrics from VictoriaMetrics.
 
 [Headlamp](https://headlamp.dev/) is a user-friendly Kubernetes UI with a built-in Prometheus plugin that can show metrics from VictoriaMetrics.
 
@@ -54860,7 +55044,9 @@ You should now find the Show Prometheus metrics option on several pages.
 # Document: VictoriaMetrics topologies
 
 Source path: docs/guides/vm-architectures/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vm-architectures/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vm-architectures/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vm-architectures/_index.md
+Description: The complexity of any monitoring system is not an end in itself. It is a direct response to two questions: what risks are we protecting against, and how much performance do we need? This guide is designed to help you ch…
 
 ## Matching Architecture to Risk
 
@@ -55246,7 +55432,9 @@ This multitenancy approach gives us another trade-off in the isolation implement
 # Document: Datasource-Managed Alerts with vmalert and Grafana
 
 Source path: docs/guides/vmalert-datasource-managed-alerts-grafana/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmalert-datasource-managed-alerts-grafana/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmalert-datasource-managed-alerts-grafana/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmalert-datasource-managed-alerts-grafana/_index.md
+Description: Grafana offers a rich alerting UI, including rule grouping, silences, and notification history. While Grafana-managed alerts are easy to use, they can hit performance issues without additional configuration since they d…
 
 Grafana offers a rich alerting UI, including rule grouping, silences, and notification history. While Grafana-managed alerts are easy to use, [they can hit performance issues without additional configuration since they depend on a relational database by default](https://grafana.com/blog/how-we-improved-grafanas-alert-state-history-to-provide-better-insights-into-your-alerting-data/).
 
@@ -55867,7 +56055,9 @@ With vmselect’s `vmalert.proxyURL` set and Alertmanager configured as a dataso
 # Document: Setup vmgateway - Multi-Tenant Access with Grafana & OIDC
 
 Source path: docs/guides/grafana-vmgateway-openid-configuration/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/grafana-vmgateway-openid-configuration/_index.md
+Description: Using Grafana with vmgateway is a great way to provide multi-tenant access to your metrics. vmgateway provides a way to authenticate users using JWT tokens issued by an external identity provider. Those tokens can inclu…
 
 > vmgateway access control feature has been deprecated. Consider following the vmauth guide [Setup vmauth - Multi-Tenant Access with Grafana & OIDC](https://docs.victoriametrics.com/guides/grafana-vmauth-openid-configuration/) instead. See [migration](https://docs.victoriametrics.com/victoriametrics/vmgateway/#access-control-migration-to-vmauth) docs.
 
@@ -56298,7 +56488,9 @@ will just verify token validity.
 # Document: Anomaly Detection
 
 Source path: docs/anomaly-detection/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/_index.md
+Description: In today's fast-paced and complex landscape of system monitoring, VictoriaMetrics Anomaly Detection (vmanomaly), a part of our Enterprise offering, serves as an observability layer for SREs and DevOps teams atop of coll…
 
 In today's fast-paced and complex landscape of system monitoring, [VictoriaMetrics Anomaly Detection](https://victoriametrics.com/products/enterprise/anomaly-detection/) (`vmanomaly`), a part of our [Enterprise offering](https://victoriametrics.com/products/enterprise/), serves as an **observability layer** for SREs and DevOps teams atop of collected data to **automate the detection of anomalies in time-series data**, reducing manual efforts required to identify abnormal system behavior.
 
@@ -56421,7 +56613,9 @@ Our [CHANGELOG is just a click away](https://docs.victoriametrics.com/anomaly-de
 # Document: Quick Start
 
 Source path: docs/anomaly-detection/QuickStart.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/QuickStart.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/QuickStart.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/QuickStart.md
+Description: For a broader overview please visit the navigation page.
 
 For a broader overview please visit the [navigation page](https://docs.victoriametrics.com/anomaly-detection/).
 
@@ -56882,7 +57076,9 @@ Please refer to the following links for a deeper understanding of Anomaly Detect
 # Document: Presets
 
 Source path: docs/anomaly-detection/Presets.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/Presets.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/Presets.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/Presets.md
+Description: Preset (available from vmanomaly v1.13.0) mode allows for simpler configuration and anomaly detection with vmanomaly on widely-recognized metrics, such as those generated by node\exporter, which are typically challengin…
 
 > Please check the [Quick Start Guide](https://docs.victoriametrics.com/anomaly-detection/quickstart/) to install and run `vmanomaly`
 
@@ -57239,7 +57435,9 @@ At the same time `cpu_seconds_total` for `steal` mode started to grow as well.
 # Document: UI
 
 Source path: docs/anomaly-detection/UI.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/UI.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/UI.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/UI.md
+Description: (available from vmanomaly v1.26.0) vmanomaly includes a built-in vmui-like UI for exploring queries, comparing anomaly detection models, and tuning model or domain settings before production deployment.
 
 ## Introduction
 
@@ -57693,14 +57891,14 @@ Based on expected usage patterns (quick experiments, internal team serving, numb
 server:
   # Port for the UI server (default: 8490)
   port: 8490
-  # Limit on concurrent tasks to manage UI load (default: 2)
+  # Limit on concurrent tasks to manage UI load (default: 2) 
   max_concurrent_tasks: 2
 
 settings:
   # Number of workers for single job speed-ups (default: 1)
   n_workers: 2
-  # Adjust logging levels to reduce verbosity
-  logger_levels:
+  # Adjust logging levels to reduce verbosity  
+  logger_levels: 
     vmanomaly: WARNING
     reader: INFO
     model: INFO
@@ -57745,7 +57943,7 @@ If mixing the UI alongside production jobs of anomaly detection is expected, it 
 
 settings:
   # Number of workers for mixed usage (numbers <= 0 mean number of available CPU cores)
-  n_workers: -1
+  n_workers: -1        
   # Adjust logging levels to reduce verbosity
   logger_levels:
     vmanomaly: WARNING
@@ -58114,7 +58312,9 @@ Initial public release of the vmanomaly UI.
 # Document: Components
 
 Source path: docs/anomaly-detection/components/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/_index.md
+Description: This chapter describes the configuration sections used to run VictoriaMetrics Anomaly Detection, or vmanomaly:
 
 This chapter describes the configuration sections used to run VictoriaMetrics Anomaly Detection, or [`vmanomaly`](https://docs.victoriametrics.com/anomaly-detection/):
 
@@ -58213,7 +58413,7 @@ reader:
   "offset": "0s"  # offset to apply to all queries, e.g. to account for data delays, can be overridden on per-query basis
   queries:  # aliases to MetricsQL expressions
     cpu_seconds_total:
-      expr: 'avg(rate(node_cpu_seconds_total[5m])) by (mode)'
+      expr: 'avg(rate(node_cpu_seconds_total[5m])) by (mode)' 
       # step: '30s'  # if not set, will be equal to reader-level sampling_period
       data_range: [0, 'inf']  # query-level business policy from v1.30.2
       detection_direction: 'above_expected'  # query-level from v1.30.2; detect spikes only
@@ -58234,6 +58434,7 @@ writer:
   metric_format:
     __name__: $VAR
     for: $QUERY_KEY
+    
 
 # enable self-monitoring in pull and/or push mode
 # https://docs.victoriametrics.com/anomaly-detection/components/monitoring/
@@ -58307,7 +58508,7 @@ reader:
       expr: 'rate(node_network_receive_errs_total[3m]) / rate(node_network_receive_packets_total[3m])'
       step: '15s'
       data_range: [0, 'inf']
-
+  
 models:
   zscore:
     class: 'zscore_online'
@@ -58376,7 +58577,9 @@ writer:
 # Document: Models
 
 Source path: docs/anomaly-detection/components/models.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/models.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/models.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/models.md
+Description: This section covers the Models component of VictoriaMetrics Anomaly Detection (commonly referred to as vmanomaly) and provides a guide on how to configure the service.
 
 This section covers the `Models` component of VictoriaMetrics Anomaly Detection (commonly referred to as [`vmanomaly`](https://docs.victoriametrics.com/anomaly-detection/)) and provides a guide on how to configure the service.
 
@@ -58736,7 +58939,7 @@ The primary use case is to **align domain knowledge** about data behavior (defin
 reader:
   # ...
   queries:
-    q1_clipped:
+    q1_clipped: 
       expr: 'q1_metricsql'
       data_range: [0, "inf"]
     q2_no_clip:
@@ -58762,11 +58965,11 @@ models:
     z_threshold: 3
     # if not set, by default resolved to `clip_predictions: False`
     queries: [
-      # `yhat`, `yhat_lower`, `yhat_upper` won't be clipped to [0, inf]
+      # `yhat`, `yhat_lower`, `yhat_upper` won't be clipped to [0, inf] 
       # even though `data_range` for `q1_clipped` is set
       # however, anomaly scores > 1 will still be produced for y outside of data_range
       'q1_clipped',
-      # there will be no (explicit) clip of yhat, yhat_lower, yhat_upper
+      # there will be no (explicit) clip of yhat, yhat_lower, yhat_upper  
       # for all `zscore_mixed` instances that are fit on series returned by `q2_no_clip` query
       # as `clip_predictions` arg is not set, regardless of data_range for `q2_no_clip`
       'q2_no_clip',
@@ -58818,7 +59021,7 @@ models:
   model_higher_out_of_data_range_score:
     class: 'zscore_online'
     # explicitly set, takes priority over `settings`'s value
-    anomaly_score_outside_data_range: 3.0
+    anomaly_score_outside_data_range: 3.0  
 ```
 
 **Decay**
@@ -59728,6 +59931,7 @@ from model.model import (
     deserialize_basic,
 )
 
+
 class CustomModel(Model):
     """Simple univariate, offline custom model."""
 
@@ -59797,6 +60001,7 @@ For a custom many-to-one model, derive from `MultivariateModel` and declare the 
 ```python
 from model.model import MultivariateModel
 from model.topology import ModelTopology
+
 
 class CustomMultivariateModel(MultivariateModel):
     topology = ModelTopology.MANY_TO_ONE
@@ -60014,7 +60219,9 @@ Resulting metrics of the model are described [here](#vmanomaly-output).
 # Document: Reader
 
 Source path: docs/anomaly-detection/components/reader.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/reader.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/reader.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/reader.md
+Description: VictoriaMetrics Anomaly Detection (vmanomaly) reads Prometheus-compatible metrics from VictoriaMetrics through VmReader and MetricsQL. It can also derive metrics from VictoriaLogs or VictoriaTraces through VLogsReader a…
 
 VictoriaMetrics Anomaly Detection (`vmanomaly`) reads Prometheus-compatible metrics from [VictoriaMetrics](https://docs.victoriametrics.com/victoriametrics/) through [VmReader](#vm-reader) and [MetricsQL](https://docs.victoriametrics.com/victoriametrics/metricsql/). It can also derive metrics from [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/) or [VictoriaTraces](https://docs.victoriametrics.com/victoriatraces/) through [VLogsReader](#victorialogs-reader) and [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/).
 
@@ -60730,7 +60937,9 @@ Like `VmReader`, `VLogsReader` exposes [several health metrics](https://docs.vic
 # Document: Scheduler
 
 Source path: docs/anomaly-detection/components/scheduler.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/scheduler.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/scheduler.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/scheduler.md
+Description: Scheduler defines how often to run and make inferences, as well as what timerange to use to train the model. Is specified in scheduler section of a config for VictoriaMetrics Anomaly Detection.
 
 Scheduler defines how often to run and make inferences, as well as what timerange to use to train the model.
 Is specified in `scheduler` section of a config for VictoriaMetrics Anomaly Detection.
@@ -60855,8 +61064,8 @@ schedulers:
   periodic_scheduler_alias:
     class: "periodic"
     # (or class: "scheduler.periodic.PeriodicScheduler" for versions before v1.13.0, without class alias support)
-    fit_window: "14d"
-    infer_every: "1m"
+    fit_window: "14d" 
+    infer_every: "1m" 
     scatter_infer_jobs: true  # Distribute infer jobs evenly across the infer interval to reduce synchronized bursts.
     fit_every: "1h"
     start_from: "20:00"  # If launched before 20:00 (local Kyiv time), the first run starts today at 20:00. Otherwise, it starts tomorrow at 20:00.
@@ -61214,7 +61423,9 @@ schedulers:
 # Document: Writer
 
 Source path: docs/anomaly-detection/components/writer.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/writer.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/writer.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/writer.md
+Description: For exporting data, VictoriaMetrics Anomaly Detection (vmanomaly) primarily employs the VmWriter, which writes produced anomaly scores (preserving initial labelset and optionally applying additional ones) back to Victor…
 
 For exporting data, VictoriaMetrics Anomaly Detection (`vmanomaly`) primarily employs the [VmWriter](#vm-writer), which writes produced anomaly scores **(preserving initial labelset and optionally applying additional ones)** back to VictoriaMetrics. This writer is tailored for smooth data export within the VictoriaMetrics ecosystem.
 
@@ -61401,18 +61612,18 @@ Please note the different behaviors depending on the `tenant_id` value:
 3. **When `writer.tenant_id = 'multitenant'` but `vm_account_id` is missing** (e.g., due to aggregation in the reader or missing `keep_metric_names` in the query):
    - **Result**: The data is still written to `"0:0"`, but a warning is raised:
    ```
-   The label `vm_account_id` was not found in the label set of {query_result.key},
-   but tenant_id='multitenant' is set in writer. The data will be written to the default tenant 0:0.
-   Ensure that the query retains the necessary multi-tenant labels,
+   The label `vm_account_id` was not found in the label set of {query_result.key}, 
+   but tenant_id='multitenant' is set in writer. The data will be written to the default tenant 0:0. 
+   Ensure that the query retains the necessary multi-tenant labels, 
    or adjust the aggregation settings to preserve `vm_account_id` key in the label set.
    ```
 
 4. **When `writer.tenant_id != 'multitenant'` (e.g., `"0:0"`) and `vm_account_id` exists in the label set**:
    - **Result**: Writing is allowed, but a warning is raised:
    ```
-   The label set for the metric {query_result.key} contains multi-tenancy labels,
-   but the write endpoint is configured for single-tenant mode (tenant_id != 'multitenant').
-   Either adjust the query in the reader to avoid multi-tenancy labels
+   The label set for the metric {query_result.key} contains multi-tenancy labels, 
+   but the write endpoint is configured for single-tenant mode (tenant_id != 'multitenant'). 
+   Either adjust the query in the reader to avoid multi-tenancy labels 
    or ensure that reserved key `vm_account_id` is not explicitly set for single-tenant environments.
    ```
 
@@ -61472,7 +61683,9 @@ It will return metrics that will look like:
 # Document: Monitoring
 
 Source path: docs/anomaly-detection/components/monitoring.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/monitoring.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/monitoring.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/monitoring.md
+Description: There are 2 models to monitor VictoriaMetrics Anomaly Detection behavior - push and pull. Parameters for each of them should be specified in the config file, monitoring section.
 
 There are 2 models to monitor VictoriaMetrics Anomaly Detection behavior - [push](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#push-model) and [pull](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#pull-model). Parameters for each of them should be specified in the config file, `monitoring` section.
 
@@ -62100,7 +62313,9 @@ guidance tools.
 # Document: Settings
 
 Source path: docs/anomaly-detection/components/settings.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/settings.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/settings.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/settings.md
+Description: Through the Settings section of a config, you can configure the following parameters of the anomaly detection service:
 
 Through the **Settings** section of a config, you can configure the following parameters of the anomaly detection service:
 
@@ -62521,7 +62736,9 @@ settings:
 # Document: Server
 
 Source path: docs/anomaly-detection/components/server.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/server.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/server.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/server.md
+Description: Server component of VictoriaMetrics Anomaly Detection (vmanomaly) is responsible for serving the REST API (e.g. /metrics endpoint) and the web UI for anomaly detection.
 
 Server component of VictoriaMetrics Anomaly Detection (`vmanomaly`) is responsible for serving the REST API (e.g. `/metrics` endpoint) and the [web UI](https://docs.victoriametrics.com/anomaly-detection/ui/) for anomaly detection.
 
@@ -62549,7 +62766,7 @@ server:
   addr: '0.0.0.0'
   port: 8490
   path_prefix: '/vmanomaly'  # optional path prefix for all HTTP routes
-
+  
   # see https://docs.victoriametrics.com/anomaly-detection/ui/#default-state section for details on constructing the value from UI state
   ui_default_state: '#/?anomaly_threshold=1.0&anomaly_consecutive=true&fit_window=3d'  # optional default UI state opened on /vmui/
   max_concurrent_tasks: 4  # maximum number of concurrent anomaly detection tasks processed by backend
@@ -62593,7 +62810,9 @@ Rest API endpoints (e.g. `/metrics`) can be accessed at `<vmanomaly-host>:8490/v
 # Document: Guides
 
 Source path: docs/anomaly-detection/guides/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/guides/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/guides/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/guides/_index.md
+Description: This section holds guides of how to set up and use VictoriaMetrics Anomaly Detection (or simply vmanomaly) service, integrating it with different observability components.
 
 This section holds guides of how to set up and use VictoriaMetrics Anomaly Detection (or simply [`vmanomaly`](https://docs.victoriametrics.com/anomaly-detection/)) service, integrating it with different observability components.
 
@@ -62605,7 +62824,9 @@ Guides:
 # Document: Anomaly Detection and Alerting Setup
 
 Source path: docs/anomaly-detection/guides/guide-vmanomaly-vmalert/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/_index.md
+Description: Prerequisites:
 
 **Prerequisites**:
 
@@ -62758,11 +62979,12 @@ reader:
   datasource_url: "http://victoriametrics:8428/"
   sampling_period: "60s"
   queries:
-    node_cpu_rate:
+    node_cpu_rate: 
       expr: "sum(rate(node_cpu_seconds_total[5m])) by (mode, instance, job)"
 
 writer:
   datasource_url: "http://victoriametrics:8428/"
+
 
 monitoring:
   pull: # Enable /metrics endpoint.
@@ -62796,7 +63018,7 @@ groups:
     labels:
       severity: warning
     annotations:
-      summary: Anomaly Score exceeded 1.0. `sum(rate(node_cpu_seconds_total))` is showing abnormal behavior.
+      summary: Anomaly Score exceeded 1.0. `sum(rate(node_cpu_seconds_total))` is showing abnormal behavior. 
 ```
 
 In the query expression `expr`, it's crucial to establish a criterion based on the generated anomaly scores. Typically, an [anomaly score](https://docs.victoriametrics.com/anomaly-detection/faq/#what-is-anomaly-score) ranging from 0.0 to 1.0 indicates that the analyzed value falls within normal behavior. Scores exceeding 1.0 signal increasing confidence from our model that the observed value is anomalous.
@@ -62962,6 +63184,7 @@ services:
       - vm_net
     restart: always
 
+
   vmalert:
     container_name: vmalert
     image: victoriametrics/vmalert:v1.150.0
@@ -63112,7 +63335,9 @@ As you continue to use VictoriaMetrics Anomaly Detection and `vmalert`, remember
 # Document: Scaling vmanomaly
 
 Source path: docs/anomaly-detection/Scaling-vmanomaly.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/Scaling-vmanomaly.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/Scaling-vmanomaly.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/Scaling-vmanomaly.md
+Description: Ensuring high availability and horizontal scalability is important for maintaining reliable anomaly detection in distributed environments. Horizontal scalability allows vmanomaly to distribute workloads across multiple…
 
 ## Overview
 
@@ -63530,7 +63755,9 @@ With **StatefulSet enabled**, `vmanomaly` automatically extracts shard numbers f
 # Document: Self-monitoring
 
 Source path: docs/anomaly-detection/Self-monitoring.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/Self-monitoring.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/Self-monitoring.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/Self-monitoring.md
+Description: Self-monitoring refers to the ability of the service to track and report its own health, operational performance, and any potential issues in real time. This process enables proactive maintenance and problem identificat…
 
 ## What is Self-Monitoring
 
@@ -63687,7 +63914,9 @@ These alerting rules complements the [dashboard](#grafana-dashboard) to monitor 
 # Document: Migration
 
 Source path: docs/anomaly-detection/Migration.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/Migration.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/Migration.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/Migration.md
+Description: This document provides guidelines for migrating to the latest version of VictoriaMetrics Anomaly Detection (vmanomaly). It covers the key changes, compatibility considerations, and best practices to ensure a smooth tran…
 
 ## Introduction
 
@@ -63774,7 +64003,9 @@ In stateless mode, the migration process is almost straightforward as there are 
 # Document: FAQ
 
 Source path: docs/anomaly-detection/FAQ.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/FAQ.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/FAQ.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/FAQ.md
+Description: VictoriaMetrics Anomaly Detection, also known as vmanomaly, is a service for detecting unexpected changes in time series data. Utilizing machine learning models, it computes and pushes back an "anomaly score" for user-s…
 
 ## What is VictoriaMetrics Anomaly Detection (vmanomaly)?
 
@@ -64056,8 +64287,8 @@ reader:
     disk_usage_perc_5m:
       expr: |
         max_over_time(
-          1 - (node_filesystem_avail_bytes{mountpoint="/",fstype!="rootfs"}
-          /
+          1 - (node_filesystem_avail_bytes{mountpoint="/",fstype!="rootfs"} 
+          / 
           node_filesystem_size_bytes{mountpoint="/",fstype!="rootfs"}),
           1h
         )
@@ -64067,8 +64298,8 @@ reader:
     disk_usage_perc_1d:
       expr: |
         max_over_time(
-          1 - (node_filesystem_avail_bytes{mountpoint="/",fstype!="rootfs"}
-          /
+          1 - (node_filesystem_avail_bytes{mountpoint="/",fstype!="rootfs"} 
+          / 
           node_filesystem_size_bytes{mountpoint="/",fstype!="rootfs"}),
           24h
         )
@@ -64237,7 +64468,7 @@ services:
 volumes:
   # ...
   # Enable if settings.restore_state is True
-  vmanomaly_data: {}
+  vmanomaly_data: {} 
 ```
 
 For Helm chart users, refer to the `persistentVolume` [section](https://github.com/VictoriaMetrics/helm-charts/blob/7f5a2c00b14c2c088d7d8d8bcee7a440a5ff11c6/charts/victoria-metrics-anomaly/values.yaml#L183) in the [`values.yaml`](https://github.com/VictoriaMetrics/helm-charts/blob/master/charts/victoria-metrics-anomaly/values.yaml) file. Ensure that the boolean flags `dumpModels` and `dumpData` are set as needed (both are *enabled* by default).
@@ -64498,7 +64729,9 @@ For detailed instructions on setting up self-monitoring, dashboards, and alertin
 # Document: CHANGELOG
 
 Source path: docs/anomaly-detection/CHANGELOG.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/CHANGELOG.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/CHANGELOG.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/CHANGELOG.md
+Description: Please find the changelog for VictoriaMetrics Anomaly Detection below.
 
 Please find the changelog for VictoriaMetrics Anomaly Detection below.
 
@@ -65533,7 +65766,9 @@ Released: 2022-12-08
 # Document: OpenTelemetry
 
 Source path: docs/opentelemetry/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/opentelemetry/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/opentelemetry/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/opentelemetry/_index.md
+Description: VictoriaMetrics software provides native OpenTelemetry ingestion across metrics, logs, and traces via dedicated components. This allows running OpenTelemetry-based observability pipeline with VictoriaMetrics software as…
 
 VictoriaMetrics software provides native [OpenTelemetry](https://opentelemetry.io/) ingestion across **metrics**, **logs**, and **traces** via dedicated components.
 This allows running OpenTelemetry-based observability pipeline with VictoriaMetrics software as your backend.
@@ -65634,7 +65869,9 @@ Depending on the Grafana datasource plugin there could be multiple correlations 
 # Document: AI tools
 
 Source path: docs/ai-tools/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/ai-tools/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/ai-tools/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/ai-tools/_index.md
+Description: VictoriaMetrics Observability Stack integrates with AI assistants through MCP servers and agent skills. The integrations allow AI agents and automation tools to query Metrics, Logs, and Traces, analyze telemetry data, a…
 
 VictoriaMetrics Observability Stack integrates with AI assistants through [MCP servers](https://docs.victoriametrics.com/ai-tools/#mcp-servers)
 and [agent skills](https://docs.victoriametrics.com/ai-tools/#agent-skills).
@@ -65766,7 +66003,9 @@ Please see more details in [Vibe coding tools observability with VictoriaMetrics
 # Document: Playgrounds
 
 Source path: docs/playgrounds/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/playgrounds/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/playgrounds/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/playgrounds/_index.md
+Description: VictoriaMetrics offers public playgrounds where you can try the full observability stack online.
 
 VictoriaMetrics offers public playgrounds where you can try the full observability stack online.
 
@@ -65939,7 +66178,9 @@ Iximiuz Labs requires a [free account](https://labs.iximiuz.com/signup) to acces
 # Document: Contributing
 
 Source path: docs/victoriametrics/CONTRIBUTING.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/CONTRIBUTING.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/CONTRIBUTING.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/CONTRIBUTING.md
+Description: If you like VictoriaMetrics and want to contribute, then it would be great:
 
 If you like VictoriaMetrics and want to contribute, then it would be great:
 
@@ -66089,7 +66330,9 @@ make apptest
 # Document: Development Goals
 
 Source path: docs/victoriametrics/goals.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/goals.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/goals.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/goals.md
+Description: Normalized source from docs/victoriametrics/goals.md.
 
 ## Goals
 

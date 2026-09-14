@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_volume_prune.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_volume_prune.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_volume_prune.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_volume_prune.yaml)
 
 # docker volume prune
 
@@ -13,11 +13,11 @@ referenced by any containers. By default, it only removes anonymous volumes.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-a`, `--all` |  | Remove all unused volumes, not just anonymous ones (API 1.42+) |
-| `--filter` |  | Provide filter values (e.g. `label=<label>`) |
-| `-f`, `--force` |  | Do not prompt for confirmation |
+| Option          | Default | Description                                                    |
+| --------------- | ------- | -------------------------------------------------------------- |
+| `-a`, `--all`   |         | Remove all unused volumes, not just anonymous ones (API 1.42+) |
+| `--filter`      |         | Provide filter values (e.g. `label=<label>`)                   |
+| `-f`, `--force` |         | Do not prompt for confirmation                                 |
 
 ## Examples
 
@@ -55,7 +55,7 @@ have **either** the `foo` **or** `bar` label, while
 
 The currently supported filters are:
 
-* label (`label=<key>`, `label=<key>=<value>`, `label!=<key>`, or `label!=<key>=<value>`) - only remove volumes with (or without, in case `label!=...` is used) the specified labels.
+- label (`label=<key>`, `label=<key>=<value>`, `label!=<key>`, or `label!=<key>=<value>`) - only remove volumes with (or without, in case `label!=...` is used) the specified labels.
 
 The `label` filter accepts two formats. One is the `label=...` (`label=<key>` or `label=<key>=<value>`),
 which removes volumes with the specified labels. The other

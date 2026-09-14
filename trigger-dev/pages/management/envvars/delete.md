@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/management/envvars/delete.mdx](https://trigger.dev/docs/management/envvars/delete)
+> Pinned source for Trigger.dev v4.5.16: [docs/management/envvars/delete.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/management/envvars/delete.mdx)
+> Canonical documentation: https://trigger.dev/docs/management/envvars/delete
 
 # Delete Env Var
 
@@ -8,15 +9,35 @@
 
 Delete a specific environment variable for a specific project and environment.
 
+**Authentication:** `secretKey` or `personalAccessToken`
+
 **Parameters**
 
-- `projectRef` (path, required): The external ref of the project. You can find this in the project settings. Starts with `proj_`.
-- `env` (path, required): The environment of the project to list variables for.
-- `name` (path, required): The name of the environment variable.
+- `projectRef` (path; required; string): The external ref of the project. You can find this in the project settings. Starts with `proj_`.
+  - Example: `proj_yubjwjsfkxnylobaqvqz`
+- `env` (path; required; string; enum: `dev`, `staging`, `prod`): The environment of the project to list variables for.
+  - Example: `dev`
+- `name` (path; required; string): The name of the environment variable.
+  - Example: `SLACK_API_KEY`
 
 **Responses**
 
 - `200`: Environment variable deleted successfully
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (required; boolean)
 - `400`: Invalid request parameters or body
+  - Media type: `application/json`
+    - Schema (object)
+      - `error` (required; string)
+        - Example: `Something went wrong`
 - `401`: Unauthorized request
+  - Media type: `application/json`
+    - Schema (object)
+      - `error` (required; string)
+        - Example: `Something went wrong`
 - `404`: Resource not found
+  - Media type: `application/json`
+    - Schema (object)
+      - `error` (required; string)
+        - Example: `Something went wrong`

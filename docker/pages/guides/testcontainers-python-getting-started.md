@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/testcontainers-python-getting-started.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/testcontainers-python-getting-started.md)
+> Pinned source for Docker main: [content/guides/testcontainers-python-getting-started.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/testcontainers-python-getting-started.md)
 
 # Getting started with Testcontainers for Python
 
@@ -57,6 +57,7 @@ import os
 
 import psycopg
 
+
 def get_connection():
     host = os.getenv("DB_HOST", "localhost")
     port = os.getenv("DB_PORT", "5432")
@@ -90,6 +91,7 @@ Add a `create_table()` function to create the `customers` table:
 ```python
 from db.connection import get_connection
 
+
 def create_table():
     with get_connection() as conn:
         with conn.cursor() as cur:
@@ -116,11 +118,13 @@ def create_customer(name, email):
                 "INSERT INTO customers (name, email) VALUES (%s, %s)", (name, email))
             conn.commit()
 
+
 def get_all_customers() -> list[Customer]:
     with get_connection() as conn:
         with conn.cursor() as cur:
             cur.execute("SELECT * FROM customers")
             return [Customer(cid, name, email) for cid, name, email in cur]
+
 
 def get_customer_by_email(email) -> Customer:
     with get_connection() as conn:
@@ -128,6 +132,7 @@ def get_customer_by_email(email) -> Customer:
             cur.execute("SELECT id, name, email FROM customers WHERE email = %s", (email,))
             (cid, name, email) = cur.fetchone()
             return Customer(cid, name, email)
+
 
 def delete_all_customers():
     with get_connection() as conn:
@@ -182,6 +187,7 @@ from customers import customers
 
 postgres = PostgresContainer("postgres:16-alpine")
 
+
 @pytest.fixture(scope="module", autouse=True)
 def setup(request):
     postgres.start()
@@ -197,6 +203,7 @@ def setup(request):
     os.environ["DB_PASSWORD"] = postgres.password
     os.environ["DB_NAME"] = postgres.dbname
     customers.create_table()
+
 
 @pytest.fixture(scope="function", autouse=True)
 def setup_data():
@@ -222,6 +229,7 @@ def test_get_all_customers():
     customers.create_customer("James", "james@gmail.com")
     customers_list = customers.get_all_customers()
     assert len(customers_list) == 2
+
 
 def test_get_customer_by_email():
     customers.create_customer("John", "john@gmail.com")

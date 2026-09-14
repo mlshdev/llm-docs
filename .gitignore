@@ -1,11 +1,15 @@
 node_modules/
-_site/
 _generated/
 .serena/
 .claude/
 .DS_Store
-/session-*.md
+/*session*.md
 /resume.txt
+
+# Audit and handoff scaffolding for the generator rewrite. Process notes, not
+# project artifacts.
+/CODEBASE_AUDIT.md
+/CONTINUATION_HANDOFF.md
 /[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9]-*.txt
 *.tmp
 .env
@@ -21,4 +25,6 @@ id_ed25519
 
 # Pipeline health report emitted by `bun run update`.
 build-report.json
+.generated-update-transaction.json
 *.staging/
+*.backup/

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_pull.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_pull.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_pull.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_pull.yaml)
 
 # docker compose pull
 
@@ -12,19 +12,19 @@ Pulls an image associated with a service defined in a `compose.yaml` file, but d
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--ignore-buildable` |  | Ignore images that can be built |
-| `--ignore-pull-failures` |  | Pull what it can and ignores images with pull failures |
-| `--include-deps` |  | Also pull services declared as dependencies |
-| `--policy` |  | Apply pull policy ("missing"\|"always") |
-| `-q`, `--quiet` |  | Pull without printing progress information |
+| Option                   | Default | Description                                            |
+| ------------------------ | ------- | ------------------------------------------------------ |
+| `--ignore-buildable`     |         | Ignore images that can be built                        |
+| `--ignore-pull-failures` |         | Pull what it can and ignores images with pull failures |
+| `--include-deps`         |         | Also pull services declared as dependencies            |
+| `--policy`               |         | Apply pull policy ("missing"\|"always")                |
+| `-q`, `--quiet`          |         | Pull without printing progress information             |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--dry-run` |  | Execute command in dry run mode |
+| Option      | Default | Description                     |
+| ----------- | ------- | ------------------------------- |
+| `--dry-run` |         | Execute command in dry run mode |
 
 ## Examples
 

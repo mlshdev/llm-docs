@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/data-ingestion/Vector.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/Vector.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/data-ingestion/Vector.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/Vector.md)
 
 To Send data to Vector you need to configure with a Prometheus remote write sink and forward metrics to that sink from at least 1 source.
 You will need to replace the values in `<>` to match your setup.

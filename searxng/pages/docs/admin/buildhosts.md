@@ -1,162 +1,134 @@
-> Commit-pinned source for SearXNG master: [docs/admin/buildhosts.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/buildhosts.rst)
+> Pinned source for SearXNG master: [docs/admin/buildhosts.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/buildhosts.rst)
 
-.. \_buildhosts:
+<a id="buildhosts"></a>
 
 # Buildhosts
 
 To get best results from build, it's recommend to install additional packages on
-build hosts (see searxng.sh).
+build hosts (see [searxng.sh](https://docs.searxng.org/utils/searxng.sh.html#searxng-sh)).
 
-.. \_searxng.sh install buildhost:
+<a id="searxng-sh-install-buildhost"></a>
 
 # Build and Development tools
 
 To Install tools used by build and development tasks in once:
 
-.. tabs:
+**SearXNG's development tools**
 
-```text
-.. group-tab:: SearXNG's development tools
-
- .. code:: sh
-
-    $ sudo -H ./utils/searxng.sh install buildhost
-
+```sh
+$ sudo -H ./utils/searxng.sh install buildhost
 ```
 
 This will install packages needed by SearXNG:
 
-.. kernel-include:: $DOCS\_BUILD/includes/searxng.rst
-:start-after: START distro-packages
-:end-before: END distro-packages
+Build-time include: `$DOCS_BUILD/includes/searxng.rst`
 
 and packages needed to build documentation and run tests:
 
-.. kernel-include:: $DOCS\_BUILD/includes/searxng.rst
-:start-after: START build-packages
-:end-before: END build-packages
+Build-time include: `$DOCS_BUILD/includes/searxng.rst`
 
-.. \_docs build:
+<a id="docs-build"></a>
 
 # Build docs
 
+<a id="graphviz"></a> <a id="imagemagick"></a> <a id="xetex"></a> <a id="dvisvgm"></a>
+
 ### Sphinx build needs
 
-- [ImageMagick](https://www.imagemagick.org)
-- [Graphviz](https://graphviz.gitlab.io)
-- [XeTeX](https://tug.org/xetex/)
-- [dvisvgm](https://dvisvgm.de/)
+- ImageMagick\_
+- Graphviz\_
+- XeTeX\_
+- dvisvgm\_
 
-Most of the sphinx requirements are installed from :origin:`setup.py` and the
+Most of the sphinx requirements are installed from [setup.py](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/setup.py) and the
 docs can be build from scratch with `make docs.html`.  For better math and
-image processing additional packages are needed.  The XeTeX needed not only for
-PDF creation, it's also needed for math when HTML output is build.
+image processing additional packages are needed.  The XeTeX\_ needed not only for
+PDF creation, it's also needed for [math](https://docs.searxng.org/dev/reST.html#math) when HTML output is build.
 
 To be able to do sphinx:math-support without CDNs, the math are rendered
 as images (`sphinx.ext.imgmath` extension).
 
-Here is the extract from the :origin:`docs/conf.py` file, setting math renderer
+Here is the extract from the [docs/conf.py](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/conf.py) file, setting math renderer
 to `imgmath`:
 
-.. literalinclude:: ../conf.py
-:language: python
-:start-after: # sphinx.ext.imgmath setup
-:end-before: # sphinx.ext.imgmath setup END
+Build-time include: `../conf.py`
 
 If your docs build (`make docs.html`) shows warnings like this:
 
-```text
+```python
 WARNING: dot(1) not found, for better output quality install \
-        graphviz from https://www.graphviz.org
+         graphviz from https://www.graphviz.org
 ..
 WARNING: LaTeX command 'latex' cannot be run (needed for math \
-        display), check the imgmath_latex setting
-
+         display), check the imgmath_latex setting
 ```
 
 you need to install additional packages on your build host, to get better HTML
-output (\[install buildhost]\(#searxng.sh install buildhost)).
+output ([install buildhost](https://docs.searxng.org/admin/buildhosts.html#searxng-sh-install-buildhost)).
 
-.. tabs:
+**Ubuntu / debian**
 
-```text
-.. group-tab:: Ubuntu / debian
+```sh
+$ sudo apt install graphviz imagemagick texlive-xetex librsvg2-bin
+```
 
-  .. code-block:: sh
+**Arch Linux**
 
-     $ sudo apt install graphviz imagemagick texlive-xetex librsvg2-bin
+```sh
+$ sudo pacman -S graphviz imagemagick texlive-bin extra/librsvg
+```
 
-.. group-tab:: Arch Linux
+**Fedora / RHEL**
 
-  .. code-block:: sh
-
-     $ sudo pacman -S graphviz imagemagick texlive-bin extra/librsvg
-
-.. group-tab::  Fedora / RHEL
-
-  .. code-block:: sh
-
-     $ sudo dnf install graphviz graphviz-gd ImageMagick texlive-xetex-bin librsvg2-tools
-
+```sh
+$ sudo dnf install graphviz graphviz-gd ImageMagick texlive-xetex-bin librsvg2-tools
 ```
 
 For PDF output you also need:
 
-.. tabs:
+**Ubuntu / debian**
 
-```text
-.. group-tab:: Ubuntu / debian
-
-  .. code:: sh
-
-     $ sudo apt texlive-latex-recommended texlive-extra-utils ttf-dejavu
-
-.. group-tab:: Arch Linux
-
-  .. code:: sh
-
-  	 $ sudo pacman -S texlive-core texlive-latexextra ttf-dejavu
-
-.. group-tab::  Fedora / RHEL
-
-  .. code:: sh
-
-  	 $ sudo dnf install \
-         texlive-collection-fontsrecommended texlive-collection-latex \
-         dejavu-sans-fonts dejavu-serif-fonts dejavu-sans-mono-fonts
-
+```sh
+$ sudo apt texlive-latex-recommended texlive-extra-utils ttf-dejavu
 ```
 
-.. \_sh lint:
+**Arch Linux**
+
+```sh
+udo pacman -S texlive-core texlive-latexextra ttf-dejavu
+```
+
+**Fedora / RHEL**
+
+```sh
+udo dnf install \
+  texlive-collection-fontsrecommended texlive-collection-latex \
+  dejavu-sans-fonts dejavu-serif-fonts dejavu-sans-mono-fonts
+```
+
+<a id="sh-lint"></a>
 
 # Lint shell scripts
 
-To lint shell scripts we use ShellCheck - a shell script static analysis tool
-(\[install buildhost]\(#searxng.sh install buildhost)).
+<a id="shellcheck"></a>
 
-.. SNIP sh lint requirements
+To lint shell scripts we use ShellCheck\_ - a shell script static analysis tool
+([install buildhost](https://docs.searxng.org/admin/buildhosts.html#searxng-sh-install-buildhost)).
 
-.. tabs:
+**Ubuntu / debian**
 
-```text
-.. group-tab:: Ubuntu / debian
-
-  .. code-block:: sh
-
-     $ sudo apt install shellcheck
-
-.. group-tab:: Arch Linux
-
-  .. code-block:: sh
-
-     $ sudo pacman -S shellcheck
-
-.. group-tab::  Fedora / RHEL
-
-  .. code-block:: sh
-
-     $ sudo dnf install ShellCheck
-
+```sh
+$ sudo apt install shellcheck
 ```
 
-.. SNAP sh lint requirements
+**Arch Linux**
+
+```sh
+$ sudo pacman -S shellcheck
+```
+
+**Fedora / RHEL**
+
+```sh
+$ sudo dnf install ShellCheck
+```

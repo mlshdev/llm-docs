@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.1: [docs/sources/alerting/fundamentals/alert-rule-evaluation/nodata-and-error-states.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/alerting/fundamentals/alert-rule-evaluation/nodata-and-error-states.md)
+> Pinned source for Grafana v13.2.1: [docs/sources/alerting/fundamentals/alert-rule-evaluation/nodata-and-error-states.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/alerting/fundamentals/alert-rule-evaluation/nodata-and-error-states.md)
 
 # No Data and Error states
 

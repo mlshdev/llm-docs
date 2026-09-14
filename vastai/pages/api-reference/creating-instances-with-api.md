@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [api-reference/creating-instances-with-api.mdx](https://docs.vast.ai/api-reference/creating-instances-with-api)
+> Pinned source for Vast.ai main: [api-reference/creating-instances-with-api.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/api-reference/creating-instances-with-api.mdx)
+> Canonical documentation: https://docs.vast.ai/api-reference/creating-instances-with-api
 
 # Creating Instances with the API
 
@@ -220,7 +221,7 @@ curl -X PUT "https://console.vast.ai/api/v0/asks/12345678/" \
     "template_hash_id": "4e17788f74f075dd9aab7d0d4427968f",
     "label": "custom-inference-server",
     "disk": 100,
-    "env": {"MODEL_ID": "mistralai/Mistral-7B-Instruct-v0.2", "HF_TOKEN": "hf_xxxYourTokenHere"}
+    "env": `{"MODEL_ID": "mistralai/Mistral-7B-Instruct-v0.2", "HF_TOKEN": "hf_xxxYourTokenHere"}`
   }'
 ```
 
@@ -240,7 +241,7 @@ response = requests.put(
         "template_hash_id": "4e17788f74f075dd9aab7d0d4427968f",
         "label": "custom-inference-server",
         "disk": 100,
-        "env": {"MODEL_ID": "mistralai/Mistral-7B-Instruct-v0.2", "HF_TOKEN": "hf_xxxYourTokenHere"}
+        "env": `{"MODEL_ID": "mistralai/Mistral-7B-Instruct-v0.2", "HF_TOKEN": "hf_xxxYourTokenHere"}`
     }
 )
 

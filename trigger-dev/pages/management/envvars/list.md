@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/management/envvars/list.mdx](https://trigger.dev/docs/management/envvars/list)
+> Pinned source for Trigger.dev v4.5.16: [docs/management/envvars/list.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/management/envvars/list.mdx)
+> Canonical documentation: https://trigger.dev/docs/management/envvars/list
 
 # List Env Vars
 
@@ -8,14 +9,37 @@
 
 List all environment variables for a specific project and environment.
 
+**Authentication:** `secretKey` or `personalAccessToken`
+
 **Parameters**
 
-- `projectRef` (path, required): The external ref of the project. You can find this in the project settings. Starts with `proj_`.
-- `env` (path, required): The environment of the project to list variables for.
+- `projectRef` (path; required; string): The external ref of the project. You can find this in the project settings. Starts with `proj_`.
+  - Example: `proj_yubjwjsfkxnylobaqvqz`
+- `env` (path; required; string; enum: `dev`, `staging`, `prod`): The environment of the project to list variables for.
+  - Example: `dev`
 
 **Responses**
 
 - `200`: Successful request
+  - Media type: `application/json`
+    - Schema (array)
+      - `items` (object)
+        - `name` (required; string)
+          - Example: `SLACK_API_KEY`
+        - `value` (required; string)
+          - Example: `slack_123456`
 - `400`: Invalid request parameters or body
+  - Media type: `application/json`
+    - Schema (object)
+      - `error` (required; string)
+        - Example: `Something went wrong`
 - `401`: Unauthorized request
+  - Media type: `application/json`
+    - Schema (object)
+      - `error` (required; string)
+        - Example: `Something went wrong`
 - `404`: Resource not found
+  - Media type: `application/json`
+    - Schema (object)
+      - `error` (required; string)
+        - Example: `Something went wrong`

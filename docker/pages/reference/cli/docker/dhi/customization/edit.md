@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/dhi/docker_dhi_customization_edit.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/dhi/docker_dhi_customization_edit.yaml)
+> Pinned source for Docker main: [data/cli/dhi/docker_dhi_customization_edit.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/dhi/docker_dhi_customization_edit.yaml)
 
 # docker dhi customization edit
 
@@ -14,12 +14,12 @@ Edit an existing Docker Hardened Images customization using a YAML file as input
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--json` |  | Output in JSON format |
+| Option   | Default | Description           |
+| -------- | ------- | --------------------- |
+| `--json` |         | Output in JSON format |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--org` |  | Docker Hub organization (overrides config) |
+| Option  | Default | Description                                |
+| ------- | ------- | ------------------------------------------ |
+| `--org` |         | Docker Hub organization (overrides config) |

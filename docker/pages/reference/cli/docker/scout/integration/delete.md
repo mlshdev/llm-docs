@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/scout/docker_scout_integration_delete.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_integration_delete.yaml)
+> Pinned source for Docker main: [data/cli/scout/docker_scout_integration_delete.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_integration_delete.yaml)
 
 # docker scout integration delete
 
@@ -12,7 +12,7 @@ The docker scout integration delete command deletes a new integration configurat
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--name` |  | Name of integration configuration to delete |
-| `--org` |  | Namespace of the Docker organization |
+| Option   | Default | Description                                 |
+| -------- | ------- | ------------------------------------------- |
+| `--name` |         | Name of integration configuration to delete |
+| `--org`  |         | Namespace of the Docker organization        |

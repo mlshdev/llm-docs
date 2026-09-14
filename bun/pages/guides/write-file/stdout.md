@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/guides/write-file/stdout.mdx](https://bun.com/docs/guides/write-file/stdout)
+> Pinned source for Bun bun-v1.4.2: [docs/guides/write-file/stdout.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/guides/write-file/stdout.mdx)
+> Canonical documentation: https://bun.com/docs/guides/write-file/stdout
 
 # Write to stdout
 

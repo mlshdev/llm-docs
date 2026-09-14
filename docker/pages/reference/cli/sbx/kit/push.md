@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_kit_push.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_kit_push.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_kit_push.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_kit_push.yaml)
 
 # sbx kit push
 
@@ -6,7 +6,7 @@ Push a kit artifact to an OCI registry
 
 **Usage:** `sbx kit push DIRECTORY REFERENCE [flags]`
 
-> [!NOTE]
+> \[!NOTE]
 > This command is experimental.
 
 ## Description
@@ -17,11 +17,11 @@ The directory must contain a valid spec.yaml. The reference should be
 in the format "registry/repo:tag" (e.g., "ghcr.io/myorg/my-plugin:1.0").
 
 The OCI artifact format is selected from the kit's spec.yaml:
-  schemaVersion: "1"  → legacy ZIP-based artifact
-  schemaVersion: "2"  → v2 tar+gzip layer with the spec in the manifest
-                        config blob and standard OCI annotations (so
-                        distribution tooling can read kit metadata
-                        without pulling layers)
+schemaVersion: "1"  → legacy ZIP-based artifact
+schemaVersion: "2"  → v2 tar+gzip layer with the spec in the manifest
+config blob and standard OCI annotations (so
+distribution tooling can read kit metadata
+without pulling layers)
 
 With --sign, the pushed manifest is signed and the Sigstore bundle is
 attached to the kit as an OCI referrer. Signing is keyless (Fulcio +
@@ -39,18 +39,18 @@ Docker credential store.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--identity-token` |  | OIDC identity token for keyless signing; defaults to the ambient CI provider, then an interactive browser login |
-| `--identity-token-file` |  | File holding the OIDC identity token; keeps it out of the process arguments |
-| `--key` |  | Private key for key-based signing (PEM); omit for keyless signing |
-| `--sign` |  | Sign the pushed kit and attach the signature as an OCI referrer |
-| `--tlog-upload` | `true` | Upload the keyless signature to the Rekor transparency log; set false for private kits |
+| Option                  | Default | Description                                                                                                     |
+| ----------------------- | ------- | --------------------------------------------------------------------------------------------------------------- |
+| `--identity-token`      |         | OIDC identity token for keyless signing; defaults to the ambient CI provider, then an interactive browser login |
+| `--identity-token-file` |         | File holding the OIDC identity token; keeps it out of the process arguments                                     |
+| `--key`                 |         | Private key for key-based signing (PEM); omit for keyless signing                                               |
+| `--sign`                |         | Sign the pushed kit and attach the signature as an OCI referrer                                                 |
+| `--tlog-upload`         | `true`  | Upload the keyless signature to the Rekor transparency log; set false for private kits                          |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--cloud` |  | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (https://api.sandboxes-cloud.docker.com). Set DOCKER_CLOUD_API_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option            | Default                                  | Description                                                                                                                                                                                                             |
+| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
+| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
+| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |

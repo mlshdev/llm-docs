@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-google-kubernetes.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-google-kubernetes.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-google-kubernetes.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-google-kubernetes.md)
 
 # Hosting n8n on Google Kubernetes Engine <a id="hosting-n8n-on-google-kubernetes-engine"></a>
 
@@ -124,7 +124,7 @@ resources:
     memory: "250Mi"
   limits:
     memory: "500Mi"
-…
+…    
 ```
 
 This defines a minimum of 250mb per container, a maximum of 500mb, and lets Kubernetes handle CPU. You can change these values to match your own needs. As a guide, here are the resources values for the n8n cloud offerings:

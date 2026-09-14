@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/pgstatstatements.sgml#pgstatstatements](https://www.postgresql.org/docs/18/pgstatstatements.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/pgstatstatements.sgml#pgstatstatements](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/pgstatstatements.sgml%23pgstatstatements)
+> Canonical documentation: https://www.postgresql.org/docs/18/pgstatstatements.html
 
 # pg_stat_statements — track statistics of SQL planning and execution
 
@@ -468,6 +469,7 @@ calls           | 1
 total_exec_time | 160.588563
 rows            | 0
 hit_percent     | 100.0000000000000000
+
 
 bench=# SELECT pg_stat_statements_reset(0,0,s.queryid) FROM pg_stat_statements AS s
             WHERE s.query = 'UPDATE pgbench_branches SET bbalance = bbalance + $1 WHERE bid = $2';

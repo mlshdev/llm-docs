@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/high-availability.sgml#warm-standby-failover](https://www.postgresql.org/docs/18/warm-standby-failover.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/high-availability.sgml#warm-standby-failover](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/high-availability.sgml%23warm-standby-failover)
+> Canonical documentation: https://www.postgresql.org/docs/18/warm-standby-failover.html
 
 # Failover
 

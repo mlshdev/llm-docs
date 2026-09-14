@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_network_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_network_create.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_network_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_network_create.yaml)
 
 # docker network create
 
@@ -25,7 +25,7 @@ $ docker network create -d bridge my-bridge-network
 Bridge networks are isolated networks on a single Docker Engine installation. If you
 want to create a network that spans multiple Docker hosts each running Docker
 Engine, you must enable Swarm mode, and create an `overlay` network. To read more
-about overlay networks with Swarm mode, see ["*use overlay networks*"](/network/overlay/).
+about overlay networks with Swarm mode, see ["*use overlay networks*"](https://docs.docker.com/network/overlay/).
 
 Once you have enabled swarm mode, you can create a swarm-scoped overlay network:
 
@@ -55,30 +55,30 @@ endpoint-mode. This recommendation addresses
 need more than 256 IP addresses, do not increase the IP block size. You can
 either use `dnsrr` endpoint mode with an external load balancer, or use multiple
 smaller overlay networks. See
-[Configure service discovery](/engine/swarm/networking/#configure-service-discovery)
+[Configure service discovery](https://docs.docker.com/engine/swarm/networking/#configure-service-discovery)
 for more information about different endpoint modes.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--attachable` |  | Enable manual container attachment (API 1.25+) |
-| `--aux-address` |  | Auxiliary IPv4 or IPv6 addresses used by Network driver |
-| `--config-from` |  | The network from which to copy the configuration (API 1.30+) |
-| `--config-only` |  | Create a configuration only network (API 1.30+) |
-| `-d`, `--driver` | `bridge` | Driver to manage the Network |
-| `--gateway` |  | IPv4 or IPv6 Gateway for the master subnet |
-| `--ingress` |  | Create swarm routing-mesh network (API 1.29+) |
-| `--internal` |  | Restrict external access to the network |
-| `--ip-range` |  | Allocate container ip from a sub-range |
-| `--ipam-driver` |  | IP Address Management Driver |
-| `--ipam-opt` |  | Set IPAM driver specific options |
-| `--ipv4` | `true` | Enable or disable IPv4 address assignment |
-| `--ipv6` |  | Enable or disable IPv6 address assignment |
-| `--label` |  | Set metadata on a network |
-| `-o`, `--opt` |  | Set driver specific options |
-| `--scope` |  | Control the network's scope (API 1.30+) |
-| `--subnet` |  | Subnet in CIDR format that represents a network segment |
+| Option           | Default  | Description                                                  |
+| ---------------- | -------- | ------------------------------------------------------------ |
+| `--attachable`   |          | Enable manual container attachment (API 1.25+)               |
+| `--aux-address`  |          | Auxiliary IPv4 or IPv6 addresses used by Network driver      |
+| `--config-from`  |          | The network from which to copy the configuration (API 1.30+) |
+| `--config-only`  |          | Create a configuration only network (API 1.30+)              |
+| `-d`, `--driver` | `bridge` | Driver to manage the Network                                 |
+| `--gateway`      |          | IPv4 or IPv6 Gateway for the master subnet                   |
+| `--ingress`      |          | Create swarm routing-mesh network (API 1.29+)                |
+| `--internal`     |          | Restrict external access to the network                      |
+| `--ip-range`     |          | Allocate container ip from a sub-range                       |
+| `--ipam-driver`  |          | IP Address Management Driver                                 |
+| `--ipam-opt`     |          | Set IPAM driver specific options                             |
+| `--ipv4`         | `true`   | Enable or disable IPv4 address assignment                    |
+| `--ipv6`         |          | Enable or disable IPv6 address assignment                    |
+| `--label`        |          | Set metadata on a network                                    |
+| `-o`, `--opt`    |          | Set driver specific options                                  |
+| `--scope`        |          | Control the network's scope (API 1.30+)                      |
+| `--subnet`       |          | Subnet in CIDR format that represents a network segment      |
 
 ## Examples
 
@@ -154,7 +154,7 @@ be passed. Some of these have equivalent flags that can be used on the dockerd
 command line or in `daemon.json` to configure the default bridge, `docker0`:
 
 | Network create option                            | Daemon option for `docker0` | Description                                           |
-|--------------------------------------------------|-----------------------------|-------------------------------------------------------|
+| ------------------------------------------------ | --------------------------- | ----------------------------------------------------- |
 | `com.docker.network.bridge.name`                 | -                           | Bridge name to be used when creating the Linux bridge |
 | `com.docker.network.bridge.enable_ip_masquerade` | `--ip-masq`                 | Enable IP masquerading                                |
 | `com.docker.network.bridge.enable_icc`           | `--icc`                     | Enable or Disable Inter Container Connectivity        |
@@ -167,7 +167,7 @@ network driver, again with their approximate equivalents to Docker daemon
 flags used for the `docker0` bridge:
 
 | Network create option | Daemon option for `docker0`       | Description                                |
-|-----------------------|-----------------------------------|--------------------------------------------|
+| --------------------- | --------------------------------- | ------------------------------------------ |
 | `--gateway`           | -                                 | IPv4 or IPv6 Gateway for the master subnet |
 | `--ip-range`          | `--fixed-cidr`, `--fixed-cidr-v6` | Allocate IP addresses from a range         |
 | `--internal`          | -                                 | Restrict external access to the network    |

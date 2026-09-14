@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_image_rm.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_image_rm.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_image_rm.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_image_rm.yaml)
 
 # docker image rm
 
@@ -17,15 +17,15 @@ removed.
 
 This does not remove images from a registry. You cannot remove an image of a
 running container unless you use the `-f` option. To see all images on a host
-use the [`docker image ls`](/reference/cli/docker/image/ls/) command.
+use the [`docker image ls`](https://docs.docker.com/reference/cli/docker/image/ls/) command.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--force` |  | Force removal of the image |
-| `--no-prune` |  | Do not delete untagged parents |
-| `--platform` |  | Remove only the given platform variant. Formatted as `os[/arch[/variant]]` (e.g., `linux/amd64`) (API 1.50+) |
+| Option          | Default | Description                                                                                                  |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------ |
+| `-f`, `--force` |         | Force removal of the image                                                                                   |
+| `--no-prune`    |         | Do not delete untagged parents                                                                               |
+| `--platform`    |         | Remove only the given platform variant. Formatted as `os[/arch[/variant]]` (e.g., `linux/amd64`) (API 1.50+) |
 
 ## Examples
 
@@ -54,6 +54,7 @@ Untagged: test1:latest
 $ docker rmi test2:latest
 
 Untagged: test2:latest
+
 
 $ docker images
 

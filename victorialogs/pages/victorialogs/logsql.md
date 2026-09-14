@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/logsql.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/logsql.md)
+> Pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/logsql.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/logsql.md)
 
 LogsQL is a simple yet powerful query language for [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/).
 See [examples](https://docs.victoriametrics.com/victorialogs/logsql-examples/), [LogsQL tutorial](https://docs.victoriametrics.com/victorialogs/logsql/#logsql-tutorial),

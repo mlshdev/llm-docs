@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.1: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-cloud-stack.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/as-code/infrastructure-as-code/terraform/terraform-cloud-stack.md)
+> Pinned source for Grafana v13.2.1: [docs/sources/as-code/infrastructure-as-code/terraform/terraform-cloud-stack.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/as-code/infrastructure-as-code/terraform/terraform-cloud-stack.md)
 
 # Create and manage a Grafana Cloud stack using Terraform
 
@@ -37,6 +37,7 @@ Before you begin, ensure you have the following:
      alias = "cloud"
      cloud_access_policy_token = "<cloud-access-token>"
    }
+
 
    resource "grafana_cloud_stack" "my_stack" {
      provider = grafana.cloud

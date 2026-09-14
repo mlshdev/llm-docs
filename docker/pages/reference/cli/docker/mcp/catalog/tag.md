@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/mcp/docker_mcp_catalog_tag.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp_catalog_tag.yaml)
+> Pinned source for Docker main: [data/cli/mcp/docker_mcp_catalog_tag.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp_catalog_tag.yaml)
 
 # docker mcp catalog tag
 
@@ -14,10 +14,13 @@ This creates a copy of the source catalog with a new reference, similar to Docke
 ## Examples
 
 # Tag a catalog with a new version
-  docker mcp catalog tag mcp/my-catalog:v1 mcp/my-catalog:v2
 
-  # Create a tagged copy with a different name
-  docker mcp catalog tag mcp/team-catalog:latest mcp/prod-catalog:v1.0
+docker mcp catalog tag mcp/my-catalog:v1 mcp/my-catalog:v2
 
-  # Tag without explicit version (uses latest)
-  docker mcp catalog tag mcp/my-catalog mcp/my-catalog:backup
+# Create a tagged copy with a different name
+
+docker mcp catalog tag mcp/team-catalog:latest mcp/prod-catalog:v1.0
+
+# Tag without explicit version (uses latest)
+
+docker mcp catalog tag mcp/my-catalog mcp/my-catalog:backup

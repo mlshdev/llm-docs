@@ -1,4 +1,4 @@
-> Release-pinned source for yt-dlp 2026.08.19: [CONTRIBUTING.md](https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ead017ac81fe8486cf/CONTRIBUTING.md)
+> Pinned source for yt-dlp 2026.08.19: [CONTRIBUTING.md](https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ead017ac81fe8486cf/CONTRIBUTING.md)
 
 # CONTRIBUTING TO YT-DLP
 
@@ -241,6 +241,7 @@ After you have ensured this site is distributing its content legally, you can fo
 
    ```python
    from .common import InfoExtractor
+
 
    class YourExtractorIE(InfoExtractor):
        _VALID_URL = r'https?://(?:www\.)?yourextractor\.com/watch/(?P<id>[0-9]+)'

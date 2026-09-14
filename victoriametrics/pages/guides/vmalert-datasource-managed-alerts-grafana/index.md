@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/vmalert-datasource-managed-alerts-grafana/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmalert-datasource-managed-alerts-grafana/_index.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/guides/vmalert-datasource-managed-alerts-grafana/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmalert-datasource-managed-alerts-grafana/_index.md)
 
 Grafana offers a rich alerting UI, including rule grouping, silences, and notification history. While Grafana-managed alerts are easy to use, [they can hit performance issues without additional configuration since they depend on a relational database by default](https://grafana.com/blog/how-we-improved-grafanas-alert-state-history-to-provide-better-insights-into-your-alerting-data/).
 

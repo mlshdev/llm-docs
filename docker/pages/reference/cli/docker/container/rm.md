@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_container_rm.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_rm.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_container_rm.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_rm.yaml)
 
 # docker container rm
 
@@ -14,11 +14,11 @@ Remove one or more containers
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--force` |  | Force the removal of a running container (uses SIGKILL) |
-| `-l`, `--link` |  | Remove the specified link |
-| `-v`, `--volumes` |  | Remove anonymous volumes associated with the container |
+| Option            | Default | Description                                             |
+| ----------------- | ------- | ------------------------------------------------------- |
+| `-f`, `--force`   |         | Force the removal of a running container (uses SIGKILL) |
+| `-l`, `--link`    |         | Remove the specified link                               |
+| `-v`, `--volumes` |         | Remove anonymous volumes associated with the container  |
 
 ## Examples
 
@@ -60,8 +60,8 @@ The main process inside the container referenced under the link `redis` will rec
 
 ### Remove all stopped containers
 
-Use the [`docker container prune`](/reference/cli/docker/container/prune/) command to remove all
-stopped containers, or refer to the [`docker system prune`](/reference/cli/docker/system/prune/)
+Use the [`docker container prune`](https://docs.docker.com/reference/cli/docker/container/prune/) command to remove all
+stopped containers, or refer to the [`docker system prune`](https://docs.docker.com/reference/cli/docker/system/prune/)
 command to remove unused containers in addition to other Docker resources, such
 as (unused) images and networks.
 

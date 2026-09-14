@@ -1,4 +1,5 @@
-> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/concepts/features/passkeys.mdx](https://zitadel.com/docs/concepts/features/passkeys)
+> Pinned source for ZITADEL v4.17.3: [apps/docs/content/concepts/features/passkeys.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/concepts/features/passkeys.mdx)
+> Canonical documentation: https://zitadel.com/docs/concepts/features/passkeys
 
 ZITADEL's passkeys feature enables passwordless authentication, offering a **smoother and more secure** login experience for your users. This document explains the essential details for developers.
 

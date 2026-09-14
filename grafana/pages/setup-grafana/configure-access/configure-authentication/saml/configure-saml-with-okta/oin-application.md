@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.1: [docs/sources/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-okta/oin-application.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-okta/oin-application.md)
+> Pinned source for Grafana v13.2.1: [docs/sources/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-okta/oin-application.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/setup-grafana/configure-access/configure-authentication/saml/configure-saml-with-okta/oin-application.md)
 
 # Configure SAML with Okta catalog application
 

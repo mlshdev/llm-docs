@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/pgadmin.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/pgadmin.md)
+> Pinned source for Docker main: [content/guides/pgadmin.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/pgadmin.md)
 
 # Visualizing your PostgreSQL databases with pgAdmin
 

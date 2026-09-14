@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/offload/docker_offload_version.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/offload/docker_offload_version.yaml)
+> Pinned source for Docker main: [data/cli/offload/docker_offload_version.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/offload/docker_offload_version.yaml)
 
 # docker offload version
 
@@ -8,7 +8,7 @@ Prints the version
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--json` |  | Prints the version as JSON |
-| `--short` |  | Prints the short version |
+| Option    | Default | Description                |
+| --------- | ------- | -------------------------- |
+| `--json`  |         | Prints the version as JSON |
+| `--short` |         | Prints the short version   |

@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/guides/streams/to-buffer.mdx](https://bun.com/docs/guides/streams/to-buffer)
+> Pinned source for Bun bun-v1.4.2: [docs/guides/streams/to-buffer.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/guides/streams/to-buffer.mdx)
+> Canonical documentation: https://bun.com/docs/guides/streams/to-buffer
 
 # Convert a ReadableStream to a Buffer
 

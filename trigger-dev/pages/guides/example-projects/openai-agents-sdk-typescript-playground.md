@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/guides/example-projects/openai-agents-sdk-typescript-playground.mdx](https://trigger.dev/docs/guides/example-projects/openai-agents-sdk-typescript-playground)
+> Pinned source for Trigger.dev v4.5.16: [docs/guides/example-projects/openai-agents-sdk-typescript-playground.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/guides/example-projects/openai-agents-sdk-typescript-playground.mdx)
+> Canonical documentation: https://trigger.dev/docs/guides/example-projects/openai-agents-sdk-typescript-playground
 
 # OpenAI Agents SDK for Typescript + Trigger.dev playground
 

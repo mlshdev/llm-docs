@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [guides/templates/advanced-setup.mdx](https://docs.vast.ai/guides/templates/advanced-setup)
+> Pinned source for Vast.ai main: [guides/templates/advanced-setup.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/templates/advanced-setup.mdx)
+> Canonical documentation: https://docs.vast.ai/guides/templates/advanced-setup
 
 # Advanced Setup
 

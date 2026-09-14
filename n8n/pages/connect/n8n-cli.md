@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/n8n-cli.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/connect/n8n-cli.md)
+> Pinned source for n8n main: [docs/connect/n8n-cli.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/connect/n8n-cli.md)
 
 # Getting started with n8n CLI <a id="getting-started-with-n8n-cli"></a>
 
@@ -29,10 +29,10 @@ If you need to manage your n8n instance (backups, license management, emergency 
 ## Install n8n-cli <a id="install-n8n-cli"></a>
 
 ```bash
-# Use directly with npx (zero install) <a id="use-directly-with-npx-zero-install"></a>
+# Use directly with npx (zero install) <a href="#use-directly-with-npx-zero-install" id="use-directly-with-npx-zero-install"></a>
 npx @n8n/cli workflow list
 
-# Or install globally <a id="or-install-globally"></a>
+# Or install globally <a href="#or-install-globally" id="or-install-globally"></a>
 npm install -g @n8n/cli
 ```
 

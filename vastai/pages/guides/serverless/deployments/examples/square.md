@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [guides/serverless/deployments/examples/square.mdx](https://docs.vast.ai/guides/serverless/deployments/examples/square)
+> Pinned source for Vast.ai main: [guides/serverless/deployments/examples/square.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/serverless/deployments/examples/square.mdx)
+> Canonical documentation: https://docs.vast.ai/guides/serverless/deployments/examples/square
 
 # Square Function
 
@@ -15,9 +16,11 @@ from vastai.data.query import gpu_name, RTX_4090, RTX_5090
 
 app = Deployment(name="square")
 
+
 @app.remote(benchmark_dataset=[{"x": 2}])
 async def square(x):
     return x * x
+
 
 app.configure_autoscaling(min_load=1000)
 image = app.image("vastai/base-image:@vastai-automatic-tag", 16)
@@ -32,10 +35,12 @@ app.ensure_ready()
 import asyncio
 from deploy import app, square
 
+
 async def main():
     for x in range(1, 10):
         result = await square(x)
         print(f"square({x}) = {result}")
+
 
 if __name__ == "__main__":
     asyncio.run(main())

@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/PerTenantStatistic.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/PerTenantStatistic.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/PerTenantStatistic.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/PerTenantStatistic.md)
 
 ![cluster-per-tenant-stat](https://raw.githubusercontent.com/VictoriaMetrics/VictoriaMetrics/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/PerTenantStatistic-stats.webp)
 

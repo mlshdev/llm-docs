@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/air-gapped-containers.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/enterprise/security/hardened-desktop/air-gapped-containers.md)
+> Pinned source for Docker main: [content/manuals/enterprise/security/hardened-desktop/air-gapped-containers.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/enterprise/security/hardened-desktop/air-gapped-containers.md)
 
 **Air-gapped containers requirements**
 

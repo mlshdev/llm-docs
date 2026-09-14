@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/peers/mdm-deployment/windows-gpo-deployment.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/peers/mdm-deployment/windows-gpo-deployment.mdx)
+> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/peers/mdm-deployment/windows-gpo-deployment.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/peers/mdm-deployment/windows-gpo-deployment.mdx)
 
 # Deploying NetBird with Group Policy (GPO)
 

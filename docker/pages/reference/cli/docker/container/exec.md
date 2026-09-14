@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_container_exec.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_exec.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_container_exec.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_exec.yaml)
 
 # docker container exec
 
@@ -25,17 +25,17 @@ The command must be an executable. A chained or a quoted command doesn't work.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-d`, `--detach` |  | Detached mode: run command in the background |
-| `--detach-keys` |  | Override the key sequence for detaching a container |
-| `-e`, `--env` |  | Set environment variables (API 1.25+) |
-| `--env-file` |  | Read in a file of environment variables (API 1.25+) |
-| `-i`, `--interactive` |  | Keep STDIN open even if not attached |
-| `--privileged` |  | Give extended privileges to the command |
-| `-t`, `--tty` |  | Allocate a pseudo-TTY |
-| `-u`, `--user` |  | Username or UID (format: `<name\|uid>[:<group\|gid>]`) |
-| `-w`, `--workdir` |  | Working directory inside the container (API 1.35+) |
+| Option                | Default | Description                                            |
+| --------------------- | ------- | ------------------------------------------------------ |
+| `-d`, `--detach`      |         | Detached mode: run command in the background           |
+| `--detach-keys`       |         | Override the key sequence for detaching a container    |
+| `-e`, `--env`         |         | Set environment variables (API 1.25+)                  |
+| `--env-file`          |         | Read in a file of environment variables (API 1.25+)    |
+| `-i`, `--interactive` |         | Keep STDIN open even if not attached                   |
+| `--privileged`        |         | Give extended privileges to the command                |
+| `-t`, `--tty`         |         | Allocate a pseudo-TTY                                  |
+| `-u`, `--user`        |         | Username or UID (format: `<name\|uid>[:<group\|gid>]`) |
+| `-w`, `--workdir`     |         | Working directory inside the container (API 1.35+)     |
 
 ## Examples
 
@@ -96,7 +96,7 @@ HOME=/root
 
 ### Escalate container privileges (--privileged) {#privileged}
 
-See [`docker run --privileged`](/reference/cli/docker/container/run/#privileged).
+See [`docker run --privileged`](https://docs.docker.com/reference/cli/docker/container/run/#privileged).
 
 ### Set the working directory for the exec process (--workdir, -w) {#workdir}
 

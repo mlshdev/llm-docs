@@ -1,54 +1,67 @@
-> Commit-pinned source for SearXNG master: [docs/src/searx.botdetection.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/src/searx.botdetection.rst)
+> Pinned source for SearXNG master: [docs/src/searx.botdetection.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/src/searx.botdetection.rst)
 
-.. \_botdetection:
+<a id="botdetection"></a>
 
 # Bot Detection
 
-.. automodule:: searx.botdetection
-:members:
+#### `searx.botdetection`
 
-.. \_botdetection ip\_lists:
+Static Python API reference (`automodule`).
+
+<a id="botdetection-ip-lists"></a>
 
 # IP lists
 
-.. automodule:: searx.botdetection.ip\_lists
-:members:
+#### `searx.botdetection.ip_lists`
 
-.. \_botdetection rate limit:
+Static Python API reference (`automodule`).
+
+<a id="botdetection-rate-limit"></a>
 
 # Rate limit
 
-.. automodule:: searx.botdetection.ip\_limit
-:members:
+#### `searx.botdetection.ip_limit`
 
-.. automodule:: searx.botdetection.link\_token
-:members:
+Static Python API reference (`automodule`).
 
-.. \_botdetection probe headers:
+#### `searx.botdetection.link_token`
+
+Static Python API reference (`automodule`).
+
+<a id="botdetection-probe-headers"></a>
 
 # Probe HTTP headers
 
-.. automodule:: searx.botdetection.http\_accept
-:members:
+#### `searx.botdetection.http_accept`
 
-.. automodule:: searx.botdetection.http\_accept\_encoding
-:members:
+Static Python API reference (`automodule`).
 
-.. automodule:: searx.botdetection.http\_accept\_language
-:members:
+#### `searx.botdetection.http_accept_encoding`
 
-.. automodule:: searx.botdetection.http\_connection
-:members:
+Static Python API reference (`automodule`).
 
-.. automodule:: searx.botdetection.http\_user\_agent
-:members:
+#### `searx.botdetection.http_accept_language`
 
-.. automodule:: searx.botdetection.http\_sec\_fetch
-:members:
+Static Python API reference (`automodule`).
 
-.. \_botdetection config:
+#### `searx.botdetection.http_connection`
+
+Static Python API reference (`automodule`).
+
+#### `searx.botdetection.http_user_agent`
+
+Static Python API reference (`automodule`).
+
+#### `searx.botdetection.http_sec_fetch`
+
+Static Python API reference (`automodule`).
+
+<a id="botdetection-config"></a>
 
 # Config
 
-.. automodule:: searx.botdetection.config
-:members:
+<a id="api-searx-botdetection-config"></a>
+
+#### `config()`
+
+Return configuration in JSON format.

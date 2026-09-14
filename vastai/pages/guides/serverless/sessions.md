@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [guides/serverless/sessions.mdx](https://docs.vast.ai/guides/serverless/sessions)
+> Pinned source for Vast.ai main: [guides/serverless/sessions.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/serverless/sessions.mdx)
+> Canonical documentation: https://docs.vast.ai/guides/serverless/sessions
 
 # Using Worker Sessions
 
@@ -45,7 +46,7 @@ Every request the SDK sends to a worker route uses the same JSON envelope:
 {
   "auth_data": { "url": "...", "endpoint": "...", "cost": 100, "reqnum": 42, "request_idx": 7, "signature": "..." },
   "session_id": "aB3xY7kLm9Qz1",
-  "payload": { "your": "model payload" }
+  "payload": `{ "your": "model payload" }`
 }
 ```
 
@@ -78,6 +79,7 @@ A request sent to one of *your* handler routes with a `session_id` that the work
 import asyncio
 from vastai import Serverless
 
+
 async def main():
     async with Serverless() as client:
         endpoint = await client.get_endpoint(name="my-endpoint")
@@ -88,6 +90,7 @@ async def main():
             print(result["response"])
         finally:
             await session.close()
+
 
 asyncio.run(main())
 ```
@@ -191,6 +194,7 @@ TURNS = [
     "Which of those obligations have hard deadlines?",
 ]
 
+
 async def main():
     async with Serverless() as client:
         endpoint = await client.get_endpoint(name="my-vllm-endpoint")
@@ -221,6 +225,7 @@ async def main():
         finally:
             await session.close()
 
+
 asyncio.run(main())
 ```
 
@@ -241,6 +246,7 @@ async def run_one(endpoint, prompt):
         return await session.request("/generate/sync", {"input": {"prompt": prompt}})
     finally:
         await session.close()
+
 
 results = await asyncio.gather(*(run_one(endpoint, p) for p in prompts))
 ```
@@ -294,6 +300,7 @@ Worker(worker_config).run()
 import asyncio
 from vastai import Serverless
 
+
 async def run_task(endpoint, epochs: int):
     # on_close_route fires on close, expiry, or crash -> the job is always cancelled
     session = await endpoint.session(cost=100, lifetime=120, on_close_route="/cancel_task")
@@ -320,12 +327,14 @@ async def run_task(endpoint, epochs: int):
     finally:
         await session.close()
 
+
 async def main():
     async with Serverless() as client:
         endpoint = await client.get_endpoint(name="my-training-endpoint")
         results = await asyncio.gather(*(run_task(endpoint, 5) for _ in range(3)))
         for r in results:
             print(r)
+
 
 asyncio.run(main())
 ```
@@ -361,6 +370,7 @@ This works because `/session/end` authenticates on `session_auth` rather than on
 ```python
 import asyncio
 from vastai import Serverless
+
 
 async def main():
     async with Serverless() as client:
@@ -399,6 +409,7 @@ async def main():
             await session.request("/generate", payload)
         except ValueError:
             print("session was closed by the completion webhook")
+
 
 asyncio.run(main())
 ```

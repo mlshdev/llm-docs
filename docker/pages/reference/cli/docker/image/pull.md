@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_image_pull.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_image_pull.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_image_pull.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_image_pull.yaml)
 
 # docker image pull
 
@@ -24,22 +24,22 @@ use `docker pull`.
 If you are behind an HTTP proxy server, for example in corporate settings,
 you may have to configure the Docker daemon to use the proxy server for
 operations such as pulling and pushing images. Refer to the
-[dockerd command-line reference](/reference/cli/dockerd/#proxy-configuration) for details.
+[dockerd command-line reference](https://docs.docker.com/reference/cli/dockerd/#proxy-configuration) for details.
 
 ### Concurrent downloads
 
 By default the Docker daemon downloads three layers of an image at a time.
 If you are on a low bandwidth connection this may cause timeout issues and you may want to lower
 this via the `--max-concurrent-downloads` daemon option. See the
-[daemon documentation](/reference/cli/dockerd/) for more details.
+[daemon documentation](https://docs.docker.com/reference/cli/dockerd/) for more details.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-a`, `--all-tags` |  | Download all tagged images in the repository |
-| `--platform` |  | Set platform if server is multi-platform capable (API 1.32+) |
-| `-q`, `--quiet` |  | Suppress verbose output |
+| Option             | Default | Description                                                  |
+| ------------------ | ------- | ------------------------------------------------------------ |
+| `-a`, `--all-tags` |         | Download all tagged images in the repository                 |
+| `--platform`       |         | Set platform if server is multi-platform capable (API 1.32+) |
+| `-q`, `--quiet`    |         | Suppress verbose output                                      |
 
 ## Examples
 
@@ -78,7 +78,7 @@ Status: Downloaded newer image for debian:bookworm
 docker.io/library/debian:bookworm
 ```
 
-To see which images are present locally, use the [`docker images`](/reference/cli/docker/image/ls/)
+To see which images are present locally, use the [`docker images`](https://docs.docker.com/reference/cli/docker/image/ls/)
 command:
 
 ```console
@@ -96,7 +96,7 @@ the same image tagged with different names. Because they are the same image,
 their layers are stored only once and do not consume extra disk space.
 
 For more information about images, layers, and the content-addressable store,
-refer to [understand images, containers, and storage drivers](/engine/storage/drivers/).
+refer to [understand images, containers, and storage drivers](https://docs.docker.com/engine/storage/drivers/).
 
 ### Pull an image by digest (immutable identifier)
 
@@ -154,7 +154,7 @@ FROM ubuntu@sha256:2e863c44b718727c860746568e1d54afd13b2fa71b160f5cd9058fc436217
 LABEL org.opencontainers.image.authors="some maintainer <maintainer@example.com>"
 ```
 
-> [!NOTE]
+> \[!NOTE]
 > Using this feature "pins" an image to a specific version in time.
 > Docker does therefore not pull updated versions of an image, which may include
 > security updates. If you want to pull an updated image, you need to change the
@@ -174,11 +174,11 @@ listening on port 5000 (`myregistry.local:5000`):
 $ docker image pull myregistry.local:5000/testing/test-image
 ```
 
-Registry credentials are managed by [docker login](/reference/cli/docker/login/).
+Registry credentials are managed by [docker login](https://docs.docker.com/reference/cli/docker/login/).
 
 Docker uses the `https://` protocol to communicate with a registry, unless the
 registry is allowed to be accessed over an insecure connection. Refer to the
-[insecure registries](/reference/cli/dockerd/#insecure-registries) section for more information.
+[insecure registries](https://docs.docker.com/reference/cli/dockerd/#insecure-registries) section for more information.
 
 ### Pull a repository with multiple images (-a, --all-tags) {#all-tags}
 

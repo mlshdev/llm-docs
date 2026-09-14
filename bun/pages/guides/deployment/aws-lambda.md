@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/guides/deployment/aws-lambda.mdx](https://bun.com/docs/guides/deployment/aws-lambda)
+> Pinned source for Bun bun-v1.4.2: [docs/guides/deployment/aws-lambda.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/guides/deployment/aws-lambda.mdx)
+> Canonical documentation: https://bun.com/docs/guides/deployment/aws-lambda
 
 # Deploy a Bun application on AWS Lambda
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/dhi/docker_dhi_customization_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/dhi/docker_dhi_customization_create.yaml)
+> Pinned source for Docker main: [data/cli/dhi/docker_dhi_customization_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/dhi/docker_dhi_customization_create.yaml)
 
 # docker dhi customization create
 
@@ -17,15 +17,15 @@ Run 'docker dhi completion --help' to set up shell completions.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-d`, `--destination` |  | Override the destination repository (e.g. myorg/dhi-golang) |
-| `--json` |  | Output in JSON format |
-| `-n`, `--name` |  | Override the customization name from the YAML file |
-| `-t`, `--tag-definition-id` |  | Override the tag definition ID (single-target only) |
+| Option                      | Default | Description                                                 |
+| --------------------------- | ------- | ----------------------------------------------------------- |
+| `-d`, `--destination`       |         | Override the destination repository (e.g. myorg/dhi-golang) |
+| `--json`                    |         | Output in JSON format                                       |
+| `-n`, `--name`              |         | Override the customization name from the YAML file          |
+| `-t`, `--tag-definition-id` |         | Override the tag definition ID (single-target only)         |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--org` |  | Docker Hub organization (overrides config) |
+| Option  | Default | Description                                |
+| ------- | ------- | ------------------------------------------ |
+| `--org` |         | Docker Hub organization (overrides config) |

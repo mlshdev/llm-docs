@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/query-stats.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/query-stats.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/query-stats.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/query-stats.md)
 
 [VictoriaMetrics Enterprise](https://docs.victoriametrics.com/victoriametrics/enterprise/) supports logging statistics *(available from v1.116.0)* for
 read queries made through the [/api/v1/query](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#instant-query)

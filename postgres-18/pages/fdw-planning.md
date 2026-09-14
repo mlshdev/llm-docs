@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/fdwhandler.sgml#fdw-planning](https://www.postgresql.org/docs/18/fdw-planning.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/fdwhandler.sgml#fdw-planning](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/fdwhandler.sgml%23fdw-planning)
+> Canonical documentation: https://www.postgresql.org/docs/18/fdw-planning.html
 
 # Foreign Data Wrapper Query Planning
 

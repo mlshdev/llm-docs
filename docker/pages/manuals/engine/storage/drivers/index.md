@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/storage/drivers/_index.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/storage/drivers/_index.md)
+> Pinned source for Docker main: [content/manuals/engine/storage/drivers/_index.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/storage/drivers/_index.md)
 
 > \[!NOTE]
 > This page describes the classic storage drivers, such as `overlay2`. Docker

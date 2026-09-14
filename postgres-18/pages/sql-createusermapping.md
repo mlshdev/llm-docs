@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/create_user_mapping.sgml#sql-createusermapping](https://www.postgresql.org/docs/18/sql-createusermapping.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/create_user_mapping.sgml#sql-createusermapping](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/create_user_mapping.sgml%23sql-createusermapping)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-createusermapping.html
 
 # CREATE USER MAPPING
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_network_prune.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_network_prune.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_network_prune.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_network_prune.yaml)
 
 # docker network prune
 
@@ -13,10 +13,10 @@ by any containers.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--filter` |  | Provide filter values (e.g. `until=<timestamp>`) |
-| `-f`, `--force` |  | Do not prompt for confirmation |
+| Option          | Default | Description                                      |
+| --------------- | ------- | ------------------------------------------------ |
+| `--filter`      |         | Provide filter values (e.g. `until=<timestamp>`) |
+| `-f`, `--force` |         | Do not prompt for confirmation                   |
 
 ## Examples
 
@@ -49,8 +49,8 @@ that have **either** the `foo` **or** `bar` label.
 
 The currently supported filters are:
 
-* until (`<timestamp>`) - only remove networks created before given timestamp
-* label (`label=<key>`, `label=<key>=<value>`, `label!=<key>`, or `label!=<key>=<value>`) - only remove networks with (or without, in case `label!=...` is used) the specified labels.
+- until (`<timestamp>`) - only remove networks created before given timestamp
+- label (`label=<key>`, `label=<key>=<value>`, `label!=<key>`, or `label!=<key>=<value>`) - only remove networks with (or without, in case `label!=...` is used) the specified labels.
 
 The `until` filter can be Unix timestamps, date formatted
 timestamps, or Go duration strings supported by [ParseDuration](https://pkg.go.dev/time#ParseDuration) (e.g. `10m`, `1h30m`) computed
@@ -59,7 +59,7 @@ formatted time stamps include RFC3339Nano, RFC3339, `2006-01-02T15:04:05`,
 `2006-01-02T15:04:05.999999999`, `2006-01-02T07:00`, and `2006-01-02`. The local
 timezone on the daemon will be used if you do not provide either a `Z` or a
 `+-00:00` timezone offset at the end of the timestamp.  When providing Unix
-timestamps enter seconds[.nanoseconds], where seconds is the number of seconds
+timestamps enter seconds\[.nanoseconds], where seconds is the number of seconds
 that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap
 seconds (aka Unix epoch or Unix time), and the optional .nanoseconds field is a
 fraction of a second no more than nine digits long.

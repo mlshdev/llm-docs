@@ -37,6 +37,8 @@ jobs:
           exit 1
       - name: Check generator and outputs
         run: bun run check
+      - name: Run isolated tests with the coverage floor
+        run: bun test --isolate --coverage --coverage-reporter=text
       - name: Rebuild pinned documentation
         env:
           GITHUB_TOKEN: ${{ github.token }}

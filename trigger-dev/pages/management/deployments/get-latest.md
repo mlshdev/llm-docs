@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/management/deployments/get-latest.mdx](https://trigger.dev/docs/management/deployments/get-latest)
+> Pinned source for Trigger.dev v4.5.16: [docs/management/deployments/get-latest.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/management/deployments/get-latest.mdx)
+> Canonical documentation: https://trigger.dev/docs/management/deployments/get-latest
 
 # Get latest deployment
 
@@ -8,9 +9,20 @@
 
 Retrieve information about the latest unmanaged deployment for the authenticated project.
 
+**Authentication:** `secretKey`
+
 **Responses**
 
 - `200`: Successful request
+  - Media type: `application/json`
+    - Schema (object)
+      - `id` (string): The deployment ID
+      - `status` (string; enum: `PENDING`, `INSTALLING`, `BUILDING`, `DEPLOYING`, `DEPLOYED`, `FAILED`, `CANCELED`, `TIMED_OUT`): The current status of the deployment
+      - `contentHash` (string): Hash of the deployment content
+      - `shortCode` (string): The short code for the deployment
+      - `version` (string): The deployment version (e.g., "20250228.1")
+      - `imageReference` (string; nullable): Reference to the deployment image
+      - `errorData` (object; nullable): Error data if the deployment failed
 - `401`: Unauthorized - API key is missing or invalid
 - `404`: No deployment found
 

@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/pm/cli/install.mdx](https://bun.com/docs/pm/cli/install)
+> Pinned source for Bun bun-v1.4.2: [docs/pm/cli/install.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/pm/cli/install.mdx)
+> Canonical documentation: https://bun.com/docs/pm/cli/install
 
 ## Basic Usage
 
@@ -344,6 +345,7 @@ concurrentScripts = 16 # (cpu count or GOMAXPROCS) x2
 # - configVersion = 1: "isolated" if using workspaces, otherwise "hoisted"
 # - configVersion = 0: "hoisted"
 linker = "hoisted"
+
 
 # minimum age config
 minimumReleaseAge = 259200 # seconds

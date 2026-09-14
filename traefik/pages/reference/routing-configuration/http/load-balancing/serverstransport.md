@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/http/load-balancing/serverstransport.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/load-balancing/serverstransport.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/http/load-balancing/serverstransport.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/load-balancing/serverstransport.md)
 
 ServersTransport allows you to configure the transport between Traefik and your HTTP servers.
 
@@ -34,7 +34,7 @@ http:
           - "spiffe://example.org/id1"
           - "spiffe://example.org/id2"
         trustDomain: "example.org"
-      cipherSuites:
+      cipherSuites: 
         - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
         - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
       minVersion: VersionTLS12

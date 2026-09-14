@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.1: [docs/agent-networks/modules/32-proxy-llm-parsers.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/32-proxy-llm-parsers.md)
+> Pinned source for NetBird v0.77.1: [docs/agent-networks/modules/32-proxy-llm-parsers.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/32-proxy-llm-parsers.md)
 
 # proxy/llm-parsers — SDK adapters + pricing + SSE
 

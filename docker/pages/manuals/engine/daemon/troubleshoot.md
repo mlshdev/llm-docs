@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/daemon/troubleshoot.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/daemon/troubleshoot.md)
+> Pinned source for Docker main: [content/manuals/engine/daemon/troubleshoot.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/daemon/troubleshoot.md)
 
 This page describes how to troubleshoot and debug the daemon if you run into
 issues.

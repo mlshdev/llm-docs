@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/vmagent-openid-configuration/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmagent-openid-configuration/_index.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/guides/vmagent-openid-configuration/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/vmagent-openid-configuration/_index.md)
 
 Using [vmagent](https://docs.victoriametrics.com/victoriametrics/vmagent/) with [vmauth](https://docs.victoriametrics.com/victoriametrics/vmauth/) and OAuth authentication *(available from v1.138.0)* enables secure metric ingestion in multi-tenant environments, where vmagent authenticates to vmauth using [JWT tokens](https://en.wikipedia.org/wiki/JSON_Web_Token) issued by an external identity provider. These tokens include tenant information so that metrics are written to the correct tenant.
 

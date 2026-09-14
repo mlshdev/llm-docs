@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/create_tsparser.sgml#sql-createtsparser](https://www.postgresql.org/docs/18/sql-createtsparser.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/create_tsparser.sgml#sql-createtsparser](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/create_tsparser.sgml%23sql-createtsparser)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-createtsparser.html
 
 # CREATE TEXT SEARCH PARSER
 

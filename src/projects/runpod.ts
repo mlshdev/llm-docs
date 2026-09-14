@@ -139,21 +139,26 @@ async function renderPage(context: PageContext) {
     sourcePath,
     context,
   );
-  const prose = rewriteMarkdownLinks(converted.body, (url, kind) =>
-    resolveMintlifyLink(url, kind, {
-      sourcePath,
-      docsFiles: context.docsFiles,
-      repository: context.repository,
-      ref: context.ref,
-      siteBase,
-      docsRoot,
-    }),
+  const title = documentTitle(
+    converted.body,
+    frontmatter.attributes,
+    sourcePath,
   );
-  const title = documentTitle(prose, frontmatter.attributes, sourcePath);
-  const body = normalizeSpacing(
-    [`# ${title}`, describe(frontmatter.attributes), specBody, prose]
-      .filter((part) => part && part.trim())
-      .join("\n\n"),
+  const body = rewriteMarkdownLinks(
+    normalizeSpacing(
+      [`# ${title}`, describe(frontmatter.attributes), specBody, converted.body]
+        .filter((part) => part && part.trim())
+        .join("\n\n"),
+    ),
+    (url, kind) =>
+      resolveMintlifyLink(url, kind, {
+        sourcePath,
+        docsFiles: context.docsFiles,
+        repository: context.repository,
+        ref: context.ref,
+        siteBase,
+        docsRoot,
+      }),
   );
   return {
     sourcePath,

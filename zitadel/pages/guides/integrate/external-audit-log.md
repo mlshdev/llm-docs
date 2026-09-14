@@ -1,4 +1,5 @@
-> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/external-audit-log.mdx](https://zitadel.com/docs/guides/integrate/external-audit-log)
+> Pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/external-audit-log.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/guides/integrate/external-audit-log.mdx)
+> Canonical documentation: https://zitadel.com/docs/guides/integrate/external-audit-log
 
 This document details integrating ZITADEL with external systems for streaming events and audit logs.
 This functionality allows you to centralize ZITADEL activity data alongside other security and operational information, facilitating comprehensive monitoring, analysis, and compliance reporting.

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/work-with-data/handle-special-data-types/query-json-data.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/work-with-data/handle-special-data-types/query-json-data.md)
+> Pinned source for n8n main: [docs/build/work-with-data/handle-special-data-types/query-json-data.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/work-with-data/handle-special-data-types/query-json-data.md)
 
 # Query JSON with JMESPath <a id="query-json-with-jmespath"></a>
 
@@ -356,7 +356,7 @@ For example, generate some input data by returning the below code from the Code 
 ```js
 return[
   {
-    "json": {
+    "json": {      
       "num_categories": "0",
       "num_products": "45",
       "category_id": 5529735,
@@ -380,7 +380,7 @@ return[
       "description": "",
       "image": ""
     }
-  }
+  }  
 ]
 ```
 

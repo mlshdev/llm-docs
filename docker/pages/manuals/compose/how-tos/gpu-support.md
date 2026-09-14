@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/how-tos/gpu-support.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/how-tos/gpu-support.md)
+> Pinned source for Docker main: [content/manuals/compose/how-tos/gpu-support.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/how-tos/gpu-support.md)
 
 # Run Docker Compose services with GPU access
 
@@ -50,7 +50,7 @@ Run with Docker Compose:
 $ docker compose up
 Creating network "gpu_default" with the default driver
 Creating gpu_test_1 ... done
-Attaching to gpu_test_1
+Attaching to gpu_test_1    
 test_1  | +-----------------------------------------------------------------------------+
 test_1  | | NVIDIA-SMI 450.80.02    Driver Version: 450.80.02    CUDA Version: 11.1     |
 test_1  | |-------------------------------+----------------------+----------------------+
@@ -62,7 +62,7 @@ test_1  | |   0  Tesla T4            On   | 00000000:00:1E.0 Off |              
 test_1  | | N/A   23C    P8     9W /  70W |      0MiB / 15109MiB |      0%      Default |
 test_1  | |                               |                      |                  N/A |
 test_1  | +-------------------------------+----------------------+----------------------+
-test_1  |
+test_1  |                                                                                
 test_1  | +-----------------------------------------------------------------------------+
 test_1  | | Processes:                                                                  |
 test_1  | |  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
@@ -79,7 +79,7 @@ On machines hosting multiple GPUs, the `device_ids` field can be set to target s
 You can use `count` or `device_ids` in each of your service definitions. An error is returned if you try to combine both, specify an invalid device ID, or use a value of count that’s higher than the number of GPUs in your system.
 
 ```console
-$ nvidia-smi
+$ nvidia-smi   
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 450.80.02    Driver Version: 450.80.02    CUDA Version: 11.0     |
 |-------------------------------+----------------------+----------------------+

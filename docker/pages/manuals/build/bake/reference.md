@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/buildx/docs/bake-reference.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/buildx/docs/bake-reference.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/buildx/docs/bake-reference.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/buildx/docs/bake-reference.md)
 
 The Bake file is a file for defining workflows that you run using `docker buildx bake`.
 
@@ -93,7 +93,7 @@ services:
   webapp:
     build:
       context: .
-      labels:
+      labels: 
         com.example.foo: "foo"
         com.example.name: "Alice"
 $ cat docker-bake.hcl
@@ -1344,7 +1344,7 @@ $ cat data.json
 ["hello","with,comma","with\"quote"]
 $ VALS_JSON=$(< data.json) docker buildx bake
 
-# CSV equivalent, though the second value cannot be expressed at all
+# CSV equivalent, though the second value cannot be expressed at all 
 $ VALS='hello,"with""quote"' docker buildx bake
 ```
 

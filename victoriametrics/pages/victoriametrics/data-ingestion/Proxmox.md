@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/data-ingestion/Proxmox.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/Proxmox.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/data-ingestion/Proxmox.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/Proxmox.md)
 
 Since Proxmox Virtual Environment(PVE) and Proxmox Backup Server(PBS) support sending data using the InfluxDB
 we can use the InfluxDB write support built into VictoriaMetrics.

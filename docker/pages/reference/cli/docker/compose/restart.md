@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_restart.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_restart.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_restart.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_restart.yaml)
 
 # docker compose restart
 
@@ -17,17 +17,17 @@ after restarting.
 
 If you are looking to configure a service's restart policy, refer to
 [restart](https://github.com/compose-spec/compose-spec/blob/main/spec.md#restart)
-or [restart_policy](https://github.com/compose-spec/compose-spec/blob/main/deploy.md#restart_policy).
+or [restart\_policy](https://github.com/compose-spec/compose-spec/blob/main/deploy.md#restart_policy).
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--no-deps` |  | Don't restart dependent services |
-| `-t`, `--timeout` |  | Specify a shutdown timeout in seconds |
+| Option            | Default | Description                           |
+| ----------------- | ------- | ------------------------------------- |
+| `--no-deps`       |         | Don't restart dependent services      |
+| `-t`, `--timeout` |         | Specify a shutdown timeout in seconds |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--dry-run` |  | Execute command in dry run mode |
+| Option      | Default | Description                     |
+| ----------- | ------- | ------------------------------- |
+| `--dry-run` |         | Execute command in dry run mode |

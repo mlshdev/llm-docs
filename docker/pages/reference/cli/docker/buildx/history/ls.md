@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/buildx/docker_buildx_history_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_history_ls.yaml)
+> Pinned source for Docker main: [data/cli/buildx/docker_buildx_history_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_history_ls.yaml)
 
 # docker buildx history ls
 
@@ -16,19 +16,19 @@ results using flags.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--filter` |  | Provide filter values (e.g., `status=error`) |
-| `--format` | `table` | Format the output |
-| `--local` |  | List records for current repository only |
-| `--no-trunc` |  | Don't truncate output |
+| Option       | Default | Description                                  |
+| ------------ | ------- | -------------------------------------------- |
+| `--filter`   |         | Provide filter values (e.g., `status=error`) |
+| `--format`   | `table` | Format the output                            |
+| `--local`    |         | List records for current repository only     |
+| `--no-trunc` |         | Don't truncate output                        |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--builder` |  | Override the configured builder instance |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option          | Default | Description                              |
+| --------------- | ------- | ---------------------------------------- |
+| `--builder`     |         | Override the configured builder instance |
+| `-D`, `--debug` |         | Enable debug logging                     |
 
 ## Examples
 
@@ -51,7 +51,7 @@ docker buildx history ls --filter status=error
 You can filter the list using the `--filter` flag. Supported filters include:
 
 | Filter                                 | Supported comparisons                            | Example                    |
-|:---------------------------------------|:-------------------------------------------------|:---------------------------|
+| :------------------------------------- | :----------------------------------------------- | :------------------------- |
 | `ref`, `repository`, `status`          | Support `=` and `!=` comparisons                 | `--filter status!=success` |
 | `startedAt`, `completedAt`, `duration` | Support `<` and `>` comparisons with time values | `--filter duration>30s`    |
 

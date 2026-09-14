@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/querying/_index.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/querying/_index.md)
+> Pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/querying/_index.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/querying/_index.md)
 
 [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/) can be queried with [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/)
 via the following ways:

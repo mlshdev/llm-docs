@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/buildx/docker_buildx_dial-stdio.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_dial-stdio.yaml)
+> Pinned source for Docker main: [data/cli/buildx/docker_buildx_dial-stdio.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_dial-stdio.yaml)
 
 # docker buildx dial-stdio
 
@@ -15,17 +15,17 @@ BuildKit API.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--platform` |  | Target platform: this is used for node selection |
-| `--progress` | `none` | Set type of progress output (`auto`, `plain`, `rawjson`, `tty`). Use plain to show container output |
+| Option       | Default | Description                                                                                         |
+| ------------ | ------- | --------------------------------------------------------------------------------------------------- |
+| `--platform` |         | Target platform: this is used for node selection                                                    |
+| `--progress` | `none`  | Set type of progress output (`auto`, `plain`, `rawjson`, `tty`). Use plain to show container output |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--builder` |  | Override the configured builder instance |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option          | Default | Description                              |
+| --------------- | ------- | ---------------------------------------- |
+| `--builder`     |         | Override the configured builder instance |
+| `-D`, `--debug` |         | Enable debug logging                     |
 
 ## Examples
 

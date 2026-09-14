@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/integrations/perses.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/perses.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/integrations/perses.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/integrations/perses.md)
 
 VictoriaMetrics integrates with [Perses](https://perses.dev/) via [Prometheus plugins](https://perses.dev/plugins/docs/prometheus/).
 

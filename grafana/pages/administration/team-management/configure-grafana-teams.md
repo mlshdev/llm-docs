@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.1: [docs/sources/administration/team-management/configure-grafana-teams.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/administration/team-management/configure-grafana-teams.md)
+> Pinned source for Grafana v13.2.1: [docs/sources/administration/team-management/configure-grafana-teams.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/administration/team-management/configure-grafana-teams.md)
 
 # Configure Grafana Teams
 
@@ -105,3 +105,108 @@ Delete a team when you no longer need it. This action permanently deletes the te
 2. Click the arrow next to **Administration** in the left-side menu, click **Users and access**, and select **Teams**.
 3. Click the **red X** on the right side of the name of the team.
 4. Click **Delete**.
+
+<!-- ## Create isolated or collaborative teams
+
+Grafana Teams can either be `isolated` or `collaborative`. Isolated teams can only see their own resources. They can't see other team’s dashboards, data, or alerts. Collaborative teams have access to other team’s resources. Grafana Cloud users must contact Support.
+
+To create an isolated team add the following to the Grafana configuration file:
+
+```ini
+auto_assign_org_role = None
+role_attribute_path = contains(groups[*], 'admin') && 'Admin' || 'None'
+```
+
+To create a collaborative team add the following to the Grafana configuration file:
+
+```ini
+auto_assign_org_role = Viewer
+role_attribute_path = contains(groups[*], 'admin') && 'Admin' || 'None'
+```
+You can also use a terraform script as shown in the following example:
+
+```hcl
+terraform {
+  required_providers {
+    grafana = {
+      source = "grafana/grafana"
+    }
+  }
+}
+
+provider "grafana" {
+  url  = "http://localhost:3000/"
+  auth = "admin:admin"
+}
+
+resource "grafana_folder" "awesome_folder" {
+  title = "Awesome Team Folder"
+}
+
+
+resource "grafana_team" "awesome-team" {
+  name  = "Awesome Team"
+}
+
+resource "grafana_team_external_group" "awesome-team-group" {
+  team_id = grafana_team.awesome-team.id
+  groups = [
+    "Awesome_group"
+  ]
+}
+
+resource "grafana_role" "team_role" {
+  name  = "team_role"
+  uid = "team_role"
+  version = 4
+  global = true
+
+  permissions {
+    action = "datasources:create"
+  }
+
+  permissions {
+    action = "serviceaccounts:create"
+  }
+
+  # below should be deleted after bug fix to view service accounts
+  permissions {
+    action = "users.roles:read"
+    scope = "users:id:*"
+  }
+
+}
+
+resource "grafana_role_assignment" "assign_role" {
+  role_uid         = grafana_role.team_role.uid
+  teams            = [grafana_team.awesome-team.id]
+}
+
+resource "grafana_service_account" "awesome_service_account" {
+  name        = "awesome_service_account"
+  role        = "None"
+  is_disabled = false
+}
+
+resource "grafana_service_account_permission" "awesome_service_account_permissions" {
+  service_account_id = grafana_service_account.awesome_service_account.id
+
+  permissions {
+    team_id    = grafana_team.awesome-team.id
+    permission = "Admin"
+  }
+}
+
+resource "grafana_folder_permission" "awesome_folder_permission" {
+  folder_uid = grafana_folder.awesome_folder.uid
+  permissions {
+    team_id    = grafana_team.awesome-team.id
+    permission = "Admin"
+  }
+
+  permissions {
+    user_id = grafana_service_account.awesome_service_account.id
+    permission = "Admin"
+  }
+}
+``` -->

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/community-nodes/installation-and-management/manual-installation.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/community-nodes/installation-and-management/manual-installation.md)
+> Pinned source for n8n main: [docs/integrations/community-nodes/installation-and-management/manual-installation.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/community-nodes/installation-and-management/manual-installation.md)
 
 # Manually install community nodes from npm <a id="manually-install-community-nodes-from-npm"></a>
 
@@ -84,6 +84,6 @@ npm uninstall n8n-nodes-nodeName
 Run npm install with the version specified:
 
 ```sh
-# Replace 2.1.0 with your version number <a id="replace-210-with-your-version-number"></a>
+# Replace 2.1.0 with your version number <a href="#replace-210-with-your-version-number" id="replace-210-with-your-version-number"></a>
 npm install n8n-nodes-nodeName@2.1.0
 ```

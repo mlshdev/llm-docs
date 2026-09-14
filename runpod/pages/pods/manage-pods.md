@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [pods/manage-pods.mdx](https://docs.runpod.io/pods/manage-pods)
+> Pinned source for Runpod main: [pods/manage-pods.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/pods/manage-pods.mdx)
+> Canonical documentation: https://docs.runpod.io/pods/manage-pods
 
 # Manage Pods
 

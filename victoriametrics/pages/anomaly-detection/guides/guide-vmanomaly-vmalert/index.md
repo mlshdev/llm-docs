@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/guides/guide-vmanomaly-vmalert/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/_index.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/guides/guide-vmanomaly-vmalert/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/guides/guide-vmanomaly-vmalert/_index.md)
 
 **Prerequisites**:
 
@@ -151,11 +151,12 @@ reader:
   datasource_url: "http://victoriametrics:8428/"
   sampling_period: "60s"
   queries:
-    node_cpu_rate:
+    node_cpu_rate: 
       expr: "sum(rate(node_cpu_seconds_total[5m])) by (mode, instance, job)"
 
 writer:
   datasource_url: "http://victoriametrics:8428/"
+
 
 monitoring:
   pull: # Enable /metrics endpoint.
@@ -189,7 +190,7 @@ groups:
     labels:
       severity: warning
     annotations:
-      summary: Anomaly Score exceeded 1.0. `sum(rate(node_cpu_seconds_total))` is showing abnormal behavior.
+      summary: Anomaly Score exceeded 1.0. `sum(rate(node_cpu_seconds_total))` is showing abnormal behavior. 
 ```
 
 In the query expression `expr`, it's crucial to establish a criterion based on the generated anomaly scores. Typically, an [anomaly score](https://docs.victoriametrics.com/anomaly-detection/faq/#what-is-anomaly-score) ranging from 0.0 to 1.0 indicates that the analyzed value falls within normal behavior. Scores exceeding 1.0 signal increasing confidence from our model that the observed value is anomalous.
@@ -354,6 +355,7 @@ services:
     networks:
       - vm_net
     restart: always
+
 
   vmalert:
     container_name: vmalert

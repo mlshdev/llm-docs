@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/http/middlewares/retry.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/retry.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/http/middlewares/retry.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/retry.md)
 
 The `retry` middleware retries requests a given number of times to a backend server if that server does not reply.
 As soon as the server answers, the middleware stops retrying, regardless of the response status.
@@ -19,7 +19,7 @@ http:
         initialInterval: 100ms
         timeout: 60s
         maxRequestBodyBytes: 1024
-        status:
+        status: 
           - "400"
           - "500-599"
         disableRetryOnNetworkError: true
@@ -89,7 +89,7 @@ spec:
     initialInterval: 100ms
     timeout: 60s
     maxRequestBodyBytes: 1024
-    status:
+    status: 
       - "400"
       - "500-599"
     disableRetryOnNetworkError: true
@@ -128,7 +128,7 @@ It is strongly recommended to set an appropriate `maxRequestBodyBytes` value for
 # For most web applications (1MB limit)
 maxRequestBodyBytes: 1048576  # 1MB in bytes
 
-# For API endpoints expecting larger payloads (10MB limit)
+# For API endpoints expecting larger payloads (10MB limit)  
 maxRequestBodyBytes: 10485760  # 10MB in bytes
 
 # For file upload authentication (100MB limit)

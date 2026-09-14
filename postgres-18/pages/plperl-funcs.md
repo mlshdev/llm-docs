@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/plperl.sgml#plperl-funcs](https://www.postgresql.org/docs/18/plperl-funcs.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/plperl.sgml#plperl-funcs](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/plperl.sgml%23plperl-funcs)
+> Canonical documentation: https://www.postgresql.org/docs/18/plperl-funcs.html
 
 # PL/Perl Functions and Arguments
 

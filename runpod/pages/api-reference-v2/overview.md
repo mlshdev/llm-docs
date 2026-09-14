@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [api-reference-v2/overview.mdx](https://docs.runpod.io/api-reference-v2/overview)
+> Pinned source for Runpod main: [api-reference-v2/overview.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/api-reference-v2/overview.mdx)
+> Canonical documentation: https://docs.runpod.io/api-reference-v2/overview
 
 # API v2
 

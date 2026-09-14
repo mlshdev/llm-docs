@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [tutorials/introduction/containers/persist-data.mdx](https://docs.runpod.io/tutorials/introduction/containers/persist-data)
+> Pinned source for Runpod main: [tutorials/introduction/containers/persist-data.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/tutorials/introduction/containers/persist-data.mdx)
+> Canonical documentation: https://docs.runpod.io/tutorials/introduction/containers/persist-data
 
 # Persist data with volumes
 

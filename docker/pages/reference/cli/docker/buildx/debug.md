@@ -1,10 +1,10 @@
-> Commit-pinned source for Docker main: [data/cli/buildx/docker_buildx_debug.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_debug.yaml)
+> Pinned source for Docker main: [data/cli/buildx/docker_buildx_debug.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_debug.yaml)
 
 # docker buildx debug
 
 Start debugger
 
-> [!NOTE]
+> \[!NOTE]
 > This command is experimental.
 
 ## Description
@@ -13,17 +13,17 @@ Start debugger
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--invoke` |  | Launch a monitor with executing specified command (Experimental) |
-| `--on` | `error` | When to launch the monitor ([always, error]) (Experimental) |
+| Option     | Default | Description                                                      |
+| ---------- | ------- | ---------------------------------------------------------------- |
+| `--invoke` |         | Launch a monitor with executing specified command (Experimental) |
+| `--on`     | `error` | When to launch the monitor (\[always, error]) (Experimental)     |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--builder` |  | Override the configured builder instance |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option          | Default | Description                              |
+| --------------- | ------- | ---------------------------------------- |
+| `--builder`     |         | Override the configured builder instance |
+| `-D`, `--debug` |         | Enable debug logging                     |
 
 ## Subcommands
 

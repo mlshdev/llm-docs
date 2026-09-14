@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/agentic-platform/get-started.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/agentic-platform/get-started.md)
+> Pinned source for Docker main: [content/manuals/agentic-platform/get-started.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/agentic-platform/get-started.md)
 
 # Get started with Docker Agentic Platform
 

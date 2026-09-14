@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_plugin_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_plugin_ls.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_plugin_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_plugin_ls.yaml)
 
 # docker plugin ls
 
@@ -11,18 +11,18 @@ List plugins
 ## Description
 
 Lists all the plugins that are currently installed. You can install plugins
-using the [`docker plugin install`](/reference/cli/docker/plugin/install/) command.
+using the [`docker plugin install`](https://docs.docker.com/reference/cli/docker/plugin/install/) command.
 You can also filter using the `-f` or `--filter` flag.
-Refer to the [filtering](#filter) section for more information about available filter options.
+Refer to the [filtering](#filtering---filter-filter) section for more information about available filter options.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--filter` |  | Provide filter values (e.g. `enabled=true`) |
-| `--format` |  | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to https://docs.docker.com/go/formatting/ for more information about formatting output with templates |
-| `--no-trunc` |  | Don't truncate output |
-| `-q`, `--quiet` |  | Only display plugin IDs |
+| Option           | Default | Description                                                                                                                                                                                                                                                                                                                                                                            |
+| ---------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `-f`, `--filter` |         | Provide filter values (e.g. `enabled=true`)                                                                                                                                                                                                                                                                                                                                            |
+| `--format`       |         | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to <https://docs.docker.com/go/formatting/> for more information about formatting output with templates |
+| `--no-trunc`     |         | Don't truncate output                                                                                                                                                                                                                                                                                                                                                                  |
+| `-q`, `--quiet`  |         | Only display plugin IDs                                                                                                                                                                                                                                                                                                                                                                |
 
 ## Examples
 
@@ -40,8 +40,8 @@ than one filter, then pass multiple flags (e.g., `--filter "foo=bar" --filter "b
 
 The currently supported filters are:
 
-* enabled (boolean - true or false, 0 or 1)
-* capability (string - currently `volumedriver`, `networkdriver`, `ipamdriver`, `logdriver`, `metricscollector`, or `authz`)
+- enabled (boolean - true or false, 0 or 1)
+- capability (string - currently `volumedriver`, `networkdriver`, `ipamdriver`, `logdriver`, `metricscollector`, or `authz`)
 
 #### enabled
 
@@ -71,7 +71,7 @@ using a Go template.
 Valid placeholders for the Go template are listed below:
 
 | Placeholder        | Description                                     |
-|--------------------|-------------------------------------------------|
+| ------------------ | ----------------------------------------------- |
 | `.ID`              | Plugin ID                                       |
 | `.Name`            | Plugin name and tag                             |
 | `.Description`     | Plugin description                              |
@@ -92,6 +92,7 @@ $ docker plugin ls --format "{{.ID}}: {{.Name}}"
 ```
 
 To list all plugins in JSON format, use the `json` directive:
+
 ```console
 $ docker plugin ls --format json
 {"Description":"sshFS plugin for Docker","Enabled":false,"ID":"856d89febb1c","Name":"vieux/sshfs:latest","PluginReference":"docker.io/vieux/sshfs:latest"}

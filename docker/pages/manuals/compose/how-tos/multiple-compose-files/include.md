@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/how-tos/multiple-compose-files/include.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/how-tos/multiple-compose-files/include.md)
+> Pinned source for Docker main: [content/manuals/compose/how-tos/multiple-compose-files/include.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/how-tos/multiple-compose-files/include.md)
 
 # Include
 
@@ -41,7 +41,7 @@ services:
   serviceA:
     build: .
     depends_on:
-      - serviceB
+      - serviceB 
 ```
 
 `include` allows you to reference Compose files from remote sources, such as OCI artifacts or Git repositories.
@@ -55,7 +55,7 @@ included model. This can be achieved by adding an override file to the include d
 
 ```yaml
 include:
-  - path :
+  - path : 
       - third-party/compose.yaml
       - override.yaml  # local override for third-party model
 ```

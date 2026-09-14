@@ -1,37 +1,39 @@
-> Commit-pinned source for SearXNG master: [docs/admin/settings/settings_search.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/settings/settings_search.rst)
+> Pinned source for SearXNG master: [docs/admin/settings/settings_search.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/settings/settings_search.rst)
 
-.. \_settings search:
+<a id="settings-search"></a>
 
 # `search:`
 
-.. code:: yaml
-
+```yaml
 search:
-safe\_search: 0
-autocomplete: "duckduckgo"
-favicon\_resolver: ""
-default\_lang: ""
-ban\_time\_on\_fail: 5
-max\_page: 0
-max\_ban\_time\_on\_fail: 120
-suspended\_times:
-SearxEngineAccessDenied: 86400
-SearxEngineCaptcha: 86400
-SearxEngineTooManyRequests: 3600
-cf\_SearxEngineCaptcha: 1296000
-cf\_SearxEngineAccessDenied: 86400
-recaptcha\_SearxEngineCaptcha: 604800
-formats:
-\- html
+  safe_search: 0
+  autocomplete: "duckduckgo"
+  favicon_resolver: ""
+  default_lang: ""
+  ban_time_on_fail: 5
+  max_page: 0
+  max_ban_time_on_fail: 120
+  suspended_times:
+    SearxEngineAccessDenied: 86400
+    SearxEngineCaptcha: 86400
+    SearxEngineTooManyRequests: 3600
+    cf_SearxEngineCaptcha: 1296000
+    cf_SearxEngineAccessDenied: 86400
+    recaptcha_SearxEngineCaptcha: 604800
+  formats:
+    - html
+```
 
-`safe_search`:
+**`safe_search`:**
+
 Filter results.
 
 - `0`: None
 - `1`: Moderate
 - `2`: Strict
 
-`autocomplete`:
+**`autocomplete`:**
+
 Existing autocomplete backends, set blank to turn it off.
 
 - `360search`
@@ -54,66 +56,77 @@ Existing autocomplete backends, set blank to turn it off.
 - `wikipedia`
 - `yandex`
 
-`favicon_resolver`:
+**`favicon_resolver`:**
+
 To activate favicons in SearXNG's result list select a default
 favicon-resolver, leave blank to turn off the feature.  Don't activate the
-favicons before reading the Favicons documentation.
+favicons before reading the [Favicons documentation](https://docs.searxng.org/admin/searx.favicons.html#favicons).
 
-`default_lang`:
+**`default_lang`:**
+
 Default search language - leave blank to detect from browser information or
-use codes from :origin:`searx/sxng_locales.py`.
+use codes from [searx/sxng\_locales.py](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/sxng_locales.py).
 
-`languages`:
+**`languages`:**
+
 List of available languages - leave unset to use all codes from
-:origin:`searx/sxng_locales.py`.  Otherwise list codes of available languages.
+[searx/sxng\_locales.py](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/sxng_locales.py).  Otherwise list codes of available languages.
 The `all` value is shown as the `Default language` in the user interface
 (in most cases, it is meant to send the query without a language parameter ;
 in some cases, it means the English language) Example:
 
-.. code:: yaml
-
-```
- languages:
-   - all
-   - en
-   - en-US
-   - de
-   - it-IT
-   - fr
-   - fr-BE
+```yaml
+languages:
+  - all
+  - en
+  - en-US
+  - de
+  - it-IT
+  - fr
+  - fr-BE
 ```
 
-`max_page`:
+**`max_page`:**
+
 If engine supports paging, 0 means unlimited numbers of pages.  The value
 is only applied if the engine itself does not have a max value that is
 lower than this one.
 
-`ban_time_on_fail`:
+**`ban_time_on_fail`:**
+
 Ban time in seconds after engine errors.
 
-`max_ban_time_on_fail`:
+**`max_ban_time_on_fail`:**
+
 Max ban time in seconds after engine errors.
 
-`suspended_times`:
+**`suspended_times`:**
+
 Engine suspension time after error (in seconds; set to 0 to disable)
 
-`SearxEngineAccessDenied`: 86400
+**`SearxEngineAccessDenied`: 86400**
+
 For error "Access denied" and "HTTP error \[402, 403]"
 
-`SearxEngineCaptcha`: 86400
+**`SearxEngineCaptcha`: 86400**
+
 For error "CAPTCHA"
 
-`SearxEngineTooManyRequests`: 3600
+**`SearxEngineTooManyRequests`: 3600**
+
 For error "Too many request" and "HTTP error 429"
 
 Cloudflare CAPTCHA:
-\- `cf_SearxEngineCaptcha`: 1296000
-\- `cf_SearxEngineAccessDenied`: 86400
+
+- `cf_SearxEngineCaptcha`: 1296000
+- `cf_SearxEngineAccessDenied`: 86400
 
 Google CAPTCHA:
-\- `recaptcha_SearxEngineCaptcha`: 604800
 
-`formats`:
+- `recaptcha_SearxEngineCaptcha`: 604800
+
+**`formats`:**
+
 Result formats available from web, remove format to deny access (use lower
 case).
 

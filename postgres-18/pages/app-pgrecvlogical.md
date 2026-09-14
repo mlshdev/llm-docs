@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/pg_recvlogical.sgml#app-pgrecvlogical](https://www.postgresql.org/docs/18/app-pgrecvlogical.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/pg_recvlogical.sgml#app-pgrecvlogical](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/pg_recvlogical.sgml%23app-pgrecvlogical)
+> Canonical documentation: https://www.postgresql.org/docs/18/app-pgrecvlogical.html
 
 # pg_recvlogical
 

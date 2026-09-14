@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/runs/max-duration.mdx](https://trigger.dev/docs/runs/max-duration)
+> Pinned source for Trigger.dev v4.5.16: [docs/runs/max-duration.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/runs/max-duration.mdx)
+> Canonical documentation: https://trigger.dev/docs/runs/max-duration
 
 # Max duration
 

@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [stable-diffusion.mdx](https://docs.vast.ai/stable-diffusion)
+> Pinned source for Vast.ai main: [stable-diffusion.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/stable-diffusion.mdx)
+> Canonical documentation: https://docs.vast.ai/stable-diffusion
 
 # Stable Diffusion
 

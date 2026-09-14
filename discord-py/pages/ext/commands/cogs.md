@@ -1,4 +1,4 @@
-> Tag-pinned source for discord.py v2.7.1: [docs/ext/commands/cogs.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/ext/commands/cogs.rst)
+> Pinned source for discord.py v2.7.1: [docs/ext/commands/cogs.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/ext/commands/cogs.rst)
 
 <a id="ext-commands-cogs"></a>
 

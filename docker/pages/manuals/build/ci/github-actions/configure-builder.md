@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/ci/github-actions/configure-builder.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build/ci/github-actions/configure-builder.md)
+> Pinned source for Docker main: [content/manuals/build/ci/github-actions/configure-builder.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build/ci/github-actions/configure-builder.md)
 
 This page contains instructions on configuring your BuildKit instances when
 using our [Setup Buildx Action](https://github.com/docker/setup-buildx-action).
@@ -49,7 +49,7 @@ jobs:
         uses: docker/setup-buildx-action@v4
         with:
           buildkitd-flags: --debug
-
+      
       - name: Build
         uses: docker/build-push-action@v7
 ```
@@ -202,7 +202,7 @@ jobs:
           host: graviton2
           private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           private-key-name: aws_graviton2
-
+      
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
         with:
@@ -262,12 +262,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-
+      
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
         with:
           driver: kubernetes
-
+      
       - name: Build
         run: |
           buildx build .
@@ -300,17 +300,17 @@ jobs:
       - name: Set up builder1
         uses: docker/setup-buildx-action@v4
         id: builder1
-
+      
       - name: Set up builder2
         uses: docker/setup-buildx-action@v4
         id: builder2
-
+      
       - name: Build against builder1
         uses: docker/build-push-action@v7
         with:
           builder: ${{ steps.builder1.outputs.name }}
           target: mytarget1
-
+      
       - name: Build against builder2
         uses: docker/build-push-action@v7
         with:

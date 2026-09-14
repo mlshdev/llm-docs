@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/components/writer.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/writer.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/components/writer.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/writer.md)
 
 For exporting data, VictoriaMetrics Anomaly Detection (`vmanomaly`) primarily employs the [VmWriter](#vm-writer), which writes produced anomaly scores **(preserving initial labelset and optionally applying additional ones)** back to VictoriaMetrics. This writer is tailored for smooth data export within the VictoriaMetrics ecosystem.
 
@@ -185,18 +185,18 @@ Please note the different behaviors depending on the `tenant_id` value:
 3. **When `writer.tenant_id = 'multitenant'` but `vm_account_id` is missing** (e.g., due to aggregation in the reader or missing `keep_metric_names` in the query):
    - **Result**: The data is still written to `"0:0"`, but a warning is raised:
    ```
-   The label `vm_account_id` was not found in the label set of {query_result.key},
-   but tenant_id='multitenant' is set in writer. The data will be written to the default tenant 0:0.
-   Ensure that the query retains the necessary multi-tenant labels,
+   The label `vm_account_id` was not found in the label set of {query_result.key}, 
+   but tenant_id='multitenant' is set in writer. The data will be written to the default tenant 0:0. 
+   Ensure that the query retains the necessary multi-tenant labels, 
    or adjust the aggregation settings to preserve `vm_account_id` key in the label set.
    ```
 
 4. **When `writer.tenant_id != 'multitenant'` (e.g., `"0:0"`) and `vm_account_id` exists in the label set**:
    - **Result**: Writing is allowed, but a warning is raised:
    ```
-   The label set for the metric {query_result.key} contains multi-tenancy labels,
-   but the write endpoint is configured for single-tenant mode (tenant_id != 'multitenant').
-   Either adjust the query in the reader to avoid multi-tenancy labels
+   The label set for the metric {query_result.key} contains multi-tenancy labels, 
+   but the write endpoint is configured for single-tenant mode (tenant_id != 'multitenant'). 
+   Either adjust the query in the reader to avoid multi-tenancy labels 
    or ensure that reserved key `vm_account_id` is not explicitly set for single-tenant environments.
    ```
 

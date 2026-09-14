@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "project": "apple-ios",
   "title": "Apple iOS and iPadOS",
   "homepage": "https://developer.apple.com/ios/",
@@ -13,6 +13,31 @@
     "Generated from Apple's public DocC endpoints: the framework index under /tutorials/data/index and the render JSON under /tutorials/data/documentation.",
     "46 frameworks in this catalog, captured at 2026-09-12T21:04:59.672Z.",
     "Apple publishes continuously and exposes no release tag, so the pin is a digest of the catalog inventory plus a digest of every render payload this snapshot was converted from, rather than a source commit; a rebuild reproduces this snapshot only while Apple still serves those bytes.",
+    "Daily reconciliation rechecks the catalog inventory only. A prose-only edit that leaves the inventory unchanged is detected by an explicit full rebuild, not by the inexpensive daily check.",
     "Documentation content remains Apple Inc.'s copyrighted material, redistributed here under the developer.apple.com terms of use recorded in LICENSE.upstream."
-  ]
+  ],
+  "generatorVersion": 3,
+  "indexComplete": false,
+  "corpusVolumes": [
+    {
+      "name": "llms-full.txt",
+      "byteLength": 696,
+      "documentCount": 0,
+      "sha256": "9e56b8c096ee79087fcd8183b5ba86b4645763f50d675b4004d843370d37da36"
+    },
+    {
+      "name": "llms-full.001.txt",
+      "byteLength": 8383423,
+      "documentCount": 4353,
+      "sha256": "f26c25275ad644d2b817e57b6bf51a19fa3ae0a368490dec3cfec6b71b3a0e0b"
+    },
+    {
+      "name": "llms-full.002.txt",
+      "byteLength": 5784661,
+      "documentCount": 3040,
+      "sha256": "8a499d0b66b89aeb8ffcd9dbbeafb7de1ddedf661255e628a2031001c8b4cc62"
+    }
+  ],
+  "outputDigest": "1d6a9fc49fee376902c96a7871d89f3b95ad513d750e1a07c16498a8faafc4cd",
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
 }

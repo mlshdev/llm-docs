@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [flash/apps/local-testing.mdx](https://docs.runpod.io/flash/apps/local-testing)
+> Pinned source for Runpod main: [flash/apps/local-testing.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/flash/apps/local-testing.mdx)
+> Canonical documentation: https://docs.runpod.io/flash/apps/local-testing
 
 # Test Flash apps locally
 

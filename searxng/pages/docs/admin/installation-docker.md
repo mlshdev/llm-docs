@@ -1,35 +1,33 @@
-> Commit-pinned source for SearXNG master: [docs/admin/installation-docker.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/installation-docker.rst)
+> Pinned source for SearXNG master: [docs/admin/installation-docker.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/installation-docker.rst)
 
-.. \_installation container:
+<a id="installation-container"></a>
 
 # Installation container
 
+<a id="docker-101"></a> <a id="docker-cheat-sheet-pdf-doc"></a> <a id="podman-rootless-containers"></a> <a id="dockerhub-mirror"></a> <a id="ghcr-mirror"></a>
+
 ### info
 
-- [Docker 101](https://docs.docker.com/get-started/docker-overview)
-- [Docker cheat sheet (PDF doc)](https://docs.docker.com/get-started/docker_cheatsheet.pdf)
-- [Podman rootless containers](https://github.com/containers/podman/blob/main/docs/tutorials/rootless_tutorial.md)
+- [Docker 101](https://docs.searxng.org/admin/installation-docker.html#docker-101)
+- [Docker cheat sheet (PDF doc)](https://docs.searxng.org/admin/installation-docker.html#docker-cheat-sheet-pdf-doc)
+- [Podman rootless containers](https://docs.searxng.org/admin/installation-docker.html#podman-rootless-containers)
 
-.. important:
-
-```text
-Understanding container architecture basics is essential for properly
-maintaining your SearXNG instance.  This guide assumes familiarity with
-container concepts and provides deployment steps at a high level.
-
-If you're new to containers, we recommend learning the fundamentals at
-`Docker 101`_ before proceeding.
-
-```
+> **Important**
+> Understanding container architecture basics is essential for properly
+> maintaining your SearXNG instance.  This guide assumes familiarity with
+> container concepts and provides deployment steps at a high level.
+>
+> If you're new to containers, we recommend learning the fundamentals at
+> [Docker 101](https://docs.searxng.org/admin/installation-docker.html#docker-101) before proceeding.
 
 Container images are the basis for deployments in containerized environments,
 Compose, Kubernetes and more.
 
-.. \_Container installation:
+<a id="container-installation"></a>
 
 # Installation
 
-.. \_Container prerequisites:
+<a id="container-prerequisites"></a>
 
 ## Prerequisites
 
@@ -42,31 +40,27 @@ option that works best for your environment:
 In the case of Docker, you need to add the user running the container to the
 `docker` group and restart the session:
 
-.. code:: sh
-
+```sh
 $ sudo usermod -aG docker $USER
+```
 
 In the case of Podman, no additional steps are generally required, but there
-are some considerations when running [Podman rootless containers](https://github.com/containers/podman/blob/main/docs/tutorials/rootless_tutorial.md).
+are some considerations when running [Podman rootless containers](https://docs.searxng.org/admin/installation-docker.html#podman-rootless-containers).
 
-.. \_Container registries:
+<a id="container-registries"></a>
 
 ## Registries
 
-.. note:
-
-```text
-DockerHub now applies rate limits to unauthenticated image pulls.  If you
-are affected by this, you can use the `GHCR mirror`_ instead.
-
-```
+> **Note**
+> DockerHub now applies rate limits to unauthenticated image pulls.  If you
+> are affected by this, you can use the [GHCR mirror](https://docs.searxng.org/admin/installation-docker.html#ghcr-mirror) instead.
 
 The official images are mirrored at:
 
-- [DockerHub mirror](https://hub.docker.com/r/searxng/searxng)
-- [GHCR mirror](https://ghcr.io/searxng/searxng) (GitHub Container Registry)
+- [DockerHub mirror](https://docs.searxng.org/admin/installation-docker.html#dockerhub-mirror)
+- [GHCR mirror](https://docs.searxng.org/admin/installation-docker.html#ghcr-mirror) (GitHub Container Registry)
 
-.. \_Container compose instancing:
+<a id="container-compose-instancing"></a>
 
 # Compose instancing
 
@@ -74,162 +68,153 @@ This is the recommended way to deploy SearXNG in a containerized environment.
 Compose templates allow you to define container configurations in a
 declarative manner.
 
-.. \_Container compose instancing setup:
+<a id="container-compose-instancing-setup"></a>
 
 ## Setup
 
 1. Create the environment:
 
-.. code:: sh
-
+```sh
 # Create the environment and configuration directories
-
 $ mkdir -p ./searxng/core-config/
 $ cd ./searxng/
 
 # Fetch the latest compose template
-
 $ curl -fsSL \
--O <https://raw.githubusercontent.com/searxng/searxng/master/container/docker-compose.yml> \
--O <https://raw.githubusercontent.com/searxng/searxng/master/container/.env.example>
+    -O https://raw.githubusercontent.com/searxng/searxng/master/container/docker-compose.yml \
+    -O https://raw.githubusercontent.com/searxng/searxng/master/container/.env.example
+```
 
 2. Copy the `.env.example` file and edit the values as needed:
 
-.. code:: sh
-
+```sh
 $ cp -i .env.example .env
 
 # nano or your preferred text editor...
-
 $ nano .env
+```
 
 3. Start & stop the services:
 
-.. code:: sh
-
+```sh
 $ docker compose up -d
 $ docker compose down
+```
 
 4. Setup your settings in `core-config/settings.yml` according to your preferences.
 
-.. \_Container compose instancing maintenance:
+<a id="container-compose-instancing-maintenance"></a>
 
 ## Management
 
-.. important:
-
-```text
-Remember to review the new templates for any changes that may affect your
-deployment, and update the ``.env`` file accordingly.
-
-```
+> **Important**
+> Remember to review the new templates for any changes that may affect your
+> deployment, and update the `.env` file accordingly.
 
 To update the templates to their latest versions:
 
-.. code:: sh
-
+```sh
 $ docker compose down
 $ curl -fsSLO \
-<https://raw.githubusercontent.com/searxng/searxng/master/container/docker-compose.yml> \
-<https://raw.githubusercontent.com/searxng/searxng/master/container/.env.example>
+    https://raw.githubusercontent.com/searxng/searxng/master/container/docker-compose.yml \
+    https://raw.githubusercontent.com/searxng/searxng/master/container/.env.example
 $ docker compose up -d
+```
 
 To update the services to their latest versions:
 
-.. code:: sh
-
+```sh
 $ docker compose down
 $ docker compose pull
 $ docker compose up -d
+```
 
 List running services:
 
-.. code:: sh
-
+```sh
 $ docker compose ps
 NAME            IMAGE  ...  CREATED        STATUS        PORTS
 searxng-core    ...    ...  3 minutes ago  Up 3 minutes  0.0.0.0:8080->8080/tcp
 searxng-valkey  ...    ...  3 minutes ago  Up 3 minutes  6379/tcp
+```
 
 Print a service container logs:
 
-.. code:: sh
-
+```sh
 $ docker compose logs -f core
+```
 
 Access a service container shell (troubleshooting):
 
-.. code:: sh
-
+```sh
 $ docker compose exec -it --user root core /bin/sh -l
 /usr/local/searxng #
+```
 
 Stop and remove the services:
 
-.. code:: sh
-
+```sh
 $ docker compose down
+```
 
-.. \_Container manual instancing:
+<a id="container-manual-instancing"></a>
 
 # Manual instancing
 
 This section is intended for advanced users who need custom deployments.  We
-recommend using Container compose instancing, which provides a preconfigured
+recommend using [Container compose instancing](https://docs.searxng.org/admin/installation-docker.html#container-compose-instancing), which provides a preconfigured
 environment with sensible defaults.
 
 Basic container instancing example:
 
-.. code:: sh
-
+```sh
 # Create directories for configuration and persistent data
-
 $ mkdir -p ./searxng/config/ ./searxng/data/
 $ cd ./searxng/
 
 # Run the container
-
 $ docker run --name searxng -d \
--p 8888:8080 \
--v "./config/:/etc/searxng/" \
--v "./data/:/var/cache/searxng/" \
-docker.io/searxng/searxng:latest
+    -p 8888:8080 \
+    -v "./config/:/etc/searxng/" \
+    -v "./data/:/var/cache/searxng/" \
+    docker.io/searxng/searxng:latest
+```
 
 This will start SearXNG in the background, accessible at <http://localhost:8888>
 
-.. \_Container management:
+<a id="container-management"></a>
 
 ## Management
 
 List running containers:
 
-.. code:: sh
-
+```sh
 $ docker container list
 CONTAINER ID  IMAGE  ...  CREATED        PORTS                   NAMES
 1af574997e63  ...    ...  3 minutes ago  0.0.0.0:8888->8080/tcp  searxng
+```
 
 Print the container logs:
 
-.. code:: sh
-
+```sh
 $ docker container logs -f searxng
+```
 
 Access the container shell (troubleshooting):
 
-.. code:: sh
-
+```sh
 $ docker container exec -it --user root searxng /bin/sh -l
 /usr/local/searxng #
+```
 
 Stop and remove the container:
 
-.. code:: sh
-
+```sh
 $ docker container stop searxng
 $ docker container rm searxng
+```
 
-.. \_Container volumes:
+<a id="container-volumes"></a>
 
 # Volumes
 
@@ -238,20 +223,19 @@ Two volumes are exposed that should be mounted to preserve its contents:
 - `/etc/searxng`: Configuration files (settings.yml, etc.)
 - `/var/cache/searxng`: Persistent data (faviconcache.db, etc.)
 
-.. \_Container environment variables:
+<a id="container-environment-variables"></a>
 
 # Environment variables
 
 The following environment variables can be configured:
 
-- `$SEARXNG*`: Controls the SearXNG configuration options, look out for
-  environment `$SEARXNG*` in \[settings server]\(#settings server), :ref:`settings
-  general` and the :origin:`container/.env.example` template.
-- `$GRANIAN*`: Controls the \[Granian server options]\(#Granian configuration).
+- `$SEARXNG_*`: Controls the SearXNG configuration options, look out for
+  environment `$SEARXNG_*` in [settings server](https://docs.searxng.org/admin/settings/settings_server.html#settings-server), [settings general](https://docs.searxng.org/admin/settings/settings_general.html#settings-general) and the [container/.env.example](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/container/.env.example) template.
+- `$GRANIAN_*`: Controls the [Granian server options](https://docs.searxng.org/admin/installation-granian.html#granian-configuration).
 - `$FORCE_OWNERSHIP`: Ensures mounted volumes/files are owned by the
   `searxng:searxng` user (default: `true`)
 
-.. \_Container custom certificates:
+<a id="container-custom-certificates"></a>
 
 # Custom certificates
 
@@ -263,20 +247,18 @@ They will be available on container (re)start or when running
 
 This requires the container to be running with `root` privileges.
 
-.. \_Container custom images:
+<a id="container-custom-images"></a>
 
 # Custom images
 
 To build your own SearXNG container image from source (please note, custom
 container images are not officially supported):
 
-.. code:: sh
-
-$ git clone <https://github.com/searxng/searxng.git>
+```sh
+$ git clone https://github.com/searxng/searxng.git
 $ cd ./searxng/
 
 # Run the container build script
-
 $ make container
 
 $ docker images
@@ -286,37 +268,38 @@ localhost/searxng/searxng  latest               ...       265 MB
 localhost/searxng/searxng  builder              ...       687 MB
 docker.io/searxng/base     searxng-builder      ...       565 MB
 docker.io/searxng/base     searxng              ...       143 MB
+```
 
 # Migrate from `searxng-docker`
 
 We expect the following source directory structure:
 
-.. code:: sh
-
+```sh
 .
 └── searxng-docker
-├── searxng
-│   ├── favicons.toml
-│   ├── limiter.toml
-│   ├── settings.yml
-│   └── ...
-├── .env
-├── Caddyfile
-├── docker-compose.yml
-└── ...
+    ├── searxng
+    │   ├── favicons.toml
+    │   ├── limiter.toml
+    │   ├── settings.yml
+    │   └── ...
+    ├── .env
+    ├── Caddyfile
+    ├── docker-compose.yml
+    └── ...
+```
 
 Create a brand new environment outside `searxng-docker` directory, following
-Container compose instancing setup.
+[Container compose instancing setup](https://docs.searxng.org/admin/installation-docker.html#container-compose-instancing-setup).
 
 Once up and running, stop the services and move the configuration files from
 the old mount to the new one:
 
-.. code:: sh
-
-$ mv ./searxng-docker/searxng/\* ./searxng/core-config/
+```sh
+$ mv ./searxng-docker/searxng/* ./searxng/core-config/
+```
 
 If using Valkey features like bot protection (limiter), you will need to update
-the URL hostname in :origin:`searx/settings.yml` file to `valkey` or
+the URL hostname in [searx/settings.yml](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/settings.yml) file to `valkey` or
 `searxng-valkey`.
 
 If you have any environment variables in the old `.env` file, make
@@ -326,9 +309,7 @@ Consider setting up a reverse proxy if exposing the instance to the public.
 
 You should end with the following directory structure:
 
-.. code:: sh
-
-```
+```sh
 .
 ├── searxng
 │   ├── core-config

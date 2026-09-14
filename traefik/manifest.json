@@ -1,5 +1,6 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
+  "generatorVersion": 3,
   "project": "traefik",
   "title": "Traefik Proxy",
   "homepage": "https://doc.traefik.io/traefik/",
@@ -9,8 +10,19 @@
   "releasePublishedAt": "2026-09-04T12:40:17Z",
   "sourceCommit": "fc92cc118a0557a029c7019d5ee06665127b0f13",
   "documentCount": 161,
+  "indexComplete": true,
+  "corpusVolumes": [
+    {
+      "name": "llms-full.txt",
+      "byteLength": 2576135,
+      "documentCount": 161,
+      "sha256": "50f918a331869ce1b75026c058159a8a336916d61c91f481157ee026a2713b21"
+    }
+  ],
+  "outputDigest": "25ba1315981a292941003a2310d2ddbe16a61addfdd4e7106d79fd7daf879dae",
   "notes": [
     "Pages follow docs/mkdocs.yml navigation order from the immutable release tag.",
     "MkDocs include fragments are expanded; repeated commercial callouts and non-text assets are omitted."
-  ]
+  ],
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
 }

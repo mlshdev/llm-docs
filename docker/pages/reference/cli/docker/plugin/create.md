@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_plugin_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_plugin_create.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_plugin_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_plugin_create.yaml)
 
 # docker plugin create
 
@@ -9,13 +9,13 @@ Create a plugin from a rootfs and configuration. Plugin data directory must cont
 ## Description
 
 Creates a plugin. Before creating the plugin, prepare the plugin's root
-filesystem as well as the [config.json](/engine/extend/config/).
+filesystem as well as the [config.json](https://docs.docker.com/engine/extend/config/).
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--compress` |  | Compress the context using gzip |
+| Option       | Default | Description                     |
+| ------------ | ------- | ------------------------------- |
+| `--compress` |         | Compress the context using gzip |
 
 ## Examples
 

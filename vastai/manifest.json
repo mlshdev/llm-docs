@@ -1,5 +1,7 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
+  "generatorVersion": 3,
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4",
   "project": "vastai",
   "title": "Vast.ai",
   "homepage": "https://docs.vast.ai/",
@@ -8,13 +10,18 @@
   "branch": "main",
   "sourceCommittedAt": "2026-09-10T04:31:00Z",
   "sourceCommit": "175a318c27750ea64da94f043dda39ec5cb26259",
-  "documentCount": 533,
-  "quarantined": [
+  "documentationDigest": "5408a10d12e1bdf593487994f9dc29cb6afa91d142ecb08a103d3922cfa2d487",
+  "documentCount": 534,
+  "indexComplete": true,
+  "corpusVolumes": [
     {
-      "sourcePath": "sdk/python/reference/show-invoices-v1.mdx",
-      "reason": "Unable to convert Vast.ai page sdk/python/reference/show-invoices-v1.mdx: Unsupported expression type: SequenceExpression"
+      "name": "llms-full.txt",
+      "byteLength": 1914138,
+      "documentCount": 534,
+      "sha256": "3005962aaebbc2b26f38f6e4aea2ac7b03eb0088afba6bf8ee02c62057217d2a"
     }
   ],
+  "outputDigest": "620b8672a82607ecddd9c6d19515723d17f3aaeba2b10228511f0e1c7468b03d",
   "notes": [
     "Pages follow the navigation declared in docs.json at the pinned commit; snippets are inlined into the pages that import them rather than published separately.",
     "Endpoint pages are generated from api-reference/openapi.yaml, which is how the site itself publishes them: the navigation group naming the specification lists no pages.",

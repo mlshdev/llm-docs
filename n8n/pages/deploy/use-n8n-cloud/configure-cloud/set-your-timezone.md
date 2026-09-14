@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/use-n8n-cloud/configure-cloud/set-your-timezone.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/use-n8n-cloud/configure-cloud/set-your-timezone.md)
+> Pinned source for n8n main: [docs/deploy/use-n8n-cloud/configure-cloud/set-your-timezone.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/use-n8n-cloud/configure-cloud/set-your-timezone.md)
 
 # Set the Cloud instance timezone <a id="set-the-cloud-instance-timezone"></a>
 

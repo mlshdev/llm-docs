@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.1.1: [build_osx.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/build_osx.md)
+> Pinned source for Podman v6.1.1: [build_osx.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/build_osx.md)
 
 # Building the Podman client on macOS
 

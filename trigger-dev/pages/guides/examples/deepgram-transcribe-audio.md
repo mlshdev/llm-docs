@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/guides/examples/deepgram-transcribe-audio.mdx](https://trigger.dev/docs/guides/examples/deepgram-transcribe-audio)
+> Pinned source for Trigger.dev v4.5.16: [docs/guides/examples/deepgram-transcribe-audio.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/guides/examples/deepgram-transcribe-audio.mdx)
+> Canonical documentation: https://trigger.dev/docs/guides/examples/deepgram-transcribe-audio
 
 # Transcribe audio using Deepgram
 

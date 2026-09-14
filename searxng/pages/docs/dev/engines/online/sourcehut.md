@@ -1,8 +1,9 @@
-> Commit-pinned source for SearXNG master: [docs/dev/engines/online/sourcehut.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/sourcehut.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/online/sourcehut.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/sourcehut.rst)
 
-.. \_sourcehut engine:
+<a id="sourcehut-engine"></a>
 
 # Sourcehut
 
-.. automodule:: searx.engines.sourcehut
-:members:
+#### `searx.engines.sourcehut`
+
+Static Python API reference (`automodule`).

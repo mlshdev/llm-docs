@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/ai-chat/client-protocol.mdx](https://trigger.dev/docs/ai-chat/client-protocol)
+> Pinned source for Trigger.dev v4.5.16: [docs/ai-chat/client-protocol.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/ai-chat/client-protocol.mdx)
+> Canonical documentation: https://trigger.dev/docs/ai-chat/client-protocol
 
 # Client Protocol
 

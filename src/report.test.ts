@@ -1,5 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import {
+  pipelineIsHealthy,
   renderIssueBody,
   renderSummary,
   reportFingerprint,
@@ -7,13 +8,17 @@ import {
 } from "./report.ts";
 
 function report(overrides: Partial<PipelineReport> = {}): PipelineReport {
+  const unresolvedSources = overrides.unresolvedSources ?? [];
+  const retainedProjects = overrides.retainedProjects ?? [];
+  const quarantine = overrides.quarantine ?? [];
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     generatedAt: "2026-09-05T12:00:00.000Z",
-    healthy: true,
-    unresolvedSources: [],
-    retainedProjects: [],
-    quarantine: [],
+    healthy: pipelineIsHealthy(unresolvedSources, retainedProjects, quarantine),
+    unresolvedSources,
+    retainedProjects,
+    quarantine,
+    sourceResolution: [],
     ...overrides,
   };
 }
@@ -35,7 +40,7 @@ describe("renderSummary", () => {
     ]);
   });
 
-  test("discloses quarantined pages even when publication is healthy", () => {
+  test("discloses quarantined pages from an unhealthy publication", () => {
     const lines = renderSummary(report({ quarantine })).join("\n");
     expect(lines).toContain("Quarantined pages");
     expect(lines).toContain("limits.mdx");
@@ -57,6 +62,16 @@ describe("renderSummary", () => {
       }),
     ).join("\n");
     expect(lines).toContain("a \\| b");
+  });
+});
+
+describe("pipelineIsHealthy", () => {
+  test("rejects a quarantine-only report", () => {
+    expect(pipelineIsHealthy([], [], quarantine)).toBe(false);
+  });
+
+  test("accepts a report only when every problem set is empty", () => {
+    expect(pipelineIsHealthy([], [], [])).toBe(true);
   });
 });
 
@@ -92,5 +107,24 @@ describe("renderIssueBody", () => {
       `<!-- pipeline-fingerprint: ${reportFingerprint(report({ quarantine }))} -->`,
     );
     expect(body).toContain("limits.mdx");
+  });
+
+  test("makes upstream-controlled issue text inert and bounded", () => {
+    const body = renderIssueBody(
+      report({
+        healthy: false,
+        unresolvedSources: [
+          {
+            project: "docker",
+            reason: "bad\n</details> @maintainer | `oops`",
+          },
+        ],
+      }),
+    );
+    expect(body).toContain("bad &lt;/details&gt; @\u200bmaintainer | `oops`");
+    expect(body).not.toContain("\n</details>");
+    expect(
+      body.match(/^<!-- pipeline-fingerprint: ([0-9a-f]{16}) -->$/m)?.[1],
+    ).toHaveLength(16);
   });
 });

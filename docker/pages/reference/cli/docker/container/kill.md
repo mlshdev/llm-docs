@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_container_kill.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_kill.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_container_kill.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_kill.yaml)
 
 # docker container kill
 
@@ -25,16 +25,16 @@ set through `--signal` may be non-terminal, depending on the container's main
 process. For example, the `SIGHUP` signal in most cases will be non-terminal,
 and the container will continue running after receiving the signal.
 
-> [!NOTE]
+> \[!NOTE]
 > `ENTRYPOINT` and `CMD` in the *shell* form run as a child process of
 > `/bin/sh -c`, which does not pass signals. This means that the executable is
 > not the container’s PID 1 and does not receive Unix signals.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-s`, `--signal` |  | Signal to send to the container |
+| Option           | Default | Description                     |
+| ---------------- | ------- | ------------------------------- |
+| `-s`, `--signal` |         | Signal to send to the container |
 
 ## Examples
 
@@ -56,7 +56,7 @@ The following example sends a `SIGHUP` signal to the container named
 $ docker kill --signal=SIGHUP  my_container
 ```
 
-You can specify a custom signal either by _name_, or _number_. The `SIG` prefix
+You can specify a custom signal either by *name*, or *number*. The `SIG` prefix
 is optional, so the following examples are equivalent:
 
 ```console

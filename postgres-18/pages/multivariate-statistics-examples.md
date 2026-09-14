@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/planstats.sgml#multivariate-statistics-examples](https://www.postgresql.org/docs/18/multivariate-statistics-examples.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/planstats.sgml#multivariate-statistics-examples](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/planstats.sgml%23multivariate-statistics-examples)
+> Canonical documentation: https://www.postgresql.org/docs/18/multivariate-statistics-examples.html
 
 # Multivariate Statistics Examples
 

@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [public-endpoints/models/wan-2-6-t2v.mdx](https://docs.runpod.io/public-endpoints/models/wan-2-6-t2v)
+> Pinned source for Runpod main: [public-endpoints/models/wan-2-6-t2v.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/public-endpoints/models/wan-2-6-t2v.mdx)
+> Canonical documentation: https://docs.runpod.io/public-endpoints/models/wan-2-6-t2v
 
 # WAN 2.6 T2V
 

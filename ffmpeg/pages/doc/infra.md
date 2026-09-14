@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/infra.txt](https://github.com/FFmpeg/FFmpeg/blob/6efe500d2e9e24a81bffda8825511f6bc9760cb1/doc/infra.txt)
+> Pinned source for FFmpeg master: [doc/infra.txt](https://github.com/FFmpeg/FFmpeg/blob/6efe500d2e9e24a81bffda8825511f6bc9760cb1/doc/infra.txt)
 
 # FFmpeg Infrastructure:
 
@@ -6,6 +6,7 @@ Trademark:
 
 ```
 ffmpeg trademark registered in france by ffmpeg creator.
+
 
 Domain + NS:
 ```
@@ -18,6 +19,7 @@ ns3.avcodec.org Replica Name server (provided by an ffmpeg developer, hosted at 
 Servers:
 
 ```
+
 
 Main Server:
 ------------
@@ -45,9 +47,11 @@ Side note - Telepoint provides the rack and physical infrastructure, their sibli
             over 15 tier-1 service providers and have over 100 PoPs (points of presence)
             in various cities. You can see more on www.telehouse.bg
 
+
 ffmpeg.org VM:
 --------------
 Web, mail, and public facing git, also website git
+
 
 fftrac VM:
 ----------
@@ -56,20 +60,26 @@ code.ffmpeg.org         Primary issue tracking
 gpg encrypted backups of the trac repositories are created once a day
 and can be downloaded by any of the admins.
 
+
 ffaux VM:
 ---------
 patchwork.ffmpeg.org    Patch tracking
 vote.ffmpeg.org         Condorcet voting
 
+
 fate:
 -----
 fate.ffmpeg.org         FFmpeg automated testing environment
+
 
 coverage:
 ---------
 coverage.ffmpeg.org     Fate code coverage
 
+
 The main and fate server as well as VMs currently run ubuntu
+
+
 
 Cronjobs:
 ```
@@ -94,6 +104,7 @@ You need a new git repository related to FFmpeg ? contact root at ffmpeg.org
 git repositories are managed by gitolite, every change to permissions is
 logged, including when, what and by whom
 
+
 Fate:
 ```
 
@@ -106,10 +117,14 @@ Accounts:
 ```
 You need an account for some FFmpeg work? Send mail to root at ffmpeg.org
 
+
+
 VMs:
 ~~~~
 You need a VM, docker container for FFmpeg? contact root at ffmpeg.org
 (for docker, CC Andriy)
+
+
 
 Forgejo Fairy:
 ```
@@ -125,6 +140,8 @@ While not directly part of FFmpeg infrastructure, technical codec and format
 information written by FFmpeg developers can be found within.
 It is our unofficial official tech wiki. For access contact Mike.
 
+
+
 IRC:
 ~~~~
 irc channels are at https://libera.chat/
@@ -133,6 +150,7 @@ irc channel archives are at https://libera.irclog.whitequark.org
 #ffmpeg and #ffmpeg-devel founder/admins: BtbN, Michael, Compn
 #ffmpeg-meeting founder/admins: BtbN, Michael
 
+
 Twitter aka X:
 ~~~~~~~~~~~~~~
 https://twitter.com/FFmpeg or https://x.com/FFmpeg
@@ -140,15 +158,21 @@ https://twitter.com/FFmpeg or https://x.com/FFmpeg
 If you would like to post to twitter please contact twitter MAINTAINERS
 for access. We want more developers posting to twitter!
 
+
+
 Reddit:
 ~~~~~~~
 https://www.reddit.com/r/ffmpeg/
 moderated by Gyan
 
+
+
 Facebook:
 ~~~~~~~~~
 https://www.facebook.com/ffmpeg
 ???
+
+
 
 Wikipedia entry:
 ```

@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/queries.sgml#queries-select-lists](https://www.postgresql.org/docs/18/queries-select-lists.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/queries.sgml#queries-select-lists](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/queries.sgml%23queries-select-lists)
+> Canonical documentation: https://www.postgresql.org/docs/18/queries-select-lists.html
 
 # Select Lists
 

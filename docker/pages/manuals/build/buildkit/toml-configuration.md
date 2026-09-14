@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/moby/buildkit/docs/buildkitd.toml.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/moby/buildkit/docs/buildkitd.toml.md)
+> Pinned source for Docker main: [_vendor/github.com/moby/buildkit/docs/buildkitd.toml.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/moby/buildkit/docs/buildkitd.toml.md)
 
 The TOML file used to configure the buildkitd daemon settings has a short
 list of global settings followed by a series of sections for specific areas
@@ -95,7 +95,7 @@ provenanceEnvDir = "/etc/buildkit/provenance.d"
   # collector will attempt to leave - however, it will never be bought below
   # reservedSpace.
   minFreeSpace = "20GB"
-  # alternate OCI worker binary name(example 'crun'), by default either
+  # alternate OCI worker binary name(example 'crun'), by default either 
   # buildkit-runc or runc binary is used
   binary = ""
   # name of the apparmor profile that should be used to constrain build containers.
@@ -207,7 +207,7 @@ provenanceEnvDir = "/etc/buildkit/provenance.d"
   enabled = true
   # If allowedRepositories is empty, all gateway sources are allowed.
   # Otherwise, only the listed repositories are allowed as a gateway source.
-  #
+  # 
   # NOTE: Only the repository name (without tag) is compared.
   #
   # Example:
@@ -220,6 +220,7 @@ provenanceEnvDir = "/etc/buildkit/provenance.d"
   # maxRegistryConcurrency sets the maximum number of concurrent connections
   # per registry. If unset, the default concurrency limit is used.
   maxRegistryConcurrency = 4
+
 
 # optional signed cache configuration for GitHub Actions backend
 [ghacache.sign]

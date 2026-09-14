@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/go-prometheus-monitoring.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/go-prometheus-monitoring.md)
+> Pinned source for Docker main: [content/guides/go-prometheus-monitoring.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/go-prometheus-monitoring.md)
 
 The guide teaches you how to containerize a Golang application and monitor it with Prometheus and Grafana.
 
@@ -44,7 +44,7 @@ directory to a directory that you want to work in, and run the following
 command to clone the repository:
 
 ```console
-$ git clone https://github.com/dockersamples/go-prometheus-monitoring.git
+$ git clone https://github.com/dockersamples/go-prometheus-monitoring.git 
 ```
 
 Once you cloned you will see the following content structure inside `go-prometheus-monitoring` directory,
@@ -116,7 +116,7 @@ func main() {
 
 	// Register /metrics before middleware
 	router.GET("/metrics", PrometheusHandler())
-
+	
 	router.Use(RequestMetricsMiddleware())
 	router.GET("/health", func(c *gin.Context) {
 		c.JSON(200, gin.H{
@@ -196,7 +196,7 @@ func main() {
 
 	// Register /metrics before middleware
 	router.GET("/metrics", PrometheusHandler())
-
+	
 	router.Use(RequestMetricsMiddleware())
 	router.GET("/health", func(c *gin.Context) {
 		c.JSON(200, gin.H{
@@ -402,7 +402,7 @@ services:
       watch:
         - path: .
           action: rebuild
-
+      
   prometheus:
     container_name: prometheus
     image: prom/prometheus:v2.55.0
@@ -412,7 +412,7 @@ services:
       - 9090:9090
     networks:
       - go-network
-
+  
   grafana:
     container_name: grafana
     image: grafana/grafana:11.3.0
@@ -484,17 +484,17 @@ $ docker compose up
 The `docker compose up` command builds the services defined in the Docker Compose file and runs them together. You will see the similar output in the terminal:
 
 ```console
- ✔ Network go-prometheus-monitoring_go-network  Created                                                           0.0s
- ✔ Container grafana                            Created                                                           0.3s
- ✔ Container go-api                             Created                                                           0.2s
- ✔ Container prometheus                         Created                                                           0.3s
+ ✔ Network go-prometheus-monitoring_go-network  Created                                                           0.0s 
+ ✔ Container grafana                            Created                                                           0.3s 
+ ✔ Container go-api                             Created                                                           0.2s 
+ ✔ Container prometheus                         Created                                                           0.3s 
 Attaching to go-api, grafana, prometheus
 go-api      | [GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
-go-api      |
+go-api      | 
 go-api      | [GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
 go-api      |  - using env:     export GIN_MODE=release
 go-api      |  - using code:    gin.SetMode(gin.ReleaseMode)
-go-api      |
+go-api      | 
 go-api      | [GIN-debug] GET    /metrics                  --> main.PrometheusHandler.func1 (3 handlers)
 go-api      | [GIN-debug] GET    /health                   --> main.main.func1 (4 handlers)
 go-api      | [GIN-debug] GET    /v1/users                 --> main.main.func2 (4 handlers)
@@ -585,7 +585,7 @@ Rebuilding service(s) ["api"] after changes were detected...
  => [api internal] load build definition from Dockerfile                                                                                                  0.0s
  => => transferring dockerfile: 704B                                                                                                                      0.0s
  => [api internal] load metadata for docker.io/library/alpine:3.17                                                                                        1.1s
-  .
+  .                             
  => => exporting manifest list sha256:89ebc86fd51e27c1da440dc20858ff55fe42211a1930c2d51bbdce09f430c7f1                                                    0.0s
  => => naming to docker.io/library/go-api:latest                                                                                                          0.0s
  => => unpacking to docker.io/library/go-api:latest                                                                                                       0.0s

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/ci/github-actions/local-registry.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build/ci/github-actions/local-registry.md)
+> Pinned source for Docker main: [content/manuals/build/ci/github-actions/local-registry.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build/ci/github-actions/local-registry.md)
 
 # Local registry with GitHub Actions
 
@@ -22,18 +22,18 @@ jobs:
     steps:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v4
-
+      
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
         with:
           driver-opts: network=host
-
+      
       - name: Build and push to local registry
         uses: docker/build-push-action@v7
         with:
           push: true
           tags: localhost:5000/name/app:latest
-
+      
       - name: Inspect
         run: |
           docker buildx imagetools inspect localhost:5000/name/app:latest

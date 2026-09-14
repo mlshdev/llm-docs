@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/Self-monitoring.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/Self-monitoring.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/Self-monitoring.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/Self-monitoring.md)
 
 ## What is Self-Monitoring
 

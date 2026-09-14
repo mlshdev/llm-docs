@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/tools/api.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/dhi/tools/api.md)
+> Pinned source for Docker main: [content/manuals/dhi/tools/api.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/dhi/tools/api.md)
 
 # Use the DHI API
 

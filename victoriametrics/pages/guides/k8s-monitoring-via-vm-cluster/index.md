@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/k8s-monitoring-via-vm-cluster/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-monitoring-via-vm-cluster/_index.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/guides/k8s-monitoring-via-vm-cluster/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-monitoring-via-vm-cluster/_index.md)
 
 > \[!NOTE] Tip
 > Store every configuration file you use during this guide in version control. You may need them for reference or to change the configuration of your installation.
@@ -132,6 +132,7 @@ You need to specify select service URL into your Grafana:
 Input this URL field into Grafana
 
     http://<select-service>/select/0/prometheus/
+
 
 for example - inside the Kubernetes cluster:
 
@@ -310,6 +311,7 @@ NOTES:
 1. Get your 'admin' user password by running:
 
    kubectl get secret --namespace default my-grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
+
 
 2. The Grafana server can be accessed via port 80 on the following DNS name from within your cluster:
 

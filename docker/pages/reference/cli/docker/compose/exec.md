@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_exec.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_exec.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_exec.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_exec.yaml)
 
 # docker compose exec
 
@@ -21,18 +21,18 @@ a script.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-d`, `--detach` |  | Detached mode: Run command in the background |
-| `-e`, `--env` |  | Set environment variables |
-| `--index` |  | Index of the container if service has multiple replicas |
-| `-T`, `--no-tty` | `true` | Disable pseudo-TTY allocation. By default 'docker compose exec' allocates a TTY. |
-| `--privileged` |  | Give extended privileges to the process |
-| `-u`, `--user` |  | Run the command as this user |
-| `-w`, `--workdir` |  | Path to workdir directory for this command |
+| Option            | Default | Description                                                                      |
+| ----------------- | ------- | -------------------------------------------------------------------------------- |
+| `-d`, `--detach`  |         | Detached mode: Run command in the background                                     |
+| `-e`, `--env`     |         | Set environment variables                                                        |
+| `--index`         |         | Index of the container if service has multiple replicas                          |
+| `-T`, `--no-tty`  | `true`  | Disable pseudo-TTY allocation. By default 'docker compose exec' allocates a TTY. |
+| `--privileged`    |         | Give extended privileges to the process                                          |
+| `-u`, `--user`    |         | Run the command as this user                                                     |
+| `-w`, `--workdir` |         | Path to workdir directory for this command                                       |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--dry-run` |  | Execute command in dry run mode |
+| Option      | Default | Description                     |
+| ----------- | ------- | ------------------------------- |
+| `--dry-run` |         | Execute command in dry run mode |

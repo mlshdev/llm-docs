@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/users](https://docs.vast.ai/api-reference/accounts/set-user)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/users](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/api-reference/openapi.yaml%23put%20/api/v0/users)
+> Canonical documentation: https://docs.vast.ai/api-reference/accounts/set-user
 
 # set user
 
@@ -8,12 +9,54 @@ Updates the user data for the authenticated user.
 
 CLI Usage: `vastai set user --file <file_path>`
 
-**Request body**
+**Authentication:** `BearerAuth`
+
+**Request body** (required)
+
+- Media type: `application/json`
+  - Schema (object)
+    - `normalized_email` (string): Normalized email address.
+      - Example: `user@example.com`
+    - `username` (string): Username of the user.
+      - Example: `johndoe`
+    - `fullname` (string): Full name of the user.
+      - Example: `John Doe`
 
 **Responses**
 
 - `200`: Success response
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `true`
+      - `msg` (string)
+        - Example: `Operation completed successfully`
 - `400`: Bad Request
+  - Media type: `application/json`
+    - Schema (object)
+      - allOf:
+        - `variant 1` (object)
+          - `success` (boolean)
+            - Example: `false`
+          - `error` (string)
+          - `msg` (string)
+      - `error` (string; enum: `missing_input`, `empty_input`, `input_too_long`, `invalid_characters`, `nonexistent_key`)
 - `401`: Unauthorized
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `false`
+      - `error` (string)
+      - `msg` (string)
 - `403`: Forbidden
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `false`
+      - `error` (string)
+      - `msg` (string)
 - `429`: Too Many Requests
+  - Media type: `application/json`
+    - Schema (object)
+      - `detail` (string)
+        - Example: `API requests too frequent endpoint threshold=5.0`

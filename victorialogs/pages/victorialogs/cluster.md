@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/cluster.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/cluster.md)
+> Pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/cluster.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/cluster.md)
 
 Cluster mode in VictoriaLogs provides horizontal scaling to many nodes when [single-node VictoriaLogs](https://docs.victoriametrics.com/victorialogs/)
 reaches vertical scalability limits of a single host. If you have the ability to run a single-node VictoriaLogs on a host with more CPU / RAM / storage space / storage IO,

@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.1: [docs/sources/as-code/infrastructure-as-code/grafana-operator/operator-dashboards-folders-datasources.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/as-code/infrastructure-as-code/grafana-operator/operator-dashboards-folders-datasources.md)
+> Pinned source for Grafana v13.2.1: [docs/sources/as-code/infrastructure-as-code/grafana-operator/operator-dashboards-folders-datasources.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/as-code/infrastructure-as-code/grafana-operator/operator-dashboards-folders-datasources.md)
 
 # Manage folders, data sources, and dashboards using the Grafana Operator
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/dhi/docker_dhi.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/dhi/docker_dhi.yaml)
+> Pinned source for Docker main: [data/cli/dhi/docker_dhi.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/dhi/docker_dhi.yaml)
 
 # docker dhi
 

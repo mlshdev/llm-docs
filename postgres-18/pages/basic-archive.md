@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/basic-archive.sgml#basic-archive](https://www.postgresql.org/docs/18/basic-archive.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/basic-archive.sgml#basic-archive](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/basic-archive.sgml%23basic-archive)
+> Canonical documentation: https://www.postgresql.org/docs/18/basic-archive.html
 
 # basic_archive — an example WAL archive module
 

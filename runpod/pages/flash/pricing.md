@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [flash/pricing.mdx](https://docs.runpod.io/flash/pricing)
+> Pinned source for Runpod main: [flash/pricing.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/flash/pricing.mdx)
+> Canonical documentation: https://docs.runpod.io/flash/pricing
 
 # Pricing
 

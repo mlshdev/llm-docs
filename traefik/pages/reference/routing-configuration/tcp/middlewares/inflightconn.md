@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/tcp/middlewares/inflightconn.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/tcp/middlewares/inflightconn.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/tcp/middlewares/inflightconn.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/tcp/middlewares/inflightconn.md)
 
 To proactively prevent Services from being overwhelmed with high load, the number of allowed simultaneous connections by IP can be limited with the `inFlightConn` TCP middleware.
 

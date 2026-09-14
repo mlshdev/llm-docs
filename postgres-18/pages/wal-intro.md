@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/wal.sgml#wal-intro](https://www.postgresql.org/docs/18/wal-intro.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/wal.sgml#wal-intro](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/wal.sgml%23wal-intro)
+> Canonical documentation: https://www.postgresql.org/docs/18/wal-intro.html
 
 # Write-Ahead Logging (WAL)
 

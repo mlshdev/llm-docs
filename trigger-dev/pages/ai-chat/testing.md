@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/ai-chat/testing.mdx](https://trigger.dev/docs/ai-chat/testing)
+> Pinned source for Trigger.dev v4.5.16: [docs/ai-chat/testing.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/ai-chat/testing.mdx)
+> Canonical documentation: https://trigger.dev/docs/ai-chat/testing
 
 # Testing
 

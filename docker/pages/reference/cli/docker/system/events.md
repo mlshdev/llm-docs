@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_system_events.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_system_events.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_system_events.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_system_events.yaml)
 
 # docker system events
 
@@ -140,7 +140,7 @@ formatted time stamps include RFC3339Nano, RFC3339, `2006-01-02T15:04:05`,
 `2006-01-02T15:04:05.999999999`, `2006-01-02T07:00`, and `2006-01-02`. The local
 timezone on the client will be used if you do not provide either a `Z` or a
 `+-00:00` timezone offset at the end of the timestamp. When providing Unix
-timestamps enter seconds[.nanoseconds], where seconds is the number of seconds
+timestamps enter seconds\[.nanoseconds], where seconds is the number of seconds
 that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap
 seconds (aka Unix epoch or Unix time), and the optional .nanoseconds field is a
 fraction of a second no more than nine digits long.
@@ -190,12 +190,12 @@ For information about JSON Lines, see <https://jsonlines.org/>.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--filter` |  | Filter output based on conditions provided |
-| `--format` |  | Format output using a custom template: 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to https://docs.docker.com/go/formatting/ for more information about formatting output with templates |
-| `--since` |  | Show all events created since timestamp |
-| `--until` |  | Stream events until this timestamp |
+| Option           | Default | Description                                                                                                                                                                                                                             |
+| ---------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `-f`, `--filter` |         | Filter output based on conditions provided                                                                                                                                                                                              |
+| `--format`       |         | Format output using a custom template: 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to <https://docs.docker.com/go/formatting/> for more information about formatting output with templates |
+| `--since`        |         | Show all events created since timestamp                                                                                                                                                                                                 |
+| `--until`        |         | Stream events until this timestamp                                                                                                                                                                                                      |
 
 ## Examples
 

@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/drop_event_trigger.sgml#sql-dropeventtrigger](https://www.postgresql.org/docs/18/sql-dropeventtrigger.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/drop_event_trigger.sgml#sql-dropeventtrigger](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/drop_event_trigger.sgml%23sql-dropeventtrigger)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-dropeventtrigger.html
 
 # DROP EVENT TRIGGER
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/secrets/docker_pass_run.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/secrets/docker_pass_run.yaml)
+> Pinned source for Docker main: [data/cli/secrets/docker_pass_run.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/secrets/docker_pass_run.yaml)
 
 # docker pass run
 
@@ -6,7 +6,7 @@ Run a command with `se://` environment references resolved.
 
 **Usage:** `docker pass run -- CMD [ARGS...] [flags]`
 
-> [!NOTE]
+> \[!NOTE]
 > This command is experimental.
 
 ## Description
@@ -23,9 +23,9 @@ started and exits non-zero.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--env-file` |  | Read environment variables from a dotenv-formatted file. Repeatable; later files override earlier files and the process environment. |
+| Option       | Default | Description                                                                                                                          |
+| ------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `--env-file` |         | Read environment variables from a dotenv-formatted file. Repeatable; later files override earlier files and the process environment. |
 
 ## Examples
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/compose-sdk.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/compose-sdk.md)
+> Pinned source for Docker main: [content/manuals/compose/compose-sdk.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/compose-sdk.md)
 
 # Using the Compose SDK
 
@@ -63,7 +63,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to initialize docker CLI: %v", err)
 	}
-
+	
     // Create a new Compose service instance
     service, err := compose.NewComposeService(dockerCLI)
     if err != nil {

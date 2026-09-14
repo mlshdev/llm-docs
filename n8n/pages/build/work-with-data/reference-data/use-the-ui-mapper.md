@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/work-with-data/reference-data/use-the-ui-mapper.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/work-with-data/reference-data/use-the-ui-mapper.md)
+> Pinned source for n8n main: [docs/build/work-with-data/reference-data/use-the-ui-mapper.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/work-with-data/reference-data/use-the-ui-mapper.md)
 
 # Referencing data in the UI <a id="referencing-data-in-the-ui"></a>
 

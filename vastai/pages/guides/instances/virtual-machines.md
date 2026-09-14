@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [guides/instances/virtual-machines.mdx](https://docs.vast.ai/guides/instances/virtual-machines)
+> Pinned source for Vast.ai main: [guides/instances/virtual-machines.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/instances/virtual-machines.mdx)
+> Canonical documentation: https://docs.vast.ai/guides/instances/virtual-machines
 
 # Virtual Machines
 

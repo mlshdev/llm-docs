@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [api-reference/container-registry-auths/DELETE/containerregistryauth/containerRegistryAuthId.mdx](https://docs.runpod.io/api-reference/container-registry-auths/DELETE/containerregistryauth/containerRegistryAuthId)
+> Pinned source for Runpod main: [api-reference/container-registry-auths/DELETE/containerregistryauth/containerRegistryAuthId.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/api-reference/container-registry-auths/DELETE/containerregistryauth/containerRegistryAuthId.mdx)
+> Canonical documentation: https://docs.runpod.io/api-reference/container-registry-auths/DELETE/containerregistryauth/containerRegistryAuthId
 
 # Delete a container registry auth
 
@@ -8,9 +9,11 @@
 
 Delete a container registry auth. Review authentication, request parameters, response fields, and errors for this Runpod API operation.
 
+**Authentication:** `ApiKey`
+
 **Parameters**
 
-- `containerRegistryAuthId` (path, required): Container registry auth ID to delete.
+- `containerRegistryAuthId` (path; required; string): Container registry auth ID to delete.
 
 **Responses**
 

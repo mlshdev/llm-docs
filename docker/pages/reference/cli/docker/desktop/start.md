@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/desktop/docker_desktop_start.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/desktop/docker_desktop_start.yaml)
+> Pinned source for Docker main: [data/cli/desktop/docker_desktop_start.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/desktop/docker_desktop_start.yaml)
 
 # docker desktop start
 
@@ -8,7 +8,7 @@ Start Docker Desktop
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-d`, `--detach` |  | Do not synchronously wait for the requested operation to complete. |
-| `--timeout` |  | Terminate the running command after the specified timeout with a non-zero exit code. A value of zero (the default) or -1 means no timeout. |
+| Option           | Default | Description                                                                                                                                |
+| ---------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `-d`, `--detach` |         | Do not synchronously wait for the requested operation to complete.                                                                         |
+| `--timeout`      |         | Terminate the running command after the specified timeout with a non-zero exit code. A value of zero (the default) or -1 means no timeout. |

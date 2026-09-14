@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/security/trust/deploying_notary.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/security/trust/deploying_notary.md)
+> Pinned source for Docker main: [content/manuals/engine/security/trust/deploying_notary.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/security/trust/deploying_notary.md)
 
 # Deploy Notary Server with Compose
 
@@ -13,7 +13,7 @@ The easiest way to deploy Notary Server is by using Docker Compose. To follow th
 2. Build and start Notary Server with the sample certificates.
 
    ```console
-   $ docker compose up -d
+   $ docker compose up -d 
    ```
 
    For more detailed documentation about how to deploy Notary Server, see the [instructions to run a Notary service](https://github.com/theupdateframework/notary/blob/master/docs/running_a_service.md) as well as [the Notary repository](https://github.com/theupdateframework/notary) for more information.

@@ -1,4 +1,4 @@
-> Tag-pinned source for discord.py v2.7.1: [docs/intro.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/intro.rst)
+> Pinned source for discord.py v2.7.1: [docs/intro.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/intro.rst)
 
 - **Orphan:**
 
@@ -57,7 +57,7 @@ libraries than the ones installed on the system. You might also not have permiss
 For this purpose, the standard library as of Python 3.3 comes with a concept called "Virtual Environment"s to
 help maintain these separate versions.
 
-A more in-depth tutorial is found on [py:tutorial/venv](https://discordpy.readthedocs.io/py:tutorial/venv.html).
+A more in-depth tutorial is found on [py:tutorial/venv](https://docs.python.org/3/tutorial/venv.html).
 
 However, for the quick and dirty:
 

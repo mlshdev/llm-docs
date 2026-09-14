@@ -7,7 +7,9 @@ Source commit: 46a54c976fa3d404396050e8a5ee6c5b0320efc5
 # Document: VictoriaLogs
 
 Source path: docs/victorialogs/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/_index.md
+Description: VictoriaLogs is open source user-friendly database for logs from VictoriaMetrics.
 
 VictoriaLogs is [open source](https://github.com/VictoriaMetrics/VictoriaLogs/) user-friendly database for logs
 from [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics/).
@@ -1153,7 +1155,9 @@ These flags are available only in [VictoriaLogs enterprise](https://docs.victori
 # Document: Quick Start
 
 Source path: docs/victorialogs/QuickStart.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/QuickStart.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/QuickStart.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/QuickStart.md
+Description: It is recommended to read README and Key Concepts before you start working with VictoriaLogs.
 
 It is recommended to read [README](https://docs.victoriametrics.com/victorialogs/)
 and [Key Concepts](https://docs.victoriametrics.com/victorialogs/keyconcepts/)
@@ -1467,7 +1471,9 @@ You can use the [VictoriaLogs single](https://docs.victoriametrics.com/helm/vict
 # Document: Key Concepts
 
 Source path: docs/victorialogs/keyConcepts.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/keyConcepts.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/keyConcepts.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/keyConcepts.md
+Description: VictoriaLogs works with both structured and unstructured logs. Every log entry must contain at least the log message field. An arbitrary number of additional key=value fields can be added to the log entry. See an overvi…
 
 ## Data model
 
@@ -1763,7 +1769,9 @@ See [LogsQL docs](https://docs.victoriametrics.com/victorialogs/logsql/) for mor
 # Document: VictoriaLogs Cluster
 
 Source path: docs/victorialogs/cluster.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/cluster.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/cluster.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/cluster.md
+Description: Cluster mode in VictoriaLogs provides horizontal scaling to many nodes when single-node VictoriaLogs reaches vertical scalability limits of a single host. If you have the ability to run a single-node VictoriaLogs on a h…
 
 Cluster mode in VictoriaLogs provides horizontal scaling to many nodes when [single-node VictoriaLogs](https://docs.victoriametrics.com/victorialogs/)
 reaches vertical scalability limits of a single host. If you have the ability to run a single-node VictoriaLogs on a host with more CPU / RAM / storage space / storage IO,
@@ -2165,7 +2173,9 @@ tuning them without the real need. See [the list of supported command-line flags
 # Document: vlagent
 
 Source path: docs/victorialogs/vlagent.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/vlagent.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/vlagent.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/vlagent.md
+Description: vlagent is an agent for collecting logs from various sources and storing them in VictoriaLogs.
 
 `vlagent` is an agent for collecting logs from various sources and storing them in [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/).
 
@@ -3770,7 +3780,9 @@ These flags are available only in [VictoriaLogs enterprise](https://docs.victori
 # Document: Data Ingestion
 
 Source path: docs/victorialogs/data-ingestion/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/_index.md
+Description: VictoriaLogs and vlagent can accept logs from the following log collectors:
 
 [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/) and [vlagent](https://docs.victoriametrics.com/victorialogs/vlagent/)
 can accept logs from the following log collectors:
@@ -4152,7 +4164,9 @@ VictoriaLogs exposes various [metrics](https://docs.victoriametrics.com/victoria
 # Document: Filebeat Setup
 
 Source path: docs/victorialogs/data-ingestion/Filebeat.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Filebeat.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Filebeat.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Filebeat.md
+Description: Tested with filebeat 8.15.1+.
 
 *Tested with filebeat [8.15.1+](https://www.elastic.co/guide/en/beats/libbeat/8.17/release-notes-8.15.1.html).*
 
@@ -4271,7 +4285,9 @@ See also:
 # Document: Fluentbit Setup
 
 Source path: docs/victorialogs/data-ingestion/Fluentbit.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Fluentbit.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Fluentbit.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Fluentbit.md
+Description: Specify http output section in the fluentbit.conf for sending the collected logs to VictoriaLogs:
 
 ## HTTP
 
@@ -4367,7 +4383,9 @@ See also:
 # Document: Fluentd Setup
 
 Source path: docs/victorialogs/data-ingestion/Fluentd.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Fluentd.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Fluentd.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Fluentd.md
+Description: Specify HTTP output section in the fluentd.conf for sending the collected logs to VictoriaLogs:
 
 ## HTTP
 
@@ -4448,7 +4466,9 @@ See also:
 # Document: Logstash Setup
 
 Source path: docs/victorialogs/data-ingestion/Logstash.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Logstash.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Logstash.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Logstash.md
+Description: VictoriaLogs supports given below Logstash outputs:
 
 VictoriaLogs supports given below Logstash outputs:
 
@@ -4576,7 +4596,9 @@ See also:
 # Document: OpenTelemetry Setup
 
 Source path: docs/victorialogs/data-ingestion/opentelemetry.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/opentelemetry.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/opentelemetry.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/opentelemetry.md
+Description: VictoriaLogs supports both client open-telemetry SDK and collector.
 
 VictoriaLogs supports both client open-telemetry [SDK](https://opentelemetry.io/docs/languages/) and [collector](https://opentelemetry.io/docs/collector/).
 
@@ -4682,7 +4704,9 @@ See also:
 # Document: Promtail Setup
 
 Source path: docs/victorialogs/data-ingestion/Promtail.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Promtail.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Promtail.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Promtail.md
+Description: Promtail, Grafana Agent and Grafana Alloy are default log collectors for Grafana Loki. They can be configured to send the collected logs to VictoriaLogs according to the following docs.
 
 [Promtail](https://grafana.com/docs/loki/latest/clients/promtail/), [Grafana Agent](https://grafana.com/docs/agent/latest/)
 and [Grafana Alloy](https://grafana.com/docs/alloy/latest/) are default log collectors for Grafana Loki.
@@ -4793,7 +4817,9 @@ See also [data ingestion troubleshooting](https://docs.victoriametrics.com/victo
 # Document: DataDog Agent Setup
 
 Source path: docs/victorialogs/data-ingestion/DataDogAgent.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/DataDogAgent.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/DataDogAgent.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/DataDogAgent.md
+Description: To start ingesting logs from DataDog agent please specify a custom URL instead of default one for sending collected logs to VictoriaLogs:
 
 To start ingesting logs from DataDog agent please specify a custom URL instead of default one for sending collected logs to [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/):
 
@@ -4848,7 +4874,9 @@ See also:
 # Document: Telegraf Setup
 
 Source path: docs/victorialogs/data-ingestion/Telegraf.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Telegraf.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Telegraf.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Telegraf.md
+Description: VictoriaLogs supports given below Telegraf outputs:
 
 VictoriaLogs supports given below Telegraf outputs:
 
@@ -4936,7 +4964,9 @@ See also:
 # Document: Journald Setup
 
 Source path: docs/victorialogs/data-ingestion/Journald.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Journald.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Journald.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Journald.md
+Description: On a client site which should already have journald please install additionally systemd-journal-upload and edit /etc/systemd/journal-upload.conf and set URL to VictoriaLogs endpoint:
 
 On a client site which should already have journald please install additionally [systemd-journal-upload](https://www.freedesktop.org/software/systemd/man/latest/systemd-journal-upload.service.html) and edit `/etc/systemd/journal-upload.conf` and set `URL` to VictoriaLogs endpoint:
 
@@ -5022,7 +5052,9 @@ See also:
 # Document: Syslog Setup
 
 Source path: docs/victorialogs/data-ingestion/syslog.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/syslog.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/syslog.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/syslog.md
+Description: VictoriaLogs can accept logs in Syslog formats at the specified TCP, UDP or Unix socket addresses via -syslog.listenAddr.tcp, -syslog.listenAddr.udp and -syslog.listenAddr.unix command-line flags. VictoriaLogs listens f…
 
 [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/) can accept logs in [Syslog formats](https://en.wikipedia.org/wiki/Syslog) at the specified TCP, UDP or Unix socket addresses
 via `-syslog.listenAddr.tcp`, `-syslog.listenAddr.udp` and `-syslog.listenAddr.unix` command-line flags. VictoriaLogs listens for `SOCK_STREAM` unix sockets by default.
@@ -5312,7 +5344,9 @@ plus it accepts TLS-encrypted syslog messages via TCP port 6514 and stores them 
 # Document: OpenShift
 
 Source path: docs/victorialogs/data-ingestion/openshift.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/openshift.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/openshift.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/openshift.md
+Description: VictoriaLogs supports two options for ingestion logs using OpenShift native cluster logging operator:
 
 VictoriaLogs supports two options for ingestion logs using OpenShift native cluster logging operator:
 
@@ -5373,7 +5407,9 @@ See also:
 # Document: Splunk Setup
 
 Source path: docs/victorialogs/data-ingestion/Splunk.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Splunk.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Splunk.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Splunk.md
+Description: VictoriaLogs accpets logs via Splunk HEC API at /insert/splunk/services/collector/event or /insert/splunk/services/collector/event/1.0 HTTP paths. Additionally paths without /insert/splunk/ prefix are supported to simpl…
 
 VictoriaLogs accpets logs via [Splunk HEC API](https://help.splunk.com/en/splunk-enterprise/get-started/get-data-in/9.0/get-data-with-http-event-collector/set-up-and-use-http-event-collector-in-splunk-web) at `/insert/splunk/services/collector/event` or `/insert/splunk/services/collector/event/1.0` HTTP paths.
 Additionally paths without `/insert/splunk/` prefix are supported to simplify integration.
@@ -5447,7 +5483,9 @@ See also:
 # Document: Vector Setup
 
 Source path: docs/victorialogs/data-ingestion/Vector.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Vector.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Vector.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/Vector.md
+Description: VictoriaLogs can accept logs from Vector via the following protocols:
 
 VictoriaLogs can accept logs from [Vector](https://vector.dev/) via the following protocols:
 
@@ -5616,7 +5654,9 @@ See also:
 # Document: Querying
 
 Source path: docs/victorialogs/querying/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/querying/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/querying/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/querying/_index.md
+Description: VictoriaLogs can be queried with LogsQL via the following ways:
 
 [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/) can be queried with [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/)
 via the following ways:
@@ -6949,7 +6989,9 @@ See also:
 # Document: vlogscli
 
 Source path: docs/victorialogs/querying/vlogscli.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/querying/vlogscli.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/querying/vlogscli.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/querying/vlogscli.md
+Description: vlogsqcli is an interactive command-line tool for querying VictoriaLogs. It has the following features:
 
 `vlogsqcli` is an **interactive** command-line tool for querying [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/).
 It has the following features:
@@ -7281,7 +7323,9 @@ This will build `vlogscli-prod` executable inside the `bin` folder.
 # Document: LogsQL
 
 Source path: docs/victorialogs/logsql.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/logsql.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/logsql.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/logsql.md
+Description: LogsQL is a simple yet powerful query language for VictoriaLogs. See examples, LogsQL tutorial, how to convert Loki queries to VictoriaLogs queries and SQL to LogsQL conversion guide.
 
 LogsQL is a simple yet powerful query language for [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/).
 See [examples](https://docs.victoriametrics.com/victorialogs/logsql-examples/), [LogsQL tutorial](https://docs.victoriametrics.com/victorialogs/logsql/#logsql-tutorial),
@@ -13234,7 +13278,9 @@ If you find a slow filter or pipe, try these ideas:
 # Document: Alerting with Logs
 
 Source path: docs/victorialogs/vmalert.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/vmalert.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/vmalert.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/vmalert.md
+Description: vmalert integrates with VictoriaLogs via stats APIs /select/logsql/statsquery and /select/logsql/statsqueryrange. These endpoints return log stats in a format compatible with the Prometheus querying API. This allows usi…
 
 [vmalert](https://docs.victoriametrics.com/victoriametrics/vmalert/) integrates with VictoriaLogs via stats APIs [`/select/logsql/stats_query`](https://docs.victoriametrics.com/victorialogs/querying/#querying-log-stats)
 and [`/select/logsql/stats_query_range`](https://docs.victoriametrics.com/victorialogs/querying/#querying-log-range-stats).
@@ -13654,7 +13700,9 @@ Please refer to [How to use multitenancy in rules](https://docs.victoriametrics.
 # Document: Security and Load Balancing
 
 Source path: docs/victorialogs/security-and-lb.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/security-and-lb.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/security-and-lb.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/security-and-lb.md
+Description: All the VictoriaLogs components must run inside a protected trusted network. Requests from the Internet must be properly authorized before being proxied to VictoriaLogs components. It is recommended using vmauth for the…
 
 ## Security on untrusted networks
 
@@ -14296,7 +14344,9 @@ To update certificates:
 # Document: FAQ
 
 Source path: docs/victorialogs/FAQ.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/FAQ.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/FAQ.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/FAQ.md
+Description: Yes. VictoriaLogs is ready for production use starting from v1.0.0.
 
 ## Is VictoriaLogs ready for production use?
 
@@ -14708,7 +14758,9 @@ Then you can extrapolate the needed compute resources for the full production wo
 # Document: Integrations
 
 Source path: docs/victorialogs/integrations/_index.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/_index.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/_index.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/_index.md
+Description: VictoriaLogs integrates with many popular monitoring solutions as remote storage or datasource:
 
 VictoriaLogs integrates with many popular monitoring solutions as remote storage or datasource:
 
@@ -14724,7 +14776,9 @@ See also integrations with [metrics collectors](https://docs.victoriametrics.com
 # Document: Perses
 
 Source path: docs/victorialogs/integrations/perses.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/perses.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/perses.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/perses.md
+Description: Starting with Perses v0.53.0-beta.2 release introduces first-class integration with VictoriaLogs.
 
 Starting with [Perses](https://perses.dev/) [v0.53.0-beta.2](https://github.com/perses/perses/releases/tag/v0.53.0-beta.2) release introduces first-class integration with VictoriaLogs.
 
@@ -14783,7 +14837,9 @@ Starting with [Perses](https://perses.dev/) [v0.53.0-beta.2](https://github.com/
 # Document: Bindplane
 
 Source path: docs/victorialogs/integrations/bindplane.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/bindplane.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/bindplane.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/bindplane.md
+Description: VictoriaLogs integrates with Bindplane via the Bindplane application.
 
 VictoriaLogs integrates with [Bindplane](https://docs.bindplane.com/) via the [Bindplane application](https://app.bindplane.com/).
 
@@ -14818,7 +14874,9 @@ For VictoriaMetrics with Bindplane integration, check [this page](https://docs.v
 # Document: Metrics of VictoriaLogs
 
 Source path: docs/victorialogs/metrics.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/metrics.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/metrics.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/metrics.md
+Description: This document provides a comprehensive reference for all metrics exposed by VictoriaLogs at the http://localhost:9428/metrics endpoint. These metrics follow the Prometheus exposition format and can be used for monitorin…
 
 This document provides a comprehensive reference for all metrics exposed by VictoriaLogs at the `http://localhost:9428/metrics` endpoint.
 These metrics follow the Prometheus exposition format and can be used for monitoring, alerting, and performance analysis.
@@ -15347,7 +15405,9 @@ VictoriaLogs provides official Grafana dashboards that utilize these metrics:
 # Document: Metrics of vlagent
 
 Source path: docs/victorialogs/vlagent-metrics.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/vlagent-metrics.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/vlagent-metrics.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/vlagent-metrics.md
+Description: This document provides a comprehensive reference for all metrics exposed by vlagent at the http://localhost:9429/metrics endpoint. These metrics follow the Prometheus exposition format and can be used for monitoring, al…
 
 This document provides a comprehensive reference for all metrics exposed by `vlagent` at the `http://localhost:9429/metrics` endpoint.
 These metrics follow the Prometheus exposition format and can be used for monitoring, alerting, and performance analysis of log collection and remote write operations.
@@ -15652,7 +15712,9 @@ VictoriaLogs provides official Grafana dashboards that utilize these metrics:
 # Document: LogsQL Examples
 
 Source path: docs/victorialogs/logsql-examples.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/logsql-examples.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/logsql-examples.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/logsql-examples.md
+Description: Run the following query:
 
 ## How to select recently ingested logs?
 
@@ -16136,7 +16198,9 @@ the duration since the last seen log entry with the `ERROR` word.
 # Document: How To Convert Loki Queries to VictoriaLogs Queries
 
 Source path: docs/victorialogs/logql-to-logsql.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/logql-to-logsql.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/logql-to-logsql.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/logql-to-logsql.md
+Description: Loki provides LogQL query language, while VictoriaLogs provides LogsQL query language. Both languages are optimized for querying logs. The docs below show how to convert typical LogQL queries to LogsQL queries.
 
 Loki provides [LogQL](https://grafana.com/docs/loki/latest/query/) query language, while VictoriaLogs provides [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/)
 query language. Both languages are optimized for querying logs. The docs below show how to convert typical LogQL queries to LogsQL queries.
@@ -16440,7 +16504,9 @@ These calculations can be replaced with [`math` pipe](https://docs.victoriametri
 # Document: SQL to LogsQL Tutorial
 
 Source path: docs/victorialogs/sql-to-logsql.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/sql-to-logsql.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/sql-to-logsql.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/sql-to-logsql.md
+Description: This is a tutorial for the migration from SQL to LogsQL. It is expected that you are familiar with SQL and know how to execute queries at VictoriaLogs.
 
 This is a tutorial for the migration from SQL to [LogsQL](https://docs.victoriametrics.com/victorialogs/logsql/).
 It is expected that you are familiar with SQL and know [how to execute queries at VictoriaLogs](https://docs.victoriametrics.com/victorialogs/querying/).
@@ -16556,7 +16622,9 @@ at [VictoriaLogs demo playground](https://play-vmlogs.victoriametrics.com/) or a
 # Document: Articles
 
 Source path: docs/victorialogs/Articles.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/Articles.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/Articles.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/Articles.md
+Description: Benchmarking and Comparisons:
 
 ## Third-party articles and slides
 
@@ -16633,7 +16701,9 @@ Tech Talks and Presentations:
 # Document: Release Process Guidance for VictoriaLogs
 
 Source path: docs/victorialogs/Release-Guide.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/Release-Guide.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/Release-Guide.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/Release-Guide.md
+Description: Make sure you have GNU version of utilities zip, tar, sha256sum. To install them run the following commands:
 
 ## Pre-reqs
 
@@ -16651,7 +16721,7 @@ Docker may need additional configuration changes:
 
 ```sh
 docker buildx create --use --name=qemu
-docker buildx inspect --bootstrap
+docker buildx inspect --bootstrap  
 ```
 
 By default, docker on MacOS has limited amount of resources (CPU, mem) to use.
@@ -16794,7 +16864,9 @@ Once updated, run the following commands:
 # Document: CHANGELOG
 
 Source path: docs/victorialogs/CHANGELOG.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/CHANGELOG.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/CHANGELOG.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/CHANGELOG.md
+Description: The following tip changes can be tested by building VictoriaLogs components from the latest commit of VictoriaLogs repository according to the following docs:
 
 The following `tip` changes can be tested by building VictoriaLogs components from the latest commit of [VictoriaLogs](https://github.com/VictoriaMetrics/VictoriaLogs/) repository
 according to the following docs:
@@ -19020,7 +19092,9 @@ Initial release
 # Document: Roadmap
 
 Source path: docs/victorialogs/Roadmap.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/Roadmap.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/Roadmap.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/Roadmap.md
+Description: Normalized source from docs/victorialogs/Roadmap.md.
 
 - [ ] Store data on object storage such as S3, GCS or Minio (issue [#48](https://github.com/VictoriaMetrics/VictoriaLogs/issues/48), PR [#1155](https://github.com/VictoriaMetrics/VictoriaLogs/pull/1155)).
 - [ ] Log transformations in `vlagent` (issue [#858](https://github.com/VictoriaMetrics/VictoriaLogs/issues/858), PR [#1508](https://github.com/VictoriaMetrics/VictoriaLogs/pull/1508)).
@@ -19037,7 +19111,9 @@ Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976
 # Document: Grafana Datasource
 
 Source path: docs/victorialogs/victorialogs-datasource.md
-Canonical source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/victorialogs-datasource.md
+Pinned source: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/victorialogs-datasource.md
+Canonical documentation: https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/victorialogs-datasource.md
+Description: Moved to victorialogs/integrations/grafana.
 
 ## VictoriaLogs datasource for Grafana
 

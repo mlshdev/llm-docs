@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.1: [docs/agent-networks/modules/31-proxy-middleware-builtin.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/31-proxy-middleware-builtin.md)
+> Pinned source for NetBird v0.77.1: [docs/agent-networks/modules/31-proxy-middleware-builtin.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/modules/31-proxy-middleware-builtin.md)
 
 # proxy/middleware-builtin — the LLM chain
 

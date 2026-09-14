@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/bake/overrides.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build/bake/overrides.md)
+> Pinned source for Docker main: [content/manuals/build/bake/overrides.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build/bake/overrides.md)
 
 Bake supports loading build definitions from files, but sometimes you need even
 more flexibility to configure these definitions. For example, you might want to
@@ -58,7 +58,7 @@ single definition. Files are merged according to the lookup order.
 
 ```console
 $ docker buildx bake --print
-[+] Building 0.0s (1/1) FINISHED
+[+] Building 0.0s (1/1) FINISHED                                                                                                                                                                                            
  => [internal] load local bake definitions                                                                                                                                                                             0.0s
  => => reading compose.yaml 45B / 45B                                                                                                                                                                                  0.0s
  => => reading docker-bake.hcl 113B / 113B                                                                                                                                                                             0.0s

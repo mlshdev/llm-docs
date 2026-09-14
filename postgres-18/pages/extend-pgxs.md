@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/extend.sgml#extend-pgxs](https://www.postgresql.org/docs/18/extend-pgxs.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/extend.sgml#extend-pgxs](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/extend.sgml%23extend-pgxs)
+> Canonical documentation: https://www.postgresql.org/docs/18/extend-pgxs.html
 
 # Extension Building Infrastructure
 

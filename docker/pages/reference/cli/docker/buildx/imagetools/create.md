@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/buildx/docker_buildx_imagetools_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_imagetools_create.yaml)
+> Pinned source for Docker main: [data/cli/buildx/docker_buildx_imagetools_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_imagetools_create.yaml)
 
 # docker buildx imagetools create
 
@@ -20,24 +20,24 @@ format in the output.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--annotation` |  | Add annotation to the image |
-| `--append` |  | Append to existing manifest |
-| `--dry-run` |  | Show final image instead of pushing |
-| `-f`, `--file` |  | Read source descriptor from file |
-| `--metadata-file` |  | Write create result metadata to a file |
-| `-p`, `--platform` |  | Filter specified platforms of target image |
-| `--prefer-index` | `true` | When only a single source is specified, prefer outputting an image index or manifest list instead of performing a carbon copy |
-| `--progress` | `auto` | Set type of progress output (`auto`, `none`, `plain`, `rawjson`, `tty`). Use plain to show container output |
-| `-t`, `--tag` |  | Set reference for new image |
+| Option             | Default | Description                                                                                                                   |
+| ------------------ | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `--annotation`     |         | Add annotation to the image                                                                                                   |
+| `--append`         |         | Append to existing manifest                                                                                                   |
+| `--dry-run`        |         | Show final image instead of pushing                                                                                           |
+| `-f`, `--file`     |         | Read source descriptor from file                                                                                              |
+| `--metadata-file`  |         | Write create result metadata to a file                                                                                        |
+| `-p`, `--platform` |         | Filter specified platforms of target image                                                                                    |
+| `--prefer-index`   | `true`  | When only a single source is specified, prefer outputting an image index or manifest list instead of performing a carbon copy |
+| `--progress`       | `auto`  | Set type of progress output (`auto`, `none`, `plain`, `rawjson`, `tty`). Use plain to show container output                   |
+| `-t`, `--tag`      |         | Set reference for new image                                                                                                   |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--builder` |  | Override the configured builder instance |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option          | Default | Description                              |
+| --------------- | ------- | ---------------------------------------- |
+| `--builder`     |         | Override the configured builder instance |
+| `-D`, `--debug` |         | Enable debug logging                     |
 
 ## Examples
 
@@ -56,7 +56,7 @@ $ docker buildx imagetools create \
   foo/bar:alpha foo/bar:beta foo/bar:gamma
 ```
 
-> [!NOTE]
+> \[!NOTE]
 > The `imagetools create` command supports adding annotations to the image
 > index and descriptor, using the following type prefixes:
 >
@@ -66,7 +66,7 @@ $ docker buildx imagetools create \
 > It doesn't support annotating manifests or OCI layouts.
 
 For more information about annotations, see
-[Annotations](/build/building/annotations/).
+[Annotations](https://docs.docker.com/build/building/annotations/).
 
 ### Append new sources to an existing manifest list (--append) {#append}
 
@@ -75,7 +75,7 @@ in the destination.
 
 ### Override the configured builder instance (--builder) {#builder}
 
-Same as [`buildx --builder`](/reference/cli/docker/buildx/#builder).
+Same as [`buildx --builder`](https://docs.docker.com/reference/cli/docker/buildx/#builder).
 
 ### Show final image instead of pushing (--dry-run) {#dry-run}
 

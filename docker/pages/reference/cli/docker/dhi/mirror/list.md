@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/dhi/docker_dhi_mirror_list.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/dhi/docker_dhi_mirror_list.yaml)
+> Pinned source for Docker main: [data/cli/dhi/docker_dhi_mirror_list.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/dhi/docker_dhi_mirror_list.yaml)
 
 # docker dhi mirror list
 
@@ -13,31 +13,37 @@ List all Docker Hardened Images currently being mirrored to your organization's 
 Shows the source repositories, destination repositories, and mirroring status.
 
 Examples:
-  # List all mirrored repositories
-  docker dhi mirror list --org myorg
 
-  # List only image repositories
-  docker dhi mirror list --org myorg --type image
+# List all mirrored repositories
 
-  # List only helm chart repositories
-  docker dhi mirror list --org myorg --type helm-chart
+docker dhi mirror list --org myorg
 
-  # Search for a specific repository by name
-  docker dhi mirror list --org myorg --filter dhi-python
+# List only image repositories
 
-  # Output in JSON format
-  docker dhi mirror list --org myorg --json
+docker dhi mirror list --org myorg --type image
+
+# List only helm chart repositories
+
+docker dhi mirror list --org myorg --type helm-chart
+
+# Search for a specific repository by name
+
+docker dhi mirror list --org myorg --filter dhi-python
+
+# Output in JSON format
+
+docker dhi mirror list --org myorg --json
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--filter` |  | Filter by repository name (partial match) |
-| `--json` |  | Output in JSON format |
-| `--type` |  | Filter by repository type (image or helm-chart) |
+| Option           | Default | Description                                     |
+| ---------------- | ------- | ----------------------------------------------- |
+| `-f`, `--filter` |         | Filter by repository name (partial match)       |
+| `--json`         |         | Output in JSON format                           |
+| `--type`         |         | Filter by repository type (image or helm-chart) |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--org` |  | Docker Hub organization (overrides config) |
+| Option  | Default | Description                                |
+| ------- | ------- | ------------------------------------------ |
+| `--org` |         | Docker Hub organization (overrides config) |

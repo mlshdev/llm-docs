@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/guide-vmcluster-multiple-retention-setup/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/guide-vmcluster-multiple-retention-setup/_index.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/guides/guide-vmcluster-multiple-retention-setup/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/guide-vmcluster-multiple-retention-setup/_index.md)
 
 > [VictoriaMetrics Enterprise](https://docs.victoriametrics.com/victoriametrics/enterprise/) supports specifying multiple retentions for distinct sets of time series and tenants. If you are an Enterprise user, [configure multiple retentions directly through retention filters](https://docs.victoriametrics.com/victoriametrics/cluster-victoriametrics/#retention-filters) instead of following this guide.
 
@@ -95,6 +95,7 @@ vminsert:
 vmselect:
   enabled: false
 EOF
+
 
 cat <<EOF > vmcluster-c.yaml
 vmstorage:

@@ -9,12 +9,12 @@
 
 ## Plugin documentation
 
-- [VictoriaLogs datasource for Grafana](pages/plugin.md): Source `src/README.md`.
+- [VictoriaLogs datasource for Grafana](pages/plugin.md): The VictoriaLogs Grafana plugin allows Grafana to query, visualize, and interact with VictoriaLogs, a high-performance log storage and processing system. (27193 bytes)
 
 ## Repository
 
-- [VictoriaLogs datasource for Grafana: repository guide](pages/repository.md): Source `README.md`.
+- [VictoriaLogs datasource for Grafana: repository guide](pages/repository.md): The VictoriaLogs datasource plugin allows you to query and visualize VictoriaLogs data in Grafana. (14887 bytes)
 
 ## Release history
 
-- [VictoriaLogs datasource for Grafana: changelog](pages/changelog.md): Source `CHANGELOG.md`.
+- [VictoriaLogs datasource for Grafana: changelog](pages/changelog.md): ⚠️ Breaking Change: Plugin ID Updated Update Note 1: In the new version of the plugin, the plugin ID has been updated. The new plugin ID is victoriametrics-logs-datasource. This is a breaking change: Grafana will treat… (46637 bytes)

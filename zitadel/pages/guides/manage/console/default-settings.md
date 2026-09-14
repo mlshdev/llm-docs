@@ -1,4 +1,5 @@
-> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/manage/console/default-settings.mdx](https://zitadel.com/docs/guides/manage/console/default-settings)
+> Pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/manage/console/default-settings.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/guides/manage/console/default-settings.mdx)
+> Canonical documentation: https://zitadel.com/docs/guides/manage/console/default-settings
 
 Default settings work as default or fallback settings for your organizational settings. Most of the time you only have to set default settings for the cases where you don't need specific behavior in the organizations themselves or you only have one organization.
 

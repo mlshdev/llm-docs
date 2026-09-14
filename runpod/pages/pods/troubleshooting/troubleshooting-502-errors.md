@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [pods/troubleshooting/troubleshooting-502-errors.mdx](https://docs.runpod.io/pods/troubleshooting/troubleshooting-502-errors)
+> Pinned source for Runpod main: [pods/troubleshooting/troubleshooting-502-errors.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/pods/troubleshooting/troubleshooting-502-errors.mdx)
+> Canonical documentation: https://docs.runpod.io/pods/troubleshooting/troubleshooting-502-errors
 
 # 502 errors
 

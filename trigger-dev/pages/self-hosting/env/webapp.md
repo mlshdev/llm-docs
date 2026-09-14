@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/self-hosting/env/webapp.mdx](https://trigger.dev/docs/self-hosting/env/webapp)
+> Pinned source for Trigger.dev v4.5.16: [docs/self-hosting/env/webapp.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/self-hosting/env/webapp.mdx)
+> Canonical documentation: https://trigger.dev/docs/self-hosting/env/webapp
 
 # Webapp
 

@@ -1,4 +1,4 @@
-> Release-pinned source for discord.py-self v2.1.0: [docs/ext/commands/commands.rst](https://github.com/dolfies/discord.py-self/blob/6de18b4cb40dd42625a535f52d9715c71399ffb3/docs/ext/commands/commands.rst)
+> Pinned source for discord.py-self v2.1.0: [docs/ext/commands/commands.rst](https://github.com/dolfies/discord.py-self/blob/6de18b4cb40dd42625a535f52d9715c71399ffb3/docs/ext/commands/commands.rst)
 
 <a id="ext-commands-commands"></a>
 
@@ -28,8 +28,7 @@ A command must always have at least one parameter, `ctx`, which is the `.Context
 
 There are two ways of registering a command. The first one is by using `.Bot.command` decorator,
 as seen in the example above. The second is using the `ext.commands.command` decorator followed by
-
-- **Meth:** `.Bot.add_command` on the instance.
+`.Bot.add_command` on the instance.
 
 Essentially, these two are equivalent: :
 
@@ -162,8 +161,7 @@ can do on the `ext.commands.Context`.
 
 Adding bot arguments with function parameters is only the first step in defining your bot's command interface. To actually
 make use of the arguments, we usually want to convert the data into a target type. We call these
-
-- **Ref:** `ext_commands_api_converters`.
+[ext\_commands\_api\_converters](https://discordpy-self.readthedocs.io/ext/commands/api.html#ext-commands-api-converters).
 
 Converters come in a few flavours:
 
@@ -221,9 +219,8 @@ Sometimes a basic converter doesn't have enough information that we need. For ex
 information from the `Message` that called the command or we want to do some asynchronous processing.
 
 For this, the library provides the `ext.commands.Converter` interface. This allows you to have access to the
-
-- **Class:** `.Context` and have the callable be asynchronous. Defining a custom converter using this interface requires
-  overriding a single method, `.Converter.convert`.
+`.Context` and have the callable be asynchronous. Defining a custom converter using this interface requires
+overriding a single method, `.Converter.convert`.
 
 An example converter:
 
@@ -437,9 +434,8 @@ async def union(ctx, what: typing.Union[discord.TextChannel, discord.Member]):
 
 The `what` parameter would either take a `discord.TextChannel` converter or a `discord.Member` converter.
 The way this works is through a left-to-right order. It first attempts to convert the input to a
-
-- **Class:** `discord.TextChannel`, and if it fails it tries to convert it to a `discord.Member`. If all converters fail,
-  then a special error is raised, `ext.commands.BadUnionArgument`.
+`discord.TextChannel`, and if it fails it tries to convert it to a `discord.Member`. If all converters fail,
+then a special error is raised, `ext.commands.BadUnionArgument`.
 
 Note that any valid converter discussed above can be passed in to the argument list of a `typing.Union`.
 
@@ -458,6 +454,7 @@ import typing
 async def bottles(ctx, amount: typing.Optional[int] = 99, *, liquid="beer"):
     await ctx.send(f'{amount} bottles of {liquid} on the wall!')
 ```
+
 
 In this example, since the argument could not be converted into an `int`, the default of `99` is passed and the parser
 resumes handling, which in this case would be to pass it into the `liquid` parameter.
@@ -482,8 +479,7 @@ async def shop(ctx, buy_sell: Literal['buy', 'sell'], amount: Literal[1, 2], *, 
 
 The `buy_sell` parameter must be either the literal string `"buy"` or `"sell"` and `amount` must convert to the
 `int` `1` or `2`. If `buy_sell` or `amount` don't match any value, then a special error is raised,
-
-- **Exc:** `~.ext.commands.BadLiteralArgument`. Any literal values can be mixed and matched within the same `typing.Literal` converter.
+`.ext.commands.BadLiteralArgument`. Any literal values can be mixed and matched within the same `typing.Literal` converter.
 
 Note that `typing.Literal[True]` and `typing.Literal[False]` still follow the `bool` converter rules.
 
@@ -525,12 +521,10 @@ When invoked, it allows for any number of members to be passed in:
 The type passed when using this converter depends on the parameter type that it is being attached to:
 
 - Positional parameter types will receive either the default parameter or a `list` of the converted values.
-
 - Variable parameter types will be a `tuple` as usual.
-
 - Keyword-only parameter types will be the same as if `ext.commands.Greedy` was not passed at all.
 
-- **Class:** `~ext.commands.Greedy` parameters can also be made optional by specifying an optional value.
+`ext.commands.Greedy` parameters can also be made optional by specifying an optional value.
 
 When mixed with the `typing.Optional` converter you can provide simple and expressive command invocation syntaxes:
 
@@ -560,15 +554,13 @@ $ban @Member spam
 > price, they open you up to some parsing ambiguities that might surprise some people.
 >
 > For example, a signature expecting a `typing.Optional` of a `discord.Member` followed by a
->
-> - **Class:** `int` could catch a member named after a number due to the different ways a
-> - **Class:** `~ext.commands.MemberConverter` decides to fetch members. You should take care to not introduce
->   unintended parsing ambiguities in your code. One technique would be to clamp down the expected syntaxes
->   allowed through custom converters or reordering the parameters to minimise clashes.
+> `int` could catch a member named after a number due to the different ways a
+> `ext.commands.MemberConverter` decides to fetch members. You should take care to not introduce
+> unintended parsing ambiguities in your code. One technique would be to clamp down the expected syntaxes
+> allowed through custom converters or reordering the parameters to minimise clashes.
 >
 > To help aid with some parsing ambiguities, `str`, `None`, `typing.Optional` and
->
-> - **Class:** `~ext.commands.Greedy` are forbidden as parameters for the `ext.commands.Greedy` converter.
+> `ext.commands.Greedy` are forbidden as parameters for the `ext.commands.Greedy` converter.
 
 #### discord.Attachment
 
@@ -715,6 +707,7 @@ In order to customise the flag syntax we also have a few options that can be pas
 class PosixLikeFlags(commands.FlagConverter, delimiter=' ', prefix='--'):
     hello: str
 
+
 # /make food
 class WindowsLikeFlags(commands.FlagConverter, prefix='/', delimiter=''):
     make: str
@@ -812,7 +805,7 @@ given as a `dict` rather than a `list`.
 
 ## Parameter Metadata
 
-- **Func:** `~ext.commands.parameter` assigns custom metadata to a `ext.commands.Command`'s parameter.
+`ext.commands.parameter` assigns custom metadata to a `ext.commands.Command`'s parameter.
 
 This is useful for:
 
@@ -848,8 +841,7 @@ async def wave(to: discord.User = commands.parameter(default=lambda ctx: ctx.aut
 ```
 
 Because this is such a common use-case, the library provides `.ext.commands.Author`, `.ext.commands.CurrentChannel` and
-
-- **Obj:** `~.ext.commands.CurrentGuild`, armed with this we can simplify `wave` to:
+`.ext.commands.CurrentGuild`, armed with this we can simplify `wave` to:
 
 ```python3
 @bot.command()
@@ -857,7 +849,7 @@ async def wave(to: discord.User = commands.Author):
     await ctx.send(f'Hello {to.mention} :wave:')
 ```
 
-- **Obj:** `~.ext.commands.Author` and co also have other benefits like having the displayed default being filled.
+`.ext.commands.Author` and co also have other benefits like having the displayed default being filled.
 
 <a id="ext-commands-error-handler"></a>
 
@@ -867,9 +859,8 @@ When our commands fail to parse we will, by default, receive a noisy error in `s
 that an error has happened and has been silently ignored.
 
 In order to handle our errors, we must use something called an error handler. There is a global error handler, called
-
-- **Func:** `.on_command_error` which works like any other event in the [discord-api-events](https://discordpy-self.readthedocs.io/api.html#discord-api-events). This global error handler is
-  called for every error reached.
+`.on_command_error` which works like any other event in the [discord-api-events](https://discordpy-self.readthedocs.io/api.html#discord-api-events). This global error handler is
+called for every error reached.
 
 Most of the time however, we want to handle an error local to the command itself. Luckily, commands come with local error
 handlers that allow us to do just that. First we decorate an error handler function with `discord.ext.commands.Command.error`:
@@ -888,15 +879,13 @@ async def info_error(ctx, error):
 ```
 
 The first parameter of the error handler is the `.Context` while the second one is an exception that is derived from
-
-- **Exc:** `~ext.commands.CommandError`. A list of errors is found in the [ext\_commands\_api\_errors](https://discordpy-self.readthedocs.io/ext/commands/api.html#ext-commands-api-errors) page of the documentation.
+`ext.commands.CommandError`. A list of errors is found in the [ext\_commands\_api\_errors](https://discordpy-self.readthedocs.io/ext/commands/api.html#ext-commands-api-errors) page of the documentation.
 
 ## Checks
 
 There are cases when we don't want a user to use our commands. They don't have permissions to do so or maybe we blocked
 them from using our bot earlier. The commands extension comes with full support for these things in a concept called a
-
-- **Ref:** `ext_commands_api_checks`.
+[ext\_commands\_api\_checks](https://discordpy-self.readthedocs.io/ext/commands/api.html#ext-commands-api-checks).
 
 A check is a basic predicate that can take in a `.Context` as its sole parameter. Within it, you have the following
 options:
@@ -906,7 +895,7 @@ options:
 - Raise a `ext.commands.CommandError` derived exception to signal the person cannot run the command.
 
   - This allows you to have custom error messages for you to handle in the
-- **Ref:** `error handlers <ext_commands_error_handler>`.
+    [error handlers](https://discordpy-self.readthedocs.io/ext/commands/commands.html#ext-commands-error-handler).
 
 To register a check for a command, we would have two ways of doing so. The first is using the `ext.commands.check`
 decorator. For example:
@@ -968,8 +957,7 @@ If any of those checks fail in the example above, then the command will not be r
 
 When an error happens, the error is propagated to the [error handlers](https://discordpy-self.readthedocs.io/ext/commands/commands.html#ext-commands-error-handler). If you do not
 raise a custom `ext.commands.CommandError` derived exception, then it will get wrapped up into a
-
-- **Exc:** `~ext.commands.CheckFailure` exception as so:
+`ext.commands.CheckFailure` exception as so:
 
 ```python3
 @bot.command()

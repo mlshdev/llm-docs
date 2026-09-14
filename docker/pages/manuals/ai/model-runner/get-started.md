@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/model-runner/get-started.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/ai/model-runner/get-started.md)
+> Pinned source for Docker main: [content/manuals/ai/model-runner/get-started.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/ai/model-runner/get-started.md)
 
 Docker Model Runner (DMR) lets you run and manage AI models locally using Docker. This page shows you how to enable DMR, pull and run a model, configure model settings, and publish custom models.
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/choose-n8ns-database.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/configure-n8n/choose-n8ns-database.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/choose-n8ns-database.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/configure-n8n/choose-n8ns-database.md)
 
 # Supported databases <a id="supported-databases"></a>
 
@@ -65,7 +65,7 @@ export DB_POSTGRESDB_USER=n8n
 export DB_POSTGRESDB_PASSWORD=n8n
 export DB_POSTGRESDB_SCHEMA=n8n
 
-# optional: <a id="optional"></a>
+# optional: <a href="#optional" id="optional"></a>
 export DB_POSTGRESDB_SSL_CA_FILE=$(pwd)/ca.crt
 export DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED=false
 

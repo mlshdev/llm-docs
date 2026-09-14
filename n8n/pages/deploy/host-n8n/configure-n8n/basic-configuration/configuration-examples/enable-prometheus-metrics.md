@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/enable-prometheus-metrics.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/enable-prometheus-metrics.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/enable-prometheus-metrics.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/enable-prometheus-metrics.md)
 
 # Enable Prometheus metrics <a id="enable-prometheus-metrics"></a>
 
@@ -28,19 +28,19 @@ To enable queue metrics, set the `N8N_METRICS_INCLUDE_QUEUE_METRICS` env var to 
 n8n gathers these metrics from Bull and exposes them on the main instances. On multi-main setups, when aggregating queries, you can identify the leader using the `instance_role_leader` gauge, set to `1` for the leader main and `0` otherwise.
 
 ```
-# HELP n8n_scaling_mode_queue_jobs_active Current number of jobs being processed across all workers in scaling mode. <a id="help-n8nscalingmodequeuejobsactive-current-number-of-jobs-being-processed-across-all-workers-in-scaling-mode"></a>
-# TYPE n8n_scaling_mode_queue_jobs_active gauge <a id="type-n8nscalingmodequeuejobsactive-gauge"></a>
+# HELP n8n_scaling_mode_queue_jobs_active Current number of jobs being processed across all workers in scaling mode. <a href="#help-n8nscalingmodequeuejobsactive-current-number-of-jobs-being-processed-across-all-workers-in-scaling-mode" id="help-n8nscalingmodequeuejobsactive-current-number-of-jobs-being-processed-across-all-workers-in-scaling-mode"></a>
+# TYPE n8n_scaling_mode_queue_jobs_active gauge <a href="#type-n8nscalingmodequeuejobsactive-gauge" id="type-n8nscalingmodequeuejobsactive-gauge"></a>
 n8n_scaling_mode_queue_jobs_active 0
 
-# HELP n8n_scaling_mode_queue_jobs_completed Total number of jobs completed across all workers in scaling mode since instance start. <a id="help-n8nscalingmodequeuejobscompleted-total-number-of-jobs-completed-across-all-workers-in-scaling-mode-since-instance-start"></a>
-# TYPE n8n_scaling_mode_queue_jobs_completed counter <a id="type-n8nscalingmodequeuejobscompleted-counter"></a>
+# HELP n8n_scaling_mode_queue_jobs_completed Total number of jobs completed across all workers in scaling mode since instance start. <a href="#help-n8nscalingmodequeuejobscompleted-total-number-of-jobs-completed-across-all-workers-in-scaling-mode-since-instance-start" id="help-n8nscalingmodequeuejobscompleted-total-number-of-jobs-completed-across-all-workers-in-scaling-mode-since-instance-start"></a>
+# TYPE n8n_scaling_mode_queue_jobs_completed counter <a href="#type-n8nscalingmodequeuejobscompleted-counter" id="type-n8nscalingmodequeuejobscompleted-counter"></a>
 n8n_scaling_mode_queue_jobs_completed 0
 
-# HELP n8n_scaling_mode_queue_jobs_failed Total number of jobs failed across all workers in scaling mode since instance start. <a id="help-n8nscalingmodequeuejobsfailed-total-number-of-jobs-failed-across-all-workers-in-scaling-mode-since-instance-start"></a>
-# TYPE n8n_scaling_mode_queue_jobs_failed counter <a id="type-n8nscalingmodequeuejobsfailed-counter"></a>
+# HELP n8n_scaling_mode_queue_jobs_failed Total number of jobs failed across all workers in scaling mode since instance start. <a href="#help-n8nscalingmodequeuejobsfailed-total-number-of-jobs-failed-across-all-workers-in-scaling-mode-since-instance-start" id="help-n8nscalingmodequeuejobsfailed-total-number-of-jobs-failed-across-all-workers-in-scaling-mode-since-instance-start"></a>
+# TYPE n8n_scaling_mode_queue_jobs_failed counter <a href="#type-n8nscalingmodequeuejobsfailed-counter" id="type-n8nscalingmodequeuejobsfailed-counter"></a>
 n8n_scaling_mode_queue_jobs_failed 0
 
-# HELP n8n_scaling_mode_queue_jobs_waiting Current number of enqueued jobs waiting for pickup in scaling mode. <a id="help-n8nscalingmodequeuejobswaiting-current-number-of-enqueued-jobs-waiting-for-pickup-in-scaling-mode"></a>
-# TYPE n8n_scaling_mode_queue_jobs_waiting gauge <a id="type-n8nscalingmodequeuejobswaiting-gauge"></a>
+# HELP n8n_scaling_mode_queue_jobs_waiting Current number of enqueued jobs waiting for pickup in scaling mode. <a href="#help-n8nscalingmodequeuejobswaiting-current-number-of-enqueued-jobs-waiting-for-pickup-in-scaling-mode" id="help-n8nscalingmodequeuejobswaiting-current-number-of-enqueued-jobs-waiting-for-pickup-in-scaling-mode"></a>
+# TYPE n8n_scaling_mode_queue_jobs_waiting gauge <a href="#type-n8nscalingmodequeuejobswaiting-gauge" id="type-n8nscalingmodequeuejobswaiting-gauge"></a>
 n8n_scaling_mode_queue_jobs_waiting 0
 ```

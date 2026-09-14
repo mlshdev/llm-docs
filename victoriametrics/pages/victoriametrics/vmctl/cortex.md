@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmctl/cortex.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/cortex.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmctl/cortex.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/cortex.md)
 
 Cortex supports [Prometheus remote read API](https://prometheus.io/docs/prometheus/latest/querying/remote_read_api/).
 `vmctl` in [remote-read mode](https://docs.victoriametrics.com/victoriametrics/vmctl/remoteread/) can be used
@@ -18,7 +18,7 @@ By default, Cortex exposes HTTP port on `:9009 `. The importing process example 
 and single-node VictoriaMetrics(`http://localhost:8428`):
 
 ```sh
-./vmctl remote-read \
+./vmctl remote-read \ 
 --remote-read-src-addr=http://127.0.0.1:9009/prometheus \
 --remote-read-filter-time-start=2021-10-18T00:00:00Z \
 --remote-read-step-interval=hour \

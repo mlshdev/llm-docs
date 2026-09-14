@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/scaling/manage-execution-data.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/configure-n8n/scaling/manage-execution-data.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/scaling/manage-execution-data.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/configure-n8n/scaling/manage-execution-data.md)
 
 # Execution data <a id="execution-data"></a>
 
@@ -18,23 +18,23 @@ To do this, configure the corresponding [environment variables](https://docs.n8n
 You can select which executions data n8n saves. For example, you can save only executions that result in an `Error`.
 
 ```sh
-# npm <a id="npm"></a>
-# Save executions ending in errors <a id="save-executions-ending-in-errors"></a>
+# npm <a href="#npm" id="npm"></a>
+# Save executions ending in errors <a href="#save-executions-ending-in-errors" id="save-executions-ending-in-errors"></a>
 export EXECUTIONS_DATA_SAVE_ON_ERROR=all
 
-# Don't save successful executions <a id="dont-save-successful-executions"></a>
+# Don't save successful executions <a href="#dont-save-successful-executions" id="dont-save-successful-executions"></a>
 export EXECUTIONS_DATA_SAVE_ON_SUCCESS=none
 
-# Don't save node progress for each execution <a id="dont-save-node-progress-for-each-execution"></a>
+# Don't save node progress for each execution <a href="#dont-save-node-progress-for-each-execution" id="dont-save-node-progress-for-each-execution"></a>
 export EXECUTIONS_DATA_SAVE_ON_PROGRESS=false
 
-# Don't save manually launched executions <a id="dont-save-manually-launched-executions"></a>
+# Don't save manually launched executions <a href="#dont-save-manually-launched-executions" id="dont-save-manually-launched-executions"></a>
 export EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS=false
 
 ```
 
 ```sh
-# Docker <a id="docker"></a>
+# Docker <a href="#docker" id="docker"></a>
 docker run -it --rm \
  --name n8n \
  -p 5678:5678 \
@@ -46,7 +46,7 @@ docker run -it --rm \
 ```
 
 ```yaml
-# Docker Compose <a id="docker-compose"></a>
+# Docker Compose <a href="#docker-compose" id="docker-compose"></a>
 n8n:
     environment:
       - EXECUTIONS_DATA_SAVE_ON_ERROR=all
@@ -71,18 +71,18 @@ Keep in mind:
 - Pruning honors a safety buffer period of `EXECUTIONS_DATA_HARD_DELETE_BUFFER` hours (default: 1h), to ensure recent data remains available while the user is building or debugging a workflow.
 
 ```sh
-# Enable executions pruning <a id="enable-executions-pruning"></a>
+# Enable executions pruning <a href="#enable-executions-pruning" id="enable-executions-pruning"></a>
 export EXECUTIONS_DATA_PRUNE=true
 
-# How old (hours) a finished execution must be to qualify for soft-deletion <a id="how-old-hours-a-finished-execution-must-be-to-qualify-for-soft-deletion"></a>
+# How old (hours) a finished execution must be to qualify for soft-deletion <a href="#how-old-hours-a-finished-execution-must-be-to-qualify-for-soft-deletion" id="how-old-hours-a-finished-execution-must-be-to-qualify-for-soft-deletion"></a>
 export EXECUTIONS_DATA_MAX_AGE=168
 
-# Max number of finished executions to keep. May not strictly prune back down to the exact max count. Set to `0` for unlimited. <a id="max-number-of-finished-executions-to-keep-may-not-strictly-prune-back-down-to-the-exact-max-count-set-to-0-for-unlimited"></a>
+# Max number of finished executions to keep. May not strictly prune back down to the exact max count. Set to `0` for unlimited. <a href="#max-number-of-finished-executions-to-keep-may-not-strictly-prune-back-down-to-the-exact-max-count-set-to-0-for-unlimited" id="max-number-of-finished-executions-to-keep-may-not-strictly-prune-back-down-to-the-exact-max-count-set-to-0-for-unlimited"></a>
 export EXECUTIONS_DATA_PRUNE_MAX_COUNT=50000
 ```
 
 ```sh
-# Docker <a id="docker"></a>
+# Docker <a href="#docker" id="docker"></a>
 docker run -it --rm \
  --name n8n \
  -p 5678:5678 \
@@ -92,7 +92,7 @@ docker run -it --rm \
 ```
 
 ```yaml
-# Docker Compose <a id="docker-compose"></a>
+# Docker Compose <a href="#docker-compose" id="docker-compose"></a>
 n8n:
     environment:
       - EXECUTIONS_DATA_PRUNE=true

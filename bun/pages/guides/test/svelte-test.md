@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/guides/test/svelte-test.mdx](https://bun.com/docs/guides/test/svelte-test)
+> Pinned source for Bun bun-v1.4.2: [docs/guides/test/svelte-test.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/guides/test/svelte-test.mdx)
+> Canonical documentation: https://bun.com/docs/guides/test/svelte-test
 
 Use Bun's [Plugin API](https://bun.com/docs/runtime/plugins) to add a custom loader for `.svelte` files, and the `test.preload` option in `bunfig.toml` to load it before your tests run.
 

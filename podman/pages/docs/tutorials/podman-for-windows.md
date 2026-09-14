@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.1.1: [docs/tutorials/podman-for-windows.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/tutorials/podman-for-windows.md)
+> Pinned source for Podman v6.1.1: [docs/tutorials/podman-for-windows.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/tutorials/podman-for-windows.md)
 
 ![The Podman logo](https://raw.githubusercontent.com/containers/common/main/logos/podman-logo-full-vert.png)
 
@@ -402,6 +402,7 @@ usage, use the `podman machine ls` command:
 ```powershell
 PS C:\Users\User> podman machine ls
 
+
 NAME                    VM TYPE     CREATED         LAST UP            CPUS        MEMORY      DISK SIZE
 wsl-default             wsl         2 hours ago     Currently running  12          16G         768MB
 hyperv-default*         hyperv      16 minutes ago  Never              6           2GiB        100GiB
@@ -512,6 +513,7 @@ C:\Users\User\.ssh\podman-machine-default.pub
 C:\Users\User\.local\share\containers\podman\machine\wsl\podman-machine-default_fedora-35-x86_64.tar
 C:\Users\User\.config\containers\podman\machine\wsl\podman-machine-default.json
 C:\Users\User\.local\share\containers\podman\machine\wsl\wsldist\podman-machine-default
+
 
 Are you sure you want to continue? [y/N] y
 ```

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-openshift-local-crc.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-openshift-local-crc.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-openshift-local-crc.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-openshift-local-crc.md)
 
 # Hosting n8n on OpenShift Local (CRC) <a id="hosting-n8n-on-openshift-local-crc"></a>
 
@@ -230,10 +230,10 @@ You only need to run this once. The setting persists across `crc stop` / `crc st
 **Recommended:** Save your pull secret to a file first so you don’t have to paste it every time:
 
 ```shell
-# Open the file, paste your pull secret (from earlier), then Ctrl+O to save, Ctrl+X to exit <a id="open-the-file-paste-your-pull-secret-from-earlier-then-ctrlo-to-save-ctrlx-to-exit"></a>
+# Open the file, paste your pull secret (from earlier), then Ctrl+O to save, Ctrl+X to exit <a href="#open-the-file-paste-your-pull-secret-from-earlier-then-ctrlo-to-save-ctrlx-to-exit" id="open-the-file-paste-your-pull-secret-from-earlier-then-ctrlo-to-save-ctrlx-to-exit"></a>
 nano ~/pull-secret.txt
 
-# Restrict permissions so only you can read it <a id="restrict-permissions-so-only-you-can-read-it"></a>
+# Restrict permissions so only you can read it <a href="#restrict-permissions-so-only-you-can-read-it" id="restrict-permissions-so-only-you-can-read-it"></a>
 chmod 600 ~/pull-secret.txt
 ```
 
@@ -375,8 +375,8 @@ nano n8n-standalone-values.yaml
 Paste the following, then press `Ctrl+O` to save and `Ctrl+X` to exit:
 
 ```yaml
-# n8n-standalone-values.yaml <a id="n8n-standalone-valuesyaml"></a>
-# Single pod, SQLite database, no external dependencies. <a id="single-pod-sqlite-database-no-external-dependencies"></a>
+# n8n-standalone-values.yaml <a href="#n8n-standalone-valuesyaml" id="n8n-standalone-valuesyaml"></a>
+# Single pod, SQLite database, no external dependencies. <a href="#single-pod-sqlite-database-no-external-dependencies" id="single-pod-sqlite-database-no-external-dependencies"></a>
 
 queueMode:
   enabled: false
@@ -388,7 +388,7 @@ database:
 redis:
   enabled: false
 
-# PVC stores the SQLite database file. <a id="pvc-stores-the-sqlite-database-file"></a>
+# PVC stores the SQLite database file. <a href="#pvc-stores-the-sqlite-database-file" id="pvc-stores-the-sqlite-database-file"></a>
 persistence:
   enabled: true
   size: 5Gi
@@ -401,10 +401,10 @@ service:
   type: ClusterIP
   port: 5678
 
-# OpenShift: securityContext must be enabled so the pod runs as UID 1000 (node user) <a id="openshift-securitycontext-must-be-enabled-so-the-pod-runs-as-uid-1000-node-user"></a>
-# with fsGroup 1000 (so the PVC is writable). The anyuid SCC granted above <a id="with-fsgroup-1000-so-the-pvc-is-writable-the-anyuid-scc-granted-above"></a>
-# allows this. The seccompProfile line is removed from the chart template in <a id="allows-this-the-seccompprofile-line-is-removed-from-the-chart-template-in"></a>
-# "Deploy n8n" because OpenShift 4.14+ rejects it even with anyuid. <a id="deploy-n8n-because-openshift-414-rejects-it-even-with-anyuid"></a>
+# OpenShift: securityContext must be enabled so the pod runs as UID 1000 (node user) <a href="#openshift-securitycontext-must-be-enabled-so-the-pod-runs-as-uid-1000-node-user" id="openshift-securitycontext-must-be-enabled-so-the-pod-runs-as-uid-1000-node-user"></a>
+# with fsGroup 1000 (so the PVC is writable). The anyuid SCC granted above <a href="#with-fsgroup-1000-so-the-pvc-is-writable-the-anyuid-scc-granted-above" id="with-fsgroup-1000-so-the-pvc-is-writable-the-anyuid-scc-granted-above"></a>
+# allows this. The seccompProfile line is removed from the chart template in <a href="#allows-this-the-seccompprofile-line-is-removed-from-the-chart-template-in" id="allows-this-the-seccompprofile-line-is-removed-from-the-chart-template-in"></a>
+# "Deploy n8n" because OpenShift 4.14+ rejects it even with anyuid. <a href="#deploy-n8n-because-openshift-414-rejects-it-even-with-anyuid" id="deploy-n8n-because-openshift-414-rejects-it-even-with-anyuid"></a>
 securityContext:
   enabled: true
 
@@ -431,7 +431,7 @@ The n8n Helm chart hard codes `seccompProfile: RuntimeDefault` in the pod spec. 
 helm pull oci://ghcr.io/n8n-io/n8n-helm-chart/n8n --version 1.0.3 --untar
 sed -i '/seccompProfile:/d; /type: RuntimeDefault/d' ~/n8n/templates/deployment-main.yaml
 
-# Confirm the lines are gone (should return no output) <a id="confirm-the-lines-are-gone-should-return-no-output"></a>
+# Confirm the lines are gone (should return no output) <a href="#confirm-the-lines-are-gone-should-return-no-output" id="confirm-the-lines-are-gone-should-return-no-output"></a>
 grep -n "seccomp\|RuntimeDefault" ~/n8n/templates/deployment-main.yaml
 ```
 
@@ -602,7 +602,7 @@ Verify that `oc get rolebindings -n $NAMESPACE` shows a binding for `system:open
 #### Create required secrets <a id="create-required-secrets"></a>
 
 ```shell
-# Core n8n secrets <a id="core-n8n-secrets"></a>
+# Core n8n secrets <a href="#core-n8n-secrets" id="core-n8n-secrets"></a>
 oc create secret generic n8n-enterprise-secrets \
   --namespace $NAMESPACE \
   --from-literal=N8N_ENCRYPTION_KEY="$(openssl rand -hex 32)" \
@@ -623,12 +623,12 @@ Store that value somewhere safe.
 In the commands below, replace `YourStrongPassword123` and `MinioStrongPassword123` with the passwords from the earlier steps.
 
 ```shell
-# Database password (must match what you set when installing PostgreSQL) <a id="database-password-must-match-what-you-set-when-installing-postgresql"></a>
+# Database password (must match what you set when installing PostgreSQL) <a href="#database-password-must-match-what-you-set-when-installing-postgresql" id="database-password-must-match-what-you-set-when-installing-postgresql"></a>
 oc create secret generic n8n-enterprise-db-secret \
   --namespace $NAMESPACE \
   --from-literal=password='YourStrongPassword123'
 
-# MinIO credentials <a id="minio-credentials"></a>
+# MinIO credentials <a href="#minio-credentials" id="minio-credentials"></a>
 oc create secret generic n8n-minio-secret \
   --namespace $NAMESPACE \
   --from-literal=root-password='MinioStrongPassword123'
@@ -643,34 +643,34 @@ nano n8n-multimain-ocp-values.yaml
 ```
 
 ```yaml
-# n8n-multimain-ocp-values.yaml <a id="n8n-multimain-ocp-valuesyaml"></a>
-# Multi-instance queue mode for OpenShift Local (CRC). <a id="multi-instance-queue-mode-for-openshift-local-crc"></a>
-# Uses in-cluster PostgreSQL, Redis, and MinIO instead of AWS services. <a id="uses-in-cluster-postgresql-redis-and-minio-instead-of-aws-services"></a>
-# Requires Enterprise license. <a id="requires-enterprise-license"></a>
+# n8n-multimain-ocp-values.yaml <a href="#n8n-multimain-ocp-valuesyaml" id="n8n-multimain-ocp-valuesyaml"></a>
+# Multi-instance queue mode for OpenShift Local (CRC). <a href="#multi-instance-queue-mode-for-openshift-local-crc" id="multi-instance-queue-mode-for-openshift-local-crc"></a>
+# Uses in-cluster PostgreSQL, Redis, and MinIO instead of AWS services. <a href="#uses-in-cluster-postgresql-redis-and-minio-instead-of-aws-services" id="uses-in-cluster-postgresql-redis-and-minio-instead-of-aws-services"></a>
+# Requires Enterprise license. <a href="#requires-enterprise-license" id="requires-enterprise-license"></a>
 
-# --- Enterprise license --- <a id="enterprise-license"></a>
+# --- Enterprise license --- <a href="#enterprise-license" id="enterprise-license"></a>
 license:
   enabled: true
   activationKey: "your-enterprise-license-key-here"  # <-- REPLACE
 
-# --- Multi-main: 2 replicas (reduced for local resources) --- <a id="multi-main-2-replicas-reduced-for-local-resources"></a>
+# --- Multi-main: 2 replicas (reduced for local resources) --- <a href="#multi-main-2-replicas-reduced-for-local-resources" id="multi-main-2-replicas-reduced-for-local-resources"></a>
 multiMain:
   enabled: true
   replicas: 2
 
-# --- Queue mode: 2 worker pods --- <a id="queue-mode-2-worker-pods"></a>
+# --- Queue mode: 2 worker pods --- <a href="#queue-mode-2-worker-pods" id="queue-mode-2-worker-pods"></a>
 queueMode:
   enabled: true
   workerReplicaCount: 2
   workerConcurrency: 5
 
-# --- Webhook processors --- <a id="webhook-processors"></a>
+# --- Webhook processors --- <a href="#webhook-processors" id="webhook-processors"></a>
 webhookProcessor:
   enabled: true
   replicaCount: 1
   disableProductionWebhooksOnMainProcess: true
 
-# --- PostgreSQL (in-cluster) --- <a id="postgresql-in-cluster"></a>
+# --- PostgreSQL (in-cluster) --- <a href="#postgresql-in-cluster" id="postgresql-in-cluster"></a>
 database:
   type: postgresdb
   useExternal: true
@@ -683,7 +683,7 @@ database:
     name: "n8n-enterprise-db-secret"
     key: "password"
 
-# --- Redis (in-cluster, no TLS) --- <a id="redis-in-cluster-no-tls"></a>
+# --- Redis (in-cluster, no TLS) --- <a href="#redis-in-cluster-no-tls" id="redis-in-cluster-no-tls"></a>
 redis:
   enabled: true
   useExternal: true
@@ -691,7 +691,7 @@ redis:
   port: 6379
   tls: false
 
-# --- MinIO (S3-compatible, in-cluster) --- <a id="minio-s3-compatible-in-cluster"></a>
+# --- MinIO (S3-compatible, in-cluster) --- <a href="#minio-s3-compatible-in-cluster" id="minio-s3-compatible-in-cluster"></a>
 s3:
   enabled: true
   bucket:
@@ -709,7 +709,7 @@ s3:
     availableModes: "filesystem,s3"
   forcePathStyle: true
 
-# --- Service account --- <a id="service-account"></a>
+# --- Service account --- <a href="#service-account" id="service-account"></a>
 serviceAccount:
   create: true
   name: n8n
@@ -720,10 +720,10 @@ Save and exit nano (`Ctrl+O`, `Ctrl+X`).
 **Before deploying**, replace the two `YOUR_NAMESPACE` placeholders with your actual namespace value:
 
 ```shell
-# Check your namespace value <a id="check-your-namespace-value"></a>
+# Check your namespace value <a href="#check-your-namespace-value" id="check-your-namespace-value"></a>
 echo $NAMESPACE
 
-# Replace in the file (this edits it automatically) <a id="replace-in-the-file-this-edits-it-automatically"></a>
+# Replace in the file (this edits it automatically) <a href="#replace-in-the-file-this-edits-it-automatically" id="replace-in-the-file-this-edits-it-automatically"></a>
 sed -i "s/YOUR_NAMESPACE/$NAMESPACE/g" n8n-multimain-ocp-values.yaml
 ```
 
@@ -826,19 +826,19 @@ Open your browser to the URL printed above.
 To change configuration or upgrade the chart version, pull and re-patch the new chart version, then upgrade:
 
 ```shell
-# Remove the old local chart copy <a id="remove-the-old-local-chart-copy"></a>
+# Remove the old local chart copy <a href="#remove-the-old-local-chart-copy" id="remove-the-old-local-chart-copy"></a>
 rm -rf ~/n8n/
 
-# Pull and patch the new version <a id="pull-and-patch-the-new-version"></a>
+# Pull and patch the new version <a href="#pull-and-patch-the-new-version" id="pull-and-patch-the-new-version"></a>
 helm pull oci://ghcr.io/n8n-io/n8n-helm-chart/n8n --version <new-version> --untar
 sed -i '/seccompProfile:/d; /type: RuntimeDefault/d' ~/n8n/templates/deployment-main.yaml
 
-# Standalone <a id="standalone"></a>
+# Standalone <a href="#standalone" id="standalone"></a>
 helm upgrade n8n ~/n8n/ \
   --namespace $NAMESPACE \
   --values n8n-standalone-values.yaml
 
-# Multi-instance <a id="multi-instance"></a>
+# Multi-instance <a href="#multi-instance" id="multi-instance"></a>
 helm upgrade n8n ~/n8n/ \
   --namespace $NAMESPACE \
   --values n8n-multimain-ocp-values.yaml
@@ -849,10 +849,10 @@ helm upgrade n8n ~/n8n/ \
 CRC doesn't need to be deleted between sessions. You can stop and restart it:
 
 ```shell
-# Stop the cluster (saves state) <a id="stop-the-cluster-saves-state"></a>
+# Stop the cluster (saves state) <a href="#stop-the-cluster-saves-state" id="stop-the-cluster-saves-state"></a>
 crc stop
 
-# Start it again later <a id="start-it-again-later"></a>
+# Start it again later <a href="#start-it-again-later" id="start-it-again-later"></a>
 crc start
 ```
 
@@ -892,11 +892,11 @@ If you see `unable to validate against any security context constraint` or `secc
 **1. Grant anyuid using the explicit form** (the `-z` shorthand can silently fail):
 
 ```shell
-# For standalone <a id="for-standalone"></a>
+# For standalone <a href="#for-standalone" id="for-standalone"></a>
 oc adm policy add-scc-to-user anyuid \
   system:serviceaccount:$NAMESPACE:n8n
 
-# For multi-instance <a id="for-multi-instance"></a>
+# For multi-instance <a href="#for-multi-instance" id="for-multi-instance"></a>
 oc adm policy add-scc-to-user anyuid \
   system:serviceaccount:$NAMESPACE:n8n-enterprise
 ```
@@ -909,7 +909,7 @@ Verify: run `oc get rolebindings -n $NAMESPACE`. You should see a binding for `s
 helm pull oci://ghcr.io/n8n-io/n8n-helm-chart/n8n --version 1.0.3 --untar
 sed -i '/seccompProfile:/d; /type: RuntimeDefault/d' ~/n8n/templates/deployment-main.yaml
 
-# Confirm they're gone (should return no output) <a id="confirm-theyre-gone-should-return-no-output"></a>
+# Confirm they're gone (should return no output) <a href="#confirm-theyre-gone-should-return-no-output" id="confirm-theyre-gone-should-return-no-output"></a>
 grep -n "seccomp\|RuntimeDefault" ~/n8n/templates/deployment-main.yaml
 ```
 
@@ -1001,13 +1001,13 @@ This means the pod is running as a random OpenShift-assigned UID instead of UID 
 ### View pod logs <a id="view-pod-logs"></a>
 
 ```shell
-# Main process <a id="main-process"></a>
+# Main process <a href="#main-process" id="main-process"></a>
 oc logs -n $NAMESPACE -l app.kubernetes.io/component=main --tail=50
 
-# Workers <a id="workers"></a>
+# Workers <a href="#workers" id="workers"></a>
 oc logs -n $NAMESPACE -l app.kubernetes.io/component=worker --tail=50
 
-# Webhook processors <a id="webhook-processors"></a>
+# Webhook processors <a href="#webhook-processors" id="webhook-processors"></a>
 oc logs -n $NAMESPACE -l app.kubernetes.io/component=webhook-processor --tail=50
 ```
 

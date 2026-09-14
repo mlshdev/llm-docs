@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [cli/reference/update-template.mdx](https://docs.vast.ai/cli/reference/update-template)
+> Pinned source for Vast.ai main: [cli/reference/update-template.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/cli/reference/update-template.mdx)
+> Canonical documentation: https://docs.vast.ai/cli/reference/update-template
 
 # vastai update template
 

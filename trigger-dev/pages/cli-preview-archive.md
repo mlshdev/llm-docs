@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/cli-preview-archive.mdx](https://trigger.dev/docs/cli-preview-archive)
+> Pinned source for Trigger.dev v4.5.16: [docs/cli-preview-archive.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/cli-preview-archive.mdx)
+> Canonical documentation: https://trigger.dev/docs/cli-preview-archive
 
 # CLI preview archive command
 

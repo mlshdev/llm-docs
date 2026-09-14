@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [examples/notifications/google-chat-webhook.mdx](https://docs.vast.ai/examples/notifications/google-chat-webhook)
+> Pinned source for Vast.ai main: [examples/notifications/google-chat-webhook.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/examples/notifications/google-chat-webhook.mdx)
+> Canonical documentation: https://docs.vast.ai/examples/notifications/google-chat-webhook
 
 # Send Notifications to Google Chat
 
@@ -60,10 +61,12 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 import requests
 
+
 GOOGLE_CHAT_URL = os.environ["GOOGLE_CHAT_URL"]
 VAST_WEBHOOK_SECRET = os.environ["VAST_WEBHOOK_SECRET"]
 PORT = int(os.environ.get("PORT", "8787"))
 MAX_SIGNATURE_AGE_SECONDS = 300
+
 
 def verify_vast_signature(headers, raw_body: bytes) -> bool:
     timestamp = headers.get("X-Vast-Timestamp", "")
@@ -88,6 +91,7 @@ def verify_vast_signature(headers, raw_body: bytes) -> bool:
     ).hexdigest()
     return hmac.compare_digest(signature, f"sha256={digest}")
 
+
 def google_chat_text(payload: dict) -> str:
     subject = payload.get("subject") or "Vast.ai notification"
     message = payload.get("message") or json.dumps(payload, sort_keys=True)
@@ -103,6 +107,7 @@ def google_chat_text(payload: dict) -> str:
     if details:
         lines.extend(["", " ".join(details)])
     return "\n".join(lines)
+
 
 class Handler(BaseHTTPRequestHandler):
     def _json(self, status: int, body: dict):
@@ -158,6 +163,7 @@ class Handler(BaseHTTPRequestHandler):
 
     def log_message(self, fmt, *args):
         print(f"{self.address_string()} - {fmt % args}", flush=True)
+
 
 if __name__ == "__main__":
     print(f"listening on http://127.0.0.1:{PORT}", flush=True)

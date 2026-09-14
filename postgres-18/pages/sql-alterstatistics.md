@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/alter_statistics.sgml#sql-alterstatistics](https://www.postgresql.org/docs/18/sql-alterstatistics.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/alter_statistics.sgml#sql-alterstatistics](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/alter_statistics.sgml%23sql-alterstatistics)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-alterstatistics.html
 
 # ALTER STATISTICS
 

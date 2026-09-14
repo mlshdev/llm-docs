@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/guides/examples/sentry-error-tracking.mdx](https://trigger.dev/docs/guides/examples/sentry-error-tracking)
+> Pinned source for Trigger.dev v4.5.16: [docs/guides/examples/sentry-error-tracking.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/guides/examples/sentry-error-tracking.mdx)
+> Canonical documentation: https://trigger.dev/docs/guides/examples/sentry-error-tracking
 
 # Track errors with Sentry
 

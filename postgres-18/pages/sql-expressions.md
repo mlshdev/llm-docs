@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/syntax.sgml#sql-expressions](https://www.postgresql.org/docs/18/sql-expressions.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/syntax.sgml#sql-expressions](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/syntax.sgml%23sql-expressions)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-expressions.html
 
 # Value Expressions
 

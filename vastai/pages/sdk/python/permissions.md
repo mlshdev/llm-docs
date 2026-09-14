@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [sdk/python/permissions.mdx](https://docs.vast.ai/sdk/python/permissions)
+> Pinned source for Vast.ai main: [sdk/python/permissions.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/sdk/python/permissions.mdx)
+> Canonical documentation: https://docs.vast.ai/sdk/python/permissions
 
 # SDK Permissions
 
@@ -225,19 +226,19 @@ A key that can only manage a single instance (view, reboot, destroy) and nothing
         "instance_read": {
             "api.instance.show": {
                 "constraints": {
-                    "id": { "eq": 1227 }
+                    "id": `{ "eq": 1227 }`
                 }
             }
         },
         "instance_write": {
             "api.instance.destroy": {
                 "constraints": {
-                    "id": { "eq": 1227 }
+                    "id": `{ "eq": 1227 }`
                 }
             },
             "api.instance.reboot": {
                 "constraints": {
-                    "id": { "eq": 1227 }
+                    "id": `{ "eq": 1227 }`
                 }
             }
         }

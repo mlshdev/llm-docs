@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/management/runs/reschedule.mdx](https://trigger.dev/docs/management/runs/reschedule)
+> Pinned source for Trigger.dev v4.5.16: [docs/management/runs/reschedule.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/management/runs/reschedule.mdx)
+> Canonical documentation: https://trigger.dev/docs/management/runs/reschedule
 
 # Reschedule run
 
@@ -8,15 +9,223 @@
 
 Updates a delayed run with a new delay. Only valid when the run is in the DELAYED state.
 
+**Authentication:** `secretKey`
+
 **Parameters**
 
-- `runId` (path, required): The ID of an run, starts with `run_`. The run ID will be returned when you trigger a run on a task.
+- `runId` (path; required; string): The ID of an run, starts with `run_`. The run ID will be returned when you trigger a run on a task.
+  - Example: `run_1234`
 
-**Request body**
+**Request body** (required)
+
+- Media type: `application/json`
+  - Schema (object)
+    - `delay`
+      - oneOf:
+        - `variant 1` (string): The duration to delay the run by. The duration should be in the format of `1d`, `6h`, `10m`, `11s`, etc.
+          - Example: `1hr`
+        - `variant 2` (string; format: date-time): The Date to delay the run until, e.g. `new Date()` or `"2024-06-25T15:45:26Z"`
+          - Example: `2024-06-25T15:45:26Z`
 
 **Responses**
 
 - `200`: Successful request
+  - Media type: `application/json`
+    - Schema
+      - allOf:
+        - `variant 1` (object)
+          - `id` (required; string): The unique ID of the run, prefixed with `run_`
+            - Example: `run_1234`
+          - `status` (required; string; enum: `PENDING_VERSION`, `DELAYED`, `QUEUED`, `EXECUTING`, `REATTEMPTING`, `FROZEN`, `COMPLETED`, `CANCELED`, `FAILED`, `CRASHED`, `INTERRUPTED`, `SYSTEM_FAILURE`): The status of the run
+          - `taskIdentifier` (required; string): The identifier of the task that was run
+            - Example: `my-task`
+          - `version` (string): The version of the worker that executed the run
+            - Example: `20240523.1`
+          - `idempotencyKey` (string): The idempotency key used to prevent creating duplicate runs, if provided
+            - Example: `idempotency_key_1234`
+          - `createdAt` (required; string; format: date-time)
+          - `updatedAt` (required; string; format: date-time)
+          - `isTest` (boolean): Whether the run is a test run or not
+            - Example: `false`
+          - `startedAt` (string; format: date-time): The time the run started
+          - `finishedAt` (string; format: date-time): The time the run finished
+          - `delayedUntil` (string; format: date-time): If the run was triggered with a delay, this will be the time the run will be enqueued to execute
+          - `ttl`: The time-to-live for this run. If the run is not executed within this time, it will be removed from the queue and never execute. You can use a string in this format: `1h`, `1m`, `1h42m` or a number of seconds (min. 1).
+            - Example: `1h42m`
+          - `expiredAt` (string; format: date-time): If the run had a TTL and that time has passed, when the run "expired".
+          - `tags` (array): Tags can be attached to a run to make it easy to find runs (in the dashboard or using SDK functions like `runs.list`)
+            - Example: `["user_5df987al13","org_c6b7dycmxw"]`
+            - `items` (string): A tag must be between 1 and 128 characters, a run can have up to 10 tags attached to it.
+          - `metadata` (object): The metadata of the run. See [Metadata](https://trigger.dev/docs/runs/metadata) for more information.
+            - Example: `{"foo":"bar"}`
+          - `costInCents` (number): The compute cost of the run (so far) in cents. This cost does not apply to DEV runs.
+            - Example: `0.00292`
+          - `baseCostInCents` (number): The invocation cost of the run in cents. This cost does not apply to DEV runs.
+            - Example: `0.0025`
+          - `durationMs` (number): The duration of compute (so far) in milliseconds. This does not include waits.
+            - Example: `491`
+          - `depth` (integer): The depth of the run in the task run hierarchy. The root run has a depth of 0.
+            - Example: `0`
+          - `batchId` (string): The ID of the batch that this run belongs to
+            - Example: `batch_1234`
+          - `triggerFunction` (string; enum: `trigger`, `triggerAndWait`, `batchTrigger`, `batchTriggerAndWait`): The name of the function that triggered the run
+        - `variant 2` (object)
+          - `payload` (object): The payload that was sent to the task. Will be omitted if the request was made with a Public API key
+            - Example: `{"foo":"bar"}`
+          - `payloadPresignedUrl` (string): The presigned URL to download the payload. Will only be included if the payload is too large to be included in the response. Expires in 5 minutes.
+            - Example: `https://r2.cloudflarestorage.com/packets/yubjwjsfkxnylobaqvqz/dev/run_p4omhh45hgxxnq1re6ovy/payload.json?X-Amz-Expires=300&X-Amz-Date=20240625T154526Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=10b064e58a0680db5b5e077be2be3b2a%2F20240625%2Fauto%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=88604cb993ffc151b4d73f2439da431d9928488e4b3dcfa4a7c8f1819`
+          - `output` (object): The output of the run. Will be omitted if the request was made with a Public API key
+            - Example: `{"foo":"bar"}`
+          - `outputPresignedUrl` (string): The presigned URL to download the output. Will only be included if the output is too large to be included in the response. Expires in 5 minutes.
+            - Example: `https://r2.cloudflarestorage.com/packets/yubjwjsfkxnylobaqvqz/dev/run_p4omhh45hgxxnq1re6ovy/payload.json?X-Amz-Expires=300&X-Amz-Date=20240625T154526Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=10b064e58a0680db5b5e077be2be3b2a%2F20240625%2Fauto%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=88604cb993ffc151b4d73f2439da431d9928488e4b3dcfa4a7c8f1819`
+          - `relatedRuns` (object)
+            - `root` (object)
+              - `id` (required; string): The unique ID of the run, prefixed with `run_`
+                - Example: `run_1234`
+              - `status` (required; string; enum: `PENDING_VERSION`, `DELAYED`, `QUEUED`, `EXECUTING`, `REATTEMPTING`, `FROZEN`, `COMPLETED`, `CANCELED`, `FAILED`, `CRASHED`, `INTERRUPTED`, `SYSTEM_FAILURE`): The status of the run
+              - `taskIdentifier` (required; string): The identifier of the task that was run
+                - Example: `my-task`
+              - `version` (string): The version of the worker that executed the run
+                - Example: `20240523.1`
+              - `idempotencyKey` (string): The idempotency key used to prevent creating duplicate runs, if provided
+                - Example: `idempotency_key_1234`
+              - `createdAt` (required; string; format: date-time)
+              - `updatedAt` (required; string; format: date-time)
+              - `isTest` (boolean): Whether the run is a test run or not
+                - Example: `false`
+              - `startedAt` (string; format: date-time): The time the run started
+              - `finishedAt` (string; format: date-time): The time the run finished
+              - `delayedUntil` (string; format: date-time): If the run was triggered with a delay, this will be the time the run will be enqueued to execute
+              - `ttl`: The time-to-live for this run. If the run is not executed within this time, it will be removed from the queue and never execute. You can use a string in this format: `1h`, `1m`, `1h42m` or a number of seconds (min. 1).
+                - Example: `1h42m`
+              - `expiredAt` (string; format: date-time): If the run had a TTL and that time has passed, when the run "expired".
+              - `tags` (array): Tags can be attached to a run to make it easy to find runs (in the dashboard or using SDK functions like `runs.list`)
+                - Example: `["user_5df987al13","org_c6b7dycmxw"]`
+                - `items` (string): A tag must be between 1 and 128 characters, a run can have up to 10 tags attached to it.
+              - `metadata` (object): The metadata of the run. See [Metadata](https://trigger.dev/docs/runs/metadata) for more information.
+                - Example: `{"foo":"bar"}`
+              - `costInCents` (number): The compute cost of the run (so far) in cents. This cost does not apply to DEV runs.
+                - Example: `0.00292`
+              - `baseCostInCents` (number): The invocation cost of the run in cents. This cost does not apply to DEV runs.
+                - Example: `0.0025`
+              - `durationMs` (number): The duration of compute (so far) in milliseconds. This does not include waits.
+                - Example: `491`
+              - `depth` (integer): The depth of the run in the task run hierarchy. The root run has a depth of 0.
+                - Example: `0`
+              - `batchId` (string): The ID of the batch that this run belongs to
+                - Example: `batch_1234`
+              - `triggerFunction` (string; enum: `trigger`, `triggerAndWait`, `batchTrigger`, `batchTriggerAndWait`): The name of the function that triggered the run
+            - `parent` (object)
+              - `id` (required; string): The unique ID of the run, prefixed with `run_`
+                - Example: `run_1234`
+              - `status` (required; string; enum: `PENDING_VERSION`, `DELAYED`, `QUEUED`, `EXECUTING`, `REATTEMPTING`, `FROZEN`, `COMPLETED`, `CANCELED`, `FAILED`, `CRASHED`, `INTERRUPTED`, `SYSTEM_FAILURE`): The status of the run
+              - `taskIdentifier` (required; string): The identifier of the task that was run
+                - Example: `my-task`
+              - `version` (string): The version of the worker that executed the run
+                - Example: `20240523.1`
+              - `idempotencyKey` (string): The idempotency key used to prevent creating duplicate runs, if provided
+                - Example: `idempotency_key_1234`
+              - `createdAt` (required; string; format: date-time)
+              - `updatedAt` (required; string; format: date-time)
+              - `isTest` (boolean): Whether the run is a test run or not
+                - Example: `false`
+              - `startedAt` (string; format: date-time): The time the run started
+              - `finishedAt` (string; format: date-time): The time the run finished
+              - `delayedUntil` (string; format: date-time): If the run was triggered with a delay, this will be the time the run will be enqueued to execute
+              - `ttl`: The time-to-live for this run. If the run is not executed within this time, it will be removed from the queue and never execute. You can use a string in this format: `1h`, `1m`, `1h42m` or a number of seconds (min. 1).
+                - Example: `1h42m`
+              - `expiredAt` (string; format: date-time): If the run had a TTL and that time has passed, when the run "expired".
+              - `tags` (array): Tags can be attached to a run to make it easy to find runs (in the dashboard or using SDK functions like `runs.list`)
+                - Example: `["user_5df987al13","org_c6b7dycmxw"]`
+                - `items` (string): A tag must be between 1 and 128 characters, a run can have up to 10 tags attached to it.
+              - `metadata` (object): The metadata of the run. See [Metadata](https://trigger.dev/docs/runs/metadata) for more information.
+                - Example: `{"foo":"bar"}`
+              - `costInCents` (number): The compute cost of the run (so far) in cents. This cost does not apply to DEV runs.
+                - Example: `0.00292`
+              - `baseCostInCents` (number): The invocation cost of the run in cents. This cost does not apply to DEV runs.
+                - Example: `0.0025`
+              - `durationMs` (number): The duration of compute (so far) in milliseconds. This does not include waits.
+                - Example: `491`
+              - `depth` (integer): The depth of the run in the task run hierarchy. The root run has a depth of 0.
+                - Example: `0`
+              - `batchId` (string): The ID of the batch that this run belongs to
+                - Example: `batch_1234`
+              - `triggerFunction` (string; enum: `trigger`, `triggerAndWait`, `batchTrigger`, `batchTriggerAndWait`): The name of the function that triggered the run
+            - `children` (array): The immediate children of the run. Will be omitted if the run has no children
+              - `items` (object)
+                - `id` (required; string): The unique ID of the run, prefixed with `run_`
+                  - Example: `run_1234`
+                - `status` (required; string; enum: `PENDING_VERSION`, `DELAYED`, `QUEUED`, `EXECUTING`, `REATTEMPTING`, `FROZEN`, `COMPLETED`, `CANCELED`, `FAILED`, `CRASHED`, `INTERRUPTED`, `SYSTEM_FAILURE`): The status of the run
+                - `taskIdentifier` (required; string): The identifier of the task that was run
+                  - Example: `my-task`
+                - `version` (string): The version of the worker that executed the run
+                  - Example: `20240523.1`
+                - `idempotencyKey` (string): The idempotency key used to prevent creating duplicate runs, if provided
+                  - Example: `idempotency_key_1234`
+                - `createdAt` (required; string; format: date-time)
+                - `updatedAt` (required; string; format: date-time)
+                - `isTest` (boolean): Whether the run is a test run or not
+                  - Example: `false`
+                - `startedAt` (string; format: date-time): The time the run started
+                - `finishedAt` (string; format: date-time): The time the run finished
+                - `delayedUntil` (string; format: date-time): If the run was triggered with a delay, this will be the time the run will be enqueued to execute
+                - `ttl`: The time-to-live for this run. If the run is not executed within this time, it will be removed from the queue and never execute. You can use a string in this format: `1h`, `1m`, `1h42m` or a number of seconds (min. 1).
+                  - Example: `1h42m`
+                - `expiredAt` (string; format: date-time): If the run had a TTL and that time has passed, when the run "expired".
+                - `tags` (array): Tags can be attached to a run to make it easy to find runs (in the dashboard or using SDK functions like `runs.list`)
+                  - Example: `["user_5df987al13","org_c6b7dycmxw"]`
+                  - `items` (string): A tag must be between 1 and 128 characters, a run can have up to 10 tags attached to it.
+                - `metadata` (object): The metadata of the run. See [Metadata](https://trigger.dev/docs/runs/metadata) for more information.
+                  - Example: `{"foo":"bar"}`
+                - `costInCents` (number): The compute cost of the run (so far) in cents. This cost does not apply to DEV runs.
+                  - Example: `0.00292`
+                - `baseCostInCents` (number): The invocation cost of the run in cents. This cost does not apply to DEV runs.
+                  - Example: `0.0025`
+                - `durationMs` (number): The duration of compute (so far) in milliseconds. This does not include waits.
+                  - Example: `491`
+                - `depth` (integer): The depth of the run in the task run hierarchy. The root run has a depth of 0.
+                  - Example: `0`
+                - `batchId` (string): The ID of the batch that this run belongs to
+                  - Example: `batch_1234`
+                - `triggerFunction` (string; enum: `trigger`, `triggerAndWait`, `batchTrigger`, `batchTriggerAndWait`): The name of the function that triggered the run
+          - `schedule` (object): The schedule that triggered the run. Will be omitted if the run was not triggered by a schedule
+            - `id` (required; string): The unique ID of the schedule, prefixed with `sched_`
+              - Example: `sched_1234`
+            - `externalId` (string): The external ID of the schedule. Can be anything that is useful to you (e.g., user ID, org ID, etc.)
+              - Example: `user_1234`
+            - `deduplicationKey` (string): The deduplication key used to prevent creating duplicate schedules
+              - Example: `dedup_key_1234`
+            - `generator` (required; object)
+              - `type` (string; enum: `CRON`)
+              - `expression` (string): The cron expression used to generate the schedule
+                - Example: `0 0 * * *`
+              - `description` (string): The description of the generator in plain english
+                - Example: `Every day at midnight`
+          - `attempts` (required; array)
+            - `items` (object)
+              - `id` (required; string): The unique ID of the attempt, prefixed with `attempt_`
+                - Example: `attempt_1234`
+              - `status` (required; string; enum: `PENDING`, `EXECUTING`, `PAUSED`, `COMPLETED`, `FAILED`, `CANCELED`)
+              - `error` (object)
+                - `message` (required; string)
+                  - Example: `Something went wrong`
+                - `name` (string)
+                  - Example: `Error`
+                - `stackTrace` (string)
+                  - Example: `Error: Something went wrong`
+              - `createdAt` (required; string; format: date-time)
+              - `updatedAt` (required; string; format: date-time)
+              - `startedAt` (string; format: date-time)
+              - `completedAt` (string; format: date-time)
 - `400`: Invalid request
+  - Media type: `application/json`
+    - Schema (object)
+      - `error` (string; enum: `Invalid or missing run ID`, `Failed to create new run`)
 - `401`: Unauthorized request
+  - Media type: `application/json`
+    - Schema (object)
+      - `error` (string; enum: `Invalid or Missing API key`)
 - `404`: Resource not found
+  - Media type: `application/json`
+    - Schema (object)
+      - `error` (string; enum: `Run not found`)

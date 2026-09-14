@@ -1,5 +1,6 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
+  "generatorVersion": 3,
   "project": "victorialogs-datasource",
   "title": "VictoriaLogs datasource for Grafana",
   "homepage": "https://grafana.com/grafana/plugins/victoriametrics-logs-datasource/",
@@ -9,8 +10,19 @@
   "releasePublishedAt": "2026-09-02T11:40:21Z",
   "sourceCommit": "9cce7548fe6771d542d86576e24ec63684197844",
   "documentCount": 3,
+  "indexComplete": true,
+  "corpusVolumes": [
+    {
+      "name": "llms-full.txt",
+      "byteLength": 90542,
+      "documentCount": 3,
+      "sha256": "f0d26d05fabf775482c01999c234b1c43bd9e7019e7667d8f64b13f8058184cf"
+    }
+  ],
+  "outputDigest": "279b4466cce9570d526cebf45fba788c12df3d32955ca8d74c21bf73ec188353",
   "notes": [
     "Pages are the plugin catalog documentation, the repository guide, and the changelog at the immutable release tag.",
     "Links and screenshots that upstream pins to a branch are rewritten to the released commit."
-  ]
+  ],
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
 }

@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [instant-clusters/pytorch.mdx](https://docs.runpod.io/instant-clusters/pytorch)
+> Pinned source for Runpod main: [instant-clusters/pytorch.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/instant-clusters/pytorch.mdx)
+> Canonical documentation: https://docs.runpod.io/instant-clusters/pytorch
 
 # Deploy an Instant Cluster with PyTorch
 

@@ -1,4 +1,5 @@
-> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/token-exchange.mdx](https://zitadel.com/docs/guides/integrate/token-exchange)
+> Pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/token-exchange.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/guides/integrate/token-exchange.mdx)
+> Canonical documentation: https://zitadel.com/docs/guides/integrate/token-exchange
 
 The Token Exchange grant implements [RFC 8693, OAuth 2.0 Token Exchange](https://www.rfc-editor.org/rfc/rfc8693) and can be used to exchange tokens to a different scope, audience or subject. Changing the subject of an authenticated token is called impersonation or delegation. This guide will explain how token exchange is implemented inside ZITADEL and gives some usage examples.
 

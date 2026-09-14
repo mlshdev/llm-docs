@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/system-views.sgml#view-pg-replication-slots](https://www.postgresql.org/docs/18/view-pg-replication-slots.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/system-views.sgml#view-pg-replication-slots](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/system-views.sgml%23view-pg-replication-slots)
+> Canonical documentation: https://www.postgresql.org/docs/18/view-pg-replication-slots.html
 
 # pg_replication_slots
 

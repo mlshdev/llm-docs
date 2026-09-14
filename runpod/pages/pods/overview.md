@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [pods/overview.mdx](https://docs.runpod.io/pods/overview)
+> Pinned source for Runpod main: [pods/overview.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/pods/overview.mdx)
+> Canonical documentation: https://docs.runpod.io/pods/overview
 
 # Overview
 

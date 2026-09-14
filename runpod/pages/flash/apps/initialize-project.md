@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [flash/apps/initialize-project.mdx](https://docs.runpod.io/flash/apps/initialize-project)
+> Pinned source for Runpod main: [flash/apps/initialize-project.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/flash/apps/initialize-project.mdx)
+> Canonical documentation: https://docs.runpod.io/flash/apps/initialize-project
 
 # Initialize a Flash app project
 

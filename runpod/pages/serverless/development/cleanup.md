@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [serverless/development/cleanup.mdx](https://docs.runpod.io/serverless/development/cleanup)
+> Pinned source for Runpod main: [serverless/development/cleanup.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/serverless/development/cleanup.mdx)
+> Canonical documentation: https://docs.runpod.io/serverless/development/cleanup
 
 # Clean up temporary files
 
@@ -43,6 +44,7 @@ from runpod.serverless.utils.rp_cleanup import clean
 import requests
 import os
 
+
 def download_image(url, save_path):
     response = requests.get(url)
     if response.status_code == 200:
@@ -50,6 +52,7 @@ def download_image(url, save_path):
             file.write(response.content)
         return True
     return False
+
 
 def handler(event):
     try:
@@ -74,6 +77,7 @@ def handler(event):
         # Attempt cleanup even if an error occurs
         clean(folder_list=["temp_images"])
         return {"error": str(e)}
+
 
 runpod.serverless.start({"handler": handler})
 ```

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_config_inspect.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_config_inspect.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_config_inspect.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_config_inspect.yaml)
 
 # docker config inspect
 
@@ -16,20 +16,20 @@ the given template will be executed for each result.
 Go's [text/template](https://pkg.go.dev/text/template) package
 describes all the details of the format.
 
-For detailed information about using configs, refer to [store configuration data using Docker Configs](/engine/swarm/configs/).
+For detailed information about using configs, refer to [store configuration data using Docker Configs](https://docs.docker.com/engine/swarm/configs/).
 
-> [!NOTE]
+> \[!NOTE]
 > This is a cluster management command, and must be executed on a Swarm
 > manager node. To learn about managers and workers, refer to the
-> [Swarm mode section](/engine/swarm/) in the
+> [Swarm mode section](https://docs.docker.com/engine/swarm/) in the
 > documentation.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--format` |  | Format output using a custom template: 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to https://docs.docker.com/go/formatting/ for more information about formatting output with templates |
-| `--pretty` |  | Print the information in a human friendly format |
+| Option           | Default | Description                                                                                                                                                                                                                             |
+| ---------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `-f`, `--format` |         | Format output using a custom template: 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to <https://docs.docker.com/go/formatting/> for more information about formatting output with templates |
+| `--pretty`       |         | Print the information in a human friendly format                                                                                                                                                                                        |
 
 ## Examples
 

@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaLogs datasource for Grafana v0.32.0: [README.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/9cce7548fe6771d542d86576e24ec63684197844/README.md)
+> Pinned source for VictoriaLogs datasource for Grafana v0.32.0: [README.md](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/9cce7548fe6771d542d86576e24ec63684197844/README.md)
 
 # VictoriaLogs datasource for Grafana
 
@@ -186,9 +186,9 @@ spec:
               command: [ "/bin/sh" ]
               workingDir: "/var/lib/grafana"
               securityContext:
-                runAsUser: 472
+                runAsUser: 472 
                 runAsNonRoot: true
-                runAsGroup: 472
+                runAsGroup: 472 
               args:
                 - "-c"
                 - |

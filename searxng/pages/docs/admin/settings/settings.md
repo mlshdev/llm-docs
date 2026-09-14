@@ -1,18 +1,18 @@
-> Commit-pinned source for SearXNG master: [docs/admin/settings/settings.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/settings/settings.rst)
+> Pinned source for SearXNG master: [docs/admin/settings/settings.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/settings/settings.rst)
 
-.. \_settings.yml:
+<a id="settings-yml"></a>
 
 # `settings.yml`
 
-This page describe the options possibilities of the :origin:`searx/settings.yml`
+This page describe the options possibilities of the [searx/settings.yml](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/settings.yml)
 file.
 
 ### Further reading ..
 
-- [use\_default\_settings.yml](#usedefaultsettings)
-- \[search API]\(#search API)
+- [use\_default\_settings.yml](https://docs.searxng.org/admin/installation-searxng.html#use-default-settings-yml)
+- [search API](https://docs.searxng.org/dev/search_api.html#search-api)
 
-.. \_settings location:
+<a id="settings-location"></a>
 
 # settings.yml location
 
@@ -22,48 +22,46 @@ The initial `settings.yml` we be load from these locations:
 2. `/etc/searxng/settings.yml`
 
 If these files don't exist (or are empty or can't be read), SearXNG uses the
-:origin:`searx/settings.yml` file.  Read \[settings use\_default\_settings]\(#settings use\_default\_settings) to
+[searx/settings.yml](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/settings.yml) file.  Read [settings use\_default\_settings](https://docs.searxng.org/admin/settings/settings.html#settings-use-default-settings) to
 see how you can simplify your *user defined* `settings.yml`.
 
-.. \_settings use\_default\_settings:
+<a id="settings-use-default-settings"></a>
 
 # use\_default\_settings
 
 ### `use_default_settings: true`
 
-- \[settings location]\(#settings location)
-- [use\_default\_settings.yml](#usedefaultsettings)
-- :origin:`/etc/searxng/settings.yml <utils/templates/etc/searxng/settings.yml>`
+- [settings location](https://docs.searxng.org/admin/settings/settings.html#settings-location)
+- [use\_default\_settings.yml](https://docs.searxng.org/admin/installation-searxng.html#use-default-settings-yml)
+- [/etc/searxng/settings.yml](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/utils/templates/etc/searxng/settings.yml)
 
-The user defined `settings.yml` is loaded from the \[settings location]\(#settings location)
-and can relied on the default configuration :origin:`searx/settings.yml` using:
+The user defined `settings.yml` is loaded from the [settings location](https://docs.searxng.org/admin/settings/settings.html#settings-location)
+**and can relied on the default configuration [searx/settings.yml](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/settings.yml) using:**
 
 `use_default_settings: true`
 
-`server:`
+**`server:`**
+
 In the following example, the actual settings are the default settings defined
-in :origin:`searx/settings.yml` with the exception of the `secret_key` and
+in [searx/settings.yml](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/settings.yml) with the exception of the `secret_key` and
 the `bind_address`:
 
-.. code:: yaml
-
-```
+```yaml
 use_default_settings: true
 server:
     secret_key: "ultrasecretkey"   # change this!
     bind_address: "[::]"
 ```
 
-`engines:`
+**`engines:`**
+
 With `use_default_settings: true`, each settings can be override in a
 similar way, the `engines` section is merged according to the engine
 `name`.  In this example, SearXNG will load all the default engines, will
-enable the `bing` engine and define a \[token]\(#private engines) for
+enable the `bing` engine and define a [token](https://docs.searxng.org/admin/settings/settings_engines.html#private-engines) for
 the arch linux engine:
 
-.. code:: yaml
-
-```
+```yaml
 use_default_settings: true
 server:
   secret_key: "ultrasecretkey"   # change this!
@@ -74,14 +72,13 @@ engines:
     disabled: false
 ```
 
-`engines:` / `remove:`
+**`engines:` / `remove:`**
+
 It is possible to remove some engines from the default settings. The following
 example is similar to the above one, but SearXNG doesn't load the the google
 engine:
 
-.. code:: yaml
-
-```
+```yaml
 use_default_settings:
   engines:
     remove:
@@ -93,13 +90,12 @@ engines:
     tokens: ['$ecretValue']
 ```
 
-`engines:` / `keep_only:`
+**`engines:` / `keep_only:`**
+
 As an alternative, it is possible to specify the engines to keep. In the
 following example, SearXNG has only two engines:
 
-.. code:: yaml
-
-```
+```yaml
 use_default_settings:
   engines:
     keep_only:

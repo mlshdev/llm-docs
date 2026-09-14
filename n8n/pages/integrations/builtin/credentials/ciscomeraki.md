@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/ciscomeraki.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/credentials/ciscomeraki.md)
+> Pinned source for n8n main: [docs/integrations/builtin/credentials/ciscomeraki.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/credentials/ciscomeraki.md)
 
 # Cisco Meraki credentials <a id="cisco-meraki-credentials"></a>
 

@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [public-endpoints/models/p-video.mdx](https://docs.runpod.io/public-endpoints/models/p-video)
+> Pinned source for Runpod main: [public-endpoints/models/p-video.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/public-endpoints/models/p-video.mdx)
+> Canonical documentation: https://docs.runpod.io/public-endpoints/models/p-video
 
 # Pruna Video
 

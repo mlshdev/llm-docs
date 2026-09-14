@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [examples/text-generation/nemotron-3-super.mdx](https://docs.vast.ai/examples/text-generation/nemotron-3-super)
+> Pinned source for Vast.ai main: [examples/text-generation/nemotron-3-super.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/examples/text-generation/nemotron-3-super.mdx)
+> Canonical documentation: https://docs.vast.ai/examples/text-generation/nemotron-3-super
 
 # NVIDIA Nemotron 3 Super
 
@@ -243,7 +244,7 @@ curl -X POST http://<IP>:<PORT>/v1/chat/completions \
     "max_tokens": 500,
     "temperature": 1.0,
     "top_p": 0.95,
-    "chat_template_kwargs": {"enable_thinking": false}
+    "chat_template_kwargs": `{"enable_thinking": false}`
   }'
 ```
 

@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [sdk/python/reference/delete-endpoint.mdx](https://docs.vast.ai/sdk/python/reference/delete-endpoint)
+> Pinned source for Vast.ai main: [sdk/python/reference/delete-endpoint.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/sdk/python/reference/delete-endpoint.mdx)
+> Canonical documentation: https://docs.vast.ai/sdk/python/reference/delete-endpoint
 
 # VastAI.delete_endpoint
 

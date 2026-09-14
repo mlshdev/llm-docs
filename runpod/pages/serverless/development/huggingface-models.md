@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [serverless/development/huggingface-models.mdx](https://docs.runpod.io/serverless/development/huggingface-models)
+> Pinned source for Runpod main: [serverless/development/huggingface-models.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/serverless/development/huggingface-models.mdx)
+> Canonical documentation: https://docs.runpod.io/serverless/development/huggingface-models
 
 # Use Hugging Face models
 
@@ -187,6 +188,7 @@ import os
 
 HF_CACHE_ROOT = "/runpod-volume/huggingface-cache/hub"
 
+
 def resolve_snapshot_path(model_id: str) -> str:
     """
     Resolve the local snapshot path for a cached model.
@@ -284,6 +286,7 @@ HF_CACHE_ROOT = "/runpod-volume/huggingface-cache/hub"
 os.environ["HF_HUB_OFFLINE"] = "1"
 os.environ["TRANSFORMERS_OFFLINE"] = "1"
 
+
 def resolve_snapshot_path(model_id: str) -> str:
     """Resolve the local snapshot path for a cached model."""
     if "/" not in model_id:
@@ -312,9 +315,11 @@ def resolve_snapshot_path(model_id: str) -> str:
 
     raise RuntimeError(f"Cached model not found: {model_id}")
 
+
 # Load model once when worker starts
 LOCAL_PATH = resolve_snapshot_path(MODEL_ID)
 model = pipeline("sentiment-analysis", model=LOCAL_PATH, local_files_only=True)
+
 
 def handler(job):
     job_input = job["input"]
@@ -329,6 +334,7 @@ def handler(job):
         "sentiment": result["label"],
         "score": float(result["score"])
     }
+
 
 runpod.serverless.start({"handler": handler})
 ```

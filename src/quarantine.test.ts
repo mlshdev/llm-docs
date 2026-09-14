@@ -132,7 +132,7 @@ describe("DocumentCollector", () => {
 
 describe("assertQuarantineBudget", () => {
   test("accepts isolated upstream drift", () => {
-    const documents = Array.from({ length: 100 }, (_, index) =>
+    const documents = Array.from({ length: 99 }, (_, index) =>
       page(`page-${index}`),
     );
     expect(() =>
@@ -140,6 +140,28 @@ describe("assertQuarantineBudget", () => {
         build(documents, [{ sourcePath: "docs/x.md", reason: "boom" }]),
       ),
     ).not.toThrow();
+  });
+
+  test("accepts exactly five percent quarantine", () => {
+    const documents = Array.from({ length: 19 }, (_, index) =>
+      page(`page-${index}`),
+    );
+    expect(() =>
+      assertQuarantineBudget(
+        build(documents, [{ sourcePath: "docs/x.md", reason: "boom" }]),
+      ),
+    ).not.toThrow();
+  });
+
+  test("rejects one omitted page from a small corpus", () => {
+    const documents = Array.from({ length: 9 }, (_, index) =>
+      page(`page-${index}`),
+    );
+    expect(() =>
+      assertQuarantineBudget(
+        build(documents, [{ sourcePath: "docs/x.md", reason: "boom" }]),
+      ),
+    ).toThrow("above the 5% budget");
   });
 
   test("rejects systemic drift so the caller keeps the previous snapshot", () => {

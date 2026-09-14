@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/plugins.mdx](https://bun.com/docs/runtime/plugins)
+> Pinned source for Bun bun-v1.4.2: [docs/runtime/plugins.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/runtime/plugins.mdx)
+> Canonical documentation: https://bun.com/docs/runtime/plugins
 
 # Plugins
 
@@ -350,6 +351,7 @@ pub fn replace_foo_with_bar(handle: &mut OnBeforeParse) -> Result<()> {
 
   // Get the Loader for the file
   let loader = handle.output_loader();
+
 
   let output_source_code = input_source_code.replace("foo", "bar");
 

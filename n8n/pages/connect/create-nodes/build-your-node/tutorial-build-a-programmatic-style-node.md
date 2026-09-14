@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/tutorial-build-a-programmatic-style-node.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/connect/create-nodes/build-your-node/tutorial-build-a-programmatic-style-node.md)
+> Pinned source for n8n main: [docs/connect/create-nodes/build-your-node/tutorial-build-a-programmatic-style-node.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/connect/create-nodes/build-your-node/tutorial-build-a-programmatic-style-node.md)
 
 # Build a programmatic-style node <a id="build-a-programmatic-style-node"></a>
 
@@ -334,7 +334,7 @@ Note the following lines of this code:
 
 ```typescript
 const items = this.getInputData();
-...
+... 
 for (let i = 0; i < items.length; i++) {
     ...
     const email = this.getNodeParameter('email', i);

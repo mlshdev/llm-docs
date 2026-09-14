@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_policy_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_policy_ls.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_policy_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_policy_ls.yaml)
 
 # sbx policy ls
 
@@ -15,8 +15,8 @@ where it applies, and a summary of decisions by resource type. With SANDBOX, it
 summarizes active rules that apply to that sandbox.
 
 Use --wide to show the detailed rule-level table with separate POLICY,
-POLICY_ID, RULE, and RULE_ID columns plus resources, status, and rule
-metadata. RULE_ID is the identifier accepted by "sbx policy rm network --id"
+POLICY\_ID, RULE, and RULE\_ID columns plus resources, status, and rule
+metadata. RULE\_ID is the identifier accepted by "sbx policy rm network --id"
 (local rules only). Use --json for the filtered daemon response.
 
 When remote governance is active, inactive policy rules are hidden by default.
@@ -26,22 +26,22 @@ rule.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--decision` |  | Filter policies by decision: "allow" or "deny" |
-| `--include-inactive` |  | Show inactive policy rules hidden by remote governance |
-| `--json` |  | Output filtered policy rules as JSON |
-| `--source` |  | Filter policies by source: "local", "org", or "kit" |
-| `--type` | `all` | Filter policies by type: "all", "network", or "filesystem" (default "all") |
-| `--wide` |  | Show detailed rule-level output with rule IDs and resources |
+| Option               | Default | Description                                                                |
+| -------------------- | ------- | -------------------------------------------------------------------------- |
+| `--decision`         |         | Filter policies by decision: "allow" or "deny"                             |
+| `--include-inactive` |         | Show inactive policy rules hidden by remote governance                     |
+| `--json`             |         | Output filtered policy rules as JSON                                       |
+| `--source`           |         | Filter policies by source: "local", "org", or "kit"                        |
+| `--type`             | `all`   | Filter policies by type: "all", "network", or "filesystem" (default "all") |
+| `--wide`             |         | Show detailed rule-level output with rule IDs and resources                |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--cloud` |  | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (https://api.sandboxes-cloud.docker.com). Set DOCKER_CLOUD_API_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option            | Default                                  | Description                                                                                                                                                                                                             |
+| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
+| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
+| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
 
 ## Examples
 

@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/quick-start.mdx](https://trigger.dev/docs/quick-start)
+> Pinned source for Trigger.dev v4.5.16: [docs/quick-start.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/quick-start.mdx)
+> Canonical documentation: https://trigger.dev/docs/quick-start
 
 # Quick start: add Trigger.dev to your project
 

@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [cli/reference/delete-scheduled-job.mdx](https://docs.vast.ai/cli/reference/delete-scheduled-job)
+> Pinned source for Vast.ai main: [cli/reference/delete-scheduled-job.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/cli/reference/delete-scheduled-job.mdx)
+> Canonical documentation: https://docs.vast.ai/cli/reference/delete-scheduled-job
 
 # vastai delete scheduled-job
 

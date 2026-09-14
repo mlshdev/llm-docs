@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_node_ps.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_node_ps.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_node_ps.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_node_ps.yaml)
 
 # docker node ps
 
@@ -9,24 +9,24 @@ List tasks running on one or more nodes, defaults to current node
 ## Description
 
 Lists all the tasks on a Node that Docker knows about. You can filter using the
-`-f` or `--filter` flag. Refer to the [filtering](#filter) section for more
+`-f` or `--filter` flag. Refer to the [filtering](#filtering---filter-filter) section for more
 information about available filter options.
 
-> [!NOTE]
+> \[!NOTE]
 > This is a cluster management command, and must be executed on a swarm
 > manager node. To learn about managers and workers, refer to the
-> [Swarm mode section](/engine/swarm/) in the
+> [Swarm mode section](https://docs.docker.com/engine/swarm/) in the
 > documentation.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--filter` |  | Filter output based on conditions provided |
-| `--format` |  | Pretty-print tasks using a Go template |
-| `--no-resolve` |  | Do not map IDs to Names |
-| `--no-trunc` |  | Do not truncate output |
-| `-q`, `--quiet` |  | Only display task IDs |
+| Option           | Default | Description                                |
+| ---------------- | ------- | ------------------------------------------ |
+| `-f`, `--filter` |         | Filter output based on conditions provided |
+| `--format`       |         | Pretty-print tasks using a Go template     |
+| `--no-resolve`   |         | Do not map IDs to Names                    |
+| `--no-trunc`     |         | Do not truncate output                     |
+| `-q`, `--quiet`  |         | Only display task IDs                      |
 
 ## Examples
 
@@ -44,15 +44,14 @@ redis.10.0tgctg8h8cech4w0k0gwrmr23  redis:7.4.1  swarm-manager1  Running        
 ### Filtering (--filter) {#filter}
 
 The filtering flag (`-f` or `--filter`) format is of "key=value". If there is
-more than one filter, then pass multiple flags (e.g., `--filter "foo=bar"
---filter "bif=baz"`).
+more than one filter, then pass multiple flags (e.g., `--filter "foo=bar" --filter "bif=baz"`).
 
 The currently supported filters are:
 
-* [name](#name)
-* [id](#id)
-* [label](#label)
-* [desired-state](#desired-state)
+- [name](#name)
+- [id](#id)
+- [label](#label)
+- [desired-state](#desired-state)
 
 #### name
 
@@ -109,7 +108,7 @@ using a Go template.
 Valid placeholders for the Go template are listed below:
 
 | Placeholder     | Description                                                      |
-|-----------------|------------------------------------------------------------------|
+| --------------- | ---------------------------------------------------------------- |
 | `.ID`           | Task ID                                                          |
 | `.Name`         | Task name                                                        |
 | `.Image`        | Task image                                                       |

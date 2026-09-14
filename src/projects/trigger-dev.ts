@@ -116,21 +116,26 @@ async function renderPage(context: PageContext) {
   const frontmatter = parseFrontmatter(source);
   const converted = convertPage(source, sourcePath, context);
   const specBody = await renderSpecOperation(frontmatter.attributes, context);
-  const prose = rewriteMarkdownLinks(converted.body, (url, kind) =>
-    resolveMintlifyLink(url, kind, {
-      sourcePath,
-      docsFiles: context.docsFiles,
-      repository: context.repository,
-      ref: context.ref,
-      siteBase,
-      docsRoot,
-    }),
+  const title = documentTitle(
+    converted.body,
+    frontmatter.attributes,
+    sourcePath,
   );
-  const title = documentTitle(prose, frontmatter.attributes, sourcePath);
-  const body = normalizeSpacing(
-    [`# ${title}`, describe(frontmatter.attributes), specBody, prose]
-      .filter((part) => part && part.trim())
-      .join("\n\n"),
+  const body = rewriteMarkdownLinks(
+    normalizeSpacing(
+      [`# ${title}`, describe(frontmatter.attributes), specBody, converted.body]
+        .filter((part) => part && part.trim())
+        .join("\n\n"),
+    ),
+    (url, kind) =>
+      resolveMintlifyLink(url, kind, {
+        sourcePath,
+        docsFiles: context.docsFiles,
+        repository: context.repository,
+        ref: context.ref,
+        siteBase,
+        docsRoot,
+      }),
   );
   return {
     sourcePath: `${docsRoot}${sourcePath}`,
@@ -148,15 +153,47 @@ function convertPage(
   context: PageContext,
 ): ReturnType<typeof convertMdx> {
   try {
-    return convertMdx(normalizeMintlifyComponents(source), sourcePath, {
-      resolveImport: (specifier, fromPath) =>
-        resolveImport(specifier, fromPath, context.sources),
-    });
+    return convertMdx(
+      normalizeTriggerComponents(source, sourcePath, context.sources),
+      sourcePath,
+      {
+        resolveImport: (specifier, fromPath) =>
+          resolveImport(specifier, fromPath, context.sources),
+      },
+    );
   } catch (error) {
     throw new Error(`Unable to convert Trigger.dev page ${sourcePath}`, {
       cause: error,
     });
   }
+}
+
+export function normalizeTriggerComponents(
+  source: string,
+  sourcePath: string,
+  sources: ReadonlyMap<string, string>,
+): string {
+  let normalized = source;
+  for (const [name, snippetPath] of [
+    ["ScrapingWarning", "snippets/web-scraping-warning.mdx"],
+    ["UsefulNextSteps", "snippets/useful-next-steps.mdx"],
+  ] as const) {
+    if (!new RegExp(`<${name}\\s*/>`).test(normalized)) {
+      continue;
+    }
+    const snippet = sources.get(snippetPath);
+    if (snippet === undefined) {
+      throw new Error(
+        `Trigger.dev ${sourcePath} uses <${name}> but ${snippetPath} is missing`,
+      );
+    }
+    normalized = normalized.replace(new RegExp(`<${name}\\s*/>`, "g"), snippet);
+  }
+  // Mintlify's site-level SoftLimit component is a visual marker between the
+  // hard batch-size limit and the following soft rate limits. It contributes
+  // no text to the rendered page.
+  normalized = normalized.replace(/<SoftLimit\s*\/>/g, "");
+  return normalizeMintlifyComponents(normalized);
 }
 
 // The reference pages carry only frontmatter: their whole body is the
@@ -225,6 +262,13 @@ function resolveImport(
 ): MdxImport | undefined {
   const resolved = resolveMintlifyImport(specifier, fromPath, sources);
   return resolved
-    ? { ...resolved, source: normalizeMintlifyComponents(resolved.source) }
+    ? {
+        ...resolved,
+        source: normalizeTriggerComponents(
+          resolved.source,
+          resolved.sourcePath,
+          sources,
+        ),
+      }
     : undefined;
 }

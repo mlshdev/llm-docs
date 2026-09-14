@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_container_export.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_export.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_container_export.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_export.yaml)
 
 # docker container export
 
@@ -15,14 +15,14 @@ with the container. If a volume is mounted on top of an existing directory in
 the container, `docker export` exports the contents of the underlying
 directory, not the contents of the volume.
 
-Refer to [Backup, restore, or migrate data volumes](/engine/storage/volumes/#back-up-restore-or-migrate-data-volumes)
+Refer to [Backup, restore, or migrate data volumes](https://docs.docker.com/engine/storage/volumes/#back-up-restore-or-migrate-data-volumes)
 in the user guide for examples on exporting data in a volume.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-o`, `--output` |  | Write to a file, instead of STDOUT |
+| Option           | Default | Description                        |
+| ---------------- | ------- | ---------------------------------- |
+| `-o`, `--output` |         | Write to a file, instead of STDOUT |
 
 ## Examples
 

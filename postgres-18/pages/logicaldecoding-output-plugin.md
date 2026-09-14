@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/logicaldecoding.sgml#logicaldecoding-output-plugin](https://www.postgresql.org/docs/18/logicaldecoding-output-plugin.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/logicaldecoding.sgml#logicaldecoding-output-plugin](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/logicaldecoding.sgml%23logicaldecoding-output-plugin)
+> Canonical documentation: https://www.postgresql.org/docs/18/logicaldecoding-output-plugin.html
 
 # Logical Decoding Output Plugins
 

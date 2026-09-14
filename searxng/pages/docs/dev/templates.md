@@ -1,424 +1,481 @@
-> Commit-pinned source for SearXNG master: [docs/dev/templates.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/templates.rst)
+> Pinned source for SearXNG master: [docs/dev/templates.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/templates.rst)
 
-.. \_simple theme templates:
+<a id="simple-theme-templates"></a>
 
 # Simple Theme Templates
 
 The simple template is complex, it consists of many different elements and also
 uses macros and include statements.  The following is a rough overview that we
 would like to give the developer at hand, details must still be taken from the
-:origin:`sources <searx/templates/simple/>`.
+[sources](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/templates/simple/).
 
-A \[result item]\(#result types) can be of different media types.  The media
-type of a result is defined by the :py:obj:`result_type.Result.template`.  To
-set another media-type as \[template default]\(#template default), the field `template`
+A [result item](https://docs.searxng.org/dev/result_types/index.html#result-types) can be of different media types.  The media
+type of a result is defined by the `result_type.Result.template`.  To
+set another media-type as [template default](https://docs.searxng.org/dev/templates.html#template-default), the field `template`
 in the result item must be set to the desired type.
 
-.. \_result template macros:
+<a id="result-template-macros"></a>
 
 # Result template macros
 
-.. \_macro result\_header:
+<a id="macro-result-header"></a>
 
 ## `result_header`
 
 Execpt `image.html` and some others this macro is used in nearly all result
-types in the \[main result list]\(#main result list).
+types in the [main result list](https://docs.searxng.org/dev/templates.html#main-result-list).
 
-Fields used in the template :origin:`macro result_header <searx/templates/simple/macros.html>`:
+Fields used in the template [macro result\_header](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/templates/simple/macros.html):
 
-url :  :py:class:`str`
+**url :  `str`**
+
 Link URL of the result item.
 
-title :  :py:class:`str`
+**title :  `str`**
+
 Link title of the result item.
 
-img\_src, thumbnail : :py:class:`str`
+**img\_src, thumbnail : `str`**
+
 URL of a image or thumbnail that is displayed in the result item.
 
-.. \_macro result\_sub\_header:
+<a id="macro-result-sub-header"></a>
 
 ## `result_sub_header`
 
 Execpt `image.html` and some others this macro is used in nearly all result
-types in the \[main result list]\(#main result list).
+types in the [main result list](https://docs.searxng.org/dev/templates.html#main-result-list).
 
-Fields used in the template :origin:`macro result_sub_header <searx/templates/simple/macros.html>`:
+Fields used in the template [macro result\_sub\_header](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/templates/simple/macros.html):
 
-publishedDate : :py:obj:`datetime.datetime`
+**publishedDate : `datetime.datetime`**
+
 The date on which the object was published.
 
-length: :py:obj:`datetime.timedelta`
+**length: `datetime.timedelta`**
+
 Playing duration in seconds.
 
-views: :py:class:`str`
+**views: `str`**
+
 View count in humanized number format.
 
-author : :py:class:`str`
+**author : `str`**
+
 Author of the title.
 
-metadata : :py:class:`str`
+**metadata : `str`**
+
 Miscellaneous metadata.
 
-.. \_engine\_data:
+<a id="engine-data"></a>
 
 ## `engine_data_form`
 
-The `engine_data_form` macro is used in :origin:`results,html <searx/templates/simple/results.html>` in a HTML `<form/>` element.  The
-intention of this macro is to pass data of a engine from one :py:obj:`response <searx.engines.demo_online.response>` to the :py:obj:`searx.search.SearchQuery`
-of the next :py:obj:`request <searx.engines.demo_online.request>`.
+The `engine_data_form` macro is used in [results,html](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/templates/simple/results.html) in a HTML `<form/>` element.  The
+intention of this macro is to pass data of a engine from one `response` to the `searx.search.SearchQuery`
+of the next `request`.
 
 To pass data, engine's response handler can append result items of typ
 `engine_data`.  This is by example used to pass a token from the response to
 the next request:
 
-.. code:: python
-
+```python
 def response(resp):
-...
-results.append({
-'engine\_data': token,
-'key': 'next\_page\_token',
-})
-...
-return results
+    ...
+    results.append({
+       'engine_data': token,
+       'key': 'next_page_token',
+    })
+    ...
+    return results
 
 def request(query, params):
-page\_token = params\['engine\_data'].get('next\_page\_token')
+    page_token = params['engine_data'].get('next_page_token')
+```
 
-.. \_main result list:
+<a id="main-result-list"></a>
 
 # Main Result List
 
 The **media types** of the **main result type** are the template files in
-the :origin:`result_templates <searx/templates/simple/result_templates>`.
+the [result\_templates](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/templates/simple/result_templates).
 
-.. \_template default:
+<a id="template-default"></a>
 
 ## `default.html`
 
 Displays result fields from:
 
-- \[macro result\_header]\(#macro result\_header) and
-- \[macro result\_sub\_header]\(#macro result\_sub\_header)
+- [macro result\_header](https://docs.searxng.org/dev/templates.html#macro-result-header) and
+- [macro result\_sub\_header](https://docs.searxng.org/dev/templates.html#macro-result-sub-header)
 
-Additional fields used in the :origin:`default.html <searx/templates/simple/result_templates/default.html>`:
+Additional fields used in the [default.html](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/templates/simple/result_templates/default.html):
 
-content :  :py:class:`str`
+**content :  `str`**
+
 General text of the result item.
 
-iframe\_src : :py:class:`str`
+**iframe\_src : `str`**
+
 URL of an embedded `<iframe>` / the frame is collapsible.
 
-audio\_src : uri,
+**audio\_src : uri,**
+
 URL of an embedded `<audio controls>`.
 
-.. \_template videos:
+<a id="template-videos"></a>
 
 ## `videos.html`
 
 Displays result fields from:
 
-- \[macro result\_header]\(#macro result\_header) and
-- \[macro result\_sub\_header]\(#macro result\_sub\_header)
+- [macro result\_header](https://docs.searxng.org/dev/templates.html#macro-result-header) and
+- [macro result\_sub\_header](https://docs.searxng.org/dev/templates.html#macro-result-sub-header)
 
-Additional fields used in the :origin:`videos.html <searx/templates/simple/result_templates/videos.html>`:
+Additional fields used in the [videos.html](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/templates/simple/result_templates/videos.html):
 
-iframe\_src : :py:class:`str`
+**iframe\_src : `str`**
+
 URL of an embedded `<iframe>` / the frame is collapsible.
 
 The videos are displayed as small thumbnails in the main results list, there
 is an additional button to collaps/open the embeded video.
 
-content :  :py:class:`str`
+**content :  `str`**
+
 Description of the code fragment.
 
-.. \_template torrent:
+<a id="template-torrent"></a>
 
 ## `torrent.html`
 
+<a id="magnet-link"></a> <a id="torrent-file"></a>
+
 Displays result fields from:
 
-- \[macro result\_header]\(#macro result\_header) and
-- \[macro result\_sub\_header]\(#macro result\_sub\_header)
+- [macro result\_header](https://docs.searxng.org/dev/templates.html#macro-result-header) and
+- [macro result\_sub\_header](https://docs.searxng.org/dev/templates.html#macro-result-sub-header)
 
-Additional fields used in the :origin:`torrent.html <searx/templates/simple/result_templates/torrent.html>`:
+Additional fields used in the [torrent.html](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/templates/simple/result_templates/torrent.html):
 
-magnetlink:
-URL of the [magnet link](https://en.wikipedia.org/wiki/Magnet_URI_scheme).
+**magnetlink:**
 
-torrentfile
-URL of the [torrent file](https://en.wikipedia.org/wiki/Torrent_file).
+URL of the [magnet link](https://docs.searxng.org/dev/templates.html#magnet-link).
 
-seed : `int`
+**torrentfile**
+
+URL of the [torrent file](https://docs.searxng.org/dev/templates.html#torrent-file).
+
+**seed : `int`**
+
 Number of seeders.
 
-leech : `int`
+**leech : `int`**
+
 Number of leecher
 
-filesize : `int`
+**filesize : `int`**
+
 Size in Bytes (rendered to human readable unit of measurement).
 
-files : `int`
+**files : `int`**
+
 Number of files.
 
-.. \_template map:
+<a id="template-map"></a>
 
 ## `map.html`
 
-.. \_place\_id is not a persistent id:
-<https://nominatim.org/release-docs/latest/api/Output/#place_id-is-not-a-persistent-id>
+<a id="geojson"></a> <a id="leaflet"></a> <a id="bbox"></a> <a id="htmlelement-dataset"></a> <a id="nominatim"></a> <a id="lookup"></a> <a id="place-id-is-not-a-persistent-id"></a>
+<https://nominatim.org/release-docs/latest/api/Output/#place_id-is-not-a-persistent-id> <a id="perma-id"></a> <a id="country-code"></a>
 
 Displays result fields from:
 
-- \[macro result\_header]\(#macro result\_header) and
-- \[macro result\_sub\_header]\(#macro result\_sub\_header)
+- [macro result\_header](https://docs.searxng.org/dev/templates.html#macro-result-header) and
+- [macro result\_sub\_header](https://docs.searxng.org/dev/templates.html#macro-result-sub-header)
 
-Additional fields used in the :origin:`map.html <searx/templates/simple/result_templates/map.html>`:
+Additional fields used in the [map.html](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/templates/simple/result_templates/map.html):
 
-content :  :py:class:`str`
+**content :  `str`**
+
 Description of the item.
 
-address\_label : :py:class:`str`
+**address\_label : `str`**
+
 Label of the address / default `_('address')`.
 
-geojson : [GeoJSON](https://en.wikipedia.org/wiki/GeoJSON)
-Geometries mapped to HTMLElement.dataset (`data-map-geojson`) and used by
-[Leaflet](https://github.com/Leaflet/Leaflet).
+**geojson : GeoJSON\_**
 
-boundingbox : `[ min-lon, min-lat, max-lon, max-lat]`
-A bbox area defined by min longitude , min latitude , max longitude and max
-latitude.  The bounding box is mapped to HTMLElement.dataset
-(`data-map-boundingbox`) and is used by Leaflet.
+Geometries mapped to HTMLElement.dataset\_ (`data-map-geojson`) and used by
+Leaflet\_.
 
-longitude, latitude : :py:class:`str`
-Geographical coordinates, mapped to HTMLElement.dataset (`data-map-lon`,
-`data-map-lat`) and is used by Leaflet.
+**boundingbox : `[ min-lon, min-lat, max-lon, max-lat]`**
 
-address : `{...}`
+A bbox\_ area defined by min longitude , min latitude , max longitude and max
+latitude.  The bounding box is mapped to HTMLElement.dataset\_
+(`data-map-boundingbox`) and is used by Leaflet\_.
+
+**longitude, latitude : `str`**
+
+Geographical coordinates, mapped to HTMLElement.dataset\_ (`data-map-lon`,
+`data-map-lat`) and is used by Leaflet\_.
+
+**address : `{...}`**
+
 A dicticonary with the address data:
 
-.. code:: python
-
-```
- address = {
-     'name'          : str,  # name of object
-     'road'          : str,  # street name of object
-     'house_number'  : str,  # house number of object
-     'postcode'      : str,  # postcode of object
-     'country'       : str,  # country of object
-     'country_code'  : str,
-     'locality'      : str,
- }
+```python
+address = {
+    'name'          : str,  # name of object
+    'road'          : str,  # street name of object
+    'house_number'  : str,  # house number of object
+    'postcode'      : str,  # postcode of object
+    'country'       : str,  # country of object
+    'country_code'  : str,
+    'locality'      : str,
+}
 ```
 
-country\_code : :py:class:`str`
+**country\_code : `str`**
+
 Country code of the object.
 
-locality : :py:class:`str`
+**locality : `str`**
+
 The name of the city, town, township, village, borough, etc. in which this
 object is located.
 
-links : `[link1, link2, ...]`
+**links : `[link1, link2, ...]`**
+
 A list of links with labels:
 
-.. code:: python
-
-```
- links.append({
-     'label'       : str,
-     'url'         : str,
-     'url_label'   : str,  # set by some engines but unused (oscar)
- })
+```python
+links.append({
+    'label'       : str,
+    'url'         : str,
+    'url_label'   : str,  # set by some engines but unused (oscar)
+})
 ```
 
-data : `[data1, data2, ...]`
+**data : `[data1, data2, ...]`**
+
 A list of additional data, shown in two columns and containing a label and
 value.
 
-.. code:: python
-
-```
- data.append({
-    'label'   : str,
-    'value'   : str,
-    'key'     : str,  # set by some engines but unused
- })
+```python
+data.append({
+   'label'   : str,
+   'value'   : str,
+   'key'     : str,  # set by some engines but unused
+})
 ```
 
-type : :py:class:`str`  # set by some engines but unused (oscar)
-Tag label from OSM\_KEYS\_TAGS\['tags'].
+**type : `str`  # set by some engines but unused (oscar)**
 
-type\_icon : :py:class:`str`  # set by some engines but unused (oscar)
+Tag label from [OSM\_KEYS\_TAGS\['tags'\]](https://docs.searxng.org/dev/searxng_extra/update.html#update-osm-keys-tags-py).
+
+**type\_icon : `str`  # set by some engines but unused (oscar)**
+
 Type's icon.
 
-osm : `{...}`
-OSM-type and OSM-ID, can be used to Lookup OSM data ([Nominatim](https://nominatim.org/release-docs/latest/)). There is
-also a discussion about "place\_id is not a persistent id" and the
+**osm : `{...}`**
+
+OSM-type and OSM-ID, can be used to Lookup\_ OSM data (Nominatim\_). There is
+also a discussion about "[place\_id is not a persistent id](https://docs.searxng.org/dev/templates.html#place-id-is-not-a-persistent-id)" and the
 perma\_id\_.
 
-.. code:: python
-
-```
- osm = {
-     'type': str,
-     'id':   str,
- }
+```python
+osm = {
+    'type': str,
+    'id':   str,
+}
 ```
 
-type : :py:class:`str`
+**type : `str`**
+
 Type of osm-object (if OSM-Result).
 
-id :
+**id :**
+
 ID of osm-object (if OSM-Result).
 
-.. hint:
+> **Hint**
+> The `osm` property is set by engine `openstreetmap.py`, but it is not
+> used in the `map.html` template yet.
 
-```text
- The ``osm`` property is set by engine ``openstreetmap.py``, but it is not
- used in the ``map.html`` template yet.
-
-```
-
-.. \_template paper:
+<a id="template-paper"></a>
 
 ## `paper.html`
 
+<a id="bibtex-format"></a> <a id="bibtex-field-types"></a>
+
 Displays result fields from:
 
-- \[macro result\_header]\(#macro result\_header)
+- [macro result\_header](https://docs.searxng.org/dev/templates.html#macro-result-header)
 
-Additional fields used in the :origin:`paper.html <searx/templates/simple/result_templates/paper.html>`:
+Additional fields used in the [paper.html](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/templates/simple/result_templates/paper.html):
 
-content :  :py:class:`str`
+**content :  `str`**
+
 An abstract or excerpt from the document.
 
-comments : :py:class:`str`
+**comments : `str`**
+
 Free text display in italic below the content.
 
-tags : :py:class:`List <list>`\ \[\ :py:class:`str`\ ]
+**tags : `List`\ \[\ `str`\ ]**
+
 Free tag list.
 
-type : :py:class:`str`
+**type : `str`**
+
 Short description of medium type, e.g. *book*, *pdf* or *html* ...
 
-authors : :py:class:`List <list>`\ \[\ :py:class:`str`\ ]
-List of authors of the work (authors with a "s" suffix, the "author" is in the
-\[macro result\_sub\_header]\(#macro result\_sub\_header)).
+**authors : `List`\ \[\ `str`\ ]**
 
-editor : :py:class:`str`
+List of authors of the work (authors with a "s" suffix, the "author" is in the
+[macro result\_sub\_header](https://docs.searxng.org/dev/templates.html#macro-result-sub-header)).
+
+**editor : `str`**
+
 Editor of the book/paper.
 
-publisher : :py:class:`str`
+**publisher : `str`**
+
 Name of the publisher.
 
-journal : :py:class:`str`
+**journal : `str`**
+
 Name of the journal or magazine the article was published in.
 
-volume : :py:class:`str`
+**volume : `str`**
+
 Volume number.
 
-pages : :py:class:`str`
+**pages : `str`**
+
 Page range where the article is.
 
-number : :py:class:`str`
+**number : `str`**
+
 Number of the report or the issue number for a journal article.
 
-doi : :py:class:`str`
+**doi : `str`**
+
 DOI number (like `10.1038/d41586-018-07848-2`).
 
-issn : :py:class:`List <list>`\ \[\ :py:class:`str`\ ]
+**issn : `List`\ \[\ `str`\ ]**
+
 ISSN number like `1476-4687`
 
-isbn : :py:class:`List <list>`\ \[\ :py:class:`str`\ ]
+**isbn : `List`\ \[\ `str`\ ]**
+
 ISBN number like `9780201896831`
 
-pdf\_url : :py:class:`str`
+**pdf\_url : `str`**
+
 URL to the full article, the PDF version
 
-html\_url : :py:class:`str`
+**html\_url : `str`**
+
 URL to full article, HTML version
 
-.. \_template packages:
+<a id="template-packages"></a>
 
 ## `packages`
 
 Displays result fields from:
 
-- \[macro result\_header]\(#macro result\_header)
+- [macro result\_header](https://docs.searxng.org/dev/templates.html#macro-result-header)
 
-Additional fields used in the :origin:`packages.html <searx/templates/simple/result_templates/packages.html>`:
+Additional fields used in the [packages.html](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/templates/simple/result_templates/packages.html):
 
-package\_name : :py:class:`str`
+**package\_name : `str`**
+
 The name of the package.
 
-version : :py:class:`str`
+**version : `str`**
+
 The current version of the package.
 
-maintainer : :py:class:`str`
+**maintainer : `str`**
+
 The maintainer or author of the project.
 
-publishedDate : :py:class:`datetime <datetime.datetime>`
+**publishedDate : `datetime`**
+
 Date of latest update or release.
 
-tags : :py:class:`List <list>`\ \[\ :py:class:`str`\ ]
+**tags : `List`\ \[\ `str`\ ]**
+
 Free tag list.
 
-popularity : :py:class:`str`
+**popularity : `str`**
+
 The popularity of the package, e.g. rating or download count.
 
-license\_name : :py:class:`str`
+**license\_name : `str`**
+
 The name of the license.
 
-license\_url : :py:class:`str`
+**license\_url : `str`**
+
 The web location of a license copy.
 
-homepage : :py:class:`str`
+**homepage : `str`**
+
 The url of the project's homepage.
 
-source\_code\_url: :py:class:`str`
+**source\_code\_url: `str`**
+
 The location of the project's source code.
 
-links : :py:class:`dict`
+**links : `dict`**
+
 Additional links in the form of `{'link_name': 'http://example.com'}`
 
-.. \_template products:
+<a id="template-products"></a>
 
 ## `products.html`
 
 Displays result fields from:
 
-- \[macro result\_header]\(#macro result\_header) and
-- \[macro result\_sub\_header]\(#macro result\_sub\_header)
+- [macro result\_header](https://docs.searxng.org/dev/templates.html#macro-result-header) and
+- [macro result\_sub\_header](https://docs.searxng.org/dev/templates.html#macro-result-sub-header)
 
-Additional fields used in the :origin:`products.html <searx/templates/simple/result_templates/products.html>`:
+Additional fields used in the [products.html](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/templates/simple/result_templates/products.html):
 
-content :  :py:class:`str`
+**content :  `str`**
+
 Description of the product.
 
-price : :py:class:`str`
+**price : `str`**
+
 The price must include the currency.
 
-shipping : :py:class:`str`
+**shipping : `str`**
+
 Shipping details.
 
-source\_country : :py:class:`str`
+**source\_country : `str`**
+
 Place from which the shipment is made.
 
-.. \_template answer results:
+<a id="template-answer-results"></a>
 
 # Answer results
 
-See result\_types.answer
+See [result\_types.answer](https://docs.searxng.org/dev/result_types/answer.html#result-types-answer)
 
 # Suggestion results
 
-See result\_types.suggestion
+See [result\_types.suggestion](https://docs.searxng.org/dev/result_types/suggestion.html#result-types-suggestion)
 
 # Correction results
 
-See result\_types.corrections
+See [result\_types.corrections](https://docs.searxng.org/dev/result_types/correction.html#result-types-corrections)
 
 # Infobox results
 
-See result\_types.infobox
+See [result\_types.infobox](https://docs.searxng.org/dev/result_types/infobox.html#result-types-infobox)

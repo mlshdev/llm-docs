@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_context_update.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_context_update.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_context_update.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_context_update.yaml)
 
 # docker context update
 
@@ -9,14 +9,14 @@ Update a context
 ## Description
 
 Updates an existing `context`.
-See [context create](/reference/cli/docker/context/create/).
+See [context create](https://docs.docker.com/reference/cli/docker/context/create/).
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--description` |  | Description of the context |
-| `--docker` |  | set the docker endpoint |
+| Option          | Default | Description                |
+| --------------- | ------- | -------------------------- |
+| `--description` |         | Description of the context |
+| `--docker`      |         | set the docker endpoint    |
 
 ## Examples
 

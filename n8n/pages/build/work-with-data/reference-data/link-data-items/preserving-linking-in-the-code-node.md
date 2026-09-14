@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/work-with-data/reference-data/link-data-items/preserving-linking-in-the-code-node.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/work-with-data/reference-data/link-data-items/preserving-linking-in-the-code-node.md)
+> Pinned source for n8n main: [docs/build/work-with-data/reference-data/link-data-items/preserving-linking-in-the-code-node.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/work-with-data/reference-data/link-data-items/preserving-linking-in-the-code-node.md)
 
 # Preserving linking in the Code node <a id="preserving-linking-in-the-code-node"></a>
 
@@ -20,7 +20,7 @@ To control item linking, set `pairedItem` when returning data. For example, to l
 [
     {
         "json": {
-            . . .
+            . . . 
         },
         // The index of the input item that generated this output item
         "pairedItem": 0
@@ -91,7 +91,7 @@ for(let i=0; i<items.length; i++){
                     "aBrandNewField": "New data for item " + i
         },
       "pairedItem": i
-    }
+    }    
   )
 }
 return newItems;

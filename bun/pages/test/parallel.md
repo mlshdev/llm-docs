@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/test/parallel.mdx](https://bun.com/docs/test/parallel)
+> Pinned source for Bun bun-v1.4.2: [docs/test/parallel.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/test/parallel.mdx)
+> Canonical documentation: https://bun.com/docs/test/parallel
 
 `bun test` has three independent knobs for running more than one thing at a time:
 

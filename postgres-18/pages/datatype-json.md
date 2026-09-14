@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/json.sgml#datatype-json](https://www.postgresql.org/docs/18/datatype-json.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/json.sgml#datatype-json](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/json.sgml%23datatype-json)
+> Canonical documentation: https://www.postgresql.org/docs/18/datatype-json.html
 
 # JSON Types
 

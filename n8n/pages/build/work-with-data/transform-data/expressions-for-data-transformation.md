@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/work-with-data/transform-data/expressions-for-data-transformation.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/work-with-data/transform-data/expressions-for-data-transformation.md)
+> Pinned source for n8n main: [docs/build/work-with-data/transform-data/expressions-for-data-transformation.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/work-with-data/transform-data/expressions-for-data-transformation.md)
 
 # Expressions for data transformation <a id="expressions-for-data-transformation"></a>
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Apple container 1.4.1: [docs/container-inspection.md](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-inspection.md)
+> Pinned source for Apple container 1.4.1: [docs/container-inspection.md](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-inspection.md)
 
 # Inspecting containers and images
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/administer/use-source-control-and-environments/use-git-in-n8n.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/administer/use-source-control-and-environments/use-git-in-n8n.md)
+> Pinned source for n8n main: [docs/administer/use-source-control-and-environments/use-git-in-n8n.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/administer/use-source-control-and-environments/use-git-in-n8n.md)
 
 # Git and n8n <a id="git-and-n8n"></a>
 

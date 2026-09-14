@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/code-in-n8n/cookbook/code-node/get-the-binary-data-buffer.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/code-in-n8n/cookbook/code-node/get-the-binary-data-buffer.md)
+> Pinned source for n8n main: [docs/build/code-in-n8n/cookbook/code-node/get-the-binary-data-buffer.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/code-in-n8n/cookbook/code-node/get-the-binary-data-buffer.md)
 
 # Get the binary data buffer <a id="get-the-binary-data-buffer"></a>
 
@@ -16,10 +16,10 @@ The binary data buffer contains all the binary file data processed by a workflow
 You can access the buffer using n8n's `getBinaryDataBuffer()` function:
 
 ```js
-/*
+/* 
 * itemIndex: number. The index of the item in the input data.
-* binaryPropertyName: string. The name of the binary property.
-* The default in the Read/Write File From Disk node is 'data'.
+* binaryPropertyName: string. The name of the binary property. 
+* The default in the Read/Write File From Disk node is 'data'. 
 */
 let binaryDataBufferItem = await this.helpers.getBinaryDataBuffer(itemIndex, binaryPropertyName);
 ```

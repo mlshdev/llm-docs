@@ -1,52 +1,60 @@
-> Commit-pinned source for SearXNG master: [docs/admin/settings/settings_outgoing.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/settings/settings_outgoing.rst)
+> Pinned source for SearXNG master: [docs/admin/settings/settings_outgoing.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/settings/settings_outgoing.rst)
 
-.. \_settings outgoing:
+<a id="settings-outgoing"></a>
 
 # `outgoing:`
 
 Communication with search engines.
 
-.. code:: yaml
-
+```yaml
 outgoing:
-request\_timeout: 2.0       # default timeout in seconds, can be override by engine
-max\_request\_timeout: 10.0  # the maximum timeout in seconds
-useragent\_suffix: ""       # information like an email address to the administrator
-pool\_connections: 100      # Maximum number of concurrent connections (default: 100)
-enable\_http2: true         # Enables the use of HTTP2
-\# uncomment below section if you want to use a custom server certificate
-\#  verify: \~/.mitmproxy/mitmproxy-ca-cert.cer
-\#
-\# uncomment below section if you want to use a proxy
-\#
-\#  proxies:
-\#    all://:
-\#      - <http://proxy1:8080>
-\#      - <http://proxy2:8080>
-\#
-\#  using\_tor\_proxy: true
-\#
-\# Extra seconds to add in order to account for the time taken by the proxy
-\#
-\#  extra\_proxy\_timeout: 10.0
-\#
+  request_timeout: 2.0       # default timeout in seconds, can be override by engine
+  max_request_timeout: 10.0  # the maximum timeout in seconds
+  useragent_suffix: ""       # information like an email address to the administrator
+  pool_connections: 100      # Maximum number of concurrent connections (default: 100)
+  enable_http2: true         # Enables the use of HTTP2
+  # uncomment below section if you want to use a custom server certificate
+  #  verify: ~/.mitmproxy/mitmproxy-ca-cert.cer
+  #
+  # uncomment below section if you want to use a proxy
+  #
+  #  proxies:
+  #    all://:
+  #      - http://proxy1:8080
+  #      - http://proxy2:8080
+  #
+  #  using_tor_proxy: true
+  #
+  # Extra seconds to add in order to account for the time taken by the proxy
+  #
+  #  extra_proxy_timeout: 10.0
+  #
+```
 
-`request_timeout` :
+**`request_timeout` :**
+
 Global timeout of the requests made to others engines in seconds.  A bigger
 timeout will allow to wait for answers from slow engines, but in consequence
 will slow SearXNG reactivity (the result page may take the time specified in the
-timeout to load).  Can be override by `timeout` in the \[settings engines]\(#settings engines).
+timeout to load).  Can be override by `timeout` in the [settings engines](https://docs.searxng.org/admin/settings/settings_engines.html#settings-engines).
 
-`useragent_suffix` :
+**`useragent_suffix` :**
+
 Suffix to add when an engine's User-Agent is set via searxng\_useragent().
 Contact info here may be useful to avoid an engine blocking you.
 
-`pool_connections` :
-Maximum number of concurrent connections.  The default is 100.
-See `max_clients` [Pool limit configuration](https://curl-cffi.readthedocs.io/en/latest/api.html#sessions).
+<a id="pool-limit-configuration"></a>
 
-`proxies` :
-Define one or more proxies you wish to use, see [curl\_cffi proxies](https://curl-cffi.readthedocs.io/en/latest/quick_start.html).
+**`pool_connections` :**
+
+Maximum number of concurrent connections.  The default is 100.
+See `max_clients` [Pool limit configuration](https://docs.searxng.org/admin/settings/settings_outgoing.html#pool-limit-configuration).
+
+<a id="curl-cffi-proxies"></a>
+
+**`proxies` :**
+
+Define one or more proxies you wish to use, see [curl\_cffi proxies](https://docs.searxng.org/admin/settings/settings_outgoing.html#curl-cffi-proxies).
 If there are more than one proxy for one protocol (http, https),
 requests to the engines are distributed in a round-robin fashion.
 
@@ -54,7 +62,8 @@ HTTP, HTTPS, SOCKS4, SOCKS5 and SOCKS5h proxies are supported
 (`http://`, `https://`, `socks4://`, `socks5://`, `socks5h://`). You should
 use `socks5h://` when using Tor so hostnames are resolved by the proxy.
 
-`source_ips` :
+**`source_ips` :**
+
 If you use multiple network interfaces, define from which IP the requests must
 be made. Example:
 
@@ -66,24 +75,29 @@ be made. Example:
 - `fe80::60a2:1691:e5a2:ee1f/126` all IP addresses in this network.
 - `[ 192.168.0.1, fe80::/126 ]`
 
-`retries` :
+**`retries` :**
+
 Number of retry in case of an HTTP error.  On each retry, SearXNG uses an
 different proxy and source ip.
 
-`enable_http2` :
+**`enable_http2` :**
+
 Enable by default (HTTP/2).  Set to `false` to force HTTP/1.1.
 HTTP/3 is opt-in per engine (`enable_http3`).
 
-`verify`: : `$SSL_CERT_FILE`, `$SSL_CERT_DIR`
+**`verify`: : `$SSL_CERT_FILE`, `$SSL_CERT_DIR`**
+
 HTTPS verification uses the OS's trust store by default.
 Set a path to use a custom CA file.
 
 In addition to `verify`, SearXNG supports the `$SSL_CERT_FILE` (for a file) and
 `$SSL_CERT_DIR` (for a directory) OpenSSL variables.
 
-`max_redirects` :
+**`max_redirects` :**
+
 30 by default. Maximum redirect before it is an error.
 
-`using_tor_proxy` :
+**`using_tor_proxy` :**
+
 Using tor proxy (`true`) or not (`false`) for all engines.  The default is
-`false` and can be overwritten in the \[settings engines]\(#settings engines)
+`false` and can be overwritten in the [settings engines](https://docs.searxng.org/admin/settings/settings_engines.html#settings-engines)

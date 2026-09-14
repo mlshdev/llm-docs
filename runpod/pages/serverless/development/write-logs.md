@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [serverless/development/write-logs.mdx](https://docs.runpod.io/serverless/development/write-logs)
+> Pinned source for Runpod main: [serverless/development/write-logs.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/serverless/development/write-logs.mdx)
+> Canonical documentation: https://docs.runpod.io/serverless/development/write-logs
 
 # Write logs
 
@@ -92,6 +93,7 @@ def handler(job):
     except Exception as e:
         job_logger.error(f"Job failed with an unexpected exception.", exc_info=True)
         return {"error": f"An unexpected error occurred: {str(e)}"}
+
 
 # Start the Serverless worker
 if __name__ == "__main__":

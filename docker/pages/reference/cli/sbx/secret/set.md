@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_secret_set.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_secret_set.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_secret_set.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_secret_set.yaml)
 
 # sbx secret set
 
@@ -23,7 +23,7 @@ Use --ref or --command to store a secret source instead of the secret value.
 sbx resolves the source on the host when needed and caches the value according
 to the --refresh policy.
 
---ref supports 1Password op:// references and AWS Secrets Manager ARNs. The
+\--ref supports 1Password op\:// references and AWS Secrets Manager ARNs. The
 corresponding op or aws CLI must be installed and authenticated. --command
 runs a shell command and uses its standard output as the secret value.
 
@@ -41,29 +41,29 @@ service secrets, registry credentials are host-only by default:
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--all-sandboxes` |  | Inject registry credentials into every sandbox (requires --registry) |
-| `--command` |  | Use a command's standard output as the secret value |
-| `-f`, `--force` |  | Overwrite an existing secret when --token is used |
-| `--no-verify` |  | Skip checking the --ref or --command source when storing it |
-| `--oauth` |  | Start OAuth flow and store OAuth tokens (openai/global only) With --cloud: openai or anthropic, stored only in the cloud (never the local secrets-engine) |
-| `--password-stdin` |  | Read registry password or token from stdin (use with --registry) |
-| `--ref` |  | Use a 1Password op:// reference or AWS Secrets Manager ARN as the secret source |
-| `--refresh` |  | Secret refresh policy: on-demand or after a duration (default: 55m) |
-| `--registry` |  | Registry hostname for pull credentials (e.g. ghcr.io) |
-| `--sandbox` |  | Scope the secret to one sandbox instead of its default scope |
-| `--show-error` |  | Show resolver standard error if the initial check fails (may contain secrets) |
-| `-t`, `--token` |  | Secret value (less secure: visible in shell history) |
-| `--username` |  | Registry username (use with --registry; omit for token-only auth) |
+| Option             | Default | Description                                                                                                                                               |
+| ------------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--all-sandboxes`  |         | Inject registry credentials into every sandbox (requires --registry)                                                                                      |
+| `--command`        |         | Use a command's standard output as the secret value                                                                                                       |
+| `-f`, `--force`    |         | Overwrite an existing secret when --token is used                                                                                                         |
+| `--no-verify`      |         | Skip checking the --ref or --command source when storing it                                                                                               |
+| `--oauth`          |         | Start OAuth flow and store OAuth tokens (openai/global only) With --cloud: openai or anthropic, stored only in the cloud (never the local secrets-engine) |
+| `--password-stdin` |         | Read registry password or token from stdin (use with --registry)                                                                                          |
+| `--ref`            |         | Use a 1Password op\:// reference or AWS Secrets Manager ARN as the secret source                                                                          |
+| `--refresh`        |         | Secret refresh policy: on-demand or after a duration (default: 55m)                                                                                       |
+| `--registry`       |         | Registry hostname for pull credentials (e.g. ghcr.io)                                                                                                     |
+| `--sandbox`        |         | Scope the secret to one sandbox instead of its default scope                                                                                              |
+| `--show-error`     |         | Show resolver standard error if the initial check fails (may contain secrets)                                                                             |
+| `-t`, `--token`    |         | Secret value (less secure: visible in shell history)                                                                                                      |
+| `--username`       |         | Registry username (use with --registry; omit for token-only auth)                                                                                         |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--cloud` |  | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (https://api.sandboxes-cloud.docker.com). Set DOCKER_CLOUD_API_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option            | Default                                  | Description                                                                                                                                                                                                             |
+| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
+| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
+| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
 
 ## Examples
 

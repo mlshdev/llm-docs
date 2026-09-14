@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/xindex.sgml#xindex](https://www.postgresql.org/docs/18/xindex.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/xindex.sgml#xindex](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/xindex.sgml%23xindex)
+> Canonical documentation: https://www.postgresql.org/docs/18/xindex.html
 
 # Interfacing Extensions to Indexes
 

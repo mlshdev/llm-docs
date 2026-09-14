@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/enable-modules-in-code-node.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/enable-modules-in-code-node.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/enable-modules-in-code-node.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/configure-n8n/basic-configuration/configuration-examples/enable-modules-in-code-node.md)
 
 # Enable modules in Code node <a id="enable-modules-in-code-node"></a>
 
@@ -8,16 +8,16 @@ For security reasons, the Code node restricts importing modules. It's possible t
 - `NODE_FUNCTION_ALLOW_EXTERNAL`: For external modules sourced from n8n/node\_modules directory. External module support is disabled when an environment variable isn't set.
 
 ```bash
-# Allows usage of all builtin modules <a id="allows-usage-of-all-builtin-modules"></a>
+# Allows usage of all builtin modules <a href="#allows-usage-of-all-builtin-modules" id="allows-usage-of-all-builtin-modules"></a>
 export NODE_FUNCTION_ALLOW_BUILTIN=*
 
-# Allows usage of only crypto <a id="allows-usage-of-only-crypto"></a>
+# Allows usage of only crypto <a href="#allows-usage-of-only-crypto" id="allows-usage-of-only-crypto"></a>
 export NODE_FUNCTION_ALLOW_BUILTIN=crypto
 
-# Allows usage of only crypto and fs <a id="allows-usage-of-only-crypto-and-fs"></a>
+# Allows usage of only crypto and fs <a href="#allows-usage-of-only-crypto-and-fs" id="allows-usage-of-only-crypto-and-fs"></a>
 export NODE_FUNCTION_ALLOW_BUILTIN=crypto,fs
 
-# Allow usage of external npm modules. <a id="allow-usage-of-external-npm-modules"></a>
+# Allow usage of external npm modules. <a href="#allow-usage-of-external-npm-modules" id="allow-usage-of-external-npm-modules"></a>
 export NODE_FUNCTION_ALLOW_EXTERNAL=moment,lodash
 ```
 

@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/keyConcepts/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/keyConcepts/_index.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/keyConcepts/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/keyConcepts/_index.md)
 
 ## Data model
 
@@ -27,8 +27,8 @@ what is actually measured to every person who reads it, just like **variable nam
 Every metric can contain additional meta-information in the form of label-value pairs:
 
 ```
-requests_total{path="/", code="200"}
-requests_total{path="/", code="403"}
+requests_total{path="/", code="200"} 
+requests_total{path="/", code="403"} 
 ```
 
 The meta-information - a set of `labels` in curly braces - gives us a context for which `path` and with what `code`
@@ -40,9 +40,9 @@ Actually, the metric name is also a label with a special name `__name__`.
 The `__name__` key could be omitted *(available from v1.111.0)* for simplicity. So the following series are identical:
 
 ```
-requests_total{path="/", code="200"}
-{__name__="requests_total", path="/", code="200"}
-{"requests_total", path="/", code="200"}
+requests_total{path="/", code="200"} 
+{__name__="requests_total", path="/", code="200"} 
+{"requests_total", path="/", code="200"} 
 ```
 
 Labels can be automatically attached to the [time series](#time-series)
@@ -778,14 +778,14 @@ foo_bar
 A single metric name may correspond to multiple time series with distinct label sets. For example:
 
 ```metricsql
-requests_total{path="/", code="200"}
-requests_total{path="/", code="403"}
+requests_total{path="/", code="200"} 
+requests_total{path="/", code="403"} 
 ```
 
 To select only time series with a specific label value, specify the matching filter in curly braces:
 
 ```metricsql
-requests_total{code="200"}
+requests_total{code="200"} 
 ```
 
 The query above returns all time series with the name `requests_total` and label `code="200"`. We use the operator `=` to

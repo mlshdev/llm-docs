@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [runpodctl/reference/runpodctl-registry.mdx](https://docs.runpod.io/runpodctl/reference/runpodctl-registry)
+> Pinned source for Runpod main: [runpodctl/reference/runpodctl-registry.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/runpodctl/reference/runpodctl-registry.mdx)
+> Canonical documentation: https://docs.runpod.io/runpodctl/reference/runpodctl-registry
 
 # registry
 

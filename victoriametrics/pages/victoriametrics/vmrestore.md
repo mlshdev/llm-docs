@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmrestore.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmrestore.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmrestore.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmrestore.md)
 
 `vmrestore` restores data from backups created by [vmbackup](https://docs.victoriametrics.com/victoriametrics/vmbackup/).
 

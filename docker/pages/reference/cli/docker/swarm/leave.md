@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_swarm_leave.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_swarm_leave.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_swarm_leave.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_swarm_leave.yaml)
 
 # docker swarm leave
 
@@ -19,9 +19,9 @@ no longer be used after the manager leaves, such as in a single-node swarm.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--force` |  | Force this node to leave the swarm, ignoring warnings |
+| Option          | Default | Description                                           |
+| --------------- | ------- | ----------------------------------------------------- |
+| `-f`, `--force` |         | Force this node to leave the swarm, ignoring warnings |
 
 ## Examples
 
@@ -46,5 +46,5 @@ Node left the default swarm.
 
 The node will still appear in the node list, and marked as `down`. It no longer
 affects swarm operation, but a long list of `down` nodes can clutter the node
-list. To remove an inactive node from the list, use the [`node rm`](/reference/cli/docker/node/rm/)
+list. To remove an inactive node from the list, use the [`node rm`](https://docs.docker.com/reference/cli/docker/node/rm/)
 command.

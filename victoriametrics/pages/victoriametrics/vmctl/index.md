@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmctl/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/_index.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmctl/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/_index.md)
 
 VictoriaMetrics command-line tool (**vmctl**) provides the following migration modes:
 
@@ -310,6 +310,7 @@ NAME:
 
 USAGE:
    vmctl [global options] command [command options]
+
 
 COMMANDS:
    opentsdb      Migrate time series from OpenTSDB

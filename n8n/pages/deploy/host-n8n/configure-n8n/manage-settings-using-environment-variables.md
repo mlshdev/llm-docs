@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/manage-settings-using-environment-variables.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/configure-n8n/manage-settings-using-environment-variables.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/manage-settings-using-environment-variables.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/configure-n8n/manage-settings-using-environment-variables.md)
 
 # Manage instance settings using environment variables <a id="manage-instance-settings-using-environment-variables"></a>
 
@@ -177,14 +177,14 @@ Manage the set of installed [community packages](https://docs.n8n.io/integration
 The following example configures an instance with all six areas managed by environment variables. It creates the instance owner, configures OIDC SSO, enforces MFA, registers a webhook log streaming destination, enables MCP access, and manages a community package.
 
 ```bash
-# Instance owner <a id="instance-owner"></a>
+# Instance owner <a href="#instance-owner" id="instance-owner"></a>
 export N8N_INSTANCE_OWNER_MANAGED_BY_ENV=true
 export N8N_INSTANCE_OWNER_EMAIL=<owner-email>
 export N8N_INSTANCE_OWNER_FIRST_NAME=<first-name>
 export N8N_INSTANCE_OWNER_LAST_NAME=<last-name>
 export N8N_INSTANCE_OWNER_PASSWORD_HASH=<bcrypt-hash>
 
-# SSO using OIDC <a id="sso-using-oidc"></a>
+# SSO using OIDC <a href="#sso-using-oidc" id="sso-using-oidc"></a>
 export N8N_SSO_MANAGED_BY_ENV=true
 export N8N_SSO_USER_ROLE_PROVISIONING=instance_role
 export N8N_SSO_OIDC_LOGIN_ENABLED=true
@@ -192,21 +192,21 @@ export N8N_SSO_OIDC_CLIENT_ID=<client-id>
 export N8N_SSO_OIDC_CLIENT_SECRET=<client-secret>
 export N8N_SSO_OIDC_DISCOVERY_ENDPOINT=<discovery-url>
 
-# Security policy <a id="security-policy"></a>
+# Security policy <a href="#security-policy" id="security-policy"></a>
 export N8N_SECURITY_POLICY_MANAGED_BY_ENV=true
 export N8N_MFA_ENFORCED_ENABLED=true
 export N8N_PERSONAL_SPACE_PUBLISHING_ENABLED=false
 export N8N_PERSONAL_SPACE_SHARING_ENABLED=false
 
-# Log streaming <a id="log-streaming"></a>
+# Log streaming <a href="#log-streaming" id="log-streaming"></a>
 export N8N_LOG_STREAMING_MANAGED_BY_ENV=true
 export N8N_LOG_STREAMING_DESTINATIONS='[{"type":"webhook","url":"https://logs.example.com/n8n"}]'
 
-# MCP <a id="mcp"></a>
+# MCP <a href="#mcp" id="mcp"></a>
 export N8N_MCP_MANAGED_BY_ENV=true
 export N8N_MCP_ACCESS_ENABLED=true
 
-# Community packages <a id="community-packages"></a>
+# Community packages <a href="#community-packages" id="community-packages"></a>
 export N8N_COMMUNITY_PACKAGES_MANAGED_BY_ENV=true
 export N8N_COMMUNITY_PACKAGES='[{"name":"n8n-nodes-foo","version":"1.2.3"}]'
 ```

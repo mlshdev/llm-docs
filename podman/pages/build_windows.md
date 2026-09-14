@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.1.1: [build_windows.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/build_windows.md)
+> Pinned source for Podman v6.1.1: [build_windows.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/build_windows.md)
 
 # Building the Podman client and client installer on Windows
 
@@ -207,7 +207,9 @@ should be there:
 ```pwsh
 Get-ChildItem .\bin\windows\
 
+
     Directory: C:\Users\mario\Git\podman\bin\windows
+
 
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
@@ -232,7 +234,9 @@ successfully, check the content of the .\bin\windows\` folder.
 ```pwsh
 Get-ChildItem .\bin\windows\
 
+
     Directory: C:\Users\mario\Git\podman\bin\windows
+
 
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----

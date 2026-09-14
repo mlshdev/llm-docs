@@ -1,4 +1,4 @@
-> Release-pinned source for discord.py-self v2.1.0: [README.rst](https://github.com/dolfies/discord.py-self/blob/6de18b4cb40dd42625a535f52d9715c71399ffb3/README.rst)
+> Pinned source for discord.py-self v2.1.0: [README.rst](https://github.com/dolfies/discord.py-self/blob/6de18b4cb40dd42625a535f52d9715c71399ffb3/README.rst)
 
 # discord.py-self
 

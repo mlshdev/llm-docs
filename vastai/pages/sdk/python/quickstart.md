@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [sdk/python/quickstart.mdx](https://docs.vast.ai/sdk/python/quickstart)
+> Pinned source for Vast.ai main: [sdk/python/quickstart.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/sdk/python/quickstart.mdx)
+> Canonical documentation: https://docs.vast.ai/sdk/python/quickstart
 
 # SDK Hello World
 

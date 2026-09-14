@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/stream-aggregation/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/stream-aggregation/_index.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/stream-aggregation/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/stream-aggregation/_index.md)
 
 [vmagent](https://docs.victoriametrics.com/victoriametrics/vmagent/) and [single-node VictoriaMetrics](https://docs.victoriametrics.com/victoriametrics/single-server-victoriametrics/)
 can aggregate incoming [samples](https://docs.victoriametrics.com/victoriametrics/keyconcepts/#raw-samples) in streaming mode **by time** and **by labels** before data is written to remote storage

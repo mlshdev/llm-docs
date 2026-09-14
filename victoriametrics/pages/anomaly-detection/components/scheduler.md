@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/components/scheduler.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/scheduler.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/components/scheduler.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/components/scheduler.md)
 
 Scheduler defines how often to run and make inferences, as well as what timerange to use to train the model.
 Is specified in `scheduler` section of a config for VictoriaMetrics Anomaly Detection.
@@ -123,8 +123,8 @@ schedulers:
   periodic_scheduler_alias:
     class: "periodic"
     # (or class: "scheduler.periodic.PeriodicScheduler" for versions before v1.13.0, without class alias support)
-    fit_window: "14d"
-    infer_every: "1m"
+    fit_window: "14d" 
+    infer_every: "1m" 
     scatter_infer_jobs: true  # Distribute infer jobs evenly across the infer interval to reduce synchronized bursts.
     fit_every: "1h"
     start_from: "20:00"  # If launched before 20:00 (local Kyiv time), the first run starts today at 20:00. Otherwise, it starts tomorrow at 20:00.

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/get-started/docker-concepts/the-basics/what-is-a-container.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/get-started/docker-concepts/the-basics/what-is-a-container.md)
+> Pinned source for Docker main: [content/get-started/docker-concepts/the-basics/what-is-a-container.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/get-started/docker-concepts/the-basics/what-is-a-container.md)
 
 # What is a container?
 

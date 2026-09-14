@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_kill.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_kill.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_kill.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_kill.yaml)
 
 # docker compose kill
 
@@ -16,13 +16,13 @@ $ docker compose kill -s SIGINT
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--remove-orphans` |  | Remove containers for services not defined in the Compose file |
-| `-s`, `--signal` | `SIGKILL` | SIGNAL to send to the container |
+| Option             | Default   | Description                                                    |
+| ------------------ | --------- | -------------------------------------------------------------- |
+| `--remove-orphans` |           | Remove containers for services not defined in the Compose file |
+| `-s`, `--signal`   | `SIGKILL` | SIGNAL to send to the container                                |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--dry-run` |  | Execute command in dry run mode |
+| Option      | Default | Description                     |
+| ----------- | ------- | ------------------------------- |
+| `--dry-run` |         | Execute command in dry run mode |

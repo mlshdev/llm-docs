@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_image_push.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_image_push.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_image_push.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_image_push.yaml)
 
 # docker image push
 
@@ -13,7 +13,7 @@ Upload an image to a registry
 Use `docker image push` to share your images to the [Docker Hub](https://hub.docker.com)
 registry or to a self-hosted one.
 
-Refer to the [`docker image tag`](/reference/cli/docker/image/tag/) reference for more information
+Refer to the [`docker image tag`](https://docs.docker.com/reference/cli/docker/image/tag/) reference for more information
 about valid image and tag names.
 
 Killing the `docker image push` process, for example by pressing `CTRL-c` while it is
@@ -23,29 +23,29 @@ Progress bars are shown during docker push, which show the uncompressed size.
 The actual amount of data that's pushed will be compressed before sending, so
 the uploaded size will not be reflected by the progress bar.
 
-Registry credentials are managed by [docker login](/reference/cli/docker/login/).
+Registry credentials are managed by [docker login](https://docs.docker.com/reference/cli/docker/login/).
 
 ### Concurrent uploads
 
 By default the Docker daemon will push five layers of an image at a time.
 If you are on a low bandwidth connection this may cause timeout issues and you may want to lower
 this via the `--max-concurrent-uploads` daemon option. See the
-[daemon documentation](/reference/cli/dockerd/) for more details.
+[daemon documentation](https://docs.docker.com/reference/cli/dockerd/) for more details.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-a`, `--all-tags` |  | Push all tags of an image to the repository |
-| `--platform` |  | Push a platform-specific manifest as a single-platform image to the registry. Image index won't be pushed, meaning that other manifests, including attestations won't be preserved. 'os[/arch[/variant]]': Explicit platform (eg. linux/amd64) (API 1.46+) |
-| `-q`, `--quiet` |  | Suppress verbose output |
+| Option             | Default | Description                                                                                                                                                                                                                                                  |
+| ------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `-a`, `--all-tags` |         | Push all tags of an image to the repository                                                                                                                                                                                                                  |
+| `--platform`       |         | Push a platform-specific manifest as a single-platform image to the registry. Image index won't be pushed, meaning that other manifests, including attestations won't be preserved. 'os\[/arch\[/variant]]': Explicit platform (eg. linux/amd64) (API 1.46+) |
+| `-q`, `--quiet`    |         | Suppress verbose output                                                                                                                                                                                                                                      |
 
 ## Examples
 
 ### Push a new image to a registry
 
 First save the new image by finding the container ID (using [`docker container
-ls`](/reference/cli/docker/container/ls/)) and then committing it to a new image name. Note that
+ls`](https://docs.docker.com/reference/cli/docker/container/ls/)) and then committing it to a new image name. Note that
 only `a-z0-9-_.` are allowed when naming images:
 
 ```console

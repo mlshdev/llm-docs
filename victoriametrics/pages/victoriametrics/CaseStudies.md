@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/CaseStudies.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/CaseStudies.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/CaseStudies.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/CaseStudies.md)
 
 Below please find public case studies and talks from VictoriaMetrics users. You can also join our [community Slack channel](https://slack.victoriametrics.com/)
 where you can chat with VictoriaMetrics users to get additional references, reviews and case studies.

@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/mvcc.sgml#mvcc-serialization-failure-handling](https://www.postgresql.org/docs/18/mvcc-serialization-failure-handling.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/mvcc.sgml#mvcc-serialization-failure-handling](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/mvcc.sgml%23mvcc-serialization-failure-handling)
+> Canonical documentation: https://www.postgresql.org/docs/18/mvcc-serialization-failure-handling.html
 
 # Serialization Failure Handling
 

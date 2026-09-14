@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/mcp/docker_mcp.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp.yaml)
+> Pinned source for Docker main: [data/cli/mcp/docker_mcp.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp.yaml)
 
 # docker mcp
 
@@ -9,14 +9,14 @@ Manage MCP servers and clients
 The MCP Gateway is Docker's open-source enterprise solution for orchestrating
 Model Context Protocol (MCP) servers and clients.
 
-For more information see [Docker MCP](/ai/mcp-gateway/) and
+For more information see [Docker MCP](https://docs.docker.com/ai/mcp-gateway/) and
 the public [GitHub repository](https://github.com/docker/mcp-gateway).
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-v`, `--version` |  | Print version information and quit |
+| Option            | Default | Description                        |
+| ----------------- | ------- | ---------------------------------- |
+| `-v`, `--version` |         | Print version information and quit |
 
 ## Subcommands
 

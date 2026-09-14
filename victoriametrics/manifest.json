@@ -1,5 +1,6 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
+  "generatorVersion": 3,
   "project": "victoriametrics",
   "title": "VictoriaMetrics",
   "homepage": "https://docs.victoriametrics.com/",
@@ -9,9 +10,20 @@
   "releasePublishedAt": "2026-08-31T10:58:41Z",
   "sourceCommit": "83fc70c6aced8c99a0a445a872ee891191b98517",
   "documentCount": 115,
+  "indexComplete": true,
+  "corpusVolumes": [
+    {
+      "name": "llms-full.txt",
+      "byteLength": 5382088,
+      "documentCount": 115,
+      "sha256": "bc59f75dc101123bb5f4bc26f031ab2c3fdac532b441b9a9c68f5c4d794a577c"
+    }
+  ],
+  "outputDigest": "7dee5ac6de2ac7c56e1db912919d85e37e5aef2c1255a59a60e8c39f330cd283",
   "notes": [
     "Pages follow the Hugo `menu.docs` navigation declared in docs/ at the immutable release tag.",
     "Fragments pulled in by `{{% content %}}` are inlined into the page that renders them and are not published separately.",
     "Hugo shortcodes are expanded to plain Markdown; presentation-only attribute lists are dropped."
-  ]
+  ],
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
 }

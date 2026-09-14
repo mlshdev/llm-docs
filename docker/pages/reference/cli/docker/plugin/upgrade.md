@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_plugin_upgrade.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_plugin_upgrade.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_plugin_upgrade.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_plugin_upgrade.yaml)
 
 # docker plugin upgrade
 
@@ -15,10 +15,10 @@ The plugin must be disabled before running the upgrade.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--grant-all-permissions` |  | Grant all permissions necessary to run the plugin |
-| `--skip-remote-check` |  | Do not check if specified remote plugin matches existing plugin image |
+| Option                    | Default | Description                                                           |
+| ------------------------- | ------- | --------------------------------------------------------------------- |
+| `--grant-all-permissions` |         | Grant all permissions necessary to run the plugin                     |
+| `--skip-remote-check`     |         | Do not check if specified remote plugin matches existing plugin image |
 
 ## Examples
 

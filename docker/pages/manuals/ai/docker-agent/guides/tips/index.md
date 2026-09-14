@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/guides/tips/index.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/docker-agent/docs/guides/tips/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/guides/tips/index.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/docker-agent/docs/guides/tips/index.md)
 
 *Expert guidance for building effective, efficient, and secure agents.*
 
@@ -302,14 +302,14 @@ agents:
     model: openai/gpt-4o
     # Good: specific and actionable
     description: |
-      Frontend specialist. Handles React, TypeScript, CSS,
+      Frontend specialist. Handles React, TypeScript, CSS, 
       UI components, and browser-related issues.
 
   backend:
     model: openai/gpt-4o
     # Good: clear domain boundaries
     description: |
-      Backend specialist. Handles APIs, databases,
+      Backend specialist. Handles APIs, databases, 
       server logic, and Go/Python code.
 
   devops:

@@ -7,7 +7,9 @@ Source commit: 9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d
 # Document: Building the project
 
 Source path: BUILDING.md
-Canonical source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/BUILDING.md
+Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/BUILDING.md
+Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/BUILDING.md
+Description: To build the container project, you need:
 
 # Building the project
 
@@ -209,7 +211,9 @@ Run `make pre-commit` to install a pre-commit hook that ensures that your change
 # Document: container
 
 Source path: README.md
-Canonical source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/README.md
+Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/README.md
+Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/README.md
+Description: container is a tool that you can use to create and run Linux containers as lightweight virtual machines on your Mac. It's written in Swift, and optimized for Apple silicon.
 
 # container
 
@@ -315,7 +319,9 @@ The container project is currently under active development. Its stability, both
 # Document: How to file effective bug reports
 
 Source path: docs/bug-report-how-to.md
-Canonical source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/bug-report-how-to.md
+Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/bug-report-how-to.md
+Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/bug-report-how-to.md
+Description: This guide helps you collect the essential information needed to file effective bug reports. Providing complete and accurate information helps maintainers reproduce and fix issues faster.
 
 # How to file effective bug reports
 
@@ -487,7 +493,9 @@ container system logs
 # Document: Container CLI Command Reference
 
 Source path: docs/command-reference.md
-Canonical source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/command-reference.md
+Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/command-reference.md
+Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/command-reference.md
+Description: Command availability may vary depending on your macOS version.
 
 # Container CLI Command Reference
 
@@ -2265,7 +2273,9 @@ container k8s write-config --name my-cluster --kubeconfig ~/.kube/my-cluster.kub
 # Document: Inspecting containers and images
 
 Source path: docs/container-inspection.md
-Canonical source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-inspection.md
+Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-inspection.md
+Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-inspection.md
+Description: Get detailed, machine-readable information about your containers and images.
 
 # Inspecting containers and images
 
@@ -2344,7 +2354,9 @@ container, set a custom MAC address, and create isolated networks.
 # Document: Container machine
 
 Source path: docs/container-machine.md
-Canonical source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-machine.md
+Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-machine.md
+Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-machine.md
+Description: Container machine provides a highly integrated Linux environment that works seamlessly on your Mac. Container machines are fast, lightweight and persistent. They are based on standard OCI images that can be built and sh…
 
 # Container machine
 
@@ -2500,7 +2512,9 @@ By default, `container` runs a built-in setup script on first boot to provision 
 # Document: config.toml reference
 
 Source path: docs/container-system-config.md
-Canonical source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-system-config.md
+Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-system-config.md
+Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/container-system-config.md
+Description: For a guided walk-through on setting default values, see Container system config tutorial.
 
 # `config.toml` reference
 
@@ -2669,7 +2683,9 @@ Quoted string. IPv4 example: `"192.168.100.0/24"`. IPv6 example: `"fd00:abcd::/6
 # Document: Host integration
 
 Source path: docs/host-integration.md
-Canonical source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/host-integration.md
+Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/host-integration.md
+Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/host-integration.md
+Description: Bridge your container and your Mac: forward your SSH agent in, or reach a host service from inside a container.
 
 # Host integration
 
@@ -2683,7 +2699,7 @@ Use the `--ssh` option to mount the macOS SSH authentication socket into your co
 When you use `--ssh`, it performs the equivalent of the options `--volume "${SSH_AUTH_SOCK}:/var/host-services/ssh-auth.sock" --env SSH_AUTH_SOCK=/var/host-services/ssh-auth.sock"`. The added benefit of `--ssh` is that when you stop your container, log out, log back in, and restart your container, the system automatically updates the target path for the socket mount to the new value of `SSH_AUTH_SOCK`, so that socket forwarding continues to function.
 
 ```console
-% container run -it --rm --ssh alpine:latest sh
+% container run -it --rm --ssh alpine:latest sh 
 / # env
 SHLVL=1
 HOME=/root
@@ -2765,7 +2781,9 @@ container names](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9b
 # Document: How-to
 
 Source path: docs/how-to.md
-Canonical source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/how-to.md
+Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/how-to.md
+Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/how-to.md
+Description: container has a lot of surface area beyond the basic tutorial. Each topic below has its own guide — pick the one that matches what you're trying to do.
 
 # How-to
 
@@ -2796,7 +2814,9 @@ Canonical source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9
 # Document: Kubernetes clusters
 
 Source path: docs/kubernetes.md
-Canonical source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/kubernetes.md
+Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/kubernetes.md
+Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/kubernetes.md
+Description: Kubernetes is an open-source orchestration platform for automating deployment, scaling, and management of containerized workloads across clusters of machines. With container, you can run local Kubernetes clusters for de…
 
 # Kubernetes clusters
 
@@ -3009,7 +3029,9 @@ container k8s load-image --name feature-payments my-service:feature-payments
 # Document: Logs
 
 Source path: docs/logs.md
-Canonical source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/logs.md
+Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/logs.md
+Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/logs.md
+Description: View output from your containerized applications, VM boot logs, and the container system's own logs.
 
 # Logs
 
@@ -3082,7 +3104,9 @@ issue.
 # Document: Multiplatform images
 
 Source path: docs/multiplatform-images.md
-Canonical source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/multiplatform-images.md
+Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/multiplatform-images.md
+Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/multiplatform-images.md
+Description: Build, run, and publish container images that support both Apple silicon and x86-64.
 
 # Multiplatform images
 
@@ -3124,7 +3148,9 @@ container image push registry.example.com/fido/web-test:latest
 # Document: Networking
 
 Source path: docs/networking.md
-Canonical source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/networking.md
+Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/networking.md
+Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/networking.md
+Description: Learn how container networks containers with one another, with the host, and with external systems.
 
 # Networking
 
@@ -3352,7 +3378,9 @@ These settings apply to networks created without explicit `--subnet` or `--subne
 # Document: Resource usage
 
 Source path: docs/resource-usage.md
-Canonical source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/resource-usage.md
+Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/resource-usage.md
+Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/resource-usage.md
+Description: Configure CPU, memory, and disk resources for your containers and builds, monitor usage while they run, and reclaim disk space afterward.
 
 # Resource usage
 
@@ -3520,7 +3548,9 @@ mounts.
 # Document: Runtime configuration
 
 Source path: docs/runtime-configuration.md
-Canonical source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/runtime-configuration.md
+Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/runtime-configuration.md
+Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/runtime-configuration.md
+Description: Configure what runs inside and around your container's init process: Linux capabilities, path masking, nested virtualization, and the init process itself.
 
 # Runtime configuration
 
@@ -3736,7 +3766,9 @@ See [Logs](https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a
 # Document: Shell completions
 
 Source path: docs/shell-completions.md
-Canonical source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/shell-completions.md
+Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/shell-completions.md
+Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/shell-completions.md
+Description: Generate and install completion scripts for zsh, bash, and fish.
 
 # Shell completions
 
@@ -3816,7 +3848,9 @@ container --generate-completion-script fish > ~/.config/fish/completions/contain
 # Document: Technical Overview
 
 Source path: docs/technical-overview.md
-Canonical source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/technical-overview.md
+Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/technical-overview.md
+Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/technical-overview.md
+Description: A brief description and technical overview of container.
 
 # Technical Overview
 
@@ -3900,7 +3934,9 @@ Normally, vmnet creates the container network using the CIDR address 192.168.64.
 # Document: Customize container default configuration values
 
 Source path: docs/tutorials/container-system-config-tutorial.md
-Canonical source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/tutorials/container-system-config-tutorial.md
+Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/tutorials/container-system-config-tutorial.md
+Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/tutorials/container-system-config-tutorial.md
+Description: Take a guided tour of setting configurations for container CLI commands and services.
 
 # Customize `container` default configuration values
 
@@ -4015,7 +4051,9 @@ container system property list --format json
 # Document: Tutorial
 
 Source path: docs/tutorials/start-here.md
-Canonical source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/tutorials/start-here.md
+Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/tutorials/start-here.md
+Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/tutorials/start-here.md
+Description: Take a guided tour of container by building, running, and publishing a simple web server image.
 
 # Tutorial
 
@@ -4388,7 +4426,9 @@ container system stop
 # Document: Resource limits (ulimits)
 
 Source path: docs/ulimits.md
-Canonical source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/ulimits.md
+Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/ulimits.md
+Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/ulimits.md
+Description: Set per-process resource limits for your containers.
 
 # Resource limits (ulimits)
 
@@ -4474,7 +4514,9 @@ cpu time                   (seconds, -t) 60
 # Document: Mounts and volumes
 
 Source path: docs/volumes.md
-Canonical source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/volumes.md
+Pinned source: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/volumes.md
+Canonical documentation: https://github.com/apple/container/blob/9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d/docs/volumes.md
+Description: Share data from your host with containers, create named volumes with better performance and lifecycle guarantees than bind mounts, and mount temporary, memory-backed storage with tmpfs.
 
 # Mounts and volumes
 

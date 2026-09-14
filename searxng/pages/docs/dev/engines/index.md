@@ -1,64 +1,106 @@
-> Commit-pinned source for SearXNG master: [docs/dev/engines/index.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/index.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/index.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/index.rst)
 
-.. \_engine implementations:
+<a id="engine-implementations"></a>
 
 # Engine Implementations
 
+- [enginelib](https://docs.searxng.org/enginelib.html)
+- [engines](https://docs.searxng.org/engines.html)
+- [engine\_overview](https://docs.searxng.org/engine_overview.html)
+
 # ResultList and engines
 
-.. autoclass:: searx.result\_types.ResultList
+<a id="api-searx-result-types-resultlist"></a>
 
-.. autoclass:: searx.result\_types.EngineResults
+#### `ResultList(list[Result | LegacyResult], abc.ABC)`
+
+Base class of all result lists (abstract).
+
+<a id="api-searx-result-types-engineresults"></a>
+
+#### `EngineResults(ResultList)`
+
+Result list that should be used by engine developers.  For convenience,
+engine developers don't need to import types / see `ResultList.types`.
+
+```python
+from searx.result_types import EngineResults
+...
+def response(resp) -> EngineResults:
+    res = EngineResults()
+    ...
+    res.add( res.types.Answer(answer="lorem ipsum ..", url="https://example.org") )
+    ...
+    return res
+```
 
 # Engine Types
 
-The :py:obj:`engine_type <searx.enginelib.Engine.engine_type>` of an engine
-determines which search processor is used by
+The `engine_type` of an engine
+determines which [search processor](https://docs.searxng.org/src/searx.search.processors.html#searx-search-processors) is used by
 the engine.
 
 In this section a list of the engines that are documented is given, a complete
-list of the engines can be found in the source under: :origin:`searx/engines`.
+list of the engines can be found in the source under: [searx/engines](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/engines).
 
-.. \_online engines:
+<a id="online-engines"></a>
 
 ## Online Engines
 
 ### info
 
-- :py:obj:`processors.online <searx.search.processors.online>`
+- `processors.online`
 
-.. \_offline engines:
+- [demo/demo\_online](https://docs.searxng.org/demo/demo_online.html)
+
+- [xpath](https://docs.searxng.org/xpath.html)
+
+- [mediawiki](https://docs.searxng.org/mediawiki.html)
+
+- [json\_engine](https://docs.searxng.org/json_engine.html)
+
+- [online/\*](https://docs.searxng.org/online/*.html)
+
+<a id="offline-engines"></a>
 
 ## Offline Engines
 
 ### info
 
-- :py:obj:`processors.offline <searx.search.processors.offline>`
+- `processors.offline`
 
-.. \_online url search:
+- [offline\_concept](https://docs.searxng.org/offline_concept.html)
+
+- [demo/demo\_offline](https://docs.searxng.org/demo/demo_offline.html)
+
+- [offline/\*](https://docs.searxng.org/offline/*.html)
+
+<a id="online-url-search"></a>
 
 ## Online URL Search
 
 ### info
 
-- :py:obj:`processors.online_url_search <searx.search.processors.online_url_search>`
+- `processors.online_url_search`
 
-.. \_online currency:
+- [online\_url\_search/\*](https://docs.searxng.org/online_url_search/*.html)
+
+<a id="online-currency"></a>
 
 ## Online Currency
 
 ### info
 
-- :py:obj:`processors.online_currency <searx.search.processors.online_currency>`
+- `processors.online_currency`
 
 *no engine of this type is documented yet / coming soon*
 
-.. \_online dictionary:
+<a id="online-dictionary"></a>
 
 ## Online Dictionary
 
 ### info
 
-- :py:obj:`processors.online_dictionary <searx.search.processors.online_dictionary>`
+- `processors.online_dictionary`
 
 *no engine of this type is documented yet / coming soon*

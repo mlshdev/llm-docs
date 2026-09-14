@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/pgbuffercache.sgml#pgbuffercache](https://www.postgresql.org/docs/18/pgbuffercache.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/pgbuffercache.sgml#pgbuffercache](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/pgbuffercache.sgml%23pgbuffercache)
+> Canonical documentation: https://www.postgresql.org/docs/18/pgbuffercache.html
 
 # pg_buffercache — inspect PostgreSQL buffer cache state
 
@@ -223,11 +224,13 @@ regression=# SELECT n.nspname, c.relname, count(*) AS buffers
  public     | spgist_text_tbl        |     182
 (10 rows)
 
+
 regression=# SELECT * FROM pg_buffercache_summary();
  buffers_used | buffers_unused | buffers_dirty | buffers_pinned | usagecount_avg
 --------------+----------------+---------------+----------------+----------------
           248 |        2096904 |            39 |              0 |       3.141129
 (1 row)
+
 
 regression=# SELECT * FROM pg_buffercache_usage_counts();
  usage_count | buffers | dirty | pinned

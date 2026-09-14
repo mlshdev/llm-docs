@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/gha.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/gha.md)
+> Pinned source for Docker main: [content/guides/gha.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/gha.md)
 
 # Introduction to GitHub Actions with Docker
 
@@ -169,7 +169,7 @@ Here's the updated snippet:
 ```yaml
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
-
+      
       - name: Build and push Docker image
         uses: docker/build-push-action@v7
         with:
@@ -218,7 +218,7 @@ jobs:
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
-
+      
       - name: Build and push Docker image
         uses: docker/build-push-action@v7
         with:

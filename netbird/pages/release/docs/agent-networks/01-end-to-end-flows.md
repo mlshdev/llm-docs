@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.1: [docs/agent-networks/01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/01-end-to-end-flows.md)
+> Pinned source for NetBird v0.77.1: [docs/agent-networks/01-end-to-end-flows.md](https://github.com/netbirdio/netbird/blob/79a06720b684768b421f0a54f3bb14f22704994f/docs/agent-networks/01-end-to-end-flows.md)
 
 # End-to-end flows
 

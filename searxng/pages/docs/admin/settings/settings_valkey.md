@@ -1,55 +1,54 @@
-> Commit-pinned source for SearXNG master: [docs/admin/settings/settings_valkey.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/settings/settings_valkey.rst)
+> Pinned source for SearXNG master: [docs/admin/settings/settings_valkey.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/settings/settings_valkey.rst)
 
-.. \_settings valkey:
+<a id="settings-valkey"></a>
 
 # `valkey:`
 
-.. \_Valkey:
-<https://valkey.io>
-.. \_Valkey-Installation:
-<https://valkey.io/topics/installation/>
-.. \_There are several ways to specify a database number:
+<a id="valkey"></a>
+<https://valkey.io> <a id="valkey-installation"></a>
+<https://valkey.io/topics/installation/> <a id="there-are-several-ways-to-specify-a-database-number"></a>
 <https://valkey-py.readthedocs.io/en/stable/connections.html#valkey.Valkey.from_url>
 
-A Valkey DB can be connected by an URL, in section \[valkey db]\(#valkey db) you will
+A Valkey\_ DB can be connected by an URL, in section [valkey db](https://docs.searxng.org/src/searx.valkeydb.html#valkey-db) you will
 find a description to test your valkey connection in SearXNG.
 
-`url` : `$SEARXNG_VALKEY_URL`
-URL to connect valkey database. `There are several ways to specify a database
-  number`\_:
+**`url` : `$SEARXNG_VALKEY_URL`**
 
-```text
+URL to connect valkey database. `There are several ways to specify a database
+number`\_:
+
+```python
 valkey://[[username]:[password]]@localhost:6379/0
 valkeys://[[username]:[password]]@localhost:6379/0
 unix://[[username]:[password]]@/path/to/socket.sock?db=0
+```
 
-When using sockets, don't forget to check the access rights on the socket::
+When using sockets, don't forget to check the access rights on the socket:
 
+```python
 ls -la /usr/local/searxng-valkey/run/valkey.sock
 srwxrwx--- 1 searxng-valkey searxng-valkey ... /usr/local/searxng-valkey/run/valkey.sock
+```
 
 In this example read/write access is given to the *searxng-valkey* group.  To
 get access rights to valkey instance (the socket), your SearXNG (or even your
 developer) account needs to be added to the *searxng-valkey* group.
 
-```
-
-.. \_Valkey Developer Notes:
+<a id="valkey-developer-notes"></a>
 
 # Valkey Developer Notes
 
-To set up a local Valkey DB, set the URL connector in your YAML setting:
+To set up a local Valkey\_ DB, set the URL connector in your YAML setting:
 
-.. code:: yaml
-
+```yaml
 valkey:
-url: valkey://localhost:6379/0
+  url: valkey://localhost:6379/0
+```
 
-To install a local Valkey DB from package manager read Valkey-Installation
+To install a local Valkey\_ DB from package manager read [Valkey-Installation](https://docs.searxng.org/admin/settings/settings_valkey.html#valkey-installation)
 or use:
 
-.. code:: sh
-
+```sh
 $ ./utils/searxng.sh install valkey
-
 # restart your SearXNG instance
+```

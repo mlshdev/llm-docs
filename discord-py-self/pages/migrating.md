@@ -1,4 +1,4 @@
-> Release-pinned source for discord.py-self v2.1.0: [docs/migrating.rst](https://github.com/dolfies/discord.py-self/blob/6de18b4cb40dd42625a535f52d9715c71399ffb3/docs/migrating.rst)
+> Pinned source for discord.py-self v2.1.0: [docs/migrating.rst](https://github.com/dolfies/discord.py-self/blob/6de18b4cb40dd42625a535f52d9715c71399ffb3/docs/migrating.rst)
 
 <a id="migrating-2-0"></a>
 
@@ -46,7 +46,7 @@ This method is called after login but before connecting to the discord gateway.
 
 It is intended to be used to setup various bot features in an asynchronous context.
 
-- **Meth:** `~Client.setup_hook` can be defined by subclassing the `Client` class.
+`Client.setup_hook` can be defined by subclassing the `Client` class.
 
 Quick example:
 
@@ -66,7 +66,7 @@ see [migrating\_2\_0\_commands\_extension\_cog\_async](https://discordpy-self.re
 
 ## Abstract Base Classes Changes
 
-- **Ref:** `discord_api_abcs` that inherited from `abc.ABCMeta` now inherit from `typing.Protocol`.
+[discord\_api\_abcs](https://discordpy-self.readthedocs.io/api.html#discord-api-abcs) that inherited from `abc.ABCMeta` now inherit from `typing.Protocol`.
 
 This results in a change of the base metaclass used by these classes
 but this should generally be completely transparent to the user.
@@ -222,7 +222,7 @@ webhook.send('Hello World', username='Foo')
 The following breaking changes have been made:
 
 - Synchronous functionality of `Webhook` and `WebhookMessage` has been split to
-- **Class:** `SyncWebhook` and `SyncWebhookMessage`.
+  `SyncWebhook` and `SyncWebhookMessage`.
 - `WebhookAdapter` class has been removed and the interfaces based on it (`AsyncWebhookAdapter`
   and `RequestsWebhookAdapter`) are now considered implementation detail and should not be depended on.
 - `execute` alias for `Webhook.send`/`SyncWebhook.send` has been removed.
@@ -244,19 +244,14 @@ As an example, here's how these changes look for `Guild.icon` (of `Asset` type):
 In addition to this, `Emoji` and `PartialEmoji` now also share an interface similar to `Asset`'s:
 
 - `Emoji.url` is now of `str` type.
-
 - `Emoji.url_as` has been removed.
-
 - `Emoji.url.read` has been replaced with `Emoji.read`.
-
 - `Emoji.url.save` has been replaced with `Emoji.save`.
 
-- **Class:** `Asset` now always represent an actually existing CDN asset. This means that:
+`Asset` now always represent an actually existing CDN asset. This means that:
 
 - `str(x)` on an `Asset` can no longer return an empty string.
-
 - `bool(x)` on an `Asset` can no longer return `False`.
-
 - Attributes containing an optional `Asset` can now be `None`.
 
 The following were affected by this change:
@@ -640,8 +635,7 @@ The following breaking changes have been made:
 ## Presence Updates Now Have A Separate Event
 
 Presence updates (changes in member's status and activity) now have a separate `on_presence_update` event.
-
-- **Func:** `on_member_update` event is now only called on member updates (changes in nickname, role, pending status, etc.).
+`on_member_update` event is now only called on member updates (changes in nickname, role, pending status, etc.).
 
 From API perspective, these are separate events and as such, this change improves library's consistency with the API.
 Presence updates usually are 90% of all handled events so splitting these should benefit listeners that were only interested
@@ -808,8 +802,7 @@ The return type of the following methods has been changed to an `asynchronous it
 - `Reaction.users`
 
 The `NoMoreItems` exception was removed as calling `anext` or `object.__anext__` on an
-
-- **Term:** `asynchronous iterator` will now raise `StopAsyncIteration`.
+`asynchronous iterator` will now raise `StopAsyncIteration`.
 
 ## Changing certain lists to be lazy sequences instead
 
@@ -1204,8 +1197,8 @@ The following changes have been made:
 
 ## `VoiceProtocol.connect` signature changes.
 
-- **Meth:** `VoiceProtocol.connect` will now be passed 2 keyword only arguments, `self_deaf` and `self_mute`. These indicate
-  whether or not the client should join the voice chat being deafened or muted.
+`VoiceProtocol.connect` will now be passed 2 keyword only arguments, `self_deaf` and `self_mute`. These indicate
+whether or not the client should join the voice chat being deafened or muted.
 
 <a id="migrating-2-0-commands"></a>
 
@@ -1260,7 +1253,7 @@ asyncio.run(main())
 
 ### Converters Are Now Generic Runtime Protocols
 
-- **Class:** `~ext.commands.Converter` is now a `runtime-checkable` `typing.Protocol`.
+`ext.commands.Converter` is now a `runtime-checkable` `typing.Protocol`.
 
 This results in a change of the base metaclass used by these classes
 which may affect user-created classes that inherit from `ext.commands.Converter`.

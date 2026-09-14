@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [api-reference/endpoints/DELETE/endpoints/endpointId.mdx](https://docs.runpod.io/api-reference/endpoints/DELETE/endpoints/endpointId)
+> Pinned source for Runpod main: [api-reference/endpoints/DELETE/endpoints/endpointId.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/api-reference/endpoints/DELETE/endpoints/endpointId.mdx)
+> Canonical documentation: https://docs.runpod.io/api-reference/endpoints/DELETE/endpoints/endpointId
 
 # Delete an endpoint
 
@@ -8,9 +9,11 @@
 
 Delete an endpoint. Use this API reference to review authentication, request parameters, response fields, and errors for this Runpod operation.
 
+**Authentication:** `ApiKey`
+
 **Parameters**
 
-- `endpointId` (path, required): Endpoint ID to delete.
+- `endpointId` (path; required; string): Endpoint ID to delete.
 
 **Responses**
 

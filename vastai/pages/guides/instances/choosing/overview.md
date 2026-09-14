@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [guides/instances/choosing/overview.mdx](https://docs.vast.ai/guides/instances/choosing/overview)
+> Pinned source for Vast.ai main: [guides/instances/choosing/overview.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/instances/choosing/overview.mdx)
+> Canonical documentation: https://docs.vast.ai/guides/instances/choosing/overview
 
 # Choosing Instances Overview
 

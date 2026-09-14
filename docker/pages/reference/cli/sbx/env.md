@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_env.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_env.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_env.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_env.yaml)
 
 # sbx env
 
@@ -6,7 +6,7 @@ Manage sandboxes declaratively from an sbxenv.yaml file
 
 **Usage:** `sbx env COMMAND`
 
-> [!NOTE]
+> \[!NOTE]
 > This command is experimental.
 
 ## Description
@@ -26,11 +26,11 @@ as `${{ env.args.NAME }}` anywhere a value appears and supply it with
 A `kits:` entry is either a bare reference or a mapping carrying the
 arguments that kit declares, which `--kit-arg` overrides per invocation:
 
-  kits:
-    - ./mixins/base
-    - source: ./mixins/tool
-      args:
-        version: ${{ env.args.channel }}
+kits:
+\- ./mixins/base
+\- source: ./mixins/tool
+args:
+version: ${{ env.args.channel }}
 
 A kit source written as an explicit relative path — `./…`, `../…`, `.`, `..`, or one
 ending in `.zip` — is resolved against the directory of the file that declares
@@ -51,13 +51,13 @@ time.
 A `lifecycle:` block declares commands that run on the host — outside
 the sandbox, with your own privileges — around the sandbox's life:
 
-  lifecycle:
-    initialize:
-      - command: test -d app || git clone https://github.com/acme/app
-    postCreate:
-      - command: ./scripts/seed-fixtures.sh
-    preRemove:
-      - command: ./scripts/archive-state.sh
+lifecycle:
+initialize:
+\- command: test -d app || git clone <https://github.com/acme/app>
+postCreate:
+\- command: ./scripts/seed-fixtures.sh
+preRemove:
+\- command: ./scripts/archive-state.sh
 
 Each runs through your shell from the project directory — the one holding the
 first PATH, which is also what a relative "workspace:" resolves against, and is
@@ -85,27 +85,34 @@ Everything an environment sets up — host commands, credentials, bindings, MCP
 registrations, directories, published ports, the sandbox itself and the
 variables it runs with — is shown as a plan and approved before anything runs:
 
-  ── ENVIRONMENT PLAN
-     claude-proj
+── ENVIRONMENT PLAN
+claude-proj
 
-     secrets:
-  +    anthropic:
-  +      ref: op://vault/anthropic/key
-  +      refresh: 55m
+```
+ secrets:
+```
 
-     lifecycle:
-       initialize:
-  ~      - command: make setup -> make setup && make seed
-           workdir: /Users/me/proj
+- anthropic:
+- ```
+   ref: op://vault/anthropic/key
+  ```
+- ```
+   refresh: 55m
+  ```
 
-     Plan: + 1 to add, ~ 1 to change, - 0 to destroy.
+  lifecycle:
+  initialize:
+  \~      - command: make setup -> make setup && make seed
+  workdir: /Users/me/proj
 
-     Approve this plan? [y/N]
+  Plan: + 1 to add, \~ 1 to change, - 0 to destroy.
+
+  Approve this plan? \[y/N]
 
 The plan is your file: the same keys, nested the same way, in the order the
 blocks are declared in, so a line is looked up where it was written. What the
 plan adds is the margin, and the two values a line moves between. The totals
-name every symbol the margin can carry: "+ to add" and "~ to change" above,
+name every symbol the margin can carry: "+ to add" and "\~ to change" above,
 "- to destroy" for what "sbx env rm" takes away, "> to run" for a command that
 runs again — a command converges to nothing, so it runs on every apply that
 reaches it — and "! to forget" for a resource this environment applied and no
@@ -122,12 +129,15 @@ secret shows where the credential comes from — a command that resolves one run
 this machine. A secret's literal "value:" is the one exception: a plan is both shown
 here and written to state, so it is named and stands in as a "sha256:" digest.
 
-     kits:
-  ~    - source: ./mixins/tool
-  ~      args:
-  ~        version: 1.2.3 -> 1.2.4
-     env:
-  ~    GOFLAGS: -mod=mod -> -mod=readonly
+```
+ kits:
+```
+
+\~    - source: ./mixins/tool
+\~      args:
+\~        version: 1.2.3 -> 1.2.4
+env:
+\~    GOFLAGS: -mod=mod -> -mod=readonly
 
 What an attribute was is what this environment last applied here, or — for one it
 approved and never applied, such as a binding or a port answered for while
@@ -158,8 +168,8 @@ they change.
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--cloud` |  | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (https://api.sandboxes-cloud.docker.com). Set DOCKER_CLOUD_API_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option            | Default                                  | Description                                                                                                                                                                                                             |
+| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
+| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
+| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |

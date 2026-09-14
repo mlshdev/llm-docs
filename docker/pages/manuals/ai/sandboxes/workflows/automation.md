@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/automation.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/ai/sandboxes/workflows/automation.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/workflows/automation.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/ai/sandboxes/workflows/automation.md)
 
 # Run sandboxes in CI
 

@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmctl/opentsdb.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/opentsdb.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmctl/opentsdb.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmctl/opentsdb.md)
 
 `vmctl` can migrate historical data from OpenTSDB to VictoriaMetrics.
 See `./vmctl opentsdb --help` for details and full list of flags.
@@ -34,7 +34,7 @@ We can query multiple chunks at once, but we shouldn't perform too many chunks a
 
 ```sh
 $ ./vmctl opentsdb --otsdb-addr http://opentsdb:4242/ --otsdb-retentions sum-1m-avg:1h:1d \
-  --otsdb-filters system \
+  --otsdb-filters system \ 
   --otsdb-normalize \
   --vm-addr <victoriametrics-addr>:8428 \
 OpenTSDB import mode
@@ -171,19 +171,19 @@ OPTIONS:
    --otsdb-CA-file value                                              Optional path to TLS CA file to use for verifying connections to -otsdb-addr. By default, system CA is used
    --otsdb-server-name value                                          Optional TLS server name to use for connections to -otsdb-addr. By default, the server name from -otsdb-addr is used
    --otsdb-insecure-skip-verify                                       Whether to skip tls verification when connecting to -otsdb-addr (default: false)
-   --vm-addr value                                                    VictoriaMetrics address to perform import requests.
-      Should be the same as --httpListenAddr value for single-node version or vminsert component.
-      When importing into the clustered version do not forget to set additionally --vm-account-id flag.
+   --vm-addr value                                                    VictoriaMetrics address to perform import requests. 
+      Should be the same as --httpListenAddr value for single-node version or vminsert component. 
+      When importing into the clustered version do not forget to set additionally --vm-account-id flag. 
       Please note, that vmctl performs initial readiness check for the given address by checking /health endpoint. (default: "http://localhost:8428")
    --vm-user value      VictoriaMetrics username for basic auth [$VM_USERNAME]
    --vm-password value  VictoriaMetrics password for basic auth [$VM_PASSWORD]
-   --vm-headers value   Optional HTTP headers to send with each request to the corresponding destination address.
-      For example, --vm-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding destination address.
+   --vm-headers value   Optional HTTP headers to send with each request to the corresponding destination address. 
+      For example, --vm-headers='My-Auth:foobar' would send 'My-Auth: foobar' HTTP header with every request to the corresponding destination address. 
       Multiple headers must be delimited by '^^': --vm-headers='header1:value1^^header2:value2'
    --vm-bearer-token value  Optional bearer auth token to use for the corresponding --vm-addr
-   --vm-account-id value    AccountID is an arbitrary 32-bit integer identifying namespace for data ingestion (aka tenant).
-      AccountID is required when importing into the clustered version of VictoriaMetrics.
-      It is possible to set it as accountID:projectID, where projectID is also arbitrary 32-bit integer.
+   --vm-account-id value    AccountID is an arbitrary 32-bit integer identifying namespace for data ingestion (aka tenant). 
+      AccountID is required when importing into the clustered version of VictoriaMetrics. 
+      It is possible to set it as accountID:projectID, where projectID is also arbitrary 32-bit integer. 
       If projectID isn't set, then it equals to 0
    --vm-concurrency value                             Number of workers concurrently performing import requests to VM (default: 2)
    --vm-compress                                      Whether to apply gzip compression to import requests (default: true)

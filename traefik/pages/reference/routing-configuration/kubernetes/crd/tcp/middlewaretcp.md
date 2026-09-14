@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/kubernetes/crd/tcp/middlewaretcp.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/crd/tcp/middlewaretcp.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/kubernetes/crd/tcp/middlewaretcp.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/crd/tcp/middlewaretcp.md)
 
 `MiddlewareTCP` is the CRD implementation of a [Traefik TCP middleware](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/middlewares/overview).
 

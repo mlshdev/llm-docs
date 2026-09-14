@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_skills_import.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_skills_import.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_skills_import.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_skills_import.yaml)
 
 # sbx skills import
 
@@ -6,7 +6,7 @@ Import skills from supported agent directories
 
 **Usage:** `sbx skills import [flags]`
 
-> [!NOTE]
+> \[!NOTE]
 > This command is experimental.
 
 ## Description
@@ -15,12 +15,12 @@ Import skills already installed for supported coding agents on this
 machine.
 
 The following directories are checked in order:
-  ~/.agents/skills
-  ~/.claude/skills
-  ~/.config/opencode/skills
-  ~/.copilot/skills
-  ~/.cursor/skills
-  ~/.factory/skills
+\~/.agents/skills
+\~/.claude/skills
+\~/.config/opencode/skills
+\~/.copilot/skills
+\~/.cursor/skills
+\~/.factory/skills
 
 When the same skill appears in more than one directory, the first copy is used
 and the others are skipped with a warning.
@@ -37,15 +37,15 @@ OpenCode.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--dry-run` |  | Preview which skills would be imported without copying anything |
-| `-f`, `--force` |  | Overwrite existing skills without prompting |
+| Option          | Default | Description                                                     |
+| --------------- | ------- | --------------------------------------------------------------- |
+| `--dry-run`     |         | Preview which skills would be imported without copying anything |
+| `-f`, `--force` |         | Overwrite existing skills without prompting                     |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--cloud` |  | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (https://api.sandboxes-cloud.docker.com). Set DOCKER_CLOUD_API_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option            | Default                                  | Description                                                                                                                                                                                                             |
+| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
+| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
+| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |

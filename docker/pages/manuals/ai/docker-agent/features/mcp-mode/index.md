@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/mcp-mode/index.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/docker-agent/docs/features/mcp-mode/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/mcp-mode/index.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/docker-agent/docs/features/mcp-mode/index.md)
 
 *Expose your Docker Agent agents as MCP tools for use in Claude Desktop, Claude Code, and other MCP-compatible applications.*
 
@@ -73,7 +73,7 @@ Add a configuration to your Claude Desktop MCP settings file:
     "myagent": {
       "command": "/usr/local/bin/docker",
       "args": [
-        "agent",
+        "agent", 
         "serve",
         "mcp",
         "myorg/coder",

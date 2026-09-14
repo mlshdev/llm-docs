@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [serverless/load-balancing/vllm-worker.mdx](https://docs.runpod.io/serverless/load-balancing/vllm-worker)
+> Pinned source for Runpod main: [serverless/load-balancing/vllm-worker.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/serverless/load-balancing/vllm-worker.mdx)
+> Canonical documentation: https://docs.runpod.io/serverless/load-balancing/vllm-worker
 
 # Build a load balancing vLLM endpoint
 
@@ -113,9 +114,11 @@ from typing import List
 from transformers import AutoTokenizer
 from .models import ChatMessage, ErrorResponse
 
+
 def get_tokenizer(model_name: str):
     """Get tokenizer for the given model"""
     return AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
+
 
 def format_chat_prompt(messages: List[ChatMessage], model_name: str) -> str:
     """Format messages using the model's chat template"""
@@ -142,6 +145,7 @@ def format_chat_prompt(messages: List[ChatMessage], model_name: str) -> str:
 
     formatted_prompt += "Assistant: "
     return formatted_prompt
+
 
 def create_error_response(error: str, detail: str, request_id: str = None) -> ErrorResponse:
     return ErrorResponse(error=error, detail=detail, request_id=request_id)
@@ -199,11 +203,14 @@ async def lifespan(_: FastAPI):
         engine_ready = False
         logger.info("vLLM engine shutdown complete")
 
+
 app = FastAPI(title="vLLM Load Balancing Server", version="1.0.0", lifespan=lifespan)
+
 
 # Global variables
 engine: Optional[AsyncLLMEngine] = None
 engine_ready = False
+
 
 async def create_engine():
     """Initialize the vLLM engine"""
@@ -233,6 +240,7 @@ async def create_engine():
         logger.error(f"Failed to initialize vLLM engine: {str(e)}")
         engine_ready = False
         raise
+
 
 @app.get("/ping")
 async def health_check():

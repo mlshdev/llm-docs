@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/alter_extension.sgml#sql-alterextension](https://www.postgresql.org/docs/18/sql-alterextension.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/alter_extension.sgml#sql-alterextension](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/alter_extension.sgml%23sql-alterextension)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-alterextension.html
 
 # ALTER EXTENSION
 

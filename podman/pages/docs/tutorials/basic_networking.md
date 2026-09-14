@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.1.1: [docs/tutorials/basic_networking.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/tutorials/basic_networking.md)
+> Pinned source for Podman v6.1.1: [docs/tutorials/basic_networking.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/tutorials/basic_networking.md)
 
 ![PODMAN logo](https://raw.githubusercontent.com/containers/common/main/logos/podman-logo-full-vert.png)
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/reference/compose-file/develop.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/reference/compose-file/develop.md)
+> Pinned source for Docker main: [content/reference/compose-file/develop.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/reference/compose-file/develop.md)
 
 # Compose Develop Specification
 
@@ -18,7 +18,7 @@ services:
     image: example/webapp
     build: ./webapp
     develop:
-      watch:
+      watch: 
         # sync static content
         - path: ./webapp/html
           action: sync
@@ -30,7 +30,7 @@ services:
     image: example/backend
     build: ./backend
     develop:
-      watch:
+      watch: 
         # rebuild image and recreate service
         - path: ./backend/src
           action: rebuild
@@ -74,7 +74,7 @@ services:
   frontend:
     image: ...
     develop:
-      watch:
+      watch: 
         # sync content then run command to reload service without interruption
         - path: ./etc/config
           action: sync+exec
@@ -109,10 +109,10 @@ services:
   backend:
     image: example/backend
     develop:
-      watch:
+      watch: 
         # rebuild image and recreate service
         - path: ./src
-          include: "*.go"
+          include: "*.go"  
           action: rebuild
 ```
 

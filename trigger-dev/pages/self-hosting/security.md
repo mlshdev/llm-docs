@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/self-hosting/security.mdx](https://trigger.dev/docs/self-hosting/security)
+> Pinned source for Trigger.dev v4.5.16: [docs/self-hosting/security.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/self-hosting/security.mdx)
+> Canonical documentation: https://trigger.dev/docs/self-hosting/security
 
 # Security & vulnerability reporting
 

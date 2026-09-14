@@ -1,6 +1,6 @@
-> Commit-pinned source for SearXNG master: [docs/dev/search_api.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/search_api.rst)
+> Pinned source for SearXNG master: [docs/dev/search_api.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/search_api.rst)
 
-.. \_search API:
+<a id="search-api"></a>
 
 # Search API
 
@@ -11,70 +11,74 @@ parameters as form data (`application/x-www-form-urlencoded`).
 
 If you want to consume the results as JSON, CSV, or RSS, you need to set the
 `format` parameter accordingly.  Supported formats are defined in
-`settings.yml`, under the \[settings search]\(#settings search) section.  Requesting an
+`settings.yml`, under the [settings search](https://docs.searxng.org/admin/settings/settings_search.html#settings-search) section.  Requesting an
 unset format will return a 403 Forbidden error.  Be aware that many public
 instances have these formats disabled.
 
 Endpoints:
-
-.. code:
 
 ```text
 GET /
 GET /search
 POST /
 POST /search
-
 ```
 
 example cURL calls:
 
-.. code:: bash
-
-curl '<https://searx.example.org/search?q=searxng&format=json>'
-curl -X POST '<https://searx.example.org/search>' -d 'q=searxng\&format=csv'
-curl -L -X POST -d 'q=searxng\&format=json' '<https://searx.example.org/>'
+```bash
+curl 'https://searx.example.org/search?q=searxng&format=json'
+curl -X POST 'https://searx.example.org/search' -d 'q=searxng&format=csv'
+curl -L -X POST -d 'q=searxng&format=json' 'https://searx.example.org/'
+```
 
 # Parameters
 
 ### Further reading ..
 
-- engines-dev
-- settings.yml
-- \[configured engines]\(#configured engines)
+- [engines-dev](https://docs.searxng.org/dev/engines/engine_overview.html#engines-dev)
+- [settings.yml](https://docs.searxng.org/admin/settings/settings.html#settings-yml)
+- [configured engines](https://docs.searxng.org/user/configured_engines.html#configured-engines)
 
-`q` : required
+**`q` : required**
+
 The search query.  This string is passed to external search services.  Thus,
 SearXNG supports syntax of each search service.  For example, `site:github.com
-  SearXNG` is a valid query for Google.  However, if simply the query above is
+SearXNG` is a valid query for Google.  However, if simply the query above is
 passed to any search engine which does not filter its results based on this
 syntax, you might not get the results you wanted.
 
-See more at search-syntax
+See more at [search-syntax](https://docs.searxng.org/user/search-syntax.html#search-syntax)
 
-`categories` : optional
+**`categories` : optional**
+
 Comma separated list, specifies the active search categories (see
-\[configured engines]\(#configured engines))
+[configured engines](https://docs.searxng.org/user/configured_engines.html#configured-engines))
 
-`language` : default from \[settings search]\(#settings search)
+**`language` : default from [settings search](https://docs.searxng.org/admin/settings/settings_search.html#settings-search)**
+
 Code of the language.
 
-`pageno` : default `1`
+**`pageno` : default `1`**
+
 Search page number.
 
-`time_range` : optional : \[ `day`, `month`, `year` ]
+**`time_range` : optional : \[ `day`, `month`, `year` ]**
+
 Time range of search for engines which support it.  See if an engine supports
 time range search in the preferences page of an instance.
 
-`format` : optional :  \[ `json`, `csv`, `rss` ]
-Output format of results.  Format needs to be activated in :ref:`settings
-  search`.
+**`format` : optional :  \[ `json`, `csv`, `rss` ]**
 
-`safesearch` :  default from \[settings search]\(#settings search) : \[ `0`, `1`, `2` ]
+Output format of results.  Format needs to be activated in [settings search](https://docs.searxng.org/admin/settings/settings_search.html#settings-search).
+
+**`safesearch` :  default from [settings search](https://docs.searxng.org/admin/settings/settings_search.html#settings-search) : \[ `0`, `1`, `2` ]**
+
 Filter search results of engines which support safe search.  See if an engine
 supports safe search in the preferences page of an instance.
 
-`theme` : default `simple` : \[ `simple` ]
+**`theme` : default `simple` : \[ `simple` ]**
+
 Theme of instance.
 
 Please note, available themes depend on an instance.  It is possible that an

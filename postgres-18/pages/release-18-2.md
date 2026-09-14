@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/release-18.sgml#release-18-2](https://www.postgresql.org/docs/18/release-18-2.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/release-18.sgml#release-18-2](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/release-18.sgml%23release-18-2)
+> Canonical documentation: https://www.postgresql.org/docs/18/release-18-2.html
 
 # Release 18.2
 

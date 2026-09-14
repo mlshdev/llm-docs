@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [api-reference/openapi.yaml#delete /api/v0/webhooks/{id}](https://docs.vast.ai/api-reference/notifications/delete-notification-webhook)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#delete /api/v0/webhooks/{id}](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/api-reference/openapi.yaml%23delete%20/api/v0/webhooks/%7Bid%7D)
+> Canonical documentation: https://docs.vast.ai/api-reference/notifications/delete-notification-webhook
 
 # delete notification webhook
 
@@ -6,12 +7,30 @@
 
 Delete a notification webhook.
 
+**Authentication:** `BearerAuth`
+
 **Parameters**
 
-- `id` (path, required): Webhook ID.
+- `id` (path; required; integer): Webhook ID.
 
 **Responses**
 
 - `200`: Webhook deleted successfully
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `true`
 - `401`: Unauthorized
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `false`
+      - `error` (string)
+      - `msg` (string)
 - `404`: Not Found
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `false`
+      - `error` (string)
+      - `msg` (string)

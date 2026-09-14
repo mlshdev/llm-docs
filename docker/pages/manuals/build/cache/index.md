@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/cache/_index.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build/cache/_index.md)
+> Pinned source for Docker main: [content/manuals/build/cache/_index.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build/cache/_index.md)
 
 When you build the same Docker image multiple times, knowing how to optimize
 the build cache is a great tool for making sure the builds run fast.

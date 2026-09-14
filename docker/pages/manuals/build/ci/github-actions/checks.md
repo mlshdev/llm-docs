@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/ci/github-actions/checks.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build/ci/github-actions/checks.md)
+> Pinned source for Docker main: [content/manuals/build/ci/github-actions/checks.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build/ci/github-actions/checks.md)
 
 # Validating build configuration with GitHub Actions
 
@@ -26,7 +26,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-
+      
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
 

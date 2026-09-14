@@ -1,26 +1,23 @@
-> Commit-pinned source for SearXNG master: [CONTRIBUTING.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/CONTRIBUTING.rst)
+> Pinned source for SearXNG master: [CONTRIBUTING.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/CONTRIBUTING.rst)
 
-.. SPDX-License-Identifier: AGPL-3.0-or-later
+<a id="quickstart-guide"></a> <a id="commits-guide"></a> <a id="ai-policy"></a> <a id="weblate"></a> <a id="github-codespaces"></a> <a id="120-hours-per-month"></a> <a id="list-of-existing-codespaces"></a>
 
 Thank you for your interest in SearXNG.
 
-Have a look at our [Quickstart guide](https://docs.searxng.org/dev/quickstart.html), it's very easy to contribute.
+Have a look at our [Quickstart guide](https://docs.searxng.org/CONTRIBUTING.html#quickstart-guide), it's very easy to contribute.
 
 Further information on *how-to* can be found
 [here](https://docs.searxng.org/dev/index.html).
 
 # Translations
 
-Help translate SearXNG at [Weblate](https://translate.codeberg.org/projects/searxng/searxng/).
+Help translate SearXNG at [Weblate](https://docs.searxng.org/dev/translation.html#weblate).
 
-![](https://translate.codeberg.org/widget/searxng/searxng/horizontal-auto.svg)
-:target: <https://translate.codeberg.org/engage/searxng/>
-:alt: Weblate
-:width: 768px
+![Weblate](https://translate.codeberg.org/widget/searxng/searxng/horizontal-auto.svg)
 
 # Cloud development
 
-You can contribute from your browser using [GitHub Codespaces](https://docs.github.com/en/codespaces/overview):
+You can contribute from your browser using [GitHub Codespaces](https://docs.searxng.org/CONTRIBUTING.html#github-codespaces):
 
 - Fork the repository.
 - Click on the `<> Code` green button.
@@ -28,7 +25,7 @@ You can contribute from your browser using [GitHub Codespaces](https://docs.gith
 - Click on `Create codespace on master`.
 - VSCode is going to start in the browser.
 - Wait for `git pull && make install` to appear and then disappear.
-- You have [120 hours per month](https://github.com/settings/billing) (see also your [list of existing Codespaces](https://github.com/codespaces)).
+- You have [120 hours per month](https://docs.searxng.org/CONTRIBUTING.html#120-hours-per-month) (see also your [list of existing Codespaces](https://docs.searxng.org/CONTRIBUTING.html#list-of-existing-codespaces)).
 - You can start SearXNG using `make run` in the terminal or by pressing `Ctrl+Shift+B`.
 
 # How-to contribute
@@ -58,7 +55,7 @@ come up with a better solution.
 - Use the imperative mood *("Move cursor to...", not "Moves cursor to...")*.
 - Limit the first line (commit title) to 72 characters or less.
 
-See [Commits guide](https://docs.searxng.org/dev/commits.html) for more details.
+See [Commits guide](https://docs.searxng.org/CONTRIBUTING.html#commits-guide) for more details.
 
 ### Coding guidelines
 
@@ -81,4 +78,4 @@ rules in this project are:
 
 ### AI Policy
 
-For our policy on the use of AI tools, please read [AI Policy](https://github.com/searxng/searxng/blob/master/AI_POLICY.rst).
+For our policy on the use of AI tools, please read [AI Policy](https://docs.searxng.org/CONTRIBUTING.html#ai-policy).

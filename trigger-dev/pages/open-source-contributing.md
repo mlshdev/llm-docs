@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/open-source-contributing.mdx](https://trigger.dev/docs/open-source-contributing)
+> Pinned source for Trigger.dev v4.5.16: [docs/open-source-contributing.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/open-source-contributing.mdx)
+> Canonical documentation: https://trigger.dev/docs/open-source-contributing
 
 # Contributing
 

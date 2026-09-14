@@ -79,6 +79,9 @@ export async function buildVastai(
                 group.specPath,
                 group.section,
                 operation,
+                docsFiles,
+                project.repository,
+                lock.sourceCommit,
               ),
           );
         }
@@ -172,10 +175,13 @@ function renderOperationPage(
   specPath: string,
   section: string,
   operation: OpenApiOperation,
+  docsFiles: ReadonlySet<string>,
+  repository: string,
+  ref: string,
 ) {
   const route = generatedOperationRoute(operation, specPath);
   const title = operation.summary ?? operation.operationId;
-  const body = normalizeSpacing(
+  const rendered = normalizeSpacing(
     [
       `# ${title}`,
       renderOpenApiOperationBody(
@@ -186,6 +192,16 @@ function renderOperationPage(
         false,
       ),
     ].join("\n\n"),
+  );
+  const body = rewriteMarkdownLinks(rendered, (url, kind) =>
+    resolveMintlifyLink(url, kind, {
+      sourcePath: specPath,
+      docsFiles,
+      repository,
+      ref,
+      siteBase,
+      docsRoot,
+    }),
   );
   return {
     sourcePath: `${specPath}#${operation.method} ${operation.route}`,
@@ -203,7 +219,7 @@ function convertPage(
   context: PageContext,
 ): ReturnType<typeof convertMdx> {
   try {
-    return convertMdx(normalizeMintlifyComponents(source), sourcePath, {
+    return convertMdx(normalizeVastMdx(source), sourcePath, {
       resolveImport: (specifier, fromPath) =>
         resolveImport(specifier, fromPath, context.sources),
     });
@@ -212,6 +228,17 @@ function convertPage(
       cause: error,
     });
   }
+}
+
+export function normalizeVastMdx(source: string): string {
+  // The generated Python reference uses braces as prose punctuation for enum
+  // choices. MDX otherwise interprets them as JavaScript expressions.
+  return normalizeMintlifyComponents(
+    source.replace(
+      /:\s*\{([^{}\n]+)\}(?=\s*(?:\n|<))/g,
+      (_match, choices: string) => `: \`{${choices}}\``,
+    ),
+  );
 }
 
 function describe(attributes: Readonly<Record<string, unknown>>): string {
@@ -247,6 +274,6 @@ function resolveImport(
 ): MdxImport | undefined {
   const resolved = resolveMintlifyImport(specifier, fromPath, sources);
   return resolved
-    ? { ...resolved, source: normalizeMintlifyComponents(resolved.source) }
+    ? { ...resolved, source: normalizeVastMdx(resolved.source) }
     : undefined;
 }

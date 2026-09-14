@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/setup/swarm.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/setup/swarm.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/setup/swarm.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/setup/swarm.md)
 
 This guide provides an in‑depth walkthrough for installing and configuring Traefik Proxy as a **Swarm service** using `docker stack deploy`. It follows the same structure as the standalone‑Docker tutorial and covers:
 
@@ -58,7 +58,7 @@ In the same directory, create `docker‑compose‑swarm.yaml`:
 services:
   traefik:
     image: traefik:v3.7
-
+    
     networks:
     # Connect to the 'traefik_proxy' overlay network for inter-container communication across nodes
       - traefik_proxy
@@ -152,7 +152,7 @@ services:
 
         # Service hint
         - "traefik.http.services.traefik.loadbalancer.server.port=8080"
-
+  
   # Deploy the Whoami application
   whoami:
     image: traefik/whoami

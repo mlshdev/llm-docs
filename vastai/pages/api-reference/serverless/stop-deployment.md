@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [api-reference/openapi.yaml#post /api/v0/deployment/{id}/stop](https://docs.vast.ai/api-reference/serverless/stop-deployment)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#post /api/v0/deployment/{id}/stop](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/api-reference/openapi.yaml%23post%20/api/v0/deployment/%7Bid%7D/stop)
+> Canonical documentation: https://docs.vast.ai/api-reference/serverless/stop-deployment
 
 # stop deployment
 
@@ -8,13 +9,38 @@ Stops the endpoint associated with a deployment. The deployment is not deleted a
 
 CLI Usage: `vastai stop deployment <id>`
 
+**Authentication:** `BearerAuth`
+
 **Parameters**
 
-- `id` (path, required): Deployment ID
+- `id` (path; required; integer): Deployment ID
+  - Example: `644`
 
 **Responses**
 
 - `200`: Deployment stopped successfully
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `true`
+      - `endpoint_state` (string)
+        - Example: `stopped`
 - `401`: Unauthorized
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `false`
+      - `error` (string)
+      - `msg` (string)
 - `404`: Deployment not found
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `false`
+      - `error` (string)
+      - `msg` (string)
 - `429`: Too Many Requests
+  - Media type: `application/json`
+    - Schema (object)
+      - `detail` (string)
+        - Example: `API requests too frequent endpoint threshold=2.0`

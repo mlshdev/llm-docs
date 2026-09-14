@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/jit.sgml#jit-decision](https://www.postgresql.org/docs/18/jit-decision.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/jit.sgml#jit-decision](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/jit.sgml%23jit-decision)
+> Canonical documentation: https://www.postgresql.org/docs/18/jit-decision.html
 
 # When to JIT?
 

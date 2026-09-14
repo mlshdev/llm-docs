@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_image_import.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_image_import.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_image_import.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_image_import.yaml)
 
 # docker image import
 
@@ -20,11 +20,11 @@ the host. To import from a remote location, specify a `URI` that begins with the
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-c`, `--change` |  | Apply Dockerfile instruction to the created image |
-| `-m`, `--message` |  | Set commit message for imported image |
-| `--platform` |  | Set platform if server is multi-platform capable (API 1.32+) |
+| Option            | Default | Description                                                  |
+| ----------------- | ------- | ------------------------------------------------------------ |
+| `-c`, `--change`  |         | Apply Dockerfile instruction to the created image            |
+| `-m`, `--message` |         | Set commit message for imported image                        |
+| `--platform`      |         | Set platform if server is multi-platform capable (API 1.32+) |
 
 ## Examples
 
@@ -68,17 +68,17 @@ created. Not all `Dockerfile` instructions are supported; the list of instructio
 is limited to metadata (configuration) changes. The following `Dockerfile`
 instructions are supported:
 
-- [`CMD`](/reference/dockerfile/#cmd)
-- [`ENTRYPOINT`](/reference/dockerfile/#entrypoint)
-- [`ENV`](/reference/dockerfile/#env)
-- [`EXPOSE`](/reference/dockerfile/#expose)
-- [`HEALTHCHECK`](/reference/dockerfile/#healthcheck)
-- [`LABEL`](/reference/dockerfile/#label)
-- [`ONBUILD`](/reference/dockerfile/#onbuild)
-- [`STOPSIGNAL`](/reference/dockerfile/#stopsignal)
-- [`USER`](/reference/dockerfile/#user)
-- [`VOLUME`](/reference/dockerfile/#volume)
-- [`WORKDIR`](/reference/dockerfile/#workdir)
+- [`CMD`](https://docs.docker.com/reference/dockerfile/#cmd)
+- [`ENTRYPOINT`](https://docs.docker.com/reference/dockerfile/#entrypoint)
+- [`ENV`](https://docs.docker.com/reference/dockerfile/#env)
+- [`EXPOSE`](https://docs.docker.com/reference/dockerfile/#expose)
+- [`HEALTHCHECK`](https://docs.docker.com/reference/dockerfile/#healthcheck)
+- [`LABEL`](https://docs.docker.com/reference/dockerfile/#label)
+- [`ONBUILD`](https://docs.docker.com/reference/dockerfile/#onbuild)
+- [`STOPSIGNAL`](https://docs.docker.com/reference/dockerfile/#stopsignal)
+- [`USER`](https://docs.docker.com/reference/dockerfile/#user)
+- [`VOLUME`](https://docs.docker.com/reference/dockerfile/#volume)
+- [`WORKDIR`](https://docs.docker.com/reference/dockerfile/#workdir)
 
 The following example imports an image from a TAR-file containing a root-filesystem,
 and sets the `DEBUG` environment-variable in the resulting image:

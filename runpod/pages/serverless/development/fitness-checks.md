@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [serverless/development/fitness-checks.mdx](https://docs.runpod.io/serverless/development/fitness-checks)
+> Pinned source for Runpod main: [serverless/development/fitness-checks.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/serverless/development/fitness-checks.mdx)
+> Canonical documentation: https://docs.runpod.io/serverless/development/fitness-checks
 
 # Fitness checks and preflight checks
 

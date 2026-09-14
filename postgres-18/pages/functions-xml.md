@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/func.sgml#functions-xml](https://www.postgresql.org/docs/18/functions-xml.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/func.sgml#functions-xml](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/func.sgml%23functions-xml)
+> Canonical documentation: https://www.postgresql.org/docs/18/functions-xml.html
 
 # XML Functions
 
@@ -160,6 +161,7 @@ SELECT xmlforest('abc' AS foo, 123 AS bar);
           xmlforest
 ------------------------------
  <foo>abc</foo><bar>123</bar>
+
 
 SELECT xmlforest(table_name, column_name)
 FROM information_schema.columns

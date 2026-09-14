@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_stack_config.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_stack_config.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_stack_config.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_stack_config.yaml)
 
 # docker stack config
 
@@ -12,10 +12,10 @@ Outputs the final Compose file, after doing the merges and interpolations of the
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-c`, `--compose-file` |  | Path to a Compose file, or `-` to read from stdin |
-| `--skip-interpolation` |  | Skip interpolation and output only merged config |
+| Option                 | Default | Description                                       |
+| ---------------------- | ------- | ------------------------------------------------- |
+| `-c`, `--compose-file` |         | Path to a Compose file, or `-` to read from stdin |
+| `--skip-interpolation` |         | Skip interpolation and output only merged config  |
 
 ## Examples
 

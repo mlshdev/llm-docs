@@ -1,8 +1,9 @@
-> Commit-pinned source for SearXNG master: [docs/dev/engines/online/mastodon.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/mastodon.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/online/mastodon.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/mastodon.rst)
 
-.. \_mastodon engine:
+<a id="mastodon-engine"></a>
 
 # Mastodon
 
-.. automodule:: searx.engines.mastodon
-:members:
+#### `searx.engines.mastodon`
+
+Static Python API reference (`automodule`).

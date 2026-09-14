@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/test-decoding.sgml#test-decoding](https://www.postgresql.org/docs/18/test-decoding.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/test-decoding.sgml#test-decoding](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/test-decoding.sgml%23test-decoding)
+> Canonical documentation: https://www.postgresql.org/docs/18/test-decoding.html
 
 # test_decoding — SQL-based test/example module for WAL logical decoding
 

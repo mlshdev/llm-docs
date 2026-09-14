@@ -1,6 +1,6 @@
-> Commit-pinned source for SearXNG master: [docs/user/about.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/user/about.rst)
+> Pinned source for SearXNG master: [docs/user/about.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/user/about.rst)
 
-.. \_about SearXNG:
+<a id="about-searxng"></a>
 
 # About SearXNG
 

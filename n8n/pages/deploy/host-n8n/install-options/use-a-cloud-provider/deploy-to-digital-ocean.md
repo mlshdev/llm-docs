@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-digital-ocean.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-digital-ocean.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-digital-ocean.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-digital-ocean.md)
 
 # Hosting n8n on DigitalOcean <a id="hosting-n8n-on-digitalocean"></a>
 
@@ -340,16 +340,16 @@ n8n Assistant needs a sandbox to run code in. You can add the same sandbox stack
 If you run n8n using a Docker Compose file, follow these steps to update n8n:
 
 ```sh
-# Navigate to the directory containing your docker compose file <a id="navigate-to-the-directory-containing-your-docker-compose-file"></a>
+# Navigate to the directory containing your docker compose file <a href="#navigate-to-the-directory-containing-your-docker-compose-file" id="navigate-to-the-directory-containing-your-docker-compose-file"></a>
 cd </path/to/your/compose/file/directory>
 
-# Pull latest version <a id="pull-latest-version"></a>
+# Pull latest version <a href="#pull-latest-version" id="pull-latest-version"></a>
 docker compose pull
 
-# Stop and remove older version <a id="stop-and-remove-older-version"></a>
+# Stop and remove older version <a href="#stop-and-remove-older-version" id="stop-and-remove-older-version"></a>
 docker compose down
 
-# Start the container <a id="start-the-container"></a>
+# Start the container <a href="#start-the-container" id="start-the-container"></a>
 docker compose up -d
 ```
 

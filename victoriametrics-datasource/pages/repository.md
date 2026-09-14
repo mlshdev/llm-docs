@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics datasource for Grafana v0.26.1: [README.md](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58cb4614080bded813362124d4a808d0359a1ccb/README.md)
+> Pinned source for VictoriaMetrics datasource for Grafana v0.26.1: [README.md](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58cb4614080bded813362124d4a808d0359a1ccb/README.md)
 
 # VictoriaMetrics datasource for Grafana
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/reference/compose-file/merge.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/reference/compose-file/merge.md)
+> Pinned source for Docker main: [content/reference/compose-file/merge.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/reference/compose-file/merge.md)
 
 # Merge Compose files
 
@@ -53,7 +53,7 @@ services:
 ```yaml
 services:
   foo:
-    DNS:
+    DNS: 
       - 8.8.8.8
 ```
 
@@ -152,9 +152,9 @@ services:
   app:
     image: myapp
     ports:
-      - "8080:80"
+      - "8080:80" 
     environment:
-      FOO: BAR
+      FOO: BAR           
 ```
 
 And a `compose.override.yaml` file:
@@ -201,7 +201,7 @@ To remove the original port, but expose a new one, the following override file i
 services:
   app:
     ports: !override
-      - "8443:443"
+      - "8443:443" 
 ```
 
 This results in:
@@ -211,7 +211,7 @@ services:
   app:
     image: myapp
     ports:
-      - "8443:443"
+      - "8443:443" 
 ```
 
 If `!override` had not been used, both `8080:80` and `8443:443` would be exposed as per the [merging rules outlined above](#sequence).

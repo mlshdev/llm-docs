@@ -1,12 +1,12 @@
-> Commit-pinned source for Docker main: [data/cli/mcp/docker_mcp_client_connect.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp_client_connect.yaml)
+> Pinned source for Docker main: [data/cli/mcp/docker_mcp_client_connect.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp_client_connect.yaml)
 
 # docker mcp client connect
 
 Connect the Docker MCP Toolkit to a client. Supported clients: claude-code claude-desktop cline codex continue crush cursor gemini goose gordon kiro lmstudio opencode sema4 vscode zed
 
-**Usage:** `docker mcp client connect [OPTIONS] <mcp-client>
+**Usage:** \`docker mcp client connect \[OPTIONS] <mcp-client>
 
-Supported clients: claude-code claude-desktop cline codex continue crush cursor gemini goose gordon kiro lmstudio opencode sema4 vscode zed`
+Supported clients: claude-code claude-desktop cline codex continue crush cursor gemini goose gordon kiro lmstudio opencode sema4 vscode zed\`
 
 ## Description
 
@@ -14,8 +14,8 @@ Connect the Docker MCP Toolkit to a client. Supported clients: claude-code claud
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-g`, `--global` |  | Change the system wide configuration or the clients setup in your current git repo. |
-| `-p`, `--profile` |  | Profile to use for client connection. |
-| `-q`, `--quiet` |  | Only display errors. |
+| Option            | Default | Description                                                                         |
+| ----------------- | ------- | ----------------------------------------------------------------------------------- |
+| `-g`, `--global`  |         | Change the system wide configuration or the clients setup in your current git repo. |
+| `-p`, `--profile` |         | Profile to use for client connection.                                               |
+| `-q`, `--quiet`   |         | Only display errors.                                                                |

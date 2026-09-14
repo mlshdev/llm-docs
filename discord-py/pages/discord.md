@@ -1,4 +1,4 @@
-> Tag-pinned source for discord.py v2.7.1: [docs/discord.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/discord.rst)
+> Pinned source for discord.py v2.7.1: [docs/discord.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/discord.rst)
 
 - **Orphan:**
 
@@ -79,5 +79,4 @@ If you want to invite your bot you must create an invite URL for it.
 > The person adding the bot needs "Manage Server" permissions to do so.
 
 If you want to generate this URL dynamically at run-time inside your bot and using the
-
-- **Class:** `discord.Permissions` interface, you can use `discord.utils.oauth_url`.
+`discord.Permissions` interface, you can use `discord.utils.oauth_url`.

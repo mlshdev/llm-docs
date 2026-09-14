@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [flash/apps/customize-app.mdx](https://docs.runpod.io/flash/apps/customize-app)
+> Pinned source for Runpod main: [flash/apps/customize-app.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/flash/apps/customize-app.mdx)
+> Canonical documentation: https://docs.runpod.io/flash/apps/customize-app
 
 # Customize your Flash app
 

@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/migrate-from-influx/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/migrate-from-influx/_index.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/guides/migrate-from-influx/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/migrate-from-influx/_index.md)
 
 InfluxDB is a well-known time series database built for
 [IoT](https://en.wikipedia.org/wiki/Internet_of_things) monitoring, Application Performance Monitoring (APM) and
@@ -78,7 +78,7 @@ curl -d 'census,location=klamath,scientist=anderson bees=23' -X POST 'http://<vi
 To check the written data export series matching the `location="klamath"` filter:
 
 ```sh
-curl -G 'http://<victoriametrics-addr>:8428/api/v1/export' -d 'match={location="klamath"}'
+curl -G 'http://<victoriametrics-addr>:8428/api/v1/export' -d 'match={location="klamath"}'   
 ```
 
 The expected response is the following:

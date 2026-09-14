@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/create_procedure.sgml#sql-createprocedure](https://www.postgresql.org/docs/18/sql-createprocedure.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/create_procedure.sgml#sql-createprocedure](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/create_procedure.sgml%23sql-createprocedure)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-createprocedure.html
 
 # CREATE PROCEDURE
 

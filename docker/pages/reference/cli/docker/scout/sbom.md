@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/scout/docker_scout_sbom.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_sbom.yaml)
+> Pinned source for Docker main: [data/cli/scout/docker_scout_sbom.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_sbom.yaml)
 
 # docker scout sbom
 
@@ -42,13 +42,13 @@ or if you want to control from where the image will be resolved, you must prefix
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--format` | `json` | Output format: - list: list of packages of the image - json: json representation of the SBOM - spdx: spdx representation of the SBOM - cyclonedx: cyclone dx representation of the SBOM |
-| `--only-package-type` |  | Comma separated list of package types (like apk, deb, rpm, npm, pypi, golang, etc) Can only be used with --format list |
-| `-o`, `--output` |  | Write the report to a file |
-| `--platform` |  | Platform of image to analyze |
-| `--ref` |  | Reference to use if the provided tarball contains multiple references. Can only be used with archive |
+| Option                | Default | Description                                                                                                                                                                             |
+| --------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--format`            | `json`  | Output format: - list: list of packages of the image - json: json representation of the SBOM - spdx: spdx representation of the SBOM - cyclonedx: cyclone dx representation of the SBOM |
+| `--only-package-type` |         | Comma separated list of package types (like apk, deb, rpm, npm, pypi, golang, etc) Can only be used with --format list                                                                  |
+| `-o`, `--output`      |         | Write the report to a file                                                                                                                                                              |
+| `--platform`          |         | Platform of image to analyze                                                                                                                                                            |
+| `--ref`               |         | Reference to use if the provided tarball contains multiple references. Can only be used with archive                                                                                    |
 
 ## Examples
 

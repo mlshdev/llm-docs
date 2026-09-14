@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/buildx/docs/bake-stdlib.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/buildx/docs/bake-stdlib.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/buildx/docs/bake-stdlib.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/buildx/docs/bake-stdlib.md)
 
 | Name                                                | Description                                                                                                                                                                                                                                          |
 | :-------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -639,7 +639,7 @@ target "webapp-dev" {
   dockerfile = "Dockerfile.webapp"
   tags = ["docker.io/username/webapp:latest"]
   args = {
-    text = "${indent(4, "Hello\nWorld")}"
+    text = "${indent(4, "Hello\nWorld")}" 
     # => "    Hello\n    World"
   }
 }
@@ -731,7 +731,7 @@ target "webapp-dev" {
   dockerfile = "Dockerfile.webapp"
   tags = ["docker.io/username/webapp:latest"]
   args = {
-    list = "${keys({foo = 1, bar = 2, baz = 3})}"
+    list = "${keys({foo = 1, bar = 2, baz = 3})}" 
     # => ["bar","baz","foo"] (sorted order)
   }
 }

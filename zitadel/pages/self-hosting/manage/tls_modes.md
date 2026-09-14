@@ -1,4 +1,5 @@
-> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/self-hosting/manage/tls_modes.mdx](https://zitadel.com/docs/self-hosting/manage/tls_modes)
+> Pinned source for ZITADEL v4.17.3: [apps/docs/content/self-hosting/manage/tls_modes.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/self-hosting/manage/tls_modes.mdx)
+> Canonical documentation: https://zitadel.com/docs/self-hosting/manage/tls_modes
 
 To run ZITADEL on any kind of infrastructure, you can configure on how to handle TLS connections.
 There are three modes of operation: `disabled`, `external`, `enabled`.

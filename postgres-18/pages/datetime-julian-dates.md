@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/datetime.sgml#datetime-julian-dates](https://www.postgresql.org/docs/18/datetime-julian-dates.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/datetime.sgml#datetime-julian-dates](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/datetime.sgml%23datetime-julian-dates)
+> Canonical documentation: https://www.postgresql.org/docs/18/datetime-julian-dates.html
 
 # Julian Dates
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/harnesses/index.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/docker-agent/docs/features/harnesses/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/features/harnesses/index.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/docker-agent/docs/features/harnesses/index.md)
 
 *Delegate coding tasks to external AI coding CLIs (Claude Code, Codex, opencode) as sub-agents.*
 

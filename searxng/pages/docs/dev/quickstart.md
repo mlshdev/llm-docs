@@ -1,63 +1,63 @@
-> Commit-pinned source for SearXNG master: [docs/dev/quickstart.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/quickstart.rst)
+> Pinned source for SearXNG master: [docs/dev/quickstart.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/quickstart.rst)
 
-.. \_devquickstart:
+<a id="devquickstart"></a>
 
 # Development Quickstart
 
+<a id="npm"></a> <a id="node-js"></a> <a id="biome"></a> <a id="stylelint"></a>
+
 ### further read
 
-- makefile
-- buildhosts
+- [makefile](https://docs.searxng.org/dev/makefile.html#makefile)
+- [buildhosts](https://docs.searxng.org/admin/buildhosts.html#buildhosts)
 
 SearXNG loves developers; Developers do not need to worry about tool chains, the
-usual developer tasks can be comfortably executed via make.
+usual developer tasks can be comfortably executed via [make](https://docs.searxng.org/dev/makefile.html#makefile).
 
 Don't hesitate, just clone SearXNG's sources and start hacking right now ..
 
-.. code:: bash
-
-```
+```bash
 git clone https://github.com/searxng/searxng.git searxng
 ```
 
-For the developer environment, mise en place is recommended:
+For the developer environment, [mise en place](https://docs.searxng.org/dev/quickstart.html#mise-en-place) is recommended:
 
-.. code:: sh
+```sh
+$ curl https://mise.run | sh
+```
 
-$ curl <https://mise.run> | sh
-
-The tools required for a developer environment are provided via mise.toml,
+The tools required for a developer environment are provided via [mise.toml](https://docs.searxng.org/dev/quickstart.html#mise-toml),
 trust the project:
 
-.. code:: sh
-
+```sh
 $ mise trust
+```
 
-.. \_mise.toml:
-<https://github.com/searxng/searxng/blob/master/mise.toml>
-.. \_mise en place:
+<a id="mise-toml"></a>
+<https://github.com/searxng/searxng/blob/master/mise.toml> <a id="mise-en-place"></a>
 <https://mise.jdx.dev/getting-started.html>
 
 Here is how a minimal workflow looks like:
 
 1. *start* hacking
-2. *run* your code: \[make run]\(#make run)
-3. *format & test* your code: \[make format]\(#make format) and \[make test]\(#make test)
+2. *run* your code: [make run](https://docs.searxng.org/dev/makefile.html#make-run)
+3. *format & test* your code: [make format](https://docs.searxng.org/dev/makefile.html#make-format) and [make test](https://docs.searxng.org/dev/makefile.html#make-test)
 
 If you think at some point something fails, go back to *start*.  Otherwise,
 choose a meaningful commit message and we are happy to receive your pull
 request. To not end in *wild west* we have some directives, please pay attention
-to our "\[how to contribute]\(#how to contribute)" guideline.
+to our "[how to contribute](https://docs.searxng.org/dev/contribution_guide.html#how-to-contribute)" guideline.
 
-If you want to debug with the *good old Python Debugger* [pdb](https://docs.python.org/3/library/pdb.html#module-pdb): Alternatively to
-`make run` (2.) which starts a \[searxng granian]\(#searxng granian) server you can jump
+<a id="pdb"></a>
+
+If you want to debug with the *good old Python Debugger* pdb\_: Alternatively to
+`make run` (2.) which starts a [searxng granian](https://docs.searxng.org/admin/installation-granian.html#searxng-granian) server you can jump
 into the developer environment and start a python based HTTP server by:
 
-```text
+```python
 $ ./manage dev.env
 ...
 (dev.env)$ SEARXNG_DEBUG=1 searxng-run
-
 ```
 
 Since this is a pure Python solution, you can set breakpoints in your code with
@@ -66,7 +66,7 @@ Since this is a pure Python solution, you can set breakpoints in your code with
 Any other script or command line provided by SearXNG can also be used in the
 same environment, here are a few examples:
 
-```text
+```python
 # tools related to favicons
 (dev.env)$ python -m searx.favicons
 
@@ -81,54 +81,49 @@ same environment, here are a few examples:
 
 # to test the update of the wikidata units and property names
 (dev.env)$ searxng_extra/update/update_wikidata.py
-
 ```
 
 ### further read
 
-- \[make nvm]\(#make nvm)
-- \[make themes]\(#make themes)
+- [make nvm](https://docs.searxng.org/dev/makefile.html#make-nvm)
+- [make themes](https://docs.searxng.org/dev/makefile.html#make-themes)
 
-If you implement themes, you will need to setup a :ref:`Node.js environment <make node.env>`.  Before you call *make run* (2.), you need to compile the
-modified styles and JavaScript: `make node.clean themes.all`.  If Biome
-or Stylelint reports issues, try `make themes.fix`.
+If you implement themes, you will need to setup a [Node.js environment](https://docs.searxng.org/dev/makefile.html#make-node-env).  Before you call *make run* (2.), you need to compile the
+modified styles and JavaScript: `make node.clean themes.all`.  If Biome\_
+or Stylelint\_ reports issues, try `make themes.fix`.
 
 Alternatively you can also compile selective the theme you have modified,
 e.g. the *simple* theme.
 
-.. code:: bash
-
+```bash
 make themes.simple
-
-.. tip:
-
-```text
-To get live builds while modifying CSS & JS use: ``LIVE_THEME=simple make run``
-
 ```
+
+> **Tip**
+> To get live builds while modifying CSS & JS use: `LIVE_THEME=simple make run`
 
 ### further read
 
-- \[make static.build]\(#make static.build)
+- [make static.build](https://docs.searxng.org/dev/makefile.html#make-static-build)
 
 If you finished your *tests* you can start to commit your changes.  To separate
 the modified source code from the build products first run:
 
-.. code:: bash
-
+```bash
 make static.build.restore
+```
 
 This will restore the old build products and only your changes of the code
 remain in the working tree which can now be added & committed.  When all sources
 are committed, you can commit the build products simply by:
 
-.. code:: bash
-
+```bash
 make static.build.commit
+```
 
 Committing the build products should be the last step, just before you send us
 your PR.  There is also a make target to rewind this last build commit:
 
-.. code:: bash
-
+```bash
 make static.build.drop
+```

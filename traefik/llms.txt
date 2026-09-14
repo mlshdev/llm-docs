@@ -9,188 +9,188 @@
 
 ## Documentation
 
-- [Traefik Proxy Documentation](pages/index.md): Source `docs/content/index.md`.
-- [Traefik Product Features Comparison](pages/features/index.md): Source `docs/content/features/index.md`.
-- [Extend Traefik](pages/extend/extend-traefik.md): Source `docs/content/extend/extend-traefik.md`.
-- [Govern Your APIs with Traefik Hub](pages/govern/index.md): Source `docs/content/govern/index.md`.
-- [Traefik Getting Started FAQ](pages/getting-started/faq.md): Source `docs/content/getting-started/faq.md`.
+- [Traefik Proxy Documentation](pages/index.md): Traefik is an open-source Application Proxy and the core of the Traefik Hub Runtime Platform. (5097 bytes)
+- [Traefik Product Features Comparison](pages/features/index.md): The Traefik ecosystem offers multiple products designed to meet different requirements, from basic reverse proxy functionality to comprehensive API management and AI gateway capabilities. This comparison matrix helps yo… (17163 bytes)
+- [Extend Traefik](pages/extend/extend-traefik.md): Plugins are a powerful feature for extending Traefik with custom features and behaviors. The Plugin Catalog is a software-as-a-service (SaaS) platform that provides an exhaustive list of the existing plugins. (2665 bytes)
+- [Govern Your APIs with Traefik Hub](pages/govern/index.md): Traefik Hub transforms your API infrastructure by providing enterprise-grade API Gateway and comprehensive API Management capabilities. Built on the foundation of Traefik Proxy, Hub enables organizations to govern, secu… (4501 bytes)
+- [Traefik Getting Started FAQ](pages/getting-started/faq.md): Traefik is a dynamic reverse proxy, and while the documentation often demonstrates configuration options through file examples, the core feature of Traefik is its dynamic configurability, directly reacting to changes fr… (11495 bytes)
 
 ## Getting Started
 
-- [Getting Started with Traefik](pages/getting-started/index.md): Source `docs/content/getting-started/index.md`.
-- [Traefik Configuration Documentation](pages/getting-started/configuration-overview.md): Source `docs/content/getting-started/configuration-overview.md`.
-- [Kubernetes and Traefik Quick Start](pages/getting-started/kubernetes.md): Source `docs/content/getting-started/kubernetes.md`.
-- [Docker and Traefik Quick Start](pages/getting-started/docker.md): Source `docs/content/getting-started/docker.md`.
+- [Getting Started with Traefik](pages/getting-started/index.md): Traefik can be deployed in various environments. Choose your preferred deployment method: (698 bytes)
+- [Traefik Configuration Documentation](pages/getting-started/configuration-overview.md): How the Magic Happens (4077 bytes)
+- [Kubernetes and Traefik Quick Start](pages/getting-started/kubernetes.md): Kubernetes is a first-class citizen in Traefik, offering native support for Kubernetes resources and the latest Kubernetes standards. Whether you're using Traefik's IngressRoute CRD, Ingress or the Kubernetes Gateway AP… (9901 bytes)
+- [Docker and Traefik Quick Start](pages/getting-started/docker.md): Docker is a first-class citizen in Traefik, offering native support for Docker containers and services. Whether you're using Docker Compose or running containers directly, Traefik provides a seamless experience for mana… (4312 bytes)
 
 ## Setup
 
-- [Setup Traefik on Kubernetes](pages/setup/kubernetes.md): Source `docs/content/setup/kubernetes.md`.
-- [Setup Traefik Proxy in Docker Standalone](pages/setup/docker.md): Source `docs/content/setup/docker.md`.
-- [Setup Traefik Proxy in Docker Swarm](pages/setup/swarm.md): Source `docs/content/setup/swarm.md`.
+- [Setup Traefik on Kubernetes](pages/setup/kubernetes.md): This guide provides an in-depth walkthrough for installing and configuring Traefik Proxy within a Kubernetes cluster using the official Helm chart. In this guide, we'll cover the following: (13914 bytes)
+- [Setup Traefik Proxy in Docker Standalone](pages/setup/docker.md): This guide provides an in-depth walkthrough for installing and configuring Traefik Proxy within a Docker container using the official Traefik Docker image & Docker Compose. In this guide, we'll cover the following: (11239 bytes)
+- [Setup Traefik Proxy in Docker Swarm](pages/setup/swarm.md): This guide provides an in‑depth walkthrough for installing and configuring Traefik Proxy as a Swarm service using docker stack deploy. It follows the same structure as the standalone‑Docker tutorial and covers: (11921 bytes)
 
 ## Expose
 
-- [Exposing Services with Traefik Proxy](pages/expose/overview.md): Source `docs/content/expose/overview.md`.
-- [Exposing Services with Traefik on Kubernetes - Basic](pages/expose/kubernetes/basic.md): Source `docs/content/expose/kubernetes/basic.md`.
-- [Exposing Services with Traefik on Kubernetes - Advanced](pages/expose/kubernetes/advanced.md): Source `docs/content/expose/kubernetes/advanced.md`.
-- [Exposing Services with Traefik on Docker - Basic](pages/expose/docker/basic.md): Source `docs/content/expose/docker/basic.md`.
-- [Exposing Services with Traefik on Docker - Advanced](pages/expose/docker/advanced.md): Source `docs/content/expose/docker/advanced.md`.
-- [Exposing Services with Traefik on Docker Swarm - Basic](pages/expose/swarm/basic.md): Source `docs/content/expose/swarm/basic.md`.
-- [Exposing Services with Traefik on Docker Swarm - Advanced](pages/expose/swarm/advanced.md): Source `docs/content/expose/swarm/advanced.md`.
+- [Exposing Services with Traefik Proxy](pages/expose/overview.md): This section guides you through exposing services securely with Traefik Proxy. You'll learn how to route HTTP and HTTPS traffic to your services, add security features, and implement advanced load balancing. (4065 bytes)
+- [Exposing Services with Traefik on Kubernetes - Basic](pages/expose/kubernetes/basic.md): This guide will help you get started with exposing your services through Traefik Proxy on Kubernetes. You'll learn the fundamentals of routing HTTP traffic, setting up path-based routing, and securing your services with… (10479 bytes)
+- [Exposing Services with Traefik on Kubernetes - Advanced](pages/expose/kubernetes/advanced.md): This guide builds on the concepts and setup from the Basic Guide. Make sure you've completed the basic guide and have a working Traefik setup with Kubernetes before proceeding. (27874 bytes)
+- [Exposing Services with Traefik on Docker - Basic](pages/expose/docker/basic.md): This guide will help you get started with exposing your services through Traefik Proxy using Docker. You'll learn the fundamentals of routing HTTP traffic, setting up path-based routing, and securing your services with… (7144 bytes)
+- [Exposing Services with Traefik on Docker - Advanced](pages/expose/docker/advanced.md): This guide builds on the concepts and setup from the Basic Guide. Make sure you've completed the basic guide and have a working Traefik setup with Docker before proceeding. (17980 bytes)
+- [Exposing Services with Traefik on Docker Swarm - Basic](pages/expose/swarm/basic.md): This guide will help you get started with exposing your services through Traefik Proxy using Docker Swarm. You'll learn the fundamentals of routing HTTP traffic, setting up path-based routing, and securing your services… (5687 bytes)
+- [Exposing Services with Traefik on Docker Swarm - Advanced](pages/expose/swarm/advanced.md): This guide builds on the concepts and setup from the Basic Guide. Make sure you've completed the basic guide and have a working Traefik setup with Docker Swarm before proceeding. (17865 bytes)
 
 ## Secure
 
-- [Secure API Access with JWT](pages/secure/secure-api-access-with-jwt.md): Source `docs/content/secure/secure-api-access-with-jwt.md`.
-- [Secure API Access with OIDC](pages/secure/secure-api-access-with-oidc.md): Source `docs/content/secure/secure-api-access-with-oidc.md`.
-- [Secure API Access with WAF](pages/secure/secure-api-access-with-waf.md): Source `docs/content/secure/secure-api-access-with-waf.md`.
+- [Secure API Access with JWT](pages/secure/secure-api-access-with-jwt.md): Traefik Hub API Gateway provides many kinds of sources to perform the token validation: (5426 bytes)
+- [Secure API Access with OIDC](pages/secure/secure-api-access-with-oidc.md): To authenticate the user, the middleware redirects through the authentication provider. Once the authentication is complete, users are redirected back to the middleware before being authorized to access the upstream app… (3159 bytes)
+- [Secure API Access with WAF](pages/secure/secure-api-access-with-waf.md): To protect your applications with custom security rules, apply the following configuration: (7558 bytes)
 
 ## Observe
 
-- [Observability Overview](pages/observe/overview.md): Source `docs/content/observe/overview.md`.
-- [Logs and Access Logs](pages/observe/logs-and-access-logs.md): Source `docs/content/observe/logs-and-access-logs.md`.
-- [Metrics](pages/observe/metrics.md): Source `docs/content/observe/metrics.md`.
-- [Tracing](pages/observe/tracing.md): Source `docs/content/observe/tracing.md`.
+- [Observability Overview](pages/observe/overview.md): Traefik Proxy provides comprehensive monitoring and observability capabilities to maintain reliability and efficiency: (2269 bytes)
+- [Logs and Access Logs](pages/observe/logs-and-access-logs.md): Logs concern everything that happens to Traefik itself (startup, configuration, events, shutdown, and so on). (6112 bytes)
+- [Metrics](pages/observe/metrics.md): Metrics in Traefik Proxy offer a comprehensive view of your infrastructure's health. They allow you to monitor critical indicators like incoming traffic volume. Metrics graphs and visualizations are helpful during incid… (2688 bytes)
+- [Tracing](pages/observe/tracing.md): Tracing in Traefik Proxy allows you to track the flow of operations within your system. Using traces and spans, you can identify performance bottlenecks and pinpoint applications causing slowdowns to optimize response t… (2654 bytes)
 
 ## Migrate
 
-- [Migrate from Ingress NGINX Controller to Traefik](pages/migrate/nginx-to-traefik.md): Source `docs/content/migrate/nginx-to-traefik.md`.
-- [Traefik Migration Documentation](pages/migrate/v3.md): Source `docs/content/migrate/v3.md`.
-- [Traefik V3 Migration Documentation](pages/migrate/v2-to-v3.md): Source `docs/content/migrate/v2-to-v3.md`.
-- [Traefik V3 Migration Details](pages/migrate/v2-to-v3-details.md): Source `docs/content/migrate/v2-to-v3-details.md`.
-- [Traefik V2 Migration Documentation](pages/migrate/v2.md): Source `docs/content/migrate/v2.md`.
-- [Traefik V2 Migration Documentation](pages/migrate/v1-to-v2.md): Source `docs/content/migrate/v1-to-v2.md`.
+- [Migrate from Ingress NGINX Controller to Traefik](pages/migrate/nginx-to-traefik.md): How to migrate from Ingress NGINX Controller to Traefik with zero downtime. (44346 bytes)
+- [Traefik Migration Documentation](pages/migrate/v3.md): This guide provides detailed migration steps for upgrading between different Traefik v3 versions. Each section covers breaking changes, deprecations, and configuration updates required for a smooth transition. (63769 bytes)
+- [Traefik V3 Migration Documentation](pages/migrate/v2-to-v3.md): How to Migrate from Traefik v2 to Traefik v3. (6860 bytes)
+- [Traefik V3 Migration Details](pages/migrate/v2-to-v3-details.md): In v3, the provider Docker has been split into 2 providers: (22529 bytes)
+- [Traefik V2 Migration Documentation](pages/migrate/v2.md): The multiple minor versions of Traefik v2 introduced a number of changes, which may require one to update their configuration when they migrate. (363 bytes)
+- [Traefik V2 Migration Documentation](pages/migrate/v1-to-v2.md): How to Migrate from Traefik v1 to Traefik v2. (763 bytes)
 
 ## Reference
 
-- [Traefik Configuration Overview](pages/reference/install-configuration/boot-environment.md): Source `docs/content/reference/install-configuration/boot-environment.md`.
-- [Traefik Providers Documentation](pages/reference/install-configuration/providers/overview.md): Source `docs/content/reference/install-configuration/providers/overview.md`.
-- [Traefik Kubernetes Gateway API Documentation](pages/reference/install-configuration/providers/kubernetes/kubernetes-gateway.md): Source `docs/content/reference/install-configuration/providers/kubernetes/kubernetes-gateway.md`.
-- [Kubernetes Custom Resources](pages/reference/install-configuration/providers/kubernetes/kubernetes-crd.md): Source `docs/content/reference/install-configuration/providers/kubernetes/kubernetes-crd.md`.
-- [Traefik Kubernetes Ingress Documentation](pages/reference/install-configuration/providers/kubernetes/kubernetes-ingress.md): Source `docs/content/reference/install-configuration/providers/kubernetes/kubernetes-ingress.md`.
-- [Traefik Kubernetes Ingress NGINX Documentation](pages/reference/install-configuration/providers/kubernetes/kubernetes-ingress-nginx.md): Source `docs/content/reference/install-configuration/providers/kubernetes/kubernetes-ingress-nginx.md`.
-- [Traefik Knative Documentation](pages/reference/install-configuration/providers/kubernetes/knative.md): Source `docs/content/reference/install-configuration/providers/kubernetes/knative.md`.
-- [Traefik Docker Documentation](pages/reference/install-configuration/providers/docker.md): Source `docs/content/reference/install-configuration/providers/docker.md`.
-- [Traefik Docker Swarm Documentation](pages/reference/install-configuration/providers/swarm.md): Source `docs/content/reference/install-configuration/providers/swarm.md`.
-- [Nomad Service Discovery](pages/reference/install-configuration/providers/hashicorp/nomad.md): Source `docs/content/reference/install-configuration/providers/hashicorp/nomad.md`.
-- [Traefik Consul Documentation](pages/reference/install-configuration/providers/hashicorp/consul.md): Source `docs/content/reference/install-configuration/providers/hashicorp/consul.md`.
-- [Traefik Consul Catalog Documentation](pages/reference/install-configuration/providers/hashicorp/consul-catalog.md): Source `docs/content/reference/install-configuration/providers/hashicorp/consul-catalog.md`.
-- [Traefik Redis Documentation](pages/reference/install-configuration/providers/kv/redis.md): Source `docs/content/reference/install-configuration/providers/kv/redis.md`.
-- [Traefik Consul Documentation](pages/reference/install-configuration/providers/kv/consul.md): Source `docs/content/reference/install-configuration/providers/kv/consul.md`.
-- [Traefik Etcd Documentation](pages/reference/install-configuration/providers/kv/etcd.md): Source `docs/content/reference/install-configuration/providers/kv/etcd.md`.
-- [Traefik ZooKeeper Documentation](pages/reference/install-configuration/providers/kv/zk.md): Source `docs/content/reference/install-configuration/providers/kv/zk.md`.
-- [Traefik File Documentation](pages/reference/install-configuration/providers/others/file.md): Source `docs/content/reference/install-configuration/providers/others/file.md`.
-- [Traefik AWS ECS Documentation](pages/reference/install-configuration/providers/others/ecs.md): Source `docs/content/reference/install-configuration/providers/others/ecs.md`.
-- [Traefik HTTP Documentation](pages/reference/install-configuration/providers/others/http.md): Source `docs/content/reference/install-configuration/providers/others/http.md`.
-- [Traefik EntryPoints Documentation](pages/reference/install-configuration/entrypoints.md): Source `docs/content/reference/install-configuration/entrypoints.md`.
-- [Traefik API & Dashboard Documentation](pages/reference/install-configuration/api-dashboard.md): Source `docs/content/reference/install-configuration/api-dashboard.md`.
-- [Certificates Resolver](pages/reference/install-configuration/tls/certificate-resolvers/overview.md): Source `docs/content/reference/install-configuration/tls/certificate-resolvers/overview.md`.
-- [Traefik & ACME Certificates Resolver](pages/reference/install-configuration/tls/certificate-resolvers/acme.md): Source `docs/content/reference/install-configuration/tls/certificate-resolvers/acme.md`.
-- [Traefik Tailscale Documentation](pages/reference/install-configuration/tls/certificate-resolvers/tailscale.md): Source `docs/content/reference/install-configuration/tls/certificate-resolvers/tailscale.md`.
-- [Traefik SPIFFE Documentation](pages/reference/install-configuration/tls/spiffe.md): Source `docs/content/reference/install-configuration/tls/spiffe.md`.
-- [Traefik OCSP Documentation](pages/reference/install-configuration/tls/ocsp.md): Source `docs/content/reference/install-configuration/tls/ocsp.md`.
-- [Traefik Metrics Overview](pages/reference/install-configuration/observability/metrics.md): Source `docs/content/reference/install-configuration/observability/metrics.md`.
-- [Traefik Tracing Overview](pages/reference/install-configuration/observability/tracing.md): Source `docs/content/reference/install-configuration/observability/tracing.md`.
-- [Traefik Logs Documentation](pages/reference/install-configuration/observability/logs-and-accesslogs.md): Source `docs/content/reference/install-configuration/observability/logs-and-accesslogs.md`.
-- [Traefik Health Check Documentation](pages/reference/install-configuration/observability/healthcheck.md): Source `docs/content/reference/install-configuration/observability/healthcheck.md`.
-- [Traefik FastProxy Experimental Configuration](pages/reference/install-configuration/experimental/fastproxy.md): Source `docs/content/reference/install-configuration/experimental/fastproxy.md`.
-- [Traefik Plugins Experimental Configuration](pages/reference/install-configuration/experimental/plugins.md): Source `docs/content/reference/install-configuration/experimental/plugins.md`.
-- [Install Configuration Options](pages/reference/install-configuration/configuration-options.md): Source `docs/content/reference/install-configuration/configuration-options.md`.
-- [Providing Dynamic Configuration to Traefik](pages/reference/routing-configuration/dynamic-configuration-methods.md): Source `docs/content/reference/routing-configuration/dynamic-configuration-methods.md`.
-- [Traefik HTTP Routers Documentation](pages/reference/routing-configuration/http/routing/router.md): Source `docs/content/reference/routing-configuration/http/routing/router.md`.
-- [Traefik HTTP Routers Rules & Priority Documentation](pages/reference/routing-configuration/http/routing/rules-and-priority.md): Source `docs/content/reference/routing-configuration/http/routing/rules-and-priority.md`.
-- [Per-Router Observability](pages/reference/routing-configuration/http/routing/observability.md): Source `docs/content/reference/routing-configuration/http/routing/observability.md`.
-- [Multi-Layer Routing](pages/reference/routing-configuration/http/routing/multi-layer-routing.md): Source `docs/content/reference/routing-configuration/http/routing/multi-layer-routing.md`.
-- [Traefik HTTP Services Documentation](pages/reference/routing-configuration/http/load-balancing/service.md): Source `docs/content/reference/routing-configuration/http/load-balancing/service.md`.
-- [ServersTransport](pages/reference/routing-configuration/http/load-balancing/serverstransport.md): Source `docs/content/reference/routing-configuration/http/load-balancing/serverstransport.md`.
-- [Traefik HTTP TLS Documentation](pages/reference/routing-configuration/http/tls/overview.md): Source `docs/content/reference/routing-configuration/http/tls/overview.md`.
-- [Traefik TLS Certificates Documentation](pages/reference/routing-configuration/http/tls/tls-certificates.md): Source `docs/content/reference/routing-configuration/http/tls/tls-certificates.md`.
-- [Traefik TLS Options Documentation](pages/reference/routing-configuration/http/tls/tls-options.md): Source `docs/content/reference/routing-configuration/http/tls/tls-options.md`.
-- [Traefik Proxy Middleware Overview](pages/reference/routing-configuration/http/middlewares/overview.md): Source `docs/content/reference/routing-configuration/http/middlewares/overview.md`.
-- [Traefik AddPrefix Documentation](pages/reference/routing-configuration/http/middlewares/addprefix.md): Source `docs/content/reference/routing-configuration/http/middlewares/addprefix.md`.
-- [API Key Authentication](pages/reference/routing-configuration/http/middlewares/apikey.md): Source `docs/content/reference/routing-configuration/http/middlewares/apikey.md`.
-- [Traefik BasicAuth Documentation](pages/reference/routing-configuration/http/middlewares/basicauth.md): Source `docs/content/reference/routing-configuration/http/middlewares/basicauth.md`.
-- [Traefik Buffering Documentation](pages/reference/routing-configuration/http/middlewares/buffering.md): Source `docs/content/reference/routing-configuration/http/middlewares/buffering.md`.
-- [Traefik Chain Middleware Documentation](pages/reference/routing-configuration/http/middlewares/chain.md): Source `docs/content/reference/routing-configuration/http/middlewares/chain.md`.
-- [Traefik CircuitBreaker Documentation](pages/reference/routing-configuration/http/middlewares/circuitbreaker.md): Source `docs/content/reference/routing-configuration/http/middlewares/circuitbreaker.md`.
-- [Traefik Compress Documentation](pages/reference/routing-configuration/http/middlewares/compress.md): Source `docs/content/reference/routing-configuration/http/middlewares/compress.md`.
-- [Traefik ContentType Documentation](pages/reference/routing-configuration/http/middlewares/contenttype.md): Source `docs/content/reference/routing-configuration/http/middlewares/contenttype.md`.
-- [Traefik DigestAuth Documentation](pages/reference/routing-configuration/http/middlewares/digestauth.md): Source `docs/content/reference/routing-configuration/http/middlewares/digestauth.md`.
-- [Distributed RateLimit](pages/reference/routing-configuration/http/middlewares/distributed-ratelimit.md): Source `docs/content/reference/routing-configuration/http/middlewares/distributed-ratelimit.md`.
-- [Traefik EncodedCharacters Documentation](pages/reference/routing-configuration/http/middlewares/encodedcharacters.md): Source `docs/content/reference/routing-configuration/http/middlewares/encodedcharacters.md`.
-- [Traefik Errors Documentation](pages/reference/routing-configuration/http/middlewares/errorpages.md): Source `docs/content/reference/routing-configuration/http/middlewares/errorpages.md`.
-- [Traefik ForwardAuth Documentation](pages/reference/routing-configuration/http/middlewares/forwardauth.md): Source `docs/content/reference/routing-configuration/http/middlewares/forwardauth.md`.
-- [Traefik GrpcWeb Documentation](pages/reference/routing-configuration/http/middlewares/grpcweb.md): Source `docs/content/reference/routing-configuration/http/middlewares/grpcweb.md`.
-- [Traefik Headers Documentation](pages/reference/routing-configuration/http/middlewares/headers.md): Source `docs/content/reference/routing-configuration/http/middlewares/headers.md`.
-- [HMAC](pages/reference/routing-configuration/http/middlewares/hmac.md): Source `docs/content/reference/routing-configuration/http/middlewares/hmac.md`.
-- [Traefik HTTP Middlewares IPAllowList](pages/reference/routing-configuration/http/middlewares/ipallowlist.md): Source `docs/content/reference/routing-configuration/http/middlewares/ipallowlist.md`.
-- [Traefik InFlightReq Documentation](pages/reference/routing-configuration/http/middlewares/inflightreq.md): Source `docs/content/reference/routing-configuration/http/middlewares/inflightreq.md`.
-- [JWT Authentication](pages/reference/routing-configuration/http/middlewares/jwt.md): Source `docs/content/reference/routing-configuration/http/middlewares/jwt.md`.
-- [LDAP Authentication](pages/reference/routing-configuration/http/middlewares/ldap.md): Source `docs/content/reference/routing-configuration/http/middlewares/ldap.md`.
-- [OAuth 2.0 Token Introspection Authentication](pages/reference/routing-configuration/http/middlewares/oauth2-token-introspection.md): Source `docs/content/reference/routing-configuration/http/middlewares/oauth2-token-introspection.md`.
-- [OAuth 2.0 Client Credentials Authentication](pages/reference/routing-configuration/http/middlewares/oauth2-client-credentials.md): Source `docs/content/reference/routing-configuration/http/middlewares/oauth2-client-credentials.md`.
-- [OpenID Connect Authentication](pages/reference/routing-configuration/http/middlewares/oidc.md): Source `docs/content/reference/routing-configuration/http/middlewares/oidc.md`.
-- [Open Policy Agent](pages/reference/routing-configuration/http/middlewares/opa.md): Source `docs/content/reference/routing-configuration/http/middlewares/opa.md`.
-- [Traefik PassTLSClientCert Documentation](pages/reference/routing-configuration/http/middlewares/passtlsclientcert.md): Source `docs/content/reference/routing-configuration/http/middlewares/passtlsclientcert.md`.
-- [Traefik RateLimit Documentation](pages/reference/routing-configuration/http/middlewares/ratelimit.md): Source `docs/content/reference/routing-configuration/http/middlewares/ratelimit.md`.
-- [Traefik RedirectRegex Documentation](pages/reference/routing-configuration/http/middlewares/redirectregex.md): Source `docs/content/reference/routing-configuration/http/middlewares/redirectregex.md`.
-- [Traefik RedirectScheme Documentation](pages/reference/routing-configuration/http/middlewares/redirectscheme.md): Source `docs/content/reference/routing-configuration/http/middlewares/redirectscheme.md`.
-- [Traefik ReplacePath Documentation](pages/reference/routing-configuration/http/middlewares/replacepath.md): Source `docs/content/reference/routing-configuration/http/middlewares/replacepath.md`.
-- [Traefik ReplacePathRegex Documentation](pages/reference/routing-configuration/http/middlewares/replacepathregex.md): Source `docs/content/reference/routing-configuration/http/middlewares/replacepathregex.md`.
-- [Traefik HTTP Retry Documentation](pages/reference/routing-configuration/http/middlewares/retry.md): Source `docs/content/reference/routing-configuration/http/middlewares/retry.md`.
-- [Traefik StripPrefix Documentation](pages/reference/routing-configuration/http/middlewares/stripprefix.md): Source `docs/content/reference/routing-configuration/http/middlewares/stripprefix.md`.
-- [Traefik StripPrefixRegex Documentation](pages/reference/routing-configuration/http/middlewares/stripprefixregex.md): Source `docs/content/reference/routing-configuration/http/middlewares/stripprefixregex.md`.
-- [Coraza Web Application Firewall](pages/reference/routing-configuration/http/middlewares/waf.md): Source `docs/content/reference/routing-configuration/http/middlewares/waf.md`.
-- [Traefik TCP Routers Documentation](pages/reference/routing-configuration/tcp/routing/router.md): Source `docs/content/reference/routing-configuration/tcp/routing/router.md`.
-- [Traefik TCP Routers Rules & Priority Documentation](pages/reference/routing-configuration/tcp/routing/rules-and-priority.md): Source `docs/content/reference/routing-configuration/tcp/routing/rules-and-priority.md`.
-- [Traefik TCP Services Documentation](pages/reference/routing-configuration/tcp/service.md): Source `docs/content/reference/routing-configuration/tcp/service.md`.
-- [ServersTransport TCP](pages/reference/routing-configuration/tcp/serverstransport.md): Source `docs/content/reference/routing-configuration/tcp/serverstransport.md`.
-- [Traefik TLS Documentation](pages/reference/routing-configuration/tcp/tls.md): Source `docs/content/reference/routing-configuration/tcp/tls.md`.
-- [Traefik Proxy TCP Middleware Overview](pages/reference/routing-configuration/tcp/middlewares/overview.md): Source `docs/content/reference/routing-configuration/tcp/middlewares/overview.md`.
-- [Traefik InFlightConn Middleware - TCP](pages/reference/routing-configuration/tcp/middlewares/inflightconn.md): Source `docs/content/reference/routing-configuration/tcp/middlewares/inflightconn.md`.
-- [Traefik TCP Middlewares IPAllowList](pages/reference/routing-configuration/tcp/middlewares/ipallowlist.md): Source `docs/content/reference/routing-configuration/tcp/middlewares/ipallowlist.md`.
-- [Traefik UDP Routers Documentation](pages/reference/routing-configuration/udp/routing/router.md): Source `docs/content/reference/routing-configuration/udp/routing/router.md`.
-- [Traefik UDP Routers Rules & Priority Documentation](pages/reference/routing-configuration/udp/routing/rules-priority.md): Source `docs/content/reference/routing-configuration/udp/routing/rules-priority.md`.
-- [Traefik UDP Services Documentation](pages/reference/routing-configuration/udp/service.md): Source `docs/content/reference/routing-configuration/udp/service.md`.
-- [Traefik Kubernetes Gateway](pages/reference/routing-configuration/kubernetes/gateway-api.md): Source `docs/content/reference/routing-configuration/kubernetes/gateway-api.md`.
-- [Kubernetes IngressRoute](pages/reference/routing-configuration/kubernetes/crd/http/ingressroute.md): Source `docs/content/reference/routing-configuration/kubernetes/crd/http/ingressroute.md`.
-- [Kubernetes Service](pages/reference/routing-configuration/kubernetes/crd/http/service.md): Source `docs/content/reference/routing-configuration/kubernetes/crd/http/service.md`.
-- [Traefik Kubernetes Services Documentation](pages/reference/routing-configuration/kubernetes/crd/http/traefikservice.md): Source `docs/content/reference/routing-configuration/kubernetes/crd/http/traefikservice.md`.
-- [Kubernetes serversTransport](pages/reference/routing-configuration/kubernetes/crd/http/serverstransport.md): Source `docs/content/reference/routing-configuration/kubernetes/crd/http/serverstransport.md`.
-- [Traefik Kubernetes Middleware Documentation](pages/reference/routing-configuration/kubernetes/crd/http/middleware.md): Source `docs/content/reference/routing-configuration/kubernetes/crd/http/middleware.md`.
-- [TLSOption](pages/reference/routing-configuration/kubernetes/crd/tls/tlsoption.md): Source `docs/content/reference/routing-configuration/kubernetes/crd/tls/tlsoption.md`.
-- [TLSStore](pages/reference/routing-configuration/kubernetes/crd/tls/tlsstore.md): Source `docs/content/reference/routing-configuration/kubernetes/crd/tls/tlsstore.md`.
-- [Kubernetes IngressRouteTCP](pages/reference/routing-configuration/kubernetes/crd/tcp/ingressroutetcp.md): Source `docs/content/reference/routing-configuration/kubernetes/crd/tcp/ingressroutetcp.md`.
-- [ServersTransportTCP](pages/reference/routing-configuration/kubernetes/crd/tcp/serverstransporttcp.md): Source `docs/content/reference/routing-configuration/kubernetes/crd/tcp/serverstransporttcp.md`.
-- [Kubernetes MiddlewareTCP](pages/reference/routing-configuration/kubernetes/crd/tcp/middlewaretcp.md): Source `docs/content/reference/routing-configuration/kubernetes/crd/tcp/middlewaretcp.md`.
-- [IngressRouteUDP](pages/reference/routing-configuration/kubernetes/crd/udp/ingressrouteudp.md): Source `docs/content/reference/routing-configuration/kubernetes/crd/udp/ingressrouteudp.md`.
-- [Kubernetes Ingress Routing Configuration](pages/reference/routing-configuration/kubernetes/ingress.md): Source `docs/content/reference/routing-configuration/kubernetes/ingress.md`.
-- [Traefik Kubernetes Ingress NGINX Routing Configuration](pages/reference/routing-configuration/kubernetes/ingress-nginx.md): Source `docs/content/reference/routing-configuration/kubernetes/ingress-nginx.md`.
-- [Traefik Knative Documentation](pages/reference/routing-configuration/kubernetes/knative.md): Source `docs/content/reference/routing-configuration/kubernetes/knative.md`.
-- [Traefik Docker Routing Documentation](pages/reference/routing-configuration/other-providers/docker.md): Source `docs/content/reference/routing-configuration/other-providers/docker.md`.
-- [Traefik Docker Swarm Routing Documentation](pages/reference/routing-configuration/other-providers/swarm.md): Source `docs/content/reference/routing-configuration/other-providers/swarm.md`.
-- [Traefik Consul Catalog Routing](pages/reference/routing-configuration/other-providers/consul-catalog.md): Source `docs/content/reference/routing-configuration/other-providers/consul-catalog.md`.
-- [Traefik Nomad Service Discovery Routing](pages/reference/routing-configuration/other-providers/nomad.md): Source `docs/content/reference/routing-configuration/other-providers/nomad.md`.
-- [Traefik ECS Documentation](pages/reference/routing-configuration/other-providers/ecs.md): Source `docs/content/reference/routing-configuration/other-providers/ecs.md`.
-- [Traefik Routing Configuration with KV stores](pages/reference/routing-configuration/other-providers/kv.md): Source `docs/content/reference/routing-configuration/other-providers/kv.md`.
-- [Traefik File Routing Configuration](pages/reference/routing-configuration/other-providers/file.md): Source `docs/content/reference/routing-configuration/other-providers/file.md`.
-- [Request Path](pages/security/request-path.md): Source `docs/content/security/request-path.md`.
-- [Content-Length](pages/security/content-length.md): Source `docs/content/security/content-length.md`.
-- [HTTP/2 Header Memory](pages/security/http2-header-memory.md): Source `docs/content/security/http2-header-memory.md`.
-- [Headers with Aliasing Names](pages/security/header-aliases.md): Source `docs/content/security/header-aliases.md`.
-- [Traefik in Multi-Tenant Kubernetes Clusters](pages/security/multi-tenant-kubernetes.md): Source `docs/content/security/multi-tenant-kubernetes.md`.
-- [Releases](pages/deprecation/releases.md): Source `docs/content/deprecation/releases.md`.
-- [Feature Deprecation Notices](pages/deprecation/features.md): Source `docs/content/deprecation/features.md`.
+- [Traefik Configuration Overview](pages/reference/install-configuration/boot-environment.md): Traefik Proxy’s configuration is divided into two main categories: (3323 bytes)
+- [Traefik Providers Documentation](pages/reference/install-configuration/providers/overview.md): Providers are infrastructure components, whether orchestrators, container engines, cloud providers, or key-value stores. The idea is that Traefik queries the provider APIs in order to find relevant information about rou… (12719 bytes)
+- [Traefik Kubernetes Gateway API Documentation](pages/reference/install-configuration/providers/kubernetes/kubernetes-gateway.md): The Kubernetes Gateway provider is a Traefik implementation of the Gateway API specification from the Kubernetes Special Interest Groups (SIGs). (14655 bytes)
+- [Kubernetes Custom Resources](pages/reference/install-configuration/providers/kubernetes/kubernetes-crd.md): Traefik provides some Kubernetes Custom Resources, such as IngressRoute, Middleware, etc. (22129 bytes)
+- [Traefik Kubernetes Ingress Documentation](pages/reference/install-configuration/providers/kubernetes/kubernetes-ingress.md): The Traefik Kubernetes Ingress provider is a Kubernetes Ingress controller; i.e, it manages access to cluster services by supporting the Ingress specification. (16935 bytes)
+- [Traefik Kubernetes Ingress NGINX Documentation](pages/reference/install-configuration/providers/kubernetes/kubernetes-ingress-nginx.md): This provider is a Kubernetes Ingress controller that manages access to cluster services by supporting the Ingress specification. It also supports many of the ingress-nginx annotations on Ingresses, enabling teams to mi… (40462 bytes)
+- [Traefik Knative Documentation](pages/reference/install-configuration/providers/kubernetes/knative.md): The Traefik Knative provider integrates with Knative Serving to provide advanced traffic management and routing capabilities for serverless applications. (12563 bytes)
+- [Traefik Docker Documentation](pages/reference/install-configuration/providers/docker.md): You can enable the Docker provider as detailed below: (24691 bytes)
+- [Traefik Docker Swarm Documentation](pages/reference/install-configuration/providers/swarm.md): This provider works with Docker Swarm Mode. (26571 bytes)
+- [Nomad Service Discovery](pages/reference/install-configuration/providers/hashicorp/nomad.md): You can enable the Nomad provider with as detailed below: (17443 bytes)
+- [Traefik Consul Documentation](pages/reference/install-configuration/providers/hashicorp/consul.md): You can enable the Consul provider as detailed below: (7315 bytes)
+- [Traefik Consul Catalog Documentation](pages/reference/install-configuration/providers/hashicorp/consul-catalog.md): You can enable the Consul Catalog provider as detailed below: (21771 bytes)
+- [Traefik Redis Documentation](pages/reference/install-configuration/providers/kv/redis.md): You can enable the Redis provider as detailed below: (11984 bytes)
+- [Traefik Consul Documentation](pages/reference/install-configuration/providers/kv/consul.md): You can enable the Consul provider as detailed below: (7315 bytes)
+- [Traefik Etcd Documentation](pages/reference/install-configuration/providers/kv/etcd.md): You can enable the etcd provider as detailed below: (6457 bytes)
+- [Traefik ZooKeeper Documentation](pages/reference/install-configuration/providers/kv/zk.md): You can enable the ZooKeeper provider as detailed below: (3939 bytes)
+- [Traefik File Documentation](pages/reference/install-configuration/providers/others/file.md): The file provider lets you define the install configuration in a YAML or TOML file. (6946 bytes)
+- [Traefik AWS ECS Documentation](pages/reference/install-configuration/providers/others/ecs.md): You can enable the ECS provider with as detailed below: (12638 bytes)
+- [Traefik HTTP Documentation](pages/reference/install-configuration/providers/others/http.md): Provide your install configuration via an HTTP(S) endpoint and let Traefik do the rest! (6994 bytes)
+- [Traefik EntryPoints Documentation](pages/reference/install-configuration/entrypoints.md): Listening for Incoming Connections/Requests (61977 bytes)
+- [Traefik API & Dashboard Documentation](pages/reference/install-configuration/api-dashboard.md): Traefik exposes a number of information through API endpoints, such as the configuration of your routers, services, middlewares, etc. (15211 bytes)
+- [Certificates Resolver](pages/reference/install-configuration/tls/certificate-resolvers/overview.md): In Traefik, TLS Certificates can be generated using Certificates Resolvers. (805 bytes)
+- [Traefik & ACME Certificates Resolver](pages/reference/install-configuration/tls/certificate-resolvers/acme.md): Below is an example of a basic configuration for ACME in Traefik. (25483 bytes)
+- [Traefik Tailscale Documentation](pages/reference/install-configuration/tls/certificate-resolvers/tailscale.md): Provision TLS certificates for your internal Tailscale services. (4972 bytes)
+- [Traefik SPIFFE Documentation](pages/reference/install-configuration/tls/spiffe.md): Secure the backend connection with SPIFFE. (2677 bytes)
+- [Traefik OCSP Documentation](pages/reference/install-configuration/tls/ocsp.md): Check certificate status and perform OCSP stapling. (1691 bytes)
+- [Traefik Metrics Overview](pages/reference/install-configuration/observability/metrics.md): Traefik provides metrics in the OpenTelemetry format as well as the following vendor specific backends: (58158 bytes)
+- [Traefik Tracing Overview](pages/reference/install-configuration/observability/tracing.md): Visualize the Requests Flow (14220 bytes)
+- [Traefik Logs Documentation](pages/reference/install-configuration/observability/logs-and-accesslogs.md): Logs concern everything that happens to Traefik itself (startup, configuration, events, shutdown, and so on). (47243 bytes)
+- [Traefik Health Check Documentation](pages/reference/install-configuration/observability/healthcheck.md): Checking the Health of your Traefik Instances (3226 bytes)
+- [Traefik FastProxy Experimental Configuration](pages/reference/install-configuration/experimental/fastproxy.md): This guide provides instructions on how to configure and use the new experimental fastProxy install configuration option in Traefik. The fastProxy option introduces a high-performance reverse proxy designed to enhance t… (1742 bytes)
+- [Traefik Plugins Experimental Configuration](pages/reference/install-configuration/experimental/plugins.md): This guide provides instructions on how to configure and use the new experimental plugins install configuration option in Traefik. The plugins option introduces a system to extend Traefik capabilities with custom middle… (4533 bytes)
+- [Install Configuration Options](pages/reference/install-configuration/configuration-options.md): Normalized source from docs/content/reference/install-configuration/configuration-options.md. (385755 bytes)
+- [Providing Dynamic Configuration to Traefik](pages/reference/routing-configuration/dynamic-configuration-methods.md): Dynamic configuration—now also known as routing configuration—defines how Traefik routes incoming requests to the correct services. This is distinct from install configuration (formerly known as static configuration), w… (5758 bytes)
+- [Traefik HTTP Routers Documentation](pages/reference/routing-configuration/http/routing/router.md): An HTTP router is in charge of connecting incoming requests to the services that can handle them. Routers analyze incoming requests based on rules, and when a match is found, forward the request through any configured m… (14107 bytes)
+- [Traefik HTTP Routers Rules & Priority Documentation](pages/reference/routing-configuration/http/routing/rules-and-priority.md): An HTTP router is in charge of connecting incoming requests to the services that can handle them. Traefik allows you to define your matching rules and prioritize the routes. (21396 bytes)
+- [Per-Router Observability](pages/reference/routing-configuration/http/routing/observability.md): Traefik's observability features include logs, access logs, metrics, and tracing. You can configure these options globally or at more specific levels, such as per router or per entry point. (4962 bytes)
+- [Multi-Layer Routing](pages/reference/routing-configuration/http/routing/multi-layer-routing.md): Hierarchical Router Relationships for Advanced Routing Scenarios. (7509 bytes)
+- [Traefik HTTP Services Documentation](pages/reference/routing-configuration/http/load-balancing/service.md): Traefik services define how to distribute incoming traffic across your backend servers. This page covers two main concepts: (51049 bytes)
+- [ServersTransport](pages/reference/routing-configuration/http/load-balancing/serverstransport.md): ServersTransport allows you to configure the transport between Traefik and your HTTP servers. (7836 bytes)
+- [Traefik HTTP TLS Documentation](pages/reference/routing-configuration/http/tls/overview.md): When an HTTP router is configured to handle HTTPS traffic, include a tls field in its definition. This field tells Traefik that the router should process only TLS requests and ignore non-TLS traffic. (6622 bytes)
+- [Traefik TLS Certificates Documentation](pages/reference/routing-configuration/http/tls/tls-certificates.md): See the Let's Encrypt page. (6572 bytes)
+- [Traefik TLS Options Documentation](pages/reference/routing-configuration/http/tls/tls-options.md): The TLS options allow one to configure some parameters of the TLS connection. (11750 bytes)
+- [Traefik Proxy Middleware Overview](pages/reference/routing-configuration/http/middlewares/overview.md): Attached to routers or services, pieces of middleware are a means of tweaking the requests before they are sent to your backend servers (or before the answer is sent to the clients). (8310 bytes)
+- [Traefik AddPrefix Documentation](pages/reference/routing-configuration/http/middlewares/addprefix.md): The addPrefix middleware updates the path of a request before forwarding it. (1307 bytes)
+- [API Key Authentication](pages/reference/routing-configuration/http/middlewares/apikey.md): Middleware API Key (3958 bytes)
+- [Traefik BasicAuth Documentation](pages/reference/routing-configuration/http/middlewares/basicauth.md): The basicAuth middleware grants access to services to authorized users only. (4352 bytes)
+- [Traefik Buffering Documentation](pages/reference/routing-configuration/http/middlewares/buffering.md): The buffering middleware limits the size of requests that can be forwarded to services. (4162 bytes)
+- [Traefik Chain Middleware Documentation](pages/reference/routing-configuration/http/middlewares/chain.md): The chain middleware enables you to define reusable combinations of other pieces of middleware. It makes it effortless to reuse the same groups. (4414 bytes)
+- [Traefik CircuitBreaker Documentation](pages/reference/routing-configuration/http/middlewares/circuitbreaker.md): The HTTP circuit breaker prevents stacking requests to unhealthy Services, resulting in cascading failures. (7926 bytes)
+- [Traefik Compress Documentation](pages/reference/routing-configuration/http/middlewares/compress.md): The compress middleware compresses response. It supports Gzip, Brotli and Zstandard compression (5604 bytes)
+- [Traefik ContentType Documentation](pages/reference/routing-configuration/http/middlewares/contenttype.md): The contentType middleware sets the Content-Type header value to the media type detected from the response content, when it is not set by the backend. (1072 bytes)
+- [Traefik DigestAuth Documentation](pages/reference/routing-configuration/http/middlewares/digestauth.md): The DigestAuth middleware grants access to services to authorized users only. (4309 bytes)
+- [Distributed RateLimit](pages/reference/routing-configuration/http/middlewares/distributed-ratelimit.md): It is based on a token bucket implementation. (20926 bytes)
+- [Traefik EncodedCharacters Documentation](pages/reference/routing-configuration/http/middlewares/encodedcharacters.md): The EncodedCharacters middleware controls which ambiguous reserved encoded characters are allowed in the request path. (2746 bytes)
+- [Traefik Errors Documentation](pages/reference/routing-configuration/http/middlewares/errorpages.md): The errors middleware returns a custom page in lieu of the default, according to configured ranges of HTTP Status codes. (9279 bytes)
+- [Traefik ForwardAuth Documentation](pages/reference/routing-configuration/http/middlewares/forwardauth.md): The forwardAuth middleware delegates authentication to an external service. If the service answers with a 2XX code, access is granted, and the original request is performed. Otherwise, the response from the authenticati… (16426 bytes)
+- [Traefik GrpcWeb Documentation](pages/reference/routing-configuration/http/middlewares/grpcweb.md): The grpcWeb middleware converts gRPC Web requests to HTTP/2 gRPC requests before forwarding them to the backends. (2013 bytes)
+- [Traefik Headers Documentation](pages/reference/routing-configuration/http/middlewares/headers.md): The Headers middleware manages the headers of requests and responses. (14488 bytes)
+- [HMAC](pages/reference/routing-configuration/http/middlewares/hmac.md): It ensures: (11898 bytes)
+- [Traefik HTTP Middlewares IPAllowList](pages/reference/routing-configuration/http/middlewares/ipallowlist.md): ipAllowList accepts / refuses requests based on the client IP. (8960 bytes)
+- [Traefik InFlightReq Documentation](pages/reference/routing-configuration/http/middlewares/inflightreq.md): The inFlightReq middleware proactively prevents services from being overwhelmed with high load. (9054 bytes)
+- [JWT Authentication](pages/reference/routing-configuration/http/middlewares/jwt.md): With no specific configuration, a JWT middleware only validates the signature of a JWT and checks the nbf, exp and iat standard claims (if they are present). Custom claim validation can be configured with Custom Claims… (18011 bytes)
+- [LDAP Authentication](pages/reference/routing-configuration/http/middlewares/ldap.md): The LDAP middleware will look for user credentials in the Authorization header of each request. Credentials must be encoded with the following format: base64(username:password). (11651 bytes)
+- [OAuth 2.0 Token Introspection Authentication](pages/reference/routing-configuration/http/middlewares/oauth2-token-introspection.md): The metadata can be used to restrict the access to applications. For more information please refer to the RFC. (15554 bytes)
+- [OAuth 2.0 Client Credentials Authentication](pages/reference/routing-configuration/http/middlewares/oauth2-client-credentials.md): The OAuth Client Credentials Authentication middleware allows using Redis (or Sentinel) as persistent KV store to authorization access tokens while they are valid. This reduces latency and the number of calls made to th… (21859 bytes)
+- [OpenID Connect Authentication](pages/reference/routing-configuration/http/middlewares/oidc.md): Middleware OIDC (54521 bytes)
+- [Open Policy Agent](pages/reference/routing-configuration/http/middlewares/opa.md): Allow requests with specific JWT claim (3226 bytes)
+- [Traefik PassTLSClientCert Documentation](pages/reference/routing-configuration/http/middlewares/passtlsclientcert.md): The passTLSClientCert middleware adds the selected data from the passed client TLS certificate to a header. (17079 bytes)
+- [Traefik RateLimit Documentation](pages/reference/routing-configuration/http/middlewares/ratelimit.md): The rateLimit middleware ensures that services will receive a fair amount of requests, and allows you to define what fair is. (25797 bytes)
+- [Traefik RedirectRegex Documentation](pages/reference/routing-configuration/http/middlewares/redirectregex.md): The RedirectRegex redirects a request using regex matching and replacement. (3731 bytes)
+- [Traefik RedirectScheme Documentation](pages/reference/routing-configuration/http/middlewares/redirectscheme.md): The RedirectScheme middleware redirects the request if the request scheme is different from the configured scheme. (2322 bytes)
+- [Traefik ReplacePath Documentation](pages/reference/routing-configuration/http/middlewares/replacepath.md): The replacePath middleware will: (1295 bytes)
+- [Traefik ReplacePathRegex Documentation](pages/reference/routing-configuration/http/middlewares/replacepathregex.md): The replacePathRegex middleware will: (2723 bytes)
+- [Traefik HTTP Retry Documentation](pages/reference/routing-configuration/http/middlewares/retry.md): The retry middleware retries requests a given number of times to a backend server if that server does not reply. As soon as the server answers, the middleware stops retrying, regardless of the response status. (8215 bytes)
+- [Traefik StripPrefix Documentation](pages/reference/routing-configuration/http/middlewares/stripprefix.md): The stripPrefix middleware strips the matching path prefix and stores it in an X-Forwarded-Prefix header. (1997 bytes)
+- [Traefik StripPrefixRegex Documentation](pages/reference/routing-configuration/http/middlewares/stripprefixregex.md): The stripPrefixRegex middleware strips the matching path prefix and stores it in an X-Forwarded-Prefix header. (2562 bytes)
+- [Coraza Web Application Firewall](pages/reference/routing-configuration/http/middlewares/waf.md): The native middleware in Hub API Gateway provides at least 23 times more performance compared to the WASM-based Coraza plugin available with the open-source Traefik Proxy. (3038 bytes)
+- [Traefik TCP Routers Documentation](pages/reference/routing-configuration/tcp/routing/router.md): A TCP router is in charge of connecting incoming TCP connections to the services that can handle them. TCP routers analyze incoming connections based on rules, and when a match is found, forward the connection through a… (7696 bytes)
+- [Traefik TCP Routers Rules & Priority Documentation](pages/reference/routing-configuration/tcp/routing/rules-and-priority.md): Rules are a set of matchers configured with values, that determine if a particular connection matches specific criteria. If the rule is verified, the router becomes active, calls middlewares, and then forwards the reque… (8663 bytes)
+- [Traefik TCP Services Documentation](pages/reference/routing-configuration/tcp/service.md): Each of the fields of the service section represents a kind of service. Which means, that for each specified service, one of the fields, and only one, has to be enabled to define what kind of service is created. Current… (11053 bytes)
+- [ServersTransport TCP](pages/reference/routing-configuration/tcp/serverstransport.md): ServersTransport allows to configure the transport between Traefik and your TCP servers. (9013 bytes)
+- [Traefik TLS Documentation](pages/reference/routing-configuration/tcp/tls.md): When a TCP router is configured to handle TLS traffic, include a tls field in its definition. This field tells Traefik that the router should process only TLS connections and ignore non-TLS traffic. (8802 bytes)
+- [Traefik Proxy TCP Middleware Overview](pages/reference/routing-configuration/tcp/middlewares/overview.md): Attached to the routers, pieces of middleware are a means of tweaking the requests before they are sent to your service (or before the answer from the services are sent to the clients). (3559 bytes)
+- [Traefik InFlightConn Middleware - TCP](pages/reference/routing-configuration/tcp/middlewares/inflightconn.md): To proactively prevent Services from being overwhelmed with high load, the number of allowed simultaneous connections by IP can be limited with the inFlightConn TCP middleware. (1690 bytes)
+- [Traefik TCP Middlewares IPAllowList](pages/reference/routing-configuration/tcp/middlewares/ipallowlist.md): iPAllowList limits allowed requests based on the client IP. (1553 bytes)
+- [Traefik UDP Routers Documentation](pages/reference/routing-configuration/udp/routing/router.md): A UDP router is in charge of connecting incoming UDP packets to the services that can handle them. Unlike HTTP and TCP routers, UDP routers operate at the transport layer and have unique characteristics due to the conne… (3685 bytes)
+- [Traefik UDP Routers Rules & Priority Documentation](pages/reference/routing-configuration/udp/routing/rules-priority.md): A router is in charge of connecting incoming requests to the services that can handle them. (3170 bytes)
+- [Traefik UDP Services Documentation](pages/reference/routing-configuration/udp/service.md): Each of the fields of the service section represents a kind of service. Which means, that for each specified service, one of the fields, and only one, has to be enabled to define what kind of service is created. Current… (3733 bytes)
+- [Traefik Kubernetes Gateway](pages/reference/routing-configuration/kubernetes/gateway-api.md): When using the Kubernetes Gateway API provider, Traefik leverages the Gateway API Custom Resource Definitions (CRDs) to obtain its routing configuration. For detailed information on the Gateway API concepts and resource… (29852 bytes)
+- [Kubernetes IngressRoute](pages/reference/routing-configuration/kubernetes/crd/http/ingressroute.md): IngressRoute is the CRD implementation of a Traefik HTTP router. (27101 bytes)
+- [Kubernetes Service](pages/reference/routing-configuration/kubernetes/crd/http/service.md): Service is the implementation of a Traefik HTTP service. (35169 bytes)
+- [Traefik Kubernetes Services Documentation](pages/reference/routing-configuration/kubernetes/crd/http/traefikservice.md): A TraefikService is a custom resource that sits on top of the Kubernetes Services. It enables advanced load-balancing features such as a Weighted Round Robin load balancing, a Highest Random Weight load balancing, a Mir… (44410 bytes)
+- [Kubernetes serversTransport](pages/reference/routing-configuration/kubernetes/crd/http/serverstransport.md): A ServersTransport allows you to configure the connection between Traefik and the HTTP servers in Kubernetes. (8100 bytes)
+- [Traefik Kubernetes Middleware Documentation](pages/reference/routing-configuration/kubernetes/crd/http/middleware.md): Middleware is the CRD implementation of a Traefik middleware. (2468 bytes)
+- [TLSOption](pages/reference/routing-configuration/kubernetes/crd/tls/tlsoption.md): The TLS options allow you to configure some parameters of the TLS connection in Traefik. (10025 bytes)
+- [TLSStore](pages/reference/routing-configuration/kubernetes/crd/tls/tlsstore.md): In Traefik, certificates are grouped together in certificates stores. (4425 bytes)
+- [Kubernetes IngressRouteTCP](pages/reference/routing-configuration/kubernetes/crd/tcp/ingressroutetcp.md): IngressRouteTCP is the CRD implementation of a Traefik TCP router. (17547 bytes)
+- [ServersTransportTCP](pages/reference/routing-configuration/kubernetes/crd/tcp/serverstransporttcp.md): ServersTransportTCP is the CRD implementation of ServersTransportTCP. (9337 bytes)
+- [Kubernetes MiddlewareTCP](pages/reference/routing-configuration/kubernetes/crd/tcp/middlewaretcp.md): MiddlewareTCP is the CRD implementation of a Traefik TCP middleware. (1895 bytes)
+- [IngressRouteUDP](pages/reference/routing-configuration/kubernetes/crd/udp/ingressrouteudp.md): IngressRouteUDP is the CRD implementation of a Traefik UDP router. (8448 bytes)
+- [Kubernetes Ingress Routing Configuration](pages/reference/routing-configuration/kubernetes/ingress.md): The Kubernetes Ingress provider watches for incoming ingresses events, such as the example below, and derives the corresponding dynamic configuration from it, which in turn will create the resulting routers, services, h… (32750 bytes)
+- [Traefik Kubernetes Ingress NGINX Routing Configuration](pages/reference/routing-configuration/kubernetes/ingress-nginx.md): Enable seamless migration from NGINX Ingress Controller to Traefik with NGINX annotation compatibility. (71814 bytes)
+- [Traefik Knative Documentation](pages/reference/routing-configuration/kubernetes/knative.md): When using the Knative provider, Traefik leverages Knative's Custom Resource Definitions (CRDs) to obtain its routing configuration. For detailed information on Knative concepts and resources, refer to the official docu… (3108 bytes)
+- [Traefik Docker Routing Documentation](pages/reference/routing-configuration/other-providers/docker.md): One of the best feature of Traefik is to delegate the routing configuration to the application level. With Docker, Traefik can leverage labels attached to a container to generate routing rules. (44596 bytes)
+- [Traefik Docker Swarm Routing Documentation](pages/reference/routing-configuration/other-providers/swarm.md): One of the best feature of Traefik is to delegate the routing configuration to the application level. With Docker Swarm, Traefik can leverage labels attached to a service to generate routing rules. (43275 bytes)
+- [Traefik Consul Catalog Routing](pages/reference/routing-configuration/other-providers/consul-catalog.md): One of the best feature of Traefik is to delegate the routing configuration to the application level. With Consul Catalog, Traefik can leverage tags attached to a service to generate routing rules. (41645 bytes)
+- [Traefik Nomad Service Discovery Routing](pages/reference/routing-configuration/other-providers/nomad.md): One of the best feature of Traefik is to delegate the routing configuration to the application level. With Nomad, Traefik can leverage tags attached to a service to generate routing rules. (40374 bytes)
+- [Traefik ECS Documentation](pages/reference/routing-configuration/other-providers/ecs.md): One of the best feature of Traefik is to delegate the routing configuration to the application level. With ECS, Traefik can leverage labels attached to a container to generate routing rules. (37992 bytes)
+- [Traefik Routing Configuration with KV stores](pages/reference/routing-configuration/other-providers/kv.md): You can declare TCP Routers and/or Services using KV. (39852 bytes)
+- [Traefik File Routing Configuration](pages/reference/routing-configuration/other-providers/file.md): The file provider lets you define routing configuration in YAML or TOML. Use it to declare routers, services, middlewares, TCP and UDP routing, and TLS options that Traefik should load from a file or a directory. (40532 bytes)
+- [Request Path](pages/security/request-path.md): Protecting Against Path-Based Attacks Through Sanitization and Filtering (5877 bytes)
+- [Content-Length](pages/security/content-length.md): Traefik acts as a streaming proxy. By default, it checks each chunk of data against the Content-Length header as it passes it on to the backend or client. This live check blocks truncated or over‑long streams without ho… (965 bytes)
+- [HTTP/2 Header Memory](pages/security/http2-header-memory.md): Traefik serves HTTP/2 through the Go standard library. With HTTP/2, a single connection can multiplex many concurrent requests, each carrying its own header block. (2523 bytes)
+- [Headers with Aliasing Names](pages/security/header-aliases.md): Preventing Header Spoofing Through Aliasing Header Names (4036 bytes)
+- [Traefik in Multi-Tenant Kubernetes Clusters](pages/security/multi-tenant-kubernetes.md): Traefik is primarily designed as a cluster-wide ingress controller. For this reason, when using the Kubernetes Ingress or IngressRoute specifications, it is not recommended to use a shared instance of Traefik in multi-t… (3730 bytes)
+- [Releases](pages/deprecation/releases.md): Below is a non-exhaustive list of versions and their maintenance status: (2486 bytes)
+- [Feature Deprecation Notices](pages/deprecation/features.md): This page is maintained and updated periodically to reflect our roadmap and any decisions around feature deprecation. (1908 bytes)
 
 ## Contributing
 
-- [Traefik Contribution Documentation](pages/contributing/thank-you.md): Source `docs/content/contributing/thank-you.md`.
-- [Traefik Submitting Issues Documentation](pages/contributing/submitting-issues.md): Source `docs/content/contributing/submitting-issues.md`.
-- [Traefik Pull Requests Documentation](pages/contributing/submitting-pull-requests.md): Source `docs/content/contributing/submitting-pull-requests.md`.
-- [Traefik Security Documentation](pages/contributing/submitting-security-issues.md): Source `docs/content/contributing/submitting-security-issues.md`.
-- [Traefik Security Decisions](pages/contributing/security-decisions.md): Source `docs/content/contributing/security-decisions.md`.
-- [Traefik Building & Testing Documentation](pages/contributing/building-testing.md): Source `docs/content/contributing/building-testing.md`.
-- [Traefik Contribution Documentation](pages/contributing/documentation.md): Source `docs/content/contributing/documentation.md`.
-- [Traefik Data Collection Documentation](pages/contributing/data-collection.md): Source `docs/content/contributing/data-collection.md`.
-- [Traefik Advocation Documentation](pages/contributing/advocating.md): Source `docs/content/contributing/advocating.md`.
-- [Traefik Maintainers Documentation](pages/contributing/maintainers.md): Source `docs/content/contributing/maintainers.md`.
-- [Traefik Maintainer's Guidelines Documentation](pages/contributing/maintainers-guidelines.md): Source `docs/content/contributing/maintainers-guidelines.md`.
+- [Traefik Contribution Documentation](pages/contributing/thank-you.md): You Made It (1729 bytes)
+- [Traefik Submitting Issues Documentation](pages/contributing/submitting-issues.md): Help Us Help You! (3068 bytes)
+- [Traefik Pull Requests Documentation](pages/contributing/submitting-pull-requests.md): This guide is for contributors who already have a pull request to submit. If you are looking for information on setting up your developer environment and creating code to contribute to Traefik Proxy or related projects,… (12710 bytes)
+- [Traefik Security Documentation](pages/contributing/submitting-security-issues.md): We strongly advise you to join our mailing list to be aware of the latest announcements from our security team. You can subscribe by sending an email to or on the online viewer. (7580 bytes)
+- [Traefik Security Decisions](pages/contributing/security-decisions.md): Some classes of report reach us repeatedly. This page records the positions we have already settled, so that you can check a finding against them before submitting, and so that we can answer with a reference instead of… (22668 bytes)
+- [Traefik Building & Testing Documentation](pages/contributing/building-testing.md): Compile and Test Your Own Traefik! (3385 bytes)
+- [Traefik Contribution Documentation](pages/contributing/documentation.md): Features Are Better When You Know How to Use Them (3100 bytes)
+- [Traefik Data Collection Documentation](pages/contributing/data-collection.md): Understanding the data Traefik shares and how it is used (4267 bytes)
+- [Traefik Advocation Documentation](pages/contributing/advocating.md): Spread the Love & Tell Us About It (2128 bytes)
+- [Traefik Maintainers Documentation](pages/contributing/maintainers.md): People who have had an incredibly positive impact on the project, and are now focusing on other projects. (1830 bytes)
+- [Traefik Maintainer's Guidelines Documentation](pages/contributing/maintainers-guidelines.md): Welcome to the Traefik Community. (5754 bytes)

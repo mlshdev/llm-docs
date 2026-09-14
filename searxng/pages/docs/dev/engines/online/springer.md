@@ -1,8 +1,9 @@
-> Commit-pinned source for SearXNG master: [docs/dev/engines/online/springer.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/springer.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/online/springer.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/springer.rst)
 
-.. \_springer engine:
+<a id="springer-engine"></a>
 
 # Springer Nature
 
-.. automodule:: searx.engines.springer
-:members:
+#### `searx.engines.springer`
+
+Static Python API reference (`automodule`).

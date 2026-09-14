@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/http/middlewares/apikey.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/apikey.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/http/middlewares/apikey.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/apikey.md)
 
 > **Traefik Hub Feature**
 > This middleware is available exclusively in [Traefik Hub](https://traefik.io/traefik-hub/). Learn more about [Traefik Hub's advanced features](https://doc.traefik.io/traefik-hub/api-gateway/intro).
@@ -25,7 +25,7 @@ spec:
       secretNonBase64Encoded: true
       secretValues:
         - "urn:k8s:secret:apikey:secret"
-        - "urn:k8s:secret:apikey:othersecret"
+        - "urn:k8s:secret:apikey:othersecret" 
 ```
 
 **Values Secret**

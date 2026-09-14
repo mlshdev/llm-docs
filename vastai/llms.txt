@@ -8,624 +8,624 @@
 - Endpoint pages are generated from api-reference/openapi.yaml, which is how the site itself publishes them: the navigation group naming the specification lists no pages.
 - Static MDX cards, tabs, accordions, steps, callouts, and parameter fields are normalized to Markdown without executing JavaScript.
 - Published page links resolve to https://docs.vast.ai; source assets point at the pinned commit.
-- Quarantined sources (1): upstream pages using constructs this generator cannot convert yet are omitted and listed in `manifest.json`.
 
 ## Getting started
 
-- [Welcome](pages/guides/get-started/index.md): Source `guides/get-started/index.mdx`.
-- [Sign up and rent your first GPU](pages/guides/get-started/quickstart.md): Source `guides/get-started/quickstart.mdx`.
-- [Concepts](pages/guides/concepts.md): Source `guides/concepts.mdx`.
-- [Manage API keys](pages/guides/reference/api-keys.md): Source `guides/reference/api-keys.mdx`.
-- [Quick Start](pages/guides/templates/quickstart.md): Source `guides/templates/quickstart.mdx`.
-- [Using Vast.ai with Agents](pages/guides/get-started/agents.md): Source `guides/get-started/agents.mdx`.
-- [Teams Quickstart](pages/guides/teams/teams-quickstart.md): Source `guides/teams/teams-quickstart.mdx`.
+- [Welcome](pages/guides/get-started/index.md): Vast.ai is a marketplace for affordable GPU cloud computing. We make it easy for anyone to: (3338 bytes)
+- [Sign up and rent your first GPU](pages/guides/get-started/quickstart.md): This Quickstart will guide you through setting up your Vast.ai account and running your first instance in just a few steps.&#x20; (7046 bytes)
+- [Concepts](pages/guides/concepts.md): The core vocabulary of the Vast.ai platform, marketplace, offers, instances, templates, endpoints, workers. (5987 bytes)
+- [Manage API keys](pages/guides/reference/api-keys.md): Create, scope, rotate, and revoke Vast.ai API keys for the CLI, SDK, and REST API. (6326 bytes)
+- [Quick Start](pages/guides/templates/quickstart.md): To jump right in and run a template, follow these steps. (2720 bytes)
+- [Using Vast.ai with Agents](pages/guides/get-started/agents.md): Manage Vast.ai GPU instances, serverless endpoints, volumes, and billing from coding agents like Claude Code, Codex, and Cursor. (8530 bytes)
+- [Teams Quickstart](pages/guides/teams/teams-quickstart.md): This quickstart guide will walk you through how to create a team, invite new team members and assign them to different roles. (4525 bytes)
 
 ## Instances
 
-- [Overview](pages/guides/instances/overview.md): Source `guides/instances/overview.mdx`.
-- [Pricing](pages/guides/instances/pricing.md): Source `guides/instances/pricing.mdx`.
-- [Choosing Instances Overview](pages/guides/instances/choosing/overview.md): Source `guides/instances/choosing/overview.mdx`.
-- [Finding & Renting Instances](pages/guides/instances/choosing/find-and-rent.md): Source `guides/instances/choosing/find-and-rent.mdx`.
-- [Instance Types](pages/guides/instances/choosing/instance-types.md): Source `guides/instances/choosing/instance-types.mdx`.
-- [Choosing a Template](pages/guides/instances/choosing/templates.md): Source `guides/instances/choosing/templates.mdx`.
-- [Reserved Instances](pages/guides/instances/choosing/reserved-instances.md): Source `guides/instances/choosing/reserved-instances.mdx`.
-- [Overview](pages/guides/instances/connect/overview.md): Source `guides/instances/connect/overview.mdx`.
-- [SSH Connection](pages/guides/instances/connect/ssh.md): Source `guides/instances/connect/ssh.mdx`.
-- [Jupyter](pages/guides/instances/connect/jupyter.md): Source `guides/instances/connect/jupyter.mdx`.
-- [Windows SSH Guide](pages/guides/instances/connect/windows-guide.md): Source `guides/instances/connect/windows-guide.mdx`.
-- [Instance Portal](pages/guides/instances/connect/instance-portal.md): Source `guides/instances/connect/instance-portal.mdx`.
-- [Networking & Ports](pages/guides/instances/connect/networking.md): Source `guides/instances/connect/networking.mdx`.
-- [Storage Types](pages/guides/instances/storage/types.md): Source `guides/instances/storage/types.mdx`.
-- [Volumes](pages/guides/instances/storage/volumes.md): Source `guides/instances/storage/volumes.mdx`.
-- [Data Movement](pages/guides/instances/storage/data-movement.md): Source `guides/instances/storage/data-movement.mdx`.
-- [Cloud Sync](pages/guides/instances/storage/cloud-sync.md): Source `guides/instances/storage/cloud-sync.mdx`.
-- [Scheduled Cloud Backups](pages/guides/instances/storage/cloud-backups.md): Source `guides/instances/storage/cloud-backups.mdx`.
-- [Managing Instances](pages/guides/instances/manage-instances.md): Source `guides/instances/manage-instances.mdx`.
-- [Docker Execution Environment](pages/guides/instances/docker-environment.md): Source `guides/instances/docker-environment.mdx`.
-- [Virtual Machines](pages/guides/instances/virtual-machines.md): Source `guides/instances/virtual-machines.mdx`.
+- [Overview](pages/guides/instances/overview.md): Instances are Docker containers that give you exclusive GPU access for training, inference, and development. Pay by the second, connect via SSH or Jupyter. (2468 bytes)
+- [Pricing](pages/guides/instances/pricing.md): Understand Vast.ai's marketplace pricing model, rental types, reserved discounts, and costs for GPU instances. (5734 bytes)
+- [Choosing Instances Overview](pages/guides/instances/choosing/overview.md): Learn the complete process of selecting and renting a GPU instance on Vast.ai, from choosing templates to configuring and launching. (2661 bytes)
+- [Finding & Renting Instances](pages/guides/instances/choosing/find-and-rent.md): Find and rent GPU instances on Vast.ai. Learn how to search, filter, understand offer cards, and configure your instance. (6556 bytes)
+- [Instance Types](pages/guides/instances/choosing/instance-types.md): Understand Vast.ai instance types - On-demand, Reserved, and Interruptible. Learn how each type works, their differences, and when to use each. (4820 bytes)
+- [Choosing a Template](pages/guides/instances/choosing/templates.md): Select the right template for your Vast.ai instance. Templates define your Docker image, launch mode, and initialization settings. (4508 bytes)
+- [Reserved Instances](pages/guides/instances/choosing/reserved-instances.md): Save up to 50% on GPU costs by pre-paying for reserved instances. Learn how to convert on-demand instances to reserved pricing. (6153 bytes)
+- [Overview](pages/guides/instances/connect/overview.md): Learn about Vast.ai connection methods-SSH, Jupyter, and Entrypoint-and how each controls instance access and workflow. (3131 bytes)
+- [SSH Connection](pages/guides/instances/connect/ssh.md): Learn how to securely connect to Vast.ai instances using SSH. Generate keys, establish connections, use port forwarding, and integrate with VS Code. (10582 bytes)
+- [Jupyter](pages/guides/instances/connect/jupyter.md): Run Jupyter on Vast.ai with proxy or direct HTTPS. Learn setup, TLS certificate installation, and secure connections for smooth AI/ML development. (5108 bytes)
+- [Windows SSH Guide](pages/guides/instances/connect/windows-guide.md): Learn how to securely connect to Vast.ai instances using SSH on Windows. Understand the basics of SSH, how to generate and add keys, and how to use PuTTY and MobaXterm for GUI-based connections. (6947 bytes)
+- [Instance Portal](pages/guides/instances/connect/instance-portal.md): The Instance Portal is the first application you will see after clicking the 'Open' button to access an instance that has been loaded with a Vast.ai Docker image. Many of our recommended templates include the Instance P… (8221 bytes)
+- [Networking & Ports](pages/guides/instances/connect/networking.md): Understand how Vast.ai handles networking, port mapping, and environment variables for Docker instances. (5285 bytes)
+- [Storage Types](pages/guides/instances/storage/types.md): Understand the different storage options available on Vast.ai instances, including container storage and volumes. (4239 bytes)
+- [Volumes](pages/guides/instances/storage/volumes.md): The Storage page allows you to easily access and manage your volumes - storage that can be attached to your instances for data storage. (9220 bytes)
+- [Data Movement](pages/guides/instances/storage/data-movement.md): Learn how to move data on Vast.ai using Cloud Sync, instance-to-instance transfers, CLI copy, VM migration, scp, and other efficient methods. (10055 bytes)
+- [Cloud Sync](pages/guides/instances/storage/cloud-sync.md): Learn how to connect Vast.ai instances with cloud storage providers like Google Drive, S3, Backblaze, Dropbox, and Hugging Face for secure data sync. (7196 bytes)
+- [Scheduled Cloud Backups](pages/guides/instances/storage/cloud-backups.md): Learn how to set up and schedule automated Vast.ai cloud backups using CLI or cron. Keep your data safe with best practices and easy management. (10192 bytes)
+- [Managing Instances](pages/guides/instances/manage-instances.md): Learn how to manage running instances - start, stop, destroy, monitor status, and handle common operational tasks. (6860 bytes)
+- [Docker Execution Environment](pages/guides/instances/docker-environment.md): Learn how Vast.ai Docker instances handle resource allocation, environment variables, networking, ports, and CLI usage. (11011 bytes)
+- [Virtual Machines](pages/guides/instances/virtual-machines.md): Learn how Vast.ai virtual machines (VMs) provide full Linux instances with init manager support, process tracing, and nested containerization for advanced workloads. (4028 bytes)
 
 ## Serverless
 
-- [Serverless](pages/guides/serverless/index.md): Source `guides/serverless/index.mdx`.
-- [Quickstart](pages/guides/serverless/quickstart.md): Source `guides/serverless/quickstart.mdx`.
-- [Setting Up Endpoints](pages/guides/serverless/setting-up-endpoints.md): Source `guides/serverless/setting-up-endpoints.mdx`.
-- [Architecture](pages/guides/serverless/architecture.md): Source `guides/serverless/architecture.mdx`.
-- [The PyWorker](pages/guides/serverless/overview.md): Source `guides/serverless/overview.mdx`.
-- [The SDK](pages/guides/serverless/sdk-overview.md): Source `guides/serverless/sdk-overview.mdx`.
-- [OpenAI API-compatible Interface](pages/guides/serverless/openai-compatible-api.md): Source `guides/serverless/openai-compatible-api.mdx`.
-- [Automated Performance Testing](pages/guides/serverless/automated-performance-testing.md): Source `guides/serverless/automated-performance-testing.mdx`.
-- [Deployments Overview](pages/guides/serverless/deployments/index.md): Source `guides/serverless/deployments/index.mdx`.
-- [Architecture Overview](pages/guides/serverless/deployments/architecture.md): Source `guides/serverless/deployments/architecture.mdx`.
-- [Configuring Deployments](pages/guides/serverless/deployments/configuration.md): Source `guides/serverless/deployments/configuration.mdx`.
-- [@remote Functions](pages/guides/serverless/deployments/remote-functions.md): Source `guides/serverless/deployments/remote-functions.mdx`.
-- [@context Classes](pages/guides/serverless/deployments/context.md): Source `guides/serverless/deployments/context.mdx`.
-- [Endpoint Parameters](pages/guides/serverless/serverless-parameters.md): Source `guides/serverless/serverless-parameters.mdx`.
-- [Managing Scale](pages/guides/serverless/managing-scale.md): Source `guides/serverless/managing-scale.mdx`.
-- [Workergroup Parameters](pages/guides/serverless/workergroup-parameters.md): Source `guides/serverless/workergroup-parameters.mdx`.
-- [Choosing GPUs for Your Workload](pages/guides/serverless/choosing-gpus.md): Source `guides/serverless/choosing-gpus.mdx`.
-- [Creating Custom PyWorkers](pages/guides/serverless/creating-new-pyworkers.md): Source `guides/serverless/creating-new-pyworkers.mdx`.
-- [Using Worker Sessions](pages/guides/serverless/sessions.md): Source `guides/serverless/sessions.mdx`.
-- [Worker States](pages/guides/serverless/worker-states.md): Source `guides/serverless/worker-states.mdx`.
-- [Zero Downtime Worker Update](pages/guides/serverless/zero-downtime-worker-update.md): Source `guides/serverless/zero-downtime-worker-update.mdx`.
-- [Endpoint and Worker Logs](pages/guides/serverless/logging.md): Source `guides/serverless/logging.mdx`.
-- [Pricing](pages/guides/serverless/pricing.md): Source `guides/serverless/pricing.mdx`.
-- [vLLM](pages/guides/serverless/vllm.md): Source `guides/serverless/vllm.mdx`.
-- [Text Generation Inference (TGI)](pages/guides/serverless/text-generation-inference-tgi.md): Source `guides/serverless/text-generation-inference-tgi.mdx`.
-- [Comfy UI](pages/guides/serverless/comfy-ui.md): Source `guides/serverless/comfy-ui.mdx`.
-- [ComfyUI Wan 2.2](pages/guides/serverless/comfyui-wan-2.2.md): Source `guides/serverless/comfyui-wan-2.2.mdx`.
-- [ComfyUI ACE Step](pages/guides/serverless/comfyui-acestep.md): Source `guides/serverless/comfyui-acestep.mdx`.
+- [Serverless](pages/guides/serverless/index.md): An introduction to how Vast serverless compute works and how it's different from other serverless offerings. (1529 bytes)
+- [Quickstart](pages/guides/serverless/quickstart.md): Deploy your first vLLM endpoint in under a minute (7636 bytes)
+- [Setting Up Endpoints](pages/guides/serverless/setting-up-endpoints.md): Create and configure a serverless endpoint with full control over parameters and workergroup configuration (8592 bytes)
+- [Architecture](pages/guides/serverless/architecture.md): Learn how Vast Serverless operates and understand its major components. (4755 bytes)
+- [The PyWorker](pages/guides/serverless/overview.md): Learn about the Vast PyWorker and how it integrates with model instances. (4243 bytes)
+- [The SDK](pages/guides/serverless/sdk-overview.md): Learn about the Serverless SDK, the primary method of interacting with Vast Serverless. (1249 bytes)
+- [OpenAI API-compatible Interface](pages/guides/serverless/openai-compatible-api.md): Use Vast.ai Serverless endpoints with the standard OpenAI API client by swapping your API key and base URL. (6586 bytes)
+- [Automated Performance Testing](pages/guides/serverless/automated-performance-testing.md): Learn about the performance testing process in Vast.ai Serverless. (2088 bytes)
+- [Deployments Overview](pages/guides/serverless/deployments/index.md): An overview of Vast Deployments, the quickest way to run GPU code and set up endpoints in the Vast Cloud. (3951 bytes)
+- [Architecture Overview](pages/guides/serverless/deployments/architecture.md): Understand how Vast Deployments work under the hood, including deploy mode, serve mode, and update tiers. (4122 bytes)
+- [Configuring Deployments](pages/guides/serverless/deployments/configuration.md): How to configure your deployment's image, packages, GPU requirements, autoscaling, environment variables, and more. (10467 bytes)
+- [@remote Functions](pages/guides/serverless/deployments/remote-functions.md): Define, call, and benchmark async Python functions that execute on remote GPU workers. (4933 bytes)
+- [@context Classes](pages/guides/serverless/deployments/context.md): Load models and heavy resources once at worker startup and share them across all remote function calls. (3781 bytes)
+- [Endpoint Parameters](pages/guides/serverless/serverless-parameters.md): Learn about the parameters that control your scaling and best practices for setting them. (7089 bytes)
+- [Managing Scale](pages/guides/serverless/managing-scale.md): Learn how to configure your Serverless endpoint for different load scenarios (3177 bytes)
+- [Workergroup Parameters](pages/guides/serverless/workergroup-parameters.md): Learn about the parameters that control which workers get recruited. (2158 bytes)
+- [Choosing GPUs for Your Workload](pages/guides/serverless/choosing-gpus.md): Use the Vast CLI to compare measured performance and cost-efficiency across GPU classes. (8481 bytes)
+- [Creating Custom PyWorkers](pages/guides/serverless/creating-new-pyworkers.md): Learn how to implement worker.py for Vast.ai Serverless using the Worker / WorkerConfig interface, including handlers, benchmarks, and log-based readiness. (25867 bytes)
+- [Using Worker Sessions](pages/guides/serverless/sessions.md): Pin a series of requests to a single Serverless worker, run long asynchronous tasks on it, and release it automatically when the work is done. (26635 bytes)
+- [Worker States](pages/guides/serverless/worker-states.md): Learn about the different worker states (4578 bytes)
+- [Zero Downtime Worker Update](pages/guides/serverless/zero-downtime-worker-update.md): Update your Serverless template or model without dropping in-flight requests. (3153 bytes)
+- [Endpoint and Worker Logs](pages/guides/serverless/logging.md): Learn how to access Vast serverless logs (2142 bytes)
+- [Pricing](pages/guides/serverless/pricing.md): Learn how Vast.ai Serverless pricing works and when resources are billed (3099 bytes)
+- [vLLM](pages/guides/serverless/vllm.md): Learn how to use vLLM with Vast.ai Serverless for large language model inference. (15959 bytes)
+- [Text Generation Inference (TGI)](pages/guides/serverless/text-generation-inference-tgi.md): Learn how to use Text Generation Inference (TGI) with Vast.ai Serverless for text generation models. (3688 bytes)
+- [Comfy UI](pages/guides/serverless/comfy-ui.md): Learn how to use Comfy UI with Vast.ai Serverless for image generation workflows. (10535 bytes)
+- [ComfyUI Wan 2.2](pages/guides/serverless/comfyui-wan-2.2.md): Learn how to use ComfyUI with Wan 2.2 T2V A14B on Vast.ai Serverless for text-to-video generation. (20236 bytes)
+- [ComfyUI ACE Step](pages/guides/serverless/comfyui-acestep.md): Learn how to use ComfyUI with ACE Step v1 3.5B on Vast.ai Serverless for text-to-music generation. (18125 bytes)
 
 ## Serverless deployments
 
-- [Square Function](pages/guides/serverless/deployments/examples/square.md): Source `guides/serverless/deployments/examples/square.mdx`.
-- [MNIST Training & Inference](pages/guides/serverless/deployments/examples/train-mnist.md): Source `guides/serverless/deployments/examples/train-mnist.mdx`.
-- [vLLM Text Generation](pages/guides/serverless/deployments/examples/vllm.md): Source `guides/serverless/deployments/examples/vllm.mdx`.
+- [Square Function](pages/guides/serverless/deployments/examples/square.md): A minimal deployment that squares a number on a remote GPU. (1017 bytes)
+- [MNIST Training & Inference](pages/guides/serverless/deployments/examples/train-mnist.md): A deployment that trains an MNIST classifier at startup and serves inference requests. (4677 bytes)
+- [vLLM Text Generation](pages/guides/serverless/deployments/examples/vllm.md): A deployment that serves an LLM using vLLM's async engine. (2415 bytes)
 
 ## Templates
 
-- [Templates](pages/guides/templates/introduction.md): Source `guides/templates/introduction.mdx`.
-- [Creating Templates](pages/guides/templates/creating-templates.md): Source `guides/templates/creating-templates.mdx`.
-- [Managing Templates](pages/guides/templates/managing-templates.md): Source `guides/templates/managing-templates.mdx`.
-- [Template Settings](pages/guides/templates/template-settings.md): Source `guides/templates/template-settings.mdx`.
-- [Advanced Setup](pages/guides/templates/advanced-setup.md): Source `guides/templates/advanced-setup.mdx`.
-- [Creating Templates for GROBID](pages/guides/templates/examples/grobid.md): Source `guides/templates/examples/grobid.mdx`.
+- [Templates](pages/guides/templates/introduction.md): A template is how Vast helps you launch an instance, setting up your rented machine with whatever software and formatting you need. Templates are generally used for launching instances through the web interface, but the… (4556 bytes)
+- [Creating Templates](pages/guides/templates/creating-templates.md): Creating a template is simple - it's just telling Vast.ai how you want your instances to be configured. This guide will walk you through creating your first template step by step. (6144 bytes)
+- [Managing Templates](pages/guides/templates/managing-templates.md): If you want to make changes to a template you previously saved, simply navigate back to the templates page and select 'My Templates'. Here you'll be able to make your changes by clicking the pencil icon. (2445 bytes)
+- [Template Settings](pages/guides/templates/template-settings.md): This guide documents all settings and options available when configuring a template. Use this guide when you need to understand what a specific setting does or how to configure a particular option. (10593 bytes)
+- [Advanced Setup](pages/guides/templates/advanced-setup.md): This guide covers advanced customization techniques available on the Vast.ai platform. These features allow you to extend and enhance your templates beyond basic configuration. (6903 bytes)
+- [Creating Templates for GROBID](pages/guides/templates/examples/grobid.md): This guide demonstrates creating a template using an existing Docker image. See our Creating Templates guide for more details on template configuration. We will be using the image from GROBID on dockerhub. (4997 bytes)
 
 ## Teams
 
-- [Teams Overview](pages/guides/teams/teams-overview.md): Source `guides/teams/teams-overview.mdx`.
-- [Managing Your Team](pages/guides/teams/managing-teams.md): Source `guides/teams/managing-teams.mdx`.
-- [Teams Roles](pages/guides/teams/teams-roles.md): Source `guides/teams/teams-roles.mdx`.
-- [Legacy Teams](pages/guides/teams/legacy-teams.md): Source `guides/teams/legacy-teams.mdx`.
+- [Teams Overview](pages/guides/teams/teams-overview.md): Vast.ai's Teams feature extends our powerful GPU compute services to collaborative environments. It allows multiple users to work together seamlessly in a shared space, managing serverless workers for AI Inference and G… (2337 bytes)
+- [Managing Your Team](pages/guides/teams/managing-teams.md): This guide covers all the operations you'll need to manage your team after creation, including inviting members, managing roles, editing settings, and more. (5223 bytes)
+- [Teams Roles](pages/guides/teams/teams-roles.md): Team roles in Vast.ai's platform are designed to streamline collaboration and enhance security by assigning specific permissions and access levels to different members of a team. These roles determine what actions a tea… (4809 bytes)
+- [Legacy Teams](pages/guides/teams/legacy-teams.md): Originally, the process of creating a team involved converting a user's personal account into a special team account. This legacy method has now been replaced with the ability to create separate team accounts. (619 bytes)
 
 ## Account & billing
 
-- [Pricing overview](pages/guides/pricing.md): Source `guides/pricing.mdx`.
-- [Account Settings](pages/guides/reference/account-settings.md): Source `guides/reference/account-settings.mdx`.
-- [Billing](pages/guides/reference/billing.md): Source `guides/reference/billing.mdx`.
-- [Notifications](pages/guides/reference/notifications.md): Source `guides/reference/notifications.mdx`.
-- [Notification Webhooks](pages/guides/reference/notification-webhooks.md): Source `guides/reference/notification-webhooks.mdx`.
-- [Keys](pages/guides/reference/keys.md): Source `guides/reference/keys.mdx`.
-- [Two-Factor Authentication](pages/guides/reference/two-factor-authentication.md): Source `guides/reference/two-factor-authentication.mdx`.
-- [Referral Program](pages/guides/reference/referral-program.md): Source `guides/reference/referral-program.mdx`.
-- [Troubleshooting](pages/guides/reference/troubleshooting.md): Source `guides/reference/troubleshooting.mdx`.
+- [Pricing overview](pages/guides/pricing.md): How Vast.ai pricing works across instances, reserved, interruptible, and serverless, and how to choose between them. (4619 bytes)
+- [Account Settings](pages/guides/reference/account-settings.md): On this page you can view and edit important information about your client account. (5924 bytes)
+- [Billing](pages/guides/reference/billing.md): Vast requires pre-payment of credits for GPU rentals. Once credits are purchased, they appear in your account balance. (10380 bytes)
+- [Notifications](pages/guides/reference/notifications.md): Choose which Vast.ai account, billing, and instance events reach you by email or through webhooks. (11872 bytes)
+- [Notification Webhooks](pages/guides/reference/notification-webhooks.md): Send Vast.ai notification events to your own HTTPS endpoint for automation, monitoring, and audit workflows. (9646 bytes)
+- [Keys](pages/guides/reference/keys.md): The Keys page helps you manage secure access to your Vast.ai account. Here, you'll find different types of keys used for authentication and connection. (3074 bytes)
+- [Two-Factor Authentication](pages/guides/reference/two-factor-authentication.md): Two-factor authentication (2FA) adds a second layer of security to your account. After entering your password, you verify your identity using a code from your phone or email. This means an attacker who obtains your pass… (8389 bytes)
+- [Referral Program](pages/guides/reference/referral-program.md): Turn your audience into earnings! Share your unique Vast.ai referral link (or a public template link), and when someone creates a new client account and buys credits, you get 3% of everything they spend, for the lifetim… (3743 bytes)
+- [Troubleshooting](pages/guides/reference/troubleshooting.md): When you stop an instance, the gpu(s) it was using may get reassigned. When you later then try to restart the instance, it tries to get those gpu(s) back - that is the "scheduling" phase. If another high priority job is… (2653 bytes)
 
 ## FAQ
 
-- [FAQ Overview](pages/guides/reference/faq/index.md): Source `guides/reference/faq/index.mdx`.
-- [General FAQ](pages/guides/reference/faq/general.md): Source `guides/reference/faq/general.mdx`.
-- [Instances FAQ](pages/guides/reference/faq/instances.md): Source `guides/reference/faq/instances.mdx`.
-- [Rental Types FAQ](pages/guides/reference/faq/rental-types.md): Source `guides/reference/faq/rental-types.mdx`.
-- [Jupyter & SSH FAQ](pages/guides/reference/faq/jupyter-ssh.md): Source `guides/reference/faq/jupyter-ssh.mdx`.
-- [Billing](pages/guides/reference/faq/billing.md): Source `guides/reference/faq/billing.mdx`.
-- [Security FAQ](pages/guides/reference/faq/security.md): Source `guides/reference/faq/security.mdx`.
-- [Technical FAQ](pages/guides/reference/faq/technical.md): Source `guides/reference/faq/technical.mdx`.
-- [Networking](pages/guides/reference/faq/networking.md): Source `guides/reference/faq/networking.mdx`.
+- [FAQ Overview](pages/guides/reference/faq/index.md): Find answers to common questions about Vast.ai (1063 bytes)
+- [General FAQ](pages/guides/reference/faq/general.md): Basic questions about the Vast.ai platform (2169 bytes)
+- [Instances FAQ](pages/guides/reference/faq/instances.md): Questions about creating and managing instances (3185 bytes)
+- [Rental Types FAQ](pages/guides/reference/faq/rental-types.md): Understanding on-demand vs interruptible instances (2313 bytes)
+- [Jupyter & SSH FAQ](pages/guides/reference/faq/jupyter-ssh.md): Connecting to instances via Jupyter and SSH (3534 bytes)
+- [Billing](pages/guides/reference/faq/billing.md): Questions about billing and credits (2362 bytes)
+- [Security FAQ](pages/guides/reference/faq/security.md): Data protection and platform security (2584 bytes)
+- [Technical FAQ](pages/guides/reference/faq/technical.md): Docker configuration, performance, and advanced topics (3462 bytes)
+- [Networking](pages/guides/reference/faq/networking.md): Add -p arguments in the docker create/run options box in the template configuration or image config editor pop-up menu. To open ports 8081 and 8082, use something like this: (1405 bytes)
 
 ## CLI
 
-- [CLI Hello World](pages/cli/hello-world.md): Source `cli/hello-world.mdx`.
-- [CLI Authentication](pages/cli/authentication.md): Source `cli/authentication.mdx`.
-- [CLI Permissions](pages/cli/permissions.md): Source `cli/permissions.mdx`.
-- [CLI Rate Limits and Errors](pages/cli/rate-limits.md): Source `cli/rate-limits.mdx`.
-- [CLI Templates](pages/cli/templates.md): Source `cli/templates.mdx`.
-- [vastai create api-key](pages/cli/reference/create-api-key.md): Source `cli/reference/create-api-key.mdx`.
-- [vastai delete api-key](pages/cli/reference/delete-api-key.md): Source `cli/reference/delete-api-key.mdx`.
-- [vastai set api-key](pages/cli/reference/set-api-key.md): Source `cli/reference/set-api-key.mdx`.
-- [vastai show api-keys](pages/cli/reference/show-api-keys.md): Source `cli/reference/show-api-keys.mdx`.
-- [vastai create ssh-key](pages/cli/reference/create-ssh-key.md): Source `cli/reference/create-ssh-key.mdx`.
-- [vastai delete ssh-key](pages/cli/reference/delete-ssh-key.md): Source `cli/reference/delete-ssh-key.mdx`.
-- [vastai show ssh-keys](pages/cli/reference/show-ssh-keys.md): Source `cli/reference/show-ssh-keys.mdx`.
-- [vastai update ssh-key](pages/cli/reference/update-ssh-key.md): Source `cli/reference/update-ssh-key.mdx`.
-- [vastai create env-var](pages/cli/reference/create-env-var.md): Source `cli/reference/create-env-var.mdx`.
-- [vastai delete env-var](pages/cli/reference/delete-env-var.md): Source `cli/reference/delete-env-var.mdx`.
-- [vastai show env-vars](pages/cli/reference/show-env-vars.md): Source `cli/reference/show-env-vars.mdx`.
-- [vastai update env-var](pages/cli/reference/update-env-var.md): Source `cli/reference/update-env-var.mdx`.
-- [vastai show user](pages/cli/reference/show-user.md): Source `cli/reference/show-user.mdx`.
-- [vastai set user](pages/cli/reference/set-user.md): Source `cli/reference/set-user.mdx`.
-- [vastai create subaccount](pages/cli/reference/create-subaccount.md): Source `cli/reference/create-subaccount.mdx`.
-- [vastai show subaccounts](pages/cli/reference/show-subaccounts.md): Source `cli/reference/show-subaccounts.mdx`.
-- [vastai show connections](pages/cli/reference/show-connections.md): Source `cli/reference/show-connections.mdx`.
-- [vastai show ipaddrs](pages/cli/reference/show-ipaddrs.md): Source `cli/reference/show-ipaddrs.mdx`.
-- [vastai show audit-logs](pages/cli/reference/show-audit-logs.md): Source `cli/reference/show-audit-logs.mdx`.
-- [vastai show deposit](pages/cli/reference/show-deposit.md): Source `cli/reference/show-deposit.mdx`.
-- [vastai show earnings](pages/cli/reference/show-earnings.md): Source `cli/reference/show-earnings.mdx`.
-- [vastai show invoices-v1](pages/cli/reference/show-invoices-v1.md): Source `cli/reference/show-invoices-v1.mdx`.
-- [vastai transfer credit](pages/cli/reference/transfer-credit.md): Source `cli/reference/transfer-credit.mdx`.
-- [vastai reports](pages/cli/reference/reports.md): Source `cli/reference/reports.mdx`.
-- [vastai create instance](pages/cli/reference/create-instance.md): Source `cli/reference/create-instance.mdx`.
-- [vastai launch instance](pages/cli/reference/launch-instance.md): Source `cli/reference/launch-instance.mdx`.
-- [vastai start instance](pages/cli/reference/start-instance.md): Source `cli/reference/start-instance.mdx`.
-- [vastai start instances](pages/cli/reference/start-instances.md): Source `cli/reference/start-instances.mdx`.
-- [vastai stop instance](pages/cli/reference/stop-instance.md): Source `cli/reference/stop-instance.mdx`.
-- [vastai stop instances](pages/cli/reference/stop-instances.md): Source `cli/reference/stop-instances.mdx`.
-- [vastai reboot instance](pages/cli/reference/reboot-instance.md): Source `cli/reference/reboot-instance.mdx`.
-- [vastai recycle instance](pages/cli/reference/recycle-instance.md): Source `cli/reference/recycle-instance.mdx`.
-- [vastai destroy instance](pages/cli/reference/destroy-instance.md): Source `cli/reference/destroy-instance.mdx`.
-- [vastai destroy instances](pages/cli/reference/destroy-instances.md): Source `cli/reference/destroy-instances.mdx`.
-- [vastai label instance](pages/cli/reference/label-instance.md): Source `cli/reference/label-instance.mdx`.
-- [vastai prepay instance](pages/cli/reference/prepay-instance.md): Source `cli/reference/prepay-instance.mdx`.
-- [vastai update instance](pages/cli/reference/update-instance.md): Source `cli/reference/update-instance.mdx`.
-- [vastai change bid](pages/cli/reference/change-bid.md): Source `cli/reference/change-bid.mdx`.
-- [vastai show instance](pages/cli/reference/show-instance.md): Source `cli/reference/show-instance.mdx`.
-- [vastai show instances](pages/cli/reference/show-instances.md): Source `cli/reference/show-instances.mdx`.
-- [vastai show instances-v1](pages/cli/reference/show-instances-v1.md): Source `cli/reference/show-instances-v1.mdx`.
-- [vastai logs](pages/cli/reference/logs.md): Source `cli/reference/logs.mdx`.
-- [vastai execute](pages/cli/reference/execute.md): Source `cli/reference/execute.mdx`.
-- [vastai attach ssh](pages/cli/reference/attach-ssh.md): Source `cli/reference/attach-ssh.mdx`.
-- [vastai detach ssh](pages/cli/reference/detach-ssh.md): Source `cli/reference/detach-ssh.mdx`.
-- [vastai ssh-url](pages/cli/reference/ssh-url.md): Source `cli/reference/ssh-url.mdx`.
-- [vastai scp-url](pages/cli/reference/scp-url.md): Source `cli/reference/scp-url.mdx`.
-- [vastai copy](pages/cli/reference/copy.md): Source `cli/reference/copy.mdx`.
-- [vastai cloud copy](pages/cli/reference/cloud-copy.md): Source `cli/reference/cloud-copy.mdx`.
-- [vastai cancel copy](pages/cli/reference/cancel-copy.md): Source `cli/reference/cancel-copy.mdx`.
-- [vastai cancel sync](pages/cli/reference/cancel-sync.md): Source `cli/reference/cancel-sync.mdx`.
-- [vastai run benchmarks](pages/cli/reference/run-benchmarks.md): Source `cli/reference/run-benchmarks.mdx`.
-- [vastai search offers](pages/cli/reference/search-offers.md): Source `cli/reference/search-offers.mdx`.
-- [vastai search benchmarks](pages/cli/reference/search-benchmarks.md): Source `cli/reference/search-benchmarks.mdx`.
-- [vastai search instances](pages/cli/reference/search-instances.md): Source `cli/reference/search-instances.mdx`.
-- [vastai search invoices](pages/cli/reference/search-invoices.md): Source `cli/reference/search-invoices.mdx`.
-- [vastai search templates](pages/cli/reference/search-templates.md): Source `cli/reference/search-templates.mdx`.
-- [vastai search volumes](pages/cli/reference/search-volumes.md): Source `cli/reference/search-volumes.mdx`.
-- [vastai create template](pages/cli/reference/create-template.md): Source `cli/reference/create-template.mdx`.
-- [vastai update template](pages/cli/reference/update-template.md): Source `cli/reference/update-template.mdx`.
-- [vastai delete template](pages/cli/reference/delete-template.md): Source `cli/reference/delete-template.mdx`.
-- [vastai create endpoint](pages/cli/reference/create-endpoint.md): Source `cli/reference/create-endpoint.mdx`.
-- [vastai update endpoint](pages/cli/reference/update-endpoint.md): Source `cli/reference/update-endpoint.mdx`.
-- [vastai delete endpoint](pages/cli/reference/delete-endpoint.md): Source `cli/reference/delete-endpoint.mdx`.
-- [vastai show endpoints](pages/cli/reference/show-endpoints.md): Source `cli/reference/show-endpoints.mdx`.
-- [vastai create workergroup](pages/cli/reference/create-workergroup.md): Source `cli/reference/create-workergroup.mdx`.
-- [vastai update workergroup](pages/cli/reference/update-workergroup.md): Source `cli/reference/update-workergroup.mdx`.
-- [vastai update workers](pages/cli/reference/update-workers.md): Source `cli/reference/update-workers.mdx`.
-- [vastai delete workergroup](pages/cli/reference/delete-workergroup.md): Source `cli/reference/delete-workergroup.mdx`.
-- [vastai show workergroups](pages/cli/reference/show-workergroups.md): Source `cli/reference/show-workergroups.mdx`.
-- [vastai get endpt-logs](pages/cli/reference/get-endpt-logs.md): Source `cli/reference/get-endpt-logs.mdx`.
-- [vastai get wrkgrp-logs](pages/cli/reference/get-wrkgrp-logs.md): Source `cli/reference/get-wrkgrp-logs.mdx`.
-- [vastai show scheduled-jobs](pages/cli/reference/show-scheduled-jobs.md): Source `cli/reference/show-scheduled-jobs.mdx`.
-- [vastai delete scheduled-job](pages/cli/reference/delete-scheduled-job.md): Source `cli/reference/delete-scheduled-job.mdx`.
-- [vastai delete deployment](pages/cli/reference/delete-deployment.md): Source `cli/reference/delete-deployment.mdx`.
-- [vastai show deployment](pages/cli/reference/show-deployment.md): Source `cli/reference/show-deployment.mdx`.
-- [vastai show deployment-versions](pages/cli/reference/show-deployment-versions.md): Source `cli/reference/show-deployment-versions.mdx`.
-- [vastai show deployments](pages/cli/reference/show-deployments.md): Source `cli/reference/show-deployments.mdx`.
-- [vastai create team](pages/cli/reference/create-team.md): Source `cli/reference/create-team.mdx`.
-- [vastai destroy team](pages/cli/reference/destroy-team.md): Source `cli/reference/destroy-team.mdx`.
-- [vastai invite member](pages/cli/reference/invite-member.md): Source `cli/reference/invite-member.mdx`.
-- [vastai remove member](pages/cli/reference/remove-member.md): Source `cli/reference/remove-member.mdx`.
-- [vastai show members](pages/cli/reference/show-members.md): Source `cli/reference/show-members.mdx`.
-- [vastai create team-role](pages/cli/reference/create-team-role.md): Source `cli/reference/create-team-role.mdx`.
-- [vastai show team-role](pages/cli/reference/show-team-role.md): Source `cli/reference/show-team-role.mdx`.
-- [vastai show team-roles](pages/cli/reference/show-team-roles.md): Source `cli/reference/show-team-roles.mdx`.
-- [vastai update team-role](pages/cli/reference/update-team-role.md): Source `cli/reference/update-team-role.mdx`.
-- [vastai remove team-role](pages/cli/reference/remove-team-role.md): Source `cli/reference/remove-team-role.mdx`.
-- [vastai create volume](pages/cli/reference/create-volume.md): Source `cli/reference/create-volume.mdx`.
-- [vastai clone volume](pages/cli/reference/clone-volume.md): Source `cli/reference/clone-volume.mdx`.
-- [vastai list volume](pages/cli/reference/list-volume.md): Source `cli/reference/list-volume.mdx`.
-- [vastai list volumes](pages/cli/reference/list-volumes.md): Source `cli/reference/list-volumes.mdx`.
-- [vastai show volumes](pages/cli/reference/show-volumes.md): Source `cli/reference/show-volumes.mdx`.
-- [vastai unlist volume](pages/cli/reference/unlist-volume.md): Source `cli/reference/unlist-volume.mdx`.
-- [vastai delete volume](pages/cli/reference/delete-volume.md): Source `cli/reference/delete-volume.mdx`.
-- [vastai cleanup machine](pages/cli/reference/cleanup-machine.md): Source `cli/reference/cleanup-machine.mdx`.
-- [vastai delete machine](pages/cli/reference/delete-machine.md): Source `cli/reference/delete-machine.mdx`.
-- [vastai list machine](pages/cli/reference/list-machine.md): Source `cli/reference/list-machine.mdx`.
-- [vastai list machines](pages/cli/reference/list-machines.md): Source `cli/reference/list-machines.mdx`.
-- [vastai show machine](pages/cli/reference/show-machine.md): Source `cli/reference/show-machine.mdx`.
-- [vastai show machines](pages/cli/reference/show-machines.md): Source `cli/reference/show-machines.mdx`.
-- [vastai set defjob](pages/cli/reference/set-defjob.md): Source `cli/reference/set-defjob.mdx`.
-- [vastai remove defjob](pages/cli/reference/remove-defjob.md): Source `cli/reference/remove-defjob.mdx`.
-- [vastai set min-bid](pages/cli/reference/set-min-bid.md): Source `cli/reference/set-min-bid.mdx`.
-- [vastai schedule maint](pages/cli/reference/schedule-maint.md): Source `cli/reference/schedule-maint.mdx`.
-- [vastai cancel maint](pages/cli/reference/cancel-maint.md): Source `cli/reference/cancel-maint.mdx`.
-- [vastai show maints](pages/cli/reference/show-maints.md): Source `cli/reference/show-maints.mdx`.
-- [vastai unlist machine](pages/cli/reference/unlist-machine.md): Source `cli/reference/unlist-machine.mdx`.
-- [vastai defrag machines](pages/cli/reference/defrag-machines.md): Source `cli/reference/defrag-machines.mdx`.
-- [vastai self-test machine](pages/cli/reference/self-test-machine.md): Source `cli/reference/self-test-machine.mdx`.
-- [vastai metrics gpu](pages/cli/reference/metrics-gpu.md): Source `cli/reference/metrics-gpu.mdx`.
-- [vastai metrics gpu-trends](pages/cli/reference/metrics-gpu-trends.md): Source `cli/reference/metrics-gpu-trends.mdx`.
-- [vastai metrics gpu-locations](pages/cli/reference/metrics-gpu-locations.md): Source `cli/reference/metrics-gpu-locations.mdx`.
-- [vastai cleanup machine](pages/host/cli/cleanup-machine.md): Source `host/cli/cleanup-machine.mdx`.
-- [vastai delete machine](pages/host/cli/delete-machine.md): Source `host/cli/delete-machine.mdx`.
-- [vastai list machine](pages/host/cli/list-machine.md): Source `host/cli/list-machine.mdx`.
-- [vastai list machines](pages/host/cli/list-machines.md): Source `host/cli/list-machines.mdx`.
-- [vastai show machine](pages/host/cli/show-machine.md): Source `host/cli/show-machine.mdx`.
-- [vastai show machines](pages/host/cli/show-machines.md): Source `host/cli/show-machines.mdx`.
-- [vastai set defjob](pages/host/cli/set-defjob.md): Source `host/cli/set-defjob.mdx`.
-- [vastai remove defjob](pages/host/cli/remove-defjob.md): Source `host/cli/remove-defjob.mdx`.
-- [vastai set min-bid](pages/host/cli/set-min-bid.md): Source `host/cli/set-min-bid.mdx`.
-- [vastai schedule maint](pages/host/cli/schedule-maint.md): Source `host/cli/schedule-maint.mdx`.
-- [vastai cancel maint](pages/host/cli/cancel-maint.md): Source `host/cli/cancel-maint.mdx`.
-- [vastai show maints](pages/host/cli/show-maints.md): Source `host/cli/show-maints.mdx`.
-- [vastai unlist machine](pages/host/cli/unlist-machine.md): Source `host/cli/unlist-machine.mdx`.
-- [vastai defrag machines](pages/host/cli/defrag-machines.md): Source `host/cli/defrag-machines.mdx`.
-- [vastai self-test machine](pages/host/cli/self-test-machine.md): Source `host/cli/self-test-machine.mdx`.
-- [vastai metrics gpu](pages/host/cli/metrics-gpu.md): Source `host/cli/metrics-gpu.mdx`.
-- [vastai metrics gpu-trends](pages/host/cli/metrics-gpu-trends.md): Source `host/cli/metrics-gpu-trends.mdx`.
-- [vastai metrics gpu-locations](pages/host/cli/metrics-gpu-locations.md): Source `host/cli/metrics-gpu-locations.mdx`.
+- [CLI Hello World](pages/cli/hello-world.md): The Vast.ai CLI gives you command-line access to the entire platform, authentication, GPU search, instance lifecycle, templates, volumes, serverless endpoints, and more. Anything you can do in the web console, you can a… (8230 bytes)
+- [CLI Authentication](pages/cli/authentication.md): Every request to the Vast.ai API requires an API key. The CLI stores your key locally and includes it automatically in every command. This page covers how to set up, verify, and manage API keys through the CLI. (2819 bytes)
+- [CLI Permissions](pages/cli/permissions.md): Every API key has a set of permissions that control which endpoints it can access. This page covers permission categories, how to build scoped keys, and how to manage team roles through the CLI. (5774 bytes)
+- [CLI Rate Limits and Errors](pages/cli/rate-limits.md): The Vast.ai CLI automatically retries rate-limited requests. You do not need to implement your own retry logic -- the CLI handles HTTP 429 responses with exponential backoff out of the box. (3232 bytes)
+- [CLI Templates](pages/cli/templates.md): A template is a configuration bundle that stores default settings for instance creation. Instead of passing every parameter each time you create an instance, you define a template once and reference it by its hashid. Yo… (13692 bytes)
+- [vastai create api-key](pages/cli/reference/create-api-key.md): Create a new api-key with restricted permissions. Can be sent to other users and teammates (1355 bytes)
+- [vastai delete api-key](pages/cli/reference/delete-api-key.md): Remove an api-key (829 bytes)
+- [vastai set api-key](pages/cli/reference/set-api-key.md): Set api-key (get your api-key from the console/CLI) (886 bytes)
+- [vastai show api-keys](pages/cli/reference/show-api-keys.md): List your api-keys associated with your account (770 bytes)
+- [vastai create ssh-key](pages/cli/reference/create-ssh-key.md): Create a new ssh-key (1888 bytes)
+- [vastai delete ssh-key](pages/cli/reference/delete-ssh-key.md): Remove an ssh-key (827 bytes)
+- [vastai show ssh-keys](pages/cli/reference/show-ssh-keys.md): List your ssh keys associated with your account (770 bytes)
+- [vastai update ssh-key](pages/cli/reference/update-ssh-key.md): Update an existing SSH key (922 bytes)
+- [vastai create env-var](pages/cli/reference/create-env-var.md): Create a new user environment variable (941 bytes)
+- [vastai delete env-var](pages/cli/reference/delete-env-var.md): Delete a user environment variable (864 bytes)
+- [vastai show env-vars](pages/cli/reference/show-env-vars.md): Show user environment variables (868 bytes)
+- [vastai update env-var](pages/cli/reference/update-env-var.md): Update an existing user environment variable (961 bytes)
+- [vastai show user](pages/cli/reference/show-user.md): Get current user data (955 bytes)
+- [vastai set user](pages/cli/reference/set-user.md): Update user data from json file (1630 bytes)
+- [vastai create subaccount](pages/cli/reference/create-subaccount.md): Create a subaccount (1377 bytes)
+- [vastai show subaccounts](pages/cli/reference/show-subaccounts.md): Get current subaccounts (865 bytes)
+- [vastai show connections](pages/cli/reference/show-connections.md): Display user's cloud connections (792 bytes)
+- [vastai show ipaddrs](pages/cli/reference/show-ipaddrs.md): Display user's history of ip addresses (786 bytes)
+- [vastai show audit-logs](pages/cli/reference/show-audit-logs.md): Display account's history of important actions (803 bytes)
+- [vastai show deposit](pages/cli/reference/show-deposit.md): Display reserve deposit info for an instance (868 bytes)
+- [vastai show earnings](pages/cli/reference/show-earnings.md): Get machine earning history reports (1145 bytes)
+- [vastai show invoices-v1](pages/cli/reference/show-invoices-v1.md): Get billing (invoices/charges) history reports with advanced filtering and pagination (3220 bytes)
+- [vastai transfer credit](pages/cli/reference/transfer-credit.md): Transfer credits to another account (1101 bytes)
+- [vastai reports](pages/cli/reference/reports.md): Get the user reports for a given machine (819 bytes)
+- [vastai create instance](pages/cli/reference/create-instance.md): Create a new instance (5842 bytes)
+- [vastai launch instance](pages/cli/reference/launch-instance.md): Launch the top instance from the search offers based on the given parameters (6723 bytes)
+- [vastai start instance](pages/cli/reference/start-instance.md): Start a stopped instance (1312 bytes)
+- [vastai start instances](pages/cli/reference/start-instances.md): Start a list of instances (865 bytes)
+- [vastai stop instance](pages/cli/reference/stop-instance.md): Stop a running instance (1332 bytes)
+- [vastai stop instances](pages/cli/reference/stop-instances.md): Stop a list of instances (918 bytes)
+- [vastai reboot instance](pages/cli/reference/reboot-instance.md): Reboot (stop/start) an instance (1670 bytes)
+- [vastai recycle instance](pages/cli/reference/recycle-instance.md): Recycle (destroy/create) an instance (993 bytes)
+- [vastai destroy instance](pages/cli/reference/destroy-instance.md): Destroy an instance (irreversible, deletes data) (1068 bytes)
+- [vastai destroy instances](pages/cli/reference/destroy-instances.md): Destroy a list of instances (irreversible, deletes data) (892 bytes)
+- [vastai label instance](pages/cli/reference/label-instance.md): Assign a string label to an instance (920 bytes)
+- [vastai prepay instance](pages/cli/reference/prepay-instance.md): Deposit credits into reserved instance (1013 bytes)
+- [vastai update instance](pages/cli/reference/update-instance.md): Update recreate an instance from a new/updated template (1424 bytes)
+- [vastai change bid](pages/cli/reference/change-bid.md): Change the bid price for a spot/interruptible instance (1817 bytes)
+- [vastai show instance](pages/cli/reference/show-instance.md): Display user's current instances (2249 bytes)
+- [vastai show instances](pages/cli/reference/show-instances.md): Display user's current instances (2288 bytes)
+- [vastai show instances-v1](pages/cli/reference/show-instances-v1.md): Show instances with pagination and filtering (v1). (3381 bytes)
+- [vastai logs](pages/cli/reference/logs.md): Get the logs for an instance (1078 bytes)
+- [vastai execute](pages/cli/reference/execute.md): Execute a (constrained) remote command on a machine (2185 bytes)
+- [vastai attach ssh](pages/cli/reference/attach-ssh.md): Attach an ssh key to an instance. This will allow you to connect to the instance with the ssh key (1268 bytes)
+- [vastai detach ssh](pages/cli/reference/detach-ssh.md): Detach an ssh key from an instance (1000 bytes)
+- [vastai ssh-url](pages/cli/reference/ssh-url.md): ssh url helper (797 bytes)
+- [vastai scp-url](pages/cli/reference/scp-url.md): scp url helper (785 bytes)
+- [vastai copy](pages/cli/reference/copy.md): Copy directories between instances and/or local (2953 bytes)
+- [vastai cloud copy](pages/cli/reference/cloud-copy.md): Copy files/folders to and from cloud providers (3080 bytes)
+- [vastai cancel copy](pages/cli/reference/cancel-copy.md): Cancel a remote copy in progress, specified by DST id (1104 bytes)
+- [vastai cancel sync](pages/cli/reference/cancel-sync.md): Cancel a remote copy in progress, specified by DST id (1110 bytes)
+- [vastai run benchmarks](pages/cli/reference/run-benchmarks.md): Benchmark a template against one or more GPUs and report performance per dollar. (2230 bytes)
+- [vastai search offers](pages/cli/reference/search-offers.md): Search for instance types using custom query (9337 bytes)
+- [vastai search benchmarks](pages/cli/reference/search-benchmarks.md): Search for benchmark results using custom query (2337 bytes)
+- [vastai search instances](pages/cli/reference/search-instances.md): Search for instance types using custom query (9340 bytes)
+- [vastai search invoices](pages/cli/reference/search-invoices.md): Search for invoices using custom query (3609 bytes)
+- [vastai search templates](pages/cli/reference/search-templates.md): Search for template results using custom query (3165 bytes)
+- [vastai search volumes](pages/cli/reference/search-volumes.md): Search for volume offers using custom query (5328 bytes)
+- [vastai create template](pages/cli/reference/create-template.md): Create a new template (2869 bytes)
+- [vastai update template](pages/cli/reference/update-template.md): Update an existing template (2946 bytes)
+- [vastai delete template](pages/cli/reference/delete-template.md): Delete a Template (974 bytes)
+- [vastai create endpoint](pages/cli/reference/create-endpoint.md): Create a new endpoint group (1983 bytes)
+- [vastai update endpoint](pages/cli/reference/update-endpoint.md): Update an existing endpoint group (2099 bytes)
+- [vastai delete endpoint](pages/cli/reference/delete-endpoint.md): Delete an endpoint group (901 bytes)
+- [vastai show endpoints](pages/cli/reference/show-endpoints.md): Display user's current endpoint groups (832 bytes)
+- [vastai create workergroup](pages/cli/reference/create-workergroup.md): Create a new autoscale group (2035 bytes)
+- [vastai update workergroup](pages/cli/reference/update-workergroup.md): Update an existing autoscale group (2421 bytes)
+- [vastai update workers](pages/cli/reference/update-workers.md): Trigger a rolling update of all workers in a workergroup, or cancel an in-progress update (1307 bytes)
+- [vastai delete workergroup](pages/cli/reference/delete-workergroup.md): Delete a workergroup group (1030 bytes)
+- [vastai show workergroups](pages/cli/reference/show-workergroups.md): Display user's current workergroups (841 bytes)
+- [vastai get endpt-logs](pages/cli/reference/get-endpt-logs.md): Fetch logs for a specific serverless endpoint group (1051 bytes)
+- [vastai get wrkgrp-logs](pages/cli/reference/get-wrkgrp-logs.md): Fetch logs for a specific serverless worker group group (1058 bytes)
+- [vastai show scheduled-jobs](pages/cli/reference/show-scheduled-jobs.md): Display the list of scheduled jobs (803 bytes)
+- [vastai delete scheduled-job](pages/cli/reference/delete-scheduled-job.md): Delete a scheduled job (859 bytes)
+- [vastai delete deployment](pages/cli/reference/delete-deployment.md): Delete a deployment by id, or by name and optional tag (1197 bytes)
+- [vastai show deployment](pages/cli/reference/show-deployment.md): Display details of a single deployment (909 bytes)
+- [vastai show deployment-versions](pages/cli/reference/show-deployment-versions.md): Display versions for a deployment (953 bytes)
+- [vastai show deployments](pages/cli/reference/show-deployments.md): Display user's current deployments (836 bytes)
+- [vastai create team](pages/cli/reference/create-team.md): Create a new team (1736 bytes)
+- [vastai destroy team](pages/cli/reference/destroy-team.md): Destroy your team (737 bytes)
+- [vastai invite member](pages/cli/reference/invite-member.md): Invite a team member (896 bytes)
+- [vastai remove member](pages/cli/reference/remove-member.md): Remove a team member (827 bytes)
+- [vastai show members](pages/cli/reference/show-members.md): Show your team members (742 bytes)
+- [vastai create team-role](pages/cli/reference/create-team-role.md): Add a new role to your team (1178 bytes)
+- [vastai show team-role](pages/cli/reference/show-team-role.md): Show your team role (828 bytes)
+- [vastai show team-roles](pages/cli/reference/show-team-roles.md): Show roles for a team (750 bytes)
+- [vastai update team-role](pages/cli/reference/update-team-role.md): Update an existing team role (1047 bytes)
+- [vastai remove team-role](pages/cli/reference/remove-team-role.md): Remove a role from your team (843 bytes)
+- [vastai create volume](pages/cli/reference/create-volume.md): Create a new volume (1224 bytes)
+- [vastai clone volume](pages/cli/reference/clone-volume.md): Clone an existing volume (1464 bytes)
+- [vastai list volume](pages/cli/reference/list-volume.md): Host command (1485 bytes)
+- [vastai list volumes](pages/cli/reference/list-volumes.md): Host command (1485 bytes)
+- [vastai show volumes](pages/cli/reference/show-volumes.md): Show stats on owned volumes. (949 bytes)
+- [vastai unlist volume](pages/cli/reference/unlist-volume.md): Host command (971 bytes)
+- [vastai delete volume](pages/cli/reference/delete-volume.md): Delete a volume (957 bytes)
+- [vastai cleanup machine](pages/cli/reference/cleanup-machine.md): Host command (1444 bytes)
+- [vastai delete machine](pages/cli/reference/delete-machine.md): Host command (1089 bytes)
+- [vastai list machine](pages/cli/reference/list-machine.md): Host command (3073 bytes)
+- [vastai list machines](pages/cli/reference/list-machines.md): Host command (2746 bytes)
+- [vastai show machine](pages/cli/reference/show-machine.md): Host command (1067 bytes)
+- [vastai show machines](pages/cli/reference/show-machines.md): Host command (977 bytes)
+- [vastai set defjob](pages/cli/reference/set-defjob.md): Host command (1592 bytes)
+- [vastai remove defjob](pages/cli/reference/remove-defjob.md): Host command (988 bytes)
+- [vastai set min-bid](pages/cli/reference/set-min-bid.md): Host command (1166 bytes)
+- [vastai schedule maint](pages/cli/reference/schedule-maint.md): Host command (1860 bytes)
+- [vastai cancel maint](pages/cli/reference/cancel-maint.md): Host command (1122 bytes)
+- [vastai show maints](pages/cli/reference/show-maints.md): Host command (1221 bytes)
+- [vastai unlist machine](pages/cli/reference/unlist-machine.md): Host command (975 bytes)
+- [vastai defrag machines](pages/cli/reference/defrag-machines.md): Host command (1106 bytes)
+- [vastai self-test machine](pages/cli/reference/self-test-machine.md): Host command (1553 bytes)
+- [vastai metrics gpu](pages/cli/reference/metrics-gpu.md): Host command (1482 bytes)
+- [vastai metrics gpu-trends](pages/cli/reference/metrics-gpu-trends.md): Host command (2607 bytes)
+- [vastai metrics gpu-locations](pages/cli/reference/metrics-gpu-locations.md): Host command (1899 bytes)
+- [vastai cleanup machine](pages/host/cli/cleanup-machine.md): Host command (1444 bytes)
+- [vastai delete machine](pages/host/cli/delete-machine.md): Host command (1089 bytes)
+- [vastai list machine](pages/host/cli/list-machine.md): Host command (3073 bytes)
+- [vastai list machines](pages/host/cli/list-machines.md): Host command (2746 bytes)
+- [vastai show machine](pages/host/cli/show-machine.md): Host command (1067 bytes)
+- [vastai show machines](pages/host/cli/show-machines.md): Host command (977 bytes)
+- [vastai set defjob](pages/host/cli/set-defjob.md): Host command (1592 bytes)
+- [vastai remove defjob](pages/host/cli/remove-defjob.md): Host command (988 bytes)
+- [vastai set min-bid](pages/host/cli/set-min-bid.md): Host command (1166 bytes)
+- [vastai schedule maint](pages/host/cli/schedule-maint.md): Host command (1860 bytes)
+- [vastai cancel maint](pages/host/cli/cancel-maint.md): Host command (1122 bytes)
+- [vastai show maints](pages/host/cli/show-maints.md): Host command (1221 bytes)
+- [vastai unlist machine](pages/host/cli/unlist-machine.md): Host command (975 bytes)
+- [vastai defrag machines](pages/host/cli/defrag-machines.md): Host command (1106 bytes)
+- [vastai self-test machine](pages/host/cli/self-test-machine.md): Host command (1553 bytes)
+- [vastai metrics gpu](pages/host/cli/metrics-gpu.md): Host command (1482 bytes)
+- [vastai metrics gpu-trends](pages/host/cli/metrics-gpu-trends.md): Host command (2607 bytes)
+- [vastai metrics gpu-locations](pages/host/cli/metrics-gpu-locations.md): Host command (1899 bytes)
 
 ## SDK
 
-- [SDK Hello World](pages/sdk/python/quickstart.md): Source `sdk/python/quickstart.mdx`.
-- [VastAI](pages/sdk/python/reference/vastai.md): Source `sdk/python/reference/vastai.mdx`.
-- [SDK Authentication](pages/sdk/python/authentication.md): Source `sdk/python/authentication.mdx`.
-- [SDK Permissions](pages/sdk/python/permissions.md): Source `sdk/python/permissions.mdx`.
-- [SDK Rate Limits and Errors](pages/sdk/python/rate-limits.md): Source `sdk/python/rate-limits.mdx`.
-- [VastAI.create_api_key](pages/sdk/python/reference/create-api-key.md): Source `sdk/python/reference/create-api-key.mdx`.
-- [VastAI.delete_api_key](pages/sdk/python/reference/delete-api-key.md): Source `sdk/python/reference/delete-api-key.mdx`.
-- [VastAI.reset_api_key](pages/sdk/python/reference/reset-api-key.md): Source `sdk/python/reference/reset-api-key.mdx`.
-- [VastAI.show_api_key](pages/sdk/python/reference/show-api-key.md): Source `sdk/python/reference/show-api-key.mdx`.
-- [VastAI.show_api_keys](pages/sdk/python/reference/show-api-keys.md): Source `sdk/python/reference/show-api-keys.mdx`.
-- [VastAI.set_api_key](pages/sdk/python/reference/set-api-key.md): Source `sdk/python/reference/set-api-key.mdx`.
-- [VastAI.create_ssh_key](pages/sdk/python/reference/create-ssh-key.md): Source `sdk/python/reference/create-ssh-key.mdx`.
-- [VastAI.delete_ssh_key](pages/sdk/python/reference/delete-ssh-key.md): Source `sdk/python/reference/delete-ssh-key.mdx`.
-- [VastAI.show_ssh_keys](pages/sdk/python/reference/show-ssh-keys.md): Source `sdk/python/reference/show-ssh-keys.mdx`.
-- [VastAI.update_ssh_key](pages/sdk/python/reference/update-ssh-key.md): Source `sdk/python/reference/update-ssh-key.mdx`.
-- [VastAI.create_env_var](pages/sdk/python/reference/create-env-var.md): Source `sdk/python/reference/create-env-var.mdx`.
-- [VastAI.show_env_vars](pages/sdk/python/reference/show-env-vars.md): Source `sdk/python/reference/show-env-vars.mdx`.
-- [VastAI.update_env_var](pages/sdk/python/reference/update-env-var.md): Source `sdk/python/reference/update-env-var.mdx`.
-- [VastAI.delete_env_var](pages/sdk/python/reference/delete-env-var.md): Source `sdk/python/reference/delete-env-var.mdx`.
-- [VastAI.show_user](pages/sdk/python/reference/show-user.md): Source `sdk/python/reference/show-user.mdx`.
-- [VastAI.set_user](pages/sdk/python/reference/set-user.md): Source `sdk/python/reference/set-user.mdx`.
-- [VastAI.create_subaccount](pages/sdk/python/reference/create-subaccount.md): Source `sdk/python/reference/create-subaccount.mdx`.
-- [VastAI.show_subaccounts](pages/sdk/python/reference/show-subaccounts.md): Source `sdk/python/reference/show-subaccounts.mdx`.
-- [VastAI.show_connections](pages/sdk/python/reference/show-connections.md): Source `sdk/python/reference/show-connections.mdx`.
-- [VastAI.show_ipaddrs](pages/sdk/python/reference/show-ipaddrs.md): Source `sdk/python/reference/show-ipaddrs.mdx`.
-- [VastAI.show_audit_logs](pages/sdk/python/reference/show-audit-logs.md): Source `sdk/python/reference/show-audit-logs.mdx`.
-- [VastAI.show_deposit](pages/sdk/python/reference/show-deposit.md): Source `sdk/python/reference/show-deposit.mdx`.
-- [VastAI.show_earnings](pages/sdk/python/reference/show-earnings.md): Source `sdk/python/reference/show-earnings.mdx`.
-- [VastAI.show_invoices](pages/sdk/python/reference/show-invoices.md): Source `sdk/python/reference/show-invoices.mdx`.
-- [VastAI.generate_pdf_invoices](pages/sdk/python/reference/generate-pdf-invoices.md): Source `sdk/python/reference/generate-pdf-invoices.mdx`.
-- [VastAI.transfer_credit](pages/sdk/python/reference/transfer-credit.md): Source `sdk/python/reference/transfer-credit.mdx`.
-- [VastAI.reports](pages/sdk/python/reference/reports.md): Source `sdk/python/reference/reports.mdx`.
-- [VastAI.create_instance](pages/sdk/python/reference/create-instance.md): Source `sdk/python/reference/create-instance.mdx`.
-- [VastAI.create_instances](pages/sdk/python/reference/create-instances.md): Source `sdk/python/reference/create-instances.mdx`.
-- [VastAI.launch_instance](pages/sdk/python/reference/launch-instance.md): Source `sdk/python/reference/launch-instance.mdx`.
-- [VastAI.start_instance](pages/sdk/python/reference/start-instance.md): Source `sdk/python/reference/start-instance.mdx`.
-- [VastAI.start_instances](pages/sdk/python/reference/start-instances.md): Source `sdk/python/reference/start-instances.mdx`.
-- [VastAI.stop_instance](pages/sdk/python/reference/stop-instance.md): Source `sdk/python/reference/stop-instance.mdx`.
-- [VastAI.stop_instances](pages/sdk/python/reference/stop-instances.md): Source `sdk/python/reference/stop-instances.mdx`.
-- [VastAI.reboot_instance](pages/sdk/python/reference/reboot-instance.md): Source `sdk/python/reference/reboot-instance.mdx`.
-- [VastAI.recycle_instance](pages/sdk/python/reference/recycle-instance.md): Source `sdk/python/reference/recycle-instance.mdx`.
-- [VastAI.destroy_instance](pages/sdk/python/reference/destroy-instance.md): Source `sdk/python/reference/destroy-instance.mdx`.
-- [VastAI.destroy_instances](pages/sdk/python/reference/destroy-instances.md): Source `sdk/python/reference/destroy-instances.mdx`.
-- [VastAI.label_instance](pages/sdk/python/reference/label-instance.md): Source `sdk/python/reference/label-instance.mdx`.
-- [VastAI.prepay_instance](pages/sdk/python/reference/prepay-instance.md): Source `sdk/python/reference/prepay-instance.mdx`.
-- [VastAI.update_instance](pages/sdk/python/reference/update-instance.md): Source `sdk/python/reference/update-instance.mdx`.
-- [VastAI.show_instance](pages/sdk/python/reference/show-instance.md): Source `sdk/python/reference/show-instance.mdx`.
-- [VastAI.show_instances](pages/sdk/python/reference/show-instances.md): Source `sdk/python/reference/show-instances.mdx`.
-- [VastAI.show_instances_v1](pages/sdk/python/reference/show-instances-v1.md): Source `sdk/python/reference/show-instances-v1.mdx`.
-- [VastAI.change_bid](pages/sdk/python/reference/change-bid.md): Source `sdk/python/reference/change-bid.mdx`.
-- [VastAI.logs](pages/sdk/python/reference/logs.md): Source `sdk/python/reference/logs.mdx`.
-- [VastAI.execute](pages/sdk/python/reference/execute.md): Source `sdk/python/reference/execute.mdx`.
-- [VastAI.attach_ssh](pages/sdk/python/reference/attach-ssh.md): Source `sdk/python/reference/attach-ssh.mdx`.
-- [VastAI.detach_ssh](pages/sdk/python/reference/detach-ssh.md): Source `sdk/python/reference/detach-ssh.mdx`.
-- [VastAI.ssh_url](pages/sdk/python/reference/ssh-url.md): Source `sdk/python/reference/ssh-url.mdx`.
-- [VastAI.scp_url](pages/sdk/python/reference/scp-url.md): Source `sdk/python/reference/scp-url.mdx`.
-- [VastAI.copy](pages/sdk/python/reference/copy.md): Source `sdk/python/reference/copy.mdx`.
-- [VastAI.cloud_copy](pages/sdk/python/reference/cloud-copy.md): Source `sdk/python/reference/cloud-copy.mdx`.
-- [VastAI.cancel_copy](pages/sdk/python/reference/cancel-copy.md): Source `sdk/python/reference/cancel-copy.mdx`.
-- [VastAI.cancel_sync](pages/sdk/python/reference/cancel-sync.md): Source `sdk/python/reference/cancel-sync.mdx`.
-- [VastAI.search_offers](pages/sdk/python/reference/search-offers.md): Source `sdk/python/reference/search-offers.mdx`.
-- [VastAI.search_benchmarks](pages/sdk/python/reference/search-benchmarks.md): Source `sdk/python/reference/search-benchmarks.mdx`.
-- [VastAI.search_invoices](pages/sdk/python/reference/search-invoices.md): Source `sdk/python/reference/search-invoices.mdx`.
-- [VastAI.search_templates](pages/sdk/python/reference/search-templates.md): Source `sdk/python/reference/search-templates.mdx`.
-- [VastAI.search_volumes](pages/sdk/python/reference/search-volumes.md): Source `sdk/python/reference/search-volumes.mdx`.
-- [VastAI.create_template](pages/sdk/python/reference/create-template.md): Source `sdk/python/reference/create-template.mdx`.
-- [VastAI.update_template](pages/sdk/python/reference/update-template.md): Source `sdk/python/reference/update-template.mdx`.
-- [VastAI.delete_template](pages/sdk/python/reference/delete-template.md): Source `sdk/python/reference/delete-template.mdx`.
-- [VastAI.create_endpoint](pages/sdk/python/reference/create-endpoint.md): Source `sdk/python/reference/create-endpoint.mdx`.
-- [VastAI.update_endpoint](pages/sdk/python/reference/update-endpoint.md): Source `sdk/python/reference/update-endpoint.mdx`.
-- [VastAI.delete_endpoint](pages/sdk/python/reference/delete-endpoint.md): Source `sdk/python/reference/delete-endpoint.mdx`.
-- [VastAI.show_endpoints](pages/sdk/python/reference/show-endpoints.md): Source `sdk/python/reference/show-endpoints.mdx`.
-- [VastAI.create_workergroup](pages/sdk/python/reference/create-workergroup.md): Source `sdk/python/reference/create-workergroup.mdx`.
-- [VastAI.update_workergroup](pages/sdk/python/reference/update-workergroup.md): Source `sdk/python/reference/update-workergroup.mdx`.
-- [VastAI.update_workers](pages/sdk/python/reference/update-workers.md): Source `sdk/python/reference/update-workers.mdx`.
-- [VastAI.delete_workergroup](pages/sdk/python/reference/delete-workergroup.md): Source `sdk/python/reference/delete-workergroup.mdx`.
-- [VastAI.show_workergroups](pages/sdk/python/reference/show-workergroups.md): Source `sdk/python/reference/show-workergroups.mdx`.
-- [VastAI.get_endpt_logs](pages/sdk/python/reference/get-endpt-logs.md): Source `sdk/python/reference/get-endpt-logs.mdx`.
-- [VastAI.get_wrkgrp_logs](pages/sdk/python/reference/get-wrkgrp-logs.md): Source `sdk/python/reference/get-wrkgrp-logs.mdx`.
-- [VastAI.show_scheduled_jobs](pages/sdk/python/reference/show-scheduled-jobs.md): Source `sdk/python/reference/show-scheduled-jobs.mdx`.
-- [VastAI.delete_scheduled_job](pages/sdk/python/reference/delete-scheduled-job.md): Source `sdk/python/reference/delete-scheduled-job.mdx`.
-- [VastAI.delete_deployment](pages/sdk/python/reference/delete-deployment.md): Source `sdk/python/reference/delete-deployment.mdx`.
-- [VastAI.show_deployment](pages/sdk/python/reference/show-deployment.md): Source `sdk/python/reference/show-deployment.mdx`.
-- [VastAI.show_deployment_versions](pages/sdk/python/reference/show-deployment-versions.md): Source `sdk/python/reference/show-deployment-versions.mdx`.
-- [VastAI.show_deployments](pages/sdk/python/reference/show-deployments.md): Source `sdk/python/reference/show-deployments.mdx`.
-- [Serverless](pages/sdk/python/serverless/serverless.md): Source `sdk/python/serverless/serverless.mdx`.
-- [ServerlessRequest](pages/sdk/python/serverless/serverless-request.md): Source `sdk/python/serverless/serverless-request.mdx`.
-- [Endpoint](pages/sdk/python/serverless/endpoint.md): Source `sdk/python/serverless/endpoint.mdx`.
-- [Session](pages/sdk/python/serverless/session.md): Source `sdk/python/serverless/session.mdx`.
-- [Worker](pages/sdk/python/serverless/client-worker.md): Source `sdk/python/serverless/client-worker.mdx`.
-- [Worker](pages/sdk/python/serverless/server-worker.md): Source `sdk/python/serverless/server-worker.mdx`.
-- [WorkerConfig](pages/sdk/python/serverless/worker-config.md): Source `sdk/python/serverless/worker-config.mdx`.
-- [HandlerConfig](pages/sdk/python/serverless/handler-config.md): Source `sdk/python/serverless/handler-config.mdx`.
-- [LogActionConfig](pages/sdk/python/serverless/log-action-config.md): Source `sdk/python/serverless/log-action-config.mdx`.
-- [BenchmarkConfig](pages/sdk/python/serverless/benchmark-config.md): Source `sdk/python/serverless/benchmark-config.mdx`.
-- [VastAI.create_team](pages/sdk/python/reference/create-team.md): Source `sdk/python/reference/create-team.mdx`.
-- [VastAI.destroy_team](pages/sdk/python/reference/destroy-team.md): Source `sdk/python/reference/destroy-team.mdx`.
-- [VastAI.invite_member](pages/sdk/python/reference/invite-member.md): Source `sdk/python/reference/invite-member.mdx`.
-- [VastAI.remove_member](pages/sdk/python/reference/remove-member.md): Source `sdk/python/reference/remove-member.mdx`.
-- [VastAI.show_members](pages/sdk/python/reference/show-members.md): Source `sdk/python/reference/show-members.mdx`.
-- [VastAI.create_team_role](pages/sdk/python/reference/create-team-role.md): Source `sdk/python/reference/create-team-role.mdx`.
-- [VastAI.show_team_role](pages/sdk/python/reference/show-team-role.md): Source `sdk/python/reference/show-team-role.mdx`.
-- [VastAI.show_team_roles](pages/sdk/python/reference/show-team-roles.md): Source `sdk/python/reference/show-team-roles.mdx`.
-- [VastAI.update_team_role](pages/sdk/python/reference/update-team-role.md): Source `sdk/python/reference/update-team-role.mdx`.
-- [VastAI.remove_team_role](pages/sdk/python/reference/remove-team-role.md): Source `sdk/python/reference/remove-team-role.mdx`.
-- [VastAI.create_volume](pages/sdk/python/reference/create-volume.md): Source `sdk/python/reference/create-volume.mdx`.
-- [VastAI.clone_volume](pages/sdk/python/reference/clone-volume.md): Source `sdk/python/reference/clone-volume.mdx`.
-- [VastAI.list_volume](pages/sdk/python/reference/list-volume.md): Source `sdk/python/reference/list-volume.mdx`.
-- [VastAI.list_volumes](pages/sdk/python/reference/list-volumes.md): Source `sdk/python/reference/list-volumes.mdx`.
-- [VastAI.show_volumes](pages/sdk/python/reference/show-volumes.md): Source `sdk/python/reference/show-volumes.mdx`.
-- [VastAI.unlist_volume](pages/sdk/python/reference/unlist-volume.md): Source `sdk/python/reference/unlist-volume.mdx`.
-- [VastAI.delete_volume](pages/sdk/python/reference/delete-volume.md): Source `sdk/python/reference/delete-volume.mdx`.
-- [VastAI.cleanup_machine](pages/sdk/python/reference/cleanup-machine.md): Source `sdk/python/reference/cleanup-machine.mdx`.
-- [VastAI.delete_machine](pages/sdk/python/reference/delete-machine.md): Source `sdk/python/reference/delete-machine.mdx`.
-- [VastAI.list_machine](pages/sdk/python/reference/list-machine.md): Source `sdk/python/reference/list-machine.mdx`.
-- [VastAI.list_machines](pages/sdk/python/reference/list-machines.md): Source `sdk/python/reference/list-machines.mdx`.
-- [VastAI.show_machine](pages/sdk/python/reference/show-machine.md): Source `sdk/python/reference/show-machine.mdx`.
-- [VastAI.show_machines](pages/sdk/python/reference/show-machines.md): Source `sdk/python/reference/show-machines.mdx`.
-- [VastAI.set_defjob](pages/sdk/python/reference/set-defjob.md): Source `sdk/python/reference/set-defjob.mdx`.
-- [VastAI.remove_defjob](pages/sdk/python/reference/remove-defjob.md): Source `sdk/python/reference/remove-defjob.mdx`.
-- [VastAI.set_min_bid](pages/sdk/python/reference/set-min-bid.md): Source `sdk/python/reference/set-min-bid.mdx`.
-- [VastAI.schedule_maint](pages/sdk/python/reference/schedule-maint.md): Source `sdk/python/reference/schedule-maint.mdx`.
-- [VastAI.cancel_maint](pages/sdk/python/reference/cancel-maint.md): Source `sdk/python/reference/cancel-maint.mdx`.
-- [VastAI.show_maints](pages/sdk/python/reference/show-maints.md): Source `sdk/python/reference/show-maints.mdx`.
-- [VastAI.unlist_machine](pages/sdk/python/reference/unlist-machine.md): Source `sdk/python/reference/unlist-machine.mdx`.
-- [VastAI.defrag_machines](pages/sdk/python/reference/defrag-machines.md): Source `sdk/python/reference/defrag-machines.mdx`.
-- [VastAI.self_test_machine](pages/sdk/python/reference/self-test-machine.md): Source `sdk/python/reference/self-test-machine.mdx`.
-- [VastAI.cleanup_machine](pages/host/sdk/cleanup-machine.md): Source `host/sdk/cleanup-machine.mdx`.
-- [VastAI.delete_machine](pages/host/sdk/delete-machine.md): Source `host/sdk/delete-machine.mdx`.
-- [VastAI.list_machine](pages/host/sdk/list-machine.md): Source `host/sdk/list-machine.mdx`.
-- [VastAI.list_machines](pages/host/sdk/list-machines.md): Source `host/sdk/list-machines.mdx`.
-- [VastAI.show_machine](pages/host/sdk/show-machine.md): Source `host/sdk/show-machine.mdx`.
-- [VastAI.show_machines](pages/host/sdk/show-machines.md): Source `host/sdk/show-machines.mdx`.
-- [VastAI.set_defjob](pages/host/sdk/set-defjob.md): Source `host/sdk/set-defjob.mdx`.
-- [VastAI.remove_defjob](pages/host/sdk/remove-defjob.md): Source `host/sdk/remove-defjob.mdx`.
-- [VastAI.set_min_bid](pages/host/sdk/set-min-bid.md): Source `host/sdk/set-min-bid.mdx`.
-- [VastAI.schedule_maint](pages/host/sdk/schedule-maint.md): Source `host/sdk/schedule-maint.mdx`.
-- [VastAI.cancel_maint](pages/host/sdk/cancel-maint.md): Source `host/sdk/cancel-maint.mdx`.
-- [VastAI.show_maints](pages/host/sdk/show-maints.md): Source `host/sdk/show-maints.mdx`.
-- [VastAI.unlist_machine](pages/host/sdk/unlist-machine.md): Source `host/sdk/unlist-machine.mdx`.
-- [VastAI.defrag_machines](pages/host/sdk/defrag-machines.md): Source `host/sdk/defrag-machines.mdx`.
-- [VastAI.self_test_machine](pages/host/sdk/self-test-machine.md): Source `host/sdk/self-test-machine.mdx`.
+- [SDK Hello World](pages/sdk/python/quickstart.md): The Vast.ai SDK gives you programmatic access to the entire platform from Python, authentication, GPU search, instance lifecycle, templates, volumes, serverless endpoints, and more. Anything you can do in the web consol… (7928 bytes)
+- [VastAI](pages/sdk/python/reference/vastai.md): The VastAI class is the main client for interacting with the Vast.ai platform. It wraps the CLI commands as Python methods with typed signatures. (1531 bytes)
+- [SDK Authentication](pages/sdk/python/authentication.md): Every request to the Vast.ai API requires an API key. The SDK accepts your key at initialization and includes it automatically in every call. This page covers how to set up, verify, and manage API keys through the SDK. (3133 bytes)
+- [SDK Permissions](pages/sdk/python/permissions.md): Every API key has a set of permissions that control which endpoints it can access. This page covers permission categories, how to build scoped keys, and how to manage team roles through the SDK. (6109 bytes)
+- [SDK Rate Limits and Errors](pages/sdk/python/rate-limits.md): The Vast.ai SDK automatically retries rate-limited requests. You do not need to implement your own retry logic -- both the VastAI client and the serverless client handle retries with exponential backoff out of the box. (4101 bytes)
+- [VastAI.create_api_key](pages/sdk/python/reference/create-api-key.md): Create a new API key. (549 bytes)
+- [VastAI.delete_api_key](pages/sdk/python/reference/delete-api-key.md): Delete an API key. (362 bytes)
+- [VastAI.reset_api_key](pages/sdk/python/reference/reset-api-key.md): Reset the API key. (263 bytes)
+- [VastAI.show_api_key](pages/sdk/python/reference/show-api-key.md): Show details of an API key. (362 bytes)
+- [VastAI.show_api_keys](pages/sdk/python/reference/show-api-keys.md): Return all API keys associated with the account. (305 bytes)
+- [VastAI.set_api_key](pages/sdk/python/reference/set-api-key.md): Update the API key used by this client. (362 bytes)
+- [VastAI.create_ssh_key](pages/sdk/python/reference/create-ssh-key.md): Create a new SSH key. (492 bytes)
+- [VastAI.delete_ssh_key](pages/sdk/python/reference/delete-ssh-key.md): Delete an SSH key. (360 bytes)
+- [VastAI.show_ssh_keys](pages/sdk/python/reference/show-ssh-keys.md): Show all SSH keys. (275 bytes)
+- [VastAI.update_ssh_key](pages/sdk/python/reference/update-ssh-key.md): Update an SSH key. (460 bytes)
+- [VastAI.create_env_var](pages/sdk/python/reference/create-env-var.md): Create a new user environment variable. (487 bytes)
+- [VastAI.show_env_vars](pages/sdk/python/reference/show-env-vars.md): Show user environment variables. (392 bytes)
+- [VastAI.update_env_var](pages/sdk/python/reference/update-env-var.md): Update an existing user environment variable. (507 bytes)
+- [VastAI.delete_env_var](pages/sdk/python/reference/delete-env-var.md): Delete a user environment variable. (398 bytes)
+- [VastAI.show_user](pages/sdk/python/reference/show-user.md): Show current user details. (259 bytes)
+- [VastAI.set_user](pages/sdk/python/reference/set-user.md): Set user parameters. (332 bytes)
+- [VastAI.create_subaccount](pages/sdk/python/reference/create-subaccount.md): Create a new subaccount. (675 bytes)
+- [VastAI.show_subaccounts](pages/sdk/python/reference/show-subaccounts.md): Show all subaccounts. (287 bytes)
+- [VastAI.show_connections](pages/sdk/python/reference/show-connections.md): Show all connections. (287 bytes)
+- [VastAI.show_ipaddrs](pages/sdk/python/reference/show-ipaddrs.md): Show IP addresses. (272 bytes)
+- [VastAI.show_audit_logs](pages/sdk/python/reference/show-audit-logs.md): Display account audit logs. (290 bytes)
+- [VastAI.show_deposit](pages/sdk/python/reference/show-deposit.md): Show deposit details. (367 bytes)
+- [VastAI.show_earnings](pages/sdk/python/reference/show-earnings.md): Show earnings information. (652 bytes)
+- [VastAI.show_invoices](pages/sdk/python/reference/show-invoices.md): Show invoice details (deprecated; use show\invoices\v1). (762 bytes)
+- [VastAI.show_invoices_v1](pages/sdk/python/reference/show-invoices-v1.md): Get billing history reports with advanced filtering and pagination. (1654 bytes)
+- [VastAI.generate_pdf_invoices](pages/sdk/python/reference/generate-pdf-invoices.md): Generate PDF invoices based on filters. (299 bytes)
+- [VastAI.transfer_credit](pages/sdk/python/reference/transfer-credit.md): Transfer credit to another account. (510 bytes)
+- [VastAI.reports](pages/sdk/python/reference/reports.md): Generate reports for a machine. (354 bytes)
+- [VastAI.create_instance](pages/sdk/python/reference/create-instance.md): Create a new instance from a contract offer ID. (4085 bytes)
+- [VastAI.create_instances](pages/sdk/python/reference/create-instances.md): Create multiple instances from a list of offer IDs. (4109 bytes)
+- [VastAI.launch_instance](pages/sdk/python/reference/launch-instance.md): Launch the top instance from search offers matching the given criteria. (3324 bytes)
+- [VastAI.start_instance](pages/sdk/python/reference/start-instance.md): Start a stopped instance. (378 bytes)
+- [VastAI.start_instances](pages/sdk/python/reference/start-instances.md): Start multiple instances. (389 bytes)
+- [VastAI.stop_instance](pages/sdk/python/reference/stop-instance.md): Stop a running instance. (365 bytes)
+- [VastAI.stop_instances](pages/sdk/python/reference/stop-instances.md): Stop multiple instances. (384 bytes)
+- [VastAI.reboot_instance](pages/sdk/python/reference/reboot-instance.md): Reboot an instance. (368 bytes)
+- [VastAI.recycle_instance](pages/sdk/python/reference/recycle-instance.md): Recycle an instance. (373 bytes)
+- [VastAI.destroy_instance](pages/sdk/python/reference/destroy-instance.md): Destroy an instance. (372 bytes)
+- [VastAI.destroy_instances](pages/sdk/python/reference/destroy-instances.md): Destroy multiple instances. (399 bytes)
+- [VastAI.label_instance](pages/sdk/python/reference/label-instance.md): Set a label on an instance. (453 bytes)
+- [VastAI.prepay_instance](pages/sdk/python/reference/prepay-instance.md): Prepay for an instance. (544 bytes)
+- [VastAI.update_instance](pages/sdk/python/reference/update-instance.md): Update/recreate an instance from a new/updated template. (1092 bytes)
+- [VastAI.show_instance](pages/sdk/python/reference/show-instance.md): Return details of a single instance. (396 bytes)
+- [VastAI.show_instances](pages/sdk/python/reference/show-instances.md): Return all of the authenticated user's instances as a flat list. (324 bytes)
+- [VastAI.show_instances_v1](pages/sdk/python/reference/show-instances-v1.md): Return instances using the paginated v1 API; for filtering, sorting, and manual pagination. (427 bytes)
+- [VastAI.change_bid](pages/sdk/python/reference/change-bid.md): Change the bid price for an instance. (487 bytes)
+- [VastAI.logs](pages/sdk/python/reference/logs.md): Retrieve logs for an instance. (682 bytes)
+- [VastAI.execute](pages/sdk/python/reference/execute.md): Execute a command on an instance. (433 bytes)
+- [VastAI.attach_ssh](pages/sdk/python/reference/attach-ssh.md): Attach an SSH key to an instance. (490 bytes)
+- [VastAI.detach_ssh](pages/sdk/python/reference/detach-ssh.md): Detach an SSH key from an instance. (501 bytes)
+- [VastAI.ssh_url](pages/sdk/python/reference/ssh-url.md): Get the SSH URL for an instance. (345 bytes)
+- [VastAI.scp_url](pages/sdk/python/reference/scp-url.md): Get the SCP URL for an instance. (333 bytes)
+- [VastAI.copy](pages/sdk/python/reference/copy.md): Copy files between instances, volumes, cloud services, and local. (550 bytes)
+- [VastAI.cloud_copy](pages/sdk/python/reference/cloud-copy.md): Copy files between cloud and instance. (1459 bytes)
+- [VastAI.cancel_copy](pages/sdk/python/reference/cancel-copy.md): Cancel a file copy operation. (350 bytes)
+- [VastAI.cancel_sync](pages/sdk/python/reference/cancel-sync.md): Cancel a file sync operation. (350 bytes)
+- [VastAI.search_offers](pages/sdk/python/reference/search-offers.md): Search for GPU offers. (967 bytes)
+- [VastAI.search_benchmarks](pages/sdk/python/reference/search-benchmarks.md): Search for benchmarks. (822 bytes)
+- [VastAI.search_invoices](pages/sdk/python/reference/search-invoices.md): Search for invoices. (444 bytes)
+- [VastAI.search_templates](pages/sdk/python/reference/search-templates.md): Search for templates. (448 bytes)
+- [VastAI.search_volumes](pages/sdk/python/reference/search-volumes.md): Search for volume offers. (993 bytes)
+- [VastAI.create_template](pages/sdk/python/reference/create-template.md): Create a new template. (3046 bytes)
+- [VastAI.update_template](pages/sdk/python/reference/update-template.md): Update an existing template. (3121 bytes)
+- [VastAI.delete_template](pages/sdk/python/reference/delete-template.md): Delete a template by ID or hash. (512 bytes)
+- [VastAI.create_endpoint](pages/sdk/python/reference/create-endpoint.md): Create a new serverless endpoint. (1826 bytes)
+- [VastAI.update_endpoint](pages/sdk/python/reference/update-endpoint.md): Update an existing endpoint. (2026 bytes)
+- [VastAI.delete_endpoint](pages/sdk/python/reference/delete-endpoint.md): Delete a serverless endpoint. (384 bytes)
+- [VastAI.show_endpoints](pages/sdk/python/reference/show-endpoints.md): Show all serverless endpoints. (290 bytes)
+- [VastAI.create_workergroup](pages/sdk/python/reference/create-workergroup.md): Create a new autoscale worker group. (1714 bytes)
+- [VastAI.update_workergroup](pages/sdk/python/reference/update-workergroup.md): Update an existing autoscale worker group. (1792 bytes)
+- [VastAI.update_workers](pages/sdk/python/reference/update-workers.md): Trigger a rolling update of all workers in a workergroup, or cancel an in-progress update. (554 bytes)
+- [VastAI.delete_workergroup](pages/sdk/python/reference/delete-workergroup.md): Delete a worker group. (377 bytes)
+- [VastAI.show_workergroups](pages/sdk/python/reference/show-workergroups.md): Show all worker groups. (292 bytes)
+- [VastAI.get_endpt_logs](pages/sdk/python/reference/get-endpt-logs.md): Fetch logs for a serverless endpoint. (540 bytes)
+- [VastAI.get_wrkgrp_logs](pages/sdk/python/reference/get-wrkgrp-logs.md): Fetch logs for a worker group. (533 bytes)
+- [VastAI.show_scheduled_jobs](pages/sdk/python/reference/show-scheduled-jobs.md): Show scheduled jobs for the account. (311 bytes)
+- [VastAI.delete_scheduled_job](pages/sdk/python/reference/delete-scheduled-job.md): Delete a scheduled job. (392 bytes)
+- [VastAI.delete_deployment](pages/sdk/python/reference/delete-deployment.md): Delete a deployment. (377 bytes)
+- [VastAI.show_deployment](pages/sdk/python/reference/show-deployment.md): Return details of a single deployment. (396 bytes)
+- [VastAI.show_deployment_versions](pages/sdk/python/reference/show-deployment-versions.md): Return version history for a deployment. (429 bytes)
+- [VastAI.show_deployments](pages/sdk/python/reference/show-deployments.md): Return all deployments for the authenticated user. (316 bytes)
+- [Serverless](pages/sdk/python/serverless/serverless.md): Property (type: Optional\[str]) (3236 bytes)
+- [ServerlessRequest](pages/sdk/python/serverless/serverless-request.md): A request to a Serverless endpoint managed by the client (262 bytes)
+- [Endpoint](pages/sdk/python/serverless/endpoint.md): Property (type: Any; required) (1806 bytes)
+- [Session](pages/sdk/python/serverless/session.md): Property (type: Endpoint; required) (1315 bytes)
+- [Worker](pages/sdk/python/serverless/client-worker.md): Property (type: int) (784 bytes)
+- [Worker](pages/sdk/python/serverless/server-worker.md): This class provides a simple to use abstraction over the pyworker backend. All custom implementations of pyworker can be created by configuring a Worker object. The pyworker starts by calling Worker.run() (471 bytes)
+- [WorkerConfig](pages/sdk/python/serverless/worker-config.md): Property (type: str) (553 bytes)
+- [HandlerConfig](pages/sdk/python/serverless/handler-config.md): Configuration for defining handlers (807 bytes)
+- [LogActionConfig](pages/sdk/python/serverless/log-action-config.md): Configuration for defining log actions (339 bytes)
+- [BenchmarkConfig](pages/sdk/python/serverless/benchmark-config.md): Configuration for defining a benchmark (358 bytes)
+- [VastAI.create_team](pages/sdk/python/reference/create-team.md): Create a new team. (363 bytes)
+- [VastAI.destroy_team](pages/sdk/python/reference/destroy-team.md): Destroy the current team. (267 bytes)
+- [VastAI.invite_member](pages/sdk/python/reference/invite-member.md): Invite a new member to the team. (479 bytes)
+- [VastAI.remove_member](pages/sdk/python/reference/remove-member.md): Remove a member from the team. (369 bytes)
+- [VastAI.show_members](pages/sdk/python/reference/show-members.md): Show all team members. (276 bytes)
+- [VastAI.create_team_role](pages/sdk/python/reference/create-team-role.md): Create a new team role. (531 bytes)
+- [VastAI.show_team_role](pages/sdk/python/reference/show-team-role.md): Show details of a specific team role. (363 bytes)
+- [VastAI.show_team_roles](pages/sdk/python/reference/show-team-roles.md): Show all team roles. (283 bytes)
+- [VastAI.update_team_role](pages/sdk/python/reference/update-team-role.md): Update an existing team role. (613 bytes)
+- [VastAI.remove_team_role](pages/sdk/python/reference/remove-team-role.md): Remove a team role. (351 bytes)
+- [VastAI.create_volume](pages/sdk/python/reference/create-volume.md): Create a new volume from an offer ID. (566 bytes)
+- [VastAI.clone_volume](pages/sdk/python/reference/clone-volume.md): Clone an existing volume. (814 bytes)
+- [VastAI.list_volume](pages/sdk/python/reference/list-volume.md): List disk space for rent as a volume. (850 bytes)
+- [VastAI.list_volumes](pages/sdk/python/reference/list-volumes.md): List disk space for rent as volumes on multiple machines. (875 bytes)
+- [VastAI.show_volumes](pages/sdk/python/reference/show-volumes.md): Show stats on owned volumes. (433 bytes)
+- [VastAI.unlist_volume](pages/sdk/python/reference/unlist-volume.md): Unlist a volume offer. (369 bytes)
+- [VastAI.delete_volume](pages/sdk/python/reference/delete-volume.md): Delete a volume. (356 bytes)
+- [VastAI.cleanup_machine](pages/sdk/python/reference/cleanup-machine.md): Clean up a machine's configuration and resources. (517 bytes)
+- [VastAI.delete_machine](pages/sdk/python/reference/delete-machine.md): Delete a machine if not being used by clients. (511 bytes)
+- [VastAI.list_machine](pages/sdk/python/reference/list-machine.md): List details of a single machine with optional pricing and configuration parameters. (1187 bytes)
+- [VastAI.list_machines](pages/sdk/python/reference/list-machines.md): List details of multiple machines with optional pricing and configuration parameters. (1209 bytes)
+- [VastAI.show_machine](pages/sdk/python/reference/show-machine.md): Show details of a hosted machine. (476 bytes)
+- [VastAI.show_machines](pages/sdk/python/reference/show-machines.md): Retrieve and display a list of machines based on specified criteria. (447 bytes)
+- [VastAI.set_defjob](pages/sdk/python/reference/set-defjob.md): Set a default job on a machine with specified parameters. (959 bytes)
+- [VastAI.remove_defjob](pages/sdk/python/reference/remove-defjob.md): Remove the default job from a machine. (500 bytes)
+- [VastAI.set_min_bid](pages/sdk/python/reference/set-min-bid.md): Set the minimum bid price for a machine. (573 bytes)
+- [VastAI.schedule_maint](pages/sdk/python/reference/schedule-maint.md): Schedule maintenance for a machine. (718 bytes)
+- [VastAI.cancel_maint](pages/sdk/python/reference/cancel-maint.md): Cancel scheduled maintenance for a machine. (502 bytes)
+- [VastAI.show_maints](pages/sdk/python/reference/show-maints.md): Show maintenance information for host machines. (534 bytes)
+- [VastAI.unlist_machine](pages/sdk/python/reference/unlist-machine.md): Unlist a machine from being available for new jobs. (516 bytes)
+- [VastAI.defrag_machines](pages/sdk/python/reference/defrag-machines.md): Defragment machines. (504 bytes)
+- [VastAI.self_test_machine](pages/sdk/python/reference/self-test-machine.md): Perform a self-test on the specified machine. (1133 bytes)
+- [VastAI.cleanup_machine](pages/host/sdk/cleanup-machine.md): Clean up a machine's configuration and resources. (517 bytes)
+- [VastAI.delete_machine](pages/host/sdk/delete-machine.md): Delete a machine if not being used by clients. (511 bytes)
+- [VastAI.list_machine](pages/host/sdk/list-machine.md): List details of a single machine with optional pricing and configuration parameters. (1187 bytes)
+- [VastAI.list_machines](pages/host/sdk/list-machines.md): List details of multiple machines with optional pricing and configuration parameters. (1209 bytes)
+- [VastAI.show_machine](pages/host/sdk/show-machine.md): Show details of a hosted machine. (476 bytes)
+- [VastAI.show_machines](pages/host/sdk/show-machines.md): Retrieve and display a list of machines based on specified criteria. (447 bytes)
+- [VastAI.set_defjob](pages/host/sdk/set-defjob.md): Set a default job on a machine with specified parameters. (959 bytes)
+- [VastAI.remove_defjob](pages/host/sdk/remove-defjob.md): Remove the default job from a machine. (500 bytes)
+- [VastAI.set_min_bid](pages/host/sdk/set-min-bid.md): Set the minimum bid price for a machine. (573 bytes)
+- [VastAI.schedule_maint](pages/host/sdk/schedule-maint.md): Schedule maintenance for a machine. (718 bytes)
+- [VastAI.cancel_maint](pages/host/sdk/cancel-maint.md): Cancel scheduled maintenance for a machine. (502 bytes)
+- [VastAI.show_maints](pages/host/sdk/show-maints.md): Show maintenance information for host machines. (534 bytes)
+- [VastAI.unlist_machine](pages/host/sdk/unlist-machine.md): Unlist a machine from being available for new jobs. (516 bytes)
+- [VastAI.defrag_machines](pages/host/sdk/defrag-machines.md): Defragment machines. (504 bytes)
+- [VastAI.self_test_machine](pages/host/sdk/self-test-machine.md): Perform a self-test on the specified machine. (1133 bytes)
 
 ## Overview
 
-- [API Hello World](pages/api-reference/hello-world.md): Source `api-reference/hello-world.mdx`.
-- [API Reference](pages/api-reference/introduction.md): Source `api-reference/introduction.mdx`.
-- [Authentication](pages/api-reference/authentication.md): Source `api-reference/authentication.mdx`.
-- [Permissions](pages/api-reference/permissions.md): Source `api-reference/permissions.mdx`.
-- [Two-Factor Authentication Endpoints](pages/api-reference/two-factor-authentication-endpoints.md): Source `api-reference/two-factor-authentication-endpoints.mdx`.
-- [Rate Limits and Errors](pages/api-reference/rate-limits-and-errors.md): Source `api-reference/rate-limits-and-errors.mdx`.
+- [API Hello World](pages/api-reference/hello-world.md): The Vast.ai REST API gives you programmatic control over GPU instances, useful for automation, CI/CD pipelines, or building your own tooling on top of Vast. (8236 bytes)
+- [API Reference](pages/api-reference/introduction.md): REST API for managing GPU instances, machines, templates, volumes, serverless endpoints, and billing on Vast.ai. (2559 bytes)
+- [Authentication](pages/api-reference/authentication.md): Every request to the Vast.ai API must include an API key. This page covers how to create keys, how to include them in requests, and key lifecycle details. (3089 bytes)
+- [Permissions](pages/api-reference/permissions.md): Every API key has a set of permissions that control which endpoints it can access. This page is the comprehensive reference for permission categories, how they map to API routes, and how to build custom scoped keys. (10739 bytes)
+- [Two-Factor Authentication Endpoints](pages/api-reference/two-factor-authentication-endpoints.md): This document describes all 2FA API endpoints. Base URL: https://console.vast.ai. (41232 bytes)
+- [Rate Limits and Errors](pages/api-reference/rate-limits-and-errors.md): This page describes how Vast.ai public API errors and rate limits work, along with practical retry guidance. (1781 bytes)
 
 ## Common workflows
 
-- [Creating Instances with the API](pages/api-reference/creating-instances-with-api.md): Source `api-reference/creating-instances-with-api.mdx`.
-- [Creating and Using Templates with API](pages/api-reference/creating-and-using-templates-with-api.md): Source `api-reference/creating-and-using-templates-with-api.mdx`.
+- [Creating Instances with the API](pages/api-reference/creating-instances-with-api.md): Instance creation on Vast.ai follows a two-step process: first find an offer (an available machine), then accept that offer to create an instance. You can configure instances in two ways: (27299 bytes)
+- [Creating and Using Templates with API](pages/api-reference/creating-and-using-templates-with-api.md): A template in the Vast.ai API is a configuration bundle that stores default settings for instance creation. Instead of specifying every parameter each time you create an instance, you can reference a template by its has… (25162 bytes)
 
 ## Concepts
 
-- [Hosting Overview](pages/host/hosting-overview.md): Source `host/hosting-overview.mdx`.
-- [Understanding Verification](pages/host/understanding-verification.md): Source `host/understanding-verification.mdx`.
-- [Earning](pages/host/earning.md): Source `host/earning.mdx`.
+- [Hosting Overview](pages/host/hosting-overview.md): Vast is a GPU marketplace. Hosts sell GPU resources on the marketplace. Hosts are responsible for: (22557 bytes)
+- [Understanding Verification](pages/host/understanding-verification.md): Verification is fully automated and powered by proprietary algorithms that continuously evaluate each machine’s operational health and performance, dynamically adjusting assessments based on real-time supply and demand. (5962 bytes)
+- [Earning](pages/host/earning.md): This page in the console allows you to manage your earnings from referrals. You can find more information about Vast's referral program here. (2575 bytes)
 
 ## Guides
 
-- [Optimize Your Earnings](pages/host/optimization-guide.md): Source `host/optimization-guide.mdx`.
-- [Verification Stages](pages/host/verification-stages.md): Source `host/verification-stages.mdx`.
-- [How to Self-Test](pages/host/how-to-self-test.md): Source `host/how-to-self-test.mdx`.
-- [Host Notifications](pages/host/notifications.md): Source `host/notifications.mdx`.
-- [Machine Metrics](pages/host/machine-metrics.md): Source `host/machine-metrics.mdx`.
-- [GPU Market Metrics](pages/host/market-metrics.md): Source `host/market-metrics.mdx`.
-- [Datacenter Status](pages/host/datacenter-status.md): Source `host/datacenter-status.mdx`.
-- [Host Payouts](pages/host/payment.md): Source `host/payment.mdx`.
-- [Tax Guide for Hosts](pages/host/guide-to-taxes.md): Source `host/guide-to-taxes.mdx`.
-- [VMs](pages/host/vms.md): Source `host/vms.mdx`.
-- [Upgrade the Kernel](pages/host/upgrade-kernel.md): Source `host/upgrade-kernel.mdx`.
-- [Disable SSH Password Login](pages/host/disable-ssh-password-login.md): Source `host/disable-ssh-password-login.mdx`.
-- [Offline Machine - Troubleshooting Steps](pages/host/machine-offline.md): Source `host/machine-offline.mdx`.
+- [Optimize Your Earnings](pages/host/optimization-guide.md): A guide to the key settings, tradeoffs, and strategies that determine how much your machines earn. Your hardware is only half the equation; how you configure your listings is the other. (11997 bytes)
+- [Verification Stages](pages/host/verification-stages.md): States: Unverified → Verified → (potentially) Deverified → Unverified → ... (9236 bytes)
+- [How to Self-Test](pages/host/how-to-self-test.md): Before your machine can be verified on Vast.ai, it must meet all minimum quality and reliability benchmarks. Verification confirms that your machine is stable, performant, and properly configured to run client workloads. (3207 bytes)
+- [Host Notifications](pages/host/notifications.md): Choose which Vast.ai host machine, verification, and maintenance events reach you by email or through webhooks. (6509 bytes)
+- [Machine Metrics](pages/host/machine-metrics.md): Monitor the health and performance of your machines with historical CPU, memory, GPU, disk, and network data (14580 bytes)
+- [GPU Market Metrics](pages/host/market-metrics.md): Track GPU supply, demand, pricing, and locations across the Vast marketplace (5202 bytes)
+- [Datacenter Status](pages/host/datacenter-status.md): Equipment that is in a certified datacenter on Vast.ai is eligible to be included in the "Secure Cloud" offering and receive other benefits, such as the blue datacenter label. Individual certifications will eventually b… (2186 bytes)
+- [Host Payouts](pages/host/payment.md): This guide explains how Vast.ai host payouts work, when invoices are generated, when payments are sent, and what to do if you experience a payout issue. (6164 bytes)
+- [Tax Guide for Hosts](pages/host/guide-to-taxes.md): Disclaimer: As an independent contractor, you are solely responsible for tracking your earnings and accurately reporting them in your tax filings. Vast.ai cannot provide tax advice, and we cannot verify the accuracy of… (2144 bytes)
+- [VMs](pages/host/vms.md): Vast now supports VM instances running on Kernel Virtual Machine (KVM) in addition to Docker container based instances. VM support is currently an optional feature for hosts as it usually requires additional configurati… (5369 bytes)
+- [Upgrade the Kernel](pages/host/upgrade-kernel.md): Check whether your host machine's kernel is up to date, install the update, and confirm the machine came back online. (15806 bytes)
+- [Disable SSH Password Login](pages/host/disable-ssh-password-login.md): Turn off SSH password login to protect your machine. (4758 bytes)
+- [Offline Machine - Troubleshooting Steps](pages/host/machine-offline.md): Steps to identify and resolve connectivity, service, and GPU-related issues when a Vast.ai host machine shows as Offline. (11863 bytes)
 
 ## AI/ML frameworks
 
-- [PyTorch](pages/pytorch.md): Source `pytorch.mdx`.
-- [Multi-Node training using Torch + NCCL](pages/multi-node-training-using-torch-nccl.md): Source `multi-node-training-using-torch-nccl.mdx`.
-- [Unsloth Studio](pages/examples/ai-ml-frameworks/unsloth-studio.md): Source `examples/ai-ml-frameworks/unsloth-studio.mdx`.
-- [Fine-Tune LLMs with Axolotl](pages/examples/ai-ml-frameworks/axolotl-fine-tuning.md): Source `examples/ai-ml-frameworks/axolotl-fine-tuning.mdx`.
+- [PyTorch](pages/pytorch.md): This guide walks you through setting up and running PyTorch workloads on Vast.ai, a marketplace for renting GPU compute power. Whether you're training large models or running inference, this guide will help you get star… (6875 bytes)
+- [Multi-Node training using Torch + NCCL](pages/multi-node-training-using-torch-nccl.md): NCCL expects all nodes to be on the same network. By default, Vast instances on different physical machines are on separate bridge networks isolated from the host's LAN and must go through a NAT to reach the outside int… (8817 bytes)
+- [Unsloth Studio](pages/examples/ai-ml-frameworks/unsloth-studio.md): Unsloth Studio is an open-source, no-code web UI for running and training over 500 open-source AI models, including text LLMs, vision models, text-to-speech, and embedding models. Search and run any model from Hugging F… (12139 bytes)
+- [Fine-Tune LLMs with Axolotl](pages/examples/ai-ml-frameworks/axolotl-fine-tuning.md): Axolotl is an open-source fine-tuning toolkit. You configure a training job in YAML — model, dataset, method — and Axolotl runs it, no custom training code required. It supports 60+ model architectures and multiple trai… (12972 bytes)
 
 ## Serving infrastructure
 
-- [dstack + vLLM](pages/examples/serving-infrastructure/dstack-vllm.md): Source `examples/serving-infrastructure/dstack-vllm.mdx`.
-- [SGLang Router](pages/examples/serving-infrastructure/sglang-router-vast.md): Source `examples/serving-infrastructure/sglang-router-vast.mdx`.
+- [dstack + vLLM](pages/examples/serving-infrastructure/dstack-vllm.md): dstack is an open-source GPU orchestration platform that simplifies deploying AI workloads across cloud providers. This guide shows you how to use dstack with Vast.ai as the backend to deploy language models using vLLM,… (7278 bytes)
+- [SGLang Router](pages/examples/serving-infrastructure/sglang-router-vast.md): When serving LLMs in production, a single GPU instance quickly becomes a bottleneck. Requests queue up during traffic spikes, latency increases, and scaling requires expensive hardware upgrades. SGLang Router solves thi… (11897 bytes)
 
 ## Notifications
 
-- [Send Notifications to Slack](pages/examples/notifications/slack-webhook.md): Source `examples/notifications/slack-webhook.mdx`.
-- [Send Notifications to Google Chat](pages/examples/notifications/google-chat-webhook.md): Source `examples/notifications/google-chat-webhook.mdx`.
+- [Send Notifications to Slack](pages/examples/notifications/slack-webhook.md): Use this example to send Vast.ai notification webhooks into a Slack channel. Vast.ai sends a standard notification payload, and the adapter below verifies the Vast.ai signature before converting it into a Slack message. (11563 bytes)
+- [Send Notifications to Google Chat](pages/examples/notifications/google-chat-webhook.md): Use this example to send Vast.ai notification webhooks into a Google Chat space. Vast.ai sends a standard notification payload, and the adapter below verifies the Vast.ai signature before converting it into the {"text":… (10613 bytes)
 
 ## Migration guides
 
-- [Migrate from Runpod to Vast.ai](pages/examples/migrations/runpod-to-vast.md): Source `examples/migrations/runpod-to-vast.mdx`.
-- [Migrate from Salad Cloud to Vast.ai](pages/examples/migrations/salad-to-vast.md): Source `examples/migrations/salad-to-vast.mdx`.
+- [Migrate from Runpod to Vast.ai](pages/examples/migrations/runpod-to-vast.md): A guide for users moving GPU workloads from Runpod to Vast.ai. Whether you use Runpod Pods for training and development or Runpod Serverless for inference, this guide maps every concept to its Vast.ai equivalent and wal… (31350 bytes)
+- [Migrate from Salad Cloud to Vast.ai](pages/examples/migrations/salad-to-vast.md): A guide for users moving GPU workloads from Salad Cloud to Vast.ai. Whether you use Salad's Container Engine for long-running containers or Job Queues for autoscaling inference, this guide maps every concept to its Vast… (30892 bytes)
 
 ## AI agents
 
-- [Autonomous AI Research with Autoresearch on Vast.ai](pages/examples/ai-agents/autoresearch.md): Source `examples/ai-agents/autoresearch.mdx`.
-- [Langflow + Ollama](pages/langflow-ollama.md): Source `langflow-ollama.mdx`.
-- [BrowseSafe Prompt Injection Detection](pages/examples/ai-agents/browsesafe.md): Source `examples/ai-agents/browsesafe.mdx`.
-- [OpenClaw AI Assistant with vLLM on Vast.ai](pages/examples/ai-agents/openclaw.md): Source `examples/ai-agents/openclaw.mdx`.
-- [Budget-Friendly Alternative to Claude Code - Overnight Ralph Loop Guide](pages/examples/ai-agents/overnight-ralph-loop.md): Source `examples/ai-agents/overnight-ralph-loop.mdx`.
+- [Autonomous AI Research with Autoresearch on Vast.ai](pages/examples/ai-agents/autoresearch.md): Autoresearch is Andrej Karpathy's framework for autonomous AI-driven ML research. The idea is simple: point an AI agent (Claude Code) at a small but real LLM training setup and let it experiment autonomously overnight.… (7666 bytes)
+- [Langflow + Ollama](pages/langflow-ollama.md): Langflow is a node-based agent builder you can use from your web browser. While it integrates with many frontier language models it also has a fantastic Ollama integration which makes it really easy to use with open wei… (7234 bytes)
+- [BrowseSafe Prompt Injection Detection](pages/examples/ai-agents/browsesafe.md): Deploy Perplexity AI's BrowseSafe model for real-time HTML prompt injection detection using vLLM on Vast.ai. (7365 bytes)
+- [OpenClaw AI Assistant with vLLM on Vast.ai](pages/examples/ai-agents/openclaw.md): Deploy Qwen3-8B on a Vast.ai GPU with vLLM and connect OpenClaw to it for private, self-hosted AI conversations with tool use. (13181 bytes)
+- [Budget-Friendly Alternative to Claude Code - Overnight Ralph Loop Guide](pages/examples/ai-agents/overnight-ralph-loop.md): Run autonomous coding agents all night long for under $18 and wake up to a completed project with passing tests. (9890 bytes)
 
 ## MCP
 
-- [DR-Tulu Research Agent](pages/examples/mcp/dr-tulu.md): Source `examples/mcp/dr-tulu.mdx`.
+- [DR-Tulu Research Agent](pages/examples/mcp/dr-tulu.md): DR-Tulu (Deep Research Tulu) is an open-source research agent developed by AI2 (Allen Institute for AI). Unlike standard LLMs that are fine-tuned separately from their tools, DR-Tulu was trained end-to-end with an MCP s… (7236 bytes)
 
 ## Text generation
 
-- [Ollama + Webui](pages/ollama-webui.md): Source `ollama-webui.mdx`.
-- [Oobabooga (LLM webui)](pages/oobabooga-llm-webui.md): Source `oobabooga-llm-webui.mdx`.
-- [Huggingface TGI with LLama3](pages/huggingface-tgi-with-llama3.md): Source `huggingface-tgi-with-llama3.mdx`.
-- [Quantized GGUF models (cloned)](pages/quantized-gguf-models-cloned.md): Source `quantized-gguf-models-cloned.mdx`.
-- [vLLM (LLM inference and serving)](pages/vllm-llm-inference-and-serving.md): Source `vllm-llm-inference-and-serving.mdx`.
-- [MiniMax-M2](pages/examples/text-generation/minimax-m2.md): Source `examples/text-generation/minimax-m2.mdx`.
-- [GLM-4.7-Flash](pages/examples/text-generation/glm-47-flash.md): Source `examples/text-generation/glm-47-flash.mdx`.
-- [NVIDIA Nemotron 3 Super](pages/examples/text-generation/nemotron-3-super.md): Source `examples/text-generation/nemotron-3-super.mdx`.
+- [Ollama + Webui](pages/ollama-webui.md): Below is a step-by-step guide on how to configure and run Ollama. Our template will automatically setup Open WebUI as a web based interface as well as expose a port for the Ollama API. (4127 bytes)
+- [Oobabooga (LLM webui)](pages/oobabooga-llm-webui.md): A large language model(LLM) learns to predict the next word in a sentence by analyzing the patterns and structures in the text it has been trained on. This enables it to generate human-like text based on the input it re… (5076 bytes)
+- [Huggingface TGI with LLama3](pages/huggingface-tgi-with-llama3.md): This is a guide on how to setup and expose an API for Llama3 Text Generation. (3179 bytes)
+- [Quantized GGUF models (cloned)](pages/quantized-gguf-models-cloned.md): Here's a step-by-step guide to running quantized LLM models in multi-part GGUF format. We will use Unsloth's Deepseek-R1 Q8\0 model as an example. This model is very large and will require an 8xH200 machine configuratio… (4197 bytes)
+- [vLLM (LLM inference and serving)](pages/vllm-llm-inference-and-serving.md): Below is a guide for runing the vLLM template on Vast. The template contains everything you need to get started, so you will only need to specify the model you want to serve and the corresponding vLLM configuration. (4829 bytes)
+- [MiniMax-M2](pages/examples/text-generation/minimax-m2.md): MiniMax-M2 is a breakthrough 230 billion parameter Mixture of Experts (MoE) language model that activates only 10 billion parameters per inference, making it incredibly fast and cost-effective. This guide shows you how… (10117 bytes)
+- [GLM-4.7-Flash](pages/examples/text-generation/glm-47-flash.md): GLM-4.7-Flash is a 30B-parameter Mixture of Experts model from Zhipu AI that activates 3B parameters per token. Despite being roughly the same active parameter count as Qwen3-30B-A3B, GLM-4.7-Flash has a fundamentally d… (7254 bytes)
+- [NVIDIA Nemotron 3 Super](pages/examples/text-generation/nemotron-3-super.md): NVIDIA Nemotron 3 Super is a 120B parameter model that only activates 12B parameters per token, which means you get the quality of a much larger model at a fraction of the compute. It uses a novel hybrid architecture —… (9436 bytes)
 
 ## Image generation
 
-- [Image Generation](pages/image-generation.md): Source `image-generation.mdx`.
-- [Stable Diffusion](pages/stable-diffusion.md): Source `stable-diffusion.mdx`.
-- [Disco Diffusion](pages/disco-diffusion.md): Source `disco-diffusion.mdx`.
+- [Image Generation](pages/image-generation.md): This guide walks you through setting up and running image generation workloads on Vast.ai, a marketplace for renting GPU compute power. Whether you're using Stable Diffusion or other image generation models, this guide… (7418 bytes)
+- [Stable Diffusion](pages/stable-diffusion.md): Stable Diffusion is a deep learning, text-to-image model that has been publicly released. It uses a variant of the diffusion model called latent diffusion. There are a few popular Open Source repos that create an easy t… (5469 bytes)
+- [Disco Diffusion](pages/disco-diffusion.md): Disco diffusion is an incredibly powerful free and open source AI image generator, which is easy to use on vast.ai. With the right settings and powerful GPUs, it can generate artist quality high-res images for a wide va… (9587 bytes)
 
 ## Video generation
 
-- [Video Generation](pages/video-generation.md): Source `video-generation.mdx`.
-- [Generating Video with LTX-2.3 and ComfyUI](pages/examples/video-generation/ltx-video-2-3.md): Source `examples/video-generation/ltx-video-2-3.mdx`.
+- [Video Generation](pages/video-generation.md): This guide will walk you through setting up and using ComfyUI for video generation on Vast.ai. ComfyUI provides a powerful node-based interface for creating advanced stable diffusion pipelines, making it ideal for video… (6217 bytes)
+- [Generating Video with LTX-2.3 and ComfyUI](pages/examples/video-generation/ltx-video-2-3.md): LTX-2.3 is the first open-source model that generates synchronized video and audio together in a single pass. Built by Lightricks, this 22B-parameter Diffusion Transformer doesn't just create video — it produces matchin… (5480 bytes)
 
 ## Audio & transcription
 
-- [TTS with Nari Labs Dia](pages/tts-with-nari-labs-dia.md): Source `tts-with-nari-labs-dia.mdx`.
-- [Whisper ASR Guide](pages/whisper-asr-guide.md): Source `whisper-asr-guide.mdx`.
-- [Speaker Diarization with Pyannote](pages/examples/transcription/speaker-diarization-pyannote.md): Source `examples/transcription/speaker-diarization-pyannote.mdx`.
+- [TTS with Nari Labs Dia](pages/tts-with-nari-labs-dia.md): Below is a step-by-step guide on how to configure and run Nari Labs Dia 1.6b model for text to speech. Our template will automatically setup an easy to access web based interface to help you get started. (2404 bytes)
+- [Whisper ASR Guide](pages/whisper-asr-guide.md): Whisper is a general-purpose speech recognition model trained on a large dataset of diverse audio. Go through the Readme first before using.&#x20; (4266 bytes)
+- [Speaker Diarization with Pyannote](pages/examples/transcription/speaker-diarization-pyannote.md): Speaker diarization partitions an audio stream into segments according to speaker identity-identifying "who spoke when" in multi-speaker recordings like meetings, podcasts, or interviews. (6756 bytes)
 
 ## Information extraction
 
-- [Running RolmOCR](pages/examples/ocr/rolmocr.md): Source `examples/ocr/rolmocr.mdx`.
-- [GLiNER2](pages/examples/ner/gliner2.md): Source `examples/ner/gliner2.mdx`.
-- [Infinity Embeddings](pages/infinity-embeddings.md): Source `infinity-embeddings.mdx`.
-- [Serving Rerankers with vLLM](pages/examples/embeddings/serving-rerankers-vllm.md): Source `examples/embeddings/serving-rerankers-vllm.mdx`.
+- [Running RolmOCR](pages/examples/ocr/rolmocr.md): RolmOCR from Reducto is an open-source document OCR model built on Qwen2.5-VL-7B. Unlike traditional OCR tools like Tesseract that rely on character-level pattern matching, RolmOCR uses vision-language understanding to… (5970 bytes)
+- [GLiNER2](pages/examples/ner/gliner2.md): Named Entity Recognition (NER) extracts structured data from text-people, companies, dates, etc. Traditional NER models only recognize entity types they were trained on. LLMs can extract anything but are slow and expens… (10696 bytes)
+- [Infinity Embeddings](pages/infinity-embeddings.md): Infinity Embeddings is a helpful serving framework to serve embedding models. It is particularly great at enabling embedding, re-ranking, and classification out of the box. It supports multiple different runtime framewo… (6471 bytes)
+- [Serving Rerankers with vLLM](pages/examples/embeddings/serving-rerankers-vllm.md): Rerankers determine relevance between text pairs-matching search queries to documents, evaluating LLM outputs, or finding similar content. They perform detailed comparisons that capture nuanced relationships simple meth… (6557 bytes)
 
 ## Virtual desktops & VMs
 
-- [Linux Virtual Desktop](pages/linux-virtual-desktop.md): Source `linux-virtual-desktop.mdx`.
-- [Linux Virtual Machines](pages/linux-virtual-machines.md): Source `linux-virtual-machines.mdx`.
+- [Linux Virtual Desktop](pages/linux-virtual-desktop.md): This guide will help you set up and use a Linux Virtual Desktop environment on Vast.ai using the Ubuntu Desktop (VM) template. (5641 bytes)
+- [Linux Virtual Machines](pages/linux-virtual-machines.md): Vast.ai provides virtual machine (VM) capabilities alongside its Docker-based instance rentals. This guide walks you through everything you need to know about running VMs on machines with GPUs found at Vast. (7704 bytes)
 
 ## Graphics & GPU programming
 
-- [Blender in the Cloud](pages/blender-in-the-cloud.md): Source `blender-in-the-cloud.mdx`.
-- [Blender Batch Rendering](pages/blender-batch-rendering.md): Source `blender-batch-rendering.mdx`.
-- [CUDA](pages/cuda.md): Source `cuda.mdx`.
-- [RTX 5 Series](pages/rtx-5-series.md): Source `rtx-5-series.mdx`.
+- [Blender in the Cloud](pages/blender-in-the-cloud.md): Blender is a free, open source 3D creation suite. It can be used to create animated films, visual effects, art, 3D-printed models, motion graphics, interactive 3D applications, virtual reality, and video games. It suppo… (4999 bytes)
+- [Blender Batch Rendering](pages/blender-batch-rendering.md): Blender is a free, open source 3D creation suite. It can be used to create animated films, visual effects, art, 3D-printed models, motion graphics, interactive 3D applications, virtual reality, and video games. It suppo… (6160 bytes)
+- [CUDA](pages/cuda.md): This guide walks you through setting up and running CUDA applications on Vast.ai's cloud platform. You'll learn how to set up a CUDA development environment, connect to your instance, and develop CUDA applications effic… (6119 bytes)
+- [RTX 5 Series](pages/rtx-5-series.md): Optimize your GPU experience with our comprehensive guide on RTX 5 Series GPUs (5090/5080/5070) and CUDA 12.8 compatibility. Learn how to rent an RTX 5090 on Vast.ai, select the right templates, and customize your stora… (3009 bytes)
 
 ## Other
 
-- [Mining on Bittensor](pages/mining-on-bittensor.md): Source `mining-on-bittensor.mdx`.
-- [Google Colab](pages/google-colab.md): Source `google-colab.mdx`.
+- [Mining on Bittensor](pages/mining-on-bittensor.md): This tutorial shows how to use the Bittensor testnet to create a subnet and run your incentive mechanism on it. (5686 bytes)
+- [Google Colab](pages/google-colab.md): Google Colab is a flavor of Jupyter notebook. The service is not meant to be run on cloud based GPUs. This guide provides a "hack" that uses SSH port forwarding so that Colab detects the Vast GPU instance as a local GPU… (4910 bytes)
 
 ## Endpoints
 
-- [show ssh-keys](pages/api-reference/instances/show-ssh-keys.md): Source `api-reference/openapi.yaml#get /api/v0/instances/{id}/ssh`.
-- [attach ssh-key](pages/api-reference/instances/attach-ssh-key.md): Source `api-reference/openapi.yaml#post /api/v0/instances/{id}/ssh`.
-- [copy](pages/api-reference/instances/copy.md): Source `api-reference/openapi.yaml#put /api/v0/commands/copy_direct`.
-- [cancel copy](pages/api-reference/instances/cancel-copy.md): Source `api-reference/openapi.yaml#delete /api/v0/commands/copy_direct`.
-- [cancel maint](pages/api-reference/machines/cancel-maint.md): Source `api-reference/openapi.yaml#put /api/v0/machines/{machine_id}/cancel_maint`.
-- [cloud copy](pages/api-reference/instances/cloud-copy.md): Source `api-reference/openapi.yaml#post /api/v0/commands/rclone`.
-- [cancel sync](pages/api-reference/instances/cancel-sync.md): Source `api-reference/openapi.yaml#delete /api/v0/commands/rclone`.
-- [change bid](pages/api-reference/instances/change-bid.md): Source `api-reference/openapi.yaml#put /api/v0/instances/bid_price/{id}`.
-- [cleanup machine](pages/api-reference/machines/cleanup-machine.md): Source `api-reference/openapi.yaml#put /api/v0/machines/{machine_id}/cleanup`.
-- [show api keys](pages/api-reference/accounts/show-api-keys.md): Source `api-reference/openapi.yaml#get /api/v0/auth/apikeys`.
-- [create api-key](pages/api-reference/accounts/create-api-key.md): Source `api-reference/openapi.yaml#post /api/v0/auth/apikeys`.
-- [show workergroup](pages/api-reference/serverless/show-workergroup.md): Source `api-reference/openapi.yaml#get /api/v0/workergroups`.
-- [create workergroup](pages/api-reference/serverless/create-workergroup.md): Source `api-reference/openapi.yaml#post /api/v0/workergroups`.
-- [show endpoints](pages/api-reference/serverless/show-endpoints.md): Source `api-reference/openapi.yaml#get /api/v0/endptjobs`.
-- [create endpoint](pages/api-reference/serverless/create-endpoint.md): Source `api-reference/openapi.yaml#post /api/v0/endptjobs`.
-- [show env vars](pages/api-reference/accounts/show-env-vars.md): Source `api-reference/openapi.yaml#get /api/v0/secrets`.
-- [create env-var](pages/api-reference/accounts/create-env-var.md): Source `api-reference/openapi.yaml#post /api/v0/secrets`.
-- [update env var](pages/api-reference/accounts/update-env-var.md): Source `api-reference/openapi.yaml#put /api/v0/secrets`.
-- [delete env var](pages/api-reference/accounts/delete-env-var.md): Source `api-reference/openapi.yaml#delete /api/v0/secrets`.
-- [create instance](pages/api-reference/instances/create-instance.md): Source `api-reference/openapi.yaml#put /api/v0/asks/{id}`.
-- [show ssh keys](pages/api-reference/accounts/show-ssh-keys.md): Source `api-reference/openapi.yaml#get /api/v0/ssh`.
-- [create ssh-key](pages/api-reference/accounts/create-ssh-key.md): Source `api-reference/openapi.yaml#post /api/v0/ssh`.
-- [create subaccount](pages/api-reference/accounts/create-subaccount.md): Source `api-reference/openapi.yaml#post /api/v0/users`.
-- [set user](pages/api-reference/accounts/set-user.md): Source `api-reference/openapi.yaml#put /api/v0/users`.
-- [create team](pages/api-reference/team/create-team.md): Source `api-reference/openapi.yaml#post /api/v0/team`.
-- [destroy team](pages/api-reference/team/destroy-team.md): Source `api-reference/openapi.yaml#delete /api/v0/team`.
-- [create team role](pages/api-reference/team/create-team-role.md): Source `api-reference/openapi.yaml#post /api/v0/team/roles`.
-- [search templates](pages/api-reference/search/search-templates.md): Source `api-reference/openapi.yaml#get /api/v0/template`.
-- [create template](pages/api-reference/templates/create-template.md): Source `api-reference/openapi.yaml#post /api/v0/template`.
-- [edit template](pages/api-reference/templates/edit-template.md): Source `api-reference/openapi.yaml#put /api/v0/template`.
-- [delete template](pages/api-reference/templates/delete-template.md): Source `api-reference/openapi.yaml#delete /api/v0/template`.
-- [delete api key](pages/api-reference/accounts/delete-api-key.md): Source `api-reference/openapi.yaml#delete /api/v0/auth/apikeys/{id}`.
-- [update workergroup](pages/api-reference/serverless/update-workergroup.md): Source `api-reference/openapi.yaml#put /api/v0/workergroups/{id}`.
-- [delete workergroup](pages/api-reference/serverless/delete-workergroup.md): Source `api-reference/openapi.yaml#delete /api/v0/workergroups/{id}`.
-- [update endpoint](pages/api-reference/serverless/update-endpoint.md): Source `api-reference/openapi.yaml#put /api/v0/endptjobs/{id}`.
-- [delete endpoint](pages/api-reference/serverless/delete-endpoint.md): Source `api-reference/openapi.yaml#delete /api/v0/endptjobs/{id}`.
-- [update ssh key](pages/api-reference/accounts/update-ssh-key.md): Source `api-reference/openapi.yaml#put /api/v0/ssh/{id}`.
-- [delete ssh key](pages/api-reference/accounts/delete-ssh-key.md): Source `api-reference/openapi.yaml#delete /api/v0/ssh/{id}`.
-- [list volumes](pages/api-reference/volumes/list-volumes.md): Source `api-reference/openapi.yaml#get /api/v0/volumes`.
-- [rent volume](pages/api-reference/volumes/rent-volume.md): Source `api-reference/openapi.yaml#put /api/v0/volumes`.
-- [delete volume](pages/api-reference/volumes/delete-volume.md): Source `api-reference/openapi.yaml#delete /api/v0/volumes`.
-- [show instance](pages/api-reference/instances/show-instance.md): Source `api-reference/openapi.yaml#get /api/v0/instances/{id}`.
-- [manage instance](pages/api-reference/instances/manage-instance.md): Source `api-reference/openapi.yaml#put /api/v0/instances/{id}`.
-- [destroy instance](pages/api-reference/instances/destroy-instance.md): Source `api-reference/openapi.yaml#delete /api/v0/instances/{id}`.
-- [detach ssh-key](pages/api-reference/instances/detach-ssh-key.md): Source `api-reference/openapi.yaml#delete /api/v0/instances/{id}/ssh/{ssh_key_id}`.
-- [execute](pages/api-reference/instances/execute.md): Source `api-reference/openapi.yaml#put /api/v0/instances/command/{id}`.
-- [get workergroup logs](pages/api-reference/serverless/get-workergroup-logs.md): Source `api-reference/openapi.yaml#post /get_workergroup_logs`.
-- [get workergroup workers](pages/api-reference/serverless/get-workergroup-workers.md): Source `api-reference/openapi.yaml#post /get_workergroup_workers`.
-- [get endpoint logs](pages/api-reference/serverless/get-endpoint-logs.md): Source `api-reference/openapi.yaml#post /get_endpoint_logs`.
-- [get endpoint workers](pages/api-reference/serverless/get-endpoint-workers.md): Source `api-reference/openapi.yaml#post /get_endpoint_workers`.
-- [invite team member](pages/api-reference/team/invite-team-member.md): Source `api-reference/openapi.yaml#post /api/v0/team/invite`.
-- [list machine](pages/api-reference/machines/list-machine.md): Source `api-reference/openapi.yaml#put /api/v0/machines/create_asks`.
-- [show logs](pages/api-reference/instances/show-logs.md): Source `api-reference/openapi.yaml#put /api/v0/instances/request_logs/{id}`.
-- [show gpu metrics](pages/api-reference/machines/show-gpu-metrics.md): Source `api-reference/openapi.yaml#get /api/v0/metrics/gpu/current`.
-- [show gpu locations](pages/api-reference/machines/show-gpu-locations.md): Source `api-reference/openapi.yaml#get /api/v0/metrics/gpu/locations`.
-- [show gpu trends](pages/api-reference/machines/show-gpu-trends.md): Source `api-reference/openapi.yaml#get /api/v0/metrics/gpu/history`.
-- [list notification types](pages/api-reference/notifications/list-notification-types.md): Source `api-reference/openapi.yaml#get /api/v0/notification-types`.
-- [get notification preferences](pages/api-reference/notifications/get-notification-preferences.md): Source `api-reference/openapi.yaml#get /api/v0/users/{user_id}/notification-prefs`.
-- [update notification preferences](pages/api-reference/notifications/update-notification-preferences.md): Source `api-reference/openapi.yaml#put /api/v0/users/{user_id}/notification-prefs`.
-- [list notification webhooks](pages/api-reference/notifications/list-notification-webhooks.md): Source `api-reference/openapi.yaml#get /api/v0/webhooks`.
-- [create notification webhook](pages/api-reference/notifications/create-notification-webhook.md): Source `api-reference/openapi.yaml#post /api/v0/webhooks`.
-- [update notification webhook](pages/api-reference/notifications/update-notification-webhook.md): Source `api-reference/openapi.yaml#put /api/v0/webhooks/{id}`.
-- [delete notification webhook](pages/api-reference/notifications/delete-notification-webhook.md): Source `api-reference/openapi.yaml#delete /api/v0/webhooks/{id}`.
-- [rotate notification webhook secret](pages/api-reference/notifications/rotate-notification-webhook-secret.md): Source `api-reference/openapi.yaml#post /api/v0/webhooks/{id}/rotate-secret`.
-- [test notification webhook](pages/api-reference/notifications/test-notification-webhook.md): Source `api-reference/openapi.yaml#post /api/v0/webhooks/{id}/test`.
-- [prepay instance](pages/api-reference/instances/prepay-instance.md): Source `api-reference/openapi.yaml#put /api/v0/instances/prepay/{id}`.
-- [reboot instance](pages/api-reference/instances/reboot-instance.md): Source `api-reference/openapi.yaml#put /api/v0/instances/reboot/{id}`.
-- [recycle instance](pages/api-reference/instances/recycle-instance.md): Source `api-reference/openapi.yaml#put /api/v0/instances/recycle/{id}`.
-- [remove defjob](pages/api-reference/machines/remove-defjob.md): Source `api-reference/openapi.yaml#delete /api/v0/machines/{machine_id}/defjob`.
-- [remove team member](pages/api-reference/team/remove-team-member.md): Source `api-reference/openapi.yaml#delete /api/v0/team/members/{id}`.
-- [show team role](pages/api-reference/team/show-team-role.md): Source `api-reference/openapi.yaml#get /api/v0/team/roles/{name}`.
-- [update team role](pages/api-reference/team/update-team-role.md): Source `api-reference/openapi.yaml#put /api/v0/team/roles/{name}`.
-- [remove team role](pages/api-reference/team/remove-team-role.md): Source `api-reference/openapi.yaml#delete /api/v0/team/roles/{name}`.
-- [show reports](pages/api-reference/machines/show-reports.md): Source `api-reference/openapi.yaml#get /api/v0/machines/{machine_id}/reports`.
-- [route](pages/api-reference/serverless/route.md): Source `api-reference/openapi.yaml#post /route`.
-- [schedule maint](pages/api-reference/machines/schedule-maint.md): Source `api-reference/openapi.yaml#put /api/v0/machines/{machine_id}/dnotify`.
-- [search benchmarks](pages/api-reference/search/search-benchmarks.md): Source `api-reference/openapi.yaml#get /api/v0/benchmarks`.
-- [search offers](pages/api-reference/search/search-offers.md): Source `api-reference/openapi.yaml#post /api/v0/bundles`.
-- [search volumes](pages/api-reference/volumes/search-volumes.md): Source `api-reference/openapi.yaml#post /api/v0/volumes/search`.
-- [set defjob](pages/api-reference/machines/set-defjob.md): Source `api-reference/openapi.yaml#put /api/v0/machines/create_bids`.
-- [set min-bid](pages/api-reference/machines/set-min-bid.md): Source `api-reference/openapi.yaml#put /api/v0/machines/{machine_id}/minbid`.
-- [show charges](pages/api-reference/billing/show-charges.md): Source `api-reference/openapi.yaml#get /api/v0/charges`.
-- [show connections](pages/api-reference/accounts/show-connections.md): Source `api-reference/openapi.yaml#get /api/v0/users/cloud_integrations`.
-- [show deployment](pages/api-reference/serverless/show-deployment.md): Source `api-reference/openapi.yaml#get /api/v0/deployment/{id}`.
-- [show deployments](pages/api-reference/serverless/show-deployments.md): Source `api-reference/openapi.yaml#get /api/v0/deployments`.
-- [show deposit](pages/api-reference/billing/show-deposit.md): Source `api-reference/openapi.yaml#get /api/v0/instances/balance/{id}`.
-- [show earnings](pages/api-reference/billing/show-earnings.md): Source `api-reference/openapi.yaml#get /api/v0/users/{user_id}/machine-earnings`.
-- [show instances](pages/api-reference/instances/show-instances.md): Source `api-reference/openapi.yaml#get /api/v1/instances`.
-- [show invoices](pages/api-reference/billing/show-invoices.md): Source `api-reference/openapi.yaml#get /api/v1/invoices`.
-- [show ipaddrs](pages/api-reference/accounts/show-ipaddrs.md): Source `api-reference/openapi.yaml#get /api/v0/users/{user_id}/ipaddrs`.
-- [show machines](pages/api-reference/machines/show-machines.md): Source `api-reference/openapi.yaml#get /api/v0/machines`.
-- [show subaccounts](pages/api-reference/accounts/show-subaccounts.md): Source `api-reference/openapi.yaml#get /api/v0/subaccounts`.
-- [show team members](pages/api-reference/team/show-team-members.md): Source `api-reference/openapi.yaml#get /api/v0/team/members`.
-- [show team roles](pages/api-reference/team/show-team-roles.md): Source `api-reference/openapi.yaml#get /api/v0/team/roles-full`.
-- [show user](pages/api-reference/accounts/show-user.md): Source `api-reference/openapi.yaml#get /api/v0/users/current`.
-- [start deployment](pages/api-reference/serverless/start-deployment.md): Source `api-reference/openapi.yaml#post /api/v0/deployment/{id}/start`.
-- [stop deployment](pages/api-reference/serverless/stop-deployment.md): Source `api-reference/openapi.yaml#post /api/v0/deployment/{id}/stop`.
-- [transfer credit](pages/api-reference/accounts/transfer-credit.md): Source `api-reference/openapi.yaml#put /api/v0/commands/transfer_credit`.
-- [unlist machine](pages/api-reference/machines/unlist-machine.md): Source `api-reference/openapi.yaml#delete /api/v0/machines/{machine_id}/asks`.
-- [unlist volume](pages/api-reference/volumes/unlist-volume.md): Source `api-reference/openapi.yaml#post /api/v0/volumes/unlist`.
+- [show ssh-keys](pages/api-reference/instances/show-ssh-keys.md): GET /api/v0/instances/{id}/ssh (1255 bytes)
+- [attach ssh-key](pages/api-reference/instances/attach-ssh-key.md): POST /api/v0/instances/{id}/ssh (1328 bytes)
+- [copy](pages/api-reference/instances/copy.md): PUT /api/v0/commands/copydirect (1471 bytes)
+- [cancel copy](pages/api-reference/instances/cancel-copy.md): DELETE /api/v0/commands/copydirect (1101 bytes)
+- [cancel maint](pages/api-reference/machines/cancel-maint.md): PUT /api/v0/machines/{machineid}/cancelmaint (1020 bytes)
+- [cloud copy](pages/api-reference/instances/cloud-copy.md): POST /api/v0/commands/rclone (1218 bytes)
+- [cancel sync](pages/api-reference/instances/cancel-sync.md): DELETE /api/v0/commands/rclone (1363 bytes)
+- [change bid](pages/api-reference/instances/change-bid.md): PUT /api/v0/instances/bidprice/{id} (1411 bytes)
+- [cleanup machine](pages/api-reference/machines/cleanup-machine.md): PUT /api/v0/machines/{machineid}/cleanup (1638 bytes)
+- [show api keys](pages/api-reference/accounts/show-api-keys.md): GET /api/v0/auth/apikeys (1245 bytes)
+- [create api-key](pages/api-reference/accounts/create-api-key.md): POST /api/v0/auth/apikeys (1896 bytes)
+- [show workergroup](pages/api-reference/serverless/show-workergroup.md): GET /api/v0/workergroups (2039 bytes)
+- [create workergroup](pages/api-reference/serverless/create-workergroup.md): POST /api/v0/workergroups (2640 bytes)
+- [show endpoints](pages/api-reference/serverless/show-endpoints.md): GET /api/v0/endptjobs (1762 bytes)
+- [create endpoint](pages/api-reference/serverless/create-endpoint.md): POST /api/v0/endptjobs (1885 bytes)
+- [show env vars](pages/api-reference/accounts/show-env-vars.md): GET /api/v0/secrets (1004 bytes)
+- [create env-var](pages/api-reference/accounts/create-env-var.md): POST /api/v0/secrets (1844 bytes)
+- [update env var](pages/api-reference/accounts/update-env-var.md): PUT /api/v0/secrets (1552 bytes)
+- [delete env var](pages/api-reference/accounts/delete-env-var.md): DELETE /api/v0/secrets (1711 bytes)
+- [create instance](pages/api-reference/instances/create-instance.md): PUT /api/v0/asks/{id} (6488 bytes)
+- [show ssh keys](pages/api-reference/accounts/show-ssh-keys.md): GET /api/v0/ssh (926 bytes)
+- [create ssh-key](pages/api-reference/accounts/create-ssh-key.md): POST /api/v0/ssh (1732 bytes)
+- [create subaccount](pages/api-reference/accounts/create-subaccount.md): POST /api/v0/users (2431 bytes)
+- [set user](pages/api-reference/accounts/set-user.md): PUT /api/v0/users (1636 bytes)
+- [create team](pages/api-reference/team/create-team.md): POST /api/v0/team (1860 bytes)
+- [destroy team](pages/api-reference/team/destroy-team.md): DELETE /api/v0/team (1721 bytes)
+- [create team role](pages/api-reference/team/create-team-role.md): POST /api/v0/team/roles (1585 bytes)
+- [search templates](pages/api-reference/search/search-templates.md): GET /api/v0/template (2267 bytes)
+- [create template](pages/api-reference/templates/create-template.md): POST /api/v0/template (4151 bytes)
+- [edit template](pages/api-reference/templates/edit-template.md): PUT /api/v0/template (1545 bytes)
+- [delete template](pages/api-reference/templates/delete-template.md): DELETE /api/v0/template (836 bytes)
+- [delete api key](pages/api-reference/accounts/delete-api-key.md): DELETE /api/v0/auth/apikeys/{id} (1473 bytes)
+- [update workergroup](pages/api-reference/serverless/update-workergroup.md): PUT /api/v0/workergroups/{id} (2304 bytes)
+- [delete workergroup](pages/api-reference/serverless/delete-workergroup.md): DELETE /api/v0/workergroups/{id} (1774 bytes)
+- [update endpoint](pages/api-reference/serverless/update-endpoint.md): PUT /api/v0/endptjobs/{id} (1775 bytes)
+- [delete endpoint](pages/api-reference/serverless/delete-endpoint.md): DELETE /api/v0/endptjobs/{id} (1505 bytes)
+- [update ssh key](pages/api-reference/accounts/update-ssh-key.md): PUT /api/v0/ssh/{id} (1048 bytes)
+- [delete ssh key](pages/api-reference/accounts/delete-ssh-key.md): DELETE /api/v0/ssh/{id} (991 bytes)
+- [list volumes](pages/api-reference/volumes/list-volumes.md): GET /api/v0/volumes (1997 bytes)
+- [rent volume](pages/api-reference/volumes/rent-volume.md): PUT /api/v0/volumes (663 bytes)
+- [delete volume](pages/api-reference/volumes/delete-volume.md): DELETE /api/v0/volumes (1167 bytes)
+- [show instance](pages/api-reference/instances/show-instance.md): GET /api/v0/instances/{id} (10948 bytes)
+- [manage instance](pages/api-reference/instances/manage-instance.md): PUT /api/v0/instances/{id} (1692 bytes)
+- [destroy instance](pages/api-reference/instances/destroy-instance.md): DELETE /api/v0/instances/{id} (1464 bytes)
+- [detach ssh-key](pages/api-reference/instances/detach-ssh-key.md): DELETE /api/v0/instances/{id}/ssh/{sshkeyid} (1708 bytes)
+- [execute](pages/api-reference/instances/execute.md): PUT /api/v0/instances/command/{id} (2237 bytes)
+- [get workergroup logs](pages/api-reference/serverless/get-workergroup-logs.md): POST /getworkergrouplogs (1031 bytes)
+- [get workergroup workers](pages/api-reference/serverless/get-workergroup-workers.md): POST /getworkergroupworkers (1392 bytes)
+- [get endpoint logs](pages/api-reference/serverless/get-endpoint-logs.md): POST /getendpointlogs (996 bytes)
+- [get endpoint workers](pages/api-reference/serverless/get-endpoint-workers.md): POST /getendpointworkers (1358 bytes)
+- [invite team member](pages/api-reference/team/invite-team-member.md): POST /api/v0/team/invite (1596 bytes)
+- [list machine](pages/api-reference/machines/list-machine.md): PUT /api/v0/machines/createasks (1873 bytes)
+- [show logs](pages/api-reference/instances/show-logs.md): PUT /api/v0/instances/requestlogs/{id} (1574 bytes)
+- [show gpu metrics](pages/api-reference/machines/show-gpu-metrics.md): GET /api/v0/metrics/gpu/current (2337 bytes)
+- [show gpu locations](pages/api-reference/machines/show-gpu-locations.md): GET /api/v0/metrics/gpu/locations (1375 bytes)
+- [show gpu trends](pages/api-reference/machines/show-gpu-trends.md): GET /api/v0/metrics/gpu/history (3524 bytes)
+- [list notification types](pages/api-reference/notifications/list-notification-types.md): GET /api/v0/notification-types (1315 bytes)
+- [get notification preferences](pages/api-reference/notifications/get-notification-preferences.md): GET /api/v0/users/{userid}/notification-prefs (884 bytes)
+- [update notification preferences](pages/api-reference/notifications/update-notification-preferences.md): PUT /api/v0/users/{userid}/notification-prefs (1514 bytes)
+- [list notification webhooks](pages/api-reference/notifications/list-notification-webhooks.md): GET /api/v0/webhooks (1147 bytes)
+- [create notification webhook](pages/api-reference/notifications/create-notification-webhook.md): POST /api/v0/webhooks (2178 bytes)
+- [update notification webhook](pages/api-reference/notifications/update-notification-webhook.md): PUT /api/v0/webhooks/{id} (1980 bytes)
+- [delete notification webhook](pages/api-reference/notifications/delete-notification-webhook.md): DELETE /api/v0/webhooks/{id} (717 bytes)
+- [rotate notification webhook secret](pages/api-reference/notifications/rotate-notification-webhook-secret.md): POST /api/v0/webhooks/{id}/rotate-secret (1649 bytes)
+- [test notification webhook](pages/api-reference/notifications/test-notification-webhook.md): POST /api/v0/webhooks/{id}/test (1049 bytes)
+- [prepay instance](pages/api-reference/instances/prepay-instance.md): PUT /api/v0/instances/prepay/{id} (1590 bytes)
+- [reboot instance](pages/api-reference/instances/reboot-instance.md): PUT /api/v0/instances/reboot/{id} (1172 bytes)
+- [recycle instance](pages/api-reference/instances/recycle-instance.md): PUT /api/v0/instances/recycle/{id} (1238 bytes)
+- [remove defjob](pages/api-reference/machines/remove-defjob.md): DELETE /api/v0/machines/{machineid}/defjob (952 bytes)
+- [remove team member](pages/api-reference/team/remove-team-member.md): DELETE /api/v0/team/members/{id} (1950 bytes)
+- [show team role](pages/api-reference/team/show-team-role.md): GET /api/v0/team/roles/{name} (817 bytes)
+- [update team role](pages/api-reference/team/update-team-role.md): PUT /api/v0/team/roles/{name} (722 bytes)
+- [remove team role](pages/api-reference/team/remove-team-role.md): DELETE /api/v0/team/roles/{name} (1592 bytes)
+- [show reports](pages/api-reference/machines/show-reports.md): GET /api/v0/machines/{machineid}/reports (1194 bytes)
+- [route](pages/api-reference/serverless/route.md): POST /route (2355 bytes)
+- [schedule maint](pages/api-reference/machines/schedule-maint.md): PUT /api/v0/machines/{machineid}/dnotify (1913 bytes)
+- [search benchmarks](pages/api-reference/search/search-benchmarks.md): GET /api/v0/benchmarks (1310 bytes)
+- [search offers](pages/api-reference/search/search-offers.md): POST /api/v0/bundles (9323 bytes)
+- [search volumes](pages/api-reference/volumes/search-volumes.md): POST /api/v0/volumes/search (3595 bytes)
+- [set defjob](pages/api-reference/machines/set-defjob.md): PUT /api/v0/machines/createbids (1898 bytes)
+- [set min-bid](pages/api-reference/machines/set-min-bid.md): PUT /api/v0/machines/{machineid}/minbid (1237 bytes)
+- [show charges](pages/api-reference/billing/show-charges.md): GET /api/v0/charges (5871 bytes)
+- [show connections](pages/api-reference/accounts/show-connections.md): GET /api/v0/users/cloudintegrations (928 bytes)
+- [show deployment](pages/api-reference/serverless/show-deployment.md): GET /api/v0/deployment/{id} (2085 bytes)
+- [show deployments](pages/api-reference/serverless/show-deployments.md): GET /api/v0/deployments (1737 bytes)
+- [show deposit](pages/api-reference/billing/show-deposit.md): GET /api/v0/instances/balance/{id} (1064 bytes)
+- [show earnings](pages/api-reference/billing/show-earnings.md): GET /api/v0/users/{userid}/machine-earnings (2015 bytes)
+- [show instances](pages/api-reference/instances/show-instances.md): GET /api/v1/instances (10566 bytes)
+- [show invoices](pages/api-reference/billing/show-invoices.md): GET /api/v1/invoices (5224 bytes)
+- [show ipaddrs](pages/api-reference/accounts/show-ipaddrs.md): GET /api/v0/users/{userid}/ipaddrs (1404 bytes)
+- [show machines](pages/api-reference/machines/show-machines.md): GET /api/v0/machines (693 bytes)
+- [show subaccounts](pages/api-reference/accounts/show-subaccounts.md): GET /api/v0/subaccounts (1205 bytes)
+- [show team members](pages/api-reference/team/show-team-members.md): GET /api/v0/team/members (1156 bytes)
+- [show team roles](pages/api-reference/team/show-team-roles.md): GET /api/v0/team/roles-full (1121 bytes)
+- [show user](pages/api-reference/accounts/show-user.md): GET /api/v0/users/current (1100 bytes)
+- [start deployment](pages/api-reference/serverless/start-deployment.md): POST /api/v0/deployment/{id}/start (1143 bytes)
+- [stop deployment](pages/api-reference/serverless/stop-deployment.md): POST /api/v0/deployment/{id}/stop (1135 bytes)
+- [transfer credit](pages/api-reference/accounts/transfer-credit.md): PUT /api/v0/commands/transfercredit (1655 bytes)
+- [unlist machine](pages/api-reference/machines/unlist-machine.md): DELETE /api/v0/machines/{machineid}/asks (1153 bytes)
+- [unlist volume](pages/api-reference/volumes/unlist-volume.md): POST /api/v0/volumes/unlist (1093 bytes)

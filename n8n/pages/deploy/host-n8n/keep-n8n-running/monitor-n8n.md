@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/keep-n8n-running/monitor-n8n.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/keep-n8n-running/monitor-n8n.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/keep-n8n-running/monitor-n8n.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/keep-n8n-running/monitor-n8n.md)
 
 # Monitoring <a id="monitoring"></a>
 
@@ -53,9 +53,9 @@ The `/metrics` endpoint is disabled by default. The health endpoint is always en
 To enable them, configure your n8n instance:
 
 ```shell
-# metrics <a id="metrics"></a>
+# metrics <a href="#metrics" id="metrics"></a>
 N8N_METRICS=true
-# healthz <a id="healthz"></a>
+# healthz <a href="#healthz" id="healthz"></a>
 QUEUE_HEALTH_CHECK_ACTIVE=true
 ```
 

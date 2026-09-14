@@ -1,8 +1,9 @@
-> Commit-pinned source for SearXNG master: [docs/dev/engines/online/bt4g.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/bt4g.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/online/bt4g.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/bt4g.rst)
 
-.. \_bt4g engine:
+<a id="bt4g-engine"></a>
 
 # BT4G
 
-.. automodule:: searx.engines.bt4g
-:members:
+#### `searx.engines.bt4g`
+
+Static Python API reference (`automodule`).

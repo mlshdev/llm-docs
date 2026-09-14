@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/bridge/usage.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/bridge/usage.md)
+> Pinned source for Docker main: [content/manuals/compose/bridge/usage.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/bridge/usage.md)
 
 # Use the default Compose Bridge transformation
 

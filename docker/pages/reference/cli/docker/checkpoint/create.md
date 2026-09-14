@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_checkpoint_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_checkpoint_create.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_checkpoint_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_checkpoint_create.yaml)
 
 # docker checkpoint create
 
@@ -6,7 +6,7 @@ Create a checkpoint from a running container
 
 **Usage:** `docker checkpoint create [OPTIONS] CONTAINER CHECKPOINT`
 
-> [!NOTE]
+> \[!NOTE]
 > This command is experimental.
 
 ## Description
@@ -15,7 +15,7 @@ Create a checkpoint from a running container
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--checkpoint-dir` |  | Use a custom checkpoint storage directory |
-| `--leave-running` |  | Leave the container running after checkpoint |
+| Option             | Default | Description                                  |
+| ------------------ | ------- | -------------------------------------------- |
+| `--checkpoint-dir` |         | Use a custom checkpoint storage directory    |
+| `--leave-running`  |         | Leave the container running after checkpoint |

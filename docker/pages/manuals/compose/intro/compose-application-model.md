@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/intro/compose-application-model.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/intro/compose-application-model.md)
+> Pinned source for Docker main: [content/manuals/compose/intro/compose-application-model.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/intro/compose-application-model.md)
 
 # How Compose works
 
@@ -61,7 +61,7 @@ $ docker compose up
 To stop and remove the running services:
 
 ```console
-$ docker compose down
+$ docker compose down 
 ```
 
 If you want to monitor the output of your running containers and debug issues, you can view the logs with:

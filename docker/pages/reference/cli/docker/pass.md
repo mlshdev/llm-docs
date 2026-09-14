@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/secrets/docker_pass.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/secrets/docker_pass.yaml)
+> Pinned source for Docker main: [data/cli/secrets/docker_pass.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/secrets/docker_pass.yaml)
 
 # docker pass
 
@@ -206,6 +206,7 @@ forms.
   prompt. The resulting cache is then refreshed periodically.
 - **Fatal errors:** the plugin treats a few conditions as
   unrecoverable and stops itself instead of retrying:
+
   - the `op` binary cannot be found on `PATH`,
   - the user dismisses or lets the 1Password authorization prompt
     time out.

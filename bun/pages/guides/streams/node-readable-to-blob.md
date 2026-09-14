@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/guides/streams/node-readable-to-blob.mdx](https://bun.com/docs/guides/streams/node-readable-to-blob)
+> Pinned source for Bun bun-v1.4.2: [docs/guides/streams/node-readable-to-blob.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/guides/streams/node-readable-to-blob.mdx)
+> Canonical documentation: https://bun.com/docs/guides/streams/node-readable-to-blob
 
 # Convert a Node.js Readable to a Blob
 

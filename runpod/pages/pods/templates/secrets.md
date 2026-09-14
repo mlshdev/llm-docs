@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [pods/templates/secrets.mdx](https://docs.runpod.io/pods/templates/secrets)
+> Pinned source for Runpod main: [pods/templates/secrets.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/pods/templates/secrets.mdx)
+> Canonical documentation: https://docs.runpod.io/pods/templates/secrets
 
 # Manage secrets
 

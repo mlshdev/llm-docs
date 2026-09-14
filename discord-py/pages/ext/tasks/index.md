@@ -1,4 +1,4 @@
-> Tag-pinned source for discord.py v2.7.1: [docs/ext/tasks/index.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/ext/tasks/index.rst)
+> Pinned source for discord.py v2.7.1: [docs/ext/tasks/index.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/ext/tasks/index.rst)
 
 <a id="discord-ext-tasks"></a>
 
@@ -239,7 +239,7 @@ Optional\[List\[`datetime.time`]]: Read-only list for the exact times this loop 
 
 ##### `current_loop(self) -> int`
 
-- **Class:** `int`: The current iteration of the loop.
+`int`: The current iteration of the loop.
 
 <a id="api-discord-ext-tasks-loop-next-iteration"></a>
 
@@ -333,9 +333,8 @@ The keyword arguments to use.
 Adds exception types to be handled during the reconnect logic.
 
 By default the exception types handled are those handled by
-
-- **Meth:** `discord.Client.connect`, which includes a lot of internet disconnection
-  errors.
+`discord.Client.connect`, which includes a lot of internet disconnection
+errors.
 
 This function is useful if you're interacting with a 3rd party library that
 raises its own set of exceptions.
@@ -395,7 +394,7 @@ Whether the task is being cancelled.
 
 ##### `failed(self) -> bool`
 
-- **Class:** `bool`: Whether the internal task has failed.
+`bool`: Whether the internal task has failed.
 
 > **Added in version 1.2**
 
@@ -403,7 +402,7 @@ Whether the task is being cancelled.
 
 ##### `is_running(self) -> bool`
 
-- **Class:** `bool`: Check if the task is currently running.
+`bool`: Check if the task is currently running.
 
 > **Added in version 1.4**
 

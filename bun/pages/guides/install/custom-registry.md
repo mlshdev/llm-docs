@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/guides/install/custom-registry.mdx](https://bun.com/docs/guides/install/custom-registry)
+> Pinned source for Bun bun-v1.4.2: [docs/guides/install/custom-registry.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/guides/install/custom-registry.mdx)
+> Canonical documentation: https://bun.com/docs/guides/install/custom-registry
 
 The default registry is `registry.npmjs.org`. Override it globally in `bunfig.toml`.
 

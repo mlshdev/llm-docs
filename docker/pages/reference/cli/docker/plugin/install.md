@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_plugin_install.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_plugin_install.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_plugin_install.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_plugin_install.yaml)
 
 # docker plugin install
 
@@ -15,15 +15,15 @@ plugins is 2.3.0.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--alias` |  | Local name for plugin |
-| `--disable` |  | Do not enable the plugin on install |
-| `--grant-all-permissions` |  | Grant all permissions necessary to run the plugin |
+| Option                    | Default | Description                                       |
+| ------------------------- | ------- | ------------------------------------------------- |
+| `--alias`                 |         | Local name for plugin                             |
+| `--disable`               |         | Do not enable the plugin on install               |
+| `--grant-all-permissions` |         | Grant all permissions necessary to run the plugin |
 
 ## Examples
 
-The following example installs `vieus/sshfs` plugin and [sets](/reference/cli/docker/plugin/set/) its
+The following example installs `vieus/sshfs` plugin and [sets](https://docs.docker.com/reference/cli/docker/plugin/set/) its
 `DEBUG` environment variable to `1`. To install, `pull` the plugin from Docker
 Hub and prompt the user to accept the list of privileges that the plugin needs,
 set the plugin's parameters and enable the plugin.

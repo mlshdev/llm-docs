@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/governance/monitor-and-enforce/sign-in-enforcement.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/ai/sandboxes/governance/monitor-and-enforce/sign-in-enforcement.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/governance/monitor-and-enforce/sign-in-enforcement.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/ai/sandboxes/governance/monitor-and-enforce/sign-in-enforcement.md)
 
 # Sign-in enforcement
 
@@ -97,7 +97,7 @@ contact details:
       <key>PayloadIdentifier</key>
       <string>com.docker.sbx.policy</string>
       <key>PayloadUUID</key>
-      <string></string>
+      <string><!-- generate a UUID --></string>
       <key>PayloadEnabled</key>
       <true/>
       <key>PayloadDisplayName</key>

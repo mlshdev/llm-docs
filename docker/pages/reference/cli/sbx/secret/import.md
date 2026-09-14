@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_secret_import.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_secret_import.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_secret_import.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_secret_import.yaml)
 
 # sbx secret import
 
@@ -9,7 +9,7 @@ Import secrets detected in host environment variables
 ## Description
 
 Import secrets that sbx detects in your host environment
-variables (e.g. OPENAI_API_KEY, ANTHROPIC_API_KEY, GH_TOKEN) into the
+variables (e.g. OPENAI\_API\_KEY, ANTHROPIC\_API\_KEY, GH\_TOKEN) into the
 global keychain. Once imported, the secret is available to every
 sandbox without needing the env var on each shell.
 
@@ -17,10 +17,10 @@ Each detected env var is offered interactively with a Y/n prompt and a
 last-4-char preview of the value. Existing stored entries are never
 overwritten silently:
 
-  - Interactive mode prompts for confirmation before overwriting.
-  - --all imports new entries without prompting but SKIPS overwrites
-    (use --force when you actually want to replace stored values).
-  - --force imports unconditionally, including overwriting.
+- Interactive mode prompts for confirmation before overwriting.
+- \--all imports new entries without prompting but SKIPS overwrites
+  (use --force when you actually want to replace stored values).
+- \--force imports unconditionally, including overwriting.
 
 Services that already have an OAuth token configured (e.g. anthropic
 after `sbx run claude … -- auth login`) are skipped: the OAuth token
@@ -32,19 +32,19 @@ Available services: anthropic, copilot, cursor, devin, droid, github, google, gr
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--all` |  | Import every detected env var without prompting |
-| `--dry-run` |  | Show what would be imported without writing |
-| `-f`, `--force` |  | Overwrite an existing stored entry without confirmation |
+| Option          | Default | Description                                             |
+| --------------- | ------- | ------------------------------------------------------- |
+| `--all`         |         | Import every detected env var without prompting         |
+| `--dry-run`     |         | Show what would be imported without writing             |
+| `-f`, `--force` |         | Overwrite an existing stored entry without confirmation |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--cloud` |  | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (https://api.sandboxes-cloud.docker.com). Set DOCKER_CLOUD_API_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option            | Default                                  | Description                                                                                                                                                                                                             |
+| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
+| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
+| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
 
 ## Examples
 

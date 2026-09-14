@@ -1,4 +1,5 @@
-> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/login-ui/oidc-standard.mdx](https://zitadel.com/docs/guides/integrate/login-ui/oidc-standard)
+> Pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/integrate/login-ui/oidc-standard.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/guides/integrate/login-ui/oidc-standard.mdx)
+> Canonical documentation: https://zitadel.com/docs/guides/integrate/login-ui/oidc-standard
 
 To build your own login ui for your own application it is not necessary to have the OIDC standard included or any additional work that has to be done.
 However, it might make sense, if you want to connect your login to different applications especially if they are not in your control and they rely on the standard.

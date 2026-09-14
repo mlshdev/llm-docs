@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/video-walkthrough.mdx](https://trigger.dev/docs/video-walkthrough)
+> Pinned source for Trigger.dev v4.5.16: [docs/video-walkthrough.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/video-walkthrough.mdx)
+> Canonical documentation: https://trigger.dev/docs/video-walkthrough
 
 # Video walkthrough
 

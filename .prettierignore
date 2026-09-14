@@ -1,5 +1,4 @@
 node_modules/
-_site/
 .serena/
 traefik/
 netbird/
@@ -36,6 +35,8 @@ apple-frameworks/
 llms.txt
 llms-full.txt
 bun.lock
-session-*.md
+*session*.md
 resume.txt
 build-report.json
+CODEBASE_AUDIT.md
+CONTINUATION_HANDOFF.md

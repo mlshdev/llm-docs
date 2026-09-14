@@ -1,17 +1,23 @@
-> Commit-pinned source for SearXNG master: [docs/dev/engines/online/duckduckgo.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/duckduckgo.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/online/duckduckgo.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/duckduckgo.rst)
 
-.. \_duckduckgo engines:
+<a id="duckduckgo-engines"></a>
 
 # DuckDuckGo Engines
 
-.. automodule:: searx.engines.duckduckgo
-:members:
+<a id="api-searx-engines-duckduckgo"></a>
 
-.. automodule:: searx.engines.duckduckgo\_extra
-:members:
+#### `duckduckgo(query: str, sxng_locale: str) -> list[str]`
 
-.. automodule:: searx.engines.duckduckgo\_definitions
-:members:
+Autocomplete from DuckDuckGo. Supports DuckDuckGo's languages
 
-.. automodule:: searx.engines.duckduckgo\_weather
-:members:
+#### `searx.engines.duckduckgo_extra`
+
+Static Python API reference (`automodule`).
+
+#### `searx.engines.duckduckgo_definitions`
+
+Static Python API reference (`automodule`).
+
+#### `searx.engines.duckduckgo_weather`
+
+Static Python API reference (`automodule`).

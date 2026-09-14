@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/install-with-npm.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/install-options/install-with-npm.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/install-options/install-with-npm.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/install-options/install-with-npm.md)
 
 > **Warning**
 > **Feature availability**
@@ -48,7 +48,7 @@ After the installation, start n8n by running:
 
 ```bash
 n8n
-# or <a id="or"></a>
+# or <a href="#or" id="or"></a>
 n8n start
 ```
 
@@ -96,10 +96,10 @@ There are two ways to use the tunnel, depending on how you run n8n:
 For npm installations, use the **services only** approach. Start cloudflared as a standalone service, then run n8n locally:
 
 ```bash
-# Terminal 1: Start the cloudflared tunnel service <a id="terminal-1-start-the-cloudflared-tunnel-service"></a>
+# Terminal 1: Start the cloudflared tunnel service <a href="#terminal-1-start-the-cloudflared-tunnel-service" id="terminal-1-start-the-cloudflared-tunnel-service"></a>
 pnpm --filter n8n-containers services --services cloudflared
 
-# Terminal 2: Start n8n locally <a id="terminal-2-start-n8n-locally"></a>
+# Terminal 2: Start n8n locally <a href="#terminal-2-start-n8n-locally" id="terminal-2-start-n8n-locally"></a>
 pnpm dev
 ```
 

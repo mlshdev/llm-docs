@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/pgoverexplain.sgml#pgoverexplain](https://www.postgresql.org/docs/18/pgoverexplain.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/pgoverexplain.sgml#pgoverexplain](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/pgoverexplain.sgml%23pgoverexplain)
+> Canonical documentation: https://www.postgresql.org/docs/18/pgoverexplain.html
 
 # pg_overexplain — allow EXPLAIN to dump even more details
 

@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/guides/runtime/define-constant.mdx](https://bun.com/docs/guides/runtime/define-constant)
+> Pinned source for Bun bun-v1.4.2: [docs/guides/runtime/define-constant.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/guides/runtime/define-constant.mdx)
+> Canonical documentation: https://bun.com/docs/guides/runtime/define-constant
 
 The `--define` flag declares statically-analyzable constants and globals. It replaces all usages of an identifier or property in a JavaScript or TypeScript file with a constant value, and works both at runtime and in `bun build`. It's similar to `#define` in C/C++, but for JavaScript.
 

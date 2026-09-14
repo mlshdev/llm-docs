@@ -1,4 +1,4 @@
-> Tag-pinned source for discord.py v2.7.1: [docs/migrating_to_async.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/migrating_to_async.rst)
+> Pinned source for discord.py v2.7.1: [docs/migrating_to_async.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/migrating_to_async.rst)
 
 - **Orphan:**
 
@@ -11,9 +11,8 @@ fundamental changes in how the library operates.
 
 The biggest major change is that the library has dropped support to all versions prior to
 Python 3.4.2. This was made to support `asyncio`, in which more detail can be seen
-
-- **Issue:** `in the corresponding issue <50>`. To reiterate this, the implication is that
-  **python version 2.7 and 3.3 are no longer supported**.
+[GH-in the corresponding issue](https://github.com/Rapptz/discord.py/issues/50). To reiterate this, the implication is that
+**python version 2.7 and 3.3 are no longer supported**.
 
 Below are all the other major changes from v0.9.0 to v0.10.0.
 
@@ -92,7 +91,7 @@ See [discord-api-events](https://discordpy.readthedocs.io/api.html#discord-api-e
 ## Coroutines
 
 The biggest change that the library went through is that almost every function in `Client`
-was changed to be a [coroutine](py:library/asyncio-task.html). Functions
+was changed to be a [coroutine](https://docs.python.org/3/library/asyncio-task.html). Functions
 that are marked as a coroutine in the documentation must be awaited from or yielded from in order
 for the computation to be done. For example...
 
@@ -150,8 +149,7 @@ servers = list(client.servers)
 ## Enumerations
 
 Due to dropping support for versions lower than Python 3.4.2, the library can now use
-
-- **Doc:** `py:library/enum` in places where it makes sense.
+[py:library/enum](https://docs.python.org/3/library/enum.html) in places where it makes sense.
 
 The common places where this was changed was in the server region, member status, and channel type.
 

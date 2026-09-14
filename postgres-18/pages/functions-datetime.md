@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/func.sgml#functions-datetime](https://www.postgresql.org/docs/18/functions-datetime.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/func.sgml#functions-datetime](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/func.sgml%23functions-datetime)
+> Canonical documentation: https://www.postgresql.org/docs/18/functions-datetime.html
 
 # Date/Time Functions and Operators
 

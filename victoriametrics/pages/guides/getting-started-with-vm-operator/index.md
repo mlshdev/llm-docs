@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/getting-started-with-vm-operator/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-vm-operator/_index.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/guides/getting-started-with-vm-operator/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-vm-operator/_index.md)
 
 The [VictoriaMetrics Kubernetes Operator](https://docs.victoriametrics.com/operator/) simplifies deploying VictoriaMetrics Stack components on Kubernetes or OpenShift using declarative YAML [custom resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/).
 
@@ -421,6 +421,7 @@ NOTES:
 1. Get your 'admin' user password by running:
 
    kubectl get secret --namespace default my-grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
+
 
 2. The Grafana server can be accessed via port 80 on the following DNS name from within your cluster:
 

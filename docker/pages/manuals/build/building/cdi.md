@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build/building/cdi.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build/building/cdi.md)
+> Pinned source for Docker main: [content/manuals/build/building/cdi.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build/building/cdi.md)
 
 The [Container Device Interface (CDI)](https://github.com/cncf-tags/container-device-interface/blob/main/SPEC.md)
 is a specification designed to standardize how devices (like GPUs, FPGAs, and
@@ -119,13 +119,13 @@ Now let's build this Dockerfile:
 ```console
 $ docker buildx build .
 [+] Building 0.4s (5/5) FINISHED                                                                                                        docker:default
- => [internal] load build definition from Dockerfile                                                                                    0.0s
+ => [internal] load build definition from Dockerfile                                                                                    0.0s 
  => => transferring dockerfile: 155B                                                                                                    0.0s
- => resolve image config for docker-image://docker/dockerfile:1-labs                                                                    0.1s
+ => resolve image config for docker-image://docker/dockerfile:1-labs                                                                    0.1s 
  => CACHED docker-image://docker/dockerfile:1-labs@sha256:9187104f31e3a002a8a6a3209ea1f937fb7486c093cbbde1e14b0fa0d7e4f1b5              0.0s
- => [internal] load metadata for docker.io/library/busybox:latest                                                                       0.1s
+ => [internal] load metadata for docker.io/library/busybox:latest                                                                       0.1s 
  => [internal] load .dockerignore                                                                                                       0.0s
- => => transferring context: 2B                                                                                                         0.0s
+ => => transferring context: 2B                                                                                                         0.0s 
 ERROR: failed to build: failed to solve: failed to load LLB: device vendor1.com/device=foo is requested by the build but not allowed
 ```
 

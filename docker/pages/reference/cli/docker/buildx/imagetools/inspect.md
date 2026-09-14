@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/buildx/docker_buildx_imagetools_inspect.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_imagetools_inspect.yaml)
+> Pinned source for Docker main: [data/cli/buildx/docker_buildx_imagetools_inspect.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_imagetools_inspect.yaml)
 
 # docker buildx imagetools inspect
 
@@ -48,32 +48,32 @@ Manifests:
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--format` | ``{{.Manifest}}`` | Format the output using the given Go template |
-| `--raw` |  | Show original, unformatted JSON manifest |
+| Option     | Default         | Description                                   |
+| ---------- | --------------- | --------------------------------------------- |
+| `--format` | `{{.Manifest}}` | Format the output using the given Go template |
+| `--raw`    |                 | Show original, unformatted JSON manifest      |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--builder` |  | Override the configured builder instance |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option          | Default | Description                              |
+| --------------- | ------- | ---------------------------------------- |
+| `--builder`     |         | Override the configured builder instance |
+| `-D`, `--debug` |         | Enable debug logging                     |
 
 ## Examples
 
 ### Override the configured builder instance (--builder) {#builder}
 
-Same as [`buildx --builder`](/reference/cli/docker/buildx/#builder).
+Same as [`buildx --builder`](https://docs.docker.com/reference/cli/docker/buildx/#builder).
 
 ### Format the output (--format) {#format}
 
 Format the output using the given Go template. Defaults to `{{.Manifest}}` if
 unset. Following fields are available:
 
-* `.Name`: provides the reference of the image
-* `.Manifest`: provides the manifest or manifest list
-* `.Image`: provides the image config
+- `.Name`: provides the reference of the image
+- `.Manifest`: provides the manifest or manifest list
+- `.Image`: provides the image config
 
 #### `.Name`
 

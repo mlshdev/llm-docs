@@ -1,4 +1,5 @@
-> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/concepts/features/identity-brokering.mdx](https://zitadel.com/docs/concepts/features/identity-brokering)
+> Pinned source for ZITADEL v4.17.3: [apps/docs/content/concepts/features/identity-brokering.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/concepts/features/identity-brokering.mdx)
+> Canonical documentation: https://zitadel.com/docs/concepts/features/identity-brokering
 
 Link social logins and external identity providers with your identity management platform allowing users to log in with their preferred identity provider.
 

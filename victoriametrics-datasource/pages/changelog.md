@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics datasource for Grafana v0.26.1: [CHANGELOG.md](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58cb4614080bded813362124d4a808d0359a1ccb/CHANGELOG.md)
+> Pinned source for VictoriaMetrics datasource for Grafana v0.26.1: [CHANGELOG.md](https://github.com/VictoriaMetrics/victoriametrics-datasource/blob/58cb4614080bded813362124d4a808d0359a1ccb/CHANGELOG.md)
 
 # Changelog
 
@@ -251,7 +251,7 @@ In the new version of the plugin, the plugin ID has been updated. The new plugin
 - You must update the `allow_loading_unsigned_plugins` field in the `grafana.ini` or `defaults.ini` configuration file.
   **Example:**
   ```ini
-  allow_loading_unsigned_plugins = victoriametrics-metrics-datasource
+  allow_loading_unsigned_plugins = victoriametrics-metrics-datasource  
   ```
 - If you are using provisioning, update the `type` field to `victoriametrics-metrics-datasource` in your provisioning configuration.
 - After making these changes, you must restart the Grafana server for the updates to take effect.

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_secret_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_secret_create.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_secret_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_secret_create.yaml)
 
 # docker secret create
 
@@ -10,21 +10,21 @@ Create a secret from a file or STDIN as content
 
 Creates a secret using standard input or from a file for the secret content.
 
-For detailed information about using secrets, refer to [manage sensitive data with Docker secrets](/engine/swarm/secrets/).
+For detailed information about using secrets, refer to [manage sensitive data with Docker secrets](https://docs.docker.com/engine/swarm/secrets/).
 
-> [!NOTE]
+> \[!NOTE]
 > This is a cluster management command, and must be executed on a swarm
 > manager node. To learn about managers and workers, refer to the
-> [Swarm mode section](/engine/swarm/) in the
+> [Swarm mode section](https://docs.docker.com/engine/swarm/) in the
 > documentation.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-d`, `--driver` |  | Secret driver (API 1.31+) |
-| `-l`, `--label` |  | Secret labels |
-| `--template-driver` |  | Template driver (API 1.37+) |
+| Option              | Default | Description                 |
+| ------------------- | ------- | --------------------------- |
+| `-d`, `--driver`    |         | Secret driver (API 1.31+)   |
+| `-l`, `--label`     |         | Secret labels               |
+| `--template-driver` |         | Template driver (API 1.37+) |
 
 ## Examples
 

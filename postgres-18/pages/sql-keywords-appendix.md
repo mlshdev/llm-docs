@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/keywords.sgml#sql-keywords-appendix](https://www.postgresql.org/docs/18/sql-keywords-appendix.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/keywords.sgml#sql-keywords-appendix](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/keywords.sgml%23sql-keywords-appendix)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-keywords-appendix.html
 
 # SQL Key Words
 

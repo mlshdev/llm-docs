@@ -1,4 +1,5 @@
 import type { Document, ProjectBuild, ProjectId } from "./types.ts";
+import { withoutFencedCode } from "./markdown.ts";
 
 // Upstream projects change their documentation source syntax continuously, and
 // a construct this generator cannot convert must never reach the corpus. It
@@ -17,7 +18,6 @@ export interface QuarantinedDocument {
 // navigation — would silently gut a corpus. Past this budget the project build
 // fails as a whole so the caller retains the previous, complete snapshot.
 const maximumQuarantineRatio = 0.05;
-const minimumQuarantineAllowance = 5;
 
 const maximumReasonLength = 400;
 
@@ -51,7 +51,8 @@ const unresolvedSyntax: Record<ProjectId, RegExp> = {
     /<\/?(?:Admonition|ApiCard|Callout|Cards?|Column|DocCardList|DynamicCodeBlock|FrameworkSelector|GithubCodeBlock|Steps?|Tabs?)\b/,
   ffmpeg: /@(?:chapter|section|subsection|include|item|table|example|end)\b/,
   "yt-dlp": /(?!)/,
-  searxng: /(?!)/,
+  searxng:
+    /^\s*\.\.\s+[a-zA-Z][\w:-]*::|(?:^|[^`\\]):[a-zA-Z][\w:-]*:`|`[^`\n]+`_|\|[A-Za-z][\w-]*\|/m,
   bun: /<\/?(?:Accordion|Card|CodeGroup|Frame|Note|Step|Tab|Tip|Warning)\b/,
   "trigger-dev":
     /<\/?(?:Accordion|Card|CardGroup|CodeGroup|Expandable|Frame|Info|Note|ParamField|ResponseField|Step|Steps|Tab|Tabs|Tip|Update|Warning)\b/,
@@ -175,14 +176,11 @@ export function assertQuarantineBudget(build: ProjectBuild): void {
   if (dropped === 0) {
     return;
   }
-  const allowance = Math.max(
-    minimumQuarantineAllowance,
-    Math.floor((kept + dropped) * maximumQuarantineRatio),
-  );
-  if (dropped > allowance) {
+  const total = kept + dropped;
+  if (dropped / total > maximumQuarantineRatio) {
     throw new ProjectBuildError(
       build.project.id,
-      `${build.project.id} quarantined ${dropped} of ${kept + dropped} pages at ${build.lock.tag}, above the ${allowance}-page budget: ${summarizeQuarantine(build.quarantined)}`,
+      `${build.project.id} quarantined ${dropped} of ${total} pages at ${build.lock.tag}, above the ${maximumQuarantineRatio * 100}% budget: ${summarizeQuarantine(build.quarantined)}`,
     );
   }
 }
@@ -235,30 +233,14 @@ function rejectionReason(
       ? ""
       : projectId === "docker" ||
           projectId === "n8n" ||
-          projectId === "postgres-18"
+          projectId === "postgres-18" ||
+          projectId === "searxng"
         ? withoutFencedCode(document.body)
         : document.body;
   const match = unresolvedSyntax[projectId].exec(source);
   return match
     ? `Unresolved ${projectId} source syntax ${JSON.stringify(match[0].trim().slice(0, 60))}`
     : undefined;
-}
-
-function withoutFencedCode(source: string): string {
-  const lines: string[] = [];
-  let fence: "```" | "~~~" | undefined;
-  for (const line of source.split("\n")) {
-    const marker = line.match(/^\s*(?:>\s*)*(```|~~~)/)?.[1] as
-      | "```"
-      | "~~~"
-      | undefined;
-    if (marker) {
-      fence = fence === marker ? undefined : marker;
-    } else if (!fence) {
-      lines.push(line);
-    }
-  }
-  return lines.join("\n");
 }
 
 function cleanReason(reason: string): string {

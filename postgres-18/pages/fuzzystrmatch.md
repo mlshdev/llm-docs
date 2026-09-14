@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/fuzzystrmatch.sgml#fuzzystrmatch](https://www.postgresql.org/docs/18/fuzzystrmatch.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/fuzzystrmatch.sgml#fuzzystrmatch](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/fuzzystrmatch.sgml%23fuzzystrmatch)
+> Canonical documentation: https://www.postgresql.org/docs/18/fuzzystrmatch.html
 
 # fuzzystrmatch — determine string similarities and distance
 

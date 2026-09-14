@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/extensions/extensions-sdk/build/minimal-frontend-extension.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/extensions/extensions-sdk/build/minimal-frontend-extension.md)
+> Pinned source for Docker main: [content/manuals/extensions/extensions-sdk/build/minimal-frontend-extension.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/extensions/extensions-sdk/build/minimal-frontend-extension.md)
 
 To start creating your extension, you first need a directory with files which range from the extension’s source code to the required extension-specific files. This page provides information on how to set up a minimal frontend extension based on plain HTML.
 

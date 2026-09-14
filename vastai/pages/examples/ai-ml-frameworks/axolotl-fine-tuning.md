@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [examples/ai-ml-frameworks/axolotl-fine-tuning.mdx](https://docs.vast.ai/examples/ai-ml-frameworks/axolotl-fine-tuning)
+> Pinned source for Vast.ai main: [examples/ai-ml-frameworks/axolotl-fine-tuning.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/examples/ai-ml-frameworks/axolotl-fine-tuning.mdx)
+> Canonical documentation: https://docs.vast.ai/examples/ai-ml-frameworks/axolotl-fine-tuning
 
 # Fine-Tune LLMs with Axolotl
 

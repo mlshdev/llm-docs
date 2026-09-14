@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/catalogs.sgml#catalog-pg-parameter-acl](https://www.postgresql.org/docs/18/catalog-pg-parameter-acl.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/catalogs.sgml#catalog-pg-parameter-acl](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/catalogs.sgml%23catalog-pg-parameter-acl)
+> Canonical documentation: https://www.postgresql.org/docs/18/catalog-pg-parameter-acl.html
 
 # pg_parameter_acl
 

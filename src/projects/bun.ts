@@ -15,6 +15,7 @@ import type {
   GithubSourceProject,
   ProjectBuild,
 } from "../types.ts";
+import { mintlifySections } from "./mintlify.ts";
 
 const siteBase = "https://bun.com/docs";
 
@@ -31,7 +32,11 @@ export async function buildBun(
       for (const sourcePath of files.filter(isReadableSource)) {
         sources.set(sourcePath, await readUtf8(root, sourcePath));
       }
-      const pages = files.filter(isPage).sort(compareCodePoints);
+      const config: unknown = JSON.parse(
+        await readUtf8(root, "docs/docs.json"),
+      );
+      const navigation = bunNavigation(config, sources);
+      const pages = [...navigation.keys()];
       const routes = new Set(pages.map(pageRoute));
       const documents = new DocumentCollector(project.id);
       for (const sourcePath of pages) {
@@ -72,7 +77,7 @@ export async function buildBun(
             title,
             body,
             canonicalUrl: `${siteBase}/${pageRoute(sourcePath)}`,
-            section: sectionFor(sourcePath),
+            section: navigation.get(sourcePath) ?? sectionFor(sourcePath),
           };
         });
       }
@@ -82,7 +87,7 @@ export async function buildBun(
         documents: documents.documents,
         quarantined: documents.quarantined,
         notes: [
-          "Pages come from the release-tagged Mintlify documentation tree under docs; snippets are inlined rather than published as duplicate pages.",
+          "Pages and their order come from the release-tagged Mintlify navigation in docs/docs.json; unreferenced files are excluded and snippets are inlined rather than published as duplicate pages.",
           "Static MDX cards, tabs, accordions, steps, callouts, and media frames are normalized to Markdown without executing JavaScript.",
           "Published page links resolve to https://bun.com/docs; source assets point at the immutable release commit.",
         ],
@@ -91,6 +96,7 @@ export async function buildBun(
     },
     (sourcePath) =>
       sourcePath === "LICENSE.md" ||
+      sourcePath === "docs/docs.json" ||
       /^docs\/.*\.(?:mdx|md|jsx)$/.test(sourcePath),
   );
 }
@@ -99,12 +105,37 @@ function isReadableSource(sourcePath: string): boolean {
   return /^docs\/.*\.(?:mdx|md|jsx)$/.test(sourcePath);
 }
 
-function isPage(sourcePath: string): boolean {
-  return (
-    /^docs\/.*\.mdx?$/.test(sourcePath) &&
-    !sourcePath.startsWith("docs/snippets/") &&
-    sourcePath !== "docs/README.md"
-  );
+export function bunNavigation(
+  config: unknown,
+  sources: ReadonlyMap<string, string>,
+): ReadonlyMap<string, string> {
+  const navigation =
+    config && typeof config === "object" && "navigation" in config
+      ? (config as { readonly navigation: unknown }).navigation
+      : undefined;
+  const declared = mintlifySections(navigation);
+  if (declared.size === 0) {
+    throw new Error("Bun docs/docs.json contains no published navigation");
+  }
+  const pages = new Map<string, string>();
+  const routes = new Set<string>();
+  for (const [rawRoute, section] of declared) {
+    const route = rawRoute.replace(/^\/+|\/+$/g, "");
+    if (!route || routes.has(route)) {
+      if (routes.has(route)) {
+        throw new Error(`Bun navigation repeats route ${rawRoute}`);
+      }
+    }
+    const sourcePath = [`docs/${route}.mdx`, `docs/${route}.md`].find(
+      (candidate) => sources.has(candidate),
+    );
+    if (!sourcePath) {
+      throw new Error(`Bun navigation names a missing page ${rawRoute}`);
+    }
+    routes.add(route);
+    pages.set(sourcePath, section);
+  }
+  return pages;
 }
 
 function pageRoute(sourcePath: string): string {
@@ -224,8 +255,4 @@ function sectionFor(sourcePath: string): string {
     project: "Project",
   };
   return first ? (names[first] ?? "Getting started") : "Getting started";
-}
-
-function compareCodePoints(left: string, right: string): number {
-  return left < right ? -1 : left > right ? 1 : 0;
 }

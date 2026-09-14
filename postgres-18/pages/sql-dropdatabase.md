@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/drop_database.sgml#sql-dropdatabase](https://www.postgresql.org/docs/18/sql-dropdatabase.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/drop_database.sgml#sql-dropdatabase](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/drop_database.sgml%23sql-dropdatabase)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-dropdatabase.html
 
 # DROP DATABASE
 

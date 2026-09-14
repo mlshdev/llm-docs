@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/xplang.sgml#xplang](https://www.postgresql.org/docs/18/xplang.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/xplang.sgml#xplang](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/xplang.sgml%23xplang)
+> Canonical documentation: https://www.postgresql.org/docs/18/xplang.html
 
 # Procedural Languages
 

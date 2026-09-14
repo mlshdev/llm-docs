@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/create_access_method.sgml#sql-create-access-method](https://www.postgresql.org/docs/18/sql-create-access-method.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/create_access_method.sgml#sql-create-access-method](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/create_access_method.sgml%23sql-create-access-method)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-create-access-method.html
 
 # CREATE ACCESS METHOD
 

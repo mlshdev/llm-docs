@@ -13,6 +13,7 @@ import {
   titleCase,
 } from "../markdown.ts";
 import { DocumentCollector } from "../quarantine.ts";
+import { renderOpenApiDocument } from "../openapi.ts";
 import type {
   GithubLockedSource,
   GithubSourceProject,
@@ -133,11 +134,28 @@ export async function buildDocker(
       }
       for (const cli of await loadCliPages(root, files)) {
         await documents.collect(cli.sourcePath, async () => {
+          const page: DockerPage = {
+            sourcePath: cli.sourcePath,
+            virtualPath: `content/reference/cli/${cli.command.replaceAll(" ", "/")}.md`,
+            attributes: {},
+            body: "",
+          };
+          const body = rewriteMarkdownLinks(renderCliPage(cli), (url, kind) =>
+            resolveDockerLink(
+              url,
+              kind,
+              page,
+              project.repository,
+              lock.sourceCommit,
+              archiveFiles,
+            ),
+          );
+          assertDockerMarkdownResolved(cli.sourcePath, body);
           return {
             sourcePath: cli.sourcePath,
             outputPath: `pages/reference/cli/${cli.command.replaceAll(" ", "/")}.md`,
             title: cli.command,
-            body: renderCliPage(cli),
+            body,
             canonicalUrl: githubBlobUrl(
               project.repository,
               lock.sourceCommit,
@@ -482,9 +500,35 @@ async function expandDockerMarkdown(
   result = replaceSelfClosing(result, "labspace-launch", (args) =>
     renderLabspace(parseArguments(args), context.page.sourcePath),
   );
+  result = replaceSelfClosing(result, "sandbox-auth", () =>
+    renderSandboxAuthentication(),
+  );
   result = replaceSelfClosing(result, "icon", () => "");
   result += await renderDataDrivenContent(context);
   return normalizeSpacing(result);
+}
+
+// `sandbox-auth` is supplied by the external Docker Docs Hugo theme rather
+// than the source archive. Its interactive pickers all describe the same two
+// authentication mechanisms, so retain their complete static information.
+export function renderSandboxAuthentication(): string {
+  return [
+    "### Subscription sign-in",
+    "",
+    "- **Codex:** No secret configuration is needed. When Codex starts, `sbx` opens the OpenAI sign-in flow on the host before creating the sandbox.",
+    "- **Claude Code:** No secret configuration is needed. After Claude Code starts in the sandbox, run `/login` and sign in with your Claude account.",
+    "",
+    "### API-key authentication",
+    "",
+    "Store the model provider key in the host credential store. The command prompts for the key without displaying it:",
+    "",
+    "```console",
+    "$ sbx secret set openai       # OpenAI",
+    "$ sbx secret set anthropic    # Anthropic",
+    "$ sbx secret set openrouter   # OpenRouter",
+    "$ sbx secret set google       # Google",
+    "```",
+  ].join("\n");
 }
 
 function expandInlineDefinitions(
@@ -710,7 +754,7 @@ async function renderDataDrivenContent(
         `Docker OpenAPI specification ${specification} is invalid`,
       );
     }
-    return `\n\n${renderOpenApi(parsed, specification)}`;
+    return `\n\n${renderOpenApiDocument(parsed, specification)}`;
   }
   return "";
 }
@@ -749,169 +793,6 @@ function openApiPath(context: DockerContext): string | undefined {
       ? [context.page.virtualPath.replace(/index\.md$/, "api.yaml")]
       : [context.page.virtualPath.replace(/\.md$/, ".yaml")];
   return candidates.find((candidate) => context.files.has(candidate));
-}
-
-function renderOpenApi(
-  api: Readonly<Record<string, unknown>>,
-  sourcePath: string,
-): string {
-  const lines = ["## API specification"];
-  const info = isRecord(api.info) ? api.info : undefined;
-  if (typeof info?.version === "string") {
-    lines.push("", `- Version: \`${info.version}\``);
-  }
-  if (typeof api.host === "string") {
-    const scheme = Array.isArray(api.schemes) ? api.schemes[0] : "https";
-    const basePath = typeof api.basePath === "string" ? api.basePath : "";
-    lines.push(
-      "",
-      `- Base URL: \`${String(scheme)}://${api.host}${basePath}\``,
-    );
-  }
-  if (Array.isArray(api.servers)) {
-    for (const server of api.servers) {
-      if (isRecord(server) && typeof server.url === "string") {
-        lines.push("", `- Base URL: \`${server.url}\``);
-      }
-    }
-  }
-  if (typeof info?.description === "string" && info.description.trim()) {
-    lines.push("", info.description.trim());
-  }
-  const securitySchemes = isRecord(api.components)
-    ? api.components.securitySchemes
-    : api.securityDefinitions;
-  if (isRecord(securitySchemes)) {
-    lines.push("", "## Authentication");
-    for (const [name, rawScheme] of Object.entries(securitySchemes)) {
-      const scheme = resolveOpenApiReference(api, rawScheme, sourcePath);
-      if (!isRecord(scheme)) {
-        continue;
-      }
-      const details = [scheme.type, scheme.scheme]
-        .filter((value): value is string => typeof value === "string")
-        .join(", ");
-      lines.push(
-        "",
-        `### \`${name}\`${details ? ` (${details})` : ""}`,
-        ...(typeof scheme.description === "string"
-          ? ["", scheme.description.trim()]
-          : []),
-      );
-    }
-  }
-  if (!isRecord(api.paths)) {
-    throw new Error(`Docker OpenAPI specification ${sourcePath} has no paths`);
-  }
-  lines.push("", "## Endpoints");
-  for (const [route, rawItem] of Object.entries(api.paths)) {
-    const item = resolveOpenApiReference(api, rawItem, sourcePath);
-    if (!isRecord(item)) {
-      continue;
-    }
-    const sharedParameters = Array.isArray(item.parameters)
-      ? item.parameters
-      : [];
-    for (const method of [
-      "get",
-      "post",
-      "put",
-      "patch",
-      "delete",
-      "head",
-    ] as const) {
-      const operation = resolveOpenApiReference(api, item[method], sourcePath);
-      if (!isRecord(operation)) {
-        continue;
-      }
-      lines.push("", `### \`${method.toUpperCase()} ${route}\``);
-      if (typeof operation.summary === "string") {
-        lines.push("", `**${operation.summary.trim()}**`);
-      }
-      if (typeof operation.description === "string") {
-        lines.push("", operation.description.trim());
-      }
-      const parameters = [
-        ...sharedParameters,
-        ...(Array.isArray(operation.parameters) ? operation.parameters : []),
-      ];
-      if (parameters.length > 0) {
-        lines.push("", "**Parameters**", "");
-        for (const rawParameter of parameters) {
-          const parameter = resolveOpenApiReference(
-            api,
-            rawParameter,
-            sourcePath,
-          );
-          if (!isRecord(parameter) || typeof parameter.name !== "string") {
-            continue;
-          }
-          const location =
-            typeof parameter.in === "string" ? parameter.in : "parameter";
-          lines.push(
-            `- \`${parameter.name}\` (${location}${parameter.required ? ", required" : ""})${typeof parameter.description === "string" ? `: ${singleLine(parameter.description)}` : ""}`,
-          );
-        }
-      }
-      const requestBody = resolveOpenApiReference(
-        api,
-        operation.requestBody,
-        sourcePath,
-      );
-      if (isRecord(requestBody)) {
-        lines.push(
-          "",
-          `**Request body**${typeof requestBody.description === "string" ? `: ${singleLine(requestBody.description)}` : ""}`,
-        );
-      }
-      if (isRecord(operation.responses)) {
-        lines.push("", "**Responses**", "");
-        for (const [status, rawResponse] of Object.entries(
-          operation.responses,
-        )) {
-          const response = resolveOpenApiReference(
-            api,
-            rawResponse,
-            sourcePath,
-          );
-          lines.push(
-            `- \`${status}\`${isRecord(response) && typeof response.description === "string" ? `: ${singleLine(response.description)}` : ""}`,
-          );
-        }
-      }
-    }
-  }
-  return normalizeSpacing(lines.join("\n"));
-}
-
-function resolveOpenApiReference(
-  api: Readonly<Record<string, unknown>>,
-  value: unknown,
-  sourcePath: string,
-): unknown {
-  if (!isRecord(value) || typeof value.$ref !== "string") {
-    return value;
-  }
-  if (!value.$ref.startsWith("#/")) {
-    throw new Error(
-      `Docker OpenAPI specification ${sourcePath} uses external reference ${value.$ref}`,
-    );
-  }
-  let current: unknown = api;
-  for (const encoded of value.$ref.slice(2).split("/")) {
-    const key = encoded.replaceAll("~1", "/").replaceAll("~0", "~");
-    if (!isRecord(current) || !(key in current)) {
-      throw new Error(
-        `Docker OpenAPI specification ${sourcePath} has unresolved reference ${value.$ref}`,
-      );
-    }
-    current = current[key];
-  }
-  return current;
-}
-
-function singleLine(value: string): string {
-  return value.replace(/\s+/g, " ").trim();
 }
 
 function renderDesktopInstall(args: ShortcodeArguments): string {
@@ -1345,6 +1226,7 @@ function assertDockerMarkdownResolved(sourcePath: string, body: string): void {
 function dropDockerBlockAttributes(source: string): string {
   const output: string[] = [];
   let fence: "```" | "~~~" | undefined;
+  let presentationDiv = false;
   for (const line of source.split("\n")) {
     const marker = line.match(/^\s*(?:>\s*)*(```|~~~)/)?.[1] as
       | "```"
@@ -1356,6 +1238,14 @@ function dropDockerBlockAttributes(source: string): string {
     if (!fence && /^\s*(?:>\s*)?\{\s*\.[\w -]+\}\s*$/.test(line)) {
       continue;
     }
+    if (!fence && /^\s*<div\s+class=["']not-prose["']\s*>\s*$/.test(line)) {
+      presentationDiv = true;
+      continue;
+    }
+    if (!fence && presentationDiv && /^\s*<\/div>\s*$/.test(line)) {
+      presentationDiv = false;
+      continue;
+    }
     output.push(
       line.replace(
         /^( +)(\t+)/,
@@ -1363,6 +1253,9 @@ function dropDockerBlockAttributes(source: string): string {
           `${spaces}${"    ".repeat(tabs.length)}`,
       ),
     );
+  }
+  if (presentationDiv) {
+    throw new Error("Unclosed Docker not-prose presentation wrapper");
   }
   return output.join("\n");
 }

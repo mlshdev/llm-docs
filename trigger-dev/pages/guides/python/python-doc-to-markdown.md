@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/guides/python/python-doc-to-markdown.mdx](https://trigger.dev/docs/guides/python/python-doc-to-markdown)
+> Pinned source for Trigger.dev v4.5.16: [docs/guides/python/python-doc-to-markdown.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/guides/python/python-doc-to-markdown.mdx)
+> Canonical documentation: https://trigger.dev/docs/guides/python/python-doc-to-markdown
 
 # Convert documents to markdown using Python and MarkItDown
 

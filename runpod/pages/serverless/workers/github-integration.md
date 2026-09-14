@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [serverless/workers/github-integration.mdx](https://docs.runpod.io/serverless/workers/github-integration)
+> Pinned source for Runpod main: [serverless/workers/github-integration.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/serverless/workers/github-integration.mdx)
+> Canonical documentation: https://docs.runpod.io/serverless/workers/github-integration
 
 # Deploy workers from GitHub
 

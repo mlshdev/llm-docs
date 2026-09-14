@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/swarm/ingress.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/swarm/ingress.md)
+> Pinned source for Docker main: [content/manuals/engine/swarm/ingress.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/swarm/ingress.md)
 
 Docker Engine Swarm mode makes it easy to publish ports for services to make
 them available to resources outside the swarm. All nodes participate in an

@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.1: [docs/sources/datasources/prometheus/configure/aws-authentication.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/datasources/prometheus/configure/aws-authentication.md)
+> Pinned source for Grafana v13.2.1: [docs/sources/datasources/prometheus/configure/aws-authentication.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/datasources/prometheus/configure/aws-authentication.md)
 
 # Migrate from Prometheus SigV4 to Amazon Managed Service for Prometheus
 

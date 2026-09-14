@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_node_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_node_ls.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_node_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_node_ls.yaml)
 
 # docker node ls
 
@@ -11,22 +11,22 @@ List nodes in the swarm
 ## Description
 
 Lists all the nodes that the Docker Swarm manager knows about. You can filter
-using the `-f` or `--filter` flag. Refer to the [filtering](#filter) section
+using the `-f` or `--filter` flag. Refer to the [filtering](#filtering---filter-filter) section
 for more information about available filter options.
 
-> [!NOTE]
+> \[!NOTE]
 > This is a cluster management command, and must be executed on a swarm
 > manager node. To learn about managers and workers, refer to the
-> [Swarm mode section](/engine/swarm/) in the
+> [Swarm mode section](https://docs.docker.com/engine/swarm/) in the
 > documentation.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--filter` |  | Filter output based on conditions provided |
-| `--format` |  | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to https://docs.docker.com/go/formatting/ for more information about formatting output with templates |
-| `-q`, `--quiet` |  | Only display IDs |
+| Option           | Default | Description                                                                                                                                                                                                                                                                                                                                                                            |
+| ---------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `-f`, `--filter` |         | Filter output based on conditions provided                                                                                                                                                                                                                                                                                                                                             |
+| `--format`       |         | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to <https://docs.docker.com/go/formatting/> for more information about formatting output with templates |
+| `-q`, `--quiet`  |         | Only display IDs                                                                                                                                                                                                                                                                                                                                                                       |
 
 ## Examples
 
@@ -39,7 +39,7 @@ ID                           HOSTNAME        STATUS  AVAILABILITY  MANAGER STATU
 e216jshn25ckzbvmwlnh5jr3g *  swarm-manager1  Ready   Active        Leader
 ```
 
-> [!NOTE]
+> \[!NOTE]
 > In the above example output, there is a hidden column of `.Self` that indicates
 > if the node is the same node as the current docker daemon. A `*` (e.g.,
 > `e216jshn25ckzbvmwlnh5jr3g *`) means this node is the current docker daemon.
@@ -51,12 +51,12 @@ than one filter, then pass multiple flags (e.g., `--filter "foo=bar" --filter "b
 
 The currently supported filters are:
 
-* [id](#id)
-* [label](#label)
-* [node.label](#nodelabel)
-* [membership](#membership)
-* [name](#name)
-* [role](#role)
+- [id](#id)
+- [label](#label)
+- [node.label](#nodelabel)
+- [membership](#membership)
+- [name](#name)
+- [role](#role)
 
 #### id
 
@@ -73,7 +73,7 @@ ID                         HOSTNAME       STATUS  AVAILABILITY  MANAGER STATUS
 
 The `label` filter matches nodes based on engine labels and on the presence of a
 `label` alone or a `label` and a value. Engine labels are configured in
-the [daemon configuration](/reference/cli/dockerd/#daemon-configuration-file). To filter on
+the [daemon configuration](https://docs.docker.com/reference/cli/dockerd/#daemon-configuration-file). To filter on
 Swarm `node` labels, use [`node.label` instead](#nodelabel).
 
 The following filter matches nodes with the `foo` label regardless of its value.
@@ -170,7 +170,7 @@ using a Go template.
 Valid placeholders for the Go template are listed below:
 
 | Placeholder      | Description                                                                                           |
-|------------------|-------------------------------------------------------------------------------------------------------|
+| ---------------- | ----------------------------------------------------------------------------------------------------- |
 | `.ID`            | Node ID                                                                                               |
 | `.Self`          | Node of the daemon (`true/false`, `true`indicates that the node is the same as current docker daemon) |
 | `.Hostname`      | Node hostname                                                                                         |
@@ -196,6 +196,7 @@ e216jshn25ckzbvmwlnh5jr3g: swarm-manager1 Ready
 ```
 
 To list all nodes in JSON format, use the `json` directive:
+
 ```console
 $ docker node ls --format json
 {"Availability":"Active","EngineVersion":"23.0.3","Hostname":"docker-desktop","ID":"k8f4w7qtzpj5sqzclcqafw35g","ManagerStatus":"Leader","Self":true,"Status":"Ready","TLSStatus":"Ready"}

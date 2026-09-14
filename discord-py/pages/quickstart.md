@@ -1,4 +1,4 @@
-> Tag-pinned source for discord.py v2.7.1: [docs/quickstart.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/quickstart.rst)
+> Pinned source for discord.py v2.7.1: [docs/quickstart.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/quickstart.rst)
 
 - **Orphan:**
 
@@ -59,7 +59,7 @@ There's a lot going on here, so let's walk you through it step by step.
    is the same as the `Client.user`.
 5. Afterwards, we check if the `Message.content` starts with `'$hello'`. If it does,
    then we send a message in the channel it was used in with `'Hello!'`. This is a basic way of
-   handling commands, which can be later automated with the [./ext/commands/index](https://discordpy.readthedocs.io/./ext/commands$1index.html) framework.
+   handling commands, which can be later automated with the [./ext/commands/index](https://discordpy.readthedocs.io/ext/commands/index.html) framework.
 6. Finally, we run the bot with our login token. If you need help getting your token or creating a bot,
    look in the [discord-intro](https://discordpy.readthedocs.io/discord.html#discord-intro) section.
 

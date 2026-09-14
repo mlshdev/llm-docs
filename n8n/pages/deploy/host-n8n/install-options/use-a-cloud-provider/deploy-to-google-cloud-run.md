@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-google-cloud-run.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-google-cloud-run.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-google-cloud-run.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-google-cloud-run.md)
 
 # Hosting n8n on Google Cloud Run <a id="hosting-n8n-on-google-cloud-run"></a>
 
@@ -101,7 +101,7 @@ If you want to deploy the following setup via Terraform, refer to this [example]
 Open the Cloud Shell Terminal (on the Google Cloud console, either type "G" then "S" or click on the terminal icon on the upper right) and run these commands in the terminal session:
 
 ```sh
-## You may need to login first <a id="you-may-need-to-login-first"></a>
+## You may need to login first <a href="#you-may-need-to-login-first" id="you-may-need-to-login-first"></a>
 gcloud auth login
 
 gcloud services enable run.googleapis.com
@@ -230,8 +230,8 @@ If you want to use Google Workspace services (Gmail, Calendar, Drive, etc.) as t
 First ensure the respective APIs you want are enabled:
 
 ```sh
-## Enable whichever APIs you need <a id="enable-whichever-apis-you-need"></a>
-## Note: If you want Sheets/Docs, it's not enough to just enable Drive; these services each have their own API <a id="note-if-you-want-sheetsdocs-its-not-enough-to-just-enable-drive-these-services-each-have-their-own-api"></a>
+## Enable whichever APIs you need <a href="#enable-whichever-apis-you-need" id="enable-whichever-apis-you-need"></a>
+## Note: If you want Sheets/Docs, it's not enough to just enable Drive; these services each have their own API <a href="#note-if-you-want-sheetsdocs-its-not-enough-to-just-enable-drive-these-services-each-have-their-own-api" id="note-if-you-want-sheetsdocs-its-not-enough-to-just-enable-drive-these-services-each-have-their-own-api"></a>
 gcloud services enable gmail.googleapis.com
 gcloud services enable drive.googleapis.com
 gcloud services enable sheets.googleapis.com
@@ -243,7 +243,7 @@ Re-deploy n8n on Cloud Run with the necessary OAuth callback URLs as environment
 
 ```sh
 export SERVICE_URL="your-n8n-service-URL"
-## e.g. https://n8n-12345678.us-west1.run.app <a id="eg-httpsn8n-12345678us-west1runapp"></a>
+## e.g. https://n8n-12345678.us-west1.run.app <a href="#eg-httpsn8n-12345678us-west1runapp" id="eg-httpsn8n-12345678us-west1runapp"></a>
 
 gcloud run services update n8n \
     --region=$REGION \

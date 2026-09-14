@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/isn.sgml#isn](https://www.postgresql.org/docs/18/isn.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/isn.sgml#isn](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/isn.sgml%23isn)
+> Canonical documentation: https://www.postgresql.org/docs/18/isn.html
 
 # isn — data types for international standard numbers (ISBN, EAN, UPC, etc.)
 

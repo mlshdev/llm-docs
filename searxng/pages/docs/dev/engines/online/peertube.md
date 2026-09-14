@@ -1,19 +1,21 @@
-> Commit-pinned source for SearXNG master: [docs/dev/engines/online/peertube.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/peertube.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/online/peertube.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/peertube.rst)
 
-.. \_peertube engines:
+<a id="peertube-engines"></a>
 
 # Peertube Engines
 
-.. \_peertube video engine:
+<a id="peertube-video-engine"></a>
 
 # Peertube Video
 
-.. automodule:: searx.engines.peertube
-:members:
+#### `searx.engines.peertube`
 
-.. \_sepiasearch engine:
+Static Python API reference (`automodule`).
+
+<a id="sepiasearch-engine"></a>
 
 # SepiaSearch
 
-.. automodule:: searx.engines.sepiasearch
-:members:
+#### `searx.engines.sepiasearch`
+
+Static Python API reference (`automodule`).

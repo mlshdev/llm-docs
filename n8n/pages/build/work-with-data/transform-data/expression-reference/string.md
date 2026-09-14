@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/work-with-data/transform-data/expression-reference/string.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/work-with-data/transform-data/expression-reference/string.md)
+> Pinned source for n8n main: [docs/build/work-with-data/transform-data/expression-reference/string.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/work-with-data/transform-data/expression-reference/string.md)
 
 # String <a id="string"></a>
 
@@ -180,7 +180,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 ```javascript
 'team'.includes('tea') //=> true
-'team'.includes('i') //=> false
+'team'.includes('i') //=> false 
 ```
 
 ```javascript
@@ -208,7 +208,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 ```javascript
 'steam'.indexOf('tea') //=> 1
-'steam'.indexOf('i') //=> -1
+'steam'.indexOf('i') //=> -1 
 ```
 
 ```javascript

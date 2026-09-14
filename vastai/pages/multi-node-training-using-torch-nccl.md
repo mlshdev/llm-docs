@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [multi-node-training-using-torch-nccl.mdx](https://docs.vast.ai/multi-node-training-using-torch-nccl)
+> Pinned source for Vast.ai main: [multi-node-training-using-torch-nccl.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/multi-node-training-using-torch-nccl.mdx)
+> Canonical documentation: https://docs.vast.ai/multi-node-training-using-torch-nccl
 
 # Multi-Node training using Torch + NCCL
 
@@ -79,6 +80,7 @@ if __name__ == "__main__":
     else:
         device = 0
 
+
     print("Initializing tensors...")
     # number of fp32 to allocate is bytes >> 2
     v1 = t.rand(size>>3, device=f'cuda:{device}') # for bidirectional test
@@ -126,6 +128,7 @@ if __name__ == "__main__":
     print(f"Checksum: {checksum}")
     print(f"elapsed: {end-start}")
     print(f"bidirectional bandwidth: {size / (end-start) / sizes['M']} MiB/s")
+
 
     print("Done, cleaning up!")
     dist.destroy_process_group()

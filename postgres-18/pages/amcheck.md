@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/amcheck.sgml#amcheck](https://www.postgresql.org/docs/18/amcheck.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/amcheck.sgml#amcheck](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/amcheck.sgml%23amcheck)
+> Canonical documentation: https://www.postgresql.org/docs/18/amcheck.html
 
 # amcheck — tools to verify table and index consistency
 

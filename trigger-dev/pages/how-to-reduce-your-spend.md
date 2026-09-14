@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/how-to-reduce-your-spend.mdx](https://trigger.dev/docs/how-to-reduce-your-spend)
+> Pinned source for Trigger.dev v4.5.16: [docs/how-to-reduce-your-spend.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/how-to-reduce-your-spend.mdx)
+> Canonical documentation: https://trigger.dev/docs/how-to-reduce-your-spend
 
 # How to reduce your spend
 

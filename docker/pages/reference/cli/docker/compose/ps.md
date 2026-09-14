@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_ps.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_ps.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_ps.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_ps.yaml)
 
 # docker compose ps
 
@@ -27,22 +27,22 @@ example-bar-1   alpine    "/entrypoint.…"   bar        4 seconds ago   exited 
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-a`, `--all` |  | Show all stopped containers (including those created by the run command) |
-| `--filter` |  | Filter services by a property (supported filters: status) |
-| `--format` |  | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to https://docs.docker.com/go/formatting/ for more information about formatting output with templates |
-| `--no-trunc` |  | Don't truncate output |
-| `--orphans` | `true` | Include orphaned services (not declared by project) |
-| `-q`, `--quiet` |  | Only display IDs |
-| `--services` |  | Display services |
-| `--status` |  | Filter services by status. Values: [paused \| restarting \| removing \| running \| dead \| created \| exited] |
+| Option          | Default | Description                                                                                                                                                                                                                                                                                                                                                                            |
+| --------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `-a`, `--all`   |         | Show all stopped containers (including those created by the run command)                                                                                                                                                                                                                                                                                                               |
+| `--filter`      |         | Filter services by a property (supported filters: status)                                                                                                                                                                                                                                                                                                                              |
+| `--format`      |         | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to <https://docs.docker.com/go/formatting/> for more information about formatting output with templates |
+| `--no-trunc`    |         | Don't truncate output                                                                                                                                                                                                                                                                                                                                                                  |
+| `--orphans`     | `true`  | Include orphaned services (not declared by project)                                                                                                                                                                                                                                                                                                                                    |
+| `-q`, `--quiet` |         | Only display IDs                                                                                                                                                                                                                                                                                                                                                                       |
+| `--services`    |         | Display services                                                                                                                                                                                                                                                                                                                                                                       |
+| `--status`      |         | Filter services by status. Values: \[paused \| restarting \| removing \| running \| dead \| created \| exited]                                                                                                                                                                                                                                                                         |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--dry-run` |  | Execute command in dry run mode |
+| Option      | Default | Description                     |
+| ----------- | ------- | ------------------------------- |
+| `--dry-run` |         | Execute command in dry run mode |
 
 ## Examples
 
@@ -114,7 +114,7 @@ example-bar-1   alpine    "/entrypoint.…"   bar        4 seconds ago   exited 
 
 ### Filter containers by status (--filter) {#filter}
 
-The [`--status` flag](#status) is a convenient shorthand for the `--filter status=<status>`
+The `--status` flag is a convenient shorthand for the `--filter status=<status>`
 flag. The example below is the equivalent to the example from the previous section,
 this time using the `--filter` flag:
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_image_build.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_image_build.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_image_build.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_image_build.yaml)
 
 # docker image build
 
@@ -10,16 +10,16 @@ Build an image from a Dockerfile
 
 ## Description
 
-> [!IMPORTANT]
+> \[!IMPORTANT]
 > This page refers to the **legacy implementation** of `docker build`,
 > using the legacy (pre-BuildKit) build backend.
 > This configuration is only relevant if you're building Windows containers.
 >
 > For information about the default `docker build`, using Buildx,
-> see [`docker buildx build`](/reference/cli/docker/buildx/build/).
+> see [`docker buildx build`](https://docs.docker.com/reference/cli/docker/buildx/build/).
 
 When building with legacy builder, images are created from a Dockerfile by
-running a sequence of [commits](/reference/cli/docker/container/commit/). This process is
+running a sequence of [commits](https://docs.docker.com/reference/cli/docker/container/commit/). This process is
 inefficient and slow compared to using BuildKit, which is why this build
 strategy is deprecated for all use cases except for building Windows
 containers. It's still useful for building Windows containers because BuildKit
@@ -34,7 +34,7 @@ The descriptions on this page only covers information that's exclusive to the
 legacy builder, and cases where behavior in the legacy builder deviates from
 behavior in BuildKit. For information about features and flags that are common
 between the legacy builder and BuildKit, such as `--tag` and `--target`, refer
-to the documentation for [`docker buildx build`](/reference/cli/docker/buildx/build/).
+to the documentation for [`docker buildx build`](https://docs.docker.com/reference/cli/docker/buildx/build/).
 
 ### Build context with the legacy builder
 
@@ -55,7 +55,7 @@ in the context.
 
 When using the legacy builder, it's therefore extra important that you
 carefully consider what files you include in the context you specify. Use a
-[`.dockerignore`](/build/concepts/context/#dockerignore-files)
+[`.dockerignore`](https://docs.docker.com/build/concepts/context/#dockerignore-files)
 file to exclude files and directories that you don't require in your build from
 being sent as part of the build context.
 
@@ -82,37 +82,37 @@ of the build context. Reusing the previous example, the path `COPY
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--add-host` |  | Add a custom host-to-IP mapping (`host:ip`) |
-| `--build-arg` |  | Set build-time variables |
-| `--cache-from` |  | Images to consider as cache sources |
-| `--cgroup-parent` |  | Set the parent cgroup for the `RUN` instructions during build |
-| `--compress` |  | Compress the build context using gzip |
-| `--cpu-period` |  | Limit the CPU CFS (Completely Fair Scheduler) period |
-| `--cpu-quota` |  | Limit the CPU CFS (Completely Fair Scheduler) quota |
-| `-c`, `--cpu-shares` |  | CPU shares (relative weight) |
-| `--cpuset-cpus` |  | CPUs in which to allow execution (0-3, 0,1) |
-| `--cpuset-mems` |  | MEMs in which to allow execution (0-3, 0,1) |
-| `-f`, `--file` |  | Name of the Dockerfile (Default is `PATH/Dockerfile`) |
-| `--force-rm` |  | Always remove intermediate containers |
-| `--iidfile` |  | Write the image ID to the file |
-| `--isolation` |  | Container isolation technology |
-| `--label` |  | Set metadata for an image |
-| `-m`, `--memory` |  | Memory limit |
-| `--memory-swap` |  | Swap limit equal to memory plus swap: -1 to enable unlimited swap |
-| `--network` |  | Set the networking mode for the RUN instructions during build (API 1.25+) |
-| `--no-cache` |  | Do not use cache when building the image |
-| `--platform` |  | Set platform if server is multi-platform capable (API 1.38+) |
-| `--pull` |  | Always attempt to pull a newer version of the image |
-| `-q`, `--quiet` |  | Suppress the build output and print image ID on success |
-| `--rm` | `true` | Remove intermediate containers after a successful build |
-| `--security-opt` |  | Security options |
-| `--shm-size` |  | Size of `/dev/shm` |
-| `--squash` |  | Squash newly built layers into a single new layer (API 1.25+, Experimental) |
-| `-t`, `--tag` |  | Name and optionally a tag in the `name:tag` format |
-| `--target` |  | Set the target build stage to build. |
-| `--ulimit` |  | Ulimit options |
+| Option               | Default | Description                                                                 |
+| -------------------- | ------- | --------------------------------------------------------------------------- |
+| `--add-host`         |         | Add a custom host-to-IP mapping (`host:ip`)                                 |
+| `--build-arg`        |         | Set build-time variables                                                    |
+| `--cache-from`       |         | Images to consider as cache sources                                         |
+| `--cgroup-parent`    |         | Set the parent cgroup for the `RUN` instructions during build               |
+| `--compress`         |         | Compress the build context using gzip                                       |
+| `--cpu-period`       |         | Limit the CPU CFS (Completely Fair Scheduler) period                        |
+| `--cpu-quota`        |         | Limit the CPU CFS (Completely Fair Scheduler) quota                         |
+| `-c`, `--cpu-shares` |         | CPU shares (relative weight)                                                |
+| `--cpuset-cpus`      |         | CPUs in which to allow execution (0-3, 0,1)                                 |
+| `--cpuset-mems`      |         | MEMs in which to allow execution (0-3, 0,1)                                 |
+| `-f`, `--file`       |         | Name of the Dockerfile (Default is `PATH/Dockerfile`)                       |
+| `--force-rm`         |         | Always remove intermediate containers                                       |
+| `--iidfile`          |         | Write the image ID to the file                                              |
+| `--isolation`        |         | Container isolation technology                                              |
+| `--label`            |         | Set metadata for an image                                                   |
+| `-m`, `--memory`     |         | Memory limit                                                                |
+| `--memory-swap`      |         | Swap limit equal to memory plus swap: -1 to enable unlimited swap           |
+| `--network`          |         | Set the networking mode for the RUN instructions during build (API 1.25+)   |
+| `--no-cache`         |         | Do not use cache when building the image                                    |
+| `--platform`         |         | Set platform if server is multi-platform capable (API 1.38+)                |
+| `--pull`             |         | Always attempt to pull a newer version of the image                         |
+| `-q`, `--quiet`      |         | Suppress the build output and print image ID on success                     |
+| `--rm`               | `true`  | Remove intermediate containers after a successful build                     |
+| `--security-opt`     |         | Security options                                                            |
+| `--shm-size`         |         | Size of `/dev/shm`                                                          |
+| `--squash`           |         | Squash newly built layers into a single new layer (API 1.25+, Experimental) |
+| `-t`, `--tag`        |         | Name and optionally a tag in the `name:tag` format                          |
+| `--target`           |         | Set the target build stage to build.                                        |
+| `--ulimit`           |         | Ulimit options                                                              |
 
 ## Examples
 
@@ -124,7 +124,7 @@ technology. On Linux, the only supported is the `default` option which uses
 Linux namespaces. On Microsoft Windows, you can specify these values:
 
 | Value     | Description                                                                                                                                                                    |
-|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `default` | Use the value specified by the Docker daemon's `--exec-opt` . If the `daemon` does not specify an isolation technology, Microsoft Windows uses `process` as its default value. |
 | `process` | Namespace isolation only.                                                                                                                                                      |
 | `hyperv`  | Hyper-V hypervisor partition-based isolation.                                                                                                                                  |
@@ -139,7 +139,7 @@ the `credentialspec` option. The `credentialspec` must be in the format
 
 #### Overview
 
-> [!NOTE]
+> \[!NOTE]
 > The `--squash` option is an experimental feature, and should not be considered
 > stable.
 
@@ -158,7 +158,7 @@ images (saving space).
 
 For most use cases, multi-stage builds are a better alternative, as they give more
 fine-grained control over your build, and can take advantage of future
-optimizations in the builder. Refer to the [Multi-stage builds](/build/building/multi-stage/)
+optimizations in the builder. Refer to the [Multi-stage builds](https://docs.docker.com/build/building/multi-stage/)
 section for more information.
 
 #### Known limitations

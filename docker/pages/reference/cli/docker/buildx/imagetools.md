@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/buildx/docker_buildx_imagetools.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_imagetools.yaml)
+> Pinned source for Docker main: [data/cli/buildx/docker_buildx_imagetools.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_imagetools.yaml)
 
 # docker buildx imagetools
 
@@ -14,10 +14,10 @@ to check multi-platform configuration and attestations.
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--builder` |  | Override the configured builder instance |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option          | Default | Description                              |
+| --------------- | ------- | ---------------------------------------- |
+| `--builder`     |         | Override the configured builder instance |
+| `-D`, `--debug` |         | Enable debug logging                     |
 
 ## Subcommands
 
@@ -28,4 +28,4 @@ to check multi-platform configuration and attestations.
 
 ### Override the configured builder instance (--builder) {#builder}
 
-Same as [`buildx --builder`](/reference/cli/docker/buildx/#builder).
+Same as [`buildx --builder`](https://docs.docker.com/reference/cli/docker/buildx/#builder).

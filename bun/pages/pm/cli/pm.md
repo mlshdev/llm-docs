@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/pm/cli/pm.mdx](https://bun.com/docs/pm/cli/pm)
+> Pinned source for Bun bun-v1.4.2: [docs/pm/cli/pm.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/pm/cli/pm.mdx)
+> Canonical documentation: https://bun.com/docs/pm/cli/pm
 
 The `bun pm` command group is a set of utilities for working with Bun's package manager.
 

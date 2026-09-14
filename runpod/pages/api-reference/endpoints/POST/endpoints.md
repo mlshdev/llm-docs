@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [api-reference/endpoints/POST/endpoints.mdx](https://docs.runpod.io/api-reference/endpoints/POST/endpoints)
+> Pinned source for Runpod main: [api-reference/endpoints/POST/endpoints.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/api-reference/endpoints/POST/endpoints.mdx)
+> Canonical documentation: https://docs.runpod.io/api-reference/endpoints/POST/endpoints
 
 # Create a new endpoint
 
@@ -8,9 +9,269 @@
 
 Create a new endpoint. Use this API reference to review authentication, request parameters, response fields, and errors for this Runpod operation.
 
-**Request body**: Create a new endpoint.
+**Authentication:** `ApiKey`
+
+**Request body** (required): Create a new endpoint.
+
+- Media type: `application/json`
+  - Schema (object)
+    - `allowedCudaVersions` (array): If the created Serverless endpoint is a GPU endpoint, a list of acceptable CUDA versions on the created workers. If not set, any CUDA version is acceptable.
+      - `items` (string; enum: `13.0`, `12.9`, `12.8`, `12.7`, `12.6`, `12.5`, `12.4`, `12.3`, `12.2`, `12.1`, `12.0`, `11.8`)
+    - `computeType` (string; enum: `GPU`, `CPU`; default: `GPU`): Set to GPU to create a Serverless endpoint with GPU workers. Set to CPU to create a Serverless endpoint with CPU workers. If set to CPU, properties related to GPUs such as gpuTypeIds will be ignored. If set to GPU, properties related to CPUs such as cpuFlavorIds will be ignored.
+    - `cpuFlavorIds` (array): If the created Serverless endpoint is a CPU endpoint, a list of Runpod CPU flavors which can be attached to the created workers. The order of the list determines the order to rent CPU flavors.
+      - `items` (string; enum: `cpu3c`, `cpu3g`, `cpu5c`, `cpu5g`)
+    - `dataCenterIds` (array; default: `["EU-RO-1","CA-MTL-1","EU-SE-1","US-IL-1","EUR-IS-1","EU-CZ-1","US-TX-3","EUR-IS-2","US-KS-2","US-GA-2","US-WA-1","US-TX-1","CA-MTL-3","EU-NL-1","US-TX-4","US-CA-2","US-NC-1","OC-AU-1","US-DE-1","EUR-IS-3","CA-MTL-2","AP-JP-1","EUR-NO-1","EU-FR-1","US-KS-3","US-GA-1"]`): A list of Runpod data center IDs where workers on the created Serverless endpoint can be located.
+      - Example: `["EU-RO-1","CA-MTL-1"]`
+      - `items` (string; enum: `EU-RO-1`, `CA-MTL-1`, `EU-SE-1`, `US-IL-1`, `EUR-IS-1`, `EU-CZ-1`, `US-TX-3`, `EUR-IS-2`, `US-KS-2`, `US-GA-2`, `US-WA-1`, `US-TX-1`, `CA-MTL-3`, `EU-NL-1`, `US-TX-4`, `US-CA-2`, `US-NC-1`, `OC-AU-1`, `US-DE-1`, `EUR-IS-3`, `CA-MTL-2`, `AP-JP-1`, `EUR-NO-1`, `EU-FR-1`, `US-KS-3`, `US-GA-1`)
+    - `executionTimeoutMs` (integer): The maximum number of milliseconds an individual request can run on a Serverless endpoint before the worker is stopped and the request is marked as failed.
+      - Example: `600000`
+    - `flashboot` (boolean): Whether to use flash boot for the created Serverless endpoint.
+      - Example: `true`
+    - `gpuCount` (integer; default: `1`; minimum: `1`): If the created Serverless endpoint is a GPU endpoint, the number of GPUs attached to each worker on the endpoint.
+    - `gpuTypeIds` (array): If the created Serverless endpoint is a GPU endpoint, a list of Runpod GPU types which can be attached to the created workers. The order of the list determines the order to rent GPU types.
+      - `items` (string; enum: `NVIDIA GeForce RTX 4090`, `NVIDIA A40`, `NVIDIA RTX A5000`, `NVIDIA GeForce RTX 5090`, `NVIDIA H100 80GB HBM3`, `NVIDIA GeForce RTX 3090`, `NVIDIA RTX A4500`, `NVIDIA L40S`, `NVIDIA H200`, `NVIDIA L4`, `NVIDIA RTX 6000 Ada Generation`, `NVIDIA A100-SXM4-80GB`, `NVIDIA RTX 4000 Ada Generation`, `NVIDIA RTX A6000`, `NVIDIA A100 80GB PCIe`, `NVIDIA RTX 2000 Ada Generation`, `NVIDIA RTX A4000`, `NVIDIA RTX PRO 6000 Blackwell Server Edition`, `NVIDIA H100 PCIe`, `NVIDIA H100 NVL`, `NVIDIA L40`, `NVIDIA B200`, `NVIDIA GeForce RTX 3080 Ti`, `NVIDIA RTX PRO 6000 Blackwell Workstation Edition`, `NVIDIA GeForce RTX 3080`, `NVIDIA GeForce RTX 3070`, `AMD Instinct MI300X OAM`, `NVIDIA GeForce RTX 4080 SUPER`, `Tesla V100-PCIE-16GB`, `Tesla V100-SXM2-32GB`, `NVIDIA RTX 5000 Ada Generation`, `NVIDIA GeForce RTX 4070 Ti`, `NVIDIA RTX 4000 SFF Ada Generation`, `NVIDIA GeForce RTX 3090 Ti`, `NVIDIA RTX A2000`, `NVIDIA GeForce RTX 4080`, `NVIDIA A30`, `NVIDIA GeForce RTX 5080`, `Tesla V100-FHHL-16GB`, `NVIDIA H200 NVL`, `Tesla V100-SXM2-16GB`, `NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition`, `NVIDIA A5000 Ada`, `Tesla V100-PCIE-32GB`, `NVIDIA RTX A4500`, `NVIDIA A30`, `NVIDIA GeForce RTX 3080TI`, `Tesla T4`, `NVIDIA RTX A30`)
+    - `idleTimeout` (integer; default: `5`; minimum: `1`; maximum: `3600`): The number of seconds a worker on the created Serverless endpoint can run without taking a job before the worker is scaled down.
+    - `minCudaVersion` (string; enum: `13.0`, `12.9`, `12.8`, `12.7`, `12.6`, `12.5`, `12.4`, `12.3`, `12.2`, `12.1`, `12.0`, `11.8`): If the created Serverless endpoint is a GPU endpoint, the minimum acceptable CUDA version on the created workers.
+    - `name` (string; maximum length: `191`): A user-defined name for the created Serverless endpoint. The name does not need to be unique.
+    - `networkVolumeId` (string): The unique string identifying the network volume to attach to the created Serverless endpoint.
+    - `networkVolumeIds` (array): A list of network volume IDs to attach to the created Serverless endpoint. Allows multiple network volumes to be used with multi-region endpoints.
+      - `items` (string)
+    - `scalerType` (string; enum: `QUEUE_DELAY`, `REQUEST_COUNT`; default: `QUEUE_DELAY`): The method used to scale up workers on the created Serverless endpoint. If QUEUE\_DELAY, workers are scaled based on a periodic check to see if any requests have been in queue for too long. If REQUEST\_COUNT, the desired number of workers is periodically calculated based on the number of requests in the endpoint's queue. Use QUEUE\_DELAY if you need to ensure requests take no longer than a maximum latency, and use REQUEST\_COUNT if you need to scale based on the number of requests.
+    - `scalerValue` (integer; default: `4`; minimum: `1`): If the endpoint scalerType is QUEUE\_DELAY, the number of seconds a request can remain in queue before a new worker is scaled up. If the endpoint scalerType is REQUEST\_COUNT, the number of workers is increased as needed to meet the number of requests in the endpoint's queue divided by scalerValue.
+    - `templateId` (required; string): The unique string identifying the template used to create the Serverless endpoint.
+      - Example: `30zmvf89kd`
+    - `vcpuCount` (integer; default: `2`): If the created Serverless endpoint is a CPU endpoint, the number of vCPUs allocated to each created worker.
+    - `workersMax` (integer; minimum: `0`): The maximum number of workers that can be running at the same time on a Serverless endpoint.
+      - Example: `3`
+    - `workersMin` (integer; minimum: `0`): The minimum number of workers that will run at the same time on a Serverless endpoint. This number of workers will always stay running for the endpoint, and will be charged even if no requests are being processed, but they are charged at a lower rate than running autoscaling workers.
+      - Example: `0`
 
 **Responses**
 
 - `200`: Successful operation.
+  - Media type: `application/json`
+    - Schema (object)
+      - `allowedCudaVersions` (array): A list of acceptable CUDA versions for the workers on a Serverless endpoint. If not set, any CUDA version is acceptable.
+        - `items` (string; enum: `13.0`, `12.9`, `12.8`, `12.7`, `12.6`, `12.5`, `12.4`, `12.3`, `12.2`, `12.1`, `12.0`, `11.8`)
+      - `computeType` (string; enum: `CPU`, `GPU`): The type of compute used by workers on a Serverless endpoint.
+        - Example: `GPU`
+      - `createdAt` (string): The UTC timestamp when a Serverless endpoint was created.
+        - Example: `2024-07-12T19:14:40.144Z`
+      - `dataCenterIds` (array; default: `["EU-RO-1","CA-MTL-1","EU-SE-1","US-IL-1","EUR-IS-1","EU-CZ-1","US-TX-3","EUR-IS-2","US-KS-2","US-GA-2","US-WA-1","US-TX-1","CA-MTL-3","EU-NL-1","US-TX-4","US-CA-2","US-NC-1","OC-AU-1","US-DE-1","EUR-IS-3","CA-MTL-2","AP-JP-1","EUR-NO-1","EU-FR-1","US-KS-3","US-GA-1"]`): A list of Runpod data center IDs where workers on a Serverless endpoint can be located.
+        - Example: `EU-NL-1,EU-RO-1,EU-SE-1`
+        - `items` (string; enum: `EU-RO-1`, `CA-MTL-1`, `EU-SE-1`, `US-IL-1`, `EUR-IS-1`, `EU-CZ-1`, `US-TX-3`, `EUR-IS-2`, `US-KS-2`, `US-GA-2`, `US-WA-1`, `US-TX-1`, `CA-MTL-3`, `EU-NL-1`, `US-TX-4`, `US-CA-2`, `US-NC-1`, `OC-AU-1`, `US-DE-1`, `EUR-IS-3`, `CA-MTL-2`, `AP-JP-1`, `EUR-NO-1`, `EU-FR-1`, `US-KS-3`, `US-GA-1`)
+      - `env` (object; default: `{}`)
+        - Example: `{"ENV_VAR":"value"}`
+        - `items` (string)
+      - `executionTimeoutMs` (integer): The maximum number of milliseconds an individual request can run on a Serverless endpoint before the worker is stopped and the request is marked as failed.
+        - Example: `600000`
+      - `gpuCount` (integer): The number of GPUs attached to each worker on a Serverless endpoint.
+        - Example: `1`
+      - `gpuTypeIds` (array): A list of Runpod GPU types which can be attached to a Serverless endpoint.
+        - `items` (string; enum: `NVIDIA GeForce RTX 4090`, `NVIDIA A40`, `NVIDIA RTX A5000`, `NVIDIA GeForce RTX 5090`, `NVIDIA H100 80GB HBM3`, `NVIDIA GeForce RTX 3090`, `NVIDIA RTX A4500`, `NVIDIA L40S`, `NVIDIA H200`, `NVIDIA L4`, `NVIDIA RTX 6000 Ada Generation`, `NVIDIA A100-SXM4-80GB`, `NVIDIA RTX 4000 Ada Generation`, `NVIDIA RTX A6000`, `NVIDIA A100 80GB PCIe`, `NVIDIA RTX 2000 Ada Generation`, `NVIDIA RTX A4000`, `NVIDIA RTX PRO 6000 Blackwell Server Edition`, `NVIDIA H100 PCIe`, `NVIDIA H100 NVL`, `NVIDIA L40`, `NVIDIA B200`, `NVIDIA GeForce RTX 3080 Ti`, `NVIDIA RTX PRO 6000 Blackwell Workstation Edition`, `NVIDIA GeForce RTX 3080`, `NVIDIA GeForce RTX 3070`, `AMD Instinct MI300X OAM`, `NVIDIA GeForce RTX 4080 SUPER`, `Tesla V100-PCIE-16GB`, `Tesla V100-SXM2-32GB`, `NVIDIA RTX 5000 Ada Generation`, `NVIDIA GeForce RTX 4070 Ti`, `NVIDIA RTX 4000 SFF Ada Generation`, `NVIDIA GeForce RTX 3090 Ti`, `NVIDIA RTX A2000`, `NVIDIA GeForce RTX 4080`, `NVIDIA A30`, `NVIDIA GeForce RTX 5080`, `Tesla V100-FHHL-16GB`, `NVIDIA H200 NVL`, `Tesla V100-SXM2-16GB`, `NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition`, `NVIDIA A5000 Ada`, `Tesla V100-PCIE-32GB`, `NVIDIA RTX A4500`, `NVIDIA A30`, `NVIDIA GeForce RTX 3080TI`, `Tesla T4`, `NVIDIA RTX A30`)
+      - `id` (string): A unique string identifying a Serverless endpoint.
+        - Example: `jpnw0v75y3qoql`
+      - `idleTimeout` (integer): The number of seconds a worker on a Serverless endpoint can be running without taking a job before the worker is scaled down.
+        - Example: `5`
+      - `instanceIds` (array): For CPU Serverless endpoints, a list of instance IDs that can be attached to a Serverless endpoint.
+        - Example: `["cpu3c-8-16"]`
+        - `items` (string)
+      - `minCudaVersion` (string; enum: `13.0`, `12.9`, `12.8`, `12.7`, `12.6`, `12.5`, `12.4`, `12.3`, `12.2`, `12.1`, `12.0`, `11.8`): The minimum acceptable CUDA version for the workers on a Serverless endpoint.
+      - `name` (string): A user-defined name for a Serverless endpoint. The name does not need to be unique.
+        - Example: `my endpoint`
+      - `networkVolumeId` (string): The unique string identifying the network volume to attach to the Serverless endpoint.
+        - Example: `agv6w2qcg7`
+      - `networkVolumeIds` (array): A list of network volume IDs attached to the Serverless endpoint. Allows multiple network volumes to be used with multi-region endpoints.
+        - Example: `["agv6w2qcg7","bxh7w3rch8"]`
+        - `items` (string)
+      - `scalerType` (string; enum: `QUEUE_DELAY`, `REQUEST_COUNT`): The method used to scale up workers on a Serverless endpoint. If QUEUE\_DELAY, workers are scaled based on a periodic check to see if any requests have been in queue for too long. If REQUEST\_COUNT, the desired number of workers is periodically calculated based on the number of requests in the endpoint's queue. Use QUEUE\_DELAY if you need to ensure requests take no longer than a maximum latency, and use REQUEST\_COUNT if you need to scale based on the number of requests.
+        - Example: `QUEUE_DELAY`
+      - `scalerValue` (integer): If the endpoint scalerType is QUEUE\_DELAY, the number of seconds a request can remain in queue before a new worker is scaled up. If the endpoint scalerType is REQUEST\_COUNT, the number of workers is increased as needed to meet the number of requests in the endpoint's queue divided by scalerValue.
+        - Example: `4`
+      - `template` (object)
+        - `category` (string): The category of the template. The category can be used to filter templates in the Runpod UI. Current categories are NVIDIA, AMD, and CPU.
+          - Example: `NVIDIA`
+        - `containerDiskInGb` (integer): The amount of disk space, in gigabytes (GB), to allocate on the container disk for a Pod or worker. The data on the container disk is wiped when the Pod or worker restarts. To persist data across restarts, set volumeInGb to configure the local network volume.
+          - Example: `50`
+        - `containerRegistryAuthId` (string)
+        - `dockerEntrypoint` (array): If specified, overrides the ENTRYPOINT for the Docker image run on a Pod or worker. If \[], uses the ENTRYPOINT defined in the image.
+          - Example: `[]`
+          - `items` (string)
+        - `dockerStartCmd` (array): If specified, overrides the start CMD for the Docker image run on a Pod or worker. If \[], uses the start CMD defined in the image.
+          - Example: `[]`
+          - `items` (string)
+        - `earned` (number): The amount of Runpod credits earned by the creator of a template by all Pods or workers created from the template.
+          - Example: `100`
+        - `env` (object; default: `{}`)
+          - Example: `{"ENV_VAR":"value"}`
+          - `items` (string)
+        - `id` (string): A unique string identifying a template.
+          - Example: `30zmvf89kd`
+        - `imageName` (string): The image tag for the container run on Pods or workers created from a template.
+          - Example: `runpod/pytorch:2.1.0-py3.10-cuda11.8.0-devel-ubuntu22.04`
+        - `isPublic` (boolean): Set to true if a template is public and can be used by any Runpod user. Set to false if a template is private and can only be used by the creator.
+          - Example: `false`
+        - `isRunpod` (boolean): If true, a template is an official template managed by Runpod.
+          - Example: `true`
+        - `isServerless` (boolean): If true, instances created from a template are Serverless workers. If false, instances created from a template are Pods.
+          - Example: `true`
+        - `name` (string): A user-defined name for a template. The name needs to be unique.
+          - Example: `my template`
+        - `ports` (array): A list of ports exposed on a Pod or worker. Each port is formatted as \[port number]/\[protocol]. Protocol can be either http or tcp.
+          - Example: `["8888/http","22/tcp"]`
+          - `items` (string)
+        - `readme` (string): A string of markdown-formatted text that describes a template. The readme is displayed in the Runpod UI when a user selects the template.
+        - `runtimeInMin` (integer)
+        - `volumeInGb` (integer): The amount of disk space, in gigabytes (GB), to allocate on the local network volume for a Pod or worker. The data on the local network volume is persisted across restarts. To persist data so that future Pods and workers can access it, create a network volume and set networkVolumeId to attach it to the Pod or worker.
+          - Example: `20`
+        - `volumeMountPath` (string): If a local network volume or network volume is attached to a Pod or worker, the absolute path where the network volume is mounted in the filesystem.
+          - Example: `/workspace`
+      - `templateId` (string): The unique string identifying the template used to create a Serverless endpoint.
+        - Example: `30zmvf89kd`
+      - `userId` (string): A unique string identifying the Runpod user who created a Serverless endpoint.
+        - Example: `user_2PyTJrLzeuwfZilRZ7JhCQDuSqo`
+      - `version` (integer): The latest version of a Serverless endpoint, which is updated whenever the template or environment variables of the endpoint are changed.
+        - Example: `0`
+      - `workers` (array): Information about current workers on a Serverless endpoint.
+        - `items` (object)
+          - `adjustedCostPerHr` (number): The effective cost in Runpod credits per hour of running a Pod, adjusted by active Savings Plans.
+            - Example: `0.69`
+          - `aiApiId` (string): Synonym for endpointId (legacy name).
+            - Example: `null`
+          - `consumerUserId` (string): A unique string identifying the Runpod user who rents a Pod.
+            - Example: `user_2PyTJrLzeuwfZilRZ7JhCQDuSqo`
+          - `containerDiskInGb` (integer): The amount of disk space, in gigabytes (GB), to allocate on the container disk for a Pod. The data on the container disk is wiped when the Pod restarts. To persist data across Pod restarts, set volumeInGb to configure the Pod network volume.
+            - Example: `50`
+          - `containerRegistryAuthId` (string): If a Pod is created with a container registry auth, the unique string identifying that container registry auth.
+            - Example: `clzdaifot0001l90809257ynb`
+          - `costPerHr` (number; format: currency): The cost in Runpod credits per hour of running a Pod. Note that the actual cost may be lower if Savings Plans are applied.
+            - Example: `0.74`
+          - `cpuFlavorId` (string): If the Pod is a CPU Pod, the unique string identifying the CPU flavor the Pod is running on.
+            - Example: `cpu3c`
+          - `desiredStatus` (string; enum: `RUNNING`, `EXITED`, `TERMINATED`): The current expected status of a Pod.
+          - `dockerEntrypoint` (array): If specified, overrides the ENTRYPOINT for the Docker image run on the created Pod. If \[], uses the ENTRYPOINT defined in the image.
+            - `items` (string)
+          - `dockerStartCmd` (array): If specified, overrides the start CMD for the Docker image run on the created Pod. If \[], uses the start CMD defined in the image.
+            - `items` (string)
+          - `endpointId` (string): If the Pod is a Serverless worker, a unique string identifying the associated endpoint.
+            - Example: `null`
+          - `env` (object; default: `{}`)
+            - Example: `{"ENV_VAR":"value"}`
+            - `items` (string)
+          - `gpu` (object)
+            - `id` (string)
+            - `count` (integer): The number of GPUs attached to a Pod.
+              - Example: `1`
+            - `displayName` (string)
+            - `securePrice` (number)
+            - `communityPrice` (number)
+            - `oneMonthPrice` (number)
+            - `threeMonthPrice` (number)
+            - `sixMonthPrice` (number)
+            - `oneWeekPrice` (number)
+            - `communitySpotPrice` (number)
+            - `secureSpotPrice` (number)
+          - `id` (string): A unique string identifying a Pod.
+            - Example: `xedezhzb9la3ye`
+          - `image` (string): The image tag for the container run on a Pod.
+            - Example: `runpod/pytorch:2.1.0-py3.10-cuda11.8.0-devel-ubuntu22.04`
+          - `interruptible` (boolean): Describes how a Pod is rented. An interruptible Pod can be rented at a lower cost but can be stopped at any time to free up resources for another Pod. A reserved Pod is rented at a higher cost but runs until it exits or is manually stopped.
+            - Example: `false`
+          - `lastStartedAt` (string): The UTC timestamp when a Pod was last started.
+            - Example: `2024-07-12T19:14:40.144Z`
+          - `lastStatusChange` (string): A string describing the last lifecycle event on a Pod.
+            - Example: `Rented by User: Fri Jul 12 2024 15:14:40 GMT-0400 (Eastern Daylight Time)`
+          - `locked` (boolean): Set to true to lock a Pod. Locking a Pod disables stopping or resetting the Pod.
+            - Example: `false`
+          - `machine` (object): Information about the machine a Pod is running on (see Machine).
+            - `minPodGpuCount` (integer)
+            - `gpuTypeId` (string)
+            - `gpuType` (object)
+              - `id` (string)
+              - `count` (integer): The number of GPUs attached to a Pod.
+                - Example: `1`
+              - `displayName` (string)
+              - `securePrice` (number)
+              - `communityPrice` (number)
+              - `oneMonthPrice` (number)
+              - `threeMonthPrice` (number)
+              - `sixMonthPrice` (number)
+              - `oneWeekPrice` (number)
+              - `communitySpotPrice` (number)
+              - `secureSpotPrice` (number)
+            - `cpuCount` (integer)
+            - `cpuTypeId` (string)
+            - `cpuType` (object)
+              - `id` (string)
+              - `displayName` (string)
+              - `cores` (number)
+              - `threadsPerCore` (number)
+              - `groupId` (string)
+            - `location` (string)
+            - `dataCenterId` (string)
+            - `diskThroughputMBps` (integer)
+            - `maxDownloadSpeedMbps` (integer)
+            - `maxUploadSpeedMbps` (integer)
+            - `supportPublicIp` (boolean)
+            - `secureCloud` (boolean)
+            - `maintenanceStart` (string)
+            - `maintenanceEnd` (string)
+            - `maintenanceNote` (string)
+            - `note` (string)
+            - `costPerHr` (number)
+            - `currentPricePerGpu` (number)
+            - `gpuAvailable` (integer)
+            - `gpuDisplayName` (string)
+          - `machineId` (string): A unique string identifying the host machine a Pod is running on.
+            - Example: `s194cr8pls2z`
+          - `memoryInGb` (number): The amount of RAM, in gigabytes (GB), attached to a Pod.
+            - Example: `62`
+          - `name` (string; maximum length: `191`): A user-defined name for the created Pod. The name does not need to be unique.
+          - `networkVolume` (object): If a network volume is attached to a Pod, information about the network volume (see network volume schema).
+            - `id` (string): A unique string identifying a network volume.
+              - Example: `agv6w2qcg7`
+            - `name` (string): A user-defined name for a network volume. The name does not need to be unique.
+              - Example: `my network volume`
+            - `size` (integer): The amount of disk space, in gigabytes (GB), allocated to a network volume.
+              - Example: `50`
+            - `dataCenterId` (string): The Runpod data center ID where a network volume is located.
+              - Example: `EU-RO-1`
+          - `portMappings` (object; nullable): A mapping of internal ports to public ports on a Pod. For example, { "22": 10341 } means that port 22 on the Pod is mapped to port 10341 and is publicly accessible at \[public ip]:10341. If the Pod is still initializing, this mapping is not yet determined and will be empty.
+            - Example: `{"22":10341}`
+            - `items` (integer)
+          - `ports` (array): A list of ports exposed on a Pod. Each port is formatted as \[port number]/\[protocol]. Protocol can be either http or tcp.
+            - Example: `["8888/http","22/tcp"]`
+            - `items` (string)
+          - `publicIp` (string; format: ipv4; nullable): The public IP address of a Pod. If the Pod is still initializing, this IP is not yet determined and will be empty.
+            - Example: `100.65.0.119`
+          - `savingsPlans` (array): The list of active Savings Plans applied to a Pod (see Savings Plans). If none are applied, the list is empty.
+            - `items` (object)
+              - `costPerHr` (number)
+                - Example: `0.21`
+              - `endTime` (string)
+                - Example: `2024-07-12T19:14:40.144Z`
+              - `gpuTypeId` (string)
+                - Example: `NVIDIA GeForce RTX 4090`
+              - `id` (string)
+                - Example: `clkrb4qci0000mb09c7sualzo`
+              - `podId` (string)
+                - Example: `xedezhzb9la3ye`
+              - `startTime` (string)
+                - Example: `2024-05-12T19:14:40.144Z`
+          - `slsVersion` (integer): If the Pod is a Serverless worker, the version of the associated endpoint (see Endpoint Version).
+            - Example: `0`
+          - `templateId` (string): If a Pod is created with a template, the unique string identifying that template.
+            - Example: `null`
+          - `vcpuCount` (number): The number of virtual CPUs attached to a Pod.
+            - Example: `24`
+          - `volumeEncrypted` (boolean): Set to true if the local network volume of a Pod is encrypted. Can only be set when creating a Pod.
+            - Example: `false`
+          - `volumeInGb` (integer): The amount of disk space, in gigabytes (GB), to allocate on the Pod volume for a Pod. The data on the Pod volume is persisted across Pod restarts. To persist data so that future Pods can access it, create a network volume and set networkVolumeId to attach it to the Pod.
+            - Example: `20`
+          - `volumeMountPath` (string): If either a Pod volume or a network volume is attached to a Pod, the absolute path where the network volume is mounted in the filesystem.
+            - Example: `/workspace`
+      - `workersMax` (integer): The maximum number of workers that can be running at the same time on a Serverless endpoint.
+        - Example: `3`
+      - `workersMin` (integer): The minimum number of workers that will run at the same time on a Serverless endpoint. This number of workers will always stay running for the endpoint, and will be charged even if no requests are being processed, but they are charged at a lower rate than running autoscaling workers.
+        - Example: `0`
 - `400`: Invalid input.

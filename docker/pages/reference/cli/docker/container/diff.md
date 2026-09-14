@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_container_diff.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_diff.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_container_diff.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_diff.yaml)
 
 # docker container diff
 
@@ -14,7 +14,7 @@ List the changed files and directories in a container᾿s filesystem since the
 container was created. Three different types of change are tracked:
 
 | Symbol | Description                     |
-|--------|---------------------------------|
+| ------ | ------------------------------- |
 | `A`    | A file or directory was added   |
 | `D`    | A file or directory was deleted |
 | `C`    | A file or directory was changed |

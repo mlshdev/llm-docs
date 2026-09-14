@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/buildx/docker_buildx_history_inspect_attachment.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_history_inspect_attachment.yaml)
+> Pinned source for Docker main: [data/cli/buildx/docker_buildx_history_inspect_attachment.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_history_inspect_attachment.yaml)
 
 # docker buildx history inspect attachment
 
@@ -14,17 +14,17 @@ platform-specific.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--platform` |  | Platform of attachment |
-| `--type` |  | Type of attachment |
+| Option       | Default | Description            |
+| ------------ | ------- | ---------------------- |
+| `--platform` |         | Platform of attachment |
+| `--type`     |         | Type of attachment     |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--builder` |  | Override the configured builder instance |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option          | Default | Description                              |
+| --------------- | ------- | ---------------------------------------- |
+| `--builder`     |         | Override the configured builder instance |
+| `-D`, `--debug` |         | Enable debug logging                     |
 
 ## Examples
 
@@ -53,11 +53,12 @@ $ docker buildx history inspect attachment --platform linux/amd64
 ### Inspect an attachment by type (--type) {#type}
 
 Supported types include:
-* `index`
-* `manifest`
-* `image`
-* `provenance`
-* `sbom`
+
+- `index`
+- `manifest`
+- `image`
+- `provenance`
+- `sbom`
 
 #### Index
 

@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/func.sgml#functions-event-triggers](https://www.postgresql.org/docs/18/functions-event-triggers.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/func.sgml#functions-event-triggers](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/func.sgml%23functions-event-triggers)
+> Canonical documentation: https://www.postgresql.org/docs/18/functions-event-triggers.html
 
 # Event Trigger Functions
 

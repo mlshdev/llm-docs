@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [host/sdk/cancel-maint.mdx](https://docs.vast.ai/host/sdk/cancel-maint)
+> Pinned source for Vast.ai main: [host/sdk/cancel-maint.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/host/sdk/cancel-maint.mdx)
+> Canonical documentation: https://docs.vast.ai/host/sdk/cancel-maint
 
 # VastAI.cancel_maint
 

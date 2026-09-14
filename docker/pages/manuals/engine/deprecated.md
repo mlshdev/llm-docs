@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/cli/docs/deprecated.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/cli/docs/deprecated.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/cli/docs/deprecated.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/cli/docs/deprecated.md)
 
 # Deprecated Docker Engine features
 

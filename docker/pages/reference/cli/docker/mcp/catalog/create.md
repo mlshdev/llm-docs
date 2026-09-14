@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/mcp/docker_mcp_catalog_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp_catalog_create.yaml)
+> Pinned source for Docker main: [data/cli/mcp/docker_mcp_catalog_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp_catalog_create.yaml)
 
 # docker mcp catalog create
 
@@ -12,10 +12,10 @@ Create a new catalog from a profile, legacy catalog, or community registry
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--from-community-registry` |  | Community registry hostname to fetch servers from (e.g. registry.modelcontextprotocol.io) |
-| `--from-legacy-catalog` |  | Legacy catalog URL to create the catalog from |
-| `--from-profile` |  | Profile ID to create the catalog from |
-| `--server` |  | Server to include specified with a URI: https:// (MCP Registry reference) or docker:// (Docker Image reference) or catalog:// (Catalog reference) or file:// (Local file path). Can be specified multiple times. |
-| `--title` |  | Title of the catalog |
+| Option                      | Default | Description                                                                                                                                                                                                       |
+| --------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--from-community-registry` |         | Community registry hostname to fetch servers from (e.g. registry.modelcontextprotocol.io)                                                                                                                         |
+| `--from-legacy-catalog`     |         | Legacy catalog URL to create the catalog from                                                                                                                                                                     |
+| `--from-profile`            |         | Profile ID to create the catalog from                                                                                                                                                                             |
+| `--server`                  |         | Server to include specified with a URI: https\:// (MCP Registry reference) or docker:// (Docker Image reference) or catalog:// (Catalog reference) or file:// (Local file path). Can be specified multiple times. |
+| `--title`                   |         | Title of the catalog                                                                                                                                                                                              |

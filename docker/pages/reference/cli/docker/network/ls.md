@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_network_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_network_ls.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_network_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_network_ls.yaml)
 
 # docker network ls
 
@@ -15,12 +15,12 @@ networks that span across multiple hosts in a cluster.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--filter` |  | Provide filter values (e.g. `driver=bridge`) |
-| `--format` |  | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to https://docs.docker.com/go/formatting/ for more information about formatting output with templates |
-| `--no-trunc` |  | Do not truncate the output |
-| `-q`, `--quiet` |  | Only display network IDs |
+| Option           | Default | Description                                                                                                                                                                                                                                                                                                                                                                            |
+| ---------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `-f`, `--filter` |         | Provide filter values (e.g. `driver=bridge`)                                                                                                                                                                                                                                                                                                                                           |
+| `--format`       |         | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to <https://docs.docker.com/go/formatting/> for more information about formatting output with templates |
+| `--no-trunc`     |         | Do not truncate the output                                                                                                                                                                                                                                                                                                                                                             |
+| `-q`, `--quiet`  |         | Only display network IDs                                                                                                                                                                                                                                                                                                                                                               |
 
 ## Examples
 
@@ -58,12 +58,12 @@ Multiple filter flags are combined as an `OR` filter. For example,
 
 The currently supported filters are:
 
-* driver
-* id (network's id)
-* label (`label=<key>` or `label=<key>=<value>`)
-* name (network's name)
-* scope (`swarm|global|local`)
-* type (`custom|builtin`)
+- driver
+- id (network's id)
+- label (`label=<key>` or `label=<key>=<value>`)
+- name (network's name)
+- scope (`swarm|global|local`)
+- type (`custom|builtin`)
 
 #### Driver
 
@@ -202,7 +202,7 @@ using a Go template.
 Valid placeholders for the Go template are listed below:
 
 | Placeholder  | Description                                                                            |
-|--------------|----------------------------------------------------------------------------------------|
+| ------------ | -------------------------------------------------------------------------------------- |
 | `.ID`        | Network ID                                                                             |
 | `.Name`      | Network name                                                                           |
 | `.Driver`    | Network driver                                                                         |

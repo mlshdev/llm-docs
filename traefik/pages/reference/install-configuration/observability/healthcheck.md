@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/reference/install-configuration/observability/healthcheck.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/observability/healthcheck.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/reference/install-configuration/observability/healthcheck.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/install-configuration/observability/healthcheck.md)
 
 # CLI & Ping
 

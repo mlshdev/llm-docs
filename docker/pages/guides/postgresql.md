@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/postgresql.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/postgresql.md)
+> Pinned source for Docker main: [content/guides/postgresql.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/postgresql.md)
 
 ## Immediate setup & data persistence
 
@@ -624,6 +624,7 @@ ab7f984be43a0ca15534a9ee568716ddbe869a5875077fad3ef3192e3af7d288
 docker network ls
 # Output
 ab7f984be43a   my-app-net    bridge    local
+
 
 ```
 

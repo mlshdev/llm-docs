@@ -1,8 +1,9 @@
-> Commit-pinned source for SearXNG master: [docs/dev/engines/online/jina.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/jina.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/online/jina.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/jina.rst)
 
-.. \_jina engine:
+<a id="jina-engine"></a>
 
 # Jina Engine
 
-.. automodule:: searx.engines.jina
-:members:
+#### `searx.engines.jina`
+
+Static Python API reference (`automodule`).

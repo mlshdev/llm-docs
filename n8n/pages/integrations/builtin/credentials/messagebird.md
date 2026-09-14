@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/credentials/messagebird.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/credentials/messagebird.md)
+> Pinned source for n8n main: [docs/integrations/builtin/credentials/messagebird.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/credentials/messagebird.md)
 
 # MessageBird credentials <a id="messagebird-credentials"></a>
 

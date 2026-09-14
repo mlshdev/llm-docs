@@ -11,7 +11,7 @@ interface MarkdownNode {
   readonly type: string;
   url?: string;
   readonly alt?: string;
-  readonly value?: string;
+  value?: string;
   children?: MarkdownNode[];
   readonly [key: string]: unknown;
 }
@@ -47,53 +47,55 @@ export function parseFrontmatter(source: string): FrontmatterResult {
 
 export function cleanMarkdown(source: string): string {
   const { body } = parseFrontmatter(source);
-  const withoutComments = body
-    .replace(/<!--(?:.|\n)*?-->/g, "")
-    .replace(/<\/a>(?:\s*<\/a>)+/gi, "</a>");
-  const withoutAnchors = withoutComments
-    .replace(
-      /<a\b([^>]*)>([\s\S]*?)<\/a>/gi,
-      (tag, attributes: string, content: string) => {
-        const id = attributes.match(/\bid=(?:"([^"]*)"|'([^']*)')/i);
-        return id ? `<a id="${id[1] ?? id[2] ?? ""}"></a>${content}` : tag;
-      },
-    )
-    .replace(
-      /<a\b([^>]*\bid=(?:"[^"]*"|'[^']*')[^>]*)>(?!<\/a>)/gi,
-      (_tag, attributes: string) => {
-        const id = attributes.match(/\bid=(?:"([^"]*)"|'([^']*)')/i);
-        return `<a id="${id?.[1] ?? id?.[2] ?? ""}"></a>`;
-      },
-    );
+  const withoutAnchors = transformOutsideFencedCode(body, (markdown) =>
+    markdown
+      .replace(/<!--(?:.|\n)*?-->/g, "")
+      .replace(/<\/a>(?:\s*<\/a>)+/gi, "</a>")
+      .replace(
+        /<a\b([^>]*)>([\s\S]*?)<\/a>/gi,
+        (tag, attributes: string, content: string) => {
+          const id = attributes.match(/\bid=(?:"([^"]*)"|'([^']*)')/i);
+          return id ? `<a id="${id[1] ?? id[2] ?? ""}"></a>${content}` : tag;
+        },
+      )
+      .replace(
+        /<a\b([^>]*\bid=(?:"[^"]*"|'[^']*')[^>]*)>(?!<\/a>)/gi,
+        (_tag, attributes: string) => {
+          const id = attributes.match(/\bid=(?:"([^"]*)"|'([^']*)')/i);
+          return `<a id="${id?.[1] ?? id?.[2] ?? ""}"></a>`;
+        },
+      ),
+  );
   const lines = withoutAnchors.split("\n");
   const output: string[] = [];
-  let inFence = false;
+  let fence: MarkdownFence | undefined;
   for (let index = 0; index < lines.length; index += 1) {
     const line = lines[index] ?? "";
-    if (inFence) {
-      output.push(line.replace(/[ \t]+$/g, ""));
-      if (/^\s*(?:>\s*)*(?:```|~~~)\s*$/.test(line)) {
-        inFence = false;
+    if (fence) {
+      output.push(line);
+      if (isClosingFence(line, fence)) {
+        fence = undefined;
       }
       continue;
     }
-    const fence = line.match(
+    const tabFence = line.match(
       /^(\s*(?:>\s*)*)```([^\s]+)\s+tab=(?:"([^"]+)"|'([^']+)')\s*$/,
     );
-    if (fence) {
-      const prefix = fence[1] ?? "";
-      const label = fence[3] ?? fence[4] ?? "Example";
+    if (tabFence) {
+      const prefix = tabFence[1] ?? "";
+      const label = tabFence[3] ?? tabFence[4] ?? "Example";
       output.push(
         `${prefix}**${label}**`,
         prefix.trimEnd(),
-        `${prefix}\`\`\`${fence[2] ?? ""}`,
+        `${prefix}\`\`\`${tabFence[2] ?? ""}`,
       );
-      inFence = true;
+      fence = openingFence(output.at(-1) ?? "");
       continue;
     }
-    if (/^\s*(?:>\s*)*(?:```|~~~)/.test(line)) {
-      output.push(line.replace(/[ \t]+$/g, ""));
-      inFence = true;
+    const opened = openingFence(line);
+    if (opened) {
+      output.push(line);
+      fence = opened;
       continue;
     }
     const admonition = line.match(
@@ -301,8 +303,105 @@ export function rewriteMarkdownLinks(
       }
       node.url = resolved;
     }
+    if (node.type === "html" && node.value) {
+      node.value = transformOutsideCode(node.value, (html) =>
+        html.replace(
+          /<(a|img|source|video)\b[^>]*>/gi,
+          (tag: string, tagName: string) => {
+            const attribute = tagName.toLowerCase() === "a" ? "href" : "src";
+            const expression = new RegExp(
+              `\\s${attribute}=(?:"([^"]+)"|'([^']+)')`,
+              "i",
+            );
+            const match = tag.match(expression);
+            const url = match?.[1] ?? match?.[2];
+            if (!url) return tag;
+            const kind = attribute === "href" ? "link" : "image";
+            const resolved = resolver(url.replaceAll("&amp;", "&"), kind);
+            if (!resolved) {
+              return kind === "link" ? tag.replace(expression, "") : "";
+            }
+            if (!/^(?:[a-z][a-z0-9+.-]*:|\/\/|#)/i.test(resolved)) {
+              throw new Error(
+                `Link resolver returned a relative URL: ${resolved}`,
+              );
+            }
+            const quote = match?.[1] !== undefined ? '"' : "'";
+            return tag.replace(
+              expression,
+              ` ${attribute}=${quote}${resolved.replaceAll("&", "&amp;")}${quote}`,
+            );
+          },
+        ),
+      );
+    }
     return [node];
   }
+}
+
+export interface MarkdownLink {
+  readonly url: string;
+  readonly kind: "link" | "image";
+  readonly syntax?: "markdown" | "html";
+}
+
+export function markdownLinks(source: string): readonly MarkdownLink[] {
+  const tree = markdownParser.parse(source) as Root;
+  const links: MarkdownLink[] = [];
+  walk(tree as unknown as MarkdownNode);
+  return links;
+
+  function walk(node: MarkdownNode): void {
+    if ((node.type === "link" || node.type === "image") && node.url) {
+      links.push({ url: node.url, kind: node.type, syntax: "markdown" });
+    }
+    if (node.type === "html" && node.value) {
+      const html = withoutCode(node.value);
+      for (const match of html.matchAll(
+        /<(a|img|source|video)\b[^>]*?\s(href|src)=(?:"([^"]+)"|'([^']+)')[^>]*>/gi,
+      )) {
+        const tag = match[1]?.toLowerCase();
+        const attribute = match[2]?.toLowerCase();
+        const url = match[3] ?? match[4];
+        if (!url) continue;
+        links.push({
+          url: url.replaceAll("&amp;", "&"),
+          kind: tag === "a" && attribute === "href" ? "link" : "image",
+          syntax: "html",
+        });
+      }
+      // CommonMark treats a block-level HTML container and everything inside
+      // it as one HTML node. Markdown-looking links in that node are still
+      // published verbatim, so the final output contract must inspect them.
+      const nested = markdownParser.parse(
+        stripHtmlContainerLines(html),
+      ) as Root;
+      collectMarkdownAstLinks(nested as unknown as MarkdownNode, links);
+    }
+    for (const child of node.children ?? []) {
+      walk(child);
+    }
+  }
+}
+
+function stripHtmlContainerLines(value: string): string {
+  return value.replace(/^\s*<\/?[A-Za-z][^>]*>\s*$/gm, "");
+}
+
+function collectMarkdownAstLinks(
+  node: MarkdownNode,
+  links: MarkdownLink[],
+): void {
+  if ((node.type === "link" || node.type === "image") && node.url) {
+    links.push({ url: node.url, kind: node.type, syntax: "markdown" });
+  }
+  for (const child of node.children ?? []) {
+    collectMarkdownAstLinks(child, links);
+  }
+}
+
+export function documentLinks(source: string): readonly MarkdownLink[] {
+  return markdownLinks(source);
 }
 
 function collectFragments(root: MarkdownNode): ReadonlyMap<string, string> {
@@ -382,9 +481,124 @@ export function titleCase(value: string): string {
 }
 
 export function normalizeSpacing(value: string): string {
-  return `${normalizeNewlines(value)
-    .replace(/\n{3,}/g, "\n\n")
-    .trim()}\n`;
+  return `${transformOutsideFencedCode(normalizeNewlines(value), (markdown) =>
+    markdown.replace(/\n{3,}/g, "\n\n"),
+  ).trim()}\n`;
+}
+
+interface MarkdownFence {
+  readonly marker: "`" | "~";
+  readonly length: number;
+}
+
+function openingFence(line: string): MarkdownFence | undefined {
+  const match = line.match(/^\s*(?:>\s*)*(`{3,}|~{3,})/);
+  const run = match?.[1];
+  if (!run) {
+    return undefined;
+  }
+  return { marker: run[0] as "`" | "~", length: run.length };
+}
+
+function isClosingFence(line: string, fence: MarkdownFence): boolean {
+  const match = line.match(/^\s*(?:>\s*)*(`{3,}|~{3,})\s*$/);
+  const run = match?.[1];
+  return (
+    run !== undefined && run[0] === fence.marker && run.length >= fence.length
+  );
+}
+
+export function transformOutsideFencedCode(
+  source: string,
+  transform: (markdown: string) => string,
+): string {
+  return mapMarkdownSegments(source, transform, (code) => code);
+}
+
+function transformOutsideCode(
+  source: string,
+  transform: (markdown: string) => string,
+): string {
+  return mapMarkdownSegments(
+    source,
+    (markdown) => mapOutsideInlineCode(markdown, transform),
+    (code) => code,
+  );
+}
+
+function withoutCode(source: string): string {
+  return mapMarkdownSegments(
+    source,
+    (markdown) => markdown.replace(/(`+)[\s\S]*?\1/g, ""),
+    () => "",
+  );
+}
+
+function mapOutsideInlineCode(
+  source: string,
+  transform: (markdown: string) => string,
+): string {
+  const pattern = /(`+)[\s\S]*?\1/g;
+  let cursor = 0;
+  let output = "";
+  for (const match of source.matchAll(pattern)) {
+    const index = match.index ?? 0;
+    output += transform(source.slice(cursor, index));
+    output += match[0];
+    cursor = index + match[0].length;
+  }
+  return output + transform(source.slice(cursor));
+}
+
+export function withoutFencedCode(source: string): string {
+  return mapMarkdownSegments(
+    source,
+    (markdown) => markdown,
+    () => "",
+  );
+}
+
+function mapMarkdownSegments(
+  source: string,
+  outside: (markdown: string) => string,
+  inside: (code: string) => string,
+): string {
+  const lines = source.split("\n");
+  const segments: string[] = [];
+  let pending: string[] = [];
+  let fence: MarkdownFence | undefined;
+  let pendingIsFence = false;
+
+  const flush = (): void => {
+    if (pending.length === 0) {
+      return;
+    }
+    segments.push(
+      pendingIsFence ? inside(pending.join("\n")) : outside(pending.join("\n")),
+    );
+    pending = [];
+  };
+
+  for (const line of lines) {
+    if (!fence) {
+      const opened = openingFence(line);
+      if (opened) {
+        flush();
+        pendingIsFence = true;
+        fence = opened;
+      }
+      pending.push(line);
+      continue;
+    }
+    pending.push(line);
+    if (isClosingFence(line, fence)) {
+      flush();
+      pendingIsFence = false;
+      fence = undefined;
+    }
+  }
+  flush();
+  return segments.join("\n");
 }
 
 export function normalizeNewlines(value: string): string {

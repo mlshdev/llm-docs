@@ -9,42 +9,42 @@
 
 ## Development
 
-- [Building the project](pages/building.md): Source `BUILDING.md`.
+- [Building the project](pages/building.md): To build the container project, you need: (7306 bytes)
 
 ## Getting started
 
-- [container](pages/index.md): Source `README.md`.
+- [container](pages/index.md): container is a tool that you can use to create and run Linux containers as lightweight virtual machines on your Mac. It's written in Swift, and optimized for Apple silicon. (4822 bytes)
 
 ## Support
 
-- [How to file effective bug reports](pages/bug-report-how-to.md): Source `docs/bug-report-how-to.md`.
+- [How to file effective bug reports](pages/bug-report-how-to.md): This guide helps you collect the essential information needed to file effective bug reports. Providing complete and accurate information helps maintainers reproduce and fix issues faster. (4341 bytes)
 
 ## Command reference
 
-- [Container CLI Command Reference](pages/command-reference.md): Source `docs/command-reference.md`.
+- [Container CLI Command Reference](pages/command-reference.md): Command availability may vary depending on your macOS version. (53970 bytes)
 
 ## Guides
 
-- [Inspecting containers and images](pages/container-inspection.md): Source `docs/container-inspection.md`.
-- [Container machine](pages/container-machine.md): Source `docs/container-machine.md`.
-- [config.toml reference](pages/container-system-config.md): Source `docs/container-system-config.md`.
-- [Host integration](pages/host-integration.md): Source `docs/host-integration.md`.
-- [How-to](pages/how-to.md): Source `docs/how-to.md`.
-- [Kubernetes clusters](pages/kubernetes.md): Source `docs/kubernetes.md`.
-- [Logs](pages/logs.md): Source `docs/logs.md`.
-- [Multiplatform images](pages/multiplatform-images.md): Source `docs/multiplatform-images.md`.
-- [Networking](pages/networking.md): Source `docs/networking.md`.
-- [Resource usage](pages/resource-usage.md): Source `docs/resource-usage.md`.
-- [Runtime configuration](pages/runtime-configuration.md): Source `docs/runtime-configuration.md`.
-- [Shell completions](pages/shell-completions.md): Source `docs/shell-completions.md`.
-- [Resource limits (ulimits)](pages/ulimits.md): Source `docs/ulimits.md`.
-- [Mounts and volumes](pages/volumes.md): Source `docs/volumes.md`.
+- [Inspecting containers and images](pages/container-inspection.md): Get detailed, machine-readable information about your containers and images. (2051 bytes)
+- [Container machine](pages/container-machine.md): Container machine provides a highly integrated Linux environment that works seamlessly on your Mac. Container machines are fast, lightweight and persistent. They are based on standard OCI images that can be built and sh… (5993 bytes)
+- [config.toml reference](pages/container-system-config.md): For a guided walk-through on setting default values, see Container system config tutorial. (11098 bytes)
+- [Host integration](pages/host-integration.md): Bridge your container and your Mac: forward your SSH agent in, or reach a host service from inside a container. (3724 bytes)
+- [How-to](pages/how-to.md): container has a lot of surface area beyond the basic tutorial. Each topic below has its own guide — pick the one that matches what you're trying to do. (3622 bytes)
+- [Kubernetes clusters](pages/kubernetes.md): Kubernetes is an open-source orchestration platform for automating deployment, scaling, and management of containerized workloads across clusters of machines. With container, you can run local Kubernetes clusters for de… (5657 bytes)
+- [Logs](pages/logs.md): View output from your containerized applications, VM boot logs, and the container system's own logs. (4050 bytes)
+- [Multiplatform images](pages/multiplatform-images.md): Build, run, and publish container images that support both Apple silicon and x86-64. (1598 bytes)
+- [Networking](pages/networking.md): Learn how container networks containers with one another, with the host, and with external systems. (8234 bytes)
+- [Resource usage](pages/resource-usage.md): Configure CPU, memory, and disk resources for your containers and builds, monitor usage while they run, and reclaim disk space afterward. (6212 bytes)
+- [Runtime configuration](pages/runtime-configuration.md): Configure what runs inside and around your container's init process: Linux capabilities, path masking, nested virtualization, and the init process itself. (7976 bytes)
+- [Shell completions](pages/shell-completions.md): Generate and install completion scripts for zsh, bash, and fish. (2930 bytes)
+- [Resource limits (ulimits)](pages/ulimits.md): Set per-process resource limits for your containers. (3321 bytes)
+- [Mounts and volumes](pages/volumes.md): Share data from your host with containers, create named volumes with better performance and lifecycle guarantees than bind mounts, and mount temporary, memory-backed storage with tmpfs. (10309 bytes)
 
 ## Architecture
 
-- [Technical Overview](pages/technical-overview.md): Source `docs/technical-overview.md`.
+- [Technical Overview](pages/technical-overview.md): A brief description and technical overview of container. (7102 bytes)
 
 ## Tutorials
 
-- [Customize container default configuration values](pages/tutorials/container-system-config-tutorial.md): Source `docs/tutorials/container-system-config-tutorial.md`.
-- [Tutorial](pages/tutorials/start-here.md): Source `docs/tutorials/start-here.md`.
+- [Customize container default configuration values](pages/tutorials/container-system-config-tutorial.md): Take a guided tour of setting configurations for container CLI commands and services. (3626 bytes)
+- [Tutorial](pages/tutorials/start-here.md): Take a guided tour of container by building, running, and publishing a simple web server image. (13830 bytes)

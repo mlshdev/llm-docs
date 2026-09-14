@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [guides/get-started/quickstart.mdx](https://docs.vast.ai/guides/get-started/quickstart)
+> Pinned source for Vast.ai main: [guides/get-started/quickstart.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/get-started/quickstart.mdx)
+> Canonical documentation: https://docs.vast.ai/guides/get-started/quickstart
 
 # Sign up and rent your first GPU
 

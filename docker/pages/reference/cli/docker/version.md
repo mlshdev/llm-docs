@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_version.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_version.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_version.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_version.yaml)
 
 # docker version
 
@@ -9,7 +9,7 @@ Show the Docker version information
 ## Description
 
 The version command prints the current version number for all independently
-versioned Docker components. Use the [`--format`](#format) option to customize
+versioned Docker components. Use the [`--format`](#format-the-output---format-format) option to customize
 the output.
 
 The version command (`docker version`) outputs the version numbers of Docker
@@ -66,7 +66,7 @@ Docker uses a client/server architecture, which allows you to use the Docker CLI
 on your local machine to control a Docker Engine running on a remote machine,
 which can be (for example) a machine running in the cloud or inside a virtual machine.
 
-The following example switches the Docker CLI to use a [context](/reference/cli/docker/context/)
+The following example switches the Docker CLI to use a [context](https://docs.docker.com/reference/cli/docker/context/)
 named `remote-test-server`, which runs an older version of the Docker Engine
 on a Linux server:
 
@@ -113,7 +113,7 @@ and Docker Engine perform API version negotiation, and select the highest API
 version that is supported by both the Docker CLI and the Docker Engine.
 
 For example, if the CLI is connecting with Docker Engine version 27.5, it downgrades
-to API version 1.47 (refer to the [API version matrix](/reference/api/engine/#api-version-matrix)
+to API version 1.47 (refer to the [API version matrix](https://docs.docker.com/reference/api/engine/#api-version-matrix)
 to learn about the supported API versions for Docker Engine):
 
 ```console
@@ -142,9 +142,9 @@ $ docker version --format '{{.Client.APIVersion}}'
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--format` |  | Format output using a custom template: 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to https://docs.docker.com/go/formatting/ for more information about formatting output with templates |
+| Option           | Default | Description                                                                                                                                                                                                                             |
+| ---------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `-f`, `--format` |         | Format output using a custom template: 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to <https://docs.docker.com/go/formatting/> for more information about formatting output with templates |
 
 ## Examples
 
@@ -152,7 +152,7 @@ $ docker version --format '{{.Client.APIVersion}}'
 
 The formatting option (`--format`) pretty-prints the output using a Go template,
 which allows you to customize the output format, or to obtain specific information
-from the output. Refer to the [format command and log output](/config/formatting/)
+from the output. Refer to the [format command and log output](https://docs.docker.com/config/formatting/)
 page for details of the format.
 
 ### Get the server version

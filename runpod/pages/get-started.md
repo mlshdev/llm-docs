@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [get-started.mdx](https://docs.runpod.io/get-started)
+> Pinned source for Runpod main: [get-started.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/get-started.mdx)
+> Canonical documentation: https://docs.runpod.io/get-started
 
 # Deploy your first Pod
 
@@ -51,7 +52,7 @@ To open the deploy page, click **+ New** in the top-right corner of the console 
 
    The **Network volume** filter narrows the GPU list to compatible GPUs by filtering for GPUs that are in the same data center as the selected network volume. Select any network volume, and GPU availability updates to match it. GPUs that aren't compatible with the selected volume move to the incompatible section of the **All** tab.
 
-   If the GPU you want shows **Out of capacity**, you can still select it and deploy it once capacity frees up. Selecting an out-of-capacity GPU changes the final Deploy step: instead of deploying right away, you can subscribe to deploy when the GPU becomes available.
+   If the GPU you want shows **Out of capacity**, you can still select it and deploy it once capacity frees up. Selecting an out-of-capacity GPU changes the final [Deploy](#deploy-your-first-pod) step: instead of deploying right away, you can subscribe to deploy when the GPU becomes available.
 4. Pods offer two kinds of storage.
 
    **Container disk**

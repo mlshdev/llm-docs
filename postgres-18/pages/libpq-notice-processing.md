@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/libpq.sgml#libpq-notice-processing](https://www.postgresql.org/docs/18/libpq-notice-processing.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/libpq.sgml#libpq-notice-processing](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/libpq.sgml%23libpq-notice-processing)
+> Canonical documentation: https://www.postgresql.org/docs/18/libpq-notice-processing.html
 
 # Notice Processing
 

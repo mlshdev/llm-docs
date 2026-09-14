@@ -1,6 +1,6 @@
-> Commit-pinned source for SearXNG master: [docs/dev/contribution_guide.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/contribution_guide.rst)
+> Pinned source for SearXNG master: [docs/dev/contribution_guide.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/contribution_guide.rst)
 
-.. \_how to contribute:
+<a id="how-to-contribute"></a>
 
 # How to contribute
 
@@ -47,65 +47,67 @@ privacy concerns do not fancy you, simply fork it.
 
 # Code
 
-.. \_Structural split of changes:
+<a id="pep8"></a> <a id="structural-split-of-changes"></a>
 <https://wiki.openstack.org/wiki/GitCommitMessages#Structural_split_of_changes>
 
 ### Create good commits!
 
-- \[create commit]\(#create commit)
+- [create commit](https://docs.searxng.org/dev/commits.html#create-commit)
 
 In order to submit a patch, please follow the steps below:
 
 - Follow coding conventions.
 
-  - [PEP8](https://www.python.org/dev/peps/pep-0008/) standards apply, except the convention of line length
+  - PEP8\_ standards apply, except the convention of line length
   - Maximum line length is 120 characters
 
 - The cardinal rule for creating good commits is to ensure there is only one
-  *logical change* per commit / read Structural split of changes
+  *logical change* per commit / read [Structural split of changes](https://docs.searxng.org/dev/contribution_guide.html#structural-split-of-changes)
 
 - Check if your code breaks existing tests.  If so, update the tests or fix your
   code.
 
 - If your code can be unit-tested, add unit tests.
 
-- Add yourself to the :origin:`AUTHORS.rst` file.
+- Add yourself to the [AUTHORS.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/AUTHORS.rst) file.
 
-- Choose meaningful commit messages, see \[create commit]\(#create commit)
+- Choose meaningful commit messages, see [create commit](https://docs.searxng.org/dev/commits.html#create-commit)
 
 - Create a pull request.
 
-For more help on getting started with SearXNG development, see devquickstart.
+For more help on getting started with SearXNG development, see [devquickstart](https://docs.searxng.org/dev/quickstart.html#devquickstart).
 
 # Translation
 
-Translation currently takes place on [weblate](#translation).
+Translation currently takes place on [weblate](https://docs.searxng.org/dev/translation.html#translation).
 
-.. \_contrib docs:
+<a id="contrib-docs"></a>
 
 # Documentation
 
+<a id="sphinx"></a> <a id="rest"></a>
+
 ### The reST sources
 
-has been moved from `gh-branch` into `master` (:origin:`docs`).
+has been moved from `gh-branch` into `master` ([docs](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs)).
 
-The documentation is built using Sphinx.  So in order to be able to generate
+The documentation is built using Sphinx\_.  So in order to be able to generate
 the required files, you have to install it on your system.  Much easier, use
-our makefile.
+our [makefile](https://docs.searxng.org/dev/makefile.html#makefile).
 
 Here is an example which makes a complete rebuild:
 
-.. code:: sh
-
+```sh
 $ make docs.clean docs.html
 ...
 The HTML pages are in dist/docs.
+```
 
-.. \_make docs.live:
+<a id="make-docs-live"></a>
 
 ## Live build
 
-.. \_sphinx-autobuild:
+<a id="sphinx-autobuild"></a>
 <https://github.com/executablebooks/sphinx-autobuild/blob/master/README.md>
 
 ### docs.clean
@@ -116,44 +118,39 @@ It is recommended to assert a complete rebuild before deploying (use
 Live build is like WYSIWYG.  It's the recommended way to go if you want to edit the documentation.
 The Makefile target `docs.live` builds the docs, opens
 URL in your favorite browser and rebuilds every time a reST file has been
-changed (\[make docs.clean]\(#make docs.clean)).
+changed ([make docs.clean](https://docs.searxng.org/dev/makefile.html#make-docs-clean)).
 
-.. code:: sh
-
+```sh
 $ make docs.live
 ...
 The HTML pages are in dist/docs.
-... Serving on <http://0.0.0.0:8000>
+... Serving on http://0.0.0.0:8000
 ... Start watching changes
+```
 
-Live builds are implemented by sphinx-autobuild.  Use environment
-`$(SPHINXOPTS)` to pass arguments to the sphinx-autobuild command.  You can
+Live builds are implemented by sphinx-autobuild\_.  Use environment
+`$(SPHINXOPTS)` to pass arguments to the sphinx-autobuild\_ command.  You can
 pass any argument except for the `--host` option (which is always set to `0.0.0.0`).
 E.g., to find and use a free port, use:
 
-.. code:: sh
-
+```sh
 $ SPHINXOPTS="--port 0" make docs.live
 ...
-... Serving on <http://0.0.0.0:50593>
+... Serving on http://0.0.0.0:50593
 ...
+```
 
-.. \_deploy on github.io:
+<a id="deploy-on-github-io"></a>
 
 ## deploy on github.io
 
-To deploy documentation at :docs:`github.io <.>` use Makefile target :ref:`make
-docs.gh-pages`, which builds the documentation and runs all the needed git add,
+To deploy documentation at [github.io](https://docs.searxng.org/index.html) use Makefile target [make docs.gh-pages](https://docs.searxng.org/dev/makefile.html#make-docs-gh-pages), which builds the documentation and runs all the needed git add,
 commit and push:
 
-.. code:: sh
-
+```sh
 $ make docs.clean docs.gh-pages
-
-.. attention:
-
-```text
-If you are working in your own brand, don't forget to adjust your
-:ref:`settings brand`.
-
 ```
+
+> **Attention**
+> If you are working in your own brand, don't forget to adjust your
+> [settings brand](https://docs.searxng.org/admin/settings/settings_brand.html#settings-brand).

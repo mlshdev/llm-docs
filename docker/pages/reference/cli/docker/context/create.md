@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_context_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_context_create.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_context_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_context_create.yaml)
 
 # docker context create
 
@@ -13,11 +13,11 @@ connects to.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--description` |  | Description of the context |
-| `--docker` |  | set the docker endpoint |
-| `--from` |  | create context from a named context |
+| Option          | Default | Description                         |
+| --------------- | ------- | ----------------------------------- |
+| `--description` |         | Description of the context          |
+| `--docker`      |         | set the docker endpoint             |
+| `--from`        |         | create context from a named context |
 
 ## Examples
 
@@ -70,4 +70,4 @@ $ docker context create \
 Docker endpoints configurations, as well as the description can be modified with
 `docker context update`.
 
-Refer to the [`docker context update` reference](/reference/cli/docker/context/update/) for details.
+Refer to the [`docker context update` reference](https://docs.docker.com/reference/cli/docker/context/update/) for details.

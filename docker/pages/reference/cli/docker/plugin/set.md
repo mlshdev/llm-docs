@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_plugin_set.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_plugin_set.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_plugin_set.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_plugin_set.yaml)
 
 # docker plugin set
 
@@ -11,10 +11,11 @@ Change settings for a plugin
 Change settings for a plugin. The plugin must be disabled.
 
 The settings currently supported are:
- * env variables
- * source of mounts
- * path of devices
- * args
+
+- env variables
+- source of mounts
+- path of devices
+- args
 
 ## Examples
 
@@ -48,7 +49,7 @@ $ docker plugin inspect -f '{{with $mount := index .Settings.Mounts 0}}{{$mount.
 /bar
 ```
 
-> [!NOTE]
+> \[!NOTE]
 > Since only `source` is settable in `mymount`,
 > `docker plugins set mymount=/bar myplugin` would work too.
 
@@ -69,7 +70,7 @@ $ docker plugin inspect -f '{{with $device := index .Settings.Devices 0}}{{$devi
 /dev/bar
 ```
 
-> [!NOTE]
+> \[!NOTE]
 > Since only `path` is settable in `mydevice`,
 > `docker plugins set mydevice=/dev/bar myplugin` would work too.
 

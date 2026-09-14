@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [examples/notifications/slack-webhook.mdx](https://docs.vast.ai/examples/notifications/slack-webhook)
+> Pinned source for Vast.ai main: [examples/notifications/slack-webhook.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/examples/notifications/slack-webhook.mdx)
+> Canonical documentation: https://docs.vast.ai/examples/notifications/slack-webhook
 
 # Send Notifications to Slack
 
@@ -54,6 +55,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 import requests
 
+
 SLACK_WEBHOOK_URL = os.environ["SLACK_WEBHOOK_URL"]
 VAST_WEBHOOK_SECRET = os.environ["VAST_WEBHOOK_SECRET"]
 PORT = int(os.environ.get("PORT", "8787"))
@@ -73,6 +75,7 @@ ACTION_URLS = {
     "upcoming_downtime": f"{CONSOLE}/instances/",
     "webhook_test": CONSOLE,
 }
+
 
 def verify_vast_signature(headers, raw_body: bytes) -> bool:
     timestamp = headers.get("X-Vast-Timestamp", "")
@@ -97,6 +100,7 @@ def verify_vast_signature(headers, raw_body: bytes) -> bool:
     ).hexdigest()
     return hmac.compare_digest(signature, f"sha256={digest}")
 
+
 def slack_message(payload: dict) -> dict:
     subject = payload.get("subject") or "Vast.ai notification"
     message = payload.get("message") or json.dumps(payload, sort_keys=True)
@@ -111,6 +115,7 @@ def slack_message(payload: dict) -> dict:
     return {
         "text": f"{subject}\n{message}\n{action_url}\n{' '.join(details)}"
     }
+
 
 class Handler(BaseHTTPRequestHandler):
     def _json(self, status: int, body: dict):
@@ -163,6 +168,7 @@ class Handler(BaseHTTPRequestHandler):
 
     def log_message(self, fmt, *args):
         print(f"{self.address_string()} - {fmt % args}", flush=True)
+
 
 if __name__ == "__main__":
     print(f"listening on http://127.0.0.1:{PORT}", flush=True)

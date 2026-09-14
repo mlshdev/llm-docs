@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry.md)
 
 # OpenTelemetry tracing <a id="opentelemetry-tracing"></a>
 
@@ -131,7 +131,7 @@ The `grpc` protocol differs from `http/protobuf` in these ways:
 By default, n8n exports every trace. To reduce volume in busy instances, set `N8N_OTEL_TRACES_SAMPLE_RATE` to a value between `0` and `1`:
 
 ```bash
-# Export 10% of traces <a id="export-10percent-of-traces"></a>
+# Export 10% of traces <a href="#export-10percent-of-traces" id="export-10percent-of-traces"></a>
 export N8N_OTEL_TRACES_SAMPLE_RATE=0.1
 ```
 

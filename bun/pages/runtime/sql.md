@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/runtime/sql.mdx](https://bun.com/docs/runtime/sql)
+> Pinned source for Bun bun-v1.4.2: [docs/runtime/sql.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/runtime/sql.mdx)
+> Canonical documentation: https://bun.com/docs/runtime/sql
 
 You write queries as tagged template literals, and the client supports connection pooling, transactions, and prepared statements.
 

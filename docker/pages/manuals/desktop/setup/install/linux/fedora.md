@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/setup/install/linux/fedora.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/desktop/setup/install/linux/fedora.md)
+> Pinned source for Docker main: [content/manuals/desktop/setup/install/linux/fedora.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/desktop/setup/install/linux/fedora.md)
 
 # Install Docker Desktop on Fedora
 

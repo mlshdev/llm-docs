@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/daemon/embedded-containerd.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/daemon/embedded-containerd.md)
+> Pinned source for Docker main: [content/manuals/engine/daemon/embedded-containerd.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/daemon/embedded-containerd.md)
 
 # Run containerd in the Docker daemon
 

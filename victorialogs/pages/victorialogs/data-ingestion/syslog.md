@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/data-ingestion/syslog.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/syslog.md)
+> Pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/data-ingestion/syslog.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/syslog.md)
 
 [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/) can accept logs in [Syslog formats](https://en.wikipedia.org/wiki/Syslog) at the specified TCP, UDP or Unix socket addresses
 via `-syslog.listenAddr.tcp`, `-syslog.listenAddr.udp` and `-syslog.listenAddr.unix` command-line flags. VictoriaLogs listens for `SOCK_STREAM` unix sockets by default.

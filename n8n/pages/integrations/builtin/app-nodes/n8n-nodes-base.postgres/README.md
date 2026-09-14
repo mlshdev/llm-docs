@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.postgres/README.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/app-nodes/n8n-nodes-base.postgres/README.md)
+> Pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.postgres/README.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/app-nodes/n8n-nodes-base.postgres/README.md)
 
 # Postgres node <a id="postgres-node"></a>
 
@@ -213,12 +213,12 @@ For example, you want to find a person by their email address. Given the followi
     {
         "email": "alex@example.com",
         "name": "Alex",
-        "age": 21
+        "age": 21 
     },
     {
         "email": "jamie@example.com",
         "name": "Jamie",
-        "age": 33
+        "age": 33 
     }
 ]
 ```
@@ -233,7 +233,7 @@ Then in **Query Parameters**, provide the field values to use. You can provide f
 
 ```js
 // users is an example table name
-{{ [ 'users', $json.email ] }}
+{{ [ 'users', $json.email ] }} 
 ```
 
 ## Common issues <a id="common-issues"></a>

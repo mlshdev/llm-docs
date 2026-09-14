@@ -1,4 +1,4 @@
-> Release-pinned source for discord.py-self v2.1.0: [docs/quickstart.rst](https://github.com/dolfies/discord.py-self/blob/6de18b4cb40dd42625a535f52d9715c71399ffb3/docs/quickstart.rst)
+> Pinned source for discord.py-self v2.1.0: [docs/quickstart.rst](https://github.com/dolfies/discord.py-self/blob/6de18b4cb40dd42625a535f52d9715c71399ffb3/docs/quickstart.rst)
 
 - **Orphan:**
 
@@ -54,7 +54,7 @@ There's a lot going on here, so let's walk you through it step by step.
    is the same as the `Client.user`.
 5. Afterwards, we check if the `Message.content` starts with `'$hello'`. If it does,
    then we send a message in the channel it was used in with `'Hello!'`. This is a basic way of
-   handling commands, which can be later automated with the [./ext/commands/index](https://discordpy-self.readthedocs.io/./ext/commands$1index.html) framework.
+   handling commands, which can be later automated with the [./ext/commands/index](https://discordpy-self.readthedocs.io/ext/commands/index.html) framework.
 6. Finally, we run the bot with our login token. If you need help getting your token,
    look in the [authenticating](https://discordpy-self.readthedocs.io/authenticating.html) section.
 

@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/set_session_auth.sgml#sql-set-session-authorization](https://www.postgresql.org/docs/18/sql-set-session-authorization.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/set_session_auth.sgml#sql-set-session-authorization](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/set_session_auth.sgml%23sql-set-session-authorization)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-set-session-authorization.html
 
 # SET SESSION AUTHORIZATION
 

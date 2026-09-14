@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/drop_extension.sgml#sql-dropextension](https://www.postgresql.org/docs/18/sql-dropextension.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/drop_extension.sgml#sql-dropextension](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/drop_extension.sgml%23sql-dropextension)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-dropextension.html
 
 # DROP EXTENSION
 

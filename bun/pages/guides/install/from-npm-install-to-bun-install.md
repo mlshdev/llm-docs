@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/guides/install/from-npm-install-to-bun-install.mdx](https://bun.com/docs/guides/install/from-npm-install-to-bun-install)
+> Pinned source for Bun bun-v1.4.2: [docs/guides/install/from-npm-install-to-bun-install.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/guides/install/from-npm-install-to-bun-install.mdx)
+> Canonical documentation: https://bun.com/docs/guides/install/from-npm-install-to-bun-install
 
 `bun install` is a fast, Node.js-compatible npm client.
 

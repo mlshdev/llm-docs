@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/features.sgml#unsupported-features-sql-standard](https://www.postgresql.org/docs/18/unsupported-features-sql-standard.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/features.sgml#unsupported-features-sql-standard](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/features.sgml%23unsupported-features-sql-standard)
+> Canonical documentation: https://www.postgresql.org/docs/18/unsupported-features-sql-standard.html
 
 # Unsupported Features
 

@@ -1,8 +1,9 @@
-> Commit-pinned source for SearXNG master: [docs/dev/engines/online/recoll.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/recoll.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/online/recoll.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/recoll.rst)
 
-.. \_engine recoll:
+<a id="engine-recoll"></a>
 
 # Recoll Engine
 
-.. automodule:: searx.engines.recoll
-:members:
+#### `searx.engines.recoll`
+
+Static Python API reference (`automodule`).

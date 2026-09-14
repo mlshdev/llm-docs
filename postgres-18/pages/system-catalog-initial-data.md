@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/bki.sgml#system-catalog-initial-data](https://www.postgresql.org/docs/18/system-catalog-initial-data.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/bki.sgml#system-catalog-initial-data](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/bki.sgml%23system-catalog-initial-data)
+> Canonical documentation: https://www.postgresql.org/docs/18/system-catalog-initial-data.html
 
 # System Catalog Initial Data
 

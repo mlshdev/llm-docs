@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/undefined-arg-in-from.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/undefined-arg-in-from.md)
+> Pinned source for Docker main: [_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/undefined-arg-in-from.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/rules/undefined-arg-in-from.md)
 
 # UndefinedArgInFrom
 

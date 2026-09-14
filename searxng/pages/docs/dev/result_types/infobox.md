@@ -1,61 +1,63 @@
-> Commit-pinned source for SearXNG master: [docs/dev/result_types/infobox.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/result_types/infobox.rst)
+> Pinned source for SearXNG master: [docs/dev/result_types/infobox.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/result_types/infobox.rst)
 
-.. \_result\_types.infobox:
+<a id="result-types-infobox"></a>
 
 # Infobox Results
 
-.. hint:
+> **Hint**
+> There is still no typing for these result items. The templates can be used as
+> orientation until the final typing is complete.
 
-```text
-There is still no typing for these result items. The templates can be used as
-orientation until the final typing is complete.
+The [area info box](https://docs.searxng.org/dev/result_types/index.html#area-info-box) is an area where addtional infos shown to the user.
 
-```
+Fields used in the [infobox.html](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/templates/simple/elements/infobox.html):
 
-The \[area info box]\(#area info box) is an area where addtional infos shown to the user.
+**img\_src: `str`**
 
-Fields used in the :origin:`infobox.html <searx/templates/simple/elements/infobox.html>`:
-
-img\_src: :py:class:`str`
 URL of a image or thumbnail that is displayed in the infobox.
 
-infobox: :py:class:`str`
+**infobox: `str`**
+
 Title of the info box.
 
-content: :py:class:`str`
+**content: `str`**
+
 Text of the info box.
 
 The infobox has additional subsections for *attributes*, *urls* and
 *relatedTopics*:
 
-attributes: :py:class:`List <list>`\ \[\ :py:class:`dict`\ ]
+**attributes: `List`\ \[\ `dict`\ ]**
+
 A list of attributes.  An *attribute* is a dictionary with keys:
 
-- label :py:class:`str`: (mandatory)
+- label `str`: (mandatory)
 
-- value :py:class:`str`: (mandatory)
+- value `str`: (mandatory)
 
-- image :py:class:`List <list>`\ \[\ :py:class:`dict`\ ] (optional)
+- image `List`\ \[\ `dict`\ ] (optional)
 
   A list of images.  An *image* is a dictionary with keys:
 
-  - src :py:class:`str`: URL of an image/thumbnail (mandatory)
-  - alt :py:class:`str`: alternative text for the image (mandatory)
+  - src `str`: URL of an image/thumbnail (mandatory)
+  - alt `str`: alternative text for the image (mandatory)
 
-urls: :py:class:`List <list>`\ \[\ :py:class:`dict`\ ]
+**urls: `List`\ \[\ `dict`\ ]**
+
 A list of links.  An *link* is a dictionary with keys:
 
-- url :py:class:`str`: URL of the link (mandatory)
-- title :py:class:`str`: Title of the link (mandatory)
+- url `str`: URL of the link (mandatory)
+- title `str`: Title of the link (mandatory)
 
-relatedTopics: :py:class:`List <list>`\ \[\ :py:class:`dict`\ ]
+**relatedTopics: `List`\ \[\ `dict`\ ]**
+
 A list of topics.  An *topic* is a dictionary with keys:
 
-- name: :py:class:`str`: (mandatory)
+- name: `str`: (mandatory)
 
-- suggestions: :py:class:`List <list>`\ \[\ :py:class:`dict`\ ] (optional)
+- suggestions: `List`\ \[\ `dict`\ ] (optional)
 
   A list of suggestions.  A *suggestion* is simple dictionary with just one
   key/value pair:
 
-  - suggestion: :py:class:`str`: suggested search term (mandatory)
+  - suggestion: `str`: suggested search term (mandatory)

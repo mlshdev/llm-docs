@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/QuickStart.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/QuickStart.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/QuickStart.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/QuickStart.md)
 
 For a broader overview please visit the [navigation page](https://docs.victoriametrics.com/anomaly-detection/).
 

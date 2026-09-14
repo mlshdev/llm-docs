@@ -1,4 +1,5 @@
-> Release-pinned source for Podman v6.1.1: [pkg/api/server/* (swagger:operation annotations)](https://github.com/podman-container-tools/podman/tree/8303f2e25b675ea7f82099d615c60969aec15870/pkg/api/server)
+> Pinned source for Podman v6.1.1: [pkg/api/server/* (swagger:operation annotations)](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/pkg/api/server/*%20(swagger%3Aoperation%20annotations))
+> Canonical documentation: https://github.com/podman-container-tools/podman/tree/8303f2e25b675ea7f82099d615c60969aec15870/pkg/api/server
 
 # Podman REST API endpoint reference
 

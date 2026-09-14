@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.1.1: [docs/MANPAGE_SYNTAX.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/MANPAGE_SYNTAX.md)
+> Pinned source for Podman v6.1.1: [docs/MANPAGE_SYNTAX.md](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/MANPAGE_SYNTAX.md)
 
 # podman-command
 

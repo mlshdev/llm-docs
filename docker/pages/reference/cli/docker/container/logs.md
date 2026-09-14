@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_container_logs.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_logs.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_container_logs.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_logs.yaml)
 
 # docker container logs
 
@@ -13,18 +13,18 @@ Fetch the logs of a container
 The `docker logs` command batch-retrieves logs present at the time of execution.
 
 For more information about selecting and configuring logging drivers, refer to
-[Configure logging drivers](/engine/logging/configure/).
+[Configure logging drivers](https://docs.docker.com/engine/logging/configure/).
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--details` |  | Show extra details provided to logs |
-| `-f`, `--follow` |  | Follow log output |
-| `--since` |  | Show logs since timestamp (e.g. `2013-01-02T13:23:37Z`) or relative (e.g. `42m` for 42 minutes) |
-| `-n`, `--tail` | `all` | Number of lines to show from the end of the logs |
-| `-t`, `--timestamps` |  | Show timestamps |
-| `--until` |  | Show logs before a timestamp (e.g. `2013-01-02T13:23:37Z`) or relative (e.g. `42m` for 42 minutes) (API 1.35+) |
+| Option               | Default | Description                                                                                                    |
+| -------------------- | ------- | -------------------------------------------------------------------------------------------------------------- |
+| `--details`          |         | Show extra details provided to logs                                                                            |
+| `-f`, `--follow`     |         | Follow log output                                                                                              |
+| `--since`            |         | Show logs since timestamp (e.g. `2013-01-02T13:23:37Z`) or relative (e.g. `42m` for 42 minutes)                |
+| `-n`, `--tail`       | `all`   | Number of lines to show from the end of the logs                                                               |
+| `-t`, `--timestamps` |         | Show timestamps                                                                                                |
+| `--until`            |         | Show logs before a timestamp (e.g. `2013-01-02T13:23:37Z`) or relative (e.g. `42m` for 42 minutes) (API 1.35+) |
 
 ## Examples
 
@@ -60,7 +60,7 @@ format you may also use RFC3339Nano, `2006-01-02T15:04:05`,
 `2006-01-02T15:04:05.999999999`, `2006-01-02T07:00`, and `2006-01-02`. The local
 timezone on the client will be used if you do not provide either a `Z` or a
 `+-00:00` timezone offset at the end of the timestamp. When providing Unix
-timestamps enter seconds[.nanoseconds], where seconds is the number of seconds
+timestamps enter seconds\[.nanoseconds], where seconds is the number of seconds
 that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap
 seconds (aka Unix epoch or Unix time), and the optional .nanoseconds field is a
 fraction of a second no more than nine digits long. You can combine the

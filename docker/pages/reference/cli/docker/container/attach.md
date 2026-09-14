@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_container_attach.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_attach.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_container_attach.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_attach.yaml)
 
 # docker container attach
 
@@ -15,7 +15,7 @@ Use `docker attach` to attach your terminal's standard input, output, and error
 ID or name. This lets you view its output or control it interactively, as
 though the commands were running directly in your terminal.
 
-> [!NOTE]
+> \[!NOTE]
 > The `attach` command displays the output of the container's `ENTRYPOINT` and
 > `CMD` process. This can appear as if the attach command is hung when in fact
 > the process may simply not be writing any output at that time.
@@ -28,7 +28,7 @@ container. If `--sig-proxy` is true (the default),`CTRL-c` sends a `SIGINT` to
 the container. If the container was run with `-i` and `-t`, you can detach from
 a container and leave it running using the `CTRL-p CTRL-q` key sequence.
 
-> [!NOTE]
+> \[!NOTE]
 > A process running as PID 1 inside a container is treated specially by
 > Linux: it ignores any signal with the default action. So, the process
 > doesn't terminate on `SIGINT` or `SIGTERM` unless it's coded to do so.
@@ -37,7 +37,7 @@ You can't redirect the standard input of a `docker attach` command while
 attaching to a TTY-enabled container (using the `-i` and `-t` options).
 
 While a client is connected to container's `stdio` using `docker attach`,
-Docker uses a ~1MB memory buffer to maximize the throughput of the application.
+Docker uses a \~1MB memory buffer to maximize the throughput of the application.
 Once this buffer is full, the speed of the API connection is affected, and so
 this impacts the output process' writing speed. This is similar to other
 applications like SSH. Because of this, it isn't recommended to run
@@ -47,11 +47,11 @@ command to get access to the logs.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--detach-keys` |  | Override the key sequence for detaching a container |
-| `--no-stdin` |  | Do not attach STDIN |
-| `--sig-proxy` | `true` | Proxy all received signals to the process |
+| Option          | Default | Description                                         |
+| --------------- | ------- | --------------------------------------------------- |
+| `--detach-keys` |         | Override the key sequence for detaching a container |
+| `--no-stdin`    |         | Do not attach STDIN                                 |
+| `--sig-proxy`   | `true`  | Proxy all received signals to the process           |
 
 ## Examples
 
@@ -148,16 +148,16 @@ entire configuration.
 
 To override the sequence for an individual container, use the
 `--detach-keys="<sequence>"` flag with the `docker attach` command. The format of
-the `<sequence>` is either a letter [a-Z], or the `ctrl-` combined with any of
+the `<sequence>` is either a letter \[a-Z], or the `ctrl-` combined with any of
 the following:
 
-* `a-z` (a single lowercase alpha character )
-* `@` (at sign)
-* `[` (left bracket)
-* `\\` (two backward slashes)
-*  `_` (underscore)
-* `^` (caret)
+- `a-z` (a single lowercase alpha character )
+- `@` (at sign)
+- `[` (left bracket)
+- `\\` (two backward slashes)
+- `_` (underscore)
+- `^` (caret)
 
 These `a`, `ctrl-a`, `X`, or `ctrl-\\` values are all examples of valid key
 sequences. To configure a different configuration default key sequence for all
-containers, see [**Configuration file** section](/reference/cli/docker/#configuration-files).
+containers, see [**Configuration file** section](https://docs.docker.com/reference/cli/docker/#configuration-files).

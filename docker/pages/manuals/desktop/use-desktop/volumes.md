@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/use-desktop/volumes.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/desktop/use-desktop/volumes.md)
+> Pinned source for Docker main: [content/manuals/desktop/use-desktop/volumes.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/desktop/use-desktop/volumes.md)
 
 # Explore the Volumes view in Docker Desktop
 

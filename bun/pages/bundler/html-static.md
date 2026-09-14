@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/bundler/html-static.mdx](https://bun.com/docs/bundler/html-static)
+> Pinned source for Bun bun-v1.4.2: [docs/bundler/html-static.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/bundler/html-static.mdx)
+> Canonical documentation: https://bun.com/docs/bundler/html-static
 
 Bun's bundler has first-class support for HTML. Build static sites, landing pages, and web applications with zero configuration: point Bun at your HTML file and it bundles the scripts, stylesheets, and assets the file references.
 

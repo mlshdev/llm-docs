@@ -37,9 +37,10 @@ export async function loadLock(): Promise<SourcesLock | undefined> {
   }
 }
 
-function isSourcesConfig(value: unknown): value is SourcesConfig {
+export function isSourcesConfig(value: unknown): value is SourcesConfig {
   if (
     !isRecord(value) ||
+    !hasOnlyKeys(value, ["schemaVersion", "projects"]) ||
     value.schemaVersion !== 1 ||
     !Array.isArray(value.projects)
   ) {
@@ -49,9 +50,25 @@ function isSourcesConfig(value: unknown): value is SourcesConfig {
   for (const project of value.projects) {
     if (
       !isRecord(project) ||
+      !hasOnlyKeys(
+        project,
+        project.kind === "github"
+          ? [
+              "id",
+              "kind",
+              "title",
+              "homepage",
+              "repository",
+              "docsRepository",
+              "branch",
+              "semanticTags",
+              "tagSeries",
+            ]
+          : ["id", "kind", "title", "homepage", "catalog"],
+      ) ||
       !isProjectId(project.id) ||
-      typeof project.title !== "string" ||
-      typeof project.homepage !== "string" ||
+      !isNonEmptyString(project.title) ||
+      !isHttpUrl(project.homepage) ||
       ids.has(project.id) ||
       !isSourceKind(project)
     ) {
@@ -67,9 +84,9 @@ function isSourceKind(project: Record<string, unknown>): boolean {
     return (
       doccProjectCatalogs[project.id as keyof typeof doccProjectCatalogs] ===
         undefined &&
-      typeof project.repository === "string" &&
+      isGithubRepository(project.repository) &&
       (project.docsRepository === undefined ||
-        typeof project.docsRepository === "string") &&
+        isGithubRepository(project.docsRepository)) &&
       (project.branch === undefined ||
         (typeof project.branch === "string" && project.branch.trim() !== "")) &&
       (project.semanticTags === undefined || project.semanticTags === true) &&
@@ -106,6 +123,7 @@ function isDoccCatalogId(value: unknown): value is DoccCatalogId {
 export function isSourcesLock(value: unknown): value is SourcesLock {
   if (
     !isRecord(value) ||
+    !hasOnlyKeys(value, ["schemaVersion", "projects"]) ||
     value.schemaVersion !== 1 ||
     !isRecord(value.projects)
   ) {
@@ -117,7 +135,25 @@ export function isSourcesLock(value: unknown): value is SourcesLock {
 }
 
 function isLockedSource(value: unknown): value is LockedSource {
-  if (!isRecord(value) || typeof value.tag !== "string") {
+  if (
+    !isRecord(value) ||
+    !hasOnlyKeys(value, [
+      "tag",
+      "branch",
+      "sourceCommit",
+      "sourceCommittedAt",
+      "taggedAt",
+      "releaseId",
+      "releasePublishedAt",
+      "docsCommit",
+      "snapshotDigest",
+      "contentDigest",
+      "capturedAt",
+      "documentationDigest",
+      "observedCommit",
+    ]) ||
+    !isNonEmptyString(value.tag)
+  ) {
     return false;
   }
   if (value.snapshotDigest !== undefined) {
@@ -125,7 +161,7 @@ function isLockedSource(value: unknown): value is LockedSource {
       isSnapshotDigest(value.snapshotDigest) &&
       (value.contentDigest === undefined ||
         isSnapshotDigest(value.contentDigest)) &&
-      typeof value.capturedAt === "string" &&
+      isIsoTimestamp(value.capturedAt) &&
       value.tag === `snapshot-${value.snapshotDigest.slice(0, 12)}` &&
       value.sourceCommit === undefined &&
       value.branch === undefined &&
@@ -142,17 +178,27 @@ function isLockedSource(value: unknown): value is LockedSource {
   if (value.branch !== undefined) {
     return (
       typeof value.branch === "string" &&
+      value.branch.trim() !== "" &&
       value.branch === value.tag &&
-      typeof value.sourceCommittedAt === "string" &&
+      isIsoTimestamp(value.sourceCommittedAt) &&
       value.taggedAt === undefined &&
       value.releaseId === undefined &&
       value.releasePublishedAt === undefined &&
-      value.docsCommit === undefined
+      value.docsCommit === undefined &&
+      (value.documentationDigest === undefined ||
+        isSnapshotDigest(value.documentationDigest)) &&
+      (value.observedCommit === undefined || isCommitSha(value.observedCommit))
     );
+  }
+  if (
+    value.documentationDigest !== undefined ||
+    value.observedCommit !== undefined
+  ) {
+    return false;
   }
   if (value.taggedAt !== undefined) {
     return (
-      typeof value.taggedAt === "string" &&
+      isIsoTimestamp(value.taggedAt) &&
       value.sourceCommittedAt === undefined &&
       value.releaseId === undefined &&
       value.releasePublishedAt === undefined &&
@@ -160,8 +206,9 @@ function isLockedSource(value: unknown): value is LockedSource {
     );
   }
   return (
-    typeof value.releaseId === "number" &&
-    typeof value.releasePublishedAt === "string" &&
+    Number.isSafeInteger(value.releaseId) &&
+    (value.releaseId as number) > 0 &&
+    isIsoTimestamp(value.releasePublishedAt) &&
     value.sourceCommittedAt === undefined &&
     (value.docsCommit === undefined || isCommitSha(value.docsCommit))
   );
@@ -173,6 +220,46 @@ function isSnapshotDigest(value: unknown): value is string {
 
 function isCommitSha(value: unknown): value is string {
   return typeof value === "string" && /^[0-9a-f]{40}$/.test(value);
+}
+
+function isNonEmptyString(value: unknown): value is string {
+  return typeof value === "string" && value.trim() !== "";
+}
+
+function isHttpUrl(value: unknown): value is string {
+  if (!isNonEmptyString(value)) return false;
+  try {
+    const url = new URL(value);
+    return (
+      (url.protocol === "https:" || url.protocol === "http:") && !!url.host
+    );
+  } catch {
+    return false;
+  }
+}
+
+function isGithubRepository(value: unknown): value is string {
+  return (
+    typeof value === "string" &&
+    /^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(value) &&
+    !value.endsWith(".git")
+  );
+}
+
+function isIsoTimestamp(value: unknown): value is string {
+  return (
+    typeof value === "string" &&
+    /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/.test(value) &&
+    Number.isFinite(Date.parse(value))
+  );
+}
+
+function hasOnlyKeys(
+  value: Readonly<Record<string, unknown>>,
+  keys: readonly string[],
+): boolean {
+  const allowed = new Set(keys);
+  return Object.keys(value).every((key) => allowed.has(key));
 }
 
 function isProjectId(value: unknown): value is ProjectId {

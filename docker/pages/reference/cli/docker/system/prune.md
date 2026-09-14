@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_system_prune.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_system_prune.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_system_prune.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_system_prune.yaml)
 
 # docker system prune
 
@@ -9,22 +9,22 @@ Remove unused data
 ## Description
 
 Remove all unused containers, networks, images (both dangling and unused),
-unused [build cache](/build/cache/), and optionally,
+unused [build cache](https://docs.docker.com/build/cache/), and optionally,
 volumes.
 
 Build cache is always eligible for pruning with this command (including BuildKit
 cache mounts created with `RUN --mount=type=cache`). Use
-[`docker builder prune`](/reference/cli/docker/builder/prune/) if you only want to reclaim build
+[`docker builder prune`](https://docs.docker.com/reference/cli/docker/builder/prune/) if you only want to reclaim build
 cache without removing containers, networks, or images.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-a`, `--all` |  | Remove all unused images not just dangling ones |
-| `--filter` |  | Provide filter values (e.g. `label=<key>=<value>`) (API 1.28+) |
-| `-f`, `--force` |  | Do not prompt for confirmation |
-| `--volumes` |  | Prune anonymous volumes |
+| Option          | Default | Description                                                    |
+| --------------- | ------- | -------------------------------------------------------------- |
+| `-a`, `--all`   |         | Remove all unused images not just dangling ones                |
+| `--filter`      |         | Provide filter values (e.g. `label=<key>=<value>`) (API 1.28+) |
+| `-f`, `--force` |         | Do not prompt for confirmation                                 |
+| `--volumes`     |         | Prune anonymous volumes                                        |
 
 ## Examples
 
@@ -119,8 +119,8 @@ that have **either** the `foo` **or** `bar` label.
 
 The currently supported filters are:
 
-* until (`<timestamp>`) - only remove containers, images, and networks created before given timestamp
-* label (`label=<key>`, `label=<key>=<value>`, `label!=<key>`, or `label!=<key>=<value>`) - only remove containers, images, networks, and volumes with (or without, in case `label!=...` is used) the specified labels.
+- until (`<timestamp>`) - only remove containers, images, and networks created before given timestamp
+- label (`label=<key>`, `label=<key>=<value>`, `label!=<key>`, or `label!=<key>=<value>`) - only remove containers, images, networks, and volumes with (or without, in case `label!=...` is used) the specified labels.
 
 The `until` filter can be Unix timestamps, date formatted
 timestamps, or Go duration strings supported by [ParseDuration](https://pkg.go.dev/time#ParseDuration) (e.g. `10m`, `1h30m`) computed
@@ -129,7 +129,7 @@ formatted time stamps include RFC3339Nano, RFC3339, `2006-01-02T15:04:05`,
 `2006-01-02T15:04:05.999999999`, `2006-01-02T07:00`, and `2006-01-02`. The local
 timezone on the daemon will be used if you do not provide either a `Z` or a
 `+-00:00` timezone offset at the end of the timestamp. When providing Unix
-timestamps enter seconds[.nanoseconds], where seconds is the number of seconds
+timestamps enter seconds\[.nanoseconds], where seconds is the number of seconds
 that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap
 seconds (aka Unix epoch or Unix time), and the optional .nanoseconds field is a
 fraction of a second no more than nine digits long.

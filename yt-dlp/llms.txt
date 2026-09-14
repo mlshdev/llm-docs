@@ -9,11 +9,11 @@
 
 ## Manual
 
-- [INSTALLATION](pages/README.md): Source `README.md`.
+- [INSTALLATION](pages/README.md): ![Release version](#installation "Installation") ![Python Version](https://github.com/yt-dlp/yt-dlp/blob/master/pyproject.toml "Python Version") ![PyPI](https://pypi.org/project/yt-dlp "PyPI") ![Discord](https://discord… (178162 bytes)
 
 ## Reference
 
-- [CONTRIBUTING TO YT-DLP](pages/CONTRIBUTING.md): Source `CONTRIBUTING.md`.
-- [Maintainers](pages/Maintainers.md): Source `Maintainers.md`.
-- [Changelog](pages/Changelog.md): Source `Changelog.md`.
-- [Supported sites](pages/supportedsites.md): Source `supportedsites.md`.
+- [CONTRIBUTING TO YT-DLP](pages/CONTRIBUTING.md): This project strictly forbids the usage of LLMs, agents, or any other AI tools for any kind of contribution. (39385 bytes)
+- [Maintainers](pages/Maintainers.md): This file lists the maintainers of yt-dlp and their major contributions. See the Changelog for more details. (4843 bytes)
+- [Changelog](pages/Changelog.md): Adds support for HTTPS proxies and persistent connections (keep-alive) (774018 bytes)
+- [Supported sites](pages/supportedsites.md): Below is a list of all extractors that are currently included with yt-dlp. If a site is not listed here, it might still be supported by yt-dlp's embed extraction or generic extractor. Not all sites listed here are guara… (57175 bytes)

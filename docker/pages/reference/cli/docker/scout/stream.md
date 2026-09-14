@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/scout/docker_scout_stream.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_stream.yaml)
+> Pinned source for Docker main: [data/cli/scout/docker_scout_stream.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_stream.yaml)
 
 # docker scout stream
 
@@ -6,10 +6,10 @@ Manage streams (experimental)
 
 **Usage:** `docker scout stream [STREAM] [IMAGE]`
 
-> [!WARNING]
+> \[!WARNING]
 > This command is deprecated.
 
-> [!NOTE]
+> \[!NOTE]
 > This command is experimental.
 
 ## Description
@@ -20,11 +20,11 @@ Once recorded, streams can be referred to by their name, eg. in the `docker scou
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--org` |  | Namespace of the Docker organization |
-| `-o`, `--output` |  | Write the report to a file |
-| `--platform` |  | Platform of image to record |
+| Option           | Default | Description                          |
+| ---------------- | ------- | ------------------------------------ |
+| `--org`          |         | Namespace of the Docker organization |
+| `-o`, `--output` |         | Write the report to a file           |
+| `--platform`     |         | Platform of image to record          |
 
 ## Examples
 

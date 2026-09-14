@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/guides/examples/resend-email-sequence.mdx](https://trigger.dev/docs/guides/examples/resend-email-sequence)
+> Pinned source for Trigger.dev v4.5.16: [docs/guides/examples/resend-email-sequence.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/guides/examples/resend-email-sequence.mdx)
+> Canonical documentation: https://trigger.dev/docs/guides/examples/resend-email-sequence
 
 # Send a sequence of emails using Resend
 

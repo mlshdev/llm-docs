@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/buildx/docker_buildx_du.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_du.yaml)
+> Pinned source for Docker main: [data/cli/buildx/docker_buildx_du.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_du.yaml)
 
 # docker buildx du
 
@@ -12,19 +12,19 @@ Disk usage
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--filter` |  | Provide filter values |
-| `--format` |  | Format the output |
-| `--timeout` | `20s` | Override the default timeout for loading builder status |
-| `--verbose` |  | Shorthand for `--format=pretty` |
+| Option      | Default | Description                                             |
+| ----------- | ------- | ------------------------------------------------------- |
+| `--filter`  |         | Provide filter values                                   |
+| `--format`  |         | Format the output                                       |
+| `--timeout` | `20s`   | Override the default timeout for loading builder status |
+| `--verbose` |         | Shorthand for `--format=pretty`                         |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--builder` |  | Override the configured builder instance |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option          | Default | Description                              |
+| --------------- | ------- | ---------------------------------------- |
+| `--builder`     |         | Override the configured builder instance |
+| `-D`, `--debug` |         | Enable debug logging                     |
 
 ## Examples
 
@@ -70,7 +70,7 @@ The asterisks (\*) in the default output format indicate the following:
 
 ### Provide filter values (--filter) {#filter}
 
-Same as [`buildx prune --filter`](/reference/cli/docker/buildx/prune/#filter).
+Same as [`buildx prune --filter`](https://docs.docker.com/reference/cli/docker/buildx/prune/#filter).
 
 ### Format the output (--format) {#format}
 
@@ -79,17 +79,17 @@ using a Go template.
 
 Valid placeholders for the Go template are:
 
-* `.ID`
-* `.Parents`
-* `.CreatedAt`
-* `.Mutable`
-* `.Reclaimable`
-* `.Shared`
-* `.Size`
-* `.Description`
-* `.UsageCount`
-* `.LastUsedAt`
-* `.Type`
+- `.ID`
+- `.Parents`
+- `.CreatedAt`
+- `.Mutable`
+- `.Reclaimable`
+- `.Shared`
+- `.Size`
+- `.Description`
+- `.UsageCount`
+- `.LastUsedAt`
+- `.Type`
 
 When using the `--format` option, the `du` command will either output the data
 exactly as the template declares or, when using the `table` directive, includes
@@ -196,7 +196,7 @@ $ docker buildx du --format=json | jq .
 
 ### Use verbose output (--verbose) {#verbose}
 
-Shorthand for [`--format=pretty`](#format):
+Shorthand for [`--format=pretty`](#format-the-output---format-format):
 
 ```console
 $ docker buildx du --verbose

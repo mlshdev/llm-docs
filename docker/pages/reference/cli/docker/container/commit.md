@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_container_commit.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_commit.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_container_commit.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_commit.yaml)
 
 # docker container commit
 
@@ -27,12 +27,12 @@ created. Supported `Dockerfile` instructions:
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-a`, `--author` |  | Author (e.g., `John Hannibal Smith <hannibal@a-team.com>`) |
-| `-c`, `--change` |  | Apply Dockerfile instruction to the created image |
-| `-m`, `--message` |  | Commit message |
-| `--no-pause` |  | Disable pausing container during commit |
+| Option            | Default | Description                                                |
+| ----------------- | ------- | ---------------------------------------------------------- |
+| `-a`, `--author`  |         | Author (e.g., `John Hannibal Smith <hannibal@a-team.com>`) |
+| `-c`, `--change`  |         | Apply Dockerfile instruction to the created image          |
+| `-m`, `--message` |         | Commit message                                             |
+| `--no-pause`      |         | Disable pausing container during commit                    |
 
 ## Examples
 

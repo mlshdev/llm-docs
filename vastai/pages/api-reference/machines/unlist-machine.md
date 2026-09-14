@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [api-reference/openapi.yaml#delete /api/v0/machines/{machine_id}/asks](https://docs.vast.ai/api-reference/machines/unlist-machine)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#delete /api/v0/machines/{machine_id}/asks](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/api-reference/openapi.yaml%23delete%20/api/v0/machines/%7Bmachine_id%7D/asks)
+> Canonical documentation: https://docs.vast.ai/api-reference/machines/unlist-machine
 
 # unlist machine
 
@@ -8,13 +9,39 @@ Removes all 'ask' type offer contracts for a specified machine, effectively unli
 
 CLI Usage: `vastai unlist machine <id>`
 
+**Authentication:** `BearerAuth`
+
 **Parameters**
 
-- `machine_id` (path, required): The ID of the machine to unlist.
+- `machine_id` (path; required; integer): The ID of the machine to unlist.
 
 **Responses**
 
 - `200`: Success response
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `true`
+      - `machine_id` (integer)
+        - Example: `123`
+      - `user_id` (integer)
+        - Example: `456`
 - `401`: Unauthorized
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `false`
+      - `error` (string)
+      - `msg` (string)
 - `404`: Not Found
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `false`
+      - `error` (string)
+      - `msg` (string)
 - `429`: Too Many Requests
+  - Media type: `application/json`
+    - Schema (object)
+      - `detail` (string)
+        - Example: `API requests too frequent endpoint threshold=1.8`

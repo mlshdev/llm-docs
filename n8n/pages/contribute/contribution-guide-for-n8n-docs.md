@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/contribute/contribution-guide-for-n8n-docs.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/contribute/contribution-guide-for-n8n-docs.md)
+> Pinned source for n8n main: [docs/contribute/contribution-guide-for-n8n-docs.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/contribute/contribution-guide-for-n8n-docs.md)
 
 # Contribution guide for n8n Docs
 

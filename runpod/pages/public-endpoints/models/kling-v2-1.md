@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [public-endpoints/models/kling-v2-1.mdx](https://docs.runpod.io/public-endpoints/models/kling-v2-1)
+> Pinned source for Runpod main: [public-endpoints/models/kling-v2-1.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/public-endpoints/models/kling-v2-1.mdx)
+> Canonical documentation: https://docs.runpod.io/public-endpoints/models/kling-v2-1
 
 # Kling v2.1 I2V Pro
 

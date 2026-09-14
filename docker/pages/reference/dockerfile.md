@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/reference.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/reference.md)
+> Pinned source for Docker main: [_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/reference.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/moby/buildkit/frontend/dockerfile/docs/reference.md)
 
 Docker can build images automatically by reading the instructions from a
 Dockerfile. A Dockerfile is a text document that contains all the commands a
@@ -3094,11 +3094,14 @@ Removing intermediate container 6fcdb6855ae2
 Step 3/5 : RUN New-Item -ItemType Directory C:\Example
  ---> Running in d0eef8386e97
 
+
     Directory: C:\
+
 
 Mode         LastWriteTime              Length Name
 ----         -------------              ------ ----
 d-----       10/28/2016  11:26 AM              Example
+
 
  ---> 3f2fbf1395d9
 Removing intermediate container d0eef8386e97

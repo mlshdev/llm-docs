@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/_index.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/_index.md)
 
 In today's fast-paced and complex landscape of system monitoring, [VictoriaMetrics Anomaly Detection](https://victoriametrics.com/products/enterprise/anomaly-detection/) (`vmanomaly`), a part of our [Enterprise offering](https://victoriametrics.com/products/enterprise/), serves as an **observability layer** for SREs and DevOps teams atop of collected data to **automate the detection of anomalies in time-series data**, reducing manual efforts required to identify abnormal system behavior.
 

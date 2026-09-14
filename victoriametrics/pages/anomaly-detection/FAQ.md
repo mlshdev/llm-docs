@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/FAQ.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/FAQ.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/anomaly-detection/FAQ.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/anomaly-detection/FAQ.md)
 
 ## What is VictoriaMetrics Anomaly Detection (vmanomaly)?
 
@@ -280,8 +280,8 @@ reader:
     disk_usage_perc_5m:
       expr: |
         max_over_time(
-          1 - (node_filesystem_avail_bytes{mountpoint="/",fstype!="rootfs"}
-          /
+          1 - (node_filesystem_avail_bytes{mountpoint="/",fstype!="rootfs"} 
+          / 
           node_filesystem_size_bytes{mountpoint="/",fstype!="rootfs"}),
           1h
         )
@@ -291,8 +291,8 @@ reader:
     disk_usage_perc_1d:
       expr: |
         max_over_time(
-          1 - (node_filesystem_avail_bytes{mountpoint="/",fstype!="rootfs"}
-          /
+          1 - (node_filesystem_avail_bytes{mountpoint="/",fstype!="rootfs"} 
+          / 
           node_filesystem_size_bytes{mountpoint="/",fstype!="rootfs"}),
           24h
         )
@@ -461,7 +461,7 @@ services:
 volumes:
   # ...
   # Enable if settings.restore_state is True
-  vmanomaly_data: {}
+  vmanomaly_data: {} 
 ```
 
 For Helm chart users, refer to the `persistentVolume` [section](https://github.com/VictoriaMetrics/helm-charts/blob/7f5a2c00b14c2c088d7d8d8bcee7a440a5ff11c6/charts/victoria-metrics-anomaly/values.yaml#L183) in the [`values.yaml`](https://github.com/VictoriaMetrics/helm-charts/blob/master/charts/victoria-metrics-anomaly/values.yaml) file. Ensure that the boolean flags `dumpModels` and `dumpData` are set as needed (both are *enabled* by default).

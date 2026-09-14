@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [examples/ner/gliner2.mdx](https://docs.vast.ai/examples/ner/gliner2)
+> Pinned source for Vast.ai main: [examples/ner/gliner2.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/examples/ner/gliner2.mdx)
+> Canonical documentation: https://docs.vast.ai/examples/ner/gliner2
 
 # GLiNER2
 
@@ -154,25 +155,30 @@ security = HTTPBearer()
 if not API_KEY:
     print("WARNING: GLINER_API_KEY not set. API will accept any token.")
 
+
 def verify_token(credentials: HTTPAuthorizationCredentials = Security(security)):
     """Verify the Bearer token"""
     if API_KEY and credentials.credentials != API_KEY:
         raise HTTPException(status_code=401, detail="Unauthorized")
     return True
 
+
 # Global model state
 model = None
 device = None
+
 
 class ExtractRequest(BaseModel):
     text: str
     labels: List[str]
     threshold: Optional[float] = 0.3
 
+
 class ExtractResponse(BaseModel):
     entities: Dict[str, List[str]]
     inference_time: float
     device: str
+
 
 class HealthResponse(BaseModel):
     status: str
@@ -180,6 +186,7 @@ class HealthResponse(BaseModel):
     device: str
     gpu_available: bool
     gpu_name: Optional[str] = None
+
 
 @app.on_event("startup")
 async def load_model():
@@ -200,6 +207,7 @@ async def load_model():
         gpu_memory = torch.cuda.get_device_properties(0).total_memory / 1e9
         print(f"GPU: {gpu_name} ({gpu_memory:.1f} GB)")
 
+
 @app.get("/health", response_model=HealthResponse)
 async def health():
     """Health check endpoint"""
@@ -214,6 +222,7 @@ async def health():
         gpu_available=torch.cuda.is_available(),
         gpu_name=gpu_name,
     )
+
 
 @app.post("/extract", response_model=ExtractResponse)
 async def extract_entities(
@@ -234,6 +243,7 @@ async def extract_entities(
         inference_time=inference_time,
         device=device,
     )
+
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info")

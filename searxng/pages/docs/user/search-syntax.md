@@ -1,6 +1,6 @@
-> Commit-pinned source for SearXNG master: [docs/user/search-syntax.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/user/search-syntax.rst)
+> Pinned source for SearXNG master: [docs/user/search-syntax.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/user/search-syntax.rst)
 
-.. \_search-syntax:
+<a id="search-syntax"></a>
 
 # Search syntax
 
@@ -68,7 +68,7 @@ when using this feature.  Use it at your own risk.
 ## Special Queries
 
 In the available page you find keywords for
-\_special queries.  To give a few examples:
+*special queries*.  To give a few examples:
 
 - Generate a random UUID
 
@@ -78,7 +78,7 @@ In the available page you find keywords for
 
   - available
 
-- Show the \_user agent of your browser (needs to be activated)
+- Show the *user agent* of your browser (needs to be activated)
 
   - available
 

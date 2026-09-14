@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/scout/docker_scout_quickview.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_quickview.yaml)
+> Pinned source for Docker main: [data/cli/scout/docker_scout_quickview.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_quickview.yaml)
 
 # docker scout quickview
 
@@ -40,27 +40,27 @@ or if you want to control from where the image will be resolved, you must prefix
 - `archive://` use a tarball archive, as created by `docker save`
 - `fs://` use a local directory or file
 - `sbom://` SPDX file or in-toto attestation file with SPDX predicate or `syft` json SBOM file
-    In case of `sbom://` prefix, if the file is not defined then it will try to read it from the standard input.
+  In case of `sbom://` prefix, if the file is not defined then it will try to read it from the standard input.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--env` |  | Name of the environment |
-| `--ignore-suppressed` |  | Filter CVEs found in Scout exceptions based on the specified exception scope |
-| `--latest` |  | Latest indexed image |
-| `--only-policy` |  | Comma separated list of policies to evaluate |
-| `--only-vex-affected` |  | Filter CVEs by VEX statements with status not affected |
-| `--org` |  | Namespace of the Docker organization |
-| `-o`, `--output` |  | Write the report to a file |
-| `--platform` |  | Platform of image to analyze |
-| `--policy-bundle` |  | OCI reference of a policy bundle to evaluate (repeatable) |
-| `--policy-config` |  | Path or http(s) URL to a JSON file configuring policy enablement and inputs |
-| `--policy-dir` |  | Path to a directory of local .rego policy files (repeatable) |
-| `--policy-file` |  | Path or http(s) URL to a .rego policy file (repeatable) |
-| `--ref` |  | Reference to use if the provided tarball contains multiple references. Can only be used with archive |
-| `--vex-author` | `[<.*@docker.com>]` | List of VEX statement authors to accept |
-| `--vex-location` |  | File location of directory or file containing VEX statements |
+| Option                | Default             | Description                                                                                          |
+| --------------------- | ------------------- | ---------------------------------------------------------------------------------------------------- |
+| `--env`               |                     | Name of the environment                                                                              |
+| `--ignore-suppressed` |                     | Filter CVEs found in Scout exceptions based on the specified exception scope                         |
+| `--latest`            |                     | Latest indexed image                                                                                 |
+| `--only-policy`       |                     | Comma separated list of policies to evaluate                                                         |
+| `--only-vex-affected` |                     | Filter CVEs by VEX statements with status not affected                                               |
+| `--org`               |                     | Namespace of the Docker organization                                                                 |
+| `-o`, `--output`      |                     | Write the report to a file                                                                           |
+| `--platform`          |                     | Platform of image to analyze                                                                         |
+| `--policy-bundle`     |                     | OCI reference of a policy bundle to evaluate (repeatable)                                            |
+| `--policy-config`     |                     | Path or http(s) URL to a JSON file configuring policy enablement and inputs                          |
+| `--policy-dir`        |                     | Path to a directory of local .rego policy files (repeatable)                                         |
+| `--policy-file`       |                     | Path or http(s) URL to a .rego policy file (repeatable)                                              |
+| `--ref`               |                     | Reference to use if the provided tarball contains multiple references. Can only be used with archive |
+| `--vex-author`        | `[<.*@docker.com>]` | List of VEX statement authors to accept                                                              |
+| `--vex-location`      |                     | File location of directory or file containing VEX statements                                         |
 
 ## Examples
 

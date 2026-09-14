@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/troubleshoot-and-support/troubleshoot/mac-damaged-dialog.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/desktop/troubleshoot-and-support/troubleshoot/mac-damaged-dialog.md)
+> Pinned source for Docker main: [content/manuals/desktop/troubleshoot-and-support/troubleshoot/mac-damaged-dialog.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/desktop/troubleshoot-and-support/troubleshoot/mac-damaged-dialog.md)
 
 # Fix "Docker.app is damaged and can't be opened" on macOS
 

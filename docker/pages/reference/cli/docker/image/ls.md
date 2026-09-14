@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_image_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_image_ls.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_image_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_image_ls.yaml)
 
 # docker image ls
 
@@ -31,15 +31,15 @@ uses up the `SIZE` listed only once.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-a`, `--all` |  | Show all images (default hides intermediate and dangling images) |
-| `--digests` |  | Show digests |
-| `-f`, `--filter` |  | Filter output based on conditions provided |
-| `--format` |  | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to https://docs.docker.com/go/formatting/ for more information about formatting output with templates |
-| `--no-trunc` |  | Don't truncate output |
-| `-q`, `--quiet` |  | Only show image IDs |
-| `--tree` |  | List multi-platform images as a tree (EXPERIMENTAL) (API 1.47+, Experimental) |
+| Option           | Default | Description                                                                                                                                                                                                                                                                                                                                                                            |
+| ---------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `-a`, `--all`    |         | Show all images (default hides intermediate and dangling images)                                                                                                                                                                                                                                                                                                                       |
+| `--digests`      |         | Show digests                                                                                                                                                                                                                                                                                                                                                                           |
+| `-f`, `--filter` |         | Filter output based on conditions provided                                                                                                                                                                                                                                                                                                                                             |
+| `--format`       |         | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to <https://docs.docker.com/go/formatting/> for more information about formatting output with templates |
+| `--no-trunc`     |         | Don't truncate output                                                                                                                                                                                                                                                                                                                                                                  |
+| `-q`, `--quiet`  |         | Only show image IDs                                                                                                                                                                                                                                                                                                                                                                    |
+| `--tree`         |         | List multi-platform images as a tree (EXPERIMENTAL) (API 1.47+, Experimental)                                                                                                                                                                                                                                                                                                          |
 
 ## Examples
 
@@ -142,11 +142,11 @@ than one filter, then pass multiple flags (e.g., `--filter "foo=bar" --filter "b
 
 The currently supported filters are:
 
-* dangling (boolean - true or false)
-* label (`label=<key>` or `label=<key>=<value>`)
-* before (`<image-name>[:<tag>]`,  `<image id>` or `<image@digest>`) - filter images created before given id or references
-* since (`<image-name>[:<tag>]`,  `<image id>` or `<image@digest>`) - filter images created since given id or references
-* reference (pattern of an image reference) - filter images whose reference matches the specified pattern
+- dangling (boolean - true or false)
+- label (`label=<key>` or `label=<key>=<value>`)
+- before (`<image-name>[:<tag>]`,  `<image id>` or `<image@digest>`) - filter images created before given id or references
+- since (`<image-name>[:<tag>]`,  `<image id>` or `<image@digest>`) - filter images created since given id or references
+- reference (pattern of an image reference) - filter images whose reference matches the specified pattern
 
 #### Show untagged images (dangling)
 
@@ -290,7 +290,7 @@ using a Go template.
 Valid placeholders for the Go template are listed below:
 
 | Placeholder     | Description                              |
-|-----------------|------------------------------------------|
+| --------------- | ---------------------------------------- |
 | `.ID`           | Image ID                                 |
 | `.Repository`   | Image repository                         |
 | `.Tag`          | Image tag                                |

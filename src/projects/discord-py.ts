@@ -6,6 +6,7 @@ import {
   githubRawUrl,
   normalizeSpacing,
   rewriteMarkdownLinks,
+  withoutFencedCode,
 } from "../markdown.ts";
 import { DocumentCollector } from "../quarantine.ts";
 import type {
@@ -25,7 +26,7 @@ export interface PythonSymbol {
   readonly children: readonly PythonSymbol[];
 }
 
-interface RstContext {
+export interface RstContext {
   readonly sourcePath: string;
   readonly homepage: string;
   readonly repository: string;
@@ -33,11 +34,13 @@ interface RstContext {
   readonly files: ReadonlySet<string>;
   readonly labels: ReadonlyMap<string, { sourcePath: string; anchor: string }>;
   readonly symbols: SymbolIndex;
+  readonly dialect?: "discord" | "searxng";
+  readonly validate?: boolean;
   currentModule: string;
   currentClass?: PythonSymbol;
 }
 
-interface SymbolIndex {
+export interface SymbolIndex {
   readonly exact: ReadonlyMap<string, PythonSymbol>;
   readonly suffix: ReadonlyMap<string, readonly PythonSymbol[]>;
 }
@@ -167,24 +170,52 @@ export async function buildDiscordPyFromDirectory(
 }
 
 export function convertDiscordRst(source: string, context: RstContext): string {
-  const normalized = source
+  let normalized = source
     .replace(/\r\n?/g, "\n")
     .replace(/\|coro\|/g, "*coroutine*")
     .replace(/\|maybecoro\|/g, "*possibly a coroutine*")
     .replace(/\|coroutine_link\|/g, "*coroutine*");
+  const substitutions = new Map<string, string>();
+  normalized = normalized.replace(
+    /^\s*\.\.\s+\|([A-Za-z][\w-]*)\|\s+replace::\s*(.*)$/gm,
+    (_match, name: string, replacement: string) => {
+      substitutions.set(name, replacement.trim());
+      return "";
+    },
+  );
+  for (const [name, replacement] of substitutions) {
+    normalized = normalized.replaceAll(`|${name}|`, replacement);
+  }
+  // Sphinx permits role contents to wrap onto indented continuation lines.
+  // Rejoin those lines before the block renderer processes one line at a time.
+  while (/:[a-zA-Z][\w:-]*:`[^`\n]*\n\s*[^`\n]*`/.test(normalized)) {
+    normalized = normalized.replace(
+      /(:[a-zA-Z][\w:-]*:`[^`\n]*)\n\s*([^`\n]*`)/g,
+      "$1 $2",
+    );
+  }
   const rendered = normalizeSpacing(
     renderBlocks(normalized.split("\n"), context),
   );
-  const unresolved = rendered.match(
+  const checked =
+    context.dialect === "searxng" ? withoutFencedCode(rendered) : rendered;
+  const unresolved = checked.match(
     /^\s*\.\.\s+\S+::|(?:^|[^`\\]):[a-zA-Z][\w:-]*:`|`[^`\n]+`_|\|(?:coro|maybecoro|coroutine_link)\|/m,
   );
-  if (unresolved) {
+  if (unresolved && context.validate !== false) {
+    const index = unresolved.index ?? 0;
+    const contextText = checked
+      .slice(Math.max(0, index - 80), index + unresolved[0].length + 120)
+      .replace(/\s+/g, " ")
+      .trim();
     throw new Error(
-      `Unsupported discord.py RST syntax ${JSON.stringify(unresolved[0].trim())} in ${context.sourcePath}`,
+      `Unsupported ${context.dialect ?? "discord.py"} RST syntax ${JSON.stringify(unresolved[0].trim())} near ${JSON.stringify(contextText)} in ${context.sourcePath}`,
     );
   }
   return rendered;
 }
+
+export const convertSphinxRst = convertDiscordRst;
 
 function renderBlocks(lines: readonly string[], context: RstContext): string {
   const output: string[] = [];
@@ -199,6 +230,13 @@ function renderBlocks(lines: readonly string[], context: RstContext): string {
     if (gridTable) {
       output.push(...gridTable.lines, "");
       index = gridTable.next - 1;
+      continue;
+    }
+
+    const simpleTable = readSimpleTable(lines, index, context);
+    if (simpleTable) {
+      output.push(...simpleTable.lines, "");
+      index = simpleTable.next - 1;
       continue;
     }
 
@@ -243,13 +281,35 @@ function renderBlocks(lines: readonly string[], context: RstContext): string {
         name === "toctree" ||
         name === "contents" ||
         name === "attributetable" ||
-        name === "highlight"
+        name === "highlight" ||
+        name === "default-role"
       ) {
+        if (name === "toctree" && context.dialect === "searxng") {
+          const entries = withoutDirectiveOptions(block.lines)
+            .map((entry) => entry.trim())
+            .filter((entry) => entry && !entry.startsWith(":"));
+          for (const entry of entries) {
+            const explicit = entry.match(/^(.+?)\s*<([^>]+)>$/);
+            const label = explicit?.[1] ?? entry;
+            const target = explicit?.[2] ?? entry;
+            if (target !== "self") {
+              output.push(
+                `- [${renderInline(label, context)}](${documentationUrl(context.homepage, `docs/${target}.rst`)})`,
+              );
+            }
+          }
+          output.push("");
+        }
         continue;
       }
-      if (name === "image") {
+      if (name === "image" || name === "figure" || name === "kernel-figure") {
         const options = directiveOptions(block.lines);
-        output.push(`![${options.get("alt") ?? ""}](${argument})`, "");
+        output.push(`![${options.get("alt") ?? ""}](${argument})`);
+        const caption = withoutDirectiveOptions(block.lines);
+        if (caption.some((entry) => entry.trim())) {
+          output.push("", `*${renderBlocks(caption, context).trim()}*`);
+        }
+        output.push("");
         continue;
       }
       if (name === "code" || name === "code-block") {
@@ -266,11 +326,18 @@ function renderBlocks(lines: readonly string[], context: RstContext): string {
         name === "warning" ||
         name === "danger" ||
         name === "important" ||
+        name === "attention" ||
+        name === "caution" ||
+        name === "error" ||
+        name === "hint" ||
+        name === "tip" ||
         name === "seealso" ||
         name === "admonition"
       ) {
-        const title =
-          name === "admonition" ? argument || "Note" : titleCase(name);
+        const title = renderInline(
+          name === "admonition" ? argument || "Note" : titleCase(name),
+          context,
+        );
         output.push(...renderQuote(title, block.lines, context), "");
         continue;
       }
@@ -297,6 +364,98 @@ function renderBlocks(lines: readonly string[], context: RstContext): string {
       if (name === "container" || name === "exception_hierarchy") {
         const body = renderBlocks(block.lines, context).trim();
         if (body) output.push(body, "");
+        continue;
+      }
+      if (name === "tabs") {
+        const body = renderBlocks(
+          withoutDirectiveOptions(block.lines),
+          context,
+        ).trim();
+        if (body) output.push(body, "");
+        continue;
+      }
+      if (name === "group-tab") {
+        output.push(
+          `**${renderInline(argument, context)}**`,
+          "",
+          renderBlocks(withoutDirectiveOptions(block.lines), context).trim(),
+          "",
+        );
+        continue;
+      }
+      if (name === "sidebar" || name === "topic" || name === "rubric") {
+        output.push(
+          `### ${renderInline(argument || titleCase(name), context)}`,
+          "",
+          renderBlocks(withoutDirectiveOptions(block.lines), context).trim(),
+          "",
+        );
+        continue;
+      }
+      if (
+        name === "table" ||
+        name === "flat-table" ||
+        name === "list-table" ||
+        name === "hlist"
+      ) {
+        if (argument) output.push(`**${renderInline(argument, context)}**`, "");
+        const body = renderBlocks(
+          withoutDirectiveOptions(block.lines),
+          context,
+        ).trim();
+        if (body) output.push(body, "");
+        continue;
+      }
+      if (name === "csv-table") {
+        if (argument) output.push(`**${renderInline(argument, context)}**`, "");
+        output.push(
+          "```csv",
+          ...trimBlankLines(withoutDirectiveOptions(block.lines)),
+          "```",
+          "",
+        );
+        continue;
+      }
+      if (name === "math") {
+        output.push(
+          "$$",
+          argument,
+          ...trimBlankLines(withoutDirectiveOptions(block.lines)),
+          "$$",
+          "",
+        );
+        continue;
+      }
+      if (name === "kernel-render") {
+        const options = directiveOptions(block.lines);
+        output.push(
+          `\`\`\`${argument.toLowerCase() || "text"}`,
+          ...trimBlankLines(withoutDirectiveOptions(block.lines)),
+          "```",
+          ...(options.get("caption")
+            ? ["", `*${options.get("caption")}*`]
+            : []),
+          "",
+        );
+        continue;
+      }
+      if (name === "program-output") {
+        output.push(
+          `Command output generated by: \`${escapeCode(argument)}\``,
+          "",
+        );
+        continue;
+      }
+      if (name === "kernel-include" || name === "literalinclude") {
+        output.push(`Build-time include: \`${escapeCode(argument)}\``, "");
+        continue;
+      }
+      if (name === "jinja") {
+        const body = withoutDirectiveOptions(block.lines)
+          .filter((entry) => !/{%|{{/.test(entry))
+          .join("\n");
+        if (body.trim())
+          output.push(renderBlocks(body.split("\n"), context).trim(), "");
         continue;
       }
       if (name === "colour") {
@@ -366,7 +525,9 @@ function renderBlocks(lines: readonly string[], context: RstContext): string {
       continue;
     }
 
-    const field = line.match(/^\s*:([\w ]+)(?:\s+([^:]+))?:\s*(.*)$/);
+    const field = /^\s*:[a-zA-Z][\w:-]*:`/.test(line)
+      ? undefined
+      : line.match(/^\s*:([\w ]+)(?:\s+([^:]+))?:\s*(.*)$/);
     if (field) {
       const label = [field[1], field[2]].filter(Boolean).join(" ");
       output.push(
@@ -393,6 +554,18 @@ function renderAutodoc(
     context.currentClass,
   );
   if (!symbol) {
+    if (context.dialect === "searxng") {
+      const output = [
+        `#### \`${escapeCode(argument)}\``,
+        "",
+        `Static Python API reference (\`${directive}\`).`,
+      ];
+      const nested = withoutDirectiveOptions(lines);
+      if (nested.some((line) => line.trim())) {
+        output.push("", renderBlocks(nested, context).trim());
+      }
+      return output;
+    }
     throw new Error(
       `Unable to resolve ${directive} target ${argument} in ${context.sourcePath}`,
     );
@@ -452,8 +625,11 @@ function renderQuote(
   ];
 }
 
-function renderInline(value: string, context: RstContext): string {
+export function renderRstInline(value: string, context: RstContext): string {
   return value
+    .replace(/\|([A-Za-z][\w-]*)\|/g, (_match, name: string) =>
+      context.dialect === "searxng" ? `\`${name}\`` : _match,
+    )
     .replace(/\|coro\|/g, "*coroutine*")
     .replace(/\|maybecoro\|/g, "*possibly a coroutine*")
     .replace(/\|coroutine_link\|/g, "*coroutine*")
@@ -482,6 +658,8 @@ function renderInline(value: string, context: RstContext): string {
     .replace(/\*\*([^*]+)\*\*/g, "**$1**");
 }
 
+const renderInline = renderRstInline;
+
 function renderRole(
   role: string,
   content: string,
@@ -491,7 +669,7 @@ function renderRole(
   const label = (explicit?.[1] ?? content).trim().replace(/^~/, "");
   const target = (explicit?.[2] ?? content).trim().replace(/^~/, "");
   if (role === "doc") {
-    return `[${label}](${documentationUrl(context.homepage, `docs/${target}.rst`)})`;
+    return `[${label}](${resolveDocumentationTarget(target, context)})`;
   }
   if (role === "ref") {
     const reference = context.labels.get(target);
@@ -501,6 +679,46 @@ function renderRole(
   }
   if (role === "issue") {
     return `[GH-${label}](https://github.com/${context.repository}/issues/${encodeURIComponent(target)})`;
+  }
+  if (context.dialect === "searxng") {
+    if (role === "origin") {
+      return `[${label}](https://github.com/${context.repository}/blob/${context.ref}/${target.replace(/^\//, "")})`;
+    }
+    if (role === "docs") {
+      const destination = target === "." ? "index.html" : target;
+      return `[${label}](${context.homepage.replace(/\/$/, "")}/${destination})`;
+    }
+    if (role === "pull") {
+      const [number, fragment] = target.split("#");
+      return `[${label}](https://github.com/${context.repository}/pull/${number}${fragment ? `#${fragment}` : ""})`;
+    }
+    if (role === "patch" || role === "commit") {
+      return `[${label}](https://github.com/${context.repository}/commit/${encodeURIComponent(target)})`;
+    }
+    if (role === "pypi")
+      return `[${label}](https://pypi.org/project/${encodeURIComponent(target)}/)`;
+    if (role === "wiki")
+      return `[${label}](https://en.wikipedia.org/wiki/${encodeURIComponent(target.replace(/ /g, "_"))})`;
+    if (role === "man") return `\`${escapeCode(label)}(1)\``;
+    if (role === "duref")
+      return `[${label}](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#${target})`;
+    if (role === "dudir")
+      return `[${label}](https://docutils.sourceforge.io/docs/ref/rst/directives.html#${target})`;
+    if (role === "durole")
+      return `[${label}](https://docutils.sourceforge.io/docs/ref/rst/roles.html#${target})`;
+    if (role === "ctan")
+      return `[${label}](https://ctan.org/pkg/${encodeURIComponent(target)})`;
+    if (
+      [
+        "cspan",
+        "rspan",
+        "fill-cells",
+        "rolename",
+        "rst:role",
+        "rst:dir",
+      ].includes(role)
+    )
+      return `\`${escapeCode(label)}\``;
   }
   if (role === "ddocs") {
     return `[${label}](https://discord.com/developers/docs/${target})`;
@@ -532,8 +750,21 @@ function renderRole(
     "term",
     "python3",
     "custom_emoji",
+    "command",
+    "download",
+    "emphasis",
+    "guilabel",
+    "kbd",
+    "literal",
+    "math",
+    "math:numref",
+    "menuselection",
+    "strong",
+    "sub",
+    "sup",
+    "title",
   ]);
-  if (codeRoles.has(role)) {
+  if (codeRoles.has(role) || role.startsWith("py:")) {
     return `\`${escapeCode(label)}\``;
   }
   throw new Error(
@@ -542,6 +773,8 @@ function renderRole(
 }
 
 function resolveRstTarget(target: string, context: RstContext): string {
+  const intersphinx = intersphinxDocumentationUrl(target);
+  if (intersphinx !== undefined) return intersphinx;
   if (/^(?:[a-z][a-z0-9+.-]*:|\/\/|#)/i.test(target)) return target;
   const reference = context.labels.get(target);
   return reference
@@ -569,11 +802,39 @@ function documentationUrl(
   sourcePath: string,
   fragment?: string,
 ): string {
-  const relative = sourcePath
+  const relative = path.posix
+    .normalize(sourcePath)
     .replace(/^docs\//, "")
-    .replace(/\.rst$/, ".html")
-    .replace(/(?:^|\/)index\.html$/, "$1index.html");
+    .replace(/\.rst$/, ".html");
   return `${homepage.replace(/\/$/, "")}/${relative}${fragment ? `#${fragment}` : ""}`;
+}
+
+function resolveDocumentationTarget(
+  target: string,
+  context: RstContext,
+): string {
+  return (
+    intersphinxDocumentationUrl(target) ??
+    documentationUrl(context.homepage, `docs/${target}.rst`)
+  );
+}
+
+function intersphinxDocumentationUrl(target: string): string | undefined {
+  const match = target.match(/^(py|aio|req):(.+)$/);
+  if (!match) return undefined;
+  const bases: Readonly<Record<string, string>> = {
+    py: "https://docs.python.org/3",
+    aio: "https://docs.aiohttp.org/en/stable",
+    req: "https://requests.readthedocs.io/en/latest",
+  };
+  const base = bases[match[1] ?? ""];
+  if (base === undefined) return undefined;
+  const route = match[2] ?? "";
+  const parts = route.match(/^([^#?]*)(.*)$/);
+  const pathname = parts?.[1] ?? route;
+  const suffix = parts?.[2] ?? "";
+  if (pathname === "index") return `${base}/${suffix}`;
+  return `${base}/${pathname}${/\.[a-z0-9]+$/i.test(pathname) ? "" : ".html"}${suffix}`;
 }
 
 function resolveMarkdownLink(
@@ -1031,6 +1292,65 @@ function readGridTable(
           (row) =>
             `| ${row.map((cell) => renderInline(cell, context).replace(/\|/g, "\\|")).join(" | ")} |`,
         ),
+    ],
+    next: cursor,
+  };
+}
+
+function readSimpleTable(
+  lines: readonly string[],
+  start: number,
+  context: RstContext,
+): GridTable | undefined {
+  const first = lines[start] ?? "";
+  const runs = [...first.matchAll(/=+/g)];
+  if (runs.length < 2 || !/^(?:=+\s+){1,}=+$/.test(first.trim())) {
+    return undefined;
+  }
+  const columns = runs.map((match) => ({
+    start: match.index ?? 0,
+    width: match[0].length,
+  }));
+  const rows: string[][] = [];
+  let cursor = start + 1;
+  for (; cursor < lines.length; cursor += 1) {
+    const line = lines[cursor] ?? "";
+    if (line.trim() === first.trim()) {
+      if (rows.length > 0 && lines[cursor + 1]?.trim() !== first.trim()) {
+        const next = lines[cursor + 1] ?? "";
+        if (!next.trim() || !next.slice(columns[0]?.start ?? 0).trim()) {
+          cursor += 1;
+          break;
+        }
+      }
+      continue;
+    }
+    if (!line.trim()) break;
+    const cells = columns.map(({ start: offset, width }, column) =>
+      (column === columns.length - 1
+        ? line.slice(offset)
+        : line.slice(offset, offset + width)
+      ).trim(),
+    );
+    if (!(cells[0] ?? "").trim() && rows.length > 0) {
+      const previous = rows.at(-1);
+      cells.forEach((cell, column) => {
+        if (cell && previous) {
+          previous[column] = `${previous[column] ?? ""} ${cell}`.trim();
+        }
+      });
+    } else {
+      rows.push(cells);
+    }
+  }
+  if (rows.length === 0) return undefined;
+  const renderRow = (row: readonly string[]): string =>
+    `| ${row.map((cell) => renderInline(cell, context).replaceAll("|", "\\|")).join(" | ")} |`;
+  return {
+    lines: [
+      renderRow(rows[0] ?? []),
+      `| ${columns.map(() => "---").join(" | ")} |`,
+      ...rows.slice(1).map(renderRow),
     ],
     next: cursor,
   };

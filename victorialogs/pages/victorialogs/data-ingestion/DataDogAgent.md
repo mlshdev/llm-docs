@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/data-ingestion/DataDogAgent.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/DataDogAgent.md)
+> Pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/data-ingestion/DataDogAgent.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/data-ingestion/DataDogAgent.md)
 
 To start ingesting logs from DataDog agent please specify a custom URL instead of default one for sending collected logs to [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/):
 

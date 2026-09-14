@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_manifest.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_manifest.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_manifest.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_manifest.yaml)
 
 # docker manifest
 
@@ -6,7 +6,7 @@ Manage Docker image manifests and manifest lists
 
 **Usage:** `docker manifest COMMAND`
 
-> [!NOTE]
+> \[!NOTE]
 > This command is experimental.
 
 ## Description
@@ -273,7 +273,7 @@ $ docker manifest create --insecure myprivateregistry.mycompany.com/repo/image:1
 $ docker manifest push --insecure myprivateregistry.mycompany.com/repo/image:tag
 ```
 
-> [!NOTE]
+> \[!NOTE]
 > The `--insecure` flag is not required to annotate a manifest list,
 > since annotations are to a locally-stored copy of a manifest list. You may also
 > skip the `--insecure` flag if you are performing a `docker manifest inspect`

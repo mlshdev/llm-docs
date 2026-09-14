@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [guides/teams/managing-teams.mdx](https://docs.vast.ai/guides/teams/managing-teams)
+> Pinned source for Vast.ai main: [guides/teams/managing-teams.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/teams/managing-teams.mdx)
+> Canonical documentation: https://docs.vast.ai/guides/teams/managing-teams
 
 # Managing Your Team
 

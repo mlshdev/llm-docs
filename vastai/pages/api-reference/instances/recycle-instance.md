@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/instances/recycle/{id}](https://docs.vast.ai/api-reference/instances/recycle-instance)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/instances/recycle/{id}](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/api-reference/openapi.yaml%23put%20/api/v0/instances/recycle/%7Bid%7D)
+> Canonical documentation: https://docs.vast.ai/api-reference/instances/recycle-instance
 
 # recycle instance
 
@@ -9,13 +10,37 @@ Updates container status to 'recycling' and executes docker stop/remove commands
 
 CLI Usage: `vastai recycle instance <id>`
 
+**Authentication:** `BearerAuth`
+
 **Parameters**
 
-- `id` (path, required): ID of the instance to recycle
+- `id` (path; required; integer): ID of the instance to recycle
+  - Example: `1234`
 
 **Responses**
 
 - `200`: Instance recycle initiated successfully
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `true`
 - `400`: Bad Request - Invalid instance ID
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `false`
+      - `error` (string; enum: `invalid_id`)
+      - `msg` (string)
+        - Example: `Invalid instance id.`
 - `401`: Unauthorized
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `false`
+      - `error` (string)
+      - `msg` (string)
 - `429`: Too Many Requests
+  - Media type: `application/json`
+    - Schema (object)
+      - `detail` (string)
+        - Example: `API requests too frequent endpoint threshold=1.0`

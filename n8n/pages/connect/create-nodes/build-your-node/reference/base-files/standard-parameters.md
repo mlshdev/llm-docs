@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/base-files/standard-parameters.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/connect/create-nodes/build-your-node/reference/base-files/standard-parameters.md)
+> Pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/base-files/standard-parameters.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/connect/create-nodes/build-your-node/reference/base-files/standard-parameters.md)
 
 # Standard parameters <a id="standard-parameters"></a>
 
@@ -32,9 +32,9 @@ icon: 'file:exampleNodeIcon.svg'
 To provide different icons for light and dark modes, use an object with `light` and `dark` properties. For example:
 
 ```
-icon: {
-  light: 'file:exampleNodeIcon.svg',
-  dark: 'file:exampleNodeIcon.dark.svg'
+icon: { 
+  light: 'file:exampleNodeIcon.svg', 
+  dark: 'file:exampleNodeIcon.dark.svg' 
 }
 ```
 

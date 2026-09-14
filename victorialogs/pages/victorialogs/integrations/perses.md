@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/integrations/perses.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/perses.md)
+> Pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/integrations/perses.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/integrations/perses.md)
 
 Starting with [Perses](https://perses.dev/) [v0.53.0-beta.2](https://github.com/perses/perses/releases/tag/v0.53.0-beta.2) release introduces first-class integration with VictoriaLogs.
 

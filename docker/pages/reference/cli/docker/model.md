@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model.yaml)
 
 # docker model
 
@@ -7,7 +7,7 @@ Docker Model Runner
 ## Description
 
 Use Docker Model Runner to run and interact with AI models directly from the command line.
-For more information, see the [documentation](/ai/model-runner/)
+For more information, see the [documentation](https://docs.docker.com/ai/model-runner/)
 
 ## Subcommands
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/localstack.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/localstack.md)
+> Pinned source for Docker main: [content/guides/localstack.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/localstack.md)
 
 # Develop and test AWS Cloud applications using LocalStack and Docker
 
@@ -143,7 +143,7 @@ Let’s see it in action. Start by launching the Node.js backend service.
      endpoint: process.env.S3_ENDPOINT_URL, // Use the provided endpoint or fallback to defaults
      credentials: {
        accessKeyId: process.env.AWS_ACCESS_KEY_ID || 'default_access_key', // Default values for development
-       secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY || 'default_secret_key',
+       secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY || 'default_secret_key',  
      },
    });
    ```

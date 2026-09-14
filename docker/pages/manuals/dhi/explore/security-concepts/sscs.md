@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/explore/security-concepts/sscs.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/dhi/explore/security-concepts/sscs.md)
+> Pinned source for Docker main: [content/manuals/dhi/explore/security-concepts/sscs.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/dhi/explore/security-concepts/sscs.md)
 
 # Software Supply Chain Security
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_config_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_config_create.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_config_create.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_config_create.yaml)
 
 # docker config create
 
@@ -10,20 +10,20 @@ Create a config from a file or STDIN
 
 Creates a config using standard input or from a file for the config content.
 
-For detailed information about using configs, refer to [store configuration data using Docker Configs](/engine/swarm/configs/).
+For detailed information about using configs, refer to [store configuration data using Docker Configs](https://docs.docker.com/engine/swarm/configs/).
 
-> [!NOTE]
+> \[!NOTE]
 > This is a cluster management command, and must be executed on a Swarm
 > manager node. To learn about managers and workers, refer to the
-> [Swarm mode section](/engine/swarm/) in the
+> [Swarm mode section](https://docs.docker.com/engine/swarm/) in the
 > documentation.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-l`, `--label` |  | Config labels |
-| `--template-driver` |  | Template driver (API 1.37+) |
+| Option              | Default | Description                 |
+| ------------------- | ------- | --------------------------- |
+| `-l`, `--label`     |         | Config labels               |
+| `--template-driver` |         | Template driver (API 1.37+) |
 
 ## Examples
 

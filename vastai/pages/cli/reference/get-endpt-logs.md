@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [cli/reference/get-endpt-logs.mdx](https://docs.vast.ai/cli/reference/get-endpt-logs)
+> Pinned source for Vast.ai main: [cli/reference/get-endpt-logs.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/cli/reference/get-endpt-logs.mdx)
+> Canonical documentation: https://docs.vast.ai/cli/reference/get-endpt-logs
 
 # vastai get endpt-logs
 

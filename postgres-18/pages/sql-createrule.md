@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/create_rule.sgml#sql-createrule](https://www.postgresql.org/docs/18/sql-createrule.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/create_rule.sgml#sql-createrule](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/create_rule.sgml%23sql-createrule)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-createrule.html
 
 # CREATE RULE
 

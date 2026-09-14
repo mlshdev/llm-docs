@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/http/load-balancing/service.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/load-balancing/service.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/http/load-balancing/service.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/load-balancing/service.md)
 
 Traefik services define how to distribute incoming traffic across your backend servers.
 This page covers two main concepts:
@@ -56,7 +56,7 @@ http:
     strategy = "wrr"
     [[http.services.my-service.loadBalancer.servers]]
       url = "http://private-ip-server-1/"
-
+    
     [http.services.my-service.loadBalancer.sticky.cookie]
       name = "sticky-cookie"
 
@@ -68,7 +68,7 @@ http:
     [http.services.my-service.loadBalancer.passiveHealthCheck]
       failureWindow = "3s"
       maxFailedAttempts = 3
-
+    
     passHostHeader = true
     serversTransport = "customTransport@file"
 
@@ -215,7 +215,7 @@ This algorithm provides better load distribution when servers have varying respo
 >     [[http.services.my-service.loadBalancer.servers]]
 >       url = "http://private-ip-server-1/"
 >     [[http.services.my-service.loadBalancer.servers]]
->       url = "http://private-ip-server-2/"
+>       url = "http://private-ip-server-2/"       
 >     [[http.services.my-service.loadBalancer.servers]]
 >       url = "http://private-ip-server-3/"
 > ```
@@ -253,7 +253,7 @@ The algorithm computes a score for each available backend using a hash of the cl
 >     [[http.services.my-service.loadBalancer.servers]]
 >       url = "http://private-ip-server-1/"
 >     [[http.services.my-service.loadBalancer.servers]]
->       url = "http://private-ip-server-2/"
+>       url = "http://private-ip-server-2/"       
 >     [[http.services.my-service.loadBalancer.servers]]
 >       url = "http://private-ip-server-3/"
 > ```

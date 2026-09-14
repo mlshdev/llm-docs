@@ -1,10 +1,10 @@
-> Tag-pinned source for discord.py v2.7.1: [docs/interactions/api.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/interactions/api.rst)
+> Pinned source for discord.py v2.7.1: [docs/interactions/api.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/interactions/api.rst)
 
 # Interactions API Reference
 
 The following section outlines the API of interactions, as implemented by the library.
 
-For documentation about the rest of the library, check [/api](https://discordpy.readthedocs.io//api.html).
+For documentation about the rest of the library, check [/api](https://discordpy.readthedocs.io/api.html).
 
 ## Models
 
@@ -109,11 +109,10 @@ The maximum number of bytes a file can have when responding to this interaction.
 
 ##### `client(self) -> ClientT`
 
-- **Class:** `Client`: The client that is handling this interaction.
+`Client`: The client that is handling this interaction.
 
 Note that `AutoShardedClient`, `.commands.Bot`, and
-
-- **Class:** `~.commands.AutoShardedBot` are all subclasses of client.
+`.commands.AutoShardedBot` are all subclasses of client.
 
 <a id="api-interaction-guild"></a>
 
@@ -131,7 +130,7 @@ Optional\[`int`]: The ID of the channel the interaction was sent from.
 
 ##### `permissions(self) -> Permissions`
 
-- **Class:** `Permissions`: The resolved permissions of the member in the channel, including overwrites.
+`Permissions`: The resolved permissions of the member in the channel, including overwrites.
 
 In a non-guild context where this doesn't apply, an empty permissions object is returned.
 
@@ -139,13 +138,13 @@ In a non-guild context where this doesn't apply, an empty permissions object is 
 
 ##### `app_permissions(self) -> Permissions`
 
-- **Class:** `Permissions`: The resolved permissions of the application or the bot, including overwrites.
+`Permissions`: The resolved permissions of the application or the bot, including overwrites.
 
 <a id="api-interaction-namespace"></a>
 
 ##### `namespace(self) -> Namespace`
 
-- **Class:** `app_commands.Namespace`: The resolved namespace for this interaction.
+`app_commands.Namespace`: The resolved namespace for this interaction.
 
 If the interaction is not an application command related interaction or the client does not have a
 tree attached to it then this returns an empty namespace.
@@ -167,8 +166,7 @@ attached tree then `None` is returned.
 Optional\[`int`]: The ID of the command that triggered this interaction.
 
 Only applicable if `type` is one of, `InteractionType.application_command` or
-
-- **Attr:** `InteractionType.autocomplete`.
+`InteractionType.autocomplete`.
 
 > **Added in version 2.7**
 
@@ -176,7 +174,7 @@ Only applicable if `type` is one of, `InteractionType.application_command` or
 
 ##### `response(self) -> InteractionResponse[ClientT]`
 
-- **Class:** `InteractionResponse`: Returns an object responsible for handling responding to the interaction.
+`InteractionResponse`: Returns an object responsible for handling responding to the interaction.
 
 A response can only be done once. If secondary messages need to be sent, consider using `followup`
 instead.
@@ -185,19 +183,19 @@ instead.
 
 ##### `followup(self) -> Webhook`
 
-- **Class:** `Webhook`: Returns the follow up webhook for follow up interactions.
+`Webhook`: Returns the follow up webhook for follow up interactions.
 
 <a id="api-interaction-created-at"></a>
 
 ##### `created_at(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: When the interaction was created.
+`datetime.datetime`: When the interaction was created.
 
 <a id="api-interaction-expires-at"></a>
 
 ##### `expires_at(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: When the interaction expires.
+`datetime.datetime`: When the interaction expires.
 
 <a id="api-interaction-custom-id"></a>
 
@@ -206,8 +204,7 @@ instead.
 Optional\[`str`]: The custom ID of the component that triggered this interaction.
 
 Only applicable if `type` is one of, `InteractionType.component` or
-
-- **Attr:** `InteractionType.modal_submit`.
+`InteractionType.modal_submit`.
 
 > **Added in version 2.7**
 
@@ -215,13 +212,13 @@ Only applicable if `type` is one of, `InteractionType.component` or
 
 ##### `is_expired(self) -> bool`
 
-- **Class:** `bool`: Returns `True` if the interaction is expired.
+`bool`: Returns `True` if the interaction is expired.
 
 <a id="api-interaction-is-guild-integration"></a>
 
 ##### `is_guild_integration(self) -> bool`
 
-- **Class:** `bool`: Returns `True` if the interaction is a guild integration.
+`bool`: Returns `True` if the interaction is a guild integration.
 
 > **Added in version 2.4**
 
@@ -229,7 +226,7 @@ Only applicable if `type` is one of, `InteractionType.component` or
 
 ##### `is_user_integration(self) -> bool`
 
-- **Class:** `bool`: Returns `True` if the interaction is a user integration.
+`bool`: Returns `True` if the interaction is a user integration.
 
 > **Added in version 2.4**
 
@@ -397,9 +394,8 @@ Translates a string using the set `discord.app_commands.Translator`.
 **string: Union\[`str`, `discord.app_commands.locale_str`]**
 
 The string to translate.
-
-- **Class:** `~discord.app_commands.locale_str` can be used to add more context,
-  information, or any metadata necessary.
+`discord.app_commands.locale_str` can be used to add more context,
+information, or any metadata necessary.
 
 **locale: `Locale`**
 
@@ -435,7 +431,7 @@ This type can be accessed through `Interaction.response`.
 
 ##### `is_done(self) -> bool`
 
-- **Class:** `bool`: Indicates whether an interaction response has been done before.
+`bool`: Indicates whether an interaction response has been done before.
 
 An interaction can only be responded to once.
 
@@ -443,7 +439,7 @@ An interaction can only be responded to once.
 
 ##### `type(self) -> Optional[InteractionResponseType]`
 
-- **Class:** `InteractionResponseType`: The type of response that was sent, `None` if response is not done.
+`InteractionResponseType`: The type of response that was sent, `None` if response is not done.
 
 <a id="api-interactionresponse-defer"></a>
 
@@ -818,8 +814,7 @@ The interaction callback response type.
 
 The resource that the interaction response created. If a message was sent, this will be
 a `InteractionMessage`. If an activity was launched this will be a
-
-- **Class:** `InteractionCallbackActivityInstance`. In any other case, this will be `None`.
+`InteractionCallbackActivityInstance`. In any other case, this will be `None`.
 
 **message\_id: Optional\[`int`]**
 
@@ -833,13 +828,13 @@ The activity ID of the resource. Only available if the resource is a `Interactio
 
 ##### `is_thinking(self) -> bool`
 
-- **Class:** `bool`: Whether the response was a thinking defer.
+`bool`: Whether the response was a thinking defer.
 
 <a id="api-interactioncallbackresponse-is-ephemeral"></a>
 
 ##### `is_ephemeral(self) -> bool`
 
-- **Class:** `bool`: Whether the response was ephemeral.
+`bool`: Whether the response was ephemeral.
 
 ### InteractionCallbackActivityInstance
 
@@ -869,8 +864,7 @@ This allows you to edit or delete the message associated with
 the interaction response. To retrieve this object see `Interaction.original_response`.
 
 This inherits from `discord.Message` with changes to
-
-- **Meth:** `edit` and `delete` to work.
+`edit` and `delete` to work.
 
 > **Added in version 2.0**
 
@@ -1105,7 +1099,7 @@ The user or member that invoked the interaction.
 
 ##### `created_at(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: The interaction's creation time in UTC.
+`datetime.datetime`: The interaction's creation time in UTC.
 
 ### MessageInteractionMetadata
 
@@ -1178,7 +1172,7 @@ The ID of the message the command was run on, only applicable to message context
 
 ##### `created_at(self) -> datetime.datetime`
 
-- **Class:** `datetime.datetime`: The interaction's creation time in UTC.
+`datetime.datetime`: The interaction's creation time in UTC.
 
 <a id="api-messageinteractionmetadata-original-response-message"></a>
 
@@ -1206,13 +1200,13 @@ Optional\[`discord.Message`]: The target message, if applicable and is found in 
 
 ##### `is_guild_integration(self) -> bool`
 
-- **Class:** `bool`: Returns `True` if the interaction is a guild integration.
+`bool`: Returns `True` if the interaction is a guild integration.
 
 <a id="api-messageinteractionmetadata-is-user-integration"></a>
 
 ##### `is_user_integration(self) -> bool`
 
-- **Class:** `bool`: Returns `True` if the interaction is a user integration.
+`bool`: Returns `True` if the interaction is a user integration.
 
 ### Component
 
@@ -1246,7 +1240,7 @@ This class is abstract and cannot be instantiated.
 
 ##### `type(self) -> ComponentType`
 
-- **Class:** `ComponentType`: The type of component.
+`ComponentType`: The type of component.
 
 ### ActionRow
 
@@ -1320,7 +1314,7 @@ An item in the action row.
 
 ##### `content_length(self) -> int`
 
-- **Class:** `int`: Returns the total length of all text content in this action row.
+`int`: Returns the total length of all text content in this action row.
 
 <a id="api-actionrow-add-item"></a>
 
@@ -1407,10 +1401,9 @@ the `discord.ui.Button` being pressed.
 > **Note**
 > Buttons with a URL or a SKU cannot be created with this function.
 > Consider creating a `Button` manually and adding it via
->
-> - **Meth:** `ActionRow.add_item` instead. This is beacuse these buttons
->   cannot have a callback associated with them since Discord does not
->   do any processing with them.
+> `ActionRow.add_item` instead. This is beacuse these buttons
+> cannot have a callback associated with them since Discord does not
+> do any processing with them.
 
 ## Parameters
 
@@ -1510,9 +1503,8 @@ Defaults to 1 and must be between 1 and 25.
 **options: List\[`discord.SelectOption`]**
 
 A list of options that can be selected in this menu. This can only be used with
-
-- **Class:** `Select` instances.
-  Can only contain up to 25 items.
+`Select` instances.
+Can only contain up to 25 items.
 
 **channel\_types: List\[`discord.ChannelType`]**
 
@@ -1608,7 +1600,7 @@ Optional\[`int`]: The ID of this button.
 
 ##### `style(self) -> ButtonStyle`
 
-- **Class:** `discord.ButtonStyle`: The style of the button.
+`discord.ButtonStyle`: The style of the button.
 
 <a id="api-button-custom-id"></a>
 
@@ -1628,7 +1620,7 @@ Optional\[`str`]: The URL this button sends you to.
 
 ##### `disabled(self) -> bool`
 
-- **Class:** `bool`: Whether the button is disabled or not.
+`bool`: Whether the button is disabled or not.
 
 <a id="api-button-label"></a>
 
@@ -1663,8 +1655,7 @@ on mobile it renders a bit differently.
 
 > **Note**
 > The user constructible and usable type to create a select menu is
->
-> - **Class:** `discord.ui.Select` not this one.
+> `discord.ui.Select` not this one.
 
 > **Added in version 2.0**
 
@@ -1805,55 +1796,55 @@ Optional\[`int`]: The ID of this text input.
 
 ##### `custom_id(self) -> str`
 
-- **Class:** `str`: The ID of the text input that gets received during an interaction.
+`str`: The ID of the text input that gets received during an interaction.
 
 <a id="api-textinput-value"></a>
 
 ##### `value(self) -> str`
 
-- **Class:** `str`: The value of the text input.
+`str`: The value of the text input.
 
 <a id="api-textinput-label"></a>
 
 ##### `label(self) -> Optional[str]`
 
-- **Class:** `str`: The label of the text input.
+`str`: The label of the text input.
 
 <a id="api-textinput-placeholder"></a>
 
 ##### `placeholder(self) -> Optional[str]`
 
-- **Class:** `str`: The placeholder text to display when the text input is empty.
+`str`: The placeholder text to display when the text input is empty.
 
 <a id="api-textinput-required"></a>
 
 ##### `required(self) -> bool`
 
-- **Class:** `bool`: Whether the text input is required.
+`bool`: Whether the text input is required.
 
 <a id="api-textinput-min-length"></a>
 
 ##### `min_length(self) -> Optional[int]`
 
-- **Class:** `int`: The minimum length of the text input.
+`int`: The minimum length of the text input.
 
 <a id="api-textinput-max-length"></a>
 
 ##### `max_length(self) -> Optional[int]`
 
-- **Class:** `int`: The maximum length of the text input.
+`int`: The maximum length of the text input.
 
 <a id="api-textinput-style"></a>
 
 ##### `style(self) -> TextStyle`
 
-- **Class:** `discord.TextStyle`: The style of the text input.
+`discord.TextStyle`: The style of the text input.
 
 <a id="api-textinput-default"></a>
 
 ##### `default(self) -> Optional[str]`
 
-- **Class:** `str`: The default value of the text input.
+`str`: The default value of the text input.
 
 ### LabelComponent
 
@@ -1867,8 +1858,7 @@ This inherits from `Component`.
 
 > **Note**
 > The user constructible and usable type for creating a label is
->
-> - **Class:** `discord.ui.Label` not this one.
+> `discord.ui.Label` not this one.
 
 > **Added in version 2.6**
 
@@ -1963,8 +1953,7 @@ The ID of this component.
 Represents a UI text display.
 
 This is a top-level layout component that can only be used on `LayoutView`,
-
-- **Class:** `Section`, `Container`, or `Modal`.
+`Section`, `Container`, or `Modal`.
 
 > **Added in version 2.6**
 
@@ -1990,8 +1979,7 @@ This inherits from `Component`.
 
 > **Note**
 > The user constructible and usable type for creating a media gallery is
->
-> - **Class:** `discord.ui.MediaGallery` not this one.
+> `discord.ui.MediaGallery` not this one.
 
 > **Added in version 2.6**
 
@@ -2017,8 +2005,7 @@ This inherits from `Component`.
 
 > **Note**
 > The user constructible and usable type for create a file component is
->
-> - **Class:** `discord.ui.File` not this one.
+> `discord.ui.File` not this one.
 
 > **Added in version 2.6**
 
@@ -2056,8 +2043,7 @@ This inherits from `Component`.
 
 > **Note**
 > The user constructible and usable type for creating a separator is
->
-> - **Class:** `discord.ui.Separator` not this one.
+> `discord.ui.Separator` not this one.
 
 > **Added in version 2.6**
 
@@ -2085,8 +2071,7 @@ Represents a UI container.
 
 This is a top-level layout component that can only be used on `LayoutView`
 and can contain `ActionRow`\s, `TextDisplay`\s, `Section`\s,
-
-- **Class:** `MediaGallery`\s, `File`\s, and `Separator`\s in it.
+`MediaGallery`\s, `File`\s, and `Separator`\s in it.
 
 This can be inherited.
 
@@ -2166,7 +2151,7 @@ An item in the container.
 
 ##### `content_length(self) -> int`
 
-- **Class:** `int`: Returns the total length of all text content in this container.
+`int`: Returns the total length of all text content in this container.
 
 <a id="api-container-add-item"></a>
 
@@ -2251,8 +2236,7 @@ This inherits from `Component`.
 
 > **Note**
 > The user constructible and usable type for creating a file upload is
->
-> - **Class:** `discord.ui.FileUpload` not this one.
+> `discord.ui.FileUpload` not this one.
 
 > **Added in version 2.7**
 
@@ -2285,7 +2269,7 @@ Defaults to `True`.
 
 ##### `type(self) -> Literal[ComponentType.file_upload]`
 
-- **Class:** `ComponentType`: The type of component.
+`ComponentType`: The type of component.
 
 ### RadioGroupComponent
 
@@ -2299,8 +2283,7 @@ This inherits from `Component`.
 
 > **Note**
 > The user constructible and usable type for creating a radio group is
->
-> - **Class:** `discord.ui.RadioGroup` not this one.
+> `discord.ui.RadioGroup` not this one.
 
 > **Added in version 2.7**
 
@@ -2327,7 +2310,7 @@ A list of options that can be selected in this group.
 
 ##### `type(self) -> Literal[ComponentType.radio_group]`
 
-- **Class:** `ComponentType`: The type of component.
+`ComponentType`: The type of component.
 
 ### CheckboxComponent
 
@@ -2341,8 +2324,7 @@ This inherits from `Component`.
 
 > **Note**
 > The user constructible and usable type for creating a checkbox is
->
-> - **Class:** `discord.ui.Checkbox` not this one.
+> `discord.ui.Checkbox` not this one.
 
 > **Added in version 2.7**
 
@@ -2364,7 +2346,7 @@ Whether this checkbox is selected by default.
 
 ##### `type(self) -> Literal[ComponentType.checkbox]`
 
-- **Class:** `ComponentType`: The type of component.
+`ComponentType`: The type of component.
 
 ### CheckboxGroupComponent
 
@@ -2378,8 +2360,7 @@ This inherits from `Component`.
 
 > **Note**
 > The user constructible and usable type for creating a checkbox group is
->
-> - **Class:** `discord.ui.CheckboxGroup` not this one.
+> `discord.ui.CheckboxGroup` not this one.
 
 > **Added in version 2.7**
 
@@ -2416,7 +2397,7 @@ A list of options that can be selected in this group.
 
 ##### `type(self) -> Literal[ComponentType.checkbox_group]`
 
-- **Class:** `ComponentType`: The type of component.
+`ComponentType`: The type of component.
 
 ### AppCommand
 
@@ -2522,7 +2503,7 @@ Whether the command is NSFW and should only work in NSFW channels.
 
 ##### `mention(self) -> str`
 
-- **Class:** `str`: Returns a string that allows you to mention the given AppCommand.
+`str`: Returns a string that allows you to mention the given AppCommand.
 
 <a id="api-discord-app-commands-appcommand-guild"></a>
 
@@ -2696,7 +2677,7 @@ The parent application command.
 
 ##### `qualified_name(self) -> str`
 
-- **Class:** `str`: Returns the fully qualified command name.
+`str`: Returns the fully qualified command name.
 
 The qualified name includes the parent name as well. For example,
 in a command like `/foo bar` the qualified name is `foo bar`.
@@ -2705,7 +2686,7 @@ in a command like `/foo bar` the qualified name is `foo bar`.
 
 ##### `mention(self) -> str`
 
-- **Class:** `str`: Returns a string that allows you to mention the given AppCommandGroup.
+`str`: Returns a string that allows you to mention the given AppCommandGroup.
 
 ### AppCommandChannel
 
@@ -2814,7 +2795,7 @@ Optional\[`discord.Guild`]: The channel's guild, from cache, if found.
 
 ##### `flags(self) -> ChannelFlags`
 
-- **Class:** `~discord.ChannelFlags`: The flags associated with this channel object.
+`discord.ChannelFlags`: The flags associated with this channel object.
 
 > **Added in version 2.6**
 
@@ -2822,7 +2803,7 @@ Optional\[`discord.Guild`]: The channel's guild, from cache, if found.
 
 ##### `is_nsfw(self) -> bool`
 
-- **Class:** `bool`: Checks if the channel is NSFW.
+`bool`: Checks if the channel is NSFW.
 
 > **Added in version 2.6**
 
@@ -2830,7 +2811,7 @@ Optional\[`discord.Guild`]: The channel's guild, from cache, if found.
 
 ##### `is_news(self) -> bool`
 
-- **Class:** `bool`: Checks if the channel is a news channel.
+`bool`: Checks if the channel is a news channel.
 
 > **Added in version 2.6**
 
@@ -2879,13 +2860,13 @@ The full channel.
 
 ##### `mention(self) -> str`
 
-- **Class:** `str`: The string that allows you to mention the channel.
+`str`: The string that allows you to mention the channel.
 
 <a id="api-discord-app-commands-appcommandchannel-jump-url"></a>
 
 ##### `jump_url(self) -> str`
 
-- **Class:** `str`: Returns a URL that allows the client to jump to the channel.
+`str`: Returns a URL that allows the client to jump to the channel.
 
 > **Added in version 2.6**
 
@@ -2893,7 +2874,7 @@ The full channel.
 
 ##### `created_at(self) -> datetime`
 
-- **Class:** `datetime.datetime`: An aware timestamp of when this channel was created in UTC.
+`datetime.datetime`: An aware timestamp of when this channel was created in UTC.
 
 ### AppCommandThread
 
@@ -3046,7 +3027,7 @@ this thread belongs to.
 
 ##### `flags(self) -> ChannelFlags`
 
-- **Class:** `~discord.ChannelFlags`: The flags associated with this thread.
+`discord.ChannelFlags`: The flags associated with this thread.
 
 > **Added in version 2.6**
 
@@ -3062,13 +3043,13 @@ Optional\[`discord.Member`]: The member this thread belongs to.
 
 ##### `mention(self) -> str`
 
-- **Class:** `str`: The string that allows you to mention the thread.
+`str`: The string that allows you to mention the thread.
 
 <a id="api-discord-app-commands-appcommandthread-jump-url"></a>
 
 ##### `jump_url(self) -> str`
 
-- **Class:** `str`: Returns a URL that allows the client to jump to the thread.
+`str`: Returns a URL that allows the client to jump to the thread.
 
 > **Added in version 2.6**
 
@@ -3184,19 +3165,19 @@ Whether the context allows usage in a DM or a GDM channel.
 
 ##### `guild(self) -> bool`
 
-- **Class:** `bool`: Whether the context allows usage in a guild.
+`bool`: Whether the context allows usage in a guild.
 
 <a id="api-discord-app-commands-appcommandcontext-dm-channel"></a>
 
 ##### `dm_channel(self) -> bool`
 
-- **Class:** `bool`: Whether the context allows usage in a DM channel.
+`bool`: Whether the context allows usage in a DM channel.
 
 <a id="api-discord-app-commands-appcommandcontext-private-channel"></a>
 
 ##### `private_channel(self) -> bool`
 
-- **Class:** `bool`: Whether the context allows usage in a DM or a GDM channel.
+`bool`: Whether the context allows usage in a DM or a GDM channel.
 
 ### AppInstallationType
 
@@ -3222,13 +3203,13 @@ Whether the integration is a user install.
 
 ##### `guild(self) -> bool`
 
-- **Class:** `bool`: Whether the integration is a guild install.
+`bool`: Whether the integration is a guild install.
 
 <a id="api-discord-app-commands-appinstallationtype-user"></a>
 
 ##### `user(self) -> bool`
 
-- **Class:** `bool`: Whether the integration is a user install.
+`bool`: Whether the integration is a user install.
 
 ### GuildAppCommandPermissions
 
@@ -3268,7 +3249,7 @@ The permissions, this is a max of 100.
 
 ##### `guild(self) -> Guild`
 
-- **Class:** `~discord.Guild`: The guild associated with the permissions.
+`discord.Guild`: The guild associated with the permissions.
 
 ### Argument
 
@@ -3358,7 +3339,7 @@ The guild the application command permission is for.
 
 ##### `id(self) -> int`
 
-- **Class:** `int`: The ID sentinel used to represent all channels. Equivalent to the guild's ID minus 1.
+`int`: The ID sentinel used to represent all channels. Equivalent to the guild's ID minus 1.
 
 ## Data Classes
 
@@ -3454,7 +3435,7 @@ The type of value that `id` represents.
 
 ##### `type(self) -> SelectDefaultValueType`
 
-- **Class:** `SelectDefaultValueType`: The type of value that `id` represents.
+`SelectDefaultValueType`: The type of value that `id` represents.
 
 <a id="api-selectdefaultvalue-from-channel"></a>
 
@@ -3613,7 +3594,7 @@ uploaded within the component message.
 
 ##### `flags(self) -> AttachmentFlags`
 
-- **Class:** `AttachmentFlags`: This media item's flags.
+`AttachmentFlags`: This media item's flags.
 
 ### MediaGalleryItem
 
@@ -3646,7 +3627,7 @@ Whether this item should be flagged as a spoiler.
 
 ##### `media(self) -> UnfurledMediaItem`
 
-- **Class:** `UnfurledMediaItem`: This item's media data.
+`UnfurledMediaItem`: This item's media data.
 
 ### RadioGroupOption
 
@@ -4327,7 +4308,7 @@ If `None` then there is no timeout.
 
 ##### `content_length(self) -> int`
 
-- **Class:** `int`: Returns the total length of all text content in the view's items.
+`int`: Returns the total length of all text content in the view's items.
 
 A view is allowed to have a maximum of 4000 display characters across all its items.
 
@@ -4579,7 +4560,7 @@ The item that is wrapped with dynamic custom ID parsing.
 
 ##### `custom_id(self) -> str`
 
-- **Class:** `str`: The ID of the dynamic item that gets received during an interaction.
+`str`: The ID of the dynamic item that gets received during an interaction.
 
 <a id="api-discord-ui-dynamicitem-from-custom-id"></a>
 
@@ -4697,7 +4678,7 @@ Optional\[`int`]: The ID of this button.
 
 ##### `style(self) -> ButtonStyle`
 
-- **Class:** `discord.ButtonStyle`: The style of the button.
+`discord.ButtonStyle`: The style of the button.
 
 <a id="api-discord-ui-button-custom-id"></a>
 
@@ -4717,7 +4698,7 @@ Optional\[`str`]: The URL this button sends you to.
 
 ##### `disabled(self) -> bool`
 
-- **Class:** `bool`: Whether the button is disabled or not.
+`bool`: Whether the button is disabled or not.
 
 <a id="api-discord-ui-button-label"></a>
 
@@ -4879,7 +4860,7 @@ List\[`str`]: A list of values that have been selected by the user.
 
 ##### `type(self) -> Literal[ComponentType.string_select]`
 
-- **Class:** `.ComponentType`: The type of this component.
+`.ComponentType`: The type of this component.
 
 <a id="api-discord-ui-select-options"></a>
 
@@ -4894,8 +4875,7 @@ List\[`discord.SelectOption`]: A list of options that can be selected in this me
 Adds an option to the select menu.
 
 To append a pre-existing `discord.SelectOption` use the
-
-- **Meth:** `append_option` method instead.
+`append_option` method instead.
 
 ## Parameters
 
@@ -5025,7 +5005,7 @@ The ID of the component. This must be unique across the view.
 
 ##### `type(self) -> Literal[ComponentType.channel_select]`
 
-- **Class:** `.ComponentType`: The type of this component.
+`.ComponentType`: The type of this component.
 
 <a id="api-discord-ui-channelselect-channel-types"></a>
 
@@ -5120,7 +5100,7 @@ The ID of the component. This must be unique across the view.
 
 ##### `type(self) -> Literal[ComponentType.role_select]`
 
-- **Class:** `.ComponentType`: The type of this component.
+`.ComponentType`: The type of this component.
 
 <a id="api-discord-ui-roleselect-values"></a>
 
@@ -5213,7 +5193,7 @@ The ID of the component. This must be unique across the view.
 
 ##### `type(self) -> Literal[ComponentType.mentionable_select]`
 
-- **Class:** `.ComponentType`: The type of this component.
+`.ComponentType`: The type of this component.
 
 <a id="api-discord-ui-mentionableselect-values"></a>
 
@@ -5311,7 +5291,7 @@ The ID of the component. This must be unique across the view.
 
 ##### `type(self) -> Literal[ComponentType.user_select]`
 
-- **Class:** `.ComponentType`: The type of this component.
+`.ComponentType`: The type of this component.
 
 <a id="api-discord-ui-userselect-values"></a>
 
@@ -5415,9 +5395,8 @@ Defaults to 1 and must be between 1 and 25.
 **options: List\[`discord.SelectOption`]**
 
 A list of options that can be selected in this menu. This can only be used with
-
-- **Class:** `Select` instances.
-  Can only contain up to 25 items.
+`Select` instances.
+Can only contain up to 25 items.
 
 **channel\_types: List\[`discord.ChannelType`]**
 
@@ -5531,55 +5510,55 @@ Optional\[`int`]: The ID of this text input.
 
 ##### `custom_id(self) -> str`
 
-- **Class:** `str`: The ID of the text input that gets received during an interaction.
+`str`: The ID of the text input that gets received during an interaction.
 
 <a id="api-discord-ui-textinput-value"></a>
 
 ##### `value(self) -> str`
 
-- **Class:** `str`: The value of the text input.
+`str`: The value of the text input.
 
 <a id="api-discord-ui-textinput-label"></a>
 
 ##### `label(self) -> Optional[str]`
 
-- **Class:** `str`: The label of the text input.
+`str`: The label of the text input.
 
 <a id="api-discord-ui-textinput-placeholder"></a>
 
 ##### `placeholder(self) -> Optional[str]`
 
-- **Class:** `str`: The placeholder text to display when the text input is empty.
+`str`: The placeholder text to display when the text input is empty.
 
 <a id="api-discord-ui-textinput-required"></a>
 
 ##### `required(self) -> bool`
 
-- **Class:** `bool`: Whether the text input is required.
+`bool`: Whether the text input is required.
 
 <a id="api-discord-ui-textinput-min-length"></a>
 
 ##### `min_length(self) -> Optional[int]`
 
-- **Class:** `int`: The minimum length of the text input.
+`int`: The minimum length of the text input.
 
 <a id="api-discord-ui-textinput-max-length"></a>
 
 ##### `max_length(self) -> Optional[int]`
 
-- **Class:** `int`: The maximum length of the text input.
+`int`: The maximum length of the text input.
 
 <a id="api-discord-ui-textinput-style"></a>
 
 ##### `style(self) -> TextStyle`
 
-- **Class:** `discord.TextStyle`: The style of the text input.
+`discord.TextStyle`: The style of the text input.
 
 <a id="api-discord-ui-textinput-default"></a>
 
 ##### `default(self) -> Optional[str]`
 
-- **Class:** `str`: The default value of the text input.
+`str`: The default value of the text input.
 
 ### Container
 
@@ -5591,8 +5570,7 @@ Represents a UI container.
 
 This is a top-level layout component that can only be used on `LayoutView`
 and can contain `ActionRow`\s, `TextDisplay`\s, `Section`\s,
-
-- **Class:** `MediaGallery`\s, `File`\s, and `Separator`\s in it.
+`MediaGallery`\s, `File`\s, and `Separator`\s in it.
 
 This can be inherited.
 
@@ -5672,7 +5650,7 @@ An item in the container.
 
 ##### `content_length(self) -> int`
 
-- **Class:** `int`: Returns the total length of all text content in this container.
+`int`: Returns the total length of all text content in this container.
 
 <a id="api-discord-ui-container-add-item"></a>
 
@@ -5794,19 +5772,19 @@ Optional\[`int`]: The ID of this file component.
 
 ##### `media(self) -> UnfurledMediaItem`
 
-- **Class:** `.UnfurledMediaItem`: Returns this file media.
+`.UnfurledMediaItem`: Returns this file media.
 
 <a id="api-discord-ui-file-url"></a>
 
 ##### `url(self) -> str`
 
-- **Class:** `str`: Returns this file's url.
+`str`: Returns this file's url.
 
 <a id="api-discord-ui-file-spoiler"></a>
 
 ##### `spoiler(self) -> bool`
 
-- **Class:** `bool`: Returns whether this file should be flagged as a spoiler.
+`bool`: Returns whether this file should be flagged as a spoiler.
 
 ### Label
 
@@ -6045,7 +6023,7 @@ List\[`Item`]: The list of children attached to this section.
 
 ##### `accessory(self) -> Item[V]`
 
-- **Class:** `Item`: The section's accessory.
+`Item`: The section's accessory.
 
 <a id="api-discord-ui-section-walk-children"></a>
 
@@ -6064,7 +6042,7 @@ An item in this section.
 
 ##### `content_length(self) -> int`
 
-- **Class:** `int`: Returns the total length of all text content in this section.
+`int`: Returns the total length of all text content in this section.
 
 <a id="api-discord-ui-section-add-item"></a>
 
@@ -6080,8 +6058,7 @@ chaining.
 **item: Union\[`str`, `Item`]**
 
 The item to append, if it is a string it automatically wrapped around
-
-- **Class:** `TextDisplay`.
+`TextDisplay`.
 
 ## Raises
 
@@ -6177,7 +6154,7 @@ Optional\[`int`]: The ID of this separator.
 
 ##### `visible(self) -> bool`
 
-- **Class:** `bool`: Whether this separator is visible.
+`bool`: Whether this separator is visible.
 
 On the client side this is whether a divider line should
 be shown or not.
@@ -6186,7 +6163,7 @@ be shown or not.
 
 ##### `spacing(self) -> SeparatorSpacing`
 
-- **Class:** `.SeparatorSpacing`: The spacing of this separator.
+`.SeparatorSpacing`: The spacing of this separator.
 
 ### TextDisplay
 
@@ -6197,8 +6174,7 @@ be shown or not.
 Represents a UI text display.
 
 This is a top-level layout component that can only be used on `LayoutView`,
-
-- **Class:** `Section`, `Container`, or `Modal`.
+`Section`, `Container`, or `Modal`.
 
 > **Added in version 2.6**
 
@@ -6246,7 +6222,7 @@ The ID of this component. This must be unique across the view.
 
 ##### `media(self) -> UnfurledMediaItem`
 
-- **Class:** `discord.UnfurledMediaItem`: This thumbnail unfurled media data.
+`discord.UnfurledMediaItem`: This thumbnail unfurled media data.
 
 ### ActionRow
 
@@ -6320,7 +6296,7 @@ An item in the action row.
 
 ##### `content_length(self) -> int`
 
-- **Class:** `int`: Returns the total length of all text content in this action row.
+`int`: Returns the total length of all text content in this action row.
 
 <a id="api-discord-ui-actionrow-add-item"></a>
 
@@ -6407,10 +6383,9 @@ the `discord.ui.Button` being pressed.
 > **Note**
 > Buttons with a URL or a SKU cannot be created with this function.
 > Consider creating a `Button` manually and adding it via
->
-> - **Meth:** `ActionRow.add_item` instead. This is beacuse these buttons
->   cannot have a callback associated with them since Discord does not
->   do any processing with them.
+> `ActionRow.add_item` instead. This is beacuse these buttons
+> cannot have a callback associated with them since Discord does not
+> do any processing with them.
 
 ## Parameters
 
@@ -6510,9 +6485,8 @@ Defaults to 1 and must be between 1 and 25.
 **options: List\[`discord.SelectOption`]**
 
 A list of options that can be selected in this menu. This can only be used with
-
-- **Class:** `Select` instances.
-  Can only contain up to 25 items.
+`Select` instances.
+Can only contain up to 25 items.
 
 **channel\_types: List\[`discord.ChannelType`]**
 
@@ -6589,25 +6563,25 @@ to get a `discord.File` for sending.
 
 ##### `custom_id(self) -> str`
 
-- **Class:** `str`: The ID of the component that gets received during an interaction.
+`str`: The ID of the component that gets received during an interaction.
 
 <a id="api-discord-ui-fileupload-min-values"></a>
 
 ##### `min_values(self) -> int`
 
-- **Class:** `int`: The minimum number of files that must be user upload before submitting the modal.
+`int`: The minimum number of files that must be user upload before submitting the modal.
 
 <a id="api-discord-ui-fileupload-max-values"></a>
 
 ##### `max_values(self) -> int`
 
-- **Class:** `int`: The maximum number of files that the user must upload before submitting the modal.
+`int`: The maximum number of files that the user must upload before submitting the modal.
 
 <a id="api-discord-ui-fileupload-required"></a>
 
 ##### `required(self) -> bool`
 
-- **Class:** `bool`: Whether the component is required or not.
+`bool`: Whether the component is required or not.
 
 ### RadioGroup
 
@@ -6655,13 +6629,13 @@ Optional\[`str`]: The value have been selected by the user, if any.
 
 ##### `custom_id(self) -> str`
 
-- **Class:** `str`: The ID of the component that gets received during an interaction.
+`str`: The ID of the component that gets received during an interaction.
 
 <a id="api-discord-ui-radiogroup-type"></a>
 
 ##### `type(self) -> Literal[ComponentType.radio_group]`
 
-- **Class:** `.ComponentType`: The type of this component.
+`.ComponentType`: The type of this component.
 
 <a id="api-discord-ui-radiogroup-options"></a>
 
@@ -6676,8 +6650,7 @@ List\[`discord.RadioGroupOption`]: A list of options that can be selected in thi
 Adds an option to the group.
 
 To append a pre-existing `discord.RadioGroupOption` use the
-
-- **Meth:** `append_option` method instead.
+`append_option` method instead.
 
 ## Parameters
 
@@ -6729,7 +6702,7 @@ The number of options exceeds 10.
 
 ##### `required(self) -> bool`
 
-- **Class:** `bool`: Whether the component is required or not.
+`bool`: Whether the component is required or not.
 
 ### Checkbox
 
@@ -6765,25 +6738,25 @@ Optional\[`int`]: The ID of this component.
 
 ##### `value(self) -> bool`
 
-- **Class:** `bool`: `True` if this checkbox was selected, otherwise `False`.
+`bool`: `True` if this checkbox was selected, otherwise `False`.
 
 <a id="api-discord-ui-checkbox-custom-id"></a>
 
 ##### `custom_id(self) -> str`
 
-- **Class:** `str`: The ID of the component that gets received during an interaction.
+`str`: The ID of the component that gets received during an interaction.
 
 <a id="api-discord-ui-checkbox-type"></a>
 
 ##### `type(self) -> Literal[ComponentType.checkbox]`
 
-- **Class:** `.ComponentType`: The type of this component.
+`.ComponentType`: The type of this component.
 
 <a id="api-discord-ui-checkbox-default"></a>
 
 ##### `default(self) -> bool`
 
-- **Class:** `bool`: Whether this checkbox is selected by default.
+`bool`: Whether this checkbox is selected by default.
 
 ### CheckboxGroup
 
@@ -6841,13 +6814,13 @@ List\[`str`]: A list of values that have been selected by the user.
 
 ##### `custom_id(self) -> str`
 
-- **Class:** `str`: The ID of the component that gets received during an interaction.
+`str`: The ID of the component that gets received during an interaction.
 
 <a id="api-discord-ui-checkboxgroup-type"></a>
 
 ##### `type(self) -> Literal[ComponentType.checkbox_group]`
 
-- **Class:** `.ComponentType`: The type of this component.
+`.ComponentType`: The type of this component.
 
 <a id="api-discord-ui-checkboxgroup-options"></a>
 
@@ -6859,13 +6832,13 @@ List\[`discord.CheckboxGroupOption`]: A list of options that can be selected in 
 
 ##### `min_values(self) -> int`
 
-- **Class:** `int`: The minimum number of options that must be selected before submitting the modal.
+`int`: The minimum number of options that must be selected before submitting the modal.
 
 <a id="api-discord-ui-checkboxgroup-max-values"></a>
 
 ##### `max_values(self) -> int`
 
-- **Class:** `int`: The maximum number of options that can be selected before submitting the modal.
+`int`: The maximum number of options that can be selected before submitting the modal.
 
 <a id="api-discord-ui-checkboxgroup-add-option"></a>
 
@@ -6874,8 +6847,7 @@ List\[`discord.CheckboxGroupOption`]: A list of options that can be selected in 
 Adds an option to the checkbox group.
 
 To append a pre-existing `discord.CheckboxGroupOption` use the
-
-- **Meth:** `append_option` method instead.
+`append_option` method instead.
 
 ## Parameters
 
@@ -6927,7 +6899,7 @@ The number of options exceeds 10.
 
 ##### `required(self) -> bool`
 
-- **Class:** `bool`: Whether the component is required or not.
+`bool`: Whether the component is required or not.
 
 <a id="discord-app-commands"></a>
 
@@ -7306,8 +7278,7 @@ To change the translator, use `set_translator`.
 Sets the translator to use for translating commands.
 
 If a translator was previously set, it will be unloaded using its
-
-- **Meth:** `Translator.unload` method.
+`Translator.unload` method.
 
 When a translator is set, it will be loaded using its `Translator.load` method.
 
@@ -7615,9 +7586,8 @@ the application command.
 A list of predicates that take a `discord.Interaction` parameter
 to indicate whether the command callback should be executed. If an exception
 is necessary to be thrown to signal failure, then one inherited from
-
-- **Exc:** `AppCommandError` should be used. If all the checks fail without
-  propagating an exception, `CheckFailure` is raised.
+`AppCommandError` should be used. If all the checks fail without
+propagating an exception, `CheckFailure` is raised.
 
 **default\_permissions: Optional\[`discord.Permissions`]**
 
@@ -7667,7 +7637,7 @@ The library will not touch any values or keys within this dictionary.
 
 ##### `callback(self) -> CommandCallback[GroupT, P, T]`
 
-- **Ref:** `coroutine <coroutine>`: The coroutine that is executed when the command is called.
+coroutine: The coroutine that is executed when the command is called.
 
 <a id="api-discord-app-commands-command-parameters"></a>
 
@@ -7714,7 +7684,7 @@ Optional\[`Group`]: The root parent of this command.
 
 ##### `qualified_name(self) -> str`
 
-- **Class:** `str`: Returns the fully qualified command name.
+`str`: Returns the fully qualified command name.
 
 The qualified name includes the parent name as well. For example,
 in a command like `/foo bar` the qualified name is `foo bar`.
@@ -7758,9 +7728,8 @@ The coroutine callback must have 2 parameters, the `discord.Interaction`,
 and the current value by the user (the string currently being typed by the user).
 
 To get the values from other parameters that may be filled in, accessing
-
-- **Attr:** `.Interaction.namespace` will give a `Namespace` object with those
-  values.
+`.Interaction.namespace` will give a `Namespace` object with those
+values.
 
 Parent `checks` are ignored within an autocomplete. However, checks can be added
 to the autocomplete callback and the ones added will be called. If the checks fail for any reason
@@ -7993,9 +7962,8 @@ Defaults to `False`.
 A list of predicates that take a `discord.Interaction` parameter
 to indicate whether the command callback should be executed. If an exception
 is necessary to be thrown to signal failure, then one inherited from
-
-- **Exc:** `AppCommandError` should be used. If all the checks fail without
-  propagating an exception, `CheckFailure` is raised.
+`AppCommandError` should be used. If all the checks fail without
+propagating an exception, `CheckFailure` is raised.
 
 **extras: `dict`**
 
@@ -8006,13 +7974,13 @@ The library will not touch any values or keys within this dictionary.
 
 ##### `callback(self) -> ContextMenuCallback`
 
-- **Ref:** `coroutine <coroutine>`: The coroutine that is executed when the context menu is called.
+coroutine: The coroutine that is executed when the context menu is called.
 
 <a id="api-discord-app-commands-contextmenu-qualified-name"></a>
 
 ##### `qualified_name(self) -> str`
 
-- **Class:** `str`: Returns the fully qualified command name.
+`str`: Returns the fully qualified command name.
 
 <a id="api-discord-app-commands-contextmenu-add-check"></a>
 
@@ -8208,7 +8176,7 @@ Optional\[`Group`]: The parent of this group.
 
 ##### `qualified_name(self) -> str`
 
-- **Class:** `str`: Returns the fully qualified group name.
+`str`: Returns the fully qualified group name.
 
 The qualified name includes the parent name as well. For example,
 in a group like `/foo bar` the qualified name is `foo bar`.
@@ -8270,9 +8238,8 @@ The default implementation of this returns `True`.
 > **Note**
 > If an exception occurs within the body then the check
 > is considered a failure and error handlers such as
->
-> - **Meth:** `on_error` is called. See `AppCommandError`
->   for more information.
+> `on_error` is called. See `AppCommandError`
+> for more information.
 
 ## Parameters
 
@@ -8651,9 +8618,9 @@ Associates the given parameters with the given autocomplete callback.
 Autocomplete is only supported on types that have `str`, `int`, or `float`
 values.
 
-- **Func:** `Checks <check>` are supported, however they must be attached to the autocomplete
-  callback in order to work. Checks attached to the command are ignored when invoking the autocomplete
-  callback.
+`Checks` are supported, however they must be attached to the autocomplete
+callback in order to work. Checks attached to the command are ignored when invoking the autocomplete
+callback.
 
 For more information, see the `Command.autocomplete` documentation.
 
@@ -8908,8 +8875,7 @@ Due to a Discord limitation, this decorator does nothing in subcommands and is i
 > **Warning**
 > This serves as a *hint* and members are *not* required to have the permissions given to actually
 > execute this command. If you want to ensure that members have the permissions needed, consider using
->
-> - **Func:** `~discord.app_commands.checks.has_permissions` instead.
+> `discord.app_commands.checks.has_permissions` instead.
 
 ## Parameters
 
@@ -9063,12 +9029,10 @@ A `discord.app_commands.check` that is added that checks if the member
 has all of the permissions necessary.
 
 Note that this check operates on the permissions given by
-
-- **Attr:** `discord.Interaction.permissions`.
+`discord.Interaction.permissions`.
 
 The permissions passed in must be exactly like the properties shown under
-
-- **Class:** `discord.Permissions`.
+`discord.Permissions`.
 
 This check raises a special exception, `discord.app_commands.MissingPermissions`
 that is inherited from `discord.app_commands.CheckFailure`.
@@ -9429,7 +9393,7 @@ constructed with no arguments passed to the `__init__` method.
 
 ##### `type(self) -> AppCommandOptionType`
 
-- **Class:** `~discord.AppCommandOptionType`: The option type associated with this transformer.
+`discord.AppCommandOptionType`: The option type associated with this transformer.
 
 This must be a `property`.
 
@@ -9454,8 +9418,7 @@ Defaults to an empty list.
 Optional\[`int`]: The minimum supported value for this parameter.
 
 Only valid if the `type` returns `discord.AppCommandOptionType.number`
-
-- **Attr:** `~discord.AppCommandOptionType.integer`, or `discord.AppCommandOptionType.string`.
+`discord.AppCommandOptionType.integer`, or `discord.AppCommandOptionType.string`.
 
 This must be a `property`.
 
@@ -9468,8 +9431,7 @@ Defaults to `None`.
 Optional\[`int`]: The maximum supported value for this parameter.
 
 Only valid if the `type` returns `discord.AppCommandOptionType.number`
-
-- **Attr:** `~discord.AppCommandOptionType.integer`, or `discord.AppCommandOptionType.string`.
+`discord.AppCommandOptionType.integer`, or `discord.AppCommandOptionType.string`.
 
 This must be a `property`.
 
@@ -9482,8 +9444,7 @@ Defaults to `None`.
 Optional\[List\[`discord.app_commands.Choice`]]: A list of up to 25 choices that are allowed to this parameter.
 
 Only valid if the `type` returns `discord.AppCommandOptionType.number`
-
-- **Attr:** `~discord.AppCommandOptionType.integer`, or `discord.AppCommandOptionType.string`.
+`discord.AppCommandOptionType.integer`, or `discord.AppCommandOptionType.string`.
 
 This must be a `property`.
 
@@ -9596,8 +9557,7 @@ async def range(interaction: discord.Interaction, value: app_commands.Range[int,
 #### `Timestamp(Transformer[ClientT])`
 
 A type annotation that can be applied to a parameter for transforming a [Discord style timestamp](https://discord.com/developers/docs/reference#message-formatting) input to a
-
-- **Class:** `datetime.datetime`.
+`datetime.datetime`.
 
 > **Added in version 2.7**
 
@@ -9707,8 +9667,7 @@ This is done lazily and is not actually translated until `CommandTree.sync` is c
 
 The sync method then ultimately defers the responsibility of translating to the `Translator`
 instance used by the `CommandTree`. For more information on the translation flow, see the
-
-- **Class:** `Translator` documentation.
+`Translator` documentation.
 
 <a id="describe-str-x"></a>
 
@@ -9838,8 +9797,7 @@ The translation involved a choice name.
 ##### `other`
 
 The translation involved something else entirely. This is useful for running
-
-- **Meth:** `Translator.translate` for custom usage.
+`Translator.translate` for custom usage.
 
 ### Exceptions
 
@@ -9892,11 +9850,10 @@ convert to its target type.
 This inherits from `discord.app_commands.AppCommandError`.
 
 If an exception occurs while converting that does not subclass
-
-- **Exc:** `AppCommandError` then the exception is wrapped into this exception.
-  The original exception can be retrieved using the `__cause__` attribute.
-  Otherwise if the exception derives from `AppCommandError` then it will
-  be propagated as-is.
+`AppCommandError` then the exception is wrapped into this exception.
+The original exception can be retrieved using the `__cause__` attribute.
+Otherwise if the exception derives from `AppCommandError` then it will
+be propagated as-is.
 
 > **Added in version 2.0**
 

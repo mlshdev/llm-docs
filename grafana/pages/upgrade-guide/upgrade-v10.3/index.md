@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.1: [docs/sources/upgrade-guide/upgrade-v10.3/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/upgrade-guide/upgrade-v10.3/index.md)
+> Pinned source for Grafana v13.2.1: [docs/sources/upgrade-guide/upgrade-v10.3/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/upgrade-guide/upgrade-v10.3/index.md)
 
 # Upgrade to Grafana v10.3
 

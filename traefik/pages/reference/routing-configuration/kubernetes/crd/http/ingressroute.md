@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/kubernetes/crd/http/ingressroute.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/crd/http/ingressroute.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/kubernetes/crd/http/ingressroute.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/crd/http/ingressroute.md)
 
 `IngressRoute` is the CRD implementation of a [Traefik HTTP router](https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/routing/rules-and-priority).
 

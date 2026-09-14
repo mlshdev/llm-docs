@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/pageinspect.sgml#pageinspect](https://www.postgresql.org/docs/18/pageinspect.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/pageinspect.sgml#pageinspect](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/pageinspect.sgml%23pageinspect)
+> Canonical documentation: https://www.postgresql.org/docs/18/pageinspect.html
 
 # pageinspect — low-level inspection of database pages
 

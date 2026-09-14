@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmalert.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmalert.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmalert.md)
 
 `vmalert` executes a list of the given [alerting](https://docs.victoriametrics.com/victoriametrics/vmalert/#alerting-rules)
 or [recording](https://docs.victoriametrics.com/victoriametrics/vmalert/#recording-rules)
@@ -257,7 +257,7 @@ expr: <string>
 # Labels are merged with labels received from `expr` evaluation and uniquely identify each generated alert.
 #
 # In case of conflicts, original labels are kept with prefix `exported_`.
-# As a special case, specifying a label with an empty string value removes the label from the result if it exists
+# As a special case, specifying a label with an empty string value removes the label from the result if it exists 
 # in the original query result; otherwise, it is ignored.
 #
 # Labels only support limited templating variables in https://docs.victoriametrics.com/victoriametrics/vmalert/#templating,
@@ -289,7 +289,7 @@ expr: <string>
 # Labels to add or overwrite labels from other external label sources, such as group labels, before storing the result.
 #
 # In case of conflicts, original labels are kept with prefix `exported_`.
-# As a special case, specifying a label with an empty string value removes the label from the result if it exists
+# As a special case, specifying a label with an empty string value removes the label from the result if it exists 
 # in the original query result; otherwise, it is ignored.
 #
 # Labels do not support templating in https://docs.victoriametrics.com/victoriametrics/vmalert/#templating due to cardinality concerns. See https://github.com/VictoriaMetrics/VictoriaMetrics/issues/8171.
@@ -1582,7 +1582,7 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/vmalert/ .
   -remoteRead.oauth2.scopes string
      Optional OAuth2 scopes to use for -remoteRead.url. Scopes must be delimited by ';'.
   -remoteRead.oauth2.tokenUrl string
-     Optional OAuth2 tokenURL to use for -remoteRead.url.
+     Optional OAuth2 tokenURL to use for -remoteRead.url. 
   -remoteRead.showURL
      Whether to show -remoteRead.url in the exported metrics. It is hidden by default, since it can contain sensitive info such as auth key
   -remoteRead.tlsCAFile string
@@ -1679,16 +1679,16 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/vmalert/ .
      Examples:
       -rule="/path/to/file". Path to a single file with alerting rules.
       -rule="http://<some-server-addr>/path/to/rules". HTTP URL to a page with alerting rules.
-      -rule="dir/*.yaml" -rule="/*.yaml" -rule="gcs://vmalert-rules/tenant_%{TENANT_ID}/prod".
+      -rule="dir/*.yaml" -rule="/*.yaml" -rule="gcs://vmalert-rules/tenant_%{TENANT_ID}/prod". 
       -rule="dir/**/*.yaml". Includes all the .yaml files in "dir" subfolders recursively.
      Rule files support YAML multi-document. Files may contain %{ENV_VAR} placeholders, which are substituted by the corresponding env vars.
-
+     
      Enterprise version of vmalert supports S3 and GCS paths to rules.
      For example: gs://bucket/path/to/rules, s3://bucket/path/to/rules
      S3 and GCS paths support only matching by prefix, e.g. s3://bucket/dir/rule_ matches
      all files with prefix rule_ in folder dir.
      See https://docs.victoriametrics.com/victoriametrics/vmalert/#reading-rules-from-object-storage
-
+     
      Supports an array of values separated by comma or specified via multiple flags.
      Each array item can contain comma inside single-quoted or double-quoted string, {}, [] and () braces.
   -rule.defaultRuleType string
@@ -1710,7 +1710,7 @@ See the docs at https://docs.victoriametrics.com/victoriametrics/vmalert/ .
       -rule.templates="dir/*.tpl" -rule.templates="/*.tpl". Relative path to all .tpl files in "dir" folder,
      absolute path to all .tpl files in root.
       -rule.templates="dir/**/*.tpl". Includes all the .tpl files in "dir" subfolders recursively.
-
+     
      Supports an array of values separated by comma or specified via multiple flags.
      Each array item can contain comma inside single-quoted or double-quoted string, {}, [] and () braces.
   -rule.updateEntriesLimit int

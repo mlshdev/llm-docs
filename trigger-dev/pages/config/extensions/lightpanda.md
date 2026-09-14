@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/config/extensions/lightpanda.mdx](https://trigger.dev/docs/config/extensions/lightpanda)
+> Pinned source for Trigger.dev v4.5.16: [docs/config/extensions/lightpanda.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/config/extensions/lightpanda.mdx)
+> Canonical documentation: https://trigger.dev/docs/config/extensions/lightpanda
 
 # Lightpanda build extension
 

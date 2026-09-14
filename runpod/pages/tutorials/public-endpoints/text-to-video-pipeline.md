@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [tutorials/public-endpoints/text-to-video-pipeline.mdx](https://docs.runpod.io/tutorials/public-endpoints/text-to-video-pipeline)
+> Pinned source for Runpod main: [tutorials/public-endpoints/text-to-video-pipeline.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/tutorials/public-endpoints/text-to-video-pipeline.mdx)
+> Canonical documentation: https://docs.runpod.io/tutorials/public-endpoints/text-to-video-pipeline
 
 # Build a text-to-video pipeline
 
@@ -295,6 +296,7 @@ def main():
     print(f"Image: output_image.png")
     print(f"Video: output_video.mp4")
 
+
 if __name__ == "__main__":
     if not API_KEY:
         print("Error: Set RUNPOD_API_KEY environment variable")
@@ -321,11 +323,13 @@ QWEN_ENDPOINT = "qwen3-32b-awq"
 FLUX_ENDPOINT = "black-forest-labs-flux-1-schnell"
 WAN_ENDPOINT = "wan-2-5"
 
+
 def get_headers():
     return {
         "Authorization": f"Bearer {API_KEY}",
         "Content-Type": "application/json",
     }
+
 
 def poll_for_completion(endpoint, job_id, timeout=300):
     """Poll an async job until completion."""
@@ -346,6 +350,7 @@ def poll_for_completion(endpoint, job_id, timeout=300):
             time.sleep(5)
 
     raise Exception(f"Job timed out after {timeout} seconds")
+
 
 def enhance_prompt(simple_prompt):
     """Use Qwen3 32B to enhance a simple prompt into a detailed image description."""
@@ -383,6 +388,7 @@ def enhance_prompt(simple_prompt):
     print(f"Enhanced prompt: {enhanced}")
     return enhanced
 
+
 def generate_image(prompt):
     """Use Flux Schnell to generate an image from the prompt."""
     print("Generating image with Flux Schnell...")
@@ -410,6 +416,7 @@ def generate_image(prompt):
     image_url = status["output"]["image_url"]
     print(f"  Image URL: {image_url}")
     return image_url
+
 
 def generate_video(image_url, prompt):
     """Use WAN 2.5 to animate the image into a video."""
@@ -439,6 +446,7 @@ def generate_video(image_url, prompt):
     print(f"  Video URL: {video_url}")
     return video_url
 
+
 def download_file(url, filename):
     """Download a file from a URL."""
     print(f"Downloading to {filename}...")
@@ -446,6 +454,7 @@ def download_file(url, filename):
     with open(filename, "wb") as f:
         f.write(response.content)
     print(f"Saved: {filename}")
+
 
 def main():
     # Your simple prompt
@@ -469,6 +478,7 @@ def main():
     print(f"Enhanced prompt: {enhanced_prompt}")
     print(f"Image: output_image.png")
     print(f"Video: output_video.mp4")
+
 
 if __name__ == "__main__":
     if not API_KEY:

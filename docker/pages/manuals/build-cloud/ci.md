@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/build-cloud/ci.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build-cloud/ci.md)
+> Pinned source for Docker main: [content/manuals/build-cloud/ci.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/build-cloud/ci.md)
 
 Using Docker Build Cloud in CI can speed up your build pipelines, which means less time
 spent waiting and context switching. You control your CI workflows as usual,
@@ -103,13 +103,13 @@ jobs:
         with:
           username: ${{ vars.DOCKER_ACCOUNT }}
           password: ${{ secrets.DOCKER_ACCESS_TOKEN }}
-
+      
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
         with:
           driver: cloud
           endpoint: "${{ vars.DOCKER_ACCOUNT }}/${{ vars.CLOUD_BUILDER_NAME }}" # for example, "acme/default"
-
+      
       - name: Build and push
         uses: docker/build-push-action@v7
         with:
@@ -317,8 +317,8 @@ pipeline {
 ### Travis CI
 
 ```yaml
-language: minimal
-dist: jammy
+language: minimal 
+dist: jammy 
 
 services:
   - docker

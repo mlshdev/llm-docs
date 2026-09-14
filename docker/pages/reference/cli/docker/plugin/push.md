@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_plugin_push.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_plugin_push.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_plugin_push.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_plugin_push.yaml)
 
 # docker plugin push
 
@@ -12,7 +12,7 @@ After you have created a plugin using `docker plugin create` and the plugin is
 ready for distribution, use `docker plugin push` to share your images to Docker
 Hub or a self-hosted registry.
 
-Registry credentials are managed by [docker login](/reference/cli/docker/login/).
+Registry credentials are managed by [docker login](https://docs.docker.com/reference/cli/docker/login/).
 
 ## Examples
 

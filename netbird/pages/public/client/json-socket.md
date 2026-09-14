@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/client/json-socket.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/client/json-socket.mdx)
+> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/client/json-socket.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/client/json-socket.mdx)
 
 # HTTP/JSON Daemon Socket
 
@@ -169,6 +169,7 @@ from http import client
 from json import dumps, load
 from socket import AF_UNIX, SOCK_STREAM, socket
 
+
 class UnixHTTPConnection(client.HTTPConnection):
     def __init__(self, socket_path):
         super().__init__("localhost")
@@ -177,6 +178,7 @@ class UnixHTTPConnection(client.HTTPConnection):
     def connect(self):
         self.sock = socket(AF_UNIX, SOCK_STREAM)
         self.sock.connect(self.socket_path)
+
 
 connection = UnixHTTPConnection("/var/run/netbird-http.sock")
 connection.request(

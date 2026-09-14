@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/http/middlewares/replacepath.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/replacepath.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/http/middlewares/replacepath.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/http/middlewares/replacepath.md)
 
 The `replacePath` middleware will:
 
@@ -44,7 +44,7 @@ labels:
   "Tags" : [
     "traefik.http.middlewares.test-replacepath.replacepath.path=/foo"
   ]
-}
+} 
 ```
 
 **Kubernetes**

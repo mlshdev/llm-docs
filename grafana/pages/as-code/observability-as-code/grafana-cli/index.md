@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.1: [docs/sources/as-code/observability-as-code/grafana-cli/_index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/as-code/observability-as-code/grafana-cli/_index.md)
+> Pinned source for Grafana v13.2.1: [docs/sources/as-code/observability-as-code/grafana-cli/_index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/as-code/observability-as-code/grafana-cli/_index.md)
 
 # Introduction to the Grafana CLI
 

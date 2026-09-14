@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_system_df.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_system_df.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_system_df.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_system_df.yaml)
 
 # docker system df
 
@@ -13,10 +13,10 @@ amount of disk space used by the Docker daemon.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--format` |  | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to https://docs.docker.com/go/formatting/ for more information about formatting output with templates |
-| `-v`, `--verbose` |  | Show detailed information on space usage |
+| Option            | Default | Description                                                                                                                                                                                                                                                                                                                                                                            |
+| ----------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--format`        |         | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to <https://docs.docker.com/go/formatting/> for more information about formatting output with templates |
+| `-v`, `--verbose` |         | Show detailed information on space usage                                                                                                                                                                                                                                                                                                                                               |
 
 ## Examples
 
@@ -58,9 +58,9 @@ NAME                                                               LINKS        
 my-named-vol                                                       0                   0 B
 ```
 
-* `SHARED SIZE` is the amount of space that an image shares with another one (i.e. their common data)
-* `UNIQUE SIZE` is the amount of space that's only used by a given image
-* `SIZE` is the virtual size of the image, it's the sum of `SHARED SIZE` and `UNIQUE SIZE`
+- `SHARED SIZE` is the amount of space that an image shares with another one (i.e. their common data)
+- `UNIQUE SIZE` is the amount of space that's only used by a given image
+- `SIZE` is the virtual size of the image, it's the sum of `SHARED SIZE` and `UNIQUE SIZE`
 
-> [!NOTE]
+> \[!NOTE]
 > Network information isn't shown, because it doesn't consume disk space.

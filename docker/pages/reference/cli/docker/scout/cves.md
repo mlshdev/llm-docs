@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/scout/docker_scout_cves.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_cves.yaml)
+> Pinned source for Docker main: [data/cli/scout/docker_scout_cves.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_cves.yaml)
 
 # docker scout cves
 
@@ -35,41 +35,41 @@ or if you want to control from where the image will be resolved, you must prefix
 - `archive://` use a tarball archive, as created by `docker save`
 - `fs://` use a local directory or file
 - `sbom://` SPDX file or in-toto attestation file with SPDX predicate or `syft` json SBOM file
-    In case of `sbom://` prefix, if the file is not defined then it will try to read it from the standard input.
+  In case of `sbom://` prefix, if the file is not defined then it will try to read it from the standard input.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--details` |  | Print details on default text output |
-| `--env` |  | Name of environment |
-| `--epss` |  | Display the EPSS scores and organize the package's CVEs according to their EPSS score |
-| `--epss-percentile` |  | Exclude CVEs with EPSS scores less than the specified percentile (0 to 1) |
-| `--epss-score` |  | Exclude CVEs with EPSS scores less than the specified value (0 to 1) |
-| `-e`, `--exit-code` |  | Return exit code '2' if vulnerabilities are detected |
-| `--format` | `packages` | Output format of the generated vulnerability report: - packages: default output, plain text with vulnerabilities grouped by packages - sarif: json Sarif output - spdx: json SPDX output - gitlab: json GitLab output - markdown: markdown output (including some html tags like collapsible sections) - sbom: json SBOM output |
-| `--ignore-base` |  | Filter out CVEs introduced from base image |
-| `--ignore-suppressed` |  | Filter CVEs found in Scout exceptions based on the specified exception scope |
-| `--locations` |  | Print package locations including file paths and layer diff_id |
-| `--multi-stage` |  | Show packages from multi-stage Docker builds |
-| `--only-base` |  | Only show CVEs introduced by the base image |
-| `--only-cisa-kev` |  | Filter to CVEs listed in the CISA KEV catalog |
-| `--only-cve-id` |  | Comma separated list of CVE ids (like CVE-2021-45105) to search for |
-| `--only-fixed` |  | Filter to fixable CVEs |
-| `--only-metric` |  | Comma separated list of CVSS metrics (like AV:N or PR:L) to filter CVEs by |
-| `--only-package` |  | Comma separated regular expressions to filter packages by |
-| `--only-package-type` |  | Comma separated list of package types (like apk, deb, rpm, npm, pypi, golang, etc) |
-| `--only-severity` |  | Comma separated list of severities (critical, high, medium, low, unspecified) to filter CVEs by |
-| `--only-stage` |  | Comma separated list of multi-stage Docker build stage names |
-| `--only-unfixed` |  | Filter to unfixed CVEs |
-| `--only-vex-affected` |  | Filter CVEs by VEX statements with status not affected |
-| `--only-vuln-packages` |  | When used with --format=only-packages ignore packages with no vulnerabilities |
-| `--org` |  | Namespace of the Docker organization |
-| `-o`, `--output` |  | Write the report to a file |
-| `--platform` |  | Platform of image to analyze |
-| `--ref` |  | Reference to use if the provided tarball contains multiple references. Can only be used with archive |
-| `--vex-author` | `[<.*@docker.com>]` | List of VEX statement authors to accept |
-| `--vex-location` |  | File location of directory or file containing VEX statements |
+| Option                 | Default             | Description                                                                                                                                                                                                                                                                                                                     |
+| ---------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--details`            |                     | Print details on default text output                                                                                                                                                                                                                                                                                            |
+| `--env`                |                     | Name of environment                                                                                                                                                                                                                                                                                                             |
+| `--epss`               |                     | Display the EPSS scores and organize the package's CVEs according to their EPSS score                                                                                                                                                                                                                                           |
+| `--epss-percentile`    |                     | Exclude CVEs with EPSS scores less than the specified percentile (0 to 1)                                                                                                                                                                                                                                                       |
+| `--epss-score`         |                     | Exclude CVEs with EPSS scores less than the specified value (0 to 1)                                                                                                                                                                                                                                                            |
+| `-e`, `--exit-code`    |                     | Return exit code '2' if vulnerabilities are detected                                                                                                                                                                                                                                                                            |
+| `--format`             | `packages`          | Output format of the generated vulnerability report: - packages: default output, plain text with vulnerabilities grouped by packages - sarif: json Sarif output - spdx: json SPDX output - gitlab: json GitLab output - markdown: markdown output (including some html tags like collapsible sections) - sbom: json SBOM output |
+| `--ignore-base`        |                     | Filter out CVEs introduced from base image                                                                                                                                                                                                                                                                                      |
+| `--ignore-suppressed`  |                     | Filter CVEs found in Scout exceptions based on the specified exception scope                                                                                                                                                                                                                                                    |
+| `--locations`          |                     | Print package locations including file paths and layer diff\_id                                                                                                                                                                                                                                                                 |
+| `--multi-stage`        |                     | Show packages from multi-stage Docker builds                                                                                                                                                                                                                                                                                    |
+| `--only-base`          |                     | Only show CVEs introduced by the base image                                                                                                                                                                                                                                                                                     |
+| `--only-cisa-kev`      |                     | Filter to CVEs listed in the CISA KEV catalog                                                                                                                                                                                                                                                                                   |
+| `--only-cve-id`        |                     | Comma separated list of CVE ids (like CVE-2021-45105) to search for                                                                                                                                                                                                                                                             |
+| `--only-fixed`         |                     | Filter to fixable CVEs                                                                                                                                                                                                                                                                                                          |
+| `--only-metric`        |                     | Comma separated list of CVSS metrics (like AV:N or PR:L) to filter CVEs by                                                                                                                                                                                                                                                      |
+| `--only-package`       |                     | Comma separated regular expressions to filter packages by                                                                                                                                                                                                                                                                       |
+| `--only-package-type`  |                     | Comma separated list of package types (like apk, deb, rpm, npm, pypi, golang, etc)                                                                                                                                                                                                                                              |
+| `--only-severity`      |                     | Comma separated list of severities (critical, high, medium, low, unspecified) to filter CVEs by                                                                                                                                                                                                                                 |
+| `--only-stage`         |                     | Comma separated list of multi-stage Docker build stage names                                                                                                                                                                                                                                                                    |
+| `--only-unfixed`       |                     | Filter to unfixed CVEs                                                                                                                                                                                                                                                                                                          |
+| `--only-vex-affected`  |                     | Filter CVEs by VEX statements with status not affected                                                                                                                                                                                                                                                                          |
+| `--only-vuln-packages` |                     | When used with --format=only-packages ignore packages with no vulnerabilities                                                                                                                                                                                                                                                   |
+| `--org`                |                     | Namespace of the Docker organization                                                                                                                                                                                                                                                                                            |
+| `-o`, `--output`       |                     | Write the report to a file                                                                                                                                                                                                                                                                                                      |
+| `--platform`           |                     | Platform of image to analyze                                                                                                                                                                                                                                                                                                    |
+| `--ref`                |                     | Reference to use if the provided tarball contains multiple references. Can only be used with archive                                                                                                                                                                                                                            |
+| `--vex-author`         | `[<.*@docker.com>]` | List of VEX statement authors to accept                                                                                                                                                                                                                                                                                         |
+| `--vex-location`       |                     | File location of directory or file containing VEX statements                                                                                                                                                                                                                                                                    |
 
 ## Examples
 
@@ -234,3 +234,4 @@ $ syft -o spdx-json alpine:3.16.1 | docker scout cves sbom://
    ├── ✔ File metadata                   [75 locations]
    └── ✔ Executables                     [16 executables]
     ✗ Detected 2 vulnerable packages with a total of 11 vulnerabilities
+```

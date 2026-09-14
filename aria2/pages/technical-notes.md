@@ -1,4 +1,4 @@
-> Release-pinned source for aria2 release-1.37.0: [doc/manual-src/en/technical-notes.rst](https://github.com/aria2/aria2/blob/02f2d0d8472b3c38c29b4dba8c75ebd5fdd2899a/doc/manual-src/en/technical-notes.rst)
+> Pinned source for aria2 release-1.37.0: [doc/manual-src/en/technical-notes.rst](https://github.com/aria2/aria2/blob/02f2d0d8472b3c38c29b4dba8c75ebd5fdd2899a/doc/manual-src/en/technical-notes.rst)
 
 # Technical Notes
 

@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/appendix-obsolete-pgxlogdump.sgml#pgxlogdump](https://www.postgresql.org/docs/18/pgxlogdump.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/appendix-obsolete-pgxlogdump.sgml#pgxlogdump](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/appendix-obsolete-pgxlogdump.sgml%23pgxlogdump)
+> Canonical documentation: https://www.postgresql.org/docs/18/pgxlogdump.html
 
 # pg_xlogdump renamed to pg_waldump
 

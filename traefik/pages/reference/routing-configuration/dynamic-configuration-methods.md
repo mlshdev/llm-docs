@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/dynamic-configuration-methods.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/dynamic-configuration-methods.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/dynamic-configuration-methods.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/dynamic-configuration-methods.md)
 
 # Providing Dynamic (Routing) Configuration to Traefik
 
@@ -131,7 +131,7 @@ For Kubernetes providers, you can configure Traefik using the native Ingress or 
 >                 port:
 >                   number: 80
 >   tls:
->     - secretName: supersecret
+>     - secretName: supersecret    
 > ```
 
 ## Using Key-Value Pairs With KV Providers

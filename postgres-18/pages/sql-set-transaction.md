@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/set_transaction.sgml#sql-set-transaction](https://www.postgresql.org/docs/18/sql-set-transaction.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/set_transaction.sgml#sql-set-transaction](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/set_transaction.sgml%23sql-set-transaction)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-set-transaction.html
 
 # SET TRANSACTION
 

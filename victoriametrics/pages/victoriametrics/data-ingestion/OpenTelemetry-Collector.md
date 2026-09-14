@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/data-ingestion/OpenTelemetry-Collector.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/OpenTelemetry-Collector.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/data-ingestion/OpenTelemetry-Collector.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/data-ingestion/OpenTelemetry-Collector.md)
 
 [OpenTelemetry Collector](https://opentelemetry.io/docs/collector/) is a vendor-agnostic agent for receiving, processing, and exporting telemetry data.
 VictoriaMetrics supports the [OTLP metrics protocol](https://docs.victoriametrics.com/victoriametrics/integrations/opentelemetry/) natively,

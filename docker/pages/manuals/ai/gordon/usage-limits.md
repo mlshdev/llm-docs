@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/gordon/usage-limits.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/ai/gordon/usage-limits.md)
+> Pinned source for Docker main: [content/manuals/ai/gordon/usage-limits.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/ai/gordon/usage-limits.md)
 
 # Gordon usage limits and tiers
 

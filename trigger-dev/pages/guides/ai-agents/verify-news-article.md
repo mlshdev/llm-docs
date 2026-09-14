@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/guides/ai-agents/verify-news-article.mdx](https://trigger.dev/docs/guides/ai-agents/verify-news-article)
+> Pinned source for Trigger.dev v4.5.16: [docs/guides/ai-agents/verify-news-article.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/guides/ai-agents/verify-news-article.mdx)
+> Canonical documentation: https://trigger.dev/docs/guides/ai-agents/verify-news-article
 
 # Verify a news article
 

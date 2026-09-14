@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_events.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_events.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_events.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_events.yaml)
 
 # docker compose events
 
@@ -26,18 +26,18 @@ With the `--json` flag, a json object is printed one per line with the format:
 }
 ```
 
-The events that can be received using this can be seen [here](/reference/cli/docker/system/events/#object-types).
+The events that can be received using this can be seen [here](https://docs.docker.com/reference/cli/docker/system/events/#object-types).
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--json` |  | Output events as a stream of json objects |
-| `--since` |  | Show all events created since timestamp |
-| `--until` |  | Stream events until this timestamp |
+| Option    | Default | Description                               |
+| --------- | ------- | ----------------------------------------- |
+| `--json`  |         | Output events as a stream of json objects |
+| `--since` |         | Show all events created since timestamp   |
+| `--until` |         | Stream events until this timestamp        |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--dry-run` |  | Execute command in dry run mode |
+| Option      | Default | Description                     |
+| ----------- | ------- | ------------------------------- |
+| `--dry-run` |         | Execute command in dry run mode |

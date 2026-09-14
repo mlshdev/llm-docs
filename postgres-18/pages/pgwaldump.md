@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/pg_waldump.sgml#pgwaldump](https://www.postgresql.org/docs/18/pgwaldump.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/pg_waldump.sgml#pgwaldump](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/pg_waldump.sgml%23pgwaldump)
+> Canonical documentation: https://www.postgresql.org/docs/18/pgwaldump.html
 
 # pg_waldump
 

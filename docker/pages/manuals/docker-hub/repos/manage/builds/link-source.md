@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/link-source.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/docker-hub/repos/manage/builds/link-source.md)
+> Pinned source for Docker main: [content/manuals/docker-hub/repos/manage/builds/link-source.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/docker-hub/repos/manage/builds/link-source.md)
 
 # Configure automated builds from GitHub and BitBucket
 

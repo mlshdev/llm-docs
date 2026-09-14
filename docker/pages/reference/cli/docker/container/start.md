@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_container_start.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_start.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_container_start.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_start.yaml)
 
 # docker container start
 
@@ -14,13 +14,13 @@ Start one or more stopped containers
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-a`, `--attach` |  | Attach STDOUT/STDERR and forward signals |
-| `--checkpoint` |  | Restore from this checkpoint (Experimental) |
-| `--checkpoint-dir` |  | Use a custom checkpoint storage directory (Experimental) |
-| `--detach-keys` |  | Override the key sequence for detaching a container |
-| `-i`, `--interactive` |  | Attach container's STDIN |
+| Option                | Default | Description                                              |
+| --------------------- | ------- | -------------------------------------------------------- |
+| `-a`, `--attach`      |         | Attach STDOUT/STDERR and forward signals                 |
+| `--checkpoint`        |         | Restore from this checkpoint (Experimental)              |
+| `--checkpoint-dir`    |         | Use a custom checkpoint storage directory (Experimental) |
+| `--detach-keys`       |         | Override the key sequence for detaching a container      |
+| `-i`, `--interactive` |         | Attach container's STDIN                                 |
 
 ## Examples
 

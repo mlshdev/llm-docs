@@ -1,4 +1,4 @@
-> Tag-pinned source for discord.py v2.7.1: [docs/whats_new.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/whats_new.rst)
+> Pinned source for discord.py v2.7.1: [docs/whats_new.rst](https://github.com/Rapptz/discord.py/blob/dfd1144b2246a7adafe3f1c64a4dd9bc2187fcee/docs/whats_new.rst)
 
 <a id="whats-new"></a>
 
@@ -82,9 +82,9 @@ in specific versions.
 - Fix overzealous exporting of symbols within an internal `primary_guild` module ([GH-10295](https://github.com/Rapptz/discord.py/issues/10295))
 - Close websocket when reconnecting websocket during polling ([GH-10409](https://github.com/Rapptz/discord.py/issues/10409))
 - Use `ui.View.walk_children` when removing items from the view cache ([GH-10402](https://github.com/Rapptz/discord.py/issues/10402))
-- |commands| Fix flag annotations not working under Python 3.14
-- |commands| Fix decorator order mattering for hybrid commands
-- |commands| Fix `ext.commands.Context.from_interaction` derived `Message.type` being incorrect
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix flag annotations not working under Python 3.14
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix decorator order mattering for hybrid commands
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix `ext.commands.Context.from_interaction` derived `Message.type` being incorrect
 
 ### Miscellaneous
 
@@ -94,7 +94,7 @@ in specific versions.
 - Change `description` to be optional when creating emoji ([GH-10346](https://github.com/Rapptz/discord.py/issues/10346))
 - Don't assume Python 3.14 always has `compression.zstd` ([GH-10328](https://github.com/Rapptz/discord.py/issues/10328))
 - Use webp as the default emoji URL format
-- |tasks| Log handled exceptions before sleeping
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] Log handled exceptions before sleeping
 
 <a id="vp2p6p4"></a>
 
@@ -142,7 +142,7 @@ in specific versions.
 - Fix `ui.DynamicItem` not working when set as an `ui.Section.acessory` ([GH-10271](https://github.com/Rapptz/discord.py/issues/10271))
 - Fix `ui.LayoutView.total_children_count` being inaccurate when adding nested items
 - Fix crash when accessing `AuditLogEntry.category` for unknown audit log actions
-- |tasks| Add logging statement when a handled exception occurs ([GH-10276](https://github.com/Rapptz/discord.py/issues/10276))
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] Add logging statement when a handled exception occurs ([GH-10276](https://github.com/Rapptz/discord.py/issues/10276))
 
 <a id="vp2p6p0"></a>
 
@@ -218,7 +218,7 @@ in specific versions.
 - Fix `__bool__` being incorrect for `Embed` ([GH-10154](https://github.com/Rapptz/discord.py/issues/10154))
 - Fix audit log `automod_rule_trigger_type` extra being missing ([GH-10244](https://github.com/Rapptz/discord.py/issues/10244))
 - Properly transform media channels in app commands ([GH-10177](https://github.com/Rapptz/discord.py/issues/10177))
-- |commands| Fix certain converters not working under `Optional` type hint in hybrids ([GH-10239](https://github.com/Rapptz/discord.py/issues/10239), [GH-10245](https://github.com/Rapptz/discord.py/issues/10245))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix certain converters not working under `Optional` type hint in hybrids ([GH-10239](https://github.com/Rapptz/discord.py/issues/10239), [GH-10245](https://github.com/Rapptz/discord.py/issues/10245))
 
 ### Miscellaneous
 
@@ -371,7 +371,7 @@ in specific versions.
 
 - Re-add `connector` parameter that was removed during v2.0 ([GH-9900](https://github.com/Rapptz/discord.py/issues/9900))
 
-- |commands| Add `discord.ext.commands.SoundboardSoundConverter` ([GH-9973](https://github.com/Rapptz/discord.py/issues/9973))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add `discord.ext.commands.SoundboardSoundConverter` ([GH-9973](https://github.com/Rapptz/discord.py/issues/9973))
 
 ### Bug Fixes
 
@@ -412,19 +412,19 @@ in specific versions.
 
 - Fix path sanitisation for absolute Windows paths when using `__main__` ([GH-10096](https://github.com/Rapptz/discord.py/issues/10096), [GH-10097](https://github.com/Rapptz/discord.py/issues/10097))
 
-- |tasks| Fix race condition when setting timer handle when using uvloop ([GH-10020](https://github.com/Rapptz/discord.py/issues/10020))
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] Fix race condition when setting timer handle when using uvloop ([GH-10020](https://github.com/Rapptz/discord.py/issues/10020))
 
-- |commands| Fix issue with category cooldowns outside of guild channels ([GH-9959](https://github.com/Rapptz/discord.py/issues/9959))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix issue with category cooldowns outside of guild channels ([GH-9959](https://github.com/Rapptz/discord.py/issues/9959))
 
-- |commands| Fix `Context.defer` unconditionally deferring
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix `Context.defer` unconditionally deferring
 
-- |commands| Fix callable FlagConverter defaults on hybrid commands not being called ([GH-10037](https://github.com/Rapptz/discord.py/issues/10037))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix callable FlagConverter defaults on hybrid commands not being called ([GH-10037](https://github.com/Rapptz/discord.py/issues/10037))
 
-- |commands| Unwrap `discord.ext.commands.Parameter` if given as default to `ext.commands.parameter` ([GH-9977](https://github.com/Rapptz/discord.py/issues/9977))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Unwrap `discord.ext.commands.Parameter` if given as default to `ext.commands.parameter` ([GH-9977](https://github.com/Rapptz/discord.py/issues/9977))
 
-- |commands| Fix fallback behaviour not being respected when calling replace for `.ext.commands.Parameter` ([GH-10076](https://github.com/Rapptz/discord.py/issues/10076), [GH-10077](https://github.com/Rapptz/discord.py/issues/10077))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix fallback behaviour not being respected when calling replace for `.ext.commands.Parameter` ([GH-10076](https://github.com/Rapptz/discord.py/issues/10076), [GH-10077](https://github.com/Rapptz/discord.py/issues/10077))
 
-- |commands| Respect `enabled` keyword argument for hybrid app commands ([GH-10001](https://github.com/Rapptz/discord.py/issues/10001))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Respect `enabled` keyword argument for hybrid app commands ([GH-10001](https://github.com/Rapptz/discord.py/issues/10001))
 
 ### Miscellaneous
 
@@ -607,18 +607,18 @@ in specific versions.
 
 - Add support for reaction types to raw and non-raw models ([GH-9836](https://github.com/Rapptz/discord.py/issues/9836)).
 
-- |tasks| Add `name` parameter to `ext.tasks.loop` to name the internal `asyncio.Task`.
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] Add `name` parameter to `ext.tasks.loop` to name the internal `asyncio.Task`.
 
-- |commands| Add fallback behaviour to `ext.commands.CurrentGuild`.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add fallback behaviour to `ext.commands.CurrentGuild`.
 
-- |commands| Add logging for errors that occur during `ext.commands.Cog.cog_unload`.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add logging for errors that occur during `ext.commands.Cog.cog_unload`.
 
-- |commands| Add support for `typing.NewType` and `type` keyword type aliases ([GH-9815](https://github.com/Rapptz/discord.py/issues/9815)).
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add support for `typing.NewType` and `type` keyword type aliases ([GH-9815](https://github.com/Rapptz/discord.py/issues/9815)).
   - Also supports application commands.
 
-- |commands| Add support for positional-only flag parameters ([GH-9805](https://github.com/Rapptz/discord.py/issues/9805)).
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add support for positional-only flag parameters ([GH-9805](https://github.com/Rapptz/discord.py/issues/9805)).
 
-- |commands| Add support for channel URLs in ChannelConverter related classes ([GH-9799](https://github.com/Rapptz/discord.py/issues/9799)).
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add support for channel URLs in ChannelConverter related classes ([GH-9799](https://github.com/Rapptz/discord.py/issues/9799)).
 
 ### Bug Fixes
 
@@ -648,10 +648,10 @@ in specific versions.
 - Fix bug with cache superfluously incrementing role positions ([GH-9853](https://github.com/Rapptz/discord.py/issues/9853)).
 - Fix `exempt_channels` not being passed along in `Guild.create_automod_rule` ([GH-9861](https://github.com/Rapptz/discord.py/issues/9861)).
 - Fix `abc.GuildChannel.purge` failing on single-message delete mode if the message was deleted ([GH-9830](https://github.com/Rapptz/discord.py/issues/9830), [GH-9863](https://github.com/Rapptz/discord.py/issues/9863)).
-- |commands| Fix localization support for `ext.commands.HybridGroup` fallback.
-- |commands| Fix nested `ext.commands.HybridGroup`'s inserting manual app commands.
-- |commands| Fix an issue where `ext.commands.HybridGroup` wrapped instances would be out of sync.
-- |commands| Fix `ext.commands.HelpCommand` defined checks not carrying over during copy ([GH-9843](https://github.com/Rapptz/discord.py/issues/9843)).
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix localization support for `ext.commands.HybridGroup` fallback.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix nested `ext.commands.HybridGroup`'s inserting manual app commands.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix an issue where `ext.commands.HybridGroup` wrapped instances would be out of sync.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix `ext.commands.HelpCommand` defined checks not carrying over during copy ([GH-9843](https://github.com/Rapptz/discord.py/issues/9843)).
 
 ### Miscellaneous
 
@@ -671,8 +671,8 @@ in specific versions.
 - Fix `NameError` when using `abc.GuildChannel.create_invite` ([GH-9505](https://github.com/Rapptz/discord.py/issues/9505)).
 - Fix crash when disconnecting during the middle of a `HELLO` packet when using `AutoShardedClient`.
 - Fix voice websocket not being closed before being replaced by a new one ([GH-9518](https://github.com/Rapptz/discord.py/issues/9518)).
-- |commands| Fix the wrong `ext.commands.HelpCommand.on_help_command_error` being called when ejected from a cog.
-- |commands| Fix `=None` being displayed in `ext.commands.Command.signature`.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix the wrong `ext.commands.HelpCommand.on_help_command_error` being called when ejected from a cog.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix `=None` being displayed in `ext.commands.Command.signature`.
 
 <a id="vp2p3p1"></a>
 
@@ -689,7 +689,7 @@ in specific versions.
 
 - Fix certain select types not appearing in `Message.components` ([GH-9462](https://github.com/Rapptz/discord.py/issues/9462)).
 
-- |commands| Change lookup order for `ext.commands.MemberConverter` and `ext.commands.UserConverter` to prioritise usernames instead of nicknames.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Change lookup order for `ext.commands.MemberConverter` and `ext.commands.UserConverter` to prioritise usernames instead of nicknames.
 
 <a id="vp2p3p0"></a>
 
@@ -703,7 +703,7 @@ in specific versions.
   - Update `__str__` for `User` to drop discriminators if the user has been migrated.
   - Update `Guild.get_member_named` to work with migrated users.
   - Update `User.default_avatar` to work with migrated users.
-  - |commands| Update user and member converters to understand migrated users.
+  - \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Update user and member converters to understand migrated users.
 
 - Add `DefaultAvatar.pink` for new pink default avatars.
 
@@ -741,11 +741,11 @@ in specific versions.
 
 - Add support for `raid_alerts_disabled` and `safety_alerts_channel` in `Guild.edit` ([GH-9318](https://github.com/Rapptz/discord.py/issues/9318)).
 
-- |commands| Add `BadLiteralArgument.argument` to get the failed argument's value ([GH-9283](https://github.com/Rapptz/discord.py/issues/9283)).
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add `BadLiteralArgument.argument` to get the failed argument's value ([GH-9283](https://github.com/Rapptz/discord.py/issues/9283)).
 
-- |commands| Add `Context.filesize_limit` property ([GH-9416](https://github.com/Rapptz/discord.py/issues/9416)).
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add `Context.filesize_limit` property ([GH-9416](https://github.com/Rapptz/discord.py/issues/9416)).
 
-- |commands| Add support for `Parameter.displayed_name` ([GH-9427](https://github.com/Rapptz/discord.py/issues/9427)).
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add support for `Parameter.displayed_name` ([GH-9427](https://github.com/Rapptz/discord.py/issues/9427)).
 
 ### Bug Fixes
 
@@ -871,7 +871,7 @@ in specific versions.
 
 - Add `ScheduledEvent.creator_id` attribute
 
-- |commands| Add support for `ext.commands.Cog.interaction_check` for `ext.commands.GroupCog` ([GH-9189](https://github.com/Rapptz/discord.py/issues/9189))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add support for `ext.commands.Cog.interaction_check` for `ext.commands.GroupCog` ([GH-9189](https://github.com/Rapptz/discord.py/issues/9189))
 
 ### Bug Fixes
 
@@ -891,7 +891,7 @@ in specific versions.
 - Fix webhooks and interactions not properly closing files after the request has completed
 - Fix `NameError` in audit log target for app commands
 - Fix `ScheduledEvent.edit` requiring some arguments to be passed in when unnecessary ([GH-9261](https://github.com/Rapptz/discord.py/issues/9261), [GH-9268](https://github.com/Rapptz/discord.py/issues/9268))
-- |commands| Explicit set a traceback for hybrid command invocations ([GH-9205](https://github.com/Rapptz/discord.py/issues/9205))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Explicit set a traceback for hybrid command invocations ([GH-9205](https://github.com/Rapptz/discord.py/issues/9205))
 
 ### Miscellaneous
 
@@ -900,8 +900,8 @@ in specific versions.
 - Force enable colour logging for the default logging handler when run under Docker.
 - Add various overloads for `Client.wait_for` to aid in static analysis ([GH-9184](https://github.com/Rapptz/discord.py/issues/9184))
 - `Interaction` can now optionally take a generic parameter, `ClientT` to represent the type for `Interaction.client`
-- |commands| Respect `ext.commands.Command.ignore_extra` for `discord.ext.commands.FlagConverter` keyword-only parameters
-- |commands| Change `Paginator.pages` to not prematurely close ([GH-9257](https://github.com/Rapptz/discord.py/issues/9257))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Respect `ext.commands.Command.ignore_extra` for `discord.ext.commands.FlagConverter` keyword-only parameters
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Change `Paginator.pages` to not prematurely close ([GH-9257](https://github.com/Rapptz/discord.py/issues/9257))
 
 <a id="vp2p1p1"></a>
 
@@ -947,15 +947,15 @@ in specific versions.
 
 - Add support for `AutoModTrigger.regex_patterns`.
 
-- |commands| Add `GroupCog.group_extras` to set `app_commands.Group.extras` ([GH-8405](https://github.com/Rapptz/discord.py/issues/8405)).
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add `GroupCog.group_extras` to set `app_commands.Group.extras` ([GH-8405](https://github.com/Rapptz/discord.py/issues/8405)).
 
-- |commands| Add support for NumPy style docstrings for regular commands to set parameter descriptions.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add support for NumPy style docstrings for regular commands to set parameter descriptions.
 
-- |commands| Allow `discord.ext.commands.Greedy` to potentially maintain state between calls.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Allow `discord.ext.commands.Greedy` to potentially maintain state between calls.
 
-- |commands| Add `Cog.has_app_command_error_handler` ([GH-8991](https://github.com/Rapptz/discord.py/issues/8991)).
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add `Cog.has_app_command_error_handler` ([GH-8991](https://github.com/Rapptz/discord.py/issues/8991)).
 
-- |commands| Allow `delete_after` in `Context.send` on ephemeral messages ([GH-9021](https://github.com/Rapptz/discord.py/issues/9021)).
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Allow `delete_after` in `Context.send` on ephemeral messages ([GH-9021](https://github.com/Rapptz/discord.py/issues/9021)).
 
 ### Bug Fixes
 
@@ -968,9 +968,9 @@ in specific versions.
 - Fix `app_commands.CommandTree.on_error` still being called when a bound error handler is set.
 - Fix thread permissions being set to `True` in `DMChannel.permissions_for` ([GH-8965](https://github.com/Rapptz/discord.py/issues/8965)).
 - Fix `on_scheduled_event_delete` occasionally dispatching with too many parameters ([GH-9019](https://github.com/Rapptz/discord.py/issues/9019)).
-- |commands| Fix `Context.from_interaction` ignoring `discord.ext.commands.Context.command_failed`.
-- |commands| Fix `discord.ext.commands.Range` to allow 3.10 Union syntax ([GH-8446](https://github.com/Rapptz/discord.py/issues/8446)).
-- |commands| Fix `before_invoke` not triggering for fallback commands in a hybrid group command ([GH-8461](https://github.com/Rapptz/discord.py/issues/8461), [GH-8462](https://github.com/Rapptz/discord.py/issues/8462)).
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix `Context.from_interaction` ignoring `discord.ext.commands.Context.command_failed`.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix `discord.ext.commands.Range` to allow 3.10 Union syntax ([GH-8446](https://github.com/Rapptz/discord.py/issues/8446)).
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix `before_invoke` not triggering for fallback commands in a hybrid group command ([GH-8461](https://github.com/Rapptz/discord.py/issues/8461), [GH-8462](https://github.com/Rapptz/discord.py/issues/8462)).
 
 ### Miscellaneous
 
@@ -996,7 +996,7 @@ in specific versions.
 - Fix library callbacks triggering a type checking error if the parameter names were different.
   - This required a change in the [version\_guarantees](https://discordpy.readthedocs.io/version_guarantees.html#version-guarantees)
 
-- |commands| Fix Python 3.10 union types not working with `commands.Greedy`.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix Python 3.10 union types not working with `commands.Greedy`.
 
 <a id="vp2p0p0"></a>
 
@@ -1030,7 +1030,7 @@ see [the migrating page](https://discordpy.readthedocs.io/migrating.html#migrati
 
 ### Bug Fixes
 
-- |commands| Fix `Cog.has_error_handler` not working as intended.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix `Cog.has_error_handler` not working as intended.
 
 <a id="vp1p7p0"></a>
 
@@ -1091,28 +1091,28 @@ Development of v2.0 will have breaking changes and support for newer API feature
 
 - Add support for passing scopes to `utils.oauth_url` ([GH-6568](https://github.com/Rapptz/discord.py/issues/6568))
 
-- |commands| Add support for `rgb` CSS function as a parameter to `ColourConverter` ([GH-6374](https://github.com/Rapptz/discord.py/issues/6374))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add support for `rgb` CSS function as a parameter to `ColourConverter` ([GH-6374](https://github.com/Rapptz/discord.py/issues/6374))
 
-- |commands| Add support for converting `StoreChannel` via `StoreChannelConverter` ([GH-6603](https://github.com/Rapptz/discord.py/issues/6603))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add support for converting `StoreChannel` via `StoreChannelConverter` ([GH-6603](https://github.com/Rapptz/discord.py/issues/6603))
 
-- |commands| Add support for stripping whitespace after the prefix is encountered using the `strip_after_prefix` `ext.commands.Bot` constructor parameter.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add support for stripping whitespace after the prefix is encountered using the `strip_after_prefix` `ext.commands.Bot` constructor parameter.
 
-- |commands| Add `Context.invoked_parents` to get the aliases a command's parent was invoked with ([GH-1874](https://github.com/Rapptz/discord.py/issues/1874), [GH-6462](https://github.com/Rapptz/discord.py/issues/6462))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add `Context.invoked_parents` to get the aliases a command's parent was invoked with ([GH-1874](https://github.com/Rapptz/discord.py/issues/1874), [GH-6462](https://github.com/Rapptz/discord.py/issues/6462))
 
-- |commands| Add a converter for `PartialMessage` under `ext.commands.PartialMessageConverter` ([GH-6308](https://github.com/Rapptz/discord.py/issues/6308))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add a converter for `PartialMessage` under `ext.commands.PartialMessageConverter` ([GH-6308](https://github.com/Rapptz/discord.py/issues/6308))
 
-- |commands| Add a converter for `Guild` under `ext.commands.GuildConverter` ([GH-6016](https://github.com/Rapptz/discord.py/issues/6016), [GH-6365](https://github.com/Rapptz/discord.py/issues/6365))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add a converter for `Guild` under `ext.commands.GuildConverter` ([GH-6016](https://github.com/Rapptz/discord.py/issues/6016), [GH-6365](https://github.com/Rapptz/discord.py/issues/6365))
 
-- |commands| Add `Command.has_error_handler`
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add `Command.has_error_handler`
   - This is also adds `Cog.has_error_handler`
 
-- |commands| Allow callable types to act as a bucket key for cooldowns ([GH-6563](https://github.com/Rapptz/discord.py/issues/6563))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Allow callable types to act as a bucket key for cooldowns ([GH-6563](https://github.com/Rapptz/discord.py/issues/6563))
 
-- |commands| Add `linesep` keyword argument to `Paginator` ([GH-5975](https://github.com/Rapptz/discord.py/issues/5975))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add `linesep` keyword argument to `Paginator` ([GH-5975](https://github.com/Rapptz/discord.py/issues/5975))
 
-- |commands| Allow `None` to be passed to `HelpCommand.verify_checks` to only verify in a guild context ([GH-2008](https://github.com/Rapptz/discord.py/issues/2008), [GH-6446](https://github.com/Rapptz/discord.py/issues/6446))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Allow `None` to be passed to `HelpCommand.verify_checks` to only verify in a guild context ([GH-2008](https://github.com/Rapptz/discord.py/issues/2008), [GH-6446](https://github.com/Rapptz/discord.py/issues/6446))
 
-- |commands| Allow relative paths when loading extensions via a `package` keyword argument ([GH-2465](https://github.com/Rapptz/discord.py/issues/2465), [GH-6445](https://github.com/Rapptz/discord.py/issues/6445))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Allow relative paths when loading extensions via a `package` keyword argument ([GH-2465](https://github.com/Rapptz/discord.py/issues/2465), [GH-6445](https://github.com/Rapptz/discord.py/issues/6445))
 
 ### Bug Fixes
 
@@ -1128,12 +1128,12 @@ Development of v2.0 will have breaking changes and support for newer API feature
 - Fix potential `AttributeError` when accessing `VoiceChannel.members` ([GH-6602](https://github.com/Rapptz/discord.py/issues/6602))
 - `Embed` constructor parameters now implicitly convert to `str` ([GH-6574](https://github.com/Rapptz/discord.py/issues/6574))
 - Ensure `discord` package is only run if executed as a script ([GH-6483](https://github.com/Rapptz/discord.py/issues/6483))
-- |commands| Fix irrelevant commands potentially being unloaded during cog unload due to failure.
-- |commands| Fix attribute errors when setting a cog to `.ext.commands.HelpCommand` ([GH-5154](https://github.com/Rapptz/discord.py/issues/5154))
-- |commands| Fix `Context.invoked_with` being improperly reassigned during a `ext.commands.Context.reinvoke` ([GH-6451](https://github.com/Rapptz/discord.py/issues/6451), [GH-6462](https://github.com/Rapptz/discord.py/issues/6462))
-- |commands| Remove duplicates from `HelpCommand.get_bot_mapping` ([GH-6316](https://github.com/Rapptz/discord.py/issues/6316))
-- |commands| Properly handle positional-only parameters in bot command signatures ([GH-6431](https://github.com/Rapptz/discord.py/issues/6431))
-- |commands| Group signatures now properly show up in `Command.signature` ([GH-6529](https://github.com/Rapptz/discord.py/issues/6529), [GH-6530](https://github.com/Rapptz/discord.py/issues/6530))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix irrelevant commands potentially being unloaded during cog unload due to failure.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix attribute errors when setting a cog to `.ext.commands.HelpCommand` ([GH-5154](https://github.com/Rapptz/discord.py/issues/5154))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix `Context.invoked_with` being improperly reassigned during a `ext.commands.Context.reinvoke` ([GH-6451](https://github.com/Rapptz/discord.py/issues/6451), [GH-6462](https://github.com/Rapptz/discord.py/issues/6462))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Remove duplicates from `HelpCommand.get_bot_mapping` ([GH-6316](https://github.com/Rapptz/discord.py/issues/6316))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Properly handle positional-only parameters in bot command signatures ([GH-6431](https://github.com/Rapptz/discord.py/issues/6431))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Group signatures now properly show up in `Command.signature` ([GH-6529](https://github.com/Rapptz/discord.py/issues/6529), [GH-6530](https://github.com/Rapptz/discord.py/issues/6530))
 
 ### Miscellaneous
 
@@ -1179,8 +1179,8 @@ This version comes with support for replies and stickers.
 - Add support for `Member.pending` for the membership gating feature.
 - Allow `colour` parameter to take `int` in `Guild.create_role` ([GH-6195](https://github.com/Rapptz/discord.py/issues/6195))
 - Add support for `presences` in `Guild.query_members` ([GH-2354](https://github.com/Rapptz/discord.py/issues/2354))
-- |commands| Add support for `description` keyword argument in `commands.Cog` ([GH-6028](https://github.com/Rapptz/discord.py/issues/6028))
-- |tasks| Add support for calling the wrapped coroutine as a function via `__call__`.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add support for `description` keyword argument in `commands.Cog` ([GH-6028](https://github.com/Rapptz/discord.py/issues/6028))
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] Add support for calling the wrapped coroutine as a function via `__call__`.
 
 ### Bug Fixes
 
@@ -1194,8 +1194,8 @@ This version comes with support for replies and stickers.
   - This would previously make it so `Message.author` is a `User`.
 - Fix `UnboundLocalError` for editing `public_updates_channel` in `Guild.edit` ([GH-6093](https://github.com/Rapptz/discord.py/issues/6093))
 - Fix uninitialised `CustomActivity.created_at` ([GH-6095](https://github.com/Rapptz/discord.py/issues/6095))
-- |commands| Errors during cog unload no longer stops module cleanup ([GH-6113](https://github.com/Rapptz/discord.py/issues/6113))
-- |commands| Properly cleanup lingering commands when a conflicting alias is found when adding commands ([GH-6217](https://github.com/Rapptz/discord.py/issues/6217))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Errors during cog unload no longer stops module cleanup ([GH-6113](https://github.com/Rapptz/discord.py/issues/6113))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Properly cleanup lingering commands when a conflicting alias is found when adding commands ([GH-6217](https://github.com/Rapptz/discord.py/issues/6217))
 
 ### Miscellaneous
 
@@ -1204,9 +1204,9 @@ This version comes with support for replies and stickers.
 - Fix docstring issue leading to a SyntaxError in 3.9 ([GH-6153](https://github.com/Rapptz/discord.py/issues/6153))
 - Update Windows opus binaries from 1.2.1 to 1.3.1 ([GH-6161](https://github.com/Rapptz/discord.py/issues/6161))
 - Allow `Guild.create_role` to accept `int` as the `colour` parameter ([GH-6195](https://github.com/Rapptz/discord.py/issues/6195))
-- |commands| `MessageConverter` regex got updated to support `www.` prefixes ([GH-6002](https://github.com/Rapptz/discord.py/issues/6002))
-- |commands| `UserConverter` now fetches the API if an ID is passed and the user is not cached.
-- |commands| `max_concurrency` is now called before cooldowns ([GH-6172](https://github.com/Rapptz/discord.py/issues/6172))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] `MessageConverter` regex got updated to support `www.` prefixes ([GH-6002](https://github.com/Rapptz/discord.py/issues/6002))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] `UserConverter` now fetches the API if an ID is passed and the user is not cached.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] `max_concurrency` is now called before cooldowns ([GH-6172](https://github.com/Rapptz/discord.py/issues/6172))
 
 <a id="vp1p5p1"></a>
 
@@ -1226,7 +1226,7 @@ This version comes with support for replies and stickers.
 ### Miscellaneous
 
 - Members are now loaded during `GUILD_MEMBER_UPDATE` events if `MemberCacheFlags.joined` is set. ([GH-5930](https://github.com/Rapptz/discord.py/issues/5930))
-- |commands| `MemberConverter` now properly lazily fetches members if not available from cache.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] `MemberConverter` now properly lazily fetches members if not available from cache.
   - This is the same as having `discord.Member` as the type-hint.
 - `Guild.chunk` now allows concurrent calls without spamming the gateway with requests.
 
@@ -1270,7 +1270,7 @@ This version came with forced breaking changes that Discord is requiring all bot
 
 - Add alias for `PublicUserFlags.verified_bot_developer` under `PublicUserFlags.early_verified_bot_developer` ([GH-5849](https://github.com/Rapptz/discord.py/issues/5849))
 
-- |commands| Add support for `require_var_positional` for `Command` ([GH-5793](https://github.com/Rapptz/discord.py/issues/5793))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add support for `require_var_positional` for `Command` ([GH-5793](https://github.com/Rapptz/discord.py/issues/5793))
 
 ### Bug Fixes
 
@@ -1281,10 +1281,10 @@ This version came with forced breaking changes that Discord is requiring all bot
 - Fix cases where a `Member` reference would be stale when cache is disabled in message events ([GH-5819](https://github.com/Rapptz/discord.py/issues/5819))
 - Fix `allowed_mentions` not being sent when sending a single file ([GH-5835](https://github.com/Rapptz/discord.py/issues/5835))
 - Fix `overwrites` being ignored in `abc.GuildChannel.edit` if `{}` is passed ([GH-5756](https://github.com/Rapptz/discord.py/issues/5756), [GH-5757](https://github.com/Rapptz/discord.py/issues/5757))
-- |commands| Fix exceptions being raised improperly in command invoke hooks ([GH-5799](https://github.com/Rapptz/discord.py/issues/5799))
-- |commands| Fix commands not being properly ejected during errors in a cog injection ([GH-5804](https://github.com/Rapptz/discord.py/issues/5804))
-- |commands| Fix cooldown timing ignoring edited timestamps.
-- |tasks| Fix tasks extending the next iteration on handled exceptions ([GH-5762](https://github.com/Rapptz/discord.py/issues/5762), [GH-5763](https://github.com/Rapptz/discord.py/issues/5763))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix exceptions being raised improperly in command invoke hooks ([GH-5799](https://github.com/Rapptz/discord.py/issues/5799))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix commands not being properly ejected during errors in a cog injection ([GH-5804](https://github.com/Rapptz/discord.py/issues/5804))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix cooldown timing ignoring edited timestamps.
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] Fix tasks extending the next iteration on handled exceptions ([GH-5762](https://github.com/Rapptz/discord.py/issues/5762), [GH-5763](https://github.com/Rapptz/discord.py/issues/5763))
 
 ### Miscellaneous
 
@@ -1294,8 +1294,8 @@ This version came with forced breaking changes that Discord is requiring all bot
 - Warnings logged due to missed caches are now changed to DEBUG log level.
 - Some strings are now explicitly interned to reduce memory usage.
 - Usage of namedtuples has been reduced to avoid potential breaking changes in the future ([GH-5834](https://github.com/Rapptz/discord.py/issues/5834))
-- |commands| All `BadArgument` exceptions from the built-in converters now raise concrete exceptions to better tell them apart ([GH-5748](https://github.com/Rapptz/discord.py/issues/5748))
-- |tasks| Lazily fetch the event loop to prevent surprises when changing event loop policy ([GH-5808](https://github.com/Rapptz/discord.py/issues/5808))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] All `BadArgument` exceptions from the built-in converters now raise concrete exceptions to better tell them apart ([GH-5748](https://github.com/Rapptz/discord.py/issues/5748))
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] Lazily fetch the event loop to prevent surprises when changing event loop policy ([GH-5808](https://github.com/Rapptz/discord.py/issues/5808))
 
 <a id="vp1p4p2"></a>
 
@@ -1312,15 +1312,15 @@ This is a maintenance release with backports from [vp1p5p0](https://discordpy.re
 - Fix cases where a `Member` reference would be stale when cache is disabled in message events ([GH-5819](https://github.com/Rapptz/discord.py/issues/5819))
 - Fix `allowed_mentions` not being sent when sending a single file ([GH-5835](https://github.com/Rapptz/discord.py/issues/5835))
 - Fix `overwrites` being ignored in `abc.GuildChannel.edit` if `{}` is passed ([GH-5756](https://github.com/Rapptz/discord.py/issues/5756), [GH-5757](https://github.com/Rapptz/discord.py/issues/5757))
-- |commands| Fix exceptions being raised improperly in command invoke hooks ([GH-5799](https://github.com/Rapptz/discord.py/issues/5799))
-- |commands| Fix commands not being properly ejected during errors in a cog injection ([GH-5804](https://github.com/Rapptz/discord.py/issues/5804))
-- |commands| Fix cooldown timing ignoring edited timestamps.
-- |tasks| Fix tasks extending the next iteration on handled exceptions ([GH-5762](https://github.com/Rapptz/discord.py/issues/5762), [GH-5763](https://github.com/Rapptz/discord.py/issues/5763))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix exceptions being raised improperly in command invoke hooks ([GH-5799](https://github.com/Rapptz/discord.py/issues/5799))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix commands not being properly ejected during errors in a cog injection ([GH-5804](https://github.com/Rapptz/discord.py/issues/5804))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix cooldown timing ignoring edited timestamps.
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] Fix tasks extending the next iteration on handled exceptions ([GH-5762](https://github.com/Rapptz/discord.py/issues/5762), [GH-5763](https://github.com/Rapptz/discord.py/issues/5763))
 
 ### Miscellaneous
 
 - Remove caching layer from `AutoShardedClient.shards`. This was causing issues if queried before launching shards.
-- |tasks| Lazily fetch the event loop to prevent surprises when changing event loop policy ([GH-5808](https://github.com/Rapptz/discord.py/issues/5808))
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] Lazily fetch the event loop to prevent surprises when changing event loop policy ([GH-5808](https://github.com/Rapptz/discord.py/issues/5808))
 
 <a id="vp1p4p1"></a>
 
@@ -1406,15 +1406,15 @@ Another version with a long development time. Features like Intents are slated t
 
 - Add support for pruning members by roles in `Guild.prune_members` ([GH-4043](https://github.com/Rapptz/discord.py/issues/4043))
 
-- |commands| Implement `ext.commands.before_invoke` and `ext.commands.after_invoke` decorators ([GH-1986](https://github.com/Rapptz/discord.py/issues/1986), [GH-2502](https://github.com/Rapptz/discord.py/issues/2502))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Implement `ext.commands.before_invoke` and `ext.commands.after_invoke` decorators ([GH-1986](https://github.com/Rapptz/discord.py/issues/1986), [GH-2502](https://github.com/Rapptz/discord.py/issues/2502))
 
-- |commands| Add a way to retrieve `retry_after` from a cooldown in a command via `Command.get_cooldown_retry_after` ([GH-5195](https://github.com/Rapptz/discord.py/issues/5195))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add a way to retrieve `retry_after` from a cooldown in a command via `Command.get_cooldown_retry_after` ([GH-5195](https://github.com/Rapptz/discord.py/issues/5195))
 
-- |commands| Add a way to dynamically add and remove checks from a `HelpCommand` ([GH-5197](https://github.com/Rapptz/discord.py/issues/5197))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add a way to dynamically add and remove checks from a `HelpCommand` ([GH-5197](https://github.com/Rapptz/discord.py/issues/5197))
 
-- |tasks| Add `Loop.is_running` method to the task objects ([GH-2540](https://github.com/Rapptz/discord.py/issues/2540))
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] Add `Loop.is_running` method to the task objects ([GH-2540](https://github.com/Rapptz/discord.py/issues/2540))
 
-- |tasks| Allow usage of custom error handlers similar to the command extensions to tasks using `Loop.error` decorator ([GH-2621](https://github.com/Rapptz/discord.py/issues/2621))
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] Allow usage of custom error handlers similar to the command extensions to tasks using `Loop.error` decorator ([GH-2621](https://github.com/Rapptz/discord.py/issues/2621))
 
 ### Bug Fixes
 
@@ -1434,13 +1434,13 @@ Another version with a long development time. Features like Intents are slated t
 - Fix an issue with domain resolution in voice ([GH-5188](https://github.com/Rapptz/discord.py/issues/5188), [GH-5191](https://github.com/Rapptz/discord.py/issues/5191))
 - Fix an issue where `PartialEmoji.id` could be a string ([GH-4153](https://github.com/Rapptz/discord.py/issues/4153), [GH-4152](https://github.com/Rapptz/discord.py/issues/4152))
 - Fix regression where `Member.activities` would not clear.
-- |commands| A `TypeError` is now raised when `typing.Optional` is used within `commands.Greedy` ([GH-2253](https://github.com/Rapptz/discord.py/issues/2253), [GH-5068](https://github.com/Rapptz/discord.py/issues/5068))
-- |commands| `Bot.walk_commands` no longer yields duplicate commands due to aliases ([GH-2591](https://github.com/Rapptz/discord.py/issues/2591))
-- |commands| Fix regex characters not being escaped in `HelpCommand.clean_prefix` ([GH-4058](https://github.com/Rapptz/discord.py/issues/4058), [GH-4071](https://github.com/Rapptz/discord.py/issues/4071))
-- |commands| Fix `Bot.get_command` from raising errors when a name only has whitespace ([GH-5124](https://github.com/Rapptz/discord.py/issues/5124))
-- |commands| Fix issue with `Context.subcommand_passed` not functioning as expected ([GH-5198](https://github.com/Rapptz/discord.py/issues/5198))
-- |tasks| Task objects are no longer stored globally so two class instances can now start two separate tasks ([GH-2294](https://github.com/Rapptz/discord.py/issues/2294))
-- |tasks| Allow cancelling the loop within `before_loop` ([GH-4082](https://github.com/Rapptz/discord.py/issues/4082))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] A `TypeError` is now raised when `typing.Optional` is used within `commands.Greedy` ([GH-2253](https://github.com/Rapptz/discord.py/issues/2253), [GH-5068](https://github.com/Rapptz/discord.py/issues/5068))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] `Bot.walk_commands` no longer yields duplicate commands due to aliases ([GH-2591](https://github.com/Rapptz/discord.py/issues/2591))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix regex characters not being escaped in `HelpCommand.clean_prefix` ([GH-4058](https://github.com/Rapptz/discord.py/issues/4058), [GH-4071](https://github.com/Rapptz/discord.py/issues/4071))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix `Bot.get_command` from raising errors when a name only has whitespace ([GH-5124](https://github.com/Rapptz/discord.py/issues/5124))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix issue with `Context.subcommand_passed` not functioning as expected ([GH-5198](https://github.com/Rapptz/discord.py/issues/5198))
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] Task objects are no longer stored globally so two class instances can now start two separate tasks ([GH-2294](https://github.com/Rapptz/discord.py/issues/2294))
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] Allow cancelling the loop within `before_loop` ([GH-4082](https://github.com/Rapptz/discord.py/issues/4082))
 
 ### Miscellaneous
 
@@ -1463,9 +1463,9 @@ Another version with a long development time. Features like Intents are slated t
 
 - Optimize `abc.GuildChannel.permissions_for` by not creating as many temporary objects (20-32% savings).
 
-- |commands| Raise `ext.commands.CommandRegistrationError` instead of `ClientException` when a duplicate error is registered ([GH-4217](https://github.com/Rapptz/discord.py/issues/4217))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Raise `ext.commands.CommandRegistrationError` instead of `ClientException` when a duplicate error is registered ([GH-4217](https://github.com/Rapptz/discord.py/issues/4217))
 
-- |tasks| No longer handle `HTTPException` by default in the task reconnect loop ([GH-5193](https://github.com/Rapptz/discord.py/issues/5193))
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] No longer handle `HTTPException` by default in the task reconnect loop ([GH-5193](https://github.com/Rapptz/discord.py/issues/5193))
 
 <a id="vp1p3p4"></a>
 
@@ -1500,7 +1500,7 @@ Another minor bug fix release.
 - Fix crashes if `Message.guild` is `Object` instead of `Guild`.
 - Fix `Webhook.send` returning an empty string instead of `None` when `wait=False`.
 - Fix invalid format specifier in webhook state ([GH-2570](https://github.com/Rapptz/discord.py/issues/2570))
-- |commands| Passing invalid permissions to permission related checks now raises `TypeError`.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Passing invalid permissions to permission related checks now raises `TypeError`.
 
 <a id="vp1p3p1"></a>
 
@@ -1608,29 +1608,29 @@ This version comes with a lot of bug fixes and new features. It's been in develo
 
 - Add `utils.sleep_until` helper to sleep until a specific datetime. ([GH-2517](https://github.com/Rapptz/discord.py/issues/2517), [GH-2519](https://github.com/Rapptz/discord.py/issues/2519))
 
-- |commands| Add support for teams and `Bot.owner_ids` to have multiple bot owners. ([GH-2239](https://github.com/Rapptz/discord.py/issues/2239))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add support for teams and `Bot.owner_ids` to have multiple bot owners. ([GH-2239](https://github.com/Rapptz/discord.py/issues/2239))
 
-- |commands| Add new `BucketType.role` bucket type. ([GH-2201](https://github.com/Rapptz/discord.py/issues/2201))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add new `BucketType.role` bucket type. ([GH-2201](https://github.com/Rapptz/discord.py/issues/2201))
 
-- |commands| Expose `Command.cog` property publicly. ([GH-2360](https://github.com/Rapptz/discord.py/issues/2360))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Expose `Command.cog` property publicly. ([GH-2360](https://github.com/Rapptz/discord.py/issues/2360))
 
-- |commands| Add non-decorator interface for adding checks to commands via `Command.add_check` and `Command.remove_check`. ([GH-2411](https://github.com/Rapptz/discord.py/issues/2411))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add non-decorator interface for adding checks to commands via `Command.add_check` and `Command.remove_check`. ([GH-2411](https://github.com/Rapptz/discord.py/issues/2411))
 
-- |commands| Add `has_guild_permissions` check. ([GH-2460](https://github.com/Rapptz/discord.py/issues/2460))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add `has_guild_permissions` check. ([GH-2460](https://github.com/Rapptz/discord.py/issues/2460))
 
-- |commands| Add `bot_has_guild_permissions` check. ([GH-2460](https://github.com/Rapptz/discord.py/issues/2460))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add `bot_has_guild_permissions` check. ([GH-2460](https://github.com/Rapptz/discord.py/issues/2460))
 
-- |commands| Add `predicate` attribute to checks decorated with `.ext.commands.check`.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add `predicate` attribute to checks decorated with `.ext.commands.check`.
 
-- |commands| Add `.ext.commands.check_any` check to logical OR multiple checks.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add `.ext.commands.check_any` check to logical OR multiple checks.
 
-- |commands| Add `.ext.commands.max_concurrency` to allow only a certain amount of users to use a command concurrently before waiting or erroring.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add `.ext.commands.max_concurrency` to allow only a certain amount of users to use a command concurrently before waiting or erroring.
 
-- |commands| Add support for calling a `.ext.commands.Command` as a regular function.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add support for calling a `.ext.commands.Command` as a regular function.
 
-- |tasks| `Loop.add_exception_type` now allows multiple exceptions to be set. ([GH-2333](https://github.com/Rapptz/discord.py/issues/2333))
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] `Loop.add_exception_type` now allows multiple exceptions to be set. ([GH-2333](https://github.com/Rapptz/discord.py/issues/2333))
 
-- |tasks| Add `Loop.next_iteration` property. ([GH-2305](https://github.com/Rapptz/discord.py/issues/2305))
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] Add `Loop.next_iteration` property. ([GH-2305](https://github.com/Rapptz/discord.py/issues/2305))
 
 ### Bug Fixes
 
@@ -1646,14 +1646,14 @@ This version comes with a lot of bug fixes and new features. It's been in develo
 - Fix issue with large sharded bots taking too long to actually dispatch `on_ready`.
 - Fix issue with fetching group DM based invites in `Client.fetch_invite`.
 - Fix out of order files being sent in webhooks when there are 10 files.
-- |commands| Extensions that fail internally due to ImportError will no longer raise `.ext.commands.ExtensionNotFound`. ([GH-2244](https://github.com/Rapptz/discord.py/issues/2244), [GH-2275](https://github.com/Rapptz/discord.py/issues/2275), [GH-2291](https://github.com/Rapptz/discord.py/issues/2291))
-- |commands| Updating the `Paginator.suffix` will not cause out of date calculations. ([GH-2251](https://github.com/Rapptz/discord.py/issues/2251))
-- |commands| Allow converters from custom extension packages. ([GH-2369](https://github.com/Rapptz/discord.py/issues/2369), [GH-2374](https://github.com/Rapptz/discord.py/issues/2374))
-- |commands| Fix issue with paginator prefix being `None` causing empty pages. ([GH-2471](https://github.com/Rapptz/discord.py/issues/2471))
-- |commands| `.commands.Greedy` now ignores parsing errors rather than propagating them.
-- |commands| `Command.can_run` now checks whether a command is disabled.
-- |commands| `HelpCommand.clean_prefix` now takes into consideration nickname mentions. ([GH-2489](https://github.com/Rapptz/discord.py/issues/2489))
-- |commands| `Context.send_help` now properly propagates to the `HelpCommand.on_help_command_error` handler.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Extensions that fail internally due to ImportError will no longer raise `.ext.commands.ExtensionNotFound`. ([GH-2244](https://github.com/Rapptz/discord.py/issues/2244), [GH-2275](https://github.com/Rapptz/discord.py/issues/2275), [GH-2291](https://github.com/Rapptz/discord.py/issues/2291))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Updating the `Paginator.suffix` will not cause out of date calculations. ([GH-2251](https://github.com/Rapptz/discord.py/issues/2251))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Allow converters from custom extension packages. ([GH-2369](https://github.com/Rapptz/discord.py/issues/2369), [GH-2374](https://github.com/Rapptz/discord.py/issues/2374))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix issue with paginator prefix being `None` causing empty pages. ([GH-2471](https://github.com/Rapptz/discord.py/issues/2471))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] `.commands.Greedy` now ignores parsing errors rather than propagating them.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] `Command.can_run` now checks whether a command is disabled.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] `HelpCommand.clean_prefix` now takes into consideration nickname mentions. ([GH-2489](https://github.com/Rapptz/discord.py/issues/2489))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] `Context.send_help` now properly propagates to the `HelpCommand.on_help_command_error` handler.
 
 ### Miscellaneous
 
@@ -1686,9 +1686,9 @@ This version comes with a lot of bug fixes and new features. It's been in develo
 
 - The loading of the opus module has been delayed which would make the result of `opus.is_loaded` somewhat surprising.
 
-- |commands| Usernames prefixed with @ inside DMs will properly convert using the `User` converter. ([GH-2498](https://github.com/Rapptz/discord.py/issues/2498))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Usernames prefixed with @ inside DMs will properly convert using the `User` converter. ([GH-2498](https://github.com/Rapptz/discord.py/issues/2498))
 
-- |tasks| The task sleeping time will now take into consideration the amount of time the task body has taken before sleeping. ([GH-2516](https://github.com/Rapptz/discord.py/issues/2516))
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] The task sleeping time will now take into consideration the amount of time the task body has taken before sleeping. ([GH-2516](https://github.com/Rapptz/discord.py/issues/2516))
 
 <a id="vp1p2p5"></a>
 
@@ -1721,7 +1721,7 @@ This version comes with a lot of bug fixes and new features. It's been in develo
 - Handle `asyncio.CancelledError` in `abc.Messageable.typing` context manager. ([GH-2218](https://github.com/Rapptz/discord.py/issues/2218))
 - Raise the max encoder bitrate to 512kbps to account for nitro boosting. ([GH-2232](https://github.com/Rapptz/discord.py/issues/2232))
 - Properly propagate exceptions in `Client.run`. ([GH-2237](https://github.com/Rapptz/discord.py/issues/2237))
-- |commands| Ensure cooldowns are properly copied when used in cog level `command_attrs`.
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Ensure cooldowns are properly copied when used in cog level `command_attrs`.
 
 <a id="vp1p2p2"></a>
 
@@ -1764,16 +1764,16 @@ This update mainly brings performance improvements and various nitro boosting at
 - Add a `type` attribute for all channels to their appropriate `ChannelType`. ([GH-2185](https://github.com/Rapptz/discord.py/issues/2185))
 - Add `Client.fetch_channel` to fetch a channel by ID via HTTP. ([GH-2169](https://github.com/Rapptz/discord.py/issues/2169))
 - Add `Guild.fetch_channels` to fetch all channels via HTTP. ([GH-2169](https://github.com/Rapptz/discord.py/issues/2169))
-- |tasks| Add `Loop.stop` to gracefully stop a task rather than cancelling.
-- |tasks| Add `Loop.failed` to query if a task had failed somehow.
-- |tasks| Add `Loop.change_interval` to change the sleep interval at runtime ([GH-2158](https://github.com/Rapptz/discord.py/issues/2158), [GH-2162](https://github.com/Rapptz/discord.py/issues/2162))
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] Add `Loop.stop` to gracefully stop a task rather than cancelling.
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] Add `Loop.failed` to query if a task had failed somehow.
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] Add `Loop.change_interval` to change the sleep interval at runtime ([GH-2158](https://github.com/Rapptz/discord.py/issues/2158), [GH-2162](https://github.com/Rapptz/discord.py/issues/2162))
 
 ### Bug Fixes
 
 - Fix internal error when using `Guild.prune_members`.
-- |commands| Fix `.Command.invoked_subcommand` being invalid in many cases.
-- |tasks| Reset iteration count when the loop terminates and is restarted.
-- |tasks| The decorator interface now works as expected when stacking ([GH-2154](https://github.com/Rapptz/discord.py/issues/2154))
+- \[[ext.commands](https://discordpy.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix `.Command.invoked_subcommand` being invalid in many cases.
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] Reset iteration count when the loop terminates and is restarted.
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] The decorator interface now works as expected when stacking ([GH-2154](https://github.com/Rapptz/discord.py/issues/2154))
 
 ### Miscellaneous
 
@@ -1789,7 +1789,7 @@ This update mainly brings performance improvements and various nitro boosting at
 - The Discord error code is now shown in the exception message for `HTTPException`.
 - Internal tasks launched by the library will now have their own custom `__repr__`.
 - All public facing types should now have a proper and more detailed `__repr__`.
-- |tasks| Errors are now logged via the standard `py:logging` module.
+- \[[ext.tasks](https://discordpy.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] Errors are now logged via the standard `py:logging` module.
 
 <a id="vp1p1p1"></a>
 
@@ -1810,7 +1810,7 @@ This update mainly brings performance improvements and various nitro boosting at
 ### New Features
 
 - **There is a new extension dedicated to making background tasks easier.**
-  - You can check the documentation here: [ext\_tasks\_api](https://discordpy.readthedocs.io/ext/tasks$1index.html#ext-tasks-api).
+  - You can check the documentation here: [ext\_tasks\_api](https://discordpy.readthedocs.io/ext/tasks/index.html#ext-tasks-api).
 - Add `Permissions.stream` permission. ([GH-2077](https://github.com/Rapptz/discord.py/issues/2077))
 - Add equality comparison and hash support to `Asset`
 - Add `compute_prune_members` parameter to `Guild.prune_members` ([GH-2085](https://github.com/Rapptz/discord.py/issues/2085))
@@ -1923,9 +1923,8 @@ This release is just a bug fix release with some better rate limit implementatio
 - Discard null sequences in the gateway.
 
   - The fact these were not discarded meant that `on_ready` kept being called instead of
-
-- **Func:** `on_resumed`. Since this has been corrected, in most cases `on_ready` will be
-  called once or twice with `on_resumed` being called much more often.
+    `on_resumed`. Since this has been corrected, in most cases `on_ready` will be
+    called once or twice with `on_resumed` being called much more often.
 
 <a id="vp0p15p1"></a>
 

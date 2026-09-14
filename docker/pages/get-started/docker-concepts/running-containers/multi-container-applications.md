@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/get-started/docker-concepts/running-containers/multi-container-applications.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/get-started/docker-concepts/running-containers/multi-container-applications.md)
+> Pinned source for Docker main: [content/get-started/docker-concepts/running-containers/multi-container-applications.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/get-started/docker-concepts/running-containers/multi-container-applications.md)
 
 # Multi-container applications
 
@@ -180,7 +180,7 @@ Navigate to the root of the project directory. Inside this directory, you'll fin
     ✔ Container nginx-node-redis-web2-1  Created                                                                                                   0.1s
     ✔ Container nginx-node-redis-web1-1  Created                                                                                                   0.1s
     ✔ Container nginx-node-redis-redis-1 Created                                                                                                   0.1s
-    ✔ Container nginx-node-redis-nginx-1 Created
+    ✔ Container nginx-node-redis-nginx-1 Created   
 
    ```
 

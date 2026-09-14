@@ -1,4 +1,4 @@
-> Release-pinned source for discord.py-self v2.1.0: [docs/whats_new.rst](https://github.com/dolfies/discord.py-self/blob/6de18b4cb40dd42625a535f52d9715c71399ffb3/docs/whats_new.rst)
+> Pinned source for discord.py-self v2.1.0: [docs/whats_new.rst](https://github.com/dolfies/discord.py-self/blob/6de18b4cb40dd42625a535f52d9715c71399ffb3/docs/whats_new.rst)
 
 <a id="whats-new"></a>
 
@@ -52,7 +52,7 @@ Due to the enormous amount of changes in this release, some minor changes may be
   - Update `Guild.get_member_named` to work with migrated users
   - Update `User.default_avatar` to work with migrated users
   - Update `ClientUser.edit` to allow migrating and changing global names
-  - |commands| Update user and member converters to understand migrated users
+  - \[[ext.commands](https://discordpy-self.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Update user and member converters to understand migrated users
 
 - Add GCP uploads
   - Allows pre-uploading files to Google Cloud Storage for faster file sending
@@ -293,23 +293,23 @@ Due to the enormous amount of changes in this release, some minor changes may be
   - This updates the old `Colour.dark_theme`, `Colour.light_theme`, `Colour.light_embed` and `Colour.dark_embed`
   - This adds `Colour.ash_theme`, `Colour.ash_embed`, `Colour.onyx_theme`, and `Colour.onyx_embed`
 
-- |tasks| Add `name` parameter to `ext.tasks.loop` to name the internal `asyncio.Task`
+- \[[ext.tasks](https://discordpy-self.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] Add `name` parameter to `ext.tasks.loop` to name the internal `asyncio.Task`
 
-- |commands| Add fallback behaviour to `ext.commands.CurrentGuild`
+- \[[ext.commands](https://discordpy-self.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add fallback behaviour to `ext.commands.CurrentGuild`
 
-- |commands| Add logging for errors that occur during `ext.commands.Cog.cog_unload`
+- \[[ext.commands](https://discordpy-self.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add logging for errors that occur during `ext.commands.Cog.cog_unload`
 
-- |commands| Add support for `typing.NewType` and `type` keyword type aliases
+- \[[ext.commands](https://discordpy-self.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add support for `typing.NewType` and `type` keyword type aliases
 
-- |commands| Add support for positional-only flag parameters
+- \[[ext.commands](https://discordpy-self.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add support for positional-only flag parameters
 
-- |commands| Add support for channel URLs in ChannelConverter related classes
+- \[[ext.commands](https://discordpy-self.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add support for channel URLs in ChannelConverter related classes
 
-- |commands| Add `BadLiteralArgument.argument` to get the failed argument's value
+- \[[ext.commands](https://discordpy-self.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add `BadLiteralArgument.argument` to get the failed argument's value
 
-- |commands| Add `Context.filesize_limit` property
+- \[[ext.commands](https://discordpy-self.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add `Context.filesize_limit` property
 
-- |commands| Add support for `Parameter.displayed_name`
+- \[[ext.commands](https://discordpy-self.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Add support for `Parameter.displayed_name`
 
 ### Bug Fixes
 
@@ -427,23 +427,23 @@ Due to the enormous amount of changes in this release, some minor changes may be
 
 - Fix audit log `automod_rule_trigger_type` extra being missing
 
-- |tasks| Fix race condition when setting timer handle when using uvloop
+- \[[ext.tasks](https://discordpy-self.readthedocs.io/ext/tasks/index.html#discord-ext-tasks)] Fix race condition when setting timer handle when using uvloop
 
-- |commands| Fix issue with category cooldowns outside of guild channels
+- \[[ext.commands](https://discordpy-self.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix issue with category cooldowns outside of guild channels
 
-- |commands| Fix callable FlagConverter defaults on hybrid commands not being called
+- \[[ext.commands](https://discordpy-self.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix callable FlagConverter defaults on hybrid commands not being called
 
-- |commands| Unwrap `discord.ext.commands.Parameter` if given as default to `ext.commands.parameter`
+- \[[ext.commands](https://discordpy-self.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Unwrap `discord.ext.commands.Parameter` if given as default to `ext.commands.parameter`
 
-- |commands| Fix fallback behaviour not being respected when calling replace for `.ext.commands.Parameter`
+- \[[ext.commands](https://discordpy-self.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix fallback behaviour not being respected when calling replace for `.ext.commands.Parameter`
 
-- |commands| Fix `ext.commands.HelpCommand` defined checks not carrying over during copy
+- \[[ext.commands](https://discordpy-self.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix `ext.commands.HelpCommand` defined checks not carrying over during copy
 
-- |commands| Fix the wrong `ext.commands.HelpCommand.on_help_command_error` being called when ejected from a cog
+- \[[ext.commands](https://discordpy-self.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix the wrong `ext.commands.HelpCommand.on_help_command_error` being called when ejected from a cog
 
-- |commands| Fix `=None` being displayed in `ext.commands.Command.signature`
+- \[[ext.commands](https://discordpy-self.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Fix `=None` being displayed in `ext.commands.Command.signature`
 
-- |commands| Change lookup order for `ext.commands.MemberConverter` and `ext.commands.UserConverter` to prioritise usernames instead of nicknames
+- \[[ext.commands](https://discordpy-self.readthedocs.io/ext/commands/index.html#discord-ext-commands)] Change lookup order for `ext.commands.MemberConverter` and `ext.commands.UserConverter` to prioritise usernames instead of nicknames
 
 ### Miscellaneous
 

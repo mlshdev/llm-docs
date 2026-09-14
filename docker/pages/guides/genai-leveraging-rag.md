@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/genai-leveraging-rag.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/genai-leveraging-rag.md)
+> Pinned source for Docker main: [content/guides/genai-leveraging-rag.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/genai-leveraging-rag.md)
 
 # Leveraging RAG in GenAI to teach new information
 

@@ -14,3 +14,15 @@ llms-full.txt linguist-generated=true
 **/llms-full.txt linguist-generated=true
 llms-full.txt -diff
 **/llms-full.txt -diff
+*/llms-full.*.txt -diff
+
+# Generated documentation preserves upstream code whitespace and Markdown hard
+# breaks. Keep whitespace checks strict for generator source while preventing
+# those intentional bytes from making `git diff --check` unusable.
+*/pages/** whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+*/llms*.txt whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+
+# This upstream SearXNG tutorial intentionally demonstrates merge-conflict
+# markers in fenced reStructuredText examples. Treat it as generated binary
+# content so Git does not flag those teaching examples as real conflicts.
+searxng/pages/docs/dev/reST.md -diff

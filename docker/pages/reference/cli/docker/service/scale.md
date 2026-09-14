@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_service_scale.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_service_scale.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_service_scale.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_service_scale.yaml)
 
 # docker service scale
 
@@ -14,17 +14,17 @@ services which are global mode. The command will return immediately, but the
 actual scaling of the service may take some time. To stop all replicas of a
 service while keeping the service active in the swarm you can set the scale to 0.
 
-> [!NOTE]
+> \[!NOTE]
 > This is a cluster management command, and must be executed on a swarm
 > manager node. To learn about managers and workers, refer to the
-> [Swarm mode section](/engine/swarm/) in the
+> [Swarm mode section](https://docs.docker.com/engine/swarm/) in the
 > documentation.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-d`, `--detach` |  | Exit immediately instead of waiting for the service to converge (API 1.29+) |
+| Option           | Default | Description                                                                 |
+| ---------------- | ------- | --------------------------------------------------------------------------- |
+| `-d`, `--detach` |         | Exit immediately instead of waiting for the service to converge (API 1.29+) |
 
 ## Examples
 
@@ -60,7 +60,7 @@ ID            NAME      MODE        REPLICAS  IMAGE
 3pr5mlvu3fh9  frontend  replicated  15/50     nginx:alpine
 ```
 
-You can also scale a service using the [`docker service update`](/reference/cli/docker/service/update/)
+You can also scale a service using the [`docker service update`](https://docs.docker.com/reference/cli/docker/service/update/)
 command. The following commands are equivalent:
 
 ```console

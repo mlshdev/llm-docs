@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [community-solutions/runpod-network-volume-storage-tool.mdx](https://docs.runpod.io/community-solutions/runpod-network-volume-storage-tool)
+> Pinned source for Runpod main: [community-solutions/runpod-network-volume-storage-tool.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/community-solutions/runpod-network-volume-storage-tool.mdx)
+> Canonical documentation: https://docs.runpod.io/community-solutions/runpod-network-volume-storage-tool
 
 # Network volume storage tool
 

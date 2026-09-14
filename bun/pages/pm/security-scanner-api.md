@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/pm/security-scanner-api.mdx](https://bun.com/docs/pm/security-scanner-api)
+> Pinned source for Bun bun-v1.4.2: [docs/pm/security-scanner-api.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/pm/security-scanner-api.mdx)
+> Canonical documentation: https://bun.com/docs/pm/security-scanner-api
 
 Bun's package manager can scan packages before installing them, to catch supply chain attacks and known vulnerabilities.
 

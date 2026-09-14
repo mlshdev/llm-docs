@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/setup/install/windows-install.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/desktop/setup/install/windows-install.md)
+> Pinned source for Docker main: [content/manuals/desktop/setup/install/windows-install.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/desktop/setup/install/windows-install.md)
 
 > **Docker Desktop terms**
 >
@@ -159,7 +159,7 @@ If you're using PowerShell you should run it as:
 ```powershell
 # Per-user installation (no admin required)
 Start-Process 'Docker Desktop Installer.exe' -Wait -ArgumentList 'install', '--user'
-
+ 
 # All-users installation (run as administrator)
 Start-Process 'Docker Desktop Installer.exe' -Wait install
 ```
@@ -169,7 +169,7 @@ If using the Windows Command Prompt:
 ```sh
 # Per-user installation (no admin required)
 start /w "" "Docker Desktop Installer.exe" install --user
-
+ 
 # All-users installation (run as administrator)
 start /w "" "Docker Desktop Installer.exe" install
 ```

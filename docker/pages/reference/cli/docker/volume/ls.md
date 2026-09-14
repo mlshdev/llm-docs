@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_volume_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_volume_ls.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_volume_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_volume_ls.yaml)
 
 # docker volume ls
 
@@ -11,17 +11,17 @@ List volumes
 ## Description
 
 List all the volumes known to Docker. You can filter using the `-f` or
-`--filter` flag. Refer to the [filtering](#filter) section for more
+`--filter` flag. Refer to the [filtering](#filtering---filter-filter) section for more
 information about available filter options.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--cluster` |  | Display only cluster volumes, and use cluster volume list formatting (API 1.42+) |
-| `-f`, `--filter` |  | Provide filter values (e.g. `dangling=true`) |
-| `--format` |  | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to https://docs.docker.com/go/formatting/ for more information about formatting output with templates |
-| `-q`, `--quiet` |  | Only display volume names |
+| Option           | Default | Description                                                                                                                                                                                                                                                                                                                                                                            |
+| ---------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--cluster`      |         | Display only cluster volumes, and use cluster volume list formatting (API 1.42+)                                                                                                                                                                                                                                                                                                       |
+| `-f`, `--filter` |         | Provide filter values (e.g. `dangling=true`)                                                                                                                                                                                                                                                                                                                                           |
+| `--format`       |         | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to <https://docs.docker.com/go/formatting/> for more information about formatting output with templates |
+| `-q`, `--quiet`  |         | Only display volume names                                                                                                                                                                                                                                                                                                                                                              |
 
 ## Examples
 
@@ -151,7 +151,7 @@ using a Go template.
 Valid placeholders for the Go template are listed below:
 
 | Placeholder   | Description                                                                           |
-|---------------|---------------------------------------------------------------------------------------|
+| ------------- | ------------------------------------------------------------------------------------- |
 | `.Name`       | Volume name                                                                           |
 | `.Driver`     | Volume driver                                                                         |
 | `.Scope`      | Volume scope (local, global)                                                          |

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/scout/docker_scout_policy_publish.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_policy_publish.yaml)
+> Pinned source for Docker main: [data/cli/scout/docker_scout_policy_publish.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_policy_publish.yaml)
 
 # docker scout policy publish
 
@@ -6,7 +6,7 @@ Package local Rego policies into an OCI bundle and push it to a registry (experi
 
 **Usage:** `docker scout policy publish [OPTIONS] REFERENCE`
 
-> [!NOTE]
+> \[!NOTE]
 > This command is experimental.
 
 ## Description
@@ -17,18 +17,18 @@ When no --policy-file or --policy-dir is given, the built-in default policy set 
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--policy-dir` |  | Path to a directory of local .rego policy files to include (repeatable) |
-| `--policy-file` |  | Path or http(s) URL to a .rego policy file to include (repeatable) |
+| Option          | Default | Description                                                             |
+| --------------- | ------- | ----------------------------------------------------------------------- |
+| `--policy-dir`  |         | Path to a directory of local .rego policy files to include (repeatable) |
+| `--policy-file` |         | Path or http(s) URL to a .rego policy file to include (repeatable)      |
 
 ## Examples
 
 Publish the built-in default policies:
-  $ docker scout policy publish registry.example.com/policies:latest[0m
+$ docker scout policy publish registry.example.com/policies:latest\[0m
 
-  Publish a directory of local policies:
-  $ docker scout policy publish --policy-dir ./rego registry.example.com/policies:latest[0m
+Publish a directory of local policies:
+$ docker scout policy publish --policy-dir ./rego registry.example.com/policies:latest\[0m
 
-  Publish specific policy files:
-  $ docker scout policy publish --policy-file fixable.rego --policy-file licenses.rego registry.example.com/policies:latest[0m
+Publish specific policy files:
+$ docker scout policy publish --policy-file fixable.rego --policy-file licenses.rego registry.example.com/policies:latest\[0m

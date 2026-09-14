@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/docker-hub/repos/manage/hub-images/bulk-migrate.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/docker-hub/repos/manage/hub-images/bulk-migrate.md)
+> Pinned source for Docker main: [content/manuals/docker-hub/repos/manage/hub-images/bulk-migrate.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/docker-hub/repos/manage/hub-images/bulk-migrate.md)
 
 This guide shows you how to migrate Docker images in bulk between Docker Hub
 organizations or namespaces. Whether you're consolidating repositories, changing
@@ -275,11 +275,11 @@ DEST_MANIFEST=$(crane manifest "${DEST_IMAGE}")
 # Check if it's a manifest list (multi-arch)
 if echo "${SRC_MANIFEST}" | jq -e '.manifests' > /dev/null 2>&1; then
   echo "Multi-arch image detected"
-
+  
   # Compare platform list
   SRC_PLATFORMS=$(echo "${SRC_MANIFEST}" | jq -r '.manifests[] | "\(.platform.os)/\(.platform.architecture)"' | sort)
   DEST_PLATFORMS=$(echo "${DEST_MANIFEST}" | jq -r '.manifests[] | "\(.platform.os)/\(.platform.architecture)"' | sort)
-
+  
   if [[ "${SRC_PLATFORMS}" == "${DEST_PLATFORMS}" ]]; then
     echo "✓ Platform list matches:"
     echo "${SRC_PLATFORMS}"

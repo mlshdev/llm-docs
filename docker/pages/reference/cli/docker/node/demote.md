@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_node_demote.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_node_demote.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_node_demote.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_node_demote.yaml)
 
 # docker node demote
 
@@ -10,10 +10,10 @@ Demote one or more nodes from manager in the swarm
 
 Demotes an existing manager so that it is no longer a manager.
 
-> [!NOTE]
+> \[!NOTE]
 > This is a cluster management command, and must be executed on a swarm
 > manager node. To learn about managers and workers, refer to the [Swarm mode
-> section](/engine/swarm/) in the documentation.
+> section](https://docs.docker.com/engine/swarm/) in the documentation.
 
 ## Examples
 

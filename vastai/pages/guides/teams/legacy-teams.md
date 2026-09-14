@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [guides/teams/legacy-teams.mdx](https://docs.vast.ai/guides/teams/legacy-teams)
+> Pinned source for Vast.ai main: [guides/teams/legacy-teams.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/teams/legacy-teams.mdx)
+> Canonical documentation: https://docs.vast.ai/guides/teams/legacy-teams
 
 # Legacy Teams
 

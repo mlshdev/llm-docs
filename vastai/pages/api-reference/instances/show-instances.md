@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v1/instances](https://docs.vast.ai/api-reference/instances/show-instances)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#get /api/v1/instances](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/api-reference/openapi.yaml%23get%20/api/v1/instances)
+> Canonical documentation: https://docs.vast.ai/api-reference/instances/show-instances
 
 # show instances
 
@@ -9,17 +10,244 @@ Supports keyset pagination (max 25 per page), filtering, column selection, and s
 
 CLI Usage: `vastai show instances [OPTIONS] [--api-key API_KEY] [--raw]`
 
+**Authentication:** `BearerAuth`
+
 **Parameters**
 
-- `limit` (query): Instances per page. Default 25, max 25. Values ≤ 0 are treated as 5.
-- `after_token` (query): Keyset pagination cursor from the previous response's `next_token`. An invalid token returns a 400 error.
-- `order_by` (query): JSON array of sort directives, e.g. `[{"col":"id","dir":"asc"}]`. Valid `dir` values: `asc`, `desc` (anything else treated as `asc`). `id` is always appended as a tiebreaker. Invalid column returns 400.
-- `select_cols` (query): JSON array of column names to return, e.g. `["id","label","actual_status"]`. Use `["*"]` for all columns (default). Unknown column names are returned as `null`.
-- `select_filters` (query): JSON object of column filters. Supported operators: `eq`, `neq`, `gt`, `gte`, `lt`, `lte`, `in`, `notin`. Filterable columns: `actual_status`, `gpu_name`, `verification`, `id`, `label`, and other columns stored directly on the contract record. Computed fields (e.g. `dph_total`, `num_gpus`) are not filterable and return 400.
+- `limit` (query; integer; default: `25`; maximum: `25`): Instances per page. Default 25, max 25. Values ≤ 0 are treated as 5.
+  - Example: `25`
+- `after_token` (query; string): Keyset pagination cursor from the previous response's `next_token`. An invalid token returns a 400 error.
+  - Example: `eyJ2YWx1ZXMiOiB7ImlkIjogMTIzfX0=`
+- `order_by` (query; string): JSON array of sort directives, e.g. `[{"col":"id","dir":"asc"}]`. Valid `dir` values: `asc`, `desc` (anything else treated as `asc`). `id` is always appended as a tiebreaker. Invalid column returns 400.
+  - Example: `[{"col":"id","dir":"asc"}]`
+- `select_cols` (query; string; default: `["*"]`): JSON array of column names to return, e.g. `["id","label","actual_status"]`. Use `["*"]` for all columns (default). Unknown column names are returned as `null`.
+  - Example: `["id","label","actual_status","dph_total"]`
+- `select_filters` (query; string; default: `{}`): JSON object of column filters. Supported operators: `eq`, `neq`, `gt`, `gte`, `lt`, `lte`, `in`, `notin`. Filterable columns: `actual_status`, `gpu_name`, `verification`, `id`, `label`, and other columns stored directly on the contract record. Computed fields (e.g. `dph_total`, `num_gpus`) are not filterable and return 400.
+  - Example: `{"actual_status":{"eq":"running"}}`
 
 **Responses**
 
 - `200`: Paginated list of instances
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `true`
+      - `instances_found` (integer): Number of instances returned in this page.
+        - Example: `5`
+      - `total_instances` (integer): Total number of instances matching the filters.
+        - Example: `42`
+      - `label_counts` (object): Count of instances grouped by label. Unlabelled instances are keyed by empty string.
+        - Example: `{"ML Training Job":3,"":2}`
+      - `next_token` (nullable): Pagination cursor for the next page. `null` when no more pages.
+        - Example: `eyJ2YWx1ZXMiOiB7ImlkIjogMTIzfX0=`
+      - `instances` (array): List of instance objects.
+        - `items` (object)
+          - `id` (integer)
+            - Example: `312`
+          - `actual_status` (nullable)
+            - Example: `running`
+          - `cur_state` (string)
+            - Example: `running`
+          - `next_state` (string)
+            - Example: `running`
+          - `intended_status` (string)
+            - Example: `running`
+          - `label` (nullable)
+            - Example: `ML Training Job 2025`
+          - `template_id` (nullable)
+            - Example: `2048`
+          - `template_hash_id` (nullable)
+            - Example: `abcde12345`
+          - `template_name` (nullable)
+            - Example: `Tensorflow GPU Template`
+          - `image_uuid` (string)
+            - Example: `nvidia/cuda:11.0.3-devel-ubuntu18.04`
+          - `image_args` (array)
+            - Example: `["bash","-c","apt update; apt install -y wget"]`
+            - `items` (string)
+          - `image_runtype` (string)
+            - Example: `ssh ssh_direc ssh_proxy`
+          - `extra_env` (array)
+            - Example: `[["DOG","CAT"],["-p 70001:70001","1"]]`
+            - `items` (array)
+              - `items` (string)
+          - `onstart` (string)
+            - Example: `echo 'hello'; echo $DOG;`
+          - `jupyter_token` (string)
+            - Example: `df77e27085bd4b3bd5d9024bdefb9e6df614b27adb0689e9d8f066fce5e01f0c`
+          - `status_msg` (nullable)
+            - Example: `success, running nvidia/cuda_11.0.3-devel-ubuntu18.04/ssh`
+          - `public_ipaddr` (string)
+            - Example: `192.0.2.45`
+          - `local_ipaddrs` (string)
+            - Example: `10.0.0.5 172.17.0.2`
+          - `ssh_host` (string)
+            - Example: `ssh123.vast.ai`
+          - `ssh_idx` (string)
+            - Example: `6`
+          - `ssh_port` (integer)
+            - Example: `10600`
+          - `machine_dir_ssh_port` (integer)
+            - Example: `21000`
+          - `machine_id` (integer)
+            - Example: `12`
+          - `start_date` (number; format: float)
+            - Example: `1668804745.1223178`
+          - `end_date` (number; format: float)
+            - Example: `1735689600`
+          - `uptime_mins` (nullable)
+            - Example: `null`
+          - `duration` (number; format: float)
+            - Example: `86400`
+          - `cpu_arch` (string)
+            - Example: `amd64`
+          - `cpu_cores` (integer)
+            - Example: `4`
+          - `cpu_cores_effective` (number; format: float)
+            - Example: `4`
+          - `cpu_name` (string)
+            - Example: `Core™ i5-6500`
+          - `cpu_ram` (integer)
+            - Example: `15989`
+          - `cpu_util` (number; format: float)
+            - Example: `0`
+          - `mem_limit` (nullable)
+            - Example: `15.71815424`
+          - `mem_usage` (nullable)
+            - Example: `0.00996352`
+          - `vmem_usage` (nullable)
+            - Example: `0.543945`
+          - `gpu_name` (string)
+            - Example: `RTX 4090`
+          - `gpu_arch` (string)
+            - Example: `nvidia`
+          - `gpu_totalram` (integer)
+            - Example: `24576`
+          - `gpu_ram` (integer)
+            - Example: `24576`
+          - `gpu_util` (nullable)
+            - Example: `0`
+          - `gpu_temp` (nullable)
+            - Example: `38.999981`
+          - `gpu_frac` (number; format: float)
+            - Example: `1`
+          - `gpu_lanes` (integer)
+            - Example: `16`
+          - `gpu_mem_bw` (number; format: float)
+            - Example: `1008`
+          - `bw_nvlink` (number; format: float)
+            - Example: `0`
+          - `disk_name` (string)
+            - Example: `Samsung SSD 870`
+          - `disk_space` (number; format: float)
+            - Example: `10.08`
+          - `disk_bw` (number; format: float)
+            - Example: `500`
+          - `disk_util` (number; format: float)
+            - Example: `0.05`
+          - `disk_usage` (number; format: float)
+            - Example: `0.05`
+          - `direct_port_count` (integer)
+            - Example: `1001`
+          - `direct_port_start` (integer)
+            - Example: `20000`
+          - `direct_port_end` (integer)
+            - Example: `20002`
+          - `ports` (nullable): Port mappings. Only present on running instances.
+            - Example: `{"8888/tcp":[{"HostIp":"0.0.0.0","HostPort":"8888"}],"22/tcp":[{"HostIp":"0.0.0.0","HostPort":"20000"}]}`
+            - `additional properties` (array)
+              - `items` (object)
+                - `HostIp` (string)
+                - `HostPort` (string)
+          - `static_ip` (boolean)
+            - Example: `false`
+          - `geolocation` (string)
+            - Example: `California, United States`
+          - `verification` (string)
+            - Example: `verified`
+          - `rentable` (boolean)
+            - Example: `true`
+          - `host_id` (integer)
+            - Example: `7`
+          - `min_bid` (number; format: float)
+            - Example: `0.296`
+          - `is_bid` (boolean)
+            - Example: `false`
+          - `dph_base` (number; format: float)
+            - Example: `0.8`
+          - `dph_total` (number; format: float)
+            - Example: `0.8021`
+          - `dlperf` (nullable)
+            - Example: `null`
+          - `dlperf_per_dphtotal` (nullable)
+            - Example: `null`
+          - `flops_per_dphtotal` (number; format: float)
+            - Example: `15.41`
+          - `total_flops` (number; format: float)
+            - Example: `12.36`
+          - `score` (nullable)
+            - Example: `null`
+          - `reliability2` (number; format: float)
+            - Example: `0.9686655`
+          - `os_version` (nullable)
+            - Example: `null`
+          - `mobo_name` (string)
+            - Example: `Z790 Gaming`
+          - `pci_gen` (number; format: float)
+            - Example: `4`
+          - `pcie_bw` (number; format: float)
+            - Example: `28`
+          - `num_gpus` (integer)
+            - Example: `1`
+          - `webpage` (nullable)
+            - Example: `null`
+          - `search` (object)
+            - Example: `{"gpuCostPerHour":0.8,"diskHour":0.0021,"totalHour":0.8021,"discountTotalHour":0,"discountedTotalPerHour":0.8013}`
+          - `instance` (object)
+            - Example: `{"gpuCostPerHour":0.8,"diskHour":0.0013,"totalHour":0.8021,"discountTotalHour":0,"discountedTotalPerHour":0.5034}`
+          - `storage_cost` (number; format: float)
+            - Example: `0.15`
+          - `storage_total_cost` (number; format: float)
+            - Example: `0.0021`
+          - `vram_costperhour` (number; format: float)
+            - Example: `0.0000494`
+          - `credit_balance` (nullable)
+            - Example: `4792.99`
+          - `credit_discount` (nullable)
+            - Example: `0.37`
+          - `credit_discount_max` (nullable)
+            - Example: `0.4`
+          - `client_run_time` (number; format: float)
+            - Example: `100000000`
+          - `host_run_time` (number; format: float)
+            - Example: `1`
+          - `external` (boolean)
+            - Example: `false`
+          - `time_remaining` (string)
+            - Example: `12 Mon 24 D 16 Hr`
+          - `time_remaining_isbid` (string)
+            - Example: `11 Mon 26 D 6 Hr`
+          - `country_code` (nullable)
+            - Example: `null`
+          - `volume_info` (array)
+            - Example: `[]`
+            - `items` (object)
 - `400`: Bad request. Returned for invalid filter column/operator, invalid `order_by` column, or invalid `after_token`.
+  - Media type: `application/json`
+    - Schema (object)
+      - `error` (string; enum: `invalid_request`, `invalid_token`)
+        - Example: `invalid_request`
+      - `msg` (string)
+        - Example: `Error in query parameters: dph_total is not a valid search key`
 - `401`: Unauthorized
+  - Media type: `application/json`
+    - Schema (object)
+      - `success` (boolean)
+        - Example: `false`
+      - `error` (string)
+      - `msg` (string)
 - `429`: Too Many Requests
+  - Media type: `application/json`
+    - Schema (object)
+      - `detail` (string)
+        - Example: `API requests too frequent endpoint threshold=1.0`

@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/Roadmap.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/Roadmap.md)
+> Pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/Roadmap.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/Roadmap.md)
 
 - [ ] Store data on object storage such as S3, GCS or Minio (issue [#48](https://github.com/VictoriaMetrics/VictoriaLogs/issues/48), PR [#1155](https://github.com/VictoriaMetrics/VictoriaLogs/pull/1155)).
 - [ ] Log transformations in `vlagent` (issue [#858](https://github.com/VictoriaMetrics/VictoriaLogs/issues/858), PR [#1508](https://github.com/VictoriaMetrics/VictoriaLogs/pull/1508)).

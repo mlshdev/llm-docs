@@ -1,5 +1,6 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
+  "generatorVersion": 3,
   "project": "container",
   "title": "Apple container",
   "homepage": "https://github.com/apple/container",
@@ -9,8 +10,19 @@
   "releasePublishedAt": "2026-09-09T01:28:43Z",
   "sourceCommit": "9a8917ca2da5cd6ba059b9ba5ca5a74892e9bb7d",
   "documentCount": 21,
+  "indexComplete": true,
+  "corpusVolumes": [
+    {
+      "name": "llms-full.txt",
+      "byteLength": 181463,
+      "documentCount": 21,
+      "sha256": "cca9433eb4f968669cf201ccccf7a6002a56d7bc8af986c6e579fb8c95dee791"
+    }
+  ],
+  "outputDigest": "06a495ece00ceb87b52e4662ed7a99d442ff492203f541e904dc84bd737ab37a",
   "notes": [
     "Release-authored Markdown includes the repository guide, build instructions, user guides, tutorials, and checked-in CLI command reference.",
     "Relative links, source references, and assets resolve against the immutable release commit."
-  ]
+  ],
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
 }

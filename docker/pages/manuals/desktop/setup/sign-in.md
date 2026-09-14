@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/desktop/setup/sign-in.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/desktop/setup/sign-in.md)
+> Pinned source for Docker main: [content/manuals/desktop/setup/sign-in.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/desktop/setup/sign-in.md)
 
 # Sign in to Docker Desktop
 
@@ -63,7 +63,7 @@ When Docker CLI or Docker Desktop use credentials, a user prompt may pop up for 
 $ docker pull molly/privateimage
 Using default tag: latest
 latest: Pulling from molly/privateimage
-3b9cc81c3203: Pull complete
+3b9cc81c3203: Pull complete 
 Digest: sha256:3c6b73ce467f04d4897d7a7439782721fd28ec9bf62ea2ad9e81a5fb7fb3ff96
 Status: Downloaded newer image for molly/privateimage:latest
 docker.io/molly/privateimage:latest

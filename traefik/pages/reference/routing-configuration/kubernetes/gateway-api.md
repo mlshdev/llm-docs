@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/kubernetes/gateway-api.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/gateway-api.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/reference/routing-configuration/kubernetes/gateway-api.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/reference/routing-configuration/kubernetes/gateway-api.md)
 
 # Traefik & Kubernetes with Gateway API
 
@@ -47,7 +47,7 @@ metadata:
   namespace: default
 spec:
   gatewayClassName: traefik
-
+  
   # Only Routes from the same namespace are allowed.
   listeners:
     - name: http
@@ -55,7 +55,7 @@ spec:
       port: 80
       allowedRoutes:
         namespaces:
-          from: Same
+          from: Same 
 
     - name: https
       protocol: HTTPS
@@ -85,7 +85,7 @@ spec:
         certificateRefs:
           - name: secret-tls
             namespace: default
-
+            
       allowedRoutes:
         namespaces:
           from: Same

@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/query.sgml#tutorial-delete](https://www.postgresql.org/docs/18/tutorial-delete.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/query.sgml#tutorial-delete](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/query.sgml%23tutorial-delete)
+> Canonical documentation: https://www.postgresql.org/docs/18/tutorial-delete.html
 
 # Deletions
 

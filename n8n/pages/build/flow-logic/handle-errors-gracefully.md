@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/flow-logic/handle-errors-gracefully.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/flow-logic/handle-errors-gracefully.md)
+> Pinned source for n8n main: [docs/build/flow-logic/handle-errors-gracefully.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/flow-logic/handle-errors-gracefully.md)
 
 # Error handling <a id="error-handling"></a>
 
@@ -75,7 +75,7 @@ If the error is caused by the trigger node of the main workflow, rather than a l
       "timestamp": 1654609328787,
       "message": "",
       "node": {
-        . . .
+        . . . 
       }
     },
     "mode": "trigger"

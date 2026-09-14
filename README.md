@@ -43,11 +43,15 @@ This repository converts documentation from immutable upstream commits or conten
 - Docker tracks the latest `docker/docs` `main` commit because that repository does not publish current GitHub releases or release tags.
 - n8n tracks the latest `n8n-io/n8n-docs` `main` commit because that repository does not publish releases or tags.
 - FFmpeg and SearXNG track their latest `master` commits because they do not publish stable GitHub releases.
+- Branch-tracked projects record both the immutable commit that produced the published snapshot and a normalized `documentationDigest`. The latest inspected branch head is recorded separately; when a new head produces the same digest after commit tokens are removed, only that observation advances and the generated corpus does not churn. Immutable source archives are cached by commit SHA, so a resumed build does not download the same repository again.
 - PostgreSQL 18 tracks the highest `REL_18_<minor>` tag in `postgres/postgres`, which publishes no GitHub releases. The series pin follows that major version's own maintenance releases and nothing else: beta and release-candidate tags do not match, a pin never moves backwards, and a tag that is repointed at a different commit fails the update rather than silently changing the corpus.
 - discord.py tracks the highest final `vX.Y.Z` tag because the repository publishes stable tags but does not create GitHub Releases. Prerelease and unrelated tags are ignored, a pin never moves backwards, and a moved tag fails reconciliation.
 - NetBird public documentation is maintained in the separate, untagged `netbirdio/docs` repository. A NetBird update is accepted only after that repository contains the exact `Update API pages with <tag>` commit. Until then, the previous complete product/docs pair remains published.
-- Apple exposes a live DocC catalog rather than release tags or an immutable repository. The generator checks the public index and render JSON endpoints daily, partitions every indexed page into one non-overlapping catalog, and pins each catalog with two SHA-256 digests: a `snapshotDigest` over the catalog inventory, which a daily run re-derives from a few hundred index documents, and a `contentDigest` over the exact render payload bytes every published page was converted from, which the build that converted them computes. The daily check therefore costs hundreds of requests rather than one per page, while each committed snapshot still names the bytes it came from. A captured Apple snapshot remains committed when the live endpoint changes, but Apple does not provide historical render JSON from which an old snapshot can be regenerated.
-- Generated files are committed so GitHub, raw-content clients, and local tools all expose the same corpus. GitHub Pages publishes the Apple corpus volumes without duplicating the normalized page tree, keeping the deployment within GitHub's site-size limit.
+- Apple exposes a live DocC catalog rather than release tags or an immutable repository. The generator checks the public index daily, partitions every indexed page into one non-overlapping catalog, and pins each catalog with two SHA-256 digests: a `snapshotDigest` over the catalog inventory, which the daily run re-derives from a few hundred index documents, and a `contentDigest` over the exact render payload bytes every published page was converted from, which a full build computes. The inexpensive daily inventory check cannot detect a prose-only edit that leaves every index unchanged; such edits are detected only by an explicit full rebuild (`DOCC_REBUILD=1`, normally with a fresh cache). A captured Apple snapshot remains committed when the live endpoint changes, and Apple does not provide historical render JSON from which an old snapshot can be regenerated.
+- Generated files are committed so repository clones, GitHub's file browser,
+  raw GitHub URLs, and local tools all expose the same corpus. `llms.txt` links
+  to each project index, while `llms-full.txt` and the volume names recorded in
+  each manifest provide complete-corpus access without a separate deployment.
 
 ## Upstream drift policy
 
@@ -98,7 +102,24 @@ llms-full.txt
 
 Project directories are named after the identifiers in `config/sources.json`: `traefik`, `netbird`, `podman`, `docker`, `container`, `n8n`, `grafana`, `victoriametrics`, `victorialogs`, `victoriametrics-datasource`, `victorialogs-datasource`, `vmestimator`, `zitadel`, `ffmpeg`, `yt-dlp`, `searxng`, `bun`, `trigger-dev`, `aria2`, `postgres-18`, `vastai`, `runpod`, `discord-py-self`, `discord-py`, `apple-swift`, `apple-swiftui`, `apple-webkit`, `apple-xcode`, `apple-ios`, `apple-macos`, `apple-watchos`, and `apple-frameworks`.
 
-Corpora below GitHub's 100 MiB file limit use one `llms-full.txt`. Larger corpora keep `llms-full.txt` as an ordered volume index and store the complete text in numbered files capped at 45 MiB.
+Corpora below the retrieval-shard threshold use one `llms-full.txt`. Larger corpora keep `llms-full.txt` as a checksum-bearing ordered index and store the complete text in deterministic numbered volumes capped at 8 MiB. This is comfortably below GitHub's 100 MiB hard limit and lets retrieval clients fetch a useful slice without downloading a tens-of-megabytes archival chunk; standalone pages remain the most selective interface.
+
+Every manifest records a schema version, a generator behavior version, a SHA-256 digest over the runtime converter source and locked dependency graph, complete volume metadata, and an output digest covering pages, indexes, corpora, and the upstream license. A snapshot therefore identifies both the upstream bytes and the exact converter revision that transformed them.
+
+## Generated-artifact retention
+
+The main repository intentionally retains the generator, lock file, manifests,
+indexes, normalized pages, and corpus volumes together so a commit is a complete
+auditable snapshot. Git history is therefore part of the storage cost, not an
+accidental cache. Maintainers should review `git count-objects -vH`, total
+checkout size, and per-project manifest size deltas before large imports and at
+least quarterly. If ordinary clones become impractical, new large immutable
+corpus volumes move to GitHub Release assets or object storage while source,
+locks, checksums, and retrieval indexes remain here; existing history is not
+rewritten as part of a routine update. A separate snapshot repository with an
+explicit retention window is the fallback when raw access to every generated
+page and a small generator repository can no longer coexist. GitHub Pages is
+not a storage or serving fallback.
 
 ## Source-specific conversion
 
@@ -131,10 +152,9 @@ Corpora below GitHub's 100 MiB file limit use one `llms-full.txt`. Larger corpor
 bun ci
 bun run update
 bun run check
-bun run site
 ```
 
-`bun run update` contacts the GitHub API, checks Apple's DocC catalogs, downloads source archives only when stable pins change, and writes `build-report.json` describing anything it had to hold back. `bun run build` rebuilds commit-backed projects from `sources.lock.json` and retains already-captured DocC projects because Apple does not serve historical snapshots. `bun run src/cli.ts report` renders the last report as the tracking-issue body. Set `DOCC_CONCURRENCY` to control concurrent Apple reads, `DOCC_CACHE_DIR` to retain render JSON between interrupted runs, `DOCC_CACHE_TTL` to control cache freshness in seconds, `DOCC_REFRESH=1` to bypass the cache, or `DOCC_REBUILD=1` to rebuild a captured catalog when its exact render JSON remains cached.
+`bun run update` contacts the GitHub API, checks Apple's DocC catalogs, downloads source archives only when stable pins change, and writes `build-report.json` describing anything it had to hold back plus per-project request counts and elapsed time. Immutable GitHub archives are cached by commit SHA under the operating system's temporary directory; set `GITHUB_ARCHIVE_CACHE_DIR` to retain them at a deliberate location. `bun run build` rebuilds commit-backed projects from `sources.lock.json` and retains already-captured DocC projects because Apple does not serve historical snapshots. `bun run src/cli.ts report` renders the last report as the tracking-issue body. Set `SOURCE_CONCURRENCY` to bound simultaneous source resolution, `DOCC_CONCURRENCY` to control concurrent Apple reads, `DOCC_CACHE_DIR` to retain render JSON between interrupted runs, `DOCC_CACHE_TTL` to control cache freshness in seconds, `DOCC_REFRESH=1` to bypass the cache, or `DOCC_REBUILD=1` to rebuild a captured catalog when its exact render JSON remains cached.
 
 ## Adding a project
 

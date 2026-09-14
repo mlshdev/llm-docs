@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/model-runner/examples.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/ai/model-runner/examples.md)
+> Pinned source for Docker main: [content/manuals/ai/model-runner/examples.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/ai/model-runner/examples.md)
 
 # DMR examples
 
@@ -69,7 +69,7 @@ jobs:
           sudo install -m 0755 -d /etc/apt/keyrings
           sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
           sudo chmod a+r /etc/apt/keyrings/docker.asc
-
+          
           # Add the repository to Apt sources:
           echo \
           "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
@@ -77,14 +77,14 @@ jobs:
           sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
           sudo apt-get update
           sudo apt-get install -y docker-model-plugin
-
+          
           echo "Installation completed successfully"
 
       - name: Test docker model version
         run: |
           echo "Testing docker model version command..."
           sudo docker model version
-
+          
           # Verify the command returns successfully
           if [ $? -eq 0 ]; then
             echo "✅ docker model version command works correctly"
@@ -97,18 +97,18 @@ jobs:
         run: |
           MODEL="${{ github.event.inputs.test_model || 'ai/smollm2:360M-Q4_K_M' }}"
           echo "Testing with model: $MODEL"
-
+          
           # Test model pull
           echo "Pulling model..."
           sudo docker model pull "$MODEL"
-
+          
           if [ $? -eq 0 ]; then
             echo "✅ Model pull successful"
           else
             echo "❌ Model pull failed"
             exit 1
           fi
-
+                  
           # Test basic model run (with timeout to avoid hanging)
           echo "Testing docker model run..."
           timeout 60s sudo docker model run "$MODEL" "Give me a fact about whales." || {
@@ -125,7 +125,7 @@ jobs:
         run: |
           MODEL="${{ github.event.inputs.test_model || 'ai/smollm2:360M-Q4_K_M' }}"
           echo "Testing API endpoint with model: $MODEL"
-
+                  
           # Test API call with curl
           echo "Testing API call..."
           RESPONSE=$(curl -s http://localhost:12434/engines/llama.cpp/v1/chat/completions \
@@ -141,11 +141,11 @@ jobs:
                 \"top_k\": 1,
                 \"temperature\": 0
             }")
-
+          
           if [ $? -eq 0 ]; then
             echo "✅ API call successful"
             echo "Response received: $RESPONSE"
-
+            
             # Check if response contains "hello" (case-insensitive)
             if echo "$RESPONSE" | grep -qi "hello"; then
               echo "✅ Response contains 'hello' (case-insensitive)"
@@ -162,14 +162,14 @@ jobs:
       - name: Test model cleanup
         run: |
           MODEL="${{ github.event.inputs.test_model || 'ai/smollm2:360M-Q4_K_M' }}"
-
+          
           echo "Cleaning up test model..."
           sudo docker model rm "$MODEL" || echo "Model removal failed or model not found"
-
+          
           # Verify model was removed
           echo "Verifying model cleanup..."
           sudo docker model ls
-
+          
           echo "✅ Model cleanup completed"
 
       - name: Report success

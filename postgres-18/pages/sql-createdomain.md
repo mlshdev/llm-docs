@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/create_domain.sgml#sql-createdomain](https://www.postgresql.org/docs/18/sql-createdomain.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/create_domain.sgml#sql-createdomain](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/create_domain.sgml%23sql-createdomain)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-createdomain.html
 
 # CREATE DOMAIN
 

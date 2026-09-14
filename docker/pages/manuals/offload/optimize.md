@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/offload/optimize.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/offload/optimize.md)
+> Pinned source for Docker main: [content/manuals/offload/optimize.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/offload/optimize.md)
 
 # Optimize Docker Offload usage
 

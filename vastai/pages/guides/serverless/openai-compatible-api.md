@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [guides/serverless/openai-compatible-api.mdx](https://docs.vast.ai/guides/serverless/openai-compatible-api)
+> Pinned source for Vast.ai main: [guides/serverless/openai-compatible-api.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/serverless/openai-compatible-api.mdx)
+> Canonical documentation: https://docs.vast.ai/guides/serverless/openai-compatible-api
 
 # OpenAI API-compatible Interface
 

@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/runtime.sgml#event-log-registration](https://www.postgresql.org/docs/18/event-log-registration.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/runtime.sgml#event-log-registration](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/runtime.sgml%23event-log-registration)
+> Canonical documentation: https://www.postgresql.org/docs/18/event-log-registration.html
 
 # Registering Event Log on Windows
 

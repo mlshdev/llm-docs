@@ -1,5 +1,7 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
+  "generatorVersion": 3,
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4",
   "project": "searxng",
   "title": "SearXNG",
   "homepage": "https://docs.searxng.org/",
@@ -8,10 +10,21 @@
   "branch": "master",
   "sourceCommittedAt": "2026-09-12T18:29:15Z",
   "sourceCommit": "d4ce87c23431f607162fc5c39ce52c538d64588f",
+  "documentationDigest": "ae2c8c30c6354eb9063067784b1f30ee0b11fea851fe3fa7285fa36a31eb96e6",
   "documentCount": 177,
+  "indexComplete": true,
+  "corpusVolumes": [
+    {
+      "name": "llms-full.txt",
+      "byteLength": 360419,
+      "documentCount": 177,
+      "sha256": "6f28e135b16815d511d8e3b12f48d7abc291d2a312a15314c39a7f011aa1dc9a"
+    }
+  ],
+  "outputDigest": "88d5b1e9ed4825235b9463f283431c030ec2a83e7dd36097def2d4d754a2f979",
   "notes": [
     "SearXNG tracks master because the repository publishes neither GitHub releases nor release tags.",
     "Checked-in RST and Markdown includes are expanded without executing Sphinx, Jinja, or imported Python modules.",
-    "Generated autodoc output and non-text assets are omitted."
+    "Python autodoc is reproduced from statically extracted source docstrings when available; unresolved imported symbols are identified explicitly without importing or executing upstream modules."
   ]
 }

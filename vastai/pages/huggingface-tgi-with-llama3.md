@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [huggingface-tgi-with-llama3.mdx](https://docs.vast.ai/huggingface-tgi-with-llama3)
+> Pinned source for Vast.ai main: [huggingface-tgi-with-llama3.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/huggingface-tgi-with-llama3.mdx)
+> Canonical documentation: https://docs.vast.ai/huggingface-tgi-with-llama3
 
 # Huggingface TGI with LLama3
 

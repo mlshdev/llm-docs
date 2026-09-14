@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [runpodctl/reference/runpodctl-user.mdx](https://docs.runpod.io/runpodctl/reference/runpodctl-user)
+> Pinned source for Runpod main: [runpodctl/reference/runpodctl-user.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/runpodctl/reference/runpodctl-user.mdx)
+> Canonical documentation: https://docs.runpod.io/runpodctl/reference/runpodctl-user
 
 # user
 

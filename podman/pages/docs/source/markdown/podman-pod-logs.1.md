@@ -1,4 +1,4 @@
-> Release-pinned source for Podman v6.1.1: [docs/source/markdown/podman-pod-logs.1.md.in](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-pod-logs.1.md.in)
+> Pinned source for Podman v6.1.1: [docs/source/markdown/podman-pod-logs.1.md.in](https://github.com/podman-container-tools/podman/blob/8303f2e25b675ea7f82099d615c60969aec15870/docs/source/markdown/podman-pod-logs.1.md.in)
 
 # podman-pod-logs
 

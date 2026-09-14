@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/node-ui-elements.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/connect/create-nodes/build-your-node/reference/node-ui-elements.md)
+> Pinned source for n8n main: [docs/connect/create-nodes/build-your-node/reference/node-ui-elements.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/connect/create-nodes/build-your-node/reference/node-ui-elements.md)
 
 # Node UI elements
 
@@ -574,7 +574,7 @@ If your node performs insert, update, or upsert operations, you need to send dat
                 singular: 'column',
                 plural: 'columns',
             },
-            addAllFields: true,
+            addAllFields: true, 
             multiKeyMatch: true,
             supportAutoMap: true,
             matchingFieldsLabels: {
@@ -608,7 +608,7 @@ export interface ResourceMapperTypeOptions {
     // Whether n8n should display a UI input for every field when node first added to workflow
     // Default is true
     addAllFields?: boolean;
-    // Specify a message to show if no fields are fetched from the service
+    // Specify a message to show if no fields are fetched from the service 
     // (the call is successful but the response is empty)
     noFieldsError?: string;
     // Whether to support multi-key column matching

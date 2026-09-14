@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/merge.sgml#sql-merge](https://www.postgresql.org/docs/18/sql-merge.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/merge.sgml#sql-merge](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/merge.sgml%23sql-merge)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-merge.html
 
 # MERGE
 

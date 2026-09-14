@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [tutorials/serverless/model-caching-text.mdx](https://docs.runpod.io/tutorials/serverless/model-caching-text)
+> Pinned source for Runpod main: [tutorials/serverless/model-caching-text.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/tutorials/serverless/model-caching-text.mdx)
+> Canonical documentation: https://docs.runpod.io/tutorials/serverless/model-caching-text
 
 # Deploy Phi-3 using model caching
 
@@ -34,6 +35,7 @@ HF_CACHE_ROOT = "/runpod-volume/huggingface-cache/hub"
 # Force offline mode to use only cached models
 os.environ["HF_HUB_OFFLINE"] = "1"
 os.environ["TRANSFORMERS_OFFLINE"] = "1"
+
 
 def resolve_snapshot_path(model_id: str) -> str:
     """
@@ -81,6 +83,7 @@ def resolve_snapshot_path(model_id: str) -> str:
     print(f"[ModelStore] Using first available snapshot: {chosen}")
     return chosen
 
+
 # Resolve and load the model at startup
 LOCAL_MODEL_PATH = resolve_snapshot_path(MODEL_ID)
 print(f"[ModelStore] Resolved local model path: {LOCAL_MODEL_PATH}")
@@ -107,6 +110,7 @@ text_gen = pipeline(
 )
 
 print("[ModelStore] Model loaded from local snapshot")
+
 
 def handler(job):
     """
@@ -147,6 +151,7 @@ def handler(job):
             "status": "error",
             "error": str(e),
         }
+
 
 runpod.serverless.start({"handler": handler})
 ```

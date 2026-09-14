@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_trust_key_generate.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_trust_key_generate.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_trust_key_generate.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_trust_key_generate.yaml)
 
 # docker trust key generate
 
@@ -9,13 +9,13 @@ Generate and load a signing key-pair
 ## Description
 
 `docker trust key generate` generates a key-pair to be used with signing,
- and loads the private key into the local Docker trust keystore.
+and loads the private key into the local Docker trust keystore.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--dir` |  | Directory to generate key in, defaults to current directory |
+| Option  | Default | Description                                                 |
+| ------- | ------- | ----------------------------------------------------------- |
+| `--dir` |         | Directory to generate key in, defaults to current directory |
 
 ## Examples
 

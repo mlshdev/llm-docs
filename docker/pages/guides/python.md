@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/python.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/python.md)
+> Pinned source for Docker main: [content/guides/python.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/python.md)
 
 > **Acknowledgment**
 >
@@ -56,6 +56,7 @@ the **Scaffold script** tab in the file browser and copy the shell command.
 from fastapi import FastAPI
 
 app = FastAPI()
+
 
 @app.get("/")
 async def root():
@@ -190,6 +191,7 @@ build context.
 from fastapi import FastAPI
 
 app = FastAPI()
+
 
 @app.get("/")
 async def root():
@@ -472,27 +474,34 @@ from sqlmodel import Field, Session, SQLModel, create_engine, select
 
 from config import settings
 
+
 class Hero(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
     name: str = Field(index=True)
     secret_name: str
     age: int | None = Field(default=None, index=True)
 
+
 engine = create_engine(str(settings.SQLALCHEMY_DATABASE_URI))
+
 
 def create_db_and_tables() -> None:
     SQLModel.metadata.create_all(engine)
+
 
 @asynccontextmanager
 async def lifespan(_app: FastAPI) -> AsyncGenerator[None, None]:
     create_db_and_tables()
     yield
 
+
 app = FastAPI(lifespan=lifespan)
+
 
 @app.get("/")
 def hello() -> str:
     return "Hello, Docker!"
+
 
 @app.post("/heroes/")
 def create_hero(hero: Hero) -> Hero:
@@ -501,6 +510,7 @@ def create_hero(hero: Hero) -> Hero:
         session.commit()
         session.refresh(hero)
         return hero
+
 
 @app.get("/heroes/")
 def read_heroes() -> Sequence[Hero]:
@@ -528,6 +538,7 @@ from pydantic import (
 )
 from pydantic_core import MultiHostUrl
 from pydantic_settings import BaseSettings
+
 
 class Settings(BaseSettings):
     POSTGRES_SERVER: str
@@ -575,6 +586,7 @@ class Settings(BaseSettings):
             path=self.POSTGRES_DB,
         )
         return PostgresDsn(url)
+
 
 settings = Settings()  # type: ignore
 ```
@@ -785,27 +797,34 @@ from sqlmodel import Field, Session, SQLModel, create_engine, select
 
 from config import settings
 
+
 class Hero(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
     name: str = Field(index=True)
     secret_name: str
     age: int | None = Field(default=None, index=True)
 
+
 engine = create_engine(str(settings.SQLALCHEMY_DATABASE_URI))
+
 
 def create_db_and_tables() -> None:
     SQLModel.metadata.create_all(engine)
+
 
 @asynccontextmanager
 async def lifespan(_app: FastAPI) -> AsyncGenerator[None, None]:
     create_db_and_tables()
     yield
 
+
 app = FastAPI(lifespan=lifespan)
+
 
 @app.get("/")
 def hello() -> str:
     return "Hello, Docker!"
+
 
 @app.post("/heroes/")
 def create_hero(hero: Hero) -> Hero:
@@ -814,6 +833,7 @@ def create_hero(hero: Hero) -> Hero:
         session.commit()
         session.refresh(hero)
         return hero
+
 
 @app.get("/heroes/")
 def read_heroes() -> Sequence[Hero]:
@@ -841,6 +861,7 @@ from pydantic import (
 )
 from pydantic_core import MultiHostUrl
 from pydantic_settings import BaseSettings
+
 
 class Settings(BaseSettings):
     POSTGRES_SERVER: str
@@ -888,6 +909,7 @@ class Settings(BaseSettings):
             path=self.POSTGRES_DB,
         )
         return PostgresDsn(url)
+
 
 settings = Settings()  # type: ignore
 ```
@@ -942,6 +964,7 @@ EXPOSE 8000
 
 # Run the application.
 CMD ["/venv/bin/python3", "-m", "uvicorn", "app:app", "--host=0.0.0.0", "--port=8000"]
+
 
 # Use the minimal runtime image for production. It runs as nonroot by default.
 FROM dhi.io/python:3.12
@@ -1117,27 +1140,34 @@ from sqlmodel import Field, Session, SQLModel, create_engine, select
 
 from config import settings
 
+
 class Hero(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
     name: str = Field(index=True)
     secret_name: str
     age: int | None = Field(default=None, index=True)
 
+
 engine = create_engine(str(settings.SQLALCHEMY_DATABASE_URI))
+
 
 def create_db_and_tables() -> None:
     SQLModel.metadata.create_all(engine)
+
 
 @asynccontextmanager
 async def lifespan(_app: FastAPI) -> AsyncGenerator[None, None]:
     create_db_and_tables()
     yield
 
+
 app = FastAPI(lifespan=lifespan)
+
 
 @app.get("/")
 def hello() -> str:
     return "Hello, Docker!"
+
 
 @app.post("/heroes/")
 def create_hero(hero: Hero) -> Hero:
@@ -1146,6 +1176,7 @@ def create_hero(hero: Hero) -> Hero:
         session.commit()
         session.refresh(hero)
         return hero
+
 
 @app.get("/heroes/")
 def read_heroes() -> Sequence[Hero]:
@@ -1173,6 +1204,7 @@ from pydantic import (
 )
 from pydantic_core import MultiHostUrl
 from pydantic_settings import BaseSettings
+
 
 class Settings(BaseSettings):
     POSTGRES_SERVER: str
@@ -1220,6 +1252,7 @@ class Settings(BaseSettings):
             path=self.POSTGRES_DB,
         )
         return PostgresDsn(url)
+
 
 settings = Settings()  # type: ignore
 ```
@@ -1274,6 +1307,7 @@ EXPOSE 8000
 
 # Run the application.
 CMD ["/venv/bin/python3", "-m", "uvicorn", "app:app", "--host=0.0.0.0", "--port=8000"]
+
 
 # Use the minimal runtime image for production. It runs as nonroot by default.
 FROM dhi.io/python:3.12
@@ -1539,27 +1573,34 @@ from sqlmodel import Field, Session, SQLModel, create_engine, select
 
 from config import settings
 
+
 class Hero(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
     name: str = Field(index=True)
     secret_name: str
     age: int | None = Field(default=None, index=True)
 
+
 engine = create_engine(str(settings.SQLALCHEMY_DATABASE_URI))
+
 
 def create_db_and_tables() -> None:
     SQLModel.metadata.create_all(engine)
+
 
 @asynccontextmanager
 async def lifespan(_app: FastAPI) -> AsyncGenerator[None, None]:
     create_db_and_tables()
     yield
 
+
 app = FastAPI(lifespan=lifespan)
+
 
 @app.get("/")
 def hello() -> str:
     return "Hello, Docker!"
+
 
 @app.post("/heroes/")
 def create_hero(hero: Hero) -> Hero:
@@ -1568,6 +1609,7 @@ def create_hero(hero: Hero) -> Hero:
         session.commit()
         session.refresh(hero)
         return hero
+
 
 @app.get("/heroes/")
 def read_heroes() -> Sequence[Hero]:
@@ -1595,6 +1637,7 @@ from pydantic import (
 )
 from pydantic_core import MultiHostUrl
 from pydantic_settings import BaseSettings
+
 
 class Settings(BaseSettings):
     POSTGRES_SERVER: str
@@ -1642,6 +1685,7 @@ class Settings(BaseSettings):
             path=self.POSTGRES_DB,
         )
         return PostgresDsn(url)
+
 
 settings = Settings()  # type: ignore
 ```
@@ -1696,6 +1740,7 @@ EXPOSE 8000
 
 # Run the application.
 CMD ["/venv/bin/python3", "-m", "uvicorn", "app:app", "--host=0.0.0.0", "--port=8000"]
+
 
 # Use the minimal runtime image for production. It runs as nonroot by default.
 FROM dhi.io/python:3.12

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/engine/security/trust/trust_sandbox.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/security/trust/trust_sandbox.md)
+> Pinned source for Docker main: [content/manuals/engine/security/trust/trust_sandbox.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/engine/security/trust/trust_sandbox.md)
 
 # Play in a content trust sandbox
 
@@ -144,7 +144,7 @@ Now, pull some images from within the `trustsandbox` container.
    / # docker pull docker/trusttest
    docker pull docker/trusttest
    Using default tag: latest
-   latest: Pulling from docker/trusttest
+   latest: Pulling from docker/trusttest   
    b3dbab3810fc: Pull complete
    a9539b34a6ab: Pull complete
    Digest: sha256:d149ab53f8718e987c3a3024bb8aa0e2caadf6c0328f1d9d850b2a2a67f2819a

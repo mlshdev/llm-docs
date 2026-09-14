@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [host/cli/delete-machine.mdx](https://docs.vast.ai/host/cli/delete-machine)
+> Pinned source for Vast.ai main: [host/cli/delete-machine.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/host/cli/delete-machine.mdx)
+> Canonical documentation: https://docs.vast.ai/host/cli/delete-machine
 
 # vastai delete machine
 

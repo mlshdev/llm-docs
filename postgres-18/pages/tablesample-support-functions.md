@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/tablesample-method.sgml#tablesample-support-functions](https://www.postgresql.org/docs/18/tablesample-support-functions.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/tablesample-method.sgml#tablesample-support-functions](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/tablesample-method.sgml%23tablesample-support-functions)
+> Canonical documentation: https://www.postgresql.org/docs/18/tablesample-support-functions.html
 
 # Sampling Method Support Functions
 

@@ -1,11 +1,16 @@
 import { describe, expect, test } from "bun:test";
+import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import path from "node:path";
 import {
   canonicalUrlFor,
   collectIndexEntries,
   digestOf,
   indexUrl,
   mapWithConcurrency,
+  readCacheFile,
   renderJsonUrl,
+  writeCacheFile,
 } from "./docc.ts";
 
 describe("DocC URLs", () => {
@@ -115,5 +120,51 @@ describe("DocC catalog traversal", () => {
 
     expect(result).toEqual([6, 2, 4, 0]);
     expect(peak).toBe(2);
+  });
+
+  test("stops scheduling new work after the first failure", async () => {
+    const started: number[] = [];
+    await expect(
+      mapWithConcurrency([0, 1, 2, 3, 4, 5], 2, async (value) => {
+        started.push(value);
+        if (value === 0) {
+          throw new Error("stop");
+        }
+        await Bun.sleep(5);
+        return value;
+      }),
+    ).rejects.toThrow("stop");
+    expect(started).toEqual([0, 1]);
+  });
+});
+
+describe("DocC cache", () => {
+  test("atomically replaces cache files and reads complete JSON", async () => {
+    const directory = await mkdtemp(path.join(tmpdir(), "docc-cache-test-"));
+    const file = path.join(directory, "cache.json");
+    try {
+      await Promise.all([
+        writeCacheFile(file, '{"value":1}'),
+        writeCacheFile(file, '{"value":2}'),
+      ]);
+      expect(['{"value":1}', '{"value":2}']).toContain(
+        await readFile(file, "utf8"),
+      );
+      expect((await readCacheFile(file))?.startsWith('{"value":')).toBe(true);
+    } finally {
+      await rm(directory, { recursive: true, force: true });
+    }
+  });
+
+  test("deletes a malformed cache entry and treats it as a miss", async () => {
+    const directory = await mkdtemp(path.join(tmpdir(), "docc-cache-test-"));
+    const file = path.join(directory, "cache.json");
+    try {
+      await writeFile(file, "{truncated", "utf8");
+      expect(await readCacheFile(file)).toBeUndefined();
+      expect(await Bun.file(file).exists()).toBe(false);
+    } finally {
+      await rm(directory, { recursive: true, force: true });
+    }
   });
 });

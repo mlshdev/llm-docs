@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_status.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_status.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_status.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_status.yaml)
 
 # docker model status
 
@@ -12,6 +12,6 @@ Check whether the Docker Model Runner is running and displays the current infere
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--json` |  | Format output in JSON |
+| Option   | Default | Description           |
+| -------- | ------- | --------------------- |
+| `--json` |         | Format output in JSON |

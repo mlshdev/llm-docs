@@ -277,7 +277,7 @@ components:
         "",
         "**Parameters**",
         "",
-        "- `runId` (path, required): The run to read",
+        "- `runId` (path; required): The run to read",
         "- `version` (query): API version",
         "",
         "**Responses**",
@@ -345,6 +345,125 @@ paths:
         "/api/v1/runs",
       ),
     ).toThrow("external reference");
+  });
+
+  test("renders nested request and response schemas with constraints", () => {
+    const rich = parseOpenApiSpec(
+      `
+openapi: 3.1.0
+security:
+  - bearer: [read:runs]
+paths:
+  /runs:
+    post:
+      deprecated: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name]
+              properties:
+                name:
+                  type: string
+                  minLength: 2
+                  example: nightly
+                mode:
+                  type: string
+                  enum: [fast, safe]
+                  default: safe
+                children:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/Node"
+      responses:
+        "200":
+          description: Created
+          headers:
+            X-Request-ID:
+              schema: { type: string, format: uuid }
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: "#/components/schemas/Node"
+                  - type: "null"
+components:
+  schemas:
+    Node:
+      type: object
+      properties:
+        id: { type: string, format: uuid }
+        child: { $ref: "#/components/schemas/Node" }
+`,
+      "rich.yaml",
+    );
+    const rendered = renderOpenApiOperationBody(
+      rich,
+      "rich.yaml",
+      "post",
+      "/runs",
+    );
+    expect(rendered).toContain("**Deprecated.**");
+    expect(rendered).toContain("`bearer` (read:runs)");
+    expect(rendered).toContain("Media type: `application/json`");
+    expect(rendered).toContain(
+      "`name` (required; string; minimum length: `2`)",
+    );
+    expect(rendered).toContain("enum: `fast`, `safe`; default: `safe`");
+    expect(rendered).toContain("Example: `nightly`");
+    expect(rendered).toContain(
+      "recursive reference `#/components/schemas/Node`",
+    );
+    expect(rendered).toContain("Header `X-Request-ID` (string; format: uuid)");
+    expect(rendered).toContain("oneOf:");
+  });
+
+  test("renders Swagger 2 body schemas and inline parameter types", () => {
+    const swagger = parseOpenApiSpec(
+      `
+swagger: "2.0"
+consumes: [multipart/form-data]
+paths:
+  /upload:
+    post:
+      security: []
+      parameters:
+        - name: overwrite
+          in: formData
+          type: boolean
+          default: false
+        - name: payload
+          in: body
+          required: true
+          schema:
+            type: object
+            required: [filename]
+            properties:
+              filename: { type: string }
+      responses:
+        "201":
+          description: Uploaded
+          schema:
+            type: array
+            items: { type: string }
+`,
+      "swagger.yaml",
+    );
+    const rendered = renderOpenApiOperationBody(
+      swagger,
+      "swagger.yaml",
+      "post",
+      "/upload",
+    );
+    expect(rendered).toContain("**Authentication:** none");
+    expect(rendered).toContain(
+      "`overwrite` (formData; boolean; default: `false`)",
+    );
+    expect(rendered).toContain("**Request body** (required)");
+    expect(rendered).toContain("`filename` (required; string)");
+    expect(rendered).toContain("`items` (string)");
   });
 });
 

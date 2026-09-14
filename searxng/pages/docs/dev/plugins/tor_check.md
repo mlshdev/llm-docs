@@ -1,8 +1,9 @@
-> Commit-pinned source for SearXNG master: [docs/dev/plugins/tor_check.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/plugins/tor_check.rst)
+> Pinned source for SearXNG master: [docs/dev/plugins/tor_check.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/plugins/tor_check.rst)
 
-.. \_tor check plugin:
+<a id="tor-check-plugin"></a>
 
 # Tor check
 
-.. automodule:: searx.plugins.tor\_check
-:members:
+#### `searx.plugins.tor_check`
+
+Static Python API reference (`automodule`).

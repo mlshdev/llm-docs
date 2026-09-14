@@ -1,4 +1,4 @@
-> Release-pinned source for Traefik Proxy v3.7.13: [docs/content/setup/docker.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/setup/docker.md)
+> Pinned source for Traefik Proxy v3.7.13: [docs/content/setup/docker.md](https://github.com/traefik/traefik/blob/fc92cc118a0557a029c7019d5ee06665127b0f13/docs/content/setup/docker.md)
 
 This guide provides an in-depth walkthrough for installing and configuring Traefik Proxy within a Docker container using the official Traefik Docker image & Docker Compose. In this guide, we'll cover the following:
 
@@ -91,16 +91,16 @@ services:
       # Attach the static configuration tls.yaml file that contains the tls configuration settings
       - "--providers.file.filename=/dynamic/tls.yaml"
 
-      # Providers
+      # Providers 
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
       - "--providers.docker.network=proxy"
 
-      # API & Dashboard
+      # API & Dashboard 
       - "--api.dashboard=true"
       - "--api.insecure=false"
 
-      # Observability
+      # Observability 
       - "--log.level=INFO"
       - "--accesslog=true"
       - "--metrics.prometheus=true"

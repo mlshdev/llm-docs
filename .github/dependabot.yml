@@ -1,0 +1,34 @@
+version: 2
+updates:
+  # `bun`, not `npm`: the npm ecosystem never regenerates bun.lock, so every
+  # dependency PR would land with package.json and bun.lock disagreeing and CI
+  # installs with `bun ci` would reject it.
+  - package-ecosystem: "bun"
+    directory: "/"
+    schedule:
+      interval: "cron"
+      cronjob: "0 0 * * 1,4"
+      timezone: "UTC"
+    open-pull-requests-limit: 5
+    labels: ["dependencies", "javascript", "bun"]
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    groups:
+      bun-deps:
+        patterns: ["*"]
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "cron"
+      cronjob: "0 0 * * 1,4"
+      timezone: "UTC"
+    open-pull-requests-limit: 5
+    labels: ["dependencies", "github-actions"]
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    groups:
+      actions:
+        patterns: ["*"]

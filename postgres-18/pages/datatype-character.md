@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/datatype.sgml#datatype-character](https://www.postgresql.org/docs/18/datatype-character.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/datatype.sgml#datatype-character](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/datatype.sgml%23datatype-character)
+> Canonical documentation: https://www.postgresql.org/docs/18/datatype-character.html
 
 # Character Types
 
@@ -43,6 +44,7 @@ SELECT a, char_length(a) FROM test1; --
   a   | char_length
 ------+-------------
  ok   |           2
+
 
 CREATE TABLE test2 (b varchar(5));
 INSERT INTO test2 VALUES ('ok');

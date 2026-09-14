@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/mcp/docker_mcp_catalog_rm.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp_catalog_rm.yaml)
+> Pinned source for Docker main: [data/cli/mcp/docker_mcp_catalog_rm.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/mcp/docker_mcp_catalog_rm.yaml)
 
 # docker mcp catalog rm
 
@@ -14,4 +14,5 @@ The Docker official catalog cannot be removed.
 ## Examples
 
 # Remove a catalog
-  docker mcp catalog rm old-servers
+
+docker mcp catalog rm old-servers

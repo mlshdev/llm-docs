@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/k8s-ha-monitoring-via-vm-cluster/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-ha-monitoring-via-vm-cluster/_index.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/guides/k8s-ha-monitoring-via-vm-cluster/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/k8s-ha-monitoring-via-vm-cluster/_index.md)
 
 This guide walks you through deploying a [VictoriaMetrics cluster](https://docs.victoriametrics.com/guides/k8s-monitoring-via-vm-cluster/) version on Kubernetes in high-availability mode.
 
@@ -150,6 +150,7 @@ You need to specify the service URL in your Grafana:
 Input this URL field into Grafana
 
     http://<select-service>/select/0/prometheus/
+
 
 for example - inside the Kubernetes cluster:
 

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_container_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_ls.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_container_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_ls.yaml)
 
 # docker container ls
 
@@ -14,16 +14,16 @@ List containers
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-a`, `--all` |  | Show all containers (default shows just running) |
-| `-f`, `--filter` |  | Filter output based on conditions provided |
-| `--format` |  | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to https://docs.docker.com/go/formatting/ for more information about formatting output with templates |
-| `-n`, `--last` | `-1` | Show n last created containers (includes all states) |
-| `-l`, `--latest` |  | Show the latest created container (includes all states) |
-| `--no-trunc` |  | Don't truncate output |
-| `-q`, `--quiet` |  | Only display container IDs |
-| `-s`, `--size` |  | Display total file sizes |
+| Option           | Default | Description                                                                                                                                                                                                                                                                                                                                                                            |
+| ---------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `-a`, `--all`    |         | Show all containers (default shows just running)                                                                                                                                                                                                                                                                                                                                       |
+| `-f`, `--filter` |         | Filter output based on conditions provided                                                                                                                                                                                                                                                                                                                                             |
+| `--format`       |         | Format output using a custom template: 'table': Print output in table format with column headers (default) 'table TEMPLATE': Print output in table format using the given Go template 'json': Print in JSON format 'TEMPLATE': Print output using the given Go template. Refer to <https://docs.docker.com/go/formatting/> for more information about formatting output with templates |
+| `-n`, `--last`   | `-1`    | Show n last created containers (includes all states)                                                                                                                                                                                                                                                                                                                                   |
+| `-l`, `--latest` |         | Show the latest created container (includes all states)                                                                                                                                                                                                                                                                                                                                |
+| `--no-trunc`     |         | Don't truncate output                                                                                                                                                                                                                                                                                                                                                                  |
+| `-q`, `--quiet`  |         | Only display container IDs                                                                                                                                                                                                                                                                                                                                                             |
+| `-s`, `--size`   |         | Display total file sizes                                                                                                                                                                                                                                                                                                                                                               |
 
 ## Examples
 
@@ -63,10 +63,11 @@ CONTAINER ID   IMAGE          COMMAND                  CREATED        STATUS    
 e90b8831a4b8   nginx          "/bin/bash -c 'mkdir "   11 weeks ago   Up 4 hours           my_nginx     35.58 kB (virtual 109.2 MB)
 00c6131c5e30   telegraf:1.5   "/entrypoint.sh"         11 weeks ago   Up 11 weeks          my_telegraf  0 B (virtual 209.5 MB)
 ```
-  * The "size" information shows the amount of data (on disk) that is used for the _writable_ layer of each container
-  * The "virtual size" is the total amount of disk-space used for the read-only _image_ data used by the container and the writable layer.
 
-For more information, refer to the [container size on disk](/engine/storage/drivers/#container-size-on-disk) section.
+- The "size" information shows the amount of data (on disk) that is used for the *writable* layer of each container
+- The "virtual size" is the total amount of disk-space used for the read-only *image* data used by the container and the writable layer.
+
+For more information, refer to the [container size on disk](https://docs.docker.com/engine/storage/drivers/#container-size-on-disk) section.
 
 ### Filtering (--filter) {#filter}
 
@@ -76,7 +77,7 @@ than one filter, then pass multiple flags (e.g. `--filter "foo=bar" --filter "bi
 The currently supported filters are:
 
 | Filter                | Description                                                                                                                          |
-|:----------------------|:-------------------------------------------------------------------------------------------------------------------------------------|
+| :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
 | `id`                  | Container's ID                                                                                                                       |
 | `name`                | Container's name                                                                                                                     |
 | `label`               | An arbitrary string representing either a key or a key-value pair. Expressed as `<key>` or `<key>=<value>`                           |
@@ -168,9 +169,9 @@ a2eb5558d669        redis:latest        "/entrypoint.sh redi   2 hours ago      
 
 Any of these events result in a `137` status:
 
-* the `init` process of the container is killed manually
-* `docker kill` kills the container
-* Docker daemon restarts which kills all running containers
+- the `init` process of the container is killed manually
+- `docker kill` kills the container
+- Docker daemon restarts which kills all running containers
 
 #### status
 
@@ -396,7 +397,7 @@ template.
 Valid placeholders for the Go template are listed below:
 
 | Placeholder     | Description                                                                                     |
-|:----------------|:------------------------------------------------------------------------------------------------|
+| :-------------- | :---------------------------------------------------------------------------------------------- |
 | `.ID`           | Container ID                                                                                    |
 | `.Image`        | Image ID                                                                                        |
 | `.Command`      | Quoted command                                                                                  |

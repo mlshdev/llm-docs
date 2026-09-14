@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [blender-in-the-cloud.mdx](https://docs.vast.ai/blender-in-the-cloud)
+> Pinned source for Vast.ai main: [blender-in-the-cloud.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/blender-in-the-cloud.mdx)
+> Canonical documentation: https://docs.vast.ai/blender-in-the-cloud
 
 # Blender in the Cloud
 

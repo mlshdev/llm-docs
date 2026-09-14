@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [guides/reference/notifications.mdx](https://docs.vast.ai/guides/reference/notifications)
+> Pinned source for Vast.ai main: [guides/reference/notifications.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/reference/notifications.mdx)
+> Canonical documentation: https://docs.vast.ai/guides/reference/notifications
 
 # Notifications
 
@@ -32,7 +33,7 @@ For a description of every event in these groups, see the [full list of renter n
 
 ## How Delivery Works
 
-Each notification type can be delivered over one or more channels:
+Each notification type can be delivered over one or more channels: `{/* HIDDEN: in-app delivery row — no console notification inbox UI yet. Restore when it ships: | **In-app** | Console notification inbox entries for supported events | */}`
 
 | Channel      | Use it for                                                |
 | ------------ | --------------------------------------------------------- |

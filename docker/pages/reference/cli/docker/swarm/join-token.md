@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_swarm_join-token.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_swarm_join-token.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_swarm_join-token.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_swarm_join-token.yaml)
 
 # docker swarm join-token
 
@@ -11,21 +11,21 @@ Manage join tokens
 Join tokens are secrets that allow a node to join the swarm. There are two
 different join tokens available, one for the worker role and one for the manager
 role. You pass the token using the `--token` flag when you run
-[swarm join](/reference/cli/docker/swarm/join/). Nodes use the join token only when they join the
+[swarm join](https://docs.docker.com/reference/cli/docker/swarm/join/). Nodes use the join token only when they join the
 swarm.
 
-> [!NOTE]
+> \[!NOTE]
 > This is a cluster management command, and must be executed on a swarm
 > manager node. To learn about managers and workers, refer to the
-> [Swarm mode section](/engine/swarm/) in the
+> [Swarm mode section](https://docs.docker.com/engine/swarm/) in the
 > documentation.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-q`, `--quiet` |  | Only display token |
-| `--rotate` |  | Rotate join token |
+| Option          | Default | Description        |
+| --------------- | ------- | ------------------ |
+| `-q`, `--quiet` |         | Only display token |
+| `--rotate`      |         | Rotate join token  |
 
 ## Examples
 

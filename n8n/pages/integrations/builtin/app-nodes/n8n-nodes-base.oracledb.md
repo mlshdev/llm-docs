@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.oracledb.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/app-nodes/n8n-nodes-base.oracledb.md)
+> Pinned source for n8n main: [docs/integrations/builtin/app-nodes/n8n-nodes-base.oracledb.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/app-nodes/n8n-nodes-base.oracledb.md)
 
 # Oracle Database node <a id="oracle-database-node"></a>
 
@@ -193,7 +193,7 @@ For example, you would want to find specific fruits by their color. Given the fo
     {
         "FRUIT_ID": 1,
         "FRUIT_NAME": "Apple",
-        "COLOR": "Red"
+        "COLOR": "Red" 
     },
     {
         "FRUIT_ID": 2,
@@ -213,7 +213,7 @@ Then in **Bind Variable Placeholder Values**, provide the field values to use. Y
 
 ```js
 // fruits is an example table name
-fruits, {{ $json.color }}
+fruits, {{ $json.color }} 
 ```
 
 ## Use n8n Expressions for bind values <a id="use-n8n-expressions-for-bind-values"></a>

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose.yaml)
 
 # docker compose
 
@@ -12,19 +12,19 @@ Define and run multi-container applications with Docker
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--all-resources` |  | Include all resources, even those not used by services |
-| `--ansi` | `auto` | Control when to print ANSI control characters ("never"\|"always"\|"auto") |
-| `--compatibility` |  | Run compose in backward compatibility mode |
-| `--dry-run` |  | Execute command in dry run mode |
-| `--env-file` |  | Specify an alternate environment file |
-| `-f`, `--file` |  | Compose configuration files |
-| `--parallel` | `-1` | Control max parallelism, -1 for unlimited |
-| `--profile` |  | Specify a profile to enable |
-| `--progress` |  | Set type of progress output (auto, tty, plain, json, quiet) |
-| `--project-directory` |  | Specify an alternate working directory (default: the path of the, first specified, Compose file) |
-| `-p`, `--project-name` |  | Project name |
+| Option                 | Default | Description                                                                                      |
+| ---------------------- | ------- | ------------------------------------------------------------------------------------------------ |
+| `--all-resources`      |         | Include all resources, even those not used by services                                           |
+| `--ansi`               | `auto`  | Control when to print ANSI control characters ("never"\|"always"\|"auto")                        |
+| `--compatibility`      |         | Run compose in backward compatibility mode                                                       |
+| `--dry-run`            |         | Execute command in dry run mode                                                                  |
+| `--env-file`           |         | Specify an alternate environment file                                                            |
+| `-f`, `--file`         |         | Compose configuration files                                                                      |
+| `--parallel`           | `-1`    | Control max parallelism, -1 for unlimited                                                        |
+| `--profile`            |         | Specify a profile to enable                                                                      |
+| `--progress`           |         | Set type of progress output (auto, tty, plain, json, quiet)                                      |
+| `--project-directory`  |         | Specify an alternate working directory (default: the path of the, first specified, Compose file) |
+| `-p`, `--project-name` |         | Project name                                                                                     |
 
 ## Subcommands
 
@@ -67,9 +67,11 @@ Define and run multi-container applications with Docker
 ## Examples
 
 ### Use `-f` to specify the name and path of one or more Compose files
-Use the `-f` flag to specify the location of a Compose [configuration file](/reference/compose-file/).
+
+Use the `-f` flag to specify the location of a Compose [configuration file](https://docs.docker.com/reference/compose-file/).
 
 #### Specifying multiple Compose files
+
 You can supply multiple `-f` configuration files. When you supply multiple files, Compose combines them into a single
 configuration. Compose builds the configuration in the order you supply the files. Subsequent files override and add
 to their predecessors.
@@ -91,6 +93,7 @@ services:
     volumes:
       - "/data"
 ```
+
 If the `compose.admin.yaml` also specifies this same service, any matching fields override the previous file.
 New values, add to the `webapp` service configuration.
 
@@ -112,6 +115,7 @@ The `-f` flag is optional. If you don’t provide this flag on the command line,
 and its parent directories looking for a `compose.yaml` or `docker-compose.yaml` file.
 
 #### Specifying a path to a single Compose file
+
 You can use the `-f` flag to specify a path to a Compose file that is not located in the current directory, either
 from the command line or by setting up a `COMPOSE_FILE` environment variable in your shell or in an environment file.
 
@@ -124,6 +128,7 @@ $ docker compose -f ~/sandbox/rails/compose.yaml pull db
 ```
 
 #### Using an OCI published artifact
+
 You can use the `-f` flag with the `oci://` prefix to reference a Compose file that has been published to an OCI registry.
 This allows you to distribute and version your Compose configurations as OCI artifacts.
 
@@ -143,19 +148,23 @@ The OCI artifact must contain a valid Compose file. You can publish Compose file
 `docker compose publish` command.
 
 #### Using a git repository
+
 You can use the `-f` flag to reference a Compose file from a git repository. Compose supports various git URL formats:
 
 Using HTTPS:
+
 ```console
 $ docker compose -f https://github.com/user/repo.git up
 ```
 
 Using SSH:
+
 ```console
 $ docker compose -f git@github.com:user/repo.git up
 ```
 
 You can specify a specific branch, tag, or commit:
+
 ```console
 $ docker compose -f https://github.com/user/repo.git@main up
 $ docker compose -f https://github.com/user/repo.git@v1.0.0 up
@@ -163,6 +172,7 @@ $ docker compose -f https://github.com/user/repo.git@abc123 up
 ```
 
 You can also specify a subdirectory within the repository:
+
 ```console
 $ docker compose -f https://github.com/user/repo.git#main:path/to/compose.yaml up
 ```
@@ -178,17 +188,18 @@ $ docker compose -f https://github.com/user/repo.git -f compose.override.yaml up
 
 Each configuration has a project name. Compose sets the project name using
 the following mechanisms, in order of precedence:
+
 - The `-p` command line flag
 - The `COMPOSE_PROJECT_NAME` environment variable
 - The top level `name:` variable from the config file (or the last `name:`
-from a series of config files specified using `-f`)
+  from a series of config files specified using `-f`)
 - The `basename` of the project directory containing the config file (or
-containing the first config file specified using `-f`)
+  containing the first config file specified using `-f`)
 - The `basename` of the current directory if no config file is specified
-Project names must contain only lowercase letters, decimal digits, dashes,
-and underscores, and must begin with a lowercase letter or decimal digit. If
-the `basename` of the project directory or current directory violates this
-constraint, you must use one of the other mechanisms.
+  Project names must contain only lowercase letters, decimal digits, dashes,
+  and underscores, and must begin with a lowercase letter or decimal digit. If
+  the `basename` of the project directory or current directory violates this
+  constraint, you must use one of the other mechanisms.
 
 ```console
 $ docker compose -p my_project ps -a
@@ -238,6 +249,7 @@ in attached mode. Alternatively, you can also run `docker compose up --menu=fals
 
 Use `--dry-run` flag to test a command without changing your application stack state.
 Dry Run mode shows you all the steps Compose applies when executing a command, for example:
+
 ```console
 $ docker compose --dry-run up --build -d
 [+] Pulling 1/1
@@ -254,6 +266,7 @@ $ docker compose --dry-run up --build -d
  ✔ DRY-RUN MODE -  Container nginx-golang-mysql-backend-1                                Started                                                                                                                                           0.0s
  ✔ DRY-RUN MODE -  Container nginx-golang-mysql-proxy-1                                  Started                                     Started
 ```
+
 From the example above, you can see that the first step is to pull the image defined by `db` service, then build the `backend` service.
 Next, the containers are created. The `db` service is started, and the `backend` and `proxy` wait until the `db` service is healthy before starting.
 

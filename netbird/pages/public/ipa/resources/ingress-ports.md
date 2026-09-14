@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/ipa/resources/ingress-ports.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/ipa/resources/ingress-ports.mdx)
+> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/ipa/resources/ingress-ports.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/ipa/resources/ingress-ports.mdx)
 
 ## List all Port Allocations  **cloud-only - cloud-only - This feature is only available in the cloud version of NetBird.**   (GET /api/peers/{peerId}/ingress/ports)
 

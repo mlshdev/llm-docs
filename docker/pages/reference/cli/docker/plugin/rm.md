@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_plugin_rm.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_plugin_rm.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_plugin_rm.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_plugin_rm.yaml)
 
 # docker plugin rm
 
@@ -11,15 +11,15 @@ Remove one or more plugins
 ## Description
 
 Removes a plugin. You cannot remove a plugin if it is enabled, you must disable
-a plugin using the [`docker plugin disable`](/reference/cli/docker/plugin/disable/) before removing
+a plugin using the [`docker plugin disable`](https://docs.docker.com/reference/cli/docker/plugin/disable/) before removing
 it, or use `--force`. Use of `--force` is not recommended, since it can affect
 functioning of running containers using the plugin.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--force` |  | Force the removal of an active plugin |
+| Option          | Default | Description                           |
+| --------------- | ------- | ------------------------------------- |
+| `-f`, `--force` |         | Force the removal of an active plugin |
 
 ## Examples
 

@@ -1,43 +1,37 @@
-> Commit-pinned source for SearXNG master: [docs/admin/settings/settings_plugins.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/settings/settings_plugins.rst)
+> Pinned source for SearXNG master: [docs/admin/settings/settings_plugins.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/settings/settings_plugins.rst)
 
-.. \_settings plugins:
+<a id="settings-plugins"></a>
 
 # `plugins:`
 
-.. attention:
-
-```text
-The ``enabled_plugins:`` section in SearXNG's settings no longer exists.
-There is no longer a distinction between built-in and external plugin, all
-plugins are registered via the settings in the ``plugins:`` section.
-
-```
+> **Attention**
+> The `enabled_plugins:` section in SearXNG's settings no longer exists.
+> There is no longer a distinction between built-in and external plugin, all
+> plugins are registered via the settings in the `plugins:` section.
 
 ### Further reading ..
 
-- \[plugins admin]\(#plugins admin)
-- \[dev plugin]\(#dev plugin)
+- [plugins admin](https://docs.searxng.org/admin/plugins.html#plugins-admin)
+- [dev plugin](https://docs.searxng.org/dev/plugins/development.html#dev-plugin)
 
-In SearXNG, plugins can be registered in the :py:obj:`PluginStore <searx.plugins.PluginStorage>` via a fully qualified class name.
+In SearXNG, plugins can be registered in the `PluginStore` via a fully qualified class name.
 
-A configuration (:py:obj:`PluginCfg <searx.plugins.PluginCfg>`) can be
+A configuration (`PluginCfg`) can be
 transferred to the plugin, e.g. to activate it by default / *opt-in* or
 *opt-out* from user's point of view.
 
-Please note that some plugins, such as the \[hostnames plugin]\(#hostnames plugin) plugin,
+Please note that some plugins, such as the [hostnames plugin](https://docs.searxng.org/dev/plugins/hostnames.html#hostnames-plugin) plugin,
 require further configuration before they can be made available for selection.
 
-By default the \[settings built in plugins]\(#settings built in plugins) are loaded.  To change the list
+By default the [settings built in plugins](https://docs.searxng.org/admin/settings/settings_plugins.html#settings-built-in-plugins) are loaded.  To change the list
 of plugins to be loaded, the value for `plugins:` in
 `/etc/searxng/settings.yml` must be overwritten.
 
-Following is an example that uses \[settings use\_default\_settings]\(#settings use\_default\_settings) and only
+Following is an example that uses [settings use\_default\_settings](https://docs.searxng.org/admin/settings/settings.html#settings-use-default-settings) and only
 two plugins are registered: the calculator can be activated by the user and the
 unit converter is active by default.
 
-.. code:: yaml
-
-```
+```yaml
 use_default_settings: true
 
 plugins:
@@ -51,23 +45,19 @@ plugins:
 
 To prevent any plugins from loading, the following setting can be used:
 
-.. code:: yaml
-
-```
+```yaml
 use_default_settings: true
 
 plugins: {}
 ```
 
-.. \_settings built in plugins:
+<a id="settings-built-in-plugins"></a>
 
 # built-in plugins
 
 The built-in plugins are all located in the namespace `searx.plugins`.
 
-.. code:: yaml
-
-```
+```yaml
 plugins:
 
   searx.plugins.calculator.SXNGPlugin:
@@ -101,22 +91,24 @@ plugins:
     active: false
 ```
 
-.. \_settings external\_plugins:
+<a id="settings-external-plugins"></a>
 
 # external plugins
 
-SearXNG supports \[external plugins]\(#dev plugin) / there is no need to
+SearXNG supports [external plugins](https://docs.searxng.org/dev/plugins/development.html#dev-plugin) / there is no need to
 install one, SearXNG runs out of the box.
 
-Only show green hosted results:
+**[Only show green hosted results](https://docs.searxng.org/admin/settings/settings_plugins.html#only-show-green-hosted-results):**
+
 SearXNG plugin to check if a domain is part of the Green WEB.
 
-SearXNG BM25 Reranker:
+**[SearXNG BM25 Reranker](https://docs.searxng.org/admin/settings/settings_plugins.html#searxng-bm25-reranker):**
+
 SearXNG plugin that reranks search results using BM25 text relevance scoring
 to improve search quality.
 
-.. \_Only show green hosted results:
+<a id="only-show-green-hosted-results"></a>
 <https://github.com/return42/tgwf-searx-plugins/>
 
-.. \_SearXNG BM25 Reranker:
+<a id="searxng-bm25-reranker"></a>
 <https://github.com/Oaklight/searxng-bm25-reranker>

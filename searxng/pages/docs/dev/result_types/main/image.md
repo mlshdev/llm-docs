@@ -1,7 +1,9 @@
-> Commit-pinned source for SearXNG master: [docs/dev/result_types/main/image.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/result_types/main/image.rst)
+> Pinned source for SearXNG master: [docs/dev/result_types/main/image.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/result_types/main/image.rst)
 
-.. \_result\_types.image:
+<a id="result-types-image"></a>
 
 # Image Results
 
-.. automodule:: searx.result\_types.image
+#### `searx.result_types.image`
+
+Static Python API reference (`automodule`).

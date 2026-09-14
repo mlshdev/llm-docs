@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/indices.sgml#indexes-ordering](https://www.postgresql.org/docs/18/indexes-ordering.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/indices.sgml#indexes-ordering](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/indices.sgml%23indexes-ordering)
+> Canonical documentation: https://www.postgresql.org/docs/18/indexes-ordering.html
 
 # Indexes and ORDER BY
 

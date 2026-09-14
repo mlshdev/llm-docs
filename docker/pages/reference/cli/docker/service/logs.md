@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_service_logs.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_service_logs.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_service_logs.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_service_logs.yaml)
 
 # docker service logs
 
@@ -10,10 +10,10 @@ Fetch the logs of a service or task
 
 The `docker service logs` command batch-retrieves logs present at the time of execution.
 
-> [!NOTE]
+> \[!NOTE]
 > This is a cluster management command, and must be executed on a swarm
 > manager node. To learn about managers and workers, refer to the
-> [Swarm mode section](/engine/swarm/) in the
+> [Swarm mode section](https://docs.docker.com/engine/swarm/) in the
 > documentation.
 
 The `docker service logs` command can be used with either the name or ID of a
@@ -21,12 +21,12 @@ service, or with the ID of a task. If a service is passed, it will display logs
 for all of the containers in that service. If a task is passed, it will only
 display logs from that particular task.
 
-> [!NOTE]
+> \[!NOTE]
 > This command is only functional for services that are started with
 > the `json-file` or `journald` logging driver.
 
 For more information about selecting and configuring logging drivers, refer to
-[Configure logging drivers](/engine/logging/configure/).
+[Configure logging drivers](https://docs.docker.com/engine/logging/configure/).
 
 The `docker service logs --follow` command will continue streaming the new output from
 the service's `STDOUT` and `STDERR`.
@@ -50,7 +50,7 @@ format you may also use RFC3339Nano, `2006-01-02T15:04:05`,
 `2006-01-02T15:04:05.999999999`, `2006-01-02T07:00`, and `2006-01-02`. The local
 timezone on the client will be used if you do not provide either a `Z` or a
 `+-00:00` timezone offset at the end of the timestamp. When providing Unix
-timestamps enter seconds[.nanoseconds], where seconds is the number of seconds
+timestamps enter seconds\[.nanoseconds], where seconds is the number of seconds
 that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap
 seconds (aka Unix epoch or Unix time), and the optional .nanoseconds field is a
 fraction of a second no more than nine digits long. You can combine the
@@ -58,14 +58,14 @@ fraction of a second no more than nine digits long. You can combine the
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--details` |  | Show extra details provided to logs (API 1.30+) |
-| `-f`, `--follow` |  | Follow log output |
-| `--no-resolve` |  | Do not map IDs to Names in output |
-| `--no-task-ids` |  | Do not include task IDs in output |
-| `--no-trunc` |  | Do not truncate output |
-| `--raw` |  | Do not neatly format logs (API 1.30+) |
-| `--since` |  | Show logs since timestamp (e.g. `2013-01-02T13:23:37Z`) or relative (e.g. `42m` for 42 minutes) |
-| `-n`, `--tail` | `all` | Number of lines to show from the end of the logs |
-| `-t`, `--timestamps` |  | Show timestamps |
+| Option               | Default | Description                                                                                     |
+| -------------------- | ------- | ----------------------------------------------------------------------------------------------- |
+| `--details`          |         | Show extra details provided to logs (API 1.30+)                                                 |
+| `-f`, `--follow`     |         | Follow log output                                                                               |
+| `--no-resolve`       |         | Do not map IDs to Names in output                                                               |
+| `--no-task-ids`      |         | Do not include task IDs in output                                                               |
+| `--no-trunc`         |         | Do not truncate output                                                                          |
+| `--raw`              |         | Do not neatly format logs (API 1.30+)                                                           |
+| `--since`            |         | Show logs since timestamp (e.g. `2013-01-02T13:23:37Z`) or relative (e.g. `42m` for 42 minutes) |
+| `-n`, `--tail`       | `all`   | Number of lines to show from the end of the logs                                                |
+| `-t`, `--timestamps` |         | Show timestamps                                                                                 |

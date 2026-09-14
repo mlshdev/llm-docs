@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmagent.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmagent.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/vmagent.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/vmagent.md)
 
 `vmagent` is a tiny agent that helps you collect metrics from various sources,
 [relabel and filter the collected metrics](https://docs.victoriametrics.com/victoriametrics/relabeling/)
@@ -717,7 +717,7 @@ corresponding `-remoteWrite.url`. Separate multiple label names with `^^`.
   -remoteWrite.url=http://<external-service2> \
   -remoteWrite.obfuscateLabels='instance' \
   -remoteWrite.url=http://<internal-service> \
-  -remoteWrite.obfuscateLabels=''
+  -remoteWrite.obfuscateLabels='' 
 ```
 
 ## Automatically generated metrics

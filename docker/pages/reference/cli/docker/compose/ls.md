@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_ls.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_ls.yaml)
 
 # docker compose ls
 
@@ -12,15 +12,15 @@ Lists running Compose projects
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-a`, `--all` |  | Show all stopped Compose projects |
-| `--filter` |  | Filter output based on conditions provided |
-| `--format` | `table` | Format the output. Values: [table \| json] |
-| `-q`, `--quiet` |  | Only display project names |
+| Option          | Default | Description                                 |
+| --------------- | ------- | ------------------------------------------- |
+| `-a`, `--all`   |         | Show all stopped Compose projects           |
+| `--filter`      |         | Filter output based on conditions provided  |
+| `--format`      | `table` | Format the output. Values: \[table \| json] |
+| `-q`, `--quiet` |         | Only display project names                  |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--dry-run` |  | Execute command in dry run mode |
+| Option      | Default | Description                     |
+| ----------- | ------- | ------------------------------- |
+| `--dry-run` |         | Execute command in dry run mode |

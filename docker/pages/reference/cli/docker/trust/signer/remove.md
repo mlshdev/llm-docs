@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_trust_signer_remove.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_trust_signer_remove.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_trust_signer_remove.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_trust_signer_remove.yaml)
 
 # docker trust signer remove
 
@@ -12,9 +12,9 @@ Remove a signer
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-f`, `--force` |  | Do not prompt for confirmation before removing the most recent signer |
+| Option          | Default | Description                                                           |
+| --------------- | ------- | --------------------------------------------------------------------- |
+| `-f`, `--force` |         | Do not prompt for confirmation before removing the most recent signer |
 
 ## Examples
 
@@ -26,6 +26,7 @@ To remove an existing signer, `alice`, from this repository:
 $ docker trust inspect --pretty example/trust-demo
 
 No signatures for example/trust-demo
+
 
 List of signers and their keys:
 
@@ -54,6 +55,7 @@ Successfully removed alice from example/trust-demo
 $ docker trust inspect --pretty example/trust-demo
 
 No signatures for example/trust-demo
+
 
 List of signers and their keys:
 

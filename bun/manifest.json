@@ -1,5 +1,6 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
+  "generatorVersion": 3,
   "project": "bun",
   "title": "Bun",
   "homepage": "https://bun.com/docs",
@@ -8,10 +9,21 @@
   "releaseId": 383114065,
   "releasePublishedAt": "2026-09-05T05:55:48Z",
   "sourceCommit": "744846f844374847c902b5e7fd59b4342a51ef99",
-  "documentCount": 320,
+  "documentCount": 319,
+  "indexComplete": true,
+  "corpusVolumes": [
+    {
+      "name": "llms-full.txt",
+      "byteLength": 1973036,
+      "documentCount": 319,
+      "sha256": "ec07548a9b08089604473f2c7bc65f7db210090e0dc196464838590d98720ae8"
+    }
+  ],
+  "outputDigest": "96a96fa835360e83a380c20f7d8c51affb3929a9fe2850a35f630046aea021a3",
   "notes": [
-    "Pages come from the release-tagged Mintlify documentation tree under docs; snippets are inlined rather than published as duplicate pages.",
+    "Pages and their order come from the release-tagged Mintlify navigation in docs/docs.json; unreferenced files are excluded and snippets are inlined rather than published as duplicate pages.",
     "Static MDX cards, tabs, accordions, steps, callouts, and media frames are normalized to Markdown without executing JavaScript.",
     "Published page links resolve to https://bun.com/docs; source assets point at the immutable release commit."
-  ]
+  ],
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
 }

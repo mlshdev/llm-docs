@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/storage.sgml#storage-file-layout](https://www.postgresql.org/docs/18/storage-file-layout.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/storage.sgml#storage-file-layout](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/storage.sgml%23storage-file-layout)
+> Canonical documentation: https://www.postgresql.org/docs/18/storage-file-layout.html
 
 # Database File Layout
 

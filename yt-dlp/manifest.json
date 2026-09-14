@@ -1,5 +1,6 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
+  "generatorVersion": 3,
   "project": "yt-dlp",
   "title": "yt-dlp",
   "homepage": "https://github.com/yt-dlp/yt-dlp#readme",
@@ -9,8 +10,19 @@
   "releasePublishedAt": "2026-08-19T23:48:43Z",
   "sourceCommit": "3a08beaf031ab68f966401ead017ac81fe8486cf",
   "documentCount": 5,
+  "indexComplete": true,
+  "corpusVolumes": [
+    {
+      "name": "llms-full.txt",
+      "byteLength": 1055981,
+      "documentCount": 5,
+      "sha256": "cfbcdb879a43ebf4b8f55224c371e7b835239964204a5622dc095e890f19f976"
+    }
+  ],
+  "outputDigest": "1265e69018f18c25e75b54e00017878a8d8f2d2510051510d75213b2e9f71b09",
   "notes": [
     "Release-authored Markdown is normalized directly; generated binaries, man pages, and shell completions are omitted.",
     "The supported-site catalog is retained as a separate reference page."
-  ]
+  ],
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
 }

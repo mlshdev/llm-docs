@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/pg_amcheck.sgml#app-pgamcheck](https://www.postgresql.org/docs/18/app-pgamcheck.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/pg_amcheck.sgml#app-pgamcheck](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/pg_amcheck.sgml%23app-pgamcheck)
+> Canonical documentation: https://www.postgresql.org/docs/18/app-pgamcheck.html
 
 # pg_amcheck
 

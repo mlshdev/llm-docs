@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/t3-code.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/ai/sandboxes/integrations/t3-code.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/integrations/t3-code.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/ai/sandboxes/integrations/t3-code.md)
 
 # Connect T3 Code to a sandbox
 

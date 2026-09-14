@@ -1,8 +1,11 @@
-> Commit-pinned source for SearXNG master: [docs/dev/engines/online/qwant.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/qwant.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/online/qwant.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/online/qwant.rst)
 
-.. \_qwant engine:
+<a id="qwant-engine"></a>
 
 # Qwant
 
-.. automodule:: searx.engines.qwant
-:members:
+<a id="api-searx-engines-qwant"></a>
+
+#### `qwant(query: str, sxng_locale: str) -> list[str]`
+
+Autocomplete from Qwant. Supports Qwant's regions.

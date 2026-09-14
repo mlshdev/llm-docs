@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/desktop/docker_desktop_engine_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/desktop/docker_desktop_engine_ls.yaml)
+> Pinned source for Docker main: [data/cli/desktop/docker_desktop_engine_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/desktop/docker_desktop_engine_ls.yaml)
 
 # docker desktop engine ls
 
@@ -8,6 +8,6 @@ List available engines (Windows only)
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
+| Option     | Default  | Description                                          |
+| ---------- | -------- | ---------------------------------------------------- |
 | `--format` | `pretty` | Format the output. Accepted values are: pretty, json |

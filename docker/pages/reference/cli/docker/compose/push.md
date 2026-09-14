@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_push.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_push.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_push.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_push.yaml)
 
 # docker compose push
 
@@ -11,6 +11,7 @@ Push service images
 Pushes images for services to their respective registry/repository.
 
 The following assumptions are made:
+
 - You are pushing an image you have built locally
 - You have access to the build key
 
@@ -29,14 +30,14 @@ services:
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--ignore-push-failures` |  | Push what it can and ignores images with push failures |
-| `--include-deps` |  | Also push images of services declared as dependencies |
-| `-q`, `--quiet` |  | Push without printing progress information |
+| Option                   | Default | Description                                            |
+| ------------------------ | ------- | ------------------------------------------------------ |
+| `--ignore-push-failures` |         | Push what it can and ignores images with push failures |
+| `--include-deps`         |         | Also push images of services declared as dependencies  |
+| `-q`, `--quiet`          |         | Push without printing progress information             |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--dry-run` |  | Execute command in dry run mode |
+| Option      | Default | Description                     |
+| ----------- | ------- | ------------------------------- |
+| `--dry-run` |         | Execute command in dry run mode |

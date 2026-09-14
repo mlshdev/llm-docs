@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [serverless/load-balancing/worker-affinity.mdx](https://docs.runpod.io/serverless/load-balancing/worker-affinity)
+> Pinned source for Runpod main: [serverless/load-balancing/worker-affinity.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/serverless/load-balancing/worker-affinity.mdx)
+> Canonical documentation: https://docs.runpod.io/serverless/load-balancing/worker-affinity
 
 # Worker affinity
 

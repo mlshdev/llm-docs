@@ -1,5 +1,6 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
+  "generatorVersion": 3,
   "project": "netbird",
   "title": "NetBird",
   "homepage": "https://docs.netbird.io/",
@@ -10,9 +11,20 @@
   "sourceCommit": "79a06720b684768b421f0a54f3bb14f22704994f",
   "docsCommit": "d905fda2a3f04a2066746875d09e51a3fe62dfed",
   "documentCount": 343,
+  "indexComplete": true,
+  "corpusVolumes": [
+    {
+      "name": "llms-full.txt",
+      "byteLength": 4363820,
+      "documentCount": 343,
+      "sha256": "ec9af06255741a2250e2966924d3d8e969305c2ef5ba757a12b68a1d5e7b5188"
+    }
+  ],
+  "outputDigest": "068588617ded248cd4a32d94f35a91f22fd9e783676d20b4ce01d10115895b1e",
   "notes": [
     "Public docs are pinned to netbirdio/docs commit d905fda2a3f04a2066746875d09e51a3fe62dfed; its commit message matches v0.77.1 and it changes generated API resource pages.",
     "NetBird does not tag its public docs repository; non-API pages are an evergreen snapshot at that exact commit, not a formally versioned manual.",
     "Release-tagged technical architecture documents are included separately from the public documentation snapshot."
-  ]
+  ],
+  "generatorDigest": "dbfb1df508ad985c7f371eb5f9d44af4478ae65a4df769aba36308a3a45c5bd4"
 }

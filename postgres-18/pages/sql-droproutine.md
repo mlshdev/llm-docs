@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/drop_routine.sgml#sql-droproutine](https://www.postgresql.org/docs/18/sql-droproutine.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/ref/drop_routine.sgml#sql-droproutine](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/ref/drop_routine.sgml%23sql-droproutine)
+> Canonical documentation: https://www.postgresql.org/docs/18/sql-droproutine.html
 
 # DROP ROUTINE
 

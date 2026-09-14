@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_gateway.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_gateway.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_gateway.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_gateway.yaml)
 
 # docker model gateway
 
@@ -46,12 +46,12 @@ automatically (for example, `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`).
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-c`, `--config` |  | Path to the YAML configuration file |
-| `--host` | `0.0.0.0` | Host address to bind to |
-| `-p`, `--port` | `4000` | Port to listen on |
-| `-v`, `--verbose` |  | Enable verbose (debug) logging |
+| Option            | Default   | Description                         |
+| ----------------- | --------- | ----------------------------------- |
+| `-c`, `--config`  |           | Path to the YAML configuration file |
+| `--host`          | `0.0.0.0` | Host address to bind to             |
+| `-p`, `--port`    | `4000`    | Port to listen on                   |
+| `-v`, `--verbose` |           | Enable verbose (debug) logging      |
 
 ## Examples
 

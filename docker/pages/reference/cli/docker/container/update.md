@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_container_update.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_update.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_container_update.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_container_update.yaml)
 
 # docker container update
 
@@ -16,28 +16,28 @@ resources from their Docker host.  With a single command, you can place
 limits on a single container or on many. To specify more than one container,
 provide space-separated list of container names or IDs.
 
-> [!WARNING]
+> \[!WARNING]
 > The `docker update` and `docker container update` commands are not supported
 > for Windows containers.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--blkio-weight` |  | Block IO (relative weight), between 10 and 1000, or 0 to disable (default 0) |
-| `--cpu-period` |  | Limit CPU CFS (Completely Fair Scheduler) period |
-| `--cpu-quota` |  | Limit CPU CFS (Completely Fair Scheduler) quota |
-| `--cpu-rt-period` |  | Limit the CPU real-time period in microseconds (API 1.25+) |
-| `--cpu-rt-runtime` |  | Limit the CPU real-time runtime in microseconds (API 1.25+) |
-| `-c`, `--cpu-shares` |  | CPU shares (relative weight) |
-| `--cpus` |  | Number of CPUs (API 1.29+) |
-| `--cpuset-cpus` |  | CPUs in which to allow execution (0-3, 0,1) |
-| `--cpuset-mems` |  | MEMs in which to allow execution (0-3, 0,1) |
-| `-m`, `--memory` |  | Memory limit |
-| `--memory-reservation` |  | Memory soft limit |
-| `--memory-swap` |  | Swap limit equal to memory plus swap: -1 to enable unlimited swap |
-| `--pids-limit` |  | Tune container pids limit (set -1 for unlimited) (API 1.40+) |
-| `--restart` |  | Restart policy to apply when a container exits |
+| Option                 | Default | Description                                                                  |
+| ---------------------- | ------- | ---------------------------------------------------------------------------- |
+| `--blkio-weight`       |         | Block IO (relative weight), between 10 and 1000, or 0 to disable (default 0) |
+| `--cpu-period`         |         | Limit CPU CFS (Completely Fair Scheduler) period                             |
+| `--cpu-quota`          |         | Limit CPU CFS (Completely Fair Scheduler) quota                              |
+| `--cpu-rt-period`      |         | Limit the CPU real-time period in microseconds (API 1.25+)                   |
+| `--cpu-rt-runtime`     |         | Limit the CPU real-time runtime in microseconds (API 1.25+)                  |
+| `-c`, `--cpu-shares`   |         | CPU shares (relative weight)                                                 |
+| `--cpus`               |         | Number of CPUs (API 1.29+)                                                   |
+| `--cpuset-cpus`        |         | CPUs in which to allow execution (0-3, 0,1)                                  |
+| `--cpuset-mems`        |         | MEMs in which to allow execution (0-3, 0,1)                                  |
+| `-m`, `--memory`       |         | Memory limit                                                                 |
+| `--memory-reservation` |         | Memory soft limit                                                            |
+| `--memory-swap`        |         | Swap limit equal to memory plus swap: -1 to enable unlimited swap            |
+| `--pids-limit`         |         | Tune container pids limit (set -1 for unlimited) (API 1.40+)                 |
+| `--restart`            |         | Restart policy to apply when a container exits                               |
 
 ## Examples
 

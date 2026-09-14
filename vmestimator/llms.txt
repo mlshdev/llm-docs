@@ -10,4 +10,4 @@
 
 ## vmestimator
 
-- [vmestimator](pages/vmestimator/index.md): Source `docs/vmestimator/_index.md`.
+- [vmestimator](pages/vmestimator/index.md): vmestimator measures metrics cardinality across arbitrary label dimensions in real time and exposes the results as metrics. (43055 bytes)

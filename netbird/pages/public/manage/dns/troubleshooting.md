@@ -1,4 +1,4 @@
-> Release-pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/dns/troubleshooting.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/dns/troubleshooting.mdx)
+> Pinned source for NetBird v0.77.1: [netbirdio/docs@d905fda2a3f04a2066746875d09e51a3fe62dfed:src/pages/manage/dns/troubleshooting.mdx](https://github.com/netbirdio/docs/blob/d905fda2a3f04a2066746875d09e51a3fe62dfed/src/pages/manage/dns/troubleshooting.mdx)
 
 # DNS Troubleshooting
 
@@ -701,6 +701,7 @@ Namespace                        : {.netbird.cloud, .83.100.in-addr.arpa}
  NameServers                      : 100.83.255.254
 ...
 PS C:\Users\kdn> Get-DnsClientNrptPolicy
+
 
 Namespace                        : .83.100.in-addr.arpa
 ...

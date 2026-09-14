@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/build/understand-workflows/workflow-components/add-notes-and-documentation.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/understand-workflows/workflow-components/add-notes-and-documentation.md)
+> Pinned source for n8n main: [docs/build/understand-workflows/workflow-components/add-notes-and-documentation.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/build/understand-workflows/workflow-components/add-notes-and-documentation.md)
 
 # Add notes and documentation
 
@@ -63,9 +63,9 @@ The text in double asterisks will be **bold**
 The text in single asterisks will be *italic*
 
 Use # to indicate headings:
-# This is a top-level heading <a id="this-is-a-top-level-heading"></a>
-## This is a sub-heading <a id="this-is-a-sub-heading"></a>
-### This is a smaller sub-heading <a id="this-is-a-smaller-sub-heading"></a>
+# This is a top-level heading <a href="#this-is-a-top-level-heading" id="this-is-a-top-level-heading"></a>
+## This is a sub-heading <a href="#this-is-a-sub-heading" id="this-is-a-sub-heading"></a>
+### This is a smaller sub-heading <a href="#this-is-a-smaller-sub-heading" id="this-is-a-smaller-sub-heading"></a>
 
 You can add links:
 [Example](https://example.com/)

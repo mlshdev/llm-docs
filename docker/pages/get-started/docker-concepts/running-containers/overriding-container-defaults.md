@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/get-started/docker-concepts/running-containers/overriding-container-defaults.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/get-started/docker-concepts/running-containers/overriding-container-defaults.md)
+> Pinned source for Docker main: [content/get-started/docker-concepts/running-containers/overriding-container-defaults.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/get-started/docker-concepts/running-containers/overriding-container-defaults.md)
 
 # Overriding container defaults
 
@@ -149,7 +149,7 @@ Sometimes, you might need to override the default commands (`CMD`) or entry poin
        entrypoint: ["docker-entrypoint.sh", "postgres"]
        command: ["-h", "localhost", "-p", "5432"]
        environment:
-         POSTGRES_PASSWORD: secret
+         POSTGRES_PASSWORD: secret 
    ```
 
    The Compose file defines a service named `postgres` that uses the official Postgres image, sets an entrypoint script, and starts the container with password authentication.

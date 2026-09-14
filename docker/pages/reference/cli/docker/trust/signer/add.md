@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_trust_signer_add.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_trust_signer_add.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_trust_signer_add.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_trust_signer_add.yaml)
 
 # docker trust signer add
 
@@ -12,9 +12,9 @@ Add a signer
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--key` |  | Path to the signer's public key file |
+| Option  | Default | Description                          |
+| ------- | ------- | ------------------------------------ |
+| `--key` |         | Path to the signer's public key file |
 
 ## Examples
 
@@ -26,6 +26,7 @@ To add a new signer, `alice`, to this repository:
 $ docker trust inspect --pretty example/trust-demo
 
 No signatures for example/trust-demo
+
 
 List of signers and their keys:
 
@@ -52,6 +53,7 @@ Successfully added signer: alice to example/trust-demo
 $ docker trust inspect --pretty example/trust-demo
 
 No signatures for example/trust-demo
+
 
 List of signers and their keys:
 

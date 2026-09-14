@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.1: [docs/sources/tutorials/install-grafana-on-raspberry-pi/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/tutorials/install-grafana-on-raspberry-pi/index.md)
+> Pinned source for Grafana v13.2.1: [docs/sources/tutorials/install-grafana-on-raspberry-pi/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/tutorials/install-grafana-on-raspberry-pi/index.md)
 
 ## Introduction
 

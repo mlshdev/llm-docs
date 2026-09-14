@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [quantized-gguf-models-cloned.mdx](https://docs.vast.ai/quantized-gguf-models-cloned)
+> Pinned source for Vast.ai main: [quantized-gguf-models-cloned.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/quantized-gguf-models-cloned.mdx)
+> Canonical documentation: https://docs.vast.ai/quantized-gguf-models-cloned
 
 # Quantized GGUF models (cloned)
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.1: [docs/sources/visualizations/dashboards/create-manage-playlists/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/visualizations/dashboards/create-manage-playlists/index.md)
+> Pinned source for Grafana v13.2.1: [docs/sources/visualizations/dashboards/create-manage-playlists/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/visualizations/dashboards/create-manage-playlists/index.md)
 
 # Manage playlists
 

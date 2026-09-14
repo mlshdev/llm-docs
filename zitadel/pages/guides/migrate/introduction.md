@@ -1,4 +1,5 @@
-> Release-pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/migrate/introduction.mdx](https://zitadel.com/docs/guides/migrate/introduction)
+> Pinned source for ZITADEL v4.17.3: [apps/docs/content/guides/migrate/introduction.mdx](https://github.com/zitadel/zitadel/blob/41b11149c6997eddd7e38390912e12ff5f918a73/apps/docs/content/guides/migrate/introduction.mdx)
+> Canonical documentation: https://zitadel.com/docs/guides/migrate/introduction
 
 This section of guides shows you how to migrate from your current auth system to ZITADEL.
 The individual guides in this section should give you an overview of things to consider before you start the migration.

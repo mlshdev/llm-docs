@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/dhi/release-notes/cli.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/dhi/release-notes/cli.md)
+> Pinned source for Docker main: [content/manuals/dhi/release-notes/cli.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/dhi/release-notes/cli.md)
 
 This page lists changes in recent stable releases of the DHI CLI (`docker dhi`). For
 the full release history, including pre-releases and downloads, see the
@@ -66,7 +66,7 @@ We removed the `--output` flags from the few commands that had it (`customizatio
 # before
 dhictl customization prepare --org my-org golang 1.25 --output my-customization.yaml
 
-# after
+# after 
 dhictl customization prepare --org my-org golang 1.25 > my-customization.yaml
 ```
 

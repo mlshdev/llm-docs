@@ -7,13 +7,17 @@ import {
 } from "../files.ts";
 import {
   cleanMarkdown,
-  convertRst,
   documentTitle,
   githubBlobUrl,
   githubRawUrl,
   normalizeSpacing,
   rewriteMarkdownLinks,
 } from "../markdown.ts";
+import {
+  convertSphinxRst,
+  extractPythonSymbols,
+  indexPythonSymbols,
+} from "./discord-py.ts";
 import { DocumentCollector } from "../quarantine.ts";
 import type {
   GithubLockedSource,
@@ -49,6 +53,41 @@ export async function buildSearxng(
             ) || /^docs\/.*\.rst$/.test(sourcePath),
         )
         .sort(compareCodePoints);
+      const sourceByPath = new Map(
+        await Promise.all(
+          pages
+            .filter((sourcePath) => sourcePath.endsWith(".rst"))
+            .map(
+              async (sourcePath) =>
+                [sourcePath, await readUtf8(root, sourcePath)] as const,
+            ),
+        ),
+      );
+      const labels = collectLabels(sourceByPath);
+      const symbols = indexPythonSymbols(
+        (
+          await Promise.all(
+            files
+              .filter((sourcePath) => /^searx\/.*\.py$/.test(sourcePath))
+              .map(async (sourcePath) => {
+                try {
+                  return extractPythonSymbols(
+                    await readUtf8(root, sourcePath),
+                    sourcePath
+                      .replace(/\.py$/, "")
+                      .replace(/\/__init__$/, "")
+                      .replaceAll("/", "."),
+                  );
+                } catch {
+                  // Some modules contain syntax intentionally outside the
+                  // conservative static extractor's subset. Their autodoc
+                  // directives remain explicit source-reference entries.
+                  return [];
+                }
+              }),
+          )
+        ).flat(),
+      );
       const documents = new DocumentCollector(project.id);
       for (const sourcePath of pages) {
         await documents.collect(sourcePath, async () => {
@@ -58,7 +97,17 @@ export async function buildSearxng(
             new Set([sourcePath]),
           );
           const converted = sourcePath.endsWith(".rst")
-            ? convertRst(normalizeSphinx(source))
+            ? convertSphinxRst(normalizeSphinx(source), {
+                sourcePath,
+                homepage: project.homepage,
+                repository: project.repository,
+                ref: lock.sourceCommit,
+                files: archiveFiles,
+                labels,
+                symbols,
+                currentModule: "",
+                dialect: "searxng",
+              })
             : cleanMarkdown(source);
           const body = rewriteMarkdownLinks(converted, (url, kind) =>
             resolveLink(
@@ -92,7 +141,7 @@ export async function buildSearxng(
         notes: [
           "SearXNG tracks master because the repository publishes neither GitHub releases nor release tags.",
           "Checked-in RST and Markdown includes are expanded without executing Sphinx, Jinja, or imported Python modules.",
-          "Generated autodoc output and non-text assets are omitted.",
+          "Python autodoc is reproduced from statically extracted source docstrings when available; unresolved imported symbols are identified explicitly without importing or executing upstream modules.",
         ],
         licenseText: await readUtf8(root, "LICENSE"),
       };
@@ -101,7 +150,9 @@ export async function buildSearxng(
       sourcePath === "LICENSE" ||
       rootDocuments.includes(sourcePath as (typeof rootDocuments)[number]) ||
       /^docs\/.*\.(?:rst|md)$/.test(sourcePath) ||
-      /^searx\/infopage\/en\/.*\.md$/.test(sourcePath),
+      /^searx\/infopage\/en\/.*\.md$/.test(sourcePath) ||
+      /^searx\/.*\.py$/.test(sourcePath) ||
+      /\.(?:conf|ini|json|py|sh|toml|ya?ml)$/.test(sourcePath),
   );
 }
 
@@ -145,27 +196,34 @@ async function expandIncludes(
 }
 
 function normalizeSphinx(source: string): string {
-  const output: string[] = [];
-  let skipJinja = false;
-  for (const line of source.split("\n")) {
-    if (/^\s*\.\.\s+jinja::/.test(line)) {
-      skipJinja = !skipJinja;
-      continue;
-    }
-    if (skipJinja && /^\S/.test(line)) {
-      skipJinja = false;
-    }
-    if (skipJinja) {
-      continue;
-    }
-    output.push(line.replace(/\{\{[^{}]+\}\}/g, "available"));
-  }
   return normalizeSpacing(
-    output
-      .join("\n")
+    source
       .replace(/^([=\-~^"'`:+*#])\1{2,}\n([^\n]+)\n\1{2,}\s*$/gm, "# $2")
-      .replace(/^\.\. sidebar::\s*(.+)$/gm, "### $1"),
+      .replace(/\{\{[^{}\n]+\}\}/g, "available"),
   );
+}
+
+function collectLabels(
+  sources: ReadonlyMap<string, string>,
+): ReadonlyMap<string, { sourcePath: string; anchor: string }> {
+  const labels = new Map<string, { sourcePath: string; anchor: string }>();
+  for (const [sourcePath, source] of sources) {
+    for (const match of source.matchAll(
+      /^\s*\.\.\s+_([^:]+):(?:\s+\S+)?\s*$/gm,
+    )) {
+      const label = match[1]?.trim();
+      if (label) {
+        labels.set(label, {
+          sourcePath,
+          anchor: label
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, "-")
+            .replace(/^-|-$/g, ""),
+        });
+      }
+    }
+  }
+  return labels;
 }
 
 function resolveLink(

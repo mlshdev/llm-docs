@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_stack_deploy.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_stack_deploy.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_stack_deploy.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_stack_deploy.yaml)
 
 # docker stack deploy
 
@@ -12,22 +12,22 @@ Deploy a new stack or update an existing stack
 
 Create and update a stack from a `compose` file on the swarm.
 
-> [!NOTE]
+> \[!NOTE]
 > This is a cluster management command, and must be executed on a swarm
 > manager node. To learn about managers and workers, refer to the
-> [Swarm mode section](/engine/swarm/) in the
+> [Swarm mode section](https://docs.docker.com/engine/swarm/) in the
 > documentation.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-c`, `--compose-file` |  | Path to a Compose file, or `-` to read from stdin (API 1.25+) |
-| `-d`, `--detach` | `true` | Exit immediately instead of waiting for the stack services to converge |
-| `--prune` |  | Prune services that are no longer referenced (API 1.27+) |
-| `-q`, `--quiet` |  | Suppress progress output |
-| `--resolve-image` | `always` | Query the registry to resolve image digest and supported platforms (`always`, `changed`, `never`) (API 1.30+) |
-| `--with-registry-auth` |  | Send registry authentication details to Swarm agents |
+| Option                 | Default  | Description                                                                                                   |
+| ---------------------- | -------- | ------------------------------------------------------------------------------------------------------------- |
+| `-c`, `--compose-file` |          | Path to a Compose file, or `-` to read from stdin (API 1.25+)                                                 |
+| `-d`, `--detach`       | `true`   | Exit immediately instead of waiting for the stack services to converge                                        |
+| `--prune`              |          | Prune services that are no longer referenced (API 1.27+)                                                      |
+| `-q`, `--quiet`        |          | Suppress progress output                                                                                      |
+| `--resolve-image`      | `always` | Query the registry to resolve image digest and supported platforms (`always`, `changed`, `never`) (API 1.30+) |
+| `--with-registry-auth` |          | Send registry authentication details to Swarm agents                                                          |
 
 ## Examples
 

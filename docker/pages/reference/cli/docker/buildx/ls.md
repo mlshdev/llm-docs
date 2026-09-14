@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/buildx/docker_buildx_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_ls.yaml)
+> Pinned source for Docker main: [data/cli/buildx/docker_buildx_ls.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/buildx/docker_buildx_ls.yaml)
 
 # docker buildx ls
 
@@ -26,17 +26,17 @@ the target platform marked with a `*` in the `PLATFORMS` column.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--format` | `table` | Format the output |
-| `--no-trunc` |  | Don't truncate output |
-| `--timeout` | `20s` | Override the default timeout for loading builder status |
+| Option       | Default | Description                                             |
+| ------------ | ------- | ------------------------------------------------------- |
+| `--format`   | `table` | Format the output                                       |
+| `--no-trunc` |         | Don't truncate output                                   |
+| `--timeout`  | `20s`   | Override the default timeout for loading builder status |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option          | Default | Description          |
+| --------------- | ------- | -------------------- |
+| `-D`, `--debug` |         | Enable debug logging |
 
 ## Examples
 
@@ -48,7 +48,7 @@ using a Go template.
 Valid placeholders for the Go template are listed below:
 
 | Placeholder       | Description                                 |
-|-------------------|---------------------------------------------|
+| ----------------- | ------------------------------------------- |
 | `.Name`           | Builder or node name                        |
 | `.DriverEndpoint` | Driver (for builder) or Endpoint (for node) |
 | `.LastActivity`   | Builder last activity                       |

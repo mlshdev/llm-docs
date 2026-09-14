@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_image_load.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_image_load.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_image_load.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_image_load.yaml)
 
 # docker image load
 
@@ -15,11 +15,11 @@ bzip2, xz or zstd) from a file or STDIN. It restores both images and tags.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-i`, `--input` |  | Read from tar archive file, instead of STDIN |
-| `--platform` |  | Load only the given platform(s). Formatted as a comma-separated list of `os[/arch[/variant]]` (e.g., `linux/amd64,linux/arm64/v8`). (API 1.48+) |
-| `-q`, `--quiet` |  | Suppress the load output |
+| Option          | Default | Description                                                                                                                                     |
+| --------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `-i`, `--input` |         | Read from tar archive file, instead of STDIN                                                                                                    |
+| `--platform`    |         | Load only the given platform(s). Formatted as a comma-separated list of `os[/arch[/variant]]` (e.g., `linux/amd64,linux/arm64/v8`). (API 1.48+) |
+| `-q`, `--quiet` |         | Suppress the load output                                                                                                                        |
 
 ## Examples
 

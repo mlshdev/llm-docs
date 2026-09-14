@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [pods/troubleshooting/jupyterlab-blank-page.mdx](https://docs.runpod.io/pods/troubleshooting/jupyterlab-blank-page)
+> Pinned source for Runpod main: [pods/troubleshooting/jupyterlab-blank-page.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/pods/troubleshooting/jupyterlab-blank-page.mdx)
+> Canonical documentation: https://docs.runpod.io/pods/troubleshooting/jupyterlab-blank-page
 
 # JupyterLab blank page issue
 

@@ -1,4 +1,5 @@
-> Commit-pinned source for Runpod main: [storage/high-performance-storage.mdx](https://docs.runpod.io/storage/high-performance-storage)
+> Pinned source for Runpod main: [storage/high-performance-storage.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/storage/high-performance-storage.mdx)
+> Canonical documentation: https://docs.runpod.io/storage/high-performance-storage
 
 # High-performance storage
 

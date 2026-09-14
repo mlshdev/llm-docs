@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/system-views.sgml#view-pg-available-extension-versions](https://www.postgresql.org/docs/18/view-pg-available-extension-versions.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/system-views.sgml#view-pg-available-extension-versions](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/system-views.sgml%23view-pg-available-extension-versions)
+> Canonical documentation: https://www.postgresql.org/docs/18/view-pg-available-extension-versions.html
 
 # pg_available_extension_versions
 

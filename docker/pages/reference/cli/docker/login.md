@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_login.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_login.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_login.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_login.yaml)
 
 # docker login
 
@@ -161,11 +161,11 @@ registry domain, and values specify the suffix of the program to use
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-p`, `--password` |  | Password or Personal Access Token (PAT), or `-` to read from stdin |
-| `--password-stdin` |  | Take the Password or Personal Access Token (PAT) from stdin |
-| `-u`, `--username` |  | Username |
+| Option             | Default | Description                                                        |
+| ------------------ | ------- | ------------------------------------------------------------------ |
+| `-p`, `--password` |         | Password or Personal Access Token (PAT), or `-` to read from stdin |
+| `--password-stdin` |         | Take the Password or Personal Access Token (PAT) from stdin        |
+| `-u`, `--username` |         | Username                                                           |
 
 ## Examples
 
@@ -210,7 +210,7 @@ by adding the port number to the server name.
 $ docker login registry.example.com:1337
 ```
 
-> [!NOTE]
+> \[!NOTE]
 > Registry addresses should not include URL path components, only the hostname
 > and (optionally) the port. Registry addresses with URL path components may
 > result in an error. For example, `docker login registry.example.com/foo/`

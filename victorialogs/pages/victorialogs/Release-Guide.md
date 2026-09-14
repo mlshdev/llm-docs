@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/Release-Guide.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/Release-Guide.md)
+> Pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/Release-Guide.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/Release-Guide.md)
 
 ## Pre-reqs
 
@@ -16,7 +16,7 @@ Docker may need additional configuration changes:
 
 ```sh
 docker buildx create --use --name=qemu
-docker buildx inspect --bootstrap
+docker buildx inspect --bootstrap  
 ```
 
 By default, docker on MacOS has limited amount of resources (CPU, mem) to use.

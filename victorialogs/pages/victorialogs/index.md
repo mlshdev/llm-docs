@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/_index.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/_index.md)
+> Pinned source for VictoriaLogs v1.52.0: [docs/victorialogs/_index.md](https://github.com/VictoriaMetrics/VictoriaLogs/blob/46a54c976fa3d404396050e8a5ee6c5b0320efc5/docs/victorialogs/_index.md)
 
 VictoriaLogs is [open source](https://github.com/VictoriaMetrics/VictoriaLogs/) user-friendly database for logs
 from [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics/).

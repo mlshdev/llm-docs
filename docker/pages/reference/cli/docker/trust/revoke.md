@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_trust_revoke.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_trust_revoke.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_trust_revoke.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_trust_revoke.yaml)
 
 # docker trust revoke
 
@@ -12,9 +12,9 @@ Remove trust for an image
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `-y`, `--yes` |  | Do not prompt for confirmation |
+| Option        | Default | Description                    |
+| ------------- | ------- | ------------------------------ |
+| `-y`, `--yes` |         | Do not prompt for confirmation |
 
 ## Examples
 
@@ -101,6 +101,7 @@ All tags that have `alice`'s signature on them are removed from the list of rele
 $ docker trust inspect --pretty example/trust-demo
 
 No signatures for example/trust-demo
+
 
 List of signers and their keys for example/trust-demo:
 

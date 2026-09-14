@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/playgrounds/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/playgrounds/_index.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/playgrounds/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/playgrounds/_index.md)
 
 VictoriaMetrics offers public playgrounds where you can try the full observability stack online.
 

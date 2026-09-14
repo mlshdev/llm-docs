@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/func.sgml#functions-conditional](https://www.postgresql.org/docs/18/functions-conditional.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/func.sgml#functions-conditional](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/func.sgml%23functions-conditional)
+> Canonical documentation: https://www.postgresql.org/docs/18/functions-conditional.html
 
 # Conditional Expressions
 
@@ -35,6 +36,7 @@ SELECT * FROM test;
  1
  2
  3
+
 
 SELECT a,
        CASE WHEN a=1 THEN 'one'

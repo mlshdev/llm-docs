@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/wiremock.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/wiremock.md)
+> Pinned source for Docker main: [content/guides/wiremock.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/wiremock.md)
 
 # Mocking API services in development and testing with WireMock
 
@@ -159,7 +159,7 @@ Follow the steps to setup a non-containerized Node application:
    Before you start the Node server, ensure that you have already installed the node packages listed in the package.json file by running `npm install`.
 
    ```console
-   npm install
+   npm install 
    npm run start
    ```
 
@@ -264,7 +264,7 @@ $ cd accuweather-api
    > node src/index.js
 
    API_ENDPOINT_BASE: http://dataservice.accuweather.com
-   ACCUWEATHER_API_KEY is set: true
+   ACCUWEATHER_API_KEY is set: true 
    Listening: http://localhost:5001
    ```
 

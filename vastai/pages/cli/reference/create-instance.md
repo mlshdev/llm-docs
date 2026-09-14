@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [cli/reference/create-instance.mdx](https://docs.vast.ai/cli/reference/create-instance)
+> Pinned source for Vast.ai main: [cli/reference/create-instance.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/cli/reference/create-instance.mdx)
+> Canonical documentation: https://docs.vast.ai/cli/reference/create-instance
 
 # vastai create instance
 
@@ -152,8 +153,7 @@ vastai create instance 5801802 --image pytorch/pytorch --disk 40 --onstart-cmd '
 vastai create instance 384826 --template_hash 661d064bbda1f2a133816b6d55da07c3 --disk 64 --bid_price 0.1
 
 Return value:
-Returns a json reporting the instance ID of the newly created instance:
-{'success': True, 'new_contract': 7835610}
+Returns a json reporting the instance ID of the newly created instance: `{'success': True, 'new_contract': 7835610}`
 ```
 
 ## Global Options

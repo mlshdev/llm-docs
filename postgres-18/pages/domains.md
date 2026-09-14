@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/datatype.sgml#domains](https://www.postgresql.org/docs/18/domains.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/datatype.sgml#domains](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/datatype.sgml%23domains)
+> Canonical documentation: https://www.postgresql.org/docs/18/domains.html
 
 # Domain Types
 

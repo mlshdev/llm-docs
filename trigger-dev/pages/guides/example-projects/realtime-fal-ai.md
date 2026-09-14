@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/guides/example-projects/realtime-fal-ai.mdx](https://trigger.dev/docs/guides/example-projects/realtime-fal-ai)
+> Pinned source for Trigger.dev v4.5.16: [docs/guides/example-projects/realtime-fal-ai.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/guides/example-projects/realtime-fal-ai.mdx)
+> Canonical documentation: https://trigger.dev/docs/guides/example-projects/realtime-fal-ai
 
 # Image generation with Fal.ai and Trigger.dev Realtime
 

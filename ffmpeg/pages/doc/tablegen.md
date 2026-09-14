@@ -1,4 +1,4 @@
-> Commit-pinned source for FFmpeg master: [doc/tablegen.txt](https://github.com/FFmpeg/FFmpeg/blob/6efe500d2e9e24a81bffda8825511f6bc9760cb1/doc/tablegen.txt)
+> Pinned source for FFmpeg master: [doc/tablegen.txt](https://github.com/FFmpeg/FFmpeg/blob/6efe500d2e9e24a81bffda8825511f6bc9760cb1/doc/tablegen.txt)
 
 Writing a table generator
 

@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.1: [docs/sources/setup-grafana/configure-security/configure-database-encryption/integrate-with-hashicorp-vault/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/setup-grafana/configure-security/configure-database-encryption/integrate-with-hashicorp-vault/index.md)
+> Pinned source for Grafana v13.2.1: [docs/sources/setup-grafana/configure-security/configure-database-encryption/integrate-with-hashicorp-vault/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/setup-grafana/configure-security/configure-database-encryption/integrate-with-hashicorp-vault/index.md)
 
 # Integrate Grafana with Hashicorp Vault
 

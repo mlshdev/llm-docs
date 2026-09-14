@@ -1,4 +1,4 @@
-> Release-pinned source for Grafana v13.2.1: [docs/sources/setup-grafana/set-up-https.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/setup-grafana/set-up-https.md)
+> Pinned source for Grafana v13.2.1: [docs/sources/setup-grafana/set-up-https.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/setup-grafana/set-up-https.md)
 
 # Set up Grafana HTTPS for secure web traffic
 

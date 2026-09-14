@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/dblink.sgml#contrib-dblink-fetch](https://www.postgresql.org/docs/18/contrib-dblink-fetch.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/dblink.sgml#contrib-dblink-fetch](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/dblink.sgml%23contrib-dblink-fetch)
+> Canonical documentation: https://www.postgresql.org/docs/18/contrib-dblink-fetch.html
 
 # dblink_fetch
 

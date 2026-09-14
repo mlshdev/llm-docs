@@ -1,4 +1,5 @@
-> Commit-pinned source for Vast.ai main: [cli/reference/search-invoices.mdx](https://docs.vast.ai/cli/reference/search-invoices)
+> Pinned source for Vast.ai main: [cli/reference/search-invoices.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/cli/reference/search-invoices.mdx)
+> Canonical documentation: https://docs.vast.ai/cli/reference/search-invoices
 
 # vastai search invoices
 

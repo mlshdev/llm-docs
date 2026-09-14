@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/pre-seeding.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/pre-seeding.md)
+> Pinned source for Docker main: [content/guides/pre-seeding.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/pre-seeding.md)
 
 # Pre-seeding database with schema and data at startup for development environment
 
@@ -80,7 +80,7 @@ Assuming that you have an existing Postgres database instance up and running, fo
    INSERT INTO users (name, email) VALUES
      ('Alpha', 'alpha@example.com'),
      ('Beta', 'beta@example.com'),
-     ('Gamma', 'gamma@example.com');
+     ('Gamma', 'gamma@example.com');  
    ```
 
    The SQL script creates a new database called `sampledb`, connects to it, and creates a `users` table. The table includes an auto-incrementing `id` as the primary key, a `name` field with a maximum length of 50 characters, and a unique `email` field with up to 100 characters.
@@ -324,7 +324,7 @@ Now that you have learned how to seed the database using various methods like SQ
    1 | Watch netflix  | f
    2 | Finish podcast | f
    3 | Pick up kid    | f
-   (3 rows)
+   (3 rows)  
    ```
 
 ## Recap

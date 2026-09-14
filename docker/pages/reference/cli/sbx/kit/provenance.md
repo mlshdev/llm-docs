@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/sbx_cli/sbx_kit_provenance.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_kit_provenance.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_kit_provenance.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/sbx_cli/sbx_kit_provenance.yaml)
 
 # sbx kit provenance
 
@@ -6,7 +6,7 @@ Show the SLSA provenance attached to a kit
 
 **Usage:** `sbx kit provenance REFERENCE [flags]`
 
-> [!NOTE]
+> \[!NOTE]
 > This command is experimental.
 
 ## Description
@@ -27,23 +27,23 @@ digest are reported as VERIFIED.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--certificate-identity` |  | Exact keyless signer identity (certificate SAN) |
-| `--certificate-identity-regexp` |  | Keyless signer identity regexp (certificate SAN) |
-| `--certificate-oidc-issuer` |  | Exact keyless OIDC issuer |
-| `--certificate-oidc-issuer-regexp` |  | Keyless OIDC issuer regexp |
-| `--insecure-ignore-tlog` |  | Do not require a Rekor transparency-log entry (for private keyless signatures) |
-| `--json` |  | Output in JSON format |
-| `--key` |  | Public key for key-based verification (PEM) |
+| Option                             | Default | Description                                                                    |
+| ---------------------------------- | ------- | ------------------------------------------------------------------------------ |
+| `--certificate-identity`           |         | Exact keyless signer identity (certificate SAN)                                |
+| `--certificate-identity-regexp`    |         | Keyless signer identity regexp (certificate SAN)                               |
+| `--certificate-oidc-issuer`        |         | Exact keyless OIDC issuer                                                      |
+| `--certificate-oidc-issuer-regexp` |         | Keyless OIDC issuer regexp                                                     |
+| `--insecure-ignore-tlog`           |         | Do not require a Rekor transparency-log entry (for private keyless signatures) |
+| `--json`                           |         | Output in JSON format                                                          |
+| `--key`                            |         | Public key for key-based verification (PEM)                                    |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--cloud` |  | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list) |
-| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (https://api.sandboxes-cloud.docker.com). Set DOCKER_CLOUD_API_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
-| `-D`, `--debug` |  | Enable debug logging |
+| Option            | Default                                  | Description                                                                                                                                                                                                             |
+| ----------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--cloud`         |                                          | Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)                                                                  |
+| `--cloud-api-url` | `https://api.sandboxes-cloud.docker.com` | Cloud Sandboxes API base URL; only used with --cloud. Defaults to prod (<https://api.sandboxes-cloud.docker.com>). Set DOCKER\_CLOUD\_API\_URL or pass this flag to override; a legacy value ending in /v1 is accepted. |
+| `-D`, `--debug`   |                                          | Enable debug logging                                                                                                                                                                                                    |
 
 ## Examples
 

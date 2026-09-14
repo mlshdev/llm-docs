@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/deploy/host-n8n/install-options/install-with-docker.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/install-options/install-with-docker.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/install-options/install-with-docker.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/deploy/host-n8n/install-options/install-with-docker.md)
 
 # Install with Docker
 
@@ -120,29 +120,29 @@ To update n8n, in Docker Desktop, navigate to the **Images** tab and select **Pu
 You can also use the command line to pull the latest, or a specific version:
 
 ```shell
-# Pull latest (stable) version <a id="pull-latest-stable-version"></a>
+# Pull latest (stable) version <a href="#pull-latest-stable-version" id="pull-latest-stable-version"></a>
 docker pull n8nio/n8n
 
-# Pull specific version <a id="pull-specific-version"></a>
+# Pull specific version <a href="#pull-specific-version" id="pull-specific-version"></a>
 docker pull n8nio/n8n:1.81.0
 
-# Pull next (unstable) version <a id="pull-next-unstable-version"></a>
+# Pull next (unstable) version <a href="#pull-next-unstable-version" id="pull-next-unstable-version"></a>
 docker pull n8nio/n8n:next
 ```
 
 After pulling the updated image, stop your n8n container and start it again. You can also use the command line. Replace `<container_id>` in the commands below with the container ID you find in the first command:
 
 ```shell
-# Find your container ID <a id="find-your-container-id"></a>
+# Find your container ID <a href="#find-your-container-id" id="find-your-container-id"></a>
 docker ps -a
 
-# Stop the container with the `<container_id>` <a id="stop-the-container-with-the-lesscontaineridgreater"></a>
+# Stop the container with the `<container_id>` <a href="#stop-the-container-with-the-lesscontaineridgreater" id="stop-the-container-with-the-lesscontaineridgreater"></a>
 docker stop <container_id>
 
-# Remove the container with the `<container_id>` <a id="remove-the-container-with-the-lesscontaineridgreater"></a>
+# Remove the container with the `<container_id>` <a href="#remove-the-container-with-the-lesscontaineridgreater" id="remove-the-container-with-the-lesscontaineridgreater"></a>
 docker rm <container_id>
 
-# Start the container <a id="start-the-container"></a>
+# Start the container <a href="#start-the-container" id="start-the-container"></a>
 docker run --name=<container_name> [options] -d n8nio/n8n
 ```
 
@@ -151,16 +151,16 @@ docker run --name=<container_name> [options] -d n8nio/n8n
 If you run n8n using a Docker Compose file, follow these steps to update n8n:
 
 ```sh
-# Navigate to the directory containing your docker compose file <a id="navigate-to-the-directory-containing-your-docker-compose-file"></a>
+# Navigate to the directory containing your docker compose file <a href="#navigate-to-the-directory-containing-your-docker-compose-file" id="navigate-to-the-directory-containing-your-docker-compose-file"></a>
 cd </path/to/your/compose/file/directory>
 
-# Pull latest version <a id="pull-latest-version"></a>
+# Pull latest version <a href="#pull-latest-version" id="pull-latest-version"></a>
 docker compose pull
 
-# Stop and remove older version <a id="stop-and-remove-older-version"></a>
+# Stop and remove older version <a href="#stop-and-remove-older-version" id="stop-and-remove-older-version"></a>
 docker compose down
 
-# Start the container <a id="start-the-container"></a>
+# Start the container <a href="#start-the-container" id="start-the-container"></a>
 docker compose up -d
 ```
 
@@ -195,10 +195,10 @@ pnpm stack --tunnel
 If you prefer to run n8n locally with `pnpm dev` or `pnpm start`, you can start cloudflared as a standalone service:
 
 ```shell
-# Terminal 1: Start the cloudflared tunnel service <a id="terminal-1-start-the-cloudflared-tunnel-service"></a>
+# Terminal 1: Start the cloudflared tunnel service <a href="#terminal-1-start-the-cloudflared-tunnel-service" id="terminal-1-start-the-cloudflared-tunnel-service"></a>
 pnpm --filter n8n-containers services --services cloudflared
 
-# Terminal 2: Start n8n locally <a id="terminal-2-start-n8n-locally"></a>
+# Terminal 2: Start n8n locally <a href="#terminal-2-start-n8n-locally" id="terminal-2-start-n8n-locally"></a>
 pnpm dev
 ```
 

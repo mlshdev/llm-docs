@@ -1,36 +1,43 @@
-> Commit-pinned source for SearXNG master: [docs/src/searx.favicons.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/src/searx.favicons.rst)
+> Pinned source for SearXNG master: [docs/src/searx.favicons.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/src/searx.favicons.rst)
 
-.. \_favicons source:
+<a id="favicons-source"></a>
 
 # Favicons (source)
 
-.. automodule:: searx.favicons
-:members:
+#### `searx.favicons`
 
-.. \_favicons.config:
+Static Python API reference (`automodule`).
+
+<a id="favicons-config"></a>
 
 # Favicons Config
 
-.. automodule:: searx.favicons.config
-:members:
+<a id="api-searx-favicons-config"></a>
 
-.. \_favicons.proxy:
+#### `config()`
+
+Return configuration in JSON format.
+
+<a id="favicons-proxy"></a>
 
 # Favicons Proxy
 
-.. automodule:: searx.favicons.proxy
-:members:
+#### `searx.favicons.proxy`
 
-.. \_favicons.resolver:
+Static Python API reference (`automodule`).
+
+<a id="favicons-resolver"></a>
 
 # Favicons Resolver
 
-.. automodule:: searx.favicons.resolvers
-:members:
+#### `searx.favicons.resolvers`
 
-.. \_favicons.cache:
+Static Python API reference (`automodule`).
+
+<a id="favicons-cache"></a>
 
 # Favicons Cache
 
-.. automodule:: searx.favicons.cache
-:members:
+#### `searx.favicons.cache`
+
+Static Python API reference (`automodule`).

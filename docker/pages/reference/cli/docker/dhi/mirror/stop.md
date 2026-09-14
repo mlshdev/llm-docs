@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/dhi/docker_dhi_mirror_stop.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/dhi/docker_dhi_mirror_stop.yaml)
+> Pinned source for Docker main: [data/cli/dhi/docker_dhi_mirror_stop.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/dhi/docker_dhi_mirror_stop.yaml)
 
 # docker dhi mirror stop
 
@@ -13,38 +13,46 @@ Stop mirroring one or more Docker Hardened Image repositories.
 Multiple repositories can be specified as positional arguments.
 
 Each repository can be specified as:
-  - namespace/name (e.g., myorg/dhi-python) - org must match --org flag or config
-  - name only (e.g., dhi-python) - the namespace can be omitted for simplicity
-    and the command will default to the current org automatically
+
+- namespace/name (e.g., myorg/dhi-python) - org must match --org flag or config
+- name only (e.g., dhi-python) - the namespace can be omitted for simplicity
+  and the command will default to the current org automatically
 
 Examples:
-  # Stop mirroring a single repository
-  docker dhi mirror stop myorg/dhi-python --org myorg
 
-  # Stop mirroring using just the name (defaults to current org)
-  docker dhi mirror stop dhi-python --org myorg
+# Stop mirroring a single repository
 
-  # Stop mirroring multiple repositories
-  docker dhi mirror stop dhi-python dhi-golang dhi-node --org myorg
+docker dhi mirror stop myorg/dhi-python --org myorg
 
-  # Stop mirroring and delete the repositories
-  docker dhi mirror stop dhi-python dhi-golang --org myorg --delete
+# Stop mirroring using just the name (defaults to current org)
 
-  # Stop mirroring, delete without confirmation prompt
-  docker dhi mirror stop dhi-python dhi-golang --org myorg --delete --force
+docker dhi mirror stop dhi-python --org myorg
 
-  # Stop mirroring all repositories matching a filter (using shell substitution)
-  docker dhi mirror stop $(docker dhi mirror list --org myorg --filter golang --json | jq -r '.[].repository') --org myorg
+# Stop mirroring multiple repositories
+
+docker dhi mirror stop dhi-python dhi-golang dhi-node --org myorg
+
+# Stop mirroring and delete the repositories
+
+docker dhi mirror stop dhi-python dhi-golang --org myorg --delete
+
+# Stop mirroring, delete without confirmation prompt
+
+docker dhi mirror stop dhi-python dhi-golang --org myorg --delete --force
+
+# Stop mirroring all repositories matching a filter (using shell substitution)
+
+docker dhi mirror stop $(docker dhi mirror list --org myorg --filter golang --json | jq -r '.\[].repository') --org myorg
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--delete` |  | Delete the repositories after stopping mirroring |
-| `-f`, `--force` |  | Skip confirmation prompt when deleting repositories |
+| Option          | Default | Description                                         |
+| --------------- | ------- | --------------------------------------------------- |
+| `--delete`      |         | Delete the repositories after stopping mirroring    |
+| `-f`, `--force` |         | Skip confirmation prompt when deleting repositories |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--org` |  | Docker Hub organization (overrides config) |
+| Option  | Default | Description                                |
+| ------- | ------- | ------------------------------------------ |
+| `--org` |         | Docker Hub organization (overrides config) |

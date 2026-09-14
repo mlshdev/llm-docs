@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/scout/docker_scout_repo_disable.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_repo_disable.yaml)
+> Pinned source for Docker main: [data/cli/scout/docker_scout_repo_disable.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_repo_disable.yaml)
 
 # docker scout repo disable
 
@@ -12,13 +12,13 @@ The docker scout repo disable command disables Docker Scout on repositories.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--all` |  | Disable all repositories of the organization. Can not be used with --filter. |
-| `--filter` |  | Regular expression to filter repositories by name |
-| `--integration` |  | Name of the integration to use for enabling an image |
-| `--org` |  | Namespace of the Docker organization |
-| `--registry` |  | Container Registry |
+| Option          | Default | Description                                                                  |
+| --------------- | ------- | ---------------------------------------------------------------------------- |
+| `--all`         |         | Disable all repositories of the organization. Can not be used with --filter. |
+| `--filter`      |         | Regular expression to filter repositories by name                            |
+| `--integration` |         | Name of the integration to use for enabling an image                         |
+| `--org`         |         | Namespace of the Docker organization                                         |
+| `--registry`    |         | Container Registry                                                           |
 
 ## Examples
 

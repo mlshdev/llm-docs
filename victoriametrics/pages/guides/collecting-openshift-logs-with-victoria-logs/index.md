@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/collecting-openshift-logs-with-victoria-logs/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/collecting-openshift-logs-with-victoria-logs/_index.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/guides/collecting-openshift-logs-with-victoria-logs/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/collecting-openshift-logs-with-victoria-logs/_index.md)
 
 This guide explains how to collect and store logs from an OpenShift cluster in VictoriaLogs.
 

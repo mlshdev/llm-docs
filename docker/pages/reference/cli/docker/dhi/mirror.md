@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/dhi/docker_dhi_mirror.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/dhi/docker_dhi_mirror.yaml)
+> Pinned source for Docker main: [data/cli/dhi/docker_dhi_mirror.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/dhi/docker_dhi_mirror.yaml)
 
 # docker dhi mirror
 
@@ -10,9 +10,9 @@ Commands to mirror Docker Hardened Images to your organization's registry
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--org` |  | Docker Hub organization (overrides config) |
+| Option  | Default | Description                                |
+| ------- | ------- | ------------------------------------------ |
+| `--org` |         | Docker Hub organization (overrides config) |
 
 ## Subcommands
 

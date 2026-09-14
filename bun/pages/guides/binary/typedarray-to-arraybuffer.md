@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/guides/binary/typedarray-to-arraybuffer.mdx](https://bun.com/docs/guides/binary/typedarray-to-arraybuffer)
+> Pinned source for Bun bun-v1.4.2: [docs/guides/binary/typedarray-to-arraybuffer.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/guides/binary/typedarray-to-arraybuffer.mdx)
+> Canonical documentation: https://bun.com/docs/guides/binary/typedarray-to-arraybuffer
 
 # Convert a Uint8Array to an ArrayBuffer
 

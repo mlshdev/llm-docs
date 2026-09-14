@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/postgres.sgml#server-programming](https://www.postgresql.org/docs/18/server-programming.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/postgres.sgml#server-programming](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/postgres.sgml%23server-programming)
+> Canonical documentation: https://www.postgresql.org/docs/18/server-programming.html
 
 # Server Programming
 

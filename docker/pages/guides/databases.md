@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/guides/databases.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/databases.md)
+> Pinned source for Docker main: [content/guides/databases.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/guides/databases.md)
 
 Using a local containerized database offers flexibility and ease of setup,
 letting you mirror production environments closely without the overhead of

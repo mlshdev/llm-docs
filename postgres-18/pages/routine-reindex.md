@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/maintenance.sgml#routine-reindex](https://www.postgresql.org/docs/18/routine-reindex.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/maintenance.sgml#routine-reindex](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/maintenance.sgml%23routine-reindex)
+> Canonical documentation: https://www.postgresql.org/docs/18/routine-reindex.html
 
 # Routine Reindexing
 

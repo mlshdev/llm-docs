@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/LTS-releases.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/LTS-releases.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/LTS-releases.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/LTS-releases.md)
 
 [Enterprise version of VictoriaMetrics](https://docs.victoriametrics.com/victoriametrics/enterprise/) provides long-term support lines of releases (aka LTS releases).
 Every LTS line receives bugfixes and [security fixes](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/SECURITY.md) for 12 months after

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/engine/docker_swarm_ca.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_swarm_ca.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_swarm_ca.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/engine/docker_swarm_ca.yaml)
 
 # docker swarm ca
 
@@ -10,23 +10,23 @@ Display and rotate the root CA
 
 View or rotate the current swarm CA certificate.
 
-> [!NOTE]
+> \[!NOTE]
 > This is a cluster management command, and must be executed on a swarm
 > manager node. To learn about managers and workers, refer to the
-> [Swarm mode section](/engine/swarm/) in the
+> [Swarm mode section](https://docs.docker.com/engine/swarm/) in the
 > documentation.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--ca-cert` |  | Path to the PEM-formatted root CA certificate to use for the new cluster |
-| `--ca-key` |  | Path to the PEM-formatted root CA key to use for the new cluster |
-| `--cert-expiry` | `2160h0m0s` | Validity period for node certificates (ns\|us\|ms\|s\|m\|h) |
-| `-d`, `--detach` |  | Exit immediately instead of waiting for the root rotation to converge |
-| `--external-ca` |  | Specifications of one or more certificate signing endpoints |
-| `-q`, `--quiet` |  | Suppress progress output |
-| `--rotate` |  | Rotate the swarm CA - if no certificate or key are provided, new ones will be generated |
+| Option           | Default     | Description                                                                             |
+| ---------------- | ----------- | --------------------------------------------------------------------------------------- |
+| `--ca-cert`      |             | Path to the PEM-formatted root CA certificate to use for the new cluster                |
+| `--ca-key`       |             | Path to the PEM-formatted root CA key to use for the new cluster                        |
+| `--cert-expiry`  | `2160h0m0s` | Validity period for node certificates (ns\|us\|ms\|s\|m\|h)                             |
+| `-d`, `--detach` |             | Exit immediately instead of waiting for the root rotation to converge                   |
+| `--external-ca`  |             | Specifications of one or more certificate signing endpoints                             |
+| `-q`, `--quiet`  |             | Suppress progress output                                                                |
+| `--rotate`       |             | Rotate the swarm CA - if no certificate or key are provided, new ones will be generated |
 
 ## Examples
 
@@ -80,7 +80,7 @@ gyg5u9Iliel99l7SuMhNeLkrU7fXs+Of1nTyyM73ig==
 
 ### Root CA rotation (--rotate) {#rotate}
 
-> [!NOTE]
+> \[!NOTE]
 > Mirantis Kubernetes Engine (MKE), formerly known as Docker UCP, provides an external
 > certificate manager service for the swarm. If you run swarm on MKE, you shouldn't
 > rotate the CA certificates manually. Instead, contact Mirantis support if you need

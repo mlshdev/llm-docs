@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/stream-aggregation/configuration.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/stream-aggregation/configuration.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/stream-aggregation/configuration.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/stream-aggregation/configuration.md)
 
 Stream aggregation can be configured via the following command-line flags:
 
@@ -97,7 +97,7 @@ specified individually per each `-remoteWrite.url`:
   # - histogram_bucket
   #
   # ignore_first_sample_interval: 2m
-
+  
   # no_align_flush_to_interval disables aligning of flush times for the aggregated data to multiples of interval.
   # By default, flush times for the aggregated data is aligned to multiples of interval.
   # For example:

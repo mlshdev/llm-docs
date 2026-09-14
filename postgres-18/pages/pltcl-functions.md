@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/pltcl.sgml#pltcl-functions](https://www.postgresql.org/docs/18/pltcl-functions.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/pltcl.sgml#pltcl-functions](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/pltcl.sgml%23pltcl-functions)
+> Canonical documentation: https://www.postgresql.org/docs/18/pltcl-functions.html
 
 # PL/Tcl Functions and Arguments
 

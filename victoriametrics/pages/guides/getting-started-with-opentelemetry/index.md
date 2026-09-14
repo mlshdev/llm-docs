@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/guides/getting-started-with-opentelemetry/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-opentelemetry/_index.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/guides/getting-started-with-opentelemetry/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/guides/getting-started-with-opentelemetry/_index.md)
 
 This guide walks you through deploying VictoriaMetrics and VictoriaLogs on Kubernetes, and collecting [metrics](https://docs.victoriametrics.com/victoriametrics/data-ingestion/opentelemetry-collector/) and [logs](https://docs.victoriametrics.com/victorialogs/data-ingestion/opentelemetry/) from a Go application either directly or via the [OpenTelemetry Collector](https://opentelemetry.io/docs/collector/).
 
@@ -273,7 +273,7 @@ go mod tidy
 The example implements a web server with two HTTP handlers: `/api/slow` and `/api/fast`. Start the application with:
 
 ```sh
-go run main.go
+go run main.go 
 2024/03/25 19:27:41 Starting web server...
 2024/03/25 19:27:41 web server started at localhost:8081.
 ```

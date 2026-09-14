@@ -1,6 +1,6 @@
-> Commit-pinned source for SearXNG master: [docs/dev/engines/offline/sql-engines.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/offline/sql-engines.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/offline/sql-engines.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/offline/sql-engines.rst)
 
-.. \_sql engines:
+<a id="sql-engines"></a>
 
 # SQL Engines
 
@@ -12,52 +12,50 @@
 
 ### info
 
-Initial sponsored by `Search and Discovery Fund    <https://nlnet.nl/discovery>`\_ of [NLnet Foundation](https://nlnet.nl/).
+Initial sponsored by `Search and Discovery Fund <https://nlnet.nl/discovery>`\_ of [NLnet Foundation](https://nlnet.nl/).
 
 With the *SQL engines* you can bind SQL databases into SearXNG.  The following
 Relational Database Management System (RDBMS) are supported:
 
-- \[engine sqlite]\(#engine sqlite)
-- \[engine postgresql]\(#engine postgresql)
-- \[engine mysql\_server]\(#engine mysql\_server) & \[engine mariadb\_server]\(#engine mariadb\_server)
+- [engine sqlite](https://docs.searxng.org/dev/engines/offline/sql-engines.html#engine-sqlite)
+- [engine postgresql](https://docs.searxng.org/dev/engines/offline/sql-engines.html#engine-postgresql)
+- [engine mysql\_server](https://docs.searxng.org/dev/engines/offline/sql-engines.html#engine-mysql-server) & [engine mariadb\_server](https://docs.searxng.org/dev/engines/offline/sql-engines.html#engine-mariadb-server)
 
-All of the engines above are just commented out in the :origin:`settings.yml <searx/settings.yml>`, as you have to set the required attributes for the
+All of the engines above are just commented out in the [settings.yml](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/settings.yml), as you have to set the required attributes for the
 engines, e.g. `database:` ...
 
-.. code:: yaml
-
+```yaml
 - name: ...
-  engine: {sqlite|postgresql|mysql\_server}
+  engine: {sqlite|postgresql|mysql_server}
   database: ...
-  result\_template: {template\_name}
-  query\_str: ...
+  result_template: {template_name}
+  query_str: ...
+```
 
 By default, the engines use the `key-value` template for displaying results /
-see :origin:`simple <searx/templates/simple/result_templates/key-value.html>`
+see [simple](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/templates/simple/result_templates/key-value.html)
 theme.  If you are not satisfied with the original result layout, you can use
 your own template, set `result_template` attribute to `{template_name}` and
 place the templates at:
 
-```text
+```python
 searx/templates/{theme_name}/result_templates/{template_name}
-
 ```
 
 If you do not wish to expose these engines on a public instance, you can still
 add them and limit the access by setting `tokens` as described in section
-\[private engines]\(#private engines).
+[private engines](https://docs.searxng.org/admin/settings/settings_engines.html#private-engines).
 
 # Extra Dependencies
 
-For using \[engine postgresql]\(#engine postgresql) or \[engine mysql\_server]\(#engine mysql\_server) you need to
+For using [engine postgresql](https://docs.searxng.org/dev/engines/offline/sql-engines.html#engine-postgresql) or [engine mysql\_server](https://docs.searxng.org/dev/engines/offline/sql-engines.html#engine-mysql-server) you need to
 install additional packages in Python's Virtual Environment of your SearXNG
-instance.  To switch into the environment (searxng-src) you can use
-searxng.sh:
+instance.  To switch into the environment ([searxng-src](https://docs.searxng.org/admin/installation-searxng.html#searxng-src)) you can use
+[searxng.sh](https://docs.searxng.org/utils/searxng.sh.html#searxng-sh):
 
-```text
+```python
 $ sudo utils/searxng.sh instance cmd bash
 (searxng-pyenv)$ pip install ...
-
 ```
 
 # Configure the engines
@@ -72,49 +70,55 @@ Please, do not include `LIMIT` or `OFFSET` in your SQL query as the engines
 rely on these keywords during paging.  If you want to configure the number of
 returned results use the option `limit`.
 
-.. \_engine sqlite:
+<a id="engine-sqlite"></a>
 
 ## SQLite
 
 ### info
 
-- :origin:`sqlite.py <searx/engines/sqlite.py>`
+- [sqlite.py](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/engines/sqlite.py)
 
-.. automodule:: searx.engines.sqlite
-:members:
+#### `searx.engines.sqlite`
 
-.. \_engine postgresql:
+Static Python API reference (`automodule`).
+
+<a id="engine-postgresql"></a>
 
 ## PostgreSQL
 
+<a id="psycopg2"></a>
+
 ### info
 
-- :origin:`postgresql.py <searx/engines/postgresql.py>`
-- `pip install` psycopg2-binary
+- [postgresql.py](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/engines/postgresql.py)
+- `pip install` [psycopg2-binary](https://docs.searxng.org/dev/engines/offline/sql-engines.html#psycopg2)
 
-.. automodule:: searx.engines.postgresql
-:members:
+#### `searx.engines.postgresql`
 
-.. \_engine mysql\_server:
+Static Python API reference (`automodule`).
+
+<a id="engine-mysql-server"></a>
 
 ## MySQL
 
 ### info
 
-- :origin:`mysql_server.py <searx/engines/mysql_server.py>`
-- `pip install` :pypi:`mysql-connector-python <mysql-connector-python>`
+- [mysql\_server.py](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/engines/mysql_server.py)
+- `pip install` [mysql-connector-python](https://pypi.org/project/mysql-connector-python/)
 
-.. automodule:: searx.engines.mysql\_server
-:members:
+#### `searx.engines.mysql_server`
 
-.. \_engine mariadb\_server:
+Static Python API reference (`automodule`).
+
+<a id="engine-mariadb-server"></a>
 
 ## MariaDB
 
 ### info
 
-- :origin:`mariadb_server.py <searx/engines/mariadb_server.py>`
-- `pip install` :pypi:`mariadb <mariadb>`
+- [mariadb\_server.py](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/searx/engines/mariadb_server.py)
+- `pip install` [mariadb](https://pypi.org/project/mariadb/)
 
-.. automodule:: searx.engines.mariadb\_server
-:members:
+#### `searx.engines.mariadb_server`
+
+Static Python API reference (`automodule`).

@@ -1,4 +1,4 @@
-> Release-pinned source for yt-dlp 2026.08.19: [README.md](https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ead017ac81fe8486cf/README.md)
+> Pinned source for yt-dlp 2026.08.19: [README.md](https://github.com/yt-dlp/yt-dlp/blob/3a08beaf031ab68f966401ead017ac81fe8486cf/README.md)
 
 <div align="center">
 
@@ -1722,6 +1722,7 @@ $ yt-dlp -f "bv*+mergeall[vcodec=none]" --audio-multistreams
 # and the best 2 audio-only formats into one file
 $ yt-dlp -f "bv*+ba+ba.2" --audio-multistreams
 
+
 # The following examples show the old method (without -S) of format selection
 # and how to use -S to achieve a similar but (generally) better result
 
@@ -1734,12 +1735,16 @@ $ yt-dlp -S "+res"
 # Download the smallest video available
 $ yt-dlp -S "+size,+br"
 
+
+
 # Download the best mp4 video available, or the best video if no mp4 available
 $ yt-dlp -f "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b"
 
 # Download the best video with the best extension
 # (For video, mp4 > mov > webm > flv. For audio, m4a > aac > mp3 ...)
 $ yt-dlp -S "ext"
+
+
 
 # Download the best video available but no better than 480p,
 # or the worst video if there is no video under 480p
@@ -1755,6 +1760,8 @@ $ yt-dlp -S "height:480"
 # So this works correctly for vertical videos as well
 $ yt-dlp -S "res:480"
 
+
+
 # Download the best video (that also has audio) but no bigger than 50 MB,
 # or the worst video (that also has audio) if there is no video under 50 MB
 $ yt-dlp -f "b[filesize<50M] / w"
@@ -1766,6 +1773,8 @@ $ yt-dlp -f "b" -S "filesize:50M"
 # Download the best video (that also has audio) that is closest in size to 50 MB
 $ yt-dlp -f "b" -S "filesize~50M"
 
+
+
 # Download best video available via direct link over HTTP/HTTPS protocol,
 # or the best video available via any protocol if there is no such video
 $ yt-dlp -f "(bv*+ba/b)[protocol^=http][protocol!*=dash] / (bv*+ba/b)"
@@ -1773,6 +1782,8 @@ $ yt-dlp -f "(bv*+ba/b)[protocol^=http][protocol!*=dash] / (bv*+ba/b)"
 # Download best video available via the best protocol
 # (https/ftps > http/ftp > m3u8_native > m3u8 > http_dash_segments ...)
 $ yt-dlp -S "proto"
+
+
 
 # Download the best video with either h264 or h265 codec,
 # or the best video if there is no such video
@@ -1786,6 +1797,8 @@ $ yt-dlp -S "codec:h264"
 # or the best video with best codec if there is no such video
 $ yt-dlp -S "+codec:h264"
 
+
+
 # More complex examples
 
 # Download the best video no better than 720p preferring framerate greater than 30,
@@ -1796,6 +1809,8 @@ $ yt-dlp -f "((bv*[fps>30]/bv*)[height<=720]/(wv*[fps>30]/wv*)) + ba / (b[fps>30
 # or the video with the smallest resolution available if there is no such video,
 # preferring larger framerate for formats with the same resolution
 $ yt-dlp -S "res:720,fps"
+
+
 
 # Download the video with smallest resolution no worse than 480p,
 # or the video with the largest resolution available if there is no such video,
@@ -2232,10 +2247,12 @@ class MyLogger:
     def error(self, msg):
         print(msg)
 
+
 # ℹ️ See "progress_hooks" in help(yt_dlp.YoutubeDL)
 def my_hook(d):
     if d['status'] == 'finished':
         print('Done downloading, now post-processing ...')
+
 
 ydl_opts = {
     'logger': MyLogger(),
@@ -2258,6 +2275,7 @@ class MyCustomPP(yt_dlp.postprocessor.PostProcessor):
     def run(self, info):
         self.to_screen('Doing stuff')
         return [], info
+
 
 with yt_dlp.YoutubeDL() as ydl:
     # ℹ️ "when" can take any value in yt_dlp.utils.POSTPROCESS_WHEN
@@ -2297,6 +2315,7 @@ def format_selector(ctx):
         # Must be + separated list of protocols
         'protocol': f'{best_video["protocol"]}+{best_audio["protocol"]}'
     }
+
 
 ydl_opts = {
     'format': format_selector,

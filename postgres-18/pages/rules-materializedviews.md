@@ -1,4 +1,5 @@
-> Tag-pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/rules.sgml#rules-materializedviews](https://www.postgresql.org/docs/18/rules-materializedviews.html)
+> Pinned source for PostgreSQL 18 REL_18_6: [doc/src/sgml/rules.sgml#rules-materializedviews](https://github.com/postgres/postgres/blob/724edf9bde9d356724ad384a2e196edc3c9f80f7/doc/src/sgml/rules.sgml%23rules-materializedviews)
+> Canonical documentation: https://www.postgresql.org/docs/18/rules-materializedviews.html
 
 # Materialized Views
 

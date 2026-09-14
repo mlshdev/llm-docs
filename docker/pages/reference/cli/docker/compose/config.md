@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_config.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_config.yaml)
+> Pinned source for Docker main: [_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_config.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_config.yaml)
 
 # docker compose config
 
@@ -14,30 +14,30 @@ the canonical format.
 
 ## Options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--environment` |  | Print environment used for interpolation. |
-| `--format` |  | Format the output. Values: [yaml \| json] |
-| `--hash` |  | Print the service config hash, one per line. |
-| `--images` |  | Print the image names, one per line. |
-| `--lock-image-digests` |  | Produces an override file with image digests |
-| `--models` |  | Print the model names, one per line. |
-| `--networks` |  | Print the network names, one per line. |
-| `--no-consistency` |  | Don't check model consistency - warning: may produce invalid Compose output |
-| `--no-env-resolution` |  | Don't resolve service env files |
-| `--no-interpolate` |  | Don't interpolate environment variables |
-| `--no-normalize` |  | Don't normalize compose model |
-| `--no-path-resolution` |  | Don't resolve file paths |
-| `-o`, `--output` |  | Save to file (default to stdout) |
-| `--profiles` |  | Print the profile names, one per line. |
-| `-q`, `--quiet` |  | Only validate the configuration, don't print anything |
-| `--resolve-image-digests` |  | Pin image tags to digests |
-| `--services` |  | Print the service names, one per line. |
-| `--variables` |  | Print model variables and default values. |
-| `--volumes` |  | Print the volume names, one per line. |
+| Option                    | Default | Description                                                                 |
+| ------------------------- | ------- | --------------------------------------------------------------------------- |
+| `--environment`           |         | Print environment used for interpolation.                                   |
+| `--format`                |         | Format the output. Values: \[yaml \| json]                                  |
+| `--hash`                  |         | Print the service config hash, one per line.                                |
+| `--images`                |         | Print the image names, one per line.                                        |
+| `--lock-image-digests`    |         | Produces an override file with image digests                                |
+| `--models`                |         | Print the model names, one per line.                                        |
+| `--networks`              |         | Print the network names, one per line.                                      |
+| `--no-consistency`        |         | Don't check model consistency - warning: may produce invalid Compose output |
+| `--no-env-resolution`     |         | Don't resolve service env files                                             |
+| `--no-interpolate`        |         | Don't interpolate environment variables                                     |
+| `--no-normalize`          |         | Don't normalize compose model                                               |
+| `--no-path-resolution`    |         | Don't resolve file paths                                                    |
+| `-o`, `--output`          |         | Save to file (default to stdout)                                            |
+| `--profiles`              |         | Print the profile names, one per line.                                      |
+| `-q`, `--quiet`           |         | Only validate the configuration, don't print anything                       |
+| `--resolve-image-digests` |         | Pin image tags to digests                                                   |
+| `--services`              |         | Print the service names, one per line.                                      |
+| `--variables`             |         | Print model variables and default values.                                   |
+| `--volumes`               |         | Print the volume names, one per line.                                       |
 
 ## Global options
 
-| Option | Default | Description |
-| --- | --- | --- |
-| `--dry-run` |  | Execute command in dry run mode |
+| Option      | Default | Description                     |
+| ----------- | ------- | ------------------------------- |
+| `--dry-run` |         | Execute command in dry run mode |

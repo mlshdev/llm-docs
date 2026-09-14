@@ -1,4 +1,5 @@
-> Release-pinned source for Trigger.dev v4.5.16: [docs/tasks/streams.mdx](https://trigger.dev/docs/tasks/streams)
+> Pinned source for Trigger.dev v4.5.16: [docs/tasks/streams.mdx](https://github.com/triggerdotdev/trigger.dev/blob/ee34a4b13710742ae26d94831547fa2b6cddc9bd/docs/tasks/streams.mdx)
+> Canonical documentation: https://trigger.dev/docs/tasks/streams
 
 # Streaming data from tasks
 

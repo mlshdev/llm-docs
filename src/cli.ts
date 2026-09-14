@@ -1,11 +1,25 @@
-import { writeFile } from "node:fs/promises";
-import { loadConfig, loadLock, lockPath } from "./config.ts";
+import { readFile, rename, rm } from "node:fs/promises";
+import path from "node:path";
+import {
+  isSourcesLock,
+  loadConfig,
+  loadLock,
+  lockPath,
+  rootDirectory,
+} from "./config.ts";
+import {
+  commitDirectoryReplacements,
+  discardDirectoryReplacements,
+  exists,
+  writeUtf8Atomic,
+} from "./files.ts";
 import { resolveLatestSources } from "./github.ts";
 import {
-  buildSite,
   generatedPaths,
+  computeDocumentationDigest,
   orderedLock,
   snapshotMatchesPin,
+  stageProjectReplacement,
   verifyOutputs,
   writeProject,
   writeRootIndexes,
@@ -19,6 +33,7 @@ import {
 } from "./report.ts";
 import type { RetainedProject } from "./report.ts";
 import { projectIds } from "./types.ts";
+import { isBranchLockedSource } from "./types.ts";
 import type {
   CompleteSourcesLock,
   LockedSource,
@@ -27,6 +42,14 @@ import type {
 } from "./types.ts";
 
 const command = process.argv[2];
+const updateTransactionPath = path.join(
+  rootDirectory,
+  ".generated-update-transaction.json",
+);
+
+if (["build", "update", "verify"].includes(command ?? "")) {
+  await recoverUpdateTransaction();
+}
 
 switch (command) {
   case "build":
@@ -38,9 +61,6 @@ switch (command) {
   case "verify":
     await verify();
     break;
-  case "site":
-    await site();
-    break;
   case "report":
     await report();
     break;
@@ -49,7 +69,7 @@ switch (command) {
     break;
   default:
     throw new Error(
-      "Usage: bun run src/cli.ts <build|update|verify|site|report|paths>",
+      "Usage: bun run src/cli.ts <build|update|verify|report|paths>",
     );
 }
 
@@ -97,50 +117,118 @@ async function update(): Promise<void> {
   const pins: Record<ProjectId, LockedSource> = { ...resolved.projects };
   const changed = changedProjects(current, orderedLock(pins));
   const retained: RetainedProject[] = [];
-  for (const project of config.projects) {
-    if (!changed.includes(project.id)) {
-      continue;
-    }
-    const target = pins[project.id];
-    console.log(`Updating ${project.id} to ${target.tag}`);
-    try {
-      // A snapshot pin is only complete once the build has hashed the payloads
-      // it converted, so the pin recorded is the one the build produced.
-      const build = await buildProject(project, target);
-      await writeProject(build);
-      pins[project.id] = build.lock;
-    } catch (error) {
-      const previous = current?.projects[project.id];
-      if (!previous) {
-        throw error;
+  const staged: string[] = [];
+  try {
+    for (const project of config.projects) {
+      if (!changed.includes(project.id)) {
+        continue;
       }
-      // A project that has never been published has nothing to retain, and a
-      // snapshot that this run already replaced has to be regenerated at the
-      // pin being retained. Either failing leaves nothing publishable, so it
-      // propagates.
-      if (await snapshotMatchesPin(project.id, previous)) {
-        pins[project.id] = previous;
-      } else {
-        const rebuilt = await buildProject(project, previous);
-        await writeProject(rebuilt);
-        pins[project.id] = rebuilt.lock;
+      const target = pins[project.id];
+      console.log(`Updating ${project.id} to ${target.tag}`);
+      try {
+        // A snapshot pin is only complete once the build has hashed the
+        // payloads it converted, so the pin recorded is the staged build's.
+        const build = await buildProject(project, target);
+        if (isBranchLockedSource(build.lock)) {
+          const documentationDigest = computeDocumentationDigest(build);
+          const previous = current?.projects[project.id];
+          if (
+            previous &&
+            isBranchLockedSource(previous) &&
+            previous.documentationDigest === documentationDigest
+          ) {
+            pins[project.id] = {
+              ...previous,
+              observedCommit: build.lock.sourceCommit,
+            };
+            console.log(
+              `${project.id} branch advanced without changing published documentation`,
+            );
+            continue;
+          }
+          const finalized = {
+            ...build,
+            lock: {
+              ...build.lock,
+              documentationDigest,
+              observedCommit: build.lock.sourceCommit,
+            },
+          };
+          staged.push(await stageProjectReplacement(finalized));
+          pins[project.id] = finalized.lock;
+        } else {
+          staged.push(await stageProjectReplacement(build));
+          pins[project.id] = build.lock;
+        }
+      } catch (error) {
+        const previous = current?.projects[project.id];
+        if (!previous) {
+          throw error;
+        }
+        // If an interrupted earlier run left this project inconsistent with
+        // the published lock, stage a deterministic rebuild of the retained
+        // pin as part of the same transaction.
+        if (await snapshotMatchesPin(project.id, previous)) {
+          pins[project.id] = previous;
+        } else {
+          const rebuilt = await buildProject(project, previous);
+          staged.push(await stageProjectReplacement(rebuilt));
+          pins[project.id] = rebuilt.lock;
+        }
+        const reason = describeError(error);
+        retained.push({
+          project: project.id,
+          attemptedTag: target.tag,
+          retainedTag: previous.tag,
+          reason,
+        });
+        console.error(
+          `::warning title=${project.id} held at ${previous.tag}::${reason}`,
+        );
       }
-      const reason = describeError(error);
-      retained.push({
-        project: project.id,
-        attemptedTag: target.tag,
-        retainedTag: previous.tag,
-        reason,
-      });
-      console.error(
-        `::warning title=${project.id} held at ${previous.tag}::${reason}`,
-      );
     }
+  } catch (error) {
+    await discardDirectoryReplacements(staged);
+    throw error;
   }
   const next = orderedLock(pins);
-  await writeRootIndexes(config.projects, next);
-  await writeFile(lockPath, `${JSON.stringify(next, null, 2)}\n`, "utf8");
-  await verifyOutputs(config.projects, next);
+  const transaction = {
+    schemaVersion: 1 as const,
+    state: "preparing" as const,
+    projects: await Promise.all(
+      staged.map(async (destination) => ({
+        project: path.basename(destination) as ProjectId,
+        hadPrevious: await exists(destination),
+      })),
+    ),
+    previousLock: current && hasEveryProject(current) ? current : undefined,
+    targetLock: next,
+  };
+  await writeUtf8Atomic(
+    updateTransactionPath,
+    JSON.stringify(transaction, null, 2),
+  );
+  try {
+    await commitDirectoryReplacements(staged, async () => {
+      await writeRootIndexes(config.projects, next);
+      await writeUtf8Atomic(lockPath, JSON.stringify(next, null, 2));
+      await verifyOutputs(config.projects, next);
+      await writeUtf8Atomic(
+        updateTransactionPath,
+        JSON.stringify({ ...transaction, state: "committed" }, null, 2),
+      );
+    });
+    await rm(updateTransactionPath, { force: true });
+  } catch (error) {
+    if (current && hasEveryProject(current)) {
+      const previous = current as CompleteSourcesLock;
+      await writeRootIndexes(config.projects, previous);
+      await writeUtf8Atomic(lockPath, JSON.stringify(previous, null, 2));
+      await verifyOutputs(config.projects, previous);
+    }
+    await rm(updateTransactionPath, { force: true });
+    throw error;
+  }
   if (changed.length === 0 && retained.length === 0) {
     console.log("All projects already match their latest stable release");
   }
@@ -150,7 +238,107 @@ async function update(): Promise<void> {
     [...retained].sort((left, right) =>
       left.project < right.project ? -1 : 1,
     ),
+    resolved.metrics,
   );
+}
+
+function hasEveryProject(lock: SourcesLock): boolean {
+  return projectIds.every((id) => lock.projects[id] !== undefined);
+}
+
+interface UpdateTransaction {
+  readonly schemaVersion: 1;
+  readonly state: "preparing" | "committed";
+  readonly projects: readonly {
+    readonly project: ProjectId;
+    readonly hadPrevious: boolean;
+  }[];
+  readonly previousLock?: CompleteSourcesLock;
+  readonly targetLock: CompleteSourcesLock;
+}
+
+async function recoverUpdateTransaction(): Promise<void> {
+  if (!(await exists(updateTransactionPath))) return;
+  const value: unknown = JSON.parse(
+    await readFile(updateTransactionPath, "utf8"),
+  );
+  const transaction = parseUpdateTransaction(value);
+  const config = await loadConfig();
+  if (transaction.state === "committed") {
+    for (const entry of transaction.projects) {
+      const destination = path.join(rootDirectory, entry.project);
+      await rm(`${destination}.backup`, { recursive: true, force: true });
+      await rm(`${destination}.staging`, { recursive: true, force: true });
+    }
+    await writeRootIndexes(config.projects, transaction.targetLock);
+    await writeUtf8Atomic(
+      lockPath,
+      JSON.stringify(transaction.targetLock, null, 2),
+    );
+    await verifyOutputs(config.projects, transaction.targetLock);
+    await rm(updateTransactionPath, { force: true });
+    return;
+  }
+
+  for (const entry of [...transaction.projects].reverse()) {
+    const destination = path.join(rootDirectory, entry.project);
+    const backup = `${destination}.backup`;
+    if (await exists(backup)) {
+      await rm(destination, { recursive: true, force: true });
+      await rename(backup, destination);
+    } else if (!entry.hadPrevious && (await exists(destination))) {
+      await rm(destination, { recursive: true, force: true });
+    }
+    await rm(`${destination}.staging`, { recursive: true, force: true });
+  }
+  if (transaction.previousLock) {
+    await writeRootIndexes(config.projects, transaction.previousLock);
+    await writeUtf8Atomic(
+      lockPath,
+      JSON.stringify(transaction.previousLock, null, 2),
+    );
+    await verifyOutputs(config.projects, transaction.previousLock);
+  }
+  await rm(updateTransactionPath, { force: true });
+}
+
+function parseUpdateTransaction(value: unknown): UpdateTransaction {
+  if (
+    !value ||
+    typeof value !== "object" ||
+    Array.isArray(value) ||
+    (value as { schemaVersion?: unknown }).schemaVersion !== 1 ||
+    !["preparing", "committed"].includes(
+      String((value as { state?: unknown }).state),
+    ) ||
+    !Array.isArray((value as { projects?: unknown }).projects)
+  ) {
+    throw new Error("Generated update transaction journal is invalid");
+  }
+  const candidate = value as Record<string, unknown>;
+  const projects = candidate.projects as unknown[];
+  if (
+    projects.some(
+      (entry) =>
+        !entry ||
+        typeof entry !== "object" ||
+        Array.isArray(entry) ||
+        !projectIds.includes(
+          (entry as { project?: ProjectId }).project as ProjectId,
+        ) ||
+        typeof (entry as { hadPrevious?: unknown }).hadPrevious !== "boolean",
+    ) ||
+    !isCompleteLock(candidate.targetLock) ||
+    (candidate.previousLock !== undefined &&
+      !isCompleteLock(candidate.previousLock))
+  ) {
+    throw new Error("Generated update transaction journal is invalid");
+  }
+  return candidate as unknown as UpdateTransaction;
+}
+
+function isCompleteLock(value: unknown): value is CompleteSourcesLock {
+  return isSourcesLock(value) && hasEveryProject(value);
 }
 
 // Renders the tracking-issue body for the last `update` run.
@@ -167,14 +355,6 @@ async function verify(): Promise<void> {
   const config = await loadConfig();
   await verifyOutputs(config.projects, await requireLock());
   console.log("Generated documentation matches sources.lock.json");
-}
-
-async function site(): Promise<void> {
-  const config = await loadConfig();
-  const lock = await requireLock();
-  await verifyOutputs(config.projects, lock);
-  await buildSite(config.projects);
-  console.log("GitHub Pages artifact prepared in _site");
 }
 
 async function requireLock(): Promise<CompleteSourcesLock> {

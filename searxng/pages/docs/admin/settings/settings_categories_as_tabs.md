@@ -1,27 +1,27 @@
-> Commit-pinned source for SearXNG master: [docs/admin/settings/settings_categories_as_tabs.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/settings/settings_categories_as_tabs.rst)
+> Pinned source for SearXNG master: [docs/admin/settings/settings_categories_as_tabs.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/settings/settings_categories_as_tabs.rst)
 
-.. \_settings categories\_as\_tabs:
+<a id="settings-categories-as-tabs"></a>
 
 # `categories_as_tabs:`
 
 A list of the categories that are displayed as tabs in the user interface.
-Categories not listed here can still be searched with the search-syntax.
+Categories not listed here can still be searched with the [search-syntax](https://docs.searxng.org/user/search-syntax.html#search-syntax).
 
-.. code:: yaml
+```yaml
+categories_as_tabs:
+  general:
+  images:
+  videos:
+  news:
+  map:
+  music:
+  it:
+  science:
+  files:
+  social media:
+```
 
-categories\_as\_tabs:
-general:
-images:
-videos:
-news:
-map:
-music:
-it:
-science:
-files:
-social media:
-
-Engines are added to `categories:` (compare \[engine categories]\(#engine categories)), the
+Engines are added to `categories:` (compare [engine categories](https://docs.searxng.org/admin/settings/settings_engines.html#engine-categories)), the
 categories listed in `categories_as_tabs` are shown as tabs in the UI.  If
 there are no active engines in a category, the tab is not displayed (e.g. if a
 user disables all engines in a category).

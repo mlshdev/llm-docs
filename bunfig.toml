@@ -1,0 +1,5 @@
+[test]
+# This is a floor on every loaded runtime module, not an aggregate percentage.
+# Raise it as adapter fixtures expand; keeping the current minimum explicit
+# prevents newly covered operational modules from silently falling to zero.
+coverageThreshold = { lines = 0.02, functions = 0.02 }

@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [data/cli/scout/docker_scout_cache_df.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_cache_df.yaml)
+> Pinned source for Docker main: [data/cli/scout/docker_scout_cache_df.yaml](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/data/cli/scout/docker_scout_cache_df.yaml)
 
 # docker scout cache df
 
@@ -31,6 +31,7 @@ Docker Scout temporary directory to generate SBOMs is located at:
   sha256:c41ab5c992deb4fe7e5da09f67a8804a46bd0592bfdf0b1847dde0e0889d2bff │ 21 kB
 
 Total: 21 kB
+
 
 Docker Scout cached SBOMs are located at:
    /Users/user/.docker/scout/sbom

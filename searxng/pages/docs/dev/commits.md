@@ -1,14 +1,14 @@
-> Commit-pinned source for SearXNG master: [docs/dev/commits.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/commits.rst)
+> Pinned source for SearXNG master: [docs/dev/commits.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/commits.rst)
 
-.. \_create commit:
+<a id="create-commit"></a>
 
 # Git Commits & Change Management
 
 ### Create good commits!
 
-- Conventional Commits
-- Structural split of changes
-- Git Commit Good Practice
+- [Conventional Commits](https://docs.searxng.org/dev/commits.html#conventional-commits)
+- [Structural split of changes](https://docs.searxng.org/dev/contribution_guide.html#structural-split-of-changes)
+- [Git Commit Good Practice](https://docs.searxng.org/dev/commits.html#git-commit-good-practice)
 
 A commit and its commit message are among the most important information
 available to a developer for bug fixing and further development.  A commit is a
@@ -49,35 +49,34 @@ The follwing rules should be in mind, when creating a commit:
 
 ***
 
-Choose meaningful commit messages:
-
-.. code:
+**Choose meaningful commit messages:**
 
 ```text
- [type] optional scope: description
+[type] optional scope: description
 
- [body]
+[body]
 
- [optional trailers]
-
+[optional trailers]
 ```
 
-`[type]`:
+**`[type]`:**
+
 Commits MUST be prefixed with a type .. `feat`, `fix`, `refactor`,
 `mod`, `upd`, `doc`, `l10n`, `build` ..
 
-`[body]`
-Information in commit messages
+**`[body]`**
+
+[Information in commit messages](https://docs.searxng.org/dev/commits.html#information-in-commit-messages)
 
 `[optional trailers]`:
 
-- Signed-off-by: certify that the committer has the rights to submit the
+- [Signed-off-by](https://docs.searxng.org/dev/commits.html#signed-off-by): certify that the committer has the rights to submit the
   work under the project’s license.  That the developer has this right is a
-  prerequisite for a merge.  If the Signed-off-by is not set in the
+  prerequisite for a merge.  If the [Signed-off-by](https://docs.searxng.org/dev/commits.html#signed-off-by) is not set in the
   commit, the contributor enters his `Developer's Certificate of Origin` at
   the latest when creating a PR!
 - Closes: Link to the bug report or the bug number (e.g. `Closes: #10`)
-- Co-authored-by: email address of the co-author
+- [Co-authored-by](https://docs.searxng.org/dev/commits.html#co-authored-by): email address of the co-author
 - Reported-by: email address (if there is no bug report)
 - Suggested-by: email address (if there is no bug report)
 
@@ -86,26 +85,23 @@ Information in commit messages
 To give examples at hand, here are a few commits.  Follow the links to see the
 full commit messages:
 
-:patch:`44d941c93`
+**[44d941c93](https://github.com/searxng/searxng/commit/44d941c93)**
+
 `[fix] mojeek web engine: don't add empty fmt argument for web searches`
 
-:patch:`feb15e387`
+**[feb15e387](https://github.com/searxng/searxng/commit/feb15e387)**
+
 `[fix] brave.news engine: response is HTML and no longer JSON`
 
-:patch:`bdfe1c2a1`
+**[bdfe1c2a1](https://github.com/searxng/searxng/commit/bdfe1c2a1)**
+
 `[mod] engines: migration of the individual cache solutions to EngineCache`
 
-.. \_Conventional Commits:
-<https://www.conventionalcommits.org/>
-.. \_Structural split of changes:
-<https://wiki.openstack.org/wiki/GitCommitMessages#Structural_split_of_changes>
-.. \_Git Commit Good Practice:
-<https://wiki.openstack.org/wiki/GitCommitMessages>
-.. \_Information in commit messages:
-<https://wiki.openstack.org/wiki/GitCommitMessages#Information_in_commit_messages>
-.. \_`Developer's Certificate of Origin`:
-<https://developercertificate.org/>
-.. \_Signed-off-by:
-<https://git-scm.com/docs/git-commit#Documentation/git-commit.txt-code--signoffcode>
-.. \_Co-authored-by:
+<a id="conventional-commits"></a>
+<https://www.conventionalcommits.org/> <a id="structural-split-of-changes"></a>
+<https://wiki.openstack.org/wiki/GitCommitMessages#Structural_split_of_changes> <a id="git-commit-good-practice"></a>
+<https://wiki.openstack.org/wiki/GitCommitMessages> <a id="information-in-commit-messages"></a>
+<https://wiki.openstack.org/wiki/GitCommitMessages#Information_in_commit_messages> <a id="developer-s-certificate-of-origin"></a>
+<https://developercertificate.org/> <a id="signed-off-by"></a>
+<https://git-scm.com/docs/git-commit#Documentation/git-commit.txt-code--signoffcode> <a id="co-authored-by"></a>
 <https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors>

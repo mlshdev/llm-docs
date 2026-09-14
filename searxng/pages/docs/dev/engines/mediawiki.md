@@ -1,8 +1,9 @@
-> Commit-pinned source for SearXNG master: [docs/dev/engines/mediawiki.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/mediawiki.rst)
+> Pinned source for SearXNG master: [docs/dev/engines/mediawiki.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/dev/engines/mediawiki.rst)
 
-.. \_mediawiki engine:
+<a id="mediawiki-engine"></a>
 
 # MediaWiki Engine
 
-.. automodule:: searx.engines.mediawiki
-:members:
+#### `searx.engines.mediawiki`
+
+Static Python API reference (`automodule`).

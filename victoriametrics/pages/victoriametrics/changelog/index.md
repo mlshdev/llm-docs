@@ -1,4 +1,4 @@
-> Release-pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/changelog/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/_index.md)
+> Pinned source for VictoriaMetrics v1.151.0: [docs/victoriametrics/changelog/_index.md](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/83fc70c6aced8c99a0a445a872ee891191b98517/docs/victoriametrics/changelog/_index.md)
 
 The following `tip` changes can be tested by building VictoriaMetrics components from the latest commits according to the following docs:
 

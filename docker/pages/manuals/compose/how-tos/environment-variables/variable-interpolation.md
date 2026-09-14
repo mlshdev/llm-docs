@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/manuals/compose/how-tos/environment-variables/variable-interpolation.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/how-tos/environment-variables/variable-interpolation.md)
+> Pinned source for Docker main: [content/manuals/compose/how-tos/environment-variables/variable-interpolation.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/manuals/compose/how-tos/environment-variables/variable-interpolation.md)
 
 # Set, use, and manage variables in a Compose file with interpolation
 
@@ -79,7 +79,7 @@ $ cat .env
 ## define COMPOSE_DEBUG based on DEV_MODE, defaults to false
 COMPOSE_DEBUG=${DEV_MODE:-false}
 
-$ cat compose.yaml
+$ cat compose.yaml 
   services:
     webapp:
       image: my-webapp-image
@@ -240,7 +240,7 @@ $ cat .env
 COMPOSE_FILE=../compose.yaml
 POSTGRES_VERSION=9.3
 
-$ cat ../compose.yaml
+$ cat ../compose.yaml 
 services:
   db:
     image: "postgres:${POSTGRES_VERSION}"

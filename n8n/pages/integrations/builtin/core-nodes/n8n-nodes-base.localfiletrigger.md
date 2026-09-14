@@ -1,4 +1,4 @@
-> Commit-pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md)
+> Pinned source for n8n main: [docs/integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md](https://github.com/n8n-io/n8n-docs/blob/1247f3fde1db33494b74ebf428a768e28c4ee27b/docs/integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md)
 
 # Local File Trigger node <a id="local-file-trigger-node"></a>
 
@@ -47,14 +47,14 @@ Ignore a single file:
 
 ```sh
 **/<fileName>.<suffix>
-# For example, **/myfile.txt <a id="for-example-myfiletxt"></a>
+# For example, **/myfile.txt <a href="#for-example-myfiletxt" id="for-example-myfiletxt"></a>
 ```
 
 Ignore a sub-directory of a directory you're watching:
 
 ```sh
 **/<directoryName>/**
-# For example, **/myDirectory/** <a id="for-example-mydirectory"></a>
+# For example, **/myDirectory/** <a href="#for-example-mydirectory" id="for-example-mydirectory"></a>
 ```
 
 ## Templates and examples <a id="templates-and-examples"></a>

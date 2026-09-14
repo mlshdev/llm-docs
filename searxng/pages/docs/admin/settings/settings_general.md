@@ -1,49 +1,51 @@
-> Commit-pinned source for SearXNG master: [docs/admin/settings/settings_general.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/settings/settings_general.rst)
+> Pinned source for SearXNG master: [docs/admin/settings/settings_general.rst](https://github.com/searxng/searxng/blob/d4ce87c23431f607162fc5c39ce52c538d64588f/docs/admin/settings/settings_general.rst)
 
-.. \_settings general:
+<a id="settings-general"></a>
 
 # `general:`
 
-.. code:: yaml
-
+```yaml
 general:
-debug: false
-instance\_name:  "SearXNG"
-privacypolicy\_url: false
-donation\_url: false
-contact\_url: false
-enable\_metrics: true
-open\_metrics: ''
+  debug: false
+  instance_name:  "SearXNG"
+  privacypolicy_url: false
+  donation_url: false
+  contact_url: false
+  enable_metrics: true
+  open_metrics: ''
+```
 
-`debug` : `$SEARXNG_DEBUG`
+**`debug` : `$SEARXNG_DEBUG`**
+
 In debug mode, the server provides an interactive debugger, will reload when
 code is changed and activates a verbose logging.
 
-.. attention:
+> **Attention**
+> The debug setting is intended for local development server.  Don't
+> activate debug (don't use a development server) when deploying to
+> production.
 
-```text
- The debug setting is intended for local development server.  Don't
- activate debug (don't use a development server) when deploying to
- production.
+**`donation_url` :**
 
-```
-
-`donation_url` :
 Set value to `true` to use your own donation page written in the
-searx/info/en/donate.md and use `false` to disable
+[searx/info/en/donate.md](https://docs.searxng.org/src/searx.infopage.html#searx-infopage) and use `false` to disable
 the donation link altogether.
 
-`privacypolicy_url`:
+**`privacypolicy_url`:**
+
 Link to privacy policy.
 
-`contact_url`:
+**`contact_url`:**
+
 Contact `mailto:` address or WEB form.
 
-`enable_metrics`:
+**`enable_metrics`:**
+
 Enabled by default. Record various anonymous metrics available at `/stats`,
 `/stats/errors` and `/preferences`.
 
-`open_metrics`:
+**`open_metrics`:**
+
 Disabled by default. Set to a secret password to expose an
 [OpenMetrics API](https://github.com/prometheus/OpenMetrics) at `/metrics`,
 e.g. for usage with Prometheus. The `/metrics` endpoint is using HTTP Basic Auth,

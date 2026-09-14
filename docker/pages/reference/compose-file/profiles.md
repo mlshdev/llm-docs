@@ -1,4 +1,4 @@
-> Commit-pinned source for Docker main: [content/reference/compose-file/profiles.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/reference/compose-file/profiles.md)
+> Pinned source for Docker main: [content/reference/compose-file/profiles.md](https://github.com/docker/docs/blob/bbf8dfd2f0205fd5c754eedceac8f8b69aa91f81/content/reference/compose-file/profiles.md)
 
 # Learn how to use profiles in Docker Compose
 

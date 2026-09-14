@@ -1,4 +1,5 @@
-> Release-pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/vite.mdx](https://bun.com/docs/guides/ecosystem/vite)
+> Pinned source for Bun bun-v1.4.2: [docs/guides/ecosystem/vite.mdx](https://github.com/oven-sh/bun/blob/744846f844374847c902b5e7fd59b4342a51ef99/docs/guides/ecosystem/vite.mdx)
+> Canonical documentation: https://bun.com/docs/guides/ecosystem/vite
 
 # Build a frontend using Vite and Bun
 
