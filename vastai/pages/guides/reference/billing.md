@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/reference/billing.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/reference/billing.mdx)
+> Pinned source for Vast.ai main: [guides/reference/billing.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/guides/reference/billing.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/reference/billing
 
 # Billing
@@ -82,7 +82,7 @@ You are not charged active rental or storage costs for instances that are curren
 
 To see a pricing breakdown on your current instances within your Instance page in the console or from offers on the Search page you can hover over the price to see pricing details.
 
-![Price Breakdown](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/price-breakdown.png)
+![Price Breakdown](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/price-breakdown.png)
 
 ## Payment Methods
 
@@ -96,44 +96,44 @@ In this section we will walk through your [billing page](https://cloud.vast.ai/b
 
 Here you can see the current amount of Vast credits you have. This section also shows what you are currently spending on instances and storage volumes.
 
-![Credits Panel](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/billing-page-credits-panel.png)
+![Credits Panel](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/billing-page-credits-panel.png)
 
 ### Adding Credits
 
 By clicking the **Add Credits** button in the credits panel, you can add payment methods, link accounts, and add credits to your Vast account.
 
-![Add Credits Form](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/billing-page-add-credits.png)
+![Add Credits Form](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/billing-page-add-credits.png)
 
 ### Transfer Credits
 
 From this section, you can transfer your personal credits to a different account or team.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/console-billing.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-billing.webp)
 
 Click the **Transfer Credits** button to open a pop-up. There, you can select the destination account or team to send the credit to.
 
 - To transfer credit to another **user**, you will need their email address.
   ⚠️ This action is irreversible, so please double-check the email before proceeding.
 
-![Transfer Credits pop-up](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/console-billing-2.webp)
+![Transfer Credits pop-up](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-billing-2.webp)
 
 - to transfer credit to a **team**, you should be a part of the team.
 
-![Transfer Credit to a team](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/console-billing-3.webp)
+![Transfer Credit to a team](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-billing-3.webp)
 
 - To transfer credit from a team back to a personal account, you must be the team owner. You will need to switch to your team context and open Billing Page form there to see following pop-up.
 
-![Transfer Credits](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/console-billing-4.webp)
+![Transfer Credits](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-billing-4.webp)
 
 ### Transaction History Table
 
 At the bottom of your billing page, you will find an itemized table of your transactions on Vast. By default, the table is open to the **Invoices** tab, where you can see all manual and automatic billing records, as well as transfers and refunds.
 
-![Invoices tab of the Transaction History table](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/transaction-history-table-invoices.png)
+![Invoices tab of the Transaction History table](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/transaction-history-table-invoices.png)
 
 You can also click the **Charges** tab to see an itemized table of all charges from your instances, storage volumes, and serverless workers. Clicking the dropdown arrow on any of these items will display a more complete breakdown of those charges by type, including GPU usage, reserved disk storage, and upload/download usage.
 
-![Charges tab of the Transaction History table](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/transaction-history-table-charges.png)
+![Charges tab of the Transaction History table](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/transaction-history-table-charges.png)
 
 You can also use this table to generate an invoice for all charges or transactions created during a custom span of time by clicking the **Export** button in the top right corner of the table. You can see more details about how to customize this invoice in the following section.
 

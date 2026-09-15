@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.0: [docs/ai-chat/migrating-from-hydrate-messages.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/ai-chat/migrating-from-hydrate-messages.mdx)
+> Pinned source for Trigger.dev v4.6.1: [docs/ai-chat/migrating-from-hydrate-messages.mdx](https://github.com/triggerdotdev/trigger.dev/blob/4132259b9da38c0131570ab7561fca8e016162df/docs/ai-chat/migrating-from-hydrate-messages.mdx)
 > Canonical documentation: https://trigger.dev/docs/ai-chat/migrating-from-hydrate-messages
 
 # Migrate from hydrateMessages to transcript storage

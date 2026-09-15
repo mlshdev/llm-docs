@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/reference/account-settings.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/reference/account-settings.mdx)
+> Pinned source for Vast.ai main: [guides/reference/account-settings.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/guides/reference/account-settings.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/reference/account-settings
 
 # Account Settings
@@ -15,9 +15,9 @@ Turning the switch on and off will enable and disable dark mode.
 
 You can also toggle this setting in the navigation bar with the moon and sun icons.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/console-setting.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-setting.webp)
 
-![](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/console-setting-2.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-setting-2.webp)
 
 ## Account Security
 
@@ -83,7 +83,7 @@ When you are finished editing your environment variables, make sure you select t
 
 Use Notification Settings to choose which account, billing, and instance events reach you by email, in the console, or through webhooks. See [Notifications](https://docs.vast.ai/guides/reference/notifications) for the full setup guide.
 
-![Notification Settings page with Account, Billing, and Instance notification groups](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/console-notifications-settings.png)
+![Notification Settings page with Account, Billing, and Instance notification groups](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-notifications-settings.png)
 
 ## Cloud Connection
 
@@ -122,7 +122,7 @@ You can now delete your Vast.ai account. **Before deleting:**
 
 After these steps, contact us via the **Support Chat** to complete deletion.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/console-setting-4.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-setting-4.webp)
 
 ### Is there a spend rate limit on my account?
 

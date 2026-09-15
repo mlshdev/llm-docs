@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/install/debian.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/engine/install/debian.md)
+> Pinned source for Docker main: [content/manuals/engine/install/debian.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/engine/install/debian.md)
 
 # Install Docker Engine on Debian
 
@@ -147,15 +147,15 @@ available versions in the repository:
 ```console
 $ apt list --all-versions docker-ce
 
+docker-ce/bookworm 5:29.8.1-1~debian.12~bookworm <arch>
 docker-ce/bookworm 5:29.8.0-1~debian.12~bookworm <arch>
-docker-ce/bookworm 5:29.7.2-1~debian.12~bookworm <arch>
 ...
 ```
 
 Select the desired version and install:
 
 ```console
-$ VERSION_STRING=5:29.8.0-1~debian.12~bookworm
+$ VERSION_STRING=5:29.8.1-1~debian.12~bookworm
 $ sudo apt install docker-ce=$VERSION_STRING docker-ce-cli=$VERSION_STRING containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 

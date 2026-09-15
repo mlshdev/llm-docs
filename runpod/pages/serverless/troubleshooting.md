@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [serverless/troubleshooting.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/serverless/troubleshooting.mdx)
+> Pinned source for Runpod main: [serverless/troubleshooting.mdx](https://github.com/runpod/docs/blob/ceb79977df03b21e40ceaec3fdea8c9869897b7e/serverless/troubleshooting.mdx)
 > Canonical documentation: https://docs.runpod.io/serverless/troubleshooting
 
 # Troubleshooting

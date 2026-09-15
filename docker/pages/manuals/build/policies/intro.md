@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/build/policies/intro.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/build/policies/intro.md)
+> Pinned source for Docker main: [content/manuals/build/policies/intro.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/build/policies/intro.md)
 
 Build policies let you validate the inputs to your Docker builds before they
 run. This tutorial walks you through creating your first policy, teaching the

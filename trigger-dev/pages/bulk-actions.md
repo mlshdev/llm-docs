@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.0: [docs/bulk-actions.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/bulk-actions.mdx)
+> Pinned source for Trigger.dev v4.6.1: [docs/bulk-actions.mdx](https://github.com/triggerdotdev/trigger.dev/blob/4132259b9da38c0131570ab7561fca8e016162df/docs/bulk-actions.mdx)
 > Canonical documentation: https://trigger.dev/docs/bulk-actions
 
 # Bulk actions in the dashboard
@@ -17,14 +17,14 @@ Use bulk actions when you need to retry failed runs after deploying a fix, or st
 
 1. Open the runs page and click **Bulk action** in the top right.
 
-   ![Open the bulk action panel from the runs page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/bulk-action-open-panel.png)
+   ![Open the bulk action panel from the runs page](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/4132259b9da38c0131570ab7561fca8e016162df/docs/images/bulk-action-open-panel.png)
 2. Filter the runs table to target a group of runs, or select individual runs from the table.
 3. Choose **Replay** or **Cancel**, add an optional name, then confirm the action.
 
-   ![Configure and create a bulk action](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/bulk-action-create.png)
+   ![Configure and create a bulk action](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/4132259b9da38c0131570ab7561fca8e016162df/docs/images/bulk-action-create.png)
 4. Open the bulk action page to see progress, view affected runs, or replay the action.
 
-   ![View bulk action progress](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/bulk-action-page.png)
+   ![View bulk action progress](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/4132259b9da38c0131570ab7561fca8e016162df/docs/images/bulk-action-page.png)
 
 > **Note**
 >

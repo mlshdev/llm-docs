@@ -6,21 +6,21 @@
   "title": "Grafana",
   "homepage": "https://grafana.com/docs/grafana/latest/",
   "repository": "grafana/grafana",
-  "tag": "v13.2.1",
-  "releaseId": 381036534,
-  "releasePublishedAt": "2026-09-02T07:00:31Z",
-  "sourceCommit": "56cd3e9288d8255fecebe5d05b48d191f50674b5",
+  "tag": "v13.2.2",
+  "releaseId": 389120530,
+  "releasePublishedAt": "2026-09-15T12:21:32Z",
+  "sourceCommit": "3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e",
   "documentCount": 677,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 8197882,
+      "byteLength": 8198820,
       "documentCount": 677,
-      "sha256": "8632628d4db100d3878088a37d0f68a0f39743c966b75c35b590dde5e38bf89d"
+      "sha256": "097d3b82066e8c60411489236b84a4f9a7ecbd26b2c2e59b6f1db0e889a21746"
     }
   ],
-  "outputDigest": "e70350db3b317d9b209b794389795301920dcabcda3e38d814d6480bec8647e5",
+  "outputDigest": "7cf10cd0002c80a00704ae1d76cbe39d899fe267d275ee58a216a3932100eef1",
   "notes": [
     "Page order, sections, and cross-references follow the Hugo weights of docs/sources at the release tag, resolved against https://grafana.com/docs/grafana/v13.2/.",
     "Shared fragments referenced by `docs/shared` and `shared-snippet` are inlined into the pages that render them and are not published separately.",

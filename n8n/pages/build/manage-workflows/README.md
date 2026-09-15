@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/manage-workflows/README.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/build/manage-workflows/README.md)
+> Pinned source for n8n main: [docs/build/manage-workflows/README.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/manage-workflows/README.md)
 
 # Manage workflows <a id="manage-workflows"></a>
 

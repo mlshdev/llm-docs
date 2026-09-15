@@ -1,4 +1,4 @@
-> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/639ee849526cfe61ceb312776335c245b98bd9d4/doc/ffmpeg-protocols.texi)
+> Pinned source for FFmpeg master: [doc/ffmpeg-protocols.texi](https://github.com/FFmpeg/FFmpeg/blob/17e6ed9dc0106fbf837bda5d675fae22360e6c3e/doc/ffmpeg-protocols.texi)
 
 # Description
 
@@ -1712,6 +1712,12 @@ The accepted options are:
 If set to zero, no waiting is done and all processes will immediately race
 to try and fetch the same missing blocks themselves. Defaults to 10000 (10 ms).
 
+- ignore\_errors
+  If true, failures of the underlying input stream are not treated as fatal, and
+  playback continues using only the data already present in the cache file.
+  Default is false. Any attempt to read into uncached data will result in an
+  unrecoverable IO error.
+
 - retry\_errors
   If true (the default), transient read errors from the underlying input stream
   are ignored and retried again. If false, any blocks that previously failed
@@ -1721,6 +1727,22 @@ to try and fetch the same missing blocks themselves. Defaults to 10000 (10 ms).
   If true (the default), blocks whose contents fail the CRC integrity check are
   re-fetched from the underlying input stream, overwriting the corrupt cached
   data. If false, cache corruption is treated as a fatal read error.
+
+- cache\_size\_max
+  Maximum amount of data to cache, in bytes, rounded down to a multiple of the
+  chosen block size. Accepts the usual size suffixes, e.g. `10G` for
+  10*10^9 bytes, or `10Gi` for 10*2^30 bytes. Defaults to 0, meaning no
+  limit.
+
+Once this limit is reached, the protocol switches to read-only mode (see
+`read_only`). Already cached data is never evicted, so once this limit
+is reached, no new data will ever be cached until the cache file is deleted.
+
+Note that this option is best-effort only, and may over-write up to N-1
+blocks, where N is the number of concurrent processes using the same cache
+file. Note also that the underlying file system may reserve more space than
+written, if the underlying allocation granularity is larger than the block
+size.
 
 URL Syntax is
 

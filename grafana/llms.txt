@@ -1,8 +1,8 @@
-# Grafana v13.2.1
+# Grafana v13.2.2
 
-> Documentation generated from the latest stable release of [grafana/grafana](https://github.com/grafana/grafana) and pinned to immutable source commit `56cd3e9288d8255fecebe5d05b48d191f50674b5`.
+> Documentation generated from the latest stable release of [grafana/grafana](https://github.com/grafana/grafana) and pinned to immutable source commit `3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e`.
 
-- [Full documentation](llms-full.txt): Complete normalized corpus for Grafana v13.2.1.
+- [Full documentation](llms-full.txt): Complete normalized corpus for Grafana v13.2.2.
 - [Provenance manifest](manifest.json): Release, commit, document count, and generation notes.
 - Page order, sections, and cross-references follow the Hugo weights of docs/sources at the release tag, resolved against https://grafana.com/docs/grafana/v13.2/.
 - Shared fragments referenced by `docs/shared` and `shared-snippet` are inlined into the pages that render them and are not published separately.
@@ -556,7 +556,7 @@
 - [Advanced variable configurations](pages/visualizations/dashboards/variables/advanced-variables.md): The advanced variable configurations described on this page help you build dashboards that adapt to complex data structures and user selections: (13825 bytes)
 - [Variable syntax](pages/visualizations/dashboards/variables/variable-syntax.md): Panel titles and metric queries can refer to variables using two different syntaxes: (6611 bytes)
 - [Manage and inspect variables](pages/visualizations/dashboards/variables/inspect-variable.md): In the Variables section of the sidebar, you can add variables and manage existing variables. You can also inspect variables to identify any dependencies between them. (1675 bytes)
-- [Assess dashboard usage](pages/visualizations/dashboards/assess-dashboard-usage/index.md): Usage insights enables you to have a better understanding of how your Grafana instance is used. (5155 bytes)
+- [Assess dashboard usage](pages/visualizations/dashboards/assess-dashboard-usage/index.md): Usage insights enables you to have a better understanding of how your Grafana instance is used. (6053 bytes)
 - [Troubleshoot dashboards](pages/visualizations/dashboards/troubleshoot-dashboards/index.md): Use the following strategies to help you troubleshoot common dashboard problems. (3484 bytes)
 - [Panels and visualizations](pages/visualizations/panels-visualizations/index.md): Easily collect, correlate, and visualize data so you can make informed decisions in real time. (2098 bytes)
 - [Visualizations](pages/visualizations/panels-visualizations/visualizations/index.md): Grafana offers a variety of visualizations to support different use cases. This section of the documentation highlights the built-in visualizations, their options and typical usage. (7619 bytes)
@@ -635,7 +635,7 @@
 - [Work with provisioned repositories in Git Sync](pages/as-code/observability-as-code/git-sync/use-git-sync.md): After you sync your resources, Git Sync creates a dashboard that provides a summary of resources, health, pull status, webhook, sync jobs, resources, and files. To access it, follow these steps: (7611 bytes)
 - [Work with provisioned dashboards in Git Sync](pages/as-code/observability-as-code/git-sync/provisioned-dashboards.md): Using provisioning, you can choose to store your dashboard JSON files in either Git repositories using Git Sync or a local path, and manage them through the Grafana interface. Dashboards and folders synchronized using G… (7017 bytes)
 - [Git Sync permissions and access control](pages/as-code/observability-as-code/git-sync/permissions-grafana.md): For Git Sync to work correctly you need to configure permissions at two layers: (23543 bytes)
-- [Configure Git repository protection](pages/as-code/observability-as-code/git-sync/permissions-git.md): For Git Sync to work correctly you need to configure permissions at two layers: (8101 bytes)
+- [Configure Git repository protection](pages/as-code/observability-as-code/git-sync/permissions-git.md): For Git Sync to work correctly you need to configure permissions at two layers: (8141 bytes)
 - [Git Sync deployment scenarios](pages/as-code/observability-as-code/git-sync/scenarios/index.md): This guide shows practical deployment scenarios for Grafana’s Git Sync. Learn how to configure bidirectional synchronization between Grafana and Git repositories for teams, environments, and regions. (2084 bytes)
 - [Single instance Git Sync](pages/as-code/observability-as-code/git-sync/scenarios/single-instance.md): Use a single Grafana instance synchronized with a Git repository. This is the foundation for Git Sync and helps you understand bidirectional synchronization. (3232 bytes)
 - [Git Sync for development and production environments](pages/as-code/observability-as-code/git-sync/scenarios/dev-prod.md): Use separate Grafana instances for development and production. Each syncs with different Git locations to test dashboards before production. (4900 bytes)

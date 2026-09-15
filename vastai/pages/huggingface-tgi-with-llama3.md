@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [huggingface-tgi-with-llama3.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/huggingface-tgi-with-llama3.mdx)
+> Pinned source for Vast.ai main: [huggingface-tgi-with-llama3.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/huggingface-tgi-with-llama3.mdx)
 > Canonical documentation: https://docs.vast.ai/huggingface-tgi-with-llama3
 
 # Huggingface TGI with LLama3
@@ -23,7 +23,7 @@ The template comes with some filters that are minimum requirements for TGI to ru
 
 After selecting the template your screen should look like this:
 
-![Select](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/Select.png)
+![Select](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/Select.png)
 
 ## 2) Modifying the Template
 

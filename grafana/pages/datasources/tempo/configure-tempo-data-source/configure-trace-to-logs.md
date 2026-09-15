@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.1: [docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs.md)
+> Pinned source for Grafana v13.2.2: [docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs.md](https://github.com/grafana/grafana/blob/3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e/docs/sources/datasources/tempo/configure-tempo-data-source/configure-trace-to-logs.md)
 
 # Configure trace to logs correlation
 

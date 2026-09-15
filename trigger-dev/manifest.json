@@ -6,21 +6,21 @@
   "title": "Trigger.dev",
   "homepage": "https://trigger.dev/docs",
   "repository": "triggerdotdev/trigger.dev",
-  "tag": "v4.6.0",
-  "releaseId": 388414420,
-  "releasePublishedAt": "2026-09-14T13:21:59Z",
-  "sourceCommit": "6172bcd1bc67044a295aa41acb49d92db954de3d",
-  "documentCount": 323,
+  "tag": "v4.6.1",
+  "releaseId": 389281977,
+  "releasePublishedAt": "2026-09-15T15:55:44Z",
+  "sourceCommit": "4132259b9da38c0131570ab7561fca8e016162df",
+  "documentCount": 326,
   "indexComplete": true,
   "corpusVolumes": [
     {
       "name": "llms-full.txt",
-      "byteLength": 2858856,
-      "documentCount": 323,
-      "sha256": "0ac4354f71a05932fefae9cde947362d0982da96940c81dc7fda95c1917295e5"
+      "byteLength": 2868465,
+      "documentCount": 326,
+      "sha256": "d852fd3651a6c5e4da3ccbbbfed600ac11a3e258e9496907a4dd7958e7802345"
     }
   ],
-  "outputDigest": "a3fc34112cdfd2a3485d478df4f373f32c51c473b4383c205370b14eed64c163",
+  "outputDigest": "8ff784a3dfa8a588bb9ea3eed855323b62dfb6e80621be4182bdd6e0a5f7c8db",
   "quarantined": [
     {
       "sourcePath": "introduction.mdx",

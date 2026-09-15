@@ -1,9 +1,15 @@
-> Pinned source for Runpod main: [public-endpoints/models/nano-banana-edit.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/public-endpoints/models/nano-banana-edit.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/nano-banana-edit.mdx](https://github.com/runpod/docs/blob/ceb79977df03b21e40ceaec3fdea8c9869897b7e/public-endpoints/models/nano-banana-edit.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/nano-banana-edit
 
 # Nano Banana Edit
 
 Google's state-of-the-art image editing model for combining multiple source images. See model inputs and outputs on Runpod Public Endpoints.
+
+> **Warning**
+>
+> **Nano Banana Edit will be retired on September 28, 2026.**
+>
+> Google is discontinuing the underlying model. Migrate to [Nano Banana 2 Edit](https://docs.runpod.io/public-endpoints/models/nano-banana-2-edit) before that date — it handles the same multi-image editing and adds resolution options up to 4K.
 
 Nano Banana Edit is Google's state-of-the-art image editing model that excels at combining multiple source images into a cohesive output. It can take up to four reference images and merge them based on text instructions.
 

@@ -1,10 +1,13 @@
-> Pinned source for n8n main: [docs/build/work-with-data/transform-data/expression-reference/boolean.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/build/work-with-data/transform-data/expression-reference/boolean.md)
+> Pinned source for n8n main: [docs/build/work-with-data/transform-data/expression-reference/boolean.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/work-with-data/transform-data/expression-reference/boolean.md)
 
 # Boolean <a id="boolean"></a>
 
 ## *`Boolean`*.**`isEmpty()`** <a id="booleanisempty"></a>
 
-**Description:** Returns <code>false</code> for all booleans. Returns <code>true</code> for <code>null</code>.
+**Description:** Returns <code>true</code> if the boolean is <code>false</code>, <code>null</code>, or <code>undefined</code>. Returns <code>false</code> if the boolean is <code>true</code>.
+
+> **Warning**
+> `isEmpty()` isn't a null check. On a boolean it treats `false` as empty, so `{{ $json.flag.isEmpty() }}` returns `true` for both a missing field and a field set to `false`. To test only for a missing value, compare directly, for example `{{ $json.flag === null }}`, or use the **exists** operator in the **If** node.
 
 **Syntax:** *`Boolean`*.isEmpty()
 
@@ -21,12 +24,39 @@ bool.isEmpty() // => false
 
 ```javascript
 // bool = false
-bool.isEmpty() // => false
+bool.isEmpty() // => true
 ```
 
 ```javascript
 // bool = null
 bool.isEmpty() // => true
+```
+
+## *`Boolean`*.**`isNotEmpty()`** <a id="booleanisnotempty"></a>
+
+**Description:** Returns <code>true</code> if the boolean is <code>true</code>. Returns <code>false</code> if the boolean is <code>false</code>, <code>null</code>, or <code>undefined</code>. This is the inverse of <code>isEmpty()</code>.
+
+**Syntax:** *`Boolean`*.isNotEmpty()
+
+**Returns:** Boolean
+
+**Source:**  Custom n8n functionality
+
+**Examples:**
+
+```javascript
+// bool = true
+bool.isNotEmpty() // => true
+```
+
+```javascript
+// bool = false
+bool.isNotEmpty() // => false
+```
+
+```javascript
+// bool = null
+bool.isNotEmpty() // => false
 ```
 
 ## *`Boolean`*.**`toNumber()`** <a id="booleantonumber"></a>

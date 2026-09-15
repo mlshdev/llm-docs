@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.1: [docs/sources/as-code/observability-as-code/git-sync/permissions-git.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/as-code/observability-as-code/git-sync/permissions-git.md)
+> Pinned source for Grafana v13.2.2: [docs/sources/as-code/observability-as-code/git-sync/permissions-git.md](https://github.com/grafana/grafana/blob/3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e/docs/sources/as-code/observability-as-code/git-sync/permissions-git.md)
 
 # Configure Git repository protection
 
@@ -105,7 +105,7 @@ When the repository allows writes and branch protection is not enabled, Git Sync
 
 ### Pull request mode
 
-When branch protection is enabled at your Git provider, Git Sync creates pull requests instead of committing directly. Changes require review and approval before merging to the main branch.
+When branch protection is enabled at your Git provider, Git Sync prompts you to go create pull requests in your Git repository instead of committing directly. Changes require review and approval before merging to the main branch.
 
 **Use when**: Changes require review and approval, such as in production environments or when multiple teams collaborate on dashboards.
 

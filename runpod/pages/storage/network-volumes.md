@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [storage/network-volumes.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/storage/network-volumes.mdx)
+> Pinned source for Runpod main: [storage/network-volumes.mdx](https://github.com/runpod/docs/blob/ceb79977df03b21e40ceaec3fdea8c9869897b7e/storage/network-volumes.mdx)
 > Canonical documentation: https://docs.runpod.io/storage/network-volumes
 
 # Network volumes

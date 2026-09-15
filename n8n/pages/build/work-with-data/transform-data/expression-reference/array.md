@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/work-with-data/transform-data/expression-reference/array.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/build/work-with-data/transform-data/expression-reference/array.md)
+> Pinned source for n8n main: [docs/build/work-with-data/transform-data/expression-reference/array.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/work-with-data/transform-data/expression-reference/array.md)
 
 # Array <a id="array"></a>
 
@@ -308,7 +308,7 @@ arr.intersection([2, 3]) //=> [2]
 
 ## *`Array`*.**`isEmpty()`** <a id="arrayisempty"></a>
 
-**Description:** Returns <code>true</code> if the array has no elements or is <code>null</code>
+**Description:** Returns <code>true</code> if the array has no elements or is <code>null</code> or <code>undefined</code>
 
 **Syntax:** *`Array`*.isEmpty()
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/droid.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/ai/sandboxes/agents/droid.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/droid.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/ai/sandboxes/agents/droid.md)
 
 # Droid
 
@@ -8,10 +8,6 @@ coding agent by Factory, in a sandboxed environment.
 Official documentation: [Droid](https://docs.factory.ai/)
 
 ## Quick start
-
-> \[!NOTE]
-> In Docker Sandboxes v0.42, use `sbx run docker.io/sbx/droid-kit:latest`.
-> The `droid` shorthand is unavailable in this release.
 
 Create a sandbox and run Droid for a project directory:
 

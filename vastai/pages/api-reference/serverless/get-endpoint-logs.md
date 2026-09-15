@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#post /get_endpoint_logs](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/api-reference/openapi.yaml%23post%20/get_endpoint_logs)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#post /get_endpoint_logs](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/api-reference/openapi.yaml%23post%20/get_endpoint_logs)
 > Canonical documentation: https://docs.vast.ai/api-reference/serverless/get-endpoint-logs
 
 # get endpoint logs

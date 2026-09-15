@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [instant-clusters/axolotl.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/instant-clusters/axolotl.mdx)
+> Pinned source for Runpod main: [instant-clusters/axolotl.mdx](https://github.com/runpod/docs/blob/ceb79977df03b21e40ceaec3fdea8c9869897b7e/instant-clusters/axolotl.mdx)
 > Canonical documentation: https://docs.runpod.io/instant-clusters/axolotl
 
 # Deploy an Instant Cluster with Axolotl

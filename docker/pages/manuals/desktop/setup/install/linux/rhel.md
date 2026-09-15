@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/desktop/setup/install/linux/rhel.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/desktop/setup/install/linux/rhel.md)
+> Pinned source for Docker main: [content/manuals/desktop/setup/install/linux/rhel.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/desktop/setup/install/linux/rhel.md)
 
 # Install Docker Desktop on RHEL
 

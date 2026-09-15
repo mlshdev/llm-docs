@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [public-endpoints/models/z-image-turbo.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/public-endpoints/models/z-image-turbo.mdx)
+> Pinned source for Runpod main: [public-endpoints/models/z-image-turbo.mdx](https://github.com/runpod/docs/blob/ceb79977df03b21e40ceaec3fdea8c9869897b7e/public-endpoints/models/z-image-turbo.mdx)
 > Canonical documentation: https://docs.runpod.io/public-endpoints/models/z-image-turbo
 
 # Z-Image Turbo

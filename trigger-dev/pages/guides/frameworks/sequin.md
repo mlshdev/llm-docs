@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.0: [docs/guides/frameworks/sequin.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/guides/frameworks/sequin.mdx)
+> Pinned source for Trigger.dev v4.6.1: [docs/guides/frameworks/sequin.mdx](https://github.com/triggerdotdev/trigger.dev/blob/4132259b9da38c0131570ab7561fca8e016162df/docs/guides/frameworks/sequin.mdx)
 > Canonical documentation: https://trigger.dev/docs/guides/frameworks/sequin
 
 # Sequin database triggers
@@ -9,7 +9,7 @@ This guide will show you how to trigger tasks from database changes using Sequin
 
 Often, task runs coincide with database changes. For instance, you might want to use a Trigger.dev task to generate an embedding for each post in your database:
 
-![Sequin and Trigger.dev Overview](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/sequin-intro.png)
+![Sequin and Trigger.dev Overview](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/4132259b9da38c0131570ab7561fca8e016162df/docs/images/sequin-intro.png)
 
 In this guide, you'll learn how to use Sequin to trigger Trigger.dev tasks from database changes.
 
@@ -124,7 +124,7 @@ Start by creating a new Trigger.dev task that takes in a Sequin change event as 
 
    In the Trigger.dev dashboard, you should now see the `create-embedding-for-post` task:
 
-   ![Task added](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/sequin-register-task.png)
+   ![Task added](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/4132259b9da38c0131570ab7561fca8e016162df/docs/images/sequin-register-task.png)
 
 > **Success**
 >
@@ -232,12 +232,12 @@ You'll now configure Sequin to send every row in your `posts` table to your Trig
 
    4. You'll now set the sort and filter for the consumer. For this guide, we'll sort by `updated_at` and start at the beginning of the table. We won't apply any filters:
 
-   ![Consumer Sort and Filter](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/sequin-sort-and-filter.png)
+   ![Consumer Sort and Filter](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/4132259b9da38c0131570ab7561fca8e016162df/docs/images/sequin-sort-and-filter.png)
 
    5. On the next screen, select **Push** to have Sequin send the events to your webhook URL. Click **Continue**.
    6. Now, give your consumer a name (i.e. `posts_push_consumer`) and in the **HTTP Endpoint** section select the `local_endpoint` you created above. Add the exact API route you created in the previous step (i.e. `/api/create-embedding-for-post`):
 
-   ![Consumer Endpoint](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/sequin-consumer-config.png)
+   ![Consumer Endpoint](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/4132259b9da38c0131570ab7561fca8e016162df/docs/images/sequin-consumer-config.png)
 
    7. Click the **Create Consumer** button.
 
@@ -262,7 +262,7 @@ You'll now configure Sequin to send every row in your `posts` table to your Trig
    ```
 3. In the Sequin console, navigate to the [**Trace**](https://console.sequinstream.com/trace) tab and confirm that Sequin delivered the event to your local endpoint:
 
-   ![Trace Event](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/sequin-trace.png)
+   ![Trace Event](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/4132259b9da38c0131570ab7561fca8e016162df/docs/images/sequin-trace.png)
 4. In your local terminal, you should see a `200` response in your Next.js app:
 
    ```bash
@@ -270,7 +270,7 @@ You'll now configure Sequin to send every row in your `posts` table to your Trig
    ```
 5. Finally, in the [**Trigger.dev dashboard**](https://cloud.trigger.dev/), navigate to the Runs page and confirm that the task run completed successfully:
 
-   ![Task run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/sequin-final-run.png)
+   ![Task run](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/4132259b9da38c0131570ab7561fca8e016162df/docs/images/sequin-final-run.png)
 
 > **Success**
 >

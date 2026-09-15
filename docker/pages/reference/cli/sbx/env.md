@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_env.yaml](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/data/sbx_cli/sbx_env.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_env.yaml](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/data/sbx_cli/sbx_env.yaml)
 
 # sbx env
 
@@ -38,15 +38,17 @@ it, so a checked-in file reaches the same kits from wherever `sbx` is run. Write
 local kit that way: a bare `kits/tool` is as much a registry reference as a
 directory, so it is left as written and resolves from the current directory.
 
-A `workspace:` names the directory mounted read/write into the sandbox,
-resolved against the project directory: the one holding the first PATH, or the
-current directory when none is named. `workspace: .` mounts the project from
-whichever file declares it. Declaring none mounts nothing — as omitting PATH
-does for `sbx create` — and the agent works in the container's own filesystem
-instead of on your files. Unless the file sets `name:`, the sandbox is named
-after the mounted directory, or after the project directory when nothing is
-mounted, so an environment that mounts nothing is still the same sandbox every
-time.
+A `workspace:` names the directory mounted read/write into the sandbox. A
+relative path resolves against the directory of the file that declares it — as
+a relative kit source does — so `workspace: .` mounts the directory the file
+sits in. ${{ env.projectDir }} names the project directory (the one holding the
+first PATH, or the current directory when none is named) and ${{ env.fileDir }}
+the declaring file's own, for a value that spells its anchor out. Declaring
+none mounts nothing — as omitting PATH does for `sbx create` — and the agent
+works in the container's own filesystem instead of on your files. Unless the file sets `name:` or --name overrides it,
+the sandbox is named after the mounted directory, or after the project directory
+when nothing is mounted, so an environment that mounts nothing is still the same
+sandbox every time.
 
 A `lifecycle:` block declares commands that run on the host — outside
 the sandbox, with your own privileges — around the sandbox's life:
@@ -60,9 +62,10 @@ preRemove:
 \- command: ./scripts/archive-state.sh
 
 Each runs through your shell from the project directory — the one holding the
-first PATH, which is also what a relative "workspace:" resolves against, and is
-shared by commands merged in from a file elsewhere. Change it per command with
-`workdir:`, and cap a command's runtime with `timeout:`.
+first PATH, or the current directory when none is named; ${{ env.projectDir }}
+names the same place, and commands merged in from a file elsewhere share it.
+Change it per command with `workdir:`, and cap a command's runtime with
+`timeout:`.
 
 "initialize" runs on every "create" and every "run", including one that only
 attaches, so it can produce the workspace the sandbox mounts; write it to be

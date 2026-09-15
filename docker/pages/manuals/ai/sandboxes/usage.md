@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/usage.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/ai/sandboxes/usage.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/usage.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/ai/sandboxes/usage.md)
 
 # Usage
 
@@ -51,8 +51,12 @@ sandboxes stopped within the last week:
 
 ```console
 $ sbx prune --dry-run
-$ sbx prune --filter since=168h
+$ sbx prune --filter until=168h
 ```
+
+The `until` filter uses the time the sandbox stopped. It accepts a duration
+such as `168h`, an RFC 3339 timestamp, or a Unix timestamp. The older
+`since=<duration>` filter remains supported.
 
 Run `sbx prune` without flags to confirm and remove all stopped sandboxes.
 
@@ -136,6 +140,10 @@ Omit the path to create a mountless sandbox instead. Attach later with
 $ sbx create --name scratch claude
 $ sbx run --name scratch
 ```
+
+After `sbx create` finishes, the local sandbox stops automatically when no
+sessions keep it running. Its files and configuration persist. Running
+`sbx run --name <sandbox-name>` starts it again and attaches you to the agent.
 
 ## Set environment variables
 

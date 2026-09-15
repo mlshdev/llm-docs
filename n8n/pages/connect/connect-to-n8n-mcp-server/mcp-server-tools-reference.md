@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/connect/connect-to-n8n-mcp-server/mcp-server-tools-reference.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/connect/connect-to-n8n-mcp-server/mcp-server-tools-reference.md)
+> Pinned source for n8n main: [docs/connect/connect-to-n8n-mcp-server/mcp-server-tools-reference.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/connect/connect-to-n8n-mcp-server/mcp-server-tools-reference.md)
 
 # n8n MCP server tools reference <a id="n8n-mcp-server-tools-reference"></a>
 

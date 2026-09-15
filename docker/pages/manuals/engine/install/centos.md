@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/install/centos.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/engine/install/centos.md)
+> Pinned source for Docker main: [content/manuals/engine/install/centos.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/engine/install/centos.md)
 
 # Install Docker Engine on CentOS
 
@@ -104,8 +104,8 @@ the repository:
 ```console
 $ dnf list docker-ce --showduplicates | sort -r
 
+docker-ce.x86_64    3:29.8.1-1.el9    docker-ce-stable
 docker-ce.x86_64    3:29.8.0-1.el9    docker-ce-stable
-docker-ce.x86_64    3:29.7.2-1.el9    docker-ce-stable
 <...>
 ```
 
@@ -114,7 +114,7 @@ to your version of CentOS (indicated by the `.el9` suffix in this example).
 
 Install a specific version by its fully qualified package name, which is
 the package name (`docker-ce`) plus the version string (2nd column),
-separated by a hyphen (`-`). For example, `docker-ce-3:29.8.0-1.el9`.
+separated by a hyphen (`-`). For example, `docker-ce-3:29.8.1-1.el9`.
 
 Replace `<VERSION_STRING>` with the desired version and then run the following
 command to install:

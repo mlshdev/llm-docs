@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/deploy/host-n8n/install-options/install-using-docker-compose.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/deploy/host-n8n/install-options/install-using-docker-compose.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/install-options/install-using-docker-compose.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/deploy/host-n8n/install-options/install-using-docker-compose.md)
 
 # Install using Docker Compose
 
@@ -57,6 +57,8 @@ search:
 ## Step 4: Create `compose.yml`
 
 This defines every service you're setting up: n8n itself, the sandbox stack that lets n8n Assistant safely run code, and SearXNG for web search.
+
+[Embedded content](https://github.com/n8n-io/n8n/blob/master/docker/get-n8n-compose.yml)
 
 ## What you've just set up
 

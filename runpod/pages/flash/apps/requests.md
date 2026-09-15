@@ -1,4 +1,4 @@
-> Pinned source for Runpod main: [flash/apps/requests.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/flash/apps/requests.mdx)
+> Pinned source for Runpod main: [flash/apps/requests.mdx](https://github.com/runpod/docs/blob/ceb79977df03b21e40ceaec3fdea8c9869897b7e/flash/apps/requests.mdx)
 > Canonical documentation: https://docs.runpod.io/flash/apps/requests
 
 # Send API requests to deployed endpoints

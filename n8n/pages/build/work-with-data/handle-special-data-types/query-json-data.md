@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/work-with-data/handle-special-data-types/query-json-data.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/build/work-with-data/handle-special-data-types/query-json-data.md)
+> Pinned source for n8n main: [docs/build/work-with-data/handle-special-data-types/query-json-data.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/work-with-data/handle-special-data-types/query-json-data.md)
 
 # Query JSON with JMESPath <a id="query-json-with-jmespath"></a>
 

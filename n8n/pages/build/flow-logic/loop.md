@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/flow-logic/loop.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/build/flow-logic/loop.md)
+> Pinned source for n8n main: [docs/build/flow-logic/loop.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/flow-logic/loop.md)
 
 # Looping in n8n <a id="looping-in-n8n"></a>
 
@@ -8,7 +8,7 @@ Looping is useful when you want to process multiple items or perform an action r
 
 n8n nodes take any number of items as input, process these items, and output the results. You can think of each item as a single data point, or a single row in the output table of a node.
 
-![The Customer Datastore node output](https://raw.githubusercontent.com/n8n-io/n8n-docs/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/build/.gitbook/assets/customer_datastore_node.png)
+![The Customer Datastore node output](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/.gitbook/assets/customer_datastore_node.png)
 
 Nodes usually run once for each item. For example, if you wanted to send the name and notes of the customers in the Customer Datastore node as a message on Slack, you would:
 
@@ -34,7 +34,7 @@ To create a loop in an n8n workflow, connect the output of one node to the input
 
 Here is an [example workflow](https://n8n.io/workflows/1130) that implements a loop with an `IF` node:
 
-![Workflow canvas showing an IF node connected back to a previous node to form a loop, checking a condition to stop it](https://raw.githubusercontent.com/n8n-io/n8n-docs/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/build/.gitbook/assets/example_workflow.png)
+![Workflow canvas showing an IF node connected back to a previous node to form a loop, checking a condition to stop it](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/.gitbook/assets/example_workflow.png)
 
 ### Loop until all items are processed <a id="loop-until-all-items-are-processed"></a>
 

@@ -1,6 +1,6 @@
 # Vast.ai main
 
-> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `175a318c27750ea64da94f043dda39ec5cb26259`.
+> Documentation generated from the latest `main` branch commit of [vast-ai/docs](https://github.com/vast-ai/docs) and pinned to immutable source commit `1f62d7e4ed71d62a858e7a800ff8096e25f07b8f`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Vast.ai main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -105,7 +105,7 @@
 - [Notification Webhooks](pages/guides/reference/notification-webhooks.md): Send Vast.ai notification events to your own HTTPS endpoint for automation, monitoring, and audit workflows. (9646 bytes)
 - [Keys](pages/guides/reference/keys.md): The Keys page helps you manage secure access to your Vast.ai account. Here, you'll find different types of keys used for authentication and connection. (3074 bytes)
 - [Two-Factor Authentication](pages/guides/reference/two-factor-authentication.md): Two-factor authentication (2FA) adds a second layer of security to your account. After entering your password, you verify your identity using a code from your phone or email. This means an attacker who obtains your pass… (8389 bytes)
-- [Referral Program](pages/guides/reference/referral-program.md): Turn your audience into earnings! Share your unique Vast.ai referral link (or a public template link), and when someone creates a new client account and buys credits, you get 3% of everything they spend, for the lifetim… (3743 bytes)
+- [Referral Program](pages/guides/reference/referral-program.md): Turn your audience into earnings! Share your unique Vast.ai referral link (or a public template link), and when someone creates a new client account and buys credits, you get 3% of everything they spend, for the lifetim… (4518 bytes)
 - [Troubleshooting](pages/guides/reference/troubleshooting.md): When you stop an instance, the gpu(s) it was using may get reassigned. When you later then try to restart the instance, it tries to get those gpu(s) back - that is the "scheduling" phase. If another high priority job is… (2653 bytes)
 
 ## FAQ

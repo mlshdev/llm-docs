@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/serverless/choosing-gpus.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/serverless/choosing-gpus.mdx)
+> Pinned source for Vast.ai main: [guides/serverless/choosing-gpus.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/guides/serverless/choosing-gpus.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/serverless/choosing-gpus
 
 # Choosing GPUs for Your Workload

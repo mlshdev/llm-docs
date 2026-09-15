@@ -1,6 +1,6 @@
 # Runpod main
 
-> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `361c96910f23cbab97220f94f7a751b12e4b09ea`.
+> Documentation generated from the latest `main` branch commit of [runpod/docs](https://github.com/runpod/docs) and pinned to immutable source commit `ceb79977df03b21e40ceaec3fdea8c9869897b7e`.
 
 - [Full documentation](llms-full.txt): Complete normalized corpus for Runpod main.
 - [Provenance manifest](manifest.json): Source ref, commit, document count, and generation notes.
@@ -170,12 +170,13 @@
 - [Network volumes](pages/storage/network-volumes.md): Persistent, portable storage for your AI workloads. Review configuration, access methods, and usage guidance for managing storage on Runpod. (7924 bytes)
 - [High-performance storage](pages/storage/high-performance-storage.md): Premium storage tier for demanding AI workloads with up to 3x throughput and 4x IOPS. Review configuration and usage guidance for Runpod storage. (5239 bytes)
 - [S3-compatible API](pages/storage/s3-api.md): Use Runpod's S3-compatible API to access and manage your network volumes. Review configuration and usage guidance for Runpod storage. (26469 bytes)
+- [Global volumes](pages/storage/globalvolume.md): Learn how to create a global volume in Runpod and access your data from Pods across all data centers, with storage that persists across sessions. (5901 bytes)
 
 ## Public Endpoints
 
 - [Overview](pages/public-endpoints/overview.md): Test and deploy production-ready AI models using Public Endpoints. Review setup and request guidance for Runpod Public Endpoints. (6667 bytes)
 - [Quickstart](pages/public-endpoints/quickstart.md): Generate your first image with Public Endpoints in under 5 minutes. Review setup and request guidance for Runpod Public Endpoints. (3769 bytes)
-- [Available models](pages/public-endpoints/reference.md): Browse all available models for Runpod Public Endpoints. Review setup, model selection, request options, and usage guidance for Runpod Public Endpoints. (10062 bytes)
+- [Available models](pages/public-endpoints/reference.md): Browse all available models for Runpod Public Endpoints. Review setup, model selection, request options, and usage guidance for Runpod Public Endpoints. (12173 bytes)
 - [Make API requests](pages/public-endpoints/requests.md): Use the playground, REST API, and SDKs to interact with Public Endpoints. Review setup and request guidance for Runpod Public Endpoints. (10083 bytes)
 - [Vercel AI SDK](pages/public-endpoints/ai-sdk.md): Use the @runpod/ai-sdk-provider package to integrate Public Endpoints with the Vercel AI SDK. Review setup and request guidance for Runpod Public Endpoints. (18027 bytes)
 - [Connect AI coding tools with Public Endpoints](pages/public-endpoints/ai-coding-tools.md): Configure AI coding tools like OpenCode, Cursor, and Cline with Runpod Public Endpoints. Review setup and request guidance for Runpod Public Endpoints. (7410 bytes)
@@ -394,7 +395,7 @@
 - [Seedream 4.0 Edit](pages/public-endpoints/models/seedream-4-edit.md): New-generation image editing with unified generation and editing architecture. See model inputs and outputs on Runpod Public Endpoints. (4333 bytes)
 - [WAN 2.6 T2I](pages/public-endpoints/models/wan-2-6-t2i.md): High-quality text-to-image with strong prompt adherence and clean composition. See model inputs and outputs on Runpod Public Endpoints. (3556 bytes)
 - [Z-Image Turbo](pages/public-endpoints/models/z-image-turbo.md): A 6-billion-parameter image generation model with text-to-image and image-to-image support. See model inputs and outputs on Runpod Public Endpoints. (4159 bytes)
-- [Nano Banana Edit](pages/public-endpoints/models/nano-banana-edit.md): Google's state-of-the-art image editing model for combining multiple source images. See model inputs and outputs on Runpod Public Endpoints. (4396 bytes)
+- [Nano Banana Edit](pages/public-endpoints/models/nano-banana-edit.md): Google's state-of-the-art image editing model for combining multiple source images. See model inputs and outputs on Runpod Public Endpoints. (4723 bytes)
 - [Nano Banana Pro Edit](pages/public-endpoints/models/nano-banana-pro-edit.md): Google's advanced image editing model with support for up to 14 reference images and multiple resolutions. (4563 bytes)
 - [Nano Banana 2 Edit](pages/public-endpoints/models/nano-banana-2-edit.md): Google's latest multi-image editing model with resolution options up to 4K. Explore this model's inputs and outputs on Runpod Public Endpoints. (4957 bytes)
 
@@ -430,4 +431,4 @@
 
 ## Release notes
 
-- [Product updates](pages/release-notes.md): New features, fixes, and improvements for the Runpod platform. Review setup, configuration, workflows, and usage guidance in the Runpod documentation. (28722 bytes)
+- [Product updates](pages/release-notes.md): New features, fixes, and improvements for the Runpod platform. Review setup, configuration, workflows, and usage guidance in the Runpod documentation. (29506 bytes)

@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.1: [docs/sources/visualizations/dashboards/assess-dashboard-usage/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/visualizations/dashboards/assess-dashboard-usage/index.md)
+> Pinned source for Grafana v13.2.2: [docs/sources/visualizations/dashboards/assess-dashboard-usage/index.md](https://github.com/grafana/grafana/blob/3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e/docs/sources/visualizations/dashboards/assess-dashboard-usage/index.md)
 
 # Assess dashboard usage
 
@@ -102,6 +102,15 @@ You can sort the dashboards by:
 - Errors 30 days (most and least)
 - Views total
 - Views 30 days (most and least)
+
+Grafana counts the data behind these sort options once a day, up to the end of the previous day.
+Because today's activity isn't included yet, these numbers can be lower than the view count in [dashboard insights](#dashboard-insights), which updates as activity happens.
+
+**Views total** and **Errors total** are aggregates.
+Grafana starts counting from the first time it aggregates data for a dashboard. That first pass looks back 30 days, so any activity older than that isn't included.
+
+For activity closer to the present, use **Views 30 days** or **Errors 30 days**, or open [dashboard insights](#dashboard-insights) on a specific dashboard to see today's views.
+To get same-day detail across all dashboards, [export logs of usage insights](https://grafana.com/docs/grafana/v13.2/setup-grafana/configure-security/export-logs/) and [visualize the exported logs](#visualize-usage-insights-data).
 
 ![Open list of dashboard sort options](https://grafana.com/media/docs/grafana/dashboards/screenshot-dashboard-sort-9.5.png)
 

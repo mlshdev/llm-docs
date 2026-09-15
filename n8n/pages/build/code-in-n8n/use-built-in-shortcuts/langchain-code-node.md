@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/code-in-n8n/use-built-in-shortcuts/langchain-code-node.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/build/code-in-n8n/use-built-in-shortcuts/langchain-code-node.md)
+> Pinned source for n8n main: [docs/build/code-in-n8n/use-built-in-shortcuts/langchain-code-node.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/code-in-n8n/use-built-in-shortcuts/langchain-code-node.md)
 
 # LangChain Code node methods <a id="langchain-code-node-methods"></a>
 

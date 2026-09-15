@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [cli/reference/show-api-keys.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/cli/reference/show-api-keys.mdx)
+> Pinned source for Vast.ai main: [cli/reference/show-api-keys.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/cli/reference/show-api-keys.mdx)
 > Canonical documentation: https://docs.vast.ai/cli/reference/show-api-keys
 
 # vastai show api-keys

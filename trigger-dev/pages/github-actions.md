@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.0: [docs/github-actions.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/github-actions.mdx)
+> Pinned source for Trigger.dev v4.6.1: [docs/github-actions.mdx](https://github.com/triggerdotdev/trigger.dev/blob/4132259b9da38c0131570ab7561fca8e016162df/docs/github-actions.mdx)
 > Canonical documentation: https://trigger.dev/docs/github-actions
 
 # CI / GitHub Actions
@@ -150,7 +150,7 @@ deployment sends.
    Tokens"](https://cloud.trigger.dev/account/tokens) tab.
 2. Click on 'Settings' -> 'Secrets and variables' -> 'Actions' -> 'New repository secret'
 3. Add the name `TRIGGER_ACCESS_TOKEN` and the value of your access token. ![Add TRIGGER\_ACCESS\_TOKEN
-   in GitHub](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/github-access-token.png)
+   in GitHub](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/4132259b9da38c0131570ab7561fca8e016162df/docs/images/github-access-token.png)
 
 ## CLI Version pinning
 

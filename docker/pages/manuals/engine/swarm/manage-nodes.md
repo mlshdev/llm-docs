@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/engine/swarm/manage-nodes.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/engine/swarm/manage-nodes.md)
+> Pinned source for Docker main: [content/manuals/engine/swarm/manage-nodes.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/engine/swarm/manage-nodes.md)
 
 # Manage nodes in a swarm
 

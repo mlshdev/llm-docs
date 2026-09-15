@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/reference/api-keys.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/reference/api-keys.mdx)
+> Pinned source for Vast.ai main: [guides/reference/api-keys.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/guides/reference/api-keys.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/reference/api-keys
 
 # Manage API keys
@@ -19,13 +19,13 @@ This page covers everything you need to create, use, scope, rotate, and revoke A
 
 2. Find the **API Keys** section and click **+New**.
 
-   ![New API key](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/console-keys-6.webp)
+   ![New API key](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-keys-6.webp)
 
 3. Give the key a descriptive name (e.g. `ci-deploy`, `local-dev`, `prod-scaler`). The name only helps you identify keys later; it isn't sent in requests.
 
 4. Select the permissions for this key. Defaults to full access; restrict for scoped keys (see below).
 
-   ![API key permissions](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/console-keys-7.webp)
+   ![API key permissions](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-keys-7.webp)
 
 5. Click **Create**. The new key is shown once. Copy it now.
 

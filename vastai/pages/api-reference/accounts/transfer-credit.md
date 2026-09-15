@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/commands/transfer_credit](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/api-reference/openapi.yaml%23put%20/api/v0/commands/transfer_credit)
+> Pinned source for Vast.ai main: [api-reference/openapi.yaml#put /api/v0/commands/transfer_credit](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/api-reference/openapi.yaml%23put%20/api/v0/commands/transfer_credit)
 > Canonical documentation: https://docs.vast.ai/api-reference/accounts/transfer-credit
 
 # transfer credit

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/mcp/docker_mcp_client_ls.yaml](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/data/cli/mcp/docker_mcp_client_ls.yaml)
+> Pinned source for Docker main: [data/cli/mcp/docker_mcp_client_ls.yaml](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/data/cli/mcp/docker_mcp_client_ls.yaml)
 
 # docker mcp client ls
 

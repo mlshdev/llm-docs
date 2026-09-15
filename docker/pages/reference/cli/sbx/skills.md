@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_skills.yaml](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/data/sbx_cli/sbx_skills.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_skills.yaml](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/data/sbx_cli/sbx_skills.yaml)
 
 # sbx skills
 
@@ -13,8 +13,9 @@ Manage skills available in sandboxes
 
 Manage skills available to agents in Docker Sandboxes.
 
-Skills are shared across sandboxes by default. Use --no-share-skills when
-creating a sandbox to opt out.
+Skills are shared across sandboxes by default, mounted read-only. Use
+\--skills=off when creating a sandbox to opt out, or --skills=readwrite to
+mount the store read-write.
 
 ## Global options
 

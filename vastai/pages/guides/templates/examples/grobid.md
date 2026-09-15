@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/templates/examples/grobid.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/templates/examples/grobid.mdx)
+> Pinned source for Vast.ai main: [guides/templates/examples/grobid.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/guides/templates/examples/grobid.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/templates/examples/grobid
 
 # Creating Templates for GROBID
@@ -63,7 +63,7 @@ Next, we add the contents of the **CMD&#x20;**&#x63;ommand to the end of the bas
 
 Also, appended environment variables to /etc/environment file in our on-start section.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/console-creating-templates-for-grobid.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-creating-templates-for-grobid.webp)
 
 This makes environment variables available to all users and processes and ensures they are persistent even if our instance/docker container is rebooted. We suggest doing the same for your templates.
 
@@ -79,19 +79,19 @@ Finally, click **Create & Use** to save the template and navigate to the GPU off
 
 Once you have selected an instance offer, You'll click on the **INSTANCES&#x20;**&#x6C;ink in the left menu and see your rented GPU instance that has your template applied.&#x20;
 
-![](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/console-creating-templates-for-grobid-2.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-creating-templates-for-grobid-2.webp)
 
 When the instance is done loading and the **>\_CONNECT** state on the blue button appears, you should be able to see the ip range button at the top of the instance card.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/console-creating-templates-for-grobid-3.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-creating-templates-for-grobid-3.webp)
 
 If you click the IP range button you will see a new modal has the IP and port information for your instance. You'll see the port 8070 that we set listed in Open Ports.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/console-creating-templates-for-grobi-4.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-creating-templates-for-grobi-4.webp)
 
 You can copy the machine IP and port and load the address (in this example: 195.0.159.206:55734) in a new browser tab or window. This address will load the GROBID web app.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/console-creating-templates-for-grobid-5.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-creating-templates-for-grobid-5.webp)
 
 ## Additional Resources
 

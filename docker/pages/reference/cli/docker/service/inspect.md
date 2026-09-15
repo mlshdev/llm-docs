@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/cli/engine/docker_service_inspect.yaml](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/data/cli/engine/docker_service_inspect.yaml)
+> Pinned source for Docker main: [data/cli/engine/docker_service_inspect.yaml](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/data/cli/engine/docker_service_inspect.yaml)
 
 # docker service inspect
 

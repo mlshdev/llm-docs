@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_ls.yaml](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/data/sbx_cli/sbx_mcp_ls.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_mcp_ls.yaml](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/data/sbx_cli/sbx_mcp_ls.yaml)
 
 # sbx mcp ls
 
@@ -13,6 +13,12 @@ List registered MCP servers under the gateway that serves them.
 The gateway header reports where it runs, who controls it, and whether you are
 signed in; each server row reports its transport and whether it is usable now.
 Servers needing authorization carry the 'sbx mcp auth' next step.
+
+A server registered with custom headers is marked as such; one whose header
+placeholder has no stored value carries the 'sbx secret set' next step, and one
+whose headers this gateway cannot send is flagged unsupported. Either way the
+server cannot connect as it stands. Run 'sbx mcp inspect <name>' for the headers
+themselves and the state of each placeholder.
 
 Auth status is read without starting an OAuth flow — from the local token store
 in local data-plane mode, otherwise from the hosted control plane.

@@ -1,9 +1,17 @@
-> Pinned source for Runpod main: [release-notes.mdx](https://github.com/runpod/docs/blob/361c96910f23cbab97220f94f7a751b12e4b09ea/release-notes.mdx)
+> Pinned source for Runpod main: [release-notes.mdx](https://github.com/runpod/docs/blob/ceb79977df03b21e40ceaec3fdea8c9869897b7e/release-notes.mdx)
 > Canonical documentation: https://docs.runpod.io/release-notes
 
 # Product updates
 
 New features, fixes, and improvements for the Runpod platform. Review setup, configuration, workflows, and usage guidance in the Runpod documentation.
+
+**September 15, 2026**
+
+\*\*\*\* [Global Volumes - Beta](https://docs.runpod.io/storage/globalstore)  Elastic, region-independent storage you can attach to any Pod from any Runpod data center. Create a global volume once and mount it at startup across any region — no copying data between data centers required. Best suited for model serving and inference workloads that read large files and write infrequently.
+
+**September 14, 2026**
+
+\*\*\*\* [Nano Banana Edit](https://docs.runpod.io/public-endpoints/models/nano-banana-edit) The Nano Banana Edit public endpoint will be retired on **September 28, 2026**, because Google is discontinuing the underlying model. Migrate to [Nano Banana 2 Edit](https://docs.runpod.io/public-endpoints/models/nano-banana-2-edit) before that date.
 
 **August 19, 2026**
 

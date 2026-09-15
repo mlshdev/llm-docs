@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [ollama-webui.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/ollama-webui.mdx)
+> Pinned source for Vast.ai main: [ollama-webui.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/ollama-webui.mdx)
 > Canonical documentation: https://docs.vast.ai/ollama-webui
 
 # Ollama + Webui

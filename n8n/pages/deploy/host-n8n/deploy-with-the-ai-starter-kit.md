@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/deploy/host-n8n/deploy-with-the-ai-starter-kit.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/deploy/host-n8n/deploy-with-the-ai-starter-kit.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/deploy-with-the-ai-starter-kit.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/deploy/host-n8n/deploy-with-the-ai-starter-kit.md)
 
 # Self-hosted AI Starter Kit <a id="self-hosted-ai-starter-kit"></a>
 

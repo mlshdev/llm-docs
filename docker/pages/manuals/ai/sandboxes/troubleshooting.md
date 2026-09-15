@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/ai/sandboxes/troubleshooting.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/troubleshooting.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/ai/sandboxes/troubleshooting.md)
 
 # Troubleshooting
 
@@ -69,6 +69,22 @@ $ sbx run --name <sandbox-name> <agent>
 
 See [Choose a workspace](https://docs.docker.com/ai/sandboxes/usage/#choose-a-workspace) for mountless, direct,
 and clone-mode behavior.
+
+## Kiro, Copilot, or Droid shorthand fails
+
+In Docker Sandboxes v0.42, `sbx run kiro`, `sbx run copilot`, and
+`sbx run droid` fail because these agents moved from built-in agents to
+public kits and their shorthand names aren't resolved in this release.
+
+[Upgrade Docker Sandboxes](https://docs.docker.com/ai/sandboxes/install/) to v0.43.0 or later to launch
+these agents by name again. If you need to stay on v0.42, use the full kit
+reference for your agent:
+
+```console
+$ sbx run docker.io/sbx/kiro-kit:latest
+$ sbx run docker.io/sbx/copilot-kit:latest
+$ sbx run docker.io/sbx/droid-kit:latest
+```
 
 ## Agent can't install packages or reach an API
 

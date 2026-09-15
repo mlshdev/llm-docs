@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/teams/teams-roles.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/teams/teams-roles.mdx)
+> Pinned source for Vast.ai main: [guides/teams/teams-roles.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/guides/teams/teams-roles.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/teams/teams-roles
 
 # Teams Roles
@@ -25,11 +25,11 @@ For more information on Permission Groups and what they allow access to, [click 
 
 You can create roles either in the Vast CLI or on your team dashbaord if you have permission to create roles within your team (team\_write).
 
-![](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/teams-roles.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/teams-roles.webp)
 
 You can easily edit any roles on your team using the team dashboard. When editing a role you should see the same series of checkboxes and categories as before.
 
-![](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/teams-roles-2.webp)
+![](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/teams-roles-2.webp)
 
 ### Role Syntax
 

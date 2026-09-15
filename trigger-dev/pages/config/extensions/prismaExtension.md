@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.0: [docs/config/extensions/prismaExtension.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/config/extensions/prismaExtension.mdx)
+> Pinned source for Trigger.dev v4.6.1: [docs/config/extensions/prismaExtension.mdx](https://github.com/triggerdotdev/trigger.dev/blob/4132259b9da38c0131570ab7561fca8e016162df/docs/config/extensions/prismaExtension.mdx)
 > Canonical documentation: https://trigger.dev/docs/config/extensions/prismaExtension
 
 # Prisma
@@ -341,7 +341,7 @@ steps:
 
 If you are using the [Trigger.dev Github integration](https://trigger.dev/docs/github-integration), you can configure a pre-build command to run `prisma generate` before deploying your project. Navigate to your project's settings page and configure the pre-build command to run `prisma generate`, for example:
 
-![Pre-build command](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/pre-build-command-prisma-generate.png)
+![Pre-build command](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/4132259b9da38c0131570ab7561fca8e016162df/docs/images/pre-build-command-prisma-generate.png)
 
 ***
 

@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/work-with-data/transform-data/expression-reference/datetime.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/build/work-with-data/transform-data/expression-reference/datetime.md)
+> Pinned source for n8n main: [docs/build/work-with-data/transform-data/expression-reference/datetime.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/work-with-data/transform-data/expression-reference/datetime.md)
 
 # DateTime <a id="datetime"></a>
 
@@ -266,6 +266,28 @@ dt.isBetween('2020-06-01', '2025-06-01') //=> true
 dt.isBetween('2020', $now) //=> true
 ```
 
+## *`DateTime`*.**`isEmpty()`** <a id="datetimeisempty"></a>
+
+**Description:** Returns <code>false</code> for all DateTimes. Returns <code>true</code> for <code>null</code> or <code>undefined</code>.
+
+**Syntax:** *`DateTime`*.isEmpty()
+
+**Returns:** Boolean
+
+**Source:**  Custom n8n functionality
+
+**Examples:**
+
+```javascript
+// dt = '2023-03-30T18:49:07.234'.toDateTime()
+dt.isEmpty() // => false
+```
+
+```javascript
+// dt = null
+dt.isEmpty() // => true
+```
+
 ## *`DateTime`*.**`isInDST`** <a id="datetimeisindst"></a>
 
 **Description:** Whether the DateTime is in daylight saving time
@@ -275,6 +297,28 @@ dt.isBetween('2020', $now) //=> true
 **Returns:** Boolean
 
 **Type:** Luxon
+
+## *`DateTime`*.**`isNotEmpty()`** <a id="datetimeisnotempty"></a>
+
+**Description:** Returns <code>true</code> for all DateTimes. Returns <code>false</code> for <code>null</code> or <code>undefined</code>.
+
+**Syntax:** *`DateTime`*.isNotEmpty()
+
+**Returns:** Boolean
+
+**Source:**  Custom n8n functionality
+
+**Examples:**
+
+```javascript
+// dt = '2023-03-30T18:49:07.234'.toDateTime()
+dt.isNotEmpty() // => true
+```
+
+```javascript
+// dt = null
+dt.isNotEmpty() // => false
+```
 
 ## *`DateTime`*.**`locale`** <a id="datetimelocale"></a>
 

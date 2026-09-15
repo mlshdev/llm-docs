@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_prune.yaml](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/data/sbx_cli/sbx_prune.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_prune.yaml](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/data/sbx_cli/sbx_prune.yaml)
 
 # sbx prune
 
@@ -15,10 +15,11 @@ which makes this safe to run habitually. Stop a sandbox first with
 "sbx stop" if you want it pruned. To remove a specific sandbox regardless of
 state, use "sbx rm SANDBOX".
 
-Use --filter since=DURATION to narrow the set to sandboxes that have been
-stopped for longer than DURATION (e.g. since=168h to keep anything stopped
-within the last week). A sandbox whose stop time the daemon cannot report is
-left alone, since how long it has been stopped cannot be established.
+Use --filter until=TIMESTAMP to narrow the set to sandboxes that stopped before
+TIMESTAMP. The value can be an RFC 3339 timestamp, Unix timestamp, or Go duration
+relative to now (e.g. until=168h keeps anything stopped within the last week).
+A sandbox whose stop time the daemon cannot report is left alone, since how long
+it has been stopped cannot be established.
 
 Use --dry-run to list what would be removed without removing anything, and
 \--json with it for machine-readable output.
@@ -36,7 +37,7 @@ Local-only: cloud sandboxes expire via their TTL.
 | Option          | Default | Description                                                                       |
 | --------------- | ------- | --------------------------------------------------------------------------------- |
 | `--dry-run`     |         | List the sandboxes that would be removed without removing them                    |
-| `--filter`      |         | Filter candidates (supported: since=DURATION — stopped for longer than DURATION)  |
+| `--filter`      |         | Filter candidates (supported: until=TIMESTAMP — stopped before TIMESTAMP)         |
 | `-f`, `--force` |         | Skip confirmation prompts and remove even if in use (e.g. an open SSH connection) |
 | `--json`        |         | Output the --dry-run listing in JSON format                                       |
 

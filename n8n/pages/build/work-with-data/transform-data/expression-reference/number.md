@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/work-with-data/transform-data/expression-reference/number.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/build/work-with-data/transform-data/expression-reference/number.md)
+> Pinned source for n8n main: [docs/build/work-with-data/transform-data/expression-reference/number.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/work-with-data/transform-data/expression-reference/number.md)
 
 # Number <a id="number"></a>
 
@@ -82,7 +82,10 @@ number.format('de-DE', {'style': 'currency', 'currency': 'EUR'}) //=> 123.456,79
 
 ## *`Number`*.**`isEmpty()`** <a id="numberisempty"></a>
 
-**Description:** Returns <code>false</code> for all numbers. Returns <code>true</code> for <code>null</code>.
+**Description:** Returns <code>true</code> if the number is <code>0</code>, <code>NaN</code>, <code>null</code>, or <code>undefined</code>. Returns <code>false</code> for every other number.
+
+> **Warning**
+> `isEmpty()` isn't a null check. On a number it treats `0` as empty, so `{{ $json.count.isEmpty() }}` returns `true` for both a missing field and a field set to `0`. To test only for a missing value, compare directly, for example `{{ $json.count === null }}`, or use the **exists** operator in the **If** node.
 
 **Syntax:** *`Number`*.isEmpty()
 
@@ -99,7 +102,7 @@ num.isEmpty() // => false
 
 ```javascript
 // num = 0
-num.isEmpty() // => false
+num.isEmpty() // => true
 ```
 
 ```javascript
@@ -144,6 +147,33 @@ number.isInteger() //=> true
 ```javascript
 // number = 4.12
 number.isInteger() //=> false
+```
+
+## *`Number`*.**`isNotEmpty()`** <a id="numberisnotempty"></a>
+
+**Description:** Returns <code>true</code> for every number except <code>0</code> and <code>NaN</code>. Returns <code>false</code> if the number is <code>0</code>, <code>NaN</code>, <code>null</code>, or <code>undefined</code>. This is the inverse of <code>isEmpty()</code>.
+
+**Syntax:** *`Number`*.isNotEmpty()
+
+**Returns:** Boolean
+
+**Source:**  Custom n8n functionality
+
+**Examples:**
+
+```javascript
+// num = 10
+num.isNotEmpty() // => true
+```
+
+```javascript
+// num = 0
+num.isNotEmpty() // => false
+```
+
+```javascript
+// num = null
+num.isNotEmpty() // => false
 ```
 
 ## *`Number`*.**`isOdd()`** <a id="numberisodd"></a>

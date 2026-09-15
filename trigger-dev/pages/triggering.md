@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.0: [docs/triggering.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/triggering.mdx)
+> Pinned source for Trigger.dev v4.6.1: [docs/triggering.mdx](https://github.com/triggerdotdev/trigger.dev/blob/4132259b9da38c0131570ab7561fca8e016162df/docs/triggering.mdx)
 > Canonical documentation: https://trigger.dev/docs/triggering
 
 # Triggering
@@ -689,7 +689,7 @@ await myTask.trigger({ some: "data" }, { delay: new Date("2024-07-23T11:50:00+02
 
 Runs that are delayed and have not been enqueued yet will display in the dashboard with a "Delayed" status:
 
-![Delayed run in the dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/delayed-runs.png)
+![Delayed run in the dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/4132259b9da38c0131570ab7561fca8e016162df/docs/images/delayed-runs.png)
 
 > **Note**
 >
@@ -747,7 +747,7 @@ await myTask.trigger({ some: "data" }, { ttl: 3600 }); // 1 hour
 
 When a run is expired, it will be marked as "Expired" in the dashboard:
 
-![Expired runs in the dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/images/expired-runs.png)
+![Expired runs in the dashboard](https://raw.githubusercontent.com/triggerdotdev/trigger.dev/4132259b9da38c0131570ab7561fca8e016162df/docs/images/expired-runs.png)
 
 When you use both `delay` and `ttl`, the TTL will start counting down from the time the run is enqueued, not from the time the run is triggered.
 

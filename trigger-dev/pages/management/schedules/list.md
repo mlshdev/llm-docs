@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.0: [docs/management/schedules/list.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/management/schedules/list.mdx)
+> Pinned source for Trigger.dev v4.6.1: [docs/management/schedules/list.mdx](https://github.com/triggerdotdev/trigger.dev/blob/4132259b9da38c0131570ab7561fca8e016162df/docs/management/schedules/list.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/schedules/list
 
 # List Schedules

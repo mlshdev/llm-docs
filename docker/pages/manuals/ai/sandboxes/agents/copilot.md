@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/copilot.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/ai/sandboxes/agents/copilot.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/agents/copilot.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/ai/sandboxes/agents/copilot.md)
 
 # Copilot
 
@@ -8,10 +8,6 @@ in a sandboxed environment.
 Official documentation: [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli)
 
 ## Quick start
-
-> \[!NOTE]
-> In Docker Sandboxes v0.42, use `sbx run docker.io/sbx/copilot-kit:latest`.
-> The `copilot` shorthand is unavailable in this release.
 
 Create a sandbox and run Copilot for a project directory:
 

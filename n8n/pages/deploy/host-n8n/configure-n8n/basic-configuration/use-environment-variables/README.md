@@ -1,10 +1,8 @@
-> Pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/README.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/README.md)
+> Pinned source for n8n main: [docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/README.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/README.md)
 
 # Environment variables overview <a id="environment-variables-overview"></a>
 
 This section lists the environment variables that you can use to change n8n's configuration settings when self-hosting n8n.
-
-For the complete and most up-to-date list of all environment variables, see the full reference in the n8n docs repository: [Full environment variables index](https://github.com/n8n-io/n8n-docs/tree/main/docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables).
 
 > **Info**
 > **File-based configuration**

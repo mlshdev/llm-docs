@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.0: [docs/versioning.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/versioning.mdx)
+> Pinned source for Trigger.dev v4.6.1: [docs/versioning.mdx](https://github.com/triggerdotdev/trigger.dev/blob/4132259b9da38c0131570ab7561fca8e016162df/docs/versioning.mdx)
 > Canonical documentation: https://trigger.dev/docs/versioning
 
 # Versioning

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/concepts/distribution/index.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/_vendor/github.com/docker/docker-agent/docs/concepts/distribution/index.md)
+> Pinned source for Docker main: [_vendor/github.com/docker/docker-agent/docs/concepts/distribution/index.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/_vendor/github.com/docker/docker-agent/docs/concepts/distribution/index.md)
 
 *Package, share, and run agents via OCI-compatible registries — just like container images.*
 

@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [content/manuals/ai/sandboxes/architecture.md](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/content/manuals/ai/sandboxes/architecture.md)
+> Pinned source for Docker main: [content/manuals/ai/sandboxes/architecture.md](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/content/manuals/ai/sandboxes/architecture.md)
 
 # Architecture
 
@@ -48,8 +48,9 @@ a directly mounted workspace live on the host instead.
 Each sandbox maintains its own Docker daemon state, image cache, and package
 installations. Multiple sandboxes don't share images or layers. The
 [shared agent skills store](https://docs.docker.com/ai/sandboxes/workflows/agent-skills/) is an exception:
-supported agents mount the same host-side store read-write unless you opt out
-when creating the sandbox.
+sandboxes created for supported agents mount the same host-side store read-only
+by default. Use `--skills` or `skills.defaultMode` to choose another mode at
+creation. Existing sandboxes retain their mounts until recreated.
 
 Each sandbox consumes disk space for its VM image, Docker images, container
 layers, and volumes, and this grows as you build images and install packages.

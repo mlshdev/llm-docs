@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/understand-workflows/workflow-components/work-with-nodes.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/build/understand-workflows/workflow-components/work-with-nodes.md)
+> Pinned source for n8n main: [docs/build/understand-workflows/workflow-components/work-with-nodes.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/understand-workflows/workflow-components/work-with-nodes.md)
 
 # Work with nodes
 
@@ -38,15 +38,15 @@ When you add a node to a workflow, n8n displays a list of available operations. 
 
 There are two types of operation:
 
-- Triggers start a workflow in response to specific events or conditions in your services. When you select a Trigger, n8n adds a trigger node to your workflow, with the Trigger operation you chose pre-selected. When you search for a node in n8n, Trigger operations have a bolt icon ![Trigger icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/reusable-content/.gitbook/assets/trigger.png).
+- Triggers start a workflow in response to specific events or conditions in your services. When you select a Trigger, n8n adds a trigger node to your workflow, with the Trigger operation you chose pre-selected. When you search for a node in n8n, Trigger operations have a bolt icon ![Trigger icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/reusable-content/.gitbook/assets/trigger.png).
 - Actions are operations that represent specific tasks within a workflow, which you can use to manipulate data, perform operations on external systems, and trigger events in other systems as part of your workflows. When you select an Action, n8n adds a node to your workflow, with the Action operation you chose pre-selected.
 
 ## Node controls <a id="node-controls"></a>
 
 To view node controls, hover over the node on the canvas:
 
-- **Execute step** ![Execute step icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/build/.gitbook/assets/play-node.png): Run the node.
-- **Deactivate** ![Deactivate node icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/build/.gitbook/assets/power-off.png): Deactivate the node.
+- **Execute step** ![Execute step icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/.gitbook/assets/play-node.png): Run the node.
+- **Deactivate** ![Deactivate node icon](https://raw.githubusercontent.com/n8n-io/n8n-docs/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/.gitbook/assets/power-off.png): Deactivate the node.
 - **Delete** !\[Delete node icon]\(../../.gitbook/assets/delete-node (1).png): Delete the node.
 - **Node context menu** !\[Node context menu icon]\(../../.gitbook/assets/node-context-menu (1).png): Select node actions. Available actions:
   - Open node

@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/deploy/use-n8n-cloud/use-the-admin-dashboard.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/deploy/use-n8n-cloud/use-the-admin-dashboard.md)
+> Pinned source for n8n main: [docs/deploy/use-n8n-cloud/use-the-admin-dashboard.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/deploy/use-n8n-cloud/use-the-admin-dashboard.md)
 
 # Cloud admin dashboard <a id="cloud-admin-dashboard"></a>
 

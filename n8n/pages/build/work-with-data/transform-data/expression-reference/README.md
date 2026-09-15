@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/work-with-data/transform-data/expression-reference/README.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/build/work-with-data/transform-data/expression-reference/README.md)
+> Pinned source for n8n main: [docs/build/work-with-data/transform-data/expression-reference/README.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/work-with-data/transform-data/expression-reference/README.md)
 
 # Expression Reference <a id="expression-reference"></a>
 
@@ -85,7 +85,7 @@ If you need all matching elements, use <code>filter()</code>.
 
 - [*`Array`*.**`isEmpty()`**](https://docs.n8n.io/build/work-with-data/transform-data/expression-reference/array#arrayisempty)
 
-  Returns <code>true</code> if the array has no elements or is <code>null</code>
+  Returns <code>true</code> if the array has no elements or is <code>null</code> or <code>undefined</code>
 
 - [*`Array`*.**`isNotEmpty()`**](https://docs.n8n.io/build/work-with-data/transform-data/expression-reference/array#arrayisnotempty)
 
@@ -214,7 +214,11 @@ See also <code>slice()</code> and <code>append()</code>.
 
 - [*`Boolean`*.**`isEmpty()`**](https://docs.n8n.io/build/work-with-data/transform-data/expression-reference/boolean#booleanisempty)
 
-  Returns <code>false</code> for all booleans. Returns <code>true</code> for <code>null</code>.
+  Returns <code>true</code> if the boolean is <code>false</code>, <code>null</code>, or <code>undefined</code>. Returns <code>false</code> if the boolean is <code>true</code>.
+
+- [*`Boolean`*.**`isNotEmpty()`**](https://docs.n8n.io/build/work-with-data/transform-data/expression-reference/boolean#booleanisnotempty)
+
+  Returns <code>true</code> if the boolean is <code>true</code>. Returns <code>false</code> if the boolean is <code>false</code>, <code>null</code>, or <code>undefined</code>. This is the inverse of <code>isEmpty()</code>.
 
 - [*`Boolean`*.**`toNumber()`**](https://docs.n8n.io/build/work-with-data/transform-data/expression-reference/boolean#booleantonumber)
 
@@ -290,9 +294,17 @@ See also <code>slice()</code> and <code>append()</code>.
 
   Returns <code>true</code> if the DateTime lies between the two moments specified
 
+- [*`DateTime`*.**`isEmpty()`**](https://docs.n8n.io/build/work-with-data/transform-data/expression-reference/datetime#datetimeisempty)
+
+  Returns <code>false</code> for all DateTimes. Returns <code>true</code> for <code>null</code> or <code>undefined</code>.
+
 - [*`DateTime`*.**`isInDST`**](https://docs.n8n.io/build/work-with-data/transform-data/expression-reference/datetime#datetimeisindst)
 
   Whether the DateTime is in daylight saving time
+
+- [*`DateTime`*.**`isNotEmpty()`**](https://docs.n8n.io/build/work-with-data/transform-data/expression-reference/datetime#datetimeisnotempty)
+
+  Returns <code>true</code> for all DateTimes. Returns <code>false</code> for <code>null</code> or <code>undefined</code>.
 
 - [*`DateTime`*.**`locale`**](https://docs.n8n.io/build/work-with-data/transform-data/expression-reference/datetime#datetimelocale)
 
@@ -528,7 +540,7 @@ See also <code>slice()</code> and <code>append()</code>.
 
 - [*`Number`*.**`isEmpty()`**](https://docs.n8n.io/build/work-with-data/transform-data/expression-reference/number#numberisempty)
 
-  Returns <code>false</code> for all numbers. Returns <code>true</code> for <code>null</code>.
+  Returns <code>true</code> if the number is <code>0</code>, <code>NaN</code>, <code>null</code>, or <code>undefined</code>. Returns <code>false</code> for every other number.
 
 - [*`Number`*.**`isEven()`**](https://docs.n8n.io/build/work-with-data/transform-data/expression-reference/number#numberiseven)
 
@@ -537,6 +549,10 @@ See also <code>slice()</code> and <code>append()</code>.
 - [*`Number`*.**`isInteger()`**](https://docs.n8n.io/build/work-with-data/transform-data/expression-reference/number#numberisinteger)
 
   Returns <code>true</code> if the number is a whole number
+
+- [*`Number`*.**`isNotEmpty()`**](https://docs.n8n.io/build/work-with-data/transform-data/expression-reference/number#numberisnotempty)
+
+  Returns <code>true</code> for every number except <code>0</code> and <code>NaN</code>. Returns <code>false</code> if the number is <code>0</code>, <code>NaN</code>, <code>null</code>, or <code>undefined</code>. This is the inverse of <code>isEmpty()</code>.
 
 - [*`Number`*.**`isOdd()`**](https://docs.n8n.io/build/work-with-data/transform-data/expression-reference/number#numberisodd)
 
@@ -574,7 +590,7 @@ See also <code>slice()</code> and <code>append()</code>.
 
 - [*`Object`*.**`isEmpty()`**](https://docs.n8n.io/build/work-with-data/transform-data/expression-reference/object#objectisempty)
 
-  Returns <code>true</code> if the Object has no keys (fields) set or is <code>null</code>
+  Returns <code>true</code> if the Object has no keys (fields) set or is <code>null</code> or <code>undefined</code>
 
 - [*`Object`*.**`isNotEmpty()`**](https://docs.n8n.io/build/work-with-data/transform-data/expression-reference/object#objectisnotempty)
 
@@ -792,7 +808,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 - [*`String`*.**`isEmpty()`**](https://docs.n8n.io/build/work-with-data/transform-data/expression-reference/string#stringisempty)
 
-  Returns <code>true</code> if the string has no characters or is <code>null</code>
+  Returns <code>true</code> if the string has no characters or is <code>null</code> or <code>undefined</code>
 
 - [*`String`*.**`isNotEmpty()`**](https://docs.n8n.io/build/work-with-data/transform-data/expression-reference/string#stringisnotempty)
 

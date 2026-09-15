@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_secret_set.yaml](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/data/sbx_cli/sbx_secret_set.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_secret_set.yaml](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/data/sbx_cli/sbx_secret_set.yaml)
 
 # sbx secret set
 
@@ -39,23 +39,27 @@ service secrets, registry credentials are host-only by default:
   enter the sandbox.
 - With --sandbox, credentials are injected into the specified sandbox only.
 
+For a registry whose Bearer authentication endpoint uses a different hostname,
+use --registry-auth-endpoint to trust its exact HTTPS URL.
+
 ## Options
 
-| Option             | Default | Description                                                                                                                                               |
-| ------------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--all-sandboxes`  |         | Inject registry credentials into every sandbox (requires --registry)                                                                                      |
-| `--command`        |         | Use a command's standard output as the secret value                                                                                                       |
-| `-f`, `--force`    |         | Overwrite an existing secret when --token is used                                                                                                         |
-| `--no-verify`      |         | Skip checking the --ref or --command source when storing it                                                                                               |
-| `--oauth`          |         | Start OAuth flow and store OAuth tokens (openai/global only) With --cloud: openai or anthropic, stored only in the cloud (never the local secrets-engine) |
-| `--password-stdin` |         | Read registry password or token from stdin (use with --registry)                                                                                          |
-| `--ref`            |         | Use a 1Password op\:// reference or AWS Secrets Manager ARN as the secret source                                                                          |
-| `--refresh`        |         | Secret refresh policy: on-demand or after a duration (default: 55m)                                                                                       |
-| `--registry`       |         | Registry hostname for pull credentials (e.g. ghcr.io)                                                                                                     |
-| `--sandbox`        |         | Scope the secret to one sandbox instead of its default scope                                                                                              |
-| `--show-error`     |         | Show resolver standard error if the initial check fails (may contain secrets)                                                                             |
-| `-t`, `--token`    |         | Secret value (less secure: visible in shell history)                                                                                                      |
-| `--username`       |         | Registry username (use with --registry; omit for token-only auth)                                                                                         |
+| Option                     | Default | Description                                                                                                                                               |
+| -------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--all-sandboxes`          |         | Inject registry credentials into every sandbox (requires --registry)                                                                                      |
+| `--command`                |         | Use a command's standard output as the secret value                                                                                                       |
+| `-f`, `--force`            |         | Overwrite an existing secret when --token is used                                                                                                         |
+| `--no-verify`              |         | Skip checking the --ref or --command source when storing it                                                                                               |
+| `--oauth`                  |         | Start OAuth flow and store OAuth tokens (openai/global only) With --cloud: openai or anthropic, stored only in the cloud (never the local secrets-engine) |
+| `--password-stdin`         |         | Read registry password or token from stdin (use with --registry)                                                                                          |
+| `--ref`                    |         | Use a 1Password op\:// reference or AWS Secrets Manager ARN as the secret source                                                                          |
+| `--refresh`                |         | Secret refresh policy: on-demand or after a duration (default: 55m)                                                                                       |
+| `--registry`               |         | Registry hostname for pull credentials (e.g. ghcr.io)                                                                                                     |
+| `--registry-auth-endpoint` |         | Trusted HTTPS auth endpoint for a cross-host registry realm                                                                                               |
+| `--sandbox`                |         | Scope the secret to one sandbox instead of its default scope                                                                                              |
+| `--show-error`             |         | Show resolver standard error if the initial check fails (may contain secrets)                                                                             |
+| `-t`, `--token`            |         | Secret value (less secure: visible in shell history)                                                                                                      |
+| `--username`               |         | Registry username (use with --registry; omit for token-only auth)                                                                                         |
 
 ## Global options
 
@@ -97,4 +101,10 @@ service secrets, registry credentials are host-only by default:
 
   # Registry: specific sandbox only
   gh auth token | sbx secret set --sandbox my-sandbox --registry ghcr.io --password-stdin
+
+  # Self-hosted registry with a cross-host authentication endpoint
+  echo "$GITLAB_PAT" | sbx secret set --all-sandboxes \
+    --registry registry.example.com --username "$GITLAB_USER" \
+    --registry-auth-endpoint https://gitlab.example.com/jwt/auth \
+    --password-stdin
 ```

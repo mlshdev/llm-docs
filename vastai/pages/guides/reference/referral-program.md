@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/reference/referral-program.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/reference/referral-program.mdx)
+> Pinned source for Vast.ai main: [guides/reference/referral-program.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/guides/reference/referral-program.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/reference/referral-program
 
 # Referral Program
@@ -46,7 +46,7 @@ It keeps your referral earnings clear and makes sure you’re payout-eligible.
 1. Create a new account for referrals.
 2. Go to [**Settings**](https://cloud.vast.ai/account/) → **Referral Link**.
 
-![Referral Link](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/console-referral.webp)
+![Referral Link](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-referral.webp)
 
 3. Copy the link.
 4. Share it!
@@ -77,6 +77,20 @@ Your audience clicks → Vast loads with your settings → they sign up → you 
 
 **Where to use it:** GitHub repos, videos, blog posts, anywhere your audience needs a “click and run” setup.
 
+## Prohibited Promotion
+
+Referrers may not purchase paid search, display, video or social advertising that targets Vast.ai brand terms, including “vast”, “vast.ai”, “vast ai”, “vast gpu”, and any misspellings or variants of these terms.
+
+Referrers may not link advertising directly to any vast.ai or cloud.vast.ai URL, and may not use Vast.ai trademarks, logos or display URLs in ad copy.
+
+Referrers may not operate multiple referral accounts, and may not create additional accounts to circumvent these terms.
+
+> **Warning**
+>
+> Referrals generated in violation of this section earn no credit. Vast may withhold pending payouts, forfeit accrued credits, reverse commissions already paid, and terminate the referring account.
+
+*Effective September 15, 2026.*
+
 ## Bigger Opportunities
 
 For large-scale referral or marketing collaborations, reach us at **<support@vast.ai>**.
@@ -87,4 +101,4 @@ For large-scale referral or marketing collaborations, reach us at **<support@vas
 
 Open your **Templates&#x20;**&#x70;age -> My Templates. On each template card, click the **three-dot menu&#x20;**&#x61;nd select **Copy Referral Link**. This gives you a ready-to-share link that includes your referral ID and the template ID, perfect for sharing with your audience.&#x20;
 
-![Three-dot menu](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/console-referral-2.webp)
+![Three-dot menu](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/console-referral-2.webp)

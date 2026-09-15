@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [vllm-llm-inference-and-serving.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/vllm-llm-inference-and-serving.mdx)
+> Pinned source for Vast.ai main: [vllm-llm-inference-and-serving.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/vllm-llm-inference-and-serving.mdx)
 > Canonical documentation: https://docs.vast.ai/vllm-llm-inference-and-serving
 
 # vLLM (LLM inference and serving)

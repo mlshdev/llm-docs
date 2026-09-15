@@ -1,4 +1,4 @@
-> Pinned source for Vast.ai main: [guides/instances/storage/cloud-sync.mdx](https://github.com/vast-ai/docs/blob/175a318c27750ea64da94f043dda39ec5cb26259/guides/instances/storage/cloud-sync.mdx)
+> Pinned source for Vast.ai main: [guides/instances/storage/cloud-sync.mdx](https://github.com/vast-ai/docs/blob/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/guides/instances/storage/cloud-sync.mdx)
 > Canonical documentation: https://docs.vast.ai/guides/instances/storage/cloud-sync
 
 # Cloud Sync
@@ -81,15 +81,15 @@ Vast connects to Hugging Face through its S3-compatible Storage Buckets: generat
 
 2. Under **Token type**, select **Write**, name the token, and select **Create token**.
 
-   ![Hugging Face Write token](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/huggingfacetoken.png)
+   ![Hugging Face Write token](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/huggingfacetoken.png)
 
 3. Back on the token list, open the three-dot menu at the far right of your token and select **Generate S3 credentials**.
 
-   ![Generate S3 credentials](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/huggingfaces3credentials.png)
+   ![Generate S3 credentials](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/huggingfaces3credentials.png)
 
 4. Copy the **Access Key ID** (it begins with `HFAK`) and the **Secret Access Key**. The secret is shown only once. Your namespace is the last segment of the **Endpoint URL** (`https://s3.hf.co/<namespace>`).
 
-   ![Hugging Face S3-compatible credentials](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/huggingfaces3compatiblecredentials.png)
+   ![Hugging Face S3-compatible credentials](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/huggingfaces3compatiblecredentials.png)
 
 5. Create a bucket on your Hugging Face account — this is the bucket you'll point your Vast instance at later in the Cloud Copy UI on the [Instances page](https://cloud.vast.ai/instances/).
 
@@ -97,6 +97,6 @@ Vast connects to Hugging Face through its S3-compatible Storage Buckets: generat
 
 7. Enter a name for the connection, your Hugging Face namespace (your username or organization), and the Access Key ID and Secret Access Key from step 4.
 
-   ![Connect Hugging Face on Vast](https://raw.githubusercontent.com/vast-ai/docs/175a318c27750ea64da94f043dda39ec5cb26259/images/credentialssettings.png)
+   ![Connect Hugging Face on Vast](https://raw.githubusercontent.com/vast-ai/docs/1f62d7e4ed71d62a858e7a800ff8096e25f07b8f/images/credentialssettings.png)
 
 You have now connected Hugging Face with Vast. When copying data, enter the bucket name (for example, `my-bucket`) and the path within it (for example, `checkpoints`) in their separate fields in the Cloud Copy UI. The namespace is part of the connection and is not repeated in either field.

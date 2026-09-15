@@ -1,4 +1,4 @@
-> Pinned source for Grafana v13.2.1: [docs/sources/setup-grafana/configure-security/configure-database-encryption/encrypt-secrets-using-aws-kms/index.md](https://github.com/grafana/grafana/blob/56cd3e9288d8255fecebe5d05b48d191f50674b5/docs/sources/setup-grafana/configure-security/configure-database-encryption/encrypt-secrets-using-aws-kms/index.md)
+> Pinned source for Grafana v13.2.2: [docs/sources/setup-grafana/configure-security/configure-database-encryption/encrypt-secrets-using-aws-kms/index.md](https://github.com/grafana/grafana/blob/3db12332b66497c31f8ad2a5fb0eb0fe0ca05a7e/docs/sources/setup-grafana/configure-security/configure-database-encryption/encrypt-secrets-using-aws-kms/index.md)
 
 # Encrypt database secrets using AWS KMS
 

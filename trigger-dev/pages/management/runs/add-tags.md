@@ -1,4 +1,4 @@
-> Pinned source for Trigger.dev v4.6.0: [docs/management/runs/add-tags.mdx](https://github.com/triggerdotdev/trigger.dev/blob/6172bcd1bc67044a295aa41acb49d92db954de3d/docs/management/runs/add-tags.mdx)
+> Pinned source for Trigger.dev v4.6.1: [docs/management/runs/add-tags.mdx](https://github.com/triggerdotdev/trigger.dev/blob/4132259b9da38c0131570ab7561fca8e016162df/docs/management/runs/add-tags.mdx)
 > Canonical documentation: https://trigger.dev/docs/management/runs/add-tags
 
 # Add tags to a run

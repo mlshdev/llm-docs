@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/administer/manage-users-and-access/set-up-for-cloud.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/administer/manage-users-and-access/set-up-for-cloud.md)
+> Pinned source for n8n main: [docs/administer/manage-users-and-access/set-up-for-cloud.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/administer/manage-users-and-access/set-up-for-cloud.md)
 
 # Set up user management on n8n Cloud <a id="set-up-user-management-on-n8n-cloud"></a>
 

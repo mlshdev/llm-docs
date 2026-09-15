@@ -1,4 +1,4 @@
-> Pinned source for Docker main: [data/sbx_cli/sbx_env_plan.yaml](https://github.com/docker/docs/blob/5541c4e3130a6de70be53bba50dfef4f203e4026/data/sbx_cli/sbx_env_plan.yaml)
+> Pinned source for Docker main: [data/sbx_cli/sbx_env_plan.yaml](https://github.com/docker/docs/blob/2465b5136acea8373d5c6a27e4672f4acf26c935/data/sbx_cli/sbx_env_plan.yaml)
 
 # sbx env plan
 
@@ -33,9 +33,13 @@ reads as having none.
 
 With no PATH, an existing .sbxenv.yaml in your home directory is merged
 underneath as a base layer for defaults shared across projects; naming any
-PATH skips the layer. It may not set "name:" or "workspace:", each of which
-identifies a single project. Changing its "agent:" changes the derived <agent>-<directory-basename> sandbox name, leaving sandboxes created under
-the previous name for "sbx env rm" to miss.
+PATH skips the layer. It may not set "name:", which identifies a single
+project, and its "workspace:" must be rooted at ${{ env.projectDir }} — for
+the base that is always the directory the invocation runs from, since naming
+any PATH skips it — so the base mounts each project's own directory rather
+than one directory under all of them. Changing its "agent:"
+changes the derived <agent>-<directory-basename> sandbox name, leaving
+sandboxes created under the previous name for "sbx env rm" to miss.
 
 A list such as "ports" or "mcp.servers" concatenates across layers rather
 than overriding, so an entry declared in both appears twice.
@@ -49,6 +53,7 @@ than overriding, so an entry declared in both appears twice.
 | `--env-args-file`      |         | File of name=value environment arguments, one per line (can be repeated); --env-arg overrides (Experimental)                                                                       |
 | `--kit-arg`            |         | Value for an argument a kit declares, as name=value for every kit or kit.name=value for one (can be repeated); overrides the args a kits: entry pins in sbxenv.yaml (Experimental) |
 | `--kit-args-file`      |         | File of name=value kit arguments, one per line (can be repeated); --kit-arg overrides (Experimental)                                                                               |
+| `--name`               |         | Name for the sandbox, overriding 'name:' in sbxenv.yaml and the derived <agent>-<directory> (every 'sbx env' command addressing this environment needs the same value)             |
 | `--skip-host-commands` |         | Plan without the host lifecycle commands the environment declares                                                                                                                  |
 
 ## Global options

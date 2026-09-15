@@ -1,4 +1,4 @@
-> Pinned source for n8n main: [docs/build/keyboard-shortcuts.md](https://github.com/n8n-io/n8n-docs/blob/851fd6d5bc2948c1ba9bf393bb6f7126dcd8ae59/docs/build/keyboard-shortcuts.md)
+> Pinned source for n8n main: [docs/build/keyboard-shortcuts.md](https://github.com/n8n-io/n8n-docs/blob/46cfbebae86e861ae0a5bb0ff78d1798361bc3e0/docs/build/keyboard-shortcuts.md)
 
 # Keyboard shortcuts and controls <a id="keyboard-shortcuts-and-controls"></a>
 
